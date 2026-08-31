@@ -65,6 +65,18 @@ It directly checks both codes, computes both invariant distributions, and
 exhaustively enumerates all possible coordinate permutations and all
 translations that can map one displayed zero-containing code to the other.
 
+The PySAT discovery program is also preserved, but is not part of the direct
+certificate's trust boundary:
+
+```bash
+python3 -m venv /scratch/q7-ld-search-venv
+/scratch/q7-ld-search-venv/bin/pip install -r requirements.txt
+/scratch/q7-ld-search-venv/bin/python search_q7_ld.py 30 \
+  --solver cadical195 --zero-degree 0
+```
+
+Any generated CNF or solver output should remain under `/scratch`.
+
 ## Status and trust boundary
 
 The second code was discovered by SAT, but SAT is not in the result's trust
