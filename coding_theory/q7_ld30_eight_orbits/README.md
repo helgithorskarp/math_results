@@ -95,9 +95,11 @@ exactly eight orbits**.  Codes within one profile could also split into
 further orbits.
 
 `explore_q7_ld29_mip.py` preserves the independent exact 0-1 formulation used
-to search for a size-29 code.  It requires the pinned exploratory dependency
-in `requirements-exploration.txt`; a time-limited run without a solution is
-not a nonexistence proof.  No size-29 conclusion is claimed.
+to search for a size-29 code.  The previously proved induced-degree bound
+reduces its lossless normalized search to the four `--zero-degree` values
+0, 1, 2, and 3.  It requires the pinned exploratory dependency in
+`requirements-exploration.txt`; a time-limited run without a solution is not
+a nonexistence proof.  No size-29 conclusion is claimed.
 
 ## Status and trust boundary
 
@@ -112,7 +114,7 @@ compiled with GCC 12.2.0.  Source SHA-256 hashes are:
 ```text
 verify_q7_ld30_eight_orbits.py  02f4179224b21c395de3209abccba1a06e73691a28b16e4e30d65c27d6667ff4
 discover_q7_hitting_sets.cpp    39ddf40e277ef8bf7a54aadebeefe534bd5ec19c8c894fbb7766dab8548d3c69
-explore_q7_ld29_mip.py          3a93b7367dde76958a50c7edc6dfb32c1cf19a8593df2166cf369f9b230bd044
+explore_q7_ld29_mip.py          4fe7b6631d22ad7683f2e2dc792e1853478a2f1a5138f3b4edfcf77c317d9b72
 requirements-exploration.txt   ebb8e5f98cc8645b1b56264be490a29f4e36905b32fbb6e1d56f42fdfca1ed8a
 ```
 

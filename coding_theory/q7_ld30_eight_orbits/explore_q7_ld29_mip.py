@@ -27,7 +27,7 @@ NEIGHBORHOODS = tuple(
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--bound", type=int, default=29)
-    parser.add_argument("--zero-degree", type=int, choices=range(DIMENSION + 1))
+    parser.add_argument("--zero-degree", type=int, choices=range(4))
     parser.add_argument("--time-limit", type=float, default=600)
     parser.add_argument("--threads", type=int, default=2)
     parser.add_argument(
@@ -70,8 +70,10 @@ def main() -> None:
     # Translation normalizes a nonempty code to contain zero.
     model.addConstr(variables[0] == 1, name="normalize_zero")
     if args.zero_degree is not None:
-        # Coordinate permutations make the chosen pattern of code-neighbors
-        # of zero canonical once their number is fixed.
+        # The excess/average-degree bound gives a codeword of induced degree
+        # at most 3 when |C| <= 29.  After translating it to zero, coordinate
+        # permutations make its exact neighbor pattern canonical.  Thus the
+        # four accepted values cover the entire search losslessly.
         for coordinate in range(DIMENSION):
             model.addConstr(
                 variables[1 << coordinate]
