@@ -183,11 +183,19 @@ Targeted searches through 2026-08-31 found the foundational papers below but
 no prior exact-seven obstruction for cyclic Cayley graphs. The result is
 therefore apparently new to the searched sources, not a claim of priority.
 
+A recent paper of Das, Das, and Sadhukhan studies a different, non-unique
+exact-distance coverage convention on square grids: vertices outside the
+chosen set need at least one chosen vertex at the prescribed distance. It
+does not impose Hersh's unique-coverage condition and does not address the
+cyclic Cayley obstruction proved here.
+
 - P. Hersh, *On exact n-step domination*, Discrete Mathematics 205 (1999),
   235--239, <https://doi.org/10.1016/S0012-365X(99)00024-2>.
 - L. K. Williams, *On Exact n-Step Domination*, Ars Combinatoria 58 (2001),
   13--22,
   <https://combinatorialpress.com/article/ars/Volume%20058/volume-58-paper-2.pdf>.
+- S. Das, S. Das, and A. Sadhukhan, *Exact-Distance Domination in Grid
+  Graphs*, arXiv:2607.29648 (2026), <https://arxiv.org/abs/2607.29648>.
 
 The corrected degree-four, verified degree-five, and involutory degree-six
 source directories are adjacent directories in this repository.
