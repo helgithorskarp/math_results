@@ -16,14 +16,14 @@ int main() {
 
     // Independently reconstruct the algebraically specified code.
     std::set<int> generated;
-    for (int a = 0; a < 2; ++a)
-        for (int b = 0; b < 2; ++b)
-            for (int c = 0; c < 2; ++c)
-                for (int f = 0; f < 2; ++f) {
-                    const int e = a ^ b ^ c ^ f;
-                    const int d = a ^ c ^ f ^ (a & f) ^ (b & f);
-                    generated.insert(a | (b << 1) | (c << 2) |
-                                     (d << 3) | (e << 4) | (f << 5));
+    for (int x1 = 0; x1 < 2; ++x1)
+        for (int x4 = 0; x4 < 2; ++x4)
+            for (int x5 = 0; x5 < 2; ++x5)
+                for (int x6 = 0; x6 < 2; ++x6) {
+                    const int x2 = x1 ^ x4 ^ x5 ^ x6;
+                    const int x3 = x1 ^ x4 ^ x6 ^ (x1 & x5) ^ (x1 & x6);
+                    generated.insert((x1 << 5) | (x2 << 4) | (x3 << 3) |
+                                     (x4 << 2) | (x5 << 1) | x6);
                 }
     assert(generated == code);
 

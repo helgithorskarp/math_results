@@ -3,8 +3,9 @@
 This directory gives two solver-free verifiers for the construction
 
 \[
-C=\{(a,b,c,d,e,f)\in\mathbb F_2^6:
-e=a+b+c+f,\quad d=a+c+f+af+bf\}.
+C=\{(x_1,\ldots,x_6)\in\mathbb F_2^6:
+x_2=x_1+x_4+x_5+x_6,\quad
+x_3=x_1+x_4+x_6+x_1x_5+x_1x_6\}.
 \]
 
 All operations in the displayed definition are in `F_2`.  Equivalently, in

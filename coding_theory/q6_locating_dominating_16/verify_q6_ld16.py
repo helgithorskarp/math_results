@@ -18,15 +18,16 @@ EXPECTED_WORDS = {
 
 
 def algebraic_code() -> set[int]:
-    """Return C, encoding (a,b,c,d,e,f) as a+2b+4c+8d+16e+32f."""
+    """Return C, encoding the displayed word x1...x6 as a binary integer."""
     code: set[int] = set()
-    for a in (0, 1):
-        for b in (0, 1):
-            for c in (0, 1):
-                for f in (0, 1):
-                    e = a ^ b ^ c ^ f
-                    d = a ^ c ^ f ^ (a & f) ^ (b & f)
-                    code.add(a | (b << 1) | (c << 2) | (d << 3) | (e << 4) | (f << 5))
+    for x1 in (0, 1):
+        for x4 in (0, 1):
+            for x5 in (0, 1):
+                for x6 in (0, 1):
+                    x2 = x1 ^ x4 ^ x5 ^ x6
+                    x3 = x1 ^ x4 ^ x6 ^ (x1 & x5) ^ (x1 & x6)
+                    word = (x1, x2, x3, x4, x5, x6)
+                    code.add(int("".join(map(str, word)), 2))
     return code
 
 
@@ -77,4 +78,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
