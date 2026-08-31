@@ -77,6 +77,29 @@ python3 -m venv /scratch/q7-ld-search-venv
 
 Any generated CNF or solver output should remain under `/scratch`.
 
+For a complete search at bound 29, it is enough to run `--zero-degree` for
+the four values `0,1,2,3`.  Indeed, if a dominating code `C` in `Q_n` has
+size `K` and `e(C)` induced edges, double-counting closed-neighborhood
+incidences gives
+
+\[
+2e(C)\le (n+1)K-2^n.
+\]
+
+Consequently
+
+\[
+\delta(Q_n[C])\le
+\left\lfloor n+1-\frac{2^n}{K}\right\rfloor.
+\]
+
+At `n=7` and `K<=29` this is at most 3.  Translate a minimum-degree
+codeword to zero, then permute coordinates to make its codeword neighbors
+the first `r` unit vectors.  The four `--zero-degree r` instances therefore
+cover every possible code of size at most 29.  Initial 15-minute CaDiCaL
+runs of all four cases timed out; this is search status only, not evidence of
+nonexistence.
+
 ## Status and trust boundary
 
 The second code was discovered by SAT, but SAT is not in the result's trust
