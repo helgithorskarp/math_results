@@ -1,0 +1,60 @@
+--- enumerate_tree8_stacking.cpp
++++ verify_order8_critical_witnesses.cpp
+@@ -183,0 +184,4 @@
++      if (weight == tree_.recorded_estimate - 1) {
++        assert_all_maximizing_root_witnesses(current);
++      }
++
+@@ -213,0 +218,52 @@
++
++  void assert_all_maximizing_root_witnesses(const ConfigSet& current) const {
++    int maximizing_roots = 0;
++    for (int root = 0; root < kOrder; ++root) {
++      std::array<int, kOrder> distance{};
++      distance.fill(-1);
++      distance[root] = 0;
++      std::queue<int> queue;
++      queue.push(root);
++      while (!queue.empty()) {
++        const int vertex = queue.front();
++        queue.pop();
++        for (const int next : neighbors_[vertex]) {
++          if (distance[next] == -1) {
++            distance[next] = distance[vertex] + 1;
++            queue.push(next);
++          }
++        }
++      }
++
++      int sigma = 1;
++      int leaves = 0;
++      for (int vertex = 0; vertex < kOrder; ++vertex) {
++        const int degree = static_cast<int>(neighbors_[vertex].size());
++        if (vertex == root || degree > 1) {
++          sigma += degree * (1 << distance[vertex]);
++        }
++        if (vertex != root && degree == 1) {
++          ++leaves;
++        }
++      }
++      if (sigma + leaves != tree_.recorded_estimate) {
++        continue;
++      }
++      ++maximizing_roots;
++      Config witness{};
++      witness[root] = static_cast<std::uint16_t>(sigma - 1);
++      for (int vertex = 0; vertex < kOrder; ++vertex) {
++        if (vertex != root && neighbors_[vertex].size() == 1) {
++          witness[vertex] = 1;
++        }
++      }
++      if (!current.contains(canonical(witness))) {
++        throw std::runtime_error("maximizing-root witness is stackable for tree " +
++                                 std::to_string(tree_.id) + " root " +
++                                 std::to_string(root));
++      }
++    }
++    if (maximizing_roots == 0) {
++      throw std::runtime_error("tree has no maximizing root");
++    }
++  }
