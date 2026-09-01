@@ -25,9 +25,8 @@ e_0+e_j not in C                     (1 <= j < 7).
 ```
 
 Let `H` be the local graph on directions `1,...,6`, with `ij` selected
-exactly when `e_i+e_j` is a codeword.  The preceding leaf-aware theorem
-gives total family defect `D>=24` in branch 69.  Its local fathers use 12
-defect units, have capacity 43, and force 24 distinct missing son slots.
+exactly when `e_i+e_j` is a codeword.  Its local fathers use 12 defect
+units, have capacity 43, and force 24 distinct missing son slots.
 For `q` codeword couples and `M` family vertices, the standard identities
 are
 
@@ -35,6 +34,20 @@ $$
 p=24+D,\qquad M=104-D-2q,\qquad
 a\geq D-5,\qquad 2q\leq34-D.
 $$
+
+This already proves `D>=24` in branch 69.  The universal theorem gives
+`D>=18`.  For `D=18,...,23`, let `G(D-12)` be the maximum capacity of the
+additional family defects.  Exact integer partitions give
+
+```text
+D                 18  19  20  21  22  23
+G(D-12)           29  33  37  41  45  51
+max(total deficit) 2   5  10  13  18  23
+```
+
+Here the last row is `43+G(D-12)-min M`, with the largest allowed `q`
+used to minimize `M`.  It is always below the 24 locally forced missing
+slots, a contradiction.
 
 At `D=24`, exhaustive integer-partition enumeration followed by the
 defect-six occupancy inequality leaves exactly
