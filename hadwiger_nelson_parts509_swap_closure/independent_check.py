@@ -91,7 +91,13 @@ def main():
                         out.append(k)
         return out
 
-    triples = set()
+    # Group the floating-point proposals by their candidate neighbour set.
+    # A genuine group containing at least three exact neighbours determines at
+    # most one centre, because three distinct points on a circle are
+    # noncollinear and have a unique circumcentre.  Trying exact triples within
+    # each group until one succeeds avoids expanding all 95,406 incident
+    # triples separately in the comparatively slow AlgebraicField layer.
+    proposal_groups = defaultdict(set)
     near_tangent = 0
     for i in range(N):
         xi, yi = fl[i]
@@ -106,10 +112,17 @@ def main():
             h = math.sqrt(1.0 - d2 / 4.0) / math.sqrt(d2)
             for s in (1, -1):
                 qx, qy = mx - s * h * dy, my + s * h * dx
-                for k in near_unit(qx, qy):
+                proposed = tuple(sorted(set(near_unit(qx, qy))))
+                for k in proposed:
                     if k != i and k != j:
-                        triples.add(tuple(sorted((i, j, k))))
-    assert near_tangent == 0, 'near-tangent pairs would need exact handling'
+                        proposal_groups[proposed].add(tuple(sorted((i, j, k))))
+    # Near-tangent pairs are deliberately skipped by the floating-point
+    # proposal layer.  This cannot hide a point with at least three unit
+    # neighbours: among any three points on one unit circle, two subtend a
+    # central angle at most 2*pi/3, so their squared chord length is at most 3,
+    # safely below the 4-1e-3 cutoff.  That pair proposes the same circumcentre.
+    # (All accepted triples and their centres are still checked exactly below.)
+    log(f'skipped {near_tangent} near-tangent pairs; Q3 completeness is unaffected')
 
     def circumcentre(a, b, c):
         ax, ay = a; bx, by = b; cx, cy = c
@@ -122,10 +135,18 @@ def main():
 
     points_by_key = {}
     vertex_keys = set(pts)
-    for (i, j, k) in sorted(triples):
-        q = circumcentre(pts[i], pts[j], pts[k])
-        if q is None or not (unit(q, pts[i]) and unit(q, pts[j]) and unit(q, pts[k])):
+    exact_triples_tried = 0
+    for _, proposed_triples in sorted(proposal_groups.items()):
+        accepted = None
+        for i, j, k in sorted(proposed_triples):
+            exact_triples_tried += 1
+            q = circumcentre(pts[i], pts[j], pts[k])
+            if q is not None and unit(q, pts[i]) and unit(q, pts[j]) and unit(q, pts[k]):
+                accepted = (q, i, j, k)
+                break
+        if accepted is None:
             continue
+        q, i, j, k = accepted
         if q in points_by_key or q in vertex_keys:
             continue
         nb = frozenset(idx for idx in range(N) if unit(q, pts[idx]))
@@ -135,6 +156,7 @@ def main():
     hist = defaultdict(int)
     for nb in q3_sets:
         hist[len(nb)] += 1
+    log(f'proposal groups: {len(proposal_groups)}, exact triples tried: {exact_triples_tried}')
     log(f'independent Q3: {len(q3_sets)} points, histogram {dict(sorted(hist.items()))} ({time.time()-t0:.0f}s)')
 
     comp = json.loads(comp_path.read_text())

@@ -129,6 +129,20 @@ representation, completion points re-derived by double-precision screening of
 circle intersections followed by exact circumcentre confirmation and exact
 rescans, own row decoder):
 
+The proposal screen skips base-point pairs whose squared distance is within
+`0.001` of `4`.  This cannot omit a centre with at least three unit neighbours:
+among any three points on a unit circle, one pair has squared chord length at
+most `3` and proposes the same centre.  Every proposed triple and every listed
+neighbourhood is then checked exactly.
+
+To avoid repeating the same algebraic-field calculation once per incident
+triple, floating-point proposals with the same candidate-neighbour set are
+grouped.  Exact triples in each group are tried until one succeeds; three
+distinct points on a unit circle determine at most one centre, and every
+accepted centre is rescanned exactly against all 509 base points.  Grouping is
+therefore only an optimization of the proposal layer, not an identification of
+points by floating-point coordinates.
+
 ```bash
 /scratch/parts509-swap-venv/bin/python independent_check.py \
   completion_points.json swap_certificate.json
