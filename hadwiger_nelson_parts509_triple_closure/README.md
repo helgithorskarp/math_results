@@ -19,15 +19,21 @@ The evidence in this directory establishes, with exact arithmetic throughout:
    instances `(A, u)`: 2,184 explicit triples (listed per vertex), all
    triples containing a certified swap point of `u` (11 swaps), and all
    triples containing a declared pair of `u` (12,901 pairs of the sibling pair
-   closure).  Write `U(A)` for the set of vertices `u` with `(A, u)` declared.
-   The distribution of `|U(A)|` over the triples with a declared vertex that
-   is not swap-implied is
+   closure).  Write `Û(A)` for the set of vertices `u` with `(A, u)` declared
+   (the *declared* set).  The actual exceptional set
+   `U(A) = {u : G - u + A is 5-chromatic}` satisfies `U(A) ⊆ Û(A)`, because
+   every undeclared `(A, u)` has a checked extending colouring; declared
+   instances are conservative (solver UNSAT answers are not certified here, and
+   budget-exhausted calls are declared as well), so `Û(A)` may be strictly
+   larger.  The tables below report `Û(A)`; the proof only uses
+   `D ⊆ U(A) ⊆ Û(A)`.  The distribution of `|Û(A)|` over the triples with a
+   declared vertex that is not swap-implied is
 
    ```text
-   |U(A)| = 1: 186,665 triples;  |U(A)| = 2: 11,165;  |U(A)| = 3: 114;  |U(A)| = 4: 2;  |U(A)| >= 5: none
+   |Û(A)| = 1: 186,665 triples;  |Û(A)| = 2: 11,165;  |Û(A)| = 3: 114;  |Û(A)| = 4: 2;  |Û(A)| >= 5: none
    ```
 
-   Exactly two triples have four critical deletion vertices: `A = {27, 30, 43}` with `U(A) = {383, 415, 442, 479}` and `A = {43, 60, 658}` with `U(A) = {392, 415, 455, 499}` (indices into the `Q3` list; point 43 is the swap point of vertex 415).  For both, the 508-vertex graph `G - U(A) + A` is 4-colourable, and the certificate contains the two explicit colourings.
+   Exactly two triples have four declared deletion vertices: `A = {27, 30, 43}` with `Û(A) = {383, 415, 442, 479}` and `A = {43, 60, 658}` with `Û(A) = {392, 415, 455, 499}` (indices into the `Q3` list; point 43 is the swap point of vertex 415).  For both, the 508-vertex graph `G - Û(A) + A` is 4-colourable, and the certificate contains the two explicit colourings.
 
 2. **Two-neighbour points.**  Exactly 2,705 points of `K^2 \ V` are at unit
    distance from exactly two Parts vertices (`Q2K`, enumerated exactly from
@@ -36,15 +42,15 @@ The evidence in this directory establishes, with exact arithmetic throughout:
    other, giving 10,015 triples of type (ii) (`p ∈ Q2K` adjacent to two `Q3`
    points), 650 of type (iii-a) (`p1 ~ p2 ∈ Q2K` both adjacent to a
    `Q3` point) and 468 unit triangles inside `Q2K`.  For each of these
-   11,133 clusters `U(A)` was computed in the same way; the histogram of
-   `|U(A)|` is `{0: 10,851; 1: 282}`.  No cluster has two or more critical deletion vertices (the 282 single vertices are exhausted-budget declarations, almost all the swap-implied instances of point 80 with vertex 220), so no direct test was needed for them.
+   11,133 clusters `Û(A)` was computed in the same way; the histogram of
+   `|Û(A)|` is `{0: 10,851; 1: 282}`.  No cluster has two or more critical deletion vertices (the 282 single vertices are exhausted-budget declarations, almost all the swap-implied instances of point 80 with vertex 220), so no direct test was needed for them.
    The 135,468 non-`K`-rational unit-circle intersection points of vertex
    pairs (each at unit distance from exactly its two generating vertices and
    from no other point of `K^2`) contain 162,584 exact unit pairs
    (all with `rho1 rho2` a square in `K`; the perpendicular-chord case does
    not occur) and 30,160 exact unit triangles; every triangle is a
    further cluster (three added points, each keeping its two generating
-   vertices).  The histogram of `|U(A)|` over these clusters is
+   vertices).  The histogram of `|Û(A)|` over these clusters is
    `{0: 30,160}`.  No non-`K` triangle has a critical deletion vertex at all: every one of the `30,160 * 509` instances is covered by an existing library colouring (no fresh witness was needed).
 
 3. **No 508 by "delete four, add three".**  For every four-element set
@@ -78,10 +84,10 @@ Nothing here improves the bounds `5 <= chi(R^2) <= 7` or the 509-vertex record.
   all three points outside `K^2` (a mixed triangle is impossible, since a
   non-`K` point would then have three `K^2` unit neighbours).
 - **Layering.**  If `G - D + A` is 5-chromatic then so is `G - u + A` for
-  every `u ∈ D`, i.e. `D ⊆ U(A)`.  So it suffices to (a) exhibit, for every
-  `(A, u)` outside the declared list, a proper 4-colouring of `G - u` that
-  extends to `A`, and (b) for every `A` with `|U(A)| >= 4` and every 4-subset
-  `D ⊆ U(A)`, a proper 4-colouring of `G - D + A` directly.
+  every `u ∈ D`, i.e. `D ⊆ U(A) ⊆ Û(A)`.  So it suffices to (a) exhibit, for
+  every `(A, u)` outside the declared list, a proper 4-colouring of `G - u` that
+  extends to `A`, and (b) for every `A` with `|Û(A)| >= 4` and every 4-subset
+  `D ⊆ Û(A)`, a proper 4-colouring of `G - D + A` directly.
 - **Extension test.**  A proper 4-colouring of `G - u` extends to `A` iff the
   points of `A` can be list-coloured from their free colours (colours absent
   from their surviving unit neighbours) with distinct colours on the unit
@@ -112,7 +118,7 @@ Nothing here improves the bounds `5 <= chi(R^2) <= 7` or the 509-vertex record.
 `triple_certificate.json` contains, for every vertex `u`, additional proper
 4-colourings of `G - u` (3,653 rows, at most 77 per vertex, packed
 as in the sibling certificates), the explicitly declared triples per vertex,
-the exact `Q2K` points with their unit incidences, the `U(A)` lists of the
+the exact `Q2K` points with their unit incidences, the `Û(A)` lists of the
 11,133 `Q2K` clusters and of the 30,160 non-`K` triangle clusters
 (in a canonical order that the verifier reconstructs) with their fresh
 witness rows (26 and 0), and 2 explicit
@@ -175,12 +181,12 @@ verifier.
 ```bash
 python triple_closure.py --workers 4 --budget 20000        # layer (i), writes triple_results/
 python two_neighbour_points.py                             # Q2K, incidences, non-K screen -> q2k_extra.json
-python cluster_U.py --q2k q2k_extra.json --out extra_U.json # U(A) of the Q2K clusters
+python cluster_U.py --q2k q2k_extra.json --out extra_U.json # Û(A) of the Q2K clusters
 python nonk_exact.py q2k_extra.json nonk_exact.json        # exact non-K unit pairs and triangles
 python -c "import json; json.dump(json.load(open('nonk_exact.json'))['clusters'], open('nonk_clusters.json','w'))"
-python cluster_U.py --clusters nonk_clusters.json --out nonk_U.json   # U(A) of the non-K triangles
-python aggregate_triples.py                                # U(A) table of the Q3 layer
-python direct_tests.py                                     # 4-subset tests for |U(A)| >= 4
+python cluster_U.py --clusters nonk_clusters.json --out nonk_U.json   # Û(A) of the non-K triangles
+python aggregate_triples.py                                # Û(A) table of the Q3 layer
+python direct_tests.py                                     # 4-subset tests for |Û(A)| >= 4
 python triple_certificate.py build triple_results q2k_extra.json extra_U.json direct_witnesses.json \
     triple_certificate.json --nonk-exact nonk_exact.json --nonk-u nonk_U.json
 ```
@@ -188,7 +194,7 @@ python triple_certificate.py build triple_results q2k_extra.json extra_U.json di
 Layer (i) uses CaDiCaL 1.9.5 through PySAT with one incremental solver per
 deleted vertex, selector literals per completion point and a conflict budget
 of 20,000 per call; calls that exhaust the budget are declared (conservative:
-declaring an instance can only enlarge `U(A)`).  Every model is decoded and
+declaring an instance can only enlarge `Û(A)`).  Every model is decoded and
 checked before it is stored.  The run took about 76 minutes wall clock (17,860 CPU-seconds, 5,837 solver calls, 3,653 witnesses) on four worker
 processes.
 
