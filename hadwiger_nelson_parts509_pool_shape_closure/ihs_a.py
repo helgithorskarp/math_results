@@ -33,6 +33,7 @@ from pool5 import Pool
 from pysat.formula import IDPool
 from pysat.card import CardEnc, EncType
 from pysat.solvers import Solver
+import cardenc
 
 ap = argparse.ArgumentParser()
 ap.add_argument('--a', type=int, required=True)
@@ -81,12 +82,14 @@ def clause_for(D):
 
 for D in seen:
     master.add_clause(clause_for(D))
-for cl in CardEnc.equals(lits=[rid[v] for v in S], bound=a + 1, vpool=ids,
-                         encoding=EncType.totalizer).clauses:
+nv = len(S) + len(Q5)
+_cl, nv = cardenc.equals_tot([rid[v] for v in S], a + 1, nv)
+for cl in _cl:
     master.add_clause(cl)
-for cl in CardEnc.equals(lits=[qid[w] for w in Q5], bound=a, vpool=ids,
-                         encoding=EncType.totalizer).clauses:
+_cl, nv = cardenc.equals_tot([qid[w] for w in Q5], a, nv)
+for cl in _cl:
     master.add_clause(cl)
+ids = IDPool(start_from=nv + 1)
 if args.useful_cut and a >= 1:
     # deg_{L u X}(w) >= 4 for every added w:  degLS(w) - |N(w) n R| + |N(w) n A| >= 4
     nc = 0

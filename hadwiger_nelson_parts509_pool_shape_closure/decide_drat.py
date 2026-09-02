@@ -23,8 +23,8 @@ ap.add_argument('--k', type=int, required=True)
 ap.add_argument('--family', default=str(HERE / 'family_min.json'))
 ap.add_argument('--extra', nargs='*', default=[str(HERE / 'accumulated_killing_sets.jsonl')])
 ap.add_argument('--out', default=str(HERE / 'drat'))
-ap.add_argument('--cadical', default='cadical')
-ap.add_argument('--drat-trim', default='drat-trim')
+ap.add_argument('--cadical', default='/scratch/cadical-package/usr/bin/cadical')
+ap.add_argument('--drat-trim', default='/scratch/drat-trim-package/usr/bin/drat-trim')
 ap.add_argument('--no-check', action='store_true')
 args = ap.parse_args()
 out = Path(args.out); out.mkdir(exist_ok=True)
@@ -45,7 +45,7 @@ use = [D for D in fam if D <= gset]
 print(f'mode={args.mode} k={args.k}: {len(use)} usable killing sets of {len(fam)}', flush=True)
 nv = len(ground)
 clauses = [sorted(xid[v] for v in D) for D in sorted(use, key=lambda d: (len(d), sorted(d)))]
-cl, nv = cardenc.atmost([xid[v] for v in ground], args.k, nv)
+cl, nv = cardenc.atmost_tot([xid[v] for v in ground], args.k, nv)
 clauses += cl
 name = f'{args.mode}_k{args.k}'
 cnf = out / f'{name}.cnf'

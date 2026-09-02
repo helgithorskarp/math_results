@@ -148,3 +148,13 @@ def equals_tot(lits, k, nv):
     if k + 1 <= len(out):
         cl.append([-out[k]])
     return cl, nv
+
+
+def atmost_tot(lits, k, nv):
+    """At most k of lits, through a totalizer (stronger propagation than `atmost`)."""
+    n = len(lits)
+    if k >= n:
+        return [], nv
+    cl, out, nv = totalizer(lits, nv, kmax=k + 1)
+    cl.append([-out[k]])
+    return cl, nv
