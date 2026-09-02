@@ -1,0 +1,8 @@
+# verifier (verify_one_anchor.py, summarize_results.py): numpy, sympy (parsing of the sibling coordinates through parts509.py)
+numpy>=1.26
+sympy==1.14.0
+mpmath>=1.3
+scipy>=1.11          # cKDTree / sparse connected components (enumeration and filter only)
+# regeneration of the enumeration and of the declared sets additionally needs PySAT with CaDiCaL
+# (tested build: python-sat 1.8.dev24 / CaDiCaL 1.9.5)
+python-sat>=1.8.dev24
