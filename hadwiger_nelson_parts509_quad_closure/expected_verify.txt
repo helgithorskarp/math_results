@@ -1,0 +1,20 @@
+[     0s] input hashes: True
+[    58s] universe: Q3 1158, Q2K 2705, K-edges 13071, conn3 102408, conn4 1144333, non-K 135468 pts / 162584 edges / 30160 triangles / 8470 diamonds; q2k match True, incidences match True, nonk counts match True {'points': 135468, 'unit_pair_candidates': 163375, 'candidate_triangles': 30170, 'tolerance': 1e-07, 'k_point_candidates': 201, 'exact_unit_pairs': 162584, 'cases': {'A': 162584, 'B': 0}, 'triangles': 30160, 'k_point_candidates_unit': 0}
+[    58s] certificate rows 5889 (validated), declared sets 12269
+[    58s] per-vertex enumeration: 0 vertices from checkpoints, 509 to do
+[   697s] vertex 49: undeclared uncovered sets 0  (nodes 14576, stale declared 0, 9.5s); done 50/509
+[   900s] vertex 99: undeclared uncovered sets 0  (nodes 17402, stale declared 0, 7.8s); done 100/509
+[  1185s] vertex 149: undeclared uncovered sets 0  (nodes 1201, stale declared 0, 7.3s); done 150/509
+[  1393s] vertex 199: undeclared uncovered sets 0  (nodes 22917, stale declared 0, 9.4s); done 200/509
+[  1711s] vertex 248: undeclared uncovered sets 0  (nodes 43377, stale declared 4, 20.9s); done 250/509
+[  2034s] vertex 300: undeclared uncovered sets 0  (nodes 23137, stale declared 1, 36.8s); done 300/509
+[  2425s] vertex 349: undeclared uncovered sets 0  (nodes 20497, stale declared 2, 25.5s); done 350/509
+[  2754s] vertex 399: undeclared uncovered sets 0  (nodes 1281, stale declared 0, 6.8s); done 400/509
+[  2953s] vertex 449: undeclared uncovered sets 0  (nodes 1019, stale declared 0, 7.6s); done 450/509
+[  3155s] vertex 499: undeclared uncovered sets 0  (nodes 356, stale declared 3, 7.9s); done 500/509
+[  3192s] vertex 508: undeclared uncovered sets 0  (nodes 685, stale declared 1, 7.2s); done 509/509
+[  3192s] enumeration: undeclared uncovered sets 0, nodes 6191796, stale certificate declarations 274
+[  3196s] aggregation: declared sets 14814, unions 95730, hist_small {1: 2626, 2: 11, 3: 1}, hist4 {1: 22933, 2: 51149, 3: 15030, 4: 1258, 5: 44, 6: 1}, candidates 45 (valid 45); matches certificate: True, hist True
+[  3196s] direct witnesses: 50 (candidate, D) tests, all valid: True
+{"checks": {"sha256:completion_points.json": true, "sha256:swap_certificate.json": true, "sha256:pair_certificate.json": true, "sha256:ambient_w3_edges.json": true, "sha256:triple_certificate.json": true, "q2k_points": true, "q2k_incidences": true, "nonk_counts": true, "no_undeclared_uncovered_set": true, "candidates_match": true, "hist4_match": true, "direct_witnesses": true, "all_checks": true}, "undeclared_uncovered": 0, "nodes": 6191796, "stale": 274, "candidates": 45, "valid_candidates": 45, "direct_tests": 50, "hist4": {"2": 51149, "1": 22933, "3": 15030, "4": 1258, "5": 44, "6": 1}, "hist_small": {"1": 2626, "2": 11, "3": 1}, "seconds": 3196}
+all_checks=true
