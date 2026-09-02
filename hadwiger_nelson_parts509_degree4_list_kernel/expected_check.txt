@@ -1,0 +1,33 @@
+list_kernel.py verify:
+strict_unit_edge_manifest_verified=true
+reduced_2259_edge_core_verified=true
+allowed_states_verified=22_mod_S4_528_labeled
+counterexample_coloring_constraints_verified=144
+solver_free_hitting_number=14
+solver_free_branch_nodes=8637
+selected_interface_edges=14
+all_checks=true
+
+independent_check.py with both generated CNFs:
+exact_unit_edges=2442
+reduced_core_edges=2259
+states_mod_S4=22
+labeled_states=528
+hitting_constraints=144
+independent_hitting_number=14
+independent_branch_nodes=8281
+interface_cnf_audited=True
+lower13_cnf_audited=True
+PASSED
+
+drat-trim (interface):
+c parsing input formula with 2060 variables and 13168 clauses
+c 9240 of 13168 clauses in core
+c 88794 of 177799 lemmas in core using 5690160 resolution steps
+s VERIFIED
+
+drat-trim (13-edge lower bound):
+c parsing input formula with 2943 variables and 10774 clauses
+c 2918 of 10774 clauses in core
+c 39202 of 59429 lemmas in core using 3516347 resolution steps
+s VERIFIED
