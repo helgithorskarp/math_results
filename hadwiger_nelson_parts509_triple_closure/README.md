@@ -248,3 +248,24 @@ completion_points.json (sibling)         b82909c48ce088deb89b555f4c8fa554bba4403
   `../hadwiger_nelson_parts509_swap_closure`.
 - Two-point pair closure and its witness rows:
   `../hadwiger_nelson_parts509_pair_closure`.
+
+## Interval certificate for the non-K float screen
+
+`nonk_interval_certificate.py` removes the informal floating-point premise of the non-K
+layer: with exact rational arithmetic only (`kfield.real_bounds`, `isqrt`) it encloses every
+coordinate of every non-K intersection point in a rational interval and checks that the
+binary64 coordinate produced by `two_neighbour_points.nonk_row` (the code path used by the
+screen) lies inside the enclosure widened by 2⁻⁴⁵.  Result (`nonk_interval_certificate.json`,
+40-digit enclosures, 431 s with 2 workers):
+
+```text
+DONE 135468 non-K points: max enclosure width W = 1.95e-37, max float deviation E = 2.22e-16, coordinates outside the 2^-45-widened enclosure: 0
+```
+
+Hence two non-K points at true distance exactly 1 have stored float points at true distance
+within 2(W + E) < 10⁻¹⁵ of 1, and the binary64 `hypot` of coordinates bounded by 4 adds at
+most a few ulps (< 10⁻¹⁴): every true unit pair has float distance within 10⁻¹³ of 1, far
+inside the 10⁻⁷ annulus of the screen.  The cell decomposition of `unit_pairs_float` examines
+every pair of cells whose minimal distance is ≤ 1 + 10⁻⁷, so no pair inside the annulus is
+skipped.  The same bound covers the incidence screens of non-K points against `Q3` and `Q2K`
+(K-rational coordinates converted by `kfield.to_float`, relative error below 10⁻¹⁵).
