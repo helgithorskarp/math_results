@@ -1,0 +1,26 @@
+classify_degree4.py verify:
+edge_manifest_verified=true
+degree_four_vertices_verified=6
+core_coloring_witnesses_verified=9
+allowed_blocked_signatures=6_singletons_plus_3_antipodal_pairs
+
+classify_degree4.py generate (stable mathematical summary):
+allowed_masks=1,2,4,8,9,16,18,32,36
+sat_witnesses=9
+classification_cnf_variables=2042
+classification_cnf_clauses=14741
+classification_cnf_sha256=682440579f9d48e7fcd20bd34d97573f3d980597a69171f5b52e5a2e663ec283
+
+independent_audit.py:
+exact_geometry_reconstructed=true
+strict_edges=2442
+degree_four_vertices=310,313,316,319,322,325
+degree_four_vertices_independent=true
+shared_neighbor_cycle=150,153,158,161,166,169
+sat_witnesses_verified=9
+classification_cnf_semantics_verified=true
+classification_cnf_variables=2042
+classification_cnf_clauses=14741
+
+drat-trim:
+s VERIFIED
