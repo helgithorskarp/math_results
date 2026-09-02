@@ -128,11 +128,12 @@ normalization work.
 
 ## Sources, novelty, and trust boundary
 
-- Current gap and the copied 21-block witness: [La Jolla entry for
-  C(13,6,3)](https://ljcr.dmgordon.org/cover/show_cover.php?k=6&t=3&v=13).
-- Imported exact link value: [La Jolla entry for
-  C(12,5,2)=9](https://ljcr.dmgordon.org/cover/show_cover.php?k=5&t=2&v=12),
-  whose lower-bound field cites Horsley's Theorem 14a.
+- Current gap, the copied 21-block witness, and the imported exact link value
+  `C(12,5,2)=9`: Daniel Gordon's [La Jolla Coverings Repository version 1.2
+  dataset](https://zenodo.org/records/19735294).  Its `coverdata.json` records
+  the bounds, and its covering archive supplies the block lists.  The author
+  also describes the maintained database on his [covering-designs
+  page](https://dmgordon.org/covering-designs/).
 - General covering-design definitions and constructions: D. M. Gordon,
   G. Kuperberg, and O. Patashnik, [*New constructions for covering
   designs*](https://arxiv.org/abs/math/9502238), J. Combin. Designs 3
