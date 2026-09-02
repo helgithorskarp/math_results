@@ -1,0 +1,25 @@
+{
+  "claim": "the 510-vertex strict unit-distance graph G - V[350] + {Q3[523],Q3[619]} is not 4-colourable",
+  "cnf": {
+    "bytes": 134584,
+    "clauses": 10293,
+    "generator_command": "python3 g14_augmentation.py cnf /scratch/g14-pair-4color.cnf",
+    "pinned_triangle": [0, 149, 152],
+    "sha256": "516778e2b54de77b257568f85b3383ea55c27b158bfd47031fd06b49fdf1afe3",
+    "variables": 2040
+  },
+  "proof": {
+    "bytes": 6761202,
+    "committed": false,
+    "core_input_clauses": 9172,
+    "core_lemmas": 48035,
+    "resolution_steps": 3163453,
+    "sha256": "e565598a526a7a9e48c7e8b606347d0ec6b7a06b6c4545516782efa56846727a"
+  },
+  "solver": "CaDiCaL sc2021",
+  "verifier": {
+    "name": "drat-trim",
+    "source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "verdict": "s VERIFIED"
+  }
+}
