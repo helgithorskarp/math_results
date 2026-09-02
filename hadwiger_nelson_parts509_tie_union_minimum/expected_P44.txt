@@ -1,0 +1,18 @@
+(0) Parts vertices in A*: 509; coordinate mismatches against parts509.vtx: 0
+(1) exact edge list of A*: 553 vertices, 2754 unit-distance pairs (2754 float candidates checked exactly) (8s)
+(2) forced vertices: 475 witness colourings replayed (A* − u is 4-colourable for each) ; free part R = 78 (9s)
+(3) killing sets: 170 witness colourings replayed (170 distinct, 133 inclusion-minimal); sizes 2..13 (9s)
+    recorded minimum hitting set m* = 34 (hitting sets with at least 4 pool points; pool = 44 free points); 0 recorded optimal hitting sets all hit the family
+    RC2 recomputed minimum hitting set: 34 (0s)
+    HiGHS MILP recomputed minimum hitting set: 34 (1s)
+    decision OPB (family + at least 4 pool selectors + at most 33 selectors, 78 variables) sha256 9ccfdbb0766e1810; VeriPB VERIFIED UNSATISFIABLE (0s)
+summary: every 5-chromatic subgraph of A* contains the 475 forced vertices and meets every killing set;
+         every hitting set of the certified family with >= 4 pool points has size >= 34 [VeriPB-checked (no hitting set of size ≤ 33 with ≥ 4 pool points)];
+         by the committed closures a 5-chromatic subgraph on <= 508 vertices would need >= 4 pool points and |X| <= 33;
+         => A* has NO 5-chromatic subgraph with at most 508 vertices (minimum order exactly 509, attained by G)
+all_checks=true
+Proof files (regenerable; not committed): card.opb sha256 9ccfdbb0766e181018efa20eb68165eff11aaec88b9b06acda7b5c192fb27471; card.pb (VeriPB proof) sha256 39b13eabd38950e21b85fdd07d4d6514513f5445e5888ef31ada2f0ca4108690 bytes 262815 
+(1) SymPy exact edge list: 553 vertices, 2754 unit-distance pairs (2754 candidates) (2s)
+(2) forced witnesses proper: True (475 colourings)
+(3) killing-set witnesses proper: True (170 colourings)
+independent_check PASSED (3s)

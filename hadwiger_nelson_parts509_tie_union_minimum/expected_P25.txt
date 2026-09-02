@@ -1,0 +1,19 @@
+(0) Parts vertices in A*: 509; coordinate mismatches against parts509.vtx: 0
+(1) exact edge list of A*: 534 vertices, 2620 unit-distance pairs (2620 float candidates checked exactly) (4s)
+(2) forced vertices: 483 witness colourings replayed (A* − u is 4-colourable for each) ; free part R = 51 (5s)
+(3) killing sets: 67 witness colourings replayed (67 distinct, 54 inclusion-minimal); sizes 2..6 (5s)
+    recorded minimum hitting set m* = 26 (hitting sets with at least 4 pool points; pool = 25 free points); 0 recorded optimal hitting sets all hit the family
+    RC2 recomputed minimum hitting set: 26 (0s)
+    HiGHS MILP recomputed minimum hitting set: 26 (0s)
+    cardinality CNF (family + at most 25 selectors + at least 4 pool selectors, 51 selector variables) sha256 514243151239cdc3; drat-trim VERIFIED (7s)
+    decision OPB (family + at least 4 pool selectors + at most 25 selectors, 51 variables) sha256 7c90e4b5f4f06b4a; VeriPB VERIFIED UNSATISFIABLE (0s)
+summary: every 5-chromatic subgraph of A* contains the 483 forced vertices and meets every killing set;
+         every hitting set of the certified family with >= 4 pool points has size >= 26 [DRAT- and VeriPB-checked (no hitting set of size ≤ 25 with ≥ 4 pool points)];
+         by the committed closures a 5-chromatic subgraph on <= 508 vertices would need >= 4 pool points and |X| <= 25;
+         => A* has NO 5-chromatic subgraph with at most 508 vertices (minimum order exactly 509, attained by G)
+all_checks=true
+Proof files (regenerable; not committed): card.opb sha256 7c90e4b5f4f06b4a06944a373d587c1bef1766ef15426a90ee3b5514af903b6d; card.pb (VeriPB proof) sha256 49ffe96e4cb50bcdf603595c7231745a80609746cf9521cfac110de9931d54a6 bytes 4532 card.cnf sha256 514243151239cdc32d63510cd60d4958674404ed34e83bd4542b43d106fc0c4b; card.drat sha256 c0c0b3db9089e62fc5d417babf64f324d43d065be8ea549b3fc35eefda798129 bytes 3703638 
+(1) SymPy exact edge list: 534 vertices, 2620 unit-distance pairs (2620 candidates) (1s)
+(2) forced witnesses proper: True (483 colourings)
+(3) killing-set witnesses proper: True (67 colourings)
+independent_check PASSED (2s)
