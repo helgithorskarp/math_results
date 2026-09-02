@@ -13,13 +13,23 @@ Configurations are grouped by their one-anchor point x:
       x is adjacent to all three points.  Configuration index ci = position in the flattened order
       (groups in file order, within a group first the 'I' then the 'II' list).
 Declared pairs: 'ci:u' -> status; fresh rows: proper 4-colourings of G − u.
-usage: pack_compact.py CONFIGS_F.json COVER.json OUT.json.gz
+usage: pack_one_anchor.py CONFIGS_F.json COVER.json OUT.json.gz [--universe DIR]
+       (DIR = output directory of build_universe.py, whose universe_meta.json maps universe indices to non-K labels;
+        default: env ONE_ANCHOR_UNIVERSE or ./universe.  The label list is checked against q2k_extra.json of the
+        triple-closure directory, the committed source of the non-K labels, before use.)
 """
-import json, sys, gzip, hashlib
+import json, sys, gzip, hashlib, argparse, os
 from pathlib import Path
+from paths import Q2K_EXTRA
 NQ3, NQ2K = 1158, 2705
-meta = json.loads(Path('/scratch/agents/researcher-4/hn/quad/universe_meta.json').read_text())
+ap = argparse.ArgumentParser(); ap.add_argument('configs'); ap.add_argument('cover'); ap.add_argument('out')
+ap.add_argument('--universe', default=os.environ.get('ONE_ANCHOR_UNIVERSE', str(Path(__file__).resolve().parent / 'universe')))
+args = ap.parse_args()
+meta = json.loads((Path(args.universe) / 'universe_meta.json').read_text())
 labels = meta['nonk_labels']
+committed_labels = json.loads(Q2K_EXTRA.read_text())['nonk_labels']
+assert sorted(map(tuple, labels)) == sorted(map(tuple, committed_labels)) and labels == sorted(labels), 'universe labels differ from the committed non-K label list'
+sys.argv = [sys.argv[0], args.configs, args.cover, args.out]
 confs = json.loads(Path(sys.argv[1]).read_text()); cov = json.loads(Path(sys.argv[2]).read_text())
 assert cov['n_configs'] == len(confs)
 

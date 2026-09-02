@@ -6,25 +6,36 @@ points with >= 2 vertex neighbours) with |v - q| < 2, the two intersection point
 generated; coincident points (radius 1e-6) are grouped (scipy connected components); a group is a
 candidate one-anchor point x with generator set Gx ⊆ Q (its Q-neighbours, complete up to the float
 tolerance).  Groups are discarded ONLY when exact arithmetic shows x is not an added one-anchor point:
-  (a) x = w ∈ V exactly: w is at unit distance (exact, in K) from v and from a K-rational generator q,
-      hence w is one of the two exact intersection points of circle(v), circle(q), which are >= 6e-5
-      apart because |v - q| < 2 - 1e-9; x is within 1e-6 of w, so x = w.
-  (b) x = p ∈ Q3 ∪ Q2K exactly (then n(x) >= 2, x belongs to the all-anchored family): same argument
-      with p in place of w (unit distance from v and from a K generator q, or from a non-K generator
-      y = m + s t n via (p-m).n = 0 and |p-m|^2 + rho |n|^2 = 1, exact in K).
-  (c) x = p non-K point of Q exactly: p's vertex neighbours are exactly its two generators {i, j}, so
-      v ∈ {i, j} is required; and p at unit distance from a non-K generator y of x is decided by the
-      exact non-K unit-pair list of the committed delete-4-add-3 closure (nonk_exact.json).
-Everything else is kept (over-inclusive).  The neighbour lists and internal edges of the new points x, y use
-the tolerance TOLX = 1e-5 (over-inclusive): if two distinct intersection points within 1e-6 of each other were
-merged by the clustering, the merged coordinate is within 1e-6 of each true point, so every true unit
-distance is still within TOLX; extra (false) edges only make the SAT tests more conservative.  Q-points keep
-their exact neighbour lists.  Tangent pairs (|v - q| = 2) contribute the midpoint.  Configurations:
+A member X_k (generator q_k) is *identified* with an exact point w ∈ V ∪ Q when w is a unit neighbour of the
+anchor v, w is a unit neighbour of q_k, and |X_k - w| < TD = 1e-6 (binary64).  All unit incidences used here
+are looked up in the committed exact lists (V-V and V-Q3 edges of the ambient graph, the V-neighbour lists of
+Q3 / Q2K / non-K points, the K-internal edges Q3-Q3 / Q2K-Q3 / Q2K-Q2K, the exact non-K unit pairs of
+nonk_exact.json; non-K points have no unit neighbour in K² other than their two generating vertices).
+Soundness: the exact point x_k* of the member lies on circle(v) and circle(q_k), so x_k* ∈ {w, w'} with w'
+the second intersection point; |x_k* - w| <= TD + E with E <= 1e-7 the forward error of a member, while
+|w - w'| = 2 sqrt(1 - |v - q_k|²/4) >= 7.45e-6 for every non-tangent anchor-Q pair (audited minimum gap
+2 - |v - q| >= 1.388e-11, tangency_audit.py) and w = w' for a tangent pair; hence x_k* = w.  Identified
+members are removed from the group (they represent w, which is a vertex or a point with >= 2 vertex
+neighbours, never an added one-anchor point); the identification is repeated with the residual centroid
+(candidates w within CL + radius of the centroid); the residual members, if they have >= 2 generators, form
+the candidate point x (centroid of the residual).  A true one-anchor point x* ≠ w never loses a member to
+identification (its members would have x_k* = w), so the residual's generator set contains N_Q(x*).
+Everything else is kept (over-inclusive).  A group is a single-linkage component and may be chained beyond
+the linking radius CL = 1e-6; the rule above does not depend on the component radius.  For the kept
+residuals the neighbour lists and internal edges of the new points x, y use the tolerance TOLX = 1e-5
+around the residual centroid; this is over-inclusive for every exact point represented provided the
+residual radius r (max member-centroid distance) satisfies r + E < TOLX, which the run certifies
+(max_radius over all kept residuals, asserted < TOLX - 2e-7; a 4-colouring extending to a superset of the
+true constraints extends to the true ones).  Q-points keep their exact neighbour lists.  The screen is
+outward-rounded, d <= 2 + 2^-40: exact tangencies whose binary64 distance rounds above 2 (79 pairs) are
+included (they contribute the midpoint); pairs slightly above 2 contribute a spurious midpoint, which is
+harmless (over-inclusive; such a member is never identified because no point is at unit distance from both
+ends of a pair at distance > 2).  Configurations:
   type I : {x, y1, y2, y3}, y's ⊆ Gx, with the necessary degree condition that a point of Q with exactly
            two vertex neighbours (Q2K / non-K) has a second neighbour inside A;
   type II: {x, y, b, d}: b, d ∈ Gx with |b - d| = sqrt3 (tol 1e-6), y = reflection of x in line bd,
            y has a vertex at unit distance (tol 1e-7).
-usage: enumerate_one_anchor.py OUTDIR [--workers W] [--anchors a b ...]   (env ONE_ANCHOR_UNIVERSE = output dir of build_universe.py, default ./universe)
+usage: enumerate_one_anchor.py OUTDIR [--workers W] [--anchors a b ...] [--universe DIR]   (DIR = output dir of build_universe.py; default env ONE_ANCHOR_UNIVERSE or ./universe)
 """
 import json, sys, time, argparse, importlib.util, os
 from pathlib import Path
@@ -35,12 +46,13 @@ from scipy.spatial import cKDTree
 from scipy.sparse import coo_matrix
 from scipy.sparse.csgraph import connected_components
 
-from paths import HERE, CRIT, COMPLETION, Q2K_EXTRA, NONK_EXACT
+from paths import HERE, CRIT, PAIR, COMPLETION, Q2K_EXTRA, NONK_EXACT
 sys.path.insert(0, str(HERE))
 QD = Path(os.environ.get('ONE_ANCHOR_UNIVERSE', str(HERE / 'universe')))   # output of build_universe.py
 import kfield as kf
 KK = 3; ONE = kf.one(KK); FOUR = kf.const(KK, 4); HALF = Fraction(1, 2)
-TOL = 1e-7; TOLX = 1e-5; CL = 1e-6; SQ3 = np.sqrt(3.0)   # TOLX: over-inclusive tolerance for the new points x, y
+TOL = 1e-7; TOLX = 1e-5; CL = 1e-6; TD = 1e-6; EFWD = 1e-7; SQ3 = np.sqrt(3.0)   # TOLX: over-inclusive tolerance for the new points x, y; TD: per-member discard radius; EFWD: forward error bound of a member
+DMAX = 2.0 + 2.0 ** -40   # outward-rounded circle-intersection cutoff
 NQ3, NQ2K = 1158, 2705
 D = {}
 
@@ -67,7 +79,24 @@ def load():
     for a, b in nx['unit_pairs']:
         upairs.add((tuple(a), tuple(b))); upairs.add((tuple(b), tuple(a)))
     lab2idx = {tuple(l): NQ3 + NQ2K + k for k, l in enumerate(labels)}
-    D.update(P=P, V=V, types=types, nbrs=nbrs, labels=labels, VE=VE, QE=Q3E + Q2E, upairs=upairs,
+    # exact incidence lookups from the committed lists
+    amb = json.loads((PAIR / 'ambient_w3_edges.json').read_text())
+    NV = len(VE)
+    vadj = [set() for _ in range(NV)]
+    kedges = set()
+    for a, b in amb['edges']:
+        if a < NV and b < NV:
+            vadj[a].add(b); vadj[b].add(a)
+        elif a >= NV and b >= NV:
+            kedges.add((min(a, b) - NV, max(a, b) - NV))          # Q3-Q3 (universe indices = Q3 indices)
+    for p, a in ex['adj_q2k_q3']:
+        kedges.add((a, NQ3 + p))
+    for p, q in ex['adj_q2k_q2k']:
+        kedges.add((NQ3 + min(p, q), NQ3 + max(p, q)))
+    qnbrs = [set(n) for n in nbrs]
+    for q3i, r in enumerate(comp['points']):                      # consistency of the V-Q3 lists with the ambient edges
+        assert qnbrs[q3i] == {a for a, b in amb['edges'] if b == NV + q3i and a < NV} | {b for a, b in amb['edges'] if a == NV + q3i and b < NV}
+    D.update(P=P, V=V, types=types, nbrs=nbrs, qnbrs=qnbrs, labels=labels, VE=VE, QE=Q3E + Q2E, upairs=upairs, vadj=vadj, kedges=kedges,
              treeV=cKDTree(V), treeQ=cKDTree(P), isK=(types != 'nonk'))
 
 
@@ -104,7 +133,7 @@ def per_anchor(v_idx):
     P, V, types, nbrs, isK = D['P'], D['V'], D['types'], D['nbrs'], D['isK']
     c = V[v_idx]; t0 = time.time()
     d = np.hypot(P[:, 0] - c[0], P[:, 1] - c[1])
-    Y = np.nonzero((d <= 2.0) & (d > 1e-9))[0]        # tangent / near-tangent pairs included (h = 0 gives the midpoint)
+    Y = np.nonzero((d <= DMAX) & (d > 1e-9))[0]       # outward-rounded: exact tangencies included (h = 0 gives the midpoint)
     dd = P[Y] - c[None, :]; dist = np.hypot(dd[:, 0], dd[:, 1])
     h = np.sqrt(np.maximum(1 - dist ** 2 / 4, 0.0)); m = c[None, :] + dd / 2
     n = np.stack([-dd[:, 1], dd[:, 0]], axis=1) / dist[:, None]
@@ -117,40 +146,71 @@ def per_anchor(v_idx):
         lab = np.arange(nX)
     order = np.argsort(lab, kind='stable'); ls = lab[order]
     starts = np.r_[0, np.nonzero(np.diff(ls))[0] + 1, len(ls)]; sizes = np.diff(starts)
-    st = {'anchor': int(v_idx), 'groups2': 0, 'disc_V': 0, 'disc_QK': 0, 'disc_QN': 0, 'kept': 0, 'kept_K2': 0,
-          'kept_K1': 0, 'kept_N': 0, 'near_unresolved': 0, 'typeI': 0, 'typeII': 0, 'maxg': 0, 'points': []}
+    st = {'anchor': int(v_idx), 'groups2': 0, 'disc_V': 0, 'disc_QK': 0, 'disc_QN': 0, 'split': 0, 'residual_small': 0, 'kept': 0,
+          'kept_K2': 0, 'kept_K1': 0, 'kept_N': 0, 'near_unresolved': 0, 'typeI': 0, 'typeII': 0, 'maxg': 0, 'points': [],
+          'max_radius': 0.0, 'chained_kept': 0}
     confs = []
     vE = D['VE'][v_idx]
+    qnbrs, vadj, kedges, labels, upairs, treeV, treeQ = D['qnbrs'], D['vadj'], D['kedges'], D['labels'], D['upairs'], D['treeV'], D['treeQ']
+
+    def adj_exact(w_is_vertex, w, q):
+        # exact unit incidence between the identified point w (vertex index, or universe index) and the generator q
+        if w_is_vertex:
+            return w in qnbrs[q]
+        if isK[w]:
+            return isK[q] and q != w and (min(w, q), max(w, q)) in kedges
+        return (not isK[q]) and (tuple(labels[w - NQ3 - NQ2K]), tuple(labels[q - NQ3 - NQ2K])) in upairs
+
     for gi in range(len(sizes)):
         if sizes[gi] < 2:
             continue
         mem = order[starts[gi]:starts[gi] + sizes[gi]]
-        G = np.unique(gen[mem]); g = len(G)
-        if g < 2:
+        Xm = X[mem]; gm = gen[mem]
+        if len(np.unique(gm)) < 2:
             continue
         st['groups2'] += 1
-        x = X[mem].mean(axis=0)
+        alive = np.ones(len(mem), dtype=bool); ident = {'V': 0, 'QK': 0, 'QN': 0}; near = False
+        while alive.any():
+            xa = Xm[alive].mean(axis=0); ra = float(np.max(np.hypot(Xm[alive, 0] - xa[0], Xm[alive, 1] - xa[1])))
+            removed = False
+            for iV in treeV.query_ball_point(xa, CL + ra):
+                if iV not in vadj[v_idx]:
+                    near = True; continue
+                close = np.hypot(Xm[:, 0] - V[iV, 0], Xm[:, 1] - V[iV, 1]) < TD
+                ok = alive & close & np.array([adj_exact(True, iV, int(q)) for q in gm])
+                if ok.any():
+                    alive &= ~ok; ident['V'] += int(ok.sum()); removed = True
+                elif (alive & close).any():
+                    near = True
+            for iQ in treeQ.query_ball_point(xa, CL + ra):
+                if v_idx not in qnbrs[iQ]:
+                    near = True; continue
+                close = np.hypot(Xm[:, 0] - P[iQ, 0], Xm[:, 1] - P[iQ, 1]) < TD
+                ok = alive & close & np.array([adj_exact(False, iQ, int(q)) for q in gm])
+                if ok.any():
+                    alive &= ~ok; ident['QK' if isK[iQ] else 'QN'] += int(ok.sum()); removed = True
+                elif (alive & close).any():
+                    near = True
+            if not removed:
+                break
+        nid = sum(ident.values())
+        if not alive.any():
+            key = max(ident, key=ident.get); st['disc_' + key] += 1
+            continue
+        if nid:
+            st['split'] += 1
+        elif near:
+            st['near_unresolved'] += 1
+        G = np.unique(gm[alive]); g = len(G)
+        if g < 2:
+            st['residual_small'] += 1; continue
+        x = Xm[alive].mean(axis=0)
+        r = float(np.max(np.hypot(Xm[alive, 0] - x[0], Xm[alive, 1] - x[1])))
         Kgens = [int(q) for q in G if isK[q]]; Ngens = [int(q) for q in G if not isK[q]]
-        # (a) vertex?
-        dV, iV = D['treeV'].query(x)
-        if dV < CL:
-            w = D['VE'][iV]
-            if d2(w, vE) == ONE and any(kpoint_unit_to_gen(w, q) for q in Kgens + Ngens):
-                st['disc_V'] += 1; continue
-            st['near_unresolved'] += 1
-        # (b)/(c) point of Q?
-        dQ, iQ = D['treeQ'].query(x)
-        if dQ < CL:
-            if isK[iQ]:
-                p = D['QE'][iQ]
-                if d2(p, vE) == ONE and any(kpoint_unit_to_gen(p, q) for q in Kgens + Ngens):
-                    st['disc_QK'] += 1; continue
-            else:
-                labp = tuple(D['labels'][iQ - NQ3 - NQ2K])
-                if v_idx in labp[:2] and any((labp, tuple(D['labels'][y - NQ3 - NQ2K])) in D['upairs'] for y in Ngens):
-                    st['disc_QN'] += 1; continue
-            st['near_unresolved'] += 1
         st['kept'] += 1; st['maxg'] = max(st['maxg'], g)
+        st['max_radius'] = max(st['max_radius'], r)
+        if r >= CL:
+            st['chained_kept'] += 1
         if len(Kgens) >= 2: st['kept_K2'] += 1
         elif len(Kgens) == 1: st['kept_K1'] += 1
         else: st['kept_N'] += 1
@@ -195,15 +255,28 @@ def per_anchor(v_idx):
 
 
 def main():
+    global QD
     ap = argparse.ArgumentParser(); ap.add_argument('outdir'); ap.add_argument('--workers', type=int, default=2)
     ap.add_argument('--anchors', type=int, nargs='*', default=None)
+    ap.add_argument('--universe', default=None, help='output directory of build_universe.py (default: env ONE_ANCHOR_UNIVERSE or ./universe)')
     args = ap.parse_args()
+    if args.universe:
+        QD = Path(args.universe); os.environ['ONE_ANCHOR_UNIVERSE'] = str(QD)
     out = Path(args.outdir); out.mkdir(exist_ok=True)
     load()
     anchors = args.anchors if args.anchors else list(range(len(D['V'])))
     t0 = time.time(); stats = []; allconfs = []
+    # per-anchor checkpoints (OUTDIR/anchors/a_XXX.json) make the run resumable: finished anchors are skipped
+    ck = out / 'anchors'; ck.mkdir(exist_ok=True)
+    for a in anchors:
+        f = ck / f'a_{a:03d}.json'
+        if f.exists():
+            d = json.loads(f.read_text()); stats.append(d['stats']); allconfs.extend(d['configs'])
+    todo = [a for a in anchors if not (ck / f'a_{a:03d}.json').exists()]
+    print(f'{len(anchors) - len(todo)} anchors loaded from checkpoints, {len(todo)} to do', flush=True)
     with Pool(args.workers, initializer=load) as pool:
-        for st, confs in pool.imap_unordered(per_anchor, anchors, chunksize=1):
+        for st, confs in pool.imap_unordered(per_anchor, todo, chunksize=1):
+            (ck / f"a_{st['anchor']:03d}.json").write_text(json.dumps({'stats': st, 'configs': confs}))
             stats.append(st); allconfs.extend(confs)
             s = {k: v for k, v in st.items() if k != 'points'}
             print(f"anchor {st['anchor']}: {s}  | totals: configs {len(allconfs)} (I {sum(x['typeI'] for x in stats)}, II {sum(x['typeII'] for x in stats)}), kept points {sum(x['kept'] for x in stats)}, unresolved {sum(x['near_unresolved'] for x in stats)}; {len(stats)}/{len(anchors)} anchors, {time.time()-t0:.0f}s", flush=True)
@@ -215,6 +288,13 @@ def main():
     print(f'configurations: {len(allconfs)} raw, {len(uniq)} distinct; type I {sum(c["type"]=="I" for c in uniq)}, type II {sum(c["type"]=="II" for c in uniq)}', flush=True)
     (out / 'configs.json').write_text(json.dumps(uniq))
     (out / 'stats.json').write_text(json.dumps(stats))
+    max_r = max(x['max_radius'] for x in stats); chained = sum(x['chained_kept'] for x in stats)
+    print(f'radius certificate: max residual radius over kept candidate points {max_r:.3e} (chained kept groups {chained}); '
+          f'bound TOLX - 2*EFWD = {TOLX - 2 * EFWD:.3e}: {"OK" if max_r < TOLX - 2 * EFWD else "VIOLATED"}', flush=True)
+    print(f"groups {sum(x['groups2'] for x in stats)}: discarded as vertex {sum(x['disc_V'] for x in stats)}, as K-point of Q {sum(x['disc_QK'] for x in stats)}, "
+          f"as non-K point of Q {sum(x['disc_QN'] for x in stats)}, split {sum(x['split'] for x in stats)} (residual with < 2 generators {sum(x['residual_small'] for x in stats)}), "
+          f"kept {sum(x['kept'] for x in stats)}, near-unresolved kept {sum(x['near_unresolved'] for x in stats)}", flush=True)
+    assert max_r < TOLX - 2 * EFWD, 'component radius certificate violated: neighbour lists might not be over-inclusive'
     print(f'total {time.time()-t0:.0f}s', flush=True)
 
 
