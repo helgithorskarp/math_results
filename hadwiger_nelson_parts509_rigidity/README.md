@@ -41,7 +41,7 @@ for every edge.  Translations and rotation give a three-dimensional kernel,
 so the rank is at most `2n-3`.  Equality is precisely infinitesimal rigidity in
 the plane.  This is the standard rigidity-matrix criterion; see Asimow and
 Roth, *The rigidity of graphs*, Trans. AMS 245 (1978), 279-289,
-<https://doi.org/10.1090/S0002-9947-1978-0511410-9>.
+<https://www.ams.org/journals/tran/1978-245-00/S0002-9947-1978-0511410-9/>.
 
 ## Exact finite-field certificate
 
