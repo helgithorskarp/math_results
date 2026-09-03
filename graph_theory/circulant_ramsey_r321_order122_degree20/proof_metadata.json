@@ -1,0 +1,38 @@
+{
+  "claim": "No 20-regular triangle-free circulant graph of order 122 has independence number at most 20.",
+  "cnf": {
+    "variables": 4741,
+    "clauses": 618664,
+    "structural_clauses": 10663,
+    "expanded_cut_clauses": 608001,
+    "sha256": "5121a54a52d13c440cd834974f1adf68992a6ea391051684dc3121b185f3580e"
+  },
+  "semantic_certificate": {
+    "file": "cut_witnesses.json",
+    "orbit_representatives": 20270,
+    "sha256": "1a0633cd6e5e6de939a96adac634027fd1df7589d2d24cf915cd875445fbef46"
+  },
+  "solver": {
+    "name": "CaDiCaL",
+    "version": "3.0.1",
+    "commit": "c60730422e758ef1cebe7aeddf2dda31c996bf04",
+    "result": "UNSATISFIABLE",
+    "wall_seconds": 225.283
+  },
+  "proof": {
+    "format": "binary DRAT",
+    "committed": false,
+    "bytes": 76954610,
+    "sha256": "25c39f19c54b2704e9c569f0eaddb6c73d4eae72aa9ea0cdfc14f884dd742f69"
+  },
+  "checker": {
+    "name": "drat-trim",
+    "commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "result": "VERIFIED",
+    "core_original_clauses": 11681,
+    "core_lemmas": 274637,
+    "resolution_steps": 20548582,
+    "wall_seconds": 573.120
+  }
+}
+
