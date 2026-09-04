@@ -13,7 +13,8 @@ There is no element of order nine. Every nontrivial 3-subgroup has exponent
 three; this does not bound its order by three or imply it is abelian.
 
 More specifically, every involution has at least five transpositions, every
-order-three element has at least seven 3-cycles. The last order-five type
+order-three element has at least eight 3-cycles (and at most 19 fixed
+vertices). The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
 using the analytic two-pattern incidence reduction.
@@ -38,9 +39,10 @@ to the known lower bound for `R(5,5)`.
 | external fixed-eight order-five exclusion | `1^8 5^7`; the wustep/maths q4 certificate is independently reconstructed from all five-sets and truth-table gate clauses, then replayed | [`ramsey_r55_order5_f8_external_reproduction`](../ramsey_r55_order5_f8_external_reproduction) |
 | final order-five type | `1^3 5^8`; both analytic incidence patterns have 148-variable full Ramsey formulas, independent orbit/clause reconstruction, and replayed DRAT proofs | [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism) |
 | sparse involutions and order-three elements | involutions with one through four transpositions and order-three elements with one through six 3-cycles; analytic local-neighborhood bounds | [`ramsey_r55_sparse_order2_order3_automorphism_obstruction`](../ramsey_r55_sparse_order2_order3_automorphism_obstruction) |
+| seven moving 3-cycles | `1^22 3^7`; degree equality reduces the moving graph to a cyclic matching cover of `K_7`, excluded by complete enumeration and a compact 191-addition RUP certificate | [`ramsey_r55_order3_seven_cycle_obstruction`](../ramsey_r55_order3_seven_cycle_obstruction) |
 | subgroups of order 25 | the surviving order-five types force a unique `C_5^2` action, whose 51-variable invariant formula is certified UNSAT; an order-25 element is excluded by its fifth power | [`ramsey_r55_c5_square_automorphism_obstruction`](../ramsey_r55_c5_square_automorphism_obstruction) |
 | order-15 elements | power constraints leave six cycle types; all six exact cyclic invariant formulas have independently reconstructed clauses and replayed DRAT certificates | [`ramsey_r55_order15_automorphism_obstruction`](../ramsey_r55_order15_automorphism_obstruction) |
-| order-nine elements | cubing leaves nine types; seven earlier certificates and two centralizer-normalized certified formulas exclude all nine | [`ramsey_r55_order9_automorphism_obstruction`](../ramsey_r55_order9_automorphism_obstruction) |
+| order-nine elements | nine types surviving the earlier cubing bounds; seven earlier certificates and two centralizer-normalized certified formulas exclude all nine | [`ramsey_r55_order9_automorphism_obstruction`](../ramsey_r55_order9_automorphism_obstruction) |
 | order-seven elements | all six types `1^f 7^k`, where `f+7k=43`; exact formula checks and replayed certificates | [`ramsey_r55_no_order7_automorphism`](../ramsey_r55_no_order7_automorphism) |
 | order-eleven elements | all three types `1^f 11^k`, where `f+11k=43`; exact formula checks and independently replayed RUP certificates | [`ramsey_r55_order11_automorphism_search`](../ramsey_r55_order11_automorphism_search) |
 | orders 13, 17, 19, and 23 | all eight types `1^f p^k`, where `f+pk=43`; exact formula checks and independently replayed RUP/DRAT certificates | [`ramsey_r55_medium_prime_automorphism_search`](../ramsey_r55_medium_prime_automorphism_search) |
@@ -72,6 +74,12 @@ their full extensions are now both certified UNSAT. The final package
 regenerates the two formulas and traces outside Git, independently
 reconstructs every clause, and replays the proofs. Its reference traces
 are 257,320 and 4,415,625 bytes; only source and compact evidence are committed.
+The complete order-five theorem, including all eight cycle types, now has
+an independently reconstructed and replayed review in
+[`ramsey_r55_no_order5_automorphism_review3`](../ramsey_r55_no_order5_automorphism_review3).
+The seven-3-cycle exclusion has no omitted certificate: its 3,125-byte RUP
+trace is committed, and its separate direct enumeration covers all
+`3^15` normalized matching assignments. Verification requires no solver.
 The fixed-33 package has also been independently
 regenerated, reconstructed, and replayed in
 [`ramsey_r55_order5_f33_degree_obstruction_review1`](../ramsey_r55_order5_f33_degree_obstruction_review1).
@@ -87,7 +95,7 @@ representatives to cover the group).  Reject the construction family if:
 
 1. an element has at most four vertex cycles;
 2. an involution has fewer than five transpositions;
-3. an order-three element has fewer than seven 3-cycles;
+3. an order-three element has fewer than eight 3-cycles;
 4. an element has order divisible by five, or a vertex cycle of length
    divisible by five;
 5. an element has prime order at least seven;
@@ -130,6 +138,16 @@ order-five types are therefore excluded, so Cauchy's theorem gives
 The sparse-motion theorem separately bounds the numbers of transpositions
 and 3-cycles by using monochromatic common-neighborhood caps; its ten types
 have many vertex cycles and are not consequences of the low-cycle rows.
+The additional type `1^22 3^7` attains equality in the sparse color-degree
+bound. Every moving triangle then has degree 18 in its own color, and two
+neighbors in each other moving cycle in that color. Opposite-colored
+triangles are incompatible. All moving triangles therefore share a color,
+and every opposite-color cross block is a perfect matching. Independent
+phase changes leave a cyclic threefold matching cover of `K_7` with 15
+free ternary shifts. Complete prefix enumeration covers all 14,348,907
+assignments without a survivor, and a separately reconstructed 45-variable
+formula has a 191-addition RUP refutation. Thus the current order-three
+minimum is eight moving cycles.
 The earlier order-25 theorem uses the then-surviving fixed counts three and eight to
 classify any `C_5^2` action as `1^3 5^3 25^1`; its exact invariant formula is
 UNSAT. A cyclic subgroup of order 25 is excluded because the fifth power of
@@ -141,7 +159,8 @@ For an order-15 element, its cube and fifth power reduce the possible cycle
 types to six; their 67--99-variable cyclic formulas are all certified UNSAT.
 This separate historical exclusion is likewise subsumed by absence of
 order-five elements.
-For order nine, cubing and the sparse order-three theorem leave nine types.
+For the earlier order-nine proof, cubing and the then-known sparse
+order-three bound left nine types.
 Seven earlier certificates exclude seven of them. Sorting internal cycle
 profiles and independently minimizing the cross words to one anchor cycle
 gives valid centralizer normalizations for the last two. Their exact formulas
