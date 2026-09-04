@@ -16,6 +16,13 @@ def convex_three_block_bound(h, intersections):
     return 2 * comb(s, 2) + comb(largest, 2) + connector
 
 
+def edge_chromatic_cap(edges):
+    c = 1
+    while c * (c + 1) // 2 <= edges:
+        c += 1
+    return c
+
+
 def reconstruct():
     summary = []
     for h in range(14, 18):
@@ -89,12 +96,18 @@ def reconstruct():
     assert all(sizes[-1] + sizes[0] <= 28 for sizes, q, *_ in frontier if q)
     assert len(frontier) == 11
 
-    return summary, parity_checks, tuple(sorted(frontier))
+    palette_caps = tuple(
+        (sizes, e_high, max(sizes), edge_chromatic_cap(e_high), max(sizes) + edge_chromatic_cap(e_high))
+        for sizes, _, _, _, e_high in sorted(frontier)
+    )
+    assert max(row[-1] for row in palette_caps) == 24 < 27
+
+    return summary, parity_checks, tuple(sorted(frontier)), palette_caps
 
 
 def main():
-    summary, parity_checks, frontier = reconstruct()
-    record = f"summary={summary};parity={parity_checks};h17={frontier}"
+    summary, parity_checks, frontier, palette_caps = reconstruct()
+    record = f"summary={summary};parity={parity_checks};h17={frontier};palette={palette_caps}"
     print("PASS independent Albertson h=14,15,16 reconstruction")
     for h, minimum, upper, rows, identities in summary:
         print(
@@ -103,6 +116,7 @@ def main():
         )
     print(f"unordered_contraction_pair_checks={parity_checks}")
     print(f"h17_three_block_signatures={frontier}")
+    print(f"h17_palette_caps={palette_caps}; maximum=24<27")
     print(f"independent_sha256={sha256(record.encode()).hexdigest()}")
 
 

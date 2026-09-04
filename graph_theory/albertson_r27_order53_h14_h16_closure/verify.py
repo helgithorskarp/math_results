@@ -190,6 +190,28 @@ def h17_three_block_audit():
     return tuple(sorted(survivors))
 
 
+def chromatic_edge_cap(edges):
+    """Largest chromatic number not excluded by the critical edge floor."""
+    chromatic = 1
+    while comb(chromatic + 1, 2) <= edges:
+        chromatic += 1
+    assert comb(chromatic, 2) <= edges < comb(chromatic + 1, 2)
+    return chromatic
+
+
+def h17_chromatic_closure(frontier):
+    """Use disjoint palettes on L,Q to eliminate all h=17 signatures."""
+    rows = []
+    for sizes, intersections, extra, e_low, e_high in frontier:
+        low_cap = max(sizes)  # all low blocks are cliques of at most this order
+        high_cap = chromatic_edge_cap(e_high)
+        total_cap = low_cap + high_cap
+        assert total_cap <= 24 < K
+        rows.append((sizes, intersections, extra, e_high, low_cap, high_cap, total_cap))
+    assert max(row[-1] for row in rows) == 24
+    return tuple(rows)
+
+
 def contraction_rigidity_audit():
     """Two distinct failed contractions force equal fixed-size rows."""
     checked = 0
@@ -290,6 +312,7 @@ def main():
     blocks = triple_block_audit()
     profiles = profile_audit()
     h17_frontier = h17_three_block_audit()
+    h17_chromatic = h17_chromatic_closure(h17_frontier)
     rigidity = contraction_rigidity_audit()
     target_types = one_target_type_audit(profiles)
     terminal_checks = terminal_identity_audit(profiles)
@@ -297,6 +320,7 @@ def main():
         f"blocks={[(h, blocks[h][2], blocks[h][3]) for h in blocks]};"
         f"profiles={[(h, profiles[h][0]) for h in profiles]};"
         f"h17={h17_frontier};"
+        f"h17_chromatic={h17_chromatic};"
         f"variants={sum(len(profiles[h][1]) for h in profiles)};"
         f"rigidity={rigidity};types={sorted(target_types.items())};"
         f"terminal={terminal_checks}"
@@ -312,6 +336,7 @@ def main():
         print(f"  exact bridge variants={len(profiles[h][1])}; witnesses={witnesses}")
     print(f"h=17 two-clique profiles={profiles[17][0]}")
     print(f"h=17 surviving three-block signatures={h17_frontier}")
+    print(f"h=17 disjoint-palette caps={h17_chromatic}; maximum=24<27")
     print(f"contraction_pair_checks={rigidity}")
     print(f"one_target_type_counts={target_types}")
     print(f"terminal_identity_checks={terminal_checks}")

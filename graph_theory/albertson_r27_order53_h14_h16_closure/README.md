@@ -1,4 +1,4 @@
-# Gallai-block persistence closes Albertson `r=27` through `h=16`
+# Gallai-block persistence closes Albertson `r=27` through `h=17`
 
 This note advances the sole surviving Albertson frontier row
 
@@ -18,12 +18,14 @@ to be 26-colourable or to contain a subdivision of `K27`.  Consequently every
 hypothetical counterexample in the final order/size row satisfies
 
 ```text
-                         |Q| >= 17.                       (1)
+                         |Q| >= 18.                       (1)
 ```
 
-At the new boundary `h=17`, the same argument eliminates every two-large-
-block form, and exact edge accounting classifies the remaining three-block
-families.  These families are recorded below as the next structural frontier.
+At `h=17`, the same argument eliminates every two-large-block form and exact
+edge accounting classifies the remaining three-block families.  A final
+chromatic edge count eliminates every one of them.  At `h=18`, a low vertex
+may lie in three large blocks for the first time, so this is the next
+structural frontier.
 
 The new structural point is an edge-budget persistence lemma.  Although low
 vertices may now lie in two large Gallai clique blocks, three large blocks
@@ -308,7 +310,7 @@ c0-d0-d1-z
 completes a `TK27`.  Thus every bridged profile is also terminal, proving
 (1).
 
-## The exact `h=17` three-block frontier
+## The exact `h=17` three-block classification
 
 At `h=17`, there are 36 low vertices and every low vertex lies in a clique
 block of order at least 10.  Four large blocks would cover at least
@@ -333,23 +335,36 @@ e(G[L])=226 or 227,        e(G[Q])=3 or 4.
 When `q=2`, the direct-intersection graph is a path, there is no additional
 low block, and the complete list is
 
-| large-block orders | `e(G[L])` | `e(G[Q])` |
-|---|---:|---:|
-| `(10,10,18)` | 243 | 20 |
-| `(10,11,17)` | 236 | 13 |
-| `(10,12,16)` | 231 | 8 |
-| `(10,13,15)` | 228 | 5 |
-| `(10,14,14)` | 227 | 4 |
-| `(11,11,16)` | 230 | 7 |
-| `(11,12,15)` | 226 | 3 |
-| `(11,13,14)` | 224 | 1 |
-| `(12,12,14)` | 223 | 0 |
+| large-block orders | `e(G[L])` | `e(G[Q])` | upper bound on `chi(G)` |
+|---|---:|---:|---:|
+| `(10,10,18)` | 243 | 20 | 24 |
+| `(10,11,17)` | 236 | 13 | 22 |
+| `(10,12,16)` | 231 | 8 | 20 |
+| `(10,13,15)` | 228 | 5 | 18 |
+| `(10,14,14)` | 227 | 4 | 17 |
+| `(11,11,16)` | 230 | 7 | 20 |
+| `(11,12,15)` | 226 | 3 | 18 |
+| `(11,13,14)` | 224 | 1 | 16 |
+| `(12,12,14)` | 223 | 0 | 15 |
 
-Here `e(G[Q])=e(G[L])-223` follows from the fixed low degree sum.  These are
-necessary block/edge signatures, not existence claims; incidence constraints,
-factor-criticality, complement connectivity, and criticality may eliminate
-some or all of them.  In particular, any `h=17` counterexample must have one
-of these three-large-block signatures.
+Here `e(G[Q])=e(G[L])-223` follows from the fixed low degree sum.  To obtain
+the last column, use two elementary facts.  First, a graph of chromatic number
+`c` has at least `binom(c,2)` edges: take a `c`-critical subgraph and sum its
+minimum degree `c-1`.  Second, a graph whose blocks are cliques has chromatic
+number equal to its largest clique-block order, by colouring the block-cut
+forest outward from a root and permuting colours at each cut vertex.
+
+Thus `chi(G[Q])` is at most 6,5,4,3,3,4,3,2,1 down the displayed rows, while
+`chi(G[L])` is at most the largest listed block order.  Using disjoint palettes
+gives the stated bounds, all at most 24.  In the one-intersection
+`(10,10,17)` signatures, `e(G[Q])` is 3 or 4, so the same argument gives
+`chi(G)<=17+3=20`.  Every three-block form is therefore incompatible with
+`chi(G)=27`, completing the proof of (1).
+
+This also explains the stopping boundary.  At `h=18`, equation (2) gives
+`s=9`, and a low vertex may belong to three large blocks because
+`3(s-1)=24<=26`.  The projected large-block intersection graph need no longer
+be a forest, so a new block-cut analysis is required.
 
 ## Reproduction and trust boundary
 
@@ -363,14 +378,14 @@ python3 independent_check.py
 With CPython 3.11.2, the expected final digests are
 
 ```text
-primary:     9a1e12fe2382d454f7d4ab1afeeaa7be3c3bd7df4204d0977fbc135750f06751
-independent: b7a08354ee2af58c3dc078ed432f415039811fb403e0107a3aa601ab659adc79
+primary:     fa48d80eca506332f3fe8b28abdd25616ceb7919fa5057c755dc32d5b7782828
+independent: 3c304ad579c82c7700f24023fcfc90cce5540f4098c90f43f14637e86026ba92
 ```
 
 SHA-256 of `verify.py`:
-`cfec057ff3442f76019a1eeea4ae688ff5a5da6a17930b9ca1c95bad0b07b07b`.
+`bae033c38ddac142829f319c4f8db54996952425670d0d91b28d9e06789074b5`.
 SHA-256 of `independent_check.py`:
-`66618d8516f5c8b010f164cb807ddaf4760b3753eaaa5b95d6a8f92fc60f4a3c`.
+`1499457bf1d3f5b1d311fe9ba7d34dbea1a6d687d54478589039e62f377e9b91`.
 
 The primary checker enumerates all admissible three-large-block forests,
 checks the connector bounds and low-edge contradiction, reconstructs every
@@ -390,8 +405,8 @@ The mathematical trust boundary is Sadhu's September 2026 connected-
 complement frontier, Gallai's low-vertex block theorem, Stehlik's colouring
 theorem, Konig's theorem, the independently reviewed rooted Gallai lemma,
 and the preceding `h=13` closure.  This note proves the new edge-budget
-persistence, the `h=14,15,16` terminal deductions, and the necessary
-three-block classification at `h=17`.
+persistence, the `h=14,15,16` terminal deductions, the three-block
+classification at `h=17`, and its chromatic closure.
 
 ## Sources and novelty scope
 
@@ -409,6 +424,6 @@ three-block classification at `h=17`.
 
 Targeted searches of the current Albertson and sparse-critical literature
 and of the committed Discovery Net found no prior three-level edge-budget
-persistence lemma, `h>=17` consequence, or `h=17` three-block classification.
+persistence lemma, `h>=18` consequence, or `h=17` three-block classification.
 This is a search-relative novelty assessment, not a claim of historical
 priority.
