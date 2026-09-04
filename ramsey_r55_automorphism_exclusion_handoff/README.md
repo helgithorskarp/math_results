@@ -23,6 +23,7 @@ to the known lower bound for `R(5,5)`.
 | exactly four vertex cycles | all 588 types: 185 exact degree obstructions and 403 independently replayed UNSAT certificates | [`ramsey_r55_four_cycle_minimal_orbit_obstruction`](../ramsey_r55_four_cycle_minimal_orbit_obstruction) |
 | four middle order-five types | `1^13 5^6`, `1^18 5^5`, `1^23 5^4`, and `1^28 5^3`; exact formula checks and replayed DRAT certificates | [`ramsey_r55_order5_middle_obstruction`](../ramsey_r55_order5_middle_obstruction) |
 | degree-strengthened order-five type | `1^33 5^2`; exact multiplicity-expanded degree networks, independent formula reconstruction, and a replayed DRAT certificate | [`ramsey_r55_order5_f33_degree_obstruction`](../ramsey_r55_order5_f33_degree_obstruction) |
+| analytic order-five type | `1^38 5`; the moving orbit is a two-colored `C_5`, and `R(4,5)=25` plus `R(3,5)=14` gives the contradiction `16 <= |Y| <= 13` | [`ramsey_r55_order5_f38_analytic_obstruction`](../ramsey_r55_order5_f38_analytic_obstruction) |
 | order-seven elements | all six types `1^f 7^k`, where `f+7k=43`; exact formula checks and replayed certificates | [`ramsey_r55_no_order7_automorphism`](../ramsey_r55_no_order7_automorphism) |
 | order-eleven elements | all three types `1^f 11^k`, where `f+11k=43`; exact formula checks and independently replayed RUP certificates | [`ramsey_r55_order11_automorphism_search`](../ramsey_r55_order11_automorphism_search) |
 | orders 13, 17, 19, and 23 | all eight types `1^f p^k`, where `f+pk=43`; exact formula checks and independently replayed RUP/DRAT certificates | [`ramsey_r55_medium_prime_automorphism_search`](../ramsey_r55_medium_prime_automorphism_search) |
@@ -42,8 +43,9 @@ one-fixed-point artifact omits a 1.304 GB proof tree under the repository's
 compact-artifact policy, but retains all leaf assignments and hashes and
 records that every leaf was replayed on the research host.  Users requiring
 a wholly compact standalone trust boundary should preserve that caveat.
-All five order-five proofs are compact and independently replayable, but the
-other three order-five cycle types remain open.
+The five computational order-five certificates are compact and independently
+replayable; the sixth exclusion is analytic. The other two order-five cycle
+types remain open.
 
 ## How to use the handoff
 
@@ -52,7 +54,7 @@ partition of every nonidentity element (or enough powers and conjugacy-class
 representatives to cover the group).  Reject the construction family if:
 
 1. an element has at most four vertex cycles;
-2. an order-five element has 13, 18, 23, 28, or 33 fixed vertices;
+2. an order-five element has 13, 18, 23, 28, 33, or 38 fixed vertices;
 3. an element has prime order at least seven;
 4. an element contains a cycle of prime length 29, 31, 37, 41, or 43; or
 5. an element fixes a vertex and also contains a cycle of length at least 25.
@@ -68,14 +70,14 @@ actions generally retain more edge orbits and therefore less of the
 dimensional advantage sought from a highly structured ansatz. The handoff
 does not prune an asymmetric local search and does not prove that a target,
 if it exists, must be asymmetric. An order-five element, if one exists, must
-have fixed count 3, 8, or 38.
+have fixed count 3 or 8.
 
 ## Logical derivation
 
 The one-cycle case is a 43-cycle and hence circulant after relabeling.  The
 next three rows exclude elements with exactly two, three, or four cycles, so
-every remaining nonidentity automorphism has at least five cycles. The two
-order-five artifacts close five of the eight types allowed by `f+5k=43`.
+every remaining nonidentity automorphism has at least five cycles. The three
+order-five artifacts close six of the eight types allowed by `f+5k=43`.
 An order-seven permutation on 43 points has one of the six displayed
 fixed-point/seven-cycle types, all covered by the order-seven artifact; the
 analogous equation for order eleven gives three types, all covered by the

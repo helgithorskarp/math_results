@@ -118,17 +118,22 @@ The eight order-five types have fixed counts
 3, 8, 13, 18, 23, 28, 33, 38.
 ```
 
-The present theorem closes the middle four. The types with fixed counts 3,
-8, 33, and 38 remain open. In bounded triage, both Kissat at 60 seconds and
-CaDiCaL at 120 seconds returned no verdict on each of those four formulas.
-Those timeouts establish nothing and are not part of the certificate.
+The present theorem closes the middle four. Subsequent sibling artifacts
+close fixed count 33 by degree networks and fixed count 38 analytically.
+In the original bounded triage, both Kissat at 60 seconds and CaDiCaL at 120
+seconds returned no verdict on each of fixed counts 3, 8, 33, and 38. Those
+historical timeouts establish nothing and are not part of this certificate.
 
 The exact construction consequence is correspondingly limited: an
 order-five symmetry in a hypothetical target must have one of
 
 ```text
-1^3 5^8,  1^8 5^7,  1^33 5^2,  1^38 5^1.
+1^3 5^8,  1^8 5^7.
 ```
+
+See [`ramsey_r55_order5_f33_degree_obstruction`](../ramsey_r55_order5_f33_degree_obstruction)
+and [`ramsey_r55_order5_f38_analytic_obstruction`](../ramsey_r55_order5_f38_analytic_obstruction)
+for the later exclusions.
 
 ## Scope, provenance, and trust boundary
 

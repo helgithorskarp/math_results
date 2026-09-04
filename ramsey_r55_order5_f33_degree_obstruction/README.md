@@ -7,10 +7,11 @@ set of order five. No automorphism of `G` has cycle type
 1^33 5^2.
 ```
 
-Together with the sibling four-type obstruction, this leaves only
-`1^3 5^8`, `1^8 5^7`, and `1^38 5^1` among the eight possible order-five
-types. This is an exact computer-assisted structural theorem, not a
-43-vertex construction or a Ramsey bound improvement.
+Together with the sibling four-type obstruction and the subsequent analytic
+exclusion of `1^38 5`, this leaves only `1^3 5^8` and `1^8 5^7` among the
+eight possible order-five types. This is an exact computer-assisted
+structural theorem, not a 43-vertex construction or a Ramsey bound
+improvement.
 
 ## Direct orbit formula
 
@@ -122,8 +123,10 @@ the drat-trim binary SHA-256 is
 
 ## Scope, provenance, and trust boundary
 
-The proof closes exactly `1^33 5^2`. The types `1^3 5^8`, `1^8 5^7`, and
-`1^38 5^1` remain open; bounded solver timeouts on them establish nothing.
+The proof closes exactly `1^33 5^2`. The types `1^3 5^8` and `1^8 5^7`
+remain open. The bounded solver timeout on `1^38 5^1` established nothing;
+that type is instead closed by the separate
+[`ramsey_r55_order5_f38_analytic_obstruction`](../ramsey_r55_order5_f38_analytic_obstruction).
 The result does not exclude all order-five automorphisms or asymmetric
 colorings.
 
