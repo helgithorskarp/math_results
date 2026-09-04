@@ -47,6 +47,11 @@ struct Bucket {
     bool operator==(const Bucket&) const = default;
 };
 
+struct ColourLibraries {
+    std::vector<std::vector<std::uint8_t>> left;
+    std::vector<std::vector<std::uint8_t>> small;
+};
+
 static i64 narrow(i128 value) {
     if (value < std::numeric_limits<i64>::min() || value > std::numeric_limits<i64>::max()) {
         throw std::overflow_error("int64 overflow");
@@ -136,6 +141,43 @@ static std::vector<Point> read_points(const std::string& path) {
     }
     if (points.size() != 509) throw std::runtime_error("expected 509 points");
     return points;
+}
+
+static ColourLibraries read_colour_libraries(const std::string& path) {
+    std::ifstream input(path);
+    if (!input) throw std::runtime_error("cannot open colour-library file");
+    ColourLibraries libraries;
+    std::string line;
+    while (std::getline(input, line)) {
+        if (line.empty()) continue;
+        std::vector<std::uint8_t>* destination = nullptr;
+        std::size_t expected_size = 0;
+        if (line.starts_with("L:")) {
+            libraries.left.emplace_back();
+            destination = &libraries.left.back();
+            expected_size = 374;
+        } else if (line.starts_with("S:")) {
+            libraries.small.emplace_back();
+            destination = &libraries.small.back();
+            expected_size = 136;
+        } else {
+            throw std::runtime_error("bad colour-library row prefix");
+        }
+        if (line.size() != expected_size + 2) {
+            throw std::runtime_error("bad colour-library row length");
+        }
+        destination->reserve(expected_size);
+        for (char value : line.substr(2)) {
+            if (value < '0' || value > '3') {
+                throw std::runtime_error("bad colour-library value");
+            }
+            destination->push_back(static_cast<std::uint8_t>(value - '0'));
+        }
+    }
+    if (libraries.left.size() != 135 || libraries.small.size() != 194) {
+        throw std::runtime_error("colour-library census mismatch");
+    }
+    return libraries;
 }
 
 using VectorsByDistance = std::map<Field, std::set<Vector>>;
@@ -267,6 +309,95 @@ static std::size_t edge_count(const std::vector<std::vector<bool>>& edges) {
         for (std::size_t v = u + 1; v < edges.size(); ++v) result += edges[u][v];
     }
     return result;
+}
+
+static void validate_colour_library(
+    const std::vector<std::vector<std::uint8_t>>& colourings,
+    const std::vector<std::vector<bool>>& edges
+) {
+    for (const auto& colours : colourings) {
+        if (colours.size() != edges.size()) {
+            throw std::runtime_error("colour-library graph order mismatch");
+        }
+        for (std::size_t u = 0; u < edges.size(); ++u) {
+            for (std::size_t v = u + 1; v < edges.size(); ++v) {
+                if (edges[u][v] && colours[u] == colours[v]) {
+                    throw std::runtime_error("improper colour-library witness");
+                }
+            }
+        }
+    }
+}
+
+using PatternMask = std::array<std::uint64_t, 4>;
+using CompatibilityTable = std::array<PatternMask, 256>;
+
+static CompatibilityTable make_compatibility_table() {
+    CompatibilityTable compatible{};
+    for (int small_pattern = 0; small_pattern < 256; ++small_pattern) {
+        std::array<int, 4> small_colours{};
+        for (int i = 0; i < 4; ++i) {
+            small_colours[i] = (small_pattern >> (2 * i)) & 3;
+        }
+        for (int left_pattern = 0; left_pattern < 256; ++left_pattern) {
+            std::array<int, 4> left_colours{};
+            for (int i = 0; i < 4; ++i) {
+                left_colours[i] = (left_pattern >> (2 * i)) & 3;
+            }
+            std::array<int, 4> permutation{0, 1, 2, 3};
+            bool works = false;
+            do {
+                works = permutation[small_colours[0]] == left_colours[0]
+                     && permutation[small_colours[1]] == left_colours[1]
+                     && permutation[small_colours[2]] != left_colours[2]
+                     && permutation[small_colours[3]] != left_colours[3];
+                if (works) break;
+            } while (std::next_permutation(permutation.begin(), permutation.end()));
+            if (works) {
+                compatible[small_pattern][left_pattern / 64]
+                    |= UINT64_C(1) << (left_pattern % 64);
+            }
+        }
+    }
+    return compatible;
+}
+
+static int colour_pattern(
+    const std::vector<std::uint8_t>& colours,
+    const std::array<std::size_t, 4>& vertices
+) {
+    int pattern = 0;
+    for (int i = 0; i < 4; ++i) pattern |= colours[vertices[i]] << (2 * i);
+    return pattern;
+}
+
+static bool absorbed_by_colour_libraries(
+    const std::vector<std::uint32_t>& overlaps,
+    const std::array<std::uint32_t, 3>& genuine_keys,
+    const ColourLibraries& libraries,
+    const CompatibilityTable& compatible
+) {
+    if (overlaps.size() != 2) throw std::runtime_error("bad overlap count");
+    const std::array<std::size_t, 4> left_vertices{
+        overlaps[0] / 136, overlaps[1] / 136,
+        genuine_keys[0] / 510, genuine_keys[1] / 510,
+    };
+    const std::array<std::size_t, 4> small_vertices{
+        overlaps[0] % 136, overlaps[1] % 136,
+        genuine_keys[0] % 510 - 374, genuine_keys[1] % 510 - 374,
+    };
+    PatternMask left_patterns{};
+    for (const auto& colours : libraries.left) {
+        const int pattern = colour_pattern(colours, left_vertices);
+        left_patterns[pattern / 64] |= UINT64_C(1) << (pattern % 64);
+    }
+    for (const auto& colours : libraries.small) {
+        const int pattern = colour_pattern(colours, small_vertices);
+        for (int word = 0; word < 4; ++word) {
+            if (left_patterns[word] & compatible[pattern][word]) return true;
+        }
+    }
+    return false;
 }
 
 // Exact lower bounds floor(sqrt(n)*10^12), indexed by the radical basis.
@@ -429,8 +560,8 @@ struct BucketNode {
 };
 
 int main(int argc, char** argv) {
-    if (argc != 2) {
-        std::cerr << "usage: census POINTS.tsv\n";
+    if (argc != 3) {
+        std::cerr << "usage: census POINTS.tsv COLOUR_LIBRARIES.txt\n";
         return 2;
     }
     check_radical_bounds();
@@ -448,6 +579,10 @@ int main(int argc, char** argv) {
     if (edge_count(left_edges) != 1860 || edge_count(small_edges) != 564) {
         throw std::runtime_error("internal edge census mismatch");
     }
+    const ColourLibraries colour_libraries = read_colour_libraries(argv[2]);
+    validate_colour_library(colour_libraries.left, left_edges);
+    validate_colour_library(colour_libraries.small, small_edges);
+    const CompatibilityTable compatible = make_compatibility_table();
     const auto left_vectors = directed_vectors(left);
     const auto small_vectors = directed_vectors(small);
     if (vector_count(left_vectors) != 11650 || vector_count(small_vectors) != 1666) {
@@ -467,13 +602,19 @@ int main(int argc, char** argv) {
     std::cout << "distinct_nonzero_S_vectors=" << vector_count(small_vectors) << '\n';
     std::cout << "internal_L_edges=" << edge_count(left_edges) << '\n';
     std::cout << "internal_Splus_edges=" << edge_count(small_edges) << '\n';
+    std::cout << "explicit_L_colourings=" << colour_libraries.left.size() << '\n';
+    std::cout << "explicit_Splus_colourings=" << colour_libraries.small.size() << '\n';
 
     std::uint64_t total_multi_overlap = 0;
     std::uint64_t pair_certificates = 0;
     std::uint64_t total_two = 0;
     std::uint64_t total_with_cross = 0;
     std::uint64_t total_with_genuine = 0;
-    std::array<std::uint64_t, 3> total_genuine_categories{};
+    std::array<std::uint64_t, 4> total_genuine_categories{};
+    std::array<std::uint64_t, 3> total_two_edge_topologies{};
+    std::array<std::uint64_t, 4> total_disjoint_adjacencies{};
+    std::uint64_t total_two_absorbed = 0;
+    std::array<std::uint64_t, 3> total_two_absorbed_by_topology{};
     std::uint64_t interval_candidates = 0;
     std::uint64_t exact_distance_checks = 0;
     std::vector<std::pair<i64, i64>> bucket_offsets;
@@ -517,14 +658,18 @@ int main(int argc, char** argv) {
         std::uint64_t local_two = 0;
         std::uint64_t local_with_cross = 0;
         std::uint64_t local_with_genuine = 0;
-        std::array<std::uint64_t, 3> local_genuine_categories{};
+        std::array<std::uint64_t, 4> local_genuine_categories{};
+        std::array<std::uint64_t, 3> local_two_edge_topologies{};
+        std::array<std::uint64_t, 4> local_disjoint_adjacencies{};
+        std::uint64_t local_two_absorbed = 0;
+        std::array<std::uint64_t, 3> local_two_absorbed_by_topology{};
         const std::uint64_t checks_before = exact_distance_checks;
         const std::uint64_t candidates_before = interval_candidates;
         for (const auto& [translation, overlaps] : differences) {
             if (overlaps.size() != 2) continue;
             ++local_two;
             bool has_cross = false;
-            std::array<std::uint32_t, 2> genuine_keys{};
+            std::array<std::uint32_t, 3> genuine_keys{};
             std::size_t genuine_count = 0;
             const RadicalInterval translation_x = radical_interval(translation.x);
             const RadicalInterval translation_y = radical_interval(translation.y);
@@ -532,7 +677,7 @@ int main(int argc, char** argv) {
                 translation_x, translation_y, orientation.denominator
             );
             for (const auto& [dx, dy] : bucket_offsets) {
-                if (genuine_count >= 2) break;
+                if (genuine_count >= 3) break;
                 const auto found = grid.find(Bucket{centre.x + dx, centre.y + dy});
                 if (found == grid.end()) continue;
                 for (const BucketNode& node : found->second) {
@@ -554,21 +699,55 @@ int main(int argc, char** argv) {
                                 genuine_keys.begin(), genuine_keys.begin() + genuine_count, *key
                             ) == genuine_keys.begin() + genuine_count) {
                             genuine_keys[genuine_count++] = *key;
-                            if (genuine_count >= 2) break;
+                            if (genuine_count >= 3) break;
                         }
                     }
-                    if (genuine_count >= 2) break;
+                    if (genuine_count >= 3) break;
                 }
             }
             local_with_cross += has_cross;
             local_with_genuine += genuine_count > 0;
             ++local_genuine_categories[genuine_count];
+            if (genuine_count == 2) {
+                const std::size_t left_a = genuine_keys[0] / 510;
+                const std::size_t left_b = genuine_keys[1] / 510;
+                const std::size_t small_a = genuine_keys[0] % 510 - 374;
+                const std::size_t small_b = genuine_keys[1] % 510 - 374;
+                int topology = 2;
+                if (left_a == left_b) {
+                    topology = 0;
+                } else if (small_a == small_b) {
+                    topology = 1;
+                } else {
+                    const int adjacency_type = 2 * left_edges[left_a][left_b]
+                                             + small_edges[small_a][small_b];
+                    ++local_disjoint_adjacencies[adjacency_type];
+                }
+                ++local_two_edge_topologies[topology];
+                if (absorbed_by_colour_libraries(
+                        overlaps, genuine_keys, colour_libraries, compatible)) {
+                    ++local_two_absorbed;
+                    ++local_two_absorbed_by_topology[topology];
+                }
+            }
         }
         total_two += local_two;
         total_with_cross += local_with_cross;
         total_with_genuine += local_with_genuine;
-        for (int category = 0; category < 3; ++category) {
+        for (int category = 0; category < 4; ++category) {
             total_genuine_categories[category] += local_genuine_categories[category];
+        }
+        for (int topology = 0; topology < 3; ++topology) {
+            total_two_edge_topologies[topology] += local_two_edge_topologies[topology];
+        }
+        for (int adjacency_type = 0; adjacency_type < 4; ++adjacency_type) {
+            total_disjoint_adjacencies[adjacency_type]
+                += local_disjoint_adjacencies[adjacency_type];
+        }
+        total_two_absorbed += local_two_absorbed;
+        for (int topology = 0; topology < 3; ++topology) {
+            total_two_absorbed_by_topology[topology]
+                += local_two_absorbed_by_topology[topology];
         }
         std::cout << "orientation=" << orientation_index
                   << ";reflected=" << orientation.reflected
@@ -578,7 +757,19 @@ int main(int argc, char** argv) {
                   << ";with_genuine=" << local_with_genuine
                   << ";genuine_zero=" << local_genuine_categories[0]
                   << ";genuine_one=" << local_genuine_categories[1]
-                  << ";genuine_two_plus=" << local_genuine_categories[2]
+                  << ";genuine_two=" << local_genuine_categories[2]
+                  << ";genuine_three_plus=" << local_genuine_categories[3]
+                  << ";two_share_left=" << local_two_edge_topologies[0]
+                  << ";two_share_small=" << local_two_edge_topologies[1]
+                  << ";two_disjoint=" << local_two_edge_topologies[2]
+                  << ";disjoint_adj00=" << local_disjoint_adjacencies[0]
+                  << ";disjoint_adj01=" << local_disjoint_adjacencies[1]
+                  << ";disjoint_adj10=" << local_disjoint_adjacencies[2]
+                  << ";disjoint_adj11=" << local_disjoint_adjacencies[3]
+                  << ";two_library_absorbed=" << local_two_absorbed
+                  << ";absorbed_share_left=" << local_two_absorbed_by_topology[0]
+                  << ";absorbed_share_small=" << local_two_absorbed_by_topology[1]
+                  << ";absorbed_disjoint=" << local_two_absorbed_by_topology[2]
                   << ";interval_candidates=" << interval_candidates - candidates_before
                   << ";exact_checks=" << exact_distance_checks - checks_before << '\n';
         if ((orientation_index + 1) % 100 == 0) {
@@ -594,7 +785,21 @@ int main(int argc, char** argv) {
     std::cout << "with_genuinely_new_cross_edge=" << total_with_genuine << '\n';
     std::cout << "with_zero_genuinely_new_cross_edges=" << total_genuine_categories[0] << '\n';
     std::cout << "with_exactly_one_genuinely_new_cross_edge=" << total_genuine_categories[1] << '\n';
-    std::cout << "with_at_least_two_genuinely_new_cross_edges=" << total_genuine_categories[2] << '\n';
+    std::cout << "with_exactly_two_genuinely_new_cross_edges=" << total_genuine_categories[2] << '\n';
+    std::cout << "with_at_least_three_genuinely_new_cross_edges=" << total_genuine_categories[3] << '\n';
+    std::cout << "two_new_edges_share_left_endpoint=" << total_two_edge_topologies[0] << '\n';
+    std::cout << "two_new_edges_share_small_endpoint=" << total_two_edge_topologies[1] << '\n';
+    std::cout << "two_new_edges_vertex_disjoint=" << total_two_edge_topologies[2] << '\n';
+    std::cout << "disjoint_two_edges_left_nonedge_small_nonedge=" << total_disjoint_adjacencies[0] << '\n';
+    std::cout << "disjoint_two_edges_left_nonedge_small_edge=" << total_disjoint_adjacencies[1] << '\n';
+    std::cout << "disjoint_two_edges_left_edge_small_nonedge=" << total_disjoint_adjacencies[2] << '\n';
+    std::cout << "disjoint_two_edges_left_edge_small_edge=" << total_disjoint_adjacencies[3] << '\n';
+    std::cout << "two_new_edges_absorbed_by_explicit_libraries=" << total_two_absorbed << '\n';
+    std::cout << "absorbed_two_edges_share_left_endpoint=" << total_two_absorbed_by_topology[0] << '\n';
+    std::cout << "absorbed_two_edges_share_small_endpoint=" << total_two_absorbed_by_topology[1] << '\n';
+    std::cout << "absorbed_two_edges_vertex_disjoint=" << total_two_absorbed_by_topology[2] << '\n';
+    std::cout << "two_new_edges_unresolved_by_explicit_libraries="
+              << total_genuine_categories[2] - total_two_absorbed << '\n';
     std::cout << "closed_by_single_cross_edge_absorption="
               << total_genuine_categories[0] + total_genuine_categories[1] << '\n';
     std::cout << "interval_candidates=" << interval_candidates << '\n';
@@ -602,9 +807,18 @@ int main(int argc, char** argv) {
     if (total_multi_overlap != 2992078 || pair_certificates != 17658256
         || total_two != 2373802 || total_with_genuine > total_with_cross
         || total_genuine_categories[0] + total_genuine_categories[1]
-             + total_genuine_categories[2] != total_two
+             + total_genuine_categories[2] + total_genuine_categories[3] != total_two
         || total_genuine_categories[1] + total_genuine_categories[2]
-             != total_with_genuine) {
+             + total_genuine_categories[3]
+             != total_with_genuine
+        || total_two_edge_topologies[0] + total_two_edge_topologies[1]
+             + total_two_edge_topologies[2] != total_genuine_categories[2]
+        || total_disjoint_adjacencies[0] + total_disjoint_adjacencies[1]
+             + total_disjoint_adjacencies[2] + total_disjoint_adjacencies[3]
+             != total_two_edge_topologies[2]
+        || total_two_absorbed_by_topology[0] + total_two_absorbed_by_topology[1]
+             + total_two_absorbed_by_topology[2] != total_two_absorbed
+        || total_two_absorbed > total_genuine_categories[2]) {
         throw std::runtime_error("census checksum mismatch");
     }
     std::cout << "exact_two_overlap_cross_census=true\n";
