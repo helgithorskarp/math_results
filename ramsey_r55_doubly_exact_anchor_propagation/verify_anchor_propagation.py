@@ -778,6 +778,7 @@ def main() -> None:
     escape_profile_counts = []
     escape_profile_lines = []
     escape_lower_bound_histograms = []
+    all_exact_anchor_lower_bounds = []
     minimum_internal_degree_at_27 = 21 - (43 - 27)
     minimum_component_order_at_27 = minimum_internal_degree_at_27 + 1
     if (minimum_internal_degree_at_27, minimum_component_order_at_27) != (5, 6):
@@ -791,6 +792,7 @@ def main() -> None:
             degree21_vertices = first_counts[3] + second_counts[3] + 1
             excess_budget = (43 - weight) // 2
             exact_anchor_lower_bound = degree21_vertices - excess_budget
+            all_exact_anchor_lower_bounds.append(exact_anchor_lower_bound)
             diameter_eight_count += exact_anchor_lower_bound >= 29
             diameter_five_count += exact_anchor_lower_bound >= 32
             if exact_anchor_lower_bound >= 27:
@@ -820,6 +822,15 @@ def main() -> None:
         raise AssertionError(diameter_five_profile_counts)
     if 4 * (29 - 21) <= 29 or 3 * (32 - 21) <= 32:
         raise AssertionError("balanced-degree diameter packing is wrong")
+    vertex_connectivity_spectrum = [
+        sum(lower_bound >= 26 + connectivity
+            for lower_bound in all_exact_anchor_lower_bounds)
+        for connectivity in range(1, 12)
+    ]
+    if vertex_connectivity_spectrum != [
+        314, 291, 253, 231, 193, 135, 128, 97, 22, 22, 20
+    ]:
+        raise AssertionError(vertex_connectivity_spectrum)
     if escape_profile_counts != [0, 0, 1, 3, 6, 10, 15]:
         raise AssertionError(escape_profile_counts)
     if escape_lower_bound_histograms != [
@@ -903,6 +914,8 @@ def main() -> None:
     print("PASS backbone escape profiles=0,0,1,3,6,10,15 total=35 "
           "sha256=bf0f2ef8a84453435e00778f04ff0892b16719ba244a7773d02ebddade99ca32")
     print("PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135")
+    print("PASS profile vertex-connectivity counts k=1,...,11 are "
+          "314,291,253,231,193,135,128,97,22,22,20")
     print("PASS first-degree-feasible tests have 0 secondary exact anchors")
     print("PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0")
     print("PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21")

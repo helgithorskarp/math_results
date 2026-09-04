@@ -486,8 +486,30 @@ enumeration of all 349 ordered split profiles gives
 | 219 | 95 | 85 | 70 | 37 | 10 |
 | 220 | 122 | 107 | 88 | 49 | 15 |
 
+The threshold is deletion-stable.  If a set `S` of `k<=d-27` anchors is
+removed, the remaining order is at least 27 and the same global degree count
+gives internal minimum degree
+
+```text
+21-(43-d+k)=d-k-22 >= 5.
+```
+
+The component argument therefore applies again.  Neither color can be
+disconnected after deleting at most `d-27` vertices, so
+
+```text
+vertex-connectivity of each color on D >= d-26 >= L-26.   (Profile-kappa)
+```
+
 In total, 314 of the 349 profiles force both color backbones connected.  The
-same internal-degree bound also controls their diameters.  A color geodesic
+numbers of profiles certifying vertex connectivity at least
+`k=1,2,...,11` in each color are respectively
+
+```text
+314, 291, 253, 231, 193, 135, 128, 97, 22, 22, 20.
+```
+
+The same internal-degree bound also controls diameters.  A color geodesic
 of length at least nine gives four disjoint closed neighborhoods, whereas a
 geodesic of length at least six gives three.  Since every such neighborhood
 has at least `d-21` vertices, `d>=29` forces diameter at most eight and
@@ -711,6 +733,7 @@ PASS C13(1,5) gives a sharp disconnected-blue abstract backbone
 PASS both-color connectivity profiles M214..220=1/1,5/5,16/17,37/40,63/69,85/95,107/122
 PASS backbone escape profiles=0,0,1,3,6,10,15 total=35 sha256=bf0f2ef8a84453435e00778f04ff0892b16719ba244a7773d02ebddade99ca32
 PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135
+PASS profile vertex-connectivity counts k=1,...,11 are 314,291,253,231,193,135,128,97,22,22,20
 PASS first-degree-feasible tests have 0 secondary exact anchors
 PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0
 PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21
