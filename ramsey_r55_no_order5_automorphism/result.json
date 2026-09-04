@@ -1,0 +1,62 @@
+{
+  "cases": [
+    {
+      "base_clauses": 248630,
+      "cnf": {
+        "bytes": 9623986,
+        "sha256": "d9158bf8335867d57006eabe2b72416b2ed79415923c1594a4c8c9fe2d56767a"
+      },
+      "h": 0,
+      "proof": {
+        "bytes": 257320,
+        "sha256": "68ceeda88d6cb39539e135d2d9dad6c6bc3dce9cae7b13bce37f743a307eb88e"
+      },
+      "proof_replay": "VERIFIED",
+      "status": "UNSAT",
+      "symmetry_clauses": 0,
+      "total_clauses": 248630,
+      "variables": 148
+    },
+    {
+      "base_clauses": 248610,
+      "cnf": {
+        "bytes": 9626831,
+        "sha256": "f91519f5032487f8d285e03838cb93f892f718606d613dbcbadf4e77882ca114"
+      },
+      "h": 1,
+      "proof": {
+        "bytes": 4415625,
+        "sha256": "aea31f657edbb09afe3dcb2696279ee06314047ce43b369edb226e0ea7059709"
+      },
+      "proof_replay": "VERIFIED",
+      "status": "UNSAT",
+      "symmetry_clauses": 169,
+      "total_clauses": 248779,
+      "variables": 148
+    }
+  ],
+  "claim": "No order-five automorphism of a Ramsey (5,5;43) graph",
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "edge_orbits_before_substitution": 183,
+  "five_sets": 962598,
+  "format": "r55-no-order5-automorphism-v1",
+  "large_proofs": "Regenerated outside the repository; reference hashes are not proofs.",
+  "new_cycle_type": "1^3 5^8",
+  "python": "3.11.2",
+  "tools": {
+    "drat_trim": {
+      "source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+      "tested_binary": {
+        "bytes": 51352,
+        "sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+      }
+    },
+    "kissat": {
+      "source_commit": "8af8e56f174b778aef3aa45af9f739b2a5f492c2",
+      "tested_binary": {
+        "bytes": 546552,
+        "sha256": "2d185ea775f2c7c16d33a235ef852d2b69f0f3c8b437335b966b4a5aa6265b45"
+      }
+    }
+  }
+}
