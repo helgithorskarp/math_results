@@ -88,9 +88,10 @@ sha256sum -c SHA256SUMS
 
 It uses only exact Python integers.  It checks 625 permutation/shape cases,
 343 Jacobi--Trudi/hyperfactorial identities, 1080 scaled-box inequalities
-including their exact equality cases, and 832 reflected-factor parameter
-triples.  The universal quantifiers are carried by the written algebraic
-proof; these finite checks independently audit its definitions and bridges.
+including their exact equality cases, 832 reflected-factor parameter
+triples, and 4615 instances of the all-Grassmannian strengthening below.
+The universal quantifiers are carried by the written algebraic proofs; these
+finite checks independently audit their definitions and bridges.
 
 The literature alignment is also correct.  Morales--Pak--Panova state the
 `k=2` inequality in [Conjecture 4.1](https://arxiv.org/html/1805.04341v1),
@@ -100,8 +101,8 @@ and Worley records the all-`k` version in
 ## Trust boundary and uncertainty
 
 The proof trusts the standard Grassmannian Schubert-to-Schur identity,
-Jacobi--Trudi, hook-content/MacMahon, and exact integer algebra.  The
-reproduction additionally trusts readable CPython, its standard-library
+Jacobi--Trudi, the Weyl dimension formula, hook-content/MacMahon, and exact
+integer algebra.  The reproduction additionally trusts readable CPython, its standard-library
 `comb`, `factorial`, and SHA-256 implementations, the interpreter, OS, and
 hardware.  It uses no floating point, randomness, solver, external data, or
 generated catalogue.
@@ -109,3 +110,78 @@ generated catalogue.
 I did not independently establish the contribution's historical novelty.
 Its novelty statement is appropriately search-relative, and the
 mathematical verdict does not depend on it.
+
+## Strengthening and improvement opportunities
+
+### Proved strengthening: all Grassmannian permutations
+
+The target's factor pairing extends beyond rectangles.  Let `w` be any
+Grassmannian permutation with unique descent `d`, and pad its shape to
+
+```text
+lambda_1 >= ... >= lambda_d >= 0.
+```
+
+Identity-block inflation is again Grassmannian, now with descent `kd` and
+shape
+
+```text
+(k lambda_1 repeated k times, ..., k lambda_d repeated k times).
+```
+
+Indeed, the difference between an inflated value and its position is
+`k(w_i-i)`, independently of the residue inside its identity block.  Apply
+the Weyl dimension formula
+
+```text
+s_lambda(1^d) = product_(i<j)
+  (lambda_i-lambda_j+j-i)/(j-i).
+```
+
+For fixed `i<j` and residues `r,s`, put
+
+```text
+A = k(lambda_i-lambda_j+j-i),  B = k(j-i),  x = s-r.
+```
+
+The inflated factor is `(A+x)/(B+x)`.  Pairing `(r,s)` with `(s,r)` again
+gives
+
+```text
+(A^2-x^2)/(B^2-x^2) >= A^2/B^2
+```
+
+with exact surplus `x^2(A^2-B^2)`.  Within a repeated row block the Weyl
+factors are one.  Multiplication proves
+
+```text
+Upsilon_(w tensor 1_k) >= Upsilon_w^(k^2)
+```
+
+for **every Grassmannian permutation** and every `k>=1`.  For `k>1`,
+equality holds exactly when all padded parts `lambda_i` are equal; otherwise
+some `i<j` has `lambda_i>lambda_j` and a residue pair has `x!=0`.  The
+target's rectangle is `lambda=(b^a,0^c)`, so its equality condition is the
+special case `c=0` or `k=1`.
+
+The two cited primary sources and targeted arXiv searches did not surface
+this broader Grassmannian statement.  It is therefore potentially novel in
+this review's limited search sense, not asserted as a historical-priority
+claim.
+
+The checker validates the Jacobi--Trudi and Weyl evaluations plus this
+paired-factor proof on all 923 partitions of lengths at most six with parts
+at most five, for five values of `k` (4615 scaled instances).  This finite
+audit is corroborative; the displayed Weyl-product argument is the proof.
+
+### Next improvements
+
+1. Promote the all-Grassmannian statement to a standalone theorem and
+   connect it directly to the Morales--Pak--Panova/Worley problem node.  Its
+   proof needs only the standard Grassmannian Schubert-to-Schur theorem and
+   the displayed Weyl-factor pairing.
+2. Formalize the general partition-inflation identity, Weyl product, and
+   paired rational inequality in Lean.  This would remove the remaining
+   reliance on prose for the universal quantifiers.
+3. Correct “fixed subcells” to “central-antidiagonal factors” in the source
+   exposition.  No theorem or computation needs to change.

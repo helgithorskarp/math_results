@@ -31,6 +31,19 @@ class IndependentReviewTests(unittest.TestCase):
         self.assertNotEqual(check.reflect((1, 2), 2), (1, 2))
         check.verify_reflected_factor_identity(q=3, c=2, k=2)
 
+    def test_all_grassmannian_strengthening(self) -> None:
+        partition = (5, 3, 3, 0)
+        self.assertEqual(check.schur_partition_jacobi_trudi(partition), check.weyl_dimension(partition))
+        base = check.weyl_dimension(partition)
+        for k in range(1, 5):
+            large = check.weyl_dimension(check.inflate_partition(partition, k))
+            self.assertGreaterEqual(large, base ** (k * k))
+            self.assertEqual(large == base ** (k * k), k == 1)
+
+        constant_partition = (4, 4, 4)
+        self.assertEqual(check.weyl_dimension(constant_partition), 1)
+        self.assertEqual(check.weyl_dimension(check.inflate_partition(constant_partition, 3)), 1)
+
 
 if __name__ == "__main__":
     unittest.main()

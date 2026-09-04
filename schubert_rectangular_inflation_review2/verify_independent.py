@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import functools
 import hashlib
+import itertools
 import math
 import sys
 
@@ -88,6 +89,19 @@ def schur_rectangle_jacobi_trudi(a: int, b: int, variables: int) -> int:
     return bareiss_determinant(matrix)
 
 
+def schur_partition_jacobi_trudi(partition: tuple[int, ...]) -> int:
+    """Evaluate s_partition(1^d), padding is explicit in len(partition)=d."""
+    d = len(partition)
+    assert d >= 1
+    assert all(partition[i] >= partition[i + 1] for i in range(d - 1))
+    assert partition[-1] >= 0
+    matrix = [
+        [complete_specialization(partition[row] - row + column, d) for column in range(d)]
+        for row in range(d)
+    ]
+    return bareiss_determinant(matrix)
+
+
 @functools.cache
 def hyperfactorial(n: int) -> int:
     """H(n)=product_(0<=j<n) j!."""
@@ -103,6 +117,29 @@ def boxed_plane_partitions(a: int, b: int, c: int) -> int:
     quotient, remainder = divmod(numerator, denominator)
     assert remainder == 0
     return quotient
+
+
+def weyl_dimension(partition: tuple[int, ...]) -> int:
+    """Evaluate s_partition(1^d) using the GL_d Weyl dimension product."""
+    d = len(partition)
+    assert d >= 1
+    assert all(partition[i] >= partition[i + 1] for i in range(d - 1))
+    assert partition[-1] >= 0
+    numerator = 1
+    denominator = 1
+    for i in range(d):
+        for j in range(i + 1, d):
+            numerator *= partition[i] - partition[j] + j - i
+            denominator *= j - i
+    quotient, remainder = divmod(numerator, denominator)
+    assert remainder == 0
+    return quotient
+
+
+def inflate_partition(partition: tuple[int, ...], k: int) -> tuple[int, ...]:
+    """Shape induced by identity-block inflation of a Grassmannian permutation."""
+    assert k >= 1
+    return tuple(k * part for part in partition for _ in range(k))
 
 
 def reflect(cell: tuple[int, int], k: int) -> tuple[int, int]:
@@ -144,6 +181,25 @@ def verify_reflected_factor_identity(q: int, c: int, k: int) -> None:
                 assert excess >= 0
                 assert (excess > 0) == (c > 0)
     assert len(visited) == k * k
+
+
+def verify_weyl_factor_block(partition: tuple[int, ...], i: int, j: int, k: int) -> None:
+    """Audit the residue-pair proof for one original Weyl factor."""
+    assert 0 <= i < j < len(partition) and k >= 1
+    difference = partition[i] - partition[j]
+    assert difference >= 0
+    a_value = k * (difference + j - i)
+    b_value = k * (j - i)
+    for r in range(1, k + 1):
+        for s in range(1, k + 1):
+            x = s - r
+            assert a_value + x > 0 and a_value - x > 0
+            assert b_value + x > 0 and b_value - x > 0
+            excess = b_value * b_value * (a_value * a_value - x * x)
+            excess -= a_value * a_value * (b_value * b_value - x * x)
+            assert excess == x * x * (a_value * a_value - b_value * b_value)
+            assert excess >= 0
+            assert (excess > 0) == (difference > 0 and x != 0)
 
 
 def main() -> None:
@@ -189,6 +245,26 @@ def main() -> None:
                 verify_reflected_factor_identity(q, c, k)
                 block_cases += 1
 
+    # The same factor pairing proves the stronger result for every
+    # Grassmannian shape, not just a rectangle followed by zero parts.
+    grassmannian_cases = 0
+    for d in range(1, 7):
+        for ascending in itertools.combinations_with_replacement(range(6), d):
+            partition = tuple(reversed(ascending))
+            base = weyl_dimension(partition)
+            assert schur_partition_jacobi_trudi(partition) == base
+            for k in range(1, 6):
+                inflated_partition = inflate_partition(partition, k)
+                inflated = weyl_dimension(inflated_partition)
+                bound = base ** (k * k)
+                assert inflated >= bound
+                assert (inflated == bound) == (k == 1 or len(set(partition)) == 1)
+                for i in range(d):
+                    for j in range(i + 1, d):
+                        verify_weyl_factor_block(partition, i, j, k)
+                digest.update(f"G{partition},{k}:{base},{inflated},{bound}\n".encode())
+                grassmannian_cases += 1
+
     assert boxed_plane_partitions(2, 2, 2) == 20
     assert boxed_plane_partitions(4, 4, 4) == 232848
     print(
@@ -197,6 +273,7 @@ def main() -> None:
         f"schur_cases={schur_cases} "
         f"inequality_cases={inequality_cases} "
         f"block_cases={block_cases} "
+        f"grassmannian_cases={grassmannian_cases} "
         f"digest={digest.hexdigest()} "
         f"python={sys.version.split()[0]}"
     )
