@@ -23,10 +23,10 @@ Thus none of the most heavily collapsed placements is five-chromatic.  This
 is a geometric maximum theorem and a restricted family exclusion, **not a new
 five-chromatic graph and not an improvement of the 509-vertex record**.
 
-A larger positive certificate checks all **5,468** placements with at least
-30 overlaps (union order at most 480).  Every one has an explicit proper
+A larger positive certificate checks all **16,542** placements with at least
+20 overlaps (union order at most 490).  Every one has an explicit proper
 four-colouring.  Consequently any five-chromatic union of these fixed `L` and
-`S+` gadgets has at most 29 overlaps and at least 481 vertices.  This lower
+`S+` gadgets has at most 19 overlaps and at least 491 vertices.  This lower
 bound is only for the fixed-gadget affine family; it is not a general lower
 bound for five-chromatic unit-distance graphs.
 
@@ -79,24 +79,24 @@ diff -u expected_overlap_scan.txt overlap_scan.txt
 python3 verify_high.py high_overlap_certificate.json
 ./enumerate_overlaps \
   ../hadwiger_nelson_parts509_completion_census_degree9/points.tsv \
-  --emit-at-least 30 > /scratch/overlap_atleast30_scan.txt
+  --emit-at-least 20 > /scratch/overlap_atleast20_scan.txt
 ./emit_graphs \
   ../hadwiger_nelson_parts509_completion_census_degree9/points.tsv \
-  /scratch/overlap_atleast30_scan.txt \
-  > /scratch/overlap_atleast30_graphs.txt
-python3 verify_graph_transcript.py overlap_atleast30_certificate.json \
-  /scratch/overlap_atleast30_scan.txt /scratch/overlap_atleast30_graphs.txt \
+  /scratch/overlap_atleast20_scan.txt \
+  > /scratch/overlap_atleast20_graphs.txt
+python3 verify_graph_transcript.py overlap_atleast20_certificate.json \
+  /scratch/overlap_atleast20_scan.txt /scratch/overlap_atleast20_graphs.txt \
   > /scratch/verify_graph_transcript.txt
 diff -u expected_verify_graph_transcript.txt \
   /scratch/verify_graph_transcript.txt
 ```
 
 The C++ scan is single-threaded and took about 80 seconds on the research
-host.  Emitting the 5,468 exact graphs takes about 80 seconds and produces a
-94 MB scratch transcript; its expected SHA-256 is
-`fdce57c196f3110465020fb45a7877c89c0c599c8b3a421f56fbc07a3edbccf8`.
-The committed threshold-30 certificate has SHA-256
-`d8978f19fe337c4630f3916b75cb3cbfe1da3e829cf9061129a80b2b65d6e930`.
+host.  Emitting the 16,542 exact graphs takes about three minutes and produces
+a 300 MB scratch transcript; its expected SHA-256 is
+`a774306af43b66eb3159068a16bf6beb1d5d13789c1a45be4978cc00de6a317a`.
+The committed threshold-20 certificate has SHA-256
+`e1aa967184c9b015ab66e7e7864e70bf7e81cb4c1d0016cd0e4afa7dc7ced5a4`.
 The high-placement integer-basis checker takes about 30 seconds; the
 independent Fraction checker took about four minutes under concurrent host
 load.  The optional independent 1,360-placement check
@@ -120,16 +120,18 @@ python3 -m venv /scratch/parts509-affine-overlap-venv
   generate_high_certificate.py overlap_scan.txt regenerated.json
 cmp high_overlap_certificate.json regenerated.json
 /scratch/parts509-affine-overlap-venv/bin/python \
-  generate_threshold_certificate.py /scratch/overlap_atleast30_scan.txt 30 \
+  generate_threshold_certificate.py /scratch/overlap_atleast20_scan.txt 20 \
   regenerated_threshold.json \
-  --graph-transcript /scratch/overlap_atleast30_graphs.txt
-cmp overlap_atleast30_certificate.json regenerated_threshold.json
+  --graph-transcript /scratch/overlap_atleast20_graphs.txt
+cmp overlap_atleast20_certificate.json regenerated_threshold.json
 ```
 
-The threshold-30 scan has the same full histogram as the default scan and
-additionally prints all 5,468 relevant transformations.  The graph transcript
+The threshold-20 scan has the same full histogram as the default scan and
+additionally prints all 16,542 relevant transformations.  The graph transcript
 accelerates positive-witness discovery and is cryptographically bound into
 the certificate.  It is generated rather than committed because of its size.
+The generator streams the transcript and stayed below 50 MB resident memory
+in the tested run.
 
 ## Trust boundary and scope
 
@@ -137,7 +139,7 @@ the certificate.  It is generated rather than committed because of its size.
   basis of `K`.  Every narrowing operation checks for 64-bit overflow, and
   hash-table keys retain exact values.  No floating-point operation is used.
 - SAT is used only to discover positive colourings: twelve in the compact
-  high certificate and 5,468 in the threshold-30 certificate.
+  high certificate and 16,542 in the threshold-20 certificate.
   `verify_graph_transcript.py` checks the exact scan, source hashes, transcript
   digest, graph metadata, every strict-edge list, and every packed colouring
   without invoking a solver.  The transcript itself comes from the exact
@@ -150,8 +152,8 @@ the certificate.  It is generated rather than committed because of its size.
   independently repeat the 2,840-orientation C++ scan.  The second checker
   independently parses the original Mathematica coordinates into exact
   `Fraction` field elements and repeats the twelve graph checks.
-- Nothing is claimed here about four-colourability of the 2,986,610 placements
-  with fewer than 30 overlaps, including all candidates of order 481 through
+- Nothing is claimed here about four-colourability of the 2,975,536 placements
+  with fewer than 20 overlaps, including all candidates of order 491 through
   508.
 
 ## Files
@@ -160,8 +162,10 @@ the certificate.  It is generated rather than committed because of its size.
 - `expected_overlap_scan.txt` — complete expected output for the exact path.
 - `high_overlap_certificate.json` — twelve transformations and proper
   four-colouring witnesses.
-- `overlap_atleast30_certificate.json` — all 5,468 transformations with at
-  least 30 overlaps and proper four-colouring witnesses.
+- `overlap_atleast20_certificate.json` — all 16,542 transformations with at
+  least 20 overlaps and proper four-colouring witnesses.
+- `overlap_atleast30_certificate.json` — the preceding 5,468-placement
+  subcertificate retained for reproducibility.
 - `overlap_atleast40_certificate.json` — independently reconstructed
   1,360-placement subcertificate.
 - `overlap_atleast50_certificate.json` — the earlier 372-placement

@@ -42,7 +42,7 @@ def parse_field(text: str):
 
 
 def parse_scan(path: Path):
-    histogram, entries, scalars = {}, [], {}
+    histogram, entries, scalars, flags = {}, [], {}, set()
     for line in path.read_text(encoding="ascii").splitlines():
         if line.startswith("overlap_multiplicity_"):
             key, value = line.split("=")
@@ -64,36 +64,57 @@ def parse_scan(path: Path):
             key, value = line.split("=", 1)
             if value.isdigit():
                 scalars[key] = int(value)
+            elif value == "true":
+                flags.add(key)
     entries.sort(
         key=lambda row: (
             row["reflected"], row["denominator"], row["c"], row["s"],
             row["translation_x"], row["translation_y"],
         )
     )
-    return histogram, entries, scalars
+    return histogram, entries, scalars, flags
 
 
-def parse_graph_transcript(path: Path):
-    result = []
-    for line in path.read_text(encoding="ascii").splitlines():
-        if not line.startswith("graph="):
-            continue
-        row = dict(item.split("=", 1) for item in line.split(";"))
-        edges = [
-            tuple(map(int, item.split("-")))
-            for item in row["edge_list"].split(",")
-            if item
-        ]
-        if int(row["graph"]) != len(result) or int(row["edges"]) != len(edges):
-            raise ValueError("bad graph transcript row")
-        result.append(
-            {
+def iter_graph_transcript(path: Path):
+    graph_count = None
+    next_graph = 0
+    finished = False
+    with path.open(encoding="ascii") as source:
+        for raw_line in source:
+            line = raw_line.rstrip("\n")
+            if line.startswith("graphs="):
+                if graph_count is not None:
+                    raise ValueError("duplicate graph transcript header")
+                graph_count = int(line.split("=", 1)[1])
+                continue
+            if line == "exact_graph_emission=true":
+                if finished:
+                    raise ValueError("duplicate graph transcript trailer")
+                finished = True
+                continue
+            if not line.startswith("graph="):
+                raise ValueError("unexpected graph transcript line")
+            if graph_count is None or finished:
+                raise ValueError("bad graph transcript framing")
+            row = dict(item.split("=", 1) for item in line.split(";"))
+            index = int(row["graph"])
+            if index != next_graph:
+                raise ValueError("noncontiguous graph transcript")
+            edges = [
+                tuple(map(int, item.split("-")))
+                for item in row["edge_list"].split(",")
+                if item
+            ]
+            if int(row["edges"]) != len(edges):
+                raise ValueError("bad graph transcript edge count")
+            yield {
                 "overlaps": int(row["overlaps"]),
                 "order": int(row["order"]),
                 "edges": edges,
             }
-        )
-    return result
+            next_graph += 1
+    if graph_count != next_graph or not finished:
+        raise ValueError("incomplete graph transcript")
 
 
 def scale(value, factor):
@@ -171,20 +192,30 @@ def solve(n, edges):
 
 
 def generate(scan: Path, minimum: int, output: Path, graph_transcript: Path | None) -> None:
-    histogram, entries, scalars = parse_scan(scan)
+    histogram, entries, scalars, flags = parse_scan(scan)
     expected = sum(value for key, value in histogram.items() if int(key) >= minimum)
     if len(entries) != expected:
         raise ValueError(f"scan emitted {len(entries)} placements; histogram requires {expected}")
     if any(row["overlaps"] < minimum for row in entries):
         raise ValueError("scan contains a placement below the requested threshold")
+    if sum(histogram.values()) != 2_992_078:
+        raise ValueError("bad full overlap histogram")
     if scalars.get("affine_placements_with_at_least_two_overlaps") != 2_992_078:
         raise ValueError("bad full-placement checksum")
     if scalars.get("recovered_pair_certificates") != 17_658_256:
         raise ValueError("bad determining-pair checksum")
+    if scalars.get("overlap_induced_rotations") != 1_420:
+        raise ValueError("bad rotation-orientation count")
+    if scalars.get("overlap_induced_reflections") != 1_420:
+        raise ValueError("bad reflection-orientation count")
+    if scalars.get("distinct_nonzero_L_vectors") != 11_650:
+        raise ValueError("bad L-vector count")
+    if scalars.get("distinct_nonzero_S_vectors") != 1_666:
+        raise ValueError("bad S-vector count")
+    if "exact_overlap_enumeration" not in flags:
+        raise ValueError("exact-enumeration trailer missing")
 
-    graphs = parse_graph_transcript(graph_transcript) if graph_transcript else None
-    if graphs is not None and len(graphs) != len(entries):
-        raise ValueError("graph transcript and scan have different lengths")
+    graphs = iter_graph_transcript(graph_transcript) if graph_transcript else None
     if graphs is None:
         points = geometry.read_points(POINTS)
         L, S = points[:374], [points[0]] + points[374:]
@@ -196,7 +227,10 @@ def generate(scan: Path, minimum: int, output: Path, graph_transcript: Path | No
             union, edges = strict_graph(labelled, row["denominator"], l_edges, s_edges)
             order = len(union)
         else:
-            graph = graphs[index]
+            try:
+                graph = next(graphs)
+            except StopIteration as error:
+                raise ValueError("graph transcript is shorter than scan") from error
             if graph["overlaps"] != row["overlaps"]:
                 raise ValueError("graph transcript overlap mismatch")
             order, edges = graph["order"], graph["edges"]
@@ -208,6 +242,13 @@ def generate(scan: Path, minimum: int, output: Path, graph_transcript: Path | No
         strict_edge_histogram[str(len(edges))] = strict_edge_histogram.get(str(len(edges)), 0) + 1
         if (index + 1) % 25 == 0:
             print(f"colored={index + 1}/{len(entries)}", flush=True)
+    if graphs is not None:
+        try:
+            next(graphs)
+        except StopIteration:
+            pass
+        else:
+            raise ValueError("graph transcript is longer than scan")
 
     certificate = {
         "format": FORMAT,
