@@ -188,11 +188,17 @@ def reconstruct(
     seed_counts: bytearray,
     flat_edges: array,
     incidence: list[array],
-) -> tuple[list[int], list[int], Counter[tuple[int, int]]]:
+) -> tuple[
+    list[int],
+    list[int],
+    Counter[tuple[int, int]],
+    dict[tuple[int, int], list[int]],
+]:
     sources = sorted((pack(row) for row in source_rows), key=word_key)
     if len(sources) != 238 or len(set(sources)) != 238:
         raise AssertionError("source list is not 238 distinct states")
     pairs: Counter[tuple[int, int]] = Counter()
+    pair_flip_edges: defaultdict[tuple[int, int], list[int]] = defaultdict(list)
     for source_number, source in enumerate(sources):
         if canonical(source) != source:
             raise AssertionError(f"source {source_number} is not canonical")
@@ -201,13 +207,15 @@ def reconstruct(
             raise AssertionError(f"source {source_number} has objective {objective}")
         for edge, target_objective in enumerate(after):
             if target_objective == 13:
-                pairs[source, canonical(source ^ (1 << edge))] += 1
+                pair = source, canonical(source ^ (1 << edge))
+                pairs[pair] += 1
+                pair_flip_edges[pair].append(edge)
     targets = sorted({target for _, target in pairs}, key=word_key)
     for target_number, target in enumerate(targets):
         images = {permute(target, rotation) for rotation in ROTATIONS}
         if canonical(target) != target or len(images) != N:
             raise AssertionError(f"target {target_number} is noncanonical or nonfree")
-    return sources, targets, pairs
+    return sources, targets, pairs, dict(pair_flip_edges)
 
 
 def summarize(
@@ -380,7 +388,9 @@ def main() -> None:
     self_test()
     seed_counts, flat_edges, incidence = build_five_set_table()
     source_rows = source_document["complete_additional_objective_12_rotation_representatives"]
-    sources, targets, pairs = reconstruct(source_rows, seed_counts, flat_edges, incidence)
+    sources, targets, pairs, pair_flip_edges = reconstruct(
+        source_rows, seed_counts, flat_edges, incidence
+    )
     expected_sources = [unpack(state) for state in sources]
     expected_targets = [unpack(state) for state in targets]
     source_index = {state: number for number, state in enumerate(sources)}
@@ -398,6 +408,14 @@ def main() -> None:
     claims = summarize(sources, targets, pairs)
     if certificate["claims"] != claims:
         raise AssertionError("claim dictionary differs entry-by-entry")
+    parallel_pairs = [pair for pair, multiplicity in pairs.items() if multiplicity > 1]
+    if len(parallel_pairs) != 1 or pairs[parallel_pairs[0]] != 2:
+        raise AssertionError("expected exactly one double-incidence pair")
+    parallel_source, parallel_target = parallel_pairs[0]
+    parallel_flips = pair_flip_edges[parallel_pairs[0]]
+    parallel_description = [
+        (edge, EDGES[edge], EDGE_DISTANCE[edge]) for edge in parallel_flips
+    ]
     elapsed = time.monotonic() - started
     print("PASS clean-room all-five-subsets verification of Cyclic(43) q=13 boundary")
     print(f"python={platform.python_version()} five_sets={FIVE_SET_COUNT} cpu_processes=1")
@@ -409,6 +427,10 @@ def main() -> None:
         f"components={claims['bipartite_component_count']} "
         f"simple_cycle_rank={claims['simple_cycle_rank']} "
         f"multigraph_cycle_rank={claims['multigraph_cycle_rank']}"
+    )
+    print(
+        f"parallel_pair=source[{source_index[parallel_source]}]"
+        f"->target[{target_index[parallel_target]}] flips={parallel_description}"
     )
     print(f"families={claims['source_support_family_histogram']}")
     print(f"certificate_sha256={digest(args.certificate)}")

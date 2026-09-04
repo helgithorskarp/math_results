@@ -62,24 +62,25 @@ The checker independently reconstructs and compares, entry by entry:
 - all 164 bipartite component profiles and both cycle ranks; and
 - the complete published `claims` dictionary.
 
-Two one-core runs passed in 31.365 and 32.126 seconds. The latter used 92,400
-KiB peak RSS and printed:
+Three one-core runs passed; the final run took 32.993 seconds and used 92,764
+KiB peak RSS. It printed:
 
 ```text
 PASS clean-room all-five-subsets verification of Cyclic(43) q=13 boundary
 python=3.11.2 five_sets=962598 cpu_processes=1
 sources=238 raw=1924 pairs=1923 targets=1785
 components=164 simple_cycle_rank=64 multigraph_cycle_rank=65
+parallel_pair=source[232]->target[270] flips=[(83, (2, 3), 1), (407, (11, 12), 1)]
 families={'cycle_only': 190, 'two_16_one_5': 38, 'two_17_one_21': 10}
 certificate_sha256=af8b6892049ace5610e2d7cea4c8642f39f53634287474127990aca0abbe2b85
-peak_rss_kib=92400
-elapsed_seconds=32.126
+peak_rss_kib=92764
+elapsed_seconds=32.993
 ```
 
 Checker SHA-256:
 
 ```text
-d184914c8ebbeebce3a3a238bb700118c6d8063d658b85b1283fe279097ac2fc  independent_five_set_check.py
+18f226475a3ad6beba2db3b55baf4a3e5479a570c57de698311407d8b1e4ce93  independent_five_set_check.py
 ```
 
 Run from the repository root:
@@ -103,6 +104,11 @@ canonicalization gives 1,923 distinct source-target pairs and 1,785 distinct
 target orbits; precisely one pair has multiplicity two. This explains the
 simple rank 64 and multigraph rank 65. Independent bipartite search produces
 164 components and none mixes the three source-support families.
+
+The unique parallel pair is certificate source 232 to target 270. Its two
+preimages are flips of length-one edges 83 = `{2,3}` and 407 = `{11,12}`;
+both canonicalize to the same cycle-only target. This gives an explicit,
+independently reconstructed witness for the sole extra multigraph incidence.
 
 The three family totals are independently confirmed: 190 cycle-only sources
 reach 1,381 targets in 122 components; 38 `{5,16,16}` sources reach 386
