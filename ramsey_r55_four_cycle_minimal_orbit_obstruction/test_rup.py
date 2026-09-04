@@ -8,14 +8,14 @@ from verify_proofs import RupChecker, parse_line
 
 class RupTests(unittest.TestCase):
     def test_satisfiable_formula_rejects_empty(self) -> None:
-        self.assertFalse(RupChecker([(1, 2)]).rup(()))
+        self.assertFalse(RupChecker(2, [(1, 2)]).rup(()))
 
     def test_nontrivial_step(self) -> None:
-        checker = RupChecker([(1, 2), (1, -2)])
+        checker = RupChecker(2, [(1, 2), (1, -2)])
         self.assertTrue(checker.rup((1,)))
 
     def test_unit_conflict(self) -> None:
-        self.assertTrue(RupChecker([(1,), (-1, 2), (-2,)]).rup(()))
+        self.assertTrue(RupChecker(2, [(1,), (-1, 2), (-2,)]).rup(()))
 
     def test_parse(self) -> None:
         self.assertEqual(parse_line("1 -2 0"), (False, (1, -2)))

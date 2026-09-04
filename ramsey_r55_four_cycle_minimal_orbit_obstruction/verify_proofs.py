@@ -14,7 +14,7 @@ from pathlib import Path
 
 
 ORDER = 43
-VARIABLES = 26
+MINIMUM_EDGE_ORBITS = 26
 
 
 def orbit_count(parts: tuple[int, ...]) -> int:
@@ -82,7 +82,7 @@ def reconstruct(parts: tuple[int, ...]) -> tuple[set[int], Counter[int]]:
     edges = list(itertools.combinations(range(ORDER), 2))
     representatives = {edge: canonical_edge(edge, parts) for edge in edges}
     ordered = sorted(set(representatives.values()))
-    if len(ordered) != VARIABLES:
+    if len(ordered) != orbit_count(parts):
         raise AssertionError("edge-orbit count mismatch")
     index = {representative: variable for variable, representative in enumerate(ordered)}
     edge_variable = {edge: index[representative] for edge, representative in representatives.items()}
@@ -100,18 +100,18 @@ def reconstruct(parts: tuple[int, ...]) -> tuple[set[int], Counter[int]]:
     return masks, orbit_sizes
 
 
-def clauses_from_masks(masks: set[int]) -> list[tuple[int, ...]]:
+def clauses_from_masks(masks: set[int], variables: int) -> list[tuple[int, ...]]:
     clauses = []
     for mask in sorted(masks):
-        positive = tuple(i + 1 for i in range(VARIABLES) if mask >> i & 1)
+        positive = tuple(i + 1 for i in range(variables) if mask >> i & 1)
         clauses.extend((positive, tuple(-literal for literal in positive)))
     clauses.append((1,))
     return clauses
 
 
-def cnf_sha256(clauses: list[tuple[int, ...]]) -> str:
+def cnf_sha256(variables: int, clauses: list[tuple[int, ...]]) -> str:
     digest = hashlib.sha256()
-    digest.update(f"p cnf {VARIABLES} {len(clauses)}\n".encode())
+    digest.update(f"p cnf {variables} {len(clauses)}\n".encode())
     for clause in clauses:
         digest.update((" ".join(map(str, clause)) + " 0\n").encode())
     return digest.hexdigest()
@@ -125,11 +125,12 @@ class WatchedClause:
 
 
 class RupChecker:
-    def __init__(self, initial: list[tuple[int, ...]]) -> None:
+    def __init__(self, variables: int, initial: list[tuple[int, ...]]) -> None:
+        self.variables = variables
         self.clauses: list[WatchedClause] = []
         self.watchers = {
             literal: []
-            for variable in range(1, VARIABLES + 1)
+            for variable in range(1, variables + 1)
             for literal in (variable, -variable)
         }
         self.units: list[int] = []
@@ -153,7 +154,7 @@ class RupChecker:
         clause = self.normalize(raw)
         if clause is None:
             return
-        if any(literal == 0 or abs(literal) > VARIABLES for literal in clause):
+        if any(literal == 0 or abs(literal) > self.variables for literal in clause):
             raise ValueError("literal outside declared range")
         if not clause:
             self.empty_present = True
@@ -185,7 +186,7 @@ class RupChecker:
         clause = self.normalize(raw)
         if clause is None:
             return True
-        assignment = [0] * (VARIABLES + 1)
+        assignment = [0] * (self.variables + 1)
         trail: deque[int] = deque()
         for unit in self.units:
             if not self.enqueue(unit, assignment, trail):
@@ -246,8 +247,8 @@ def parse_line(line: str) -> tuple[bool, tuple[int, ...]]:
     return deletion, tuple(map(int, fields[:-1]))
 
 
-def replay(clauses: list[tuple[int, ...]], path: Path) -> tuple[int, int]:
-    checker = RupChecker(clauses)
+def replay(variables: int, clauses: list[tuple[int, ...]], path: Path) -> tuple[int, int]:
+    checker = RupChecker(variables, clauses)
     additions = deletions = 0
     derived_empty = False
     for number, line in enumerate(path.read_text().splitlines(), start=1):
@@ -279,7 +280,7 @@ def main() -> None:
         "order": ORDER,
         "degree_window": [18, 24],
         "total_four_cycle_types": 588,
-        "minimum_edge_orbit_count": VARIABLES,
+        "minimum_edge_orbit_count": MINIMUM_EDGE_ORBITS,
         "minimum_orbit_types": 131,
         "degree_infeasible_minimum_orbit_types": infeasible,
         "certified_minimum_orbit_types": len(types),
@@ -294,11 +295,14 @@ def main() -> None:
 
     additions = deletions = proof_bytes = 0
     for index, (parts, case) in enumerate(zip(types, cases, strict=True), start=1):
+        variables = orbit_count(parts)
+        if variables != MINIMUM_EDGE_ORBITS:
+            raise AssertionError("minimum stratum has wrong variable count")
         masks, orbit_sizes = reconstruct(parts)
-        clauses = clauses_from_masks(masks)
+        clauses = clauses_from_masks(masks, variables)
         expected_case = {
             "cycle_type": list(parts),
-            "variable_count": VARIABLES,
+            "variable_count": variables,
             "edge_orbit_size_histogram": {
                 str(size): count for size, count in sorted(orbit_sizes.items())
             },
@@ -309,7 +313,7 @@ def main() -> None:
             },
             "clause_count": len(clauses),
             "color_swap_unit_clause": 1,
-            "cnf_sha256": cnf_sha256(clauses),
+            "cnf_sha256": cnf_sha256(variables, clauses),
             "satisfiable": False,
         }
         for key, value in expected_case.items():
@@ -320,7 +324,7 @@ def main() -> None:
             raise AssertionError(f"case {parts} proof hash mismatch")
         if path.stat().st_size != case["proof_byte_count"]:
             raise AssertionError(f"case {parts} proof size mismatch")
-        added, deleted = replay(clauses, path)
+        added, deleted = replay(variables, clauses, path)
         if added + deleted != case["proof_line_count"]:
             raise AssertionError(f"case {parts} proof line count mismatch")
         additions += added
