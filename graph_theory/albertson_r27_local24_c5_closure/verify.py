@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Exact audit for the Albertson r=27 unique-non-full-C5 closure.
+"""Exact audit for the Albertson r=27 terminal-triangulation closure.
 
-The topology is proved in README.md.  This checker verifies the defect
-arithmetic, terminal equality identities, forced endpoint reconstruction,
-and the contradiction in both previously certified residual profiles.
+The topology is proved in README.md. This checker verifies the profile
+arithmetic, terminal Euler equality, forced endpoint reconstruction, and the
+contradiction in both previously certified residual profiles.
 """
 
 from hashlib import sha256
@@ -125,17 +125,15 @@ def audit_profile(
     c5 = numerator // 3
     assert c5 == full + 1
 
-    # Each equality C5 reduction deletes two edges and four crossings and
-    # creates exactly one empty triangle.
+    # Each C5 deletion removes two edges and four crossings.  No local face
+    # assertion is needed: the resulting global Euler equality drives the
+    # topological reconstruction.
     terminal_edges = edges - 2 * c5
     terminal_crossings = crossings - 4 * c5
-    terminal_triangles = c5
-    assert defect(terminal_edges, terminal_crossings, terminal_triangles) == 0
 
-    # The two nonnegative slacks in the 1-planar branch both vanish.
-    twice_density_slack = 8 * S - terminal_triangles - 2 * terminal_edges
+    # Equality in the planarization bound makes the simple planarization a
+    # triangulation.
     planarization_slack = terminal_crossings - terminal_edges + 3 * S
-    assert twice_density_slack == 0
     assert planarization_slack == 0
 
     # The global terminal-kite argument uses the resulting equality in the
@@ -163,7 +161,7 @@ def audit_profile(
         "c5": c5,
         "terminal_edges": terminal_edges,
         "terminal_crossings": terminal_crossings,
-        "terminal_empty_triangles": terminal_triangles,
+        "planarization_slack": planarization_slack,
         "planar_vertices": planar_vertices,
         "planar_edges": planar_edges,
         "planar_faces": planar_faces,
@@ -185,10 +183,10 @@ def main() -> None:
             f"profile {row['name']}: delta=0, C5={row['c5']}, "
             f"reported_full={row['full_reported']}, "
             f"terminal=(e={row['terminal_edges']},x={row['terminal_crossings']},"
-            f"Delta={row['terminal_empty_triangles']})"
+            f"B={row['planarization_slack']})"
         )
     print(f"certificate_sha256={digest}")
-    print("PASS both profiles contradict the unique-non-full C5 lemma")
+    print("PASS both profiles contradict the terminal-triangulation C5 lemma")
 
 
 if __name__ == "__main__":

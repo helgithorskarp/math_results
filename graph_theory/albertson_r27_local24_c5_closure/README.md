@@ -1,24 +1,29 @@
-# Equality crossing 5-cycles close the local Albertson `r=27` endpoint
+# Terminal triangulation closes the local Albertson `r=27` endpoint
 
 This note supplies the missing topological step in the previously reviewed
-24-vertex reduction.  Its main lemma is the following unique-exception
-closure.
+24-vertex reduction. Its main lemma is the following profile-specific
+unique-exception closure.
 
-> **Unique-non-full `C5` lemma.**  Let `D` be a good 2-planar equality
-> drawing in Pach--Radoicic--Tardos--Toth Lemma 3.2.  Suppose exactly one
-> `C5` component of its edge-crossing graph is not a full 2-planar pentagon,
-> and every configuration-boundary edge of each full component is present.
-> Then the exceptional component is full as well, a contradiction.
+> **Terminal-triangulation `C5` lemma.** Let `D` be a good 2-planar drawing
+> whose edge-crossing graph consists of `C5` and `K2` components. In each
+> `C5`, perform the two-edge deletion described below, leaving one
+> crossing-free survivor and one crossing pair. Suppose the planarization of
+> the resulting 1-planar drawing `T` is a triangulation. If exactly one
+> original `C5` is not a full 2-planar pentagon, while every boundary edge of
+> every other (full) component is present, then the exceptional component is
+> full as well, a contradiction.
 
 Here the edge-crossing graph has one vertex for every crossed edge of `D`,
-with adjacency when two edges cross.  A full 2-planar pentagon consists of
-the five diagonals inside a crossing-free pentagonal boundary.
+with adjacency when two edges cross. A full 2-planar pentagon consists of the
+five diagonals inside a vertex-empty planar pentagonal boundary; the five
+boundary edges need not be graph edges in the definition.
 
 The preceding campaign reduction proves that a 24-vertex, 132-edge drawing
-with at most 164 crossings would have an equality 2-planar remainder `D2`
-with **exactly one non-full crossing `C5`** and `m0=0`, meaning that all
-configuration-boundary edges are present.  The lemma therefore excludes both
-residual profiles and proves
+with at most 164 crossings would have a 2-planar remainder `D2` with
+**exactly one non-full crossing `C5`** and `m0=0`, meaning that every present
+full configuration has all five boundary edges. In each of the two residual
+profiles, the reduced drawing `T` has a planarization attaining Euler
+equality. The lemma therefore excludes both profiles and proves
 
 ```text
 cr(24,132) >= 165.                                   (L24)
@@ -28,186 +33,139 @@ The already published exact propagation from `(L24)` gives
 `cr(53,713)>=6089>6084` and closes the last row in Sadhu's `r=27` frontier.
 Consequently Albertson's conjecture holds for chromatic number 27.
 
-Because the new ingredient is a delicate equality reading of a topological
-induction and of the sealed full-pentagon regions, the Discovery Net
-submission is conservatively labelled a proof attempt pending independent
-review.
+Because the new ingredient is a delicate topological reconstruction and
+sealed-region argument, the Discovery Net submission is conservatively
+labelled a proof attempt pending independent review.
 
-## 1. Defect and equality reduction
+## 1. Certified profile data and the `C5` deletion
 
 Write `n,e,x` for the numbers of vertices, edges, and crossings of a drawing,
 put `s=n-2`, and let `Delta` be the number of empty triangular faces of its
-crossing-free subgraph.  Define the integer defect
+crossing-free subgraph. The reviewed predecessor certificate uses the
+integer defect
 
 ```text
 delta(D) = 3x-7e+25s-2Delta.
 ```
 
-Pach--Radoicic--Tardos--Toth Lemma 3.2 is `delta(D)>=0`.
+Pach--Radoicic--Tardos--Toth Lemma 3.2 is `delta(D)>=0`. Its equality
+induction, already independently reviewed in the predecessor artifact,
+proves that the two profiles have only `C5` and `K2` crossing components and
+have respectively 10 and 12 `C5`s, exactly one of which is non-full.
 
-The equality reductions used below are the same reductions in its proof.
-They cause no hidden loss:
-
-1. If a missing edge can be inserted crossing-free, then `e` increases and
-   `Delta` does not decrease, making the inequality strict.  Hence an
-   equality drawing is crossing-free-edge-maximal.
-2. If the graph has a separation into smaller subgraphs meeting in at most
-   two vertices, restrict the drawing to the two parts.  The proof has
-   `x1+x2<=x`, `e1+e2>=e`, `s1+s2<=s`, and
-   `Delta1+Delta2>=Delta`.  Applying the lemma to the two parts shows that
-   equality in the original drawing forces equality everywhere, including
-   `x=x1+x2`.  In particular, no crossing pair straddles the two parts.
-   Equality questions may therefore be handled recursively in their
-   3-connected blocks.
-
-These observations justify using the local 3-connected configurations in
-the published proof and then passing their conclusions back through every
-equality separation.
-
-## 2. Terminal equality pairs are full kites
-
-We need the equality case of the one-crossing-per-edge branch.  Suppose `T`
-is a good 1-planar drawing with `delta(T)=0`.  The two nonnegative slacks used
-in Case 2 of Lemma 3.2 are
-
-```text
-A = 4s-Delta/2-e,        B = x-e+3s.
-```
-
-The first is Pach--Radoicic--Tardos--Toth Lemma 3.1 and the second is the
-planarization bound.  Directly,
-
-```text
-delta(T) = 4A+3B.
-```
-
-Thus both slacks vanish.  There is a direct global proof of the needed
-equality structure which avoids any issue about reassembling faces across a
-2-separation.  Planarize `T`, replacing each crossing by a degree-four
-vertex.  Because the drawing is good, the original graph is simple, and
-each edge is crossed at most once, the planarization is a simple plane graph
-with
-
-```text
-Vplan = n+x,       Eplan = e+2x.
-```
-
-The planar inequality `Eplan<=3Vplan-6` is exactly `B>=0`.  Since `B=0`, the
-planarization is a plane triangulation.  At a crossing vertex its four
-neighbors are the four distinct endpoints of the crossing pair, alternating
-around the vertex.  Every consecutive pair is joined by an edge because all
-four incident faces are triangular.  These four joining edges correspond to
-crossing-free edges of `T`, and the four triangles incident with the crossing
-vertex form an empty disk.  Undoing the planarization shows that the crossing
-pair is precisely the two diagonals of an empty quadrilateral face of the
-crossing-free subgraph.  We call this the **terminal kite property**.
-
-This argument proves emptiness of the kite globally, not only the existence
-of its four boundary edges inside a 3-connected equality block.
-
-## 3. Restoring the unique non-full equality `C5`
-
-Let a component of the edge-crossing graph be the cycle
+Label any one of the cycles
 
 ```text
 b -- a -- c -- d -- f -- b.
 ```
 
 Thus `a` crosses `b,c`; `c` also crosses `d`; `d` crosses `f`; and `f`
-crosses `b`.  First delete `b`.  Then apply Case 3 of the proof of Lemma 3.2
-to `c`, using `a=zw` as the now singly crossed edge.  Choose the endpoint `u`
-of `c` whose segment first meets `a`.  On deleting `c`, the published local
-argument makes
+crosses `b`. Delete `b,c`. This removes two edges and four crossings,
+leaving `a` crossing-free and `d,f` as a crossing pair. Doing this in all
+`q5` cycles gives a good 1-planar drawing `T` with
 
 ```text
-u-z-w
+e(T)=e(D2)-2q5,        x(T)=x(D2)-4q5.
 ```
 
-an empty triangular face of the new crossing-free subgraph.
+No face assertion from a block-local PRTT reduction will be used below.
 
-Let `D'` be the drawing after these two deletions and put
-`r=Delta(D')-Delta(D)`.  We have `r>=1`, `e'=e-2`, and `x'=x-4`, so
+## 2. Euler equality makes the terminal drawing triangular
+
+Planarize `T`, replacing each crossing by a degree-four vertex. Because the
+drawing is good, the original graph is simple, and each edge is crossed at
+most once, the planarization `P(T)` is a simple plane graph with
 
 ```text
-delta(D') = delta(D)+2-2r = 2-2r.
+Vplan = n+x(T),       Eplan = e(T)+2x(T).
 ```
 
-Lemma 3.2 applied to `D'` forces `r<=1`.  Consequently `r=1` and
-`delta(D')=0`: the two-edge reduction creates exactly one empty triangle and
-preserves equality.
-
-Perform this reduction on every `C5` crossing component.  Reductions of
-different components do not cross one another.  An already created empty
-triangle cannot be entered later without crossing its crossing-free
-boundary, so it remains an empty face.  The terminal drawing `T` is
-1-planar and still has zero defect.
-
-For the selected component, `a=zw` is now crossing-free and `d,f` are the
-surviving crossing pair.  By the terminal kite property they are the two
-diagonals of a quadrilateral face `Q`.  The deleted arc `c` crosses `a` and
-then `d`, and no edge that is crossing-free in `T`.  Hence the face on the
-other side of `a` from triangle `uzw` is exactly `Q`; the triangle and kite
-share the side `zw`.
-
-There is one necessary provenance check here.  Reducing another `C5` makes
-one of its formerly crossed edges crossing-free, so a priori a side of `Q`
-might not have been crossing-free in the original drawing.  In the present
-hypotheses every other `C5` is a full pentagon and every one of its boundary
-edges is present.  That crossing-free boundary encloses an empty pentagonal
-disk containing all five component edges.  Together with those diagonals the
-present boundary is a drawn `K5`, so simplicity and the absence of interior
-vertices leave no additional edge of another component inside the disk.  Its
-newly freed survivor remains inside this sealed disk.  The edges `d,f` of the
-exceptional component lie outside every such disk, so no survivor from
-another component can be a side of their face `Q`.  The only newly free edge
-of the exceptional component is
-`a` itself.  Consequently all five outer-boundary sides of the triangle--kite
-union were already crossing-free in the original drawing.  This is precisely
-where the uniqueness hypothesis and `m0=0` are used.
-
-Write the cyclic boundary of `Q` as
+The planar inequality `Eplan<=3Vplan-6` is
 
 ```text
-z,w,r,t
+B := x(T)-e(T)+3(n-2) >= 0.
 ```
 
-and, after possibly exchanging names, write its diagonals as
+For profile A, `(e(T),x(T))=(83,17)`; for profile B it is `(82,16)`.
+Since `n=24`, both have `B=0`. Therefore `P(T)` is a plane triangulation.
+
+At a crossing vertex its four neighbors are the four distinct endpoints of
+the crossing pair, alternating around the vertex. Every consecutive pair is
+joined by an edge because all four incident faces are triangular. These four
+joining edges correspond to crossing-free edges of `T`, and the four
+triangles incident with the crossing vertex form a vertex-empty disk.
+Undoing the planarization shows that the crossing pair is precisely the two
+diagonals of an empty quadrilateral face of the crossing-free subgraph. We
+call this the **terminal kite property**.
+
+This is a global consequence of Euler equality; it does not require
+reassembling block-local faces across a 2-separation.
+
+## 3. Tracing the deleted arcs through triangular faces
+
+Select the exceptional component and use the labels from Section 1. Put
+`a=zw`, and orient `c` from the endpoint `u` for which it crosses `a` before
+`d`. In `T`, every open portion of the deleted arc `c` between successive
+crossings lies in one face of the triangulation `P(T)`.
+
+The face immediately after `c` crosses `a` has the planarization edge `zw`
+and a segment of `d` on its boundary. A triangular face containing both
+forces that segment of `d` to end at one of `z,w` and at the crossing vertex
+of `d,f`. Thus `zw` is a side of the terminal kite of `d,f`. Write its cyclic
+boundary as `z,w,r,t` and, after exchanging labels if needed, write
 
 ```text
 d=zr,        f=wt.
 ```
 
-The endpoint of `c` on the triangular side of `zw` must be `u`: it cannot be
-`z` or `w`, since adjacent edges do not cross in a good drawing.  Its endpoint
-on the kite side must be `t`: it cannot be `z` or `w` because `c` crosses
-`a=zw`, and it cannot be `z` or `r` because `c` crosses `d=zr`.  Therefore
+The face immediately before the crossing with `a` is the other triangular
+face incident with `zw`; its third vertex is the endpoint `u`. It is
+therefore the empty triangle `u,z,w`. After crossing the `z`-to-crossing
+segment of `d`, the last portion of `c` lies in the triangle with third
+vertex `t`. Since a good drawing forbids an edge from crossing an adjacent
+edge, this forces
 
 ```text
 c=ut.
 ```
 
-The identical argument for `b`, which crosses `a` and `f`, gives
+The same face trace for `b`, which crosses `a` and `f`, starts in the unique
+triangle on the non-kite side of `zw` and ends in the opposite kite triangle.
+It consequently forces
 
 ```text
 b=ur.
 ```
 
-The five crossed edges are consequently
+There is one necessary provenance check. Reducing another `C5` makes one of
+its formerly crossed edges crossing-free, so a priori a boundary edge in the
+triangle--kite trace might be such a survivor rather than an edge that was
+already crossing-free in `D2`. Under the present hypotheses every other
+`C5` is a full pentagon and all five of its boundary edges are present. The
+configuration lies inside a planar 5-cycle with no other vertices. Its five
+diagonals together with the boundary form a drawn `K5`. Simplicity leaves no
+additional edge inside this sealed disk, and 2-planarity prevents an external
+edge from crossing the configuration. Hence its newly freed survivor remains
+inside its own disk. The exceptional edges `a,d,f` lie outside every such
+disk, so no other survivor can border any face traversed by `b` or `c`. The
+only newly free edge of the exceptional component is `a` itself.
+
+Consequently all five outer-boundary sides of the triangle--kite union were
+already crossing-free in `D2`. The five crossed edges are
 
 ```text
 zw, ur, ut, zr, wt,
 ```
 
-and the union of the triangle and quadrilateral has the crossing-free outer
-boundary
+and the union has the crossing-free, vertex-empty outer boundary
 
 ```text
 u-z-t-r-w-u.
 ```
 
-Thus the component is exactly the five diagonals of that crossing-free
-planar pentagon: a full 2-planar pentagon.  This proves the unique-non-full
-`C5` lemma.
+Those two sets partition the ten edges of the drawn `K5`. Thus the component
+is exactly the five diagonals of a full 2-planar pentagon. This proves the
+terminal-triangulation `C5` lemma.
 
 ## 4. Excluding the two 24-vertex profiles
 
@@ -218,10 +176,10 @@ For the two residual rows, the reviewed equality induction gives
 | A | 103 | 57 | 0 | 9 | 10 |
 | B | 106 | 64 | 0 | 11 | 12 |
 
-Here `q5=(2e(D2)-8(24-2))/3`.  In both rows `delta(D2)=0`, `m0=0`, and
-`q5=p+1`.  Thus the hypotheses of the unique-non-full `C5` lemma hold, and
-the final component must also be full, forcing `p=q5`.  This is the desired
-contradiction.
+Here `q5=(2e(D2)-8(24-2))/3`. In both rows `delta(D2)=0`, `m0=0`, and
+`q5=p+1`; the terminal values in Section 2 give Euler equality. Thus the
+hypotheses of the terminal-triangulation `C5` lemma hold. The final component
+must also be full, forcing `p=q5`, the desired contradiction.
 
 It follows that a 24-vertex, 132-edge graph has no drawing with at most 164
 crossings, proving `(L24)`.
@@ -234,25 +192,18 @@ Run under CPython 3.9 or later; there are no third-party dependencies:
 python3 verify.py
 ```
 
-Expected final line:
-
-```text
-PASS both profiles contradict the unique-non-full C5 lemma
-```
-
 Expected certificate digest:
 
 ```text
-45ee365069fffa39eb4a30f746908566a62baa2a666eb2fc64b70631de6a24ad
+714c3d4fe1d73893d360d57c3a9805caa1178be38cb6109384d39459397a8bd7
 ```
 
 The verifier checks, with exact integer and finite-set arithmetic:
 
 - zero PRTT defect for both residual rows;
-- preservation of zero defect and the one-new-triangle count under every
-  `C5` reduction;
-- equality in both terminal 1-planar slacks;
-- equality `Eplan=3Vplan-6` in the simple terminal planarization;
+- the edge and crossing counts after all `C5` deletions;
+- equality in the terminal planarization bound;
+- equality `Eplan=3Vplan-6` and `3Fplan=2Eplan`;
 - the unique endpoints of the two restored edges at a triangle--kite
   interface;
 - that the five restored edges are exactly the complement of the outer
@@ -260,13 +211,13 @@ The verifier checks, with exact integer and finite-set arithmetic:
 - the unique-exception condition `q5=p+1` and the resulting contradiction in
   both profiles.
 
-The executable does **not** certify planar topology.  The mathematical trust
-boundary is the good-drawing normalization, the equality reductions in the
-proof of Pach--Radoicic--Tardos--Toth Lemma 3.2, their Lemma 3.1, the reviewed
-Büngener--Kaufmann deletion-profile reduction (including `m0=0`), and the
-already published exact propagation from `(L24)` to the Albertson frontier.
-The new prose argument is the triangle--kite reconstruction and sealed-region
-provenance check in Section 3.
+The executable does **not** certify planar topology. The mathematical trust
+boundary is the good-drawing normalization, the reviewed PRTT equality
+classification of the crossing components, the reviewed Büngener--Kaufmann
+deletion-profile reduction (including `m0=0`), and the already published
+exact propagation from `(L24)` to the Albertson frontier. The new prose
+argument is the global triangular-face trace and sealed-region provenance
+check in Section 3.
 
 ## Sources and novelty scope
 
@@ -278,19 +229,3 @@ provenance check in Section 3.
   [*Improving the Crossing Lemma by Characterizing Dense 2-Planar and
   3-Planar Graphs*](https://arxiv.org/abs/2409.01733v2), especially Theorem 6
   and Propositions 21 and 23.
-- The reviewed [two-profile
-  reduction](../albertson_r27_local_4planar_obstruction/README.md), its
-  [independent review](../albertson_r27_local_4planar_obstruction_review/README.md),
-  and the [global propagation from the local
-  endpoint](../albertson_r27_local24_global_reduction/README.md).
-- A. Sadhu,
-  [*Albertson's Conjecture Holds for `r` at Most
-  26*](https://arxiv.org/abs/2609.01682v1), for the `r=27` order frontier.
-
-The inequality `(L24)` is an endpoint of the older PRTT conjecture, not a new
-problem.  Targeted primary-literature and committed-graph searches found no
-published result excluding a unique non-full `C5` in this equality setting.
-This is a search-relative novelty statement, not a claim of historical
-priority.  This version deliberately does **not** claim that arbitrary
-equality drawings cannot contain several mutually interacting non-full
-`C5` components.
