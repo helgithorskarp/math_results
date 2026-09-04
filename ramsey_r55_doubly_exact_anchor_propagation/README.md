@@ -192,6 +192,48 @@ Thus a search at `M=214` has no degree-count branching at all; the other six
 cross totals together have only 348 possible ordered side-count pairs before
 core-specific row and column feasibility is imposed.
 
+### Complete red-side exactness at `M=214`
+
+The singleton profile has a further divisibility consequence.  Including the
+chosen degree-21 anchor, the global degree counts are
+
+```text
+x_20=13,  x_21=30,  and all other x_d=0.
+```
+
+Its weight is `W=39`, so `Delta=(1247-39)/2=604`.  There are only two units
+of total excess above the hard baseline 602.  Let `E_R` and `E_B` be the sums
+of `delta_(u,R)-7` and `delta_(u,B)-7`; then
+
+```text
+E_R+E_B=2.
+```
+
+Before subtracting these excesses, the red local-edge sum is
+
+```text
+13(U(20)-7) + 30(U(21)-7)
+    = 13*93 + 30*100 = 4209.
+```
+
+The actual red local-edge sum is `4209-E_R=3T_R`, because every red triangle
+is counted at its three vertices.  Hence `E_R` is divisible by three.  Since
+`0<=E_R<=2`, necessarily
+
+```text
+E_R=0,  E_B=2,
+T_R=4209/3=1403,
+T_B=(13*107+30*100-2)/3=1463.                 (M214)
+```
+
+Consequently every red color-neighborhood is exactly seven-deficient: the 13
+degree-20 vertices have order-20 red local graphs with 93 edges, and the 30
+degree-21 vertices have order-21 red local graphs with 100 edges.  On the blue
+side either one local deficiency is nine or two are eight, with every other
+blue deficiency seven.  In particular at least 28 of the 30 degree-21
+vertices are doubly exact.  This is a necessary branch theorem; it does not
+assert that the pinned local graphs exist compatibly.
+
 ## Hard-branch propagation theorem
 
 For `18 <= q <= 24`, the exact maximum edge counts in an order-`q`
@@ -346,6 +388,8 @@ PASS all test matrices satisfy cross cardinality and first-degree bounds
 PASS split degree deviations equal M-220 and M-221
 PASS first-degree-feasible test weights=99,...,111 exceed hard limit 39
 PASS hard split degree-profile counts=1,5,17,40,69,95,122 total=349
+PASS M=214 forces degrees 20^13,21^30 and excess split red=0 blue=2
+PASS M=214 forces monochromatic triangle counts red=1403 blue=1463
 PASS first-degree-feasible tests have 0 secondary exact anchors
 PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0
 PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21

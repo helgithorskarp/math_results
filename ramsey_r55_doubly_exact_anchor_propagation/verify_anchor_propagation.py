@@ -442,6 +442,45 @@ def main() -> None:
     ):
         raise AssertionError(split_profiles[214])
 
+    # The unique M=214 split, plus the selected degree-21 anchor, has thirteen
+    # degree-20 and thirty degree-21 vertices.  Divisibility of each color's
+    # local-edge sum by three forces both excess-deficiency units to be blue.
+    _, first_counts, second_counts = split_profiles[214][0]
+    global_counts = [
+        first_counts[index] + second_counts[index] + (degree == 21)
+        for index, degree in enumerate(range(18, 25))
+    ]
+    if global_counts != [0, 0, 13, 30, 0, 0, 0]:
+        raise AssertionError(global_counts)
+    total_deficiency = (1247 - 39) // 2
+    total_excess = total_deficiency - 86 * 7
+    red_baseline = sum(
+        (EXTREMAL_EDGES[degree] - 7) * count
+        for degree, count in zip(range(18, 25), global_counts, strict=True)
+    )
+    blue_baseline = sum(
+        (EXTREMAL_EDGES[42 - degree] - 7) * count
+        for degree, count in zip(range(18, 25), global_counts, strict=True)
+    )
+    admissible_red_excess = [
+        excess
+        for excess in range(total_excess + 1)
+        if (red_baseline - excess) % 3 == 0
+        and (blue_baseline - (total_excess - excess)) % 3 == 0
+    ]
+    if (
+        total_deficiency,
+        total_excess,
+        red_baseline,
+        blue_baseline,
+        admissible_red_excess,
+    ) != (604, 2, 4209, 4391, [0]):
+        raise AssertionError("wrong M=214 excess split")
+    red_triangles = red_baseline // 3
+    blue_triangles = (blue_baseline - total_excess) // 3
+    if (red_triangles, blue_triangles) != (1403, 1463):
+        raise AssertionError((red_triangles, blue_triangles))
+
     # If W is the degree weight, at most W/3 secondary vertices are
     # noncentral and at most (43-W)/2 local sides exceed deficiency seven.
     # Audit both the structural 241-M lower bound and its attainment within
@@ -482,6 +521,8 @@ def main() -> None:
     print("PASS split degree deviations equal M-220 and M-221")
     print("PASS first-degree-feasible test weights=99,...,111 exceed hard limit 39")
     print("PASS hard split degree-profile counts=1,5,17,40,69,95,122 total=349")
+    print("PASS M=214 forces degrees 20^13,21^30 and excess split red=0 blue=2")
+    print("PASS M=214 forces monochromatic triangle counts red=1403 blue=1463")
     print("PASS first-degree-feasible tests have 0 secondary exact anchors")
     print("PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0")
     print("PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21")
