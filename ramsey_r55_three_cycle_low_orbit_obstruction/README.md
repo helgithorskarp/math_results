@@ -1,19 +1,19 @@
-# A low-edge-orbit three-cycle obstruction for Ramsey `K_43`
+# A complete three-cycle automorphism obstruction for Ramsey `K_43`
 
 Let `G` be a graph on 43 vertices with neither a clique nor an independent
-set of order five.  Then no automorphism of `G` has exactly three vertex
-cycles and at most 25 orbits on unordered vertex pairs.
+set of order five.  Then no nonidentity automorphism of `G` has exactly three
+vertex cycles.
 
-Equivalently, if a permutation of cycle type `(a)(b)(c)`, with
-`a+b+c=43`, induces at most 25 edge orbits, every invariant red/blue
-coloring of `K_43` contains a monochromatic `K_5`.
+Equivalently, for every permutation of cycle type `(a)(b)(c)`, with
+`a+b+c=43`, every invariant red/blue coloring of `K_43` contains a
+monochromatic `K_5`.
 
-This is an exact computer-assisted obstruction theorem.  It rules out 76 of
-the 154 unordered three-cycle types: 50 by a degree sieve and the remaining
-26 by exhaustive classification and independently replayed UNSAT
-certificates.  It does **not** construct a 43-vertex Ramsey graph, improve the
-lower bound for `R(5,5)`, or close the 49 degree-feasible types having more
-than 25 edge orbits.
+This is an exact computer-assisted obstruction theorem.  Of the 154 unordered
+three-cycle types, 79 fail a degree sieve and all 75 survivors have
+independently replayed UNSAT certificates.  The 26 types with at most 25 edge
+orbits additionally have complete objective classifications.  It does
+**not** construct a 43-vertex Ramsey graph or improve the lower bound for
+`R(5,5)`.
 
 ## Structural reduction
 
@@ -38,9 +38,10 @@ floor(a/2) + floor(b/2) + floor(c/2)
 
 There are 76 types with at most 25 edge orbits.  Fifty already fail the
 degree sieve; the other 26 have 23 or 25 Boolean edge-orbit variables and
-are classified exactly.
+are classified exactly.  The remaining 49 degree-feasible types have 27 to
+43 edge-orbit variables and are certified by SAT proofs.
 
-## Exact minima
+## Exact minima below the enumeration cutoff
 
 For every five-set `A`, let `M(A)` be the bit mask of edge orbits met by its
 ten edges, and let `w(M)` count five-sets with mask `M`.  If `S` is the set
@@ -63,9 +64,9 @@ case.  All minima are positive.  They range from 1,175, at cycle type
 
 ## Independent UNSAT certificates
 
-The proof path asks only the logically sufficient zero-versus-positive
-question and does not import the C++ classifier.  For each distinct mask
-`M`, it emits the two clauses
+The proof paths ask only the logically sufficient zero-versus-positive
+question and do not import the C++ classifier.  For each distinct mask `M`,
+they emit the two clauses
 
 ```text
 OR_{i in M} x_i
@@ -74,28 +75,30 @@ OR_{i in M} not x_i,
 
 which require both colors on the five-set.  A final unit clause fixes the
 first orbit red; global color complementation makes this equisatisfiable.
-The 26 instances have 2,515 to 4,447 clauses.  PySAT Glucose 4.2 reports each
-formula UNSAT and emits the compact traces in [`proofs/`](proofs/).
+Across the two edge-orbit strata the 75 instances have 2,515 to 87,311
+clauses.  PySAT Glucose 4.2 reports every formula UNSAT and emits the compact
+traces in [`proofs/`](proofs/) and [`proofs_high/`](proofs_high/).
 
-`verify_proofs.py` uses only the Python standard library.  It independently:
+`verify_proofs.py` and `verify_high_proofs.py` use only the Python standard
+library.  They independently:
 
 - rederives the degree sieve and all three-part partitions of 43;
 - canonicalizes every edge under repeated permutation images, rather than
   using the generator's unused-edge orbit walk;
 - regenerates every five-set mask and CNF hash;
 - checks every proof hash and byte count; and
-- replays all 1,026 proof additions by reverse unit propagation, reaching an
-  empty clause in every instance.
+- replay all 5,153 proof additions by reverse unit propagation, reaching an
+  empty clause in every one of the 75 instances.
 
-The traces also contain 4,144 deletion hints.  The checker soundly ignores
+The traces also contain 39,636 deletion hints.  The checker soundly ignores
 them and retains all derived clauses: every retained clause is already a
 logical consequence of the original formula, and retaining it only
-strengthens unit propagation.  The 26 traces total 80,177 bytes.
+strengthens unit propagation.  The 75 traces total 998,098 bytes.
 
 Thus solver correctness is outside the trust boundary of the obstruction
-claim.  The trusted components are the two small reconstruction programs,
-the checked proof bytes, the RUP checker, the degree lemma (including the
-known equality `R(4,5)=25`), and ordinary C++/Python execution semantics.
+claim.  The trusted components are the small reconstruction programs, the
+checked proof bytes, the RUP checker, the degree lemma (including the known
+equality `R(4,5)=25`), and ordinary C++/Python execution semantics.
 
 ## Reproduction
 
@@ -114,6 +117,9 @@ python3 -m venv .venv
 .venv/bin/python generate_proofs.py \
   --proof-dir proofs.regenerated \
   --result proof_manifest.regenerated.json
+.venv/bin/python generate_high_proofs.py \
+  --proof-dir proofs_high.regenerated \
+  --result high_proof_manifest.regenerated.json
 ```
 
 Generation is deterministic with `python-sat==1.9.dev15`; the regenerated
@@ -123,11 +129,11 @@ instance is used during classification or verification.
 
 ## Scope and literature
 
-The theorem concerns only automorphisms with exactly three vertex cycles and
-at most 25 induced edge orbits.  It says nothing about asymmetric colorings,
-automorphisms with other cycle counts, or the 49 degree-feasible three-cycle
-types above the cutoff.  The edge-orbit cutoff is computational, not a
-mathematical threshold.
+The theorem concerns only automorphisms with exactly three vertex cycles.  It
+says nothing about asymmetric colorings or automorphisms with other cycle
+counts.  The 25-edge-orbit threshold separates exhaustive objective
+classification from proof-only SAT certification; it is not a mathematical
+restriction in the final theorem.
 
 The structured-coloring motivation comes from Exoo's
 [*A lower bound for R(5,5)*](https://doi.org/10.1002/jgt.3190130113) and Ge,

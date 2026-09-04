@@ -7,4 +7,5 @@ compiler=${CXX:-g++}
 ./enumerate_three_cycles > classification.regenerated.txt
 cmp classification.txt classification.regenerated.txt
 python3 verify_proofs.py
+python3 verify_high_proofs.py
 python3 -m unittest -v test_rup.py
