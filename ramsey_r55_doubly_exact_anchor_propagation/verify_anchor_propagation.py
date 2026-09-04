@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import hashlib
 import itertools
+from pathlib import Path
 
 
 SIDE = 21
@@ -765,26 +766,33 @@ def main() -> None:
     if (abstract_red_minimum_degree, abstract_blue_minimum_degree) != (17, 8):
         raise AssertionError("wrong disconnected-blue backbone degrees")
 
-    # For M=216,217,218 both backbone colors have minimum degree at least
-    # four.  A disconnected color therefore has at least two independent
-    # vertices in every component.  Avoiding an opposite K5 forces exactly
-    # two alpha-two components, each of order at most 13 by R(5,3)=14.  Hence
-    # any profile forcing at least 27 exact anchors forces both colors to be
-    # connected.  Enumerate the only split profiles whose excess budget leaves
-    # a lower bound of at most 26 exact anchors.
+    # Every vertex in D has global degree 21 in each color.  If |D|=d, both
+    # induced colors therefore have minimum degree at least d-22.  At d>=27,
+    # every component has at least six vertices and hence an independent pair
+    # in its own color.  Avoiding an opposite K5 forces exactly two alpha-two
+    # components, each of order at most 13 by R(5,3)=14, contradicting d>=27.
+    # Thus the profile bound L>=27 forces both colors connected for every M.
     forced_connected_profile_counts = []
+    diameter_eight_profile_counts = []
+    diameter_five_profile_counts = []
     escape_profile_counts = []
     escape_profile_lines = []
     escape_lower_bound_histograms = []
-    for edge_count in range(216, 219):
-        if min(441 - 2 * edge_count, 440 - 2 * edge_count) < 4:
-            raise AssertionError("component argument needs minimum degree four")
+    minimum_internal_degree_at_27 = 21 - (43 - 27)
+    minimum_component_order_at_27 = minimum_internal_degree_at_27 + 1
+    if (minimum_internal_degree_at_27, minimum_component_order_at_27) != (5, 6):
+        raise AssertionError("balanced-degree component lower bound is wrong")
+    for edge_count in range(214, 221):
         forced_count = 0
+        diameter_eight_count = 0
+        diameter_five_count = 0
         escape_histogram = {}
         for weight, first_counts, second_counts in split_profiles[edge_count]:
             degree21_vertices = first_counts[3] + second_counts[3] + 1
             excess_budget = (43 - weight) // 2
             exact_anchor_lower_bound = degree21_vertices - excess_budget
+            diameter_eight_count += exact_anchor_lower_bound >= 29
+            diameter_five_count += exact_anchor_lower_bound >= 32
             if exact_anchor_lower_bound >= 27:
                 forced_count += 1
                 continue
@@ -797,23 +805,44 @@ def main() -> None:
                 f"{','.join(map(str, second_counts))}\n"
             )
         forced_connected_profile_counts.append(forced_count)
+        diameter_eight_profile_counts.append(diameter_eight_count)
+        diameter_five_profile_counts.append(diameter_five_count)
         escape_profile_counts.append(len(split_profiles[edge_count]) - forced_count)
         escape_lower_bound_histograms.append(escape_histogram)
     escape_profile_digest = hashlib.sha256(
         "".join(escape_profile_lines).encode("ascii")
     ).hexdigest()
-    if forced_connected_profile_counts != [16, 37, 63]:
+    if forced_connected_profile_counts != [1, 5, 16, 37, 63, 85, 107]:
         raise AssertionError(forced_connected_profile_counts)
-    if escape_profile_counts != [1, 3, 6]:
+    if diameter_eight_profile_counts != [0, 2, 11, 30, 52, 70, 88]:
+        raise AssertionError(diameter_eight_profile_counts)
+    if diameter_five_profile_counts != [0, 0, 5, 16, 28, 37, 49]:
+        raise AssertionError(diameter_five_profile_counts)
+    if 4 * (29 - 21) <= 29 or 3 * (32 - 21) <= 32:
+        raise AssertionError("balanced-degree diameter packing is wrong")
+    if escape_profile_counts != [0, 0, 1, 3, 6, 10, 15]:
         raise AssertionError(escape_profile_counts)
     if escape_lower_bound_histograms != [
+        {},
+        {},
         {26: 1},
         {25: 1, 26: 2},
         {24: 1, 25: 2, 26: 3},
+        {23: 1, 24: 2, 25: 3, 26: 4},
+        {22: 1, 23: 2, 24: 3, 25: 4, 26: 5},
     ]:
         raise AssertionError(escape_lower_bound_histograms)
-    if escape_profile_digest != "d0dcd1268b11f67bc747d27c7b9a501b6f330c49eda2c5d5cd41c0b9ced14e07":
+    if escape_profile_digest != "bf0f2ef8a84453435e00778f04ff0892b16719ba244a7773d02ebddade99ca32":
         raise AssertionError(escape_profile_digest)
+    expected_escape_file = (
+        "# M W L A_counts_degrees_18_to_24 B_counts_degrees_18_to_24\n"
+        + "".join(escape_profile_lines)
+    )
+    actual_escape_file = Path(__file__).with_name(
+        "BACKBONE_ESCAPE_PROFILES.txt"
+    ).read_text(encoding="ascii")
+    if actual_escape_file != expected_escape_file:
+        raise AssertionError("BACKBONE_ESCAPE_PROFILES.txt does not match enumeration")
 
     # If W is the degree weight, at most W/3 secondary vertices are
     # noncentral and at most (43-W)/2 local sides exceed deficiency seven.
@@ -869,9 +898,11 @@ def main() -> None:
     print("PASS M=216 red backbone order=26,...,36 is connected with diameter<=8")
     print("PASS M=216 blue disconnection forces two 13-vertex critical components")
     print("PASS C13(1,5) gives a sharp disconnected-blue abstract backbone")
-    print("PASS both-color connectivity profiles M216=16/17 M217=37/40 M218=63/69")
-    print("PASS backbone escape profiles=1,3,6 "
-          "sha256=d0dcd1268b11f67bc747d27c7b9a501b6f330c49eda2c5d5cd41c0b9ced14e07")
+    print("PASS both-color connectivity profiles M214..220="
+          "1/1,5/5,16/17,37/40,63/69,85/95,107/122")
+    print("PASS backbone escape profiles=0,0,1,3,6,10,15 total=35 "
+          "sha256=bf0f2ef8a84453435e00778f04ff0892b16719ba244a7773d02ebddade99ca32")
+    print("PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135")
     print("PASS first-degree-feasible tests have 0 secondary exact anchors")
     print("PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0")
     print("PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21")

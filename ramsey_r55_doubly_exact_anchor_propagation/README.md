@@ -12,7 +12,9 @@ chosen anchor: between 27 and 21 secondary anchors as `M` runs from 214 to
 220.  These exact anchors form connected red and blue backbones at `M=214`
 and `M=215`.  At `M=216` the red backbone remains connected, while every
 possible blue disconnection is reduced to two 13-vertex Ramsey-critical
-components.
+components.  Profile-sensitive excess accounting forces both colors
+connected in 314 of the 349 possible degree-count profiles across all
+`M=214,...,220`.
 
 This is a necessary pruning theorem for the hard construction branch.  It is
 not a 43-vertex Ramsey graph, an enumeration of the local cores, or a solver
@@ -440,7 +442,7 @@ Consequently the `M=216` order and degree bounds alone cannot force the blue
 backbone to be connected.  This 26-vertex auxiliary coloring is not asserted
 to extend to a full 43-vertex candidate.
 
-### A profile-level connectivity sieve through `M=218`
+### A profile-level connectivity sieve through `M=220`
 
 The component argument has a useful profile-sensitive form.  For a split
 profile of weight `W`, let `n_21` be the total number of degree-21 vertices,
@@ -457,21 +459,54 @@ least one such unit, so the profile itself certifies
 |D| >= L := n_21-E.                                  (Profile-D)
 ```
 
-For `M=216,217,218`, both color graphs on `D` have minimum degree at least
-four.  If either were disconnected, every component would contain an
-independent pair in that color.  Avoiding an opposite-color five-clique then
-forces exactly two components, each with independence number two and hence,
-by `R(5,3)=14`, order at most 13.  Thus `|D|<=26`.  In particular every
-profile with `L>=27` forces both backbone colors to be connected.  Exact
-enumeration of the 126 relevant ordered split profiles gives
+There is an `M`-independent connectivity threshold.  Put `d=|D|`.  Every
+vertex of `D` has 21 neighbors of each color in the full graph, while only
+`43-d` vertices lie outside `D`.  Consequently both induced color degrees
+are at least
 
-| `M` | all profiles | profiles with `L>=27` | escape profiles |
-|---:|---:|---:|---:|
-| 216 | 17 | 16 | 1 |
-| 217 | 40 | 37 | 3 |
-| 218 | 69 | 63 | 6 |
+```text
+21-(43-d)=d-22.                                      (D-internal)
+```
 
-Here is the complete escape list.  The two final columns are
+If `d>=27`, every component of either color has at least six vertices.  It
+cannot be complete because it is `K_5`-free, so it contains an independent
+pair in that color.  Avoiding an opposite-color five-clique then forces
+exactly two components, each with independence number two and hence, by
+`R(5,3)=14`, order at most 13.  This would give `d<=26`, a contradiction.
+Thus every profile with `L>=27` forces both backbone colors connected.  Exact
+enumeration of all 349 ordered split profiles gives
+
+| `M` | all | connected (`L>=27`) | diameter <=8 (`L>=29`) | diameter <=5 (`L>=32`) | escapes |
+|---:|---:|---:|---:|---:|---:|
+| 214 | 1 | 1 | 0 | 0 | 0 |
+| 215 | 5 | 5 | 2 | 0 | 0 |
+| 216 | 17 | 16 | 11 | 5 | 1 |
+| 217 | 40 | 37 | 30 | 16 | 3 |
+| 218 | 69 | 63 | 52 | 28 | 6 |
+| 219 | 95 | 85 | 70 | 37 | 10 |
+| 220 | 122 | 107 | 88 | 49 | 15 |
+
+In total, 314 of the 349 profiles force both color backbones connected.  The
+same internal-degree bound also controls their diameters.  A color geodesic
+of length at least nine gives four disjoint closed neighborhoods, whereas a
+geodesic of length at least six gives three.  Since every such neighborhood
+has at least `d-21` vertices, `d>=29` forces diameter at most eight and
+`d>=32` forces diameter at most five.  Thus the profile lower bound alone
+certifies both-color diameter at most eight in 253 profiles and at most five
+in 135 profiles.  (The earlier `M=214,215` arguments certify some stronger
+bounds outside these two generic counts.)
+
+The 35 connectivity escapes have lower-bound multiplicities
+
+```text
+M=216: L=26                          -> 1
+M=217: L=25,26                       -> 1,2
+M=218: L=24,25,26                    -> 1,2,3
+M=219: L=23,24,25,26                 -> 1,2,3,4
+M=220: L=22,23,24,25,26              -> 1,2,3,4,5.
+```
+
+Here are the first ten escapes, covering `M<=218`.  The two final columns are
 `(x_20,x_21,x_22)` on `A` and `B`; all other degree counts vanish.
 
 ```text
@@ -488,11 +523,13 @@ M   W   L    A              B
 218 27  26   (4,15,2)       (3,18,0)
 ```
 
-The canonical full seven-degree-count form of these ten lines has SHA-256
-`d0dcd1268b11f67bc747d27c7b9a501b6f330c49eda2c5d5cd41c0b9ced14e07`.
-For an escape profile that is actually disconnected, `L<=|D|<=26`.  The
-number of excess units not forced to serve distinct nonexact degree-21
-vertices is exactly
+The complete machine-readable list is
+[`BACKBONE_ESCAPE_PROFILES.txt`](BACKBONE_ESCAPE_PROFILES.txt).  Its 35
+canonical data lines have SHA-256
+`bf0f2ef8a84453435e00778f04ff0892b16719ba244a7773d02ebddade99ca32`,
+and the verifier regenerates it exactly.  For an escape profile that is
+actually disconnected, `L<=|D|<=26`.  The number of excess units not forced
+to serve distinct nonexact degree-21 vertices is exactly
 
 ```text
 E-(n_21-|D|)=|D|-L <= 26-L.
@@ -500,10 +537,10 @@ E-(n_21-|D|)=|D|-L <= 26-L.
 
 Thus an `L=26` escape has zero slack: every excess unit lies on a different
 nonexact degree-21 vertex, with no repeated excess and no excess on a
-noncentral local side.  The `L=25` and `L=24` cases have at most one and two
-slack units respectively.  These are direct cardinality and excess-budget
-constraints for a construction or local-repair search; they do not discard
-the escape profiles without further compatibility information.
+noncentral local side.  More generally the `L=25,24,23,22` cases have at most
+one, two, three, and four slack units.  These are direct cardinality and
+excess-budget constraints for a construction or local-repair search; they do
+not discard the escape profiles without further compatibility information.
 
 ## Hard-branch propagation theorem
 
@@ -671,8 +708,9 @@ PASS M=215 backbones connected; red connectivity>=2 diameters red<=5 blue<=8
 PASS M=216 red backbone order=26,...,36 is connected with diameter<=8
 PASS M=216 blue disconnection forces two 13-vertex critical components
 PASS C13(1,5) gives a sharp disconnected-blue abstract backbone
-PASS both-color connectivity profiles M216=16/17 M217=37/40 M218=63/69
-PASS backbone escape profiles=1,3,6 sha256=d0dcd1268b11f67bc747d27c7b9a501b6f330c49eda2c5d5cd41c0b9ced14e07
+PASS both-color connectivity profiles M214..220=1/1,5/5,16/17,37/40,63/69,85/95,107/122
+PASS backbone escape profiles=0,0,1,3,6,10,15 total=35 sha256=bf0f2ef8a84453435e00778f04ff0892b16719ba244a7773d02ebddade99ca32
+PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135
 PASS first-degree-feasible tests have 0 secondary exact anchors
 PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0
 PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21
