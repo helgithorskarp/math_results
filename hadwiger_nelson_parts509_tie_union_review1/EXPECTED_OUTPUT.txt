@@ -1,0 +1,32 @@
+Independent exact checker:
+
+exact_all_pairs: vertices=648 pairs=209628 unit_edges=3119 seconds=68.546
+P25: edges=2620 edge_sha256=9101b875b12b226f3a0345a5811bf334fcb24e5fe58dbeab2b36dee3cdca578c witnesses=550 minimal_killing_sets=54 opb_sha256=7c90e4b5f4f06b4a06944a373d587c1bef1766ef15426a90ee3b5514af903b6d
+P44: edges=2754 edge_sha256=d3b85a8b47ddcdddf2579ecf9af7970917a53f008f51a31221b7054cec553caf witnesses=645 minimal_killing_sets=133 opb_sha256=9ccfdbb0766e181018efa20eb68165eff11aaec88b9b06acda7b5c192fb27471
+L2: edges=3119 edge_sha256=3629fb1f1a6f5a242384898a93213eb7ae0664e5e7a8ef9fc6c280621799083b witnesses=1134 minimal_killing_sets=540 opb_sha256=b09f17c663c76350a6ff8b63019203299c0e6e950b4ea1d437640276ae9c37af
+all_checks=true total_witnesses=2329 seconds=74.672
+
+Independent pool reconstruction:
+
+tie_pools: swaps=11 pairs=60 triples=79 P25=25 P44=44
+level2_generation: generated_new=599 histogram={2: 458, 3: 131, 4: 10} raw_degree_at_least_3=141 seconds=18.667
+exact_pruning: initial=694 removed=46 surviving=648 matches_certificate=true seconds=76.267
+all_checks=true
+
+Contribution verifier plus exact optimizers:
+
+P25: edge_count=2620 witnesses=550 RC2=26 HiGHS=26 all_checks=true
+P44: edge_count=2754 witnesses=645 RC2=34 HiGHS=34 all_checks=true
+L2: edge_count=3119 witnesses=1134 RC2=34 HiGHS=34 all_checks=true
+
+RoundingSat d4edbf7908a9bb951fd181940919e0f3ac7ab1ee and VeriPB 3.0.2:
+
+P25: s UNSATISFIABLE; s VERIFIED UNSATISFIABLE
+  OPB sha256 7c90e4b5f4f06b4a06944a373d587c1bef1766ef15426a90ee3b5514af903b6d
+  proof sha256 49ffe96e4cb50bcdf603595c7231745a80609746cf9521cfac110de9931d54a6 bytes 4532
+P44: s UNSATISFIABLE; s VERIFIED UNSATISFIABLE
+  OPB sha256 9ccfdbb0766e181018efa20eb68165eff11aaec88b9b06acda7b5c192fb27471
+  proof sha256 39b13eabd38950e21b85fdd07d4d6514513f5445e5888ef31ada2f0ca4108690 bytes 262815
+L2: s UNSATISFIABLE; s VERIFIED UNSATISFIABLE
+  OPB sha256 b09f17c663c76350a6ff8b63019203299c0e6e950b4ea1d437640276ae9c37af
+  proof sha256 a7642baa7edc8a1dea3fea5526cee9cf208ebf3e0341776a03bc09c0b6c32869 bytes 122264591
