@@ -93,8 +93,8 @@ def verify(path: Path) -> None:
             raise ValueError(f"source hash mismatch: {name}")
 
     minimum = certificate.get("minimum_overlap")
-    if minimum != 50:
-        raise ValueError("this certificate must close the overlap threshold 50")
+    if not isinstance(minimum, int) or minimum < 2:
+        raise ValueError("bad certified overlap threshold")
     histogram = {int(key): value for key, value in certificate["overlap_multiplicity_histogram"].items()}
     if sum(histogram.values()) != 2_992_078:
         raise ValueError("full placement histogram mismatch")
@@ -102,7 +102,7 @@ def verify(path: Path) -> None:
         raise ValueError("determining-pair checksum mismatch")
     expected_placements = sum(value for k, value in histogram.items() if k >= minimum)
     rows = certificate["placements"]
-    if expected_placements != 372 or certificate.get("placement_count") != 372 or len(rows) != 372:
+    if certificate.get("placement_count") != expected_placements or len(rows) != expected_placements:
         raise ValueError("threshold placement count mismatch")
 
     source_points = geometry.read_points(POINTS)
@@ -150,8 +150,8 @@ def verify(path: Path) -> None:
     expected_edges = Counter({int(key): value for key, value in certificate["strict_edge_histogram"].items()})
     if observed_edges != expected_edges:
         raise ValueError("observed strict-edge histogram mismatch")
-    print("minimum_overlap=50")
-    print("four_colorable_placements=372")
+    print(f"minimum_overlap={minimum}")
+    print(f"four_colorable_placements={len(rows)}")
     print(f"union_order_range={min(510-k for k in observed_overlap)}..{max(510-k for k in observed_overlap)}")
     print(f"strict_edge_range={min(observed_edges)}..{max(observed_edges)}")
     print("solver_free_threshold_checks=true")
@@ -159,7 +159,7 @@ def verify(path: Path) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("certificate", nargs="?", type=Path, default=Path("overlap_atleast50_certificate.json"))
+    parser.add_argument("certificate", nargs="?", type=Path, default=Path("overlap_atleast40_certificate.json"))
     args = parser.parse_args()
     verify(args.certificate)
 
