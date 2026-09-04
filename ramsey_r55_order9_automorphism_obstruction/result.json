@@ -1,0 +1,51 @@
+{
+  "cases": [
+    {
+      "clauses": 211374,
+      "cnf_sha256": "263cb16b9558d9af6d45eef0195d9c224f64c4b9652fd2b28189fb70b439293d",
+      "cycle_counts": [
+        3,
+        5,
+        1
+      ],
+      "reference_proof_bytes": 2840051,
+      "reference_proof_format": "binary DRAT",
+      "reference_proof_sha256": "7a572df15def6905f9167377b006eb76a5fa27ca815391be7e04e90ea662132b",
+      "reference_replay": "VERIFIED",
+      "symmetry_clauses": 1168,
+      "variables": 127
+    },
+    {
+      "clauses": 212787,
+      "cnf_sha256": "cf358aadde89b8bed4943d11ae6419f7e824dcfe67ebad2f8d2598e13e1e4fbc",
+      "cycle_counts": [
+        4,
+        2,
+        1
+      ],
+      "reference_proof_bytes": 20250332,
+      "reference_proof_format": "binary DRAT",
+      "reference_proof_sha256": "2b824de414a791b561b001d77c7d673cb11e9e3c1adcafac9ebc565c557f4e5c",
+      "reference_replay": "VERIFIED",
+      "symmetry_clauses": 1725,
+      "variables": 105
+    }
+  ],
+  "format": "r55-order9-centralizer-closure-v1",
+  "order": 43,
+  "proof_storage": "Generated DRAT files are omitted from Git; reproduce.py regenerates and independently checks both. Hashes describe reference bytes, not substitutes for replay.",
+  "source_dependencies": {
+    "../ramsey_r55_order9_partial_automorphism_obstruction/generate_formula.py": "ff4e41859de3189a7ab87b34a0de4b841d38d59c304a17c90cba0e243a846a87",
+    "../ramsey_r55_order9_partial_automorphism_obstruction/verify_formula.cpp": "6a03f12dd924ab9045b826ea79419a1eb18c91f45ce613ffe9b860ef55eb628c"
+  },
+  "status": "exact computer-assisted structural theorem",
+  "tools": {
+    "drat_trim_binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+    "drat_trim_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "g++": "12.2.0",
+    "kissat_binary_sha256": "2d185ea775f2c7c16d33a235ef852d2b69f0f3c8b437335b966b4a5aa6265b45",
+    "kissat_commit": "8af8e56f174b778aef3aa45af9f739b2a5f492c2",
+    "kissat_version": "4.0.4",
+    "python": "3.11.2"
+  }
+}
