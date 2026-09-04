@@ -1,0 +1,29 @@
+Solver-free witness check:
+
+rows=3575 distinct=3575 minimal=2852
+minimal_size_histogram={1: 30, 2: 125, 3: 210, 4: 300, 5: 386, 6: 298, 7: 290, 8: 240, 9: 219, 10: 168, 11: 129, 12: 124, 13: 102, 14: 60, 15: 41, 16: 28, 17: 39, 18: 19, 19: 13, 20: 12, 21: 9, 22: 6, 23: 2, 24: 1, 27: 1}
+forced_singletons=30 minimal_pairs=125 pair_vertices=78
+hitting_set_size=90 sha256=3253baae849fe5dd1eb7c04a60fa05dbec61f26098fb4ed627c052f77bd61d76
+witness_check=true
+
+Sequential-counter API audit:
+
+sizes=1..8 assignments_checked=4096
+cardinality_api_check=true
+
+Decision CNF rebuild:
+
+forced=30 remaining=105 residual_sets=2822
+variables=2819 clauses=8237 sha256=cc48ddb59f66e752e1ad7bdd6c17c7ca492eb796a353332e8de49e3e9ffacfe7
+
+Target-verifier exact RC2 replay:
+
+(4) RC2 (core-guided MaxSAT, python-sat): minimum hitting set = 90 (1244s)
+    recomputed value 90 matches the recorded 90
+    => (solver-trusted) every Y subset S with L union Y union Q5 not 4-colourable has |Y| >= 90
+summary: 74 <= h_S (solver-free); 90 <= h_S (solver-trusted); h_S <= 98 (DRAT)
+all_checks=true
+
+Independent decision-CNF DRAT attempt:
+
+No terminal proof result is claimed or used in this evidence package.
