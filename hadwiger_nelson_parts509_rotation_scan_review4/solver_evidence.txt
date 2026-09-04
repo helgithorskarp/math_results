@@ -1,0 +1,30 @@
+Fresh one-core UNSAT proof replay, 2026-09-04 UTC
+
+CaDiCaL Debian 1.5.3-2, banner version sc2021
+binary_sha256=c6de62662723ec4a7426c5ca2bc9bfb04c60aad81a423957e3cd1ffadd0f8aa7
+command=cadical EVENT.cnf EVENT-fresh.drat
+
+drat-trim Debian 0.0~git20240428.effa1dc-2
+binary_sha256=bc7543a99da8521ddb09af442698956054f11e10d198bd482ac756535244c021
+command=drat-trim EVENT.cnf EVENT-fresh.drat
+
+event=108
+cnf_sha256=b59275f43657f668d21b5fe9ca02488d57b2283d940c454fbdb4aa5617eff426
+cnf_bytes=134402
+proof_sha256=7677db3d8448bd57b4f6ebe2e067fc759f67c3e4e91f0557f53fc1c91f15f3d4
+proof_bytes=6842632
+cadical_result=UNSATISFIABLE exit=20
+drat_trim_result=VERIFIED exit=0
+drat_trim_core=9171/10280 clauses; 48261/82649 lemmas; 3202987 resolution steps; 0 RAT lemmas
+
+event=109
+cnf_sha256=e03f90aa72ae88cd03c85f7cf8db57aaa99ecd7c8df32caff4ef22326ae302fa
+cnf_bytes=134402
+proof_sha256=94a7451fa6ee661538e6614e372fef11e9adb901fac62386a3522d453146b9e7
+proof_bytes=7103563
+cadical_result=UNSATISFIABLE exit=20
+drat_trim_result=VERIFIED exit=0
+drat_trim_core=9189/10280 clauses; 46758/81307 lemmas; 3070936 resolution steps; 0 RAT lemmas
+
+The fresh proof traces are reproducible scratch outputs and are not committed.
+Their hashes differ from the target's historical CaDiCaL 2.1.2 traces.
