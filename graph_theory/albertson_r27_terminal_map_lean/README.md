@@ -22,7 +22,7 @@ the proof. Finally, the order-53 deletion sum has the nonzero remainder that
 forces the integer lower bound 6089, which exceeds `Z(27)=6084`.
 
 [`AlbertsonTerminalMap.lean`](AlbertsonTerminalMap.lean) proves this statement
-as four closed theorems:
+as five closed theorems:
 
 - `finite_terminal_map_certificate` checks all face multiplicities, the five
   boundary and five internal edges, Euler count `6+5=10+1`, an explicit
@@ -30,6 +30,10 @@ as four closed theorems:
   vertex of the crossing graph. It also checks directed incidence: both
   orientations occur once on every internal edge, while the only surviving
   darts are `u->z->t->r->w->u`.
+- `vertex_link_certificate` derives every link from the oriented face list.
+  The five original vertices have explicitly connected interval links, with
+  two degree-one endpoints and all other degrees two, while `x` has the
+  circular link `z-w-r-t-z` with every degree equal to two.
 - `profileA_certificate` proves `C5=10`, terminal `(e,x)=(83,17)`, and
   planarization `(V,E,F)=(41,117,78)` together with both triangulation
   identities.
@@ -58,7 +62,7 @@ lean AlbertsonTerminalMap.lean | diff -u EXPECTED_OUTPUT.txt -
 sha256sum -c SHA256SUMS
 ```
 
-The expected transcript consists of four successful `#print axioms` audits.
+The expected transcript consists of five successful `#print axioms` audits.
 The proofs use kernel reduction through `decide`; there is no `sorry`, `admit`,
 `native_decide`, `unsafe` definition, custom axiom, external oracle, generated
 code, or imported certificate.

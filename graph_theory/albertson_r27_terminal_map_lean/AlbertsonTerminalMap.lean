@@ -132,6 +132,38 @@ def internalDartsCancel : Bool :=
   internalDarts.all fun dart =>
     dartMultiplicity dart == 1 && dartMultiplicity (reverseDart dart) == 1
 
+def allPlanarVertices : List PlanarVertex := [U, Z, T, R, W, X]
+
+def planarRank : PlanarVertex → Nat
+  | U => 0
+  | Z => 1
+  | T => 2
+  | R => 3
+  | W => 4
+  | X => 5
+
+def planarEdge (left right : PlanarVertex) : Dart :=
+  if planarRank left < planarRank right then (left, right) else (right, left)
+
+def faceLinkEdge (vertex : PlanarVertex) (face : OrientedFace) : Option Dart :=
+  if vertex == face.first then
+    some (planarEdge face.second face.third)
+  else if vertex == face.second then
+    some (planarEdge face.first face.third)
+  else if vertex == face.third then
+    some (planarEdge face.first face.second)
+  else
+    none
+
+def linkEdges (vertex : PlanarVertex) : List Dart :=
+  orientedFaces.filterMap (faceLinkEdge vertex)
+
+def linkDegree (vertex neighbor : PlanarVertex) : Nat :=
+  ((linkEdges vertex).filter fun side => side.1 == neighbor || side.2 == neighbor).length
+
+def activeLinkDegrees (vertex : PlanarVertex) : List Nat :=
+  (allPlanarVertices.map (linkDegree vertex)).filter fun degree => degree > 0
+
 /-- The five listed triangles have the claimed disk incidence data, Euler
 count, pentagonal boundary, and complementary five-edge crossing cycle. -/
 theorem finite_terminal_map_certificate :
@@ -159,6 +191,24 @@ theorem finite_terminal_map_certificate :
     orientedOccurrences.length = 15 ∧
     outerDartsOnce = true ∧
     internalDartsCancel = true := by
+  decide
+
+/-- The five original vertices have interval links and the crossing vertex
+has the circular link Z-W-R-T-Z.  The displayed edge orders also give an
+explicit connected traversal of every link. -/
+theorem vertex_link_certificate :
+    linkEdges U = [(Z, W)] ∧
+    linkEdges Z = [(U, W), (W, X), (T, X)] ∧
+    linkEdges T = [(Z, X), (R, X)] ∧
+    linkEdges R = [(T, X), (W, X)] ∧
+    linkEdges W = [(U, Z), (Z, X), (R, X)] ∧
+    linkEdges X = [(Z, W), (Z, T), (T, R), (R, W)] ∧
+    activeLinkDegrees U = [1, 1] ∧
+    activeLinkDegrees Z = [1, 1, 2, 2] ∧
+    activeLinkDegrees T = [1, 1, 2] ∧
+    activeLinkDegrees R = [1, 1, 2] ∧
+    activeLinkDegrees W = [1, 2, 1, 2] ∧
+    activeLinkDegrees X = [2, 2, 2, 2] := by
   decide
 
 structure Profile where
@@ -233,6 +283,7 @@ theorem final_integer_certificate :
   decide
 
 #print axioms finite_terminal_map_certificate
+#print axioms vertex_link_certificate
 #print axioms profileA_certificate
 #print axioms profileB_certificate
 #print axioms final_integer_certificate
