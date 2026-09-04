@@ -1,0 +1,40 @@
+{
+  "claim_status": "bounded computational observation; no SAT or UNSAT certificate",
+  "parent_index": 0,
+  "maximum_flip_weight": 7,
+  "minimal_blocks": 7,
+  "variables": 7749,
+  "clauses": 1643567,
+  "cnf_sha256": "5c0c39228e96fa9ad7324f05c13dd9ab8c09329099528b0a124390b7f4f478b4",
+  "solver": "CaDiCaL 3.0.1",
+  "solver_source_commit": "c60730422e758ef1cebe7aeddf2dda31c996bf04",
+  "build": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0 -Wall -Wextra -O3 -DNDEBUG",
+  "command": "cadical --no-colors -t 600 -c 100000 parent0.cnf parent0.drat",
+  "result": "UNKNOWN",
+  "returncode": 0,
+  "conflicts_reported": 100004,
+  "decisions_reported": 183143,
+  "propagations_reported": 37305849,
+  "wall_seconds": 45.8130583559996,
+  "cpu_seconds": 45.7096,
+  "max_rss_kib": 548316,
+  "wall_limit_seconds": 600,
+  "conflict_limit": 100000,
+  "address_space_limit_bytes": 8589934592,
+  "proof_file_limit_bytes": 2147483648,
+  "omitted_local_files": {
+    "parent0.cnf": {
+      "bytes": 74539667,
+      "sha256": "5c0c39228e96fa9ad7324f05c13dd9ab8c09329099528b0a124390b7f4f478b4"
+    },
+    "parent0.drat": {
+      "bytes": 34141108,
+      "sha256": "5c55cf3256171d770bbc6ed80cf29cbcd3f4a0e33c252b7c9d72b485e2c83fd8"
+    },
+    "parent0-solver.log": {
+      "bytes": 11627,
+      "sha256": "76d3f8d18d6f9f42666e1bf1faa8acd7dd0f3e1385b0c20b306c2aeec1d3ca13"
+    }
+  },
+  "trace_status": "incomplete DRAT prefix; not independently checked and not a certificate"
+}
