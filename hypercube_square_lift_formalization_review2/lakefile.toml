@@ -1,0 +1,12 @@
+name = "hypercube_square_lift_formalization_review2"
+version = "0.1.0"
+defaultTargets = ["ReviewConverse"]
+
+[[lean_lib]]
+name = "ReviewConverse"
+
+[[require]]
+name = "hypercube_square_lift"
+git = "https://github.com/njallskarp/math_source_code_open.git"
+rev = "98addd514680b493978e6fd1bc794af98009711a"
+subDir = "hypercube_square_lift"
