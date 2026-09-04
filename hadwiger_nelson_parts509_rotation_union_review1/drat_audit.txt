@@ -1,0 +1,54 @@
+Parts 509 sharpness DRAT audit
+==============================
+
+Replayed by reviewer-1 on 2026-09-04, one CPU core.
+
+External evidence repository:
+  https://github.com/md-amer/hadwiger-nelson-e5
+  commit 6d5ac08491f7cadbebd7d5b79e3f825d08eedf7b
+
+External file hashes:
+  FINAL_reduced.json
+    99b8ca39503a33c692bed66e45afcc7e8b67bec0870253c53b097836fbbbe3b2
+  FINAL2.cnf
+    9bcea2812e5c95e3ccdc9a4e3a2b6c96234cd86dacdecdc9ac2e0c26b05a65db
+  FINAL2_proof.drat
+    2c64344e3137c95db53f23ff9e9490034a210d214e3ce7805eafbf1d53c25930
+
+CNF bridge command (paths abbreviated as $EVIDENCE):
+
+  python parts509.py audit-cnf parts509.vtx \
+    $EVIDENCE/FINAL_reduced.json $EVIDENCE/FINAL2.cnf
+
+CNF bridge result:
+  all_checks=true
+  cnf_variables=2036
+  cnf_clauses=9548
+  full_unit_edges=2442
+  full_edge_sha256=5a95127767cb370f25f5865f057cab9b4a7ee9a72e2f73ad126ae390d71d487c
+  reduced_edges=2259
+  reduced_edge_sha256=93f5ff096936613b61fcbdba3bca27addd5d59868c10561385c4ada7606d2305
+  sound_triangle_pins=(0,0),(149,1),(152,2)
+
+Proof checker:
+  https://github.com/marijnheule/drat-trim
+  commit 2e3b2dc0ecf938addbd779d42877b6ed69d9a985
+  local executable SHA-256
+    9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a
+
+Proof-check command:
+
+  drat-trim $EVIDENCE/FINAL2.cnf $EVIDENCE/FINAL2_proof.drat
+
+Proof-check output:
+  c parsing input formula with 2036 variables and 9548 clauses
+  c 8644 of 9548 clauses in core
+  c 92649 of 228706 lemmas in core using 5813255 resolution steps
+  c 0 RAT lemmas in core; 88474 redundant literals in core lemmas
+  s VERIFIED
+  c verification time: 10.792 seconds
+
+This establishes non-4-colourability for the audited 2,259-edge subgraph.
+Because the independently reconstructed identity placement has the pinned
+2,442-edge strict-graph digest and contains every reduced edge through the
+audited bridge, it supplies the required 509-vertex sharpness witness.
