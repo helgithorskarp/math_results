@@ -2,12 +2,12 @@
 
 Let `G` be a graph on 43 vertices with neither a clique nor an independent
 set of order five.  If an automorphism of `G` has exactly four vertex cycles,
-then its induced action on unordered vertex pairs has more than 30 orbits.
+then its induced action on unordered vertex pairs has more than 34 orbits.
 
-The bound excludes all 246 exactly-four-cycle types with 26, 28, or 30 edge
+The bound excludes all 393 exactly-four-cycle types with 26 through 34 edge
 orbits.  This is an exact computer-assisted obstruction theorem.  It does
 **not** construct a 43-vertex Ramsey graph, improve the lower bound for
-`R(5,5)`, or exclude the four-cycle actions with 32 or more edge orbits.
+`R(5,5)`, or exclude the four-cycle actions with 36 or more edge orbits.
 
 ## The minimal structured stratum
 
@@ -24,9 +24,9 @@ in (1) is then 21 or 20, respectively, while the six gcd terms are each at
 least one.  Thus every four-cycle action has at least 26 edge orbits.
 
 Direct enumeration gives 588 unordered four-part partitions of 43.  Their
-first three edge-orbit strata contain 131, 33, and 82 types at 26, 28, and 30
-orbits, respectively.  The 131 minimum types equivalently have three odd
-parts and all six pairwise gcds equal one.
+first five edge-orbit strata contain 131, 33, 82, 120, and 27 types at 26,
+28, 30, 32, and 34 orbits, respectively.  The 131 minimum types equivalently
+have three odd parts and all six pairwise gcds equal one.
 
 Every vertex of a target graph has degree in `[18,24]`: its neighborhood is
 `K_4`-free, the equality `R(4,5)=25` gives the upper bound, and applying the
@@ -39,14 +39,14 @@ cycles adds `m/gcd(l,m)` and `l/gcd(l,m)` to their respective degrees.
 Enumerating these integer choices gives the exact census
 
 ```text
-edge orbits                 26   28   30   total
-cycle types                131   33   82     246
-degree-infeasible           56   11   35     102
-certificate cases           75   22   47     144
+edge orbits                 26   28   30   32   34   total
+cycle types                131   33   82  120   27     393
+degree-infeasible           56   11   35   46    6     154
+certificate cases           75   22   47   74   21     239
 ```
 
-Thus the 144 survivor formulas have 26, 28, or 30 Boolean edge-orbit
-variables.
+Thus the 239 survivor formulas have 26, 28, 30, 32, or 34 Boolean
+edge-orbit variables.
 
 ## Exact SAT certificates
 
@@ -63,13 +63,15 @@ permutation, enumerates all `C(43,5)=962,598` five-sets, deduplicates their
 masks, and emits these clauses.  A final unit clause fixes the first orbit
 red; global color complementation makes this equisatisfiable.
 
-The 144 formulas have 2,325 to 10,051 clauses.  PySAT Glucose 4.2 reports
-every one UNSAT and emits the checked-in DRUP traces in [`proofs/`](proofs/)
-and [`proofs_28_30/`](proofs_28_30/).  The initial screen was configured to
-halt on a satisfiable instance and write its complete red edge list.
+The 239 formulas have 2,325 to 21,247 clauses.  PySAT Glucose 4.2 reports
+every one UNSAT and emits the checked-in DRUP traces in [`proofs/`](proofs/),
+[`proofs_28_30/`](proofs_28_30/), and [`proofs_32_34/`](proofs_32_34/).  The
+initial screen was configured to halt on a satisfiable instance and write its
+complete red edge list; `screen_strata.py` preserves that optional workflow.
 
-`verify_proofs.py` and `verify_next_proofs.py` do not import the generators or
-PySAT.  Using only the standard library, they independently:
+`verify_proofs.py`, `verify_next_proofs.py`, and `verify_mid_proofs.py` do not
+import the generators or PySAT.  Using only the standard library, they
+independently:
 
 - enumerates four-part partitions with nested loops;
 - checks degree feasibility by a direct Cartesian product of cross-orbit
@@ -77,12 +79,12 @@ PySAT.  Using only the standard library, they independently:
 - canonicalizes each edge by taking its least repeated permutation image,
   rather than walking an unused-edge set;
 - regenerates every five-set mask, CNF hash, proof hash, and byte count; and
-- replay 5,973 proof additions by reverse unit propagation, deriving the
-  empty clause in every one of the 144 instances.
+- replay 9,645 proof additions by reverse unit propagation, deriving the
+  empty clause in every one of the 239 instances.
 
-The traces contain 22,851 deletion hints.  The checker soundly ignores them
+The traces contain 51,416 deletion hints.  The checker soundly ignores them
 and retains every already derived clause, which can only strengthen unit
-propagation.  All 144 traces total 475,525 bytes.  Therefore solver
+propagation.  All 239 traces total 1,108,923 bytes.  Therefore solver
 correctness is not trusted for the final UNSAT conclusion.
 
 ## Reproduction
@@ -104,11 +106,16 @@ python3 -m venv .venv
 .venv/bin/python generate_next_proofs.py \
   --proof-dir proofs_28_30.regenerated \
   --result proof_manifest_28_30.regenerated.json
+.venv/bin/python generate_mid_proofs.py \
+  --proof-dir proofs_32_34.regenerated \
+  --result proof_manifest_32_34.regenerated.json
 
 diff -qr proofs proofs.regenerated
 cmp proof_manifest.json proof_manifest.regenerated.json
 diff -qr proofs_28_30 proofs_28_30.regenerated
 cmp proof_manifest_28_30.json proof_manifest_28_30.regenerated.json
+diff -qr proofs_32_34 proofs_32_34.regenerated
+cmp proof_manifest_32_34.json proof_manifest_32_34.regenerated.json
 ```
 
 The manifest records every omitted DIMACS SHA-256 and every proof hash.  With
@@ -118,7 +125,7 @@ floating point, network input, or external instance.
 
 ## Scope, provenance, and trust boundary
 
-The result excludes 246 exactly-four-cycle types and leaves the other 342
+The result excludes 393 exactly-four-cycle types and leaves the other 195
 four-cycle types open.  It says nothing about asymmetric colorings or
 automorphisms having a different number of vertex cycles.  The edge-orbit
 cutoff is a computational scope boundary; 26 is the absolute structural
