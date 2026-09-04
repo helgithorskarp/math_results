@@ -164,6 +164,56 @@ def linkDegree (vertex neighbor : PlanarVertex) : Nat :=
 def activeLinkDegrees (vertex : PlanarVertex) : List Nat :=
   (allPlanarVertices.map (linkDegree vertex)).filter fun degree => degree > 0
 
+inductive FaceId where
+  | F0 | F1 | F2 | F3 | F4
+  deriving DecidableEq, Repr
+
+open FaceId
+
+def allFaceIds : List FaceId := [F0, F1, F2, F3, F4]
+
+def faceEdges : FaceId → List Edge
+  | F0 => [uz, zw, uw]
+  | F1 => [zw, wx, zx]
+  | F2 => [zt, tx, zx]
+  | F3 => [tr, rx, tx]
+  | F4 => [rw, wx, rx]
+
+def sharesEdge (left right : FaceId) : Bool :=
+  (faceEdges left).any fun side => (faceEdges right).contains side
+
+def allFacePairs : List (FaceId × FaceId) :=
+  [(F0, F1), (F0, F2), (F0, F3), (F0, F4),
+   (F1, F2), (F1, F3), (F1, F4),
+   (F2, F3), (F2, F4), (F3, F4)]
+
+def adjacentFacePairs : List (FaceId × FaceId) :=
+  allFacePairs.filter fun pair => sharesEdge pair.1 pair.2
+
+def dualSpanningPath : List (FaceId × FaceId) :=
+  [(F0, F1), (F1, F2), (F2, F3), (F3, F4)]
+
+def dualSpanningPathValid : Bool :=
+  dualSpanningPath.all fun pair => adjacentFacePairs.contains pair
+
+def dualSpanningPathCoversFaces : Bool :=
+  let incidentFaces := dualSpanningPath.flatMap fun pair => [pair.1, pair.2]
+  allFaceIds.all fun face => incidentFaces.contains face
+
+def isDartPath : List Dart → Bool
+  | [] => true
+  | [_] => true
+  | first :: second :: rest =>
+      first.2 == second.1 && isDartPath (second :: rest)
+
+def isClosedDartCycle : List Dart → Bool
+  | [] => false
+  | first :: rest =>
+      isDartPath (first :: rest) &&
+        match (first :: rest).getLast? with
+        | some last => last.2 == first.1
+        | none => false
+
 /-- The five listed triangles have the claimed disk incidence data, Euler
 count, pentagonal boundary, and complementary five-edge crossing cycle. -/
 theorem finite_terminal_map_certificate :
@@ -209,6 +259,21 @@ theorem vertex_link_certificate :
     activeLinkDegrees R = [1, 1, 2] ∧
     activeLinkDegrees W = [1, 2, 1, 2] ∧
     activeLinkDegrees X = [2, 2, 2, 2] := by
+  decide
+
+/-- The face dual is connected via F0-F1-F2-F3-F4, and all boundary darts
+form the single oriented cycle U-Z-T-R-W-U. -/
+theorem face_boundary_connectivity_certificate :
+    adjacentFacePairs =
+      [(F0, F1), (F1, F2), (F1, F4), (F2, F3), (F3, F4)] ∧
+    dualSpanningPathValid = true ∧
+    dualSpanningPathCoversFaces = true ∧
+    dualSpanningPath.length = 4 ∧
+    dualSpanningPath.Nodup ∧
+    outerDarts = [(U, Z), (Z, T), (T, R), (R, W), (W, U)] ∧
+    outerDarts.length = 5 ∧
+    outerDarts.Nodup ∧
+    isClosedDartCycle outerDarts = true := by
   decide
 
 structure Profile where
@@ -284,6 +349,7 @@ theorem final_integer_certificate :
 
 #print axioms finite_terminal_map_certificate
 #print axioms vertex_link_certificate
+#print axioms face_boundary_connectivity_certificate
 #print axioms profileA_certificate
 #print axioms profileB_certificate
 #print axioms final_integer_certificate
