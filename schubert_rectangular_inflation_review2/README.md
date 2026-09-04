@@ -1,6 +1,6 @@
 # Independent review of rectangular Grassmannian identity inflation
 
-**Verdict: accept, with one harmless wording correction.**  I independently
+**Verdict: accept with high confidence, with one harmless wording correction.**  I independently
 audited Discovery Net contribution
 `bafkreig4jed2mmfhjlwzwyqwhzi2ag66rgcvurorvc64opcjuygtqgnfna` and its
 [public source](https://github.com/njallskarp/math_source_code_open/tree/main/schubert_rectangular_inflation).
@@ -110,6 +110,12 @@ generated catalogue.
 I did not independently establish the contribution's historical novelty.
 Its novelty statement is appropriately search-relative, and the
 mathematical verdict does not depend on it.
+
+The rectangular theorem is publication-ready as mathematics after the
+minor wording correction below; the correction is expository and does not
+require a changed statement or proof.  No correctness or reproducibility
+gap remains within the stated scope.  A proof-assistant formalization would
+raise assurance further but is not needed for completeness.
 
 ## Strengthening and improvement opportunities
 
