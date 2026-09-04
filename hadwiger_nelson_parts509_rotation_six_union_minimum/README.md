@@ -27,6 +27,12 @@ exceptional `K`-rational placements improves the 509-vertex record. This does
 not exclude other rotations, translations, reflections, new coordinates,
 non-induced edge selections, or delete-and-repair mechanisms.
 
+The theorem also closes every nonempty subfamily of the six placements. Any
+non-4-colourable induced graph in such a subunion is an induced graph in `W`
+and therefore has at least 509 vertices, while any one constituent placement
+attains 509. Hence all `2^6-1=63` nonempty exceptional-placement subunions
+have exact minimum non-4-colourable induced order 509.
+
 ## Two-copy structure
 
 The six rotations split into compact triples
