@@ -146,6 +146,58 @@ def d22_independent_transversal_capacity(adjacency, minimum_size: int) -> int:
     return min(21, maximum_rows(capacities))
 
 
+def d22_extendable_transversal_capacity(adjacency, minimum_size: int) -> int:
+    """Upper-bound independent rows that can coexist with 21 total rows."""
+    order = len(adjacency)
+    masks = tuple(
+        mask
+        for size in range(minimum_size, 5)
+        for mask in independent_four_transversals(adjacency, size)
+        if mask_edge_count(adjacency, mask) == 0
+    )
+    if not masks:
+        return 0
+    capacities = tuple(order - 1 - sum(row) for row in adjacency)
+    independent_fours = independent_four_masks(adjacency)
+    states = {tuple(0 for _ in range(order))}
+    best = 0
+    for row_count in range(1, 22):
+        next_states = set()
+        for usage in states:
+            for mask in masks:
+                candidate = tuple(
+                    usage[vertex] + bool(mask & (1 << vertex))
+                    for vertex in range(order)
+                )
+                if all(value <= capacity for value, capacity in zip(
+                    candidate, capacities, strict=True
+                )):
+                    next_states.add(candidate)
+        states = next_states
+        if not states:
+            break
+        remaining_rows = 21 - row_count
+        for usage in states:
+            residual = tuple(
+                capacity - value
+                for capacity, value in zip(capacities, usage, strict=True)
+            )
+            if any(value > remaining_rows for value in residual):
+                continue
+            if any(
+                sum(
+                    residual[vertex]
+                    for vertex in range(order)
+                    if independent & (1 << vertex)
+                ) < remaining_rows
+                for independent in independent_fours
+            ):
+                continue
+            best = row_count
+            break
+    return best
+
+
 R45_ARCHIVE_URL = BASE_URL + "r45extreme.tar.gz"
 R45_MAXIMUM_EXPECTED = {
     14: (60, 1, "752aa8b1509075bc39cb1151936b250c681fbdf0a9fdda20d8d5bbb6e6356c62"),
@@ -157,12 +209,12 @@ R45_MAXIMUM_EXPECTED = {
 }
 
 
-def audit_r35() -> dict[int, tuple[tuple[int, int, int], ...]]:
+def audit_r35() -> dict[int, tuple[tuple[int, int, int, int], ...]]:
     catalog_records = {}
     h11_independent_cover_support_histogram = Counter()
     h12_minimum_cover_edge_histogram = Counter()
     capacity_type_lines = [
-        "# order edges tau4 independent_row_capacity role graph6\n"
+        "# order edges tau4 relaxed_capacity extendable_capacity role graph6\n"
     ]
     for order, (expected_count, expected_digest, expected_histogram) in (
         R35_EXPECTED.items()
@@ -196,7 +248,6 @@ def audit_r35() -> dict[int, tuple[tuple[int, int, int], ...]]:
                 capacity = d22_independent_transversal_capacity(
                     adjacency, transversal_number
                 )
-            records.append((edge_count, transversal_number, capacity))
             role = None
             if order == 10 and capacity >= 13:
                 role = "10+12-small"
@@ -204,11 +255,18 @@ def audit_r35() -> dict[int, tuple[tuple[int, int, int], ...]]:
                 role = "11+11-required" if capacity == 14 else "11+11-partner"
             elif order == 12 and capacity:
                 role = "10+12-large"
+            extendable_capacity = 0
             if role is not None:
+                extendable_capacity = d22_extendable_transversal_capacity(
+                    adjacency, transversal_number
+                )
                 capacity_type_lines.append(
                     f"{order} {edge_count} {transversal_number} {capacity} "
-                    f"{role} {encoded}\n"
+                    f"{extendable_capacity} {role} {encoded}\n"
                 )
+            records.append((
+                edge_count, transversal_number, capacity, extendable_capacity
+            ))
             if order == 11 and edge_count <= 19:
                 support = 0
                 for size in (3, 4):
@@ -231,7 +289,7 @@ def audit_r35() -> dict[int, tuple[tuple[int, int, int], ...]]:
             raise AssertionError((order, histogram))
         catalog_records[order] = tuple(records)
     cover_spectra = {
-        order: dict(sorted(Counter(cover for _, cover, _ in records).items()))
+        order: dict(sorted(Counter(cover for _, cover, _, _ in records).items()))
         for order, records in catalog_records.items()
     }
     if cover_spectra != {
@@ -256,7 +314,7 @@ def audit_r35() -> dict[int, tuple[tuple[int, int, int], ...]]:
     capacity_histograms = {
         order: dict(sorted(Counter(
             (edge_count, capacity)
-            for edge_count, _, capacity in catalog_records[order]
+            for edge_count, _, capacity, _ in catalog_records[order]
             if capacity
         ).items()))
         for order in (10, 11, 12)
@@ -286,6 +344,33 @@ def audit_r35() -> dict[int, tuple[tuple[int, int, int], ...]]:
         12: {(22, 8): 1},
     }:
         raise AssertionError(capacity_histograms)
+    extendable_histograms = {
+        order: dict(sorted(Counter(
+            (edge_count, capacity, extendable)
+            for edge_count, _, capacity, extendable in catalog_records[order]
+            if extendable
+        ).items()))
+        for order in (10, 11, 12)
+    }
+    if extendable_histograms != {
+        10: {
+            (14, 13, 6): 1,
+            (15, 13, 5): 2, (15, 13, 6): 1, (15, 13, 10): 1,
+            (16, 13, 5): 1, (16, 13, 8): 1, (16, 13, 10): 1,
+            (16, 18, 9): 1,
+        },
+        11: {
+            (16, 7, 3): 1,
+            (17, 7, 2): 2, (17, 7, 3): 1, (17, 7, 4): 1,
+            (18, 7, 2): 3, (18, 7, 3): 1, (18, 7, 4): 5,
+            (18, 8, 4): 2,
+            (19, 7, 2): 2, (19, 7, 3): 1, (19, 7, 4): 3,
+            (19, 14, 6): 1,
+            (20, 7, 2): 1, (20, 7, 3): 2,
+        },
+        12: {(22, 8, 3): 1},
+    }:
+        raise AssertionError(extendable_histograms)
     actual_capacity_types = Path(__file__).with_name(
         "D22_CAPACITY_TYPES.tsv"
     ).read_text(encoding="ascii")
@@ -295,7 +380,7 @@ def audit_r35() -> dict[int, tuple[tuple[int, int, int], ...]]:
 
 
 def audit_residual_menu(
-    catalog_records: dict[int, tuple[tuple[int, int, int], ...]]
+    catalog_records: dict[int, tuple[tuple[int, int, int, int], ...]]
 ) -> None:
     """Rebuild the surviving d=22 menu directly from catalog records."""
     r55_minimum_edges = {20: 50, 21: 56}
@@ -326,9 +411,9 @@ def audit_residual_menu(
                 )
             counts = Counter()
             for (
-                first_edges, first_cover, first_capacity
+                first_edges, first_cover, first_capacity, first_extendable
             ), (
-                second_edges, second_cover, second_capacity
+                second_edges, second_cover, second_capacity, second_extendable
             ) in record_pairs:
                 first_cross_edges = (
                     first_order * (first_order + 21 - backbone_order)
@@ -342,6 +427,7 @@ def audit_residual_menu(
                     first_cross_edges < outside_order * first_cover
                     or second_cross_edges < outside_order * second_cover
                     or first_capacity + second_capacity < outside_order
+                    or first_extendable + second_extendable < outside_order
                 ):
                     continue
                 counts[
@@ -410,7 +496,7 @@ def main() -> None:
     print("PASS official R(4,5) maxima at orders 14,...,19 are "
           "60,66,72,79,85,92")
     print("PASS official extremal R(4,5;14,60) catalog is the pinned singleton")
-    print("PASS official R(3,5) records reproduce covers, support/capacity sieves, and menu")
+    print("PASS official R(3,5) records reproduce cover, support, capacity, and completion sieves")
 
 
 if __name__ == "__main__":

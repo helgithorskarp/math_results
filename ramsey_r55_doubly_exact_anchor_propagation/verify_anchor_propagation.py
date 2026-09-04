@@ -77,6 +77,27 @@ R35_D22_EDGE_CAPACITY_HISTOGRAMS = {
     },
     12: {(22, 8): 1},
 }
+# Refine the preceding relaxed capacity by requiring that the unused column
+# degrees can still be distributed over the remaining transversal rows.  The
+# key is (edge count, relaxed capacity, extendable capacity).
+R35_D22_EXTENDABLE_CAPACITY_HISTOGRAMS = {
+    10: {
+        (14, 13, 6): 1,
+        (15, 13, 5): 2, (15, 13, 6): 1, (15, 13, 10): 1,
+        (16, 13, 5): 1, (16, 13, 8): 1, (16, 13, 10): 1,
+        (16, 18, 9): 1,
+    },
+    11: {
+        (16, 7, 3): 1,
+        (17, 7, 2): 2, (17, 7, 3): 1, (17, 7, 4): 1,
+        (18, 7, 2): 3, (18, 7, 3): 1, (18, 7, 4): 5,
+        (18, 8, 4): 2,
+        (19, 7, 2): 2, (19, 7, 3): 1, (19, 7, 4): 3,
+        (19, 14, 6): 1,
+        (20, 7, 2): 1, (20, 7, 3): 2,
+    },
+    12: {(22, 8, 3): 1},
+}
 R35_EDGE_HISTOGRAMS = {
     order: {
         edge_count: sum(
@@ -1851,11 +1872,6 @@ def main() -> None:
                 if not outside_minimum <= outside_edges <= outside_maximum:
                     continue
                 retained_count += type_pairs
-                residual_menu_lines.append(
-                    f"22 220 {disconnected_color} "
-                    f"{first_order}+{second_order} {opposite_edges} "
-                    f"{outside_edges} {type_pairs}\n"
-                )
             partition_counts[(first_order, second_order)] = retained_count
         d22_capacity_menu_summary[disconnected_color] = partition_counts
     if d22_capacity_menu_summary != {
@@ -1864,11 +1880,36 @@ def main() -> None:
     }:
         raise AssertionError(d22_capacity_menu_summary)
 
+    # A relaxed packing can spend so much column capacity that its remaining
+    # rows cannot even be transversals.  If k independent rows use y_v copies
+    # of vertex v, q=21-k rows remain.  Necessarily 0<=r_v-y_v<=q, and for
+    # every independent four-set I the residual incidence sum over I is at
+    # least q, since every remaining row must hit I.  Maximizing k subject to
+    # these further conditions gives the extendable capacities below.  Their
+    # pairwise maxima are already too small to cover all 21 outside rows.
+    extendable_counts = {
+        order: sum(histogram.values())
+        for order, histogram in R35_D22_EXTENDABLE_CAPACITY_HISTOGRAMS.items()
+    }
+    extendable_maxima = {
+        order: max(key[2] for key in histogram)
+        for order, histogram in R35_D22_EXTENDABLE_CAPACITY_HISTOGRAMS.items()
+    }
+    if extendable_counts != {10: 9, 11: 26, 12: 1}:
+        raise AssertionError(extendable_counts)
+    if extendable_maxima != {10: 10, 11: 6, 12: 3}:
+        raise AssertionError(extendable_maxima)
+    if not (
+        extendable_maxima[10] + extendable_maxima[12] < 21
+        and 2 * extendable_maxima[11] < 21
+    ):
+        raise AssertionError("extendable capacities do not eliminate d=22 pairs")
+
     expected_residual_menu_file = "".join(residual_menu_lines)
     residual_menu_digest = hashlib.sha256(
         expected_residual_menu_file.encode("ascii")
     ).hexdigest()
-    if residual_menu_digest != "b7aa05477d568cb69bb7d1a1201ff1ad4c11a3b8de6e3adf6aefa68c89bb9b3f":
+    if residual_menu_digest != "b471f2d664cc156e89ff951287e1f739c6747e4d1f0c63969b298609675f10f2":
         raise AssertionError(residual_menu_digest)
     actual_residual_menu_file = Path(__file__).with_name(
         "RESIDUAL_COMPONENT_MENUS.tsv"
@@ -1904,7 +1945,7 @@ def main() -> None:
     ).hexdigest()
     if residual_excess_digest != "2bb0a8f67e346f1066a9cf2d8219ef89e97480bcf973372fe59040bacefed857":
         raise AssertionError(residual_excess_digest)
-    if len(residual_menu_lines) != 17:
+    if len(residual_menu_lines) != 1:
         raise AssertionError(len(residual_menu_lines))
 
     # If W is the degree weight, at most W/3 secondary vertices are
@@ -1980,9 +2021,10 @@ def main() -> None:
     print("PASS d=23 independent-transversal support eliminates all four menus")
     print("PASS pre-capacity d=22 two-component menus red/blue=8240/8241")
     print("PASS d=22 independent-row capacity leaves red/blue=35/35 type pairs")
+    print("PASS d=22 extendable-row capacity eliminates every two-component pair")
     print("PASS d=22 red singleton impossible; blue singleton reanchors two "
           "R(4,5;21,100) cores")
-    print("PASS residual component menu rows=16 "
+    print("PASS residual component menu rows=0 "
           f"sha256={residual_menu_digest}")
     print("PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135")
     print("PASS profile vertex-connectivity counts k=1,...,11 are "

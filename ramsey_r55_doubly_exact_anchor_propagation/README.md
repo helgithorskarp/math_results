@@ -20,10 +20,10 @@ combined with a local `K_4`-cover inequality and its equality case, eliminate
 all order-23 disconnections.  The sole remaining abstract escape is the
 `M=220` profile with degree multiset `20^1 21^42`, and it can disconnect only
 on exactly 22 anchors.  At that order the cover inequality removes the
-`9+13` component partition, and an independent-row capacity sieve reduces
-the remaining two-component menu to 35 catalog pairs per color.  A singleton
-component is impossible in red and forces a nested pair of exact
-`(4,5;21,100)` cores in blue.
+`9+13` component partition; independent-row capacity and row-completion
+constraints eliminate every remaining two-component partition.  Thus any
+disconnection is a blue singleton, which forces a nested pair of exact
+`(4,5;21,100)` cores.
 
 This is a necessary pruning theorem for the hard construction branch.  It is
 not a 43-vertex Ramsey graph, an enumeration of the local cores, or a solver
@@ -961,18 +961,43 @@ For `10+12`, the displayed order-12 type is the only one with positive
 capacity, so `(Row-capacity)` requires an order-10 capacity of at least 13.
 Exactly nine order-10 types qualify.  For `11+11`, one component must be the
 unique capacity-14 type, while the other can be any of the 26 positive-
-capacity types.  Thus the final two-component menu is
+capacity types.  Thus the relaxed two-component menu is
 
 | disconnected color | `10+12` types | `11+11` types | total |
 |:---:|---:|---:|---:|
 | red  | 9 | 26 | 35 |
 | blue | 9 | 26 | 35 |
 
-The exact graph6 representatives, with edge count, `tau_4`, capacity, and
-their forced role, are listed in
+One more necessary condition remembers that the unselected rows still have to
+be transversals.  Suppose `k` independent rows use vertex `v` exactly `y_v`
+times, and put `q=21-k`.  The remaining column demand is
+`r_v-y_v`, where `r_v=a-1-deg_H(v)`.  Necessarily
+
+```text
+0 <= r_v-y_v <= q,
+sum_{v in I} (r_v-y_v) >= q  for every independent four-set I.
+```
+
+The second inequality holds because each of the remaining `q` rows must meet
+`I`.  Define the *extendable capacity* by maximizing `k` over multisets of
+independent transversals subject to these residual conditions.  Exact state
+enumeration on the 36 relaxed survivors gives maximum extendable capacities
+
+```text
+order 10: 10,       order 11: 6,       order 12: 3.
+```
+
+But the outside-row argument still requires the two component capacities to
+sum to at least 21.  The largest possible sums are only `10+3=13` for
+`10+12` and `6+6=12` for `11+11`.  Therefore every two-component
+disconnection at `d=22` is impossible.
+
+The exact 36 graph6 representatives from the intermediate sieve, with edge
+count, `tau_4`, relaxed and extendable capacity, and their forced role, are
+listed in
 [`D22_CAPACITY_TYPES.tsv`](D22_CAPACITY_TYPES.tsv).  This makes the sieve
-directly consumable by a component-based construction search rather than
-leaving only aggregate counts.
+independently auditable and records precisely how the preliminary 35-pair
+menu collapses.
 
 There is a sharper conclusion for a singleton.  The only order-22 profile is
 `M220-W3`, with 451 red edges and degree multiset `20^1 21^42`.  Suppose an
@@ -990,12 +1015,16 @@ its red neighborhood `C` and blue neighborhood `O` are necessarily exact
 second doubly exact anchoring of the original `M=220` profile, with all other
 21 exact anchors on the red side and none on the blue side.
 
+Since the two-component alternatives have now been eliminated, this blue
+singleton is the only possible disconnected-backbone normal form left by the
+entire argument.
+
 The complete edge-resolved catalog menu is
-[`RESIDUAL_COMPONENT_MENUS.tsv`](RESIDUAL_COMPONENT_MENUS.tsv).  Its 16 data
-rows list `d`, `M`, the disconnected color, the component orders, `s`, the
-forced opposite-color outside edge count, and the number of unordered catalog
-type pairs.  Its SHA-256 is
-`b7aa05477d568cb69bb7d1a1201ff1ad4c11a3b8de6e3adf6aefa68c89bb9b3f`.
+[`RESIDUAL_COMPONENT_MENUS.tsv`](RESIDUAL_COMPONENT_MENUS.tsv).  Its empty
+data section certifies that no two-component catalog pair survives; the
+header records the schema used by the preceding intermediate sieves.  Its
+SHA-256 is
+`b471f2d664cc156e89ff951287e1f739c6747e4d1f0c63969b298609675f10f2`.
 The verifier regenerates both residual files exactly.  This is a finite
 necessary-condition menu, not an assertion that any listed pair extends to a
 43-vertex coloring.
@@ -1180,8 +1209,9 @@ PASS pre-support d=23 component-pair menus M219 red/blue=57/87 M220 red/blue=87/
 PASS d=23 independent-transversal support eliminates all four menus
 PASS pre-capacity d=22 two-component menus red/blue=8240/8241
 PASS d=22 independent-row capacity leaves red/blue=35/35 type pairs
+PASS d=22 extendable-row capacity eliminates every two-component pair
 PASS d=22 red singleton impossible; blue singleton reanchors two R(4,5;21,100) cores
-PASS residual component menu rows=16 sha256=b7aa05477d568cb69bb7d1a1201ff1ad4c11a3b8de6e3adf6aefa68c89bb9b3f
+PASS residual component menu rows=0 sha256=b471f2d664cc156e89ff951287e1f739c6747e4d1f0c63969b298609675f10f2
 PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135
 PASS profile vertex-connectivity counts k=1,...,11 are 348,291,253,231,193,135,128,97,22,22,20
 PASS first-degree-feasible tests have 0 secondary exact anchors
@@ -1198,10 +1228,11 @@ SHA-256 digests, counts, Ramsey properties, edge histograms, and the extremal
 singleton.  It then computes every independent-four transversal number and
 checks the order-12 minimum-cover edge distribution and the order-11
 independent-cover support obstruction.  It also recomputes every order-22
-independent-row capacity by exact memoized integer packing and reproduces the
-36 graph6 representatives in the capacity-type list.  Finally, it reconstructs
-all 16 surviving order-22 menu rows directly from individual catalog records,
-independently of the joint-invariant product routine in the main verifier:
+independent-row capacity by exact memoized integer packing, checks the
+row-completion inequalities, and reproduces the 36 graph6 representatives in
+the capacity-type list.  Finally, it certifies that no order-22 two-component
+menu row survives, independently of the joint-invariant product routine in
+the main verifier:
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 verify_catalog_inputs.py
