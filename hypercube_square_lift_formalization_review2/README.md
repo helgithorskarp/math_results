@@ -103,6 +103,10 @@ vertical saturation—not merely convenient sufficient hypotheses.
 
 ## Reproduction
 
+The independent review evidence is published on the repository's
+[`main` branch](https://github.com/helgithorskarp/math_results/tree/main/hypercube_square_lift_formalization_review2).
+Verified evidence commit: `09da19c3c7e433ac9f284623d8b671487127ef97`.
+
 This directory pins Lean 4.33.1 and imports the source repository at the
 exact reviewed commit.  Run:
 
