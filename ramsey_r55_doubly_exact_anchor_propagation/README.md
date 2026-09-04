@@ -1107,8 +1107,8 @@ SAT model is already a certified order-43 Ramsey graph and proves
 [`singleton_sat.py`](singleton_sat.py) emits this formula deterministically
 using Sinz sequential counters and independently checks any SAT model by
 exhausting all `binom(43,5)=962598` five-sets.  Its pure-Python self-test
-exhausts every exact-cardinality instance through five input literals.  The
-generated DIMACS has
+exhausts the sequential-counter encoding through five input literals and the
+independent balanced-binary-adder encoding through six.  The base DIMACS has
 
 ```text
 157521 variables
@@ -1124,12 +1124,34 @@ PYTHONDONTWRITEBYTECODE=1 python3 singleton_sat.py generate singleton.cnf \
   | cmp - EXPECTED_SINGLETON_SAT.txt
 ```
 
+The optional local-profile strengthening introduces one exact indicator for
+each color of each triangle in `F`, reuses those indicators at their three
+vertices, and encodes the displayed local counts with balanced binary
+population-count circuits.  It enforces `(100,100)` on all vertices of `C`,
+`(93,107)` on `z`, and total 199 on each other vertex of `O`.  The last
+condition is equivalent to the two displayed alternatives because each
+order-21 local `(4,5)` graph has at most 100 edges.  This strengthened DIMACS
+has
+
+```text
+458257 variables
+3784316 clauses
+SHA-256 63efa37992e27fe12a668f7c7c8c917871d35938b6f0c003f6078731b9dc31fa.
+```
+
+Generate it with:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 singleton_sat.py generate \
+  singleton-local.cnf --local-profile | cmp - EXPECTED_SINGLETON_LOCAL_SAT.txt
+```
+
 For a solver transcript containing a `s SATISFIABLE` line and standard `v`
 model lines, independently verify and export the red graph in graph6 format:
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 singleton_sat.py check-model solver.log \
-  --write-graph singleton-witness.g6
+  --require-local-profile --write-graph singleton-witness.g6
 ```
 
 The complete edge-resolved catalog menu is

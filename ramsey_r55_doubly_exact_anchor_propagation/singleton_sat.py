@@ -88,6 +88,80 @@ class ClauseSink:
         self.at_most(literals, k)
         self.at_most(tuple(-literal for literal in literals), len(literals) - k)
 
+    def define_gate(self, inputs: Sequence[int], predicate) -> int:
+        """Return a fresh variable equivalent to predicate(inputs)."""
+        output = self.fresh()
+        for values in itertools.product((False, True), repeat=len(inputs)):
+            correct = bool(predicate(values))
+            # Forbid precisely the input assignment together with the wrong
+            # output value.  Inputs may themselves be signed literals.
+            clause = [
+                -literal if value else literal
+                for literal, value in zip(inputs, values, strict=True)
+            ]
+            wrong = not correct
+            clause.append(-output if wrong else output)
+            self.add(clause)
+        return output
+
+    def add_binary_vectors(
+        self, left: Sequence[int], right: Sequence[int]
+    ) -> tuple[int, ...]:
+        """CNF circuit for two little-endian unsigned binary vectors."""
+        answer: list[int] = []
+        carry: int | None = None
+        for position in range(max(len(left), len(right))):
+            terms = []
+            if position < len(left):
+                terms.append(left[position])
+            if position < len(right):
+                terms.append(right[position])
+            if carry is not None:
+                terms.append(carry)
+            if len(terms) == 1:
+                answer.append(terms[0])
+                carry = None
+            elif len(terms) == 2:
+                answer.append(
+                    self.define_gate(terms, lambda values: sum(values) % 2 == 1)
+                )
+                carry = self.define_gate(terms, lambda values: sum(values) >= 2)
+            elif len(terms) == 3:
+                answer.append(
+                    self.define_gate(terms, lambda values: sum(values) % 2 == 1)
+                )
+                carry = self.define_gate(terms, lambda values: sum(values) >= 2)
+            else:
+                raise AssertionError(terms)
+        if carry is not None:
+            answer.append(carry)
+        return tuple(answer)
+
+    def binary_sum(self, literals: Sequence[int]) -> tuple[int, ...]:
+        """Build an exact balanced-adder circuit for a population count."""
+        if not literals:
+            return ()
+        level = [(literal,) for literal in literals]
+        while len(level) > 1:
+            following = []
+            for start in range(0, len(level) - 1, 2):
+                following.append(
+                    self.add_binary_vectors(level[start], level[start + 1])
+                )
+            if len(level) % 2:
+                following.append(level[-1])
+            level = following
+        return level[0]
+
+    def exactly_binary(self, literals: Sequence[int], k: int) -> None:
+        """Exact cardinality via a balanced binary population-count circuit."""
+        if not 0 <= k <= len(literals):
+            self.add(())
+            return
+        bits = self.binary_sum(literals)
+        for position, bit in enumerate(bits):
+            self.add((bit if (k >> position) & 1 else -bit,))
+
 
 class DimacsWriter(ClauseSink):
     HEADER = f"p cnf {0:12d} {0:12d}\n"
@@ -124,7 +198,59 @@ class MemorySink(ClauseSink):
         self.nclauses += 1
 
 
-def generate_formula(path: Path) -> tuple[int, int]:
+def add_local_profile_constraints(sink: ClauseSink) -> None:
+    """Encode every forced singleton local count except the 20 color choices."""
+    triangle_variables: dict[tuple[int, int, int], tuple[int, int]] = {}
+    for vertices in itertools.combinations(range(N_F), 3):
+        edges = tuple(
+            edge_var(i, j) for i, j in itertools.combinations(vertices, 2)
+        )
+        red = sink.fresh()
+        for edge in edges:
+            sink.add((-red, edge))
+        sink.add((red, *(-edge for edge in edges)))
+        blue = sink.fresh()
+        for edge in edges:
+            sink.add((-blue, -edge))
+        sink.add((blue, *edges))
+        triangle_variables[vertices] = (red, blue)
+
+    def incident(vertex: int, color: int) -> list[int]:
+        others = tuple(v for v in range(N_F) if v != vertex)
+        return [
+            triangle_variables[tuple(sorted((vertex, first, second)))][color]
+            for first, second in itertools.combinations(others, 2)
+        ]
+
+    # Every c in C is doubly exact.  Red triangles through u correspond to
+    # red H-edges incident with c; no blue triangle through u contains c.
+    for vertex in C:
+        red_local = incident(vertex, 0)
+        red_local.extend(
+            edge_var(vertex, other) for other in C if other != vertex
+        )
+        sink.exactly_binary(red_local, 100)
+        sink.exactly_binary(incident(vertex, 1), 100)
+
+    # The exceptional degree-20 vertex z remains at the deficiency-seven
+    # baseline.  Its blue triangles through u correspond to blue O-edges.
+    sink.exactly_binary(incident(Z, 0), 93)
+    blue_z = incident(Z, 1)
+    blue_z.extend(-edge_var(Z, other) for other in O if other != Z)
+    sink.exactly_binary(blue_z, 107)
+
+    # Each other O vertex spends exactly one of the twenty excess units, so
+    # its two local monochromatic-triangle counts sum to 199.  Its triangles
+    # through u can only be blue and are precisely the blue incident O-edges.
+    for vertex in O:
+        if vertex == Z:
+            continue
+        local = incident(vertex, 0) + incident(vertex, 1)
+        local.extend(-edge_var(vertex, other) for other in O if other != vertex)
+        sink.exactly_binary(local, 199)
+
+
+def generate_formula(path: Path, local_profile: bool = False) -> tuple[int, int]:
     sink = DimacsWriter(path)
 
     # Both colors are forbidden on every 5-set of F.
@@ -151,6 +277,9 @@ def generate_formula(path: Path) -> tuple[int, int]:
     # G[C] has 100 red edges and G[O] has 100 blue (=110 red) edges.
     sink.exactly(tuple(edge_var(i, j) for i, j in itertools.combinations(C, 2)), 100)
     sink.exactly(tuple(edge_var(i, j) for i, j in itertools.combinations(O, 2)), 110)
+
+    if local_profile:
+        add_local_profile_constraints(sink)
 
     return sink.finish()
 
@@ -227,9 +356,35 @@ def self_test() -> None:
                 if actual != expected:
                     raise AssertionError((n, k, mask, actual, expected))
 
+    # Independently exercise the balanced-adder exact-cardinality circuit.
+    for n in range(1, 7):
+        literal_sets = [
+            tuple(range(1, n + 1)),
+            tuple(
+                variable if variable % 2 else -variable
+                for variable in range(1, n + 1)
+            ),
+        ]
+        for literals in literal_sets:
+            for k in range(n + 1):
+                sink = MemorySink(n + 1)
+                sink.exactly_binary(literals, k)
+                for mask in range(1 << n):
+                    fixed = {i + 1: bool(mask & (1 << i)) for i in range(n)}
+                    actual = satisfiable_extension(sink.clauses, fixed)
+                    truth_count = sum(
+                        fixed[abs(literal)] == (literal > 0) for literal in literals
+                    )
+                    expected = truth_count == k
+                    if actual != expected:
+                        raise AssertionError(
+                            ("binary", n, k, literals, mask, actual, expected)
+                        )
+
     if BASE_VARS != 861:
         raise AssertionError(BASE_VARS)
     print("sequential-counter self-test: PASS (all n<=5 exact cardinalities)")
+    print("binary-adder self-test: PASS (all n<=6 exact cardinalities)")
     print("base graph variables: 861")
 
 
@@ -268,7 +423,9 @@ def graph6(n: int, red_edges: set[tuple[int, int]]) -> str:
     return "".join(map(chr, payload))
 
 
-def check_model(path: Path, graph_path: Path | None) -> None:
+def check_model(
+    path: Path, graph_path: Path | None, require_local_profile: bool = False
+) -> None:
     assignment = parse_model(path)
     red_edges = {edge for edge, variable in EDGE_VAR.items() if assignment[variable]}
     red_edges.update((vertex, U) for vertex in C)
@@ -298,6 +455,35 @@ def check_model(path: Path, graph_path: Path | None) -> None:
     if (e_c, e_o, e_cross) != (100, 110, 220):
         raise AssertionError((e_c, e_o, e_cross))
 
+    local_pairs = []
+    for vertex in range(43):
+        red_local = blue_local = 0
+        others = tuple(v for v in range(43) if v != vertex)
+        for first, second in itertools.combinations(others, 2):
+            colors = (
+                is_red(vertex, first),
+                is_red(vertex, second),
+                is_red(first, second),
+            )
+            if all(colors):
+                red_local += 1
+            elif not any(colors):
+                blue_local += 1
+        local_pairs.append((red_local, blue_local))
+    exact_side = all(local_pairs[vertex] == (100, 100) for vertex in (*C, U))
+    z_exact = local_pairs[Z] == (93, 107)
+    o_profiles = [local_pairs[vertex] for vertex in O if vertex != Z]
+    outside_exact = all(pair in {(99, 100), (100, 99)} for pair in o_profiles)
+    has_local_profile = exact_side and z_exact and outside_exact
+    if require_local_profile and not has_local_profile:
+        raise AssertionError(
+            f"model violates forced singleton local profile: {local_pairs}"
+        )
+
+    red_exceptional = o_profiles.count((99, 100))
+    red_triangles = sum(pair[0] for pair in local_pairs) // 3
+    blue_triangles = sum(pair[1] for pair in local_pairs) // 3
+
     encoded = graph6(43, red_edges)
     if graph_path is not None:
         graph_path.write_text(encoded + "\n", encoding="ascii")
@@ -306,6 +492,13 @@ def check_model(path: Path, graph_path: Path | None) -> None:
     print("red degree multiset: 20^1 21^42")
     print("homogeneous 5-sets: 0")
     print("partition red edge counts (C,O,C-O): 100 110 220")
+    if has_local_profile:
+        print(
+            "singleton local profile: PASS "
+            f"(x={red_exceptional}, triangles={red_triangles},{blue_triangles})"
+        )
+    else:
+        print("singleton local profile: outside the local-profile strengthening")
     print(f"red graph6: {encoded}")
 
 
@@ -323,20 +516,26 @@ def main() -> None:
     subparsers.add_parser("self-test")
     generate = subparsers.add_parser("generate")
     generate.add_argument("output", type=Path)
+    generate.add_argument(
+        "--local-profile",
+        action="store_true",
+        help="also encode all forced blue-singleton local triangle counts",
+    )
     check = subparsers.add_parser("check-model")
     check.add_argument("model", type=Path)
     check.add_argument("--write-graph", type=Path)
+    check.add_argument("--require-local-profile", action="store_true")
     args = parser.parse_args()
 
     if args.command == "self-test":
         self_test()
     elif args.command == "generate":
-        nvars, nclauses = generate_formula(args.output)
+        nvars, nclauses = generate_formula(args.output, args.local_profile)
         print(f"DIMACS variables: {nvars}")
         print(f"DIMACS clauses: {nclauses}")
         print(f"DIMACS sha256: {sha256(args.output)}")
     else:
-        check_model(args.model, args.write_graph)
+        check_model(args.model, args.write_graph, args.require_local_profile)
 
 
 if __name__ == "__main__":
