@@ -25,7 +25,9 @@ constraints eliminate every remaining two-component partition.  Thus any
 disconnection is a blue singleton, which forces a nested pair of exact
 `(4,5;21,100)` cores.  Deleting that singleton would produce a 42-vertex
 Ramsey graph with degree multiset `20^22 21^20`; none of the 656 orientations
-of the published known Ramsey-42 catalog has that multiset.
+of the published known Ramsey-42 catalog has that multiset, and the complete
+radius-four transition classification forces its catalog edge distance to be
+at least five.
 
 This is a necessary pruning theorem for the hard construction branch.  It is
 not a 43-vertex Ramsey graph, an enumeration of the local cores, or a solver
@@ -1047,11 +1049,20 @@ known orientations    1 17  72  146  187  152  67  13   1.
 ```
 
 The unique closest orientation is base catalog index 93 (zero-based), with
-degree multiset `19^4 20^20 21^16 22^2`.  Consequently, any hard-branch graph
-realizing the last disconnected normal form must delete to a Ramsey-42 graph
-outside the published known catalog and outside its radius-three neighborhood.
-This is a relative catalog exclusion, not a completeness claim for Ramsey
-graphs on 42 vertices.
+degree multiset `19^4 20^20 21^16 22^2`.  The companion
+[`ramsey_r55_catalog_edge_radius4_classification`](../ramsey_r55_catalog_edge_radius4_classification)
+exhaustively lists all 8,408 Ramsey-preserving exactly-four flips from the 328
+stored parents and proves, using complement symmetry, that every
+Ramsey-preserving graph within four edits of any of the 656 orientations is
+again in the known catalog.  Since the target degree multiset occurs nowhere
+in that catalog, the singleton deletion has edge-edit distance at least five
+from every known orientation.  The bridge verifier additionally pins and
+scans the complete radius-four map, finding neither the target multiset nor
+its color complement among its 8,408 records.  Consequently, any hard-branch
+graph realizing the last disconnected normal form must delete to a
+Ramsey-42 graph outside the published known catalog and outside its
+radius-four neighborhood.  This is a relative catalog exclusion, not a
+completeness claim for Ramsey graphs on 42 vertices.
 
 ### Exact local profile inside the singleton normal form
 
