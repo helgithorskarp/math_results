@@ -1,0 +1,78 @@
+Independent radius-six review, 2026-09-04
+=================================================
+
+All compilation, checking, SAT, and proof-replay runs used one CPU-heavy
+process at a time.
+
+Compiler:
+  g++ (Debian 12.2.0-14+deb12u1) 12.2.0
+
+CaDiCaL:
+  https://github.com/arminbiere/cadical
+  tag rel-3.0.1
+  commit c60730422e758ef1cebe7aeddf2dda31c996bf04
+  version 3.0.1
+  libcadical.a SHA-256:
+    7a0020336683ce541109f1ad49eb1fdf978fe9af7211335de3fa9f7477466e85
+
+Release enumerator:
+  source SHA-256:
+    2b148561c4f44b89720721c41ffcc0b61b35707761fe1a1de4d9c6597d03e025
+  binary SHA-256:
+    9638daad21c1dee8d3751df9ba17a490e82e49bafea8db559c45c7e3f2c24b33
+  build command:
+    g++ -std=c++17 -O3 -Wall -Wextra -Wpedantic -I CADICAL/src \
+      enumerate_six_flip_sat.cpp CADICAL/build/libcadical.a -pthread \
+      -o radius6-enumerate
+
+Fresh sequential one-core runs:
+  parent=0   exact6=29 lower_models=72  wall=117s
+  parent=23  exact6=16 lower_models=112 wall=96s
+  parent=190 exact6=0  lower_models=4   wall=128s
+  parent=241 exact6=57 lower_models=106 wall=135s
+  exact emitted-set and raw-graph6 comparison:
+    sample_parents=0,23,190,241 sample_transitions=102 exact_set_match=true
+  independent clause-count audit:
+    clause_count_audit=4/4 parents=0,23,190,241
+
+Independent all-map audit:
+  Python 3.11.2, NetworkX 3.5, one core, wall=85s
+  all 6384 variants Ramsey-valid; all 6384 target isomorphisms verified
+
+Static proof-producing parent-190 formula:
+  build command:
+    python3 build_static_cnf.py 190 parent190-static.cnf
+  variables=6888
+  clauses=1455200
+  counter_clauses=12042
+  ramsey_clauses=1443154
+  blocked_known_models=4
+  CNF bytes=65613408
+  CNF SHA-256:
+    a9fcbcd776a764c5ac2f191e114092499b1322b083db2eafe14356c4254b6320
+
+Static proof:
+  CaDiCaL process wall=81s
+  result=UNSAT
+  binary DRAT bytes=85558316
+  proof SHA-256:
+    ba13706530b6d3e0c4c55900421a1520a56fedd4c024ca48c7afb285382df10a
+
+DRAT replay:
+  https://github.com/marijnheule/drat-trim
+  commit 2e3b2dc0ecf938addbd779d42877b6ed69d9a985
+  result=s VERIFIED
+  input clauses in core=27940 of 1455200
+  lemmas in core=123892 of 773841
+  resolution steps=42077695
+  RAT lemmas in core=0
+  verification wall=45s
+
+Dependency replay:
+  ramsey_r55_catalog_two_vertex_extension_obstruction/verify.sh
+  result=VERIFIED cores=9757 models=11387 ordered_pairs=15401
+  wall=16s
+
+Catalog provenance check:
+  fresh https://users.cecs.anu.edu.au/~bdm/data/r55_42some.g6 SHA-256:
+    067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb
