@@ -23,7 +23,9 @@ on exactly 22 anchors.  At that order the cover inequality removes the
 `9+13` component partition; independent-row capacity and row-completion
 constraints eliminate every remaining two-component partition.  Thus any
 disconnection is a blue singleton, which forces a nested pair of exact
-`(4,5;21,100)` cores.
+`(4,5;21,100)` cores.  Deleting that singleton would produce a 42-vertex
+Ramsey graph with degree multiset `20^22 21^20`; none of the 656 orientations
+of the published known Ramsey-42 catalog has that multiset.
 
 This is a necessary pruning theorem for the hard construction branch.  It is
 not a 43-vertex Ramsey graph, an enumeration of the local cores, or a solver
@@ -1019,6 +1021,38 @@ Since the two-component alternatives have now been eliminated, this blue
 singleton is the only possible disconnected-backbone normal form left by the
 entire argument.
 
+### Bridge to the known Ramsey-42 catalog
+
+Delete the isolated-blue exact vertex `u` from the singleton normal form.
+Each of the 21 vertices in `C` loses its red edge to `u`, so its red degree
+drops from 21 to 20.  No vertex in `O` loses a red edge: its unique degree-20
+vertex remains degree 20 and the other 20 vertices remain degree 21.  Thus the
+resulting Ramsey graph on 42 vertices necessarily has degree multiset
+
+```text
+20^22 21^20.                                             (Singleton-delete)
+```
+
+The companion radius-three artifact contains 328 known Ramsey-42 graphs and
+uses complement symmetry to represent 656 color orientations.  The independent
+[`verify_known_r42_bridge.py`](verify_known_r42_bridge.py) audit pins that
+catalog by SHA-256 and finds zero orientations with `(Singleton-delete)`.  In
+fact, the label-independent lower bound obtained by matching sorted degree
+sequences shows that every graph with `(Singleton-delete)` is at least four
+edge edits from every known orientation.  The full lower-bound histogram is
+
+```text
+edge edits at least   4  5   6    7    8    9   10  11  12
+known orientations    1 17  72  146  187  152  67  13   1.
+```
+
+The unique closest orientation is base catalog index 93 (zero-based), with
+degree multiset `19^4 20^20 21^16 22^2`.  Consequently, any hard-branch graph
+realizing the last disconnected normal form must delete to a Ramsey-42 graph
+outside the published known catalog and outside its radius-three neighborhood.
+This is a relative catalog exclusion, not a completeness claim for Ramsey
+graphs on 42 vertices.
+
 The complete edge-resolved catalog menu is
 [`RESIDUAL_COMPONENT_MENUS.tsv`](RESIDUAL_COMPONENT_MENUS.tsv).  Its empty
 data section certifies that no two-component catalog pair survives; the
@@ -1240,6 +1274,14 @@ PYTHONDONTWRITEBYTECODE=1 python3 verify_catalog_inputs.py
 
 It uses only the standard library and network access; its dominant input is
 the approximately 91 MB compressed edge-extremal `(4,5)` archive.
+
+The catalog bridge is a fast local check against the pinned Ramsey-42 file
+already committed by the companion radius-three artifact:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 verify_known_r42_bridge.py \
+  | cmp - EXPECTED_R42_BRIDGE.txt
+```
 
 ## Scope, provenance, and trust boundary
 
