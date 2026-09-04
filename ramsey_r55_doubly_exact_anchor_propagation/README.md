@@ -1,5 +1,18 @@
 # Propagation constraints from a doubly exact `R(5,5;43)` anchor
 
+Current status: the [one-defect localization theorem](../ramsey_r55_one_defect_anchor_localization/README.md)
+now closes the final blue-singleton case analytically. Both exact-anchor
+backbone colors are connected in all 349 hard-branch split profiles. The
+staged escape counts and singleton formulas below are retained as historical
+intermediate supersets: the aggregate local-profile formula and all typed
+and stabilized typed branches are mathematically inconsistent, without a
+solver-generated UNSAT certificate. The base formula omitting local-profile
+constraints remains unresolved by that argument. The finite target-degree
+catalog-radius results remain valid, but their singleton application is
+superseded by the analytic closure.
+
+## Historical propagation and residual-case reduction
+
 This directory strengthens the companion 21-by-21 cross-matrix normal form.
 In the hard branch of the local-deficiency dichotomy, fixing one doubly exact
 vertex does not merely fix two `(4,5;21,100)` cores.  The cross matrix also
