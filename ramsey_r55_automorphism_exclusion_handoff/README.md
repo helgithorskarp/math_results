@@ -5,11 +5,11 @@ independent set of order five.  The currently certified symmetry results in
 this repository imply the following reusable group-screening rule:
 
 > Every nonidentity element of `Aut(G)` has at least five vertex cycles, and
-> `Aut(G)` has no element of order seven.
+> `Aut(G)` has no element of order seven or eleven.
 
 In addition, no automorphism has a prime cycle of length 29, 31, 37, 41, or
 43.  Consequently `|Aut(G)|` is not divisible by any of
-`7,29,31,37,41,43`.  A target cannot be vertex-transitive.
+`7,11,29,31,37,41,43`.  A target cannot be vertex-transitive.
 
 These are necessary conditions, not a construction and not an improvement
 to the known lower bound for `R(5,5)`.
@@ -23,16 +23,19 @@ to the known lower bound for `R(5,5)`.
 | exactly three vertex cycles | all 154 types: 79 exact degree obstructions and 75 independently replayed UNSAT certificates | [`ramsey_r55_three_cycle_low_orbit_obstruction`](../ramsey_r55_three_cycle_low_orbit_obstruction) |
 | exactly four vertex cycles | all 588 types: 185 exact degree obstructions and 403 independently replayed UNSAT certificates | [`ramsey_r55_four_cycle_minimal_orbit_obstruction`](../ramsey_r55_four_cycle_minimal_orbit_obstruction) |
 | order-seven elements | all six types `1^f 7^k`, where `f+7k=43`; exact formula checks and replayed certificates | [`ramsey_r55_no_order7_automorphism`](../ramsey_r55_no_order7_automorphism) |
+| order-eleven elements | all three types `1^f 11^k`, where `f+11k=43`; exact formula checks and independently replayed RUP certificates | [`ramsey_r55_order11_automorphism_search`](../ramsey_r55_order11_automorphism_search) |
 | long cycles | a fixed point cannot coexist with a cycle of length at least 25; prime cycles of lengths 29, 31, 37, and 41 are excluded analytically | [`ramsey_r55_automorphism_long_cycle_obstruction`](../ramsey_r55_automorphism_long_cycle_obstruction) |
 
-The order-seven theorem is disjoint from the two-, three-, and four-cycle
-theorems: its six permutation types have 7, 13, 19, 25, 31, and 37 vertex
-cycles.  The older `1+21+21` obstruction is now subsumed by the complete
-three-cycle theorem and is not counted as an additional exclusion.
+The order-seven and order-eleven theorems are disjoint from the two-, three-,
+and four-cycle theorems: their permutation types have respectively 7, 13,
+19, 25, 31, and 37 cycles, and 13, 23, and 33 cycles.  The older `1+21+21`
+obstruction is now subsumed by the complete three-cycle theorem and is not
+counted as an additional exclusion.
 
 Certificate compactness differs across inputs.  The two-, three-, and
-four-cycle artifacts retain independently checkable enumeration or RUP
-evidence.  The complete order-seven theorem combines four compact standalone
+four-cycle artifacts and the order-eleven artifact retain independently
+checkable enumeration or RUP evidence.  The complete order-seven theorem
+combines four compact standalone
 DRAT proofs with sibling results for one and eight fixed points.  Its
 one-fixed-point artifact omits a 1.304 GB proof tree under the repository's
 compact-artifact policy, but retains all leaf assignments and hashes and
@@ -46,7 +49,7 @@ partition of every nonidentity element (or enough powers and conjugacy-class
 representatives to cover the group).  Reject the construction family if:
 
 1. an element has at most four vertex cycles;
-2. an element has order seven;
+2. an element has order seven or eleven;
 3. an element contains a cycle of prime length 29, 31, 37, 41, or 43; or
 4. an element fixes a vertex and also contains a cycle of length at least 25.
 
@@ -55,11 +58,11 @@ insufficient: invariance under `g` also gives invariance under every power of
 `g`, and a proper power may fall into a forbidden family.
 
 This materially prunes symmetry-first construction search.  Any surviving
-nontrivial action must be a many-cycle action, avoid order seven, and avoid
-the long-cycle patterns above; such actions generally retain more edge
-orbits and therefore less of the dimensional advantage sought from a highly
-structured ansatz.  The handoff does not prune an asymmetric local search
-and does not prove that a target, if it exists, must be asymmetric.
+nontrivial action must be a many-cycle action, avoid orders seven and eleven,
+and avoid the long-cycle patterns above; such actions generally retain more
+edge orbits and therefore less of the dimensional advantage sought from a
+highly structured ansatz.  The handoff does not prune an asymmetric local
+search and does not prove that a target, if it exists, must be asymmetric.
 
 ## Logical derivation
 
@@ -67,8 +70,9 @@ The one-cycle case is a 43-cycle and hence circulant after relabeling.  The
 next three rows exclude elements with exactly two, three, or four cycles, so
 every remaining nonidentity automorphism has at least five cycles.  An
 order-seven permutation on 43 points has one of the six displayed
-fixed-point/seven-cycle types, all covered by the order-seven artifact.  The
-prime-cycle restrictions are the analytic long-cycle theorem plus the
-43-cycle classification.  Finally, Cauchy's theorem converts absence of an
-element of each listed prime order into the stated restrictions on
-`|Aut(G)|`.
+fixed-point/seven-cycle types, all covered by the order-seven artifact; the
+analogous equation for order eleven gives three types, all covered by the
+order-eleven artifact.  The prime-cycle restrictions are the analytic
+long-cycle theorem plus the 43-cycle classification.  Finally, Cauchy's
+theorem converts absence of an element of each listed prime order into the
+stated restrictions on `|Aut(G)|`.
