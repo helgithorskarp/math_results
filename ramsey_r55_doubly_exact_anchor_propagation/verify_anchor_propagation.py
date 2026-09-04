@@ -329,6 +329,13 @@ def hard_split_degree_profiles():
     return profiles_by_cross_count
 
 
+def turan_edges(order: int, parts: int) -> int:
+    """Number of edges in the balanced complete `parts`-partite graph."""
+    quotient, remainder = divmod(order, parts)
+    class_sizes = [quotient + 1] * remainder + [quotient] * (parts - remainder)
+    return (order * order - sum(size * size for size in class_sizes)) // 2
+
+
 def main() -> None:
     red_core = decode_short_graph6(SAMPLE_CORE_G6)
     blue_core = relabel(red_core, tuple((5 * vertex + 3) % SIDE for vertex in range(SIDE)))
@@ -481,6 +488,62 @@ def main() -> None:
     if (red_triangles, blue_triangles) != (1403, 1463):
         raise AssertionError((red_triangles, blue_triangles))
 
+    # There are 28--30 doubly exact vertices at M=214.  Reanchoring at each
+    # one gives internal minimum red/blue degrees 13 and 12.  Turan's exact
+    # K5-free edge bound forces component orders at least 18 and 16, while
+    # three disjoint closed neighborhoods exclude diameter six.
+    backbone_order_bounds = (28, global_counts[3])
+    backbone_minimum_degrees = (13, 12)
+    minimum_component_orders = tuple(
+        next(
+            order
+            for order in range(minimum_degree + 1, backbone_order_bounds[1] + 1)
+            if 2 * turan_edges(order, 4) >= minimum_degree * order
+        )
+        for minimum_degree in backbone_minimum_degrees
+    )
+    if backbone_order_bounds != (28, 30):
+        raise AssertionError(backbone_order_bounds)
+    if minimum_component_orders != (18, 16):
+        raise AssertionError(minimum_component_orders)
+    if not all(2 * component_order > backbone_order_bounds[1]
+               for component_order in minimum_component_orders):
+        raise AssertionError("Turan component bound does not force connectivity")
+
+    deletion_component_orders = {
+        "red": [
+            next(
+                order
+                for order in range(backbone_minimum_degrees[0] - deleted + 1,
+                                   backbone_order_bounds[1] + 1)
+                if 2 * turan_edges(order, 4)
+                >= (backbone_minimum_degrees[0] - deleted) * order
+            )
+            for deleted in range(4)
+        ],
+        "blue": [
+            next(
+                order
+                for order in range(backbone_minimum_degrees[1] - deleted + 1,
+                                   backbone_order_bounds[1] + 1)
+                if 2 * turan_edges(order, 4)
+                >= (backbone_minimum_degrees[1] - deleted) * order
+            )
+            for deleted in range(2)
+        ],
+    }
+    if deletion_component_orders != {"red": [18, 16, 15, 14], "blue": [16, 15]}:
+        raise AssertionError(deletion_component_orders)
+    if not all(
+        2 * component_order + deleted > backbone_order_bounds[1]
+        for orders in deletion_component_orders.values()
+        for deleted, component_order in enumerate(orders)
+    ):
+        raise AssertionError("Turan deletion bound does not force connectivity")
+    if not all(3 * (minimum_degree + 1) > backbone_order_bounds[1]
+               for minimum_degree in backbone_minimum_degrees):
+        raise AssertionError("closed-neighborhood packing does not bound diameter")
+
     # If W is the degree weight, at most W/3 secondary vertices are
     # noncentral and at most (43-W)/2 local sides exceed deficiency seven.
     # Audit both the structural 241-M lower bound and its attainment within
@@ -523,6 +586,9 @@ def main() -> None:
     print("PASS hard split degree-profile counts=1,5,17,40,69,95,122 total=349")
     print("PASS M=214 forces degrees 20^13,21^30 and excess split red=0 blue=2")
     print("PASS M=214 forces monochromatic triangle counts red=1403 blue=1463")
+    print("PASS M=214 exact-anchor backbone order=28,...,30 min degrees red=13 blue=12")
+    print("PASS backbone vertex connectivity is at least red=4 blue=2")
+    print("PASS both backbone colors have diameter at most 5")
     print("PASS first-degree-feasible tests have 0 secondary exact anchors")
     print("PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0")
     print("PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21")

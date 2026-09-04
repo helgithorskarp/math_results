@@ -234,6 +234,68 @@ blue deficiency seven.  In particular at least 28 of the 30 degree-21
 vertices are doubly exact.  This is a necessary branch theorem; it does not
 assert that the pinned local graphs exist compatibly.
 
+### Connected exact-anchor backbone at `M=214`
+
+Let `D` be the set of all doubly exact vertices.  The `241-M` theorem gives
+at least 27 secondary anchors, while the unique degree profile has only 30
+degree-21 vertices.  Therefore
+
+```text
+28 <= |D| <= 30.                                         (Backbone-order)
+```
+
+The cross total is independent of which `u in D` is selected as anchor:
+every such split has 21 incident red edges, 100 red edges in its red core,
+110 red edges in its blue-neighbor side, and hence the same
+`M=|E(G)|-231=214`.  Apply the side-specific anchor bounds at every `u`.  Its
+red-neighbor side contains at least 13 other vertices of `D`, and its
+blue-neighbor side contains at least 12.  Thus
+
+```text
+minimum degree of G[D]               >= 13,
+minimum degree of complement(G)[D]   >= 12.              (Backbone-degree)
+```
+
+Both color graphs on `D` are connected.  Indeed, a component of a `K_5`-free
+graph with minimum degree 13 has order at least 18: Turan's theorem gives
+
+```text
+13s/2 <= ex(s,K_5) <= 3s^2/8.
+```
+
+Two such components would require at least 36 vertices.  The blue argument
+with minimum degree 12 makes every component have order at least 16, so two
+would require at least 32 vertices.  Both contradict `|D|<=30`.
+
+The same argument survives vertex deletions.  If a cut set of size `k` leaves
+a component of order `s`, its internal minimum degree is at least `13-k` in
+red or `12-k` in blue.  Turan's bound gives the following minimum component
+orders:
+
+```text
+red:   k=0,1,2,3  ->  s>=18,16,15,14,
+blue:  k=0,1      ->  s>=16,15.
+```
+
+Two components plus the cut set would require respectively at least
+`36,33,32,31` red vertices or `32,31` blue vertices.  Consequently
+
+```text
+vertex-connectivity of G[D]              >= 4,
+vertex-connectivity of complement(G)[D]  >= 2.          (Backbone-connectivity)
+```
+
+Both connected color graphs also have diameter at most five.  A geodesic of
+length at least six contains vertices at positions 0, 3, and 6 with pairwise
+disjoint closed neighborhoods.  Those neighborhoods would contain at least
+`3*(13+1)=42` vertices in red or `3*(12+1)=39` in blue, again exceeding 30.
+
+Consequently every doubly exact anchor can be reached from every other by at
+most five red-anchor steps and, independently, by at most five blue-anchor
+steps.  A construction or consistency checker can propagate reanchored core
+constraints through this connected backbone instead of treating the 28--30
+anchors as unrelated splits.
+
 ## Hard-branch propagation theorem
 
 For `18 <= q <= 24`, the exact maximum edge counts in an order-`q`
@@ -390,6 +452,9 @@ PASS first-degree-feasible test weights=99,...,111 exceed hard limit 39
 PASS hard split degree-profile counts=1,5,17,40,69,95,122 total=349
 PASS M=214 forces degrees 20^13,21^30 and excess split red=0 blue=2
 PASS M=214 forces monochromatic triangle counts red=1403 blue=1463
+PASS M=214 exact-anchor backbone order=28,...,30 min degrees red=13 blue=12
+PASS backbone vertex connectivity is at least red=4 blue=2
+PASS both backbone colors have diameter at most 5
 PASS first-degree-feasible tests have 0 secondary exact anchors
 PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0
 PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21
@@ -402,8 +467,8 @@ data.  It took about 1.3 seconds under CPython 3.11.2 on the research host.
 ## Scope, provenance, and trust boundary
 
 The formulas are elementary partitions and are checked independently against
-the definition of a local color-neighborhood.  The count of nine secondary
-anchors imports the companion
+the definition of a local color-neighborhood.  The `241-M` secondary-anchor
+count imports the companion
 [`ramsey_r55_local_extremal_deficiency`](../ramsey_r55_local_extremal_deficiency)
 theorem, including its stated trust in the completeness of the pinned McKay
 `(4,5)` extremal catalogs.  The anchored representation and mixed-clique
