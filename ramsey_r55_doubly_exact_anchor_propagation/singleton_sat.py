@@ -162,6 +162,24 @@ class ClauseSink:
         for position, bit in enumerate(bits):
             self.add((bit if (k >> position) & 1 else -bit,))
 
+    def conditional_binary_values(
+        self,
+        literals: Sequence[int],
+        selector: int,
+        when_true: int,
+        when_false: int,
+    ) -> None:
+        """Fix a population count to one of two values selected by a literal."""
+        if not (0 <= when_true <= len(literals) and 0 <= when_false <= len(literals)):
+            self.add(())
+            return
+        bits = self.binary_sum(literals)
+        for position, bit in enumerate(bits):
+            true_literal = bit if (when_true >> position) & 1 else -bit
+            false_literal = bit if (when_false >> position) & 1 else -bit
+            self.add((-selector, true_literal))
+            self.add((selector, false_literal))
+
 
 class DimacsWriter(ClauseSink):
     HEADER = f"p cnf {0:12d} {0:12d}\n"
@@ -198,7 +216,9 @@ class MemorySink(ClauseSink):
         self.nclauses += 1
 
 
-def add_local_profile_constraints(sink: ClauseSink) -> None:
+def add_local_profile_constraints(
+    sink: ClauseSink, red_exceptional_count: int | None = None
+) -> None:
     """Encode every forced singleton local count except the 20 color choices."""
     triangle_variables: dict[tuple[int, int, int], tuple[int, int]] = {}
     for vertices in itertools.combinations(range(N_F), 3):
@@ -239,18 +259,36 @@ def add_local_profile_constraints(sink: ClauseSink) -> None:
     blue_z.extend(-edge_var(Z, other) for other in O if other != Z)
     sink.exactly_binary(blue_z, 107)
 
-    # Each other O vertex spends exactly one of the twenty excess units, so
-    # its two local monochromatic-triangle counts sum to 199.  Its triangles
-    # through u can only be blue and are precisely the blue incident O-edges.
+    # Each other O vertex spends exactly one of the twenty excess units.  In
+    # the untyped formula we impose only that its two counts sum to 199.  A
+    # typed branch instead selects (99,100) or (100,99) and fixes the number
+    # of vertices of the first type.  Blue triangles through u are precisely
+    # the blue incident O-edges.
+    type_selectors = []
     for vertex in O:
         if vertex == Z:
             continue
-        local = incident(vertex, 0) + incident(vertex, 1)
-        local.extend(-edge_var(vertex, other) for other in O if other != vertex)
-        sink.exactly_binary(local, 199)
+        red_local = incident(vertex, 0)
+        blue_local = incident(vertex, 1)
+        blue_local.extend(
+            -edge_var(vertex, other) for other in O if other != vertex
+        )
+        if red_exceptional_count is None:
+            sink.exactly_binary(red_local + blue_local, 199)
+        else:
+            selector = sink.fresh()
+            type_selectors.append(selector)
+            sink.conditional_binary_values(red_local, selector, 99, 100)
+            sink.conditional_binary_values(blue_local, selector, 100, 99)
+    if red_exceptional_count is not None:
+        sink.exactly_binary(type_selectors, red_exceptional_count)
 
 
-def generate_formula(path: Path, local_profile: bool = False) -> tuple[int, int]:
+def generate_formula(
+    path: Path,
+    local_profile: bool = False,
+    red_exceptional_count: int | None = None,
+) -> tuple[int, int]:
     sink = DimacsWriter(path)
 
     # Both colors are forbidden on every 5-set of F.
@@ -279,7 +317,7 @@ def generate_formula(path: Path, local_profile: bool = False) -> tuple[int, int]
     sink.exactly(tuple(edge_var(i, j) for i, j in itertools.combinations(O, 2)), 110)
 
     if local_profile:
-        add_local_profile_constraints(sink)
+        add_local_profile_constraints(sink, red_exceptional_count)
 
     return sink.finish()
 
@@ -380,6 +418,30 @@ def self_test() -> None:
                         raise AssertionError(
                             ("binary", n, k, literals, mask, actual, expected)
                         )
+
+        # Also check both implications of the selector-controlled variant,
+        # including signed inputs.
+        literals = literal_sets[1]
+        selector = n + 1
+        when_true, when_false = n // 3, (2 * n) // 3
+        sink = MemorySink(n + 2)
+        sink.conditional_binary_values(
+            literals, selector, when_true, when_false
+        )
+        for selector_value in (False, True):
+            target = when_true if selector_value else when_false
+            for mask in range(1 << n):
+                fixed = {i + 1: bool(mask & (1 << i)) for i in range(n)}
+                fixed[selector] = selector_value
+                actual = satisfiable_extension(sink.clauses, fixed)
+                truth_count = sum(
+                    fixed[abs(literal)] == (literal > 0) for literal in literals
+                )
+                expected = truth_count == target
+                if actual != expected:
+                    raise AssertionError(
+                        ("conditional", n, mask, selector_value, actual, expected)
+                    )
 
     if BASE_VARS != 861:
         raise AssertionError(BASE_VARS)
@@ -521,6 +583,12 @@ def main() -> None:
         action="store_true",
         help="also encode all forced blue-singleton local triangle counts",
     )
+    generate.add_argument(
+        "--red-exceptional",
+        type=int,
+        choices=tuple(range(0, 19, 3)),
+        help="typed local branch: number of O vertices with (t_R,t_B)=(99,100)",
+    )
     check = subparsers.add_parser("check-model")
     check.add_argument("model", type=Path)
     check.add_argument("--write-graph", type=Path)
@@ -530,7 +598,11 @@ def main() -> None:
     if args.command == "self-test":
         self_test()
     elif args.command == "generate":
-        nvars, nclauses = generate_formula(args.output, args.local_profile)
+        if args.red_exceptional is not None and not args.local_profile:
+            parser.error("--red-exceptional requires --local-profile")
+        nvars, nclauses = generate_formula(
+            args.output, args.local_profile, args.red_exceptional
+        )
         print(f"DIMACS variables: {nvars}")
         print(f"DIMACS clauses: {nclauses}")
         print(f"DIMACS sha256: {sha256(args.output)}")

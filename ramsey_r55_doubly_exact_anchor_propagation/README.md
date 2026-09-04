@@ -1146,6 +1146,22 @@ PYTHONDONTWRITEBYTECODE=1 python3 singleton_sat.py generate \
   singleton-local.cnf --local-profile | cmp - EXPECTED_SINGLETON_LOCAL_SAT.txt
 ```
 
+Finally, the seven values of `x` in `(Singleton-local)` give seven exhaustive
+typed branches.  In a typed branch the script uses a selector for each vertex
+of `O minus {z}`, separately fixes its local pair to `(99,100)` or
+`(100,99)`, and fixes the selector sum to `x`.  Each branch has 458107
+variables and 3782794 clauses.  All seven deterministic hashes are recorded
+in [`SINGLETON_TYPED_BRANCHES.tsv`](SINGLETON_TYPED_BRANCHES.tsv).  For
+example:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 singleton_sat.py generate \
+  singleton-x0.cnf --local-profile --red-exceptional 0
+```
+
+UNSAT certificates for all seven rows would eliminate the singleton normal
+form; a SAT model in any row would be the desired order-43 witness.
+
 For a solver transcript containing a `s SATISFIABLE` line and standard `v`
 model lines, independently verify and export the red graph in graph6 format:
 
