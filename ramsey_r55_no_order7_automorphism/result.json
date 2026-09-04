@@ -1,0 +1,46 @@
+{
+  "claim": "A (5,5)-Ramsey coloring of K_43 has no color-preserving automorphism of order 7.",
+  "cycle_type_exhaustion": [1, 8, 15, 22, 29, 36],
+  "new_standalone_cases": [
+    {
+      "checker": {"core_clauses": 14254, "core_lemmas": 26664, "lemmas": 26867, "rat_lemmas": 564, "resolution_steps": 427623, "seconds": 9.169},
+      "fixed": 15,
+      "formula": {"bytes": 11187081, "clauses": 280424, "sha256": "c55f4f7b526389c66b9d6c22643c386b1116737f30878fdbea4e15354d4686d6", "variables": 219},
+      "proof": {"compressed_bytes": 413536, "compressed_sha256": "148ba7009dbd1935de7480de8f339488933ddc3d029160b2e6c74112491407fe", "core_bytes": 1688368, "core_sha256": "ca3510a7b0e20ea1d865a94d694e1ac3e73516d3903f77973db01904162e3db8", "source_bytes": 4405594, "source_sha256": "aa1b3dd3f438e1d27d1a71295654711031e361335d59f118f30b22b9979de159"},
+      "seven_cycles": 4,
+      "solver": {"conflicts": 43937, "decisions": 69007, "maximum_resident_bytes": 64339968, "process_seconds": 10.27}
+    },
+    {
+      "checker": {"core_clauses": 5205, "core_lemmas": 8443, "lemmas": 8516, "rat_lemmas": 251, "resolution_steps": 122523, "seconds": 3.109},
+      "fixed": 22,
+      "formula": {"bytes": 12963321, "clauses": 318854, "sha256": "3f99803c30ba974f0f77cfe0773c70c94917b7da48ac10c0520c9e89f6c3379f", "variables": 327},
+      "proof": {"compressed_bytes": 125268, "compressed_sha256": "d2b3e1184d7628efbdcb255f16cbf4420d2266752bcb7490cc621cd8940ea250", "core_bytes": 468079, "core_sha256": "55f697507e68f5d5d76bd2347b701d0360f7ff185ab3417cbb3d23bf14300197", "source_bytes": 1168112, "source_sha256": "1b119176c42351f119e7edbb5d216ecf6f100d7ee0899fe2a87f5f175a186153"},
+      "seven_cycles": 3,
+      "solver": {"conflicts": 10868, "decisions": 15260, "maximum_resident_bytes": 67813376, "process_seconds": 1.54}
+    },
+    {
+      "checker": {"core_clauses": 1103, "core_lemmas": 930, "lemmas": 938, "rat_lemmas": 66, "resolution_steps": 11703, "seconds": 1.660},
+      "fixed": 29,
+      "formula": {"bytes": 20345016, "clauses": 476732, "sha256": "3fa71beafaee42e3e80ae59f376a15fb88e77bff5cb06e3443004a0d4b44d411", "variables": 477},
+      "proof": {"compressed_bytes": 13952, "compressed_sha256": "b100d8c6202d9308cf3dc931f3c2828ef6fc415799b7f3185263d50db89015b1", "core_bytes": 42999, "core_sha256": "e9c98de0ae49dc9903ff53f82e8860b85516538d847349bda02021bcbd404d49", "source_bytes": 119333, "source_sha256": "0a36cf04736d0cae9d3756d274e9ca57c4e084dc5d4e2fc58f2febeb632e4ce4"},
+      "seven_cycles": 2,
+      "solver": {"conflicts": 1805, "decisions": 8620, "maximum_resident_bytes": 69099520, "process_seconds": 0.58}
+    },
+    {
+      "checker": {"core_clauses": 81, "core_lemmas": 38, "lemmas": 52, "rat_lemmas": 1, "resolution_steps": 521, "seconds": 3.184},
+      "fixed": 36,
+      "formula": {"bytes": 41096862, "clauses": 919797, "sha256": "75910f34d8b242fa17348a38d295ff3144584dd9a3b5f655963a531410d6ac51", "variables": 669},
+      "proof": {"compressed_bytes": 752, "compressed_sha256": "a5cc3c2ad0f49fa5e14ba7b13e595c9eafc8e6eb924e9ea239aa92d82d5ad6d6", "core_bytes": 1724, "core_sha256": "4520e1cb9454bce467fdfa2cc06d78d18db8afaeaf2c0de4758f460b7a70a4eb", "source_bytes": 86213, "source_sha256": "0e864797098951a0904e557aca47825495cb6edb41a0d45ee92f185e90124cfb"},
+      "seven_cycles": 1,
+      "solver": {"conflicts": 545, "decisions": 47108, "maximum_resident_bytes": 139599872, "process_seconds": 1.60}
+    }
+  ],
+  "previous_verified_cases": [
+    {"fixed": 1, "github_commit": "38b1b73f723bff6b47d3af2b2e17549677413917", "path": "ramsey_r55_order7_one_fixed_obstruction", "seven_cycles": 6},
+    {"fixed": 8, "github_commit": "0a5c431cbebd4d4037affb921fc4bb1ba2018446", "path": "ramsey_r55_order7_eight_fixed_obstruction", "seven_cycles": 5}
+  ],
+  "toolchain": {
+    "checker": {"binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a", "commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985", "name": "drat-trim"},
+    "solver": {"binary_sha256": "2d185ea775f2c7c16d33a235ef852d2b69f0f3c8b437335b966b4a5aa6265b45", "commit": "8af8e56f174b778aef3aa45af9f739b2a5f492c2", "name": "Kissat", "version": "4.0.4"}
+  }
+}
