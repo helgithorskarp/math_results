@@ -6,7 +6,7 @@ from __future__ import annotations
 import hashlib
 import subprocess
 import sys
-from itertools import combinations
+from itertools import combinations, permutations, product
 from pathlib import Path
 
 
@@ -24,6 +24,7 @@ LIBRARY = HERE / "colour_libraries.txt"
 EXPECTED = HERE / "expected_census.txt"
 THREE_SUMMARY = HERE / "expected_three_summary.txt"
 FOUR_SUMMARY = HERE / "expected_four_summary.txt"
+FIVE_SUMMARY = HERE / "expected_five_summary.txt"
 
 from make_colour_libraries import library_bytes  # noqa: E402
 
@@ -39,12 +40,13 @@ SOURCE_HASHES = {
     FLEXIBILITY / "certificate.json": "718f0742acd6bbc8b4a809646a9a896912e2a593154906e2af04df62b9c3febb",
     FLEXIBILITY / "verify.py": "cfc83d15a14d34b7684576a162b602a18a3a0b2242112872f2670be498f0d9d9",
     CRITICALITY: "d354f9629c41639168b80fc1aa6feb6e4187dd37dee7efcb83b4ef6ebe68d16c",
-    CENSUS: "ee2b9690428103d736f079907deaae2a68b60f006fc1756e37eb840ce4bdb772",
+    CENSUS: "d9992d421d20fcb2246692353ab7b7aa3b7c0357b2779e40d0126a8ce03d1ca3",
     LIBRARY_GENERATOR: "ad23e21c17c48242ea2dcbb4a90bdad96da655c8c29f0ddadbfe86f4f5ab5660",
     LIBRARY: "91f5f39f1533e5780edfa30130f36bee3f90428bd7d442e788e8311d029b4169",
     EXPECTED: "4008074237712c7fe2064cb32c3a47db0f91cf293e1be11914bed232b95c497d",
     THREE_SUMMARY: "c82fc5b5b7da533686ddeb12273337e6a218e5a308be299218a4d7bccf14c559",
     FOUR_SUMMARY: "e4c3f2d098ae43e69dfab345a6d9025e3061a5110d1d470e80ccb64160cd0814",
+    FIVE_SUMMARY: "bee53871486313d1245d17dd2e9fc282ef00dbc304ccfa4cd731cdcd49ad65de",
 }
 
 LEGACY_ROW_FIELDS = {
@@ -73,6 +75,9 @@ FOUR_ROW_FIELDS = (THREE_ROW_FIELDS - {"genuine_four_plus"}) | {
     "genuine_four", "genuine_five_plus", "four_library_absorbed",
 } | {f"four_{suffix}" for suffix in FOUR_PROFILE_SUFFIXES} | {
     f"absorbed_four_{suffix}" for suffix in FOUR_PROFILE_SUFFIXES
+}
+FIVE_ROW_FIELDS = (FOUR_ROW_FIELDS - {"genuine_five_plus"}) | {
+    "genuine_five", "genuine_six_plus", "five_library_absorbed",
 }
 
 
@@ -120,6 +125,44 @@ def verify_radical_bounds() -> None:
     # The C++ guard is safe for both-coordinate interval-square sums.
     if not 2 * (6 * 10**18) ** 2 < 2**127:
         raise ValueError("signed-int128 safety inequality failed")
+
+
+def canonical_colour_partition(pattern):
+    renamed = {}
+    canonical = []
+    for colour in pattern:
+        if colour not in renamed:
+            renamed[colour] = len(renamed)
+        canonical.append(renamed[colour])
+    return tuple(canonical)
+
+
+def verify_canonical_colour_compatibility() -> None:
+    colour_permutations = tuple(permutations(range(4)))
+    raw_patterns = tuple(product(range(4), repeat=7))
+    representatives = sorted({canonical_colour_partition(row) for row in raw_patterns})
+    if len(representatives) != 715:
+        raise ValueError("seven-label colour-partition census mismatch")
+    for row in raw_patterns:
+        canonical = canonical_colour_partition(row)
+        if any(
+            canonical_colour_partition(tuple(rename[value] for value in row))
+            != canonical
+            for rename in colour_permutations
+        ):
+            raise ValueError("canonical colour partition is not relabelling-invariant")
+    compatible_pairs = 0
+    for small in representatives:
+        for left in representatives:
+            if any(
+                rename[small[0]] == left[0]
+                and rename[small[1]] == left[1]
+                and all(rename[small[i]] != left[i] for i in range(2, 7))
+                for rename in colour_permutations
+            ):
+                compatible_pairs += 1
+    if compatible_pairs != 124925:
+        raise ValueError("canonical compatibility-pair census mismatch")
 
 
 def verify_prior_reduction() -> None:
@@ -354,6 +397,52 @@ def verify_four_edge_summary(three_scalars):
     return scalars
 
 
+def verify_five_edge_summary(four_scalars):
+    rows, scalars, flags = parse_output(FIVE_SUMMARY)
+    if rows:
+        raise ValueError("compact five-edge summary contains orientation rows")
+    expected = {
+        key: value
+        for key, value in four_scalars.items()
+        if key not in {
+            "with_at_least_five_genuinely_new_cross_edges",
+            "interval_candidates", "exact_distance_checks",
+        }
+    }
+    expected.update({
+        "with_exactly_five_genuinely_new_cross_edges": 173230,
+        "with_at_least_six_genuinely_new_cross_edges": 1276364,
+        "five_new_edges_absorbed_by_explicit_libraries": 173230,
+        "five_new_edges_unresolved_by_explicit_libraries": 0,
+        "interval_candidates": 55803809,
+        "exact_distance_checks": 55803809,
+    })
+    if scalars != expected:
+        raise ValueError("five-edge global summary mismatch")
+    if flags != {"exact_two_overlap_cross_census"}:
+        raise ValueError("five-edge census trailer mismatch")
+    if sum(
+        scalars[name]
+        for name in (
+            "with_zero_genuinely_new_cross_edges",
+            "with_exactly_one_genuinely_new_cross_edge",
+            "with_exactly_two_genuinely_new_cross_edges",
+            "with_exactly_three_genuinely_new_cross_edges",
+            "with_exactly_four_genuinely_new_cross_edges",
+            "with_exactly_five_genuinely_new_cross_edges",
+            "with_at_least_six_genuinely_new_cross_edges",
+        )
+    ) != scalars["exactly_two_overlap_placements"]:
+        raise ValueError("five-edge categories do not partition placements")
+    if scalars["five_new_edges_absorbed_by_explicit_libraries"] != (
+        scalars["with_exactly_five_genuinely_new_cross_edges"]
+    ) or scalars["five_new_edges_unresolved_by_explicit_libraries"] != 0:
+        raise ValueError("five-edge explicit-colouring closure mismatch")
+    if scalars["interval_candidates"] != scalars["exact_distance_checks"]:
+        raise ValueError("five-edge exact-check accounting mismatch")
+    return scalars
+
+
 def verify_three_transcript(path: Path, expected_scalars) -> None:
     if sha256(path) != "6a1903a823aa4712ffc76107b038e2ab2f78a844651bcdc4c47264ed94513f2c":
         raise ValueError("extended transcript hash mismatch")
@@ -558,16 +647,152 @@ def verify_four_transcript(path: Path, expected_scalars) -> None:
             raise ValueError(f"four-edge rotation/reflection mismatch: {key}")
 
 
+def verify_five_transcript(path: Path, expected_scalars) -> None:
+    if sha256(path) != "bcfb26d2c2dcf7a03c956d6e57186d519c9cd200267cee43cbfe62168b35ddaa":
+        raise ValueError("five-edge transcript hash mismatch")
+    rows, scalars, flags = parse_output(path, FIVE_ROW_FIELDS)
+    headers = {
+        "overlap_induced_rotations": 1420,
+        "overlap_induced_reflections": 1420,
+        "distinct_nonzero_L_vectors": 11650,
+        "distinct_nonzero_S_vectors": 1666,
+        "internal_L_edges": 1860,
+        "internal_Splus_edges": 564,
+        "explicit_L_colourings": 135,
+        "explicit_Splus_colourings": 194,
+        "canonical_seven_label_colour_partitions": 715,
+        "compatible_seven_label_partition_pairs": 124925,
+    }
+    if scalars != headers | expected_scalars:
+        raise ValueError("five-edge transcript scalar mismatch")
+    if flags != {"exact_two_overlap_cross_census"}:
+        raise ValueError("five-edge transcript trailer mismatch")
+    if len(rows) != 2840 or [row["orientation"] for row in rows] != list(range(2840)):
+        raise ValueError("five-edge orientation rows are incomplete or noncontiguous")
+    if any(row["reflected"] != (index >= 1420) for index, row in enumerate(rows)):
+        raise ValueError("five-edge rotation/reflection partition mismatch")
+    if any(row["with_cross"] != row["exactly_two"] for row in rows):
+        raise ValueError("five-edge transcript has a placement without a cross pair")
+    if any(
+        row["genuine_zero"] + row["genuine_one"] + row["genuine_two"]
+        + row["genuine_three"] + row["genuine_four"] + row["genuine_five"]
+        + row["genuine_six_plus"] != row["exactly_two"]
+        for row in rows
+    ):
+        raise ValueError("five-edge categories do not partition row placements")
+    three_suffixes = ("L1_S3", "L3_S1", "L2_S2", "L2_S3", "L3_S2", "L3_S3")
+    if any(
+        row["two_share_left"] + row["two_share_small"] + row["two_disjoint"]
+        != row["genuine_two"]
+        for row in rows
+    ):
+        raise ValueError("five-edge transcript has a bad two-edge partition")
+    if any(
+        sum(row[f"three_{suffix}"] for suffix in three_suffixes)
+        != row["genuine_three"]
+        for row in rows
+    ):
+        raise ValueError("five-edge transcript has a bad three-edge partition")
+    if any(
+        sum(row[f"four_{suffix}"] for suffix in FOUR_PROFILE_SUFFIXES)
+        != row["genuine_four"]
+        for row in rows
+    ):
+        raise ValueError("five-edge transcript has a bad four-edge partition")
+    if any(
+        row["two_library_absorbed"] != row["genuine_two"]
+        or row["absorbed_share_left"] != row["two_share_left"]
+        or row["absorbed_share_small"] != row["two_share_small"]
+        or row["absorbed_disjoint"] != row["two_disjoint"]
+        for row in rows
+    ):
+        raise ValueError("five-edge transcript row lacks a two-edge colouring")
+    if any(
+        row["three_library_absorbed"] != row["genuine_three"]
+        or any(
+            row[f"absorbed_three_{suffix}"] != row[f"three_{suffix}"]
+            for suffix in three_suffixes
+        )
+        for row in rows
+    ):
+        raise ValueError("five-edge transcript row lacks a three-edge colouring")
+    if any(
+        row["four_library_absorbed"] != row["genuine_four"]
+        or any(
+            row[f"absorbed_four_{suffix}"] != row[f"four_{suffix}"]
+            for suffix in FOUR_PROFILE_SUFFIXES
+        )
+        for row in rows
+    ):
+        raise ValueError("five-edge transcript row lacks a four-edge colouring")
+    if any(row["five_library_absorbed"] != row["genuine_five"] for row in rows):
+        raise ValueError("five-edge transcript row lacks a five-edge colouring")
+    if any(row["interval_candidates"] != row["exact_checks"] for row in rows):
+        raise ValueError("five-edge exact-check accounting mismatch")
+    mapping = {
+        "exactly_two": "exactly_two_overlap_placements",
+        "with_cross": "with_any_cross_unit_label_pair",
+        "with_genuine": "with_genuinely_new_cross_edge",
+        "genuine_zero": "with_zero_genuinely_new_cross_edges",
+        "genuine_one": "with_exactly_one_genuinely_new_cross_edge",
+        "genuine_two": "with_exactly_two_genuinely_new_cross_edges",
+        "genuine_three": "with_exactly_three_genuinely_new_cross_edges",
+        "genuine_four": "with_exactly_four_genuinely_new_cross_edges",
+        "genuine_five": "with_exactly_five_genuinely_new_cross_edges",
+        "genuine_six_plus": "with_at_least_six_genuinely_new_cross_edges",
+        "two_share_left": "two_new_edges_share_left_endpoint",
+        "two_share_small": "two_new_edges_share_small_endpoint",
+        "two_disjoint": "two_new_edges_vertex_disjoint",
+        "disjoint_adj00": "disjoint_two_edges_left_nonedge_small_nonedge",
+        "disjoint_adj01": "disjoint_two_edges_left_nonedge_small_edge",
+        "disjoint_adj10": "disjoint_two_edges_left_edge_small_nonedge",
+        "disjoint_adj11": "disjoint_two_edges_left_edge_small_edge",
+        "two_library_absorbed": "two_new_edges_absorbed_by_explicit_libraries",
+        "absorbed_share_left": "absorbed_two_edges_share_left_endpoint",
+        "absorbed_share_small": "absorbed_two_edges_share_small_endpoint",
+        "absorbed_disjoint": "absorbed_two_edges_vertex_disjoint",
+        "three_library_absorbed": "three_new_edges_absorbed_by_explicit_libraries",
+        "four_library_absorbed": "four_new_edges_absorbed_by_explicit_libraries",
+        "five_library_absorbed": "five_new_edges_absorbed_by_explicit_libraries",
+        "interval_candidates": "interval_candidates",
+        "exact_checks": "exact_distance_checks",
+    }
+    mapping.update({f"three_{suffix}": f"three_new_edges_{suffix}" for suffix in three_suffixes})
+    mapping.update({
+        f"absorbed_three_{suffix}": f"absorbed_three_new_edges_{suffix}"
+        for suffix in three_suffixes
+    })
+    mapping.update({
+        f"four_{suffix}": f"four_new_edges_{suffix}"
+        for suffix in FOUR_PROFILE_SUFFIXES
+    })
+    mapping.update({
+        f"absorbed_four_{suffix}": f"absorbed_four_new_edges_{suffix}"
+        for suffix in FOUR_PROFILE_SUFFIXES
+    })
+    for local, global_name in mapping.items():
+        if sum(row[local] for row in rows) != scalars[global_name]:
+            raise ValueError(f"five-edge per-orientation sum mismatch: {local}")
+    rotations, reflections = rows[:1420], rows[1420:]
+    for key in mapping:
+        if key in {"interval_candidates", "exact_checks"}:
+            continue
+        if sum(row[key] for row in rotations) != sum(row[key] for row in reflections):
+            raise ValueError(f"five-edge rotation/reflection mismatch: {key}")
+
+
 def verify() -> None:
     for path, expected in SOURCE_HASHES.items():
         if sha256(path) != expected:
             raise ValueError(f"source hash mismatch: {path.relative_to(ROOT)}")
     verify_radical_bounds()
+    verify_canonical_colour_compatibility()
     verify_prior_reduction()
     verify_single_cross_flexibility()
     verify_colour_libraries()
     three_scalars = verify_three_edge_summary()
     four_scalars = verify_four_edge_summary(three_scalars)
+    five_scalars = verify_five_edge_summary(four_scalars)
 
     rows, scalars, flags = parse_output(EXPECTED, LEGACY_ROW_FIELDS)
     if len(rows) != 2840 or [row["orientation"] for row in rows] != list(range(2840)):
@@ -714,7 +939,8 @@ def verify() -> None:
     print("with_exactly_two_genuinely_new_cross_edges=194946")
     print("with_exactly_three_genuinely_new_cross_edges=180216")
     print("with_exactly_four_genuinely_new_cross_edges=180234")
-    print("with_at_least_five_genuinely_new_cross_edges=1449594")
+    print("with_exactly_five_genuinely_new_cross_edges=173230")
+    print("with_at_least_six_genuinely_new_cross_edges=1276364")
     print("two_edge_topologies=share_L:21432 share_Splus:37900 disjoint:135614")
     print("two_new_edges_absorbed_by_explicit_libraries=194946")
     print("two_new_edges_unresolved_by_explicit_libraries=0")
@@ -729,6 +955,10 @@ def verify() -> None:
     )
     print("four_new_edges_absorbed_by_explicit_libraries=180234")
     print("four_new_edges_unresolved_by_explicit_libraries=0")
+    print("canonical_seven_label_colour_partitions=715")
+    print("compatible_seven_label_partition_pairs=124925")
+    print("five_new_edges_absorbed_by_explicit_libraries=173230")
+    print("five_new_edges_unresolved_by_explicit_libraries=0")
     print("closed_by_single_cross_edge_absorption=368812")
     print("closed_by_at_most_two_edge_certificates=563758")
     closed_through_three = (
@@ -742,6 +972,11 @@ def verify() -> None:
         + four_scalars["four_new_edges_absorbed_by_explicit_libraries"]
     )
     print(f"closed_by_at_most_four_edge_certificates={closed_through_four}")
+    closed_through_five = (
+        closed_through_four
+        + five_scalars["five_new_edges_absorbed_by_explicit_libraries"]
+    )
+    print(f"closed_by_at_most_five_edge_certificates={closed_through_five}")
     print("rotation_reflection_classification_totals_match=true")
     print("prior_two_overlap_reduction_verified=true")
     print("single_cross_edge_flexibility_verified=true")
@@ -749,7 +984,7 @@ def verify() -> None:
     print("solver_free_census_checks=true")
 
     if len(sys.argv) > 2:
-        raise ValueError("usage: verify.py [THREE_OR_FOUR_EDGE_TRANSCRIPT]")
+        raise ValueError("usage: verify.py [THREE_FOUR_OR_FIVE_EDGE_TRANSCRIPT]")
     if len(sys.argv) == 2:
         transcript = Path(sys.argv[1])
         transcript_hash = sha256(transcript)
@@ -757,6 +992,8 @@ def verify() -> None:
             verify_three_transcript(transcript, three_scalars)
         elif transcript_hash == "dfdff4b9fde77a9afb45de38b7c5564cd38906fda3f8e88cf393eaba38f015e5":
             verify_four_transcript(transcript, four_scalars)
+        elif transcript_hash == "bcfb26d2c2dcf7a03c956d6e57186d519c9cd200267cee43cbfe62168b35ddaa":
+            verify_five_transcript(transcript, five_scalars)
         else:
             raise ValueError("unrecognized extended transcript hash")
 
