@@ -1,0 +1,46 @@
+Independent sample replay, 2026-09-04
+=====================================
+
+All compilation and checking used one CPU-heavy process at a time.
+
+Compiler:
+  g++ (Debian 12.2.0-14+deb12u1) 12.2.0
+
+CaDiCaL:
+  https://github.com/arminbiere/cadical
+  tag rel-3.0.1
+  commit c60730422e758ef1cebe7aeddf2dda31c996bf04
+  version 3.0.1
+  libcadical.a SHA-256
+    351b5497822428e57927d539608eccbc6d20f4d6d49e91dcf34414ed08ed6f53
+
+Release enumerator build:
+  g++ -std=c++17 -O3 -Wall -Wextra -Wpedantic \
+    -I/path/to/cadical/src enumerate_four_flip_sat.cpp \
+    /path/to/cadical/build/libcadical.a -pthread -o enumerate
+
+  enumerate SHA-256
+    0044594a633e0b8b0ff3041552ccbaa6d8014e319f0834594970a827f531bbf1
+
+Complete release-mode parent replays:
+  parent=0   exact4=16 lower_models=42 clauses=633558 ramsey_clauses=624956
+  parent=33  exact4=37 lower_models=64 clauses=633015 ramsey_clauses=624413
+  parent=39  exact4=0  lower_models=12 clauses=633524 ramsey_clauses=624922
+  parent=327 exact4=8  lower_models=30 clauses=633534 ramsey_clauses=624932
+
+Every emitted exact-four flip set was compared against the corresponding
+committed map slice by check_sample_replays.py; all four slices matched.
+
+Sanitizer wrapper build:
+  g++ -std=c++17 -O1 -g -Wall -Wextra -Wpedantic \
+    -fsanitize=address,undefined -fno-omit-frame-pointer \
+    -I/path/to/cadical/src enumerate_four_flip_sat.cpp \
+    /path/to/cadical/build/libcadical.a -pthread -o enumerate-sanitize
+
+  enumerate-sanitize SHA-256
+    9b49d78c0dab6e308546a08c0490f450d8ae55ce0e9daf05b1f365fd0a8b8010
+
+The sanitizer build replayed parent 39 with exact4=0 and lower_models=12,
+without an AddressSanitizer or UndefinedBehaviorSanitizer diagnostic. The
+linked CaDiCaL static library itself was the release build, so sanitizer
+coverage pertains to the submitted enumeration wrapper rather than CaDiCaL.
