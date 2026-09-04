@@ -89,8 +89,9 @@ def main() -> None:
 
     certificate = {
         "format": "parts509-exceptional-rotation-triple-minimum-v1",
-        "claim": "The minimum order of a non-4-colourable induced subgraph of the strict 108/109/789 placement union is 509.",
+        "claim": "The strict 108/109/789 and 215/216/690 placement unions have identical canonical edge arrays, and each has minimum non-4-colourable induced order 509.",
         "events": [108, 109, 789],
+        "equivalent_events": [215, 216, 690],
         "vertices": 533,
         "edges": 2607,
         "edge_sha256": EXPECTED_EDGE_SHA256,

@@ -8,6 +8,7 @@ import base64
 import hashlib
 import json
 from collections import Counter
+from fractions import Fraction
 from pathlib import Path
 
 
@@ -20,6 +21,7 @@ BASE_SIZE = 509
 EXPECTED_POINTS_SHA256 = "f69ce1adef2f47c666f57c5e2096cb766fbc16654d75e3b24fbf0f5913d5be50"
 EXPECTED_BASE_EDGE_SHA256 = "5a95127767cb370f25f5865f057cab9b4a7ee9a72e2f73ad126ae390d71d487c"
 EXPECTED_BASE_CERTIFICATE_SHA256 = "d354f9629c41639168b80fc1aa6feb6e4187dd37dee7efcb83b4ef6ebe68d16c"
+EXPECTED_ROTATION_CERTIFICATE_SHA256 = "f3d1ff76e031dc0bfe50153db43512428d073d25ea243173d26d5ebfaa8cdedf"
 EXPECTED_UNION_EDGE_SHA256 = "cc3f6ad98f3d1198b6bde17628326d690b17789bd880f84303a2c6ff58be454f"
 
 Field = tuple[int, ...]
@@ -99,12 +101,39 @@ def identity_scaled(point: Point) -> Point:
     return tuple(tuple(2 * coefficient for coefficient in coordinate) for coordinate in point)  # type: ignore[return-value]
 
 
+def rotate_scaled64(point: Point, cosine: Field, sine: Field) -> Point:
+    """Rotate a scale-96 point by field numerators with denominator 64."""
+    x, y = point
+    cx = field_multiply(cosine, x)
+    sy = field_multiply(sine, y)
+    sx = field_multiply(sine, x)
+    cy = field_multiply(cosine, y)
+    return (
+        tuple(a - b for a, b in zip(cx, sy, strict=True)),
+        tuple(a + b for a, b in zip(sx, cy, strict=True)),
+    )
+
+
+def identity_scaled64(point: Point) -> Point:
+    return tuple(tuple(64 * coefficient for coefficient in coordinate) for coordinate in point)  # type: ignore[return-value]
+
+
 def squared_distance(left: Point, right: Point) -> Field:
     dx = tuple(a - b for a, b in zip(left[0], right[0], strict=True))
     dy = tuple(a - b for a, b in zip(left[1], right[1], strict=True))
     xx = field_multiply(dx, dx)
     yy = field_multiply(dy, dy)
     return tuple(a + b for a, b in zip(xx, yy, strict=True))
+
+
+def strict_edges(points: list[Point], scale: int) -> list[Edge]:
+    unit = (scale * scale,) + (0,) * (BASIS - 1)
+    return [
+        (i, j)
+        for i in range(len(points))
+        for j in range(i + 1, len(points))
+        if squared_distance(points[i], points[j]) == unit
+    ]
 
 
 def build_union(points_path: Path) -> tuple[list[Point], list[Edge], dict[int, list[int]], Counter[int]]:
@@ -126,13 +155,43 @@ def build_union(points_path: Path) -> tuple[list[Point], list[Edge], dict[int, l
         placements[event] = labels
     if len(points) != len(set(points)):
         raise AssertionError("coordinate deduplication failed")
-    unit = (SCALE * SCALE,) + (0,) * (BASIS - 1)
-    edges = [
-        (i, j)
-        for i in range(len(points))
-        for j in range(i + 1, len(points))
-        if squared_distance(points[i], points[j]) == unit
-    ]
+    edges = strict_edges(points, SCALE)
+    return points, edges, placements, Counter(multiplicity.values())
+
+
+def build_equivalent_union(points_path: Path) -> tuple[list[Point], list[Edge], dict[int, list[int]], Counter[int]]:
+    """Build events 215/216/690 independently at common scale 96*64."""
+    base = read_scaled_points(points_path)
+    points = [identity_scaled64(point) for point in base[:L_SIZE]]
+    point_index = {point: i for i, point in enumerate(points)}
+    placements: dict[int, list[int]] = {}
+    multiplicity: Counter[int] = Counter()
+    rotations = (
+        (215, (-17, 0, -21, 0, 0, 0, 0, 0), (0, -17, 0, 7, 0, 0, 0, 0)),
+        (216, (-17, 0, 21, 0, 0, 0, 0, 0), (0, 17, 0, 7, 0, 0, 0, 0)),
+        (690, (34, 0, 0, 0, 0, 0, 0, 0), (0, 0, 0, -14, 0, 0, 0, 0)),
+    )
+    if any(len(cosine) != BASIS or len(sine) != BASIS for _, cosine, sine in rotations):
+        raise AssertionError("malformed rotation numerator")
+    for event, cosine, sine in rotations:
+        cc = field_multiply(cosine, cosine)
+        ss = field_multiply(sine, sine)
+        norm = tuple(a + b for a, b in zip(cc, ss, strict=True))
+        if norm != (4096,) + (0,) * (BASIS - 1):
+            raise AssertionError(f"event {event} is not a unit rotation")
+        labels = list(range(L_SIZE))
+        for point in base[L_SIZE:]:
+            image = rotate_scaled64(point, cosine, sine)
+            if image not in point_index:
+                point_index[image] = len(points)
+                points.append(image)
+            label = point_index[image]
+            labels.append(label)
+            multiplicity[label] += 1
+        placements[event] = labels
+    if len(points) != len(set(points)):
+        raise AssertionError("equivalent-union coordinate deduplication failed")
+    edges = strict_edges(points, 96 * 64)
     return points, edges, placements, Counter(multiplicity.values())
 
 
@@ -245,12 +304,31 @@ def main() -> None:
     base_certificate = json.loads(base_certificate_path.read_text(encoding="utf-8"))
     if base_certificate["edge_sha256"] != EXPECTED_BASE_EDGE_SHA256:
         raise ValueError("base certificate edge digest mismatch")
+    rotation_certificate_path = root / "hadwiger_nelson_parts509_rotation_scan" / "rotation_certificate.json"
+    if sha256(rotation_certificate_path) != EXPECTED_ROTATION_CERTIFICATE_SHA256:
+        raise ValueError("unexpected rotation certificate SHA-256")
+    rotation_certificate = json.loads(rotation_certificate_path.read_text(encoding="utf-8"))
+    expected_rotations = {
+        108: ((Fraction(-1, 2), 0, 0, 0, 0, 0, 0, 0), (0, Fraction(-1, 2), 0, 0, 0, 0, 0, 0)),
+        109: ((Fraction(-1, 2), 0, 0, 0, 0, 0, 0, 0), (0, Fraction(1, 2), 0, 0, 0, 0, 0, 0)),
+        215: ((Fraction(-17, 64), 0, Fraction(-21, 64), 0, 0, 0, 0, 0), (0, Fraction(-17, 64), 0, Fraction(7, 64), 0, 0, 0, 0)),
+        216: ((Fraction(-17, 64), 0, Fraction(21, 64), 0, 0, 0, 0, 0), (0, Fraction(17, 64), 0, Fraction(7, 64), 0, 0, 0, 0)),
+        690: ((Fraction(17, 32), 0, 0, 0, 0, 0, 0, 0), (0, 0, 0, Fraction(-7, 32), 0, 0, 0, 0)),
+        789: ((Fraction(1), 0, 0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0, 0, 0)),
+    }
+    for event, expected in expected_rotations.items():
+        row = rotation_certificate["events"][event]
+        actual = tuple(tuple(Fraction(value) for value in row[key]) for key in ("cos", "sin"))
+        if actual != expected:
+            raise AssertionError(f"rotation certificate event {event} mismatch")
 
     certificate = json.loads(args.certificate.read_text(encoding="utf-8"))
     if certificate["format"] != "parts509-exceptional-rotation-triple-minimum-v1":
         raise ValueError("unknown certificate format")
     if certificate["events"] != [108, 109, 789]:
         raise ValueError("unexpected exceptional-placement triple")
+    if certificate["equivalent_events"] != [215, 216, 690]:
+        raise ValueError("unexpected equivalent exceptional-placement triple")
     points, edges, placements, multiplicity = build_union(points_path)
     if len(points) != 533 or certificate["vertices"] != 533:
         raise AssertionError("union vertex count mismatch")
@@ -261,6 +339,16 @@ def main() -> None:
         raise AssertionError("union edge digest mismatch")
     if multiplicity != Counter({3: 111, 2: 24, 1: 24}):
         raise AssertionError("unexpected rotated-S overlap profile")
+    other_points, other_edges, other_placements, other_multiplicity = build_equivalent_union(points_path)
+    if len(other_points) != 533 or len(other_edges) != 2607:
+        raise AssertionError("equivalent-union census mismatch")
+    if edge_digest(other_edges) != EXPECTED_UNION_EDGE_SHA256 or other_edges != edges:
+        raise AssertionError("the two canonical strict edge arrays differ")
+    if other_multiplicity != multiplicity:
+        raise AssertionError("the two overlap profiles differ")
+    event_map = {108: 215, 109: 216, 789: 690}
+    if any(placements[first] != other_placements[second] for first, second in event_map.items()):
+        raise AssertionError("corresponding placement-label arrays differ")
     edge_set = set(edges)
     placement_counts = {}
     for event, labels in placements.items():
@@ -272,6 +360,11 @@ def main() -> None:
         placement_counts[event] = count
         if event == 789 and placement_digest != EXPECTED_BASE_EDGE_SHA256:
             raise AssertionError("identity placement is not the certified Parts graph")
+    other_edge_set = set(other_edges)
+    for event, labels in other_placements.items():
+        count, _ = placement_edge_digest(labels, other_edge_set)
+        if count != 2442:
+            raise AssertionError(f"equivalent placement {event} strict-edge count mismatch")
 
     forced = certificate["forced_vertices"]
     if forced != sorted(set(forced)) or len(forced) != 470:
@@ -337,6 +430,8 @@ def main() -> None:
         "edges": len(edges),
         "pairwise_shared_vertices": pairwise_shared,
         "shared_vertices_all_three": triple_shared,
+        "equivalent_event_map": {str(key): value for key, value in event_map.items()},
+        "strict_edge_arrays_identical": True,
         "forced_vertices": len(forced),
         "free_vertices": len(free),
         "minimal_killing_sets": len(hyperedges),

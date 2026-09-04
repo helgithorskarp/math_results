@@ -1,4 +1,4 @@
-# Exact minimum inside a three-placement Parts-509 union
+# Exact minimum inside both compact three-placement Parts-509 unions
 
 ## Result
 
@@ -11,17 +11,29 @@ unit-distance graph `U` on
 \]
 
 These are events 108, 109, and 789 in the sibling exact rotation
-classification. Each pair of placements shares 493 points, while all three
-share 485. Thus `U` has 533 distinct points. Exact reconstruction gives 2,607
-unit pairs. The certified theorem is:
+classification. The other compact triple consists of events 215, 216, and
+690. The verifier independently reconstructs it from the rotations
 
-> Every non-4-colourable induced subgraph of `U` has at least 509 vertices,
-> and this is sharp because each constituent placement has 509 vertices.
+```text
+215: cos=(-17-21 sqrt(5))/64, sin=(-17 sqrt(3)+7 sqrt(15))/64
+216: cos=(-17+21 sqrt(5))/64, sin=( 17 sqrt(3)+7 sqrt(15))/64
+690: cos=17/32,                 sin=-7 sqrt(15)/32.
+```
 
-Therefore superposing this complete compact cluster of three exceptional
+Under canonical coordinate-insertion labels its strict edge array is
+identical to that of `U`, with corresponding events
+`108->215`, `109->216`, and `789->690`. In either triple, each pair of
+placements shares 493 points while all three share 485. Each union therefore
+has 533 distinct points and 2,607 unit pairs. The certified theorem is:
+
+> Every non-4-colourable induced subgraph of either compact triple union has
+> at least 509 vertices, and this is sharp because each constituent placement
+> has 509 vertices.
+
+Therefore superposing either complete compact cluster of three exceptional
 placements cannot improve the 509-vertex record, despite adding 165 strict
-unit edges to the identity placement. This is a negative result about one
-precise construction family. It does not exclude other placement unions,
+unit edges to one constituent placement. This is a negative result about two
+precise construction families. It does not exclude other placement unions,
 translations, reflections, new coordinates, non-induced edge selections, or
 delete-and-repair constructions.
 
@@ -45,11 +57,11 @@ It follows that a non-4-colourable induced subgraph has at least
 argument: the evidence consists of directly checked colourings and a small,
 independently rerun finite-set enumeration.
 
-The 533 points are reconstructed over
+Both 533-point realizations are reconstructed over
 `Q(sqrt(3),sqrt(5),sqrt(11))`. The verifier represents each coordinate by
-eight integer coefficients at common denominator 192 and compares squared
-distances exactly. It uses no floating-point geometry and includes every unit
-pair.
+eight integer coefficients, using common denominator 192 for events
+108/109/789 and 6144 for events 215/216/690, and compares squared distances
+exactly. It uses no floating-point geometry and includes every unit pair.
 
 ## Fast verification
 
@@ -68,6 +80,8 @@ vertices=533
 edges=2607
 pairwise_shared_vertices=493,493,493
 shared_vertices_all_three=485
+equivalent_event_map=108->215,109->216,789->690
+strict_edge_arrays_identical=true
 forced_vertices=470
 free_vertices=63
 minimal_killing_sets=330
@@ -78,7 +92,7 @@ edge_sha256=cc3f6ad98f3d1198b6bde17628326d690b17789bd880f84303a2c6ff58be454f
 
 `verify.py` also checks 2,071,951 edge incidences across all colouring
 witnesses. The compact certificate SHA-256 is
-`fdbcc767159a8b72d70515dce516775b83c03db5f2a79e956e3877bec8274df9`.
+`46ee849ead7b3601e887cee2aa2d5a1d02d12cf083a673c9890e2d2552bef795`.
 
 ## Full regeneration
 
@@ -125,6 +139,9 @@ passes.
   small eight-coordinate field implementation in `verify.py`, and the pinned
   sibling `points.tsv` bytes. The point-file SHA-256 is
   `f69ce1adef2f47c666f57c5e2096cb766fbc16654d75e3b24fbf0f5913d5be50`.
+- The six event identifiers and their exact sine/cosine values are parsed from
+  the sibling rotation certificate, pinned at SHA-256
+  `f3d1ff76e031dc0bfe50153db43512428d073d25ea243173d26d5ebfaa8cdedf`.
 - The 470 deletion colourings, 330 killing-set colourings, and the transversal
   lower bound are checked without a SAT or optimization solver. PySAT,
   CaDiCaL, and RC2 are outside this part of the verification trust boundary.
@@ -148,10 +165,11 @@ graphs in the plane*, Geombinatorics 29(4) (2020), 137--166,
 the six exceptional `K`-rational placements come from the sibling
 `hadwiger_nelson_parts509_rotation_scan` artifact.
 
-No claim is made that the drawings, their superposition, or the abstract
+No claim is made that the drawings, their superpositions, or the abstract
 criticality facts were previously unknown. The contribution is the exact
-minimum-order theorem for this explicitly defined strict union and its compact
-solver-independent lower-bound certificate.
+minimum-order theorem for these two explicitly defined strict unions, the
+identity of their canonical edge arrays, and a compact solver-independent
+lower-bound certificate.
 
 ## Files
 
