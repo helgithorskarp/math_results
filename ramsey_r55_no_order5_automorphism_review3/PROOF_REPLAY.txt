@@ -1,0 +1,39 @@
+Independent fresh replay record for the new k=8 cases
+======================================================
+
+Target source commit:
+  a0a684f7a386dde1ac62ae4c8a59839ba3549858
+
+Tools built from the documented upstream revisions:
+  kissat source:    8af8e56f174b778aef3aa45af9f739b2a5f492c2
+  kissat binary:    07b64052c8efb82eb2830371f22a386a0196e9ae9a450fcf18b0cac4a3d7c60d
+  drat-trim source: 2e3b2dc0ecf938addbd779d42877b6ed69d9a985
+  drat-trim binary: 9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a
+
+h=0
+  variables:       148
+  clauses:         248630
+  CNF bytes:       9623986
+  CNF SHA-256:     d9158bf8335867d57006eabe2b72416b2ed79415923c1594a4c8c9fe2d56767a
+  Kissat result:   UNSAT
+  proof bytes:     257320
+  proof SHA-256:   68ceeda88d6cb39539e135d2d9dad6c6bc3dce9cae7b13bce37f743a307eb88e
+  drat-trim:       VERIFIED
+  replay core:     413 input clauses; 828/2263 lemmas; 7851 resolutions; 0 RAT
+  mutations:       2/2 rejected
+
+h=1
+  variables:       148
+  clauses:         248779
+  CNF bytes:       9626831
+  CNF SHA-256:     f91519f5032487f8d285e03838cb93f892f718606d613dbcbadf4e77882ca114
+  Kissat result:   UNSAT
+  proof bytes:     4415625
+  proof SHA-256:   aea31f657edbb09afe3dcb2696279ee06314047ce43b369edb226e0ea7059709
+  drat-trim:       VERIFIED
+  replay core:     8311 input clauses; 32709/103177 lemmas; 682684 resolutions; 173 RAT
+  mutations:       2/2 rejected
+
+For both cases, the target's independent C++ formula reconstruction matched
+the generated CNF, the reference proof hash matched, and an actual replay
+was required. Generated formulas and proofs remain outside this repository.

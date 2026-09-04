@@ -1,0 +1,62 @@
+Review-pass audit of the seven earlier order-five cycle types
+=============================================================
+
+k=1, type 1^38 5
+  Reran the exact orbit/arithmetic checker.
+  Internal orbit sizes: 5,5; valid nonmonochromatic assignments: 2.
+  The fixed-neighbor set must have size at least 16 from R(4,5)=25 and at
+  most 13 from R(3,5)=14, a contradiction.
+  Result: analytic verifier PASS.
+
+k=2, type 1^33 5^2
+  Independently regenerated formula:
+    variables=60873 clauses=943738 degree_clauses=180880
+    CNF SHA-256=20a4dbcef743846145cb91f0bd1e811e31569e6a8e9ae7e8792e065fe3af10ce
+  drat-trim replay:
+    VERIFIED; 4121 input clauses in core; 832/845 lemmas;
+    24816 resolution steps; 0 RAT lemmas.
+  Five exact unit tests, including degree-network semantics, passed.
+
+k=3, type 1^28 5^3
+  Regenerated formula:
+    variables=483 clauses=540744
+    CNF SHA-256=d518282e91451281243e9f99a84739c6de99b9e42e3e2287f74541e9c047f789
+  drat-trim: VERIFIED; 4512 input clauses in core; 7267/7371 lemmas;
+    54527 resolution steps; 22 RAT lemmas.
+
+k=4, type 1^23 5^4
+  Regenerated formula:
+    variables=383 clauses=439398
+    CNF SHA-256=5d5f17fce53b7bb0cdfdd82beb7366da2386436f4a4912fd38869d2a839394eb
+  drat-trim: VERIFIED; 13272 input clauses in core; 41756/42365 lemmas;
+    731456 resolution steps; 32 RAT lemmas.
+
+k=5, type 1^18 5^5
+  Regenerated formula:
+    variables=303 clauses=405458
+    CNF SHA-256=f1f78ce8efc1aba0b661d36541777680b8ab1c6910e6ec53addf4a755886b9ca
+  drat-trim: VERIFIED; 27722 input clauses in core; 95907/97019 lemmas;
+    1767361 resolution steps; 39 RAT lemmas.
+
+k=6, type 1^13 5^6
+  Regenerated formula:
+    variables=243 clauses=410034
+    CNF SHA-256=5533d4cbf74b46b754ebf6c23d3779474ec831aabb55122c6cebef56bcf84fa8
+  drat-trim: VERIFIED; 37337 input clauses in core; 81628/83987 lemmas;
+    1420943 resolution steps; 64 RAT lemmas.
+  The middle-package exact orbit/cycle-type tests also passed.
+
+k=7, type 1^8 5^7
+  Downloaded four inputs pinned to external source commit
+    9b6011399f13791b35ee76c4e2e3cdbd208cdd8f
+  and checked all four published hashes. Independently reconstructed all
+  903 edge labels, all 962598 five-sets, degree and gate clauses, and the
+  complete formula:
+    variables=15482 clauses=444322
+    CNF SHA-256=e8184d290a348f8f7b245c48e07a54a1c1c839a5337d6461b20c98c1c2d3a8da
+    proof SHA-256=a9a3d927537ebedf43d3a3f007c3abac2686f4ef221eb8aae84ef9ee8f1347e6
+  drat-trim: VERIFIED; 28119 input clauses in core; 167705/172527 lemmas;
+    2268759 resolution steps; 341 RAT lemmas.
+
+All computational checks were run serially. Formula/proof scratch data was
+kept under /scratch/research-team-v2/tmp/reviewer-3 and is not committed.
