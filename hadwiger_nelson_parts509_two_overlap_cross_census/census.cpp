@@ -389,7 +389,7 @@ static int colour_pattern(
 template <std::size_t CrossEdgeCount>
 static bool absorbed_by_colour_libraries(
     const std::vector<std::uint32_t>& overlaps,
-    const std::array<std::uint32_t, 4>& genuine_keys,
+    const std::array<std::uint32_t, 5>& genuine_keys,
     const ColourLibraries& libraries,
     const CompatibilityTable<2 + CrossEdgeCount>& compatible
 ) {
@@ -580,15 +580,17 @@ struct BucketNode {
 int main(int argc, char** argv) {
     if (argc != 3 && argc != 4) {
         std::cerr << "usage: census POINTS.tsv COLOUR_LIBRARIES.txt"
-                  << " [--through-three]\n";
+                  << " [--through-three|--through-four]\n";
         return 2;
     }
-    const bool through_three = argc == 4 && std::string(argv[3]) == "--through-three";
-    if (argc == 4 && !through_three) {
+    int through_edges = 2;
+    if (argc == 4 && std::string(argv[3]) == "--through-three") through_edges = 3;
+    if (argc == 4 && std::string(argv[3]) == "--through-four") through_edges = 4;
+    if (argc == 4 && through_edges == 2) {
         std::cerr << "unknown census mode: " << argv[3] << '\n';
         return 2;
     }
-    const std::size_t genuine_cutoff = through_three ? 4 : 3;
+    const std::size_t genuine_cutoff = static_cast<std::size_t>(through_edges + 1);
     check_radical_bounds();
     const std::vector<Point> all = read_points(argv[1]);
     const std::vector<Point> left(all.begin(), all.begin() + 374);
@@ -609,6 +611,7 @@ int main(int argc, char** argv) {
     validate_colour_library(colour_libraries.small, small_edges);
     const auto compatible_two = make_compatibility_table<4>();
     const auto compatible_three = make_compatibility_table<5>();
+    const auto compatible_four = make_compatibility_table<6>();
     const auto left_vectors = directed_vectors(left);
     const auto small_vectors = directed_vectors(small);
     if (vector_count(left_vectors) != 11650 || vector_count(small_vectors) != 1666) {
@@ -636,7 +639,7 @@ int main(int argc, char** argv) {
     std::uint64_t total_two = 0;
     std::uint64_t total_with_cross = 0;
     std::uint64_t total_with_genuine = 0;
-    std::array<std::uint64_t, 5> total_genuine_categories{};
+    std::array<std::uint64_t, 6> total_genuine_categories{};
     std::array<std::uint64_t, 3> total_two_edge_topologies{};
     std::array<std::uint64_t, 4> total_disjoint_adjacencies{};
     std::uint64_t total_two_absorbed = 0;
@@ -644,6 +647,9 @@ int main(int argc, char** argv) {
     std::array<std::uint64_t, 6> total_three_edge_topologies{};
     std::uint64_t total_three_absorbed = 0;
     std::array<std::uint64_t, 6> total_three_absorbed_by_topology{};
+    std::array<std::uint64_t, 11> total_four_edge_profiles{};
+    std::uint64_t total_four_absorbed = 0;
+    std::array<std::uint64_t, 11> total_four_absorbed_by_profile{};
     std::uint64_t interval_candidates = 0;
     std::uint64_t exact_distance_checks = 0;
     std::vector<std::pair<i64, i64>> bucket_offsets;
@@ -687,7 +693,7 @@ int main(int argc, char** argv) {
         std::uint64_t local_two = 0;
         std::uint64_t local_with_cross = 0;
         std::uint64_t local_with_genuine = 0;
-        std::array<std::uint64_t, 5> local_genuine_categories{};
+        std::array<std::uint64_t, 6> local_genuine_categories{};
         std::array<std::uint64_t, 3> local_two_edge_topologies{};
         std::array<std::uint64_t, 4> local_disjoint_adjacencies{};
         std::uint64_t local_two_absorbed = 0;
@@ -695,13 +701,16 @@ int main(int argc, char** argv) {
         std::array<std::uint64_t, 6> local_three_edge_topologies{};
         std::uint64_t local_three_absorbed = 0;
         std::array<std::uint64_t, 6> local_three_absorbed_by_topology{};
+        std::array<std::uint64_t, 11> local_four_edge_profiles{};
+        std::uint64_t local_four_absorbed = 0;
+        std::array<std::uint64_t, 11> local_four_absorbed_by_profile{};
         const std::uint64_t checks_before = exact_distance_checks;
         const std::uint64_t candidates_before = interval_candidates;
         for (const auto& [translation, overlaps] : differences) {
             if (overlaps.size() != 2) continue;
             ++local_two;
             bool has_cross = false;
-            std::array<std::uint32_t, 4> genuine_keys{};
+            std::array<std::uint32_t, 5> genuine_keys{};
             std::size_t genuine_count = 0;
             const RadicalInterval translation_x = radical_interval(translation.x);
             const RadicalInterval translation_y = radical_interval(translation.y);
@@ -761,7 +770,7 @@ int main(int argc, char** argv) {
                     ++local_two_absorbed;
                     ++local_two_absorbed_by_topology[topology];
                 }
-            } else if (through_three && genuine_count == 3) {
+            } else if (through_edges >= 3 && genuine_count == 3) {
                 const std::size_t distinct_left = std::set<std::size_t>{
                     genuine_keys[0] / 510, genuine_keys[1] / 510,
                     genuine_keys[2] / 510,
@@ -784,12 +793,39 @@ int main(int argc, char** argv) {
                     ++local_three_absorbed;
                     ++local_three_absorbed_by_topology[topology];
                 }
+            } else if (through_edges >= 4 && genuine_count == 4) {
+                std::set<std::size_t> left_endpoints, small_endpoints;
+                for (std::size_t edge = 0; edge < 4; ++edge) {
+                    left_endpoints.insert(genuine_keys[edge] / 510);
+                    small_endpoints.insert(genuine_keys[edge] % 510 - 374);
+                }
+                const std::size_t distinct_left = left_endpoints.size();
+                const std::size_t distinct_small = small_endpoints.size();
+                int profile = -1;
+                if (distinct_left == 1 && distinct_small == 4) profile = 0;
+                if (distinct_left == 4 && distinct_small == 1) profile = 1;
+                if (distinct_left == 2 && distinct_small == 2) profile = 2;
+                if (distinct_left == 2 && distinct_small == 3) profile = 3;
+                if (distinct_left == 2 && distinct_small == 4) profile = 4;
+                if (distinct_left == 3 && distinct_small == 2) profile = 5;
+                if (distinct_left == 3 && distinct_small == 3) profile = 6;
+                if (distinct_left == 3 && distinct_small == 4) profile = 7;
+                if (distinct_left == 4 && distinct_small == 2) profile = 8;
+                if (distinct_left == 4 && distinct_small == 3) profile = 9;
+                if (distinct_left == 4 && distinct_small == 4) profile = 10;
+                if (profile < 0) throw std::runtime_error("bad four-edge profile");
+                ++local_four_edge_profiles[profile];
+                if (absorbed_by_colour_libraries<4>(
+                        overlaps, genuine_keys, colour_libraries, compatible_four)) {
+                    ++local_four_absorbed;
+                    ++local_four_absorbed_by_profile[profile];
+                }
             }
         }
         total_two += local_two;
         total_with_cross += local_with_cross;
         total_with_genuine += local_with_genuine;
-        for (int category = 0; category < 5; ++category) {
+        for (int category = 0; category < 6; ++category) {
             total_genuine_categories[category] += local_genuine_categories[category];
         }
         for (int topology = 0; topology < 3; ++topology) {
@@ -801,6 +837,12 @@ int main(int argc, char** argv) {
                 += local_three_absorbed_by_topology[topology];
         }
         total_three_absorbed += local_three_absorbed;
+        for (int profile = 0; profile < 11; ++profile) {
+            total_four_edge_profiles[profile] += local_four_edge_profiles[profile];
+            total_four_absorbed_by_profile[profile]
+                += local_four_absorbed_by_profile[profile];
+        }
+        total_four_absorbed += local_four_absorbed;
         for (int adjacency_type = 0; adjacency_type < 4; ++adjacency_type) {
             total_disjoint_adjacencies[adjacency_type]
                 += local_disjoint_adjacencies[adjacency_type];
@@ -819,9 +861,14 @@ int main(int argc, char** argv) {
                   << ";genuine_zero=" << local_genuine_categories[0]
                   << ";genuine_one=" << local_genuine_categories[1]
                   << ";genuine_two=" << local_genuine_categories[2];
-        if (through_three) {
-            std::cout << ";genuine_three=" << local_genuine_categories[3]
-                      << ";genuine_four_plus=" << local_genuine_categories[4];
+        if (through_edges >= 3) {
+            std::cout << ";genuine_three=" << local_genuine_categories[3];
+            if (through_edges >= 4) {
+                std::cout << ";genuine_four=" << local_genuine_categories[4]
+                          << ";genuine_five_plus=" << local_genuine_categories[5];
+            } else {
+                std::cout << ";genuine_four_plus=" << local_genuine_categories[4];
+            }
         } else {
             std::cout << ";genuine_three_plus=" << local_genuine_categories[3];
         }
@@ -836,7 +883,7 @@ int main(int argc, char** argv) {
                   << ";absorbed_share_left=" << local_two_absorbed_by_topology[0]
                   << ";absorbed_share_small=" << local_two_absorbed_by_topology[1]
                   << ";absorbed_disjoint=" << local_two_absorbed_by_topology[2];
-        if (through_three) {
+        if (through_edges >= 3) {
             std::cout << ";three_L1_S3=" << local_three_edge_topologies[0]
                       << ";three_L3_S1=" << local_three_edge_topologies[1]
                       << ";three_L2_S2=" << local_three_edge_topologies[2]
@@ -857,6 +904,42 @@ int main(int argc, char** argv) {
                       << ";absorbed_three_L3_S3="
                       << local_three_absorbed_by_topology[5];
         }
+        if (through_edges >= 4) {
+            std::cout << ";four_L1_S4=" << local_four_edge_profiles[0]
+                      << ";four_L4_S1=" << local_four_edge_profiles[1]
+                      << ";four_L2_S2=" << local_four_edge_profiles[2]
+                      << ";four_L2_S3=" << local_four_edge_profiles[3]
+                      << ";four_L2_S4=" << local_four_edge_profiles[4]
+                      << ";four_L3_S2=" << local_four_edge_profiles[5]
+                      << ";four_L3_S3=" << local_four_edge_profiles[6]
+                      << ";four_L3_S4=" << local_four_edge_profiles[7]
+                      << ";four_L4_S2=" << local_four_edge_profiles[8]
+                      << ";four_L4_S3=" << local_four_edge_profiles[9]
+                      << ";four_L4_S4=" << local_four_edge_profiles[10]
+                      << ";four_library_absorbed=" << local_four_absorbed
+                      << ";absorbed_four_L1_S4="
+                      << local_four_absorbed_by_profile[0]
+                      << ";absorbed_four_L4_S1="
+                      << local_four_absorbed_by_profile[1]
+                      << ";absorbed_four_L2_S2="
+                      << local_four_absorbed_by_profile[2]
+                      << ";absorbed_four_L2_S3="
+                      << local_four_absorbed_by_profile[3]
+                      << ";absorbed_four_L2_S4="
+                      << local_four_absorbed_by_profile[4]
+                      << ";absorbed_four_L3_S2="
+                      << local_four_absorbed_by_profile[5]
+                      << ";absorbed_four_L3_S3="
+                      << local_four_absorbed_by_profile[6]
+                      << ";absorbed_four_L3_S4="
+                      << local_four_absorbed_by_profile[7]
+                      << ";absorbed_four_L4_S2="
+                      << local_four_absorbed_by_profile[8]
+                      << ";absorbed_four_L4_S3="
+                      << local_four_absorbed_by_profile[9]
+                      << ";absorbed_four_L4_S4="
+                      << local_four_absorbed_by_profile[10];
+        }
         std::cout << ";interval_candidates=" << interval_candidates - candidates_before
                   << ";exact_checks=" << exact_distance_checks - checks_before << '\n';
         if ((orientation_index + 1) % 100 == 0) {
@@ -873,11 +956,18 @@ int main(int argc, char** argv) {
     std::cout << "with_zero_genuinely_new_cross_edges=" << total_genuine_categories[0] << '\n';
     std::cout << "with_exactly_one_genuinely_new_cross_edge=" << total_genuine_categories[1] << '\n';
     std::cout << "with_exactly_two_genuinely_new_cross_edges=" << total_genuine_categories[2] << '\n';
-    if (through_three) {
+    if (through_edges >= 3) {
         std::cout << "with_exactly_three_genuinely_new_cross_edges="
                   << total_genuine_categories[3] << '\n';
-        std::cout << "with_at_least_four_genuinely_new_cross_edges="
-                  << total_genuine_categories[4] << '\n';
+        if (through_edges >= 4) {
+            std::cout << "with_exactly_four_genuinely_new_cross_edges="
+                      << total_genuine_categories[4] << '\n';
+            std::cout << "with_at_least_five_genuinely_new_cross_edges="
+                      << total_genuine_categories[5] << '\n';
+        } else {
+            std::cout << "with_at_least_four_genuinely_new_cross_edges="
+                      << total_genuine_categories[4] << '\n';
+        }
     } else {
         std::cout << "with_at_least_three_genuinely_new_cross_edges="
                   << total_genuine_categories[3] << '\n';
@@ -895,7 +985,7 @@ int main(int argc, char** argv) {
     std::cout << "absorbed_two_edges_vertex_disjoint=" << total_two_absorbed_by_topology[2] << '\n';
     std::cout << "two_new_edges_unresolved_by_explicit_libraries="
               << total_genuine_categories[2] - total_two_absorbed << '\n';
-    if (through_three) {
+    if (through_edges >= 3) {
         std::cout << "three_new_edges_L1_S3=" << total_three_edge_topologies[0] << '\n';
         std::cout << "three_new_edges_L3_S1=" << total_three_edge_topologies[1] << '\n';
         std::cout << "three_new_edges_L2_S2=" << total_three_edge_topologies[2] << '\n';
@@ -919,6 +1009,45 @@ int main(int argc, char** argv) {
         std::cout << "three_new_edges_unresolved_by_explicit_libraries="
                   << total_genuine_categories[3] - total_three_absorbed << '\n';
     }
+    if (through_edges >= 4) {
+        std::cout << "four_new_edges_L1_S4=" << total_four_edge_profiles[0] << '\n';
+        std::cout << "four_new_edges_L4_S1=" << total_four_edge_profiles[1] << '\n';
+        std::cout << "four_new_edges_L2_S2=" << total_four_edge_profiles[2] << '\n';
+        std::cout << "four_new_edges_L2_S3=" << total_four_edge_profiles[3] << '\n';
+        std::cout << "four_new_edges_L2_S4=" << total_four_edge_profiles[4] << '\n';
+        std::cout << "four_new_edges_L3_S2=" << total_four_edge_profiles[5] << '\n';
+        std::cout << "four_new_edges_L3_S3=" << total_four_edge_profiles[6] << '\n';
+        std::cout << "four_new_edges_L3_S4=" << total_four_edge_profiles[7] << '\n';
+        std::cout << "four_new_edges_L4_S2=" << total_four_edge_profiles[8] << '\n';
+        std::cout << "four_new_edges_L4_S3=" << total_four_edge_profiles[9] << '\n';
+        std::cout << "four_new_edges_L4_S4=" << total_four_edge_profiles[10] << '\n';
+        std::cout << "four_new_edges_absorbed_by_explicit_libraries="
+                  << total_four_absorbed << '\n';
+        std::cout << "absorbed_four_new_edges_L1_S4="
+                  << total_four_absorbed_by_profile[0] << '\n';
+        std::cout << "absorbed_four_new_edges_L4_S1="
+                  << total_four_absorbed_by_profile[1] << '\n';
+        std::cout << "absorbed_four_new_edges_L2_S2="
+                  << total_four_absorbed_by_profile[2] << '\n';
+        std::cout << "absorbed_four_new_edges_L2_S3="
+                  << total_four_absorbed_by_profile[3] << '\n';
+        std::cout << "absorbed_four_new_edges_L2_S4="
+                  << total_four_absorbed_by_profile[4] << '\n';
+        std::cout << "absorbed_four_new_edges_L3_S2="
+                  << total_four_absorbed_by_profile[5] << '\n';
+        std::cout << "absorbed_four_new_edges_L3_S3="
+                  << total_four_absorbed_by_profile[6] << '\n';
+        std::cout << "absorbed_four_new_edges_L3_S4="
+                  << total_four_absorbed_by_profile[7] << '\n';
+        std::cout << "absorbed_four_new_edges_L4_S2="
+                  << total_four_absorbed_by_profile[8] << '\n';
+        std::cout << "absorbed_four_new_edges_L4_S3="
+                  << total_four_absorbed_by_profile[9] << '\n';
+        std::cout << "absorbed_four_new_edges_L4_S4="
+                  << total_four_absorbed_by_profile[10] << '\n';
+        std::cout << "four_new_edges_unresolved_by_explicit_libraries="
+                  << total_genuine_categories[4] - total_four_absorbed << '\n';
+    }
     std::cout << "closed_by_single_cross_edge_absorption="
               << total_genuine_categories[0] + total_genuine_categories[1] << '\n';
     std::cout << "interval_candidates=" << interval_candidates << '\n';
@@ -940,7 +1069,7 @@ int main(int argc, char** argv) {
         || total_two_absorbed_by_topology[0] + total_two_absorbed_by_topology[1]
              + total_two_absorbed_by_topology[2] != total_two_absorbed
         || total_two_absorbed > total_genuine_categories[2]
-        || (through_three
+        || (through_edges >= 3
             && (std::accumulate(
                     total_three_edge_topologies.begin(),
                     total_three_edge_topologies.end(), std::uint64_t{0})
@@ -949,7 +1078,17 @@ int main(int argc, char** argv) {
                        total_three_absorbed_by_topology.begin(),
                        total_three_absorbed_by_topology.end(), std::uint64_t{0})
                     != total_three_absorbed
-                || total_three_absorbed > total_genuine_categories[3]))) {
+                || total_three_absorbed > total_genuine_categories[3]))
+        || (through_edges >= 4
+            && (std::accumulate(
+                    total_four_edge_profiles.begin(),
+                    total_four_edge_profiles.end(), std::uint64_t{0})
+                    != total_genuine_categories[4]
+                || std::accumulate(
+                       total_four_absorbed_by_profile.begin(),
+                       total_four_absorbed_by_profile.end(), std::uint64_t{0})
+                    != total_four_absorbed
+                || total_four_absorbed > total_genuine_categories[4]))) {
         throw std::runtime_error("census checksum mismatch");
     }
     std::cout << "exact_two_overlap_cross_census=true\n";
