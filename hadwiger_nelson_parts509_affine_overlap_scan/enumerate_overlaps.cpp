@@ -222,9 +222,16 @@ static void print_field(const Field& value) {
 }
 
 int main(int argc, char** argv) {
-    if (argc != 2) {
-        std::cerr << "usage: enumerate_overlaps POINTS.tsv\n";
+    if (argc != 2 && argc != 4) {
+        std::cerr << "usage: enumerate_overlaps POINTS.tsv [--emit-at-least N]\n";
         return 2;
+    }
+    unsigned emit_threshold = 84;
+    if (argc == 4) {
+        if (std::string(argv[2]) != "--emit-at-least") throw std::runtime_error("unknown option");
+        const unsigned long parsed = std::stoul(argv[3]);
+        if (parsed < 2 || parsed > 136) throw std::runtime_error("bad emission threshold");
+        emit_threshold = static_cast<unsigned>(parsed);
     }
     const std::vector<Point> all = read_points(argv[1]);
     const std::vector<Point> left(all.begin(), all.begin() + 374);
@@ -275,7 +282,7 @@ int main(int argc, char** argv) {
                 ++overlap_histogram[multiplicity];
                 ++local_candidates;
                 pair_certificates += static_cast<std::uint64_t>(multiplicity) * (multiplicity - 1) / 2;
-                if (multiplicity >= 84) {
+                if (multiplicity >= emit_threshold) {
                     std::cout << "high_overlap=" << multiplicity
                               << ";reflected=" << orientation.reflected
                               << ";denominator=" << orientation.denominator << ";c=";
