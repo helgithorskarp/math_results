@@ -22,7 +22,8 @@ weighted sense proved below.  Up to exchanging the two colors, only 104
 integer degree-count profiles survive that hard branch, and the sparser color
 has between 445 and 451 edges.  Thus either a six-deficient local core exists,
 or the two global color classes differ in size by at most 13 edges while the
-66-fold exact-level-seven conclusion holds.
+66-fold exact-level-seven conclusion holds.  In fact, at least 40 of those
+exact-level-seven local graphs have order 21 and exactly 100 edges.
 
 This is a necessary condition, not a construction of a 43-vertex Ramsey graph
 and not an exclusion of all such graphs.
@@ -157,6 +158,20 @@ that all 104 are realizable Ramsey graphs.  Dividing those degree sums by two
 shows that the sparser color has exactly one of 445, 446, ..., 451 edges.  Since
 `K_43` has 903 edges, the two color-class sizes differ by at most 13.
 
+Every non-21 degree consumes at least three units of the weight-at-most-39
+budget, so at most 13 vertices have degree different from 21.  Thus at least
+30 vertices have degree 21 and contribute at least 60 order-21 color sides.
+At most 20 of all 86 sides can have deficiency greater than seven.  Even if
+all 20 occur among those order-21 sides, at least 40 order-21 sides have
+deficiency exactly seven.  Since `U(21)=107`, each is a `(4,5;21)` graph with
+exactly 100 edges.  The construction frontier therefore has the clean form:
+
+```text
+either: some local (4,5;k) graph has at least U(k)-6 edges;
+or:     at least 40 local (4,5;21) graphs have exactly 100 edges,
+        and the two global color classes differ by at most 13 edges.
+```
+
 ## Reproduction
 
 The standard-library verifier checks the extrema manifest, derives every
@@ -179,6 +194,7 @@ PASS either one deficiency <=6 or at least 66 deficiencies equal 7
 PASS hard-case degree weight <=39 and deficiency >=604
 PASS hard-case complement-normalized degree-count profiles=104
 PASS hard-case sparser color has 445,...,451 edges
+PASS hard-case has at least 40 order-21 local graphs with 100 edges
 ```
 
 An optional upstream-data audit checks both pinned SHA-256 values, verifies

@@ -187,6 +187,13 @@ def audit_identity(document: dict[str, object]) -> None:
     sparser_edge_counts = {degree_sum // 2 for _, _, degree_sum in hard_profiles}
     if sparser_edge_counts != set(range(445, 452)):
         raise AssertionError(sparser_edge_counts)
+    maximum_noncentral = max(N - counts[21] for counts, _, _ in hard_profiles)
+    minimum_order21_sides = 2 * (N - maximum_noncentral)
+    minimum_exact100_order21_sides = minimum_order21_sides - exceptional_sides
+    if (maximum_noncentral, minimum_order21_sides, minimum_exact100_order21_sides) != (13, 60, 40):
+        raise AssertionError(
+            (maximum_noncentral, minimum_order21_sides, minimum_exact100_order21_sides)
+        )
     maximum_delta_profiles = [
         counts for counts, weight, _ in hard_profiles if (1247 - weight) // 2 == 622
     ]
@@ -203,6 +210,7 @@ def audit_identity(document: dict[str, object]) -> None:
     print("PASS hard-case degree weight <=39 and deficiency >=604")
     print(f"PASS hard-case complement-normalized degree-count profiles={len(hard_profiles)}")
     print("PASS hard-case sparser color has 445,...,451 edges")
+    print("PASS hard-case has at least 40 order-21 local graphs with 100 edges")
 
 
 def main() -> None:
