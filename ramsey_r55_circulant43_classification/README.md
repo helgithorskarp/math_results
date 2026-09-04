@@ -15,10 +15,40 @@ Thus Exoo's `Cyclic(43)` length coloring is the unique optimum under these
 operations.  This is an exact computer-assisted classification of the full
 undirected Cayley family on `Z_43`, not a search near one seed.
 
+As a group-theoretic corollary, the same lower bound and uniqueness hold for
+**every vertex-transitive** red/blue coloring of `K_43`: each has at least 43
+monochromatic `K_5`s, with equality only for Exoo's coloring up to vertex
+relabeling and color swap.
+
 This negative result does **not** construct a 43-vertex Ramsey graph and does
 not improve the lower bound for `R(5,5)`.  It rules out the whole circulant
 family as a source of such a graph and shows that any successful 43-vertex
 construction must break translation symmetry.
+
+## Vertex-transitive corollary
+
+Let `G` be the red graph of a color-preserving vertex-transitive coloring on
+43 vertices.  Orbit-stabilizer gives
+
+```text
+43 divides |Aut(G)|.
+```
+
+By Cauchy's theorem, `Aut(G)` contains an element `sigma` of order 43.  The
+cycle lengths of `sigma` as a permutation of 43 vertices are one or 43.
+Because `sigma` is nonidentity, it must be a single 43-cycle.  Label the
+vertices successively along this cycle by `Z_43`.  Invariance under `sigma`
+then says that the color of `{x,y}` depends only on `y-x` up to sign, so the
+coloring is one of the `2^21` circulant colorings classified below.
+
+The computed lower bound therefore applies to every vertex-transitive
+coloring.  If equality holds, the circulant classification puts its red
+length set in the multiplier/color-swap orbit of Exoo's set.  Multiplication
+by a nonzero residue is a vertex relabeling, proving the stated uniqueness.
+
+This corollary uses only orbit-stabilizer, Cauchy's theorem, and the exhaustive
+circulant classification.  In particular, a hypothetical 43-vertex
+`(5,5)`-Ramsey coloring cannot be vertex-transitive.
 
 ## Structural reduction
 
@@ -156,11 +186,15 @@ cb4f7b155203f7c7d22eb0ba6efb9f2481c7d927f3344019e254110369e1263a  test_classific
 
 ## Scope, provenance, and literature
 
-The trust boundary is the proved distance-mask reduction, the two source
-implementations, standard C++ and Python semantics, and the compiler or
-interpreter.  The checked-in JSON is compact evidence, not an opaque external
-input.  Completeness of the classification does not depend on the earlier
-Cyclic(43) component certificates in this repository.
+The result closes the full undirected Cayley family on the cyclic group of
+order 43 and, by the elementary group-theoretic corollary, all
+vertex-transitive colorings on 43 vertices.  It is not a 43-vertex
+construction, does not improve `R(5,5)>=43`, and does not exclude general
+non-vertex-transitive colorings.  The trust boundary is the proved
+distance-mask reduction, the two source implementations, standard C++ and
+Python semantics, and the compiler or interpreter.  The checked-in JSON is
+compact evidence, not an opaque external input.  Completeness does not depend
+on the earlier Cyclic(43) component certificates in this repository.
 
 Exoo introduced the relevant cyclic coloring in
 [*A lower bound for R(5,5)*](https://doi.org/10.1002/jgt.3190130113).
