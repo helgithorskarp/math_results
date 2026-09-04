@@ -765,6 +765,56 @@ def main() -> None:
     if (abstract_red_minimum_degree, abstract_blue_minimum_degree) != (17, 8):
         raise AssertionError("wrong disconnected-blue backbone degrees")
 
+    # For M=216,217,218 both backbone colors have minimum degree at least
+    # four.  A disconnected color therefore has at least two independent
+    # vertices in every component.  Avoiding an opposite K5 forces exactly
+    # two alpha-two components, each of order at most 13 by R(5,3)=14.  Hence
+    # any profile forcing at least 27 exact anchors forces both colors to be
+    # connected.  Enumerate the only split profiles whose excess budget leaves
+    # a lower bound of at most 26 exact anchors.
+    forced_connected_profile_counts = []
+    escape_profile_counts = []
+    escape_profile_lines = []
+    escape_lower_bound_histograms = []
+    for edge_count in range(216, 219):
+        if min(441 - 2 * edge_count, 440 - 2 * edge_count) < 4:
+            raise AssertionError("component argument needs minimum degree four")
+        forced_count = 0
+        escape_histogram = {}
+        for weight, first_counts, second_counts in split_profiles[edge_count]:
+            degree21_vertices = first_counts[3] + second_counts[3] + 1
+            excess_budget = (43 - weight) // 2
+            exact_anchor_lower_bound = degree21_vertices - excess_budget
+            if exact_anchor_lower_bound >= 27:
+                forced_count += 1
+                continue
+            escape_histogram[exact_anchor_lower_bound] = (
+                escape_histogram.get(exact_anchor_lower_bound, 0) + 1
+            )
+            escape_profile_lines.append(
+                f"{edge_count} {weight} {exact_anchor_lower_bound} "
+                f"{','.join(map(str, first_counts))} "
+                f"{','.join(map(str, second_counts))}\n"
+            )
+        forced_connected_profile_counts.append(forced_count)
+        escape_profile_counts.append(len(split_profiles[edge_count]) - forced_count)
+        escape_lower_bound_histograms.append(escape_histogram)
+    escape_profile_digest = hashlib.sha256(
+        "".join(escape_profile_lines).encode("ascii")
+    ).hexdigest()
+    if forced_connected_profile_counts != [16, 37, 63]:
+        raise AssertionError(forced_connected_profile_counts)
+    if escape_profile_counts != [1, 3, 6]:
+        raise AssertionError(escape_profile_counts)
+    if escape_lower_bound_histograms != [
+        {26: 1},
+        {25: 1, 26: 2},
+        {24: 1, 25: 2, 26: 3},
+    ]:
+        raise AssertionError(escape_lower_bound_histograms)
+    if escape_profile_digest != "d0dcd1268b11f67bc747d27c7b9a501b6f330c49eda2c5d5cd41c0b9ced14e07":
+        raise AssertionError(escape_profile_digest)
+
     # If W is the degree weight, at most W/3 secondary vertices are
     # noncentral and at most (43-W)/2 local sides exceed deficiency seven.
     # Audit both the structural 241-M lower bound and its attainment within
@@ -819,6 +869,9 @@ def main() -> None:
     print("PASS M=216 red backbone order=26,...,36 is connected with diameter<=8")
     print("PASS M=216 blue disconnection forces two 13-vertex critical components")
     print("PASS C13(1,5) gives a sharp disconnected-blue abstract backbone")
+    print("PASS both-color connectivity profiles M216=16/17 M217=37/40 M218=63/69")
+    print("PASS backbone escape profiles=1,3,6 "
+          "sha256=d0dcd1268b11f67bc747d27c7b9a501b6f330c49eda2c5d5cd41c0b9ced14e07")
     print("PASS first-degree-feasible tests have 0 secondary exact anchors")
     print("PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0")
     print("PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21")
