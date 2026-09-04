@@ -17,12 +17,18 @@ PASS M=216 red backbone order=26,...,36 is connected with diameter<=8
 PASS M=216 blue disconnection forces two 13-vertex critical components
 PASS C13(1,5) gives a sharp disconnected-blue abstract backbone
 PASS outside-edge obstructions eliminate d=26 and M217/218 d=25 cuts
-PASS small R(3,5) catalog minima at orders 11,12,13 are 15,20,26
+PASS small R(3,5) catalog counts at orders 9,...,13 are 290,313,105,12,1
 PASS every R(5,5;19) graph has at least 43 edges
+PASS diagonal edge minima at orders 20,21 are at least 50,56
 PASS the unique M=218 profile has both backbone colors connected
 PASS d=24/25 cuts are impossible in the M=219/220 escape profiles
 PASS both-color connectivity profiles M214..220=1/1,5/5,17/17,40/40,69/69,94/95,119/122
 PASS backbone escape profiles=0,0,0,0,0,1,3 total=4 sha256=d69a53973b619bd63eccebe7641657f606f537b752972b67518d1b2d74e136ed
+PASS residual excess split counts=6,7,6,6 rows=32 sha256=2bb0a8f67e346f1066a9cf2d8219ef89e97480bcf973372fe59040bacefed857
+PASS d=23 component-pair menus M219 red/blue=260/1202 M220 red/blue=547/890
+PASS d=22 two-component menus red/blue=9610/9611
+PASS d=22 red singleton impossible; blue singleton reanchors two R(4,5;21,100) cores
+PASS residual component menu rows=129 sha256=03cb19958a9fa6a1933bd6f4e635040342cc46d74486bfc59b219192a5177f99
 PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135
 PASS profile vertex-connectivity counts k=1,...,11 are 345,291,253,231,193,135,128,97,22,22,20
 PASS first-degree-feasible tests have 0 secondary exact anchors

@@ -15,7 +15,20 @@ EXTREMAL_R4514_G6 = "MznZ\\lle{vYVlhsm_"
 EXTREMAL_EDGES = {18: 85, 19: 92, 20: 100, 21: 107,
                   22: 114, 23: 122, 24: 132}
 SMALL_EXTREMAL_EDGES = {14: 60, 15: 66, 16: 72, 17: 79, 18: 85}
-MINIMUM_R35_EDGES = {11: 15, 12: 20, 13: 26}
+R35_EDGE_HISTOGRAMS = {
+    9: {7: 1, 8: 3, 9: 11, 10: 28, 11: 59, 12: 73,
+        13: 62, 14: 33, 15: 14, 16: 4, 17: 2},
+    10: {10: 1, 11: 2, 12: 10, 13: 32, 14: 69, 15: 86,
+         16: 65, 17: 32, 18: 12, 19: 3, 20: 1},
+    11: {15: 1, 16: 6, 17: 19, 18: 31, 19: 30, 20: 13,
+         21: 4, 22: 1},
+    12: {20: 1, 21: 2, 22: 5, 23: 2, 24: 2},
+    13: {26: 1},
+}
+MINIMUM_R35_EDGES = {
+    order: min(histogram)
+    for order, histogram in R35_EDGE_HISTOGRAMS.items()
+}
 DEGREE_WEIGHTS = {18: 21, 19: 12, 20: 3, 21: 0,
                   22: 3, 23: 12, 24: 21}
 
@@ -435,6 +448,65 @@ def triangle_pair_sieve(split_profiles):
         triangle_pairs[edge_count] = tuple(sorted(values))
         maximum_excess[edge_count] = (maximum_red_excess, maximum_blue_excess)
     return triangle_pairs, maximum_excess
+
+
+def component_pair_edge_histogram(
+    first_order: int, second_order: int
+) -> tuple[tuple[int, int], ...]:
+    """Count unordered pairs of R(3,5) types by joined edge count.
+
+    The returned edge count includes all edges between the two components.
+    Components of different orders are distinguished by their orders.  For
+    equal orders, swapping the two is not counted a second time.
+    """
+    first_histogram = R35_EDGE_HISTOGRAMS[first_order]
+    second_histogram = R35_EDGE_HISTOGRAMS[second_order]
+    pair_counts: dict[int, int] = {}
+    cross_edges = first_order * second_order
+    for first_edges, first_count in first_histogram.items():
+        for second_edges, second_count in second_histogram.items():
+            if first_order == second_order and first_edges > second_edges:
+                continue
+            if first_order == second_order and first_edges == second_edges:
+                type_pairs = first_count * (first_count + 1) // 2
+            else:
+                type_pairs = first_count * second_count
+            total_edges = cross_edges + first_edges + second_edges
+            pair_counts[total_edges] = pair_counts.get(total_edges, 0) + type_pairs
+    return tuple(sorted(pair_counts.items()))
+
+
+def excess_triangle_splits(
+    weight: int,
+    first_counts: tuple[int, ...],
+    second_counts: tuple[int, ...],
+) -> tuple[tuple[int, int, int, int], ...]:
+    """Return all exact (red excess, blue excess, red/blue triangles)."""
+    degrees = tuple(range(18, 25))
+    global_counts = [
+        first_counts[index] + second_counts[index] + (degree == 21)
+        for index, degree in enumerate(degrees)
+    ]
+    total_excess = (43 - weight) // 2
+    red_baseline = sum(
+        (EXTREMAL_EDGES[degree] - 7) * count
+        for degree, count in zip(degrees, global_counts, strict=True)
+    )
+    blue_baseline = sum(
+        (EXTREMAL_EDGES[42 - degree] - 7) * count
+        for degree, count in zip(degrees, global_counts, strict=True)
+    )
+    return tuple(
+        (
+            red_excess,
+            total_excess - red_excess,
+            (red_baseline - red_excess) // 3,
+            (blue_baseline - (total_excess - red_excess)) // 3,
+        )
+        for red_excess in range(total_excess + 1)
+        if (red_baseline - red_excess) % 3 == 0
+        and (blue_baseline - (total_excess - red_excess)) % 3 == 0
+    )
 
 
 def main() -> None:
@@ -1074,6 +1146,52 @@ def main() -> None:
     if blue_outside_upper_if_blue_disconnected >= r5519_minimum_edges:
         raise AssertionError("order-19 edge lemma does not close blue disconnection")
 
+    # The order-19 lemma bootstraps to the sharper e(5,5,20)>=50.  If an
+    # order-20 graph F had at most 49 edges, a minimum-degree vertex would
+    # have degree at most four.  Degrees zero through three force the lower
+    # bounds below by looking at the complementary R(4,5)-graph on its
+    # nonneighbors.  At degree four, put a=e(F[N(v)]) and b=e(N(v),S).
+    # The order-15 extremal value gives a+b<=6.  Minimum degree gives
+    # 2a+b>=12, hence a>=6, whereas N(v) is K4-free and has a<=5.
+    combined_r45_maxima = {**SMALL_EXTREMAL_EDGES, **EXTREMAL_EDGES}
+    order20_low_degree_bounds = tuple(
+        (
+            degree,
+            degree
+            + (19 - degree) * (18 - degree) // 2
+            - combined_r45_maxima[19 - degree],
+        )
+        for degree in range(4)
+    )
+    if order20_low_degree_bounds != ((0, 79), (1, 69), (2, 59), (3, 51)):
+        raise AssertionError(order20_low_degree_bounds)
+    order20_degree_four_core_minimum = 15 * 14 // 2 - SMALL_EXTREMAL_EDGES[15]
+    order20_degree_four_extra_budget = 49 - 4 - order20_degree_four_core_minimum
+    order20_degree_four_neighbor_cap = turan_edges(4, 3)
+    order20_degree_four_required_internal = (
+        4 * 4 - 4 - order20_degree_four_extra_budget
+    )
+    if (
+        order20_degree_four_core_minimum,
+        order20_degree_four_extra_budget,
+        4 * 4 - 4,
+        order20_degree_four_required_internal,
+        order20_degree_four_neighbor_cap,
+    ) != (39, 6, 12, 6, 5):
+        raise AssertionError("wrong R(5,5;20) degree-four budget")
+    if order20_degree_four_required_internal <= order20_degree_four_neighbor_cap:
+        raise AssertionError("degree-four contradiction was not strict")
+    r5520_minimum_edges = 50
+
+    # Every edge of a 21-vertex graph occurs in 19 of its 21 one-vertex
+    # deletions.  Applying the order-20 bound to every deletion gives 19e >=
+    # 21*50 and hence e(5,5,21)>=56.
+    r5521_minimum_edges = (
+        21 * r5520_minimum_edges + (21 - 2) - 1
+    ) // (21 - 2)
+    if r5521_minimum_edges != 56:
+        raise AssertionError(r5521_minimum_edges)
+
     # The same ingredients close every d=24 or d=25 disconnection in the
     # M=219 and M=220 escape profiles.  The universal internal minimum degree
     # d-22 makes a component with independence number one a K3/K4 at d=24 or
@@ -1111,8 +1229,10 @@ def main() -> None:
     r55_minimum_edges = {
         18: order18_brouwer_minimum + 18 // 4 - 1,
         19: r5519_minimum_edges,
+        20: r5520_minimum_edges,
+        21: r5521_minimum_edges,
     }
-    if r55_minimum_edges != {18: 35, 19: 43}:
+    if r55_minimum_edges != {18: 35, 19: 43, 20: 50, 21: 56}:
         raise AssertionError(r55_minimum_edges)
     high_order_outside_checks = []
     for edge_count in (219, 220):
@@ -1159,6 +1279,7 @@ def main() -> None:
     final_forced_connected_profile_counts = []
     surviving_escape_profile_counts = []
     surviving_escape_profile_lines = []
+    surviving_escape_profiles = []
     for edge_count in range(214, 221):
         forced_count = 0
         for weight, first_counts, second_counts in split_profiles[edge_count]:
@@ -1172,6 +1293,15 @@ def main() -> None:
             if forced:
                 forced_count += 1
             else:
+                surviving_escape_profiles.append(
+                    (
+                        edge_count,
+                        weight,
+                        exact_anchor_lower_bound,
+                        first_counts,
+                        second_counts,
+                    )
+                )
                 surviving_escape_profile_lines.append(
                     f"{edge_count} {weight} {exact_anchor_lower_bound} "
                     f"{','.join(map(str, first_counts))} "
@@ -1224,6 +1354,281 @@ def main() -> None:
     ).read_text(encoding="ascii")
     if actual_escape_file != expected_escape_file:
         raise AssertionError("BACKBONE_ESCAPE_PROFILES.txt does not match enumeration")
+
+    # The four remaining abstract profiles have only the orders 22 and 23 to
+    # consider.  Record their exact global degree multisets, their possible
+    # actual backbone orders, the corresponding excess slack d-L, and every
+    # color-excess/triangle split.
+    expected_residual_profiles = [
+        (
+            219,
+            9,
+            23,
+            (0, 0, 1, 20, 0, 0, 0),
+            (0, 0, 2, 19, 0, 0, 0),
+        ),
+        (
+            220,
+            3,
+            22,
+            (0, 0, 0, 21, 0, 0, 0),
+            (0, 0, 1, 20, 0, 0, 0),
+        ),
+        (
+            220,
+            9,
+            23,
+            (0, 0, 0, 21, 0, 0, 0),
+            (0, 0, 2, 18, 1, 0, 0),
+        ),
+        (
+            220,
+            9,
+            23,
+            (0, 0, 1, 19, 1, 0, 0),
+            (0, 0, 1, 20, 0, 0, 0),
+        ),
+    ]
+    if surviving_escape_profiles != expected_residual_profiles:
+        raise AssertionError(surviving_escape_profiles)
+    residual_profile_ids = (
+        "M219-W9",
+        "M220-W3",
+        "M220-W9-A21",
+        "M220-W9-mixed",
+    )
+    expected_global_counts = (
+        (0, 0, 3, 40, 0, 0, 0),
+        (0, 0, 1, 42, 0, 0, 0),
+        (0, 0, 2, 40, 1, 0, 0),
+        (0, 0, 2, 40, 1, 0, 0),
+    )
+    expected_residual_splits = (
+        (
+            (1, 16, 1426, 1435),
+            (4, 13, 1425, 1436),
+            (7, 10, 1424, 1437),
+            (10, 7, 1423, 1438),
+            (13, 4, 1422, 1439),
+            (16, 1, 1421, 1440),
+        ),
+        (
+            (0, 20, 1431, 1429),
+            (3, 17, 1430, 1430),
+            (6, 14, 1429, 1431),
+            (9, 11, 1428, 1432),
+            (12, 8, 1427, 1433),
+            (15, 5, 1426, 1434),
+            (18, 2, 1425, 1435),
+        ),
+        (
+            (0, 17, 1431, 1430),
+            (3, 14, 1430, 1431),
+            (6, 11, 1429, 1432),
+            (9, 8, 1428, 1433),
+            (12, 5, 1427, 1434),
+            (15, 2, 1426, 1435),
+        ),
+        (
+            (0, 17, 1431, 1430),
+            (3, 14, 1430, 1431),
+            (6, 11, 1429, 1432),
+            (9, 8, 1428, 1433),
+            (12, 5, 1427, 1434),
+            (15, 2, 1426, 1435),
+        ),
+    )
+    residual_excess_lines = [
+        "# profile M W L d slack global_degree_multiset "
+        "red_excess blue_excess red_triangles blue_triangles\n"
+    ]
+    observed_global_counts = []
+    observed_residual_splits = []
+    for profile_id, profile in zip(
+        residual_profile_ids, surviving_escape_profiles, strict=True
+    ):
+        edge_count, weight, lower_bound, first_counts, second_counts = profile
+        global_counts = tuple(
+            first_counts[index] + second_counts[index] + (degree == 21)
+            for index, degree in enumerate(range(18, 25))
+        )
+        observed_global_counts.append(global_counts)
+        splits = excess_triangle_splits(weight, first_counts, second_counts)
+        observed_residual_splits.append(splits)
+        degree_multiset = ",".join(
+            f"{degree}^{count}"
+            for degree, count in zip(range(18, 25), global_counts, strict=True)
+            if count
+        )
+        for backbone_order in range(lower_bound, 24):
+            slack = backbone_order - lower_bound
+            for red_excess, blue_excess, red_triangles, blue_triangles in splits:
+                residual_excess_lines.append(
+                    f"{profile_id} {edge_count} {weight} {lower_bound} "
+                    f"{backbone_order} {slack} {degree_multiset} "
+                    f"{red_excess} {blue_excess} "
+                    f"{red_triangles} {blue_triangles}\n"
+                )
+    if tuple(observed_global_counts) != expected_global_counts:
+        raise AssertionError(observed_global_counts)
+    if tuple(observed_residual_splits) != expected_residual_splits:
+        raise AssertionError(observed_residual_splits)
+    if len(residual_excess_lines) != 33:
+        raise AssertionError(len(residual_excess_lines))
+    expected_residual_excess_file = "".join(residual_excess_lines)
+    actual_residual_excess_file = Path(__file__).with_name(
+        "RESIDUAL_EXCESS_SPLITS.tsv"
+    ).read_text(encoding="ascii")
+    if actual_residual_excess_file != expected_residual_excess_file:
+        raise AssertionError("RESIDUAL_EXCESS_SPLITS.tsv does not match enumeration")
+
+    # At d=23 the universal induced minimum degree is one.  A component with
+    # independence number one would be K2, K3, or K4.  Its vertices have the
+    # stated numbers of same-color outside neighbors; inclusion-exclusion
+    # leaves common outside sets of orders 20,17,12.  These respectively hold
+    # a same-color triangle by R(3,5)=14, an edge because alpha<=4, or a
+    # vertex, so each clique extends to K5.  The same calculation excludes
+    # every nonsingleton alpha-one component at d=22.
+    alpha_one_component_data = {
+        23: tuple(
+            (
+                component_order,
+                22 - component_order,
+                20 - component_order * (component_order - 2),
+            )
+            for component_order in range(2, 5)
+        ),
+        22: tuple(
+            (
+                component_order,
+                22 - component_order,
+                21 - component_order * (component_order - 1),
+            )
+            for component_order in range(2, 5)
+        ),
+    }
+    if alpha_one_component_data != {
+        23: ((2, 20, 20), (3, 19, 17), (4, 18, 12)),
+        22: ((2, 20, 19), (3, 19, 15), (4, 18, 9)),
+    }:
+        raise AssertionError(alpha_one_component_data)
+    if alpha_one_component_data[23][0][2] < 14:
+        raise AssertionError("the d=23 K2 common set need not contain a triangle")
+    if alpha_one_component_data[22][0][2] < 14:
+        raise AssertionError("the d=22 K2 common set need not contain a triangle")
+    if min(alpha_one_component_data[23][1][2], alpha_one_component_data[22][1][2]) < 5:
+        raise AssertionError("a K3 common set need not contain an edge")
+    if min(alpha_one_component_data[23][2][2], alpha_one_component_data[22][2][2]) < 1:
+        raise AssertionError("a K4 common set can be empty")
+
+    # Hence a d=23 disconnection consists of exactly two alpha-two
+    # components, of orders 10+13 or 11+12.  At d=22, either there are two
+    # alpha-two components of orders 9+13, 10+12, or 11+11, or one singleton
+    # and one order-21 alpha-three component.  Complete R(3,5) catalog edge
+    # histograms enumerate the two-component isomorphism-type pairs.  Global
+    # edge accounting and the just-proved diagonal minima filter the menu.
+    residual_component_partitions = {
+        23: ((10, 13), (11, 12)),
+        22: ((9, 13), (10, 12), (11, 11)),
+    }
+    r35_catalog_counts = {
+        order: sum(histogram.values())
+        for order, histogram in R35_EDGE_HISTOGRAMS.items()
+    }
+    if r35_catalog_counts != {9: 290, 10: 313, 11: 105, 12: 12, 13: 1}:
+        raise AssertionError(r35_catalog_counts)
+    menu_case_specs = (
+        (23, 219, "red"),
+        (23, 219, "blue"),
+        (23, 220, "red"),
+        (23, 220, "blue"),
+        (22, 220, "red"),
+        (22, 220, "blue"),
+    )
+    residual_menu_lines = [
+        "# d M disconnected_color component_orders opposite_edges_D "
+        "opposite_edges_outside candidate_unordered_type_pairs\n"
+    ]
+    menu_summary = {}
+    for backbone_order, edge_count, disconnected_color in menu_case_specs:
+        outside_order = ORDER - backbone_order
+        outside_minimum = r55_minimum_edges[outside_order]
+        outside_maximum = outside_order * (outside_order - 1) // 2 - outside_minimum
+        color_totals = {"red": 231 + edge_count, "blue": 672 - edge_count}
+        opposite_color = "blue" if disconnected_color == "red" else "red"
+        partition_counts = {}
+        for first_order, second_order in residual_component_partitions[backbone_order]:
+            retained_count = 0
+            for opposite_edges, type_pairs in component_pair_edge_histogram(
+                first_order, second_order
+            ):
+                outside_edges = (
+                    color_totals[opposite_color]
+                    + opposite_edges
+                    - 21 * backbone_order
+                )
+                if not outside_minimum <= outside_edges <= outside_maximum:
+                    continue
+                retained_count += type_pairs
+                residual_menu_lines.append(
+                    f"{backbone_order} {edge_count} {disconnected_color} "
+                    f"{first_order}+{second_order} {opposite_edges} "
+                    f"{outside_edges} {type_pairs}\n"
+                )
+            partition_counts[(first_order, second_order)] = retained_count
+        menu_summary[(backbone_order, edge_count, disconnected_color)] = partition_counts
+    expected_menu_summary = {
+        (23, 219, "red"): {(10, 13): 114, (11, 12): 146},
+        (23, 219, "blue"): {(10, 13): 297, (11, 12): 905},
+        (23, 220, "red"): {(10, 13): 200, (11, 12): 347},
+        (23, 220, "blue"): {(10, 13): 265, (11, 12): 625},
+        (22, 220, "red"): {(9, 13): 290, (10, 12): 3756, (11, 11): 5564},
+        (22, 220, "blue"): {(9, 13): 290, (10, 12): 3756, (11, 11): 5565},
+    }
+    if menu_summary != expected_menu_summary:
+        raise AssertionError(menu_summary)
+    expected_residual_menu_file = "".join(residual_menu_lines)
+    residual_menu_digest = hashlib.sha256(
+        expected_residual_menu_file.encode("ascii")
+    ).hexdigest()
+    if residual_menu_digest != "03cb19958a9fa6a1933bd6f4e635040342cc46d74486bfc59b219192a5177f99":
+        raise AssertionError(residual_menu_digest)
+    actual_residual_menu_file = Path(__file__).with_name(
+        "RESIDUAL_COMPONENT_MENUS.tsv"
+    ).read_text(encoding="ascii")
+    if actual_residual_menu_file != expected_residual_menu_file:
+        raise AssertionError("RESIDUAL_COMPONENT_MENUS.tsv does not match enumeration")
+
+    # The only d=22 profile has red-degree multiset 20^1,21^42 and 451 red
+    # edges.  If an exact vertex u were a singleton of the red backbone, its
+    # two exact local cores would force 100 red edges on the outside O and 110
+    # red edges on the other 21 anchors C.  Global accounting then gives 220
+    # red C--O edges, while the degree sum on O gives only 219.  A blue
+    # singleton is consistent, but exactness forces G[C] and complement(G)[O]
+    # both to be R(4,5;21,100) cores and fixes the red C--O count at 220.
+    d22_red_total = 231 + 220
+    d22_outside_red_degree_sum = 20 + 20 * 21
+    red_singleton_cross_global = d22_red_total - 21 - 100 - 110
+    red_singleton_cross_degrees = d22_outside_red_degree_sum - 2 * 100 - 21
+    blue_singleton_cross_global = d22_red_total - 21 - 100 - 110
+    blue_singleton_cross_degrees = d22_outside_red_degree_sum - 2 * 110
+    if (
+        d22_red_total,
+        d22_outside_red_degree_sum,
+        red_singleton_cross_global,
+        red_singleton_cross_degrees,
+        blue_singleton_cross_global,
+        blue_singleton_cross_degrees,
+    ) != (451, 440, 220, 219, 220, 220):
+        raise AssertionError("wrong d=22 singleton accounting")
+
+    residual_excess_digest = hashlib.sha256(
+        expected_residual_excess_file.encode("ascii")
+    ).hexdigest()
+    if residual_excess_digest != "2bb0a8f67e346f1066a9cf2d8219ef89e97480bcf973372fe59040bacefed857":
+        raise AssertionError(residual_excess_digest)
+    if len(residual_menu_lines) != 130:
+        raise AssertionError(len(residual_menu_lines))
 
     # If W is the degree weight, at most W/3 secondary vertices are
     # noncentral and at most (43-W)/2 local sides exceed deficiency seven.
@@ -1280,14 +1685,25 @@ def main() -> None:
     print("PASS M=216 blue disconnection forces two 13-vertex critical components")
     print("PASS C13(1,5) gives a sharp disconnected-blue abstract backbone")
     print("PASS outside-edge obstructions eliminate d=26 and M217/218 d=25 cuts")
-    print("PASS small R(3,5) catalog minima at orders 11,12,13 are 15,20,26")
+    print("PASS small R(3,5) catalog counts at orders 9,...,13 are "
+          "290,313,105,12,1")
     print("PASS every R(5,5;19) graph has at least 43 edges")
+    print("PASS diagonal edge minima at orders 20,21 are at least 50,56")
     print("PASS the unique M=218 profile has both backbone colors connected")
     print("PASS d=24/25 cuts are impossible in the M=219/220 escape profiles")
     print("PASS both-color connectivity profiles M214..220="
           "1/1,5/5,17/17,40/40,69/69,94/95,119/122")
     print("PASS backbone escape profiles=0,0,0,0,0,1,3 total=4 "
           "sha256=d69a53973b619bd63eccebe7641657f606f537b752972b67518d1b2d74e136ed")
+    print("PASS residual excess split counts=6,7,6,6 rows=32 "
+          f"sha256={residual_excess_digest}")
+    print("PASS d=23 component-pair menus M219 red/blue=260/1202 "
+          "M220 red/blue=547/890")
+    print("PASS d=22 two-component menus red/blue=9610/9611")
+    print("PASS d=22 red singleton impossible; blue singleton reanchors two "
+          "R(4,5;21,100) cores")
+    print("PASS residual component menu rows=129 "
+          f"sha256={residual_menu_digest}")
     print("PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135")
     print("PASS profile vertex-connectivity counts k=1,...,11 are "
           "345,291,253,231,193,135,128,97,22,22,20")

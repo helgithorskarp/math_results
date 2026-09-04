@@ -15,7 +15,11 @@ possible blue disconnection is reduced to two 13-vertex Ramsey-critical
 components at the abstract induced-subgraph level, and global edge accounting
 then excludes that exception.  Profile-sensitive excess accounting forces
 both colors connected in 345 of the 349 possible degree-count profiles across
-all `M=214,...,220`.
+all `M=214,...,220`.  The four remaining abstract profiles are now reduced to
+orders 22 and 23, explicit excess/triangle splits, and finite component menus
+drawn from the complete order-9 through order-13 `(3,5)` catalogs.  At order
+22, a singleton component is impossible in red and forces a nested pair of
+exact `(4,5;21,100)` cores in blue.
 
 This is a necessary pruning theorem for the hard construction branch.  It is
 not a 43-vertex Ramsey graph, an enumeration of the local cores, or a solver
@@ -718,6 +722,153 @@ These are direct cardinality and
 excess-budget constraints for a construction or local-repair search; they do
 not discard the escape profiles without further compatibility information.
 
+## Exact normal forms for the four residual profiles
+
+Let `D` be the full set of doubly exact vertices and put `d=|D|`.  The previous
+section shows that a disconnected backbone can occur only in the following
+four degree profiles and only at the listed orders.  Here `L` is the certified
+lower bound for `d`.
+
+| profile | global red-degree multiset | possible `d` | slack `d-L` | excess/triangle splits |
+|:---|:---:|:---:|:---:|---:|
+| `M219-W9` | `20^3 21^40` | 23 | 0 | 6 |
+| `M220-W3` | `20^1 21^42` | 22 or 23 | 0 or 1 | 7 |
+| `M220-W9-A21` | `20^2 21^40 22^1` | 23 | 0 | 6 |
+| `M220-W9-mixed` | `20^2 21^40 22^1` | 23 | 0 | 6 |
+
+The two `W=9` profiles at `M=220` have the same global degree multiset but
+different distributions between the original anchor sides.  Every exact
+quadruple `(E_R,E_B,T_R,T_B)`, repeated for each possible `d` and accompanied
+by its exact slack, is in
+[`RESIDUAL_EXCESS_SPLITS.tsv`](RESIDUAL_EXCESS_SPLITS.tsv).  Its 32 data rows
+have SHA-256
+`2bb0a8f67e346f1066a9cf2d8219ef89e97480bcf973372fe59040bacefed857`.
+
+### Two sparse diagonal edge bounds
+
+The order-19 lemma above admits a useful elementary bootstrap:
+
+```text
+e(5,5,20) >= 50,        e(5,5,21) >= 56.              (Sparse-20/21)
+```
+
+For the first bound, suppose an order-20 Ramsey graph `F` has at most 49
+edges and choose a minimum-degree vertex `v`, of degree `r<=4`.  If `r<=3`,
+the complement on the `19-r` nonneighbors of `v` is a `(4,5)` graph.  The
+exact extremal values at orders 19, 18, 17, and 16 give respective lower
+bounds
+
+```text
+r=0,1,2,3:       e(F) >= 79,69,59,51,
+```
+
+all impossible.  Thus `r=4`.  Let `N` be the four neighbors, `S` the 15
+nonneighbors, `a=e(F[N])`, and `b=e_F(N,S)`.  Since the complement of `F[S]`
+is a `(4,5;15)` graph, `e(F[S])>=105-66=39`, and hence `a+b<=6`.  Summing
+the degrees of `N` and using the minimality of `r` gives `2a+b>=12`, so
+`a>=6`.  But `F[N]` is `K_4`-free and therefore `a<=5`, a contradiction.
+
+For an order-21 Ramsey graph, apply the order-20 bound to all 21 one-vertex
+deletions.  Every edge survives in 19 of them, so
+
+```text
+19e >= 21*50,       hence e >= 56.
+```
+
+Complementation bounds the maximum edge counts at orders 20 and 21 by 140
+and 154.  These are the outside-edge caps used below.
+
+### Components at order 23
+
+Fix a disconnected backbone color `Q`.  Its induced minimum degree on `D` is
+`d-22=1`.  A component with `Q`-independence number one would therefore be
+`K_2`, `K_3`, or `K_4`.  At `d=23`, the vertices of those cliques have,
+respectively, 20, 19, or 18 `Q`-neighbors in the outside 20-set.  Their common
+outside neighborhoods have orders at least 20, 17, or 12.  The first contains
+a `Q`-triangle by `R(3,5)=14`, the second contains a `Q`-edge because the
+whole graph has `Q`-independence number at most four, and the third is
+nonempty.  Each alternative completes a `Q`-colored `K_5`.
+
+Thus each component has independence number at least two.  Since the opposite
+color is complete between components and has no `K_5`, there are exactly two
+components, each of independence number two.  Their orders are therefore
+
+```text
+10+13 or 11+12.
+```
+
+Inside either component, the opposite-color graph is a `(3,5)` Ramsey graph.
+For an order pair `(a,b)`, if those two catalog graphs have `e_a,e_b` edges,
+the number of opposite-color edges on `D` is exactly
+
+```text
+s = ab + e_a + e_b.                                  (Component-s)
+```
+
+The complete catalog histograms, `(Component-s)`, global 21-regularity on
+`D`, and `(Sparse-20/21)` give this finite menu of unordered isomorphism-type
+pairs:
+
+| `M` | disconnected color | cap on `s` | `10+13` types | `11+12` types | total |
+|---:|:---:|---:|---:|---:|---:|
+| 219 | red  | 170 | 114 | 146 | 260 |
+| 219 | blue | 173 | 297 | 905 | 1,202 |
+| 220 | red  | 171 | 200 | 347 | 547 |
+| 220 | blue | 172 | 265 | 625 | 890 |
+
+For example, a red disconnection at `M=219` makes the opposite blue outside
+edge count `s-30`; the order-20 maximum 140 gives `s<=170`.  The other three
+rows follow from the same exact identity.  This menu applies to every
+`d=23` realization of the corresponding residual `M`, including a possible
+order-23 realization of `M220-W3`.
+
+### Components and the asymmetric singleton at order 22
+
+At `d=22`, the same common-neighborhood calculation excludes every
+nonsingleton component of independence number one: the common outside sets
+for `K_2,K_3,K_4` have orders at least 19, 15, and 9.  Consequently either
+
+```text
+two alpha-two components have orders 9+13, 10+12, or 11+11,
+```
+
+or there is one singleton and one order-21 component of independence number
+three.  Other component patterns violate the total independence budget four
+and the order-13 bound supplied by `R(3,5)=14`.
+
+For the two-component case, the same catalog and edge accounting leave
+
+| disconnected color | cap on `s` | `9+13` types | `10+12` types | `11+11` types | total |
+|:---:|---:|---:|---:|---:|---:|
+| red  | 164 | 290 | 3,756 | 5,564 | 9,610 |
+| blue | 165 | 290 | 3,756 | 5,565 | 9,611 |
+
+There is a sharper conclusion for a singleton.  The only order-22 profile is
+`M220-W3`, with 451 red edges and degree multiset `20^1 21^42`.  Suppose an
+exact vertex `u` is isolated in the red backbone.  Its red neighborhood is the
+outside 21-set `O`, and its blue neighborhood is the other 21 anchors `C`.
+Exactness forces 100 red edges on `O` and 100 blue, hence 110 red, edges on
+`C`.  Global edge accounting gives 220 red `C--O` edges.  But the red degree
+sum on `O` is `20+20*21=440`; subtracting its 200 internal incidences and the
+21 edges to `u` gives only 219 red `C--O` edges.  Therefore a red singleton is
+impossible.
+
+If `u` is instead isolated in blue, the two counts agree at 220.  Moreover,
+its red neighborhood `C` and blue neighborhood `O` are necessarily exact
+`(4,5;21,100)` cores.  Thus the sole singleton escape is not generic: it is a
+second doubly exact anchoring of the original `M=220` profile, with all other
+21 exact anchors on the red side and none on the blue side.
+
+The complete edge-resolved catalog menu is
+[`RESIDUAL_COMPONENT_MENUS.tsv`](RESIDUAL_COMPONENT_MENUS.tsv).  Its 129 data
+rows list `d`, `M`, the disconnected color, the component orders, `s`, the
+forced opposite-color outside edge count, and the number of unordered catalog
+type pairs.  Its SHA-256 is
+`03cb19958a9fa6a1933bd6f4e635040342cc46d74486bfc59b219192a5177f99`.
+The verifier regenerates both residual files exactly.  This is a finite
+necessary-condition menu, not an assertion that any listed pair extends to a
+43-vertex coloring.
+
 ## Hard-branch propagation theorem
 
 For `18 <= q <= 24`, the exact maximum edge counts in an order-`q`
@@ -885,12 +1036,18 @@ PASS M=216 red backbone order=26,...,36 is connected with diameter<=8
 PASS M=216 blue disconnection forces two 13-vertex critical components
 PASS C13(1,5) gives a sharp disconnected-blue abstract backbone
 PASS outside-edge obstructions eliminate d=26 and M217/218 d=25 cuts
-PASS small R(3,5) catalog minima at orders 11,12,13 are 15,20,26
+PASS small R(3,5) catalog counts at orders 9,...,13 are 290,313,105,12,1
 PASS every R(5,5;19) graph has at least 43 edges
+PASS diagonal edge minima at orders 20,21 are at least 50,56
 PASS the unique M=218 profile has both backbone colors connected
 PASS d=24/25 cuts are impossible in the M=219/220 escape profiles
 PASS both-color connectivity profiles M214..220=1/1,5/5,17/17,40/40,69/69,94/95,119/122
 PASS backbone escape profiles=0,0,0,0,0,1,3 total=4 sha256=d69a53973b619bd63eccebe7641657f606f537b752972b67518d1b2d74e136ed
+PASS residual excess split counts=6,7,6,6 rows=32 sha256=2bb0a8f67e346f1066a9cf2d8219ef89e97480bcf973372fe59040bacefed857
+PASS d=23 component-pair menus M219 red/blue=260/1202 M220 red/blue=547/890
+PASS d=22 two-component menus red/blue=9610/9611
+PASS d=22 red singleton impossible; blue singleton reanchors two R(4,5;21,100) cores
+PASS residual component menu rows=129 sha256=03cb19958a9fa6a1933bd6f4e635040342cc46d74486bfc59b219192a5177f99
 PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135
 PASS profile vertex-connectivity counts k=1,...,11 are 345,291,253,231,193,135,128,97,22,22,20
 PASS first-degree-feasible tests have 0 secondary exact anchors
@@ -904,7 +1061,9 @@ the one small graph6 representative needed for the order-19 lemma and took
 about 2.1 seconds under CPython 3.11.2 on the research host.  The separate
 provenance audit fetches the pinned official catalog files and checks their
 SHA-256 digests, counts, Ramsey properties, edge histograms, and the extremal
-singleton:
+singleton.  It then reconstructs all 129 residual menu rows directly from
+individual catalog records, independently of the histogram-product routine in
+the main verifier:
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 verify_catalog_inputs.py
@@ -922,7 +1081,8 @@ count imports the companion
 theorem, including its stated trust in the completeness of the pinned McKay
 `(4,5)` extremal catalogs.  The backbone connectivity corollaries additionally
 use the classical exact values `R(5,3)=14` and `R(3,4)=9`, and the `M=216`
-red result uses Brooks' theorem.  The `M=218` closure additionally trusts
+red result uses Brooks' theorem.  The `M=218` closure and the residual
+component menus additionally trust
 [McKay's complete small `(3,5)` catalogs](https://users.cecs.anu.edu.au/~bdm/data/ramsey.html)
 and the edge-extremal `(4,5)` census summarized in
 [Angeltveit--McKay's Table 1](https://onlinelibrary.wiley.com/doi/full/10.1002/jgt.70029).
