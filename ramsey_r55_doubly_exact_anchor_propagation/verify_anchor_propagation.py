@@ -1074,6 +1074,88 @@ def main() -> None:
     if blue_outside_upper_if_blue_disconnected >= r5519_minimum_edges:
         raise AssertionError("order-19 edge lemma does not close blue disconnection")
 
+    # The same ingredients close every d=24 or d=25 disconnection in the
+    # M=219 and M=220 escape profiles.  The universal internal minimum degree
+    # d-22 makes a component with independence number one a K3/K4 at d=24 or
+    # a K4 at d=25.  Such a clique needs so many of its color-neighbors in the
+    # outside set that it immediately extends to a K5: at d=25 the K4 sees
+    # all 18 outside vertices; at d=24 a K4 has a common outside neighbor,
+    # while a K3 sees all 19 outside vertices and extends using any outside
+    # edge.  Thus every component has independence number at least two.
+    # Since the independence numbers sum to at most four, there are exactly
+    # two alpha-two components.  Their orders and opposite-color minima are
+    # therefore 11+13 or 12+12 at d=24, and 12+13 at d=25.
+    high_order_component_partitions = {
+        24: ((11, 13), (12, 12)),
+        25: ((12, 13),),
+    }
+    high_order_opposite_internal_minima = {
+        order: min(
+            first * second
+            + MINIMUM_R35_EDGES[first]
+            + MINIMUM_R35_EDGES[second]
+            for first, second in partitions
+        )
+        for order, partitions in high_order_component_partitions.items()
+    }
+    if high_order_opposite_internal_minima != {24: 184, 25: 202}:
+        raise AssertionError(high_order_opposite_internal_minima)
+
+    # Brouwer's theorem already gives e(5,5,18)>=35: T(18,4)=32 and every
+    # graph through 34 edges with alpha<=4 is a union of four cliques, one of
+    # which has order at least five.  Complementing gives the outside maxima
+    # 118 at order 18 and 128 at order 19.  All eight color/order cases below
+    # exceed the applicable maximum.
+    order18_pairs = 18 * 17 // 2
+    order18_brouwer_minimum = order18_pairs - turan_edges(18, 4)
+    r55_minimum_edges = {
+        18: order18_brouwer_minimum + 18 // 4 - 1,
+        19: r5519_minimum_edges,
+    }
+    if r55_minimum_edges != {18: 35, 19: 43}:
+        raise AssertionError(r55_minimum_edges)
+    high_order_outside_checks = []
+    for edge_count in (219, 220):
+        color_totals = {"red": 231 + edge_count, "blue": 672 - edge_count}
+        for backbone_order in (24, 25):
+            outside_order = ORDER - backbone_order
+            outside_maximum = (
+                outside_order * (outside_order - 1) // 2
+                - r55_minimum_edges[outside_order]
+            )
+            for disconnected_color, opposite_color in (
+                ("red", "blue"),
+                ("blue", "red"),
+            ):
+                outside_lower_bound = (
+                    color_totals[opposite_color]
+                    + high_order_opposite_internal_minima[backbone_order]
+                    - 21 * backbone_order
+                )
+                high_order_outside_checks.append(
+                    (
+                        edge_count,
+                        backbone_order,
+                        disconnected_color,
+                        outside_lower_bound,
+                        outside_maximum,
+                    )
+                )
+    expected_high_order_outside_checks = [
+        (219, 24, "red", 133, 128),
+        (219, 24, "blue", 130, 128),
+        (219, 25, "red", 130, 118),
+        (219, 25, "blue", 127, 118),
+        (220, 24, "red", 132, 128),
+        (220, 24, "blue", 131, 128),
+        (220, 25, "red", 129, 118),
+        (220, 25, "blue", 128, 118),
+    ]
+    if high_order_outside_checks != expected_high_order_outside_checks:
+        raise AssertionError(high_order_outside_checks)
+    if not all(lower > maximum for _, _, _, lower, maximum in high_order_outside_checks):
+        raise AssertionError("a high-order disconnection survives edge accounting")
+
     final_forced_connected_profile_counts = []
     surviving_escape_profile_counts = []
     surviving_escape_profile_lines = []
@@ -1085,7 +1167,7 @@ def main() -> None:
             forced = (
                 exact_anchor_lower_bound >= 26
                 or (edge_count == 217 and exact_anchor_lower_bound >= 25)
-                or (edge_count == 218 and exact_anchor_lower_bound >= 24)
+                or (edge_count in (218, 219, 220) and exact_anchor_lower_bound >= 24)
             )
             if forced:
                 forced_count += 1
@@ -1102,11 +1184,11 @@ def main() -> None:
     surviving_escape_profile_digest = hashlib.sha256(
         "".join(surviving_escape_profile_lines).encode("ascii")
     ).hexdigest()
-    if final_forced_connected_profile_counts != [1, 5, 17, 40, 69, 89, 112]:
+    if final_forced_connected_profile_counts != [1, 5, 17, 40, 69, 94, 119]:
         raise AssertionError(final_forced_connected_profile_counts)
-    if surviving_escape_profile_counts != [0, 0, 0, 0, 0, 6, 10]:
+    if surviving_escape_profile_counts != [0, 0, 0, 0, 0, 1, 3]:
         raise AssertionError(surviving_escape_profile_counts)
-    if surviving_escape_profile_digest != "10ab59a22595799f02493c84d72965cff106024a947eb808b583c30b03071a51":
+    if surviving_escape_profile_digest != "d69a53973b619bd63eccebe7641657f606f537b752972b67518d1b2d74e136ed":
         raise AssertionError(surviving_escape_profile_digest)
 
     vertex_connectivity_spectrum = [
@@ -1116,7 +1198,7 @@ def main() -> None:
     ]
     vertex_connectivity_spectrum[0] = sum(final_forced_connected_profile_counts)
     if vertex_connectivity_spectrum != [
-        333, 291, 253, 231, 193, 135, 128, 97, 22, 22, 20
+        345, 291, 253, 231, 193, 135, 128, 97, 22, 22, 20
     ]:
         raise AssertionError(vertex_connectivity_spectrum)
     if escape_profile_counts != [0, 0, 1, 3, 6, 10, 15]:
@@ -1201,13 +1283,14 @@ def main() -> None:
     print("PASS small R(3,5) catalog minima at orders 11,12,13 are 15,20,26")
     print("PASS every R(5,5;19) graph has at least 43 edges")
     print("PASS the unique M=218 profile has both backbone colors connected")
+    print("PASS d=24/25 cuts are impossible in the M=219/220 escape profiles")
     print("PASS both-color connectivity profiles M214..220="
-          "1/1,5/5,17/17,40/40,69/69,89/95,112/122")
-    print("PASS backbone escape profiles=0,0,0,0,0,6,10 total=16 "
-          "sha256=10ab59a22595799f02493c84d72965cff106024a947eb808b583c30b03071a51")
+          "1/1,5/5,17/17,40/40,69/69,94/95,119/122")
+    print("PASS backbone escape profiles=0,0,0,0,0,1,3 total=4 "
+          "sha256=d69a53973b619bd63eccebe7641657f606f537b752972b67518d1b2d74e136ed")
     print("PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135")
     print("PASS profile vertex-connectivity counts k=1,...,11 are "
-          "333,291,253,231,193,135,128,97,22,22,20")
+          "345,291,253,231,193,135,128,97,22,22,20")
     print("PASS first-degree-feasible tests have 0 secondary exact anchors")
     print("PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0")
     print("PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21")
