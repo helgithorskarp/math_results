@@ -14,7 +14,7 @@ three; this does not bound its order by three or imply it is abelian.
 
 More specifically, every involution has at least five transpositions, every
 order-three element has at least seven 3-cycles, and an order-five element
-must have fixed count 3 or 8.
+must have exactly three fixed vertices and eight 5-cycles.
 
 Equivalently, `Aut(G)` has no element of prime order at least seven. A target
 cannot be vertex-transitive.
@@ -33,6 +33,7 @@ to the known lower bound for `R(5,5)`.
 | four middle order-five types | `1^13 5^6`, `1^18 5^5`, `1^23 5^4`, and `1^28 5^3`; exact formula checks and replayed DRAT certificates | [`ramsey_r55_order5_middle_obstruction`](../ramsey_r55_order5_middle_obstruction) |
 | degree-strengthened order-five type | `1^33 5^2`; exact multiplicity-expanded degree networks, independent formula reconstruction, and a replayed DRAT certificate | [`ramsey_r55_order5_f33_degree_obstruction`](../ramsey_r55_order5_f33_degree_obstruction) |
 | analytic order-five type | `1^38 5`; the moving orbit is a two-colored `C_5`, and `R(4,5)=25` plus `R(3,5)=14` gives the contradiction `16 <= |Y| <= 13` | [`ramsey_r55_order5_f38_analytic_obstruction`](../ramsey_r55_order5_f38_analytic_obstruction) |
+| external fixed-eight order-five exclusion | `1^8 5^7`; the wustep/maths q4 certificate is independently reconstructed from all five-sets and truth-table gate clauses, then replayed | [`ramsey_r55_order5_f8_external_reproduction`](../ramsey_r55_order5_f8_external_reproduction) |
 | sparse involutions and order-three elements | involutions with one through four transpositions and order-three elements with one through six 3-cycles; analytic local-neighborhood bounds | [`ramsey_r55_sparse_order2_order3_automorphism_obstruction`](../ramsey_r55_sparse_order2_order3_automorphism_obstruction) |
 | subgroups of order 25 | the surviving order-five types force a unique `C_5^2` action, whose 51-variable invariant formula is certified UNSAT; an order-25 element is excluded by its fifth power | [`ramsey_r55_c5_square_automorphism_obstruction`](../ramsey_r55_c5_square_automorphism_obstruction) |
 | order-15 elements | power constraints leave six cycle types; all six exact cyclic invariant formulas have independently reconstructed clauses and replayed DRAT certificates | [`ramsey_r55_order15_automorphism_obstruction`](../ramsey_r55_order15_automorphism_obstruction) |
@@ -57,8 +58,10 @@ compact-artifact policy, but retains all leaf assignments and hashes and
 records that every leaf was replayed on the research host.  Users requiring
 a wholly compact standalone trust boundary should preserve that caveat.
 The five computational order-five certificates are compact and independently
-replayable; the sixth exclusion is analytic. The other two order-five cycle
-types remain open. The fixed-33 package has also been independently
+replayable; the sixth exclusion is analytic. The external fixed-eight
+certificate is independently reconstructed and replayed by a package that
+downloads pinned source and proof bytes. Only `1^3 5^8` remains open.
+The fixed-33 package has also been independently
 regenerated, reconstructed, and replayed in
 [`ramsey_r55_order5_f33_degree_obstruction_review1`](../ramsey_r55_order5_f33_degree_obstruction_review1).
 The order-25 finite obstruction has a separate clean-room action, formula,
@@ -74,7 +77,7 @@ representatives to cover the group).  Reject the construction family if:
 1. an element has at most four vertex cycles;
 2. an involution has fewer than five transpositions;
 3. an order-three element has fewer than seven 3-cycles;
-4. an order-five element has 13, 18, 23, 28, 33, or 38 fixed vertices;
+4. an order-five element has any fixed count other than three;
 5. an element has prime order at least seven;
 6. an element contains a cycle of prime length 29, 31, 37, 41, or 43; or
 7. an element fixes a vertex and also contains a cycle of length at least 25; or
@@ -95,7 +98,7 @@ actions generally retain more edge orbits and therefore less of the
 dimensional advantage sought from a highly structured ansatz. The handoff
 does not prune an asymmetric local search and does not prove that a target,
 if it exists, must be asymmetric. An order-five element, if one exists, must
-have fixed count 3 or 8.
+have fixed count three.
 
 ## Logical derivation
 
@@ -103,10 +106,14 @@ The one-cycle case is a 43-cycle and hence circulant after relabeling.  The
 next three rows exclude elements with exactly two, three, or four cycles, so
 every remaining nonidentity automorphism has at least five cycles. The three
 order-five artifacts close six of the eight types allowed by `f+5k=43`.
+The external q4 certificate closes a seventh, `1^8 5^7`: the fixed-vertex
+degree equation leaves neighbor-cycle counts three and four, complementation
+reduces to three, and its anchored invariant CNF is independently
+reconstructed and its DRAT proof replayed. Only `1^3 5^8` survives.
 The sparse-motion theorem separately bounds the numbers of transpositions
 and 3-cycles by using monochromatic common-neighborhood caps; its ten types
 have many vertex cycles and are not consequences of the low-cycle rows.
-The order-25 theorem then uses the surviving order-five fixed counts to
+The earlier order-25 theorem uses the then-surviving fixed counts three and eight to
 classify any `C_5^2` action as `1^3 5^3 25^1`; its exact invariant formula is
 UNSAT. A cyclic subgroup of order 25 is excluded because the fifth power of
 its generator has five 5-cycles, rather than the required seven or eight.
