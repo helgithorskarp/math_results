@@ -1,0 +1,26 @@
+Independent tool builds
+Kissat upstream: https://github.com/arminbiere/kissat.git
+Kissat commit: 8af8e56f174b778aef3aa45af9f739b2a5f492c2
+Kissat version: 4.0.4
+Kissat binary SHA-256: 07b64052c8efb82eb2830371f22a386a0196e9ae9a450fcf18b0cac4a3d7c60d
+drat-trim upstream: https://github.com/marijnheule/drat-trim.git
+drat-trim commit: 2e3b2dc0ecf938addbd779d42877b6ed69d9a985
+drat-trim binary SHA-256: 9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a
+Compiler: gcc (Debian 12.2.0-14+deb12u1) 12.2.0
+
+R=374,375,383
+CNF: 1323 variables, 3234 clauses, 111746 bytes
+CNF SHA-256: e4baa3fc9947c31a065fecd6a49fc4377a1281759f576e46f684692f4e8768f8
+DRAT: 12557278 bytes
+DRAT SHA-256: 8748969ba0fcb252d3aef4941d8b8f00f2e39ecf13b178f772827206b760b0da
+drat-trim: 2728 input clauses and 152070 of 190927 lemmas in core; 388 RAT lemmas; s VERIFIED
+
+R=396,412,479
+CNF: 1323 variables, 2789 clauses, 56132 bytes
+CNF SHA-256: fedf92e241f9434222c015d18e603d6e778490edbccf02601526980f87d0ac0d
+DRAT: 1726623 bytes
+DRAT SHA-256: 03b399052c0c0c50825d525c49d9ae8066c06919002de70e7f5ee6d6b68541ce
+drat-trim: 2081 input clauses and 23873 of 33491 lemmas in core; 145 RAT lemmas; s VERIFIED
+
+Both CNF and DRAT hashes equal the reviewed artifact's recorded hashes. The
+proof files are regenerated and intentionally remain outside git.
