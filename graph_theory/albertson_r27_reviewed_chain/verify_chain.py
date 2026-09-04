@@ -149,6 +149,7 @@ def local_disk(rotation: dict[str, object]) -> dict[str, object]:
 def arithmetic_chain() -> dict[str, object]:
     profiles = (("A", 103, 57, 9), ("B", 106, 64, 11))
     terminal = []
+    planarizations = []
     for name, edges, crossings, full in profiles:
         c5 = (2 * edges - 8 * (24 - 2)) // 3
         terminal_edges = edges - 2 * c5
@@ -156,6 +157,15 @@ def arithmetic_chain() -> dict[str, object]:
         assert c5 == full + 1
         assert terminal_crossings - terminal_edges + 3 * (24 - 2) == 0
         terminal.append((name, c5, full, terminal_edges, terminal_crossings))
+        planar_vertices = 24 + terminal_crossings
+        planar_edges = terminal_edges + 2 * terminal_crossings
+        planar_faces = 2 - planar_vertices + planar_edges
+        assert planar_edges == 3 * planar_vertices - 6
+        assert planar_faces == 2 * planar_vertices - 4
+        assert 3 * planar_faces == 2 * planar_edges
+        planarizations.append(
+            (name, planar_vertices, planar_edges, planar_faces)
+        )
 
     order54 = Fraction(218768121, 35960)
     order53_714 = Fraction(14046318, 2303)
@@ -169,6 +179,7 @@ def arithmetic_chain() -> dict[str, object]:
     assert z27 == 6084
     return {
         "terminal_profiles": terminal,
+        "terminal_planarizations": planarizations,
         "row_bounds": {
             "53,713": 6089,
             "53,714": 6100,
@@ -201,6 +212,7 @@ def main() -> None:
     print(f"PASS pinned dependency manifest: {artifact_count} artifacts, {file_count} files")
     print("PASS five-face oriented complex is a disk with boundary u-z-t-r-w-u")
     print(f"terminal_profiles={arithmetic['terminal_profiles']}")
+    print(f"terminal_planarizations={arithmetic['terminal_planarizations']}")
     print(f"frontier_row_bounds={arithmetic['row_bounds']}; Z(27)={arithmetic['Z(27)']}")
     print(f"certificate_sha256={digest}")
 

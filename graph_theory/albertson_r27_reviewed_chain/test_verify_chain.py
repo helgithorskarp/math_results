@@ -27,6 +27,10 @@ class ReviewedChainTests(unittest.TestCase):
         certificate = audit.arithmetic_chain()
         self.assertEqual(certificate["Z(27)"], 6084)
         self.assertEqual(
+            certificate["terminal_planarizations"],
+            [("A", 41, 117, 78), ("B", 40, 114, 76)],
+        )
+        self.assertEqual(
             certificate["row_bounds"],
             {"53,713": 6089, "53,714": 6100, "53,715": 6129, "54,726": 6084},
         )

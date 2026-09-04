@@ -195,32 +195,48 @@ bounds in Section 1, this proves the theorem.
 ## 6. Reproduction and trust boundary
 
 Run the compact manifest, local-map, and arithmetic audit with CPython 3.9
-or later; there are no third-party dependencies:
+or later; there are no third-party Python dependencies:
 
 ```sh
 PYTHONDONTWRITEBYTECODE=1 python3 verify_chain.py
 PYTHONDONTWRITEBYTECODE=1 python3 -m unittest -v test_verify_chain.py
+PYTHONDONTWRITEBYTECODE=1 python3 verify_git_history.py
+PYTHONDONTWRITEBYTECODE=1 python3 -m unittest -v test_verify_git_history.py
 ```
 
-The exact five-line checker transcript is in
+The exact six-line mathematical-checker transcript is in
 [`EXPECTED_OUTPUT.txt`](EXPECTED_OUTPUT.txt); its final certificate digest is
 
 ```text
-ee53004f39b2400ef97fb7fc65456c462723fb5190e2a7a6b9e770971039269c
+1d21c61a84c4357c1062d60a105d99284195c7235e1e5b2a79dbef0a128a8be2
+```
+
+The history checker requires a full Git checkout. It independently reads each
+of the 18 pinned files from the recorded source commit, compares both that Git
+object and the working-tree copy to the manifest hash, verifies every recorded
+commit object, and checks that each of the five review commits descends from
+its source. Its exact transcript is in
+[`EXPECTED_HISTORY_OUTPUT.txt`](EXPECTED_HISTORY_OUTPUT.txt), with digest
+
+```text
+c421c281d6b37b91a95015cf1b48f2aeeee5632ba5ba04fc20d6659a982517cb
 ```
 
 The checker verifies all pinned source hashes, graph-reference syntax, the
 oriented five-face disk including every vertex link, both terminal profiles,
-all four frontier floors, and `Z(27)=6084`. The longer source verifiers remain
-the authorities for the exhaustive profile enumeration and recursive convex
-tables; their exact commands and commits are in the manifest.
+the exact planarization triples `(vertices,edges,faces)=(41,117,78)` and
+`(40,114,76)`, all four frontier floors, and `Z(27)=6084`. The longer source
+verifiers remain the authorities for the exhaustive profile enumeration and
+recursive convex tables; their exact commands and commits are in the manifest.
 
 The mathematical trust boundary consists of the four versioned primary
 results, standard good-drawing normalization, the reviewed PRTT equality
 classification, convex induced sampling, and the Jordan-curve interpretation
 of the oriented local map. The executable uses only exact CPython integers,
 `Fraction`, finite sets, JSON, and SHA-256. It uses no floating point, solver,
-randomness, network input, or uncommitted data.
+randomness, network input, or uncommitted data. The separate provenance audit
+also trusts the installed Git executable and the completeness of the local
+repository history.
 
 The terminal closure has independent `VERIFIES`/`REPRODUCES` reviews at
 Discovery Net heights 2025 and 2027. This establishes a reviewed mathematical
