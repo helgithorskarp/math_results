@@ -1,0 +1,186 @@
+# Complete library census for two-overlap Parts placements
+
+## Result
+
+**Claim status: exact computer-assisted finite-family reduction.**
+Of all **2,373,802** exactly-two-overlap Parts L/S+ placements,
+**2,371,030** have composable four-colourings from the explicit
+libraries. Exactly **2,772** fail library composition and are
+preserved as compact exact isometry seeds.
+
+This closes **983,032** additional placements beyond the
+preceding seven-edge result. Every one of the **2,282,030** placements with
+at most **28** genuinely new cross edges is four-colourable. The
+smallest residual has **29** new edges; the maximum over the full
+family is **131**. The residual splits into 1,372 rotations and
+1,400 reflections. Library coverage need not respect reflection because
+the chosen libraries need not be reflection-invariant.
+
+Consequently any non-four-colourable graph in this fixed two-overlap family
+must be among the listed 2,772 instances and have at least
+29 genuinely new cross edges. No such graph is established here.
+
+This is an exact computer-assisted reduction for one fixed family of 508-point
+unit-distance graphs. It does not produce a five-chromatic graph or improve
+the 509-vertex record. A residual means only that the specified two libraries
+cannot be glued in the specified placement.
+
+The input gadgets are the 374-point large part `L` and the 136-point `S+`
+(the 135-point small part with the origin adjoined) of the Parts construction.
+Both have distinct vertices internally. They have 510 labels before overlap
+identifications, so exactly two coincidences produce 508 distinct points.
+The geometric enumeration covers rotations, reflections, and translations.
+
+## Colouring-set intersection lemma
+
+Let A and B be finite libraries of proper four-colourings of two graphs.
+For each b in B and each permutation pi of four colour names, give the pair
+(b, pi) one bit. For a fixed a in A, each overlap (p,q) requires
+`a[p] = pi(b[q])`, and each genuinely new edge (p,q) requires
+`a[p] != pi(b[q])`. Intersect the sets of bits meeting these constraints.
+
+A nonempty intersection yields a proper colouring of the glued graph:
+colours agree wherever vertices are identified; internal edges are proper by
+the library hypotheses; and every other edge is checked by an inequality.
+Conversely, any gluing using the two libraries contributes a surviving bit.
+Thus the intersection decides library compatibility exactly, for any number
+of overlaps or new edges. This elementary gluing mechanism is not claimed as
+a new general theorem.
+
+Here A has 135 colourings and B has 194, giving 4,656 permuted small-gadget
+witnesses, represented by 73 64-bit words. There is no table of all abstract
+boundary colour patterns and no bound on the number of cross edges. Every
+positive bit is decoded and checked directly against all constraints before
+its placement is counted as coloured. This eliminates the exponential table
+growth that constrained the preceding seven-edge computation.
+
+## Geometry and exact enumeration
+
+`census_all.cpp` imports the previous exact field and spatial-filter routines
+without changing their source. Points are represented in
+`Q(sqrt(3),sqrt(5),sqrt(11))` with scale 96. The two overlap pairs force an
+orientation: the inherited complete enumeration gives 1,420 rotations and
+1,420 reflections. All translations with two coincidences are enumerated by
+exact cross-point differences. Translations are sorted by their integer
+coefficient tuples, making the output independent of hash-map iteration.
+
+Every possible cross edge is recovered by the certified bucket filter and an
+exact squared-distance test. Unlike the previous stratum programs, this run
+never stops after a prescribed number of edges. After identifying vertices,
+it removes edges already internal to either gadget and deduplicates the
+remaining strict edges. Overlap constraints and these genuinely new edges
+are passed to the library matcher. Counts for zero through seven edges
+reproduce the previous results.
+
+The full family has 2,992,078 placements with at least two overlaps and
+17,658,256 recovered overlap-pair certificates. Exactly 2,373,802 placements
+have exactly two overlaps. These are counts of placements in a fixed labelled
+coordinate family, not counts of abstract graph isomorphism classes.
+
+## Compact residual instances
+
+`residual_seeds.tsv` contains one line per residual isometry. Columns are
+`orientation_index`, `first_overlap`, `second_overlap`. Each encoded overlap
+is `136*p + q`, where p is an L index and q is an S+ index (q=0 is the adjoined
+origin). Indices 0..1419 are rotations; 1420..2839 are reflections. The two
+ordered segment correspondences and this parity uniquely determine the
+Euclidean isometry, so the seeds specify exact instances without storing the
+verbose edge lists and translation arrays. The file preserves the canonical
+production order; its rows are not sorted lexicographically by seed.
+
+The omitted residual JSONL is regenerated by the census. It supplies the exact
+translation and every new edge for each seed. These data are useful inputs to
+a later colouring search, symmetry-based library extension, or proof check.
+No claim about the chromatic number of an individual residual is made here.
+
+## Verification and trust boundary
+
+- C++ validates every input library colouring against all exact internal
+  edges, intersects all constraints, and checks each decoded positive witness.
+- `test_matcher.cpp` compares the production matcher with direct permutation
+  enumeration on 223,587 exhaustive bounded interface cases: 155,115 positive
+  and 68,472 negative. Cases exercise 24-, 72-, and 192-bit libraries, repeated
+  constraints, zero constraints, and four colour classes. Two additional
+  tests use 128 constraints and a contradiction added at position 129.
+- `verify.py` pins all substantive source and inputs, checks the full transcript
+  and residual digests, all 2,840 orientation rows, histogram and global sums,
+  geometric reflection symmetry, and exact correspondence with compact seeds.
+  It compares every orientation with the preceding committed zero-through-two-edge
+  census. Optionally it compares all zero-through-seven orientation counts
+  with the separately regenerated prior seven-edge transcript.
+- `check_residual.py` checks every residual using reversed library intersections:
+  it fixes the original S+ colours and expands L by all permutations. This is
+  an independent implementation of the same set-intersection mechanism, not a
+  different theorem. Inverting the colour permutation proves equivalence of
+  the two directions.
+- For eight selected residuals, Python reconstructs the Euclidean placement directly
+  from its two segment correspondences. It uses the segment squared length as
+  an algebraic common denominator and tests all 50,864 cross-label pairs,
+  bypassing the C++ normalized orientations and both spatial filters. It
+  independently reconstructs every internal edge as well. These are samples,
+  not an independent full geometry census.
+- The production program also performs direct all-cross-pair checks for the
+  first two-overlap translation in every 137th orientation. These bypass the
+  filters but reuse the C++ arithmetic and edge-identification functions.
+
+The complete geometric classification still trusts the inherited exact C++
+enumerator, integer arithmetic implementation, and compiler. The result is
+not proof-assistant formalization and has not itself received independent
+peer review. A matching summary hash alone is not a proof of enumeration
+completeness. Full regeneration runs the stated enumeration and checks.
+
+## Reproduction
+
+Requirements: GCC 12.2.0 with C++20 and Python 3.11.2, standard libraries only.
+From this directory:
+
+```bash
+g++ -std=c++20 -O3 -Wall -Wextra -pedantic census_all.cpp -o census_all
+./census_all \
+  ../hadwiger_nelson_parts509_completion_census_degree9/points.tsv \
+  ../hadwiger_nelson_parts509_two_overlap_cross_census/colour_libraries.txt \
+  /tmp/parts_all_residual.jsonl > /tmp/parts_all_census.jsonl
+python3 verify.py /tmp/parts_all_census.jsonl /tmp/parts_all_residual.jsonl
+python3 check_residual.py /tmp/parts_all_residual.jsonl
+g++ -std=c++20 -O3 -Wall -Wextra -pedantic test_matcher.cpp -o test_matcher
+./test_matcher
+```
+
+Compare with `expected_verify.txt`, `expected_residual_check.txt`, and
+`expected_matcher.txt`. `expected_summary.json` is the complete final histogram.
+Pass `--prior-seven PATH` to `verify.py` for the additional comparison with the
+prior seven-edge transcript; this prints one additional success line.
+
+For a bounded range, append `FIRST END` to `census_all` (half-open orientation
+indices). A range output has its own completion marker and is not a full
+census. Output files should be distinct for each range. Sanitizer builds use
+`-O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer`.
+
+The complete one-core run took 639.613 seconds and
+used 27,172 KiB peak RSS on the shared host. It made
+75,228,956 filtered exact distance tests and completed
+21 additional direct-geometry samples. The 20-orientation
+benchmark took 6.243 seconds and 26,628 KiB. An ASan/UBSan run completed the
+same 20 orientations in 35.266 seconds without a diagnostic;
+all 20 rows and all 760 residual records match the production benchmark
+entrywise. This is representative coverage, not a complete second census.
+The matcher differential tests also pass under both sanitizers.
+
+Verbose generated files are intentionally omitted. Full census transcript:
+835,097 bytes, SHA-256
+`b44b48122f698b539f96fe16f4aa2432dd4eb763bff2dcc050195bc337a77f22`.
+Full residual transcript: 1,763,441 bytes,
+SHA-256 `cca94363716ec704032c98bd16e065ba1b8dde27ad9ef5b631f143f1cd116d33`.
+The 2,772 exact residual seeds occupy
+41,437 bytes and are committed.
+
+## Provenance
+
+The original Parts graph is from Jaan Parts, [Graph minimization, focusing on
+the example of 5-chromatic unit-distance graphs in the plane](https://arxiv.org/abs/2010.12665).
+The local [exact coordinates](../hadwiger_nelson_parts509_completion_census_degree9)
+and [witness libraries and affine enumeration](../hadwiger_nelson_parts509_two_overlap_cross_census)
+are pinned by precise digests in `manifest.json`.
+The new contribution is the complete finite library classification and its
+small residual family; priority claims about the general gluing method are
+not intended.
