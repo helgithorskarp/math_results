@@ -15,6 +15,12 @@ three; this does not bound its order by three or imply it is abelian.
 More specifically, every involution has at least five transpositions, every
 order-three element has at least seven 3-cycles, and an order-five element
 must have exactly three fixed vertices and eight 5-cycles.
+For such an order-five element, its fixed triangle is mixed. After color
+reversal and relabeling, the fixed edges are `xy` red and `xz,yz` blue,
+the fixed red degrees are `21,21,20`, and the eight fixed-to-cycle
+incidences have one of exactly two necessary patterns in
+[`ramsey_r55_order5_f3_incidence`](../ramsey_r55_order5_f3_incidence).
+Neither residual pattern is excluded.
 
 Equivalently, `Aut(G)` has no element of prime order at least seven. A target
 cannot be vertex-transitive.
@@ -61,6 +67,11 @@ The five computational order-five certificates are compact and independently
 replayable; the sixth exclusion is analytic. The external fixed-eight
 certificate is independently reconstructed and replayed by a package that
 downloads pinned source and proof bytes. Only `1^3 5^8` remains open.
+The analytic incidence reduction for that last type leaves the column
+multisets `0,1,2,3,5,5,6,6` and `0,1,2,3,4,5,6,7`, with red fixed-neighbor
+bit weights `x=1,y=2,z=4` and the mixed triangle normalized as above.
+Both pass every local test using the fixed vertices and two moving cycles;
+global extensions remain unresolved.
 The fixed-33 package has also been independently
 regenerated, reconstructed, and replayed in
 [`ramsey_r55_order5_f33_degree_obstruction_review1`](../ramsey_r55_order5_f33_degree_obstruction_review1).
