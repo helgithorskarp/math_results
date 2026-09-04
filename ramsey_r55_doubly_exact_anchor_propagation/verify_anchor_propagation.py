@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import itertools
 
 
@@ -336,6 +337,48 @@ def turan_edges(order: int, parts: int) -> int:
     return (order * order - sum(size * size for size in class_sizes)) // 2
 
 
+def triangle_pair_sieve(split_profiles):
+    """Return admissible triangle pairs and maximum excess in each color."""
+    degrees = tuple(range(18, 25))
+    triangle_pairs = {}
+    maximum_excess = {}
+    for edge_count, pairs in split_profiles.items():
+        values = set()
+        maximum_red_excess = 0
+        maximum_blue_excess = 0
+        for weight, first_counts, second_counts in pairs:
+            global_counts = [
+                first_counts[index] + second_counts[index] + (degree == 21)
+                for index, degree in enumerate(degrees)
+            ]
+            total_excess = (43 - weight) // 2
+            red_baseline = sum(
+                (EXTREMAL_EDGES[degree] - 7) * count
+                for degree, count in zip(degrees, global_counts, strict=True)
+            )
+            blue_baseline = sum(
+                (EXTREMAL_EDGES[42 - degree] - 7) * count
+                for degree, count in zip(degrees, global_counts, strict=True)
+            )
+            for red_excess in range(total_excess + 1):
+                blue_excess = total_excess - red_excess
+                if (
+                    (red_baseline - red_excess) % 3 == 0
+                    and (blue_baseline - blue_excess) % 3 == 0
+                ):
+                    values.add(
+                        (
+                            (red_baseline - red_excess) // 3,
+                            (blue_baseline - blue_excess) // 3,
+                        )
+                    )
+                    maximum_red_excess = max(maximum_red_excess, red_excess)
+                    maximum_blue_excess = max(maximum_blue_excess, blue_excess)
+        triangle_pairs[edge_count] = tuple(sorted(values))
+        maximum_excess[edge_count] = (maximum_red_excess, maximum_blue_excess)
+    return triangle_pairs, maximum_excess
+
+
 def main() -> None:
     red_core = decode_short_graph6(SAMPLE_CORE_G6)
     blue_core = relabel(red_core, tuple((5 * vertex + 3) % SIDE for vertex in range(SIDE)))
@@ -448,6 +491,51 @@ def main() -> None:
         (39, (0, 0, 6, 15, 0, 0, 0), (0, 0, 7, 14, 0, 0, 0)),
     ):
         raise AssertionError(split_profiles[214])
+
+    triangle_pairs, maximum_color_excess = triangle_pair_sieve(split_profiles)
+    triangle_pair_counts = [
+        len(triangle_pairs[edge_count]) for edge_count in range(214, 221)
+    ]
+    triangle_ranges = [
+        (
+            min(red for red, _ in triangle_pairs[edge_count]),
+            max(red for red, _ in triangle_pairs[edge_count]),
+            min(blue for _, blue in triangle_pairs[edge_count]),
+            max(blue for _, blue in triangle_pairs[edge_count]),
+        )
+        for edge_count in range(214, 221)
+    ]
+    expected_triangle_ranges = [
+        (1403, 1403, 1463, 1463),
+        (1406, 1407, 1458, 1459),
+        (1410, 1412, 1452, 1455),
+        (1414, 1417, 1446, 1451),
+        (1417, 1422, 1441, 1446),
+        (1421, 1427, 1435, 1442),
+        (1425, 1432, 1429, 1437),
+    ]
+    exact_red_side_minima = [
+        43 - maximum_color_excess[edge_count][0] for edge_count in range(214, 221)
+    ]
+    exact_blue_side_minima = [
+        43 - maximum_color_excess[edge_count][1] for edge_count in range(214, 221)
+    ]
+    canonical_triangle_pairs = "".join(
+        f"{edge_count} {red} {blue}\n"
+        for edge_count in range(214, 221)
+        for red, blue in triangle_pairs[edge_count]
+    ).encode("ascii")
+    triangle_pair_digest = hashlib.sha256(canonical_triangle_pairs).hexdigest()
+    if triangle_pair_counts != [1, 3, 8, 15, 20, 27, 39] or sum(triangle_pair_counts) != 113:
+        raise AssertionError(triangle_pair_counts)
+    if triangle_ranges != expected_triangle_ranges:
+        raise AssertionError(triangle_ranges)
+    if exact_red_side_minima != [43, 38, 36, 34, 29, 27, 25]:
+        raise AssertionError(exact_red_side_minima)
+    if exact_blue_side_minima != [41, 40, 36, 32, 31, 27, 23]:
+        raise AssertionError(exact_blue_side_minima)
+    if triangle_pair_digest != "ccaf9ccec34aa4633cf2019d3f85f34e714c1f0bb17db444e9f8034c650c936c":
+        raise AssertionError(triangle_pair_digest)
 
     # The unique M=214 split, plus the selected degree-21 anchor, has thirteen
     # degree-20 and thirty degree-21 vertices.  Divisibility of each color's
@@ -584,6 +672,10 @@ def main() -> None:
     print("PASS split degree deviations equal M-220 and M-221")
     print("PASS first-degree-feasible test weights=99,...,111 exceed hard limit 39")
     print("PASS hard split degree-profile counts=1,5,17,40,69,95,122 total=349")
+    print("PASS triangle-pair counts=1,3,8,15,20,27,39 total=113 "
+          "sha256=ccaf9ccec34aa4633cf2019d3f85f34e714c1f0bb17db444e9f8034c650c936c")
+    print("PASS exact local-side minima red=43,38,36,34,29,27,25 "
+          "blue=41,40,36,32,31,27,23")
     print("PASS M=214 forces degrees 20^13,21^30 and excess split red=0 blue=2")
     print("PASS M=214 forces monochromatic triangle counts red=1403 blue=1463")
     print("PASS M=214 exact-anchor backbone order=28,...,30 min degrees red=13 blue=12")

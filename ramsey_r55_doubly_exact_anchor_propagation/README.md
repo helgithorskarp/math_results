@@ -192,6 +192,56 @@ Thus a search at `M=214` has no degree-count branching at all; the other six
 cross totals together have only 348 possible ordered side-count pairs before
 core-specific row and column feasibility is imposed.
 
+### Color-excess and triangle-pair sieve
+
+The hard-branch profiles also give a small color-specific divisibility sieve.
+For a global degree-count vector `x_d`, define the baseline local-edge sums
+
+```text
+B_R = sum_d x_d (U(d)-7),
+B_B = sum_d x_d (U(42-d)-7).
+```
+
+For profile weight `W`, let `E=(43-W)/2` be the total excess over deficiency
+seven, and split it as `E_R+E_B=E` between the colors.  Triangle incidence
+requires
+
+```text
+B_R-E_R = 3T_R,
+B_B-E_B = 3T_B.                                      (Triangle-divisibility)
+```
+
+Enumerating the 349 side profiles and the finitely many nonnegative excess
+splits leaves only the following possibilities:
+
+```text
+M    number of (T_R,T_B)  range of T_R  range of T_B  exact R sides  exact B sides
+214           1             1403          1463             43             41
+215           3           1406--1407    1458--1459          38             40
+216           8           1410--1412    1452--1455          36             36
+217          15           1414--1417    1446--1451          34             32
+218          20           1417--1422    1441--1446          29             31
+219          27           1421--1427    1435--1442          27             27
+220          39           1425--1432    1429--1437          25             23
+total        113
+```
+
+The last two columns are universal lower bounds.  If the total red excess is
+`E_R`, at most `E_R` of the 43 red local sides can have deficiency greater
+than seven, and similarly in blue.  Maximizing the permitted color excess
+over the profile sieve gives the displayed numbers.
+
+The 113 canonical lines `M T_R T_B`, ordered lexicographically and terminated
+by newlines, have SHA-256
+
+```text
+ccaf9ccec34aa4633cf2019d3f85f34e714c1f0bb17db444e9f8034c650c936c.
+```
+
+This is an exact arithmetic superset.  It provides a compact validation gate
+for a candidate coloring, but it does not assert that any listed triangle
+pair is realizable.
+
 ### Complete red-side exactness at `M=214`
 
 The singleton profile has a further divisibility consequence.  Including the
@@ -450,6 +500,8 @@ PASS all test matrices satisfy cross cardinality and first-degree bounds
 PASS split degree deviations equal M-220 and M-221
 PASS first-degree-feasible test weights=99,...,111 exceed hard limit 39
 PASS hard split degree-profile counts=1,5,17,40,69,95,122 total=349
+PASS triangle-pair counts=1,3,8,15,20,27,39 total=113 sha256=ccaf9ccec34aa4633cf2019d3f85f34e714c1f0bb17db444e9f8034c650c936c
+PASS exact local-side minima red=43,38,36,34,29,27,25 blue=41,40,36,32,31,27,23
 PASS M=214 forces degrees 20^13,21^30 and excess split red=0 blue=2
 PASS M=214 forces monochromatic triangle counts red=1403 blue=1463
 PASS M=214 exact-anchor backbone order=28,...,30 min degrees red=13 blue=12
@@ -462,7 +514,7 @@ PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21
 
 The audit uses CPython 3.11 or later, the standard library, exact integer
 arithmetic, and no solver, randomness, floating point, network, or external
-data.  It took about 1.3 seconds under CPython 3.11.2 on the research host.
+data.  It took about 3.8 seconds under CPython 3.11.2 on the research host.
 
 ## Scope, provenance, and trust boundary
 
