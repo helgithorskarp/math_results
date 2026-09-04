@@ -1053,6 +1053,85 @@ outside the published known catalog and outside its radius-three neighborhood.
 This is a relative catalog exclusion, not a completeness claim for Ramsey
 graphs on 42 vertices.
 
+### Exact local profile inside the singleton normal form
+
+The singleton structure also determines every remaining unit of local
+deficiency.  Let `z in O` be the unique red-degree-20 vertex.  The 22
+vertices `u union C` are doubly exact, so each has local pair
+`(t_R,t_B)=(100,100)`.  The hard-branch excess identity for `M220-W3` leaves
+20 units above the baseline deficiency seven.  Every one of the 20
+degree-21 vertices in `O minus {z}` is outside the exact-anchor set and hence
+uses at least one unit.  Therefore each uses exactly one, while `z` uses
+none:
+
+```text
+z:                  (d,t_R,t_B) = (20,93,107),
+o in O minus {z}:   (d,t_R,t_B) = (21,99,100) or (21,100,99).
+```
+
+If `x` vertices have the first exceptional type, triangle-incidence
+divisibility gives
+
+```text
+x in {0,3,6,9,12,15,18},
+(T_R,T_B) = (1431-x/3, 1429+x/3).                       (Singleton-local)
+```
+
+Thus the seven `M220-W3` rows in `RESIDUAL_EXCESS_SPLITS.tsv` have a direct
+vertex-level interpretation, not merely a global excess interpretation.
+
+### A complete SAT dichotomy for the residual singleton
+
+There is a useful exact test that avoids enumerating either order-21 core.
+Delete `u`, label `C=0,...,20`, label `O=21,...,41`, and choose `z=21`.
+For each pair `i<j<42`, let the Boolean variable `x_ij` mean that `ij` is
+red in `F=G-u`.  Impose:
+
+1. neither color has a `K_5` on any five vertices of `F`;
+2. `C` has no red `K_4` and `O` has no blue `K_4`;
+3. the red degrees in `F` are 20 on `C union {z}` and 21 on
+   `O minus {z}`; and
+4. `G[C]` has 100 red edges and `G[O]` has 110 red edges (equivalently,
+   100 blue edges).
+
+These conditions are a relaxation of the singleton normal form because they
+omit `(Singleton-local)` and all other local-triangle equations.  Nevertheless
+they have a sharp two-sided interpretation.  If the CNF is UNSAT, then the
+singleton normal form is impossible.  If it is SAT, extend the model by
+making all `u-C` edges red and all `u-O` edges blue.  A monochromatic `K_5`
+not using `u` is forbidden by condition 1.  One using `u` would be a red
+`K_4` in `C` or a blue `K_4` in `O`, forbidden by condition 2.  Hence every
+SAT model is already a certified order-43 Ramsey graph and proves
+`R(5,5)>=44`.
+
+[`singleton_sat.py`](singleton_sat.py) emits this formula deterministically
+using Sinz sequential counters and independently checks any SAT model by
+exhausting all `binom(43,5)=962598` five-sets.  Its pure-Python self-test
+exhausts every exact-cardinality instance through five input literals.  The
+generated DIMACS has
+
+```text
+157521 variables
+2028680 clauses
+SHA-256 3eb71332561297639e6798fd5e1d495437181d4c62193a0cc57cabf24b742bca.
+```
+
+Reproduce the encoding (the DIMACS itself is intentionally not committed):
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 singleton_sat.py self-test
+PYTHONDONTWRITEBYTECODE=1 python3 singleton_sat.py generate singleton.cnf \
+  | cmp - EXPECTED_SINGLETON_SAT.txt
+```
+
+For a solver transcript containing a `s SATISFIABLE` line and standard `v`
+model lines, independently verify and export the red graph in graph6 format:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 singleton_sat.py check-model solver.log \
+  --write-graph singleton-witness.g6
+```
+
 The complete edge-resolved catalog menu is
 [`RESIDUAL_COMPONENT_MENUS.tsv`](RESIDUAL_COMPONENT_MENUS.tsv).  Its empty
 data section certifies that no two-component catalog pair survives; the

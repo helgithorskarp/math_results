@@ -1940,6 +1940,34 @@ def main() -> None:
     ) != (451, 440, 220, 219, 220, 220):
         raise AssertionError("wrong d=22 singleton accounting")
 
+    # In the blue-singleton case u and all 21 vertices of C are exact.  The
+    # twenty degree-21 vertices of O outside the exact set must consume the
+    # twenty available excess units one apiece, while the unique degree-20
+    # vertex z remains at the seven-deficiency baseline.  Triangle incidence
+    # forces the number x of red-exceptional O vertices to be a multiple of 3.
+    singleton_local_profiles = []
+    for red_exceptional in range(21):
+        red_local_sum = 22 * 100 + 93 + red_exceptional * 99 + (
+            20 - red_exceptional
+        ) * 100
+        blue_local_sum = 22 * 100 + 107 + red_exceptional * 100 + (
+            20 - red_exceptional
+        ) * 99
+        if red_local_sum % 3 == blue_local_sum % 3 == 0:
+            singleton_local_profiles.append(
+                (red_exceptional, red_local_sum // 3, blue_local_sum // 3)
+            )
+    if singleton_local_profiles != [
+        (0, 1431, 1429),
+        (3, 1430, 1430),
+        (6, 1429, 1431),
+        (9, 1428, 1432),
+        (12, 1427, 1433),
+        (15, 1426, 1434),
+        (18, 1425, 1435),
+    ]:
+        raise AssertionError(singleton_local_profiles)
+
     residual_excess_digest = hashlib.sha256(
         expected_residual_excess_file.encode("ascii")
     ).hexdigest()
@@ -2024,6 +2052,8 @@ def main() -> None:
     print("PASS d=22 extendable-row capacity eliminates every two-component pair")
     print("PASS d=22 red singleton impossible; blue singleton reanchors two "
           "R(4,5;21,100) cores")
+    print("PASS blue-singleton local profiles x=0,3,...,18 with "
+          "triangles (1431-x/3,1429+x/3)")
     print("PASS residual component menu rows=0 "
           f"sha256={residual_menu_digest}")
     print("PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135")
