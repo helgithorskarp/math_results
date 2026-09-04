@@ -1,0 +1,59 @@
+Independent review replay, 2026-09-04
+=====================================
+
+All proof/checking processes were run sequentially on one core.
+
+Target:
+  Discovery Net bafkreig2wslyxeadb3fadldshzxvy3dy5spqpwtoqnhxfinqvtl6hpu46a
+  source commit 1629d46a8bc1b0a4249139ae7dfca04b1870145a
+
+Submitted exhaustive checker:
+  command: TMPDIR=/scratch/research-team-v2/tmp/reviewer-1 ./verify.sh
+  result: VERIFIED cores=9757 models=11387 ordered_pairs=15401
+  wall=14.9s
+
+Independent SAT checker:
+  compiler: g++ (Debian 12.2.0-14+deb12u1) 12.2.0
+  CaDiCaL: version 3.0.1, commit c60730422e758ef1cebe7aeddf2dda31c996bf04
+  libcadical.a SHA-256:
+    351b5497822428e57927d539608eccbc6d20f4d6d49e91dcf34414ed08ed6f53
+  build:
+    g++ -std=c++17 -O3 -Wall -Wextra -Wpedantic -I CADICAL/src \
+      independent_sat_audit.cpp CADICAL/build/libcadical.a -pthread \
+      -o independent_sat_audit
+  independent_sat_audit binary SHA-256:
+    b4f1f881a1d8d4c7ce8f36ed204f9ec1b1b74797c965c1b2915a79c1d33294bb
+  result:
+    SAT_VERIFIED cores=9757 models=11387 ordered_pairs=15401
+    multiplicities 1:8383 2:1229 3:43 4:94 5:7 6:1
+  wall=21.0s
+  negative-fixture test: changing the first saved model caused
+    "error: SAT model mismatch at core 0" and exit status 1.
+
+Independent deletion-core regeneration:
+  Debian nauty 2.8.6+ds-2 package SHA-256:
+    0bf8d06147b8dd4a856f54031ea6390d411630dfec24316840079450c88addc1
+  Debian libnauty2 2.8.6+ds-2 package SHA-256:
+    38ab75377f7021941621af6e23c63146acb351523811973ffc7e23c7321d986e
+  Debian libcliquer1 1.21-3+b1 package SHA-256:
+    7858686f9e8a1931644e7bf58d68df85cbb95299c255466b3c6c65706bacc563
+  command:
+    nauty-delptg -q -l r55_42some.g6 all.g6
+    nauty-shortg -q all.g6 unique.g6
+  all.g6: 13,776 records, SHA-256
+    31925078d3c58a6e9b9b8eb1fde82bfca07e10439dbe80647c44c849575bee4e
+  unique.g6: 9,757 records, SHA-256
+    225c00c0fc26d1b372e598790fb3954a442c0bee5fd68b59a5be76bbb7761f5b
+  result: unique.g6 byte-identical to the decompressed submitted core file.
+
+Representative direct two-vertex proof:
+  regenerated core 3451 CNF: 83 variables, 6,704 clauses, SHA-256
+    a344f2440cbb24bd5af24c4411ddf9eef16d00422e14796a90efff1a9640c5c3
+  decompressed DRAT SHA-256:
+    c0b1778e7aed4ecf248c4836365b46982931e9c37274316b936875c8a50e1d6d
+  drat-trim result: s VERIFIED; 531/6,704 input clauses and 630/6,822
+    lemmas in the core, 2,758 resolution steps, zero RAT lemmas; wall=0.12s.
+  Portability note: the submitted verify_drat_crosscheck.sh exits 1 with this
+    drat-trim build because output lines begin with carriage returns, so its
+    grep for '^s VERIFIED' misses the otherwise successful status. Removing
+    carriage returns before grep resolves it. This does not affect the proof.
