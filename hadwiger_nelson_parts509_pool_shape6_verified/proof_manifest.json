@@ -1,0 +1,61 @@
+{
+  "generated_outputs": {
+    "checker_seconds": 66.00844137999957,
+    "clauses": 26660,
+    "cnf_sha256": "b171d62e559a4ea78a368f0c5fd842eaf4895cf7a238bcad252d57bf70ad2eec",
+    "interface_hints_sha256": "c847c98c15bbe847a2a94bdb8c79bfbe3b1b80ed85d8cfc711c28c4d13d0ac53",
+    "killing_clauses": 6777,
+    "killing_instance_sha256": "23c440f74f78a8f6adf675de4e5f284cda4d5b1fe1e353eac48efff381b46288",
+    "points": 677,
+    "positive_certificates": {
+      "cache_sha256": "cccc3f4effc5880387017bc426b6d221bb597ad85bcdbe2d04f0ba5f639c3816",
+      "generated_this_run": 6777,
+      "seconds": 129.80536087299697,
+      "verified": 6777
+    },
+    "proof_bytes": 57623889,
+    "proof_sha256": "499cfc2907322d196c6acec628486884124e0d93cde747fd7eabd26ddc99eade",
+    "solver_seconds": 47.173405623998406,
+    "status": "a=6 COLOURING COVER AND DRAT VERIFIED",
+    "total_seconds": 247.32370054100102,
+    "unit_edges": 3400,
+    "variables": 4588
+  },
+  "independent_audit": {
+    "denominator": 288,
+    "exact_edges_sha256": "64a0f52154cb05b657a320c16569316cd1cba90748ed6dff71d4f45ca862b550",
+    "geometry_checker_sha256": "3c8d082f5e651a8c96583bccf948e0ba450ffb93c9832a3d6abdc611fe02b750",
+    "killing_clauses": 6777,
+    "master_cnf_sha256": "b171d62e559a4ea78a368f0c5fd842eaf4895cf7a238bcad252d57bf70ad2eec",
+    "points": 677,
+    "status": "independent integer geometry and all positive certificates VERIFIED",
+    "unit_edges": 3400
+  },
+  "log_sha256": {
+    "solver.log": "1286c70820888f380dbf87281c4fb9b46d923a5dfba78b7c9b53e7444cdd5c61",
+    "verify.log": "56fc31a81e4f0c283d739f9b0d83aa4e08789c353e44a6e496bb6c7975367195"
+  },
+  "notes": [
+    "All 6777 colourings were freshly generated from the public compact instance and hints, then directly checked.",
+    "Generated colourings, full CNF and DRAT trace are local outputs; verification regenerates them.",
+    "Exact master and compact input hashes are pinned in expected.json. Colouring/proof hashes record this run, not a requirement for all correct tool builds.",
+    "The geometry and witness audit is a separate implementation run by the same researcher, not an external review.",
+    "Small counter projections are supplementary finite checks; the general threshold-counter argument is in README.md."
+  ],
+  "small_projection_validation": {
+    "checks": 15364,
+    "n_range": [
+      1,
+      8
+    ],
+    "seconds": 0.13024451800083625,
+    "status": "all cardinality and conditional-degree projections verified"
+  },
+  "source_sha256": {
+    "audit.py": "2e144bcfebebf6328d451543f505067d41a7e8d6f3c8677ece6e684f9370f4be",
+    "interface_hints.json": "c847c98c15bbe847a2a94bdb8c79bfbe3b1b80ed85d8cfc711c28c4d13d0ac53",
+    "killing_clauses.cnf": "23c440f74f78a8f6adf675de4e5f284cda4d5b1fe1e353eac48efff381b46288",
+    "verify.py": "19cff23dda98148eb7e47d8fe0016226f8cfe8a60e78548601142e7a450a956b"
+  },
+  "status": "completed fresh reproduction; all positive colourings and DRAT proof verified"
+}
