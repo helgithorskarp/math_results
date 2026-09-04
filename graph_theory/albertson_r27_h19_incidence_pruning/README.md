@@ -29,9 +29,10 @@ Equivalently, every `h=19` survivor must occur in one of only these cases:
 | B | isolated `K19`; two `K8` blocks sharing a cut vertex | 56 | 8, 9, or 10 |
 | C | isolated `K18`; `K8,K9` sharing a cut vertex | 46 | 9 |
 
-This removes both three-component forms and three of the seven chromatic
-subcases left by the preceding reduction.  It does not exclude the four
-cases in the table and does not prove Albertson's conjecture for `r=27`.
+This removes both three-component forms and four of the eight
+form-and-chromatic subcases left by the preceding reduction.  It does not
+exclude the four cases in the table and does not prove Albertson's conjecture
+for `r=27`.
 
 ## Imported four-form conclusion
 
