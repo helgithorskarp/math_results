@@ -26,8 +26,8 @@ disconnection is a blue singleton, which forces a nested pair of exact
 `(4,5;21,100)` cores.  Deleting that singleton would produce a 42-vertex
 Ramsey graph with degree multiset `20^22 21^20`; none of the 656 orientations
 of the published known Ramsey-42 catalog has that multiset, and the complete
-radius-four transition classification forces its catalog edge distance to be
-at least five.
+radius-four transition classification plus a target-specific radius-five
+enumeration force its catalog edge distance to be at least six.
 
 This is a necessary pruning theorem for the hard construction branch.  It is
 not a 43-vertex Ramsey graph, an enumeration of the local cores, or a solver
@@ -1058,11 +1058,27 @@ again in the known catalog.  Since the target degree multiset occurs nowhere
 in that catalog, the singleton deletion has edge-edit distance at least five
 from every known orientation.  The bridge verifier additionally pins and
 scans the complete radius-four map, finding neither the target multiset nor
-its color complement among its 8,408 records.  Consequently, any hard-branch
-graph realizing the last disconnected normal form must delete to a
-Ramsey-42 graph outside the published known catalog and outside its
-radius-four neighborhood.  This is a relative catalog exclusion, not a
-completeness claim for Ramsey graphs on 42 vertices.
+its color complement among its 8,408 records.
+
+The degree signature makes radius five much cheaper than a generic
+classification.  Of the 656 catalog orientations, only 18 have the
+degree-sequence edit lower bound at most five.  Six have the wrong edge-count
+parity for exactly five flips, leaving 12 orientations.  On each remaining
+orientation, equality in the degree-edit bound forces every flip endpoint to
+move monotonically toward degree 20 or 21: additions join only rising
+vertices and deletions join only falling vertices.  The endpoint changes are
+at most two.  The independent
+[`verify_known_r42_radius5.py`](verify_known_r42_radius5.py) audit enumerates
+all small degree-realizing addition/deletion graphs, deduplicates the flip
+sets, explicitly checks the target degree multiset, and searches both colors
+for a 5-clique.  Exactly 230,503 flip sets survive the degree constraints and
+none preserves the Ramsey property.  Therefore the singleton deletion is at
+edge-edit distance at least six from every known catalog orientation.
+
+Consequently, any hard-branch graph realizing the last disconnected normal
+form must delete to a Ramsey-42 graph outside the published known catalog and
+outside its radius-five neighborhood.  This is a relative catalog exclusion,
+not a completeness claim for Ramsey graphs on 42 vertices.
 
 ### Exact local profile inside the singleton normal form
 
@@ -1409,7 +1425,13 @@ already committed by the companion radius-three artifact:
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 verify_known_r42_bridge.py \
   | cmp - EXPECTED_R42_BRIDGE.txt
+PYTHONDONTWRITEBYTECODE=1 python3 verify_known_r42_radius5.py \
+  | cmp - EXPECTED_R42_RADIUS5.txt
 ```
+
+The radius-five audit uses only the Python standard library and took about 33
+seconds on the research host.  Its trust boundary is the pinned known catalog;
+unlike the radius-four bridge, it does not invoke or trust a SAT solver.
 
 ## Scope, provenance, and trust boundary
 
