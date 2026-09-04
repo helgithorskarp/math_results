@@ -184,6 +184,9 @@ def audit_identity(document: dict[str, object]) -> None:
         raise AssertionError(weight_histogram)
     if (min(item[2] for item in hard_profiles), max(item[2] for item in hard_profiles)) != (890, 902):
         raise AssertionError("wrong normalized degree-sum range")
+    sparser_edge_counts = {degree_sum // 2 for _, _, degree_sum in hard_profiles}
+    if sparser_edge_counts != set(range(445, 452)):
+        raise AssertionError(sparser_edge_counts)
     maximum_delta_profiles = [
         counts for counts, weight, _ in hard_profiles if (1247 - weight) // 2 == 622
     ]
@@ -199,6 +202,7 @@ def audit_identity(document: dict[str, object]) -> None:
     print("PASS either one deficiency <=6 or at least 66 deficiencies equal 7")
     print("PASS hard-case degree weight <=39 and deficiency >=604")
     print(f"PASS hard-case complement-normalized degree-count profiles={len(hard_profiles)}")
+    print("PASS hard-case sparser color has 445,...,451 edges")
 
 
 def main() -> None:

@@ -19,7 +19,10 @@ edges of its maximum, or at least 66 of the 86 color-neighborhoods have
 **exactly** seven fewer edges than their order-specific maxima.  In the second
 case the degree sequence is strongly concentrated around 21 in the precise
 weighted sense proved below.  Up to exchanging the two colors, only 104
-integer degree-count profiles survive that hard branch.
+integer degree-count profiles survive that hard branch, and the sparser color
+has between 445 and 451 edges.  Thus either a six-deficient local core exists,
+or the two global color classes differ in size by at most 13 edges while the
+66-fold exact-level-seven conclusion holds.
 
 This is a necessary condition, not a construction of a 43-vertex Ramsey graph
 and not an exclusion of all such graphs.
@@ -150,7 +153,9 @@ enumeration of nonnegative integer counts `x_18,...,x_24` subject to their sum
 being 43, this normalization, handshaking parity, and the sharpened
 weight-at-most-39 constraint leaves exactly 104 profiles.  Their degree sums
 range from 890 to 902.  These are necessary integer profiles, not an assertion
-that all 104 are realizable Ramsey graphs.
+that all 104 are realizable Ramsey graphs.  Dividing those degree sums by two
+shows that the sparser color has exactly one of 445, 446, ..., 451 edges.  Since
+`K_43` has 903 edges, the two color-class sizes differ by at most 13.
 
 ## Reproduction
 
@@ -173,6 +178,7 @@ PASS total local deficiency <=622 over 86 color-neighborhoods
 PASS either one deficiency <=6 or at least 66 deficiencies equal 7
 PASS hard-case degree weight <=39 and deficiency >=604
 PASS hard-case complement-normalized degree-count profiles=104
+PASS hard-case sparser color has 445,...,451 edges
 ```
 
 An optional upstream-data audit checks both pinned SHA-256 values, verifies
