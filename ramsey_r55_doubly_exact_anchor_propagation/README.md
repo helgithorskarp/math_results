@@ -26,8 +26,8 @@ disconnection is a blue singleton, which forces a nested pair of exact
 `(4,5;21,100)` cores.  Deleting that singleton would produce a 42-vertex
 Ramsey graph with degree multiset `20^22 21^20`; none of the 656 orientations
 of the published known Ramsey-42 catalog has that multiset, and the complete
-radius-four transition classification plus a target-specific radius-five
-enumeration force its catalog edge distance to be at least six.
+radius-four transition classification plus target-specific radius-five and
+radius-six enumerations force its catalog edge distance to be at least seven.
 
 This is a necessary pruning theorem for the hard construction branch.  It is
 not a 43-vertex Ramsey graph, an enumeration of the local cores, or a solver
@@ -1075,9 +1075,62 @@ for a 5-clique.  Exactly 230,503 flip sets survive the degree constraints and
 none preserves the Ramsey property.  Therefore the singleton deletion is at
 edge-edit distance at least six from every known catalog orientation.
 
+Radius six has one new feature: a flip set need not saturate the sorted-degree
+lower bound.  Fix a labeled target-degree assignment `tau_v in {20,21}` with
+exactly twenty values 21, put `delta_v=tau_v-d_v`, and let `a_v,d_v` count
+added and deleted flip edges incident with `v`.  There are unique
+nonnegative integers `q_v` such that
+
+```text
+a_v = max(delta_v,0)+q_v,
+d_v = max(-delta_v,0)+q_v,
+sum_v q_v = (12-sum_v |delta_v|)/2.                  (Radius6-slack)
+```
+
+The degree bound and edge-count parity leave 53 of the 656 catalog
+orientations.  Forty-seven have degree lower bound six, so every `q_v=0`
+and every endpoint moves monotonically toward its target degree.  Five have
+lower bound five and one has lower bound four.  For those six slack
+orientations, `(Radius6-slack)` has total cancellation at most two.  The
+scripts
+[`verify_known_r42_radius6_saturated.py`](verify_known_r42_radius6_saturated.py)
+and
+[`verify_known_r42_radius6_slack.py`](verify_known_r42_radius6_slack.py)
+exhaust every optimal or slack target assignment, every weak composition of
+the cancellation total, and every prescribed-degree addition and deletion
+graph.
+
+The saturated audit checks 19,954,948 candidates and the slack audit checks
+26,160,087, for 46,115,035 six-flip candidates in total.  None is Ramsey.
+For an efficient definition-level check, observe that every new red `K_5`
+must contain an added edge and every new blue `K_5` must contain a deleted
+edge.  The checker therefore searches for a triangle in the appropriate
+final common neighborhood of each changed edge.  Exhaustive small-instance
+tests compare this criterion with global clique search, compare all
+minimum-L1 target assignments with literal enumeration over all `5^6`
+six-vertex degree vectors, and compare the complete cancellation
+decomposition with every zero- through three-flip subset on sampled
+six-vertex graphs.  The recursion retains only deterministic blocks of 256
+target assignments, bounding memory without changing the enumeration.
+
+Reproduce both parts with Python 3.11 or later (runtime is machine-dependent
+and is on the order of tens of single-core minutes):
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 verify_known_r42_radius6_saturated.py \
+  | cmp - EXPECTED_R42_RADIUS6_SATURATED.txt
+PYTHONDONTWRITEBYTECODE=1 python3 verify_known_r42_radius6_slack.py \
+  | cmp - EXPECTED_R42_RADIUS6_SLACK.txt
+```
+
+Consequently the singleton deletion is at edge-edit distance at least seven
+from every known catalog orientation.  These radius-six verifiers use only
+the Python standard library and the pinned catalog; they do not invoke or
+trust a SAT solver.
+
 Consequently, any hard-branch graph realizing the last disconnected normal
 form must delete to a Ramsey-42 graph outside the published known catalog and
-outside its radius-five neighborhood.  This is a relative catalog exclusion,
+outside its radius-six neighborhood.  This is a relative catalog exclusion,
 not a completeness claim for Ramsey graphs on 42 vertices.
 
 ### Exact local profile inside the singleton normal form
