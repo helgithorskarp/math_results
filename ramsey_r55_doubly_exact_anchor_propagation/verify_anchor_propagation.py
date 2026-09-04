@@ -49,6 +49,34 @@ R35_EDGE_COVER_HISTOGRAMS = {
     12: {(20, 4): 1, (21, 4): 2, (22, 4): 5, (23, 4): 2, (24, 4): 2},
     13: {(26, 5): 1},
 }
+# For d=22, an independent-cover capacity is the maximum number of outside
+# rows that can use an independent transversal without exceeding any exact
+# component-to-outside column degree.  These histograms contain precisely the
+# catalog types that pass the K4-cover inequality and have positive capacity.
+R35_D22_EDGE_CAPACITY_HISTOGRAMS = {
+    10: {
+        (11, 7): 1,
+        (12, 6): 3, (12, 7): 3,
+        (13, 6): 12, (13, 7): 6, (13, 8): 1,
+        (13, 10): 2, (13, 12): 1,
+        (14, 6): 14, (14, 7): 8, (14, 8): 4,
+        (14, 10): 1, (14, 12): 4, (14, 13): 1,
+        (15, 6): 20, (15, 7): 9, (15, 8): 5, (15, 9): 1,
+        (15, 12): 9, (15, 13): 4,
+        (16, 6): 18, (16, 7): 8, (16, 8): 1,
+        (16, 12): 7, (16, 13): 3, (16, 18): 1,
+        (17, 6): 9, (17, 7): 2, (17, 12): 6,
+        (18, 6): 3,
+    },
+    11: {
+        (16, 7): 1,
+        (17, 7): 4,
+        (18, 7): 9, (18, 8): 2,
+        (19, 7): 6, (19, 14): 1,
+        (20, 7): 3,
+    },
+    12: {(22, 8): 1},
+}
 R35_EDGE_HISTOGRAMS = {
     order: {
         edge_count: sum(
@@ -525,6 +553,31 @@ def component_pair_edge_histogram(
             ):
                 continue
             total_edges = cross_edges + first_edges + second_edges
+            pair_counts[total_edges] = pair_counts.get(total_edges, 0) + type_pairs
+    return tuple(sorted(pair_counts.items()))
+
+
+def d22_capacity_pair_edge_histogram(
+    first_order: int, second_order: int
+) -> tuple[tuple[int, int], ...]:
+    """Count d=22 component pairs passing the independent-row capacity test."""
+    first_histogram = R35_D22_EDGE_CAPACITY_HISTOGRAMS[first_order]
+    second_histogram = R35_D22_EDGE_CAPACITY_HISTOGRAMS[second_order]
+    pair_counts: dict[int, int] = {}
+    cross_edge_count = first_order * second_order
+    for (first_edges, first_capacity), first_count in first_histogram.items():
+        for (second_edges, second_capacity), second_count in second_histogram.items():
+            first_key = (first_edges, first_capacity)
+            second_key = (second_edges, second_capacity)
+            if first_capacity + second_capacity < ORDER - 22:
+                continue
+            if first_order == second_order and first_key > second_key:
+                continue
+            if first_order == second_order and first_key == second_key:
+                type_pairs = first_count * (first_count + 1) // 2
+            else:
+                type_pairs = first_count * second_count
+            total_edges = cross_edge_count + first_edges + second_edges
             pair_counts[total_edges] = pair_counts.get(total_edges, 0) + type_pairs
     return tuple(sorted(pair_counts.items()))
 
@@ -1650,12 +1703,6 @@ def main() -> None:
                 if not outside_minimum <= outside_edges <= outside_maximum:
                     continue
                 retained_count += type_pairs
-                if backbone_order == 22:
-                    residual_menu_lines.append(
-                        f"{backbone_order} {edge_count} {disconnected_color} "
-                        f"{first_order}+{second_order} {opposite_edges} "
-                        f"{outside_edges} {type_pairs}\n"
-                    )
             partition_counts[(first_order, second_order)] = retained_count
         menu_summary[(backbone_order, edge_count, disconnected_color)] = partition_counts
     expected_menu_summary = {
@@ -1754,11 +1801,74 @@ def main() -> None:
     ]:
         raise AssertionError(vertex_connectivity_spectrum)
 
+    # At d=22, let iota(H) be the maximum number of independent-transversal
+    # rows that can be packed subject to the exact column capacities
+    # |H|-1-deg_H(v).  For every outside vertex, at least one of its two
+    # component-neighbor sets must be independent; otherwise an edge from
+    # each set and the complete join between components give a K5.  Thus a
+    # component pair must satisfy iota(H_1)+iota(H_2)>=21.  The complete
+    # catalog capacity histograms reduce 10+12 to 9 pairs and 11+11 to 26.
+    capacity_counts = {
+        order: sum(histogram.values())
+        for order, histogram in R35_D22_EDGE_CAPACITY_HISTOGRAMS.items()
+    }
+    capacity_spectra = {
+        order: {
+            capacity: sum(
+                count
+                for (_, candidate_capacity), count in histogram.items()
+                if candidate_capacity == capacity
+            )
+            for capacity in sorted({entry[1] for entry in histogram})
+        }
+        for order, histogram in R35_D22_EDGE_CAPACITY_HISTOGRAMS.items()
+    }
+    if capacity_counts != {10: 167, 11: 26, 12: 1}:
+        raise AssertionError(capacity_counts)
+    if capacity_spectra != {
+        10: {6: 79, 7: 37, 8: 11, 9: 1, 10: 3,
+             12: 27, 13: 8, 18: 1},
+        11: {7: 23, 8: 2, 14: 1},
+        12: {8: 1},
+    }:
+        raise AssertionError(capacity_spectra)
+
+    d22_capacity_menu_summary = {}
+    for disconnected_color in ("red", "blue"):
+        outside_minimum = r55_minimum_edges[21]
+        outside_maximum = 210 - outside_minimum
+        color_totals = {"red": 451, "blue": 452}
+        opposite_color = "blue" if disconnected_color == "red" else "red"
+        partition_counts = {}
+        for first_order, second_order in ((10, 12), (11, 11)):
+            retained_count = 0
+            for opposite_edges, type_pairs in d22_capacity_pair_edge_histogram(
+                first_order, second_order
+            ):
+                outside_edges = (
+                    color_totals[opposite_color] + opposite_edges - 21 * 22
+                )
+                if not outside_minimum <= outside_edges <= outside_maximum:
+                    continue
+                retained_count += type_pairs
+                residual_menu_lines.append(
+                    f"22 220 {disconnected_color} "
+                    f"{first_order}+{second_order} {opposite_edges} "
+                    f"{outside_edges} {type_pairs}\n"
+                )
+            partition_counts[(first_order, second_order)] = retained_count
+        d22_capacity_menu_summary[disconnected_color] = partition_counts
+    if d22_capacity_menu_summary != {
+        "red": {(10, 12): 9, (11, 11): 26},
+        "blue": {(10, 12): 9, (11, 11): 26},
+    }:
+        raise AssertionError(d22_capacity_menu_summary)
+
     expected_residual_menu_file = "".join(residual_menu_lines)
     residual_menu_digest = hashlib.sha256(
         expected_residual_menu_file.encode("ascii")
     ).hexdigest()
-    if residual_menu_digest != "d5244ec560ece8d6d088a93790d609d36861434d15064ac062866ce3b6ddaae9":
+    if residual_menu_digest != "b7aa05477d568cb69bb7d1a1201ff1ad4c11a3b8de6e3adf6aefa68c89bb9b3f":
         raise AssertionError(residual_menu_digest)
     actual_residual_menu_file = Path(__file__).with_name(
         "RESIDUAL_COMPONENT_MENUS.tsv"
@@ -1794,7 +1904,7 @@ def main() -> None:
     ).hexdigest()
     if residual_excess_digest != "2bb0a8f67e346f1066a9cf2d8219ef89e97480bcf973372fe59040bacefed857":
         raise AssertionError(residual_excess_digest)
-    if len(residual_menu_lines) != 58:
+    if len(residual_menu_lines) != 17:
         raise AssertionError(len(residual_menu_lines))
 
     # If W is the degree weight, at most W/3 secondary vertices are
@@ -1868,10 +1978,11 @@ def main() -> None:
     print("PASS pre-support d=23 component-pair menus M219 red/blue=57/87 "
           "M220 red/blue=87/87")
     print("PASS d=23 independent-transversal support eliminates all four menus")
-    print("PASS d=22 two-component menus red/blue=8240/8241")
+    print("PASS pre-capacity d=22 two-component menus red/blue=8240/8241")
+    print("PASS d=22 independent-row capacity leaves red/blue=35/35 type pairs")
     print("PASS d=22 red singleton impossible; blue singleton reanchors two "
           "R(4,5;21,100) cores")
-    print("PASS residual component menu rows=57 "
+    print("PASS residual component menu rows=16 "
           f"sha256={residual_menu_digest}")
     print("PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135")
     print("PASS profile vertex-connectivity counts k=1,...,11 are "

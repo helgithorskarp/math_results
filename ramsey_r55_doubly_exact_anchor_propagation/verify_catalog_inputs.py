@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 from collections import Counter
+from functools import lru_cache
 import hashlib
 import itertools
 from pathlib import Path
@@ -105,6 +106,46 @@ def mask_edge_count(adjacency, mask: int) -> int:
         adjacency[first][second]
         for first, second in itertools.combinations(vertices, 2)
     )
+
+
+def d22_independent_transversal_capacity(adjacency, minimum_size: int) -> int:
+    """Maximize independent-transversal rows under exact d=22 column caps."""
+    order = len(adjacency)
+    masks = tuple(
+        mask
+        for size in range(minimum_size, 5)
+        for mask in independent_four_transversals(adjacency, size)
+        if mask_edge_count(adjacency, mask) == 0
+    )
+    if not masks:
+        return 0
+    capacities = tuple(order - 1 - sum(row) for row in adjacency)
+    incidence_vectors = tuple(
+        tuple(bool(mask & (1 << vertex)) for vertex in range(order))
+        for mask in masks
+    )
+
+    @lru_cache(maxsize=None)
+    def maximum_rows(remaining: tuple[int, ...]) -> int:
+        best = 0
+        for incidence in incidence_vectors:
+            if all(value <= capacity for value, capacity in zip(
+                incidence, remaining, strict=True
+            )):
+                best = max(
+                    best,
+                    1 + maximum_rows(tuple(
+                        capacity - value
+                        for capacity, value in zip(
+                            remaining, incidence, strict=True
+                        )
+                    )),
+                )
+        return best
+
+    return min(21, maximum_rows(capacities))
+
+
 R45_ARCHIVE_URL = BASE_URL + "r45extreme.tar.gz"
 R45_MAXIMUM_EXPECTED = {
     14: (60, 1, "752aa8b1509075bc39cb1151936b250c681fbdf0a9fdda20d8d5bbb6e6356c62"),
@@ -116,10 +157,13 @@ R45_MAXIMUM_EXPECTED = {
 }
 
 
-def audit_r35() -> dict[int, tuple[tuple[int, int], ...]]:
+def audit_r35() -> dict[int, tuple[tuple[int, int, int], ...]]:
     catalog_records = {}
     h11_independent_cover_support_histogram = Counter()
     h12_minimum_cover_edge_histogram = Counter()
+    capacity_type_lines = [
+        "# order edges tau4 independent_row_capacity role graph6\n"
+    ]
     for order, (expected_count, expected_digest, expected_histogram) in (
         R35_EXPECTED.items()
     ):
@@ -143,7 +187,28 @@ def audit_r35() -> dict[int, tuple[tuple[int, int], ...]]:
             edge_count = core_edge_count(adjacency)
             histogram[edge_count] += 1
             transversal_number = independent_four_transversal_number(adjacency)
-            records.append((edge_count, transversal_number))
+            d22_cross_edges = order * (order - 1) - 2 * edge_count
+            capacity = 0
+            if (
+                order in (10, 11, 12)
+                and d22_cross_edges >= 21 * transversal_number
+            ):
+                capacity = d22_independent_transversal_capacity(
+                    adjacency, transversal_number
+                )
+            records.append((edge_count, transversal_number, capacity))
+            role = None
+            if order == 10 and capacity >= 13:
+                role = "10+12-small"
+            elif order == 11 and capacity:
+                role = "11+11-required" if capacity == 14 else "11+11-partner"
+            elif order == 12 and capacity:
+                role = "10+12-large"
+            if role is not None:
+                capacity_type_lines.append(
+                    f"{order} {edge_count} {transversal_number} {capacity} "
+                    f"{role} {encoded}\n"
+                )
             if order == 11 and edge_count <= 19:
                 support = 0
                 for size in (3, 4):
@@ -166,7 +231,7 @@ def audit_r35() -> dict[int, tuple[tuple[int, int], ...]]:
             raise AssertionError((order, histogram))
         catalog_records[order] = tuple(records)
     cover_spectra = {
-        order: dict(sorted(Counter(cover for _, cover in records).items()))
+        order: dict(sorted(Counter(cover for _, cover, _ in records).items()))
         for order, records in catalog_records.items()
     }
     if cover_spectra != {
@@ -188,11 +253,49 @@ def audit_r35() -> dict[int, tuple[tuple[int, int], ...]]:
         (19, 0): 23, (19, 4): 4, (19, 5): 2, (19, 6): 1,
     }:
         raise AssertionError(h11_independent_cover_support_histogram)
+    capacity_histograms = {
+        order: dict(sorted(Counter(
+            (edge_count, capacity)
+            for edge_count, _, capacity in catalog_records[order]
+            if capacity
+        ).items()))
+        for order in (10, 11, 12)
+    }
+    if capacity_histograms != {
+        10: {
+            (11, 7): 1,
+            (12, 6): 3, (12, 7): 3,
+            (13, 6): 12, (13, 7): 6, (13, 8): 1,
+            (13, 10): 2, (13, 12): 1,
+            (14, 6): 14, (14, 7): 8, (14, 8): 4,
+            (14, 10): 1, (14, 12): 4, (14, 13): 1,
+            (15, 6): 20, (15, 7): 9, (15, 8): 5, (15, 9): 1,
+            (15, 12): 9, (15, 13): 4,
+            (16, 6): 18, (16, 7): 8, (16, 8): 1,
+            (16, 12): 7, (16, 13): 3, (16, 18): 1,
+            (17, 6): 9, (17, 7): 2, (17, 12): 6,
+            (18, 6): 3,
+        },
+        11: {
+            (16, 7): 1,
+            (17, 7): 4,
+            (18, 7): 9, (18, 8): 2,
+            (19, 7): 6, (19, 14): 1,
+            (20, 7): 3,
+        },
+        12: {(22, 8): 1},
+    }:
+        raise AssertionError(capacity_histograms)
+    actual_capacity_types = Path(__file__).with_name(
+        "D22_CAPACITY_TYPES.tsv"
+    ).read_text(encoding="ascii")
+    if actual_capacity_types != "".join(capacity_type_lines):
+        raise AssertionError("official catalogs do not reproduce capacity types")
     return catalog_records
 
 
 def audit_residual_menu(
-    catalog_records: dict[int, tuple[tuple[int, int], ...]]
+    catalog_records: dict[int, tuple[tuple[int, int, int], ...]]
 ) -> None:
     """Rebuild the surviving d=22 menu directly from catalog records."""
     r55_minimum_edges = {20: 50, 21: 56}
@@ -222,7 +325,11 @@ def audit_residual_menu(
                     catalog_records[second_order],
                 )
             counts = Counter()
-            for (first_edges, first_cover), (second_edges, second_cover) in record_pairs:
+            for (
+                first_edges, first_cover, first_capacity
+            ), (
+                second_edges, second_cover, second_capacity
+            ) in record_pairs:
                 first_cross_edges = (
                     first_order * (first_order + 21 - backbone_order)
                     - 2 * first_edges
@@ -234,6 +341,7 @@ def audit_residual_menu(
                 if (
                     first_cross_edges < outside_order * first_cover
                     or second_cross_edges < outside_order * second_cover
+                    or first_capacity + second_capacity < outside_order
                 ):
                     continue
                 counts[
@@ -302,7 +410,7 @@ def main() -> None:
     print("PASS official R(4,5) maxima at orders 14,...,19 are "
           "60,66,72,79,85,92")
     print("PASS official extremal R(4,5;14,60) catalog is the pinned singleton")
-    print("PASS official R(3,5) records reproduce covers, support obstruction, and menu")
+    print("PASS official R(3,5) records reproduce covers, support/capacity sieves, and menu")
 
 
 if __name__ == "__main__":

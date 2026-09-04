@@ -20,8 +20,10 @@ combined with a local `K_4`-cover inequality and its equality case, eliminate
 all order-23 disconnections.  The sole remaining abstract escape is the
 `M=220` profile with degree multiset `20^1 21^42`, and it can disconnect only
 on exactly 22 anchors.  At that order the cover inequality removes the
-`9+13` component partition; a singleton component is impossible in red and
-forces a nested pair of exact `(4,5;21,100)` cores in blue.
+`9+13` component partition, and an independent-row capacity sieve reduces
+the remaining two-component menu to 35 catalog pairs per color.  A singleton
+component is impossible in red and forces a nested pair of exact
+`(4,5;21,100)` cores in blue.
 
 This is a necessary pruning theorem for the hard construction branch.  It is
 not a 43-vertex Ramsey graph, an enumeration of the local cores, or a solver
@@ -919,12 +921,58 @@ order-13 component supplies only 104 opposite-color outside edges, one short
 of the required `21*5=105`.  In `10+12`, it retains every order-10 type with
 `tau_4=2` but only the edge-10 through edge-13 types with `tau_4=3`.  All
 `11+11` pairs pass the cover inequality.  Combining that filter with the edge
-caps leaves
+caps gives the preliminary cover-only menu
 
 | disconnected color | cap on `s` | `9+13` types | `10+12` types | `11+11` types | total |
 |:---:|---:|---:|---:|---:|---:|
 | red  | 164 | 0 | 2,676 | 5,564 | 8,240 |
 | blue | 165 | 0 | 2,676 | 5,565 | 8,241 |
+
+The simultaneous outside rows impose a much sharper capacity condition.  For
+a component graph `H` of order `a`, define `iota(H)` to be the maximum number
+of independent transversals of its independent four-sets that can be packed
+as a multiset while using each vertex `v` at most
+
+```text
+a-1-deg_H(v)
+```
+
+times.  This is exactly the opposite-color degree available from `v` to the
+21 outside vertices when `d=22`.  For each outside vertex, its neighbor set
+in both components is a transversal.  At least one of the two sets must be
+independent: if both contained an edge, those edges, the complete join between
+components, and the outside vertex would give an opposite-color `K_5`.
+Therefore every surviving pair satisfies
+
+```text
+iota(H_1)+iota(H_2) >= 21.                            (Row-capacity)
+```
+
+An exact memoized packing computation on the complete catalogs gives the
+following capacity spectra among cover-feasible types with positive capacity:
+
+```text
+order 10:  6:79, 7:37, 8:11, 9:1, 10:3, 12:27, 13:8, 18:1
+order 11:  7:23, 8:2, 14:1
+order 12:  8:1.
+```
+
+For `10+12`, the displayed order-12 type is the only one with positive
+capacity, so `(Row-capacity)` requires an order-10 capacity of at least 13.
+Exactly nine order-10 types qualify.  For `11+11`, one component must be the
+unique capacity-14 type, while the other can be any of the 26 positive-
+capacity types.  Thus the final two-component menu is
+
+| disconnected color | `10+12` types | `11+11` types | total |
+|:---:|---:|---:|---:|
+| red  | 9 | 26 | 35 |
+| blue | 9 | 26 | 35 |
+
+The exact graph6 representatives, with edge count, `tau_4`, capacity, and
+their forced role, are listed in
+[`D22_CAPACITY_TYPES.tsv`](D22_CAPACITY_TYPES.tsv).  This makes the sieve
+directly consumable by a component-based construction search rather than
+leaving only aggregate counts.
 
 There is a sharper conclusion for a singleton.  The only order-22 profile is
 `M220-W3`, with 451 red edges and degree multiset `20^1 21^42`.  Suppose an
@@ -943,11 +991,11 @@ second doubly exact anchoring of the original `M=220` profile, with all other
 21 exact anchors on the red side and none on the blue side.
 
 The complete edge-resolved catalog menu is
-[`RESIDUAL_COMPONENT_MENUS.tsv`](RESIDUAL_COMPONENT_MENUS.tsv).  Its 57 data
+[`RESIDUAL_COMPONENT_MENUS.tsv`](RESIDUAL_COMPONENT_MENUS.tsv).  Its 16 data
 rows list `d`, `M`, the disconnected color, the component orders, `s`, the
 forced opposite-color outside edge count, and the number of unordered catalog
 type pairs.  Its SHA-256 is
-`d5244ec560ece8d6d088a93790d609d36861434d15064ac062866ce3b6ddaae9`.
+`b7aa05477d568cb69bb7d1a1201ff1ad4c11a3b8de6e3adf6aefa68c89bb9b3f`.
 The verifier regenerates both residual files exactly.  This is a finite
 necessary-condition menu, not an assertion that any listed pair extends to a
 43-vertex coloring.
@@ -1130,9 +1178,10 @@ PASS residual excess split counts=6,7,6,6 rows=32 sha256=2bb0a8f67e346f1066a9cf2
 PASS independent-four cover sieve removes d=23 10+13 and d=22 9+13
 PASS pre-support d=23 component-pair menus M219 red/blue=57/87 M220 red/blue=87/87
 PASS d=23 independent-transversal support eliminates all four menus
-PASS d=22 two-component menus red/blue=8240/8241
+PASS pre-capacity d=22 two-component menus red/blue=8240/8241
+PASS d=22 independent-row capacity leaves red/blue=35/35 type pairs
 PASS d=22 red singleton impossible; blue singleton reanchors two R(4,5;21,100) cores
-PASS residual component menu rows=57 sha256=d5244ec560ece8d6d088a93790d609d36861434d15064ac062866ce3b6ddaae9
+PASS residual component menu rows=16 sha256=b7aa05477d568cb69bb7d1a1201ff1ad4c11a3b8de6e3adf6aefa68c89bb9b3f
 PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135
 PASS profile vertex-connectivity counts k=1,...,11 are 348,291,253,231,193,135,128,97,22,22,20
 PASS first-degree-feasible tests have 0 secondary exact anchors
@@ -1148,8 +1197,10 @@ provenance audit fetches the pinned official catalog files and checks their
 SHA-256 digests, counts, Ramsey properties, edge histograms, and the extremal
 singleton.  It then computes every independent-four transversal number and
 checks the order-12 minimum-cover edge distribution and the order-11
-independent-cover support obstruction.  Finally, it reconstructs all 57
-surviving order-22 menu rows directly from individual catalog records,
+independent-cover support obstruction.  It also recomputes every order-22
+independent-row capacity by exact memoized integer packing and reproduces the
+36 graph6 representatives in the capacity-type list.  Finally, it reconstructs
+all 16 surviving order-22 menu rows directly from individual catalog records,
 independently of the joint-invariant product routine in the main verifier:
 
 ```bash
