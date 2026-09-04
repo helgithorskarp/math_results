@@ -406,20 +406,10 @@ def main() -> None:
     if degree21_counts != [19, 19, 17, 19, 19, 21, 19]:
         raise AssertionError(degree21_counts)
 
-    # In the hard branch, the prior deficiency theorem gives at most thirteen
-    # non-degree-21 vertices and at most twenty non-exact local color sides.
-    # At least 43-13-20=10 vertices are therefore exact on both sides.  The
-    # selected anchor is one, leaving at least nine among the profiles above.
+    # The prior theorem's uniform count gives 29 secondary degree-21 vertices.
     minimum_degree21_vertices = ORDER - 13
     minimum_secondary_degree21 = minimum_degree21_vertices - 1
-    minimum_double_exact = minimum_degree21_vertices - 20
-    minimum_secondary = minimum_double_exact - 1
-    if (
-        minimum_degree21_vertices,
-        minimum_secondary_degree21,
-        minimum_double_exact,
-        minimum_secondary,
-    ) != (30, 29, 10, 9):
+    if (minimum_degree21_vertices, minimum_secondary_degree21) != (30, 29):
         raise AssertionError("wrong anchor-propagation count")
     if set(range(3, 40, 6)) != {3, 9, 15, 21, 27, 33, 39}:
         raise AssertionError("wrong hard degree-weight range")
@@ -452,6 +442,40 @@ def main() -> None:
     ):
         raise AssertionError(split_profiles[214])
 
+    # If W is the degree weight, at most W/3 secondary vertices are
+    # noncentral and at most (43-W)/2 local sides exceed deficiency seven.
+    # Audit both the structural 241-M lower bound and its attainment within
+    # the integer-profile superset for every cross total.
+    secondary_anchor_minima = []
+    first_side_anchor_minima = []
+    second_side_anchor_minima = []
+    for edge_count, pairs in split_profiles.items():
+        if not all(weight >= 3 * (441 - 2 * edge_count)
+                   for weight, _, _ in pairs):
+            raise AssertionError("degree-weight triangle inequality failed")
+        profile_bounds = []
+        for weight, first_counts, second_counts in pairs:
+            secondary_degree21 = first_counts[3] + second_counts[3]
+            exceptional_sides = (43 - weight) // 2
+            profile_bounds.append(secondary_degree21 - exceptional_sides)
+        first_side_anchor_minima.append(
+            min(max(0, first_counts[3] - (43 - weight) // 2)
+                for weight, first_counts, _ in pairs)
+        )
+        second_side_anchor_minima.append(
+            min(max(0, second_counts[3] - (43 - weight) // 2)
+                for weight, _, second_counts in pairs)
+        )
+        secondary_anchor_minima.append(min(profile_bounds))
+    if secondary_anchor_minima != [27, 26, 25, 24, 23, 22, 21]:
+        raise AssertionError(secondary_anchor_minima)
+    if secondary_anchor_minima != [241 - edge_count for edge_count in range(214, 221)]:
+        raise AssertionError("wrong closed anchor-multiplicity formula")
+    if first_side_anchor_minima != [13, 11, 9, 7, 5, 3, 1]:
+        raise AssertionError(first_side_anchor_minima)
+    if second_side_anchor_minima != [12, 10, 8, 6, 4, 2, 0]:
+        raise AssertionError(second_side_anchor_minima)
+
     print("PASS exact row/column formulas on 7 matrices and 294 vertex profiles")
     print("PASS exact one-cross-flip updates on 14 flips and 588 vertex profiles")
     print("PASS all test matrices satisfy cross cardinality and first-degree bounds")
@@ -459,7 +483,8 @@ def main() -> None:
     print("PASS first-degree-feasible test weights=99,...,111 exceed hard limit 39")
     print("PASS hard split degree-profile counts=1,5,17,40,69,95,122 total=349")
     print("PASS first-degree-feasible tests have 0 secondary exact anchors")
-    print("PASS hard branch forces at least 29 secondary degree-21 vertices and 9 anchors")
+    print("PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0")
+    print("PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21")
 
 
 if __name__ == "__main__":

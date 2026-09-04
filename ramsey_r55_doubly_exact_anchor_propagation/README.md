@@ -6,8 +6,10 @@ vertex does not merely fix two `(4,5;21,100)` cores.  The cross matrix also
 determines the order and edge count of both color-neighborhoods at every one
 of the other 42 vertices.  All 84 of those local graphs must have deficiency
 at least seven.  A linear degree-weight test already forces at least 29 of the
-42 vertices to have degree 21, and at least nine must reproduce the full
-doubly exact signature of the chosen anchor.
+42 vertices to have degree 21.  In fact, if the red cross-edge count is `M`,
+at least `241-M` of them must reproduce the full doubly exact signature of the
+chosen anchor: between 27 and 21 secondary anchors as `M` runs from 214 to
+220.
 
 This is a necessary pruning theorem for the hard construction branch.  It is
 not a 43-vertex Ramsey graph, an enumeration of the local cores, or a solver
@@ -145,6 +147,15 @@ most 13 of the 42 secondary vertices have noncentral degree, and
 at least 29 vertices in A union B have degree 21.        (P29)
 ```
 
+There is also an `M`-dependent lower bound on the weight.  Pointwise,
+`w(d) >= 3|d-21|`; summing and applying `(S)` gives
+
+```text
+W >= 3 sum_u |d_u-21|
+  >= 3 |sum_u (d_u-21)|
+   = 3(441-2M).                                          (WM)
+```
+
 Conditions `(S)`, `(W39)`, and `(P29)` use only row and column sums.  They can
 therefore reject a cross matrix before the quadratic local counts below are
 computed.
@@ -205,21 +216,68 @@ This supplies 84 exact local inequalities in addition to the mixed-clique
 clauses.  The left sides are explicit quadratic functions of the cross bits,
 or can be maintained as local-repair scores under a single-bit flip.
 
-There is also a global propagation condition:
+There is also a much stronger global propagation condition:
 
 ```text
-at least 9 vertices u in A union B satisfy
-       (d_u, t_R(u), t_B(u)) = (21,100,100).             (P9)
+at least 241-M vertices u in A union B satisfy
+       (d_u, t_R(u), t_B(u)) = (21,100,100).             (PM)
 ```
 
-The local-deficiency theorem forces at least ten doubly exact vertices in the
-hard branch.  The selected `v` is one of them, so at least nine remain.  A
-vertex is doubly exact exactly when its displayed triple is `(21,100,100)`:
-red degree 21 makes both local orders 21, and the two local edge counts are
-then seven below `U(21)=107`.  Thus `(P9)` follows without choosing or labeling
-the other anchors in advance.
+To prove `(PM)`, the exact deficiency identity gives
 
-For a hard-branch cross search, `(D7)` and `(P9)` are lossless.  A general
+```text
+Delta = (1247-W)/2.
+```
+
+The 86 local sides have baseline deficiency `86*7=602`, so at most
+
+```text
+E = Delta-602 = (43-W)/2
+```
+
+of them can have deficiency greater than seven.  Meanwhile, at most `W/3`
+vertices have nonzero degree weight, hence at least `42-W/3` secondary
+vertices have degree 21.  A degree-21 vertex can fail to be doubly exact only
+if at least one of its two local sides is among those `E` exceptional sides.
+Therefore the number of secondary doubly exact vertices is at least
+
+```text
+42 - W/3 - (43-W)/2 = (123+W)/6
+                          >= 241-M,
+```
+
+where the last step is `(WM)`.  A vertex is doubly exact exactly when its
+displayed triple is `(21,100,100)`: red degree 21 makes both local orders 21,
+and the two local edge counts are then seven below `U(21)=107`.  Thus `(PM)`
+does not choose or label the secondary anchors in advance.
+
+There are also side-specific guarantees.  Write `s=220-M` and split
+`W=W_A+W_B` over the two sides.  Equation `(S)` and the pointwise weight
+bound give `W_A>=3s` and `W_B>=3(s+1)`.  Subtracting the same exceptional-side
+budget `E` separately from the degree-21 population on either side yields
+
+```text
+exact vertices in A >= 21-W_A/3-E
+                    = -1/2+W_A/6+W_B/2 >= 2s+1,
+exact vertices in B >= 21-W_B/3-E
+                    = -1/2+W_A/2+W_B/6 >= 2s,
+
+number of doubly exact vertices in A >= 2s+1 = 441-2M,
+number of doubly exact vertices in B >= 2s   = 440-2M.   (PM_side)
+```
+
+The total guarantee `(PM)` is stronger than adding these two separate bounds,
+because the exceptional sides cannot simultaneously be spent twice.  The
+three guarantees specialize as follows:
+
+```text
+M                             214 215 216 217 218 219 220
+forced exact vertices in A     13  11   9   7   5   3   1
+forced exact vertices in B     12  10   8   6   4   2   0
+forced exact vertices in A+B   27  26  25  24  23  22  21
+```
+
+For a hard-branch cross search, `(D7)` and `(PM)` are lossless.  A general
 construction search must retain the complementary branch in which some
 local deficiency is at most six.
 
@@ -289,7 +347,8 @@ PASS split degree deviations equal M-220 and M-221
 PASS first-degree-feasible test weights=99,...,111 exceed hard limit 39
 PASS hard split degree-profile counts=1,5,17,40,69,95,122 total=349
 PASS first-degree-feasible tests have 0 secondary exact anchors
-PASS hard branch forces at least 29 secondary degree-21 vertices and 9 anchors
+PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0
+PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21
 ```
 
 The audit uses CPython 3.11 or later, the standard library, exact integer
