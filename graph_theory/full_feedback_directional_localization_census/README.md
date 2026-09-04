@@ -50,6 +50,14 @@ has \(\zeta_d^*(G)>2\).  It rules out all connected graphs through order 10
 and all connected cubic graphs through order 20 as counterexamples.  No claim
 of priority beyond this reproducible artifact is made.
 
+There is also a state-level strengthening.  Every connected graph through
+order 10 satisfies the exact **response-fiber descent property** defined and
+proved sufficient in [`DESCENT_CRITERION.md`](DESCENT_CRITERION.md).  The
+census checks 462,804,261 distinct neighborhood-generated territories.  This
+structural certificate gives an alternative proof of the same order-10
+conclusion, but the property is only sufficient: the finite census does not
+assert that it holds for every graph.
+
 ## Exact reduction
 
 For a probe at \(p\) and robber position \(r\), the deterministic full-feedback
@@ -95,7 +103,7 @@ accepted.  Since capture rank is invariant under graph isomorphism, checking
 these representatives proves the finite theorem, subject to the generator
 trust boundary.
 
-Two structurally different checks reduce implementation risk:
+Three structurally different checks reduce implementation risk:
 
 1. [`reference_solver.py`](reference_solver.py) constructs the entire
    nonempty belief lattice and computes its least fixed point.  It agrees
@@ -105,6 +113,16 @@ Two structurally different checks reduce implementation risk:
    and an independent bounded recurrence.  It verifies that all 71 stored
    cubic records are connected, cubic, and have exact rank three (failure in
    two phases and success in three).
+3. [`verify_descent.py`](verify_descent.py) independently constructs every
+   neighborhood-generated territory and checks every response cell of the
+   C++ descent certificates.  It agrees entry by entry through order 8
+   (238,156 territories over 12,113 connected graphs, including order 1).
+
+An independent reviewer also audited the original census at its immutable
+source commit, checked all 71 rank-three witnesses with separately written
+code, reproduced the complete order-9 and cubic order-20 censuses, and tested
+an order-10 residue class.  The review and retained outputs are in
+[`directional_localization_census_review`](../directional_localization_census_review/README.md).
 
 The C++ code was compiled with GCC 12.2.0 using strict conversion and shadow
 warnings.  An AddressSanitizer/UndefinedBehaviorSanitizer build also completed
@@ -127,11 +145,20 @@ python3 reference_solver.py \
 
 python3 verify_rank3.py
 
+python3 verify_descent.py \
+  --compare ./dirloc_solver --geng "$GENG" --max-order 8
+
 python3 run_census.py \
   --geng "$GENG" --solver ./dirloc_solver \
   --scope both --partitions 16 --jobs 16 > observed_results.json
 
 diff -u expected_results.json observed_results.json
+
+python3 run_descent_census.py \
+  --geng "$GENG" --solver ./dirloc_solver \
+  --max-order 10 --partitions 16 --jobs 16 > observed_descent.json
+
+diff -u descent_results.json observed_descent.json
 ```
 
 The full run processes 12,546,235 graphs.  It uses only the Python standard

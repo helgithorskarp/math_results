@@ -86,6 +86,68 @@ class FullFeedbackGame {
     bool complete{true};
   };
 
+  struct DescentResult {
+    bool holds{};
+    Mask counterexample{};
+    std::size_t checked_states{};
+  };
+
+  // Check a sufficient condition for two-cop localization.  Every state
+  // arising after recontamination has the form N[X].  The condition asks for
+  // an action whose every unresolved successor is either smaller than the
+  // current state or resolvable in one further probing phase.
+  DescentResult check_response_fiber_descent() const {
+    if (n_ > 20) {
+      throw std::runtime_error("descent checking is limited to orders at most 20");
+    }
+    const auto partitions = make_partitions(2);
+    std::vector<Mask> closure(static_cast<std::size_t>(full_) + 1, 0);
+    std::vector<bool> is_state(static_cast<std::size_t>(full_) + 1, false);
+    for (Mask mask = 1; mask <= full_; ++mask) {
+      const Mask bit = mask & (~mask + 1);
+      const int vertex = std::countr_zero(bit);
+      closure[mask] = closure[mask ^ bit] | closed_[static_cast<std::size_t>(vertex)];
+      is_state[closure[mask]] = true;
+    }
+
+    std::vector<std::int8_t> resolving_cache(static_cast<std::size_t>(full_) + 1, -1);
+    const auto is_resolvable = [&](Mask belief) {
+      auto& cached = resolving_cache[belief];
+      if (cached < 0) {
+        const bool answer = std::ranges::any_of(partitions, [&](const auto& classes) {
+          return std::ranges::all_of(classes, [&](Mask class_mask) {
+            return std::popcount(belief & class_mask) <= 1;
+          });
+        });
+        cached = static_cast<std::int8_t>(answer ? 1 : 0);
+      }
+      return cached != 0;
+    };
+
+    std::size_t checked_states = 0;
+    for (Mask belief = 1; belief <= full_; ++belief) {
+      if (!is_state[belief] || std::popcount(belief) <= 1) {
+        continue;
+      }
+      ++checked_states;
+      const int belief_size = std::popcount(belief);
+      const bool has_descent_action = std::ranges::any_of(partitions, [&](const auto& classes) {
+        return std::ranges::all_of(classes, [&](Mask class_mask) {
+          const Mask cell = belief & class_mask;
+          if (std::popcount(cell) <= 1) {
+            return true;
+          }
+          const Mask successor = closure[cell];
+          return std::popcount(successor) < belief_size || is_resolvable(successor);
+        });
+      });
+      if (!has_descent_action) {
+        return DescentResult{false, belief, checked_states};
+      }
+    }
+    return DescentResult{true, 0, checked_states};
+  }
+
   Result solve(int cops, int round_limit = 0) const {
     const auto partitions = make_partitions(cops);
     if (n_ == 1) {
@@ -361,12 +423,15 @@ int main(int argc, char** argv) {
   try {
     int cops = 2;
     bool emit_all = false;
+    bool check_descent = false;
     int emit_rank = -1;
     int round_limit = 0;
     for (int i = 1; i < argc; ++i) {
       const std::string argument = argv[i];
       if (argument == "--all") {
         emit_all = true;
+      } else if (argument == "--check-descent") {
+        check_descent = true;
       } else if (argument == "--emit-rank" && i + 1 < argc) {
         emit_rank = std::stoi(argv[++i]);
         if (emit_rank < 0) {
@@ -384,13 +449,17 @@ int main(int argc, char** argv) {
       } else {
         throw std::invalid_argument(
             "usage: dirloc_solver [--cops K] [--all|--emit-rank R] "
-            "[--two-round-only|--max-rounds R]");
+            "[--two-round-only|--max-rounds R] [--check-descent]");
       }
+    }
+    if (check_descent && (cops != 2 || round_limit != 0 || emit_rank >= 0)) {
+      throw std::invalid_argument("--check-descent permits only the optional --all output flag");
     }
 
     const auto started = std::chrono::steady_clock::now();
     std::size_t processed = 0;
     std::size_t obstructions = 0;
+    std::size_t descent_states = 0;
     std::map<int, std::size_t> rank_counts;
     std::string line;
     while (std::getline(std::cin, line)) {
@@ -398,6 +467,21 @@ int main(int argc, char** argv) {
         continue;
       }
       const FullFeedbackGame game(decode_graph6(line));
+      if (check_descent) {
+        const auto descent = game.check_response_fiber_descent();
+        ++processed;
+        descent_states += descent.checked_states;
+        if (!descent.holds) {
+          ++obstructions;
+        }
+        if (emit_all || !descent.holds) {
+          std::cout << line << '\t' << game.n() << '\t'
+                    << (descent.holds ? "DESCENT_OK" : "DESCENT_FAIL") << '\t'
+                    << std::hex << descent.counterexample << std::dec << '\t'
+                    << descent.checked_states << '\n';
+        }
+        continue;
+      }
       const auto result = game.solve(cops, round_limit);
       ++processed;
       ++rank_counts[result.full_rank];
@@ -412,6 +496,12 @@ int main(int argc, char** argv) {
     }
     const auto finished = std::chrono::steady_clock::now();
     const std::chrono::duration<double> elapsed = finished - started;
+    if (check_descent) {
+      std::cerr << "processed=" << processed << " descent_failures=" << obstructions
+                << " checked_states=" << descent_states
+                << " elapsed_seconds=" << elapsed.count() << '\n';
+      return EXIT_SUCCESS;
+    }
     std::cerr << "processed=" << processed << " obstructions=" << obstructions
               << " cops=" << cops << " elapsed_seconds=" << elapsed.count();
     for (const auto& [rank, count] : rank_counts) {
