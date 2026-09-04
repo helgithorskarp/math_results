@@ -1,0 +1,580 @@
+#include <algorithm>
+#include <array>
+#include <compare>
+#include <cstdint>
+#include <fstream>
+#include <iostream>
+#include <limits>
+#include <map>
+#include <numeric>
+#include <set>
+#include <sstream>
+#include <stdexcept>
+#include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
+
+using i64 = std::int64_t;
+using i128 = __int128_t;
+using Field = std::array<i64, 8>;
+
+struct Point {
+    Field x{}, y{};
+    auto operator<=>(const Point&) const = default;
+};
+
+struct Vector {
+    Field x{}, y{};
+    auto operator<=>(const Vector&) const = default;
+};
+
+struct Orientation {
+    bool reflected{};
+    i64 denominator{};
+    Field c{}, s{};
+    auto operator<=>(const Orientation&) const = default;
+};
+
+struct Difference {
+    Field x{}, y{};
+    bool operator==(const Difference&) const = default;
+};
+
+struct Bucket {
+    i64 x{}, y{};
+    bool operator==(const Bucket&) const = default;
+};
+
+static i64 narrow(i128 value) {
+    if (value < std::numeric_limits<i64>::min() || value > std::numeric_limits<i64>::max()) {
+        throw std::overflow_error("int64 overflow");
+    }
+    return static_cast<i64>(value);
+}
+
+static Field add(const Field& a, const Field& b) {
+    Field out{};
+    for (int i = 0; i < 8; ++i) out[i] = narrow(static_cast<i128>(a[i]) + b[i]);
+    return out;
+}
+
+static Field subtract(const Field& a, const Field& b) {
+    Field out{};
+    for (int i = 0; i < 8; ++i) out[i] = narrow(static_cast<i128>(a[i]) - b[i]);
+    return out;
+}
+
+static Field negate(const Field& a) {
+    Field out{};
+    for (int i = 0; i < 8; ++i) out[i] = narrow(-static_cast<i128>(a[i]));
+    return out;
+}
+
+static Field multiply(const Field& a, const Field& b) {
+    constexpr int primes[3] = {3, 5, 11};
+    std::array<i128, 8> wide{};
+    for (int i = 0; i < 8; ++i) {
+        if (!a[i]) continue;
+        for (int j = 0; j < 8; ++j) {
+            if (!b[j]) continue;
+            i128 term = static_cast<i128>(a[i]) * b[j];
+            for (int bit = 0; bit < 3; ++bit) {
+                if ((i & j) & (1 << bit)) term *= primes[bit];
+            }
+            wide[i ^ j] += term;
+        }
+    }
+    Field out{};
+    for (int i = 0; i < 8; ++i) out[i] = narrow(wide[i]);
+    return out;
+}
+
+static Field squared_norm(const Vector& vector) {
+    return add(multiply(vector.x, vector.x), multiply(vector.y, vector.y));
+}
+
+static std::uint64_t mix(std::uint64_t value) {
+    value ^= value >> 30;
+    value *= UINT64_C(0xbf58476d1ce4e5b9);
+    value ^= value >> 27;
+    value *= UINT64_C(0x94d049bb133111eb);
+    return value ^ (value >> 31);
+}
+
+struct DifferenceHash {
+    std::size_t operator()(const Difference& difference) const {
+        std::uint64_t hash = UINT64_C(0x9e3779b97f4a7c15);
+        for (i64 value : difference.x) hash = mix(hash ^ mix(static_cast<std::uint64_t>(value)));
+        for (i64 value : difference.y) hash = mix(hash ^ mix(static_cast<std::uint64_t>(value)));
+        return static_cast<std::size_t>(hash);
+    }
+};
+
+struct BucketHash {
+    std::size_t operator()(const Bucket& bucket) const {
+        return static_cast<std::size_t>(mix(static_cast<std::uint64_t>(bucket.x))
+                                      ^ mix(static_cast<std::uint64_t>(bucket.y)));
+    }
+};
+
+static std::vector<Point> read_points(const std::string& path) {
+    std::ifstream input(path);
+    if (!input) throw std::runtime_error("cannot open points file");
+    std::vector<Point> points;
+    std::string line;
+    while (std::getline(input, line)) {
+        if (line.empty() || line[0] == '#') continue;
+        std::istringstream row(line);
+        Point point;
+        for (i64& value : point.x) row >> value;
+        for (i64& value : point.y) row >> value;
+        std::string extra;
+        if (!row || row >> extra) throw std::runtime_error("bad points row");
+        points.push_back(point);
+    }
+    if (points.size() != 509) throw std::runtime_error("expected 509 points");
+    return points;
+}
+
+using VectorsByDistance = std::map<Field, std::set<Vector>>;
+
+static VectorsByDistance directed_vectors(const std::vector<Point>& points) {
+    VectorsByDistance result;
+    for (std::size_t i = 0; i < points.size(); ++i) {
+        for (std::size_t j = 0; j < i; ++j) {
+            const Vector vector{subtract(points[i].x, points[j].x),
+                                subtract(points[i].y, points[j].y)};
+            const Field distance = squared_norm(vector);
+            result[distance].insert(vector);
+            result[distance].insert(Vector{negate(vector.x), negate(vector.y)});
+        }
+    }
+    return result;
+}
+
+static std::size_t vector_count(const VectorsByDistance& vectors) {
+    std::size_t result = 0;
+    for (const auto& [distance, members] : vectors) {
+        (void)distance;
+        result += members.size();
+    }
+    return result;
+}
+
+static i64 absolute(i64 value) {
+    if (value == std::numeric_limits<i64>::min()) throw std::overflow_error("abs overflow");
+    return value < 0 ? -value : value;
+}
+
+static Orientation make_orientation(
+    bool reflected,
+    const Field& numerator_c,
+    const Field& numerator_s,
+    const Field& distance
+) {
+    for (int i = 0; i < 8; ++i) {
+        if (i != 0 && i != 5 && distance[i] != 0) {
+            throw std::runtime_error("common distance escaped Q(sqrt(33))");
+        }
+    }
+    const i64 d0 = distance[0], d5 = distance[5];
+    const i64 denominator = narrow(static_cast<i128>(d0) * d0
+                                 - static_cast<i128>(33) * d5 * d5);
+    Field conjugate{};
+    conjugate[0] = d0;
+    conjugate[5] = -d5;
+    Field c = multiply(numerator_c, conjugate);
+    Field s = multiply(numerator_s, conjugate);
+    i64 divisor = absolute(denominator);
+    for (i64 value : c) divisor = std::gcd(divisor, absolute(value));
+    for (i64 value : s) divisor = std::gcd(divisor, absolute(value));
+    i64 reduced_denominator = denominator / divisor;
+    for (i64& value : c) value /= divisor;
+    for (i64& value : s) value /= divisor;
+    if (reduced_denominator < 0) {
+        reduced_denominator = -reduced_denominator;
+        c = negate(c);
+        s = negate(s);
+    }
+    return Orientation{reflected, reduced_denominator, c, s};
+}
+
+static std::set<Orientation> enumerate_orientations(
+    const VectorsByDistance& left,
+    const VectorsByDistance& right
+) {
+    std::set<Orientation> result;
+    for (const auto& [distance, left_vectors] : left) {
+        const auto found = right.find(distance);
+        if (found == right.end()) continue;
+        for (const Vector& a : left_vectors) {
+            for (const Vector& b : found->second) {
+                const Field rotation_c = add(multiply(a.x, b.x), multiply(a.y, b.y));
+                const Field rotation_s = subtract(multiply(b.x, a.y), multiply(b.y, a.x));
+                result.insert(make_orientation(false, rotation_c, rotation_s, distance));
+                const Field reflection_c = subtract(multiply(a.x, b.x), multiply(a.y, b.y));
+                const Field reflection_s = add(multiply(a.x, b.y), multiply(a.y, b.x));
+                result.insert(make_orientation(true, reflection_c, reflection_s, distance));
+            }
+        }
+    }
+    return result;
+}
+
+static Point transformed_numerator(const Orientation& orientation, const Point& point) {
+    const Field cx = multiply(orientation.c, point.x);
+    const Field sy = multiply(orientation.s, point.y);
+    const Field sx = multiply(orientation.s, point.x);
+    const Field cy = multiply(orientation.c, point.y);
+    if (orientation.reflected) return Point{add(cx, sy), subtract(sx, cy)};
+    return Point{subtract(cx, sy), add(sx, cy)};
+}
+
+static Difference cross_difference(
+    const Point& left,
+    const Point& transformed_right,
+    i64 denominator
+) {
+    Difference difference;
+    for (int i = 0; i < 8; ++i) {
+        difference.x[i] = narrow(static_cast<i128>(denominator) * left.x[i]
+                               - transformed_right.x[i]);
+        difference.y[i] = narrow(static_cast<i128>(denominator) * left.y[i]
+                               - transformed_right.y[i]);
+    }
+    return difference;
+}
+
+static std::vector<std::vector<bool>> internal_edges(const std::vector<Point>& points) {
+    Field unit{};
+    unit[0] = 96 * 96;
+    std::vector<std::vector<bool>> result(points.size(), std::vector<bool>(points.size()));
+    for (std::size_t u = 0; u < points.size(); ++u) {
+        for (std::size_t v = u + 1; v < points.size(); ++v) {
+            const Vector difference{subtract(points[u].x, points[v].x),
+                                    subtract(points[u].y, points[v].y)};
+            if (squared_norm(difference) == unit) result[u][v] = result[v][u] = true;
+        }
+    }
+    return result;
+}
+
+static std::size_t edge_count(const std::vector<std::vector<bool>>& edges) {
+    std::size_t result = 0;
+    for (std::size_t u = 0; u < edges.size(); ++u) {
+        for (std::size_t v = u + 1; v < edges.size(); ++v) result += edges[u][v];
+    }
+    return result;
+}
+
+// Exact lower bounds floor(sqrt(n)*10^12), indexed by the radical basis.
+constexpr i128 ROOT_SCALE = INT64_C(1000000000000);
+constexpr std::array<i64, 8> RADICANDS{1, 3, 5, 15, 11, 33, 55, 165};
+constexpr std::array<i64, 8> ROOT_FLOORS{
+    INT64_C(1000000000000), INT64_C(1732050807568),
+    INT64_C(2236067977499), INT64_C(3872983346207),
+    INT64_C(3316624790355), INT64_C(5744562646538),
+    INT64_C(7416198487095), INT64_C(12845232578665),
+};
+
+static void check_radical_bounds() {
+    for (int i = 1; i < 8; ++i) {
+        const i128 lower = ROOT_FLOORS[i];
+        const i128 target = static_cast<i128>(RADICANDS[i]) * ROOT_SCALE * ROOT_SCALE;
+        if (!(lower * lower < target && target < (lower + 1) * (lower + 1))) {
+            throw std::runtime_error("invalid rational radical bound");
+        }
+    }
+}
+
+static i128 lower_scaled_value(const Field& value) {
+    i128 result = static_cast<i128>(value[0]) * ROOT_SCALE;
+    for (int i = 1; i < 8; ++i) {
+        const i128 bound = value[i] >= 0 ? ROOT_FLOORS[i] : ROOT_FLOORS[i] + 1;
+        result += static_cast<i128>(value[i]) * bound;
+    }
+    return result;
+}
+
+static i128 uncertain_width(const Field& value) {
+    i128 result = 0;
+    for (int i = 1; i < 8; ++i) result += absolute(value[i]);
+    return result;
+}
+
+struct RadicalInterval {
+    i128 lower{};
+    i128 width{};
+};
+
+static RadicalInterval radical_interval(const Field& value) {
+    return RadicalInterval{lower_scaled_value(value), uncertain_width(value)};
+}
+
+static i128 floor_divide(i128 numerator, i128 denominator) {
+    if (denominator <= 0) throw std::runtime_error("nonpositive floor divisor");
+    i128 quotient = numerator / denominator;
+    const i128 remainder = numerator % denominator;
+    if (remainder < 0) --quotient;
+    return quotient;
+}
+
+static i64 bucket_coordinate(const RadicalInterval& interval, i64 denominator) {
+    const i128 coordinate_denominator = ROOT_SCALE * 96 * denominator;
+    // The exact coordinate is less than 1/1000 above its certified lower bound.
+    if (1000 * interval.width >= coordinate_denominator) {
+        throw std::runtime_error("radical interval too wide for certified bucket search");
+    }
+    return narrow(floor_divide(4 * interval.lower, coordinate_denominator));
+}
+
+static Bucket bucket(
+    const RadicalInterval& x,
+    const RadicalInterval& y,
+    i64 denominator
+) {
+    return Bucket{bucket_coordinate(x, denominator), bucket_coordinate(y, denominator)};
+}
+
+static bool unit_separated(const Difference& a, const Difference& b, i64 denominator) {
+    Field unit{};
+    unit[0] = narrow(static_cast<i128>(96) * 96 * denominator * denominator);
+    const Vector difference{subtract(a.x, b.x), subtract(a.y, b.y)};
+    return squared_norm(difference) == unit;
+}
+
+static i128 absolute128(i128 value) {
+    return value < 0 ? -value : value;
+}
+
+static std::pair<i128, i128> square_range(i128 low, i128 high) {
+    // Twice SAFE^2 remains below the signed-int128 maximum.
+    constexpr i128 SAFE = static_cast<i128>(6000000000000000000LL);
+    if (low > high || absolute128(low) >= SAFE || absolute128(high) >= SAFE) {
+        throw std::overflow_error("interval square outside certified int128 range");
+    }
+    const i128 low_square = low * low, high_square = high * high;
+    const i128 minimum = low <= 0 && high >= 0 ? 0 : std::min(low_square, high_square);
+    return {minimum, std::max(low_square, high_square)};
+}
+
+static bool interval_can_be_unit(
+    const RadicalInterval& ax,
+    const RadicalInterval& ay,
+    const RadicalInterval& bx,
+    const RadicalInterval& by,
+    i64 denominator
+) {
+    const auto [x_minimum, x_maximum] = square_range(
+        ax.lower - bx.lower - bx.width,
+        ax.lower + ax.width - bx.lower
+    );
+    const auto [y_minimum, y_maximum] = square_range(
+        ay.lower - by.lower - by.width,
+        ay.lower + ay.width - by.lower
+    );
+    const i128 coordinate_denominator = ROOT_SCALE * 96 * denominator;
+    constexpr i128 SAFE = static_cast<i128>(6000000000000000000LL);
+    if (coordinate_denominator >= SAFE) {
+        throw std::overflow_error("unit interval outside certified int128 range");
+    }
+    const i128 unit_square = coordinate_denominator * coordinate_denominator;
+    return x_minimum + y_minimum <= unit_square && unit_square <= x_maximum + y_maximum;
+}
+
+static bool bucket_offset_can_be_unit(i64 offset_x, i64 offset_y) {
+    // Scale 4000: a bucket has width 1000 and the certified radical error is < 4.
+    const auto square_bounds = [](i64 offset) {
+        const i64 low = (offset - 1) * 1000 - 4;
+        const i64 high = (offset + 1) * 1000 + 4;
+        const i64 low_square = low * low, high_square = high * high;
+        const i64 minimum = low <= 0 && high >= 0 ? 0 : std::min(low_square, high_square);
+        return std::pair<i64, i64>{minimum, std::max(low_square, high_square)};
+    };
+    const auto [x_minimum, x_maximum] = square_bounds(offset_x);
+    const auto [y_minimum, y_maximum] = square_bounds(offset_y);
+    constexpr i64 UNIT = 4000 * 4000;
+    return x_minimum + y_minimum <= UNIT && UNIT <= x_maximum + y_maximum;
+}
+
+static bool genuinely_new(
+    std::uint32_t cross_pair,
+    const std::vector<std::uint32_t>& overlaps,
+    const std::vector<std::vector<bool>>& left_edges,
+    const std::vector<std::vector<bool>>& small_edges
+) {
+    const std::size_t p = cross_pair / 136;
+    const std::size_t q = cross_pair % 136;
+    for (std::uint32_t overlap : overlaps) {
+        const std::size_t overlap_p = overlap / 136;
+        const std::size_t overlap_q = overlap % 136;
+        if (q == overlap_q && left_edges[p][overlap_p]) return false;
+        if (p == overlap_p && small_edges[q][overlap_q]) return false;
+    }
+    return true;
+}
+
+struct BucketNode {
+    const Difference* difference{};
+    const std::vector<std::uint32_t>* pairs{};
+    RadicalInterval x{}, y{};
+};
+
+int main(int argc, char** argv) {
+    if (argc != 2) {
+        std::cerr << "usage: census POINTS.tsv\n";
+        return 2;
+    }
+    check_radical_bounds();
+    const std::vector<Point> all = read_points(argv[1]);
+    const std::vector<Point> left(all.begin(), all.begin() + 374);
+    std::vector<Point> small;
+    small.push_back(all[0]);
+    small.insert(small.end(), all.begin() + 374, all.end());
+    if (std::set<Point>(left.begin(), left.end()).size() != left.size()
+        || std::set<Point>(small.begin(), small.end()).size() != small.size()) {
+        throw std::runtime_error("gadget points are not distinct");
+    }
+    const auto left_edges = internal_edges(left);
+    const auto small_edges = internal_edges(small);
+    if (edge_count(left_edges) != 1860 || edge_count(small_edges) != 564) {
+        throw std::runtime_error("internal edge census mismatch");
+    }
+    const auto left_vectors = directed_vectors(left);
+    const auto small_vectors = directed_vectors(small);
+    if (vector_count(left_vectors) != 11650 || vector_count(small_vectors) != 1666) {
+        throw std::runtime_error("directed-vector census mismatch");
+    }
+    const auto orientation_set = enumerate_orientations(left_vectors, small_vectors);
+    const std::vector<Orientation> orientations(orientation_set.begin(), orientation_set.end());
+    if (orientations.size() != 2840) throw std::runtime_error("orientation census mismatch");
+    const std::size_t rotations = std::count_if(
+        orientations.begin(), orientations.end(),
+        [](const Orientation& orientation) { return !orientation.reflected; }
+    );
+    if (rotations != 1420) throw std::runtime_error("rotation/reflection census mismatch");
+    std::cout << "overlap_induced_rotations=" << rotations << '\n';
+    std::cout << "overlap_induced_reflections=" << orientations.size() - rotations << '\n';
+    std::cout << "distinct_nonzero_L_vectors=" << vector_count(left_vectors) << '\n';
+    std::cout << "distinct_nonzero_S_vectors=" << vector_count(small_vectors) << '\n';
+    std::cout << "internal_L_edges=" << edge_count(left_edges) << '\n';
+    std::cout << "internal_Splus_edges=" << edge_count(small_edges) << '\n';
+
+    std::uint64_t total_multi_overlap = 0;
+    std::uint64_t pair_certificates = 0;
+    std::uint64_t total_two = 0;
+    std::uint64_t total_with_cross = 0;
+    std::uint64_t total_with_genuine = 0;
+    std::uint64_t interval_candidates = 0;
+    std::uint64_t exact_distance_checks = 0;
+    std::vector<std::pair<i64, i64>> bucket_offsets;
+    for (i64 dx = -6; dx <= 6; ++dx) {
+        for (i64 dy = -6; dy <= 6; ++dy) {
+            if (bucket_offset_can_be_unit(dx, dy)) bucket_offsets.emplace_back(dx, dy);
+        }
+    }
+    if (bucket_offsets.size() != 68) throw std::runtime_error("bucket-offset census mismatch");
+    for (std::size_t orientation_index = 0; orientation_index < orientations.size(); ++orientation_index) {
+        const Orientation& orientation = orientations[orientation_index];
+        std::vector<Point> image;
+        image.reserve(small.size());
+        for (const Point& point : small) image.push_back(transformed_numerator(orientation, point));
+
+        std::unordered_map<Difference, std::vector<std::uint32_t>, DifferenceHash> differences;
+        differences.reserve(left.size() * small.size() * 2);
+        for (std::size_t p = 0; p < left.size(); ++p) {
+            for (std::size_t q = 0; q < image.size(); ++q) {
+                differences[cross_difference(left[p], image[q], orientation.denominator)]
+                    .push_back(static_cast<std::uint32_t>(136 * p + q));
+            }
+        }
+        for (const auto& [difference, pairs] : differences) {
+            (void)difference;
+            if (pairs.size() < 2) continue;
+            ++total_multi_overlap;
+            pair_certificates += pairs.size() * (pairs.size() - 1) / 2;
+        }
+
+        std::unordered_map<Bucket, std::vector<BucketNode>, BucketHash> grid;
+        grid.reserve(differences.size() * 2);
+        for (const auto& [difference, pairs] : differences) {
+            const RadicalInterval x = radical_interval(difference.x);
+            const RadicalInterval y = radical_interval(difference.y);
+            grid[bucket(x, y, orientation.denominator)].push_back(
+                BucketNode{&difference, &pairs, x, y}
+            );
+        }
+
+        std::uint64_t local_two = 0;
+        std::uint64_t local_with_cross = 0;
+        std::uint64_t local_with_genuine = 0;
+        const std::uint64_t checks_before = exact_distance_checks;
+        const std::uint64_t candidates_before = interval_candidates;
+        for (const auto& [translation, overlaps] : differences) {
+            if (overlaps.size() != 2) continue;
+            ++local_two;
+            bool has_cross = false;
+            bool has_genuine = false;
+            const RadicalInterval translation_x = radical_interval(translation.x);
+            const RadicalInterval translation_y = radical_interval(translation.y);
+            const Bucket centre = bucket(
+                translation_x, translation_y, orientation.denominator
+            );
+            for (const auto& [dx, dy] : bucket_offsets) {
+                if (has_genuine) break;
+                const auto found = grid.find(Bucket{centre.x + dx, centre.y + dy});
+                if (found == grid.end()) continue;
+                for (const BucketNode& node : found->second) {
+                    if (!interval_can_be_unit(
+                            translation_x, translation_y, node.x, node.y,
+                            orientation.denominator)) {
+                        continue;
+                    }
+                    ++interval_candidates;
+                    ++exact_distance_checks;
+                    if (!unit_separated(translation, *node.difference, orientation.denominator)) continue;
+                    has_cross = true;
+                    for (std::uint32_t pair : *node.pairs) {
+                        if (genuinely_new(pair, overlaps, left_edges, small_edges)) {
+                            has_genuine = true;
+                            break;
+                        }
+                    }
+                    if (has_genuine) break;
+                }
+            }
+            local_with_cross += has_cross;
+            local_with_genuine += has_genuine;
+        }
+        total_two += local_two;
+        total_with_cross += local_with_cross;
+        total_with_genuine += local_with_genuine;
+        std::cout << "orientation=" << orientation_index
+                  << ";reflected=" << orientation.reflected
+                  << ";denominator=" << orientation.denominator
+                  << ";exactly_two=" << local_two
+                  << ";with_cross=" << local_with_cross
+                  << ";with_genuine=" << local_with_genuine
+                  << ";interval_candidates=" << interval_candidates - candidates_before
+                  << ";exact_checks=" << exact_distance_checks - checks_before << '\n';
+        if ((orientation_index + 1) % 100 == 0) {
+            std::cerr << "processed_orientations=" << orientation_index + 1
+                      << '/' << orientations.size() << '\n';
+        }
+    }
+
+    std::cout << "affine_placements_with_at_least_two_overlaps=" << total_multi_overlap << '\n';
+    std::cout << "recovered_pair_certificates=" << pair_certificates << '\n';
+    std::cout << "exactly_two_overlap_placements=" << total_two << '\n';
+    std::cout << "with_any_cross_unit_label_pair=" << total_with_cross << '\n';
+    std::cout << "with_genuinely_new_cross_edge=" << total_with_genuine << '\n';
+    std::cout << "closed_by_two_overlap_gluing_lemma=" << total_two - total_with_genuine << '\n';
+    std::cout << "interval_candidates=" << interval_candidates << '\n';
+    std::cout << "exact_distance_checks=" << exact_distance_checks << '\n';
+    if (total_multi_overlap != 2992078 || pair_certificates != 17658256
+        || total_two != 2373802 || total_with_genuine > total_with_cross) {
+        throw std::runtime_error("census checksum mismatch");
+    }
+    std::cout << "exact_two_overlap_cross_census=true\n";
+}
