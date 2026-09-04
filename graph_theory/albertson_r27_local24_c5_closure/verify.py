@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact audit for the Albertson r=27 local equality-C5 closure.
+"""Exact audit for the Albertson r=27 unique-non-full-C5 closure.
 
 The topology is proved in README.md.  This checker verifies the defect
 arithmetic, terminal equality identities, forced endpoint reconstruction,
@@ -14,10 +14,11 @@ from json import dumps
 N = 24
 S = N - 2
 
-# (name, e(D2), x(D2), number of full F^2_5 configurations)
+# (name, e(D2), x(D2), missing configuration-boundary edges,
+#  number of full F^2_5 configurations)
 PROFILES = (
-    ("A", 103, 57, 9),
-    ("B", 106, 64, 11),
+    ("A", 103, 57, 0, 9),
+    ("B", 106, 64, 0, 11),
 )
 
 
@@ -113,8 +114,11 @@ def triangle_kite_reconstruction() -> dict[str, object]:
     }
 
 
-def audit_profile(name: str, edges: int, crossings: int, full: int) -> dict[str, object]:
+def audit_profile(
+    name: str, edges: int, crossings: int, missing_boundaries: int, full: int
+) -> dict[str, object]:
     assert defect(edges, crossings, 0) == 0
+    assert missing_boundaries == 0
 
     numerator = 2 * edges - 8 * S
     assert numerator % 3 == 0
@@ -134,8 +138,19 @@ def audit_profile(name: str, edges: int, crossings: int, full: int) -> dict[str,
     assert twice_density_slack == 0
     assert planarization_slack == 0
 
-    # The equality C5 lemma forces every cycle to be full, contradicting the
-    # exact number of full configurations in the certified profile.
+    # The global terminal-kite argument uses the resulting equality in the
+    # simple planarization: every face is triangular, including the four
+    # faces incident with each degree-four crossing vertex.
+    planar_vertices = N + terminal_crossings
+    planar_edges = terminal_edges + 2 * terminal_crossings
+    assert planar_edges == 3 * planar_vertices - 6
+    planar_faces = 2 * planar_vertices - 4
+    assert 3 * planar_faces == 2 * planar_edges
+
+    # There is exactly one reported non-full cycle.  With m0=0, the
+    # unique-non-full lemma forces it to be full as well.
+    non_full_reported = c5 - full
+    assert non_full_reported == 1
     forced_full = c5
     assert forced_full > full
 
@@ -143,11 +158,16 @@ def audit_profile(name: str, edges: int, crossings: int, full: int) -> dict[str,
         "name": name,
         "edges": edges,
         "crossings": crossings,
+        "missing_boundaries": missing_boundaries,
         "full_reported": full,
         "c5": c5,
         "terminal_edges": terminal_edges,
         "terminal_crossings": terminal_crossings,
         "terminal_empty_triangles": terminal_triangles,
+        "planar_vertices": planar_vertices,
+        "planar_edges": planar_edges,
+        "planar_faces": planar_faces,
+        "non_full_reported": non_full_reported,
         "forced_full": forced_full,
     }
 
@@ -168,7 +188,7 @@ def main() -> None:
             f"Delta={row['terminal_empty_triangles']})"
         )
     print(f"certificate_sha256={digest}")
-    print("PASS both equality profiles contradict the equality C5 lemma")
+    print("PASS both profiles contradict the unique-non-full C5 lemma")
 
 
 if __name__ == "__main__":
