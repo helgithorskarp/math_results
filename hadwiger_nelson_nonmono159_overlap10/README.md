@@ -86,9 +86,9 @@ nonmonochromatic gadget program:
 
 - J. Parts, [Graph minimization, focusing on the example of 5-chromatic
   unit-distance graphs in the plane](https://arxiv.org/abs/2010.12665).
-- J.-P. Haugland, [A new upper bound for the order of a 5-chromatic
-  unit-distance graph](https://arxiv.org/abs/2608.04542), which still identifies
-  509 as the record in 2026.
+- J. K. Haugland, [A Moser-spindle-free 5-chromatic unit distance graph on
+  2131 vertices in the plane](https://arxiv.org/abs/2608.04542), which still
+  identifies 509 as the record in 2026.
 
 `SOURCE.md` records the archived coordinate source and hashes. The newer Parts
 table reports a 157-vertex refinement of the square-root-seven gadget; this

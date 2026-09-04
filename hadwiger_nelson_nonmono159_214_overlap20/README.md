@@ -75,9 +75,9 @@ xz -dc colorings.txt.xz | cmp - colorings.rebuilt.txt
 
 - J. Parts, [Graph minimization, focusing on the example of 5-chromatic
   unit-distance graphs in the plane](https://arxiv.org/abs/2010.12665).
-- J.-P. Haugland, [A new upper bound for the order of a 5-chromatic
-  unit-distance graph](https://arxiv.org/abs/2608.04542), confirming the
-  509-vertex benchmark in 2026.
+- J. K. Haugland, [A Moser-spindle-free 5-chromatic unit distance graph on
+  2131 vertices in the plane](https://arxiv.org/abs/2608.04542), confirming
+  the 509-vertex benchmark in 2026.
 
 `SOURCE.md` records coordinate provenance. No minimality claim is made for
 either archived gadget.
