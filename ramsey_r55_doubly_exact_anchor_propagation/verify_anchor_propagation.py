@@ -822,13 +822,102 @@ def main() -> None:
         raise AssertionError(diameter_five_profile_counts)
     if 4 * (29 - 21) <= 29 or 3 * (32 - 21) <= 32:
         raise AssertionError("balanced-degree diameter packing is wrong")
+
+    # Edge accounting rules out every d=26 disconnection.  It would force
+    # two alpha-two components of order 13.  The opposite-color graph inside
+    # each component is triangle-free with alpha at most four and hence has
+    # minimum degree at least four by R(3,4)=9.  Thus the opposite color has
+    # at least 13^2+2*26=221 edges inside D.  Balanced degree then leaves at
+    # least 120 edges on the other 17 vertices, above ex(17,K5)=108.
+    d26_opposite_internal_edges = 13 * 13 + 2 * (13 * 4 // 2)
+    least_global_color_total = min(
+        total
+        for edge_count in range(214, 221)
+        for total in (231 + edge_count, 672 - edge_count)
+    )
+    d26_outside_edges = (
+        least_global_color_total + d26_opposite_internal_edges - 21 * 26
+    )
+    if (
+        least_global_color_total,
+        d26_opposite_internal_edges,
+        d26_outside_edges,
+        turan_edges(17, 4),
+    ) != (445, 221, 120, 108):
+        raise AssertionError("wrong d=26 outside-edge obstruction")
+    if d26_outside_edges <= turan_edges(17, 4):
+        raise AssertionError("d=26 edge count does not contradict Turan")
+
+    # At d=25 in M=217 or 218, the side-specific minimum degrees are at
+    # least four, so the two components have orders 12 and 13 and alpha two.
+    # Their opposite-color complements have minimum degrees at least three
+    # and four, yielding 156+18+26=200 internal opposite-color edges.  The
+    # least relevant global color total is 448, forcing 123 edges on the
+    # other 18 vertices, above ex(18,K5)=121.
+    if min(441 - 2 * edge_count for edge_count in (217, 218)) < 4:
+        raise AssertionError("red d=25 components may have order four")
+    if min(440 - 2 * edge_count for edge_count in (217, 218)) < 4:
+        raise AssertionError("blue d=25 components may have order four")
+    d25_opposite_internal_edges = 12 * 13 + (12 * 3 // 2) + (13 * 4 // 2)
+    least_d25_color_total = min(
+        total
+        for edge_count in (217, 218)
+        for total in (231 + edge_count, 672 - edge_count)
+    )
+    d25_outside_edges = (
+        least_d25_color_total + d25_opposite_internal_edges - 21 * 25
+    )
+    if (
+        least_d25_color_total,
+        d25_opposite_internal_edges,
+        d25_outside_edges,
+        turan_edges(18, 4),
+    ) != (448, 200, 123, 121):
+        raise AssertionError("wrong d=25 outside-edge obstruction")
+    if d25_outside_edges <= turan_edges(18, 4):
+        raise AssertionError("d=25 edge count does not contradict Turan")
+
+    final_forced_connected_profile_counts = []
+    surviving_escape_profile_counts = []
+    surviving_escape_profile_lines = []
+    for edge_count in range(214, 221):
+        forced_count = 0
+        for weight, first_counts, second_counts in split_profiles[edge_count]:
+            degree21_vertices = first_counts[3] + second_counts[3] + 1
+            exact_anchor_lower_bound = degree21_vertices - (43 - weight) // 2
+            forced = exact_anchor_lower_bound >= 26 or (
+                edge_count in (217, 218) and exact_anchor_lower_bound >= 25
+            )
+            if forced:
+                forced_count += 1
+            else:
+                surviving_escape_profile_lines.append(
+                    f"{edge_count} {weight} {exact_anchor_lower_bound} "
+                    f"{','.join(map(str, first_counts))} "
+                    f"{','.join(map(str, second_counts))}\n"
+                )
+        final_forced_connected_profile_counts.append(forced_count)
+        surviving_escape_profile_counts.append(
+            len(split_profiles[edge_count]) - forced_count
+        )
+    surviving_escape_profile_digest = hashlib.sha256(
+        "".join(surviving_escape_profile_lines).encode("ascii")
+    ).hexdigest()
+    if final_forced_connected_profile_counts != [1, 5, 17, 40, 68, 89, 112]:
+        raise AssertionError(final_forced_connected_profile_counts)
+    if surviving_escape_profile_counts != [0, 0, 0, 0, 1, 6, 10]:
+        raise AssertionError(surviving_escape_profile_counts)
+    if surviving_escape_profile_digest != "1271fc7f2b002c8ae45c216be31603abf6e339fa69abb943986dcce07e4f1ccb":
+        raise AssertionError(surviving_escape_profile_digest)
+
     vertex_connectivity_spectrum = [
         sum(lower_bound >= 26 + connectivity
             for lower_bound in all_exact_anchor_lower_bounds)
         for connectivity in range(1, 12)
     ]
+    vertex_connectivity_spectrum[0] = sum(final_forced_connected_profile_counts)
     if vertex_connectivity_spectrum != [
-        314, 291, 253, 231, 193, 135, 128, 97, 22, 22, 20
+        332, 291, 253, 231, 193, 135, 128, 97, 22, 22, 20
     ]:
         raise AssertionError(vertex_connectivity_spectrum)
     if escape_profile_counts != [0, 0, 1, 3, 6, 10, 15]:
@@ -847,7 +936,7 @@ def main() -> None:
         raise AssertionError(escape_profile_digest)
     expected_escape_file = (
         "# M W L A_counts_degrees_18_to_24 B_counts_degrees_18_to_24\n"
-        + "".join(escape_profile_lines)
+        + "".join(surviving_escape_profile_lines)
     )
     actual_escape_file = Path(__file__).with_name(
         "BACKBONE_ESCAPE_PROFILES.txt"
@@ -909,13 +998,14 @@ def main() -> None:
     print("PASS M=216 red backbone order=26,...,36 is connected with diameter<=8")
     print("PASS M=216 blue disconnection forces two 13-vertex critical components")
     print("PASS C13(1,5) gives a sharp disconnected-blue abstract backbone")
+    print("PASS outside-edge obstructions eliminate d=26 and M217/218 d=25 cuts")
     print("PASS both-color connectivity profiles M214..220="
-          "1/1,5/5,16/17,37/40,63/69,85/95,107/122")
-    print("PASS backbone escape profiles=0,0,1,3,6,10,15 total=35 "
-          "sha256=bf0f2ef8a84453435e00778f04ff0892b16719ba244a7773d02ebddade99ca32")
+          "1/1,5/5,17/17,40/40,68/69,89/95,112/122")
+    print("PASS backbone escape profiles=0,0,0,0,1,6,10 total=17 "
+          "sha256=1271fc7f2b002c8ae45c216be31603abf6e339fa69abb943986dcce07e4f1ccb")
     print("PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135")
     print("PASS profile vertex-connectivity counts k=1,...,11 are "
-          "314,291,253,231,193,135,128,97,22,22,20")
+          "332,291,253,231,193,135,128,97,22,22,20")
     print("PASS first-degree-feasible tests have 0 secondary exact anchors")
     print("PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0")
     print("PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21")
