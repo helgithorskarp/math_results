@@ -284,10 +284,38 @@ def add_local_profile_constraints(
         sink.exactly_binary(type_selectors, red_exceptional_count)
 
 
+def add_stabilizer_symmetry_break(sink: ClauseSink) -> None:
+    """Choose canonical prefixes in the C and O-minus-z stabilizer chain."""
+    # In the blue core K on O, every degree lies in [3,13]: the lower bound
+    # follows from R(4,4)=18 on a vertex's nonneighbors, and the upper bound
+    # from R(3,5)=14 on its neighbors.  Since z's red cross degree equals its
+    # blue degree in K, relabel C so those red neighbors form a prefix.
+    z_cross = tuple(edge_var(vertex, Z) for vertex in C)
+    for first, second in zip(z_cross, z_cross[1:]):
+        sink.add((first, -second))
+    for literal in z_cross[:3]:
+        sink.add((literal,))
+    for literal in z_cross[13:]:
+        sink.add((-literal,))
+
+    # The chosen vertex c0 is therefore red-adjacent to z.  Its H-degree is
+    # also in [3,13], so it has 6,...,16 red neighbors among the twenty
+    # nondistinguished O vertices.  Relabel those vertices to form a prefix.
+    normal_o = tuple(vertex for vertex in O if vertex != Z)
+    c0_cross = tuple(edge_var(C[0], vertex) for vertex in normal_o)
+    for first, second in zip(c0_cross, c0_cross[1:]):
+        sink.add((first, -second))
+    for literal in c0_cross[:6]:
+        sink.add((literal,))
+    for literal in c0_cross[16:]:
+        sink.add((-literal,))
+
+
 def generate_formula(
     path: Path,
     local_profile: bool = False,
     red_exceptional_count: int | None = None,
+    stabilizer_break: bool = False,
 ) -> tuple[int, int]:
     sink = DimacsWriter(path)
 
@@ -318,6 +346,8 @@ def generate_formula(
 
     if local_profile:
         add_local_profile_constraints(sink, red_exceptional_count)
+    if stabilizer_break:
+        add_stabilizer_symmetry_break(sink)
 
     return sink.finish()
 
@@ -443,10 +473,56 @@ def self_test() -> None:
                         ("conditional", n, mask, selector_value, actual, expected)
                     )
 
+    # Check the symmetry-breaking clauses directly on every pair of prefix
+    # lengths.  Also reject a same-weight nonprefix assignment in each block,
+    # which detects a reversed or omitted monotonic implication.
+    sink = MemorySink(BASE_VARS + 1)
+    add_stabilizer_symmetry_break(sink)
+    z_cross = tuple(edge_var(vertex, Z) for vertex in C)
+    c0_cross = tuple(edge_var(C[0], vertex) for vertex in O if vertex != Z)
+
+    def prefix_assignment(length_z: int, length_c0: int) -> dict[int, bool]:
+        assignment = {
+            variable: index < length_z
+            for index, variable in enumerate(z_cross)
+        }
+        assignment.update(
+            {
+                variable: index < length_c0
+                for index, variable in enumerate(c0_cross)
+            }
+        )
+        return assignment
+
+    def clauses_hold(assignment: dict[int, bool]) -> bool:
+        return all(
+            any(assignment[abs(literal)] == (literal > 0) for literal in clause)
+            for clause in sink.clauses
+        )
+
+    if sink.nclauses != 60:
+        raise AssertionError(("stabilizer clauses", sink.nclauses))
+    for length_z in range(len(z_cross) + 1):
+        for length_c0 in range(len(c0_cross) + 1):
+            actual = clauses_hold(prefix_assignment(length_z, length_c0))
+            expected = 3 <= length_z <= 13 and 6 <= length_c0 <= 16
+            if actual != expected:
+                raise AssertionError(
+                    ("stabilizer prefixes", length_z, length_c0, actual, expected)
+                )
+
+    for block, swap_at in ((z_cross, 4), (c0_cross, 7)):
+        assignment = prefix_assignment(5, 8)
+        assignment[block[swap_at]] = False
+        assignment[block[swap_at + 1]] = True
+        if clauses_hold(assignment):
+            raise AssertionError(("stabilizer nonprefix", block, swap_at))
+
     if BASE_VARS != 861:
         raise AssertionError(BASE_VARS)
     print("sequential-counter self-test: PASS (all n<=5 exact cardinalities)")
     print("binary-adder self-test: PASS (all n<=6 exact cardinalities)")
+    print("stabilizer self-test: PASS (all prefix-length pairs)")
     print("base graph variables: 861")
 
 
@@ -589,6 +665,11 @@ def main() -> None:
         choices=tuple(range(0, 19, 3)),
         help="typed local branch: number of O vertices with (t_R,t_B)=(99,100)",
     )
+    generate.add_argument(
+        "--stabilizer-break",
+        action="store_true",
+        help="canonically order two cross-neighborhoods using core degree bounds",
+    )
     check = subparsers.add_parser("check-model")
     check.add_argument("model", type=Path)
     check.add_argument("--write-graph", type=Path)
@@ -601,7 +682,10 @@ def main() -> None:
         if args.red_exceptional is not None and not args.local_profile:
             parser.error("--red-exceptional requires --local-profile")
         nvars, nclauses = generate_formula(
-            args.output, args.local_profile, args.red_exceptional
+            args.output,
+            args.local_profile,
+            args.red_exceptional,
+            args.stabilizer_break,
         )
         print(f"DIMACS variables: {nvars}")
         print(f"DIMACS clauses: {nclauses}")

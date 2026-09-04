@@ -1186,6 +1186,36 @@ PYTHONDONTWRITEBYTECODE=1 python3 singleton_sat.py generate \
   singleton-x0.cnf --local-profile --red-exceptional 0
 ```
 
+Each branch admits a lossless two-stage stabilizer-chain reduction.  In an
+order-21 `(4,5)` core every vertex degree is between 3 and 13.  Indeed, at
+most two neighbors would leave at least 18 nonneighbors, contradicting
+`R(4,4)=18`, while at least 14 neighbors would contradict `R(3,5)=14`.
+For the distinguished vertex `z`, its red cross degree into `C` equals its
+blue degree in the core on `O`, hence lies in `[3,13]`.  Relabel `C` so these
+red cross-neighbors form a prefix.  The first vertex `c0` is then
+red-adjacent to `z`.  If its red core degree in `C` is `h in [3,13]`, it has
+`19-h in [6,16]` red neighbors among `O minus {z}`.  Relabel those twenty
+vertices so this second neighborhood is a prefix.  The two relabelings are
+successive actions of stabilizers, so every solution orbit has a
+representative satisfying both conditions.
+
+The option `--stabilizer-break` encodes those two prefixes with 39 monotonic
+clauses and the forced ranges with 21 unit clauses.  It introduces no
+variables.  Thus each stabilized typed branch has 458107 variables and
+3782854 clauses.  All seven deterministic hashes are recorded in
+[`SINGLETON_TYPED_STABILIZED_BRANCHES.tsv`](SINGLETON_TYPED_STABILIZED_BRANCHES.tsv).
+For example:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 singleton_sat.py generate \
+  singleton-x0-stabilized.cnf --local-profile --red-exceptional 0 \
+  --stabilizer-break
+```
+
+The self-test checks all 462 pairs of possible prefix lengths against the
+two degree intervals and separately rejects nonprefix assignments.  This is
+a symmetry reduction only; no solver verdict is claimed here.
+
 UNSAT certificates for all seven rows would eliminate the singleton normal
 form; a SAT model in any row would be the desired order-43 witness.
 
