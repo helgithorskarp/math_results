@@ -238,8 +238,35 @@ randomness, network input, or uncommitted data. The separate provenance audit
 also trusts the installed Git executable and the completeness of the local
 repository history.
 
+## 7. Post-review Lean assurance
+
+The separate
+[`albertson_r27_terminal_map_lean`](../albertson_r27_terminal_map_lean/README.md)
+package now kernel-checks two layers that the historical manifest originally
+left to finite Python computations and a general combinatorial-disk
+recognition:
+
+- a universal exhaustion of the complete nonnegative deletion-profile system,
+  proving that every feasible record is exactly row A or row B; and
+- a constructive shelling of the five oriented triangles, with every shared
+  edge, shared vertex, attachment arc, and intermediate boundary computed
+  from the face list.
+
+The assurance version used here is immutable commit
+[`2675bc9a4cba87b1375533a44746ad096378ba38`](https://github.com/helgithorskarp/math_results/tree/2675bc9a4cba87b1375533a44746ad096378ba38/graph_theory/albertson_r27_terminal_map_lean),
+whose Lean source has SHA-256
+`dbb5ff53c6a89419a35edc412ecdb6c57bfae36dfcce51a077cf737fb5bc2539`.
+This is post-review evidence and does not change any source or review object
+pinned by `dependency_manifest.json`. Its trust boundary remains explicit: it
+assumes the mapping from the cited drawing inequalities to the encoded integer
+system, the geometric derivation of the five-face list, and the elementary
+topological lemma that a triangle glued to a disk along an exact connected
+proper boundary arc preserves a disk.
+
 The terminal closure has independent `VERIFIES`/`REPRODUCES` reviews at
 Discovery Net heights 2025 and 2027. This establishes a reviewed mathematical
 chain under the stated imported results; it is not a literature-wide priority
-claim, and a proof-assistant formalization of the planar topology would still
-be a useful assurance improvement.
+claim. The remaining proof-assistant frontier is the geometric face trace,
+sealed-region provenance, the standard triangle-gluing lemma, and the imported
+primary drawing theorems rather than the finite profile exhaustion or local
+five-face incidence.
