@@ -11,8 +11,11 @@ from pathlib import Path
 SIDE = 21
 ORDER = 43
 SAMPLE_CORE_G6 = "TJaGmrdI_gqziMTiLYE?ro`dlTI|TTmTiwtQ"
+EXTREMAL_R4514_G6 = "MznZ\\lle{vYVlhsm_"
 EXTREMAL_EDGES = {18: 85, 19: 92, 20: 100, 21: 107,
                   22: 114, 23: 122, 24: 132}
+SMALL_EXTREMAL_EDGES = {14: 60, 15: 66, 16: 72, 17: 79, 18: 85}
+MINIMUM_R35_EDGES = {11: 15, 12: 20, 13: 26}
 DEGREE_WEIGHTS = {18: 21, 19: 12, 20: 3, 21: 0,
                   22: 3, 23: 12, 24: 21}
 
@@ -347,6 +350,36 @@ def clique_number(adjacency: tuple[tuple[bool, ...], ...]) -> int:
                    for first, second in itertools.combinations(vertices, 2)):
                 return size
     return 0
+
+
+def complement_adjacency(
+    adjacency: tuple[tuple[bool, ...], ...]
+) -> tuple[tuple[bool, ...], ...]:
+    """Return the loopless complement of an adjacency matrix."""
+    return tuple(
+        tuple(first != second and not adjacency[first][second]
+              for second in range(len(adjacency)))
+        for first in range(len(adjacency))
+    )
+
+
+def minimum_triangle_transversal(
+    adjacency: tuple[tuple[bool, ...], ...]
+) -> tuple[int, int]:
+    """Return the number of triangles and their minimum vertex-cover size."""
+    triangles = tuple(
+        vertices
+        for vertices in itertools.combinations(range(len(adjacency)), 3)
+        if all(adjacency[first][second]
+               for first, second in itertools.combinations(vertices, 2))
+    )
+    for size in range(len(adjacency) + 1):
+        if any(
+            all(set(vertices).intersection(triangle) for triangle in triangles)
+            for vertices in itertools.combinations(range(len(adjacency)), size)
+        ):
+            return len(triangles), size
+    raise AssertionError("finite triangle family has no transversal")
 
 
 def circulant_adjacency(
@@ -877,6 +910,170 @@ def main() -> None:
     if d25_outside_edges <= turan_edges(18, 4):
         raise AssertionError("d=25 edge count does not contradict Turan")
 
+    # The sole remaining M=218 profile has W=15 and L=24.  If a backbone
+    # color were disconnected, the preceding d=25 obstruction would force
+    # |D|=24.  Its two alpha-two components then have orders 11+13 or 12+12.
+    # In the opposite color their interiors are R(3,5)-graphs.  McKay's
+    # complete small catalogs give minimum edge counts 15, 20, and 26, so
+    # either partition has at least 184 opposite-color edges on D.
+    m218_low_profiles = []
+    for weight, first_counts, second_counts in split_profiles[218]:
+        degree21_vertices = first_counts[3] + second_counts[3] + 1
+        exact_anchor_lower_bound = degree21_vertices - (43 - weight) // 2
+        if exact_anchor_lower_bound < 25:
+            m218_low_profiles.append(
+                (weight, exact_anchor_lower_bound, first_counts, second_counts)
+            )
+    expected_m218_low_profile = (
+        15,
+        24,
+        (0, 0, 2, 19, 0, 0, 0),
+        (0, 0, 3, 18, 0, 0, 0),
+    )
+    if m218_low_profiles != [expected_m218_low_profile]:
+        raise AssertionError(m218_low_profiles)
+    m218_global_counts = [0, 0, 5, 38, 0, 0, 0]
+    m218_excess_budget = (43 - expected_m218_low_profile[0]) // 2
+    m218_nonexact_degree21 = m218_global_counts[3] - 24
+    m218_red_baseline = sum(
+        (EXTREMAL_EDGES[degree] - 7) * count
+        for degree, count in zip(range(18, 25), m218_global_counts, strict=True)
+    )
+    m218_blue_baseline = sum(
+        (EXTREMAL_EDGES[42 - degree] - 7) * count
+        for degree, count in zip(range(18, 25), m218_global_counts, strict=True)
+    )
+    m218_admissible_excess_splits = [
+        (
+            red_excess,
+            m218_excess_budget - red_excess,
+            (m218_red_baseline - red_excess) // 3,
+            (m218_blue_baseline - (m218_excess_budget - red_excess)) // 3,
+        )
+        for red_excess in range(m218_excess_budget + 1)
+        if (m218_red_baseline - red_excess) % 3 == 0
+        and (m218_blue_baseline - (m218_excess_budget - red_excess)) % 3 == 0
+    ]
+    if (
+        m218_excess_budget,
+        m218_nonexact_degree21,
+        m218_red_baseline,
+        m218_blue_baseline,
+        m218_admissible_excess_splits,
+    ) != (
+        14,
+        14,
+        4265,
+        4335,
+        [
+            (2, 12, 1421, 1441),
+            (5, 9, 1420, 1442),
+            (8, 6, 1419, 1443),
+            (11, 3, 1418, 1444),
+            (14, 0, 1417, 1445),
+        ],
+    ):
+        raise AssertionError("wrong M=218 zero-slack profile")
+
+    component_partitions = ((11, 13), (12, 12))
+    opposite_internal_minima = tuple(
+        first * second
+        + MINIMUM_R35_EDGES[first]
+        + MINIMUM_R35_EDGES[second]
+        for first, second in component_partitions
+    )
+    if opposite_internal_minima != (184, 184):
+        raise AssertionError(opposite_internal_minima)
+
+    # Red disconnection makes the opposite blue color dense on D.  At least
+    # 184 such edges leave at most 37 red edges on the outside 19-set O.
+    # Brouwer's exact extension of Turan says that an n-vertex graph with
+    # alpha at most t and at most T(n,t)+floor(n/t)-2 edges is the union of
+    # t cliques.  Here T(19,4)=36 and the threshold is 38.  Four cliques
+    # covering 19 vertices contain a K5, so red disconnection is impossible.
+    outside_order = ORDER - 24
+    outside_pairs = outside_order * (outside_order - 1) // 2
+    m218_red_total = 231 + 218
+    m218_blue_total = 672 - 218
+    red_outside_upper_if_red_disconnected = outside_pairs - (
+        m218_blue_total + min(opposite_internal_minima) - 21 * 24
+    )
+    brouwer_minimum = outside_pairs - turan_edges(outside_order, 4)
+    brouwer_threshold = brouwer_minimum + outside_order // 4 - 2
+    if (
+        outside_order,
+        outside_pairs,
+        m218_red_total,
+        m218_blue_total,
+        red_outside_upper_if_red_disconnected,
+        brouwer_minimum,
+        brouwer_threshold,
+    ) != (19, 171, 449, 454, 37, 36, 38):
+        raise AssertionError("wrong M=218 red-disconnection obstruction")
+
+    # A second small lemma handles blue disconnection.  Every (5,5;19)
+    # graph has at least 43 edges.  If F had at most 42, its minimum degree
+    # would be at least four: at degree d<=3 the complement of the graph on
+    # the 18-d nonneighbors is an R(4,5)-graph, and the exact E(4,5,n) values
+    # give the audited lower bounds below.  Equality at d=3 leaves its three
+    # neighbors mutually nonadjacent and anticomplete to the other 15
+    # vertices, immediately producing an independent five-set.
+    low_degree_edge_bounds = tuple(
+        (
+            degree,
+            (18 - degree) * (17 - degree) // 2
+            - SMALL_EXTREMAL_EDGES[18 - degree]
+            + degree,
+        )
+        for degree in range(4)
+    )
+    if low_degree_edge_bounds != ((0, 68), (1, 58), (2, 50), (3, 42)):
+        raise AssertionError(low_degree_edge_bounds)
+
+    # Thus a degree-four vertex exists.  On its 14 nonneighbors, the red
+    # complement is R(4,5;14), so the induced graph has at least 31 edges.
+    # If it has at least 32, the four neighbors cannot all retain degree four:
+    # their K4-free interior has at most five edges and their remaining edge
+    # budget is at most six.  Equality at 31 forces the unique 60-edge
+    # R(4,5;14) core, a K4-minus-edge on the four neighbors, and only two
+    # cross edges.  The missing pair avoids some independent triple because
+    # the core's triangles have transversal number four.
+    extremal_r4514 = decode_short_graph6(EXTREMAL_R4514_G6)
+    extremal_r4514_complement = complement_adjacency(extremal_r4514)
+    extremal_triangle_data = minimum_triangle_transversal(extremal_r4514)
+    if (
+        len(extremal_r4514),
+        core_edge_count(extremal_r4514),
+        clique_number(extremal_r4514),
+        clique_number(extremal_r4514_complement),
+        extremal_triangle_data,
+    ) != (14, 60, 3, 4, (80, 4)):
+        raise AssertionError("wrong extremal R(4,5;14) core data")
+    neighbor_internal_edge_cap = turan_edges(4, 3)
+    larger_core_extra_budget = 42 - 4 - 32
+    extremal_core_extra_budget = 42 - 4 - 31
+    if (
+        neighbor_internal_edge_cap,
+        larger_core_extra_budget,
+        neighbor_internal_edge_cap + larger_core_extra_budget,
+        extremal_core_extra_budget,
+        extremal_core_extra_budget - neighbor_internal_edge_cap,
+    ) != (5, 6, 11, 7, 2):
+        raise AssertionError("wrong R(5,5;19) degree-four budget")
+    r5519_minimum_edges = 43
+
+    # If blue were disconnected on D, the same 184-edge bound is red.  It
+    # leaves at least 129 red, hence at most 42 blue, edges on O, contradicting
+    # the just-proved order-19 lemma.  The unique M=218 profile therefore has
+    # both backbone colors connected.
+    blue_outside_upper_if_blue_disconnected = outside_pairs - (
+        m218_red_total + min(opposite_internal_minima) - 21 * 24
+    )
+    if blue_outside_upper_if_blue_disconnected != 42:
+        raise AssertionError(blue_outside_upper_if_blue_disconnected)
+    if blue_outside_upper_if_blue_disconnected >= r5519_minimum_edges:
+        raise AssertionError("order-19 edge lemma does not close blue disconnection")
+
     final_forced_connected_profile_counts = []
     surviving_escape_profile_counts = []
     surviving_escape_profile_lines = []
@@ -885,8 +1082,10 @@ def main() -> None:
         for weight, first_counts, second_counts in split_profiles[edge_count]:
             degree21_vertices = first_counts[3] + second_counts[3] + 1
             exact_anchor_lower_bound = degree21_vertices - (43 - weight) // 2
-            forced = exact_anchor_lower_bound >= 26 or (
-                edge_count in (217, 218) and exact_anchor_lower_bound >= 25
+            forced = (
+                exact_anchor_lower_bound >= 26
+                or (edge_count == 217 and exact_anchor_lower_bound >= 25)
+                or (edge_count == 218 and exact_anchor_lower_bound >= 24)
             )
             if forced:
                 forced_count += 1
@@ -903,11 +1102,11 @@ def main() -> None:
     surviving_escape_profile_digest = hashlib.sha256(
         "".join(surviving_escape_profile_lines).encode("ascii")
     ).hexdigest()
-    if final_forced_connected_profile_counts != [1, 5, 17, 40, 68, 89, 112]:
+    if final_forced_connected_profile_counts != [1, 5, 17, 40, 69, 89, 112]:
         raise AssertionError(final_forced_connected_profile_counts)
-    if surviving_escape_profile_counts != [0, 0, 0, 0, 1, 6, 10]:
+    if surviving_escape_profile_counts != [0, 0, 0, 0, 0, 6, 10]:
         raise AssertionError(surviving_escape_profile_counts)
-    if surviving_escape_profile_digest != "1271fc7f2b002c8ae45c216be31603abf6e339fa69abb943986dcce07e4f1ccb":
+    if surviving_escape_profile_digest != "10ab59a22595799f02493c84d72965cff106024a947eb808b583c30b03071a51":
         raise AssertionError(surviving_escape_profile_digest)
 
     vertex_connectivity_spectrum = [
@@ -917,7 +1116,7 @@ def main() -> None:
     ]
     vertex_connectivity_spectrum[0] = sum(final_forced_connected_profile_counts)
     if vertex_connectivity_spectrum != [
-        332, 291, 253, 231, 193, 135, 128, 97, 22, 22, 20
+        333, 291, 253, 231, 193, 135, 128, 97, 22, 22, 20
     ]:
         raise AssertionError(vertex_connectivity_spectrum)
     if escape_profile_counts != [0, 0, 1, 3, 6, 10, 15]:
@@ -999,13 +1198,16 @@ def main() -> None:
     print("PASS M=216 blue disconnection forces two 13-vertex critical components")
     print("PASS C13(1,5) gives a sharp disconnected-blue abstract backbone")
     print("PASS outside-edge obstructions eliminate d=26 and M217/218 d=25 cuts")
+    print("PASS small R(3,5) catalog minima at orders 11,12,13 are 15,20,26")
+    print("PASS every R(5,5;19) graph has at least 43 edges")
+    print("PASS the unique M=218 profile has both backbone colors connected")
     print("PASS both-color connectivity profiles M214..220="
-          "1/1,5/5,17/17,40/40,68/69,89/95,112/122")
-    print("PASS backbone escape profiles=0,0,0,0,1,6,10 total=17 "
-          "sha256=1271fc7f2b002c8ae45c216be31603abf6e339fa69abb943986dcce07e4f1ccb")
+          "1/1,5/5,17/17,40/40,69/69,89/95,112/122")
+    print("PASS backbone escape profiles=0,0,0,0,0,6,10 total=16 "
+          "sha256=10ab59a22595799f02493c84d72965cff106024a947eb808b583c30b03071a51")
     print("PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135")
     print("PASS profile vertex-connectivity counts k=1,...,11 are "
-          "332,291,253,231,193,135,128,97,22,22,20")
+          "333,291,253,231,193,135,128,97,22,22,20")
     print("PASS first-degree-feasible tests have 0 secondary exact anchors")
     print("PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0")
     print("PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21")

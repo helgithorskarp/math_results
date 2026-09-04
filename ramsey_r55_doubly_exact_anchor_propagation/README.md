@@ -14,7 +14,7 @@ and `M=215`.  At `M=216` the red backbone remains connected, while every
 possible blue disconnection is reduced to two 13-vertex Ramsey-critical
 components at the abstract induced-subgraph level, and global edge accounting
 then excludes that exception.  Profile-sensitive excess accounting forces
-both colors connected in 332 of the 349 possible degree-count profiles across
+both colors connected in 333 of the 349 possible degree-count profiles across
 all `M=214,...,220`.
 
 This is a necessary pruning theorem for the hard construction branch.  It is
@@ -508,7 +508,103 @@ four by `R(3,4)=9`, so the opposite color has at least
 edges inside `D`.  The least relevant global color total is 448, leaving at
 least `448+200-21*25=123` edges on the 18 outside vertices.  This contradicts
 `ex(18,K_5)=121`.  Hence `L>=25` also forces both colors connected at
-`M=217,218`.  Exact enumeration of all 349 ordered split profiles gives
+`M=217,218`.
+
+### The last `M=218` escape is also connected
+
+There is only one `M=218` profile not covered above:
+
+```text
+W=15, L=24,
+A counts in degrees 18,...,24 = (0,0,2,19,0,0,0),
+B counts in degrees 18,...,24 = (0,0,3,18,0,0,0).
+```
+
+Including the anchor, its global degree multiset is `20^5,21^38`.  Its 14
+units of local-side excess have possible color splits and triangle counts
+
+```text
+(E_R,E_B,T_R,T_B) =
+(2,12,1421,1441), (5,9,1420,1442), (8,6,1419,1443),
+(11,3,1418,1444), (14,0,1417,1445).
+```
+
+If either backbone color were disconnected, the lower bound `L=24` and the
+preceding `d=25` obstruction would force `|D|=24`.  Thus there is zero slack:
+the 14 nonexact degree-21 vertices consume exactly one excess unit each, and
+all five degree-20 vertices have both local sides exactly seven-deficient.
+
+The side-specific backbone degree bounds at `M=218` are five in red and four
+in blue.  A disconnected color therefore has exactly two components, each
+with independence number two.  Each component has order at most 13 by
+`R(5,3)=14`, so their orders are `11+13` or `12+12`.  Inside these components,
+the opposite color consists of `(3,5)` Ramsey graphs.  The complete small
+catalogs have exact minimum edge counts
+
+```text
+e(3,5,11)=15,  e(3,5,12)=20,  e(3,5,13)=26.
+```
+
+Both component partitions consequently put at least
+
+```text
+11*13+15+26 = 184,  or  12*12+20+20 = 184
+```
+
+opposite-color edges inside `D`.
+
+Suppose first that red is disconnected.  The blue graph has 454 edges, so
+the outside 19-set `O` has at least `454+184-21*24=134` blue edges and at
+most 37 red edges.  [Brouwer's exact extension of Turan's theorem](https://ir.cwi.nl/pub/6791/6791D.pdf)
+says that an `n`-vertex graph with independence number at most `t` and at
+most
+
+```text
+T(n,t)+floor(n/t)-2
+```
+
+edges is a union of `t` cliques, where `T(n,t)` is the minimum from Turan's
+theorem.  Here `T(19,4)=36`, so the threshold is 38.  The red graph on `O`
+would be a union of four cliques; one has at least five vertices, contrary to
+the absence of a red `K_5`.  Thus red cannot be disconnected.
+
+For the other color we use the following small edge lemma.
+
+```text
+Every (5,5;19) graph has at least 43 edges.              (R5519-edge)
+```
+
+To prove it, suppose `F` has at most 42 edges.  If a vertex has degree
+`d<=3`, the complement of `F` on its `18-d` nonneighbors is a `(4,5)` Ramsey
+graph.  The exact values
+
+```text
+E(4,5,15)=66, E(4,5,16)=72, E(4,5,17)=79, E(4,5,18)=85
+```
+
+give respective lower bounds `42,50,58,68` on `e(F)` as `d=3,2,1,0`.
+Equality for `d=3` leaves the three neighbors mutually nonadjacent and
+anticomplete to the other 15 vertices, yielding an independent five-set.
+Hence `delta(F)>=4`; averaging supplies a degree-four vertex `v`.
+
+Let `N` be its four neighbors and `S` its 14 nonneighbors.  The complement
+of `F[S]` is a `(4,5;14)` graph, so `e(F[S])>=31`.  Put
+`a=e(F[N])`, `b=e_F(N,S)`, and `z=a+b`.  Since `N` is `K_4`-free, `a<=5`;
+the minimum-degree bound gives `2a+b>=12`.  If `e(F[S])>=32`, then `z<=6`
+and `2a+b=a+z<=11`, a contradiction.  Therefore `e(F[S])=31`, and the
+same inequalities force `a=5`, `b=2`, `z=7`.  The complement of `F[S]` is
+the unique 60-edge `(4,5;14)` graph.  Its 80 triangles have vertex
+transversal number four, as the verifier checks directly from the catalog's
+graph6 representative.  The missing edge `xy` of `F[N]` has at most two
+neighbors in `S`, so some independent triple of `F[S]` avoids all of them.
+Together with `x,y` it is an independent five-set, proving `(R5519-edge)`.
+
+Finally, if blue were disconnected on `D`, the red graph would have at least
+184 edges there.  This leaves at least `449+184-21*24=129` red edges, hence
+at most 42 blue edges, on `O`, contradicting `(R5519-edge)`.  The last
+`M=218` profile therefore has both backbone colors connected.
+
+Exact enumeration of all 349 ordered split profiles now gives
 
 | `M` | all | proved connected | diameter <=8 (`L>=29`) | diameter <=5 (`L>=32`) | escapes |
 |---:|---:|---:|---:|---:|---:|
@@ -516,7 +612,7 @@ least `448+200-21*25=123` edges on the 18 outside vertices.  This contradicts
 | 215 | 5 | 5 | 2 | 0 | 0 |
 | 216 | 17 | 17 | 11 | 5 | 0 |
 | 217 | 40 | 40 | 30 | 16 | 0 |
-| 218 | 69 | 68 | 52 | 28 | 1 |
+| 218 | 69 | 69 | 52 | 28 | 0 |
 | 219 | 95 | 89 | 70 | 37 | 6 |
 | 220 | 122 | 112 | 88 | 49 | 10 |
 
@@ -535,12 +631,12 @@ disconnected after deleting at most `d-27` vertices, so
 vertex-connectivity of each color on D >= d-26 >= L-26.   (Profile-kappa)
 ```
 
-In total, 332 of the 349 profiles force both color backbones connected.  The
+In total, 333 of the 349 profiles force both color backbones connected.  The
 numbers of profiles certifying vertex connectivity at least
 `k=1,2,...,11` in each color are respectively
 
 ```text
-332, 291, 253, 231, 193, 135, 128, 97, 22, 22, 20.
+333, 291, 253, 231, 193, 135, 128, 97, 22, 22, 20.
 ```
 
 The same internal-degree bound also controls diameters.  A color geodesic
@@ -552,18 +648,17 @@ certifies both-color diameter at most eight in 253 profiles and at most five
 in 135 profiles.  (The earlier `M=214,215` arguments certify some stronger
 bounds outside these two generic counts.)
 
-The 17 surviving connectivity escapes have lower-bound multiplicities
+The 16 surviving connectivity escapes have lower-bound multiplicities
 
 ```text
-M=218: L=24             -> 1
 M=219: L=23,24,25       -> 1,2,3
 M=220: L=22,23,24,25    -> 1,2,3,4.
 ```
 
 The complete machine-readable list is
-[`BACKBONE_ESCAPE_PROFILES.txt`](BACKBONE_ESCAPE_PROFILES.txt).  Its 17
+[`BACKBONE_ESCAPE_PROFILES.txt`](BACKBONE_ESCAPE_PROFILES.txt).  Its 16
 canonical data lines have SHA-256
-`1271fc7f2b002c8ae45c216be31603abf6e339fa69abb943986dcce07e4f1ccb`,
+`10ab59a22595799f02493c84d72965cff106024a947eb808b583c30b03071a51`,
 and the verifier regenerates it exactly.  For an escape profile that is
 actually disconnected, `L<=|D|<=25`.  The number of excess units not forced
 to serve distinct nonexact degree-21 vertices is exactly
@@ -746,18 +841,32 @@ PASS M=216 red backbone order=26,...,36 is connected with diameter<=8
 PASS M=216 blue disconnection forces two 13-vertex critical components
 PASS C13(1,5) gives a sharp disconnected-blue abstract backbone
 PASS outside-edge obstructions eliminate d=26 and M217/218 d=25 cuts
-PASS both-color connectivity profiles M214..220=1/1,5/5,17/17,40/40,68/69,89/95,112/122
-PASS backbone escape profiles=0,0,0,0,1,6,10 total=17 sha256=1271fc7f2b002c8ae45c216be31603abf6e339fa69abb943986dcce07e4f1ccb
+PASS small R(3,5) catalog minima at orders 11,12,13 are 15,20,26
+PASS every R(5,5;19) graph has at least 43 edges
+PASS the unique M=218 profile has both backbone colors connected
+PASS both-color connectivity profiles M214..220=1/1,5/5,17/17,40/40,69/69,89/95,112/122
+PASS backbone escape profiles=0,0,0,0,0,6,10 total=16 sha256=10ab59a22595799f02493c84d72965cff106024a947eb808b583c30b03071a51
 PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135
-PASS profile vertex-connectivity counts k=1,...,11 are 332,291,253,231,193,135,128,97,22,22,20
+PASS profile vertex-connectivity counts k=1,...,11 are 333,291,253,231,193,135,128,97,22,22,20
 PASS first-degree-feasible tests have 0 secondary exact anchors
 PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0
 PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21
 ```
 
-The audit uses CPython 3.11 or later, the standard library, exact integer
-arithmetic, and no solver, randomness, floating point, network, or external
-data.  It took about 2.0 seconds under CPython 3.11.2 on the research host.
+The main audit uses CPython 3.11 or later, the standard library, exact integer
+arithmetic, and no solver, randomness, floating point, or network.  It embeds
+the one small graph6 representative needed for the order-19 lemma and took
+about 2.1 seconds under CPython 3.11.2 on the research host.  The separate
+provenance audit fetches the pinned official catalog files and checks their
+SHA-256 digests, counts, Ramsey properties, edge histograms, and the extremal
+singleton:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 verify_catalog_inputs.py
+```
+
+It uses only the standard library and network access; its dominant input is
+the approximately 91 MB compressed edge-extremal `(4,5)` archive.
 
 ## Scope, provenance, and trust boundary
 
@@ -768,8 +877,15 @@ count imports the companion
 theorem, including its stated trust in the completeness of the pinned McKay
 `(4,5)` extremal catalogs.  The backbone connectivity corollaries additionally
 use the classical exact values `R(5,3)=14` and `R(3,4)=9`, and the `M=216`
-red result uses Brooks' theorem.  The sharp auxiliary circulant is checked
-directly.  The anchored representation and mixed-clique constraints come from
+red result uses Brooks' theorem.  The `M=218` closure additionally trusts
+[McKay's complete small `(3,5)` catalogs](https://users.cecs.anu.edu.au/~bdm/data/ramsey.html)
+and the edge-extremal `(4,5)` census summarized in
+[Angeltveit--McKay's Table 1](https://onlinelibrary.wiley.com/doi/full/10.1002/jgt.70029).
+The downloaded catalog bytes and all properties actually used are audited by
+`verify_catalog_inputs.py`; completeness of the source censuses remains the
+external trust boundary.  The sharp auxiliary circulant and the unique
+order-14 triangle-transversal certificate are checked directly.  The anchored
+representation and mixed-clique constraints come from
 [`ramsey_r55_doubly_exact_cross_normal_form`](../ramsey_r55_doubly_exact_cross_normal_form).
 
 Discovery Net was searched through indexed height 2034 for the `R(5,5)`
