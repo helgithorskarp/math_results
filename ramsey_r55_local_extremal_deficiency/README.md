@@ -18,7 +18,8 @@ There is a sharper dichotomy.  Either some color-neighborhood is within six
 edges of its maximum, or at least 66 of the 86 color-neighborhoods have
 **exactly** seven fewer edges than their order-specific maxima.  In the second
 case the degree sequence is strongly concentrated around 21 in the precise
-weighted sense proved below.
+weighted sense proved below.  Up to exchanging the two colors, only 104
+integer degree-count profiles survive that hard branch.
 
 This is a necessary condition, not a construction of a 43-vertex Ramsey graph
 and not an exclusion of all such graphs.
@@ -125,24 +126,39 @@ If no deficiency is at most six, all 86 are at least seven and their baseline
 sum is `86*7=602`.  At most 20 units remain before the upper bound 622.  Every
 deficiency greater than seven consumes at least one of those units, so at
 least `86-20=66` deficiencies equal seven exactly.  Moreover, (2) and
-`Delta>=602` give the hard-case degree constraint
+`Delta>=602` first give the hard-case degree constraint
 
 ```text
 21(x_18+x_24) + 12(x_19+x_23) + 3(x_20+x_22) <= 43.     (4)
+```
+
+The left side of (4) is divisible by three.  It is also odd, because by (2)
+it equals the odd number `1247-2 Delta`.  It is therefore at most 39, not
+merely 43.  In particular, every hard-case coloring satisfies
+
+```text
+Delta >= (1247-39)/2 = 604.                            (5)
 ```
 
 Equations (3) and (4), together with handshaking parity, are compact durable
 constraints for a construction encoding.  For example, (4) immediately
 allows at most two degree-18-or-24 vertices and at most three
 degree-19-or-23 vertices, with the joint weighted budget being the stronger
-statement.
+statement.  After possibly exchanging red and blue, assume that red has at
+most 451 edges, or equivalently that the degree sum is at most 902.  Direct
+enumeration of nonnegative integer counts `x_18,...,x_24` subject to their sum
+being 43, this normalization, handshaking parity, and the sharpened
+weight-at-most-39 constraint leaves exactly 104 profiles.  Their degree sums
+range from 890 to 902.  These are necessary integer profiles, not an assertion
+that all 104 are realizable Ramsey graphs.
 
 ## Reproduction
 
 The standard-library verifier checks the extrema manifest, derives every
 coefficient in (1), and uses a dynamic program over all 43-term degree lists
 to confirm that 1244 is the largest possible value of `2 Delta` subject to
-handshaking parity.  It then checks the dichotomy arithmetic and (4).
+handshaking parity.  It then checks the dichotomy arithmetic, sharpens (4) to
+39, and enumerates the 104 complement-normalized hard-case degree profiles.
 
 ```bash
 python3 verify_deficiency.py | cmp - EXPECTED_OUTPUT.txt
@@ -155,7 +171,8 @@ PASS exact R(4,5;k) maxima pinned for k=18,...,24
 PASS twice-deficiency coefficients=18:8,19:17,20:26,21:29,22:26,23:17,24:8
 PASS total local deficiency <=622 over 86 color-neighborhoods
 PASS either one deficiency <=6 or at least 66 deficiencies equal 7
-PASS hard-case degree weight <=43
+PASS hard-case degree weight <=39 and deficiency >=604
+PASS hard-case complement-normalized degree-count profiles=104
 ```
 
 An optional upstream-data audit checks both pinned SHA-256 values, verifies

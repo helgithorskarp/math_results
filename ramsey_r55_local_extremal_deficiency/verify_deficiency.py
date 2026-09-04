@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import io
+import itertools
 import json
 import re
 import tarfile
@@ -151,6 +152,43 @@ def audit_identity(document: dict[str, object]) -> None:
     # 1247 - 2*Delta <= 43 is exactly this weighted degree concentration.
     if 29 * N - 2 * baseline != 43:
         raise AssertionError("wrong hard-case degree budget")
+    # The weight is a multiple of three, and it is odd because 1247-2*Delta
+    # is odd.  The apparent bound 43 therefore sharpens to 39.
+    hard_weight_maximum = 39
+    if hard_weight_maximum % 6 != 3 or hard_weight_maximum + 6 <= 43:
+        raise AssertionError(hard_weight_maximum)
+    if (1247 - hard_weight_maximum) // 2 != 604:
+        raise AssertionError("wrong hard-case deficiency minimum")
+
+    # Color complementation sends every degree d to 42-d.  Normalize to at
+    # most 451 red edges, hence degree sum at most 902.  Enumerate the small
+    # integer-profile superset forced by the weight bound (graphicality and
+    # all deeper Ramsey constraints are deliberately not assumed here).
+    noncentral_degrees = (18, 19, 20, 22, 23, 24)
+    count_ranges = [range(43 // degree_weights[degree] + 1) for degree in noncentral_degrees]
+    hard_profiles = []
+    for noncentral_counts in itertools.product(*count_ranges):
+        used = sum(noncentral_counts)
+        if used > N:
+            continue
+        counts = dict(zip(noncentral_degrees, noncentral_counts, strict=True))
+        counts[21] = N - used
+        weight = sum(degree_weights[degree] * counts.get(degree, 0) for degree in LOCAL_ORDERS)
+        degree_sum = sum(degree * counts.get(degree, 0) for degree in LOCAL_ORDERS)
+        if weight <= hard_weight_maximum and degree_sum % 2 == 0 and degree_sum <= 902:
+            hard_profiles.append((counts, weight, degree_sum))
+    if len(hard_profiles) != 104:
+        raise AssertionError(len(hard_profiles))
+    weight_histogram = Counter(weight for _, weight, _ in hard_profiles)
+    if weight_histogram != Counter({3: 1, 9: 2, 15: 5, 21: 9, 27: 17, 33: 27, 39: 43}):
+        raise AssertionError(weight_histogram)
+    if (min(item[2] for item in hard_profiles), max(item[2] for item in hard_profiles)) != (890, 902):
+        raise AssertionError("wrong normalized degree-sum range")
+    maximum_delta_profiles = [
+        counts for counts, weight, _ in hard_profiles if (1247 - weight) // 2 == 622
+    ]
+    if maximum_delta_profiles != [{18: 0, 19: 0, 20: 1, 22: 0, 23: 0, 24: 0, 21: 42}]:
+        raise AssertionError(maximum_delta_profiles)
 
     print("PASS exact R(4,5;k) maxima pinned for k=18,...,24")
     print(
@@ -159,7 +197,8 @@ def audit_identity(document: dict[str, object]) -> None:
     )
     print("PASS total local deficiency <=622 over 86 color-neighborhoods")
     print("PASS either one deficiency <=6 or at least 66 deficiencies equal 7")
-    print("PASS hard-case degree weight <=43")
+    print("PASS hard-case degree weight <=39 and deficiency >=604")
+    print(f"PASS hard-case complement-normalized degree-count profiles={len(hard_profiles)}")
 
 
 def main() -> None:
