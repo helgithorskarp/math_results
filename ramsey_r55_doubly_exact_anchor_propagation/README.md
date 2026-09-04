@@ -346,6 +346,40 @@ steps.  A construction or consistency checker can propagate reanchored core
 constraints through this connected backbone instead of treating the 28--30
 anchors as unrelated splits.
 
+### The `M=215` backbone is also connected in both colors
+
+The next branch retains a weaker but still global reanchoring network.  The
+`241-M` theorem and the exact split-profile list give
+
+```text
+27 <= |D| <= 33,
+minimum degree of G[D]               >= 11,
+minimum degree of complement(G)[D]   >= 10.              (M215-backbone)
+```
+
+The upper bound is the maximum number of degree-21 vertices among the five
+`M=215` split profiles.  Turan's theorem makes every red component have order
+at least 15 and every blue component order at least 14.  The exact classical
+value `R(5,3)=14` says that a `K_5`-free graph on at least 14 vertices has an
+independent triple.  If either color graph on `D` had two components, take an
+opposite-color triangle in each; all edges between the components have that
+opposite color, producing a forbidden monochromatic clique (indeed a
+six-clique).  Thus both color graphs are connected.
+
+After deleting one vertex, a red component still has minimum degree at least
+10 and hence order at least 14 by Turan.  The same Ramsey argument rules out
+two components, so the red backbone has vertex connectivity at least two.
+Finally, disjoint closed-neighborhood packing gives
+
+```text
+diameter of G[D]               <= 5,   since 3*(11+1)>33,
+diameter of complement(G)[D]   <= 8,   since 4*(10+1)>33.
+```
+
+The `M=216` minimum degrees no longer force every hypothetical component to
+reach order 14, so this particular connectivity proof stops sharply after
+`M=215`.
+
 ## Hard-branch propagation theorem
 
 For `18 <= q <= 24`, the exact maximum edge counts in an order-`q`
@@ -507,6 +541,8 @@ PASS M=214 forces monochromatic triangle counts red=1403 blue=1463
 PASS M=214 exact-anchor backbone order=28,...,30 min degrees red=13 blue=12
 PASS backbone vertex connectivity is at least red=4 blue=2
 PASS both backbone colors have diameter at most 5
+PASS M=215 exact-anchor backbone order=27,...,33 min degrees red=11 blue=10
+PASS M=215 backbones connected; red connectivity>=2 diameters red<=5 blue<=8
 PASS first-degree-feasible tests have 0 secondary exact anchors
 PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0
 PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21
@@ -514,7 +550,7 @@ PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21
 
 The audit uses CPython 3.11 or later, the standard library, exact integer
 arithmetic, and no solver, randomness, floating point, network, or external
-data.  It took about 3.8 seconds under CPython 3.11.2 on the research host.
+data.  It took about 1.2 seconds under CPython 3.11.2 on the research host.
 
 ## Scope, provenance, and trust boundary
 
@@ -523,8 +559,9 @@ the definition of a local color-neighborhood.  The `241-M` secondary-anchor
 count imports the companion
 [`ramsey_r55_local_extremal_deficiency`](../ramsey_r55_local_extremal_deficiency)
 theorem, including its stated trust in the completeness of the pinned McKay
-`(4,5)` extremal catalogs.  The anchored representation and mixed-clique
-constraints come from
+`(4,5)` extremal catalogs.  The `M=215` connectivity corollary additionally
+uses the classical exact value `R(5,3)=14`.  The anchored representation and
+mixed-clique constraints come from
 [`ramsey_r55_doubly_exact_cross_normal_form`](../ramsey_r55_doubly_exact_cross_normal_form).
 
 Discovery Net was searched through indexed height 2034 for the `R(5,5)`

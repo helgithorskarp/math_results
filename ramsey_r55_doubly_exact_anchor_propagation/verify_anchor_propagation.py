@@ -632,6 +632,47 @@ def main() -> None:
                for minimum_degree in backbone_minimum_degrees):
         raise AssertionError("closed-neighborhood packing does not bound diameter")
 
+    # The five M=215 degree profiles have at most 33 degree-21 vertices, while
+    # the anchor multiplicity and side bounds give order >=27 and minimum
+    # red/blue degrees 11/10.  Turan component orders reach R(5,3)=14 in both
+    # colors, so two components would combine independent triples into a
+    # forbidden opposite-color clique.
+    ramsey_5_3 = 14
+    m215_pairs = split_profiles[215]
+    m215_order_bounds = (
+        242 - 215,
+        max(first_counts[3] + second_counts[3] + 1
+            for _, first_counts, second_counts in m215_pairs),
+    )
+    m215_minimum_degrees = (441 - 2 * 215, 440 - 2 * 215)
+    m215_component_orders = tuple(
+        next(
+            order
+            for order in range(minimum_degree + 1, m215_order_bounds[1] + 1)
+            if 2 * turan_edges(order, 4) >= minimum_degree * order
+        )
+        for minimum_degree in m215_minimum_degrees
+    )
+    m215_red_after_one_deletion = next(
+        order
+        for order in range(m215_minimum_degrees[0], m215_order_bounds[1] + 1)
+        if 2 * turan_edges(order, 4) >= (m215_minimum_degrees[0] - 1) * order
+    )
+    if m215_order_bounds != (27, 33):
+        raise AssertionError(m215_order_bounds)
+    if m215_minimum_degrees != (11, 10):
+        raise AssertionError(m215_minimum_degrees)
+    if m215_component_orders != (15, 14):
+        raise AssertionError(m215_component_orders)
+    if not all(order >= ramsey_5_3 for order in m215_component_orders):
+        raise AssertionError("Ramsey component argument does not force connectivity")
+    if m215_red_after_one_deletion != ramsey_5_3:
+        raise AssertionError(m215_red_after_one_deletion)
+    if 3 * (m215_minimum_degrees[0] + 1) <= m215_order_bounds[1]:
+        raise AssertionError("wrong M=215 red diameter packing")
+    if 4 * (m215_minimum_degrees[1] + 1) <= m215_order_bounds[1]:
+        raise AssertionError("wrong M=215 blue diameter packing")
+
     # If W is the degree weight, at most W/3 secondary vertices are
     # noncentral and at most (43-W)/2 local sides exceed deficiency seven.
     # Audit both the structural 241-M lower bound and its attainment within
@@ -681,6 +722,8 @@ def main() -> None:
     print("PASS M=214 exact-anchor backbone order=28,...,30 min degrees red=13 blue=12")
     print("PASS backbone vertex connectivity is at least red=4 blue=2")
     print("PASS both backbone colors have diameter at most 5")
+    print("PASS M=215 exact-anchor backbone order=27,...,33 min degrees red=11 blue=10")
+    print("PASS M=215 backbones connected; red connectivity>=2 diameters red<=5 blue<=8")
     print("PASS first-degree-feasible tests have 0 secondary exact anchors")
     print("PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0")
     print("PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21")
