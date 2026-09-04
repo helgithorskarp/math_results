@@ -6,12 +6,12 @@ The verdict is acceptance with high confidence.
 
 ## Universal argument
 
-Let an (M)-cell box have an optimal partition into
-(Q=\lfloor M/s\rfloor) coordinate-line parts of size at least (s), and
-write (M=sQ+\tau), (p=sv+c), with (0\leq \tau,c<s).  In
-(B\times[p]), partition the first (sv) cells on each new-coordinate
-line into (v) exact (s)-sets.  This gives (vM) parts.  Put a copy of
-the base partition in each of the remaining (c) layers, giving (cQ)
+Let an $M$-cell box have an optimal partition into
+$Q=\lfloor M/s\rfloor$ coordinate-line parts of size at least $s$, and
+write $M=sQ+\tau$, $p=sv+c$, with $0\leq \tau,c<s$.  In
+$B\times[p]$, partition the first $sv$ cells on each new-coordinate
+line into $v$ exact $s$-sets.  This gives $vM$ parts.  Put a copy of
+the base partition in each of the remaining $c$ layers, giving $cQ$
 more.  The families are disjoint, cover the product, and remain in coordinate
 lines.  Since
 
@@ -19,13 +19,29 @@ lines.  Since
  Mp=s(vM+cQ)+c\tau,
 \]
 
-the condition (c\tau<s) makes their number exactly
-(\lfloor Mp/s\rfloor), which is optimal by the part-size bound.  This also
-checks the boundary cases (c=0) and \(\tau=0\).
+the condition $c\tau<s$ makes their number exactly
+$\lfloor Mp/s\rfloor$, which is optimal by the part-size bound.  This also
+checks the boundary cases $c=0$ and $\tau=0$.
 
-For a three-dimensional minor-box line part (P), lifting to the colour class
-([n_1]\times P) gives each vertex
-((n_1-1)+(|P|-1)\geq N_1+s-1=h) same-colour neighbours.  The independently
+There is a useful multi-coordinate sharpening.  Suppose sides
+$p_1,\ldots,p_r$ are to be appended and put $c_i=p_i\bmod s$.  After each
+successful step the new volume remainder is exactly the old remainder times
+$c_i$, because that product is below $s$.  Consequently, an order in which
+every step succeeds exists exactly when
+
+\[
+ \tau\prod_{i=1}^r c_i<s.
+\]
+
+If every residue is positive, every order works because the successive
+prefix products never exceed the final product.  If a zero residue occurs,
+placing that side first makes the remainder zero and all later steps
+automatic.  This converts the contribution's informal iterability statement
+into a single order-free existence criterion.
+
+For a three-dimensional minor-box line part $P$, lifting to the colour class
+$[n_1]\times P$ gives each vertex
+$(n_1-1)+(|P|-1)\geq N_1+s-1=h$ same-colour neighbours.  The independently
 reviewed first/second-shell theorem supplies the matching upper bound, so the
 claimed four-dimensional value follows.
 
@@ -36,15 +52,15 @@ For the proposed family, direct substitution gives
  (n_2,n_3,n_4)\bmod s=(k+1,2,2).
 \]
 
-The pair remainder is (2(k+1)\bmod s=1), so the new condition is (2<s).
+The pair remainder is $2(k+1)\bmod s=1$, so the new condition is $2<s$.
 Moreover
 
 \[
  (3k+2)(2k+3)^2=(2k+1)(6k^2+19k+16)+2.
 \]
 
-The residue product is (2s+2), no minor side or pair product is divisible
-by (s), and every old full-side multiplier is at least (s).  Thus the
+The residue product is $2s+2$, no minor side or pair product is divisible
+by $s$, and every old full-side multiplier is at least $s$.  Thus the
 family is genuinely outside the earlier criteria cited by the contribution.
 
 ## Independent computation
@@ -58,10 +74,12 @@ the exact quotient count.  This is an algorithmically independent bounded
 reproduction of the target's use of the cyclic rectangle theorem.
 
 The checker also constructs all 78 minor parts for the base case
-(K_{12}\square K_8\square K_7\square K_7), lifts them to a colouring of all
+$K_{12}\square K_8\square K_7\square K_7$, lifts them to a colouring of all
 4,704 vertices, and directly counts same-colour neighbours.  Finally it
 audits the polynomial identities and exclusion from every stated previous
-criterion for (2\leq k\leq10{,}000).
+criterion for $2\leq k\leq10{,}000$.  It also reconstructs four-dimensional
+line partitions obtained by two successive append operations and verifies
+the compact residue-product criterion above.
 
 Run with CPython 3.12 or later:
 

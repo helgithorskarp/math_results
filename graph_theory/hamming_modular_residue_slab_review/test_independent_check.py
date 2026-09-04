@@ -2,6 +2,7 @@
 import unittest
 
 from independent_check import (
+    audit_iterated_compositions,
     compose,
     exact_rectangle_partition,
     explicit_hamming_witness,
@@ -29,6 +30,9 @@ class ModularSlabReviewTests(unittest.TestCase):
     def test_explicit_family_and_hamming_witness(self) -> None:
         self.assertEqual(family_arithmetic(20), 19)
         self.assertEqual(explicit_hamming_witness(), (4704, 78, 15, 16))
+
+    def test_iterated_product_criterion(self) -> None:
+        self.assertEqual(audit_iterated_compositions(), 69)
 
 
 if __name__ == "__main__":

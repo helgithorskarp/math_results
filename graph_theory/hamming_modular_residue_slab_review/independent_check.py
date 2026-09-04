@@ -189,6 +189,32 @@ def audit_small_compositions() -> tuple[int, int, int, int]:
     return rectangles, compositions, composed_parts, beyond_old
 
 
+def audit_iterated_compositions() -> int:
+    """Check the compact product criterion for two appended coordinates."""
+    checked = 0
+    for s in range(2, 6):
+        dimensions = (s + 1, s + 2)
+        base = exact_rectangle_partition(*dimensions, s)
+        tau = math.prod(dimensions) % s
+        for p in range(1, s + 3):
+            for q in range(1, s + 3):
+                if tau * (p % s) * (q % s) >= s:
+                    continue
+                appendages = [p, q]
+                appendages.sort(key=lambda side: (side % s != 0, side))
+                parts: tuple[Part, ...] = base
+                current_dimensions = dimensions
+                for side in appendages:
+                    parts = compose(parts, current_dimensions, side, s)
+                    current_dimensions += (side,)
+                validate_partition(parts, current_dimensions, s)
+                assert math.prod(current_dimensions) % s == (
+                    tau * (p % s) * (q % s)
+                )
+                checked += 1
+    return checked
+
+
 def previous_criterion(sides: Sequence[int], s: int) -> bool:
     residues = [side % s for side in sides]
     residue_volume = math.prod(residues)
@@ -276,6 +302,7 @@ def explicit_hamming_witness() -> tuple[int, int, int, int]:
 def main() -> None:
     identities = audit_floor_identity()
     rectangles, compositions, parts, beyond_old = audit_small_compositions()
+    iterated = audit_iterated_compositions()
     family = family_arithmetic()
     vertices, colours, minimum, maximum = explicit_hamming_witness()
     print(f"floor identities checked: {identities}")
@@ -283,6 +310,7 @@ def main() -> None:
     print(f"small modular compositions checked: {compositions}")
     print(f"composed line parts checked: {parts}")
     print(f"small compositions beyond old full-side test: {beyond_old}")
+    print(f"iterated two-coordinate compositions checked: {iterated}")
     print(f"infinite-family indices checked: {family}")
     print(f"K12xK8xK7xK7 vertices checked: {vertices}")
     print(f"K12xK8xK7xK7 colours: {colours}")
