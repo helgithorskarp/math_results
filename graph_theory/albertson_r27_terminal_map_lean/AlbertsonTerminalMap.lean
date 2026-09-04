@@ -4,7 +4,8 @@ import Std
 Kernel-checked finite layer of the terminal-triangulation argument used at
 the Albertson r = 27 frontier.  This file intentionally does not formalize
 Jordan separation, the face-tracing translation from a good drawing, or the
-sealed-region provenance lemma.
+sealed-region provenance lemma.  It records a constructive disk shelling but
+does not formalize the elementary topological triangle-gluing lemma.
 -/
 
 namespace AlbertsonTerminalMap
@@ -110,8 +111,14 @@ def faceDarts (face : OrientedFace) : List Dart :=
    (face.second, face.third),
    (face.third, face.first)]
 
+def shellFace0 : OrientedFace := ⟨U, Z, W⟩
+def shellFace1 : OrientedFace := ⟨W, Z, X⟩
+def shellFace2 : OrientedFace := ⟨Z, T, X⟩
+def shellFace3 : OrientedFace := ⟨T, R, X⟩
+def shellFace4 : OrientedFace := ⟨R, W, X⟩
+
 def orientedFaces : List OrientedFace :=
-  [⟨U, Z, W⟩, ⟨W, Z, X⟩, ⟨Z, T, X⟩, ⟨T, R, X⟩, ⟨R, W, X⟩]
+  [shellFace0, shellFace1, shellFace2, shellFace3, shellFace4]
 
 def orientedOccurrences : List Dart := orientedFaces.flatMap faceDarts
 
@@ -213,6 +220,137 @@ def isClosedDartCycle : List Dart → Bool
         match (first :: rest).getLast? with
         | some last => last.2 == first.1
         | none => false
+
+def orientedOccurrencesFor (faces : List OrientedFace) : List Dart :=
+  faces.flatMap faceDarts
+
+def dartMultiplicityIn (faces : List OrientedFace) (dart : Dart) : Nat :=
+  ((orientedOccurrencesFor faces).filter fun candidate => candidate == dart).length
+
+def allDarts : List Dart :=
+  allPlanarVertices.flatMap fun left =>
+    allPlanarVertices.filterMap fun right =>
+      if left == right then none else some (left, right)
+
+def allPlanarEdges : List Dart :=
+  allDarts.filter fun dart => planarRank dart.1 < planarRank dart.2
+
+def boundaryDartsOf (faces : List OrientedFace) : List Dart :=
+  allDarts.filter fun dart =>
+    dartMultiplicityIn faces dart == 1 &&
+      dartMultiplicityIn faces (reverseDart dart) == 0
+
+def sameDartSet (left right : List Dart) : Bool :=
+  left.all (fun dart => right.contains dart) &&
+    right.all (fun dart => left.contains dart)
+
+def faceVertices (face : OrientedFace) : List PlanarVertex :=
+  [face.first, face.second, face.third]
+
+def verticesInFaces (faces : List OrientedFace) : List PlanarVertex :=
+  faces.flatMap faceVertices
+
+def verticesOfDarts (darts : List Dart) : List PlanarVertex :=
+  darts.flatMap fun dart => [dart.1, dart.2]
+
+def sameVertexSet (left right : List PlanarVertex) : Bool :=
+  left.all (fun vertex => right.contains vertex) &&
+    right.all (fun vertex => left.contains vertex)
+
+def faceUndirectedEdges (face : OrientedFace) : List Dart :=
+  (faceDarts face).map fun dart => planarEdge dart.1 dart.2
+
+def complexEdges (faces : List OrientedFace) : List Dart :=
+  allPlanarEdges.filter fun edge =>
+    (orientedOccurrencesFor faces).contains edge ||
+      (orientedOccurrencesFor faces).contains (reverseDart edge)
+
+def sharedEdges (faces : List OrientedFace) (next : OrientedFace) : List Dart :=
+  (faceUndirectedEdges next).filter fun edge => (complexEdges faces).contains edge
+
+def sharedVertices (faces : List OrientedFace) (next : OrientedFace) :
+    List PlanarVertex :=
+  (faceVertices next).filter fun vertex => (verticesInFaces faces).contains vertex
+
+def arcEdges (arc : List Dart) : List Dart :=
+  arc.map fun dart => planarEdge dart.1 dart.2
+
+def newVertices (faces : List OrientedFace) (next : OrientedFace) :
+    List PlanarVertex :=
+  (faceVertices next).filter fun vertex => !(verticesInFaces faces).contains vertex
+
+/-- `next` meets the preceding triangle complex in exactly the displayed
+connected proper boundary arc, with the opposite orientation on every glued
+edge.  Exact shared-edge and shared-vertex tests exclude hidden pinches. -/
+def ExactBoundaryAttachment (faces : List OrientedFace) (next : OrientedFace)
+    (arc : List Dart) : Prop :=
+  0 < arc.length ∧
+  arc.length < (faceDarts next).length ∧
+  arc.length < (boundaryDartsOf faces).length ∧
+  (faceVertices next).Nodup ∧
+  arc.Nodup ∧
+  (arcEdges arc).Nodup ∧
+  isDartPath arc = true ∧
+  arc.all (fun dart => (boundaryDartsOf faces).contains dart) = true ∧
+  arc.all (fun dart => (faceDarts next).contains (reverseDart dart)) = true ∧
+  sameDartSet (sharedEdges faces next) (arcEdges arc) = true ∧
+  sameVertexSet (sharedVertices faces next) (verticesOfDarts arc) = true
+
+def shellStage1 : List OrientedFace := [shellFace0]
+def shellStage2 : List OrientedFace := shellStage1 ++ [shellFace1]
+def shellStage3 : List OrientedFace := shellStage2 ++ [shellFace2]
+def shellStage4 : List OrientedFace := shellStage3 ++ [shellFace3]
+def shellStage5 : List OrientedFace := shellStage4 ++ [shellFace4]
+
+def shellArc1 : List Dart := [(Z, W)]
+def shellArc2 : List Dart := [(Z, X)]
+def shellArc3 : List Dart := [(T, X)]
+def shellArc4 : List Dart := [(R, X), (X, W)]
+
+def shellBoundary1 : List Dart := [(U, Z), (Z, W), (W, U)]
+def shellBoundary2 : List Dart := [(U, Z), (Z, X), (X, W), (W, U)]
+def shellBoundary3 : List Dart := [(U, Z), (Z, T), (T, X), (X, W), (W, U)]
+def shellBoundary4 : List Dart :=
+  [(U, Z), (Z, T), (T, R), (R, X), (X, W), (W, U)]
+def shellBoundary5 : List Dart := outerDarts
+
+/-- A constructive shelling of the five triangles.  Starting from one
+triangle, the next three triangles attach along one boundary edge and the
+last attaches along the boundary path R-X-W.  Every simplex intersection and
+every intermediate boundary is computed from the face list. -/
+theorem disk_shelling_certificate :
+    orientedFaces = shellStage5 ∧
+    (faceVertices shellFace0).Nodup ∧
+    (faceVertices shellFace1).Nodup ∧
+    (faceVertices shellFace2).Nodup ∧
+    (faceVertices shellFace3).Nodup ∧
+    (faceVertices shellFace4).Nodup ∧
+    sameDartSet (boundaryDartsOf shellStage1) shellBoundary1 = true ∧
+    sameDartSet (boundaryDartsOf shellStage2) shellBoundary2 = true ∧
+    sameDartSet (boundaryDartsOf shellStage3) shellBoundary3 = true ∧
+    sameDartSet (boundaryDartsOf shellStage4) shellBoundary4 = true ∧
+    sameDartSet (boundaryDartsOf shellStage5) shellBoundary5 = true ∧
+    isClosedDartCycle shellBoundary1 = true ∧
+    isClosedDartCycle shellBoundary2 = true ∧
+    isClosedDartCycle shellBoundary3 = true ∧
+    isClosedDartCycle shellBoundary4 = true ∧
+    isClosedDartCycle shellBoundary5 = true ∧
+    (boundaryDartsOf shellStage1).length = 3 ∧
+    (boundaryDartsOf shellStage2).length = 4 ∧
+    (boundaryDartsOf shellStage3).length = 5 ∧
+    (boundaryDartsOf shellStage4).length = 6 ∧
+    (boundaryDartsOf shellStage5).length = 5 ∧
+    ExactBoundaryAttachment shellStage1 shellFace1 shellArc1 ∧
+    ExactBoundaryAttachment shellStage2 shellFace2 shellArc2 ∧
+    ExactBoundaryAttachment shellStage3 shellFace3 shellArc3 ∧
+    ExactBoundaryAttachment shellStage4 shellFace4 shellArc4 ∧
+    newVertices shellStage1 shellFace1 = [X] ∧
+    newVertices shellStage2 shellFace2 = [T] ∧
+    newVertices shellStage3 shellFace3 = [R] ∧
+    newVertices shellStage4 shellFace4 = [] := by
+  unfold ExactBoundaryAttachment
+  repeat' apply And.intro
+  all_goals decide
 
 /-- The five listed triangles have the claimed disk incidence data, Euler
 count, pentagonal boundary, and complementary five-edge crossing cycle. -/
@@ -350,6 +488,7 @@ theorem final_integer_certificate :
 #print axioms finite_terminal_map_certificate
 #print axioms vertex_link_certificate
 #print axioms face_boundary_connectivity_certificate
+#print axioms disk_shelling_certificate
 #print axioms profileA_certificate
 #print axioms profileB_certificate
 #print axioms final_integer_certificate

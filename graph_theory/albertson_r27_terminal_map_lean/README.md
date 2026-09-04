@@ -21,8 +21,19 @@ the terminal planarization has the exact Euler-triangulation counts used in
 the proof. Finally, the order-53 deletion sum has the nonzero remainder that
 forces the integer lower bound 6089, which exceeds `Z(27)=6084`.
 
+The face complex also has the constructive shelling
+
+```text
+uzw  --zw-->  zwx  --zx-->  ztx  --tx-->  trx  --rx,xw-->  rwx.
+```
+
+At each arrow the new triangle meets the preceding complex in exactly the
+displayed connected proper boundary arc, with opposite dart orientations.
+The successive boundary lengths are `3,4,5,6,5`, ending at
+`u-z-t-r-w-u`.
+
 [`AlbertsonTerminalMap.lean`](AlbertsonTerminalMap.lean) proves this statement
-as six closed theorems:
+as seven closed theorems:
 
 - `finite_terminal_map_certificate` checks all face multiplicities, the five
   boundary and five internal edges, Euler count `6+5=10+1`, an explicit
@@ -37,6 +48,11 @@ as six closed theorems:
 - `face_boundary_connectivity_certificate` derives the full dual adjacency
   graph, checks the spanning path `F0-F1-F2-F3-F4`, and proves that all five
   boundary darts form the single closed cycle `u-z-t-r-w-u`.
+- `disk_shelling_certificate` starts with `uzw` and checks all four triangle
+  attachments. It computes the exact shared edges and vertices, verifies that
+  each gluing arc is a proper connected part of the preceding boundary with
+  reversed orientation in the new face, excludes hidden edge intersections
+  and vertex pinches, and computes every intermediate closed boundary cycle.
 - `profileA_certificate` proves `C5=10`, terminal `(e,x)=(83,17)`, and
   planarization `(V,E,F)=(41,117,78)` together with both triangulation
   identities.
@@ -65,7 +81,7 @@ lean AlbertsonTerminalMap.lean | diff -u EXPECTED_OUTPUT.txt -
 sha256sum -c SHA256SUMS
 ```
 
-The expected transcript consists of six successful `#print axioms` audits.
+The expected transcript consists of seven successful `#print axioms` audits.
 The proofs use kernel reduction through `decide`; there is no `sorry`, `admit`,
 `native_decide`, `unsafe` definition, custom axiom, external oracle, generated
 code, or imported certificate.
@@ -76,8 +92,13 @@ Lean proves the consequences of the displayed finite face list and the two
 numeric profile records. It does **not** prove that a good drawing produces
 those faces. In particular, Jordan separation, the triangular-face tracing,
 the distinctness/provenance argument, and the sealed full-pentagon disks remain
-the geometric part of the proof. It also imports rather than formalizes the
-primary PRTT and Büngener--Kaufmann classifications and the exhaustive
+the geometric part of the proof. The formal shelling data reduces recognition
+of the displayed five-face complex as a disk to the elementary lemma that
+gluing a triangle to a disk along an exact connected proper boundary arc
+preserves a disk; that general topological lemma is stated informally rather
+than formalized here. No general surface-classification inference is needed
+for this particular complex. The package also imports rather than formalizes
+the primary PRTT and Büngener--Kaufmann classifications and the exhaustive
 derivation of the two profiles.
 
 Those bridges, their two independent reviews, the exact primary-source
