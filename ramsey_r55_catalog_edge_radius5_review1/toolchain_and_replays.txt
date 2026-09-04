@@ -1,0 +1,45 @@
+Independent radius-five sample replay, 2026-09-04
+=================================================
+
+Only one CPU-heavy process ran at a time.
+
+Compiler:
+  g++ (Debian 12.2.0-14+deb12u1) 12.2.0
+
+CaDiCaL:
+  https://github.com/arminbiere/cadical
+  tag rel-3.0.1
+  commit c60730422e758ef1cebe7aeddf2dda31c996bf04
+  version 3.0.1
+  libcadical.a SHA-256
+    351b5497822428e57927d539608eccbc6d20f4d6d49e91dcf34414ed08ed6f53
+
+Release enumerator command:
+  g++ -std=c++17 -O3 -Wall -Wextra -Wpedantic \
+    -I/path/to/cadical/src enumerate_five_flip_sat.cpp \
+    /path/to/cadical/build/libcadical.a -pthread -o enumerate
+
+  enumerate SHA-256
+    4a76fe5788f4f6b0548c121bdaf87472daca048151ea0dbc78cfb634ff948d03
+
+Complete one-thread samples:
+  parent=0   exact5=14 lower_models=58 clauses=1086702 ramsey_clauses=1076380
+  parent=152 exact5=36 lower_models=70 clauses=1087388 ramsey_clauses=1077066
+  parent=39  exact5=0  lower_models=12 clauses=1086736 ramsey_clauses=1076414
+  parent=327 exact5=2  lower_models=38 clauses=1086726 ramsey_clauses=1076404
+
+check_sample_replays.py verified equality of every emitted five-flip set with
+the corresponding committed map slice.
+
+Sanitizer wrapper command:
+  g++ -std=c++17 -O1 -g -Wall -Wextra -Wpedantic \
+    -fsanitize=address,undefined -fno-omit-frame-pointer \
+    -I/path/to/cadical/src enumerate_five_flip_sat.cpp \
+    /path/to/cadical/build/libcadical.a -pthread -o enumerate-sanitize
+
+  enumerate-sanitize SHA-256
+    64bd024960b305ad9f4e57cea5508fdbfb6cebb47c1c1c0ae656a0a779cb36b2
+
+The sanitizer wrapper replayed parent 39 without an ASan/UBSan diagnostic.
+The linked CaDiCaL archive was a release build, so sanitizer coverage applies
+to the submitted enumeration wrapper, not to CaDiCaL internals.
