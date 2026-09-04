@@ -1,0 +1,26 @@
+{
+  "description": "Oriented triangular faces in the closed local patch after planarizing the terminal crossing x of d and f.",
+  "faces": [
+    ["u", "z", "w"],
+    ["w", "z", "x"],
+    ["z", "t", "x"],
+    ["t", "r", "x"],
+    ["r", "w", "x"]
+  ],
+  "internal_vertex": "x",
+  "internal_edges": [
+    ["z", "w"],
+    ["z", "x"],
+    ["w", "x"],
+    ["r", "x"],
+    ["t", "x"]
+  ],
+  "expected_boundary": ["u", "z", "t", "r", "w"],
+  "expected_restored_edges": {
+    "a": ["z", "w"],
+    "b": ["u", "r"],
+    "c": ["u", "t"],
+    "d": ["z", "r"],
+    "f": ["w", "t"]
+  }
+}

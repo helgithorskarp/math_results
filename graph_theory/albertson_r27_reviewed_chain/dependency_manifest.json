@@ -1,0 +1,149 @@
+{
+  "claim": "Every graph of chromatic number 27 has crossing number at least that of K_27.",
+  "frontier_rows": [
+    [53, 713],
+    [53, 714],
+    [53, 715],
+    [54, 726]
+  ],
+  "primary_sources": [
+    {
+      "id": "sadhu_frontier",
+      "revision": "arXiv:2609.01682v1",
+      "statement": "Theorem 1.3 and Section 5 reduce r=27 to the four listed order-53/54 rows.",
+      "url": "https://arxiv.org/abs/2609.01682v1"
+    },
+    {
+      "id": "buengener_kaufmann",
+      "revision": "arXiv:2409.01733v2",
+      "statement": "Theorem 6 and Propositions 21 and 23 supply the crossing bounds, forbidden-configuration counts, and m0 boundary-edge interpretation.",
+      "url": "https://arxiv.org/abs/2409.01733v2"
+    },
+    {
+      "id": "prtt_sparse_crossing",
+      "revision": "Discrete & Computational Geometry 36 (2006), DOI 10.1007/s00454-006-1264-9",
+      "statement": "Lemma 3.2 supplies the 7/3 crossing inequality with empty-triangle correction and its equality induction.",
+      "url": "https://doi.org/10.1007/s00454-006-1264-9"
+    },
+    {
+      "id": "ackerman_4planar",
+      "revision": "arXiv:1509.01932v2",
+      "statement": "Theorem 4 supplies the 6(n-2) density bound for simple 4-planar drawings.",
+      "url": "https://arxiv.org/abs/1509.01932v2"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "order54_two_scale",
+      "path": "graph_theory/albertson_r27_order54_two_scale_sampling",
+      "source_commit": "76f610390f6fe1b0635b58010f0c7336739384b3",
+      "contribution_ref": "bafkreiegkml22ez62dztxelrvrlhsaq73pgi5rmpuqequbdbew762mcfby",
+      "review_ref": "bafkreift26bxlj5zbnysob5auoklt4fr4skmi76u7ro6sveyghb3znu4ma",
+      "review_commit": "0df3cc2cee0ae1603f26180cb59a2a13af311724",
+      "statement": "Every 54-vertex simple graph with at least 726 edges has crossing number at least 6084.",
+      "files": {
+        "README.md": "3bf2f5e6f38d9165eb00d3a7cb8e5f7cc0e9c66575c8aa59af0f3f711eec89ba",
+        "verify.py": "fe17aafbc3a442ec6d771e1781dfd727853a403a0c764f23336018bee95ee8e1"
+      }
+    },
+    {
+      "id": "order54_two_scale_review",
+      "path": "graph_theory/albertson_r27_order54_two_scale_sampling_review",
+      "source_commit": "0df3cc2cee0ae1603f26180cb59a2a13af311724",
+      "contribution_ref": "bafkreift26bxlj5zbnysob5auoklt4fr4skmi76u7ro6sveyghb3znu4ma",
+      "statement": "Independent derivation and checker for the order-54 two-scale sampling certificate.",
+      "files": {
+        "README.md": "a00d89e32cf62e76ab4b4cecf9e941f03bffd133983aaba64b1e738e3900d761",
+        "independent_check.py": "5e1cd30b592a1ce46dc7ebe71c18728d58a234d2e901b9a0896ab0ff7d22d03e"
+      }
+    },
+    {
+      "id": "order53_recursive_convex",
+      "path": "graph_theory/albertson_r27_recursive_convex_sampling",
+      "source_commit": "766cdbab074cb4f12740287eff17aa4e6fa5688e",
+      "contribution_ref": "bafkreieqkhvjed6b6utypdxiadbafol2arziaw2pe4fnbmoqyg6wzgvduq",
+      "review_ref": "bafkreiafzvjui3cr2krgj7eenlrgph6q4l2rclfqzmmzmqdvzcgfp67vle",
+      "review_commit": "0f75ae5d180d1192ebb7c0833447f14769702b45",
+      "statement": "The 714- and 715-edge order-53 frontier rows have crossing number greater than 6084.",
+      "files": {
+        "README.md": "ecbfed59e5277d37ebb0a0fbfa688008ddf69c1fbbe029248f547aa34c333707",
+        "verify.py": "67a6fa10a9c6960916734f0ea83170444b439af92d6667fe6d5c98faa75fc804"
+      }
+    },
+    {
+      "id": "local24_profiles",
+      "path": "graph_theory/albertson_r27_local_4planar_obstruction",
+      "source_commit": "c4d978a125fff54fc3ab60efd86153e8ab09e680",
+      "contribution_ref": "bafkreigunk3xsaksbzmmii4futrcupsdhca3vewuknsgvgtofk22bhwcse",
+      "review_ref": "bafkreiarrvk7oaqv2q5thgs3rj5l67vus7xqmmveabm43ws5aot7nwf7ky",
+      "review_commit": "eb5c4da05ebbc840b33bd44293cd9a46f90e5bd7",
+      "statement": "A failure of cr(24,132)>=165 leaves exactly profiles A and B, each with one non-full crossing C5 and m0=0.",
+      "files": {
+        "README.md": "2db7489440fadae71ffa747b6ca901ef36e1ed3fd150990d74f3e5bcc43440c8",
+        "verify.py": "d041986549dfdf7e27c523b832b13734b3064b8bacf3f26d3a6992838314a0a5"
+      }
+    },
+    {
+      "id": "local24_profiles_review",
+      "path": "graph_theory/albertson_r27_local_4planar_obstruction_review",
+      "source_commit": "eb5c4da05ebbc840b33bd44293cd9a46f90e5bd7",
+      "contribution_ref": "bafkreiarrvk7oaqv2q5thgs3rj5l67vus7xqmmveabm43ws5aot7nwf7ky",
+      "statement": "Independent exact enumeration and equality-profile review.",
+      "files": {
+        "README.md": "e56d4f9ae84cf4e788d8157791b05c2d0490bbf5aa18aaa8b11d6b1ee38c0993",
+        "verify.py": "e291e85e62ee6e84c91d57054ce8d8c38d6bcfd8359ddf3d51acce5af2fe612d"
+      }
+    },
+    {
+      "id": "terminal_c5_closure",
+      "path": "graph_theory/albertson_r27_local24_c5_closure",
+      "source_commit": "8c04121343a9e7a33aa7feeeda851531dc7cf8ee",
+      "contribution_ref": "bafkreiad3haqoqb4bb5mdl6huxleywgq6uczqiwhqe72kolzs7gvuhcvcq",
+      "review_refs": [
+        "bafkreie6o7g2ll43lt2c2kfbnmvzm33up2nt3ab3zjxcso4v7jod2w47y4",
+        "bafkreiaawxptual6q5zb7akt53b4uoh45lc3ornjyxpgr2qnjtnpanozli"
+      ],
+      "review_commit": "183676815d167200ee42ebd60261d35a7efe12dd",
+      "statement": "Global terminal triangulation forces the unique non-full crossing C5 to be full, proving cr(24,132)>=165.",
+      "files": {
+        "README.md": "a1d0565b87d229c93949fafc026ed0fd6ead1b7df0b1ebf5279e4342f690428e",
+        "verify.py": "fd223d7fc436204b14cd9d5e207e32f22bf8e96b494ba7e07533bfe4f3d90454"
+      }
+    },
+    {
+      "id": "terminal_c5_review",
+      "path": "graph_theory/albertson_r27_local24_c5_closure_review2",
+      "source_commit": "183676815d167200ee42ebd60261d35a7efe12dd",
+      "contribution_ref": "bafkreie6o7g2ll43lt2c2kfbnmvzm33up2nt3ab3zjxcso4v7jod2w47y4",
+      "statement": "Independent topological derivation and independent five-face incidence checker.",
+      "files": {
+        "README.md": "55e1e5d6b0f13e2cfb046f5e295a89df6e0c34c227a461482035709765ea8629",
+        "verify_local_map.py": "91f274b3bad7c8b3f1242adf2e04c9843f01f3e04bd2f1404b1ade83bbcf8e77"
+      }
+    },
+    {
+      "id": "local24_global_propagation",
+      "path": "graph_theory/albertson_r27_local24_global_reduction",
+      "source_commit": "356285d38a5f7c3d932ac1303e997dd0dce93ecc",
+      "contribution_ref": "bafkreieqgtvq6aldlsawt2d2esbytyc3xuw2py6k23clreqv24p47emd74",
+      "review_ref": "bafkreiafzvjui3cr2krgj7eenlrgph6q4l2rclfqzmmzmqdvzcgfp67vle",
+      "review_commit": "0f75ae5d180d1192ebb7c0833447f14769702b45",
+      "statement": "The local endpoint implies cr(53,713)>=6089 via exact recursive sampling and deletion averaging.",
+      "files": {
+        "README.md": "4d94e8706ec6f426e8725f941a575f53958af7e36beb3d3ce00488afc338fbe6",
+        "verify.py": "2283e2a9ee8399ed6da2ca036bff5da1836454103f190ead779414e8edbb5669"
+      }
+    },
+    {
+      "id": "local24_global_review",
+      "path": "graph_theory/albertson_r27_local24_global_reduction_review2",
+      "source_commit": "0f75ae5d180d1192ebb7c0833447f14769702b45",
+      "contribution_ref": "bafkreiafzvjui3cr2krgj7eenlrgph6q4l2rclfqzmmzmqdvzcgfp67vle",
+      "statement": "Independent QuickHull reconstruction of the conditional propagation.",
+      "files": {
+        "README.md": "dbc5f53b11f78d42f9addb586c488e4d24c5ded0ad3f2e25772bedfe2ea2b05e",
+        "verify_review.py": "b4a043c3a2024ea4001faf4862f6823fb776eb3cae15661ae03ecad9f3909bba"
+      }
+    }
+  ]
+}
