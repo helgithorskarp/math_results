@@ -5,8 +5,9 @@ In the hard branch of the local-deficiency dichotomy, fixing one doubly exact
 vertex does not merely fix two `(4,5;21,100)` cores.  The cross matrix also
 determines the order and edge count of both color-neighborhoods at every one
 of the other 42 vertices.  All 84 of those local graphs must have deficiency
-at least seven, and at least nine of the 42 vertices must reproduce the same
-doubly exact signature as the chosen anchor.
+at least seven.  A linear degree-weight test already forces at least 29 of the
+42 vertices to have degree 21, and at least nine must reproduce the full
+doubly exact signature of the chosen anchor.
 
 This is a necessary pruning theorem for the hard construction branch.  It is
 not a 43-vertex Ramsey graph, an enumeration of the local cores, or a solver
@@ -101,6 +102,85 @@ t_B(b) = k_b
 
 Here the term `k_b` counts the blue edges from `v` to `Q_b`.
 
+## Linear degree propagation
+
+Let `M=sum_(a,b) x_ab`, so `214 <= M <= 220`.  Summing the displayed degree
+formulas and using
+
+```text
+sum_a h_a = 2|E(H)| = 200,
+sum_b k_b = 2|E(K)| = 200
+```
+
+gives the two exact deviation identities
+
+```text
+sum_(a in A) (d_a-21) = M-220,
+sum_(b in B) (d_b-21) = M-221.                         (S)
+```
+
+Thus the total deviations on the `A` and `B` sides lie in `[-6,0]` and
+`[-7,-1]`, respectively.  These equations couple the row and column degree
+patterns more sharply than treating their intervals independently.
+
+Define the symmetric degree weight
+
+```text
+w(18)=w(24)=21,  w(19)=w(23)=12,
+w(20)=w(22)=3,   w(21)=0.
+```
+
+The hard-branch deficiency identity from the companion theorem gives
+
+```text
+W = sum_(u in A union B) w(d_u)
+    in {3,9,15,21,27,33,39}.                            (W39)
+```
+
+The omitted anchor `v` has degree 21 and weight zero, so this is exactly the
+global weight.  Every non-21 degree costs at least three; consequently at
+most 13 of the 42 secondary vertices have noncentral degree, and
+
+```text
+at least 29 vertices in A union B have degree 21.        (P29)
+```
+
+Conditions `(S)`, `(W39)`, and `(P29)` use only row and column sums.  They can
+therefore reject a cross matrix before the quadratic local counts below are
+computed.
+
+Enumerating the nonnegative degree-count vectors on the two labeled sides,
+subject only to 21 vertices per side, `(S)`, and `(W39)`, leaves the following
+exact numbers of ordered `(A,B)` profile pairs:
+
+```text
+M       W=3  W=9  W=15  W=21  W=27  W=33  W=39   total
+214       0    0     0     0     0     0     1       1
+215       0    0     0     0     0     1     4       5
+216       0    0     0     0     1     4    12      17
+217       0    0     0     1     4    11    24      40
+218       0    0     1     4     9    19    36      69
+219       0    1     3     6    13    25    47      95
+220       1    2     4     9    17    32    57     122
+total     1    3     8    20    44    92   181     349
+```
+
+Here a side profile is the seven-tuple of counts of degrees 18 through 24;
+vertices within a side are not assigned or labeled.  This is an exact
+integer-profile superset, not a claim that any of the 349 pairs is graphical
+or compatible with a chosen core.  At the lowest cross total the superset is
+a singleton:
+
+```text
+M=214:
+(x_18,...,x_24 on A) = (0,0,6,15,0,0,0),
+(x_18,...,x_24 on B) = (0,0,7,14,0,0,0).
+```
+
+Thus a search at `M=214` has no degree-count branching at all; the other six
+cross totals together have only 348 possible ordered side-count pairs before
+core-specific row and column feasibility is imposed.
+
 ## Hard-branch propagation theorem
 
 For `18 <= q <= 24`, the exact maximum edge counts in an order-`q`
@@ -187,10 +267,12 @@ the resulting labeled 43-vertex coloring.  It also audits `(F_end)` and the
 third-vertex rule on 14 toggles, once in each direction for every matrix.
 
 All seven matrices satisfy the earlier cardinality and row/column degree
-bounds, but have no secondary doubly exact vertex and violate `(D7)`.  They
-are deliberately not claimed to satisfy the mixed-`K_5` clauses.  Their role
-is a regression witness that the new tests contain information absent from
-the inexpensive cardinality/degree filter, not evidence about feasibility.
+bounds, but have degree weights from 99 through 111, only 17 through 21
+degree-21 vertices, no secondary doubly exact vertex, and violations of
+`(D7)`.  They are deliberately not claimed to satisfy the mixed-`K_5`
+clauses.  Their role is a regression witness that the new tests contain
+information absent from the earlier independent cardinality/degree intervals,
+not evidence about feasibility.
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 verify_anchor_propagation.py \
@@ -203,13 +285,16 @@ Expected output is
 PASS exact row/column formulas on 7 matrices and 294 vertex profiles
 PASS exact one-cross-flip updates on 14 flips and 588 vertex profiles
 PASS all test matrices satisfy cross cardinality and first-degree bounds
+PASS split degree deviations equal M-220 and M-221
+PASS first-degree-feasible test weights=99,...,111 exceed hard limit 39
+PASS hard split degree-profile counts=1,5,17,40,69,95,122 total=349
 PASS first-degree-feasible tests have 0 secondary exact anchors
-PASS hard branch propagates 84 deficiency inequalities and at least 9 anchors
+PASS hard branch forces at least 29 secondary degree-21 vertices and 9 anchors
 ```
 
 The audit uses CPython 3.11 or later, the standard library, exact integer
 arithmetic, and no solver, randomness, floating point, network, or external
-data.  It takes well under one second.
+data.  It took about 1.3 seconds under CPython 3.11.2 on the research host.
 
 ## Scope, provenance, and trust boundary
 

@@ -11,6 +11,8 @@ ORDER = 43
 SAMPLE_CORE_G6 = "TJaGmrdI_gqziMTiLYE?ro`dlTI|TTmTiwtQ"
 EXTREMAL_EDGES = {18: 85, 19: 92, 20: 100, 21: 107,
                   22: 114, 23: 122, 24: 132}
+DEGREE_WEIGHTS = {18: 21, 19: 12, 20: 3, 21: 0,
+                  22: 3, 23: 12, 24: 21}
 
 
 def decode_short_graph6(encoded: str) -> tuple[tuple[bool, ...], ...]:
@@ -287,6 +289,46 @@ def hard_side_violations(profiles: tuple[tuple[int, int, int], ...]) -> int:
     return violations
 
 
+def weak_compositions(total: int, parts: int):
+    """Yield ordered weak compositions without relying on a solver."""
+    if parts == 1:
+        yield (total,)
+        return
+    for first in range(total + 1):
+        for suffix in weak_compositions(total - first, parts - 1):
+            yield (first,) + suffix
+
+
+def hard_split_degree_profiles():
+    """Enumerate side degree-count pairs allowed by (S) and (W39)."""
+    degrees = tuple(range(18, 25))
+    side_profiles = []
+    for counts in weak_compositions(SIDE, len(degrees)):
+        deviation = sum((degree - 21) * count
+                        for degree, count in zip(degrees, counts, strict=True))
+        weight = sum(DEGREE_WEIGHTS[degree] * count
+                     for degree, count in zip(degrees, counts, strict=True))
+        if weight <= 39:
+            side_profiles.append((deviation, weight, counts))
+
+    profiles_by_cross_count = {}
+    for edge_count in range(214, 221):
+        pairs = []
+        for first_deviation, first_weight, first_counts in side_profiles:
+            if first_deviation != edge_count - 220:
+                continue
+            for second_deviation, second_weight, second_counts in side_profiles:
+                total_weight = first_weight + second_weight
+                if (
+                    second_deviation == edge_count - 221
+                    and total_weight <= 39
+                    and total_weight % 6 == 3
+                ):
+                    pairs.append((total_weight, first_counts, second_counts))
+        profiles_by_cross_count[edge_count] = tuple(pairs)
+    return profiles_by_cross_count
+
+
 def main() -> None:
     red_core = decode_short_graph6(SAMPLE_CORE_G6)
     blue_core = relabel(red_core, tuple((5 * vertex + 3) % SIDE for vertex in range(SIDE)))
@@ -303,6 +345,8 @@ def main() -> None:
     flip_profile_count = 0
     secondary_counts = []
     violation_counts = []
+    degree_weights = []
+    degree21_counts = []
     for edge_count in range(214, 221):
         red_cross = balanced_cross(edge_count)
         formulas = formula_profiles(red_core, blue_core, red_cross)
@@ -316,6 +360,14 @@ def main() -> None:
         profile_count += len(formulas)
         secondary_counts.append(formulas.count((21, 100, 100)))
         violation_counts.append(hard_side_violations(formulas))
+        degrees = [profile[0] for profile in formulas]
+        if (
+            sum(degree - 21 for degree in degrees[:SIDE]) != edge_count - 220
+            or sum(degree - 21 for degree in degrees[SIDE:]) != edge_count - 221
+        ):
+            raise AssertionError("wrong split degree-deviation identity")
+        degree_weights.append(sum(DEGREE_WEIGHTS[degree] for degree in degrees))
+        degree21_counts.append(degrees.count(21))
 
         # Offset zero is red in every balanced matrix; offset ten in row 20
         # is blue in every matrix in the audited range.  This checks one
@@ -349,24 +401,65 @@ def main() -> None:
         raise AssertionError(secondary_counts)
     if not all(count > 0 for count in violation_counts):
         raise AssertionError(violation_counts)
+    if degree_weights != [105, 105, 111, 105, 105, 99, 105]:
+        raise AssertionError(degree_weights)
+    if degree21_counts != [19, 19, 17, 19, 19, 21, 19]:
+        raise AssertionError(degree21_counts)
 
     # In the hard branch, the prior deficiency theorem gives at most thirteen
     # non-degree-21 vertices and at most twenty non-exact local color sides.
     # At least 43-13-20=10 vertices are therefore exact on both sides.  The
     # selected anchor is one, leaving at least nine among the profiles above.
     minimum_degree21_vertices = ORDER - 13
+    minimum_secondary_degree21 = minimum_degree21_vertices - 1
     minimum_double_exact = minimum_degree21_vertices - 20
     minimum_secondary = minimum_double_exact - 1
-    if (minimum_degree21_vertices, minimum_double_exact, minimum_secondary) != (30, 10, 9):
+    if (
+        minimum_degree21_vertices,
+        minimum_secondary_degree21,
+        minimum_double_exact,
+        minimum_secondary,
+    ) != (30, 29, 10, 9):
         raise AssertionError("wrong anchor-propagation count")
+    if set(range(3, 40, 6)) != {3, 9, 15, 21, 27, 33, 39}:
+        raise AssertionError("wrong hard degree-weight range")
     if 2 * (ORDER - 1) != 84:
         raise AssertionError("wrong number of propagated local inequalities")
+
+    split_profiles = hard_split_degree_profiles()
+    expected_histograms = {
+        214: {39: 1},
+        215: {33: 1, 39: 4},
+        216: {27: 1, 33: 4, 39: 12},
+        217: {21: 1, 27: 4, 33: 11, 39: 24},
+        218: {15: 1, 21: 4, 27: 9, 33: 19, 39: 36},
+        219: {9: 1, 15: 3, 21: 6, 27: 13, 33: 25, 39: 47},
+        220: {3: 1, 9: 2, 15: 4, 21: 9, 27: 17, 33: 32, 39: 57},
+    }
+    for edge_count, pairs in split_profiles.items():
+        histogram = {
+            weight: sum(pair[0] == weight for pair in pairs)
+            for weight in range(3, 40, 6)
+            if any(pair[0] == weight for pair in pairs)
+        }
+        if histogram != expected_histograms[edge_count]:
+            raise AssertionError((edge_count, histogram))
+    split_counts = [len(split_profiles[edge_count]) for edge_count in range(214, 221)]
+    if split_counts != [1, 5, 17, 40, 69, 95, 122] or sum(split_counts) != 349:
+        raise AssertionError(split_counts)
+    if split_profiles[214] != (
+        (39, (0, 0, 6, 15, 0, 0, 0), (0, 0, 7, 14, 0, 0, 0)),
+    ):
+        raise AssertionError(split_profiles[214])
 
     print("PASS exact row/column formulas on 7 matrices and 294 vertex profiles")
     print("PASS exact one-cross-flip updates on 14 flips and 588 vertex profiles")
     print("PASS all test matrices satisfy cross cardinality and first-degree bounds")
+    print("PASS split degree deviations equal M-220 and M-221")
+    print("PASS first-degree-feasible test weights=99,...,111 exceed hard limit 39")
+    print("PASS hard split degree-profile counts=1,5,17,40,69,95,122 total=349")
     print("PASS first-degree-feasible tests have 0 secondary exact anchors")
-    print("PASS hard branch propagates 84 deficiency inequalities and at least 9 anchors")
+    print("PASS hard branch forces at least 29 secondary degree-21 vertices and 9 anchors")
 
 
 if __name__ == "__main__":
