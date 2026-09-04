@@ -15,15 +15,50 @@ EXTREMAL_R4514_G6 = "MznZ\\lle{vYVlhsm_"
 EXTREMAL_EDGES = {18: 85, 19: 92, 20: 100, 21: 107,
                   22: 114, 23: 122, 24: 132}
 SMALL_EXTREMAL_EDGES = {14: 60, 15: 66, 16: 72, 17: 79, 18: 85}
+R35_EDGE_COVER_HISTOGRAMS = {
+    9: {
+        (7, 2): 1,
+        (8, 2): 3,
+        (9, 2): 10, (9, 3): 1,
+        (10, 1): 1, (10, 2): 27,
+        (11, 1): 3, (11, 2): 56,
+        (12, 1): 8, (12, 2): 65,
+        (13, 1): 8, (13, 2): 54,
+        (14, 1): 5, (14, 2): 28,
+        (15, 1): 1, (15, 2): 13,
+        (16, 2): 4,
+        (17, 2): 2,
+    },
+    10: {
+        (10, 3): 1,
+        (11, 2): 1, (11, 3): 1,
+        (12, 2): 3, (12, 3): 7,
+        (13, 2): 15, (13, 3): 17,
+        (14, 2): 37, (14, 3): 32,
+        (15, 2): 59, (15, 3): 27,
+        (16, 2): 48, (16, 3): 17,
+        (17, 2): 24, (17, 3): 8,
+        (18, 2): 8, (18, 3): 4,
+        (19, 2): 2, (19, 3): 1,
+        (20, 3): 1,
+    },
+    11: {
+        (15, 3): 1, (16, 3): 6, (17, 3): 19, (18, 3): 31,
+        (19, 3): 30, (20, 3): 13, (21, 3): 4, (22, 3): 1,
+    },
+    12: {(20, 4): 1, (21, 4): 2, (22, 4): 5, (23, 4): 2, (24, 4): 2},
+    13: {(26, 5): 1},
+}
 R35_EDGE_HISTOGRAMS = {
-    9: {7: 1, 8: 3, 9: 11, 10: 28, 11: 59, 12: 73,
-        13: 62, 14: 33, 15: 14, 16: 4, 17: 2},
-    10: {10: 1, 11: 2, 12: 10, 13: 32, 14: 69, 15: 86,
-         16: 65, 17: 32, 18: 12, 19: 3, 20: 1},
-    11: {15: 1, 16: 6, 17: 19, 18: 31, 19: 30, 20: 13,
-         21: 4, 22: 1},
-    12: {20: 1, 21: 2, 22: 5, 23: 2, 24: 2},
-    13: {26: 1},
+    order: {
+        edge_count: sum(
+            count
+            for (candidate_edges, _), count in histogram.items()
+            if candidate_edges == edge_count
+        )
+        for edge_count in sorted({entry[0] for entry in histogram})
+    }
+    for order, histogram in R35_EDGE_COVER_HISTOGRAMS.items()
 }
 MINIMUM_R35_EDGES = {
     order: min(histogram)
@@ -451,26 +486,44 @@ def triangle_pair_sieve(split_profiles):
 
 
 def component_pair_edge_histogram(
-    first_order: int, second_order: int
+    first_order: int, second_order: int, backbone_order: int
 ) -> tuple[tuple[int, int], ...]:
-    """Count unordered pairs of R(3,5) types by joined edge count.
+    """Count cover-feasible R(3,5) type pairs by joined edge count.
 
     The returned edge count includes all edges between the two components.
     Components of different orders are distinguished by their orders.  For
-    equal orders, swapping the two is not counted a second time.
+    equal orders, swapping the two is not counted a second time.  A type is
+    retained only if its forced cross-edge total can provide every outside
+    vertex a transversal of its independent four-sets.
     """
-    first_histogram = R35_EDGE_HISTOGRAMS[first_order]
-    second_histogram = R35_EDGE_HISTOGRAMS[second_order]
+    first_histogram = R35_EDGE_COVER_HISTOGRAMS[first_order]
+    second_histogram = R35_EDGE_COVER_HISTOGRAMS[second_order]
     pair_counts: dict[int, int] = {}
     cross_edges = first_order * second_order
-    for first_edges, first_count in first_histogram.items():
-        for second_edges, second_count in second_histogram.items():
-            if first_order == second_order and first_edges > second_edges:
+    outside_order = ORDER - backbone_order
+    for (first_edges, first_cover), first_count in first_histogram.items():
+        for (second_edges, second_cover), second_count in second_histogram.items():
+            first_key = (first_edges, first_cover)
+            second_key = (second_edges, second_cover)
+            if first_order == second_order and first_key > second_key:
                 continue
-            if first_order == second_order and first_edges == second_edges:
+            if first_order == second_order and first_key == second_key:
                 type_pairs = first_count * (first_count + 1) // 2
             else:
                 type_pairs = first_count * second_count
+            first_cross_edges = (
+                first_order * (first_order + 21 - backbone_order)
+                - 2 * first_edges
+            )
+            second_cross_edges = (
+                second_order * (second_order + 21 - backbone_order)
+                - 2 * second_edges
+            )
+            if (
+                first_cross_edges < outside_order * first_cover
+                or second_cross_edges < outside_order * second_cover
+            ):
+                continue
             total_edges = cross_edges + first_edges + second_edges
             pair_counts[total_edges] = pair_counts.get(total_edges, 0) + type_pairs
     return tuple(sorted(pair_counts.items()))
@@ -1537,6 +1590,53 @@ def main() -> None:
     }
     if r35_catalog_counts != {9: 290, 10: 313, 11: 105, 12: 12, 13: 1}:
         raise AssertionError(r35_catalog_counts)
+    cover_spectra = {
+        order: {
+            cover: sum(
+                count
+                for (_, candidate_cover), count in histogram.items()
+                if candidate_cover == cover
+            )
+            for cover in sorted({entry[1] for entry in histogram})
+        }
+        for order, histogram in R35_EDGE_COVER_HISTOGRAMS.items()
+    }
+    if cover_spectra != {
+        9: {1: 26, 2: 263, 3: 1},
+        10: {2: 197, 3: 116},
+        11: {3: 105},
+        12: {4: 12},
+        13: {5: 1},
+    }:
+        raise AssertionError(cover_spectra)
+
+    # If H is the opposite-color graph in a Q-component C, then for every
+    # outside vertex its opposite-color neighbors in C must hit every
+    # independent four-set of H: otherwise its Q-neighbors contain a Q-K4.
+    # If tau_4(H) is the minimum such transversal, the opposite-color cross
+    # degree sum from C is therefore at least |O| tau_4(H).  Exact degree 21
+    # on C computes that sum as |C|(|C|+21-d)-2e(H).  In particular the unique
+    # order-13 graph has e=26 and tau_4=5, excluding the 10+13 partition at
+    # d=23 (91<100) and the 9+13 partition at d=22 (104<105).  For 11+12 at
+    # d=23, the order-12 graph must be the unique 20-edge type, and the
+    # order-11 graph has at most 19 edges.
+    critical_cover_checks = (
+        (13 * (13 + 21 - 23) - 2 * 26, (43 - 23) * 5),
+        (13 * (13 + 21 - 22) - 2 * 26, (43 - 22) * 5),
+        (12 * (12 + 21 - 23) - 2 * 20, (43 - 23) * 4),
+        (12 * (12 + 21 - 23) - 2 * 21, (43 - 23) * 4),
+        (11 * (11 + 21 - 23) - 2 * 19, (43 - 23) * 3),
+        (11 * (11 + 21 - 23) - 2 * 20, (43 - 23) * 3),
+    )
+    if critical_cover_checks != (
+        (91, 100),
+        (104, 105),
+        (80, 80),
+        (78, 80),
+        (61, 60),
+        (59, 60),
+    ):
+        raise AssertionError(critical_cover_checks)
     menu_case_specs = (
         (23, 219, "red"),
         (23, 219, "blue"),
@@ -1560,7 +1660,7 @@ def main() -> None:
         for first_order, second_order in residual_component_partitions[backbone_order]:
             retained_count = 0
             for opposite_edges, type_pairs in component_pair_edge_histogram(
-                first_order, second_order
+                first_order, second_order, backbone_order
             ):
                 outside_edges = (
                     color_totals[opposite_color]
@@ -1578,12 +1678,12 @@ def main() -> None:
             partition_counts[(first_order, second_order)] = retained_count
         menu_summary[(backbone_order, edge_count, disconnected_color)] = partition_counts
     expected_menu_summary = {
-        (23, 219, "red"): {(10, 13): 114, (11, 12): 146},
-        (23, 219, "blue"): {(10, 13): 297, (11, 12): 905},
-        (23, 220, "red"): {(10, 13): 200, (11, 12): 347},
-        (23, 220, "blue"): {(10, 13): 265, (11, 12): 625},
-        (22, 220, "red"): {(9, 13): 290, (10, 12): 3756, (11, 11): 5564},
-        (22, 220, "blue"): {(9, 13): 290, (10, 12): 3756, (11, 11): 5565},
+        (23, 219, "red"): {(10, 13): 0, (11, 12): 57},
+        (23, 219, "blue"): {(10, 13): 0, (11, 12): 87},
+        (23, 220, "red"): {(10, 13): 0, (11, 12): 87},
+        (23, 220, "blue"): {(10, 13): 0, (11, 12): 87},
+        (22, 220, "red"): {(9, 13): 0, (10, 12): 2676, (11, 11): 5564},
+        (22, 220, "blue"): {(9, 13): 0, (10, 12): 2676, (11, 11): 5565},
     }
     if menu_summary != expected_menu_summary:
         raise AssertionError(menu_summary)
@@ -1591,7 +1691,7 @@ def main() -> None:
     residual_menu_digest = hashlib.sha256(
         expected_residual_menu_file.encode("ascii")
     ).hexdigest()
-    if residual_menu_digest != "03cb19958a9fa6a1933bd6f4e635040342cc46d74486bfc59b219192a5177f99":
+    if residual_menu_digest != "8b58b0cbba85e55def6083a90d7ef21397cd2c0a39de5bfe95df7f704434baac":
         raise AssertionError(residual_menu_digest)
     actual_residual_menu_file = Path(__file__).with_name(
         "RESIDUAL_COMPONENT_MENUS.tsv"
@@ -1627,7 +1727,7 @@ def main() -> None:
     ).hexdigest()
     if residual_excess_digest != "2bb0a8f67e346f1066a9cf2d8219ef89e97480bcf973372fe59040bacefed857":
         raise AssertionError(residual_excess_digest)
-    if len(residual_menu_lines) != 130:
+    if len(residual_menu_lines) != 77:
         raise AssertionError(len(residual_menu_lines))
 
     # If W is the degree weight, at most W/3 secondary vertices are
@@ -1697,12 +1797,13 @@ def main() -> None:
           "sha256=d69a53973b619bd63eccebe7641657f606f537b752972b67518d1b2d74e136ed")
     print("PASS residual excess split counts=6,7,6,6 rows=32 "
           f"sha256={residual_excess_digest}")
-    print("PASS d=23 component-pair menus M219 red/blue=260/1202 "
-          "M220 red/blue=547/890")
-    print("PASS d=22 two-component menus red/blue=9610/9611")
+    print("PASS independent-four cover sieve removes d=23 10+13 and d=22 9+13")
+    print("PASS d=23 component-pair menus M219 red/blue=57/87 "
+          "M220 red/blue=87/87")
+    print("PASS d=22 two-component menus red/blue=8240/8241")
     print("PASS d=22 red singleton impossible; blue singleton reanchors two "
           "R(4,5;21,100) cores")
-    print("PASS residual component menu rows=129 "
+    print("PASS residual component menu rows=76 "
           f"sha256={residual_menu_digest}")
     print("PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135")
     print("PASS profile vertex-connectivity counts k=1,...,11 are "

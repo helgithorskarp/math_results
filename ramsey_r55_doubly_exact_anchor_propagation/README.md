@@ -18,8 +18,10 @@ both colors connected in 345 of the 349 possible degree-count profiles across
 all `M=214,...,220`.  The four remaining abstract profiles are now reduced to
 orders 22 and 23, explicit excess/triangle splits, and finite component menus
 drawn from the complete order-9 through order-13 `(3,5)` catalogs.  At order
-22, a singleton component is impossible in red and forces a nested pair of
-exact `(4,5;21,100)` cores in blue.
+23 a local `K_4`-cover inequality removes the entire `10+13` component
+partition; at order 22 it removes `9+13`.  A singleton component at order 22
+is impossible in red and forces a nested pair of exact `(4,5;21,100)` cores in
+blue.
 
 This is a necessary pruning theorem for the hard construction branch.  It is
 not a 43-vertex Ramsey graph, an enumeration of the local cores, or a solver
@@ -805,20 +807,52 @@ the number of opposite-color edges on `D` is exactly
 s = ab + e_a + e_b.                                  (Component-s)
 ```
 
-The complete catalog histograms, `(Component-s)`, global 21-regularity on
-`D`, and `(Sparse-20/21)` give this finite menu of unordered isomorphism-type
-pairs:
+There is a further cover constraint that uses exactness vertex by vertex.  If
+`H` is the opposite-color graph on a `Q`-component `C`, every outside vertex's
+opposite-color neighbors in `C` must hit every independent four-set of `H`.
+Otherwise, the corresponding `Q`-colored `K_4` together with the outside
+vertex is a `Q`-colored `K_5`.  Write `tau_4(H)` for the minimum size of such a
+transversal.  If `|C|=a`, its other component has order `b`, and the outside
+has order `o`, exact degree 21 on `C` gives the necessary inequality
+
+```text
+a(21-b)-2e(H) >= o*tau_4(H).                           (K4-cover)
+```
+
+Indeed, the left side is exactly the number of opposite-color edges from `C`
+to the outside: the sum of the opposite degrees on `C` is `21a`, while the
+opposite graph inside `D` contributes `ab+2e(H)` incidences.
+
+The complete catalog has the following `tau_4` spectra, written
+`transversal size : number of isomorphism types`:
+
+```text
+order  9:  1:26, 2:263, 3:1
+order 10:  2:197, 3:116
+order 11:  3:105
+order 12:  4:12
+order 13:  5:1.
+```
+
+In the `10+13` case at `d=23`, the unique order-13 type has `e=26` and
+`tau_4=5`.  Its left side in `(K4-cover)` is 91, whereas the 20 outside
+vertices require at least 100 edges.  Thus this entire component partition is
+impossible.  In the surviving `11+12` case, `(K4-cover)` forces the order-12
+type to have exactly 20 edges (there is one such type) and the order-11 type
+to have at most 19 edges.  Combining this with `(Component-s)` and
+`(Sparse-20/21)` gives the exact finite menu:
 
 | `M` | disconnected color | cap on `s` | `10+13` types | `11+12` types | total |
 |---:|:---:|---:|---:|---:|---:|
-| 219 | red  | 170 | 114 | 146 | 260 |
-| 219 | blue | 173 | 297 | 905 | 1,202 |
-| 220 | red  | 171 | 200 | 347 | 547 |
-| 220 | blue | 172 | 265 | 625 | 890 |
+| 219 | red  | 170 | 0 | 57 | 57 |
+| 219 | blue | 173 | 0 | 87 | 87 |
+| 220 | red  | 171 | 0 | 87 | 87 |
+| 220 | blue | 172 | 0 | 87 | 87 |
 
 For example, a red disconnection at `M=219` makes the opposite blue outside
 edge count `s-30`; the order-20 maximum 140 gives `s<=170`.  The other three
-rows follow from the same exact identity.  This menu applies to every
+rows follow from the same exact identity, followed by `(K4-cover)`.  This menu
+applies to every
 `d=23` realization of the corresponding residual `M`, including a possible
 order-23 realization of `M220-W3`.
 
@@ -836,12 +870,17 @@ or there is one singleton and one order-21 component of independence number
 three.  Other component patterns violate the total independence budget four
 and the order-13 bound supplied by `R(3,5)=14`.
 
-For the two-component case, the same catalog and edge accounting leave
+For the two-component case, `(K4-cover)` eliminates `9+13` outright: the
+order-13 component supplies only 104 opposite-color outside edges, one short
+of the required `21*5=105`.  In `10+12`, it retains every order-10 type with
+`tau_4=2` but only the edge-10 through edge-13 types with `tau_4=3`.  All
+`11+11` pairs pass the cover inequality.  Combining that filter with the edge
+caps leaves
 
 | disconnected color | cap on `s` | `9+13` types | `10+12` types | `11+11` types | total |
 |:---:|---:|---:|---:|---:|---:|
-| red  | 164 | 290 | 3,756 | 5,564 | 9,610 |
-| blue | 165 | 290 | 3,756 | 5,565 | 9,611 |
+| red  | 164 | 0 | 2,676 | 5,564 | 8,240 |
+| blue | 165 | 0 | 2,676 | 5,565 | 8,241 |
 
 There is a sharper conclusion for a singleton.  The only order-22 profile is
 `M220-W3`, with 451 red edges and degree multiset `20^1 21^42`.  Suppose an
@@ -860,11 +899,11 @@ second doubly exact anchoring of the original `M=220` profile, with all other
 21 exact anchors on the red side and none on the blue side.
 
 The complete edge-resolved catalog menu is
-[`RESIDUAL_COMPONENT_MENUS.tsv`](RESIDUAL_COMPONENT_MENUS.tsv).  Its 129 data
+[`RESIDUAL_COMPONENT_MENUS.tsv`](RESIDUAL_COMPONENT_MENUS.tsv).  Its 76 data
 rows list `d`, `M`, the disconnected color, the component orders, `s`, the
 forced opposite-color outside edge count, and the number of unordered catalog
 type pairs.  Its SHA-256 is
-`03cb19958a9fa6a1933bd6f4e635040342cc46d74486bfc59b219192a5177f99`.
+`8b58b0cbba85e55def6083a90d7ef21397cd2c0a39de5bfe95df7f704434baac`.
 The verifier regenerates both residual files exactly.  This is a finite
 necessary-condition menu, not an assertion that any listed pair extends to a
 43-vertex coloring.
@@ -1044,10 +1083,11 @@ PASS d=24/25 cuts are impossible in the M=219/220 escape profiles
 PASS both-color connectivity profiles M214..220=1/1,5/5,17/17,40/40,69/69,94/95,119/122
 PASS backbone escape profiles=0,0,0,0,0,1,3 total=4 sha256=d69a53973b619bd63eccebe7641657f606f537b752972b67518d1b2d74e136ed
 PASS residual excess split counts=6,7,6,6 rows=32 sha256=2bb0a8f67e346f1066a9cf2d8219ef89e97480bcf973372fe59040bacefed857
-PASS d=23 component-pair menus M219 red/blue=260/1202 M220 red/blue=547/890
-PASS d=22 two-component menus red/blue=9610/9611
+PASS independent-four cover sieve removes d=23 10+13 and d=22 9+13
+PASS d=23 component-pair menus M219 red/blue=57/87 M220 red/blue=87/87
+PASS d=22 two-component menus red/blue=8240/8241
 PASS d=22 red singleton impossible; blue singleton reanchors two R(4,5;21,100) cores
-PASS residual component menu rows=129 sha256=03cb19958a9fa6a1933bd6f4e635040342cc46d74486bfc59b219192a5177f99
+PASS residual component menu rows=76 sha256=8b58b0cbba85e55def6083a90d7ef21397cd2c0a39de5bfe95df7f704434baac
 PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135
 PASS profile vertex-connectivity counts k=1,...,11 are 345,291,253,231,193,135,128,97,22,22,20
 PASS first-degree-feasible tests have 0 secondary exact anchors
@@ -1061,9 +1101,10 @@ the one small graph6 representative needed for the order-19 lemma and took
 about 2.1 seconds under CPython 3.11.2 on the research host.  The separate
 provenance audit fetches the pinned official catalog files and checks their
 SHA-256 digests, counts, Ramsey properties, edge histograms, and the extremal
-singleton.  It then reconstructs all 129 residual menu rows directly from
-individual catalog records, independently of the histogram-product routine in
-the main verifier:
+singleton.  It then computes every independent-four transversal number and
+reconstructs all 76 residual menu rows directly from individual catalog
+records, independently of the joint-invariant product routine in the main
+verifier:
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 verify_catalog_inputs.py

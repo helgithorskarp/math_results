@@ -60,6 +60,25 @@ def contains_clique(adjacency, size: int) -> bool:
             for first, second in itertools.combinations(vertices, 2))
         for vertices in itertools.combinations(range(len(adjacency)), size)
     )
+
+
+def independent_four_transversal_number(adjacency) -> int:
+    """Return the minimum number of vertices hitting every independent 4-set."""
+    order = len(adjacency)
+    independent_fours = tuple(
+        sum(1 << vertex for vertex in vertices)
+        for vertices in itertools.combinations(range(order), 4)
+        if not any(
+            adjacency[first][second]
+            for first, second in itertools.combinations(vertices, 2)
+        )
+    )
+    for size in range(order + 1):
+        for vertices in itertools.combinations(range(order), size):
+            transversal = sum(1 << vertex for vertex in vertices)
+            if all(transversal & independent for independent in independent_fours):
+                return size
+    raise AssertionError("finite set family has no transversal")
 R45_ARCHIVE_URL = BASE_URL + "r45extreme.tar.gz"
 R45_MAXIMUM_EXPECTED = {
     14: (60, 1, "752aa8b1509075bc39cb1151936b250c681fbdf0a9fdda20d8d5bbb6e6356c62"),
@@ -71,8 +90,8 @@ R45_MAXIMUM_EXPECTED = {
 }
 
 
-def audit_r35() -> dict[int, tuple[int, ...]]:
-    catalog_edge_counts = {}
+def audit_r35() -> dict[int, tuple[tuple[int, int], ...]]:
+    catalog_records = {}
     for order, (expected_count, expected_digest, expected_histogram) in (
         R35_EXPECTED.items()
     ):
@@ -84,7 +103,7 @@ def audit_r35() -> dict[int, tuple[int, ...]]:
         if len(lines) != expected_count or len(lines) != len(set(lines)):
             raise AssertionError(f"order-{order} R(3,5) catalog count")
         histogram = Counter()
-        edge_counts = []
+        records = []
         for encoded in lines:
             adjacency = decode_short_graph6(encoded)
             if len(adjacency) != order:
@@ -95,14 +114,30 @@ def audit_r35() -> dict[int, tuple[int, ...]]:
                 raise AssertionError("catalog graph has an independent five-set")
             edge_count = core_edge_count(adjacency)
             histogram[edge_count] += 1
-            edge_counts.append(edge_count)
+            records.append(
+                (edge_count, independent_four_transversal_number(adjacency))
+            )
         if dict(sorted(histogram.items())) != expected_histogram:
             raise AssertionError((order, histogram))
-        catalog_edge_counts[order] = tuple(edge_counts)
-    return catalog_edge_counts
+        catalog_records[order] = tuple(records)
+    cover_spectra = {
+        order: dict(sorted(Counter(cover for _, cover in records).items()))
+        for order, records in catalog_records.items()
+    }
+    if cover_spectra != {
+        9: {1: 26, 2: 263, 3: 1},
+        10: {2: 197, 3: 116},
+        11: {3: 105},
+        12: {4: 12},
+        13: {5: 1},
+    }:
+        raise AssertionError(cover_spectra)
+    return catalog_records
 
 
-def audit_residual_menu(catalog_edge_counts: dict[int, tuple[int, ...]]) -> None:
+def audit_residual_menu(
+    catalog_records: dict[int, tuple[tuple[int, int], ...]]
+) -> None:
     """Rebuild the menu directly from catalog records, not histograms."""
     r55_minimum_edges = {20: 50, 21: 56}
     partitions = {
@@ -130,17 +165,31 @@ def audit_residual_menu(catalog_edge_counts: dict[int, tuple[int, ...]]) -> None
         for first_order, second_order in partitions[backbone_order]:
             if first_order == second_order:
                 record_pairs = itertools.combinations_with_replacement(
-                    catalog_edge_counts[first_order], 2
+                    catalog_records[first_order], 2
                 )
             else:
                 record_pairs = itertools.product(
-                    catalog_edge_counts[first_order],
-                    catalog_edge_counts[second_order],
+                    catalog_records[first_order],
+                    catalog_records[second_order],
                 )
-            counts = Counter(
-                first_order * second_order + first_edges + second_edges
-                for first_edges, second_edges in record_pairs
-            )
+            counts = Counter()
+            for (first_edges, first_cover), (second_edges, second_cover) in record_pairs:
+                first_cross_edges = (
+                    first_order * (first_order + 21 - backbone_order)
+                    - 2 * first_edges
+                )
+                second_cross_edges = (
+                    second_order * (second_order + 21 - backbone_order)
+                    - 2 * second_edges
+                )
+                if (
+                    first_cross_edges < outside_order * first_cover
+                    or second_cross_edges < outside_order * second_cover
+                ):
+                    continue
+                counts[
+                    first_order * second_order + first_edges + second_edges
+                ] += 1
             for opposite_edges, type_pairs in sorted(counts.items()):
                 outside_edges = (
                     global_totals[opposite_color]
@@ -196,15 +245,15 @@ def audit_r45_extremal() -> None:
 
 
 def main() -> None:
-    catalog_edge_counts = audit_r35()
-    audit_residual_menu(catalog_edge_counts)
+    catalog_records = audit_r35()
+    audit_residual_menu(catalog_records)
     audit_r45_extremal()
     print("PASS official R(3,5) catalog counts=290,313,105,12,1 "
           "minima=7,10,15,20,26")
     print("PASS official R(4,5) maxima at orders 14,...,19 are "
           "60,66,72,79,85,92")
     print("PASS official extremal R(4,5;14,60) catalog is the pinned singleton")
-    print("PASS official R(3,5) records independently reproduce residual menu")
+    print("PASS official R(3,5) records and independent-4 covers reproduce menu")
 
 
 if __name__ == "__main__":
