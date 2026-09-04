@@ -14,6 +14,7 @@ ROOT = HERE.parent
 POINTS = ROOT / "hadwiger_nelson_parts509_completion_census_degree9" / "points.tsv"
 POINTS_VTX = ROOT / "hadwiger_nelson_parts509_criticality" / "parts509.vtx"
 PRIOR = ROOT / "hadwiger_nelson_parts509_two_overlap_reduction"
+FLEXIBILITY = ROOT / "hadwiger_nelson_parts509_splus_single_cross_flexibility"
 AFFINE = ROOT / "hadwiger_nelson_parts509_affine_overlap_scan"
 CENSUS = HERE / "census.cpp"
 EXPECTED = HERE / "expected_census.txt"
@@ -24,8 +25,10 @@ SOURCE_HASHES = {
     PRIOR / "certificate.json": "7fddf99ef3de1e875ab5bc6b82d2f26dc751a27be54a85b03b75565990df5786",
     PRIOR / "verify.py": "10fa4c81d27c773c76f1a8645a9ff453cf846f17ed5140ec96538b8aa5ded788",
     AFFINE / "enumerate_overlaps.cpp": "97f63813d3058be87b2b6de32cb3a6b7c4e268eb7e1f49893e9f7cbd51c37b3e",
-    CENSUS: "314efb2448f4a84539f4f2ec6c606bd9ed64d4ac68133835e09b84464f1409af",
-    EXPECTED: "ddb2b0f7f878e56ce985c8b4493bdd6850fc548d9568cb3f62460364da99bfe4",
+    FLEXIBILITY / "certificate.json": "718f0742acd6bbc8b4a809646a9a896912e2a593154906e2af04df62b9c3febb",
+    FLEXIBILITY / "verify.py": "cfc83d15a14d34b7684576a162b602a18a3a0b2242112872f2670be498f0d9d9",
+    CENSUS: "a31533704faf903214c3729748b44a0739b4c5cbae13f8a4b7dc7a633db1df44",
+    EXPECTED: "b2364ee34f0442436524111dd147507574e3125761caf648d2b8908fdd51bcc6",
 }
 
 
@@ -44,7 +47,8 @@ def parse_output(path: Path):
             encoded = dict(item.split("=", 1) for item in line.split(";"))
             if set(encoded) != {
                 "orientation", "reflected", "denominator", "exactly_two",
-                "with_cross", "with_genuine", "interval_candidates", "exact_checks",
+                "with_cross", "with_genuine", "genuine_zero", "genuine_one",
+                "genuine_two_plus", "interval_candidates", "exact_checks",
             }:
                 raise ValueError("bad per-orientation fields")
             rows.append({key: int(value) for key, value in encoded.items()})
@@ -91,12 +95,30 @@ def verify_prior_reduction() -> None:
         raise ValueError("prior two-overlap verifier output mismatch")
 
 
+def verify_single_cross_flexibility() -> None:
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(FLEXIBILITY / "verify.py"),
+            str(FLEXIBILITY / "certificate.json"),
+        ],
+        cwd=FLEXIBILITY,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    expected = (FLEXIBILITY / "expected_verify.txt").read_text(encoding="utf-8")
+    if result.stdout != expected:
+        raise ValueError("single-cross-edge flexibility verifier output mismatch")
+
+
 def verify() -> None:
     for path, expected in SOURCE_HASHES.items():
         if sha256(path) != expected:
             raise ValueError(f"source hash mismatch: {path.relative_to(ROOT)}")
     verify_radical_bounds()
     verify_prior_reduction()
+    verify_single_cross_flexibility()
 
     rows, scalars, flags = parse_output(EXPECTED)
     if len(rows) != 2840 or [row["orientation"] for row in rows] != list(range(2840)):
@@ -111,6 +133,17 @@ def verify() -> None:
         raise ValueError("an exactly-two placement lacks a cross-unit label pair")
     if any(not 0 <= row["with_genuine"] <= row["with_cross"] for row in rows):
         raise ValueError("bad genuine-cross-edge count")
+    if any(
+        row["genuine_zero"] + row["genuine_one"] + row["genuine_two_plus"]
+        != row["exactly_two"]
+        for row in rows
+    ):
+        raise ValueError("genuine-edge categories do not partition placements")
+    if any(
+        row["genuine_one"] + row["genuine_two_plus"] != row["with_genuine"]
+        for row in rows
+    ):
+        raise ValueError("positive genuine-edge categories disagree")
     if any(row["interval_candidates"] != row["exact_checks"] for row in rows):
         raise ValueError("exact-check accounting mismatch")
 
@@ -126,9 +159,12 @@ def verify() -> None:
         "exactly_two_overlap_placements": 2373802,
         "with_any_cross_unit_label_pair": 2373802,
         "with_genuinely_new_cross_edge": 2194728,
-        "closed_by_two_overlap_gluing_lemma": 179074,
-        "interval_candidates": 18848971,
-        "exact_distance_checks": 18848971,
+        "with_zero_genuinely_new_cross_edges": 179074,
+        "with_exactly_one_genuinely_new_cross_edge": 189738,
+        "with_at_least_two_genuinely_new_cross_edges": 2004990,
+        "closed_by_single_cross_edge_absorption": 368812,
+        "interval_candidates": 30525682,
+        "exact_distance_checks": 30525682,
     }
     if scalars != expected_scalars:
         raise ValueError("global scalar summary mismatch")
@@ -138,6 +174,9 @@ def verify() -> None:
         "exactly_two": "exactly_two_overlap_placements",
         "with_cross": "with_any_cross_unit_label_pair",
         "with_genuine": "with_genuinely_new_cross_edge",
+        "genuine_zero": "with_zero_genuinely_new_cross_edges",
+        "genuine_one": "with_exactly_one_genuinely_new_cross_edge",
+        "genuine_two_plus": "with_at_least_two_genuinely_new_cross_edges",
         "interval_candidates": "interval_candidates",
         "exact_checks": "exact_distance_checks",
     }
@@ -145,12 +184,15 @@ def verify() -> None:
         if sum(row[local] for row in rows) != scalars[global_name]:
             raise ValueError(f"per-orientation sum mismatch: {local}")
     rotations, reflections = rows[:1420], rows[1420:]
-    for key in ("exactly_two", "with_cross", "with_genuine"):
+    for key in (
+        "exactly_two", "with_cross", "with_genuine", "genuine_zero",
+        "genuine_one", "genuine_two_plus",
+    ):
         if sum(row[key] for row in rotations) != sum(row[key] for row in reflections):
             raise ValueError(f"rotation/reflection aggregate mismatch: {key}")
-    if scalars["closed_by_two_overlap_gluing_lemma"] != (
-        scalars["exactly_two_overlap_placements"]
-        - scalars["with_genuinely_new_cross_edge"]
+    if scalars["closed_by_single_cross_edge_absorption"] != (
+        scalars["with_zero_genuinely_new_cross_edges"]
+        + scalars["with_exactly_one_genuinely_new_cross_edge"]
     ):
         raise ValueError("gluing-lemma subtraction mismatch")
 
@@ -160,9 +202,13 @@ def verify() -> None:
     print("exactly_two_overlap_placements=2373802")
     print("all_exactly_two_have_cross_unit_label_pair=true")
     print("with_genuinely_new_cross_edge=2194728")
-    print("closed_by_two_overlap_gluing_lemma=179074")
+    print("with_zero_genuinely_new_cross_edges=179074")
+    print("with_exactly_one_genuinely_new_cross_edge=189738")
+    print("with_at_least_two_genuinely_new_cross_edges=2004990")
+    print("closed_by_single_cross_edge_absorption=368812")
     print("rotation_reflection_classification_totals_match=true")
     print("prior_two_overlap_reduction_verified=true")
+    print("single_cross_edge_flexibility_verified=true")
     print("solver_free_census_checks=true")
 
 

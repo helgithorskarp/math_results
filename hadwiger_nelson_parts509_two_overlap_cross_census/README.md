@@ -19,21 +19,24 @@ them by their additional cross-unit edges:
 | exactly two overlaps | 2,373,802 |
 | at least one cross-unit label pair | 2,373,802 |
 | at least one genuinely new cross edge | 2,194,728 |
-| no genuinely new cross edge | **179,074** |
+| no genuinely new cross edge | 179,074 |
+| exactly one genuinely new cross edge | 189,738 |
+| at least two genuinely new cross edges | **2,004,990** |
 
-The published two-overlap gluing lemma says that a placement with exactly two
-overlaps and no genuinely new cross edge is four-colourable.  Consequently
-all 179,074 placements in the last row are four-colourable, and any
-five-chromatic exactly-two-overlap placement in this fixed-gadget family must
-belong to the remaining set of 2,194,728.
+The published single-cross-edge absorption lemma says that a placement with
+exactly two overlaps and at most one genuinely new cross edge is
+four-colourable.  Consequently **368,812** placements are four-colourable,
+and any five-chromatic exactly-two-overlap placement in this fixed-gadget
+family must belong to the remaining set of 2,004,990.
 
 The rotation-preserving and reflection-reversing halves each contain exactly
-1,186,901 two-overlap placements, of which 1,097,364 have a genuinely new
-cross edge.  The equality is an independently checked aggregate symmetry.
+1,186,901 two-overlap placements.  In each half, 89,537 have no new edge,
+94,869 have exactly one, and 1,002,495 have at least two.  These equalities
+are independently checked aggregate symmetries.
 
 This is a finite structural reduction, **not a new five-chromatic graph and
 not an improvement of the 509-vertex record**.  It does not close the
-2,194,728 genuinely cross-coupled cases or placements with three or more
+2,004,990 multiply cross-coupled cases or placements with three or more
 overlaps.
 
 ## Cross-difference characterization
@@ -87,12 +90,12 @@ bounded between consecutive rationals with denominator `10^12`; the bounds
 are checked by exact integer squaring.  For every coordinate encountered,
 the exact value lies less than `1/1000` above its computed lower bound.  Only
 68 bucket offsets can therefore contain a unit neighbour.  An exact interval
-square test removes impossible candidates, and all 18,848,971 survivors are
+square test removes impossible candidates, and all 30,525,682 survivors are
 tested by exact multiplication in `K`.  No floating-point operation is used.
 
 The full per-orientation output is committed as `expected_census.txt` with
 SHA-256
-`ddb2b0f7f878e56ce985c8b4493bdd6850fc548d9568cb3f62460364da99bfe4`.
+`b2364ee34f0442436524111dd147507574e3125761caf648d2b8908fdd51bcc6`.
 
 ## Reproduction
 
@@ -109,7 +112,7 @@ python3 verify.py > verify_output.txt
 diff -u expected_verify.txt verify_output.txt
 ```
 
-The exact C++ census is single-threaded and took about 12 minutes on the
+The exact C++ census is single-threaded and took about 15 minutes on the
 shared research host.  The Python verifier uses only the standard library.
 
 ## Trust boundary
@@ -120,7 +123,8 @@ shared research host.  The Python verifier uses only the standard library.
 - `verify.py` pins every source, checks the complete transcript digest and
   all per-orientation/global sums, verifies the radical bounds and signed
   128-bit safety inequality, and reruns the solver-free sibling certificate
-  supplying the pair-flexibility input used by the gluing lemma.
+  supplying the pair-flexibility input used by the gluing lemma.  It also
+  reruns the solver-free 4,769,328-case single-cross-edge flexibility checker.
 - The transcript checker does not independently reimplement the full C++
   census.  The proof is a reproducible finite exact computation in ordinary
   C++ and Python, not a proof-assistant formalization.

@@ -7,6 +7,7 @@
 #include <limits>
 #include <map>
 #include <numeric>
+#include <optional>
 #include <set>
 #include <sstream>
 #include <stdexcept>
@@ -398,7 +399,7 @@ static bool bucket_offset_can_be_unit(i64 offset_x, i64 offset_y) {
     return x_minimum + y_minimum <= UNIT && UNIT <= x_maximum + y_maximum;
 }
 
-static bool genuinely_new(
+static std::optional<std::uint32_t> new_strict_edge_key(
     std::uint32_t cross_pair,
     const std::vector<std::uint32_t>& overlaps,
     const std::vector<std::vector<bool>>& left_edges,
@@ -406,13 +407,19 @@ static bool genuinely_new(
 ) {
     const std::size_t p = cross_pair / 136;
     const std::size_t q = cross_pair % 136;
+    std::size_t q_vertex = 374 + q;
     for (std::uint32_t overlap : overlaps) {
         const std::size_t overlap_p = overlap / 136;
         const std::size_t overlap_q = overlap % 136;
-        if (q == overlap_q && left_edges[p][overlap_p]) return false;
-        if (p == overlap_p && small_edges[q][overlap_q]) return false;
+        if (q == overlap_q) {
+            q_vertex = overlap_p;
+            if (left_edges[p][overlap_p]) return std::nullopt;
+        }
+        if (p == overlap_p && small_edges[q][overlap_q]) return std::nullopt;
     }
-    return true;
+    const std::size_t u = std::min(p, q_vertex), v = std::max(p, q_vertex);
+    if (u == v) throw std::runtime_error("unit cross edge collapsed to a loop");
+    return static_cast<std::uint32_t>(510 * u + v);
 }
 
 struct BucketNode {
@@ -466,6 +473,7 @@ int main(int argc, char** argv) {
     std::uint64_t total_two = 0;
     std::uint64_t total_with_cross = 0;
     std::uint64_t total_with_genuine = 0;
+    std::array<std::uint64_t, 3> total_genuine_categories{};
     std::uint64_t interval_candidates = 0;
     std::uint64_t exact_distance_checks = 0;
     std::vector<std::pair<i64, i64>> bucket_offsets;
@@ -509,20 +517,22 @@ int main(int argc, char** argv) {
         std::uint64_t local_two = 0;
         std::uint64_t local_with_cross = 0;
         std::uint64_t local_with_genuine = 0;
+        std::array<std::uint64_t, 3> local_genuine_categories{};
         const std::uint64_t checks_before = exact_distance_checks;
         const std::uint64_t candidates_before = interval_candidates;
         for (const auto& [translation, overlaps] : differences) {
             if (overlaps.size() != 2) continue;
             ++local_two;
             bool has_cross = false;
-            bool has_genuine = false;
+            std::array<std::uint32_t, 2> genuine_keys{};
+            std::size_t genuine_count = 0;
             const RadicalInterval translation_x = radical_interval(translation.x);
             const RadicalInterval translation_y = radical_interval(translation.y);
             const Bucket centre = bucket(
                 translation_x, translation_y, orientation.denominator
             );
             for (const auto& [dx, dy] : bucket_offsets) {
-                if (has_genuine) break;
+                if (genuine_count >= 2) break;
                 const auto found = grid.find(Bucket{centre.x + dx, centre.y + dy});
                 if (found == grid.end()) continue;
                 for (const BucketNode& node : found->second) {
@@ -536,26 +546,39 @@ int main(int argc, char** argv) {
                     if (!unit_separated(translation, *node.difference, orientation.denominator)) continue;
                     has_cross = true;
                     for (std::uint32_t pair : *node.pairs) {
-                        if (genuinely_new(pair, overlaps, left_edges, small_edges)) {
-                            has_genuine = true;
-                            break;
+                        const auto key = new_strict_edge_key(
+                            pair, overlaps, left_edges, small_edges
+                        );
+                        if (!key) continue;
+                        if (std::find(
+                                genuine_keys.begin(), genuine_keys.begin() + genuine_count, *key
+                            ) == genuine_keys.begin() + genuine_count) {
+                            genuine_keys[genuine_count++] = *key;
+                            if (genuine_count >= 2) break;
                         }
                     }
-                    if (has_genuine) break;
+                    if (genuine_count >= 2) break;
                 }
             }
             local_with_cross += has_cross;
-            local_with_genuine += has_genuine;
+            local_with_genuine += genuine_count > 0;
+            ++local_genuine_categories[genuine_count];
         }
         total_two += local_two;
         total_with_cross += local_with_cross;
         total_with_genuine += local_with_genuine;
+        for (int category = 0; category < 3; ++category) {
+            total_genuine_categories[category] += local_genuine_categories[category];
+        }
         std::cout << "orientation=" << orientation_index
                   << ";reflected=" << orientation.reflected
                   << ";denominator=" << orientation.denominator
                   << ";exactly_two=" << local_two
                   << ";with_cross=" << local_with_cross
                   << ";with_genuine=" << local_with_genuine
+                  << ";genuine_zero=" << local_genuine_categories[0]
+                  << ";genuine_one=" << local_genuine_categories[1]
+                  << ";genuine_two_plus=" << local_genuine_categories[2]
                   << ";interval_candidates=" << interval_candidates - candidates_before
                   << ";exact_checks=" << exact_distance_checks - checks_before << '\n';
         if ((orientation_index + 1) % 100 == 0) {
@@ -569,11 +592,19 @@ int main(int argc, char** argv) {
     std::cout << "exactly_two_overlap_placements=" << total_two << '\n';
     std::cout << "with_any_cross_unit_label_pair=" << total_with_cross << '\n';
     std::cout << "with_genuinely_new_cross_edge=" << total_with_genuine << '\n';
-    std::cout << "closed_by_two_overlap_gluing_lemma=" << total_two - total_with_genuine << '\n';
+    std::cout << "with_zero_genuinely_new_cross_edges=" << total_genuine_categories[0] << '\n';
+    std::cout << "with_exactly_one_genuinely_new_cross_edge=" << total_genuine_categories[1] << '\n';
+    std::cout << "with_at_least_two_genuinely_new_cross_edges=" << total_genuine_categories[2] << '\n';
+    std::cout << "closed_by_single_cross_edge_absorption="
+              << total_genuine_categories[0] + total_genuine_categories[1] << '\n';
     std::cout << "interval_candidates=" << interval_candidates << '\n';
     std::cout << "exact_distance_checks=" << exact_distance_checks << '\n';
     if (total_multi_overlap != 2992078 || pair_certificates != 17658256
-        || total_two != 2373802 || total_with_genuine > total_with_cross) {
+        || total_two != 2373802 || total_with_genuine > total_with_cross
+        || total_genuine_categories[0] + total_genuine_categories[1]
+             + total_genuine_categories[2] != total_two
+        || total_genuine_categories[1] + total_genuine_categories[2]
+             != total_with_genuine) {
         throw std::runtime_error("census checksum mismatch");
     }
     std::cout << "exact_two_overlap_cross_census=true\n";
