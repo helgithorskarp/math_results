@@ -1,0 +1,54 @@
+Independent review runs, 2026-09-04
+===================================
+
+All proof/checking processes ran sequentially with one CPU-heavy process at a
+time. Large generated files and binaries remain in reviewer scratch.
+
+Target:
+  Discovery Net bafkreicbil66im6ickeb6fnsjvazufuopor7s6yshjog26ulecx6maiha4
+  source commit bd0fa9b175004861dba9ab8df70fbedc78a3cdd4
+
+Toolchain:
+  g++ (Debian 12.2.0-14+deb12u1) 12.2.0
+  Python 3.11.2, standard library
+
+Primary full census:
+  build: g++ -std=c++20 -O3 -Wall -Wextra -pedantic census_all.cpp
+  binary SHA-256:
+    8bc62fdc5438c1ceffd2f70b8879498d6de5ce2e35ff046a15f7d61db67c494e
+  wall: 628 seconds
+  census SHA-256:
+    b44b48122f698b539f96fe16f4aa2432dd4eb763bff2dcc050195bc337a77f22
+  residual SHA-256:
+    cca94363716ec704032c98bd16e065ba1b8dde27ad9ef5b631f143f1cd116d33
+
+Target checkers:
+  verify.py: all expected census, histogram, source-pin, legacy, and residual
+    reconciliation lines matched.
+  check_residual.py: all 2,772 residuals failed reversed matching; eight direct
+    no-filter geometries matched.
+  test_matcher.cpp: 223,587/223,587 definition-level cases matched, including
+    68,472 negatives and two long-constraint boundary cases.
+
+Reviewer reverse-matcher full census:
+  build: g++ -std=c++20 -O3 -Wall -Wextra -pedantic reverse_match_census.cpp
+  binary SHA-256:
+    8a6ef31486dc8f520787faa3cd4ef00a4c55e73f9ce4ab7731f12e91f744104a
+  wall: 670 seconds
+  census and residual files are byte-identical to the primary run and have the
+    same hashes above.
+
+Reviewer exact orientation audit:
+  Python arbitrary-integer field arithmetic reconstructed 1,420 rotations and
+  1,420 reflections in 4.64 seconds. All 2,772 residual seeds induced their
+  stated canonical orientation exactly.
+
+Reviewer sanitizer run:
+  build: g++ -std=c++20 -O1 -g -Wall -Wextra -pedantic
+    -fsanitize=address,undefined -fno-omit-frame-pointer
+    reverse_match_census.cpp
+  binary SHA-256:
+    e5492075bb80f6c6745569d5fc95de9f05250340c2f6ccab5e7c52258626bb26
+  range: orientations 1410 through 1429, spanning both determinant classes
+  result: all 20 rows and 644 residuals matched the primary run exactly; no
+    AddressSanitizer or UndefinedBehaviorSanitizer diagnostic.
