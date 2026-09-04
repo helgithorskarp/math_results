@@ -2,6 +2,9 @@
 
 ## Result
 
+**Claim status:** exact computer-assisted finite-family exclusion.  This is
+not a five-chromatic graph below 509 vertices and is not a record improvement.
+
 Let `L` be the 374-point large gadget of the Parts 509 construction, and let
 `S+` be its 135-point small gadget with a second origin point adjoined.  The
 two gadgets have 510 labels before identifications.  The sibling exact affine
@@ -22,16 +25,17 @@ them by their additional cross-unit edges:
 | no genuinely new cross edge | 179,074 |
 | exactly one genuinely new cross edge | 189,738 |
 | exactly two genuinely new cross edges | 194,946 |
-| at least three genuinely new cross edges | **1,810,044** |
+| exactly three genuinely new cross edges | 180,216 |
+| at least four genuinely new cross edges | **1,629,828** |
 
 The published single-cross-edge absorption lemma says that a placement with
 exactly two overlaps and at most one genuinely new cross edge is
-four-colourable.  A new explicit witness-composition check proves that all
-194,946 placements with exactly two genuinely new cross edges are also
-four-colourable.  Consequently **563,758** placements are now closed, and any
-five-chromatic exactly-two-overlap placement in this fixed-gadget family must
-belong to the remaining set of 1,810,044 placements having at least three new
-edges.
+four-colourable.  The explicit witness-composition check proves that all
+194,946 placements with exactly two and all 180,216 placements with exactly
+three genuinely new cross edges are also four-colourable.  Consequently
+**743,974** placements are closed, and any five-chromatic exactly-two-overlap
+placement in this fixed-gadget family must belong to the remaining set of
+1,629,828 placements having at least four new edges.
 
 The exactly-two-new-edge class splits as follows, and every row is completely
 closed by the explicit colour libraries:
@@ -42,19 +46,32 @@ closed by the explicit colour libraries:
 | shared `S+` endpoint | 37,900 | 37,900 |
 | four distinct endpoints | 135,614 | 135,614 |
 
+Every simple three-edge bipartite endpoint topology occurs.  `Li_Sj` means
+that the three cross edges use `i` distinct `L` endpoints and `j` distinct
+`S+` endpoints.
+
+| three-edge topology | placements | explicitly four-coloured |
+|---|---:|---:|
+| `L1_S3` | 7,402 | 7,402 |
+| `L3_S1` | 15,236 | 15,236 |
+| `L2_S2` | 154 | 154 |
+| `L2_S3` | 31,788 | 31,788 |
+| `L3_S2` | 37,302 | 37,302 |
+| `L3_S3` | 88,334 | 88,334 |
+
 The rotation-preserving and reflection-reversing halves each contain exactly
 1,186,901 two-overlap placements.  In each half, 89,537 have no new edge,
-94,869 have exactly one, 97,473 have exactly two, and 905,022 have at least
-three.  The two-edge topology and colouring subtotals also agree term by term
-between the halves.  These equalities are independently checked aggregate
-symmetries.
+94,869 have exactly one, 97,473 have exactly two, 90,108 have exactly three,
+and 814,914 have at least four.  Every two- and three-edge topology and
+colouring subtotal also agrees term by term between the halves.  These
+equalities are independently checked aggregate symmetries.
 
 This is a finite structural reduction, **not a new five-chromatic graph and
 not an improvement of the 509-vertex record**.  It does not close the
-1,810,044 placements with three or more new cross edges, or placements with
+1,629,828 placements with four or more new cross edges, or placements with
 three or more overlaps.
 
-## Explicit two-edge colouring composition
+## Explicit two- and three-edge colouring composition
 
 The Parts criticality certificate supplies 509 explicit four-colourings of
 one-vertex deletions of the full graph.  Restricting the 135 rows whose deleted
@@ -62,15 +79,16 @@ vertex lies outside `L` gives 135 proper colourings of all 374 vertices of
 `L`.  The single-cross-edge flexibility certificate supplies 194 proper
 colourings of `S+`.
 
-For an exactly-two-new-edge placement, write the two overlap pairs as
-`(p1,q1),(p2,q2)` and the two new cross edges as `(p3,q3),(p4,q4)`.  Each
-large-gadget witness gives a four-colour pattern on `p1,p2,p3,p4`, and each
-small-gadget witness gives one on `q1,q2,q3,q4`.  The census checks all 24
-permutations of the small-gadget colour names.  A compatible pair must agree
-at both overlaps and disagree across both new edges.  It then combines to a
-proper four-colouring of the strict union, since all other strict edges are
-internal to one gadget.  Such a compatible explicit pair exists for every
-one of the 194,946 placements.
+For a placement with `k` new cross edges, `k` equal to two or three, write the
+two overlap pairs as `(p1,q1),(p2,q2)` and the new edges as
+`(p3,q3),...,(p(k+2),q(k+2))`.  Each large-gadget witness gives a colour
+pattern on its `p` labels, and each small-gadget witness gives one on its `q`
+labels.  Repeated edge endpoints are retained in the pattern.  The census
+checks all 24 permutations of the small-gadget colour names.  A compatible
+pair must agree at both overlaps and disagree across every new edge.  It then
+combines to a proper four-colouring of the strict union, since all other
+strict edges are internal to one gadget.  Such a compatible explicit pair
+exists for every placement in both exact strata.
 
 The deterministic `colour_libraries.txt` has SHA-256
 `91f5f39f1533e5780edfa30130f36bee3f90428bd7d442e788e8311d029b4169`.
@@ -129,12 +147,19 @@ bounded between consecutive rationals with denominator `10^12`; the bounds
 are checked by exact integer squaring.  For every coordinate encountered,
 the exact value lies less than `1/1000` above its computed lower bound.  Only
 68 bucket offsets can therefore contain a unit neighbour.  An exact interval
-square test removes impossible candidates, and all 39,179,441 survivors are
-tested by exact multiplication in `K`.  No floating-point operation is used.
+square test removes impossible candidates.  The default two-edge run makes
+39,179,441 exact distance checks; `--through-three` makes 45,942,172, stopping
+each search as soon as a fourth genuinely new edge proves that the placement
+is outside the exact-three stratum.  No floating-point operation is used.
 
-The full per-orientation output is committed as `expected_census.txt` with
-SHA-256
+The legacy through-two per-orientation transcript remains committed as
+`expected_census.txt`, SHA-256
 `4008074237712c7fe2064cb32c3a47db0f91cf293e1be11914bed232b95c497d`.
+The extended transcript is 1,933,183 bytes and is omitted as verbose generated
+output; its SHA-256 is
+`6a1903a823aa4712ffc76107b038e2ab2f78a844651bcdc4c47264ed94513f2c`.
+Its compact global tail is `expected_three_summary.txt`, SHA-256
+`c82fc5b5b7da533686ddeb12273337e6a218e5a308be299218a4d7bccf14c559`.
 
 ## Reproduction
 
@@ -150,31 +175,50 @@ cmp colour_libraries.txt regenerated_colour_libraries.txt
   colour_libraries.txt \
   > census_output.txt
 diff -u expected_census.txt census_output.txt
-python3 verify.py > verify_output.txt
+./census \
+  ../hadwiger_nelson_parts509_completion_census_degree9/points.tsv \
+  colour_libraries.txt \
+  --through-three \
+  > /tmp/parts509_three_edge_census.txt
+sha256sum /tmp/parts509_three_edge_census.txt
+sed -n '/^affine_placements_with_at_least_two_overlaps=/,$p' \
+  /tmp/parts509_three_edge_census.txt \
+  > regenerated_three_summary.txt
+diff -u expected_three_summary.txt regenerated_three_summary.txt
+python3 verify.py /tmp/parts509_three_edge_census.txt > verify_output.txt
 diff -u expected_verify.txt verify_output.txt
 ```
 
-The exact C++ census is single-threaded and took about 15 minutes on the
-shared research host.  The Python verifier uses only the standard library.
+The exact C++ census is single-threaded.  The extended run took 556.78 seconds
+with GCC 12.2.0 on the shared research host.  The Python verifier uses only
+the standard library.  A GCC 12.2.0 `-fsanitize=address,undefined` build ran
+through 111 complete orientations before the declared 120-second
+representative-test timeout with no sanitizer diagnostic; this was coverage
+testing, not a complete second census.
 
 ## Trust boundary
 
 - `census.cpp` exactly reconstructs the orientations, all cross differences,
   internal edges, interval filters, and final unit tests.  It validates every
-  library colouring, constructs the 256-by-256 four-vertex-pattern
-  compatibility table from all 24 colour permutations, and checks each
-  exactly-two-new-edge placement.  Hash collisions cannot affect the result
-  because full field elements are compared.
+  library colouring, constructs exact compatibility bitsets for the four- and
+  five-label patterns from all 24 colour permutations, and checks each
+  exactly-two- and exactly-three-new-edge placement.  Hash collisions cannot
+  affect the result because full field elements are compared.
 - `verify.py` pins every source, checks the complete transcript digest and
-  all per-orientation/global sums, verifies the radical bounds and signed
-  128-bit safety inequality, and reruns the solver-free sibling certificate
+  all legacy per-orientation/global sums, and checks the compact extended
+  summary.  When given the regenerated extended transcript, it additionally
+  pins its digest and checks all extended rows, topology sums, and
+  rotation/reflection symmetries.  It verifies the radical bounds and signed
+  128-bit safety inequality and reruns the solver-free sibling certificate
   supplying the pair-flexibility input used by the gluing lemma.  It also
   reruns the solver-free 4,769,328-case single-cross-edge flexibility checker.
   It independently regenerates the two explicit colour libraries and checks
   every witness against every internal edge.
-- The transcript checker does not independently reimplement the full C++
-  census.  The proof is a reproducible finite exact computation in ordinary
-  C++ and Python, not a proof-assistant formalization.
+- The compact three-edge summary does not independently reimplement the full
+  C++ census.  The extended transcript was reproduced in two deterministic
+  GCC runs during publication validation, but those runs share the same
+  algorithm and compiler.  The proof is a reproducible finite exact
+  computation in ordinary C++ and Python, not a proof-assistant formalization.
 - The conclusion is confined to this fixed Parts `L`/`S+` placement family.
 
 ## Files
@@ -182,7 +226,9 @@ shared research host.  The Python verifier uses only the standard library.
 - `census.cpp` — complete exact orientation, translation, and cross-edge
   census.
 - `expected_census.txt` — all 2,840 per-orientation counts and global
-  checksums.
+  checksums for the default through-two mode.
+- `expected_three_summary.txt` — compact global checksums for the
+  `--through-three` mode; the verbose transcript is intentionally omitted.
 - `make_colour_libraries.py` — standard-library deterministic extraction of
   the positive witnesses from their source certificates.
 - `colour_libraries.txt` — the 135 explicit `L` colourings and 194 explicit
