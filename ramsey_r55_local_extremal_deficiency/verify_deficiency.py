@@ -190,10 +190,29 @@ def audit_identity(document: dict[str, object]) -> None:
     maximum_noncentral = max(N - counts[21] for counts, _, _ in hard_profiles)
     minimum_order21_sides = 2 * (N - maximum_noncentral)
     minimum_exact100_order21_sides = minimum_order21_sides - exceptional_sides
-    if (maximum_noncentral, minimum_order21_sides, minimum_exact100_order21_sides) != (13, 60, 40):
+    minimum_double_exact_vertices = N - maximum_noncentral - exceptional_sides
+    if (
+        maximum_noncentral,
+        minimum_order21_sides,
+        minimum_exact100_order21_sides,
+        minimum_double_exact_vertices,
+    ) != (13, 60, 40, 10):
         raise AssertionError(
-            (maximum_noncentral, minimum_order21_sides, minimum_exact100_order21_sides)
+            (
+                maximum_noncentral,
+                minimum_order21_sides,
+                minimum_exact100_order21_sides,
+                minimum_double_exact_vertices,
+            )
         )
+    # At a doubly exact degree-21 vertex, the red neighborhood has 100 red
+    # edges and the blue neighborhood has 100 blue edges, hence 110 red
+    # edges.  Together with the 21 incident red edges, the red cross count is
+    # m-231 for a global red edge count m in 445,...,451.
+    if {edges - (21 + 100 + (210 - 100)) for edges in sparser_edge_counts} != set(
+        range(214, 221)
+    ):
+        raise AssertionError("wrong doubly exact cross-edge range")
     maximum_delta_profiles = [
         counts for counts, weight, _ in hard_profiles if (1247 - weight) // 2 == 622
     ]
@@ -211,6 +230,7 @@ def audit_identity(document: dict[str, object]) -> None:
     print(f"PASS hard-case complement-normalized degree-count profiles={len(hard_profiles)}")
     print("PASS hard-case sparser color has 445,...,451 edges")
     print("PASS hard-case has at least 40 order-21 local graphs with 100 edges")
+    print("PASS hard-case has at least 10 doubly exact 21+21 split vertices")
 
 
 def main() -> None:

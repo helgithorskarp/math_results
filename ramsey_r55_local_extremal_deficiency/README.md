@@ -23,7 +23,9 @@ integer degree-count profiles survive that hard branch, and the sparser color
 has between 445 and 451 edges.  Thus either a six-deficient local core exists,
 or the two global color classes differ in size by at most 13 edges while the
 66-fold exact-level-seven conclusion holds.  In fact, at least 40 of those
-exact-level-seven local graphs have order 21 and exactly 100 edges.
+exact-level-seven local graphs have order 21 and exactly 100 edges.  At least
+ten degree-21 vertices have this exact structure in both colors
+simultaneously.
 
 This is a necessary condition, not a construction of a 43-vertex Ramsey graph
 and not an exclusion of all such graphs.
@@ -172,6 +174,27 @@ or:     at least 40 local (4,5;21) graphs have exactly 100 edges,
         and the two global color classes differ by at most 13 edges.
 ```
 
+There is also a paired version.  Among the at least 30 degree-21 vertices,
+at most 20 can have either color side among the at most 20 non-exact sides.
+Consequently at least ten vertices `v` have both
+
+```text
+G[N_G(v)]                         in R(4,5;21), with 100 edges,
+complement(G)[N_complement(G)(v)] in R(4,5;21), with 100 edges.
+```
+
+For the complement-normalized red graph, the second equality means that its
+blue-neighbor set spans `binom(21,2)-100=110` red edges.  If the whole red
+graph has `m` edges, the red edges across the resulting `21+21` split number
+
+```text
+m - 21 - 100 - 110 = m - 231,
+```
+
+which lies between 214 and 220.  Thus the hard branch supplies at least ten
+balanced split anchors with both internal local cores and the cross-edge
+total fixed to a seven-value range.
+
 ## Reproduction
 
 The standard-library verifier checks the extrema manifest, derives every
@@ -195,6 +218,7 @@ PASS hard-case degree weight <=39 and deficiency >=604
 PASS hard-case complement-normalized degree-count profiles=104
 PASS hard-case sparser color has 445,...,451 edges
 PASS hard-case has at least 40 order-21 local graphs with 100 edges
+PASS hard-case has at least 10 doubly exact 21+21 split vertices
 ```
 
 An optional upstream-data audit checks both pinned SHA-256 values, verifies
