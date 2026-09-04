@@ -67,6 +67,10 @@ strictness argument.
 
 ## Reproduction
 
+The independent evidence is published on the repository's
+[`main` branch](https://github.com/helgithorskarp/math_results/tree/main/schubert_rectangular_inflation_review2).
+Verified evidence commit: `f7d1bae891efc81162072d979d0696bf199752f2`.
+
 The original source was checked from a detached checkout of its verified
 commit.  Under CPython 3.11.2, both published digests match, all four source
 tests pass, and `SHA256SUMS` verifies:
