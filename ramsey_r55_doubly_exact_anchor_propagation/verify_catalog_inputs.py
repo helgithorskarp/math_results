@@ -62,10 +62,10 @@ def contains_clique(adjacency, size: int) -> bool:
     )
 
 
-def independent_four_transversal_number(adjacency) -> int:
-    """Return the minimum number of vertices hitting every independent 4-set."""
+def independent_four_masks(adjacency) -> tuple[int, ...]:
+    """Return the bit masks of all independent four-sets."""
     order = len(adjacency)
-    independent_fours = tuple(
+    return tuple(
         sum(1 << vertex for vertex in vertices)
         for vertices in itertools.combinations(range(order), 4)
         if not any(
@@ -73,12 +73,38 @@ def independent_four_transversal_number(adjacency) -> int:
             for first, second in itertools.combinations(vertices, 2)
         )
     )
+
+
+def independent_four_transversals(adjacency, size: int) -> tuple[int, ...]:
+    """Return all size-``size`` vertex sets hitting every independent 4-set."""
+    independent_fours = independent_four_masks(adjacency)
+    return tuple(
+        sum(1 << vertex for vertex in vertices)
+        for vertices in itertools.combinations(range(len(adjacency)), size)
+        if all(
+            sum(1 << vertex for vertex in vertices) & independent
+            for independent in independent_fours
+        )
+    )
+
+
+def independent_four_transversal_number(adjacency) -> int:
+    """Return the minimum number of vertices hitting every independent 4-set."""
+    order = len(adjacency)
     for size in range(order + 1):
-        for vertices in itertools.combinations(range(order), size):
-            transversal = sum(1 << vertex for vertex in vertices)
-            if all(transversal & independent for independent in independent_fours):
-                return size
+        if independent_four_transversals(adjacency, size):
+            return size
     raise AssertionError("finite set family has no transversal")
+
+
+def mask_edge_count(adjacency, mask: int) -> int:
+    vertices = tuple(
+        vertex for vertex in range(len(adjacency)) if mask & (1 << vertex)
+    )
+    return sum(
+        adjacency[first][second]
+        for first, second in itertools.combinations(vertices, 2)
+    )
 R45_ARCHIVE_URL = BASE_URL + "r45extreme.tar.gz"
 R45_MAXIMUM_EXPECTED = {
     14: (60, 1, "752aa8b1509075bc39cb1151936b250c681fbdf0a9fdda20d8d5bbb6e6356c62"),
@@ -92,6 +118,8 @@ R45_MAXIMUM_EXPECTED = {
 
 def audit_r35() -> dict[int, tuple[tuple[int, int], ...]]:
     catalog_records = {}
+    h11_independent_cover_support_histogram = Counter()
+    h12_minimum_cover_edge_histogram = Counter()
     for order, (expected_count, expected_digest, expected_histogram) in (
         R35_EXPECTED.items()
     ):
@@ -114,9 +142,26 @@ def audit_r35() -> dict[int, tuple[tuple[int, int], ...]]:
                 raise AssertionError("catalog graph has an independent five-set")
             edge_count = core_edge_count(adjacency)
             histogram[edge_count] += 1
-            records.append(
-                (edge_count, independent_four_transversal_number(adjacency))
-            )
+            transversal_number = independent_four_transversal_number(adjacency)
+            records.append((edge_count, transversal_number))
+            if order == 11 and edge_count <= 19:
+                support = 0
+                for size in (3, 4):
+                    for transversal in independent_four_transversals(
+                        adjacency, size
+                    ):
+                        if mask_edge_count(adjacency, transversal) == 0:
+                            support |= transversal
+                h11_independent_cover_support_histogram[
+                    (edge_count, support.bit_count())
+                ] += 1
+            if order == 12 and edge_count == 20:
+                if transversal_number != 4:
+                    raise AssertionError("wrong order-12 minimum cover size")
+                for transversal in independent_four_transversals(adjacency, 4):
+                    h12_minimum_cover_edge_histogram[
+                        mask_edge_count(adjacency, transversal)
+                    ] += 1
         if dict(sorted(histogram.items())) != expected_histogram:
             raise AssertionError((order, histogram))
         catalog_records[order] = tuple(records)
@@ -132,23 +177,27 @@ def audit_r35() -> dict[int, tuple[tuple[int, int], ...]]:
         13: {5: 1},
     }:
         raise AssertionError(cover_spectra)
+    if dict(sorted(h12_minimum_cover_edge_histogram.items())) != {3: 12, 4: 4}:
+        raise AssertionError(h12_minimum_cover_edge_histogram)
+    if dict(sorted(h11_independent_cover_support_histogram.items())) != {
+        (15, 0): 1,
+        (16, 0): 5, (16, 4): 1,
+        (17, 0): 15, (17, 4): 3, (17, 5): 1,
+        (18, 0): 20, (18, 4): 6, (18, 5): 3,
+        (18, 6): 1, (18, 7): 1,
+        (19, 0): 23, (19, 4): 4, (19, 5): 2, (19, 6): 1,
+    }:
+        raise AssertionError(h11_independent_cover_support_histogram)
     return catalog_records
 
 
 def audit_residual_menu(
     catalog_records: dict[int, tuple[tuple[int, int], ...]]
 ) -> None:
-    """Rebuild the menu directly from catalog records, not histograms."""
+    """Rebuild the surviving d=22 menu directly from catalog records."""
     r55_minimum_edges = {20: 50, 21: 56}
-    partitions = {
-        23: ((10, 13), (11, 12)),
-        22: ((9, 13), (10, 12), (11, 11)),
-    }
+    partitions = {22: ((9, 13), (10, 12), (11, 11))}
     case_specs = (
-        (23, 219, "red"),
-        (23, 219, "blue"),
-        (23, 220, "red"),
-        (23, 220, "blue"),
         (22, 220, "red"),
         (22, 220, "blue"),
     )
@@ -253,7 +302,7 @@ def main() -> None:
     print("PASS official R(4,5) maxima at orders 14,...,19 are "
           "60,66,72,79,85,92")
     print("PASS official extremal R(4,5;14,60) catalog is the pinned singleton")
-    print("PASS official R(3,5) records and independent-4 covers reproduce menu")
+    print("PASS official R(3,5) records reproduce covers, support obstruction, and menu")
 
 
 if __name__ == "__main__":

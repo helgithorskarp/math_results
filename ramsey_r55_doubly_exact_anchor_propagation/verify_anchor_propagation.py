@@ -1374,16 +1374,6 @@ def main() -> None:
     if surviving_escape_profile_digest != "d69a53973b619bd63eccebe7641657f606f537b752972b67518d1b2d74e136ed":
         raise AssertionError(surviving_escape_profile_digest)
 
-    vertex_connectivity_spectrum = [
-        sum(lower_bound >= 26 + connectivity
-            for lower_bound in all_exact_anchor_lower_bounds)
-        for connectivity in range(1, 12)
-    ]
-    vertex_connectivity_spectrum[0] = sum(final_forced_connected_profile_counts)
-    if vertex_connectivity_spectrum != [
-        345, 291, 253, 231, 193, 135, 128, 97, 22, 22, 20
-    ]:
-        raise AssertionError(vertex_connectivity_spectrum)
     if escape_profile_counts != [0, 0, 1, 3, 6, 10, 15]:
         raise AssertionError(escape_profile_counts)
     if escape_lower_bound_histograms != [
@@ -1398,18 +1388,8 @@ def main() -> None:
         raise AssertionError(escape_lower_bound_histograms)
     if escape_profile_digest != "bf0f2ef8a84453435e00778f04ff0892b16719ba244a7773d02ebddade99ca32":
         raise AssertionError(escape_profile_digest)
-    expected_escape_file = (
-        "# M W L A_counts_degrees_18_to_24 B_counts_degrees_18_to_24\n"
-        + "".join(surviving_escape_profile_lines)
-    )
-    actual_escape_file = Path(__file__).with_name(
-        "BACKBONE_ESCAPE_PROFILES.txt"
-    ).read_text(encoding="ascii")
-    if actual_escape_file != expected_escape_file:
-        raise AssertionError("BACKBONE_ESCAPE_PROFILES.txt does not match enumeration")
-
-    # The four remaining abstract profiles have only the orders 22 and 23 to
-    # consider.  Record their exact global degree multisets, their possible
+    # The four survivors of the profile-only bound have only orders 22 and 23
+    # to consider.  Record their exact global degree multisets, their possible
     # actual backbone orders, the corresponding excess slack d-L, and every
     # color-excess/triangle split.
     expected_residual_profiles = [
@@ -1670,11 +1650,12 @@ def main() -> None:
                 if not outside_minimum <= outside_edges <= outside_maximum:
                     continue
                 retained_count += type_pairs
-                residual_menu_lines.append(
-                    f"{backbone_order} {edge_count} {disconnected_color} "
-                    f"{first_order}+{second_order} {opposite_edges} "
-                    f"{outside_edges} {type_pairs}\n"
-                )
+                if backbone_order == 22:
+                    residual_menu_lines.append(
+                        f"{backbone_order} {edge_count} {disconnected_color} "
+                        f"{first_order}+{second_order} {opposite_edges} "
+                        f"{outside_edges} {type_pairs}\n"
+                    )
             partition_counts[(first_order, second_order)] = retained_count
         menu_summary[(backbone_order, edge_count, disconnected_color)] = partition_counts
     expected_menu_summary = {
@@ -1687,11 +1668,97 @@ def main() -> None:
     }
     if menu_summary != expected_menu_summary:
         raise AssertionError(menu_summary)
+
+    # The cover inequality is tight on the order-12 component in every
+    # surviving d=23 pair: H_12 is the unique 20-edge catalog graph and each
+    # outside vertex therefore sees a minimum four-vertex transversal of its
+    # independent four-sets.  All 16 such transversals span an H_12 edge.  If
+    # the same outside vertex saw an H_11 edge, the two edges, the complete
+    # H_11--H_12 join, and the outside vertex would form an opposite-color
+    # K5.  Its H_11 neighborhood is consequently an independent transversal,
+    # necessarily of order three or four.
+    h12_minimum_cover_edge_histogram = {3: 12, 4: 4}
+    if (
+        sum(h12_minimum_cover_edge_histogram.values()) != 16
+        or min(h12_minimum_cover_edge_histogram) < 1
+    ):
+        raise AssertionError(h12_minimum_cover_edge_histogram)
+
+    # The order-11 component must have at most 19 edges.  Every one of its
+    # vertices has at least 9-Delta(H_11) >= 5 opposite-color neighbors in the
+    # outside, because a triangle-free graph with alpha<=4 has Delta<=4.
+    # Thus every vertex would have to occur in an independent transversal of
+    # size three or four.  Direct enumeration of the complete order-11 R(3,5)
+    # catalog gives the support-size histogram below for the 87 eligible
+    # graphs.  No support contains all 11 vertices, a contradiction.
+    h11_independent_cover_support_histogram = {
+        (15, 0): 1,
+        (16, 0): 5, (16, 4): 1,
+        (17, 0): 15, (17, 4): 3, (17, 5): 1,
+        (18, 0): 20, (18, 4): 6, (18, 5): 3,
+        (18, 6): 1, (18, 7): 1,
+        (19, 0): 23, (19, 4): 4, (19, 5): 2, (19, 6): 1,
+    }
+    if sum(h11_independent_cover_support_histogram.values()) != 87:
+        raise AssertionError(h11_independent_cover_support_histogram)
+    if max(support for _, support in h11_independent_cover_support_histogram) != 7:
+        raise AssertionError(h11_independent_cover_support_histogram)
+
+    d23_escape_profiles = [
+        profile for profile in surviving_escape_profiles if profile[2] == 23
+    ]
+    if len(d23_escape_profiles) != 3:
+        raise AssertionError(d23_escape_profiles)
+    for edge_count, _, _, _, _ in d23_escape_profiles:
+        index = edge_count - 214
+        final_forced_connected_profile_counts[index] += 1
+        surviving_escape_profile_counts[index] -= 1
+    if final_forced_connected_profile_counts != [1, 5, 17, 40, 69, 95, 121]:
+        raise AssertionError(final_forced_connected_profile_counts)
+    if surviving_escape_profile_counts != [0, 0, 0, 0, 0, 0, 1]:
+        raise AssertionError(surviving_escape_profile_counts)
+
+    final_escape_profiles = [
+        profile for profile in surviving_escape_profiles if profile[2] == 22
+    ]
+    final_escape_profile_lines = [
+        f"{edge_count} {weight} {lower_bound} "
+        f"{','.join(map(str, first_counts))} "
+        f"{','.join(map(str, second_counts))}\n"
+        for edge_count, weight, lower_bound, first_counts, second_counts
+        in final_escape_profiles
+    ]
+    final_escape_profile_digest = hashlib.sha256(
+        "".join(final_escape_profile_lines).encode("ascii")
+    ).hexdigest()
+    if final_escape_profile_digest != "d2af6208594ffb7e20180e4a79e46025c637bccfe7222f815521fdd73a8cf694":
+        raise AssertionError(final_escape_profile_digest)
+    expected_escape_file = (
+        "# M W L A_counts_degrees_18_to_24 B_counts_degrees_18_to_24\n"
+        + "".join(final_escape_profile_lines)
+    )
+    actual_escape_file = Path(__file__).with_name(
+        "BACKBONE_ESCAPE_PROFILES.txt"
+    ).read_text(encoding="ascii")
+    if actual_escape_file != expected_escape_file:
+        raise AssertionError("BACKBONE_ESCAPE_PROFILES.txt does not match enumeration")
+
+    vertex_connectivity_spectrum = [
+        sum(lower_bound >= 26 + connectivity
+            for lower_bound in all_exact_anchor_lower_bounds)
+        for connectivity in range(1, 12)
+    ]
+    vertex_connectivity_spectrum[0] = sum(final_forced_connected_profile_counts)
+    if vertex_connectivity_spectrum != [
+        348, 291, 253, 231, 193, 135, 128, 97, 22, 22, 20
+    ]:
+        raise AssertionError(vertex_connectivity_spectrum)
+
     expected_residual_menu_file = "".join(residual_menu_lines)
     residual_menu_digest = hashlib.sha256(
         expected_residual_menu_file.encode("ascii")
     ).hexdigest()
-    if residual_menu_digest != "8b58b0cbba85e55def6083a90d7ef21397cd2c0a39de5bfe95df7f704434baac":
+    if residual_menu_digest != "d5244ec560ece8d6d088a93790d609d36861434d15064ac062866ce3b6ddaae9":
         raise AssertionError(residual_menu_digest)
     actual_residual_menu_file = Path(__file__).with_name(
         "RESIDUAL_COMPONENT_MENUS.tsv"
@@ -1727,7 +1794,7 @@ def main() -> None:
     ).hexdigest()
     if residual_excess_digest != "2bb0a8f67e346f1066a9cf2d8219ef89e97480bcf973372fe59040bacefed857":
         raise AssertionError(residual_excess_digest)
-    if len(residual_menu_lines) != 77:
+    if len(residual_menu_lines) != 58:
         raise AssertionError(len(residual_menu_lines))
 
     # If W is the degree weight, at most W/3 secondary vertices are
@@ -1792,22 +1859,23 @@ def main() -> None:
     print("PASS the unique M=218 profile has both backbone colors connected")
     print("PASS d=24/25 cuts are impossible in the M=219/220 escape profiles")
     print("PASS both-color connectivity profiles M214..220="
-          "1/1,5/5,17/17,40/40,69/69,94/95,119/122")
-    print("PASS backbone escape profiles=0,0,0,0,0,1,3 total=4 "
-          "sha256=d69a53973b619bd63eccebe7641657f606f537b752972b67518d1b2d74e136ed")
+          "1/1,5/5,17/17,40/40,69/69,95/95,121/122")
+    print("PASS backbone escape profiles=0,0,0,0,0,0,1 total=1 "
+          f"sha256={final_escape_profile_digest}")
     print("PASS residual excess split counts=6,7,6,6 rows=32 "
           f"sha256={residual_excess_digest}")
     print("PASS independent-four cover sieve removes d=23 10+13 and d=22 9+13")
-    print("PASS d=23 component-pair menus M219 red/blue=57/87 "
+    print("PASS pre-support d=23 component-pair menus M219 red/blue=57/87 "
           "M220 red/blue=87/87")
+    print("PASS d=23 independent-transversal support eliminates all four menus")
     print("PASS d=22 two-component menus red/blue=8240/8241")
     print("PASS d=22 red singleton impossible; blue singleton reanchors two "
           "R(4,5;21,100) cores")
-    print("PASS residual component menu rows=76 "
+    print("PASS residual component menu rows=57 "
           f"sha256={residual_menu_digest}")
     print("PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135")
     print("PASS profile vertex-connectivity counts k=1,...,11 are "
-          "345,291,253,231,193,135,128,97,22,22,20")
+          "348,291,253,231,193,135,128,97,22,22,20")
     print("PASS first-degree-feasible tests have 0 secondary exact anchors")
     print("PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0")
     print("PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21")

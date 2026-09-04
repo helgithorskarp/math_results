@@ -14,14 +14,14 @@ and `M=215`.  At `M=216` the red backbone remains connected, while every
 possible blue disconnection is reduced to two 13-vertex Ramsey-critical
 components at the abstract induced-subgraph level, and global edge accounting
 then excludes that exception.  Profile-sensitive excess accounting forces
-both colors connected in 345 of the 349 possible degree-count profiles across
-all `M=214,...,220`.  The four remaining abstract profiles are now reduced to
-orders 22 and 23, explicit excess/triangle splits, and finite component menus
-drawn from the complete order-9 through order-13 `(3,5)` catalogs.  At order
-23 a local `K_4`-cover inequality removes the entire `10+13` component
-partition; at order 22 it removes `9+13`.  A singleton component at order 22
-is impossible in red and forces a nested pair of exact `(4,5;21,100)` cores in
-blue.
+both colors connected in 348 of the 349 possible degree-count profiles across
+all `M=214,...,220`.  Complete order-9 through order-13 `(3,5)` catalogs,
+combined with a local `K_4`-cover inequality and its equality case, eliminate
+all order-23 disconnections.  The sole remaining abstract escape is the
+`M=220` profile with degree multiset `20^1 21^42`, and it can disconnect only
+on exactly 22 anchors.  At that order the cover inequality removes the
+`9+13` component partition; a singleton component is impossible in red and
+forces a nested pair of exact `(4,5;21,100)` cores in blue.
 
 This is a necessary pruning theorem for the hard construction branch.  It is
 not a 43-vertex Ramsey graph, an enumeration of the local cores, or a solver
@@ -663,8 +663,8 @@ Exact enumeration of all 349 ordered split profiles now gives
 | 216 | 17 | 17 | 11 | 5 | 0 |
 | 217 | 40 | 40 | 30 | 16 | 0 |
 | 218 | 69 | 69 | 52 | 28 | 0 |
-| 219 | 95 | 94 | 70 | 37 | 1 |
-| 220 | 122 | 119 | 88 | 49 | 3 |
+| 219 | 95 | 95 | 70 | 37 | 0 |
+| 220 | 122 | 121 | 88 | 49 | 1 |
 
 The threshold is deletion-stable.  If a set `S` of `k<=d-27` anchors is
 removed, the remaining order is at least 27 and the same global degree count
@@ -681,12 +681,12 @@ disconnected after deleting at most `d-27` vertices, so
 vertex-connectivity of each color on D >= d-26 >= L-26.   (Profile-kappa)
 ```
 
-In total, 345 of the 349 profiles force both color backbones connected.  The
+In total, 348 of the 349 profiles force both color backbones connected.  The
 numbers of profiles certifying vertex connectivity at least
 `k=1,2,...,11` in each color are respectively
 
 ```text
-345, 291, 253, 231, 193, 135, 128, 97, 22, 22, 20.
+348, 291, 253, 231, 193, 135, 128, 97, 22, 22, 20.
 ```
 
 The same internal-degree bound also controls diameters.  A color geodesic
@@ -698,38 +698,38 @@ certifies both-color diameter at most eight in 253 profiles and at most five
 in 135 profiles.  (The earlier `M=214,215` arguments certify some stronger
 bounds outside these two generic counts.)
 
-The four surviving connectivity escapes have lower-bound multiplicities
+The sole surviving connectivity escape has lower-bound multiplicity
 
 ```text
-M=219: L=23       -> 1
-M=220: L=22,23    -> 1,2.
+M=220: L=22       -> 1.
 ```
 
 The complete machine-readable list is
-[`BACKBONE_ESCAPE_PROFILES.txt`](BACKBONE_ESCAPE_PROFILES.txt).  Its four
-canonical data lines have SHA-256
-`d69a53973b619bd63eccebe7641657f606f537b752972b67518d1b2d74e136ed`,
-and the verifier regenerates it exactly.  For an escape profile that is
-actually disconnected, `L<=|D|<=23`.  The number of excess units not forced
-to serve distinct nonexact degree-21 vertices is exactly
+[`BACKBONE_ESCAPE_PROFILES.txt`](BACKBONE_ESCAPE_PROFILES.txt).  Its one
+canonical data line has SHA-256
+`d2af6208594ffb7e20180e4a79e46025c637bccfe7222f815521fdd73a8cf694`,
+and the verifier regenerates it exactly.  A disconnected realization has
+`|D|=L=22`.  The number of excess units not forced to serve distinct nonexact
+degree-21 vertices is exactly
 
 ```text
-E-(n_21-|D|)=|D|-L <= 23-L.
+E-(n_21-|D|)=|D|-L = 0.
 ```
 
-Thus an `L=23` escape has zero slack: every excess unit lies on a different
-nonexact degree-21 vertex, with no repeated excess and no excess on a
-noncentral local side.  The sole `L=22` case has at most one slack unit.
-These are direct cardinality and
-excess-budget constraints for a construction or local-repair search; they do
-not discard the escape profiles without further compatibility information.
+Thus every excess unit lies on a different nonexact degree-21 vertex, with no
+repeated excess and no excess on a noncentral local side.  These are direct
+cardinality and excess-budget constraints for a construction or local-repair
+search; they do not discard the last escape profile without further
+compatibility information.
 
-## Exact normal forms for the four residual profiles
+## Exact normal forms for the preliminary residual profiles
 
 Let `D` be the full set of doubly exact vertices and put `d=|D|`.  The previous
-section shows that a disconnected backbone can occur only in the following
-four degree profiles and only at the listed orders.  Here `L` is the certified
-lower bound for `d`.
+profile bound first leaves the following four candidates at the listed
+orders.  The order-23 support obstruction below subsequently eliminates three
+of them and the order-23 realization of `M220-W3`.  The table and excess file
+are retained as an exact audit trail of that reduction.  Here `L` is the
+certified lower bound for `d`.
 
 | profile | global red-degree multiset | possible `d` | slack `d-L` | excess/triangle splits |
 |:---|:---:|:---:|:---:|---:|
@@ -852,9 +852,53 @@ to have at most 19 edges.  Combining this with `(Component-s)` and
 For example, a red disconnection at `M=219` makes the opposite blue outside
 edge count `s-30`; the order-20 maximum 140 gives `s<=170`.  The other three
 rows follow from the same exact identity, followed by `(K4-cover)`.  This menu
-applies to every
-`d=23` realization of the corresponding residual `M`, including a possible
-order-23 realization of `M220-W3`.
+is only preliminary: equality in `(K4-cover)` supplies a final obstruction.
+
+Call the order-12 opposite-color graph `H_12`.  Its cover inequality is the
+equality
+
+```text
+12(21-11)-2*20 = 80 = 20*tau_4(H_12).
+```
+
+Consequently every outside vertex has exactly four opposite-color neighbors
+in this component, and those four vertices form a minimum transversal.  The
+unique 20-edge order-12 catalog graph has 16 minimum four-transversals: 12
+span three `H_12` edges and four span four edges.  In particular, every one
+contains an edge.
+
+Now call the other component graph `H_11`.  If an outside vertex's
+opposite-color neighbors in `H_11` also contained an edge, that edge, an edge
+from its `H_12` transversal, the complete opposite-color join between the
+components, and the outside vertex would form an opposite-color `K_5`.
+Therefore its `H_11` neighbor set is independent.  It must simultaneously
+hit every independent four-set of `H_11`, so it is an independent
+transversal of order three or four.
+
+The cover inequality already restricts `H_11` to at most 19 edges.  For each
+of the 87 eligible order-11 catalog graphs, take the union of all vertices
+that occur in an independent transversal of order three or four.  The exact
+histogram below is indexed by `e(H_11)` and the size of that union:
+
+| `e(H_11)` | support 0 | support 4 | support 5 | support 6 | support 7 |
+|---:|---:|---:|---:|---:|---:|
+| 15 | 1 | 0 | 0 | 0 | 0 |
+| 16 | 5 | 1 | 0 | 0 | 0 |
+| 17 | 15 | 3 | 1 | 0 | 0 |
+| 18 | 20 | 6 | 3 | 1 | 1 |
+| 19 | 23 | 4 | 2 | 1 | 0 |
+
+No support has all 11 vertices.  Yet every vertex of `H_11` has at least
+
+```text
+21-12-deg_H11(v) = 9-deg_H11(v) >= 5
+```
+
+opposite-color neighbors outside: triangle-freeness makes every neighborhood
+independent, so `Delta(H_11)<=alpha(H_11)<=4`.  Every vertex would therefore
+have to appear in one of the independent transversals, contradicting the
+catalog support bound of seven.  This eliminates every `d=23` disconnection,
+in both colors and for both `M=219,220`.
 
 ### Components and the asymmetric singleton at order 22
 
@@ -899,11 +943,11 @@ second doubly exact anchoring of the original `M=220` profile, with all other
 21 exact anchors on the red side and none on the blue side.
 
 The complete edge-resolved catalog menu is
-[`RESIDUAL_COMPONENT_MENUS.tsv`](RESIDUAL_COMPONENT_MENUS.tsv).  Its 76 data
+[`RESIDUAL_COMPONENT_MENUS.tsv`](RESIDUAL_COMPONENT_MENUS.tsv).  Its 57 data
 rows list `d`, `M`, the disconnected color, the component orders, `s`, the
 forced opposite-color outside edge count, and the number of unordered catalog
 type pairs.  Its SHA-256 is
-`8b58b0cbba85e55def6083a90d7ef21397cd2c0a39de5bfe95df7f704434baac`.
+`d5244ec560ece8d6d088a93790d609d36861434d15064ac062866ce3b6ddaae9`.
 The verifier regenerates both residual files exactly.  This is a finite
 necessary-condition menu, not an assertion that any listed pair extends to a
 43-vertex coloring.
@@ -1080,16 +1124,17 @@ PASS every R(5,5;19) graph has at least 43 edges
 PASS diagonal edge minima at orders 20,21 are at least 50,56
 PASS the unique M=218 profile has both backbone colors connected
 PASS d=24/25 cuts are impossible in the M=219/220 escape profiles
-PASS both-color connectivity profiles M214..220=1/1,5/5,17/17,40/40,69/69,94/95,119/122
-PASS backbone escape profiles=0,0,0,0,0,1,3 total=4 sha256=d69a53973b619bd63eccebe7641657f606f537b752972b67518d1b2d74e136ed
+PASS both-color connectivity profiles M214..220=1/1,5/5,17/17,40/40,69/69,95/95,121/122
+PASS backbone escape profiles=0,0,0,0,0,0,1 total=1 sha256=d2af6208594ffb7e20180e4a79e46025c637bccfe7222f815521fdd73a8cf694
 PASS residual excess split counts=6,7,6,6 rows=32 sha256=2bb0a8f67e346f1066a9cf2d8219ef89e97480bcf973372fe59040bacefed857
 PASS independent-four cover sieve removes d=23 10+13 and d=22 9+13
-PASS d=23 component-pair menus M219 red/blue=57/87 M220 red/blue=87/87
+PASS pre-support d=23 component-pair menus M219 red/blue=57/87 M220 red/blue=87/87
+PASS d=23 independent-transversal support eliminates all four menus
 PASS d=22 two-component menus red/blue=8240/8241
 PASS d=22 red singleton impossible; blue singleton reanchors two R(4,5;21,100) cores
-PASS residual component menu rows=76 sha256=8b58b0cbba85e55def6083a90d7ef21397cd2c0a39de5bfe95df7f704434baac
+PASS residual component menu rows=57 sha256=d5244ec560ece8d6d088a93790d609d36861434d15064ac062866ce3b6ddaae9
 PASS profile diameter bounds <=8 for 253 profiles and <=5 for 135
-PASS profile vertex-connectivity counts k=1,...,11 are 345,291,253,231,193,135,128,97,22,22,20
+PASS profile vertex-connectivity counts k=1,...,11 are 348,291,253,231,193,135,128,97,22,22,20
 PASS first-degree-feasible tests have 0 secondary exact anchors
 PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0
 PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21
@@ -1102,9 +1147,10 @@ about 2.1 seconds under CPython 3.11.2 on the research host.  The separate
 provenance audit fetches the pinned official catalog files and checks their
 SHA-256 digests, counts, Ramsey properties, edge histograms, and the extremal
 singleton.  It then computes every independent-four transversal number and
-reconstructs all 76 residual menu rows directly from individual catalog
-records, independently of the joint-invariant product routine in the main
-verifier:
+checks the order-12 minimum-cover edge distribution and the order-11
+independent-cover support obstruction.  Finally, it reconstructs all 57
+surviving order-22 menu rows directly from individual catalog records,
+independently of the joint-invariant product routine in the main verifier:
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 verify_catalog_inputs.py
