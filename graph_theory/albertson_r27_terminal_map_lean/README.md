@@ -21,6 +21,12 @@ the terminal planarization has the exact Euler-triangulation counts used in
 the proof. Finally, the order-53 deletion sum has the nonzero remainder that
 forces the integer lower bound 6089, which exceeds `Z(27)=6084`.
 
+The complete nonnegative integer system imported from the PRTT and
+Büngener--Kaufmann inequalities is encoded as `FeasibleDeletionProfile`.
+Lean proves universally that its only feasible records are precisely the two
+reviewed residual rows, rather than merely checking those rows after a Python
+enumeration has selected them.
+
 The face complex also has the constructive shelling
 
 ```text
@@ -33,7 +39,7 @@ The successive boundary lengths are `3,4,5,6,5`, ending at
 `u-z-t-r-w-u`.
 
 [`AlbertsonTerminalMap.lean`](AlbertsonTerminalMap.lean) proves this statement
-as seven closed theorems:
+through eleven closed theorems:
 
 - `finite_terminal_map_certificate` checks all face multiplicities, the five
   boundary and five internal edges, Euler count `6+5=10+1`, an explicit
@@ -53,6 +59,13 @@ as seven closed theorems:
   each gluing arc is a proper connected part of the preceding boundary with
   reversed orientation in the new face, excludes hidden edge intersections
   and vertex pinches, and computes every intermediate closed boundary cycle.
+- `deletion_profiles_feasible`, `ceilDiv3_lower`,
+  `deletion_profile_search_bound`, and `deletion_profile_exhaustion` certify
+  the equality-profile classification. The two displayed rows satisfy every
+  encoded constraint; any feasible row obeys the derived search bound
+  `3a+c+2d+2Delta <= 8`; and Presburger elimination forces every such row to
+  equal A or B. The crossing lower bound is clamped at zero because `x2` is a
+  nonnegative crossing count.
 - `profileA_certificate` proves `C5=10`, terminal `(e,x)=(83,17)`, and
   planarization `(V,E,F)=(41,117,78)` together with both triangulation
   identities.
@@ -81,25 +94,33 @@ lean AlbertsonTerminalMap.lean | diff -u EXPECTED_OUTPUT.txt -
 sha256sum -c SHA256SUMS
 ```
 
-The expected transcript consists of seven successful `#print axioms` audits.
-The proofs use kernel reduction through `decide`; there is no `sorry`, `admit`,
-`native_decide`, `unsafe` definition, custom axiom, external oracle, generated
-code, or imported certificate.
+The expected transcript consists of eleven explicit `#print axioms` audits.
+The eight finite certificates use kernel reduction through `decide`; the
+three universal Presburger lemmas use Lean's `omega` proof procedure. The
+latter expose exactly the standard logical dependencies `propext`,
+`Quot.sound`, and, for the case split in the exhaustion theorem,
+`Classical.choice`. There is no `sorry`, `admit`, `native_decide`, `unsafe`
+definition, custom axiom, external oracle, generated code, or imported
+certificate.
 
 ## Exact trust boundary
 
-Lean proves the consequences of the displayed finite face list and the two
-numeric profile records. It does **not** prove that a good drawing produces
-those faces. In particular, Jordan separation, the triangular-face tracing,
-the distinctness/provenance argument, and the sealed full-pentagon disks remain
-the geometric part of the proof. The formal shelling data reduces recognition
+Lean proves the consequences of the displayed finite face list and exhausts
+the displayed nonnegative equality-profile system. It does **not** prove that
+a good drawing produces those faces or that the cited drawing inequalities
+produce precisely that integer system. In particular, Jordan separation, the
+triangular-face tracing, the distinctness/provenance argument, and the sealed
+full-pentagon disks remain the geometric part of the proof. The formal shelling
+data reduces recognition
 of the displayed five-face complex as a disk to the elementary lemma that
 gluing a triangle to a disk along an exact connected proper boundary arc
 preserves a disk; that general topological lemma is stated informally rather
 than formalized here. No general surface-classification inference is needed
 for this particular complex. The package also imports rather than formalizes
-the primary PRTT and Büngener--Kaufmann classifications and the exhaustive
-derivation of the two profiles.
+the primary PRTT and Büngener--Kaufmann theorems, the equality-induction
+interpretation of the crossing graph, and the mapping of their variables and
+inequalities to `FeasibleDeletionProfile`. The finite exhaustion after that
+mapping is now kernel checked.
 
 Those bridges, their two independent reviews, the exact primary-source
 versions, and all recursive-sampling certificates are consolidated in the

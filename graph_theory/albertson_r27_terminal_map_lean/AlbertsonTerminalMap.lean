@@ -352,6 +352,122 @@ theorem disk_shelling_certificate :
   repeat' apply And.intro
   all_goals decide
 
+structure DeletionProfile where
+  a : Nat
+  b : Nat
+  c : Nat
+  d : Nat
+  emptyTriangles : Nat
+  missingBoundary : Nat
+  pentagons : Nat
+  hexagons : Nat
+  outsideTriangles : Nat
+  e2 : Nat
+  x2 : Nat
+  total : Nat
+  deriving DecidableEq, Repr
+
+def ceilDiv3 (numerator : Nat) : Nat := (numerator + 2) / 3
+
+/-- The exact nonnegative integer system imported from the PRTT and
+Büngener--Kaufmann inequalities.  Subtraction in the crossing lower bound is
+truncated at zero, as appropriate for the nonnegative variable `x2`. -/
+def FeasibleDeletionProfile (profile : DeletionProfile) : Prop :=
+  profile.a + profile.b + profile.c = 22 ∧
+  profile.e2 + 2 * profile.c + profile.d = 110 ∧
+  profile.emptyTriangles ≤ 44 ∧
+  profile.x2 =
+    ceilDiv3 (7 * profile.e2 + 2 * profile.emptyTriangles - 550) ∧
+  profile.total =
+    5 * profile.a + 4 * profile.b + 9 * profile.c +
+      3 * profile.d + profile.x2 ∧
+  profile.total ≤ 164 ∧
+  profile.missingBoundary ≤ profile.d ∧
+  4 * profile.c + 3 * profile.pentagons + 4 * profile.hexagons +
+      profile.outsideTriangles = 44 ∧
+  44 + 3 * profile.missingBoundary ≤
+    4 * profile.c + 3 * profile.d +
+      3 * (profile.pentagons + profile.hexagons) ∧
+  profile.b ≤
+    profile.c + profile.hexagons + 4 * profile.missingBoundary +
+      2 * profile.outsideTriangles
+
+def deletionProfileA : DeletionProfile :=
+  ⟨0, 20, 2, 3, 0, 0, 9, 0, 9, 103, 57, 164⟩
+
+def deletionProfileB : DeletionProfile :=
+  ⟨0, 22, 0, 4, 0, 0, 11, 0, 11, 106, 64, 164⟩
+
+theorem deletion_profiles_feasible :
+    FeasibleDeletionProfile deletionProfileA ∧
+    FeasibleDeletionProfile deletionProfileB := by
+  unfold FeasibleDeletionProfile
+  decide
+
+theorem ceilDiv3_lower (numerator : Nat) :
+    numerator ≤ 3 * ceilDiv3 numerator := by
+  simp [ceilDiv3]
+  omega
+
+/-- The crossing budget and PRTT lower bound force a tiny search simplex.
+This bound is derived rather than imposed on the feasible-profile system. -/
+theorem deletion_profile_search_bound (profile : DeletionProfile)
+    (feasible : FeasibleDeletionProfile profile) :
+    3 * profile.a + profile.c + 2 * profile.d +
+      2 * profile.emptyTriangles ≤ 8 := by
+  rcases profile with
+    ⟨a, b, c, d, emptyTriangles, missingBoundary, pentagons, hexagons,
+      outsideTriangles, e2, x2, total⟩
+  change 3 * a + c + 2 * d + 2 * emptyTriangles ≤ 8
+  simp only [FeasibleDeletionProfile] at feasible
+  rcases feasible with
+    ⟨abc, e2Count, emptyBound, x2Count, totalCount, totalBound,
+      missingBound, triangleCount, configurationBound, deletionBound⟩
+  have crossingLower :=
+    ceilDiv3_lower (7 * e2 + 2 * emptyTriangles - 550)
+  rw [← x2Count] at crossingLower
+  omega
+
+/-- Universal exhaustion of the equality-profile integer system: every
+nonnegative feasible record is one of the two reviewed residual rows. -/
+theorem deletion_profile_exhaustion (profile : DeletionProfile)
+    (feasible : FeasibleDeletionProfile profile) :
+    profile = deletionProfileA ∨ profile = deletionProfileB := by
+  have bounded := deletion_profile_search_bound profile feasible
+  rcases profile with
+    ⟨a, b, c, d, emptyTriangles, missingBoundary, pentagons, hexagons,
+      outsideTriangles, e2, x2, total⟩
+  change 3 * a + c + 2 * d + 2 * emptyTriangles ≤ 8 at bounded
+  simp [FeasibleDeletionProfile, ceilDiv3, deletionProfileA,
+    deletionProfileB] at feasible bounded ⊢
+  have aBound : a ≤ 2 := by omega
+  have cBound : c ≤ 8 := by omega
+  have dBound : d ≤ 4 := by omega
+  have emptyBound : emptyTriangles ≤ 4 := by omega
+  by_cases cZero : c = 0
+  · right
+    omega
+  · by_cases cTwo : c = 2
+    · left
+      omega
+    · by_cases cOne : c = 1
+      · omega
+      · by_cases cThree : c = 3
+        · omega
+        · by_cases cFour : c = 4
+          · omega
+          · by_cases cFive : c = 5
+            · omega
+            · by_cases cSix : c = 6
+              · omega
+              · by_cases cSeven : c = 7
+                · omega
+                · by_cases cEight : c = 8
+                  · omega
+                  · exfalso
+                    clear feasible bounded aBound dBound emptyBound
+                    omega
+
 /-- The five listed triangles have the claimed disk incidence data, Euler
 count, pentagonal boundary, and complementary five-edge crossing cycle. -/
 theorem finite_terminal_map_certificate :
@@ -489,6 +605,10 @@ theorem final_integer_certificate :
 #print axioms vertex_link_certificate
 #print axioms face_boundary_connectivity_certificate
 #print axioms disk_shelling_certificate
+#print axioms deletion_profiles_feasible
+#print axioms ceilDiv3_lower
+#print axioms deletion_profile_search_bound
+#print axioms deletion_profile_exhaustion
 #print axioms profileA_certificate
 #print axioms profileB_certificate
 #print axioms final_integer_certificate
