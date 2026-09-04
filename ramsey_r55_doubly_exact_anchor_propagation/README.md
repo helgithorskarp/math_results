@@ -9,7 +9,10 @@ at least seven.  A linear degree-weight test already forces at least 29 of the
 42 vertices to have degree 21.  In fact, if the red cross-edge count is `M`,
 at least `241-M` of them must reproduce the full doubly exact signature of the
 chosen anchor: between 27 and 21 secondary anchors as `M` runs from 214 to
-220.
+220.  These exact anchors form connected red and blue backbones at `M=214`
+and `M=215`.  At `M=216` the red backbone remains connected, while every
+possible blue disconnection is reduced to two 13-vertex Ramsey-critical
+components.
 
 This is a necessary pruning theorem for the hard construction branch.  It is
 not a 43-vertex Ramsey graph, an enumeration of the local cores, or a solver
@@ -376,9 +379,66 @@ diameter of G[D]               <= 5,   since 3*(11+1)>33,
 diameter of complement(G)[D]   <= 8,   since 4*(10+1)>33.
 ```
 
-The `M=216` minimum degrees no longer force every hypothetical component to
-reach order 14, so this particular connectivity proof stops sharply after
-`M=215`.
+At `M=216` the minimum degrees no longer force every hypothetical component
+to reach order 14, so this particular two-component count no longer handles
+both colors.  The next argument nevertheless salvages one color sharply.
+
+### The `M=216` red backbone remains connected
+
+The profile and propagation bounds at the next cross total are
+
+```text
+26 <= |D| <= 36,
+minimum degree of G[D]               >= 9,
+minimum degree of complement(G)[D]   >= 8.               (M216-backbone)
+```
+
+Suppose that the red graph `G[D]` is disconnected.  Every component has at
+least ten vertices, since its internal red minimum degree is at least nine.
+It is not complete, because it is `K_5`-free, and hence has red independence
+number at least two.  Three components would supply a blue six-clique by
+taking an independent pair from each.  With two components, their red
+independence numbers have sum at most four, or their union supplies a blue
+five-clique.  Thus there are exactly two components, each with independence
+number two.  The value `R(5,3)=14` bounds both component orders by 13.  Since
+`|D|>=26`, both orders are exactly 13 and `|D|=26`.
+
+In either component `C`, let `L=complement(G[C])`.  The graph `L` is
+triangle-free because `alpha(G[C])=2`, and it has maximum degree at most
+`13-1-9=3`.  Brooks' theorem makes `L` 3-colorable: its only complete-graph
+exception is excluded by triangle-freeness, and its odd-cycle exception is
+still 3-colorable.  One color class has at least `ceil(13/3)=5` vertices.
+That class is independent in `L`, hence a red five-clique in `G[C]`, a
+contradiction.  Therefore `G[D]` is connected.  Closed-neighborhood packing
+also gives
+
+```text
+diameter of G[D] <= 8,   since a length-9 geodesic gives 4*(9+1)>36.
+```
+
+The corresponding argument also classifies every possible blue
+disconnection.  Each blue component has at least nine vertices and blue
+independence number at least two.  Avoiding a red five-clique permits exactly
+two components, both with independence number two; `R(5,3)=14` and
+`|D|>=26` then force two components of order 13 and `|D|=26`.  In the red
+complement `H_i` of either blue component, triangle-freeness and the blue
+minimum degree give `Delta(H_i)<=4`.  Also `delta(H_i)>=4`: otherwise a
+vertex with at least nine nonneighbors has, by `R(3,4)=9`, four mutually
+nonadjacent vertices in its nonneighborhood, and those four together with
+the vertex are an independent five-set of `H_i`, hence a blue five-clique.
+Thus every exceptional `H_i` is a 4-regular `(3,5;13)` Ramsey graph.
+
+This exceptional shape is attainable under the displayed abstract backbone
+bounds.  Let `H` be the circulant graph on `Z/13Z` with differences
+`+/-1,+/-5`; direct enumeration verifies that `H` is 4-regular,
+triangle-free, and has independence number four.  On two copies of its
+vertex set, color all cross edges red and use `H` for the red edges inside
+each copy.  The red clique number is `2+2=4`.  The blue graph is two
+disconnected copies of `complement(H)`, also with clique number four, and
+has minimum blue degree `12-4=8` (while the red minimum degree is 17).
+Consequently the `M=216` order and degree bounds alone cannot force the blue
+backbone to be connected.  This 26-vertex auxiliary coloring is not asserted
+to extend to a full 43-vertex candidate.
 
 ## Hard-branch propagation theorem
 
@@ -543,6 +603,9 @@ PASS backbone vertex connectivity is at least red=4 blue=2
 PASS both backbone colors have diameter at most 5
 PASS M=215 exact-anchor backbone order=27,...,33 min degrees red=11 blue=10
 PASS M=215 backbones connected; red connectivity>=2 diameters red<=5 blue<=8
+PASS M=216 red backbone order=26,...,36 is connected with diameter<=8
+PASS M=216 blue disconnection forces two 13-vertex critical components
+PASS C13(1,5) gives a sharp disconnected-blue abstract backbone
 PASS first-degree-feasible tests have 0 secondary exact anchors
 PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0
 PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21
@@ -550,7 +613,7 @@ PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21
 
 The audit uses CPython 3.11 or later, the standard library, exact integer
 arithmetic, and no solver, randomness, floating point, network, or external
-data.  It took about 1.2 seconds under CPython 3.11.2 on the research host.
+data.  It took about 2.0 seconds under CPython 3.11.2 on the research host.
 
 ## Scope, provenance, and trust boundary
 
@@ -559,9 +622,10 @@ the definition of a local color-neighborhood.  The `241-M` secondary-anchor
 count imports the companion
 [`ramsey_r55_local_extremal_deficiency`](../ramsey_r55_local_extremal_deficiency)
 theorem, including its stated trust in the completeness of the pinned McKay
-`(4,5)` extremal catalogs.  The `M=215` connectivity corollary additionally
-uses the classical exact value `R(5,3)=14`.  The anchored representation and
-mixed-clique constraints come from
+`(4,5)` extremal catalogs.  The backbone connectivity corollaries additionally
+use the classical exact values `R(5,3)=14` and `R(3,4)=9`, and the `M=216`
+red result uses Brooks' theorem.  The sharp auxiliary circulant is checked
+directly.  The anchored representation and mixed-clique constraints come from
 [`ramsey_r55_doubly_exact_cross_normal_form`](../ramsey_r55_doubly_exact_cross_normal_form).
 
 Discovery Net was searched through indexed height 2034 for the `R(5,5)`

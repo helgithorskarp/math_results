@@ -337,6 +337,30 @@ def turan_edges(order: int, parts: int) -> int:
     return (order * order - sum(size * size for size in class_sizes)) // 2
 
 
+def clique_number(adjacency: tuple[tuple[bool, ...], ...]) -> int:
+    """Return the clique number by exhaustive subset enumeration."""
+    order = len(adjacency)
+    for size in range(order, 0, -1):
+        for vertices in itertools.combinations(range(order), size):
+            if all(adjacency[first][second]
+                   for first, second in itertools.combinations(vertices, 2)):
+                return size
+    return 0
+
+
+def circulant_adjacency(
+    order: int, positive_steps: tuple[int, ...]
+) -> tuple[tuple[bool, ...], ...]:
+    """Return the undirected circulant with the supplied positive steps."""
+    residues = set(positive_steps)
+    residues.update(order - step for step in positive_steps)
+    return tuple(
+        tuple(first != second and (second - first) % order in residues
+              for second in range(order))
+        for first in range(order)
+    )
+
+
 def triangle_pair_sieve(split_profiles):
     """Return admissible triangle pairs and maximum excess in each color."""
     degrees = tuple(range(18, 25))
@@ -673,6 +697,74 @@ def main() -> None:
     if 4 * (m215_minimum_degrees[1] + 1) <= m215_order_bounds[1]:
         raise AssertionError("wrong M=215 blue diameter packing")
 
+    # At M=216 the red backbone remains connected.  If it were disconnected,
+    # the order lower bound and R(5,3)=14 would force two components of order
+    # 13 and independence number two.  The complement within either component
+    # would then be triangle-free and subcubic.  Brooks gives a 3-coloring,
+    # hence an independent 5-set there and a red K5, a contradiction.
+    m216_pairs = split_profiles[216]
+    m216_order_bounds = (
+        242 - 216,
+        max(first_counts[3] + second_counts[3] + 1
+            for _, first_counts, second_counts in m216_pairs),
+    )
+    m216_minimum_degrees = (441 - 2 * 216, 440 - 2 * 216)
+    if m216_order_bounds != (26, 36):
+        raise AssertionError(m216_order_bounds)
+    if m216_minimum_degrees != (9, 8):
+        raise AssertionError(m216_minimum_degrees)
+    if m216_minimum_degrees[0] + 1 != 10:
+        raise AssertionError("red components need not contain a nonedge")
+    if 2 * (ramsey_5_3 - 1) != m216_order_bounds[0]:
+        raise AssertionError("Ramsey orders do not force two 13-vertex components")
+    if (ramsey_5_3 - 1) - 1 - m216_minimum_degrees[0] != 3:
+        raise AssertionError("the forced component complement is not subcubic")
+    if 4 * (m216_minimum_degrees[0] + 1) <= m216_order_bounds[1]:
+        raise AssertionError("wrong M=216 red diameter packing")
+
+    # If blue is disconnected, the same component-independence argument
+    # forces exactly two order-13 components with independence number two.
+    # Their red complements H_i are triangle-free with alpha at most four.
+    # The blue degree bound gives Delta(H_i)<=4; R(3,4)=9 gives delta(H_i)>=4,
+    # since a degree-at-most-three vertex would have nine nonneighbors
+    # containing an independent four-set, and adjoining the vertex makes five.
+    ramsey_3_4 = 9
+    exceptional_component_order = ramsey_5_3 - 1
+    exceptional_red_maximum_degree = (
+        exceptional_component_order - 1 - m216_minimum_degrees[1]
+    )
+    minimum_nonneighbors_at_degree_three = exceptional_component_order - 1 - 3
+    if (
+        exceptional_component_order,
+        exceptional_red_maximum_degree,
+        minimum_nonneighbors_at_degree_three,
+    ) != (13, 4, ramsey_3_4):
+        raise AssertionError("wrong disconnected-blue critical-component bounds")
+
+    # The color-asymmetric limit is real at the abstract backbone level.
+    # H=Cay(Z_13,{+/-1,+/-5}) is triangle-free, 4-regular, and has alpha 4.
+    # Put copies of H in red on two 13-sets and color every cross edge red.
+    # Red then has clique number 2+2=4, while blue is two disconnected copies
+    # of complement(H), also with clique number alpha(H)=4.  Its minimum blue
+    # degree is exactly eight, matching the M=216 bound.
+    ramsey_circulant = circulant_adjacency(13, (1, 5))
+    ramsey_circulant_complement = tuple(
+        tuple(first != second and not ramsey_circulant[first][second]
+              for second in range(13))
+        for first in range(13)
+    )
+    circulant_degrees = {sum(row) for row in ramsey_circulant}
+    circulant_clique = clique_number(ramsey_circulant)
+    circulant_independence = clique_number(ramsey_circulant_complement)
+    if (circulant_degrees, circulant_clique, circulant_independence) != ({4}, 2, 4):
+        raise AssertionError(
+            (circulant_degrees, circulant_clique, circulant_independence)
+        )
+    abstract_red_minimum_degree = 13 + next(iter(circulant_degrees))
+    abstract_blue_minimum_degree = 12 - next(iter(circulant_degrees))
+    if (abstract_red_minimum_degree, abstract_blue_minimum_degree) != (17, 8):
+        raise AssertionError("wrong disconnected-blue backbone degrees")
+
     # If W is the degree weight, at most W/3 secondary vertices are
     # noncentral and at most (43-W)/2 local sides exceed deficiency seven.
     # Audit both the structural 241-M lower bound and its attainment within
@@ -724,6 +816,9 @@ def main() -> None:
     print("PASS both backbone colors have diameter at most 5")
     print("PASS M=215 exact-anchor backbone order=27,...,33 min degrees red=11 blue=10")
     print("PASS M=215 backbones connected; red connectivity>=2 diameters red<=5 blue<=8")
+    print("PASS M=216 red backbone order=26,...,36 is connected with diameter<=8")
+    print("PASS M=216 blue disconnection forces two 13-vertex critical components")
+    print("PASS C13(1,5) gives a sharp disconnected-blue abstract backbone")
     print("PASS first-degree-feasible tests have 0 secondary exact anchors")
     print("PASS side anchor minima A=13,11,9,7,5,3,1 B=12,10,8,6,4,2,0")
     print("PASS hard branch forces secondary exact anchors=27,26,25,24,23,22,21")
