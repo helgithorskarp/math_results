@@ -46,8 +46,8 @@ most four, giving color degree at most `2k+4` for `k` moving triples, while
 
 The remaining trust boundary is CPython integer/container behavior, SHA-256
 and xz decompression, the checked-in proof bytes, the transparent Ramsey-CNF
-bridge, and the two imported Ramsey numbers `R(3,5)=14` and `R(4,5)=25` used
-by the order-three dependency. This is not a proof-assistant formalization.
-It proves a restriction on automorphisms of a hypothetical target graph, not
-existence of such a graph or `R(5,5)>=44`; it also does not prove that 15
-cannot divide the automorphism-group order.
+bridge, and the imported Ramsey number `R(4,5)=25` used by the order-three
+dependency. This is not a proof-assistant formalization. It proves a
+restriction on automorphisms of a hypothetical target graph, not existence of
+such a graph or `R(5,5)>=44`; it also does not prove that 15 cannot divide the
+automorphism-group order.
