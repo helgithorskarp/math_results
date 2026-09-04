@@ -1,0 +1,69 @@
+Independent radius-five review, 2026-09-04
+=================================================
+
+All compilation, checking, and SAT runs used one CPU-heavy process at a time.
+
+Compiler:
+  g++ (Debian 12.2.0-14+deb12u1) 12.2.0
+
+CaDiCaL:
+  https://github.com/arminbiere/cadical
+  tag rel-3.0.1
+  commit c60730422e758ef1cebe7aeddf2dda31c996bf04
+  version 3.0.1
+  libcadical.a SHA-256:
+    7a0020336683ce541109f1ad49eb1fdf978fe9af7211335de3fa9f7477466e85
+
+Release enumerator:
+  source SHA-256:
+    a7a47a207c41194b4f953159b87f1a0fd808be46655d0461843d0a49d3629937
+  binary SHA-256:
+    0f5038be1f2514b4b8ae7d1756bd13d1b4df6d1c2cff751d2c2c15469fcf06af
+  build command:
+    g++ -std=c++17 -O3 -Wall -Wextra -Wpedantic -I CADICAL/src \
+      enumerate_five_flip_sat.cpp CADICAL/build/libcadical.a -pthread \
+      -o radius5-enumerate
+
+Fresh one-parent runs:
+  parent=0   exact5=14 lower_models=58 wall=56.838s
+  parent=40  exact5=22 lower_models=99 wall=82.029s
+  parent=152 exact5=36 lower_models=70 wall=70.473s
+  parent=190 exact5=0  lower_models=4  wall=52.489s
+  parent=327 exact5=2  lower_models=38 wall=48.369s
+  exact emitted-set comparison:
+    sample_parents=0,40,152,190,327 sample_transitions=74 exact_set_match=true
+
+Static proof-producing parent-190 formula:
+  build command:
+    python build_static_cnf.py 190 radius5-parent190-static.cnf
+  variables=6027
+  clauses=1086872
+  counter_clauses=10322
+  ramsey_clauses=1076546
+  blocked_known_models=4
+  CNF bytes=not retained in git
+  CNF SHA-256:
+    b8c4b8da142c0a2b7311e217a707f0b0a90d81299b8dd316d56e39f0c388675f
+
+Static proof:
+  CaDiCaL process time=62.67s
+  CaDiCaL result=UNSAT
+  proof bytes=61286336
+  proof SHA-256:
+    252176d016f0ad7d5cc5ebac588cdf992124429b3fa6a1c47993b266538bafb3
+
+DRAT replay:
+  https://github.com/marijnheule/drat-trim
+  commit 2e3b2dc0ecf938addbd779d42877b6ed69d9a985
+  drat-trim binary SHA-256:
+    9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a
+  result=s VERIFIED
+  input clauses in core=21895 of 1086872
+  lemmas in core=80414 of 519423
+  resolution steps=23676041
+  RAT lemmas in core=0
+  verification time=33.352s
+
+Dependency replay:
+  ramsey_r55_catalog_two_vertex_extension_obstruction/verify.sh
+  result=VERIFIED cores=9757 models=11387 ordered_pairs=15401
