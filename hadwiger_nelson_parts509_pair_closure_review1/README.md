@@ -90,6 +90,17 @@ deletion/addition closure.
 
 ## Qualifications and trust boundary
 
+Post-review classification correction (2026-09-04): the target prose says
+that the 63 pairs with `|U(A)|=2` consist of 55 swap-point pairs, six pairs
+among the four degree-10 completion points, and four further pairs; those
+numbers would sum to 65.  Direct reconstruction from `declared_pairs` confirms
+the correction independently reported by reviewer-3: the split is **55 swap
+pairs + 4 degree-10 pairs + 4 mixed pairs = 63**.  The degree-10 pairs with
+`U={350,353}` are `(0,1)`, `(0,3)`, `(1,2)`, and `(2,3)`; `(0,2)` and `(1,3)`
+have empty `U`.  This corrects only redundant prose.  The certificate fields,
+the checked histogram `{1:12775,2:63}`, and the decisive absence of
+`|U(A)|>=3` are unaffected.
+
 The phrases "declared instance" and "exception" must be kept separate.  This
 review proves that the 12,901 declared instances are exactly those *uncovered
 by the published colouring family*.  It does not independently prove the
