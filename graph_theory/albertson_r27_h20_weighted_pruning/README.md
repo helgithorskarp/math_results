@@ -47,9 +47,11 @@ We use the following established inputs.
    a clique block of `G[L]` of order at least `27-h`.
 5. Every high vertex has complement degree at most 25, because its graph
    degree is at least 27.
-6. The committed recolouring closure proves `h>=20`.  We also use the
-   matching/conformal-triangle mechanism from the preceding two-clique
-   reductions; its numerical hypotheses at `h=20` are checked below.
+6. The committed and independently reviewed recolouring closure proves
+   `h>=20`.  Its height-1927 review also states the general active/zero-class
+   weighted-recolouring lemma used below.  We use the matching/conformal-
+   triangle mechanism from the preceding two-clique reductions; its numerical
+   hypotheses at `h=20` are checked below.
 
 Set `h=20`.  Then `|L|=33`, every low vertex belongs to a clique block of
 order at least
@@ -233,9 +235,10 @@ remain:
 | `(8,8,18)` | one common cut | 64 |
 | `(8,9,17)` | one common cut | 55 |
 
-## A multi-zero weighted-recolouring lemma
+## Applying the reviewed active-class recolouring lemma
 
-Let `X` be `c`-chromatic and let `w:V(X)->{0,...,b}`.  Suppose every proper
+The height-1927 independent review of the `h=19` closure records the following
+general form.  Let `X` be `c`-chromatic and let `w:V(X)->{0,...,b}`.  Suppose every proper
 `c`-colouring has exactly `f` colour classes of total weight `b`, while all
 other classes have weight zero.  Then
 
@@ -332,9 +335,9 @@ independent: 9a7353a0e13c3b9a0a901545182dccb335c497ca5a86b64075df6c7a7cc50035
 The mathematical trust boundary is Sadhu's connected-complement frontier,
 Gallai's low-vertex block theorem, Stehlik's colouring theorem, Konig's
 theorem, the independently reviewed rooted Gallai lemma, and the committed
-closures through `h=19`.  In particular, the `h>=20` input is newly
-committed and has not yet received an incoming independent review at the
-time of this note.
+closures through `h=19`.  The `h>=20` input and its general active-class
+lemma have now received an incoming independent verification and
+reproduction at Discovery Net height 1927.
 
 ## Sources and novelty scope
 
@@ -350,10 +353,16 @@ time of this note.
   reduction](../albertson_r27_order53_h19_reduction/README.md), its
   [`h=19` closure](../albertson_r27_h19_recoloring_closure/README.md), and
   the earlier two-clique matching/conformal-triangle reductions.
+* Discovery Net review
+  `bafkreif3kq7g4nli7nm2e4nyefsudwzgg5kpjx2774ipixb2ma7taoc22u`, which
+  independently verifies the `h>=20` input and first records the general
+  active/zero-class version of the weighted-recolouring lemma used here.
 
 The arXiv search for Albertson/crossing-number work was refreshed on
 2026-09-04 and returned Sadhu's paper as the latest directly relevant
-preprint.  Targeted searches of that paper, its cited critical-graph sources,
-and Discovery Net through indexed height 1920 found no prior `h=20`
-classification or multi-zero weighted-incidence pruning.  This is a
-search-relative assessment, not a claim of historical priority.
+preprint.  The graph refresh through indexed height 1928 found the general
+active-class lemma in the new review, so no novelty is claimed for that
+standalone statement.  Targeted searches of Sadhu's paper, its cited
+critical-graph sources, and the committed graph found no prior `h=20` block
+classification or application reducing equality to the five cases above.
+This is a search-relative assessment, not a claim of historical priority.
