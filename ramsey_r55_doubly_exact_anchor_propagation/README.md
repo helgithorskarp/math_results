@@ -26,8 +26,9 @@ disconnection is a blue singleton, which forces a nested pair of exact
 `(4,5;21,100)` cores.  Deleting that singleton would produce a 42-vertex
 Ramsey graph with degree multiset `20^22 21^20`; none of the 656 orientations
 of the published known Ramsey-42 catalog has that multiset, and the complete
-radius-four transition classification plus target-specific radius-five and
-radius-six enumerations force its catalog edge distance to be at least seven.
+radius-four transition classification plus target-specific
+radius-five, radius-six, and radius-seven enumerations force its catalog edge
+distance to be at least eight.
 
 This is a necessary pruning theorem for the hard construction branch.  It is
 not a 43-vertex Ramsey graph, an enumeration of the local cores, or a solver
@@ -1130,8 +1131,147 @@ trust a SAT solver.
 
 Consequently, any hard-branch graph realizing the last disconnected normal
 form must delete to a Ramsey-42 graph outside the published known catalog and
-outside its radius-six neighborhood.  This is a relative catalog exclusion,
+outside its radius-seven neighborhood.  This is a relative catalog exclusion,
 not a completeness claim for Ramsey graphs on 42 vertices.
+
+### Team handoff: scope and durable singleton manifests
+
+The five-edit audit in this directory restricts the repaired graph to degree
+multiset `20^22 21^20`.  It does not classify unrestricted five-edit moves.
+Its 12 eligible orientations and 230,503 candidates count degree-compatible
+flip sets; all fail the Ramsey test.  Team-r55-2's general
+[`radius-five classification`](../ramsey_r55_catalog_edge_radius5_classification)
+instead starts from all 328 stored parents, with complements supplied by
+color symmetry, and records 6,224 Ramsey-preserving five-edit sets without a
+target-degree restriction.  Every survivor returns to the known catalog.
+These counts measure different sets and agree logically: the target degree
+multiset occurs in none of the general sweep's catalog survivors.
+
+The same distinction holds at radius six.  This directory tests 46,115,035
+target-degree candidates across 53 orientations with zero Ramsey survivors.
+The now-published general
+[`radius-six classification`](../ramsey_r55_catalog_edge_radius6_classification)
+records 6,384 Ramsey-preserving six-edit sets over 328 stored parents and
+again maps every survivor into the catalog.  Its completeness uses the
+stated SAT-solver trust boundary; the target-specific enumeration here uses
+the explicit cancellation decomposition.  The radius-seven result below
+extends only the target-specific exclusion.
+
+The following singleton outputs are already committed, are unchanged by this
+radius-seven addition, and are covered by `SHA256SUMS`:
+
+| durable output | content |
+| --- | --- |
+| `EXPECTED_SINGLETON_SAT.txt` | base formula: 157,521 variables, 2,028,680 clauses, DIMACS digest |
+| `EXPECTED_SINGLETON_LOCAL_SAT.txt` | aggregate local-profile formula: 458,257 variables, 3,784,316 clauses, DIMACS digest |
+| `SINGLETON_TYPED_BRANCHES.tsv` | seven branches `x=0,3,...,18`, each with 458,107 variables and 3,782,794 clauses, separate digests |
+| `SINGLETON_TYPED_STABILIZED_BRANCHES.tsv` | the same seven branches with stabilizer constraints: 458,107 variables and 3,782,854 clauses, separate digests |
+
+`singleton_sat.py` regenerates these formulas and independently checks any
+proposed graph.  The formula manifests certify reproducible encodings; they
+do not contain a SAT or UNSAT verdict.  The typed and stabilized clause
+counts differ by exactly 60.  Bulky DIMACS files and exploratory solver logs
+remain outside the public artifact.
+
+### Exact radius-seven repair and extension search
+
+The next edit shell still admits a small exact structural parameterization.
+For a labeled target assignment `tau_v in {20,21}` with twenty high targets,
+the cancellation identity becomes
+
+```text
+a_v = max(tau_v-p_v,0)+q_v,
+d_v = max(p_v-tau_v,0)+q_v,
+sum_v q_v = (14-sum_v |tau_v-p_v|)/2.                (Radius7-slack)
+```
+
+Here `p_v` is the parent degree, while `a_v` and `d_v` are addition and
+deletion incidences.  Degree distance, edge difference, and parity leave
+exactly 131 of the 656 known catalog orientations.  Their degree-bound
+distribution is
+
+```text
+degree lower bound       5   6   7
+eligible orientations   12  25  94
+```
+
+Thus every surviving target assignment has `sum q_v <= 2`.  Enumerating weak
+compositions of zero, one, or two cancellation units, followed by every
+prescribed-degree addition and deletion graph, is therefore exhaustive.
+The edge-count distribution supplies a second coverage check:
+
+```text
+parent red edges        425  427  429  431  433  435
+eligible orientations    10   47   30    8   26   10
+```
+
+This search also directly tests the intended construction, rather than only
+the 42-vertex repair.  Any repaired Ramsey graph has 22 degree-20 vertices.
+For each choice of an exception `z`, adjoin a vertex red to the other 21
+degree-20 vertices.  Since the old graph is Ramsey, this is a Ramsey graph on
+43 vertices if and only if those 21 red neighbors contain no red `K_4` and
+the complementary 21-set contains no blue `K_4`.  Every positive is expanded
+and checked globally in both colors before graph6 is emitted.
+
+The exact census contains 6,625,450,204 degree-compatible seven-edge repair
+sets across the 131 orientations.  None is even a Ramsey graph on 42
+vertices, so there is no singleton extension.  By combination with the
+lower-radius audits, the forced singleton deletion is at edge-edit distance
+at least eight from every orientation in the known catalog.
+
+[`search_known_r42_radius7_extension.py`](search_known_r42_radius7_extension.py)
+is the definition-level Python reference.  It inherits the exact degree and
+local-clique tests and the cancellation-decomposition tests from the
+radius-six audit, and adds masked-clique comparisons, graph6 round trips,
+and small-instance product-count checks.  The full Cartesian search is implemented
+again in C++20 by
+[`search_known_r42_radius7_extension.cpp`](search_known_r42_radius7_extension.cpp).
+The orchestration and transcript checker
+[`run_known_r42_radius7_native.py`](run_known_r42_radius7_native.py) reruns all
+Python self-tests, pins the catalog hash, checks that all 328 parents are
+Ramsey graphs, derives the 131 eligible keys in Python, validates every
+native record against those keys, reconciles all
+positive-event counts, and emits the records in catalog order.
+
+Compile and reproduce the checked transcript as follows, from this directory
+with Python 3.11 or later and a C++20 compiler.  `--workers 6` uses at most six
+single-threaded native processes, and can be lowered:
+
+```bash
+set -euo pipefail
+g++ -O3 -std=c++20 -Wall -Wextra -Wpedantic -Wconversion -Wshadow \
+  search_known_r42_radius7_extension.cpp -o /tmp/r55-radius7
+PYTHONDONTWRITEBYTECODE=1 python3 run_known_r42_radius7_native.py \
+  --native /tmp/r55-radius7 --workers 6 \
+  | cmp - EXPECTED_R42_RADIUS7_NATIVE.txt
+```
+
+On the shared research host the partitioned run, using at most six native
+workers, took approximately 35 wall minutes; runtime is machine- and
+load-dependent.  The native and Python
+enumerators agree exactly on six production cases spanning zero and one
+cancellation unit, from 8,460 through 17,340,824 candidates.  For two
+cancellation units, the slower Python product counter independently gives
+104,262,642 candidates for parent 9/base, exactly matching the native full
+enumeration.  GCC ASan/UBSan runs completed without findings on full zero-
+and one-cancellation cases; a declared 90-second two-cancellation exercise
+reached five million candidates without a diagnostic and is not claimed as
+full sanitizer coverage.  The complete result is the checked transcript,
+not any partial progress line.
+
+The exhaustive negative result trusts the stated decomposition, the native
+enumerator and clique checker, compiler, and hardware.  The Python production
+comparisons validate selected cases; they are not a second full census or an
+independent mathematical derivation.  No SAT solver or graph-isomorphism
+library is used for this radius-seven layer.  Small-instance tests exhaust
+their declared domains (repair subsets through three flips on sampled
+six-vertex parents, and clique subsets on sampled seven-vertex parents);
+they do not exhaust all graphs on those orders.
+
+Like every catalog-radius statement here, the conclusion is relative to the
+328 published representatives and their complements.  It does not assert
+that this is a complete catalog of Ramsey graphs on 42 vertices, and it does
+not improve the numerical Ramsey lower bound.
 
 ### Exact local profile inside the singleton normal form
 
