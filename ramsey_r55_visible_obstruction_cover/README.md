@@ -129,9 +129,12 @@ verifier imports neither one.
 The relevant graph refresh through height 2892 found no feedback on the
 parent or duplicate exposed-edge cover work. The teammate's new
 [118-core exclusion](../ramsey_r55_order3_eleven_blue_k4_exclusion), commit
-`3c4f7273ecdfb6dc99bd89b561c3146dfc247823`, remains a separate symmetry result
-awaiting independent review. Its 79 four-versus-seven classes and two
-three-versus-eight cores remain open; none is searched here.
+`3c4f7273ecdfb6dc99bd89b561c3146dfc247823`, remains a separate symmetry result.
+The final Git publication fetch added the
+[independent acceptance](../ramsey_r55_order3_eleven_blue_k4_exclusion_review1)
+at commit `820b71722dea416cdbf85a89bcb5b53adb22405c`, including the load-bearing
+197-class cover and full-action normalization. Its 79 four-versus-seven
+classes and two three-versus-eight cores remain open; none is searched here.
 
 External contributions at heights 2851 and 2883 concern a different d=22
 two-anchor incidence. The latter gives an eight-clause third-anchor
