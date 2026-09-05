@@ -1,5 +1,8 @@
 # A residual selection and a new Parts pool killing set
 
+The [additional certificate below](#sixteen-additional-irredundant-killing-sets)
+extends this cover with sixteen further verified killing sets.
+
 **Exact finite certificate.** The four specified published killing-set
 families do not cover every four-colourable selection in the remaining
 fixed-L Parts pool. The explicit selection here has 508 vertices, 2,402
@@ -108,3 +111,63 @@ The trust boundary is the committed exact coordinate data, parsing and
 integer arithmetic, the explicit restriction argument, and ordinary
 software execution. This is an author-checked artifact, not a claim of
 external peer review or proof-assistant formalization.
+
+## Sixteen additional irredundant killing sets
+
+[refinements.json](refinements.json) supplies sixteen further killing
+sets D_i and sixteen selections X_i. Every H_i=L union X_i has 508
+vertices and a directly checked proper four-colouring. Their addition
+counts range from 22 to 35. The killing sets have sizes 19 through 45;
+each is certified by an explicit proper colouring of L union (U minus D_i).
+The file stores full 374-character L-colourings and 303-character pool
+rows, so no interface-class completeness assertion is needed.
+
+Let C be the 17,250-set public family specified above, augmented by the
+original 39-point killing set of this package. Each X_i satisfies
+|X_i|<=134, |X_i intersection Q5|>=8, and the selected-pool degree-four
+condition. It meets every member of C and every D_j with j different
+from i, but misses D_i. These are checked set intersections, including
+all sixteen-by-sixteen comparisons, not an inference from solver status.
+
+It follows that every one of the sixteen new positive clauses is
+nonredundant relative to C and all fifteen other new clauses, even with
+the displayed cardinality and degree conditions. Removing D_i admits
+X_i into that relaxation. Each new clause is valid for non-four-colourable
+selections by the same colouring-restriction argument as before.
+The final public family has 17,267 distinct killing sets. This is
+irredundancy of this particular extension; a different colouring library
+might cover these candidates more efficiently.
+
+The additional certificate is 17,729 bytes, SHA-256
+`da8467f76419aeeff86226b23db0fa3192523d2f4c9ee7fd1695ac6a53a3a568`.
+Check it from a full repository checkout using Python's standard library:
+
+```sh
+python3 hadwiger_nelson_parts509_pool_cover_residual30/verify_refinements.py
+```
+
+Expected: `ADDITIONAL COVER REFINEMENTS VERIFIED`, `new_rows: 16`, and
+`added_rows_irredundant: true`. The exact counts, edge hashes and
+exclusion matrix are in [refinements_expected.json](refinements_expected.json).
+The checker pins the original public inputs, reconstructs every exact
+unit edge, checks the initial and all additional complement colourings,
+and verifies the separating selections. It requires neither SAT nor
+the local discovery stream. A separate author audit rebuilt the geometry
+from the original Mathematica source and checked all sixteen graphs and
+colourings by direct edge comparisons, also confirming irredundancy.
+
+Discovery used one bounded refinement batch, seeded by the original
+39-point row. Each exact master model was followed by a full-graph
+colouring solve; a deterministic fixed-colour greedy extension then
+supplied the next positive clause. All sixteen candidates were resolved
+within the preset limit of sixteen candidates and 1,200 cumulative
+master seconds: Kissat master calls totalled 970.20 seconds, and the
+sixteen graph-colouring calls totalled 12.92 seconds. All solver calls
+returned SAT; no UNSAT trace or optimization bound is claimed.
+
+The local discovery family began with 36,487 checked killing sets and
+the original public row, and ended with 36,504 sets. Its larger private
+stream is additional provenance, not a dependency of the public
+separation/irredundancy certificate. The public theorem concerns exactly
+C and the sixteen appended rows. No further shape stratum or whole
+fixed-L pool closure, and no five-chromatic graph, follows from this batch.
