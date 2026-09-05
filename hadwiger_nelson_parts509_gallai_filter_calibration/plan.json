@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-09-05T12:43:55.602250+00:00",
+  "scope": "Bounded exact calibration of Gallai/degree-list reducibility on the 18 distinct published 508-vertex fixed-L residual supports, with a complete C4/diamond census in the 303-point pool. No H574 deletion and no quantified solver.",
+  "exploration_before_plan": "motif_probe, historical_probe and gallai_probe motivated this frozen validation; preliminary zero-rejection outcome is not presented as a blind test.",
+  "success_criterion": "Determine exactly how many of the 18 historical residuals violate the full low-degree Gallai condition; certify either gain or its absence by direct witnesses and all degree-four components.",
+  "finite_bounds": {
+    "supports": 18,
+    "pool_vertices": 303,
+    "graph_vertices": 677,
+    "motif_order": 4,
+    "native_solver_queries": 0
+  },
+  "validation": [
+    "Reconstruct all exact geometry from pinned inputs.",
+    "Directly verify the 18 existing positive colourings and common base-clause intersections.",
+    "Check all degree-four components as forests, using both traversal and a separate cycle-union check.",
+    "Enumerate every induced pool C4 or diamond by two distinct complete traversals, comparing exact sets.",
+    "Compare motif and forest checks with brute force on all 64 labelled simple graphs on four vertices and all 1024 on five vertices."
+  ],
+  "stop_policy": "Publish or checkpoint this calibration and its go/no-go disposition; do not launch another support extraction, broader motif order, or QBF phase."
+}
