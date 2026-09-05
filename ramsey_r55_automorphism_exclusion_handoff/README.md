@@ -105,6 +105,17 @@ Thus 152 of the original 197 classes are excluded; 85,789 of the original
 independent review. Every remaining case returned UNKNOWN at the fixed
 ten-second solver limit, and both three-versus-eight cores remain open.
 The global minimum moving count stays eleven.
+The subsequent [empty-signature theorem](../ramsey_r55_order3_eleven_empty_signature)
+uses a weaker hypothesis than a core blue K4: if every complementary
+three-triangle core has a blue triangle, a full extension must have a
+fixed vertex blue to all four red triangles. Eleven of the 45 open cores
+satisfy this hypothesis. Four necessary first-row units strengthen their
+complete formulas, giving **seven further refutations** and leaving
+**38 four-versus-seven classes** open. The four tested survivors
+131,139,162,173 inherit the empty-signature requirement; the other 34
+classes were not retested. The new hand theorem, unit bridge and
+computational exclusions await independent review. The three-versus-eight
+branch and minimum moving count eleven are unchanged.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
@@ -165,6 +176,7 @@ to the known lower bound for `R(5,5)`.
 | ten uniform fixed vertices on four minority triangles | all 197 cores have four explicit valid 22-vertex extensions; for 118 blue-K4 cores, ten is maximum and all equality extensions have singleton/pair signatures and exactly those four edge patterns; no full 43-vertex verdict | [`ramsey_r55_order3_eleven_four_fixed`](../ramsey_r55_order3_eleven_four_fixed) |
 | full seven-blue-triangle incidence obstruction | blue-K4 minority cores require at least 12 fixed-pair/blue-triangle incidences but permit at most 7; excludes 118 of 197 full core classes, leaving 79, by a hand proof and exact row-sum certificate | [`ramsey_r55_order3_eleven_blue_k4_exclusion`](../ramsey_r55_order3_eleven_blue_k4_exclusion) |
 | residual four-versus-seven full-extension sweep | all 79 complete 43-vertex formulas audited; 34 new refutations replayed twice, leaving 45 explicit UNKNOWN cases; 152 of 197 total core classes excluded | [`ramsey_r55_order3_eleven_residual_sweep`](../ramsey_r55_order3_eleven_residual_sweep) |
+| four-triangle empty-signature propagation | blue triangles in all four complementary triples force an empty fixed signature; eleven selected complete formulas yield seven further replayed refutations, leaving 38 total core classes open | [`ramsey_r55_order3_eleven_empty_signature`](../ramsey_r55_order3_eleven_empty_signature) |
 | C3-square actions and order 27 | sixteen of eighteen actions excluded; the two open types have one fixed point, two three-orbits and four regular nine-orbits; an index-three stabilizer argument excludes order-27 subgroups globally and order-nine subgroups in M=214 | [`ramsey_r55_c3_square_action_sweep`](../ramsey_r55_c3_square_action_sweep) |
 | complete C3-square closure | both remaining actions excluded after proven centralizer normalization, with fresh full formula reconstruction and DRAT replay; nine does not divide the automorphism-group order globally | [`ramsey_r55_c3_square_normalized_extensions`](../ramsey_r55_c3_square_normalized_extensions) |
 | subgroups of order 25 | the surviving order-five types force a unique `C_5^2` action, whose 51-variable invariant formula is certified UNSAT; an order-25 element is excluded by its fifth power | [`ramsey_r55_c5_square_automorphism_obstruction`](../ramsey_r55_c5_square_automorphism_obstruction) |
@@ -310,6 +322,14 @@ These new computational exclusions have full replay and fresh formula
 reconstruction but await independent review. Four-versus-seven indices
 11 and 13 excluded there are unrelated to the two open three-versus-eight
 cores with the same numeric indices in a different catalog.
+The subsequent empty-signature theorem supplies four necessary first-row
+units for the eleven cores whose every complementary triple has a blue
+triangle. The new full tests refute 87,101,110,112,120,121,147. The four
+tested survivors 131,139,162,173 must have an empty signature, and the
+other 34 previously open classes are unchanged. The current exact list
+of **38** open classes is in
+[the new boundary manifest](../ramsey_r55_order3_eleven_empty_signature/boundary.json).
+The new theorem and computational exclusions await independent review.
 
 The finished ten-cycle chain proceeded through the four-versus-six
 internal-color split, 94 of 98 anchor exclusions, and twenty further
