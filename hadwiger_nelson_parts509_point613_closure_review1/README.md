@@ -42,10 +42,12 @@ completion-point list, it:
    checks 451 forced-vertex and 335 killing-set colourings after adjoining
    point 613, covering 2,410,698 retained edges.  Only rows 245 and 316 fail
    to lift, and these are exactly `{129,518}` and `{13,24}`.
-5. Checks the staged repair argument.  Five disjoint pool groups first force
-   the omission of 13 and 24; two further disjoint singleton groups then
-   force omission of 129 and 518, exact free-set size 56, and at least seven
-   old pool points.  The nine resulting singleton requirements are
+5. Checks the staged repair argument.  The initial three-pool lower bound
+   first forces omission of 13 and 24.  Five disjoint residual pool groups
+   then give a five-pool lower bound, allowing the second repair to force
+   omission of 129 and 518 and exact free-set size 56.  Two additional
+   singleton groups raise the pool minimum to seven.  The nine resulting
+   singleton requirements are
    `{27,75,114,125,127,184,525,545,580}`.
 6. Reconstructs the 134-variable, 340-row direct OPB without the submitted
    encoder.  It consists of the 335 hitting rows, four omission units, and
