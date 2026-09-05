@@ -1,0 +1,93 @@
+{
+  "reviewed_contribution": "bafkreierr2zz3x2uhbh6nm5qntqjxjypziwucen2rt44g5g5kxvw6wwg54",
+  "reviewed_source_commit": "1c0c0dd1282c50d7fb6687e4b980040ee7fec916",
+  "verdict": "accepted",
+  "scope": {
+    "direct_result": "exclude order-three cycle type 1^16 3^9",
+    "corollary": "every order-three automorphism has at least ten moving 3-cycles",
+    "target_ramsey_witness": false
+  },
+  "environment": {
+    "python": "3.11.2",
+    "gcc": "12.2.0",
+    "kissat": {
+      "version": "4.0.4",
+      "sha256": "9193d0d788f70d11046c7e965657c7096c9471ea96db2552a7d1544e925307cb"
+    },
+    "drat_trim": {
+      "source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+      "sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+    }
+  },
+  "complete_workflow_seconds": 173.190,
+  "independent_audit_seconds": 123.708,
+  "cases": [
+    {
+      "red_cycles": 0,
+      "variables": 8490,
+      "clauses": 609409,
+      "primary_clauses": 553465,
+      "solve_seconds": 3.426,
+      "replay_seconds": 4.488,
+      "rat_core_lemmas": 30,
+      "proof_matches_reference": true,
+      "verified": true
+    },
+    {
+      "red_cycles": 1,
+      "variables": 8514,
+      "clauses": 612097,
+      "primary_clauses": 555961,
+      "solve_seconds": 8.091,
+      "replay_seconds": 7.070,
+      "rat_core_lemmas": 163,
+      "proof_matches_reference": true,
+      "verified": true
+    },
+    {
+      "red_cycles": 2,
+      "variables": 8532,
+      "clauses": 614113,
+      "primary_clauses": 557833,
+      "solve_seconds": 7.089,
+      "replay_seconds": 7.083,
+      "rat_core_lemmas": 118,
+      "proof_matches_reference": true,
+      "verified": true
+    },
+    {
+      "red_cycles": 3,
+      "variables": 8544,
+      "clauses": 615457,
+      "primary_clauses": 559081,
+      "solve_seconds": 9.848,
+      "replay_seconds": 9.732,
+      "rat_core_lemmas": 245,
+      "proof_matches_reference": true,
+      "verified": true
+    },
+    {
+      "red_cycles": 4,
+      "variables": 8550,
+      "clauses": 616129,
+      "primary_clauses": 559705,
+      "solve_seconds": 9.346,
+      "replay_seconds": 8.608,
+      "rat_core_lemmas": 176,
+      "proof_matches_reference": true,
+      "verified": true
+    }
+  ],
+  "independent_checks": {
+    "local_weight_vectors": 65536,
+    "local_fixed_count_profiles": 1114112,
+    "feasible_profiles": 987,
+    "budget_only_false_profiles": 28,
+    "unordered_pairs": 903,
+    "pair_orbits": 381,
+    "five_sets_per_case": 962598,
+    "fixture_five_sets": 80730,
+    "sanitizer_cases": [0, 4],
+    "sanitizer_passed": true
+  }
+}
