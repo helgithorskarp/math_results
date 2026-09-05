@@ -1,0 +1,156 @@
+{
+  "cases": [
+    {
+      "action": {
+        "a": 1,
+        "b": [
+          0,
+          0,
+          0,
+          2
+        ],
+        "c": 4,
+        "index": 9
+      },
+      "audit": {
+        "full_sha256": "e58d139ede296b86b44cb5d452c2cc80d374e0805e936dadfed5deb94cd7162f",
+        "index": 9,
+        "parent_clauses": 211323,
+        "status": "verified",
+        "tail_clauses": 2840,
+        "variables": 105
+      },
+      "formula": {
+        "bytes": 7609085,
+        "clauses": 214163,
+        "normalization_clauses": 2840,
+        "parent": {
+          "bytes": 7509897,
+          "clauses": 211323,
+          "ramsey_clauses": 211322,
+          "sha256": "7846688b50408ebb6f9d6a9fc0a537d06186e9d732f5be9856edae6b7e88ca75",
+          "variables": 105
+        },
+        "sha256": "e58d139ede296b86b44cb5d452c2cc80d374e0805e936dadfed5deb94cd7162f",
+        "variables": 105
+      },
+      "generation_check_seconds": 12.674719,
+      "index": 9,
+      "proof": {
+        "bytes": 4359167,
+        "sha256": "9e10d8805ebb22704c6b17c408632ebc53a4d0b8f6f8b4a74fc5bbc2b7c57ac1"
+      },
+      "replay": {
+        "code": 0,
+        "rat_core_lemmas": 138,
+        "seconds": 7.136797,
+        "verified": true
+      },
+      "solve_seconds": 6.509183,
+      "solver_code": 20,
+      "status": "excluded"
+    },
+    {
+      "action": {
+        "a": 1,
+        "b": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "c": 4,
+        "index": 10
+      },
+      "audit": {
+        "full_sha256": "3f583630b73b13026e24415838526984f376315aae9e0f5cc33a5f24e48c3420",
+        "index": 10,
+        "parent_clauses": 210907,
+        "status": "verified",
+        "tail_clauses": 2840,
+        "variables": 103
+      },
+      "formula": {
+        "bytes": 7522587,
+        "clauses": 213747,
+        "normalization_clauses": 2840,
+        "parent": {
+          "bytes": 7423403,
+          "clauses": 210907,
+          "ramsey_clauses": 210906,
+          "sha256": "6455b56f83001e09fd53f7fa8bdbd26270df013a32b3895569ddab3e5d18d929",
+          "variables": 103
+        },
+        "sha256": "3f583630b73b13026e24415838526984f376315aae9e0f5cc33a5f24e48c3420",
+        "variables": 103
+      },
+      "generation_check_seconds": 12.649918,
+      "index": 10,
+      "proof": {
+        "bytes": 5517636,
+        "sha256": "58894c980c186d3811b33daef72a930b381f2dd80a101cc3c29fb2f53319800e"
+      },
+      "replay": {
+        "code": 0,
+        "rat_core_lemmas": 88,
+        "seconds": 11.000726,
+        "verified": true
+      },
+      "solve_seconds": 10.723448,
+      "solver_code": 20,
+      "status": "excluded"
+    }
+  ],
+  "complete_bounded_sweep": true,
+  "contract": {
+    "drat_trim": {
+      "bytes": 51352,
+      "sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+    },
+    "format": "c3-square-normalized-v1",
+    "kissat": {
+      "bytes": 546552,
+      "sha256": "2d185ea775f2c7c16d33a235ef852d2b69f0f3c8b437335b966b4a5aa6265b45"
+    },
+    "parent_sources": {
+      "check_formula.cpp": {
+        "bytes": 4062,
+        "sha256": "da84bab2dd928dad97c658125cbf0f2c4d1c86b752061eebe0eb76a7e3dd0aec"
+      },
+      "inspect_graph.py": {
+        "bytes": 1263,
+        "sha256": "bd72c5d79400fbe66db0e0c56a13cde3d2b3efc350099c770c11bfb5c9fb5746"
+      },
+      "model.py": {
+        "bytes": 6810,
+        "sha256": "b48a10a6e5ff285436d3d6f5d2ea874f4c87630d30e66cb5413387f5586cfacb"
+      }
+    },
+    "python": "3.11.2",
+    "replay_seconds": 300,
+    "solve_seconds": 180,
+    "sources": {
+      "audit.py": {
+        "bytes": 8401,
+        "sha256": "fa32f72dfbebe982728fc6d50d729a55ae2d5b3fe895b962676db869e43ce223"
+      },
+      "generate.py": {
+        "bytes": 4133,
+        "sha256": "90040692b773eed0fd79458cb2ab28217510346f5d8d9fec085ace5553fada15"
+      },
+      "run.py": {
+        "bytes": 7754,
+        "sha256": "003f633659846686310cc976f3c245b8708a75e09ed1a0549ecdfcc470621851"
+      }
+    },
+    "workers": 2
+  },
+  "elapsed_seconds": 38.922123,
+  "excluded_indices": [
+    9,
+    10
+  ],
+  "largest_child_maxrss_kib": 180872,
+  "open_indices": [],
+  "target_graph_found": false
+}

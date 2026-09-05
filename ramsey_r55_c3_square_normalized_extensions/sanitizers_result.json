@@ -1,0 +1,27 @@
+{
+  "flags": [
+    "-std=c++17",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Werror",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer"
+  ],
+  "cases": [
+    {
+      "index": 9,
+      "output": "FORMULA_AUDIT variables=105 clauses=211323 ramsey_clauses=211322 five_sets=962598 PASS",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "index": 10,
+      "output": "FORMULA_AUDIT variables=103 clauses=210907 ramsey_clauses=210906 five_sets=962598 PASS",
+      "stderr": "",
+      "exit_code": 0
+    }
+  ]
+}
