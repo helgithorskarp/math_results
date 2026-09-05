@@ -146,9 +146,10 @@ refutations, each replayed twice, exclude cores 88,102,107,138,169,172,176,196.
 Thus **26 four-versus-seven classes remain open**, covering 16,605 labeled
 cores; cumulatively **171 of 197 classes** and 98,938 of 115,543 labels are
 excluded. These are whole-core exclusions. The other 26 cases returned
-explicit UNKNOWN at the fixed twenty-second limit. The new propagation
-bridge and refutations await independent review; the inherited anchor theorem
-is now independently accepted.
+explicit UNKNOWN at the fixed twenty-second limit. The propagation bridge and eight
+refutations now have an [accepted independent review](../ramsey_r55_order3_eleven_anchor_propagation_review1),
+as does the inherited anchor theorem. The cumulative 171/26 count still
+imports the older empty-signature-specific exclusions.
 The subsequent [no-empty rigidity theorem](../ramsey_r55_order3_eleven_noempty_rigidity)
 forces a fixed vertex blue to all twelve red-core vertices throughout the
 four-versus-seven branch. Under no empty signature, singleton counts are
@@ -161,8 +162,20 @@ extension refutations replayed twice. All are contradictory by input unit
 propagation. **All 26 remaining cores now have an empty-signature requirement**;
 no additional whole core is excluded and the count remains 171 excluded,
 26 open. The new hand proof and its exact clause/certificate checks await
-independent review. The next boundary is the empty-present extension of
-these 26 cores; it is not tested in this milestone.
+independent review. That milestone stopped before testing the empty-present
+extensions.
+The subsequent [complete empty-signature propagation](../ramsey_r55_order3_eleven_empty_propagation)
+retains every full base and appends the forced first prefix 0000 plus 1,440
+primary clauses for the sharp pair bound. All 26 cases are tested. Core123
+is refuted, with a 19,801,958-byte full proof replayed twice after complete
+fresh reconstruction, using 673 RAT core lemmas. This excludes 648 labeled
+cores. **25 four-versus-seven classes / 15,957 labels now remain open**;
+cumulatively **172 of 197 classes / 99,586 of 115,543 labels are excluded**.
+All 25 residual cases explicitly return UNKNOWN at 20 seconds; each retains
+the empty-signature requirement. The new whole-core exclusion and its
+load-bearing no-empty reduction await independent review. The next
+frontier is stronger structure around an empty vertex or a justified
+complete split, rather than another unchanged sweep.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
