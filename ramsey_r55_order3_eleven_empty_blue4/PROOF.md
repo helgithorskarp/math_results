@@ -121,9 +121,10 @@ it does not open the complementary b<=3 phase.
 
 The complete parent, 197-core cover, abstract signature lemma, two-empty
 anchor theorem, intrinsic-anchor propagation, and forced-empty theorem
-have accepted independent reviews. The previous core123 full exclusion
-and older empty-signature-specific closures remain inherited review
-boundaries for the starting 25-core bookkeeping. The degree window uses
+have accepted independent reviews. The previous core123 full exclusion now also has an
+[accepted independent review](../ramsey_r55_order3_eleven_empty_propagation_review1).
+Older empty-signature-specific closures remain inherited review boundaries
+for the starting 25-core bookkeeping. The degree window uses
 the parent's external R(4,5)=25 theorem; its original computation is not
 repeated here. The new branch encoding and any refutations await independent
 review. Ordinary unformalized reductions, source/runtime/compiler/hardware,

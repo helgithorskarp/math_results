@@ -174,8 +174,10 @@ fresh reconstruction, using 673 RAT core lemmas. This excludes 648 labeled
 cores. **25 four-versus-seven classes / 15,957 labels now remain open**;
 cumulatively **172 of 197 classes / 99,586 of 115,543 labels are excluded**.
 All 25 residual cases explicitly return UNKNOWN at 20 seconds; each retains
-the empty-signature requirement. The new whole-core exclusion awaits independent review; its load-bearing
-no-empty reduction is now independently accepted.
+the empty-signature requirement. The core123 whole-core exclusion now has
+an [accepted independent review](../ramsey_r55_order3_eleven_empty_propagation_review1),
+as does its load-bearing no-empty reduction. Older empty-signature-specific
+exclusions remain the cumulative-count review boundary.
 The subsequent [maximal blue-attachment test](../ramsey_r55_order3_eleven_empty_blue4)
 examines the first fixed empty vertex e when it is blue to four of the
 seven blue moving triangles. Its 24 blue moving neighbors then force e

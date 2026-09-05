@@ -120,7 +120,10 @@ The complete bases and 25-core starting boundary come from
 [empty-signature propagation](../ramsey_r55_order3_eleven_empty_propagation),
 source `f7f8339fcf0e7c0b48cd18df1c5f84975eef1d6e`, Discovery Net
 `bafkreicxnbie6cijmgq6b3dh3heom7utz7ghbea632xbynavk4wzauclpa`.
-Its newest core123 exclusion remains an inherited review boundary.
+Its core123 exclusion now has an [accepted independent review](../ramsey_r55_order3_eleven_empty_propagation_review1),
+source `e0b3c2c025583f12b7916a3255ae301e2f893491`, received during the final publication refresh.
+The older empty-signature-specific closures remain the cumulative-count
+review boundary.
 The forced-empty theorem now has an
 [accepted independent review](../ramsey_r55_order3_eleven_noempty_rigidity_review1),
 source `56055e5554a4201446d635eaa445b3fe7577e5b3`, Discovery Net
