@@ -1,0 +1,56 @@
+{
+  "checker_controls": {
+    "cases": [
+      "monochromatic edge",
+      "short string",
+      "illegal colour",
+      "two deletions",
+      "wrong deleted label",
+      "absent deleted label"
+    ],
+    "malformed_witnesses_rejected": 6,
+    "valid_fixture_accepted": true
+  },
+  "controls": {
+    "actual_positive_control_native_seconds": 2.505617742,
+    "assignments": 1629,
+    "fixtures": 48,
+    "known_deleted_pool_vertex": 1662,
+    "pinned_assignments": 99,
+    "sat": 1561,
+    "status": "ALL CONTROLS VERIFIED",
+    "unsat": 68,
+    "wall_seconds": 6.855564058001619
+  },
+  "encoding_clauses": 11405,
+  "encoding_sha256": "6b9dbf0c41fcb6757f2ebf608c18f8bf7c1542c24ade7b028ac1aae02e484036",
+  "encoding_variables": 2670,
+  "fixed_graph_vertices": 574,
+  "forced_vertices_lower_bound": 509,
+  "maximum_rss_kib": 77896,
+  "native_seconds": 95.54359700099998,
+  "negative_answers_independently_certified": false,
+  "positive_L_deletions": 309,
+  "positive_verifier": {
+    "status": "EVERY AT-MOST-508-VERTEX SUBGRAPH OF H574 IS FOUR-COLOURABLE",
+    "wall_seconds": 5.053709747007815
+  },
+  "pysat_version": "1.8.dev24",
+  "queries": 309,
+  "sat": 309,
+  "solver": "CaDiCaL 1.9.5",
+  "status": "completed",
+  "stop_reason": "309 positive L deletions reached",
+  "tested_L_labels": [
+    0,
+    308
+  ],
+  "unattempted_count": 65,
+  "unknown": 0,
+  "unsat": 0,
+  "untested_L_labels": [
+    309,
+    373
+  ],
+  "wall_seconds": 101.38329115899978
+}
