@@ -1,0 +1,74 @@
+{
+  "reviewed_contribution": "bafkreialyv7icynqkmaetihqwukvunyd73ue5xs4yynijxi3ql3hwluwne",
+  "reviewed_source_commit": "6b314bafc8ca93ff65f6bb2145fae8ad1ca7a871",
+  "verdict": "accepted",
+  "scope": {
+    "direct_result": "every disjoint non-field-preserving placement of B and an isometric copy of V has at most one cross-degree-at-least-three hub, and that hub has cross degree at most ten",
+    "sharpness": "exact four-colorable examples attain cross degree ten with the hub on either side",
+    "rotation_reduction": "a non-four-colorable disjoint placement with a hub must use a multiplier of degree exactly two over the base field",
+    "hub_free_placements_closed": false,
+    "quadratic_angular_families_closed": false,
+    "five_chromatic_graph_produced": false
+  },
+  "submitted_workflow": {
+    "python": "3.11.2",
+    "generator_seconds": 7.532,
+    "triangle_audit_seconds": 16.794,
+    "sharp_example_seconds": 3.880,
+    "unordered_pairs": 65277,
+    "all_triples": 5717544,
+    "short_triples": 3631478,
+    "unit_circumradius_triples": 82094,
+    "sharp_example_pairs_each": 127765,
+    "sharp_example_vertices_each": 506,
+    "sharp_example_edges_each": 2238,
+    "catalogs": {
+      "B": {
+        "bytes": 168818,
+        "sha256": "98cb10340a4f234616022f680e7c86e988031c46a2f7486f419276e9795f2154"
+      },
+      "V": {
+        "bytes": 105877,
+        "sha256": "d9286e087f5d29b4f8115c66cf1440f2e2f6c6db26ed3bd84361332d65ed062a"
+      }
+    },
+    "all_expected_outputs_and_source_hashes_passed": true
+  },
+  "independent_audit": {
+    "seconds": 30.327,
+    "imports_reviewed_modules": false,
+    "source_points": {
+      "A": 159,
+      "V": 214,
+      "B_reconstructed": 292
+    },
+    "catalog_centers": {
+      "B_total": 1173,
+      "B_external": 881,
+      "V_total": 748,
+      "V_external": 534
+    },
+    "full_neighbor_lists_reconstructed": true,
+    "all_component_triples_independently_enumerated": 5717544,
+    "unit_circumradius_triples_matched_exactly": 82094,
+    "external_degree_histograms_matched": true,
+    "max_external_degree": 10,
+    "sharp_external_centers": {
+      "B": 4,
+      "V": 8
+    },
+    "labeled_anchor_families": 344462,
+    "passed": true
+  },
+  "imported_dependency": {
+    "whole_field_coloring_contribution": "bafkreig75j4jkhvm5guyp3k62ojlq5udshmgr345zbv5f433l2dlacefqq",
+    "independent_review": "bafkreianlcfpracsoyxay3aj2ab7w55wes6fobebsvxtje5lyc5p2t435u"
+  },
+  "uncertainty": {
+    "direct_theorem": "no unresolved issue found",
+    "finite_catalog": "independently reconstructed and exhaustively matched using exact arithmetic",
+    "analytical_arguments": "independently re-derived but not proof-assistant formalized",
+    "dependencies": "field-preserving colorability imports the separately reviewed whole-field coloring and pinned coordinate provenance",
+    "software": "trusts CPython Fraction and integer semantics, source-code correctness, hardware, and SHA-256 collision resistance"
+  }
+}
