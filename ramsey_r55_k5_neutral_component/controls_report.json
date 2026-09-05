@@ -1,0 +1,64 @@
+{
+  "bounded_runner_controls": {
+    "cap_status": "STATE_LIMIT",
+    "changed_contract_rejected": true,
+    "discovered": 4,
+    "processed": 1,
+    "same_contract_resume_preserved_records": true
+  },
+  "entry_comparison": {
+    "admissible_color_count_vectors_compared": 2988,
+    "negative_exit_incidences_compared": 30,
+    "support_classifications_compared": 259430
+  },
+  "frozen_neighborhood_audit": {
+    "canonical_immutable_K5_list_sha256": "e0b3361093b0910c962a84a75cc8c7523cc9de77acfd4976495d4f29c7977bc0",
+    "colors": [
+      {
+        "after": 176,
+        "before": 172,
+        "color": "red",
+        "contained_in_one_exceptional_color_neighborhood": 76,
+        "created": 20,
+        "destroyed": 16,
+        "first_immutable_example": [
+          3,
+          6,
+          11,
+          14,
+          20
+        ],
+        "immutable_under_all_antipodal_edits": 96
+      },
+      {
+        "after": 177,
+        "before": 186,
+        "color": "blue",
+        "contained_in_one_exceptional_color_neighborhood": 20,
+        "created": 8,
+        "destroyed": 17,
+        "first_immutable_example": [
+          3,
+          22,
+          24,
+          35,
+          38
+        ],
+        "immutable_under_all_antipodal_edits": 48
+      }
+    ],
+    "immutable_K5_lower_bound_for_every_fixed_neighborhood_completion": 144,
+    "scope": "All recolorings of the 124 unexposed edges with the other edges fixed; no degree assumption needed. This is a lower bound, not an attained minimum or a whole degree-profile exclusion.",
+    "unexposed_antipodal_edges": 124,
+    "visible_central_edges": 656
+  },
+  "rejected_mutations": {
+    "altered_entry_digest": "entry-level classification mismatch",
+    "duplicate_graph": "duplicate component graph",
+    "omitted_lower_exit": "complete lower-exit incidence mismatch",
+    "omitted_neutral_edges": "asymmetric neutral edges",
+    "omitted_neutral_vertex": "neutral neighbor missing from component",
+    "reversed_switch": "nonalternating move",
+    "wrong_level": "component seed/level"
+  }
+}
