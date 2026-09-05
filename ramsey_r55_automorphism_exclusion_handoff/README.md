@@ -67,6 +67,13 @@ minority triangles, and two cannot omit the same triangle. The bound has
 sharp 13-vertex witnesses; a 14-vertex red-pair example shows the color
 hypothesis is necessary. All four full pair-color extensions remain
 UNKNOWN. The new lemma and clause bridge await independent review.
+In the four-versus-seven branch, the new
+[four-triangle core classification](../ramsey_r55_order3_eleven_four_core)
+gives a complete cover by **197 action classes**, containing all 115543
+locally valid labeled cores. Each representative fits the existing
+full-graph normalization and has eighteen checked primary units.
+This local cover awaits independent review; all 197 full extensions
+are untested at this stage, and the branch remains open.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
@@ -123,6 +130,7 @@ to the known lower bound for `R(5,5)`.
 | signatures at eleven cycles | at most nine uniform vertices have nonempty red signatures to three red triangles; sharp equality fixes multiplicities; 1623 primary consequences exclude core 8 and leave cores 11,13 open | [`ramsey_r55_order3_eleven_signature_bound`](../ramsey_r55_order3_eleven_signature_bound) |
 | equality excluded at eleven cycles | full extensions of both residual three-versus-eight cores with exactly one empty fixed signature are refuted; at least two fixed signatures must be empty; both residual cores remain open | [`ramsey_r55_order3_eleven_empty_split`](../ramsey_r55_order3_eleven_empty_split) |
 | empty blue pair at eleven cycles | at most two common blue fixed neighbors, each red to at least two minority triangles; sharp local witnesses and exact primary consequences; all four core/pair-color extension cases remain UNKNOWN | [`ramsey_r55_order3_eleven_empty_pair`](../ramsey_r55_order3_eleven_empty_pair) |
+| four minority triangles at eleven cycles | 108 local red-K5 obstructions leave 115543 labeled cores, partitioned into 197 normalizer classes with compatible full-graph representatives and eighteen checked primary units; no extension verdict | [`ramsey_r55_order3_eleven_four_core`](../ramsey_r55_order3_eleven_four_core) |
 | C3-square actions and order 27 | sixteen of eighteen actions excluded; the two open types have one fixed point, two three-orbits and four regular nine-orbits; an index-three stabilizer argument excludes order-27 subgroups globally and order-nine subgroups in M=214 | [`ramsey_r55_c3_square_action_sweep`](../ramsey_r55_c3_square_action_sweep) |
 | complete C3-square closure | both remaining actions excluded after proven centralizer normalization, with fresh full formula reconstruction and DRAT replay; nine does not divide the automorphism-group order globally | [`ramsey_r55_c3_square_normalized_extensions`](../ramsey_r55_c3_square_normalized_extensions) |
 | subgroups of order 25 | the surviving order-five types force a unique `C_5^2` action, whose 51-variable invariant formula is certified UNSAT; an order-25 element is excluded by its fifth power | [`ramsey_r55_c5_square_automorphism_obstruction`](../ramsey_r55_c5_square_automorphism_obstruction) |
@@ -242,6 +250,11 @@ least two red minority incidences. No two common blue neighbors can
 both be blue to the same minority triangle. This new conditional screen
 has a hand proof and sharp local examples; the full pair-color sweep
 excluded no additional case.
+For minority count four, the complete 197-class catalog supplies the
+corresponding normalizer cover. A core must avoid every complete block
+and each of the 108 listed occupancy obstructions; its compatible
+representative then determines eighteen primary bits. No full extension
+is excluded solely by membership in this catalog.
 
 The finished ten-cycle chain proceeded through the four-versus-six
 internal-color split, 94 of 98 anchor exclusions, and twenty further
