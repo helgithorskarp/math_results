@@ -1,0 +1,51 @@
+{
+  "python": "3.11.2",
+  "primary_verifier": {
+    "command": [
+      "python3",
+      "verify.py"
+    ],
+    "exit_code": 0,
+    "seconds": 21.474888326003565,
+    "max_rss_kib": 183152
+  },
+  "first_independent_rational_census": {
+    "rational_classification_and_every_group_match": true,
+    "counts": {
+      "no_unit_roots": 520070,
+      "outside_E_pairs": 642238,
+      "roots_in_E": 127748
+    },
+    "classes": 303730,
+    "classification_sha256": "21bb5efda6dec4739cb0b716ce59df3ac59c44dd933865b3645e1959325cdc96",
+    "seconds": 356.44511325799976,
+    "max_rss_kib": 938912
+  },
+  "independent_direct_projection_audit": {
+    "seconds": 20.830543299001874,
+    "max_rss_kib": 741324
+  },
+  "inherited_and_lazy_coverage_bytes_match": true,
+  "all_anchor_table_bytes_match": true,
+  "every_rational_and_integer_edge_group_compared": 303730,
+  "every_coordinate_difference_and_incidence_compared": true,
+  "full_geometry_control_unordered_pairs": 255530,
+  "positive_generator_replay": true,
+  "proof_replay_requires_solver": false,
+  "initial_misses": 1309,
+  "remaining_after_positive_calls": [
+    124,
+    34,
+    2,
+    0
+  ],
+  "full_public_rational_audit": {
+    "command": [
+      "python3",
+      "audit.py"
+    ],
+    "exit_code": 0,
+    "seconds": 364.96711482100363,
+    "max_rss_kib": 417744
+  }
+}
