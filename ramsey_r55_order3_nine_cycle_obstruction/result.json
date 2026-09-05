@@ -1,0 +1,101 @@
+{
+  "format": "r55-order3-nine-cycle-v1",
+  "excluded_type": "1^16 3^9",
+  "minimum_moving_3cycles": 10,
+  "new_ramsey_lower_bound": false,
+  "cases": [
+    {
+      "red_cycles": 0,
+      "variables": 8490,
+      "clauses": 609409,
+      "formula": {
+        "bytes": 24631263,
+        "sha256": "19a93bc6f17d64cdd5e2c84a9180d3b8c704cd4ea48ce8b7214b3aeb5db44163"
+      },
+      "reference_drat": {
+        "bytes": 12162845,
+        "sha256": "b5c87eeb263154427baa35afbaaea2ccd04d95e4b5b48c876abbee5030c9524a"
+      }
+    },
+    {
+      "red_cycles": 1,
+      "variables": 8514,
+      "clauses": 612097,
+      "formula": {
+        "bytes": 24774713,
+        "sha256": "fa3c17c653379ac46b576230bff4b8ecf3bd9bd106fd10edb60c7b49b41bdd9b"
+      },
+      "reference_drat": {
+        "bytes": 15794263,
+        "sha256": "307c4dcca2cd912629957e9489a5650997d45bd6f5bd829c60a65636f0e16e84"
+      }
+    },
+    {
+      "red_cycles": 2,
+      "variables": 8532,
+      "clauses": 614113,
+      "formula": {
+        "bytes": 24899652,
+        "sha256": "a6e33c756d24824f5d10263fc4fe811f5f54e97f2152cfcd91fc805097a64a4a"
+      },
+      "reference_drat": {
+        "bytes": 17349019,
+        "sha256": "d519f421acdeea76aca8542f4634a83b9b00891437770b2f9ef967b84330aed7"
+      }
+    },
+    {
+      "red_cycles": 3,
+      "variables": 8544,
+      "clauses": 615457,
+      "formula": {
+        "bytes": 25003667,
+        "sha256": "fe024e749043ea7f605d6dc37d6d1d599f131da3ea76b1b5196f6637626b965a"
+      },
+      "reference_drat": {
+        "bytes": 16312980,
+        "sha256": "1d220239a1c24410f7686fbdb9b14ca7f1ca5a434257e886f876301ec5258165"
+      }
+    },
+    {
+      "red_cycles": 4,
+      "variables": 8550,
+      "clauses": 616129,
+      "formula": {
+        "bytes": 25086759,
+        "sha256": "21a39248ace49248bbb16171b757f4488b1dae7918192aad04ef036e6ac3f17b"
+      },
+      "reference_drat": {
+        "bytes": 20367008,
+        "sha256": "b03f122c0f3468700e89de12e193928f25eae701a4d5aec2077732e6d8547965"
+      }
+    }
+  ],
+  "local_audit": {
+    "cross_profiles": 65536,
+    "fixed_count_profiles": 1114112,
+    "feasible_profiles": 987,
+    "budget_only_false_profiles": 28
+  },
+  "fixture": {
+    "vertices": 27,
+    "red_edges": 177,
+    "five_sets": 80730,
+    "bytes": 916,
+    "sha256": "3acac6e84e1a9fdce9a2225d71568877cb352220ffdd1f4f6f050d070e32d659"
+  },
+  "tools": {
+    "kissat_version": "4.0.4",
+    "kissat_source_commit": "8af8e56f174b778aef3aa45af9f739b2a5f492c2",
+    "kissat_binary": {
+      "bytes": 546552,
+      "sha256": "2d185ea775f2c7c16d33a235ef852d2b69f0f3c8b437335b966b4a5aa6265b45"
+    },
+    "drat_trim_source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "drat_trim_binary": {
+      "bytes": 51352,
+      "sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+    }
+  },
+  "proofs_committed": false,
+  "solver_time_limit_seconds": 60
+}
