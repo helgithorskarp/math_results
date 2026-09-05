@@ -1,5 +1,11 @@
 # A four-chromatic 143-point heptagon–Moser-spindle sum
 
+**Subsequent complete stratum:** [CONTACTS.md](CONTACTS.md) proves that all
+252 unit/unit contact rotations of these same factors are four-chromatic,
+using 36 symmetry representatives and explicit colourings. Other factor
+lengths remain unexamined. The aligned-milestone report below is preserved
+as its original scope and provenance.
+
 **Completed result:** the aligned sum of a 21-point heptagon motif and a
 seven-point Moser spindle has 143 vertices and 512 unit edges. Every edge
 comes from a factor edge. Three compatible collision classes permit an
