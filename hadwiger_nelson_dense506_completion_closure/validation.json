@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-09-05T15:39:18.466459+00:00",
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "dependency": "standard library only",
+  "checks": {
+    "prior_census": {
+      "seconds": 15.983449389008456,
+      "cumulative_children_max_rss_kib": 50472,
+      "expected_bytes_matched": true
+    },
+    "construct": {
+      "seconds": 0.07358311700227205,
+      "cumulative_children_max_rss_kib": 50472,
+      "expected_bytes_matched": true
+    },
+    "verify": {
+      "seconds": 1.5906462440034375,
+      "cumulative_children_max_rss_kib": 50472,
+      "expected_bytes_matched": true
+    },
+    "audit": {
+      "seconds": 1.9466638839949155,
+      "cumulative_children_max_rss_kib": 50472,
+      "expected_bytes_matched": true
+    },
+    "controls": {
+      "seconds": 1.6862603949994082,
+      "cumulative_children_max_rss_kib": 50472,
+      "expected_bytes_matched": true
+    }
+  },
+  "memory_note": "ru_maxrss is cumulative child maximum after each sequential command, not each command's individual peak.",
+  "candidate_table_bytes": 245622,
+  "source_census_reproduced": true,
+  "both_roots_directly_checked": true,
+  "new_external_review": "pending",
+  "background_jobs": [],
+  "unfinished_certificates": [],
+  "nonsemantic_followup": "Audit source disables bytecode cache creation in the imported review directory; rerun matched expected_audit.json byte for byte."
+}
