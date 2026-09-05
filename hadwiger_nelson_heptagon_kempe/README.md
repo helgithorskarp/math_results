@@ -102,11 +102,14 @@ composition formula concern a separate Parts lane and are not premises
 here. The initial graph scan reached height 2982; final relevant refresh
 and publication identities are recorded in the campaign checkpoint.
 
-**Stopping decision:** potential necessity and the original selected pair
-are now settled negatively. Finish this checkpoint before further work.
-The next candidate milestone is a bounded, symmetry-aware test of
-sequences of Kempe swaps focused on the three residual pair orbits,
-using the verified ordinary colourings as starting points. Failure of
-such a bounded test would still not prove forcing. No second swap depth,
-larger difference set, native runtime extension or other construction
-phase has been started. No job remains running; external review is pending.
+**Subsequent bounded checkpoint:** the
+[complete two-step follow-up](TWO_STEP.md) now tests all 37968 second
+swaps from these 1260 first-step rows. None makes a residual pair
+monochromatic; all 42 remain unresolved. A separate disjoint-set audit
+constructs and directly checks every second-step colouring. This does
+not prove ordinary forcing or close a full Kempe equivalence class.
+
+**Stopping decision:** reassess the residual terminal mechanism before
+another swap layer. No third depth, enlarged graph, native runtime
+extension or other construction phase has started. No job remains
+running; external review is pending.
