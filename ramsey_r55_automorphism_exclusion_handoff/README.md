@@ -7,10 +7,15 @@ this repository imply the following reusable group-screening rule:
 > Every nonidentity element of `Aut(G)` has at least five vertex cycles, and
 > every prime divisor of `|Aut(G)|` is `2` or `3`.
 
-In particular, `|Aut(G)|=2^a 3^b`. There is no element of order five;
+In particular, `|Aut(G)|=2^a 3^b` with **0<=b<=2**: the new
+[C3-square action restriction](../ramsey_r55_c3_square_action_sweep) excludes
+subgroups of order 27. There is no element of order five;
 the earlier order-25 and order-15 restrictions are now subsumed by this.
-There is no element of order nine. Every nontrivial 3-subgroup has exponent
-three; this does not bound its order by three or imply it is abelian.
+There is no element of order nine. Every nontrivial 3-subgroup is therefore
+`C_3` or `C_3 x C_3`. The latter remains globally open in two action types:
+one global fixed vertex, two three-point orbits with equal or distinct
+stabilizers, and four regular nine-point orbits. Each regular orbit splits
+into three 3-cycles under any nonidentity element.
 
 More specifically, every involution has at least five transpositions, and
 an order-three element now requires **at least eleven moving 3-cycles**
@@ -22,11 +27,12 @@ core, and reviewed fixed-signature bound. The last lemma forces three
 fixed vertices opposite-color complete to the core; its twelve unit
 assignments close all four remaining anchor extensions.
 
-The principal inherited trust boundary is the older four-versus-six
-internal-color split: its five exclusions have internal full-formula
-checks and DRAT replays, but the later independent reviews explicitly
-did not rerun them. The new final four-case closure also awaits independent
-peer review. Eleven through fourteen moving cycles remain open globally.
+The older four-versus-six internal-color split now has an
+[accepted independent review](../ramsey_r55_order3_ten_cycle_obstruction_review1),
+resolving that inherited review gap. The final four-case ten-cycle closure
+still awaits independent peer review. The new C3-square restriction imports
+that minimum-eleven conclusion and also awaits independent review.
+Eleven through fourteen moving cycles remain open globally.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
@@ -44,6 +50,10 @@ branch. The solver-free lemma and sharp degree/incidence fixture are in
 The fixture contains an independent five-set. The upper bound is
 conditional on the branch; thirteen and fourteen moving cycles remain
 open for the full Ramsey problem.
+The new C3-square classification additionally excludes every order-nine
+subgroup in this branch: each of its two global open types has an element
+with fourteen moving 3-cycles. Thus **b<=1 in M=214 only**. Neither this
+corollary nor the global order-27 exclusion changes the branch profile count.
 The standalone M=214 degree/incidence lemma and its explicitly conditional
 Ramsey corollary now have an accepted
 [independent review](../ramsey_r55_m214_symmetry_review1).
@@ -73,6 +83,7 @@ to the known lower bound for `R(5,5)`.
 | unique minority core at ten cycles | 27 normalized phase triples form six classes; twenty published small DRAT certificates exclude five classes, forcing one 12-vertex core with triangle-free complement; four extensions stay open | [`ramsey_r55_order3_ten_cycle_phase_sweep`](../ramsey_r55_order3_ten_cycle_phase_sweep) |
 | fixed signatures at ten cycles | at most ten fixed vertices have nonempty minority-color signatures, so at least three are empty; equality has all ten nonempty signatures once; a 25-vertex fixture is locally sharp and 1,868 vectors meet the forced-blue clique constraints | [`ramsey_r55_order3_fixed_signature_bound`](../ramsey_r55_order3_fixed_signature_bound) |
 | final ten-cycle extensions | twelve reviewed signature-consequence units in each of the four remaining full formulas; four UNSAT proofs replayed, closing the type under the inherited reductions; large proof traces regenerated outside Git | [`ramsey_r55_order3_ten_cycle_signature_propagation`](../ramsey_r55_order3_ten_cycle_signature_propagation) |
+| C3-square actions and order 27 | sixteen of eighteen actions excluded; the two open types have one fixed point, two three-orbits and four regular nine-orbits; an index-three stabilizer argument excludes order-27 subgroups globally and order-nine subgroups in M=214 | [`ramsey_r55_c3_square_action_sweep`](../ramsey_r55_c3_square_action_sweep) |
 | subgroups of order 25 | the surviving order-five types force a unique `C_5^2` action, whose 51-variable invariant formula is certified UNSAT; an order-25 element is excluded by its fifth power | [`ramsey_r55_c5_square_automorphism_obstruction`](../ramsey_r55_c5_square_automorphism_obstruction) |
 | order-15 elements | power constraints leave six cycle types; all six exact cyclic invariant formulas have independently reconstructed clauses and replayed DRAT certificates | [`ramsey_r55_order15_automorphism_obstruction`](../ramsey_r55_order15_automorphism_obstruction) |
 | order-nine elements | nine types surviving the earlier cubing bounds; seven earlier certificates and two centralizer-normalized certified formulas exclude all nine | [`ramsey_r55_order9_automorphism_obstruction`](../ramsey_r55_order9_automorphism_obstruction) |
@@ -133,8 +144,8 @@ The ten-cycle package also regenerates large general DRAT traces outside
 Git. Its independent complete-clause reconstruction covers all six formulas;
 proof replay excluded five cases and initially left the four-versus-six
 case unresolved. The subsequent signature-propagation artifact closes that
-case, retaining the older five-case independent-review boundary. Internal
-checking is not new independent peer review.
+case. The older five-case split now has an accepted independent review;
+the final four-case closure remains internally checked and awaits review.
 The fixed-33 package has also been independently
 regenerated, reconstructed, and replayed in
 [`ramsey_r55_order5_f33_degree_obstruction_review1`](../ramsey_r55_order5_f33_degree_obstruction_review1).
@@ -159,7 +170,8 @@ representatives to cover the group).  Reject the construction family if:
 7. an element fixes a vertex and also contains a cycle of length at least 25; or
 8. the proposed group order is divisible by five; or
 9. an element has order divisible by nine, or a vertex cycle with length
-    divisible by nine.
+    divisible by nine; or
+10. the proposed group order is divisible by 27, or, in M=214 only, by nine.
 
 For a cyclic ansatz generated by `g`, testing only the cycle type of `g` is
 insufficient: invariance under `g` also gives invariance under every power of
@@ -170,7 +182,8 @@ internal-color split, 94 of 98 anchor exclusions, and twenty further
 phase exclusions. The remaining minority core has words 01=23=100 and
 02=03=12=13=110, with coordinate differences interpreted as in the
 literal core artifact. The matching and phase refinements have accepted
-independent reviews conditional on the older internal-color split.
+independent reviews; their formerly unreviewed internal-color antecedent
+has now been independently accepted as well.
 
 Writing X for singleton fixed-signature multiplicities and Y for pair
 multiplicities gives X+2Y<=16 and 3X+2Y<=24. Thus at least three fixed
@@ -193,7 +206,8 @@ This is a completed symmetry restriction, not a target coloring.
 
 This materially prunes symmetry-first construction search. Any proposed
 group whose order has a prime divisor at least five is impossible; a
-surviving nontrivial action has order `2^a 3^b` and must satisfy the
+surviving nontrivial action has order `2^a 3^b`, with b<=2 globally and
+b<=1 in M=214, and must satisfy the
 element-wise cycle restrictions above. Such
 actions generally retain more edge orbits and therefore less of the
 dimensional advantage sought from a highly structured ansatz. The handoff
@@ -273,6 +287,22 @@ types are therefore excluded. Every element of order divisible by nine has
 a power of order nine, so every nontrivial 3-subgroup has exponent three.
 The two new generated traces are omitted from Git; the artifact regenerates
 and independently replays both, with reference hashes and pinned tools.
+The C3-square classification uses the minimum-eleven motion bound to
+limit each nonidentity element to at most ten fixed vertices. Write a for
+global fixed points, b_L for three-orbits stabilized by each of four lines,
+and c for regular nine-orbits. The equations a+3sum(b_L)+9c=43 and
+a+3b_L<=10 leave eighteen actions up to GL(2,3), whose projective action is
+S4. Full invariant Ramsey formulas and replayed proofs exclude sixteen.
+The two remaining actions both have exactly one global fixed point.
+If a subgroup P of order27 existed, its index-three subgroups would all
+be C3-square and normal. The unique fixed point of one is fixed by P,
+and an orbit of size3 would give its stabilizer at least three fixed
+points. Thus P has one fixed point and all remaining orbits divisible
+by9, contradicting 43-1=42. This proves the new global restriction
+27 not dividing the group order. Each residual C3-square action contains
+an element with fourteen moving triangles, contradicting the M=214-specific
+upper bound. That branch consequently excludes order-nine subgroups.
+The global two-case extension problem remains open.
 An order-seven permutation on 43 points has one of the six displayed
 fixed-point/seven-cycle types, all covered by the order-seven artifact; the
 analogous equation for order eleven gives three types, all covered by the
