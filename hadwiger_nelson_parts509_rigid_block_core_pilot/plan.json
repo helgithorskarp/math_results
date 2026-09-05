@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-09-05T19:42:51.505150+00:00",
+  "milestone": "One bounded simultaneous rigid-block replacement and proof-core minimization pilot",
+  "support": "Original L374 plus all first-level completion points with no sqrt5 coefficient and at least4 original unit neighbours; keep original19-vertex interface mandatory. No per-extra-point closures.",
+  "target": "A block T of at most373 vertices containing the interface, whose proper4-colourings all restrict to one of the published20 classes. Then T union originalS135 is non-four-colourable on at most508 vertices.",
+  "encoding": "Four colour variables plus one activation variable per ambient vertex. Guard only its at-least-one-colour clause by activation; edge exclusions unconditional; mandatory interface activations; origin colour0; forbid all six colour permutations of each published20-class row.",
+  "seed": "Omit one non-interface original with maximum new-point neighbours, tie-break by lowest original label, to prevent a trivial return to unchanged L.",
+  "bounds": {
+    "initial_signature_query_conflicts": 100000,
+    "maximum_reduction_queries": 128,
+    "reduction_query_conflicts": 25000,
+    "native_workers": 1,
+    "address_space_bytes": 4294967296,
+    "final_signature_proof_seconds": 180
+  },
+  "algorithm": "On initial UNSAT take an assumption core, then original-first deterministic core-guided deletion. Check each SAT colouring directly. Keep latest native-UNSAT support and independently certify its final exact forbidden-interface CNF. Stop at128 reduction queries or exhausted order. No second seed.",
+  "proof_policy": "Only final complete DRAT-checked signature refutation is a claimed new negative theorem. SAT assignments and any proper4/5-colouring checked directly. Native UNSAT cores are search hints until final complete check.",
+  "stop": "Finish seed query, bounded core minimization and any final certificate, then checkpoint and yield before another seed, pool threshold, phase or mechanism."
+}

@@ -1,0 +1,337 @@
+{
+  "cases": [
+    {
+      "audit": {
+        "anchor_units": 9,
+        "clauses": 615956,
+        "equality_units": 30,
+        "primary_orbits": 320,
+        "removed_ordering_clauses": 3,
+        "retained_parent_clauses": 615917,
+        "variables": 34280
+      },
+      "bits": "100110110",
+      "formula": {
+        "bytes": 24892839,
+        "sha256": "78895f65af9852156303a478723b2729670467c2ddb5db7058f3eb58ed87c0c5"
+      },
+      "id": "a11_equality",
+      "proof": {
+        "bytes": 14711441,
+        "sha256": "836d7176cb32b0524add57c2cbd5e3b26d7c3e658c0ff52059ac025988cc88ff"
+      },
+      "replay": {
+        "exit_code": 0,
+        "rat_core_lemmas": 254,
+        "seconds": 6.085892,
+        "verified": true
+      },
+      "solve_seconds": 2.06961,
+      "solver_code": 20,
+      "status": "excluded",
+      "type": 11
+    },
+    {
+      "audit": {
+        "anchor_units": 9,
+        "clauses": 615956,
+        "equality_units": 30,
+        "primary_orbits": 320,
+        "removed_ordering_clauses": 3,
+        "retained_parent_clauses": 615917,
+        "variables": 34280
+      },
+      "bits": "110110101",
+      "formula": {
+        "bytes": 24892838,
+        "sha256": "42ecf94915d0b0ed753c56dab4d778bd1c637548e533c95d5bc7558e4002ab8b"
+      },
+      "id": "a13_equality",
+      "proof": {
+        "bytes": 11075882,
+        "sha256": "82dea18c5b9d0e1bfa7f201c30250ea9ebbb996e15521436c4aaffba73c0226d"
+      },
+      "replay": {
+        "exit_code": 0,
+        "rat_core_lemmas": 109,
+        "seconds": 4.178213,
+        "verified": true
+      },
+      "solve_seconds": 1.154673,
+      "solver_code": 20,
+      "status": "excluded",
+      "type": 13
+    }
+  ],
+  "complete": true,
+  "contract": {
+    "drat_trim": {
+      "bytes": 51352,
+      "sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+    },
+    "format": "r55-r4-anchor-equality-v1",
+    "kissat": {
+      "bytes": 546552,
+      "sha256": "2d185ea775f2c7c16d33a235ef852d2b69f0f3c8b437335b966b4a5aa6265b45"
+    },
+    "python": "3.11.2",
+    "replay_seconds": 300,
+    "solve_seconds": 60,
+    "sources": {
+      "ramsey_r55_order3_eleven_anchor_equality/anchor.py": {
+        "bytes": 4825,
+        "sha256": "8e99de87e46c73ed233edafdd5e8da8f73335a5a870089dfeacf193894befd1f"
+      },
+      "ramsey_r55_order3_eleven_anchor_equality/audit.py": {
+        "bytes": 8477,
+        "sha256": "b2272b70aae53e41eb7195beaf49f47aea26cee36e5e8985bdc48c1e8c7b4233"
+      },
+      "ramsey_r55_order3_eleven_anchor_equality/run.py": {
+        "bytes": 7495,
+        "sha256": "a2fdf48891a850277ccb60a86b7740183bf2842a229b80d73284b3733cb1c2fa"
+      },
+      "ramsey_r55_order3_eleven_anchor_equality/verify.py": {
+        "bytes": 2562,
+        "sha256": "f69ee80a71b5cff07db10d72b338b2fea9099e838a7b95d840bfafaa2e4a9b3a"
+      },
+      "ramsey_r55_order3_eleven_cycle_obstruction/check_formula.cpp": {
+        "bytes": 9611,
+        "sha256": "23df18de05fca300e1f20759be822e9d58a924c42a38be764beb8546939f7946"
+      },
+      "ramsey_r55_order3_eleven_cycle_obstruction/controls.py": {
+        "bytes": 8049,
+        "sha256": "883581a65b4f79f69f684fe102ff8c77a6c4a79e951ce3807e7017407a43b716"
+      },
+      "ramsey_r55_order3_eleven_cycle_obstruction/generate.py": {
+        "bytes": 6211,
+        "sha256": "e97e44491220a8d0d288912930d5f1795c8a4c86802ce66f5fc6cf374655b95b"
+      },
+      "ramsey_r55_order3_eleven_cycle_obstruction/inspect_graph.py": {
+        "bytes": 1263,
+        "sha256": "bd72c5d79400fbe66db0e0c56a13cde3d2b3efc350099c770c11bfb5c9fb5746"
+      },
+      "ramsey_r55_order3_eleven_cycle_obstruction/run.py": {
+        "bytes": 8765,
+        "sha256": "5bedca290d8bc3939de9e157fa2f1e4adef8d9828a692b88f294673a81b836f3"
+      },
+      "ramsey_r55_order3_eleven_empty_signature/classification.json": {
+        "bytes": 15588,
+        "sha256": "163bf5fd836ff5fbd58387182995d9389f85b2d8eade6f6bef4009a313a09f98"
+      },
+      "ramsey_r55_order3_eleven_four_empty_split/boundary.json": {
+        "bytes": 819,
+        "sha256": "4e450e3df6f5277612a53baab4e2a8231a800d517566c42d9854d5200e09cf7b"
+      },
+      "ramsey_r55_order3_eleven_signature_bound/PROOF.md": {
+        "bytes": 9340,
+        "sha256": "9b3393fe931f04202ce93281bf550ba6f6af0db2092724221a62a2544d4e9fc5"
+      }
+    },
+    "workers": 2
+  },
+  "elapsed_seconds": 67.847626,
+  "excluded": [
+    "a11_equality",
+    "a13_equality"
+  ],
+  "largest_child_maxrss_kib": 261672,
+  "open": [],
+  "preparation": {
+    "anchors": {
+      "bytes": 30094,
+      "sha256": "7c9afff91b862308deea340d11a8576a7f7773b5880749c3a8793e00cf340464"
+    },
+    "classification_check": {
+      "blue_free": 45,
+      "equality_prefixes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "full_fixed_rows_checked": 2048,
+      "literal_witnesses": 101,
+      "residual_classes": 34,
+      "residual_labeled": 24057,
+      "type_counts": {
+        "11": 27,
+        "13": 18
+      }
+    },
+    "controls": {
+      "classification": {
+        "blue_free": 45,
+        "equality_prefixes": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "full_fixed_rows_checked": 2048,
+        "literal_witnesses": 101,
+        "residual_classes": 34,
+        "residual_labeled": 24057,
+        "type_counts": {
+          "11": 27,
+          "13": 18
+        }
+      },
+      "formula": {
+        "anchor_units": 9,
+        "clauses": 615956,
+        "equality_units": 30,
+        "primary_orbits": 320,
+        "removed_ordering_clauses": 3,
+        "retained_parent_clauses": 615917,
+        "variables": 34280
+      },
+      "rejected": [
+        "lost_anchor",
+        "false_type",
+        "lost_residual",
+        "extra_empty",
+        "wrong_prefix",
+        "lost_unit",
+        "lost_parent",
+        "wrong_type",
+        "numeric_order",
+        "restore_sort"
+      ]
+    },
+    "formulas": {
+      "a11_equality": {
+        "audit": {
+          "anchor_units": 9,
+          "clauses": 615956,
+          "equality_units": 30,
+          "primary_orbits": 320,
+          "removed_ordering_clauses": 3,
+          "retained_parent_clauses": 615917,
+          "variables": 34280
+        },
+        "formula": {
+          "bytes": 24892839,
+          "sha256": "78895f65af9852156303a478723b2729670467c2ddb5db7058f3eb58ed87c0c5"
+        }
+      },
+      "a13_equality": {
+        "audit": {
+          "anchor_units": 9,
+          "clauses": 615956,
+          "equality_units": 30,
+          "primary_orbits": 320,
+          "removed_ordering_clauses": 3,
+          "retained_parent_clauses": 615917,
+          "variables": 34280
+        },
+        "formula": {
+          "bytes": 24892838,
+          "sha256": "42ecf94915d0b0ed753c56dab4d778bd1c637548e533c95d5bc7558e4002ab8b"
+        }
+      }
+    },
+    "parent": {
+      "bytes": 24892619,
+      "clauses": 615920,
+      "edge_orbits": 331,
+      "primary_variables": 320,
+      "ramsey_clauses": 529157,
+      "red_cycles": 4,
+      "sha256": "c8f355b256de55727b18efcbd47ef9e777ac2b3b4ae69e09676fcddd51afa05f",
+      "variables": 34280
+    }
+  },
+  "target_graph": false
+}

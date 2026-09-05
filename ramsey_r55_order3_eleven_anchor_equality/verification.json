@@ -1,0 +1,237 @@
+{
+  "cases": [
+    {
+      "bits": "100110110",
+      "formula": {
+        "bytes": 24892839,
+        "sha256": "78895f65af9852156303a478723b2729670467c2ddb5db7058f3eb58ed87c0c5"
+      },
+      "id": "a11_equality",
+      "replay": {
+        "exit_code": 0,
+        "rat_core_lemmas": 254,
+        "seconds": 6.035234,
+        "verified": true
+      },
+      "status": "excluded",
+      "type": 11
+    },
+    {
+      "bits": "110110101",
+      "formula": {
+        "bytes": 24892838,
+        "sha256": "42ecf94915d0b0ed753c56dab4d778bd1c637548e533c95d5bc7558e4002ab8b"
+      },
+      "id": "a13_equality",
+      "replay": {
+        "exit_code": 0,
+        "rat_core_lemmas": 109,
+        "seconds": 4.178859,
+        "verified": true
+      },
+      "status": "excluded",
+      "type": 13
+    }
+  ],
+  "complete_formula_reconstructions": 2,
+  "elapsed_seconds": 65.408805,
+  "preparation": {
+    "anchors": {
+      "bytes": 30094,
+      "sha256": "7c9afff91b862308deea340d11a8576a7f7773b5880749c3a8793e00cf340464"
+    },
+    "classification_check": {
+      "blue_free": 45,
+      "equality_prefixes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "full_fixed_rows_checked": 2048,
+      "literal_witnesses": 101,
+      "residual_classes": 34,
+      "residual_labeled": 24057,
+      "type_counts": {
+        "11": 27,
+        "13": 18
+      }
+    },
+    "controls": {
+      "classification": {
+        "blue_free": 45,
+        "equality_prefixes": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "full_fixed_rows_checked": 2048,
+        "literal_witnesses": 101,
+        "residual_classes": 34,
+        "residual_labeled": 24057,
+        "type_counts": {
+          "11": 27,
+          "13": 18
+        }
+      },
+      "formula": {
+        "anchor_units": 9,
+        "clauses": 615956,
+        "equality_units": 30,
+        "primary_orbits": 320,
+        "removed_ordering_clauses": 3,
+        "retained_parent_clauses": 615917,
+        "variables": 34280
+      },
+      "rejected": [
+        "lost_anchor",
+        "false_type",
+        "lost_residual",
+        "extra_empty",
+        "wrong_prefix",
+        "lost_unit",
+        "lost_parent",
+        "wrong_type",
+        "numeric_order",
+        "restore_sort"
+      ]
+    },
+    "formulas": {
+      "a11_equality": {
+        "audit": {
+          "anchor_units": 9,
+          "clauses": 615956,
+          "equality_units": 30,
+          "primary_orbits": 320,
+          "removed_ordering_clauses": 3,
+          "retained_parent_clauses": 615917,
+          "variables": 34280
+        },
+        "formula": {
+          "bytes": 24892839,
+          "sha256": "78895f65af9852156303a478723b2729670467c2ddb5db7058f3eb58ed87c0c5"
+        }
+      },
+      "a13_equality": {
+        "audit": {
+          "anchor_units": 9,
+          "clauses": 615956,
+          "equality_units": 30,
+          "primary_orbits": 320,
+          "removed_ordering_clauses": 3,
+          "retained_parent_clauses": 615917,
+          "variables": 34280
+        },
+        "formula": {
+          "bytes": 24892838,
+          "sha256": "42ecf94915d0b0ed753c56dab4d778bd1c637548e533c95d5bc7558e4002ab8b"
+        }
+      }
+    },
+    "parent": {
+      "bytes": 24892619,
+      "clauses": 615920,
+      "edge_orbits": 331,
+      "primary_variables": 320,
+      "ramsey_clauses": 529157,
+      "red_cycles": 4,
+      "sha256": "c8f355b256de55727b18efcbd47ef9e777ac2b3b4ae69e09676fcddd51afa05f",
+      "variables": 34280
+    }
+  },
+  "proof_replays": 2,
+  "verified": true
+}
