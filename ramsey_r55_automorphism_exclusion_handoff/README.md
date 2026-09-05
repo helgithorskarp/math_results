@@ -12,29 +12,22 @@ the earlier order-25 and order-15 restrictions are now subsumed by this.
 There is no element of order nine. Every nontrivial 3-subgroup has exponent
 three; this does not bound its order by three or imply it is abelian.
 
-More specifically, every involution has at least five transpositions, every
-order-three element has at least ten 3-cycles (and at most 13 fixed
-vertices). If it has exactly ten, the moving triangles have internal
-colors split four versus six; all five other counts up to complementation
-are excluded. In the remaining four-versus-six case, the four minority
-triangles are paired by cross blocks of own-color weight one; their other
-mutual blocks have weight two. Every minority triangle has mixed weights
-one or two, with one through four weights equal to one. The four anchor
-profiles remain open; 94 of the former 98 have checked exclusions in
-[`ramsey_r55_order3_ten_cycle_anchor_sweep`](../ramsey_r55_order3_ten_cycle_anchor_sweep).
-Their phases are now forced as well: the twelve minority vertices induce
-the single explicit core in
-[`ramsey_r55_order3_ten_cycle_phase_sweep`](../ramsey_r55_order3_ten_cycle_phase_sweep).
-It is 7-regular in their internal color and triangle-free in the other.
-Each fixed vertex is adjacent in the minority color to at most two whole
-minority triangles. Twenty compact certificates exclude the other five
-phase classes; the four anchor extensions of the remaining core stay open.
-At least three of the thirteen fixed vertices are adjacent to none of the
-minority core in that color. If exactly three are, the four singleton and
-six pair signatures each occur once. The hand proof and sharp local
-25-vertex fixture are in
-[`ramsey_r55_order3_fixed_signature_bound`](../ramsey_r55_order3_fixed_signature_bound).
-The whole ten-cycle type remains open. The last order-five type
+More specifically, every involution has at least five transpositions, and
+an order-three element now requires **at least eleven moving 3-cycles**
+(at most ten fixed vertices). The ten-cycle exclusion is completed in
+[`ramsey_r55_order3_ten_cycle_signature_propagation`](../ramsey_r55_order3_ten_cycle_signature_propagation).
+All four remaining full-extension formulas have replayed UNSAT proofs.
+This uses the internal-color split, minority matching, unique minority
+core, and reviewed fixed-signature bound. The last lemma forces three
+fixed vertices opposite-color complete to the core; its twelve unit
+assignments close all four remaining anchor extensions.
+
+The principal inherited trust boundary is the older four-versus-six
+internal-color split: its five exclusions have internal full-formula
+checks and DRAT replays, but the later independent reviews explicitly
+did not rerun them. The new final four-case closure also awaits independent
+peer review. Eleven through fourteen moving cycles remain open globally.
+The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
 using the analytic two-pattern incidence reduction.
@@ -45,7 +38,7 @@ cannot be vertex-transitive.
 For the **M=214 hard branch only**, the degree sequence `20^13 21^30`
 and its two-unit exceptional-incidence budget additionally force an
 order-three element to have at most twelve moving 3-cycles. Together
-with the global minimum, only ten, eleven, or twelve remain in this
+with the global minimum, only eleven or twelve remain in this
 branch. The solver-free lemma and sharp degree/incidence fixture are in
 [`ramsey_r55_m214_symmetry_audit`](../ramsey_r55_m214_symmetry_audit).
 The fixture contains an independent five-set. The upper bound is
@@ -79,6 +72,7 @@ to the known lower bound for `R(5,5)`.
 | minority matching at ten cycles | 94 checked anchor-profile exclusions leave four rows; the four minority triangles have weight-one blocks forming a perfect matching and induce a 7-regular graph in their internal color | [`ramsey_r55_order3_ten_cycle_anchor_sweep`](../ramsey_r55_order3_ten_cycle_anchor_sweep) |
 | unique minority core at ten cycles | 27 normalized phase triples form six classes; twenty published small DRAT certificates exclude five classes, forcing one 12-vertex core with triangle-free complement; four extensions stay open | [`ramsey_r55_order3_ten_cycle_phase_sweep`](../ramsey_r55_order3_ten_cycle_phase_sweep) |
 | fixed signatures at ten cycles | at most ten fixed vertices have nonempty minority-color signatures, so at least three are empty; equality has all ten nonempty signatures once; a 25-vertex fixture is locally sharp and 1,868 vectors meet the forced-blue clique constraints | [`ramsey_r55_order3_fixed_signature_bound`](../ramsey_r55_order3_fixed_signature_bound) |
+| final ten-cycle extensions | twelve reviewed signature-consequence units in each of the four remaining full formulas; four UNSAT proofs replayed, closing the type under the inherited reductions; large proof traces regenerated outside Git | [`ramsey_r55_order3_ten_cycle_signature_propagation`](../ramsey_r55_order3_ten_cycle_signature_propagation) |
 | subgroups of order 25 | the surviving order-five types force a unique `C_5^2` action, whose 51-variable invariant formula is certified UNSAT; an order-25 element is excluded by its fifth power | [`ramsey_r55_c5_square_automorphism_obstruction`](../ramsey_r55_c5_square_automorphism_obstruction) |
 | order-15 elements | power constraints leave six cycle types; all six exact cyclic invariant formulas have independently reconstructed clauses and replayed DRAT certificates | [`ramsey_r55_order15_automorphism_obstruction`](../ramsey_r55_order15_automorphism_obstruction) |
 | order-nine elements | nine types surviving the earlier cubing bounds; seven earlier certificates and two centralizer-normalized certified formulas exclude all nine | [`ramsey_r55_order9_automorphism_obstruction`](../ramsey_r55_order9_automorphism_obstruction) |
@@ -86,6 +80,9 @@ to the known lower bound for `R(5,5)`.
 | order-eleven elements | all three types `1^f 11^k`, where `f+11k=43`; exact formula checks and independently replayed RUP certificates | [`ramsey_r55_order11_automorphism_search`](../ramsey_r55_order11_automorphism_search) |
 | orders 13, 17, 19, and 23 | all eight types `1^f p^k`, where `f+pk=43`; exact formula checks and independently replayed RUP/DRAT certificates | [`ramsey_r55_medium_prime_automorphism_search`](../ramsey_r55_medium_prime_automorphism_search) |
 | long cycles | a fixed point cannot coexist with a cycle of length at least 25; prime cycles of lengths 29, 31, 37, and 41 are excluded analytically | [`ramsey_r55_automorphism_long_cycle_obstruction`](../ramsey_r55_automorphism_long_cycle_obstruction) |
+
+The ten-cycle rows record the stages of the proof. Their intermediate open
+cases are superseded by the final signature-propagation row.
 
 The prime-order theorems are disjoint from the two-, three-, and four-cycle
 theorems: every type newly used in the prime-divisor conclusion has at least
@@ -134,8 +131,10 @@ independent review in
 [`ramsey_r55_order3_nine_cycle_review1`](../ramsey_r55_order3_nine_cycle_review1).
 The ten-cycle package also regenerates large general DRAT traces outside
 Git. Its independent complete-clause reconstruction covers all six formulas;
-proof replay excludes five cases and explicitly leaves the four-versus-six
-case unresolved. Internal checking is not new independent peer review.
+proof replay excluded five cases and initially left the four-versus-six
+case unresolved. The subsequent signature-propagation artifact closes that
+case, retaining the older five-case independent-review boundary. Internal
+checking is not new independent peer review.
 The fixed-33 package has also been independently
 regenerated, reconstructed, and replayed in
 [`ramsey_r55_order5_f33_degree_obstruction_review1`](../ramsey_r55_order5_f33_degree_obstruction_review1).
@@ -151,7 +150,8 @@ representatives to cover the group).  Reject the construction family if:
 
 1. an element has at most four vertex cycles;
 2. an involution has fewer than five transpositions;
-3. an order-three element has fewer than ten 3-cycles;
+3. an order-three element has fewer than eleven 3-cycles (with the
+   ten-cycle dependency boundary stated above);
 4. an element has order divisible by five, or a vertex cycle of length
    divisible by five;
 5. an element has prime order at least seven;
@@ -165,46 +165,31 @@ For a cyclic ansatz generated by `g`, testing only the cycle type of `g` is
 insufficient: invariance under `g` also gives invariance under every power of
 `g`, and a proper power may fall into a forbidden family.
 
-When candidate edges are assigned to an action with exactly ten moving
-3-cycles, additionally require four monochromatic moving triangles of one
-color and six of the other. The remaining case has a further valid anchor
-normalization with 98 cross-weight profiles, explicitly listed in the
-ten-cycle package. The new anchor sweep certifies 94 exclusions and leaves
-only indices 64,65,67,69. At every minority triangle, the same-color weights
-are 1,2,2 and the opposite-color weights have p ones and 6-p twos for
-1<=p<=4. Thus the minority weight-one blocks form a perfect matching;
-their twelve vertices induce a 7-regular graph in that color and have
-full-graph degree at most 22 in it. These four remaining profiles are not
-graph realizations or excluded cubes. The new result's large original and
-extracted DRAT traces are regenerated outside Git from source and compact
-manifests, with full clause checks and replay. It has no independent peer
-review of the older internal-color dependency yet. The 94-anchor
-refinement itself now has an accepted
-[independent review](../ramsey_r55_order3_ten_cycle_anchor_sweep_review1),
-explicitly conditional on that preceding internal-color split.
+The finished ten-cycle chain proceeded through the four-versus-six
+internal-color split, 94 of 98 anchor exclusions, and twenty further
+phase exclusions. The remaining minority core has words 01=23=100 and
+02=03=12=13=110, with coordinate differences interpreted as in the
+literal core artifact. The matching and phase refinements have accepted
+independent reviews conditional on the older internal-color split.
 
-The subsequent phase sweep uses the matching simultaneously at all four
-minority triangles. After normalization, its only remaining core has words
-01=23=100 and 02=03=12=13=110. Each word gives the three red bits from
-coordinate zero of the lower-indexed triangle to the other. The core is
-provided as a literal 42-edge list on twelve vertices. Its complement has
-no triangle, and a fixed vertex has a minority-incidence signature of
-weight at most two. All twenty new exclusion certificates are published
-in full, totaling 310,309 bytes; replay requires a DRAT checker and fresh
-parent reconstruction, but no SAT solver. The complete ten-cycle type
-remains open. The phase refinement now has an
-[accepted independent review](../ramsey_r55_order3_ten_cycle_phase_sweep_review1),
-explicitly conditional on the older internal-color split.
+Writing X for singleton fixed-signature multiplicities and Y for pair
+multiplicities gives X+2Y<=16 and 3X+2Y<=24. Thus at least three fixed
+vertices are opposite-color complete to the core. Equality forces every
+singleton and pair signature once. This lemma, its 1,868 necessary
+count vectors, and its locally sharp 25-vertex fixture now have an
+[accepted independent review](../ramsey_r55_order3_fixed_signature_bound_review1).
+The fixture itself supplies no extension by six majority triangles.
 
-Writing X for the number of singleton fixed signatures and Y for pair
-signatures gives X+2Y<=16 and 3X+2Y<=24. Hence at most ten fixed vertices
-have nonempty signatures, and at least three are opposite-color complete
-to the whole minority core. Equality forces every singleton and pair
-signature once. The new hand proof does not require a solver; its complete
-forced-blue count-vector census leaves 1,868 necessary vectors, not graph
-realizations. A literal 25-vertex core-plus-fixed graph attains equality.
-No six-majority-triangle extension is supplied by that fixture, and the
-signature refinement has no independent peer review yet.
+In the inherited fixed-row lexicographic normalization, the first three
+fixed vertices therefore have empty minority signatures. Twelve necessary
+primary unit clauses enforce this. The four full formulas retain every
+parent degree counter and all five-set constraints. All four returned
+UNSAT within 120 seconds per solve and passed DRAT replay, so the
+formerly open ten-cycle type is closed under the inherited reductions.
+The new formula generators, layer checker, certificate extraction and
+support checker, hashes and reports are public; large generated proof
+traces remain outside Git and must be regenerated for independent replay.
+This is a completed symmetry restriction, not a target coloring.
 
 This materially prunes symmetry-first construction search. Any proposed
 group whose order has a prime divisor at least five is impossible; a
@@ -261,8 +246,12 @@ six, with the complete-block cap still necessary. There are 10,679 local
 arithmetic profiles; the deficit budget alone admits 1,380 impossible
 weight vectors. Explicit degree counters at all thirteen fixed vertices
 strengthen the full formulas. Five verified internal-color cases leave
-only four triangles of one color and six of the other. This does not raise
-the minimum to eleven or exclude the remaining ten-cycle case.
+only four triangles of one color and six of the other. The later matching
+and phase reductions leave four full extensions of one minority core. The
+reviewed fixed-signature bound then forces twelve primary units in the
+fixed-row normalization. Their four reconstructed formulas all have
+replayed DRAT refutations. Combining this final step with the inherited
+chain excludes the entire ten-cycle type and raises the minimum to eleven.
 The earlier order-25 theorem uses the then-surviving fixed counts three and eight to
 classify any `C_5^2` action as `1^3 5^3 25^1`; its exact invariant formula is
 UNSAT. A cyclic subgroup of order 25 is excluded because the fifth power of
