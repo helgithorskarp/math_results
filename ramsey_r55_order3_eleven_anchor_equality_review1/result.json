@@ -1,0 +1,92 @@
+{
+  "all_checks_passed": true,
+  "anchor_census": {
+    "blue_triangle_free": 45,
+    "domain": 343,
+    "type_counts": {
+      "11": 27,
+      "13": 18
+    }
+  },
+  "cases": [
+    {
+      "drat_trim_verified": true,
+      "formula": {
+        "bytes": 24892839,
+        "sha256": "78895f65af9852156303a478723b2729670467c2ddb5db7058f3eb58ed87c0c5"
+      },
+      "formula_audit": {
+        "anchor_units": 9,
+        "clauses": 615956,
+        "fixed_prefix_units": 30,
+        "removed_ordering_clauses": 3,
+        "retained_parent_clauses": 615917
+      },
+      "id": "a11_equality",
+      "proof": {
+        "bytes": 14711441,
+        "sha256": "836d7176cb32b0524add57c2cbd5e3b26d7c3e658c0ff52059ac025988cc88ff"
+      }
+    },
+    {
+      "drat_trim_verified": true,
+      "formula": {
+        "bytes": 24892838,
+        "sha256": "42ecf94915d0b0ed753c56dab4d778bd1c637548e533c95d5bc7558e4002ab8b"
+      },
+      "formula_audit": {
+        "anchor_units": 9,
+        "clauses": 615956,
+        "fixed_prefix_units": 30,
+        "removed_ordering_clauses": 3,
+        "retained_parent_clauses": 615917
+      },
+      "id": "a13_equality",
+      "proof": {
+        "bytes": 11075882,
+        "sha256": "82dea18c5b9d0e1bfa7f201c30250ea9ebbb996e15521436c4aaffba73c0226d"
+      }
+    }
+  ],
+  "format": "r55-order3-eleven-anchor-equality-review1-v1",
+  "parent": {
+    "bytes": 24892619,
+    "sha256": "c8f355b256de55727b18efcbd47ef9e777ac2b3b4ae69e09676fcddd51afa05f"
+  },
+  "reviewer_drat_trim": {
+    "bytes": 51352,
+    "sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+  },
+  "reviewer_kissat": {
+    "bytes": 546552,
+    "sha256": "9193d0d788f70d11046c7e965657c7096c9471ea96db2552a7d1544e925307cb"
+  },
+  "signature_equality": {
+    "counts_by_mask_0_to_7": [
+      1,
+      2,
+      2,
+      1,
+      2,
+      1,
+      1,
+      0
+    ],
+    "empty_one_profiles": 1,
+    "feasible_signature_multiplicities": 928,
+    "minimum_empty": 1,
+    "sorted_prefixes": [
+      [0, 0, 0],
+      [0, 0, 1],
+      [0, 0, 1],
+      [0, 1, 0],
+      [0, 1, 0],
+      [0, 1, 1],
+      [1, 0, 0],
+      [1, 0, 0],
+      [1, 0, 1],
+      [1, 1, 0]
+    ]
+  },
+  "target_graph_claimed": false
+}
