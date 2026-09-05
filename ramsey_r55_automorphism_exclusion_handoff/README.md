@@ -161,9 +161,11 @@ local obstructions corroborate this last step, as do fifteen complete
 extension refutations replayed twice. All are contradictory by input unit
 propagation. **All 26 remaining cores now have an empty-signature requirement**;
 no additional whole core is excluded and the count remains 171 excluded,
-26 open. The new hand proof and its exact clause/certificate checks await
-independent review. That milestone stopped before testing the empty-present
-extensions.
+26 open. The hand proof and its exact clause/certificate checks now have an
+[accepted independent review](../ramsey_r55_order3_eleven_noempty_rigidity_review1)
+for all 26 explicit cores. The global combination retains the older
+empty-signature-specific exclusion dependencies. That milestone stopped
+before testing the empty-present extensions.
 The subsequent [complete empty-signature propagation](../ramsey_r55_order3_eleven_empty_propagation)
 retains every full base and appends the forced first prefix 0000 plus 1,440
 primary clauses for the sharp pair bound. All 26 cases are tested. Core123
@@ -172,10 +174,26 @@ fresh reconstruction, using 673 RAT core lemmas. This excludes 648 labeled
 cores. **25 four-versus-seven classes / 15,957 labels now remain open**;
 cumulatively **172 of 197 classes / 99,586 of 115,543 labels are excluded**.
 All 25 residual cases explicitly return UNKNOWN at 20 seconds; each retains
-the empty-signature requirement. The new whole-core exclusion and its
-load-bearing no-empty reduction await independent review. The next
-frontier is stronger structure around an empty vertex or a justified
-complete split, rather than another unchanged sweep.
+the empty-signature requirement. The core123 whole-core exclusion now has
+an [accepted independent review](../ramsey_r55_order3_eleven_empty_propagation_review1),
+as does its load-bearing no-empty reduction. Older empty-signature-specific
+exclusions remain the cumulative-count review boundary.
+The subsequent [maximal blue-attachment test](../ramsey_r55_order3_eleven_empty_blue4)
+examines the first fixed empty vertex e when it is blue to four of the
+seven blue moving triangles. Its 24 blue moving neighbors then force e
+red to all nine other fixed vertices. Each complete base adds only the
+56 exact-cardinality clauses and nine fixed-edge units, covering all 35
+labeled choices without changing the existing normalization. **19 maximal
+branches are refuted**, each with a full proof replayed twice. Thus their
+first normalized empty vertex has at most three blue moving-triangle
+neighbors. The unresolved maximal branches are **124,155,159,168,180,194**.
+All six one-anchor cases close in this stratum, as do thirteen two-anchor
+cases. These are branch exclusions: **all 25 whole cores remain open**,
+and the cumulative full exclusion count stays 172. No statement about
+every empty vertex follows. The new encoding/refutations await independent
+review. The next concrete boundary is to propagate the necessary three-blue
+upper bound into the 19 unrestricted full extensions, leaving the six
+unresolved branches unchanged.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
