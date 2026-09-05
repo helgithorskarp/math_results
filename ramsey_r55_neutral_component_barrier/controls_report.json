@@ -1,0 +1,55 @@
+{
+  "minimum_positive_exit_by_vertex": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "negative_controls_rejected": [
+    "omitted_graph",
+    "duplicate_graph",
+    "omitted_neutral_edge",
+    "improving_exit",
+    "missing_census",
+    "omitted_path_move",
+    "wrong_path_score",
+    "wrong_endpoint"
+  ],
+  "positive_component_adjacency": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      3,
+      4
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "state_limit_controls": [
+    {
+      "endpoint_unchanged": true,
+      "processed": 1,
+      "status": "TOTAL_STATE_LIMIT"
+    },
+    {
+      "endpoint_unchanged": true,
+      "processed": 1,
+      "status": "PLATEAU_STATE_LIMIT"
+    }
+  ]
+}
