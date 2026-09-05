@@ -39,7 +39,15 @@ Eleven through fourteen moving cycles remain open globally. At eleven cycles,
 the new [internal-color restriction](../ramsey_r55_order3_eleven_cycle_obstruction)
 permits only **three-versus-eight or four-versus-seven** moving triangles.
 Four complete formulas exclude normalized red counts 0,1,2,5; counts 3 and 4
-remain open. This new eleven-cycle restriction awaits independent peer review.
+remain open. The eleven-cycle split restriction now has an
+[accepted independent review](../ramsey_r55_order3_eleven_cycle_obstruction_review1).
+In the three-versus-eight split, the new
+[minority-core reduction](../ramsey_r55_order3_eleven_minority_core) leaves
+only three nine-vertex cores: red block words 100,100,100; 100,110,110;
+or 110,110,101 on the three minority pairs. A complete fourteen-class
+normalizer cover and eleven replayed refutations give this restriction.
+The three remaining extensions are UNKNOWN, and four-versus-seven remains
+open. This new core refinement awaits independent peer review.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
@@ -92,6 +100,7 @@ to the known lower bound for `R(5,5)`.
 | fixed signatures at ten cycles | at most ten fixed vertices have nonempty minority-color signatures, so at least three are empty; equality has all ten nonempty signatures once; a 25-vertex fixture is locally sharp and 1,868 vectors meet the forced-blue clique constraints | [`ramsey_r55_order3_fixed_signature_bound`](../ramsey_r55_order3_fixed_signature_bound) |
 | final ten-cycle extensions | twelve reviewed signature-consequence units in each of the four remaining full formulas; four UNSAT proofs replayed, closing the type under the inherited reductions; large proof traces regenerated outside Git | [`ramsey_r55_order3_ten_cycle_signature_propagation`](../ramsey_r55_order3_ten_cycle_signature_propagation) |
 | eleven moving 3-cycles, partial | complete formulas and checked DRAT proofs exclude normalized internal red counts 0,1,2,5; only three-versus-eight and four-versus-seven remain open, with the minimum moving count unchanged | [`ramsey_r55_order3_eleven_cycle_obstruction`](../ramsey_r55_order3_eleven_cycle_obstruction) |
+| three minority triangles at eleven cycles | fourteen normalizer classes cover all 343 labeled cores; eleven full-extension refutations leave three explicit nine-vertex cores, containing 54 labeled forms; all three extensions remain open | [`ramsey_r55_order3_eleven_minority_core`](../ramsey_r55_order3_eleven_minority_core) |
 | C3-square actions and order 27 | sixteen of eighteen actions excluded; the two open types have one fixed point, two three-orbits and four regular nine-orbits; an index-three stabilizer argument excludes order-27 subgroups globally and order-nine subgroups in M=214 | [`ramsey_r55_c3_square_action_sweep`](../ramsey_r55_c3_square_action_sweep) |
 | complete C3-square closure | both remaining actions excluded after proven centralizer normalization, with fresh full formula reconstruction and DRAT replay; nine does not divide the automorphism-group order globally | [`ramsey_r55_c3_square_normalized_extensions`](../ramsey_r55_c3_square_normalized_extensions) |
 | subgroups of order 25 | the surviving order-five types force a unique `C_5^2` action, whose 51-variable invariant formula is certified UNSAT; an order-25 element is excluded by its fifth power | [`ramsey_r55_c5_square_automorphism_obstruction`](../ramsey_r55_c5_square_automorphism_obstruction) |
@@ -193,6 +202,12 @@ exactly eleven moving triangles, additionally reject internal assignments
 whose minority count is 0,1,2 or 5. Only counts 3 and 4 survive the complete
 six-count sweep. This prunes internal color assignments, rather than the
 whole eleven-cycle permutation type.
+For minority count three, the core may now be screened by the complete
+normalizer invariant. Its sorted red cross weights and distinguished-phase
+sum must be (1,1,1) with zero sum, (1,2,2) with zero sum, or (2,2,2) with
+nonzero sum. The explicit three-core artifact defines the phase convention
+and gives compatible full-graph relabelings. Its eleven new exclusions
+have internal validation and await independent review.
 
 The finished ten-cycle chain proceeded through the four-versus-six
 internal-color split, 94 of 98 anchor exclusions, and twenty further
@@ -292,6 +307,14 @@ r=0,1,2,5. The remaining r=3,4 cases reached their 180-second limits, so
 three-versus-eight and four-versus-seven stay open. The minimum stays eleven.
 The exact local census has 80,726 arithmetic profiles; without the upper
 degree constraint twelve additional profiles would be incorrectly admitted.
+The parent eleven-cycle split reduction now has an accepted independent
+review. Within its three-versus-eight split, three noncomplete minority
+cross words give 343 labeled nine-vertex cores. Their unordered weights
+and zero/nonzero distinguished-phase sum classify fourteen normalizer
+orbits. Eleven full-extension refutations leave only words 100,100,100;
+100,110,110; or 110,110,101, on pairs 01,02,12. The three cubes returned
+UNKNOWN at 60 seconds. This new core restriction has internal checks
+and awaits independent review; the minimum moving count remains eleven.
 The earlier order-25 theorem uses the then-surviving fixed counts three and eight to
 classify any `C_5^2` action as `1^3 5^3 25^1`; its exact invariant formula is
 UNSAT. A cyclic subgroup of order 25 is excluded because the fifth power of
