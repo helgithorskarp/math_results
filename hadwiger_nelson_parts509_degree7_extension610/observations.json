@@ -1,0 +1,340 @@
+{
+  "broader_selector": {
+    "cnf_sha256": "6ac6f5e48d43472d36780cf17d9f3b25f022d44e2ef69a401c494d1a9a57e8e0",
+    "maximum_child_rss_kib": 34364,
+    "name": "master",
+    "negative_independently_verified": false,
+    "proof_bytes": 310831702,
+    "proof_sha256": "8262331983cef6c4095fa953477f670b347b065a7196f2c6d918b70c804af575",
+    "solver_exit_code": 0,
+    "solver_wall_seconds": 300.006390894996,
+    "status": "UNKNOWN; partial trace is not a certificate; do not resume unchanged"
+  },
+  "claim_scope": "One fixed support A7 plus completion point610; minimum obstruction order508or509;508residual unsolved.",
+  "negative_barrier": {
+    "checker_exit_code": 0,
+    "checker_wall_seconds": 1.1758150789974025,
+    "cnf_sha256": "8a0a690046c59ca18c347e041afb946ccb0c766e7e60f16fe3189d2e155e5318",
+    "maximum_child_rss_kib": 68012,
+    "name": "kill_188",
+    "negative_independently_verified": true,
+    "proof_bytes": 2313278,
+    "proof_sha256": "f1d62975e2259457ab876f383cba5cbb520e862f1a4dfd789edcb3185c4e2669",
+    "solver_exit_code": 20,
+    "solver_wall_seconds": 1.6927817300020251
+  },
+  "proof_boundary": {
+    "new_negative_DRAT_checked": true,
+    "old_degree7_bound_imported": true,
+    "old_large_pb_proof_rechecked": false,
+    "residual_formula_solved": false
+  },
+  "repair_queries": [
+    {
+      "D": [
+        44
+      ],
+      "clauses": 12884,
+      "cnf_sha256": "939397c1afb01db60c5066246a9f9349a3a26deae11295b3694a4d889e5314dd",
+      "key": "44",
+      "kind": "forced",
+      "native_seconds": 0.39984438599999983,
+      "status": "SAT",
+      "variables": 2340
+    },
+    {
+      "D": [
+        56
+      ],
+      "clauses": 12876,
+      "cnf_sha256": "bed11dce8381c0fbd4d6103bc65d0da137b93c8bdd139a07b8ae2526a7953148",
+      "key": "56",
+      "kind": "forced",
+      "native_seconds": 0.1840997470000003,
+      "status": "SAT",
+      "variables": 2340
+    },
+    {
+      "D": [
+        14,
+        22,
+        26,
+        70,
+        121,
+        125,
+        126,
+        186,
+        392,
+        414,
+        477,
+        552,
+        565
+      ],
+      "clauses": 12492,
+      "cnf_sha256": "e70d2715b3543edf0a0a9e79c10368b68f824e6e83e7efecc14445c8fa06085b",
+      "key": "94",
+      "kind": "kill",
+      "native_seconds": 0.0063277639999999025,
+      "status": "SAT",
+      "variables": 2292
+    },
+    {
+      "D": [
+        15,
+        23
+      ],
+      "clauses": 12871,
+      "cnf_sha256": "8a0a690046c59ca18c347e041afb946ccb0c766e7e60f16fe3189d2e155e5318",
+      "key": "188",
+      "kind": "kill",
+      "native_seconds": 1.5942844010000004,
+      "status": "UNSAT",
+      "variables": 2336
+    }
+  ],
+  "repairs": {
+    "edges": 3089,
+    "maximum_rss_kib": 34028,
+    "native_negative_answers_independently_certified": false,
+    "native_seconds": 2.1845562980000004,
+    "status": "completed",
+    "wall_seconds": 9.042874766004388
+  },
+  "residual": {
+    "addition_labels": [
+      509,
+      510,
+      511,
+      512,
+      513,
+      514,
+      515,
+      516,
+      517,
+      518,
+      519,
+      520,
+      521,
+      522,
+      523,
+      524,
+      525,
+      526,
+      527,
+      528,
+      529,
+      530,
+      531,
+      532,
+      533,
+      534,
+      535,
+      536,
+      537,
+      538,
+      539,
+      540,
+      541,
+      542,
+      543,
+      544,
+      545,
+      546,
+      547,
+      548,
+      549,
+      550,
+      551,
+      552,
+      553,
+      554,
+      555,
+      556,
+      557,
+      558,
+      559,
+      560,
+      561,
+      562,
+      563,
+      564,
+      565,
+      566,
+      567,
+      568,
+      569,
+      570,
+      571,
+      572,
+      573,
+      574,
+      575,
+      576,
+      577,
+      578,
+      579,
+      580,
+      581,
+      582,
+      583,
+      584
+    ],
+    "clauses": 3774,
+    "deletion_labels": [
+      13,
+      14,
+      22,
+      24,
+      25,
+      26,
+      27,
+      70,
+      75,
+      112,
+      113,
+      114,
+      118,
+      121,
+      125,
+      126,
+      127,
+      128,
+      129,
+      132,
+      133,
+      146,
+      147,
+      184,
+      185,
+      186,
+      218,
+      219,
+      248,
+      249,
+      252,
+      253,
+      350,
+      353,
+      369,
+      370,
+      371,
+      372,
+      373,
+      392,
+      393,
+      412,
+      413,
+      414,
+      415,
+      416,
+      431,
+      433,
+      455,
+      457,
+      472,
+      473,
+      477,
+      479,
+      495,
+      496
+    ],
+    "exact_additions": 3,
+    "exact_deletions": 3,
+    "fixed_added_point": 610,
+    "fixed_omitted_original_vertices": [
+      15,
+      23
+    ],
+    "raw_support_pairs": 1948716000,
+    "sha256": "4c72e503e2c302863589bd35e1b8418e4a5f776dc6267fcca556befbd33a6d8f",
+    "solver_launched": false,
+    "variables": 1038
+  },
+  "resource_limits": {
+    "address_space_bytes": 4294967296,
+    "native_workers": 1,
+    "proof_solver_seconds_per_query": 300,
+    "repair_conflicts_per_query": 100000
+  },
+  "selection": {
+    "candidates": 119,
+    "other_extensions_solved": false,
+    "ranked_sha256_canonical_json": "78adeb72d28b1778794c2e72ad40ee62d622d8fc451e6355e6da883b0243c3a2",
+    "rule": "Minimize failed_forced,failed_kills,q lexicographically over the119 degree-six completion points.",
+    "screen_wall_seconds": 8.507904879006674,
+    "top_two": [
+      {
+        "degree_into_D7": 6,
+        "failed_forced": 2,
+        "failed_kills": 2,
+        "misses": [
+          [
+            "forced",
+            "44"
+          ],
+          [
+            "forced",
+            "56"
+          ],
+          [
+            "kill",
+            "94"
+          ],
+          [
+            "kill",
+            "188"
+          ]
+        ],
+        "neighbors": [
+          0,
+          1,
+          63,
+          163,
+          171,
+          198
+        ],
+        "q": 610
+      },
+      {
+        "degree_into_D7": 6,
+        "failed_forced": 2,
+        "failed_kills": 2,
+        "misses": [
+          [
+            "forced",
+            "66"
+          ],
+          [
+            "forced",
+            "262"
+          ],
+          [
+            "kill",
+            "225"
+          ],
+          [
+            "kill",
+            "287"
+          ]
+        ],
+        "neighbors": [
+          0,
+          12,
+          59,
+          148,
+          156,
+          187
+        ],
+        "q": 681
+      }
+    ]
+  },
+  "tools": {
+    "drat_trim_sha256": "bc7543a99da8521ddb09af442698956054f11e10d198bd482ac756535244c021",
+    "kissat_sha256": "2d185ea775f2c7c16d33a235ef852d2b69f0f3c8b437335b966b4a5aa6265b45",
+    "kissat_version": "4.0.4",
+    "pysat_backend": "CaDiCaL195",
+    "python": "3.11.2",
+    "python_sat": "1.8.dev24"
+  }
+}
