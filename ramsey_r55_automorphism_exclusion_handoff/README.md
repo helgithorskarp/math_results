@@ -74,6 +74,16 @@ locally valid labeled cores. Each representative fits the existing
 full-graph normalization and has eighteen checked primary units.
 This local cover awaits independent review; all 197 full extensions
 are untested at this stage, and the branch remains open.
+The subsequent [fixed-vertex theorem](../ramsey_r55_order3_eleven_four_fixed)
+constructs four valid 22-vertex extensions for every core, so the core
+plus ten uniform fixed vertices cannot eliminate any of these cases.
+For the 118 cores containing a blue K4, ten is the sharp maximum:
+the signatures are exactly the four singletons and six pairs, each
+once. All fixed edges are forced except the three complementary-pair
+edges, of which at most one may be blue. These four choices are all
+valid. The other 79 cores have the same constructions but their other
+fixed extensions are not classified. This new local theorem awaits
+independent review; it supplies no full-formula or full-extension verdict.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
@@ -131,6 +141,7 @@ to the known lower bound for `R(5,5)`.
 | equality excluded at eleven cycles | full extensions of both residual three-versus-eight cores with exactly one empty fixed signature are refuted; at least two fixed signatures must be empty; both residual cores remain open | [`ramsey_r55_order3_eleven_empty_split`](../ramsey_r55_order3_eleven_empty_split) |
 | empty blue pair at eleven cycles | at most two common blue fixed neighbors, each red to at least two minority triangles; sharp local witnesses and exact primary consequences; all four core/pair-color extension cases remain UNKNOWN | [`ramsey_r55_order3_eleven_empty_pair`](../ramsey_r55_order3_eleven_empty_pair) |
 | four minority triangles at eleven cycles | 108 local red-K5 obstructions leave 115543 labeled cores, partitioned into 197 normalizer classes with compatible full-graph representatives and eighteen checked primary units; no extension verdict | [`ramsey_r55_order3_eleven_four_core`](../ramsey_r55_order3_eleven_four_core) |
+| ten uniform fixed vertices on four minority triangles | all 197 cores have four explicit valid 22-vertex extensions; for 118 blue-K4 cores, ten is maximum and all equality extensions have singleton/pair signatures and exactly those four edge patterns; no full 43-vertex verdict | [`ramsey_r55_order3_eleven_four_fixed`](../ramsey_r55_order3_eleven_four_fixed) |
 | C3-square actions and order 27 | sixteen of eighteen actions excluded; the two open types have one fixed point, two three-orbits and four regular nine-orbits; an index-three stabilizer argument excludes order-27 subgroups globally and order-nine subgroups in M=214 | [`ramsey_r55_c3_square_action_sweep`](../ramsey_r55_c3_square_action_sweep) |
 | complete C3-square closure | both remaining actions excluded after proven centralizer normalization, with fresh full formula reconstruction and DRAT replay; nine does not divide the automorphism-group order globally | [`ramsey_r55_c3_square_normalized_extensions`](../ramsey_r55_c3_square_normalized_extensions) |
 | subgroups of order 25 | the surviving order-five types force a unique `C_5^2` action, whose 51-variable invariant formula is certified UNSAT; an order-25 element is excluded by its fifth power | [`ramsey_r55_c5_square_automorphism_obstruction`](../ramsey_r55_c5_square_automorphism_obstruction) |
@@ -255,6 +266,15 @@ corresponding normalizer cover. A core must avoid every complete block
 and each of the 108 listed occupancy obstructions; its compatible
 representative then determines eighteen primary bits. No full extension
 is excluded solely by membership in this catalog.
+For each of the 118 cores having a blue K4, a full candidate's ten
+fixed vertices must realize every singleton and pair signature exactly
+once. Intersecting signatures have blue edges; disjoint signatures
+have red edges except at most one complementary-pair edge. All four
+patterns really extend the local core. Fixture labels must be reconciled
+with the parent's full eleven-bit fixed-row ordering before imposing
+units. The remaining 79 cores also admit these local constructions.
+Further pruning therefore needs the other moving triangles or other
+full-graph information; no core is excluded by the fixed-only relaxation.
 
 The finished ten-cycle chain proceeded through the four-versus-six
 internal-color split, 94 of 98 anchor exclusions, and twenty further
