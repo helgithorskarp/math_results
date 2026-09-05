@@ -1,0 +1,77 @@
+{
+  "controls": {
+    "negative_graph_rejected": true,
+    "nonmember_core_rejected": true,
+    "positive_graph_five_sets_inspected": 142506,
+    "positive_graph_passed": true,
+    "rejected_cube_mutations": [
+      "wrong_anchor_unit",
+      "missing_unit",
+      "changed_parent_clause",
+      "wrong_header"
+    ]
+  },
+  "fresh_outputs": {
+    "cube_bytes": 3556523466,
+    "proof_bytes": 1024998768,
+    "sweep_console_sha256": "00038afc4423ea106999f3aa15a1ef036d42669597c8a7bf6f01201e9f49d10d",
+    "sweep_manifest_sha256": "ddefcc1151ea0e2f9c7cd6c86775bdfee17c86ecc05c4b583a363fb917f84d32"
+  },
+  "fresh_sweep": {
+    "formula_reference_hash_matches": 94,
+    "fresh_elapsed_seconds": 1020.419473,
+    "fresh_exclusions_replayed": 94,
+    "fresh_open_indices": [
+      64,
+      65,
+      67,
+      69
+    ],
+    "largest_child_maxrss_kib": 495712,
+    "proof_reference_hash_matches": 94,
+    "solver_seconds_per_cube": 30,
+    "workers": 1
+  },
+  "independent_audit": {
+    "fixed_red_neighbor_ranges_by_p": {
+      "1": [0, 4],
+      "2": [1, 4],
+      "3": [2, 4],
+      "4": [3, 4]
+    },
+    "labeled_profiles_by_orbit_multiplicity": 5599,
+    "matching_weight_matrices": 3,
+    "normalized_profiles": 98,
+    "open_indices": [
+      64,
+      65,
+      67,
+      69
+    ],
+    "primary_variable_orbits": 343,
+    "total_pair_orbits": 353
+  },
+  "parent_formula": {
+    "bytes": 36290917,
+    "clauses": 927000,
+    "sha256": "f01c990a1dae17fb7bc1cd633d785cd819ba9f4d1a1eeacd69b4034663af104e",
+    "variables": 28950
+  },
+  "review_date_utc": "2026-09-05",
+  "reviewed_artifact_ref": "bafkreihda7pgnhpd6dwgaels7qdwmbr5j6mqsqbsx3m5krfpmjffk5buni",
+  "reviewed_source_commit": "bc3aad157f7c6f19bbc2e5c5c6cd12861a13ed2a",
+  "scope": {
+    "all_98_cubes_excluded": false,
+    "internal_color_split_imported": true,
+    "new_ramsey_lower_bound": false,
+    "target_graph_found": false,
+    "ten_cycle_type_excluded": false
+  },
+  "toolchain": {
+    "drat_trim_binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+    "drat_trim_source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "kissat_binary_sha256": "2d185ea775f2c7c16d33a235ef852d2b69f0f3c8b437335b966b4a5aa6265b45",
+    "kissat_source_commit": "8af8e56f174b778aef3aa45af9f739b2a5f492c2"
+  },
+  "verdict": "accepted_for_new_refinement_conditional_on_parent_internal_color_split"
+}
