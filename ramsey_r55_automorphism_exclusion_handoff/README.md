@@ -57,8 +57,16 @@ strengthens the full three-versus-eight branch: **at least two fixed
 vertices are blue to all nine minority vertices**. Each of the two cores
 is split into exactly one versus at least two empty signatures. Both
 exactly-one cases have full refutations replayed twice; both other cases
-return UNKNOWN. This strengthening awaits independent review, keeps both
-cores open, and leaves the minimum moving count at eleven.
+return UNKNOWN. This strengthening now has an
+[accepted independent review](../ramsey_r55_order3_eleven_empty_split_review1),
+keeps both cores open, and leaves the minimum moving count at eleven.
+The subsequent [empty-pair lemma](../ramsey_r55_order3_eleven_empty_pair)
+says that a blue edge between two empty-signature fixed vertices has at
+most two common blue fixed neighbors. Each is red to at least two
+minority triangles, and two cannot omit the same triangle. The bound has
+sharp 13-vertex witnesses; a 14-vertex red-pair example shows the color
+hypothesis is necessary. All four full pair-color extensions remain
+UNKNOWN. The new lemma and clause bridge await independent review.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
@@ -114,6 +122,7 @@ to the known lower bound for `R(5,5)`.
 | three minority triangles at eleven cycles | fourteen normalizer classes cover all 343 labeled cores; eleven full-extension refutations leave three explicit nine-vertex cores, containing 54 labeled forms; all three extensions remain open | [`ramsey_r55_order3_eleven_minority_core`](../ramsey_r55_order3_eleven_minority_core) |
 | signatures at eleven cycles | at most nine uniform vertices have nonempty red signatures to three red triangles; sharp equality fixes multiplicities; 1623 primary consequences exclude core 8 and leave cores 11,13 open | [`ramsey_r55_order3_eleven_signature_bound`](../ramsey_r55_order3_eleven_signature_bound) |
 | equality excluded at eleven cycles | full extensions of both residual three-versus-eight cores with exactly one empty fixed signature are refuted; at least two fixed signatures must be empty; both residual cores remain open | [`ramsey_r55_order3_eleven_empty_split`](../ramsey_r55_order3_eleven_empty_split) |
+| empty blue pair at eleven cycles | at most two common blue fixed neighbors, each red to at least two minority triangles; sharp local witnesses and exact primary consequences; all four core/pair-color extension cases remain UNKNOWN | [`ramsey_r55_order3_eleven_empty_pair`](../ramsey_r55_order3_eleven_empty_pair) |
 | C3-square actions and order 27 | sixteen of eighteen actions excluded; the two open types have one fixed point, two three-orbits and four regular nine-orbits; an index-three stabilizer argument excludes order-27 subgroups globally and order-nine subgroups in M=214 | [`ramsey_r55_c3_square_action_sweep`](../ramsey_r55_c3_square_action_sweep) |
 | complete C3-square closure | both remaining actions excluded after proven centralizer normalization, with fresh full formula reconstruction and DRAT replay; nine does not divide the automorphism-group order globally | [`ramsey_r55_c3_square_normalized_extensions`](../ramsey_r55_c3_square_normalized_extensions) |
 | subgroups of order 25 | the surviving order-five types force a unique `C_5^2` action, whose 51-variable invariant formula is certified UNSAT; an order-25 element is excluded by its fifth power | [`ramsey_r55_c5_square_automorphism_obstruction`](../ramsey_r55_c5_square_automorphism_obstruction) |
@@ -225,8 +234,14 @@ independent reviews.
 For each, at least two fixed vertices must be blue to all three minority
 triangles. The exactly-one case would have two copies of each singleton
 and one of each pair; both full equality extensions are newly refuted.
-This last strengthening awaits independent review. The full extensions
-with at least two empty signatures are still unresolved.
+This last strengthening now has an accepted independent review. The full
+extensions with at least two empty signatures are still unresolved.
+If two empty-signature fixed vertices have a blue edge, at most two other
+fixed vertices can be blue to both; each common blue neighbor has at
+least two red minority incidences. No two common blue neighbors can
+both be blue to the same minority triangle. This new conditional screen
+has a hand proof and sharp local examples; the full pair-color sweep
+excluded no additional case.
 
 The finished ten-cycle chain proceeded through the four-versus-six
 internal-color split, 94 of 98 anchor exclusions, and twenty further
@@ -347,7 +362,11 @@ review. The subsequent complete four-case split into exactly one versus
 at least two empty signatures refutes both equality branches. Each uses
 27 further incidence units and a full proof replayed twice. Thus at least
 two fixed vertices are blue to the minority core; both remaining cores
-with that restriction return UNKNOWN. This strengthening awaits review.
+with that restriction return UNKNOWN. This strengthening now has an
+accepted independent review. The next bounded pair-color sweep adds the
+sharp common-blue-neighbor lemma in the blue branches and splits each
+core by the first empty pair's edge. All four final cases are UNKNOWN;
+the new hand lemma and its clause bridge await independent review.
 The earlier order-25 theorem uses the then-surviving fixed counts three and eight to
 classify any `C_5^2` action as `1^3 5^3 25^1`; its exact invariant formula is
 UNSAT. A cyclic subgroup of order 25 is excluded because the fifth power of
