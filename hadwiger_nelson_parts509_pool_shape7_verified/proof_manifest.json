@@ -1,0 +1,94 @@
+{
+  "core_extraction": {
+    "core_clauses": 18062,
+    "killing_sha256": "a7bc0aadf72becb81cc66000fa5d00135ddbfa95fcb375f47d36c08ce4a80ade",
+    "original_killing_clauses": 34791,
+    "public_killing_bytes": 818834,
+    "public_killing_clauses": 12824,
+    "restored_clauses": 33387,
+    "status": "verified formula core covered by chosen positive clauses and original structural clauses",
+    "variables": 4641
+  },
+  "generated_outputs": {
+    "checker_seconds": 424.1837506539996,
+    "clauses": 33387,
+    "cnf_sha256": "ed3ae96f4a4d2664c69914520ae40c469440481c2c035b6551d0ecd2d3d4ece6",
+    "interface_hints_sha256": "c539a762dcfabaae7599800eb72d5e9143033482ae2eaca77773f9da5211cc5b",
+    "killing_clauses": 12824,
+    "killing_instance_sha256": "a7bc0aadf72becb81cc66000fa5d00135ddbfa95fcb375f47d36c08ce4a80ade",
+    "points": 677,
+    "positive_certificates": {
+      "cache_sha256": "cc34a2d2914c5b2583c7e3211ce3ac96dd59c55c3aa74a827a035931db84ec9d",
+      "generated_this_run": 12824,
+      "seconds": 207.1327590660003,
+      "verified": 12824
+    },
+    "proof_bytes": 252438677,
+    "proof_sha256": "4ae6c4883ddaf481119288deb87b6144df7ba5cbb6a8343fea5877142f4da05e",
+    "solver_seconds": 283.2751920180017,
+    "status": "a=7 COLOURING COVER AND DRAT VERIFIED",
+    "total_seconds": 918.9618947950003,
+    "unit_edges": 3400,
+    "variables": 4641
+  },
+  "independent_audit": {
+    "denominator": 288,
+    "exact_edges_sha256": "64a0f52154cb05b657a320c16569316cd1cba90748ed6dff71d4f45ca862b550",
+    "geometry_checker_sha256": "3c8d082f5e651a8c96583bccf948e0ba450ffb93c9832a3d6abdc611fe02b750",
+    "killing_clauses": 12824,
+    "master_cnf_sha256": "ed3ae96f4a4d2664c69914520ae40c469440481c2c035b6551d0ecd2d3d4ece6",
+    "points": 677,
+    "status": "independent integer geometry and all positive certificates VERIFIED",
+    "unit_edges": 3400
+  },
+  "log_sha256": {
+    "solver.log": "a208c6bdfd46d1c255eeb38e2c485c979fef91b515562b712d220fa445e7b131",
+    "verify.log": "e8bcec291383043ae99d121c94b812f92b456f8467e6084f261765fec7acab5d"
+  },
+  "notes": [
+    "The public replay generated all 12824 colourings from the compact canonical instance and hints; it did not copy the research cache.",
+    "Colouring cache, full CNF and DRAT traces are regenerated outputs, not unavailable input dependencies.",
+    "Proof and colouring hashes describe this completed run; mathematically valid outputs may differ across tool builds.",
+    "The separate integer-geometry audit was run by the same researcher; no external peer review of a=7 is claimed.",
+    "The initial alternative counting-automaton/direct-degree master was generated but not solved.",
+    "The unconditional degree-removal step depends on the accepted a=6 theorem."
+  ],
+  "original_input_audit": {
+    "alternative_clauses": 61692,
+    "alternative_cnf_sha256": "f8f9edcc9f8dfa045807a4f7ab4a5a96ed3d5dc4fe9d0870de7e89b5af36dce2",
+    "alternative_variables": 3103,
+    "degree_clauses": 9317,
+    "denominator": 288,
+    "independent_source_sha256": "a3f2de1702cbd55650e77ae97759294ff2915d183e8aec6944adb2813037d416",
+    "killing_clauses": 34791,
+    "points": 677,
+    "primary_cnf_sha256": "ba51b4881d09d564e5b3d6eb41049d682b9c269a0edaead3dd1f9404e40acde5",
+    "seconds": 14.338748653000948,
+    "status": "independent exact geometry and all positive colourings VERIFIED; alternative master generated, not solved",
+    "unit_edges": 3400
+  },
+  "original_master": {
+    "checker_seconds": 576.877,
+    "clauses": 55354,
+    "core_checker_seconds": 561.887,
+    "killing_clauses": 34791,
+    "result": {
+      "children_peak_rss_kib": 481636,
+      "master_cnf_sha256": "ba51b4881d09d564e5b3d6eb41049d682b9c269a0edaead3dd1f9404e40acde5",
+      "master_returncode": 20,
+      "master_seconds": 380.09710333699695,
+      "master_seconds_limit": 600,
+      "proof_bytes": 296848943,
+      "proof_sha256": "2475a9f1f681698f2c106c7aa0358854a0244c97556cd671c004c2b16c5ad54c",
+      "status": "initial master DRAT VERIFIED; separate input audit passed"
+    },
+    "variables": 4641
+  },
+  "source_sha256": {
+    "audit.py": "00535fe67b617e20a8e8f791b9639f6c2827ac520ab41510f1a6b694325b8b43",
+    "interface_hints.json": "c539a762dcfabaae7599800eb72d5e9143033482ae2eaca77773f9da5211cc5b",
+    "killing_clauses.cnf": "a7bc0aadf72becb81cc66000fa5d00135ddbfa95fcb375f47d36c08ce4a80ade",
+    "verify.py": "10734e621c6a06b2dfe2f382c6e7c1ec954a3e303da479bbe1cf16c478498372"
+  },
+  "status": "fresh reconstruction, positive certificates, independent geometry audit and DRAT proof verified"
+}
