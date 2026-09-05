@@ -1,0 +1,24 @@
+{
+  "frozen_at": "2026-09-05T21:47:58.053984+00:00",
+  "milestone": "Boundary-cost feasibility decision and full A976 four-colourability prerequisite",
+  "query_count": 1,
+  "support_vertices": 976,
+  "edges": 6406,
+  "variables": 3904,
+  "clauses": 26601,
+  "cnf_sha256": "b8d9a114ebdb224e0a8c7e74037a9594a6cbc17e8438068410d28e9d7f48c173",
+  "solver": "Kissat 4.0.4",
+  "options": [
+    "--seed=0",
+    "--conflicts=300000",
+    "--time=180"
+  ],
+  "address_space_bytes": 4294967296,
+  "per_file_size_bytes": 268435456,
+  "branches": {
+    "SAT": "Independently verify complete geometry and colouring, close all A-only subgraphs, decide whether composition cost mechanism remains actionable; no further native queries.",
+    "UNSAT": "Complete DRAT verification, independently rebuild CNF, report A-alone non-four-colourability; no minimization this pass.",
+    "UNKNOWN": "No negative claim; preserve stopped run and park unproductive decomposition idea. No extension."
+  },
+  "stop": "Publish warranted result and checkpoint decision; no new seed, deletion, quota or search phase."
+}
