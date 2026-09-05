@@ -1,0 +1,27 @@
+{
+  "flags": [
+    "-std=c++17",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Werror",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer"
+  ],
+  "cases": [
+    {
+      "red_cycles": 0,
+      "exit_code": 0,
+      "stdout": "FORMULA_AUDIT r=0 variables=34196 clauses=613487 ramsey_clauses=527393 edge_orbits=331 five_sets=962598 gate_rows=440 PASS",
+      "stderr": ""
+    },
+    {
+      "red_cycles": 5,
+      "exit_code": 0,
+      "stdout": "FORMULA_AUDIT r=5 variables=34286 clauses=616094 ramsey_clauses=529283 edge_orbits=331 five_sets=962598 gate_rows=680 PASS",
+      "stderr": ""
+    }
+  ]
+}
