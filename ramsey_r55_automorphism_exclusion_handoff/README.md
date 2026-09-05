@@ -22,6 +22,13 @@ mutual blocks have weight two. Every minority triangle has mixed weights
 one or two, with one through four weights equal to one. The four anchor
 profiles remain open; 94 of the former 98 have checked exclusions in
 [`ramsey_r55_order3_ten_cycle_anchor_sweep`](../ramsey_r55_order3_ten_cycle_anchor_sweep).
+Their phases are now forced as well: the twelve minority vertices induce
+the single explicit core in
+[`ramsey_r55_order3_ten_cycle_phase_sweep`](../ramsey_r55_order3_ten_cycle_phase_sweep).
+It is 7-regular in their internal color and triangle-free in the other.
+Each fixed vertex is adjacent in the minority color to at most two whole
+minority triangles. Twenty compact certificates exclude the other five
+phase classes; the four anchor extensions of the remaining core stay open.
 The whole ten-cycle type remains open. The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
@@ -65,6 +72,7 @@ to the known lower bound for `R(5,5)`.
 | nine moving 3-cycles | `1^16 3^9`; deficit budget four with the retained complete-block cap, five fully reconstructed formulas, and regenerated/replayed DRAT certificates | [`ramsey_r55_order3_nine_cycle_obstruction`](../ramsey_r55_order3_nine_cycle_obstruction) |
 | ten moving 3-cycles, partial | `1^13 3^10`; explicit fixed-vertex degree bounds and five checked DRAT proofs exclude internal red counts 0,1,2,3,5; only the four-versus-six split remains open | [`ramsey_r55_order3_ten_cycle_obstruction`](../ramsey_r55_order3_ten_cycle_obstruction) |
 | minority matching at ten cycles | 94 checked anchor-profile exclusions leave four rows; the four minority triangles have weight-one blocks forming a perfect matching and induce a 7-regular graph in their internal color | [`ramsey_r55_order3_ten_cycle_anchor_sweep`](../ramsey_r55_order3_ten_cycle_anchor_sweep) |
+| unique minority core at ten cycles | 27 normalized phase triples form six classes; twenty published small DRAT certificates exclude five classes, forcing one 12-vertex core with triangle-free complement; four extensions stay open | [`ramsey_r55_order3_ten_cycle_phase_sweep`](../ramsey_r55_order3_ten_cycle_phase_sweep) |
 | subgroups of order 25 | the surviving order-five types force a unique `C_5^2` action, whose 51-variable invariant formula is certified UNSAT; an order-25 element is excluded by its fifth power | [`ramsey_r55_c5_square_automorphism_obstruction`](../ramsey_r55_c5_square_automorphism_obstruction) |
 | order-15 elements | power constraints leave six cycle types; all six exact cyclic invariant formulas have independently reconstructed clauses and replayed DRAT certificates | [`ramsey_r55_order15_automorphism_obstruction`](../ramsey_r55_order15_automorphism_obstruction) |
 | order-nine elements | nine types surviving the earlier cubing bounds; seven earlier certificates and two centralizer-normalized certified formulas exclude all nine | [`ramsey_r55_order9_automorphism_obstruction`](../ramsey_r55_order9_automorphism_obstruction) |
@@ -164,7 +172,21 @@ full-graph degree at most 22 in it. These four remaining profiles are not
 graph realizations or excluded cubes. The new result's large original and
 extracted DRAT traces are regenerated outside Git from source and compact
 manifests, with full clause checks and replay. It has no independent peer
-review yet.
+review of the older internal-color dependency yet. The 94-anchor
+refinement itself now has an accepted
+[independent review](../ramsey_r55_order3_ten_cycle_anchor_sweep_review1),
+explicitly conditional on that preceding internal-color split.
+
+The subsequent phase sweep uses the matching simultaneously at all four
+minority triangles. After normalization, its only remaining core has words
+01=23=100 and 02=03=12=13=110. Each word gives the three red bits from
+coordinate zero of the lower-indexed triangle to the other. The core is
+provided as a literal 42-edge list on twelve vertices. Its complement has
+no triangle, and a fixed vertex has a minority-incidence signature of
+weight at most two. All twenty new exclusion certificates are published
+in full, totaling 310,309 bytes; replay requires a DRAT checker and fresh
+parent reconstruction, but no SAT solver. The complete ten-cycle type
+remains open, and the phase refinement has no independent peer review yet.
 
 This materially prunes symmetry-first construction search. Any proposed
 group whose order has a prime divisor at least five is impossible; a
