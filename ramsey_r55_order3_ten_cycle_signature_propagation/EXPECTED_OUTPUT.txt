@@ -1,0 +1,25 @@
+Full base reconstruction:
+GENERATED r=4 variables=28950 clauses=927000 ramsey_clauses=538914
+FORMULA_AUDIT r=4 variables=28950 clauses=927000 ramsey_clauses=538914 edge_orbits=353 five_sets=962598 gate_rows=552 PASS
+
+Bounded solver outcome (runtime fields vary):
+excluded_indices = [0, 1, 2, 3]
+open_indices = []
+complete_bounded_sweep = true
+all_cases_excluded = true
+target_graph_found = false
+
+Final certificate outcome (runtime fields vary):
+verified_indices = [0, 1, 2, 3]
+all_four_extensions_excluded = true
+core_clause_occurrences = 79653
+distinct_parent_obligations = 30528
+RAT core lemmas = [1029, 1297, 773, 878]
+All four replays: s VERIFIED
+
+Layer audit: 12 units, 36 literal edges, 61440 prefix/suffix comparisons.
+All five malformed formulas rejected; unsupported core axiom rejected
+after updating its recorded hash.
+
+This excludes the remaining ten-cycle branch under the inherited
+reductions. It supplies no 43-vertex graph and no Ramsey lower-bound gain.
