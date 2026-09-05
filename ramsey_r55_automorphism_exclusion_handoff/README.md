@@ -16,7 +16,13 @@ More specifically, every involution has at least five transpositions, every
 order-three element has at least ten 3-cycles (and at most 13 fixed
 vertices). If it has exactly ten, the moving triangles have internal
 colors split four versus six; all five other counts up to complementation
-are excluded. The four-versus-six case remains open. The last order-five type
+are excluded. In the remaining four-versus-six case, the four minority
+triangles are paired by cross blocks of own-color weight one; their other
+mutual blocks have weight two. Every minority triangle has mixed weights
+one or two, with one through four weights equal to one. The four anchor
+profiles remain open; 94 of the former 98 have checked exclusions in
+[`ramsey_r55_order3_ten_cycle_anchor_sweep`](../ramsey_r55_order3_ten_cycle_anchor_sweep).
+The whole ten-cycle type remains open. The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
 using the analytic two-pattern incidence reduction.
@@ -33,6 +39,9 @@ branch. The solver-free lemma and sharp degree/incidence fixture are in
 The fixture contains an independent five-set. The upper bound is
 conditional on the branch; thirteen and fourteen moving cycles remain
 open for the full Ramsey problem.
+The standalone M=214 degree/incidence lemma and its explicitly conditional
+Ramsey corollary now have an accepted
+[independent review](../ramsey_r55_m214_symmetry_review1).
 
 These are necessary conditions, not a construction and not an improvement
 to the known lower bound for `R(5,5)`.
@@ -55,6 +64,7 @@ to the known lower bound for `R(5,5)`.
 | eight moving 3-cycles | `1^19 3^8`; a local deficit budget and five complete normalized formulas, with full orbit/clause reconstruction and 4,088 committed RUP additions | [`ramsey_r55_order3_eight_cycle_obstruction`](../ramsey_r55_order3_eight_cycle_obstruction) |
 | nine moving 3-cycles | `1^16 3^9`; deficit budget four with the retained complete-block cap, five fully reconstructed formulas, and regenerated/replayed DRAT certificates | [`ramsey_r55_order3_nine_cycle_obstruction`](../ramsey_r55_order3_nine_cycle_obstruction) |
 | ten moving 3-cycles, partial | `1^13 3^10`; explicit fixed-vertex degree bounds and five checked DRAT proofs exclude internal red counts 0,1,2,3,5; only the four-versus-six split remains open | [`ramsey_r55_order3_ten_cycle_obstruction`](../ramsey_r55_order3_ten_cycle_obstruction) |
+| minority matching at ten cycles | 94 checked anchor-profile exclusions leave four rows; the four minority triangles have weight-one blocks forming a perfect matching and induce a 7-regular graph in their internal color | [`ramsey_r55_order3_ten_cycle_anchor_sweep`](../ramsey_r55_order3_ten_cycle_anchor_sweep) |
 | subgroups of order 25 | the surviving order-five types force a unique `C_5^2` action, whose 51-variable invariant formula is certified UNSAT; an order-25 element is excluded by its fifth power | [`ramsey_r55_c5_square_automorphism_obstruction`](../ramsey_r55_c5_square_automorphism_obstruction) |
 | order-15 elements | power constraints leave six cycle types; all six exact cyclic invariant formulas have independently reconstructed clauses and replayed DRAT certificates | [`ramsey_r55_order15_automorphism_obstruction`](../ramsey_r55_order15_automorphism_obstruction) |
 | order-nine elements | nine types surviving the earlier cubing bounds; seven earlier certificates and two centralizer-normalized certified formulas exclude all nine | [`ramsey_r55_order9_automorphism_obstruction`](../ramsey_r55_order9_automorphism_obstruction) |
@@ -144,9 +154,17 @@ insufficient: invariance under `g` also gives invariance under every power of
 When candidate edges are assigned to an action with exactly ten moving
 3-cycles, additionally require four monochromatic moving triangles of one
 color and six of the other. The remaining case has a further valid anchor
-normalization with 98 necessary cross-weight profiles, explicitly listed
-in the ten-cycle package. These profiles are not graph realizations or
-excluded cubes.
+normalization with 98 cross-weight profiles, explicitly listed in the
+ten-cycle package. The new anchor sweep certifies 94 exclusions and leaves
+only indices 64,65,67,69. At every minority triangle, the same-color weights
+are 1,2,2 and the opposite-color weights have p ones and 6-p twos for
+1<=p<=4. Thus the minority weight-one blocks form a perfect matching;
+their twelve vertices induce a 7-regular graph in that color and have
+full-graph degree at most 22 in it. These four remaining profiles are not
+graph realizations or excluded cubes. The new result's large original and
+extracted DRAT traces are regenerated outside Git from source and compact
+manifests, with full clause checks and replay. It has no independent peer
+review yet.
 
 This materially prunes symmetry-first construction search. Any proposed
 group whose order has a prime divisor at least five is impossible; a
