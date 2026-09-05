@@ -1,0 +1,123 @@
+{
+  "checked_at": "2026-09-05T19:12:38.698397+00:00",
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "compile_flags": "-std=c++17 -O3 -Wall -Wextra -Wconversion -Wshadow -Werror",
+  "checking_flags": "-std=c++17 -O1 -g -Wall -Wextra -Wconversion -Wshadow -Werror -fsanitize=address,undefined -fno-omit-frame-pointer",
+  "python_reference": {
+    "group": [
+      0,
+      1
+    ],
+    "limit": 30,
+    "tested_pairs": 310845,
+    "triangles": 4523,
+    "seconds": 2.130568940003286,
+    "max_rss_kib": 59348
+  },
+  "midpoint_census": {
+    "completed": true,
+    "returncode": 0,
+    "seconds": 33.89293730800273,
+    "max_rss_kib": 11156,
+    "output_bytes": 78343591
+  },
+  "primary_screen": {
+    "completed": true,
+    "seconds": 35.72289842499595,
+    "max_rss_kib": 11128,
+    "output_bytes": 1456306
+  },
+  "packed_audit": {
+    "encoding_base": 262144,
+    "groups": [
+      {
+        "group": 0,
+        "pairs": 53835876,
+        "triangles": 524077
+      },
+      {
+        "group": 1,
+        "pairs": 53752896,
+        "triangles": 775261
+      },
+      {
+        "group": 2,
+        "pairs": 59279716,
+        "triangles": 811210
+      },
+      {
+        "group": 3,
+        "pairs": 52178220,
+        "triangles": 575682
+      },
+      {
+        "group": 4,
+        "pairs": 58282206,
+        "triangles": 629492
+      },
+      {
+        "group": 5,
+        "pairs": 50476128,
+        "triangles": 734830
+      }
+    ],
+    "triangles": 4050552,
+    "all_rows_match": true,
+    "stream_sha256": "bac810715525907a23cdff32f98e9237ae16f37aa29c4f1523e3395bb6b02d54",
+    "seconds": 248.39986480599327,
+    "max_rss_kib": 62296
+  },
+  "audit_screen": {
+    "completed": true,
+    "seconds": 38.90189837299113,
+    "max_rss_kib": 11144,
+    "output_bytes": 1456306
+  },
+  "exact_audit": {
+    "root": -1,
+    "rows": 34938,
+    "parallel_checks": 104814,
+    "all_chords_parallel": true,
+    "all_midpoint_triangles_valid": true,
+    "screen_streams_byte_identical": true,
+    "stream_sha256": "88580a61a55170031b3207f53a8b3a058713fb2cb414339bb5bd9ffff18fa920",
+    "seconds": 2.8568828700081212,
+    "max_rss_kib": 59440
+  },
+  "sanitizer_coverage": {
+    "midpoint_enumerator": "first30 indices in each of six groups; every row matches optimized pilot",
+    "primary_screen": "first10000 midpoint triangles; every row matches optimized pilot",
+    "audit_screen": "first10000 midpoint triangles; compared to full audit prefix"
+  },
+  "public_input_bytes_match_completed_native_runs": true,
+  "public_native_source_bytes_match_completed_runs": true,
+  "public_full_packed_loop_matches_completed_run": true,
+  "public_entry_points_executed": [
+    "prepare.py",
+    "verify.py",
+    "audit_input.py",
+    "audit_exact.py",
+    "controls.py"
+  ],
+  "packed_entry_point_validation": "Complete unchanged enumeration loop ran on full data; public argument handling and loop ran on positive fixture. Full scan not repeated for path/report refactor.",
+  "new_SAT_calls": 0,
+  "background_jobs": [],
+  "unfinished_certificates": [],
+  "external_review": "pending",
+  "parser_hardening_replays": {
+    "primary": {
+      "completed": true,
+      "seconds": 35.97488578899356,
+      "max_rss_kib": 11172,
+      "all_bytes_match_prior_complete_run": true
+    },
+    "audit": {
+      "completed": true,
+      "seconds": 39.11262121499749,
+      "max_rss_kib": 11184,
+      "all_bytes_match_prior_complete_run": true
+    }
+  },
+  "truncated_triangle_streams_rejected": 2
+}
