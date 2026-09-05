@@ -135,8 +135,9 @@ all seven blue triangles; both have proofs replayed twice. Only three
 incompatible red-cycle ordering clauses are removed from the accepted
 parent. Intrinsically, `z+x_i>=2` for every applicable omitted triangle i,
 where z counts empty four-bit signatures and x_i counts singleton {i}.
-The theorem leaves all 34 full core classes open. Its new normalization,
-equality bridge and refutations await independent review.
+The theorem leaves all 34 full core classes open. Its normalization,
+equality bridge and refutations now have an [accepted independent
+review](../ramsey_r55_order3_eleven_anchor_equality_review1).
 The subsequent [complete anchor-propagation sweep](../ramsey_r55_order3_eleven_anchor_propagation)
 tests all 34 classes with all 56 applicable intrinsic inequalities.
 Fresh indicators enforce the counts while retaining the complete original
@@ -146,7 +147,22 @@ Thus **26 four-versus-seven classes remain open**, covering 16,605 labeled
 cores; cumulatively **171 of 197 classes** and 98,938 of 115,543 labels are
 excluded. These are whole-core exclusions. The other 26 cases returned
 explicit UNKNOWN at the fixed twenty-second limit. The new propagation
-bridge/refutations and inherited anchor theorem await independent review.
+bridge and refutations await independent review; the inherited anchor theorem
+is now independently accepted.
+The subsequent [no-empty rigidity theorem](../ramsey_r55_order3_eleven_noempty_rigidity)
+forces a fixed vertex blue to all twelve red-core vertices throughout the
+four-versus-seven branch. Under no empty signature, singleton counts are
+`x_i=1+1[i in U]`, where U indexes blue-triangle-free complements. Projection
+equality gives hand contradictions for 25 residual cores. Core194 would
+have two of each singleton and two pair signatures, but the sharper
+four-triangle bound `x_i+y_ij<=2` excludes these. Fifteen compact literal
+local obstructions corroborate this last step, as do fifteen complete
+extension refutations replayed twice. All are contradictory by input unit
+propagation. **All 26 remaining cores now have an empty-signature requirement**;
+no additional whole core is excluded and the count remains 171 excluded,
+26 open. The new hand proof and its exact clause/certificate checks await
+independent review. The next boundary is the empty-present extension of
+these 26 cores; it is not tested in this milestone.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
