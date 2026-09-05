@@ -1,0 +1,70 @@
+{
+  "reviewed_contribution": "bafkreifnhuulmsqc6fop4cqgwzpqsqkscf2wjd6rgaapssfok5wh4d2vae",
+  "reviewed_source_commit": "2309fe83413c55742b07480dd243ae21d91f3836",
+  "verdict": "accepted",
+  "scope": {
+    "direct_result": "two connected subsets of E=Q(i*sqrt(3),i*sqrt(11)) whose placed union contains a cross K2,2 have a four-colorable strict unit-distance graph",
+    "mixed506_corollary": "every placement of the fixed 292-vertex B and 214-vertex V containing a cross four-cycle is four-colorable",
+    "combined_single_hub_corollary": "a non-four-colorable disjoint mixed506 placement must have a four-cycle-free cross graph and at most one cross-degree-at-least-three hub, of degree at most ten",
+    "four_cycle_free_placements_closed": false,
+    "five_chromatic_graph_produced": false
+  },
+  "submitted_workflow": {
+    "python": "3.11.2",
+    "generator_seconds": 0.947,
+    "audit_seconds": 34.260,
+    "source_and_dependency_pins": 18,
+    "component_pairs": 65277,
+    "complementary_norm_pairs": 77,
+    "field_rotation_norm_pairs": 26,
+    "outside_field_norm_pairs": 51,
+    "selected_cases": 51,
+    "selected_case_pairs_checked": 6516015,
+    "case_data_sha256": "b35e911535a1ef1ec0c8d47c8a4a08bb10053d8e4e5c9557fe24eac20d32b259",
+    "case_audit_sha256": "e57078d8eac8ac89f636e928676782744366bc2975eef26221d88a083a2cfade",
+    "all_expected_outputs_and_hashes_passed": true
+  },
+  "independent_audit": {
+    "seconds": 0.211,
+    "imports_reviewed_modules": false,
+    "component_vertices": {
+      "B": 292,
+      "V": 214
+    },
+    "component_edges": {
+      "B": 1251,
+      "V": 977
+    },
+    "component_connectivity_checked": true,
+    "diagonal_norm_types": {
+      "B": 1056,
+      "V": 372
+    },
+    "complementary_diagonal_census_matched": true,
+    "field_square_classification_reimplemented": true,
+    "calibration_length_types_covered": 51,
+    "calibration_branches": {
+      "unit": 43,
+      "even": 8
+    },
+    "finite_residue_states": {
+      "even_cross": 6,
+      "unit_diagonal": 72,
+      "unit_radial": 576
+    },
+    "passed": true
+  },
+  "imported_dependencies": {
+    "whole_field_coloring_contribution": "bafkreig75j4jkhvm5guyp3k62ojlq5udshmgr345zbv5f433l2dlacefqq",
+    "whole_field_coloring_review": "bafkreianlcfpracsoyxay3aj2ab7w55wes6fobebsvxtje5lyc5p2t435u",
+    "single_hub_contribution": "bafkreialyv7icynqkmaetihqwukvunyd73ue5xs4yynijxi3ql3hwluwne",
+    "single_hub_review": "bafkreihbe34jhuk2vfizgzxielmz4et7vlkzgyk2xxtxlo2ntfkz3piq7u"
+  },
+  "uncertainty": {
+    "direct_theorem": "no unresolved issue found",
+    "uniform_argument": "independently re-derived but not proof-assistant formalized",
+    "calibration": "exactly reproduced and independently checked at the diagonal/residue level; the 51 cases calibrate the implementation but do not enumerate all placements",
+    "dependencies": "the 2-adic embedding and base-field four-coloring are imported from a separately reviewed theorem; coordinate provenance is pinned",
+    "software": "trusts CPython exact-integer and Fraction semantics, source correctness, hardware, and SHA-256 collision resistance"
+  }
+}
