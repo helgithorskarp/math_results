@@ -1,0 +1,176 @@
+{
+  "abstract_cases": 14,
+  "abstract_controls": [
+    {
+      "clauses": 5,
+      "matrix_assignments_checked": 2,
+      "name": "empty",
+      "qdimacs_sha256": "7b89d6bb5aa3369123ebef3aa5aa408eb1257b013eae0ad27d8809cd8c6ff611",
+      "truth": false,
+      "variables": 3,
+      "winning_selection_masks": []
+    },
+    {
+      "clauses": 8,
+      "matrix_assignments_checked": 16,
+      "name": "isolated",
+      "qdimacs_sha256": "1e7f8b719b7cfb175e88c9171d4156881ec29ed80df16121310fd654e5454719",
+      "truth": false,
+      "variables": 6,
+      "winning_selection_masks": []
+    },
+    {
+      "clauses": 38,
+      "matrix_assignments_checked": 16,
+      "name": "four_forbidden_b0",
+      "qdimacs_sha256": "40634e5218e163e87c011ff3cff4ed260bda40821644bd906a6965f0424f3ec6",
+      "truth": false,
+      "variables": 18,
+      "winning_selection_masks": []
+    },
+    {
+      "clauses": 37,
+      "matrix_assignments_checked": 16,
+      "name": "four_forbidden_b1",
+      "qdimacs_sha256": "acfc136d1307d41779f49d4ae9df9ca0495f943ab0b1fc27d97c7c78b9086603",
+      "truth": true,
+      "variables": 18,
+      "winning_selection_masks": [
+        1
+      ]
+    },
+    {
+      "clauses": 28,
+      "matrix_assignments_checked": 16,
+      "name": "three_forbidden",
+      "qdimacs_sha256": "dd8c0f2da5ac6f8517675bb14988e8b3231547271502029fe8e7a7fdc6fdb251",
+      "truth": false,
+      "variables": 15,
+      "winning_selection_masks": []
+    },
+    {
+      "clauses": 56,
+      "matrix_assignments_checked": 128,
+      "name": "forced_equal_edge_b1",
+      "qdimacs_sha256": "779ee771cb368dfb6094231a132ff8057e8b085ff33f6b8cec95c61e5faa6d5d",
+      "truth": false,
+      "variables": 24,
+      "winning_selection_masks": []
+    },
+    {
+      "clauses": 49,
+      "matrix_assignments_checked": 128,
+      "name": "forced_equal_edge_b2",
+      "qdimacs_sha256": "40a3f7a8d0b2879401d604af6d79adbe86d46baec0795fb6bce113dac1566148",
+      "truth": true,
+      "variables": 22,
+      "winning_selection_masks": [
+        3
+      ]
+    },
+    {
+      "clauses": 79,
+      "matrix_assignments_checked": 128,
+      "name": "common_selection_p2_b1",
+      "qdimacs_sha256": "64380f2009297fd0be994001b7f62bf6f22fa75bcce7680a7b34ad431f26f248",
+      "truth": false,
+      "variables": 36,
+      "winning_selection_masks": []
+    },
+    {
+      "clauses": 72,
+      "matrix_assignments_checked": 128,
+      "name": "common_selection_p2_b2",
+      "qdimacs_sha256": "79641bd8c18e4636199354eeee5bafd36f1df41d11e199de7e248c597965ee0e",
+      "truth": true,
+      "variables": 34,
+      "winning_selection_masks": [
+        3
+      ]
+    },
+    {
+      "clauses": 89,
+      "matrix_assignments_checked": 256,
+      "name": "common_selection_p3_b1",
+      "qdimacs_sha256": "db2f5e4775de9377810dba0c9f9f3468e4bf9ff0dbb0919baac222d00bd2c929",
+      "truth": false,
+      "variables": 38,
+      "winning_selection_masks": []
+    },
+    {
+      "clauses": 82,
+      "matrix_assignments_checked": 256,
+      "name": "common_selection_p3_b2",
+      "qdimacs_sha256": "ae984485b69fcd32b46aa786c0230a3da1c960473c526031fbc777ae07ee3593",
+      "truth": true,
+      "variables": 36,
+      "winning_selection_masks": [
+        3
+      ]
+    },
+    {
+      "clauses": 285,
+      "matrix_assignments_checked": 2048,
+      "name": "common_selection_p20_b1",
+      "qdimacs_sha256": "454aaae338a39248cecf8972b05c5fdc8b6cad496531896efc0b2f9183e2ae95",
+      "truth": false,
+      "variables": 58,
+      "winning_selection_masks": []
+    },
+    {
+      "clauses": 278,
+      "matrix_assignments_checked": 2048,
+      "name": "common_selection_p20_b2",
+      "qdimacs_sha256": "10ba28a48f45a7f9e7ec6b17a5a071704c0fc4ceeef3e9a8f7841d7576573c7a",
+      "truth": true,
+      "variables": 56,
+      "winning_selection_masks": [
+        3
+      ]
+    },
+    {
+      "clauses": 37,
+      "matrix_assignments_checked": 16,
+      "name": "permuted_four_colours",
+      "qdimacs_sha256": "0774a5f00d6571779ab8829e886582cc7da8846a03faa40e7fc7f9115b987529",
+      "truth": true,
+      "variables": 18,
+      "winning_selection_masks": [
+        1
+      ]
+    }
+  ],
+  "exact_L_witnesses_checked": 20,
+  "fixed_508_control": {
+    "class_index": 0,
+    "deleted_vertex": 397,
+    "proper_colouring_checked": true,
+    "qdimacs_sha256": "fda50b18e05e26c9aaceb1779ec493b6097984de930baafcc48c088b403616ec",
+    "unit_edges": 2427,
+    "universal_counterexample_refutes_matrix": true,
+    "vertices": 508
+  },
+  "full_instance": {
+    "budget": 134,
+    "class_bits": 5,
+    "clauses": 77505,
+    "cross_edges": 36,
+    "inner": 1599,
+    "outer": 2620,
+    "outer_clauses": 67917,
+    "patterns": 20,
+    "pool_edges": 1504,
+    "pool_vertices": 303,
+    "qdimacs_sha256": "caacfbf264249f6da99f4c23e91ce3c7a9a6448ef1f7f30bc0542bbd159b5c14",
+    "tautology_padding": 0,
+    "universal": 611,
+    "unused_class_codes": 12,
+    "variables": 4830,
+    "witnesses": 1540
+  },
+  "geometric_unit_edges": 3400,
+  "geometric_vertices": 677,
+  "interface_vertices": 19,
+  "matrix_assignments_checked": 5202,
+  "status": "QUANTIFIED SELECTOR FINITE CHECKS VERIFIED"
+}

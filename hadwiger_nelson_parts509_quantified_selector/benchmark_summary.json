@@ -1,0 +1,173 @@
+{
+  "format_correction_retests": [
+    "isolated"
+  ],
+  "package_sha256": "57f606ca724c402f29b0b3d3f74bde82e83ebbd5f40dd1ed4040224a93ddb2fe",
+  "real_seconds_limit": 30,
+  "rows": [
+    {
+      "clauses": 5,
+      "expected": false,
+      "name": "empty",
+      "qdimacs_sha256": "7b89d6bb5aa3369123ebef3aa5aa408eb1257b013eae0ad27d8809cd8c6ff611",
+      "returncode": 20,
+      "seconds": 0.001845686994784046,
+      "truth": false,
+      "variables": 3
+    },
+    {
+      "clauses": 8,
+      "expected": false,
+      "name": "isolated",
+      "qdimacs_sha256": "1e7f8b719b7cfb175e88c9171d4156881ec29ed80df16121310fd654e5454719",
+      "returncode": 20,
+      "seconds": 0.0018076230044243857,
+      "truth": false,
+      "variables": 6
+    },
+    {
+      "clauses": 38,
+      "expected": false,
+      "name": "four_forbidden_b0",
+      "qdimacs_sha256": "40634e5218e163e87c011ff3cff4ed260bda40821644bd906a6965f0424f3ec6",
+      "returncode": 20,
+      "seconds": 0.0018239199998788536,
+      "truth": false,
+      "variables": 18
+    },
+    {
+      "clauses": 37,
+      "expected": true,
+      "name": "four_forbidden_b1",
+      "qdimacs_sha256": "acfc136d1307d41779f49d4ae9df9ca0495f943ab0b1fc27d97c7c78b9086603",
+      "returncode": 10,
+      "seconds": 0.0017530509940115735,
+      "truth": true,
+      "variables": 18
+    },
+    {
+      "clauses": 28,
+      "expected": false,
+      "name": "three_forbidden",
+      "qdimacs_sha256": "dd8c0f2da5ac6f8517675bb14988e8b3231547271502029fe8e7a7fdc6fdb251",
+      "returncode": 20,
+      "seconds": 0.0017457759968237951,
+      "truth": false,
+      "variables": 15
+    },
+    {
+      "clauses": 56,
+      "expected": false,
+      "name": "forced_equal_edge_b1",
+      "qdimacs_sha256": "779ee771cb368dfb6094231a132ff8057e8b085ff33f6b8cec95c61e5faa6d5d",
+      "returncode": 20,
+      "seconds": 0.0017864410037873313,
+      "truth": false,
+      "variables": 24
+    },
+    {
+      "clauses": 49,
+      "expected": true,
+      "name": "forced_equal_edge_b2",
+      "qdimacs_sha256": "40a3f7a8d0b2879401d604af6d79adbe86d46baec0795fb6bce113dac1566148",
+      "returncode": 10,
+      "seconds": 0.001700742999673821,
+      "truth": true,
+      "variables": 22
+    },
+    {
+      "clauses": 79,
+      "expected": false,
+      "name": "common_selection_p2_b1",
+      "qdimacs_sha256": "64380f2009297fd0be994001b7f62bf6f22fa75bcce7680a7b34ad431f26f248",
+      "returncode": 20,
+      "seconds": 0.00167904300178634,
+      "truth": false,
+      "variables": 36
+    },
+    {
+      "clauses": 72,
+      "expected": true,
+      "name": "common_selection_p2_b2",
+      "qdimacs_sha256": "79641bd8c18e4636199354eeee5bafd36f1df41d11e199de7e248c597965ee0e",
+      "returncode": 10,
+      "seconds": 0.0015637399992556311,
+      "truth": true,
+      "variables": 34
+    },
+    {
+      "clauses": 89,
+      "expected": false,
+      "name": "common_selection_p3_b1",
+      "qdimacs_sha256": "db2f5e4775de9377810dba0c9f9f3468e4bf9ff0dbb0919baac222d00bd2c929",
+      "returncode": 20,
+      "seconds": 0.00374248500156682,
+      "truth": false,
+      "variables": 38
+    },
+    {
+      "clauses": 82,
+      "expected": true,
+      "name": "common_selection_p3_b2",
+      "qdimacs_sha256": "ae984485b69fcd32b46aa786c0230a3da1c960473c526031fbc777ae07ee3593",
+      "returncode": 10,
+      "seconds": 0.003769597999053076,
+      "truth": true,
+      "variables": 36
+    },
+    {
+      "clauses": 285,
+      "expected": false,
+      "name": "common_selection_p20_b1",
+      "qdimacs_sha256": "454aaae338a39248cecf8972b05c5fdc8b6cad496531896efc0b2f9183e2ae95",
+      "returncode": 20,
+      "seconds": 0.0038423610021709464,
+      "truth": false,
+      "variables": 58
+    },
+    {
+      "clauses": 278,
+      "expected": true,
+      "name": "common_selection_p20_b2",
+      "qdimacs_sha256": "10ba28a48f45a7f9e7ec6b17a5a071704c0fc4ceeef3e9a8f7841d7576573c7a",
+      "returncode": 10,
+      "seconds": 0.003935080996598117,
+      "truth": true,
+      "variables": 56
+    },
+    {
+      "clauses": 37,
+      "expected": true,
+      "name": "permuted_four_colours",
+      "qdimacs_sha256": "0774a5f00d6571779ab8829e886582cc7da8846a03faa40e7fc7f9115b987529",
+      "returncode": 10,
+      "seconds": 0.0016977010018308647,
+      "truth": true,
+      "variables": 18
+    },
+    {
+      "clauses": 3981,
+      "expected": true,
+      "name": "record509",
+      "qdimacs_sha256": "f1ef8583cbe7d128155c57bece7aac6669f659c338dd1b5501de5415f17c1810",
+      "returncode": 0,
+      "seconds": 30.063691695999296,
+      "truth": null,
+      "variables": 1051
+    },
+    {
+      "clauses": 3891,
+      "expected": false,
+      "name": "delete397",
+      "qdimacs_sha256": "fda50b18e05e26c9aaceb1779ec493b6097984de930baafcc48c088b403616ec",
+      "returncode": 20,
+      "seconds": 0.46581386899924837,
+      "truth": false,
+      "variables": 1033
+    }
+  ],
+  "solver": "DepQBF Debian package 5.01-3 (amd64)",
+  "solver_sha256": "15b19e5ce9f3e9a8dfa9503c72c336d92b26f59b0c1ce6f5cf59a68093e89378",
+  "status": "bounded controls completed; native answers are calibration only",
+  "total_seconds": 34.7680030249976
+}
