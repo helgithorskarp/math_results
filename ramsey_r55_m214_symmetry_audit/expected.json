@@ -1,0 +1,210 @@
+{
+  "formula": {
+    "bytes": 167913049,
+    "constraints": 1974731,
+    "equalities": 128,
+    "five_sets": 962598,
+    "rejected_mutations": 8,
+    "semantic_check": "PASS",
+    "sha256": "88aa294709836a0a707b2203da2176d420a3608353db21cc741dfa9bedf89a58",
+    "triangle_gates": 12341,
+    "variables": 13244
+  },
+  "lemma": {
+    "arithmetic": {
+      "anchor_cross_edges": 214,
+      "blue_triangles": 1463,
+      "central_exact_anchor_lower_bound": 28,
+      "monochromatic_triangles": 2866,
+      "red_edges": 445,
+      "red_triangles": 1403,
+      "total_excess": 2
+    },
+    "fixed_graph_audit": [
+      {
+        "degree_congruent": 0,
+        "fixed_exceptional": 1,
+        "fixed_vertices": 1,
+        "graphs_scanned": 1,
+        "residue_sums": {},
+        "survivors": 0
+      },
+      {
+        "degree_congruent": 0,
+        "fixed_exceptional": 1,
+        "fixed_vertices": 4,
+        "graphs_scanned": 64,
+        "residue_sums": {},
+        "survivors": 0
+      },
+      {
+        "degree_congruent": 3,
+        "fixed_exceptional": 4,
+        "fixed_vertices": 4,
+        "graphs_scanned": 64,
+        "residue_sums": {
+          "8": 3
+        },
+        "survivors": 0
+      }
+    ],
+    "fixture": {
+      "degree_profile": {
+        "20": 13,
+        "21": 30
+      },
+      "edges": 445,
+      "exceptional_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        36
+      ],
+      "fixed_vertices": 7,
+      "incidence_excess": [
+        [
+          37,
+          1
+        ],
+        [
+          42,
+          1
+        ]
+      ],
+      "independent_five_set": [
+        0,
+        1,
+        2,
+        40,
+        41
+      ],
+      "is_ramsey_graph": false,
+      "moving_3cycles": 12,
+      "red_triangle_equality_failures": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "vertices": 43
+    },
+    "full_opb_solver_verdict": "NOT_RUN",
+    "m214_moving_3cycle_range_with_imported_minimum": [
+      10,
+      12
+    ],
+    "naively_combined_labelings_incompatible_orbits": [
+      [
+        12,
+        13,
+        14
+      ]
+    ],
+    "necessary_degree_class_counts": [
+      {
+        "exceptional_moving_cycles": 1,
+        "fixed_central": 3,
+        "fixed_exceptional": 10,
+        "moving_cycles": 10
+      },
+      {
+        "exceptional_moving_cycles": 2,
+        "fixed_central": 6,
+        "fixed_exceptional": 7,
+        "moving_cycles": 10
+      },
+      {
+        "exceptional_moving_cycles": 3,
+        "fixed_central": 9,
+        "fixed_exceptional": 4,
+        "moving_cycles": 10
+      },
+      {
+        "exceptional_moving_cycles": 4,
+        "fixed_central": 12,
+        "fixed_exceptional": 1,
+        "moving_cycles": 10
+      },
+      {
+        "exceptional_moving_cycles": 2,
+        "fixed_central": 3,
+        "fixed_exceptional": 7,
+        "moving_cycles": 11
+      },
+      {
+        "exceptional_moving_cycles": 3,
+        "fixed_central": 6,
+        "fixed_exceptional": 4,
+        "moving_cycles": 11
+      },
+      {
+        "exceptional_moving_cycles": 4,
+        "fixed_central": 9,
+        "fixed_exceptional": 1,
+        "moving_cycles": 11
+      },
+      {
+        "exceptional_moving_cycles": 3,
+        "fixed_central": 3,
+        "fixed_exceptional": 4,
+        "moving_cycles": 12
+      },
+      {
+        "exceptional_moving_cycles": 4,
+        "fixed_central": 6,
+        "fixed_exceptional": 1,
+        "moving_cycles": 12
+      }
+    ],
+    "target_graph_found": false
+  },
+  "upstream_commit": "fdba2d1000599987d545d0b83f44c46084a73b19"
+}

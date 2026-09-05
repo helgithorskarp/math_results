@@ -24,6 +24,16 @@ using the analytic two-pattern incidence reduction.
 Equivalently, `Aut(G)` has no element of prime order at least five. A target
 cannot be vertex-transitive.
 
+For the **M=214 hard branch only**, the degree sequence `20^13 21^30`
+and its two-unit exceptional-incidence budget additionally force an
+order-three element to have at most twelve moving 3-cycles. Together
+with the global minimum, only ten, eleven, or twelve remain in this
+branch. The solver-free lemma and sharp degree/incidence fixture are in
+[`ramsey_r55_m214_symmetry_audit`](../ramsey_r55_m214_symmetry_audit).
+The fixture contains an independent five-set. The upper bound is
+conditional on the branch; thirteen and fourteen moving cycles remain
+open for the full Ramsey problem.
+
 These are necessary conditions, not a construction and not an improvement
 to the known lower bound for `R(5,5)`.
 
