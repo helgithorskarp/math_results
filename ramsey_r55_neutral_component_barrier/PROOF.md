@@ -83,9 +83,9 @@ component to a lower-Phi graph must leave it, and the first exit must increase
 Phi. Integer scores force a visit to at least 74.
 
 The positive score-change histogram has minimum 1 at every component state.
-Thus the bound 74 is sharp for a FIRST EXIT. It is NOT a proof that score 74
-suffices along a path to any lower-Phi graph; that barrier-height decision
-has not been attempted.
+Thus the bound 74 is sharp for a FIRST EXIT. This census alone does not prove
+that score 74 suffices along a path to any lower-Phi graph. The subsequent
+excursion certificate below supplies that additional upper bound.
 
 Across the component, 10,848 state/support incidences would decrease Phi:
 2,463 fail a pointwise bound, and the remaining 8,385 create a mixed K5.
@@ -127,3 +127,49 @@ trusts the pinned sources, exact Python/runtime, SHA256 and ordinary hardware.
 No solver, floating-point arithmetic or automorphism program is used. These
 are internal certificate checks, not independent peer review. Source pins,
 complete per-state census hashes and negative controls are supplied.
+
+## Subsequent exact height-one certificate
+
+Let C_0 be the five-graph component above. In the same admissible switch graph,
+define its required score increase by
+
+```text
+h = min { max_i Phi(G_i)-73 : G_0 in C_0, Phi(G_l)<73,
+                            consecutive G_i joined by permitted switches }.
+```
+
+The minimum is well-defined once a witness exists, because attainable maxima
+are integers bounded below. The closed-component argument proves h>=1.
+Start at component vertex 2 and perform these three switches:
+
+```text
+(7,10,26,30), (25,34,17,22), (25,26,22,9).
+```
+
+Each tuple (a,b,c,d) removes red ac,bd and adds red ad,bc. Literal path checking
+and full graph audits show that the four scores are 73,74,74,72 and all
+retained degree, quota, mixed-clique and pointwise conditions hold. Hence h<=1,
+so h=1. Connectedness of C_0 lets any of its five starting graphs reach vertex
+2 neutrally, without changing the maximal score, giving the same conclusion
+for each starting graph individually. This is not a minimum-length theorem.
+
+The full lower-bound census is freshly replayed by verify_escape.py; it does
+not just trust a claimed first-exit bound in a cached summary. All four
+excursion graphs receive exhaustive literal five-set checks and full red/blue
+clique-list agreement with recursive enumeration. No solver or search code is
+on the verification path. Seven malformed excursions and two bounded search
+controls distinguish valid witnesses, closed zero-height components and state
+limits. Normal and optimized reports match exactly.
+
+The red/blue K5 counts along the excursion are (238,212), (252,210),
+(261,220), (265,212). Thus Phi improves from 73 to 72 while the target
+obstruction count worsens from 450 to 477; central cap-failing vertices also
+increase from 29 to 31. Even its neutral middle step adds 19 net K5s. These
+literal graph facts show why Phi alone cannot order candidate quality by
+monochromatic K5 count. No general novelty claim is made for surrogate-objective
+failure; this is an explicit target-specific limitation of the repair route.
+
+The 450-K5 component graph is preserved as the better seed by actual K5 count.
+ESCAPE_GRAPH.json is a barrier witness, not a preferred Ramsey candidate.
+Neither graph is Ramsey, and no optimum score, shortest escape, full sublevel
+classification, larger-move exclusion or continued repair phase is claimed.

@@ -1,4 +1,13 @@
-# A certified five-graph uphill barrier
+# A certified five-graph barrier with exact height one
+
+Update: an explicit admissible path **73 -> 74 -> 74 -> 72** now shows that
+the minimum peak score needed to reach any lower-score graph is exactly 74.
+The full five-graph lower-bound certificate below is replayed by the new
+checker. This settles the component's barrier height, not a new Ramsey bound.
+
+The escape worsens the actual K5 count **450 -> 477**. It is a barrier witness,
+not the best construction seed; the 450-K5 component graph remains available.
+This concrete mismatch argues against continuing cap-error-only optimization.
 
 An eleven-switch continuation from the
 [previous escape graph](../ramsey_r55_neutral_switch_escape) lowers the central
@@ -9,7 +18,8 @@ walks cannot escape it.
 
 This is a finite repair obstruction, not a Ramsey construction or a global
 infeasibility result. The best of the five included graphs still contains
-**450 monochromatic K5s**. No search beyond the component was started.
+**450 monochromatic K5s**. The first milestone stopped at that component;
+the subsequent bounded height-one test is documented below.
 
 ## What is certified
 
@@ -41,7 +51,8 @@ All five have Phi=73, and all remaining K5s lie inside the central set.
 The verifier exhausts 57,110 state/support incidences, finding no decreasing
 admissible switch and no neutral neighbor outside this list. Connectedness
 and induction establish the barrier. A score-74 first exit exists from every
-state, but no claim is made that 74 suffices to reach a lower score afterward.
+state. The later three-switch path below proves that 74 also suffices to reach
+a lower score afterward; the original boundary census alone did not prove it.
 [PROOF.md](PROOF.md) states the argument, counting conventions and exact scope.
 
 The endpoint SHA256 is
@@ -125,9 +136,79 @@ component theorem. The external height-2751 deletion cuts were not imposed
 or certified here. Newly received review commit
 `2159afba09d073e10da0a896bcec778bc9283c78` independently accepts the teammate's
 core-8 exclusion and sharp eleven-cycle signature bound. Thus cores 11,13
-remain in its 3/8 branch, with 4/7 still open. That symmetry scope stays separate.
+remain in its 3/8 branch, with 4/7 still open. Its subsequent commit
+`632619d72b6cfc4f0ade808524c319df302f1ef7` (Discovery Net height 2803) excludes
+exactly-one-empty-signature extensions of both cores, leaving their at-least-two
+branches open. That new strengthening was read, not independently reviewed
+here; the accepted signature review does not cover it. Symmetry stays separate.
 
-The pass stops at this fully checked component. No background job remains.
-A next bounded phase could decide whether a height-one uphill allowance
-escapes it, using component vertex 2 as the lowest-K5 seed, or add a stronger
-local-graph feasibility layer. Neither phase is started here.
+## Exact height-one excursion
+
+Starting at component vertex 2, the three tuple-encoded switches are
+`(7,10,26,30)`, `(25,34,17,22)`, `(25,26,22,9)`. A tuple (a,b,c,d) removes
+red ac,bd and adds red ad,bc. [ESCAPE_PATH.json](ESCAPE_PATH.json) records them;
+[ESCAPE_GRAPH.json](ESCAPE_GRAPH.json) is their endpoint, SHA256
+`67cb872fc99fe305f6a3984b5407ae6b5359ef0a39daca025682f487fc1d93d0`.
+
+| state | Phi | red K5 | blue K5 | total K5 | central cap failures |
+|---|---:|---:|---:|---:|---:|
+| component vertex 2 | 73 | 238 | 212 | 450 | 29 |
+| after move 1 | 74 | 252 | 210 | 462 | 31 |
+| after move 2 | 74 | 261 | 220 | 481 | 32 |
+| escape endpoint | 72 | 265 | 212 | 477 | 31 |
+
+Every graph satisfies all retained individual-edge constraints. Together
+with the lower bound, the excursion proves exact required score increase one
+for any starting graph in the connected five-state component. It does NOT
+prove a shortest path, minimum changed-edge support, optimal endpoint score,
+or any path reaching a Ramsey graph. No continued descent was attempted.
+
+Reproduce the complete height-one certificate from this directory:
+
+```sh
+python3 -B verify_escape.py --report /tmp/r55-height-one-report.json
+cmp escape_report.json /tmp/r55-height-one-report.json
+python3 -B escape_controls.py --report /tmp/r55-height-one-controls.json
+cmp escape_controls_report.json /tmp/r55-height-one-controls.json
+python3 -B -O verify_escape.py --report /tmp/r55-height-one-report-O.json
+cmp escape_report.json /tmp/r55-height-one-report-O.json
+python3 -B -O escape_controls.py --report /tmp/r55-height-one-controls-O.json
+cmp escape_controls_report.json /tmp/r55-height-one-controls-O.json
+```
+
+The new verifier imports no search code. It checks the three switches
+literally and runs full five-set audits of all four states, then regenerates
+the ENTIRE earlier five-state, 57,110-support certificate in a fresh temporary
+directory and requires byte-for-byte report agreement. The lower bound is
+replayed, not inferred from a cached report hash alone. Normal and optimized
+outputs agree. Full normal verification took 75.176 seconds, peak RSS 22,472
+KiB, with other short checks briefly overlapping on the host.
+
+Seven malformed excursion controls are rejected. A ceiling-73 search control
+reproduces exactly the five component graphs and closes after five processed
+states; a one-state ceiling-74 control gives STATE_LIMIT, not closure. Neither
+non-escape control emits an escape graph.
+
+Optional rediscovery with a fresh external work directory:
+
+```sh
+python3 -B height_one_search.py --work /tmp/r55-height-one-fresh --ceiling 74 --start-index 2 --max-processed 512
+cmp ESCAPE_GRAPH.json /tmp/r55-height-one-fresh/GRAPH.json
+cmp ESCAPE_PATH.json /tmp/r55-height-one-fresh/PATH.json
+```
+
+Fresh public-source discovery reproduced the same graph/path in 4.537 seconds,
+peak RSS 65,408 KiB. It processed 13 states, discovering 42, and stopped at the
+first processed state admitting an escape. These are operational records, not
+a complete sublevel classification or a minimum-path-length certificate.
+The source, bounds and stop state are pinned in
+[height_one_discovery.json](height_one_discovery.json). Each completed node has
+an atomic external checkpoint; no background process remains.
+
+The old source, graph, component and lower-bound report are unchanged; their
+scope is preserved. The current pass stops at the verified exact-height
+certificate. The next method should couple actual K5 obstructions to the repair
+objective or add a stronger local-graph feasibility condition. Pure Phi descent
+would prefer the new 477-K5 graph over the preserved 450-K5 seed, illustrating
+why lower cap error alone is not a target-aligned quality ordering. No such
+new objective or stronger-constraint phase has started here.
