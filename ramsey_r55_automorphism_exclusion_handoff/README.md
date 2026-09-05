@@ -101,8 +101,9 @@ eighteen core units. It refutes **34 additional classes**, leaving **45**
 open four-versus-seven classes. All 34 full DRAT proofs pass replay and
 are replayed again after fresh reconstruction of all 79 complete formulas.
 Thus 152 of the original 197 classes are excluded; 85,789 of the original
-115,543 locally valid labeled cores are covered. The new refutations await
-independent review. Every remaining case returned UNKNOWN at the fixed
+115,543 locally valid labeled cores are covered. These 34 refutations now
+have an [accepted independent review](../ramsey_r55_order3_eleven_residual_sweep_review1).
+Every remaining case returned UNKNOWN at the fixed
 ten-second solver limit, and both three-versus-eight cores remain open.
 The global minimum moving count stays eleven.
 The subsequent [empty-signature theorem](../ramsey_r55_order3_eleven_empty_signature)
@@ -125,6 +126,17 @@ core has a complementary three-triangle subcore with no blue triangle.
 The new split and computational closure await independent review, as does
 the inherited empty-signature theorem. No full eleven-cycle exclusion or
 new Ramsey lower bound follows.
+The subsequent [anchor equality theorem](../ramsey_r55_order3_eleven_anchor_equality)
+proves that every blue-triangle-free complementary triple has at least
+two fixed vertices blue to all nine of its vertices. A direct local
+classification gives just the anchor words 100,110,110 and 110,110,101.
+Two complete r=4 equality formulas retain the fourth red triangle and
+all seven blue triangles; both have proofs replayed twice. Only three
+incompatible red-cycle ordering clauses are removed from the accepted
+parent. Intrinsically, `z+x_i>=2` for every applicable omitted triangle i,
+where z counts empty four-bit signatures and x_i counts singleton {i}.
+The theorem leaves all 34 full core classes open. Its new normalization,
+equality bridge and refutations await independent review.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
@@ -187,6 +199,7 @@ to the known lower bound for `R(5,5)`.
 | residual four-versus-seven full-extension sweep | all 79 complete 43-vertex formulas audited; 34 new refutations replayed twice, leaving 45 explicit UNKNOWN cases; 152 of 197 total core classes excluded | [`ramsey_r55_order3_eleven_residual_sweep`](../ramsey_r55_order3_eleven_residual_sweep) |
 | four-triangle empty-signature propagation | blue triangles in all four complementary triples force an empty fixed signature; eleven selected complete formulas yield seven further replayed refutations, leaving 38 total core classes open | [`ramsey_r55_order3_eleven_empty_signature`](../ramsey_r55_order3_eleven_empty_signature) |
 | complete four-core empty-multiplicity split | exactly one versus at least two empty signatures; eight complete refutations close cores 131,139,162,173, leaving 34 core classes; every survivor has a blue-triangle-free complementary triple | [`ramsey_r55_order3_eleven_four_empty_split`](../ramsey_r55_order3_eleven_four_empty_split) |
+| equality excluded at every blue-free r4 anchor | two complete formulas retain four red and seven blue moving triangles; every blue-triangle-free complementary triple forces at least two empty projected fixed signatures; all 34 full core classes remain open | [`ramsey_r55_order3_eleven_anchor_equality`](../ramsey_r55_order3_eleven_anchor_equality) |
 | C3-square actions and order 27 | sixteen of eighteen actions excluded; the two open types have one fixed point, two three-orbits and four regular nine-orbits; an index-three stabilizer argument excludes order-27 subgroups globally and order-nine subgroups in M=214 | [`ramsey_r55_c3_square_action_sweep`](../ramsey_r55_c3_square_action_sweep) |
 | complete C3-square closure | both remaining actions excluded after proven centralizer normalization, with fresh full formula reconstruction and DRAT replay; nine does not divide the automorphism-group order globally | [`ramsey_r55_c3_square_normalized_extensions`](../ramsey_r55_c3_square_normalized_extensions) |
 | subgroups of order 25 | the surviving order-five types force a unique `C_5^2` action, whose 51-variable invariant formula is certified UNSAT; an order-25 element is excluded by its fifth power | [`ramsey_r55_c5_square_automorphism_obstruction`](../ramsey_r55_c5_square_automorphism_obstruction) |
@@ -328,8 +341,9 @@ now independently accepted. The subsequent full-parent sweep excludes 34
 of those 79 entries, so the compatible core must lie in the **45 open
 indices** listed in
 [the result manifest](../ramsey_r55_order3_eleven_residual_sweep/result.json).
-These new computational exclusions have full replay and fresh formula
-reconstruction but await independent review. Four-versus-seven indices
+These 34 computational exclusions now have accepted independent review,
+including fresh complete reconstruction and certificate generation/replay.
+Four-versus-seven indices
 11 and 13 excluded there are unrelated to the two open three-versus-eight
 cores with the same numeric indices in a different catalog.
 The subsequent empty-signature theorem supplies four necessary first-row
@@ -347,6 +361,15 @@ In each, at least one complementary three-triangle subcore has no blue
 triangle. This new full-core closure and its inherited empty-signature
 premise await independent review. Do not replace the fourth red triangle
 by a blue triangle when using the nine-vertex subcore as an anchor.
+The two-type blue-free anchor reduction now retains that fourth red
+triangle explicitly. Both complete unique-empty projected-signature
+formulas are UNSAT, with fresh reconstruction and second full replay.
+Consequently every applicable triple must have at least two projected
+empty signatures. All 56 applicable complements across the 34 residual
+representatives are listed in
+[the anchor manifest](../ramsey_r55_order3_eleven_anchor_equality/anchors.json).
+The new theorem and its normalization await independent review. It is
+a signature restriction, not a reduction in the number of full cores.
 
 The finished ten-cycle chain proceeded through the four-versus-six
 internal-color split, 94 of 98 anchor exclusions, and twenty further
