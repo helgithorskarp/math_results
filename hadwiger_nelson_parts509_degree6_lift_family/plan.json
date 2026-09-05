@@ -1,0 +1,37 @@
+{
+  "bounds": {
+    "address_space_bytes": 4294967296,
+    "conflicts_per_query": 100000,
+    "forced_queries_max": 31,
+    "minimal_killing_queries_per_eligible_point_max": 337,
+    "native_workers": 1,
+    "one_query_per_missing_witness_per_point": true
+  },
+  "certificate_analysis_refinement": {
+    "additional_solver_calls": 0,
+    "rule": "If the unlifted minimal killing sets have a common old pool point, one addition repairs both all missing clauses and the pool quota. This also closes points646and681.",
+    "scope_changed": false
+  },
+  "created_at": "2026-09-05T16:02:23.695657+00:00",
+  "imported_ranking_source": "hadwiger_nelson_parts509_degree7_extension610/rank_lifts.py",
+  "method": "Try to retain all451 forced vertices using old and shared new colourings. On eligible points repair missing inclusion-minimal killing rows once. Complete lifting closes the support. Otherwise seek a common repair vertex for all unlifted rows and four pairwise-disjoint residual pool requirements in every missed-row branch. Check certificates directly; native negative answers alone establish no graph claim.",
+  "milestone": "One fixed family pilot: all previously unclosed degree-six points disrupting at most three published forced witnesses.",
+  "previously_closed": [
+    610
+  ],
+  "selection": [
+    606,
+    613,
+    621,
+    630,
+    637,
+    643,
+    646,
+    675,
+    678,
+    681,
+    689
+  ],
+  "selection_rule": "Exactly six original neighbours and at most three failures among the451 old forced-vertex colourings; remove the already closed point610.",
+  "stop": "Complete this finite selected cohort and certificate checks; preserve unclassified supports and yield. No new point outside the cohort, repeated cut loop, geometric-placement family or old timeout."
+}
