@@ -1,0 +1,17 @@
+PASS analytic reduction: sparse<=6, k=7 equality, k=8 profiles=52
+PASS normalizations: internal_splits=5 anchor_words=8 fixed_signatures=lex-sortable
+PASS actual edge orbits: pairs=903 orbits=415 primary=407
+PASS positive control: vertices=24 red_edges=138 five_sets=42504
+PASS semantic CNF r=0: five_sets=962598 ramsey=563672 primary=568276 core_members=460 sha256=0b513debff007d3e603114cad7324087bd0f9059fd8c4610880e4508343baa92
+PASS external RUP r=0: input_core=460/460 lemmas=391/396 resolutions=16936 RAT=0
+PASS semantic CNF r=1: five_sets=962598 ramsey=567011 primary=571615 core_members=1406 sha256=58af038f37badd46f741bea580e7ad72b27c5d7462b6123aa2763b6b4bca22cb
+PASS external RUP r=1: input_core=1386/1406 lemmas=1978/2058 resolutions=118127 RAT=0
+PASS semantic CNF r=2: five_sets=962598 ramsey=569396 primary=574000 core_members=270 sha256=9022b216e0ef6f98231323bb8fcda3495345f24eaccfc6b3caa2e5a6ee8cc7f7
+PASS external RUP r=2: input_core=270/270 lemmas=297/303 resolutions=11121 RAT=0
+PASS semantic CNF r=3: five_sets=962598 ramsey=570827 primary=575431 core_members=465 sha256=139dbc3e856acc844df266ff712cb8372bcac468fcfe6db4a33c72ed60a4f772
+PASS external RUP r=3: input_core=465/465 lemmas=1184/1217 resolutions=59322 RAT=0
+PASS semantic CNF r=4: five_sets=962598 ramsey=571304 primary=575908 core_members=360 sha256=4a162bcfa5959a833bd8a9b122b1c71c9585a23054fce0638dcee37755345e9f
+PASS external RUP r=4: input_core=360/360 lemmas=116/119 resolutions=1867 RAT=0
+DRAT_TRIM sha256=9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a
+PASS: independently verified exclusion of order-three type 1^19 3^8
+SCOPE: minimum nine additionally imports the verified k=7 and sparse-motion exclusions

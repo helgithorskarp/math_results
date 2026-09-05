@@ -1,0 +1,70 @@
+{
+  "format": "r55-order3-eight-cycle-review1-v1",
+  "reviewed_contribution": "bafkreifjrxglvap2mbbcfnvpmf24xmudmuiy4wmlnl665ejto6nljoal5m",
+  "reviewed_source_commit": "894412219892dcaca939b78696c52c97496c6199",
+  "verdict": "accepted",
+  "scope": {
+    "directly_verified": "No Ramsey(5,5;43) graph has an automorphism of type 1^19 3^8",
+    "corollary": "Every order-three automorphism has at least nine moving 3-cycles",
+    "target_result": false,
+    "new_ramsey_lower_bound": false,
+    "remaining_order_three_cycle_counts": [9, 10, 11, 12, 13, 14]
+  },
+  "submitted_full_reproduction": {
+    "elapsed_seconds": 152.593,
+    "python": "3.11.2",
+    "compiler": "g++ 12.2.0",
+    "five_sets_per_case": 962598,
+    "cases": [
+      {"red_cycles": 0, "variables": 7611, "clauses": 585876, "core_clauses": 460, "rup_additions": 395},
+      {"red_cycles": 1, "variables": 7632, "clauses": 589383, "core_clauses": 1406, "rup_additions": 2057},
+      {"red_cycles": 2, "variables": 7647, "clauses": 591888, "core_clauses": 270, "rup_additions": 302},
+      {"red_cycles": 3, "variables": 7656, "clauses": 593391, "core_clauses": 465, "rup_additions": 1216},
+      {"red_cycles": 4, "variables": 7659, "clauses": 593892, "core_clauses": 360, "rup_additions": 118}
+    ],
+    "result": "PASS"
+  },
+  "independent_semantic_audit": {
+    "imports_reviewed_modules": false,
+    "unordered_pairs": 903,
+    "edge_orbits": 415,
+    "primary_variables": 407,
+    "local_profiles": 52,
+    "primary_clause_streams_exact": true,
+    "all_core_clauses_in_full_formula": true,
+    "positive_fixture_five_sets": 42504,
+    "result": "PASS"
+  },
+  "external_rup_replay": {
+    "tool": "drat-trim",
+    "source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+    "cases_verified": 5,
+    "rat_lemmas": 0,
+    "result": "s VERIFIED"
+  },
+  "sanitizer_check": {
+    "compiler_flags": "-std=c++17 -O1 -g -Wall -Wextra -Werror -fsanitize=address,undefined -fno-omit-frame-pointer",
+    "cases": [0, 3],
+    "binary_sha256": "db86c5f664cad36be1bbcfc72dd1b3531a4a53fc5d8bfe5da8a637bf695e3c63",
+    "result": "PASS"
+  },
+  "seven_cycle_dependency": {
+    "contribution": "bafkreihue2cjnlhqe4sw7ey36d5luwiljmrtnbbta2bxd7ny3zi534etoa",
+    "source_commit": "5b2d168fc8b16120b117531f7824af334f3ebbd1",
+    "elapsed_seconds": 2.099,
+    "normalized_assignments": 14348907,
+    "tested_prefixes": 11722,
+    "formula_variables": 45,
+    "formula_clauses": 3872,
+    "rup_additions": 191,
+    "external_rup": "s VERIFIED; 226/3872 input clauses; 188/192 lemmas; 2876 resolutions; 0 RAT",
+    "result": "PASS"
+  },
+  "external_input": {
+    "theorem": "R(4,5)=25",
+    "source": "McKay and Radziszowski, Journal of Graph Theory 19 (1995), 309-322",
+    "url": "https://users.cecs.anu.edu.au/~bdm/papers/r45.pdf",
+    "download_sha256": "b7f17a4b93358d5feea479381ddad8537cdab4a91a3a0380996fca855916ba0e"
+  }
+}
