@@ -13,7 +13,7 @@ There is no element of order nine. Every nontrivial 3-subgroup has exponent
 three; this does not bound its order by three or imply it is abelian.
 
 More specifically, every involution has at least five transpositions, every
-order-three element has at least eight 3-cycles (and at most 19 fixed
+order-three element has at least nine 3-cycles (and at most 16 fixed
 vertices). The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
@@ -40,6 +40,7 @@ to the known lower bound for `R(5,5)`.
 | final order-five type | `1^3 5^8`; both analytic incidence patterns have 148-variable full Ramsey formulas, independent orbit/clause reconstruction, and replayed DRAT proofs | [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism) |
 | sparse involutions and order-three elements | involutions with one through four transpositions and order-three elements with one through six 3-cycles; analytic local-neighborhood bounds | [`ramsey_r55_sparse_order2_order3_automorphism_obstruction`](../ramsey_r55_sparse_order2_order3_automorphism_obstruction) |
 | seven moving 3-cycles | `1^22 3^7`; degree equality reduces the moving graph to a cyclic matching cover of `K_7`, excluded by complete enumeration and a compact 191-addition RUP certificate | [`ramsey_r55_order3_seven_cycle_obstruction`](../ramsey_r55_order3_seven_cycle_obstruction) |
+| eight moving 3-cycles | `1^19 3^8`; a local deficit budget and five complete normalized formulas, with full orbit/clause reconstruction and 4,088 committed RUP additions | [`ramsey_r55_order3_eight_cycle_obstruction`](../ramsey_r55_order3_eight_cycle_obstruction) |
 | subgroups of order 25 | the surviving order-five types force a unique `C_5^2` action, whose 51-variable invariant formula is certified UNSAT; an order-25 element is excluded by its fifth power | [`ramsey_r55_c5_square_automorphism_obstruction`](../ramsey_r55_c5_square_automorphism_obstruction) |
 | order-15 elements | power constraints leave six cycle types; all six exact cyclic invariant formulas have independently reconstructed clauses and replayed DRAT certificates | [`ramsey_r55_order15_automorphism_obstruction`](../ramsey_r55_order15_automorphism_obstruction) |
 | order-nine elements | nine types surviving the earlier cubing bounds; seven earlier certificates and two centralizer-normalized certified formulas exclude all nine | [`ramsey_r55_order9_automorphism_obstruction`](../ramsey_r55_order9_automorphism_obstruction) |
@@ -80,6 +81,9 @@ an independently reconstructed and replayed review in
 The seven-3-cycle exclusion has no omitted certificate: its 3,125-byte RUP
 trace is committed, and its separate direct enumeration covers all
 `3^15` normalized matching assignments. Verification requires no solver.
+The eight-3-cycle package also needs no solver: five committed clause
+subsets and their addition-only RUP traces total 269,427 bytes. Each core
+clause is checked against a completely reconstructed 43-vertex formula.
 The fixed-33 package has also been independently
 regenerated, reconstructed, and replayed in
 [`ramsey_r55_order5_f33_degree_obstruction_review1`](../ramsey_r55_order5_f33_degree_obstruction_review1).
@@ -95,7 +99,7 @@ representatives to cover the group).  Reject the construction family if:
 
 1. an element has at most four vertex cycles;
 2. an involution has fewer than five transpositions;
-3. an order-three element has fewer than eight 3-cycles;
+3. an order-three element has fewer than nine 3-cycles;
 4. an element has order divisible by five, or a vertex cycle of length
    divisible by five;
 5. an element has prime order at least seven;
@@ -146,8 +150,14 @@ and every opposite-color cross block is a perfect matching. Independent
 phase changes leave a cyclic threefold matching cover of `K_7` with 15
 free ternary shifts. Complete prefix enumeration covers all 14,348,907
 assignments without a survivor, and a separately reconstructed 45-variable
-formula has a 191-addition RUP refutation. Thus the current order-three
-minimum is eight moving cycles.
+formula has a 191-addition RUP refutation. This gives a minimum of eight
+moving cycles. The next type `1^19 3^8` has a local deficit budget of two:
+each cross block with own-color weight `w` costs `2-w+3*[w=3]`. A separate
+24-vertex fixture shows that the moving-vertex condition alone is insufficient.
+The full 43-vertex formulas cover all five internal-color counts up to
+complementation. Verified small clause subsets have 4,088 RUP additions
+through the empty clause. This raises the current minimum to **nine**
+moving 3-cycles, leaving nine through fourteen unresolved by these results.
 The earlier order-25 theorem uses the then-surviving fixed counts three and eight to
 classify any `C_5^2` action as `1^3 5^3 25^1`; its exact invariant formula is
 UNSAT. A cyclic subgroup of order 25 is excluded because the fifth power of
