@@ -1,0 +1,30 @@
+{
+  "algorithm": "Check the seed using the published actual-composition activation formula. If SAT, verify the full colouring and close its entire deletion family, then stop. If UNKNOWN, checkpoint and stop. If UNSAT, use its assumption core then try a deterministic new-point-first partition into chunks of24 non-interface selected vertices; SAT/UNKNOWN chunks split into two nonempty halves, UNSAT replaces selection by its core. At most32 batch queries; stop immediately at block budget373. Independently certify the final direct four-colour formula; check a direct five-colouring if it is UNSAT.",
+  "ambient": "Existing1111-point A union S; original S135 fixed, I19 mandatory; actual cross-edge compatibility, no forbidden-pattern clauses",
+  "created_at": "2026-09-05T21:07:15.967214+00:00",
+  "evidence": "Intermediate native UNSAT/core reports are only search hints. Only directly checked colourings or complete DRAT refutations support graph claims. Any time/file-bound cutoff is inconclusive. No broader ambient closure or minimum-order claim.",
+  "milestone": "One cost-capped actual-composition pilot: one532-point support and optional bounded batch reduction",
+  "native_bounds": {
+    "address_space_bytes": 4294967296,
+    "batch_query_conflicts": 25000,
+    "final_direct_four_colour_seconds": 180,
+    "final_proof_file_cap_bytes": 268435456,
+    "five_colour_witness_seconds": 20,
+    "initial_batch_size": 24,
+    "initial_conflicts": 100000,
+    "maximum_batch_queries": 32,
+    "worker_count": 1
+  },
+  "seed": {
+    "completion_eligibility": "Parent602-point no-sqrt5 completion list, original509-point degree at most6; all points are outside the degree-seven pool.",
+    "completion_quota": 24,
+    "ordering": "Include every eligible point whose retained original neighbours use all4 colours in the published original40-deletion colouring. Then greedily maximize (unit neighbours among already selected completions, unit neighbours among retained originals, negative label) until24 are selected.",
+    "original_omission": 40,
+    "seed_block_vertices": 397,
+    "seed_vertices": 532,
+    "source_colouring": "Restrict certificate_D7 forced_witness[40] to original labels except40 and check every retained original edge.",
+    "target_block_vertices": 373
+  },
+  "source_commit": "30b7abf9c070dd07bdc86d78c5c32485a7935233",
+  "stop": "One fixed cost cap and one seed. Complete every required verification for this pilot, preserve reproducible state and yield. No second24-point subset, changed quota, old120-pattern loop, or continuation past32 batch queries."
+}
