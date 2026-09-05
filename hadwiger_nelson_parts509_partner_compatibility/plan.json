@@ -1,0 +1,21 @@
+{
+  "bounds": {
+    "address_space_bytes": 4294967296,
+    "distinct_normalized_interface_patterns": 44,
+    "maximum_small_S_queries": 93,
+    "saved_witnesses": 49,
+    "seconds_per_query": 10,
+    "workers": 1
+  },
+  "created_at": "2026-09-05T20:29:15.514382+00:00",
+  "evidence": "Check every SAT S-colouring directly; use complete checked DRAT or an explicit zero-list obstruction for every UNSAT claim. Deduplicate identical S list assignments. UNKNOWN stays unknown; do not extend budgets.",
+  "milestone": "One finite compatibility audit of all49 saved SAT colourings from the completed rigid-block pilot",
+  "source_checkpoint": "hn_new_mechanism01",
+  "source_commit": "917b4bfb1bf33317e4a192749268bb4b223b35ec",
+  "stopping_decision": "Assess whether the old120-pattern containment target excluded saved colourings that were already blocked by S. No new large-graph seed, trimming run, cost search, pool expansion, or geometric census. Publish scoped result and yield after this finite audit and formula-equivalence checkpoint.",
+  "tests": [
+    "For every distinct saved pattern on I, test extension across the original30 cross edges to S135.",
+    "For every saved full colouring of selected T, test extension across every exact T-S unit edge.",
+    "Prove the exact relaxed activation formula for the complete ambient union S; generate its canonical instance but do not solve or minimize it this pass."
+  ]
+}
