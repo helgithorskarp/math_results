@@ -137,6 +137,16 @@ parent. Intrinsically, `z+x_i>=2` for every applicable omitted triangle i,
 where z counts empty four-bit signatures and x_i counts singleton {i}.
 The theorem leaves all 34 full core classes open. Its new normalization,
 equality bridge and refutations await independent review.
+The subsequent [complete anchor-propagation sweep](../ramsey_r55_order3_eleven_anchor_propagation)
+tests all 34 classes with all 56 applicable intrinsic inequalities.
+Fresh indicators enforce the counts while retaining the complete original
+parent, eighteen core units and existing fixed-row order. Eight full
+refutations, each replayed twice, exclude cores 88,102,107,138,169,172,176,196.
+Thus **26 four-versus-seven classes remain open**, covering 16,605 labeled
+cores; cumulatively **171 of 197 classes** and 98,938 of 115,543 labels are
+excluded. These are whole-core exclusions. The other 26 cases returned
+explicit UNKNOWN at the fixed twenty-second limit. The new propagation
+bridge/refutations and inherited anchor theorem await independent review.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
@@ -200,6 +210,7 @@ to the known lower bound for `R(5,5)`.
 | four-triangle empty-signature propagation | blue triangles in all four complementary triples force an empty fixed signature; eleven selected complete formulas yield seven further replayed refutations, leaving 38 total core classes open | [`ramsey_r55_order3_eleven_empty_signature`](../ramsey_r55_order3_eleven_empty_signature) |
 | complete four-core empty-multiplicity split | exactly one versus at least two empty signatures; eight complete refutations close cores 131,139,162,173, leaving 34 core classes; every survivor has a blue-triangle-free complementary triple | [`ramsey_r55_order3_eleven_four_empty_split`](../ramsey_r55_order3_eleven_four_empty_split) |
 | equality excluded at every blue-free r4 anchor | two complete formulas retain four red and seven blue moving triangles; every blue-triangle-free complementary triple forces at least two empty projected fixed signatures; all 34 full core classes remain open | [`ramsey_r55_order3_eleven_anchor_equality`](../ramsey_r55_order3_eleven_anchor_equality) |
+| intrinsic anchor propagation in all remaining r4 cores | all 56 applicable counts encoded without changing fixed-row order; eight complete refutations replayed twice reduce 34 classes to 26, leaving 16,605 labels; 171 of 197 classes excluded cumulatively | [`ramsey_r55_order3_eleven_anchor_propagation`](../ramsey_r55_order3_eleven_anchor_propagation) |
 | C3-square actions and order 27 | sixteen of eighteen actions excluded; the two open types have one fixed point, two three-orbits and four regular nine-orbits; an index-three stabilizer argument excludes order-27 subgroups globally and order-nine subgroups in M=214 | [`ramsey_r55_c3_square_action_sweep`](../ramsey_r55_c3_square_action_sweep) |
 | complete C3-square closure | both remaining actions excluded after proven centralizer normalization, with fresh full formula reconstruction and DRAT replay; nine does not divide the automorphism-group order globally | [`ramsey_r55_c3_square_normalized_extensions`](../ramsey_r55_c3_square_normalized_extensions) |
 | subgroups of order 25 | the surviving order-five types force a unique `C_5^2` action, whose 51-variable invariant formula is certified UNSAT; an order-25 element is excluded by its fifth power | [`ramsey_r55_c5_square_automorphism_obstruction`](../ramsey_r55_c5_square_automorphism_obstruction) |
@@ -370,6 +381,17 @@ representatives are listed in
 [the anchor manifest](../ramsey_r55_order3_eleven_anchor_equality/anchors.json).
 The new theorem and its normalization await independent review. It is
 a signature restriction, not a reduction in the number of full cores.
+Applying all applicable inequalities intrinsically to the 34 canonical
+full formulas now gives eight further whole-core refutations. All bases
+match their original full-parent hashes; fresh auxiliary predicates and
+ten positive nine-subset clauses per complement enforce each count>=2.
+No fixed-row normalization is altered. Both full replays pass for every
+excluded core. The current **26** open indices are listed in
+[the propagation boundary](../ramsey_r55_order3_eleven_anchor_propagation/boundary.json).
+This new full-extension consequence and the inherited anchor theorem
+await independent review. The next proposed structural boundary is
+whether an empty four-bit fixed signature exists; no such split has
+been started in the propagation package.
 
 The finished ten-cycle chain proceeded through the four-versus-six
 internal-color split, 94 of 98 anchor exclusions, and twenty further
