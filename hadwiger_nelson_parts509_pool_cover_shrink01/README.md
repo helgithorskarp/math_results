@@ -121,3 +121,62 @@ The trust boundary is the exact coordinate data, parsing and arithmetic,
 the explicit colourings and restriction argument, and ordinary software
 execution. All claims retain every L vertex and use only this specified
 pool. Other planar graphs and geometric families are outside the result.
+
+## Residual after the sixteen replacements
+
+A further exact certificate shows that the enlarged published cover still
+admits a four-colourable residual. The selection in
+[postshrink_residual.json](postshrink_residual.json) deletes 28 S points and
+adds 27 Q5 points, giving 508 vertices and 2404 strict unit edges. Its 134
+selected pool points all have degree at least four. It meets every one of
+the 24,821 rows (17,283 distinct sets) in the seven pinned public families:
+the a=0,...,5 cover, S-only cover, a=6 cover, a=7 cover, first residual cut,
+sixteen refinements, and sixteen subset replacements.
+
+An explicit colouring extends this selection to 646 vertices and all 3102
+surviving unit edges. Its complement D has 31 points (12 S and 19 Q5), and
+is disjoint from the residual selection X. Thus every non-four-colourable
+L union Y must meet D, while X meets every previous published clause and
+misses D. The new positive clause strictly refines this specified public
+cover even on the size/degree-constrained domain: X is the separating
+witness. This does not assert minimality of D. The earlier rows and their
+certificates are retained unchanged.
+
+Reproduce from the repository root with Python 3.11 standard library:
+
+```sh
+python3 hadwiger_nelson_parts509_pool_cover_shrink01/verify_postshrink.py
+```
+
+Expected: `POST-SHRINK RESIDUAL AND NEW KILLING SET VERIFIED`,
+`candidate_vertices=508`, `candidate_edges=2404`, `killing_size=31`,
+`public_family_distinct_sets=17283`, and `missed_public_sets=0`.
+[postshrink_manifest.json](postshrink_manifest.json) pins the public inputs;
+[postshrink_expected.json](postshrink_expected.json) gives exact counts and
+hashes. The compact certificate is 1074 bytes, SHA-256
+`4df4c2cb87ef6d3ece25f72ecbba7aa6cad46ea6b6e98636f852a52b0c74b782`.
+The explicit complement colouring also colours the candidate
+by restriction. No SAT verdict is needed for these public claims.
+
+Discovery used one bounded Kissat 4.0.4 call, seed 20609, on the exact
+remaining-pool master augmented by the sixteen subset clauses. Its 36,520
+local killing clauses were all directly rechecked before use. The
+12,799-variable, 155,993-clause formula had SHA-256
+`c50e974411286477f40afced4acd49de5c185472623c7649867b75ab4fbfcd1d`.
+The 600-second-bounded call returned SAT in 52.181 seconds; all model
+clauses and decoded conditions were checked. A full-graph two-bit colouring
+formula, with triangle (0,149,152) pinned to colours (0,1,2), returned SAT
+in 0.767 seconds within a 300-second bound. Every graph edge was checked
+before greedy fixed-colour extension. One worker was used; full batch
+wall time was 69.124 seconds and child peak RSS was 122652 KiB.
+
+A second author implementation reconstructed the original Mathematica
+coordinates, checked the candidate against all 36,520 local killing sets,
+and directly checked the candidate and extension colourings in 4.610
+seconds. The public checker separately uses the reviewed integer geometry
+and verifies the witness against only the explicitly pinned public family.
+The larger private local cover is not required for the public theorem;
+no public reproducibility of the full local master is claimed here.
+Solver traces from the two SAT calls are local search records, not UNSAT
+certificates. No family closure, additional closed shape, cardinality
+lower bound, or five-chromatic graph is established.
