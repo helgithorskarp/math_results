@@ -72,8 +72,9 @@ In the four-versus-seven branch, the new
 gives a complete cover by **197 action classes**, containing all 115543
 locally valid labeled cores. Each representative fits the existing
 full-graph normalization and has eighteen checked primary units.
-This local cover awaits independent review; all 197 full extensions
-are untested at this stage, and the branch remains open.
+This complete cover and its full-parent normalization now have an
+[accepted independent review](../ramsey_r55_order3_eleven_blue_k4_exclusion_review1).
+The later results below prune its full extensions; the branch remains open.
 The subsequent [fixed-vertex theorem](../ramsey_r55_order3_eleven_four_fixed)
 constructs four valid 22-vertex extensions for every core, so the core
 plus ten uniform fixed vertices cannot eliminate any of these cases.
@@ -92,8 +93,18 @@ at most seven incidences. The six pair vertices each need at least
 two such incidences to keep their red degrees at most 24, requiring
 at least twelve. This hand proof uses the full moving remainder and
 R(4,5)=25; its exact thirteen-row certificate sums to `0 >= 5`.
-The result awaits independent review. The remaining 79 full extensions
-and both three-versus-eight cores stay open.
+This exclusion now has the same accepted independent review, including
+the complete core cover and its full-parent normalization.
+The subsequent [bounded full-extension sweep](../ramsey_r55_order3_eleven_residual_sweep)
+tests all 79 remaining classes with the entire 43-vertex parent and exactly
+eighteen core units. It refutes **34 additional classes**, leaving **45**
+open four-versus-seven classes. All 34 full DRAT proofs pass replay and
+are replayed again after fresh reconstruction of all 79 complete formulas.
+Thus 152 of the original 197 classes are excluded; 85,789 of the original
+115,543 locally valid labeled cores are covered. The new refutations await
+independent review. Every remaining case returned UNKNOWN at the fixed
+ten-second solver limit, and both three-versus-eight cores remain open.
+The global minimum moving count stays eleven.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
@@ -153,6 +164,7 @@ to the known lower bound for `R(5,5)`.
 | four minority triangles at eleven cycles | 108 local red-K5 obstructions leave 115543 labeled cores, partitioned into 197 normalizer classes with compatible full-graph representatives and eighteen checked primary units; no extension verdict | [`ramsey_r55_order3_eleven_four_core`](../ramsey_r55_order3_eleven_four_core) |
 | ten uniform fixed vertices on four minority triangles | all 197 cores have four explicit valid 22-vertex extensions; for 118 blue-K4 cores, ten is maximum and all equality extensions have singleton/pair signatures and exactly those four edge patterns; no full 43-vertex verdict | [`ramsey_r55_order3_eleven_four_fixed`](../ramsey_r55_order3_eleven_four_fixed) |
 | full seven-blue-triangle incidence obstruction | blue-K4 minority cores require at least 12 fixed-pair/blue-triangle incidences but permit at most 7; excludes 118 of 197 full core classes, leaving 79, by a hand proof and exact row-sum certificate | [`ramsey_r55_order3_eleven_blue_k4_exclusion`](../ramsey_r55_order3_eleven_blue_k4_exclusion) |
+| residual four-versus-seven full-extension sweep | all 79 complete 43-vertex formulas audited; 34 new refutations replayed twice, leaving 45 explicit UNKNOWN cases; 152 of 197 total core classes excluded | [`ramsey_r55_order3_eleven_residual_sweep`](../ramsey_r55_order3_eleven_residual_sweep) |
 | C3-square actions and order 27 | sixteen of eighteen actions excluded; the two open types have one fixed point, two three-orbits and four regular nine-orbits; an index-three stabilizer argument excludes order-27 subgroups globally and order-nine subgroups in M=214 | [`ramsey_r55_c3_square_action_sweep`](../ramsey_r55_c3_square_action_sweep) |
 | complete C3-square closure | both remaining actions excluded after proven centralizer normalization, with fresh full formula reconstruction and DRAT replay; nine does not divide the automorphism-group order globally | [`ramsey_r55_c3_square_normalized_extensions`](../ramsey_r55_c3_square_normalized_extensions) |
 | subgroups of order 25 | the surviving order-five types force a unique `C_5^2` action, whose 51-variable invariant formula is certified UNSAT; an order-25 element is excluded by its fifth power | [`ramsey_r55_c5_square_automorphism_obstruction`](../ramsey_r55_c5_square_automorphism_obstruction) |
@@ -289,8 +301,15 @@ full-graph information; no core is excluded by the fixed-only relaxation.
 Using all seven blue moving triangles now excludes the 118 blue-K4
 cores by the twelve-versus-seven incidence contradiction. A remaining
 four-versus-seven core must therefore be one of the 79 catalog entries
-with no blue K4. This new full-extension exclusion has a hand proof
-but awaits independent review; it does not decide any of those 79 entries.
+with no blue K4. The hand exclusion and complete marked-action cover are
+now independently accepted. The subsequent full-parent sweep excludes 34
+of those 79 entries, so the compatible core must lie in the **45 open
+indices** listed in
+[the result manifest](../ramsey_r55_order3_eleven_residual_sweep/result.json).
+These new computational exclusions have full replay and fresh formula
+reconstruction but await independent review. Four-versus-seven indices
+11 and 13 excluded there are unrelated to the two open three-versus-eight
+cores with the same numeric indices in a different catalog.
 
 The finished ten-cycle chain proceeded through the four-versus-six
 internal-color split, 94 of 98 anchor exclusions, and twenty further
