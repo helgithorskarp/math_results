@@ -1,0 +1,52 @@
+{
+  "compiler": "g++ Debian12.2.0-14+deb12u1 12.2.0",
+  "complete_filter_runs": 1,
+  "entrywise_checks": [
+    "Native510point coordinates",
+    "All1712 centre neighbour lists",
+    "All103976 survivor triples",
+    "All122 fresh candidates"
+  ],
+  "filter_seconds": 2.250781399998232,
+  "filter_workers": 1,
+  "independent_audit_seconds": 34.105463404004695,
+  "local_generated_bytes": {
+    "H_labels.json": 2443,
+    "audit.json": 6818,
+    "centres.json": 268832,
+    "filter.json": 104,
+    "fresh_candidates.json": 23322,
+    "points.txt": 18745,
+    "rejected.json": 3,
+    "summary.json": 1228,
+    "survivors.tsv": 1158843
+  },
+  "native_colour_queries": 0,
+  "new_independent_author_review_claimed": false,
+  "peak_memory_measured": false,
+  "producer_seconds": 47.50161668199871,
+  "python_version": "3.11.2",
+  "record_improvement": false,
+  "release_flags": [
+    "-std=c++20",
+    "-O3",
+    "-Wall",
+    "-Wextra",
+    "-Wconversion",
+    "-Wshadow",
+    "-pedantic"
+  ],
+  "sanitizer_controls_passed": true,
+  "sanitizer_flags": [
+    "-std=c++20",
+    "-O1",
+    "-g",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer",
+    "-Wall",
+    "-Wextra",
+    "-Wconversion",
+    "-Wshadow",
+    "-pedantic"
+  ]
+}
