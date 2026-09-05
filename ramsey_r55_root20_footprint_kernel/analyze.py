@@ -46,6 +46,15 @@ def pair_colors(red, first, second):
     return [c for c in (False, True) if not any(common[c] & t == t for t in cliques(red, c, 3))]
 
 
+def clone_capacity(red, footprint):
+    """Exact capacity for pairwise-blue copies with H and its universal root."""
+    full = (1 << len(red)) - 1
+    require(type(footprint) is int and 0 <= footprint <= full, "footprint bounds")
+    complement = full ^ footprint
+    omega = next((k for k in (4,3,2,1) if any(complement & q == q for q in cliques(red,False,k))),0)
+    return min(3,4-omega)
+
+
 def calculate(red):
     n, full = len(red), (1 << len(red)) - 1
     require(n == 20, "this census is for H20")
@@ -73,7 +82,10 @@ def calculate(red):
               "domain_size_histograms": {str(t):dict(sorted(Counter(s.bit_count() for s in ds).items())) for t,ds in domains.items()},
               "identical_footprint_blue_allowed": {str(t):sum(not bt[full ^ s] for s in ds) for t,ds in domains.items()},
               "identical_footprint_red_allowed": {str(t):sum(not rt[s] for s in ds) for t,ds in domains.items()},
-              "claim": "H20 has no Ramsey(4,5;21) vertex extension; exact one/two-outside-vertex interface only",
+              "exact_blue_clone_capacity_histograms": {str(t):dict(sorted(Counter(
+                  1 if bt[full ^ s] else 2 if edges[full ^ s] < (n-s.bit_count())*(n-s.bit_count()-1)//2 else 3
+                  for s in ds).items())) for t,ds in domains.items()},
+              "claim": "H20 has no Ramsey(4,5;21) vertex extension; exact pair and clone interfaces, not full 43-vertex extension",
               "full_43_extension_decided": False}
     return report, domains, minimal
 

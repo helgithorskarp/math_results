@@ -125,6 +125,17 @@ Consequently:
   footprints for which even a pair of copies is allowed are 1,365, 2,363,
   and 10,630 in the three classes, respectively. This does not certify any
   multiplicity as globally realizable.
+- In fact the exact capacity of pairwise-blue copies **inside the core-plus-
+  copies graph** is `min(3,4-omega_blue(H[D]))`, where D is their common blue
+  footprint and `omega_blue(empty)=0`. Unary validity guarantees this clique
+  number is at most three. A blue clique of size k in D together with
+  `5-k` copies would be a blue K5; four copies together with r are also
+  forbidden. Conversely these exhaust the possible blue K5s in this small
+  graph, and a red K5 cannot use two copies. Thus the capacity is one when D
+  has a blue triangle, two when D has a blue edge but no blue triangle, and
+  three when D has no blue edge. `analyze.clone_capacity` implements this
+  exact higher-order test. It does not decide whether a permitted number of
+  copies can coexist with other outside vertices, degrees or profiles.
 - For each of the 104 red triangles Q of H, at most three outside footprints
   can contain Q. All such vertices are pairwise blue by the red pair rule,
   so four again contradict the blue-K4-free outside graph.
@@ -169,7 +180,10 @@ Controls test the pair reduction against **32,256 complete literal seven-vertex
 graphs**: every red-K4-free four-vertex core, every pair of footprints, and
 both outside edge colors, with the universal root retained. All five-subsets
 are tested. Eight malformed graphs, three invalid footprints and three
-malformed domain streams are rejected. Normal and optimized Python agree.
+malformed domain streams are rejected. Another 4,032 literal graphs test every
+footprint and one through four pairwise-blue copies on the same 63 small
+cores, checking all five-sets against the exact clone capacity. Normal and
+optimized Python agree.
 
 This is author validation with different algorithms, **not independent peer
 review or proof-assistant formalization**. Trust remains in the short

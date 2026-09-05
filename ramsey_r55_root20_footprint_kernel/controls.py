@@ -16,7 +16,7 @@ def require(ok, message):
 
 def run():
     pairs, five_sets = list(combinations(range(4),2)), list(combinations(range(7),5))
-    cases = 0
+    cases, clones = 0, 0
     for bits in range(63):  # The one excluded four-vertex core is the red K4.
         edges = {e for i,e in enumerate(pairs) if bits >> i & 1}
         rows = analyze.decode({"n":4,"red_edges":[list(e) for e in sorted(edges)]})
@@ -34,6 +34,15 @@ def run():
                     ramsey = not any(len({e in actual for e in combinations(q,2)}) == 1 for q in five_sets)
                     require(ramsey == bool(unary and color in allowed), "literal pair-kernel equivalence")
                     cases += 1
+        for footprint in range(16):
+            cap = analyze.clone_capacity(rows,footprint)
+            for copies in range(1,5):
+                actual = set(edges) | {(v,4) for v in range(4)}
+                actual |= {(v,w) for v in range(4) for w in range(5,5+copies) if footprint >> v & 1}
+                ramsey = not any(len({e in actual for e in combinations(q,2)}) == 1
+                                 for q in combinations(range(5+copies),5))
+                require(ramsey == (copies <= cap), "literal blue-clone capacity")
+                clones += 1
     invalid = [{"n":True,"red_edges":[]}, {"n":21,"red_edges":[]},
                {"n":3,"red_edges":[[0,0]]}, {"n":3,"red_edges":[[1,0]]},
                {"n":3,"red_edges":[[0,3]]}, {"n":3,"red_edges":[[0,1],[0,1]]},
@@ -64,7 +73,7 @@ def run():
                 raise ValueError("bad domain stream accepted")
         path.write_text("1 00001\n")
         verify.compare_file(path,{1:[1]})
-    return {"literal_graph_cases":cases,"core_graphs":63,"malformed_graphs_rejected":len(invalid),
+    return {"literal_graph_cases":cases,"literal_blue_clone_cases":clones,"core_graphs":63,"malformed_graphs_rejected":len(invalid),
             "malformed_footprints_rejected":3,"malformed_domain_streams_rejected":3,
             "status":"PASS"}
 
