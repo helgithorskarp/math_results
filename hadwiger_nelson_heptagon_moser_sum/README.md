@@ -1,5 +1,10 @@
 # A four-chromatic 143-point heptagon–Moser-spindle sum
 
+**Subsequent all-collision closure:** [COLLISIONS.md](COLLISIONS.md) proves
+that no further collision rotations exist beyond the 252 already closed.
+Injective sums with contacts at unequal factor lengths remain open.
+The earlier milestone below retains its historical scope.
+
 **Subsequent complete stratum:** [CONTACTS.md](CONTACTS.md) proves that all
 252 unit/unit contact rotations of these same factors are four-chromatic,
 using 36 symmetry representatives and explicit colourings. Other factor

@@ -1,5 +1,10 @@
 # Closure of all unit/unit contact rotations
 
+**Subsequent all-collision closure:** [COLLISIONS.md](COLLISIONS.md) proves
+that no further collision rotations exist beyond the 252 already closed.
+Injective sums with contacts at unequal factor lengths remain open.
+The earlier milestone below retains its historical scope.
+
 **Theorem.** Let H and M be exactly the 21-point heptagon motif and
 seven-point spindle defined in [PROOF.md](PROOF.md). Among relative
 rotations r, there are exactly 252 for which two nonzero **unit** factor
