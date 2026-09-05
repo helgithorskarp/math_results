@@ -47,12 +47,18 @@ leaves only two nine-vertex cores: red words 100,110,110 or 110,110,101
 on minority pairs 01,02,12. This builds on the complete fourteen-class
 [minority-core reduction](../ramsey_r55_order3_eleven_minority_core) and
 its eleven refutations, then excludes core 100,100,100 with a further
-full refutation replayed twice. Both refinements await independent review.
-At most nine fixed vertices have nonempty minority signatures, forcing
-the first normalized fixed vertex to be blue to the nine minority vertices.
-The abstract bound and equality case have a self-contained proof and sharp
-19-vertex witnesses. The new exclusion has internal checks; the two
-remaining extensions returned UNKNOWN and the minimum stays eleven.
+full refutation replayed twice. Both the
+[core cover](../ramsey_r55_order3_eleven_minority_core_review1) and the
+[signature reduction](../ramsey_r55_order3_eleven_signature_bound_review1)
+now have accepted independent reviews. The abstract bound and equality
+case have a self-contained proof and sharp 19-vertex witnesses.
+The new [equality-case exclusion](../ramsey_r55_order3_eleven_empty_split)
+strengthens the full three-versus-eight branch: **at least two fixed
+vertices are blue to all nine minority vertices**. Each of the two cores
+is split into exactly one versus at least two empty signatures. Both
+exactly-one cases have full refutations replayed twice; both other cases
+return UNKNOWN. This strengthening awaits independent review, keeps both
+cores open, and leaves the minimum moving count at eleven.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
@@ -107,6 +113,7 @@ to the known lower bound for `R(5,5)`.
 | eleven moving 3-cycles, partial | complete formulas and checked DRAT proofs exclude normalized internal red counts 0,1,2,5; only three-versus-eight and four-versus-seven remain open, with the minimum moving count unchanged | [`ramsey_r55_order3_eleven_cycle_obstruction`](../ramsey_r55_order3_eleven_cycle_obstruction) |
 | three minority triangles at eleven cycles | fourteen normalizer classes cover all 343 labeled cores; eleven full-extension refutations leave three explicit nine-vertex cores, containing 54 labeled forms; all three extensions remain open | [`ramsey_r55_order3_eleven_minority_core`](../ramsey_r55_order3_eleven_minority_core) |
 | signatures at eleven cycles | at most nine uniform vertices have nonempty red signatures to three red triangles; sharp equality fixes multiplicities; 1623 primary consequences exclude core 8 and leave cores 11,13 open | [`ramsey_r55_order3_eleven_signature_bound`](../ramsey_r55_order3_eleven_signature_bound) |
+| equality excluded at eleven cycles | full extensions of both residual three-versus-eight cores with exactly one empty fixed signature are refuted; at least two fixed signatures must be empty; both residual cores remain open | [`ramsey_r55_order3_eleven_empty_split`](../ramsey_r55_order3_eleven_empty_split) |
 | C3-square actions and order 27 | sixteen of eighteen actions excluded; the two open types have one fixed point, two three-orbits and four regular nine-orbits; an index-three stabilizer argument excludes order-27 subgroups globally and order-nine subgroups in M=214 | [`ramsey_r55_c3_square_action_sweep`](../ramsey_r55_c3_square_action_sweep) |
 | complete C3-square closure | both remaining actions excluded after proven centralizer normalization, with fresh full formula reconstruction and DRAT replay; nine does not divide the automorphism-group order globally | [`ramsey_r55_c3_square_normalized_extensions`](../ramsey_r55_c3_square_normalized_extensions) |
 | subgroups of order 25 | the surviving order-five types force a unique `C_5^2` action, whose 51-variable invariant formula is certified UNSAT; an order-25 element is excluded by its fifth power | [`ramsey_r55_c5_square_automorphism_obstruction`](../ramsey_r55_c5_square_automorphism_obstruction) |
@@ -213,12 +220,13 @@ normalizer invariant. Its sorted red cross weights and distinguished-phase
 sum must be (1,2,2) with zero sum or (2,2,2) with nonzero sum.
 The three-core artifact defines the phase convention and compatible
 full-graph relabelings; signature propagation supplies the additional
-exclusion of (1,1,1) with zero sum. Both refinements have internal
-validation and await independent review.
-For each, at least one fixed vertex is blue to all three minority
-triangles. If exactly one is, the nonempty signatures consist of two
-copies of each singleton and one of each pair. The full extensions of
-these two cores are still unresolved.
+exclusion of (1,1,1) with zero sum. Both refinements now have accepted
+independent reviews.
+For each, at least two fixed vertices must be blue to all three minority
+triangles. The exactly-one case would have two copies of each singleton
+and one of each pair; both full equality extensions are newly refuted.
+This last strengthening awaits independent review. The full extensions
+with at least two empty signatures are still unresolved.
 
 The finished ten-cycle chain proceeded through the four-versus-six
 internal-color split, 94 of 98 anchor exclusions, and twenty further
@@ -324,8 +332,8 @@ cross words give 343 labeled nine-vertex cores. Their unordered weights
 and zero/nonzero distinguished-phase sum classify fourteen normalizer
 orbits. Eleven full-extension refutations leave only words 100,100,100;
 100,110,110; or 110,110,101, on pairs 01,02,12. The three cubes returned
-UNKNOWN at 60 seconds. This new core restriction has internal checks
-and awaits independent review; the minimum moving count remains eleven.
+UNKNOWN at 60 seconds. This core restriction now has an accepted
+independent review; the minimum moving count remains eleven.
 The later three-triangle uniform-signature lemma gives I<=12 and X<=6,
 where I counts fixed red incidences and X singleton signatures. With Z
 triple signatures, twice the nonempty count is I+X-Z<=18. Thus at most
@@ -333,8 +341,13 @@ nine fixed vertices have nonempty signatures, forcing at least one empty
 among ten. Equality uniquely fixes all nonempty multiplicities. The three
 forced first-row bits and 1620 proved signature cuts give a full replayed
 refutation of core8. Cores11 and13 remain UNKNOWN, and the four-versus-seven
-split is unchanged. The new bound is locally sharp on 19-vertex witnesses;
-the full-extension exclusion has internal validation and awaits review.
+split is unchanged. The bound is locally sharp on 19-vertex witnesses;
+the lemma and full-extension exclusion now have an accepted independent
+review. The subsequent complete four-case split into exactly one versus
+at least two empty signatures refutes both equality branches. Each uses
+27 further incidence units and a full proof replayed twice. Thus at least
+two fixed vertices are blue to the minority core; both remaining cores
+with that restriction return UNKNOWN. This strengthening awaits review.
 The earlier order-25 theorem uses the then-surviving fixed counts three and eight to
 classify any `C_5^2` action as `1^3 5^3 25^1`; its exact invariant formula is
 UNSAT. A cyclic subgroup of order 25 is excluded because the fifth power of

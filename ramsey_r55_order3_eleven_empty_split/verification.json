@@ -1,0 +1,130 @@
+{
+  "bases": {
+    "11": {
+      "audit": {
+        "clauses": 617204,
+        "complete_prefix": true,
+        "core_units": 9,
+        "signature_clauses": 1623,
+        "variables": 34268
+      },
+      "formula": {
+        "bytes": 24873705,
+        "sha256": "edcb237d03e46805495c5151f4589d44543f0450c30564108bbefb7dea2905e1"
+      }
+    },
+    "13": {
+      "audit": {
+        "clauses": 617204,
+        "complete_prefix": true,
+        "core_units": 9,
+        "signature_clauses": 1623,
+        "variables": 34268
+      },
+      "formula": {
+        "bytes": 24873704,
+        "sha256": "3e795444d8ce43c10c52f20f382b0f981605f47223fc24204a22e8553c132236"
+      }
+    }
+  },
+  "cases": [
+    {
+      "audit": {
+        "appended_units": 27,
+        "clauses": 617231,
+        "complete_prefix": true,
+        "variables": 34268
+      },
+      "formula": {
+        "bytes": 24873882,
+        "sha256": "66a189985febad0f8e08e988cc79aef498a740cf37cfbdf99c7956248a9a5c5d"
+      },
+      "name": "c11_one",
+      "replay": {
+        "exit_code": 0,
+        "rat_core_lemmas": 86,
+        "seconds": 3.928299,
+        "verified": true
+      },
+      "status": "excluded"
+    },
+    {
+      "audit": {
+        "appended_units": 3,
+        "clauses": 617207,
+        "complete_prefix": true,
+        "variables": 34268
+      },
+      "formula": {
+        "bytes": 24873726,
+        "sha256": "ec5b3113a2a1bb845cf0d22857aa728c937eb629e2730a0d47ba69413a32b96d"
+      },
+      "name": "c11_many",
+      "status": "open"
+    },
+    {
+      "audit": {
+        "appended_units": 27,
+        "clauses": 617231,
+        "complete_prefix": true,
+        "variables": 34268
+      },
+      "formula": {
+        "bytes": 24873881,
+        "sha256": "e6fa2416d82fecdfbf09b26c1bd81639bd7d97cea248bae8d33661b474223477"
+      },
+      "name": "c13_one",
+      "replay": {
+        "exit_code": 0,
+        "rat_core_lemmas": 89,
+        "seconds": 3.877811,
+        "verified": true
+      },
+      "status": "excluded"
+    },
+    {
+      "audit": {
+        "appended_units": 3,
+        "clauses": 617207,
+        "complete_prefix": true,
+        "variables": 34268
+      },
+      "formula": {
+        "bytes": 24873725,
+        "sha256": "57e6219d14e7eefd43881657cfac7d3c06b79127095ced6dee1df257e2d0f99e"
+      },
+      "name": "c13_many",
+      "status": "open"
+    }
+  ],
+  "elapsed_seconds": 38.13028,
+  "excluded": [
+    "c11_one",
+    "c13_one"
+  ],
+  "format": "r55-k11-empty-split-verification-v1",
+  "open": [
+    "c11_many",
+    "c13_many"
+  ],
+  "parent": {
+    "bytes": 24811001,
+    "clauses": 615572,
+    "edge_orbits": 331,
+    "primary_variables": 320,
+    "ramsey_clauses": 528905,
+    "red_cycles": 3,
+    "sha256": "82f27b524e893d237f7a478c43bc9d49ff559faaa28e260d688d1591bdfaad20",
+    "variables": 34268
+  },
+  "proof_replays": 2,
+  "reconstructed_formulas": 4,
+  "rejected_mutations": [
+    "missing_equality_unit",
+    "numeric_mask_order",
+    "unsupported_empty_axiom",
+    "wrong_many_polarity",
+    "wrong_parent_prefix"
+  ],
+  "verified": true
+}
