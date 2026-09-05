@@ -1,0 +1,58 @@
+{
+  "active_background_jobs": 0,
+  "baseline": {
+    "elapsed_seconds": 600.2075856599986,
+    "formula_sha256": "20f03643727208fafbe960bea868e443ea6fb8e0788c5846c8fb93c8ef660e20",
+    "interpretation": "Both bounded runs were unknown; these observations establish no runtime superiority or coverage fraction.",
+    "maximum_child_rss_kib": 125992,
+    "qdimacs_verdict": "s cnf -1 3852 74956"
+  },
+  "completed_at": "2026-09-05T09:50:35.016270+00:00",
+  "decision": "NO-GO for automatic runtime extension of this degree-restricted DepQBF configuration; require a materially different certificate mechanism and bounded calibration before another full-family run",
+  "formula": {
+    "bytes": 1807553,
+    "clauses": 92468,
+    "existential": 11540,
+    "sha256": "08e5a931743148cb50534d0d5e4d8cd5687137d229844148215a0a080c77c9d6",
+    "universal": 303,
+    "variables": 11843
+  },
+  "limits": {
+    "address_space_bytes": 4294967296,
+    "proof_tracing": false,
+    "solver_seconds": 600,
+    "wall_watchdog_seconds": 615,
+    "workers": 1
+  },
+  "log": {
+    "bytes": 79370,
+    "sha256": "5553c561aed9131ce219231a6449595c83298520a464ae45ef1ec51b06209277"
+  },
+  "new_graph_order_bound": false,
+  "result": {
+    "candidate_assignment_returned": false,
+    "elapsed_seconds": 600.2448339620023,
+    "native_truth": null,
+    "new_family_certificate": false,
+    "qdimacs_verdict": "s cnf -1 11843 92468",
+    "resources": {
+      "maximum_child_rss_kib": 117488,
+      "system_seconds": 3.90286,
+      "user_seconds": 596.247317
+    },
+    "returncode": 0,
+    "watchdog_fired": false
+  },
+  "solver": {
+    "flags": [
+      "--qdo",
+      "-v",
+      "--max-secs=600"
+    ],
+    "sha256": "15b19e5ce9f3e9a8dfa9503c72c336d92b26f59b0c1ce6f5cf59a68093e89378",
+    "version": "Debian DepQBF 5.01-3 amd64"
+  },
+  "started_at": "2026-09-05T09:40:34.771473+00:00",
+  "status": "UNKNOWN at declared solver limit",
+  "target_record_established": false
+}

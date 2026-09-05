@@ -9,9 +9,10 @@ four-colourable beside the fixed 374-point L.
 [PROOF.md](PROOF.md) gives the reduction, guarded CNF semantics and an
 explicit colouring-extension argument. The degree condition is classical
 and already appeared in the earlier shape and cover work. Its guarded
-quantified implementation is the contribution here. **The revised full
-formula is unsolved; no new family closure, lower bound or five-chromatic
-graph is established.**
+quantified implementation is the contribution here. **A bounded full-family
+pilot returned UNKNOWN at 600 seconds. No new family closure, lower bound
+or five-chromatic graph is established.** See [PILOT.md](PILOT.md) for the
+measured result and reproduction commands.
 
 ## Why the family quantifier matters
 
@@ -88,13 +89,16 @@ The new formula adds an escape witness for a selected degree violation.
 Each witness condition uses a small conditional sequential counter; every
 ordinary colouring clause uses the common escape guard. The exact budget
 counter stays unguarded. The encoding has more variables and clauses than
-the previous formula; no performance improvement is asserted before a
-new bounded family pilot.
+the previous formula. Both the earlier unfiltered pilot and the changed
+degree-restricted pilot returned UNKNOWN at their 600-second limits;
+neither runtime superiority nor a coverage fraction is established.
 
-This completes the reduction-and-validation milestone. The next useful
-step is one bounded pilot of this changed formulation after coordination.
-The previous unchanged 600-second configuration is not rerun here, and
-the isolated cut/shrink loop remains paused. A native false result still
+The reduction-and-validation milestone and its bounded native pilot are
+complete. Automatic runtime extension of either tested full-family
+configuration is paused, as is the isolated cut/shrink loop. Before another
+family run, assess a materially different certificate mechanism and
+validate it on a bounded calibration; no such next phase has started.
+A native false result still
 needs exact selection decoding and an independent non-four-colourability
 certificate; a true result needs a checked quantified proof or complete
 colouring strategy. A five-colouring is additionally required for a

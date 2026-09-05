@@ -15,7 +15,7 @@ that necessary condition to the two-block quantified dual, proves its
 family-level semantics, and validates the new guarded encoding and
 colouring-extension procedure.
 
-No full-family solve, new closed stratum, order lower bound or
+No decided full-family result, new closed stratum, order lower bound or
 five-chromatic graph is established. All existing graph and interface
 inputs retain their preceding trust boundaries.
 
@@ -184,7 +184,9 @@ not a new search candidate or killing-set refinement.
 The native calibration runs only changed small formulas. Unchanged
 fixtures and fixed real inputs are identified by byte hashes and not
 rerun. It supplies parser/solver calibration, not an independent proof
-of the full family. The full revised instance is generated but unsolved.
+of the full family. The full revised instance remains unsolved. A subsequent
+bounded native pilot returned UNKNOWN at 600 seconds; [PILOT.md](PILOT.md)
+records that observation and its limits.
 
 Explicit trust boundaries are the pinned exact geometry and interface
 classification, the prior base-encoding semantics, the at-most encoder,
