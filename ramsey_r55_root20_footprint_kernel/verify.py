@@ -84,7 +84,11 @@ def audit(work):
                 "domain_size_histograms":{str(t):{str(k):v for k,v in sorted(Counter(s.bit_count() for s in ds).items())} for t,ds in domains.items()},
                 "identical_footprint_blue_allowed":{str(t):sum(not b3[full ^ s] for s in ds) for t,ds in domains.items()},
                 "identical_footprint_red_allowed":{str(t):0 for t in domains},
-                "claim":"H20 has no Ramsey(4,5;21) vertex extension; exact one/two-outside-vertex interface only",
+                "exact_blue_clone_capacity_histograms":{str(t):{str(k):v for k,v in sorted(Counter(
+                    1 if b3[full ^ s] else 2 if any((u,v) not in red
+                    for u,v in combinations([i for i in range(20) if not (s >> i & 1)],2)) else 3
+                    for s in ds).items())} for t,ds in domains.items()},
+                "claim":"H20 has no Ramsey(4,5;21) vertex extension; exact pair and clone interfaces, not full 43-vertex extension",
                 "full_43_extension_decided":False}
     for name in ("domains.txt", "minimal.txt"):
         expected[name + "_sha256"] = sha((work / name).read_bytes())
