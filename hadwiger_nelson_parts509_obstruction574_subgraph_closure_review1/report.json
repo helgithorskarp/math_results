@@ -1,0 +1,39 @@
+{
+  "certificates": {
+    "all_subgraphs_through_order": 508,
+    "all_such_subgraphs_four_colourable": true,
+    "assembled_witness_family_sha256": "fff0bfe209c128f6dc7dc697f997b9d58f593eeb7907d5fc26c85cf2b8870d3b",
+    "distinct_forced_vertices": 509,
+    "mutation_controls_rejected": 3,
+    "new_L_deletion_colourings": 309,
+    "old_pool_deletion_colourings": 200,
+    "retained_edges_per_colouring": {
+      "maximum": 2703,
+      "minimum": 2666
+    },
+    "verified_retained_edge_incidences": 1372888
+  },
+  "geometry": {
+    "basis": "1,sqrt(3),sqrt(5),sqrt(15),sqrt(11),sqrt(33),sqrt(55),sqrt(165)",
+    "coordinate_denominator": 288,
+    "degree_maximum": 41,
+    "degree_minimum": 4,
+    "edge_sha256": "37d330b472e101c001e04aca6a1dc52ddf4f048d025adce0794f4e521682f575",
+    "strict_unit_edges": 2707,
+    "unordered_pairs_tested": 164451,
+    "vertices": 574
+  },
+  "inputs": {
+    "hadwiger_nelson_parts509_completion_census_degree9/points.tsv": "f69ce1adef2f47c666f57c5e2096cb766fbc16654d75e3b24fbf0f5913d5be50",
+    "hadwiger_nelson_parts509_interface_lemma/interface_L.json": "a160340461815e57c46936fb7d0001b74881fe753d904a5ddc7fb866cfc29637",
+    "hadwiger_nelson_parts509_obstruction574_subgraph_closure/certificate.json": "647c3011ac61449b274b1b8815ce17d1da6c948da54ba6ed79546eb856c20469",
+    "hadwiger_nelson_parts509_pool_obstruction574/certificate.json": "327065c465ce0a52f7f5e783d5810ac68895edafb38d404feb031ff01380987c",
+    "hadwiger_nelson_parts509_s_replacement_budget/pool_S.json": "fd636275fccdd84266655ba9ada22412f7d2aef66a0ad66f6ee5bd738570939e",
+    "hadwiger_nelson_parts509_swap_closure/completion_points.json": "b82909c48ce088deb89b555f4c8fa554bba44030570fdaaf0b9b607e9552a5a6"
+  },
+  "logical_bridge": "A subgraph on at most 508 vertices omits some member v of the 509-element forced set; restriction of the checked colouring of H-v is therefore a proper four-colouring, also after arbitrary edge deletion.",
+  "reviewed_source_commit": "6fd4065d7351caf6959453351fe6f5545c54a2e1",
+  "solver_or_negative_certificate_used": false,
+  "target_scope": "all subgraphs of the one explicit graph H574 through order 508",
+  "verdict": "ACCEPTED"
+}
