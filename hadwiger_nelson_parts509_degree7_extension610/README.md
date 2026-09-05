@@ -1,5 +1,10 @@
 # Exact boundary for the degree-seven pool plus completion point 610
 
+**Completed follow-up:** the residual is now refuted, and this support is
+[closed through 508 vertices](../hadwiger_nelson_parts509_degree7_extension610_closure/README.md).
+The minimum obstruction order is exactly 509. The material below preserves
+the earlier reduction checkpoint and its then-unsolved residual.
+
 **Result:** In a fixed 586-point extension of the Parts degree-seven completion
 pool, every subgraph on at most 507 vertices is four-colourable. The minimum
 order of a non-four-colourable subgraph is **508 or 509**. Any possible
