@@ -1,0 +1,83 @@
+{
+  "cases": [
+    {
+      "audit": {
+        "clauses": 617204,
+        "complete_prefix": true,
+        "core_units": 9,
+        "signature_clauses": 1623,
+        "variables": 34268
+      },
+      "formula": {
+        "bytes": 24873707,
+        "sha256": "057a61e851efe4bc213dbbf17017d3c13716cc0db3b9099c28f397cfdbb301ef"
+      },
+      "index": 8,
+      "replay": {
+        "exit_code": 0,
+        "rat_core_lemmas": 821,
+        "seconds": 49.476475,
+        "verified": true
+      },
+      "status": "excluded"
+    },
+    {
+      "audit": {
+        "clauses": 617204,
+        "complete_prefix": true,
+        "core_units": 9,
+        "signature_clauses": 1623,
+        "variables": 34268
+      },
+      "formula": {
+        "bytes": 24873705,
+        "sha256": "edcb237d03e46805495c5151f4589d44543f0450c30564108bbefb7dea2905e1"
+      },
+      "index": 11,
+      "status": "open"
+    },
+    {
+      "audit": {
+        "clauses": 617204,
+        "complete_prefix": true,
+        "core_units": 9,
+        "signature_clauses": 1623,
+        "variables": 34268
+      },
+      "formula": {
+        "bytes": 24873704,
+        "sha256": "3e795444d8ce43c10c52f20f382b0f981605f47223fc24204a22e8553c132236"
+      },
+      "index": 13,
+      "status": "open"
+    }
+  ],
+  "elapsed_seconds": 78.574414,
+  "excluded": [
+    8
+  ],
+  "format": "r55-k11-signature-verification-v1",
+  "full_formula_reconstructions": 3,
+  "open": [
+    11,
+    13
+  ],
+  "parent": {
+    "bytes": 24811001,
+    "clauses": 615572,
+    "edge_orbits": 331,
+    "primary_variables": 320,
+    "ramsey_clauses": 528905,
+    "red_cycles": 3,
+    "sha256": "82f27b524e893d237f7a478c43bc9d49ff559faaa28e260d688d1591bdfaad20",
+    "variables": 34268
+  },
+  "proof_replays": 1,
+  "rejected_mutations": [
+    "missing_clause",
+    "wrong_signature_polarity",
+    "unsupported_empty_clause",
+    "wrong_parent_prefix"
+  ],
+  "verified": true
+}

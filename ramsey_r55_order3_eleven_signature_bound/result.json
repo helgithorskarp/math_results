@@ -1,0 +1,153 @@
+{
+  "cases": [
+    {
+      "audit": {
+        "clauses": 617204,
+        "complete_prefix": true,
+        "core_units": 9,
+        "signature_clauses": 1623,
+        "variables": 34268
+      },
+      "bits": "100100100",
+      "formula": {
+        "bytes": 24873707,
+        "sha256": "057a61e851efe4bc213dbbf17017d3c13716cc0db3b9099c28f397cfdbb301ef"
+      },
+      "index": 8,
+      "proof": {
+        "bytes": 49868240,
+        "sha256": "fb650c6e0f945a9987b21591d2447f59a67625a15136f19995c65e75d67047b4"
+      },
+      "replay": {
+        "exit_code": 0,
+        "rat_core_lemmas": 821,
+        "seconds": 49.278754,
+        "verified": true
+      },
+      "solve_seconds": 46.335606,
+      "solver_code": 20,
+      "status": "excluded"
+    },
+    {
+      "audit": {
+        "clauses": 617204,
+        "complete_prefix": true,
+        "core_units": 9,
+        "signature_clauses": 1623,
+        "variables": 34268
+      },
+      "bits": "100110110",
+      "formula": {
+        "bytes": 24873705,
+        "sha256": "edcb237d03e46805495c5151f4589d44543f0450c30564108bbefb7dea2905e1"
+      },
+      "index": 11,
+      "proof": {
+        "bytes": 55658685,
+        "sha256": "a9b0c252608ee1efc6dbc2f6c09d6997956bf8a7793f9a3b0d9218b158dbc6c2"
+      },
+      "solve_seconds": 60.243524,
+      "solver_code": 0,
+      "status": "open"
+    },
+    {
+      "audit": {
+        "clauses": 617204,
+        "complete_prefix": true,
+        "core_units": 9,
+        "signature_clauses": 1623,
+        "variables": 34268
+      },
+      "bits": "110110101",
+      "formula": {
+        "bytes": 24873704,
+        "sha256": "3e795444d8ce43c10c52f20f382b0f981605f47223fc24204a22e8553c132236"
+      },
+      "index": 13,
+      "proof": {
+        "bytes": 58104092,
+        "sha256": "a686969c61bde6700534ce430f99c2b913725a87653dbbd09e698539a701291e"
+      },
+      "solve_seconds": 60.25167,
+      "solver_code": 0,
+      "status": "open"
+    }
+  ],
+  "complete": true,
+  "contract": {
+    "drat_trim": {
+      "bytes": 51352,
+      "sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+    },
+    "format": "r55-k11-fixed-signatures-v1",
+    "kissat": {
+      "bytes": 546552,
+      "sha256": "2d185ea775f2c7c16d33a235ef852d2b69f0f3c8b437335b966b4a5aa6265b45"
+    },
+    "python": "3.11.2",
+    "replay_seconds": 300,
+    "solve_seconds": 60,
+    "sources": {
+      "ramsey_r55_order3_eleven_cycle_obstruction/check_formula.cpp": {
+        "bytes": 9611,
+        "sha256": "23df18de05fca300e1f20759be822e9d58a924c42a38be764beb8546939f7946"
+      },
+      "ramsey_r55_order3_eleven_cycle_obstruction/generate.py": {
+        "bytes": 6211,
+        "sha256": "e97e44491220a8d0d288912930d5f1795c8a4c86802ce66f5fc6cf374655b95b"
+      },
+      "ramsey_r55_order3_eleven_cycle_obstruction/inspect_graph.py": {
+        "bytes": 1263,
+        "sha256": "bd72c5d79400fbe66db0e0c56a13cde3d2b3efc350099c770c11bfb5c9fb5746"
+      },
+      "ramsey_r55_order3_eleven_cycle_obstruction/run.py": {
+        "bytes": 8765,
+        "sha256": "5bedca290d8bc3939de9e157fa2f1e4adef8d9828a692b88f294673a81b836f3"
+      },
+      "ramsey_r55_order3_eleven_minority_core/cover.json": {
+        "bytes": 10534,
+        "sha256": "ed47db1eb0d18e8829fe903ded99c5bb2bc9e305891297396f7b94fdc17a8b62"
+      },
+      "ramsey_r55_order3_eleven_minority_core/result.json": {
+        "bytes": 11649,
+        "sha256": "409948deda8e061ff9730f7e432cc9c1c01a216dd73f11c0b2f1897800176c01"
+      },
+      "ramsey_r55_order3_eleven_signature_bound/audit.py": {
+        "bytes": 6869,
+        "sha256": "783eec02c380041fd5a316f633c0386a0922da51a62c752ee0f7f758d5f09f4d"
+      },
+      "ramsey_r55_order3_eleven_signature_bound/controls.py": {
+        "bytes": 2247,
+        "sha256": "c8eb33d5fedaf47f54989507a9f0b3c34dd32d03f1cb362741f2e811e401be27"
+      },
+      "ramsey_r55_order3_eleven_signature_bound/model.py": {
+        "bytes": 3089,
+        "sha256": "7ceb43fedfa95580d042ca997a7b6d2afc916351e8925af8637d2d3907507c46"
+      },
+      "ramsey_r55_order3_eleven_signature_bound/run.py": {
+        "bytes": 7773,
+        "sha256": "2099f9a9a537b9d8c97f00fd3729b04cf93a6bf611bccfd6e00d8f78d6b8fcf1"
+      }
+    },
+    "workers": 2
+  },
+  "elapsed_seconds": 147.457911,
+  "excluded": [
+    8
+  ],
+  "largest_child_maxrss_kib": 259516,
+  "open": [
+    11,
+    13
+  ],
+  "parent": {
+    "bytes": 24811001,
+    "clauses": 615572,
+    "edge_orbits": 331,
+    "primary_variables": 320,
+    "ramsey_clauses": 528905,
+    "red_cycles": 3,
+    "sha256": "82f27b524e893d237f7a478c43bc9d49ff559faaa28e260d688d1591bdfaad20",
+    "variables": 34268
+  }
+}
