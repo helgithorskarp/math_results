@@ -1,0 +1,79 @@
+{
+  "reviewed_contribution": "bafkreic7dtyayxjuwrrvsajjs5wf75rstew2e5lbkcd3hvui3elltzqfwq",
+  "reviewed_source_commit": "4223c60451ab4e146e1e6d44e5d22776be9e0729",
+  "verdict": "accepted",
+  "scope": {
+    "standalone_result": "a 43-vertex graph with degree sequence 20^13 21^30 and at least six neighbors in the degree-20 class at every vertex has at most twelve moving 3-cycles under an order-three automorphism, and fixes at least three degree-21 vertices",
+    "conditional_m214_corollary": "the imported M=214 hard branch permits only ten, eleven, or twelve moving 3-cycles",
+    "sharpness": "a literal non-Ramsey degree/incidence graph attains twelve moving cycles",
+    "m214_branch_excluded": false,
+    "target_ramsey_graph_produced": false
+  },
+  "submitted_reproduction": {
+    "python": "3.11.2",
+    "gcc": "12.2.0",
+    "total_seconds": 56.996,
+    "steps_seconds": {
+      "upstream_arithmetic": 1.909,
+      "upstream_generate": 17.500,
+      "upstream_compile": 1.403,
+      "upstream_reconstruct": 3.582,
+      "semantic_check": 30.872,
+      "lemma_check": 0.044
+    },
+    "upstream_commit": "fdba2d1000599987d545d0b83f44c46084a73b19",
+    "formula": {
+      "bytes": 167913049,
+      "variables": 13244,
+      "constraints": 1974731,
+      "equalities": 128,
+      "five_sets": 962598,
+      "triangle_gates": 12341,
+      "sha256": "88aa294709836a0a707b2203da2176d420a3608353db21cc741dfa9bedf89a58"
+    },
+    "semantic_mutations_rejected": 8,
+    "sanitized_cpp_reconstruction_passed": true,
+    "solver_run": false,
+    "all_expected_outputs_and_hashes_passed": true
+  },
+  "independent_audit": {
+    "seconds": 2.679,
+    "imports_reviewed_modules": false,
+    "fixed_graphs_scanned": 129,
+    "degree_congruent_fixed_graphs": 3,
+    "residue_budget_survivors": 0,
+    "labeled_graphs_order_6": 32768,
+    "rooted_identity_instances_order_6": 196608,
+    "sharpness_fixture": {
+      "vertices": 43,
+      "edges": 445,
+      "moving_3cycles": 12,
+      "explicit_independent_five_set": true,
+      "all_local_red_equalities_fail": true
+    },
+    "m214_totals": {
+      "red_edges": 445,
+      "monochromatic_triangles": 2866,
+      "red_triangles": 1403,
+      "blue_triangles": 1463,
+      "total_excess": 2,
+      "anchor_cross_edges": 214
+    },
+    "necessary_degree_class_patterns": 9,
+    "passed": true
+  },
+  "imported_dependencies": {
+    "m214_profile": "bafkreig3v3w32pam5auleqnsswf4h4rniswvv543az3o4cvw2mxylbzmcu",
+    "minimum_ten_cycles": "bafkreierr2zz3x2uhbh6nm5qntqjxjypziwucen2rt44g5g5kxvw6wwg54",
+    "minimum_ten_review": "bafkreibymhkgy6se3fdveorggwr22dxnfgbs5qibs6fdrtndlaxlu54k6a",
+    "opb_formalization": "bafkreiagndv4xnzopsniccepuxbe6zmca5hm5tyqb7bh2epm6polwfc4bm",
+    "separate_opb_reproduction": "bafkreihzmg6qyjjel6veghqq5oip3bf4rleq6bnpbvlbrvizrj4m5mvi6m"
+  },
+  "uncertainty": {
+    "standalone_lemma": "no unresolved issue found",
+    "m214_corollary": "inherits the upstream hard-branch profile and extremal classification",
+    "opb": "semantic equivalence and exact generation were reproduced, but no model or unsatisfiability proof was attempted",
+    "formalized": false,
+    "software": "trusts CPython exact integers, C++ compiler/runtime, compact source, hardware, and SHA-256 collision resistance"
+  }
+}
