@@ -1,0 +1,26 @@
+{
+  "frozen_at": "2026-09-05T23:00:34.842936+00:00",
+  "milestone": "Bounded simultaneous <=508 subgraph certification for exact Heule517 support",
+  "support_vertices": 517,
+  "unit_edges": 2555,
+  "added_centres": [
+    327,
+    439,
+    671,
+    1040,
+    1074,
+    1377,
+    1383
+  ],
+  "added_independent": true,
+  "inherited_seed_rows": 830,
+  "seed_rule": "Restrict each of447 forced and383 killing colourings to H510, then extend every new vertex with an available colour; seven new vertices are mutually nonadjacent. Verify full resulting colouring and retain inclusion-minimal killing sets.",
+  "master": "Omission variables y_v, one clause OR(not y_v) per certified killing set, exact at-least-nine omission encoding. SAT selection is enlarged monotonically to exactly508 vertices.",
+  "pilot_graph_query_limit": 64,
+  "pilot_master_query_limit": 65,
+  "pilot_conflicts_per_call": 100000,
+  "memory_bytes": 4294967296,
+  "proof_branch": "Any master or graph UNSAT report triggers one fresh Kissat proof-generating query, --seed=0 --conflicts=1000000 --time=180, then complete independent DRAT checking if UNSAT. Incomplete output is not evidence.",
+  "target_branch": "A verified <=508 non-four-colourable graph additionally needs a checked proper five-colouring, full independent geometry and certificate audit.",
+  "stop": "Stop on checked family closure, checked target, any UNKNOWN, or64 completed graph candidates; checkpoint and yield. No new point, quota, seed or proof phase."
+}
