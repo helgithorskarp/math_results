@@ -190,10 +190,27 @@ neighbors. The unresolved maximal branches are **124,155,159,168,180,194**.
 All six one-anchor cases close in this stratum, as do thirteen two-anchor
 cases. These are branch exclusions: **all 25 whole cores remain open**,
 and the cumulative full exclusion count stays 172. No statement about
-every empty vertex follows. The new encoding/refutations await independent
-review. The next concrete boundary is to propagate the necessary three-blue
-upper bound into the 19 unrestricted full extensions, leaving the six
-unresolved branches unchanged.
+every empty vertex follows. The maximal-branch encoding and nineteen
+refutations now have an [accepted independent review](../ramsey_r55_order3_eleven_empty_blue4_review1).
+That milestone left the 19 unrestricted full extensions for the next pass.
+The subsequent [full attachment-bound propagation](../ramsey_r55_order3_eleven_blue_bound_propagation)
+starts from those unrestricted bases and appends the 35 positive
+four-subset clauses enforcing at least four red links to the seven blue
+moving triangles. It adds no fixed-edge unit and does not reuse the
+maximal-branch formula. Seven complete refutations, each replayed twice
+after fresh reconstruction, exclude **109,114,122,154,167,177,188** and
+**6,480 labeled cores**. Thus **18 classes / 9,477 labels remain open**;
+cumulative exclusions are **179 of 197 classes / 106,066 of 115,543 labels**.
+The twelve tested UNKNOWN cases retain the new bound; the six unresolved
+maximal cases are untested and unchanged. Core164 is the only remaining
+one-anchor case, alongside sixteen two-anchor cases and core194 with four.
+The new full propagation/refutations await independent review; their
+inherited maximal-branch premises are now independently accepted. Older empty-signature-specific
+closures remain a review boundary for cumulative counts. No whole
+four-versus-seven exclusion, target graph, or Ramsey lower-bound
+improvement follows. The next structural boundary is the saturated
+24-vertex blue neighborhood in the six unresolved maximal cases; no
+new local-neighborhood computation is begun in this milestone.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
