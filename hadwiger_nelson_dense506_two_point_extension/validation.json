@@ -1,0 +1,49 @@
+{
+  "python": "3.11.2",
+  "public_checks": {
+    "verify": {
+      "command": [
+        "python3",
+        "verify.py",
+        "--work",
+        "/tmp/hn-dense-two"
+      ],
+      "exit_code": 0,
+      "seconds": 16.013240547996247,
+      "cumulative_children_max_rss_kib": 50444
+    },
+    "audit": {
+      "command": [
+        "python3",
+        "audit.py",
+        "--work",
+        "/tmp/hn-dense-two"
+      ],
+      "exit_code": 0,
+      "seconds": 53.20174261799548,
+      "cumulative_children_max_rss_kib": 72212
+    },
+    "controls": {
+      "command": [
+        "python3",
+        "controls.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.786690616994747,
+      "cumulative_children_max_rss_kib": 72212
+    }
+  },
+  "RSS_note": "Each value is the cumulative maximum child RSS after that sequential command; the controls value is not its individual peak.",
+  "complete_geometric_triples": 21464520,
+  "independent_every_candidate_and_triple_compared": true,
+  "independent_every_host_neighbor_list_and_candidate_edge_compared": true,
+  "fixed_colouring_bytes": 507,
+  "fixed_colouring_sha256": "010e6190aa14b6eadc285a6131d7b455bd5434f79ed9b4f69cdfb2848acddcb4",
+  "all_candidate_pairs_explicitly_coloured": 1007490,
+  "new_SAT_calls": 0,
+  "floating_point_mathematical_decisions": 0,
+  "prototype_and_final_candidate_data_equal": true,
+  "local_generated_candidate_file_bytes": 245622,
+  "native_code_required": false,
+  "external_peer_review": false
+}
