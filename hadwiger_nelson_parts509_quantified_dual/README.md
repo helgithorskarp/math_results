@@ -89,10 +89,18 @@ or establish full-family scaling.
 
 ## Continuation decision and scope
 
-The fixed 509-vertex validation hurdle passed. This supports **one bounded
-full-family pilot in a following pass**, after coordination. It does not
-justify an unlimited solver run. No full-family job is active, and the
-old isolated cut/shrink loop remains paused.
+The fixed 509-vertex validation hurdle passed. The subsequent single
+600-second full-family pilot returned **unknown** after 600.208 seconds,
+with exit code 0 and no candidate or strategy certificate. See
+[PILOT.md](PILOT.md) and [pilot_summary.json](pilot_summary.json) for the
+exact configuration, limits, hashes and reproduction command.
+
+Decision: **do not automatically extend this unchanged configuration**.
+The next useful milestone is to justify and validate an exact reduction
+of the selector domain before another family run. Inclusion-minimal
+selected sets and their necessary degree conditions are a proposed route,
+not an implemented or certified reduction in this package. No job is
+active, and the old isolated cut/shrink loop remains paused.
 
 A future false dual answer must yield a selection of at most 134 pool
 points and a separately checked non-four-colourability certificate;

@@ -161,4 +161,4 @@ generator, ordinary Python execution, and the DRAT checker for the
 fixed 509-vertex certificate. The independent parser, definition-level finite
 checks and proof checker reduce different risks; these are author
 cross-checks, not external review or a formal proof of the generator.
-No native full-family verdict or QBF strategy certificate exists here.
+No full-family truth value or QBF strategy certificate has been established.
