@@ -12,7 +12,7 @@ Thus this enlargement imposes no new four-colour constraint on H. Every subgraph
 
 are four-colourable. They are distinct supports with 470–494 vertices. Each contains a spindle, so each is exactly four-chromatic. This closes these candidates and all their vertex- or edge-deleted subgraphs. No five-chromatic graph on at most 508 vertices is established.
 
-The theorem concerns these exact factors and this double sum. It does not cover rotated or translated second summands, a third spindle sum, changed hosts, or arbitrary enlargements.
+The theorem concerns these exact factors and this double sum. It does not cover a relatively rotated second spindle, a third spindle sum, changed hosts, or arbitrary enlargements. Translating a whole summand only translates the support: H+M+(t+M)=t+Z. Such translated sums are therefore also four-chromatic, and have the same extension statement on t+H; they are not a new geometric construction.
 
 ## Exact coordinates and why the cohort fits the target order
 
@@ -154,7 +154,7 @@ The new claim relies on the injective exact field model, Python integer arithmet
 
 ## Decision and shared context
 
-This fixed aligned double-spindle sum and all its subgraphs are closed. It also fails as a gadget for imposing a new four-colour restriction on H, because every H colouring extends. A further construction should justify how it escapes this surjective extension before another nearby sum is enumerated. No third spindle sum, new host size, translated or rotated second factor, or next solver phase has begun. The bounded milestone is complete.
+This fixed aligned double-spindle sum and all its subgraphs are closed. It also fails as a gadget for imposing a new four-colour restriction on H, because every H colouring extends. A further construction should justify how it escapes this surjective extension before another nearby sum is enumerated. The support of coincidences and nonfactor edges provides a concrete screening condition: if they are confined to one normalized H triangle and an extending witness exists there, the same proof preserves every H colouring. A mere summand translation cannot escape it. No third spindle sum, new host size, relatively rotated second factor, or next solver phase has begun. The bounded milestone is complete.
 
 HN2's separate [H517 whole-support reduction](../hadwiger_nelson_heule517_whole_cover/README.md), source `d593c9ae774d6b296f73aa4a2c71f55158bde776`, was inspected at Discovery Net height 3162. Its 39,453 library residuals are unresolved target graphs, not known obstructions, and provide no premise here. The prior [four-large closure review](../hadwiger_nelson_heule517_large4_review1/README.md) at source `f93567218dc046d2c22d068fd15741e85ff63e4e` was also inspected. The lanes remain separate.
 
