@@ -246,7 +246,10 @@ and replayed twice. This excludes **Core194's maximal b=4 branch /81 labels**,
 so all **17 remaining full classes /9,153 labels** have b<=3 for the first
 normalized empty vertex. No whole-core exclusion is added; cumulative
 full exclusions stay180/197. This classification, transfer and full-branch
-refutation await independent review.
+refutation now have an [accepted independent review](../ramsey_r55_order3_eleven_core194_maximal_review1),
+including both regenerated proofs, full literal formula reconstruction and
+the transfer through explicit equivariant maps. It does not exclude the
+whole Core194 extension.
 The subsequent [guarded full Core194 checkpoint](../ramsey_r55_order3_eleven_core194_full)
 uses that theorem's universal quantifier: each of ten fixed vertices gets
 35 clauses guarded by its four red-core links. Nonempty signatures remain
@@ -256,9 +259,18 @@ The resulting 34,320-variable/617,932-clause full formula returns **UNKNOWN
 at 20 seconds**. Fresh reconstruction matches the formula and controls;
 there is **no refutation and no new full-core exclusion**. All 17 classes
 remain open. This bounded test is complete; no higher cap or other core
-was tested. A next distinct scope is to establish whether the accepted
-local obstructions for124,155,168,180 justify the same universal guarded
-transfer, rather than treating first-row-only bounds as universal.
+was tested. The subsequent [four-core guarded checkpoint](../ramsey_r55_order3_eleven_guarded_four)
+establishes this universal scope for the accepted local obstructions of
+cores 124,155,168,180: the neighborhood restriction keeps the red core
+pointwise and imports no fixed vertices or full normalizers. All 350 maps
+are checked. Each unrestricted full formula gains 350 guarded clauses,
+with 34,300 variables and 617,832 clauses. All four return **UNKNOWN at
+20 seconds**; fresh reconstruction and control checks give no additional
+exclusion. The **17 classes /9,153 labels remain open**, including the
+1,944 labels in these four cases. The new universal transfer awaits
+independent review. No higher cap, other core or new major phase is begun.
+The next distinct direction is a complete structural split by empty-signature
+multiplicity in a residual full extension, retaining all proved guards.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
