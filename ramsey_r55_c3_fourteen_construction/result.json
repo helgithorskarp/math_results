@@ -1,0 +1,136 @@
+{
+  "best_score": 123,
+  "blue_red_K5": [
+    72,
+    51
+  ],
+  "calibration": {
+    "check_interval": 250,
+    "overlaps_production_seeds": true,
+    "release_sanitizer_best_words_graph_model_equal": true,
+    "release_seconds": 2.278096,
+    "restarts": 2,
+    "sanitizer_seconds": 15.705216,
+    "seed_base": 202609069,
+    "steps_per_restart": 2000
+  },
+  "checks": {
+    "all_16_initial_and_best_scores_reconstructed": true,
+    "normal_optimized_verification_equal": true,
+    "physical_literal_and_recursive_defect_lists_equal": true,
+    "release_sanitizer_comparison_equal": true,
+    "small_graph_control_reports_equal": true
+  },
+  "comparison": {
+    "Paley41_all_deletions": 903,
+    "all_cases_exhausted": true,
+    "arbitrary_relabeling_and_color_reverse": true,
+    "cap_per_case": 2000000,
+    "catalog42_all_deletions": 43,
+    "largest_case_nodes": 9169,
+    "moving33_anchor_color_cases": 30,
+    "total_embedding_nodes": 140735
+  },
+  "family_excluded": false,
+  "family_labeled_size": "2^287",
+  "frozen_comparison": {
+    "controls_match": true,
+    "created_utc": "2026-09-06T13:05:18.815775+00:00",
+    "maximum_nodes_per_embedding_case": 2000000,
+    "release_binary_sha256": "141ec1bfb9da9df9d6df63cd74fc70f421b8d70ca36b511516e4ef529a1c37b1",
+    "sanitizer_binary_sha256": "49428a97b797c58ba491490dc9c7fcb141c08bd589a8942b5dac3b782af811d2",
+    "scope": "Only the selected score123 graph, not another construction or class census; catalog42 and Paley41 invariants plus30 exhaustive anchored moving33 induced comparisons",
+    "sources": {
+      "catalog.g6": "067902e853d87b49bcef0d1d4c0e3bbadd238ee18bc65341b079a3ca4780eccb",
+      "compare.py": "02fbf4f91cf25587697da4098b65dadcc7d246bcdac0fe3d2178463b1959453e",
+      "compare_controls.py": "0c52b615940b278945648dcf3be1665eaf82c9c88d1619b6db0ff6913f87265d",
+      "core33.edges": "096b23f09a0e8eddc928d932f2fb7cc7e9c54e6543b2e77b0b9d8dcade158651",
+      "induced.cpp": "2c18db4f740702c459019efd85f2941253db3437d7494d2957a8bc8b97d5f0d1"
+    }
+  },
+  "frozen_sources": {
+    "check_interval": 5000,
+    "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "created_utc": "2026-09-06T12:57:05.524827+00:00",
+    "entrywise_pilot_and_audit_equality": true,
+    "pilot_release": {
+      "candidate_target": false,
+      "complete": true,
+      "jobs": 2,
+      "seconds": 2.278096
+    },
+    "pilot_sanitize": {
+      "candidate_target": false,
+      "complete": true,
+      "jobs": 2,
+      "seconds": 15.705216
+    },
+    "production_restarts": 16,
+    "release_binary_sha256": "931468d0cdc3322551479a9c4107ab608ee534f542098a7e47f50f500093e33b",
+    "sanitizer_binary_sha256": "b3e0115e0288382d5985bad9782d3d912530ebf2dc8eff281815f1d12135de36",
+    "seed_base": 202609061,
+    "sources": {
+      ".gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+      "EXPERIMENT.md": "13e1b8413a1407b23a90081db03e01b0c4cd5c4cb6824b5b145332895fa16fcb",
+      "controls.py": "20056abaeb73501aeb98b67a9f280bff9095f893d942f7dfa9b78ac38c6247ac",
+      "imports.json": "b9083a6a30872f6485a4eb94d09c55bd5b4d4595c912d02db95d8d61e2f3cfec",
+      "search.cpp": "9a0555fbe3306955ff900e1bd16c79546c77c1d8754a258a35ea9490d668fb3f",
+      "verify.py": "614ae70e7b8deeeb8591a58bb460737114012ee904ef18c3b0ba17bcd8489d8f"
+    },
+    "steps": 25000
+  },
+  "graph_sha256": "36c4a4ff6359e56ece7c9a6b41e35fae02cb04d72e56d832dc1a4dc056c6e88e",
+  "incremental_check_interval": 5000,
+  "limitations": [
+    "A defective explicit graph, not a Ramsey coloring or bound improvement.",
+    "No global optimum or exclusion of the 2^287 family is claimed.",
+    "Construction was heuristic; score and stated family separation have explicit reproducible checks.",
+    "Comparison covers the named 328 literal catalog records, Paley41, and the designated Core186 moving33 core; no universal catalog completeness is assumed.",
+    "No external review or formalization of this new artifact has been observed."
+  ],
+  "model": {
+    "clauses": 504308,
+    "possible_blue": 756777,
+    "possible_red": 756777,
+    "variables": 287
+  },
+  "production_peak_child_RSS_KiB": 141300,
+  "production_wall_seconds": 103.00478965000366,
+  "ramsey_target": false,
+  "red_degree_histogram": {
+    "20": 6,
+    "21": 28,
+    "22": 9
+  },
+  "red_edges": 453,
+  "restarts": 16,
+  "seed_base": 202609061,
+  "status": "CHECKED_SCORE_123_AND_SEPARATION",
+  "steps_per_restart": 25000,
+  "toolchain": {
+    "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "language": "C++20",
+    "python": "CPython 3.11.2",
+    "release_flags": [
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror"
+    ],
+    "sanitizer_flags": [
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror"
+    ]
+  },
+  "total_production_moves": 400000,
+  "winner_best_step": 18172,
+  "winner_restart": 11,
+  "winner_seed": 202609072
+}

@@ -1101,3 +1101,43 @@ boundary and the global target remain open. Future construction on this
 fixture must change switching-invariant triangle parities in the moving
 33-core. No smaller-core minimization, modified core or second solve has
 started. This pass ends at the completed certificate.
+
+
+## Fourteen-cycle construction below the 155 gate (2026-09-06)
+
+The [new C3 construction](../ramsey_r55_c3_fourteen_construction) has 43
+vertices and exactly 123 monochromatic five-sets: 72 blue and 51 red.
+It has 453 red edges and degree distribution `20^6 21^28 22^9`. Its action
+has fourteen moving triples and one fixed vertex, with seven red and seven
+blue internal triangles. All 287 other pair-orbit colors are free; this
+is a `2^287` labeled construction family with no prescribed minority core.
+One predeclared 16-by-25,000-flip batch completed, and all sixteen saved
+initial/best scores passed independent physical reconstruction. Literal
+five-set enumeration and clique recursion give identical complete winner
+defect lists. This improves this lane's saved global score from 155 to 123;
+it is not a Ramsey coloring, global minimum, or whole-family exclusion.
+
+The actual winner is outside all completed catalog42, Paley41 and Core186
+moving33 switching-extension families, allowing arbitrary relabeling and
+global color reversal. Switching-invariant triangle-parity histograms
+separate every 42- and 41-vertex deletion from the 328 literal catalog
+parents and Paley41. Normalization at an anchor reduces moving33 comparison
+to 30 induced-embedding cases; all exhaust without a witness in 140,735
+total nodes. This also separates the winner from the earlier Core186
+41-core family. Source, compact inputs, every decision, controls, and a
+complete reproduction command are public. The new comparison has author
+checking and sanitizer replay, not external independent review.
+
+The preceding moving33 exclusion now has independent acceptance at
+Discovery Net height 3373, contribution
+`bafkreih6p6gytfa7bfz3xhcbuvq57tdxdn6aiznfeatou6w2vjyzxdqggu`.
+That review reconstructed a physical DPLL proof, resolving the earlier
+external-review gap. The teammate's entire 328-parent catalog switching
+union is also published at height 3365; it is not another active census.
+Neither prior exclusion verdict is required to check this explicit graph
+or the new comparison against its literal family inputs.
+
+No eleven-cycle class, entire C3 action type, hard degree slice, or global
+Ramsey target is closed by this construction. No next optimization phase
+has started. Preserve this non-switching construction and select the next
+bounded step after coordination.
