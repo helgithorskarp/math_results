@@ -1,0 +1,226 @@
+{
+  "consequence": "a>=4; if a=4 then (a,b,c)=(4,1,2)",
+  "cover": {
+    "allowed": 4806900,
+    "enumeration": "direct C++ sweep of all 3^15 labeled assignments",
+    "excluded_labeled_assignments": 3504900,
+    "excluded_profiles": 70,
+    "moving_types": 9,
+    "profiles": 119,
+    "remaining_labeled_assignments": 1302000,
+    "remaining_profiles": 49,
+    "total": 14348907
+  },
+  "excluded_types": [
+    "a1_b3_c3",
+    "a2_b2_c3",
+    "a3_b1_c3",
+    "a3_b2_c2",
+    "a4_b0_c3"
+  ],
+  "formulas": [
+    {
+      "counts": [
+        1,
+        3,
+        3
+      ],
+      "formula": {
+        "bytes": 14883867,
+        "sha256": "f9c0f082cafd3000fe07b676464f9cdf7676d5304cfdfd59d211b6fdb8cdeab5"
+      },
+      "id": "a1_b3_c3",
+      "tail_units": 14
+    },
+    {
+      "counts": [
+        2,
+        2,
+        3
+      ],
+      "formula": {
+        "bytes": 14883866,
+        "sha256": "6ec69455b04e1c9079cd2d74619a9b01cfd1e102596bdb5a379059cc43ae68f3"
+      },
+      "id": "a2_b2_c3",
+      "tail_units": 14
+    },
+    {
+      "counts": [
+        3,
+        1,
+        3
+      ],
+      "formula": {
+        "bytes": 14883865,
+        "sha256": "cd9fdc75f4e390884b40f761dd0be3e168648bb5338425e60b3adfa60d2487f9"
+      },
+      "id": "a3_b1_c3",
+      "tail_units": 14
+    },
+    {
+      "counts": [
+        3,
+        2,
+        2
+      ],
+      "formula": {
+        "bytes": 14883865,
+        "sha256": "fb6810e0f9ee65d3ccdb4cd9cdc6795f8c2a3b490ddef7f6034f488107f30f27"
+      },
+      "id": "a3_b2_c2",
+      "tail_units": 14
+    },
+    {
+      "counts": [
+        4,
+        0,
+        3
+      ],
+      "formula": {
+        "bytes": 14883864,
+        "sha256": "408ed7537bd4fe7924da91996bb9769472ee70307252df14da044841430ee54e"
+      },
+      "id": "a4_b0_c3",
+      "tail_units": 14
+    },
+    {
+      "counts": [
+        4,
+        1,
+        2
+      ],
+      "formula": {
+        "bytes": 14883864,
+        "sha256": "9b4713387dcd340004587bcf23904b4b5521cdd0ad1fe2c8cdab50fe86f9c849"
+      },
+      "id": "a4_b1_c2",
+      "tail_units": 14
+    },
+    {
+      "counts": [
+        5,
+        0,
+        2
+      ],
+      "formula": {
+        "bytes": 14883863,
+        "sha256": "203185eda762ba8435aadb1443aa15857d9a4c264f8192801c17cc4fc1458add"
+      },
+      "id": "a5_b0_c2",
+      "tail_units": 14
+    },
+    {
+      "counts": [
+        5,
+        1,
+        1
+      ],
+      "formula": {
+        "bytes": 14883863,
+        "sha256": "94949fffff51e46aff3ddfb264af728e8e77d4bb168bb4ba63e9d19e529cfcab"
+      },
+      "id": "a5_b1_c1",
+      "tail_units": 14
+    },
+    {
+      "counts": [
+        6,
+        0,
+        1
+      ],
+      "formula": {
+        "bytes": 14883862,
+        "sha256": "ceaf2996b2d44329898e5bfbab009ce1846b11a5c48da002794a6d15af5d3014"
+      },
+      "id": "a6_b0_c1",
+      "tail_units": 14
+    }
+  ],
+  "proof_tools": {
+    "drat_trim_binary": {
+      "bytes": 51352,
+      "sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+    },
+    "execution": "serial; one solver or checker process at a time",
+    "kissat_binary": {
+      "bytes": 546552,
+      "sha256": "9193d0d788f70d11046c7e965657c7096c9471ea96db2552a7d1544e925307cb"
+    },
+    "kissat_version": "4.0.4"
+  },
+  "proofs": [
+    {
+      "formula": {
+        "bytes": 14883867,
+        "sha256": "f9c0f082cafd3000fe07b676464f9cdf7676d5304cfdfd59d211b6fdb8cdeab5"
+      },
+      "id": "a1_b3_c3",
+      "proof": {
+        "bytes": 3868766,
+        "sha256": "bb89276383af7e8d91bdd2f3feb713f70795be163aada88ac0ae8d10ddf4751d"
+      },
+      "rat_core_lemmas": 4
+    },
+    {
+      "formula": {
+        "bytes": 14883866,
+        "sha256": "6ec69455b04e1c9079cd2d74619a9b01cfd1e102596bdb5a379059cc43ae68f3"
+      },
+      "id": "a2_b2_c3",
+      "proof": {
+        "bytes": 8217888,
+        "sha256": "004474111779d07216d7dfbbdc830b443862b36df89af991ce76821ae4263ab0"
+      },
+      "rat_core_lemmas": 0
+    },
+    {
+      "formula": {
+        "bytes": 14883865,
+        "sha256": "cd9fdc75f4e390884b40f761dd0be3e168648bb5338425e60b3adfa60d2487f9"
+      },
+      "id": "a3_b1_c3",
+      "proof": {
+        "bytes": 10828739,
+        "sha256": "5f7264458663f0fab0cddcddebd7d24032854f64c4beef74b517397f553a6032"
+      },
+      "rat_core_lemmas": 0
+    },
+    {
+      "formula": {
+        "bytes": 14883865,
+        "sha256": "fb6810e0f9ee65d3ccdb4cd9cdc6795f8c2a3b490ddef7f6034f488107f30f27"
+      },
+      "id": "a3_b2_c2",
+      "proof": {
+        "bytes": 58741079,
+        "sha256": "81e0f264819702a9524eb3da309414e3c16b742dc0fa5b2b54efda88ff165986"
+      },
+      "rat_core_lemmas": 0
+    },
+    {
+      "formula": {
+        "bytes": 14883864,
+        "sha256": "408ed7537bd4fe7924da91996bb9769472ee70307252df14da044841430ee54e"
+      },
+      "id": "a4_b0_c3",
+      "proof": {
+        "bytes": 9712329,
+        "sha256": "e09d8ddb22b45411c2e5d6dbe2814f3022ffef20ada76a1fcde1687f8ebb489c"
+      },
+      "rat_core_lemmas": 0
+    }
+  ],
+  "red_pair_branch_resolved": false,
+  "remaining_types": [
+    "a4_b1_c2",
+    "a5_b0_c2",
+    "a5_b1_c1",
+    "a6_b0_c1"
+  ],
+  "solver_or_checker_parallelism": 1,
+  "status": "PASS",
+  "target_graph_found": false,
+  "verdict": "five complete blue-pair attachment types independently refuted",
+  "whole_core194_excluded": false
+}
