@@ -734,3 +734,31 @@ analytic long-cycle theorem plus the 43-cycle classification. These exhaust
 the primes from 7 through 43. Finally, Cauchy's theorem converts absence of
 an element of each listed prime order into the stated restriction on
 `|Aut(G)|`.
+
+
+## Core194: five full blue-pair attachment types excluded
+
+The [nine complete attachment decisions](../ramsey_r55_order3_eleven_core194_attachment_decisions)
+refute(1,3,3),(2,2,3),(3,1,3),(3,2,2),(4,0,3). Each full320-variable,
+366,083-clause case passed full DRAT in production and against a fresh
+reconstructed input. Four proofs have zero RAT lemmas in their core;
+the(1,3,3) proof has four, so full DRAT matters. The remaining types
+(4,1,2),(5,0,2),(5,1,1),(6,0,1) returned explicit UNKNOWN at90seconds.
+No whole class is excluded:17classes/9,153labels remain open, Core19481labels.
+
+Consequently any blue empty fixed pair is red to all vertices of at least
+four internally blue moving triangles. If there are exactly four such
+triangles, the exclusive counts are1 and2. The inherited complete cover
+and its ordinary normalization proof are prerequisites; the direct base
+and local pair lemma already have accepted reviews. The new attachment
+cover/five exclusions await independent review. No target graph or bound
+improvement. Of119 joint degree profiles,70 fall in excluded full types;
+49 candidate profiles remain(27,10,9,3 by type), not Ramsey realizations.
+
+Nine solver calls, ten full proof replays, production332.992066s and
+fresh optimized verification95.655537s. All19 frozen source identities
+match. Source, compact outcomes, controls and reproduction commands are
+public; complete CNFs and91,368,801bytes of refutation traces remain
+outside Git. Four UNKNOWN traces are partial and do not prove feasibility.
+The red-pair branch is untouched. The next bounded step is the three
+fixed-star profiles of(6,0,1); it is not started at this checkpoint.
