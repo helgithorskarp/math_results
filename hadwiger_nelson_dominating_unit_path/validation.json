@@ -1,0 +1,116 @@
+{
+  "status": "COMPLETE: every unit-wedge circle neighbourhood is four-colourable; connected domination by at most three vertices cannot force five colours",
+  "result": {
+    "status": "PASS",
+    "formal_patch_vertices": 30,
+    "formal_pair_target_checks": 870,
+    "event_equations": 46,
+    "closed_form_exceptional_set_checked": true,
+    "event_root_count_histogram": {
+      "0": 24,
+      "1": 6,
+      "2": 16
+    },
+    "circle_line_parameter_tests": 644,
+    "circle_line_root_incidences": 38,
+    "exceptional_parameters": 14,
+    "coincident_parameter_cases": 1,
+    "generic_cases": 1,
+    "generic_vertices": 30,
+    "generic_edges": 72,
+    "exceptional_pair_norms": 3891,
+    "exceptional_size_histogram": {
+      "10,19": 1,
+      "12,24": 2,
+      "13,26": 3,
+      "30,74": 6,
+      "30,76": 2
+    },
+    "patch_positive_edge_checks": 813,
+    "all_angles_four_colourable": true,
+    "all_distinct_centre_precolourings_extend": true,
+    "sharpness_vertices": 7,
+    "sharpness_pair_norms": 21,
+    "sharpness_edges": 11,
+    "sharpness_three_colour_assignments": 2187,
+    "sharpness_three_colourings": 0,
+    "connected_dominating_path_vertices": 3,
+    "native_solver_calls": 0,
+    "malformed_certificate_rejections": 6,
+    "certificate_bytes": 5609,
+    "certificate_sha256": "52c3f952f5bb8fcd70b36ecd7acd9fc420d60fa583b394310a392a5ebe92c6a2"
+  },
+  "scope": "All unit complex beta in D={0,1,beta} and every subgraph of the full infinite union of their unit circles. All ordered pairwise-distinct three-centre precolourings extend for beta !=1.",
+  "sharpness": "Seven-vertex Moser spindle has chromatic number4 and a connected dominating3-vertex unit path with opening angle 120 degrees.",
+  "not_claimed": [
+    "Four-colourability for arbitrary disconnected dominating triples",
+    "Extension when outer centre prescriptions have equal colours",
+    "Exact chromatic number for each opening angle",
+    "A five-chromatic graph on at most 508 vertices",
+    "Priority",
+    "External review of this new theorem"
+  ],
+  "build": {
+    "status": "PASS",
+    "certificate_bytes": 5609,
+    "certificate_sha256": "52c3f952f5bb8fcd70b36ecd7acd9fc420d60fa583b394310a392a5ebe92c6a2",
+    "seconds": 0.2718482579803094,
+    "native_solver_calls": 0
+  },
+  "independent_audit_seconds": 0.7999724289984442,
+  "optimized_audit_seconds": 0.8049017100129277,
+  "normal_optimized_reports_identical": true,
+  "python": "3.11.2",
+  "threads": 1,
+  "peak_memory_measured": false,
+  "native_solver_calls": 0,
+  "producer_method": "Eisenstein inner-product affine equations; sparse squarefree-radical exact roots; finite deterministic list-colouring search.",
+  "checker_method": "Integer XOR radical-field multiplication; distance polarization at beta=1,-1,i; root completeness by exact circle-line solution counts; closed-form parameter set; reconstructed full graphs and direct list/edge tests. No producer or parent executable import.",
+  "mathematical_dependencies": [
+    {
+      "package": "hadwiger_nelson_dominating_triangle",
+      "source_commit": "0c9e4cf4fd74b5bae3821c957e3b23186386e81d",
+      "artifact_ref": "bafkreiauzabwiqtpeqzdkwuy35l33xrexthvv2knfozsl5e3jb7kxewboi",
+      "scope": "Coincident beta=1 two-unit-centre case; the unit-centre-pair lemma is also proved directly in this package.",
+      "independently_accepted": true,
+      "review_commit": "22c15454297758c87574738df7d623fd25f4d75e",
+      "review_ref": "bafkreigcxi3wttalq3fg2dzm3g4iwnsmz5zucaq5zmnbzwrhjwz52esxfu",
+      "review_height": 3325
+    }
+  ],
+  "external_executable_inputs": [],
+  "initial_graph_scan_height": 3336,
+  "prepublication_graph_scan_height": 3344,
+  "prepublication_additional_new_refs_height": 3346,
+  "HN2_latest_durable_result": {
+    "package": "hadwiger_nelson_heule560_degree_family",
+    "source_commit": "b92ab727e7447730af73058e4687e4a4e8b4b148",
+    "artifact_ref": "bafkreihwchy7p2lgnrpyqdxblehcz7tmwas2tlllsib6jb6tdwm2xmlkmi",
+    "height": 3339,
+    "scope": "A directly checked 542-vertex, 2672-edge four-colouring covers all subsets using the 492 mandatory and 50 free optional vertices. Any remaining obstruction meets 18 specified fresh vertices. No full 560-family closure or target witness.",
+    "last_report": "20260906T114251.860890Z.md",
+    "dependency": false,
+    "parent560": {
+      "source_commit": "5cc08e6ec43644ccd6ce741c641edf8799bd4955",
+      "artifact_ref": "bafkreigrsanib6kfhqwhxdkjpjym6fa7xxyhcrw2phtv6m7or6vludas4i",
+      "review_package": "hadwiger_nelson_heule560_family_review1",
+      "review_commit": "1d7e20889cc407d53440c7841b9f56e66e39145e",
+      "review_ref": "bafkreicgezlcgpdcdp673itijhhjeh3qdr2bwusmtma2fryh62today2ue",
+      "review_height": 3345,
+      "review_scope": "ACCEPT exact 560-vertex five-chromaticity and 492/68 family reduction; not the later free50 closure."
+    }
+  },
+  "prior_own_checkpoint": {
+    "package": "hadwiger_nelson_triangle_simultaneous_exterior",
+    "source_commit": "5fde11a323c50bd6dec493922980a49a2bb3ab23",
+    "artifact_ref": "bafkreiflit4qvx4zyphpc3k6txoo27tgee3rvtrd7k4po3brg2wp4p2liq",
+    "dependency": false
+  },
+  "primary_record_calibration": "Parts2010.12665v2 gives 509; Haugland2608.04542v4 introduction names 509 as record. Both primary pages checked live 2026-09-06.",
+  "external_review": "Pending for this theorem. Author-run independent implementation checks finite data; written continuum bridge is not proof-assistant formalized. Parent theorem accepted separately.",
+  "large_omitted_certificate": false,
+  "priority_claim": false,
+  "target_found": false,
+  "background_jobs": [],
+  "next_phase_started": false
+}
