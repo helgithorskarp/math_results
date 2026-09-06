@@ -1,0 +1,20 @@
+{
+  "frozen_at": "2026-09-06T02:57:35.735975+00:00",
+  "milestone": "Bounded four-large/five-small deletion decision on H517",
+  "family": "371 large plus 137 small vertices, exactly508",
+  "initial_positive_rows": 922,
+  "initial_antichain": 584,
+  "forced_vertices": 467,
+  "five_small_sets": 3003,
+  "surviving_small_sets": 94,
+  "large_quadruples": 31695,
+  "source_large3_commit": "6dcd0080ce1004ab86d743ce9498a9a065e0ccd9",
+  "max_full_graph_queries": 256,
+  "conflicts_per_query": 100000,
+  "address_space_bytes": 4294967296,
+  "order": "Round robin over lexicographic small omission sets, then least uncovered large quadruple.",
+  "oracle": "Full activated H517 CNF with all517 activation assumptions; no restriction to intact-L profiles.",
+  "positive_policy": "Check full colouring, extend omitted L before S, check again, remove only candidates whose omissions contain D.",
+  "negative_policy": "Fresh exact full-candidate CNF; Kissat seed0, at most1000000 conflicts and180seconds; independent DRAT and CNF check plus checked five-colouring before any target claim.",
+  "stop_policy": "Complete family coverage, certified target, UNKNOWN, or256 queries. Preserve evidence and yield before a next family or runtime extension."
+}
