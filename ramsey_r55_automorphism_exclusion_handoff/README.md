@@ -984,5 +984,42 @@ and35:22 variable contacts, with their mutual edge fixed. This introduces
 five-set interactions absent from the completed one-star test. No such
 sweep has begun. The17-class/9,153-label boundary, including all open
 Core194 RED cases, is unchanged. Teammate3's new three-block gluing result
-at graph3311 stays in the distinct nonsymmetric H92 lane; it is an exact
-conditional interface, not a satisfiability verdict or independent review.
+at graph3311 stayed in the distinct nonsymmetric H92 lane; it is an exact
+conditional interface, not a satisfiability verdict. Its theorem, full
+physical interface and pairwise obstruction subsequently received external
+acceptance at3315; the broader realization question remains open.
+
+## Core186: coupled stars remain strict, and fixed-star repair has a barrier
+
+The [paired-star certificate](../ramsey_r55_order3_eleven_paired_star)
+exhausts all2^22 simultaneous assignments of the eleven moving contacts
+at fixed vertices33 and35, with their mutual red edge and all other pairs
+unchanged. The input mask2744789 is the unique minimum, with155 defects.
+Every changed mask has at least157; changing both stars gives minimum162,
+uniquely at masks468 and1336. No improved fixture or target graph appears.
+
+An independent K5/K4/K3 decomposition reconstructs all854 coefficient
+records. A complete Gray-code traversal evaluates affected monomials
+directly and agrees with every blue/red entry of the producer's subset
+transform tables. All4,194,304 assignments,9,224 small physical controls,
+six corruptions and explicit incomplete-prefix behavior are checked.
+Normal/optimized producers and a fresh optimized full reproduction agree.
+New evidence remains author-checked, not externally reviewed or formalized.
+
+The full physical audit supplies a stronger stopping reason:27 blue and30
+red forbidden five-sets lie entirely in the33 moving vertices. Independent
+literal enumeration of that induced graph agrees with the complete audit;
+blue{0,5,8,14,27} and red{0,7,9,18,26} are compact examples. Even arbitrary
+changes to every pair touching a fixed vertex preserve these57 defects.
+Do not continue a hierarchy of fixed-star moves on this same frozen moving
+subgraph. A target construction must change its internal pair colors.
+
+The teammate's new Paley(41) switching-class exclusion at3327, source
+dac1474f64f1df456bfb4653bd97beb71063f23a, provides a durable physical-DRAT
+method for a distinct whole-family closure, with no external review at
+this cutoff. Its H92 route is parked. A proposed next structured test is
+the switching family of the41-core obtained here by deleting33 and35,
+first checking whether that class is already covered by Paley(41).
+No equivalence test, switched formula, solve or other move phase has begun.
+All17 prescribed4v7classes/9,153labels and the inherited3v8boundary remain
+open. The completed local certificates do not change any Ramsey bound.
