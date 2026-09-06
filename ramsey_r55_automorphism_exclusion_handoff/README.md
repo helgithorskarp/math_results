@@ -232,9 +232,22 @@ The four other tests124,155,168,180 return UNKNOWN; thirteen full cores
 are untested. Sixteen remaining cores have b<=3, while Core194 is the
 sole unresolved maximal branch. The new full Core159 result awaits
 independent review; the local neighborhood premise is now accepted.
-Next investigate Core194's maximal branch with a justified full-extension
-or complete local-family reduction. No new phase or higher cap is started
-in this milestone.
+The next [complete Core194 maximal-branch proof](../ramsey_r55_order3_eleven_core194_maximal)
+classifies its local24 family into four contact-normalized representatives,
+all explicit equivariant images of the known witness. A117-variable
+refutation after four model blockers proves classification completeness;
+four disjoint blue-cycle orbits give exactly7,776 labeled local graphs.
+A separate216-variable formula covers every43-vertex extension of that
+witness with the maximal attachment, without degree constraints or full
+normalizers. Its refutation transfers through the explicit commuting
+permutations to the entire local family. Both full proofs are reconstructed
+and replayed twice. This excludes **Core194's maximal b=4 branch /81 labels**,
+so all **17 remaining full classes /9,153 labels** have b<=3 for the first
+normalized empty vertex. No whole-core exclusion is added; cumulative
+full exclusions stay180/197. This classification, transfer and full-branch
+refutation await independent review. The next separate phase is propagation
+of the new bound to Core194's unrestricted full base; no such full-core
+test is begun in this milestone.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
