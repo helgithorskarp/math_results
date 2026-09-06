@@ -1,0 +1,17 @@
+{
+  "milestone": "Complete local boundary-extension decision for H514",
+  "frozen_at": "2026-09-06T05:53:06.616675+00:00",
+  "input_commit": "d77db33544d0b5fc16e8dd8973ef1b1046d97c09",
+  "selection": "All four path vertices, fixed induced boundary B of 16 vertices; origin colour 0",
+  "discovery_preflight": "Boundary graph has 13 exact edges, isolated origin, and component orders 2,3,4,6. No colouring query has run.",
+  "producer": "Enumerate proper four-colourings of each nontrivial component; convolve component contributions to the four forbidden-colour masks with exact integer multiplicities.",
+  "independent_check": "Reconstruct the twenty local points and all unit edges independently; directly enumerate all proper 16-vertex boundary assignments in compiled C++ and compare every one of the 4096 list-state counts. Independently count path extensions by all 81 assignments.",
+  "finite_bound": "At most 4^6 assignments per component; four convolutions on at most4096 states; direct complete boundary DFS on 4^15 possible assignments before pruning. One native finite enumeration only; no H514 solver query.",
+  "success_criteria": [
+    "Decide whether every proper normalized boundary colouring extends over the full path",
+    "For all37 clauses record attainability and whether any proper boundary colouring violates only that clause",
+    "Preserve compact positive boundary obstruction certificates, exact census summaries and profile-stream hash"
+  ],
+  "scope_limit": "An obstructed boundary colouring need not extend to any target old subgraph and is not a five-chromatic graph. No unchanged H514 master continuation.",
+  "stop_rule": "Complete exact boundary census and independent verification, publish warranted evidence, checkpoint and yield before testing any additional old constraints or target graphs."
+}
