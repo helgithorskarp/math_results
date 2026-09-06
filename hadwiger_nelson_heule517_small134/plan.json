@@ -1,0 +1,18 @@
+{
+  "frozen_local_timestamp": "2026-09-06T01:19:13.914681+00:00",
+  "milestone": "Decide the 195 surviving eight-small-omission sets with all L375 retained.",
+  "input_small133_commit": "6c88f992e5effaf0cea806f8066c80986edef08a",
+  "input_joint_interface_commit": "dfabbb59e9d59215737e0b8e6321ca0f1e6321a9",
+  "initial_cuts": 206,
+  "preflight_subsets": 490314,
+  "survivors": 195,
+  "candidate_order": "Lexicographic global omission lists; skip only if a checked new positive cut is contained in the omission list.",
+  "max_candidates": 195,
+  "max_case_calls": 3900,
+  "conflicts_per_case": 100000,
+  "address_space_bytes": 4294967296,
+  "unknown_policy": "Stop at UNKNOWN without extending the limit.",
+  "sat_policy": "Check a full G minus D colouring with the same L witness; greedily extend over omitted S vertices; retain the positive witness.",
+  "all_20_unsat_policy": "Generate and independently check each case proof, each with Kissat seed 0, at most 1000000 conflicts and 180 seconds. Obtain and check a five-colouring. Attempt one direct full509 four-colour CNF proof under the same bounds.",
+  "boundary": "No large deletion or higher small level in this pass. Finish the finite closure or obstruction certificate, preserve and publish warranted evidence, then yield. A 509-vertex obstruction is not a record."
+}
