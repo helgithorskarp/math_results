@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-09-06T00:42:14.754544+00:00",
+  "milestone": "One bounded fixed-L375 selector pilot onS142 using complete20pattern interface",
+  "required_L_source": "dfabbb59e9d59215737e0b8e6321ca0f1e6321a9",
+  "selection": "All375L retained; anyTsubsetS142with|T|<=133. Nativecandidate enlargedmonotonically to133. No mandatorynewpoint orminimumdegree restrictions.",
+  "initial_cuts": "Exactly148rows inprior526cutcertificate whoseDissubsetS; allotherrowshitbyfixedL. Directcheckallinheritedcolourings.",
+  "master": "142omissionvariables, at least9omissions bybackwardprefixthreshold. For everypositiveG-DcolouringwithDsubsetS, forbidomittingallD. NativeSATselectionenlargedto133preservingallcuts.",
+  "oracle": "20incremental exact smallcaseSATformulas withactivationassumptionsforselectedS. StopatfirstSATcase andextend itscolouring greedilyoveromittedSwithsameboundaryrow. CutDremainingomitted. All20UNSAThintsrequirefreshproofsforeachfixedcasebeforetargetclaim.",
+  "case_order": "Fixed canonical row order frompublicinterfacecertificate, cases0through19",
+  "max_candidates": 512,
+  "max_master_calls": 513,
+  "max_small_case_calls": 10240,
+  "conflicts_per_call": 100000,
+  "address_space_bytes": 4294967296,
+  "UNKNOWN_policy": "Stoppilot onfirstunknown; do not inferanynegativeclaim",
+  "proof_bounds": "Kissat --seed=0 --conflicts=1000000 --time=180; eachcompletedUNSATtracecheckedindependentlybydrat-trim. Thisbranchappliesfinalmasterorall20targetcases.",
+  "target_upper_bound": "Onlyafter20checkednegativecases, obtainanddirectcheck5colouringofexactLunionT; no recordunlessfullgeometryandbothboundschecked.",
+  "checkpoint_policy": "Publishcompactfinalpositivecutcertificateandcompleteproofifclosed; keepnativeinputs/logs/proofsandallwitnesseslocal. Onbound/unknownsaveunresolvedfrontier. Noextensionof512limit ornextstratum thispass."
+}
