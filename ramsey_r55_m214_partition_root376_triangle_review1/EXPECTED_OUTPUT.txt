@@ -1,0 +1,80 @@
+{
+  "bounds": {
+    "anchor_triangle_upper_bound": 196,
+    "footprint_lower_bound": 5,
+    "gap": 4,
+    "off_diagonal_sum_upper_bound": 32,
+    "required_anchor_triangle_sum": 200,
+    "twice_core_edge_upper_bound": 52
+  },
+  "descriptor": {
+    "remaining_after_both_cuts": 387,
+    "remaining_family_counts": [
+      60,
+      85,
+      70,
+      104,
+      68
+    ],
+    "root_index": 376,
+    "selector": 13621,
+    "two_pattern_slice": [
+      [
+        375,
+        "HO"
+      ],
+      [
+        376,
+        "AB"
+      ]
+    ]
+  },
+  "farkas": {
+    "coefficients": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "rhs": -4
+  },
+  "physical_formula": {
+    "bytes": 172788992,
+    "constraints": 2044421,
+    "incident_triangles_reconstructed": 1681,
+    "proof_used_five_set_rows": 2358,
+    "proof_used_rows_verified": 9220,
+    "selected_root_first_row": 2041484,
+    "sha256": "469879cf7bc1c2147996163cd14a588a8bff41a3353c14e9bcc498d084f3783f"
+  },
+  "scope": {
+    "complete_m_slice_closed": false,
+    "ramsey_43_graph_found": false,
+    "ramsey_bound_changed": false,
+    "remaining_descriptor_feasibility_asserted": false,
+    "root_core_variables_fixed": 0,
+    "selector_cut": "x13621=0"
+  },
+  "small_ramsey": {
+    "k6_edge_colorings_exhausted": 32768,
+    "r34_upper_bound": 9,
+    "rup_rows": 288
+  },
+  "source": {
+    "commit": "5cb7a179c691a413b20e939b26cf5910d593a578",
+    "manifest_entries": 11,
+    "manifest_sha256": "af567b371eccbf850077e67256effa6e17dfc01564adc62169f65cb053a0ccf6"
+  },
+  "status": "INDEPENDENTLY_VERIFIED_COMPLETE_ROOT376_TRIANGLE_EXCLUSION",
+  "triangle_identity": {
+    "constant": 26,
+    "nonzero_physical_coordinates": 133,
+    "reduced_rhs": 83,
+    "triangle_product_truth_cases": 16
+  },
+  "turan_seven": {
+    "graphs_with_at_least_17_edges_exhausted": 7547,
+    "maximum_k4_free_edges": 16,
+    "sharp_witness_checked": true
+  }
+}
