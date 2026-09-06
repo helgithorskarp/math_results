@@ -1,0 +1,271 @@
+{
+  "python": "3.11.2",
+  "threads": 1,
+  "peak_memory": "not measured",
+  "build": {
+    "seconds": 0.32203955500153825
+  },
+  "audit": {
+    "status": "ALL NONMONOCHROMATIC TERMINAL ASSIGNMENTS EXTEND; TERMINAL-ONLY ASSEMBLIES OF AT MOST508 VERTICES ARE FOUR-COLOURABLE",
+    "arithmetic": "Independent Q(sqrt3)(sqrt11) tower; no producer imports",
+    "graphs_compared_entrywise": 2,
+    "full_pair_norm_checks": 35352,
+    "canonical_positive_patterns_checked": 5,
+    "canonical_witness_edge_checks": 3561,
+    "all_nonmonochromatic_terminal_assignments_checked": 72,
+    "expanded_colour_edge_checks": 50484,
+    "gadgets": [
+      {
+        "vertices": 159,
+        "edges": 646,
+        "pair_norm_checks": 12561,
+        "terminal_assignments_extended": 60,
+        "expanded_colour_edge_checks": 38760
+      },
+      {
+        "vertices": 214,
+        "edges": 977,
+        "pair_norm_checks": 22791,
+        "terminal_assignments_extended": 12,
+        "expanded_colour_edge_checks": 11724
+      }
+    ],
+    "geometric_auxiliary_controls": [
+      {
+        "fixture": "shared_terminal",
+        "distinct_terminals": 8,
+        "unit_edges": 3,
+        "selected_pair_cases": 27,
+        "maximum_auxiliary_degree": 3
+      },
+      {
+        "fixture": "triangular_prism",
+        "distinct_terminals": 6,
+        "unit_edges": 6,
+        "selected_pair_cases": 1,
+        "maximum_auxiliary_degree": 3
+      },
+      {
+        "fixture": "three_identical_sets",
+        "distinct_terminals": 3,
+        "unit_edges": 0,
+        "selected_pair_cases": 27,
+        "maximum_auxiliary_degree": 2
+      },
+      {
+        "fixture": "two_identical_pairs",
+        "distinct_terminals": 2,
+        "unit_edges": 0,
+        "selected_pair_cases": 1,
+        "maximum_auxiliary_degree": 1
+      },
+      {
+        "fixture": "one_pair",
+        "distinct_terminals": 2,
+        "unit_edges": 0,
+        "selected_pair_cases": 1,
+        "maximum_auxiliary_degree": 1
+      }
+    ],
+    "auxiliary_selected_pair_cases_checked": 57,
+    "strict_distance_greater_than2_boundary_checked": true,
+    "invalid_witnesses_or_premises_rejected": 3,
+    "universal_placement_argument": "Analytic separation and degree proof in README; finite fixtures are controls only",
+    "negative_solver_proof_required": false,
+    "native_solver_calls": 0,
+    "target_found": false,
+    "seconds": 0.27022440399741754
+  },
+  "discovery": {
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "pysat": "1.8.dev24",
+    "solver": "CaDiCaL1.9.5",
+    "max_conflicts_per_native_call": 100000,
+    "native_calls": 3,
+    "seconds": 0.05264416699355934,
+    "transcript": [
+      {
+        "gadget": "159",
+        "pattern": "001",
+        "source": {
+          "kind": "prior_library",
+          "row": 2
+        }
+      },
+      {
+        "gadget": "159",
+        "pattern": "010",
+        "source": {
+          "kind": "native",
+          "variables": 636,
+          "clauses": 3697,
+          "assumptions": [
+            565,
+            570,
+            577
+          ],
+          "seconds": 0.0051244899950688705,
+          "stats": {
+            "restarts": 0,
+            "conflicts": 22,
+            "decisions": 44,
+            "propagations": 2649
+          }
+        }
+      },
+      {
+        "gadget": "159",
+        "pattern": "011",
+        "source": {
+          "kind": "native",
+          "variables": 636,
+          "clauses": 3697,
+          "assumptions": [
+            565,
+            570,
+            578
+          ],
+          "seconds": 0.0038512419996550307,
+          "stats": {
+            "restarts": 0,
+            "conflicts": 45,
+            "decisions": 71,
+            "propagations": 5096
+          }
+        }
+      },
+      {
+        "gadget": "159",
+        "pattern": "012",
+        "source": {
+          "kind": "prior_library",
+          "row": 0
+        }
+      },
+      {
+        "gadget": "214",
+        "pattern": "01",
+        "source": {
+          "kind": "native",
+          "variables": 856,
+          "clauses": 5406,
+          "assumptions": [
+            745,
+            750
+          ],
+          "seconds": 0.03628074799780734,
+          "stats": {
+            "restarts": 3,
+            "conflicts": 1125,
+            "decisions": 1247,
+            "propagations": 147927
+          }
+        }
+      }
+    ]
+  },
+  "public_discovery_entrypoint_replay": {
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "pysat": "1.8.dev24",
+    "solver": "CaDiCaL1.9.5",
+    "max_conflicts_per_native_call": 100000,
+    "native_calls": 3,
+    "seconds": 0.05104335100622848,
+    "transcript": [
+      {
+        "gadget": "159",
+        "pattern": "001",
+        "source": {
+          "kind": "prior_library",
+          "row": 2
+        }
+      },
+      {
+        "gadget": "159",
+        "pattern": "010",
+        "source": {
+          "kind": "native",
+          "variables": 636,
+          "clauses": 3697,
+          "assumptions": [
+            565,
+            570,
+            577
+          ],
+          "seconds": 0.004257487002178095,
+          "stats": {
+            "restarts": 0,
+            "conflicts": 22,
+            "decisions": 44,
+            "propagations": 2649
+          }
+        }
+      },
+      {
+        "gadget": "159",
+        "pattern": "011",
+        "source": {
+          "kind": "native",
+          "variables": 636,
+          "clauses": 3697,
+          "assumptions": [
+            565,
+            570,
+            578
+          ],
+          "seconds": 0.0042632240074453875,
+          "stats": {
+            "restarts": 0,
+            "conflicts": 45,
+            "decisions": 71,
+            "propagations": 5096
+          }
+        }
+      },
+      {
+        "gadget": "159",
+        "pattern": "012",
+        "source": {
+          "kind": "prior_library",
+          "row": 0
+        }
+      },
+      {
+        "gadget": "214",
+        "pattern": "01",
+        "source": {
+          "kind": "native",
+          "variables": 856,
+          "clauses": 5406,
+          "assumptions": [
+            745,
+            750
+          ],
+          "seconds": 0.03518321699812077,
+          "stats": {
+            "restarts": 3,
+            "conflicts": 1125,
+            "decisions": 1247,
+            "propagations": 147927
+          }
+        }
+      }
+    ]
+  },
+  "rediscovered_certificate_byte_identical": true,
+  "prototype_geometry_compared_entrywise": true,
+  "input_sha256": {
+    "../hadwiger_nelson_nonmono159_214_lowden2/points159.tsv": "4f72fa06d18434472ce77cebe38880333694ec04b94945ede073a4a1c6d5bc02",
+    "../hadwiger_nelson_nonmono159_214_lowden2/points214.tsv": "97c9b3a964ed19874ae3fe932eb8c085fd637f618d2481fffaebbd1fbae55c2f",
+    "../hadwiger_nelson_nonmono159_214_lowden2/enumerate_lowden.py": "182f752e8f0354e5a91a3fc1569d717fb8654c16b5127bc5281dfc7141da6322",
+    "../hadwiger_nelson_nonmono159_moser_triple/colors_A.txt": "92f7c3cbe62a5eb2b0f827fc065e022018c598e16ea2651580aabccfb01c7195"
+  },
+  "scope": "Any at-most508 union of full copies of the specified A159/B214 graphs satisfying the two terminal-only conditions is four-colourable. Arbitrary interior overlaps, new interior edges and connector graphs are not covered.",
+  "external_review": "Pending for this new theorem. The independent implementation is author-run.",
+  "target_found": false,
+  "negative_forcing_proof_required": false,
+  "total_physical_native_calls_in_pass": 6,
+  "distinct_native_pattern_queries": 3,
+  "original_search_native_calls": 3,
+  "entrypoint_validation_replay_native_calls": 3
+}
