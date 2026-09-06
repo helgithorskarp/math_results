@@ -778,12 +778,50 @@ permutation, tail and malformed-input checks pass. Large proofs stay outside Git
 The global nine-type cover and five earlier moving-type exclusions now have
 [accepted independent review](../ramsey_r55_core194_attachment_decisions_review1),
 source30912d675aee5a5da5630f12bd1f1cdd76fb3589, Discovery Net3224. Direct3^15 C++
-counts and all five fresh full proofs were checked. The current three-profile
-extension and (6,0,1) closure await their own independent review.
+counts and all five fresh full proofs were checked. The three-profile
+extension and (6,0,1) closure now have
+[accepted independent review](../ramsey_r55_core194_a6_fixed_review1),
+source6bae11903cfc04e6f7fdc6a6c60741c7736a5641, Discovery Net3238.
 
 Consequently any BLUE empty pair has four or five common-red internally blue
 moving triangles. Remaining types (4,1,2),(5,0,2),(5,1,1) contain27,10,9 candidate
 joint profiles:46 total,1,298,472 labeled star assignments, not graph realizations.
 The RED-pair branch and17wholeclasses/9,153labels remain open (Core19481labels).
-No target graph or bound improvement. The next unstarted scope is the19 fixed
-profiles in the complete a=5 stratum. No next search or background job is launched.
+No target graph or bound improvement. The following checkpoint completes the
+previously unstarted nineteen-profile a=5 stratum and supersedes these counts.
+
+
+## Core194: only the (4,1,2) blue-pair moving type remains
+
+The [nineteen complete a=5 fixed-profile decisions](../ramsey_r55_order3_eleven_core194_a5_fixed)
+exclude the entire moving types (5,0,2) and (5,1,1). Every complete
+320-variable, 366,099-clause formula passed full DRAT in production and
+again against fresh reconstructed inputs. Nineteen calls and thirty-eight
+full proof replays completed, with no UNKNOWN or SAT. Twelve proof cores
+use RAT lemmas. Production took 76.094705 seconds; fresh optimized
+verification 72.607107 seconds. All 27 frozen source identities match.
+
+The complete cover checks all 6,561 fixed words per type, finding 577 and
+4,074 admissible words. Its (5,1,1) endpoint normalization explicitly
+couples the endpoint swap with a phase-preserving swap of moving triangles
+9 and 10; an endpoint-only swap fails. Every actual full-star transport,
+all 570 physical unit meanings and 2,928,552 complete base clause images
+under eight relabeling generators are checked. This new a=5 closure has
+not yet been independently reviewed; the inherited cover, direct base,
+pair lemma and six earlier moving exclusions have accepted reviews.
+
+Consequently any BLUE empty fixed pair has exactly four common-red
+internally blue moving triangles, with exclusive counts one and two:
+only (4,1,2) remains. The degree-relaxation frontier is now 27 candidate
+joint profiles / 1,103,130 labeled stars, down from 46 / 1,298,472.
+These are not graph realizations. The RED-pair branch, whole Core194
+and all 17 whole classes / 9,153 labels remain open, including Core194's
+81 labels. No target graph or Ramsey-bound improvement is claimed.
+
+The 27 finer (4,1,2) formulas/searches are the next unstarted bounded
+direction. No next phase or background process is launched. The complete
+83,119,043 bytes of new proof traces stay outside Git; public source,
+compact evidence, negative controls and exact reproduction commands are
+in the linked package. Shared graph content was refreshed through 3243;
+no overlapping result or affecting objection was found. The teammate's
+nonsymmetric neighborhood realization lane remains distinct.
