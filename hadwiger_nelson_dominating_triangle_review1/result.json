@@ -1,0 +1,123 @@
+{
+  "all_checks_passed": true,
+  "colouring": {
+    "exceptional_extension_unique": true,
+    "generic_extension_choices_per_orbit": 2,
+    "permuted_representative_edge_checks": 936,
+    "proper_centre_prescriptions": 6
+  },
+  "definition_level_controls": {
+    "C4_assignments_examined": 4096,
+    "C4_colourings": 2,
+    "C5_assignments_examined": 32768,
+    "C5_colourings": 0,
+    "malformed_certificates_rejected": 5
+  },
+  "exceptional_patch": {
+    "edge_sha256": "bc4751ffd1cb921cee7b0804937907431e9fe9684b14c3e680116ab58d6a6ce3",
+    "edges": 24,
+    "pair_distances_checked": 66,
+    "pinned_assignments_examined": 19683,
+    "pinned_colourings": 1,
+    "residual_component": "C9",
+    "vertices": 12
+  },
+  "generic_template": {
+    "centre_spokes": 18,
+    "internal_edges": 36,
+    "pair_distances_checked_per_exact_control": 435,
+    "pair_distances_checked_total": 1305,
+    "pinned_assignments_examined": 262144,
+    "pinned_colourings": 2,
+    "reviewer_exact_direction_controls": [
+      {
+        "edge_sha256": "755bd5a8a4dba576f173a972fc8da3505effd87a41c1d37a71c89ce4ab3cac22",
+        "edges": 78,
+        "half_angle_parameter": "1/7",
+        "unit_direction": [
+          "24/25",
+          "7/25"
+        ],
+        "vertices": 30
+      },
+      {
+        "edge_sha256": "755bd5a8a4dba576f173a972fc8da3505effd87a41c1d37a71c89ce4ab3cac22",
+        "edges": 78,
+        "half_angle_parameter": "1/3",
+        "unit_direction": [
+          "4/5",
+          "3/5"
+        ],
+        "vertices": 30
+      },
+      {
+        "edge_sha256": "755bd5a8a4dba576f173a972fc8da3505effd87a41c1d37a71c89ce4ab3cac22",
+        "edges": 78,
+        "half_angle_parameter": "1/2",
+        "unit_direction": [
+          "3/5",
+          "4/5"
+        ],
+        "vertices": 30
+      }
+    ],
+    "structure_after_deleting_centres": "K3 Cartesian C6",
+    "vertices": 18
+  },
+  "logical_audit": {
+    "continuum_coverage_from_finite_sampling": false,
+    "continuum_coverage_from_unit_rhombus_and_rotation_orbit_proof": true,
+    "dominating_clique_sizes_reduced": [
+      1,
+      2,
+      3
+    ],
+    "multiple_circle_membership_is_exceptional": true,
+    "noncentre_cross_circle_edges_preserve_unit_direction": true,
+    "record_improvement": false,
+    "same_circle_unit_chords_are_sixth_rotation_neighbours": true
+  },
+  "python": "3.11.2",
+  "reviewed_source": {
+    ".gitignore": {
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    "README.md": {
+      "bytes": 14496,
+      "sha256": "e02710308986ca6ffe58acc4b520e36527b9a71cf0847f8b9a40366a4ac7de8f"
+    },
+    "SHA256SUMS": {
+      "bytes": 549,
+      "sha256": "f13f11a465e1b8457e4ba70496969c1dd7e0f188f1b3733b9d081b5f3e691c3f"
+    },
+    "build.py": {
+      "bytes": 3260,
+      "sha256": "4e3334be1dcd18bb4ccae5bc09d2e5239d11fa4f2fdfabc3800e887f0b41ba85"
+    },
+    "certificate.json": {
+      "bytes": 1493,
+      "sha256": "f3e065d5907a96a41b9d0fe9ae4dfe5fc7ee141ac69030ea497082f1eb199e4c"
+    },
+    "expected.json": {
+      "bytes": 905,
+      "sha256": "0d31e52c9457894a942e0c1a248e88535cc1053676cab7174f924f8cac946bc9"
+    },
+    "validation.json": {
+      "bytes": 3629,
+      "sha256": "9613234c1d7f13ccfa59b2004cdd2c1a48964673dfe48c5ae7a1db400c6d09fb"
+    },
+    "verify.py": {
+      "bytes": 10038,
+      "sha256": "a929bac6e7498aae5874ceeacac985053013521841def53d8eb0fb73cb5eee74"
+    }
+  },
+  "reviewed_source_commit": "0c9e4cf4fd74b5bae3821c957e3b23186386e81d",
+  "scope": "full strict unit graph on three unit circles centred at a unit equilateral triangle; dominating-clique corollary",
+  "trust_boundary": [
+    "elementary Euclidean two-circle intersection and unit-chord arguments used for the continuum reduction",
+    "the standard irrationality of sqrt(3) in the exact quadratic representation",
+    "ordinary CPython Fraction/integer arithmetic, JSON decoding, and exhaustive-loop execution",
+    "SHA-256 collision resistance for the reviewed source identity"
+  ]
+}
