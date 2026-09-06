@@ -220,9 +220,21 @@ checked local 24-vertex witness with 156 red edges and red degree 13 at
 every vertex. A local witness supplies no full extension. Thus 17 of the
 18 open full cores now satisfy b<=3 for the first normalized empty vertex;
 **all 18 full classes / 9,477 labels remain open**, and cumulative whole
-exclusions stay at 179. The new local reduction and outcomes await review.
-Next, propagate the five new necessary bounds into their unrestricted
-full 43-vertex bases. No such next-phase test is run in this milestone.
+exclusions stay at 179. The local reduction, five exclusions and witness
+now have an [accepted independent review](../ramsey_r55_order3_eleven_neighborhood24_review1).
+The subsequent [full local-bound propagation](../ramsey_r55_order3_eleven_local_bound_propagation)
+adds the 35 positive four-subset clauses to the five unrestricted full
+bases. Core159 has a complete 21,652,748-byte refutation, replayed twice
+after fresh reconstruction, with 1,046 RAT core lemmas. This removes
+**one whole-core class /324 labels**, leaving **17 classes /9,153 labels**;
+cumulative exclusions become **180/197 classes /106,390 of115,543 labels**.
+The four other tests124,155,168,180 return UNKNOWN; thirteen full cores
+are untested. Sixteen remaining cores have b<=3, while Core194 is the
+sole unresolved maximal branch. The new full Core159 result awaits
+independent review; the local neighborhood premise is now accepted.
+Next investigate Core194's maximal branch with a justified full-extension
+or complete local-family reduction. No new phase or higher cap is started
+in this milestone.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
