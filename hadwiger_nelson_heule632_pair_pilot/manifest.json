@@ -1,0 +1,121 @@
+{
+  "base_commit_at_plan_freeze": "d1ef2c978a6659a4f0ab1ef748be88e57486a4cb",
+  "claim": "The full unit-distance graph H632 minus old H510 labels399 and462 has630 distinct vertices,3098 unit edges,and chromatic number5.",
+  "computation_boundary": {
+    "attempted": 6,
+    "family_closed": false,
+    "five_colour_certificate": true,
+    "full_pair_domain": 118828,
+    "outcomes": {
+      "SAT": 5,
+      "UNSAT_VERIFIED": 1
+    },
+    "prepared": 24,
+    "record_improvement": false,
+    "seconds": 10.62578933298937,
+    "status": "BOUNDED H632 PAIR PILOT COMPLETE",
+    "unattempted": 18,
+    "unit_edges_if_winner": 3098,
+    "unit_vertices_if_winner": 630,
+    "winner": 5
+  },
+  "dependencies_and_context": [
+    {
+      "commit": "ac6553bd4ede54bea77c6ef4bd66c02638d8f297",
+      "directory": "hadwiger_nelson_heule_fresh122_incidence",
+      "ref": "bafkreiapqhphqnrryhl72riy4crzdtfh2dzzcft53i6iraa4xoaqdjnouu",
+      "role": "Fixed archived fresh support; exact full geometry independently rebuilt here, no reliance on centre-search completeness."
+    },
+    {
+      "commit": "74440b7460b93e4778c945e160d0641cabfb5b37",
+      "directory": "hadwiger_nelson_heule_fresh122_incidence_review1",
+      "ref": "bafkreidsif5t2x4moaanqulup262xsinkywbpkns6lri6azd4hptuu7yje",
+      "role": "Independent acceptance of fixed122 incidence and two-choosability; does not review this new seed."
+    },
+    {
+      "commit": "d0bbc427ade0a65514fd1aa7ce7d9c0548bbfe00",
+      "directory": "hadwiger_nelson_heule632_transport",
+      "ref": "bafkreiejmx3w76svpeppugpxhhlzk2qzu75g2gbzwz3z6nq6arcphvwfgy",
+      "role": "The22 verified singleton cuts guide pair selection; fixed-colouring failures are not support UNSAT claims."
+    },
+    {
+      "commit": "d64687b34ab3ae1e2e0fc4fa18fcdc38e4582d4c",
+      "directory": "hadwiger_nelson_heule632_transport_review1",
+      "ref": "bafkreiemkhamfm7hondjjuvhcy3s7rj7hxraghccxspe6lahf7glq5vu4y",
+      "role": "Independent acceptance of preceding transport, discovered at prepublication refresh."
+    },
+    {
+      "commit": "d1ef2c978a6659a4f0ab1ef748be88e57486a4cb",
+      "directory": "hadwiger_nelson_triangle_exterior_kernel",
+      "ref": "bafkreiccamey42e5sqxevdwi4g72uuxm7e34bimhx6jixxfifr4bdoqzoa",
+      "role": "Distinct teammate geometric direction inspected; not a premise, not duplicated."
+    }
+  ],
+  "full_host_edge_stream": {
+    "format": "ASCII u,v followed by LF, increasing unordered endpoint pairs",
+    "sha256": "8dd36c195b3e252ec2be150ea6a029375707293fec70b63da9fc157eed4140f0"
+  },
+  "graph_context": {
+    "refresh_indexed_height": 3314,
+    "refresh_scan_since": 3310,
+    "relevant_new_durable_artifacts": [
+      {
+        "artifactRef": "bafkreidsif5t2x4moaanqulup262xsinkywbpkns6lri6azd4hptuu7yje",
+        "height": "3289",
+        "title": "Independent acceptance of fixed fresh122 incidence and two-choosability"
+      },
+      {
+        "artifactRef": "bafkreiccamey42e5sqxevdwi4g72uuxm7e34bimhx6jixxfifr4bdoqzoa",
+        "height": "3303",
+        "title": "Finite four-colour kernels for triangle-circle exterior couplings, with a checked 57-vertex core"
+      },
+      {
+        "artifactRef": "bafkreiemkhamfm7hondjjuvhcy3s7rj7hxraghccxspe6lahf7glq5vu4y",
+        "height": "3313",
+        "title": "Independent acceptance: exact frozen-544 H632 transport classification"
+      }
+    ],
+    "start_indexed_height": 3310,
+    "start_scan_since": 3288
+  },
+  "independent_author_review_of_this_seed_claimed": false,
+  "input_files": {
+    "hadwiger_nelson_heule510_completion_frontier/fresh_candidates.json": "89345930e1bea184ce2457b0e14a015bcd9a2901cfc609a6468cf050234a8317",
+    "hadwiger_nelson_heule632_transport/result.json": "d4c566403394f8c307dcb2f1c222ccdcdd3a58dae9ab15a14382edd87eb6dcd5",
+    "hadwiger_nelson_parts509_heule_union_minimum/certificate_H510.json": "bc8e0f5f5ec7fa5f2376cc77ba0e65f6023b340cf48990370d5eda575d30ae79"
+  },
+  "labels": {
+    "fresh": "All122 rows in increasing archived centre_index order, relabelled510..631",
+    "old": "Increasing union labels with provenance containing510, relabelled0..509",
+    "omitted_old": [
+      399,
+      462
+    ],
+    "omitted_union": [
+      436,
+      505
+    ]
+  },
+  "local_only_artifacts": {
+    "four_colour_proof_bytes": 3231081,
+    "four_colour_proof_sha256": "888d261774d76c2ae5667931a96a27abd54d2cb872dfbda183f2b3372b51f620",
+    "others": "Raw CNFs, verbose native logs, original checkpoint and scratch audit outputs. Regenerate proof with verify.py; no raw artifact download required."
+  },
+  "minimality_claimed": false,
+  "next_direction": "Choose one bounded minimization of the verified630-vertex seed, preserving old omissions399 and462. Any smaller non-four-colourable claim requires a freshly checked proof. Do not resume the18 unattempted pair queries as an automatic next step.",
+  "next_phase_started": false,
+  "record_improvement": false,
+  "record_target": 508,
+  "repository_head_after_prepublication_refresh": "d64687b34ab3ae1e2e0fc4fa18fcdc38e4582d4c",
+  "runtime": {
+    "platform": "Linux-6.1.0-52-cloud-amd64-x86_64-with-glibc2.36",
+    "python": "3.11.2"
+  },
+  "trust_boundary": [
+    "Exact CPython integer/Fraction execution and JSON parsing",
+    "Linear independence of the eight squarefree-radical basis elements",
+    "CNF equivalence and global triangle-colour permutation",
+    "DRAT checker correctness; solver UNSAT status alone is insufficient",
+    "Input identity via SHA-256; no frozen-library or centre-search completeness assumption"
+  ]
+}
