@@ -1,0 +1,81 @@
+{
+  "combinatorics": {
+    "K4_edge_signatures_checked": 64,
+    "K4_remaining_forms": "one all-unit K4 or four unit-triangle/sqrt7-centre signatures",
+    "K4_transitive_signatures_with_at_most_three_long_edges": 5,
+    "budget_pairs_checked": 25,
+    "budget_pairs_fitting_private_vertex_bound": 7,
+    "equal_two_list_obstruction_checked": true,
+    "leaf_triangle_list_cases": 120,
+    "terminal_degree_parameter_cases": 6
+  },
+  "kernel": {
+    "all_kernel_pair_norms": 300,
+    "certificate": {
+      "bytes": 1527,
+      "sha256": "bddb9275204535cccce1d66bd2ad1415040a6807fdffb7902dec31fd57126a98"
+    },
+    "circle_witness_unit_checks": 84,
+    "external_distance3_pairs": 0,
+    "external_double_neighbours": 18,
+    "external_sqrt7_pairs": 4,
+    "external_unit_edges": 6,
+    "kernel_points": 25,
+    "spindle_unit_edges": 11,
+    "three_lists": 3,
+    "two_list_edges": 2,
+    "two_list_graph": "P3 plus 12 isolated vertices",
+    "two_lists": 15
+  },
+  "positive_extensions": {
+    "canonical_witness_edge_checks": 3561,
+    "certificate": {
+      "bytes": 1100,
+      "sha256": "26206782c1937d481d06e05ed95284405a188c66c1073a48a8d30dd537b0a830"
+    },
+    "exact_pair_norm_checks": 35352,
+    "expanded_edge_checks": 50484,
+    "gadgets": [
+      {
+        "coordinate_file": {
+          "bytes": 5385,
+          "sha256": "4f72fa06d18434472ce77cebe38880333694ec04b94945ede073a4a1c6d5bc02"
+        },
+        "squared_terminal_distance": 7,
+        "terminal_assignments": 60,
+        "terminal_indices": [
+          141,
+          142,
+          144
+        ],
+        "unit_edges": 646,
+        "vertices": 159
+      },
+      {
+        "coordinate_file": {
+          "bytes": 7262,
+          "sha256": "97c9b3a964ed19874ae3fe932eb8c085fd637f618d2481fffaebbd1fbae55c2f"
+        },
+        "squared_terminal_distance": 9,
+        "terminal_assignments": 12,
+        "terminal_indices": [
+          186,
+          187
+        ],
+        "unit_edges": 977,
+        "vertices": 214
+      }
+    ],
+    "terminal_assignments": 72
+  },
+  "private_interiors_required": true,
+  "python": "3.11.2",
+  "source_commit_reviewed": "061fb2c248515bf6c7385304d2ea53187de4a44c",
+  "spindle_disjoint_required": true,
+  "status": "PASS",
+  "target_artifact": "bafkreig35dkfwsnf4zwzx3nlknxmraobceoeh26qkdnbujiv3ycls7fpvy",
+  "target_graph_found": false,
+  "terminal_only_new_edges_required": true,
+  "verdict": "all terminal contacts extend under the stated spindle-disjoint terminal-only hypotheses",
+  "vertices_at_most": 508
+}
