@@ -1141,3 +1141,36 @@ No eleven-cycle class, entire C3 action type, hard degree slice, or global
 Ramsey target is closed by this construction. No next optimization phase
 has started. Preserve this non-switching construction and select the next
 bounded step after coordination.
+
+
+## Exact four-triangle repair barrier (2026-09-06)
+
+The [four-triangle barrier](../ramsey_r55_c3_four_triangle_barrier) completes
+one exact recoloring unit around the score-123 fourteen-cycle graph. For
+every four of its fourteen moving triangles, all 18 internal cross-triangle
+phase orbits and four contacts to the fixed vertex are free; all other
+pairs and all internal triangle colors remain fixed. Each of the 1,001
+blocks has 22 free bits. An integer polynomial expansion and subset zeta
+transform evaluates the global physical five-set score on every assignment.
+
+All 1,001 blocks have minimum 123 uniquely at the unchanged graph. Thus
+every nontrivial graph in their union has at least 126 defects, since
+five-set orbits under this C3 action have size three. Exact support counting
+gives 4,183,743,579 distinct labeled graphs, compared with 4,198,498,304
+overlapping block-assignment slots. The value 126 is not claimed sharp.
+
+The full computation completed in 188.653 seconds. Public evidence includes
+all block summary rows, the exact transform, physical argmin audits, small
+literal table controls, sanitizer comparisons and the support-count proof.
+The physical audit alone does not establish all table minima: their
+negative bound and uniqueness trust the complete native transform and
+scan. There is no external review, formalization, or separate proof-kernel
+certificate of the new barrier at publication.
+
+This does not improve score 123 or close a global symmetry stratum. Within
+this fixed-action, fixed-internal-color construction family, any score
+improvement must involve at least five moving triangles. The claim does
+not apply after changing internal triangle colors or to arbitrary
+thirteen-vertex repairs. It supplies a precise local stopping boundary;
+no larger block, reanchored sweep or new switching census has started.
+Reassess the next construction method after coordination.
