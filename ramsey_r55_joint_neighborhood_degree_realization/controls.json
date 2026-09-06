@@ -1,0 +1,110 @@
+{
+  "balanced_corruptions": {
+    "blue_K4": {
+      "added": [
+        [
+          20,
+          24
+        ],
+        [
+          21,
+          22
+        ]
+      ],
+      "forbidden_vertices": [
+        5,
+        15,
+        20,
+        22
+      ],
+      "rejection": "Q Ramsey conditions",
+      "removed": [
+        [
+          20,
+          22
+        ],
+        [
+          21,
+          24
+        ]
+      ],
+      "unchanged": "all43 degrees, H, root contacts, both Q edge totals"
+    },
+    "red_K5": {
+      "added": [
+        [
+          20,
+          24
+        ],
+        [
+          21,
+          22
+        ]
+      ],
+      "forbidden_vertices": [
+        4,
+        7,
+        14,
+        20,
+        24
+      ],
+      "rejection": "Q Ramsey conditions",
+      "removed": [
+        [
+          20,
+          22
+        ],
+        [
+          21,
+          24
+        ]
+      ],
+      "unchanged": "all43 degrees, H, root contacts, both Q edge totals"
+    }
+  },
+  "malformed_graphs": [
+    {
+      "name": "order",
+      "rejection": "graph order"
+    },
+    {
+      "name": "boolean_order",
+      "rejection": "graph order"
+    },
+    {
+      "name": "extra_field",
+      "rejection": "graph schema"
+    },
+    {
+      "name": "duplicate",
+      "rejection": "canonical unique edges"
+    },
+    {
+      "name": "reversed_pair",
+      "rejection": "edge range/order"
+    },
+    {
+      "name": "loop",
+      "rejection": "edge range/order"
+    },
+    {
+      "name": "out_of_range",
+      "rejection": "edge range/order"
+    },
+    {
+      "name": "boolean_vertex",
+      "rejection": "edge schema"
+    },
+    {
+      "name": "delete_free_edge",
+      "rejection": "target degree sequence"
+    },
+    {
+      "name": "delete_H_edge",
+      "rejection": "fixed H"
+    }
+  ],
+  "malformed_statuses_rejected": 7,
+  "scope": "author checker controls, not peer review",
+  "valid_status_controls": 3
+}
