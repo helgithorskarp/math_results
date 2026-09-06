@@ -1,0 +1,149 @@
+{
+  "all_three_refuted": true,
+  "base_formula": {
+    "bytes": 14883777,
+    "sha256": "f3314485280b2080f3459774b944e010beeb175788673d53703d60cba091e84c"
+  },
+  "cases": [
+    {
+      "fixed_counts": [
+        0,
+        5,
+        3
+      ],
+      "formula": {
+        "bytes": 14883966,
+        "sha256": "fcee37e21152952708e1b926453c74e0e173d28e9a55d47276829800bf218ab6"
+      },
+      "id": "x0_y5_z3",
+      "proof": {
+        "bytes": 7495271,
+        "sha256": "c5335aead7a69657049fa8424279d35713dfb894fefc934af10237eac07cc140"
+      },
+      "published_proof_match": true,
+      "rat_core_lemmas": 0,
+      "replay_seconds": 3.001566,
+      "solve_seconds": 5.383498
+    },
+    {
+      "fixed_counts": [
+        0,
+        6,
+        2
+      ],
+      "formula": {
+        "bytes": 14883966,
+        "sha256": "2cd440d4a185fda86d5d944aa51fd1c4b08c1c533fe44f48b7c4c9632b4c271d"
+      },
+      "id": "x0_y6_z2",
+      "proof": {
+        "bytes": 2236029,
+        "sha256": "aac21d3508e4612c18a1a094d953a43eb8ac736a0f4733193f36e18fdba0bb8c"
+      },
+      "published_proof_match": true,
+      "rat_core_lemmas": 0,
+      "replay_seconds": 1.183241,
+      "solve_seconds": 0.666949
+    },
+    {
+      "fixed_counts": [
+        1,
+        5,
+        2
+      ],
+      "formula": {
+        "bytes": 14883965,
+        "sha256": "b4cfef4f8ca0a8fbd43f07728c5d89c906af5836b57bb5b713714f53e6c25e72"
+      },
+      "id": "x1_y5_z2",
+      "proof": {
+        "bytes": 4185567,
+        "sha256": "904e9ed78bb9777cf3f696a02167c6700061ae711a2826d16b3b05a8bc95b805"
+      },
+      "published_proof_match": true,
+      "rat_core_lemmas": 0,
+      "replay_seconds": 2.28825,
+      "solve_seconds": 2.624029
+    }
+  ],
+  "census": {
+    "allowed": 252,
+    "method": "direct C++ enumeration of all 3^8 words",
+    "profiles": 3,
+    "rows": [
+      {
+        "fixed_counts": [
+          0,
+          5,
+          3
+        ],
+        "fixed_words": 56,
+        "red_degrees": [
+          23,
+          24
+        ]
+      },
+      {
+        "fixed_counts": [
+          0,
+          6,
+          2
+        ],
+        "fixed_words": 28,
+        "red_degrees": [
+          24,
+          23
+        ]
+      },
+      {
+        "fixed_counts": [
+          1,
+          5,
+          2
+        ],
+        "fixed_words": 168,
+        "red_degrees": [
+          24,
+          24
+        ]
+      }
+    ],
+    "sorting_permutations": 223,
+    "total": 6561
+  },
+  "drat_trim_binary": {
+    "bytes": 51352,
+    "sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+  },
+  "elapsed_seconds": 15.576503,
+  "execution": "serial; one solver or checker process at a time",
+  "false_refutation_rejected": true,
+  "kissat_binary": {
+    "bytes": 546552,
+    "sha256": "9193d0d788f70d11046c7e965657c7096c9471ea96db2552a7d1544e925307cb"
+  },
+  "kissat_version": "4.0.4",
+  "proofs_match_published": true,
+  "red_pair_branch_resolved": false,
+  "remaining_moving_types": [
+    [
+      4,
+      1,
+      2
+    ],
+    [
+      5,
+      0,
+      2
+    ],
+    [
+      5,
+      1,
+      1
+    ]
+  ],
+  "status": "PASS",
+  "target_graph_found": false,
+  "verdict": "the complete Core194 (6,0,1) moving type is excluded",
+  "whole_core194_excluded": false
+}
