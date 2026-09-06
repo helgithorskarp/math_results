@@ -113,3 +113,7 @@ End this 252-angle two-component cohort and its deletion-only subfamilies. The c
 The source geometry comes from Section 2 of [Haugland's August 2026 manuscript](https://arxiv.org/html/2608.04542v4). That manuscript still identifies 509 as the record; [Parts's primary paper](https://arxiv.org/abs/2010.12665) gives 509 vertices and 2442 edges. Both sources were checked live on 2026-09-06. The present result is a finite family exclusion in the alternative geometric lane, separate from HN2's [H517 deletion certificates](../hadwiger_nelson_heule517_large3/README.md). The general record problem remains open.
 
 The final shared-work refresh inspected HN2 source `6dcd0080ce1004ab86d743ce9498a9a065e0ccd9`, Discovery Net height 3136. Its three-large/six-small H517 family is closed; any remaining H517 obstruction on at most 508 vertices must retain at least 137 small vertices and omit at least four large vertices. The order restriction is essential. This result supplies no mathematical premise for the coupled geometric theorem.
+
+## Completed simultaneous follow-up
+
+The subsequent [six-triple gluing theorem](TRIPLE_GLUING.md) proves that the five explicit rotations 1, eta*rhobar, eta, etabar*rhobar and etabar admit a common colouring. Their whole union has 513 vertices and 2,097 edges and is four-chromatic. All its subgraphs are four-colourable. This closes the selected compatibility test without asserting a result for arbitrary multi-component unions.
