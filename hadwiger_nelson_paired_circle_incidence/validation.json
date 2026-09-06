@@ -1,0 +1,57 @@
+{
+  "checked_at": "2026-09-06T13:48:57.307854+00:00",
+  "python_version": "3.11.2",
+  "producer": {
+    "status": "PASS",
+    "factor_count": 22,
+    "coefficient_terms": 570,
+    "certificate_bytes": 11040,
+    "certificate_sha256": "ee51e8cf1517bd2885d3c74d7b5ccaa74418593e5e9910bf948bcab56021febb",
+    "seconds": 0.027847463003126904
+  },
+  "independent_check_seconds": 2.1282163049909286,
+  "optimized_check_seconds": 2.1001428079907782,
+  "normal_optimized_reports_identical": true,
+  "native_solver_calls": 0,
+  "CAS_used": false,
+  "threads": 1,
+  "external_review": "Pending",
+  "method": "Written continuum colouring proof; sparse-polynomial producer versus exact determinant evaluations on a coefficient-complete 7-by-7 interpolation grid. No shared executable imports.",
+  "general_orientation_trust": "Written proof; the executable certificate specializes r=(3+4i)/5 only.",
+  "source_context": [
+    {
+      "package": "hadwiger_nelson_paired_circle_kernel",
+      "commit": "1f9787f88ecf05469906f8ba9a6eaab010434791",
+      "scope": "Preceding finite kernel; elementary geometry is reproved here."
+    },
+    {
+      "package": "hadwiger_nelson_heule503_endpoint",
+      "commit": "053a47e798b4c82354b5a62f7d94b337926e19c4",
+      "scope": "Coordination only; not a mathematical dependency."
+    },
+    {
+      "package": "hadwiger_nelson_heule560_kempe_review1",
+      "commit": "323f3620ce03918b3e8c084b5319bc81e21bd65b",
+      "scope": "Coordination only."
+    }
+  ],
+  "graph_initial_indexed_height": 3390,
+  "graph_prepublication_indexed_height": 3394,
+  "new_overlapping_work_in_refresh": false,
+  "literature": [
+    {
+      "url": "https://arxiv.org/abs/2010.12665",
+      "scope": "Parts reports 509 vertices and 2442 edges."
+    },
+    {
+      "url": "https://arxiv.org/html/2608.04542v4",
+      "scope": "August 17 2026 introduction identifies Parts509 as current record."
+    }
+  ],
+  "limitations": [
+    "No claim that polynomial vanishing implies graph non-four-colourability.",
+    "No claim of an exact or minimal exceptional locus.",
+    "Common-midpoint full graph and earlier kernel lists were not queried.",
+    "No five-chromatic graph at most508 vertices found."
+  ]
+}
