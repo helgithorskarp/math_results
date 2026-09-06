@@ -1,0 +1,123 @@
+{
+  "all_checks_passed": true,
+  "both_nonunit_envelopes": {
+    "H_colourings": 1,
+    "M_colourings": 4,
+    "certificate": {
+      "bytes": 11235,
+      "sha256": "a27a193f2188705af41a857d4fbddc724885bf1ac8faa6f8752cf8b5442c1ad1"
+    },
+    "colour_edge_checks": 252480,
+    "edge_histogram": {
+      "526": 480
+    },
+    "events": 480,
+    "extra_edges": 480,
+    "formal_pair_tests": 5150880,
+    "graph_stream_sha256": "c6cfd5e270aa3ac60bbf50ed6d1926051e713eff32f23dc19b88365e8d99e0a9",
+    "mixed_pair_tests": 4233600,
+    "modular_false_positives": 0,
+    "modular_survivors_rechecked_exactly": 480
+  },
+  "collision_dependency": {
+    "certificate_C7_representatives": 36,
+    "colouring_verdict_imported_from": "review1 collision review",
+    "entrywise_orbit_cover": true,
+    "exact_collision_rotations": 252
+  },
+  "coverage": {
+    "C7_and_simultaneous_sign_cover_entrywise": true,
+    "all_nonunit_H_pair_C7_orbits": 24,
+    "both_nonunit_directed_event_pairs_covered": 6720,
+    "nonunit_M_directed_differences": 20,
+    "uncovered_H_pair_C7_orbits_for_unit_M": 9,
+    "unit_M_directed_differences": 14,
+    "unit_M_directed_event_pairs_covered": 1764
+  },
+  "factor_check": {
+    "H_unit_edges": 42,
+    "H_vertices": 21,
+    "M_unit_edges": 11,
+    "M_vertices": 7,
+    "factor_edges": 525,
+    "formal_vertices_outside_collisions": 147,
+    "proper_M_three_colourings": 0
+  },
+  "finite_field_filter": {
+    "distinct_from_reviewed_moduli": true,
+    "models": [
+      {
+        "prime": 1000231,
+        "s": 514215,
+        "t": 78195
+      },
+      {
+        "prime": 1000609,
+        "s": 223469,
+        "t": 465403
+      }
+    ],
+    "soundness": "exact zero maps to zero; every modular survivor was rechecked in characteristic zero"
+  },
+  "inputs": {
+    "contact_envelopes_expected.json": {
+      "bytes": 1049,
+      "sha256": "c87e6f39a6257fdff82bb3b3b18175060a2b45bc66e5b968ca5d63e9e9009f56"
+    },
+    "contacts_certificate.json": {
+      "bytes": 5703,
+      "sha256": "624764f5927cf520be6e364c82b006dc87df9311b519f61d47fd72fbbcfa2a35"
+    },
+    "reviewed_source_commit": "edc54718fba597ce37f5377fca70213bda133784",
+    "reviewer_arithmetic_base": {
+      "bytes": 16855,
+      "sha256": "c854ee538254bd272cd604bc9aa4dabb57e0b48b184b1fde28ac5dc0d965e1a2"
+    },
+    "rotation_family_expected.json": {
+      "bytes": 988,
+      "sha256": "16a555ad0ca44eefa7b6e2c48f7b1657a1d3b7ed7773066932b4b6f44a52afb8"
+    }
+  },
+  "scope": "every rotation of the fixed 21-point H plus rotated 7-point M family",
+  "target_graph_claimed": false,
+  "trust_boundary": {
+    "exact_arithmetic": "reviewer-owned Q[t,s]/(Phi42(t),s^2+11) implementation",
+    "imported_mathematics": [
+      "injectivity of the displayed 24-element number-field basis",
+      "the already accepted collision-rotation colouring review"
+    ],
+    "runtime": "CPython integer and Fraction arithmetic, finite loops, JSON, SHA-256"
+  },
+  "unit_M_envelopes": {
+    "H_colourings": 1,
+    "M_colourings": 6,
+    "certificate": {
+      "bytes": 3732,
+      "sha256": "0a2ebbaabddd53fd3003f04165567628bcd22c8df3e68811767306eb44b2ea5e"
+    },
+    "colour_edge_checks": 66348,
+    "edge_histogram": {
+      "526": 54,
+      "527": 72
+    },
+    "events": 126,
+    "extra_edges": 198,
+    "formal_pair_tests": 1352106,
+    "graph_stream_sha256": "6c230a063e7d28c4be68e2315d5e74a566b294e74f2e20ad22ba9cdc5f04efd2",
+    "mixed_pair_tests": 1111320,
+    "modular_false_positives": 0,
+    "modular_survivors_rechecked_exactly": 198
+  },
+  "unit_contact_bridges": {
+    "covered_nonunit_H_pairs": 105,
+    "dual_neighbour_root_checks": 2940,
+    "every_checked_root_in_collision_set": true,
+    "only_M_pair_without_common_unit_neighbour": [
+      3,
+      6
+    ],
+    "uncovered_nonunit_H_pairs": 63,
+    "unit_H_directed_differences": 84,
+    "unit_H_labelled_root_checks": 7056
+  }
+}
