@@ -1,0 +1,139 @@
+{
+  "algebra": {
+    "H_rational_spectrum": [
+      1
+    ],
+    "H_spectrum_size": 25,
+    "H_vertices": 21,
+    "M_radical_spectrum_verified": true,
+    "M_spectrum_size": 7,
+    "M_vertices": 7,
+    "representation": "Q[t,s]/(Phi42(t),s^2+11)",
+    "spectrum_intersection": [
+      1
+    ]
+  },
+  "all_checks_passed": true,
+  "collision_check": {
+    "C7_representatives": 36,
+    "H_directed_differences": 420,
+    "M_directed_differences": 34,
+    "certificate_orbits_cover_entrywise": true,
+    "difference_pair_comparisons": 14280,
+    "equal_length_pairs": 1176,
+    "multiplicity_histogram": {
+      "2": 84,
+      "6": 168
+    },
+    "rotations": 252
+  },
+  "finite_field_filter": {
+    "exact_candidates": 18588,
+    "false_positives": 0,
+    "models": [
+      {
+        "prime": 1000231,
+        "s": 514215,
+        "t": 78195
+      },
+      {
+        "prime": 1000609,
+        "s": 223469,
+        "t": 465403
+      }
+    ],
+    "soundness": "exact unit implies unit in each finite-field image; every candidate rechecked exactly"
+  },
+  "graph_check": {
+    "case_histogram": [
+      [
+        142,
+        513,
+        0,
+        12
+      ],
+      [
+        143,
+        512,
+        0,
+        12
+      ],
+      [
+        146,
+        523,
+        0,
+        6
+      ],
+      [
+        146,
+        525,
+        2,
+        6
+      ]
+    ],
+    "fibre_histograms": [
+      [
+        [
+          [
+            1,
+            137
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        12
+      ],
+      [
+        [
+          [
+            1,
+            140
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        12
+      ],
+      [
+        [
+          [
+            1,
+            145
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        12
+      ]
+    ],
+    "formal_sum_representations": 5292,
+    "invalid_colourings_rejected": 36,
+    "proper_XOR_colourings": 36,
+    "proper_spindle_three_colourings": 0,
+    "representative_edge_checks": 18588,
+    "representative_pair_checks": 368988,
+    "spindle_embeddings": 36
+  },
+  "inputs": {
+    "collisions_certificate.json": {
+      "bytes": 4211,
+      "sha256": "a3670efebb9b7c04355dec3fbf9e40f6085627c792f5461867e64e53c37d32e2"
+    },
+    "contacts_certificate.json": {
+      "bytes": 5703,
+      "sha256": "624764f5927cf520be6e364c82b006dc87df9311b519f61d47fd72fbbcfa2a35"
+    }
+  },
+  "scope": "all collision orientations of the fixed H+rM family",
+  "target_graph_claimed": false
+}
