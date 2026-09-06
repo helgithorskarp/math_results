@@ -1,0 +1,528 @@
+{
+  "cases": [
+    {
+      "counts": [
+        2
+      ],
+      "formula": {
+        "bytes": 14841531,
+        "sha256": "97a6647537ff6631e988832ede8c9806a4885d7637d719509ffd58bdee5b345d"
+      },
+      "id": "e2",
+      "solve_seconds": 90.350155,
+      "solver_code": 0,
+      "solver_log": {
+        "bytes": 29614,
+        "sha256": "7fd1a532a9ce9e6d9b99b6c1358140878803180bbd63557f6b7cdfbad5fddc44"
+      },
+      "status": "open",
+      "trace": {
+        "bytes": 99952609,
+        "sha256": "dbe182b942ccd274c041b5f6d9558eef8e53280b62c0f04a02237eb86627e35e"
+      }
+    },
+    {
+      "counts": [
+        3
+      ],
+      "formula": {
+        "bytes": 14841553,
+        "sha256": "b8ca6084dd41450d921b74754d422e2546e7c57b9968122a5e82bceaac9573fe"
+      },
+      "id": "e3",
+      "solve_seconds": 90.356283,
+      "solver_code": 0,
+      "solver_log": {
+        "bytes": 30069,
+        "sha256": "d3404b8eec2ba2e7e4d41ea5694d522764e1c4e8fc80fe1d4a23b554dbe708e2"
+      },
+      "status": "open",
+      "trace": {
+        "bytes": 98590823,
+        "sha256": "b995a63068ec6ab1142b7eecf1ac81ad080220ec406a6f08b0ca3bf5c47f3933"
+      }
+    },
+    {
+      "counts": [
+        4
+      ],
+      "formula": {
+        "bytes": 14841581,
+        "sha256": "1753bc6de7d66b87d7279d4176c00f192e8454773928879fe4ce401b1be8a1c8"
+      },
+      "id": "e4",
+      "solve_seconds": 90.411669,
+      "solver_code": 0,
+      "solver_log": {
+        "bytes": 30516,
+        "sha256": "a120e7a16a1aefaf8d0b6718a9ed84adbe514fce6654a55881ffb03fe674200c"
+      },
+      "status": "open",
+      "trace": {
+        "bytes": 104011271,
+        "sha256": "0e6a89c967b7a5717c30ca723ee88d63693ae20e041b2c48aa467e499fbcd372"
+      }
+    }
+  ],
+  "complete": true,
+  "contract": {
+    "case_order": [
+      "e2",
+      "e3",
+      "e4"
+    ],
+    "drat_trim": {
+      "bytes": 51352,
+      "sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+    },
+    "format": "r55-core194-red-empty-clique-decisions-v1",
+    "kissat": {
+      "bytes": 546552,
+      "sha256": "2d185ea775f2c7c16d33a235ef852d2b69f0f3c8b437335b966b4a5aa6265b45"
+    },
+    "python": "3.11.2",
+    "replay_seconds": 600,
+    "solve_seconds": 90,
+    "sources": {
+      "ramsey_r55_core194_a4_fixed_review1/README.md": {
+        "bytes": 5977,
+        "sha256": "30b5177f6e317a735712404a9d7c0d01e924cac4d970ab7643d51d296941aeee"
+      },
+      "ramsey_r55_core194_a4_fixed_review1/result.json": {
+        "bytes": 24950,
+        "sha256": "e427bc33e956a2de5635b3e64ca0b69ad4fd4e976ed493825bd6c514ec38de01"
+      },
+      "ramsey_r55_order3_eleven_core194_a4_fixed/PROOF.md": {
+        "bytes": 5698,
+        "sha256": "6ad4c97b6d4345ed547273f223e080687594db876131f4c2c267ef8c4ac51f2c"
+      },
+      "ramsey_r55_order3_eleven_core194_a4_fixed/result.json": {
+        "bytes": 63154,
+        "sha256": "c210208f92b80e9504491d3cc34dbfb7514db26c46073676a9b378a5aa666d87"
+      },
+      "ramsey_r55_order3_eleven_core194_attachments/audit.py": {
+        "bytes": 9877,
+        "sha256": "b174b24d845b9748b8ff837384c174441a5601088f42a4b7cfa62a37af47b82b"
+      },
+      "ramsey_r55_order3_eleven_core194_direct/PROOF.md": {
+        "bytes": 7886,
+        "sha256": "5178dd3e8e404fa02e17014a0e2e56c8b8a048b415cd958ea6a7ebd470e09888"
+      },
+      "ramsey_r55_order3_eleven_core194_direct/check.py": {
+        "bytes": 7090,
+        "sha256": "93298ebc771c1c4f7bb6e019eb3387986745d8394feb20ecb4f93321f3a235ef"
+      },
+      "ramsey_r55_order3_eleven_core194_direct/decode.py": {
+        "bytes": 1707,
+        "sha256": "fa36d067c863dd0541c15b3f99ade7705c7cefcdf1b102b8b2345663146c0d89"
+      },
+      "ramsey_r55_order3_eleven_core194_direct/generate.py": {
+        "bytes": 3320,
+        "sha256": "fc8b15a087b02e31a254df7b7c0314e391b27c11cfe3a54bdc4a870a1aa382e9"
+      },
+      "ramsey_r55_order3_eleven_core194_direct/result.json": {
+        "bytes": 11182,
+        "sha256": "9500da9e2358316eeaece258bbce553e6df4070bc67feca3da573854094273f1"
+      },
+      "ramsey_r55_order3_eleven_core194_direct_review1/README.md": {
+        "bytes": 5604,
+        "sha256": "402ad7716ac6ba1c4fd82e1db3bb8ab81d832edffca71ebad020ffe4b6cda23f"
+      },
+      "ramsey_r55_order3_eleven_core194_direct_review1/result.json": {
+        "bytes": 2997,
+        "sha256": "fc13fd9203da61c2b2f289ea4e6b67cd2628d3a16942bd7116678be447c654eb"
+      },
+      "ramsey_r55_order3_eleven_core194_multiplicity/PROOF.md": {
+        "bytes": 6901,
+        "sha256": "24273fc3ed16d093982c473719692cf5115701081a70f50241362e4267269f10"
+      },
+      "ramsey_r55_order3_eleven_core194_multiplicity/result.json": {
+        "bytes": 42496,
+        "sha256": "864276e0fca83db96ce2629f7320310ee2f7e2ffe3e5cd3ab0e60aa7dc930a1e"
+      },
+      "ramsey_r55_order3_eleven_core194_multiplicity_review1/README.md": {
+        "bytes": 8283,
+        "sha256": "05b92ef87cf3649f7f3e6bc3410c6266a205b7e5f7e49748afd17f258c611934"
+      },
+      "ramsey_r55_order3_eleven_core194_multiplicity_review1/result.json": {
+        "bytes": 10574,
+        "sha256": "b155d9b1d6cef42ea0b334aba294af108e8d7a742076f55d52eae475232654e3"
+      },
+      "ramsey_r55_order3_eleven_core194_red_clique/PROOF.md": {
+        "bytes": 6020,
+        "sha256": "bff75d00859c3c84fccc988db9d4864c0228490bf13801078a5c56a877cbd976"
+      },
+      "ramsey_r55_order3_eleven_core194_red_clique/audit.py": {
+        "bytes": 4215,
+        "sha256": "03d3b6b88caf06aa883418f8e34a09995c1e1a7f2b5a645f61b168dc6b6f16bc"
+      },
+      "ramsey_r55_order3_eleven_core194_red_clique/build.py": {
+        "bytes": 5682,
+        "sha256": "79e14ea1480288410ec51dc1cf6d13aa53f5c293027659041089c6fdbca05b86"
+      },
+      "ramsey_r55_order3_eleven_core194_red_clique/controls.py": {
+        "bytes": 1823,
+        "sha256": "b60afa10d90e6370588ceb100d0af4fbf854f9f7df57e202f728090b22d738c5"
+      },
+      "ramsey_r55_order3_eleven_core194_red_clique/run.py": {
+        "bytes": 7435,
+        "sha256": "f240c253d8717fbae62e97c13dc03fdecdb4950836b6ed04853a3da0995b06c0"
+      },
+      "ramsey_r55_order3_eleven_core194_red_clique/verify.py": {
+        "bytes": 3667,
+        "sha256": "ff85bd3b46ea11258b60038e0aaf8a15f2cf080ec8ccf792eccefebdb4543dd1"
+      }
+    },
+    "workers": 2
+  },
+  "elapsed_seconds": 209.051071,
+  "excluded": [],
+  "largest_child_maxrss_kib": 322244,
+  "open": [
+    "e2",
+    "e3",
+    "e4"
+  ],
+  "preparation": {
+    "base_audit": {
+      "bytes": 14841387,
+      "census": {
+        "clauses": 364095,
+        "distinct_ramsey_clauses": 364068,
+        "fixed_units": 27,
+        "new_pair_consequences": 0,
+        "possible_blue": 646149,
+        "possible_red": 457300,
+        "variables": 320
+      },
+      "clause_lengths": {
+        "1": 27,
+        "10": 202538,
+        "3": 473,
+        "4": 190,
+        "5": 1106,
+        "6": 3738,
+        "7": 25144,
+        "8": 30618,
+        "9": 100261
+      },
+      "color": "red",
+      "exact": true,
+      "reconstruction": "physical C3 pair orbits and possible-color clique recursion",
+      "sha256": "2aa575e6b988d788f57f98abaa3728518517adc02c795ef5f75458c459e85a72"
+    },
+    "base_generation": {
+      "census": {
+        "all_five_sets": 962598,
+        "clauses": 364095,
+        "distinct_ramsey_clauses": 364068,
+        "fixed_units": 27,
+        "new_pair_consequences": 0,
+        "possible_blue": 646149,
+        "possible_red": 457300,
+        "variables": 320
+      },
+      "color": "red",
+      "formula": {
+        "bytes": 14841387,
+        "sha256": "2aa575e6b988d788f57f98abaa3728518517adc02c795ef5f75458c459e85a72"
+      }
+    },
+    "base_symmetries": {
+      "clause_images_checked": 2548665,
+      "generators": [
+        [
+          35,
+          36
+        ],
+        [
+          36,
+          37
+        ],
+        [
+          37,
+          38
+        ],
+        [
+          38,
+          39
+        ],
+        [
+          39,
+          40
+        ],
+        [
+          40,
+          41
+        ],
+        [
+          41,
+          42
+        ]
+      ]
+    },
+    "cases": [
+      {
+        "added_clauses": [
+          [
+            233,
+            234,
+            235,
+            236
+          ],
+          [
+            244,
+            245,
+            246,
+            247
+          ],
+          [
+            255,
+            256,
+            257,
+            258
+          ],
+          [
+            266,
+            267,
+            268,
+            269
+          ],
+          [
+            277,
+            278,
+            279,
+            280
+          ],
+          [
+            288,
+            289,
+            290,
+            291
+          ],
+          [
+            299,
+            300,
+            301,
+            302
+          ],
+          [
+            310,
+            311,
+            312,
+            313
+          ]
+        ],
+        "counts": [
+          2
+        ],
+        "empty_fixed_vertices": [
+          33,
+          34
+        ],
+        "formula": {
+          "bytes": 14841531,
+          "sha256": "97a6647537ff6631e988832ede8c9806a4885d7637d719509ffd58bdee5b345d"
+        },
+        "id": "e2",
+        "status": "untested"
+      },
+      {
+        "added_clauses": [
+          [
+            -233
+          ],
+          [
+            -234
+          ],
+          [
+            -235
+          ],
+          [
+            -236
+          ],
+          [
+            167
+          ],
+          [
+            175
+          ],
+          [
+            244,
+            245,
+            246,
+            247
+          ],
+          [
+            255,
+            256,
+            257,
+            258
+          ],
+          [
+            266,
+            267,
+            268,
+            269
+          ],
+          [
+            277,
+            278,
+            279,
+            280
+          ],
+          [
+            288,
+            289,
+            290,
+            291
+          ],
+          [
+            299,
+            300,
+            301,
+            302
+          ],
+          [
+            310,
+            311,
+            312,
+            313
+          ]
+        ],
+        "counts": [
+          3
+        ],
+        "empty_fixed_vertices": [
+          33,
+          34,
+          35
+        ],
+        "formula": {
+          "bytes": 14841553,
+          "sha256": "b8ca6084dd41450d921b74754d422e2546e7c57b9968122a5e82bceaac9573fe"
+        },
+        "id": "e3",
+        "status": "untested"
+      },
+      {
+        "added_clauses": [
+          [
+            -233
+          ],
+          [
+            -234
+          ],
+          [
+            -235
+          ],
+          [
+            -236
+          ],
+          [
+            -244
+          ],
+          [
+            -245
+          ],
+          [
+            -246
+          ],
+          [
+            -247
+          ],
+          [
+            167
+          ],
+          [
+            168
+          ],
+          [
+            175
+          ],
+          [
+            176
+          ],
+          [
+            183
+          ],
+          [
+            255,
+            256,
+            257,
+            258
+          ],
+          [
+            266,
+            267,
+            268,
+            269
+          ],
+          [
+            277,
+            278,
+            279,
+            280
+          ],
+          [
+            288,
+            289,
+            290,
+            291
+          ],
+          [
+            299,
+            300,
+            301,
+            302
+          ],
+          [
+            310,
+            311,
+            312,
+            313
+          ]
+        ],
+        "counts": [
+          4
+        ],
+        "empty_fixed_vertices": [
+          33,
+          34,
+          35,
+          36
+        ],
+        "formula": {
+          "bytes": 14841581,
+          "sha256": "1753bc6de7d66b87d7279d4176c00f192e8454773928879fe4ce401b1be8a1c8"
+        },
+        "id": "e4",
+        "status": "untested"
+      }
+    ],
+    "cover": {
+      "allowed_patterns": {
+        "2": 1,
+        "3": 8,
+        "4": 28
+      },
+      "clique_truth_assignments": 37,
+      "distinct_normalizers": 35,
+      "empty_patterns": 256,
+      "no_exterior_contact_restriction": true,
+      "prefix_truth_assignments": 384
+    },
+    "file_controls": [
+      "wrong_header",
+      "lost_base",
+      "missing_nonempty",
+      "missing_empty",
+      "wrong_empty_sign",
+      "wrong_clique_sign",
+      "extra_no_BB",
+      "missing_clique"
+    ]
+  },
+  "target_graph": false,
+  "whole_core_exclusions": []
+}

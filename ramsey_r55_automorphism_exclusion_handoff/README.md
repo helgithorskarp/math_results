@@ -1,5 +1,12 @@
 # Automorphism exclusion handoff for Ramsey `(5,5,43)` search
 
+Latest checkpoint: the complete Core194 BLUE-pair closure now has independent
+acceptance. The [exact RED empty-clique split](../ramsey_r55_order3_eleven_core194_red_clique)
+tests cardinalities two, three and four; all three return UNKNOWN. No whole
+class is removed: 17 classes / 9,153 labels remain open. This reaches the
+all-UNKNOWN stopping boundary for further Core194 variants; the next pass
+should change method. See the final sections for precise current scope.
+
 Let `G` be a hypothetical graph on 43 vertices with neither a clique nor an
 independent set of order five.  The currently certified symmetry results in
 this repository imply the following reusable group-screening rule:
@@ -855,21 +862,55 @@ The [reviewed multiplicity theorem](../ramsey_r55_order3_eleven_core194_multipli
 gives at least two, and the no-red-K5 condition gives at most four.
 These are necessary cardinalities, not asserted realizations.
 
-The new 27-profile proof remains independently unreviewed. The inherited
-a=5 closure now has accepted independent review at graph3258, discovered
-just after source publication. Its complete counts, coupled normalization,
-formulas and nineteen fresh proofs were independently checked. All inherited
-cover, pair, direct, multiplicity and moving-exclusion premises are reviewed;
-the remaining combined BLUE-branch gap is this new a4 closure. No target graph or
-Ramsey-bound improvement follows. The RED-pair branch, whole Core194
-and all 17 whole classes / 9,153 labels remain open, including 81
-Core194 labels.
+The complete 27-profile proof and its combined BLUE closure now have
+[accepted independent review](../ramsey_r55_core194_a4_fixed_review1), source
+ad709b9c713573ed389377990aa9a639abcc6900, graph3270. The reviewer independently
+reconstructed the cover, all complete formulas and 27 fresh full refutations,
+including the physical normalization bridge. The red-clique corollary is
+accepted as well. All inherited cover, pair, direct, multiplicity and
+moving-exclusion premises have accepted reviews. No target graph or
+Ramsey-bound improvement follows. The RED-pair branch, whole Core194 and
+all 17 whole classes / 9,153 labels remain open, including 81 Core194 labels.
 
-The next unstarted scope is an exact RED empty-clique reduction with
-cardinality two, three or four. The BLUE no-BB contact lemma and its
-nine-type cover do not automatically apply to RED pairs. No such red
-reduction, finer formula or search has begun. No background job remains.
-The teammate's new 104-edge projection concerns a distinct fixed H92
-six-neighborhood subsystem; it supplies no solver verdict and is not
-imported here. Shared content was refreshed through 3257 without an
-affecting objection or overlapping BLUE-branch closure.
+
+## Core194: exact red-clique cardinalities all remain UNKNOWN
+
+The [complete three-case checkpoint](../ramsey_r55_order3_eleven_core194_red_clique)
+normalizes the empty set to 33..32+q, for q=2,3,4. Each formula preserves
+the complete reviewed RED base and adds the required negative core units,
+red clique edges and positive nonempty-prefix clauses for every other fixed
+vertex. Its 320 variables have respectively 364,103, 364,108 and 364,114
+clauses. No BLUE-pair no-BB consequence, degree profile or extra graph
+automorphism is imposed.
+
+All 256 empty/nonempty prefix patterns are checked, with 1,8,28 covered
+placements and 35 distinct normalizers. The physical tails, 384 prefix
+assignments, 37 clique assignments and 2,548,665 complete base-clause images
+pass. Eight malformed complete formulas and seven malformed solver
+transcripts are rejected, along with a false DRAT refutation of a satisfiable
+fixture. All 22 frozen source identities remain unchanged; normal and
+optimized reconstructions agree on every complete formula.
+
+Each new case received one 90-second solve. All three returned explicit
+UNKNOWN/exit0. Production completed in 209.051071 seconds, fresh optimized
+verification in 29.241066 seconds. There was no SAT, UNSAT, or refutation
+replay. The 302,554,703 bytes of partial traces are neither refutations nor
+solver restart state and remain outside Git. The new cover is author-checked;
+the inherited base and red-clique corollary are independently accepted.
+
+This checkpoint produces no frontier reduction. All three red cases,
+whole Core194 and all 17 classes / 9,153 labels remain open. The principal's
+all-UNKNOWN stopping boundary now requires a method change before any more
+Core194 variants. No further subdivision or longer solve has begun. The
+proposed next pass is a bounded structured-construction experiment on full
+43-vertex graphs under the eleven-cycle action across the existing whole-core
+frontier, preserving an explicit coloring and independent exact defect audit.
+This is an unstarted direction, not a construction claim. No background job
+or pending certificate remains.
+
+Shared content was refreshed through3273. The teammate's
+[projected H92 backend](../ramsey_r55_antipodal_degree_backend), source
+7f25e7786bbb850b2979a9d877543f1dc44ec5df, graph3272, supplies an executable
+encoding and an author-written arithmetic checker for its distinct fixed
+nonsymmetric subsystem, with one UNKNOWN. Its projection premise is reviewed;
+the backend is not independently reviewed and is not imported here.

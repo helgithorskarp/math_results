@@ -1,0 +1,340 @@
+{
+  "base_audit": {
+    "bytes": 14841387,
+    "census": {
+      "clauses": 364095,
+      "distinct_ramsey_clauses": 364068,
+      "fixed_units": 27,
+      "new_pair_consequences": 0,
+      "possible_blue": 646149,
+      "possible_red": 457300,
+      "variables": 320
+    },
+    "clause_lengths": {
+      "1": 27,
+      "10": 202538,
+      "3": 473,
+      "4": 190,
+      "5": 1106,
+      "6": 3738,
+      "7": 25144,
+      "8": 30618,
+      "9": 100261
+    },
+    "color": "red",
+    "exact": true,
+    "reconstruction": "physical C3 pair orbits and possible-color clique recursion",
+    "sha256": "2aa575e6b988d788f57f98abaa3728518517adc02c795ef5f75458c459e85a72"
+  },
+  "base_generation": {
+    "census": {
+      "all_five_sets": 962598,
+      "clauses": 364095,
+      "distinct_ramsey_clauses": 364068,
+      "fixed_units": 27,
+      "new_pair_consequences": 0,
+      "possible_blue": 646149,
+      "possible_red": 457300,
+      "variables": 320
+    },
+    "color": "red",
+    "formula": {
+      "bytes": 14841387,
+      "sha256": "2aa575e6b988d788f57f98abaa3728518517adc02c795ef5f75458c459e85a72"
+    }
+  },
+  "base_symmetries": {
+    "clause_images_checked": 2548665,
+    "generators": [
+      [
+        35,
+        36
+      ],
+      [
+        36,
+        37
+      ],
+      [
+        37,
+        38
+      ],
+      [
+        38,
+        39
+      ],
+      [
+        39,
+        40
+      ],
+      [
+        40,
+        41
+      ],
+      [
+        41,
+        42
+      ]
+    ]
+  },
+  "cases": [
+    {
+      "added_clauses": [
+        [
+          233,
+          234,
+          235,
+          236
+        ],
+        [
+          244,
+          245,
+          246,
+          247
+        ],
+        [
+          255,
+          256,
+          257,
+          258
+        ],
+        [
+          266,
+          267,
+          268,
+          269
+        ],
+        [
+          277,
+          278,
+          279,
+          280
+        ],
+        [
+          288,
+          289,
+          290,
+          291
+        ],
+        [
+          299,
+          300,
+          301,
+          302
+        ],
+        [
+          310,
+          311,
+          312,
+          313
+        ]
+      ],
+      "counts": [
+        2
+      ],
+      "empty_fixed_vertices": [
+        33,
+        34
+      ],
+      "formula": {
+        "bytes": 14841531,
+        "sha256": "97a6647537ff6631e988832ede8c9806a4885d7637d719509ffd58bdee5b345d"
+      },
+      "id": "e2",
+      "status": "untested"
+    },
+    {
+      "added_clauses": [
+        [
+          -233
+        ],
+        [
+          -234
+        ],
+        [
+          -235
+        ],
+        [
+          -236
+        ],
+        [
+          167
+        ],
+        [
+          175
+        ],
+        [
+          244,
+          245,
+          246,
+          247
+        ],
+        [
+          255,
+          256,
+          257,
+          258
+        ],
+        [
+          266,
+          267,
+          268,
+          269
+        ],
+        [
+          277,
+          278,
+          279,
+          280
+        ],
+        [
+          288,
+          289,
+          290,
+          291
+        ],
+        [
+          299,
+          300,
+          301,
+          302
+        ],
+        [
+          310,
+          311,
+          312,
+          313
+        ]
+      ],
+      "counts": [
+        3
+      ],
+      "empty_fixed_vertices": [
+        33,
+        34,
+        35
+      ],
+      "formula": {
+        "bytes": 14841553,
+        "sha256": "b8ca6084dd41450d921b74754d422e2546e7c57b9968122a5e82bceaac9573fe"
+      },
+      "id": "e3",
+      "status": "untested"
+    },
+    {
+      "added_clauses": [
+        [
+          -233
+        ],
+        [
+          -234
+        ],
+        [
+          -235
+        ],
+        [
+          -236
+        ],
+        [
+          -244
+        ],
+        [
+          -245
+        ],
+        [
+          -246
+        ],
+        [
+          -247
+        ],
+        [
+          167
+        ],
+        [
+          168
+        ],
+        [
+          175
+        ],
+        [
+          176
+        ],
+        [
+          183
+        ],
+        [
+          255,
+          256,
+          257,
+          258
+        ],
+        [
+          266,
+          267,
+          268,
+          269
+        ],
+        [
+          277,
+          278,
+          279,
+          280
+        ],
+        [
+          288,
+          289,
+          290,
+          291
+        ],
+        [
+          299,
+          300,
+          301,
+          302
+        ],
+        [
+          310,
+          311,
+          312,
+          313
+        ]
+      ],
+      "counts": [
+        4
+      ],
+      "empty_fixed_vertices": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "formula": {
+        "bytes": 14841581,
+        "sha256": "1753bc6de7d66b87d7279d4176c00f192e8454773928879fe4ce401b1be8a1c8"
+      },
+      "id": "e4",
+      "status": "untested"
+    }
+  ],
+  "cover": {
+    "allowed_patterns": {
+      "2": 1,
+      "3": 8,
+      "4": 28
+    },
+    "clique_truth_assignments": 37,
+    "distinct_normalizers": 35,
+    "empty_patterns": 256,
+    "no_exterior_contact_restriction": true,
+    "prefix_truth_assignments": 384
+  },
+  "file_controls": [
+    "wrong_header",
+    "lost_base",
+    "missing_nonempty",
+    "missing_empty",
+    "wrong_empty_sign",
+    "wrong_clique_sign",
+    "extra_no_BB",
+    "missing_clique"
+  ]
+}
