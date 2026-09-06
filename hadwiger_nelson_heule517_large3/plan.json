@@ -1,0 +1,20 @@
+{
+  "frozen_at": "2026-09-06T02:27:07.058136+00:00",
+  "milestone": "One bounded three-large/six-small deletion family decision on exact H517",
+  "family": "Exactly 372 large and 136 small vertices retained: 508 vertices",
+  "initial_positive_rows": 814,
+  "initial_inclusion_antichain": 571,
+  "forced_vertices": 397,
+  "small_six_sets": 8008,
+  "small_survivors": 38,
+  "large_triple_survivors": 749066,
+  "source_large2_commit": "86287fd43140e23790f97a3d267299585f0335e7",
+  "max_full_graph_queries": 256,
+  "conflicts_per_query": 100000,
+  "address_space_bytes": 4294967296,
+  "order": "Round robin through lexicographic small omission sets; lexicographically least uncovered large triple per case.",
+  "oracle": "Full activated H517 four-colouring CNF; all517 activations assigned; no intact-L pattern restriction.",
+  "positive_policy": "Check candidate colouring, greedily restore omitted large vertices before small vertices, check the full extended witness and remove only candidates avoiding its residual D.",
+  "negative_policy": "Fresh full-candidate Kissat proof with seed0,1000000 conflicts,180seconds; independent DRAT and exact CNF checks, plus checked five-colouring, before any target claim.",
+  "stop_policy": "Stop on complete coverage, certified target, UNKNOWN, or256 queries. Preserve a reproducible checkpoint and yield; no automatic budget extension or next deletion level."
+}
