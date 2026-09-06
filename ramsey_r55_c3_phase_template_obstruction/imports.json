@@ -1,0 +1,19 @@
+{
+  "baseline.edges": {
+    "source": "../ramsey_r55_c3_four_triangle_barrier/baseline.edges",
+    "sha256": "36c4a4ff6359e56ece7c9a6b41e35fae02cb04d72e56d832dc1a4dc056c6e88e",
+    "role": "Exact saved parent input"
+  },
+  "physical.py": {
+    "source": "../ramsey_r55_c3_four_triangle_barrier/physical.py",
+    "sha256": "614ae70e7b8deeeb8591a58bb460737114012ee904ef18c3b0ba17bcd8489d8f",
+    "role": "Byte-identical reuse of physical graph and clique routines; no claim of external review"
+  },
+  "search.cpp": {
+    "source_context": "../ramsey_r55_c3_fourteen_construction/search.cpp",
+    "role": "New finite-domain projection and state update; inherits the physical five-set event method, SplitMix64 generator, seven-step tabu, one-percent random escape, twenty-percent bad-event choice and output pattern from the previous Boolean search. Does not import its Boolean clauses or gains."
+  },
+  "proof.py": {
+    "role": "Separate dense physical checker, imports none of the other producer, objective or graph-checker modules"
+  }
+}

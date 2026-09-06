@@ -1,0 +1,58 @@
+{
+  "status": "PARENT_PHASE_OBSTRUCTION_PROVED_TRADE_GATE_MISSED",
+  "parent_score": 123,
+  "traded_initial_score": 186,
+  "best_trade_score": 177,
+  "best_trade_blue_red": [
+    123,
+    54
+  ],
+  "best_trade_graph_sha256": "ff1c0922aa3aee7252a46635dec5980263ea70a084a258e9ab8c090542282979",
+  "restarts": 16,
+  "moves_per_restart": 25000,
+  "total_moves": 400000,
+  "seed_base": 2026090621,
+  "interval": 5000,
+  "all_restarts_best_177": true,
+  "search_exhaustive": false,
+  "trade_family_excluded": false,
+  "target_found": false,
+  "new_ramsey_bound": false,
+  "native_runtime": {
+    "exit_code": 0,
+    "wall_seconds": 193.7746094529998
+  },
+  "calibration_release": {
+    "complete": true,
+    "candidate_target": false,
+    "seconds": 2.374782
+  },
+  "calibration_sanitizer": {
+    "complete": true,
+    "candidate_target": false,
+    "seconds": 31.396263
+  },
+  "calibration_overlap_production": true,
+  "calibration_release_sanitizer_words_model_graph_equal": true,
+  "source_sha256": {
+    "control.cpp": "88872ebd1d64b8ae35d63642fcfec9ae9bfd21884fbd38c39d75e7fa56cd5107",
+    "template.json": "0d40c26f44ccf2ce35c6ac07c0e29a92b20cfb8edcb98b3f31f431ebcac9a3a2",
+    "baseline.edges": "36c4a4ff6359e56ece7c9a6b41e35fae02cb04d72e56d832dc1a4dc056c6e88e",
+    "search.cpp": "aa6b759fb7059ee3b08129dfe0fbceb2964d6a5b3da9b89423db04b59bab111e",
+    "audit.py": "b0c69bbb331ac32b27f37582a75f3d41e8bdccf2f3c34f05d8d060c839b3cbe1",
+    "template.py": "4d7a4ed98d9c105e136742acf0e6b26ae9cd4e8bc3a024e381a86b363527e045",
+    "physical.py": "614ae70e7b8deeeb8591a58bb460737114012ee904ef18c3b0ba17bcd8489d8f",
+    "traded.edges": "6a971024aacc5f1311665b9fd0934388e200af4811fb7eeb1d04ff79d7c1250b"
+  },
+  "binary_sha256": {
+    "search": "0f8a002933a5a98436dd3691fe79d67f5a7f126b98f550392db076db448eedfa",
+    "search-sanitize": "4929e65e7bac1eb9f9957d12454f2dc9adb3635dd774e08a5abae442a9f76c1f",
+    "control": "a8ccce7feebc681f3a70d74d65509b392790157dbedd933a5a1affac543ca72a"
+  },
+  "normal_optimized_proof_controls_and_graph_audit_equal": true,
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "python": "CPython 3.11.2",
+  "release_flags": "-std=c++20 -O3 -Wall -Wextra -Wpedantic -Werror",
+  "sanitizer_flags": "-std=c++20 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=address,undefined -fno-omit-frame-pointer",
+  "preproduction_calibration_issue": "An initial Boolean-mask update formulation disagreed with exact rebuilt scores in optimized builds and was rejected. The frozen implementation uses explicit zero/one integer membership differences with bounded event lookup. No production or published result uses the rejected version; no compiler-root-cause claim is made."
+}

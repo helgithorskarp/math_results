@@ -1174,3 +1174,27 @@ not apply after changing internal triangle colors or to arbitrary
 thirteen-vertex repairs. It supplies a precise local stopping boundary;
 no larger block, reanchored sweep or new switching census has started.
 Reassess the next construction method after coordination.
+
+## Parent phase-template obstruction and one completed count trade
+
+The [phase-template package](../ramsey_r55_c3_phase_template_obstruction)
+proves that every phase reassignment preserving the score123 parent's
+91 pair multiplicities, internal colors and root contacts retains the
+three blue K5s `{u,30,31,32,42}`, `u=6,7,8`. This excludes that whole
+`3^73` labeled family from containing a Ramsey target, while giving only
+a score lower bound of3; it does not prove score123 optimal there.
+Unlike the preceding four-triangle barrier, phases may change across
+all fourteen moving triangles but pair multiplicities stay fixed.
+
+The exact trade `+(2,10),+(0,5),-(0,2),-(5,10)` preserves every degree
+and removes all five-cliques whose edges are individually frozen by its
+template. Its76 free phases give `3^76` labeled graphs. A completed
+16-start/400000-move bounded heuristic found score177 (123blue/54red)
+in every restart, missing the strict constructive gate below123. The
+traded family remains unresolved; no optimality or exclusion follows.
+The parent's profile `20^6 21^28 22^9` has weightW45 and thus lies outside
+the hard deficiency branch, without being globally excluded. The dense
+physical proof checker, all443 phase controls and all16 graph audits
+passed; publication has author checking, with no external review claimed.
+No global symmetry frontier, eleven-cycle class or Ramsey bound changed.
+This pass ends before another template, cap increase or proof phase.
