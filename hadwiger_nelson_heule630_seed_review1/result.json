@@ -1,0 +1,261 @@
+{
+  "accepted_claim": "H632 minus old vertices 399 and 462 has 630 vertices, 3098 edges, and chromatic number exactly five",
+  "all_checks_passed": true,
+  "five_colour_upper_bound": {
+    "colour_frequencies": {
+      "0": 163,
+      "1": 138,
+      "2": 126,
+      "3": 109,
+      "4": 94
+    },
+    "edge_checks": 3098
+  },
+  "four_colour_lower_bound": {
+    "clause_partition": {
+      "at_least_one": 630,
+      "at_most_one": 3780,
+      "edge_colour": 12392,
+      "triangle_pins": 3
+    },
+    "clauses": 16805,
+    "cnf_bytes": 222713,
+    "cnf_sha256": "8c123d547fc4c2ff24338880b8a9d61e6edb798b844900c172de6e6a6e3c7e4f",
+    "definition_level_boolean_controls": 32768,
+    "derived_lrat": {
+      "bytes": 12996060,
+      "sha256": "2d3984da881a400a1b59bcf682745cb8f14440dc986e7b1a8d5d3a86e60260a5"
+    },
+    "pinned_triangle": [
+      0,
+      143,
+      146
+    ],
+    "proof": {
+      "bytes": 2719501,
+      "sha256": "422cf1b90cf0e66a395291f8051a64619023a2bcfbe3e752a3cbd30325196975"
+    },
+    "proof_checkers": {
+      "drat_trim": {
+        "bytes": 51352,
+        "exact_verified_line": true,
+        "exit_code": 0,
+        "sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+      },
+      "lrat_check": {
+        "bytes": 22176,
+        "exact_verified_line": true,
+        "exit_code": 0,
+        "sha256": "fb7e9f57ee5849afaa35e9d967e27a72cd76bad7aa72ee0499dc65207c08c4a7"
+      }
+    },
+    "solver": {
+      "exit_code": 20,
+      "proof_regenerated": true,
+      "seed": 17,
+      "sha256": "9193d0d788f70d11046c7e965657c7096c9471ea96db2552a7d1544e925307cb"
+    },
+    "variables": 2520
+  },
+  "geometry": {
+    "distinct_points": 632,
+    "exact_pairs_checked": 199396,
+    "host_edge_sha256": "8dd36c195b3e252ec2be150ea6a029375707293fec70b63da9fc157eed4140f0",
+    "host_edges": 3112,
+    "host_vertices": 632,
+    "omitted_adjacent": false,
+    "omitted_degrees": {
+      "399": 7,
+      "462": 7
+    },
+    "omitted_old_vertices": [
+      399,
+      462
+    ],
+    "omitted_union_labels": [
+      436,
+      505
+    ],
+    "seed_edge_sha256": "14dfca558a986c73226f39e1cfcf10081d2c77d19abb087ccc31913f9bb00758",
+    "seed_edges": 3098,
+    "seed_vertices": 630
+  },
+  "negative_controls": {
+    "lrat_without_empty_clause_rejected": true,
+    "malformed_positive_colourings_rejected": 4
+  },
+  "positive_pilot_prefix": {
+    "rows": [
+      {
+        "colour_frequencies": {
+          "0": 157,
+          "1": 158,
+          "2": 162,
+          "3": 153
+        },
+        "edge_checks": 3104,
+        "index": 0,
+        "omitted": [
+          102,
+          293
+        ]
+      },
+      {
+        "colour_frequencies": {
+          "0": 169,
+          "1": 158,
+          "2": 152,
+          "3": 151
+        },
+        "edge_checks": 3102,
+        "index": 1,
+        "omitted": [
+          102,
+          384
+        ]
+      },
+      {
+        "colour_frequencies": {
+          "0": 160,
+          "1": 155,
+          "2": 143,
+          "3": 172
+        },
+        "edge_checks": 3100,
+        "index": 2,
+        "omitted": [
+          384,
+          444
+        ]
+      },
+      {
+        "colour_frequencies": {
+          "0": 159,
+          "1": 162,
+          "2": 158,
+          "3": 151
+        },
+        "edge_checks": 3104,
+        "index": 3,
+        "omitted": [
+          302,
+          305
+        ]
+      },
+      {
+        "colour_frequencies": {
+          "0": 172,
+          "1": 153,
+          "2": 148,
+          "3": 157
+        },
+        "edge_checks": 3101,
+        "index": 4,
+        "omitted": [
+          293,
+          399
+        ]
+      }
+    ],
+    "total_edge_checks": 15511
+  },
+  "python": "3.11.2",
+  "reviewed_source_commit": "14a0c9b76d7907ab0d7107a0a8796e3c0784dc68",
+  "scope": {
+    "chromatic_number_exact": 5,
+    "minimality": false,
+    "record_improvement": false,
+    "sub509_graph": false,
+    "unattempted_pilot_pairs_decided": false,
+    "vertex_criticality": false
+  },
+  "source_identity": {
+    "mathematical_inputs": {
+      "hadwiger_nelson_heule510_completion_frontier/fresh_candidates.json": {
+        "bytes": 23322,
+        "sha256": "89345930e1bea184ce2457b0e14a015bcd9a2901cfc609a6468cf050234a8317"
+      },
+      "hadwiger_nelson_parts509_heule_union_minimum/certificate_H510.json": {
+        "bytes": 552196,
+        "sha256": "bc8e0f5f5ec7fa5f2376cc77ba0e65f6023b340cf48990370d5eda575d30ae79"
+      }
+    },
+    "target_files": {
+      ".gitignore": {
+        "bytes": 44,
+        "sha256": "618f50be681a673d863a99f7b6a6e65af69cc8aa0bf7a37c72347f3e72c03809"
+      },
+      "PROOF.md": {
+        "bytes": 3652,
+        "sha256": "c94d920c671f18cd19fd6867c83db728fb48f58845df8544a339c1de5e1fa857"
+      },
+      "README.md": {
+        "bytes": 8211,
+        "sha256": "be107116ef95b4814d07ae236938a16cf8215573bc9853e50a48cc94d5027961"
+      },
+      "SHA256SUMS": {
+        "bytes": 1246,
+        "sha256": "e91ef9dc4cc128a573818be3df377c1f0e75fd7edc9227f71e0fc2cf75c94252"
+      },
+      "build.py": {
+        "bytes": 5831,
+        "sha256": "f3e2c4d579feccec7cab9a31903b814d5428c0d146053ed488ec1dc1cf6bcf4c"
+      },
+      "cases.json": {
+        "bytes": 3074,
+        "sha256": "7a08c2f2818e9545a1719e2f16a05eed2f9d82afc46384d4cd07acdcc10d76c0"
+      },
+      "certificate.json": {
+        "bytes": 4694,
+        "sha256": "fffa224298854425f7c40726a9dd96196b1c5e82b75ffa4d8c6c19fefbc8274f"
+      },
+      "controls.py": {
+        "bytes": 2607,
+        "sha256": "90d8487ffcad25c6830bf1c75e1d759567779bac21a091bbd6355df97d6a3be2"
+      },
+      "independent.py": {
+        "bytes": 4977,
+        "sha256": "091b762038fae447dad5679cd6cc25009291869d641af75a7b26b5cfc0551d60"
+      },
+      "manifest.json": {
+        "bytes": 5540,
+        "sha256": "b8115ea866c6ff2661ae440f9f6e85929d3c8bb6cd83b5f9fb88aa82a61d5747"
+      },
+      "native.py": {
+        "bytes": 1924,
+        "sha256": "f1ce9e6d8014c06b1882f5346217f1c4988852f7b0ee80e3db7b452ad25c87ae"
+      },
+      "plan.json": {
+        "bytes": 2770,
+        "sha256": "5da817c4506312cf5d30a83ec6242c3581ea882b4a1be48355c8e07d5a91a9df"
+      },
+      "preparation.json": {
+        "bytes": 8316,
+        "sha256": "72baacfe588ea5e3baf8527553aea8d633c65ca1eada9c7d9d793745729891de"
+      },
+      "result.json": {
+        "bytes": 402,
+        "sha256": "10f2081745322a66e5a9cd549925aac1d93e0c0fcb9f6b1d5472f28a9a841c7b"
+      },
+      "run.py": {
+        "bytes": 4853,
+        "sha256": "e0b9f6f6033716fe687a27f00c6a6fbb9e38c81a4042ddee93146e425a64b0e1"
+      },
+      "validation.json": {
+        "bytes": 3839,
+        "sha256": "7f99bdefc02fbd38a81c4c0533b3b9faf6b19abc74299f07145d948837d153cc"
+      },
+      "verify.py": {
+        "bytes": 7529,
+        "sha256": "13268f6106966542793e9e078adba774865304561ca1abd4bfadd201f9d8e07f"
+      }
+    }
+  },
+  "trust_boundary": [
+    "the two SHA-256-pinned coordinate tables",
+    "linear independence of the eight squarefree radical basis elements",
+    "ordinary CPython integer/Fraction arithmetic, JSON decoding, and exhaustive pair enumeration",
+    "soundness of the independently built drat-trim and lrat-check proof checkers; solver UNSAT output is not trusted",
+    "SHA-256 collision resistance for source and stream identities"
+  ]
+}
