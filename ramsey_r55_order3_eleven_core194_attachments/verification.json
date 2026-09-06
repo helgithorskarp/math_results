@@ -1,0 +1,554 @@
+{
+  "base": {
+    "bytes": 14883777,
+    "sha256": "f3314485280b2080f3459774b944e010beeb175788673d53703d60cba091e84c"
+  },
+  "cases": [
+    {
+      "counts": [
+        1,
+        3,
+        3
+      ],
+      "formula": {
+        "bytes": 14883867,
+        "sha256": "f9c0f082cafd3000fe07b676464f9cdf7676d5304cfdfd59d211b6fdb8cdeab5"
+      },
+      "id": "a1_b3_c3",
+      "status": "untested"
+    },
+    {
+      "counts": [
+        2,
+        2,
+        3
+      ],
+      "formula": {
+        "bytes": 14883866,
+        "sha256": "6ec69455b04e1c9079cd2d74619a9b01cfd1e102596bdb5a379059cc43ae68f3"
+      },
+      "id": "a2_b2_c3",
+      "status": "untested"
+    },
+    {
+      "counts": [
+        3,
+        1,
+        3
+      ],
+      "formula": {
+        "bytes": 14883865,
+        "sha256": "cd9fdc75f4e390884b40f761dd0be3e168648bb5338425e60b3adfa60d2487f9"
+      },
+      "id": "a3_b1_c3",
+      "status": "untested"
+    },
+    {
+      "counts": [
+        3,
+        2,
+        2
+      ],
+      "formula": {
+        "bytes": 14883865,
+        "sha256": "fb6810e0f9ee65d3ccdb4cd9cdc6795f8c2a3b490ddef7f6034f488107f30f27"
+      },
+      "id": "a3_b2_c2",
+      "status": "untested"
+    },
+    {
+      "counts": [
+        4,
+        0,
+        3
+      ],
+      "formula": {
+        "bytes": 14883864,
+        "sha256": "408ed7537bd4fe7924da91996bb9769472ee70307252df14da044841430ee54e"
+      },
+      "id": "a4_b0_c3",
+      "status": "untested"
+    },
+    {
+      "counts": [
+        4,
+        1,
+        2
+      ],
+      "formula": {
+        "bytes": 14883864,
+        "sha256": "9b4713387dcd340004587bcf23904b4b5521cdd0ad1fe2c8cdab50fe86f9c849"
+      },
+      "id": "a4_b1_c2",
+      "status": "untested"
+    },
+    {
+      "counts": [
+        5,
+        0,
+        2
+      ],
+      "formula": {
+        "bytes": 14883863,
+        "sha256": "203185eda762ba8435aadb1443aa15857d9a4c264f8192801c17cc4fc1458add"
+      },
+      "id": "a5_b0_c2",
+      "status": "untested"
+    },
+    {
+      "counts": [
+        5,
+        1,
+        1
+      ],
+      "formula": {
+        "bytes": 14883863,
+        "sha256": "94949fffff51e46aff3ddfb264af728e8e77d4bb168bb4ba63e9d19e529cfcab"
+      },
+      "id": "a5_b1_c1",
+      "status": "untested"
+    },
+    {
+      "counts": [
+        6,
+        0,
+        1
+      ],
+      "formula": {
+        "bytes": 14883862,
+        "sha256": "ceaf2996b2d44329898e5bfbab009ce1846b11a5c48da002794a6d15af5d3014"
+      },
+      "id": "a6_b0_c1",
+      "status": "untested"
+    }
+  ],
+  "full_corruptions_rejected": [
+    "wrong_header",
+    "lost_base",
+    "missing_unit",
+    "wrong_sign",
+    "extra_clause",
+    "wrong_fixed_unit"
+  ],
+  "joint_profiles": 119,
+  "local_audit": {
+    "fixture": {
+      "blue_pair": [
+        12,
+        18
+      ],
+      "common_blue": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "five_blue_fixed_neighbors": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "five_sets": 11628,
+      "neighborhood_four_sets": 3060,
+      "order": 19,
+      "red_edges": 69,
+      "scope": "counterexample to a local four-fixed-neighbor cap, not a full43extension",
+      "signatures": [
+        0,
+        0,
+        1,
+        6,
+        10
+      ]
+    },
+    "profile_check": {
+      "census": {
+        "all_no_BB_assignments": 14348907,
+        "allowed_labeled_assignments": 4806900,
+        "fixed_words": 6561,
+        "moving_words": 2187,
+        "normalizing_permutations": 5852,
+        "pair_swaps": 1,
+        "red_degree_census": [
+          {
+            "count": 129360,
+            "degrees": [
+              18,
+              18
+            ]
+          },
+          {
+            "count": 147000,
+            "degrees": [
+              18,
+              19
+            ]
+          },
+          {
+            "count": 149100,
+            "degrees": [
+              18,
+              20
+            ]
+          },
+          {
+            "count": 147000,
+            "degrees": [
+              18,
+              21
+            ]
+          },
+          {
+            "count": 129360,
+            "degrees": [
+              18,
+              22
+            ]
+          },
+          {
+            "count": 103005,
+            "degrees": [
+              18,
+              23
+            ]
+          },
+          {
+            "count": 82320,
+            "degrees": [
+              18,
+              24
+            ]
+          },
+          {
+            "count": 147000,
+            "degrees": [
+              19,
+              18
+            ]
+          },
+          {
+            "count": 142380,
+            "degrees": [
+              19,
+              19
+            ]
+          },
+          {
+            "count": 142380,
+            "degrees": [
+              19,
+              20
+            ]
+          },
+          {
+            "count": 147000,
+            "degrees": [
+              19,
+              21
+            ]
+          },
+          {
+            "count": 118230,
+            "degrees": [
+              19,
+              22
+            ]
+          },
+          {
+            "count": 87780,
+            "degrees": [
+              19,
+              23
+            ]
+          },
+          {
+            "count": 73500,
+            "degrees": [
+              19,
+              24
+            ]
+          },
+          {
+            "count": 149100,
+            "degrees": [
+              20,
+              18
+            ]
+          },
+          {
+            "count": 142380,
+            "degrees": [
+              20,
+              19
+            ]
+          },
+          {
+            "count": 149100,
+            "degrees": [
+              20,
+              20
+            ]
+          },
+          {
+            "count": 140175,
+            "degrees": [
+              20,
+              21
+            ]
+          },
+          {
+            "count": 105840,
+            "degrees": [
+              20,
+              22
+            ]
+          },
+          {
+            "count": 82530,
+            "degrees": [
+              20,
+              23
+            ]
+          },
+          {
+            "count": 67032,
+            "degrees": [
+              20,
+              24
+            ]
+          },
+          {
+            "count": 147000,
+            "degrees": [
+              21,
+              18
+            ]
+          },
+          {
+            "count": 147000,
+            "degrees": [
+              21,
+              19
+            ]
+          },
+          {
+            "count": 140175,
+            "degrees": [
+              21,
+              20
+            ]
+          },
+          {
+            "count": 123480,
+            "degrees": [
+              21,
+              21
+            ]
+          },
+          {
+            "count": 97020,
+            "degrees": [
+              21,
+              22
+            ]
+          },
+          {
+            "count": 73521,
+            "degrees": [
+              21,
+              23
+            ]
+          },
+          {
+            "count": 54684,
+            "degrees": [
+              21,
+              24
+            ]
+          },
+          {
+            "count": 129360,
+            "degrees": [
+              22,
+              18
+            ]
+          },
+          {
+            "count": 118230,
+            "degrees": [
+              22,
+              19
+            ]
+          },
+          {
+            "count": 105840,
+            "degrees": [
+              22,
+              20
+            ]
+          },
+          {
+            "count": 97020,
+            "degrees": [
+              22,
+              21
+            ]
+          },
+          {
+            "count": 73836,
+            "degrees": [
+              22,
+              22
+            ]
+          },
+          {
+            "count": 51534,
+            "degrees": [
+              22,
+              23
+            ]
+          },
+          {
+            "count": 38808,
+            "degrees": [
+              22,
+              24
+            ]
+          },
+          {
+            "count": 103005,
+            "degrees": [
+              23,
+              18
+            ]
+          },
+          {
+            "count": 87780,
+            "degrees": [
+              23,
+              19
+            ]
+          },
+          {
+            "count": 82530,
+            "degrees": [
+              23,
+              20
+            ]
+          },
+          {
+            "count": 73521,
+            "degrees": [
+              23,
+              21
+            ]
+          },
+          {
+            "count": 51534,
+            "degrees": [
+              23,
+              22
+            ]
+          },
+          {
+            "count": 36666,
+            "degrees": [
+              23,
+              23
+            ]
+          },
+          {
+            "count": 28224,
+            "degrees": [
+              23,
+              24
+            ]
+          },
+          {
+            "count": 82320,
+            "degrees": [
+              24,
+              18
+            ]
+          },
+          {
+            "count": 73500,
+            "degrees": [
+              24,
+              19
+            ]
+          },
+          {
+            "count": 67032,
+            "degrees": [
+              24,
+              20
+            ]
+          },
+          {
+            "count": 54684,
+            "degrees": [
+              24,
+              21
+            ]
+          },
+          {
+            "count": 38808,
+            "degrees": [
+              24,
+              22
+            ]
+          },
+          {
+            "count": 28224,
+            "degrees": [
+              24,
+              23
+            ]
+          },
+          {
+            "count": 19992,
+            "degrees": [
+              24,
+              24
+            ]
+          }
+        ]
+      },
+      "full_star_units_checked": 3570,
+      "joint_profiles": 119,
+      "moving_profiles": 9,
+      "moving_units_checked": 126
+    },
+    "rejected": [
+      "missing_profile",
+      "wrong_weight",
+      "wrong_degree",
+      "wrong_full_unit",
+      "missing_moving",
+      "wrong_moving_unit",
+      "wrong_window",
+      "wrong_total",
+      "wrong_order",
+      "duplicate_edge",
+      "red_empty_link",
+      "blue_vf",
+      "wrong_core"
+    ]
+  },
+  "moving_cases": 9,
+  "seconds": 29.31716,
+  "solver_calls": 0,
+  "verified": true,
+  "whole_core_exclusions": []
+}

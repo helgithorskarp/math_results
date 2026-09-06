@@ -298,9 +298,16 @@ clauses, checked independently via physical orbits and possible-color
 clique recursion. Its absence of fixed-row ordering permits any selected
 empty pair to be relabeled33,34. Both new cases return UNKNOWN at60
 seconds; no additional exclusion follows, and all17classes/9,153labels
-remain. The new direct formulation and relabeling proof await independent
-review. The bounded comparison is complete; a further structural
-attachment analysis has not begun.
+remain. The direct formulation and relabeling proof now have an
+[accepted independent review](../ramsey_r55_order3_eleven_core194_direct_review1).
+The subsequent [blue-pair attachment cover](../ramsey_r55_order3_eleven_core194_attachments)
+proves that every blue empty pair has at least one common-red blue
+moving triangle and reduces its contacts to nine moving types and119
+joint degree profiles. The entire nine complete formulas are prepared
+and checked, with no SAT calls or new exclusions. A19-vertex local
+counterexample permits five other fixed blue neighbors of one endpoint,
+so that local cap cannot justify pruning these types. All17classes and
+the red-pair case remain open. The next full nine-case search is unstarted.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
