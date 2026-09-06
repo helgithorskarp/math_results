@@ -1,0 +1,441 @@
+{
+  "all_checks_passed": true,
+  "conclusion": {
+    "H632_family_closed_through_508": false,
+    "adaptive_new_colourings_or_solver_calls": 0,
+    "failed_fixed_old_colourings": 522,
+    "failed_row_support_non_four_colourability_proved": false,
+    "fixed_544_by_66_decision_complete": true,
+    "full_extensions": 22,
+    "record_improvement": false,
+    "sub509_five_chromatic_graph_produced": false,
+    "valid_H632_singleton_deletion_witnesses": 22
+  },
+  "definition_level_controls": {
+    "fixtures": [
+      {
+        "cases": 83521,
+        "colourable": 62208,
+        "fixture": "path4",
+        "search": {
+          "branch_nodes": 140382,
+          "conflicts": 21313,
+          "domain_deletions": 108256,
+          "recursive_nodes": 223903
+        },
+        "truth_sha256": "b3864c867cc735738b6804350f656e4deabd73657012a6b026353fe4273df45f"
+      },
+      {
+        "cases": 83521,
+        "colourable": 60876,
+        "fixture": "cycle4",
+        "search": {
+          "branch_nodes": 126079,
+          "conflicts": 22681,
+          "domain_deletions": 133504,
+          "recursive_nodes": 209636
+        },
+        "truth_sha256": "feeea840e368110122370811148637183eff8af0a643242f905721b1da3a815f"
+      },
+      {
+        "cases": 15625,
+        "colourable": 1732,
+        "fixture": "cycle4_two_branches",
+        "search": {
+          "branch_nodes": 508,
+          "conflicts": 13893,
+          "domain_deletions": 10730,
+          "recursive_nodes": 16133
+        },
+        "truth_sha256": "ac6f9827d2170299f20ab152530052c2df191d2b50998a445e1caa177a4726a0"
+      }
+    ],
+    "odd_cycle_identical_two_lists_rejected": true,
+    "total_cases": 182667
+  },
+  "geometry": {
+    "exact_pairs_checked": 199396,
+    "fresh_components": 66,
+    "fresh_cross_norm_stream_sha256": "f319dfe814bb9a2259a914b74c79adde9272422e4e761d57dc308fc750a638f7",
+    "fresh_edges": 57,
+    "full_edge_stream_sha256": "b68794133915a87531627c09582dda5eeb959e5ddad03407280ad916d1b9b92e",
+    "full_edges": 3112,
+    "old_edges": 2504,
+    "old_fresh_edges": 551,
+    "vertices": 632
+  },
+  "negative_controls_rejected": [
+    "missing_vertex_mask",
+    "out_of_range_mask",
+    "odd_cycle_identical_two_lists"
+  ],
+  "old_library": {
+    "distinct_singleton_vertices": 510,
+    "omission_size_histogram": {
+      "1": 532,
+      "2": 10,
+      "3": 2
+    },
+    "retained_H510_edge_checks": 1356641,
+    "retained_H514_edge_checks": 1368406,
+    "rows": 544,
+    "source_strings_redecoded": 963,
+    "stream_sha256": "f35fc4fc4d9e42c8d877f05b344de4fa374b17f954bea6b2c00b365d359d52bc"
+  },
+  "pinned_input_files": 50,
+  "python": "3.11.2",
+  "reviewed_source": {
+    ".gitignore": {
+      "bytes": 25,
+      "sha256": "61ba5dd06b07c5b9b1e3b52603182e0c9bf75bff7a13193b86a75c1bfeefdda9"
+    },
+    "PROOF.md": {
+      "bytes": 8339,
+      "sha256": "08ab94d50a2a1ad88abf4503778906708c080807fb3a354887c1d2d79356f3ca"
+    },
+    "README.md": {
+      "bytes": 6151,
+      "sha256": "4d284c6fcc6caede0a9d118cb2d09151c21c71113c50bfcc2e3f034fdc174d63"
+    },
+    "cases.tsv": {
+      "bytes": 21346,
+      "sha256": "1732ba3f438cec81bd83950bf8a54ac728ca6be7136489d9fc60688845fef630"
+    },
+    "controls.py": {
+      "bytes": 2886,
+      "sha256": "ea1ae19bb63d19a5f1f0df860fd18490fb7eb7c9744a0571ac6ff9d79bf1e2b9"
+    },
+    "independent.py": {
+      "bytes": 3036,
+      "sha256": "d798a99e070ea2832cc9825c34b294110fe1131ee20dd07ee146e83d94fcb390"
+    },
+    "manifest.json": {
+      "bytes": 2002,
+      "sha256": "042bce5ad0925665c8be6df0be068da9ecd8fd0df3fbf8f6a7d1ea31a0c26fa7"
+    },
+    "oracle.py": {
+      "bytes": 3311,
+      "sha256": "aa250eee347dd04d380b814bcb9f70eefd91ce673b55e0e950379f1880957ac0"
+    },
+    "plan.json": {
+      "bytes": 8539,
+      "sha256": "9cca392e18601da0ba5df747da34ef84ac13e859d4297b5eccb26d6ad04ff733"
+    },
+    "positive.json": {
+      "bytes": 5334,
+      "sha256": "61f386acef6bb271a0e2384cc2fd59a2696e92b1df2af6a35350f86a88b5d1ef"
+    },
+    "result.json": {
+      "bytes": 1916,
+      "sha256": "d4c566403394f8c307dcb2f1c222ccdcdd3a58dae9ab15a14382edd87eb6dcd5"
+    },
+    "run.py": {
+      "bytes": 6116,
+      "sha256": "eafa73fd28c540b92f85321f93742fdf5d1f6d263cee495bacd36d4e7ba7040e"
+    },
+    "validation.json": {
+      "bytes": 6545,
+      "sha256": "5a59b6d18d4565c1b25c2287b3e891997e0eca96c1ddbe1bbd5ca9035ad18698"
+    },
+    "verify.py": {
+      "bytes": 8287,
+      "sha256": "964aad032fb9e1ddcd91dead0abb777569cf0991fb6317586a86a8c7feab3311"
+    }
+  },
+  "reviewed_source_commit": "d0bbc427ade0a65514fd1aa7ce7d9c0548bbfe00",
+  "scope": "exact extension classification of the frozen 544 old colourings over all 122 fresh vertices of fixed H632",
+  "transport": {
+    "cases_sha256": "1732ba3f438cec81bd83950bf8a54ac728ca6be7136489d9fc60688845fef630",
+    "component_failures_by_reason": {
+      "coupled_lists": 179,
+      "empty_list": 1239
+    },
+    "component_success_counts": [
+      543,
+      531,
+      540,
+      539,
+      77,
+      517,
+      543,
+      535,
+      542,
+      534,
+      544,
+      542,
+      542,
+      528,
+      471,
+      523,
+      499,
+      542,
+      527,
+      544,
+      518,
+      519,
+      452,
+      538,
+      542,
+      540,
+      532,
+      503,
+      507,
+      521,
+      452,
+      522,
+      541,
+      542,
+      534,
+      542,
+      537,
+      521,
+      515,
+      504,
+      544,
+      543,
+      538,
+      544,
+      539,
+      541,
+      543,
+      517,
+      538,
+      541,
+      534,
+      534,
+      509,
+      513,
+      531,
+      543,
+      537,
+      543,
+      538,
+      531,
+      533,
+      541,
+      541,
+      543,
+      540,
+      542
+    ],
+    "empty_centres_per_row_histogram": {
+      "0": 39,
+      "1": 79,
+      "10": 7,
+      "11": 1,
+      "12": 3,
+      "14": 3,
+      "16": 1,
+      "2": 100,
+      "3": 90,
+      "4": 63,
+      "5": 59,
+      "6": 46,
+      "7": 34,
+      "8": 11,
+      "9": 8
+    },
+    "explicit_failure": {
+      "adjacent_centres": [
+        809,
+        1041
+      ],
+      "common_singleton_mask": 2,
+      "index": 462,
+      "old_omissions": [
+        486
+      ],
+      "tag": "interface:462"
+    },
+    "full_rows": [
+      11,
+      39,
+      47,
+      50,
+      78,
+      102,
+      138,
+      141,
+      163,
+      174,
+      194,
+      195,
+      206,
+      212,
+      217,
+      218,
+      232,
+      289,
+      314,
+      350,
+      449,
+      478
+    ],
+    "lists_sha256": "3d7edada6564ae03cf604276dbc58915077a8242132cb2b9861d356628dccb7d",
+    "nonempty_list_failed_rows": [
+      {
+        "failed_components": [
+          4
+        ],
+        "index": 16,
+        "tag": "interface:16"
+      },
+      {
+        "failed_components": [
+          4
+        ],
+        "index": 32,
+        "tag": "interface:32"
+      },
+      {
+        "failed_components": [
+          4
+        ],
+        "index": 37,
+        "tag": "interface:37"
+      },
+      {
+        "failed_components": [
+          4
+        ],
+        "index": 53,
+        "tag": "interface:53"
+      },
+      {
+        "failed_components": [
+          30
+        ],
+        "index": 95,
+        "tag": "interface:95"
+      },
+      {
+        "failed_components": [
+          30
+        ],
+        "index": 132,
+        "tag": "interface:132"
+      },
+      {
+        "failed_components": [
+          4
+        ],
+        "index": 143,
+        "tag": "interface:143"
+      },
+      {
+        "failed_components": [
+          22
+        ],
+        "index": 173,
+        "tag": "interface:173"
+      },
+      {
+        "failed_components": [
+          4
+        ],
+        "index": 185,
+        "tag": "interface:185"
+      },
+      {
+        "failed_components": [
+          22
+        ],
+        "index": 249,
+        "tag": "interface:249"
+      },
+      {
+        "failed_components": [
+          4
+        ],
+        "index": 360,
+        "tag": "interface:360"
+      },
+      {
+        "failed_components": [
+          4
+        ],
+        "index": 377,
+        "tag": "interface:377"
+      },
+      {
+        "failed_components": [
+          37
+        ],
+        "index": 462,
+        "tag": "interface:462"
+      },
+      {
+        "failed_components": [
+          4
+        ],
+        "index": 497,
+        "tag": "interface:497"
+      },
+      {
+        "failed_components": [
+          4
+        ],
+        "index": 498,
+        "tag": "interface:498"
+      },
+      {
+        "failed_components": [
+          4
+        ],
+        "index": 510,
+        "tag": "interface:510"
+      },
+      {
+        "failed_components": [
+          4
+        ],
+        "index": 536,
+        "tag": "whole:5"
+      }
+    ],
+    "reviewer_positive_edge_checks": 68225,
+    "reviewer_positive_tail_sha256": "667c6dc6aebe2fc0b0e5dd851c482f9e96c086698876183c83640f6ad84c49d9",
+    "row_failures_by_reason": {
+      "coupled_lists": 17,
+      "empty_list": 505
+    },
+    "search_stats": {
+      "branch_nodes": 13364,
+      "conflicts": 1418,
+      "domain_deletions": 4987,
+      "recursive_nodes": 49268
+    },
+    "singleton_cuts": [
+      11,
+      39,
+      48,
+      51,
+      81,
+      105,
+      142,
+      145,
+      168,
+      179,
+      199,
+      200,
+      212,
+      220,
+      225,
+      226,
+      241,
+      300,
+      328,
+      366,
+      473,
+      504
+    ],
+    "submitted_positive_edge_checks": 68225
+  },
+  "trust_boundary": [
+    "the pinned coordinate and historical positive-colouring recipe tables",
+    "ordinary CPython integer/Fraction arithmetic, JSON decoding, recursion, and exhaustive-loop execution",
+    "the standard degree-eight squarefree radical basis used for exact distance equality",
+    "SHA-256 collision resistance for source and canonical stream identities",
+    "the frozen library is not assumed complete among all H510 colourings, so its 522 failures have no negative graph consequence"
+  ]
+}
