@@ -1,0 +1,85 @@
+{
+  "python": "3.11.2",
+  "producer_polynomial": "determinant norm identity",
+  "producer_moduli": [
+    [
+      1093,
+      275,
+      128
+    ],
+    [
+      1303,
+      272,
+      125
+    ]
+  ],
+  "build": {
+    "seconds": 1.5171980649902252
+  },
+  "audit": {
+    "status": "ALL MIXED CONTACTS WITH A UNIT M DIFFERENCE ARE FOUR-CHROMATIC",
+    "independent_polynomial": "squared quadratic-root elimination",
+    "independent_moduli": [
+      [
+        2017,
+        54,
+        822
+      ],
+      [
+        2143,
+        325,
+        207
+      ]
+    ],
+    "H_uncovered_pairs_checked": 63,
+    "H_pair_C7_orbits_checked": 9,
+    "cohort_equations_checked": 126,
+    "mixed_pair_tests": 1111320,
+    "all_pair_tests_including_unmixed": 1352106,
+    "modular_survivors_rechecked_exactly": 198,
+    "modular_false_positives": 0,
+    "extra_envelope_edges_compared": 198,
+    "complete_graphs_compared_entrywise": 126,
+    "colour_edge_checks": 66348,
+    "one_branch_only_edge_control": true,
+    "dependent_rows_control": true,
+    "tangent_contact_control": true,
+    "infeasible_contact_control": true,
+    "collision_requires_separate_colour_descent": true,
+    "invalid_inputs_or_certificates_rejected": 6,
+    "remaining_possible_exception_bound": 6720,
+    "C7_possible_exception_orbit_bound": 960,
+    "contact_roots_extracted": false,
+    "actual_root_graphs_constructed": 0,
+    "remaining_both_nonunit_events_enumerated": false,
+    "native_solver_calls": 0,
+    "seconds": 5.473896964002051
+  },
+  "prototype_seconds": 7.39830476300267,
+  "prototype_extra_edges_compared_entrywise": true,
+  "input_hashes": {
+    "field.py": "55d016633f1c18cece1a94edf90c97a6bafc7d0aec99b31dad355f1df86e1678",
+    "audit.py": "2fd16a572c14ab8903ce97fe34c860ddd1c49b086d868e06cd5c3f8e4bc9e6d7",
+    "contacts_audit.py": "ed2da482fa8b8911aebf16038a449c0c8537162e0c7dcf50b57f022a194a0a92",
+    "dual_neighbour_certificate.json": "0580d65e0e85a2112ab4171032a1db70bdc85ecb6c217956d6b67a4e6db33a61"
+  },
+  "H_colour_source": {
+    "path": "../hadwiger_nelson_heptagon_difference_lifts/potentials.json",
+    "sha256": "f90259563b3c96a57a07618318c18b4e410e49bf2b3613045cf82a296091e592",
+    "row": 0
+  },
+  "dependencies": {
+    "dual_neighbour": "55b29e49c8737ed321c2c8ed32149d50086c738c",
+    "unit_H_common_neighbour": "6882c980c31f08481228629aa5ea193c04e32ca2",
+    "all_collision": "4ec850c8ba08f8beea0a811c49e3b526aa123e38",
+    "accepted_collision_review": "cd2a5b7d74def8059a1f1bdc58ecb900c570cd4c"
+  },
+  "certificate_bytes": 3732,
+  "threads": 1,
+  "peak_memory": "not measured",
+  "external_review": "new envelope result pending; collision and unit-contact dependencies accepted independently",
+  "native_solver_calls": 0,
+  "contact_roots_extracted": false,
+  "actual_root_graphs_constructed": 0,
+  "remaining_both_nonunit_events_enumerated": false
+}

@@ -1,5 +1,11 @@
 # A four-chromatic 143-point heptagon–Moser-spindle sum
 
+**Subsequent unit-M closure:** [CONTACT_ENVELOPES.md](CONTACT_ENVELOPES.md)
+certifies all 126 remaining unit-M contact equations by four-colouring
+their elimination supergraphs. Possibly non-four-colourable sums now
+require nonunit differences in both factors, leaving an unenumerated
+bound of 6720 angles or 960 sevenfold-rotation classes.
+
 **Subsequent dual incidence assessment:** [DUAL_NEIGHBOUR.md](DUAL_NEIGHBOUR.md)
 applies the common-neighbour lemma with the factors exchanged. The
 remaining necessary-event bound is 8484 angles, or 1212 classes under

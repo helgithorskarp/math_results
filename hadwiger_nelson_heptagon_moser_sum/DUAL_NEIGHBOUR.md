@@ -1,5 +1,11 @@
 # Common neighbours in both factors and the remaining contact indices
 
+**Subsequent complete cohort closure:** [CONTACT_ENVELOPES.md](CONTACT_ENVELOPES.md)
+closes all 126 proposed unit-M contact equations using exact elimination
+supergraphs and explicit four-colourings. Only both-nonunit contacts
+remain, with a bound of 6720 angles or 960 sevenfold-rotation classes.
+The earlier assessment below retains its historical scope.
+
 **Theorem.** Use the fixed 21-point H and seven-point M from
 [PROOF.md](PROOF.md), with their existing labels. Let C be the complete
 252-rotation collision set, whose sum graphs are four-chromatic by
