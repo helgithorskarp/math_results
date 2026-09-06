@@ -1,0 +1,160 @@
+{
+  "all_checks_passed": true,
+  "four_large_target": {
+    "large_candidates_checked": 31695,
+    "remaining_candidates": 0,
+    "small_omission_sets_checked": 3003,
+    "surviving_small_cases": 94
+  },
+  "geometry": {
+    "basis": "1,sqrt(3),sqrt(5),sqrt(15),sqrt(11),sqrt(33),sqrt(55),sqrt(165)",
+    "denominator": 96,
+    "edge_stream_sha256": "93bec44c9bc6e2514ed4d4b75985267561f63751eaa7132ec5cdd271af85e456",
+    "large_vertices": 375,
+    "small_vertices": 142,
+    "unit_edges": 2555,
+    "unordered_pair_checks": 133386,
+    "vertices": 517
+  },
+  "mandatory_vertices": {
+    "after_large4": 490,
+    "before_large4": 467,
+    "large": 362,
+    "possible_omission_vertices": [
+      130,
+      189,
+      192,
+      194,
+      211,
+      228,
+      245,
+      254,
+      285,
+      325,
+      332,
+      338,
+      361,
+      378,
+      379,
+      395,
+      432,
+      434,
+      470,
+      505,
+      510,
+      511,
+      512,
+      513,
+      514,
+      515,
+      516
+    ],
+    "small": 128
+  },
+  "manifest_inputs": {
+    "hadwiger_nelson_heule510_completion_frontier/fresh_candidates.json": "89345930e1bea184ce2457b0e14a015bcd9a2901cfc609a6468cf050234a8317",
+    "hadwiger_nelson_heule517_family_pilot/certificate.json": "d9cb7562d20c385d42a789dc052b0bd66c6859077f4d58f96e8e30a51e6a3ca3",
+    "hadwiger_nelson_heule517_family_pilot/engine.py": "2d2d06b48d6e8eb661cb4e3fd143b37bc4befff0bbb6ece8ff428f1f229cecda",
+    "hadwiger_nelson_heule517_joint_interface/certificate.json": "b55e1a58822f46c1fe8d1f981ff8f0307178093236b0432942f1f2b8e6604ecc",
+    "hadwiger_nelson_heule517_joint_interface/engine.py": "b81b7ce419ff048232421d4743eb555047b75fa581303e267dce02814cb6e080",
+    "hadwiger_nelson_heule517_joint_interface/manifest.json": "e70195c6df49c8f8820e1dac922a98b3518c2add615c3faff03a4adec7655078",
+    "hadwiger_nelson_heule517_joint_interface/separator.json": "376dc8d81c3f0957d7ed02628dbc4c5e3dfe1e235471ac5f2a06d58334dfebc9",
+    "hadwiger_nelson_heule517_joint_interface/verify.py": "473a286697e4fd466753991061dc5697630b547273336ad02de3f9780544c07d",
+    "hadwiger_nelson_heule517_large2_pilot/certificate.json": "983ec756f2e629923636fc60ee0a7c2baa4ca7514f747470e4e6d2bded10e8ed",
+    "hadwiger_nelson_heule517_large2_pilot/engine.py": "13c3bb108fda087c2be5c72bc66dcafaf657972d91bcc3b542c955c44c702043",
+    "hadwiger_nelson_heule517_large3/certificate.json": "7f7ff091ac2a7893dae0177888a2357bbbc3360dfd6059637f606b7a0d54192a",
+    "hadwiger_nelson_heule517_large3/engine.py": "44afd162295af3484cc5a032a72bf65014bc389ea3bcb3305686fda8368e1aea",
+    "hadwiger_nelson_heule517_small134/certificate.json": "3d97b85e74045d842682917268defbdba6da0790ddecb56b42360766a94e3e7a",
+    "hadwiger_nelson_heule517_small134/engine.py": "e4db43317c76b72f8b66bfd62ef91d814230fa8918c975254ec3fd02e6275712",
+    "hadwiger_nelson_heule517_small_pilot/certificate.json": "9c4586483f7c11d886dcc1f59f6773f6a23d1444904c440e903814ebe17f9d3f",
+    "hadwiger_nelson_heule517_small_pilot/engine.py": "33a1d19f74b05c2643596635274d8de4aed39369f3d7d774868f2ef11ca1868f",
+    "hadwiger_nelson_parts509_heule_union_minimum/certificate_H510.json": "bc8e0f5f5ec7fa5f2376cc77ba0e65f6023b340cf48990370d5eda575d30ae79"
+  },
+  "native_solver_used": false,
+  "negative_solver_result_used": false,
+  "positive_witnesses": {
+    "large2": {
+      "retained_edge_checks": 218392,
+      "rows": 86
+    },
+    "large3": {
+      "retained_edge_checks": 274371,
+      "rows": 108
+    },
+    "large4": {
+      "retained_edge_checks": 83854,
+      "rows": 33
+    },
+    "prior": {
+      "retained_edge_checks": 1336627,
+      "rows": 526
+    },
+    "small": {
+      "retained_edge_checks": 513249,
+      "rows": 202
+    },
+    "witness_stream_sha256": "c247f7f293616b94360737612585d6182d84119934b9fffe22737439e52d7bf9"
+  },
+  "rejection_controls": 3,
+  "reviewed_source_commit": "fe8f1593bcfec80c71adfc55f60b28d58428d70d",
+  "scope": "fixed H517 four-large/five-small deletion family and its stated target-order corollary",
+  "small134_dependency": {
+    "eight_sets_checked": 319770,
+    "forced_small": 120,
+    "free_small": [
+      358,
+      359,
+      360,
+      361,
+      362,
+      370,
+      378,
+      379,
+      393,
+      395,
+      399,
+      432,
+      434,
+      459,
+      505,
+      510,
+      511,
+      512,
+      513,
+      514,
+      515,
+      516
+    ],
+    "remaining_cases": 0
+  },
+  "target_graph_claimed": false,
+  "target_order_deduction": {
+    "and_has_at_most_large": 370,
+    "cases": [
+      "at most 134 small: small134 positive cover",
+      "135 small: at most 373 large, two-large positive cover",
+      "136 small: at most 372 large, three-large positive cover",
+      "137 small: at most 371 large, four-large positive cover"
+    ],
+    "nonfour_subgraph_on_at_most_508_needs_at_least_small": 138,
+    "unrestricted_at_most_508_family_closed": false
+  },
+  "three_large_dependency": {
+    "large_candidates_checked": 749066,
+    "remaining_candidates": 0,
+    "small_omission_sets_checked": 8008,
+    "surviving_small_cases": 38
+  },
+  "trust_boundary": [
+    "exact multiquadratic source coordinates and basis independence",
+    "CPython integer, Fraction, JSON and SHA-256 behavior",
+    "finite-loop and witness-decoding correctness"
+  ],
+  "two_large_dependency": {
+    "large_candidates_checked": 870215,
+    "remaining_candidates": 0,
+    "small_omission_sets_checked": 170544,
+    "surviving_small_cases": 167
+  },
+  "verdict": "ACCEPTED"
+}
