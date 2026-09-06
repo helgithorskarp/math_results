@@ -204,13 +204,25 @@ cumulative exclusions are **179 of 197 classes / 106,066 of 115,543 labels**.
 The twelve tested UNKNOWN cases retain the new bound; the six unresolved
 maximal cases are untested and unchanged. Core164 is the only remaining
 one-anchor case, alongside sixteen two-anchor cases and core194 with four.
-The new full propagation/refutations await independent review; their
-inherited maximal-branch premises are now independently accepted. Older empty-signature-specific
+The seven whole-core refutations and their propagation now have an
+[accepted independent review](../ramsey_r55_order3_eleven_blue_bound_propagation_review1),
+as do their inherited maximal-branch premises. Older empty-signature-specific
 closures remain a review boundary for cumulative counts. No whole
 four-versus-seven exclusion, target graph, or Ramsey lower-bound
-improvement follows. The next structural boundary is the saturated
-24-vertex blue neighborhood in the six unresolved maximal cases; no
-new local-neighborhood computation is begun in this milestone.
+improvement follows. That milestone left the six maximal cases unresolved.
+The subsequent [saturated-neighborhood test](../ramsey_r55_order3_eleven_neighborhood24)
+uses exact local 24-vertex formulas with four red and four blue moving
+triangles, no red K5, no blue K4, the fixed red core, and no imported
+full-graph normalizers. Five local refutations, each replayed twice,
+exclude the maximal b=4 branches of **124,155,159,168,180**. The **only
+remaining maximal branch is Core194**; it has an explicit, independently
+checked local 24-vertex witness with 156 red edges and red degree 13 at
+every vertex. A local witness supplies no full extension. Thus 17 of the
+18 open full cores now satisfy b<=3 for the first normalized empty vertex;
+**all 18 full classes / 9,477 labels remain open**, and cumulative whole
+exclusions stay at 179. The new local reduction and outcomes await review.
+Next, propagate the five new necessary bounds into their unrestricted
+full 43-vertex bases. No such next-phase test is run in this milestone.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
