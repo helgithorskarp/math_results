@@ -1,0 +1,87 @@
+{
+  "claim": "The induced542-point graph G minus the18 specified fresh vertices has a verified proper four-colouring; all free50 optional subsets are closed. Degree/cardinality conditions remain feasible at every optional cardinality0..16.",
+  "coordinate_input_files": {
+    "hadwiger_nelson_heule510_completion_frontier/fresh_candidates.json": "89345930e1bea184ce2457b0e14a015bcd9a2901cfc609a6468cf050234a8317",
+    "hadwiger_nelson_heule632_transport/result.json": "d4c566403394f8c307dcb2f1c222ccdcdd3a58dae9ab15a14382edd87eb6dcd5",
+    "hadwiger_nelson_parts509_heule_union_minimum/certificate_H510.json": "bc8e0f5f5ec7fa5f2376cc77ba0e65f6023b340cf48990370d5eda575d30ae79"
+  },
+  "dependencies": [
+    {
+      "commit": "5cc08e6ec43644ccd6ce741c641edf8799bd4955",
+      "directory": "hadwiger_nelson_heule632_minimize",
+      "ref": "bafkreigrsanib6kfhqwhxdkjpjym6fa7xxyhcrw2phtv6m7or6vludas4i",
+      "role": "The exact560-point support and492/68 mandatory partition. The positive covering graph itself is rechecked from coordinate data."
+    },
+    {
+      "commit": "7df34e419981e1c8d0b7cf98fb3ca6f35ca62a95",
+      "directory": "hadwiger_nelson_heule630_seed_review1",
+      "ref": "bafkreiebbth67szgalmbqvpxtygw3ez3z3o5swyplplrttxzjypa227joq",
+      "role": "New independent acceptance of the parent630-point seed, with DRAT/LRAT checks; not a review of560 or this package."
+    }
+  ],
+  "family_counts": {
+    "all_free_optional_subsets": 1125899906842624,
+    "all_size508_supports_before": 1469568786235308,
+    "covered_at_most508_with_M": 8639411571051,
+    "covered_fraction": 0.003350431597141052,
+    "newly_covered_size508_supports": 4923689695575,
+    "remaining_size508_supports": 1464645096539733
+  },
+  "graph_context": {
+    "new_relevant_contributions": [
+      {
+        "artifactRef": "bafkreiebbth67szgalmbqvpxtygw3ez3z3o5swyplplrttxzjypa227joq",
+        "height": "3335",
+        "title": "Independent acceptance of exact five-chromatic H630 seed"
+      }
+    ],
+    "refresh_indexed_height": 3336,
+    "refresh_since": 3336,
+    "start_indexed_height": 3336,
+    "start_since": 3330
+  },
+  "imported_executables": {
+    "hadwiger_nelson_heule632_pair_pilot/build.py": "f3e2c4d579feccec7cab9a31903b814d5428c0d146053ed488ec1dc1cf6bcf4c",
+    "hadwiger_nelson_heule632_pair_pilot/independent.py": "091b762038fae447dad5679cd6cc25009291869d641af75a7b26b5cfc0551d60"
+  },
+  "independent_author_review_claimed": false,
+  "input_files": {
+    "hadwiger_nelson_heule632_minimize/boundary.json": "8732adbdfe9792d6b6496bfec89da64b0127c388c2bb79f892b1d35a9c396f5e",
+    "hadwiger_nelson_heule632_minimize/certificate.json": "3a22660e40329c0aef34e108b91747f529adb046cf687df5b05b3531ca17e35b",
+    "hadwiger_nelson_heule632_pair_pilot/plan.json": "5da817c4506312cf5d30a83ec6242c3581ea882b4a1be48355c8e07d5a91a9df"
+  },
+  "local_artifacts": {
+    "run/free50.cnf": {
+      "bytes": 189812,
+      "sha256": "f8c9e2610e1a823083a83921391cb3eb78f01266c97c20c3882322ded7477681"
+    },
+    "run/free50.log": {
+      "bytes": 22186,
+      "sha256": "6d2a0584e7a4ea08bd428a4d75207f801394495085f9cb91355e568bccc4174a"
+    },
+    "run/records.json": {
+      "bytes": 928,
+      "sha256": "2d8e0846ca548730b518929fb0a5abae16204ba5b2ac53979a7f2d1d48cc0fdc"
+    },
+    "run/result.json": {
+      "bytes": 1247,
+      "sha256": "49dd2d91d8420b5202ad1d411e2754dcfc30247e6793fde6fd90894eddf5eadb"
+    }
+  },
+  "method_decision": "NO-GO for a degree-only global-infeasibility proof: the empty optional selection and all free50 subsets through size16 are explicit feasible models. The partial positive closure leaves a residual family meeting the18 fresh dependent vertices.",
+  "native_scope": {
+    "DRAT_used": false,
+    "actual_calls": 1,
+    "result": "SAT, positive model directly verified",
+    "target16_query": false,
+    "target16_result": "four-colourable by restriction of the covering certificate",
+    "unresolved_queries": 0
+  },
+  "next_direction": "Choose one bounded simultaneous colouring-extension or structural-certificate test on the residual family M plus at most16 optional vertices, requiring a hit in the18-vertex dependent set. Reuse the proper M/free50 colouring. Do not start a series of isolated G-free50-plus-one checks or extend the old degree-only screen.",
+  "next_phase_started": false,
+  "python": "3.11.2",
+  "record_improvement": false,
+  "source_base_commit": "7df34e419981e1c8d0b7cf98fb3ca6f35ca62a95",
+  "trust": "Exact Python/radical arithmetic, exhaustive geometry, direct positive colouring checks, JSON and SHA-256. SAT is a witness finder only. Mandatory-target interpretation additionally imports the prior492 singleton certificates.",
+  "whole560_family_closed": false
+}
