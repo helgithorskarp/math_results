@@ -1,0 +1,30 @@
+{
+  "expected_component_counts": [
+    7,
+    6,
+    4,
+    5,
+    1,
+    2
+  ],
+  "expected_quotient_slots": 123,
+  "frozen_utc": "2026-09-06T12:35:30.021253+00:00",
+  "input_files": {
+    "hadwiger_nelson_heule560_degree_family/certificate.json": "357d140cbe9432da75402c5e6ad9d13aff8d90a14319d019a8c0cdf4459d529c",
+    "hadwiger_nelson_heule560_interface/certificate.json": "3df21aa84154341f7db3e10c1082e3948842b213c7211be7b2d763f1ddcd0bb7",
+    "hadwiger_nelson_heule632_minimize/boundary.json": "8732adbdfe9792d6b6496bfec89da64b0127c388c2bb79f892b1d35a9c396f5e",
+    "hadwiger_nelson_heule632_pair_pilot/plan.json": "5da817c4506312cf5d30a83ec6242c3581ea882b4a1be48355c8e07d5a91a9df"
+  },
+  "limits": {
+    "max_antichain": 100000,
+    "max_boundary_cases": 100000,
+    "max_live_clauses": 100000,
+    "max_products_per_step": 2000000,
+    "max_resolvent_pairs_per_step": 1000000,
+    "seconds_per_stage": 600
+  },
+  "milestone": "Complete one-pair component-switch family of the saved M colouring: all six colour pairs, all subsets of their original induced components, modulo complementary global swap. Project every distinct template, combine exact nonextension antichains, independently certify and count the resulting full optional family. No compositions across different pairs and no graph-deletion solver queries.",
+  "scope": "Nonextension for these templates is not graph non-four-colourability. The M colouring family may omit other proper colourings.",
+  "stop": "Complete this finite family, or preserve the exact resource boundary. Do not initiate another Kempe depth, template family, isolated-cut cycle, or major phase.",
+  "template_rule": "Components sorted by smallest host label; leave first component unchanged, enumerate every subset of the others. Normalize each resulting M colouring by first-occurrence palette labels, then deduplicate."
+}
