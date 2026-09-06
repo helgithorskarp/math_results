@@ -1,0 +1,125 @@
+{
+  "status": "EVERY H514 SUBGRAPH ON AT MOST508 VERTICES IS FOUR-COLOURABLE",
+  "family_closed": true,
+  "record_improvement": false,
+  "vertices": 514,
+  "unit_edges": 2526,
+  "exact_coordinate_pairs": 131841,
+  "positive_witnesses_checked": 544,
+  "positive_edge_checks": 1368406,
+  "boundary_witness_edge_checks": 40246,
+  "direct_whole_support": {
+    "forced_vertices": 503,
+    "free_vertices": [
+      152,
+      214,
+      344,
+      433,
+      439,
+      497,
+      500,
+      510,
+      511,
+      512,
+      513
+    ],
+    "omissions_per_case": 6,
+    "cases": 462,
+    "directly_covered": 458,
+    "peeling_cases": 4,
+    "all_508_vertex_colourings_checked": 462,
+    "target_edge_checks": 1146726,
+    "peeling_witnesses": [
+      {
+        "omitted": [
+          152,
+          214,
+          433,
+          497,
+          500,
+          512
+        ],
+        "rounds": [
+          [
+            299,
+            302
+          ]
+        ],
+        "witness_group": "interface",
+        "witness_index": 288,
+        "seed_D": [
+          299
+        ]
+      },
+      {
+        "omitted": [
+          152,
+          214,
+          433,
+          497,
+          512,
+          513
+        ],
+        "rounds": [
+          [
+            299,
+            302
+          ]
+        ],
+        "witness_group": "interface",
+        "witness_index": 288,
+        "seed_D": [
+          299
+        ]
+      },
+      {
+        "omitted": [
+          152,
+          433,
+          497,
+          500,
+          510,
+          512
+        ],
+        "rounds": [
+          [
+            299,
+            302
+          ]
+        ],
+        "witness_group": "interface",
+        "witness_index": 288,
+        "seed_D": [
+          299
+        ]
+      },
+      {
+        "omitted": [
+          152,
+          433,
+          497,
+          510,
+          512,
+          513
+        ],
+        "rounds": [
+          [
+            299,
+            302
+          ]
+        ],
+        "witness_group": "interface",
+        "witness_index": 288,
+        "seed_D": [
+          299
+        ]
+      }
+    ],
+    "direct_tag_bytes": 6252,
+    "direct_tag_sha256": "a8755fe2bac2ff2a13c2e7b19f0d69e3a168baf43ea7c82ad8c7e8116bc5f33c"
+  },
+  "malformed_colourings_rejected": 3,
+  "residual_census_required_for_direct_proof": false,
+  "solver_used": false,
+  "seconds": 1.4647726179973688
+}

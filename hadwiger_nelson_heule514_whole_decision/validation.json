@@ -1,0 +1,68 @@
+{
+  "recorded_at": "2026-09-06T08:07:01.120680+00:00",
+  "producer_sha256_before_target_queries": "464fcfec2e0fdbda25e904335cd52b15201890d1bc4a23ee5497318fbc2b6b85",
+  "solver": "CaDiCaL1.9.5 via python-sat1.8.dev24",
+  "worker_unchanged": true,
+  "inherited_solver_controls": [
+    {
+      "abstract_graph": "K4",
+      "expected": "SAT",
+      "actual": "SAT",
+      "model_directly_checked": true
+    },
+    {
+      "abstract_graph": "K5",
+      "expected": "UNSAT",
+      "actual": "UNSAT",
+      "model_directly_checked": false
+    }
+  ],
+  "new_solver_controls": 0,
+  "initial_target_queries": 0,
+  "new_target_queries": 25,
+  "native_status_counts": {
+    "SAT": 25
+  },
+  "chronological_status_counts": {
+    "COVERED": 8949,
+    "SAT": 25
+  },
+  "native_retries": 0,
+  "native_worker_failures": 0,
+  "negative_target_proof_traces": 0,
+  "whole_run_wall_seconds": 5.671974246011814,
+  "total_native_seconds": 1.4077761130756699,
+  "maximum_native_seconds": 0.19007387800957076,
+  "total_conflicts": 28885,
+  "maximum_conflicts": 4473,
+  "maximum_worker_rss_kib": 27920,
+  "raw_case_metadata_rows_compared": 25,
+  "driver_source_unchanged_after_query_freeze": true,
+  "default_direct_proof_run_without_frontier_or_solver": true,
+  "direct_proof_seconds": 1.4647726179973688,
+  "direct_and_historical_proof_records_agree": true,
+  "supplemental_compact_verification_plan": {
+    "purpose": "Compact independent verification of the same whole-H514 closure using the new503 singleton forcings; no new graph family or solver query.",
+    "forced": 503,
+    "free": [
+      152,
+      214,
+      344,
+      433,
+      439,
+      497,
+      500,
+      510,
+      511,
+      512,
+      513
+    ],
+    "bound": "Every6-subset of the11 free vertices:462 cases. Check direct positive containment, otherwise degree<=3 peeling and restriction/restoration.",
+    "source": "All516 archived H514 witnesses,15 pilot positives,13 new minimal positives."
+  },
+  "chronological_trace_sha256": "fe9c33dd1d78618d9d821949aa0ccec45eb4190103620cf0b1e0b3419961cb8e",
+  "native_summary_sha256": "43868745456cc8262d5b270583ca2affa4d33bacb5fe17b569ce030f7627c958",
+  "raw_witnesses_sha256": "c91c91bbdf677163ee60f6984338f3bb05ab574ba4b52d4cd3b4049250317f0a",
+  "background_jobs": [],
+  "unfinished_proofs": []
+}

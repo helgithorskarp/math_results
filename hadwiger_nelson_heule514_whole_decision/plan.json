@@ -1,0 +1,26 @@
+{
+  "milestone": "Complete bounded decision of the entire8974-core H514 remainder",
+  "frozen_at": "2026-09-06T08:04:41.945759+00:00",
+  "parent_commit": "7ce051c2e6bae4ccdedd31880418a7ade9505181",
+  "frontier": {
+    "rows": 8974,
+    "bytes": 215488,
+    "sha256": "8f0448c4d9f9cdd0c7f7d1fa1e69aef3ab6d7a368b0cfc6782ea7debedb8a38e",
+    "order": "Increasing (omission tuple length, omission tuple); six or seven increasing H514 indices, comma-separated ASCII LF"
+  },
+  "selection": "Process every frozen input row once in canonical order; skip only when an already checked full positive omission cut is contained in that row. No native retry or secondary sample.",
+  "encoding": "Pinned published2052-variable optional-P4 projected CNF, origin colour0, no extra symmetry. Fresh Cadical195 per native target through the pinned prior worker.",
+  "bounds": {
+    "target_queries_max": 8974,
+    "conflicts_per_candidate": 100000,
+    "worker_wall_seconds": 60,
+    "total_run_wall_seconds": 1800,
+    "worker_address_space_bytes": 4294967296,
+    "retries": 0
+  },
+  "positive_rule": "Check model clauses, decode old minimum true colours and lexicographic path extension, check actual retained unit edges. Greedily restore omitted vertices to fixed point and verify the resulting full H514-D colouring. Append checked cut and preserve reason for every skipped input.",
+  "final_audit": "After the finite traversal, minimize the positive cut library and independently cover the entire8974-row input. Every row must have a checked positive witness or an explicit unresolved record.",
+  "negative_rule": "Stop on native UNSAT, preserve exact formula and obtain a fresh independently checked proof before a negative or record claim.",
+  "unknown_rule": "UNKNOWN and unqueried rows remain explicit, with no retry. Later checked positive cuts may certify them without a new call.",
+  "stop_rule": "Complete this bounded whole-family unit and independent certificate audit; publish warranted closure or exact unresolved checkpoint and yield before a new support, construction or proof phase."
+}
