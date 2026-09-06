@@ -1,0 +1,128 @@
+{
+  "status": "COMPLETE: general 204-point sufficient kernel, sharp 156 parallel bound, and all 81 frozen full-circle supports four-colourable",
+  "result": {
+    "status": "PASS",
+    "canonical_new_placements": 22,
+    "signed_new_placements": 76,
+    "inherited_coincident_placements": 3,
+    "inherited_rhombus_placements": 2,
+    "total_signed_placements": 81,
+    "general_kernel_vertex_bound": 204,
+    "parallel_kernel_vertex_bound": 156,
+    "parallel_bound_attained": true,
+    "max_observed_vertices": 156,
+    "max_observed_direction_orbits": 7,
+    "cross_circle_pair_checks": 88,
+    "cross_intersection_count_histogram": {
+      "0": 37,
+      "1": 5,
+      "2": 46
+    },
+    "cross_intersection_point_checks": 97,
+    "actual_patch_pair_norms": 100561,
+    "positive_patch_edge_checks": 4805,
+    "patch_owner_direction_checks": 1924,
+    "mixed_owner_noncentre_checks": 93,
+    "staircase": {
+      "translation": [
+        2,
+        2
+      ],
+      "scale": 4,
+      "vertices": 38,
+      "edges": 95,
+      "directions": 12,
+      "intersection_histogram": {
+        "0": 1,
+        "2": 3
+      },
+      "intersection_points": 6,
+      "pair_norms": 703,
+      "owner_direction_checks": 42,
+      "mixed_owner_noncentres": 4,
+      "point_sha256": "a6dc3dd6c47da0fd6dcd749094028f860e8917c48cc58db67af0cdf30fcf0ed9",
+      "edge_sha256": "e56e220c2fab7815d989486324740dfa54060a087d9a097a322fdabebf2854d3"
+    },
+    "all_frozen_supports_four_colourable": true,
+    "criterion_is_only_sufficient": true,
+    "native_solver_calls": 0,
+    "malformed_certificate_rejections": 6,
+    "certificate_bytes": 13964,
+    "certificate_sha256": "4fca8a7d9f160397566d82d92bbb2e9435f7caa572e677a20b8e712fe3283fe7"
+  },
+  "general_scope": "Four distinct centres paired into two unit edges; arbitrary orientation and translation. Proper colouring of the specified actual patch from prescribed owner-group lists and centre pins extends to all four complete unit circles.",
+  "parallel_size_bound": "At most 156 actual kernel vertices; attained at t=i/2. This is sharpness of the size bound, not a chromatic-number lower bound.",
+  "bounded_scope": "Parallel segments{0,1} and{t,t+1}, t=(m+in)/2, integer m,n in [-4,4]. 22 new representatives cover 76 signed translations; five inherited signed cases complete 81.",
+  "not_claimed": [
+    "All paired-circle placements are four-colourable",
+    "Necessity of the finite list criterion",
+    "Any non-four-colourability from failed lists",
+    "Sharpness of the general 204 bound",
+    "Exact chromatic numbers of the 81 supports",
+    "A five-chromatic graph on at most 508 vertices"
+  ],
+  "build": {
+    "status": "PASS",
+    "cases": 22,
+    "certificate_bytes": 13964,
+    "certificate_sha256": "4fca8a7d9f160397566d82d92bbb2e9435f7caa572e677a20b8e712fe3283fe7",
+    "seconds": 19.14447403201484,
+    "native_solver_calls": 0
+  },
+  "independent_audit_seconds": 2.722328492003726,
+  "optimized_audit_seconds": 2.7829717519925907,
+  "normal_optimized_reports_identical": true,
+  "python": "3.11.2",
+  "threads": 1,
+  "peak_memory_measured": false,
+  "native_solver_calls": 0,
+  "producer_method": "Rational-centre circle-intersection formula and sparse squarefree-radical arithmetic; exact patch generation and deterministic finite list-colour backtracking.",
+  "checker_method": "Integer 32-coefficient radical-field arithmetic; complete circle intersections certified by exact counts and both unit distances without the producer root formula. Every patch, canonical point/edge stream, owner list and positive colouring is rebuilt and checked.",
+  "arithmetic_field": "Q(sqrt3,sqrt5,sqrt7,sqrt11,sqrt13), 32 squarefree basis elements; per-case exact integer scaling.",
+  "code_provenance": "Producer reuses sparse arithmetic primitives from the prior unit-cycle producer. New verifier imports no producer or parent executable. Independence is arithmetic representation, intersection-completeness algorithm and direct positive checking, not external authorship.",
+  "mathematical_dependencies": [
+    {
+      "package": "hadwiger_nelson_dominating_unit_path",
+      "source_commit": "43db8b0a81018d98ff7135f74983f6174af466a1",
+      "artifact_ref": "bafkreidejrvogso6oidei7cod74tt4fveggrzvybis73qonr45bbf7vcoi",
+      "scope": "Three signed translations with coincident centres; not needed for the general distinct-centre kernel lemma.",
+      "independently_accepted": true,
+      "review_commit": "d0149b27d24ed25a6e0c5433d0fcc4f64c0c2355",
+      "review_ref": "bafkreihccb74zb455ckjz5wak7rbnmd6nt66y6apfrce2ceizgiq4hmhqi",
+      "review_height": 3359
+    },
+    {
+      "package": "hadwiger_nelson_dominating_unit_cycle",
+      "source_commit": "f04d48bf8d133e6b2fe7facd38941859e42890e4",
+      "artifact_ref": "bafkreid6ifcc6yw7rp5ti7q4oqw65s4wgzn4lmmni45z6ev3lrhzc2shye",
+      "scope": "Two signed unit-square translations; not needed for the general kernel lemma.",
+      "independent_review_status_at_cutoff": "Pending"
+    }
+  ],
+  "external_executable_inputs": [],
+  "initial_graph_scan_height": 3370,
+  "prepublication_graph_scan_height": 3378,
+  "HN2_latest_durable_result": {
+    "package": "hadwiger_nelson_heule560_kempe",
+    "source_commit": "2160f57c42e26a07a96fc9059419d57f8db10d5e",
+    "artifact_ref": "bafkreicbccbsnw3nod7txrsrzgmnh2q3vt5wuavkcd6vtfk2fph6hswvsq",
+    "height": 3369,
+    "last_report": "20260906T124948.081476Z.md",
+    "dependency": false,
+    "scope": "Complete 118-template one-original-colour-pair Kempe family. Nine minimal failures classify all optional subsets for this family; 95.9068% of labelled 508-point supports covered. 60151956198234 remain outside this certificate, not proved non-four-colourable. Suggested 503-point support unqueried at this checkpoint.",
+    "preceding_interface_review": {
+      "package": "hadwiger_nelson_heule560_interface_review1",
+      "source_commit": "dc5d819e83d2dd7fa76c5f1e1a8a91270fedcf3c",
+      "artifact_ref": "bafkreidn6wqp7yrbwct22ysn65j6n2rqwbtosswpqr4u5xunxwk27m5duq",
+      "height": 3371,
+      "scope": "Accepts the earlier fixed-c three-pair interface, not automatically the later Kempe family."
+    }
+  },
+  "primary_record_calibration": "Parts 2010.12665v2 gives 509 and Haugland 2608.04542v4 introduction names 509 as record; both primary pages checked live 2026-09-06.",
+  "external_review": "Pending for the new kernel theorem, bounds and bounded application. Written continuum proof is not proof-assistant formalized.",
+  "large_omitted_certificate": false,
+  "priority_claim": false,
+  "target_found": false,
+  "background_jobs": [],
+  "next_phase_started": false
+}
