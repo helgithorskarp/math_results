@@ -1,0 +1,62 @@
+{
+  "core_vertices": 33,
+  "drat_proof_bytes": 17051,
+  "drat_trim_binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+  "drat_trim_source": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "external_independent_review": false,
+  "formula_sha256": "533c48f31d993bd3aa16d46465ba56128afac329c59ff12837acd2765d72b6c1",
+  "free_attachment_pairs": 375,
+  "fresh_full_public_source_reproduction": {
+    "command": "bash ramsey_r55_core186_moving_switch/reproduce.sh FRESH --full",
+    "full_CNF_byte_match": true,
+    "peak_child_RSS_KiB": 21200,
+    "status": "PASS",
+    "wall_seconds": 4.3794356230064295
+  },
+  "frozen_sources_unchanged": true,
+  "full_normal_optimized_formula_and_reports_agree": true,
+  "kissat_binary_sha256": "2d185ea775f2c7c16d33a235ef852d2b69f0f3c8b437335b966b4a5aa6265b45",
+  "kissat_source": "8af8e56f174b778aef3aa45af9f739b2a5f492c2",
+  "labeled_43_family_size": "330527984395124299475957654016385519914202341482140609642324397637202895618155672912594605219857642423795606012511679152128",
+  "obstruction_bytes": 8359,
+  "original_proof_bytes": 11757,
+  "original_proof_sha256": "2a42b970ce9204411968aae10cedbbe652a5c893dcaf2e56253dd03e0b3f6b62",
+  "proof_extraction": {
+    "children_max_rss_KiB": 64548,
+    "command": [
+      "drat-trim",
+      "WORK/switch.cnf",
+      "WORK/untrimmed.drat",
+      "-c",
+      "WORK/obstruction.dimacs",
+      "-l",
+      "WORK/certificate.drat.txt"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 0.16465325999888591,
+    "wall_timeout": false
+  },
+  "ramsey_bound_changed": false,
+  "ramsey_target_found": false,
+  "rup_proof_bytes": 3727,
+  "rup_sha256": "2c5f22c54e6f5508b101c6b6cd222e63e347426691ed0bae1745ba706165cab8",
+  "same_C3_action_subfamily_size": "46768052394588893382517914646921056628989841375232",
+  "solver": {
+    "children_max_rss_KiB": 23572,
+    "command": [
+      "kissat",
+      "--time=300",
+      "--no-binary",
+      "WORK/switch.cnf",
+      "WORK/untrimmed.drat"
+    ],
+    "exit_code": 20,
+    "wall_seconds": 0.01608981000026688,
+    "wall_timeout": false
+  },
+  "solver_invocations": 1,
+  "solver_limit_seconds": 300,
+  "status": "VERIFIED_CORE186_MOVING33_SWITCH_CLASS_EXCLUSION",
+  "whole_4v7_classes_remaining": 17,
+  "whole_4v7_labels_remaining": 9153
+}

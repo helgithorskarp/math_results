@@ -1,0 +1,34 @@
+{
+  "direct_predecessor_commit": "5651aa9620f72b296fa6d6f7c889b5f440da821d",
+  "direct_predecessor_directory": "ramsey_r55_core186_switch_family",
+  "copied_files": {
+    "parent.edges": "f034595d4f9fcb40cbf70acb6da75f0f7efda21719b1cc4bd052b75e0e927441",
+    "drat.py": "87df5fdeabf78d2e7c86286cb7193717332f5636e743b6c61b142c498048f2ba",
+    "certificate_controls.py": "57be35522a3429c058c2986a9ca475ececa5505ef4a8220ce37ade072a38aef6"
+  },
+  "adapted_files": {
+    "check_certificate.py": {
+      "upstream_sha256": "4bb5e3424e170c61382aa6019d69387da8ed9d6ffb5347f4e9692dab5807b875",
+      "change": "Use the induced moving vertices 0..32 and 32 normalized switch variables; no change to the proof kernel."
+    },
+    "decide.py": {
+      "upstream_sha256": "b4a853c918c2924d9159fa8729c49736ee9b5e3c130c9583dbc5747337dca939",
+      "change": "Use the induced moving vertices 0..32 and 32 normalized switch variables; no change to the proof kernel."
+    },
+    "controls.py": {
+      "upstream_sha256": "34bd9357ac41b1a086526c29772f1bc5cc0529011d26457f4d7af25aa9f0223c",
+      "change": "Use the induced moving vertices 0..32 and 32 normalized switch variables; no change to the proof kernel."
+    }
+  },
+  "proof_kernel": {
+    "source_commit": "dac1474f64f1df456bfb4653bd97beb71063f23a",
+    "source_file": "ramsey_r55_paley41_switch_family/check_certificate.py",
+    "source_sha256": "c11cb9ced4987bdb8384cc57a87c455c9d59c33f28df56da53918351c0516e2c",
+    "function_body_sha256": {
+      "require": "570ace48effbcffbb325b4bdc4424b575500114187d28c59c86b8870081e9f76",
+      "clause": "2d2a293c96f6dfa44baa164e64c36629fa480085abaf4158909a82cd8be2c47f",
+      "rup": "faaa98ca843e3baa635dd5e3e173e114441be42274c3130d053afcaf2503153b",
+      "verify_proof": "108f44a81d2aea2fc3b4e55f423f3477805e2a7b213017d91141ace27c5d4a5c"
+    }
+  }
+}
