@@ -1,0 +1,202 @@
+{
+  "all_checks_passed": true,
+  "conclusion": {
+    "arbitrary_list_dynamic_reduction_valid": true,
+    "fixed_F_and_all_subgraphs_two_choosable": true,
+    "fixed_F_exact_incidence_verified": true,
+    "full_H_union_F_four_colourability_decided": false,
+    "record_improvement": false,
+    "sub509_five_chromatic_graph_produced": false,
+    "uniform_four_colour_extension_criterion_valid": true
+  },
+  "decomposition": {
+    "bridges": 53,
+    "component_order_histogram": {
+      "1": 55,
+      "2": 7,
+      "37": 1,
+      "4": 1,
+      "6": 2
+    },
+    "components": 66,
+    "fresh_degree_histogram": {
+      "0": 55,
+      "1": 33,
+      "2": 23,
+      "3": 10,
+      "5": 1
+    },
+    "non_bridge_cycle_edges": [
+      [
+        1239,
+        1370
+      ],
+      [
+        1239,
+        1371
+      ],
+      [
+        1370,
+        1522
+      ],
+      [
+        1371,
+        1522
+      ]
+    ],
+    "tree_components": 65,
+    "unicyclic_components": 1,
+    "unique_cycle": [
+      1239,
+      1370,
+      1522,
+      1371
+    ],
+    "unique_cycle_length_even": true
+  },
+  "exact_geometry": {
+    "all_points_distinct": 632,
+    "attachment_pair_checks": 62220,
+    "common_denominator": 96,
+    "exact_norm_arithmetic_controls": 4,
+    "fresh_edge_stream_sha256": "76bb5adb53ddc6cb7def884a6a999cf3d570af5ed27bbb3a199be6eba3e012d4",
+    "fresh_edges": 57,
+    "fresh_pair_checks": 7381,
+    "fresh_vertices": 122,
+    "norm_stream_sha256": "f319dfe814bb9a2259a914b74c79adde9272422e4e761d57dc308fc750a638f7",
+    "old_attachments": 551,
+    "old_vertices": 510,
+    "total_norm_vectors": 69601
+  },
+  "inputs": {
+    "hadwiger_nelson_heule510_completion_frontier/fresh_candidates.json": {
+      "bytes": 23322,
+      "sha256": "89345930e1bea184ce2457b0e14a015bcd9a2901cfc609a6468cf050234a8317"
+    },
+    "hadwiger_nelson_parts509_heule_union_minimum/certificate_H510.json": {
+      "bytes": 552196,
+      "sha256": "bc8e0f5f5ec7fa5f2376cc77ba0e65f6023b340cf48990370d5eda575d30ae79"
+    }
+  },
+  "negative_controls_rejected": [
+    "missing_fresh_edge",
+    "noncycle_order",
+    "wrong_attachment_type",
+    "odd_cycle_two_list_obstruction"
+  ],
+  "old_fresh_interface": {
+    "H514_mixed_path_edges": [
+      [
+        170,
+        436
+      ],
+      [
+        436,
+        1239
+      ],
+      [
+        1239,
+        1527
+      ]
+    ],
+    "attachment_type_histogram": {
+      "L": 43,
+      "M": 4,
+      "S": 75
+    },
+    "coupled_component_old_large_neighbours": [
+      0
+    ],
+    "coupled_component_old_small_neighbours": 100,
+    "coupled_component_order": 37,
+    "fresh_edge_type_histogram": {
+      "LL": 1,
+      "MM": 3,
+      "MS": 7,
+      "SS": 46
+    },
+    "large_to_mixed_or_small_fresh_edges": 0,
+    "mixed_centres": [
+      170,
+      436,
+      1239,
+      1527
+    ],
+    "mixed_large_neighbour_sets": {
+      "1239": [
+        0
+      ],
+      "1527": [
+        0
+      ],
+      "170": [
+        0
+      ],
+      "436": [
+        0
+      ]
+    },
+    "old_large_vertices": 375,
+    "old_small_vertices": 135
+  },
+  "python": "3.11.2",
+  "reviewed_source": {
+    ".gitignore": {
+      "bytes": 25,
+      "sha256": "61ba5dd06b07c5b9b1e3b52603182e0c9bf75bff7a13193b86a75c1bfeefdda9"
+    },
+    "PROOF.md": {
+      "bytes": 8045,
+      "sha256": "f3ac5e09e94ec5518c403d8c233e81676d9cfc08fbb0f0a3883a72d1da36d351"
+    },
+    "README.md": {
+      "bytes": 5420,
+      "sha256": "dccb375da60f3115ee02d34803e01035844672c07a187a2dd2c378766e5a3b02"
+    },
+    "census.py": {
+      "bytes": 7136,
+      "sha256": "af311dcafdd039c537f31ac16723e1b0537c8a2a84d04f6e1551bf2b85c6d789"
+    },
+    "certificate.json": {
+      "bytes": 24844,
+      "sha256": "2a66e94584037a32d9bbe1217a5af6c39bff4405987c69a7a84eb12fa3408899"
+    },
+    "manifest.json": {
+      "bytes": 1670,
+      "sha256": "cb8d939c7d241ddd47df9be340ddf17b8cd8abe327d6edfa1b99408b00f41b95"
+    },
+    "plan.json": {
+      "bytes": 1750,
+      "sha256": "fdfc36a1a6c4539af935494ff95b0bd5e18473b19979e51c379b9ce26d8945ae"
+    },
+    "result.json": {
+      "bytes": 778,
+      "sha256": "b131b57ac5dc13ca99ceb6e0ecb65871c25749fef927ce87bf068d1d3ce6e784"
+    },
+    "validation.json": {
+      "bytes": 1569,
+      "sha256": "a25dc908cebb8f3d83330f46efd1bab4eeecc888986e7630903db223acd6327b"
+    },
+    "verify.py": {
+      "bytes": 10959,
+      "sha256": "c1bced45d59ec5f45f1734fa35528893b33c35eb151752257eae17169b45c17e"
+    }
+  },
+  "reviewed_source_commit": "ac6553bd4ede54bea77c6ef4bd66c02638d8f297",
+  "scope": "exact mutual incidence and two-list extension structure of the fixed 122 archived completion centres",
+  "trust_boundary": [
+    "the two pinned raw coordinate tables and the standard degree-eight squarefree radical basis",
+    "ordinary CPython integer/Fraction arithmetic, JSON decoding, and completeness of explicit finite loops",
+    "the elementary tree and even-cycle list-colouring arguments stated in the review",
+    "SHA-256 collision resistance for source and canonical stream identities",
+    "the original 21,978,620-triple centre enumeration is intentionally outside the claim and is not trusted or repeated"
+  ],
+  "two_list_evidence": {
+    "arbitrary_colour_universe_argument": "reduce to two-element sublists; greedily colour trees, while an even cycle alternates for equal lists and closes from an adjacent unequal-list pair otherwise",
+    "four_colour_pair_lists": 6,
+    "four_cycle_list_assignments": 1296,
+    "full_F_constructive_colourings": 1296,
+    "odd_triangle_identical_list_control_rejected": true,
+    "structural_reason": "each component is a tree or consists of trees attached to the certified even four-cycle"
+  }
+}
