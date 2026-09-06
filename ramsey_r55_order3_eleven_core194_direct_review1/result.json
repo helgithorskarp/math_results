@@ -1,0 +1,103 @@
+{
+  "cases": {
+    "blue": {
+      "census": {
+        "all_five_sets": 962598,
+        "clauses": 366069,
+        "distinct_ramsey_clauses": 366034,
+        "fixed_units": 27,
+        "pair_consequences": 8,
+        "possible_blue": 655371,
+        "possible_red": 454199,
+        "variables": 320
+      },
+      "clause_lengths": {
+        "1": 27,
+        "2": 15,
+        "3": 473,
+        "4": 490,
+        "5": 1162,
+        "6": 3801,
+        "7": 26684,
+        "8": 30618,
+        "9": 100261,
+        "10": 202538
+      },
+      "formula": {
+        "bytes": 14883777,
+        "sha256": "f3314485280b2080f3459774b944e010beeb175788673d53703d60cba091e84c"
+      }
+    },
+    "red": {
+      "census": {
+        "all_five_sets": 962598,
+        "clauses": 364095,
+        "distinct_ramsey_clauses": 364068,
+        "fixed_units": 27,
+        "pair_consequences": 0,
+        "possible_blue": 646149,
+        "possible_red": 457300,
+        "variables": 320
+      },
+      "clause_lengths": {
+        "1": 27,
+        "3": 473,
+        "4": 190,
+        "5": 1106,
+        "6": 3738,
+        "7": 25144,
+        "8": 30618,
+        "9": 100261,
+        "10": 202538
+      },
+      "formula": {
+        "bytes": 14841387,
+        "sha256": "2aa575e6b988d788f57f98abaa3728518517adc02c795ef5f75458c459e85a72"
+      }
+    }
+  },
+  "decision_boundary": "Both submitted solves are UNKNOWN; neither case is excluded.",
+  "displayed_index": {
+    "noninternal_edges_checked": 870,
+    "primary_variables": 320
+  },
+  "equivalence_scope": "Distinguished-pair formulas are exact; whole-Core194 coverage imports z>=2.",
+  "fixed_pair_coverage": {
+    "moving_vertices_fixed_pointwise": 33,
+    "primary_orbit_bijections": 45,
+    "unordered_empty_pairs_checked": 45
+  },
+  "local_blue_pair_lemma": {
+    "five_sets": 48048,
+    "literal_pair_colors_checked": 480480,
+    "obstructions": {
+      "blue": 11,
+      "red": 5
+    },
+    "red_k4_by_omitted_triangle": {
+      "0": [3, 4, 7, 10],
+      "1": [0, 1, 7, 10],
+      "2": [0, 3, 9, 10],
+      "3": [0, 3, 6, 7]
+    },
+    "signatures": 16
+  },
+  "orbit_census": {
+    "fixed": 45,
+    "incidence": 110,
+    "internal_constant_edges": 33,
+    "moving": 165,
+    "physical_pairs": 903
+  },
+  "reviewed_source": {
+    "PROOF.md": "5178dd3e8e404fa02e17014a0e2e56c8b8a048b415cd958ea6a7ebd470e09888",
+    "README.md": "e2bf2c0844814abe6b6b5529172381c256c713461d0ee5e1876bf1ddb6918f61",
+    "SHA256SUMS": "8957c50722503ecb09e350161a4061bf8a45872f715a71dbbd18c1f80c1c2011",
+    "boundary.json": "cb474a08b91c7d343f289c41c0c48dc0dd35b18688f1a8ca394ea9db2564159f",
+    "check.py": "93298ebc771c1c4f7bb6e019eb3387986745d8394feb20ecb4f93321f3a235ef",
+    "generate.py": "fc8b15a087b02e31a254df7b7c0314e391b27c11cfe3a54bdc4a870a1aa382e9",
+    "result.json": "9500da9e2358316eeaece258bbce553e6df4070bc67feca3da573854094273f1",
+    "verification.json": "3c7ca7dfe39bb492f27f0a6d42d897f400d08f9f9f1b6af1625b4ec3ce3f04fd"
+  },
+  "solver_claims_reproduced": false
+}
