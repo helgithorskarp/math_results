@@ -1,0 +1,97 @@
+{
+  "status": "COMPLETE: every permitted connector four-colouring extends",
+  "scope": "At most508 total vertices, full specified A159/B214 copies, connector vertex-disjoint from every copy, gadget overlaps confined to common terminals, all new edges confined to connector/terminals. Each terminal sees at most one connector colour in the given proper four-colouring. At most one physical connector neighbour suffices for every connector colouring.",
+  "abstract_lemma": "At most3 equilateral triangles of a common side length L>2 are nonmonochromatically list-colourable when every terminal has at least3 allowed colours from the same4-element palette.",
+  "proof": "Analytic degree bound; cubic components have at most6 vertices; planar distances exclude K4; elementary K33/prism list constructions; positive gadget lifting.",
+  "geometry_enumerated": false,
+  "new_full_gadget_graph_constructed": false,
+  "build": {
+    "canonical_patterns_per_graph": 187,
+    "canonical_witnesses": 374,
+    "labelled_list_profiles_per_graph": 4096,
+    "certificate_sha256": "2cbeee5d9fff8cfa31e7b47a8b101823b548d26a04c6f3a4582eac9cac3dbd23",
+    "certificate_bytes": 6752,
+    "native_solver_calls": 0,
+    "seconds": 0.027320483000949025
+  },
+  "independent_finite_audit": {
+    "all_labelled_profiles": 8192,
+    "canonical_rows": 374,
+    "witness_vertex_checks": 49152,
+    "witness_edge_checks": 73728,
+    "simple_graph_masks": 32832,
+    "labelled_cubic_graphs": {
+      "K33": 10,
+      "K4": 1,
+      "prism": 60
+    },
+    "K4_distance_patterns": 42,
+    "Gram_determinants": {
+      "-11/2": 12,
+      "-245/2": 3,
+      "-49": 4,
+      "-58": 12,
+      "-7": 6,
+      "1/2": 1,
+      "5": 4
+    },
+    "rejection_controls": 2,
+    "certificate_sha256": "2cbeee5d9fff8cfa31e7b47a8b101823b548d26a04c6f3a4582eac9cac3dbd23",
+    "native_solver_calls": 0,
+    "status": "PASS"
+  },
+  "fixtures": {
+    "fixtures": [
+      {
+        "fixture": "prism",
+        "points": 9,
+        "unit_edges": 9,
+        "maximum_auxiliary_degree": 3,
+        "cubic_component_orders": [
+          6
+        ]
+      },
+      {
+        "fixture": "coincident_terminal_sets",
+        "points": 3,
+        "unit_edges": 0,
+        "maximum_auxiliary_degree": 2,
+        "cubic_component_orders": []
+      }
+    ],
+    "exact_fixture_pair_norms": 39,
+    "terminal_distance_checks": 18,
+    "selected_pair_cases": 54,
+    "geometric_list_runs": 216,
+    "noncubic_list_profiles": 1552,
+    "invalid_input_rejections": 4,
+    "status": "PASS"
+  },
+  "normal_and_optimized_audit_match": true,
+  "normal_and_optimized_fixtures_match": true,
+  "finite_audit_seconds": 0.20621095501701348,
+  "fixtures_seconds": 0.038571293000131845,
+  "python": "3.11.2",
+  "threads": 1,
+  "peak_memory_measured": false,
+  "native_solver_calls": 0,
+  "positive_extension_source_commit": "91fbc8611c732752b51251df14bfc882da524807",
+  "positive_extension_replayed": true,
+  "terminal_assignments_replayed": 72,
+  "expanded_edge_inequalities_replayed": 50484,
+  "pair_norm_checks_replayed": 35352,
+  "input_sha256": {
+    "hadwiger_nelson_nonmono159_214_lowden2/points159.tsv": "4f72fa06d18434472ce77cebe38880333694ec04b94945ede073a4a1c6d5bc02",
+    "hadwiger_nelson_nonmono159_214_lowden2/points214.tsv": "97c9b3a964ed19874ae3fe932eb8c085fd637f618d2481fffaebbd1fbae55c2f",
+    "hadwiger_nelson_long_terminal_gluing/certificate.json": "26206782c1937d481d06e05ed95284405a188c66c1073a48a8d30dd537b0a830",
+    "hadwiger_nelson_long_terminal_gluing/build.py": "93a1bda2390834c683a31431dbcdefac0a21e0b895c0063f81b2af038b11667c",
+    "hadwiger_nelson_long_terminal_gluing/verify.py": "61c91721d8764a743fa0ffc8a5a3b08e39402d09ea36857125f4353c3c38a7db"
+  },
+  "negative_A_or_B_forcing_premise": false,
+  "large_omitted_certificate": false,
+  "target_found": false,
+  "external_review": "Pending for this theorem. Distinct finite checker is author-run. The preceding double-contact Moser theorem has accepted independent review.",
+  "background_jobs": [],
+  "next_phase_started": false,
+  "primary_source_calibration": "2026-09-06: Parts 2010.12665v2 and Haugland 2608.04542v4 report the509 record."
+}
