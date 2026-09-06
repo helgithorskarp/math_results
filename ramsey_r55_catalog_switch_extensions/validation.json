@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "python": "3.11.2",
+  "compiler": "GCC 12.2.0",
+  "generator_controls": {
+    "status": "PASS",
+    "input_graphs": 74,
+    "physical_assignments": 19456,
+    "valid_assignments": 17986,
+    "rejected_bad_physical_clauses": 5,
+    "rejected_bad_graph6_records": 6
+  },
+  "generator_sanitizer_controls": {
+    "status": "PASS",
+    "input_graphs": 74,
+    "physical_assignments": 19456,
+    "valid_assignments": 17986,
+    "rejected_bad_physical_clauses": 5,
+    "rejected_bad_graph6_records": 6
+  },
+  "native_proof_controls": {
+    "status": "PASS",
+    "semantic": {
+      "status": "PASS",
+      "formulas": 512,
+      "rup_checks": 27648,
+      "rat_checks": 27648,
+      "accepted_rat": 26556
+    },
+    "negative_controls": 16,
+    "positive_controls": 5,
+    "checker_sha256": "6eb768fd9363a806c2a091210bb5407fb9b99e14c2adebd65fc0e8e458cdd887",
+    "replayed": 76,
+    "seconds": 36.903929115098435
+  },
+  "native_sanitizer_controls": {
+    "status": "PASS",
+    "semantic": {
+      "status": "PASS",
+      "formulas": 512,
+      "rup_checks": 27648,
+      "rat_checks": 27648,
+      "accepted_rat": 26556
+    },
+    "negative_controls": 16,
+    "positive_controls": 5,
+    "checker_sha256": "e1be6492a47f14634f62b8b716eabc832227e760c47f4534f9833e24d0533060",
+    "replayed": 1,
+    "seconds": 1.6408944879949559
+  },
+  "reference_parent0_seconds": 12.293190569005674,
+  "native_parent0_seconds": 0.5100125340104569,
+  "kissat_source": "8af8e56f174b778aef3aa45af9f739b2a5f492c2",
+  "drat_trim_source": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "solver_invocations": 328,
+  "solver_cap_cpu_seconds": 30,
+  "solver_wall_guard_seconds": 45,
+  "solver_seconds_sum": 1836.8792432038463,
+  "solver_seconds_range": [
+    5.382871784007875,
+    5.884572030015988
+  ],
+  "proof_trimmer_seconds_sum": 361.3222298566834,
+  "parallel_remainder": {
+    "status": "CHECKED_ENTIRE_CATALOG_SWITCH_EXTENSION_UNION",
+    "parents": 328,
+    "jobs": 4,
+    "elapsed_seconds": 497.76293911601533
+  },
+  "proof_replay_is_independent_mathematical_algorithm": false,
+  "external_review_of_catalog_result": false
+}
