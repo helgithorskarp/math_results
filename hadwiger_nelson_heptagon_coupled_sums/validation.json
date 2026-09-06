@@ -1,0 +1,54 @@
+{
+  "python": "3.11.2",
+  "threads": 1,
+  "peak_memory": "not measured",
+  "build": {
+    "seconds": 49.99758538900642
+  },
+  "audit": {
+    "status": "ALL252 COUPLED SUMS ARE FOUR-CHROMATIC",
+    "rotations_independently_reenumerated": 252,
+    "complete_supports_and_edge_lists_compared": 252,
+    "formal_labels_compared": 74088,
+    "full_pair_tests": 8786736,
+    "colour_edge_checks": 247878,
+    "new_cross_edge_inequalities_checked": 420,
+    "modular_survivors_rechecked_exactly": 247878,
+    "modular_false_positives": 0,
+    "distinct_supports": 252,
+    "same_baseline_colouring_extended_in_every_case": true,
+    "spindle_embeddings_checked": 252,
+    "normalized_three_colour_assignments_rejected": 81,
+    "invalid_inputs_or_witnesses_rejected": 6,
+    "moduli": [
+      [
+        2017,
+        54,
+        822
+      ],
+      [
+        2143,
+        325,
+        207
+      ]
+    ],
+    "native_solver_calls": 0,
+    "seconds": 68.08018616300251
+  },
+  "prototype_seconds": 51.686702607999905,
+  "prototype_and_producer_full_graphs_compared_entrywise": 252,
+  "certificate_bytes": 791,
+  "input_sha256": {
+    "../hadwiger_nelson_heptagon_moser_sum/field.py": "55d016633f1c18cece1a94edf90c97a6bafc7d0aec99b31dad355f1df86e1678",
+    "../hadwiger_nelson_heptagon_moser_sum/contacts.py": "3f3458262f3a8ad8a72ad65f022405412820bb2a5de4c399da5430daa76fc983",
+    "../hadwiger_nelson_heptagon_moser_sum/rotation_family.py": "b50bb681cec9dd60383dc48dc43a41a2c34aa25f9fde3b8164998535c17c6131",
+    "../hadwiger_nelson_heptagon_moser_sum/audit.py": "2fd16a572c14ab8903ce97fe34c860ddd1c49b086d868e06cd5c3f8e4bc9e6d7",
+    "../hadwiger_nelson_heptagon_moser_sum/contacts_audit.py": "ed2da482fa8b8911aebf16038a449c0c8537162e0c7dcf50b57f022a194a0a92",
+    "../hadwiger_nelson_heptagon_moser_sum/contacts_certificate.json": "624764f5927cf520be6e364c82b006dc87df9311b519f61d47fd72fbbcfa2a35",
+    "../hadwiger_nelson_heptagon_difference_lifts/geometry.py": "67599414c9cabc9e1e9f0100907c3c039200deea4ffd935cb6ba09d67c57ef07"
+  },
+  "scope": "All252 relative angles in the fixed collision cohort. One baseline colouring separately extends to each full two-component union; no assertion of simultaneous extension to larger unions.",
+  "external_review": "Pending for the new coupled theorem; independent implementations were run by the author.",
+  "native_solver_calls": 0,
+  "target_found": false
+}
