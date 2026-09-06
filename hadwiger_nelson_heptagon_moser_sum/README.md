@@ -1,5 +1,11 @@
 # A four-chromatic 143-point heptagon–Moser-spindle sum
 
+**Subsequent dual incidence assessment:** [DUAL_NEIGHBOUR.md](DUAL_NEIGHBOUR.md)
+applies the common-neighbour lemma with the factors exchanged. The
+remaining necessary-event bound is 8484 angles, or 1212 classes under
+sevenfold rotation. These angles remain unenumerated; the complete
+incidence certificate specifies a proposed smaller first cohort.
+
 **Subsequent common-neighbour reduction:** [COMMON_NEIGHBOUR.md](COMMON_NEIGHBOUR.md)
 closes every mixed contact with a unit H difference and bounds the
 remaining possible non-four-colourable rotations by 11424. That remaining

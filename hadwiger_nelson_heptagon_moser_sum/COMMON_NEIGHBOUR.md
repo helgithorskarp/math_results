@@ -1,5 +1,11 @@
 # Common neighbours remove every mixed contact with a unit H difference
 
+**Subsequent factor-exchanged assessment:** [DUAL_NEIGHBOUR.md](DUAL_NEIGHBOUR.md)
+verifies the complete H common-neighbour relation and sharpens the
+remaining bound to 8484 angles, or 1212 classes under sevenfold rotation.
+The necessary-event set remains unenumerated. The earlier milestone
+below retains its historical scope and provenance.
+
 **Theorem.** Fix the 21-point H and seven-point M defined in
 [PROOF.md](PROOF.md), and let C be the 252 collision rotations closed
 in [COLLISIONS.md](COLLISIONS.md). If |r|=1 and
