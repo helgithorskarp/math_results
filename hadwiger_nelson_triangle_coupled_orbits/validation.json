@@ -1,0 +1,106 @@
+{
+  "status": "COMPLETE: exact36-placement negative construction-family result",
+  "finite_result": {
+    "placements": 36,
+    "exterior_points_per_placement": 18,
+    "normal_classes_per_placement": 36,
+    "maximum_normal_multiplicity_per_placement": 2,
+    "shared_normal_classes": 36,
+    "pair_rotation_cases": 3996,
+    "pair_outcomes": {
+      "identical": 36,
+      "nonunit": 3742,
+      "parallel_incompatible": 78,
+      "unit": 140
+    },
+    "unit_circumcentre_witnesses": 140,
+    "candidate_direction_orbits": 3,
+    "important_components_per_placement": 2,
+    "core_vertices_per_placement": 66,
+    "core_edge_histogram": {
+      "200": 12,
+      "202": 18,
+      "204": 6
+    },
+    "cross_cycle_edge_histogram": {
+      "0": 24,
+      "2": 12
+    },
+    "incidence_histogram": {
+      "17,15": 18,
+      "19,15": 18
+    },
+    "exterior_union_vertices": 108,
+    "shared_certificate_vertices": 156,
+    "shared_pair_norms": 12090,
+    "shared_unit_edges": 690,
+    "shared_colour_edge_checks": 690,
+    "restricted_core_edge_checks": 7260,
+    "full_infinite_graphs_four_colourable": 36,
+    "simultaneous_108_exterior_closure_claimed": false,
+    "status": "PASS",
+    "malformed_certificate_rejections": 5,
+    "certificate_bytes": 19427,
+    "certificate_sha256": "8680dc794ddb0543fd89f93fa61e6119521ebba51c422a74c4eae0dcf7f5a23a",
+    "native_solver_calls": 0
+  },
+  "subset_corollary": "Every W subset of the fixed108-point exterior union with at most two source normals per sixth-rotation class gives a four-colourable whole X union W. Such W has at most24 points and a core of at most72 vertices. Admissible subsets were not individually enumerated.",
+  "build": {
+    "status": "PASS",
+    "certificate_bytes": 19427,
+    "certificate_sha256": "8680dc794ddb0543fd89f93fa61e6119521ebba51c422a74c4eae0dcf7f5a23a",
+    "seconds": 19.399956067005405,
+    "native_solver_calls": 0
+  },
+  "independent_audit_seconds": 15.474639013002161,
+  "optimized_audit_seconds": 15.851906648982549,
+  "normal_optimized_reports_identical": true,
+  "python": "3.11.2",
+  "threads": 1,
+  "peak_memory_measured": false,
+  "native_solver_calls": 0,
+  "positive_discovery": "One deterministic Python four-colour backtracking search,176 recursive nodes. Positive row checked directly on690 edges.",
+  "independence": "Producer uses exact Cartesian four-coefficient XOR multiplication and field inversion. Checker uses sparse squarefree radicals, gcd multiplication and the unit-circumradius polynomial, and imports no submitted executable.",
+  "mathematical_dependencies": [
+    {
+      "package": "hadwiger_nelson_dominating_triangle",
+      "source_commit": "0c9e4cf4fd74b5bae3821c957e3b23186386e81d",
+      "artifact_ref": "bafkreiauzabwiqtpeqzdkwuy35l33xrexthvv2knfozsl5e3jb7kxewboi",
+      "scope": "Full continuum decomposition into exceptional C9 and generic K3 Cartesian C6 components. External acceptance not asserted."
+    },
+    {
+      "package": "hadwiger_nelson_triangle_exterior_kernel",
+      "source_commit": "d1ef2c978a6659a4f0ab1ef748be88e57486a4cb",
+      "artifact_ref": "bafkreiccamey42e5sqxevdwi4g72uuxm7e34bimhx6jixxfifr4bdoqzoa",
+      "scope": "Full four-colour restoration for components with at most two exterior edge incidences; canonical sigma direction motivates fixed support. External acceptance not asserted."
+    }
+  ],
+  "initial_graph_scan_height": 3312,
+  "prepublication_graph_scan_height": 3314,
+  "HN2_latest_durable_result": {
+    "package": "hadwiger_nelson_heule632_transport",
+    "source_commit": "d0bbc427ade0a65514fd1aa7ce7d9c0548bbfe00",
+    "artifact_ref": "bafkreiejmx3w76svpeppugpxhhlzk2qzu75g2gbzwz3z6nq6arcphvwfgy",
+    "height": 3291,
+    "result": "Exactly22 of544 fixed old colourings extend;35,904 component decisions independently agree. H632 full family remains open. Failed fixed rows are not negative graph certificates.",
+    "fresh122_independently_accepted": true,
+    "fresh122_review_ref": "bafkreidsif5t2x4moaanqulup262xsinkywbpkns6lri6azd4hptuu7yje",
+    "fresh122_review_height": 3289,
+    "H514_independently_accepted": true,
+    "H514_review_ref": "bafkreigcrsut6lo2npmc4iyi4nyf3s2xj6glhrxkv3rwn7hfi7spf3hh2i",
+    "H514_review_height": 3282,
+    "dependency": false,
+    "transport_independently_accepted": true,
+    "transport_review_commit": "d64687b34ab3ae1e2e0fc4fa18fcdc38e4582d4c",
+    "transport_review_ref": "bafkreiemkhamfm7hondjjuvhcy3s7rj7hxraghccxspe6lahf7glq5vu4y",
+    "transport_review_height": 3313
+  },
+  "external_mathematical_coordinate_inputs": [],
+  "primary_record_calibration": "Parts2010.12665v2 gives509; Haugland2608.04542v4 introduction names509 as record, both checked live2026-09-06.",
+  "external_review": "Pending for this result; separate checker is author-run.",
+  "priority_claim": false,
+  "target_found": false,
+  "background_jobs": [],
+  "next_phase_started": false,
+  "simultaneous_108_point_support_decided": false
+}
