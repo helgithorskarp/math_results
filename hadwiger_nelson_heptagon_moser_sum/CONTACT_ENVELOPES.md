@@ -1,5 +1,10 @@
 # Elimination graphs close every mixed contact with a unit M difference
 
+**Subsequent full-family closure:** [ROTATION_FAMILY.md](ROTATION_FAMILY.md)
+certifies all 480 remaining both-nonunit equations and proves every
+rotation H+rM four-chromatic. No unresolved rotation remains for these
+fixed factors. The earlier unit-M milestone below retains its scope.
+
 **Theorem.** Fix H and M from [PROOF.md](PROOF.md). If a nonzero
 difference a of H and a unit difference b of M satisfy
 

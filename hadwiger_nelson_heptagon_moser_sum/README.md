@@ -1,5 +1,12 @@
 # A four-chromatic 143-point heptagon–Moser-spindle sum
 
+**Full rotation family closed:** [ROTATION_FAMILY.md](ROTATION_FAMILY.md)
+proves that H+rM is four-chromatic for every unit complex r. The final
+480-equation census has exactly one extra mixed edge per elimination
+graph and explicit four-colourings. Every subgraph of every member is
+four-colourable; this fixed rotation family cannot improve the record.
+Earlier milestones below retain their historical scopes.
+
 **Subsequent unit-M closure:** [CONTACT_ENVELOPES.md](CONTACT_ENVELOPES.md)
 certifies all 126 remaining unit-M contact equations by four-colouring
 their elimination supergraphs. Possibly non-four-colourable sums now
