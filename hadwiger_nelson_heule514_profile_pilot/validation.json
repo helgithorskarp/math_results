@@ -1,0 +1,40 @@
+{
+  "solver_controls": [
+    {
+      "abstract_graph": "K4",
+      "expected": "SAT",
+      "actual": "SAT",
+      "model_directly_checked": true
+    },
+    {
+      "abstract_graph": "K5",
+      "expected": "UNSAT",
+      "actual": "UNSAT",
+      "model_directly_checked": false
+    }
+  ],
+  "not_unit_distance_constructions": true,
+  "producer_sha256_before_target_queries": "4cedc9f4101dce79f8f133ddd3c24c88aa99053ca87e2d7654033ef45e0ffff0",
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "python_executable": "/scratch/researcher-3-hn-venv/bin/python",
+  "target_queries": 77,
+  "status_counts": {
+    "SAT": 77
+  },
+  "controls_native_queries": 2,
+  "target_retries": 0,
+  "target_unsat_proof_traces": 0,
+  "whole_pilot_wall_seconds": 13.766921491012909,
+  "total_native_seconds": 2.7619034010567702,
+  "maximum_native_seconds": 0.3341089989989996,
+  "total_conflicts": 55424,
+  "maximum_conflicts": 6739,
+  "maximum_worker_rss_kib": 28432,
+  "archived_case_metadata_rows_compared": 77,
+  "pilot_source_unchanged_since_freeze": true,
+  "native_cnf_and_model_files_local_only": true,
+  "transcript_sha256": "0af3dd2687cfc768470f66b017a3c22e163c64592c9bc1f4b7de08d41345effb",
+  "raw_certificate_sha256": "ae6c4375299c4af5810677c70d063e14effb7391c2dcc16cbc74d33cbf390743",
+  "no_worker_failures": true,
+  "no_background_jobs": true
+}

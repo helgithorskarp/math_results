@@ -1,0 +1,23 @@
+{
+  "milestone": "One complete bounded fixed-profile H514 projected-CNF pilot and whole-core-family positive cover audit",
+  "frozen_at": "2026-09-06T07:27:38.742633+00:00",
+  "parent_commit": "b35e1d7a57d9cf47d20a1788b4b9077001b8d18e",
+  "candidates": 77,
+  "candidate_sha256": "1a91c902abf46af848d9e37fb22e391bd49e1bfadab7f756c065a88e0cb6cd5f",
+  "selection": "Exactly the first-input-row representative of each of the 77 public core profiles, in public census order; no adaptive target selection.",
+  "encoding": "Published H514 optional-P4 projection, 2052 variables, fixed origin colour 0, no other symmetry breaking. Fresh Cadical195 per candidate, defaults, no assumptions or cross-candidate learned clauses.",
+  "bounds": {
+    "conflicts_per_candidate": 100000,
+    "worker_wall_seconds": 60,
+    "total_pilot_wall_seconds": 900,
+    "worker_address_space_bytes": 4294967296,
+    "target_queries_max": 77,
+    "retries": 0
+  },
+  "positive_rule": "Check every CNF model, decode old minimum true indicators and a lexicographic P4 extension, directly check all retained edges. Greedily restore omitted vertices in increasing index order to a fixed point; check resulting H514-D four-colouring.",
+  "audit_rule": "After this fixed pilot, perform exactly one complete known-cut coverage audit over the 190536 canonical cores; separately verify positive witnesses and reproduce coverage without relying on solver statuses.",
+  "negative_rule": "Stop on native UNSAT and preserve the actual formula for a fresh independent proof. No negative or record claim without exact geometry and checked UNSAT certificate.",
+  "unknown_rule": "Keep UNKNOWN and unqueried cases explicit; no retries or unchanged-runtime extension.",
+  "stop_rule": "After bounded pilot and complete positive cover audit, publish warranted exact evidence, make a family-level go/no-go decision, checkpoint and yield before any new support or phase.",
+  "scope": "Representatives do not decide whole profiles. Residual means not covered, never non-four-colourable."
+}
