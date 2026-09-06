@@ -1023,3 +1023,50 @@ first checking whether that class is already covered by Paley(41).
 No equivalence test, switched formula, solve or other move phase has begun.
 All17 prescribed4v7classes/9,153labels and the inherited3v8boundary remain
 open. The completed local certificates do not change any Ramsey bound.
+
+## The saved Core186 fixture's induced 41-core has no Ramsey switch
+
+The [induced-core switching certificate](../ramsey_r55_core186_switch_family)
+completes the proposed method change. Delete original vertices33 and35
+from the saved43-vertex Core186 fixture and relabel the remaining vertices
+in increasing order. The resulting particular41-vertex graph H has412
+red edges. Every Seidel switch H_uv XOR s_u XOR s_v contains a red or blue
+K5. No automorphism, degree or fixed-signature condition is imposed.
+
+Hence no43-vertex Ramsey(5,5) graph contains an induced41-core in this
+switching class, even after relabeling and arbitrary two-vertex attachments.
+The complete normalized labeled family has2^40 core choices times2^83
+attachment choices, exactly2^123 graphs. This does not exclude every
+extension of the twelve-vertex minority core named Core186, nor any of
+the17 remaining whole C3 classes. No Ramsey bound changes.
+
+The new41-core is outside Paley(41)'s switching class: pair{0,3} lies in15
+odd-parity triangles, whereas every Paley pair lies in19 or20. Switching
+preserves triangle parity and relabeling preserves the pair-count multiset.
+Independent pair and triangle enumerations agree on both complete histograms.
+This distinguishes the designated cores; no disjointness claim is made
+for arbitrary relabelings of their43-vertex extension families.
+
+One audited40-variable formula with33,779 clauses returned UNSAT in5.784
+seconds under the single predeclared300-second call. The compact physical
+obstruction contains3,864 clauses; its146,371-byte proof has1,635 RUP and476
+RAT additions,404 RAT-side checks and5,953 deletions. Every input clause is
+checked against the actual induced graph, then the proof reaches a checked
+empty clause. DRAT-trim also accepts the extracted pair directly. Full
+truth-table reconstruction, normal/optimized checks and fresh public-source
+reproduction pass.
+
+The small proof kernel is explicitly vendored by function from the teammate's
+Paley package, source dac1474f64f1df456bfb4653bd97beb71063f23a. This is disclosed
+reuse, not an independently rewritten DRAT algorithm or external peer review.
+The physical decoder is new and never uses a Paley-specific edge predicate.
+The new theorem does not assume the Paley exclusion, catalog completeness,
+the old heuristic or old quantitative minima. Its certificate can be checked
+without a solver or omitted raw formula.
+
+This entire induced-core switching class is now a closed construction route.
+A later construction must change its switching-invariant triangle parities
+or choose another structured core; changing switch bits or attaching two
+vertices to a member cannot reach the target. No second pair, modified core,
+new formula or additional construction phase has begun. Shared content was
+refreshed through3336, with no new overlapping result or external review.
