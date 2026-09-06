@@ -947,9 +947,42 @@ calibration and fresh optimized verification pass. There is no independent
 peer review of this new package.
 
 No symmetry family is excluded and the 17-class / 9,153-label frontier
-is unchanged. The next unstarted test is to optimize the eleven moving
+is unchanged. The next proposed test was to optimize the eleven moving
 incidences of one fixed vertex simultaneously, using the exact 2^11
 conditional objective on the saved best graph. This is a different move
 capable of testing escape from the certified single-orbit minimum; it
 does not assert that 155 defects are close to the target. No second
 search batch, radius, or proof phase was started. All jobs are complete.
+
+## Core186: complete fixed-star reassignment cannot improve the fixture
+
+The [exact fixed-star certificate](../ramsey_r55_order3_eleven_fixed_star)
+completes that proposed test. Starting each block from the same saved
+155-defect coloring, it assigns all eleven moving-triangle contacts of
+one fixed vertex in every possible way. All other edges remain fixed,
+including pairs between fixed vertices. The ten blocks contain 20,480
+assignment scores and 20,471 distinct labeled colorings; they intersect
+only at the input graph.
+
+Every block has the input assignment as its unique minimum, with 74 red
+and 81 blue K5s. Every one of the 20,470 changed colorings has at least157
+defects. The minimum after changing the star at f=33..42 is respectively
+160,177,157,173,182,174,170,184,187,168. No target graph or improved fixture
+is produced, and no core or symmetry family is excluded.
+
+The producer scans physical five-sets with symbolic contacts and computes
+all scores by subset zeta transforms. An independent checker reconstructs
+all3,562 coefficient records from monochromatic K4s in G-f and K5s avoiding
+f, then evaluates every assignment directly without a transform. It also
+checks literal/recursive full-graph counts and all physical action pairs.
+All16,898 small physical controls and eleven corruption controls pass;
+normal/optimized runs and a fresh public-source reproduction agree.
+These are internally independent algorithms, not external peer review.
+
+The next unstarted direction is to couple two fixed stars, initially33
+and35:22 variable contacts, with their mutual edge fixed. This introduces
+five-set interactions absent from the completed one-star test. No such
+sweep has begun. The17-class/9,153-label boundary, including all open
+Core194 RED cases, is unchanged. Teammate3's new three-block gluing result
+at graph3311 stays in the distinct nonsymmetric H92 lane; it is an exact
+conditional interface, not a satisfiability verdict or independent review.

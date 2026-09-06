@@ -1,0 +1,38 @@
+{
+  "extra_constant_through_root_checks": 2,
+  "outcomes_seen": {
+    "improvement": true,
+    "neutral": true,
+    "worsening": true,
+    "zero": true
+  },
+  "rejected_corruptions": [
+    "weight",
+    "omit_constant",
+    "duplicate_support",
+    "out_of_range",
+    "negative_weight",
+    "wrong_vertex",
+    "wrong_base",
+    "false_minimum",
+    "omit_argmin",
+    "false_changed_minimum",
+    "corrupt_table"
+  ],
+  "small_cases": [
+    {
+      "constant_weight_sum": 0,
+      "physical_scores_checked": 512,
+      "star_assignments_per_coloring": 4,
+      "vertices": 5,
+      "visible_colorings": 128
+    },
+    {
+      "constant_weight_sum": 8,
+      "physical_scores_checked": 16384,
+      "star_assignments_per_coloring": 4,
+      "vertices": 6,
+      "visible_colorings": 4096
+    }
+  ]
+}
