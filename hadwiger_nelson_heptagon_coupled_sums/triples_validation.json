@@ -1,0 +1,55 @@
+{
+  "python": "3.11.2",
+  "threads": 1,
+  "peak_memory": "not measured",
+  "build": {
+    "seconds": 2.2816700170078548
+  },
+  "audit": {
+    "status": "ONE COLOURING OF THE FIVE-COMPONENT UNION AND ALL ITS SUBGRAPHS",
+    "complete_triple_graphs_compared": 6,
+    "formal_labels_compared": 2646,
+    "point_pair_tests": 406020,
+    "modular_survivors_rechecked_exactly": 8710,
+    "modular_false_positives": 0,
+    "triple_colour_edge_checks": 8710,
+    "new_attachment_edge_checks": 118,
+    "glued_union_vertices": 513,
+    "glued_union_edges_checked": 2097,
+    "full_union_distance_scan_performed": false,
+    "component_pairs_covered": 10,
+    "fixed_baseline_domain_sizes": [
+      10,
+      6,
+      10,
+      6
+    ],
+    "pair_relations_compared_entrywise": 6,
+    "restricted_pair_counts": [
+      67,
+      27
+    ],
+    "fixed_H_and_baseline_XOR_completions": 1809,
+    "nonempty_orientation_subsets_closed": 31,
+    "spindle_embeddings_checked": 6,
+    "normalized_three_colour_assignments_rejected": 81,
+    "invalid_controls_rejected": 4,
+    "native_solver_calls": 0,
+    "seconds": 2.923484009996173
+  },
+  "prototype_seconds": 2.8562515569938114,
+  "prototype_graphs_and_compatibility_relations_compared_entrywise": true,
+  "input_sha256": {
+    "build.py": "e1843f189b3b1023b08bada8b99cc65c4228161e73f70975a463bbb3b66b8543",
+    "check.py": "2f29540180e12e66a258d46736884d9d1ebf00a7c201dd96ea6b5981bd933694",
+    "../hadwiger_nelson_heptagon_moser_sum/field.py": "55d016633f1c18cece1a94edf90c97a6bafc7d0aec99b31dad355f1df86e1678",
+    "../hadwiger_nelson_heptagon_moser_sum/audit.py": "2fd16a572c14ab8903ce97fe34c860ddd1c49b086d868e06cd5c3f8e4bc9e6d7",
+    "../hadwiger_nelson_heptagon_moser_sum/contacts_audit.py": "ed2da482fa8b8911aebf16038a449c0c8537162e0c7dcf50b57f022a194a0a92",
+    "../hadwiger_nelson_heptagon_moser_sum/contacts_certificate.json": "624764f5927cf520be6e364c82b006dc87df9311b519f61d47fd72fbbcfa2a35",
+    "../hadwiger_nelson_heptagon_difference_lifts/geometry.py": "67599414c9cabc9e1e9f0100907c3c039200deea4ffd935cb6ba09d67c57ef07"
+  },
+  "scope": "Exactly the five specified orientations. Six full triple graphs cover every pair of components; their common colouring descends to the513-point complete unit graph. All its subgraphs and all31 nonempty orientation subsets are four-colourable. No larger orientation family is asserted.",
+  "native_solver_calls": 0,
+  "external_review": "New simultaneous gluing result pending. Parent continuous single-sum closure independently accepted at reviewer source274d3df.",
+  "target_found": false
+}
