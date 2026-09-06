@@ -818,10 +818,54 @@ These are not graph realizations. The RED-pair branch, whole Core194
 and all 17 whole classes / 9,153 labels remain open, including Core194's
 81 labels. No target graph or Ramsey-bound improvement is claimed.
 
-The 27 finer (4,1,2) formulas/searches are the next unstarted bounded
-direction. No next phase or background process is launched. The complete
+The following checkpoint completes the formerly unstarted 27-profile
+(4,1,2) stratum and supersedes its open status. The complete
 83,119,043 bytes of new proof traces stay outside Git; public source,
 compact evidence, negative controls and exact reproduction commands are
 in the linked package. Shared graph content was refreshed through 3243;
 no overlapping result or affecting objection was found. The teammate's
 nonsymmetric neighborhood realization lane remains distinct.
+
+
+## Core194: no BLUE empty fixed pair remains
+
+The [complete 27-profile (4,1,2) decisions](../ramsey_r55_order3_eleven_core194_a4_fixed)
+exclude the last moving type in the BLUE empty-pair cover. All complete
+320-variable, 366,099-clause formulas are UNSAT, with full DRAT replayed
+twice against freshly reconstructed inputs. There were 27 solver calls,
+54 full proof checks, no UNKNOWN and no SAT. Twenty-one proof cores use
+RAT lemmas. Production runner elapsed 74.750031 seconds; fresh optimized
+verification 131.004608 seconds. All 35 frozen source identities match.
+
+The exact cover has fixed counts x+y+z=8, y>=2, z<=5. It checks all 6,561
+words, recovering 5,253 admissible words and 27 profiles. All actual
+thirty-contact sorting maps (4,019 distinct vertex permutations), all
+810 physical unit meanings and 2,562,483 complete clause images under
+seven fixed-transposition generators pass. No endpoint tie or swap is
+used inside the (4,1,2) normal form. The public package includes the
+ordinary coverage proof and malformed-input controls; 121,167,533 bytes
+of complete refutation traces remain outside Git.
+
+Combined with the earlier moving-type closures, this excludes every
+BLUE empty pair, exhausting the original nine-type / 119-profile cover
+as full extensions. Therefore all empty fixed vertices form a RED clique.
+The [reviewed multiplicity theorem](../ramsey_r55_order3_eleven_core194_multiplicity_review1)
+gives at least two, and the no-red-K5 condition gives at most four.
+These are necessary cardinalities, not asserted realizations.
+
+The new 27-profile proof and inherited a=5 closure remain independently
+unreviewed at graph cutoff 3257. The combined BLUE-branch theorem imports
+both boundaries. Other inherited cover, pair, direct, multiplicity and
+moving-exclusion premises have accepted reviews. No target graph or
+Ramsey-bound improvement follows. The RED-pair branch, whole Core194
+and all 17 whole classes / 9,153 labels remain open, including 81
+Core194 labels.
+
+The next unstarted scope is an exact RED empty-clique reduction with
+cardinality two, three or four. The BLUE no-BB contact lemma and its
+nine-type cover do not automatically apply to RED pairs. No such red
+reduction, finer formula or search has begun. No background job remains.
+The teammate's new 104-edge projection concerns a distinct fixed H92
+six-neighborhood subsystem; it supplies no solver verdict and is not
+imported here. Shared content was refreshed through 3257 without an
+affecting objection or overlapping BLUE-branch closure.
