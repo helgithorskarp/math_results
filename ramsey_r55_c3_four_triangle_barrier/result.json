@@ -1,0 +1,85 @@
+{
+  "all_block_argmins_zero": true,
+  "all_block_minima_123": true,
+  "all_block_minimum_multiplicities_one": true,
+  "assignment_slots": 4198498304,
+  "bits_per_block": 22,
+  "block_count": 1001,
+  "bound_126_claimed_sharp": false,
+  "distinct_labeled_graphs": 4183743579,
+  "every_nontrivial_graph_score_at_least": 126,
+  "maximum_projected_events": 1565,
+  "minimum_graph_count": 1,
+  "minimum_projected_events": 972,
+  "minimum_score": 123,
+  "native_state_word": "signed64bit coefficient/score table, unsigned32bit subset indices",
+  "parent_graph_sha256": "36c4a4ff6359e56ece7c9a6b41e35fae02cb04d72e56d832dc1a4dc056c6e88e",
+  "parent_source_commit": "3b75ed0774476ec005f804bb031d945651ddc4b2",
+  "ramsey_target": false,
+  "runtime": {
+    "command": [
+      "/scratch/team-r55-1-c3-fourteen-blocks/block",
+      "/scratch/team-r55-1-c3-fourteen-blocks/source/baseline.edges",
+      "/scratch/team-r55-1-c3-fourteen-blocks/production",
+      "0",
+      "1001",
+      "22",
+      "123"
+    ],
+    "exit_code": 0,
+    "peak_child_RSS_KiB": 139944,
+    "wall_seconds": 188.65334838599665
+  },
+  "scope": "Fixed labeled parent, fixed C3 action and all14internaltriangle colors; changes may touch at most4movingtriangles, withroot42available. No arbitrary13vertex or general43graph theorem; global fourteen-cycle C3 family stays open.",
+  "score_improvement": false,
+  "source_contract": {
+    "calibration_comparisons": "all blocks.tsv and best.edges byte-identical",
+    "calibration_release": {
+      "best_block": -1,
+      "best_mask": 0,
+      "best_score": 123,
+      "bits": 22,
+      "complete_requested_range": true,
+      "done": 3,
+      "full_family": false,
+      "requested": 3,
+      "seconds": 1.090716386,
+      "start": 0
+    },
+    "calibration_sanitizer": {
+      "best_block": -1,
+      "best_mask": 0,
+      "best_score": 123,
+      "bits": 22,
+      "complete_requested_range": true,
+      "done": 3,
+      "full_family": false,
+      "requested": 3,
+      "seconds": 11.409618536,
+      "start": 0
+    },
+    "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "created_utc": "2026-09-06T13:53:19.726879+00:00",
+    "parser_controls": 8,
+    "physical_small_control_assignments": 256,
+    "production": {
+      "assignment_slots": 4198498304,
+      "bits": 22,
+      "count": 1001,
+      "start": 0
+    },
+    "python": "Python 3.11.2",
+    "release_binary_sha256": "c5570448dc9d121af22f5a427d93b27d047d448c73fdfd621fa635c18a5b94fa",
+    "sanitizer_binary_sha256": "7afea4d3b68715fcf3716eee65509bf3b7eaf5d24c431890b56685afab351e1d",
+    "sources": {
+      "PROTOCOL.md": "1bddf9c53c56dd4f5c6b9b9d4c73e96e7fc6b7a56d6f404e8838883bcbff052c",
+      "audit.py": "677f409c4055113b6d711ce11d748a15de0ca2ab1b02df97f655e9798da749c2",
+      "baseline.edges": "36c4a4ff6359e56ece7c9a6b41e35fae02cb04d72e56d832dc1a4dc056c6e88e",
+      "block.cpp": "5b2032662bbd2df6f49a22e0fe195ba9f2da3af01fd6a89e35cce8469899ab1f",
+      "physical.py": "614ae70e7b8deeeb8591a58bb460737114012ee904ef18c3b0ba17bcd8489d8f"
+    },
+    "ternary_polynomial_controls": 1093
+  },
+  "status": "EXACT_UNIQUE_FOUR_TRIANGLE_MINIMUM_123",
+  "trust": "Exact integer expansion and subset transform, full table scan, source/compiler/platform. Physical audit checks every recorded argmin and complete parent defect lists; it does not independently exhaust production minima. No external review or portable proof-kernel certificate."
+}

@@ -1,0 +1,20 @@
+{
+  "baseline.edges": {
+    "from": "best.edges",
+    "sha256": "36c4a4ff6359e56ece7c9a6b41e35fae02cb04d72e56d832dc1a4dc056c6e88e"
+  },
+  "block.cpp": {
+    "from": "search.cpp through end of Model, before Random",
+    "reuse": "Physical weighted-clause generator and native var index; no heuristic optimizer or tabu algorithm used. New exact projection, polynomial expansion and subset transform."
+  },
+  "count.py": {
+    "added_after_production": "Exact union cardinality by support inclusion-exclusion and recurrence; not an input or reduction to the production search."
+  },
+  "parent_package": "ramsey_r55_c3_fourteen_construction",
+  "physical.py": {
+    "from": "verify.py",
+    "reuse": "Copied byte for byte; physical orbit discovery, graph parsing, clique recursion and literal five-set checks. This is disclosed code reuse, not a new external independent review.",
+    "sha256": "614ae70e7b8deeeb8591a58bb460737114012ee904ef18c3b0ba17bcd8489d8f"
+  },
+  "source_commit": "3b75ed0774476ec005f804bb031d945651ddc4b2"
+}
