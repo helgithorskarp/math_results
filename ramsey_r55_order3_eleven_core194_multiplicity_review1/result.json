@@ -1,0 +1,388 @@
+{
+  "all_checks_passed": true,
+  "base": {
+    "clauses": 617932,
+    "first_empty_prefix_units": [
+      -214,
+      -213,
+      -212,
+      -211
+    ],
+    "identity": {
+      "bytes": 24968396,
+      "sha256": "f7f9eab7a28f32f56bebd54349db8a0e06010274bb16df9f90cbbb9b982216bf"
+    },
+    "variables": 34320
+  },
+  "children": [
+    {
+      "audit": {
+        "added_units": 4,
+        "clauses": 617936,
+        "entire_guarded_base_retained": true,
+        "variables": 34320
+      },
+      "branch": "multiple",
+      "formula": {
+        "bytes": 24968424,
+        "sha256": "214cbdad727ec3f48e97e62246134b341719277981119bd6b89baa5475b2dbb4"
+      },
+      "id": "multiple",
+      "units_sha256": "35a21d24f9d663b9e183442c5e6e3990a8c1e46427531cb946f34930a3ea9dbd"
+    },
+    {
+      "audit": {
+        "added_units": 36,
+        "clauses": 617968,
+        "entire_guarded_base_retained": true,
+        "variables": 34320
+      },
+      "branch": "one",
+      "formula": {
+        "bytes": 24968634,
+        "sha256": "2c8927d6e10b5e7e17234c8537e5e58b0b9202c960fa282d5604df351319f02b"
+      },
+      "id": "one_01",
+      "units_sha256": "87a0d61ad076e155364f922ad170c797d83c319bb3c83bae11521be08abd9eaf"
+    },
+    {
+      "audit": {
+        "added_units": 36,
+        "clauses": 617968,
+        "entire_guarded_base_retained": true,
+        "variables": 34320
+      },
+      "branch": "one",
+      "formula": {
+        "bytes": 24968634,
+        "sha256": "daea0b1dd9be5b3ada28b1d2245fdb42b82efeb7c24516ce3595ec6b78ef18b1"
+      },
+      "id": "one_02",
+      "units_sha256": "dc5b713785d032c38a91b8f4bf8274291650ee13973551d7e2d97bcd7a9c527b"
+    },
+    {
+      "audit": {
+        "added_units": 36,
+        "clauses": 617968,
+        "entire_guarded_base_retained": true,
+        "variables": 34320
+      },
+      "branch": "one",
+      "formula": {
+        "bytes": 24968634,
+        "sha256": "369182d8a7db6f2e5a1e1b9f3f0fe99141c724b32d6ab724e9b50c4b0c41c507"
+      },
+      "id": "one_03",
+      "units_sha256": "3ae2fea922c33cbe940898599c73259aaef6002a3894bdde5387b945b2c89ad6"
+    },
+    {
+      "audit": {
+        "added_units": 36,
+        "clauses": 617968,
+        "entire_guarded_base_retained": true,
+        "variables": 34320
+      },
+      "branch": "one",
+      "formula": {
+        "bytes": 24968634,
+        "sha256": "38b52425f68eae4f6cc2e572903bea9e2b0a397a6d93ca76dc1dfe26e079fed9"
+      },
+      "id": "one_12",
+      "units_sha256": "1cab29f5c600af8f44c320ab0c6d6635335ad01cb04f38abd442b3cd8dd2bd23"
+    },
+    {
+      "audit": {
+        "added_units": 36,
+        "clauses": 617968,
+        "entire_guarded_base_retained": true,
+        "variables": 34320
+      },
+      "branch": "one",
+      "formula": {
+        "bytes": 24968634,
+        "sha256": "4459469c1733f54e4d514415d0f4e2c92a6be9b05d4c7f2d91aca88994b58bf6"
+      },
+      "id": "one_13",
+      "units_sha256": "7d4a60a3e7cd59f28b19de49174ff18c725f921e82bb0a1eb95c32c9c2fac1e7"
+    },
+    {
+      "audit": {
+        "added_units": 36,
+        "clauses": 617968,
+        "entire_guarded_base_retained": true,
+        "variables": 34320
+      },
+      "branch": "one",
+      "formula": {
+        "bytes": 24968634,
+        "sha256": "97c66f192874c41899a5c59d91d0bbae0bdb16c610b5d4ed943d74652e789c09"
+      },
+      "id": "one_23",
+      "units_sha256": "f5bc0ff20c5e94498059ddb56c84287f68a4cbd4dfb289254aa8312fb408bd78"
+    }
+  ],
+  "classification": {
+    "case_cover": "six one-empty patterns plus one multiple-empty complement",
+    "one_empty_cases": [
+      "one_01",
+      "one_02",
+      "one_03",
+      "one_12",
+      "one_13",
+      "one_23"
+    ],
+    "survivors": 6,
+    "weak_compositions": 48620
+  },
+  "conclusion": {
+    "multiple_empty_branch_tested": false,
+    "new_whole_core_exclusions": [],
+    "one_empty_branch_excluded": true,
+    "remaining_full_classes": 17,
+    "remaining_full_labeled": 9153,
+    "target_graph": false
+  },
+  "core": {
+    "bits": "100110110110110100",
+    "complementary_red_k4s": [
+      {
+        "omitted": 0,
+        "red_k4": [
+          3,
+          4,
+          7,
+          10
+        ]
+      },
+      {
+        "omitted": 1,
+        "red_k4": [
+          0,
+          1,
+          7,
+          10
+        ]
+      },
+      {
+        "omitted": 2,
+        "red_k4": [
+          0,
+          3,
+          9,
+          10
+        ]
+      },
+      {
+        "omitted": 3,
+        "red_k4": [
+          0,
+          3,
+          6,
+          7
+        ]
+      }
+    ],
+    "index": 194,
+    "labeled_multiplicity": 81
+  },
+  "negative_controls_rejected": [
+    "lost_one_empty_case",
+    "duplicate_empty_prefix",
+    "bad_missing_pair",
+    "positive_second_empty_literal",
+    "fixed_edge_in_tail"
+  ],
+  "physical_primary_orbits": 320,
+  "proofs": [
+    {
+      "id": "one_01",
+      "matches_published_proof": true,
+      "proof": {
+        "bytes": 13150456,
+        "sha256": "d01aaba95baaabd8ad7a2a73e447b431db508900c8efcf5ae614b83c2b71f3a4"
+      },
+      "replay": {
+        "exit_code": 0,
+        "log": {
+          "bytes": 458,
+          "sha256": "230af34c90bc2f012f355d52b33d6698290702f7d5cbd6c42ccfe446ee381ecd"
+        },
+        "rat_core_lemmas": 117,
+        "seconds": 4.078579,
+        "verified": true
+      },
+      "solve_log": {
+        "bytes": 8429,
+        "sha256": "028cb12ae68d24fde957607d1d7a863874aeee45a70e88c0d67415dd63adeec6"
+      },
+      "solve_seconds": 1.519394,
+      "solver_exit_code": 20,
+      "status": "excluded"
+    },
+    {
+      "id": "one_02",
+      "matches_published_proof": true,
+      "proof": {
+        "bytes": 14908671,
+        "sha256": "4690d82abe8070785c1bb9c34825743eb367fbdb131c72046748e64996bfa7bb"
+      },
+      "replay": {
+        "exit_code": 0,
+        "log": {
+          "bytes": 460,
+          "sha256": "899df4f526c51e901cbcb7db4ee2684148601fd7ef47a106d64da48089bf6876"
+        },
+        "rat_core_lemmas": 164,
+        "seconds": 4.580008,
+        "verified": true
+      },
+      "solve_log": {
+        "bytes": 9317,
+        "sha256": "24bea2e623fd0f577a7bf3654b6661186736d99a8a8728d5fefd8b678d2776f7"
+      },
+      "solve_seconds": 1.519838,
+      "solver_exit_code": 20,
+      "status": "excluded"
+    },
+    {
+      "id": "one_03",
+      "matches_published_proof": true,
+      "proof": {
+        "bytes": 13275456,
+        "sha256": "b705ab0b7a5ff5f3cf917e372b177b26dc0fd0998781809608320f60ca7ed48c"
+      },
+      "replay": {
+        "exit_code": 0,
+        "log": {
+          "bytes": 461,
+          "sha256": "534923dc9267e2de28435229cd38f911f8eb822d2905558ed0073b576f15c4b0"
+        },
+        "rat_core_lemmas": 190,
+        "seconds": 4.580021,
+        "verified": true
+      },
+      "solve_log": {
+        "bytes": 9380,
+        "sha256": "4e82294d51178add7ac216381eef3ce1fc01135f0a883674de74a3c5f0cece83"
+      },
+      "solve_seconds": 1.569661,
+      "solver_exit_code": 20,
+      "status": "excluded"
+    },
+    {
+      "id": "one_12",
+      "matches_published_proof": true,
+      "proof": {
+        "bytes": 13651948,
+        "sha256": "9870e70e20399eba55006faba35a104cd42a4f5435959660b750a8475bfd3f0a"
+      },
+      "replay": {
+        "exit_code": 0,
+        "log": {
+          "bytes": 456,
+          "sha256": "ca237cc04ad42a3f11ff11e48394cb121fda4ed3a2e2acd308c377555cf0de0b"
+        },
+        "rat_core_lemmas": 77,
+        "seconds": 3.777377,
+        "verified": true
+      },
+      "solve_log": {
+        "bytes": 9018,
+        "sha256": "8e0dda98a4aeb2cbe74ad1c9f4b283fbd01dda52e1263c33443f70152e763d13"
+      },
+      "solve_seconds": 1.619675,
+      "solver_exit_code": 20,
+      "status": "excluded"
+    },
+    {
+      "id": "one_13",
+      "matches_published_proof": true,
+      "proof": {
+        "bytes": 13512414,
+        "sha256": "04534135eb81b147e0e996af6341b3c961eb876d004cbd1d9632c479013a09ac"
+      },
+      "replay": {
+        "exit_code": 0,
+        "log": {
+          "bytes": 457,
+          "sha256": "4e9a68ca7b4fe64809c429198f55af8db37c0aabfcb96e3fcb1c15614872640a"
+        },
+        "rat_core_lemmas": 98,
+        "seconds": 4.029,
+        "verified": true
+      },
+      "solve_log": {
+        "bytes": 9054,
+        "sha256": "21698b019b9b66be71108bbf00bcf57ea67b27481652bd40a844486772ea5b17"
+      },
+      "solve_seconds": 1.519635,
+      "solver_exit_code": 20,
+      "status": "excluded"
+    },
+    {
+      "id": "one_23",
+      "matches_published_proof": true,
+      "proof": {
+        "bytes": 13490235,
+        "sha256": "c3d95c9ad0ff0d8254d99ad04e71215e682175a0d3bea7b363b2dbca0aa20d3e"
+      },
+      "replay": {
+        "exit_code": 0,
+        "log": {
+          "bytes": 456,
+          "sha256": "300b1fab9682291bf455903f47a6627f475bfee4c480f84dc932fa24697da74d"
+        },
+        "rat_core_lemmas": 73,
+        "seconds": 3.726798,
+        "verified": true
+      },
+      "solve_log": {
+        "bytes": 8433,
+        "sha256": "4000789ff4a5912170fdd92b828797399ab9081229a2d8a20f4eb2f9f378de43"
+      },
+      "solve_seconds": 1.469608,
+      "solver_exit_code": 20,
+      "status": "excluded"
+    }
+  ],
+  "python": "3.11.2",
+  "reviewed_source": {
+    "PROOF.md": {
+      "bytes": 6901,
+      "sha256": "24273fc3ed16d093982c473719692cf5115701081a70f50241362e4267269f10"
+    },
+    "boundary.json": {
+      "bytes": 983,
+      "sha256": "b1b3b5f6eb3cc924d8831715656b299d4b805d02367f468c20e6711c2fc96bd3"
+    },
+    "cases.json": {
+      "bytes": 1431,
+      "sha256": "b7982c3e7eb1ab9259ae8140974e0491868ec794426093504f6db989a80bb955"
+    },
+    "certificate.json": {
+      "bytes": 1753,
+      "sha256": "85463d15000c06190b98a1a7bfba0946bb5ed6e65b9f2b8949f1ae11128e32ba"
+    },
+    "result.json": {
+      "bytes": 42496,
+      "sha256": "864276e0fca83db96ce2629f7320310ee2f7e2ffe3e5cd3ab0e60aa7dc930a1e"
+    }
+  },
+  "scope": "Core194 one-empty branch only; implies at least two empty fixed signatures, not whole-core exclusion",
+  "tools": {
+    "drat_trim": {
+      "bytes": 51352,
+      "sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+    },
+    "kissat": {
+      "bytes": 546552,
+      "sha256": "9193d0d788f70d11046c7e965657c7096c9471ea96db2552a7d1544e925307cb"
+    }
+  },
+  "trust_boundary": [
+    "accepted forced-empty, intrinsic-anchor, and sharp-pair inequalities",
+    "accepted Core194 maximal-attachment result underlying the guarded clauses",
+    "semantic correctness of the freshly reconstructed inherited guarded base beyond its checked boundary",
+    "ordinary CPython, compiler, hardware, SHA-256, Kissat proof emission, and drat-trim"
+  ]
+}
