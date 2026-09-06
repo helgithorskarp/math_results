@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-09-06T15:16:01.135794+00:00",
+  "python": "3.11.2",
+  "dependencies": "standard library only",
+  "primary_approach": "construction-counterexample",
+  "tool_layer": "Python research code",
+  "producer": {
+    "status": "PASS",
+    "vertices": 180,
+    "edges": 511,
+    "phase_solutions": 54,
+    "census_formulas": 13761,
+    "unsatisfiable_formulas": 40,
+    "certificate_bytes": 5722,
+    "certificate_sha256": "6ddbd372d4d42351929676a55e969d9a2dfb99bd08d620e71f07ae60a1e17560",
+    "seconds": 2.0501591409999946
+  },
+  "validation": "independent fixed-basis arithmetic and circle-root completeness; direct root colour truth tables; inclusion-exclusion, implication closure and signed-support classification",
+  "normal_and_optimized_reports": "must match expected.json exactly",
+  "finite_boolean_universe": "all distinct subsets of at most four proper binary clauses on each of 2,3,4 named variables",
+  "universal_proof": "written Euclidean argument and four-subcube partition classification; not inferred from finite enumeration",
+  "source_context": [
+    {
+      "package": "hadwiger_nelson_paired_circle_incidence",
+      "source_commit": "394e4bf74e94a09a91298f7a6fd8683f84d0151a",
+      "role": "prior context; proof is self-contained"
+    },
+    {
+      "package": "hadwiger_nelson_paired_circle_kernel",
+      "source_commit": "1f9787f88ecf05469906f8ba9a6eaab010434791",
+      "role": "prior context; proof is self-contained"
+    },
+    {
+      "package": "hadwiger_nelson_shared_midpoint",
+      "source_commit": "04b66e16b872ad971dcfcd4ca63ef9996c33ff4d",
+      "role": "prior context; proof is self-contained"
+    },
+    {
+      "package": "hadwiger_nelson_paired_circle_incidence_review1",
+      "source_commit": "1ee6e503f0744c4f30eaf7449d4b5d4141f6ec00",
+      "role": "prior context; proof is self-contained"
+    },
+    {
+      "package": "hadwiger_nelson_heule560_left_relation",
+      "source_commit": "4562cbc6d90e7c33ff497752b599e43e7f3c01d6",
+      "role": "coordination only"
+    }
+  ],
+  "external_review": "pending for this result; earlier incidence theorem accepted",
+  "priority_claim": false,
+  "target_found": false
+}
