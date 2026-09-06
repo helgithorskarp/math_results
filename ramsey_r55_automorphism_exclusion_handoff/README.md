@@ -1070,3 +1070,34 @@ or choose another structured core; changing switch bits or attaching two
 vertices to a member cannot reach the target. No second pair, modified core,
 new formula or additional construction phase has begun. Shared content was
 refreshed through3336, with no new overlapping result or external review.
+
+
+## Moving-core switching obstruction (2026-09-06)
+
+The new [moving33 switching package](../ramsey_r55_core186_moving_switch)
+shows that every Seidel switch of the saved Core186 fixture restricted to
+vertices 0..32 contains a red or blue K5. This frees all 375 pairs touching
+the other ten vertices. The complete excluded family has 2^407 distinct
+labeled graphs and properly contains the preceding 2^123 family. Its exact
+subfamily preserving the original eleven-triangle C3 action has 2^165
+labeled members: ten normalized triangle-switch bits plus 110 moving/fixed
+contact orbits and 45 fixed/fixed pairs. The proof explains why an invariant
+switch must be constant on each odd cycle.
+
+A standalone checker reconstructs the actual input and verifies 494
+physical clauses and 211 addition-only RUP steps from a 3,727-byte proof.
+It imports no generator, solver or predecessor proof kernel. A separate
+DRAT replay, full truth-table formula reconstruction, normal/optimized
+comparisons and fresh public-source reproduction also pass. This is author
+checking with separate implementations, not external independent review
+or formalization. The input is a specific defective graph; this does not
+exclude all extensions of the twelve-vertex minority Core186 or any entire
+remaining four-versus-seven class.
+
+The earlier 41-core conclusion follows hereditarily from this smaller-core
+obstruction; the old exact paired-star minimum is not asserted for this
+larger family. All 17 whole classes / 9,153 labels, the three-versus-eight
+boundary and the global target remain open. Future construction on this
+fixture must change switching-invariant triangle parities in the moving
+33-core. No smaller-core minimization, modified core or second solve has
+started. This pass ends at the completed certificate.
