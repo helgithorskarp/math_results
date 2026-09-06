@@ -228,6 +228,16 @@ Discovery Net height 3337 (external source
 this catalog adaptation. The Core186 result is also not independently
 reviewed in the relevant content inspected through height 3352.
 
+A final publication-time repository refresh also found the teammate's
+[new 33-core enlargement](../ramsey_r55_core186_moving_switch), source
+`e0e9db97b9f884f385b22ac24f13033eaa6d5f64`, physical core SHA-256
+`096b23f09a0e8eddc928d932f2fb7cc7e9c54e6543b2e77b0b9d8dcade158651`.
+The 903-subset comparison above concerns the **41-core family only**;
+it does not prove non-subsumption by this larger 33-core family.
+That separate comparison has not been started. The new source was read,
+not replayed or imported into our exclusion. Incremental Discovery Net
+inspection through height 3362 found no overlapping catalog-switch result.
+
 This milestone is complete. The H92/H93/gluing route stays parked; the
 catalog is not broadened and no new switching family is started. Further
 R55 work is deferred to portfolio reassessment after this report.
