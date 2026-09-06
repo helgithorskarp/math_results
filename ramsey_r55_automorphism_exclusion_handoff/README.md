@@ -1,11 +1,12 @@
 # Automorphism exclusion handoff for Ramsey `(5,5,43)` search
 
-Latest checkpoint: the complete Core194 BLUE-pair closure now has independent
-acceptance. The [exact RED empty-clique split](../ramsey_r55_order3_eleven_core194_red_clique)
-tests cardinalities two, three and four; all three return UNKNOWN. No whole
-class is removed: 17 classes / 9,153 labels remain open. This reaches the
-all-UNKNOWN stopping boundary for further Core194 variants; the next pass
-should change method. See the final sections for precise current scope.
+Latest checkpoint: a [bounded structured-construction batch](../ramsey_r55_order3_eleven_structured_candidates)
+has completed the method change after the three UNKNOWN Core194 red-clique
+cases. All seventeen saved C3 colorings are defective; the best has 155
+monochromatic five-sets. Each is a local minimum under the 302 orbit flips
+that preserve its prescribed core. No whole class is removed: 17 classes /
+9,153 labels remain open. The complete Core194 BLUE closure remains
+independently accepted. See the final sections for precise current scope.
 
 Let `G` be a hypothetical graph on 43 vertices with neither a clique nor an
 independent set of order five.  The currently certified symmetry results in
@@ -902,10 +903,10 @@ This checkpoint produces no frontier reduction. All three red cases,
 whole Core194 and all 17 classes / 9,153 labels remain open. The principal's
 all-UNKNOWN stopping boundary now requires a method change before any more
 Core194 variants. No further subdivision or longer solve has begun. The
-proposed next pass is a bounded structured-construction experiment on full
+proposed next pass was a bounded structured-construction experiment on full
 43-vertex graphs under the eleven-cycle action across the existing whole-core
 frontier, preserving an explicit coloring and independent exact defect audit.
-This is an unstarted direction, not a construction claim. No background job
+That experiment is completed in the following checkpoint. No background job
 or pending certificate remains.
 
 Shared content was refreshed through3273. The teammate's
@@ -913,4 +914,42 @@ Shared content was refreshed through3273. The teammate's
 7f25e7786bbb850b2979a9d877543f1dc44ec5df, graph3272, supplies an executable
 encoding and an author-written arithmetic checker for its distinct fixed
 nonsymmetric subsystem, with one UNKNOWN. Its projection premise is reviewed;
-the backend is not independently reviewed and is not imported here.
+the backend was not independently reviewed at this historical cutoff and
+is not imported here. Its pointwise auxiliary-equivalence gate subsequently
+received external acceptance at graph3287; no solver verdict followed.
+
+
+## Seventeen explicit C3 construction fixtures and their local limits
+
+The [structured-construction package](../ramsey_r55_order3_eleven_structured_candidates)
+contains one explicit full 43-vertex coloring per surviving prescribed core.
+A fixed batch of 68 restarts and 1,700,000 orbit flips completed in
+226.100212 seconds with two workers. It preserves the eleven-cycle action,
+the four-red/seven-blue internal colors and eighteen core bits; all other
+302 orbit bits can change. No additional empty signature, degree or
+neighborhood condition is imposed. No target graph was found.
+
+The best observed fixture is Core186, with 457 red edges and exactly
+74 red / 81 blue K5s, totaling155. Its degree histogram is
+20^7 21^20 22^14 23^2. This is not a family optimum or a claimed construction
+record. Seventeen labeled edge lists, fixed seeds, exact search source,
+compact outcomes and an independent physical verifier are published.
+
+Every fixture's complete literal five-set census agrees with a different
+clique-recursion algorithm. All 5,134 single-orbit neighbors across the
+seventeen fixtures are counted independently of the optimization code.
+None improves its source fixture. Cores118,119,186 are strict local minima;
+the others have neutral neighbors. Every allowed neighbor of Core186 has
+at least156 defects. These claims freeze the eighteen prescribed core bits;
+they do not address core changes, multiple-orbit moves, neutral paths or
+arbitrary graph edits. Internal controls, strict compilation, sanitizer
+calibration and fresh optimized verification pass. There is no independent
+peer review of this new package.
+
+No symmetry family is excluded and the 17-class / 9,153-label frontier
+is unchanged. The next unstarted test is to optimize the eleven moving
+incidences of one fixed vertex simultaneously, using the exact 2^11
+conditional objective on the saved best graph. This is a different move
+capable of testing escape from the certified single-orbit minimum; it
+does not assert that 155 defects are close to the target. No second
+search batch, radius, or proof phase was started. All jobs are complete.

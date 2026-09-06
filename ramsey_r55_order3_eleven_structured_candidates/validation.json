@@ -1,0 +1,18 @@
+{
+  "compiler": "Debian GCC 12.2.0-14+deb12u1",
+  "focused": {
+    "best": 396,
+    "release_seconds": 1.492925,
+    "steps": 2000
+  },
+  "global": {
+    "best": 199,
+    "release_seconds": 1.370927,
+    "steps": 2000
+  },
+  "literal_recursive_audits_match": true,
+  "normal_optimized_controls_match": true,
+  "release_flags": "-std=c++20 -O3 -Wall -Wextra -Wpedantic -Werror",
+  "release_sanitizer_restarts_match": true,
+  "sanitizer_flags": "-std=c++20 -O1 -g -Wall -Wextra -Wpedantic -Werror -fsanitize=address,undefined -fno-omit-frame-pointer"
+}
