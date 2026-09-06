@@ -1,0 +1,105 @@
+{
+  "children": {
+    "blue": {
+      "clauses": 617945,
+      "formula": {
+        "bytes": 24968511,
+        "sha256": "21b9a5e9d4b4ddb9e91388abf6bc45d87488f356adbcbc70fb60d752ad5f13e1"
+      },
+      "tail": [
+        [-166],
+        [167, 175],
+        [168, 176],
+        [169, 177],
+        [170, 178],
+        [171, 179],
+        [172, 180],
+        [173, 181],
+        [174, 182]
+      ],
+      "variables": 34320
+    },
+    "red": {
+      "clauses": 617937,
+      "formula": {
+        "bytes": 24968430,
+        "sha256": "941df55fb7a26c64b1e72dfdff819d3cad15409a5eb83521a57ac2e353562224"
+      },
+      "tail": [[166]],
+      "variables": 34320
+    }
+  },
+  "exact_common_blue_neighbors": {
+    "blue_cycle_vertices_excluded_by_blue_K5": 21,
+    "other_fixed_excluded_by_local_lemma": 8,
+    "red_core_vertices": 12,
+    "total": 12
+  },
+  "fixtures": {
+    "blue_guarded": {
+      "common_blue_neighbors_of_pair": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      "five_vertex_subsets_checked": 2002,
+      "pair_color": "blue",
+      "red_edges": 42,
+      "vertices": 14
+    },
+    "red_guard_counterexample": {
+      "common_blue_neighbors_of_pair": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14],
+      "five_vertex_subsets_checked": 3003,
+      "pair_color": "red",
+      "red_edges": 43,
+      "vertices": 15
+    }
+  },
+  "full_formula_base": {
+    "clauses_parsed": 617936,
+    "empty_units_found": [-225, -224, -223, -222, -214, -213, -212, -211],
+    "identity": {
+      "bytes": 24968424,
+      "sha256": "214cbdad727ec3f48e97e62246134b341719277981119bd6b89baa5475b2dbb4"
+    },
+    "moving_cycle_guards_found": 7,
+    "variables": 34320
+  },
+  "guarded_partition": {
+    "assignments_checked": 131072,
+    "blue_child": 6561,
+    "missed": 0,
+    "overlap": 0,
+    "red_child": 65536
+  },
+  "local_lemma": {
+    "derived_witness_table_sha256": "9c9982511a978c230bc91ef42be90955d21b554ca8aef6f38ee68673af7ee664",
+    "five_vertex_subsets_examined": 48048,
+    "obstruction_classes": {
+      "blue": 11,
+      "red": 5
+    },
+    "red_k4_by_omitted_triangle": {
+      "0": [3, 4, 7, 10],
+      "1": [0, 1, 7, 10],
+      "2": [0, 3, 9, 10],
+      "3": [0, 3, 6, 7]
+    },
+    "signatures_exhausted": 16,
+    "submitted_witness_pairs_checked": 160
+  },
+  "primary_orbits": {
+    "empty_pair_primary": 166,
+    "fixed": 45,
+    "incidence": 110,
+    "moving": 165,
+    "total": 320
+  },
+  "reviewed_source": {
+    "SHA256SUMS": "df0d660b46bc1d71449f4aa3f6671e317a3536fb564d246511052ed9ca3aedd8",
+    "blue_pair14.edges": "3101276f4d277e534e73d95f7ac5f5803daf999449df3678e08846e255552a4a",
+    "boundary.json": "50434529beb914e06cfbdd14d1d480e70082d9d0603805e80d88cb7203ca9149",
+    "cases.json": "96c37b92fe77aac389398d82430ac5ecdda018ecbe47689e6efb53f4d3434752",
+    "certificate.json": "2d79294b8ac0d5079b14e1afde77d9cdc5889dc732b51e56d637f946385d1746",
+    "red_pair15.edges": "9ba40ea39112b462cf9d169cb29adf760a1012811c9d5229fb2c3a5709b3acd0",
+    "result.json": "8cc1a431546b7d5ba1f9fc819dcc48e7728b6647466036c6850535ba199b39a9"
+  },
+  "solver_claims_reproduced": false,
+  "solver_scope_note": "Both submitted child solves are UNKNOWN and have no proving force."
+}
