@@ -8,7 +8,7 @@ restart of its parameter search.
 
 | Durable result | Exact scope |
 | --- | --- |
-| [Kernel theorem](../hadwiger_nelson_paired_circle_kernel/README.md) | At most 204 actual points, or 156 for parallel segments; sufficient owner-group lists extend to the entire four-circle support. The bounds are sharp in the stated cases. The criterion is not necessary. |
+| [Kernel theorem](../hadwiger_nelson_paired_circle_kernel/README.md) | At most 204 actual points, or 156 for parallel segments; sufficient owner-group lists extend to the entire four-circle support. The 156-point parallel bound is attained. The criterion is not necessary. |
 | [Incidence reduction](../hadwiger_nelson_paired_circle_incidence/README.md) | A degree-108 polynomial gives an outer exceptional locus for the specified assignment method; off-locus placements are four-colourable on their full supports. Membership in the locus is not an obstruction. |
 | [Shared-midpoint theorem](../hadwiger_nelson_shared_midpoint/README.md) | Every full support of two unit segments sharing a midpoint is four-colourable with any four distinct centre pins. [Independent acceptance](../hadwiger_nelson_shared_midpoint_review1/README.md). |
 | [Four-clause reduction](../hadwiger_nelson_paired_circle_four_clauses/README.md) | Regular placements have at most four coupled clauses. A cross distance equal to square root of three or greater than two yields a full-support four-colouring. Two abstract unsatisfiable clause patterns are classified. [Independent acceptance](../hadwiger_nelson_paired_circle_four_clauses_review1/README.md). |
