@@ -13,9 +13,9 @@ of the blue-branch closure, not a red-branch search.
 
 The RED-pair branch, whole Core194 and all **17 whole classes / 9,153 labels**
 remain open, including Core194's 81 labels. No target graph or Ramsey-bound
-improvement is claimed. The new 27-profile proof and inherited a=5 closure
-remain **not independently reviewed** at the final graph cutoff. The
-combined blue-branch claim imports that review boundary explicitly.
+improvement is claimed. The new 27-profile proof remains **not independently reviewed**. An
+independent acceptance of the inherited a=5 closure arrived after the
+3257 content cutoff; the late review update below records the resolved gate.
 [boundary.json](boundary.json) records the exact scope.
 
 ## Complete decisions
@@ -158,8 +158,9 @@ The [complete (6,0,1) closure](../ramsey_r55_order3_eleven_core194_a6_fixed)
 has [accepted independent review](../ramsey_r55_core194_a6_fixed_review1)
 at graph 3238, source `6bae11903cfc04e6f7fdc6a6c60741c7736a5641`.
 The [complete a=5 closure](../ramsey_r55_order3_eleven_core194_a5_fixed),
-source `d16e57aa17b0dc1382bdec946df3c3e97cb353f9`, graph 3246, is still
-independently unreviewed at the final cutoff, as is this new a4 work.
+source `d16e57aa17b0dc1382bdec946df3c3e97cb353f9`, graph 3246, now has
+[accepted independent review](../ramsey_r55_core194_a5_fixed_review1) at 3258.
+The new a4 work remains independently unreviewed.
 
 The [direct base](../ramsey_r55_order3_eleven_core194_direct) and
 [BLUE pair theorem](../ramsey_r55_order3_eleven_core194_pair) have accepted
@@ -213,3 +214,22 @@ using possible cardinalities two, three and four. The BLUE no-BB lemma
 and nine-type attachment cover **must not be transferred to a RED pair**;
 new red-branch formulas must permit contacts not excluded by a separate
 proof. No such reduction, finer formula or search is started here.
+
+
+## Late review update, after source publication
+
+Independent review of the entire a=5 closure was discovered while confirming
+publication. Source `30889e084f821e22ad2471cc6187e7ce21b0f9eb`, graph
+`bafkreih5qmqfy2nesjxk575ihc5cuw4mffckjndra2ve6llvdbi36lpca4` at 3258,
+accepts both moving types and all nineteen refinements. The full README/body
+were read and manifest checked. Standalone C++ counts, independent physical
+unit reconstruction and 3,294,621 complete clause images validate the coupled
+normalization. A distinct reviewer Kissat build regenerated all nineteen
+proofs byte-identically; full DRAT passed, with twelve RAT-using cores.
+
+This resolves the inherited a5 review boundary; it does not review this new
+a4 closure. The frozen PROOF.md, source contract and original graph body
+retain their historically correct 3257-cutoff wording. All 35 frozen source
+identities and all formula/proof records remain unchanged. Only review-status
+documentation is updated, and a post-publication citation links the new review.
+No solver or further research phase is started by this update.

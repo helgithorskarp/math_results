@@ -806,9 +806,11 @@ The complete cover checks all 6,561 fixed words per type, finding 577 and
 couples the endpoint swap with a phase-preserving swap of moving triangles
 9 and 10; an endpoint-only swap fails. Every actual full-star transport,
 all 570 physical unit meanings and 2,928,552 complete base clause images
-under eight relabeling generators are checked. This new a=5 closure has
-not yet been independently reviewed; the inherited cover, direct base,
-pair lemma and six earlier moving exclusions have accepted reviews.
+under eight relabeling generators are checked. The a=5 closure now has
+[accepted independent review](../ramsey_r55_core194_a5_fixed_review1),
+source30889e084f821e22ad2471cc6187e7ce21b0f9eb, graph3258. The inherited
+cover, direct base, pair lemma and six earlier moving exclusions also have
+accepted reviews.
 
 Consequently any BLUE empty fixed pair has exactly four common-red
 internally blue moving triangles, with exclusive counts one and two:
@@ -853,10 +855,12 @@ The [reviewed multiplicity theorem](../ramsey_r55_order3_eleven_core194_multipli
 gives at least two, and the no-red-K5 condition gives at most four.
 These are necessary cardinalities, not asserted realizations.
 
-The new 27-profile proof and inherited a=5 closure remain independently
-unreviewed at graph cutoff 3257. The combined BLUE-branch theorem imports
-both boundaries. Other inherited cover, pair, direct, multiplicity and
-moving-exclusion premises have accepted reviews. No target graph or
+The new 27-profile proof remains independently unreviewed. The inherited
+a=5 closure now has accepted independent review at graph3258, discovered
+just after source publication. Its complete counts, coupled normalization,
+formulas and nineteen fresh proofs were independently checked. All inherited
+cover, pair, direct, multiplicity and moving-exclusion premises are reviewed;
+the remaining combined BLUE-branch gap is this new a4 closure. No target graph or
 Ramsey-bound improvement follows. The RED-pair branch, whole Core194
 and all 17 whole classes / 9,153 labels remain open, including 81
 Core194 labels.
