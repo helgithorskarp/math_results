@@ -1,0 +1,96 @@
+{
+  "python": "3.11.2",
+  "threads": 1,
+  "peak_memory": "not measured",
+  "build": {
+    "seconds": 0.8947752180101816
+  },
+  "audit": {
+    "status": "EVERY HOST FOUR-COLOURING EXTENDS; THE 483-POINT GRAPH HAS CHROMATIC NUMBER FOUR",
+    "exact_support_and_all_fibres_compared_entrywise": true,
+    "distance_method": "All pairs directly in characteristic zero; no modular filter",
+    "full_pair_norm_checks": 116403,
+    "factor_pair_norm_checks": 97,
+    "complete_unit_edge_list_compared_entrywise": true,
+    "vertices": 483,
+    "edges": 2061,
+    "factor_edges": 2061,
+    "extra_mixed_edges": 0,
+    "formal_labels_compared": 539,
+    "symbolic_fibres_checked": 483,
+    "set_valued_host_edge_differences_checked": 2061,
+    "host_colours_preserved": 11,
+    "every_host_four_colouring_extends": true,
+    "colour_edge_checks": 2061,
+    "all_subgraphs_four_colourable": true,
+    "normalized_spindle_three_colourings_rejected": 81,
+    "spindle_embeddings_checked": 1,
+    "invalid_inputs_or_certificates_rejected": 5,
+    "native_solver_calls": 0,
+    "seconds": 36.443106987993815
+  },
+  "size_check": {
+    "H_labels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      14,
+      8,
+      15
+    ],
+    "factor_size": 49,
+    "formal_labels": 539,
+    "vertices": 483,
+    "fibre_histogram": {
+      "1": 441,
+      "2": 28,
+      "3": 14
+    },
+    "independent_support_and_all_fibres_compared_entrywise": true,
+    "fits508": true,
+    "seconds": 0.11076641498948447
+  },
+  "discovery": {
+    "vertices": 483,
+    "edges": 2061,
+    "factor_edges": 2061,
+    "extra_edges": 0,
+    "factor_sizes": [
+      13,
+      11,
+      11
+    ],
+    "collision_H_labels": [
+      0,
+      1,
+      7,
+      8,
+      14,
+      15
+    ],
+    "extra_H_labels": [],
+    "modular_survivors": 2061,
+    "restricted_trials": 631,
+    "restricted_witness_found": true,
+    "seconds": 0.5849850759987021
+  },
+  "prototype_geometry_and_fibres_compared_entrywise": true,
+  "rotation_serialization_padded_to_the_full24_basis_before_completed_audit": true,
+  "geometry_and_symbolic_certificate_unchanged_by_padding": true,
+  "input_sha256": {
+    "../hadwiger_nelson_heptagon_moser_sum/field.py": "55d016633f1c18cece1a94edf90c97a6bafc7d0aec99b31dad355f1df86e1678",
+    "../hadwiger_nelson_heptagon_moser_sum/rotation_family.py": "b50bb681cec9dd60383dc48dc43a41a2c34aa25f9fde3b8164998535c17c6131",
+    "../hadwiger_nelson_heptagon_moser_sum/audit.py": "2fd16a572c14ab8903ce97fe34c860ddd1c49b086d868e06cd5c3f8e4bc9e6d7",
+    "../hadwiger_nelson_heptagon_moser_sum/contacts_audit.py": "ed2da482fa8b8911aebf16038a449c0c8537162e0c7dcf50b57f022a194a0a92",
+    "../hadwiger_nelson_heptagon_difference_lifts/geometry.py": "67599414c9cabc9e1e9f0100907c3c039200deea4ffd935cb6ba09d67c57ef07"
+  },
+  "scope": "Every four-colouring of Hstar extends to its one fixed483-point Hstar+M+t^6M unit graph; all subgraphs are four-colourable. Other hosts, rotations and assemblies are not covered.",
+  "external_review": "Pending; the new producer and distinct exact checker are author-run.",
+  "target_found": false,
+  "native_solver_calls": 0
+}
