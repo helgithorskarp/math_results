@@ -1,0 +1,18 @@
+{
+  "invalid_status_cases": [
+    [0, ""],
+    [10, "s UNKNOWN\n"],
+    [20, "s SATISFIABLE\n"],
+    [1, "s UNKNOWN\n"],
+    [0, "s UNKNOWN\ns UNKNOWN\n"],
+    [10, "s SATISFIABLE\ns UNKNOWN\n"],
+    [20, "s UNSATISFIABLE\ns UNKNOWN\n"]
+  ],
+  "invalid_status_cases_rejected": 7,
+  "valid_status_cases": [
+    [0, "s UNKNOWN\n", "UNKNOWN"],
+    [10, "s SATISFIABLE\n", "SAT_PENDING_LIFT_AUDIT"],
+    [20, "s UNSATISFIABLE\n", "UNSAT_PENDING_PROOF"]
+  ],
+  "scope": "Status parsing controls only; no solver or DRAT call in these controls."
+}
