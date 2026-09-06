@@ -1,0 +1,54 @@
+{
+  "base_commit": "d1ef2c978a6659a4f0ab1ef748be88e57486a4cb",
+  "controls": {
+    "boolean_cases": "All8 graphs on3 vertices and all2^12 Boolean assignments for the four-colour encoder",
+    "native_cases": [
+      "K4 four colours SAT",
+      "K5 four colours UNSAT with checked DRAT",
+      "K5 five colours SAT"
+    ],
+    "target_pair_queries_before_controls": 0
+  },
+  "decision": "First verified4-UNSAT support becomes a new larger seed. A positive5-colouring certifies exactly five colours; no <=508 claim. If no verified4-UNSAT occurs, finish the fixed24-case batch and checkpoint exact SAT/UNKNOWN outcomes; do not start another batch or refinement loop in this pass.",
+  "encoding": "Four or five one-hot variables per retained vertex; one at-least-one and every at-most-one pair; equal-colour exclusion on every actual unit edge; lexicographically first retained triangle pinned to0,1,2.",
+  "frozen_utc": "2026-09-06T10:03:32.423767+00:00",
+  "input_files": {
+    "hadwiger_nelson_heule510_completion_frontier/fresh_candidates.json": "89345930e1bea184ce2457b0e14a015bcd9a2901cfc609a6468cf050234a8317",
+    "hadwiger_nelson_heule632_transport/result.json": "d4c566403394f8c307dcb2f1c222ccdcdd3a58dae9ab15a14382edd87eb6dcd5",
+    "hadwiger_nelson_parts509_heule_union_minimum/certificate_H510.json": "bc8e0f5f5ec7fa5f2376cc77ba0e65f6023b340cf48990370d5eda575d30ae79"
+  },
+  "limits": {
+    "address_space_bytes": 4294967296,
+    "checker_outer_wall_seconds": 315,
+    "checker_seconds": 300,
+    "proof_file_bytes": 536870912,
+    "solver_conflicts": 200000,
+    "solver_outer_wall_seconds": 45,
+    "solver_seconds": 30
+  },
+  "pair_domain": 118828,
+  "pilot_pairs": 24,
+  "preparation_sha256": "72baacfe588ea5e3baf8527553aea8d633c65ca1eada9c7d9d793745729891de",
+  "proof_checker": {
+    "name": "drat-trim",
+    "options": [
+      "-t",
+      "300"
+    ],
+    "sha256": "bc7543a99da8521ddb09af442698956054f11e10d198bd482ac756535244c021"
+  },
+  "record_target": 508,
+  "scope": "At most24 frozen H632-minus-two-old-vertices trials; stop at first independently checked non-four-colourable support; at most one conditional five-colour query on that same support. No minimization phase.",
+  "selection": "Remove pairs outside the22 valid old singleton cuts. For each LL/LS/SS stratum sort by (lost unit edges,u,v), greedily take8 vertex-disjoint pairs; interleave LL,LS,SS in rank order. Density heuristic only; no exhaustive exclusion or symmetry quotient claimed.",
+  "solver": {
+    "git_id": "8af8e56f174b778aef3aa45af9f739b2a5f492c2",
+    "name": "Kissat",
+    "options": [
+      "--seed=0",
+      "--conflicts=200000",
+      "--time=30"
+    ],
+    "sha256": "2d185ea775f2c7c16d33a235ef852d2b69f0f3c8b437335b966b4a5aa6265b45",
+    "version": "4.0.4"
+  }
+}
