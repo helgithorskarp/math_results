@@ -1,0 +1,469 @@
+{
+  "budget_zero_status": "INCOMPLETE",
+  "fixtures": {
+    "negative": {
+      "all_hole_colorings": 4096,
+      "clique_valid_colorings": 832,
+      "clique_valid_set_sha256": "2966f69f038f284d3d0af9a1072360e0042b4fbd9164ac0dc7dfcf3170119e6e",
+      "forbidden_five_set_witnesses": [
+        {
+          "color": "blue",
+          "states": [
+            6,
+            6,
+            6
+          ],
+          "vertices": [
+            0,
+            2,
+            5,
+            7,
+            9
+          ]
+        },
+        {
+          "color": "blue",
+          "states": [
+            9,
+            6,
+            6
+          ],
+          "vertices": [
+            0,
+            3,
+            4,
+            8,
+            10
+          ]
+        },
+        {
+          "color": "blue",
+          "states": [
+            6,
+            9,
+            6
+          ],
+          "vertices": [
+            0,
+            4,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "color": "blue",
+          "states": [
+            9,
+            9,
+            6
+          ],
+          "vertices": [
+            0,
+            3,
+            4,
+            8,
+            10
+          ]
+        },
+        {
+          "color": "blue",
+          "states": [
+            6,
+            6,
+            9
+          ],
+          "vertices": [
+            0,
+            2,
+            5,
+            7,
+            9
+          ]
+        },
+        {
+          "color": "blue",
+          "states": [
+            9,
+            6,
+            9
+          ],
+          "vertices": [
+            0,
+            3,
+            4,
+            9,
+            10
+          ]
+        },
+        {
+          "color": "blue",
+          "states": [
+            6,
+            9,
+            9
+          ],
+          "vertices": [
+            0,
+            4,
+            5,
+            9,
+            10
+          ]
+        },
+        {
+          "color": "blue",
+          "states": [
+            9,
+            9,
+            9
+          ],
+          "vertices": [
+            0,
+            3,
+            4,
+            9,
+            10
+          ]
+        }
+      ],
+      "input_sha256": "bdc904daa4b43f4362afb3cdf55041e320e2a2854d46bf27d8c251cd10da51bc",
+      "literal_five_sets": 792,
+      "margin_correct_colorings": 8,
+      "oracle": {
+        "active_conditional_clauses": 11,
+        "domains": [
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6
+          ]
+        ],
+        "n": 12,
+        "relations": {
+          "0-1": [
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              9,
+              9
+            ]
+          ],
+          "0-2": [
+            [
+              6,
+              6
+            ]
+          ],
+          "1-2": [
+            [
+              6,
+              6
+            ]
+          ]
+        },
+        "scope": "one fully specified visible coloring and three prescribed pairs of margins",
+        "status": "NO_LIFT_PAIRWISE_JOIN",
+        "work_limit": 1000000,
+        "work_used": 26
+      },
+      "valid_margin_lift_set": [],
+      "valid_margin_lifts": 0
+    },
+    "positive": {
+      "all_hole_colorings": 4096,
+      "clique_valid_colorings": 2560,
+      "clique_valid_set_sha256": "85fa215681dd0c462e04c9250ccf214ca3e973771eaec3b2983160cfa1662801",
+      "forbidden_five_set_witnesses": [
+        {
+          "color": "blue",
+          "states": [
+            6,
+            6,
+            6
+          ],
+          "vertices": [
+            0,
+            2,
+            5,
+            7,
+            9
+          ]
+        },
+        {
+          "color": "blue",
+          "states": [
+            6,
+            6,
+            9
+          ],
+          "vertices": [
+            0,
+            2,
+            5,
+            7,
+            9
+          ]
+        },
+        {
+          "color": "blue",
+          "states": [
+            9,
+            6,
+            9
+          ],
+          "vertices": [
+            0,
+            5,
+            7,
+            9,
+            10
+          ]
+        }
+      ],
+      "input_sha256": "322370d346f7b01f0cba73c95941557cef07a0c3256e24c667b371a188fe4468",
+      "literal_five_sets": 792,
+      "margin_correct_colorings": 8,
+      "oracle": {
+        "active_conditional_clauses": 4,
+        "domains": [
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            9
+          ]
+        ],
+        "graph": {
+          "n": 12,
+          "red_edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              11
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              10
+            ],
+            [
+              2,
+              11
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              4,
+              11
+            ],
+            [
+              5,
+              7
+            ],
+            [
+              5,
+              8
+            ],
+            [
+              6,
+              8
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              6,
+              10
+            ],
+            [
+              7,
+              11
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              8,
+              11
+            ],
+            [
+              9,
+              10
+            ],
+            [
+              10,
+              11
+            ]
+          ]
+        },
+        "n": 12,
+        "relations": {
+          "0-1": [
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              9,
+              9
+            ]
+          ],
+          "0-2": [
+            [
+              6,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              9,
+              9
+            ]
+          ],
+          "1-2": [
+            [
+              6,
+              6
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              9,
+              9
+            ]
+          ]
+        },
+        "scope": "one fully specified visible coloring and three prescribed pairs of margins",
+        "states": [
+          6,
+          9,
+          6
+        ],
+        "status": "LIFT_FOUND",
+        "work_limit": 1000000,
+        "work_used": 30
+      },
+      "valid_margin_lift_set": [
+        1641,
+        1686,
+        1689,
+        2454,
+        2457
+      ],
+      "valid_margin_lifts": 5
+    }
+  },
+  "rejected_input_controls": [
+    "overlapping_blocks",
+    "hole_edge_marked_visible",
+    "Boolean_order",
+    "invalid_margin",
+    "noncanonical_side_order",
+    "duplicate_visible_pair",
+    "wrong_margin_length"
+  ],
+  "single_visible_repair_edge": [
+    0,
+    4
+  ],
+  "status": "POINTWISE_PHYSICAL_FIXTURE_AND_GLUING_CHECKS_PASSED",
+  "visible_only_control": {
+    "active_conditional_clauses": 171,
+    "n": 12,
+    "scope": "one fully specified visible coloring and three prescribed pairs of margins",
+    "status": "NO_LIFT_VISIBLE_K5",
+    "witness": {
+      "color": "blue",
+      "vertices": [
+        0,
+        1,
+        4,
+        5,
+        8
+      ]
+    },
+    "work_limit": 1000000,
+    "work_used": 0
+  }
+}
