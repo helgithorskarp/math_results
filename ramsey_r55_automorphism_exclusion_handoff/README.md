@@ -762,3 +762,28 @@ public; complete CNFs and91,368,801bytes of refutation traces remain
 outside Git. Four UNKNOWN traces are partial and do not prove feasibility.
 The red-pair branch is untouched. The next bounded step is the three
 fixed-star profiles of(6,0,1); it is not started at this checkpoint.
+
+
+## Core194: complete (6,0,1) moving type excluded
+
+The [three full fixed-profile decisions](../ramsey_r55_order3_eleven_core194_a6_fixed)
+exclude the entire (6,0,1) type. Degree upper bounds leave exactly the fixed
+counts (0,5,3),(0,6,2),(1,5,2), with root degrees (23,24),(24,23),(24,24).
+All three complete 320-variable,366,099-clause formulas are UNSAT, with full
+DRAT replayed twice. Production25.193669s, fresh optimized verification23.2873s;
+three calls, six successful full replays, all proof cores zero RAT lemmas.
+Full DRAT is used throughout.23source identities and physical fixed-word,
+permutation, tail and malformed-input checks pass. Large proofs stay outside Git.
+
+The global nine-type cover and five earlier moving-type exclusions now have
+[accepted independent review](../ramsey_r55_core194_attachment_decisions_review1),
+source30912d675aee5a5da5630f12bd1f1cdd76fb3589, Discovery Net3224. Direct3^15 C++
+counts and all five fresh full proofs were checked. The current three-profile
+extension and (6,0,1) closure await their own independent review.
+
+Consequently any BLUE empty pair has four or five common-red internally blue
+moving triangles. Remaining types (4,1,2),(5,0,2),(5,1,1) contain27,10,9 candidate
+joint profiles:46 total,1,298,472 labeled star assignments, not graph realizations.
+The RED-pair branch and17wholeclasses/9,153labels remain open (Core19481labels).
+No target graph or bound improvement. The next unstarted scope is the19 fixed
+profiles in the complete a=5 stratum. No next search or background job is launched.
