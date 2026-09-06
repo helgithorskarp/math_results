@@ -1,0 +1,45 @@
+{
+  "claim": "Classify exactly all72 boundary states times all512 left optional masks, allowing arbitrary mandatory-large recolouring. Stop before right-selector phase.",
+  "frozen_at": "2026-09-06T14:20:06.989670+00:00",
+  "initial_bounds": "20 full states inherit all512 masks. Other52 start with parent empty-mask positive and full-mask negative.",
+  "input_files": {
+    "hadwiger_nelson_heule510_completion_frontier/fresh_candidates.json": "89345930e1bea184ce2457b0e14a015bcd9a2901cfc609a6468cf050234a8317",
+    "hadwiger_nelson_heule560_separator/certificate.json": "e248abe73717723fb841af94672a23269e1562a0f2f20f6c48059b21ee01a9b3",
+    "hadwiger_nelson_heule560_separator/proof_manifest.json": "63d8118c07b703bb47f978bf3d3e98726c6676c1720b20ed8f9fec1152740c0c",
+    "hadwiger_nelson_heule632_minimize/boundary.json": "8732adbdfe9792d6b6496bfec89da64b0127c388c2bb79f892b1d35a9c396f5e",
+    "hadwiger_nelson_heule632_minimize/certificate.json": "3a22660e40329c0aef34e108b91747f529adb046cf687df5b05b3531ca17e35b",
+    "hadwiger_nelson_heule632_transport/result.json": "d4c566403394f8c307dcb2f1c222ccdcdd3a58dae9ab15a14382edd87eb6dcd5",
+    "hadwiger_nelson_parts509_heule_union_minimum/certificate_H510.json": "bc8e0f5f5ec7fa5f2376cc77ba0e65f6023b340cf48990370d5eda575d30ae79"
+  },
+  "memory_bytes": 4294967296,
+  "negative_certificate": "One disjunctive CNF: gated full-large four-colouring, at least one negative-case gate; each gate implies the exact boundary word and inclusion of its minimal forbidden mask. Checked UNSAT proves all forbidden upward cones.",
+  "next_phase_started": false,
+  "optional_order": [
+    310,
+    510,
+    512,
+    513,
+    520,
+    521,
+    523,
+    524,
+    535
+  ],
+  "positive_certificate": "Full proper colourings for maximal good masks; inherit full-state witnesses. Independent verifier checks every mask against positive and negative antichains.",
+  "proof_limits": {
+    "conflicts": 2000000,
+    "max_fresh_kissat_queries": 1,
+    "outer_seconds": 135,
+    "proof_bytes": 536870912,
+    "seconds": 120
+  },
+  "query_cap": 20000,
+  "query_conflicts": 200000,
+  "query_seconds": 10,
+  "raw_output_bytes": 134217728,
+  "record_improvement": false,
+  "search": "Pick largest-cardinality unclassified mask, breaking ties by integer mask. SAT gives a positive cover; UNSAT is minimized by ascending-bit deletion, storing every checked positive trial. Propagate monotonicity, retain antichains, and stop each state when all512 masks are classified. No unverified UNSAT is a final premise.",
+  "state_order": "Increasing canonical19-character words from accepted parent certificate.",
+  "total_search_seconds": 300,
+  "whole560_family_closed": false
+}
