@@ -1,0 +1,17 @@
+{
+  "frozen_at": "2026-09-06T01:56:28.084629+00:00",
+  "milestone": "One bounded coupled two-large/seven-small deletion pilot on H517",
+  "family": "Exactly 373 of L375 and 135 of S142 retained: 508 vertices. Prior positive certificates eliminate all other small omission choices and many large pairs.",
+  "preflight_small_choices": 167,
+  "preflight_large_pairs": 870215,
+  "source_small134_commit": "adad2a4b42cf76e507ecbe1e8d4ccf23ca231a4d",
+  "source_full_pilot_commit": "59d634e906f6c6ed5945c0180b5352ba03c3babd",
+  "max_full_graph_queries": 256,
+  "conflicts_per_query": 100000,
+  "address_space_bytes": 4294967296,
+  "order": "Round robin through lexicographic surviving seven-small omissions; choose lexicographically least uncovered pair of large omissions. Filter only with checked full-graph positive colourings.",
+  "oracle": "Full H517 activated four-colouring CNF with all 517 activation assumptions; no intact-L boundary completeness assumption.",
+  "positive_policy": "Check the full candidate colouring, then greedily extend omitted L vertices before omitted S vertices; check again; remove every family candidate avoiding the remaining omitted cut D.",
+  "negative_policy": "Fresh deterministic full-candidate Kissat proof, at most 1000000 conflicts and 180 seconds; independent DRAT check and exact geometry/CNF check; obtain and check five-colouring before any target claim.",
+  "stop_policy": "Stop on complete coverage, certified target, UNKNOWN, or 256 queries. Preserve all state; do not automatically extend the pilot or open another deletion level."
+}
