@@ -1,0 +1,23 @@
+{
+  "milestone": "Complete4-core and positive-certificate propagation on the frozen H514 target family",
+  "frozen_at": "2026-09-06T06:33:02.835446+00:00",
+  "frontier": {
+    "rows": 258914,
+    "omissions_per_row": 6,
+    "sha256": "6098161a878f17d4eb0f102124e1ea193543d15e4120c1ca0269a28baf0e6c80",
+    "path": ".scratch/hn_heule_interface_screen/audit/frontier.txt"
+  },
+  "positive_library": {
+    "rows": 516,
+    "singletons": 484,
+    "higher_order": 32,
+    "source_commit": "7eda14a94d91709c94d59dbcdcdc2fb9378b1435"
+  },
+  "rule": "Peel all degree<=3 vertices of each induced508 graph. Cover it iff its4-core omits an entire checked positive omission set D. Restrict H514-D colouring to the core and greedily restore peeled vertices in reverse order.",
+  "producer": "C++ queue peeling, first canonical covered certificate, complete fixed binary core stream, independently checked restored colourings.",
+  "checker": "Separate Python simultaneous-round peeling, complete entrywise core and certificate comparison, independent full-colouring reconstruction/check for every covered target. Exact graph and all516 public colourings reconstructed before native run.",
+  "controls": "Small explicit graphs exercise positive restoration, cascades, untouched4-cores, empty cores, singleton and pair cuts, and omission preservation.",
+  "bounds": "Exactly258914 frontier rows, each at most514 vertex deletions; no SAT/QBF or native target-colouring queries, no runtime-limit extension. Large streams local only.",
+  "stop_rule": "Complete full-family predicate and check; publish compact exact closure or survivor certificate if warranted, checkpoint and yield before any next family or solver phase.",
+  "scope_limit": "Surviving4-cores are not proved non-four-colourable; no record unless separately independently certified."
+}
