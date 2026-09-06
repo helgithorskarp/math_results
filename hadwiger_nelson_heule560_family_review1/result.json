@@ -1,0 +1,299 @@
+{
+  "accepted_claim": "the fixed H560 graph has chromatic number five and every non-four-colourable subgraph within it contains M492, giving the stated M plus 16-of-U68 equivalence at order at most 508",
+  "all_checks_passed": true,
+  "five_colour_upper_bound": {
+    "colour_frequencies": {
+      "0": 143,
+      "1": 118,
+      "2": 113,
+      "3": 102,
+      "4": 84
+    },
+    "edge_checks": 2758
+  },
+  "four_colour_lower_bound": {
+    "clause_partition": {
+      "at_least_one": 560,
+      "at_most_one": 3360,
+      "edge_colour": 11032,
+      "triangle_pins": 3
+    },
+    "clauses": 14955,
+    "cnf_bytes": 196524,
+    "cnf_sha256": "9dbec7853461556956cd34e406d475ba1f13144fae87e72b6f136e2b4805d673",
+    "definition_level_boolean_controls": 32768,
+    "derived_lrat": {
+      "bytes": 13099967,
+      "sha256": "f76c09344315b1e6e006eb15bdb768cde1f7a64b33ebc190e56082e620037c7f"
+    },
+    "pinned_triangle": [
+      0,
+      143,
+      146
+    ],
+    "proof": {
+      "bytes": 3021476,
+      "sha256": "21b37f734e5fb85c6e48899c125d3bde1692b11358acd17cdac113cb7ff80037"
+    },
+    "proof_checkers": {
+      "drat_trim": {
+        "bytes": 51352,
+        "exact_verified_line": true,
+        "exit_code": 0,
+        "sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+      },
+      "lrat_check": {
+        "bytes": 22176,
+        "exact_verified_line": true,
+        "exit_code": 0,
+        "sha256": "fb7e9f57ee5849afaa35e9d967e27a72cd76bad7aa72ee0499dc65207c08c4a7"
+      }
+    },
+    "proof_differs_from_target_seed_zero": true,
+    "solver": null,
+    "variables": 2240
+  },
+  "geometry": {
+    "degree_histogram": {
+      "4": 25,
+      "5": 31,
+      "6": 39,
+      "7": 56,
+      "8": 58,
+      "9": 57,
+      "10": 67,
+      "11": 88,
+      "12": 44,
+      "13": 21,
+      "14": 23,
+      "15": 19,
+      "16": 7,
+      "17": 7,
+      "18": 11,
+      "24": 6,
+      "39": 1
+    },
+    "distinct_points": 632,
+    "exact_pairs_checked": 199396,
+    "host_edge_sha256": "8dd36c195b3e252ec2be150ea6a029375707293fec70b63da9fc157eed4140f0",
+    "host_edges": 3112,
+    "host_vertices": 632,
+    "omitted_vertices": [
+      399,
+      462,
+      507,
+      514,
+      519,
+      522,
+      525,
+      528,
+      531,
+      532,
+      533,
+      534,
+      536,
+      537,
+      540,
+      543,
+      544,
+      545,
+      546,
+      547,
+      548,
+      549,
+      552,
+      553,
+      554,
+      556,
+      557,
+      559,
+      560,
+      561,
+      562,
+      563,
+      564,
+      566,
+      568,
+      572,
+      573,
+      575,
+      576,
+      579,
+      581,
+      582,
+      583,
+      584,
+      585,
+      587,
+      588,
+      589,
+      593,
+      598,
+      599,
+      600,
+      601,
+      602,
+      603,
+      605,
+      606,
+      616,
+      617,
+      618,
+      619,
+      620,
+      621,
+      622,
+      623,
+      625,
+      626,
+      627,
+      628,
+      629,
+      630,
+      631
+    ],
+    "seed_edge_sha256": "d74d9442321f512ca7bbb7cf0013ab3c65255608bf001b5d1def41367ebc4e68",
+    "seed_edges": 2758,
+    "seed_vertices": 560
+  },
+  "mandatory_optional_reduction": {
+    "activation_definition_controls": 262144,
+    "family_closed": false,
+    "generator": {
+      "pysolvers_native": {
+        "bytes": 5640960,
+        "sha256": "b2bfb434d999b2e101036828b94d64a1e972d01208b674fed5f8a353e7c77615"
+      },
+      "python_sat_version": "1.8.dev24",
+      "solver_name": "m22",
+      "witnesses_regenerated": true
+    },
+    "mandatory_count": 492,
+    "mandatory_vertex_stream": {
+      "bytes": 1858,
+      "count": 492,
+      "sha256": "254e9b34dd9fda28161b9ae54a9230b95db28e863fc26ac99f274b4f3b4ffccc"
+    },
+    "maximum_optional_at_order_508": 16,
+    "optional_count": 68,
+    "optional_vertex_stream": {
+      "bytes": 272,
+      "count": 68,
+      "sha256": "04bdad79b8f8dba42b1b578b64833827b893413bdc142ac93ee832e4903fc6ec"
+    },
+    "positive_witnesses": {
+      "aggregate_colour_frequencies": {
+        "0": 70723,
+        "1": 67929,
+        "2": 68340,
+        "3": 68036
+      },
+      "bytes": 348721,
+      "edge_checks": 1351849,
+      "rows": 492,
+      "sha256": "77db4bdaaa8eb2271dc2a7c4eb4948b48d635bfb63da5feac7bc0af8f7f29034"
+    },
+    "size_508_supports": 1469568786235308
+  },
+  "negative_controls": {
+    "lrat_without_empty_clause_rejected": true,
+    "malformed_five_colourings_rejected": 4,
+    "missing_mandatory_row_rejected": true,
+    "monochromatic_singleton_witness_rejected": true,
+    "wrong_singleton_support_rejected": true
+  },
+  "python": "3.11.2",
+  "reviewed_source_commit": "5cc08e6ec43644ccd6ce741c641edf8799bd4955",
+  "scope": {
+    "chromatic_number_exact": 5,
+    "exploratory_sweep_reproduced": false,
+    "family_equivalence_within_H560": true,
+    "family_member_decided": false,
+    "minimality": false,
+    "record_improvement": false,
+    "sub509_graph_established": false,
+    "vertex_criticality": false
+  },
+  "source_identity": {
+    "mathematical_inputs": {
+      "hadwiger_nelson_heule510_completion_frontier/fresh_candidates.json": {
+        "bytes": 23322,
+        "sha256": "89345930e1bea184ce2457b0e14a015bcd9a2901cfc609a6468cf050234a8317"
+      },
+      "hadwiger_nelson_parts509_heule_union_minimum/certificate_H510.json": {
+        "bytes": 552196,
+        "sha256": "bc8e0f5f5ec7fa5f2376cc77ba0e65f6023b340cf48990370d5eda575d30ae79"
+      }
+    },
+    "target_files": {
+      ".gitignore": {
+        "bytes": 44,
+        "sha256": "618f50be681a673d863a99f7b6a6e65af69cc8aa0bf7a37c72347f3e72c03809"
+      },
+      "PROOF.md": {
+        "bytes": 4194,
+        "sha256": "dde81a527421f8d9e341f7da2de898157e27ea049fdbb25981dec5cc7f48c32e"
+      },
+      "README.md": {
+        "bytes": 9247,
+        "sha256": "effe2ba2e56d105725eb0ddeb2abb76b76622f9ecd8af19159607c6a46d0d9fe"
+      },
+      "SHA256SUMS": {
+        "bytes": 1115,
+        "sha256": "4383cbca8e4f5a4ec446959e975c6ab92246b3c80e014098645fbf01dbd9345c"
+      },
+      "boundary.json": {
+        "bytes": 5814,
+        "sha256": "8732adbdfe9792d6b6496bfec89da64b0127c388c2bb79f892b1d35a9c396f5e"
+      },
+      "certificate.json": {
+        "bytes": 6777,
+        "sha256": "3a22660e40329c0aef34e108b91747f529adb046cf687df5b05b3531ca17e35b"
+      },
+      "check_boundary.py": {
+        "bytes": 5473,
+        "sha256": "e4910171272b5648fdd4488e4003279b4a8d4dedfc31043d5c1680597d736cf5"
+      },
+      "initial_positive.json": {
+        "bytes": 18897,
+        "sha256": "dfac460b2f15d658996d8adbc42a86cc2a4339f96c45a12fa78d0cf9034e4e70"
+      },
+      "manifest.json": {
+        "bytes": 3984,
+        "sha256": "9cc31271e966ba44593f3d153adf7b065cf20b05eb9ff9faded1a451aef50eba"
+      },
+      "plan.json": {
+        "bytes": 8643,
+        "sha256": "1b27410491811802ffae0503e88f26bc2f8ea90ae890b1d5a5651156c7e5329d"
+      },
+      "search.py": {
+        "bytes": 10222,
+        "sha256": "3d53c9d43049fe5fa42bb18eaa8f4a163b0d24b8fb7b8f65c403e758b2200d30"
+      },
+      "search_summary.json": {
+        "bytes": 1118,
+        "sha256": "abf669ccbd786dde9fe19aaed704d6052141d27ae8c58c8ae2b0ec57e075fa05"
+      },
+      "sweep.tsv": {
+        "bytes": 15627,
+        "sha256": "889c8b69ba999107db3952f57ddf07e0baa10d24b5321038ad89ca74abda8752"
+      },
+      "validation.json": {
+        "bytes": 3476,
+        "sha256": "acd1863a75a50cb5d8cdc254a6e68d084fe59fc2915c0de3c2e7d21c632e4072"
+      },
+      "verify.py": {
+        "bytes": 7672,
+        "sha256": "f2e94656d4cc45989ce3a14bc8249cd45e7336371f96c30e62fa85400936849f"
+      }
+    }
+  },
+  "trust_boundary": [
+    "the two SHA-256-pinned coordinate tables and target certificate files",
+    "linear independence of the eight squarefree radical basis elements",
+    "ordinary CPython integer/Fraction arithmetic and exhaustive pair enumeration",
+    "soundness of independently built drat-trim and lrat-check binaries; solver UNSAT text alone is not trusted",
+    "positive witness validity is checked definitionally, so its SAT solver need not be trusted for soundness",
+    "SHA-256 collision resistance for source and stream identities"
+  ]
+}
