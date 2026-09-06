@@ -1,0 +1,15 @@
+{
+  "frozen_at": "2026-09-06T04:00:34.073832+00:00",
+  "milestone": "One bounded candidate-level decision over the complete whole-H517 target frontier",
+  "initial_candidates": 39453,
+  "initial_frontier_sha256": "3de1463a2764ad16633e48709626339974dee986559e23f4452b2680d98192d1",
+  "source_commit": "d593c9ae774d6b296f73aa4a2c71f55158bde776",
+  "max_queries": 256,
+  "conflicts_per_query": 100000,
+  "address_space_bytes": 4294967296,
+  "order": "Round robin over large-omission counts5,6,7,8,9; choose least lexicographic surviving nine-tuple in each bucket. Initial cursor5. Positive cuts prune all buckets.",
+  "oracle": "Full activated H517 CNF; all517 activations assumed; no intact-L profile restriction.",
+  "positive_policy": "Decode and check all selected vertices; greedily extend in increasing L then increasing S order; recheck full colouring and exact residual omissions.",
+  "negative_policy": "Stop candidate search; preserve exact selected508 vertices and a fresh full-colouring CNF. Try Kissat seed0 with1000000 conflicts and180seconds. If UNSAT trace exists, run independent DRAT validation to completion; require separately checked exact CNF and five-colouring for any target claim.",
+  "stop_policy": "Full cover, UNKNOWN, negative target, or256 queries. Complete proof/certificate in progress, preserve exact remaining frontier, publish warranted evidence and yield for reassessment. No next stratum or limit extension this pass."
+}
