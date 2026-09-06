@@ -1,0 +1,23 @@
+{
+  "primary_source": "https://arxiv.org/abs/1805.00157v1",
+  "source_pdf_sha256": "dc3a0eba536537e2638f99ffd648554f36e64b6a78fadd475b8f8cccc2867335",
+  "source_tables": "G40 on PDFpage2, G49 on PDFpage5, appendix109 on PDFpage12. Coordinates use the paper convention.",
+  "reference_symmetry": "Rotate120degrees and reflect in y-axis as Section4 says; literal appendix x-axis reflection gives627vertices but1935edges, not2982.",
+  "reduction": "One static ascending(reference_degree,index) deletion pass, retaining terminals0,1,2. SAT+selector assumptions, all624 nonterminal queries completed.",
+  "reference_vertices": 627,
+  "reference_edges": 2982,
+  "retained_vertices": 375,
+  "retained_edges": 1661,
+  "deleted_vertices": 252,
+  "reduction_seconds": 9.224,
+  "python": "3.12.14",
+  "python_sat": "1.9.dev15",
+  "solver": "Glucose3",
+  "frozen_plan_sha256": "9df5705041f2aa21c132a6beb6cd228320cb26934bb54558e0544c5ca908c237",
+  "deletion_order_sha256": "6a82ce71ed091a382ec85ebac4403b9ea3ce6f9b50c6861767c22fc702c7db4f",
+  "private_positive_deletion_witnesses": 372,
+  "minimality_claim": "No global minimum or smallest-known gadget claim. Positive deletion histories are private reproducible discovery state, not needed by the published forcing proof.",
+  "forcing_gate_reached": true,
+  "target_found": false,
+  "next_phase_started": false
+}
