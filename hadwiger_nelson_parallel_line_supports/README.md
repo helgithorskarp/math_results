@@ -203,6 +203,15 @@ continuous strips and the rational plane; those are different supports from
 an infinite family of discrete parallel lines. No priority is asserted for
 the elementary bounds, colour formulas, or zigzag construction.
 
+Attribution addendum, 6 September 2026: Theorem 4.3 of Axenovich, Choi,
+Lastrina, McKay, Smith and Stanton, *On the Chromatic Number of Subsets of
+the Euclidean Plane*, Graphs and Combinatorics 30 (2014), 71–81, already
+states and proves the exact two-parallel-line classification used here.
+See the [authors' manuscript](https://wwwalt.math.kit.edu/iag6/~axenovich/media/euclid-submitted-4-2011.pdf).
+This attribution does not alter the theorem statements or certificates.
+The subsequent [rational-height support theorem](../hadwiger_nelson_quarter_rational_heights/README.md)
+extends the campaign's exclusions to specified arbitrarily small spacings.
+
 The campaign contribution is a consolidated, checked exclusion of the complete
 geometric families stated here, with all vertical-edge boundaries handled
 and precise distinctions between upper bounds and exact chromatic numbers.

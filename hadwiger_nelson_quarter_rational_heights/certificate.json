@@ -1,0 +1,121 @@
+{
+  "cases": [
+    {
+      "colours": "02020313313202020202020013131313133113133113133113133113",
+      "denominators": [
+        1
+      ],
+      "edge_sha256": "df87b1cbbb0c3037fd1c042767aec7a9e4e43a208bff8098ab58bda565608008",
+      "edges": 107,
+      "name": "integer_quarters",
+      "point_sha256": "14fa5e3a3701a328992ab2c1777a40d7791b709de65537d6cc2c6f04d21b6e43",
+      "vertices": 56
+    },
+    {
+      "colours": "020203133133333202020202020202002022020000220000220013131313133113133113133113133113133113133113311331311331133113133113",
+      "denominators": [
+        3
+      ],
+      "edge_sha256": "98bbc978ca2735a6cda62706aa2391c2e2c2546feacdf13ec372823e876ebabf",
+      "edges": 219,
+      "name": "twelfths",
+      "point_sha256": "e2b5ce9313774b04813176004b299f4bad607a49a073a2fe8b790cd61f790ebc",
+      "vertices": 120
+    },
+    {
+      "colours": "0202031331320203333202020202020020202020202013131313002200002200133113133113133113133113133113133113311331311331311331311331311331311331",
+      "denominators": [
+        5
+      ],
+      "edge_sha256": "c157db998c2d603986b2292dfde012498466ef193db74dcb4207b1930021f057",
+      "edges": 247,
+      "name": "twentieths",
+      "point_sha256": "3364532de1e8bc88ddc3257511cd41ae9507e0f0dda1d6b4a1e8519329a2b182",
+      "vertices": 136
+    },
+    {
+      "colours": "0202031331333202033202020200202020202020202000220013131313002200133113133113133113133113311331311331311331311331311331311331311331311331",
+      "denominators": [
+        7
+      ],
+      "edge_sha256": "6e98cdbdaa3f17125dda76e94b2344cb1043a7fe8e0ddb64e97a0cda05ac9a0c",
+      "edges": 247,
+      "name": "twenty_eighths",
+      "point_sha256": "2e8847e1c255187a84d80fff12f25eb52fd9ca55cc80598d1a306b45f6ecee8a",
+      "vertices": 136
+    },
+    {
+      "colours": "0202031331320203333202020202020202020202020013131313002200002200133113133113133113133113133113133113133113133113133113133113133113133113",
+      "denominators": [
+        9
+      ],
+      "edge_sha256": "bc574779e8ea85bbcf267d03b091bc866be05a985813c351eb7fe926fec1ea18",
+      "edges": 247,
+      "name": "thirty_sixths",
+      "point_sha256": "bcae86e71387c45af075f58ab3571640dce69d8c623863cf20f6efe6e4752f6a",
+      "vertices": 136
+    },
+    {
+      "colours": "0202031331320202020333320200202020202020202013131313133113133113002200002200133113133113311331311331311331311331311331311331311331311331",
+      "denominators": [
+        15
+      ],
+      "edge_sha256": "313e0ebfa8394047ed298cb545a055c99d0aa0e8cc16dbca2be7a9532702c51f",
+      "edges": 247,
+      "name": "sixtieths",
+      "point_sha256": "b4effc317c04f5b6589812b68e9ab51c4ea491c078f3b179a8361d92b2a6f08a",
+      "vertices": 136
+    },
+    {
+      "colours": "0202031331333333320203333332020202020202020020202020202020202022020020202020202000220000220000220013131313002200002200002200133113133113133113133113133113133113133113133113311331311331311331311331311331311331311331311331311331311331133113133113311331311331311331311331311331311331",
+      "denominators": [
+        3,
+        5,
+        7
+      ],
+      "edge_sha256": "e6b948961421f975f85c3000184b0ba3f151af7f069c2a231dd3aed0132cab5b",
+      "edges": 499,
+      "name": "mixed_odd_denominators",
+      "point_sha256": "5f9306b357e89b6285cb8024c5a1a3ec050b1ded91071391efc17155d2253f61",
+      "vertices": 280
+    }
+  ],
+  "claim": "full support R x (1/4) Z_(2) is four-colourable",
+  "exact_chromatic_number_claimed": false,
+  "levels_by_squarefree_residue_mod8": {
+    "1": 2,
+    "2": 2,
+    "3": 1,
+    "5": 2,
+    "6": 2,
+    "7": 0
+  },
+  "modular": {
+    "first_bit_unchanged": {
+      "1": 512,
+      "2": 512,
+      "3": 512,
+      "5": 512,
+      "6": 512,
+      "7": 512
+    },
+    "modulus": 64,
+    "solutions": {
+      "1": 1024,
+      "2": 512,
+      "3": 1536,
+      "5": 1024,
+      "6": 512,
+      "7": 1536
+    },
+    "tested": 196608
+  },
+  "rational": {
+    "odd_denominator_max": 31,
+    "origin_residue_checks": 27264,
+    "signed_steps": 3408,
+    "steps_sha256": "f2750b25d861bb07be0ac8345337b6a5f894af7523211f2bb6864460cc2429f3"
+  },
+  "schema": 1,
+  "target_found": false
+}

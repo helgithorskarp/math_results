@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-09-06T19:38:05.153937+00:00",
+  "python": "3.11.2",
+  "standard_library_only": true,
+  "normal_check": "python3 verify.py --out <scratch>/audit",
+  "normal_optimized_identical": true,
+  "producer_byte_identical": true,
+  "mathematical_status": "Written full-support proof plus exhaustive local residue lemma and exact finite geometry controls. External review pending.",
+  "development_fix": "Checker integer fixture coefficients are normalized to Fraction at point construction; final audits use only exact arithmetic.",
+  "executions": [
+    {
+      "command": [
+        "python3",
+        "build.py",
+        "--out",
+        "out/replay"
+      ],
+      "seconds": 4.787,
+      "exit_code": 0,
+      "stdout": {
+        "cases": 7,
+        "certificate_bytes": 4125,
+        "certificate_sha256": "39ac38b30ae5999d83e38b236e8bd00d479a2763d159ef219778abbef7b62c14",
+        "edges": 1813,
+        "status": "PASS",
+        "vertices": 1000
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "verify.py",
+        "--out",
+        "out/optimized"
+      ],
+      "seconds": 3.943,
+      "exit_code": 0,
+      "stdout": {
+        "certificate_bytes": 4125,
+        "certificate_sha256": "39ac38b30ae5999d83e38b236e8bd00d479a2763d159ef219778abbef7b62c14",
+        "edges": 1813,
+        "first_bit_only_edges": 721,
+        "first_bit_unchanged_edges": 656,
+        "floating_point_operations": 0,
+        "malformed_controls_rejected": [
+          "omitted fixture",
+          "monochromatic fixture",
+          "wrong coordinates",
+          "wrong radical divisibility",
+          "incomplete residue audit",
+          "omitted rational step",
+          "false record claim",
+          "unproved sharpness",
+          "even vertical denominator",
+          "insufficient horizontal divisibility"
+        ],
+        "modular": {
+          "first_bit_unchanged": {
+            "1": 512,
+            "2": 512,
+            "3": 512,
+            "5": 512,
+            "6": 512,
+            "7": 512
+          },
+          "modulus": 64,
+          "solutions": {
+            "1": 1024,
+            "2": 512,
+            "3": 1536,
+            "5": 1024,
+            "6": 512,
+            "7": 1536
+          },
+          "tested": 196608
+        },
+        "native_solver_calls": 0,
+        "point_pairs": 84460,
+        "rational": {
+          "odd_denominator_max": 31,
+          "origin_residue_checks": 27264,
+          "signed_steps": 3408,
+          "steps_sha256": "f2750b25d861bb07be0ac8345337b6a5f894af7523211f2bb6864460cc2429f3"
+        },
+        "scope": "universal modular lemma and exact finite controls; full-support bridge in README",
+        "status": "PASS",
+        "target_found": false,
+        "triangle_edges": 3,
+        "vertical_edges": 528,
+        "vertices": 1000
+      }
+    }
+  ]
+}
