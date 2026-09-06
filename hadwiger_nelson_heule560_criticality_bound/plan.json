@@ -1,0 +1,38 @@
+{
+  "algorithm": "Increasing budgets0..13, each with exact cardinality upper bound and minimum degree. For each satisfying assignment test all low-degree biconnected blocks. A non-Gallai induced block yields a universally necessary clause forbidding all its vertices being low. Keep cuts across budgets. Stop at the first full-Gallai witness or certified infeasibility through13.",
+  "conditional_candidate_test": "If a full-Gallai witness has <=13 selectors, make at most one arbitrary-interior right-colouring query at2000000 conflicts/30seconds. Preserve a positive gluing witness or separately checked negative proof. No cover refinement loop.",
+  "frozen_at": "2026-09-06T17:25:37.002397+00:00",
+  "gallai_cut_cap": 256,
+  "input_files": {
+    "hadwiger_nelson_heule510_completion_frontier/fresh_candidates.json": "89345930e1bea184ce2457b0e14a015bcd9a2901cfc609a6468cf050234a8317",
+    "hadwiger_nelson_heule560_global_decision/certificate.json": "1d24fdbed29a3d17c89764fa62c599049a819a24dd9982d83b116c37df572271",
+    "hadwiger_nelson_heule560_kempe/certificate.json": "289785ccccf47d967a3b1c3abd98f3a7fa9d188748f1aa525b292d176323cd4f",
+    "hadwiger_nelson_heule560_left_relation/certificate.json": "e3c01e8694b4e27afe22ea633a2acbc77dae5d4268a8d0da59d7ce83f42c3a42",
+    "hadwiger_nelson_heule560_left_relation/proof_manifest.json": "fd33662c86ac6aac5f7375a4916e4b9a1a105de675dd9edb11907f7a4ac0c127",
+    "hadwiger_nelson_heule560_separator/certificate.json": "e248abe73717723fb841af94672a23269e1562a0f2f20f6c48059b21ee01a9b3",
+    "hadwiger_nelson_heule560_separator/proof_manifest.json": "63d8118c07b703bb47f978bf3d3e98726c6676c1720b20ed8f9fec1152740c0c",
+    "hadwiger_nelson_heule632_minimize/boundary.json": "8732adbdfe9792d6b6496bfec89da64b0127c388c2bb79f892b1d35a9c396f5e",
+    "hadwiger_nelson_heule632_minimize/certificate.json": "3a22660e40329c0aef34e108b91747f529adb046cf687df5b05b3531ca17e35b",
+    "hadwiger_nelson_heule632_transport/result.json": "d4c566403394f8c307dcb2f1c222ccdcdd3a58dae9ab15a14382edd87eb6dcd5",
+    "hadwiger_nelson_parts509_heule_union_minimum/certificate_H510.json": "bc8e0f5f5ec7fa5f2376cc77ba0e65f6023b340cf48990370d5eda575d30ae79"
+  },
+  "mandatory_added": [
+    310,
+    393,
+    578
+  ],
+  "master_query_cap": 1000,
+  "memory_bytes": 4294967296,
+  "next_phase_started": false,
+  "objective": "Prove the minimum number of additional selectors satisfying all45 known positive-cover cuts, minimum degree4 on every selected vertex, and the full Gallai condition on all degree4 vertices, within target budget13. If none exists, prove whole-family closure at <=508.",
+  "optional_count": 57,
+  "proof_bytes": 536870912,
+  "proof_conflicts": 4000000,
+  "proof_seconds": 180,
+  "query_conflicts": 2000000,
+  "query_seconds": 10,
+  "record_improvement": false,
+  "search_seconds": 300,
+  "target_budget": 13,
+  "validation": "Independently reconstruct coordinates, cover cuts, degrees, low graph and both CNFs. Independently check DRAT for the lower bound and a direct support witness for the upper bound."
+}
