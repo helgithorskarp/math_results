@@ -1,0 +1,28 @@
+{
+  "cnf_clause_cap": 2000000,
+  "decision": "If at least509 distinct target vertices are forced by singleton source domains, give the direct no-go certificate. Otherwise make at most one native SAT decision on the complete remaining domain formula and image-cardinality bound. SAT maps require direct exact verification; UNSAT requires independently checked DRAT. A capped query is UNKNOWN.",
+  "family": "All graph homomorphisms from the certified516-vertex negative core52 to the exact632-point host, fixing every source vertex in the large field block pointwise. Source edges must map to unit edges. Nonadjacent vertices may identify; no injectivity or induced-embedding condition is imposed.",
+  "frozen_at": "2026-09-06T19:04:44.071679+00:00",
+  "image_budget": 508,
+  "input_files": {
+    "hadwiger_nelson_heule510_completion_frontier/fresh_candidates.json": "89345930e1bea184ce2457b0e14a015bcd9a2901cfc609a6468cf050234a8317",
+    "hadwiger_nelson_heule560_global_decision/certificate.json": "1d24fdbed29a3d17c89764fa62c599049a819a24dd9982d83b116c37df572271",
+    "hadwiger_nelson_heule560_separator/certificate.json": "e248abe73717723fb841af94672a23269e1562a0f2f20f6c48059b21ee01a9b3",
+    "hadwiger_nelson_heule632_minimize/boundary.json": "8732adbdfe9792d6b6496bfec89da64b0127c388c2bb79f892b1d35a9c396f5e",
+    "hadwiger_nelson_parts509_heule_union_minimum/certificate_H510.json": "bc8e0f5f5ec7fa5f2376cc77ba0e65f6023b340cf48990370d5eda575d30ae79"
+  },
+  "mapping_variable_cap": 200000,
+  "native_conflicts": 2000000,
+  "native_memory_bytes": 4294967296,
+  "native_query_cap": 1,
+  "native_seconds": 300,
+  "next_phase_started": false,
+  "objective": "Determine whether any map in this family has at most508 distinct image vertices.",
+  "pinned_block": "Source vertices whose two exact coordinates have zero coefficients on radicals divisible by5. Expected375 pins.",
+  "preprocessing": "Complete arc consistency from full host domains, singleton domains at pins. Every deletion must follow the absence of a neighbour in an adjacent source domain. Reconstruct independently with direct sets.",
+  "proof_bytes_cap": 536870912,
+  "record_improvement": false,
+  "source_core_index": 52,
+  "target_host_size": 632,
+  "validation": "Sparse-radical exact geometry, independent synchronous set-domain revision to fixed point, entrywise final-domain comparison, all pin/source/host memberships and edges checked. Small exhaustive graph homomorphisms validate soundness and empty/loop-sensitive cases."
+}
