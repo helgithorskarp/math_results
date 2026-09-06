@@ -1,0 +1,91 @@
+{
+  "chromatic_number": {
+    "explicit_full_colors_used": 4,
+    "normalized_spindle_three_color_cases": 81,
+    "proper_spindle_three_colorings": 0,
+    "spindle_embeddings_checked": 1,
+    "value": 4
+  },
+  "complete_graph": {
+    "exact_unit_edges": 2061,
+    "extra_mixed_edges": 0,
+    "factor_edge_images": 2061,
+    "modular_candidates": 2061,
+    "modular_false_positives": 0,
+    "pair_norms_classified": 116403
+  },
+  "construction": {
+    "M_edges": 11,
+    "M_plus_rotated_M_vertices": 49,
+    "M_vertices": 7,
+    "fibre_histogram": {
+      "1": 441,
+      "2": 28,
+      "3": 14
+    },
+    "formal_triples": 539,
+    "host_edges": 13,
+    "host_vertices": 11,
+    "rotated_M_edges": 11,
+    "rotated_M_vertices": 7,
+    "vertices": 483
+  },
+  "exact_algebra": {
+    "finite_field_models": [
+      [1000231, 78195, 514215],
+      [1000609, 465403, 223469]
+    ],
+    "finite_fields_used_only_as_rejection_filters": true,
+    "representation": "Q[t,s]/(Phi42(t),s^2+11)",
+    "reviewer_base_sha256": "c854ee538254bd272cd604bc9aa4dabb57e0b48b184b1fde28ac5dc0d965e1a2"
+  },
+  "reviewed_source": {
+    "README.md": "ec269ebcf35ae82dd96c5ceed2be89d150a9831bd6030a1c70063b852239a051",
+    "SHA256SUMS": "e788b91d3df57263a1425e3064e188c664937c439085c7be88ef3540c594c2e0",
+    "build.py": "46d1ce612333dd93dfca56b82d0aca7a3c858dc5aea31a9e322af8cc8395cacc",
+    "certificate.json": "0656dd5d65128fbf0aed0b852ee9b26c1cc6455b33e781fbc0e3e69317bae212",
+    "expected.json": "93d491f0ce2c71813196c2fd5017de83fbbe724992f4087c18d90be69452b28d",
+    "validation.json": "9dacf47fa60e762993b98783d8812bb3824a97a9ec31a59a4263a53c96f82f76",
+    "verify.py": "4e455a319bd4983ddbed0be32d5a2715f3d2f6be9ed58f9e10a632e7db25bbfe"
+  },
+  "target_graph_found": false,
+  "target_serialization": {
+    "certificate": {
+      "bytes": 40,
+      "sha256": "0656dd5d65128fbf0aed0b852ee9b26c1cc6455b33e781fbc0e3e69317bae212"
+    },
+    "entrywise_edge_comparison": true,
+    "entrywise_support_comparison": true,
+    "graph": {
+      "bytes": 88893,
+      "sha256": "f2568bd02c121d37500d8d05f4e352212ac0db16d82d34f6075272db8491b5da"
+    },
+    "result": {
+      "bytes": 1730,
+      "sha256": "93d491f0ce2c71813196c2fd5017de83fbbe724992f4087c18d90be69452b28d"
+    }
+  },
+  "universal_extension": {
+    "distinct_formal_supports": 112,
+    "edge_projection_histogram": [
+      [0, 1, 49],
+      [0, 6, 49],
+      [0, 7, 306],
+      [0, 8, 306],
+      [1, 2, 49],
+      [1, 9, 306],
+      [1, 10, 306],
+      [2, 3, 49],
+      [3, 4, 49],
+      [4, 5, 49],
+      [5, 6, 49],
+      [7, 8, 247],
+      [9, 10, 247]
+    ],
+    "fibres_checked": 483,
+    "host_embeddings_preserved": 11,
+    "proper_labeled_host_four_colorings": 78624,
+    "unit_edge_symbolic_differences_checked": 2061
+  },
+  "verdict_scope": "fixed Hstar+M+t^6M construction and all its subgraphs"
+}
