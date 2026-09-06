@@ -1,0 +1,110 @@
+{
+  "status": "COMPLETE: full fixed108-point exterior support has chromatic number4",
+  "result": {
+    "exterior_points": 108,
+    "normal_classes": 36,
+    "normal_class_size_histogram": {
+      "6": 12,
+      "9": 12,
+      "12": 12
+    },
+    "source_events": 324,
+    "fixed_base_colouring_changed": false,
+    "extended_blocks": 36,
+    "abstract_vertices": 804,
+    "abstract_unit_embedding_claimed": false,
+    "abstract_edges": 2958,
+    "abstract_positive_edge_checks": 2958,
+    "new_block_internal_edge_checks": 1296,
+    "new_owner_spoke_checks": 648,
+    "new_exterior_attachment_checks": 324,
+    "actual_base_vertices": 156,
+    "actual_base_unit_edges": 690,
+    "moser_vertices": 7,
+    "moser_pair_norms": 21,
+    "moser_unit_edges": 11,
+    "moser_three_colour_assignments": 2187,
+    "moser_three_colourings": 0,
+    "full_infinite_support_chromatic_number": 4,
+    "all_subsupports_four_colourable": true,
+    "status": "PASS",
+    "malformed_certificate_rejections": 5,
+    "parent_census_rechecked": {
+      "pair_rotation_cases": 3996,
+      "pair_outcomes": {
+        "identical": 36,
+        "nonunit": 3742,
+        "parallel_incompatible": 78,
+        "unit": 140
+      },
+      "unit_circumcentre_witnesses": 140,
+      "candidate_direction_orbits": 3,
+      "shared_certificate_vertices": 156,
+      "shared_pair_norms": 12090,
+      "shared_unit_edges": 690,
+      "shared_colour_edge_checks": 690,
+      "placements": 36,
+      "restricted_core_edge_checks": 7260
+    },
+    "certificate_bytes": 5849,
+    "certificate_sha256": "8be9e1a93df1ff717432b20f26b4e331ff89703dbc55493be924a64396a9c27a",
+    "native_solver_calls": 0
+  },
+  "general_lemma": "For a finite nonempty W outside the triangle neighbourhood X, retain every generic component with a nonparallel contact-normal pair, then add one abstract K3 Cartesian C6 block per source-normal rotation class with all stipulated source edges and owner spokes. The whole infinite X union W admits a graph homomorphism to this finite abstract graph. Colourability of the abstract graph is sufficient; converse and geometric realization of the abstract graph are not asserted.",
+  "actual_scope": "All108 exterior points from the fixed rho/sigma six-rotation orbits simultaneously, together with all three full unit circles. Every subgraph is four-colourable, with no normal-multiplicity restriction.",
+  "build": {
+    "status": "PASS",
+    "certificate_bytes": 5849,
+    "certificate_sha256": "8be9e1a93df1ff717432b20f26b4e331ff89703dbc55493be924a64396a9c27a",
+    "seconds": 1.5105257730174344,
+    "native_solver_calls": 0
+  },
+  "independent_audit_seconds": 3.6260654570069164,
+  "optimized_audit_seconds": 3.7924254680110607,
+  "normal_optimized_reports_identical": true,
+  "python": "3.11.2",
+  "threads": 1,
+  "peak_memory_measured": false,
+  "native_solver_calls": 0,
+  "producer_method": "36 complete six-column dynamic programs using11 states and44 compatible ordered state pairs; all extend the unchanged published base colouring.",
+  "checker_method": "Reuses the prior author-run sparse-radical geometry audit as local source, imports no producer or parent executable, rechecks all3996 nonparallel-census cases and all12090 base pair norms, matches source events to explicit216 representative/rotation slots, then checks every one of2958 abstract edges directly. Independently checks all21 Moser point pairs and2187 three-colour assignments.",
+  "mathematical_dependencies": [
+    {
+      "package": "hadwiger_nelson_dominating_triangle",
+      "source_commit": "0c9e4cf4fd74b5bae3821c957e3b23186386e81d",
+      "artifact_ref": "bafkreiauzabwiqtpeqzdkwuy35l33xrexthvv2knfozsl5e3jb7kxewboi",
+      "scope": "Full continuum circle decomposition.",
+      "independently_accepted": true,
+      "review_commit": "22c15454297758c87574738df7d623fd25f4d75e",
+      "review_ref": "bafkreigcxi3wttalq3fg2dzm3g4iwnsmz5zucaq5zmnbzwrhjwz52esxfu",
+      "review_height": 3325
+    },
+    {
+      "package": "hadwiger_nelson_triangle_coupled_orbits",
+      "source_commit": "6921c3d9a608cd09806eef0b86601f30bc4124c2",
+      "artifact_ref": "bafkreigxlhtc23kdsix5uz6drg4fgjwkthsflvulrftgr2r6ndi3w3u6kq",
+      "input": "certificate.json",
+      "bytes": 19427,
+      "sha256": "8680dc794ddb0543fd89f93fa61e6119521ebba51c422a74c4eae0dcf7f5a23a",
+      "scope": "Exact fixed support, full source-normal representative set, nonparallel census,156-point base graph and its positive colouring, all rechecked here."
+    }
+  ],
+  "initial_graph_scan_height": 3326,
+  "prepublication_graph_scan_height": 3328,
+  "HN2_latest_durable_result": {
+    "package": "hadwiger_nelson_heule632_pair_pilot",
+    "source_commit": "14a0c9b76d7907ab0d7107a0a8796e3c0784dc68",
+    "artifact_ref": "bafkreig3udgy4bgqb6b26ae2dwjjrjygzpv5lb3m4lvvul2ht5o4ldgtuy",
+    "height": 3319,
+    "scope": "Published630-point3098-edge exact five-chromatic seed after deleting old labels399,462; checked DRAT and five-colouring. Above508, not claimed minimal; minimization not started in that artifact.",
+    "last_report": "20260906T102736.541577Z.md",
+    "dependency": false
+  },
+  "primary_record_calibration": "Parts2010.12665v2 gives509; Haugland2608.04542v4 introduction names509 as record. Both checked live2026-09-06.",
+  "large_omitted_certificate": false,
+  "external_review": "Pending for this new result; author-run checker is independent of its producer. Parent continuum decomposition accepted separately.",
+  "priority_claim": false,
+  "target_found": false,
+  "background_jobs": [],
+  "next_phase_started": false
+}
