@@ -290,9 +290,17 @@ exactly the12 red-core vertices. A14-vertex blue-pair witness attains zero;
 a15-vertex red-pair counterexample proves the color guard is necessary.
 Both complete first-pair color cases return UNKNOWN at20 seconds, with
 fresh full reconstruction. No new full branch or whole core is excluded;
-all17 classes /9,153 labels remain open. The local lemma and new encoding
-await independent review. This milestone stops before a possible direct
-primary-variable encoding of the two complete extensions.
+all17 classes /9,153 labels remain open. The local lemma and the old exact child tails now have an
+[accepted independent review](../ramsey_r55_order3_eleven_core194_pair_review1).
+The subsequent [direct primary-variable formulation](../ramsey_r55_order3_eleven_core194_direct)
+reconstructs both complete cases with320 variables and literal Ramsey
+clauses, checked independently via physical orbits and possible-color
+clique recursion. Its absence of fixed-row ordering permits any selected
+empty pair to be relabeled33,34. Both new cases return UNKNOWN at60
+seconds; no additional exclusion follows, and all17classes/9,153labels
+remain. The new direct formulation and relabeling proof await independent
+review. The bounded comparison is complete; a further structural
+attachment analysis has not begun.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),

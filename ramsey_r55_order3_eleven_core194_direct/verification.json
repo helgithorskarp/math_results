@@ -1,0 +1,353 @@
+{
+  "cases": [
+    {
+      "color": "blue",
+      "formula": {
+        "bytes": 14883777,
+        "sha256": "f3314485280b2080f3459774b944e010beeb175788673d53703d60cba091e84c"
+      },
+      "status": "open",
+      "trace": {
+        "bytes": 63917566,
+        "sha256": "1844d66c4886cf23a2de374e71025fb3f75d290964d665799aa8b618bfff61af"
+      }
+    },
+    {
+      "color": "red",
+      "formula": {
+        "bytes": 14841387,
+        "sha256": "2aa575e6b988d788f57f98abaa3728518517adc02c795ef5f75458c459e85a72"
+      },
+      "status": "open",
+      "trace": {
+        "bytes": 60537873,
+        "sha256": "241a70b9dfc8cd2cc1a214c5c18b5338c670118776fe397e35700370a1ee97c8"
+      }
+    }
+  ],
+  "excluded": [],
+  "open": [
+    "blue",
+    "red"
+  ],
+  "preparation": {
+    "audit": {
+      "decoded_physical_pairs": 903,
+      "fixtures": {
+        "blue_pair14.edges": {
+          "five_sets": 2002,
+          "order": 14,
+          "ramsey": true,
+          "red_edges": 42
+        },
+        "red_pair15.edges": {
+          "five_sets": 3003,
+          "order": 15,
+          "ramsey": true,
+          "red_edges": 43
+        }
+      },
+      "formulas": [
+        {
+          "bytes": 14883777,
+          "census": {
+            "clauses": 366069,
+            "distinct_ramsey_clauses": 366034,
+            "fixed_units": 27,
+            "new_pair_consequences": 8,
+            "possible_blue": 655371,
+            "possible_red": 454199,
+            "variables": 320
+          },
+          "clause_lengths": {
+            "1": 27,
+            "10": 202538,
+            "2": 15,
+            "3": 473,
+            "4": 490,
+            "5": 1162,
+            "6": 3801,
+            "7": 26684,
+            "8": 30618,
+            "9": 100261
+          },
+          "color": "blue",
+          "exact": true,
+          "reconstruction": "physical C3 pair orbits and possible-color clique recursion",
+          "sha256": "f3314485280b2080f3459774b944e010beeb175788673d53703d60cba091e84c"
+        },
+        {
+          "bytes": 14841387,
+          "census": {
+            "clauses": 364095,
+            "distinct_ramsey_clauses": 364068,
+            "fixed_units": 27,
+            "new_pair_consequences": 0,
+            "possible_blue": 646149,
+            "possible_red": 457300,
+            "variables": 320
+          },
+          "clause_lengths": {
+            "1": 27,
+            "10": 202538,
+            "3": 473,
+            "4": 190,
+            "5": 1106,
+            "6": 3738,
+            "7": 25144,
+            "8": 30618,
+            "9": 100261
+          },
+          "color": "red",
+          "exact": true,
+          "reconstruction": "physical C3 pair orbits and possible-color clique recursion",
+          "sha256": "2aa575e6b988d788f57f98abaa3728518517adc02c795ef5f75458c459e85a72"
+        }
+      ],
+      "local_signature_witnesses": [
+        {
+          "color": "blue",
+          "signature": 0,
+          "vertices": [
+            0,
+            4,
+            12,
+            13,
+            14
+          ]
+        },
+        {
+          "color": "blue",
+          "signature": 1,
+          "vertices": [
+            3,
+            8,
+            12,
+            13,
+            14
+          ]
+        },
+        {
+          "color": "blue",
+          "signature": 2,
+          "vertices": [
+            0,
+            8,
+            12,
+            13,
+            14
+          ]
+        },
+        {
+          "color": "blue",
+          "signature": 3,
+          "vertices": [
+            6,
+            10,
+            12,
+            13,
+            14
+          ]
+        },
+        {
+          "color": "blue",
+          "signature": 4,
+          "vertices": [
+            0,
+            4,
+            12,
+            13,
+            14
+          ]
+        },
+        {
+          "color": "blue",
+          "signature": 5,
+          "vertices": [
+            3,
+            11,
+            12,
+            13,
+            14
+          ]
+        },
+        {
+          "color": "blue",
+          "signature": 6,
+          "vertices": [
+            0,
+            11,
+            12,
+            13,
+            14
+          ]
+        },
+        {
+          "color": "red",
+          "signature": 7,
+          "vertices": [
+            0,
+            3,
+            6,
+            7,
+            14
+          ]
+        },
+        {
+          "color": "blue",
+          "signature": 8,
+          "vertices": [
+            0,
+            4,
+            12,
+            13,
+            14
+          ]
+        },
+        {
+          "color": "blue",
+          "signature": 9,
+          "vertices": [
+            3,
+            8,
+            12,
+            13,
+            14
+          ]
+        },
+        {
+          "color": "blue",
+          "signature": 10,
+          "vertices": [
+            0,
+            8,
+            12,
+            13,
+            14
+          ]
+        },
+        {
+          "color": "red",
+          "signature": 11,
+          "vertices": [
+            0,
+            3,
+            9,
+            10,
+            14
+          ]
+        },
+        {
+          "color": "blue",
+          "signature": 12,
+          "vertices": [
+            0,
+            4,
+            12,
+            13,
+            14
+          ]
+        },
+        {
+          "color": "red",
+          "signature": 13,
+          "vertices": [
+            0,
+            1,
+            7,
+            10,
+            14
+          ]
+        },
+        {
+          "color": "red",
+          "signature": 14,
+          "vertices": [
+            3,
+            4,
+            7,
+            10,
+            14
+          ]
+        },
+        {
+          "color": "red",
+          "signature": 15,
+          "vertices": [
+            0,
+            1,
+            7,
+            10,
+            14
+          ]
+        }
+      ],
+      "rejected": [
+        "blue_wrong_header",
+        "blue_omitted_row",
+        "blue_extra_empty",
+        "blue_wrong_core",
+        "blue_wrong_pair",
+        "blue_opposite_case",
+        "blue_new_variable",
+        "blue_repeated_literal",
+        "red_wrong_header",
+        "red_omitted_row",
+        "red_extra_empty",
+        "red_wrong_core",
+        "red_wrong_pair",
+        "red_opposite_case",
+        "red_new_variable",
+        "red_repeated_literal",
+        "duplicate_edge",
+        "bad_vertex",
+        "monochromatic_complete",
+        "incomplete_model",
+        "conflicting_model",
+        "invalid_model_index",
+        "missing_terminator",
+        "after_terminator"
+      ]
+    },
+    "generation": [
+      {
+        "census": {
+          "all_five_sets": 962598,
+          "clauses": 366069,
+          "distinct_ramsey_clauses": 366034,
+          "fixed_units": 27,
+          "new_pair_consequences": 8,
+          "possible_blue": 655371,
+          "possible_red": 454199,
+          "variables": 320
+        },
+        "color": "blue",
+        "formula": {
+          "bytes": 14883777,
+          "sha256": "f3314485280b2080f3459774b944e010beeb175788673d53703d60cba091e84c"
+        }
+      },
+      {
+        "census": {
+          "all_five_sets": 962598,
+          "clauses": 364095,
+          "distinct_ramsey_clauses": 364068,
+          "fixed_units": 27,
+          "new_pair_consequences": 0,
+          "possible_blue": 646149,
+          "possible_red": 457300,
+          "variables": 320
+        },
+        "color": "red",
+        "formula": {
+          "bytes": 14841387,
+          "sha256": "2aa575e6b988d788f57f98abaa3728518517adc02c795ef5f75458c459e85a72"
+        }
+      }
+    ]
+  },
+  "proof_replays": 0,
+  "seconds": 120.922062,
+  "target_graph": false,
+  "verified": true
+}
