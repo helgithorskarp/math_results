@@ -278,10 +278,21 @@ pairs once. A complete48,620-vector count audit gives six sorted patterns.
 Each full pattern formula has a refutation replayed twice; the complementary
 multiple-empty formula returns UNKNOWN at20 seconds. The six cases are
 subdivisions of the same81-label class. **All17 full classes /9,153 labels
-remain open**, with no new whole exclusion. The new rigidity and full
-branch closure await independent review. This milestone ends before a
-possible next full color split on the edge between the first two empty
-fixed vertices; the one-empty branch is finished and must not be reopened.
+remain open**, with no new whole exclusion. The rigidity and complete
+one-empty closure now have an [accepted independent review](../ramsey_r55_order3_eleven_core194_multiplicity_review1),
+including independently generated tails and all six regenerated/full-replayed
+proofs. The one-empty branch is finished and must not be reopened.
+The subsequent [Core194 empty-pair lemma and full split](../ramsey_r55_order3_eleven_core194_pair)
+proves that a blue empty pair has no common blue fixed neighbor: all16
+third-vertex signatures have literal K5 obstruction witnesses. With the
+seven blue moving-triangle constraints, its common blue neighborhood is
+exactly the12 red-core vertices. A14-vertex blue-pair witness attains zero;
+a15-vertex red-pair counterexample proves the color guard is necessary.
+Both complete first-pair color cases return UNKNOWN at20 seconds, with
+fresh full reconstruction. No new full branch or whole core is excluded;
+all17 classes /9,153 labels remain open. The local lemma and new encoding
+await independent review. This milestone stops before a possible direct
+primary-variable encoding of the two complete extensions.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),

@@ -1,0 +1,65 @@
+{
+  "coverage": {
+    "cases": 2,
+    "first_empty_edge": [
+      33,
+      34
+    ],
+    "labeled": 81,
+    "primary": 166,
+    "whole_cores": 1
+  },
+  "local": {
+    "blue_pair": {
+      "common_blue_fixed": [],
+      "five_sets_checked": 2002,
+      "pair_red": false,
+      "red_edges": 42,
+      "vertices": 14
+    },
+    "proof": {
+      "blue_obstructions": 11,
+      "literal_witness_pairs": 160,
+      "red_obstructions": 5,
+      "signature_masks": 16
+    },
+    "red_pair_counterexample": {
+      "common_blue_fixed": [
+        14
+      ],
+      "five_sets_checked": 3003,
+      "pair_red": true,
+      "red_edges": 43,
+      "vertices": 15
+    }
+  },
+  "rejected": [
+    "missing_signature",
+    "bad_witness",
+    "wrong_color",
+    "wrong_core",
+    "wrong_pair",
+    "missing_red_case",
+    "bad_order",
+    "duplicate_edge",
+    "red_in_empty_signature",
+    "wrong_pair_color",
+    "blue_lost_base",
+    "blue_lost_clause",
+    "blue_wrong_sign",
+    "blue_wrong_edge",
+    "blue_extra_empty",
+    "blue_wrong_header",
+    "red_lost_base",
+    "red_lost_clause",
+    "red_wrong_sign",
+    "red_wrong_edge",
+    "red_extra_empty",
+    "red_wrong_header"
+  ],
+  "truth_table": {
+    "accepted_blue": 6561,
+    "accepted_red": 65536,
+    "pair_fixed_incidence_assignments": 131072
+  }
+}
