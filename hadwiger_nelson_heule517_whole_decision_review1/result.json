@@ -1,0 +1,195 @@
+{
+  "all_checks_passed": true,
+  "conclusion": {
+    "fixed_support_closed": true,
+    "negative_solver_proof_required": false,
+    "new_five_chromatic_graph": false,
+    "other_supports_excluded": false,
+    "record_improvement": false,
+    "unrestricted_at_most508_family_closed": true
+  },
+  "cover": {
+    "all_free_subsets_checked": 2097152,
+    "cut_avoiding_subset_histogram": [
+      1,
+      21,
+      177,
+      773,
+      1888,
+      2596,
+      1920,
+      679,
+      87,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "cut_size_histogram": {
+      "1": 496,
+      "2": 33,
+      "3": 8,
+      "4": 1
+    },
+    "forced_large": 367,
+    "forced_small": 129,
+    "forced_vertices": 496,
+    "free_vertices": [
+      189,
+      192,
+      211,
+      228,
+      245,
+      325,
+      332,
+      338,
+      361,
+      378,
+      379,
+      432,
+      434,
+      505,
+      510,
+      511,
+      512,
+      513,
+      514,
+      515,
+      516
+    ],
+    "maximum_cut_avoiding_omissions": 8,
+    "minimal_cuts": 538,
+    "non_singleton_cuts": 42
+  },
+  "graph": {
+    "cross_edges": 30,
+    "edge_stream_sha256": "93bec44c9bc6e2514ed4d4b75985267561f63751eaa7132ec5cdd271af85e456",
+    "exact_pairs_checked": 133386,
+    "large_edges": 1920,
+    "large_vertices": 375,
+    "small_edges": 605,
+    "small_vertices": 142,
+    "unit_edges": 2555,
+    "vertices": 517
+  },
+  "negative_controls_rejected": [
+    "monochromatic_unit_edge",
+    "incorrect_omission_set",
+    "incomplete_hypergraph_cover"
+  ],
+  "positive_witnesses": {
+    "inherited": {
+      "large2": {
+        "retained_edge_checks": 218392,
+        "rows": 86
+      },
+      "large3": {
+        "retained_edge_checks": 274371,
+        "rows": 108
+      },
+      "large4": {
+        "retained_edge_checks": 83854,
+        "rows": 33
+      },
+      "prior": {
+        "retained_edge_checks": 1336627,
+        "rows": 526
+      },
+      "small": {
+        "retained_edge_checks": 513249,
+        "rows": 202
+      }
+    },
+    "inherited_retained_edge_checks": 2426493,
+    "inherited_total": 955,
+    "new": 8,
+    "new_omission_sets": [
+      [
+        130
+      ],
+      [
+        194
+      ],
+      [
+        254
+      ],
+      [
+        285
+      ],
+      [
+        395
+      ],
+      [
+        470
+      ],
+      [
+        192,
+        245
+      ],
+      [
+        332,
+        338
+      ]
+    ],
+    "new_retained_edge_checks": 20351
+  },
+  "python": "3.11.2",
+  "reviewed_source": {
+    "README.md": {
+      "bytes": 10923,
+      "sha256": "28ba18d7bb884f1ac036cad58be73d1740c0055e2f1e0b437b588ae6f8335330"
+    },
+    "certificate.json": {
+      "bytes": 4511,
+      "sha256": "9adfc7ca85d0374b7c2882bcede1c56db6d4b1bd3d9e26f0285529dd12c1ab3e"
+    },
+    "engine.py": {
+      "bytes": 2018,
+      "sha256": "961068d8a027ce7cfdc9dfc9a492e2d3f0c81606b6b2cbcbe82296bb9feab010"
+    },
+    "manifest.json": {
+      "bytes": 2165,
+      "sha256": "e8181fbf888a839921fad303ec1a109a7ee1a8e6db90bcd256b1f9e0b8b7a046"
+    },
+    "plan.json": {
+      "bytes": 1455,
+      "sha256": "35e97f740fe53536ea4e9a549885271020e5c78e994eae458acf93a3585c71db"
+    },
+    "run.py": {
+      "bytes": 6143,
+      "sha256": "cb362fd790e878850b3f965181e0294ff501a943254a5a2282d12a8ca5a246fd"
+    },
+    "run_summary.json": {
+      "bytes": 506,
+      "sha256": "0dced62b93176b7552acb3d99124d0c30bb3c448787f8d5bfa578a7b83da3ed7"
+    },
+    "validation.json": {
+      "bytes": 934,
+      "sha256": "b3be11eb9e0139702444ed43af90b7367c7dd5c7446c6646842710e12fd36a05"
+    },
+    "verification.json": {
+      "bytes": 1297,
+      "sha256": "6ae74d5ba50466dc55b478f583f3218440923593b2ca75e3529db8a738b0504e"
+    },
+    "verify.py": {
+      "bytes": 8794,
+      "sha256": "89af8513f246682958a38baa33b1424b2f25cd933059933bd427680ccd59ce0e"
+    }
+  },
+  "scope": "every at-most-508-vertex subgraph of the fixed exact H517 support is four-colourable",
+  "trust_boundary": [
+    "exact source coordinates and independence of the radical basis",
+    "ordinary CPython integer and Fraction arithmetic and faithful JSON decoding",
+    "completeness of the explicit finite loops and the elementary restriction argument",
+    "SHA-256 for source and edge-stream identity"
+  ]
+}
