@@ -1,0 +1,283 @@
+{
+  "accepted_claim": "for the specified fixed colouring c of M492, extension to G[M union T] holds exactly when T avoids the three stated pairs, with the claimed counts and inherited family corollary",
+  "all_checks_passed": true,
+  "classification": {
+    "affected_endpoints": [
+      362,
+      406,
+      409,
+      604,
+      613
+    ],
+    "endpoint_patterns": 32,
+    "endpoint_size_histogram": {
+      "0": 1,
+      "1": 5,
+      "2": 7,
+      "3": 2
+    },
+    "extending_endpoint_patterns": 15,
+    "forced_pairs": [
+      [
+        362,
+        604
+      ],
+      [
+        406,
+        613
+      ],
+      [
+        409,
+        613
+      ]
+    ],
+    "fresh_colouring_stream": {
+      "bytes": 2532,
+      "sha256": "3470c37e61cd10ef634d03065b01e328d3fd277337654b3ab3098c4aa2a3a0c0"
+    },
+    "fresh_cover_edge_checks": 10958,
+    "fresh_cover_stats": [
+      {
+        "edges": 2741,
+        "omitted_optional": [
+          362,
+          613
+        ],
+        "vertices": 558
+      },
+      {
+        "edges": 2747,
+        "omitted_optional": [
+          604,
+          613
+        ],
+        "vertices": 558
+      },
+      {
+        "edges": 2732,
+        "omitted_optional": [
+          362,
+          406,
+          409
+        ],
+        "vertices": 557
+      },
+      {
+        "edges": 2738,
+        "omitted_optional": [
+          406,
+          409,
+          604
+        ],
+        "vertices": 557
+      }
+    ],
+    "fresh_search_nodes": [
+      67,
+      67,
+      66,
+      66
+    ],
+    "minimal_hitting_sets": [
+      [
+        362,
+        613
+      ],
+      [
+        604,
+        613
+      ],
+      [
+        362,
+        406,
+        409
+      ],
+      [
+        406,
+        409,
+        604
+      ]
+    ],
+    "target_colouring_stream": {
+      "bytes": 2532,
+      "sha256": "ab4215a47b3b526fc2feacf82ce46a7410aa5a7a4e8f76371c18b55b4a76b5de"
+    },
+    "target_cover_edge_checks": 10958,
+    "target_cover_stats": [
+      {
+        "edges": 2741,
+        "omitted_optional": [
+          362,
+          613
+        ],
+        "vertices": 558
+      },
+      {
+        "edges": 2747,
+        "omitted_optional": [
+          604,
+          613
+        ],
+        "vertices": 558
+      },
+      {
+        "edges": 2732,
+        "omitted_optional": [
+          362,
+          406,
+          409
+        ],
+        "vertices": 557
+      },
+      {
+        "edges": 2738,
+        "omitted_optional": [
+          406,
+          409,
+          604
+        ],
+        "vertices": 557
+      }
+    ]
+  },
+  "dependency": {
+    "accepted_parent": "bafkreigrsanib6kfhqwhxdkjpjym6fa7xxyhcrw2phtv6m7or6vludas4i",
+    "fixed_colour_source": "bafkreihwchy7p2lgnrpyqdxblehcz7tmwas2tlllsib6jb6tdwm2xmlkmi",
+    "parent_independent_acceptance": "bafkreicgezlcgpdcdp673itijhhjeh3qdr2bwusmtma2fryh62today2ue"
+  },
+  "exact_geometry": {
+    "basis_product_controls": 64,
+    "distinct_points": 632,
+    "host_edge_stream": {
+      "bytes": 23472,
+      "sha256": "8dd36c195b3e252ec2be150ea6a029375707293fec70b63da9fc157eed4140f0"
+    },
+    "host_edges": 3112,
+    "host_vertices": 632,
+    "seed_edge_stream": {
+      "bytes": 20666,
+      "sha256": "d74d9442321f512ca7bbb7cf0013ab3c65255608bf001b5d1def41367ebc4e68"
+    },
+    "seed_edges": 2758,
+    "seed_vertices": 560,
+    "unordered_pairs_checked": 199396
+  },
+  "family_counts": {
+    "all_extending_subsets": 138350580552821637120,
+    "all_optional_subsets": 295147905179352825856,
+    "all_size_16": 1469568786235308,
+    "coefficient_stream": {
+      "bytes": 1209,
+      "sha256": "2c59b3071aea01a81f2249d797196f01f351eaffc2bba5c85df6a20562a5dc5c"
+    },
+    "extending_at_most_16": 1793849422050660,
+    "extending_size_16": 1259701602040917,
+    "remaining_at_most_16": 283129375173160,
+    "remaining_size_16": 209867184194391
+  },
+  "fixed_interface": {
+    "list_size_histogram": {
+      "1": 49,
+      "2": 17,
+      "3": 2
+    },
+    "list_stream": {
+      "bytes": 450,
+      "sha256": "a4c734ddd35e686f4bdae058f0de34a4daa2dc3a3559f75ce886f6edf0be2893"
+    },
+    "mandatory_edge_checks": 2390,
+    "mandatory_vertices": 492,
+    "optional_edge_stream": {
+      "bytes": 488,
+      "sha256": "b067cdc25bdf14e146b09d27ee066231dab9cf9158131ed8ce7b20c46c1b8a6b"
+    },
+    "optional_edges": 61,
+    "optional_vertices": 68
+  },
+  "negative_controls": [
+    "missing_list",
+    "missing_obstruction",
+    "missing_cover",
+    "monochromatic_cover_edge",
+    "wrong_cover_support",
+    "false_count",
+    "monochromatic_fixed_edge"
+  ],
+  "python": "3.11.2",
+  "reviewed_source_commit": "b2ac55ad66b0c86c45b53fe8c68089f6e95ccd67",
+  "scope": {
+    "all_optional_subsets_covered": true,
+    "arbitrary_recolouring_of_m_classified": false,
+    "fixed_mandatory_colouring_classified": true,
+    "record_improvement": false,
+    "remaining_graphs_proved_nonfourcolourable": false,
+    "sub509_graph_established": false,
+    "whole_h560_family_closed": false
+  },
+  "source_identity": {
+    "mathematical_inputs": {
+      "hadwiger_nelson_heule510_completion_frontier/fresh_candidates.json": {
+        "bytes": 23322,
+        "sha256": "89345930e1bea184ce2457b0e14a015bcd9a2901cfc609a6468cf050234a8317"
+      },
+      "hadwiger_nelson_heule560_degree_family/certificate.json": {
+        "bytes": 11929,
+        "sha256": "357d140cbe9432da75402c5e6ad9d13aff8d90a14319d019a8c0cdf4459d529c"
+      },
+      "hadwiger_nelson_heule632_minimize/boundary.json": {
+        "bytes": 5814,
+        "sha256": "8732adbdfe9792d6b6496bfec89da64b0127c388c2bb79f892b1d35a9c396f5e"
+      },
+      "hadwiger_nelson_parts509_heule_union_minimum/certificate_H510.json": {
+        "bytes": 552196,
+        "sha256": "bc8e0f5f5ec7fa5f2376cc77ba0e65f6023b340cf48990370d5eda575d30ae79"
+      }
+    },
+    "reviewed_files": {
+      ".gitignore": {
+        "bytes": 19,
+        "sha256": "0175fcafc5d8328c584d3df3eeba657ad2c5ccda3956d46d15e15adb9ecdd57c"
+      },
+      "README.md": {
+        "bytes": 11124,
+        "sha256": "b83d53c43ee1a05f96e9f1addf60f17359d8d8766dccd7a46f110c5601377bc9"
+      },
+      "SHA256SUMS": {
+        "bytes": 625,
+        "sha256": "94fc020fa1bafa4f2de332f1423507548b773a781bb68edf062793970da52b0e"
+      },
+      "build.py": {
+        "bytes": 8153,
+        "sha256": "30ef4a47fde2f6063a6534e6c6dabf5888d55ca9bf84bdb42d0182b9ca9151cd"
+      },
+      "certificate.json": {
+        "bytes": 5526,
+        "sha256": "3df21aa84154341f7db3e10c1082e3948842b213c7211be7b2d763f1ddcd0bb7"
+      },
+      "expected.json": {
+        "bytes": 1493,
+        "sha256": "12b14c4bf9bf2238a6503a480d72839ff6004e2abc1fbffc4ca85345b4d0f176"
+      },
+      "plan.json": {
+        "bytes": 1371,
+        "sha256": "b793bbbaf02cc69a445b99f52be3ddd15e1dd9ecf3fc8af9f2ad44d156259b81"
+      },
+      "validation.json": {
+        "bytes": 1447,
+        "sha256": "5a2f178bd2053fd3ec062d8a7cb8d9c90be5f91b990cbefee9daa1b8863cf914"
+      },
+      "verify.py": {
+        "bytes": 8221,
+        "sha256": "5775719e950d393e16ca4bd75e54db72a9dd2d71f1d7f774e2ff5deb1f7cecc7"
+      }
+    }
+  },
+  "trust_boundary": [
+    "the four SHA-256-pinned mathematical input files",
+    "linear independence of the eight squarefree-radical basis elements",
+    "ordinary CPython integer/Fraction arithmetic and exhaustive enumeration",
+    "the elementary restriction argument from four maximal positive covers",
+    "the separately accepted H560 M492/U68 parent theorem for the global family corollary",
+    "SHA-256 collision resistance for source and canonical stream identities"
+  ]
+}
