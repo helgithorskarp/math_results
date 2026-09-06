@@ -1,0 +1,129 @@
+{
+  "status": "COMPLETE: terminal-spindle coincidences allowed; full terminal-only Moser/A159/B214 family below509 is four-colourable",
+  "scope": "Full archived copies; M intersects copies only at designated terminals; copies intersect only at shared terminals; all additional unit edges lie among M and terminals; at most508 total vertices. Arbitrary real isometries.",
+  "fixed_spindle_colouring": "0123132",
+  "terminal_spindle_coincidences_allowed": true,
+  "gadget_terminal_coincidences_allowed": true,
+  "interior_intersections_allowed": false,
+  "additional_interior_edges_allowed": false,
+  "inherited_edges_from_shared_terminal_to_own_interior_allowed": true,
+  "single_colouring_of_all_placements_claimed": false,
+  "result": {
+    "M_M_pair_norms": 21,
+    "M_M_sqrt7_pairs": 0,
+    "M_M_distance3_pairs": 0,
+    "M_D_pair_norms": 126,
+    "M_D_sqrt7_pairs": 0,
+    "M_D_distance3_pairs": 0,
+    "anchored_palette_cases": 100,
+    "by_anchored_B_multiplicity": {
+      "1": {
+        "cases": 20,
+        "minimum_list_size": 2,
+        "maximum_auxiliary_degree": 1
+      },
+      "2": {
+        "cases": 80,
+        "minimum_list_size": 1,
+        "maximum_auxiliary_degree": 0
+      }
+    },
+    "shared_endpoint_singleton_checked": true,
+    "status": "PASS",
+    "exact_pair_norms": 147,
+    "malformed_certificate_rejections": 3,
+    "native_solver_calls": 0,
+    "certificate_bytes": 2666,
+    "certificate_sha256": "d1230606da52f17d5e74e608a04b3123951c4bcf72e1d780f1e40f742cbe5190"
+  },
+  "build": {
+    "certificate_bytes": 2666,
+    "certificate_sha256": "d1230606da52f17d5e74e608a04b3123951c4bcf72e1d780f1e40f742cbe5190",
+    "exact_pair_norms": 147,
+    "native_solver_calls": 0,
+    "seconds": 0.0028293619980104268,
+    "status": "PASS"
+  },
+  "independent_audit_seconds": 0.006750300992280245,
+  "optimized_audit_seconds": 0.0066141579882241786,
+  "normal_and_optimized_reports_identical": true,
+  "public_replay_certificate_identical": true,
+  "parent_geometry_replay": {
+    "C_points": 25,
+    "C_unit_edges": 53,
+    "D_bipartite": true,
+    "D_distance3_pairs": 0,
+    "D_induced_four_subsets_checked": 3060,
+    "D_sqrt7_pairs": 4,
+    "D_unit_edges": 6,
+    "M_unit_edges": 11,
+    "certificate_bytes": 1527,
+    "certificate_sha256": "bddb9275204535cccce1d66bd2ad1415040a6807fdffb7902dec31fd57126a98",
+    "circle_unit_checks": 84,
+    "equal_two_list_obstruction_checked": true,
+    "exact_C_pair_norms": 300,
+    "external_double_neighbours": 18,
+    "long_pair_list_disjointness_checks": 4,
+    "malformed_certificate_rejections": 3,
+    "native_solver_calls": 0,
+    "seconds": 0.24199692902038805,
+    "spindle_pairs_with_two_certified_intersections": 21,
+    "status": "PASS",
+    "three_colour_lists": 3,
+    "two_colour_lists": 15,
+    "two_list_component_type": "P3 + 12 isolated vertices",
+    "two_list_unit_edges": 2,
+    "unequal_two_list_triangle_extensions": 120,
+    "unit_pair_list_compatibility_checks": 6
+  },
+  "positive_extension_replay": {
+    "pair_norms": 35352,
+    "labelled_terminal_assignments": 72,
+    "expanded_edge_inequalities": 50484,
+    "native_solver_calls": 0
+  },
+  "input_sha256": {
+    "hadwiger_nelson_moser_all_terminal_contacts/certificate.json": "bddb9275204535cccce1d66bd2ad1415040a6807fdffb7902dec31fd57126a98",
+    "hadwiger_nelson_moser_all_terminal_contacts/build.py": "d8ac6a023a7967bd5ee8b14cdbab2fdc2a45a6e6a2cb738ce7ca5b9be2d70ac7",
+    "hadwiger_nelson_moser_all_terminal_contacts/verify.py": "b4a76e5330780b4035fa912eb984ecd34a707f95525b098834dff1e221baabf1",
+    "hadwiger_nelson_long_terminal_gluing/certificate.json": "26206782c1937d481d06e05ed95284405a188c66c1073a48a8d30dd537b0a830",
+    "hadwiger_nelson_long_terminal_gluing/build.py": "93a1bda2390834c683a31431dbcdefac0a21e0b895c0063f81b2af038b11667c",
+    "hadwiger_nelson_long_terminal_gluing/verify.py": "61c91721d8764a743fa0ffc8a5a3b08e39402d09ea36857125f4353c3c38a7db",
+    "hadwiger_nelson_nonmono159_214_lowden2/points159.tsv": "4f72fa06d18434472ce77cebe38880333694ec04b94945ede073a4a1c6d5bc02",
+    "hadwiger_nelson_nonmono159_214_lowden2/points214.tsv": "97c9b3a964ed19874ae3fe932eb8c085fd637f618d2481fffaebbd1fbae55c2f"
+  },
+  "parent_source_commit": "061fb2c248515bf6c7385304d2ea53187de4a44c",
+  "positive_extension_source_commit": "91fbc8611c732752b51251df14bfc882da524807",
+  "parent_independent_acceptance": {
+    "artifact": "bafkreigniftrx5mznvw5e2vrxwmenvoets5tddzlksupo4ahfapfm5owye",
+    "height": 3248,
+    "source_commit": "718ea05190116e46a15a100f37ca96afd98a9fad",
+    "scope": "Parent spindle-disjoint theorem and its proof ingredients; does not review this new strengthening."
+  },
+  "python": "3.11.2",
+  "threads_per_audit": 1,
+  "independent_replays_run_concurrently": true,
+  "peak_memory_measured": false,
+  "native_solver_calls": 0,
+  "full_gadget_placement_graph_constructed": false,
+  "placement_census_started": false,
+  "abstract_list_removal_cases_are_not_placement_census": true,
+  "negative_terminal_forcing_premise": false,
+  "omitted_large_certificate": false,
+  "external_review": "Pending for this new strengthening. Parent was independently accepted at3248.",
+  "target_found": false,
+  "next_phase_started": false,
+  "background_jobs": [],
+  "primary_record_calibration": "2026-09-06: Parts2010.12665v2 and Haugland2608.04542v4 report509 vertices.",
+  "late_teammate_publication": {
+    "package": "hadwiger_nelson_heule514_profile_pilot",
+    "source_commit": "7ce051c2e6bae4ccdedd31880418a7ade9505181",
+    "closed_cores": 181562,
+    "unresolved_cores": 8974,
+    "unresolved_by_order": {
+      "507": 817,
+      "508": 8157
+    },
+    "used_as_mathematical_premise": false
+  }
+}
