@@ -1,0 +1,114 @@
+{
+  "full_replay": {
+    "checker_seconds": 1104.6896900860265,
+    "clause_range": [
+      22408,
+      22604
+    ],
+    "complete_cases": 348,
+    "covered_original_cases": 696,
+    "kernel_edge_variables": 296,
+    "max_checker_key": [
+      15,
+      6
+    ],
+    "max_checker_seconds": 15.48810705300275,
+    "max_solver_key": [
+      15,
+      6
+    ],
+    "max_solver_seconds": 19.677444135999394,
+    "newly_excluded_original_cases": 348,
+    "physical_free_edges": 413,
+    "proof_bytes": 1628429698,
+    "runs_sha256": "aed5a38b23618cae332bfa9eb8a8ce1b9eed777b4c92f30a2e35ea0ac89d3c68",
+    "solver_seconds": 1488.008951650001,
+    "status": "VERIFIED_COMPLETE_TWENTY_FOUR_EDGE_TYPE126_DENSITY116_EXCLUSION",
+    "unconstrained_outside_edges": 117
+  },
+  "independent_global": {
+    "active_vertices": 40,
+    "cases": 348,
+    "kernel_edge_variables": 296,
+    "manifest_sha256": "42e4692b75d87d3a34345238da60502d77c1b62b6ce20699473ff4e24f9c0a00",
+    "optimized_output_equal": true,
+    "physical_free_edges": 413,
+    "status": "VERIFIED_GLOBAL_RECONSTRUCTION_TRANSPORT_AND_CNF_SEMANTICS",
+    "total_distinct_clauses": 7826830,
+    "transport_checks": 628488,
+    "unconstrained_outside_edges": 117
+  },
+  "independent_local": {
+    "dense_models": [
+      7166538,
+      9610677
+    ],
+    "density_histogram": {
+      "102": 3,
+      "103": 44,
+      "104": 190,
+      "105": 343,
+      "106": 284,
+      "107": 109,
+      "108": 20,
+      "109": 2
+    },
+    "fixed_red_base": 97,
+    "free_edges": 24,
+    "minimal_clauses": 40,
+    "model_sha256": "272dc97a9946ae31e6e032511e0af7c621bd526fc351c3cc620db776151dfe54",
+    "optimized_output_equal": true,
+    "status": "VERIFIED_LOCAL_24_EDGE_FAMILY",
+    "valid_local_fillings": 995
+  },
+  "lrat_checks": [
+    {
+      "clauses": 22516,
+      "key": [
+        0,
+        0
+      ],
+      "lrat_bytes": 10991500,
+      "lrat_sha256": "0de8b0f2ebc89c9e7facf6d85698ac9f6a86bd929a6b3cc26b123f4a6ce2de74",
+      "status": "VERIFIED"
+    },
+    {
+      "clauses": 22408,
+      "key": [
+        24,
+        7
+      ],
+      "lrat_bytes": 14517213,
+      "lrat_sha256": "c9fdb95c0408e96620689bc95baf716cc0766a444200381e20970da64d9d6bb7",
+      "status": "VERIFIED"
+    },
+    {
+      "clauses": 22604,
+      "key": [
+        27,
+        5
+      ],
+      "lrat_bytes": 14962049,
+      "lrat_sha256": "6e803fa647507ee91eb6d42a7eb20aff46e7619c9c817fd379362a815c79f0fc",
+      "status": "VERIFIED"
+    }
+  ],
+  "source": {
+    "commit": "92335c457b35f47ead428ba79a834ded1637233e",
+    "manifest_sha256": "42e4692b75d87d3a34345238da60502d77c1b62b6ce20699473ff4e24f9c0a00",
+    "public_commit_verified": true,
+    "public_raw_manifest_verified": true,
+    "target_contribution": "bafkreien3d45yahv6agzetbk2za6uebgbznsusvkpxevxspax6dpjrd4m4"
+  },
+  "tools": {
+    "compiler": "c++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "drat_trim_binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+    "drat_trim_source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "kissat_binary_sha256": "9193d0d788f70d11046c7e965657c7096c9471ea96db2552a7d1544e925307cb",
+    "kissat_source_commit": "8af8e56f174b778aef3aa45af9f739b2a5f492c2",
+    "kissat_version": "4.0.4",
+    "lrat_check_binary_sha256": "fb7e9f57ee5849afaa35e9d967e27a72cd76bad7aa72ee0499dc65207c08c4a7",
+    "python": "3.11.2"
+  },
+  "verdict": "ACCEPT_HIGH_CONFIDENCE_SCOPED"
+}
