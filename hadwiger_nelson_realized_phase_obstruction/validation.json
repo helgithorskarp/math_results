@@ -1,0 +1,57 @@
+{
+  "checked_at": "2026-09-06T16:47:09.778581+00:00",
+  "python": "3.11.2",
+  "dependencies": "Python standard library only",
+  "primary_approach": "construction-counterexample",
+  "producer": {
+    "status": "PASS",
+    "vertices": 74,
+    "edges": 198,
+    "mixed_points": 6,
+    "positive_search_nodes": 75,
+    "certificate_bytes": 1935,
+    "certificate_sha256": "e21c45ca9ebf3bb33c2ed4d74c24a1c69188ff5c29c50cc4c19532863a79b207",
+    "seconds": 0.6379144980001001
+  },
+  "normal_and_optimized_reports_match": true,
+  "certificate_regenerates_byte_for_byte": true,
+  "checker_arithmetic": "Quadratic tower Q(sqrt3)[eta]/(eta^2-2sqrt3), independent of producer monomial reduction eta^4=12.",
+  "universal_claims": "Explicit written intersection/continuity proof, even-path list obstruction, and bipartite double-cover argument using accepted four-clause classification.",
+  "finite_claims": "Exact 74-point kernel, full 198-edge four-colouring with prescribed pins, root truth tables and explicit list-obstruction path.",
+  "source_context": [
+    {
+      "package": "hadwiger_nelson_paired_circle_four_clauses",
+      "source_commit": "c13f31a5d2885a847709f8daa83fbad847189a5b",
+      "role": "The four-clause classification is a dependency of the regular independent-phase transfer lemma."
+    },
+    {
+      "package": "hadwiger_nelson_paired_circle_four_clauses_review1",
+      "source_commit": "3980a28c154cbb11cc36ba055903532f85ef8c56",
+      "role": "Independent acceptance and realizability/repair question."
+    },
+    {
+      "package": "hadwiger_nelson_paired_circle_kernel",
+      "source_commit": "1f9787f88ecf05469906f8ba9a6eaab010434791",
+      "role": "Definition of the actual kernel and sufficient lists, repeated here."
+    },
+    {
+      "package": "hadwiger_nelson_shared_midpoint_review1",
+      "source_commit": "22fb98963667549ae52625cbc0df0ccfe73078f6",
+      "role": "Separate retired family, newly accepted."
+    },
+    {
+      "package": "hadwiger_nelson_heule560_global_decision",
+      "source_commit": "bff36887d06f5fdbf017380148419da5ce8f0935",
+      "role": "Coordination only; separate fixed-support lane."
+    },
+    {
+      "package": "hadwiger_nelson_heule560_global_decision_review1",
+      "source_commit": "61b67bd47654103d5a3a9fcea7410da3576aa74d",
+      "role": "Coordination only; accepted scoped no-go decision."
+    }
+  ],
+  "external_review": "pending for this new result",
+  "priority_claim": false,
+  "full_support_colouring_claimed": false,
+  "target_found": false
+}
