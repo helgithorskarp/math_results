@@ -1,0 +1,17 @@
+{
+  "milestone": "Complete optional-P4 list-extension projection for the H514 residual family",
+  "frozen_at": "2026-09-06T05:19:08.594457+00:00",
+  "parent_commit": "7eda14a94d91709c94d59dbcdcdc2fb9378b1435",
+  "scope": "One relation/certificate phase only. No native graph query or residual-frontier continuation.",
+  "finite_domain": {
+    "selection_masks": 16,
+    "lists_per_vertex": 8,
+    "vertices": 4,
+    "states": 65536
+  },
+  "producer": "Dynamic programming on selected path components; derive maximal-bad-list interval clauses.",
+  "checker": "Exhaust all 3^|T| assignments independently for every local state; verify witness reconstruction, complete clause equivalence and all prime-clause one-literal controls.",
+  "geometric_bridge": "Reconstruct exact H514 geometry and check explicit singleton-deletion colourings for origin and all 15 old path neighbours. Apply relation to every parent residual omission set by the published free-set theorem; no re-enumeration.",
+  "claim_limit": "Exact existential elimination of the four added vertices, not a four-colourability or target-graph decision.",
+  "stop_rule": "Publish verified complete relation, boundary certificates, exact specification and reproducible source; checkpoint and yield before graph queries."
+}
