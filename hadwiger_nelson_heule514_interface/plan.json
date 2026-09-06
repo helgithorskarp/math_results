@@ -1,0 +1,23 @@
+{
+  "frozen_at": "2026-09-06T04:31:22.451078+00:00",
+  "milestone": "One simultaneous target-order decision for H510 with every mixed-neighbour centre in the published122-point fresh frontier",
+  "centres": [
+    170,
+    436,
+    1239,
+    1527
+  ],
+  "predetermined_support_order": 514,
+  "candidate_order": 508,
+  "omissions_at_least": 6,
+  "selection_rule": "Published centres outside U553 and A1111 of degree>=4 in H510 having at least one L and one S neighbour. No degree escalation or later centre added.",
+  "input_positive_rows": 963,
+  "transport_policy": "Restrict every checked H517 colouring to its first510 entries. Extend over the four new vertices by exhaustive proper partial colouring, maximizing retained new vertices, then lexicographic string (. last). Greedily extend omitted H510 vertices in increasing L then S order. Check complete result.",
+  "master": "SAT omission formula over514 vertices, at least6 omissions, and one negative containment clause per checked positive cut;100000 conflicts per call. SAT omissions give the first6 selected omission indices as a508-vertex candidate.",
+  "native_queries_max": 64,
+  "native_conflicts_per_query": 100000,
+  "address_space_bytes": 4294967296,
+  "positive_policy": "Decode full candidate colouring and check every exact edge. Greedily extend all omitted L then S vertices. Recheck full colouring; append only a verified positive cut.",
+  "negative_policy": "Any master UNSAT is a coverage hint pending independent positive-cover certification. Any native UNSAT candidate needs fresh exact CNF, Kissat seed0 bounded by1000000 conflicts/180s, completed DRAT check and a checked five-colouring before a target claim.",
+  "stop_policy": "Certified whole-family closure, certified target, UNKNOWN, or64 native queries. Preserve exact source, witnesses and residual formula; publish warranted result and yield. No next support or deletion ladder this pass."
+}
