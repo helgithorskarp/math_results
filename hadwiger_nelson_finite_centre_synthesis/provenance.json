@@ -1,0 +1,20 @@
+{
+  "paper": {
+    "url": "https://arxiv.org/pdf/1805.00157",
+    "sha256": "dc3a0eba536537e2638f99ffd648554f36e64b6a78fadd475b8f8cccc2867335",
+    "seed": "G51, Section4, page7 of12; coordinate table extracted and 51rows checked",
+    "coordinate_convention": "x=(a sqrt3+b sqrt11)/36,y=(c+d sqrt33)/36"
+  },
+  "python": "3.12.14",
+  "python_sat": "1.9.dev15",
+  "solver": "Glucose3 bundled with PySAT",
+  "synthesis_seconds": 44.934,
+  "selection": "Prefer four represented neighbour colours, then higher degree, then smaller coefficient bit-length sum, then lexicographic coordinates. All eligible candidates have at least three represented colours.",
+  "cap": 1024,
+  "additions": 973,
+  "stop_reason": "cap_reached",
+  "candidate_pool_at_stop": 4740,
+  "next_phase_started": false,
+  "bounded_run_complete": true,
+  "claim_status": "Exact finite positive colouring certificate; no family-level exclusion and no forcing gadget."
+}
