@@ -1,0 +1,140 @@
+{
+  "status": "SEPARATOR18_ARITHMETIC_CERTIFICATE",
+  "vertices": 43,
+  "minimum_degree_at_least": 18,
+  "clique_number_at_most": 4,
+  "independence_number_at_most": 4,
+  "separator_orders": [
+    0,
+    17
+  ],
+  "component_order_bounds_by_independence": {
+    "1": 4,
+    "2": 13,
+    "3": 24
+  },
+  "rows": [
+    {
+      "separator": 15,
+      "components": [
+        [
+          4,
+          1
+        ],
+        [
+          24,
+          3
+        ]
+      ],
+      "rule": "clique_common_neighbors",
+      "clique_order": 4,
+      "common_neighbor_lower": 15,
+      "common_neighbor_upper": 0
+    },
+    {
+      "separator": 16,
+      "components": [
+        [
+          3,
+          1
+        ],
+        [
+          24,
+          3
+        ]
+      ],
+      "rule": "clique_common_neighbors",
+      "clique_order": 3,
+      "common_neighbor_lower": 16,
+      "common_neighbor_upper": 4
+    },
+    {
+      "separator": 16,
+      "components": [
+        [
+          4,
+          1
+        ],
+        [
+          23,
+          3
+        ]
+      ],
+      "rule": "clique_common_neighbors",
+      "clique_order": 4,
+      "common_neighbor_lower": 12,
+      "common_neighbor_upper": 0
+    },
+    {
+      "separator": 17,
+      "components": [
+        [
+          2,
+          1
+        ],
+        [
+          24,
+          3
+        ]
+      ],
+      "rule": "clique_common_neighbors",
+      "clique_order": 2,
+      "common_neighbor_lower": 17,
+      "common_neighbor_upper": 13
+    },
+    {
+      "separator": 17,
+      "components": [
+        [
+          3,
+          1
+        ],
+        [
+          23,
+          3
+        ]
+      ],
+      "rule": "clique_common_neighbors",
+      "clique_order": 3,
+      "common_neighbor_lower": 14,
+      "common_neighbor_upper": 4
+    },
+    {
+      "separator": 17,
+      "components": [
+        [
+          4,
+          1
+        ],
+        [
+          22,
+          3
+        ]
+      ],
+      "rule": "clique_common_neighbors",
+      "clique_order": 4,
+      "common_neighbor_lower": 9,
+      "common_neighbor_upper": 0
+    },
+    {
+      "separator": 17,
+      "components": [
+        [
+          13,
+          2
+        ],
+        [
+          13,
+          2
+        ]
+      ],
+      "rule": "two_saturated_components",
+      "outside_vertex_exists": true,
+      "red_neighbors_in_each_at_most": 8,
+      "blue_neighbors_in_each_at_least": 5,
+      "blue_pair_in_each": true
+    }
+  ],
+  "whole_separator_branch_excluded": true,
+  "classifies_separators_of_order18": false
+}
