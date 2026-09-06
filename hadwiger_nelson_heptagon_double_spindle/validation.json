@@ -1,0 +1,78 @@
+{
+  "python": "3.11.2",
+  "threads": 1,
+  "peak_memory": "not measured",
+  "build": {
+    "seconds": 1.038969678003923
+  },
+  "audit": {
+    "status": "H+M+M AND ALL ITS SUBGRAPHS ARE FOUR-COLOURABLE",
+    "independent_distance_method": "Every pair directly in characteristic zero; no modular filter",
+    "unordered_M_pairs_checked": 28,
+    "distinct_M_pair_sums": 26,
+    "duplicate_unordered_pair_classes": [
+      [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          6
+        ],
+        [
+          4,
+          5
+        ]
+      ]
+    ],
+    "full_supports_compared": 1,
+    "full_unit_graphs_compared_entrywise": 1,
+    "full_pair_norm_checks": 135981,
+    "formal_HMM_labels_compared": 1029,
+    "HN_labels_compared": 546,
+    "full_colour_edge_checks": 2436,
+    "factor_edge_images": 2434,
+    "extra_mixed_edges": 2,
+    "collision_H_labels": [
+      0,
+      7,
+      14
+    ],
+    "extra_edge_H_labels": [
+      7,
+      14
+    ],
+    "N_colour_edge_checks": 69,
+    "zero_N_point_has_colour_zero": true,
+    "all_nonfactor_constraints_use_only_the_normalized_H_triangle": true,
+    "every_proper_H_four_colouring_extends": true,
+    "target_supports_and_edge_lists_compared_entrywise": 210,
+    "target_restriction_colour_edge_checks": 445479,
+    "target_spindle_embeddings_checked": 210,
+    "normalized_three_colour_assignments_rejected": 81,
+    "invalid_inputs_or_colourings_rejected": 5,
+    "native_solver_calls": 0,
+    "seconds": 43.426916727999924
+  },
+  "prototype_seconds": 0.6532970069965813,
+  "prototype_graph_and_colouring_compared_entrywise": true,
+  "strengthened_certificate_graph_and_restriction_streams_unchanged": true,
+  "input_sha256": {
+    "../hadwiger_nelson_heptagon_moser_sum/field.py": "55d016633f1c18cece1a94edf90c97a6bafc7d0aec99b31dad355f1df86e1678",
+    "../hadwiger_nelson_heptagon_moser_sum/rotation_family.py": "b50bb681cec9dd60383dc48dc43a41a2c34aa25f9fde3b8164998535c17c6131",
+    "../hadwiger_nelson_heptagon_moser_sum/audit.py": "2fd16a572c14ab8903ce97fe34c860ddd1c49b086d868e06cd5c3f8e4bc9e6d7",
+    "../hadwiger_nelson_heptagon_moser_sum/contacts_audit.py": "ed2da482fa8b8911aebf16038a449c0c8537162e0c7dcf50b57f022a194a0a92",
+    "../hadwiger_nelson_heptagon_difference_lifts/geometry.py": "67599414c9cabc9e1e9f0100907c3c039200deea4ffd935cb6ba09d67c57ef07"
+  },
+  "scope": "Every proper four-colouring of H extends to the complete522-point H+M+M unit graph. All its subgraphs are four-colourable, including210 specified host omissions with470\u2013494 vertices. No rotated/translated second summand or higher sum is covered.",
+  "native_solver_calls": 0,
+  "external_review": "Pending for this new theorem; the distinct implementations are author-run.",
+  "target_found": false
+}
