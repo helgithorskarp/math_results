@@ -1,5 +1,10 @@
 # A four-chromatic 143-point heptagon–Moser-spindle sum
 
+**Subsequent common-neighbour reduction:** [COMMON_NEIGHBOUR.md](COMMON_NEIGHBOUR.md)
+closes every mixed contact with a unit H difference and bounds the
+remaining possible non-four-colourable rotations by 11424. That remaining
+set has not been enumerated. The earlier milestone retains its scope.
+
 **Subsequent all-collision closure:** [COLLISIONS.md](COLLISIONS.md) proves
 that no further collision rotations exist beyond the 252 already closed.
 Injective sums with contacts at unequal factor lengths remain open.

@@ -1,5 +1,10 @@
 # Every collision orientation of the heptagon–spindle sum is four-chromatic
 
+**Subsequent common-neighbour reduction:** [COMMON_NEIGHBOUR.md](COMMON_NEIGHBOUR.md)
+closes every mixed contact with a unit H difference and bounds the
+remaining possible non-four-colourable rotations by 11424. That remaining
+set has not been enumerated. The earlier milestone retains its scope.
+
 **Theorem.** Fix exactly the H and M of [PROOF.md](PROOF.md), with 21 and
 7 points respectively. For |r|=1, the sum map
 
