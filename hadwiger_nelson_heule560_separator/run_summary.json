@@ -1,0 +1,41 @@
+{
+  "all_sat_solver": "Glucose 4.1 (g4)",
+  "background_processes": [],
+  "frozen_plan_sha256": "c2d96e718dce323399c495aaf8b8d29c50602cf6ed34da01a15cdb51bde1cd69",
+  "go_no_go": "GO for a separate bounded 72-state selector-relation phase; no unchanged template or QBF loop",
+  "next_phase_started": false,
+  "phases": {
+    "full": {
+      "all_sat_calls": 21,
+      "enumeration_seconds": 1.479368367989082,
+      "enumeration_stats": {
+        "conflicts": 23617,
+        "decisions": 29020,
+        "propagations": 3835373,
+        "restarts": 34
+      },
+      "proof_and_first_check_seconds": 1.7958256799902301,
+      "states": 20,
+      "status": "COMPLETE_DRAT_VERIFIED"
+    },
+    "mandatory": {
+      "all_sat_calls": 73,
+      "enumeration_seconds": 1.7033714299905114,
+      "enumeration_stats": {
+        "conflicts": 24108,
+        "decisions": 32267,
+        "propagations": 4101665,
+        "restarts": 100
+      },
+      "proof_and_first_check_seconds": 2.1996366450039204,
+      "states": 72,
+      "status": "COMPLETE_DRAT_VERIFIED"
+    }
+  },
+  "proof_checker": "drat-trim; exit0 and exact s VERIFIED",
+  "proof_solver": "Kissat 4.0.4; seed=0; conflicts<=2000000; time<=120s",
+  "python": "3.11.2",
+  "python_sat": "1.8.dev24",
+  "record_improvement": false,
+  "whole560_family_closed": false
+}
