@@ -269,8 +269,19 @@ with 34,300 variables and 617,832 clauses. All four return **UNKNOWN at
 exclusion. The **17 classes /9,153 labels remain open**, including the
 1,944 labels in these four cases. The new universal transfer awaits
 independent review. No higher cap, other core or new major phase is begun.
-The next distinct direction is a complete structural split by empty-signature
-multiplicity in a residual full extension, retaining all proved guards.
+The subsequent [Core194 multiplicity reduction](../ramsey_r55_order3_eleven_core194_multiplicity)
+proves that **Core194 must have at least two empty fixed signatures**.
+All four intrinsic anchors apply. Under exactly one empty, literal red K4
+witnesses forbid signatures of size at least three, while the anchor and
+sharp pair inequalities force each singleton once and exactly five of six
+pairs once. A complete48,620-vector count audit gives six sorted patterns.
+Each full pattern formula has a refutation replayed twice; the complementary
+multiple-empty formula returns UNKNOWN at20 seconds. The six cases are
+subdivisions of the same81-label class. **All17 full classes /9,153 labels
+remain open**, with no new whole exclusion. The new rigidity and full
+branch closure await independent review. This milestone ends before a
+possible next full color split on the edge between the first two empty
+fixed vertices; the one-empty branch is finished and must not be reopened.
 The last order-five type
 `1^3 5^8` is excluded by the two certified full-extension formulas in
 [`ramsey_r55_no_order5_automorphism`](../ramsey_r55_no_order5_automorphism),
