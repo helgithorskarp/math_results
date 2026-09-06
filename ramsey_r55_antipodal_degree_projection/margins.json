@@ -1,0 +1,82 @@
+{
+  "block_censuses": [
+    {
+      "additional_permuted_flow_checks": 51,
+      "balanced_pairs_flow_checked": 11483,
+      "canonical_column_vectors": 495,
+      "canonical_row_vectors": 495,
+      "columns": 8,
+      "feasible_margin_count_stream_sha256": "4a52f76c41cfdaf24d96bb4739fdc44c933450e32139156d5193a0b68ac45040",
+      "feasible_margin_pairs": 5108,
+      "labeled_matrix_census": 4294967296,
+      "margin_pairs_checked": 245025
+    },
+    {
+      "additional_permuted_flow_checks": 93,
+      "balanced_pairs_flow_checked": 21773,
+      "canonical_column_vectors": 715,
+      "canonical_row_vectors": 715,
+      "columns": 9,
+      "feasible_margin_count_stream_sha256": "4bbeebfd5cd4acd7d912d03dfecfe401aaca95e98ab89c6749021d826f6e1269",
+      "feasible_margin_pairs": 9362,
+      "labeled_matrix_census": 68719476736,
+      "margin_pairs_checked": 511225
+    }
+  ],
+  "method": "independent matrix-orbit DP versus every canonical margin pair",
+  "negative_controls": {
+    "corrupted_certificate_rejections": 1,
+    "infeasible_examples_checked": 5,
+    "noninteger_rejections": 4,
+    "singleton_insufficiency_example": {
+      "certificate": {
+        "kind": "subset",
+        "lhs": 8,
+        "rhs": 6,
+        "rows": [
+          0,
+          1
+        ]
+      },
+      "columns": [
+        3,
+        3,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rows": [
+        4,
+        4,
+        0,
+        0
+      ]
+    }
+  },
+  "scope": "binary degree blocks only; not a Ramsey graph census or SAT verdict",
+  "small_literal_censuses": [
+    {
+      "canonical_column_vectors": 5,
+      "columns": 1,
+      "literal_matrices": 16
+    },
+    {
+      "canonical_column_vectors": 15,
+      "columns": 2,
+      "literal_matrices": 256
+    },
+    {
+      "canonical_column_vectors": 35,
+      "columns": 3,
+      "literal_matrices": 4096
+    },
+    {
+      "canonical_column_vectors": 70,
+      "columns": 4,
+      "literal_matrices": 65536
+    }
+  ]
+}

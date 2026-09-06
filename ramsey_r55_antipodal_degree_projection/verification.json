@@ -1,0 +1,123 @@
+{
+  "blocks": [
+    {
+      "left": [
+        39,
+        40,
+        41,
+        42
+      ],
+      "right": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "left": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "right": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "left": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "right": [
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ]
+    }
+  ],
+  "descriptor_mutations_rejected": [
+    "change_bound",
+    "change_degree",
+    "change_density",
+    "drop_balance",
+    "drop_cut",
+    "drop_outside_equation"
+  ],
+  "fixed_pairs": 276,
+  "fixture": {
+    "changed_edges": 16,
+    "changed_full_K5_example": {
+      "lifted": "red",
+      "original": null,
+      "vertices": [
+        2,
+        3,
+        15,
+        26,
+        34
+      ]
+    },
+    "lifted_K5": {
+      "blue": 171,
+      "red": 466
+    },
+    "lifted_sha256": "0c492719ffa721cb1fb11464d362ca5993e310b5d5356adcad84e6d8ccb3fc34",
+    "neighborhood_clause_violations_both": 202,
+    "original_K5": {
+      "blue": 211,
+      "red": 442
+    },
+    "scope": "fixture tests lifting; neither graph satisfies the projected Ramsey subsystem",
+    "six_neighborhood_hashes": {
+      "0-0": "25a3d6315c5d4a89ed0b601d31073cb59ff0557399e81cc78fb841fd14be468a",
+      "0-1": "968d06cbca8edde9b788b2b09cb23eb149508271fc3190c962a177a0421f8548",
+      "1-0": "8d3ac8d5517e7c9a0d3524c3a72d3530db2f6c9efb796299779d92ba5fd60a75",
+      "1-1": "7d18622fd7596d75b8e43cebdedd5af963e2c8c1f63e8e23ec2b175397fce648",
+      "38-0": "d62da3e4959eec2ca92ca24113ee0878c0f3e18f8e5624270aab693217b96af9",
+      "38-1": "7859b3a48929fb20b68d61b32736bd2185eaabacdb6523e894be66b0bb74acfc"
+    }
+  },
+  "neighborhood_clauses": 70848,
+  "neighborhood_cnf_sha256": "ece2f0c1a0ebf7f43fee80bd848b0ff082602e91f36bdc9946cff230e8a4ac25",
+  "physical_condition_counts": {
+    "0-0-opposite_inside": 6432,
+    "0-0-through_root": 2313,
+    "0-1-opposite_inside": 8164,
+    "0-1-through_root": 3133,
+    "1-0-opposite_inside": 6240,
+    "1-0-through_root": 2367,
+    "1-1-opposite_inside": 8736,
+    "1-1-through_root": 2977,
+    "38-0-opposite_inside": 26334,
+    "38-0-through_root": 7315
+  },
+  "prior_formula_comparison": null,
+  "prior_free_pairs": 627,
+  "projection_json_sha256": "0a5407af70b1711597b9bdd7a46753c78ee33a297f4812fc9b271172d6c2331a",
+  "removed_pairs": 104,
+  "retained_free_pairs": 523,
+  "status": "EXACT_PROJECTION_SCHEMA_AND_PHYSICAL_CLAUSES_CHECKED",
+  "trust": "unformalized proof plus independent in-process algorithms; no external review or SAT/UNSAT verdict"
+}
