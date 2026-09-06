@@ -1,0 +1,101 @@
+{
+  "status": "COMPLETE: common proper four-colouring; all covered terminal-only A159 assemblies four-colourable",
+  "scope": "Fixed Moser spindle, every equilateral sqrt7 triangle with one vertex having at least two distinct M unit neighbours and a different vertex having at least one. Full-gadget lifting requires private interiors and all new edges confined to M plus terminals.",
+  "proof_method": "Outward integer/rational interval enclosures plus positive colouring and analytic circle coverage/gluing.",
+  "exact_distinct_geometric_point_or_triangle_count_claimed": false,
+  "producer": {
+    "bits": 128,
+    "scale": "2^128",
+    "result": {
+      "bits": 128,
+      "spindle_pairs": 21,
+      "labelled_double_contact_points": 42,
+      "second_anchor_cases": 294,
+      "absent_cases": 240,
+      "two_intersection_cases": 54,
+      "labelled_triangles": 216,
+      "labelled_points": 655,
+      "enclosure_clusters": 189,
+      "conservative_edges": 239,
+      "distinct_cluster_triples": 128,
+      "data_sha256": "c832391badb45c56290e16c6011525a5079ea741f7adb00272449757cb35208e"
+    },
+    "seconds": 0.3544840250106063
+  },
+  "direct_audit": {
+    "same_colour_nonunit_checks": 61051,
+    "different_colour_distinctness_checks": 153134,
+    "arithmetic_controls": 17,
+    "rejection_controls": 4,
+    "exact_all_contact_fixture_checks": 7,
+    "status": "PASS",
+    "decimal_digits": 45,
+    "points": 655,
+    "all_pairs": 214185,
+    "nonmono_triangles": 216,
+    "coordinate_enclosure_comparisons": 1310,
+    "seconds": 15.436145778017817
+  },
+  "certificate": {
+    "bytes": 1153,
+    "sha256": "0b8842523c17bd2f8e1172e2bf422ed43bca2adb9aa43c47091817fb98c80a88"
+  },
+  "discovery_original": {
+    "solver": "CaDiCaL 1.9.5",
+    "python_sat": "1.8.dev24",
+    "queries": 1,
+    "conflict_cap": 100000,
+    "variables": 756,
+    "clauses": 2791,
+    "status": "SAT",
+    "solver_stats": {
+      "restarts": 0,
+      "conflicts": 0,
+      "decisions": 0,
+      "propagations": 0
+    },
+    "seconds": 0.365145323012257
+  },
+  "discovery_replay": {
+    "solver": "CaDiCaL 1.9.5",
+    "python_sat": "1.8.dev24",
+    "queries": 1,
+    "conflict_cap": 100000,
+    "variables": 756,
+    "clauses": 2791,
+    "status": "SAT",
+    "solver_stats": {
+      "restarts": 0,
+      "conflicts": 0,
+      "decisions": 0,
+      "propagations": 0
+    },
+    "seconds": 0.35761699700378813
+  },
+  "discovery_replay_certificate_identical": true,
+  "floating_prototype_native_queries": 1,
+  "exact_native_queries": 1,
+  "exact_native_replay_queries": 1,
+  "total_physical_native_queries": 3,
+  "proof_replay_native_queries": 0,
+  "python": "3.11.2",
+  "threads": 1,
+  "peak_memory_measured": false,
+  "inherited_extension_source_commit": "91fbc8611c732752b51251df14bfc882da524807",
+  "inherited_extension_replayed": true,
+  "relevant_A_assignments_checked": 60,
+  "relevant_A_edge_inequalities": 38760,
+  "input_sha256": {
+    "hadwiger_nelson_nonmono159_214_lowden2/points159.tsv": "4f72fa06d18434472ce77cebe38880333694ec04b94945ede073a4a1c6d5bc02",
+    "hadwiger_nelson_long_terminal_gluing/certificate.json": "26206782c1937d481d06e05ed95284405a188c66c1073a48a8d30dd537b0a830",
+    "hadwiger_nelson_long_terminal_gluing/build.py": "93a1bda2390834c683a31431dbcdefac0a21e0b895c0063f81b2af038b11667c",
+    "hadwiger_nelson_long_terminal_gluing/verify.py": "61c91721d8764a743fa0ffc8a5a3b08e39402d09ea36857125f4353c3c38a7db"
+  },
+  "large_omitted_certificate": false,
+  "negative_solver_claim": false,
+  "target_found": false,
+  "external_review": "Pending; distinct checker is author-run.",
+  "next_phase_started": false,
+  "background_jobs": [],
+  "primary_sources_checked": "2026-09-06; https://arxiv.org/html/2010.12665v2 and https://arxiv.org/html/2608.04542v4; 509 record unchanged in these sources."
+}
