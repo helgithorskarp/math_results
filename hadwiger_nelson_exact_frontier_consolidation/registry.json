@@ -1,0 +1,353 @@
+{
+  "format": 1,
+  "title": "Scope-aware consolidation of exact Hadwiger-Nelson exclusions",
+  "record_improvement": false,
+  "new_candidate_searches": 0,
+  "snapshot_commit": "a1aa6a2e28fd156abe98ce8236922527c6252fcc",
+  "graph_cutoff": 3840,
+  "target_vertices_at_most": 508,
+  "root_problem_ref": "bafkreicj6dz3yq4yfla3nlhcx2ah4gskbe63mk4ayl7mzfep7ppu2jnv3a",
+  "scope_policy": "A rule applies only after its hypotheses are proved for the intended point set and edge relation. Failure to trigger a rule is unresolved, never positive chromatic evidence.",
+  "entries": [
+    {
+      "id": "inertia",
+      "directory": "hadwiger_nelson_inertial_field_barrier",
+      "scope_kind": "whole_field",
+      "original_source_commit": "b0c50ccb772029a11d0ae9498aeef230cd414909",
+      "contribution_ref": "bafkreiglwo2ky22qpljeuuaanz5wab5jo2jnswfhled6oxjd2kreytueiq",
+      "contribution_height": 3717,
+      "hypotheses": "Physical conjugation lies in inertia at some finite place of the conjugation-stable embedded number field.",
+      "conclusion": "Every strict unit-distance graph on any translated or similar subset has chi<=2 at residue characteristic2, and chi<=3 otherwise.",
+      "does_not_cover": "Does not cover arbitrary CM fields or extensions adjoining new elements; lack of such a place is not a positive signal.",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_inertial_field_barrier",
+      "principal_proof": {
+        "path": "hadwiger_nelson_inertial_field_barrier/README.md",
+        "bytes": 14821,
+        "sha256": "b7f27c3c63478bd54734afb295c3b12e37903982054a6f05d5ce3248e2e93881"
+      },
+      "source_manifest": {
+        "path": "hadwiger_nelson_inertial_field_barrier/SHA256SUMS",
+        "bytes": 548,
+        "sha256": "03bbfca38479df2919175e7d418a8ec82c15218be48229ced32ac51abb8f11c3"
+      },
+      "review": {
+        "status": "accepted at stated scope",
+        "artifact_ref": "bafkreiabtbhmq6aogw74wfgrntj3w6st6jaahxq5ii7adtlu73lxr7m2ha",
+        "height": 3725,
+        "document": {
+          "path": "hadwiger_nelson_inertial_field_barrier_review1/README.md",
+          "bytes": 7393,
+          "sha256": "dd4cf8cb60a4ded9460e3e716c697073c137bf94ff1dc074344fe8a561f2558f"
+        },
+        "url": "https://github.com/helgithorskarp/math_results/blob/main/hadwiger_nelson_inertial_field_barrier_review1/README.md"
+      }
+    },
+    {
+      "id": "abelian",
+      "directory": "hadwiger_nelson_finite_abelian_lifts",
+      "scope_kind": "abstract_graph_class",
+      "original_source_commit": "f4c1868af89393e5d7ef18413c430f0ebaae62b2",
+      "contribution_ref": "bafkreiabg27svqhv6akxqagd5u6amtymb5q4cv2gfiszedvnzorbexoisy",
+      "contribution_height": 3795,
+      "hypotheses": "The entire proposed edge graph is Cay(A,S), A finite abelian, S=-S excludes0, and its unit-distance drawing is injective.",
+      "conclusion": "Realizability iff the cyclic sign-class factors form an internal direct sum. The abstract graph then has chi<=3. Norm-one Gq is realizable exactly forq=3; abstractG11 has chi5 but no injective plane unit drawing.",
+      "does_not_cover": "Does not bound the strict completion of an arbitrary non-strict drawing, selected edge subgraphs, noninjective maps, or infinite additive groups.",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_finite_abelian_lifts",
+      "principal_proof": {
+        "path": "hadwiger_nelson_finite_abelian_lifts/PROOF.md",
+        "bytes": 8144,
+        "sha256": "f92327589e4d0303fc53db9856aab67e7c59f52c9568db0dbf8cdc96e566b17f"
+      },
+      "source_manifest": {
+        "path": "hadwiger_nelson_finite_abelian_lifts/SHA256SUMS",
+        "bytes": 955,
+        "sha256": "a25b391360715b189de97891a21e06ee3f3fdc2fb1a5f05ed0ab414952ad4e2f"
+      },
+      "review": {
+        "status": "no external review located in inspected committed neighborhoods as of height3840; not a new audit verdict"
+      }
+    },
+    {
+      "id": "triangular",
+      "directory": "hadwiger_nelson_triangular_overlays",
+      "scope_kind": "whole_lattice_union",
+      "original_source_commit": "dd26ed334c602a5814c31e01a98bdbc5e881ba1b",
+      "contribution_ref": "bafkreihgxz4xvtbbztmx5cswx7ur3kkk43zm2hxbczm4ibzlbk24yfv7mi",
+      "contribution_height": 3817,
+      "hypotheses": "The physical point set lies in two unit triangular lattices sharing a vertex.",
+      "conclusion": "The entire strict union has chi<=4 for every relative angle. Bound sharp. The specified253-point patch has1746 exceptional angles:1350 chi3 and396 chi4.",
+      "does_not_cover": "No implication for three or more orientations, disjoint translated full lattices, different scales, or arbitrary sums of lattices.",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_triangular_overlays",
+      "principal_proof": {
+        "path": "hadwiger_nelson_triangular_overlays/PROOF.md",
+        "bytes": 12625,
+        "sha256": "907d4c5803110ba36e1c3d3adaf66cdbf0bfed69f7dd0026b2f1ff2f534ddbed"
+      },
+      "source_manifest": {
+        "path": "hadwiger_nelson_triangular_overlays/SHA256SUMS",
+        "bytes": 621,
+        "sha256": "7b378a73c10d6db8578baa52f992bb37347b6c1f21962610d49959dd35f8f744"
+      },
+      "review": {
+        "status": "accepted at stated scope",
+        "artifact_ref": "bafkreicm2byz5jh253may7fbntuysvynmejfm6ed3etvqk3bjnjxndudce",
+        "height": 3821,
+        "document": {
+          "path": "hadwiger_nelson_triangular_overlays_review1/README.md",
+          "bytes": 5496,
+          "sha256": "9883054c23f23b515a62750591f52482cee770d2e9b72ead2f63a636667a5fb1"
+        },
+        "url": "https://github.com/helgithorskarp/math_results/blob/main/hadwiger_nelson_triangular_overlays_review1/README.md"
+      }
+    },
+    {
+      "id": "snail",
+      "directory": "hadwiger_nelson_snail_dihedral",
+      "scope_kind": "finite_construction_family",
+      "original_source_commit": "dd252d8f830c0a116a053edcfbda694609152d19",
+      "contribution_ref": "bafkreicb5nyjzrmpvafoxr3r3d45tydgbc4kkbwza6qhen626ve5xteboa",
+      "contribution_height": 3777,
+      "hypotheses": "Exactly the frozen29-point seed, a centre and axis selected by an ordered pair of distinct seed vertices, and its stated dihedral-nine closure.",
+      "conclusion": "All812 labelled closures are classified:157 chi3 and655 chi4,271--496 vertices.",
+      "does_not_cover": "Not arbitrary seeds, arbitrary axes, or a universal dihedral construction theorem; labelled counts are not isomorphism counts.",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_snail_dihedral",
+      "principal_proof": {
+        "path": "hadwiger_nelson_snail_dihedral/README.md",
+        "bytes": 5235,
+        "sha256": "bb67d5cb905146a038c29d230590fd31d5292cb8eaa82163334f68e2d8b11dfb"
+      },
+      "source_manifest": {
+        "path": "hadwiger_nelson_snail_dihedral/SHA256SUMS",
+        "bytes": 1192,
+        "sha256": "05bc859f6abd8619e21ab59fcac3734d2f77b1958d30d9f5f07824b0f81990bf"
+      },
+      "review": {
+        "status": "accepted at stated scope",
+        "artifact_ref": "bafkreib6c7dyithywimtspe46npgvvsoj2jbkqgtuf4ajkskzqc74qisoe",
+        "height": 3787,
+        "document": {
+          "path": "hadwiger_nelson_snail_dihedral_review1/REVIEW.md",
+          "bytes": 6513,
+          "sha256": "0d944b4f517dd2cf0b16e3ffd56125755464df5edbc6ec32ebd2e08a41528392"
+        },
+        "url": "https://github.com/helgithorskarp/math_results/blob/main/hadwiger_nelson_snail_dihedral_review1/REVIEW.md"
+      }
+    },
+    {
+      "id": "heptagon_assembly",
+      "directory": "hadwiger_nelson_heptagon_triangle_isometries",
+      "scope_kind": "finite_construction_family",
+      "original_source_commit": "d90753bde487a968800d90a5b66ae52b588bbf0e",
+      "contribution_ref": "bafkreifndnqnvwzqytopgbdbyptat6s4vwchjbjywl2bqt7zdzzlyivit4",
+      "contribution_height": 3807,
+      "hypotheses": "The specified H21 seed and any subset of the35 nonidentity isometries permuting one of its seven fixed seed triangles.",
+      "conclusion": "All2^35 full assemblies have chi4. Exactly34351006520 have<=508 points, with at most507 points. Any seed four-colouring extends.",
+      "does_not_cover": "No recursive application to newly created triangles. Arbitrary partial edge subgraphs have only the upper bound, not necessarily chi4.",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_heptagon_triangle_isometries",
+      "principal_proof": {
+        "path": "hadwiger_nelson_heptagon_triangle_isometries/PROOF.md",
+        "bytes": 7075,
+        "sha256": "5e40dc72a52c65a97c6231662e9def0e3a646ed8847190940f07da3ccc196c45"
+      },
+      "source_manifest": {
+        "path": "hadwiger_nelson_heptagon_triangle_isometries/SHA256SUMS",
+        "bytes": 704,
+        "sha256": "29b144445d7d221c5522db0157f692c4f124f006ff7acac0597fa30af9f09825"
+      },
+      "review": {
+        "status": "no external review located in inspected committed neighborhoods as of height3840; not a new audit verdict"
+      }
+    },
+    {
+      "id": "degrey1581",
+      "directory": "hadwiger_nelson_degrey1581_terminal_cover",
+      "scope_kind": "fixed_host",
+      "original_source_commit": "2fcf486bbe0b09af8bb4094c48ca14ce15bbdcd1",
+      "contribution_ref": "bafkreih7ynv6eqb33smgovf7dkhsnllvczjdhgc5ztsy53scpc3trazm2e",
+      "contribution_height": 3675,
+      "hypotheses": "The candidate is a subgraph of the exact pinned1581-point host, with inherited coordinates and edges.",
+      "conclusion": "Every subgraph through510 vertices is four-colourable;511 separately certified omissions force511 mandatory vertices in any non-four-colourable subgraph.",
+      "does_not_cover": "No global lower bound and no assertion that a511-vertex obstruction exists; moving or adding points changes the host.",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_degrey1581_terminal_cover",
+      "principal_proof": {
+        "path": "hadwiger_nelson_degrey1581_terminal_cover/README.md",
+        "bytes": 11128,
+        "sha256": "f979969a411af634992fe2024ff3c33c2de7054a68662b2879b8fede67bc4b94"
+      },
+      "source_manifest": {
+        "path": "hadwiger_nelson_degrey1581_terminal_cover/SHA256SUMS",
+        "bytes": 1112,
+        "sha256": "9e582f5b621fe5d999933451080a5d9a1eb454b657998e1e8fa2f87671fe8460"
+      },
+      "review": {
+        "status": "accepted at stated scope",
+        "artifact_ref": "bafkreihndtl7cbjerwkg3ao6sxhweqo6pzgtf4rbzxsn2oj4meufkitztm",
+        "height": 3689,
+        "document": {
+          "path": "hadwiger_nelson_degrey1581_terminal_cover_review1/README.md",
+          "bytes": 4008,
+          "sha256": "d08f89a1f665f91e8a8d332e5e9704043bf81018a034566d274a9523b54c26b6"
+        },
+        "url": "https://github.com/helgithorskarp/math_results/blob/main/hadwiger_nelson_degrey1581_terminal_cover_review1/README.md"
+      }
+    },
+    {
+      "id": "t721",
+      "directory": "hadwiger_nelson_t721_weighted_cover",
+      "scope_kind": "fixed_host",
+      "original_source_commit": "b12741b584cf453511f1d8d88db3e4497c6290a2",
+      "contribution_ref": "bafkreieuht6l4x46a65oihaiavxy4mbjt2dkurtit6fgbos5enqpy5snmq",
+      "contribution_height": 3707,
+      "hypotheses": "The candidate is a subgraph of the exact1441-point native T721 spindle host defined by the pinned input.",
+      "conclusion": "Every subgraph through573 vertices is four-colourable.475 mandatory vertices plus an integer weighted-degree bound force at least99 others.",
+      "does_not_cover": "574 is a lower bound inside this host, not an attained minimum or a global plane bound. Native input remains separately pinned and fetchable.",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_t721_weighted_cover",
+      "principal_proof": {
+        "path": "hadwiger_nelson_t721_weighted_cover/README.md",
+        "bytes": 11509,
+        "sha256": "9a677f88b4219c8791304369d3e2052440ac87fbcf5207b355f4201cef8fe75a"
+      },
+      "source_manifest": {
+        "path": "hadwiger_nelson_t721_weighted_cover/SHA256SUMS",
+        "bytes": 1433,
+        "sha256": "ce467622eb373f1334d5dcc1792ffe28cea6bd8add0d566a7a1f9917180cbe22"
+      },
+      "review": {
+        "status": "accepted at stated scope",
+        "artifact_ref": "bafkreif2v7ruvi7fo2fxyhqsfbak7hfptslgqh3btpo5h7nucccr4e26ai",
+        "height": 3713,
+        "document": {
+          "path": "hadwiger_nelson_t721_weighted_cover_review1/README.md",
+          "bytes": 5008,
+          "sha256": "5460853222afed10e06b3f3c7ccbe9c5d748b6e05d3e5d4e64523f14723127a6"
+        },
+        "url": "https://github.com/helgithorskarp/math_results/blob/main/hadwiger_nelson_t721_weighted_cover_review1/README.md"
+      }
+    },
+    {
+      "id": "joint769",
+      "directory": "hadwiger_nelson_joint769_order508_closure",
+      "scope_kind": "fixed_host",
+      "original_source_commit": "cf57b4e7beac3f7dbe22e86888bd63813fe5ede4",
+      "contribution_ref": "bafkreids4rf5viaqhkfh7tvrn75n5wugx4qoki2yhelvmgct4qtyex2g2m",
+      "contribution_height": 3793,
+      "hypotheses": "The candidate is a subgraph of the specified769-point fresh-triangle host.",
+      "conclusion": "Every subgraph with at most508 vertices is four-colourable;503 positive rows and15 covering rows handle143 residual cases.",
+      "does_not_cover": "No statement about graph supports outside this fixed coordinate union.",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_joint769_order508_closure",
+      "principal_proof": {
+        "path": "hadwiger_nelson_joint769_order508_closure/README.md",
+        "bytes": 5443,
+        "sha256": "71f63dc3b10ab4ca1c8512aeebe2f9b4c45529048a1adb7371732787ada83ec6"
+      },
+      "source_manifest": {
+        "path": "hadwiger_nelson_joint769_order508_closure/SHA256SUMS",
+        "bytes": 791,
+        "sha256": "0ad3b0188ef3aa40fb0dd614bf9b544e7a02b32bcc17e5b5da402c18e9ffc63f"
+      },
+      "review": {
+        "status": "no external review located in inspected committed neighborhoods as of height3840; not a new audit verdict"
+      }
+    },
+    {
+      "id": "golden",
+      "directory": "hadwiger_nelson_golden_reciprocal_closure",
+      "scope_kind": "finite_construction_family",
+      "original_source_commit": "c72af06ed2d9e8ea9eda056ef095ab091a3d2972",
+      "contribution_ref": "bafkreic3qhe4awwdjdvhsygo5oysaqaiceyfyrp6xqpv6sxcjouvpditua",
+      "contribution_height": 3833,
+      "hypotheses": "Every moved copy of the fixed G16 point set has scalephi or1/phi and shares at least two points with the original fixed base.",
+      "conclusion": "The union of all656 allowed copies and the base has1386 points and4380 strict unit edges, with one proper four-colouring. Every subassembly is four-colourable.",
+      "does_not_cover": "No chains attached only through earlier moved copies, other scales, deformations, or the distinct G31 source.",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_golden_reciprocal_closure",
+      "principal_proof": {
+        "path": "hadwiger_nelson_golden_reciprocal_closure/PROOF.md",
+        "bytes": 7083,
+        "sha256": "04c6321aeab0b80631c99f7f94fe9bfb25e787e1f7503c0e396a0bf61e48cce7"
+      },
+      "source_manifest": {
+        "path": "hadwiger_nelson_golden_reciprocal_closure/SHA256SUMS",
+        "bytes": 940,
+        "sha256": "355d76f094b71200bcb1c4b182354cd8c63ad195e2941afc22c85c50d875f73e"
+      },
+      "review": {
+        "status": "no external review located in inspected committed neighborhoods as of height3840; not a new audit verdict"
+      }
+    },
+    {
+      "id": "cm213_pilot",
+      "directory": "hadwiger_nelson_cm213_candidate_pilot",
+      "scope_kind": "sampled_candidates",
+      "original_source_commit": "57fa2bb9250bded8c8528dc5fe707ff5326651c0",
+      "contribution_ref": null,
+      "contribution_height": null,
+      "hypotheses": "One of the32 saved labelled norm-window outputs; the precise points and norm fibre must match.",
+      "conclusion": "All32 saved508-point outputs have verified proper four-colourings.",
+      "does_not_cover": "No field, unsampled norm, window, shift, or family closure.",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_cm213_candidate_pilot",
+      "principal_proof": {
+        "path": "hadwiger_nelson_cm213_candidate_pilot/README.md",
+        "bytes": 5779,
+        "sha256": "8e3c5293772c2627cd47732dfba7084b9b574b2de9e4d6109fac25b5fe6b1076"
+      },
+      "source_manifest": {
+        "path": "hadwiger_nelson_cm213_candidate_pilot/SHA256SUMS",
+        "bytes": 549,
+        "sha256": "cf6f1e0caaf38b8471b0d84f44eb840b3cbf8ce17684ae9fed0b436ab1140ceb"
+      },
+      "review": {
+        "status": "no external review located in inspected committed neighborhoods as of height3840; not a new audit verdict"
+      }
+    },
+    {
+      "id": "contact_pilot",
+      "directory": "hadwiger_nelson_contact_growth_pilot",
+      "scope_kind": "sampled_candidates",
+      "original_source_commit": "07b9c3bcf71abb317d68ed410d8e0802e23c74e9",
+      "contribution_ref": null,
+      "contribution_height": null,
+      "hypotheses": "One of the four saved contact-growth trajectories, or an induced prefix thereof.",
+      "conclusion": "All four508-point outputs have chi4; the final words certify1984 labelled prefix queries.",
+      "does_not_cover": "No other trajectory, point pool, dictionary, source placement, or universal field upper bound.",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_contact_growth_pilot",
+      "principal_proof": {
+        "path": "hadwiger_nelson_contact_growth_pilot/README.md",
+        "bytes": 6952,
+        "sha256": "a3f619890006a5b243ac2ca795afef745b74eb3fd7643e039f4cd997e8af6df6"
+      },
+      "source_manifest": {
+        "path": "hadwiger_nelson_contact_growth_pilot/SHA256SUMS",
+        "bytes": 548,
+        "sha256": "48f0ea5e341c9c124d3a8a5efbaec54d0fcd15ff2e511dc83bd4ec78b0a41088"
+      },
+      "review": {
+        "status": "no external review located in inspected committed neighborhoods as of height3840; not a new audit verdict"
+      }
+    },
+    {
+      "id": "ei79_pilot",
+      "directory": "hadwiger_nelson_ei79_circumcenter_pilot",
+      "scope_kind": "sampled_candidates",
+      "original_source_commit": "f688024ff7b9d33be0b62017e25e5bfd4fa784ea",
+      "contribution_ref": null,
+      "contribution_height": null,
+      "hypotheses": "The saved G79 circumcentre trajectory, or an induced prefix thereof.",
+      "conclusion": "Its508-point2561-edge output has a proper four-colouring; the final word certifies430 prefix queries.",
+      "does_not_cover": "No exhaustive numerical proposal pool, other trajectory, conditional-colour result, auxiliary-distance edge, or exact lower chromatic-number claim.",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_ei79_circumcenter_pilot",
+      "principal_proof": {
+        "path": "hadwiger_nelson_ei79_circumcenter_pilot/README.md",
+        "bytes": 7279,
+        "sha256": "b3750c6c0cf8f7dc65a2a1b990d50934e7447d47b9e5f88ffbd615e63e3fef96"
+      },
+      "source_manifest": {
+        "path": "hadwiger_nelson_ei79_circumcenter_pilot/SHA256SUMS",
+        "bytes": 627,
+        "sha256": "f80e5c17cdee6b53b81c6893a3b2080ba34245c92aae9bef04cd42d813132f6e"
+      },
+      "review": {
+        "status": "no external review located in inspected committed neighborhoods as of height3840; not a new audit verdict"
+      }
+    }
+  ]
+}
