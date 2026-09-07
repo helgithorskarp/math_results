@@ -1,0 +1,136 @@
+{
+  "arithmetic": {
+    "counts": {
+      "baseline": 130462366516263974374824266855507767254963105600,
+      "internal_free_bits": 443,
+      "previous_affine_family": 17154780486757774613743095705600000000,
+      "previous_complement_rank_three": 4050919711653602791074637762831219200,
+      "rank4_total": 296935236499420514245609548376980635622730104000,
+      "remaining": 77766291769629785088218777403926809066625520000,
+      "removed": 52696074746634189286605489451580958188337585600,
+      "removed_fraction": [
+        376310008768820496017231590851225959,
+        931649928837861438158324253913962509
+      ],
+      "stages": [
+        {
+          "complement_rank_three_overlap": 4050919711653602791074637762831219200,
+          "previous_affine_family": 17154780486757774613743095705600000000,
+          "raw_zero_filtered": 130462366537469674573235644260325500723394324800,
+          "remaining": 130462366516263974374824266855507767254963105600,
+          "stage": "current_baseline"
+        },
+        {
+          "complement_rank_three_overlap": 4050919711653602791074637762831219200,
+          "previous_affine_family": 17154780486757774613743095705600000000,
+          "raw_zero_filtered": 92390744370276124859211765951503730989415444480,
+          "remaining": 92390744349070424660800388546685997520984225280,
+          "stage": "zero_multiplicity_caps"
+        },
+        {
+          "complement_rank_three_overlap": 1458661973529497372867041338528000000,
+          "previous_affine_family": 17154780486757774613743095705600000000,
+          "raw_zero_filtered": 81140697290018138669657459725148732137207680000,
+          "remaining": 81140697271404696209370187738538595093079680000,
+          "stage": "also_all_row_classes_at_most_four"
+        },
+        {
+          "complement_rank_three_overlap": 828149679018144235057330215590400000,
+          "previous_affine_family": 17154780486757774613743095705600000000,
+          "raw_zero_filtered": 77766291787612715253994696252727234987815920000,
+          "remaining": 77766291769629785088218777403926809066625520000,
+          "stage": "also_all_column_classes_at_most_five"
+        }
+      ],
+      "status": "EXACT_RANK4_GLOBAL_SIEVE_COUNTS",
+      "zero_pair_survivors": 130462366537469674573235644260325500723394324800
+    },
+    "exact_count_comparisons": 1114
+  },
+  "elementary": {
+    "five_contact_signatures": 32,
+    "literal_clique_comparisons": 10240,
+    "mixed_triple_signatures": 8
+  },
+  "matrices": {
+    "complete_rank_two_fibers": 1470,
+    "exhaustive_matrices": 8768,
+    "factor_pairs": 8820,
+    "matrix_count_comparisons": 4032,
+    "physical_complement_rank_drop_cases": 1660
+  },
+  "physical": {
+    "basis_changes": 64,
+    "cross_coordinates": 460,
+    "fixture": {
+      "certificate": {
+        "color": "red",
+        "vertices": [
+          0,
+          1,
+          5,
+          18,
+          39
+        ]
+      },
+      "graph": {
+        "n": 43,
+        "red_hex": "00ec52b6474607afb61e5b936e92d1a541ce9dcbeb1445c14782b876bd268e53a36935f6149ae62b342b76e55cc566d8bcab6c0000012000000382b76e0dab0c6fbb49fec27ac9f8aba557b27c95b1c40fe95bf683e55d41cf38e389b4b4fc5999438fd389d61cc901e527f158637f5b53"
+      },
+      "parameters": {
+        "columns": [
+          7,
+          11,
+          13,
+          9,
+          14,
+          3,
+          1,
+          6,
+          4,
+          6,
+          5,
+          5,
+          8,
+          2,
+          2,
+          8,
+          1,
+          7,
+          10,
+          15,
+          4,
+          3,
+          12
+        ],
+        "internal_hex": "00ec52b6474607afb61e5b936e92d1a541ce9dcbeb1445c14782b876bd268e52d6b24386eecf5a55ad856fba8389b4cca27586a4fe75b53",
+        "rows": [
+          1,
+          8,
+          14,
+          12,
+          9,
+          4,
+          5,
+          13,
+          15,
+          11,
+          1,
+          3,
+          0,
+          0,
+          10,
+          2,
+          3,
+          2,
+          7,
+          6
+        ]
+      }
+    },
+    "internal_coordinates": 443,
+    "physical_certificates": 64,
+    "rejected_corruptions_or_out_of_scope": 75
+  },
+  "status": "VERIFIED_RANK4_GLOBAL_SIEVE"
+}
