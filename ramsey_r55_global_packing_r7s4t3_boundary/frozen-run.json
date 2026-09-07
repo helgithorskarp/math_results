@@ -1,0 +1,43 @@
+{
+  "audit_record_sha256": "0b0f61f81ee02cdcb5ff0a14bcdde7707478cef20e465cd129ce82291fa2045c",
+  "audit_source_sha256": "2785a2048e63ca7f2f5ca95310fed75412d6d13b498f4668cb549ab9a242f544",
+  "branch": [
+    7,
+    4,
+    3
+  ],
+  "checker": {
+    "commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+  },
+  "cnf": {
+    "bytes": 64752872,
+    "clauses": 1425766,
+    "sha256": "b0c44e203a13d2096ef6eed36cb5c870a83cd139f014a32724c6f4d97f505178",
+    "variables": 847
+  },
+  "command": [
+    "cadical",
+    "-t",
+    "1800",
+    "-w",
+    "production.witness",
+    "branch.cnf",
+    "production.drat"
+  ],
+  "gate_sha256": "059421a1fea25f7bdc806f189a29877d698a63d31695a03751c8f9ac28a135a0",
+  "handoff_manifest_sha256": "c6d9318c3cde10526bf65713c150ffd6d356ef632efd224be9339b5a7032ee93",
+  "policy": "one CaDiCaL call; SAT requires strict decode and independent physical verification; UNSAT requires pinned drat-trim; UNKNOWN stops",
+  "seconds_limit": 1800,
+  "selection": "unique minimum retained-state count and maximum CNF clause count in TASKS.json",
+  "solver": {
+    "commit": "c60730422e758ef1cebe7aeddf2dda31c996bf04",
+    "sha256": "823b3c94050654fda13dab0c8c34386d9777a1e6de31bd6bc20555979e7c5e0b",
+    "version": "3.0.1"
+  },
+  "source_commit": "3f06352ae0735101a04afa1ba7b055736e7300f7",
+  "source_manifest_sha256": "1e3cafb437e30478f3961200529cb0a7bb4d5065495f8bf47f0da7589457172e",
+  "source_model_sha256": "620833aac2a36bd368d0111f70cd9032f613d6cb15450d4142d0c54ae6af3f41",
+  "status": "FROZEN_R7_S4_T3_READY_FOR_SINGLE_PRODUCTION_CALL",
+  "task_registry_sha256": "1fc733ce3eeee7db5edc7ed8927beded4eb580947b85a26f92768e697d7f4bff"
+}
