@@ -1,0 +1,63 @@
+{
+  "archived_original_generator_sha256": "163ed9ffb76139aad0901684c97720ea3705acc89da3f9569175cf5076777c8f",
+  "archived_original_manifest_sha256": "842845ad97bee7503c1525ff1bec1306af8eac32065ea09a70d35b99884b453d",
+  "claim": "Frozen CNF satisfiable; supplied first-bit partition has a monochromatic five-cycle and cannot extend to a four-colouring. Original endpoint claim undecided.",
+  "created_utc": "2026-09-07T23:25:17.748583+00:00",
+  "dependencies": "Verifier: Python standard library. Optional frozen reconstruction: CPython3.11.2, python-sat1.9.dev15, CaDiCaL1.9.5.",
+  "format": 1,
+  "frozen_artifacts": [
+    {
+      "bytes": 11432915,
+      "name": "odd_cycles.cnf",
+      "sha256": "57058179a7ca8dd5d74c9711f202a53378b1adba9001786687dd92e82d3cf038"
+    },
+    {
+      "bytes": 5049100,
+      "name": "cycles.json",
+      "sha256": "bac6fe6962012d4ae5c79e65e9ad5dc39383bfd5c40d651f9cff877ac61b5a63"
+    }
+  ],
+  "graph_cutoff": 3854,
+  "independent_acceptance_review": false,
+  "new_cycles_added": 0,
+  "new_refinements": 0,
+  "original_run_replayed_this_pass": false,
+  "prior_consolidation_ref": "bafkreid6avnxtvxb55ij7s3wt655qysjdkdylq6vvotrchw2zldohi7quq",
+  "reconstruction_code_audit": {
+    "changes": "Output directory and source path handling; final fixed identity checks; unused static refutation branch removed.",
+    "helper_functions_ast_identical": [
+      "adjacency",
+      "canonical_cycle",
+      "check_cycle",
+      "controls",
+      "cycle_clauses",
+      "odd_cycles"
+    ],
+    "historical_refinements_rerun_this_pass": 0,
+    "main_prefix_statements_ast_identical": 29
+  },
+  "record_improvement": false,
+  "source_graph_path": "hadwiger_nelson_haugland2131_exact_reproduction/graph.json",
+  "source_graph_sha256": "201196679760fc329fff548346b843a821646ce5ffc326a91cc24598effc299d",
+  "source_reconstruction_ref": "bafkreie5khtlvj3tb6oet52gnzzejftls3yzokeadkqhgtdpwdfd3awlwm",
+  "source_snapshot_commit": "d7400f1a2ce682e22ed8533ca6f9356d7d43b644",
+  "static_discovery": {
+    "cnf_sha256": "57058179a7ca8dd5d74c9711f202a53378b1adba9001786687dd92e82d3cf038",
+    "combined_conflicts": 283301,
+    "conflict_limit": 100000,
+    "maxrss_kib": 150164,
+    "model_directly_verified": true,
+    "new_cycles": 0,
+    "new_refinements": 0,
+    "prior_conflicts": 279984,
+    "sat": true,
+    "seconds": 2.1675914259976707,
+    "stats": {
+      "conflicts": 3317,
+      "decisions": 5786,
+      "propagations": 285474,
+      "restarts": 33
+    }
+  },
+  "strict_edge_ref": "bafkreiea5j2eje6vloyjej6rgteor6az24msa54l2oavnynkoo7usrue2a"
+}
