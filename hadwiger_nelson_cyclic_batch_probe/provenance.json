@@ -1,0 +1,115 @@
+{
+  "status": "Complete fresh-triangle 508-point four-colourability gate; certified larger joint candidate; no record improvement",
+  "date": "2026-09-07",
+  "seed_graph_ref": "bafkreifwsajpgdnfabgsi3adnk5usvx2n56psvzaovwnkhpyo6gb3jg5he",
+  "public_reproduction": {
+    "vertices": 543,
+    "edges": 2587,
+    "scale": 288,
+    "pair_checks": 147153,
+    "cnf_sha256": "44ece498113a2a5be493483b77c0ab5b5ed4f3e2fec2d4284d580dd9b20685fb",
+    "five_colouring_checked": true,
+    "DRAT_verified": true,
+    "deletion_words_checked": 543,
+    "proof_sha256": "490b164d7c5f6914439451f46c7e7a6c2d93f13a8bb187e057ef859272bd2a3e",
+    "deletion_words_sha256": "d5ecbb6463af7d969f0d0cf57418045e59f36b4f7f030602198083d2aaa9d4fc"
+  },
+  "validation": {
+    "controls": [
+      "incomplete deletion file rejected",
+      "monochromatic deletion words rejected",
+      "invalid circle branch rejected",
+      "all 3375 nonempty triple-list cases match explicit colour enumeration",
+      "optimized public geometry and both certificate replays agree"
+    ],
+    "fresh_K_triangles": 126,
+    "K_single_deletion_extensions_replayed": 64073,
+    "direct_508_cases_replayed": 343,
+    "nonK_screen_triangles": 1468,
+    "nonK_single_deletion_extensions_replayed": 747212,
+    "final_graph": {
+      "vertices": 543,
+      "edges": 2587,
+      "DRAT_verified": true,
+      "deletion_words_checked": 543
+    },
+    "full_public_reproducer_regenerated_both_certificates": true
+  },
+  "seed_source_sha256": {
+    "hadwiger_nelson_neutral_mutation_candidate/verify.py": "28bfb2f674b934f92099ecff364555f4ba514c26db480afe7e22d91e66697110",
+    "hadwiger_nelson_neutral_mutation_candidate/geometry.py": "6d4af357210ab8aa1699c218d56d3cb25ca44e1cc90a0433ddcaa9806712f996",
+    "hadwiger_nelson_parts509_swap_closure/kfield.py": "648cb0317b5a4c96959e8447327c5e1cf19945c8049a746e86cceed130a18b31"
+  },
+  "omitted_outputs": "Expanded geometry censuses, graphs, generated colour words, proof traces, search transcripts and solver logs remain outside Git. gate.py regenerates the complete stated fresh-triangle gate from the compact colouring certificate. reproduce.py regenerates the final 543-point graph and optionally both chromatic certificates. Private search histories are provenance rather than premises.",
+  "public_triangle_gate": {
+    "all_checks": true,
+    "geometry": {
+      "original_census": {
+        "pairs": 129286,
+        "inside_pairs": 85351,
+        "K_pairs": 17617,
+        "nonK_pairs": 67734,
+        "tangent_pairs": 582,
+        "K_points": 4372,
+        "max_interval_width_scaled": 0
+      },
+      "seed_census": {
+        "pairs": 129286,
+        "inside_pairs": 85472,
+        "K_pairs": 17657,
+        "nonK_pairs": 67815,
+        "tangent_pairs": 583,
+        "K_points": 4377,
+        "max_interval_width_scaled": 2545
+      },
+      "external_K_points": 3868,
+      "fresh_K_points": 104,
+      "K_triangles": 126,
+      "nonK_points": 135630,
+      "fresh_nonK_points": 4574,
+      "nonK_triangle_candidates": 1468,
+      "screen": {
+        "grid_offsets": 260,
+        "coordinate_pair_tests": 44488113,
+        "directed_annulus_pairs": 6917
+      }
+    },
+    "seed_deletion_words_checked": 509,
+    "additional_words_checked": 300,
+    "K_U_histogram": {
+      "0": 108,
+      "1": 3,
+      "2": 8,
+      "3": 7
+    },
+    "nonK_U_histogram": {
+      "0": 1468
+    },
+    "maximum_declared_deletions": 3,
+    "target_order": 508,
+    "gate_four_colourable": true
+  },
+  "gate_validation": {
+    "all_checks": true,
+    "K_points_entrywise_replayed": 3868,
+    "K_triangles_entrywise_replayed": 126,
+    "nonK_labels_and_grid_coordinates_replayed": 135630,
+    "nonK_candidates_entrywise_replayed": 1468,
+    "list_matching_controls": 4096,
+    "rational_interval_boundary_controls": 35,
+    "rejected_malformed_certificates": [
+      "truncated_rows",
+      "monochromatic_row"
+    ],
+    "normal_and_optimized_public_runs_agree": true
+  },
+  "record_comparison": {
+    "baseline": 509,
+    "source_check_date": "2026-09-07",
+    "sources": [
+      "https://arxiv.org/abs/2010.12665",
+      "https://arxiv.org/html/2608.04542v4"
+    ],
+    "target_found": false
+  }
+}
