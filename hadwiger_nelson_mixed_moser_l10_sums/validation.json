@@ -1,0 +1,177 @@
+{
+  "status": "all_checks_passed",
+  "python_verifier": "3.11.2",
+  "compiler": "12.2.0",
+  "compiler_flags": "-std=c++17 -O3 -Wall -Wextra -Wpedantic -Wconversion",
+  "resources": {
+    "elapsed_seconds": 32.26049100400269,
+    "peak_rss_kib": 450936
+  },
+  "controls": {
+    "exact_small_edges": 373,
+    "exact_small_pairs": 13041,
+    "exact_small_points": 162,
+    "malformed_colourings_rejected": 5,
+    "native_interval_controls": {
+      "boundary_overflow_controls": true,
+      "exact_interval_pairs_compared": 19900,
+      "interval_candidates": 6119,
+      "malformed_rejected": 10
+    },
+    "unit_direction_norms_checked": 96
+  },
+  "normal_optimized_controls_equal": true,
+  "address_undefined_sanitizer_controls_passed": true,
+  "pure_python_P2": {
+    "vertices": 4609,
+    "edges": 20202,
+    "all_pairs": 10619136,
+    "interval_survivors": 20202,
+    "complete_exact_edges_match": true,
+    "seconds": 16.922351341003377,
+    "points_sha256": "7d8f8efe9e4fa816d5fdef543c8be411ca0d88a8454eb6bf01f892fcc3e5c9a2",
+    "edges_sha256": "4e903d222474413679074fe85558d5c772e8598316b57b9fc6423bac326686aa",
+    "four_colouring_verified": true
+  },
+  "native_P2": {
+    "vertices": 4609,
+    "edges": 20202,
+    "all_pairs": 10619136,
+    "interval_survivors": 20202,
+    "complete_exact_edges_match": true,
+    "native_filter": "Q=2^20, abs interval endpoint<=10^9",
+    "seconds": 0.3039484330001869,
+    "points_sha256": "7d8f8efe9e4fa816d5fdef543c8be411ca0d88a8454eb6bf01f892fcc3e5c9a2",
+    "edges_sha256": "4e903d222474413679074fe85558d5c772e8598316b57b9fc6423bac326686aa",
+    "four_colouring_verified": true
+  },
+  "pure_python_C8": {
+    "vertices": 5233,
+    "edges": 27240,
+    "all_pairs": 13689528,
+    "interval_survivors": 27240,
+    "complete_exact_edges_match": true,
+    "seconds": 21.50494422000338,
+    "points_sha256": "2ba717526272c6172a81baa81e3d6e990569a4494245d71e405f67aed230dd70",
+    "edges_sha256": "90982b467ced749b4f0505950565e31e32213f0212fd944870f12612598014ca",
+    "four_colouring_verified": true
+  },
+  "discovery_python": "3.12.14",
+  "python_sat": "1.9.dev15",
+  "solver": "CaDiCaL195",
+  "discovery_queries": [
+    {
+      "support": "P2",
+      "status": "SAT",
+      "vertices": 4609,
+      "edges": 20202,
+      "pins": [
+        [
+          147,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          12,
+          2
+        ]
+      ],
+      "statistics": {
+        "restarts": 2202,
+        "conflicts": 46540,
+        "decisions": 105513,
+        "propagations": 33166697
+      },
+      "seconds": 6.756590690994926
+    },
+    {
+      "support": "C8",
+      "status": "SAT",
+      "vertices": 5233,
+      "edges": 27240,
+      "pins": [
+        [
+          173,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          14,
+          2
+        ]
+      ],
+      "statistics": {
+        "restarts": 206,
+        "conflicts": 4446,
+        "decisions": 8824,
+        "propagations": 3734059
+      },
+      "seconds": 0.8280824480025331
+    },
+    {
+      "support": "M3",
+      "status": "SAT",
+      "vertices": 84487,
+      "edges": 630594,
+      "pins": [
+        [
+          1700,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          130,
+          2
+        ]
+      ],
+      "conflict_budget": 300000,
+      "statistics": {
+        "restarts": 666,
+        "conflicts": 7942,
+        "decisions": 19861,
+        "propagations": 32418528
+      },
+      "seconds": 30.88399567399756
+    },
+    {
+      "support": "Union",
+      "status": "SAT",
+      "vertices": 84643,
+      "edges": 633126,
+      "pins": [
+        [
+          1700,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          130,
+          2
+        ]
+      ],
+      "conflict_budget": 300000,
+      "statistics": {
+        "restarts": 4,
+        "conflicts": 2087,
+        "decisions": 3477,
+        "propagations": 10343201
+      },
+      "seconds": 10.403081297001336
+    }
+  ],
+  "final_verifier_uses_SAT": false,
+  "external_review": "not claimed",
+  "proof_assistant": "none"
+}
