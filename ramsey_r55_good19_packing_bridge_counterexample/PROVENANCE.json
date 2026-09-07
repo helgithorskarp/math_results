@@ -1,0 +1,77 @@
+{
+  "certificate_sha256": "e7a19a14cf10d7098862642a6686c4af995da8329d7f4eb267c8d41ff1275382",
+  "certificate_trust_boundary": "Only physical graph bits, two independent finite checkers and Python standard library; catalog completeness and solver correctness are not required for the negative claim.",
+  "claim": "Explicit good19 with monochromatic K4 packing number one",
+  "core_catalog": {
+    "attribution": "Brendan D. McKay, Ramsey graph data; data licensing: https://users.cecs.anu.edu.au/~bdm/data/",
+    "graph6": "NCdXrTsodGizJmq[uLg",
+    "graphs": 640,
+    "sha256": "53a46ba21cb16805eb07775b60746f783864388538368955e72cbdae5ae8f4e1",
+    "url": "https://users.cecs.anu.edu.au/~bdm/data/r44_15.g6",
+    "zero_based_index": 379
+  },
+  "discovery": {
+    "cross_bits": 919580044947875353,
+    "fixed_root": "Red K4 on vertices0..3; core on4..18",
+    "independent_formula_audit": {
+      "clauses": 74698,
+      "five_clauses": 509,
+      "indicator_clauses": 3287,
+      "packing_clauses": 70902,
+      "sha256": "d524b7c38b4ffca5471671425c31359fdac9936066036f88bd5aeb5a6a01f47c",
+      "status": "VERIFIED_LITERAL_BRIDGE_FORMULA",
+      "variables": 803
+    },
+    "model_sha256": "0d1d18aca3bca64744077515d109e82478bb2532a18a7d2881ef6332e44d8e5b",
+    "primary_cross_edges": 60,
+    "sat_exit": 10,
+    "sat_formula": {
+      "bytes": 899299,
+      "clauses": 74698,
+      "cross_edges": 60,
+      "four_indicators": 743,
+      "sha256": "d524b7c38b4ffca5471671425c31359fdac9936066036f88bd5aeb5a6a01f47c",
+      "variables": 803
+    },
+    "sat_model_all_clauses_verified": true,
+    "sat_seconds": 0.0380956459994195,
+    "sat_trace_is_refutation": false
+  },
+  "external_review": "pending",
+  "frozen_tools": {
+    "checker": {
+      "sha256": "bc7543a99da8521ddb09af442698956054f11e10d198bd482ac756535244c021"
+    },
+    "solver": {
+      "sha256": "c6de62662723ec4a7426c5ca2bc9bfb04c60aad81a423957e3cd1ffadd0f8aa7",
+      "version": "sc2021"
+    }
+  },
+  "graph_sha256": "cc0b6df1856a7c214aedd97f128622f9ebfc2985092d98eaef4b70c123ac7005",
+  "historical_novelty_claim": false,
+  "run": {
+    "all_attempted_formulas_independently_audited": true,
+    "attempted": 380,
+    "audited_clauses": 28339316,
+    "checked_unsat_cores": 379,
+    "checker_seconds_per_core": 120,
+    "first_sat_index": 379,
+    "initial_wrapper_correction": {
+      "caps_changed": false,
+      "mathematical_encoding_changed": false,
+      "original_result_sha256": "724595ce16ba0c835fd9869b43aefcfc290f50306e285203f06c8d5ad8f955ce",
+      "original_wrapper_sha256": "83fb242aa3218a869004a8914a0aaa058221cd36d75834aeb3a173c28c8e93a9",
+      "reason": "CaDiCaL -w redirects result status to the witness file; core000 returned20 with exact s UNSATISFIABLE. The initial wrapper incorrectly searched empty stdout. This is not an UNKNOWN solve.",
+      "resume_sha256": "a7ab569a4ad5eaa8844ea22ac0d74258116f68565ed22f2b10d1925a186c8322",
+      "reuse": "Existing core000 CNF, complete proof, witness and duration are reused. Audit and proof check are performed before proceeding to core001.",
+      "solver_calls_repeated": 0
+    },
+    "policy": "Catalog order; stop at first SAT or UNKNOWN; no retries or backend changes",
+    "solver_seconds_per_core": 60,
+    "solver_seconds_total_cap": 1800,
+    "total_catalog_cases": 640,
+    "total_solver_seconds": 46.642808070013416,
+    "unattempted": 260
+  },
+  "scope": "Earlier refutations are retained privately as discovery history, not a complete catalog exclusion. This package proves only the explicit negative bridge certificate. No global43 draft is validated or used."
+}
