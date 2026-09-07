@@ -1,0 +1,53 @@
+{
+  "certificate_reproduced_byte_for_byte": true,
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "verify.py",
+        "--check-expected"
+      ],
+      "seconds": 0.1789182799984701
+    },
+    {
+      "command": [
+        "python3",
+        "controls.py"
+      ],
+      "seconds": 1.4186916280013975
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "controls.py"
+      ],
+      "seconds": 1.6008304589995532
+    },
+    {
+      "command": [
+        "python",
+        "generate.py",
+        "--out",
+        "out"
+      ],
+      "seconds": 0.998865483001282
+    }
+  ],
+  "controls": {
+    "actual_constrained_selectors_checked": 8192,
+    "actual_feasible_constrained_assignments": 729,
+    "dihedral_group_and_orbits": true,
+    "four_coloured_odd_wheel_control": true,
+    "generic_hypergraphs_checked": 278,
+    "malformed_inputs_rejected": 15,
+    "odd_angle_walks_checked": 2728
+  },
+  "discovery_python": "3.12.14",
+  "external_peer_review": false,
+  "optimized_controls_match": true,
+  "peak_child_rss_kib": 25020,
+  "python": "3.11.2",
+  "python_sat": "1.9.dev15",
+  "solver": "CaDiCaL 1.9.5"
+}
