@@ -1,0 +1,91 @@
+{
+  "all_completed_positive_words_independently_checked": {
+    "completed_sat_seed_words": 40,
+    "half_edge_checks_including_baseline": 161224,
+    "verified": true
+  },
+  "certificate_regenerated_byte_identically": true,
+  "completed_primary_queries": 45,
+  "completed_primary_sat": 40,
+  "completed_primary_seconds": 470.01540481005213,
+  "completed_primary_unknown": 5,
+  "completed_primary_unsat": 0,
+  "controls": {
+    "all_checks_passed": true,
+    "exact_geometries_equal": true,
+    "full_pair_checks": 1248990,
+    "malformed_inputs_rejected": 27,
+    "palette_presence_cases": 2696,
+    "producer_constant_filter_survivors": 8689,
+    "rejections": [
+      "version",
+      "target",
+      "boolean target",
+      "boolean terminal",
+      "short baseline",
+      "baseline omission",
+      "baseline colour",
+      "nonlist steps",
+      "deleted label range",
+      "boolean deleted label",
+      "terminal deletion",
+      "short seed",
+      "duplicate row",
+      "equal seed terminals",
+      "seed monochromatic edge",
+      "inversion wrong parent",
+      "inversion wrong label",
+      "unknown kind",
+      "missing parent",
+      "empty patch",
+      "duplicate patch label",
+      "patch colour",
+      "boolean patch label",
+      "missing target coverage",
+      "missing cross edge",
+      "additional cross edge",
+      "invalid modular root"
+    ],
+    "small_graph_palette_subset_cases": 135468,
+    "small_graphs": 1100,
+    "two_colour_counterexample": true
+  },
+  "eligible_inversion_orbits": 395,
+  "encoding_controls": {
+    "graphs": 1098,
+    "independent_solver": "Glucose4",
+    "terminal_pinned_subsets": 8466,
+    "unsatisfiable_cases": 2,
+    "verified": true
+  },
+  "in_flight_query_interrupted_after_verified_target_closure": true,
+  "independent_source_geometry_review": "bafkreibvtak6cxfttmiblgq7qdqlnf2pxtv2nnk2ihvnnm3emje2gdetki",
+  "new_terminal_cover_externally_reviewed": false,
+  "no_pending_jobs": true,
+  "normal_optimized_controls_equal": true,
+  "normal_optimized_verifier_equal": true,
+  "proof_seed_words": 34,
+  "pysat": "1.9.dev15",
+  "python": "3.11.2",
+  "record_improvement": false,
+  "requested_conflict_budget_per_primary_query": 200000,
+  "resources": [
+    {
+      "check": "verify_normal",
+      "child_peak_rss_kib": 24880,
+      "seconds": 2.6171702159990673
+    },
+    {
+      "check": "verify_optimized",
+      "child_peak_rss_kib": 27144,
+      "seconds": 2.640786336000019
+    },
+    {
+      "check": "controls_optimized",
+      "child_peak_rss_kib": 31108,
+      "seconds": 8.256586317998881
+    }
+  ],
+  "seed_solver": "CaDiCaL195",
+  "unused_completed_sat_words": 6
+}
