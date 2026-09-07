@@ -1,0 +1,51 @@
+{
+  "branch": [
+    7,
+    4,
+    3
+  ],
+  "checker": {
+    "commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+  },
+  "cnf": {
+    "bytes": 64763929,
+    "clauses": 1426489,
+    "sha256": "10018cb1079822ecc883396078e17000a9dc3519cd932df9dbc40006868c3965",
+    "variables": 966
+  },
+  "command": [
+    "cadical",
+    "-t",
+    "1800",
+    "-w",
+    "production.witness",
+    "normalized.cnf",
+    "production.drat"
+  ],
+  "dependency": {
+    "h3835_ref": "bafkreifgyycgvem6uqlasgdwwbluvuvomk4km2n7rzaxg6sgudgzgrj2sq",
+    "h3845_review_ref": "bafkreiem4hg5qakgtvnf55vjyhtc7ephwgxczimdvdw43w7taocbnvubuq",
+    "model_sha256": "620833aac2a36bd368d0111f70cd9032f613d6cb15450d4142d0c54ae6af3f41",
+    "source_commit": "3f06352ae0735101a04afa1ba7b055736e7300f7",
+    "source_manifest_sha256": "1e3cafb437e30478f3961200529cb0a7bb4d5065495f8bf47f0da7589457172e"
+  },
+  "inputs": {
+    "GATE.md": "26d5bfcc58bf2ed5cc7721a7ea55630cc2da1005e12a4c2c04ad3545f6e5e745",
+    "audit.json": "053c72b5e17e10a132a2b093f0509689538ca3ce3312bf81ca4d8a838be01f2f",
+    "audit.py": "e38e46a11feb4047c3255b1c194582bc5d3325b159ccc4a4a23bafe0bf62fea0",
+    "block_symmetry.py": "e6b4a95ebf02f619375ef9375fe7c7db92aafab3a45c267ef7b24788416c002d",
+    "controls.json": "980bb1d2db2d5467f4152d6d4bd68165b8f72a67fa39e0c0325281099c6f0b5c",
+    "controls.py": "795c7f9617b8b294ce120bdee0110b34657fb461755c5a6aebb82ffcc695ad91",
+    "metadata.json": "d056513d6d92b749ad1abd2c9031654d16c1bedf08072fabad617593880819e4"
+  },
+  "mathematical_change": "sound lexicographic normalization under residual S6 x S5 identical-block relabeling",
+  "policy": "one CaDiCaL call; SAT strict physical verification; UNSAT pinned drat-trim; UNKNOWN stops without another solver/branch/profile",
+  "seconds_limit": 1800,
+  "solver": {
+    "commit": "c60730422e758ef1cebe7aeddf2dda31c996bf04",
+    "sha256": "823b3c94050654fda13dab0c8c34386d9777a1e6de31bd6bc20555979e7c5e0b",
+    "version": "3.0.1"
+  },
+  "status": "FROZEN_BLOCK_NORMALIZED_R7_S4_T3_READY"
+}
