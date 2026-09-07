@@ -1,0 +1,60 @@
+{
+  "claim_status": "Bounded computational observation with independently checked positive colouring certificate",
+  "source": "Exoo-Ismailescu2018 G79, Section2",
+  "primary_source_url": "https://arxiv.org/pdf/1805.00157",
+  "source40_sha256": "20b7e8df78b2ef61aac9c258c30fd8360f854338019e091ca9f168e39eac4aba",
+  "source40_rows": 40,
+  "seed79_unit_edges": 165,
+  "seed79_auxiliary_sqrt11over3_pairs": 118,
+  "auxiliary_edges_used_in_unit_graph": 0,
+  "physical_field": "Q(i sqrt3,i sqrt11,i sqrt247), degree8",
+  "mechanism": "Exact unit-radius circumcentres selected by numerical proposals and current colour obstructions",
+  "preset_discovery_caps": {
+    "trajectories": 1,
+    "vertices": 508,
+    "query_conflicts": 100000,
+    "trajectory_conflicts": 500000,
+    "prefix_queries": 430
+  },
+  "all_discovery_queries": "SAT",
+  "final_vertices": 508,
+  "final_unit_edges": 2561,
+  "chromatic_upper_bound": 4,
+  "source_cap_extended": false,
+  "non_four_colourable_signal": false,
+  "record_improvement": false,
+  "discovery_environment": {
+    "python": "CPython3.11.2",
+    "python-flint": "0.8.0",
+    "numpy": "2.4.6",
+    "python-sat": "1.9.dev15",
+    "SAT": "cadical195 / CaDiCaL1.9.5"
+  },
+  "verification_environment": "CPython3.11.2 standard library only",
+  "discovery_seconds": 22.739607935000095,
+  "verification_seconds": 3.653945815996849,
+  "replay": {
+    "non_timing_certificate_fields_identical": true,
+    "all_rational_coordinates_identical": true,
+    "construction_triples": 429,
+    "colour_symbols": 508,
+    "additional_candidates": 0,
+    "validation_repeat_queries": 430
+  },
+  "trust_boundary": "Numerical proposals and SAT are discovery tools only. Independent exact Cartesian reconstruction, all-pairs norm tests and the positive word certify the saved graph. No exhaustive search-space or exact chromatic-number claim.",
+  "external_review_completed": false,
+  "standing_steering": "2026-09-07T18:18Z positive-signal gate",
+  "teammate_context": {
+    "artifact": "bafkreic3qhe4awwdjdvhsygo5oysaqaiceyfyrp6xqpv6sxcjouvpditua",
+    "height": 3833,
+    "source_commit": "c72af06ed2d9e8ea9eda056ef095ab091a3d2972",
+    "role": "New retired golden reciprocal-overlay branch; read for nonoverlap, not a mathematical dependency"
+  },
+  "primary_source_transcription_audit": {
+    "primary_pdf_url": "https://arxiv.org/pdf/1805.00157v1",
+    "pdf_sha256": "dc3a0eba536537e2638f99ffd648554f36e64b6a78fadd475b8f8cccc2867335",
+    "source40_rows_compared_entrywise": 40,
+    "source40_transcription_exact": true,
+    "extraction": "pypdf6.1.1; optional source provenance only"
+  }
+}
