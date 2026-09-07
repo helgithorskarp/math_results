@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "research_date_utc": "2026-09-07",
+  "claim": "Every subgraph of the specified 769-point host on at most 508 vertices is four-colourable.",
+  "source_packages": [
+    {
+      "path": "hadwiger_nelson_neutral_mutation_candidate",
+      "commit": "da761932c49900fe2bfe3ad90b9bdde49bc32577"
+    },
+    {
+      "path": "hadwiger_nelson_cyclic_batch_probe",
+      "commit": "3459e914a2c1cf6be3df799bb577df867d1b39c7"
+    }
+  ],
+  "host": {
+    "description": "The 509-point nine-move seed together with the union of the 126 fresh field-valued unit triangles enumerated by the cyclic-batch package.",
+    "vertices": 769,
+    "edges": 3560,
+    "edge_sha256": "f61dfeae4266ce698bc485eca0be2eb182ee5ae113180686275df3e0e0f68427"
+  },
+  "certificate": {
+    "sha256": "929c0ede9c3a8225a756190ae108c2a94a63cec8e46423595d53bd626c7fe69f",
+    "positive_boundary_rows": 503,
+    "global_cover_rows": 15,
+    "residual_cases": 143,
+    "solver_or_unsat_proof_inputs": 0
+  },
+  "discovery_search": {
+    "method": "Seventeen deterministic seed-first critical-core passes followed by an exact eight-vertex deletion lattice and positive extension-cover generation.",
+    "smallest_observed_core_vertices": 529,
+    "target_candidate_found": false,
+    "note": "The private solver search discovered the boundary. The published theorem is checked solely from explicit proper colourings and a solver-free finite cover calculation."
+  },
+  "record_calibration": {
+    "checked_utc": "2026-09-07",
+    "parts": "https://arxiv.org/abs/2010.12665",
+    "haugland": "https://arxiv.org/abs/2608.04542"
+  }
+}
