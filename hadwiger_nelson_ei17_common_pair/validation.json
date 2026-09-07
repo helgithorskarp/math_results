@@ -1,0 +1,46 @@
+{
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "verify.py",
+        "--check-expected"
+      ],
+      "elapsed_seconds": 5.441928095002368,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "controls.py"
+      ],
+      "elapsed_seconds": 1.467212659001234,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "controls.py"
+      ],
+      "elapsed_seconds": 1.6150297740023234,
+      "exit_code": 0
+    }
+  ],
+  "controls": {
+    "independent_sets_with_nonbipartite_complement": 1181,
+    "interval_pair_fixtures": 256,
+    "malformed_rejected": 12,
+    "mask_space_exhausted": 131072,
+    "normal_assertions_not_required": true,
+    "square_root_boundary_cases": 33
+  },
+  "discovery_words_reproduced_byte_for_byte": true,
+  "external_peer_review": false,
+  "optimized_controls_identical": true,
+  "optional_discovery_python": "3.12.14",
+  "peak_rss_kib": 21984,
+  "python": "3.11.2",
+  "python_sat": "1.9.dev15",
+  "solver": "CaDiCaL 1.9.5"
+}
