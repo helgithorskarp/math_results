@@ -1,0 +1,24 @@
+{
+  "source": "https://arxiv.org/html/2601.16342v1",
+  "source_role": "Definition of W_k and external criticality/uniqueness theorem; geometric impossibility is checked independently.",
+  "comparison_sources": [
+    "https://arxiv.org/abs/2010.12665",
+    "https://arxiv.org/html/2608.04542v4"
+  ],
+  "checked_date": "2026-09-07",
+  "tested_python": [
+    "3.11.2",
+    "3.12.14"
+  ],
+  "producer_dependency": "python-sat==1.9.dev15; Cadical195",
+  "kissat": {
+    "version": "4.0.4",
+    "commit": "8af8e56f174b778aef3aa45af9f739b2a5f492c2",
+    "url": "https://github.com/arminbiere/kissat"
+  },
+  "drat_trim": {
+    "commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "url": "https://github.com/marijnheule/drat-trim"
+  },
+  "novelty": "No priority claim for the elementary geometry or general SAT method; a checked transfer obstruction for the explicit critical shift source."
+}
