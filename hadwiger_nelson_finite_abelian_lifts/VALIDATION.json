@@ -1,0 +1,383 @@
+{
+  "date_utc": "2026-09-07",
+  "proof": {
+    "cases": 12,
+    "field_nonzero_elements": 1432,
+    "ignored_deletions": 101,
+    "nonrealizable": 11,
+    "norm_tests": 1444,
+    "pair_tests": 167586,
+    "q11_chromatic_number": 5,
+    "q3_drawing_pairs": 36,
+    "record_improvement": false,
+    "rhombus_rows": 933,
+    "rup_additions": 539,
+    "verified": true
+  },
+  "controls": {
+    "rejected_faults": [
+      {
+        "fault": "boolean version",
+        "reason": "certificate version/limit"
+      },
+      {
+        "fault": "missing case",
+        "reason": "complete case count"
+      },
+      {
+        "fault": "duplicate case",
+        "reason": "complete ordered parameter coverage"
+      },
+      {
+        "fault": "wrong parameter",
+        "reason": "complete ordered parameter coverage"
+      },
+      {
+        "fault": "reducible modulus",
+        "reason": "quotient is not a field"
+      },
+      {
+        "fault": "missing generator",
+        "reason": "full norm-one generator set"
+      },
+      {
+        "fault": "wrong edge count",
+        "reason": "full graph edge count"
+      },
+      {
+        "fault": "invalid transverse generator",
+        "reason": "relation transverse generator"
+      },
+      {
+        "fault": "invalid coefficient",
+        "reason": "relation term range"
+      },
+      {
+        "fault": "false relation",
+        "reason": "relation sum"
+      },
+      {
+        "fault": "missing obstruction",
+        "reason": "relation shape"
+      },
+      {
+        "fault": "wrong exceptional case",
+        "reason": "q3 exceptional case"
+      },
+      {
+        "fault": "monochromatic witness",
+        "reason": "five-colouring edge"
+      },
+      {
+        "fault": "boolean colour",
+        "reason": "five-colouring shape"
+      },
+      {
+        "fault": "short witness",
+        "reason": "five-colouring shape"
+      },
+      {
+        "fault": "missing proof end",
+        "reason": "proof has no final empty clause"
+      },
+      {
+        "fault": "unsupported empty clause",
+        "reason": "addition not RUP"
+      },
+      {
+        "fault": "false initial clause",
+        "reason": "addition not RUP"
+      },
+      {
+        "fault": "out of range literal",
+        "reason": "proof literal range"
+      }
+    ],
+    "small_group_audit": {
+      "cayley_presentations": 500,
+      "direct_cyclic_products": 163,
+      "forced_collision_presentations": 337,
+      "group_types": [
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          8
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          9
+        ],
+        [
+          10
+        ],
+        [
+          11
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          12
+        ]
+      ],
+      "matrix_prime": 101
+    }
+  },
+  "timings": [
+    {
+      "check": "verify",
+      "seconds": 1.0806993629958015
+    },
+    {
+      "check": "optimized",
+      "seconds": 1.1937311009969562
+    },
+    {
+      "check": "controls",
+      "seconds": 2.8672065720020328
+    }
+  ],
+  "independent_glucose_rup": {
+    "rup_additions": 292,
+    "ignored_deletions": 401,
+    "vertices": 121,
+    "edges": 726,
+    "independent_coordinates": "direct x^2+y^2 mod 11"
+  },
+  "normal_optimized_identical": true,
+  "certificate_regeneration_byte_identical": true,
+  "q11_proof_and_five_colouring_regeneration_byte_identical": true,
+  "auxiliary_pilot": {
+    "conflict_cap_per_query": 100000,
+    "cases": [
+      {
+        "q": 2,
+        "vertices": 4,
+        "edges": 6,
+        "result": "SAT",
+        "statistics": {
+          "restarts": 0,
+          "conflicts": 0,
+          "decisions": 0,
+          "propagations": 12
+        },
+        "elapsed_seconds": 0.0006145590014057234
+      },
+      {
+        "q": 3,
+        "vertices": 9,
+        "edges": 18,
+        "result": "SAT",
+        "statistics": {
+          "restarts": 0,
+          "conflicts": 0,
+          "decisions": 0,
+          "propagations": 14
+        },
+        "elapsed_seconds": 0.00028659100644290447
+      },
+      {
+        "q": 4,
+        "vertices": 16,
+        "edges": 40,
+        "result": "SAT",
+        "statistics": {
+          "restarts": 0,
+          "conflicts": 0,
+          "decisions": 0,
+          "propagations": 16
+        },
+        "elapsed_seconds": 0.00035537200164981186
+      },
+      {
+        "q": 5,
+        "vertices": 25,
+        "edges": 75,
+        "result": "SAT",
+        "statistics": {
+          "restarts": 0,
+          "conflicts": 0,
+          "decisions": 0,
+          "propagations": 18
+        },
+        "elapsed_seconds": 0.0005608960054814816
+      },
+      {
+        "q": 7,
+        "vertices": 49,
+        "edges": 196,
+        "result": "SAT",
+        "statistics": {
+          "restarts": 0,
+          "conflicts": 18,
+          "decisions": 31,
+          "propagations": 1047
+        },
+        "elapsed_seconds": 0.0012909380020573735
+      },
+      {
+        "q": 8,
+        "vertices": 64,
+        "edges": 288,
+        "result": "SAT",
+        "statistics": {
+          "restarts": 0,
+          "conflicts": 0,
+          "decisions": 0,
+          "propagations": 24
+        },
+        "elapsed_seconds": 0.0013037099997745827
+      },
+      {
+        "q": 9,
+        "vertices": 81,
+        "edges": 405,
+        "result": "SAT",
+        "statistics": {
+          "restarts": 0,
+          "conflicts": 0,
+          "decisions": 0,
+          "propagations": 26
+        },
+        "elapsed_seconds": 0.0017299640021519735
+      },
+      {
+        "q": 11,
+        "vertices": 121,
+        "edges": 726,
+        "result": "UNSAT",
+        "statistics": {
+          "restarts": 0,
+          "conflicts": 274,
+          "decisions": 282,
+          "propagations": 31831
+        },
+        "elapsed_seconds": 0.007876086994656362
+      },
+      {
+        "q": 13,
+        "vertices": 169,
+        "edges": 1183,
+        "result": "UNSAT",
+        "statistics": {
+          "restarts": 1575,
+          "conflicts": 73830,
+          "decisions": 88076,
+          "propagations": 6966445
+        },
+        "elapsed_seconds": 3.2553915419994155
+      },
+      {
+        "q": 16,
+        "vertices": 256,
+        "edges": 2176,
+        "result": "SAT",
+        "statistics": {
+          "restarts": 0,
+          "conflicts": 13,
+          "decisions": 25,
+          "propagations": 3732
+        },
+        "elapsed_seconds": 0.008486608989187516
+      },
+      {
+        "q": 17,
+        "vertices": 289,
+        "edges": 2601,
+        "result": "UNSAT",
+        "statistics": {
+          "restarts": 114,
+          "conflicts": 2049,
+          "decisions": 2683,
+          "propagations": 411579
+        },
+        "elapsed_seconds": 0.07991196001239587
+      },
+      {
+        "q": 19,
+        "vertices": 361,
+        "edges": 3610,
+        "result": "UNKNOWN",
+        "statistics": {
+          "restarts": 4088,
+          "conflicts": 100000,
+          "decisions": 135373,
+          "propagations": 16313237
+        },
+        "elapsed_seconds": 5.4356545970076695
+      }
+    ],
+    "complete_proof_checks": [
+      {
+        "q": 11,
+        "proof_lines": 640,
+        "proof_bytes": 12449,
+        "checker_returncode": 0,
+        "verified": true,
+        "seconds": 0.11712356300267857
+      },
+      {
+        "q": 13,
+        "proof_lines": 145297,
+        "proof_bytes": 8865614,
+        "checker_returncode": 0,
+        "verified": true,
+        "seconds": 6.72756231900712
+      },
+      {
+        "q": 17,
+        "proof_lines": 7503,
+        "proof_bytes": 217340,
+        "checker_returncode": 0,
+        "verified": true,
+        "seconds": 0.2616677490004804
+      }
+    ],
+    "proof_export_initially_failed": true,
+    "proof_export_fix": "Explicit C fflush(NULL) before reading PySAT CaDiCaL binary proof stream; no binary strip.",
+    "q19_remains_unknown": true
+  },
+  "environment": {
+    "python": "CPython 3.11.2",
+    "proof_checker_dependencies": "stdlib only",
+    "optional_python_sat": "1.9.dev15",
+    "optional_cadical": "1.9.5",
+    "ancillary_drat_trim_source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+  },
+  "external_review": false,
+  "formalized": false,
+  "private_traces_are_not_main_proof_inputs": true
+}
