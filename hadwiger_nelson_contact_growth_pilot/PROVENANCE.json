@@ -1,0 +1,49 @@
+{
+  "problem": "Smallest five-chromatic unit-distance graph in the Euclidean plane; target<=508",
+  "claim_status": "Bounded computational observation with independently checked positive four-colouring certificates",
+  "source_context": [
+    {
+      "url": "https://arxiv.org/html/1804.02385v2",
+      "role": "Known30-direction spindle geometry and radius2 linking rotation; no stored host imported"
+    }
+  ],
+  "physical_field": "Q(sqrt5,i sqrt3,i sqrt11), degree8",
+  "coordinate_denominator": 96,
+  "mechanism": "Colour-bank-guided exact contact growth from13 points",
+  "frozen_caps": {
+    "trajectory_cap": 4,
+    "vertex_cap": 508,
+    "query_conflict_cap": 100000,
+    "trajectory_conflict_cap": 500000,
+    "bank_cap": 4
+  },
+  "solver_queries": 1984,
+  "all_queries": "SAT",
+  "discovery_python": "CPython3.11.2",
+  "discovery_dependency": "python-sat1.9.dev15",
+  "solver": "cadical195 / CaDiCaL1.9.5",
+  "verification": "Independent stdlib tensor-algebra checker, all-pairs edges, colour witnesses, exact seed lower bound",
+  "trust_boundary": "No solver trust needed for the saved geometry, upper bound, or seed lower bound; heuristic selection and the untested search space are not classified",
+  "certificate_runtime_seconds": [
+    3.8417588169977535,
+    4.241883723007049,
+    3.0509315399976913,
+    4.2924862840009155
+  ],
+  "search_cap_extended": false,
+  "non_four_colourable_signal": false,
+  "record_improvement": false,
+  "external_review_completed": false,
+  "prior_checkpoint": "Completed32-query CM213 pilot, source57fa2bb9250bded8c8528dc5fe707ff5326651c0; preserved and not extended",
+  "teammate_separation": "team-hn-3 reciprocal-golden-ratio G16 overlays; distinct source and mechanism",
+  "steering": "2026-09-07T18:18Z positive-signal gate",
+  "artifact_scope": "Four saved508-vertex labelled outputs and their induced prefixes; no universal or exhaustive-family claim",
+  "discovery_replay": {
+    "all_non_timing_certificate_fields_identical": true,
+    "all_coordinates_entrywise_identical": true,
+    "trajectories": 4,
+    "parent_step_records": 1980,
+    "colour_symbols": 2032
+  },
+  "independent_verification_seconds": 6.746247184986714
+}
