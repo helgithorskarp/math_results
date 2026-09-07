@@ -1,0 +1,202 @@
+{
+  "proof": {
+    "verified": true,
+    "cases": 812,
+    "formal_D3_addresses_per_case": 174,
+    "family_D9_vertex_upper_bound": 496,
+    "seed_monochromatic_pairs": 132,
+    "family_monochromatic_pairs": 3548735,
+    "all_graphs_four_colourable": true,
+    "exactly_three_chromatic": 157,
+    "exactly_four_chromatic": 655,
+    "lower_core_search_nodes": 47634,
+    "max_lower_core_search_nodes": 6648,
+    "max_lower_core_vertices": 113,
+    "record_improvement": false,
+    "seed_sha256": "9d03aaf2233e7b96109484a1fe3c8d311025bb95186b6927d517d716e774f614",
+    "modulus": 1000001539,
+    "proof_uses_solver_or_producer_geometry": false,
+    "certificate_sha256": "c217efc0649faf986475dac157e7f2ac4bb992e4f4ac88a108e3217808d20dc3"
+  },
+  "independent_geometry": {
+    "verified": true,
+    "cases": 812,
+    "formal_positions_checked": 141288,
+    "distinct_point_pairs_checked": 8738622,
+    "full_norm_checks_after_modular_filter": 295485,
+    "seed_vertices": 29,
+    "seed_edges": 51,
+    "seed_p_q_neighbours": [
+      [
+        4
+      ],
+      [
+        4
+      ]
+    ],
+    "D3_vertices_range": [
+      91,
+      166
+    ],
+    "D3_edges_range": [
+      246,
+      498
+    ],
+    "D9_vertices_range": [
+      271,
+      496
+    ],
+    "D9_edges_range": [
+      738,
+      1494
+    ],
+    "census_sha256": "cafc136a70b10e3b4b97537cdd319eb573e16307a2396a6730ee032da98728b5",
+    "producer_compared_entry_by_entry": true
+  },
+  "controls": {
+    "verified": true,
+    "all_simple_graphs_through_five_vertices": 1100,
+    "independent_basis_products": 256,
+    "conjugation_basis_vectors": 16,
+    "rejected_faults": [
+      {
+        "case": "boolean version",
+        "reason": "certificate version"
+      },
+      {
+        "case": "incomplete",
+        "reason": "incomplete certificate"
+      },
+      {
+        "case": "wrong family",
+        "reason": "certificate family"
+      },
+      {
+        "case": "wrong address order",
+        "reason": "address ordering"
+      },
+      {
+        "case": "wrong seed hash",
+        "reason": "seed hash"
+      },
+      {
+        "case": "missing case",
+        "reason": "complete case count"
+      },
+      {
+        "case": "duplicated case",
+        "reason": "complete ordered case coverage"
+      },
+      {
+        "case": "boolean centre",
+        "reason": "complete ordered case coverage"
+      },
+      {
+        "case": "invalid base64",
+        "reason": "Only base64 data is allowed"
+      },
+      {
+        "case": "short word",
+        "reason": "packed word length"
+      },
+      {
+        "case": "monochromatic word",
+        "reason": "same-colour pair has unit residue"
+      },
+      {
+        "case": "wrong chromatic label",
+        "reason": "chromatic label"
+      },
+      {
+        "case": "nonunit seed triangle",
+        "reason": "exact seed triangle"
+      },
+      {
+        "case": "duplicate lower address",
+        "reason": "lower core addresses"
+      },
+      {
+        "case": "negative lower address",
+        "reason": "lower core addresses"
+      },
+      {
+        "case": "boolean lower address",
+        "reason": "lower core addresses"
+      },
+      {
+        "case": "three-colourable lower core",
+        "reason": "lower core is three-colourable"
+      },
+      {
+        "case": "coincident lower points",
+        "reason": "lower core coincidences"
+      },
+      {
+        "case": "nonzero padding",
+        "reason": "padding bits"
+      },
+      {
+        "case": "invalid residue root",
+        "reason": "residue equations"
+      }
+    ],
+    "rejection_count": 20
+  },
+  "source_reconstruction": {
+    "verified": true,
+    "symbolic_source_reconstructions": 29,
+    "source_npy_sha256": "19766f3a5c31d544c5b15aa2f64cb2996684dc17b1818d9a5e5b20a90d8614a3"
+  },
+  "reproduction": {
+    "exact_geometry_files_regenerated": 812,
+    "geometry_bytes": 11106258,
+    "all_classifications_and_upper_words_identical": true,
+    "lower_witnesses_changed_by_explicit_sorted_choice": 35,
+    "final_certificate_bytes": 88302,
+    "final_certificate_sha256": "c217efc0649faf986475dac157e7f2ac4bb992e4f4ac88a108e3217808d20dc3"
+  },
+  "resources": {
+    "producer": [
+      {
+        "script": "produce.py",
+        "elapsed_seconds": 14.105747608002275,
+        "peak_rss_kib": 26992
+      },
+      {
+        "script": "classify.py",
+        "elapsed_seconds": 60.97483704700426,
+        "peak_rss_kib": 26992
+      }
+    ],
+    "checks": [
+      {
+        "mode": "controls",
+        "elapsed_seconds": 1.0404390829935437,
+        "peak_rss_kib": 17732
+      },
+      {
+        "mode": "geometry",
+        "elapsed_seconds": 15.025450822009589,
+        "peak_rss_kib": 19132
+      },
+      {
+        "mode": "normal",
+        "elapsed_seconds": 6.957936395003344,
+        "peak_rss_kib": 18740
+      },
+      {
+        "mode": "optimized",
+        "elapsed_seconds": 7.39426511801139,
+        "peak_rss_kib": 22200
+      },
+      {
+        "mode": "source",
+        "elapsed_seconds": 0.7729958849959075,
+        "peak_rss_kib": 68256
+      }
+    ]
+  },
+  "normal_and_optimized_proof_outputs_identical": true,
+  "external_peer_review": false,
+  "formalized": false
+}
