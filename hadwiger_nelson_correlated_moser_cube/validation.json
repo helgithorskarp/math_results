@@ -1,0 +1,142 @@
+{
+  "status": "complete exact computer-assisted construction-family classification",
+  "record_improvement": false,
+  "external_peer_review": false,
+  "normal_optimized_equal": true,
+  "producer_geometry_independently_reconstructed": true,
+  "all_factor_identities_checked": 18988,
+  "irreducibility_oracle_trusted": false,
+  "exact_modular_squarefreeness_checked": true,
+  "colour_certificate_regenerated_byte_identically": true,
+  "controls": {
+    "independent_rational_root_controls": 200,
+    "quadratic_sign_controls": 289,
+    "rejected_faults": [
+      {
+        "case": "changed coordinate",
+        "reason": "producer spindle coordinates"
+      },
+      {
+        "case": "missing generic edge",
+        "reason": "generic edge census"
+      },
+      {
+        "case": "missing unit polynomial",
+        "reason": "event polynomial count"
+      },
+      {
+        "case": "missing incidence",
+        "reason": "complete event-pair incidence"
+      },
+      {
+        "case": "boolean coefficient",
+        "reason": "quadratic coefficients"
+      },
+      {
+        "case": "missing factor row",
+        "reason": "complete factor-proposal list"
+      },
+      {
+        "case": "wrong multiplicity",
+        "reason": "factor product identity"
+      },
+      {
+        "case": "duplicate factor",
+        "reason": "distinct nonconstant factors in row"
+      },
+      {
+        "case": "lost collision root",
+        "reason": "factor product identity"
+      },
+      {
+        "case": "repeated modular piece",
+        "reason": "squarefree product of all pieces"
+      },
+      {
+        "case": "distinct noncoprime pieces",
+        "reason": "squarefree product of all pieces"
+      },
+      {
+        "case": "modular degree drop",
+        "reason": "modular degree preservation"
+      },
+      {
+        "case": "wrong version",
+        "reason": "certificate version"
+      },
+      {
+        "case": "short word",
+        "reason": "colour word shape"
+      },
+      {
+        "case": "monochromatic generic graph",
+        "reason": "generic colouring"
+      },
+      {
+        "case": "missing angle",
+        "reason": "complete assignment array"
+      },
+      {
+        "case": "real case skipped",
+        "reason": "real piece colouring index"
+      },
+      {
+        "case": "nonreal marker corrupted",
+        "reason": "nonreal piece marker"
+      },
+      {
+        "case": "boolean word index",
+        "reason": "integer assignment index"
+      },
+      {
+        "case": "infinity case skipped",
+        "reason": "infinity colouring index"
+      },
+      {
+        "case": "wrong extra_edges colouring",
+        "reason": "exceptional unit edges"
+      },
+      {
+        "case": "spurious collision constraint",
+        "reason": "coincident addresses have equal colours"
+      }
+    ],
+    "rejection_count": 22,
+    "reversal_pair_incidences": 115689,
+    "root_multiplicity_fixtures": 6,
+    "solver_calls": 0,
+    "verified": true
+  },
+  "verification_resources": [
+    {
+      "mode": "normal",
+      "seconds": 18.734656880005787,
+      "cumulative_child_peak_rss_kib": 120544
+    },
+    {
+      "mode": "optimized",
+      "seconds": 18.708459353001672,
+      "cumulative_child_peak_rss_kib": 122004
+    }
+  ],
+  "proposal_seconds": 14.124051418002637,
+  "search": {
+    "positive_cases": 7011,
+    "words": 57,
+    "SAT_calls": 56,
+    "largest_conflict_count": 345,
+    "requested_conflict_budget": 2000000
+  },
+  "verifier_dependencies": {
+    "python": "3.11.2",
+    "python-flint": "0.8.0"
+  },
+  "proposal_dependencies": {
+    "sympy": "1.14.0"
+  },
+  "optional_search_dependencies": {
+    "python-sat": "1.9.dev15",
+    "solver": "CaDiCaL1.9.5"
+  },
+  "generated_data_policy": "Proposal tables, full case graphs, factorization outputs, logs and local environment are generated outside Git; source plus37,391-byte positive certificate suffice."
+}
