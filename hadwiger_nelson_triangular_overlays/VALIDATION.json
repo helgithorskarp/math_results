@@ -1,0 +1,49 @@
+{
+  "all_lattice_theorem": "Elementary proof in PROOF.md; no computational premise",
+  "catalog_bytes": 459196,
+  "catalog_sha256": "92b06d19628c1da21472875ee22103888cdd01af4655258fb20e98219324a66b",
+  "controls": {
+    "benchmark_all_assignments": 18571,
+    "benchmark_edges": 11,
+    "benchmark_proper_colourings": {
+      "3": 0,
+      "4": 384
+    },
+    "benchmark_vertices": 7,
+    "controls": [
+      "wrong family radius",
+      "missing vertex",
+      "missing seed edge",
+      "missing origin contact",
+      "missing contact line",
+      "missing irrational line",
+      "duplicate irrational line",
+      "missing rational angle",
+      "duplicate rational angle",
+      "wrong radicand",
+      "missing irrational unit edge",
+      "erased four-chromatic witness",
+      "false three-colour label",
+      "wrong residue palette",
+      "nonunit rational rotation",
+      "noncanonical rational encoding",
+      "missing coincidence",
+      "missing rational unit edge"
+    ],
+    "rejected_corruptions": 18,
+    "verified": true
+  },
+  "dependencies": "Python standard library only",
+  "external_review": false,
+  "final_full_audit_seconds": 54.46488929100451,
+  "finite_census_checker": "Independent Cartesian representation, rational conic parametrization, complete squared-norm comparisons",
+  "floating_point_premise": false,
+  "formalized": false,
+  "implementation": "CPython",
+  "initial_full_audit_seconds": 28.45189482999558,
+  "interpreter": "3.11.2",
+  "optimized_core_audit_seconds": 26.129620311010513,
+  "optimized_scope": "Same full cross-norm audit and chromatic census; subsequent final normal run additionally independently enumerates all coincidence angles",
+  "producer_representation": "Eisenstein integer pairs and rational contact-line roots",
+  "solver_premise": false
+}
