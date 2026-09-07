@@ -1,0 +1,122 @@
+{
+  "status": "complete exact classification of the frozen construction family",
+  "external_peer_review": false,
+  "record_improvement": false,
+  "normal_optimized_equal": true,
+  "independent_geometry": "Ramanujan trace coordinates versus cyclotomic polynomial quotient",
+  "all_pair_incidences_compared": 714594,
+  "all_generated_files_regenerated_byte_identically": 28,
+  "generated_bytes": 8967822,
+  "resources": [
+    {
+      "seconds": 9.414530091991764,
+      "peak_rss_kib": 58356,
+      "mode": "normal"
+    },
+    {
+      "seconds": 9.290069021008094,
+      "peak_rss_kib": 59168,
+      "mode": "optimized"
+    }
+  ],
+  "controls": {
+    "Mobius_controls": 256,
+    "Ramanujan_projector_entries": 666,
+    "certificate_sha256": "45a928f317553fd80ea95e992cf38105a50ad12da8e3e4f22bec69f74a33926e",
+    "chord_cardinality_orders": 36,
+    "cycle_parity_fixtures": 6,
+    "rejected_faults": [
+      {
+        "case": "even alleged odd cycle",
+        "reason": "odd cycle length"
+      },
+      {
+        "case": "repeated odd cycle vertex",
+        "reason": "simple odd cycle"
+      },
+      {
+        "case": "nonedge in odd cycle",
+        "reason": "odd cycle edges"
+      },
+      {
+        "case": "boolean version",
+        "reason": "certificate version"
+      },
+      {
+        "case": "wrong family",
+        "reason": "family tag"
+      },
+      {
+        "case": "duplicate core key",
+        "reason": "duplicate core key"
+      },
+      {
+        "case": "boolean key",
+        "reason": "core key domain"
+      },
+      {
+        "case": "nonternary word",
+        "reason": "ternary word shape"
+      },
+      {
+        "case": "missing core word",
+        "reason": "missing core colouring"
+      },
+      {
+        "case": "short core word",
+        "reason": "ternary word shape"
+      },
+      {
+        "case": "monochromatic core",
+        "reason": "full positive edge colouring"
+      },
+      {
+        "case": "wrong shell key",
+        "reason": "missing core colouring"
+      },
+      {
+        "case": "missing point",
+        "reason": "proposal addresses"
+      },
+      {
+        "case": "wrong point coordinate",
+        "reason": "proposal coordinates"
+      },
+      {
+        "case": "missing scale",
+        "reason": "proposal shell count"
+      },
+      {
+        "case": "missing shell edge",
+        "reason": "complete proposal shell incidence"
+      },
+      {
+        "case": "wrong squared distance",
+        "reason": "proposal norm value"
+      },
+      {
+        "case": "wrong chromatic number",
+        "reason": "proposal chromatic number"
+      },
+      {
+        "case": "wrong positive proposal",
+        "reason": "proposal positive colouring"
+      }
+    ],
+    "rejection_count": 19,
+    "verified": true
+  },
+  "SAT_proposal": {
+    "calls": 309,
+    "maximum_conflicts": 145,
+    "conflict_budget": 200000,
+    "all_answers": "SAT",
+    "UNSAT_proof_premises": 0
+  },
+  "proof_checker_dependencies": "CPython 3.11.2 standard library",
+  "optional_producer_dependencies": {
+    "python-flint": "0.8.0",
+    "python-sat": "1.9.dev15",
+    "solver": "CaDiCaL1.9.5"
+  }
+}
