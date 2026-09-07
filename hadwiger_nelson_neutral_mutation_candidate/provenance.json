@@ -1,0 +1,72 @@
+{
+  "date": "2026-09-07",
+  "agent": "team-hn-3",
+  "problem": "Strict improvement of the Parts 509-vertex five-chromatic Euclidean unit-distance graph",
+  "target_vertices_at_most": 508,
+  "target_found": false,
+  "construction_source_graph_refs": [
+    "bafkreibd5s52slcr6km2aycj7vh6y37lqioagg5ml6gcolvny3gpqrsshy",
+    "bafkreihoewqqzy6xgoh6cvyutrdbkl6ejj4sbcqljdvrxmwpxtxhtpz7pu",
+    "bafkreideyharovxczahnz5cqqqptf3wj4c2o4pep57hhp6gwzt5d33vyfm"
+  ],
+  "validation": {
+    "checks": [
+      "truncated deletion row rejected",
+      "out-of-range family reference rejected",
+      "changed coordinate rejected",
+      "all thirty geometric points and incidences match primary experiment",
+      "complete 523-vertex geometric host matches primary experiment",
+      "optimized verifier agrees on all geometry, colourings and CNF",
+      "public end-to-end command regenerated and verified the recorded DRAT proof"
+    ],
+    "python": "3.11.2",
+    "primary_arithmetic": "Fraction multiquadratic products plus exact modular filter",
+    "public_arithmetic": "independent integer monomial squares, all 129286 pairs",
+    "DRAT": "public regenerated CNF independently rechecked with original DRAT trace",
+    "fresh_public_proof_reproduced": true
+  },
+  "recorded_lower_bound": {
+    "vertices": 509,
+    "edges": 2447,
+    "pair_checks": 129286,
+    "original_points_retained": 500,
+    "deletion_words_checked": 509,
+    "five_colouring_checked": true,
+    "cnf_sha256": "ba3c9cbcb8958c41282382abbc79a4c307acfa2ea6debb45d2ce15ec0a9058ce",
+    "DRAT_verified": true,
+    "proof_sha256": "7ee8cb2ba37fcff08432f3665a559f5904f3f1e5e08a32230793195985912d65",
+    "matches_recorded_proof": true
+  },
+  "solver": {
+    "generator": "Kissat 4.0.4",
+    "commit": "8af8e56f174b778aef3aa45af9f739b2a5f492c2",
+    "checker": "drat-trim",
+    "checker_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+  },
+  "search_provenance": {
+    "initial_eleven_move_and_ten_move_subsets": {
+      "tested": 12,
+      "four_colourable": 12
+    },
+    "selected_nine_move_seed": {
+      "source": "First tested maximum-size subset avoiding the two known bad move pairs",
+      "claimed_exhaustive_nine_move_classification": false
+    },
+    "finite_continuation": {
+      "mutant_frontier_points": 59,
+      "all_single_move_candidates_replayed": 30031,
+      "initial_blocked_pairs": 1791,
+      "incremental_SAT_calls": 656,
+      "incremental_UNKNOWN": 1,
+      "fixed_graph_SAT_resolutions": 1,
+      "final_unknown": 0,
+      "coupled_host_vertices": 523,
+      "coupled_host_edges": 2499,
+      "full_coupled_host_seed_deletions_replayed": 509,
+      "target_found": false
+    },
+    "publication_boundary": "Only candidate reconstruction, compact direct criticality evidence, and the exact circle generator are public. Expanded search transcripts, all output graphs, solver logs and the DRAT trace are private and are not proof premises silently checked by the default command."
+  },
+  "novelty": "A specific recombination outside the recorded original/single/63-pair candidate lists by edge count. No global isomorphism classification or historical priority claim.",
+  "trust": "Fresh DRAT refutation plus directly replayed witnesses. Earlier chromaticity and closure theorems are search context, not proof premises for the new graph."
+}
