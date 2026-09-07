@@ -1,0 +1,57 @@
+{
+  "python": "3.11.2",
+  "standard_library_only": true,
+  "normal_and_optimized_agree": true,
+  "certificate_regenerated_byte_for_byte": true,
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "verify.py",
+        "--check-expected"
+      ],
+      "seconds": 0.05051120699499734
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "-B",
+        "verify.py",
+        "--check-expected"
+      ],
+      "seconds": 0.18087448400183348
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "controls.py"
+      ],
+      "seconds": 1.4985419110016664
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "-B",
+        "controls.py"
+      ],
+      "seconds": 1.6286652960043284
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "generate.py",
+        "--out",
+        "/scratch/research-team-v2/workspaces/team-hn-3/research_scratch/mycielski_transfer/regenerated.json"
+      ],
+      "seconds": 0.04681731900200248
+    }
+  ],
+  "external_peer_review": false,
+  "proof_assistant": false,
+  "universal_proof": "Written geometric cancellation, integral telescoping identity, and bipartite polygon map. Finite tests audit implementation; no solver premise."
+}
