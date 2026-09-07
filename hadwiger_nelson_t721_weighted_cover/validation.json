@@ -1,0 +1,111 @@
+{
+  "normal_optimized_verifier_equal": true,
+  "normal_optimized_controls_equal": true,
+  "colour_certificate_regenerated_byte_identically": true,
+  "weight_certificate_regenerated_byte_identically": true,
+  "controls": {
+    "DAG_regenerated": true,
+    "feasible_dual_subset_cases": 7646,
+    "independent_geometries_equal": true,
+    "malformed_inputs_rejected": 43,
+    "parser_expression_cases": 90,
+    "producer_filter_survivors": 43704,
+    "rejections": [
+      "version",
+      "target",
+      "boolean target",
+      "boolean terminal",
+      "short baseline",
+      "baseline omission",
+      "nonlist steps",
+      "deleted range",
+      "terminal deletion",
+      "boolean deleted",
+      "short seed",
+      "duplicate row",
+      "equal terminals",
+      "monochromatic edge",
+      "rotation zero",
+      "rotation six",
+      "boolean rotation",
+      "rotation parent",
+      "rotation label",
+      "unknown kind",
+      "missing parent",
+      "empty patch",
+      "duplicate patch label",
+      "patch colour",
+      "boolean patch label",
+      "parse {1/0,0}",
+      "parse {Sqrt[-1],0}",
+      "parse {Sqrt[11],0}",
+      "parse {x,0}",
+      "parse {1,0}junk",
+      "parse {1,0,2}",
+      "parse {(1+2,0}",
+      "parse {1/0*0,0}",
+      "weight sign",
+      "weight duplicate",
+      "weight outside mandatory",
+      "weight boolean",
+      "degree boolean",
+      "capacity",
+      "missing exception",
+      "boolean exception",
+      "missing bridge",
+      "additional bridge"
+    ],
+    "seed_words": 12,
+    "small_dual_graphs": 1099,
+    "verified": true
+  },
+  "resources": [
+    {
+      "check": "verify_normal",
+      "seconds": 4.181874663998315,
+      "child_peak_rss_kib": 21540
+    },
+    {
+      "check": "verify_optimized",
+      "seconds": 4.075297832998331,
+      "child_peak_rss_kib": 23156
+    },
+    {
+      "check": "controls_optimized",
+      "seconds": 15.587505005998537,
+      "child_peak_rss_kib": 27412
+    }
+  ],
+  "search": {
+    "primary_universe": 360,
+    "consumed_primary_labels": 79,
+    "completed_queries": 77,
+    "SAT": 21,
+    "UNKNOWN_completed": 56,
+    "UNSAT": 0,
+    "interrupted_consumed_labels": [
+      640,
+      600
+    ],
+    "skipped_already_certified": 34,
+    "unqueried_after_target_closure": 247,
+    "no_duplicate_labels": true,
+    "all_labels_accounted_for": true,
+    "all_completed_positive_words_independently_checked": 21,
+    "positive_half_edge_checks": 82770,
+    "requested_conflict_cap": 200000,
+    "largest_reported_conflict_count": 201212,
+    "sum_completed_query_seconds": 2627.1185446409872,
+    "proof_seed_words": 12,
+    "no_background_jobs": true,
+    "search_exhaustiveness_needed_for_theorem": false
+  },
+  "python": "3.11.2",
+  "proof_dependencies": "standard library only",
+  "optional_weight_producer": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "new_result_externally_reviewed": false,
+  "record_improvement": false
+}
