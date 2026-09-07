@@ -1,0 +1,49 @@
+{
+  "python": "3.11.2",
+  "pysat": "1.9.dev15",
+  "solver": "CaDiCaL195",
+  "certificate_regenerated_identically": true,
+  "normal_optimized_verifier_equal": true,
+  "normal_optimized_controls_equal": true,
+  "verifier": {
+    "seconds": 7.716968756001734,
+    "child_peak_rss_kib": 20292
+  },
+  "producer_seconds": 71.7462000509986,
+  "initial_crossover": {
+    "order": 508,
+    "edges": 2497,
+    "result": "SAT"
+  },
+  "primary_queries": 49,
+  "primary_sat": 49,
+  "growth_queries": 529,
+  "growth_sat": 305,
+  "growth_unknown": 224,
+  "unresolved_candidates": 0,
+  "controls": {
+    "all_checks_passed": true,
+    "exhaustive_weighted_coverage_cases": 11542,
+    "field_basis_products": 64,
+    "independent_geometry_equal": true,
+    "malformed_inputs_rejected": 14,
+    "parser_fixtures": 6,
+    "rejections": [
+      "wrong version",
+      "wrong target",
+      "boolean target",
+      "negative mask",
+      "oversize mask",
+      "boolean mask",
+      "short word",
+      "invalid colour",
+      "empty covers",
+      "duplicate cover",
+      "missing selected colour",
+      "colour on absent vertex",
+      "monochromatic edge",
+      "missing essential cover"
+    ]
+  },
+  "development_repair": "Expected-report comparison initially compared tuples to JSON arrays; tuple-valued report fields were normalized to lists. Normal and optimized checks now pass with unchanged mathematical report bytes."
+}
