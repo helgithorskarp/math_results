@@ -1,0 +1,155 @@
+{
+  "exact": {
+    "baseline": 130462366516263974374824266855507767254963105600,
+    "internal_free_bits": 443,
+    "rank4_total": 296935236499420514245609548376980635622730104000,
+    "remaining": 77766291769629785088218777403926809066625520000,
+    "removed": 52696074746634189286605489451580958188337585600,
+    "removed_fraction": [
+      376310008768820496017231590851225959,
+      931649928837861438158324253913962509
+    ],
+    "stages": [
+      {
+        "affine_omission": 17154780486757774613743095705600000000,
+        "complement_rank_three_overlap": 4050919711653602791074637762831219200,
+        "raw_zero_filtered": 130462366537469674573235644260325500723394324800,
+        "remaining": 130462366516263974374824266855507767254963105600,
+        "stage": "current_baseline"
+      },
+      {
+        "affine_omission": 17154780486757774613743095705600000000,
+        "complement_rank_three_overlap": 4050919711653602791074637762831219200,
+        "raw_zero_filtered": 92390744370276124859211765951503730989415444480,
+        "remaining": 92390744349070424660800388546685997520984225280,
+        "stage": "zero_multiplicity_caps"
+      },
+      {
+        "affine_omission": 17154780486757774613743095705600000000,
+        "complement_rank_three_overlap": 1458661973529497372867041338528000000,
+        "raw_zero_filtered": 81140697290018138669657459725148732137207680000,
+        "remaining": 81140697271404696209370187738538595093079680000,
+        "stage": "also_all_row_classes_at_most_four"
+      },
+      {
+        "affine_omission": 17154780486757774613743095705600000000,
+        "complement_rank_three_overlap": 828149679018144235057330215590400000,
+        "raw_zero_filtered": 77766291787612715253994696252727234987815920000,
+        "remaining": 77766291769629785088218777403926809066625520000,
+        "stage": "also_all_column_classes_at_most_five"
+      }
+    ]
+  },
+  "independent_method": "direct_actual_label_span_dynamic_program",
+  "package": {
+    "bytes": 49686,
+    "files_including_manifest": 16,
+    "manifest_sha256": "cfccd6659ec8a73a17e4ceafdfce4e53545596c52dcbe8156324f8a9601b48b0",
+    "target_evidence_sha256": "2aa0ce54c18a3835e1a91ace577dcc8ca5c325adc2d5f55f9ba30f1cddfd931c"
+  },
+  "physical": {
+    "certificate": {
+      "color": "red",
+      "vertices": [
+        0,
+        1,
+        5,
+        18,
+        39
+      ]
+    },
+    "classification": "zero_multiplicity",
+    "cross_coordinates_reconstructed": 460,
+    "internal_coordinates_reconstructed": 443,
+    "physical_pairs_checked": 10,
+    "zero_rows": 2
+  },
+  "reviewed_source_commit": "1d660bc22336072feab9702a4969c9597c78df5f",
+  "scope": {
+    "affine_exclusion_is_imported": true,
+    "all_internal_edges_free": true,
+    "global_rank4_sieve": "accepted",
+    "ramsey_5_5_lower_bound_changed": false
+  },
+  "small_controls": {
+    "binary_matrices_enumerated": 12288,
+    "complete_configurations": 3
+  },
+  "status": "VERIFIED_REVIEW_RANK4_GLOBAL_SIEVE",
+  "structural": {
+    "five_contact_max_distinguished_triples": 9,
+    "five_contact_patterns_checked": 32,
+    "five_row_required_vs_available": [
+      170,
+      155
+    ],
+    "imported_premise": "R(4,5)<=25",
+    "mixed_signature_rows": [
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        2
+      ]
+    ],
+    "mixed_triangle_distinguisher_bound": 17,
+    "monochromatic_triangle_distinguisher_bounds": [
+      24,
+      23,
+      21,
+      20,
+      18
+    ],
+    "r33_avoiders": 0,
+    "r33_colorings_checked": 32768,
+    "r34_forced_degree": [
+      3
+    ],
+    "r35_upper_bound": 14,
+    "six_column_opposite_contact_minimum": 16,
+    "zero_column_cap": 2,
+    "zero_row_cap": 1
+  }
+}
