@@ -52,7 +52,7 @@ The reference run on CPython 3.11.2 uses one process and one thread.  It takes
 about 43 seconds for production, 25 seconds for either verification, and 51
 seconds for the controls on the research host.
 
-Verified source commit: `VERIFIED_SOURCE_COMMIT`.
+Verified source commit: `c72af06ed2d9e8ea9eda056ef095ab091a3d2972`.
 
 Public directory:
 <https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_golden_reciprocal_closure>
