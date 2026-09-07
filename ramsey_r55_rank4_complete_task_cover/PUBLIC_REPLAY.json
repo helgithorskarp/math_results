@@ -1,0 +1,58 @@
+{
+  "normal": {
+    "audit_sha256": "4ce493a63cf754fc7329d8236820d8cb53e442089b403e5ffa638fb098c44c29",
+    "certificate_negative_controls": 6,
+    "peak_child_rss_kib": 142588,
+    "peak_rss_kib": 120948,
+    "python_optimization": 0,
+    "row_cover_sha256": "bd1161b4261eb1ee3f8bc2cd0104a062c858bf38d596cf725acbfb195b158bac",
+    "seconds": 256.3298846969992,
+    "status": "VERIFIED_ALL_PATTERN_RANK4_TASK_HANDOFF",
+    "tasks": 10959
+  },
+  "optimized": {
+    "audit_sha256": "4ce493a63cf754fc7329d8236820d8cb53e442089b403e5ffa638fb098c44c29",
+    "certificate_negative_controls": 6,
+    "peak_child_rss_kib": 142584,
+    "peak_rss_kib": 122368,
+    "python_optimization": 1,
+    "row_cover_sha256": "bd1161b4261eb1ee3f8bc2cd0104a062c858bf38d596cf725acbfb195b158bac",
+    "seconds": 185.75742393601104,
+    "status": "VERIFIED_ALL_PATTERN_RANK4_TASK_HANDOFF",
+    "tasks": 10959
+  },
+  "source_sha256": {
+    "audit.py": "df2ce0c7810db26dbeb276a5440932cf57f6244a8286382b4752f2a88dab2548",
+    "burnside.py": "0298e9cbcc186339296e4acd4fcfc48c2599218a85b4c83314b7c3b85d50d044",
+    "check_cover.cpp": "41fbfc1ac4078228adc2fc88edfaa93c17be15ccb166cf05c9e2518d3929fabb",
+    "cover.cpp": "d3e1f5eb15a99a8661f0858c566e9d58eada599cf183757517c03c1fd58693cd",
+    "decode.py": "d6374fe0ca68afae7e4274f9aa4bc6c9e7ec69a8c705eacd72190c499bf21ceb",
+    "model.py": "4b3eeef8cda0c487746ab071c5409296e544142c6eb13dd81b141bf5106923b2",
+    "normalize.py": "7d874b8bab660894f91faf20ab84826660edbf953d194a5dfe872d837d17c85c",
+    "reproduce.py": "d20e89624c62444f0a02555844db43478e27b80b3ebc6aefb1ac21b4ba2efec4",
+    "verify_target.py": "878d4ac753fa16697a2e23902c47fd1d068c3410b627943ca1bc32ae621f3d6e"
+  },
+  "standalone": {
+    "audit_sha256": "4ce493a63cf754fc7329d8236820d8cb53e442089b403e5ffa638fb098c44c29",
+    "example_base_filters_hold": true,
+    "example_target_rejection": {
+      "blue_fives": 77288,
+      "first_violation": {
+        "color": "blue",
+        "vertices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "five_subsets_checked": 962598,
+      "n": 43,
+      "red_fives": 0,
+      "status": "REJECTED_MONOCHROMATIC_FIVE"
+    },
+    "standalone_commands": 5,
+    "status": "VERIFIED_DOCUMENTED_INTERFACES"
+  }
+}
