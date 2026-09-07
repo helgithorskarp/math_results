@@ -1,0 +1,30 @@
+{
+  "checker_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+  "child_max_rss_kib": 766260,
+  "clauses": 2462655,
+  "cnf_bytes": 138709891,
+  "cnf_sha256": "e01a3aec66bf8d3bd0ce8aba611634abc3f5068ad6ad56511be00186d6832989",
+  "command": [
+    "../tools/cadical/build/cadical",
+    "-q",
+    "-t",
+    "900",
+    "-w",
+    "production.witness",
+    "aggregate.cnf",
+    "production.drat"
+  ],
+  "proof_bytes": 834897993,
+  "schema": "rank4-all-row-support8-production-v1",
+  "seconds_limit": 900,
+  "solver_exit": 0,
+  "solver_output_tail": "",
+  "solver_seconds": 900.0882027010084,
+  "solver_sha256": "823b3c94050654fda13dab0c8c34386d9777a1e6de31bd6bc20555979e7c5e0b",
+  "solver_system_seconds": 9.446563,
+  "solver_user_seconds": 890.456956,
+  "solver_version": "3.0.1",
+  "status": "UNKNOWN",
+  "variables": 147595,
+  "witness_status": "MISSING"
+}
