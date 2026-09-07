@@ -1,0 +1,118 @@
+{
+  "formula_soundness": {
+    "five_sets_per_reference_case": 962598,
+    "reference_cases": 6,
+    "selected": [
+      {
+        "clauses": 141007,
+        "distinct_clause_lines": 129468,
+        "orbit_index": 0
+      },
+      {
+        "clauses": 140846,
+        "distinct_clause_lines": 129262,
+        "orbit_index": 201
+      },
+      {
+        "clauses": 140845,
+        "distinct_clause_lines": 129261,
+        "orbit_index": 862
+      },
+      {
+        "clauses": 143680,
+        "distinct_clause_lines": 130886,
+        "orbit_index": 1255
+      },
+      {
+        "clauses": 140991,
+        "distinct_clause_lines": 129344,
+        "orbit_index": 1256
+      },
+      {
+        "clauses": 139963,
+        "distinct_clause_lines": 128871,
+        "orbit_index": 1275
+      }
+    ],
+    "variables": 443
+  },
+  "fresh_full_replay": {
+    "command_shape": "python3 -B proof_replay.py --solver CADICAL_3_0_1 --checker DRAT_TRIM --exploration orbits_complete.json --manifest MANIFEST --summary SUMMARY --shards 1 --shard-index 0 --progress-every 25 --scratch SCRATCH",
+    "full_replay": {
+      "all_stable_fields_match": true,
+      "checker_seconds_max": 1.2979594289936358,
+      "checker_seconds_total": 608.7641701397661,
+      "clauses": 190848992,
+      "cnf_bytes": 7481258038,
+      "distinct_cnf_hashes": 1348,
+      "distinct_proof_hashes": 1348,
+      "manifest_bytes": 619998,
+      "proof_bytes": 1124629092,
+      "raw_manifest_sha256": "1cbfada67af75801e280d6f257170843e361ea5e52cac78902407db68221544b",
+      "records": 1348,
+      "solver_seconds_max": 1.147695145002217,
+      "solver_seconds_total": 444.42127211918705,
+      "stable_record_sha256": "744c2ced26ee6794f7a81d65f1f5250842c0230b40e96ce4dd89438ac658020a",
+      "statuses": [
+        "UNSAT_PROOF_VERIFIED"
+      ],
+      "wall_seconds": 1907.6290605670074
+    },
+    "target_contribution": "bafkreiclmkonai5ugjizxvswct3adsype7gnlsncoy3sri232rjke2dgsy",
+    "target_source_commit": "f3ca3be5e96bde79f807192d985b0c63c38d3506",
+    "toolchain": {
+      "cadical_commit": "c60730422e758ef1cebe7aeddf2dda31c996bf04",
+      "cadical_version": "3.0.1",
+      "drat_trim_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+      "drat_trim_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+    }
+  },
+  "orbit_coverage": {
+    "affine_eight_sets": 15,
+    "canonical_manifest_pairs": 1348,
+    "gl4_size": 20160,
+    "manifest_blocks": {
+      "(1, 2, 3, 4, 5)": 201,
+      "(1, 2, 3, 4, 8)": 661,
+      "(1, 2, 4, 7, 8)": 394,
+      "(1, 2, 4, 8, 15)": 92
+    },
+    "method": "all 2^16 matrices, Burnside lemma, lexicographic canonicalization",
+    "pair_orbits_burnside": 1348,
+    "pair_sets": 19279260,
+    "row_orbit_sizes": [
+      168,
+      315,
+      840,
+      1680
+    ],
+    "row_orbits_burnside": 4
+  },
+  "scope": {
+    "affine_column_family_imported_from_h3757_h3761": true,
+    "all_nonzero_labels_present": true,
+    "all_rank4_profiles_excluded": false,
+    "column_labels_doubled": 8,
+    "fixed_partition": [
+      20,
+      23
+    ],
+    "good43_existence_decided": false,
+    "internal_edges_free": 443,
+    "nonaffine_column_family_excluded_here": true,
+    "ramsey_bound_improved": false,
+    "red_cross_rank": 4,
+    "row_labels_doubled": 5
+  },
+  "status": "INDEPENDENT_FULL_SUPPORT_RANK4_ACCEPTANCE",
+  "target_evidence": {
+    "clauses": 190848992,
+    "cnf_bytes": 7481258038,
+    "package_bytes": 1350642,
+    "package_files": 25,
+    "proof_bytes": 1124629092,
+    "proof_records": 1348,
+    "stable_record_sha256": "744c2ced26ee6794f7a81d65f1f5250842c0230b40e96ce4dd89438ac658020a"
+  },
+  "verified": true
+}
