@@ -1,0 +1,85 @@
+{
+  "date_utc": "2026-09-07",
+  "python": "3.11.2",
+  "dependencies": "standard library only",
+  "producer_basis": "Q(t), t=zeta42",
+  "checker_basis": "Q(zeta7,omega6)",
+  "producer_inverse": "exact rational linear system",
+  "checker_inverse": "geometric-series formula",
+  "producer_isometries": "enumerate S3 permutations and test orientation",
+  "checker_isometries": "C3 rotation and reflection generators",
+  "checker_geometry": "all pairs, characteristic zero, no modular filter",
+  "entrywise_comparisons": [
+    "all coordinates",
+    "all copy images and labels",
+    "all edges"
+  ],
+  "expected": {
+    "all_family_graphs_chromatic_number": 4,
+    "all_pair_norm_checks": 211575,
+    "edges": 1407,
+    "every_base_four_colouring_extends": true,
+    "maximum_target_copies": 27,
+    "maximum_target_edges": 1095,
+    "maximum_target_vertices": 507,
+    "nonidentity_copies": 35,
+    "normalized_three_colour_assignments": 46656,
+    "private_vertices_per_copy": 18,
+    "record_improvement": false,
+    "seed_chromatic_number": 4,
+    "seed_edges": 42,
+    "seed_vertices": 21,
+    "target_sized_family_members": 34351006520,
+    "valid_three_colourings": 0,
+    "verified": true,
+    "vertices": 651
+  },
+  "normal_optimized_identical": true,
+  "timings": [
+    {
+      "mode": "normal",
+      "seconds": 9.71072484299657
+    },
+    {
+      "mode": "optimized",
+      "seconds": 9.65059903600195
+    }
+  ],
+  "algebra_controls": {
+    "basis_products": 144,
+    "basis_conjugations": 12,
+    "proper_root_order_exclusions": 7
+  },
+  "independent_seed_lower_check": {
+    "method": "DSATUR with only vertex zero colour fixed",
+    "nodes": 709,
+    "three_colourable": false
+  },
+  "rejected_faults": [
+    "boolean version",
+    "short colour word",
+    "boolean colour",
+    "monochromatic seed",
+    "wrong denominator",
+    "missing point",
+    "duplicate point",
+    "boolean coefficient",
+    "moved point",
+    "missing copy",
+    "duplicate isometry",
+    "wrong orientation",
+    "wrong copy point",
+    "boolean copy index",
+    "missing unit edge",
+    "invented unit edge"
+  ],
+  "rejection_count": 16,
+  "certificate_sha256": "b17c2545fe5f3fbaa153fafcf50d0c0df7b35dfab05d36e0ea8b0a1e4f5bfb65",
+  "generated_graph_sha256": "9fa98d213f0bf5c927a90d91385db59bcbd6eef5c2706e5c2d477a635d8ab60c",
+  "generated_graph_bytes": 39386,
+  "source_coordinate_definition": "Haugland arXiv:2608.04542v1, Section2; independently reconstructed",
+  "previous_foundation_source_commit": "b42754c605b69877056555955ac7f72a56e824f3",
+  "solver_proof_inputs": 0,
+  "formalized": false,
+  "externally_reviewed": false
+}
