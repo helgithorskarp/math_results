@@ -1,0 +1,35 @@
+{
+  "new_sources": [
+    "direct_span.py",
+    "quadruple.py",
+    "audit.py"
+  ],
+  "private_inputs_required": false,
+  "sources": [
+    {
+      "path": "ramsey_r55_rank4_contact_sieve/baseline.py",
+      "sha256": "bb841b1b6e9b7299d02b2c8cd56de9eabb883b49ed158df0f00086633ff1d15d",
+      "use": "Counting primitives retained; old rank-four compute entry point replaced by the new rank-five stages."
+    },
+    {
+      "path": "ramsey_r55_rank4_contact_sieve/base_model.py",
+      "sha256": "3277bdb35290b7739d8b774898974662b7d4688b6a675b3521201cc1d43a1bcf",
+      "use": "Adapted physical factor interface to rank five and the new baseline/filter."
+    },
+    {
+      "path": "ramsey_r55_rank4_global_sieve/extract.py",
+      "sha256": "77e5130e458f76484f97d7e4846288d3007fa0d21794a4bb4408ff77072b9240",
+      "use": "Copied verbatim; resolves local model/audit modules."
+    },
+    {
+      "path": "ramsey_r55_rank4_global_sieve/verify.py",
+      "sha256": "066581950481941b307fca49a12d76c31f271e650751443fa144499e0bc18234",
+      "use": "Copied verbatim; resolves local model/audit modules."
+    },
+    {
+      "path": "ramsey_r55_rank4_global_sieve/reproduce.py",
+      "sha256": "9d3efcfb2887f945c32e2ac7d39bc9add7bb9e067ec9b7dbb034991e90c20456",
+      "use": "Copied verbatim; resolves local model/audit modules."
+    }
+  ]
+}

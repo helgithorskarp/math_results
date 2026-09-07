@@ -1,0 +1,522 @@
+{
+  "arithmetic": {
+    "all_target_stage_fields_checked": 18,
+    "counts": {
+      "baseline": 5265776463769286448156565145344760253473964876758764876800,
+      "factor_fiber": 9999360,
+      "internal_free_bits": 443,
+      "quadruple_additional_removed": 319639601769240155564925006980617339728513107340597120000,
+      "quadruple_fraction_after_old_caps": [
+        1381295518673381498026176252447729,
+        15207280070793831858140556386411641
+      ],
+      "rank5_total": 5265776464066216906005257851228408422167691469305444480000,
+      "remaining": 3199411086594883698497480332351669598105158486523919360000,
+      "removed": 2066365377174402749659084812993090655368806390234845516800,
+      "removed_fraction": [
+        72250993667250533318774539803589602314409997,
+        184119220220965173622650664548131290651799397
+      ],
+      "stages": [
+        {
+          "complement_rank_four": 296930457848692705883648168693726592546679603200,
+          "raw": 5265776464066216906005257851228408422167691469305444480000,
+          "remaining": 5265776463769286448156565145344760253473964876758764876800,
+          "stage": "rank_five_with_blue_rank_at_least_five"
+        },
+        {
+          "complement_rank_four": 296930457848692705883648168693726592546679603200,
+          "raw": 3983167358906681186236467277897823051307302992465337472000,
+          "remaining": 3983167358609750728387774572014174882613576399918657868800,
+          "stage": "no_zero_pair"
+        },
+        {
+          "complement_rank_four": 296930457848692705883648168693726592546679603200,
+          "raw": 3563498397088877772365682979905490058979252040221014568960,
+          "remaining": 3563498396791947314516990274021841890285525447674334965760,
+          "stage": "zero_multiplicity_caps"
+        },
+        {
+          "complement_rank_four": 265650945417066755393235515598389082849484800000,
+          "raw": 3525934885857863919023425011271086023892674245939113600000,
+          "remaining": 3525934885592212973606358255877850508294285163089628800000,
+          "stage": "previous_row_cap_four"
+        },
+        {
+          "complement_rank_four": 255566051401893153915166994357253852556861440000,
+          "raw": 3519050688619689905464298493247453932190925446421377920000,
+          "remaining": 3519050688364123854062405339332286937833671593864516480000,
+          "stage": "column_cap_five"
+        },
+        {
+          "complement_rank_four": 154312745637917802252601569663291701978910720000,
+          "raw": 3199411086749196444135398134604271167768450188502830080000,
+          "remaining": 3199411086594883698497480332351669598105158486523919360000,
+          "stage": "new_row_cap_three"
+        }
+      ],
+      "status": "EXACT_RANK5_GLOBAL_SIEVE_COUNTS"
+    },
+    "independent_algorithm": "positive DP over actual vector labels and concrete linear spans",
+    "independent_spanning_word_entries": 212
+  },
+  "factor_fibers": [
+    {
+      "distinct_matrices": 42,
+      "each_fiber": 6,
+      "factor_pairs": 252,
+      "rank": 2,
+      "shape": [
+        2,
+        3
+      ]
+    },
+    {
+      "distinct_matrices": 168,
+      "each_fiber": 168,
+      "factor_pairs": 28224,
+      "rank": 3,
+      "shape": [
+        3,
+        3
+      ]
+    }
+  ],
+  "literal_clique_comparisons": 10240,
+  "physical": {
+    "basis_changes": 40,
+    "cross_coordinates_checked": 460,
+    "fixture": {
+      "certificate": {
+        "color": "red",
+        "vertices": [
+          0,
+          4,
+          11,
+          29,
+          30
+        ]
+      },
+      "graph": {
+        "n": 43,
+        "red_hex": "679f4d370a381ec717c32035823b3f6f66063533ea922a20d4e304f879fcd6dad6d06c5533b45533b0c22c8a6417d6c7e24d93dd6343a5b05bb5d5273d1107cca790c5533bbc61d1214596b8e994edbc7506871c251dfc7e853f38eb38378bce77045533ba1aae8d1e629ffee8b5546e08"
+      },
+      "parameters": {
+        "columns": [
+          9,
+          23,
+          4,
+          3,
+          15,
+          7,
+          18,
+          8,
+          13,
+          19,
+          10,
+          6,
+          1,
+          16,
+          11,
+          20,
+          21,
+          22,
+          5,
+          14,
+          12,
+          2,
+          17
+        ],
+        "internal_hex": "679f4d370a381ec717c32035823b3f6f66063533ea922a20d4e304f879fcd6d8264f55c8a4378c59a76a1c78fceb3b3b8286aa53ffc6e08",
+        "rows": [
+          9,
+          15,
+          1,
+          17,
+          13,
+          7,
+          3,
+          6,
+          16,
+          1,
+          12,
+          2,
+          14,
+          11,
+          4,
+          10,
+          8,
+          1,
+          1,
+          5
+        ]
+      }
+    },
+    "fixtures_checked": 40,
+    "internal_coordinates_checked": 443,
+    "negative_controls": 95,
+    "retained_complementary_ranks": [
+      6,
+      5
+    ]
+  },
+  "quadruple": {
+    "all_K4_colorings_checked": 64,
+    "equality_pairs": [
+      [
+        17,
+        18
+      ]
+    ],
+    "global_four_set_distinguisher_minimum": 17,
+    "mixed_signatures_checked": 8,
+    "outside_signatures_checked": 16,
+    "permitted_outside_signatures": [
+      3,
+      5,
+      6,
+      9,
+      10,
+      12
+    ],
+    "records": [
+      {
+        "forced_total_red_degrees": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "internal_red_degrees": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "mask": 12,
+        "required_four_times_red_uniform": 60
+      },
+      {
+        "forced_total_red_degrees": [
+          18,
+          18,
+          24,
+          24
+        ],
+        "internal_red_degrees": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "mask": 13,
+        "required_four_times_red_uniform": 46
+      },
+      {
+        "forced_total_red_degrees": [
+          18,
+          24,
+          18,
+          24
+        ],
+        "internal_red_degrees": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "mask": 14,
+        "required_four_times_red_uniform": 46
+      },
+      {
+        "forced_total_red_degrees": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "internal_red_degrees": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "mask": 18,
+        "required_four_times_red_uniform": 60
+      },
+      {
+        "forced_total_red_degrees": [
+          18,
+          18,
+          24,
+          24
+        ],
+        "internal_red_degrees": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "mask": 19,
+        "required_four_times_red_uniform": 46
+      },
+      {
+        "forced_total_red_degrees": [
+          18,
+          24,
+          24,
+          18
+        ],
+        "internal_red_degrees": [
+          2,
+          1,
+          1,
+          2
+        ],
+        "mask": 22,
+        "required_four_times_red_uniform": 46
+      },
+      {
+        "forced_total_red_degrees": [
+          24,
+          18,
+          18,
+          24
+        ],
+        "internal_red_degrees": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "mask": 26,
+        "required_four_times_red_uniform": 46
+      },
+      {
+        "forced_total_red_degrees": [
+          24,
+          18,
+          24,
+          18
+        ],
+        "internal_red_degrees": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "mask": 28,
+        "required_four_times_red_uniform": 46
+      },
+      {
+        "forced_total_red_degrees": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "internal_red_degrees": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "mask": 30,
+        "required_four_times_red_uniform": 32
+      },
+      {
+        "forced_total_red_degrees": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "internal_red_degrees": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "mask": 33,
+        "required_four_times_red_uniform": 60
+      },
+      {
+        "forced_total_red_degrees": [
+          18,
+          24,
+          18,
+          24
+        ],
+        "internal_red_degrees": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "mask": 35,
+        "required_four_times_red_uniform": 46
+      },
+      {
+        "forced_total_red_degrees": [
+          18,
+          24,
+          24,
+          18
+        ],
+        "internal_red_degrees": [
+          2,
+          1,
+          1,
+          2
+        ],
+        "mask": 37,
+        "required_four_times_red_uniform": 46
+      },
+      {
+        "forced_total_red_degrees": [
+          24,
+          18,
+          18,
+          24
+        ],
+        "internal_red_degrees": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "mask": 41,
+        "required_four_times_red_uniform": 46
+      },
+      {
+        "forced_total_red_degrees": [
+          24,
+          24,
+          18,
+          18
+        ],
+        "internal_red_degrees": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "mask": 44,
+        "required_four_times_red_uniform": 46
+      },
+      {
+        "forced_total_red_degrees": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "internal_red_degrees": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "mask": 45,
+        "required_four_times_red_uniform": 32
+      },
+      {
+        "forced_total_red_degrees": [
+          24,
+          18,
+          24,
+          18
+        ],
+        "internal_red_degrees": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "mask": 49,
+        "required_four_times_red_uniform": 46
+      },
+      {
+        "forced_total_red_degrees": [
+          24,
+          24,
+          18,
+          18
+        ],
+        "internal_red_degrees": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "mask": 50,
+        "required_four_times_red_uniform": 46
+      },
+      {
+        "forced_total_red_degrees": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "internal_red_degrees": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "mask": 51,
+        "required_four_times_red_uniform": 32
+      }
+    ],
+    "row_class_cap_on_20_side": 3,
+    "status": "VERIFIED_FOUR_SET_DISTINGUISHER_OBSTRUCTION",
+    "surviving_internal_colorings": 18
+  },
+  "small_matrices": {
+    "all_binary_matrices": 74304,
+    "cases": [
+      {
+        "exact_counts_checked": 20,
+        "matrices": 64,
+        "shape": [
+          2,
+          3
+        ]
+      },
+      {
+        "exact_counts_checked": 30,
+        "matrices": 512,
+        "shape": [
+          3,
+          3
+        ]
+      },
+      {
+        "exact_counts_checked": 30,
+        "matrices": 4096,
+        "shape": [
+          3,
+          4
+        ]
+      },
+      {
+        "exact_counts_checked": 30,
+        "matrices": 4096,
+        "shape": [
+          4,
+          3
+        ]
+      },
+      {
+        "exact_counts_checked": 40,
+        "matrices": 65536,
+        "shape": [
+          4,
+          4
+        ]
+      }
+    ]
+  },
+  "status": "VERIFIED_RANK5_GLOBAL_SIEVE"
+}
