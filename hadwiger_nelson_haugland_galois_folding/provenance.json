@@ -1,0 +1,104 @@
+{
+  "arithmetic": {
+    "prime": 1000000009,
+    "root42": 41285184,
+    "root84": 139892774,
+    "sqrt5": 383008016
+  },
+  "comparison": {
+    "checker_synchronous_changing_rounds": 9,
+    "domain_stream_entrywise_equal": true,
+    "domains_compared": 2131,
+    "point_entries_compared": 51144,
+    "point_stream_entrywise_equal": true,
+    "producer_ac3_updates": 2718
+  },
+  "execution": {
+    "SAT_queries": 0,
+    "external_review": false,
+    "floating_arithmetic_used_for_claim": false,
+    "normal_optimized_exact_audit_equal": true,
+    "normal_optimized_verifier_equal": true,
+    "python": "3.11.2",
+    "python_flint": "0.8.0",
+    "solver_soundness_required": false
+  },
+  "field": {
+    "actions_order": "a ascending with gcd(a,42)=1, then sign +1,-1",
+    "cyclotomic_polynomial_low_to_high": [
+      1,
+      1,
+      0,
+      -1,
+      -1,
+      0,
+      1,
+      0,
+      -1,
+      -1,
+      0,
+      1,
+      1
+    ],
+    "definition": "Q(t,sqrt(5)), t=exp(pi*i/21)",
+    "degree": 24
+  },
+  "input": {
+    "G3_edges": 12530,
+    "bytes": 179395,
+    "creation_commit": "ca450635c0b57787f6733d63e0adc4175b534406",
+    "last_change_commit": "ca450635c0b57787f6733d63e0adc4175b534406",
+    "path": "../hadwiger_nelson_haugland2131_exact_reproduction/graph.json",
+    "paths": 231,
+    "sha256": "201196679760fc329fff548346b843a821646ce5ffc326a91cc24598effc299d"
+  },
+  "methods": {
+    "exact_audit": "Characteristic-zero rational polynomial quotient and quadratic extension using python-flint",
+    "producer": "Complex modular reconstruction, asynchronous AC-3; private exploratory domain-cover search not used by checker",
+    "verifier": "Separate Cartesian modular reconstruction, synchronous sweeps, direct disjoint-domain witness check"
+  },
+  "paper": {
+    "author": "Jan Kristian Haugland",
+    "published_chromatic_lower_bound_independently_reproved": false,
+    "source_transcription_version": "v2",
+    "title": "A Moser-spindle-free 5-chromatic unit distance graph on 2131 vertices in the plane",
+    "url": "https://arxiv.org/html/2608.04542v4"
+  },
+  "prior_graph_context": [
+    {
+      "height": 1118,
+      "ref": "bafkreihvgswkovxawdhk3km6oinrjiu22ltvnic3ranjirrzerxqlm65uq",
+      "role": "Published source and chromatic claim, not a lower-bound premise for this obstruction"
+    },
+    {
+      "height": 1122,
+      "ref": "bafkreie5khtlvj3tb6oet52gnzzejftls3yzokeadkqhgtdpwdfd3awlwm",
+      "role": "Archived path and edge transcription; geometry rechecked here"
+    },
+    {
+      "height": 1184,
+      "ref": "bafkreiea5j2eje6vloyjej6rgteor6az24msa54l2oavnynkoo7usrue2a",
+      "role": "Previous strict-edge completeness; completeness not needed for the new bound"
+    },
+    {
+      "height": 3641,
+      "ref": "bafkreia2stp6puazbzlsuu4okudqg7ywh74ytl24254c2ry4ttwrmhnkyi",
+      "role": "Closed metric-ball family, distinct from present pointwise conjugate assignments"
+    }
+  ],
+  "private_evidence": {
+    "producer_domains_sha256": "b08dc47bec72abf2383b0e76be0fca969df3073cd8573fafdffff40a11ce3dc2",
+    "producer_point_rows_sha256": "71c6808d4de1da1bb98ae2422b1ebcef52c9aba1852abdc1c741898f976bbb36",
+    "producer_source_sha256": "b2a9d721137beade6eb7a452a68ef9f100e8a2cbfeacf0800887fd1e7e5cdf7b",
+    "public_verifier_needs_private_files": false
+  },
+  "scope": {
+    "arbitrary_coordinate_origins_covered": false,
+    "arbitrary_source_subgraphs_covered": false,
+    "attainment_claimed": false,
+    "complete_pointwise_conjugate_assignment_family_excluded_through_order": 1250,
+    "proved_image_order_lower_bound": 1251,
+    "record_improvement": false,
+    "source_chromatic_lower_bound_needed": false
+  }
+}
