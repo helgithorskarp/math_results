@@ -20,6 +20,8 @@ for abstract construction searches.  It does **not** construct a smaller
 five-chromatic graph, approach the 508-vertex target quantitatively, classify
 order 14, or decide realization of graphs that pass the two local tests.
 
+Verified source commit: `1083f927c1850b1bf85c88c7d5f777f4defb2915`.
+
 ## External inputs
 
 The edge-critical graph catalogs are credited on
