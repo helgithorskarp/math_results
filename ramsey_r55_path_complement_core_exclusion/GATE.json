@@ -1,0 +1,11 @@
+{
+  "problem": "Certified good43 proving R(5,5)>=44",
+  "family": "All simple labeled 43-vertex graphs for which some 26-vertex induced subgraph has neither an induced P5 nor an induced complement of P5; all remaining 17 vertices and their incident edges arbitrary",
+  "success_gate": "Prove a complete-class upper bound 25 for (P5, complement-P5)-free graphs with clique and independence numbers at most four, and consequently exclude the entire specified 43-vertex family",
+  "method": "Structural substitution decomposition into perfect graphs and C5; exact small weighted capacity induction",
+  "boundary_validation": "Check any claimed 25-vertex extremal graph literally; do not treat it as good43 or a candidate extension",
+  "failure_gate": "If the complete bound cannot be justified, preserve the failed proof obligation without publishing a global exclusion",
+  "forbidden_continuations": "No old triangle-support, carrier quotient, cut-rank occupancy, fixed-neighborhood gluing, or saved-parent repair; no threshold ladder after this gate",
+  "external_inputs_to_verify": ["Fouquet decomposition theorem for P5 and complement-P5 free graphs", "Perfect graph weighted replication property"],
+  "computation_role": "Exact finite arithmetic and semantic validation, not a capped monolithic target solve"
+}
