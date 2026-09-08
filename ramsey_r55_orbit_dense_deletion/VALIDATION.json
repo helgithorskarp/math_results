@@ -1,0 +1,60 @@
+{
+  "all_executable_and_logical_input_bytes_unchanged_after_replay": true,
+  "arithmetic": "exact integers, rational means, bitsets and adjacency matrices",
+  "controls_per_mode": {
+    "ambient_order_color_controls": 16,
+    "nonabelian_multiorbit_control": true,
+    "outside_family_has_no_ramsey_verdict": true,
+    "rejected_global_certificate_corruptions": 6,
+    "rejected_invalid_inputs_across_two_implementations": 10,
+    "rejected_physical_certificate_corruptions": 5,
+    "small_seed_deletion_pairs": 46332,
+    "status": "PASSED_ORBIT_DELETION_CONTROLS",
+    "strict_equality_counterexample_checked": true,
+    "template_all_pairs_checked": 1378,
+    "template_basis_assignments_checked": 54
+  },
+  "external_review_of_this_result": false,
+  "fresh_receiving_replay": {
+    "elapsed_seconds": 4.508502423996106,
+    "literal_physical_pairs_per_mode": 70,
+    "max_child_rss_kib": 17568,
+    "modes": [
+      "normal",
+      "assertions_disabled"
+    ],
+    "new_solver_calls": 0,
+    "paley_physical_jobs_excluded": 19499099620,
+    "physical_fixtures_per_mode": 7,
+    "status": "REPRODUCED_COMPLETE_ORBIT_DENSE_DELETION_CERTIFICATES",
+    "target43_found": false,
+    "two_orbit_physical_parameter_jobs_excluded": 77948453671476024416665600
+  },
+  "note": "Final validation metadata added after replay; source and logical certificate bytes are pinned above.",
+  "proof_boundary": "Written group-average theorem imports the published R(5,5)<=46 bound. Paley53 finite certificate uses no Ramsey bound. No full graph or group classification is imported.",
+  "python": "3.11.2",
+  "solver_calls": 0,
+  "source_replay": {
+    "elapsed_seconds": 4.522353682987159,
+    "literal_physical_pairs_per_mode": 70,
+    "max_child_rss_kib": 17548,
+    "modes": [
+      "normal",
+      "assertions_disabled"
+    ],
+    "new_solver_calls": 0,
+    "paley_physical_jobs_excluded": 19499099620,
+    "physical_fixtures_per_mode": 7,
+    "status": "REPRODUCED_COMPLETE_ORBIT_DENSE_DELETION_CERTIFICATES",
+    "target43_found": false,
+    "two_orbit_physical_parameter_jobs_excluded": 77948453671476024416665600
+  },
+  "validated_executables_sha256": {
+    "check.py": "fa4b9645d228efdbb749cb2e567c1ea11a542c6850e23b0cfca94fde88f50b5c",
+    "controls.py": "b52ff4c21ce26a930ecc98a8964aa4b41afab68384a6083f7b9a24695bc585e9",
+    "family.py": "08eb25244ff7924da7cecf26f9654d1071d6d938c2abbbf4d253cd6ea0af8b42",
+    "interface.py": "09d655c02ae5a696dc150024395e0e6224270cccf5ffb04b8596edda0c0b698f",
+    "produce.py": "ae6eb65c5594074233f6cf0fd735201951c60916e80ec4d4e27a622b907c167c",
+    "reproduce.py": "03daa9b3312d85c2b0afc9abd09ea7130cf1784683b9740bf9aabd7838ab171b"
+  }
+}
