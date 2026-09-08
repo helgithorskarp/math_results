@@ -1,0 +1,53 @@
+{
+  "assertions_disabled_full_factored_audit": true,
+  "controls": {
+    "catalogs": 12,
+    "closure_count_transports": 24,
+    "negative_controls": 10,
+    "normalization_fixtures": 36,
+    "onehot_assignments": 4096,
+    "physical_edges_transported": 32508,
+    "predicate_definition_cases": 5448,
+    "prefix_recurrence_assignments": 16,
+    "result_reader_controls": 6,
+    "reverse_repacking_edges": 32508,
+    "reverse_repacking_fixtures": 36,
+    "status": "VERIFIED_SELECTOR_AND_NORMALIZATION_CONTROLS",
+    "tail_predicate_cases": 37752,
+    "target_fixture_claims": 0
+  },
+  "direct": {
+    "clauses": 1483700,
+    "independent_representation": "12-bit edge truth tables and direct physical pairs",
+    "literals": 17653433,
+    "physical_five_subsets": 962598,
+    "sections": {
+      "block_colors": 1,
+      "constant": 1,
+      "greedy_closure": 5795,
+      "selectors": 67,
+      "symmetry": 900,
+      "tail_predicates": 0,
+      "target": 1476936
+    },
+    "sha256": "c34213d0ce43639589930cb4c4529233e331ee8590cf4ace5fa950964ab14275",
+    "status": "VERIFIED_EVERY_AGGREGATE_LITERAL"
+  },
+  "factored": {
+    "clauses": 1486424,
+    "independent_representation": "12-bit edge truth tables and direct physical pairs",
+    "literals": 14224206,
+    "physical_five_subsets": 962598,
+    "sections": {
+      "block_colors": 1,
+      "constant": 1,
+      "greedy_closure": 5795,
+      "selectors": 67,
+      "symmetry": 900,
+      "tail_predicates": 2724,
+      "target": 1476936
+    },
+    "sha256": "91bf5f741a7e8d08ad1da1e347825cf572060db601bb40f2e185da2c6f734dce",
+    "status": "VERIFIED_EVERY_AGGREGATE_LITERAL"
+  }
+}
