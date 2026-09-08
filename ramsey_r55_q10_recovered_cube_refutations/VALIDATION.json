@@ -1,0 +1,85 @@
+{
+  "assertions_disabled_replay": {
+    "elapsed_seconds": 45.86102829899755,
+    "good43_found": false,
+    "maxrss_kib": 165724,
+    "residual_physical_units": 29,
+    "solver_calls": 0,
+    "status": "REPRODUCED_99_Q10_PHYSICAL_SUBTASK_REFUTATIONS",
+    "tasks": {
+      "d20-22": {
+        "certified_unsat": 63,
+        "physical_tasks": 130,
+        "unknown": 67
+      },
+      "d22-20": {
+        "certified_unsat": 36,
+        "physical_tasks": 130,
+        "unknown": 94
+      }
+    },
+    "whole_parent_formulas": "BOTH_UNKNOWN"
+  },
+  "baseline_verification": "260 consistent UP-closed partial assignments; 502097960 original clauses independently scanned.",
+  "cpp_validation": {
+    "ndebug-controls": {
+      "accepted": 4160,
+      "checks": 4608,
+      "formulas": 512,
+      "status": "PASS"
+    },
+    "ndebug-d20-22-strong": {
+      "additions": 934,
+      "deletions": 1909,
+      "rup_additions": 934
+    },
+    "ndebug-d22-20": {
+      "additions": 531,
+      "deletions": 1062,
+      "rup_additions": 531
+    },
+    "ndebug-d22-20-corezero": {
+      "additions": 1689,
+      "deletions": 3293,
+      "rup_additions": 1689
+    },
+    "sanitize-controls": {
+      "accepted": 4160,
+      "checks": 4608,
+      "formulas": 512,
+      "status": "PASS"
+    },
+    "sanitize-d22-20": {
+      "additions": 531,
+      "deletions": 1062,
+      "rup_additions": 531
+    }
+  },
+  "external_review_of_this_result": false,
+  "negative_controls": "Seven incomplete/missing-assumption proof cases and five fixed-point controls, including duplicate-literal false-unit rejection.",
+  "normal_replay": {
+    "elapsed_seconds": 44.519150416977936,
+    "good43_found": false,
+    "maxrss_kib": 165728,
+    "residual_physical_units": 29,
+    "solver_calls": 0,
+    "status": "REPRODUCED_99_Q10_PHYSICAL_SUBTASK_REFUTATIONS",
+    "tasks": {
+      "d20-22": {
+        "certified_unsat": 63,
+        "physical_tasks": 130,
+        "unknown": 67
+      },
+      "d22-20": {
+        "certified_unsat": 36,
+        "physical_tasks": 130,
+        "unknown": 94
+      }
+    },
+    "whole_parent_formulas": "BOTH_UNKNOWN"
+  },
+  "receiving_emitter": "One residual p0 CNF per degree tested byte by byte; closed-task emission produces no file.",
+  "solver_calls": 0,
+  "supplemental_source_cover_check": "Both original full CNFs: exact 3310 canonical clauses plus three physical admissibility clauses; included in final assertion-disabled full replay.",
+  "watched_propagation_controls": "All 512 formulas on two variables over the nine signed/empty clauses; 416 initial conflicts, 864 fixed-point comparisons on remaining formulas."
+}

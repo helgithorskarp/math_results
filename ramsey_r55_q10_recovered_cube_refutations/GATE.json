@@ -1,0 +1,15 @@
+{
+  "declared_utc": "2026-09-08T18:07:15.678084+00:00",
+  "family": "The two exact frozen bo1-q10-r10-c000000 physical CNFs d20-22 and d22-20, with h3969 hashes.",
+  "mechanism": "Recover small physical branch exclusions from existing partial binary DRAT streams, without a solver restart.",
+  "first_output_gate": "At least one independently checked new complete physical cube exclusion of width at most four spanning at least three fixed blocks/core atoms, with proof tied to the exact frozen CNF and measured relative to baseline unit propagation. If no such leverage is recovered, close and checkpoint failure.",
+  "candidate_rule": "Complete addition records only; all literals physical variables 2..841; clause width <=4; no tautology or duplicates; touches >=3 atoms.",
+  "bounds": "Scan exactly the two historical final streams once. No higher width, adjacent proof sources, new SAT solve, or larger solve cap in this gate.",
+  "trust": "Raw DRAT records are untrusted candidates; RAT does not imply a physical clause. A claim requires an independently validated derivation or UNSAT proof for original CNF plus negated candidate.",
+  "forbidden_inferences": [
+    "UNKNOWN is not UNSAT",
+    "Partial streams are not UNSAT certificates",
+    "No full q10/h3887 task closure from a cube",
+    "No good43 or new Ramsey lower bound"
+  ]
+}
