@@ -1,0 +1,36 @@
+{
+  "validated_at_utc": "2026-09-08T02:07:00Z",
+  "environment": {
+    "python": "3.11.2",
+    "dependencies": "standard library plus hash-pinned sibling packages"
+  },
+  "runs": [
+    {
+      "command": "python3 -B verify.py",
+      "result": "passed; exact match to expected.json",
+      "elapsed_seconds": 78.924
+    },
+    {
+      "command": "python3 -O -B verify.py",
+      "result": "passed; exact match to expected.json with assertions disabled",
+      "elapsed_seconds": 76.947
+    },
+    {
+      "command": "python3 -B direct_audit.py",
+      "result": "passed; 3072 direct four-placement intersections, all size 16; all 32 cores have order 755",
+      "elapsed_seconds": 79.889
+    },
+    {
+      "command": "python3 -B controls.py",
+      "result": "passed; 32 normalized cases, exact circle data, set identity, two malformed-input rejections"
+    }
+  ],
+  "pinned_results": {
+    "mask_151_physical_order": 48405,
+    "mask_1682_physical_order": 48365,
+    "mask_151_point_sha256": "fcbfa81345bf182fb5e136bf7b48e96d994c725ce6d6fe10f785b2e49ffce500",
+    "mask_1682_point_sha256": "e6dff588e07ac07d8d1b7361c6a35f59ed3ac3f5b7d407fda1b783ac85b79edf",
+    "minimum_unavoidable_core_order": 755,
+    "outer_case_stream_sha256": "7c3d64158da27d6a10207040e5c2cf8ab2f5477bf6fa40362fda59bd2a7ee3e0"
+  }
+}
