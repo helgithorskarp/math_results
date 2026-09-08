@@ -1,0 +1,18 @@
+{
+  "task": "bo1-q7-r7-c000000",
+  "input_formula_sha256": "755dbcd5677bbc57a0865637dbce19fa72084c4846b3996b8697bf1485070178",
+  "input_variables": 10868,
+  "input_clauses": 923269,
+  "input_max_width": 8,
+  "new_mechanism": "h3899 propagation-complete K4 expansion threshold interface derived from h3897",
+  "selection_reason": "The same physical task as h3893 isolates the new interface's effect. The augmented formula has an independent literal audit and the structural unlock applies to every prescribed block.",
+  "solver": "CaDiCaL 3.0.1",
+  "solver_sha256": "823b3c94050654fda13dab0c8c34386d9777a1e6de31bd6bc20555979e7c5e0b",
+  "checker_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+  "solver_calls_max": 1,
+  "solver_wall_seconds_max": 1800,
+  "sat_policy": "Accept only after the augmented exact assignment check, h3887 physical decoder, and independent five-set verifier; preserve a compact edge list.",
+  "unsat_policy": "Accept only after drat-trim verifies the complete proof for the exact augmented CNF.",
+  "timeout_policy": "Preserve UNKNOWN and its partial proof stream as a non-certificate; do not rerun, extend the cap, or advance to another task in this pass.",
+  "target_found": false
+}
