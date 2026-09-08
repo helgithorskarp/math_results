@@ -13,7 +13,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 DEFAULT_REPOSITORY = HERE.parent
-EVIDENCE_SHA256 = "0ab8d449ec9655a79a610460a163bd94c1b59de582e9142b588c65cbb1f5dd1f"
+EVIDENCE_SHA256 = "b578f0e478b9c672e519da2f7d6b425d072044fba8430d5efb02af6be1122223"
 INPUT_SHA256 = {
     "hadwiger_nelson_h516_k23free_edge_repair/certificate.json": "a1cb7ecc7f33c16d4230b027f7809d57f8d5a07491538b5aa94f13b4d00e1808",
     "hadwiger_nelson_h516_k23free_edge_repair/expected.json": "62c12c8528e8a4cca30f59f42269ec0622515a50830bd1a53d6e40cd2d397655",
@@ -38,6 +38,7 @@ INPUT_SHA256 = {
     "hadwiger_nelson_301_forbidden_subgraph_interface/graph.json": "a5260af89de966a18e66a6ad932cd8f11e230a846a6f07e8ffaad005802e657f",
     "hadwiger_nelson_301_forbidden_subgraph_interface/repair_clause.cnf": "2e525fb48c247195fb20e6f4c323da5e0b87611c9f0ea25974485e94dbd3dfe3",
     "hadwiger_nelson_301_forbidden_subgraph_interface/verify.py": "7c695f564e879f31f4bdf70eada21b9a213dbdce04841c2ccb4ec4a0b4dff9e6",
+    "hadwiger_nelson_301_norm_edge_repairs/SHA256SUMS": "304cdef735572042d6aa8db8eca566a034d2901e684c557363f586c68509c0db",
 }
 
 
@@ -52,6 +53,31 @@ def sha256(path: Path) -> str:
 
 def load_json(path: Path):
     return json.loads(path.read_text())
+
+
+def audit_checksum_manifest(directory: Path) -> dict[str, str]:
+    entries = {}
+    for line in (directory / "SHA256SUMS").read_text().splitlines():
+        fields = line.split("  ", 1)
+        need(len(fields) == 2, "repair checksum syntax")
+        digest, name = fields
+        need(len(digest) == 64 and all(character in "0123456789abcdef" for character in digest), "repair checksum digest")
+        relative = Path(name)
+        need(not relative.is_absolute() and ".." not in relative.parts and name not in entries, "repair checksum path")
+        path = directory / relative
+        need(path.is_file() and sha256(path) == digest, f"repair checksum: {name}")
+        entries[name] = digest
+    public_files = {
+        str(path.relative_to(directory))
+        for path in directory.rglob("*")
+        if path.is_file()
+        and "__pycache__" not in path.relative_to(directory).parts
+        and path.name != "five_chromatic_repairs.lrat.xz"
+        and path.name != "SHA256SUMS"
+    }
+    need(len(entries) == 25 and set(entries) == public_files, "repair public manifest coverage")
+    need("five_chromatic_repairs.lrat.xz" not in entries, "repair LRAT must be omitted")
+    return entries
 
 
 def run(arguments: list[str], cwd: Path) -> str:
@@ -101,8 +127,9 @@ def audit_metadata(
     obstruction = evidence["obstruction"]
     reviews = evidence["independent_acceptances"]
     downstream = evidence["downstream_interface"]
+    terminal = evidence["terminal_repair_classification"]
     conclusion = evidence["combined_conclusion"]
-    need(evidence["status"] == "FIXED_301_CANDIDATE_CLOSED_BY_ACCEPTED_ALL_MAPS_OBSTRUCTION", "status")
+    need(evidence["status"] == "FIXED_301_CANDIDATE_AND_DIRECT_NORM_SUPPORT_REPAIRS_CLOSED", "status")
     need(evidence["record_improvement"] is False, "record status")
     need(candidate["evidence_role"] == "abstract_chromatic_producer", "candidate role")
     need(candidate["geometric_claim"] == "none", "candidate geometric scope")
@@ -113,10 +140,19 @@ def audit_metadata(
     need(len(reviews) == 2 and all(row["verdict"] == "ACCEPT" for row in reviews), "independent acceptances")
     need(all(row["chromatic_LRAT_in_verdict"] is False for row in reviews), "review scope")
     need(conclusion["physical_candidate_survives"] is False, "combined conclusion")
+    need(conclusion["direct_norm_support_repair_survives"] is False, "terminal repair conclusion")
     need(downstream["evidence_role"] == "necessary_condition_for_any_later_repair", "downstream role")
     need(downstream["sufficient_for_realizability"] is False, "repair clause necessity only")
     need(downstream["preserves_five_chromaticity"] is False, "repair clause chromatic scope")
     need(downstream["independently_reviewed"] is False, "downstream review scope")
+    need(terminal["evidence_role"] == "complete_decision_of_h3993_norm_support_edge_deletions", "terminal role")
+    need(terminal["source_graph_sha256"] == candidate["graph_sha256"], "terminal source graph")
+    need(terminal["interface_contribution"] == downstream["contribution"], "terminal interface")
+    need(terminal["norm_support_repairs"] == 18, "terminal repair count")
+    need(terminal["four_colourable_repairs"] == 6, "terminal four-colourable count")
+    need(terminal["exactly_five_nonrealizable_repairs"] == 12, "terminal five/nonrealizable count")
+    need(terminal["geometric_certificates"] == 12, "terminal geometric certificate count")
+    need(terminal["LRAT_archive_published"] is False, "terminal LRAT publication boundary")
 
     candidate_dir = repository / candidate["directory"]
     candidate_certificate = load_json(candidate_dir / "certificate.json")
@@ -167,6 +203,44 @@ def audit_metadata(
     need(variable_count == candidate["edges"], "repair variable count")
     need(repair_variables == {source_edge_order[edge] for edge in interface_edges}, "repair clause edge mapping")
 
+    terminal_dir = repository / terminal["directory"]
+    terminal_manifest = audit_checksum_manifest(terminal_dir)
+    need(sha256(terminal_dir / "SHA256SUMS") == terminal["public_checksum_manifest_sha256"], "terminal manifest identity")
+    need(terminal_manifest["classification.json"] == terminal["classification_sha256"], "terminal classification identity")
+    terminal_expected = load_json(terminal_dir / "EXPECTED.json")
+    terminal_classification = load_json(terminal_dir / "classification.json")
+    omitted_lrat = load_json(terminal_dir / "OMITTED_LRAT.json")
+    need(terminal_classification["source_graph_sha256"] == candidate["graph_sha256"], "terminal classification source")
+    need(terminal_classification["interface_certificate_sha256"] == sha256(interface_dir / "certificate.json"), "terminal interface certificate")
+    norm_support = {
+        (left, right)
+        for left, right, weight in load_json(interface_dir / "certificate.json")["norm_weights"]
+        if weight
+    }
+    cases = terminal_classification["cases"]
+    need(len(cases) == terminal["norm_support_repairs"], "terminal cases")
+    need({tuple(row["edge"]) for row in cases} == norm_support, "terminal norm-support coverage")
+    four = [row for row in cases if row["classification"] == "FOUR_COLOURABLE"]
+    exact = [row for row in cases if row["classification"] == "EXACTLY_FIVE_CHROMATIC_AND_NO_PLANE_UNIT_EDGE_MAP"]
+    need(len(four) == terminal["four_colourable_repairs"], "terminal explicit colouring count")
+    need(len(exact) == terminal["exactly_five_nonrealizable_repairs"], "terminal exact obstruction count")
+    need(len({row["geometric_certificate"] for row in exact}) == terminal["geometric_certificates"], "terminal geometric files")
+    need(all((terminal_dir / row["geometric_certificate"]).is_file() for row in exact), "terminal geometric file presence")
+    need(terminal_expected["norm_support_repairs"] == terminal["norm_support_repairs"], "terminal expected repair count")
+    need(terminal_expected["four_colourable_repairs"] == terminal["four_colourable_repairs"], "terminal expected four-colourable count")
+    need(terminal_expected["exactly_five_nonrealizable_repairs_if_LRAT_accepts"] == terminal["exactly_five_nonrealizable_repairs"], "terminal expected exact count")
+    need(terminal_expected["combined_CNF_variables"] == terminal["combined_CNF_variables"], "terminal CNF variables")
+    need(terminal_expected["combined_CNF_clauses"] == terminal["combined_CNF_clauses"], "terminal CNF clauses")
+    need(terminal_expected["combined_CNF_sha256"] == terminal["combined_CNF_sha256"], "terminal CNF identity")
+    need(terminal_expected["family_decision"] == terminal["family_decision"], "terminal family decision")
+    need(omitted_lrat["archive_size_bytes"] == terminal["LRAT_archive_size_bytes"], "terminal LRAT archive size")
+    need(omitted_lrat["archive_sha256"] == terminal["LRAT_archive_sha256"], "terminal LRAT archive identity")
+    need(omitted_lrat["raw_lrat_size_bytes"] == terminal["raw_LRAT_size_bytes"], "terminal raw LRAT size")
+    need(omitted_lrat["raw_lrat_sha256"] == terminal["raw_LRAT_sha256"], "terminal raw LRAT identity")
+    need({key: omitted_lrat["strict_replay_receipt"][key] for key in terminal["strict_LRAT"]} == terminal["strict_LRAT"], "terminal LRAT replay receipt")
+    need(omitted_lrat["publication_status"] == "retained locally and excluded from Git pending explicit human approval", "terminal LRAT status")
+    need("five_chromatic_repairs.lrat.xz" in (terminal_dir / ".gitignore").read_text().splitlines(), "terminal LRAT ignore rule")
+
     return {
         "candidate_certificate": candidate_certificate,
         "candidate_expected": candidate_expected,
@@ -174,6 +248,7 @@ def audit_metadata(
         "review1_expected": review1_expected,
         "review2_expected": review2_expected,
         "interface_expected": interface_expected,
+        "terminal_expected": terminal_expected,
     }
 
 
@@ -183,6 +258,7 @@ def replay(repository: Path, work: Path, compiler: str, metadata: dict) -> dict:
     review1_dir = repository / "hadwiger_nelson_301_repair_plane_obstruction_review1"
     review2_dir = repository / "hadwiger_nelson_301_repair_plane_obstruction_review2"
     interface_dir = repository / "hadwiger_nelson_301_forbidden_subgraph_interface"
+    terminal_dir = repository / "hadwiger_nelson_301_norm_edge_repairs"
 
     candidate_output = run(
         [sys.executable, "-B", str(candidate_dir / "verify.py"), "--work", str(work / "candidate")],
@@ -235,6 +311,17 @@ def replay(repository: Path, work: Path, compiler: str, metadata: dict) -> dict:
     interface_expected_text = (interface_dir / "EXPECTED.json").read_text()
     need(interface_normal == interface_optimized == interface_expected_text, "interface receipts")
 
+    terminal_arguments = [str(terminal_dir / "verify.py"), "--controls"]
+    terminal_normal = json.loads(run([sys.executable, "-B", *terminal_arguments], repository))
+    terminal_optimized = json.loads(run([sys.executable, "-B", "-O", *terminal_arguments], repository))
+    need(terminal_normal == terminal_optimized, "terminal repair receipts")
+    need(terminal_normal["verified"] is True, "terminal repair verdict")
+    need(terminal_normal["norm_support_repairs"] == 18, "terminal replay count")
+    need(terminal_normal["four_colourable_repairs"] == 6, "terminal replay four-colourable count")
+    need(terminal_normal["exactly_five_nonrealizable_repairs_if_LRAT_accepts"] == 12, "terminal replay exact count")
+    need(terminal_normal["rejected_controls"] == ["bad_four_colouring", "bad_edge_index", "bad_norm_identity"], "terminal replay controls")
+    need(type(terminal_normal["local_lrat_archive_checked"]) is bool, "terminal LRAT presence receipt")
+
     return {
         "candidate_audit": True,
         "strict_LRAT": True,
@@ -242,6 +329,7 @@ def replay(repository: Path, work: Path, compiler: str, metadata: dict) -> dict:
         "review1_reproduced": True,
         "review2_reproduced": True,
         "downstream_interface_checked": True,
+        "terminal_repair_compact_normal_optimized_equal": True,
         "lrat_additions": lrat_receipt["additions"],
         "lrat_hints": lrat_receipt["hints_used"],
     }
@@ -269,6 +357,12 @@ def controls(evidence: dict, repository: Path) -> int:
     mutations.append(changed)
     changed = copy.deepcopy(evidence)
     changed["record_improvement"] = True
+    mutations.append(changed)
+    changed = copy.deepcopy(evidence)
+    changed["terminal_repair_classification"]["norm_support_repairs"] = 17
+    mutations.append(changed)
+    changed = copy.deepcopy(evidence)
+    changed["terminal_repair_classification"]["LRAT_archive_published"] = True
     mutations.append(changed)
     rejected = 0
     for changed in mutations:
@@ -328,6 +422,15 @@ def main() -> None:
             "repair_clause_literals": evidence["downstream_interface"]["repair_clause_literals"],
             "necessary_only": True,
             "independently_reviewed": False,
+        },
+        "terminal_repair_classification": {
+            "contribution": evidence["terminal_repair_classification"]["contribution"],
+            "norm_support_repairs": evidence["terminal_repair_classification"]["norm_support_repairs"],
+            "four_colourable_repairs": evidence["terminal_repair_classification"]["four_colourable_repairs"],
+            "exactly_five_nonrealizable_repairs": evidence["terminal_repair_classification"]["exactly_five_nonrealizable_repairs"],
+            "geometric_certificates": evidence["terminal_repair_classification"]["geometric_certificates"],
+            "family_survivor": False,
+            "large_LRAT_archive_published": False,
         },
         "replay": {key: value for key, value in replay_report.items() if key not in {"lrat_additions", "lrat_hints"}},
         "record_improvement": False,

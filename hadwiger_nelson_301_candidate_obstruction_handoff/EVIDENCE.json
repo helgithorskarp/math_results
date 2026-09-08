@@ -1,5 +1,5 @@
 {
-  "status": "FIXED_301_CANDIDATE_CLOSED_BY_ACCEPTED_ALL_MAPS_OBSTRUCTION",
+  "status": "FIXED_301_CANDIDATE_AND_DIRECT_NORM_SUPPORT_REPAIRS_CLOSED",
   "record_improvement": false,
   "candidate": {
     "evidence_role": "abstract_chromatic_producer",
@@ -71,6 +71,7 @@
   "combined_conclusion": {
     "statement": "the fixed labelled graph is exactly five-chromatic as an abstract graph and has no Euclidean plane unit-edge map",
     "physical_candidate_survives": false,
+    "direct_norm_support_repair_survives": false,
     "logical_form": "producer chromatic theorem AND independently accepted geometric obstruction on the identical graph bytes"
   },
   "downstream_interface": {
@@ -88,17 +89,48 @@
     "preserves_five_chromaticity": false,
     "independently_reviewed": false
   },
+  "terminal_repair_classification": {
+    "evidence_role": "complete_decision_of_h3993_norm_support_edge_deletions",
+    "contribution": "bafkreigtn43k4w2ejkmwiiip2jgoitic2ip2s277s5vhpjm5jnohgbvv5y",
+    "height": 4007,
+    "commit": "cc7d37dc9d389fb2c8c8fd1e31122f1486894d0a",
+    "directory": "hadwiger_nelson_301_norm_edge_repairs",
+    "source_graph_sha256": "7be0344d1811866429181436b2f85653fc801272a7a3efddad6125539e50cbbb",
+    "interface_contribution": "bafkreiaht6wdxk2gkh4uor2pyynmnzkmeqofcybncbeo6rnaxcxxto7u2i",
+    "norm_support_repairs": 18,
+    "four_colourable_repairs": 6,
+    "exactly_five_nonrealizable_repairs": 12,
+    "geometric_certificates": 12,
+    "combined_CNF_variables": 1227,
+    "combined_CNF_clauses": 6145,
+    "combined_CNF_sha256": "60055ca362217f4c8f5121a7d245de67c146c1283dc0adf04457224e7db6ad86",
+    "classification_sha256": "ac2699cfc073b858cdfdb0004033af20b26d9a9fb8d39cd43e6ae0fd4e57ad3b",
+    "public_checksum_manifest_sha256": "304cdef735572042d6aa8db8eca566a034d2901e684c557363f586c68509c0db",
+    "LRAT_archive_published": false,
+    "LRAT_archive_size_bytes": 7544256,
+    "LRAT_archive_sha256": "d6b008ff352d2be03b170f2a662480ddfb955f8e0e842acfe1be0dff374e4aee",
+    "raw_LRAT_size_bytes": 28590220,
+    "raw_LRAT_sha256": "1d8bb23ff2caca290b6f3f77637c134c36ce9efb8d10961e768dffaac954413b",
+    "strict_LRAT": {
+      "additions": 66120,
+      "deletions": 72205,
+      "hints_used": 4202594,
+      "proof_lines": 98052
+    },
+    "family_decision": "no deletion of one h3993 norm-support edge is both non-four-colourable and plane unit-distance realizable"
+  },
   "non_implications": [
     "No five-chromatic Euclidean unit-distance graph is produced.",
-    "No result is established for graphs obtained by deleting or replacing an edge.",
+    "No result is established for the other 672 h3993 repair-clause edges, multi-edge repairs, or edge replacements.",
     "K2,3-freeness and K4-freeness do not imply unit-distance realizability.",
     "The downstream repair clause is necessary, not sufficient, and has no chromatic guarantee.",
     "No record improvement is established."
   ],
   "coordination_refresh": {
-    "team_hn_2_boundary_contribution": "bafkreiaht6wdxk2gkh4uor2pyynmnzkmeqofcybncbeo6rnaxcxxto7u2i",
-    "team_hn_2_boundary_height": 3993,
-    "graph_indexed_height": 3994,
-    "decision": "preserve the downstream interface without opening a repair search; yield before a new research phase"
+    "team_hn_2_boundary_contribution": "bafkreihbz4cv4ikfxrino5h2u3wjg2ykoij5jexkj26vba4c4acoop2ypy",
+    "team_hn_2_boundary_height": 4005,
+    "team_hn_2_boundary_commit": "209c7380cb9d83ee825f12593259aa584cf92d1d",
+    "graph_indexed_height": 4010,
+    "decision": "consolidate the already closed h4007 repair family; no concrete teammate bridge was requested and no new search was opened"
   }
 }

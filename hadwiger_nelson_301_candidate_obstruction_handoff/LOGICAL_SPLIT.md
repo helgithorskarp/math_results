@@ -60,6 +60,33 @@ all-maps geometric obstruction. Consequently, any later repair on the original
 labels must delete at least one of those 690 edges. This implication is
 monotone under adding vertices and edges.
 
-The converse is not claimed. `H` itself is four-colourable, and deleting a
-listed edge from `G` has no certified effect on the chromatic number. H3993 is
-downstream search guidance rather than evidence in the fixed-graph closure.
+The converse is not claimed. `H` itself is four-colourable, and the 690-edge
+clause alone supplies no chromatic guarantee. H3993 is downstream search
+guidance rather than evidence in the fixed-graph closure.
+
+## Terminal norm-support classification, h4007
+
+Let `S` be the 18-edge support of the h3993 weighted norm identity. H4007
+classifies every graph `G-e` for `e` in `S`.
+
+1. Six cases have explicit proper four-colourings and hence fail the
+   chromatic requirement.
+2. A single selector CNF encodes four-colourability of any of the other twelve
+   cases. A strict RUP-only LRAT replay proves it unsatisfiable. The inherited
+   five-colouring of `G` remains proper after an edge deletion, so all twelve
+   are exactly five-chromatic.
+3. Each of those twelve cases has its own forced-parallelogram certificate,
+   complete rational parametrization, modular rank witness, and nonzero-sum
+   norm identity. Each therefore has no plane unit-edge map, including a
+   noninjective one.
+
+Thus none of the 18 most direct obstruction-breaking deletions is both
+non-four-colourable and geometrically realizable. This is a complete decision
+of `S`, not of all 690 h3993 clause edges.
+
+The h4007 public package deliberately omits its 7,544,256-byte generated LRAT
+archive under the large-file publication boundary. Its exact hashes and
+strict replay receipt are public. The twelve chromatic lower bounds are
+author-verified, but public replay of them requires the byte-identical omitted
+archive; the six colourings and all twelve geometric obstructions are fully
+contained in the compact public evidence.
