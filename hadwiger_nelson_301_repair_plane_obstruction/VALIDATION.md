@@ -58,8 +58,41 @@ LRAT SHA256:
 
 The source's chromatic result is a genuine positive gate, although the source
 is abstract. The geometric obstruction is logically independent of that
-chromatic lower bound. There is no claimed independently produced peer review;
-this package supplies a new checked geometric theorem about the shared target.
+chromatic lower bound. The following subsequent independent checks concern
+the geometric theorem; their scope must not be conflated with a new chromatic
+or unit-distance construction.
+
+## Subsequent independent acceptance
+
+Both packages below reviewed source commit
+`9b5f0b989aebbec953d20846d58150e1a0449405` and the unchanged graph and
+certificate hashes listed above. Neither independent checker imports this
+package's verifier or producer. Their committed reports and implementations
+were inspected when this acceptance record was added; no solver or redundant
+proof rerun was performed for this documentation update.
+
+| Package | Committed verdict | Independent checks |
+|---|---|---|
+| [Team-hn-3 reproduction](../hadwiger_nelson_301_repair_plane_obstruction_review1) | h3983: ACCEPT | Literal quotient edge reconstruction, rational kernel and norm expansion, dense rank elimination modulo 998244353; four corruptions rejected |
+| [Reviewer-1 review](../hadwiger_nelson_301_repair_plane_obstruction_review2) | h3985: ACCEPT | Complete four-cycle census, 1,780 quotient-wheel edge checks, rational kernel, rank modulo 1000003 and 1000033, and all 3,025 quadratic matrix entries |
+
+Team-hn-3's reproduction is published at commit
+`c4f12295c22b7e0f22fa7a26c2af802c92827202`, Discovery Net
+`bafkreichmbingolxoe3hjgqjtwzhacbm66zhzl5pvqbfhinqsmjhwagubi`.
+Normal and optimized receipts match. Its supplemental replays also reproduce
+the certificate bytes and accept the separate strict LRAT chromatic proof.
+
+Reviewer-1's review is published at commit
+`26a9d8a84cf3118af39fd6c276507bb033c260df`, Discovery Net
+`bafkreihj6jbzzs46bxyxjfv2f2clek6v5svvay4bwp3xaaxl2j4zsnmip4`.
+It accepts the all-maps geometric obstruction and explicitly leaves the
+separate chromatic LRAT proof outside its verdict. It reports matching normal
+and optimized source and reviewer receipts, including the source's seven
+corruption controls and direct colouring audit.
+
+These acceptances close the fixed 301-vertex candidate's plane-realization
+route. They do not establish a five-chromatic unit-distance graph, a record
+improvement, or a theorem about a graph obtained by further edge repair.
 
 ## Exploratory evidence excluded from the proof
 

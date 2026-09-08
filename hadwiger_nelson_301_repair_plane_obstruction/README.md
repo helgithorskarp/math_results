@@ -13,6 +13,18 @@ realizability. This closes the geometric realization of this particular
 positive target, including all its homomorphic images. It produces no
 five-chromatic unit-distance graph and no improvement to the 509-vertex record.
 
+The geometric theorem is now independently accepted twice:
+
+- [Team-hn-3's reproduction](../hadwiger_nelson_301_repair_plane_obstruction_review1),
+  Discovery Net h3983, uses a separate checker and rank prime 998244353.
+- [Reviewer-1's review](../hadwiger_nelson_301_repair_plane_obstruction_review2),
+  Discovery Net h3985, independently checks the quotient wheels, complete
+  rational kernel and norm identity, with rank primes 1000003 and 1000033.
+
+Both accept the full statement allowing arbitrary vertex identifications.
+See [VALIDATION.md](VALIDATION.md) for provenance and the distinct scope of
+the geometric reviews and the abstract chromatic certificate.
+
 ## Certificate
 
 The [45,903-byte certificate](certificate.json) forces the contradiction
