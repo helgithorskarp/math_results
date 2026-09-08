@@ -1,0 +1,63 @@
+{
+  "arithmetic": "exact Python integers and complete Boolean truth tables",
+  "byte_reproduction": "all five historical files (base plus four branches) match full size and SHA256",
+  "controls_per_mode": {
+    "colex_boundary_combinations": 252,
+    "counter_states_checked": 32250,
+    "guard_states_checked": 504,
+    "positive_signed_gates": 18,
+    "rejected_dimacs_or_suffix_corruptions": 6,
+    "rejected_gate_corruptions": 212,
+    "rejected_hash_size_header_corruptions": 3,
+    "rejected_physical_corruptions": 7,
+    "status": "PASSED_EXACT_AUDITOR_CONTROLS"
+  },
+  "fresh_receiving_full_chain_with_byte_reconstruction": {
+    "elapsed_seconds": 164.5782652879716,
+    "max_child_rss_kib": 68460,
+    "modes": [
+      "normal",
+      "assertions_disabled"
+    ],
+    "new_solver_calls": 0,
+    "reconstruction": true,
+    "reduction_sha256": "7f10788aa1ec3747c534971fe6fb4b2852130c17388b8dfcca354fa0db00aadb",
+    "remaining_unknown_branches": [
+      "d20-22",
+      "d22-20"
+    ],
+    "status": "CERTIFIED_TWO_OF_FOUR_FROZEN_Q10_REGULAR_CNFS_UNSAT",
+    "theorem_replay": "REPRODUCED_COMPLETE_REGULAR18_AND24_EXCLUSION"
+  },
+  "historical_solver_logs_modified": false,
+  "initial_literal_frozen_file_audit": "CHECKED_FOUR_FROZEN_FILES_AND_TWO_REGULAR_ENDPOINT_BRIDGES",
+  "metadata_note": "Final documentation, review provenance, and this timing report added after replay; executable and expected certificate bytes unchanged.",
+  "new_cnf_audit_external_review": false,
+  "new_solver_calls": 0,
+  "python": "3.11.2",
+  "source_full_chain": {
+    "elapsed_seconds": 113.65688427299028,
+    "max_child_rss_kib": 68456,
+    "modes": [
+      "normal",
+      "assertions_disabled"
+    ],
+    "new_solver_calls": 0,
+    "reconstruction": false,
+    "reduction_sha256": "7f10788aa1ec3747c534971fe6fb4b2852130c17388b8dfcca354fa0db00aadb",
+    "remaining_unknown_branches": [
+      "d20-22",
+      "d22-20"
+    ],
+    "status": "CERTIFIED_TWO_OF_FOUR_FROZEN_Q10_REGULAR_CNFS_UNSAT",
+    "theorem_replay": "REPRODUCED_COMPLETE_REGULAR18_AND24_EXCLUSION"
+  },
+  "underlying_theorem_external_review": "h3965 ACCEPT of h3959; imported catalog boundaries retained",
+  "validated_executables_sha256": {
+    "audit.py": "bd1226d8e18beffc3d34c03a7ac6f48459f1700de87bb10f0905f13141b8daa8",
+    "controls.py": "25a7e2e708749498d1f8083714f93136187682eae48a8c63e6aca347f366f29d",
+    "frozen_encoder.py": "b4810018d6ebb1b7ec23d0a880b7fe8c8405667338216d38d18b6eab200afd0f",
+    "rebuild.py": "8f295b3bd16d7f9739ba4f62e214feb2849ad033f53b911219f4ecac929a1717",
+    "reproduce.py": "1acf920038e34afa7fab107c5ce0997d2d187c71b47aa21094c9dc5791d1018e"
+  }
+}
