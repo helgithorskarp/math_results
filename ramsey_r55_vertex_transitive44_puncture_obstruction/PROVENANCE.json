@@ -1,0 +1,32 @@
+{
+  "catalog": {
+    "actions": 2113,
+    "degree": 44,
+    "sha256": "6b138e64a9f97e200ff2451d8477337568162451119562c71c2c7be3e794b117",
+    "source": "GAP TransGrp NrTransitiveGroups(44), TransitiveGroup(44,k)"
+  },
+  "debian_packages": {
+    "gap-core_4.12.1-2_amd64.deb": "d775cc6468b749da98460da7aaeda7cc83c26a9d77540ec0d30f87b7438d50bb",
+    "gap-gapdoc_1.6.6-1_all.deb": "959501f5928de1c60266ad04e03a2e0fe97aa62d956bb06826606d7620431681",
+    "gap-libs_4.12.1-2_all.deb": "670911236dca7b991d9fb56b0b4d22df5d2d5b8e3f2c6b639ad5099666d07fec",
+    "gap-transgrp_3.6.3-1_all.deb": "8ac5342efa62e429d4781c3d2f31f8436860e5975819f3fc0676a337730ebf16"
+  },
+  "prior_cayley44_dependency": {
+    "discovery_net_height": 3951,
+    "discovery_net_reference": "bafkreiaooohzr57hfdbac2i4pg5cayummvacrhhnk32ga3o4j4ejkumolm",
+    "manifest_sha256": "22e56b0cd156ef22de472287d2bac9e4133259d9b43e163d3a37c80793377b16",
+    "result_sha256": "78e26d4cc327bd0a58a0d4ba72e8c53b376bd9ca09096c3a760284d32230a843",
+    "source_commit": "c02d41c25330b8772baa6782bc9cbbf639b751f7"
+  },
+  "production": {
+    "certificate_sha256": "7835a04409f6577b0d27e02c2f5ef55fc33ce9d9e8fcc40637d42760033e2747",
+    "elapsed_seconds": 294.17924171098275,
+    "external_sat_solver": false,
+    "python": "CPython 3.11.2",
+    "sampling": "SplitMix64 plus Floyd five-subset sampler; discovery only"
+  },
+  "transgrp_tree_digest": {
+    "method": "find TransGrp -type f -print0 | sort -z | xargs -0 sha256sum | sha256sum",
+    "sha256": "78e97aecb4c9d5745b51e9a12ce9a33d3561561896f9f9976abd9f17ef9d219d"
+  }
+}
