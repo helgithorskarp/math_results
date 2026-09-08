@@ -1,0 +1,31 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "case": "valid",
+      "accepted": true,
+      "returncode": 0
+    },
+    {
+      "case": "false_empty",
+      "accepted": false,
+      "returncode": 1
+    },
+    {
+      "case": "invalid_premise",
+      "accepted": false,
+      "returncode": 1
+    },
+    {
+      "case": "reused_id",
+      "accepted": false,
+      "returncode": 1
+    },
+    {
+      "case": "invalid_integer",
+      "accepted": false,
+      "returncode": 1
+    }
+  ],
+  "ASan_UBSan_findings": 0
+}

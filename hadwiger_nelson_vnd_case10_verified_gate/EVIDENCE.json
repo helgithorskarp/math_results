@@ -1,0 +1,140 @@
+{
+  "verified": true,
+  "claim": "The exact 64513-point VND series-2 case-10 strict unit-distance graph is not four-colourable.",
+  "source_commit": "e3714d0a156f6ed151d4521debb2b89ce4f1075c",
+  "point_reconstruction": {
+    "verified": true,
+    "independent_field": "Q[t]/(t^8-t^4+1), adjoining sqrt5",
+    "M1_M2_M3_counts": [
+      73,
+      865,
+      32257
+    ],
+    "complete_generated_source_point_set_equal": true,
+    "source_points": 64513,
+    "all_declared_unit_edges_checked": 542472,
+    "exact_direction_classes_checked": 132,
+    "coordinate_scale": 96,
+    "clipping": "integer radical enclosures, exact equality retained",
+    "mapped_points_sha256": "acd4c9bdaad0e8811a852bcbc48c9fd9d7b203e17ac9c202f38198efcb3d4ed0",
+    "nonedges_checked": false,
+    "chromatic_lower_bound_reproved": false,
+    "elapsed_seconds": 6.00594376900699
+  },
+  "strict_edge_census": {
+    "verified": true,
+    "vertices": 64513,
+    "all_pairs_examined": 2080931328,
+    "modular_survivors": 542472,
+    "char_zero_unit_pairs": 542472,
+    "modular_false_positives": 0,
+    "distinct_exact_norms_evaluated": 132,
+    "full_strict_graph_equals_author_graph": true,
+    "arithmetic": "necessary evaluation in Z[sqrt2,sqrt3,sqrt5,1/96] modulo 1000000009; every surviving pair tested in characteristic zero",
+    "integer_overflow_bound": 2000000032000000128,
+    "CXX_scan_seconds": 6.39132,
+    "exact_finish_seconds": 5.689377845003037,
+    "survivor_file_sha256": "4685d9075c5d4a7cb677a0a4ec8209d84d1b16ccbf35ab0523f45f0cf2b22904",
+    "edges_sha256": "1cf734ec5d06549e8cf944d2ebdb709bf3e59f098e906f3d090a595929824c91",
+    "new_vertices": 0,
+    "new_colour_queries": 0,
+    "chromatic_lower_bound_reproved": false
+  },
+  "CNF_audit": {
+    "verified": true,
+    "raw_author_edge_count": 542472,
+    "clause_lines_verified": 2234404,
+    "variables": 258052,
+    "clauses": 2234404,
+    "independent_raw_graph_to_CNF_mapping": true,
+    "at_most_one_clauses_required": false,
+    "symmetry_triangle": [
+      0,
+      1,
+      5
+    ],
+    "CNF_sha256": "aa4305ebd561a52e89fe77738deee93c53f0c062a7715b879a51d0ada69b3bef",
+    "elapsed_seconds": 4.413221745984629
+  },
+  "source_replay": "Packaged reproduce.py completed without --solve, matching the exact original point, edge and CNF hashes.",
+  "solver": {
+    "solver": "PySAT Glucose42",
+    "answer": "False",
+    "elapsed_solver_seconds": 1603.4719052790024,
+    "conflict_budget": 2000000,
+    "solver_wall_budget": 1800,
+    "interrupt_reason": [],
+    "statistics": {
+      "restarts": 2443,
+      "conflicts": 1593997,
+      "decisions": 1932084,
+      "propagations": 2700158204
+    }
+  },
+  "four_colour_solver_queries": 1,
+  "physical_core_extraction_performed": false,
+  "DRAT_check": {
+    "accepted": true,
+    "checker_source_revision": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "checker_binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+    "elapsed_seconds": 933.1278796500119,
+    "zero_RAT_lemmas": true
+  },
+  "strict_LRAT_check": {
+    "verified": true,
+    "status": "VERIFIED_VND_CASE10_FULL_LRAT_REFUTATION",
+    "CNF_sha256": "aa4305ebd561a52e89fe77738deee93c53f0c062a7715b879a51d0ada69b3bef",
+    "LRAT_bytes": 926441080,
+    "LRAT_sha256": "e83e851c0e8f70b0e909085ba81c582438290983e451f33a6b5c851aa4ff136d",
+    "checker_results": [
+      {
+        "checker": "strict_lrat",
+        "checker_sha256": "7d7009af78bb9afeadd05c5bd119b8919bdf343a21ea5c3c3344c572342e4c2e",
+        "returncode": 0,
+        "elapsed_seconds": 73.2393071760016,
+        "acceptance_line": "VERIFIED_STRICT_RUP_LRAT"
+      }
+    ],
+    "source_vertices": 64513,
+    "non_four_colourability": true,
+    "exactly_five_chromatic_claimed": false,
+    "physical_core_extraction_performed": false,
+    "target_508_found": false
+  },
+  "strict_LRAT_counts": {
+    "variables": 258052,
+    "original_clauses": 2234404,
+    "additions": 749746,
+    "deletions": 2984115,
+    "hints_used": 100631926,
+    "proof_lines": 1127355,
+    "seconds": 73.1898
+  },
+  "legacy_C_LRAT_acceptance_excluded": true,
+  "large_omitted_files": [
+    {
+      "file": "gate.cnf",
+      "bytes": 38502696,
+      "sha256": "aa4305ebd561a52e89fe77738deee93c53f0c062a7715b879a51d0ada69b3bef"
+    },
+    {
+      "file": "gate.drat",
+      "bytes": 748046086,
+      "sha256": "8b8b0c12ca7cb9ff32f2b0e8978e7ebc982af8a6ad34048465679d97344ca337"
+    },
+    {
+      "file": "gate.trimmed.drat",
+      "bytes": 332642276,
+      "sha256": "c5877b643d12475660044776407948e747381636564ad0582aada2c73f677552"
+    },
+    {
+      "file": "gate.lrat",
+      "bytes": 926441080,
+      "sha256": "e83e851c0e8f70b0e909085ba81c582438290983e451f33a6b5c851aa4ff136d"
+    }
+  ],
+  "target_508_found": false,
+  "exactly_five_chromatic_claimed": false,
+  "vertex_minimum_claimed": false,
+  "status": "VERIFIED_VND_CASE10_NON_FOUR_COLOURABLE"
+}
