@@ -1,0 +1,24 @@
+{
+  "adverse_control": {
+    "elapsed_seconds": 9.246,
+    "exit_code": 1,
+    "optimized": true,
+    "status": "CORRUPT_STRONGER_EDGE_WINDOW_REJECTED"
+  },
+  "catalog_sha256": "83ca4028f206b2fa4315ef219b8c2c57c7835209673dd8183d8fb4353bd4fdd0",
+  "external_review_of_new_result": "not observed; separate checker is same-author validation",
+  "input_scope": "Complete full-catalog scan and every new profile, incidence and identity check; historical catalog completeness and U(18)=85 imported.",
+  "normal_and_optimized_total_seconds": 19.335,
+  "python": "3.11.2",
+  "reproduction_command": "python3 -B ramsey_r55_global_degree_excess/reproduce.py --catalog /tmp/r45_24.g6",
+  "reproduction_result": {
+    "certificate_sha256": "d030ea15e9529f3dcf6fdefb03f3f64e8eff75cf23aa9359152cce23338c06fe",
+    "edge_window": [
+      390,
+      513
+    ],
+    "normal_and_optimized_agree": true,
+    "status": "REPRODUCED_GLOBAL_GOOD43_EDGE_WINDOW",
+    "target_found": false
+  }
+}
