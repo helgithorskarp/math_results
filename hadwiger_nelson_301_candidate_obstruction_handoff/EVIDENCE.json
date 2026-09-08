@@ -1,0 +1,104 @@
+{
+  "status": "FIXED_301_CANDIDATE_CLOSED_BY_ACCEPTED_ALL_MAPS_OBSTRUCTION",
+  "record_improvement": false,
+  "candidate": {
+    "evidence_role": "abstract_chromatic_producer",
+    "contribution": "bafkreib67bj2x2xsk2tsvlxtw4a2rp3z65eysayh7yiaxyc7e2v6wlwpsm",
+    "height": 3977,
+    "commit": "c8272e6690a50bb821452e684f812b1a8824e60f",
+    "directory": "hadwiger_nelson_h516_k23free_edge_repair",
+    "graph_sha256": "7be0344d1811866429181436b2f85653fc801272a7a3efddad6125539e50cbbb",
+    "vertices": 301,
+    "edges": 1452,
+    "chromatic_number": 5,
+    "vertex_critical": true,
+    "K23_free": true,
+    "K4_free": true,
+    "upper_bound_evidence": "explicit proper five-colouring",
+    "lower_bound_evidence": "strict positive-hint RUP replay of the four-colouring LRAT refutation",
+    "deletion_evidence": "301 explicit proper four-colourings of all one-vertex deletions",
+    "CNF_variables": 1204,
+    "CNF_clauses": 6112,
+    "LRAT_additions": 7971,
+    "LRAT_hints": 685802,
+    "geometric_claim": "none"
+  },
+  "obstruction": {
+    "evidence_role": "geometric_nonrealizability",
+    "contribution": "bafkreifffqjqtfl2xcan2ywesda56x47mv74bgxl7pown6jdunk4x6zotm",
+    "height": 3981,
+    "commit": "9b5f0b989aebbec953d20846d58150e1a0449405",
+    "directory": "hadwiger_nelson_301_repair_plane_obstruction",
+    "graph_sha256": "7be0344d1811866429181436b2f85653fc801272a7a3efddad6125539e50cbbb",
+    "certificate_sha256": "728c5af3dc90c6e01ac74c13d78768cae997f6fe91d39dfa1076600bfb61ab42",
+    "theorem": "no Euclidean plane map sends every graph edge to unit distance, even allowing arbitrary vertex identifications",
+    "mandatory_four_cycles": 279,
+    "direct_diagonal_edges": 276,
+    "quotient_odd_wheels": 282,
+    "anchored_rank": 246,
+    "coordinate_parameters": 55,
+    "norm_identity_edges": 18,
+    "unit_norm_sum": 708,
+    "chromatic_claim_used": false
+  },
+  "independent_acceptances": [
+    {
+      "contribution": "bafkreichmbingolxoe3hjgqjtwzhacbm66zhzl5pvqbfhinqsmjhwagubi",
+      "height": 3983,
+      "commit": "c4f12295c22b7e0f22fa7a26c2af802c92827202",
+      "directory": "hadwiger_nelson_301_repair_plane_obstruction_review1",
+      "kind": "reproduction",
+      "verdict": "ACCEPT",
+      "rank_primes": [
+        998244353
+      ],
+      "chromatic_LRAT_in_verdict": false
+    },
+    {
+      "contribution": "bafkreihj6jbzzs46bxyxjfv2f2clek6v5svvay4bwp3xaaxl2j4zsnmip4",
+      "height": 3985,
+      "commit": "26a9d8a84cf3118af39fd6c276507bb033c260df",
+      "directory": "hadwiger_nelson_301_repair_plane_obstruction_review2",
+      "kind": "review",
+      "verdict": "ACCEPT",
+      "rank_primes": [
+        1000003,
+        1000033
+      ],
+      "chromatic_LRAT_in_verdict": false
+    }
+  ],
+  "combined_conclusion": {
+    "statement": "the fixed labelled graph is exactly five-chromatic as an abstract graph and has no Euclidean plane unit-edge map",
+    "physical_candidate_survives": false,
+    "logical_form": "producer chromatic theorem AND independently accepted geometric obstruction on the identical graph bytes"
+  },
+  "downstream_interface": {
+    "evidence_role": "necessary_condition_for_any_later_repair",
+    "contribution": "bafkreiaht6wdxk2gkh4uor2pyynmnzkmeqofcybncbeo6rnaxcxxto7u2i",
+    "height": 3993,
+    "commit": "a78e2aee848dd3f4ee0da1f75d0d45baa2cd42de",
+    "directory": "hadwiger_nelson_301_forbidden_subgraph_interface",
+    "forbidden_subgraph_vertices": 204,
+    "forbidden_subgraph_edges": 690,
+    "forbidden_subgraph_four_colourable": true,
+    "repair_clause_literals": 690,
+    "claim": "a repair on the original labels must delete at least one of the listed 690 edges",
+    "sufficient_for_realizability": false,
+    "preserves_five_chromaticity": false,
+    "independently_reviewed": false
+  },
+  "non_implications": [
+    "No five-chromatic Euclidean unit-distance graph is produced.",
+    "No result is established for graphs obtained by deleting or replacing an edge.",
+    "K2,3-freeness and K4-freeness do not imply unit-distance realizability.",
+    "The downstream repair clause is necessary, not sufficient, and has no chromatic guarantee.",
+    "No record improvement is established."
+  ],
+  "coordination_refresh": {
+    "team_hn_2_boundary_contribution": "bafkreiaht6wdxk2gkh4uor2pyynmnzkmeqofcybncbeo6rnaxcxxto7u2i",
+    "team_hn_2_boundary_height": 3993,
+    "graph_indexed_height": 3994,
+    "decision": "preserve the downstream interface without opening a repair search; yield before a new research phase"
+  }
+}
