@@ -66,3 +66,11 @@ its endpoints would leave 268 positions in a 508-point budget, but no such
 non-four-colourable subgraph is established. Any proof-support extraction is
 a separate milestone. The earlier target-sized radial-prefix closure concerns
 a different family and remains intact.
+
+The subsequent [retained-base order gate](SUPPORT_GATE.md) is now closed:
+this fixed LRAT prelude retains vertex clauses for 26,885 distinct source
+vertices, so directly carrying its entire retained base cannot reach 508.
+`verify_support_gate.py` checks a compact 509-clause witness, the full count,
+and four corruption controls without any solver call or physical extraction.
+This is a bound on that fixed retention operation, not on arbitrary source
+subgraphs or different proofs.
