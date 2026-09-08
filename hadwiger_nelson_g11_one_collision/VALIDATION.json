@@ -1,0 +1,30 @@
+{
+  "python": "3.11.2",
+  "platform": "Linux-6.1.0-52-cloud-amd64-x86_64-with-glibc2.36",
+  "commands": {
+    "verifier": {
+      "argv": "python3 hadwiger_nelson_g11_one_collision/verify.py --check-expected",
+      "elapsed_seconds": 0.20979,
+      "exit_code": 0,
+      "stdout_sha256": "bce8c597738507ca2c4017bc71adeab156ef24fa7243408f6abb18adb59be162"
+    },
+    "optimized_verifier": {
+      "argv": "python3 -O hadwiger_nelson_g11_one_collision/verify.py --check-expected",
+      "elapsed_seconds": 0.370341,
+      "exit_code": 0,
+      "stdout_sha256": "bce8c597738507ca2c4017bc71adeab156ef24fa7243408f6abb18adb59be162"
+    },
+    "controls": {
+      "argv": "python3 hadwiger_nelson_g11_one_collision/controls.py",
+      "elapsed_seconds": 0.184247,
+      "exit_code": 0,
+      "stdout_sha256": "57ba76937ffaecc75ea7541b4dd7e33a1fa4386ae3a3b3e35668cbe6e6644715"
+    },
+    "predecessor": {
+      "argv": "python3 hadwiger_nelson_finite_abelian_lifts/verify.py",
+      "elapsed_seconds": 1.072704,
+      "exit_code": 0,
+      "stdout_sha256": "a520b236e0f3fce67b2e64bea930965a80e4727fa3cf7ec938ee46de5c850ad9"
+    }
+  }
+}
