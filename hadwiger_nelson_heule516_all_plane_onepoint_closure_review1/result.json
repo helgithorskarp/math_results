@@ -1,0 +1,88 @@
+{
+  "H632_boundary": {
+    "coverage_histogram_outside_H560": {
+      "508": 21,
+      "509": 4,
+      "510": 2,
+      "511": 2,
+      "512": 4,
+      "513": 4,
+      "514": 10,
+      "515": 12,
+      "516": 13
+    },
+    "deletion_edge_checks": 1678685,
+    "deletion_rows": 664,
+    "direct_edge_checks": 116570,
+    "direct_rows": 46,
+    "imported_H560_review_ref": "bafkreifbln2uuz67wbkaz3ae54j3jv5kfsqyh2wzinztiaxj7zrupmjb7e",
+    "imported_H560_review_result_sha256": "9b2661d57b32ce6a1d03586ed0fe3451cfe97119e728cd7596d6a8663483f425",
+    "inside_H560_points_imported_from_accepted_closure": 44,
+    "maximum_covered_deletions_outside_H560": 516,
+    "minimum_covered_deletions_outside_H560": 508,
+    "outside_H560_points_directly_checked": 72
+  },
+  "exterior_cover": {
+    "additional_rows": 411,
+    "base_edge_checks": 2717716,
+    "coverage_histogram": {
+      "508": 33,
+      "509": 14,
+      "510": 17,
+      "511": 20,
+      "512": 30,
+      "513": 39,
+      "514": 80,
+      "515": 115,
+      "516": 210
+    },
+    "extension_tests": 599850,
+    "inherited_rows": 664,
+    "maximum_covered_deletions": 516,
+    "minimum_covered_deletions": 508,
+    "points": 558
+  },
+  "geometry": {
+    "base_edges": 2538,
+    "base_pairs_checked": 132870,
+    "base_triples_enumerated_by_independent_filter": 22765060,
+    "base_vertices": 516,
+    "centre_denominator_histogram": {
+      "96": 1714,
+      "288": 12
+    },
+    "exact_centre_base_incidence_checks": 890616,
+    "exact_centres": 1726,
+    "exterior_degree_histogram": {
+      "4": 192,
+      "5": 188,
+      "6": 111,
+      "7": 30,
+      "8": 25,
+      "9": 10,
+      "10": 2
+    },
+    "independent_filter": {
+      "first_survivors": 105776,
+      "moduli": [
+        1001219,
+        1001459
+      ],
+      "second_survivors": 105755,
+      "triples": 22765060,
+      "vertices": 516
+    },
+    "independent_survivor_sha256": "23f9790bff3809086d28d7ef983b56bb8cb7944c25d4e1fd9a7a6157414baa11"
+  },
+  "logical_implication": {
+    "high_degree_completeness": "three distinct unit neighbours determine the unique circumcentre; every exact triple survives both new ring evaluations",
+    "low_degree_case": "at most three neighbours leaves an available fourth colour",
+    "pigeonhole_case": "a 508-vertex target containing q omits at least nine base vertices while at most eight are uncovered"
+  },
+  "record_improvement": false,
+  "reviewed_artifact_ref": "bafkreidrpgz7n2d5c4z7o4cifdreb7cchzft2ae7sbgkbgnlqlocr7cr7u",
+  "reviewed_commit": "4241a558b4f1279e2a8741202cc2bd2c93b3048c",
+  "scope": "fixed Heule 516-point placement plus one arbitrary plane point, through order 508",
+  "status": "INDEPENDENT_ACCEPT_CHECK_PASSED",
+  "trust_boundary": "pinned published coordinates and witness bytes; exact CPython integer/Fraction and Base64 semantics; independently compiled C++20 exhaustive loop; compiler, OS, and hardware; prior accepted fixed-H560 closure for 44 boundary points"
+}
