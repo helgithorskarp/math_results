@@ -1,0 +1,18 @@
+{
+  "python": "CPython 3.11-compatible standard library",
+  "commands": [
+    "python3 -B verify.py",
+    "python3 -B controls.py",
+    "PYTHONOPTIMIZE=1 python3 -B verify.py",
+    "PYTHONOPTIMIZE=1 python3 -B controls.py",
+    "python3 -B generate.py --out /tmp/h510-plane-replay",
+    "cmp certificate.json /tmp/h510-plane-replay/certificate.json"
+  ],
+  "results": {
+    "verification": "passed",
+    "controls": "passed",
+    "optimized_outputs_match": true,
+    "deterministic_certificate_replay": true,
+    "record_improvement": false
+  }
+}
