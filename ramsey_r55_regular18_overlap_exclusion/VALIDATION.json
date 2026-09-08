@@ -1,0 +1,55 @@
+{
+  "status": "SOURCE_FULL_REPLAY_PASSED",
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "full_replay": {
+    "status": "REPRODUCED_COMPLETE_REGULAR18_AND24_EXCLUSION",
+    "modes": [
+      "normal",
+      "assertions_disabled"
+    ],
+    "family_certificate_input_negative_controls_per_mode": 3,
+    "elapsed_seconds": 41.92363869500696,
+    "max_child_rss_kib": 68492
+  },
+  "independent_check": {
+    "status": "VERIFIED_COMPLETE_REGULAR18_AND24_EXCLUSION",
+    "catalog_records": 352366,
+    "checked_retained_ramsey_graphs": 1027,
+    "rooted_graphs": 24648,
+    "degree_sequence_buckets": 39,
+    "bucket_profiles": 527,
+    "profile_pairs": 6669,
+    "rejected_by_first_then_second": [
+      6140,
+      529
+    ],
+    "whole_h3887_tasks_decided": 0,
+    "regular_degree_strata_excluded": [
+      18,
+      24
+    ]
+  },
+  "physical_controls": {
+    "all_six_vertex_graphs": 32768,
+    "regular_six_vertex_graphs": 172,
+    "additional_regular_graphs": 6,
+    "eligible_root_edges": 1473,
+    "checked_shared_edges": 816,
+    "shared_edges_with_nonempty_outside": 218,
+    "status": "VERIFIED_PHYSICAL_OVERLAP_IDENTITIES_AND_CONTROLS",
+    "regular43_fixtures": 8,
+    "outside_branch_controls": 7,
+    "bad_physical_certificates_and_inputs_rejected": 9
+  },
+  "family_corruption_controls_per_mode": [
+    "altered overlap threshold",
+    "incomplete retained graph list",
+    "wrong full catalog hash"
+  ],
+  "physical_negative_controls_per_mode": 9,
+  "upstream_catalog_completeness_reproved": false,
+  "new_result_externally_reviewed": false,
+  "target_solver_calls": 0,
+  "initial_experiment_note": "All 24648 identical rooted overlaps contradicted, but this was not used as a complete cover. The final 6669-pair test includes every cross-template combination after safe invariant binning.",
+  "scope": "Complete regular18/24 graph-class decision. No entire h3887 task decided; no good43."
+}

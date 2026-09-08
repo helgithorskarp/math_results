@@ -1,0 +1,18 @@
+{
+  "declared_utc": "2026-09-08T14:13:19.386542+00:00",
+  "family": "All simple labeled 18-regular graphs on 43 vertices with neither K5 nor independent5, and their 24-regular complements; no automorphism, packing, saved parent or fixed neighborhood is imposed.",
+  "mechanism": "Exact realization constraints on the actual 24-vertex neighborhoods of the 24-regular color. Every such neighborhood must belong to the complete R(4,5;24) catalog and have at least 128 edges. Use concrete overlap graphs, not aggregate induced-subgraph densities.",
+  "first_output_gate": "A complete exclusion certificate for the whole regular18/24 target branch, or a physical good43. Mere catalog counts, nonempty compatibility tables, reduced denominators and solver UNKNOWN do not meet the gate.",
+  "failure_boundary": "If the first concrete overlap mechanism retains a checkable unresolved support, preserve that failed gate without another overlap-depth, catalog threshold, degree, backend or carrier refinement.",
+  "separation": "No target SAT solve, q10 formula, prior aggregate density witness refinement, H92/H93 subsystem, product-core or saved-parent repair.",
+  "density_bridge": "For the 18-regular color, A=N(v) has size18, B=nonneighbors(v) has size24. Set a=e(G[A]), b=e(complement(G)[B]). Regularity gives a+b=213; a<=U18=85, hence b>=128. Complementing gives a 24-regular color whose every neighborhood is an R(4,5;24) graph with >=128 edges.",
+  "inputs": {
+    "catalog_url": "https://users.cecs.anu.edu.au/~bdm/data/r45_24.g6",
+    "catalog_sha256": "83ca4028f206b2fa4315ef219b8c2c57c7835209673dd8183d8fb4353bd4fdd0",
+    "catalog_complete_count": 352366,
+    "U18": 85,
+    "U18_source": "accepted local-extremal deficiency extrema.json; upstream catalog completeness imported"
+  },
+  "claim_status": "COMPLETE_EXCLUSION_SUBJECT_TO_IMPORTED_CATALOG_AND_EXTREMUM",
+  "result": "All cross-template pairings excluded by two exact overlap inequalities; no self-overlap restriction is part of the theorem."
+}
