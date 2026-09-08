@@ -1,0 +1,40 @@
+{
+  "checker": {
+    "source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+  },
+  "cnf": {
+    "bytes": 35194411,
+    "clauses": 905265,
+    "sha256": "899f8492e9806bc87ed71296a9aca8d52b63f3cfaa4eaa0e1bf17b0ac945664a",
+    "variables": 6332
+  },
+  "command": [
+    "cadical",
+    "-t",
+    "1800",
+    "-w",
+    "witness.txt",
+    "bo1-q7-r7-c000000-triangles.cnf",
+    "trace.drat"
+  ],
+  "gate_sha256": "51197ab1036efeb72dbd46579c93a871f7294c27e124d6cfd60d21043f74773a",
+  "input_artifact": "bafkreiezp4vezgp56hywcbzpoqh2nrazchj4xx3amlamsilbkxfmdl2ftq",
+  "input_manifest_sha256": "452b38de607c4bfecd9f6addbf363b47b1400c8c63eaee954d68466648f534e6",
+  "input_snapshot_manifest_sha256": "167e720f6a4be0a9467e0bc750df7e6b13ce56bbf2853d1ea25ac3b03137f137",
+  "input_source_commit": "869077b78dd8a6d8a04c499d3ada80ac35e69d22",
+  "policy": "One CaDiCaL call; SAT requires strict complete physical verification; UNSAT requires pinned drat-trim; UNKNOWN stops",
+  "runner_sha256": "4606debd5c32694872b0728cdae112270bcd34081874c0b2780ab0565ed09219",
+  "seconds_limit": 1800,
+  "selection": "First independently audited task in q7-r7, the smallest exact per-task carrier class; no empirical difficulty claim",
+  "solver": {
+    "source_commit": "c60730422e758ef1cebe7aeddf2dda31c996bf04",
+    "sha256": "823b3c94050654fda13dab0c8c34386d9777a1e6de31bd6bc20555979e7c5e0b",
+    "version": "3.0.1"
+  },
+  "started_utc": "2026-09-08T03:09:07.870318+00:00",
+  "status": "FROZEN_ORDERED_TRIANGLE_Q7R7_SINGLE_CALL",
+  "task": "bo1-q7-r7-c000000",
+  "triangle_artifact": "bafkreicarsujdlkakr5zllgvs7giyu3oikexpkjny767icakmtzjpjcgtu",
+  "triangle_source_commit": "4cfeba9d07b41a262193e7e1b6dd5e9dd1a181a8"
+}

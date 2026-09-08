@@ -1,0 +1,25 @@
+{
+  "input_family": "Every physical graph in bo1-q7-r7-c000000, the first task in the smallest exact per-task carrier class of the complete h3873 cover",
+  "input_source_commit": "869077b78dd8a6d8a04c499d3ada80ac35e69d22",
+  "input_source_manifest_sha256": "452b38de607c4bfecd9f6addbf363b47b1400c8c63eaee954d68466648f534e6",
+  "triangle_source_commit": "4cfeba9d07b41a262193e7e1b6dd5e9dd1a181a8",
+  "encoding": "Whole-block ordered h3881 shared-triangle form; 756 physical edge variables, 5500 triangle variables, 75 prefix variables, maximum width eight",
+  "formula": {
+    "bytes": 35194411,
+    "clauses": 905265,
+    "sha256": "899f8492e9806bc87ed71296a9aca8d52b63f3cfaa4eaa0e1bf17b0ac945664a",
+    "variables": 6332
+  },
+  "selection_reason": "This is a complete physical task in the globally complete carrier and belongs to its smallest exact per-task carrier class; the formula already has independent literal audit coverage. Carrier size is not asserted to predict solver time.",
+  "solver": {
+    "name": "CaDiCaL 3.0.1",
+    "sha256": "823b3c94050654fda13dab0c8c34386d9777a1e6de31bd6bc20555979e7c5e0b"
+  },
+  "drat_checker_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+  "solver_calls_max": 1,
+  "solver_wall_seconds_max": 1800,
+  "sat_policy": "Accept only after the complete ordered-model decoder checks every CNF clause, carrier ordering, maximality, and all 962598 physical five-subsets; then publish a compact edge list and standalone verifier.",
+  "unsat_policy": "Accept only after drat-trim independently verifies the complete proof for the exact formula.",
+  "timeout_policy": "Preserve UNKNOWN and the partial proof stream as a non-certificate; do not rerun, extend the cap, or advance to another task in this pass.",
+  "target_found": false
+}
