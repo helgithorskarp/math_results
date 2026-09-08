@@ -1,0 +1,58 @@
+{
+  "cases": {
+    "G1": {
+      "binary_proof_bytes": 3472,
+      "binary_proof_sha256": "8ff9458b8204a6a8db288adaa869573737a6e780908aedf42aa01a3efde982e7",
+      "drat_checker_exit": 0,
+      "drat_verified": true,
+      "solver_elapsed_seconds": 0.06040167808532715,
+      "solver_exit": 20,
+      "text_proof_bytes": 7898,
+      "text_proof_sha256": "16adf69c694fb10ffec56869b7e12ced6a3593283d87cce860f194c4223aad5a"
+    },
+    "G2": {
+      "binary_proof_bytes": 543,
+      "binary_proof_sha256": "b7e233dceeb2007cc385cacff94144e504ed9491592144ffddb930724e2c0ee9",
+      "drat_checker_exit": 0,
+      "drat_verified": true,
+      "solver_elapsed_seconds": 0.028629064559936523,
+      "solver_exit": 20,
+      "text_proof_bytes": 1434,
+      "text_proof_sha256": "708a13a0487c23c04705ffdcb3514e1e8ef26bd63f9b02c377b46bf9284dfa0c"
+    }
+  },
+  "checker": "drat-trim / Debian package binary",
+  "checker_sha256": "bc7543a99da8521ddb09af442698956054f11e10d198bd482ac756535244c021",
+  "controls": {
+    "corruptions_rejected": [
+      "missing physical constraint",
+      "unjustified empty clause"
+    ],
+    "status": "PASS",
+    "two_variable_rup_soundness_checks": 4608
+  },
+  "limits": {
+    "conflicts": 500000,
+    "seed": 0,
+    "wall_seconds": 600
+  },
+  "optimized_controls": {
+    "corruptions_rejected": [
+      "missing physical constraint",
+      "unjustified empty clause"
+    ],
+    "status": "PASS",
+    "two_variable_rup_soundness_checks": 4608
+  },
+  "python": "CPython 3.11.2",
+  "python_replays": {
+    "normal": "PASS",
+    "optimized": "PASS"
+  },
+  "solver": "CaDiCaL sc2021 / Debian 1.5.3-2",
+  "solver_sha256": "c6de62662723ec4a7426c5ca2bc9bfb04c60aad81a423957e3cd1ffadd0f8aa7",
+  "text_drat_trim_checks": {
+    "G1": "s VERIFIED",
+    "G2": "s VERIFIED"
+  }
+}
