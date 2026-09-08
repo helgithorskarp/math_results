@@ -1,0 +1,61 @@
+{
+  "initial_solver": {
+    "arguments": [
+      "--unsat",
+      "FORMULA.cnf",
+      "PROOF.drat"
+    ],
+    "binary_sha256": "2d185ea775f2c7c16d33a235ef852d2b69f0f3c8b437335b966b4a5aa6265b45",
+    "name": "Kissat",
+    "sequential_group_order": [
+      "c11_c4",
+      "c11_v4",
+      "c11_sd_c4",
+      "c11_sd_v4"
+    ],
+    "version": "4.0.4",
+    "wall_limit_seconds_each": 300
+  },
+  "initial_unsat_runs": [
+    {
+      "elapsed_wall_seconds": 0.16482234001159668,
+      "group": "c11_c4",
+      "proof_bytes": 288973,
+      "proof_sha256": "8580db4c82e581adcb66a86ceef765ab9688f290c9bcab23ed2d7628fd76905c"
+    },
+    {
+      "elapsed_wall_seconds": 0.2652921676635742,
+      "group": "c11_v4",
+      "proof_bytes": 319623,
+      "proof_sha256": "ced5af04cd97856a43572339153a1f70cd0b18d1e6ca1fde58b81d57a882adae"
+    },
+    {
+      "elapsed_wall_seconds": 0.11497116088867188,
+      "group": "c11_sd_c4",
+      "proof_bytes": 23315,
+      "proof_sha256": "8f6c4c5c9ad1aa7b127f9d736df7f3014db809979942369cda1cf1a34c58992a"
+    },
+    {
+      "elapsed_wall_seconds": 4.128865718841553,
+      "group": "c11_sd_v4",
+      "proof_bytes": 2109087,
+      "proof_sha256": "ccd7001816977509d4367eefd67650e9958cd77c0cf6090e5cb3d3558b6db112"
+    }
+  ],
+  "proof_checker": {
+    "arguments": [
+      "FORMULA.cnf",
+      "PROOF.drat",
+      "-i"
+    ],
+    "binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+    "name": "drat-trim",
+    "outcomes": [
+      "VERIFIED",
+      "VERIFIED",
+      "VERIFIED",
+      "VERIFIED"
+    ]
+  },
+  "public_proof_boundary": "Operational DRAT streams are omitted. The committed physical cores are independently decided by dpll_check.py and audited clause by clause, so neither Kissat nor drat-trim is a public proof dependency."
+}

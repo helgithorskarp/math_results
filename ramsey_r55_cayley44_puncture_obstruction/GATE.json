@@ -1,0 +1,16 @@
+{
+  "target": "A certified 43-vertex graph with no monochromatic K5",
+  "family": "All graphs obtained by deleting one vertex from an undirected Cayley graph on any group of order 44",
+  "group_cover": [
+    "C11 x C4",
+    "C11 x V4",
+    "C11 semidirect C4 with inversion action",
+    "C11 semidirect V4 with nontrivial inversion action"
+  ],
+  "reduction": "A good puncture forces the full Cayley graph to be good: translate any monochromatic five-set away from the deleted vertex.",
+  "decision_variables": "One Boolean variable per inverse orbit of nonidentity group elements",
+  "success": "A SAT model, exported as a 43-vertex edge list and independently checked on every five-set, or checked UNSAT proofs for all four groups",
+  "failure": "Any bounded UNKNOWN or failed formula/proof audit; preserve the exact boundary without a retry or adjacent group-order ladder",
+  "solver_policy": "Kissat 4.0.4, at most 300 wall seconds per group, sequential, stop on SAT/UNKNOWN/check failure; binary DRAT checked by drat-trim -i for UNSAT",
+  "excluded_routes": "No q10 relaunch, cyclic43 repair, C5[C5] refinement, symplectic restart, or h3887 re-encoding"
+}
