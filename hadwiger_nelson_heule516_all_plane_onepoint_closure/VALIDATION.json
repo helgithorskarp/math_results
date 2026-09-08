@@ -1,0 +1,90 @@
+{
+  "compact_certificate": {
+    "certificate_bytes": 82664,
+    "coverage_histogram": {
+      "508": 33,
+      "509": 14,
+      "510": 17,
+      "511": 20,
+      "512": 30,
+      "513": 39,
+      "514": 80,
+      "515": 115,
+      "516": 210
+    },
+    "method": "Single reverse-order greedy removal of redundant new colour words with existing664 rows fixed.",
+    "minimum_coverage": 508,
+    "original_additional_rows": 441,
+    "retained_additional_rows": 411
+  },
+  "compiler": "g++ 12.2.0",
+  "controls_and_regeneration": {
+    "missing_cached_survivor_rejected_by_fresh_enumeration": true,
+    "normal_sanitized_controls_identical": true,
+    "normal_sanitized_filter_streams_identical": true,
+    "public_certificate_regeneration_byte_identical": true
+  },
+  "discovery_answers": {
+    "SAT": 441
+  },
+  "discovery_conflict_budget_per_query": 200000,
+  "discovery_max_query_conflicts": 16492,
+  "discovery_queries": 441,
+  "discovery_seconds": 112.59261465902091,
+  "discovery_total_conflicts": 386727,
+  "independent_author_review_claimed": false,
+  "native_controls": {
+    "fixtures": [
+      {
+        "exact_unit_triples": 13,
+        "triples": 56,
+        "vertices": 8
+      },
+      {
+        "exact_unit_triples": 30,
+        "triples": 1140,
+        "vertices": 20
+      },
+      {
+        "exact_unit_triples": 5,
+        "triples": 1330,
+        "vertices": 21
+      }
+    ],
+    "malformed_inputs_rejected": [
+      "too_many_vertices",
+      "wrong_scale",
+      "coefficient_out_of_range"
+    ],
+    "status": "EXACT_FILTER_CONTROLS_PASSED",
+    "total_triples": 2526
+  },
+  "new_physical_record_established": false,
+  "normal_optimized_results_byte_identical": true,
+  "omitted_generated_files": {
+    "QUERY_LOG.json": {
+      "bytes": 68054,
+      "sha256": "cf0f467af59a1757a98058c47c9a9b3c711a2e415d63ed07765a31314e315a02"
+    },
+    "centres.json": {
+      "bytes": 271284,
+      "sha256": "2d33a4c3c78026573f777b98f097de09a30b1071b84a0142956f4e38aadba0cc"
+    },
+    "exterior.json": {
+      "bytes": 95911,
+      "sha256": "0f6c7c84cb1a27fa90b7d14f5c2669bee0cffebb85e7fadedb51a89b790cdee4"
+    },
+    "new_deletion_rows.json": {
+      "bytes": 88526,
+      "sha256": "b5cd68ee5d27b443bf57c96c3bb474409ceb0b4f3bfca9b98bac98628b609672"
+    },
+    "survivors.tsv": {
+      "bytes": 1180135,
+      "sha256": "23f9790bff3809086d28d7ef983b56bb8cb7944c25d4e1fd9a7a6157414baa11"
+    }
+  },
+  "public_private_centres_and_survivors_byte_identical": true,
+  "python": "3.11.2",
+  "python_sat": "1.9.dev15",
+  "solver": "Glucose42"
+}
