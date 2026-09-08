@@ -1,0 +1,40 @@
+{
+  "environment": {
+    "python": "CPython 3.11.2",
+    "proof_checker_dependencies": "standard library only",
+    "producer_dependencies": "python-sat 1.9.dev15, CaDiCaL 1.9.5"
+  },
+  "producer_replay": {
+    "command": "python3 build.py --output /tmp/snail_mixed_certificate.json",
+    "complete_rows": 4400,
+    "elapsed_seconds": 476.3,
+    "byte_identical_to_committed": true,
+    "sha256": "7792f073fec4c7f14721e42e598e49166bf8398ad06dedb564b187b34344f81e"
+  },
+  "proof_replay": {
+    "command": "python3 verify.py --progress",
+    "complete_rows": 4400,
+    "elapsed_seconds": 354.0,
+    "all_four_colourable": true
+  },
+  "negative_controls": {
+    "command": "python3 controls.py",
+    "elapsed_seconds": 11.3,
+    "rejected": [
+      "wrong vertex count",
+      "wrong edge count",
+      "wrong copy count",
+      "wrong row key",
+      "truncated colour word",
+      "monochromatic residue edge",
+      "nonzero packed-word padding"
+    ]
+  },
+  "scope": {
+    "cases": 4400,
+    "physical_vertices": [80, 508],
+    "copies": [4, 40],
+    "residue_edges": [176, 1782],
+    "record_improvement": false
+  }
+}
