@@ -1,0 +1,36 @@
+{
+  "claim": "The frozen 301-vertex abstract graph is vertex-critical and exactly five-chromatic, with neither K2,3 nor K4",
+  "parent508_sha256": "d122486f945390832f3626185a641fe46243e3f2cb1352094011589bf783873c",
+  "graph_sha256": "7be0344d1811866429181436b2f85653fc801272a7a3efddad6125539e50cbbb",
+  "five_colouring_sha256": "720466c1b6403de7d8247a33bb2844fccca306dfa21cc339b763968e6b2aea1d",
+  "vertex_deletion_colours_sha256": "e72ec7eb94c012ba00af1fa8a30ee782c84609992ad30322e172fdb36424bb70",
+  "four_colour_CNF_sha256": "f88078fe17e76339b18bf4f1d339921ae2b0bf19a44367cd1978877ce54b0828",
+  "four_colour_LRAT_sha256": "d9b9250c8d40cb59b07d973ba96ca02ec9fce3e446fd5db9ac804599c7d15711",
+  "solver": {
+    "name": "Glucose42 via python-sat 1.9.dev15",
+    "answer": "UNSAT",
+    "seconds": 0.6013731739949435,
+    "restarts": 19,
+    "conflicts": 10803,
+    "decisions": 14859,
+    "propagations": 1323379,
+    "DRAT_bytes": 2094830,
+    "DRAT_sha256": "a262dcd04b97b75c6bf7f3f20607281f5964a2b01770f0ab76adc573da2dd4c0"
+  },
+  "DRAT_trim": {
+    "verified": true,
+    "core_original_clauses": 5307,
+    "core_lemmas": 7971,
+    "resolution_steps": 685802,
+    "RAT_lemmas": 0
+  },
+  "strict_LRAT": {
+    "verified": true,
+    "variables": 1204,
+    "original_clauses": 6112,
+    "additions": 7971,
+    "deletions": 14026,
+    "hints_used": 685802,
+    "proof_lines": 12046
+  }
+}

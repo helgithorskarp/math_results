@@ -1,0 +1,81 @@
+{
+  "upstream_source_sha256": "3f60fe94c7cd3d9c70b7cc52124fa185d4b46d54bb59b21bca0c45d2b181fd51",
+  "upstream_certificate_sha256": "e4b9aefa91795174669da14e3b18ef717ba28ebab2c5338be90095b26af9203a",
+  "LRAT_sha256": "d9b9250c8d40cb59b07d973ba96ca02ec9fce3e446fd5db9ac804599c7d15711",
+  "verification": {
+    "verified": true,
+    "vertices": 301,
+    "edges": 1452,
+    "minimum_degree": 4,
+    "maximum_degree": 24,
+    "parent_vertices": 508,
+    "parent_K23_pairs": 6,
+    "parent_minimum_deletions": 6,
+    "parent_minimum_hitting_sets": 14400,
+    "core_pre_repair_K23_pairs": 5,
+    "core_minimum_deletions": 5,
+    "core_minimum_hitting_sets": 2400,
+    "final_K23_pairs": 0,
+    "final_K4s": 0,
+    "five_colouring_checked": true,
+    "single_vertex_deletion_colouring_count": 301,
+    "vertex_critical_if_LRAT_accepts": true,
+    "CNF_variables": 1204,
+    "CNF_clauses": 6112,
+    "CNF_sha256": "f88078fe17e76339b18bf4f1d339921ae2b0bf19a44367cd1978877ce54b0828",
+    "LRAT_sha256": "d9b9250c8d40cb59b07d973ba96ca02ec9fce3e446fd5db9ac804599c7d15711",
+    "method": "independent source quotient reconstruction, exact obstruction and hitting-set censuses, explicit colouring audits, and byte-exact CNF rebuild"
+  },
+  "negative_controls": {
+    "altered_graph": true,
+    "bad_five_colouring": true,
+    "missing_deletion_witness": true
+  },
+  "producer": {
+    "minimum_deletions": 6,
+    "minimum_hitting_sets": 14400,
+    "queries": 12,
+    "answers": [
+      "SAT",
+      "SAT",
+      "SAT",
+      "SAT",
+      "SAT",
+      "SAT",
+      "SAT",
+      "SAT",
+      "SAT",
+      "SAT",
+      "SAT",
+      "UNSAT"
+    ],
+    "first_UNSAT_rank_zero_based": 11,
+    "deleted_edges": [
+      [
+        0,
+        142
+      ],
+      [
+        0,
+        145
+      ],
+      [
+        0,
+        146
+      ],
+      [
+        0,
+        149
+      ],
+      [
+        15,
+        119
+      ],
+      [
+        15,
+        120
+      ]
+    ],
+    "candidate_matches": true
+  }
+}
