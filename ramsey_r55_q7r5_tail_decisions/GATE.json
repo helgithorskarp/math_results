@@ -1,0 +1,30 @@
+{
+  "declared_utc": "2026-09-08T19:38:54.780919+00:00",
+  "problem": "Ramsey(5,5) lower bound: certified good43",
+  "physical_family": "All 640 bo1-q7-r5-c000000 through bo1-q7-r5-c000639 h3887 tasks",
+  "mechanism": "Exact induced red-exhausted tail decision: fixed R(4,4;15) core plus two blue K4 blocks, all 136 cross edges free, no red K4 and no blue K5",
+  "success_gate": "Certified tail UNSAT removes its entire physical43 task; record exact removed and surviving task IDs. Complete all 640 tail decisions if possible.",
+  "failure_gate": "If all 640 tails have literal certified witnesses, no physical task is reduced: close the approach without a nearby refinement. Resource interruption is UNKNOWN and cannot count as success.",
+  "scope": "Tail SAT is only a 23-vertex witness, never a physical43 candidate or a physical43 SAT verdict. Tail UNSAT is sufficient for the corresponding complete physical task UNSAT.",
+  "prohibited_continuations": [
+    "other core orders",
+    "larger tail",
+    "root-row proof mining",
+    "another cap or equivalent solver",
+    "additional hereditary filter",
+    "ambient deletion or adjacent symmetry family"
+  ],
+  "prior_physical_state": {
+    "h3987_q10_closed": 99,
+    "h3987_q10_unknown": 161,
+    "whole_h3887_tasks": 2189178,
+    "good43": false
+  },
+  "dependencies": [
+    "h3887 complete physical interface",
+    "h3873 R44_15 catalog and red exhaustion theorem"
+  ],
+  "context": [
+    "h3989 supplied DRT43 family exclusion acknowledged h3987; no q10 survivor decision"
+  ]
+}
