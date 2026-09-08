@@ -48,8 +48,8 @@ python3 -B ramsey_r55_pentagon_product_extension_obstruction/verify_certificate.
   ramsey_r55_pentagon_product_extension_obstruction/EXAMPLE_CERTIFICATE.json
 ```
 
-`FIXTURE.json` is a deliberately rejected complete graph, not a Ramsey
-candidate. A subset outside this specific core family receives no Ramsey
+`FIXTURE.json` is a fully specified 43-vertex graph that is deliberately
+rejected; it is not a Ramsey candidate. A subset outside this specific core family receives no Ramsey
 verdict. [BRIDGE_CONTROL.json](BRIDGE_CONTROL.json) records a full physical
 example where the 26-set has a P5 but the new extension obstruction still
 supplies a K5.
