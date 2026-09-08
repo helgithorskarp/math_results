@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "time_utc": "2026-09-08T11:53:38.128575+00:00",
+  "normal_and_optimized_python_results_identical": true,
+  "commands": [
+    "python3 -B hadwiger_nelson_cm_integral_colouring/verify.py --check-expected",
+    "python3 -O -B hadwiger_nelson_cm_integral_colouring/verify.py --check-expected"
+  ],
+  "expected_sha256": "bce38c64be5cfdabbddc6cc88cab0f84568d47ab91922afa3f91b8c48841a702",
+  "finite_checks": {
+    "functional_certificates": 44,
+    "root_directions": 7321,
+    "binary_conductors": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "fixture_vertices": 256,
+    "fixture_strict_edges": 1240,
+    "fixture_pair_census": 32640,
+    "denominator_boundary_vertices": 7,
+    "negative_controls": 5
+  },
+  "solver_calls": 0,
+  "trust_boundary": "Uniform written proof uses standard CM conjugation, bounded conjugates, cyclotomic irreducibility and tensor products; finite controls are not an exhaustive proof for all fields. Python integer/rational semantics and these unformalized mathematical bridges remain trusted."
+}

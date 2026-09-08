@@ -1,0 +1,56 @@
+{
+  "time_utc": "2026-09-08T11:50:00.810221+00:00",
+  "problem": "Hadwiger-Nelson: seek a rigorously verified five-chromatic plane unit-distance graph on at most508vertices",
+  "claim_status": "Written uniform algebraic theorem with executable exact controls; not independently reviewed or formally verified",
+  "theorem": "For every CM number field K, UD(O_K) has chromatic number2 if |mu(K)| is a power of2 and3 otherwise; finite rational-relative-angle unit-edge graphs have chromatic number<=3",
+  "integrality_scope": "At the fixed physical unit scale; translations, unit rotations and reflections preserve the bound. Arbitrary rational denominators and arbitrary scaling are not covered.",
+  "source_gate": "One binary cyclotomic power-basis cube of conductor30 and dimension8 has exactly256vertices. A uniform additive-colouring obstruction closed the entire integral CM source before any SAT search or enlargement.",
+  "sources": [
+    {
+      "url": "https://www.jmilne.org/math/CourseNotes/ANT.pdf",
+      "title": "J.S. Milne, Algebraic Number Theory, v3.08 (2020)",
+      "role": "Standard arithmetic: Corollary5.6 and CM involution discussion in Section5; argument reproduced in full in PROOF.md"
+    },
+    {
+      "url": "https://arxiv.org/html/1807.03726v1",
+      "title": "Danylo Radchenko, Unit distance graphs and algebraic integers (2018)",
+      "role": "Primary unit-distance source context and finite degree of cyclotomic integer unit graphs; no chromaticity premise imported"
+    }
+  ],
+  "prior_work_search": {
+    "date_utc": "2026-09-08",
+    "queries": [
+      "cyclotomic integers chromatic",
+      "roots of unity 3-colouring graph",
+      "unit-distance algebraic integers coloring",
+      "unit distance rational angles chromatic"
+    ],
+    "result": "No exact match to the additive-colouring theorem identified in inspected primary sources; no priority claim. Polymath algebraic-formulation wiki endpoints returned404 and were not used as proof evidence."
+  },
+  "independent_checks": {
+    "producer": "CRT tensor sign formula; polynomial division; integer norms for fixture edges",
+    "checker": "No producer imports; cyclotomic polynomials from Ramanujan sums and Newton identities; direct validation of an F3 linear functional on all root powers; root-direction membership for fixture edges",
+    "infinite_claim_boundary": "The written proof establishes all fields/conductors; the44finite certificates are implementation controls only.",
+    "finite_result": "44conductors,7321root directions;256distinctfixturevertices,1240strictunitedges,32640pairs; exactchi3. Seven-point denominator-boundary Moser graph has11strictedges and exactchi4. Five malformed-certificate controls reject.",
+    "arithmetic": "Exact integers and rational fractions, Python3 standard library",
+    "solver_calls": 0
+  },
+  "environment": {
+    "python": "Python 3.11.2",
+    "prepublication_repository_base": "7c77fc25af8613351be96ec4b59b61716c831a08"
+  },
+  "coordination": {
+    "steering": "2026-09-08T10:18Z fixed-retention exit",
+    "initial_incremental_graph_height": 3940,
+    "teammate_report": "20260908T111048.573140Z.md",
+    "teammate_result": "h3939 order13 exclusion; inspected, independent of current proof",
+    "prior_arithmetic_result": "h3717 bafkreiglwo2ky22qpljeuuaanz5wab5jo2jnswfhled6oxjd2kreytueiq, comparison only",
+    "preserved_positive_and_floor": [
+      "h3927 verified64513point VNDnon4",
+      "h3933 fixedLRATbase floor26885"
+    ],
+    "retired_sources": "No square-Moser, EI/BPS, Parts, or fixed-proof-retention branch was reopened"
+  },
+  "novelty": "No priority claim",
+  "record_improvement": false
+}
