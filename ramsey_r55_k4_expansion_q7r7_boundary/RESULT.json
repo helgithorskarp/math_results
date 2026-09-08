@@ -1,0 +1,58 @@
+{
+  "status": "AUDITED_K4_EXPANSION_Q7R7_UNKNOWN_BOUNDARY",
+  "task": "bo1-q7-r7-c000000",
+  "encoding": "h3887 ordered h3881 shared-triangle formula plus h3899 K4 expansion interface",
+  "solver_status": "UNKNOWN",
+  "solver_calls": 1,
+  "solver": {
+    "version": "3.0.1",
+    "sha256": "823b3c94050654fda13dab0c8c34386d9777a1e6de31bd6bc20555979e7c5e0b",
+    "seconds_limit": 1800,
+    "elapsed_seconds": 1800.11150585601,
+    "exit_code": 0,
+    "max_rss_kib": 466412
+  },
+  "cnf": {
+    "variables": 10868,
+    "physical_variables": 756,
+    "clauses": 923269,
+    "max_width": 8,
+    "bytes": 35503067,
+    "sha256": "755dbcd5677bbc57a0865637dbce19fa72084c4846b3996b8697bf1485070178"
+  },
+  "diagnostics": {
+    "conflicts": 3486156,
+    "decisions": 14792193,
+    "propagations": 811501360,
+    "eliminated_variables": 5767,
+    "fixed_variables": 279,
+    "remaining_variables": 4785,
+    "conflicts_per_second": 1938.20
+  },
+  "stdout": {
+    "bytes": 55487,
+    "sha256": "956421272b0c0a7c2ea78f3389eab475b62ee03dbb54c0c6930315e92d44c177"
+  },
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "witness": {
+    "bytes": 10,
+    "sha256": "8fba55cea0f98be36fab7b65349dda867a58aabfcf974a46098f5123830ac5cb",
+    "content": "c UNKNOWN\n"
+  },
+  "partial_drat": {
+    "bytes": 1185586651,
+    "sha256": "428b04fb2eb1a6500f56a3e292a7aaad315ba4325913f012b2652d3a11009fa6",
+    "is_certificate": false,
+    "checked": false,
+    "published": false
+  },
+  "candidate_found": false,
+  "target43_found": false,
+  "branch_excluded": false,
+  "tasks_decided": 0,
+  "tasks_remaining": 2189178,
+  "policy_outcome": "UNKNOWN ends the monolithic physical-SAT tractability test; no rerun, longer cap, alternate task, or further raw call"
+}
