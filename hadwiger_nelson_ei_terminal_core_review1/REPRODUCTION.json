@@ -1,0 +1,71 @@
+{
+  "boundary_replay": {
+    "global_deletion_colourings": 835,
+    "local_deletion_words": 416,
+    "normal_and_optimized_checks_agree": true,
+    "word_file_bytes": 214154,
+    "word_file_sha256": "7cde84924a222e21d751de3f3bb38fc71a67e0b204fceed9af276862e6d11502"
+  },
+  "bounded_search_replay": {
+    "backend_budget_overshoot": 1,
+    "deletion_conflicts": 2000001,
+    "elapsed_seconds": 1441.160090661986,
+    "peeled_vertices": 0,
+    "queries": 1533,
+    "retained_vertices": 502,
+    "unknown_queries": 32
+  },
+  "claim": {
+    "discovery_net_cid": "bafkreigy7jakk4pzlm23r5hmch7mzkittt4lphgrhbvmyix2rcxw3ny5wi",
+    "source_commit": "661a1564087d0c6e7a7616cf729fb0b98ecc2310"
+  },
+  "external_lrat_check": {
+    "checker": "C lrat-check built from DRAT-trim source",
+    "checker_binary_sha256": "fb7e9f57ee5849afaa35e9d967e27a72cd76bad7aa72ee0499dc65207c08c4a7",
+    "checker_source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "result": "VERIFIED"
+  },
+  "independent_check": {
+    "claimant_modules_imported": false,
+    "normal_and_optimized_checks_agree": true,
+    "result_file": "RESULT.json"
+  },
+  "proof_replay": {
+    "cnf": {
+      "bytes": 183891,
+      "sha256": "3867b33e6e2a2b1669d8c7ae95231021b4fc3670fefb420f68ab845d923acb55"
+    },
+    "drat": {
+      "bytes": 36003412,
+      "sha256": "3bb4d853b28f0026d9e92de51182830c1689a3ca982b1daba1585836861fdc5a"
+    },
+    "lrat": {
+      "bytes": 49259048,
+      "sha256": "545f8b75c5446d2a2ff5978cfd8970717e4bfd08af08c35ce4164f725591ff8d"
+    },
+    "positive_hint_lrat": {
+      "additions": 71096,
+      "deletions": 85066,
+      "empty_clause": true,
+      "hint_steps": 6638850
+    },
+    "regenerated_byte_for_byte": true,
+    "solver_conflicts": 98830
+  },
+  "source_audit": {
+    "parent_edges": 29934,
+    "parent_four_colourable": true,
+    "parent_pairs_checked": 9212778,
+    "parent_vertices": 4293,
+    "retained_vertices": 502,
+    "verified": true
+  },
+  "toolchain": {
+    "drat_trim_binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+    "drat_trim_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "python": "3.11.2",
+    "python_sat": "1.9.dev15",
+    "solver": "PySAT Glucose3"
+  },
+  "verdict": "ACCEPT"
+}
