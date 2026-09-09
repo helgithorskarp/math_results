@@ -1,0 +1,75 @@
+{
+  "controls": {
+    "CAS_calls": 0,
+    "boundary_controls": [
+      "leading-coefficient degree loss and empty fibre",
+      "negative constant resultant, including source system 770",
+      "972 entry-level matrix/norm comparisons, including nilpotents",
+      "bad prime resolved by second modulus; zero relation rejected",
+      "last quadratic envelope split identity"
+    ],
+    "matrix_norm_comparisons": 972,
+    "rejected_corruptions": [
+      "common univariate factor",
+      "nonunit quotient coefficient",
+      "vertical common component",
+      "bad rational denominator",
+      "undeclared or composite modulus",
+      "missing projection factor",
+      "wrong projection coefficient",
+      "monochromatic Cartesian edge",
+      "truncated colour word"
+    ],
+    "solver_calls": 0,
+    "status": "CONTROLS_PASSED"
+  },
+  "external_reviewer_1_verdict_claimed": false,
+  "final_verifier": "integer Sylvester determinants, rational quotient Euclidean gcd, algebraic norm unit tests; no CAS/SAT/floating predicates",
+  "formalized": false,
+  "implementation_repair": "Independent Sylvester replay detected negative constant resultant normalization at system770. Corrected to positive primitive normalization and added a regression control; final complete replays pass.",
+  "large_outputs_omitted": "Private pilot logs and algebra/graph inventories retained locally; the compact certificate and source suffice for proof replay.",
+  "matrix_norm_full_unit_witness_stream_identical": true,
+  "normal_optimized_outputs_identical": true,
+  "normal_output_sha256": "193ff034ea82c812c7ad8676fe6738cb68ebff001919653cd0a13346a223ab3f",
+  "private_exploration": {
+    "direct_physical_SAT_calls": 2,
+    "direct_physical_checks": 2,
+    "initial_CAS_quotient_blocks": 1416,
+    "initial_algebra_seconds": 13.92868453002302,
+    "initial_algebra_systems": 800,
+    "initial_cover_SAT_calls": 61,
+    "initial_cover_and_refinement_unsat_verdicts_used_as_proof": false,
+    "initial_cover_seconds": 41.02322020300198,
+    "physical_check_outcome": "The sole split block gave two301-point,1662-edge collision graphs, both SAT4; this private diagnostic is not a premise of the final algebraic cover.",
+    "prime_refinement_SAT_calls": 1,
+    "total_SAT_calls_including_two_producer_runs": 168,
+    "total_discovery_UNSAT": 26,
+    "total_positive_SAT": 142
+  },
+  "producer": "SymPy resultant factorization and Groebner relations; multiplication matrix/gcd finite-field unit tests; Glucose42 positive colour witnesses",
+  "proof_replay_CAS_calls": 0,
+  "proof_replay_solver_calls": 0,
+  "public_certificate_regenerated_byte_for_byte": true,
+  "public_regeneration": {
+    "certificate_bytes": 56033,
+    "certificate_sha256": "301ca9a0ee089dfa10ba1b7d29f4e0a23d2e446a2592101dcd60e6cf2a1e6385",
+    "domain": "QQ[x,y], lex y>x; modular good-reduction tests",
+    "seconds": 47.85835741998744,
+    "source_systems": 800,
+    "stats": {
+      "SAT_calls": 52,
+      "UNSAT_discovery_only": 3,
+      "colour": 773,
+      "empty": 4,
+      "no_real_x": 47,
+      "no_real_y": 10,
+      "split": 1
+    },
+    "sympy": "1.14.0",
+    "unique_blocks": 835,
+    "unique_projection_factors": 687,
+    "words": 62
+  },
+  "python": "3.11.2",
+  "shared_trust_base": "Basic univariate arithmetic, finite-field Euclidean gcd, Python execution, input source provenance, and written reductions. The elimination and y-algebra unit algorithms differ."
+}
