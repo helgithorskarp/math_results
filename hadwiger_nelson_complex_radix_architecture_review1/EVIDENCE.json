@@ -1,0 +1,53 @@
+{
+  "discovery_target": {
+    "height": 4105,
+    "ref": "bafkreigomighnz4n5wenu4smqghcvusog6d67lsay7x4fq7fkpcvur2np4",
+    "title": "Complex-radix 243-point architecture has a finite exact non-four-colourability frontier"
+  },
+  "external_scope_check": {
+    "conclusion": "No exact-title or exact A5(z) architecture match was found; this is not a proof of historical priority.",
+    "date_utc": "2026-09-09",
+    "queries": [
+      "\"Complex-radix 243-point architecture\" unit distance graph",
+      "\"A5(z)\" \"unit-distance\" graph radix",
+      "site:arxiv.org Hadwiger Nelson complex radix unit distance graph polynomial parameter",
+      "site:arxiv.org unit distance graph algebraic curves four color finite parameter family"
+    ]
+  },
+  "independent_reconstruction": {
+    "coefficient_domain": "QQ(sqrt(-3))",
+    "event_curve_stream_sha256": "85c286422c01bcb6ebb244186032bc607984471bc2b705ef7247084dd7c33db9",
+    "method": "First-nonzero displacement normalization, direct SymPy norm expansion, AlgebraicField gcds, independent edge and finite-field cover reconstruction",
+    "solver_calls": 0,
+    "sympy_algebraic_gcd_checks": 2796,
+    "sympy_norm_expansions": 2800,
+    "sympy_version": "1.14.0",
+    "target_certificate_read": false,
+    "wall_seconds": 327
+  },
+  "official_replay": {
+    "certificate_regenerated_byte_identical": true,
+    "controls_sha256": "77a2d38f67d1fce3cc082a4b48d4491c7aeed494b286e8209c6004942379766b",
+    "frontier_bytes": 3751645,
+    "frontier_sha256": "ff2842ca4515ff9e25b0575f08e1f0fcefc308258fbfbbe146a1524c8c9b9d6b",
+    "normal_optimized_byte_identical": true,
+    "result_sha256": "6e9ec2be048bc8a34bd2cc5f61ed4da8e29d78e7c492ec2b5ddb3aaa8a9c7bc8"
+  },
+  "scope": {
+    "all_parameter_upper_bound": 15522676,
+    "finite_exceptional_frontier_decided": false,
+    "full_architecture_four_colour_closure": false,
+    "injective_parameter_bezout_bound": 15513472,
+    "maximum_physical_order": 243,
+    "nonfour_graph_found": false,
+    "record_improvement": false
+  },
+  "target_certificate_sha256": "a252f1b2cf1044789661b1d9eeeeed31a541397fc300e6cd479b47c96cae3951",
+  "target_source_commit": "95687bd35321aa6fb767fc508eac6ab186ba6d2e",
+  "trust_boundaries": [
+    "Classical projective Bezout and the Eisenstein/Gauss argument are manually audited written mathematics, not proof-assistant formalizations.",
+    "The target replay trusts CPython integer and file semantics; the independent reconstruction additionally trusts SymPy 1.14.0 exact AlgebraicField and polynomial algorithms.",
+    "The finite exceptional set is represented by polynomial systems and collision polynomials; its distinct real members are not isolated or counted."
+  ],
+  "verdict": "ACCEPT_HIGH_CONFIDENCE_SCOPED"
+}
