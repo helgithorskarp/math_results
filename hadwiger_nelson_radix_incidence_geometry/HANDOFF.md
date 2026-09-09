@@ -43,7 +43,7 @@ python3 -B hadwiger_nelson_radix_incidence_geometry/frontier_effect.py --quotien
 ```
 
 The standalone geometry theorem is complete and does not depend on the
-ongoing eight-active SAT search. That search has not established a new
+checkpointed eight-active SAT search. That search has not established a new
 incidence lower bound or a physical non-four-colourable graph. HN2 retains
 that physical/chromatic gate. HN3 can use this durable interface for
 complementary exact parameter viability and conjunction elimination.
@@ -55,3 +55,8 @@ geometry filter is claimed.
 ## New complementary result consumed before publication
 
 HN3 h4165 ([four-concurrence package](https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_complex_radix_four_concurrence), source `0bdad4d8d139e8ec6926bd3fd9d1068fec0c186d`) excludes all 960,768 parallel four-section conjunctions, including inside larger active sets. It removes no whole pair system. Its constraints can be combined with the present pencil and constant-offset filters; the new 432-system reduction remains valid. This theorem does not depend on h4165.
+
+The pass ended after deciding its in-progress residual model; no solver job
+is left running. The stronger eight-active gate remains open.
+[PASS_BOUNDARY.json](PASS_BOUNDARY.json) records the completed theorem, exact
+remaining frontier, and scope of the private continuation checkpoint.
