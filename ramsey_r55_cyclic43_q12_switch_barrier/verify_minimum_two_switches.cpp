@@ -1,0 +1,20 @@
+// Independent two-level replay, using the alternate triangle kernel in
+// verify_cyclic43_q12_switches.cpp rather than the primary enumerator.
+#define main first_verifier_main
+#include "verify_switches.cpp"
+#undef main
+#include <atomic>
+#include <thread>
+
+template<class F> void enumerate_switches(const std::array<std::array<int,N>,N>& id,const std::array<uint8_t,M>& color,F visit){
+  for(int a=0;a<N;++a)for(int b=a+1;b<N;++b)for(int c=b+1;c<N;++c)for(int d=c+1;d<N;++d){int m[3][2]{{id[a][b],id[c][d]},{id[a][c],id[b][d]},{id[a][d],id[b][c]}};for(int i=0;i<3;++i)for(int j=i+1;j<3;++j){bool x=color[m[i][0]],y=color[m[j][0]];if(color[m[i][1]]!=x||color[m[j][1]]!=y||x==y)continue;visit(std::array<int,4>{m[i][0],m[i][1],m[j][0],m[j][1]});}}
+}
+int endpoint(const std::array<std::pair<int,int>,M>& ends,const Adj& root,int q,const std::array<int,4>& move,Adj* save=nullptr){Adj work=root;for(int e:move){auto[u,v]=ends[e];q+=delta(work,u,v);}if(save)*save=work;return q;}
+struct TwoClaim{int first_q=0,first_count=0,second_min=0;uint64_t total=0,descending=0,equal12=0,below12=0;};
+std::vector<TwoClaim> load_two(std::string path){std::ifstream f(path);std::string line;std::getline(f,line);if(line!="index\tfirst_minimum_q\tfirst_minimum_multiplicity\tsecond_switches\tsecond_descending\tsecond_equal_12\tsecond_below_12\tsecond_minimum_q")throw std::runtime_error("two header");std::vector<TwoClaim>r;int expected=0;while(std::getline(f,line)){std::replace(line.begin(),line.end(),'\t',' ');std::istringstream s(line);int index;TwoClaim x;s>>index>>x.first_q>>x.first_count>>x.total>>x.descending>>x.equal12>>x.below12>>x.second_min;if(!s||index!=expected++)throw std::runtime_error("two row");r.push_back(x);}if(r.size()!=238)throw std::runtime_error("two count");return r;}
+
+int main(int argc,char**argv){if(argc!=4){std::cerr<<"usage: verify INPUT.json FIRST.tsv TWO.tsv\n";return 2;}auto inputs=load_rows(argv[1]);auto first=load_claim(argv[2]);auto claims=load_two(argv[3]);std::array<std::array<int,N>,N>id{};std::array<std::pair<int,int>,M>ends{};int ne=0;for(int u=0;u<N;++u)for(int v=u+1;v<N;++v){id[u][v]=id[v][u]=ne;ends[ne++]={u,v};}const std::array<int,11>L{1,2,7,10,12,13,14,16,18,20,21};std::array<uint8_t,M>base{};for(int e=0;e<M;++e){auto[u,v]=ends[e];int d=std::min(v-u,N-v+u);base[e]=std::find(L.begin(),L.end(),d)!=L.end();}
+ std::vector<TwoClaim>got(238);std::atomic<int>next{0};std::vector<std::thread>threads;for(unsigned w=0;w<std::max(1u,std::thread::hardware_concurrency());++w)threads.emplace_back([&]{for(;;){int z=next.fetch_add(1);if(z>=238)break;auto color=base;for(int e:inputs[z])color[e]^=1;Adj root{};for(int e=0;e<M;++e)if(color[e]){auto[u,v]=ends[e];root[u]|=UINT64_C(1)<<v;root[v]|=UINT64_C(1)<<u;}TwoClaim r;r.first_q=first[z].minimum;std::vector<std::array<int,4>> minima;enumerate_switches(id,color,[&](auto move){if(endpoint(ends,root,12,move)==r.first_q)minima.push_back(move);});r.first_count=minima.size();r.second_min=100000;for(auto one:minima){Adj middle;int mq=endpoint(ends,root,12,one,&middle);auto mc=color;for(int e:one)mc[e]^=1;enumerate_switches(id,mc,[&](auto two){int q=endpoint(ends,middle,mq,two);++r.total;r.descending+=(q<mq);r.equal12+=(q==12);r.below12+=(q<12);r.second_min=std::min(r.second_min,q);});}got[z]=r;}});for(auto&t:threads)t.join();
+  uint64_t endpoints=0,total=0,descending=0,equal12=0,below12=0;int minimum=100000;for(int z=0;z<238;++z){auto&a=got[z],&b=claims[z];if(a.first_q!=b.first_q||a.first_count!=b.first_count||a.total!=b.total||a.descending!=b.descending||a.equal12!=b.equal12||a.below12!=b.below12||a.second_min!=b.second_min)throw std::runtime_error("two mismatch "+std::to_string(z));endpoints+=a.first_count;total+=a.total;descending+=a.descending;equal12+=a.equal12;below12+=a.below12;minimum=std::min(minimum,a.second_min);}if(endpoints!=502||total!=25424492||descending!=502||equal12!=502||below12||minimum!=12)throw std::runtime_error("two aggregate");std::cout<<"PASS independent two-level census endpoints="<<endpoints<<" second_switches="<<total<<" descending="<<descending<<" equal12="<<equal12<<" below12="<<below12<<" minimum="<<minimum<<'\n';
+ return 0;
+}
