@@ -1,0 +1,36 @@
+{
+  "declared_at": "2026-09-09T18:08:12.086917+00:00",
+  "family": "Existing h4149/h4161 q8,r8 cohort 0 positive worker M8 AND A0 AND 119",
+  "original_members": 2184,
+  "core_guard": [
+    -810,
+    -819,
+    -824,
+    -832,
+    -833,
+    -836,
+    -842,
+    -856
+  ],
+  "positive_input_sha256": "326d54a4a9b2abb26c5865536c7bb42d20696c5a59c6c8e1a0d1477465f21c67",
+  "mechanism": "Four exhaustive sign choices on two distinct unassigned physical cross edges; exact full worker inputs, supported proof checking, complementary joins and explicit h4161-premise original-task admission",
+  "split_selection": "Integer short-clause score on the exact conditioned base: maximize min(positive_weight,negative_weight), then total; weight 2^(10-width); physical variables 2..801 only; second edge has disjoint physical endpoints; ties prefer smaller variable",
+  "target_backend": "Pinned standalone CaDiCaL sc2021, --plain --seed=0",
+  "per_leaf_conflict_limit": 100000,
+  "per_leaf_wall_safety_seconds": 240,
+  "target_leaf_count": 4,
+  "target_concurrency": 1,
+  "first_output_gate": [
+    "Checked complete exclusion of named original cohort member IDs",
+    "Fully verified physical good43 candidate",
+    "Otherwise actual measured UNKNOWN with every unresolved leaf retained"
+  ],
+  "pre_target_requirements": [
+    "Actual small SAT/UNSAT solver-proof-format controls",
+    "Exact mixed-premise admission contract and rejection controls",
+    "All four full physical worker inputs and split coverage checked"
+  ],
+  "stop": "Finish the four-leaf gate unless a verified target concludes it, then checkpoint and yield. No retries, deeper split, changed cap/backend, neighboring cohort, or additional phase.",
+  "q10_inputs_accessed": false,
+  "frozen_routes_reopened": false
+}

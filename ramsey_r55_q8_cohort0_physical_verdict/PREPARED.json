@@ -1,0 +1,152 @@
+{
+  "format": "q8-r8-cohort0-four-leaf-v1",
+  "selection": {
+    "variables": [
+      39,
+      74
+    ],
+    "edges": [
+      [
+        0,
+        41
+      ],
+      [
+        1,
+        37
+      ]
+    ],
+    "scores": [
+      {
+        "variable": 39,
+        "positive": 9159,
+        "negative": 12667
+      },
+      {
+        "variable": 74,
+        "positive": 8532,
+        "negative": 13536
+      }
+    ],
+    "remaining_clauses_after_explicit_units": 1416943,
+    "method": "Declared integer short-clause score; a heuristic only"
+  },
+  "original_members": 2184,
+  "original_ids_sha256": "3fb1d9ba03c6613c5ae034d169a4b2d4b18b76793563d4f30ab86913e8a0a11f",
+  "root_job": {
+    "r": 8,
+    "core_assumptions": [
+      -810,
+      -819,
+      -824,
+      -832,
+      -833,
+      -836,
+      -842,
+      -856
+    ],
+    "edge_cube": [
+      119
+    ]
+  },
+  "leaves": [
+    {
+      "index": 0,
+      "job": {
+        "r": 8,
+        "core_assumptions": [
+          -810,
+          -819,
+          -824,
+          -832,
+          -833,
+          -836,
+          -842,
+          -856
+        ],
+        "edge_cube": [
+          119,
+          39,
+          74
+        ]
+      },
+      "cnf": "leaf-0.cnf",
+      "sha256": "e3fbb00c0f556bc15577bd0d3d33fed2624ed3482550debc46f2f15c5a323691",
+      "status": "PENDING"
+    },
+    {
+      "index": 1,
+      "job": {
+        "r": 8,
+        "core_assumptions": [
+          -810,
+          -819,
+          -824,
+          -832,
+          -833,
+          -836,
+          -842,
+          -856
+        ],
+        "edge_cube": [
+          119,
+          39,
+          -74
+        ]
+      },
+      "cnf": "leaf-1.cnf",
+      "sha256": "5c58f535aa154a802ce0b024c05fb52ba2f1d182c348c3f5ca66a574e37dc661",
+      "status": "PENDING"
+    },
+    {
+      "index": 2,
+      "job": {
+        "r": 8,
+        "core_assumptions": [
+          -810,
+          -819,
+          -824,
+          -832,
+          -833,
+          -836,
+          -842,
+          -856
+        ],
+        "edge_cube": [
+          119,
+          -39,
+          74
+        ]
+      },
+      "cnf": "leaf-2.cnf",
+      "sha256": "661d80f2c6737effde61ebb55b428514b9d8b0e84469c8c4dea4fec72708daa1",
+      "status": "PENDING"
+    },
+    {
+      "index": 3,
+      "job": {
+        "r": 8,
+        "core_assumptions": [
+          -810,
+          -819,
+          -824,
+          -832,
+          -833,
+          -836,
+          -842,
+          -856
+        ],
+        "edge_cube": [
+          119,
+          -39,
+          -74
+        ]
+      },
+      "cnf": "leaf-3.cnf",
+      "sha256": "076345923680d09d8a41aefc799fa1cfdc3aec1c6b024bd7953fb8faeb511749",
+      "status": "PENDING"
+    }
+  ],
+  "partition_assignments_checked": 4,
+  "all_original_statuses": "UNKNOWN",
+  "target_solver_calls": 0
+}

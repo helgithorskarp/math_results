@@ -1,0 +1,101 @@
+{
+  "status": "PRE_TARGET_CONTROLS_PASSED",
+  "actual_small_solver_calls": 3,
+  "checked_small_statuses": [
+    "SAT",
+    "UNSAT",
+    "UNKNOWN"
+  ],
+  "actual_rup_only_drat_and_lrat_checked": true,
+  "empty_cover_control_tasks": 0,
+  "rejected_mixed_admissions": 5,
+  "solver_receipts": {
+    "r33-5-c1000": {
+      "status": "SAT",
+      "returncode": 10,
+      "wall_seconds": 0.004911439027637243,
+      "user_seconds": 0.002825,
+      "system_seconds": 0.0,
+      "peak_rss_kib": 22276,
+      "input_sha256": "8f8a440a24002e681a2b18eee3bb896c048ed706313b34e8c2ba510a29abb28d",
+      "solver_sha256": "c6de62662723ec4a7426c5ca2bc9bfb04c60aad81a423957e3cd1ffadd0f8aa7",
+      "command": [
+        "/scratch/cadical-package/usr/bin/cadical",
+        "--plain",
+        "--seed=0",
+        "-c",
+        "1000",
+        "-t",
+        "20",
+        "/scratch/research-team-v2/state/work/team-r55-3/q8-cohort0-physical-verdict-20260909/controls/r33-5-c1000.cnf",
+        "/scratch/research-team-v2/state/work/team-r55-3/q8-cohort0-physical-verdict-20260909/controls/r33-5-c1000/proof.drat"
+      ],
+      "statistics": {
+        "conflicts": 2,
+        "decisions": 5,
+        "propagations": 14
+      },
+      "proof_bytes": 10,
+      "proof_sha256": "6e1406cc305702deb1228471be7729efaa282db71cc91b302830ac569b5b634e",
+      "proof_status": "NOT_AN_UNSAT_CERTIFICATE"
+    },
+    "r33-6-c1000": {
+      "status": "UNSAT",
+      "returncode": 20,
+      "wall_seconds": 0.0034558079787530005,
+      "user_seconds": 0.0,
+      "system_seconds": 0.003058,
+      "peak_rss_kib": 22500,
+      "input_sha256": "14ce3824a2a1e9fbfc0668a8fd8ae6be53fc864f4a96a56841413d4dad4c05ef",
+      "solver_sha256": "c6de62662723ec4a7426c5ca2bc9bfb04c60aad81a423957e3cd1ffadd0f8aa7",
+      "command": [
+        "/scratch/cadical-package/usr/bin/cadical",
+        "--plain",
+        "--seed=0",
+        "-c",
+        "1000",
+        "-t",
+        "20",
+        "/scratch/research-team-v2/state/work/team-r55-3/q8-cohort0-physical-verdict-20260909/controls/r33-6-c1000.cnf",
+        "/scratch/research-team-v2/state/work/team-r55-3/q8-cohort0-physical-verdict-20260909/controls/r33-6-c1000/proof.drat"
+      ],
+      "statistics": {
+        "conflicts": 21,
+        "decisions": 26,
+        "propagations": 101
+      },
+      "proof_bytes": 114,
+      "proof_sha256": "a1972dacaf9364b22c72104ee5404a420e41cc89d0cf68b2af241b3ac053d759",
+      "proof_status": "UNVERIFIED_COMPLETE_TRACE"
+    },
+    "r33-6-c1": {
+      "status": "UNKNOWN",
+      "returncode": 0,
+      "wall_seconds": 0.0033035920350812376,
+      "user_seconds": 0.002665,
+      "system_seconds": 0.000278,
+      "peak_rss_kib": 22500,
+      "input_sha256": "14ce3824a2a1e9fbfc0668a8fd8ae6be53fc864f4a96a56841413d4dad4c05ef",
+      "solver_sha256": "c6de62662723ec4a7426c5ca2bc9bfb04c60aad81a423957e3cd1ffadd0f8aa7",
+      "command": [
+        "/scratch/cadical-package/usr/bin/cadical",
+        "--plain",
+        "--seed=0",
+        "-c",
+        "1",
+        "-t",
+        "20",
+        "/scratch/research-team-v2/state/work/team-r55-3/q8-cohort0-physical-verdict-20260909/controls/r33-6-c1.cnf",
+        "/scratch/research-team-v2/state/work/team-r55-3/q8-cohort0-physical-verdict-20260909/controls/r33-6-c1/proof.drat"
+      ],
+      "statistics": {
+        "conflicts": 1,
+        "decisions": 3,
+        "propagations": 6
+      },
+      "proof_bytes": 5,
+      "proof_sha256": "7deed290616ec6cbd14b537c5c83c394cc08af7e2348f6817e05b02555ee59de",
+      "proof_status": "NOT_AN_UNSAT_CERTIFICATE"
+    }
+  }
+}
