@@ -1,0 +1,86 @@
+{
+  "corruptions": {
+    "cases": [
+      "read",
+      "root_upper",
+      "missing_class",
+      "class_weight",
+      "decimal",
+      "PROFILE.tsv",
+      "HISTOGRAM.tsv",
+      "RR.bin",
+      "TOTALS.tsv"
+    ],
+    "rejected": 9,
+    "status": "VERIFIED_NUMERICAL_CERTIFICATE_CORRUPTIONS"
+  },
+  "final_fresh_replay": {
+    "new_task_decisions": 0,
+    "platform": "Linux-6.1.0-52-cloud-amd64-x86_64-with-glibc2.36",
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "q10_child_inputs_inspected": 0,
+    "result_sha256": "839a83302d2892b99041c41f3f46bbafb53de8fe4708689b5b2bcd98ce5021b0",
+    "seconds": 37.774677969980985,
+    "solver_calls": 0,
+    "status": "REPRODUCED_THREE_BLOCK_GLOBAL_REDUCTION",
+    "target_found": false
+  },
+  "full_parent_replays": 0,
+  "independent": {
+    "abstract_events": 2952,
+    "classes": 18,
+    "coordinate_occurrences": 8856,
+    "exact_primitive_counts": 3,
+    "gate": "PASS",
+    "histogram_entries": 830,
+    "literal_pair_assignments": 196608,
+    "palette_states": 111360,
+    "palette_transport_identities": 294148,
+    "profile_entries": 1039,
+    "status": "INDEPENDENT_CENTRED_CENSUS_AND_GLOBAL_COVER_VERIFIED"
+  },
+  "native_modes": [
+    "strict C++20 -O3",
+    "strict C++20 -O1 ASan/UBSan"
+  ],
+  "native_outputs_byte_identical": true,
+  "native_warnings": 0,
+  "physical": {
+    "blue_mutations": 2016,
+    "complete_two_block_palette_checks": 24276,
+    "fixtures_sha256": "ae1a429967d78738c205af56f43c650c6657a7d79722ff98ce056646716ba9af",
+    "indexed_mutations": 8064,
+    "mutation_stream_sha256": "de36b1b19228129717f9367271c9c371aaeb6a90b96810c89433491ac5b08be2",
+    "physical_corruptions_rejected": 6,
+    "positive_fixtures": 3,
+    "positive_literal_three_block_fives": 32256,
+    "primitive_truth_cases": 900,
+    "q10_child_inputs_inspected": 0,
+    "red_mutations": 6048,
+    "status": "VERIFIED_LITERAL_THREE_BLOCK_PHYSICAL_CONTROLS",
+    "target_found": false
+  },
+  "prior_solver_recomputations": 0,
+  "public_tables_reproduced": [
+    "HISTOGRAM.tsv",
+    "PROFILE.tsv",
+    "FIXTURES.json"
+  ],
+  "python_modes": [
+    "normal",
+    "-O"
+  ],
+  "python_outputs_equal": true,
+  "record_replay": {
+    "new_task_decisions": 0,
+    "platform": "Linux-6.1.0-52-cloud-amd64-x86_64-with-glibc2.36",
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "q10_child_inputs_inspected": 0,
+    "result_sha256": "839a83302d2892b99041c41f3f46bbafb53de8fe4708689b5b2bcd98ce5021b0",
+    "seconds": 37.61162147199502,
+    "solver_calls": 0,
+    "status": "RECORDED_THREE_BLOCK_GLOBAL_REDUCTION",
+    "target_found": false
+  },
+  "result_sha256": "839a83302d2892b99041c41f3f46bbafb53de8fe4708689b5b2bcd98ce5021b0"
+}
