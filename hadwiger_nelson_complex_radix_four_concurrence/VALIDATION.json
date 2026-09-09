@@ -1,0 +1,28 @@
+{
+  "certificate": {
+    "bytes": 2838,
+    "regenerated_byte_identical": true,
+    "sha256": "9c2d6c362a4b8d206ac1aa8f141d9b093285f453c390ae7a75adba72d34ce3c6"
+  },
+  "controls": {
+    "interpolation_checks": 33,
+    "malformed_certificates_rejected": 7,
+    "projection_substitution_checks": 147,
+    "resultant_recurrence_checks": 256,
+    "status": "passed"
+  },
+  "optimized_verifier": {
+    "command": "python3 -O -B hadwiger_nelson_complex_radix_four_concurrence/verify.py --processes 8 --check-expected",
+    "exit_code": 0,
+    "stdout_sha256": "1b3150f32d1275e532bdc38d1277c129145c1f129ad5254775ecf7e455e1fec4"
+  },
+  "standard_verifier": {
+    "command": "python3 -B hadwiger_nelson_complex_radix_four_concurrence/verify.py --processes 8 --check-expected",
+    "exit_code": 0,
+    "stdout_sha256": "1b3150f32d1275e532bdc38d1277c129145c1f129ad5254775ecf7e455e1fec4"
+  },
+  "producer": {
+    "command": "python3 -B hadwiger_nelson_complex_radix_four_concurrence/produce.py --out /tmp/four-concurrence-regenerated.json --processes 8",
+    "exit_code": 0
+  }
+}
