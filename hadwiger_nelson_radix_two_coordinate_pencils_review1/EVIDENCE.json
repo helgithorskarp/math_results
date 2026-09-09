@@ -1,0 +1,89 @@
+{
+  "schema": "hn-radix-two-coordinate-pencils-review-evidence-v1",
+  "verdict": {
+    "conditional_frontier": "accept conditional on h4177 and its h4117/h4175 dependencies",
+    "confidence": "high",
+    "standalone_nonconcurrence": "accept"
+  },
+  "target": {
+    "artifact_ref": "bafkreiaui6vdzlexzkuytzxullzvqbvggem7u6p2saasx7prywfrqvskwy",
+    "height": 4181,
+    "source_commit": "a59fef1b6eaed390ec5d2920edf607149adc2fdc",
+    "title": "All 6912 two-coordinate A5 five-pencil quintets are nonconcurrent"
+  },
+  "submitted_replay": {
+    "certificate_bytes": 13081,
+    "certificate_sha256": "2cee23437feab03d5cfbbeaa87b909fb1a4215194bf649daa523ab31bf84ed21",
+    "controls_passed": true,
+    "fresh_generator": {
+      "byte_identical": true,
+      "python": "3.11.2",
+      "python_flint": "0.8.0",
+      "sympy": "1.14.0",
+      "wall_seconds_approx": 90.0
+    },
+    "optimized_verifier_wall_seconds": 1.7,
+    "ordinary_verifier_wall_seconds": 1.4
+  },
+  "independent_checker": {
+    "algorithm": "direct Q(sqrt(-3))[x,y] curve construction; Cartesian affine-section mask cover enumeration; complete lift normalization; exact Q(sqrt(-3))[U,V] identity checking",
+    "imports_ancestor_code": false,
+    "imports_target_code": false,
+    "optimized_wall_seconds": 11.2,
+    "ordinary_wall_seconds": 12.0,
+    "python": "3.11.2",
+    "source_sha256": "5a3804b9e39e55686fd2ffa377f7bc60323b46c33c45f88f16076fe529a3de23"
+  },
+  "independent_results": {
+    "common_radix_power_forms": 1,
+    "complex_affine_concurrences": 0,
+    "coordinate_pairs": 6,
+    "curve_inventory": 2797,
+    "direct_denominator_forms": 31,
+    "identities_checked_in_sqrt_minus_three_basis": 33,
+    "lifted_quintets": 6912,
+    "lifts_per_normal_form": 216,
+    "multiplier_degree_histogram": {
+      "2": 31,
+      "3": 1,
+      "4": 1
+    },
+    "normal_forms": 32,
+    "realized_pencils": 54,
+    "sha256": {
+      "curve_inventory": "85c286422c01bcb6ebb244186032bc607984471bc2b705ef7247084dd7c33db9",
+      "normal_forms": "d9b918c2484f1abf2227907552aabef31b3abb4c040cedd1eca3a7120250b082",
+      "normalization_transcript": "99fbf510c6ae7e4d590261d14f6919251f0a7e134c6caed62164edfff31854a1",
+      "patterns": "aba200487055af434b9556fd6abdc85252a31140e61d99abc683fc6bd28d8cb0",
+      "quintets": "6e98cc7cc4a83774b9826b8989518ebdde3982298e7fb08801cb9b3777226e55"
+    }
+  },
+  "conditional_frontier": {
+    "global_pairs_removed": 0,
+    "h4177_interface_bytes": 2331829,
+    "h4177_interface_file_sha256": "be36cc09da60c4bba4c260f42c12b21b88c9dea4553a1ae0214870c0284b047e",
+    "moved_nonfour_orbit_allowance": 3860,
+    "moved_pairs": 192,
+    "moved_product_surface_allowance": 4112,
+    "moved_stabilizer_histogram": {
+      "1": 164,
+      "2": 28
+    },
+    "now_at_least_six_orbit_allowance": 83380,
+    "now_at_least_six_pairs": 2932,
+    "remaining_exact_five_orbit_allowance": 3763324,
+    "remaining_exact_five_pairs": 128424
+  },
+  "scope": {
+    "accepted": "All 6912 lifted quintets in all 54 realized two-coordinate A5 affine pencils are nonconcurrent in the complex affine parameter plane, including inside larger active sets.",
+    "conditional": "The 192-pair mode move and resulting orbit allowances are correct transformations of the regenerated h4177 interface, conditional on h4177 and its h4117/h4175 dependencies.",
+    "not_established": "No closure of the other 5328 exact-five pencils, no six-or-more closure, no physical non-four-colourable graph, no global pair deletion, and no sub-509 record.",
+    "trust_boundaries": [
+      "CPython arbitrary-precision integer and Fraction arithmetic",
+      "inspected mathematical reduction and exhaustive-loop completeness",
+      "published compact certificate",
+      "h4171 for interpretation as a complete exact-five subset",
+      "h4177, h4117, and h4175 for conditional global pair-orbit figures"
+    ]
+  }
+}
