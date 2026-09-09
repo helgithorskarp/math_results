@@ -1,0 +1,35 @@
+{
+  "declared_at": "2026-09-09T19:45:22.944438+00:00",
+  "primary_approach": "construction-counterexample",
+  "complete_applicability_family": "All original q8,r5..8 physical families: prescribed monochromatic K4 blocks and eleven-vertex Ramsey(4,4) core; physical root order is optional until normalization of any target",
+  "mechanism": "Exact quadratic obstruction objective for flipping any subset of one matching. Cycle the 43 near-perfect matchings from a fixed factorization of K44, deleting dummy vertex43 and fixed within-block/core pairs. Each accepted batch strictly decreases the full physical K5 plus red-tail-K4 obstruction count.",
+  "declared_trials": [
+    {
+      "r": 5,
+      "core_index": 0
+    },
+    {
+      "r": 6,
+      "core_index": 182118
+    },
+    {
+      "r": 7,
+      "core_index": 364237
+    },
+    {
+      "r": 8,
+      "core_index": 546355
+    }
+  ],
+  "initialization": "Fresh SplitMix64 bits for 800 free physical pairs, seed 0x5235350000000000+r; no historical graph or solver trace is an input",
+  "pre_execution_gate": "Prove exact quadratic identity and tie-preserving monotone update; independently compare matching minima with literal graph enumeration on small cases; benchmark one optimization kernel before deciding resource feasibility",
+  "termination": "Each trial ends on zero physical obstruction count or a full factorization sweep with no accepted strict improvement. Every nonzero trial yields a fully specified failed construction endpoint and an exhaustive matching-optimality audit. No restarts, further neighborhoods, budget/backend changes, or another mechanism in this pass.",
+  "candidate_gate": "Independently check every physical five-set on a literal43 graph before claiming a target. Otherwise failed construction mechanism; zero original-task exclusions.",
+  "prior_routes_reopened": false,
+  "q10_accessed": false,
+  "target_solver_calls": 0,
+  "prior_graph_cursor": "4172",
+  "current_graph_cursor": "4176",
+  "prior_repo_cursor": "3c117594ac6b7ec7020ad824944411173efdd4c7",
+  "current_repo_cursor": "0a2c962023ced13b11364cbd38dcccdf08904b64"
+}

@@ -1,0 +1,12 @@
+{
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "producer_build": "g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow descent.cpp -o descent",
+  "checker_build": "g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow certify.cpp -o certify",
+  "sanitizer_build": "g++ -std=c++20 -O1 -g -Wall -Wextra -fsanitize=address,undefined -fno-omit-frame-pointer -no-pie descent.cpp -o descent_san",
+  "sanitizer_scope": "Small n=8 final control matching0; returned minimum0 identity0, no diagnostics. Not a full sanitized target replay.",
+  "producer_sha256": "801931c0c4a26ae2600fdf4dce3fe1737d691ed9c991a20fea002e21402c286c",
+  "checker_sha256": "5eef56088cf926a3244a04074ba1a3b8061b338faf81fb20174bd8988168188b",
+  "target_threads": 1,
+  "packages": "standard libraries only"
+}
