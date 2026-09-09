@@ -1,0 +1,94 @@
+{
+  "fresh_replay": {
+    "new_task_decisions": 0,
+    "platform": "Linux-6.1.0-52-cloud-amd64-x86_64-with-glibc2.36",
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "result_sha256": "f465b07c3546dc295272cdf1ea771fbd0340dd0b5b0c620f23194714dfc5e4ba",
+    "seconds": 1079.0550707579823,
+    "solver_calls": 0,
+    "status": "REPRODUCED_Q9_CONTACT_GLOBAL_REDUCTION",
+    "target_found": false
+  },
+  "native_censuses": {
+    "column_check-release": {
+      "complete": true,
+      "method": "labelled_columns",
+      "nodes": 3602604842,
+      "records": 362,
+      "seconds": 53.3137
+    },
+    "column_check-sanitized": {
+      "complete": true,
+      "method": "labelled_columns",
+      "nodes": 3602604842,
+      "records": 362,
+      "seconds": 761.337
+    },
+    "row_count-release": {
+      "complete": true,
+      "method": "unordered_rows",
+      "records": 362,
+      "seconds": 2.84951
+    },
+    "row_count-sanitized": {
+      "complete": true,
+      "method": "unordered_rows",
+      "records": 362,
+      "seconds": 15.9201
+    }
+  },
+  "normal_and_optimized_match": true,
+  "standalone_cli": {
+    "fixtures": 3,
+    "modes": 2,
+    "receipts": [
+      {
+        "bad_five": {
+          "color": 0,
+          "vertices": [
+            0,
+            4,
+            8,
+            12,
+            16
+          ]
+        },
+        "status": "VERIFIED_Q9_CONTACT_CARRIER_FIXTURE_NOT_TARGET",
+        "task": "bo1-q9-r5-c000000",
+        "tested_local_five_sets": 6174
+      },
+      {
+        "bad_five": {
+          "color": 0,
+          "vertices": [
+            0,
+            5,
+            9,
+            15,
+            17
+          ]
+        },
+        "status": "VERIFIED_Q9_CONTACT_CARRIER_FIXTURE_NOT_TARGET",
+        "task": "bo1-q9-r7-c000181",
+        "tested_local_five_sets": 6174
+      },
+      {
+        "bad_five": {
+          "color": 1,
+          "vertices": [
+            0,
+            1,
+            2,
+            7,
+            11
+          ]
+        },
+        "status": "VERIFIED_Q9_CONTACT_CARRIER_FIXTURE_NOT_TARGET",
+        "task": "bo1-q9-r9-c000361",
+        "tested_local_five_sets": 6174
+      }
+    ],
+    "status": "STANDALONE_CLI_FIXTURES_VERIFIED"
+  },
+  "strict_compiler_logs_empty": true
+}
