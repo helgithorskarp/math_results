@@ -1,0 +1,186 @@
+{
+  "finite_kernel_enumeration": {
+    "critical_reduction": "a vertex-minimal non-four-colourable subgraph has all degrees in {4,5}",
+    "global_receipt_sha256": "0a5a33d479d1948d026901ec5a58996f5ffe59c0ee537914b1f45f728574a9f9",
+    "kernels": [
+      {
+        "K5_free_graphs": 0,
+        "colouring_receipt_sha256": "e20b43634b583156e3bb4383aff522df7d78ab1df7895afbcd84863f3a3f960e",
+        "degree_sequences_considered": 1,
+        "explicit_four_colourings": 0,
+        "graph_set_sha256": "01859b39ae074342936b5553c425233f2edf7b0d534569d541f879ca0eb2cca5",
+        "graphs_containing_K5": 1,
+        "labelled_min4_max5_graphs": 1,
+        "vertices": 5
+      },
+      {
+        "K5_free_graphs": 60,
+        "colouring_receipt_sha256": "18b506058d053f91b8de03262cb4d6e6043c16fa365d687aec0f0999f1e320b3",
+        "degree_sequences_considered": 32,
+        "explicit_four_colourings": 60,
+        "graph_set_sha256": "080ff3e014f37ab112b16af75c5e36068ec495606c4f3bcc8c0ac8e5ae2f4b38",
+        "graphs_containing_K5": 16,
+        "labelled_min4_max5_graphs": 76,
+        "vertices": 6
+      },
+      {
+        "K5_free_graphs": 6912,
+        "colouring_receipt_sha256": "75a4e15f85f6aaf826bf68805b3d12dab2903a0528246457475c03b8bf2595a7",
+        "degree_sequences_considered": 64,
+        "explicit_four_colourings": 6912,
+        "graph_set_sha256": "a6dd1c1782a06da6b0e253b1d66823f835614d8d4b6d7f3fbb8bc8f63a27be7b",
+        "graphs_containing_K5": 0,
+        "labelled_min4_max5_graphs": 6912,
+        "vertices": 7
+      },
+      {
+        "K5_free_graphs": 848932,
+        "colouring_receipt_sha256": "f3a1c46d7d8c827c781df138c2b44300be4da16b22d46db3a0e18c766aa789b3",
+        "degree_sequences_considered": 128,
+        "explicit_four_colourings": 848932,
+        "graph_set_sha256": "697467999ed76d94582151150317aa3cc8117f60697dcbb0a298074c6861af53",
+        "graphs_containing_K5": 0,
+        "labelled_min4_max5_graphs": 848932,
+        "vertices": 8
+      }
+    ],
+    "orders_checked": [5, 6, 7, 8]
+  },
+  "full_A159_B214_five_module_order_lower_bounds": [
+    {
+      "A159_copies": 5,
+      "B214_copies": 0,
+      "nonfour_terminal_union_lower_bound": 9,
+      "private_vertices": 780,
+      "total_order_lower_bound": 789
+    },
+    {
+      "A159_copies": 4,
+      "B214_copies": 1,
+      "nonfour_terminal_union_lower_bound": 9,
+      "private_vertices": 836,
+      "total_order_lower_bound": 845
+    },
+    {
+      "A159_copies": 3,
+      "B214_copies": 2,
+      "nonfour_terminal_union_lower_bound": 9,
+      "private_vertices": 892,
+      "total_order_lower_bound": 901
+    },
+    {
+      "A159_copies": 2,
+      "B214_copies": 3,
+      "nonfour_terminal_union_lower_bound": 9,
+      "private_vertices": 948,
+      "total_order_lower_bound": 957
+    },
+    {
+      "A159_copies": 1,
+      "B214_copies": 4,
+      "nonfour_terminal_union_lower_bound": 9,
+      "private_vertices": 1004,
+      "total_order_lower_bound": 1013
+    },
+    {
+      "A159_copies": 0,
+      "B214_copies": 5,
+      "nonfour_terminal_union_lower_bound": 9,
+      "private_vertices": 1060,
+      "total_order_lower_bound": 1069
+    }
+  ],
+  "independent_audit": {
+    "classical_input": "Tutte's one-factor theorem",
+    "classical_source": "https://doi.org/10.1112/jlms/s1-22.2.107",
+    "degree_polynomial_counts": {
+      "5": 1,
+      "6": 76,
+      "7": 6912,
+      "8": 848932
+    },
+    "local_sublemmas": {
+      "all_have_matching_size_at_least_two": 253,
+      "all_such_graphs_are_triangle_plus_isolates": 20,
+      "also_independence_number_at_most_four": 20,
+      "five_vertex_graphs_examined": 1024,
+      "five_vertex_min_degree_two_graphs": 253,
+      "five_vertex_receipt_sha256": "e2ef1db432f118ab9e17a8d6994e03d08cfe8c379e3ec67b26d8e910e184aa44",
+      "six_vertex_graphs_examined": 32768,
+      "six_vertex_matching_number_at_most_one": 192
+    },
+    "tutte_eight_vertex_component_cases": {
+      "0": [[5, 3]],
+      "1": [],
+      "2": [[3, 1, 1, 1], [2, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1]],
+      "3": [[1, 1, 1, 1, 1]],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": []
+    }
+  },
+  "interface_fixtures": [
+    {
+      "maximum_auxiliary_degree": 2,
+      "minimum_colours_in_returned_words": 2,
+      "name": "five_identical_triples",
+      "pair_choices_checked": 243,
+      "receipt_sha256": "5478196d45d97d55771892cc57accd71fab4bdc5f1b8dc5408da78bdfa6e739f",
+      "terminals": 3,
+      "unit_edges": 0
+    },
+    {
+      "maximum_auxiliary_degree": 4,
+      "minimum_colours_in_returned_words": 2,
+      "name": "eight_terminal_overlapping_triples",
+      "pair_choices_checked": 243,
+      "receipt_sha256": "64d85077e0624b6141e40cb0bf39dfacf562a463521ac4230c0a6846a9dc9538",
+      "terminals": 8,
+      "unit_edges": 4
+    },
+    {
+      "maximum_auxiliary_degree": 5,
+      "minimum_colours_in_returned_words": 2,
+      "name": "auxiliary_degree_five",
+      "pair_choices_checked": 1,
+      "receipt_sha256": "c27feb8dd1467d5f1cfabcf98fa97cf67a2e43c4ecba69c7d0aebe5cacf1441c",
+      "terminals": 8,
+      "unit_edges": 4
+    }
+  ],
+  "receipt_sha256": "475db8ddfb1a87b06a6975ac03747e5c5dc19f6737b34ce4ee2ab00a119e90db",
+  "record_improvement": false,
+  "rejected_controls": [
+    "six_terminal_sets",
+    "nine_terminal_vertices",
+    "loop_unit_edge",
+    "unit_edge_inside_terminal_set",
+    "two_neighbours_in_foreign_set",
+    "out_of_range_endpoint",
+    "duplicate_unit_edge",
+    "singleton_terminal_set"
+  ],
+  "solver_calls": 0,
+  "status": "FIVE_SEPARATED_TERMINAL_MODULES_WITH_AT_MOST_EIGHT_TERMINALS_ARE_FOUR_COLOURABLE",
+  "theorem": {
+    "at_most508_nonfour_requires_some_private_order_at_most": 99,
+    "modules": 5,
+    "nonfour_terminal_union_lower_bound": 9,
+    "pair_selection_quantifier": "every choice of one pair per terminal set works",
+    "terminal_union_upper_bound": 8
+  },
+  "trust_boundary": "written reduction using Tutte's one-factor theorem plus exact standard-library Python enumeration; no SAT, floating point, coordinates, or omitted certificate",
+  "upstream": {
+    "A159_reductions_already_closed_independently": true,
+    "prior_full_module_bound": 783,
+    "prior_private_vertex_threshold": 101,
+    "related_A159_compression_commit": "574377f2e1c2adb7dd8be3f71c4fc54d41ef05a5",
+    "related_A159_compression_ref": "bafkreihereeov7bz4byxqbjpr62rnxhdumvhbjzphgpqe3odixc3h7hhxu",
+    "related_hashes_checked": 4,
+    "source_commit": "b53187f02f53f77ffbba70270cc97d3ee33bb813",
+    "source_contribution_ref": "bafkreigpni6zc3ij7mxluzoca3fn5wsw2oa5gfcq47mmopkm2qtvtkmnee",
+    "source_hashes_checked": 4
+  }
+}
