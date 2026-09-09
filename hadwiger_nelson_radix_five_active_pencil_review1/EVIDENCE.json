@@ -1,0 +1,103 @@
+{
+  "schema": "hn-radix-five-active-pencil-review-evidence-v1",
+  "verdict": "accept",
+  "confidence": "high",
+  "target": {
+    "artifact_ref": "bafkreibg2oy54raymeyrdphyhzqgpr3ko45vqvlqwwwka2o34qipbzacwi",
+    "height": 4171,
+    "source_commit": "d35119a821a2da13c0e015e731caebe662a7def0",
+    "title": "Every viable exact-five A5 radix cover is one of 5382 affine pencils"
+  },
+  "submitted_replay": {
+    "command": "python3 -B hadwiger_nelson_radix_five_active_pencil/verify.py --export-interface PATH --check-expected",
+    "exit_code": 0,
+    "elapsed_seconds": 85.138,
+    "user_cpu_seconds": 84.545,
+    "certificate_bytes": 4035,
+    "certificate_sha256": "3a02e1e277ca418103d5b0e70a12b4bc7eb4f09b36a0caba6750f4f03973f539",
+    "certificate_byte_identical": true,
+    "interface_bytes": 6200577,
+    "interface_file_sha256": "fc12122b45703c2cd04a0f064a7f225081ac065c917118888679723106a97b7d",
+    "interface_canonical_sha256": "eb03a45aa30f2ce0bd1b4989f72413001522b6eedbc329f0273427f94bdf3e20",
+    "controls": {
+      "AG_2_4_five_line_subsets_checked": 15504,
+      "AG_2_4_five_line_covers": 96,
+      "partition_plus_extra_covers": 80,
+      "pencil_covers": 16,
+      "malformed_certificates_rejected": 8
+    }
+  },
+  "independent_checker": {
+    "algorithm": "RREF enumeration of every dual 2-subspace and affine right-hand side; independent reviewer curve/incidence reconstruction; unrolled bit-mask lift count; exhaustive validation of explicit extension witnesses",
+    "imports_target_code": false,
+    "python": "3.11.2",
+    "normal_seconds": 60.345,
+    "optimized_seconds": 79.108,
+    "normal_and_optimized_outputs_byte_identical": true,
+    "stdout_sha256": "58b08155a8fef1bfc5350f08238fbd9b3f4e5d1534474d6d56667cb63ed1716a",
+    "source_sha256": "dd86f6730356621358c1b5608c8129d569244d386a16a481f6339b42fdf7865b",
+    "imported_reviewer_sources": {
+      "hadwiger_nelson_radix_four_active_closure_review1/independent_check.py": "c39d2074232262003fab6ed0bb97d1b522238b14063c257047130497fb9222a7",
+      "hadwiger_nelson_radix_incidence_geometry_review1/independent_check.py": "fd649000dd0c1263f51b568c5ef9db9895fe1ff756fae34b77407254fbd76bae"
+    }
+  },
+  "independent_results": {
+    "RREF_two_subspaces": 357,
+    "abstract_pencils": 5712,
+    "abstract_partition_plus_extra_covers": 28560,
+    "abstract_five_covers": 34272,
+    "realized_hyperplanes": 336,
+    "realized_pencils": 5382,
+    "realized_partition_plus_extra_covers": 26892,
+    "realized_five_covers": 32274,
+    "pencils_by_missing_type_count": {
+      "0": 5382,
+      "1": 324,
+      "2": 6
+    },
+    "realized_pencil_sha256": "bc43768f6eb36484fff008c505c72db554ba01076975e1a81cf1a2b1a821d0d0",
+    "label_pairs_audited": 29403,
+    "h4151_K4_triples": 2376,
+    "h4151_K4_quartets": 630,
+    "all_h4151_obstructions_parallel_normal": true,
+    "h4167_pair_constraints": 8376,
+    "h4167_triple_constraints": 176420,
+    "raw_pencil_quintets": 136094976,
+    "after_h4167_pair_constraints": 136094976,
+    "after_h4167_triple_constraints": 132232896,
+    "pencils_empty_after_constraints": 0,
+    "lift_transcript_sha256": "39615363ecd4c5d16ad997dac6b63d1f77e28d913c9b660276f7ac98943c9c5e",
+    "h4117_pair_representatives_imported": 132130,
+    "retained_pair_representatives": 131356,
+    "pair_modes": {
+      "exact_five_compatible": {
+        "representatives": 128616,
+        "allowance": 7585472,
+        "sha256": "b3191eb923e7d31ec2522b3d98b1ee59023dff86382b9dbb1cbf12b41582e552"
+      },
+      "parallel_signatures_require_at_least_six": {
+        "representatives": 2096,
+        "allowance": 129952,
+        "sha256": "982cac50412ee053014a4047ecc220408854ab0364b201ad3c16b2d8689a9416"
+      },
+      "unrealized_pencil_type_requires_at_least_six": {
+        "representatives": 644,
+        "allowance": 39104,
+        "sha256": "dff4a61fa0621ba1ee9fddd91009b56073d1979fbb21f93690f81ae076319c28"
+      }
+    },
+    "extension_witnesses_validated": 128616,
+    "extension_witness_transcript_sha256": "6d6663e8e7aba000969424640ad6775a90cfea3afee485f9b5957db655589d17"
+  },
+  "scope": {
+    "accepted": "The q=4 five-hyperplane cover classification, all realized-pencil and curve-lift counts, the exact application of accepted h4151/h4167 constraints, and every explicit compatible-pair extension witness.",
+    "conditional": "The 128616/2740 global pair-orbit split and allowances are correct conditional transformations of the exact published h4117 quotient.",
+    "not_established": "No algebraic concurrence of a surviving quintet, no physical non-four-colourable member, no six-active closure, no whole pair-system deletion, and no sub-509 record.",
+    "imported_trust": [
+      "accepted h4165 four-section nonconcurrence for removal of the partition branch",
+      "previous reviewer curve, K4, and incidence reconstructions",
+      "h4117 D3 quotient for global pair representatives",
+      "CPython 3.11.2 exact integer and bit-set arithmetic"
+    ]
+  }
+}
