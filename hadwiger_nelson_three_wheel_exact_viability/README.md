@@ -63,3 +63,13 @@ python3 -B hadwiger_nelson_three_wheel_exact_viability/verify.py --certificate /
 Use a fresh output directory.  Generation took about 219 seconds; independent
 verification took about 127 seconds in the recorded environment.  See
 [PROOF.md](PROOF.md), [HANDOFF.md](HANDOFF.md), and [VALIDATION.json](VALIDATION.json).
+
+HN-2's subsequent internal replay tightened the interval checker: the old
+endpoint-order condition admitted `[(1,1),(1,1)]` as complete coverage of
+`(t-1)(t-2)`, counting the root at 1 twice and missing 2.  The checker now
+requires distinct intervals; controls include this counterexample, valid
+distinct singleton roots, and adjacent intervals with a shared nonroot
+endpoint.  None of the published certificate's 1,022 intervals is duplicated
+within its component.  Its bytes, classifications, and all chromatic claims
+are unchanged.  This correction is an internal verification improvement,
+not a reviewer-1 verdict.

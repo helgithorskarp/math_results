@@ -1,0 +1,61 @@
+{
+  "architecture_unresolved_classes": 0,
+  "author": "team-hn-2",
+  "certificate_sha256": "a38615f0e6833abe371e7004184db867d8e284979e0468ddfd53e0aff267b4bf",
+  "commands": [
+    "python3 -B hadwiger_nelson_three_wheel_exact_viability/verify.py --check-expected",
+    "python3 -O -B hadwiger_nelson_three_wheel_exact_viability/verify.py --check-expected",
+    "python3 -B hadwiger_nelson_three_wheel_exact_viability/controls.py"
+  ],
+  "controls": {
+    "low_level_controls": [
+      "incomplete Sturm coverage",
+      "duplicate singleton root",
+      "shared nonroot endpoint accepted",
+      "shared residue root"
+    ],
+    "rejected_certificate_corruptions": [
+      "wrong shape relation",
+      "missing real embedding",
+      "wrong failure witness"
+    ]
+  },
+  "controls_sha256": "c9863a52268f5496e667b71e0be289461f388bf0d5e191fce585fc8ab25c4474",
+  "duplicate_intervals_within_published_components": 0,
+  "full_replay_output_sha256": "b46fdc2085bc8ff3f6a9611fd7fc7e5cb34ce14bc7ee6c0bf8a23543b9f180eb",
+  "normal_optimized_and_pre_correction_outputs_identical": true,
+  "pre_correction_commit": "a4ac9e656b6c01fd68aab477ea23a7018adccb82",
+  "published_certificate_unchanged": true,
+  "published_intervals_checked": 1022,
+  "python": "3.11.2",
+  "record_improvement": false,
+  "regression": {
+    "actual_roots": [
+      1,
+      2
+    ],
+    "missing_root": 2,
+    "old_checker_accepts": true,
+    "old_source_commit": "a4ac9e656b6c01fd68aab477ea23a7018adccb82",
+    "polynomial": [
+      2,
+      -3,
+      1
+    ],
+    "provided_intervals": [
+      [
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1"
+      ]
+    ],
+    "published_certificate_affected": false
+  },
+  "source_classification_commit": "9866f2901550073ebe12d8423677d79239c9a3cb",
+  "status": "INTERNAL_REPLAY_PASSED_WITH_DISTINCT_ROOT_INTERVALS",
+  "trust_boundary": "Internal replay of the shared exact checker plus a decoder correction; no new implementation, independent reviewer-1 verdict, or chromatic theorem claimed. h4085 remains the separate chromatic closure.",
+  "verifier_sha256": "7431bcda3d460a906efc64e0cbd2d39d64115c6f2a15a92bc89a03b56126383a"
+}

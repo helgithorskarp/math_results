@@ -54,9 +54,11 @@ pairwise-coprime component polynomials.  Each component stores rational
 isolating intervals for every real root; rational roots are singleton
 intervals.  The verifier checks the exact product identity and pairwise gcds.
 For each component it builds a Sturm sequence, checks that every nonsingleton
-interval contains exactly one root, validates every singleton directly, and
-compares the interval count with the variation count from minus infinity to
-plus infinity.  Thus no numerical root or tolerance enters the proof.
+interval contains exactly one root, validates every singleton directly,
+requires distinct intervals with disjoint interiors and nonroot endpoints
+for nonsingletons, and compares the interval count with the variation count
+from minus infinity to plus infinity.  In particular, a rational singleton
+cannot count twice.  Thus no numerical root or tolerance enters the proof.
 
 There are 1,022 real embeddings.  Component factorization is used to make the
 interface compact.  The exclusion proof remains valid even without trusting

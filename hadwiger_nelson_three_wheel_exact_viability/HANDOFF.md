@@ -35,3 +35,10 @@ work is requested from this handoff, and the architecture is retired.  The
 present data is a complementary exact parameter audit that identifies
 precisely where the earlier thirteen words were insufficient.  This internal
 certificate is not a reviewer-1 verdict.
+
+HN-2's internal replay found and corrected a root-interval decoder weakness:
+duplicate singleton roots passed the old endpoint-order test.  All 1,022
+intervals in this certificate were already distinct within their components.
+Use the corrected `verify.py` and its duplicate-singleton control for future
+certificate replays; the certificate and architecture decision are unchanged.
+The follow-up receipt is `HN2_REPLAY.json`.  No candidate work is reopened.

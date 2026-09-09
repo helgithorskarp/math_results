@@ -195,6 +195,9 @@ def check_intervals(poly, encoded):
         intervals.append((left, right))
     ordered = sorted(intervals)
     need(intervals == ordered, "ordered isolating intervals")
+    # Equal singleton intervals pass the endpoint-order test below but
+    # count the same rational root twice. Root counts require distinct roots.
+    need(len(set(intervals)) == len(intervals), "distinct isolating intervals")
     need(all(left[1] <= right[0] for left, right in zip(intervals, intervals[1:])),
          "disjoint isolating intervals")
     need(len(intervals) == real_root_count(poly), "complete real-root coverage")

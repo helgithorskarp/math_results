@@ -28,11 +28,26 @@ def low_level_controls():
     else:
         raise RuntimeError("accepted incomplete Sturm coverage")
 
+    # Without distinctness, [(1,1),(1,1)] counts two intervals for the
+    # squarefree polynomial (t-1)(t-2), while omitting its root at 2.
+    rational_roots = [Q(2), Q(-3), Q(1)]
+    V.check_intervals(rational_roots, [["1", "1"], ["2", "2"]])
+    try:
+        V.check_intervals(rational_roots, [["1", "1"], ["1", "1"]])
+    except ValueError:
+        pass
+    else:
+        raise RuntimeError("accepted duplicate singleton root")
+
+    # Open isolating intervals may still share a nonroot endpoint.
+    V.check_intervals([Q(3), Q(-4), Q(1)], [["0", "2"], ["2", "4"]])
+
     # A shared zero of two residues must not be called excluded.
     modulus = [Q(-2), Q(0), Q(1)]
     need(not V.no_common_root(modulus, modulus), "common-root control")
     need(V.no_common_root(modulus, [Q(1), Q(1)]), "coprime-residue control")
-    return ["incomplete Sturm coverage", "shared residue root"]
+    return ["incomplete Sturm coverage", "duplicate singleton root",
+            "shared nonroot endpoint accepted", "shared residue root"]
 
 
 def certificate_controls():
