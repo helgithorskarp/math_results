@@ -1,0 +1,44 @@
+{
+  "cases": {
+    "G1": {
+      "clauses": 57596,
+      "core_order": 13,
+      "core_vertex_critical": true,
+      "free_physical_pairs": 75,
+      "proof_additions": 275,
+      "proof_deletions_ignored_soundly": 88,
+      "rup_full_scan_passes": 821,
+      "rup_propagations": 6311,
+      "unsat": true
+    },
+    "G2": {
+      "clauses": 34197,
+      "core_order": 14,
+      "core_vertex_critical": true,
+      "free_physical_pairs": 62,
+      "proof_additions": 77,
+      "proof_deletions_ignored_soundly": 24,
+      "rup_full_scan_passes": 181,
+      "rup_propagations": 1406,
+      "unsat": true
+    }
+  },
+  "degree_path_rows": [
+    [18, 1, 24, 5, 6],
+    [19, 2, 23, 4, 6],
+    [20, 2, 22, 4, 6],
+    [21, 3, 21, 3, 6],
+    [22, 4, 20, 2, 6],
+    [23, 4, 19, 2, 6],
+    [24, 5, 18, 1, 6]
+  ],
+  "formula_builder": "independent forbidden truth-table enumeration",
+  "independent_proof_method": "repeated full bit-mask clause scans",
+  "manifest_entries": 17,
+  "minimum_rooted_path_incidences_per_vertex": 6,
+  "path_truth_words": 60,
+  "rooted_path_incidences_across_both_colors": 258,
+  "status": "INDEPENDENTLY_VERIFIED_H4015_EXTENSION_FAMILIES",
+  "surviving_extension_families": 0,
+  "target_good43_constructed": false
+}
