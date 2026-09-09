@@ -1,0 +1,59 @@
+{
+  "color_orbit": {
+    "canonical_rule": "retain the representative with red_edges <= 451",
+    "cutoff": 451,
+    "fixed_orbits_possible": false,
+    "order": 43,
+    "total_edges": 903
+  },
+  "coverage": {
+    "complete_carrier": "h3873 maximal-K4/Ramsey(4,4) carrier",
+    "complete_carrier_physical_tasks": 2189178,
+    "dependency_status": "INDEPENDENTLY_ACCEPTED",
+    "redirect_destination": "some normalized task in the complete h3873 carrier; no same-child transport is claimed"
+  },
+  "literal_h3987_state": {
+    "certified_unsat": 99,
+    "parent_formulas": {
+      "d20-22": "UNKNOWN",
+      "d22-20": "UNKNOWN"
+    },
+    "unknown": 161,
+    "whole_h3887_tasks_decided_here": 0
+  },
+  "oriented_q10_unknown_queue": {
+    "active_ids_sha256": "1dc9164990c087b35d1294ce3f7f9e6096956861282f479ca2e45110b270f26f",
+    "by_branch": {
+      "d20-22": {
+        "complement_red_degree": 22,
+        "complement_red_edges": 473,
+        "disposition_of_unknown_children": "TARGET_ACTIVE_ORIENTATION",
+        "red_degree": 20,
+        "red_edges": 430,
+        "unknown_children": 67
+      },
+      "d22-20": {
+        "complement_red_degree": 20,
+        "complement_red_edges": 430,
+        "disposition_of_unknown_children": "COLOR_COMPLEMENT_REDIRECT",
+        "red_degree": 22,
+        "red_edges": 473,
+        "unknown_children": 94
+      }
+    },
+    "color_complement_redirect": 94,
+    "redirect_ids_sha256": "04d86b9ac159349b75f26af38bf47adaae6f55da6537fc75276c0091cc007635",
+    "redirected_fraction": {
+      "decimal_percent": "58.385093167702",
+      "denominator": 161,
+      "numerator": 94
+    },
+    "source_unknown": 161,
+    "target_active_orientation": 67
+  },
+  "ramsey_lower_bound_changed": false,
+  "solver_calls": 0,
+  "status": "CERTIFIED_GLOBAL_COLOR_ORIENTATION_EFFECT_ON_H3987_UNKNOWN_LEDGER",
+  "status_separation": "94 redirects are neither SAT nor UNSAT decisions; the literal h3987 ledger remains 99 CERTIFIED_UNSAT / 161 UNKNOWN",
+  "target43_found": false
+}
