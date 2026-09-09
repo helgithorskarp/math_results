@@ -1,0 +1,65 @@
+{
+  "validation_kind": "Author checks; no external reviewer verdict",
+  "full_routing_run": {
+    "command": "python3 -O -B ramsey_r55_q8_root_unit/run_queue.py PARENT_RUN CERTIFICATE FRESH_OUTPUT",
+    "completed": true,
+    "all_positive_materializations": 239,
+    "negative_materializations": 0,
+    "assertions_disabled": true
+  },
+  "normalization": {
+    "status": "CERTIFIED_UNSAT_USING_IMPORTED_RAMSEY_THEOREM",
+    "family": "M8 AND -119",
+    "normalization_rup_steps": 240,
+    "blue_neighbors": 28,
+    "ramsey_vertices": 25,
+    "implied_unit": 119,
+    "original_task_exclusions": 0,
+    "candidates": 0,
+    "trust": "Published M8 encoding and R(4,5)<=25; not a full LRAT refutation"
+  },
+  "independent_normalization": {
+    "status": "VERIFIED_RELATIVE_TO_PUBLISHED_RAMSEY_BOUND",
+    "resolution_steps": 192,
+    "unit_substitution_steps": 48,
+    "normalized_matrices": 3876,
+    "negative_first_top_bit_matrices": 330,
+    "forced_blue_neighbors": 28,
+    "selected_ramsey_vertices": 25,
+    "full_ramsey_proof_checked": false
+  },
+  "fresh_proof_sha256": "fb614cc943d9c9378e7c1ef876ad52ea6fb2e8779c3b67b95ef4353c1b6e5a2b",
+  "fresh_proof_bytes": 13978,
+  "fresh_proof_bytes_identical": true,
+  "proof_controls": {
+    "certificate_mutations_rejected": 14,
+    "checkers_per_mutation": 2,
+    "dispatch_scopes_rejected": 7,
+    "physical_child_upgrade_rejected": true
+  },
+  "independent_queue_audit": {
+    "status": "VERIFIED",
+    "method": "55 physical-core bitset columns, independent guard intersections; complete direct stream consumer",
+    "nonempty_disjoint_negative_cohorts": 239,
+    "core_ids_covered": 546356,
+    "records_checked": 546356,
+    "unchanged_other_cohorts": 717,
+    "retained_full_input_bodies_checked": 2,
+    "original_statuses": "UNKNOWN"
+  },
+  "additional_interface_checks": {
+    "original_ids": [
+      "bo1-q8-r8-c000000",
+      "bo1-q8-r8-c273178",
+      "bo1-q8-r8-c546355"
+    ],
+    "corrupt_dispatch_rejected": true,
+    "other_class_request_rejected": true,
+    "duplicate_output_refused": true
+  },
+  "parent_source_manifest_verified": "398b70625a08f30b1acdcf7f07b08fb5a3a1f3abe6438278d410053fc9f0f6de",
+  "wrapper_execution": "Full routing and all checker components executed separately. Fresh proof regeneration and request checks followed. The assembled reproduce.py wrapper was not rerun through the 16 GB routing stage.",
+  "target_solver_calls": 0,
+  "principal_original_task_gate": "UNKNOWN; no original task verdict or candidate",
+  "proof_premise": "R(4,5)<=25 imported, not proved by the 240 RUP steps"
+}
