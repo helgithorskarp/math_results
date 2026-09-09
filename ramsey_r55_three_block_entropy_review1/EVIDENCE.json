@@ -1,0 +1,36 @@
+{
+  "target": {
+    "artifact_ref": "bafkreicjqaw73z3dadzhbww7nycnew7pac5jlnpigprw4igygsxygiin2m",
+    "source_commit": "ee70e31e6e61ae1388a0f63e1eb7cfefcaa3444c",
+    "replay_status": "REPRODUCED_THREE_BLOCK_GLOBAL_REDUCTION",
+    "replay_seconds": 37.79056950600352,
+    "result_sha256": "839a83302d2892b99041c41f3f46bbafb53de8fe4708689b5b2bcd98ce5021b0"
+  },
+  "reviewer_local": {
+    "status": "REVIEWER_LITERAL_MASK_SCAN_COMPLETE",
+    "domains": {"RR": 37823, "RB": 35714, "BB": 37823},
+    "same": {"allowed": 50076756774655, "total": 54108801960767, "mask_classes": 209},
+    "majority": {"allowed": 42206573324092, "total": 48242850554108, "mask_classes": 621},
+    "minority": {"allowed": 38488830004364, "total": 48242850554108, "mask_classes": 2071},
+    "output_sha256": "4534fa3fc3885c58af24e944bccad05ca25eaf7f418806272bb2603e80c97239",
+    "release_sanitizer_byte_identical": true
+  },
+  "reviewer_global": {
+    "status": "REVIEWER_ENTROPY_AND_GLOBAL_BOUND_VERIFIED",
+    "classes": 18,
+    "abstract_events": 2952,
+    "coordinate_occurrences": 8856,
+    "task_ids": 2189178,
+    "minimum_class_removal": "321044393298405427/1000000000000000000",
+    "gate": "PASS",
+    "new_task_decisions": 0,
+    "target_found": false,
+    "output_sha256": "c22f94aa53df52130ab828117bd9e27583ae783ef53831248527f99852188e38",
+    "normal_optimized_byte_identical": true
+  },
+  "environment": {
+    "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "python": "3.11.2",
+    "solver_calls": 0
+  }
+}
