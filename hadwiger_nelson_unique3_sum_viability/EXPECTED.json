@@ -1,0 +1,133 @@
+{
+  "factor_uniqueness_nodes": [
+    1,
+    1
+  ],
+  "instances": [
+    {
+      "chromatic_number": 3,
+      "chromatic_search_nodes": 12,
+      "direct_anchored_three_colourings": 2,
+      "direct_three_colour_nodes": 13,
+      "edges": 18,
+      "name": "cartesian_product",
+      "pattern_tests": {
+        "-1": {
+          "class_word": [0, 2, 1, 1, 0, 2, 2, 1, 0],
+          "valid": true,
+          "witness": null
+        },
+        "1": {
+          "class_word": [0, 1, 2, 1, 2, 0, 2, 0, 1],
+          "valid": true,
+          "witness": null
+        }
+      },
+      "physical_vertices": 9,
+      "product_labels": 9,
+      "valid_signs": [-1, 1]
+    },
+    {
+      "chromatic_number": 3,
+      "chromatic_search_nodes": 12,
+      "direct_anchored_three_colourings": 1,
+      "direct_three_colour_nodes": 7,
+      "edges": 19,
+      "name": "one_extra_edge_kills_plus",
+      "pattern_tests": {
+        "-1": {
+          "class_word": [0, 2, 1, 1, 0, 2, 2, 1, 0],
+          "valid": true,
+          "witness": null
+        },
+        "1": {
+          "valid": false,
+          "witness": ["edge", 0, 5]
+        }
+      },
+      "physical_vertices": 9,
+      "product_labels": 9,
+      "valid_signs": [-1]
+    },
+    {
+      "chromatic_number": 4,
+      "chromatic_search_nodes": 17,
+      "direct_anchored_three_colourings": 0,
+      "direct_three_colour_nodes": 2,
+      "edges": 20,
+      "name": "two_extra_edges_kill_both",
+      "pattern_tests": {
+        "-1": {
+          "valid": false,
+          "witness": ["edge", 0, 4]
+        },
+        "1": {
+          "valid": false,
+          "witness": ["edge", 0, 5]
+        }
+      },
+      "physical_vertices": 9,
+      "product_labels": 9,
+      "valid_signs": []
+    },
+    {
+      "chromatic_number": 3,
+      "chromatic_search_nodes": 11,
+      "direct_anchored_three_colourings": 1,
+      "direct_three_colour_nodes": 6,
+      "edges": 16,
+      "name": "one_collision_kills_plus",
+      "pattern_tests": {
+        "-1": {
+          "class_word": [0, 2, 1, 1, 2, 2, 1, 0],
+          "valid": true,
+          "witness": null
+        },
+        "1": {
+          "valid": false,
+          "witness": ["collision", 0, 4]
+        }
+      },
+      "physical_vertices": 8,
+      "product_labels": 9,
+      "valid_signs": [-1]
+    },
+    {
+      "chromatic_number": 4,
+      "chromatic_search_nodes": 16,
+      "direct_anchored_three_colourings": 0,
+      "direct_three_colour_nodes": 3,
+      "edges": 17,
+      "name": "collision_and_edge_kill_both",
+      "pattern_tests": {
+        "-1": {
+          "valid": false,
+          "witness": ["edge", 1, 5]
+        },
+        "1": {
+          "valid": false,
+          "witness": ["collision", 0, 4]
+        }
+      },
+      "physical_vertices": 8,
+      "product_labels": 9,
+      "valid_signs": []
+    }
+  ],
+  "receipt_sha256": "1910f7afcd27c4f0eae786dc1e498501a8546fcf145f8812c61a7222514f18a8",
+  "small_graph_census": {
+    "anchored_product_colourings": 50,
+    "backtracking_nodes": 808,
+    "factor_isomorphism_classes": 5,
+    "factor_order_histogram": {
+      "3": 1,
+      "4": 1,
+      "5": 3
+    },
+    "ordered_factor_pairs": 25,
+    "pair_receipts_sha256": "d494eb51e85092ca33edd4dc24ebed732fcaf552f814a3a12766faee22859992",
+    "product_vertex_range": [9, 25]
+  },
+  "status": "VERIFIED_UNIQUE3_ROTATIONAL_SUM_VIABILITY_INTERFACE",
+  "trust_boundary": "written combinatorial proof plus CPython exact finite enumeration; no SAT, floating point, or external package"
+}

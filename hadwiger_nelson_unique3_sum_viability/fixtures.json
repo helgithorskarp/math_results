@@ -1,0 +1,53 @@
+{
+  "left": {
+    "name": "K3-left",
+    "vertices": 3,
+    "edges": [[0, 1], [0, 2], [1, 2]],
+    "colouring": [0, 1, 2],
+    "palette_triangle": [0, 1, 2]
+  },
+  "right": {
+    "name": "K3-right",
+    "vertices": 3,
+    "edges": [[0, 1], [0, 2], [1, 2]],
+    "colouring": [0, 1, 2],
+    "palette_triangle": [0, 1, 2]
+  },
+  "instances": [
+    {
+      "name": "cartesian_product",
+      "quotient": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+      "extra_edges": [],
+      "expected_valid_signs": [-1, 1],
+      "expected_chromatic_number": 3
+    },
+    {
+      "name": "one_extra_edge_kills_plus",
+      "quotient": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+      "extra_edges": [[0, 5]],
+      "expected_valid_signs": [-1],
+      "expected_chromatic_number": 3
+    },
+    {
+      "name": "two_extra_edges_kill_both",
+      "quotient": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+      "extra_edges": [[0, 4], [0, 5]],
+      "expected_valid_signs": [],
+      "expected_chromatic_number": 4
+    },
+    {
+      "name": "one_collision_kills_plus",
+      "quotient": [0, 1, 2, 3, 0, 4, 5, 6, 7],
+      "extra_edges": [],
+      "expected_valid_signs": [-1],
+      "expected_chromatic_number": 3
+    },
+    {
+      "name": "collision_and_edge_kill_both",
+      "quotient": [0, 1, 2, 3, 0, 4, 5, 6, 7],
+      "extra_edges": [[1, 4]],
+      "expected_valid_signs": [],
+      "expected_chromatic_number": 4
+    }
+  ]
+}
