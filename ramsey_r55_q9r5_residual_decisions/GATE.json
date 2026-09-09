@@ -1,0 +1,22 @@
+{
+  "declared_utc": "2026-09-09T10:33:03.703379+00:00",
+  "family": "all 362 original bo1-q9-r5-c000000 through bo1-q9-r5-c000361 physical 43 tasks",
+  "necessary_formula": "full 23-vertex red-K4-free and blue-K5-free residual on physical vertices 20..42, with four fixed blue K4 blocks and pinned 7-core; all 208 unfixed physical edges; no symmetry breaking",
+  "success": "at least one new whole 43-task exclusion certified from UNSAT of this necessary formula and independent proof check; complete 362-row ledger required",
+  "non_success": "residual SAT witnesses do not count as candidates; UNKNOWN or zero exclusions fails gate; checkpoint without any adjacent retry",
+  "resource_rule": {
+    "solver": "Cadical300 via python-sat 1.9.dev15",
+    "conflicts_per_case": 200000,
+    "hard_wall_seconds_per_case": 30,
+    "workers": 4,
+    "seed": 0,
+    "attempts_per_case": 1,
+    "postprocessing_proof_check_seconds": 120
+  },
+  "disjoint_from": [
+    "161 q10 children owned by team-r55-1",
+    "parked q7-r5 tail",
+    "fixed central-neighborhood gluing"
+  ],
+  "core_sha256": "6a3da7f0687c392420f190db0643b5c5b7ecb1a3c5ed098c7d96200185a5f010"
+}
