@@ -1,0 +1,40 @@
+{
+  "certificate": {
+    "bytes": 4035,
+    "producer_regenerated_byte_identical": true,
+    "sha256": "3a02e1e277ca418103d5b0e70a12b4bc7eb4f09b36a0caba6750f4f03973f539"
+  },
+  "controls": {
+    "AG_2_4_five_line_subsets_checked": 15504,
+    "AG_2_4_cover_count": 96,
+    "malformed_certificates_rejected": 8,
+    "status": "passed"
+  },
+  "dependencies": "CPython standard library plus committed sibling complex-radix modules",
+  "independent_verifier": {
+    "command": "python3 -B hadwiger_nelson_radix_five_active_pencil/verify.py --check-expected",
+    "elapsed_seconds": 115.330,
+    "exit_code": 0,
+    "stdout_sha256": "3a02e1e277ca418103d5b0e70a12b4bc7eb4f09b36a0caba6750f4f03973f539"
+  },
+  "optimized_verifier": {
+    "command": "python3 -O -B hadwiger_nelson_radix_five_active_pencil/verify.py --check-expected",
+    "elapsed_seconds": 126.953,
+    "exit_code": 0,
+    "stdout_sha256": "3a02e1e277ca418103d5b0e70a12b4bc7eb4f09b36a0caba6750f4f03973f539"
+  },
+  "producer": {
+    "command": "python3 -B hadwiger_nelson_radix_five_active_pencil/produce.py --out NEW_PATH --export-interface NEW_PATH",
+    "exit_code": 0
+  },
+  "python": "3.11.2",
+  "raw_interface": {
+    "bytes": 6200577,
+    "canonical_json_sha256": "eb03a45aa30f2ce0bd1b4989f72413001522b6eedbc329f0273427f94bdf3e20",
+    "file_sha256": "fc12122b45703c2cd04a0f064a7f225081ac065c917118888679723106a97b7d",
+    "producer_and_verifier_byte_identical": true,
+    "published": false
+  },
+  "record_improvement": false,
+  "utc": "2026-09-09T18:35:28.421423+00:00"
+}
