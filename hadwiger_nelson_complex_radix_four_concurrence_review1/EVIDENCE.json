@@ -1,0 +1,104 @@
+{
+  "schema": "hn-complex-radix-four-concurrence-review-evidence-v1",
+  "verdict": "accept",
+  "confidence": "high",
+  "target": {
+    "artifact_ref": "bafkreibx44iyelrmbgrndbnuoggzb2762sf5dtgfr7mi4552skhpehzgia",
+    "height": 4165,
+    "source_commit": "0bdad4d8d139e8ec6926bd3fd9d1068fec0c186d",
+    "title": "All 960768 complex-radix four-cover curve quartets are algebraically nonconcurrent"
+  },
+  "submitted_replay": {
+    "command": "python3 -B hadwiger_nelson_complex_radix_four_concurrence/verify.py --processes 1 --check-expected",
+    "exit_code": 0,
+    "elapsed_seconds": 409.72,
+    "user_cpu_seconds": 409.52,
+    "active_noncircle_curves": 2796,
+    "covering_signature_normals": 81,
+    "eligible_curve_quartets": 960768,
+    "primary_pair_resultants": 14256,
+    "primary_gcd_degree_histogram": {
+      "0": 960698,
+      "1": 70
+    },
+    "slope3_gcd_degree_histogram": {
+      "0": 68,
+      "2": 2
+    },
+    "slope4_gcd_degree_histogram": {
+      "0": 2
+    },
+    "final_survivors": 0,
+    "certificate_bytes": 2838,
+    "certificate_sha256": "9c2d6c362a4b8d206ac1aa8f141d9b093285f453c390ae7a75adba72d34ce3c6",
+    "controls_passed": true
+  },
+  "independent_checker": {
+    "algorithm": "independent curve and F4-bucket reconstruction; direct Sylvester determinants; Vandermonde interpolation; polynomial Euclidean gcd",
+    "imports_target_code": false,
+    "inventory_source": "hadwiger_nelson_radix_four_active_closure_review1/independent_check.py",
+    "inventory_source_sha256": "c39d2074232262003fab6ed0bb97d1b522238b14063c257047130497fb9222a7",
+    "python": "3.11.2",
+    "normal_seconds": 28.616,
+    "optimized_seconds": 29.470,
+    "normal_and_optimized_outputs_byte_identical": true,
+    "stdout_sha256": "92c8f649824d539b7edf6a207dedc959e85f88a24de5db95a932102564879e40",
+    "source_sha256": "aaa161fdece7e46e83b023e59578ec5af8f09f71eced11e618a20acd5e20b0f4"
+  },
+  "independent_results": {
+    "difference_classes": 2801,
+    "active_curves": 2797,
+    "circle_id": 342,
+    "label_pairs_audited": 29403,
+    "realized_affine_hyperplanes": 336,
+    "projective_normals": 85,
+    "complete_four_section_normals": 81,
+    "eligible_quartets": 960768,
+    "primary_pair_resultants": 14256,
+    "primary_pair_degree_histogram": {
+      "8": 72,
+      "18": 1008,
+      "32": 13176
+    },
+    "submitted_primary_survivors_checked": 70,
+    "primary_survivor_gcd_histogram": {
+      "1": 70
+    },
+    "primary_exclusion_samples_checked": 323,
+    "primary_exclusion_samples_cover_all_normals": true,
+    "primary_exclusion_sample_gcd_histogram": {
+      "0": 323
+    },
+    "slope3_gcd_histogram": {
+      "0": 68,
+      "2": 2
+    },
+    "slope3_survivors": [
+      [60, 480, 1059, 2271],
+      [155, 1165, 1738, 2326]
+    ],
+    "slope4_gcd_histogram": {
+      "0": 2
+    },
+    "slope4_survivors": [],
+    "direct_sylvester_pair_resultants": 700,
+    "direct_sylvester_determinants": 20380,
+    "curve_inventory_sha256": "85c286422c01bcb6ebb244186032bc607984471bc2b705ef7247084dd7c33db9",
+    "four_section_pattern_sha256": "fe0863b674143b718e1c3bc907cdfe1daee0f31b6e64350a7c62f6e26a60e7a6",
+    "curve_bucket_sha256": "c30ecad8bfb4200d29e15e06bd9e0d3067f69aa521d0d9035ff2b8383eb5f44b",
+    "pair_inventory_sha256": "ffcd9e9c7387094a709319db09a687834b19f5d5247d5ec294ac70508e200e31",
+    "all_checked_resultants_attain_sharp_degree": true
+  },
+  "scope": {
+    "accepted": "All 960768 eligible no-circle four-section quartets are nonconcurrent over the complex affine plane; the 81 patterns are valid monotone higher-incidence exclusions.",
+    "corollary_with_previously_accepted_dependencies": "Any injective non-four-colourable architecture member activates at least five event curves.",
+    "not_established": "No five-or-more-active closure, no physical five-chromatic graph, no sub-509 record, and no whole pair-system removal.",
+    "imported_trust": [
+      "h4105 curve completeness, absolute irreducibility, and distinctness",
+      "h4119 collision closure for the injectivity corollary",
+      "h4139 unit-circle closure for the no-circle corollary",
+      "CPython 3.11.2 exact integer arithmetic"
+    ],
+    "independence_limit": "The different-algorithm checker validates all survivors and 323 exclusions spanning every normal, while full 960768-quartet exhaustiveness is supplied by source inspection and the complete target replay."
+  }
+}
