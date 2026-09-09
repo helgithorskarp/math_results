@@ -1,0 +1,82 @@
+{
+  "schema": "hn-radix-incidence-geometry-review-evidence-v1",
+  "verdict": "accept",
+  "confidence": "high",
+  "target": {
+    "artifact_ref": "bafkreihsveyhvm3o5jiiizrdqot7zxm3qkylbg2iukycnez6um3d75h72q",
+    "height": 4167,
+    "source_commit": "0bf2d5def5f03e707f2743974fc40dcf65c3cffb",
+    "title": "Exact radix incidence geometry excludes 184796 conjunctions and 432 global pair systems"
+  },
+  "independent_checker": {
+    "algorithm": "direct orbiting of all 13^5 disjoint-support states; independently reconstructed curve inventory; normalized-tail offset construction; canonical entrywise interface comparison; independent frontier application",
+    "imports_target_code": false,
+    "inventory_source": "reviewer-1 h4151 independent checker",
+    "python": "3.11.2",
+    "normal_seconds": 11.65,
+    "optimized_seconds": 11.76,
+    "normal_and_optimized_outputs_byte_identical": true,
+    "stdout_sha256": "9287a8b620daf8b467e76be1427fbcd52191b8f8c3d2ff7d8516cb346552eeee",
+    "source_sha256": "fd649000dd0c1263f51b568c5ef9db9895fe1ff756fae34b77407254fbd76bae"
+  },
+  "independent_results": {
+    "difference_classes": 2801,
+    "active_curves": 2797,
+    "circle_id": 342,
+    "raw_nonzero_ordered_disjoint_pairs": 337680,
+    "phase_pencils": 4690,
+    "injectivity_excluded_pairs": 5976,
+    "injectivity_excluded_triples": 176420,
+    "injectivity_excluded_sets": 182396,
+    "constant_offset_bundles": 400,
+    "constant_offset_bundle_size_histogram": {
+      "6": 4,
+      "7": 396
+    },
+    "monic_degree_four_excluded_pairs": 8376,
+    "phase_pairs_contained_in_offset_pairs": 5976,
+    "additional_offset_only_pairs": 2400,
+    "combined_nonfour_excluded_sets": 184796,
+    "interface_entrywise_identical": true,
+    "interface_sha256": "c9cb33688915d282b9d410898eeeb22d4bd33e242b3d28b7703ca4fe2111c477",
+    "phase_pencils_sha256": "b91db2b27d5d4cbf3d416a46469634f3f5cef343f130c5c6193c1843029a8c48",
+    "injectivity_excluded_sets_sha256": "1fa10066313c5e1cfa1bdbbecf87d71e4104c52fcd1762b461f7a3df8c5800ae",
+    "monic_degree_four_excluded_pairs_sha256": "b144a37895d7baa98a685e8e3b2497ea0fd3c673bd5ad2be66b7c4fbdd923a65",
+    "combined_nonfour_excluded_sets_sha256": "25d621e713f417abb6c6c51c5bc175779445142032dc4e06abceccb5962b91b0"
+  },
+  "independent_frontier_application": {
+    "source_global_systems": 132130,
+    "source_global_parameter_allowance": 7785424,
+    "after_circle_systems": 131788,
+    "after_circle_allowance": 7780224,
+    "removed_whole_systems": 432,
+    "removed_parameter_allowance": 25696,
+    "removed_pairs_sha256": "44f2c41114a911c9113b433ae08a83335ba6acbbf23872b938c526d98ef37576",
+    "remaining_global_systems": 131356,
+    "remaining_parameter_allowance": 7754528,
+    "remaining_pairs_sha256": "9aa6caf04379f9e8c9736ad8d287ea51902c63e4d317f9c9c7deb112700f8149",
+    "all_removed_pairs_force_collision": true
+  },
+  "submitted_replay": {
+    "certificate_bytes": 1176,
+    "certificate_sha256": "4810999e6dfd567d34ea596f1c5d9793cea0bf2d2eb9e8196a2778dce704e5e0",
+    "interface_bytes": 3093550,
+    "interface_bytes_sha256": "37321cbfb596695ed42e8f0336004f1e09c8b77dc42fd8205785b5160d9b10ec",
+    "normal_and_optimized_outputs_byte_identical": true,
+    "producer_certificate_byte_identical": true,
+    "producer_and_verifier_interfaces_byte_identical": true,
+    "normal_verify_seconds": 5.27,
+    "controls_passed": true,
+    "quotient_export_bytes": 1334366,
+    "quotient_export_sha256": "90e6235fcd71a8998fe6c4229882f383fe9d18c7c3dd6c66cca9098fa5057998",
+    "frontier_checkpoint_passed": true
+  },
+  "scope": {
+    "accepted": "The 184796 higher-incidence non-four-colourability exclusions; the 432-system frontier transformation conditional on the exact h4117 quotient interface.",
+    "not_established": "No eight-active closure, no physical non-four-colourable graph, no <=508-vertex record, and no distinct-root census.",
+    "imported_not_independently_reviewed_here": [
+      "h4117 D3 quotient",
+      "h4165 four-concurrence theorem"
+    ]
+  }
+}
