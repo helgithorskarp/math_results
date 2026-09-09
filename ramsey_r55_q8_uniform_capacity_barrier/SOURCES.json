@@ -1,0 +1,35 @@
+{
+  "primary": [
+    {
+      "url": "https://arxiv.org/pdf/1703.08768",
+      "title": "Angeltveit and McKay, R(5,5)<=48",
+      "location": "printed page 2, before the reconstruction discussion",
+      "used_facts": [
+        "R(4,5)=25",
+        "R(3,5)=14"
+      ],
+      "scope": "Only two standard Ramsey bounds; no gluing computation, catalog graph or symmetry family is used."
+    }
+  ],
+  "inherited": [
+    {
+      "directory": "ramsey_r55_global_clique_packing",
+      "url": "https://github.com/helgithorskarp/math_results/blob/main/ramsey_r55_global_clique_packing/PROOF.md",
+      "source_commit": "3f06352ae0735101a04afa1ba7b055736e7300f7",
+      "used_fact": "Elementary upper-bound arguments for R33<=6, R34<=9, R44<=18 in PROOF.md"
+    },
+    {
+      "directory": "ramsey_r55_global_maximal_packing",
+      "url": "https://github.com/helgithorskarp/math_results/tree/main/ramsey_r55_global_maximal_packing",
+      "source_commit": "1884881efbf52a54bd3a30b1445c211da7caec27",
+      "used_fact": "Original q8 core interpretation; 546356 eleven-vertex R44 records and four r values"
+    }
+  ],
+  "overlap_review": [
+    "ramsey_r55_exceptional_signature_capacity",
+    "ramsey_r55_coupled_signature_counts",
+    "ramsey_r55_signature_union_cuts"
+  ],
+  "overlap_scope": "Only the published scope statements were inspected. Those earlier systems have extra exceptional-degree/branch constraints, so their profile exclusions are not contradicted. Their data, witnesses and proofs are not inputs.",
+  "trust": "The standard Ramsey upper bounds are imported. The generic core-occupant lemma, uniform point and weak-duality argument are unformalized mathematical proofs; Python checks exact arithmetic and literal small-core controls. No target graph or complete catalog is imported."
+}
