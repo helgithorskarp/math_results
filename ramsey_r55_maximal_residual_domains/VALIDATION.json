@@ -1,0 +1,221 @@
+{
+  "complete_census": {
+    "catalogues": [
+      {
+        "count_sha256": "ee5ee3e5fabbedde38aa4764aafccaff0bcbb7866bd4856cd67a5b950970bef6",
+        "independent": {
+          "direct_incidences": 107,
+          "profiles": 32,
+          "records": 4,
+          "status": "INDEPENDENT_INCLUSION_EXCLUSION_CENSUS_VERIFIED"
+        },
+        "order": 3,
+        "producer": {
+          "profiles": 32,
+          "records": 4,
+          "status": "COMPLETE_MOBIUS_COVER_CENSUS"
+        },
+        "profile_entries": 32,
+        "profile_sha256": "361ba2d7370128552ba08e21f10beeece1145ea85638d04de2c0b8f9177f3962",
+        "records": 4
+      },
+      {
+        "count_sha256": "f908ce8ff209f48f52f0af1015fb6b84f7e1f6abdfaf1980ea3f14d1338b2f69",
+        "independent": {
+          "direct_incidences": 715137,
+          "profiles": 46336,
+          "records": 362,
+          "status": "INDEPENDENT_INCLUSION_EXCLUSION_CENSUS_VERIFIED"
+        },
+        "order": 7,
+        "producer": {
+          "profiles": 46336,
+          "records": 362,
+          "status": "COMPLETE_MOBIUS_COVER_CENSUS"
+        },
+        "profile_entries": 46336,
+        "profile_sha256": "f33219e889c1b565fec74ce1e39cdcf8de7806f8f4b02da435f1ea69246c10c0",
+        "records": 362
+      },
+      {
+        "count_sha256": "cbc6c3b332706a8cd84d1a2886c4eb7a36d7b5cfb57fa633e97d0698e8e41453",
+        "independent": {
+          "direct_incidences": 67369625544,
+          "profiles": 1118937088,
+          "records": 546356,
+          "status": "INDEPENDENT_INCLUSION_EXCLUSION_CENSUS_VERIFIED"
+        },
+        "order": 11,
+        "producer": {
+          "profiles": 1118937088,
+          "records": 546356,
+          "status": "COMPLETE_MOBIUS_COVER_CENSUS"
+        },
+        "profile_entries": 1118937088,
+        "profile_sha256": "140c12f73390659dc9c31a8be2c486df84cdedee07d63d9b98d4e163a15ef973",
+        "records": 546356
+      },
+      {
+        "count_sha256": "131bf9db8ae1fa27f1744c355e947bf70051f1ae5938fed2c85a66cede171244",
+        "independent": {
+          "direct_incidences": 4165389824,
+          "profiles": 20971520,
+          "records": 640,
+          "status": "INDEPENDENT_INCLUSION_EXCLUSION_CENSUS_VERIFIED"
+        },
+        "order": 15,
+        "producer": {
+          "profiles": 20971520,
+          "records": 640,
+          "status": "COMPLETE_MOBIUS_COVER_CENSUS"
+        },
+        "profile_entries": 20971520,
+        "profile_sha256": "d684d7eed053a807cf754f5850a7e910ea83370f1540a40559c00cdeb9ecaa44",
+        "records": 640
+      }
+    ],
+    "profile_entries": 1139954976,
+    "records": 547362,
+    "status": "COMPLETE_INDEPENDENT_MAXIMAL_RESIDUAL_CENSUS"
+  },
+  "final_fresh_replay": {
+    "gate": "PASS",
+    "new_task_decisions": 0,
+    "platform": "Linux-6.1.0-52-cloud-amd64-x86_64-with-glibc2.36",
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "q10_child_inputs_inspected": 0,
+    "result_sha256": "685c333e6be567b678fe46c86c70d4843ccb877353a0337ed5bca82421bfd69b",
+    "seconds": 232.1723281769955,
+    "solver_calls": 0,
+    "status": "REPRODUCED_COMPLETE_MAXIMAL_RESIDUAL_BOUND",
+    "target_found": false
+  },
+  "fresh_public_downloads": {
+    "files": [
+      {
+        "bytes": 12,
+        "order": 3,
+        "sha256": "1d237c0da1c599bbd8f4cffdf1fd13171099276e9ca335a1e0c819e4be9b2bea",
+        "url": "https://users.cecs.anu.edu.au/~bdm/data/r44_3.g6"
+      },
+      {
+        "bytes": 2172,
+        "order": 7,
+        "sha256": "6a3da7f0687c392420f190db0643b5c5b7ecb1a3c5ed098c7d96200185a5f010",
+        "url": "https://users.cecs.anu.edu.au/~bdm/data/r44_7.g6"
+      },
+      {
+        "bytes": 6556272,
+        "order": 11,
+        "sha256": "39e10a1bb2d6b36d556e646e12f0181b2bc3bd45b334ad7f495b8900d7680433",
+        "url": "https://users.cecs.anu.edu.au/~bdm/data/r44_11.g6.gz"
+      },
+      {
+        "bytes": 12800,
+        "order": 15,
+        "sha256": "53a46ba21cb16805eb07775b60746f783864388538368955e72cbdae5ae8f4e1",
+        "url": "https://users.cecs.anu.edu.au/~bdm/data/r44_15.g6"
+      }
+    ],
+    "status": "ALL_FOUR_PUBLIC_CATALOGUES_FETCH_AND_HASH_PASS"
+  },
+  "global_corruptions": {
+    "cases": 6,
+    "status": "GLOBAL_RESIDUAL_CORRUPTIONS_REJECTED"
+  },
+  "independent_global": {
+    "classes": 18,
+    "cores": 547362,
+    "gate": "PASS",
+    "status": "INDEPENDENT_COMPLETE_RESIDUAL_BOUND_VERIFIED",
+    "strictly_improved_task_bounds": 1641765,
+    "task_ids": 2189178
+  },
+  "literal": {
+    "complete_small_graphs": 75,
+    "corruptions_rejected": 6,
+    "large_boundary_graphs": 2,
+    "status": "LITERAL_RESIDUAL_DEFINITION_CONTROLS_PASS",
+    "truth": [
+      {
+        "graphs": 1,
+        "order": 1,
+        "total": 15
+      },
+      {
+        "graphs": 2,
+        "order": 2,
+        "total": 450
+      },
+      {
+        "graphs": 8,
+        "order": 3,
+        "total": 25305
+      },
+      {
+        "graphs": 64,
+        "order": 4,
+        "total": 2587575
+      }
+    ]
+  },
+  "native_compiler_warnings": 0,
+  "native_sanitizer_coverage": {
+    "partitions": [
+      {
+        "end": 4,
+        "order": 3,
+        "start": 0
+      },
+      {
+        "end": 362,
+        "order": 7,
+        "start": 0
+      },
+      {
+        "end": 128,
+        "order": 11,
+        "start": 0
+      },
+      {
+        "end": 273306,
+        "order": 11,
+        "start": 273178
+      },
+      {
+        "end": 546356,
+        "order": 11,
+        "start": 546228
+      },
+      {
+        "end": 640,
+        "order": 15,
+        "start": 0
+      }
+    ],
+    "profile_entries": 21804320,
+    "records": 1390,
+    "scope": "All orders 3,7,15; first/middle/last 128 order-11 cores. Full release census independently compared separately.",
+    "status": "SANITIZED_RESIDUAL_CENSUS_COVERAGE_PASS"
+  },
+  "parent_replays": 0,
+  "physical": {
+    "corruptions_rejected": 4,
+    "fixtures_sha256": "c0c7c1f5e6f8fff8ba2581052db73fb99caf28b05842540cc7beab01b46b4880",
+    "full_positive_controls": 12,
+    "indexed_mutations": 1416,
+    "literal_core_fours": 990,
+    "literal_pair_fives": 18816,
+    "mutation_stream_sha256": "9be9d3e949ea60143b22d7ab1375d149c5130edec68d2873d34b1efc8dd24036",
+    "pair_palette_checks": 336,
+    "q10_child_inputs_inspected": 0,
+    "status": "PHYSICAL_MAXIMAL_RESIDUAL_CONTROLS_PASS",
+    "target_found": false
+  },
+  "python_modes": [
+    "normal",
+    "-O"
+  ],
+  "python_modes_agree": true,
+  "q10_child_inputs_inspected": 0
+}
