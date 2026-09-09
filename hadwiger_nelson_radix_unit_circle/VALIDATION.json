@@ -1,0 +1,67 @@
+{
+  "CAS_factorizations": 1272,
+  "CAS_irreducibility_labels_trusted": false,
+  "author_checked_only": true,
+  "certificate_bytes": 62007,
+  "certificate_sha256": "c76efb83fab51605eb7e59c7fa9114b3fbe1bc643500c8eb047f47f1d5bc8bb7",
+  "controls": {
+    "modular_gcd_controls": 2,
+    "physical_fixture": {
+      "chromatic_number": 3,
+      "exact_unit_event_remainders": 1272,
+      "irreducibility_prime": 31,
+      "irreducible_degree_over_Q_omega": 7,
+      "physical_vertices": 243,
+      "point_coordinates": "sum_{j=0}^4 a_j*z^j, a_j in {0,1,(1+i*sqrt(3))/2}",
+      "strict_unit_edges": 1221,
+      "t_isolating_interval": [
+        "-1/7",
+        "-1/8"
+      ],
+      "t_polynomial_low_first": [
+        5,
+        39,
+        -15,
+        -189,
+        -81,
+        261,
+        27,
+        81
+      ],
+      "z": "(1+i*sqrt(3)*t)/(1-i*sqrt(3)*t)"
+    },
+    "rejected_corruptions": 7,
+    "sturm_controls": 2,
+    "verified": true
+  },
+  "frontier_effect": {
+    "circle_curve_id": 342,
+    "global_not_chamber_representatives": true,
+    "h4135_exact_four_allowance_retained": 155648,
+    "h4135_exact_four_global_systems_retained": 2528,
+    "h4135_torus_mode_retained_only_for_higher_incidence": 4,
+    "h4135_torus_mode_systems_excluded_from_exact_four": 26,
+    "h4135_torus_mode_whole_circle_systems_removed": 22,
+    "higher_incidence_scope": "Parameters with at least five active curves can also occur on the exact-four-compatible systems; this is not a disjoint parameter partition",
+    "other_retained_systems_require_at_least_five_curves": 129260,
+    "record_improvement": false,
+    "remaining_global_pair_orbit_representatives": 131788,
+    "remaining_pair_representatives_sha256": "5081090409f632176d1f6d620f9eef50a048adc13d0c3c6e6ddfa1ab2b55cb84",
+    "remaining_parameter_orbit_allowance": 7780224,
+    "removed_bezout_allowance": 5200,
+    "removed_circle_pair_orbits": 342,
+    "scope": "Only whole systems explicitly containing the circle are removed by this count. The theorem also excludes circle roots of all retained systems. No count of those roots is claimed.",
+    "source_h4117_pair_orbits": 132130,
+    "verified": true
+  },
+  "late_intake": "HN3 h4135 consumed: 2528 no-circle exact-four-compatible systems remain. Entry-level check distinguished 22 explicit-circle systems from four noncircle systems compatible only with torus patterns; the latter remain for higher incidence.",
+  "new_solver_calls": 0,
+  "normal_and_optimized_and_regenerated_outputs_identical": true,
+  "preliminary_factorization_time_seconds": 257.11,
+  "producer_time_seconds_approximate": 240,
+  "proof_solver_calls": 0,
+  "record_improvement": false,
+  "status": "ALL_UNIT_CIRCLE_PHYSICAL_MEMBERS_EXACTLY_THREE_CHROMATIC",
+  "verifier_output_sha256": "04fdefad933fd0ccc8a8ee7bf745a2d6c4ba92aa73b0cd4b1b0eec1e2a2f6912",
+  "written_external_dependency": "h4119 monic degree<=4 paired-residue three-colouring theorem"
+}
