@@ -31,6 +31,6 @@ Only one small catalog record is included as a test fixture; there is no
 catalog sweep, candidate search, q10 solve, or catalog download.
 
 Packing exchanges are an established method; see, for example, the primary
-[Hurkens–Schrijver paper](https://epubs.siam.org/doi/10.1137/0402008).
+[Hurkens–Schrijver paper](https://ir.cwi.nl/pub/10065).
 No theorem from that paper is required here. The new evidence is the exact
 effect on this complete global43-vertex family and the checked interface.
