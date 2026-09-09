@@ -1,0 +1,45 @@
+{
+  "primary": [
+    {
+      "url": "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+      "scope": "Complete R(4,5,24); only selected edge-extreme R(4,5,n) subfamilies for n<=23",
+      "fetch": {
+        "url": "https://users.cecs.anu.edu.au/~bdm/data/ramsey.html",
+        "http": 200,
+        "retrieved_at": "2026-09-09T19:04:50.066001+00:00",
+        "bytes": 11581,
+        "sha256": "a7d8ac686583ee395f7104d6adf5aea6b994568ab2471c4728011159ad643bf3"
+      }
+    },
+    {
+      "url": "https://arxiv.org/html/2409.15709v2",
+      "title": "R(5,5)<=46, Angeltveit and McKay, version 2",
+      "locations": [
+        "Section 2: full smaller-order census impractical",
+        "Section 3.2: e>=119 census for order 23",
+        "Appendix A, Table 1: exact edge minima and extreme counts; statistical total at order 23"
+      ],
+      "fetch": {
+        "url": "https://arxiv.org/html/2409.15709v2",
+        "http": 200,
+        "retrieved_at": "2026-09-09T19:05:16.571807+00:00",
+        "bytes": 351617,
+        "sha256": "acba65f6bac97495571a53e35b9b0ed7884a3963b2e7961b9d1769db2dfca840"
+      }
+    }
+  ],
+  "inherited": [
+    {
+      "directory": "ramsey_r55_global_maximal_packing",
+      "role": "Complete maximal packing cover and residual interpretation",
+      "artifact_ref": "bafkreihujya7ormfvza6jvm2xnly7bnbt5nsv3j6ispwz4pu34pp24dchu",
+      "source_commit": "1884881efbf52a54bd3a30b1445c211da7caec27"
+    },
+    {
+      "directory": "ramsey_r55_maximal_block_order",
+      "role": "Original bo1 task labels and unchanged core indices"
+    }
+  ],
+  "imported_ramsey_bound": "R(3,5)=14; standard bound already used in the parent complete packing cover",
+  "trust": "Published exact counts and Ramsey bound are imported; no author census was rerun. The task implication is a direct induced-subgraph argument. Catalog completeness at order 23 and signature-image coverage are not assumed. No solver or code certifies a full-task exclusion."
+}
