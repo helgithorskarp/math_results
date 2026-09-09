@@ -1,0 +1,26 @@
+{
+  "created_utc": "2026-09-09T03:29:08.651287+00:00",
+  "lineage": "Ducz-Varga Snail geometric fractional chromatic pressure >4.0007",
+  "source": "https://arxiv.org/html/2606.28157v1",
+  "mechanism": "One greedy finite isometry cluster minimizing congruence-generator boundary per added physical vertex. No fixed dihedral orbit or two-generator box.",
+  "generator_set": "Inverse closure of union of existing exact 20 highest-overlap pair motions and 22 augmentation pair motions.",
+  "growth_rule": "Start identity. Frontier consists of right-generator extensions. Rank by newly closed directed generator transitions divided by number of new residue points, then transition count, overlap, lexicographic modular motion. Ignore clouds adding zero points. In score order choose first exact physical union of order <=508.",
+  "caps": {
+    "physical_vertices": 508,
+    "copies": 64,
+    "solver_conflicts": 1000000,
+    "solver_seconds": 180
+  },
+  "gate": "Generate one cluster to cap or saturated admissible frontier; query its unconstrained physical 4-colouring. A modular-supergraph SAT witness may certify a negative pilot, but modular UNSAT is not physical evidence and must be followed by exact edge generation and certified physical refutation.",
+  "queries": "One final chromatic query unless modular UNSAT requires the exact physical query. No seed pinning except optional colour-name symmetry; no congruence-colour constraints treated as edges.",
+  "terminal_rule": "On verified SAT or no admissible positive pilot, preserve terminal checkpoint and flag human-level HN role/problem review. No restart, altered weights, generator ladder, second mechanism, or source switch.",
+  "retired_preserved": [
+    "fixed H516 and one-point families",
+    "h3993 edge repairs",
+    "H+uH hexagons",
+    "fixed Snail D9 and mixed boxes",
+    "fish difference set",
+    "trace window",
+    "Kiteck frozen-colour gluing"
+  ]
+}
