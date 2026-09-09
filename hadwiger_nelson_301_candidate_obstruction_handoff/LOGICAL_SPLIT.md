@@ -90,3 +90,18 @@ strict replay receipt are public. The twelve chromatic lower bounds are
 author-verified, but public replay of them requires the byte-identical omitted
 archive; the six colourings and all twelve geometric obstructions are fully
 contained in the compact public evidence.
+
+## Independent acceptance of the terminal classification, h4023
+
+H4023 independently checks the exact 18-case support split, all six proper
+four-colourings, all twelve all-map geometric certificates, a fresh-prime rank
+calculation, and the combined selector-CNF semantics. Its public checker is a
+separate implementation and agrees in normal and optimized Python. The
+reviewer also replayed the byte-identical omitted LRAT locally with a separate
+Python RUP checker, accepting the twelve exact chromatic lower bounds.
+
+The bounded-family exclusion has a useful logical robustness: it needs no
+LRAT. Six cases are eliminated by explicit four-colourings, and the remaining
+twelve are eliminated by their geometric impossibility certificates. The LRAT
+is required only to call those twelve abstract graphs exactly five-chromatic.
+This does not extend the classification beyond the 18 norm-support edges.

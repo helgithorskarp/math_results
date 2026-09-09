@@ -13,7 +13,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 DEFAULT_REPOSITORY = HERE.parent
-EVIDENCE_SHA256 = "b578f0e478b9c672e519da2f7d6b425d072044fba8430d5efb02af6be1122223"
+EVIDENCE_SHA256 = "59673c07262d183d59dc77b7b9bb31601bd5f26af952927309024023453f1a62"
 INPUT_SHA256 = {
     "hadwiger_nelson_h516_k23free_edge_repair/certificate.json": "a1cb7ecc7f33c16d4230b027f7809d57f8d5a07491538b5aa94f13b4d00e1808",
     "hadwiger_nelson_h516_k23free_edge_repair/expected.json": "62c12c8528e8a4cca30f59f42269ec0622515a50830bd1a53d6e40cd2d397655",
@@ -39,6 +39,9 @@ INPUT_SHA256 = {
     "hadwiger_nelson_301_forbidden_subgraph_interface/repair_clause.cnf": "2e525fb48c247195fb20e6f4c323da5e0b87611c9f0ea25974485e94dbd3dfe3",
     "hadwiger_nelson_301_forbidden_subgraph_interface/verify.py": "7c695f564e879f31f4bdf70eada21b9a213dbdce04841c2ccb4ec4a0b4dff9e6",
     "hadwiger_nelson_301_norm_edge_repairs/SHA256SUMS": "304cdef735572042d6aa8db8eca566a034d2901e684c557363f586c68509c0db",
+    "hadwiger_nelson_301_norm_edge_repairs_review1/EXPECTED.json": "32c298cbdb9a1e2dec1fc11656b2a814ab11da63b894a41b41e9ef00aa451dc9",
+    "hadwiger_nelson_301_norm_edge_repairs_review1/README.md": "a6d4157d5faa5f8a076049261fb9d632b7f0ffb99675ca011e51cd0caf36d0ea",
+    "hadwiger_nelson_301_norm_edge_repairs_review1/independent_check.py": "8d91fe96c012835e935fe8818e8683d4e9383c1109c6cb8e10216d747665f2f1",
 }
 
 
@@ -128,6 +131,7 @@ def audit_metadata(
     reviews = evidence["independent_acceptances"]
     downstream = evidence["downstream_interface"]
     terminal = evidence["terminal_repair_classification"]
+    terminal_review = evidence["terminal_repair_acceptance"]
     conclusion = evidence["combined_conclusion"]
     need(evidence["status"] == "FIXED_301_CANDIDATE_AND_DIRECT_NORM_SUPPORT_REPAIRS_CLOSED", "status")
     need(evidence["record_improvement"] is False, "record status")
@@ -153,6 +157,16 @@ def audit_metadata(
     need(terminal["exactly_five_nonrealizable_repairs"] == 12, "terminal five/nonrealizable count")
     need(terminal["geometric_certificates"] == 12, "terminal geometric certificate count")
     need(terminal["LRAT_archive_published"] is False, "terminal LRAT publication boundary")
+    need(terminal["independently_reviewed"] is True, "terminal review status")
+    need(terminal["review_contribution"] == terminal_review["contribution"], "terminal review link")
+    need(terminal_review["kind"] == "review" and terminal_review["verdict"] == "ACCEPT", "terminal review verdict")
+    need(terminal_review["reviewed_contribution"] == terminal["contribution"], "terminal reviewed contribution")
+    need(terminal_review["reviewed_source_commit"] == terminal["commit"], "terminal reviewed source")
+    need(terminal_review["checker_status"] == "INDEPENDENT_H4007_ACCEPT", "terminal review checker status")
+    need(terminal_review["fresh_rank_prime"] == 998244353, "terminal review rank prime")
+    need(terminal_review["public_LRAT_checked"] is False, "terminal public LRAT scope")
+    need(terminal_review["local_exact_LRAT_replayed"] is True, "terminal local LRAT review")
+    need(terminal_review["family_closure_requires_LRAT"] is False, "terminal closure LRAT independence")
 
     candidate_dir = repository / candidate["directory"]
     candidate_certificate = load_json(candidate_dir / "certificate.json")
@@ -241,6 +255,21 @@ def audit_metadata(
     need(omitted_lrat["publication_status"] == "retained locally and excluded from Git pending explicit human approval", "terminal LRAT status")
     need("five_chromatic_repairs.lrat.xz" in (terminal_dir / ".gitignore").read_text().splitlines(), "terminal LRAT ignore rule")
 
+    terminal_review_dir = repository / terminal_review["directory"]
+    terminal_review_expected = load_json(terminal_review_dir / "EXPECTED.json")
+    need(terminal_review_expected["status"] == terminal_review["checker_status"], "terminal review expected status")
+    need(terminal_review_expected["norm_support_cases"] == terminal["norm_support_repairs"], "terminal review case count")
+    need(terminal_review_expected["four_colourable_cases"] == terminal["four_colourable_repairs"], "terminal review four-colourable count")
+    need(terminal_review_expected["five_chromatic_nonrealizable_cases_after_lrat"] == terminal["exactly_five_nonrealizable_repairs"], "terminal review exact count")
+    need(terminal_review_expected["geometric_certificates"] == terminal["geometric_certificates"], "terminal review geometric count")
+    need(terminal_review_expected["cnf_variables"] == terminal["combined_CNF_variables"], "terminal review CNF variables")
+    need(terminal_review_expected["cnf_clauses"] == terminal["combined_CNF_clauses"], "terminal review CNF clauses")
+    need(terminal_review_expected["cnf_sha256"] == terminal["combined_CNF_sha256"], "terminal review CNF identity")
+    need(terminal_review_expected["lrat_raw_size_bytes"] == terminal["raw_LRAT_size_bytes"], "terminal review raw LRAT size")
+    need(terminal_review_expected["lrat_raw_sha256"] == terminal["raw_LRAT_sha256"], "terminal review raw LRAT identity")
+    for key, expected_key in (("additions", "lrat_additions"), ("deletions", "lrat_deletions"), ("hints_used", "lrat_hints_used"), ("proof_lines", "lrat_proof_lines")):
+        need(terminal_review_expected[expected_key] == terminal["strict_LRAT"][key], f"terminal review LRAT {key}")
+
     return {
         "candidate_certificate": candidate_certificate,
         "candidate_expected": candidate_expected,
@@ -249,6 +278,7 @@ def audit_metadata(
         "review2_expected": review2_expected,
         "interface_expected": interface_expected,
         "terminal_expected": terminal_expected,
+        "terminal_review_expected": terminal_review_expected,
     }
 
 
@@ -259,6 +289,7 @@ def replay(repository: Path, work: Path, compiler: str, metadata: dict) -> dict:
     review2_dir = repository / "hadwiger_nelson_301_repair_plane_obstruction_review2"
     interface_dir = repository / "hadwiger_nelson_301_forbidden_subgraph_interface"
     terminal_dir = repository / "hadwiger_nelson_301_norm_edge_repairs"
+    terminal_review_dir = repository / "hadwiger_nelson_301_norm_edge_repairs_review1"
 
     candidate_output = run(
         [sys.executable, "-B", str(candidate_dir / "verify.py"), "--work", str(work / "candidate")],
@@ -322,6 +353,27 @@ def replay(repository: Path, work: Path, compiler: str, metadata: dict) -> dict:
     need(terminal_normal["rejected_controls"] == ["bad_four_colouring", "bad_edge_index", "bad_norm_identity"], "terminal replay controls")
     need(type(terminal_normal["local_lrat_archive_checked"]) is bool, "terminal LRAT presence receipt")
 
+    terminal_review_arguments = [str(terminal_review_dir / "independent_check.py"), "--controls"]
+    terminal_review_normal = json.loads(run([sys.executable, "-B", *terminal_review_arguments], repository))
+    terminal_review_optimized = json.loads(run([sys.executable, "-B", "-O", *terminal_review_arguments], repository))
+    need(terminal_review_normal == terminal_review_optimized, "terminal review normal/optimized receipts")
+    terminal_review_expected = metadata["terminal_review_expected"]
+    need(terminal_review_normal["status"] == terminal_review_expected["status"], "terminal review verdict")
+    need(terminal_review_normal["source_vertices"] == 301 and terminal_review_normal["source_edges"] == 1452, "terminal review source dimensions")
+    need(terminal_review_normal["repair_clause_edges"] == 690, "terminal review repair clause")
+    need(terminal_review_normal["norm_support_cases"] == terminal_review_expected["norm_support_cases"], "terminal review support")
+    need(terminal_review_normal["four_colourable_cases"] == terminal_review_expected["four_colourable_cases"], "terminal review colourable cases")
+    need(terminal_review_normal["five_chromatic_nonrealizable_cases"] == terminal_review_expected["five_chromatic_nonrealizable_cases_after_lrat"], "terminal review nonrealizable cases")
+    need(terminal_review_normal["geometry"]["certificates"] == terminal_review_expected["geometric_certificates"], "terminal review certificate count")
+    need(terminal_review_normal["geometry"]["cycles"] == terminal_review_expected["geometric_cycles"], "terminal review cycle count")
+    need(terminal_review_normal["geometry"]["diagonal_witnesses"] == terminal_review_expected["diagonal_witnesses"], "terminal review diagonal count")
+    need(terminal_review_normal["geometry"]["rank_range"] == terminal_review_expected["rank_range"], "terminal review rank range")
+    need(terminal_review_normal["geometry"]["fresh_rank_prime"] == terminal_review_expected["fresh_rank_prime"], "terminal review rank prime")
+    need(terminal_review_normal["cnf"] == {"variables": terminal_review_expected["cnf_variables"], "clauses": terminal_review_expected["cnf_clauses"], "sha256": terminal_review_expected["cnf_sha256"]}, "terminal review CNF")
+    need(terminal_review_normal["lrat"] == {"checked": False, "required_for_exact_chromatic_subclaim": True}, "terminal review public LRAT scope")
+    need(terminal_review_normal["family_closure_does_not_require_lrat"] is True, "terminal review closure scope")
+    need(terminal_review_normal["rejected_controls"] == ["missing_family_case", "changed_norm_identity"], "terminal review controls")
+
     return {
         "candidate_audit": True,
         "strict_LRAT": True,
@@ -330,6 +382,7 @@ def replay(repository: Path, work: Path, compiler: str, metadata: dict) -> dict:
         "review2_reproduced": True,
         "downstream_interface_checked": True,
         "terminal_repair_compact_normal_optimized_equal": True,
+        "terminal_repair_independent_review_public_normal_optimized_equal": True,
         "lrat_additions": lrat_receipt["additions"],
         "lrat_hints": lrat_receipt["hints_used"],
     }
@@ -363,6 +416,15 @@ def controls(evidence: dict, repository: Path) -> int:
     mutations.append(changed)
     changed = copy.deepcopy(evidence)
     changed["terminal_repair_classification"]["LRAT_archive_published"] = True
+    mutations.append(changed)
+    changed = copy.deepcopy(evidence)
+    changed["terminal_repair_acceptance"]["verdict"] = "REJECT"
+    mutations.append(changed)
+    changed = copy.deepcopy(evidence)
+    changed["terminal_repair_acceptance"]["reviewed_contribution"] = "wrong"
+    mutations.append(changed)
+    changed = copy.deepcopy(evidence)
+    changed["terminal_repair_acceptance"]["family_closure_requires_LRAT"] = True
     mutations.append(changed)
     rejected = 0
     for changed in mutations:
@@ -431,6 +493,7 @@ def main() -> None:
             "geometric_certificates": evidence["terminal_repair_classification"]["geometric_certificates"],
             "family_survivor": False,
             "large_LRAT_archive_published": False,
+            "independent_acceptance": evidence["terminal_repair_acceptance"]["contribution"],
         },
         "replay": {key: value for key, value in replay_report.items() if key not in {"lrat_additions", "lrat_hints"}},
         "record_improvement": False,
