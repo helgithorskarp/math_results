@@ -1,0 +1,112 @@
+{
+  "author_internal_validation_only": true,
+  "checker_seconds": 0.7847806699865032,
+  "colour_corruptions_rejected": 12,
+  "coordinate_domain": "Q[s,t], s^2=-3, t^2=-Delta, embedding s=i sqrt(3),t=i sqrt(Delta); exact integer coordinate verifier",
+  "discovery_SAT_calls": 12,
+  "discovery_SAT_scope": "Private four-case pilot executed three times by diagnostic imports; all 12 SAT. Public producer then used two formula words and two SAT words. No negative SAT claim used.",
+  "external_reviewer_1_acceptance_claimed": false,
+  "final_proof_CAS_calls": 0,
+  "final_proof_solver_calls": 0,
+  "formalized": false,
+  "geometry_independence": "Producer: rational field multiplication on 58653 labelled pairs per case before quotienting. Checker: integer norm coefficients on all distinct physical point pairs after quotienting. Full point and edge hashes agree.",
+  "h4071_coordinate_bridge": {
+    "CAS_calls": 0,
+    "cases": [
+      {
+        "exact_rotation_identities": 2,
+        "norms": [
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "exact_rotation_identities": 2,
+        "norms": [
+          1,
+          4,
+          4
+        ]
+      },
+      {
+        "exact_rotation_identities": 2,
+        "norms": [
+          3,
+          3,
+          4
+        ]
+      },
+      {
+        "exact_rotation_identities": 2,
+        "norms": [
+          3,
+          4,
+          4
+        ]
+      }
+    ],
+    "remaining_factor_pair_representatives": 800,
+    "remaining_physical_classes_using_h4071": 5110,
+    "solver_calls": 0,
+    "source_certificate_sha256": "14e2a5e3fc00af36d4ef57b6a8fdd964450633b0ab76f0f2783094172ec69132",
+    "status": "H4071_REPRESENTATIVES_MATCH_PHYSICAL_COLOUR_CERTIFICATES"
+  },
+  "independent_geometry_comparison": {
+    "SAT_calls": 0,
+    "independent_geometry": [
+      {
+        "edge_entries": 1662,
+        "entry_level_hashes_match": true,
+        "norms": [
+          1,
+          3,
+          3
+        ],
+        "point_entries": 301
+      },
+      {
+        "edge_entries": 1797,
+        "entry_level_hashes_match": true,
+        "norms": [
+          1,
+          4,
+          4
+        ],
+        "point_entries": 331
+      },
+      {
+        "edge_entries": 1770,
+        "entry_level_hashes_match": true,
+        "norms": [
+          3,
+          3,
+          4
+        ],
+        "point_entries": 331
+      },
+      {
+        "edge_entries": 1785,
+        "entry_level_hashes_match": true,
+        "norms": [
+          3,
+          4,
+          4
+        ],
+        "point_entries": 337
+      }
+    ],
+    "seconds": 8.989980618003756
+  },
+  "normal_and_optimized_identical": true,
+  "optional_producer_python_sat": "1.9.dev15",
+  "optional_producer_solver": "Glucose42",
+  "physical_pairs_checked": 210996,
+  "producer": {
+    "SAT_calls": 2,
+    "certificate_bytes": 1448,
+    "certificate_sha256": "72ac8d453f2ee0298951ce70dfaa831f5b8a8cb28a8944397443f8f94c021e79",
+    "seconds": 9.107807585009141
+  },
+  "python": "3.11.2"
+}

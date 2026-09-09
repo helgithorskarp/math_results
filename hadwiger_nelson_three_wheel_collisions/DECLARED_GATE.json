@@ -1,0 +1,23 @@
+{
+  "time_utc": "2026-09-09T08:58:52.515308+00:00",
+  "architecture": "S(u,v)=W+uW+vW; W={0}+sixth roots; <=343 physical points",
+  "gate": "Decide the entire noninjective physical branch: exact non-four-colourability certificate for a physical <=343 graph, or checked four-colourings of all unaligned collision classes plus a complete geometric reduction. No second architecture or general intersection root phase this pass.",
+  "reduction_to_be_checked": "All-three-nonzero collision displacement norms lie in {1,3,4}; summand permutation, independent sixth-root reparametrization and conjugation reduce to ten norm triples. Six are pair-aligned and accepted h4005/h4031 applies. Four unaligned norm triples (1,3,3),(1,4,4),(3,3,4),(3,4,4) require exact physical construction and chromatic decision.",
+  "primary_approach": "math-approach-computer-assisted",
+  "tools": [
+    "math-tool-research-code",
+    "math-tool-solvers, witness discovery only unless UNSAT"
+  ],
+  "team_interface": "HN2 owns direct physical reconstruction and chromatic certificates for collision branch. General factor intersection real-root viability remains HN3; direct low-degree circle formula needs no general root isolation.",
+  "dependencies": [
+    "h4065",
+    "h4005",
+    "h4031"
+  ],
+  "intake": {
+    "graph_height": 4070,
+    "new_HN": [],
+    "new_relevant_teammate_reports": [],
+    "origin_main": "ee70e31e6e61ae1388a0f63e1eb7cfefcaa3444c"
+  }
+}
