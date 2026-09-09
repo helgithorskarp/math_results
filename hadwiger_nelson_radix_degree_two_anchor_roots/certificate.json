@@ -1,0 +1,139 @@
+{
+  "circle_parameterization": {
+    "center": "c=-a0/a1",
+    "coordinates": "z=x+i*sqrt(3)y",
+    "omitted_point": "(c_x-1,c_y), tested separately",
+    "x": "c_x+(1-3*t^2)/(1+3*t^2)",
+    "y": "c_y+2*t/(1+3*t^2)"
+  },
+  "closed_loci": {
+    "center_markers": [
+      {
+        "base_point_closed": true,
+        "base_point_collision": false,
+        "base_point_on_axis": true,
+        "base_point_on_radial_circle": false,
+        "center_eisenstein": [-1, 0],
+        "closed_marker": [0, 1, 0, 30, 0, 459, 0, -108, 0, -60345, 0, -71442, 0, 295245],
+        "closed_marker_degree": 13,
+        "collision_marker": [1, 0, 27, 0, 378, 0, -1242, 0, -56619, 0, 98415],
+        "collision_marker_degree": 10
+      },
+      {
+        "base_point_closed": false,
+        "base_point_collision": false,
+        "base_point_on_axis": false,
+        "base_point_on_radial_circle": false,
+        "center_eisenstein": [-1, 1],
+        "closed_marker": [0, 1, 10, 42, 32, -481, -2598, -7284, -13104, -15633, -8802, 7722, 22032, 15633, 2430],
+        "closed_marker_degree": 14,
+        "collision_marker": [0, -1, -8, -26, 26, 468, 1746, 3402, 3726, 1917, 270],
+        "collision_marker_degree": 10
+      },
+      {
+        "base_point_closed": false,
+        "base_point_collision": false,
+        "base_point_on_axis": false,
+        "base_point_on_radial_circle": false,
+        "center_eisenstein": [0, -1],
+        "closed_marker": [0, -1, 10, -42, 32, 481, -2598, 7284, -13104, 15633, -8802, -7722, 22032, -15633, 2430],
+        "closed_marker_degree": 14,
+        "collision_marker": [0, 1, -8, 26, 26, -468, 1746, -3402, 3726, -1917, 270],
+        "collision_marker_degree": 10
+      },
+      {
+        "base_point_closed": true,
+        "base_point_collision": true,
+        "base_point_on_axis": true,
+        "base_point_on_radial_circle": true,
+        "center_eisenstein": [0, 1],
+        "closed_marker": [10, 193, 816, 858, -2934, -15633, -39312, -65556, -70146, -38961, 7776, 30618, 21870, 6561],
+        "closed_marker_degree": 13,
+        "collision_marker": [-10, -213, -1242, -3402, -5238, -4212, -702, 2106, 1944, 729],
+        "collision_marker_degree": 9
+      },
+      {
+        "base_point_closed": true,
+        "base_point_collision": true,
+        "base_point_on_axis": true,
+        "base_point_on_radial_circle": true,
+        "center_eisenstein": [1, -1],
+        "closed_marker": [-10, 193, -816, 858, 2934, -15633, 39312, -65556, 70146, -38961, -7776, 30618, -21870, 6561],
+        "closed_marker_degree": 13,
+        "collision_marker": [10, -213, 1242, -3402, 5238, -4212, 702, 2106, -1944, 729],
+        "collision_marker_degree": 9
+      },
+      {
+        "base_point_closed": true,
+        "base_point_collision": false,
+        "base_point_on_axis": true,
+        "base_point_on_radial_circle": false,
+        "center_eisenstein": [1, 0],
+        "closed_marker": [0, 45, 0, -98, 0, -745, 0, -12, 0, 459, 0, 270, 0, 81],
+        "closed_marker_degree": 13,
+        "collision_marker": [45, 0, -233, 0, -46, 0, 126, 0, 81, 0, 27],
+        "collision_marker_degree": 10
+      }
+    ],
+    "collision_rows": 2400,
+    "radial_unit_circle": "x^2+3*y^2=1",
+    "reflection_axes": ["y=0", "y=x", "y=-x"]
+  },
+  "explicit_interface": {
+    "bytes": 232908,
+    "canonical_json_sha256": "8a20abdaeee5b06d4c2851945ae03cae8b56879afca5f7af59be675a88475c64",
+    "entries": 400,
+    "entry_sha256": "ba7b1e17d6d95584a472465e7be136a9967f76c411595a2f3eca87ab8c558654",
+    "file_sha256": "94cee1fd30d8273b2631f74afcbb0d746b3fd2c9b9a3fa85b476a604648f4c1c"
+  },
+  "frontier_effect": {
+    "at_least_six_nonfour_orbit_allowance": 83380,
+    "at_least_six_pair_systems": 2932,
+    "previous_exact_five_nonfour_orbit_allowance": 3763324,
+    "previous_exact_five_pair_systems": 128424,
+    "previous_global_nonfour_orbit_allowance": 3846704,
+    "previous_global_pair_systems": 131356,
+    "remaining_exact_five_nonfour_orbit_allowance": 3760994,
+    "remaining_exact_five_pair_systems": 128380,
+    "remaining_global_nonfour_orbit_allowance": 3844374,
+    "remaining_global_pair_systems": 131312,
+    "whole_pair_systems_removed": 44
+  },
+  "physical_chromatic_search_performed": false,
+  "record_improvement": false,
+  "schema": "hn-radix-degree-two-anchor-roots-v1",
+  "sources": {
+    "curve_inventory_sha256": "85c286422c01bcb6ebb244186032bc607984471bc2b705ef7247084dd7c33db9",
+    "five_active_orbit_certificate_sha256": "9ce28be5f8a71a19fc84ec447ae43e2d55361cc0e4c0a419771c9f700f9b0fbd",
+    "h4177_interface_sha256": "1db1ecc86c993bbe22a83127b85c6d9467d385bdb7dba085193ad47308e1676a",
+    "h4181_frontier_effect_sha256": "36335d3bf6bbfae797b7d386e759119baf65a2291065410a777573f78ee1c0a0"
+  },
+  "summary": {
+    "distinct_physical_pair_intersections": 890,
+    "orbit_allowance_reduction": 2330,
+    "pair_stabilizer_histogram": {"1": 344, "2": 56},
+    "pair_systems_with_no_eligible_point": 44,
+    "points_on_accepted_closed_loci": 272,
+    "previous_nonfour_orbit_allowance": 2904,
+    "previous_product_surface_allowance": 3120,
+    "remaining_eligible_points": 618,
+    "remaining_eligible_stabilizer_orbits": 574,
+    "root_closed_eligible_stabilizer_histogram": {
+      "(2, 0, 2, 1)": 152,
+      "(2, 0, 2, 2)": 38,
+      "(2, 1, 1, 1)": 114,
+      "(2, 2, 0, 1)": 28,
+      "(2, 2, 0, 2)": 14,
+      "(3, 1, 2, 1)": 16,
+      "(3, 2, 1, 1)": 4,
+      "(3, 3, 0, 1)": 2,
+      "(4, 0, 4, 1)": 6,
+      "(4, 1, 3, 1)": 8,
+      "(4, 2, 2, 1)": 14,
+      "(4, 2, 2, 2)": 2,
+      "(6, 2, 4, 2)": 2
+    },
+    "selected_pair_systems": 400,
+    "zero_pair_sha256": "e206e7936781ef3a035bc1a68052ab0140655c59b991ba9c8761943a18dd6a67"
+  }
+}
