@@ -1,0 +1,61 @@
+{
+  "author_checked_only": true,
+  "certificate": {
+    "bytes": 2687,
+    "regenerated_byte_identical": true,
+    "sha256": "aa8bb1f495edf2691cda637c14e5bd40873aef0558492e1bf69622184fb9df93"
+  },
+  "controls": {
+    "D3_relation_checks": 6,
+    "collision_coefficient_action_checks": 4800,
+    "curve_polynomial_substitution_checks": 5594,
+    "digit_triangle_isometry_checks": 6,
+    "positive_certificate_replay": true,
+    "rejected_corruptions": [
+      "wrong curve rotation permutation hash",
+      "wrong pair representative hash",
+      "missing pair orbit",
+      "wrong collision orbit degree bound",
+      "incomplete fundamental chamber"
+    ],
+    "status": "CONTROLS_PASSED"
+  },
+  "exact_result": {
+    "active_curve_orbits": 529,
+    "all_exceptional_parameter_orbits_upper_bound": 7787106,
+    "collision_parameter_orbit_degree_bound": 1682,
+    "collision_polynomial_orbits": 442,
+    "full_D3_pair_closure_systems": 785380,
+    "injective_parameter_orbit_bezout_bound": 7785424,
+    "pair_system_orbits": 132130,
+    "source_pair_systems": 264800
+  },
+  "external_reviewer_acceptance_claimed": false,
+  "generated_explicit_quotient": {
+    "bytes": 1334366,
+    "committed": false,
+    "local_ignored_path": "generated_quotient.json",
+    "policy": "Generated large interface remains local and unstaged; source plus compact certificate reproduces it.",
+    "sha256": "90e6235fcd71a8998fe6c4229882f383fe9d18c7c3dd6c66cca9098fa5057998"
+  },
+  "implementation_independence": {
+    "producer_curve_action": "canonical displacement coefficient words over Z[omega]",
+    "verifier_curve_action": "direct exact rational substitution into every primitive integer event polynomial",
+    "agreement_checks": 5594
+  },
+  "proof_CAS_calls": 0,
+  "proof_solver_calls": 0,
+  "python": "3.11.2",
+  "record_improvement": false,
+  "source": {
+    "artifactRef": "bafkreigomighnz4n5wenu4smqghcvusog6d67lsay7x4fq7fkpcvur2np4",
+    "certificate_sha256": "a252f1b2cf1044789661b1d9eeeeed31a541397fc300e6cd479b47c96cae3951",
+    "commit": "95687bd35321aa6fb767fc508eac6ab186ba6d2e"
+  },
+  "status": "VALIDATED",
+  "timings_seconds": {
+    "controls_wall": 13.663,
+    "producer_observed_wall": 10.4,
+    "verifier_wall": 13.775
+  }
+}
