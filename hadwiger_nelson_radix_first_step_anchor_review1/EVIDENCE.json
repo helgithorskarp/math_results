@@ -1,0 +1,144 @@
+{
+  "schema": "hn-radix-first-step-anchor-review-evidence-v1",
+  "verdict": {
+    "conditional_pair_orbit_accounting": "accept conditional on h4177, h4175, and h4117",
+    "confidence": "high",
+    "five_pencil_reduction": "accept relative to reviewed h4167 and h4171",
+    "six_circle_chromatic_theorem": "accept"
+  },
+  "target": {
+    "artifact_ref": "bafkreih7dzrfyq3uhwyiw6jkqhu7uzj2wtmre6sdax34rl34iw2syi73ty",
+    "height": 4185,
+    "source_commit": "c67e7e5053e320672bb9aa745c400e5d4e5402af",
+    "title": "All first-step A5 anchor loci are exactly three-chromatic; 424 global pairs excluded"
+  },
+  "submitted_replay": {
+    "certificate": {
+      "bytes": 163330,
+      "fresh_generation_byte_identical": true,
+      "generator_wall_seconds": 11.7,
+      "sha256": "15235c8e304f762422162f3cb7422e74b683b2f8e997e11037cc43f567cf9976"
+    },
+    "controls_passed": 6,
+    "frontier_wall_seconds": 44.3,
+    "optimized_verifier_wall_seconds": 67.2,
+    "ordinary_verifier_wall_seconds": 59.7,
+    "physical_fixture": {
+      "bytes": 8652,
+      "fresh_generation_byte_identical": true,
+      "sha256": "845d08282f55e27461b413fa6d0a21b8610ccba8b1806e985b1005af7fdbf8d7",
+      "verifier_wall_seconds": 9.8
+    }
+  },
+  "independent_checker": {
+    "algorithm": "reviewer Q(sqrt(-3))[x,y] curve inventory; direct row rational-function restriction; fresh rational Sturm chains and modular Euclidean gcd; all actual label edges; independent quadratic-field fixtures; direct affine-pencil/frontier reconstruction",
+    "imports_target_code": false,
+    "optimized_full_wall_seconds": 145.8,
+    "ordinary_full_wall_seconds": 150.0,
+    "python": "3.11.2",
+    "source_sha256": "d0aab607fcd2ba6360dcdd5a7447fa916f0d9b0dce7aa2470a7133e5c9f3e283",
+    "uses_previous_reviewer_curve_source": {
+      "path": "hadwiger_nelson_radix_two_coordinate_pencils_review1/independent_check.py",
+      "sha256": "5a3804b9e39e55686fd2ffa377f7bc60323b46c33c45f88f16076fe529a3de23"
+    }
+  },
+  "independent_results": {
+    "all_six_anchor_loci_chromatic_number": 3,
+    "blocks_closed_by_accepted_collision_theorem": 5,
+    "blocks_with_real_roots": 1907,
+    "colour_word_blocks_per_representative": [
+      1902,
+      1902
+    ],
+    "coprimality": {
+      "pair_trace_sha256": "7fdea25f5ea1030f4b1f35a8df2807e4abee3ef717e567967e9d59202a03e47b",
+      "prime": 1000003,
+      "real_block_pair_checks": 1817371,
+      "squarefree_blocks": 2536
+    },
+    "distinct_finite_real_event_parameters_per_representative": 2865,
+    "endpoint_graphs": [
+      {
+        "unit_edges": 363,
+        "vertices": 243,
+        "z": 2
+      },
+      {
+        "unit_edges": 363,
+        "vertices": 243,
+        "z": -2
+      }
+    ],
+    "event_curves": 2797,
+    "nonreal_blocks": 629,
+    "physical_fixture_pair_checks": 58806,
+    "physical_fixtures": [
+      {
+        "active_curves": 8,
+        "chromatic_number": 3,
+        "edges": 603,
+        "sign": 1,
+        "vertices": 243
+      },
+      {
+        "active_curves": 8,
+        "chromatic_number": 3,
+        "edges": 603,
+        "sign": -1,
+        "vertices": 243
+      }
+    ],
+    "primitive_blocks": 2536,
+    "representative_anchor_curves": [
+      2209,
+      2208
+    ],
+    "restriction_inventory_sha256": "1fed3b8b15e84549d4a549bc665cbdafd6f9566041c7e4094ef058630370134f",
+    "unique_nonzero_restricted_polynomials": 2760
+  },
+  "frontier_effect": {
+    "accepted_relative_to_reviewed_h4167_h4171": {
+      "new_closed_h4171_survivors": 3354048,
+      "new_closed_pencils": 216,
+      "new_closed_raw_lifts": 3760128,
+      "previously_closed_two_coordinate_pencils": 27,
+      "remaining_pencils": 5112,
+      "remaining_quintets": 128871936
+    },
+    "conditional_on_h4177_h4175_h4117": {
+      "anchor_curves": [
+        591,
+        592,
+        1277,
+        1278,
+        2208,
+        2209
+      ],
+      "moved_allowance": 146256,
+      "moved_to_at_least_six": 4784,
+      "remaining_at_least_six_allowance": 229528,
+      "remaining_at_least_six_pairs": 7692,
+      "remaining_exact_five_allowance": 3614164,
+      "remaining_exact_five_pairs": 123240,
+      "remaining_global_allowance": 3843692,
+      "remaining_global_pairs": 130932,
+      "removed_at_least_six_pairs": 24,
+      "removed_exact_five_pairs": 400,
+      "removed_orbit_allowance": 3012,
+      "removed_whole_pairs": 424
+    }
+  },
+  "scope": {
+    "accepted": "Every A5 member on any first-step anchor circle is exactly three-chromatic; the six anchor curves are globally excluded for possible non-four members; 216 additional h4171 pencils and 3354048 accepted survivor lifts close relative to reviewed h4167/h4171.",
+    "conditional": "The 424 global-pair deletions, 4784 mode moves, and all pair-orbit totals are exact transformations of h4177 conditional on h4177, h4175 free action, and h4117 quotient completeness.",
+    "not_established": "No closure of the remaining 5112 exact-five pencils or higher-incidence frontier, no physical non-four graph, and no sub-509 record.",
+    "trust_boundaries": [
+      "CPython exact integer and Fraction arithmetic",
+      "published compact certificate and inspected exhaustive-loop coverage",
+      "previous reviewer curve reconstruction",
+      "accepted h4119 only for five explicit collision parameters",
+      "reviewed h4167/h4171 for the finite pencil reduction",
+      "h4177/h4175/h4117 for conditional global pair-orbit accounting"
+    ]
+  }
+}
