@@ -1,0 +1,14 @@
+{
+  "declared_at_utc": "2026-09-09T08:52:13Z",
+  "mechanism": "global_Seidel_cut_switching",
+  "input": {
+    "description": "all 238 pinned Cyclic(43) objective-12 rotation representatives",
+    "path": "ramsey_r55_cyclic43_q13_boundary_certificate/objective-twelve-component-fast.json",
+    "sha256": "4803b2e40dba06c0f82c3d23cbd5ae0a9127da0db24e5655971fff179fb68ec3"
+  },
+  "normalization": "fix switch bit s_0=0; switching a rotated source is the rotation of a switch of its representative",
+  "pass_condition": "For every one of the 238 normalized switching formulas, either produce a satisfying assignment whose decoded 43-vertex coloring independently verifies as good43, or produce a complete independently checkable UNSAT certificate.",
+  "failure_condition": "Any UNKNOWN, missing source, unchecked certificate, incomplete formula, or failed physical decoding fails the milestone.",
+  "scope": "One complete source-indexed union of global switching classes; no claim that the 238 classes are pairwise disjoint is needed for exclusion.",
+  "stop_rule": "Publish and yield after the complete 238-source decision; do not begin another construction family in this pass."
+}
