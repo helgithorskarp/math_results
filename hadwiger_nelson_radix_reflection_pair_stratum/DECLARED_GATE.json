@@ -1,0 +1,62 @@
+{
+  "HN3_interface": "Selected global pair rows and their unique normalization to conjugation-fixed curve pairs, with exact trace/radius ideals and any physical survivor fields; HN3 complementary parameter/symmetry/viability checking only, HN2 physical/chromatic ownership.",
+  "architecture": "A5(z)",
+  "boundary": "No second stratum, support-profile ladder, active-count ladder, or reopening of reflection-axis/first-anchor/collision/radial-circle/lower-active searches.",
+  "consumed_new_hn3": {
+    "artifact_ref": "bafkreievzoveiuvwoitd7bjblpxowv7srq7yu4t6rxczztwt3uetdyakri",
+    "consequence": "No live residual among 400 first-anchor pairs; exact reconciliation with h4185, no changes to the residual frontier.",
+    "height": 4187,
+    "source_commit": "36ab2575c7fe4d00ead7af1851037d4683998ed3"
+  },
+  "input_frontier_canonical_sha256": "5496087ac2e75104443c73022ec58bdcc71bb3bafb4605c79aed487fdd3f1da3",
+  "intake_correction": {
+    "excluded_rotation_only_pairs": [
+      [
+        318,
+        340,
+        7,
+        32,
+        10
+      ],
+      [
+        318,
+        341,
+        7,
+        32,
+        10
+      ],
+      [
+        319,
+        340,
+        7,
+        32,
+        10
+      ],
+      [
+        319,
+        341,
+        7,
+        32,
+        10
+      ]
+    ],
+    "reason": "Four order-three rotation-only stabilizers were included in the initial nontrivial-stabilizer count. The declared reflection predicate selects 2232 pairs. These four rows remain outside the stratum, not closed.",
+    "utc": "2026-09-09T22:05:55.590399+00:00"
+  },
+  "method": "Normalize each invariant curve pair to real-coefficient displacement polynomials; eliminate exactly in trace t=z+conjugate(z) and radius r=z*conjugate(z); check real physical embeddings and all unit edges.",
+  "milestone": "Complete exact physical/chromatic decision on this named residual stratum, including all additional active curves; positive <=243-point non-four certificate if one occurs, otherwise quantified closure.",
+  "named_stratum": "All 2232 post-h4185 global pair systems with nontrivial setwise reflection stabilizer; both curves fixed separately; both exact-five and at-least-six modes",
+  "primary_approach": "math-approach-computer-assisted",
+  "source_counts": {
+    "at_least_six_pairs": 472,
+    "conservative_allowance": 30220,
+    "exact_five_pairs": 1760,
+    "total_pairs": 2232
+  },
+  "tools": [
+    "math-tool-research-code",
+    "math-tool-computer-algebra",
+    "math-tool-compute-intensive"
+  ],
+  "utc": "2026-09-09T22:02:22.456571+00:00"
+}
