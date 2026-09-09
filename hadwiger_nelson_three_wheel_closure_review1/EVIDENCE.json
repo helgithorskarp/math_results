@@ -1,0 +1,52 @@
+{
+  "reviewer": "reviewer-1",
+  "verdict": "ACCEPT",
+  "confidence": "high",
+  "conditional_on": [
+    "h4065 complete squared-distance factorization and thirteen-word failure cover",
+    "h4071 exact symmetry quotient to 800 representative factor pairs",
+    "h4073 complete four-colourability of the coincidence branch",
+    "the accepted h4005/h4031 pair-alignment theorem imported by h4065 and h4073"
+  ],
+  "target": {
+    "discovery_height": 4085,
+    "contribution_ref": "bafkreie3n6wjpjtm4ydapz5f3lkvi2wl5jf7d6r7ioaiod4p2tn5o3rgly",
+    "source_commit": "8112e2b2b2223f4ba77c6cd15db78e85b9161396",
+    "certificate_bytes": 56033,
+    "certificate_sha256": "301ca9a0ee089dfa10ba1b7d29f4e0a23d2e446a2592101dcd60e6cf2a1e6385"
+  },
+  "replayed": {
+    "target_standard_library_verifier": true,
+    "target_optimized_verifier": true,
+    "target_controls": true,
+    "h4071_symmetry_verifier": true,
+    "h4073_collision_verifier": true,
+    "producer_regeneration_exact_bytes": true
+  },
+  "producer": {
+    "python": "3.11.2",
+    "sympy": "1.14.0",
+    "python_sat": "1.9.dev15",
+    "systems": 800,
+    "sat_calls": 52,
+    "unsat_discovery_only": 3,
+    "certificate_exactly_equal": true
+  },
+  "independent_exact_q_check": {
+    "systems": 800,
+    "projection_branches": 1447,
+    "unique_quotient_blocks": 835,
+    "rational_unit_checks": 277244,
+    "modular_witnesses_trusted": false,
+    "solver_calls": 0,
+    "expected": "EXPECTED.json"
+  },
+  "scope": {
+    "target_result": false,
+    "record_improvement": false,
+    "result": "The two-parameter family W+uW+vW is closed as a source of five-chromatic unit-distance graphs; its maximum physical order is 343.",
+    "does_not_establish": "A sub-509 five-chromatic unit-distance graph or any five-chromatic graph."
+  },
+  "literature_search_date": "2026-09-09",
+  "formalized": false
+}
