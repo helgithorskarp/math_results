@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-09-09T15:41:56.757968+00:00",
+  "mechanism_gate": "PASSED",
+  "target_solver_calls": 0,
+  "original_q8_tasks": 2185424,
+  "original_task_status": "ALL_UNKNOWN",
+  "new_task_exclusions": 0,
+  "physical_candidates": 0,
+  "prepared_cohort_jobs": 956,
+  "core_partition_nodes": 477,
+  "core_partition_leaves": 239,
+  "guard_length_histogram": {
+    "7": 17,
+    "8": 222
+  },
+  "boolean_core_cube_covered": "36028797018963968",
+  "master_clauses": 5973523,
+  "master_bytes": 269380717,
+  "full_catalog_four_sets_checked": 180297480,
+  "full_dispatch_assumption_literals_checked": 120198320,
+  "full_literal_projection_examples": 4,
+  "sanitizer_coverage": "All four complete bases and the entire catalog/queue consumer",
+  "fresh_solver_free_replay_seconds": 241.52373351197457,
+  "fresh_replay_python_optimization": 1,
+  "additional_worker_model_controls": "MODEL_CONTROLS.json; also incorporated into future replay entry point after the fresh full replay",
+  "initial_operational_measurements": "Actual registry preparation, dispatch decoding, cohort partition, checked worker input and certificate control path; no target-solver performance measurement",
+  "control_scope": "The full-base RUP/branch controls match zero catalog cores and change no real task status",
+  "independent_review": "PENDING; all checks are author-written",
+  "source_runtime_tools": {
+    "python": "Python 3.11.2",
+    "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0"
+  },
+  "q10_inputs_read_or_executed": false,
+  "parked_routes_reopened": false
+}

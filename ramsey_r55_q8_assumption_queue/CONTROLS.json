@@ -1,0 +1,178 @@
+{
+  "exhaustive": {
+    "two_variable_formula_assumption_cases": 4608,
+    "complete_refutations": 4161,
+    "guarded_lemmas_checked": 4163,
+    "literal_graph_controls": 1024,
+    "good_R33_order5": 12
+  },
+  "proof": {
+    "nontrivial_projection": [
+      {
+        "clause": [
+          -4,
+          -3,
+          1
+        ],
+        "hints": [
+          1,
+          2
+        ]
+      },
+      {
+        "clause": [
+          -4,
+          -3
+        ],
+        "hints": [
+          5,
+          3,
+          4
+        ]
+      }
+    ],
+    "proof_corruptions_rejected": 9,
+    "complete_binary_branch_join": [
+      {
+        "clause": [
+          -4,
+          -3,
+          -1
+        ],
+        "hints": [
+          3,
+          4
+        ]
+      },
+      {
+        "clause": [
+          -4,
+          -3,
+          1
+        ],
+        "hints": [
+          1,
+          2
+        ]
+      },
+      {
+        "clause": [],
+        "hints": [
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ]
+  },
+  "cohorts": {
+    "small_partition": {
+      "status": "VERIFIED",
+      "original_task_ids": 64,
+      "pending_cohort_jobs": 32,
+      "core_leaves": 8,
+      "nodes": 15,
+      "smallest_cohort": 2,
+      "largest_cohort": 2,
+      "membership_digest": "b6bac054f098f8c6069c27b6cb39160a50633f557872da5e70eb256db88cee4b",
+      "task_exclusions": 0,
+      "all_original_task_statuses": "UNKNOWN"
+    },
+    "corruptions_rejected": 4
+  },
+  "worker": {
+    "positive_hint_lrat_import": true,
+    "deletion_ignored_soundly": true,
+    "corruptions_rejected": 7
+  },
+  "full": {
+    "full_base_checked_empty_covers": [
+      {
+        "status": "VERIFIED_EMPTY_COVER",
+        "r": 5,
+        "matching_tasks": 0,
+        "task_ids_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "core_mask": "00000000080c07",
+        "core_value": "00000000080c07",
+        "conclusion": [
+          -821,
+          -813,
+          -812,
+          -804,
+          -803,
+          -802
+        ],
+        "original_steps": 1,
+        "lifted_steps": 1,
+        "base_sha256": "fd8cb14ebe0fea673167881270486c2efb0cbf82969f3c229c754fce43d81d15",
+        "good43": false
+      },
+      {
+        "status": "VERIFIED_EMPTY_COVER",
+        "r": 6,
+        "matching_tasks": 0,
+        "task_ids_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "core_mask": "00000000080c07",
+        "core_value": "00000000080c07",
+        "conclusion": [
+          -821,
+          -813,
+          -812,
+          -804,
+          -803,
+          -802
+        ],
+        "original_steps": 1,
+        "lifted_steps": 1,
+        "base_sha256": "88a070b39a59e78d076323878f2629b5afea21861aaa00790e2dd97932c38af0",
+        "good43": false
+      },
+      {
+        "status": "VERIFIED_EMPTY_COVER",
+        "r": 7,
+        "matching_tasks": 0,
+        "task_ids_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "core_mask": "00000000080c07",
+        "core_value": "00000000080c07",
+        "conclusion": [
+          -821,
+          -813,
+          -812,
+          -804,
+          -803,
+          -802
+        ],
+        "original_steps": 1,
+        "lifted_steps": 1,
+        "base_sha256": "c03c7a5f915917c512dd45cd3613818ebcd59a8194359d5f35e988157b60b7d9",
+        "good43": false
+      },
+      {
+        "status": "VERIFIED_EMPTY_COVER",
+        "r": 8,
+        "matching_tasks": 0,
+        "task_ids_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "core_mask": "00000000080c07",
+        "core_value": "00000000080c07",
+        "conclusion": [
+          -821,
+          -813,
+          -812,
+          -804,
+          -803,
+          -802
+        ],
+        "original_steps": 1,
+        "lifted_steps": 1,
+        "base_sha256": "ba96586572a831dbc6a12329515cad3d11779a1ea01b3242e981a2c1f539c2d1",
+        "good43": false
+      }
+    ],
+    "task_admission_status": "UNKNOWN",
+    "actual_task_exclusions": 0,
+    "actual_candidates": 0,
+    "admission_corruptions_rejected": 13,
+    "full_physical_false_candidate_rejected": true
+  }
+}
