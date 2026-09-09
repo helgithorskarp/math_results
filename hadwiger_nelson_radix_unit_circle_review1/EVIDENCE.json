@@ -1,0 +1,93 @@
+{
+  "verdict": "ACCEPT",
+  "confidence": "high",
+  "scope": {
+    "accepted": [
+      "For every complex z with |z|=1, the full strict physical unit graph on A5(z) has chromatic number exactly three.",
+      "The exact factor and colour witness covers all 1272 nonzero physical event polynomials."
+    ],
+    "not_claimed": [
+      "a five-chromatic unit-distance graph",
+      "closure of any non-unit-modulus injective parameter",
+      "a sub-509 record improvement"
+    ],
+    "imported_not_independently_reviewed": [
+      "h4117 D3 pair-orbit interface",
+      "h4135 exactly-four-active interface"
+    ]
+  },
+  "target": {
+    "artifact_ref": "bafkreihd4vuonverpss4eah6ikgkp5ybu7b5oourwfuj5uupbcznwxjnku",
+    "height": 4139,
+    "source_commit": "cf382fec65c4554a039be59ddbc6d6c5462a22ca"
+  },
+  "environment": {
+    "python": "3.11.2",
+    "independent_dependencies": [],
+    "regeneration_sympy": "1.14.0",
+    "parallelism": 1
+  },
+  "official_replay": {
+    "normal_exit": 0,
+    "optimized_exit": 0,
+    "normal_and_optimized_stdout_sha256": "04fdefad933fd0ccc8a8ee7bf745a2d6c4ba92aa73b0cd4b1b0eec1e2a2f6912",
+    "rejected_certificate_corruptions": 7,
+    "modular_gcd_controls": 2,
+    "sturm_controls": 2,
+    "regenerated_certificate_byte_identical": true,
+    "certificate_bytes": 62007,
+    "certificate_sha256": "c76efb83fab51605eb7e59c7fa9114b3fbe1bc643500c8eb047f47f1d5bc8bb7",
+    "regeneration_seconds_approximate": 346
+  },
+  "independent_reconstruction": {
+    "imports_target_code": false,
+    "uses_certificate_as_factor_witness": true,
+    "ignores_submitted_colour_specs_and_factor_cover": true,
+    "exact_arithmetic": "Python integers, Fractions, Eisenstein coefficient pairs, and finite fields",
+    "label_vertices": 243,
+    "unordered_label_pairs": 29403,
+    "universal_edges": 1215,
+    "event_polynomials": 1272,
+    "event_degree_histogram": {
+      "2": 6,
+      "4": 27,
+      "6": 168,
+      "8": 1071
+    },
+    "event_sha256": "b1d070b53ee5cd13713f598f2baeaa5e0d6dc1a3b9faf20635c28730a97d668d",
+    "factor_blocks": 820,
+    "factor_product_identities": 1272,
+    "low_degree_blocks_delegated_to_accepted_h4119": 124,
+    "high_degree_blocks_independently_coloured": 696,
+    "colour_distribution": {
+      "11111": 396,
+      "11112": 255,
+      "11121": 45
+    },
+    "modular_coprimality_checks": 381888,
+    "modular_witness_histogram": {
+      "211": 380688,
+      "223": 1200
+    },
+    "target_modular_primes_avoided": [7, 13, 19],
+    "normal_and_optimized_stdout_sha256": "93a504e14d9614d4eab7b1b959e68c8b9c26b022bb02729edf30147bf9065451"
+  },
+  "independent_fixture": {
+    "irreducibility_prime": 337,
+    "omega_image": 209,
+    "target_prime_31_avoided": true,
+    "isolated_real_roots": 1,
+    "physical_vertices": 243,
+    "strict_unit_edges": 1221,
+    "chromatic_number": 3
+  },
+  "dependency_replay": {
+    "h4119_independently_accepted": true,
+    "h4117_and_h4135_frontier_effect_exit": 0,
+    "remaining_global_pair_orbits": 131788,
+    "remaining_parameter_orbit_allowance": 7780224,
+    "exactly_four_active_systems": 2528,
+    "exactly_four_active_allowance": 155648,
+    "independently_reviewed_here": false
+  }
+}
