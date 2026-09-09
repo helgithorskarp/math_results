@@ -1,0 +1,25 @@
+{
+  "declared_utc": "2026-09-09T11:32:24.179684+00:00",
+  "family": "All simple 43-vertex graphs whose adjacency matrix has GF(2) rank at most eight, with every labeling and no automorphism assumption",
+  "encoding": "select at least 43 distinct nonzero vectors in GF(2)^8; red adjacency is the alternating form B((x,y),(u,v))=x.v+y.u; exclude every red or blue five-set; injectivity and zero exclusion proved from Ramsey degree/common-neighbor bounds",
+  "success": "a literal verified good43 or an independently checked UNSAT certificate excluding this entire physical rank-at-most-eight branch",
+  "failure": "UNKNOWN or certificate failure is an unresolved gate, not a reduction; checkpoint and stop without larger caps, another backend, rank/coordinate variants, or adjacent follow-up",
+  "solver": "installed standalone CaDiCaL sc2021",
+  "resources": {
+    "solver_invocations": 1,
+    "conflicts": 1000000,
+    "wall_seconds": 600,
+    "address_space_GiB": 12,
+    "proof_file_GiB": 4,
+    "threads": 1,
+    "proof_check_seconds": 600
+  },
+  "symmetry_breaking": "none; no host orbit quotient or prescribed graph automorphism",
+  "excluded_inputs": [
+    "161 q10 children",
+    "q7-r5 tail",
+    "h4089 residual inputs",
+    "historical candidate/Paley/orbit/symmetry sources",
+    "fixed-neighborhood gluing"
+  ]
+}
