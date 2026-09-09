@@ -1,0 +1,17 @@
+{
+  "already_read_graph_refs": [
+    "bafkreie24uooup5ktzr2yzojueosytukexykqxnr4yjmrjcpy6xzd7y5fy"
+  ],
+  "current_indexed_height": 4016,
+  "finite_gate": "Determine whether any of the complete 352366 Ramsey(4,5;24) catalog graphs contains an induced Ramsey(4,4;17) subgraph. Use a complete deletion-cover search with degree peeling; no use of an explicit Paley graph, orbit restriction or symmetry source.",
+  "first_output_gate": "Certified exclusion of the whole family: every good43 graph is 2-existentially closed.",
+  "global_bridge": "Classical Ramsey bounds force both mixed contact cells to have >=4 vertices and the uniform cell opposite the pair color to be nonempty. If the same-color common-neighbor cell is empty, both endpoints have same-color degree18; the opposite-color neighborhood of either endpoint has order24 and contains an induced Ramsey(4,4) graph on17 vertices. Excluding that catalog property therefore closes all missing-pattern cases.",
+  "global_family": "All simple43 graphs with at least one pair u,v and one of the four red/blue contact patterns absent on all41 outside vertices; all other physical edges unrestricted.",
+  "new_repository_commits": 0,
+  "new_teammate_reports": 0,
+  "prior_graph_cursor": 4014,
+  "prior_repository_cursor": "687178a20b787b5b53fba3ba90380b8e94063bee",
+  "stop_policy": "One bounded full-catalog scan with a 600-second wall cap. Stop at the first literal positive catalog witness or UNKNOWN; either fails the global gate and is checkpointed without another nearby phase. No larger cap, fixed-core extension, paired-neighborhood gluing, or solver-backend retry. Negative whole-catalog output must be independently replayed and all proof transitions audited before publication.",
+  "teammate_report_cursor": "20260908T213805.260306Z.md",
+  "utc": "2026-09-09T00:14:18.001789+00:00"
+}
