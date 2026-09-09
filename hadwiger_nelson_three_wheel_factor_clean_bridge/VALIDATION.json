@@ -1,0 +1,30 @@
+{
+  "commands": [
+    "python3 -B verify.py --check-expected",
+    "python3 -O -B verify.py --check-expected",
+    "python3 -B controls.py",
+    "python3 -B verify.py --full-dependency-replay --check-expected",
+    "/scratch/research-team-v2/workspaces/team-hn-3/.venv-snail/bin/python -B produce.py --output certificate.json"
+  ],
+  "controls": {
+    "certificate_corruptions_rejected": [
+      "missing survivor row",
+      "missing nonunit factor",
+      "missing zero factor",
+      "false proper word",
+      "wrong graph hash",
+      "false three-word cover"
+    ],
+    "low_level_controls": [
+      "shared-root gcd",
+      "coprime gcd"
+    ]
+  },
+  "full_viability_dependency_replay": "passed",
+  "normal_and_optimized_outputs_identical": true,
+  "normal_verifier_wall_seconds": 20.1,
+  "producer_and_verifier_certificates_identical": true,
+  "producer_elapsed_seconds": 147.25645726901712,
+  "status": "ALL_VALIDATION_PASSED",
+  "verifier": "CPython standard library exact rational arithmetic"
+}
