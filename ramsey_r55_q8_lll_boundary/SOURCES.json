@@ -1,0 +1,24 @@
+{
+  "primary": [
+    {
+      "title": "Moser and Tardos, A constructive proof of the general Lovasz Local Lemma",
+      "url": "https://arxiv.org/pdf/0903.0544",
+      "location": "Theorem 1.2 and Algorithm 1.1, printed page 3",
+      "used_fact": "The asymmetric variable-overlap inequalities imply finite expected resampling time to an assignment avoiding all bad events.",
+      "scope": "Only the conditional candidate implication. The proof that these inequalities are impossible here is elementary and supplied in PROOF.md."
+    }
+  ],
+  "task_interface": {
+    "directory": "ramsey_r55_global_maximal_packing",
+    "source_commit": "1884881efbf52a54bd3a30b1445c211da7caec27",
+    "url": "https://github.com/helgithorskarp/math_results/blob/main/ramsey_r55_global_maximal_packing/PROOF.md",
+    "used_facts": [
+      "Original q8 tasks have eight fixed monochromatic four-blocks and an eleven-vertex Ramsey(4,4) core.",
+      "r ranges from 5 through 8; the first r four-blocks are red.",
+      "There are 546356 core records and 2185424 original q8 tasks.",
+      "Root-column sorting preserves physical target conditions."
+    ],
+    "trust": "Task naming and counts are inherited; no core record or external catalog is read by this computation. Matrix-domain completeness is rechecked from all 65536 masks."
+  },
+  "method_scope": "The previous fractional core-signature capacity test and all frozen carrier, solver, catalog and descent routes are distinct and are not inputs. This pass studies a candidate-producing probabilistic certificate on complete physical assignments. Its exact event clique prevents that specific certificate."
+}
