@@ -1,0 +1,70 @@
+{
+  "verdict": "ACCEPT",
+  "confidence": "high",
+  "scope": {
+    "accepted": [
+      "Every strict unit graph on E[z] is additively three-colourable when z satisfies a monic E-polynomial of degree at most four.",
+      "Every noninjective physical A5(z) member has chromatic number exactly three.",
+      "The h4105 collision inventory consists of 2400 normalized nonconstant polynomials with degree sum 9204."
+    ],
+    "not_claimed": [
+      "a five-chromatic graph",
+      "closure of the injective frontier",
+      "a sub-509 record improvement"
+    ],
+    "imported_not_independently_reviewed": [
+      "h4117 D3 orbit counts and its global-system versus chamber interface"
+    ]
+  },
+  "target": {
+    "artifact_ref": "bafkreifm45kpihmk544icvvwlqaidzbtzea53uggbgvoks5wma4c22aihu",
+    "height": 4119,
+    "source_commit": "3ffe4fdba4fbd79868b2ff8bcf8c7c214f816294"
+  },
+  "environment": {
+    "python": "3.11.2",
+    "third_party_dependencies": [],
+    "parallelism": 1
+  },
+  "official_replay": {
+    "normal_exit": 0,
+    "optimized_exit": 0,
+    "normal_and_optimized_stdout_sha256": "7a6ae22d13136bbf80330b43476854c2f1a2ba36a931101cc77ce74affda5bc8",
+    "regenerated_certificate_byte_identical": true,
+    "certificate_sha256": "7205fb23b0b81ac87c35b2fb29dd11b0f64ae694992b302a90ea8d832dd4601a",
+    "rejected_malformed_controls": 10,
+    "exact_physical_collision_fixtures": 4
+  },
+  "independent_reconstruction": {
+    "imports_target_code_or_certificate": false,
+    "exact_arithmetic": "Python integers and polynomial arithmetic modulo 3",
+    "monic_polynomials_factored": 120,
+    "irreducibles_by_degree": [3, 3, 8, 18],
+    "residue_case_types": 16,
+    "all_pairs_checked_across_case_graphs": 24546,
+    "norm81": {
+      "modulus_low_first": [2, 2, 2, 1, 1],
+      "functional": [1, 0, 2, 2],
+      "vertices": 81,
+      "edges": 405
+    },
+    "hyperbola81": {
+      "modulus_low_first": [2, 2, 1],
+      "functional": [0, 1, 1, 1],
+      "vertices": 81,
+      "edges": 324
+    },
+    "digit_words": 243,
+    "unordered_digit_word_pairs": 29403,
+    "normalized_nonconstant_collision_polynomials": 2400,
+    "collision_degree_sum": 9204,
+    "maximum_collision_degree": 4,
+    "normal_and_optimized_stdout_sha256": "ecc653c4470decb69e5d9a9dc02bfae5520a92b2ed02427a472b40394da364e0"
+  },
+  "dependency_replay": {
+    "artifact_ref": "bafkreial33wbe3wrhtf75zcirqvf7n74uza7mql7nrg5gpdgcyzzu5ydtq",
+    "source_commit": "f84e35de3a61a7f849ebae61a1df34639a3b0152",
+    "official_verifier_exit": 0,
+    "independent_reviewed_here": false
+  }
+}
