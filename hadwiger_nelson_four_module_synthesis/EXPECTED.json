@@ -1,0 +1,195 @@
+{
+  "at_most508_nonfour_assembly_requires_some_private_size_at_most": 101,
+  "brooks_theorem_required_for_finite_proof": false,
+  "finite_proof": {
+    "K5_geometry": {
+      "long_edge_histogram": {
+        "10": 1,
+        "6": 10,
+        "7": 10,
+        "8": 15,
+        "9": 10
+      },
+      "masks_examined": 1024,
+      "minimum_long_edges": 6,
+      "surviving_masks": 46,
+      "surviving_masks_sha256": "e4d9bce36c59ed53e44fbbeae3a40291e97f4285c19d71011c1329e4aee63c16"
+    },
+    "claimed_record_improvement": false,
+    "finite_kernels": [
+      {
+        "K5_exceptions": 1,
+        "graph_set_sha256": "01859b39ae074342936b5553c425233f2edf7b0d534569d541f879ca0eb2cca5",
+        "labelled_four_regular_graphs": 1,
+        "positive_four_colourings": 0,
+        "receipt_sha256": "f121580c3a26037b243b3f4588dcaeccedd1e9dc4c23f82658c9069a01cd17ac",
+        "used_colours_histogram": {},
+        "vertices": 5
+      },
+      {
+        "K5_exceptions": 0,
+        "graph_set_sha256": "3bda3ced1a1f14e5f8dd4005e4be3011bd38001f2c3ac323c0bb1990f860073f",
+        "labelled_four_regular_graphs": 15,
+        "positive_four_colourings": 15,
+        "receipt_sha256": "4caffb154e1d69b27f96a3f7e56f38bc66d454930c61e6c866264a2b8f00cefa",
+        "used_colours_histogram": {
+          "3": 15
+        },
+        "vertices": 6
+      },
+      {
+        "K5_exceptions": 0,
+        "graph_set_sha256": "6b5fcf2511abbb996d959db7cd1387b37c82678a94957077d9273d2a7482b46b",
+        "labelled_four_regular_graphs": 465,
+        "positive_four_colourings": 465,
+        "receipt_sha256": "41df5723bb79751c64f43ea668160469905aa0f3f36c00b27b27a4e933d211cc",
+        "used_colours_histogram": {
+          "4": 465
+        },
+        "vertices": 7
+      },
+      {
+        "K5_exceptions": 0,
+        "graph_set_sha256": "29a3366658767d6dcd03f5a02cd5d6dae29f4f51f2fa2e52a38c0651236d2805",
+        "labelled_four_regular_graphs": 19355,
+        "positive_four_colourings": 19355,
+        "receipt_sha256": "b832d3373b2ab7b256812878e074ae7c2e92a4da1c98bb26d1198c7ec99d3b8f",
+        "used_colours_histogram": {
+          "4": 19355
+        },
+        "vertices": 8
+      }
+    ],
+    "four_module_obstruction": true
+  },
+  "five_full_module_order_lower_bounds": [
+    {
+      "A159_copies": 5,
+      "B214_copies": 0,
+      "private_vertices": 780,
+      "terminal_union_lower_bound": 3,
+      "total_order_lower_bound": 783
+    },
+    {
+      "A159_copies": 4,
+      "B214_copies": 1,
+      "private_vertices": 836,
+      "terminal_union_lower_bound": 4,
+      "total_order_lower_bound": 840
+    },
+    {
+      "A159_copies": 3,
+      "B214_copies": 2,
+      "private_vertices": 892,
+      "terminal_union_lower_bound": 4,
+      "total_order_lower_bound": 896
+    },
+    {
+      "A159_copies": 2,
+      "B214_copies": 3,
+      "private_vertices": 948,
+      "terminal_union_lower_bound": 4,
+      "total_order_lower_bound": 952
+    },
+    {
+      "A159_copies": 1,
+      "B214_copies": 4,
+      "private_vertices": 1004,
+      "terminal_union_lower_bound": 4,
+      "total_order_lower_bound": 1008
+    },
+    {
+      "A159_copies": 0,
+      "B214_copies": 5,
+      "private_vertices": 1060,
+      "terminal_union_lower_bound": 2,
+      "total_order_lower_bound": 1062
+    }
+  ],
+  "full_A159_B214_nonfour_order_lower_bound": 783,
+  "geometric_controls": [
+    {
+      "fixture": "four_distant_pairs",
+      "maximum_auxiliary_degree": 4,
+      "pair_choices_checked": 1,
+      "unit_edges": 10,
+      "vertices": 8
+    },
+    {
+      "fixture": "four_identical_triples",
+      "maximum_auxiliary_degree": 2,
+      "pair_choices_checked": 81,
+      "unit_edges": 0,
+      "vertices": 3
+    },
+    {
+      "fixture": "four_pairs_shared_centre",
+      "maximum_auxiliary_degree": 4,
+      "pair_choices_checked": 1,
+      "unit_edges": 0,
+      "vertices": 5
+    }
+  ],
+  "independent_audit": {
+    "K5_geometry": {
+      "equivalence_partitions": 46,
+      "minimum_long_edges": 6,
+      "surviving_masks_sha256": "e4d9bce36c59ed53e44fbbeae3a40291e97f4285c19d71011c1329e4aee63c16"
+    },
+    "finite_kernels": [
+      {
+        "degree_polynomial_count": 1,
+        "graph_set_sha256": "01859b39ae074342936b5553c425233f2edf7b0d534569d541f879ca0eb2cca5",
+        "positive_covered_graphs": 0,
+        "vertices": 5
+      },
+      {
+        "degree_polynomial_count": 15,
+        "graph_set_sha256": "3bda3ced1a1f14e5f8dd4005e4be3011bd38001f2c3ac323c0bb1990f860073f",
+        "positive_covered_graphs": 15,
+        "vertices": 6
+      },
+      {
+        "degree_polynomial_count": 465,
+        "graph_set_sha256": "6b5fcf2511abbb996d959db7cd1387b37c82678a94957077d9273d2a7482b46b",
+        "positive_covered_graphs": 465,
+        "vertices": 7
+      },
+      {
+        "degree_polynomial_count": 19355,
+        "graph_set_sha256": "29a3366658767d6dcd03f5a02cd5d6dae29f4f51f2fa2e52a38c0651236d2805",
+        "positive_covered_graphs": 19355,
+        "vertices": 8
+      }
+    ],
+    "method": "matching-plus-cycle covers compared with exact degree-polynomial coefficients"
+  },
+  "record_improvement": false,
+  "rejected_source_corruptions": [
+    "missing boundary pattern",
+    "false colouring",
+    "wrong terminal index"
+  ],
+  "solver_calls": 0,
+  "source_extensions": [
+    {
+      "all_pairs_checked": 12561,
+      "nonmono_assignments": 60,
+      "private_vertices": 156,
+      "renamed_witness_edge_checks": 62016,
+      "squared_terminal_distance": 7,
+      "strict_unit_edges": 646,
+      "vertices": 159
+    },
+    {
+      "all_pairs_checked": 22791,
+      "nonmono_assignments": 12,
+      "private_vertices": 212,
+      "renamed_witness_edge_checks": 23448,
+      "squared_terminal_distance": 9,
+      "strict_unit_edges": 977,
+      "vertices": 214
+    }
+  ],
+  "status": "AT_MOST_FOUR_SEPARATED_TERMINAL_MODULES_ARE_FOUR_COLOURABLE"
+}
