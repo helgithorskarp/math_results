@@ -1,0 +1,71 @@
+{
+  "schema": "hn-radix-four-active-review-evidence-v1",
+  "verdict": "accept",
+  "confidence": "high",
+  "target": {
+    "artifact_ref": "bafkreidulncimzcgkped4pqbiisxq7vpprsbm5vuvygsmeno5ldlqvaz34",
+    "height": 4151,
+    "source_commit": "6f58bd6f3fa5a5da0cf549de345facd89e9f19a3",
+    "title": "Every complex-radix counterexample needs at least five active curves"
+  },
+  "independent_checker": {
+    "algorithm": "7^5 displacement-row inventory; real/imaginary exact event expansion; direct audit of all label-pair colour masks; K4 certificate validation plus obstruction-set containment coverage",
+    "imports_target_or_ancestor_code": false,
+    "python": "3.11.2",
+    "normal_seconds": 24.82,
+    "optimized_seconds": 24.87,
+    "normal_and_optimized_outputs_byte_identical": true,
+    "stdout_sha256": "c9d16bb292c1f452b1adbc50f590570726942180de091fae55494c176b4635ff",
+    "source_sha256": "c39d2074232262003fab6ed0bb97d1b522238b14063c257047130497fb9222a7"
+  },
+  "independent_results": {
+    "label_vertices": 243,
+    "label_pairs": 29403,
+    "difference_classes": 2801,
+    "noncircle_curves": 2796,
+    "circle_id": 342,
+    "off_circle_universal_edges": 243,
+    "circle_only_monomial_edges": 972,
+    "noncircle_event_edges": 28188,
+    "realized_hyperplanes": 336,
+    "projective_normals": 85,
+    "eligible_patterns": 81,
+    "eligible_quartets": 960768,
+    "linear_three_colourings": 934632,
+    "impossible_planar_K4": 26136,
+    "unresolved_eligible_quartets": 0,
+    "K4_gram_determinant": "1/2",
+    "curve_inventory_sha256": "85c286422c01bcb6ebb244186032bc607984471bc2b705ef7247084dd7c33db9",
+    "eligible_patterns_sha256": "fe0863b674143b718e1c3bc907cdfe1daee0f31b6e64350a7c62f6e26a60e7a6",
+    "obstruction_list_sha256": "d7c61f5149b6ad0be81498649d6b0255b4294910364137547c68d635ffcbbef3",
+    "review_transcript_sha256": "393160fbc483e3083137e60be4e7d649477fb60d0bc96a494d0d978d73174b09"
+  },
+  "independent_strengthening": {
+    "submitted_three_curve_obstructions": 2376,
+    "submitted_four_curve_obstructions": 630,
+    "failing_quartets_covered_by_three_curve_obstructions": 26136,
+    "distinct_three_curve_obstructions_used": 2376,
+    "four_curve_obstructions_needed_for_closure_coverage": 0
+  },
+  "submitted_replay": {
+    "certificate_bytes": 2275,
+    "certificate_sha256": "1b9ed319a9765ed67fa2ed09a5a94d2e626b6d2028b9b4032a1bec23b8a55d55",
+    "interface_bytes": 100080,
+    "interface_bytes_sha256": "d93f5b84600e42695b0fb53fb009ccff75002a17e31af2a2af5bc0d0834ea665",
+    "interface_canonical_sha256": "be8b496cffe2896c597107da3c2699a96cbe4f1e37dcdeddf408782a0dc2c24d",
+    "normal_and_optimized_outputs_byte_identical": true,
+    "producer_certificate_byte_identical": true,
+    "producer_and_verifier_interfaces_byte_identical": true,
+    "normal_verify_seconds": 20.43,
+    "controls_passed": true,
+    "handoff_checkpoint_passed": true
+  },
+  "scope": {
+    "accepted": "Every injective off-unit-circle A5(z) member with at most four active noncircle curves is four-colourable; with accepted h4119 and h4139, every non-four-colourable member needs at least five active curves.",
+    "not_established": "No five-chromatic graph, no <=508-vertex record, no whole global-pair-system deletion, and no higher-incidence parameter solution.",
+    "imported_not_independently_reviewed_here": [
+      "h4117 global pair quotient and count",
+      "h4135 global-system allocation counts"
+    ]
+  }
+}
