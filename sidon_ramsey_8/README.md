@@ -1,16 +1,14 @@
 # Exact upper bounds for the eighth Sidon–Ramsey number
 
-**Current result: [the complete P84 exclusion](p84_exclusion/README.md) gives
-81 <= SR(8) <= 84.** It checks every balanced P84 case by two complete
-implementations and imports the independently reviewed profile theorem.
-The original P85 proof is preserved below.
+**Current result: [the complete P83 exclusion](p83_exclusion/README.md) gives
+81 <= SR(8) <= 83.** It imports the [P83 profile theorem](p83_profiles/README.md)
+and excludes every `11^3 10^5` partition by two complete compatibility traversals.
+All 5,157 nonempty anchor cases and 65,073,232 three-eleven packings are closed.
+The exact value and P82 remain undecided.
 
-The [new P83 profile theorem](p83_profiles/README.md) proves that every P83
-partition must have profile `11^3 10^5`. A complete global cover leaves
-5,157 nonempty anchor cases and 65,073,232 three-eleven packings for the
-five-ten completion problem, which remains undecided. The numerical bound
-above is unchanged. The P84 exclusion has received an
-[independent acceptance](../sidon_ramsey_8_p84_exclusion_review1/README.md).
+The [P84 exclusion](p84_exclusion/README.md), its
+[independent acceptance](../sidon_ramsey_8_p84_exclusion_review1/README.md),
+and the original P85 proof below are preserved as earlier milestones.
 
 This directory reproduces the computer-assisted upper bound **SR(8) <= 85**.
 The Sidon–Ramsey number SR(r) is the smallest n for which `[n] = {1,...,n}`
