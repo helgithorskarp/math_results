@@ -8,7 +8,9 @@ This contribution proves a necessary structural restriction: every such 187-edge
 (n_6,n_7,n_8)=(z+4,50-2z,z),\qquad 0\le z\le13.
 \]
 
-A weighted pair-counting identity gives an exact nonnegative gap of `256-19z`. At `z=13`, at least 12 of the 13 degree-eight vertices have every vertex within distance two. If precisely one fails this property, its unique distant vertex has degree six or seven and all its neighbors have degree seven. See [proof.md](proof.md) for the complete argument.
+A weighted pair-counting identity gives an exact nonnegative gap of `256-19z`; see [proof.md](proof.md). The [boundary refinement](boundary_sinks.md) proves that at `z=13`, **all 13 degree-eight vertices have every vertex within distance two**, and the adjacency characteristic polynomial is divisible by `(X²+X−7)^12`.
+
+The published aggregate certificate has also been [proved unrealizable as a graph](profile_exclusion.md), using a checked SAT refutation. This excludes that exact aggregate assignment; the broader 13-vertex case remains open.
 
 This is a structural lemma, not an improved extremal-number bound or an existence result. The weighting and the specialization were obtained in this campaign; priority is not established. The underlying two-path packing method is standard, notably in Backelin's work cited below.
 
@@ -18,6 +20,7 @@ Run from this directory with Python 3.11 or later, with no external packages or 
 
 ```sh
 python3 verify.py
+python3 verify_boundary.py
 ```
 
 Expected output:
@@ -27,13 +30,16 @@ PASS: 72 local types; exact weighted certificate; z <= 13
 PASS: Hoffman-Singleton and two edge-deletion controls
 PASS: independently checked 54-vertex, 185-edge lower-bound fixture
 PASS: integral z=13 aggregate certificate (15 types, 47 nonzero edge counts)
+PASS: local weighted identity on four graph controls
+PASS: arithmetic in both exceptional-vertex exclusions
+PASS: four independent degree-eight sinks; exact polynomial nullity 6
 ```
 
 The verifier checks the rational-free coefficient certificate on every permitted local type, the gap polynomial, graph identities on explicit controls, a known lower-bound graph, and an integer boundary certificate. The human proof is independent of the optimizer. The checks do not formally verify the human proof and do not enumerate all 54-vertex graphs.
 
 `boundary_profile.json` satisfies the six degree-class pair-capacity inequalities, all type-incidence balances, all type-averaged two-step capacities, and the simple-graph upper capacities between and within types. It is **not a graph**: the data do not assign these incidences to individual vertices or enforce unique common neighbors for individual pairs. It demonstrates that even this strengthened aggregate relaxation does not exclude `z=13`. Its definitions and exact verification are in `verify.py`; no optimizer is needed to check the certificate. It was found using SciPy 1.15.3 / HiGHS, with integer variables, then checked using Python integers.
 
-The next substantive phase is to impose individual incidence and pair constraints, beginning with the boundary cases forced by the gap identity. No unbounded computation is running.
+For the optional SAT reproduction, see [profile_exclusion.md](profile_exclusion.md) and `profile_sat.py`. It regenerates the omitted CNF and proof outside the repository and calls a separate proof checker. The next substantive phase is to combine the all-sink conclusion with the small gap budget in a complete incidence search or a further structural exclusion. No unbounded computation is running.
 
 ## Sources and scope
 

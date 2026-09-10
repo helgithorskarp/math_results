@@ -1,0 +1,52 @@
+{
+  "status": "UNSAT",
+  "variables": 136456,
+  "clauses": 357591,
+  "edge_variables": 1071,
+  "solver_seconds": 13.482293601962738,
+  "statistics": {
+    "restarts": 12,
+    "conflicts": 63825,
+    "decisions": 74774,
+    "propagations": 53736486
+  },
+  "checker_status": "VERIFIED",
+  "checker_seconds": 11.431168928043917,
+  "cnf_sha256": "1a289a7cd86754fd4818f36d66624ceef863988fcdc8e7d0fdb3ca13d6ecdc07",
+  "proof_sha256": "eb280a826f84e60300b4405d65bc8a138d21e48bc919a20acd3a101a8e854a00",
+  "cnf_bytes": 5791068,
+  "proof_bytes": 10759717,
+  "controls": [
+    {
+      "name": "Hoffman-Singleton",
+      "n": 50,
+      "edges": 175,
+      "status": "SAT and decoded"
+    },
+    {
+      "name": "existing-54-185",
+      "n": 54,
+      "edges": 185,
+      "status": "SAT and decoded"
+    },
+    {
+      "name": "triangle",
+      "status": "UNSAT"
+    },
+    {
+      "name": "quadrilateral",
+      "status": "UNSAT"
+    }
+  ],
+  "total_seconds": 37.63544716499746,
+  "peak_rss_kb": 426508,
+  "environment": {
+    "python": "3.11.2",
+    "python_sat": "1.8.dev24",
+    "six": "1.17.0",
+    "checker": "DRAT-trim",
+    "checker_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "checker_compiler": "GCC 12.2.0, make drat-trim, C99 -O2",
+    "platform": "Linux; peak_rss_kb reports KiB"
+  }
+}
