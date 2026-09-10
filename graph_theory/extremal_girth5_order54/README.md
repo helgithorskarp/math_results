@@ -2,10 +2,21 @@
 
 Let `f(n) = ex(n,{C3,C4})` for finite simple undirected graphs. The retained target is to decide whether a graph of order 54, size 187 and girth at least five exists. The working interval remains **185 ≤ f(54) ≤ 187**.
 
+The [whole-boundary exclusion](boundary_exclusion.md) now proves
+**at most twelve degree-eight vertices**. Every case with thirteen is closed.
+The new human argument combines local sign and charge inequalities with
+individual distant-neighborhood partitions and double covers. It imports
+one existing exact rational inequality, and uses no prior SAT forest
+exclusions. Run `python3 verify_boundary_exclusion.py` for exact certificate
+replay and independent finite controls.
+
+The detailed reductions below preserve the preceding research stages;
+their surviving-case statements are superseded by the whole-boundary theorem.
+
 This contribution proves a necessary structural restriction: every such 187-edge graph has degree counts
 
 \[
-(n_6,n_7,n_8)=(z+4,50-2z,z),\qquad 0\le z\le13.
+(n_6,n_7,n_8)=(z+4,50-2z,z),\qquad 0\le z\le12.
 \]
 
 A weighted pair-counting identity gives an exact nonnegative gap of `256-19z`; see [proof.md](proof.md). The [boundary refinement](boundary_sinks.md) proves that at `z=13`, **all 13 degree-eight vertices have every vertex within distance two**, and the adjacency characteristic polynomial is divisible by `(X²+X−7)^12`.

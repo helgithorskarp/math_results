@@ -1,5 +1,9 @@
 # Four high forests remain: a distant-neighborhood partition obstruction
 
+Current status: the [whole-boundary theorem](boundary_exclusion.md) excludes
+every case with thirteen degree-eight vertices, improving the degree bound
+to n8<=12. The proof and evidence below are preserved as earlier results.
+
 **Theorem.** A finite simple graph of order 54, size 187 and girth at least
 five cannot have its thirteen degree-eight vertices induce
 

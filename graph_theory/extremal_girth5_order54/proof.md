@@ -1,5 +1,9 @@
 # A weighted gap identity and its boundary cases
 
+Current status: the [whole-boundary theorem](boundary_exclusion.md) excludes
+every case with thirteen degree-eight vertices, improving the degree bound
+to n8<=12. The proof and evidence below are preserved as earlier results.
+
 The later [boundary refinement](boundary_sinks.md) excludes both exceptional alternatives in Section 3, proving that all 13 degree-eight vertices are sinks when `z=13`. The proof below supplies its prerequisites.
 
 All graphs below are finite, simple and undirected. A *sink* means a vertex from which every vertex is at distance at most two. Distance between disconnected vertices is infinity.
