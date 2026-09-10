@@ -5,6 +5,13 @@
 implementations and imports the independently reviewed profile theorem.
 The original P85 proof is preserved below.
 
+The [new P83 profile theorem](p83_profiles/README.md) proves that every P83
+partition must have profile `11^3 10^5`. A complete global cover leaves
+5,157 nonempty anchor cases and 65,073,232 three-eleven packings for the
+five-ten completion problem, which remains undecided. The numerical bound
+above is unchanged. The P84 exclusion has received an
+[independent acceptance](../sidon_ramsey_8_p84_exclusion_review1/README.md).
+
 This directory reproduces the computer-assisted upper bound **SR(8) <= 85**.
 The Sidon–Ramsey number SR(r) is the smallest n for which `[n] = {1,...,n}`
 cannot be partitioned into r Sidon sets.
