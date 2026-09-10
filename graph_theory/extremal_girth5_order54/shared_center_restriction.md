@@ -1,5 +1,9 @@
 # A shared degree-six neighbor in the five-edge two-P3 forest
 
+Current status: the subsequent [distant-partition argument](distant_partition_exclusion.md)
+excludes the whole forest `2P3+P2+5K1`, leaving four high forests.
+The statements and evidence below describe the preceding reduction stage.
+
 **Theorem.** Let G be a finite simple graph on 54 vertices with 187 edges
 and girth at least five. Suppose its thirteen degree-eight vertices induce
 

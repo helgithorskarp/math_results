@@ -34,27 +34,40 @@ profiles are covered by 13 proof-checked cases. The key reduction forces
 the common neighbor and the individual neighbor roles of the two path
 centers; the full order-54 existence question remains open.
 
-The [P4 exclusion](p4_exclusion.md) now closes the entire forest
-`P4+2P2+5K1`, leaving **five forests**. Adjacent path centers force twelve
+The [P4 exclusion](p4_exclusion.md) closes the entire forest
+`P4+2P2+5K1`, leaving five forests at that stage. Adjacent path centers force twelve
 independent low neighbors; a complete center/endpoint role cover gives
 52 proof-checked incidence cases across all fifteen high-neighbor
 histograms. The surviving forests are `5P2+3K1`, `P3+3P2+4K1`,
 `2P3+P2+5K1`, `6P2+K1`, and `P3+4P2+2K1`.
 
-Reproduce this latest exclusion with `python3 verify_p4.py` and
+Reproduce that exclusion with `python3 verify_p4.py` and
 `python3 reproduce_p4.py --work /tmp/order54-p4 --checker /path/to/drat-trim`.
 The [proof](p4_exclusion.md) gives the complete cover, dependencies and
 trust boundary; [p4_expected.json](p4_expected.json) records all 52
 formula/proof hashes, and [p4_run.json](p4_run.json) records the fresh run.
 
-The [shared-center restriction](shared_center_restriction.md) now proves
+The [shared-center restriction](shared_center_restriction.md) proves
 that, in `H=2P3+P2+5K1`, the two path centers share a degree-six vertex
 with exactly two or three high neighbors. A complete joint-neighborhood
 cover and 124 checked refutations reduce that whole forest to 33 explicit
-center-incidence states across four histograms. Its realizability remains
-open; all five high forests still remain in the overall classification.
+center-incidence states across four histograms. That complete cover is the
+computer-assisted prerequisite for the closing argument below.
 Reproduce with `python3 verify_shared_center.py` and
 `python3 reproduce_shared_center.py --work /tmp/order54-shared-center --checker /path/to/drat-trim --jobs 4`.
+
+The [distant-partition exclusion](distant_partition_exclusion.md) now closes
+**the entire forest `2P3+P2+5K1`**, leaving **four forests**:
+`5P2+3K1`, `P3+3P2+4K1`, `6P2+K1`, and `P3+4P2+2K1`.
+For every degree-seven vertex, its distant vertices' high-neighbor sets
+partition the high vertices outside its own neighborhood. Combined with
+two weighted identities, this excludes three of the inherited profiles
+immediately. The fourth requires at least four special seven-vertices,
+while their individual partitions allow at most two. The closing proof
+allows distant seven–seven pairs and requires no new solver refutations.
+Run `python3 verify_distant_partition.py` for the exact controls and small
+independent enumerations. The remaining complete histogram cover has 115
+cases; no realization or exclusion of the four remaining forests is claimed.
 
 This is a structural lemma, not an improved extremal-number bound or an existence result. The weighting and the specialization were obtained in this campaign; priority is not established. The underlying two-path packing method is standard, notably in Backelin's work cited below.
 

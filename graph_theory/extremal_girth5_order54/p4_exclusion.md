@@ -1,5 +1,9 @@
 # Excluding the four-vertex-path high forest
 
+Current status: the subsequent [distant-partition argument](distant_partition_exclusion.md)
+excludes the whole forest `2P3+P2+5K1`, leaving four high forests.
+The statements and evidence below describe the preceding reduction stage.
+
 **Theorem.** No finite simple graph G of order 54, size 187 and girth at
 least five, with thirteen degree-eight vertices, has
 
