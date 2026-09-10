@@ -1,0 +1,33 @@
+{
+  "target_artifact_ref": "bafkreib56vf6e55mrewnuicvd2nj7myxwu5zxz5gomggqddoqo4bt32afm",
+  "target_source_commit": "40d9b65d38ed9e7b7e4b3ae0e9cd45a1f67817f4",
+  "completed_at_utc": "2026-09-10T15:31:19Z",
+  "environment": {
+    "python": "3.11.2",
+    "python_sat": "1.8.dev24",
+    "six": "1.17.0",
+    "gcc": "12.2.0",
+    "solver": "g4",
+    "checker": "drat-trim",
+    "checker_source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "checker_binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+  },
+  "result": {
+    "verified_unsat": 50,
+    "all_cnf_hashes_match_target_manifest": true,
+    "all_proof_hashes_match_target_manifest": true,
+    "validation_json_sha256": "f8a911d3183f012cc3b61f4b977bf581c9560b96248cb4f06ee6e1b8dd9add97",
+    "total_seconds": 229.1964554459555,
+    "solver_seconds": 40.873624918051064,
+    "checker_seconds": 52.01941432408057,
+    "peak_rss_kb": 278836,
+    "total_cnf_bytes": 434186625,
+    "total_proof_bytes": 197327312,
+    "conflicts": {
+      "minimum": 142,
+      "maximum": 934,
+      "sum": 24284
+    }
+  },
+  "large_file_boundary": "The 50 CNFs, 50 DRUP traces, checker logs, and 31,288-byte detailed validation file remain outside Git; this file is their compact summary."
+}
