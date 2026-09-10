@@ -26,7 +26,13 @@ graph to **seven explicit forests with five or six edges and at most two
 degree-two vertices**. Exact rational certificates first give a ten-forest
 cover. Complete incidence refutations then exclude three entire forests,
 covering all 22 of their high-neighbor-count profiles. Every remaining
-forest still requires a realization decision.
+forest at that stage still required a realization decision.
+
+The [two-P3 exclusion](two_p3_exclusion.md) closes the entire remaining
+forest `2P3+2P2+3K1`, leaving **six forests**. Its six possible high-neighbor
+profiles are covered by 13 proof-checked cases. The key reduction forces
+the common neighbor and the individual neighbor roles of the two path
+centers; the full order-54 existence question remains open.
 
 This is a structural lemma, not an improved extremal-number bound or an existence result. The weighting and the specialization were obtained in this campaign; priority is not established. The underlying two-path packing method is standard, notably in Backelin's work cited below.
 
@@ -79,6 +85,15 @@ python3 reproduce_forest_exclusions.py --work /tmp/order54-forests --checker /pa
 The first command uses exact standard-library arithmetic; the second must
 finish with `verified_unsat: 22`. The three excluded forests are covered in
 full, rather than only for selected incidence totals.
+
+For the complete two-P3 forest exclusion:
+
+```sh
+python3 verify_two_p3.py
+python3 reproduce_two_p3.py --work /tmp/order54-two-p3 --checker /path/to/drat-trim
+```
+
+Expected: `verified_unsat: 13`; all six profiles of this forest are excluded.
 
 ## Sources and scope
 

@@ -16,7 +16,9 @@ Here P_j is the path on j vertices, and K1 is an isolated vertex.
 | 6_2b | 2P3 + 2P2 + 3K1 | 6 | 2 |
 
 This is a necessary classification of actual graph realizations. Existence
-in any of these seven cases is unresolved. In particular the theorem does
+was unresolved in these seven cases at this reduction stage. Subsequent
+[whole-forest work](two_p3_exclusion.md) excludes `6_2b`, leaving six cases.
+In particular the theorem does
 not exclude thirteen degree-eight vertices or improve the working interval
 185 <= ex(54,{C3,C4}) <= 187.
 
@@ -241,9 +243,13 @@ checker; the solver's bare verdict is insufficient. These new controls
 and reproductions were conducted in this research session, not by the
 reviewer of the preceding theorem.
 
-The seven remaining forest types are unresolved, even where some individual
+At this reduction stage, the seven remaining forest types were unresolved,
+even where some individual
 profiles have been ruled out in exploratory runs. The result is a complete
 structural reduction and three whole-subclass exclusions, not a complete
 solution of the thirteen-high-vertex case. The underlying pair-packing
 method is standard; no historical priority or standalone publishability
 claim is made for this specialization.
+
+Subsequent [two-P3 work](two_p3_exclusion.md) closes `6_2b` completely;
+the other six forests remain unresolved.
