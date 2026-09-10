@@ -47,6 +47,15 @@ The [proof](p4_exclusion.md) gives the complete cover, dependencies and
 trust boundary; [p4_expected.json](p4_expected.json) records all 52
 formula/proof hashes, and [p4_run.json](p4_run.json) records the fresh run.
 
+The [shared-center restriction](shared_center_restriction.md) now proves
+that, in `H=2P3+P2+5K1`, the two path centers share a degree-six vertex
+with exactly two or three high neighbors. A complete joint-neighborhood
+cover and 124 checked refutations reduce that whole forest to 33 explicit
+center-incidence states across four histograms. Its realizability remains
+open; all five high forests still remain in the overall classification.
+Reproduce with `python3 verify_shared_center.py` and
+`python3 reproduce_shared_center.py --work /tmp/order54-shared-center --checker /path/to/drat-trim --jobs 4`.
+
 This is a structural lemma, not an improved extremal-number bound or an existence result. The weighting and the specialization were obtained in this campaign; priority is not established. The underlying two-path packing method is standard, notably in Backelin's work cited below.
 
 ## Reproduction

@@ -18,8 +18,12 @@ Here P_j is a path on j vertices. Together with the preceding
 | 6_0 | 6P2 + K1 | 24 |
 | 6_1 | P3 + 4P2 + 2K1 | 13 |
 
-Existence in these five forests remains unresolved. The table has 130
-forest/histogram cases before any partial exploratory exclusions. This
+Existence in these five forests remains unresolved. At this stage the
+table has 130 forest/histogram cases before partial exploratory exclusions.
+Subsequent [shared-center work](shared_center_restriction.md) restricts
+`5_2b` to four histograms and 33 joint-incidence states, with a shared
+degree-six neighbor of high count two or three. The resulting overall
+forest/histogram cover has 119 cases. This
 theorem covers all incidences and all fifteen histograms in the excluded
 forest. It does not exclude thirteen degree-eight vertices in general,
 and the working bounds **185 <= ex(54,{C3,C4}) <= 187** are unchanged.
