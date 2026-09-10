@@ -8,6 +8,14 @@ summands**, and addition is in the integers. Together with the published
 lower bound, the resulting interval is **81 <= SR(8) <= 85**. This computation
 does not determine the exact value.
 
+The subsequent [P84 profile theorem](p84_profiles/README.md) shows that any
+eight-class partition of `[84]` must have four eleven-element classes and
+four ten-element classes. That remaining balanced case is unresolved.
+
+An [external end-to-end review](https://github.com/njallskarp/math_source_code_open/tree/main/sidon_ramsey_8_independent_review)
+accepts the P85 upper bound with stated computational trust limitations,
+after replaying this package and implementing a separate full verifier.
+
 The previous upper bound located in the literature audit is 86, in
 Espinosa-García and Pellicer, *Update on Sidon–Ramsey numbers*, Discrete
 Applied Mathematics 378 (2026), 120–124:
