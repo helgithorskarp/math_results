@@ -1,0 +1,106 @@
+{
+  "schema": "hn-radix-reflection-pair-stratum-review-evidence-v1",
+  "verdict": {
+    "confidence": "high",
+    "named_physical_stratum": "accept",
+    "pair_selection": "accept relative to the pinned reviewed h4185 interface",
+    "residual_orbit_allowances": "accept only as exact conditional transformations of h4185/h4177/h4117/h4175"
+  },
+  "target": {
+    "artifact_ref": "bafkreie5w6pudf4bh52i3ltb6yhewzuizcquca4jj7hupvwd46wzwytdgy",
+    "height": 4191,
+    "source_commit": "36657746aa40fac0f7af517c76b847682ffaf808",
+    "title": "All 2232 residual A5 reflection-stabilized pair systems yield three-chromatic physical graphs"
+  },
+  "submitted_replay": {
+    "certificate": {
+      "bytes": 47105,
+      "fresh_generation_byte_identical": true,
+      "sha256": "b561346fe17e07bf1b362611414d7b00c7bb3aae1f4ede096800f2cbf9a21953"
+    },
+    "controls": {
+      "rejected": 7,
+      "wall_seconds": 30.2
+    },
+    "fresh_generator_wall_seconds": 213.9,
+    "optimized_verifier_wall_seconds": 444.8,
+    "ordinary_verifier_wall_seconds": 370.4,
+    "physical": {
+      "bytes": 16641,
+      "fresh_generation_byte_identical": true,
+      "optimized_verifier_wall_seconds": 8.8,
+      "ordinary_verifier_wall_seconds": 8.8,
+      "sha256": "8322a08a8b6bfda7fc0c0a4c63fcda382f28a4a8121a13c28b49cfbf4745f68b"
+    }
+  },
+  "independent_checker": {
+    "algorithm": "reviewer h4181 curve reconstruction; direct D3 digit action; alternate x,D real-coordinate recurrence; FLINT multivariate resultants; reviewer quotient-ring Euclid; direct actual-label projection obligations; pure-Fraction quartic reconstruction",
+    "imports_target_h4191_code": false,
+    "optimized_full_wall_seconds": 625.3,
+    "ordinary_full_wall_seconds": 603.1,
+    "python": "3.11.2",
+    "python_flint": "0.8.0",
+    "source_sha256": "7ae8ecff9506c9900a114d9e8f67ae34969df72ef77f0ccaae142ef0709aad1a",
+    "sympy": "1.14.0"
+  },
+  "independent_results": {
+    "D3_expanded_pair_exclusions": 6696,
+    "actual_label_pairs_per_word_inventory": 29403,
+    "algebraic_components": 2291,
+    "all_named_physical_members_chromatic_number": 3,
+    "colour_projection_unit_checks": 1265523,
+    "eliminant_inventory_sha256": "79692a62a6048f688761be7cdc388e181687450e3662f5cf6f63748801ad0c9c",
+    "fibre_degree_histogram": {
+      "empty": 118,
+      "linear": 3778,
+      "quadratic": 66,
+      "cubic": 10
+    },
+    "pair_component_incidence_slots": 3903,
+    "pair_systems": 2232,
+    "physical_fixture": {
+      "chromatic_numbers": [
+        3,
+        3
+      ],
+      "real_embeddings": 2,
+      "unit_edges": [
+        378,
+        378
+      ],
+      "vertices": [
+        243,
+        243
+      ]
+    },
+    "real_coefficient_norm_curves": 112,
+    "used_colour_words": 26
+  },
+  "conditional_frontier": {
+    "input_global_pairs": 130932,
+    "remaining_at_least_six_allowance": 222712,
+    "remaining_at_least_six_rows": 7220,
+    "remaining_exact_five_allowance": 3590760,
+    "remaining_exact_five_rows": 121480,
+    "remaining_global_allowance": 3813472,
+    "remaining_global_pairs": 128700,
+    "removed_allowance": 30220,
+    "removed_at_least_six_rows": 472,
+    "removed_exact_five_rows": 1760,
+    "removed_total_rows": 2232,
+    "rotation_only_rows_retained": 4
+  },
+  "scope": {
+    "accepted": "Every physical A5 member satisfying any of the 2232 named reflection-stabilized pair systems is exactly three-chromatic; the 6696 D3-expanded pair conjunctions are valid exclusions.",
+    "conditional": "The selection and deletion counts are exact relative to h4185; global residual and orbit allowances inherit h4177/h4117/h4175.",
+    "not_established": "No physical non-four graph, no closure of the remaining 128700 pair systems, no review of downstream h4193, and no sub-509 record.",
+    "trust_boundaries": [
+      "CPython exact integer and Fraction arithmetic",
+      "SymPy 1.14.0 symbolic construction",
+      "python-flint 0.8.0 exact resultant and factor arithmetic",
+      "pinned reviewer h4181 curve inventory",
+      "inspected exhaustive label-pair and component loops",
+      "h4185/h4177/h4117/h4175 only for conditional global accounting"
+    ]
+  }
+}
