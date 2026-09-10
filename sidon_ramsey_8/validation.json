@@ -1,0 +1,230 @@
+{
+  "schema": "sidon-sr8-validation-v1",
+  "completed_utc_date": "2026-09-10",
+  "method": "Exact integer enumeration; independent algorithms implemented within the same research session.",
+  "environment": {
+    "python": "Python 3.11.2",
+    "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0"
+  },
+  "residual_batches": [
+    {
+      "batch": 0,
+      "producer": {
+        "found": false,
+        "tuples": 21797,
+        "unique_residuals": 21797,
+        "ten_sets": 246609,
+        "eleven_sets": 5,
+        "seconds": 312.622,
+        "input_read_complete": true
+      },
+      "pair_sum_replay": {
+        "tested": 21797,
+        "ten_sets": 246609,
+        "eleven_sets": 5,
+        "seconds": 642.116,
+        "all_unsatisfiable": true
+      }
+    },
+    {
+      "batch": 1,
+      "producer": {
+        "found": false,
+        "tuples": 21797,
+        "unique_residuals": 21797,
+        "ten_sets": 248655,
+        "eleven_sets": 2,
+        "seconds": 317.032,
+        "input_read_complete": true
+      },
+      "pair_sum_replay": {
+        "tested": 21797,
+        "ten_sets": 248655,
+        "eleven_sets": 2,
+        "seconds": 628.465,
+        "all_unsatisfiable": true
+      }
+    },
+    {
+      "batch": 2,
+      "producer": {
+        "found": false,
+        "tuples": 21797,
+        "unique_residuals": 21797,
+        "ten_sets": 248318,
+        "eleven_sets": 6,
+        "seconds": 317.854,
+        "input_read_complete": true
+      },
+      "pair_sum_replay": {
+        "tested": 21797,
+        "ten_sets": 248318,
+        "eleven_sets": 6,
+        "seconds": 606.781,
+        "all_unsatisfiable": true
+      }
+    },
+    {
+      "batch": 3,
+      "producer": {
+        "found": false,
+        "tuples": 21797,
+        "unique_residuals": 21797,
+        "ten_sets": 248992,
+        "eleven_sets": 5,
+        "seconds": 317.112,
+        "input_read_complete": true
+      },
+      "pair_sum_replay": {
+        "tested": 21797,
+        "ten_sets": 248992,
+        "eleven_sets": 5,
+        "seconds": 593.26,
+        "all_unsatisfiable": true
+      }
+    },
+    {
+      "batch": 4,
+      "producer": {
+        "found": false,
+        "tuples": 21796,
+        "unique_residuals": 21796,
+        "ten_sets": 248316,
+        "eleven_sets": 5,
+        "seconds": 308.636,
+        "input_read_complete": true
+      },
+      "pair_sum_replay": {
+        "tested": 21796,
+        "ten_sets": 248316,
+        "eleven_sets": 5,
+        "seconds": 651.247,
+        "all_unsatisfiable": true
+      }
+    },
+    {
+      "batch": 5,
+      "producer": {
+        "found": false,
+        "tuples": 21796,
+        "unique_residuals": 21796,
+        "ten_sets": 247080,
+        "eleven_sets": 3,
+        "seconds": 316.64,
+        "input_read_complete": true
+      },
+      "pair_sum_replay": {
+        "tested": 21796,
+        "ten_sets": 247080,
+        "eleven_sets": 3,
+        "seconds": 663.688,
+        "all_unsatisfiable": true
+      }
+    }
+  ],
+  "catalogs_agree_entrywise": true,
+  "packing_files_agree_bytewise": true,
+  "positive_control_profiles": [
+    [
+      10,
+      10,
+      10
+    ],
+    [
+      9,
+      10,
+      11
+    ],
+    [
+      8,
+      11,
+      11
+    ]
+  ],
+  "sanitizers": "AddressSanitizer and UndefinedBehaviorSanitizer: small all-set enumeration controls, all three positive residual profiles for both checkers, and full vector packing enumeration passed.",
+  "fresh_driver_reproduction": {
+    "complete": true,
+    "jobs": 4,
+    "conclusion": "SR(8) <= 85",
+    "seconds": 615.343758270028,
+    "enumeration": {
+      "10": {
+        "n": 85,
+        "k": 10,
+        "endpoints": false,
+        "normalized": 14229040,
+        "sets": 49479804,
+        "max_weight": 999996,
+        "nodes": 250239198,
+        "seconds": 23.4869,
+        "complete": true
+      },
+      "11": {
+        "n": 85,
+        "k": 11,
+        "endpoints": false,
+        "normalized": 25600,
+        "sets": 56110,
+        "max_weight": 999995,
+        "nodes": 101630425,
+        "seconds": 6.76702,
+        "complete": true
+      },
+      "12": {
+        "n": 85,
+        "k": 12,
+        "endpoints": false,
+        "normalized": 0,
+        "sets": 0,
+        "max_weight": 0,
+        "nodes": 23889632,
+        "seconds": 1.67895,
+        "complete": true
+      }
+    },
+    "packing": {
+      "packings": 130780,
+      "nodes": 2029824,
+      "seconds": 0.735441,
+      "complete": true
+    },
+    "residual_batches": [
+      {
+        "found": false,
+        "tuples": 32695,
+        "unique_residuals": 32695,
+        "ten_sets": 371084,
+        "eleven_sets": 8,
+        "seconds": 558.746,
+        "input_read_complete": true
+      },
+      {
+        "found": false,
+        "tuples": 32695,
+        "unique_residuals": 32695,
+        "ten_sets": 371480,
+        "eleven_sets": 7,
+        "seconds": 565.708,
+        "input_read_complete": true
+      },
+      {
+        "found": false,
+        "tuples": 32695,
+        "unique_residuals": 32695,
+        "ten_sets": 372159,
+        "eleven_sets": 8,
+        "seconds": 561.221,
+        "input_read_complete": true
+      },
+      {
+        "found": false,
+        "tuples": 32695,
+        "unique_residuals": 32695,
+        "ten_sets": 373247,
+        "eleven_sets": 3,
+        "seconds": 564.905,
+        "input_read_complete": true
+      }
+    ]
+  }
+}
