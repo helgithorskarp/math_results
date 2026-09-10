@@ -1,0 +1,57 @@
+{
+  "target_artifact_ref": "bafkreigh7kw56zbzl2eqjx7vn7vf3x3u6t2va6llwlekfwnlsohfpbeu4q",
+  "target_source_commit": "0cf14711c72762d6e5e2cca9ecabbd88773dbea9",
+  "dependency_artifact_ref": "bafkreianyuagkcjkdxtkuqk5eggs7j5ehgzymmtfbdxtscjznetfsghqde",
+  "environment": {
+    "python": "3.11.2",
+    "g++": "12.2.0",
+    "c++_standard": "C++20",
+    "integer_mask": "unsigned __int128",
+    "optional_python_sat": "1.9.dev15"
+  },
+  "target_reproduction": {
+    "completed_at_utc": "2026-09-10T16:59:58Z",
+    "verified": true,
+    "seconds": 496.5463292970089,
+    "ten_sets": 35250764,
+    "eleven_sets": 30510,
+    "eligible_orbits": 1488,
+    "global_packings": 125576811,
+    "anchored_packings": 62861452,
+    "selected_residuals": 5959,
+    "selected_ten_set_occurrences": 999039,
+    "unresolved_cases": 1211,
+    "cases_sha256": "7c773d21b592e6bbab40dd1e6e67e5859b9a4394db2ca4f15e7a1bc5b6538e2b",
+    "verification_json_sha256": "e38516d5832955e900c7d0b95738976f4199bf049fadb9df34245b7c8312cf24"
+  },
+  "independent_ten_cap": {
+    "completed_at_utc": "2026-09-10T17:16:46Z",
+    "algorithm": "fixed endpoints with direct unordered-pair-sum bitset",
+    "normalized_sets": 10498958,
+    "translated_sets": 35250764,
+    "maximum_weight": 1999990,
+    "maximizer_zero_based": [15, 20, 22, 30, 36, 47, 56, 59, 60, 78],
+    "nodes": 259367284,
+    "seconds": 50.6384
+  },
+  "profile_dependency_reproduction": {
+    "completed_at_utc": "2026-09-10T17:14:40Z",
+    "verified": true,
+    "independent_mode": true,
+    "seconds": 492.4944886480225,
+    "eleven_catalogs_agree_as_sets": true,
+    "five_tuple_files_agree_bytewise": true,
+    "qualifying_five_tuples": 160244,
+    "distinct_residuals": 160242,
+    "all_four_residual_profiles_excluded": true,
+    "verification_json_sha256": "1d1aad6dc906ecec7d22c2bd2b2fd6935df6d70191b6672504716c8f4e81373a"
+  },
+  "sanitizer_checks": {
+    "address_sanitizer": true,
+    "undefined_behavior_sanitizer": true,
+    "selected_packings": 5959,
+    "positive_domains_per_method": 6,
+    "status": "passed"
+  },
+  "large_file_boundary": "Generated catalogs, tuple lists, residuals, CNFs, binary traces, binaries, virtual environments, and logs remain in reviewer scratch space and are not committed."
+}
