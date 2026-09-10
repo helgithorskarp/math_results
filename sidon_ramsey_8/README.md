@@ -17,6 +17,10 @@ balanced P84 partition up to reflection. It excludes 64 packing-empty cases
 and 213 further complete cases, leaving 1,211 explicitly indexed cases.
 It supplies no additional numerical bound.
 
+The subsequent [weight certificates](p84_weight_certificates/README.md)
+exclude one more whole case, leaving 1,210, and prove that a joint-eleven
+point-weight relaxation is feasible in the largest remaining case.
+
 A [seed extension obstruction](p80_extension_barrier/README.md) also rules out
 extending either embedding of the published `[80]` partition to `[81]` while
 retaining three seed classes. It covers all replacement class sizes and
