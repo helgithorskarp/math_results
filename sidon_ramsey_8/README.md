@@ -12,6 +12,11 @@ The subsequent [P84 profile theorem](p84_profiles/README.md) shows that any
 eight-class partition of `[84]` must have four eleven-element classes and
 four ten-element classes. That remaining balanced case is unresolved.
 
+A [global case decomposition](p84_global_cases/README.md) now covers every
+balanced P84 partition up to reflection. It excludes 64 packing-empty cases
+and 213 further complete cases, leaving 1,211 explicitly indexed cases.
+It supplies no additional numerical bound.
+
 A [seed extension obstruction](p80_extension_barrier/README.md) also rules out
 extending either embedding of the published `[80]` partition to `[81]` while
 retaining three seed classes. It covers all replacement class sizes and

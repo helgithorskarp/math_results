@@ -1,0 +1,157 @@
+{
+  "scope": "SAT experiments; no P84 decision or case exclusion follows from UNKNOWN.",
+  "solver": {
+    "name": "Kissat",
+    "version": "4.0.4",
+    "source_commit": "8af8e56f174b778aef3aa45af9f739b2a5f492c2"
+  },
+  "proof_checker": {
+    "name": "drat-trim",
+    "source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+  },
+  "runs": {
+    "p84_difference": {
+      "status": "UNKNOWN",
+      "exit_code": 0,
+      "seconds": 300.0409711879911,
+      "time_limit": 300,
+      "cnf_sha256": "72ee15dd60de4f6f100f649c45eeeb93a932c3d91e3297f3432efd511aba2411",
+      "proof_bytes": 402513656,
+      "proof_verified": false,
+      "proof_sha256": "4d490ad453b88bee749aa5a0ac4e03134b9ad9d0218db88fa5e1d98e3d6c7685"
+    },
+    "anchor0": {
+      "status": "UNKNOWN",
+      "exit_code": 0,
+      "seconds": 120.04851227701874,
+      "time_limit": 120,
+      "cnf_sha256": "f813374ead5b931bee19e795ea974e9fc3e31a9c21df836b002cd560c32f1a72",
+      "proof_bytes": 166974819,
+      "proof_verified": false,
+      "proof_sha256": "36f4671a774033313092b171fc1b47e7e4999d7a7a4d9a99e7748e6f032e6d6d"
+    },
+    "control14": {
+      "status": "SAT",
+      "exit_code": 10,
+      "seconds": 0.06526319199474528,
+      "time_limit": 30,
+      "cnf_sha256": "2ca74f9e29cf26dd17a0593f0f33cfdff3e39e9d727469b71d2059784809a184",
+      "proof_bytes": 4952,
+      "proof_verified": false,
+      "partition_zero_based": [
+        [
+          0,
+          4,
+          9,
+          10,
+          12
+        ],
+        [
+          2,
+          3,
+          6,
+          11,
+          13
+        ],
+        [
+          1,
+          5,
+          7,
+          8
+        ]
+      ],
+      "proof_sha256": "4be821f93e4aedb4edc104ec97f66d90abe7be8a9afc159d3b504952fd912135"
+    },
+    "control15": {
+      "status": "UNSAT",
+      "exit_code": 20,
+      "seconds": 0.11539671500213444,
+      "time_limit": 30,
+      "cnf_sha256": "61e772499de42c86c00b55400d291089ff5e6348dc95b4042221c2279e664abc",
+      "proof_bytes": 15133,
+      "proof_verified": true,
+      "checker_exit_code": 0,
+      "proof_sha256": "918bdf9d9b63179741795942cce3eb88a92687358157db68bc16446977ce0728"
+    },
+    "control24": {
+      "status": "SAT",
+      "exit_code": 10,
+      "seconds": 0.3662264080485329,
+      "time_limit": 30,
+      "cnf_sha256": "efe2a9cf186e485eeec1ece7c5765ac61952b5b7639f604904fd89e6dd5c8053",
+      "proof_bytes": 170719,
+      "proof_verified": false,
+      "partition_zero_based": [
+        [
+          0,
+          3,
+          11,
+          12,
+          16,
+          18
+        ],
+        [
+          1,
+          4,
+          13,
+          15,
+          19,
+          20
+        ],
+        [
+          2,
+          6,
+          7,
+          9,
+          17,
+          23
+        ],
+        [
+          5,
+          8,
+          10,
+          14,
+          21,
+          22
+        ]
+      ],
+      "proof_sha256": "bdf4d736bd2a6551f9a54ed7f459d62232e1fba6e24b352882da16458e751a58"
+    },
+    "control25": {
+      "status": "UNKNOWN",
+      "exit_code": 0,
+      "seconds": 30.03781217802316,
+      "time_limit": 30,
+      "cnf_sha256": "b7cb41fe20d3f87e95cc3d01bbc47b0a72639bc74a901b1b6a8a5b67982dcfd3",
+      "proof_bytes": 28279050,
+      "proof_verified": false,
+      "proof_sha256": "835ec9b74fe64c8076dd20866f7285a269d78812e20c924bd145a0215db5e86b"
+    }
+  },
+  "calibration": [
+    {
+      "n": 80,
+      "shift": 0,
+      "kind": "difference",
+      "valid": true
+    },
+    {
+      "n": 80,
+      "shift": 0,
+      "kind": "sums",
+      "valid": true
+    },
+    {
+      "n": 80,
+      "shift": 4,
+      "kind": "difference",
+      "valid": true
+    },
+    {
+      "n": 80,
+      "shift": 4,
+      "kind": "sums",
+      "valid": true
+    }
+  ]
+}
