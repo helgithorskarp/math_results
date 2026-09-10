@@ -12,6 +12,15 @@ A weighted pair-counting identity gives an exact nonnegative gap of `256-19z`; s
 
 The published aggregate certificate has also been [proved unrealizable as a graph](profile_exclusion.md), using a checked SAT refutation. This excludes that exact aggregate assignment; the broader 13-vertex case remains open.
 
+The [complete seven-edge subclass exclusion](seven_edge_exclusion.md) now proves
+that these thirteen vertices span **at most six edges**, so at least one has
+no degree-eight neighbor. A human pair-coverage argument reduces the equality
+case to 50 complete incidence cases; every case has an independently checked
+SAT refutation. The new computation uses no weighted-gap budget and covers
+all remaining vertex incidences. It reduces the entire surviving `z=13`
+search to a degree-eight root with three degree-six and five degree-seven
+neighbors.
+
 This is a structural lemma, not an improved extremal-number bound or an existence result. The weighting and the specialization were obtained in this campaign; priority is not established. The underlying two-path packing method is standard, notably in Backelin's work cited below.
 
 ## Reproduction
@@ -39,7 +48,19 @@ The verifier checks the rational-free coefficient certificate on every permitted
 
 `boundary_profile.json` satisfies the six degree-class pair-capacity inequalities, all type-incidence balances, all type-averaged two-step capacities, and the simple-graph upper capacities between and within types. It is **not a graph**: the data do not assign these incidences to individual vertices or enforce unique common neighbors for individual pairs. It demonstrates that even this strengthened aggregate relaxation does not exclude `z=13`. Its definitions and exact verification are in `verify.py`; no optimizer is needed to check the certificate. It was found using SciPy 1.15.3 / HiGHS, with integer variables, then checked using Python integers.
 
-For the optional SAT reproduction, see [profile_exclusion.md](profile_exclusion.md) and `profile_sat.py`. It regenerates the omitted CNF and proof outside the repository and calls a separate proof checker. The next substantive phase is to combine the all-sink conclusion with the small gap budget in a complete incidence search or a further structural exclusion. No unbounded computation is running.
+For the earlier fixed-certificate reproduction, see [profile_exclusion.md](profile_exclusion.md) and `profile_sat.py`.
+For the complete new subclass, see [seven_edge_exclusion.md](seven_edge_exclusion.md):
+
+```sh
+python3 verify_seven_edge.py
+python3 reproduce_seven_edge.py --work /tmp/order54-seven-edge --checker /path/to/drat-trim
+```
+
+The latter requires the pinned SAT dependencies and must finish with
+`verified_unsat: 50`. It regenerates every CNF and proof outside the repository
+and calls the separate checker. The next substantive phase is to decide
+realizability with the newly forced isolated high root. No unbounded
+computation is running.
 
 ## Sources and scope
 
