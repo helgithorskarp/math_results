@@ -1,4 +1,9 @@
-# An exact exclusion of eight Sidon classes on [85]
+# Exact upper bounds for the eighth Sidon–Ramsey number
+
+**Current result: [the complete P84 exclusion](p84_exclusion/README.md) gives
+81 <= SR(8) <= 84.** It checks every balanced P84 case by two complete
+implementations and imports the independently reviewed profile theorem.
+The original P85 proof is preserved below.
 
 This directory reproduces the computer-assisted upper bound **SR(8) <= 85**.
 The Sidon–Ramsey number SR(r) is the smallest n for which `[n] = {1,...,n}`
@@ -10,15 +15,15 @@ does not determine the exact value.
 
 The subsequent [P84 profile theorem](p84_profiles/README.md) shows that any
 eight-class partition of `[84]` must have four eleven-element classes and
-four ten-element classes. That remaining balanced case is unresolved.
+four ten-element classes. The balanced case is now excluded by the subsequent complete computation.
 
 A [global case decomposition](p84_global_cases/README.md) now covers every
 balanced P84 partition up to reflection. It excludes 64 packing-empty cases
-and 213 further complete cases, leaving 1,211 explicitly indexed cases.
+and 213 further complete cases, at that stage leaving 1,211 explicitly indexed cases.
 It supplies no additional numerical bound.
 
 The subsequent [weight certificates](p84_weight_certificates/README.md)
-exclude one more whole case, leaving 1,210, and prove that a joint-eleven
+excluded one more whole case, then leaving 1,210, and prove that a joint-eleven
 point-weight relaxation is feasible in the largest remaining case.
 
 A [seed extension obstruction](p80_extension_barrier/README.md) also rules out
