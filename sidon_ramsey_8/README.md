@@ -12,6 +12,11 @@ The subsequent [P84 profile theorem](p84_profiles/README.md) shows that any
 eight-class partition of `[84]` must have four eleven-element classes and
 four ten-element classes. That remaining balanced case is unresolved.
 
+A [seed extension obstruction](p80_extension_barrier/README.md) also rules out
+extending either embedding of the published `[80]` partition to `[81]` while
+retaining three seed classes. It covers all replacement class sizes and
+does not change the numerical bounds.
+
 An [external end-to-end review](https://github.com/njallskarp/math_source_code_open/tree/main/sidon_ramsey_8_independent_review)
 accepts the P85 upper bound with stated computational trust limitations,
 after replaying this package and implementing a separate full verifier.

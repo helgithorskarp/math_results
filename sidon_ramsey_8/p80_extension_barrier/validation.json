@@ -1,0 +1,285 @@
+{
+  "claim": "No P81 partition retains three seed classes, for either seed shift.",
+  "complete": true,
+  "independent_methods": true,
+  "runs": [
+    {
+      "shift": 0,
+      "method": 0,
+      "found": false,
+      "domains": 56,
+      "eleven_occurrences": 1094,
+      "large_pairs": 128,
+      "balanced_ten_occurrences": 3153154,
+      "other_ten_occurrences": 1503,
+      "other_eleven_occurrences": 0,
+      "twelve_occurrences": 0,
+      "catalog_calls": 1462,
+      "complete": true,
+      "seconds": 174.263,
+      "partition": []
+    },
+    {
+      "shift": 0,
+      "method": 1,
+      "found": false,
+      "domains": 56,
+      "eleven_occurrences": 1094,
+      "large_pairs": 128,
+      "balanced_ten_occurrences": 3153154,
+      "other_ten_occurrences": 1503,
+      "other_eleven_occurrences": 0,
+      "twelve_occurrences": 0,
+      "catalog_calls": 1462,
+      "complete": true,
+      "seconds": 359.086,
+      "partition": []
+    },
+    {
+      "shift": 1,
+      "method": 0,
+      "found": false,
+      "domains": 56,
+      "eleven_occurrences": 1024,
+      "large_pairs": 126,
+      "balanced_ten_occurrences": 2895923,
+      "other_ten_occurrences": 1915,
+      "other_eleven_occurrences": 0,
+      "twelve_occurrences": 0,
+      "catalog_calls": 1388,
+      "complete": true,
+      "seconds": 169.711,
+      "partition": []
+    },
+    {
+      "shift": 1,
+      "method": 1,
+      "found": false,
+      "domains": 56,
+      "eleven_occurrences": 1024,
+      "large_pairs": 126,
+      "balanced_ten_occurrences": 2895923,
+      "other_ten_occurrences": 1915,
+      "other_eleven_occurrences": 0,
+      "twelve_occurrences": 0,
+      "catalog_calls": 1388,
+      "complete": true,
+      "seconds": 369.796,
+      "partition": []
+    }
+  ],
+  "traces": {
+    "0": {
+      "bytes": 50538800,
+      "sha256": "e11d54cebfdd52018aa7b25c2895ce4cd99bea33bde2d1934f200a1ea814ed86"
+    },
+    "1": {
+      "bytes": 46426208,
+      "sha256": "ff3492f41e9f577bee35bc149ec816677f392d4e0252c54e11cde29b14bb05ad"
+    }
+  },
+  "entrywise_equal": true,
+  "positive_controls": [
+    {
+      "fixture": 0,
+      "method": 0,
+      "returned_sizes": [
+        10,
+        10,
+        10,
+        10,
+        11
+      ]
+    },
+    {
+      "fixture": 0,
+      "method": 1,
+      "returned_sizes": [
+        10,
+        10,
+        10,
+        10,
+        11
+      ]
+    },
+    {
+      "fixture": 1,
+      "method": 0,
+      "returned_sizes": [
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    {
+      "fixture": 1,
+      "method": 1,
+      "returned_sizes": [
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    {
+      "fixture": 2,
+      "method": 0,
+      "returned_sizes": [
+        9,
+        10,
+        10
+      ]
+    },
+    {
+      "fixture": 2,
+      "method": 1,
+      "returned_sizes": [
+        9,
+        10,
+        10
+      ]
+    },
+    {
+      "fixture": 3,
+      "method": 0,
+      "returned_sizes": [
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "fixture": 3,
+      "method": 1,
+      "returned_sizes": [
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "fixture": 4,
+      "method": 0,
+      "returned_sizes": [
+        9,
+        9,
+        11
+      ]
+    },
+    {
+      "fixture": 4,
+      "method": 1,
+      "returned_sizes": [
+        9,
+        9,
+        11
+      ]
+    },
+    {
+      "fixture": 5,
+      "method": 0,
+      "returned_sizes": [
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "fixture": 5,
+      "method": 1,
+      "returned_sizes": [
+        8,
+        10,
+        11
+      ]
+    }
+  ],
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "flags": [
+    "-O3",
+    "-std=c++20",
+    "-Wall",
+    "-Wextra",
+    "-Wconversion",
+    "-Werror"
+  ],
+  "python": "3.11.2",
+  "machine": "x86_64",
+  "jobs": 4,
+  "wall_seconds": 379.338738987979,
+  "max_child_rss_kb_linux": 198024,
+  "source_sha256": "5c550838a796d6ad6657a3e53e5a061bdf8917f0640c1cf2253de517e02a2053",
+  "sanitizers": {
+    "flags": [
+      "-O1",
+      "-g",
+      "-std=c++20",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-no-pie"
+    ],
+    "controls": [
+      {
+        "fixture": 0,
+        "method": 0,
+        "passed": true
+      },
+      {
+        "fixture": 1,
+        "method": 0,
+        "passed": true
+      },
+      {
+        "fixture": 2,
+        "method": 0,
+        "passed": true
+      },
+      {
+        "fixture": 3,
+        "method": 0,
+        "passed": true
+      },
+      {
+        "fixture": 4,
+        "method": 0,
+        "passed": true
+      },
+      {
+        "fixture": 5,
+        "method": 0,
+        "passed": true
+      },
+      {
+        "fixture": 0,
+        "method": 1,
+        "passed": true
+      },
+      {
+        "fixture": 1,
+        "method": 1,
+        "passed": true
+      },
+      {
+        "fixture": 2,
+        "method": 1,
+        "passed": true
+      },
+      {
+        "fixture": 3,
+        "method": 1,
+        "passed": true
+      },
+      {
+        "fixture": 4,
+        "method": 1,
+        "passed": true
+      },
+      {
+        "fixture": 5,
+        "method": 1,
+        "passed": true
+      }
+    ]
+  }
+}
