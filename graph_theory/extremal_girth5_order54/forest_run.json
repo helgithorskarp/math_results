@@ -1,0 +1,73 @@
+{
+  "certificates": [
+    {
+      "objective": "m",
+      "variables": 1710,
+      "types": 72,
+      "type_edges": 1638,
+      "corrected_lower_bound": "4120933/1000000",
+      "maximum_coefficient_error": "9/500000"
+    },
+    {
+      "objective": "-(m+k)",
+      "variables": 1710,
+      "types": 72,
+      "type_edges": 1638,
+      "corrected_lower_bound": "-138976/15625",
+      "maximum_coefficient_error": "13/1000000"
+    }
+  ],
+  "coverage": {
+    "forests": 10,
+    "profiles_by_m_k": {
+      "5,0": 49,
+      "5,1": 29,
+      "5,2": 15,
+      "5,3": 8,
+      "6,0": 24,
+      "6,1": 13,
+      "6,2": 6
+    },
+    "total_profiles": 173
+  },
+  "graph_controls": [
+    {
+      "n": 50,
+      "edges": 175,
+      "all_rows_satisfied": true
+    },
+    {
+      "n": 50,
+      "edges": 174,
+      "all_rows_satisfied": true
+    }
+  ],
+  "symmetry_control": {
+    "block_lex_matrices": 4096
+  },
+  "verified_unsat": 22,
+  "excluded_forests": [
+    "5_3a",
+    "5_3b",
+    "6_2a"
+  ],
+  "total_seconds": 129.40447059099097,
+  "peak_rss_kb": 277564,
+  "cases_count": 22,
+  "all_cnf_hashes_match_expected": true,
+  "all_proof_hashes_match_first_run": true,
+  "case_manifest_sha256": "3008dbe3114edf4cfadf05810ab4c534ada46bae7e08289c56d4973e46030c6b",
+  "total_cnf_bytes": 211872927,
+  "total_proof_bytes": 26643320,
+  "solver_seconds": 30.097834842745215,
+  "checker_seconds": 34.183335525973234,
+  "conflicts": {
+    "min": 176,
+    "max": 9663,
+    "sum": 49929
+  },
+  "python": "3.11.2",
+  "python_sat": "1.8.dev24",
+  "solver": "g4",
+  "drat_trim_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+}

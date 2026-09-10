@@ -21,6 +21,13 @@ all remaining vertex incidences. It reduces the entire surviving `z=13`
 search to a degree-eight root with three degree-six and five degree-seven
 neighbors.
 
+The [forest reduction](forest_reduction.md) further restricts the high-induced
+graph to **seven explicit forests with five or six edges and at most two
+degree-two vertices**. Exact rational certificates first give a ten-forest
+cover. Complete incidence refutations then exclude three entire forests,
+covering all 22 of their high-neighbor-count profiles. Every remaining
+forest still requires a realization decision.
+
 This is a structural lemma, not an improved extremal-number bound or an existence result. The weighting and the specialization were obtained in this campaign; priority is not established. The underlying two-path packing method is standard, notably in Backelin's work cited below.
 
 ## Reproduction
@@ -61,6 +68,17 @@ The latter requires the pinned SAT dependencies and must finish with
 and calls the separate checker. The next substantive phase is to decide
 realizability with the newly forced isolated high root. No unbounded
 computation is running.
+
+For the latest seven-forest reduction:
+
+```sh
+python3 verify_forest_reduction.py
+python3 reproduce_forest_exclusions.py --work /tmp/order54-forests --checker /path/to/drat-trim
+```
+
+The first command uses exact standard-library arithmetic; the second must
+finish with `verified_unsat: 22`. The three excluded forests are covered in
+full, rather than only for selected incidence totals.
 
 ## Sources and scope
 
