@@ -18,7 +18,9 @@ these **six** high induced forests:
 | 6_0 | 6P2 + K1 |
 | 6_1 | P3 + 4P2 + 2K1 |
 
-Existence in all six surviving forests remains unresolved. The unrestricted
+These six forests were unresolved at this stage. Subsequent
+[P4 work](p4_exclusion.md) excludes `5_2a` completely, leaving five.
+The unrestricted
 working bounds 185 <= ex(54,{C3,C4}) <= 187 are unchanged. This theorem
 covers every remaining incidence in the excluded forest, without fixing
 a favorable local-type histogram or type-to-type edge count.

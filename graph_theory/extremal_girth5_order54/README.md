@@ -29,10 +29,23 @@ covering all 22 of their high-neighbor-count profiles. Every remaining
 forest at that stage still required a realization decision.
 
 The [two-P3 exclusion](two_p3_exclusion.md) closes the entire remaining
-forest `2P3+2P2+3K1`, leaving **six forests**. Its six possible high-neighbor
+forest `2P3+2P2+3K1`, leaving six forests at that stage. Its six possible high-neighbor
 profiles are covered by 13 proof-checked cases. The key reduction forces
 the common neighbor and the individual neighbor roles of the two path
 centers; the full order-54 existence question remains open.
+
+The [P4 exclusion](p4_exclusion.md) now closes the entire forest
+`P4+2P2+5K1`, leaving **five forests**. Adjacent path centers force twelve
+independent low neighbors; a complete center/endpoint role cover gives
+52 proof-checked incidence cases across all fifteen high-neighbor
+histograms. The surviving forests are `5P2+3K1`, `P3+3P2+4K1`,
+`2P3+P2+5K1`, `6P2+K1`, and `P3+4P2+2K1`.
+
+Reproduce this latest exclusion with `python3 verify_p4.py` and
+`python3 reproduce_p4.py --work /tmp/order54-p4 --checker /path/to/drat-trim`.
+The [proof](p4_exclusion.md) gives the complete cover, dependencies and
+trust boundary; [p4_expected.json](p4_expected.json) records all 52
+formula/proof hashes, and [p4_run.json](p4_run.json) records the fresh run.
 
 This is a structural lemma, not an improved extremal-number bound or an existence result. The weighting and the specialization were obtained in this campaign; priority is not established. The underlying two-path packing method is standard, notably in Backelin's work cited below.
 

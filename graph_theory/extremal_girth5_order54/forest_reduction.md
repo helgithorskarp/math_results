@@ -17,7 +17,8 @@ Here P_j is the path on j vertices, and K1 is an isolated vertex.
 
 This is a necessary classification of actual graph realizations. Existence
 was unresolved in these seven cases at this reduction stage. Subsequent
-[whole-forest work](two_p3_exclusion.md) excludes `6_2b`, leaving six cases.
+[two-P3 work](two_p3_exclusion.md) excludes `6_2b`, and
+[P4 work](p4_exclusion.md) excludes `5_2a`, leaving five cases.
 In particular the theorem does
 not exclude thirteen degree-eight vertices or improve the working interval
 185 <= ex(54,{C3,C4}) <= 187.
@@ -252,4 +253,5 @@ method is standard; no historical priority or standalone publishability
 claim is made for this specialization.
 
 Subsequent [two-P3 work](two_p3_exclusion.md) closes `6_2b` completely;
-the other six forests remain unresolved.
+[P4 work](p4_exclusion.md) then closes `5_2a`. The other five forests
+remain unresolved.

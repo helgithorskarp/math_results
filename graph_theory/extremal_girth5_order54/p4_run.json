@@ -1,0 +1,83 @@
+{
+  "coverage": {
+    "center_cover": {
+      "profiles": 15,
+      "center_case_counts": [
+        1,
+        1,
+        1,
+        0,
+        3,
+        3,
+        9,
+        4,
+        4,
+        12,
+        0,
+        0,
+        2,
+        1,
+        9
+      ],
+      "total_cases": 50,
+      "empty_profiles": [
+        3,
+        10,
+        11
+      ]
+    },
+    "complete_histograms": 15,
+    "endpoint_cover": {
+      "endpoint_types": [
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "unordered_type_pairs": 3,
+      "remaining_six_role_sizes": [
+        1,
+        3,
+        3
+      ]
+    },
+    "endpoint_role_cases": 3,
+    "positive_control": {
+      "graph": "Hoffman-Singleton",
+      "vertices": 50,
+      "edges": 175,
+      "oriented_induced_P4": 12600,
+      "individual_partition_checks": 907200
+    },
+    "sat_cases": 52
+  },
+  "verified_unsat": 52,
+  "excluded_forest": "P4+2P2+5K1",
+  "total_seconds": 611.9372580120107,
+  "peak_rss_kb": 339924,
+  "cases_count": 52,
+  "all_cnf_hashes_match_expected": true,
+  "all_proof_hashes_match_expected": true,
+  "case_manifest_sha256": "f7fce4b9fbe8d1db865498fdf57de54c00b1454bda11ef6d9c2393921fe1b924",
+  "total_cnf_bytes": 496384935,
+  "total_proof_bytes": 207253189,
+  "solver_seconds": 218.51612321013818,
+  "checker_seconds": 234.79010370315518,
+  "conflicts": {
+    "min": 244,
+    "max": 41701,
+    "sum": 247608
+  },
+  "python": "3.11.2",
+  "python_sat": "1.8.dev24",
+  "six": "1.17.0",
+  "solver": "g4",
+  "drat_trim_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "peak_rss_scope": "Main sequential Python reproduction process; proof checker runs separately"
+}
