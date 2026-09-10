@@ -1,0 +1,48 @@
+{
+  "certificate_bytes": 8672,
+  "certificate_sha256": "1ca587a034b9cd27f30c57bd1df9e5d3af46721cbc9fa0774f28261088899dec",
+  "checks": [
+    {
+      "check": "OPTIMIZED",
+      "elapsed_seconds": 14.33045992598636,
+      "max_rss_kib": 121716
+    },
+    {
+      "check": "CONTROLS",
+      "elapsed_seconds": 31.675158230005763,
+      "max_rss_kib": 122676
+    },
+    {
+      "check": "FRESH",
+      "elapsed_seconds": 42.948951758036856,
+      "max_rss_kib": 206628
+    }
+  ],
+  "final_control_resources": {
+    "elapsed_seconds": 31.893767728004605,
+    "max_rss_kib": 123300
+  },
+  "final_controls": {
+    "assertions_used_for_correctness": false,
+    "rejected": [
+      "omitted affected pencil",
+      "noncovering valid three-section choice",
+      "false admissible-lift count",
+      "false global pair-mode count"
+    ],
+    "verified": true
+  },
+  "final_successful_delayed_export_byte_identical": true,
+  "final_verification_resources": {
+    "elapsed_seconds": 15.60050272900844,
+    "max_rss_kib": 122268
+  },
+  "fresh_certificate_byte_identical": true,
+  "frontier_bytes": 2774033,
+  "frontier_file_sha256": "734286535020a4fc4ccbaac44a8a24c4b775d89854de6515c25b45353b93dc4b",
+  "independent_reviewer_1_verdict": null,
+  "invalid_certificates_produce_no_export": true,
+  "normal_optimized_identical": true,
+  "producer_independent_and_fresh_frontiers_byte_identical": true,
+  "trust_note": "Two author implementations, not an independent reviewer verdict. The verifier imports the accepted baseline and recounts every changed lift."
+}
