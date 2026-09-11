@@ -1,5 +1,9 @@
 # A uniform incidence reduction for twelve high sinks
 
+The subsequent [one-quad exclusion](z12_A0_one_quad_exclusion.md) refines
+the cover below to ten high forests and 53 necessary profiles. The
+results and evidence of this preceding reduction are preserved.
+
 **Theorem.** Let $G$ be a simple graph on 54 vertices with 187 edges,
 girth at least five, and twelve degree-eight vertices. Write
 $T=V_8$, $C(v)=N(v)\cap T$, $c(v)=|C(v)|$, and $H=G[T]$.
