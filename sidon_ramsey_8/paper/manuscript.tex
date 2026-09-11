@@ -1,0 +1,521 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{computation}[theorem]{Computation}
+\newcommand{\SR}{\operatorname{SR}}
+\newcommand{\wt}{\operatorname{wt}}
+\newcommand{\PP}{P_{83}}
+\title{An upper bound of 83 for the eighth Sidon--Ramsey number}
+\author{Research draft for human review\\\small Automated research campaign, researcher 2}
+\date{September 11, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A Sidon set of integers has distinct unordered pair sums, including sums
+of an element with itself. The eighth Sidon--Ramsey number is the least
+$n$ for which $\{1,\ldots,n\}$ cannot be partitioned into eight Sidon sets.
+We give an exact computer-assisted proof that no such partition exists
+for $n=83$, yielding $81\leq\SR(8)\leq83$. The proof covers every class-size
+profile. An explicit integer weight vector reduces the problem to
+weighted packings of eleven-element Sidon sets and complete searches in
+their complements. The final profile has an exhaustive cover by
+65,073,232 anchored triples. Two implementations agree on all case counts
+and recorded nonempty completion queries. Public source, compact case
+ledgers, and a complete replay command accompany the proof. The lower
+bound uses a previously published partition of $\{1,\ldots,80\}$.
+\end{abstract}
+
+\section{Statement and context}
+Write $[n]=\{1,\ldots,n\}$ and $P_n=\{0,\ldots,n-1\}$. A finite set
+$A\subset\mathbb Z$ is \emph{Sidon} if
+\[
+ a+b=c+d,\quad a,b,c,d\in A
+ \quad\Longrightarrow\quad \{a,b\}=\{c,d\}.
+\]
+Pairs here are unordered and repetitions are allowed. Translation and
+reflection preserve this property. A Sidon $k$-partition is a partition
+into at most $k$ Sidon sets, equivalently a coloring with $k$ colors whose
+color classes are Sidon. We define $\SR(k)$ as the least $n$ with no such
+partition of $[n]$, using the convention in \cite{EGMRS,EP}. For $n\geq k$,
+requiring exactly $k$ nonempty classes is equivalent, since Sidon classes
+can be split. The class-size bound below also rules out empty classes in
+a hypothetical eight-coloring at $n=83$.
+
+Espinosa-Garc\'ia and Pellicer established $\SR(8)\leq86$;
+Theorem 4.1 of their open preprint gives the proof \cite{EP}. The
+construction of Xiu, Fan and Liang \cite[Table I, $I=8$]{XFL} supplies
+eight disjoint ten-element Sidon sets covering $[80]$. Our numerical
+result is the following.
+
+\begin{theorem}\label{thm:main}
+There is no partition of $P_{83}$ into eight Sidon sets. Consequently,
+\[
+                         81\leq\SR(8)\leq83.
+\]
+\end{theorem}
+
+The upper bound is established by the finite computations specified in
+this paper and the accompanying source. We do not assume that a
+hypothetical partition is balanced. In particular, eliminating only
+profile $11^3 10^5$ would not suffice; the other six possible profiles
+are handled first. Here $s^r$ means $r$ classes of size $s$.
+The result does not determine whether $\SR(8)$ is 81, 82, or 83.
+
+The proof has two computational stages. The first establishes the
+complete profile landscape at $P_{83}$ and excludes every profile except
+$11^3 10^5$. The second excludes that profile. Both are replayed from
+fresh catalogs, and their interface is checked case by case.
+Earlier exclusions at $P_{84}$ and $P_{85}$ are not mathematical premises.
+The contribution is the finite numerical bound with its exhaustive
+verification; no novelty is claimed for the elementary search reductions.
+
+\section{Enumerating Sidon sets and certifying weights}\label{sec:weights}
+For $a_1<\cdots<a_s$, the Sidon property is equivalent to distinctness of
+all positive differences $a_j-a_i$, $i<j$. Indeed, equal positive
+differences rearrange to equal unordered sums. Conversely, canceling a
+common term in a nontrivial sum equality is impossible; arranging the
+terms of such an equality gives two equal positive differences. This
+also accounts for a collision involving a double, such as $a+c=2b$.
+
+The two catalog methods use this equivalence. One extends increasing
+prefixes while tracking used positive differences. The other fixes the
+minimum and maximum elements and tracks unordered sums, including
+doubles. Each tests every compatible next element, subject only to
+necessary bounds: enough available points must remain; distinct positive
+differences force diameter at least $\binom{s}{2}$; and $r$ future
+consecutive gaps have sum at least $r(r+1)/2$. The difference method may
+strengthen the last bound by using the $r$ smallest positive differences
+not already used. Every completed set has a unique increasing order.
+For normalized enumeration, all translates fitting the interval are
+emitted. These observations justify completeness of the catalog
+recursions; the implementation is part of the computational trust
+boundary described in Section~\ref{sec:repro}.
+
+For $D\subseteq\PP$, define $\wt(D)=\sum_{x\in D}u_x$, where the
+nonnegative integer weights $u_x$ are given in
+Table~\ref{tab:weights}. They satisfy $u_x=u_{82-x}$ and
+\begin{equation}\label{eq:constants}
+ W:=\wt(\PP)=31{,}134{,}774,\qquad
+ M:=4{,}000{,}000,\qquad \max_x u_x=444{,}444.
+\end{equation}
+The vector is supplied explicitly. Its method of discovery is irrelevant
+to validity: all needed inequalities are verified by integer enumeration.
+
+\begin{table}[ht]
+\centering
+\input{weights_table.tex}
+\caption{The 42 independent entries of the weight vector. Set
+$u_{82-x}=u_x$ for the remaining entries.}\label{tab:weights}
+\end{table}
+
+\begin{computation}\label{comp:catalogs}
+The complete catalogs in $\PP$ have the following sizes and weight maxima.
+\[
+\begin{array}{c|r|r}
+ |A|&\text{number of Sidon sets}&\max\wt(A)\\\hline
+ 10&24{,}751{,}806&3{,}999{,}980\\
+ 11&15{,}958&3{,}999{,}979\\
+ 12&0&\text{not applicable}
+\end{array}
+\]
+Both catalog methods give identical sets for sizes 10 and 11 and find
+no size-12 set. The ten-element binary catalogs agree byte for byte;
+the eleven-element catalogs agree as sets after sorting.
+\end{computation}
+
+A larger Sidon set would contain a size-12 subset, so every class has
+size at most 11. Classes with at most nine points have weight at most
+$9\cdot444{,}444=3{,}999{,}996<M$. Thus Computation~\ref{comp:catalogs}
+proves the uniform bound
+\begin{equation}\label{eq:cap}
+                   \wt(A)\leq M\quad\text{for every Sidon }A\subseteq\PP.
+\end{equation}
+We deliberately retain this slightly loose common cap throughout the
+proof, so all thresholds correspond exactly to the published case ledgers.
+
+\begin{lemma}\label{lem:profiles}
+Every Sidon eight-partition of $\PP$, if one exists, has one of these
+seven profiles:
+\begin{align*}
+&11^7 6,\quad 11^6 10\,7,\quad 11^6 9\,8,\quad
+ 11^5 10^2 8,\quad 11^5 10\,9^2,\\
+&11^4 10^3 9,\qquad 11^3 10^5.
+\end{align*}
+\end{lemma}
+\begin{proof}
+Writing each class size as $11-d_i$ gives nonnegative integers $d_i$
+with $\sum_i d_i=88-83=5$. The seven integer partitions of 5 give the
+listed profiles. This also shows that at least three classes have size 11.
+\end{proof}
+
+\section{Exhaustive packing and completion reductions}
+We record the reductions that connect the finite computations to all
+hypothetical partitions. For any choice of $r$ classes in an eight-class
+partition, \eqref{eq:cap} implies
+\begin{equation}\label{eq:union}
+ \wt\left(\bigcup_{i=1}^{r}A_i\right)\geq W-(8-r)M.
+\end{equation}
+Disjointness makes the weight of the union additive.
+
+\subsection{Reflection and canonical anchors}\label{sec:reflection}
+Let $m(A)=\sum_{x\in A}2^x$ be the membership mask, and
+$\rho(A)=\{82-x:x\in A\}$. No eleven-element Sidon set is fixed by
+$\rho$: a fixed set of that size contains multiple distinct mirrored
+pairs, each with sum 82. Partition the eleven-element catalog into
+reflection pairs. In each pair choose the member with smaller mask as
+representative. Sort the pairs by decreasing weight, breaking ties by
+representative mask, and list each representative followed by its
+reflection. Denote these rows by $A_0,\ldots,A_{15957}$.
+
+\begin{lemma}\label{lem:anchor}
+Every collection of $r\geq1$ disjoint eleven-element classes, up to
+reflecting the entire collection, occurs among the increasing row
+sequences
+\[
+        2q=i_1<i_2<\cdots<i_r,
+\]
+where $q$ is the earliest reflection pair represented in the collection.
+If the collection can be part of an eight-class partition, then
+\[
+                    r\wt(A_{2q})\geq W-(8-r)M.
+\]
+\end{lemma}
+\begin{proof}
+If the earliest represented pair contributes its representative, use it
+as the first row. Otherwise reflect the whole collection. Reflection
+leaves the set of represented pair indices unchanged and interchanges
+the two rows of the earliest pair. Every other selected row is later.
+This remains valid if both members of that pair occur. Since row weights
+are nonincreasing, the first weight bounds all $r$ selected weights.
+Apply \eqref{eq:union}.
+\end{proof}
+
+This is a complete cover, not an assertion of one representative per
+reflection orbit. Such multiplicities do not affect exclusion. After an
+anchor is fixed, both packing traversals enumerate increasing disjoint
+row sequences satisfying \eqref{eq:union}. One checks intersection with
+the current union; the other filters compatible candidates recursively
+(or intersects adjacency bitsets). Weight pruning uses upper bounds
+from the heaviest still available rows. These bounds can discard only
+sequences unable to reach \eqref{eq:union}.
+
+\subsection{Heaviest-class recursion}\label{sec:recursion}
+\begin{lemma}\label{lem:heaviest}
+Suppose $D$ is to be partitioned into $k$ ten-element Sidon classes,
+all of weight at most $U$. If $\wt(D)>kU$, no such partition exists.
+Otherwise a heaviest class $T$ satisfies
+\[
+              \left\lceil\frac{\wt(D)}k\right\rceil
+              \leq\wt(T)\leq U.
+\]
+Consequently, it suffices to enumerate every Sidon ten-set $T\subset D$
+in this interval and recurse on $(D\setminus T,k-1,\wt(T))$.
+For $k=1$, direct testing of $D$ decides the state.
+\end{lemma}
+\begin{proof}
+The first statement follows by adding the $k$ class caps. The maximum
+of $k$ weights is at least their average. Order the classes of any
+partition by nonincreasing weight and apply this fact successively.
+Every partition gives a branch of the recursion, including ties.
+\end{proof}
+
+For a domain to be partitioned into $t$ tens and one nine, cap the nine
+by $M$. A heaviest ten then satisfies
+\begin{equation}\label{eq:mixed}
+ \left\lceil\frac{\wt(D)-M}{t}\right\rceil\leq\wt(T)\leq U,
+ \qquad \wt(D)\leq tU+M.
+\end{equation}
+Recurse on the tens in nonincreasing order and test the final nine
+directly. There is no requirement that the nine weigh less than the
+last ten. This distinction is needed for coverage of the mixed profile.
+
+The complete heavy-ten catalog consists of the tens satisfying
+\begin{equation}\label{eq:cutoff}
+       \wt(T)\geq C:=\left\lceil\frac{W-6M}{2}\right\rceil
+                    =3{,}567{,}387.
+\end{equation}
+Filtering either complete ten catalog gives exactly 4,832,138 such sets.
+In a balanced completion state with $k\geq2$, at most $8-k$ classes
+have already been removed, so
+\[
+ \frac{\wt(D)}k\geq\frac{W-(8-k)M}{k}
+             =M+\frac{W-8M}{k}\geq\frac{W-6M}{2}.
+\]
+The last inequality uses $W-8M=-865{,}226<0$ and $k\geq2$.
+Thus the heavy catalog contains every ten needed by
+Lemma~\ref{lem:heaviest}. The last ten is tested directly and need not
+belong to the heavy catalog.
+
+For the mixed profile, while $t\geq2$ tens remain together with the
+nine, the same calculation gives
+\[
+ \frac{\wt(D)-M}{t}\geq\frac{W-(8-t)M}{t}
+             \geq\frac{W-6M}{2}.
+\]
+When one ten and the nine remain, the domain has 19 points; every
+Sidon ten in the interval \eqref{eq:mixed} is generated directly.
+The heavy-catalog restriction is not imposed at that stage.
+
+\section{Excluding the profiles with at least four elevens}
+\subsection{Five or more elevens}
+Any five eleven-element classes in a partition satisfy
+\[
+                       \wt(A_1\cup\cdots\cup A_5)\geq W-3M
+                                                   =19{,}134{,}774.
+\]
+Their complement has 28 points. Lemma~\ref{lem:profiles} gives precisely
+five possible remaining profiles:
+\begin{equation}\label{eq:28profiles}
+          (11,11,6),\ (11,10,7),\ (11,9,8),\ (10,10,8),\ (10,9,9).
+\end{equation}
+These include the possibility that the original partition has more than
+five elevens.
+
+\begin{computation}\label{comp:five}
+There are exactly 2,142 unordered disjoint five-tuples satisfying the
+weight threshold, with 2,142 distinct 28-point complements. None of these
+complements admits any profile in \eqref{eq:28profiles}.
+\end{computation}
+
+The first packing method recursively filters compatible rows; the second
+uses the full eleven-set disjointness graph. Both produce the same sorted
+five-tuple list. Two complement routines generate Sidon subsets by
+positive differences or unordered sums, respectively, and test all five
+profiles. They find 66 ten-subset occurrences and no eleven-subset
+occurrences across the domains. The recorded nine-subset count is 2:
+this counts only the conditional nine queries actually required by the
+search, not all nine-subsets of all 28-point domains.
+
+For completeness, these query shortcuts follow from containment. Every
+eleven-set contains eleven distinct ten-subsets, so a domain with fewer
+than eleven tens cannot contain an eleven. Profiles with an eleven can
+be decided by enumerating the relevant eleven/eleven, eleven/ten, or
+eleven/nine disjoint choices and testing the last class. With no eleven,
+only $(10,10,8)$ and $(10,9,9)$ remain. Enumerate their ten choices and,
+for the latter, the required nines in the residual 18-point domain;
+test the complement directly. Positive controls contain an explicit
+partition of every profile in \eqref{eq:28profiles}.
+
+\subsection{Exactly four elevens}
+The only profile is $11^4 10^3 9$. The union of its four elevens has
+weight at least $W-4M=15,134,774$. Lemma~\ref{lem:anchor} gives 2,701
+eligible anchors; all increasing disjoint anchored quadruples above
+this threshold are traversed.
+
+\begin{computation}\label{comp:four}
+The cover contains 7,805,097 anchored quadruples. None of their 39-point
+complements partitions into three Sidon tens and one Sidon nine.
+\end{computation}
+
+The completion procedure is \eqref{eq:mixed}. Two subset-query engines
+supply every heavy ten contained in the current domain: one uses a
+radix tree with common-point masks and maximum weights, the other incidence
+bitsets over a catalog ordered by weight. The former discards a subtree
+only when a common point is forbidden or its maximum weight is below
+the query minimum; leaves also enforce the query maximum, while the latter intersects the weight range with the complements
+of the incidence sets for forbidden points. Thus both implement the
+same exact subset query. Their complete recorded nonempty query streams
+agree byte for byte. The recursion totals are:
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Remaining profile&States tested&Candidate tens returned\\
+\midrule
+$10^3 9$&7,805,097&7,813,293\\
+$10^2 9$&7,813,293&1,077,835\\
+$10\,9$&1,077,835&380\\
+$9$&380&---\\
+\bottomrule
+\end{tabular}
+\end{center}
+Each of the 380 terminal nine-sets has an explicit collision of unordered
+sums, independently checked in Python. The per-anchor ledger records
+all 2,701 anchors, including those without a qualifying quadruple.
+
+\section{Excluding the final profile}\label{sec:balanced}
+Only $11^3 10^5$ remains. The three elevens must have total weight at
+least
+\begin{equation}\label{eq:triple}
+                        W-5M=11{,}134{,}774.
+\end{equation}
+The canonical anchor condition is $3\wt(A_{2q})\geq11,134,774$.
+The ordered catalog gives exactly 5,364 eligible anchors. Two preliminary
+triple enumerations, one using direct intersections and the other bitset
+adjacency, establish the following cover.
+
+\begin{computation}\label{comp:triples}
+The complete anchored cover of triples satisfying \eqref{eq:triple}
+contains 65,073,232 triples. Of the 5,364 anchors, 207 have no such triple
+and 5,157 have at least one. The two per-anchor ledgers agree exactly.
+\end{computation}
+
+For each triple, apply Lemma~\ref{lem:heaviest} to its 50-point complement,
+starting with $k=5$ and $U=M$. The heavy catalog is sufficient by
+\eqref{eq:cutoff}. Every branch ends either at a necessary infeasibility
+bound, an empty subset query, or a directly tested residual ten.
+
+\begin{computation}\label{comp:balanced}
+Neither of the two complete packing-and-completion traversals finds a
+partition for any of the 65,073,232 anchored triples. Their per-anchor
+counts, recorded nonempty query streams, and terminal records agree.
+\end{computation}
+
+The resulting search counts are shown in Table~\ref{tab:balanced}. There
+are 1,771 terminal occurrences, each a distinct failing residual ten,
+associated with 1,644 distinct anchored triples. Each terminal record
+lists the three eleven-row indices, four chosen tens, the residual ten,
+and an explicit pair-sum collision. Python checks every listed class,
+disjointness, coverage of $P_{83}$, weight ordering, and the collision.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrr}
+\toprule
+Tens remaining&States tested&Candidate tens returned\\
+\midrule
+5&65,073,232&185,585,643\\
+4&185,585,643&66,521,099\\
+3&66,521,099&2,261,478\\
+2&2,261,478&1,771\\
+1&1,771&0\\
+\bottomrule
+\end{tabular}
+\caption{Complete recursion for profile $11^3 10^5$. Counts are traversal
+occurrences, not necessarily distinct residual domains.}\label{tab:balanced}
+\end{table}
+
+An additional check removes the weight-order restriction from the final
+two classes. For every terminal record, take the union of its last chosen
+ten with the failing residual ten. There are 1,754 distinct 20-point
+domains. Two direct enumerators find 4,040 ten-subset occurrences across
+these domains and no partition of any domain into two Sidon tens.
+This checks the terminal decisions independently of the heavy-catalog
+query. It does not replace the global traversal that reaches them.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Computation~\ref{comp:catalogs} and Lemma~\ref{lem:profiles} cover all
+possible profiles. Computation~\ref{comp:five} excludes the first five;
+Computation~\ref{comp:four} excludes the sixth. Lemmas~\ref{lem:anchor}
+and~\ref{lem:heaviest} ensure that the remaining profile is covered by
+Computations~\ref{comp:triples} and~\ref{comp:balanced}, which exclude it.
+Translation gives the same exclusion on $[83]$. The partition of $[80]$
+in Appendix~\ref{app:80} gives the lower bound.
+\end{proof}
+
+\section{Reproduction and scope of verification}\label{sec:repro}
+The source is available in the \texttt{sidon\_ramsey\_8} directory of
+\cite{source}. The consolidated \texttt{paper} directory contains this
+manuscript, a source/input hash manifest, and \texttt{verify.py}.
+From the repository root, the complete command is
+\begin{verbatim}
+python3 sidon_ramsey_8/paper/verify.py --work /tmp/sr8-full-proof
+\end{verbatim}
+The work directory must be new and outside the repository. The command
+runs \path{p83_profiles/reproduce.py} and
+\path{p83_exclusion/reproduce.py}, including sanitizer controls, then
+checks the interface. It regenerates the full ten- and eleven-catalogs
+in both stages; compares them byte for byte between stages; and matches
+all 5,364 triple-cover rows to the completion ledger. The published
+expected counts and hashes are consistency checks, not substitutes for
+complete enumeration. A separate aggregation mode checks existing
+completed runs and labels that narrower action explicitly.
+
+The two stages have no imported P84 exclusion. The profile driver reads
+an earlier 84-entry weight vector only to check the provenance identity
+$u_i=v_i+v_{i+1}$; it verifies all P83 weight bounds afresh. A general
+catalog program located under \texttt{p84\_weight\_certificates} is run
+on the explicitly supplied domain $P_{83}$. The manifest records both
+of these source dependencies, avoiding dependence on an undocumented
+working copy or a prior search checkpoint.
+
+The profile stage includes positive examples of all five 28-point
+profiles and mixed ten/nine completions. The balanced stage compares
+4,712 small exact-cover decisions with a Python definition-level
+solver, checks positive 50-point and 20-point domains from the known
+partition, and rejects a malformed duplicated catalog. AddressSanitizer
+and UndefinedBehaviorSanitizer run on the small and positive controls.
+The full production traversals use optimized builds; sanitizer runs
+cover the controls, not the entire production search.
+
+For the balanced stage the two nonempty query streams have
+8,044,688,696 bytes each; for the four-eleven stage they have 299,368,488
+bytes each. Each stream is split into shards, compared with its counterpart,
+and checked against case counts and completion markers. Empty queries
+are counted by the state ledgers but are not individually recorded in
+these binary streams. Compact ledgers and representative terminal
+records are committed; bulky catalogs and traces are regenerated in the
+external work directory. About 25 GB of free disk space is a practical
+allowance for the complete default replay.
+
+All mathematical quantities in the proof computations are integers.
+Point and difference masks fit in 128-bit unsigned words; pair-sum masks
+use two words when needed. The supported parameter ranges keep every
+shift below its word width, and counts use 64-bit integers. Floating-point
+arithmetic is used for elapsed-time reporting, not exclusion decisions.
+Python optimization must be disabled because the stage drivers use
+assertions as proof checks. The trust boundary includes the coverage
+arguments, source implementations, compiler, runtime, and hardware.
+There is no proof-assistant formalization or portable SAT-style
+unsatisfiability certificate.
+
+A separate automated research identity replayed both stages from fresh
+inputs and issued an acceptance with limitations \cite{review}. Its
+additional unordered-sum checker enumerated all nine-subsets of the
+2,142 full 28-point domains (318,212 occurrences), rather than only the
+conditional nine queries used by the producer, and separately checked
+the terminal 20-point domains. It did not supply a third independently
+written global traversal. The two global implementations here were
+developed within the same research campaign, and agreement between them
+is a computational cross-check rather than independent authorship.
+The review is not journal peer review. This manuscript remains a draft
+for human mathematical review and authorship assignment.
+
+\appendix
+\section{The known lower-bound partition}\label{app:80}
+The following rows are the $I=8$ construction in
+\cite[Table I]{XFL}, reproduced as finite mathematical data. Their union
+is $[80]$, they are disjoint, and each row has 55 distinct unordered
+pair sums including its ten doubles. These properties are checked
+directly by the replay entry point.
+\begin{center}\small
+\begin{tabular}{rrrrrrrrrr}
+18&20&32&39&47&50&63&67&72&73\\
+11&12&17&21&34&37&45&52&64&66\\
+8&10&19&25&26&46&49&54&68&80\\
+6&9&16&27&35&40&60&62&76&77\\
+5&7&15&22&28&31&56&70&74&75\\
+4&13&36&38&42&43&55&58&69&79\\
+3&14&23&29&30&48&51&53&61&65\\
+1&2&24&33&41&44&57&59&71&78
+\end{tabular}
+\end{center}
+
+\section{Compact artifact identities}
+The profile stage's three-eleven cover ledger has SHA-256
+\begin{center}\small\texttt{d9858a448b47d98b3a3879e7a0f14e0f773d}\\
+\texttt{c50519fb25c8af635830569af236}\end{center}
+and the completion stage's ledger has SHA-256
+\begin{center}\small\texttt{b32d9a00e42e5349dbf6677988fb7c9da107}\\
+\texttt{fd325b5507cd308392006a57b250}.\end{center}
+Each displayed pair of lines is one concatenated digest. The first
+ledger records each anchor weight and triple count; the second records
+the same triple count and completion-call totals. These differing file
+formats explain why their digests differ despite exact agreement at
+the interface. Full digests for source files, weights, catalogs, and
+terminal data appear in the machine-readable manifests and replay
+reports. A digest identifies an artifact; it does not itself prove
+completeness.
+
+\begingroup
+\raggedright
+\bibliographystyle{plain}
+\bibliography{references}
+\endgroup
+\end{document}

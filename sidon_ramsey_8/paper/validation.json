@@ -1,0 +1,85 @@
+{
+  "verified": true,
+  "numerical_conclusion": "81 <= SR(8) <= 83",
+  "upper_bound_scope": "All partitions of [83] into eight Sidon classes",
+  "exact_SR8_determined": false,
+  "interface_cases": 5364,
+  "anchored_triples": 65073232,
+  "shared_files_bytewise_equal": true,
+  "shared_file_sha256": {
+    "raw11.txt": "ea9cea7a250f9b532bd8bf952aa27b7339b785327fb666835755369d3d0a9e44",
+    "orbit11.txt": "d2c18038ea0fe65cf909fb11f57f3d97a33e9067eef1c8d5045a78e083fda640",
+    "full_0.bin": "e8645742c6c8c896ac50b6d73e9cfd58ca380877229f4276faf5a50c78586a79",
+    "heavy_0.bin": "b74d251f459a209951e87ae1519976e7dc42d4263f7dffc967d9ceaf3650bd49"
+  },
+  "artifact_sha256": {
+    "profiles/verification.json": "bde50d5cf1f121007dd921b8114cf65f6c90b87592f079ac7c9d70f5286536e4",
+    "profiles/cases_three.csv": "d9858a448b47d98b3a3879e7a0f14e0f773dc50519fb25c8af635830569af236",
+    "profiles/cases_four.csv": "6a171fbe3afe6d79ff46db48d45e46a876cc1acae428f242a912a5fd4ad63f9c",
+    "profiles/all_terminals.json": "6c17ba17a626f6a4bdbfec6a55c48f9dde68c60860024aad88b2e71d50dbfacd",
+    "exclusion/verification.json": "901a696e123c7bf413cc3f9d0e8928eec0e7a00576f11f2cdc20ca6ceb2ba413",
+    "exclusion/cases.csv": "b32d9a00e42e5349dbf6677988fb7c9da107fd325b5507cd308392006a57b250",
+    "exclusion/all_terminals.json": "c73ec06dd3b98c25f70c83951f1ee7d58dab687efb9ad3246741ab6de32e401e"
+  },
+  "stage_seconds": {
+    "profiles": 828.641439255036,
+    "exclusion": 1996.9107747109956
+  },
+  "compiler": {
+    "profiles": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "exclusion": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0"
+  },
+  "python": {
+    "profiles": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "exclusion": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]"
+  },
+  "source_manifest_sha256": "4066b2da6cf28dc58ae4e3430bae86c90c508f38ce03618c88fc2057c80558fe",
+  "source_file_count": 28,
+  "P80_witness_verified": true,
+  "printed_weights_witness_and_ledger_digests_verified": true,
+  "witness_sha256": "d58dc3dfe0cd3ff7ffbc5f13426d99ab28641b64e103fdd35aea49e93a308d14",
+  "weight_sum": 31134774,
+  "maximum_point_weight": 444444,
+  "started_utc": "2026-09-11T09:24:37.296414+00:00",
+  "finished_utc": "2026-09-11T09:24:38.765682+00:00",
+  "mode": "aggregate_existing_completed_runs",
+  "commands_launched_by_this_invocation": [],
+  "trust_boundary": "Exact integer programs and coverage reductions; compiler/runtime/hardware trusted. No formal proof assistant.",
+  "run_scope": "Both complete stage drivers were run directly from fresh work directories with sanitizer controls and exited zero. This entry point then aggregated their completed reports. Its fresh-launch mode was not executed in this validation.",
+  "fresh_driver_replays": true,
+  "driver_return_codes": {
+    "profiles": 0,
+    "exclusion": 0
+  },
+  "wrapper_fresh_launch_mode_executed": false,
+  "direct_driver_commands": [
+    "python3 sidon_ramsey_8/p83_profiles/reproduce.py --work /absolute/work/profiles --jobs 4 --sanitizers",
+    "python3 sidon_ramsey_8/p83_exclusion/reproduce.py --work /absolute/work/exclusion --jobs 6 --workers 6 --sanitizers"
+  ],
+  "aggregation_command": "python3 sidon_ramsey_8/paper/verify.py --check-existing --work /absolute/work",
+  "typesetting": {
+    "engine": "Tectonic 0.15.0",
+    "pages": 9,
+    "pdf_sha256": "95ea83a5056a06636067f9e3947dcab9c0ca957b31ce84b689eaef71d67b5b05",
+    "bytes": 86782,
+    "links": [
+      "https://arxiv.org/abs/1405.4535",
+      "https://arxiv.org/abs/2309.08553",
+      "https://doi.org/10.1007/s40590-024-00676-7",
+      "https://github.com/helgithorskarp/math_results/tree/main/sidon_ramsey_8/paper",
+      "https://github.com/njallskarp/math_source_code_open/tree/main/sidon_ramsey_8_p83_independent_review"
+    ],
+    "text_outside_60pt_margins": [],
+    "undefined_reference_markers": false,
+    "build_log_warnings": []
+  },
+  "document_controls": {
+    "verified": true,
+    "sidon_definition_boundary_controls": 3,
+    "document_and_source_corruptions_rejected": 4,
+    "repository_source_modified": false
+  },
+  "proof_bound_changed_this_pass": false,
+  "P82_decided": false,
+  "human_mathematical_review_pending": true
+}

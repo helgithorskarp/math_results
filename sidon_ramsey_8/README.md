@@ -6,6 +6,12 @@ and excludes every `11^3 10^5` partition by two complete compatibility traversal
 All 5,157 nonempty anchor cases and 65,073,232 three-eleven packings are closed.
 The exact value and P82 remain undecided.
 
+The [consolidated manuscript and complete replay entry point](paper/README.md)
+cover the full numerical theorem, including the profile reduction, all completion
+cases, the known lower-bound witness, and the interface between proof stages.
+The P83 theorem received [separate computational acceptance with limitations](https://github.com/njallskarp/math_source_code_open/tree/main/sidon_ramsey_8_p83_independent_review).
+The historical stage reports below retain their original scopes and dates.
+
 The [complete P82 three-eleven exclusion](p82_three_exclusion/README.md)
 closes all 6,773,441 triples of profile `11^3 10^4 9`. Together with the
 [global P82 profile theorem](p82_profiles/README.md), it shows that only
