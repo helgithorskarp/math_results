@@ -141,6 +141,12 @@ as is every larger choice having a source or sink isolated in `D`.
 Moreover, a search may symmetry-break on a directed asymmetric cycle of
 length between two and nine.
 
+The subsequent
+[`exact-nine branch reduction`](../sequence_covering_sca79_nine_asymmetry_branch/README.md)
+shows that tightness forces the asymmetric links to form a directed cycle
+cover and forces every full point link to be uniform.  Thus only eight support
+types up to relabelling remain at the point-link layer.
+
 ## Reproduction
 
 From this directory, run
