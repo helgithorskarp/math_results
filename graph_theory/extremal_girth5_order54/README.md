@@ -2,6 +2,13 @@
 
 Let `f(n) = ex(n,{C3,C4})` for finite simple undirected graphs. The retained target is to decide whether a graph of order 54, size 187 and girth at least five exists. The working interval remains **185 ≤ f(54) ≤ 187**.
 
+The [uniform high-path theorem](rooted_completion/high_path_theorem.md) now
+restricts every remaining high graph to isolated vertices, edges, and
+three-vertex paths, with at most two such paths at z=11. An
+[exact graph-completion framework](rooted_completion/README.md) covers all
+candidates at z=9,10,11 in 15 formulas. These degree classes remain
+undecided; no 187-edge realization or new numerical bound is claimed.
+
 The [complete three-edge exclusion](z12_A0_three_edge_exclusion.md)
 closes the **entire twelve-high boundary**. Every remaining 187-edge
 candidate has at most **eleven degree-eight vertices**. The new theorem
