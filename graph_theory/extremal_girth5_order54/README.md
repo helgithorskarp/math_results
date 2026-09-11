@@ -2,16 +2,21 @@
 
 Let `f(n) = ex(n,{C3,C4})` for finite simple undirected graphs. The retained target is to decide whether a graph of order 54, size 187 and girth at least five exists. The working interval remains **185 ≤ f(54) ≤ 187**.
 
-The [complete four-edge exclusion](z12_A0_four_edge_exclusion.md) closes
-the **entire four-edge all-sink layer at twelve high vertices**. Its raw
-73-profile cover has 57 human exclusions and 16 profiles covered by
-3,721 independently checked incidence refutations. An independent orbit
-audit covers all 11,489,820 labeled quad families with degree roles.
-Every remaining twelve-high candidate now has exactly **three high-high
-edges**, at most four high neighbors at each low vertex, and one of
-**23 necessary profiles across three high forests**. See the proof and
-[four_edge_expected.json](four_edge_expected.json) for reproduction and
-scope. No realization or global numerical improvement is claimed.
+The [complete three-edge exclusion](z12_A0_three_edge_exclusion.md)
+closes the **entire twelve-high boundary**. Every remaining 187-edge
+candidate has at most **eleven degree-eight vertices**. The new theorem
+covers all 121 raw three-edge profiles: 82 human exclusions and 39
+multiple-quad profiles, reduced structurally to 51 independently checked
+incidence cases. The high edges are chosen inside the model, covering
+all three high forests. See the proof and
+[three_edge_expected.json](three_edge_expected.json) for reproduction,
+complete coverage and scope. The cases with at most eleven high vertices
+remain open; the numerical interval is unchanged.
+
+The preceding [complete four-edge exclusion](z12_A0_four_edge_exclusion.md)
+closed the four-edge all-sink layer using 57 human profile exclusions and
+3,721 independently checked incidence cases. It left 23 necessary profiles
+across three high forests, all closed by the new theorem above.
 
 The preceding [complete multiple-quad exclusion](z12_A0_multi_quad_exclusion.md)
 closed the entire five-edge high-forest subclass. Its 357 incidence cases
@@ -43,8 +48,9 @@ See the linked proof for regeneration commands and
 The [single-incidence exclusion](z12_A1_exclusion.md) now proves that,
 at `z=12`, **all twelve degree-eight vertices are sinks**: `A=0`.
 A complete census of 91 profiles, followed by individual high-neighborhood
-partition arguments, excludes every `A=1` configuration. The cases
-`z=12,A=0` and `z<=11` remain open; the numerical interval is unchanged.
+partition arguments, excludes every `A=1` configuration. That left
+`z=12,A=0` and `z<=11`; the twelve-high case is now closed above. The
+numerical interval is unchanged.
 Run `python3 verify_a1_exclusion.py` and compare with
 [a1_exclusion_expected.json](a1_exclusion_expected.json).
 
@@ -55,7 +61,7 @@ while a colored-edge packing argument permits at most eight.
 Run `python3 verify_a2_exclusion.py` and compare with
 [a2_exclusion_expected.json](a2_exclusion_expected.json).
 
-The [whole-boundary exclusion](boundary_exclusion.md) now proves
+The preceding [thirteen-high exclusion](boundary_exclusion.md) proved
 **at most twelve degree-eight vertices**. Every case with thirteen is closed.
 The new human argument combines local sign and charge inequalities with
 individual distant-neighborhood partitions and double covers. It imports

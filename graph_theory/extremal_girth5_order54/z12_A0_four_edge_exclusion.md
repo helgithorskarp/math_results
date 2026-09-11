@@ -1,5 +1,9 @@
 # The entire four-edge all-sink layer is excluded
 
+**Subsequent refinement.** The [complete three-edge exclusion](z12_A0_three_edge_exclusion.md)
+now closes every twelve-high candidate. The theorem and historical
+three-edge remainder below are preserved.
+
 **Conditional theorem.** There is no simple graph with 54 vertices,
 187 edges, girth at least five, degree counts $(n_6,n_7,n_8)=(16,26,12)$,
 and all of the following properties:
