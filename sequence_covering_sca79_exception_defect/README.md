@@ -137,3 +137,13 @@ The checker uses only Python 3 standard-library exact integers.  It
 reconstructs all 36 multinomial layers, verifies the 18-row certificate,
 groups the four possible moduli, and recomputes the per-link and global defect
 bounds from definition.
+
+## Subsequent elimination of the branch
+
+The follow-up
+[`named immediate-successor obstruction`](../sequence_covering_sca79_ten_asymmetric_links/README.md)
+shows that the exact-nine hypothesis itself is impossible, independently of
+how this forced defect is allocated.  Consequently every hypothetical array
+has at least ten coordinate-asymmetric ordered-pair links.  The defect result
+remains a validation fixture for named pair-link models of the former tight
+branch.

@@ -163,3 +163,9 @@ The subsequent
 shows that every one of the nine exceptional links must break named-coordinate
 symmetry in 18 ordered-composition layers, with total integral `L^1` defect at
 least 504 per link and 4,536 across the cycle cover.
+
+The exact-nine branch is now excluded completely.  The follow-up
+[`named immediate-successor obstruction`](../sequence_covering_sca79_ten_asymmetric_links/README.md)
+couples the seven symmetric outgoing links through named two-element
+predecessor sets and proves that every hypothetical array has at least ten
+coordinate-asymmetric ordered-pair links.
