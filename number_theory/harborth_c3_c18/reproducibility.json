@@ -1,0 +1,71 @@
+{
+  "status": "VERIFIED_g_C3_C18_EQUALS_21",
+  "lower": 21,
+  "upper": 21,
+  "cases": [
+    {
+      "total": [
+        0,
+        0
+      ],
+      "cnf_sha256": "40ef5cb92c1f019643722995370148cb4279fad801c229917f49f3d59eb79081",
+      "proof_sha256": "f50638b0e6cf1bec7a24e29be85d4089df7264240e70bfb8511a50691694bdb9",
+      "proof_bytes": 15201971,
+      "solver_exit": 20,
+      "checker_exit": 0,
+      "checker_status": "VERIFIED",
+      "solver_seconds": 12.604884,
+      "checker_seconds": 10.949064,
+      "matches_recorded_proof": true
+    },
+    {
+      "total": [
+        1,
+        0
+      ],
+      "cnf_sha256": "135fb71fb190803aea94a8739a22bd73ace6b3231911b32ed25798c6b900c380",
+      "proof_sha256": "da9a216eba658644957da98e52a4bb7aa1f6c7365ab7c7739b5d02738d3de8d1",
+      "proof_bytes": 56362591,
+      "solver_exit": 20,
+      "checker_exit": 0,
+      "checker_status": "VERIFIED",
+      "solver_seconds": 40.540975,
+      "checker_seconds": 47.562075,
+      "matches_recorded_proof": true
+    },
+    {
+      "total": [
+        0,
+        1
+      ],
+      "cnf_sha256": "7ce45871eee38e8f561e9330f830685dea1b46fd1e8286feb1035d1293f9dbc8",
+      "proof_sha256": "8d271fd3094ed2e0654d2b16277fdb6c14cd53daa6458ba5aa45e9df10cf8645",
+      "proof_bytes": 16724626,
+      "solver_exit": 20,
+      "checker_exit": 0,
+      "checker_status": "VERIFIED",
+      "solver_seconds": 14.661778,
+      "checker_seconds": 12.503048,
+      "matches_recorded_proof": true
+    }
+  ],
+  "covered_totals": 54,
+  "semantic_audit_sha256": "c62ce57bf3f302ae5ad97afa91de6559dade1fa5e471f086200cf5cce4101d04",
+  "python": "3.11.2",
+  "solver_version": "4.0.4",
+  "solver_binary_sha256": "8664d542108e494c8aebc90e762d7e719c63b556506a65f0c6ff7c9c6bc5c15b",
+  "checker_binary_sha256": "91175748b13d618f59e1f62f0ec37a4d5fe07ff15735ab98ea36f97e36930c05",
+  "elapsed_seconds": 141.050068,
+  "children_peak_rss_kib": 172592,
+  "formal_proof_assistant": false,
+  "solver_source_commit": "8af8e56f174b778aef3aa45af9f739b2a5f492c2",
+  "checker_source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "checker_source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+  "solver_build": "./configure --quiet; make -j2",
+  "checker_build": "gcc -O2 drat-trim.c -o drat-trim",
+  "compiler": "gcc (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "recorded_environment": "Linux x86_64; Python standard library; fresh pinned proof-tool builds",
+  "large_files": "CNFs,DRAT traces and logs are regenerated outside repository; no precomputed large file is required",
+  "clean_replay_source_matches_published_code": true,
+  "replay_scope": "All three CNFs and DRAT proofs regenerated from clean source copy, byte-identical to recorded CNF/proof hashes, and independently checked."
+}
