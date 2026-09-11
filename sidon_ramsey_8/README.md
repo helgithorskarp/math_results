@@ -6,9 +6,12 @@ and excludes every `11^3 10^5` partition by two complete compatibility traversal
 All 5,157 nonempty anchor cases and 65,073,232 three-eleven packings are closed.
 The exact value and P82 remain undecided.
 
-The [global P82 profile reduction](p82_profiles/README.md) excludes nine of
-its eleven possible profiles. Only `11^3 10^4 9` and `11^2 10^6` remain,
-with a verified exhaustive cover of 6,444 nonempty canonical cases.
+The [complete P82 three-eleven exclusion](p82_three_exclusion/README.md)
+closes all 6,773,441 triples of profile `11^3 10^4 9`. Together with the
+[global P82 profile theorem](p82_profiles/README.md), it shows that only
+`11^2 10^6` remains: 3,840 nonempty canonical cases and 1,142,922 anchored pairs.
+The new source also gives exact fractional certificates showing that global
+class-size weight caps alone cannot exclude either formerly remaining profile.
 
 The [P84 exclusion](p84_exclusion/README.md), its
 [independent acceptance](../sidon_ramsey_8_p84_exclusion_review1/README.md),
