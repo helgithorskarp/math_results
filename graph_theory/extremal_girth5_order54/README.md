@@ -10,14 +10,20 @@ one existing exact rational inequality, and uses no prior SAT forest
 exclusions. Run `python3 verify_boundary_exclusion.py` for exact certificate
 replay and independent finite controls.
 
-The [twelve-high-vertex incidence theorem](z12_distant_incidence_bound.md)
-proves that at `z=12`, the total number of distant vertices summed over
-all degree-eight vertices is **at most three**. Thus at least nine high
-vertices are sinks. The proof closes every four- and five-incidence case,
-using corrected distant-cover equations that allow high nonsinks, an
-exact rational prerequisite, and an individual missed-vertex obstruction.
-Run `python3 verify_z12_distant_incidence.py` for reproduction. The complete
-`z=12` subclass is still open, with `A=0,1,2,3` remaining.
+The [new three-incidence exclusion](z12_A3_exclusion.md) proves that at
+`z=12`, the total number `A` of distant vertices summed over the twelve
+degree-eight vertices is **at most two**. Thus **at least ten high vertices
+are sinks**. It closes the entire `A=3` subclass: all individual missed-vertex
+frames reduce to a shared endpoint or a six-cycle, and 14 exact rational
+certificates refute every remaining attachment profile. The public source
+regenerates the certificates outside Git and checks them with integer
+arithmetic; see the proof for commands and [compact evidence](a3_expected.json).
+The complete `z=12` subclass remains open, with `A=0,1,2` remaining.
+
+The [preceding incidence theorem](z12_distant_incidence_bound.md) supplies
+the corrected identities and the earlier bound `A<=3`, excluding every
+four- and five-incidence case. Its assumptions and certificates are kept
+separate from the new `A=3` computation.
 
 The detailed reductions below preserve the preceding research stages;
 their surviving-case statements are superseded by the whole-boundary theorem.
