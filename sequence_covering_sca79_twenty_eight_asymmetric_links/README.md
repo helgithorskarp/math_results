@@ -255,3 +255,12 @@ entry as vectors on the 36 ordered compositions.  Runtime is about 70 seconds
 on the publication machine and memory use is modest.  There is no random
 choice, floating point, solver, external input, or bulky generated
 certificate.
+
+## Subsequent strengthening
+
+The follow-up
+[`exact-28 elimination`](../sequence_covering_sca79_twenty_nine_asymmetric_links/README.md)
+combines a two-row parity obstruction, a complete one-row point-link lift,
+and the same-type pair-link certificate in the all-constant branch.  It
+eliminates exact 28 and raises the unrestricted lower bound to twenty-nine
+asymmetric links.
