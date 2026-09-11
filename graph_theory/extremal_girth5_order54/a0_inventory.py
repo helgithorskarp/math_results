@@ -57,4 +57,3 @@ def bounds(row):
   if f4==3:upper=min(upper,9)
  upper=min(upper,32+b1,2*b1+seven[2])
  return lo,upper,{}
-
