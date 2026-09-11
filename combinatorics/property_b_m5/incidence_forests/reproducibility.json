@@ -1,0 +1,28 @@
+{
+  "returncode": 0,
+  "elapsed_seconds": 62.868777037016116,
+  "max_rss_kib": 47268,
+  "python": "3.11.2",
+  "command": "python3 verify_all.py",
+  "result": {
+    "all_layers_verified": true,
+    "layers": [
+      {
+        "layer": "property_b_m5",
+        "output_sha256": "8d9cadc21f3f552f987a98261e3e9a84b273fdf2912d9712301edd13f3b56555"
+      },
+      {
+        "layer": "link_envelopes",
+        "output_sha256": "d4a482e74d22df78ebee2561ac2042bfbada1e07e596e901859154f34bdfc7d4"
+      },
+      {
+        "layer": "incidence_forests",
+        "output_sha256": "ce85081dd133d2decdf7ba72a41257d885f4467e6c0123ad1a48f42724631792"
+      }
+    ]
+  },
+  "unchanged_prerequisite_commit": "2cd963d84601e49e15d571757e2714a75a408902",
+  "arithmetic": "Python arbitrary-precision integers and fractions.Fraction",
+  "dependencies": "Python standard library and the preceding source directories in this repository",
+  "trust_boundary": "Written reductions, published source, Python interpreter and hardware; no formalization or independent peer review."
+}
