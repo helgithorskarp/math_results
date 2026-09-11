@@ -2,6 +2,16 @@
 
 Let `f(n) = ex(n,{C3,C4})` for finite simple undirected graphs. The retained target is to decide whether a graph of order 54, size 187 and girth at least five exists. The working interval remains **185 ≤ f(54) ≤ 187**.
 
+The [uniform all-sink reduction](z12_A0_reduction.md) proves that every
+twelve-high candidate has **three to five high-high edges** and **at most
+four high neighbors at each low vertex**. It excludes all larger high
+neighborhoods, all high forests with at most two edges, and every six-edge
+high forest. Twelve explicit high forests and 63 necessary low profiles
+remain. The proof uses individual partitions, graphical far-degree lists,
+eleven exact certificates, and a final four-cycle pigeonhole contradiction.
+See the linked proof for regeneration commands and
+[a0_expected.json](a0_expected.json) for compact evidence.
+
 The [single-incidence exclusion](z12_A1_exclusion.md) now proves that,
 at `z=12`, **all twelve degree-eight vertices are sinks**: `A=0`.
 A complete census of 91 profiles, followed by individual high-neighborhood
