@@ -93,6 +93,33 @@ for value in range(6):
 			quit()
 		darkcol0_case = value
 		sys.argv.remove(flag)
+whitegraph_case = None
+for value in range(9):
+	flag = "-whitegraph-{}".format(value)
+	if flag in sys.argv:
+		if whitegraph_case is not None:
+			print("At most one -whitegraph-k flag may be used")
+			quit()
+		whitegraph_case = value
+		sys.argv.remove(flag)
+if darkcol0_case is not None and whitegraph_case is not None:
+	print("-darkcol0-k and -whitegraph-k are alternative orbit splits")
+	quit()
+fixedstar_case = None
+for value in range(6):
+	flag = "-fixedstar-{}".format(value)
+	if flag in sys.argv:
+		if fixedstar_case is not None:
+			print("At most one -fixedstar-k flag may be used")
+			quit()
+		fixedstar_case = value
+		sys.argv.remove(flag)
+if fixedstar_case is not None and whitegraph_case is None:
+	print("-fixedstar-k requires -whitegraph-k")
+	quit()
+if fixedstar_case is not None and p0_case is None:
+	print("-fixedstar-k requires one of -p0a, -p0b, or -p0c")
+	quit()
 
 # Verify that square names are provided
 if len(sys.argv) <= 1 or len(sys.argv[1]) <= 1:
@@ -113,6 +140,9 @@ if not Q_type in ['R','S','T','U','V','W','X']:
 	quit()
 if darkcol0_case is not None and not (use_distinguished_subsquare and P_type == 'U' and Q_type == 'U'):
 	print("-darkcol0-k requires distinguished type UU")
+	quit()
+if whitegraph_case is not None and not (use_distinguished_subsquare and P_type == 'U' and Q_type == 'U'):
+	print("-whitegraph-k requires distinguished type UU")
 	quit()
 
 # Multi-dimensional arrays to hold the variables used in the encoding
@@ -400,7 +430,7 @@ if use_distinguished_subsquare and P_type == 'U' and Q_type == 'U':
 			else:
 				for j in range(6):
 					generate_clause({-Z[qrow][j][prow], -Pc[prow][j][DARK]})
-	if darkcol0_case is not None:
+	if darkcol0_case is not None or whitegraph_case is not None:
 		darkcol0_representatives = [
 			{(6, 8), (7, 9)}, # low-high + low-high
 			{(6, 8), (8, 6)}, # low-high + high-low
@@ -409,7 +439,24 @@ if use_distinguished_subsquare and P_type == 'U' and Q_type == 'U':
 			{(8, 6), (9, 8)}, # high-low + high-high
 			{(8, 8), (9, 9)}, # high-high + high-high
 		]
-		chosen = darkcol0_representatives[darkcol0_case]
+		if whitegraph_case is None:
+			chosen = darkcol0_representatives[darkcol0_case]
+		else:
+			# Joint representatives for the column-0 dark matching and the
+			# white-neighbour bit of P-row 0.  These nine cases are the exact
+			# orbits under the four low/high row swaps.
+			joint_representatives = [
+				({(6, 8), (7, 9)}, 0),
+				({(6, 8), (8, 6)}, 0),
+				({(6, 8), (8, 6)}, 1),
+				({(6, 8), (8, 9)}, 0),
+				({(6, 8), (8, 9)}, 1),
+				({(8, 6), (9, 7)}, 0),
+				({(8, 6), (9, 8)}, 0),
+				({(8, 6), (9, 8)}, 1),
+				({(8, 8), (9, 9)}, 0),
+			]
+			chosen, whitegraph_bit = joint_representatives[whitegraph_case]
 		for prow, qrow in dark_edges:
 			generate_clause({Z[qrow][0][prow] if (prow, qrow) in chosen else -Z[qrow][0][prow]})
 
@@ -460,6 +507,45 @@ for i in range(n):
 		generate_implication_clause({Qc[i][j][WHITE]}, {Q[i][j][0], Q[i][j][1], Q[i][j][2], Q[i][j][3]})
 	for j in range(6):
 		generate_implication_clause({Qc[i][j][DARK]}, {Q[i][j][4], Q[i][j][5], Q[i][j][6], Q[i][j][7], Q[i][j][8], Q[i][j][9]})
+
+# Directly expose colour coherence at the unique P/Q row intersection.
+# This follows from Q=PZ and the symbol-to-colour constraints, but avoiding
+# the ten-way symbol detour materially strengthens propagation.
+for prow in range(n):
+	for qrow in range(n):
+		for j in range(6):
+			generate_implication_clause({Z[qrow][j][prow], Pc[prow][j][DARK]}, {Qc[qrow][j][DARK]})
+			generate_implication_clause({Z[qrow][j][prow], Qc[qrow][j][DARK]}, {Pc[prow][j][DARK]})
+		for j in range(6, n):
+			generate_implication_clause({Z[qrow][j][prow], Pc[prow][j][WHITE]}, {Qc[qrow][j][WHITE]})
+			generate_implication_clause({Z[qrow][j][prow], Qc[qrow][j][WHITE]}, {Pc[prow][j][WHITE]})
+
+# In distinguished type (U,U), the white-intersection graph is forced up to
+# two complementary 3+3 partitions.  It is edge-disjoint from the forced
+# dark graph.  The two high P rows must use all six degree-one Q rows, and
+# the two high Q rows must use all six degree-one P rows; the remaining four
+# white edges are exactly K_2,2 on the two degree-two rows on each side.
+# A -whitegraph-k representative also spends the corresponding top-row
+# permutations to fix both 3+3 partitions.
+if whitegraph_case is not None:
+	white_edges = {(8, qrow) for qrow in range(3)}
+	white_edges |= {(9, qrow) for qrow in range(3, 6)}
+	white_edges |= {(prow, qrow) for prow in [6, 7] for qrow in [6, 7]}
+	if whitegraph_bit == 0:
+		white_edges |= {(prow, 8) for prow in [0, 1, 2]}
+		white_edges |= {(prow, 9) for prow in [3, 4, 5]}
+	else:
+		white_edges |= {(prow, 8) for prow in [1, 2, 3]}
+		white_edges |= {(prow, 9) for prow in [0, 4, 5]}
+	for prow in range(n):
+		for qrow in range(n):
+			if (prow, qrow) in white_edges:
+				generate_clause([Z[qrow][j][prow] for j in range(6, n)])
+				for j in range(6, n):
+					generate_implication_clause({Z[qrow][j][prow]}, {Pc[prow][j][WHITE]})
+			else:
+				for j in range(6, n):
+					generate_clause({-Z[qrow][j][prow], -Pc[prow][j][WHITE]})
 
 # Fixing symbols in the first row of P (symmetry breaking).  This normal
 # form uses arbitrary permutations of the first six columns, so it is not
@@ -520,19 +606,35 @@ for i in range(n):
 
 # Generate symbol ordering constraints within a block of the same colour
 # K is the list of transversal types for the square H
-def lex_order(K, H):
+def lex_order(K, H, square_name):
 	for i in range(n-1):
 		if K[i] == K[i+1]:
 			# The active type-U row swaps canonicalize the column-0 dark
 			# matching when that orbit split is selected.
-			if darkcol0_case is not None and i in [6, 8]:
+			if (darkcol0_case is not None or whitegraph_case is not None) and i in [6, 8]:
 				continue
+			# A joint white-graph representative uses these top-row actions to
+			# fix two 3+3 partitions.  Keep lex order inside each part, using
+			# the stabilizer of the fixed partition.
+			if whitegraph_case is not None:
+				if square_name == 'Q' and i == 2:
+					continue
+				if square_name == 'P':
+					if whitegraph_bit == 0 and i == 2:
+						continue
+					if whitegraph_bit == 1 and i == 3:
+						continue
+					if fixedstar_case is not None:
+						if whitegraph_bit == 0 and i == 1:
+							continue
+						if whitegraph_bit == 1 and i == 4:
+							continue
 			for k in range(n):
 				for l in range(k):
 					generate_implication_clause({H[i][0][k]}, {-H[i+1][0][l]})
 
-lex_order(transversal_types[P_type], P)
-lex_order(transversal_types[Q_type], Q)
+lex_order(transversal_types[P_type], P, 'P')
+lex_order(transversal_types[Q_type], Q, 'Q')
 
 # Constraints that the squares in the TRP are consistent with one of the following 4x4 Latin subsquares in the bottom-right of the third square L:
 # Omega_1 (The Cayley table of Z_4)
@@ -583,6 +685,42 @@ if use_distinguished_subsquare:
 		for i in range(4):
 			for j in range(4):
 				generate_implication_clause({omega[subsqtype]}, {L[i+6][j+6][Ls[subsqtype][i][j]]})
+	if fixedstar_case is not None:
+		# P-row 0 has its unique white cell at column 6.  Its source-row
+		# coordinate is the small symbol selected by the p0 case.  In the
+		# fixed white graph this edge belongs to a degree-three star centred
+		# at Q-row 8 or 9.  The other two cells form one of six partial
+		# transversals through the anchored cell of the selected Omega.
+		fixedstar_pairs = []
+		for subsqtype in range(2):
+			def attributes(cell):
+				column, lrow = cell
+				return column, lrow, Ls[subsqtype][lrow][column]
+			def compatible(first, second):
+				return all(a != b for a, b in zip(attributes(first), attributes(second)))
+			anchor = (0, p0_case)
+			candidates = [
+				(column, lrow) for column in range(4) for lrow in range(4)
+				if (column, lrow) != anchor and compatible(anchor, (column, lrow))
+			]
+			pairs = []
+			for first_index in range(len(candidates)):
+				for second_index in range(first_index + 1, len(candidates)):
+					first = candidates[first_index]
+					second = candidates[second_index]
+					if compatible(first, second):
+						pairs.append((first, second))
+			assert len(pairs) == 6
+			fixedstar_pairs.append(pairs)
+		qrow = 8 if whitegraph_bit == 0 else 9
+		prows = [1, 2] if whitegraph_bit == 0 else [4, 5]
+		for subsqtype in range(2):
+			for prow, (column, lrow) in zip(prows, fixedstar_pairs[subsqtype][fixedstar_case]):
+				j = column + 6
+				ell = lrow + 6
+				generate_implication_clause({omega[subsqtype]}, {Z[qrow][j][prow]})
+				generate_implication_clause({omega[subsqtype]}, {PE[prow][ell][j]})
+				generate_implication_clause({omega[subsqtype]}, {QE[qrow][ell][j]})
 	if sigma_case is not None:
 		if sigma_case == "12":
 			edges = {(i, i) for i in range(6)} | {(i, (i+1) % 6) for i in range(6)}

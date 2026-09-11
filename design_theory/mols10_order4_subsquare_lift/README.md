@@ -10,8 +10,8 @@ surviving type pairs.
 
 It does **not** claim an existence or nonexistence decision.  The mathematical
 advance is an exact named-coordinate formulation of the distinguished square,
-a forced dark-intersection theorem for `(U,U)`, and two proved exhaustive
-finite decompositions that can support certified follow-up searches.
+forced dark- and white-intersection theorems for `(U,U)`, and proved exhaustive
+finite decompositions that support certified follow-up searches.
 
 The starting pair encoder is from Bright--Keita--Stevens,
 [*Myrvold's Results on Orthogonal Triples of 10 x 10 Latin Squares: A SAT
@@ -90,6 +90,59 @@ into the named `Z` coordinates.  `audit_uu_dark_structure.py` independently
 enumerates every simple labelled 4-by-4 bipartite graph with these degrees and
 finds exactly the displayed graph.
 
+## Forced white-intersection theorem
+
+**Theorem.** In every distinguished-square realization of type `(U,U)`, join
+a row of `P` to a row of `Q` when their unique intersection is one of the
+sixteen white cells in the last four columns.  The resulting simple bipartite
+graph has exactly the following form:
+
+- rows 6 and 7 on the two sides induce `K_2,2`;
+- rows 8 and 9 of `P` partition rows 0 through 5 of `Q` into two triples;
+- rows 8 and 9 of `Q` partition rows 0 through 5 of `P` into two triples;
+- there are no other white edges.
+
+The white degrees on both sides are `(1,1,1,1,1,1,2,2,3,3)`.  This graph is
+edge-disjoint from the forced dark graph because a pair of TRP rows intersects
+in exactly one column.  The two degree-three `P` rows cannot meet any of the
+last four `Q` rows in a white edge, since every such pair is already a dark
+edge.  Their six white edges therefore use all six degree-one `Q` rows.
+The symmetric argument uses all six degree-one `P` rows.  Only the four
+low--low pairs remain for the two degree-two rows, forcing `K_2,2`.
+
+There are exactly `binom(6,3)^2=400` labelled graphs of this form.  Normalize
+the first triple using the six top-row permutations of `Q`.  Since row 0 of
+`P` is distinguished by the published first-row form, the second partition
+has two cases according as row 0 meets row 8 or row 9 of `Q`; the other five
+top rows normalize each case.  Quotient the pair consisting of this bit and
+the column-0 dark matching by the four low/high row swaps.  The resulting
+action on `38*2=76` states has exactly nine orbits, of sizes
+
+```text
+4,16,16,8,8,4,8,8,4.
+```
+
+The flags `-whitegraph-0` through `-whitegraph-8` impose representatives and
+retain the lexicographic symmetries inside each fixed three-row part.  With
+the three first-row forms and two subsquare classes they give an exact family
+of `2*3*9=54` CNFs.  This supersedes the coarser 36-CNF dark-only family as
+the preferred global `(U,U)` decomposition.
+
+There is also a complete named-coordinate refinement.  The white graph has
+five components: four 3-edge stars and one 4-cycle.  Its edges biject with the
+sixteen cells of the fixed order-four subsquare; incident edges must have
+different column, source-row, and symbol coordinates.  The unique white edge
+of `P` row 0 anchors one cell.  The other two edges of its star have exactly
+six possible unordered coordinate pairs for either subsquare class and any
+of the three first-row forms.  Flags `-fixedstar-0` through `-fixedstar-5`
+therefore refine the exact cover to 324 CNFs.  Direct enumeration finds
+373,248 anchored coordinate embeddings for the cyclic square and 2,985,984
+for the Klein square.  These are skeleton counts, not MOLS completions.
+
+`audit_uu_white_structure.py` independently enumerates the 400 graphs, the
+nine joint orbits, the six anchored-star cases, and the coordinate-embedding
+counts from their definitions.
+
 ## Two exhaustive decompositions
 
 First, sort the six rows of `L` outside the subsquare by their first-column
@@ -140,6 +193,7 @@ CNF.  To reproduce the finite structural counts:
 ```sh
 python3 audit_trp_encodings.py
 python3 audit_uu_dark_structure.py
+python3 audit_uu_white_structure.py
 ```
 
 Expected output is in `EXPECTED_OUTPUT.txt`.  To build the complete 36-CNF
@@ -152,12 +206,24 @@ python3 generate_darkcol0_family.py \
   --manifest build/manifest.json
 ```
 
+To build the stronger 54-CNF white-graph family, or its 324-CNF anchored-star
+refinement, run
+
+```sh
+python3 generate_whitegraph_family.py \
+  --encoder encode.py --out build/whitegraph \
+  --manifest build/whitegraph-manifest.json
+python3 generate_whitegraph_family.py --fixed-star \
+  --encoder encode.py --out build/fixedstar \
+  --manifest build/fixedstar-manifest.json
+```
+
 A single exact instance, for example, is generated with
 
 ```sh
 python3 encode.py UU -triple -direct-extension \
   -distinguished-subsquare -pairwise-onehot -z4 \
-  -p0a -darkcol0-0 > UU-z4-p0a-darkcol0-0.cnf
+  -p0a -whitegraph-0 -fixedstar-0 > UU-z4-p0a-whitegraph-0-fixedstar-0.cnf
 ```
 
 Kissat 4.0.4 or CaDiCaL 1.9.5 can read the result.  A SAT solver output can be
@@ -169,8 +235,9 @@ python3 verify_triple_model.py --type UU --omega z4 \
 ```
 
 The first exploration tested unbranched exact cases for both subsquare
-classes, all four canonical `Sigma` supports for `Omega_1`, and eight of the
-fifteen `(p0a,a,b)` branches for `Omega_1`.  All bounded runs ended `UNKNOWN`;
-none is treated as evidence for nonexistence.  The next certified search
-should use the smaller 36-instance dark-column family.
-
+classes, all four canonical `Sigma` supports for `Omega_1`, eight of the
+fifteen `(p0a,a,b)` branches for `Omega_1`, and bounded representatives of the
+dark-, white-, and fixed-star decompositions.  All bounded runs ended
+`UNKNOWN`; none is treated as evidence for nonexistence.  The next certified
+search should use the 54-instance white-graph family or its exact 324-instance
+fixed-star refinement.

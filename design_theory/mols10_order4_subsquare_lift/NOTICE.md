@@ -14,7 +14,6 @@ Orthogonal Triples of 10 x 10 Latin Squares: A SAT Investigation*.
 
 Campaign modifications add the triple/direct encodings, the exact
 distinguished-subsquare bridge, pairwise one-hot option, composition
-coherence, complete branch flags, and named `(U,U)` dark-coordinate
+coherence, complete branch flags, and named `(U,U)` dark- and white-coordinate
 constraints.  The other scripts and documentation in this directory were
 written for this research campaign.
-
