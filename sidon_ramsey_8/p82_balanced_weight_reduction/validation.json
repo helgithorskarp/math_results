@@ -1,0 +1,232 @@
+{
+  "verified": true,
+  "verification": {
+    "verified": true,
+    "minimum": 1000,
+    "maximum": 4107,
+    "budget": 100000,
+    "cases": 3107,
+    "nonempty_cases": 2840,
+    "totals": {
+      "packings": 460485,
+      "unsat": 460485,
+      "unknown": 0,
+      "sat": 0,
+      "calls": 494796944,
+      "queries": 494792158,
+      "options": 494336459,
+      "leaves": 4786
+    },
+    "max_pair_calls": 16863,
+    "compared_bytes": 14969338824,
+    "cases_sha256": "7ba3a83ac3022481ccbe99b9ebd3c3d83da497a9a9c2d878a0744631f38bc01c",
+    "streams": [
+      {
+        "shard": 0,
+        "audit": {
+          "verified": true,
+          "bytes": 3653623168,
+          "pairs": 112381,
+          "unsat": 112381,
+          "unknown": 0,
+          "sat": 0,
+          "records": 35735021,
+          "options": 120637908,
+          "leaves": 1105,
+          "calls": 120750289,
+          "queries": 120749184,
+          "largest_option_list": 196
+        },
+        "comparison": {
+          "complete": true,
+          "compared_bytes": 3653623168,
+          "sha256": "d37b7390f328be04990513421c48870c022f9f6b603737463aa49faa9467cff4",
+          "seconds": 1112.3861115119653
+        }
+      },
+      {
+        "shard": 1,
+        "audit": {
+          "verified": true,
+          "bytes": 3810401192,
+          "pairs": 118089,
+          "unsat": 118089,
+          "unknown": 0,
+          "sat": 0,
+          "records": 37268133,
+          "options": 125811200,
+          "leaves": 1230,
+          "calls": 125929289,
+          "queries": 125928059,
+          "largest_option_list": 207
+        },
+        "comparison": {
+          "complete": true,
+          "compared_bytes": 3810401192,
+          "sha256": "11aedb45faac70780563c5d00d55b287d0ffa6ef642510237bcd3d304ed9d2db",
+          "seconds": 1133.123078995035
+        }
+      },
+      {
+        "shard": 2,
+        "audit": {
+          "verified": true,
+          "bytes": 3728384368,
+          "pairs": 115125,
+          "unsat": 115125,
+          "unknown": 0,
+          "sat": 0,
+          "records": 36453880,
+          "options": 123141348,
+          "leaves": 1189,
+          "calls": 123256473,
+          "queries": 123255284,
+          "largest_option_list": 206
+        },
+        "comparison": {
+          "complete": true,
+          "compared_bytes": 3728384368,
+          "sha256": "792488662cf3cf78bdf51c58554d66aad7bec8ae08ef1784b702176a7c9f617d",
+          "seconds": 1133.2563285139622
+        }
+      },
+      {
+        "shard": 3,
+        "audit": {
+          "verified": true,
+          "bytes": 3776930096,
+          "pairs": 114890,
+          "unsat": 114890,
+          "unknown": 0,
+          "sat": 0,
+          "records": 36930656,
+          "options": 124746003,
+          "leaves": 1262,
+          "calls": 124860893,
+          "queries": 124859631,
+          "largest_option_list": 240
+        },
+        "comparison": {
+          "complete": true,
+          "compared_bytes": 3776930096,
+          "sha256": "6cfa33a3af09b7234a1733a6bd7aed674da05c808fb94c43cb121636db5f129c",
+          "seconds": 1143.5189263960347
+        }
+      }
+    ]
+  },
+  "controls": {
+    "verified": true,
+    "query_oracle_checks": 3000,
+    "positive_domains": 238,
+    "negative_domains": 293,
+    "budget_unknown": true
+  },
+  "sanitizers": {
+    "verified": true,
+    "query_oracle_checks": 3000,
+    "positive_domains": 238,
+    "negative_domains": 293,
+    "budget_unknown": true
+  },
+  "stream_controls": [
+    {
+      "name": "valid_unknown",
+      "accepted": true,
+      "stderr": ""
+    },
+    {
+      "name": "truncated",
+      "accepted": false,
+      "stderr": "truncated word"
+    },
+    {
+      "name": "missing_pair",
+      "accepted": false,
+      "stderr": "incomplete stream"
+    },
+    {
+      "name": "wrong_pair",
+      "accepted": false,
+      "stderr": "pair cover/order"
+    },
+    {
+      "name": "bad_unknown_count",
+      "accepted": false,
+      "stderr": "unknown call limit"
+    },
+    {
+      "name": "bad_unsat_identity",
+      "accepted": false,
+      "stderr": "unsat call identity"
+    },
+    {
+      "name": "wrong_type",
+      "accepted": false,
+      "stderr": "record type"
+    },
+    {
+      "name": "false_terminal",
+      "accepted": false,
+      "stderr": "terminal check"
+    }
+  ],
+  "sanitizer_stream": [
+    {
+      "name": "valid_unknown",
+      "accepted": true,
+      "stderr": ""
+    },
+    {
+      "name": "truncated",
+      "accepted": false,
+      "stderr": "truncated word"
+    },
+    {
+      "name": "missing_pair",
+      "accepted": false,
+      "stderr": "incomplete stream"
+    },
+    {
+      "name": "wrong_pair",
+      "accepted": false,
+      "stderr": "pair cover/order"
+    },
+    {
+      "name": "bad_unknown_count",
+      "accepted": false,
+      "stderr": "unknown call limit"
+    },
+    {
+      "name": "bad_unsat_identity",
+      "accepted": false,
+      "stderr": "unsat call identity"
+    },
+    {
+      "name": "wrong_type",
+      "accepted": false,
+      "stderr": "record type"
+    },
+    {
+      "name": "false_terminal",
+      "accepted": false,
+      "stderr": "terminal check"
+    }
+  ],
+  "source_hashes": {
+    "audit_controls.py": "5c79810120b39d233204f3a6e260e2d3716c0405fa9ebcf7f49fec591a834871",
+    "audit_stream.cpp": "0e1b1ddc5844c612e123cea5d9ec82285f8cee4083a76dd7a55525568ff7eff4",
+    "controls.cpp": "785e6f97f9d6de64fc2a1e06b41c85a8de87aa8c553ad9e54e0b28ffb64c6f5d",
+    "core.hpp": "025b37d83b932301142b46540f47d001b27527012536c1335353e60581b31ec5",
+    "exclude.cpp": "74a9a04d62e06bf3822d5bae7393c4097541c75f940f23bc187582c66103bd7c",
+    "query_fixture.txt": "b10208b88585a089c8081881e90259eb22b451c69a5a698d82e3714bf1fb6e51",
+    "reproduce.py": "c9368d54ad138ceffe28fecb9a81175d322b0ee320d7f206738e4bb393b05426",
+    "search.hpp": "852d3b58e25be6498158681fcb95850cb6b4649cd8822f81a79e6909db3ff1dd"
+  },
+  "inputs": {
+    "orbit11.txt": "c83b78cc89f21291359ac34bffde91d7b6722b16ccab5ef5ce0a1d786c9ab471",
+    "full_0.bin": "3f11eb8951c1d40a41733f047fafa13be0d6746ed4583ac38bfbf5918a31486a",
+    "full_1.bin": "3f11eb8951c1d40a41733f047fafa13be0d6746ed4583ac38bfbf5918a31486a"
+  },
+  "seconds": 1167.9236926219892
+}

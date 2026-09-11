@@ -9,9 +9,16 @@ The exact value and P82 remain undecided.
 The [complete P82 three-eleven exclusion](p82_three_exclusion/README.md)
 closes all 6,773,441 triples of profile `11^3 10^4 9`. Together with the
 [global P82 profile theorem](p82_profiles/README.md), it shows that only
-`11^2 10^6` remains: 3,840 nonempty canonical cases and 1,142,922 anchored pairs.
-The new source also gives exact fractional certificates showing that global
-class-size weight caps alone cannot exclude either formerly remaining profile.
+`11^2 10^6` remains. The subsequent
+[global eleven-weight restriction](p82_balanced_weight_reduction/README.md)
+excludes all 460,485 pairs in the lighter-anchor range. Every possible P82
+partition must contain an eleven-class of fixed weight at least 3,824,714;
+1,000 nonempty canonical cases and 682,437 anchored pairs remain in a proved
+exhaustive cover. An exact 83-row fractional certificate also blocks global
+point-weight separation using one ten-class cap and one canonical eleven-pair
+cap, even for asymmetric weights. The prerequisite profile reduction has
+[independent acceptance](p82_profiles_review1/README.md); the newer exclusions
+await external review.
 
 The [P84 exclusion](p84_exclusion/README.md), its
 [independent acceptance](../sidon_ramsey_8_p84_exclusion_review1/README.md),
