@@ -27,9 +27,18 @@ seven-vertices are missed crosswise by the two nonsinks; each has exactly
 one six-neighbor, and each nonsink has a high sink as its matching partner.
 Thus six specified vertices induce two disjoint sink–nonsink–seven paths.
 Thirty-six exact certificates and a complete missed-incidence/profile cover
-establish these necessary restrictions. Neither remaining configuration is
-proved realizable or excluded. Full reproduction commands and compact evidence
-are in the linked proof and [a2_expected.json](a2_expected.json).
+establish these necessary restrictions. Full reproduction commands and compact
+evidence are in the linked proof and [a2_expected.json](a2_expected.json).
+
+The [five-edge matching exclusion](z12_A2_matching_exclusion.md) now closes
+that entire `A=2` subclass by a human incidence argument. At least eight
+special seven-vertices would need distinct disjoint pairs among at most five
+triples on eight high points, where at most three such pairs can occur.
+Thus only the **four-edge matching** remains at `A=2`; its two four-element
+high neighborhoods must intersect in exactly one point. Run
+`python3 verify_a2_matching.py` for complete finite packing controls and compare
+with [a2_matching_expected.json](a2_matching_expected.json). The four-edge
+case remains unresolved, and the numerical interval is unchanged.
 
 The [preceding incidence theorem](z12_distant_incidence_bound.md) supplies
 the corrected identities and the earlier bound `A<=3`, excluding every
