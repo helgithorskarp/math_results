@@ -31,6 +31,12 @@ The statement is a conditional obstruction to the uniform point-profile
 branch.  It does not decide the existence of an `SCA(5040;7,9)` with
 asymmetric point links.
 
+The subsequent
+[`unrestricted asymmetry theorem`](../sequence_covering_sca79_unrestricted_pair_asymmetry/README.md)
+removes the uniform-profile hypothesis: the point-position moment form plus
+named-coordinate divisibility forces at least one incoming and one outgoing
+asymmetric link at every symbol for every hypothetical `SCA(5040;7,9)`.
+
 ## Proof
 
 Fix `w` and count rows in which `w` is first and another specified symbol `x`
