@@ -157,3 +157,9 @@ enumerates the eight cycle types and 133,496 labelled supports.  The trust
 boundary is the previously published exhaustive point-link census and the
 elementary reductions (1)--(5); no solver verdict or floating-point result is
 used.
+
+The subsequent
+[`exceptional-link defect theorem`](../sequence_covering_sca79_exception_defect/README.md)
+shows that every one of the nine exceptional links must break named-coordinate
+symmetry in 18 ordered-composition layers, with total integral `L^1` defect at
+least 504 per link and 4,536 across the cycle cover.
