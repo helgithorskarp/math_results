@@ -1,0 +1,57 @@
+{
+  "scope": "global structural reduction; no new numerical endpoint",
+  "files": {
+    ".gitignore": {
+      "bytes": 39,
+      "sha256": "0ac051242a18a4ea08dad411dc2f22e098328a9cc1a7a16a26b5f7f44813bbc9"
+    },
+    "README.md": {
+      "bytes": 5177,
+      "sha256": "2e4c06ce206ae8ea51b2f64efb5ee3f4b56c95d25c9a5389de2bc9150dc0161a"
+    },
+    "check_reduction.py": {
+      "bytes": 2823,
+      "sha256": "e36f2c2086ecc220320117f41e0465676b3d62db90c14995c8a8d182972c2b59"
+    },
+    "expected_planar.json": {
+      "bytes": 87,
+      "sha256": "5abb49adc44f2e72760184db04d8d14557a98b88a4bb78508cbeaf4ab937e394"
+    },
+    "expected_reduction.json": {
+      "bytes": 2074,
+      "sha256": "13fd45665bc75ea719cf60cd0831bf24e1eb61c282a43d0e2d7f5d2c1665ebd5"
+    },
+    "generate.py": {
+      "bytes": 2064,
+      "sha256": "524a6113df502962722c9646643a11ad42bbea4f84ba14f68007b2838d71250f"
+    },
+    "known70.json": {
+      "bytes": 878,
+      "sha256": "7679318e102d114f307ae37fe787b1fc08ac43f775eee77f388b4f0838ba81c5"
+    },
+    "plane_caps.cpp": {
+      "bytes": 1223,
+      "sha256": "c88bbebcb250aa4aa33220d101ea4e8a1cf69d9dea25f4c6295966e4169ace04"
+    },
+    "proof.md": {
+      "bytes": 8120,
+      "sha256": "0136085090be9b24a012f8eef1275f31e07d7ad70e1c261e9f66272f4a01f0fd"
+    },
+    "runs.json": {
+      "bytes": 1767,
+      "sha256": "f6e15f5f4b5dea9a38fcf932b0588cf023c3a519e600eb9ca6d14bca1aa2f1c0"
+    }
+  },
+  "validation": {
+    "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "python": "3 standard library for geometry checks; python-sat 1.9.dev15 only for optional CNF generation",
+    "planar_check": "complete labelled enumeration, both survivor counts zero",
+    "geometry_check": "775 affine lines;155 affine planes;70-point literature control verified",
+    "baseline_cnf_regeneration": "four of four byte-identical to original probes"
+  },
+  "external_classification": {
+    "url": "https://arxiv.org/pdf/2108.04871v2",
+    "pdf_sha256": "62023698054f15116c3585a8c74fa3e698972138680a4b31ecd1500411b5a741",
+    "dependency": "Theorems 5.2 and 5.3; not independently re-proved here"
+  }
+}
