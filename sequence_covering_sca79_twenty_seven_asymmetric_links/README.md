@@ -205,3 +205,12 @@ checks each multiset through all global balances and all 256 central cells,
 and verifies the exact-27 constant frontier.  Runtime is approximately ten
 seconds on the publication machine; there is no external input, random
 choice, floating point, solver, or bulky generated certificate.
+
+## Subsequent strengthening
+
+The follow-up
+[`exact-27 elimination`](../sequence_covering_sca79_twenty_eight_asymmetric_links/README.md)
+checks the complete one-nonconstant-row branch and supplies explicit
+nonnegative-cell certificates against symmetric same-type pair links in the
+all-constant branch.  It eliminates exact 27 and raises the unrestricted
+lower bound to twenty-eight asymmetric links.
