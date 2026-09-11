@@ -168,3 +168,11 @@ The Python 3 standard-library checker uses exact integers.  It reconstructs
 the five congruences and their unique residue modulo 60, verifies every
 coefficient in (9) symbolically by substitution, replays the inequality
 certificate, and audits the sharp fourteen-arc graph fixture.
+
+## Subsequent strengthening
+
+The follow-up
+[`constant-row and exact-23 obstruction`](../sequence_covering_sca79_twenty_four_asymmetric_links/README.md)
+combines symmetric pair-link boundaries with the global point-flow balances.
+It eliminates every support through 23 arcs and raises the unrestricted
+lower bound to twenty-four coordinate-asymmetric ordered-pair links.
