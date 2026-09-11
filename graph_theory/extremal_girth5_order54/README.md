@@ -2,6 +2,16 @@
 
 Let `f(n) = ex(n,{C3,C4})` for finite simple undirected graphs. The retained target is to decide whether a graph of order 54, size 187 and girth at least five exists. The working interval remains **185 ≤ f(54) ≤ 187**.
 
+The [complete two-incidence exclusion](z12_A2_exclusion.md) now proves that,
+at `z=12`, the total high distant incidence count satisfies **A ≤ 1**.
+Thus **at least eleven of the twelve degree-eight vertices are sinks**.
+It closes every `A=2` configuration: the final overlapping-four-neighborhood
+case requires at least ten special seven-vertices, while a colored-edge
+packing argument on five points permits at most eight. Only `A=0,1` remain
+at `z=12`. If `A=1`, the unique missed vertex has degree six or seven and
+no high neighbors. Run `python3 verify_a2_exclusion.py` and compare with
+[a2_exclusion_expected.json](a2_exclusion_expected.json).
+
 The [whole-boundary exclusion](boundary_exclusion.md) now proves
 **at most twelve degree-eight vertices**. Every case with thirteen is closed.
 The new human argument combines local sign and charge inequalities with
@@ -18,7 +28,7 @@ frames reduce to a shared endpoint or a six-cycle, and 14 exact rational
 certificates refute every remaining attachment profile. The public source
 regenerates the certificates outside Git and checks them with integer
 arithmetic; see the proof for commands and [compact evidence](a3_expected.json).
-The complete `z=12` subclass remains open, with `A=0,1,2` remaining.
+This left `A=0,1,2` at that stage; the new theorem above closes `A=2`.
 
 The [complete two-incidence reduction](z12_A2_reduction.md) now classifies
 all remaining `A=2` candidates. Their high vertices induce a matching of
@@ -38,7 +48,8 @@ Thus only the **four-edge matching** remains at `A=2`; its two four-element
 high neighborhoods must intersect in exactly one point. Run
 `python3 verify_a2_matching.py` for complete finite packing controls and compare
 with [a2_matching_expected.json](a2_matching_expected.json). The four-edge
-case remains unresolved, and the numerical interval is unchanged.
+case left by that result is now closed by the new theorem above. The
+numerical interval is unchanged.
 
 The [preceding incidence theorem](z12_distant_incidence_bound.md) supplies
 the corrected identities and the earlier bound `A<=3`, excluding every
