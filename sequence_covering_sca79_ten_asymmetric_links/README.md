@@ -106,3 +106,11 @@ The checker uses Python 3 standard-library exact integers and `Fraction`
 arithmetic.  It reconstructs the seven incidence equations from named sets,
 checks the point-link count (1), verifies the aggregate divisibility
 certificate (3), and independently solves the rational system.
+
+## Subsequent strengthening
+
+The follow-up
+[`forbidden-edge and capacity theorem`](../sequence_covering_sca79_twelve_asymmetric_links/README.md)
+combines this named-set obstruction with the exact point-position residue
+signatures.  It excludes every support with ten or eleven asymmetric links
+and raises the global lower bound to twelve.
