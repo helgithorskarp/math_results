@@ -298,7 +298,7 @@ with the return-to-start multiplicity removed. This proves the necessary
 graph-to-model implication. No converse or realization claim is needed.
 
 The nonnegative-variable budget is (sum X_i+sum Y_{ij}\le54+374=428).
-The objective is (m=rac12sum_{d_i=8}c_iX_i). Equality multipliers are
+The objective is (m=\frac12sum_{d_i=8}c_iX_i). Equality multipliers are
 unrestricted and upper-inequality multipliers are nonpositive. Summing the
 stored exact rational multipliers gives right-hand side (981743/500000).
 The largest excess over an objective coefficient, across **every** column,

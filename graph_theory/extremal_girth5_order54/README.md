@@ -20,6 +20,17 @@ regenerates the certificates outside Git and checks them with integer
 arithmetic; see the proof for commands and [compact evidence](a3_expected.json).
 The complete `z=12` subclass remains open, with `A=0,1,2` remaining.
 
+The [complete two-incidence reduction](z12_A2_reduction.md) now classifies
+all remaining `A=2` candidates. Their high vertices induce a matching of
+four or five edges, with one fixed low profile in each case. Two distinct
+seven-vertices are missed crosswise by the two nonsinks; each has exactly
+one six-neighbor, and each nonsink has a high sink as its matching partner.
+Thus six specified vertices induce two disjoint sink–nonsink–seven paths.
+Thirty-six exact certificates and a complete missed-incidence/profile cover
+establish these necessary restrictions. Neither remaining configuration is
+proved realizable or excluded. Full reproduction commands and compact evidence
+are in the linked proof and [a2_expected.json](a2_expected.json).
+
 The [preceding incidence theorem](z12_distant_incidence_bound.md) supplies
 the corrected identities and the earlier bound `A<=3`, excluding every
 four- and five-incidence case. Its assumptions and certificates are kept
