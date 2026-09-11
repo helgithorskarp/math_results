@@ -225,3 +225,8 @@ memoizes central signatures and uses the proved reversal bijection to avoid
 duplicating the mixed case; this changes only execution, not the mathematical
 state space.  There is no parallelism, randomness, floating point, solver,
 external input, or bulky generated certificate.
+
+## Subsequent strengthening
+
+The [`thirty-link theorem`](../sequence_covering_sca79_thirty_asymmetric_links/README.md)
+eliminates all three exact-29 coefficient-row branches.
