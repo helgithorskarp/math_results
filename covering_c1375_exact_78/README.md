@@ -61,6 +61,55 @@ the `A,B` blocks gives a 41-block `C(12,6,4)` cover `M union B`; similarly,
 `M union C` is the link at `1`.  This is the global point-link bridge used
 below.
 
+### Why the dichotomy is exhaustive
+
+For completeness, the short counting argument can be stated without the CNF
+interface of the earlier bridge.  Fix a degree-41 root `0`.  For its twelve
+neighbors write
+
+```text
+a_i = d(0,i)-20,
+b_i = d(i)-41.
+```
+
+All entries are nonnegative, because point links need 41 blocks and pair
+links need 20 blocks.  Incidence counting gives
+
+```text
+sum_i a_i = 41*6 - 12*20 = 6,
+sum_i b_i = 77*7 - 13*41 = 6,
+```
+
+where the root itself has full excess zero and is omitted from the second
+sum.  Case e0 occurs precisely when some coordinate has `a_i=b_i=0`.  If e0
+does not occur, then `a_i+b_i>=1` in all twelve coordinates.  The sum of
+these twelve positive integers is exactly `6+6=12`, so every coordinate has
+sum one.  Consequently six coordinates are `(a_i,b_i)=(0,1)` and six are
+`(1,0)`: the link profile is `20^6,21^6` and the full point profile is
+`41^7,42^6`.
+
+At any degree-41 point, the twelve pair excesses above 20 also sum to six.
+Its six other degree-41 partners must have positive pair excess outside e0,
+so all six are exactly one and every cross-pair excess is zero.  Choosing a
+degree-42 neighbor of the root therefore yields category counts
+`(A,B,C,D)=(20,21,22,14)` in hard e1.  The independent checker enumerates
+the 924 possible placements of the six `(1,0)` coordinates and verifies this
+arithmetic explicitly.
+
+For that forced hard-`e1` link, the earlier compact certificate assigns
+nonnegative weights to all 546 five-sets not covered by the archived link.
+It checks every one of the 792 possible completion blocks and proves
+
+```text
+weighted coverage requirement = 678,
+weighted per-block upper total = 672.
+```
+
+The expanded independent checker reconstructs the certificate's order-720
+group, all target and candidate orbits, and every per-block inequality from
+the raw source link.  Hence hard e1 is excluded within the same end-to-end
+verification command used below.
+
 ## Exhaustive classification of `M` extensions
 
 Consider any 21-block extension `E` for which `M union E` is a 41-block
@@ -188,17 +237,40 @@ python3 exact_78.py \
   | diff -u EXPECTED_CHECK.txt -
 ```
 
-The independent checker imports neither the primary checker nor the
-generator.  It reconstructs all blocks, group actions, incidence matrices,
-and Farkas sums using 11- and 12-bit masks:
+The independent checker imports neither the primary checker nor any
+generator.  It now audits the proof end to end using integer bit masks.  In
+addition to reconstructing all new group actions, incidence matrices, and
+Farkas sums, it:
+
+- exhausts the 924 hard-`e1` excess assignments forced by the global
+  dichotomy and checks both category-count vectors;
+- independently reconstructs the earlier order-720 hard-`e1` weighted
+  certificate, all 546 residual five-sets, and all 792 candidate blocks; and
+- recovers the hard-`e1` contradiction `678 > 672` before entering the e0
+  branch.
+
+Thus one command checks every finite certificate in the lower-bound chain:
 
 ```sh
 python3 independent_bitmask_check.py \
   ../covering_c1375_fixed_link_symmetry/cover_41.txt \
   ../covering_c1375_hard_e1_link_classification/ORBIT11_EXTENSION.txt \
   ../covering_c1375_hard_e1_link_classification/FARKAS_CERTIFICATES.json \
+  ../covering_c1375_hard_e1_elimination/CERTIFICATE.json \
   FARKAS_CERTIFICATES.json \
   | diff -u EXPECTED_INDEPENDENT_CHECK.txt -
+```
+
+Representative certificate corruptions are required to fail closed:
+
+```sh
+python3 tamper_tests.py \
+  ../covering_c1375_fixed_link_symmetry/cover_41.txt \
+  ../covering_c1375_hard_e1_link_classification/ORBIT11_EXTENSION.txt \
+  ../covering_c1375_hard_e1_link_classification/FARKAS_CERTIFICATES.json \
+  ../covering_c1375_hard_e1_elimination/CERTIFICATE.json \
+  FARKAS_CERTIFICATES.json \
+  | diff -u EXPECTED_TAMPER_TESTS.txt -
 ```
 
 To regenerate the floating-point rays and round them only when a strict
@@ -225,12 +297,28 @@ exact checker takes about ten seconds.
 
 HiGHS and NumPy are used only to discover reproducible multiplier vectors;
 they are outside the proof trust boundary.  The two standard-library
-checkers verify every new numerical claim with exact integers.  The global
-proof additionally depends on Krug's certified `C(12,6,4)=41` and unique
-`C(11,5,3)` results, the exact global dichotomy, and the exact hard-`e1`
-elimination linked above.
+checkers verify every new numerical claim with exact integers.  The expanded
+independent checker also reconstructs the global-dichotomy arithmetic and the
+complete hard-`e1` weighted obstruction, instead of accepting those local
+certificates through prior checker output.  The remaining external
+mathematical inputs are Krug's certified `C(12,6,4)=41` and unique
+`C(11,5,3)` results; the short human reduction from a hypothetical 77-cover
+to the audited e0/hard-`e1` cases is stated above and in the global bridge.
 
 A publication-time web, arXiv, and GitHub search on 2026-09-10 found the
 new `77` lower bound from Krug and Bluskov's established `78` upper bound,
 but no prior exact determination.  This supports a novelty review; it does
 not establish priority and does not replace independent peer review.
+
+## Independent review
+
+An independently authored
+[clean-room review](../covering_c1375_exact_78_review1/) accepted the theorem
+at source commit `818b1f8af96c964667ab5163345d919c8da1608a`.  Its NetworkX
+incidence-graph implementation imports none of the submitted code, enumerates
+the full order-240 automorphism group independently, replays all new and
+imported duals, and regenerated the 1,298,480-byte certificate byte-for-byte.
+The review checker passes under both ordinary and optimized Python.  Discovery
+Net records the review as both `VERIFIES` and `REPRODUCES` relations; its
+contribution reference is
+`bafkreihk54ixjzron3mewug42idmhziv4bgfp7veuoidn3x3ftm6u2hkvu`.

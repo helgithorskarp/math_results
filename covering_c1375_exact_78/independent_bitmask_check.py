@@ -60,7 +60,7 @@ def k_masks(n, k):
 
 
 def compose(a, b):
-    return tuple(a[b[i]] for i in range(11))
+    return tuple(a[b[i]] for i in range(len(a)))
 
 
 def make_group(m_blocks):
@@ -88,7 +88,7 @@ def make_group(m_blocks):
 
 
 def permute_mask(block, permutation):
-    return sum(1 << permutation[i] for i in range(11) if block >> i & 1)
+    return sum(1 << permutation[i] for i in range(len(permutation)) if block >> i & 1)
 
 
 def weak_compositions(total, length, prefix=()):
@@ -215,6 +215,149 @@ def completion_matrix(m_blocks, left, right, d_candidates):
     return rows, residual
 
 
+def audit_global_dichotomy():
+    # In the complement of e0, let a_i be the twelve root-link degree
+    # excesses and b_i the twelve full point-degree excesses.  Both sums are
+    # six, and a_i+b_i>=1 at every neighbor.  Their combined sum is twelve,
+    # so equality holds coordinatewise: (a_i,b_i) is (1,0) or (0,1).
+    hard_patterns = []
+    for a in weak_compositions(6, 12):
+        b = tuple(1 - value for value in a)
+        if min(b) >= 0 and sum(b) == 6:
+            hard_patterns.append((a, b))
+    if len(hard_patterns) != math.comb(12, 6):
+        raise AssertionError("independent hard-e1 profile census")
+    if any(
+        Counter(a) != Counter({0: 6, 1: 6})
+        or Counter(b) != Counter({0: 6, 1: 6})
+        or any(x + y != 1 for x, y in zip(a, b))
+        for a, b in hard_patterns
+    ):
+        raise AssertionError("independent hard-e1 profile structure")
+
+    # At any degree-41 point, the twelve pair excesses above 20 sum to six.
+    # In hard e1 its six degree-41 partners each have excess at least one,
+    # leaving the unique vector 1^6,0^6.
+    pair_vectors = [
+        row
+        for row in weak_compositions(6, 12)
+        if min(row[:6]) >= 1
+    ]
+    if pair_vectors != [(1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0)]:
+        raise AssertionError("independent hard-e1 pair-excess structure")
+    e0_counts = (20, 21, 21, 15)
+    hard_counts = (20, 21, 22, 14)
+    if sum(e0_counts) != 77 or sum(hard_counts) != 77:
+        raise AssertionError("independent category-count arithmetic")
+    return len(hard_patterns), e0_counts, hard_counts
+
+
+def audit_hard_e1(source_masks, source_path, certificate_path):
+    document = json.loads(certificate_path.read_text(encoding="ascii"))
+    if document.get("format") != "C1375-hard-e1-weighted-orbit-certificate-v1":
+        raise AssertionError("independent hard-e1 certificate format")
+    if document.get("source_link_sha256") != digest(source_path):
+        raise AssertionError("independent hard-e1 source hash")
+
+    degrees = [sum(block >> i & 1 for block in source_masks) for i in range(12)]
+    if Counter(degrees) != Counter({20: 6, 21: 6}):
+        raise AssertionError("independent hard-e1 link degrees")
+    low_points = tuple(i + 1 for i, degree in enumerate(degrees) if degree == 20)
+    if list(low_points) != document.get("link_degree_20_points"):
+        raise AssertionError("independent hard-e1 low-point metadata")
+    low_mask = mask_12(low_points)
+
+    generators = tuple(
+        tuple(value - 1 for value in row)
+        for row in document.get("automorphism_generators", ())
+    )
+    if len(generators) != 2 or any(set(row) != set(range(12)) for row in generators):
+        raise AssertionError("independent hard-e1 generators")
+    source_set = set(source_masks)
+    for generator in generators:
+        if {permute_mask(block, generator) for block in source_masks} != source_set:
+            raise AssertionError("independent hard-e1 non-automorphism")
+    identity = tuple(range(12))
+    group = {identity}
+    todo = deque([identity])
+    while todo:
+        current = todo.popleft()
+        for generator in generators:
+            result = compose(generator, current)
+            if result not in group:
+                group.add(result)
+                todo.append(result)
+    if len(group) != document.get("generated_group_order") or len(group) != 720:
+        raise AssertionError("independent hard-e1 group order")
+
+    residual = {
+        target for target in k_masks(12, 5)
+        if not any(subset(target, block) for block in source_masks)
+    }
+    if len(residual) != 546:
+        raise AssertionError("independent hard-e1 residual count")
+    weights = {}
+    for row in document.get("residual_orbits", ()):
+        representative = mask_12(row["representative"])
+        orbit = {permute_mask(representative, permutation) for permutation in group}
+        if representative not in residual or not orbit <= residual:
+            raise AssertionError("independent hard-e1 residual representative")
+        if len(orbit) != row["size"] or weights.keys() & orbit:
+            raise AssertionError("independent hard-e1 residual orbit")
+        weight = row["weight"]
+        if not isinstance(weight, int) or weight < 0:
+            raise AssertionError("independent hard-e1 residual weight")
+        weights.update((target, weight) for target in orbit)
+    if set(weights) != residual:
+        raise AssertionError("independent hard-e1 residual orbit exhaustiveness")
+
+    candidates = set(k_masks(12, 7))
+    seen = set()
+    scores = Counter()
+    bound = document["per_block_bound"]
+    for row in document.get("candidate_orbits", ()):
+        representative = mask_12(row["representative"])
+        orbit = {permute_mask(representative, permutation) for permutation in group}
+        if representative not in candidates or not orbit <= candidates:
+            raise AssertionError("independent hard-e1 candidate representative")
+        if len(orbit) != row["size"] or seen & orbit:
+            raise AssertionError("independent hard-e1 candidate orbit")
+        for block in orbit:
+            contained_weight = sum(weight for target, weight in weights.items() if subset(target, block))
+            low_count = (block & low_mask).bit_count()
+            score = contained_weight + 8 * low_count
+            if score > bound:
+                raise AssertionError("independent hard-e1 per-block inequality")
+            scores[score] += 1
+        representative_weight = sum(
+            weight for target, weight in weights.items() if subset(target, representative)
+        )
+        representative_low = (representative & low_mask).bit_count()
+        if (
+            representative_weight != row["contained_weight"]
+            or representative_low != row["link_low_count"]
+            or representative_weight + 8 * representative_low != row["score"]
+        ):
+            raise AssertionError("independent hard-e1 candidate metadata")
+        seen |= orbit
+    if seen != candidates or len(seen) != 792:
+        raise AssertionError("independent hard-e1 candidate orbit exhaustiveness")
+
+    weighted_requirement = sum(weights.values())
+    weighted_upper = (
+        bound * document["completion_blocks"]
+        - 8 * len(low_points) * document["variable_degree_on_link_degree_20_points"]
+    )
+    gap = weighted_requirement - weighted_upper
+    if document.get("arithmetic") != {
+        "weighted_requirement": weighted_requirement,
+        "weighted_upper": weighted_upper,
+        "strict_gap": gap,
+    } or gap <= 0:
+        raise AssertionError("independent hard-e1 contradiction arithmetic")
+    return len(group), len(residual), len(candidates), scores, weighted_requirement, weighted_upper, gap
+
+
 def check_upper():
     modulus = 13
     line = (1, 2, 4, 10)
@@ -246,6 +389,7 @@ def main():
     parser.add_argument("source_link", type=Path)
     parser.add_argument("prior_witness", type=Path)
     parser.add_argument("prior_certificates", type=Path)
+    parser.add_argument("hard_e1_certificate", type=Path)
     parser.add_argument("certificates", type=Path)
     args = parser.parse_args()
 
@@ -256,6 +400,8 @@ def main():
     for target in k_masks(12, 4):
         if not any(subset(target, block) for block in source_masks):
             raise AssertionError("independent source-cover check")
+    hard_patterns, e0_counts, hard_counts = audit_global_dichotomy()
+    hard_audit = audit_hard_e1(source_masks, args.source_link, args.hard_e1_certificate)
     m_blocks = tuple(mask_r(tuple(p for p in block if p != 1)) for block in source_points if 1 in block)
     if len(m_blocks) != 20 or len(set(m_blocks)) != 20:
         raise AssertionError("independent second-link size check")
@@ -354,6 +500,15 @@ def main():
 
     histogram = check_upper()
     print("independent_bitmask_farkas_check=PASS")
+    print(
+        f"global_dichotomy=PASS hard_profile_assignments={hard_patterns} "
+        f"e0_counts={','.join(map(str, e0_counts))} hard_e1_counts={','.join(map(str, hard_counts))}"
+    )
+    print(
+        f"hard_e1_weighted_check=PASS group_order={hard_audit[0]} residual_five_sets={hard_audit[1]} "
+        f"candidates={hard_audit[2]} weighted_requirement={hard_audit[4]} "
+        f"weighted_upper={hard_audit[5]} strict_gap={hard_audit[6]}"
+    )
     print("group_order=240 profile_orbits=143 excluded_orbits=142 excluded_labeled=8006")
     print(f"profile_min_gap={min(row['gap'] for row in profile_results)} profile_max_support={max(row['support'] for row in profile_results)}")
     print(f"prior_uniqueness_cases={len(prior_results)} surviving_extensions={len(extension_orbit)}")
