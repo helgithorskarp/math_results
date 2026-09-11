@@ -262,10 +262,13 @@ the executable supplies exact finite checks of the ranks and the explicit
 fixture.  The remaining target requires coupling asymmetric pair links and
 then enforcing the internal orders that the ternary regions forget.
 
-## Next milestone
+## Subsequent global obstruction
 
-Lift (7) from ordered compositions to named region partitions.  The immediate
-objective is to decide whether its 72 local profiles admit labelled refinements
-whose projections agree on every named point-link cell.  Failure would provide
-a finite global obstruction; success would give a concrete pair-link bundle
-for a subsequent three-symbol or internal-order search.
+The proposed lift is impossible.  The follow-up
+[`sequence_covering_sca79_pair_link_symmetry_obstruction`](../sequence_covering_sca79_pair_link_symmetry_obstruction/README.md)
+shows that every coordinate-symmetric pair link contributes a multiple of 21
+to each fixed-symbol `(0,2,5)` position count, whereas the uniform point link
+requires that count to be 560.  Thus no assignment of the 72 profiles in (7)
+can come from common permutation paths, and any continuation of the uniform
+point branch must introduce dependence on the names of the seven unmarked
+symbols in at least nine ordered-pair links.
