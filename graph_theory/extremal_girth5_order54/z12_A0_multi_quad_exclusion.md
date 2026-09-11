@@ -1,5 +1,10 @@
 # The five-edge high-forest subclass is excluded
 
+**Subsequent refinement.** The [complete four-edge exclusion](z12_A0_four_edge_exclusion.md)
+now leaves only the three-edge layer: 23 necessary profiles and three high
+forests at twelve high vertices. The theorem and its historical remainder
+below are preserved.
+
 **Conditional theorem.** There is no simple graph with 54 vertices, 187
 edges, girth at least five, degree counts $(n_6,n_7,n_8)=(16,26,12)$,
 and all of the following properties:
