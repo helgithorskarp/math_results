@@ -1,5 +1,10 @@
 # Exhaustive structure at 73 points
 
+This is the historical reduction established in the first mathematical pass.
+The subsequent [upper-bound proof](upper_bound72.md) closes every branch and
+proves r_5(F_5^3)<=72. References below to unresolved cases describe the
+earlier checkpoint; the reduction and its source remain valid.
+
 Let S be a line-free 73-subset of AG(3,5). Write a_j for the number of affine
 planes meeting S in j points. There are 31 parallel classes, each comprising
 five planes, and 155 affine planes in total.

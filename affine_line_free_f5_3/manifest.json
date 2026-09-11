@@ -1,17 +1,33 @@
 {
-  "scope": "global structural reduction; no new numerical endpoint",
+  "scope": "Theorem:70<=r_5(F_5^3)<=72; no73-point line-free set",
   "files": {
     ".gitignore": {
       "bytes": 39,
       "sha256": "0ac051242a18a4ea08dad411dc2f22e098328a9cc1a7a16a26b5f7f44813bbc9"
     },
     "README.md": {
-      "bytes": 5177,
-      "sha256": "2e4c06ce206ae8ea51b2f64efb5ee3f4b56c95d25c9a5389de2bc9150dc0161a"
+      "bytes": 5566,
+      "sha256": "e780f02e450d5c995470f7a6102c028d8e6d3570859dc6155f1a028673dc7604"
+    },
+    "check_exceptional.py": {
+      "bytes": 1687,
+      "sha256": "5a1d2d75986b888ad6904c5aa0e8ada5969feafd6b7217595a163fef0d5570e5"
+    },
+    "check_lifted.py": {
+      "bytes": 2712,
+      "sha256": "e37af1f59dffe5ad4b77f339d8a0351e66b817e40400474a8f04080e9f32b4cf"
     },
     "check_reduction.py": {
       "bytes": 2823,
       "sha256": "e36f2c2086ecc220320117f41e0465676b3d62db90c14995c8a8d182972c2b59"
+    },
+    "exceptional128.json": {
+      "bytes": 662,
+      "sha256": "0111ba01ebd0db97da48e64471fe1d4066a1788d216bcaf58ccd635931f4483a"
+    },
+    "exceptional_expected.json": {
+      "bytes": 5629,
+      "sha256": "110de9bf1e8ca5c613c5b42baaabc0c9b3f5115931869d5c3c8d993793b1fdb1"
     },
     "expected_planar.json": {
       "bytes": 87,
@@ -29,29 +45,59 @@
       "bytes": 878,
       "sha256": "7679318e102d114f307ae37fe787b1fc08ac43f775eee77f388b4f0838ba81c5"
     },
+    "lifted_catalogue.json": {
+      "bytes": 1716,
+      "sha256": "bdba258b3779fb1eecbcdc74141f980460741d4bcbe299ca2ed1cef6a7d6be6e"
+    },
+    "lifted_expected.json": {
+      "bytes": 6276,
+      "sha256": "1f99fa9c0ac688a42bf2173b8d3b6f64fe7360d60a97d55694a976bdc4a23dc3"
+    },
     "plane_caps.cpp": {
       "bytes": 1223,
       "sha256": "c88bbebcb250aa4aa33220d101ea4e8a1cf69d9dea25f4c6295966e4169ace04"
     },
+    "projective.py": {
+      "bytes": 789,
+      "sha256": "4993b55e4f16e5a250501567da25844753e8aa6ea045142e7e3db427efc347f7"
+    },
     "proof.md": {
-      "bytes": 8120,
-      "sha256": "0136085090be9b24a012f8eef1275f31e07d7ad70e1c261e9f66272f4a01f0fd"
+      "bytes": 8411,
+      "sha256": "1256a0246bc0ffb700b0c9322d97754cd90dc4959a3f079313774e5c45c46779"
     },
     "runs.json": {
       "bytes": 1767,
       "sha256": "f6e15f5f4b5dea9a38fcf932b0588cf023c3a519e600eb9ca6d14bca1aa2f1c0"
+    },
+    "upper72_expected.json": {
+      "bytes": 939,
+      "sha256": "1179474ca8c36063feb51d09fef47fca68bf74862b99c49e1372ed11436a6838"
+    },
+    "upper_bound72.md": {
+      "bytes": 10265,
+      "sha256": "cf773dfcc40b342bc9a5b21fbdf6d64edd1f5c3e407ad3fba67732cb2c7ee6b2"
+    },
+    "verify_upper72.py": {
+      "bytes": 3826,
+      "sha256": "cba225ebdc05d6c8d1dcabd0843a7e18d8f4c2fd8e61256a69c5c914e81ab8fc"
     }
   },
-  "validation": {
-    "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
-    "python": "3 standard library for geometry checks; python-sat 1.9.dev15 only for optional CNF generation",
-    "planar_check": "complete labelled enumeration, both survivor counts zero",
-    "geometry_check": "775 affine lines;155 affine planes;70-point literature control verified",
-    "baseline_cnf_regeneration": "four of four byte-identical to original probes"
-  },
-  "external_classification": {
-    "url": "https://arxiv.org/pdf/2108.04871v2",
-    "pdf_sha256": "62023698054f15116c3585a8c74fa3e698972138680a4b31ecd1500411b5a741",
-    "dependency": "Theorems 5.2 and 5.3; not independently re-proved here"
-  }
+  "verification_command": "python3 verify_upper72.py --out build/upper72",
+  "expected_output_sha256": "1179474ca8c36063feb51d09fef47fca68bf74862b99c49e1372ed11436a6838",
+  "external_premises": [
+    {
+      "source": "Elsholtz et al., Maximal line-free sets in F_p^n",
+      "url": "https://arxiv.org/abs/2310.03382v2",
+      "role": "Published upper bound73 and lower construction70"
+    },
+    {
+      "source": "Kurz\u2013Landjev\u2013Rousseva, Classification of (3 mod5) arcs in PG(3,5)",
+      "url": "https://arxiv.org/pdf/2108.04871v2",
+      "pdf_sha256": "62023698054f15116c3585a8c74fa3e698972138680a4b31ecd1500411b5a741",
+      "role": "Theorem5.2, Tables4\u20137 and Theorem3.9; imported classification and support theorem, not re-proved here"
+    }
+  ],
+  "historical_reduction_source_commit": "3c073e2752490cd211a8d611156f1e3f76be51c0",
+  "solver_verdict_is_premise": false,
+  "proof_assistant_formalization": false
 }
