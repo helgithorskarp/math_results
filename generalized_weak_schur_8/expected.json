@@ -1,0 +1,66 @@
+{
+  "claim": "WS_8(2)=365",
+  "convention": "least forcing integer; two colors, eight distinct summands",
+  "status": "COMPUTER_ASSISTED_PROVED",
+  "date_utc": "2026-09-11",
+  "parameters": {
+    "n": 365,
+    "k": 8,
+    "r": 171
+  },
+  "solver_result": {
+    "n": 365,
+    "k": 8,
+    "r": 171,
+    "solver": "glucose3",
+    "status": "UNSAT",
+    "variables": 629905,
+    "clauses": 1059130,
+    "seconds": 471.6087852639612,
+    "stats": {
+      "restarts": 6,
+      "conflicts": 39725,
+      "decisions": 48888,
+      "propagations": 1484742608
+    }
+  },
+  "checker": {
+    "name": "drat-trim",
+    "git_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "options": [
+      "-U"
+    ],
+    "status": "VERIFIED",
+    "exit_code": 0,
+    "seconds": 241.641,
+    "input_clauses_in_core": 323524,
+    "lemmas_in_core": 35407,
+    "proof_lemmas": 39726,
+    "resolution_steps": 57024089,
+    "rat_lemmas": 0
+  },
+  "files": {
+    "input.cnf": {
+      "bytes": 19298595,
+      "sha256": "46811b4e83e608efd96d264ed7e6763b598bcd49c63c1ac955ed848e92bfe388",
+      "published": false,
+      "regenerable": true
+    },
+    "proof.drat": {
+      "bytes": 3569646,
+      "sha256": "cc6af9c4db6721b478e6edcf401ce275672c6f1898efca03e67dc9731a3ed758",
+      "published": false,
+      "regenerable": true
+    }
+  },
+  "environment": {
+    "python": "3.11.2",
+    "python_sat": "1.9.dev15",
+    "six": "1.17.0",
+    "platform": "Linux-6.1.0-52-cloud-amd64-x86_64-with-glibc2.36"
+  },
+  "validation": "evidence/validation.json",
+  "semantic_audit": "evidence/audit.json",
+  "canonical_lower_bound_source": "Ahmed et al. (2023), Lemma 2.1/Table 4"
+}
