@@ -2,13 +2,25 @@
 
 Let `f(n) = ex(n,{C3,C4})` for finite simple undirected graphs. The retained target is to decide whether a graph of order 54, size 187 and girth at least five exists. The working interval remains **185 ≤ f(54) ≤ 187**.
 
-The [complete one-quad exclusion](z12_A0_one_quad_exclusion.md) now proves
+The [complete multiple-quad exclusion](z12_A0_multi_quad_exclusion.md)
+closes the **entire five-edge high-forest subclass at twelve high vertices**.
+Every remaining twelve-high candidate now has three or four high-high
+edges, at most four high neighbors at each low vertex, and one of
+**48 necessary profiles across eight high forests**. The proof covers
+all 357 quad-incidence cases; 343 are excluded by individual near/far
+partitions and 14 require actual low adjacency. Every contradiction was
+independently checked. The independent orbit audit covers all 666,372
+labeled quad families. See the linked proof and
+[a0_multi_quad_expected.json](a0_multi_quad_expected.json) for reproduction
+and scope. No realization or global numerical improvement is claimed.
+
+The preceding [complete one-quad exclusion](z12_A0_one_quad_exclusion.md) proved
 that a twelve-high candidate with five high-high edges must have at least
 two low vertices with four high neighbors. All ten one-quad profiles are
 excluded, using a helper non-reuse lemma, a complete incidence normalization,
 and 38 separately checked full-graph SAT refutations. This closes both
-high forests with two degree-two vertices. Five profiles across two
-five-edge forests remain; the total twelve-high cover is now ten high
+high forests with two degree-two vertices. It left five profiles across two
+five-edge forests, all closed above; its preceding cover had ten high
 forests and 53 necessary profiles. See
 [a0_one_quad_expected.json](a0_one_quad_expected.json) and the reproduction
 commands in the linked proof.
@@ -18,7 +30,7 @@ twelve-high candidate has **three to five high-high edges** and **at most
 four high neighbors at each low vertex**. It excludes all larger high
 neighborhoods, all high forests with at most two edges, and every six-edge
 high forest. It established the preceding cover of twelve high forests
-and 63 necessary profiles, now refined by the one-quad exclusion above. The proof uses individual partitions, graphical far-degree lists,
+and 63 necessary profiles, now refined by the complete five-edge exclusion above. The proof uses individual partitions, graphical far-degree lists,
 eleven exact certificates, and a final four-cycle pigeonhole contradiction.
 See the linked proof for regeneration commands and
 [a0_expected.json](a0_expected.json) for compact evidence.

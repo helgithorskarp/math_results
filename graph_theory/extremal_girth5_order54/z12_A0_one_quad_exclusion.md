@@ -1,5 +1,9 @@
 # Excluding the entire one-quad five-edge subclass
 
+The subsequent [multiple-quad exclusion](z12_A0_multi_quad_exclusion.md)
+closes the entire five-edge high-forest subclass. The proof and all evidence
+below are preserved as prerequisites of that combined conclusion.
+
 **Theorem.** A simple graph on 54 vertices with 187 edges, girth at least
 five, and twelve degree-eight vertices cannot simultaneously have:
 
