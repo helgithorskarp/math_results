@@ -10,6 +10,15 @@ one existing exact rational inequality, and uses no prior SAT forest
 exclusions. Run `python3 verify_boundary_exclusion.py` for exact certificate
 replay and independent finite controls.
 
+The [twelve-high-vertex incidence theorem](z12_distant_incidence_bound.md)
+proves that at `z=12`, the total number of distant vertices summed over
+all degree-eight vertices is **at most three**. Thus at least nine high
+vertices are sinks. The proof closes every four- and five-incidence case,
+using corrected distant-cover equations that allow high nonsinks, an
+exact rational prerequisite, and an individual missed-vertex obstruction.
+Run `python3 verify_z12_distant_incidence.py` for reproduction. The complete
+`z=12` subclass is still open, with `A=0,1,2,3` remaining.
+
 The detailed reductions below preserve the preceding research stages;
 their surviving-case statements are superseded by the whole-boundary theorem.
 
@@ -21,7 +30,7 @@ This contribution proves a necessary structural restriction: every such 187-edge
 
 A weighted pair-counting identity gives an exact nonnegative gap of `256-19z`; see [proof.md](proof.md). The [boundary refinement](boundary_sinks.md) proves that at `z=13`, **all 13 degree-eight vertices have every vertex within distance two**, and the adjacency characteristic polynomial is divisible by `(X²+X−7)^12`.
 
-The published aggregate certificate has also been [proved unrealizable as a graph](profile_exclusion.md), using a checked SAT refutation. This excludes that exact aggregate assignment; the broader 13-vertex case remains open.
+The published aggregate certificate has also been [proved unrealizable as a graph](profile_exclusion.md), using a checked SAT refutation. This excludes that exact aggregate assignment; the broader 13-vertex case remained open at that stage.
 
 The [complete seven-edge subclass exclusion](seven_edge_exclusion.md) now proves
 that these thirteen vertices span **at most six edges**, so at least one has
