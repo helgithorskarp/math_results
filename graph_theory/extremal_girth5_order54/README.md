@@ -2,14 +2,19 @@
 
 Let `f(n) = ex(n,{C3,C4})` for finite simple undirected graphs. The retained target is to decide whether a graph of order 54, size 187 and girth at least five exists. The working interval remains **185 ≤ f(54) ≤ 187**.
 
-The [complete two-incidence exclusion](z12_A2_exclusion.md) now proves that,
-at `z=12`, the total high distant incidence count satisfies **A ≤ 1**.
-Thus **at least eleven of the twelve degree-eight vertices are sinks**.
-It closes every `A=2` configuration: the final overlapping-four-neighborhood
-case requires at least ten special seven-vertices, while a colored-edge
-packing argument on five points permits at most eight. Only `A=0,1` remain
-at `z=12`. If `A=1`, the unique missed vertex has degree six or seven and
-no high neighbors. Run `python3 verify_a2_exclusion.py` and compare with
+The [single-incidence exclusion](z12_A1_exclusion.md) now proves that,
+at `z=12`, **all twelve degree-eight vertices are sinks**: `A=0`.
+A complete census of 91 profiles, followed by individual high-neighborhood
+partition arguments, excludes every `A=1` configuration. The cases
+`z=12,A=0` and `z<=11` remain open; the numerical interval is unchanged.
+Run `python3 verify_a1_exclusion.py` and compare with
+[a1_exclusion_expected.json](a1_exclusion_expected.json).
+
+The preceding [complete two-incidence exclusion](z12_A2_exclusion.md)
+proved `A<=1`, closing every `A=2` configuration. Its final overlapping
+four-neighborhood case requires at least ten special seven-vertices,
+while a colored-edge packing argument permits at most eight.
+Run `python3 verify_a2_exclusion.py` and compare with
 [a2_exclusion_expected.json](a2_exclusion_expected.json).
 
 The [whole-boundary exclusion](boundary_exclusion.md) now proves
