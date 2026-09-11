@@ -1,0 +1,114 @@
+{
+  "theorem": "Every pair-covered simple 5-uniform hypergraph with at most 33 edges and minimum degree at most six is 2-colorable.",
+  "additional_complete_cases": "Pair-covered 19- or 25-vertex hypergraphs with at most 34 edges are 2-colorable.",
+  "global_m5_lower_bound_unchanged": 33,
+  "forest_cases": [
+    {
+      "v": 19,
+      "m": 34,
+      "degrees": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "max_bound": "12047/12155"
+    },
+    {
+      "v": 20,
+      "m": 33,
+      "degrees": [
+        5,
+        6
+      ],
+      "max_bound": "45921/46189"
+    },
+    {
+      "v": 21,
+      "m": 33,
+      "degrees": [
+        5,
+        6
+      ],
+      "max_bound": "417/418"
+    }
+  ],
+  "low_degree_cases": [
+    {
+      "v": 22,
+      "visited": {
+        "3": 226
+      },
+      "closed_by_coloring": {
+        "3": 226
+      },
+      "residual_types": 0,
+      "closure": "all colored"
+    },
+    {
+      "v": 23,
+      "visited": {
+        "3": 121,
+        "4": 2710,
+        "5": 36920
+      },
+      "closed_by_coloring": {
+        "3": 106,
+        "4": 2684,
+        "5": 36901
+      },
+      "residual_types": 3,
+      "closure": "17>12"
+    },
+    {
+      "v": 24,
+      "visited": {
+        "3": 8
+      },
+      "closed_by_coloring": {
+        "3": 8
+      },
+      "residual_types": 0,
+      "closure": "all colored"
+    },
+    {
+      "v": 25,
+      "visited": {
+        "3": 2
+      },
+      "closed_by_coloring": {
+        "3": 2
+      },
+      "residual_types": 0,
+      "closure": "all colored"
+    }
+  ],
+  "spanning_link_cases": [
+    {
+      "v": 25,
+      "m": 33,
+      "spanning_degree6_vertices": 3,
+      "types": 2,
+      "max_bound": "28845/29393"
+    },
+    {
+      "v": 25,
+      "m": 34,
+      "spanning_degree6_vertices": 4,
+      "types": 3,
+      "max_bound": "793/798"
+    },
+    {
+      "v": 25,
+      "m": 35,
+      "spanning_degree6_vertices": 5,
+      "types": 5,
+      "max_bound": "91877/92378"
+    }
+  ],
+  "checks": {
+    "link_envelope_maxima": 64,
+    "tail_union_families": 2240,
+    "covering_pivot_families": 5986
+  }
+}
