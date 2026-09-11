@@ -112,3 +112,12 @@ proof. Later sparse-fiber probes were stopped when the analytic argument
 made them unnecessary. Large instances and incomplete traces remain outside
 Git; they supply no proof premise. Both earlier research programs remain
 separate from this contribution.
+
+## Structure at 72 points
+
+A subsequent [certified theorem](sparse_directions/README.md) shows that every
+possible 72-point line-free set has a four-point line in each of the 31
+directions. At least 50 planes have 16 points, and their projective
+completions cover every point of PG(3,5) at least twice. The proof excludes the complete sparse-direction
+family using exact reconstruction checks and five independently verified
+SAT certificates. The numerical bounds remain 70–72.

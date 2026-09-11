@@ -1,0 +1,71 @@
+{
+  "scope": "Every72-point line-free set has a4-point line in every direction; at least50 of its planes have16 points and cover each projective point at leasttwice",
+  "files": {
+    "README.md": {
+      "bytes": 11957,
+      "sha256": "7539d2c68c405650b65062f2d15b3667e7703fe3dca251fb2eb891c5e79b8ec3"
+    },
+    "base23.json": {
+      "bytes": 358,
+      "sha256": "addec11f372b6dfb0ac0904b883d857dc617182571cf7e026fbb2da52dcc686c"
+    },
+    "certificates.json": {
+      "bytes": 3803,
+      "sha256": "b9659ca276caffd19fb5995a3fa87af19982ee4ce040ea4e76d571d727c3ff28"
+    },
+    "exceptional143.json": {
+      "bytes": 694,
+      "sha256": "921c4cf4db1ad44944872c8f69bc9dd33dad99ed3e79ee95a26d215c33cf7eec"
+    },
+    "finite_expected.json": {
+      "bytes": 2755,
+      "sha256": "6b82a45f0bbcf04a682ecb41775f8d8f630aee38e7e4c2c35daaf28112a01503"
+    },
+    "generate.py": {
+      "bytes": 1644,
+      "sha256": "dc34abb1141d73cd175f04a6edacece9eea8f3aebf4f594d575c2979fe27f370"
+    },
+    "model.py": {
+      "bytes": 4222,
+      "sha256": "8bf01fdbf3263ca978e7d6aed5b8a62583f1efd584f6aab4d248b2fea067db09"
+    },
+    "replay.py": {
+      "bytes": 2145,
+      "sha256": "369b42fca68fb3f884c8466689cc6e6bd49f90a25262c3914532019403d230a5"
+    },
+    "requirements.txt": {
+      "bytes": 22,
+      "sha256": "5c39718c34ee37edf082a7e7052045ef83ae6640f6099427d592ffcdd8391cdd"
+    },
+    "verify.py": {
+      "bytes": 5019,
+      "sha256": "048d858c569a0978eac837884fbfa6af3011fb416607ba52d670e38c67997b1b"
+    }
+  },
+  "parent_dependencies": {
+    "projective.py": {
+      "bytes": 789,
+      "sha256": "4993b55e4f16e5a250501567da25844753e8aa6ea045142e7e3db427efc347f7"
+    },
+    "exceptional128.json": {
+      "bytes": 662,
+      "sha256": "0111ba01ebd0db97da48e64471fe1d4066a1788d216bcaf58ccd635931f4483a"
+    },
+    "upper_bound72.md": {
+      "bytes": 10265,
+      "sha256": "cf773dfcc40b342bc9a5b21fbdf6d64edd1f5c3e407ad3fba67732cb2c7ee6b2"
+    },
+    "lifted_catalogue.json": {
+      "bytes": 1716,
+      "sha256": "bdba258b3779fb1eecbcdc74141f980460741d4bcbe299ca2ed1cef6a7d6be6e"
+    },
+    "plane_caps.cpp": {
+      "bytes": 1223,
+      "sha256": "c88bbebcb250aa4aa33220d101ea4e8a1cf69d9dea25f4c6295966e4169ace04"
+    }
+  },
+  "finite_check": "python3 verify.py --compare finite_expected.json",
+  "full_replay": "python3 replay.py --out OUT --kissat KISSAT --drat-trim DRAT_TRIM",
+  "formalized": false,
+  "large_proofs_committed": false
+}
