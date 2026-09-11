@@ -121,3 +121,13 @@ directions. At least 50 planes have 16 points, and their projective
 completions cover every point of PG(3,5) at least twice. The proof excludes the complete sparse-direction
 family using exact reconstruction checks and five independently verified
 SAT certificates. The numerical bounds remain 70–72.
+
+## Global low-plane reduction at 72
+
+The [low-plane theorem](low_planes72/README.md) proves that every possible
+72-point set has at least five planes of size at most nine, with three
+independent normals. It reduces the entire 72-point problem to the four
+coordinate profiles AAA, AAB, ABB and BBB, where A=(8,16,16,16,16) and
+B=(9,15,16,16,16). The optimizer-free replay checks complete planar spectra
+and 128 exact rational certificates. These four cases remain open; the
+numerical interval is still 70–72.
