@@ -1,0 +1,85 @@
+{
+  "theorem": "Every finite simple 5-uniform hypergraph with at most 32 edges has Property B.",
+  "lower_bound_m5": 33,
+  "known_upper_bound_m5": 51,
+  "small_vertex_cases": [
+    {
+      "v": 19,
+      "max_failure_bound": "11478/12155"
+    },
+    {
+      "v": 20,
+      "max_failure_bound": "230202/230945"
+    },
+    {
+      "v": 21,
+      "max_failure_bound": "8337/8398"
+    }
+  ],
+  "middle_vertex_cases": [
+    {
+      "v": 22,
+      "visited": {
+        "3": 497,
+        "4": 7510,
+        "5": 43815
+      },
+      "closed_by_coloring": {
+        "3": 479,
+        "4": 7487,
+        "5": 43815
+      },
+      "raw_lifts": {
+        "4": 10147,
+        "5": 71692
+      }
+    },
+    {
+      "v": 23,
+      "visited": {
+        "3": 121,
+        "4": 3444,
+        "5": 20218
+      },
+      "closed_by_coloring": {
+        "3": 102,
+        "4": 3426,
+        "5": 20218
+      },
+      "raw_lifts": {
+        "4": 9729,
+        "5": 46789
+      }
+    },
+    {
+      "v": 24,
+      "visited": {
+        "3": 8,
+        "4": 72
+      },
+      "closed_by_coloring": {
+        "4": 72
+      },
+      "raw_lifts": {
+        "4": 2356
+      }
+    }
+  ],
+  "case25": {
+    "labeled_pair_partitions": 352,
+    "trace_isomorphism_types": 9,
+    "types_closed_by_coloring": 8,
+    "remaining_type": "two disjoint triples",
+    "seven_vertex_identity": "4*T=14, impossible"
+  },
+  "checks": {
+    "coefficient_configurations": 38,
+    "independent_pair_partitions": 352,
+    "small_controls": {
+      "direct_permutation_event_checks": 5280,
+      "hypergraphs_checked": 1024,
+      "certified_colorable_controls": 1008,
+      "covering_link_families_checked": 32596
+    }
+  }
+}
