@@ -209,3 +209,12 @@ the local classification entry by entry, the excess calculation, all global
 balance cases in the exact-23 branch, and the final negative named cell.  No
 solver, floating point, external catalogue, or large generated artifact is
 used.
+
+## Subsequent strengthening
+
+The follow-up
+[`exact-24 through exact-26 elimination`](../sequence_covering_sca79_twenty_seven_asymmetric_links/README.md)
+distributes all remaining degree-excess units among the classified constant
+rows and checks the globally determined nonconstant point link.  It excludes
+every support through 26 arcs and raises the unrestricted lower bound to
+twenty-seven asymmetric links.
