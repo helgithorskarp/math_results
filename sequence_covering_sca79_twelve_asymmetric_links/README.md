@@ -122,3 +122,11 @@ The standard-library checker verifies the modulo-6 local obstruction, the
 capacity inequalities for every smaller excess `s`, and the explicit
 twelve-arc sharpness fixture.  No solver or floating-point result enters the
 theorem.
+
+## Subsequent strengthening
+
+The follow-up
+[`all-layer named-successor theorem`](../sequence_covering_sca79_fourteen_asymmetric_links/README.md)
+uses predecessor sizes two through six to prove that no vertex can have both
+asymmetric indegree one and outdegree one.  It excludes twelve and thirteen
+arcs as well and raises the global lower bound to fourteen.
