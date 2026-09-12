@@ -1,0 +1,36 @@
+{
+  "checks": [
+    {
+      "name": "1024 valid positive graphs followed by incomplete-scope rejection",
+      "reason": "incomplete core catalog",
+      "rejected": true,
+      "sanitizer_errors": false
+    },
+    {
+      "name": "nonzero 104-bit padding",
+      "reason": "nonzero witness padding",
+      "rejected": true,
+      "sanitizer_errors": false
+    },
+    {
+      "name": "false all-blue cross-edge witness",
+      "reason": "blue K5 in model",
+      "rejected": true,
+      "sanitizer_errors": false
+    },
+    {
+      "name": "truncated physical word",
+      "reason": "truncated witness",
+      "rejected": true,
+      "sanitizer_errors": false
+    },
+    {
+      "name": "UNSAT sentinel without listed exception",
+      "reason": "UNSAT sentinel mismatch",
+      "rejected": true,
+      "sanitizer_errors": false
+    }
+  ],
+  "positive_graphs_sanitizer_checked": 1024,
+  "status": "ALL_NEW_DECODER_CONTROLS_PASSED"
+}
