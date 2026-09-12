@@ -1,0 +1,34 @@
+{
+  "checker": {
+    "binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+    "invocation": [
+      "drat-trim",
+      "INPUT.cnf",
+      "OUTPUT.drat",
+      "-t",
+      "300"
+    ],
+    "name": "DRAT-trim",
+    "source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "url": "https://github.com/marijnheule/drat-trim"
+  },
+  "external_peer_review": false,
+  "initial_failed_interface": "PySAT 1.8.dev24 CaDiCaL195 returned truncated buffered proof output through get_proof(). Checks rejected it. Its logs are retained; no result relies on those traces. All 640 final proofs use standalone solver output.",
+  "python": "3.11.2",
+  "solver": {
+    "binary_sha256": "19dc7cc71b68d938e707eb0fab422470005616c68afddb0b9b52481e07efa049",
+    "build": "./configure; make -j4; g++ -Wall -Wextra -O3 -DNDEBUG",
+    "invocation": [
+      "cadical",
+      "--no-binary",
+      "INPUT.cnf",
+      "OUTPUT.drat"
+    ],
+    "name": "CaDiCaL",
+    "source_commit": "146207318796f094dcded87349a64f0c6927309e",
+    "url": "https://github.com/arminbiere/cadical",
+    "version": "1.9.5"
+  },
+  "workers": 4
+}
