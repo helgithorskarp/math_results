@@ -1,0 +1,41 @@
+{
+  "status": "UNKNOWN",
+  "started_utc": "2026-09-12T21:43:48.829581+00:00",
+  "command": [
+    "/scratch/research-team-general-20260910/work/general-researcher-1/pass34_r55/cadical-1.9.5/build/cadical",
+    "--no-binary",
+    "/scratch/research-team-general-20260910/work/general-researcher-2/pass37/physical/four_frames.cnf",
+    "/scratch/research-team-general-20260910/work/general-researcher-2/pass37/physical/proof.drat"
+  ],
+  "input_sha256": "1ae0ddca878c96a3350ed2c51b70d5b0d6c3ded74603092abf31224e3bdf7049",
+  "solver_sha256": "19dc7cc71b68d938e707eb0fab422470005616c68afddb0b9b52481e07efa049",
+  "wall_limit_seconds": 1200,
+  "proof_limit_bytes": 4294967296,
+  "address_space_limit_bytes": 8589934592,
+  "scope": "Complete physical good43 extensions of all four c13 minimum-five-footprint frames.",
+  "new_global_exclusions": 0,
+  "terminal_certificates": [],
+  "returncode": -15,
+  "wall_seconds": 1200.5294992600102,
+  "peak_rss_bytes": 450670592,
+  "stop_reason": "PREDECLARED_WALL_LIMIT",
+  "finished_utc": "2026-09-12T22:03:49.359116+00:00",
+  "four_frames.cnf": {
+    "bytes": 50181326,
+    "sha256": "1ae0ddca878c96a3350ed2c51b70d5b0d6c3ded74603092abf31224e3bdf7049"
+  },
+  "proof.drat": {
+    "bytes": 3039092736,
+    "sha256": "34168fcf5fe7b35f22477ea8357e54180a9a6ed74c56659e42c4fd2b349dff84"
+  },
+  "solver.log": {
+    "bytes": 22275,
+    "sha256": "963797ff36a4cf1c448226fb55ce9072deb93f44fd1f2fb863dd97755a557a1b"
+  },
+  "complete_proof_checked": false,
+  "proof_is_incomplete": true,
+  "first_milestone_gate": "MISSED",
+  "complete_physical_subsets_closed": 0,
+  "verified_good43s": 0,
+  "resume_policy": "Preserve input and unfinished trace. This is a research checkpoint, not saved CDCL state. Do not restart or deepen the unchanged input without a mathematical change."
+}
