@@ -1,0 +1,135 @@
+{
+  "active_M8_controls": [],
+  "bridge_controls": [],
+  "complete_product_patterns": 16,
+  "complete_product_states": 78556,
+  "complete_small_physical_class": {
+    "chains": 6856,
+    "core_graphs": 8,
+    "original_states": 27000,
+    "outcomes": {
+      "VERIFIED_CLOSED_CHAIN": 2,
+      "VERIFIED_GOOD_GRAPH": 6854
+    }
+  },
+  "exact_q_ratios": [
+    {
+      "display": 22.03921823773487,
+      "proven_strict_gain": 22,
+      "q": 7
+    },
+    {
+      "display": 20.184077869788418,
+      "proven_strict_gain": 20,
+      "q": 8
+    },
+    {
+      "display": 17.094029592246063,
+      "proven_strict_gain": 17,
+      "q": 9
+    },
+    {
+      "display": 11.838708489517588,
+      "proven_strict_gain": 11,
+      "q": 10
+    }
+  ],
+  "external_rup_replays": [],
+  "fixtures": {
+    "CORE4": {
+      "cut": 0,
+      "length": 13,
+      "n": 8,
+      "parent_witness_clauses": [
+        {
+          "forbidden_color": 1,
+          "restricted": [],
+          "vertices": [
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "proof_lines": 1,
+      "status": "VERIFIED_CLOSED_CHAIN"
+    },
+    "FULL43": {
+      "cut": 30,
+      "length": 30,
+      "n": 43,
+      "parent_witness_clauses": [
+        {
+          "forbidden_color": 0,
+          "restricted": [],
+          "vertices": [
+            3,
+            7,
+            11,
+            22,
+            42
+          ]
+        }
+      ],
+      "proof_lines": 1,
+      "status": "VERIFIED_CLOSED_CHAIN"
+    },
+    "INTERIOR": {
+      "cut": 6,
+      "length": 15,
+      "n": 9,
+      "parent_witness_clauses": [
+        {
+          "forbidden_color": 0,
+          "restricted": [
+            6,
+            9,
+            12
+          ],
+          "vertices": [
+            2,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "forbidden_color": 1,
+          "restricted": [
+            -1,
+            -4,
+            -2,
+            -5,
+            -3,
+            -6
+          ],
+          "vertices": [
+            0,
+            1,
+            2,
+            4,
+            5
+          ]
+        }
+      ],
+      "proof_lines": 2,
+      "status": "VERIFIED_CLOSED_CHAIN"
+    },
+    "POSITIVE42": {
+      "cut": 6,
+      "length": 8,
+      "n": 42,
+      "status": "VERIFIED_GOOD_GRAPH"
+    }
+  },
+  "original_complete_tasks": 2189178,
+  "original_task_retirements": 0,
+  "physical_adapter_controls": [],
+  "physical_cohorts": 956,
+  "rectangle_points": 44100,
+  "rejected_corruptions": 7,
+  "rejected_obligation_scopes": 0,
+  "target_solver_invocations": 0
+}
