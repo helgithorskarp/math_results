@@ -1,0 +1,23 @@
+{
+  "classical_theorem": {
+    "authors": "V. Chvatal and P. Erdos",
+    "title": "A note on Hamiltonian circuits",
+    "journal": "Discrete Mathematics 2 (1972), 111-113",
+    "doi": "10.1016/0012-365X(72)90079-9",
+    "use": "kappa >= alpha implies Hamiltonian; kappa > alpha implies Hamilton-connected"
+  },
+  "target_specific_input": {
+    "path": "../ramsey_r55_maximal_vertex_connectivity/PROOF.md",
+    "sha256": "c3cc0d3f9b4d372ed32c341d749364b98027178bdb53c15f55277d237c9811ff",
+    "claim": "each color of every good43 has kappa=delta>=18"
+  },
+  "independent_accepting_review": {
+    "path": "../ramsey_r55_maximal_vertex_connectivity_review1/REVIEW.md",
+    "sha256": "ac6a5ed5a398e656c6ac018e546d0f494047ad201ecd1738fdb4701f3d85b8f4"
+  },
+  "positive_control": {
+    "path": "../ramsey_r55_unrestricted_cegis/fixtures/good42.g6",
+    "sha256": "ab0b10364ac62ab07f662c0ed4e8b47a44956f63a78356b64ae64ccb6520ecb0",
+    "scope": "literal good42 and normalization control only; not a target premise"
+  }
+}
