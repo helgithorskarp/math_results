@@ -1,0 +1,76 @@
+{
+  "pass": 38,
+  "physical_trial_pass": 2,
+  "gate": "SECOND_GATE_MISSED_ZERO_TERMINAL_COVERAGE",
+  "predeclared_target": "All physical good43 with maximum own-color edge codegree M<=10, namely all313 preserved M10 cases.",
+  "new_physical_decisions": 0,
+  "unresolved_cases_by_M": {
+    "10": 313,
+    "11": 105,
+    "12": 12,
+    "13": 1
+  },
+  "discovery": {
+    "M10_sevendeck_sdp.json": {
+      "status": "optimal_inaccurate",
+      "value": 5.370229170346348e-06,
+      "seconds": 2.6209917769301683,
+      "rows": 1584,
+      "variables": 464,
+      "solver": "CLARABEL",
+      "solver_iterations": 23
+    },
+    "M10_integer_sdp.json": {
+      "status": "optimal_inaccurate",
+      "value": 1.7473054216392436e-07,
+      "seconds": 3.510234322049655,
+      "rows": 1647,
+      "variables": 464,
+      "solver": "CLARABEL",
+      "solver_iterations": 20
+    },
+    "M10_complete_squares_sdp.json": {
+      "status": "optimal_inaccurate",
+      "value": 1.3907652314028656e-07,
+      "seconds": 91.52368123200722,
+      "rows": 1647,
+      "variables": 464,
+      "solver": "CLARABEL",
+      "solver_iterations": 25
+    }
+  },
+  "exact_control": {
+    "status": "EXACT_STRICTLY_FEASIBLE",
+    "density_denominator": 1000000173109,
+    "positive_densities": 464,
+    "strict_scalar_inequalities": 1647,
+    "minimum_integer_scalar_slack": 317116206,
+    "positive_definite_matrices": 56,
+    "positive_leading_principal_minors": 1303,
+    "seconds": 4.122436927980743,
+    "claim": "The specified finite moment relaxation is strictly feasible. This is not a physical graph or a Ramsey exclusion."
+  },
+  "clean_replay": {
+    "status": "EXACT_REPLAY_MATCH",
+    "certificate_sha256": "68da5d93fc88d379bd64161328db36328fb4e96e2c65a377412f6763942d373f",
+    "seconds": 98.13765101099852,
+    "terminal_physical_decisions": 0
+  },
+  "versions": {
+    "python": "3.11.2",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "cvxpy": "1.9.2",
+    "clarabel": "0.11.1"
+  },
+  "resources": {
+    "largest_conic_solve_seconds": 91.52368123200722,
+    "clarabel_threads_reported": 12,
+    "max_conic_iterations": 300,
+    "hard_memory_limit": null,
+    "peak_memory_measured": false,
+    "enumeration_labeled_graphs": 2097152,
+    "no_SAT_jobs": true
+  },
+  "next_boundary": "One granted pass remains; another genuinely different high-level approach is required. Do not deepen this fixed-order moment system or change its numerical backend as continuation."
+}
