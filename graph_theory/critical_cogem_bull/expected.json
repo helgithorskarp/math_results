@@ -1,0 +1,570 @@
+{
+  "claim_status": "finite exact controls; universal claims use proof.md",
+  "complete_small_labeled_controls": [
+    {
+      "critical_P5_banner_free": 1,
+      "critical_P5_bull_free": 1,
+      "labeled_graphs": 1,
+      "n": 1
+    },
+    {
+      "critical_P5_banner_free": 1,
+      "critical_P5_bull_free": 1,
+      "labeled_graphs": 2,
+      "n": 2
+    },
+    {
+      "critical_P5_banner_free": 1,
+      "critical_P5_bull_free": 1,
+      "labeled_graphs": 8,
+      "n": 3
+    },
+    {
+      "critical_P5_banner_free": 1,
+      "critical_P5_bull_free": 1,
+      "labeled_graphs": 64,
+      "n": 4
+    },
+    {
+      "critical_P5_banner_free": 13,
+      "critical_P5_bull_free": 13,
+      "labeled_graphs": 1024,
+      "n": 5
+    }
+  ],
+  "construction_recurrence_parameters": [
+    {
+      "alpha": 1,
+      "chi": 1,
+      "forbidden_P4_plus_isolates": 0,
+      "vertices": 1
+    },
+    {
+      "alpha": 2,
+      "chi": 3,
+      "forbidden_P4_plus_isolates": 1,
+      "vertices": 5
+    },
+    {
+      "alpha": 3,
+      "chi": 8,
+      "forbidden_P4_plus_isolates": 2,
+      "vertices": 17
+    },
+    {
+      "alpha": 4,
+      "chi": 23,
+      "forbidden_P4_plus_isolates": 3,
+      "vertices": 54
+    },
+    {
+      "alpha": 5,
+      "chi": 58,
+      "forbidden_P4_plus_isolates": 4,
+      "vertices": 146
+    },
+    {
+      "alpha": 6,
+      "chi": 148,
+      "forbidden_P4_plus_isolates": 5,
+      "vertices": 383
+    },
+    {
+      "alpha": 7,
+      "chi": 373,
+      "forbidden_P4_plus_isolates": 6,
+      "vertices": 980
+    },
+    {
+      "alpha": 8,
+      "chi": 933,
+      "forbidden_P4_plus_isolates": 7,
+      "vertices": 2472
+    }
+  ],
+  "exact_controls": {
+    "criticality_necessary": {
+      "alpha": 3,
+      "avoidance": {
+        "P5": true,
+        "banner": true,
+        "bull": true,
+        "co_gem": true
+      },
+      "chi": 4,
+      "critical": false,
+      "edges": 20,
+      "rho4": 0,
+      "rho4_path_vertex_set": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "vertex_deletion_chromatic_numbers": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4
+      ],
+      "vertices": 8
+    },
+    "mycielski_C5_outside_class": {
+      "alpha": 5,
+      "avoidance": {
+        "P5": false,
+        "banner": false,
+        "bull": true,
+        "co_gem": false
+      },
+      "chi": 4,
+      "critical": true,
+      "edges": 20,
+      "rho4": 2,
+      "rho4_path_vertex_set": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "vertex_deletion_chromatic_numbers": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "vertices": 11
+    },
+    "sharp_alpha_1": {
+      "alpha": 1,
+      "avoidance": {
+        "P5": true,
+        "banner": true,
+        "bull": true,
+        "co_gem": true
+      },
+      "chi": 1,
+      "critical": true,
+      "edges": 0,
+      "rho4": -1,
+      "rho4_path_vertex_set": null,
+      "vertex_deletion_chromatic_numbers": [
+        0
+      ],
+      "vertices": 1
+    },
+    "sharp_alpha_2": {
+      "alpha": 2,
+      "avoidance": {
+        "P5": true,
+        "banner": true,
+        "bull": true,
+        "co_gem": true
+      },
+      "chi": 3,
+      "critical": true,
+      "edges": 5,
+      "rho4": 0,
+      "rho4_path_vertex_set": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "vertex_deletion_chromatic_numbers": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "vertices": 5
+    },
+    "sharp_alpha_3": {
+      "alpha": 3,
+      "avoidance": {
+        "P5": true,
+        "banner": false,
+        "bull": true,
+        "co_gem": false
+      },
+      "chi": 8,
+      "critical": true,
+      "edges": 74,
+      "rho4": 1,
+      "rho4_path_vertex_set": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "vertex_deletion_chromatic_numbers": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "vertices": 17
+    }
+  },
+  "fixtures": {
+    "sharp_alpha_1": {
+      "edges": [],
+      "vertices": 1
+    },
+    "sharp_alpha_2": {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "vertices": 5
+    },
+    "sharp_alpha_3": {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          14
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          1,
+          16
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15
+        ],
+        [
+          2,
+          16
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          14
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          14
+        ],
+        [
+          4,
+          15
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          11,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          14
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          14,
+          16
+        ],
+        [
+          15,
+          16
+        ]
+      ],
+      "vertices": 17
+    }
+  },
+  "pair_palette_controls_odd_demands": [
+    1,
+    99
+  ]
+}
