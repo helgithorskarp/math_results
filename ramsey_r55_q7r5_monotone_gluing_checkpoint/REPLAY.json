@@ -1,0 +1,37 @@
+{
+  "status": "MATCHED_EVERY_ORIGINAL_INPUT",
+  "original_inputs": 122,
+  "recorded_projection_seconds": 45.422161965980195,
+  "portable_replay_seconds": 45.47297763300594,
+  "public_producer_equals_executed": false,
+  "scope": "Portable parent replay also checks all literal core bits against the pinned original producer. It uses the same native projector, so it is regression evidence, not an independent proof.",
+  "executed_math_logic_unchanged": true,
+  "publication_only_change": "An explicit __debug__ guard rejects -O/-OO. Executed bulk source remains unchanged. AST equality after removing that guard was checked.",
+  "optimized_mode_controls": [
+    {
+      "file": "model.py",
+      "optimized_invocation_rejected": true,
+      "original_AST_unchanged_except_guard": true
+    },
+    {
+      "file": "audit.py",
+      "optimized_invocation_rejected": true,
+      "original_AST_unchanged_except_guard": true
+    },
+    {
+      "file": "parent_inputs.py",
+      "optimized_invocation_rejected": true,
+      "original_AST_unchanged_except_guard": true
+    },
+    {
+      "file": "normalize.py",
+      "optimized_invocation_rejected": true,
+      "original_AST_unchanged_except_guard": true
+    },
+    {
+      "file": "controls.py",
+      "optimized_invocation_rejected": true,
+      "original_AST_unchanged_except_guard": true
+    }
+  ]
+}

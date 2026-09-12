@@ -1,0 +1,31 @@
+{
+  "python": "Python 3.11.2",
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "projector_flags": [
+    "-O2",
+    "-std=c++17"
+  ],
+  "solver": {
+    "name": "CaDiCaL",
+    "version": "1.9.5",
+    "source_commit": "146207318796f094dcded87349a64f0c6927309e",
+    "executable_sha256": "19dc7cc71b68d938e707eb0fab422470005616c68afddb0b9b52481e07efa049",
+    "arguments": [
+      "--no-binary",
+      "input.cnf",
+      "proof.drat"
+    ],
+    "solver_runs": 1,
+    "wall_limit_seconds": 1800,
+    "proof_limit_bytes": 21474836480,
+    "threads": 1
+  },
+  "conditional_unsat_checker": {
+    "name": "drat-trim",
+    "source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "executable_sha256": "91175748b13d618f59e1f62f0ec37a4d5fe07ff15735ab98ea36f97e36930c05",
+    "used_this_pass": false,
+    "requirement": "Run only on a terminal full-input UNSAT proof; input auditing is not proof checking."
+  },
+  "arithmetic": "Python unbounded integers. C++ literals <=115104, clauses <=2576821, base offsets fewer than 16000000; uint32 offsets and int literals are safe. Stream buffers are about 1 MiB, with little-endian uint32 framing."
+}
