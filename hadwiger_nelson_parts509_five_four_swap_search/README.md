@@ -77,6 +77,51 @@ after four selector models and 688 seconds; its last 508-point model still
 admitted nine of the twenty interface patterns. That is an open search
 checkpoint, not an exclusion or candidate claim.
 
+## Open q=7 continuation
+
+Two q=7-specific outer representations were then tested. The incremental
+[complement selector](search_q7_incremental.py) uses eight S-deletion and
+seven Q5-addition variables and preserves learned clauses across CEGAR rounds.
+The [canonical selector](search_q7_kissat.py) retains the independently
+rebuildable binary counters and invokes standalone Kissat. Both are search
+programs, not proof checkers.
+
+The complement selector found a fifth exact 508-label selection after 111.9
+seconds:
+
+```text
+S deleted: 389 412 413 415 442 443 493 496
+Q5 added: 539 552 560 563 565 598 898
+```
+
+It is not a record candidate: five supplied proper four-colourings use fixed-L
+interface classes 2, 3, 11, 12, and 13. They give five new disjoint killing
+sets, raising the public q=7 frontier from 45 to 50 rows. The fifth selection
+hits all 5,528 base rows and the previous 45 q=7 rows. After the new five are
+added, a solver-free enumeration checks all 1,641,683 balanced selections at
+one or two S/Q5 exchanges from it; none hits every public cut. This is only a
+local statement about the finite cut relaxation, not a four-colourability
+exclusion for other q=7 selections.
+
+The next incremental outer call returned no answer before the one-hour total
+owner gate. The separately bounded canonical post-cut call also returned no
+new model within its cap (the exact terminal status is recorded in
+`OPEN_SEARCH.json`). The representation/core pivot has therefore fired, but
+q=7 remains open.
+
+The compact [q=7 certificate](q7_frontier_certificate.json) contains all 50
+positive colouring witnesses and the five proper colourings of the fifth
+selection. Its solver-free audit uses the hash-pinned complete ambient edge
+list from the exact Parts completion package:
+
+    python3 -B hadwiger_nelson_parts509_five_four_swap_search/verify_q7_frontier.py
+
+It must end with `VERIFIED_OPEN_Q7_FRONTIER`. The all-pairs exact coordinate
+reconstruction establishing completeness of that ambient unit-edge list is
+the independently checked upstream `hadwiger_nelson_parts509_pair_closure`
+artifact. Because this selection is positively four-colourable, it did not
+trigger the full physical/chromatic candidate gate.
+
 ## Sources and scope
 
 The exact coordinate/edge pool is imported from the separately checked Parts
