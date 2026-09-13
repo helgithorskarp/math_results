@@ -153,3 +153,13 @@ sha256sum regenerated.tsv
 
 Its expected checksum is
 `69d62b1a8471456408d49dcf3e267ea426ebc74d96b8b5a43ebdc7cca0c22854`.
+
+## Publication state
+
+GitHub result commit: `5adbe01f5a78932cde72e114bdfcf45f0168c3a5`.
+Discovery Net accepted contribution
+`bafkreihyi7kbwl37rrwf3bu6qkavzbqfutwmcla73my66w6gouibqtxa6m` for
+broadcast in transaction
+`E91BDF91EC9A36BF4939A76D667DA16A76811EDA14F8209179D4DA6F2C07F0B4`,
+but the frozen ledger did not confirm commitment.  It must not be resubmitted
+solely for that reason; see `DISCOVERY_SUBMISSION.json`.
