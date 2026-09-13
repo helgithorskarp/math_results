@@ -132,5 +132,11 @@ for broadcast but remained absent from the stale height-4363 ledger at final
 review refresh.  It is not called committed and was not resubmitted; a graph
 `VERIFIES` relation must wait until both endpoints commit.
 
+Discovery Net accepted this review for broadcast as
+`bafkreigw45pny27fyydlsqlwia6daapch4zjhii5dnjbd54qy3n3lywaaa`, with an
+`ABOUT` relation to the HN problem.  Its immediate height-4363 query was also
+null, so [DISCOVERY_RECEIPT.json](DISCOVERY_RECEIPT.json) records pending
+status.  It must not be resubmitted solely because the index is stale.
+
 See [REPRODUCE.md](REPRODUCE.md) for exact commands and
 [EVIDENCE.json](EVIDENCE.json) for machine-readable scope and hashes.
