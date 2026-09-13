@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "python": "CPython 3.11.2",
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "release_flags": [
+    "-std=c++17",
+    "-O3",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic"
+  ],
+  "checking_flags": [
+    "-std=c++17",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-fsanitize=undefined",
+    "-fno-sanitize-recover=all"
+  ],
+  "normal_seconds": 39.21189021808095,
+  "optimized_python_ubsan_seconds": 42.6630718850065,
+  "normal_and_ubsan_core_fields_equal": true,
+  "python_weighted_cover": {
+    "hits": 142473,
+    "misses": 1367004,
+    "maxsize": null,
+    "currsize": 1367004
+  },
+  "cpp_cover_calls": 2449101,
+  "cpp_cover_memo_states": 53030,
+  "controls": {
+    "status": "PASS",
+    "exhaustive_graphs": 12,
+    "qualified_connected_sets": 672,
+    "exhaustive_cover_instances": 80,
+    "feasible_cover_controls": 71,
+    "invalid_words_rejected": 4
+  },
+  "independent_enumeration_comparison": {
+    "three_point_groups": 18965,
+    "four_point_groups": 175654,
+    "comparison": "entrywise identical between ESU and spanning-tree images"
+  },
+  "solver_free_verification": true,
+  "independent_author_review_claimed": false,
+  "formalized": false,
+  "discovery_only_solver_outcomes": {
+    "reduced_mip": "INFEASIBLE, not used as proof",
+    "standard_cardinality_cnf": "UNKNOWN at 180 seconds; unfinished trace is not a certificate"
+  },
+  "trust_boundary": "Pinned exact geometry implementation, explicit positive words, enumeration completeness arguments, ordinary exact program execution; no solver feasibility/optimality premise",
+  "positive_search_controls": {
+    "508": 7,
+    "509": 10
+  }
+}
