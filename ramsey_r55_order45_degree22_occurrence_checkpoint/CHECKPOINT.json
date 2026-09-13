@@ -1,0 +1,82 @@
+{
+  "campaign": "R(5,5) symmetry-free neighborhood-occurrence lane",
+  "pass": 8,
+  "status": "unresolved_timeout",
+  "opened_utc": "2026-09-13T02:33:45Z",
+  "target": "exclude every degree-22 root cut with e(H)+e(Q)>=220; this would certify the full degree-22 n=45 gate",
+  "claim": {
+    "ramsey_bound": null,
+    "beta22_bound": null,
+    "paired_occurrence_bound": null,
+    "physical_graph": null
+  },
+  "complete_family": {
+    "root_degree": 22,
+    "H_order": 22,
+    "Q_order": 22,
+    "orientation": "e(H)>=110 after complementing if e(H)+e(Q)>=220",
+    "H_edge_layers": [110, 111, 112, 113, 114],
+    "Q_edge_interval": [88, 114],
+    "individual_graph_enumeration": false
+  },
+  "final_model": {
+    "variables": 75903,
+    "equalities": 10826,
+    "inequalities": 23,
+    "nonzeros_soplex": 480587,
+    "valid_colored_types_through_order": 7,
+    "valid_type_count": 74332,
+    "lp_sha256": "fc1d49c6e81bb15fd35295804ecd4229f919335f89df10272e432e1e198483a9"
+  },
+  "solver_runs": [
+    {
+      "solver": "HiGHS dual simplex",
+      "time_limit_seconds": 3600,
+      "status": "time_limit",
+      "primal_status": "none"
+    },
+    {
+      "solver": "HiGHS interior point",
+      "time_limit_seconds": 1200,
+      "status": "time_limit",
+      "primal_status": "none"
+    },
+    {
+      "solver": "HiGHS dual simplex with paired-sum objective",
+      "time_limit_seconds": 1200,
+      "status": "time_limit",
+      "primal_status": "none"
+    },
+    {
+      "solver": "SoPlex 9.0.0 exact mode, pinned git 7418b737e675b0f533e8743c2992763c318a911b",
+      "time_limit_seconds": 300,
+      "status": "time_limit",
+      "iterations": 18037,
+      "primal_solution": false,
+      "dual_solution": false,
+      "rational_refinements": 0
+    }
+  ],
+  "positive_control": {
+    "order": 6,
+    "paired_lower": 220,
+    "status": "feasible",
+    "eH": 110.0,
+    "eQ": 110.0
+  },
+  "audits": {
+    "frontier_sha256": "c848da3dd1b3ef0a9312e66f8d3b6146c12080925ee3a3f2c669561a63e4f8a6",
+    "latest_full_principal_report_sha256": "8b3dcd4f196a41f297e72a518612b82f3af1e6980f4ba7441092e3bb83e6104c",
+    "latest_supplemental_principal_report_sha256": "7271a26b3ef8fa9100a1e7444df8fcd0b83a9d8c4a061fa5a85f6dab0af53a10",
+    "latest_reviewer_report_sha256": "c856fd360b21ea3df773dbe98eeb15d0ed7b39e3ba730bbf4111f713cca86d14",
+    "discovery_reduction_cid": "bafkreicgpqb2vyw2qtelysclrfyt6f2rljwzybt3a6f2wgotwgobtb75oy",
+    "discovery_review_cid": "bafkreifxpqqpaifsozor24am6dnux7sczu2yhmrbmjqafjy5wakhob5qpu",
+    "source_commit": "093c9debce37f15db80866fc06f6af7c080bdfa3",
+    "extremal_archive_sha256": "9cfac9dbd1c209cfa342e5d5424df2a7a3fbb008ca00bf0a992e5bbe72f925b6"
+  },
+  "trust_boundaries": [
+    "McKay--Radziszowski catalogue completeness",
+    "classical exact Ramsey values R(3,5)=14, R(4,4)=18, R(4,5)=25",
+    "exhaustiveness of the reproducible colored-type generator"
+  ]
+}

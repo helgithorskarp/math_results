@@ -1,0 +1,266 @@
+SoPlex version 9.0.0 [mode: optimized] [precision: 8 byte] [rational: GMP 6.2.1] [PaPILO n/a] [GitHash: 7418b73]
+Copyright (c) 1996-2026 Zuse Institute Berlin (ZIB)
+
+External libraries:
+  Boost 1.74.0         Boost C++ Libraries (boost.org)
+  GMP 6.2.1            GNU Multiple Precision Arithmetic Library developed by T. Granlund (gmplib.org)
+  ZLIB 1.2.13          General Purpose Compression Library by J. Gailly and M. Adler (zlib.net)
+
+int:verbosity = 4
+int:syncmode = 1
+int:readmode = 1
+int:solvemode = 2
+real:timelimit = 3.00000000e+02
+
+Reading (rational) LP file <order7_direct_paired220_final.lp> . . .
+Finished reading 58683 lines
+Reading took 2.04 seconds.
+
+LP has 10849 rows 75903 columns and 480587 nonzeros.
+
+Initial floating-point solve . . .
+LP has 10826 equations, 0 ranged rows, 0 boxed columns
+Simplifier (rows) removed 0 rows, 0 non-zeros, 4 col bounds, 0 row bounds; kept 0 column bounds, 0 row bounds
+Simplifier (columns) removed 0 rows, 6 cols, 10 non-zeros, 0 col bounds
+Simplifier removed 6 rows, 6 columns, 16 nonzeros, 4 col bounds, 0 row bounds
+Reduced LP has 10843 rows 75897 columns 480571 nonzeros
+Reduced LP has 10820 equations, 0 ranged rows, 2 boxed columns
+
+Simplifier performed:
+0 empty rows
+0 free rows
+6 singleton rows
+0 forcing rows
+0 empty columns
+2 fixed columns
+0 free columns with zero objective
+4 singleton columns with zero objective
+0 singleton columns combined with a doubleton equation
+0 free singleton columns
+0 dominated columns
+0 weakly dominated columns
+0 duplicate rows
+0 duplicate columns (fixed)
+0 duplicate columns (substituted)
+0 variable aggregations
+0 multi aggregations
+
+Equilibrium scaling LP
+before scaling: min= 1.42857143e-01 max= 1.53615000e+06 col-ratio= 6.14460000e+06 row-ratio= 7.46130000e+04
+after scaling:  min= 7.62939453e-06 max= 1.00000000e+00 col-ratio= 1.31072000e+05 row-ratio= 7.46130000e+04
+
+ --- using hypersparse pricing, sparsity: 0.0022
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |0.0     |0        | 1     | 0.00e+00 | 1.31e+01 | 24       | 0.00000000e+00
+  L  |0.0     |199      | 1     | 0.00e+00 | 2.96e+01 | 24       | 0.00000000e+00
+  L  |0.0     |399      | 2     | 0.00e+00 | 2.71e+01 | 187      | 0.00000000e+00
+  L  |0.1     |599      | 4     | 0.00e+00 | 3.68e+01 | 408      | 0.00000000e+00
+  L  |0.2     |799      | 6     | 0.00e+00 | 3.25e+01 | 657      | 0.00000000e+00
+  L  |0.3     |999      | 8     | 0.00e+00 | 2.85e+01 | 855      | 0.00000000e+00
+  L  |0.6     |1199     | 11    | 0.00e+00 | 2.19e+01 | 1038     | 0.00000000e+00
+  L  |0.8     |1399     | 13    | 0.00e+00 | 2.30e+01 | 1269     | 0.00000000e+00
+  L  |1.0     |1599     | 15    | 0.00e+00 | 3.28e+01 | 1483     | 0.00000000e+00
+  L  |1.4     |1799     | 17    | 0.00e+00 | 5.33e+01 | 1552     | 0.00000000e+00
+  L  |1.7     |1999     | 19    | 0.00e+00 | 6.23e+01 | 1853     | 0.00000000e+00
+  L  |2.1     |2199     | 21    | 0.00e+00 | 5.66e+01 | 1831     | 0.00000000e+00
+  L  |2.5     |2399     | 23    | 0.00e+00 | 6.23e+01 | 2128     | 0.00000000e+00
+  L  |3.0     |2599     | 25    | 0.00e+00 | 1.07e+02 | 2238     | 0.00000000e+00
+  L  |3.4     |2799     | 27    | 0.00e+00 | 9.04e+01 | 2558     | 0.00000000e+00
+  L  |3.9     |2999     | 28    | 0.00e+00 | 9.56e+01 | 2628     | 0.00000000e+00
+  L  |4.4     |3199     | 30    | 0.00e+00 | 6.11e+01 | 2858     | 0.00000000e+00
+  L  |4.9     |3399     | 31    | 0.00e+00 | 1.36e+02 | 3023     | 0.00000000e+00
+  L  |5.4     |3599     | 33    | 0.00e+00 | 6.25e+01 | 3012     | 0.00000000e+00
+  L  |6.0     |3799     | 34    | 0.00e+00 | 1.04e+02 | 3226     | 0.00000000e+00
+  L  |6.5     |3999     | 35    | 1.59e-03 | 7.76e+01 | 3323     | 1.81848818e-09
+  L  |7.1     |4199     | 36    | 1.59e-03 | 1.13e+02 | 3406     | 2.88267427e-09
+  L  |7.7     |4399     | 37    | 1.59e-03 | 1.23e+02 | 3464     | 4.13060999e-09
+  L  |8.2     |4599     | 38    | 1.59e-03 | 2.11e+02 | 3573     | 4.74983727e-09
+  L  |8.9     |4799     | 39    | 1.59e-03 | 4.40e+02 | 3376     | 5.72041091e-09
+  L  |9.6     |4999     | 40    | 1.59e-03 | 1.37e+02 | 3673     | 6.46746114e-09
+  L  |10.2    |5199     | 41    | 1.59e-03 | 1.02e+02 | 3671     | 7.15556089e-09
+  L  |10.9    |5399     | 42    | 1.59e-03 | 1.59e+02 | 3653     | 7.58226507e-09
+  L  |11.6    |5599     | 43    | 1.59e-03 | 1.24e+02 | 3888     | 8.20611627e-09
+  L  |12.4    |5799     | 45    | 1.59e-03 | 1.63e+02 | 3745     | 8.80086981e-09
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |13.1    |5999     | 46    | 1.59e-03 | 1.41e+02 | 3874     | 9.68640543e-09
+  L  |13.9    |6199     | 48    | 1.59e-03 | 1.86e+02 | 3814     | 1.04259545e-08
+  L  |14.7    |6399     | 50    | 1.59e-03 | 1.11e+02 | 3933     | 1.08048521e-08
+  L  |15.5    |6599     | 52    | 1.59e-03 | 2.74e+02 | 3972     | 1.12128428e-08
+  L  |16.3    |6799     | 54    | 1.81e-03 | 1.22e+02 | 3962     | 1.17171055e-08
+  L  |17.2    |6999     | 56    | 1.81e-03 | 1.24e+02 | 4040     | 1.22993885e-08
+  L  |18.0    |7199     | 58    | 1.81e-03 | 1.63e+02 | 4068     | 1.30693903e-08
+  L  |18.9    |7399     | 60    | 1.81e-03 | 1.65e+02 | 4279     | 1.39513945e-08
+  L  |19.8    |7599     | 62    | 1.94e-03 | 2.38e+02 | 4212     | 1.44400141e-08
+  L  |20.7    |7799     | 64    | 1.94e-03 | 9.85e+01 | 4258     | 1.53616827e-08
+  L  |21.6    |7999     | 66    | 1.94e-03 | 2.56e+02 | 4276     | 1.57557360e-08
+  L  |22.6    |8199     | 68    | 1.94e-03 | 1.56e+02 | 4380     | 1.65512464e-08
+  L  |23.4    |8399     | 69    | 1.94e-03 | 1.48e+02 | 4327     | 1.73337816e-08
+  L  |24.3    |8599     | 71    | 1.94e-03 | 3.54e+02 | 4505     | 1.78378132e-08
+  L  |25.2    |8799     | 73    | 2.00e-03 | 3.32e+02 | 4394     | 1.85451688e-08
+  L  |26.2    |8999     | 74    | 2.04e-03 | 1.39e+02 | 4392     | 1.95781892e-08
+  L  |27.1    |9199     | 76    | 2.04e-03 | 1.83e+02 | 4381     | 2.00569484e-08
+  L  |28.1    |9399     | 77    | 2.04e-03 | 2.14e+02 | 4368     | 2.07802172e-08
+  L  |29.0    |9599     | 79    | 2.09e-03 | 2.10e+02 | 4406     | 2.17266104e-08
+  L  |30.0    |9799     | 81    | 2.09e-03 | 1.40e+02 | 4443     | 2.25808106e-08
+  E  |30.9    |9999     | 82    | 2.21e+02 | 0.00e+00 | 0        | 0.00000000e+00
+  L  |31.0    |9999     | 83    | 0.00e+00 | 2.21e+02 | 4426     | 0.00000000e+00
+ --- initializing steepest edge multipliers
+ --- active pricer: SteepEx
+  L  |33.4    |10196    | 84    | 1.73e-03 | 5.75e+02 | 4765     | 1.96349085e-09
+  L  |34.6    |10396    | 86    | 1.91e-03 | 7.44e+02 | 5078     | 5.31813264e-09
+  L  |36.1    |10596    | 87    | 2.23e-03 | 3.71e+02 | 5166     | 1.56740357e-08
+  L  |37.7    |10796    | 88    | 2.26e-03 | 4.94e+02 | 5152     | 2.01644899e-08
+  L  |39.5    |10996    | 89    | 1.71e-03 | 4.94e+02 | 5299     | 2.99128741e-08
+  L  |41.7    |11196    | 91    | 1.84e-03 | 4.89e+02 | 5289     | 4.05295547e-08
+  L  |43.7    |11396    | 92    | 1.87e-03 | 4.32e+02 | 5333     | 4.67426232e-08
+  L  |46.0    |11596    | 93    | 1.87e-03 | 4.91e+02 | 5334     | 5.01542808e-08
+  L  |48.5    |11796    | 94    | 1.90e-03 | 3.64e+02 | 5306     | 5.42234716e-08
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |51.2    |11996    | 95    | 1.92e-03 | 9.45e+02 | 5260     | 5.84473324e-08
+  L  |54.2    |12196    | 96    | 1.96e-03 | 3.69e+02 | 5275     | 6.44469974e-08
+  L  |57.5    |12396    | 97    | 1.96e-03 | 4.12e+02 | 5324     | 6.82318954e-08
+  L  |61.2    |12596    | 98    | 2.06e-03 | 8.61e+02 | 5200     | 8.14814979e-08
+  L  |65.1    |12796    | 99    | 2.08e-03 | 7.08e+02 | 5288     | 8.91090213e-08
+  L  |69.1    |12996    | 100   | 2.12e-03 | 1.13e+03 | 5278     | 9.91210605e-08
+  L  |73.5    |13196    | 101   | 2.14e-03 | 4.87e+02 | 5260     | 1.07482164e-07
+  L  |78.3    |13396    | 102   | 2.14e-03 | 4.61e+02 | 5169     | 1.13169788e-07
+  L  |83.4    |13596    | 103   | 2.17e-03 | 3.28e+02 | 5230     | 1.22320913e-07
+  L  |88.9    |13796    | 104   | 2.21e-03 | 4.22e+02 | 5091     | 1.28822179e-07
+  L  |94.7    |13996    | 105   | 2.25e-03 | 6.42e+02 | 5126     | 1.36451479e-07
+  L  |100.9   |14196    | 106   | 2.29e-03 | 2.85e+02 | 5252     | 1.44579433e-07
+  L  |111.1   |14396    | 108   | 2.33e-03 | 3.40e+02 | 5159     | 1.52204868e-07
+  L  |118.9   |14596    | 109   | 2.33e-03 | 5.63e+02 | 5074     | 1.56843493e-07
+  L  |127.3   |14796    | 110   | 2.40e-03 | 3.16e+02 | 5037     | 1.68024752e-07
+  L  |136.1   |14996    | 111   | 2.41e-03 | 1.87e+02 | 5153     | 1.73194378e-07
+  L  |145.2   |15196    | 112   | 2.42e-03 | 3.47e+02 | 5006     | 1.77253416e-07
+  L  |154.3   |15396    | 113   | 2.43e-03 | 2.49e+02 | 5036     | 1.81435137e-07
+  L  |163.6   |15596    | 114   | 2.44e-03 | 3.49e+02 | 4959     | 1.86492207e-07
+  L  |173.2   |15796    | 115   | 2.46e-03 | 2.69e+02 | 4951     | 1.90868204e-07
+  L  |183.3   |15996    | 116   | 2.48e-03 | 4.87e+02 | 4906     | 1.96143476e-07
+  L  |193.7   |16196    | 117   | 2.49e-03 | 2.66e+02 | 4919     | 1.99502388e-07
+  L  |204.7   |16396    | 118   | 2.49e-03 | 3.69e+02 | 4949     | 2.02667998e-07
+  L  |215.3   |16596    | 119   | 2.51e-03 | 3.38e+02 | 4868     | 2.07349488e-07
+  L  |226.1   |16796    | 120   | 2.52e-03 | 2.27e+02 | 4908     | 2.11515991e-07
+  L  |238.1   |16996    | 121   | 2.52e-03 | 2.10e+02 | 4892     | 2.15158506e-07
+  L  |249.8   |17196    | 122   | 2.52e-03 | 2.86e+02 | 4899     | 2.18942909e-07
+  L  |261.6   |17396    | 123   | 2.56e-03 | 2.98e+02 | 4853     | 2.25101344e-07
+  L  |273.7   |17596    | 124   | 2.56e-03 | 3.75e+02 | 4940     | 2.28876029e-07
+  L  |286.4   |17796    | 125   | 2.56e-03 | 3.17e+02 | 4798     | 2.32224780e-07
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |298.9   |17996    | 126   | 2.59e-03 | 2.10e+02 | 4837     | 2.35792329e-07
+ --- timelimit (2.99730000e+02) reached
+  L  |299.7   |18037    | 126   | 2.59e-03 | 2.40e+02 | 4837     | 2.36596757e-07
+
+
+SoPlex status       : solving aborted [time limit reached]
+Solving time (sec)  : 300.58
+Iterations          : 18037
+Objective value     : 0.00000000e+00
+
+No primal solution available.
+No dual solution available.
+
+Statistics
+==========
+
+SoPlex status       : solving aborted [time limit reached]
+Original problem    : 
+  Columns           : 75903
+              boxed : 0
+        lower bound : 75903
+        upper bound : 0
+               free : 0
+  Rows              : 10849
+              equal : 10826
+             ranged : 0
+                lhs : 0
+                rhs : 23
+               free : 0
+  Nonzeros          : 480587
+         per column : 480587/75903
+            per row : 480587/10849
+           sparsity : 480587/823471647
+    min. abs. value : 1/7
+    max. abs. value : 1536150
+Objective sense     : minimize
+Solution (rational) : 
+  Objective value   : 0
+Size (base 2/10)    : 
+  Total primal      : 0 / 0
+  Total dual        : 0 / 0
+  DLCM primal       : 0 / 0
+  DLCM dual         : 0 / 0
+  DMAX primal       : 0 / 0
+  DMAX dual         : 0 / 0
+Violation (rational): 
+  Max/sum bound     : - / -
+  Max/sum row       : - / -
+  Max/sum redcost   : - / -
+  Max/sum dual      : - / -
+Total time          : 302.08
+  Reading           : 1.50
+  Solving           : 300.58
+  Preprocessing     : 0.00 (0.00% of solving time)
+  Simplex           : 299.74 (99.72% of solving time)
+  Synchronization   : 0.14 (0.05% of solving time)
+  Transformation    : 0.00 (0.00% of solving time)
+  Rational          : 0.00 (0.00% of solving time)
+  InitialPrecision  : 300.58 (100.00% of solving time)
+  ExtendedPrecision : 0.00 (0.00% of solving time)
+  BoostingStep      : 0.00 (0.00% of solving time)
+  FpTime            : 300.58 (100.00% of solving time)
+  Other             : 0.70 (0.23% of solving time)
+Refinements         : 0
+  Stalling          : 0
+  Pivoting          : 0
+  Feasibility       : 0
+  Unboundedness     : 0
+Precision boosts    : 0
+  Stalling          : 0
+  Pivoting          : 0
+  Feasibility       : 0
+  Unboundedness     : 0
+Iterations          : 18037
+  From scratch      : 18037 (100.00%)
+  From basis        : 0 (0.00%)
+  Primal            : 0 (0.00%)
+  Dual              : 18037 (100.00%)
+  Bound flips       : 0
+  Sol. polishing    : 0
+  First FP solve    : 18037
+IterationsBoosted   : 0
+  From scratch      : 0
+  From basis        : 0
+  Primal            : 0
+  Dual              : 0
+  Bound flips       : 0
+  Sol. polishing    : 0
+LU factorizations   : 126
+  Factor. frequency : 143.15 iterations per factorization
+  Factor. time      : 143.02
+LU solves           : 55181
+  Solve frequency   : 3.06 solves per iteration
+  Solve time        : 78.65
+Matrix-Vector ops   : 
+  Sparse    time    : 0.10 (0.03% of solving time)
+            calls   : 1027 (5.69% of iterations)
+  Full      time    : 36.02 (11.98% of solving time)
+            calls   : 17010 (94.31% of iterations)
+  Colwise   time    : 0.00 (0.00% of solving time)
+            calls   : 0 (0.00% of iterations)
+  Unsetup   time    : 0.00 (0.00% of solving time)
+            calls   : 0 (0.00% of iterations)
+Rat. factorizations : 0
+  Rat. factor. time : 0.00
+  Rat. solve time   : 0.00
+Rat. reconstructions: 0
+  Rat. rec. time    : 0.00
+Degeneracy          : 
+  Primal Pivots     : 0
+  Dual Pivots       : 8493
+  Primal Candidates : 0
+  Dual Candidates   : 0
+  Average Primal    : 0.00
+  Average Dual      : 0.00
+Numerics            :
+  Condition Number  : 0.00000000e+00
