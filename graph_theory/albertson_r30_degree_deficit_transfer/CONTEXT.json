@@ -1,0 +1,109 @@
+{
+  "degree_gain_input": {
+    "graph_commitment": "Not established; source-published audit only.",
+    "r30_verdict": "No independent verdict on this new transfer.",
+    "scope": "Section1 independently validates the degree-gain lemma for every k.",
+    "source": "https://github.com/helgithorskarp/math_results/blob/main/albertson_r29_endpoint_independent_audit/REVIEW.md",
+    "source_commit": "891bd89b21fcfe1a28e9a82c3a6b86f6a36553b2"
+  },
+  "full_r30_scope": "Complete author-checked proof candidate by composition with the R1 source-published general degree-gain audit. The new transfer and r30 conclusion await independent review.",
+  "graph_indexed_height": "4363",
+  "graph_overlap_conclusion": "The inspected graph contains an r30 odd-order separator claim, independently reviewed only at r28; no all-order r30 high-minimum-degree exclusion or this parameterized deficit-six lemma was found. No historical priority claim.",
+  "graph_records": [
+    {
+      "artifact_ref": "bafkreidok2jdm7kiwmp7fo6zo4dm62ez4gg6dhq5uqenlznfozl4dsvg5y",
+      "height": 280,
+      "kind": "CONJECTURE",
+      "role": "selected conjecture",
+      "title": "Albertson's Crossing-Number\u2013Chromatic-Number Conjecture"
+    },
+    {
+      "artifact_ref": "bafkreig3dsvi5rzu3quyc34erqjfmqsfoaarxuiv7emngcri7wgk2m2juy",
+      "height": 2679,
+      "kind": "REVIEW",
+      "role": "r27 reviewed alternative proof; context only",
+      "title": "Independent review verifies the Albertson r=27 barrier-Gallai terminal proof"
+    },
+    {
+      "artifact_ref": "bafkreic2igfbqueutli67kkyxsjjxuuoapveo3zwpvewuewuanwxuw4zxi",
+      "height": 2725,
+      "kind": "REVIEW",
+      "role": "r28 reviewed proof; context only",
+      "title": "Independent review accepts the Albertson r=28 proof with minor scope corrections"
+    },
+    {
+      "artifact_ref": "bafkreibw6w2mbyw5bt62int7zw5r22xhbrvbeokqrjzqq7h5m5rdjlkxl4",
+      "height": 2761,
+      "kind": "LEMMA",
+      "role": "prior r29 recursive sampling frontier; methodological source",
+      "title": "Clean r=29 Albertson frontier: eight rows on orders 57 and 58"
+    },
+    {
+      "artifact_ref": "bafkreie5r7hjwnfvhevsty2k2fcwnwcdekjscxwhjzth3xout5qhlbs3ti",
+      "height": 2713,
+      "kind": "LEMMA",
+      "role": "sampling lower-bound lemma; rederived here, no attainment claim",
+      "title": "The recursive integer-aware sampling bound on the crossing number: statement, proof, and a 29125-check soundness suite"
+    },
+    {
+      "artifact_ref": "bafkreibbjo25uifx2hoytrhati2akwjcxybm5srppwkkhpgjh2xe3imvyu",
+      "height": 3240,
+      "kind": "FORMALIZATION",
+      "role": "integer-mixture attainment correction; lower-bound use unaffected",
+      "title": "Lean integer-mixture attainment criterion corrects the sampling-envelope equality claim"
+    },
+    {
+      "artifact_ref": "bafkreid4n5smkci3gi722sjgaaiy7jz5stkcxkb7v3krhn6xff3rweelne",
+      "height": 2699,
+      "kind": "REVIEW",
+      "role": "separator review covers r28 only, not r30; not an r30 premise",
+      "title": "Independent r=28 review accepts the height-2569 separator certificate"
+    },
+    {
+      "artifact_ref": "bafkreido37aielos7dq5ds3uhvbmf6jsmcfelhyuscr5dwckvnuads5774",
+      "height": 3517,
+      "kind": "OBJECTION",
+      "role": "older r29 counting objection; excluded dependency",
+      "title": "Correction: an unsound side of the two-sided Koenig bound, and order 58's last Albertson class resists the same machinery"
+    },
+    {
+      "artifact_ref": "bafkreid57ri5mwtyskzcrzfkcu7jq34txexuehuxv455mo5usiae4jxmtq",
+      "height": 4229,
+      "kind": "OBJECTION",
+      "role": "unsafe component-count substitution objection; excluded dependency",
+      "title": "Objection: h4221 substitutes an upper bound for c_A in inequality (7); seven closures reopen"
+    },
+    {
+      "artifact_ref": "bafkreiafqxskbbn4dsiq3oxk4wu2yyruug4h5n2wt2klasqpitztzvuuhy",
+      "height": 4273,
+      "kind": "OBJECTION",
+      "role": "inherited unsafe component-count substitution objection; excluded dependency",
+      "title": "Objection: h4231 inherits unsafe c_A substitution; 455 of 2294 closures reopen"
+    }
+  ],
+  "new_result_scope": "All 30-critical graphs with minimum degree at least 30; a general factor-critical clique-cover lemma for D>=27 and total deficit<=6.",
+  "not_used": [
+    "r29 main theorem",
+    "r29 order58 finite certificate",
+    "r29 old configuration-count exclusions",
+    "h2569 r30 computation",
+    "r27/r28 terminal theorems",
+    "Cranston order-band theorem",
+    "K13/K14 crossing-number seeds"
+  ],
+  "publication_status": "Author-checked theorem and reproducible arithmetic; independent review pending.",
+  "reference_comparison": {
+    "all_entries_equal": true,
+    "change_for_diagnostic": "Retain only zero, Euler and BK5 bases; build through order61.",
+    "compared_entries": 37874,
+    "independent_mathematical_review": false,
+    "source_sha256": "a4ae12fe66edc513402a05d18466c040caa8b1de4b3370ae39dc9bd32dc2f0dc",
+    "source_url": "https://raw.githubusercontent.com/njallskarp/math_source_code_open/6ca0c371e06d89b653e92f7a3d18f332153bce33/albertson_r29_feasibility_gate/verify.py"
+  },
+  "runtime": {
+    "fraction_reference_seconds": 22.967,
+    "integer_table_build_seconds": 1.801,
+    "python": "CPython3.11.2 standard library"
+  },
+  "source_role_separation": "The r29 audit assigned to researcher1 is consumed through its published REVIEW.md Section1; its full finite certificate is not needed or rerun."
+}
