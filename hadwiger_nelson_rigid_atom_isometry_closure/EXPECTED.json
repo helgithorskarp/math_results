@@ -1,0 +1,35 @@
+{
+  "field_basis": ["1", "sqrt33", "i_sqrt3", "i_sqrt11"],
+  "rows": [
+    {
+      "name": "moser_self",
+      "seed_vertices": 7,
+      "copy_point_sets": {"moser": 152},
+      "vertices": 302,
+      "edges": 1341,
+      "point_stream_sha256": "ac2dd6d782fbbff9fa3dc5827c99fa729dedb64a4f92e45e2714d1f49eda3068",
+      "edge_stream_sha256": "2ee5732be6bd14c31dc5fa097bce868d62a4a4e4303c3b52de9da853f7123aed"
+    },
+    {
+      "name": "golomb_self",
+      "seed_vertices": 10,
+      "copy_point_sets": {"golomb": 251},
+      "vertices": 700,
+      "edges": 3531,
+      "point_stream_sha256": "ad2870433b417e85da5f854283a36f520fb80fa33f2f206c951387cb6d19008a",
+      "edge_stream_sha256": "a66140c055ee0284c84d2a97cdce424d42b06389bb2b1c76dc4d18a2a6a8fed5"
+    },
+    {
+      "name": "mixed_aligned",
+      "seed_vertices": 14,
+      "copy_point_sets": {"moser": 343, "golomb": 363},
+      "vertices": 971,
+      "edges": 5092,
+      "point_stream_sha256": "b83079a20d4f18a0fb5bd61039e088f5bfb1a86eb549c762e76822e5a99cd5e3",
+      "edge_stream_sha256": "84da05262324135c412469458c411aa4523713c7ff40498c5518a77251ea3794"
+    }
+  ],
+  "all_full_closures_four_colourable": true,
+  "all_subassemblies_four_colourable": true,
+  "record_improvement": false
+}
