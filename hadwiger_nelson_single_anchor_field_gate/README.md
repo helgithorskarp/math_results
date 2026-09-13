@@ -165,7 +165,11 @@ outside-K anchored Golomb copies with mutual unit edges, while keeping their
 physical union within508 points. Its exact field compositum, cross-copy
 collisions and all cross-copy edges must be reconstructed before promotion.
 The isolated-copy result provides a filter: any such obstruction must use
-those interactions. That proposed paired construction has not been tested.
+those interactions. [JOINT_FILTER.md](JOINT_FILTER.md) proves that points in
+different quadratic extensions can be unit adjacent only at a common
+root-pair midpoint, with perpendicular displacements whose squared radii
+sum to one. It supplies the exact next census filter. That proposed paired
+construction has not been tested.
 
 The unrestricted comparison remains Parts's 509-vertex/2442-edge construction
 ([primary paper](https://arxiv.org/abs/2010.12665)), still identified as the
