@@ -1,0 +1,15 @@
+{
+  "arithmetic": "exact CPython integers and Fraction; one-sided modular rejection followed by exact norm checks",
+  "independence": {
+    "imports_target_code": false,
+    "imports_target_frontier": false,
+    "imports_target_search_transcript": false,
+    "positive_evidence_imported": "hash-pinned Parts coordinates, P-u colour rows, and 42 residual colour rows only",
+    "search_algorithm": "memoized recursive list colouring, not target proper-word bitsets"
+  },
+  "normal_verification": "PASS: CPython 3.11 -B, 155.700 seconds; exact match to EXPECTED.json",
+  "optimized_verification": "PASS: CPython 3.11 -O -B, 155.771 seconds; exact match to EXPECTED.json",
+  "small_controls": "PASS: 1512 list-colouring comparisons, 40 field inverses, Moser 3/4 census, 2 malformed colour encodings rejected",
+  "target_commit": "0cb2fb30eb693ec68c56e796ee999b51441f9c55",
+  "verdict": "ACCEPT with high confidence within the pair-anchored single-Moser family"
+}
