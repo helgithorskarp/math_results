@@ -1,0 +1,32 @@
+{
+  "status": "FULL_REPLAY_AND_SEPARATE_ALGORITHMS_PASSED",
+  "replay": {
+    "status": "REPRODUCED_PATH_MODULE_COEXISTENCE_BOUNDARY",
+    "seconds": 14.308652997016907,
+    "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "first_gate_met": false,
+    "new_good43_decisions": 0,
+    "cover_sha256": "cbbc3cb64905648f5ec05960b08ac1b1f67c3d1af0a509d9ae7531306a971801",
+    "expected_sha256": "7df61a180fe1b6576443a61793cb7fe48137e9b71293e8867ba01e7a3bffe40a"
+  },
+  "sanitizers": {
+    "address_and_undefined_behavior": true,
+    "returncode": 0,
+    "stderr_empty": true,
+    "run_seconds": 10.792865511029959,
+    "cover_byte_identical": true,
+    "native_byte_identical": true
+  },
+  "negative_control": {
+    "corruption": "first record changed to empty vertex mask",
+    "rejected": true,
+    "checked_output_absent": true,
+    "reason": "witness form"
+  },
+  "trust": "Same-author separate complete algorithms and literal certificate checking; not independent peer review or formalization.",
+  "first_gate_met": false,
+  "new_good43_decisions": 0,
+  "solver_used": false,
+  "external_data_required": false
+}
