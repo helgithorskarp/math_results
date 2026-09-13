@@ -1,0 +1,55 @@
+{
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "control_mutation": "Replace the first leaf by L 0; checker rejects incomplete leaf partition.",
+  "controls": {
+    "damaged_leaf_rejected": true,
+    "failure": "incomplete leaf partition",
+    "positive_C5_free_control_detected": true,
+    "positive_control_vertices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "positive_status_not_promoted_to_cover": true
+  },
+  "expected_sha256": "ae394de37dca99bdb75bfbae6a89286b780041fd7d3747abe277869a3cff4d7f",
+  "final_gate_met": false,
+  "global_good43_decisions": 0,
+  "peak_child_rss_kib": 91856,
+  "positive_control": "Graph file consisting of header 43 0. Generator exits10 with a C5-free21 witness; its unfinished branch stream is not an accepted proof.",
+  "proof_bytes": 30159116,
+  "proof_sha256": "94a7e9c0fda102dbb0d811a1108c68cd6646450d28e82be0025a087b5372a3a3",
+  "python": "3.11.2",
+  "sanitizer": {
+    "generator_summary": "cycles 18535 nodes 408771 leaves 204386 status COMPLETE_21_COVER",
+    "seconds": 10.198032073909417,
+    "status": "FULL_GENERATION_ASAN_UBSAN_MATCH"
+  },
+  "seconds": 79.30737345502712,
+  "status": "REPRODUCED_FINAL_INCIDENCE_BARRIER",
+  "timings": {
+    "audit": 5.1667132820002735,
+    "compile": 1.0328661550302058,
+    "compiler": 0.0023673729738220572,
+    "generate": 1.0177743609528989,
+    "independent_cover_check": 72.08687311492395
+  }
+}
