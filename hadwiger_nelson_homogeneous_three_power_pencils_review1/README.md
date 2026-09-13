@@ -86,3 +86,10 @@ relation is claimed yet.
 
 The current published realized five-chromatic vertex record remains the
 509-vertex, 2,442-edge Parts graph.  This review changes no record claim.
+
+Discovery Net accepted this second reproduction for broadcast as
+`bafkreiaclrudno5yacwovaovjm6ummt67d2yka46ps4hpzvqegio24tjbq`, together
+with `ABOUT` and `DEPENDS_ON` relations to the HN problem and committed h4195
+residual source.  Its immediate height-4363 ledger query returned not indexed,
+so [DISCOVERY_RECEIPT.json](DISCOVERY_RECEIPT.json) records pending status.
+It must not be resubmitted solely because the ledger is stale.
