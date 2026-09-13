@@ -1,0 +1,35 @@
+Albertson r=30 split-barrier independent review
+Z(30) = 9555
+crK counting bounds: K28=6250 K29=7250
+
+ORDER REDUCTION
+n=35 m>=569 q=12 B-Z=79/3
+n=36 m>=593 q=12 B-Z=1901/3
+n=54 join>=1735/2 ceil=868 at (a,k)=(49,25); q=20 B-Z=443807/285
+n=55 join>=873 ceil=873 at (a,k)=(51,26); q=21 B-Z=163683/133
+n=56 join>=1755/2 ceil=878 at (a,k)=(53,27); q=21 B-Z=17417/19
+n=57 join>=881 ceil=881 at (a,k)=(55,28); q=22 B-Z=19743/38
+n=58 join>=1767/2 ceil=884 at (a,k)=(57,29); q=23 B-Z=13487/69
+disconnected n=59: join>=899 ceil=899 at (a,k)=(58,29); q=23 B-Z=34031/115
+disconnected n=60: join>=1829/2 ceil=915 at (a,k)=(59,29); q=24 B-Z=67810/161
+n=59 direct-sampling rows 885..891; m=892 closes with q=23, B-Z=3441/115
+n=60 direct-sampling rows 900..903; m=904 closes with q=24, B-Z=635/23
+n=61..84: all 24 minimum-edge rows close; smallest margin 19961/1265 at n=61 q=25
+
+BARRIER PARTITIONS
+n=59 cap12 live s=[3, 28, 29, 30]; min excluded-middle cost=23
+n=60 cap6  live s=[6, 29, 30, 31, 32]; min excluded-middle cost=20
+n=59 s=3 partitions: [(29, 27)]
+n=60 s=6 partitions: [(29, 25), (27, 27)]
+
+TERMINAL SPLIT BOUNDS
+n59 triangle-free: lower=355049/33 margin=39734/33
+n59 s=30: lower=134455/11 margin=29350/11
+n60 s=30: lower=236523/22 margin=26313/22
+n60 s=31: lower=20059957/1980 margin=1141057/1980
+n60 s=32: lower=1570059/143 margin=203694/143
+n59 s=3: cr(K29,27)>=137228/5 > Z
+n60 no-disjoint-triangles: neighbor-clique sum>=55, cr lower=11607
+n60 regular row: Rabern radical ceiling=18
+
+PASS: every exact finite check agrees with REVIEW.md
