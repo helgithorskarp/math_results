@@ -1,0 +1,51 @@
+{
+  "pass": 39,
+  "whole_physical_trial_pass": 3,
+  "status": "FINAL_GATE_MISSED_REASSIGN_WITHIN_R55",
+  "new_physical_decisions": 0,
+  "new_original_task_decisions": 0,
+  "good43_found": false,
+  "global_nonexistence_proved": false,
+  "quantitatively_finishable_residual": false,
+  "unresolved_cases_by_M": {
+    "10": 313,
+    "11": 105,
+    "12": 12,
+    "13": 1
+  },
+  "approach": "Exact separator elimination of the complete Hamilton-normalized physical class, independent of old carrier and moment work.",
+  "approach_premise_result": "Refuted for the specified literal primal/incidence representations and local-gadget transformations; no algorithm-independent complexity claim.",
+  "matching": {
+    "n": 43,
+    "fixed_cycle": true,
+    "variables": 860,
+    "variable_pairs": 369370,
+    "assigned_distinct_five_sets": 369370,
+    "certificate_format": "One little-endian uint64 five-set bitmask per lexicographic unordered pair of lexicographic free physical edges.",
+    "certificate_sha256": "3f4f8221d1550dabbefb1fb54385da170965ce42e6091d23704e6de665d232f0",
+    "certificate_bytes": 2954960,
+    "seconds": 8.15682860603556,
+    "candidate_checks": 3830594,
+    "augmenting_searches": 1838,
+    "largest_visited_left_set": 9150,
+    "peak_rss_kib": 164436,
+    "status": "COMPLETE_INCIDENCE_MATCHING_NO_RAMSEY_VERDICT"
+  },
+  "clean_replay": {
+    "status": "EXACT_INCIDENCE_REPLAY_MATCH",
+    "certificate_sha256": "3f4f8221d1550dabbefb1fb54385da170965ce42e6091d23704e6de665d232f0",
+    "seconds": 20.1955728729954,
+    "physical_cases_closed": 0,
+    "treewidth_primal": 859,
+    "treewidth_incidence": 859,
+    "free_edge_host_cutwidth": 420
+  },
+  "versions": {
+    "python": "3.11.2",
+    "external_packages": []
+  },
+  "no_search_caps": true,
+  "no_SAT_run": true,
+  "old_formula_and_moments_not_restarted": true,
+  "next_action": "No fourth pass of this whole-physical-class trial. Report reassignment within R(5,5) after the 2700-second cadence."
+}
