@@ -1,0 +1,54 @@
+{
+  "certificate_bytes": 2184292,
+  "certificate_sha256": "f7dc43ce1f68eee6715a48527367d219b3cc592a7c82029b94831234a6587f50",
+  "clean_room_audit_runs": [
+    {
+      "certificate_route": "target_groebner",
+      "check_expected": false,
+      "seconds": 313.424,
+      "status": "PASS"
+    },
+    {
+      "certificate_route": "target_resultant_fibre",
+      "check_expected": true,
+      "seconds": 240.128,
+      "status": "PASS"
+    },
+    {
+      "certificate_route": "target_resultant_fibre",
+      "check_expected": true,
+      "optimized_python": true,
+      "seconds": 231.84,
+      "status": "PASS"
+    }
+  ],
+  "dependencies": {
+    "cpython": "3.11.2",
+    "python_flint": "0.8.0",
+    "sympy": "1.14.0"
+  },
+  "target_auxiliary_checks": {
+    "boundaries": "PASS",
+    "classification": "PASS",
+    "controls": "PASS"
+  },
+  "target_certificate_generation": [
+    {
+      "method": "groebner",
+      "seconds": 312.435,
+      "status": "PASS"
+    },
+    {
+      "method": "resultant_fibre",
+      "seconds": 274.317,
+      "status": "PASS"
+    }
+  ],
+  "target_full_verify": {
+    "check_expected": true,
+    "seconds": 711.692,
+    "status": "PASS"
+  },
+  "validation_date_utc": "2026-09-13",
+  "workers": 4
+}
