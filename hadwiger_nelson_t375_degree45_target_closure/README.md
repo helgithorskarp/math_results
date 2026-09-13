@@ -135,3 +135,7 @@ record in Haugland's 2026 paper
 author-side exact verification, not independent-author review.  It closes this
 band and recommends a geometry change rather than a routine descent through
 lower contact degrees.
+
+The Discovery Net contribution receipt is recorded as pending in
+`DISCOVERY_RECEIPT.json`: the broadcast was accepted, but the stale committed
+ledger did not index it.  It must not be described as committed or resubmitted.
