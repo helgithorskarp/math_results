@@ -1,0 +1,31 @@
+{
+  "status": "UNKNOWN",
+  "mathematical_evidence": false,
+  "command": "cadical -t 300 receiver.cnf",
+  "started_from_clean_generated_instance": true,
+  "input": {
+    "variables": 861,
+    "clauses": 1493856,
+    "bytes": 66791934,
+    "sha256": "b9454cfc20ce3fe3bc95ea52aba5ed9f3a686b955d1ba1a06f92550962248102"
+  },
+  "solver": {
+    "name": "CaDiCaL",
+    "version": "1.9.5",
+    "banner_commit": "146207318796f094dcded87349a64f0c6927309e",
+    "binary_sha256": "76eb1ad64c7a3fdb9eca46d21e7c020f2cb7052cad61a53ea8da827f2d7591ed",
+    "options": "defaults except -t 300"
+  },
+  "result": {
+    "real_seconds": 300.00,
+    "process_seconds": 299.96,
+    "conflicts": 486513,
+    "decisions": 4560622,
+    "propagations": 14552879,
+    "restarts": 16385,
+    "maximum_resident_set_mb": 505.61,
+    "model": null,
+    "proof": null
+  },
+  "interpretation": "The bounded target run neither found a physical good43 nor proved the one-cell receiver UNSAT. It is retained only as an explicit finishability limitation."
+}

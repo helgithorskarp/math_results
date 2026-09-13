@@ -1,0 +1,29 @@
+{
+  "alternating_hamilton_cycle_theorem": {
+    "authors": "M. Bankfalvi and Zs. Bankfalvi",
+    "title": "Alternating hamiltonian circuit in two-coloured complete graphs",
+    "publication": "Theory of Graphs (Proc. Colloq., Tihany, 1966), Academic Press, 1968, pp. 11-18",
+    "mr": "MR0233731",
+    "accessible_statement": "https://par.cse.nsysu.edu.tw/resource/paper/2009/090506/Digraphs_Theory_Algorithms_and_Applicati.pdf#page=649",
+    "use": "an even-order 2-edge-colored complete graph has an alternating Hamilton cycle iff it has an alternating cycle factor and the disjoint equal-size degree-sum inequalities are strict"
+  },
+  "fault_hamiltonicity_input": {
+    "path": "../ramsey_r55_fault_hamiltonicity/PROOF.md",
+    "sha256": "154f6a35c707889187db5ceaa871440202b0f6aa2ed7a196f93e6274afc05973",
+    "claim": "in both colors every induced order-28 subgraph is traceable and every induced order at least 29 is Hamiltonian"
+  },
+  "connectivity_input": {
+    "path": "../ramsey_r55_maximal_vertex_connectivity/PROOF.md",
+    "sha256": "c3cc0d3f9b4d372ed32c341d749364b98027178bdb53c15f55277d237c9811ff",
+    "claim": "underlying target-specific source for the fault-Hamiltonicity theorem"
+  },
+  "independent_review": {
+    "path": "../ramsey_r55_maximal_vertex_connectivity_review1/REVIEW.md",
+    "sha256": "ac6a5ed5a398e656c6ac018e546d0f494047ad201ecd1738fdb4701f3d85b8f4"
+  },
+  "positive_control": {
+    "path": "../ramsey_r55_unrestricted_cegis/fixtures/good42.g6",
+    "sha256": "ab0b10364ac62ab07f662c0ed4e8b47a44956f63a78356b64ae64ccb6520ecb0",
+    "scope": "literal good42 alternating-path and relabeling control only; not a target premise"
+  }
+}
