@@ -1,0 +1,79 @@
+{
+  "target": "Cao\u2013Mehat, arXiv:2609.04771v1, r=29 theorem",
+  "source_url": "https://arxiv.org/src/2609.04771v1",
+  "archive_sha256": "0fe533a2fb21b85de0002b1ca09da8c01f0ed55c6b8f3038b3857d648b8568d9",
+  "archive_bytes": 42785,
+  "input_files": {
+    "00README.json": "6c174cdc2a9c8958049ee547723620ea4a372788a712d09c1cb9775cdd564b95",
+    "anc/EXACT_ARITHMETIC_AUDIT.json": "3471465ea51573abc1d07db61b03f94b3324e23deba998a4a53a78ccee498832",
+    "anc/FINAL_BINDING_MANIFEST.json": "dfa37f89aad1d72708df3c9969122b05243cf532d7db21f74274a8c84263d921",
+    "anc/README.txt": "d49b9a53460e81cb9df987463f7f0c16bc47814bd2a13a3245b377e0605db0d9",
+    "anc/REPRODUCE.md": "53667d0de7c8d25b6db8cf30e812a0025bbd728166163f0f5a06c905f8d6ab89",
+    "anc/certificates/CASE_TREE_CERTIFICATE.json": "c46c4440fe26dfd12b7f890d475cd2215f85abcd4f7018468464411e35580fd9",
+    "anc/certificates/CASE_TREE_LEDGER.md": "e4bd95d116bbe5c675b6e9cdc02e1c773756af96b703e9da41724a9d02882fc2",
+    "anc/certificates/CASE_TREE_PREDICATE.md": "5ed16f28f287f8f6ffe3643ce4e46dec352b4a1e90748b11a5a1dd97183848e7",
+    "anc/certificates/CASE_TREE_SEPARATE_VERIFICATION.json": "c83306ada92eb655e32f7e98c9109673a7012c254c9f615e19bc30315c0e468b",
+    "anc/reproduction/runtime.txt": "740bae9795318302a33e64cd6f4e6d75a4e2a5177a6ac98ceaae00795729fa00",
+    "anc/reproduction/verify_exact_arithmetic.py": "ffcd4b6dc45bb31c180268c2b374a9104a3be53a8071e6579f2dc5921936535e",
+    "anc/verifier/case_tree_predicate.py": "daca8f21c492082389e5cf8848971c767a169aea8e6a27ee1af06f495b305ed1",
+    "anc/verifier/verify_case_tree_certificate.py": "33d2ef4fe1d1739f70f348bbe1793fb9489a3e41b9b59f7d887f0c1e2a011710",
+    "main.tex": "d9e9542222395ee911c912d6c7aa2dae54046c6817d18e41713bf06410e9e2d7"
+  },
+  "upstream_replay": [
+    {
+      "script": "verifier/case_tree_predicate.py",
+      "returncode": 0,
+      "stdout": "CASE_TREE_PASS s30_leaves=13838 s31_leaves=51 unresolved=0\n",
+      "stderr": "",
+      "seconds": 0.4659557359991595
+    },
+    {
+      "script": "verifier/verify_case_tree_certificate.py",
+      "returncode": 0,
+      "stdout": "SEPARATE_CASE_TREE_VERIFY_PASS s30=13838 s31=51\n",
+      "stderr": "",
+      "seconds": 0.7144055039389059
+    },
+    {
+      "script": "reproduction/verify_exact_arithmetic.py",
+      "returncode": 0,
+      "stdout": "EXACT_ARITHMETIC_PASS checks=110\n",
+      "stderr": "",
+      "seconds": 0.1580882539274171
+    }
+  ],
+  "python": "3.11.2",
+  "initial_repository_head": "91ba57b8857584d2e04145763b2a5df24a7818ad",
+  "independent_expected_sha256": "0ff5e2af7935f8e297823f36ba2652f9f68196fb08a21314ec91bb4058f07af8",
+  "independent_check_scope": "Exact scalar coverage and ordinary proof audit; not a graph census or formalization",
+  "graph_indexed_height": 4363,
+  "author_identity": "general-researcher-1",
+  "external_target_authors": [
+    "Sen Cao",
+    "Sanjit Singh Mehat"
+  ],
+  "binding_manifest_entries_verified": 12,
+  "fresh_replay_comparisons": [
+    {
+      "replay": "case_tree_replay.json",
+      "target": "anc/certificates/CASE_TREE_CERTIFICATE.json",
+      "byte_equal": true,
+      "json_equal": true,
+      "sha256": "c46c4440fe26dfd12b7f890d475cd2215f85abcd4f7018468464411e35580fd9"
+    },
+    {
+      "replay": "case_tree_verified.json",
+      "target": "anc/certificates/CASE_TREE_SEPARATE_VERIFICATION.json",
+      "byte_equal": true,
+      "json_equal": true,
+      "sha256": "c83306ada92eb655e32f7e98c9109673a7012c254c9f615e19bc30315c0e468b"
+    },
+    {
+      "replay": "arithmetic_replay.json",
+      "target": "anc/EXACT_ARITHMETIC_AUDIT.json",
+      "byte_equal": true,
+      "json_equal": true,
+      "sha256": "3471465ea51573abc1d07db61b03f94b3324e23deba998a4a53a78ccee498832"
+    }
+  ]
+}
