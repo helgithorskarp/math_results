@@ -1,6 +1,6 @@
 # Native contact construction and a six-point record repair target
 
-**A 1,233-vertex plane unit-distance graph with 6,969 edges is certified
+**A 1,090-vertex plane unit-distance graph with 6,011 edges is certified
 five-chromatic. No improvement to the 509-vertex record is claimed.** This
 package supplies a reproducible construction host, a proved five-chromatic
 subset, and an exact sub-509 search target. It does not claim a new general
@@ -19,7 +19,7 @@ H = L union rho L.
 The exact host has **3,919 vertices and 29,125 strict unit edges**; L has
 1,960 points. It contains a 3,049-point, 21,217-edge subhost obtained by
 restricting L to the closed radius-2 disk before rotation. The certified
-1,233-point graph is an induced subgraph of this smaller host, specified by
+1,090-point graph is an induced subgraph of this smaller host, specified by
 sorted point IDs in [certificate.json](certificate.json). Both larger hosts
 also have chromatic number exactly five: they contain this subset and have
 explicit proper five-colourings, checked on all their unit edges.
@@ -49,7 +49,7 @@ other isometries or abstract graph isomorphism.
 
 **This repair question is unresolved in this publication.** The provided
 507-point, 2,422-edge control has a checked four-colouring. No UNSAT master
-verdict, universal repair exclusion, or optimality of the 1,233-point subset
+verdict, universal repair exclusion, or optimality of the 1,090-point subset
 is asserted. Live search checkpoints and later smaller intermediate subsets
 remain outside this frozen source package.
 
@@ -82,21 +82,21 @@ python3 -B hadwiger_nelson_native_contact_repair/reproduce.py \
   --drat-trim /path/to/drat-trim
 ```
 
-Expected final status: `CERTIFIED CHROMATIC NUMBER FIVE`, with 1,233 vertices
-and 6,969 edges. The selected CNF SHA256 is
+Expected final status: `CERTIFIED CHROMATIC NUMBER FIVE`, with 1,090 vertices
+and 6,011 edges. The selected CNF SHA256 is
 
 ```
-683daee79e37c6d8dc64d3c7c6dcef2d370d4530a118de70c380e705cab275c5
+aabe9d910769aa923c3fd5432d2f4184029e2b36b896b53c7014010f4f7fce5e
 ```
 
-The checked proof was 9,945,902 bytes, SHA256
+The checked proof was 10,739,017 bytes, SHA256
 
 ```
-39a2984ae28d50e3f3a40049e41706b346ee0b245bc617b6369154d4129cf9db
+c11236bd6febaab12773e0f0548a3c1a7e83dd8b68dfe8c7f0e703e644a9d929
 ```
 
 It is generated locally and omitted from Git. The observed proof generation
-and checking took 32.1 seconds; full independent geometry took 33.9 seconds
+and checking took 20.2 seconds; full independent geometry took 33.9 seconds
 on a shared host. These are measured runs, not performance guarantees.
 [EXPECTED.json](EXPECTED.json) and [VALIDATION.json](VALIDATION.json) record
 counts, hashes and tool provenance. All verification was performed by the
