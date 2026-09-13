@@ -5,7 +5,8 @@ Let `omega=(1+i*sqrt(3))/2`, `T={0,1,omega}`, and
     A5(z) = T + zT + z^2 T + z^3 T + z^4 T.
 
 The h4105 architecture represents every possible non-base unit edge by one
-of 2,797 irreducible event curves over `Q[x,y]`, where `z=x+iy`.  Each curve
+of 2,797 irreducible event curves over `Q[x,y]`, where
+`z=x+i*sqrt(3)*y`.  Each curve
 owns an explicit set of label edges.  The h4195 residual records pairs of
 event-curve indices that are still necessary for an at-least-six-active
 counterexample.  This package treats all 160 residual pairs for which at
