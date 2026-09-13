@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "ordinary_portable_replay": true,
+  "optimized_portable_replay": true,
+  "byte_identical_regeneration": true,
+  "controls": {
+    "corruptions_rejected": 5,
+    "equal_exponents_counterexample": true,
+    "exact_free_vector_witnesses": 2,
+    "no_free_vector_nonconcurrence_claim": true,
+    "status": "PASS"
+  },
+  "finite_resultant_groebner_complete_transcript_agree": true,
+  "finite_result": {
+    "algebraic_components_with_pair_incidence": 180,
+    "anchor_pairs": 96,
+    "complex_affine_concurrences": 0,
+    "pencils": 24,
+    "quintets": 3072,
+    "status": "PASS",
+    "transcript_sha256": "d99095f6172f587778f0793b78385ec9adae9ef730b996b1334498de630dc296"
+  },
+  "a5_interface": {
+    "all_lifts": 4608,
+    "all_pencils": 36,
+    "interface_sha256": "3933bb6ac2094939ff6de582ccf23dc93e8c5a03137c3abe4b343d94448e7d22",
+    "residual_lifts": 3072,
+    "residual_pencils": 24,
+    "status": "PASS"
+  },
+  "independent_external_review": false,
+  "versions": {
+    "portable_verifier": "CPython3.11.2 standard library only",
+    "producer_and_optional_finite_check": [
+      "SymPy1.14.0",
+      "python-flint0.8.0"
+    ]
+  }
+}
