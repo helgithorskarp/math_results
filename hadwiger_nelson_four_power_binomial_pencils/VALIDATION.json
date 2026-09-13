@@ -1,0 +1,60 @@
+{
+  "cache_benchmark": [
+    {
+      "baseline_seconds": 0.004774226923473179,
+      "cached_seconds": 0.007580560981296003,
+      "degree": 1,
+      "edges": 63,
+      "norm_evaluations": 221,
+      "pairs": 351,
+      "vertices": 27
+    },
+    {
+      "baseline_seconds": 14.168182707973756,
+      "cached_seconds": 1.6129081449471414,
+      "degree": 23,
+      "edges": 351,
+      "norm_evaluations": 2801,
+      "pairs": 29403,
+      "vertices": 243
+    }
+  ],
+  "date": "2026-09-13",
+  "incomplete_probes": "Original x-coordinate representation left57 unsupported pairs; repaired in final production and audit. An auxiliary physical probe stopped on import-name collision before producing results. No incomplete probe is used as proof.",
+  "independent_author_review_of_current_theorem": false,
+  "optimized_checks": [
+    "classification",
+    "corollary",
+    "six main corruptions",
+    "two fiber corruptions",
+    "boundary census",
+    "literal/cache full graph fixtures"
+  ],
+  "producer": {
+    "certificate_bytes": 8605469,
+    "certificate_sha256": "b2e970417d8ed72882305a0d64d2c3992e0fa38478b67bcbd1c2d8dd641ff095",
+    "jobs": 3,
+    "method": "shifted resultant and full exact field graph construction",
+    "seconds": 814.1218351220014
+  },
+  "running_jobs_at_validation_end": [],
+  "status": "PASS",
+  "verifier": {
+    "approximate_wall_seconds": 451.644,
+    "complete_physical_graph_check": true,
+    "complete_unshifted_square_free_fiber_audit": true,
+    "concurrency_transcript_sha256": "6a2a1f4a8e546a0bd31349eefba392dcb3f9adf7c3a6ebfef44ebd3b9b257f68",
+    "distance_method": "direct coordinates with exact unit-rotation cache",
+    "fiber_transcript_sha256": "e471758e174e8d3dcd462ab594830cbfa8a7c0f44f218837bb1db52c79411f29",
+    "full_literal_distance_replay": false,
+    "jobs": 4,
+    "normal_exit_code": 0,
+    "physical_transcript_sha256": "acffb2697a478bc822b50e372e864c13a073e56b49168806598d531215dd89fa",
+    "timing_basis": "verification log creation to final write; full normal run"
+  },
+  "versions": {
+    "python": "3.11.2",
+    "python-flint": "0.8.0",
+    "sympy": "1.14.0"
+  }
+}
