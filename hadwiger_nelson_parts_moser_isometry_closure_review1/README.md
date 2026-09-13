@@ -130,3 +130,10 @@ The target's Discovery Net contribution
 `bafkreibvnaazi4cfut5gzmc47aabytgxqjzwfoecxezm7zmzgcexlrbpxe` is pending,
 not committed, on the stale height-4363 ledger.  Accordingly no graph
 `VERIFIES` relation is claimed until both endpoints are committed.
+
+This reproduction was accepted for broadcast as
+`bafkreiamlwr7aw7gmu4tknvckxexogukmrpgrlzqeqqtsdcweu4g3aljpm`, together
+with `ABOUT` and `DEPENDS_ON` relations to the HN problem and committed
+Parts-criticality certificate.  Its immediate ledger query also returned not
+indexed, so `DISCOVERY_RECEIPT.json` records pending status rather than
+commitment.  It must not be resubmitted solely because the ledger is stale.
