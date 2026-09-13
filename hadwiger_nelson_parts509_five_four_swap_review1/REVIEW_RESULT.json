@@ -1,0 +1,174 @@
+{
+  "status": "ACCEPTED_WITH_RESTRICTED_FAMILY_SCOPE",
+  "completed_at": "2026-09-13T23:36:20Z",
+  "target": {
+    "title": "Seven completion points are necessary in the sealed Parts pool",
+    "mathematical_commit": "503681c9e5c9c1e01ff1fd8ad468b03d27c8ef3b",
+    "discovery_ref": "bafkreifjas5mzrnxdr7bpev77qu76qx6ygflbftenlc6aol4kkt3hg6pp4",
+    "discovery_status": "accepted_for_broadcast_but_not_committed_do_not_resubmit"
+  },
+  "claim": "For the fixed 374-point Parts block L and sealed 303-point pool U=S union Q5, every X subset U with |X| at most 134 and chi(L union X)>4 has at least seven Q5 points.",
+  "geometry_and_witnesses": {
+    "status": "INDEPENDENT_EXACT_GEOMETRY_AND_WITNESSES_VERIFIED",
+    "result_file": "GEOMETRY_WITNESS_RESULT.json",
+    "field": "Q(sqrt(3),sqrt(5),sqrt(11))",
+    "embedded_points": 677,
+    "all_pairs_considered": 228826,
+    "exact_edges": 3400,
+    "induced_edge_sha256": "6b4d9eea93af5a0987873103a2015fb60c17206cb814d04cb96a39c6e10d737e",
+    "killing_sets": 5528,
+    "witness_edge_checks": 7907307,
+    "imports_target_code": false
+  },
+  "target_package_checks": {
+    "sha256sums": "PASS",
+    "solver_free_verifier": "PASS",
+    "counter_truth_table_checks": 640,
+    "mutation_controls_rejected": 5,
+    "producer": {
+      "name": "CaDiCaL",
+      "version": "3.0.1",
+      "source_commit": "c60730422e758ef1cebe7aeddf2dda31c996bf04",
+      "executable_sha256": "5e48ffc347aba49d75438a17ac38ffe0251f6dd96db4e25b4c10dce8736fff94"
+    },
+    "selectors": {
+      "4": {
+        "variables": 8462,
+        "clauses": 34530,
+        "cnf_sha256": "5bc7b03d5358059482db5884658396f8ffad47afd41520dae8d2589634d0357c",
+        "proof_bytes": 21067411,
+        "proof_sha256": "24c653b6465afbbda28141e81f14e4b038a15b21ccac8fbd3d7ba55c23d62f3b",
+        "regenerated_byte_identical": true,
+        "drat_trim_status": "s VERIFIED"
+      },
+      "5": {
+        "variables": 8462,
+        "clauses": 34530,
+        "cnf_sha256": "d4c34d606e33b16737b1cd44165f849a075a2f2f4f0993a4e2d823967615a322",
+        "proof_bytes": 155848972,
+        "proof_sha256": "f594a8ee208b2f7e79d3778842edc02ac7a77976c3e351882eb08bf76343ca95",
+        "regenerated_byte_identical": true,
+        "drat_trim_status": "s VERIFIED"
+      },
+      "6": {
+        "variables": 8462,
+        "clauses": 34530,
+        "cnf_sha256": "5149b4eacb099be3809a186ec0f4242b57cc7d9e28bbf11527a3ac23db9703e9",
+        "proof_bytes": 841867496,
+        "proof_sha256": "503f2d457ef3e9ed12f8a0a5612a5f28d1872aceb131a435a46334da44e2f8e8",
+        "regenerated_byte_identical": true,
+        "drat_trim_status": "s VERIFIED"
+      }
+    }
+  },
+  "independent_selector_encoding": {
+    "status": "UNSAT_AND_DRAT_VERIFIED_FOR_Q_0_THROUGH_6",
+    "encoding": "unary threshold counts on selected Q5 points and deleted S points",
+    "counter_control_checks": 1536,
+    "imports_target_code": false,
+    "fresh_producer": {
+      "name": "CaDiCaL",
+      "version": "3.0.1",
+      "source_commit": "c60730422e758ef1cebe7aeddf2dda31c996bf04",
+      "executable_sha256": "82c798e6d4eb57989179746907f3f2ed928b3ab82812405c81841e99d328245a"
+    },
+    "selectors": {
+      "0": {
+        "variables": 704,
+        "clauses": 6901,
+        "cnf_bytes": 236583,
+        "cnf_sha256": "14c75e930b35e9c98cd3cce7b177ab51f1c1fd5ed3da08f0c7d0393b5f48a58a",
+        "proof_bytes": 115692,
+        "proof_sha256": "cd2eacce9e1cbe1a9d5a393d145daf32619c8f77a9a7e7b1e8d1f29a2434e747",
+        "solver_status": "UNSATISFIABLE",
+        "drat_trim_status": "s VERIFIED"
+      },
+      "1": {
+        "variables": 1469,
+        "clauses": 9030,
+        "cnf_bytes": 266536,
+        "cnf_sha256": "4f288326aa6c5986880a2f60967a4e8f928b27416550224ceef19294c4ad23ff",
+        "proof_bytes": 6922,
+        "proof_sha256": "648dd071106226f21d653acde55e6bdf6dadb42157d4e14f7222d0072d3246da",
+        "solver_status": "UNSATISFIABLE",
+        "drat_trim_status": "s VERIFIED"
+      },
+      "2": {
+        "variables": 2063,
+        "clauses": 10812,
+        "cnf_bytes": 292101,
+        "cnf_sha256": "8eee2a340d33511252e8b28a1ba892e93c487b10fe17c3386610e79f1de9a6b3",
+        "proof_bytes": 475784,
+        "proof_sha256": "fd49818d9d1cfd1d49d2ff71a4749d9effbfe607a7752591e7390ebaff335e4a",
+        "solver_status": "UNSATISFIABLE",
+        "drat_trim_status": "s VERIFIED"
+      },
+      "3": {
+        "variables": 2653,
+        "clauses": 12582,
+        "cnf_bytes": 317521,
+        "cnf_sha256": "3a99b5ecef98f623af814e1847775240f8a8765adcc02ef4fc8c1c394e2c47fd",
+        "proof_bytes": 2074373,
+        "proof_sha256": "47cd1883ecae217c34f1bd767be511f8ae6d1aac69083741e7c9d9f258c57d4c",
+        "solver_status": "UNSATISFIABLE",
+        "drat_trim_status": "s VERIFIED"
+      },
+      "4": {
+        "variables": 3239,
+        "clauses": 14340,
+        "cnf_bytes": 342791,
+        "cnf_sha256": "0f560508f193029c55a8ef658bbd5ca309065f4231cc1be6048b4d1fb0ae8b06",
+        "proof_bytes": 10607088,
+        "proof_sha256": "bf212c3c400954661e503b73d682fc24a1540d9c8ffbc303aa393a1c3acaac8b",
+        "solver_status": "UNSATISFIABLE",
+        "drat_trim_status": "s VERIFIED"
+      },
+      "5": {
+        "variables": 3821,
+        "clauses": 16086,
+        "cnf_bytes": 367899,
+        "cnf_sha256": "f966c7f6679d306a1c5258341f599a488fb4ceb4ca05763f116192c74cf32227",
+        "proof_bytes": 68706077,
+        "proof_sha256": "ea0214632918a3674617b58a7e684130cafbc4becda0a99c406bbbee92277d3d",
+        "solver_status": "UNSATISFIABLE",
+        "drat_trim_status": "s VERIFIED"
+      },
+      "6": {
+        "variables": 4399,
+        "clauses": 17820,
+        "cnf_bytes": 392841,
+        "cnf_sha256": "04c0620a2b07bc344a009f93c147117c9e8b2661219e734264d587cd7dfc27ce",
+        "proof_bytes": 529818291,
+        "proof_sha256": "bf536b8e8a4ddd2f51185ebe9148dd990e38f19d1bc16e53b48472261fc5e2e3",
+        "solver_status": "UNSATISFIABLE",
+        "drat_trim_status": "s VERIFIED"
+      }
+    }
+  },
+  "checker": {
+    "name": "drat-trim",
+    "source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "fresh_executable_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+    "matches_target_manifest": true
+  },
+  "scope_limitations": [
+    "fixed L and finite S-union-Q5 pool only",
+    "q=7 remains open",
+    "no five-chromatic graph on at most 508 vertices is constructed",
+    "no global exclusion outside the 677 explicit plane points",
+    "no improvement of the unrestricted 509-vertex published record"
+  ],
+  "source_refresh": {
+    "repository_head_before_review_publication": "c4e3c8f4b006130d57b83a3c48850ef4ca8fb67a",
+    "new_fixed_native_repair_exclusion": "eec9c1061dcbc4bc63e7cbaad44553ce4f47996d",
+    "new_single_anchor_field_gate": "3ca991ea1acec708326ec9966256250753235e2e",
+    "new_q7_frontier": "1c0956f301330924c8e393ed54f7144c18b99d26: fifth exact 508-point selector is four-colourable; q=7 remains open",
+    "new_parts574_criticality": "1c0956f301330924c8e393ed54f7144c18b99d26: fixed 574-point obstruction is vertex-critical but remains nonrecord",
+    "published_record": "Parts 509 vertices and 2442 edges, arXiv:2010.12665",
+    "ledger_indexed_height": 4363,
+    "node_height": 4364,
+    "node_last_block_time": "2026-09-11T02:40:58.067131057Z",
+    "ledger_status": "stale"
+  },
+  "scratch_directory": "/scratch/hn-parts-q456-review.20260913.0DXkpDub"
+}
