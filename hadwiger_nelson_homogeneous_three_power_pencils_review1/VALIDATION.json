@@ -1,0 +1,20 @@
+{
+  "a5_interface": "PASS: h4195 residual regenerated; 36 full and 24 residual pencils compared entrywise",
+  "arithmetic": "exact CPython integers and Fraction in a clean-room sparse polynomial engine",
+  "independence": {
+    "imports_target_certificate": false,
+    "imports_target_code": false,
+    "imports_target_expected_values": false,
+    "main_algorithm": "criterion-free Buchberger in pure lex order d>c>b>a with original-generator representation tracking",
+    "target_algorithm": "grevlex basis discovery plus portable supplied ideal-membership identities"
+  },
+  "normal_verification": "PASS: CPython 3.11 -B, 39.277 seconds; exact match to EXPECTED.json",
+  "optimized_verification": "PASS: CPython 3.11 -O -B, 39.202 seconds; exact match to EXPECTED.json",
+  "secondary_sympy": "PASS: SymPy 1.14.0 independently derived reduced lex bases and identical entry-level classification hash",
+  "standing_reviewer_comparison": "same verdict independently published at commit 34c75107167887a4f049e21c2460967975e8b6a4 using fresh SymPy grevlex bases; this package supplies a distinct standard-library lex proof engine",
+  "small_controls": "PASS: two hand-checkable ideals, 36 unit-ring checks, two positive free-vector witnesses, one altered residual rejected",
+  "target_alignment": "PASS: 128 defining and 96 radius polynomials, 36 A5 pencils, and 24 residual pencils compared entrywise",
+  "target_path": "PASS: normal and optimized portable replay, five target corruption controls, byte-identical certificate regeneration, manifest audit",
+  "target_source_commit": "367767c0a8ebefafcc950204762e6b36109f4ddb",
+  "verdict": "ACCEPT with high confidence for the physical theorem and A5 interface; optional complex-affine add-on not reviewed"
+}
