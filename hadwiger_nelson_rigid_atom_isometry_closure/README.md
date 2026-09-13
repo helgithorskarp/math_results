@@ -70,3 +70,5 @@ unrestricted order.  Primary sources are pinned in `SOURCE_PINS.json`.
 - `verify.py`: solver-free exact verifier and mutation controls.
 - `produce.py`: optional certificate regeneration with a SAT solver.
 - `EXPECTED.json`, `VALIDATION.md`, `REPRODUCE.md`: compact evidence.
+- `DISCOVERY_RECEIPT.json`: broadcast receipt, explicitly pending against the
+  stale height-4363 committed ledger.
