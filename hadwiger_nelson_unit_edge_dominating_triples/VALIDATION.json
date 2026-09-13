@@ -1,0 +1,36 @@
+{
+  "date_utc": "2026-09-13",
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "max_child_rss_kib": 20604,
+  "runs": [
+    {
+      "command": "python3 -B build.py --out FRESH_DIR",
+      "returncode": 0,
+      "seconds": 0.063284,
+      "stdout_sha256": "10bc00e374c8861b70bd5b8932c603e15f73207f130330e628f665308a2c46c4"
+    },
+    {
+      "command": "python3 -B verify.py",
+      "returncode": 0,
+      "seconds": 0.845320,
+      "stdout_sha256": "b8cef578af5d05eb5a099b96b16f5b534e49213f55d38f7d71a23e0e0c8b8c00"
+    },
+    {
+      "command": "python3 -O -B verify.py",
+      "returncode": 0,
+      "seconds": 0.983285,
+      "stdout_sha256": "b8cef578af5d05eb5a099b96b16f5b534e49213f55d38f7d71a23e0e0c8b8c00"
+    },
+    {
+      "command": "python3 -B controls.py",
+      "returncode": 0,
+      "seconds": 0.387458,
+      "stdout_sha256": "2b2b392523851074f8143fca0069aff32ad44346ba8a24427844ea7f923dbaa9"
+    }
+  ],
+  "timings_are_nonsemantic": true,
+  "external_data": false,
+  "native_solver": false,
+  "floating_point_distance_predicate": false,
+  "independent_external_review": false
+}
