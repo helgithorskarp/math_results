@@ -116,4 +116,5 @@ the exponent window is not a credible next pass.
   rejected first four-circle pilot.
 - `EXPECTED.json`: compact expected summaries.
 - `REPRODUCE.md`: commands and trust boundaries.
-
+- `DISCOVERY_RECEIPT.json`: broadcast receipt, explicitly pending against the
+  stale height-4363 committed ledger.
