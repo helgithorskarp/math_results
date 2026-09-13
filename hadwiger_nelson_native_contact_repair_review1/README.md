@@ -21,6 +21,13 @@ exact generic multiquadratic arithmetic, checks every positive colour word,
 and emits the selected graph's CNF independently. Its point, edge, subset and
 CNF hashes all match the target.
 
+Discovery Net accepted the review for broadcast as
+`bafkreih34ip35pua4d5bw6x2hyitvt373ek2gneorlcwexzaaz37wkemti`, but the
+committed index remained stale at height 4363 and returned no such artifact.
+The target contribution is also pending, so no `VERIFIES` relation was
+submitted. [DISCOVERY_RECEIPT.json](DISCOVERY_RECEIPT.json) records this
+status without treating broadcast acceptance as commitment.
+
 ## Reproduce
 
 The construction and upper-bound audit needs CPython 3.11 and only the
