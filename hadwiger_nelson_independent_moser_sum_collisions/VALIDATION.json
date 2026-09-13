@@ -1,0 +1,55 @@
+{
+  "audited_unordered_physical_pairs": 433052116,
+  "certificate_bytes": 204793,
+  "certificate_sha256": "2795687647a8f8d2b01d6d7c844d3d0d06afd9b3000f5a24341d03b5b3c26765",
+  "certificate_words": 483,
+  "checked_at_utc": "2026-09-13T19:04:15.861365+00:00",
+  "compiler": "g++12.2.0",
+  "complete_inventories_match_original_runs": true,
+  "controls_normal_and_optimized_ubsan": {
+    "independent_fraction_metric_pairs": 1140,
+    "local_valuation_controls": 328,
+    "native_guard_rejections": 6
+  },
+  "expected_json_sha256": "1d0da0d919e9ed163a0d8550de700c97f79baad225bf6440fb7a0a4cfee06b61",
+  "external_review": "pending",
+  "full_public_replay_python_optimized_native_ubsan": {
+    "exit_code": 0,
+    "maxrss_kib": 47832,
+    "wall_seconds": 548.359349489212
+  },
+  "negative_controls": {
+    "collision_disagreement": 1,
+    "constant_colour_rejections": 8568,
+    "malformed_words": 2
+  },
+  "optimized_address_generation_controls": {
+    "exact_formal_address_sequences_match_original": true,
+    "quadratic_fields": 31
+  },
+  "original_three_factor_geometry_audit": {
+    "all_positive_words_checked": true,
+    "both_metric_formulas": true,
+    "cases": 3504,
+    "wall_seconds": 385.33320355415344
+  },
+  "original_two_factor_geometry_audit": {
+    "both_metric_formulas": true,
+    "cases": 5064,
+    "event_census_matches_actual_points": true,
+    "wall_seconds": 590.8862016201019
+  },
+  "python": "3.11.2",
+  "record_improvement": false,
+  "running_computations": [],
+  "solver_needed_for_replay": false,
+  "source_points": 7,
+  "status": "PASS: author-checked exact theorem; external review pending",
+  "undefined_behavior_reports": 0,
+  "validation_commands": [
+    "g++ -std=c++17 -O1 -g -shared -fPIC -fsanitize=undefined -fno-sanitize-recover=all geometry.cpp -o /tmp/hn-moser-collisions-ubsan.so",
+    "python3 -O verify.py --library /tmp/hn-moser-collisions-ubsan.so",
+    "python3 controls.py /tmp/hn-moser-collisions.so",
+    "python3 -O controls.py /tmp/hn-moser-collisions-ubsan.so"
+  ]
+}
