@@ -1,0 +1,92 @@
+{
+  "alternative_master": {
+    "bytes": 1260883,
+    "cadical_1_9_5": {
+      "process_seconds": 848.02,
+      "result": "UNSAT",
+      "wall_seconds": 848.15
+    },
+    "clauses": 31805,
+    "degree_clauses": 9317,
+    "drat_trim": {
+      "core_clauses": 19287,
+      "core_lemmas": 3479012,
+      "rat_lemmas": 2299,
+      "resolution_steps": 330361531,
+      "result": "VERIFIED",
+      "verification_seconds": 835.291,
+      "wall_seconds": 835.312
+    },
+    "kissat_4_0_4": {
+      "result": "UNSAT",
+      "wall_seconds": 526.079
+    },
+    "proof_bytes": 504134280,
+    "proof_sha256": "6d3bb8455a06c840a33712ef9c980330c04ce9190c6722c8fcc0128e740928a7",
+    "sha256": "9fce915b192fac7953fd057b2eb844a78a0efa3bc7aed137f06bbbc6c1bb5abd",
+    "variables": 2798
+  },
+  "controls": {
+    "counter_assignment_checks": 8192,
+    "degree_assignment_checks": 9216,
+    "deterministic_cnf_regenerations_compared": 3
+  },
+  "geometry": {
+    "cross_edges": 36,
+    "denominator": 288,
+    "inner_L_edges": 1860,
+    "inner_pool_edges": 1504,
+    "points": 677,
+    "pool_points": 303,
+    "unit_edges": 3400
+  },
+  "positive_cover": {
+    "cache_bytes": 4199717,
+    "cache_sha256": "cc34a2d2914c5b2583c7e3211ce3ac96dd59c55c3aa74a827a035931db84ec9d",
+    "colourings_checked": 12824,
+    "interface_colourings": 20,
+    "killing_clauses": 12824
+  },
+  "record_refresh": {
+    "as_of_utc": "2026-09-14",
+    "edges": 2442,
+    "haugland_current_record_source": "https://arxiv.org/html/2608.04542v4",
+    "parts_source": "https://arxiv.org/abs/2010.12665",
+    "vertices": 509
+  },
+  "review": {
+    "confidence": "high",
+    "scope": "fixed Parts L,S,Q5 sealed-pool a=7 family only",
+    "verdict": "ACCEPT"
+  },
+  "source_integrity": {
+    "accepted_geometry_checker_sha256": "a3f2de1702cbd55650e77ae97759294ff2915d183e8aec6944adb2813037d416",
+    "interface_hints_sha256": "c539a762dcfabaae7599800eb72d5e9143033482ae2eaca77773f9da5211cc5b",
+    "killing_instance_sha256": "a7bc0aadf72becb81cc66000fa5d00135ddbfa95fcb375f47d36c08ce4a80ade",
+    "target_contribution_ref": "bafkreif2ooyiwjladso7j7lit2krf3mtr3aqmjfgj6senyaobubbspb5ki",
+    "target_source_commit": "ecbbad03dc82bc8562dc1e200bf5b8996b6d482d",
+    "target_tree_at_review": "48beef4ce37bdc3bc4b999c8f0151a0a8900dd06",
+    "target_tree_at_source_commit": "48beef4ce37bdc3bc4b999c8f0151a0a8900dd06",
+    "target_verify_sha256": "10734e621c6a06b2dfe2f382c6e7c1ec954a3e303da479bbe1cf16c478498372"
+  },
+  "submitted_master_replay": {
+    "cache_generated_this_run": 12824,
+    "checker_seconds": 439.71720110299066,
+    "clauses": 33387,
+    "master_sha256": "ed3ae96f4a4d2664c69914520ae40c469440481c2c035b6551d0ecd2d3d4ece6",
+    "proof_bytes": 252438677,
+    "proof_sha256": "4ae6c4883ddaf481119288deb87b6144df7ba5cbb6a8343fea5877142f4da05e",
+    "solver_seconds": 265.56105313799344,
+    "status": "a=7 COLOURING COVER AND DRAT VERIFIED",
+    "total_seconds": 921.6023940739688,
+    "variables": 4641
+  },
+  "toolchain": {
+    "cadical_binary_sha256": "19dc7cc71b68d938e707eb0fab422470005616c68afddb0b9b52481e07efa049",
+    "cadical_version": "1.9.5",
+    "drat_trim_binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+    "kissat_binary_sha256": "8664d542108e494c8aebc90e762d7e719c63b556506a65f0c6ff7c9c6bc5c15b",
+    "kissat_version": "4.0.4",
+    "python": "3.11.2"
+  }
+}
