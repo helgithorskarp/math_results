@@ -108,6 +108,24 @@ has an independent review that accepts its geometry and also exhibits an
 ordinary recolouring outside its potential class.  That recolouring does not
 affect the present root-closure argument, which uses geometry only.
 
+## Prepublication refresh
+
+Immediately before publication, repository main advanced with the author-side
+package
+[`hadwiger_nelson_palette_terminal_circle_gate`](../hadwiger_nelson_palette_terminal_circle_gate/README.md)
+at commit `8f33696c8f67fedb73a40b18cd889ba47546070b`.  It adds every common unit
+neighbour of every terminal pair, obtaining a 44-point, 85-edge physical
+graph, and reports that every colouring of the original 16 vertices extends.
+The new points are independent and each sees at most three old colours, so
+this is compatible with—and sharpens the construction limitation in—the
+present review.  It does not contradict the 16-point relation.
+
+The target-circle package's normal and optimized checks, controls, and source
+manifest were replayed successfully.  Its separate exact geometry was not
+clean-room rederived in this review, so it remains author-side rather than an
+additional accepted review target.  Its negative conclusion retires this
+particular full common-neighbour driver, not every possible physical host.
+
 ## Reproduction
 
 The substantive review source is commit
@@ -163,7 +181,9 @@ its own 2,131-vertex spindle-free graph non-record-small:
    For all eight terminals, a host of order at most 500 leaves room for the
    eight remaining gadget vertices.  The completed graph would still need
    exact collision/edge reconstruction, a checked non-four-colourability
-   certificate, and a positive five-colouring.
+   certificate, and a positive five-colouring.  The full common-unit-neighbour
+   pool of the fixed terminals has now been closed as neutral at 44 points and
+   85 edges, so a successor must use a genuinely different coupling mechanism.
 
 2. **Exploit the six- and seven-terminal projections.**  The proved projection
    census supplies alternative interfaces that the target's eight-terminal
