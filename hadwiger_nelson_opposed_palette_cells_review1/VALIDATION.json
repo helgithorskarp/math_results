@@ -1,0 +1,34 @@
+{
+  "validated_at_utc": "2026-09-14T08:52:26Z",
+  "verdict": "ACCEPT with high confidence for the exact physical terminal-relation claim",
+  "python": "3.11.2",
+  "dependencies": "Python standard library only",
+  "target_replay": {
+    "normal_status": "PASS",
+    "optimized_status": "PASS",
+    "controls_status": "PASS",
+    "host_gate_status": "PASS",
+    "sha256_manifest_status": "PASS"
+  },
+  "independent_replay": {
+    "normal_status": "PASS",
+    "normal_seconds": 31.163,
+    "optimized_status": "PASS",
+    "optimized_seconds": 30.844,
+    "outputs_identical": true,
+    "named_terminal_assignments_solved": 65536,
+    "all_oriented_palette_checks": 576
+  },
+  "independent_host_replay": {
+    "normal_status": "PASS",
+    "normal_seconds": 101.431,
+    "optimized_status": "PASS",
+    "optimized_seconds": 103.704,
+    "outputs_identical": true,
+    "all_support_pair_checks": 88410,
+    "unit_root_equalities_checked": 504
+  },
+  "review_source_commit": "9493a42f27660f4b92c4b86d18424d89d05d0a34",
+  "formal_proof": false,
+  "record_improvement": false
+}
