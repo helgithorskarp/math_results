@@ -1,0 +1,38 @@
+{
+  "verdict": "ACCEPT with high confidence for the exact fixed-base, fixed-host scope",
+  "target_commit": "eec9c1061dcbc4bc63e7cbaad44553ce4f47996d",
+  "claim": "For every S subset of H minus B with cardinality at most five, the induced strict plane unit-distance graph on B union S is four-colourable.",
+  "scope": {
+    "host_vertices": 3919,
+    "host_edges": 29125,
+    "fixed_base_vertices": 503,
+    "addition_budget": 5,
+    "actual_plane_realization": true,
+    "restricted_family_exclusion": true,
+    "record_improvement": false
+  },
+  "independent_evidence": {
+    "target_code_imported": false,
+    "all_physical_pairs_checked": 7677321,
+    "exact_field": "Q(sqrt(3),sqrt(5),sqrt(11))",
+    "partial_colourings": 126,
+    "retained_edge_checks": 2801272,
+    "canonical_qualified_connected_five_sets": 1856054,
+    "canonical_five_set_sha256": "8c62016047b1750485d31a6ec757a4b67db2ddf27ec4197f00b924e179e60f6e",
+    "qualified_connected_triples": 18965,
+    "qualified_connected_quadruples": 175654,
+    "triple_completion_candidate_masks": 264431623,
+    "dominance_reduced_singleton_masks": 419,
+    "dominance_reduced_pair_masks": 1063,
+    "pair_pair_cases": 564453,
+    "weighted_cover_feasible": false
+  },
+  "limitations": [
+    "The fixed 503-point base may not be changed or reduced.",
+    "Points outside the explicit 3919-point host are not addressed.",
+    "This review does not certify the later author-side six-addition theorem at commit c418ae6.",
+    "Arbitrary smaller subgraphs of the host are not classified.",
+    "No sub-509 five-chromatic construction or global plane-colouring improvement follows."
+  ],
+  "trust_boundary": "Pinned exact-arithmetic geometry source, positive partial colourings, finite enumeration arguments, and ordinary Python/C++ execution; not a proof-assistant formalization."
+}

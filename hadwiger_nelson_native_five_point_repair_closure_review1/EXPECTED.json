@@ -1,0 +1,80 @@
+{
+  "status": "INDEPENDENT FIXED-BASE FIVE-POINT CLOSURE CHECK PASSED",
+  "target_commit": "eec9c1061dcbc4bc63e7cbaad44553ce4f47996d",
+  "python": "CPython 3.11.2",
+  "geometry": {
+    "vertices": 3919,
+    "strict_unit_edges": 29125,
+    "finite_field_sieve_survivors": 29125,
+    "all_pairs": 7677321,
+    "field": "Q(sqrt(3),sqrt(5),sqrt(11))",
+    "imports_target_code": false
+  },
+  "fixed_vertices": 503,
+  "free_vertices": 3416,
+  "partial_colourings": 126,
+  "retained_edge_checks": 2801272,
+  "omission_inventory_sha256": "60aac8f394ad53829013ad6ee37858ad8d22467c53786d00e1a46ce8418e7f52",
+  "high_singletons": 585,
+  "qualified_free_edges": 2549,
+  "low_involving_pair_atoms": 1238,
+  "connected_growth": {
+    "1": {
+      "viable": 3416
+    },
+    "2": {
+      "candidate_attempts": 41158,
+      "viable": 20579,
+      "degree_qualified": 2549
+    },
+    "3": {
+      "candidate_attempts": 507222,
+      "viable": 147827,
+      "degree_qualified": 18965
+    },
+    "4": {
+      "candidate_attempts": 5402209,
+      "viable": 592780,
+      "degree_qualified": 175654
+    },
+    "5": {
+      "candidate_attempts": 24832684,
+      "viable": 1856054,
+      "degree_qualified": 1856054,
+      "inventory_sha256": "8c62016047b1750485d31a6ec757a4b67db2ddf27ec4197f00b924e179e60f6e"
+    }
+  },
+  "large_component_checks": {
+    "4_plus_1": {
+      "items": 585,
+      "unique_masks": 569,
+      "queries": 175654,
+      "candidate_masks_tested": 4495376
+    },
+    "3_plus_2": {
+      "items": 172058,
+      "unique_masks": 157917,
+      "queries": 18965,
+      "candidate_masks_tested": 264431623
+    }
+  },
+  "weighted_cover_feasible": false,
+  "weighted_cover": {
+    "original_singleton_masks": 585,
+    "original_pair_masks": 1238,
+    "maximal_singleton_masks": 419,
+    "maximal_undominated_pair_masks": 1063,
+    "last_mode_checked": "two_pairs",
+    "singleton_recursion_calls": 1667939,
+    "singleton_failed_states": 39050,
+    "singleton_cache_hits": 921,
+    "one_singleton_queries": 1627968,
+    "pair_pair_cases": 564453
+  },
+  "positive_search_controls": {
+    "508": 7,
+    "509": 10
+  },
+  "positive_search_control_edge_checks": 41303,
+  "corruptions_rejected": 3
+}
