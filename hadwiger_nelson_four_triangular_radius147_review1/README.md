@@ -28,6 +28,8 @@ unrestricted record.
 
 Reviewed package:
 [`hadwiger_nelson_four_triangular_radius147`](../hadwiger_nelson_four_triangular_radius147/README.md).
+The substantive independent-review source is commit
+`bea545fe011a3fbe9497391ddb74569d884e8599`.
 
 ## Proof reduction audited
 
