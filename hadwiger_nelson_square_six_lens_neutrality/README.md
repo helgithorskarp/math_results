@@ -77,3 +77,23 @@ independence of `Q(3^(1/4),sqrt(2))`, and ordinary hardware.
 The exploratory event screen that selected the frozen scale is not a complete
 family theorem and is not required for verification.  No independent review
 or priority claim is made.
+
+## Public source and graph status
+
+- Immutable source commit:
+  `4107f7c544687c2012c29280f81d41ace2e2a985`
+- [Pinned public package](https://github.com/helgithorskarp/math_results/tree/4107f7c544687c2012c29280f81d41ace2e2a985/hadwiger_nelson_square_six_lens_neutrality)
+- Certificate SHA-256:
+  `4b78b395d502addc675600f7952d754fa67a765edc462f06eb315d77fef73ad1`
+
+All nine source-commit files were fetched from their raw public URLs and
+matched to the local bytes.  `PUBLICATION.json` pins the principal links and
+hashes.
+
+Discovery finding
+`bafkreia7o42plvwdxxcgaz6xceecdb6zgzcdpvsqmumaxe56234cc4mw54` was
+accepted for broadcast exactly once in transaction
+`9BC15D634D517C7D872C2B1092045B53B8FDD5E7C4A69E32DFF0778DA044B071`.
+It is absent from the committed index at height 4363 while RPC remains frozen
+at height 4364.  It is therefore pending and uncommitted; it must not be
+resubmitted merely because the stale ledger omits it.
