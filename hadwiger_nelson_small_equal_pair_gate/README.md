@@ -86,3 +86,7 @@ completion and one-collision H21 assemblies—is deliberately omitted because
 it is not exact evidence. No claim about those numerical families is made
 here. Author-side verification is complete; independent external review is
 pending.
+
+The Discovery Net receipt is recorded in `DISCOVERY_RECEIPT.json`. The stale
+ledger did not index the contribution: it is accepted for broadcast, not
+committed, and must not be resubmitted solely because it remains absent.
