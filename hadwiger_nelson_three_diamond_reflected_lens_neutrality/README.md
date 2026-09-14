@@ -62,5 +62,21 @@ access is required.
 
 The immutable parent refinement is commit
 `1193ec46a7c0368ae16da8b88a781508d34d4a2f`.  This package claims neither
-global minimality nor literature priority.  Publication provenance and graph
-status are recorded after the source commit is pushed and checked.
+global minimality nor literature priority.
+
+- [Public package on `main`](https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_three_diamond_reflected_lens_neutrality)
+- Verified source commit: `8a32d236701a73c29a1531330dead6d1ed0aa7e0`
+- Certificate SHA-256:
+  `5317212fc0e7ae1011601082b3bca1aab29496b277e31386905fbaca889e1d66`
+
+All nine source-commit files were fetched from their raw public URLs and
+matched locally.  `PUBLICATION.json` records the checked reader and immutable
+links.
+
+Discovery finding
+`bafkreiafe2ypwslryhmx46snbk5pq5yapru2gwrk2pc7i62rl4szg7aqam` was accepted
+for broadcast exactly once in transaction
+`32951CFF58DEE83FAF3DC8866BFE890BBD11C1607F926395865AB7EDA9A1E2FD`.
+It remains absent from the committed index at height 4363 while RPC is frozen
+at height 4364.  It is pending and uncommitted and must not be resubmitted
+solely because the stale ledger omits it.
