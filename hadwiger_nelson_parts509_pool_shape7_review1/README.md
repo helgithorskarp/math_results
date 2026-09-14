@@ -94,7 +94,7 @@ colour absent from its at most three neighbours.  The imported `a=6` theorem
 is contribution
 `bafkreia3yb6enpdokhwsl7b4ppiksckwweacuq6wgpc5wyw3oh7c5bg62y`; its
 independent accepted review is
-`bafkreigshcpt2gupuueqtjvzaoj5kiy7xhg6tct4pqimqnpo2n5htbokze`.
+`bafkreiagpqyhmidbom3httuxtgyjexnmxr6hyjphnct5xg3hn2t34yrpr4`.
 
 For fewer than seven additions, the earlier closed shapes apply.  If seven
 Q5 points are selected but fewer S points are retained, fill with S points to
