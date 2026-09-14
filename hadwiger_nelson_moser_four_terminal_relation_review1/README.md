@@ -110,6 +110,10 @@ height 4364 since 2026-09-11, with 159 uncommitted transactions.  The committed
 field theorem is `bafkreig75j4jkhvm5guyp3k62ojlq5udshmgr345zbv5f433l2dlacefqq`;
 its accepted review is
 `bafkreianlcfpracsoyxay3aj2ab7w55wes6fobebsvxtje5lyc5p2t435u`.
+This review was accepted for broadcast once as
+`bafkreiaohf3zvj2xrk3da6c4gnbhg2b66uwsxdwrm7yddhrurle7w3tt6q`, but a
+post-submission query still found it absent at committed height 4363.  It is
+therefore pending, not committed; see [`DISCOVERY_RECEIPT.json`](DISCOVERY_RECEIPT.json).
 
 ## Reproduction
 
