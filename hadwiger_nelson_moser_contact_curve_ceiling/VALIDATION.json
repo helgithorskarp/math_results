@@ -1,0 +1,23 @@
+{
+  "date_utc": "2026-09-14",
+  "status": "author-side exact replay passed; independent review pending",
+  "environment": {
+    "python": "3.11.2",
+    "dependencies": "Python standard library plus sibling exact arithmetic package"
+  },
+  "command": "python3 verify.py > /tmp/hn-moser-contact-ceiling.json && cmp expected.json /tmp/hn-moser-contact-ceiling.json",
+  "observed": {
+    "elapsed_seconds_approx": 86,
+    "formal_pairs": 58653,
+    "nonconstant_contact_classes": 18828,
+    "maximal_admissible_multiplicity": 8,
+    "maximal_admissible_classes": 96,
+    "complete_inventory_routes": 2,
+    "complete_dictionaries_identical": true,
+    "negative_controls_rejected": 3,
+    "floating_point_used": false,
+    "solver_used": false
+  },
+  "contact_inventory_sha256": "6003281b13f03b2cc844384fa8c5da3db8c449bea303458ff68857bec3d4915c",
+  "record_improvement": false
+}
