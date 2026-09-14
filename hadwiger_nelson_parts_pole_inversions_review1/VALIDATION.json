@@ -1,0 +1,51 @@
+{
+  "validated_at_utc": "2026-09-14T05:44:53Z",
+  "verdict": "ACCEPT with high confidence within the stated restricted family",
+  "target_commit": "9f2a8a6c603d6166124abcb1d062a3e0cbf41c6c",
+  "target_author_replay": {
+    "status": "PASS",
+    "command": "python3 -B hadwiger_nelson_parts_pole_inversions/verify.py --work <scratch>/author-replay --sanitize",
+    "seconds": 48.268208026885986,
+    "entrywise_comparisons": 65548002,
+    "exact_fixture_pair_checks": 128778,
+    "published_word_checks": 17,
+    "ubsan": true
+  },
+  "independent_replay": {
+    "status": "PASS",
+    "command": "python3 -B hadwiger_nelson_parts_pole_inversions_review1/review.py --check-expected",
+    "wall_seconds": 225.693,
+    "reported_seconds": 225.45643424987793,
+    "python": "3.11.2",
+    "numpy": "2.4.6",
+    "complete_projection_scans": 4,
+    "event_representatives_per_projection": 65548002,
+    "total_modular_pair_evaluations": 262192008,
+    "fresh_positive_words_per_projection": 17,
+    "published_word_checks": 17,
+    "exact_fixture_pair_checks": 128778,
+    "controls": {
+      "positive_graph_controls": 1,
+      "negative_graph_controls": 1,
+      "inversion_controls": 1
+    }
+  },
+  "record_check": {
+    "checked_at_utc": "2026-09-14",
+    "unrestricted_record": "Parts: 509 vertices, 2442 edges",
+    "restricted_comparison": "Haugland: 2131 vertices, Moser-spindle-free",
+    "record_improvement": false
+  },
+  "discovery_net": {
+    "indexed_height": 4363,
+    "rpc_height": 4364,
+    "last_block_time": "2026-09-11T02:40:58.067131057Z",
+    "target_status": "pending, not committed",
+    "committed_hn_objection_matches": 0
+  },
+  "latest_repository_context": {
+    "inspected_through_commit": "966199e7afac89b09d01f52532523939b87a8f86",
+    "newer_result": "Heule fresh-centre four-cycle fixed-support exclusion through order 509",
+    "effect_on_verdict": "none; distinct restricted family, no record improvement"
+  }
+}
