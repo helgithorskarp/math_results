@@ -1,0 +1,28 @@
+{
+  "date_utc": "2026-09-14",
+  "python": "CPython 3.11.2",
+  "normal_verifier": {
+    "command": "python3 -B hadwiger_nelson_snail_moser_pair_contacts/verify.py",
+    "elapsed_seconds": 43.496,
+    "result": "passed"
+  },
+  "optimized_verifier": {
+    "command": "python3 -O -B hadwiger_nelson_snail_moser_pair_contacts/verify.py --check-expected",
+    "result": "passed; byte-identical output to normal verifier"
+  },
+  "direct_audit": {
+    "command": "python3 -B hadwiger_nelson_snail_moser_pair_contacts/direct_audit.py --check-expected",
+    "elapsed_seconds": 203.809,
+    "result": "passed; all 933088 physical pair norms evaluated exactly"
+  },
+  "controls": {
+    "command": "python3 -B hadwiger_nelson_snail_moser_pair_contacts/controls.py",
+    "basis_product_conjugation_checks": 256,
+    "basis_product_modular_checks": 256,
+    "positive_small_graph_search_cases": 896,
+    "malformed_source_rejected": true,
+    "result": "passed"
+  },
+  "solver_dependency": null,
+  "trust_boundary": "Written finite reduction, hash-pinned source rows, exact rational field arithmetic, exhaustive finite loops, positive word checks, CPython execution. This is author-side computer-assisted verification, not independent peer review or formalization."
+}
