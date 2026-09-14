@@ -1,0 +1,62 @@
+{
+  "abstract_chromatic_cross_check": {
+    "cadical_1_9_5": {
+      "checker_seconds": 0.160,
+      "proof_bytes": 188139,
+      "proof_sha256": "4e7f1ffd5e9fbe6fbde22c29521a0c864d7fecc8296f9d653f7b0a23c5f1cb6e",
+      "solver_returncode": 20,
+      "solver_seconds": 0.103,
+      "verdict": "drat-trim s VERIFIED"
+    },
+    "cnf_bytes": 44025,
+    "cnf_clauses": 3751,
+    "cnf_encoding": "exactly one of four colours; pairwise at-most-one; no symmetry breaking",
+    "cnf_sha256": "4ad85413d9b179993b82cd78d965afdc30418b0683941de9a0bdab379e05bb3e",
+    "cnf_variables": 484,
+    "five_colouring_checked": true,
+    "kissat_4_0_4": {
+      "checker_seconds": 0.147,
+      "proof_bytes": 86998,
+      "proof_sha256": "f5e936c88766036648fb2e91e2277be8e7def7c6b2bcd260ae3068b3080c47f2",
+      "seed": 260914,
+      "solver_returncode": 20,
+      "solver_seconds": 0.098,
+      "verdict": "drat-trim s VERIFIED"
+    }
+  },
+  "independent_mod3_audit": {
+    "all_final_ranks": [118],
+    "event_stream_sha256": "f1eb5305433d7b9584dcf01476437a1febab543e59f82d5003495922431ca6b9",
+    "fallback_cycles": 1565898,
+    "fallback_events": 776,
+    "mod3_rank_controls": 21304,
+    "normal_seconds": 61.603,
+    "normalized_events": 57735,
+    "optimized_bytes_identical": true,
+    "optimized_seconds": 62.241,
+    "source_rank": 120,
+    "one_collision_ranks": [119, 119, 119, 119, 119, 119, 119, 119, 119]
+  },
+  "python": "3.11.2",
+  "review_date_utc": "2026-09-14",
+  "reviewed_source_commit": "8a96fd3545bf35d6578cee34df69db2a4205cd68",
+  "status": "ACCEPT: exact-119 image exclusion and at-most-118 corollary; abstract source only, no physical graph or record advance",
+  "submitted_workflow_replay": {
+    "exact119_alternate_audit": "PASS",
+    "exact119_certificate_regenerated_byte_identically": true,
+    "exact119_controls": "PASS",
+    "exact119_normal_optimized_identical": true,
+    "finite_abelian_predecessor": "PASS",
+    "one_collision_certificate_regenerated_byte_identically": true,
+    "one_collision_normal_optimized_identical": true,
+    "target_certificate_sha256": "0c10098c25e19b05931abc6dfbe8449e5f295792fa0edfa19b738f29d2ffc8ac",
+    "target_mod2_fallback_equations": 1567802,
+    "target_mod2_fallback_events": 777,
+    "target_mod2_final_ranks": [118]
+  },
+  "tools": {
+    "cadical_binary_sha256": "19dc7cc71b68d938e707eb0fab422470005616c68afddb0b9b52481e07efa049",
+    "drat_trim_binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+    "kissat_binary_sha256": "8664d542108e494c8aebc90e762d7e719c63b556506a65f0c6ff7c9c6bc5c15b"
+  }
+}
