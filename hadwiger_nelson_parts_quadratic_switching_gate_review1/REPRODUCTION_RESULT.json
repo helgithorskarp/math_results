@@ -1,0 +1,66 @@
+{
+  "base_non_four_cross_check": {
+    "cadical_1_9_5": {
+      "checker_seconds": 214.228,
+      "proof_bytes": 145191085,
+      "proof_sha256": "e720402393d1e3688dea8a0823f679c810f4b89d6060a8feac594d17b23ae3a4",
+      "solver_returncode": 20,
+      "solver_seconds": 211.844,
+      "verdict": "drat-trim s VERIFIED"
+    },
+    "cnf_bytes": 173821,
+    "cnf_clauses": 13331,
+    "cnf_encoding": "exactly one of four colours; pairwise at-most-one; no symmetry breaking",
+    "cnf_semantics_controls": 33297,
+    "cnf_sha256": "78d6c72b530a099282d7fd48ca65d01e522df5cadfc97b41f0bf29d30ae1cf59",
+    "cnf_variables": 2036,
+    "kissat_4_0_4": {
+      "checker_seconds": 215.973,
+      "proof_bytes": 199526508,
+      "proof_sha256": "27cbe72d19cdc39e3db9c0a538cacc5b4216d97b1b441a4e0660f95022f213b6",
+      "seed": 260914,
+      "solver_returncode": 20,
+      "solver_seconds": 225.885,
+      "verdict": "drat-trim s VERIFIED"
+    }
+  },
+  "independent_retraction_audit": {
+    "base_edge_sha256": "5a95127767cb370f25f5865f057cab9b4a7ee9a72e2f73ad126ae390d71d487c",
+    "complete_pair_checks": 207046,
+    "host_edge_sha256": "98bc2c0d94fa2a2680306b8b38f51ad475498f8b55d2e2d1a589d91eb73c5336",
+    "host_edges": 3024,
+    "host_point_sha256": "da44a0501e29c6f7d77ace280ff362e56ddbfcfb9115665a0cbcd0965444273f",
+    "host_points": 644,
+    "lifted_word_edge_checks": 1533168,
+    "mixed_pair_checks": 18225,
+    "mixed_unit_edges": 0,
+    "normal_seconds": 4.671,
+    "optimized_bytes_identical": true,
+    "optimized_seconds": 4.746,
+    "projection_failures": 0,
+    "tower_product_controls": 64
+  },
+  "python": "3.11.2",
+  "review_date_utc": "2026-09-14",
+  "reviewed_final_package_commit": "ecdc953f1555506db58f61e0093c163a555db269",
+  "reviewed_logic_commit": "0f10691903ccbad754fda1c74c3e7304090c101d",
+  "source_bridge": {
+    "base_deletion_words_checked": 509,
+    "base_word_edge_checks": 1238094,
+    "criticality_source_commit": "800daa63e087e01fe57e1eac55c10c08e6b1820b",
+    "points_tsv_matches_parts509_vtx": true,
+    "upstream_criticality_verifier": "PASS",
+    "upstream_exact_unit_edges": 2442
+  },
+  "status": "ACCEPT: every at-most-508 subgraph of the exact 644-point host is four-colourable; minimum five-chromatic order within this host is 509; restricted host only",
+  "submitted_workflow_replay": {
+    "normal_optimized_identical": true,
+    "sha256_manifest": "PASS",
+    "status": "QUADRATIC SWITCHING HOST CLOSED THROUGH508 BY EXACT COLOURING RETRACTION"
+  },
+  "tools": {
+    "cadical_binary_sha256": "76eb1ad64c7a3fdb9eca46d21e7c020f2cb7052cad61a53ea8da827f2d7591ed",
+    "drat_trim_binary_sha256": "91175748b13d618f59e1f62f0ec37a4d5fe07ff15735ab98ea36f97e36930c05",
+    "kissat_binary_sha256": "8664d542108e494c8aebc90e762d7e719c63b556506a65f0c6ff7c9c6bc5c15b"
+  }
+}
