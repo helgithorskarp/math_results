@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "reviewed_at_utc": "2026-09-14T00:38:00Z",
+  "environment": {
+    "python": "CPython 3.11.2",
+    "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "kernel": "Linux 6.1.0-52-cloud-amd64 x86_64"
+  },
+  "target_replay": {
+    "normal_seconds": 38.516055565094575,
+    "normal_stdout_sha256": "69555ce8c61942a6c02779360398861efd7757635db3d9f4a1aeefbdbb463a8d",
+    "ubsan_seconds": 41.71155680704396,
+    "ubsan_stdout_sha256": "a07a5b0162e22480739b20dbfc1bc3384382e2c6c296be1eccc2d0897dc32393",
+    "normal_and_ubsan_stable_fields_equal": true,
+    "target_controls": {
+      "random_graphs": 12,
+      "qualified_connected_sets": 672,
+      "cover_instances": 80,
+      "feasible_cover_instances": 71,
+      "invalid_words_rejected": 4
+    }
+  },
+  "full_target_esu_replay": {
+    "connected_five_visits": 8945216,
+    "qualified_connected_five_sets": 1856054,
+    "uncovered_connected_five_sets": 0,
+    "triple_inventory_sorted_sha256": "c8081254694c6f754fe294fad2d103705328f5b8bbb4c071ef388f4f04118ead",
+    "quadruple_inventory_sorted_sha256": "7c731485af02a41857264a1eb6a2f89d6984add1c5f0673ca474ca1f2fe2dbfd",
+    "inventories_equal_to_spanning_tree_outputs_after_sort": true,
+    "stdout_sha256": "426482bea91dd39fc3e2acc5e60c11a0c3f8b1fe9803f191e1ca8c560da336a6"
+  },
+  "independent_replay": {
+    "stable_output": "EXPECTED.json",
+    "seconds": 181.3375168030616,
+    "maximum_rss_kib": 437236,
+    "all_pairs": 7677321,
+    "host_edges": 29125,
+    "connected_five_sets": 1856054,
+    "connected_five_inventory_sha256": "8c62016047b1750485d31a6ec757a4b67db2ddf27ec4197f00b924e179e60f6e",
+    "triple_completion_candidate_masks": 264431623,
+    "weighted_cover_feasible": false
+  },
+  "independent_controls": {
+    "random_graphs": 10,
+    "qualified_connected_sets": 21,
+    "cover_instances": 80,
+    "feasible_cover_instances": 72,
+    "infeasible_cover_instances": 8,
+    "bad_completion_rejected": 1,
+    "semantic_certificate_corruptions_rejected": 3
+  },
+  "record_calibration": {
+    "unrestricted_published_record": "Parts, 509 vertices and 2442 edges, arXiv:2010.12665",
+    "restricted_comparison": "Haugland, 2131 vertices, Moser-spindle-free, arXiv:2608.04542",
+    "checked_utc_date": "2026-09-14"
+  },
+  "prepublication_repository_refresh": {
+    "remote_tip": "e0c61f025c162373087218646fe4c6efdb3e6173",
+    "new_native_six_point_claim": "c418ae6; author-side exact restricted-family exclusion, not reviewed here",
+    "new_paired_golomb_claim": "e0c61f0; author-side exact restricted-family exclusion, not reviewed here",
+    "sub_509_five_chromatic_construction_found": false
+  },
+  "discovery_net": {
+    "indexed_height": 4363,
+    "node_height": 4364,
+    "node_last_block_time": "2026-09-11T02:40:58.067131057Z",
+    "target_ref": "bafkreibmed5sri762gbh2bjt7nshkii5zt6tiq5n2dkujaxlq2m2p6lq3e",
+    "target_committed": false,
+    "target_status": "broadcast pending; absent from stale committed ledger; do not resubmit"
+  }
+}
