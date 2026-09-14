@@ -1,0 +1,62 @@
+{
+  "audit": {
+    "all_pairs": 55,
+    "different_colour_pairs": 55,
+    "edge_sha256": "4893ac251d13a31c1428f541535d3891d275072bd0e78707d6d66ad6e198f82d",
+    "extension_multiplicity_sha256": "475b57f7a17b648e1d98ed3e636b49a6cfced1dd189f7ece4fd437445c762853",
+    "full_four_colour_words": 6144,
+    "interior_four_colour_words": 384,
+    "interior_three_colour_words": 0,
+    "labelled_relation_sha256": "ff4ab8251daac2b12c32592459a5623de89b655a5fd417ab576dd2d6319a30f2",
+    "labelled_terminal_patterns": 240,
+    "points": 11,
+    "same_colour_nonunit_pairs": 36,
+    "status": "PRIMITIVE-ELEMENT AND INTERIOR-FIRST AUDIT PASS",
+    "strict_unit_edges": 19
+  },
+  "controls": {
+    "count": 8,
+    "rejected": [
+      "missing_positive_pattern",
+      "duplicate_positive_pattern",
+      "improper_full_word",
+      "missing_interior_deletion",
+      "wrong_deleted_vertex",
+      "improper_deletion_word",
+      "missing_failed_formula_pattern",
+      "physical_point_collision"
+    ],
+    "status": "CORRUPTION CONTROLS PASS"
+  },
+  "verify": {
+    "all_pairs": 55,
+    "canonical_allowed": 13,
+    "canonical_forbidden": [
+      "0000",
+      "0011"
+    ],
+    "chromatic_number": 4,
+    "distance_sha256": "12cb0e06a7d32839f9fdd0408320b604369d42795dcbb25f9c561f68e2ec8ad9",
+    "edge_sha256": "4893ac251d13a31c1428f541535d3891d275072bd0e78707d6d66ad6e198f82d",
+    "failed_formula_allowed_patterns": 15,
+    "failed_formula_points_edges": [
+      11,
+      18
+    ],
+    "labelled_allowed": 240,
+    "labelled_forbidden": 16,
+    "labelled_relation_sha256": "ff4ab8251daac2b12c32592459a5623de89b655a5fd417ab576dd2d6319a30f2",
+    "marked_pair_squared_lengths": [
+      7,
+      7
+    ],
+    "neutral_interior_vertex_deletions": 7,
+    "neutral_three_terminal_projections": 4,
+    "point_sha256": "edc736f3ce3051a092257fb2273b8a2cc396ea6610acd52966f79c9ddd1e5c7a",
+    "points": 11,
+    "qualifying_capped_composition": false,
+    "record_improvement": false,
+    "status": "EXACT FOUR-TERMINAL RELATION VERIFIED",
+    "strict_unit_edges": 19
+  }
+}
