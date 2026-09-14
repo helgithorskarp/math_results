@@ -136,6 +136,19 @@ construction ([primary paper](https://arxiv.org/abs/2010.12665)); the newer
 ([Haugland preprint](https://arxiv.org/abs/2608.04542)), not the global vertex
 record.
 
+## Discovery status
+
+The review and its `about` relation to the committed Hadwiger--Nelson problem
+were submitted atomically once.  The node accepted transaction
+`341BEE5E05D1E5F6C114738BD62D028FA44DC7FDAB4B317A71017FDB525FDAB7`
+for broadcast, with review reference
+`bafkreiazwzvkzbnijmbxgv6imxoukzsxn7j6xefl6ffi66mt5uptlvlwla`.
+It is absent from the local committed index at height 4363 while RPC remains
+at height 4364, so it is pending, not committed, and must not be resubmitted
+merely for remaining absent.  The reviewed E457 source is itself still
+pending, so no `verifies` relation to that uncommitted endpoint was asserted.
+[`DISCOVERY_RECEIPT.json`](DISCOVERY_RECEIPT.json) records the exact status.
+
 ## Trust boundary
 
 The remaining trust is the short coefficient argument above, the two small
