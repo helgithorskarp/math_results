@@ -1,0 +1,86 @@
+{
+  "validated_at_utc": "2026-09-14T10:19:55Z",
+  "status": "PASS",
+  "verdict": "ACCEPT with high confidence for the exact restricted-family theorem",
+  "python": "3.11.2",
+  "dependencies": "Python standard library plus the pinned clean-room P36 review source in this repository",
+  "execution": {
+    "deterministic": true,
+    "random_seed": null,
+    "external_input": null,
+    "threads_per_process": 1,
+    "final_replays_run_concurrently": true,
+    "independent_normal_frozen_replay": {
+      "command": "python3 -B independent_check.py --check-expected",
+      "status": "PASS",
+      "wall_seconds": 923.039,
+      "max_rss_kib": 1135152
+    },
+    "independent_optimized_frozen_replay": {
+      "command": "python3 -O -B independent_check.py --check-expected",
+      "status": "PASS",
+      "wall_seconds": 925.615,
+      "max_rss_kib": 1142688
+    },
+    "review_controls": {
+      "command": "python3 -B controls.py",
+      "status": "PASS",
+      "wall_seconds": 8.919,
+      "max_rss_kib": 27508
+    }
+  },
+  "target_replay": {
+    "sha256_manifest": "PASS",
+    "normal_frozen_output": "PASS",
+    "optimized_frozen_output": "PASS",
+    "target_controls": "PASS",
+    "normal_and_optimized_outputs_equal": true,
+    "target_author_reported_normal_wall_seconds": 882.592
+  },
+  "independent_exact_census": {
+    "patch_vertices": 535,
+    "patch_edges": 1518,
+    "primitive_contact_lines": 4788,
+    "event_phases": 6054,
+    "event_classes_mod_units": 1009,
+    "coincidence_phases": 246,
+    "normalized_active_triangles": 4449,
+    "inconsistent_triangles": 0,
+    "two_edge_products": 1015056,
+    "distinct_constrained_targets": 140656,
+    "opposite_parity_target_channels": 0,
+    "missing_inverse_phases": 0,
+    "inverse_constraint_mismatches": 0
+  },
+  "translation_bridge": {
+    "p36_points": 127,
+    "p37_points": 139,
+    "p147_points": 535,
+    "p148_points": 547,
+    "p36_difference_hull_points": 469,
+    "p36_difference_hull_maximum_norm": 144,
+    "p36_difference_hull_contained_in_p147": true,
+    "p36_reflection_invariant": true,
+    "maximum_common_point_p36_union_vertices": 505
+  },
+  "controls": {
+    "p36_event_phases": 594,
+    "p36_event_classes_mod_units": 99,
+    "p36_active_triangles": 186,
+    "p36_two_edge_products": 9506,
+    "explicit_p36_four_cycle_reference": 8100,
+    "odd_triangle_rejected": true,
+    "odd_square_rejected": true,
+    "corrupted_endpoint_bucket_rejected": true
+  },
+  "commitments": {
+    "clean_room_dependency_sha256": "9ec7fe896e1c2197da0788d00ee033dae81348172ce26e449599cd8d2798644d",
+    "inventory_sha256": "eb56210013f2d8e777b50a164ea774c6756da01658b83c8101f3ba9af01f23da",
+    "triangle_census_sha256": "66fe9d7754ed5cb87de728577be27d10c9d521c49aba7c8d5db829740e6ebbf4",
+    "two_edge_path_census_sha256": "68a570b0073f76b80a6ea7e3a82a39fe4737f71fa00ee4a929020801c6bcfac0",
+    "review_endpoint_label_buckets_sha256": "759512f22f079119799fd5681839703642a9cc34b92add19219a7600440deede"
+  },
+  "trust_boundary": "written finite-event, unit-gauge, and shortest-cycle reductions; the target and clean-room exact implementations; CPython; SHA-256; not proof-assistant formalized",
+  "record_improvement": false,
+  "global_vertex_lower_bound": false
+}
