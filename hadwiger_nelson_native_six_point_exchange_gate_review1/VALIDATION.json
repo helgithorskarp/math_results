@@ -1,0 +1,56 @@
+{
+  "independent_replay": {
+    "status": "PASS",
+    "seconds": 195.9740444390336,
+    "expected_output_match": true,
+    "imports_target_code": false,
+    "geometry_pairs": 7677321,
+    "partial_word_edge_checks": 3681762,
+    "connected_six_qualified_tree_maps": 121531980,
+    "connected_six_uncovered_tree_maps": 0,
+    "triple_small_residuals": 13,
+    "weighted_cover_feasible": false
+  },
+  "independent_controls": {
+    "status": "PASS",
+    "python_weighted_bruteforce_cases": 100,
+    "python_weighted_feasible": 90,
+    "python_weighted_infeasible": 10,
+    "bit_column_queries": 2000,
+    "compiled_weighted_ubsan_cases": 40,
+    "connected_labelled_six_vertex_graphs": 26704,
+    "tree_template_misses": 0,
+    "sanitized_k6_tree_rows": 6
+  },
+  "target_normal_compare_esu": {
+    "status": "PASS",
+    "seconds": 156.09763755998574,
+    "distinct_qualified_connected_six_sets": 21289412,
+    "uncovered": 0
+  },
+  "target_optimized": {
+    "status": "PASS",
+    "seconds": 116.86515126307495
+  },
+  "target_small_entry_comparison": {
+    "status": "PASS",
+    "triple_entries_equal": true,
+    "quadruple_entries_equal": true,
+    "quintuple_entries_equal": true
+  },
+  "target_sanitized_controls": {
+    "status": "PASS",
+    "graph_cases": 20,
+    "positive_uncovered_sets": 398,
+    "weighted_cover_cases": 90,
+    "positive_cover_cases": 74,
+    "rejected_malformed_words": 4
+  },
+  "target_rotation_pilot": {
+    "status": "ALTERNATIVE HOST IS FOUR-COLOURABLE",
+    "vertices": 3919,
+    "edges": 29096,
+    "point_sha256": "fcf178a8cae7cb7d80deff60b60caef6877bacf88a2e724f6c09a71aafbe7305",
+    "edge_sha256": "f00a6575a5daddaf8d0ce9da75a3270c7d5452198684664252fbaabef5b479cd"
+  }
+}

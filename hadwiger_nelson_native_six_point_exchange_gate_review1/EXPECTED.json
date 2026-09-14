@@ -1,0 +1,145 @@
+{
+  "status": "INDEPENDENT NATIVE SIX-POINT EXCHANGE-GATE CHECK PASSED",
+  "target_commit": "c418ae6bacc76c2f48ee4daa051273651ee898f3",
+  "python": "CPython 3.11.2",
+  "geometry": {
+    "vertices": 3919,
+    "strict_unit_edges": 29125,
+    "finite_field_sieve_survivors": 29125,
+    "all_pairs": 7677321,
+    "field": "Q(sqrt(3),sqrt(5),sqrt(11))",
+    "imports_target_code": false
+  },
+  "fixed_vertices": 503,
+  "free_vertices": 3416,
+  "initial_partial_colourings": 126,
+  "additional_partial_colourings": 40,
+  "retained_edge_checks": 3681762,
+  "omission_inventory_sha256": "b6411520399bcab24e81293e12130166c6b7d77576cd92bbf418496c10f5e61d",
+  "high_singletons": 585,
+  "qualified_free_edges": 2549,
+  "low_involving_pair_atoms": 1238,
+  "canonical_connected_growth": {
+    "1": {
+      "viable": 3416
+    },
+    "2": {
+      "candidate_attempts": 41158,
+      "viable": 20579,
+      "degree_qualified": 2549,
+      "inventory_sha256": "8fa2a172263d1ee228b5fbfea34242d9341d99962200784288d47b3a25437bbc"
+    },
+    "3": {
+      "candidate_attempts": 507222,
+      "viable": 147827,
+      "degree_qualified": 18965,
+      "inventory_sha256": "00933c09a528fb139c1e5bbfe62ffdc6c8d0bb36dd43c83134c14a3c96431936"
+    },
+    "4": {
+      "candidate_attempts": 5402209,
+      "viable": 592780,
+      "degree_qualified": 175654,
+      "inventory_sha256": "b09a877446a68e48c21d08bd2fab5f7ddeb6400d9851092b11a489b7d9c9841a"
+    },
+    "5": {
+      "candidate_attempts": 24832684,
+      "viable": 1856054,
+      "degree_qualified": 1856054,
+      "inventory_sha256": "8c62016047b1750485d31a6ec757a4b67db2ddf27ec4197f00b924e179e60f6e"
+    }
+  },
+  "tree_template_control": {
+    "connected_labelled_graphs": 26704,
+    "relabelled_template_counts": [
+      6,
+      360,
+      120,
+      90,
+      360,
+      360
+    ],
+    "missed": 0
+  },
+  "unquotiented_connected_six_rows": [
+    [
+      0,
+      12968400,
+      12968400,
+      0
+    ],
+    [
+      1,
+      27750742,
+      27750742,
+      0
+    ],
+    [
+      2,
+      17013870,
+      17013870,
+      0
+    ],
+    [
+      3,
+      18664008,
+      18664008,
+      0
+    ],
+    [
+      4,
+      22437512,
+      22437512,
+      0
+    ],
+    [
+      5,
+      22697448,
+      22697448,
+      0
+    ]
+  ],
+  "component_joins": {
+    "5_plus_1": {
+      "large_groups": 1856054,
+      "completion_items": 585,
+      "unique_nonzero_completion_masks": 568,
+      "queries": 1856054,
+      "covering_completions": 0
+    },
+    "4_plus_2": {
+      "large_groups": 175654,
+      "completion_items": 172058,
+      "unique_nonzero_completion_masks": 157916,
+      "queries": 175654,
+      "covering_completions": 0
+    },
+    "3_plus_3": {
+      "large_groups": 18965,
+      "completion_items": 18965,
+      "unique_nonzero_completion_masks": 18642,
+      "queries": 18965,
+      "covering_completions": 0
+    }
+  },
+  "triple_plus_small": {
+    "triples": 18965,
+    "branch_atoms": 2592835,
+    "covering_completion_tests": 13,
+    "distinct_initial_survivors": 13
+  },
+  "positive_cases": 13,
+  "positive_case_edge_checks": 31661,
+  "weighted_cover_feasible": false,
+  "weighted_cover": {
+    "original_singleton_masks": 585,
+    "original_pair_masks": 1238,
+    "maximal_singleton_masks": 494,
+    "maximal_undominated_pair_masks": 1162,
+    "singleton_recursion_calls": 2282792822,
+    "singleton_failed_states": 2088655,
+    "singleton_cache_hits": 78778,
+    "pair_pair_cases": 674541,
+    "third_pair_candidates": 27165636
+  },
+  "corruptions_rejected": 3
+}
