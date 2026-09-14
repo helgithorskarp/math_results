@@ -1,0 +1,61 @@
+{
+  "checked_at_utc": "2026-09-14T04:08:25.401214+00:00",
+  "status": "PASS",
+  "independent_peer_review": false,
+  "formal_proof": false,
+  "versions": {
+    "Python": "CPython 3.11.2",
+    "NumPy": "2.4.6",
+    "compiler": "g++ 12.2.0",
+    "optional_producer": "python-sat 1.8.dev24 / CaDiCaL195"
+  },
+  "full_replays": [
+    {
+      "python_optimized": true,
+      "undefined_behaviour_sanitizer": true,
+      "seconds": 13.823431253433228,
+      "note": "Compiler indentation warnings corrected before second replay."
+    },
+    {
+      "python_optimized": false,
+      "undefined_behaviour_sanitizer": true,
+      "seconds": 13.862838983535767,
+      "compiler_and_runtime_stderr_bytes": 0,
+      "expected_census_match": true
+    }
+  ],
+  "regenerated_certificate_byte_identical": true,
+  "certificate_bytes": 40357,
+  "all_pair_geometry_basis": "Q(zeta5, alpha, beta), alpha^2=-3, beta^2=-11, denominator 96",
+  "producer_basis": "Q(zeta15, eta), 3 eta^2-5 eta+3=0",
+  "modular_filter_used_by_alternate_checker": false,
+  "negative_SAT_claims": 0,
+  "result": {
+    "host_vertices": 1801,
+    "host_edges": 7170,
+    "host_edge_sha256": "aa017c602023b41966d19af547fa361c41394ff93f8c688b7ae369b24f5fd166",
+    "unit_directions": 90,
+    "target_members": 252,
+    "target_order": 451,
+    "target_edge_histogram": {
+      "1650": 20,
+      "1668": 130,
+      "1686": 100,
+      "1740": 2
+    },
+    "host_moser_patterns": 16,
+    "dyadic_members": 16,
+    "dyadic_order": 451,
+    "dyadic_edges": 1740,
+    "dyadic_edge_sha256": "9f318b04b2c8f75d4c240a64c524503ce4ae83c30b6b83b97c1cfa654dc48624",
+    "dyadic_graphs_identical_under_pair_labels": true,
+    "dyadic_moser_pattern_checks": 256,
+    "all_pairs_checked": 3244500,
+    "edge_entries_compared": 35010,
+    "bad_controls_rejected": 7,
+    "certificate_sha256": "667cd21e6e97bed25540469c4b117c2d628bb11614cf7c801cfc4e58cf50acde",
+    "native_summary": "pairs=3244500 edges=35010",
+    "PASS": true
+  },
+  "trust": "Written reductions; independent author-side coordinate generation and ordinary arithmetic implementations; no external review claimed."
+}
