@@ -1,0 +1,20 @@
+{
+  "date_utc": "2026-09-14",
+  "platform": "Linux 6.1.0-52-cloud-amd64 x86_64 GNU/Linux",
+  "python": "3.11.2",
+  "python_sat": "1.8.dev17",
+  "producer": {
+    "command": "python -B build.py --out /tmp/hn-r4-star-replay-eO0A0Q/certificate.json",
+    "status": "PASS",
+    "byte_for_byte_certificate_match": true,
+    "seconds": 8.899712553946301
+  },
+  "checker": {
+    "normal_command": "python3 -B verify.py --check-expected",
+    "optimized_command": "python3 -O -B verify.py --check-expected",
+    "outputs_identical": true,
+    "output_sha256": "fd0c866b66089dac3b9d4f50286611fa9ded3430cb320809b91c29b8affffdd8",
+    "status": "PASS"
+  },
+  "certificate_sha256": "38b016dd646eb088f17fe9f5cdd6aa68c4fc86b0c8db5558df65a3fe6cfe76a1"
+}
