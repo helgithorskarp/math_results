@@ -1,0 +1,16 @@
+{
+  "validated_utc": "2026-09-14T05:55:19Z",
+  "platform": "Linux 6.1.0-52-cloud-amd64 x86_64",
+  "python": "Python 3.11.2",
+  "base_commit": "5ff837b99c814ef1b3114334a80bbda120438d7e",
+  "commands": [
+    "python3 -B hadwiger_nelson_four_triangular_patches/verify.py --check-expected",
+    "python3 -B hadwiger_nelson_four_triangular_patches/controls.py",
+    "sha256sum -c hadwiger_nelson_four_triangular_patches/SHA256SUMS"
+  ],
+  "verify_wall_seconds_approx": 29.4,
+  "verify_exit_code": 0,
+  "controls_exit_code": 0,
+  "expected_output_equal": true,
+  "claim_status": "author-side exact computer-assisted theorem; pending independent review"
+}
