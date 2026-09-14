@@ -1,0 +1,82 @@
+{
+  "author_checks_only": true,
+  "cross_check": {
+    "all_3024_edges_match": true,
+    "baseline_scale": 288,
+    "checker_scale": 96,
+    "different_label_orders": true,
+    "distinct_coordinate_sets_match": true
+  },
+  "external_review": false,
+  "native_solver_used": false,
+  "normal_optimized_identical": true,
+  "python": "3.11.2",
+  "runs": [
+    {
+      "mode": "normal",
+      "result": {
+        "facts": {
+          "all_at_most_508_subgraphs_four_colourable": true,
+          "base_deletion_words": 509,
+          "base_word_edge_checks": 1238094,
+          "basis_product_controls": 64,
+          "complete_pair_checks": 207046,
+          "corruptions_rejected": 4,
+          "denominator": 96,
+          "distinct_host_points": 644,
+          "edge_sha256": "98bc2c0d94fa2a2680306b8b38f51ad475498f8b55d2e2d1a589d91eb73c5336",
+          "fixed_points": 374,
+          "lifted_word_edge_checks": 1533168,
+          "maximal_fibre_deletion_words": 509,
+          "mixed_pair_checks": 18225,
+          "mixed_unit_edges": 0,
+          "nonfixed_points": 135,
+          "original_edges": 2442,
+          "original_points": 509,
+          "point_sha256": "da44a0501e29c6f7d77ace280ff362e56ddbfcfb9115665a0cbcd0965444273f",
+          "projection_failures": 0,
+          "projection_sha256": "6bb8e75c8a6fed9fd24054dd56fe4bf34ee4637d649108837bf08bbe8810fb4f",
+          "proper_host_five_colouring": true,
+          "record_candidate": false,
+          "support_fixtures": 138,
+          "unit_edges": 3024
+        },
+        "status": "QUADRATIC SWITCHING HOST CLOSED THROUGH508 BY EXACT COLOURING RETRACTION"
+      },
+      "seconds": 5.079810910974629
+    },
+    {
+      "mode": "optimized",
+      "result": {
+        "facts": {
+          "all_at_most_508_subgraphs_four_colourable": true,
+          "base_deletion_words": 509,
+          "base_word_edge_checks": 1238094,
+          "basis_product_controls": 64,
+          "complete_pair_checks": 207046,
+          "corruptions_rejected": 4,
+          "denominator": 96,
+          "distinct_host_points": 644,
+          "edge_sha256": "98bc2c0d94fa2a2680306b8b38f51ad475498f8b55d2e2d1a589d91eb73c5336",
+          "fixed_points": 374,
+          "lifted_word_edge_checks": 1533168,
+          "maximal_fibre_deletion_words": 509,
+          "mixed_pair_checks": 18225,
+          "mixed_unit_edges": 0,
+          "nonfixed_points": 135,
+          "original_edges": 2442,
+          "original_points": 509,
+          "point_sha256": "da44a0501e29c6f7d77ace280ff362e56ddbfcfb9115665a0cbcd0965444273f",
+          "projection_failures": 0,
+          "projection_sha256": "6bb8e75c8a6fed9fd24054dd56fe4bf34ee4637d649108837bf08bbe8810fb4f",
+          "proper_host_five_colouring": true,
+          "record_candidate": false,
+          "support_fixtures": 138,
+          "unit_edges": 3024
+        },
+        "status": "QUADRATIC SWITCHING HOST CLOSED THROUGH508 BY EXACT COLOURING RETRACTION"
+      },
+      "seconds": 3.7495442549698055
+    }
+  ]
+}
