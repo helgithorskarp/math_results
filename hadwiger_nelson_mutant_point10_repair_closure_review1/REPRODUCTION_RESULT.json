@@ -1,0 +1,84 @@
+{
+  "review_date_utc": "2026-09-14",
+  "verdict": "ACCEPT_HIGH_CONFIDENCE_SCOPED",
+  "target_source_commit": "53065ba7c2cd481a3febaae34a2dd5f0863cd89d",
+  "parent_source_commit": "da761932c49900fe2bfe3ad90b9bdde49bc32577",
+  "source_replay": {
+    "sha256_manifest": "PASS",
+    "normal_verify": "PASS",
+    "optimized_verify": "PASS",
+    "normal_and_optimized_output_sha256": "92c431874af54059d3449595e72f4cb183d134c3b32f0677044678618b6058d7",
+    "audit": "PASS",
+    "audit_output_sha256": "d496c3ed3b63f00fcbb13219381ddf7c9f173aa061f18266b18b37d24b31155c",
+    "controls": "PASS",
+    "controls_output_sha256": "e5640b92f035d80c56a83f80bba0c40a6fb87625ef61c8040561d85d4ef20937"
+  },
+  "independent_geometry_and_positive_certificates": {
+    "normal": "PASS",
+    "optimized": "PASS",
+    "host_vertices": 510,
+    "host_edges": 2456,
+    "host_pair_checks": 129795,
+    "host_edge_sha256": "1e34a544293e9bc182dfcea9022937720068edc5b2a4a1e68223b73dc48aa54f",
+    "host_point_sha256": "448820940cce98420988702b45b33e6b7d0d40ad352c2e6b387386bac116380f",
+    "host_deletion_words_checked": 509,
+    "host_deletion_edge_checks": 1245201,
+    "parent_deletion_words_checked": 509,
+    "parent_deletion_edge_checks": 1240629,
+    "additional_parent_library_rows_checked": 506,
+    "additional_parent_library_edge_checks": 1233043,
+    "combined_parent_word_library_rows": 1015,
+    "new_target_rows": 3,
+    "expanded_host_words_sha256": "ed68e6ef9cb0d1da535f4d67368aa7c383f9aee18b243a969503e606849bac69",
+    "corrupt_words_rejected": 1
+  },
+  "canonical_parent_lower_bound": {
+    "cnf_variables": 2036,
+    "cnf_clauses": 13354,
+    "cnf_sha256": "ba3c9cbcb8958c41282382abbc79a4c307acfa2ea6debb45d2ce15ec0a9058ce",
+    "kissat_result": "UNSAT",
+    "proof_bytes": 5917687,
+    "proof_sha256": "7ee8cb2ba37fcff08432f3665a559f5904f3f1e5e08a32230793195985912d65",
+    "matches_recorded_proof": true,
+    "drat_trim_result": "VERIFIED"
+  },
+  "independent_symmetry_free_parent_lower_bound": {
+    "encoding": "at_least_one_colour_per_vertex_and_edge_colour_disjointness_only",
+    "cnf_variables": 2036,
+    "cnf_clauses": 10297,
+    "cnf_bytes": 134597,
+    "cnf_sha256": "4b40b25b1dd695b123c8ce9ed99c97a3f609abfb52217eca3f5a7c4742b55114",
+    "kissat": {
+      "version": "4.0.4",
+      "commit": "8af8e56f174b778aef3aa45af9f739b2a5f492c2",
+      "binary_sha256": "9f17e47defc4f6fd27ecc5a25d51f0b8de4f81e795fbfd8087b3b8a075c30ca7",
+      "result": "UNSAT",
+      "wall_seconds": 217.597,
+      "proof_bytes": 194055334,
+      "proof_sha256": "19578b4b6fa64334159afd49bad4bd57c9f57bb517f8557138a884d14cc45029",
+      "drat_trim_result": "VERIFIED",
+      "drat_trim_wall_seconds": 177.496
+    },
+    "cadical": {
+      "version": "1.9.5",
+      "commit": "146207318796f094dcded87349a64f0c6927309e",
+      "binary_sha256": "76eb1ad64c7a3fdb9eca46d21e7c020f2cb7052cad61a53ea8da827f2d7591ed",
+      "seed": 260914,
+      "result": "UNSAT",
+      "wall_seconds": 266.788,
+      "proof_bytes": 170518970,
+      "proof_sha256": "6cf456434366c79f7d5fab9452181881a840bcf00186f7ac8782cf9426c1c22f",
+      "drat_trim_result": "VERIFIED",
+      "drat_trim_wall_seconds": 261.515
+    },
+    "drat_trim": {
+      "commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+      "binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+    }
+  },
+  "source_reproducibility_issue": {
+    "severity": "minor",
+    "detail": "The parent verifier's --kissat path unconditionally passes --quiet. The cited Kissat commit built with --no-options rejects that flag. Running Kissat directly and replaying via --proof succeeds."
+  },
+  "large_generated_artifacts_committed": false
+}
