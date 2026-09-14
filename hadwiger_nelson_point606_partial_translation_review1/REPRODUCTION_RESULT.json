@@ -1,0 +1,55 @@
+{
+  "verdict": "ACCEPT_HIGH_CONFIDENCE_SCOPED",
+  "reviewed_source_commit": "8b4a5d149d4d908530d9a3b0f8613446f627e36c",
+  "reviewed_claim": "Every identity-or-one-translation Boolean map of the frozen point606 530-point core that preserves every source unit edge is global, so every such image has 530 distinct points.",
+  "independent_checker": {
+    "python": "3.11.2",
+    "dependencies": "standard library only",
+    "imports_reviewed_code": false,
+    "normal_seconds": 3.29,
+    "optimized_seconds": 3.27,
+    "normal_optimized_output_equal": true,
+    "source_vertices": 530,
+    "source_points_distinct": true,
+    "complete_pair_checks": 140185,
+    "complete_unit_edges": 2648,
+    "unoriented_unit_directions": 36,
+    "zero_one_or_two_direction_deletion_tests": 667,
+    "direction_pair_deletion_tests": 630,
+    "all_tested_retained_graphs_connected": true,
+    "minimum_pair_retained_edges": 2330,
+    "maximum_pair_retained_edges": 2646,
+    "source_edge_sha256": "7116ca71d9b53598b931614a5c7f5406909f124555f0ecf231a4fc234b665faa",
+    "direction_partition_sha256": "1e5abe71c36df14445609bb60780e4e5f3a784509614c13994a4f10c991a0fc9",
+    "connectivity_trace_sha256": "9fa211fd11c8dfdaf7e61adc935c7686285700587afee2aff81536542cd11c72"
+  },
+  "author_replay": {
+    "package_sha256sum_check": "PASS",
+    "normal_verifier": "PASS",
+    "optimized_verifier": "PASS",
+    "same_author_exact_audit": "PASS",
+    "controls": "PASS",
+    "normal_seconds": 3.41,
+    "optimized_seconds": 3.60,
+    "audit_seconds": 3.27,
+    "controls_seconds": 0.04
+  },
+  "controls": {
+    "field_basis_products_checked": 64,
+    "diamond_boolean_assignments_checked": 16,
+    "diamond_edge_preserving_assignments": 4,
+    "diamond_three_point_contractions": 2,
+    "disconnected_graph_rejected": true,
+    "zero_direction_rejected": true
+  },
+  "scope": {
+    "exact_physical_realization_checked": true,
+    "chromatic_certificate_needed_for_the_reviewed_theorem": false,
+    "record_candidate": false,
+    "global_Hadwiger_Nelson_progress": false,
+    "lost_source_edges_covered": false,
+    "more_than_two_displacement_levels_covered": false,
+    "rotations_or_reflections_covered": false,
+    "prior_vertex_deletions_covered": false
+  }
+}
