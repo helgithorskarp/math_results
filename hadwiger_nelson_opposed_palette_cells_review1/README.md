@@ -27,7 +27,11 @@ The target Discovery contribution is
 `bafkreigunu5bg7kw25ku6qwa7yrmpvcspqtup7tiniizyx2l45ojwkxhvm`,
 “A sixteen-point physical palette coupler has 32 essential eight-terminal
 obstructions.”  It was accepted for broadcast once but was still absent from
-the stale committed ledger during this review.
+the stale committed ledger during this review.  The review contribution
+`bafkreifp74uzfozsk5ns5qzxjiai2jci64raox35vad7fekkmumg3ih6c4` was likewise
+accepted for broadcast once and remains pending.  Target-directed relations
+are deferred until both endpoints commit; neither contribution should be
+resubmitted merely because the ledger is stale.
 
 ## Mathematical audit
 
