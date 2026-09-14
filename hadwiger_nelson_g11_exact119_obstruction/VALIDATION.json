@@ -1,0 +1,63 @@
+{
+  "validated_utc": "2026-09-14T16:31:00Z",
+  "python": "CPython 3.11.2",
+  "platform": "Linux 6.1.0-52-cloud-amd64 x86_64",
+  "dependencies": "Python standard library only",
+  "exact_arithmetic": true,
+  "floating_point_used": false,
+  "randomness_used": false,
+  "parallelism_inside_programs": false,
+  "peak_memory_measured": false,
+  "commands": [
+    {
+      "command": "python3 -B hadwiger_nelson_g11_exact119_obstruction/produce.py",
+      "status": "PASS",
+      "wall_seconds": 25.041,
+      "certificate_sha256": "0c10098c25e19b05931abc6dfbe8449e5f295792fa0edfa19b738f29d2ffc8ac"
+    },
+    {
+      "command": "python3 -B hadwiger_nelson_g11_exact119_obstruction/verify.py --check-expected",
+      "status": "PASS",
+      "wall_seconds": 26.046
+    },
+    {
+      "command": "python3 -O -B hadwiger_nelson_g11_exact119_obstruction/verify.py --check-expected",
+      "status": "PASS",
+      "wall_seconds": 26.175
+    },
+    {
+      "command": "python3 -B hadwiger_nelson_g11_exact119_obstruction/audit.py --check-expected",
+      "status": "PASS",
+      "wall_seconds": 45.0,
+      "alternate_basis_fallbacks": 844
+    },
+    {
+      "command": "python3 -B hadwiger_nelson_g11_exact119_obstruction/controls.py",
+      "status": "PASS",
+      "wall_seconds": 25.814,
+      "malformed_certificates_rejected": 4,
+      "small_binary_rank_fixtures": 689
+    }
+  ],
+  "result": {
+    "source_vertices": 121,
+    "source_edges": 726,
+    "target_distinct_images": 119,
+    "normalized_events_checked": 57735,
+    "triple_normalizations": 864,
+    "two_pair_normalizations": 56871,
+    "five_colour_compatible_normalizations": 12627,
+    "primary_basis_fallbacks": 777,
+    "primary_fallback_equations": 1567802,
+    "alternate_basis_fallbacks": 844,
+    "all_final_ranks_mod_2": [118],
+    "exactly_119_images_excluded": true,
+    "physical_unit_distance_graph_produced": false,
+    "record_improvement": false
+  },
+  "dependency_sha256": {
+    "hadwiger_nelson_g11_one_collision/certificate.json": "37d740c4c31129870fa2020dd1e65d5eeb6a300a4e6cd403e265af16815ef14f",
+    "hadwiger_nelson_finite_abelian_lifts/q11_four_unsat.drat": "b54714d1acc3af2f1269aedcdf5bd2fdc6a899ef47037d6af8c8159c106e11b8",
+    "hadwiger_nelson_finite_abelian_lifts/q11_five_colouring.json": "7a12bf22cb3ebdaec2a40f8e321c59e4bac59095c83a533b881aa3c0a7aab444"
+  }
+}
