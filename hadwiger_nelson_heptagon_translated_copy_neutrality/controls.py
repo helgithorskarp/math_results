@@ -52,8 +52,16 @@ def brute_extension(order, edges, terminals, pattern):
 def main():
     primary_seed, primary_classes, _, primary_edges, _, _ = V.build_graph()
     audit_seed, audit_classes, _, audit_edges, _, _ = A.build_graph()
-    need(tuple(convert_scaled(point) for point in primary_seed) == audit_seed,
-         "seed basis conversion")
+    primary_moved = tuple(
+        V.add(primary_seed[0], V.mul(V.POWERS[-6 % 42], V.sub(point, primary_seed[0])))
+        for point in primary_seed
+    )
+    audit_moved = tuple(
+        A.add(audit_seed[0], A.mul(A.ZPOW[6], A.sub(point, audit_seed[0])))
+        for point in audit_seed
+    )
+    need(tuple(convert_scaled(point) for point in primary_seed + primary_moved)
+         == audit_seed + audit_moved, "formal-coordinate basis conversion")
     need(primary_classes == audit_classes, "collision classes disagree")
     need(primary_edges == audit_edges, "edge lists disagree")
 
