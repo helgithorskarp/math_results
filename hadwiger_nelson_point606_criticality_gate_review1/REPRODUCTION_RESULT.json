@@ -1,0 +1,60 @@
+{
+  "alternative_encoding": {
+    "clauses": 14302,
+    "cnf_bytes": 186846,
+    "cnf_sha256": "1f82ca98fb1fa37caa70c955b053df309e972edd4ca5638d13b04206803b3b44",
+    "description": "exactly one of four colours per vertex using pairwise exclusions; four same-colour exclusions per edge; no symmetry breaking",
+    "small_assignment_controls": 33297,
+    "variables": 2120
+  },
+  "alternative_proofs": {
+    "cadical_1_9_5": {
+      "checker_seconds": 61.893,
+      "proof_bytes": 62414368,
+      "proof_sha256": "3af994c7f39b32be367724c1e04aaf9f10fdc5806d64f2402c47328c8bf346d9",
+      "solver_returncode": 20,
+      "solver_seconds": 70.909,
+      "verdict": "drat-trim s VERIFIED"
+    },
+    "kissat_4_0_4": {
+      "checker_seconds": 67.873,
+      "proof_bytes": 61970993,
+      "proof_sha256": "31f7f4c60224833cf3522a21d1a872c1b6ee376249a7fff6eeba40e93f994082",
+      "seed": 260914,
+      "solver_returncode": 20,
+      "solver_seconds": 65.789,
+      "verdict": "drat-trim s VERIFIED"
+    }
+  },
+  "exact_checks": {
+    "colouring_corruptions_rejected": 4,
+    "core_points": 530,
+    "core_unit_edges": 2648,
+    "denominator": 288,
+    "five_colouring_edge_checks": 2648,
+    "host_pair_distances": 171405,
+    "host_points": 586,
+    "host_unit_edges": 3090,
+    "q606_neighbours": [37, 51, 69, 142, 180, 198, 530],
+    "vertex_deletion_edge_checks": 1398144,
+    "vertex_deletion_words": 530
+  },
+  "original_encoding_replay": {
+    "checker_seconds": 1.1212768880650401,
+    "cnf_bytes": 145663,
+    "cnf_sha256": "a4d45411df483f11b0b1cbc5e16d0af2ecf2e3221d4924112d71a85031b54f3e",
+    "proof_bytes": 2058905,
+    "proof_sha256": "56115ffad4dca3064345f0164dedc029d1f87732bad40faa9033d0f366585dd8",
+    "solver_seconds": 1.712899389094673,
+    "verdict": "drat-trim s VERIFIED; byte-identical to target manifest"
+  },
+  "python": "3.11.2",
+  "review_date_utc": "2026-09-14",
+  "reviewed_source_commit": "e9d715e5be1defc32ef6bd87b7f0381220f03055",
+  "status": "ACCEPT: 530-point strict plane unit-distance graph is 5-vertex-critical; not a record or cap result",
+  "tools": {
+    "cadical_binary_sha256": "19dc7cc71b68d938e707eb0fab422470005616c68afddb0b9b52481e07efa049",
+    "drat_trim_binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+    "kissat_binary_sha256": "8664d542108e494c8aebc90e762d7e719c63b556506a65f0c6ff7c9c6bc5c15b"
+  }
+}
