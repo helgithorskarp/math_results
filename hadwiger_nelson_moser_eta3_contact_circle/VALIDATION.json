@@ -1,0 +1,30 @@
+{
+  "date_utc": "2026-09-14",
+  "status": "author-side exact replay passed; independent review pending",
+  "environment": {
+    "python": "3.11.2",
+    "compiler": "g++ 12.2.0",
+    "certificate_generator": "python-sat 1.9.dev15 / CaDiCaL 1.9.5"
+  },
+  "commands": [
+    "g++ -std=c++17 -O3 -shared -fPIC ../hadwiger_nelson_independent_moser_sum_collisions/geometry.cpp -o /tmp/hn-moser-eta3-circle.so",
+    "python3 verify.py --library /tmp/hn-moser-eta3-circle.so > /tmp/hn-moser-eta3-circle.json",
+    "cmp expected.json /tmp/hn-moser-eta3-circle.json",
+    "python make_certificate.py --output /tmp/eta3-certificate.json",
+    "cmp certificate.json /tmp/eta3-certificate.json"
+  ],
+  "observed": {
+    "full_verify_elapsed_seconds_approx": 49,
+    "certificate_regeneration_elapsed_seconds_approx": 13,
+    "exceptional_quadratics": 922,
+    "physical_roots": 1844,
+    "certificate_words": 80,
+    "audited_unordered_pairs": 108156132,
+    "certificate_reproduction_identical": true,
+    "expected_output_identical": true,
+    "floating_point_geometry_used": false
+  },
+  "dependency": "../hadwiger_nelson_independent_moser_sum_collisions",
+  "claim_scope": "fixed first phases eta^3 and eta^-3; arbitrary unit second phase v; restricted-family exclusion only",
+  "record_improvement": false
+}
