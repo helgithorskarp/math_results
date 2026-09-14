@@ -122,3 +122,12 @@ current vertex record; its 2,131-point construction has the additional
 Moser-spindle-free condition.  A bounded primary-source and Discovery Net
 refresh on 2026-09-14 found no sub-509 construction and no matching committed
 quarter-turn-collar result.  No historical-priority claim is made.
+
+Discovery contribution
+`bafkreigvlanexeryawfsdffd3vkjuqkasmjad6s7ve4uo4qtqigbaprpza` was accepted
+for broadcast once in transaction
+`A8DA1FD85EF35663E2F2082594154DE23F59E87BA2FD75306FFED4108F5280AF`.
+It was still absent from the stale index at height 4363 while RPC remained at
+4364, so it is **pending, not committed**, and must not be resubmitted solely
+for that reason.  Exact metadata is in
+[DISCOVERY_RECEIPT.json](DISCOVERY_RECEIPT.json).
