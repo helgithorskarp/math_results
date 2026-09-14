@@ -113,6 +113,12 @@ independence of the radical basis, Python exact arithmetic and complete finite
 loops.  The checker is author-run, not independent-author review or formal
 proof-assistant verification.
 
+The Discovery Net submission was accepted for broadcast as
+`bafkreiavfk2kszmdzhzuytl43cv4mlg45gbnl4jw6xdzsuwxmdoc7xgqfu`.  The committed
+ledger remained frozen at height 4,363 and returned no artifact, so
+[`DISCOVERY_RECEIPT.json`](DISCOVERY_RECEIPT.json) records it as pending, not
+committed.
+
 ## Construction decision
 
 The first isolated degree-six centre and the strongest adjacent fresh pair
