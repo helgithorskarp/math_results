@@ -1,0 +1,31 @@
+{
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "checks": [
+    {
+      "check": "normal",
+      "seconds": 0.1752,
+      "output_sha256": "e5450bc62182a18971581f1ff7adac5b3444bb86af03109dee4dd4bec6dbadd5"
+    },
+    {
+      "check": "optimized",
+      "seconds": 0.3094,
+      "output_sha256": "e5450bc62182a18971581f1ff7adac5b3444bb86af03109dee4dd4bec6dbadd5"
+    },
+    {
+      "check": "controls",
+      "seconds": 1.2504,
+      "output_sha256": "32d2d2ef13ce42340eb9b994e2246930611cc2504a68077c58ae44bf8adfa3bf"
+    }
+  ],
+  "normal_optimized_identical": true,
+  "certificate_bytes": 273,
+  "certificate_sha256": "f0ddaf5bd3dd15da539fbbac8f00f5aebaa8b2c9c0333cb68648a66432169d98",
+  "controls": {
+    "status": "CONTROLS_PASS",
+    "independent_norm_vectors": 101025,
+    "independent_fold_assignments": 16,
+    "positive_collision_control": true,
+    "rejected_corruptions": 4
+  },
+  "trust_boundary": "Exact integer arithmetic, radical independence and elementary reflection/collision geometry. Parent fixture hash-pinned; no parent code or solver imported. Author verification, no independent review."
+}
