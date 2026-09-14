@@ -1,0 +1,30 @@
+{
+  "validated_at_utc": "2026-09-14T06:37:01Z",
+  "verdict": "ACCEPT with high confidence for the exact fixed-support claim",
+  "target_commit": "5ff837b99c814ef1b3114334a80bbda120438d7e",
+  "target_replay": {
+    "normal_status": "PASS",
+    "normal_seconds": 15.789,
+    "optimized_status": "PASS",
+    "optimized_seconds": 15.929,
+    "controls_status": "PASS",
+    "controls_seconds": 61.353,
+    "malformed_controls_rejected": 4,
+    "manifest_status": "PASS"
+  },
+  "independent_replay": {
+    "status": "PASS",
+    "normal_seconds": 83.349,
+    "optimized_status": "PASS",
+    "optimized_seconds": 85.365,
+    "python": "3.11.2",
+    "dependencies": "standard library only",
+    "physical_pairs_checked": 131841,
+    "two_metric_agreements": 131841,
+    "singleton_colourings_checked": 510,
+    "edge_inequalities_checked": 1282725,
+    "malformed_controls_rejected": 3
+  },
+  "record_improvement": false,
+  "formal_proof": false
+}
