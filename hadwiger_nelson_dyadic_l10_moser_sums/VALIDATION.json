@@ -1,0 +1,71 @@
+{
+  "controls": {
+    "invalid_pins_rejected": 2,
+    "malformed_certificates_rejected": 9,
+    "padding_rejected": true,
+    "positive_pin_regression": true,
+    "rational_norm_false_positive_rejected": true,
+    "verified": true
+  },
+  "exact_checks": {
+    "all_unordered_pairs": 2803584,
+    "cartesian_edges": 2188,
+    "certificate_sha256": "9d57a28605392957fc7e788f40c062609bae4a3158e34b73cc9fd7208481d958",
+    "checked_edge_inequalities": 12994800,
+    "edge_histogram": {
+      "2202": 12,
+      "2216": 16
+    },
+    "edge_inventory_sha256": "d779bfab0cfcc89587131438ad8d8c475a28c892335eae98c27b939fc8dc81a3",
+    "pattern_phase_pairs": 5880,
+    "phase_sha256": "5731aa4b0f9f45d71fee6a70b675167362b3906c439822bb933c3f01f65f6eb2",
+    "phases": 28,
+    "physical_order": 448,
+    "point_inventory_sha256": "7f742b95f382d0773a1e187d24a114b19733070d80b8c0947b7bd56dc3fb23dc",
+    "rational_coefficient_survivors": 92688,
+    "source_patterns": {
+      "L": 178,
+      "first_M": 16,
+      "last_M": 16
+    },
+    "status": "VERIFIED_EXACT_CONTACT_CLASS_AND_FULL_SOURCE_PATTERN_EXTENSION",
+    "words": 717
+  },
+  "external_author_review": false,
+  "fixed_decoder_regression": "Positive pins are explicitly selected from multi-colour ALO models; first-true decoding did not preserve every prescribed source colour and its failed certificate was rejected, retained locally, and not published.",
+  "fixed_expected_output_regression": "JSON edge-histogram keys are strings in both live output and expected data.",
+  "formal_proof": false,
+  "local_committed_index": 4363,
+  "normal_optimized_outputs_identical": true,
+  "normal_replay_seconds": 38.832,
+  "optimized_replay_seconds": 38.094,
+  "optional_python_sat": "1.8.dev17",
+  "optional_solver": "CaDiCaL153",
+  "peak_memory_measured": false,
+  "prepublication_repository_head": "44e2a03655a3a0dd769105e8de4197e2bf339a95",
+  "producer_completed": true,
+  "producer_queries": 773,
+  "producer_seconds": 24.00370574905537,
+  "producer_words": 717,
+  "proof_uses_floating_point": false,
+  "python": "3.11.2",
+  "source_context": [
+    {
+      "sha256": "1e36e64c49c57e9d3049fc3d6756196b64cfcfc67f688a921c2859a04375a260",
+      "url": "https://arxiv.org/pdf/2106.11824",
+      "use": "VND L10,2 atom attribution; coordinates reconstructed and proved here"
+    },
+    {
+      "url": "https://arxiv.org/html/2608.04542v4",
+      "use": "current published 509 comparison; checked live 2026-09-14"
+    }
+  ],
+  "status": "AUTHOR_VALIDATION_COMPLETE",
+  "unfiltered_pair_control": {
+    "entrywise_agreement": true,
+    "phase": 0,
+    "seconds": 2.843912962009199,
+    "unit_edges": 2216,
+    "unordered_pairs": 100128
+  }
+}
