@@ -99,7 +99,11 @@ Haugland's August 2026 paper still identifies 509 as the
 target's Discovery artifact
 `bafkreifvhaslflduege3hsx5mr5pv6mk7gqz3vun3xlst6cvsgok53dcdu` remained absent
 from the stale committed index at height 4363 and is treated as pending, not
-committed.
+committed.  This review was accepted for broadcast once as
+`bafkreidszrfiu2g4qkjhul2l6jouy6zbsx7vbzw34njofvbof7j3cqjkkm`, but the
+post-submission query also found it absent at height 4363.  It too is pending,
+not committed, and must not be resubmitted merely because the ledger is stale;
+see [`DISCOVERY_RECEIPT.json`](DISCOVERY_RECEIPT.json).
 
 ## Reproduction and trust boundary
 
