@@ -1,0 +1,59 @@
+{
+  "review_date_utc": "2026-09-14",
+  "verdict": "ACCEPT_HIGH_CONFIDENCE_SCOPED",
+  "target_source_commit": "7757f7fc0629bc1a2565ce94eb1702f7647c6e79",
+  "field_source_commit": "825d763c59e6e299f2c7df4b8c93b13dece6d511",
+  "field_review_commit": "0d54b52f753674be64f78b6aa57754d873464347",
+  "residual_census_source_commit": "bd0fa9b175004861dba9ab8df70fbedc78a3cdd4",
+  "residual_census_review_commit": "21772fc07210d78d51821b520f04927ed88c1a0b",
+  "source_replay": {
+    "sha256_manifest": "PASS",
+    "normal_verify": "PASS",
+    "optimized_verify": "PASS",
+    "normal_and_optimized_output_sha256": "8c8d241d8367ed88a378e934c14939c9de6f56dd9693bc3bb1095b49fa498b8c",
+    "controls": "PASS",
+    "controls_output_sha256": "ca61d232948b2cdd4dcae460aa5d293ec26d970f4e892dac651107df594bb432"
+  },
+  "field_dependency_replay": {
+    "source_verifier": "PASS",
+    "source_expected_sha256": "f90af5e3ded43688cd80a8c3d997bff4048ac6eb43e5ee0016bb6030b9d61806",
+    "independent_review_checker": "PASS",
+    "independent_expected_sha256": "c368eca9f8d9508a44653202c4092a7d1b12c770233c52deca435aad8d45d686"
+  },
+  "independent_coordinate_bridge": {
+    "field": "Q(i*sqrt(3),i*sqrt(11))",
+    "generic_radical_basis_products_checked": 64,
+    "sqrt33_root_precisions_checked": 128,
+    "large_points": 374,
+    "normalized_small_with_origin_points": 136,
+    "large_edges": 1860,
+    "small_edges": 564,
+    "normalized_small_integer_rows_sha256": "cccc21127b01ccf2febd4326779fcb05fe5e71c29d7c348a03f9e89782ff0145",
+    "rho_is_unit": true,
+    "inverse_rotation_roundtrips": 136,
+    "negative_controls_rejected": 5
+  },
+  "independent_residual_reconstruction": {
+    "residuals": 2772,
+    "preserving": 1372,
+    "reversing": 1400,
+    "all_exact_cross_overlaps": 2,
+    "all_merged_orders": 508,
+    "parameter_stream_sha256": "ca87bb6c507fa4c1e5cd58a0c671ddc6d8ddec08c1d2ea4ea42b57e33da6d478",
+    "placed_point_stream_sha256": "30c16afc55464af226a664057e88679af1d444d01f38464c1333d531bc515831",
+    "colour_word_stream_sha256": "e0f34b0c49e7d372a72206fa120faee839d07856a2eaffd3f0e1a530fd3d15f0",
+    "source_complete_samples_matched": 4,
+    "additional_complete_samples": 9,
+    "complete_sample_pair_checks": 1674114,
+    "complete_sample_unit_edges": 32557
+  },
+  "scope": {
+    "all_euclidean_isometries_of_the_two_complete_gadgets_with_at_least_two_overlaps": true,
+    "all_unions_of_these_complete_gadgets_with_at_most_508_points": true,
+    "all_plane_unit_distance_graphs_with_at_most_508_points": false,
+    "incomplete_gadgets": false,
+    "zero_or_one_overlap_placements": false,
+    "record_candidate": false
+  },
+  "large_generated_artifacts_committed": false
+}
