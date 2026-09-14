@@ -53,3 +53,12 @@ g++ -O3 -std=c++17 hadwiger_nelson_h516_k23free_edge_repair/strict_lrat.cpp -o /
 ```
 
 See [`PROOF.md`](PROOF.md) for the exact argument and trust boundary.
+
+## Discovery Net status
+
+The finding and its `ABOUT` relation were accepted for broadcast once in
+transaction `FFE58D204F59DC74D1B46ECE29DB6ADC13360F9096D766A25E0DC545A18C8AB7`.
+The committed ledger remained stale at height 4363 while RPC reported 4364,
+and the contribution was not indexed after submission.  It is therefore
+**pending, not committed**, and must not be resubmitted merely because of the
+stale index.  See [`DISCOVERY_RECEIPT.json`](DISCOVERY_RECEIPT.json).
