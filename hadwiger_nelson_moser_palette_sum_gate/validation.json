@@ -1,0 +1,51 @@
+{
+  "python": "3.11.2",
+  "checks": [
+    {
+      "check": "normal",
+      "command": [
+        "python3",
+        "-B",
+        "verify.py"
+      ],
+      "elapsed_seconds": 0.16187309799715877,
+      "output_sha256": "8b205cacede23564da6bd3ec8629bacb9f220324d5d3ea51fcb98d643c99ea7c"
+    },
+    {
+      "check": "optimized",
+      "command": [
+        "python3",
+        "-O",
+        "-B",
+        "verify.py"
+      ],
+      "elapsed_seconds": 0.2542943089501932,
+      "output_sha256": "8b205cacede23564da6bd3ec8629bacb9f220324d5d3ea51fcb98d643c99ea7c"
+    },
+    {
+      "check": "controls",
+      "command": [
+        "python3",
+        "-B",
+        "controls.py"
+      ],
+      "elapsed_seconds": 1.310486868955195,
+      "output_sha256": "172686e151b47de62c46fb1ebd34246d0d7462f798cf4bc0c0fdad835fbe7ee9"
+    }
+  ],
+  "solver": {
+    "command": [
+      "kissat",
+      "--time=30",
+      "full4.cnf"
+    ],
+    "binary_sha256": "8664d542108e494c8aebc90e762d7e719c63b556506a65f0c6ff7c9c6bc5c15b",
+    "version": "4.0.4",
+    "elapsed_seconds": 0.002735875081270933,
+    "returncode": 10,
+    "status_lines": [
+      "s SATISFIABLE"
+    ]
+  },
+  "trust_boundary": "Author-run formula reconstruction, exact coefficient arithmetic, collision merging and complete unit-edge checks. Positive colouring verification does not trust the SAT solver; no independent review claimed."
+}
