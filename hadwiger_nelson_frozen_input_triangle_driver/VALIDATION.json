@@ -1,0 +1,39 @@
+{
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "checks": [
+    {
+      "name": "normal",
+      "seconds": 0.4385,
+      "output_sha256": "38cd326f3db4d7fdb2e3d8b63890a2e9c59d77491115a31756514ca015372cc3"
+    },
+    {
+      "name": "optimized",
+      "seconds": 0.5662,
+      "output_sha256": "38cd326f3db4d7fdb2e3d8b63890a2e9c59d77491115a31756514ca015372cc3"
+    },
+    {
+      "name": "controls",
+      "seconds": 14.5952,
+      "output_sha256": "4a8b43bd4eb4cbc9b75f4a6dc0930ccd8a4769c91e5862fc67f7b403cfa9a87e"
+    }
+  ],
+  "normal_optimized_identical": true,
+  "controls": {
+    "direct_positive_word_stream_sha256": "81d72ec1b0e791f55886cb9695b38cae88d89a15d7325f079d8640ca98416790",
+    "full_pair_norm_comparisons": 7140,
+    "full_search_nodes": 176389,
+    "full_support_pattern_queries": 2795,
+    "labelled_assignments_normalized": 65536,
+    "negative": 104,
+    "positive": 2691,
+    "rejected_corruptions": 7,
+    "source_coset_points": 43,
+    "source_fixture_matched": true,
+    "status": "CONTROLS_PASS"
+  },
+  "certificate_bytes": 2991,
+  "certificate_sha256": "94f617b585f22654bdbb32fe97e7290b89f1f39ae014cdfbbd4eb9528af914ef",
+  "source_fixture_bytes": 1024,
+  "source_fixture_sha256": "9d80a8e7997d5d2780c3ec783dbdc02e6e4678b7454b72787b34a6268188ea99",
+  "trust_boundary": "Exact multiquadratic arithmetic, finite palette search and elementary triangle-colour permutation argument. Author validation; no floating arithmetic, imported theorem, solver binary or omitted large certificate in replay."
+}
