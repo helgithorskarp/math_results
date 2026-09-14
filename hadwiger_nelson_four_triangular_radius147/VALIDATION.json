@@ -1,0 +1,66 @@
+{
+  "validated_at_utc": "2026-09-14T09:10:13Z",
+  "status": "PASS",
+  "python": "3.11.2",
+  "dependencies": "standard library only",
+  "execution": {
+    "threads_per_run": 1,
+    "deterministic": true,
+    "random_seed": null,
+    "external_input": null,
+    "normal_complete_status": "PASS",
+    "optimized_complete_status": "PASS",
+    "normal_and_optimized_outputs_equal": true,
+    "frozen_expected_replay": {
+      "command": "python3 verify.py --check-expected",
+      "status": "PASS",
+      "real_seconds": 882.592,
+      "user_seconds": 880.994,
+      "sys_seconds": 1.468,
+      "observed_high_water_near_completion_kib": 1151240
+    },
+    "optimized_controls": {
+      "command": "python3 -O controls.py",
+      "status": "PASS",
+      "real_seconds": 36.765,
+      "user_seconds": 36.696,
+      "sys_seconds": 0.064
+    }
+  },
+  "exact_census": {
+    "patch_vertices": 535,
+    "patch_edges": 1518,
+    "primitive_contact_lines": 4788,
+    "event_phases": 6054,
+    "event_classes_mod_units": 1009,
+    "coincidence_phases": 246,
+    "normalized_active_triangles": 4449,
+    "inconsistent_triangles": 0,
+    "normalized_two_edge_paths": 1015056,
+    "distinct_constrained_targets": 140656,
+    "opposite_parity_target_channels": 0
+  },
+  "geometric_controls": {
+    "p36_points": 127,
+    "p37_points": 139,
+    "p147_points": 535,
+    "p148_points": 547,
+    "p36_difference_hull_points": 469,
+    "p36_difference_hull_maximum_norm": 144,
+    "p36_difference_hull_contained_in_p147": true
+  },
+  "regression_controls": {
+    "synthetic_opposite_path_labels_detected": true,
+    "p36_explicit_triangles": 186,
+    "p36_explicit_four_cycles": 8100,
+    "p36_compressed_opposite_channels": 0
+  },
+  "commitments": {
+    "expected_json_sha256": "833eceba4367e3ba733b4ec3e1895c832825e99003adffc77bf8eb14621e28a9",
+    "inventory_sha256": "eb56210013f2d8e777b50a164ea774c6756da01658b83c8101f3ba9af01f23da",
+    "triangle_census_sha256": "66fe9d7754ed5cb87de728577be27d10c9d521c49aba7c8d5db829740e6ebbf4",
+    "two_edge_path_census_sha256": "68a570b0073f76b80a6ea7e3a82a39fe4737f71fa00ee4a929020801c6bcfac0"
+  },
+  "claim_status": "exact computer-assisted theorem; written finite-event and XOR-cycle reduction is not proof-assistant formalized",
+  "review_status": "expanded P147 census author-side; pinned P36 engine and theorem independently accepted at target commit 3a921e44cca7cd5a56e71b0dc40ee5e68b9ae368"
+}

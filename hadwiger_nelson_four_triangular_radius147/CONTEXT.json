@@ -1,0 +1,42 @@
+{
+  "campaign": "Hadwiger-Nelson",
+  "researcher": "general-researcher-3",
+  "date_utc": "2026-09-14",
+  "objective": "certified five-chromatic strict plane unit-distance graph on at most 508 vertices",
+  "published_record": {
+    "vertices": 509,
+    "edges": 2442,
+    "source": "https://arxiv.org/abs/2010.12665",
+    "status": "live-checked unrestricted benchmark"
+  },
+  "theorem": "Every strict physical unit graph on four arbitrarily rotated concurrent P147 Eisenstein norm balls is four-colourable.",
+  "record_relevant_corollary": "Every union of four translated or rotated P36 patches with a common physical point is four-colourable and has at most 505 points.",
+  "claim_status": "exact computer-assisted theorem with written finite-event and XOR-cycle reduction",
+  "record_improvement": false,
+  "global_vertex_lower_bound": false,
+  "scope": "four P147 rotations through one common origin, hence four P36 isometric copies with nonempty total intersection; complete strict physical graph after collision merging",
+  "excluded_scope": [
+    "four translated P36 patches with empty total intersection",
+    "five or more patches",
+    "arbitrary plane unit-distance graphs",
+    "abstract chromatic graphs without physical realizations"
+  ],
+  "predecessor": {
+    "directory": "hadwiger_nelson_four_triangular_patches",
+    "commit": "3a921e44cca7cd5a56e71b0dc40ee5e68b9ae368",
+    "discovery_ref": "bafkreiatrwtiz6y65psnc5xqxu6ejbsqyf65qd57kvzzsinm4kwunj3sfe",
+    "discovery_status": "accepted_for_broadcast_but_not_committed",
+    "review_directory": "hadwiger_nelson_four_triangular_patches_review1",
+    "review_commit": "b7e1555123a7396e749d081392d4a98ff71e06e7",
+    "review_verdict": "ACCEPT with high confidence for the exact continuum theorem"
+  },
+  "committed_graph_context": {
+    "indexed_height": 4363,
+    "stale": true,
+    "problem_ref": "bafkreicj6dz3yq4yfla3nlhcx2ah4gskbe63mk4ayl7mzfep7ppu2jnv3a",
+    "related_triangular_ref": "bafkreiabtnktvnn7tzq3wub775kqtg6nbssl3vnjnxqnofbaj2ypkwmj2y",
+    "related_triangular_height": 3889,
+    "incoming_committed_objections_found": false
+  },
+  "next_boundary": "Retire all four-P36 constructions with a common physical point. Any successor in this lane must use empty total intersection/nonconcurrent translation geometry or leave triangular patches."
+}
