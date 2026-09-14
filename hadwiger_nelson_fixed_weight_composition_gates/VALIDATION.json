@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "environment": {
+    "python": "3.11.2",
+    "platform": "Linux x86_64"
+  },
+  "runs": [
+    {
+      "command": "python3 -B verify.py --check-expected",
+      "seconds": 50.516,
+      "status": "PASS"
+    },
+    {
+      "command": "python3 -O -B verify.py --check-expected",
+      "seconds": 49.127,
+      "status": "PASS"
+    },
+    {
+      "command": "python3 -B controls.py",
+      "seconds": 51.180,
+      "rejected_corruptions": 4,
+      "status": "PASS"
+    }
+  ],
+  "trust_boundary": [
+    "the displayed multiquadratic and cyclotomic basis definitions are faithful",
+    "CPython Fraction arithmetic and the complete pair loops",
+    "the small positive-colouring checker"
+  ],
+  "solver_required_for_verification": false,
+  "floating_point_used_by_verifier": false,
+  "independent_external_review": false
+}
