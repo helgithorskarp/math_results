@@ -135,3 +135,10 @@ boundary.  The general cap bridge is not disproved.  A future use needs an
 external positive signal involving patch contacts, a different four-chromatic
 exterior, or a component with at least four incidences; those are not licensed
 as adjacent sweeps by this negative theorem.
+
+The Discovery contribution was accepted for broadcast once as
+`bafkreig6zrq5gpgxtjslm2ci3odt3rmfnyy3hkipjyffjuievpwwcpydym`, transaction
+`980C45A641C2FC6600949803DB05569A3BA28DE69601037F90F4F4A43FF71565`.
+The local committed index remains at 4363 while RPC remains at 4364, so the
+receipt is pending, not committed, and must not be resubmitted merely because
+it is absent from that stale index.
