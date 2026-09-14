@@ -31,6 +31,13 @@ Reviewed package:
 The substantive independent-review source is commit
 `bea545fe011a3fbe9497391ddb74569d884e8599`.
 
+Discovery Net accepted review
+`bafkreiezaqjsaukhljxnvgnidummxlyxw5urxm2we4i7cxkkbj4ayd4kzy` for
+broadcast once. The committed index remained frozen at height 4363 and the
+post-broadcast query returned no artifact, so the review is pending, not
+committed. Target-directed `verifies` and `reproduces` relations are deferred
+until both endpoints commit; see [`DISCOVERY_RECEIPT.json`](DISCOVERY_RECEIPT.json).
+
 ## Proof reduction audited
 
 The residue `r(a+b*omega)=a-b mod 3` splits each patch into two disjoint
