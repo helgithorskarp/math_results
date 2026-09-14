@@ -140,3 +140,12 @@ old vertex-deletion colourings. No further automorphism, phase, host, seed or
 parent variation was launched from this negative result. The separate
 point606 critical core remains banked, and the fixed Parts a=8 transfer
 decision belongs to its existing researcher.
+
+During publication, the separate
+[conjugate a=7 corner result](../hadwiger_nelson_parts509_conjugate_corner_gate/README.md)
+became available. It uses T(x,y)=(-sigma(x),sigma(y)) on the existing
+677-point pool and proves that a specified a=8 corner was already excluded
+by its old cuts. Here sigma acts without that reflection, the envelope has
+644 points, and the proof is a direct colouring retraction to the original
+graph. The corner theorem is coordination context, not a premise or a
+result independently reviewed in this pass.
