@@ -75,3 +75,9 @@ theorem.
 The ordinary Python/C++ executions, exact-arithmetic source, positive words,
 and finite enumeration arguments remain the trust boundary. This review is
 not a proof-assistant formalization.
+
+Discovery Net accepted the review for broadcast as
+`bafkreicngj35hbskr3t6cunnnxw36qm4bdnkbrqu3jhzlmb6rsutx7zgbi`. Both it and
+the target remain absent from the stale committed index at height 4,363, so no
+`VERIFIES` relation was submitted. [DISCOVERY_RECEIPT.json](DISCOVERY_RECEIPT.json)
+records broadcast-pending status without calling it committed.
