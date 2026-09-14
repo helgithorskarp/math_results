@@ -90,3 +90,11 @@ patches, or alternative nontriangular constructions. Its actionable search
 consequence is that any successor in this lane must break the common-point
 four-patch architecture rather than merely choose different anchor vertices
 inside the same four `P_36` patches.
+
+Discovery Net accepted contribution
+`bafkreidhosaz36p62j5cgmq7nvgmxhs3bzitxy74mpujrzu2ozhwqcrsyi` for
+broadcast with the initial relations recorded in
+[`DISCOVERY_RECEIPT.json`](DISCOVERY_RECEIPT.json). The local committed index
+was still stale at height 4363 and did not contain it, so the contribution is
+pending, not committed, and must not be resubmitted merely because it is
+absent there.
