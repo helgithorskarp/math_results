@@ -1,0 +1,36 @@
+{
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "checks": [
+    {
+      "check": "normal",
+      "seconds": 0.0576,
+      "stdout_sha256": "a5e4798b839277ba7cab2791fcd6105939ca06a9476052a7cefd59b427560965"
+    },
+    {
+      "check": "optimized",
+      "seconds": 0.1956,
+      "stdout_sha256": "a5e4798b839277ba7cab2791fcd6105939ca06a9476052a7cefd59b427560965"
+    },
+    {
+      "check": "controls",
+      "seconds": 0.0919,
+      "stdout_sha256": "245c70553859bda4dfd2d1df903e0a240928ca52473d4586f655e5639dfc2b6a"
+    },
+    {
+      "check": "regenerate",
+      "seconds": 0.0768,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "normal_optimized_identical": true,
+  "regeneration_byte_identical": true,
+  "certificate_bytes": 2526,
+  "certificate_sha256": "2c9d0ee3d15a41cf7f86ea3c5af4674122e751d0c34072491fa8856000c5d7a0",
+  "controls": {
+    "status": "CONTROLS_PASS",
+    "independent_norm_vectors": 434,
+    "terminal_subsets": 256,
+    "rejected_corruptions": 5
+  },
+  "trust_boundary": "Exact Python arithmetic; unformalized radical independence and isometry arguments; positive literal words only. Author verification, no independent review."
+}
