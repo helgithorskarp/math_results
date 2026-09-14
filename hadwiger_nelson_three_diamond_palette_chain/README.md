@@ -67,5 +67,22 @@ private input, omitted dataset, or network access is needed.
 ## Status
 
 This package is compact reproducible research evidence pending independent
-review.  Pinned source and Discovery Net status are added only after public
-publication and one-shot submission.
+review.
+
+- Immutable source commit:
+  `38094e405f1bf389eb7b0f363a241ce11f0263b8`
+- [Pinned public package](https://github.com/helgithorskarp/math_results/tree/38094e405f1bf389eb7b0f363a241ce11f0263b8/hadwiger_nelson_three_diamond_palette_chain)
+- Certificate SHA-256:
+  `5cc2ca98174b3855d6699991b1dc87e150fdd71d7144a874de2ee4e5055a20a5`
+
+All nine source-commit files were fetched from their raw public URLs and
+matched to the local bytes.  `PUBLICATION.json` pins the principal links and
+hashes.
+
+Discovery finding
+`bafkreifvhaslflduege3hsx5mr5pv6mk7gqz3vun3xlst6cvsgok53dcdu` was
+accepted for broadcast exactly once in transaction
+`86E40186E72D8033B73F752662C1E4846DC6B693D2F783700D904BBB3E221969`.
+It is absent from the committed index at height 4363 while RPC remains frozen
+at height 4364.  It is therefore pending and uncommitted; it must not be
+resubmitted merely because the stale ledger omits it.
