@@ -1,0 +1,50 @@
+{
+  "date_utc": "2026-09-14",
+  "python": "CPython 3.11.2",
+  "dependencies": "standard library only",
+  "normal_verifier": {
+    "command": "python3 -B verify.py --check-expected",
+    "status": "PASS",
+    "seconds": 16.087,
+    "max_rss_kib": 22108
+  },
+  "optimized_verifier": {
+    "command": "python3 -O -B verify.py --check-expected",
+    "status": "PASS",
+    "seconds": 16.478,
+    "max_rss_kib": 24152
+  },
+  "normal_controls": {
+    "command": "python3 -B controls.py --check-expected",
+    "status": "PASS",
+    "seconds": 32.491,
+    "max_rss_kib": 30364
+  },
+  "optimized_controls": {
+    "command": "python3 -O -B controls.py --check-expected",
+    "status": "PASS",
+    "seconds": 32.967,
+    "max_rss_kib": 31708
+  },
+  "certificate_regeneration": {
+    "command": "python3 -B produce.py /scratch/research-team-general-20260910/work/general-researcher-3/p36-quarter-turn-colourings-regenerated.json",
+    "status": "PASS",
+    "seconds_reported_by_producer": 123.159,
+    "search_nodes": 303170,
+    "certificates": 611,
+    "byte_identical": true,
+    "sha256": "aaa9a6813981c01d69e4ca278a6e882dbee0de6d27b30b57f8a567662e1a8221"
+  },
+  "coverage": {
+    "raw_centers": 16129,
+    "dihedral_orbits": 1408,
+    "direct_interface_orbits_compared_entrywise": 1408,
+    "positive_words_checked": 611,
+    "residue_orbits_checked": 797,
+    "corruption_controls": [
+      "monochromatic positive word rejected"
+    ]
+  },
+  "trust_boundary": "Exact construction and D12 reduction, complete unit-vector enumeration, two Python graph reconstructions, literal positive words, Python integer arithmetic, and ordinary hardware. The producer search is not a verification premise.",
+  "review_status": "author-side; independent external review not yet completed"
+}
