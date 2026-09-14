@@ -1,0 +1,39 @@
+{
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "checks": [
+    {
+      "check": "normal",
+      "elapsed_seconds": 0.2966,
+      "output_sha256": "3df9da243b692c18c24604eb8b00446990b415a141a72e17a46a7560684431fc"
+    },
+    {
+      "check": "optimized",
+      "elapsed_seconds": 0.4278,
+      "output_sha256": "3df9da243b692c18c24604eb8b00446990b415a141a72e17a46a7560684431fc"
+    },
+    {
+      "check": "controls",
+      "elapsed_seconds": 6.1284,
+      "output_sha256": "d516120b1df40196f6863f038fbdc2477be83cdc94c1675f6d9f38225556ad25"
+    }
+  ],
+  "controls": {
+    "complete_search_patterns": 2795,
+    "exhausted_negative_patterns": 104,
+    "independent_field_norms": 190,
+    "interval_checks": 240,
+    "labelled_terminal_assignments": 65536,
+    "positive_words_checked": 2691,
+    "precision_replays": [
+      48,
+      80,
+      128
+    ],
+    "rejected_corruptions": 8,
+    "status": "CONTROLS_PASS"
+  },
+  "certificate_bytes": 1161,
+  "certificate_sha256": "d9311e008fcf29fe381957eac2e4c2cf2d985806e0008e3219d63e70856071be",
+  "normal_optimized_identical": true,
+  "trust_boundary": "Unformalized circle-intersection identity; Python arbitrary-precision arithmetic and explicit rational interval implementation; complete finite domain search cross-check. Author verification, not independent review. No float, SAT binary, external input, or omitted large certificate in replay."
+}
