@@ -1,0 +1,80 @@
+{
+  "date_utc": "2026-09-14",
+  "python": "CPython 3.11.2",
+  "dependencies": "standard library only",
+  "target": {
+    "directory": "hadwiger_nelson_p36_quarter_turn_collars",
+    "mathematical_commit": "8f4e7785fa0f4bb6a59230bc2a723cc93d73d239",
+    "substantive_bytes_unchanged_through_receipt_tip": true,
+    "sha256_manifest": "PASS",
+    "normal_verifier": {
+      "command": "python3 -B verify.py --check-expected",
+      "status": "PASS",
+      "wall_seconds": 16.213
+    },
+    "optimized_verifier": {
+      "command": "python3 -O -B verify.py --check-expected",
+      "status": "PASS",
+      "wall_seconds": 16.349
+    },
+    "normal_controls": {
+      "command": "python3 -B controls.py --check-expected",
+      "status": "PASS"
+    },
+    "optimized_controls": {
+      "command": "python3 -O -B controls.py --check-expected",
+      "status": "PASS"
+    }
+  },
+  "independent_full_replays": [
+    {
+      "command": "python3 -B independent_check.py --check-expected",
+      "status": "PASS",
+      "wall_seconds": 185.568,
+      "user_seconds": 168.948,
+      "system_seconds": 16.384
+    },
+    {
+      "command": "python3 -O -B independent_check.py --check-expected",
+      "status": "PASS",
+      "wall_seconds": 188.058,
+      "user_seconds": 170.470,
+      "system_seconds": 17.328
+    },
+    {
+      "command": "resource-measured normal replay",
+      "status": "PASS",
+      "wall_seconds": 185.285,
+      "max_rss_kib": 26436
+    }
+  ],
+  "normal_optimized_outputs_identical": true,
+  "coverage": {
+    "raw_placements_reconstructed_and_coloured": 16129,
+    "dihedral_representatives_freshly_coloured": 1408,
+    "fresh_dsat_total_nodes": 705568,
+    "fresh_dsat_total_backtracks": 0,
+    "target_positive_words_independently_checked": 611,
+    "definition_level_pairwise_graph_audits": 74,
+    "empty_intersection_placements": 16002,
+    "empty_extra_contact_placements": 660,
+    "empty_extra_contact_orbits": 58,
+    "corruption_controls": [
+      "forced monochromatic target word rejected"
+    ]
+  },
+  "hashes": {
+    "target_certificate_sha256": "aaa9a6813981c01d69e4ca278a6e882dbee0de6d27b30b57f8a567662e1a8221",
+    "representative_graph_stream_sha256": "17a1dcfc78e3fb9069ed9deaff70a7cedd0916a0cece473eb8b558dc3d075b46",
+    "fresh_representative_colour_cover_sha256": "a7463cdd391e7d4cd872a4b34695b6ced8403a8cac4a395e9a9a220bc8ea07ab",
+    "raw_graph_and_transport_cover_sha256": "848857c6a4194ff56f2d07a9026d9d34722ec35ce5bfdc87ec022d9a29227632"
+  },
+  "execution": {
+    "processes": 1,
+    "partition": "representatives in sorted exact-coordinate order; raw centers sorted within each orbit",
+    "checkpointing": "not required; each deterministic full run completed in under four minutes",
+    "optimization_effect": "Python -O changed execution only; output was byte-identical"
+  },
+  "verdict": "ACCEPT with high confidence for the fixed cyclic quarter-turn P36 family only",
+  "trust_boundary": "CPython exact integer, sorting, hashing and JSON operations; the displayed Q(sqrt(3)) norm derivation; pinned target bytes; ordinary hardware. No floating-point tolerance, SAT solver, or negative solver certificate is used."
+}
