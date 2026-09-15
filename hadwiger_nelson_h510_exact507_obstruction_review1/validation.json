@@ -1,0 +1,53 @@
+{
+  "validated_at_utc": "2026-09-15T01:51:51Z",
+  "environment": {
+    "python": "CPython 3.11.2",
+    "platform": "Linux 6.1.0-52-cloud-amd64 x86_64"
+  },
+  "review_verifier": {
+    "normal_command": "python3 -B independent_verify.py --check-expected",
+    "optimized_command": "python3 -O -B independent_verify.py --check-expected",
+    "normal_exit_code": 0,
+    "optimized_exit_code": 0,
+    "byte_identical_outputs": true,
+    "output_sha256": "5fe7331fc057e30ae5d715b68d739540a8280e00de9dee16ef5af21246e0a551",
+    "timed_normal_real_seconds": 171.426,
+    "timed_normal_user_seconds": 171.314,
+    "timed_normal_system_seconds": 0.088,
+    "observed_rss_mib_approx": 71
+  },
+  "review_controls": {
+    "normal_command": "python3 -B controls.py",
+    "optimized_command": "python3 -O -B controls.py",
+    "normal_exit_code": 0,
+    "optimized_exit_code": 0,
+    "byte_identical_outputs": true,
+    "output_sha256": "f9b3df145f21797cee5b270bd80ebbcb8e337f61fc2fd1627b179f5540cd4070"
+  },
+  "entry_level_comparison": {
+    "command": "python3 -B compare_author.py",
+    "exit_code": 0,
+    "output_sha256": "584238d7d3a5ed97acfb6f5ccc953fb315c49a2bf7733537245d65a2a188ce9f",
+    "candidate_lists_identical": true,
+    "candidate_partitions_compared": 41879
+  },
+  "submitted_package": {
+    "normal_verifier_exit_code": 0,
+    "optimized_verifier_exit_code": 0,
+    "byte_identical_verifier_outputs": true,
+    "verifier_output_sha256": "bcfde763960c1c75ed8b086a2715cdab78424c8b506cc8e6a2b3bf9c58459306",
+    "normal_controls_exit_code": 0,
+    "optimized_controls_exit_code": 0,
+    "controls_output_sha256": "0d5d1bcb5ae8148b697ad23a50d6c33c025dfa1f0b5a49017f3fcb7d0f5fa325",
+    "manifest_passed": true
+  },
+  "parent_dependency": {
+    "source_manifest_passed": true,
+    "independent_review_manifest_passed": true,
+    "source_verifier_replayed_by_submitted_package": true,
+    "committed_source_ref": "bafkreia5oxkhc3sjykhvvl2fqkksrd3ple4ci4rcyn6x6z4ixjkj7y6dqq",
+    "committed_review_ref": "bafkreigzpjwa6r6usnu5xxmcnujnpkysdrnuvjoq7ee6vjpbxmwyffjp7q"
+  },
+  "result": "ACCEPT_HIGH_CONFIDENCE_EXACT_SCOPE",
+  "trust_boundary": "Exact clean-room Python rechecks source graph, rhombi, rank lower and upper bounds, collision coverage and quotient obstructions. The orientation row-space consequences and polynomial endgame are imported from the previously independently accepted parent theorem. No solver, floating-point decision, random seed, omitted proof trace or external download is used."
+}
