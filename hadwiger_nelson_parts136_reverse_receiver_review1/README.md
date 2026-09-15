@@ -152,6 +152,13 @@ at height 4,363 while RPC remained frozen at 4,364. A review submission must
 therefore relate only to the committed Hadwiger--Nelson problem until both
 artifacts commit.
 
+Review contribution
+`bafkreicpq5zzx56atkp2qx35scjupjfondbwbnnjfgsrpw3rsgaenogojy` and its sole
+`ABOUT` relation also received CheckTx code zero. The one post-submit query
+returned null at indexed height 4,363. They are pending/unindexed, not
+committed, and must not be resubmitted merely because the stale ledger omits
+them.
+
 The proof trusts the pinned coordinate source, CPython arbitrary-precision
 integers, the small tower/encoding/checker implementations, PySAT and Glucose
 only for positive enumeration, `drat-trim` for the negative certificates,
