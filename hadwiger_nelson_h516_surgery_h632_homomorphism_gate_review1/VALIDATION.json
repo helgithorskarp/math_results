@@ -1,0 +1,35 @@
+{
+  "review_timestamp_utc": "2026-09-15T02:52:22Z",
+  "reviewed_target_commit": "744f7567486b6a27f1f073554aef098b654f6c3a",
+  "environment": {
+    "python": "3.11.2",
+    "platform": "Linux 6.1.0-52-cloud-amd64 x86_64 GNU/Linux"
+  },
+  "independent_review": {
+    "normal_seconds": 2.72,
+    "optimized_seconds": 2.85,
+    "normal_optimized_identical": true,
+    "output_bytes": 2636,
+    "output_sha256": "a48648f3f8779b2463bbe009de82f90c1551ebc183bf35179ccb53643ec34764",
+    "status": "INDEPENDENT_ACCEPT_AND_STRENGTHEN"
+  },
+  "target_replay": {
+    "manifest": "PASS",
+    "normal_verifier_seconds": 24.99,
+    "optimized_verifier_seconds": 25.21,
+    "normal_optimized_identical": true,
+    "verifier_output_sha256": "5878a5b80d0a0ffa5c9aaefd7988b3384afd6d2aac6c1de46c48e086236b4994",
+    "producer_seconds": 14.11,
+    "producer_byte_match": true,
+    "certificate_sha256": "1cb3f667b14fe7636ab410bf7ef50e68210ca2daad17febf5f3438dda710bdb8"
+  },
+  "commands": [
+    "python3 -B hadwiger_nelson_h516_surgery_h632_homomorphism_gate_review1/independent_check.py > /tmp/h516-h632-review.txt",
+    "diff -u hadwiger_nelson_h516_surgery_h632_homomorphism_gate_review1/EXPECTED_OUTPUT.txt /tmp/h516-h632-review.txt",
+    "python3 -O -B hadwiger_nelson_h516_surgery_h632_homomorphism_gate_review1/independent_check.py > /tmp/h516-h632-review-O.txt",
+    "diff -u hadwiger_nelson_h516_surgery_h632_homomorphism_gate_review1/EXPECTED_OUTPUT.txt /tmp/h516-h632-review-O.txt",
+    "python3 -B hadwiger_nelson_h516_surgery_h632_homomorphism_gate/verify.py --controls --output /tmp/target-normal.json",
+    "python3 -O -B hadwiger_nelson_h516_surgery_h632_homomorphism_gate/verify.py --controls --output /tmp/target-optimized.json",
+    "python3 -B hadwiger_nelson_h516_surgery_h632_homomorphism_gate/produce.py --output /tmp/target-certificate.json"
+  ]
+}
