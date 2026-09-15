@@ -1,0 +1,51 @@
+{
+  "corruptions_rejected": [
+    "schema",
+    "point_count",
+    "edge_count",
+    "point_hash",
+    "missing_terminal_pattern",
+    "wrong_terminal_pattern"
+  ],
+  "five_d3_cases_reconstructed": 5,
+  "status": "CONTROLS_PASS",
+  "toy_solver_checks": {
+    "moser_k3": {
+      "satisfiable": false,
+      "stats": {
+        "dead_ends": 2,
+        "nodes": 9
+      }
+    },
+    "path3_k2": {
+      "satisfiable": true,
+      "stats": {
+        "dead_ends": 0,
+        "nodes": 4
+      }
+    },
+    "triangle_k2": {
+      "satisfiable": false,
+      "stats": {
+        "dead_ends": 1,
+        "nodes": 3
+      }
+    },
+    "triangle_k3": {
+      "satisfiable": true,
+      "stats": {
+        "dead_ends": 0,
+        "nodes": 4
+      }
+    },
+    "triangle_k3_equal_pin_conflict": {
+      "satisfiable": false,
+      "stats": {
+        "dead_ends": 1,
+        "nodes": 0
+      }
+    }
+  },
+  "unit_direction_box_rows_replayed": 817089,
+  "unit_directions_replayed": 54
+}

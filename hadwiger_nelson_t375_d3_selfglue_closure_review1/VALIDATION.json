@@ -1,0 +1,44 @@
+{
+  "checks": [
+    {
+      "command": "python3 -B independent_check.py --check-expected",
+      "exit_code": 0,
+      "stdout_sha256": "a0465ba7f5e4c9071c55b120842edfa138afad1d3047ef392019cac9d5dbc28f"
+    },
+    {
+      "command": "python3 -O -B independent_check.py --check-expected",
+      "exit_code": 0,
+      "stdout_sha256": "a0465ba7f5e4c9071c55b120842edfa138afad1d3047ef392019cac9d5dbc28f"
+    },
+    {
+      "command": "python3 -B controls.py --check-expected",
+      "exit_code": 0,
+      "stdout_sha256": "d62fb05eb377d95b86488cf382c5c16705fbecdb90b2261d89e9fce63742ca34"
+    },
+    {
+      "command": "python3 -B ../hadwiger_nelson_t375_d3_selfglue_closure/verify.py",
+      "exit_code": 0,
+      "stdout_sha256": "9e414f012d4fcc51d1d31c61d8a69b66d6ddc1fd6128fd43039c703a0b0bcfbf"
+    },
+    {
+      "command": "python3 -O -B ../hadwiger_nelson_t375_d3_selfglue_closure/verify.py",
+      "exit_code": 0,
+      "stdout_sha256": "9e414f012d4fcc51d1d31c61d8a69b66d6ddc1fd6128fd43039c703a0b0bcfbf"
+    },
+    {
+      "command": "python3 -B ../hadwiger_nelson_small_triangle_forcer375/verify.py",
+      "exit_code": 0,
+      "stdout_sha256": "485b64bfb5fd4e6313026fd636365d8370f9105fe1064f04c4b05cc7b69ab90d"
+    },
+    {
+      "command": "python3 -O -B ../hadwiger_nelson_small_triangle_forcer375/verify.py",
+      "exit_code": 0,
+      "stdout_sha256": "485b64bfb5fd4e6313026fd636365d8370f9105fe1064f04c4b05cc7b69ab90d"
+    }
+  ],
+  "normal_optimized_identical": true,
+  "omitted_artifacts": false,
+  "python": ">=3.11",
+  "runtime_note": "Main verification took about 33 seconds per process on the review host; controls took under one second.",
+  "trust_boundary": "Python exact integer arithmetic and file semantics, inspectable exhaustive finite searches, SHA-256 identity, and ordinary hardware; no solver or numerical tolerance."
+}
