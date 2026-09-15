@@ -1,0 +1,75 @@
+{
+  "completed_utc": "2026-09-15T13:41:50Z",
+  "environment": {
+    "kernel": "Linux 6.1.0-52-cloud-amd64 x86_64",
+    "python": "CPython 3.11.2"
+  },
+  "target_replay": [
+    {
+      "command": "python3 -B verify.py --check-expected",
+      "elapsed_seconds": 1.034,
+      "result": "passed"
+    },
+    {
+      "command": "python3 -O -B verify.py --check-expected",
+      "elapsed_seconds": 1.162,
+      "result": "passed with byte-identical output"
+    },
+    {
+      "command": "python3 -B controls.py",
+      "elapsed_seconds": 4.171,
+      "result": "passed 5184 domain-oracle cases and rejected four corruptions"
+    },
+    {
+      "command": "python3 -B produce.py --compare EXPECTED.json",
+      "elapsed_seconds": 1.085,
+      "result": "independent target producer agreed"
+    },
+    {
+      "command": "sha256sum -c SHA256SUMS",
+      "result": "passed"
+    }
+  ],
+  "review_runs": [
+    {
+      "command": "python3 -B verify.py --check-expected",
+      "elapsed_seconds": 3.702,
+      "result": "passed"
+    },
+    {
+      "command": "python3 -O -B verify.py --check-expected",
+      "elapsed_seconds": 3.799,
+      "result": "passed with byte-identical output"
+    },
+    {
+      "command": "python3 -B controls.py",
+      "elapsed_seconds": 47.256,
+      "result": "passed"
+    }
+  ],
+  "controls": {
+    "quartic_square_oracle_cases": 625,
+    "four_vertex_list_instances": 153664,
+    "frontier_order_comparisons": 460992,
+    "source_corruption_rejected": true,
+    "semantic_corruptions_rejected": [
+      "fresh union word",
+      "private contact colour",
+      "forbidden palette"
+    ]
+  },
+  "exact_result": {
+    "points": 34,
+    "unit_edges": 82,
+    "source_canonical_patterns": 5109,
+    "composite_joint_canonical_patterns": 490464,
+    "lost_joint_canonical_patterns": 122616,
+    "chromatic_number": 4,
+    "relation_formula": "P != Q"
+  },
+  "fresh_word_difference_from_target": 25,
+  "floating_point_predicates": 0,
+  "external_solver_calls": 0,
+  "negative_solver_claims": 0,
+  "running_computations": []
+}
