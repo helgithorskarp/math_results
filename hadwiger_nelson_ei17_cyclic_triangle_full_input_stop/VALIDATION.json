@@ -1,0 +1,46 @@
+{
+  "validated_utc": "2026-09-15T16:48:00Z",
+  "python": "Python 3.11.2",
+  "baseline_origin_main": "dc73bb626598be1f0d2c5e65b86b13f0b8d0ff45",
+  "commands": [
+    {
+      "command": "python3 -B hadwiger_nelson_ei17_cyclic_triangle_full_input_stop/verify.py --check-expected",
+      "exit": 0,
+      "elapsed_seconds": 17.50
+    },
+    {
+      "command": "python3 -O -B hadwiger_nelson_ei17_cyclic_triangle_full_input_stop/verify.py --check-expected",
+      "exit": 0,
+      "elapsed_seconds": 17.92
+    },
+    {
+      "command": "python3 -B hadwiger_nelson_ei17_cyclic_triangle_full_input_stop/controls.py",
+      "exit": 0,
+      "elapsed_seconds": 17.14
+    },
+    {
+      "command": "python3 -O -B hadwiger_nelson_ei17_cyclic_triangle_full_input_stop/controls.py",
+      "exit": 0,
+      "elapsed_seconds": 17.53
+    }
+  ],
+  "main_result": {
+    "labelled_frames": 124,
+    "physical_points_each": 48,
+    "source_colour_orbits": 85088,
+    "contactful_frames": 8,
+    "contactful_source_frame_checks": 680704,
+    "all_source_colourings_extend": true,
+    "all_physical_graphs_chromatic_number": 4,
+    "record_candidate": false
+  },
+  "controls": {
+    "independent_fixed_order_nodes": 225141,
+    "independent_source_orbits": 85088,
+    "contactful_frames_rechecked": 8,
+    "distinct_domain_state_histogram": {"27": 4, "39": 4},
+    "corrupted_witness_rejected": true
+  },
+  "assertions_required": false,
+  "third_party_packages": []
+}
