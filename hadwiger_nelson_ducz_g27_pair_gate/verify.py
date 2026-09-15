@@ -29,6 +29,25 @@ WORDS = (
     "000201201202100210212030122",
 )
 
+SAME_WORDS = (
+    "000110202100020320010201320",
+    "000110210101020201102113013",
+    "000102101202100220001303122",
+    "000102101200130210012013011",
+    "000110202100231001102103200",
+    "000102101202100210202110312",
+    "000102112100230110002101230",
+    "010203101000210310002103210",
+    "000102101200230310003102130",
+    "011001201000120210002303120",
+    "000102101200130212002103120",
+    "000102101200131210002103100",
+    "000102102100130312002101230",
+    "000102102100130320101303210",
+    "000102102101100310002103213",
+    "001203101200210310002113012",
+)
+
 
 def require(condition: bool, message: str) -> None:
     if not condition:
@@ -48,6 +67,16 @@ def check_words(words: tuple[str, ...]) -> None:
     require(len(set(signatures)) == 27, "colour signatures do not separate all points")
 
 
+def check_same_words(words: tuple[str, ...]) -> None:
+    require(len(words) == 16, "same-word count")
+    require(all(proper(w) for w in words), "improper saved same-word")
+    edge_set = set(EDGES)
+    nonedges = [p for p in combinations(range(27), 2) if p not in edge_set]
+    require(len(nonedges) == 302, "nonedge count")
+    require(all(any(w[a] == w[b] for w in words) for a, b in nonedges),
+            "some nonedge cannot be coalesced by the saved words")
+
+
 def result() -> dict:
     require(len(POINTS) == len(set(POINTS)) == 27, "coordinate collision")
     # Independent sanity check for the manually expanded omega_1*omega_3.
@@ -60,6 +89,7 @@ def result() -> dict:
     require(edge_sha256() == "e23da734060870131917024d0e2b397ac2353e495d235aa8470704183f6d4dde",
             "edge stream hash")
     check_words(WORDS)
+    check_same_words(SAME_WORDS)
     edge_set = set(EDGES)
     require({(3, 5), (3, 13), (5, 13)} <= edge_set, "triangle witness")
     degrees = [0] * 27
@@ -75,8 +105,12 @@ def result() -> dict:
         "triangle_witness_zero_based": [3, 5, 13],
         "proper_three_colouring": WORDS[0],
         "proper_four_colour_separating_words": len(WORDS),
+        "proper_four_colour_coalescing_words": len(SAME_WORDS),
         "all_distinct_pairs_separated": True,
+        "all_nonedge_pairs_coalesced": True,
+        "nonedge_pair_relation": "both same and different",
         "forced_equal_pairs": 0,
+        "forced_different_nonedges": 0,
         "edge_stream_sha256": edge_sha256(),
         "degree_sequence": sorted(degrees),
     }
@@ -94,6 +128,12 @@ def controls() -> None:
     except ValueError:
         rejected = True
     require(rejected, "corrupt edge word was accepted")
+    rejected = False
+    try:
+        check_same_words(SAME_WORDS[:-1])
+    except ValueError:
+        rejected = True
+    require(rejected, "truncated same-word certificate was accepted")
 
 
 def main() -> None:

@@ -8,15 +8,19 @@ The result is an exact scoped stop for a Hadwiger--Nelson construction intake:
 - the 27 coordinates are distinct;
 - the complete physical graph has 49 unit edges;
 - its ordinary chromatic number is exactly **3**; and
-- 17 checked proper four-colourings separate every pair of distinct points,
-  so the support has no forced-equal pair in ordinary four-colourings.
+- 17 checked proper four-colourings separate every pair of distinct points;
+  and 16 further checked words colour together every physical nonedge in at
+  least one word. Thus every nonedge admits both equality states in ordinary
+  four-colourings.
 
 The lower bound is the triangle on zero-based vertices `(3,5,13)`. The saved
 word `000201201202100210212020122` is a proper three-colouring of every one of
 the 49 physical unit edges. For the pair statement, assign to each vertex its
-17-entry colour signature across the saved words. All 27 signatures are
-different. This is a positive certificate: no SAT or exhaustive-search
-`UNSAT` verdict is used by the checker.
+17-entry colour signature across the separating words. All 27 signatures are
+different. For the reverse state, every one of the 302 nonedges is equal in at
+least one of the 16 coalescing words. Both statements are positive
+certificates: no SAT or exhaustive-search `UNSAT` verdict is used by the
+checker.
 
 ## Why this is not a contradiction
 
@@ -45,19 +49,21 @@ python3 -B verify.py --controls
 
 The checker independently expands the displayed basis, reconstructs all 351
 unordered distances, checks the edge-stream hash, validates the triangle and
-three-colour word, validates every saved four-colour word, and checks that the
-colour signatures separate all vertices. The control corrupts a colour on an
-edge and confirms rejection.
+three-colour word, validates every saved four-colour word, checks that the
+colour signatures separate all vertices, and checks coalescence coverage of
+all 302 nonedges. The controls corrupt a colour on an edge and truncate the
+coalescing certificate, confirming rejection.
 
 ## Construction consequence and scope
 
 The source fails the campaign's first physical gate because it is only
-three-chromatic. Pair separation additionally rules out using this fixed
-27-point support as the forced-equal half of the usual two-copy spindle
-composition. The result says nothing about other finite subsets of the Moser
-lattice or ring, other terminal relations, added outside-ring points, or the
-Hadwiger--Nelson number. It produces no five-chromatic graph and no improvement
-on Parts's 509-vertex published record.
+three-chromatic. The complete two-state certificate additionally proves that
+every physical nonedge has the neutral ordinary four-colour relation, ruling
+out any single-pair forcing completion from this fixed support. The result says
+nothing about other finite subsets of the Moser lattice or ring, higher-arity
+terminal relations, added outside-ring points, or the Hadwiger--Nelson number.
+It produces no five-chromatic graph and no improvement on Parts's 509-vertex
+published record.
 
 This is author-side exact verification of a finite source, not an independent
 review of Dúcz's theorem and not a priority claim.
