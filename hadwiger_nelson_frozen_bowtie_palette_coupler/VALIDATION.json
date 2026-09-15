@@ -1,0 +1,37 @@
+{
+  "python": "3.11.2",
+  "checks": [
+    {
+      "name": "normal",
+      "returncode": 0,
+      "seconds": 1.1016209119698033
+    },
+    {
+      "name": "optimized",
+      "returncode": 0,
+      "seconds": 1.1880463189445436
+    },
+    {
+      "name": "controls",
+      "returncode": 0,
+      "seconds": 4.249147137044929
+    }
+  ],
+  "verified_utc": "2026-09-15T12:35:20.882273+00:00",
+  "all_checks_author_run": true,
+  "independent_peer_review": false,
+  "producer_method": "Direct restricted-growth terminal enumeration, explicit-colour DSATUR, subset-mask radical products",
+  "verifier_method": "Named-colour enumeration followed by quotient, finite-domain singleton propagation and exhaustive branching, squarefree-radicand/gcd products",
+  "producer_full_distance_and_source_relation_hashes_agree": true,
+  "control_result": {
+    "valid_baseline_passed": true,
+    "domain_oracle_cases": 5184,
+    "semantic_corruptions_rejected": [
+      "coordinate scale",
+      "violated private unit contact",
+      "altered forbidden terminal prescription",
+      "proper five-word with different marked terminals"
+    ]
+  },
+  "no_sat_library_or_floating_incidence": true
+}
