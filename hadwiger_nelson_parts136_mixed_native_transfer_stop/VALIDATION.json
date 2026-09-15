@@ -1,0 +1,35 @@
+{
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "runs": [
+    {
+      "name": "normal",
+      "seconds": 1.3338852219749242,
+      "returncode": 0
+    },
+    {
+      "name": "optimized",
+      "seconds": 1.5127702800091356,
+      "returncode": 0
+    },
+    {
+      "name": "controls",
+      "seconds": 7.780285429093055,
+      "returncode": 0
+    }
+  ],
+  "normal_optimized_byte_identical": true,
+  "producer_checker_all_distance_stream_agrees": true,
+  "producer_checker_pinned_cnf_byte_identical": true,
+  "solver_required_for_proof": false,
+  "initial_validation_correction": "A shorthand range accidentally included unmarked host points 477 and 479. The first checker correctly rejected the boundary projection. The exact 19-pin list was restored; geometry, the 136 pinned host colours and the SAT word were unchanged. Final positive and corruption checks all rerun after correction.",
+  "controls": {
+    "valid_certificate_accepted": true,
+    "corruptions_rejected": [
+      "bad_private_B_edge",
+      "wrong_host_projection",
+      "bad_five_word",
+      "repeated_lower_bound_vertex"
+    ],
+    "hand_norm_controls": 9
+  }
+}
