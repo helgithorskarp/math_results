@@ -1,0 +1,49 @@
+{
+  "python": "3.11.2",
+  "checks": [
+    {
+      "name": "normal",
+      "command": [
+        "python3",
+        "-B",
+        "verify.py"
+      ],
+      "elapsed_seconds": 0.24009387998376042,
+      "output_sha256": "a95e87ed725d65d126114a441dce4844bbc144281b08df95975512f064eccb4c"
+    },
+    {
+      "name": "optimized",
+      "command": [
+        "python3",
+        "-O",
+        "-B",
+        "verify.py"
+      ],
+      "elapsed_seconds": 0.3409535320242867,
+      "output_sha256": "a95e87ed725d65d126114a441dce4844bbc144281b08df95975512f064eccb4c"
+    },
+    {
+      "name": "producer",
+      "command": [
+        "python3",
+        "-B",
+        "produce.py"
+      ],
+      "elapsed_seconds": 0.06567903596442193,
+      "output_sha256": "dc3f8f736c36a362d9177ff22dcca5f6c7bb888ca923c251c2fded95f8997352"
+    },
+    {
+      "name": "controls",
+      "command": [
+        "python3",
+        "-B",
+        "controls.py"
+      ],
+      "elapsed_seconds": 1.0049276269273832,
+      "output_sha256": "de709574f81d32346bb3ea8c901d4db9fe9bd6ce38496458c4b70b34c9ae14dd"
+    }
+  ],
+  "native_solver_calls": 0,
+  "realization_search_started": false,
+  "trust_boundary": "Imported reviewed Moser11 relation; exact finite named-colour exhaustion; rational Gram determinant and unformalized planar rank argument. Author verification, not independent external review."
+}
