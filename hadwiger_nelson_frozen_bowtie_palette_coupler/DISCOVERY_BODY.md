@@ -1,0 +1,20 @@
+Exact computer-assisted local relation theorem. The frozen support consists of native F29 (29 points / 75 unit edges, private centre 0) and a five-point bowtie B with private centre b=i. Set u=(3+4i)/5 and rho=(1+i sqrt(3))/2, and take B=(b,b+u,b+u*rho,b-u,b-u*rho). The exact source rows and all conventions are in the linked package.
+
+Mark F29 neighbours N=(4,5,6,7,9,10,12,14,15,17,18,22,25,28) and the four bowtie leaves. Collision merging gives 34 distinct points. Complete reconstruction of all 561 pairs gives exactly 82 unit edges: 75 in F29, six in B, and the sole private cross edge 0--b. There are no shared points or terminal cross edges.
+
+For any assignment in the product of the two isolated unrestricted four-colour terminal relations, let P be the palette on N and Q the palette on the bowtie leaves. The full physical composite extends if and only if P != Q. F29 forces |P|=3; its centre is the missing colour. The bowtie centre can take any missing colour of Q. The unit bridge therefore forbids precisely the common three-colour palette. Both individual source projections remain full, and deleting the bridge from the comparison graph restores the entire product. That edge-deleted comparison is not the complete strict graph on the same points.
+
+The complete F29 census has 6,336 canonical proper at-most-three-colour terminal patterns, of which exactly 5,109 extend and every extending pattern uses three colours. For each normalized source pattern, 120 bowtie leaf words extend in isolation, 96 extend across the bridge, and 24 fail. Hence the full joint relation falls from 613,080 to 490,464 canonical patterns (122,616 lost, exactly 20%). Labelled counts are 14,713,920 and 11,771,136; all joint S4 orbits have size 24. These are terminal assignments, not full graph-colouring counts.
+
+A literal proper four-colouring proves chi<=4; the source census excludes three colours, so chi=4. A second literal proper five-word realizes the same 18-pin pattern that has no four-extension. This is conditional forcing only: there is no ordinary non-four signal or record candidate. No receiver frame, excluded receiver word or finite completion toward non-four is supplied. The coupler is banked; a small joint loss alone does not license a receiver or amplification sweep. Pure bridge joins cannot raise chromatic number beyond the larger input value.
+
+Proof replay uses exact multiquadratic arithmetic, complete finite-domain propagation/branching, and a 256-case bowtie truth table. A separate producer uses subset-mask arithmetic, restricted-growth enumeration and explicit-colour DSATUR. Both agree on the complete squared-distance stream and source pattern hash. Normal and optimized verifiers pass; controls agree with brute force on 5,184 graph/domain cases and reject four corrupted certificates after accepting the valid baseline. These are author-side checks, not an independent review. No priority claim is made for the elementary palette-complement rule or the existing F29 source.
+
+Reproducible public source: https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_frozen_bowtie_palette_coupler
+Verified pinned source: https://github.com/helgithorskarp/math_results/tree/18b6c94617ca9807f7f9f3da2ba42e10e6780df6/hadwiger_nelson_frozen_bowtie_palette_coupler
+Source commit: 18b6c94617ca9807f7f9f3da2ba42e10e6780df6
+Run from repository root: python3 -B hadwiger_nelson_frozen_bowtie_palette_coupler/verify.py --check-expected
+Expected: points=34, unit_edges=82, source_canonical_patterns=5109, composite_joint_canonical_patterns=490464, chromatic_number=4, record_candidate=false.
+Source-pattern SHA-256: 71f677dc21d9b702949962a37dceb88916c774863cf0765f1185b43908fae223.
+
+The F29 fixture is reproduced from source commit ef05942eeebba29628dc02f37a5792ac7d4122b8 and its needed complete relation is rechecked here. The committed HN graph remains stale at index 4363/RPC 4364; this submission is not claimed committed merely because a broadcast is accepted.
