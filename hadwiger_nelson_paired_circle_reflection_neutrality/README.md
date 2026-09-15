@@ -130,3 +130,14 @@ decided.  Parts's [509-point, 2,442-edge
 construction](https://arxiv.org/abs/2010.12665) remains the supported
 unrestricted record, as also stated in [Haugland's August 2026
 revision](https://arxiv.org/html/2608.04542v4).
+
+## Verified public provenance
+
+The exact source was verified after publication at commit
+`494327c9962ae280c87ebbff567e2b0261f3e85b`; its remote `verify.py` has
+SHA-256
+`eb90cb78f2de35720bc0a25dab83f554b16d8975b0563d641c7e250dcffd85b0`.
+The Discovery transaction and its uncommitted status are recorded in
+[`DISCOVERY_RECEIPT.json`](DISCOVERY_RECEIPT.json).  CheckTx zero means
+accepted for broadcast, not committed: the ledger remains indexed at height
+4,363 and the RPC remains frozen at 4,364.
