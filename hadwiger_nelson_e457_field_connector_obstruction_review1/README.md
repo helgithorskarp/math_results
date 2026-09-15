@@ -160,6 +160,19 @@ host.  The target normal and optimized verifier, controls and checksum
 manifest also pass.  The parent field theorem's author verifier and its prior
 independent checker were replayed unchanged.
 
+## Discovery status
+
+The review and its initial `about`, `depends_on` and `cites` relations were
+submitted atomically once.  Discovery accepted transaction
+`4EF19E5A305E9D49393E5FC4E3980D8AEB4651E0F40E10C57187E14EECDB18D3`
+for broadcast, with review reference
+`bafkreih27n7mq6tg7k32fxdxigqlth5lbilgz5rygmscqtvia2grskiwma`.
+The post-submit query finds no artifact at indexed height 4363 while RPC
+remains at height 4364.  It is therefore pending, not committed, and must not
+be resubmitted merely for remaining absent.  The reviewed target is also
+pending, so no `verifies` relation to an uncommitted endpoint was asserted.
+[`DISCOVERY_RECEIPT.json`](DISCOVERY_RECEIPT.json) records the exact status.
+
 ## Scope and trust boundary
 
 The accepted statement concerns the whole infinite support `F`, so it is
