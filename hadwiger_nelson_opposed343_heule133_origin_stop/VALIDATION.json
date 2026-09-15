@@ -1,0 +1,43 @@
+{
+  "python": "Python 3.11.2",
+  "checks": [
+    {
+      "name": "normal",
+      "passed": true,
+      "seconds": 0.8866
+    },
+    {
+      "name": "optimized",
+      "passed": true,
+      "seconds": 1.0309
+    },
+    {
+      "name": "controls",
+      "passed": true,
+      "seconds": 3.3756
+    }
+  ],
+  "independent_geometry": {
+    "all_norms_compared_entrywise": 113050,
+    "point_and_edge_lists_equal": true,
+    "elapsed_seconds": 2.3188
+  },
+  "remote_dependency_verification": [
+    {
+      "path": "hadwiger_nelson_nonmono159_214_lowden2/points214.tsv",
+      "sha256": "97c9b3a964ed19874ae3fe932eb8c085fd637f618d2481fffaebbd1fbae55c2f",
+      "bytes": 7262,
+      "remote_verified": true
+    },
+    {
+      "path": "hadwiger_nelson_parts374_heule133_substitution_gate/points.json",
+      "sha256": "89987eb29eecb4f0a30fa298436d3080b3183c25bc02df556f99dae084d1e97b",
+      "bytes": 20687,
+      "remote_verified": true
+    }
+  ],
+  "ordinary_colour_solver_calls": 0,
+  "source_relation_solver_calls": 0,
+  "proof": "A fixed proper complement word extends every complete source word by the transposition 0<->source_origin_colour. Every cross edge is incident with that origin.",
+  "trust_boundary": "Author-side exact integer geometry and direct positive-word checks; ordinary Python runtime and independent squareclass basis. The reviewed 66-pattern source count is attributed to the upstream review, not reproduced."
+}
