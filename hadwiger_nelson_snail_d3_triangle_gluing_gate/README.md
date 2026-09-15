@@ -94,3 +94,9 @@ unit-distance graph, [arXiv:2010.12665](https://arxiv.org/abs/2010.12665).
 Dúcz and Varga's Snail is from
 [arXiv:2606.28157](https://arxiv.org/abs/2606.28157).  No literature-priority
 claim is made for this finite gluing census.
+
+Discovery Net accepted contribution
+`bafkreiasrejo7vwwsoud46c5flqemxcvgd3gx5joipjejrpzpfy3tj6g2a` for broadcast
+with its two initial relations.  The local committed ledger remained stale at
+height 4,363 (RPC 4,364), so the contribution is pending, not committed, and
+must not be resubmitted merely because it is absent from that index.
