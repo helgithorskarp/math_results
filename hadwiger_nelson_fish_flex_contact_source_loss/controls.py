@@ -50,8 +50,25 @@ def main():
         for _, value in changes:
             path.write_text(json.dumps(value))
             rejected(lambda: verify(path))
+        relation = json.loads((HERE/"relation_certificate.json").read_text())
+        relation_changes = []
+
+        def add_relation(mutate):
+            value = deepcopy(relation)
+            mutate(value)
+            relation_changes.append(value)
+
+        add_relation(lambda c: c.__setitem__("schema", "wrong"))
+        add_relation(lambda c: c["words"].pop(0))
+        add_relation(lambda c: c["words"].__setitem__(0, "0"*23))
+        add_relation(lambda c: c["words"].append(c["words"][0]))
+        relation_path = Path(temporary)/"bad-relation.json"
+        for value in relation_changes:
+            relation_path.write_text(json.dumps(value))
+            rejected(lambda: verify(relation_path=relation_path))
     print(json.dumps({"status": "CONTROLS PASS",
-                      "mathematical_corruptions_rejected": len(changes),
+                      "mathematical_corruptions_rejected":
+                      len(changes)+len(relation_changes),
                       "hash_rejection_used": False}, sort_keys=True))
 
 

@@ -82,12 +82,34 @@ also applies to the physical graph.  The positive word proves that both have
 chromatic number exactly four.  The theorem is strict loss of the set of full
 source assignments, not a statement about a selected terminal projection.
 
-## 5. Trust and limitations
+## 5. Complete two-terminal relation
 
-The exact proof boundary consists of `geometry_certificate.json`, `verify.py`
-and Python's integer/rational arithmetic.  The builder and `mpmath` only
-reproduce the positive certificate.  The eight negative controls are
-author-side robustness tests, not independent peer review or formal proof.
+There are 210 nonedges among the 23 vertices.  The relation certificate lists
+13 proper four-colour words.  The checker first verifies every word on every
+one of the 43 complete physical edges.  For each nonedge `{u,v}`, it then finds
+both truth values of `colour(u)=colour(v)` among those words.  These 420 direct
+positive witnesses prove that every nonedge permits equality and difference.
+Every edge necessarily permits only difference, and at least one listed word
+colours it properly.  Hence the complete two-terminal relation is classified.
+
+The checker also verifies that removing any one of the 13 words destroys the
+coverage of at least one requested state.  This proves only that the displayed
+cover is inclusion-minimal, not minimum-cardinality.
+
+`produce_relation.py` fixes the source edge `(0,1)` to colours `(0,1)`, which
+is without loss under global colour permutation.  It performs an exact
+backtracking search for a positive word for each requested state, then applies
+a deterministic greedy cover and redundant-word deletion.  Since every claim
+is existential, the verifier's direct witness checks are the proof; no
+negative search answer is trusted.
+
+## 6. Trust and limitations
+
+The exact proof boundary consists of `geometry_certificate.json`,
+`relation_certificate.json`, `verify.py` and Python's integer/rational
+arithmetic.  The builders only reproduce positive certificates.  The twelve
+negative controls are author-side robustness tests, not independent peer
+review or formal proof.
 
 No four-colour impossibility is claimed for the 43-edge graph.  In particular,
 the source-loss theorem is not a Hadwiger--Nelson record construction.

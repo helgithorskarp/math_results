@@ -13,6 +13,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 DEFAULT_CERTIFICATE = HERE / "geometry_certificate.json"
+DEFAULT_RELATION = HERE / "relation_certificate.json"
 FIXED = {0: (0, 0), 1: (1, 0)}
 
 
@@ -56,8 +57,9 @@ def three_colour_search(edges):
     return visit(set(range(2, 23))), nodes
 
 
-def verify(path=DEFAULT_CERTIFICATE):
+def verify(path=DEFAULT_CERTIFICATE, relation_path=DEFAULT_RELATION):
     path = Path(path)
+    relation_path = Path(relation_path)
     certificate = json.loads(path.read_text())
     require(certificate["schema"] == "fish-self-contact-root-v1", "schema")
     source_edges = list(map(tuple, certificate["source_edges"]))
@@ -150,10 +152,30 @@ def verify(path=DEFAULT_CERTIFICATE):
     require(not proper(blocked, full_edges), "blocked word survived contact")
     require(proper(surviving, full_edges), "surviving word is improper")
 
+    relation = json.loads(relation_path.read_text())
+    require(relation["schema"] == "fish-contact-pair-cover-v1", "relation schema")
+    require(relation["fixed_edge_colours"] == {"0": 0, "1": 1},
+            "fixed edge colours")
+    words = relation["words"]
+    require(len(words) == len(set(words)) and words, "relation word set")
+    require(all(proper(word, full_edges) for word in words),
+            "improper relation word")
+    nonedges = [pair for pair in combinations(range(23), 2)
+                if pair not in full_edges]
+    for pair in nonedges:
+        states = {words[index][pair[0]] == words[index][pair[1]]
+                  for index in range(len(words))}
+        require(states == {False, True}, f"uncovered nonedge {pair}")
+    for omitted in range(len(words)):
+        require(any(len({words[index][pair[0]] == words[index][pair[1]]
+                         for index in range(len(words)) if index != omitted}) < 2
+                    for pair in nonedges),
+                f"relation word {omitted} is redundant")
+
     graph_rows = [f"{a} {b}" for a, b in full_edges]
     edge_hash = hashlib.sha256(("\n".join(graph_rows)+"\n").encode()).hexdigest()
     return {
-        "status": "EXACT FISH SELF-CONTACT SOURCE-LOSS VERIFIED",
+        "status": "EXACT FISH CONTACT SOURCE-LOSS AND PAIR-NEUTRALITY VERIFIED",
         "vertices": 23,
         "source_edges": len(source_edges),
         "complete_unit_edges": len(full_edges),
@@ -161,6 +183,12 @@ def verify(path=DEFAULT_CERTIFICATE):
         "chromatic_number": 4,
         "blocked_complete_source_colourings_at_least": 1,
         "surviving_complete_source_colourings_at_least": 1,
+        "complete_physical_colour_words": len(words),
+        "nonedges_pair_neutral": len(nonedges),
+        "forced_equal_nonedges": 0,
+        "forced_different_nonedges": 0,
+        "unit_pairs_forced_different": len(full_edges),
+        "relation_cover_inclusion_minimal": True,
         "three_colour_search_nodes": search_nodes,
         "radius": str(radius),
         "beta": str(beta),
@@ -171,6 +199,10 @@ def verify(path=DEFAULT_CERTIFICATE):
         "nonedge_squared_unit_gap_lower": str(minimum_nonedge_gap),
         "edge_stream_sha256": edge_hash,
         "certificate_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+        "relation_certificate_sha256": hashlib.sha256(
+            relation_path.read_bytes()).hexdigest(),
+        "colour_word_stream_sha256": hashlib.sha256(
+            (("\n".join(words))+"\n").encode()).hexdigest(),
     }
 
 
@@ -178,5 +210,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("certificate", nargs="?", type=Path,
                         default=DEFAULT_CERTIFICATE)
+    parser.add_argument("--relation-certificate", type=Path,
+                        default=DEFAULT_RELATION)
     args = parser.parse_args()
-    print(json.dumps(verify(args.certificate), indent=2, sort_keys=True))
+    print(json.dumps(verify(args.certificate, args.relation_certificate),
+                     indent=2, sort_keys=True))
