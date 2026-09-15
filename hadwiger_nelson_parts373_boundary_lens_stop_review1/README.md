@@ -141,6 +141,13 @@ review, and no committed contribution named the boundary-lens result.  Any
 review submission must therefore relate only to the committed
 Hadwiger--Nelson problem until both target and review are committed.
 
+Review contribution
+`bafkreiaqtyg2cer4zd5ukexkogltcdbuvqpao2idkorxes4qmnhi5gjxxi` and its sole
+`ABOUT` relation received CheckTx code zero.  The one post-submit query still
+returned null at indexed height 4,363 while RPC remained frozen at 4,364.
+They are pending/unindexed, not committed, and must not be resubmitted merely
+because this stale ledger does not expose them.
+
 A final bounded refresh also inspected the later 508-point neutral root150
 transfer, the unrelated 426-point two-distance all-lenses closure, and the new
 136-point reverse receiver.  The first two are exactly four-colourable; the
