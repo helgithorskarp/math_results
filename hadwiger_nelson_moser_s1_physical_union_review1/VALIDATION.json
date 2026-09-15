@@ -1,0 +1,52 @@
+{
+  "completed_utc": "2026-09-15T11:55:52Z",
+  "environment": {
+    "kernel": "Linux 6.1.0-52-cloud-amd64 x86_64",
+    "python": "CPython 3.11.2",
+    "witness_generator": "Kissat 4.0.4"
+  },
+  "inputs": {
+    "coordinate_source_commit": "061fb2c248515bf6c7385304d2ea53187de4a44c",
+    "coordinate_source_sha256": "bddb9275204535cccce1d66bd2ad1415040a6807fdffb7902dec31fd57126a98",
+    "review_target_commit": "7adb3cf0dc28ba85931c849001d353b53f01b1a5",
+    "review_target_sha256": "4d7d2e69e02e0e2394cceac36810dd485c75499b69d84176aff35f2e4b7d85af"
+  },
+  "runs": [
+    {
+      "command": "python3 -B verify.py",
+      "elapsed_seconds": 142.654,
+      "exit_code": 0,
+      "result": "EXPECTED.json exact match"
+    },
+    {
+      "command": "python3 -O -B verify.py",
+      "elapsed_seconds": 146.451,
+      "exit_code": 0,
+      "result": "byte-identical to EXPECTED.json pretty-print"
+    },
+    {
+      "command": "python3 -B verify.py --controls",
+      "elapsed_seconds": 157.006,
+      "exit_code": 0,
+      "result": "embedding, colour, point_count and target_colour corruptions rejected"
+    },
+    {
+      "command": "python3 -B generate.py --solver /path/to/kissat --output /tmp/certificate.json",
+      "elapsed_seconds": 152.081,
+      "exit_code": 0,
+      "result": "byte-identical regeneration"
+    }
+  ],
+  "certificate_sha256": "9641a1a297be6d21df73e2436e314c8c06077e697ec809deccb6f14840bb784d",
+  "exact_result": {
+    "embeddings": 70,
+    "physical_point_range": [115, 197],
+    "complete_edge_range": [447, 877],
+    "incidental_edge_range": [0, 74],
+    "unions_with_incidental_edges": 68,
+    "chromatic_number_of_every_union": 4
+  },
+  "floating_point_predicates": 0,
+  "negative_solver_claims": 0,
+  "running_computations": []
+}
