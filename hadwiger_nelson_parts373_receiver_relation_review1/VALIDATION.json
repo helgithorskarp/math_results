@@ -1,0 +1,88 @@
+{
+  "reviewed_at_utc": "2026-09-15T08:36:37Z",
+  "verdict": "accept_with_scope_limitations",
+  "environment": {
+    "python": "CPython 3.11.2",
+    "python_sat": "1.8.dev24",
+    "enumeration_solver": "glucose4",
+    "proof_solver": "CaDiCaL 1.9.5",
+    "proof_checker": "drat-trim"
+  },
+  "independent_geometry_and_witness_replay": {
+    "implementation": "quadratic tower Q(sqrt(3),sqrt(5),sqrt(11)); no target-module imports",
+    "normal_and_optimized_outputs_byte_identical": true,
+    "verification_json_sha256": "7c130a5fa6be507ccb17d7f1475c2a8d12008d71a7be474ca0289cc03e43b526",
+    "all_129286_pairs_checked_exactly": true,
+    "all_positive_words_checked_on_complete_reconstructed_edges": true,
+    "binary_local_truth_tables_exhaustively_checked": true
+  },
+  "independent_binary_proofs": [
+    {
+      "name": "host_completeness_binary",
+      "variables": 746,
+      "clauses": 10234,
+      "cnf_sha256": "ee4adb3c9c69db91ee6bf82e8cdbb95297bb15e82a6fc9e401a7a7032ee2f28b",
+      "cnf_bytes": 694710,
+      "drat_sha256": "b7f6468b8ad0b49312650a9484d2bc9457a8f175f7aabb81186f3b4854bf09f4",
+      "drat_bytes": 10544236,
+      "solver_exit": 20,
+      "checker_exit": 0,
+      "checker_reported_verified": true,
+      "elapsed_seconds": 27.44067086710129
+    },
+    {
+      "name": "parent_binary",
+      "variables": 1018,
+      "clauses": 9770,
+      "cnf_sha256": "17277d4755cd4cc374061d9a6767af4db5febf1625066b357e65cdccaa60a40d",
+      "cnf_bytes": 190530,
+      "drat_sha256": "258c3b9d1715136f54d4b0a94a2cd267388c43cd117d63147943113f4fcc9803",
+      "drat_bytes": 27751061,
+      "solver_exit": 20,
+      "checker_exit": 0,
+      "checker_reported_verified": true,
+      "elapsed_seconds": 83.98317278292961
+    }
+  ],
+  "independent_binary_enumeration": {
+    "status": "COMPLETE_SOLVER_UNSAT",
+    "solver": "glucose4",
+    "canonical_patterns": 468,
+    "frozen_patterns": 468,
+    "exact_set_match": true,
+    "enumerated_sorted_patterns_sha256": "6ccd6bbb2f7ff07c95a3b5264d42696a338a315a602a6fc84e1b4e798358c63a",
+    "elapsed_seconds": 16.24003410199657
+  },
+  "secondary_enumeration": {
+    "solver": "minisat22",
+    "wall_limit_seconds": 300,
+    "status": "INCOMPLETE_WALL_LIMIT",
+    "used_as_evidence": false
+  },
+  "author_certificate_replay": [
+    {
+      "name": "one_hot_host_completeness",
+      "cnf_sha256": "70204a64d82d5675858cb57c0535449a8cb012e70d2cd9da49b69e0ef83fe7a1",
+      "regenerated_cnf_byte_identical": true,
+      "drat_sha256": "ae9898e9ab43e0fc8581549110e8638384edfbb5008196703e77ac1c0d540222",
+      "drat_bytes": 7959061,
+      "checker_reported_verified": true
+    },
+    {
+      "name": "one_hot_parent",
+      "cnf_sha256": "bfad1c1cb96e983bfa83922b63d564da9db3cb9bd36012c15abe89240f227de8",
+      "regenerated_cnf_byte_identical": true,
+      "drat_sha256": "54f27154135601003385b31adc7e38104fed22f7a2450dd62bebb79bd97a62ea",
+      "drat_bytes": 36964030,
+      "checker_reported_verified": true
+    }
+  ],
+  "binary_hashes": {
+    "author_solver_sha256": "19dc7cc71b68d938e707eb0fab422470005616c68afddb0b9b52481e07efa049",
+    "review_solver_sha256": "76eb1ad64c7a3fdb9eca46d21e7c020f2cb7052cad61a53ea8da827f2d7591ed",
+    "review_checker_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+  },
+  "raw_proofs_committed": false,
+  "raw_proofs_preserved_in_authorized_scratch": true,
+  "persistent_computations_running_at_checkpoint": false
+}
