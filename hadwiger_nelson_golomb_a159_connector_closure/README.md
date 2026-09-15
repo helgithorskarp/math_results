@@ -159,3 +159,14 @@ graph](https://arxiv.org/abs/2010.12665) remains the unrestricted record, as
 also stated in [Haugland's August 2026
 revision](https://arxiv.org/html/2608.04542v4).  This restricted connector
 closure is not an order improvement or a global Hadwiger--Nelson bound.
+
+## Verified public provenance
+
+The exact source package was verified after publication at commit
+`d20ddc954a51f1a6c49315a699f7d692cf1ca8d3`; its remote `verify.py` has
+SHA-256
+`9dff7a304e3796681481117ffc7fcad4e51f3a5f4eb09043cc6e3c8ae8365f90`.
+The accompanying Discovery transaction and its uncommitted status are recorded
+in [`DISCOVERY_RECEIPT.json`](DISCOVERY_RECEIPT.json).  CheckTx code zero means
+accepted for broadcast, not committed: the ledger remains indexed at height
+4,363 while the RPC is frozen at 4,364.
