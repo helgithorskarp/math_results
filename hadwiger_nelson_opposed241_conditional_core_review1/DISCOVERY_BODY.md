@@ -23,4 +23,5 @@ The native Parts373 comparison independently gives 137 overlaps, 104 new
 points and a 477-point union, all in E=Q(i sqrt3,i sqrt11). The conclusion
 that this role is four-colorable imports the previously independently
 reviewed whole-field theorem; no receiver relation was queried. Reproducible
-source and limitations: REVIEW_URL_PLACEHOLDER
+source and limitations:
+https://github.com/helgithorskarp/math_results/tree/801445c98ae82e7f67b9e3588eebe0034ca7d80b/hadwiger_nelson_opposed241_conditional_core_review1
