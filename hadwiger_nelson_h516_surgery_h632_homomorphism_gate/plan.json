@@ -1,0 +1,17 @@
+{
+  "claim": "The lexicographically first labelled four-star H516 surgery has no graph homomorphism into the exact 632-point strict unit-distance host H632.",
+  "frozen_before_full_run": true,
+  "image_budget": 508,
+  "input_files": {
+    "hadwiger_nelson_h516_degree4_surgeries/SOURCE.json": "3f60fe94c7cd3d9c70b7cc52124fa185d4b46d54bb59b21bca0c45d2b181fd51",
+    "hadwiger_nelson_heule510_completion_frontier/fresh_candidates.json": "89345930e1bea184ce2457b0e14a015bcd9a2901cfc609a6468cf050234a8317",
+    "hadwiger_nelson_parts509_heule_union_minimum/certificate_H510.json": "bc8e0f5f5ec7fa5f2376cc77ba0e65f6023b340cf48990370d5eda575d30ae79"
+  },
+  "selector": {
+    "anchor": "A source triangle maximizing the sum of its three final-graph degrees, with lexicographic tie-break.",
+    "surgery": "The first compatible four-centre tuple, then the first lexicographic allowed neighbour pair at each centre. Centres, tuples, and pairs are ordered increasingly by original H632 labels.",
+    "target_images": "Every permutation of every increasing target triangle in the complete exact H632 strict unit graph."
+  },
+  "stopping_rule": "Stop and retire this frozen source-host pair after complete anchored arc-consistency closure, any surviving anchored family without a separately declared finite decision, or an exact homomorphism.",
+  "target_record_order": 508
+}

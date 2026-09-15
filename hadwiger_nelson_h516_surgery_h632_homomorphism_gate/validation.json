@@ -1,0 +1,24 @@
+{
+  "certificate_bytes": 1650,
+  "certificate_sha256": "1cb3f667b14fe7636ab410bf7ef50e68210ca2daad17febf5f3438dda710bdb8",
+  "commands": [
+    {
+      "command": "python3 -B produce.py --output /tmp/r3-h516-h632-cert2.json; cmp generated certificate.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 -B verify.py --controls --output /tmp/r3-h516-h632-normal.json; cmp expected.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 -O -B verify.py --controls --output /tmp/r3-h516-h632-optimized.json; cmp expected.json",
+      "exit_code": 0
+    }
+  ],
+  "expected_bytes": 512,
+  "expected_sha256": "5878a5b80d0a0ffa5c9aaefd7988b3384afd6d2aac6c1de46c48e086236b4994",
+  "normal_optimized_outputs_identical": true,
+  "platform": "Linux 6.1.0-52-cloud-amd64 x86_64 GNU/Linux",
+  "python": "3.11.2",
+  "timestamp_utc": "2026-09-15T01:51:28Z"
+}
