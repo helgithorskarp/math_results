@@ -1,0 +1,33 @@
+{
+  "schema": "discovery-receipt-v1",
+  "mathematical_commit": "beab314a6e106e524d6cbdcd26d26e785e0c5e7f",
+  "ledger_indexed_height": 4363,
+  "rpc_height": 4364,
+  "rpc_last_block_time": "2026-09-11T02:40:58.067131057Z",
+  "active_corrected_submission": {
+    "contribution_ref": "bafkreigyjdefjtagibdgcsyvzz2w3qvxcjur4dradoxvcb5e2drbw6nxpe",
+    "about_relation_ref": "bafkreigfwx66hvqbyu7oz6sujnigco5cjj4g2sjwxlfmlk7jxl3jlpp6ta",
+    "transaction_hash": "F1FF58A8008C1489CDB24B4A652DF02A8E7B8D21CA4F44429127B5DD4830094C",
+    "check_tx_code": 0,
+    "accepted_for_broadcast": true,
+    "committed": false
+  },
+  "superseded_malformed_link_submission": {
+    "contribution_ref": "bafkreid72m3agm3qepszihruk57svinkt5bq54cvolarmaoktcaz4binnq",
+    "about_relation_ref": "bafkreigtu4gadbghbbtdgu455bigf6rehcko2wzwqaonm33pughc67b4ri",
+    "transaction_hash": "624852A4B88F12E3C04028A873BD642176F45ADC1A7C54D34BE4CB369E61BDB1",
+    "check_tx_code": 0,
+    "accepted_for_broadcast": true,
+    "committed": false,
+    "defect": "The mathematical text is correct, but the pinned GitHub commit hash in the body was mistyped. Use the active corrected submission."
+  },
+  "rejected_correction_relation_attempt": {
+    "contribution_ref": "bafkreighemhlpzu3grhyfvbkhaxzpktn7ynt34fh3vk4fweqjexxfrgchy",
+    "transaction_hash": "0E2A80AF3917D22E550A40E234C1CE6B24820E30F8E8524BF14E2EE089731AA3",
+    "check_tx_code": 5,
+    "accepted_for_broadcast": false,
+    "committed": false,
+    "note": "Attempted to refine the uncommitted first artifact; rejected because the target was not indexed. This transaction is neither pending nor committed."
+  },
+  "discipline": "Do not resubmit any of these transactions merely because the ledger remains stale."
+}
