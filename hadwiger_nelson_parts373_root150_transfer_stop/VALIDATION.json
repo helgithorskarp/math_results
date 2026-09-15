@@ -1,0 +1,55 @@
+{
+  "runs": [
+    {
+      "name": "normal",
+      "command": [
+        "python3",
+        "-B",
+        "verify.py"
+      ],
+      "seconds": 1.8482234477996826,
+      "exit": 0
+    },
+    {
+      "name": "optimized",
+      "command": [
+        "python3",
+        "-O",
+        "-B",
+        "verify.py"
+      ],
+      "seconds": 1.9665257930755615,
+      "exit": 0
+    },
+    {
+      "name": "controls",
+      "command": [
+        "python3",
+        "-B",
+        "controls.py"
+      ],
+      "seconds": 6.779154300689697,
+      "exit": 0
+    }
+  ],
+  "normal_optimized_equal": true,
+  "producer_subset_mask_and_checker_sparse_radical_all_distances_agree": true,
+  "controls": {
+    "status": "CONTROLS_PASS",
+    "damaged_certificates_rejected": [
+      {
+        "mutation": "new_internal_edge_colour",
+        "rejected_by": "proper all-edge colouring"
+      },
+      {
+        "mutation": "receiving_word",
+        "rejected_by": "frozen boundary word"
+      },
+      {
+        "mutation": "invented_extra_contact",
+        "rejected_by": "expected exact result"
+      }
+    ]
+  },
+  "solver_required": false
+}
