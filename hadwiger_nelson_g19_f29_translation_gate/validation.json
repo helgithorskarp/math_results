@@ -1,0 +1,67 @@
+{
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "verify.py",
+        "--check-expected"
+      ],
+      "elapsed_seconds": 1.041202230961062,
+      "name": "normal",
+      "stdout_sha256": "8affc29a711619229440c32552e55a122064ffbbb955c5b07b83bbab84e92d75"
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "-B",
+        "verify.py",
+        "--check-expected"
+      ],
+      "elapsed_seconds": 1.2091639550635591,
+      "name": "optimized",
+      "stdout_sha256": "8affc29a711619229440c32552e55a122064ffbbb955c5b07b83bbab84e92d75"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "produce.py",
+        "--out",
+        "/tmp/g19-f29-fresh.json"
+      ],
+      "elapsed_seconds": 0.27951667504385114,
+      "name": "regenerate",
+      "stdout_sha256": "716950bd219fcb0aa9aeaafeb6bc7f834968580cd1bb888a2da64a8508bfa787"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "controls.py"
+      ],
+      "elapsed_seconds": 5.918576940894127,
+      "name": "controls",
+      "stdout_sha256": "b7bc8c668aac80dbf3fe975a3054305abada55786af992d5f63c1ea6e00258eb"
+    }
+  ],
+  "controls": {
+    "entrywise_distance_comparisons": 990,
+    "rejected_mutations": [
+      "coordinate",
+      "collision",
+      "missing_only_new_contact",
+      "improper_five_word",
+      "lost_contact_flexibility",
+      "bad_shared_triangle"
+    ],
+    "status": "CONTROLS_PASS"
+  },
+  "native_solver_calls": 0,
+  "normal_optimized_identical": true,
+  "omitted_artifacts": false,
+  "python": "3.11.2",
+  "regeneration_byte_identical": true,
+  "trust_boundary": "Exact rational arithmetic, quadratic-tower basis argument, explicit universal extension proof, ordinary hardware. Author verification; this new attachment has no independent review."
+}

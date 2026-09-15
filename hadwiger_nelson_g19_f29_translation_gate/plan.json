@@ -1,0 +1,32 @@
+{
+  "pass_number": 80,
+  "lane_pass": 33,
+  "started_utc": "2026-09-15T03:49:34+00:00",
+  "status": "frozen_one_exact_driver",
+  "lane": "heterogeneous physical relation amplification",
+  "architecture": "Union of the fixed G19 private bridge with native F29 translated by +i; no other isometry, source or copy variant.",
+  "sources": [
+    "G19 source 2e26eadaa928d089c86462f567e3e29dfa9f0511",
+    "native F29 in frozen_centre_transfer/points.tsv"
+  ],
+  "raw_label_budget": 48,
+  "anticipated_shared_triangle": "F29 vertices 0,25,28 translated to G19 vertices 11,15,16; any additional collisions will be reconstructed exactly",
+  "input_rationale": "The certified F29 centre requires at least three colours on its neighbour set; translation introduces this forcing at G19 private/P8 vertices. Geometry and full relation must determine whether it amplifies the source.",
+  "terminals": [
+    7,
+    8,
+    9,
+    10,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "baseline": "Compare the complete projected relation of G19, the merged inherited-edge union, and the full strict unit graph. Shared-vertex constraints included in baseline.",
+  "finite_decision": "All 43,947 canonical ten-terminal patterns in four colours; restrict to 11,624 source-allowed patterns. Exact finite colouring or a universal checked extension table can decide the full relation.",
+  "stop": "Unchanged relation, failed geometry or cap, unshrunk UNKNOWN. No phase/copy/seed continuation after a neutral result.",
+  "primary_approach": "math-approach-computer-assisted",
+  "running_jobs": []
+}
