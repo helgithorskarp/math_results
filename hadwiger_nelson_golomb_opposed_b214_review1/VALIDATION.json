@@ -1,0 +1,49 @@
+{
+  "generated_utc": "2026-09-15T15:33:17Z",
+  "platform": {
+    "kernel": "Linux 6.1.0-52-cloud-amd64 x86_64 GNU/Linux",
+    "python": "3.11.2"
+  },
+  "review_runs": [
+    {
+      "command": "python3 -B verify.py --check-expected",
+      "elapsed_seconds": 4.474,
+      "result": "PASS"
+    },
+    {
+      "command": "python3 -O -B verify.py --check-expected",
+      "elapsed_seconds": 4.735,
+      "result": "PASS"
+    },
+    {
+      "command": "cmp normal.json optimized.json",
+      "result": "BYTE_IDENTICAL"
+    },
+    {
+      "command": "python3 -B controls.py",
+      "elapsed_seconds": 5.182,
+      "result": "PASS"
+    }
+  ],
+  "controls": {
+    "baseline_passed": true,
+    "colour_corruption_rejected": true,
+    "corrupted_first_rup_lemma_rejected": true,
+    "cut_structure_controls": 2,
+    "hash_corruption_rejected": true,
+    "radical_product_oracle_cases": 6561,
+    "rup_oracle_cases": 10240
+  },
+  "target_replay": {
+    "normal_seconds": 4.600,
+    "optimized_seconds": 4.714,
+    "outputs_byte_identical": true,
+    "manifest_passed": true
+  },
+  "method": {
+    "external_solver": false,
+    "floating_point_geometry": false,
+    "parallel_jobs": 1,
+    "proof_system": "RUP replay by independent occurrence-count propagation"
+  }
+}
