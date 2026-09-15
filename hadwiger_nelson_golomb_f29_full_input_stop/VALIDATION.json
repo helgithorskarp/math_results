@@ -1,0 +1,29 @@
+{
+  "python": "Python 3.11.2",
+  "checks": [
+    {
+      "check": "normal",
+      "passed": true,
+      "elapsed_seconds": 0.1275
+    },
+    {
+      "check": "optimized",
+      "passed": true,
+      "elapsed_seconds": 0.2596
+    },
+    {
+      "check": "controls",
+      "passed": true,
+      "elapsed_seconds": 0.1942
+    },
+    {
+      "check": "producer",
+      "passed": true,
+      "elapsed_seconds": 0.2052
+    }
+  ],
+  "complete_certificate_byte_identity": true,
+  "independent_paths": "Producer: complex rotations in a flat rational sqrt3/sqrt11 basis plus DSATUR. Verifier: directly expanded integer-coordinate map, exact two-coefficient norm, literal-order exhaustive 4^7 source assignments plus positive extension words.",
+  "trust_boundary": "Author-side arithmetic and finite enumeration; no independent-author review, floating point, SAT or UNSAT backend premise.",
+  "development_correction": "An initial handwritten imaginary-coordinate expansion used two incorrect multipliers. Collision-map comparison rejected it before validation or publication. The corrected expansion agrees entrywise with the separate complex-product construction and complete certificate."
+}
