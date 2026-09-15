@@ -1,0 +1,63 @@
+{
+  "generated_utc": "2026-09-15T14:37:58Z",
+  "platform": {
+    "kernel": "Linux 6.1.0-52-cloud-amd64 x86_64 GNU/Linux",
+    "python": "3.11.2"
+  },
+  "review_runs": [
+    {
+      "command": "python3 -B verify.py --check-expected",
+      "elapsed_seconds": 16.367,
+      "result": "PASS"
+    },
+    {
+      "command": "python3 -O -B verify.py --check-expected",
+      "elapsed_seconds": 16.626,
+      "result": "PASS"
+    },
+    {
+      "command": "cmp normal.json optimized.json",
+      "result": "BYTE_IDENTICAL"
+    },
+    {
+      "command": "python3 -B controls.py",
+      "elapsed_seconds": 18.597,
+      "result": "PASS"
+    },
+    {
+      "command": "ast.parse verify.py controls.py; json.load certificate.json EXPECTED.json",
+      "result": "PASS"
+    }
+  ],
+  "controls": {
+    "colour_corruption_rejected": true,
+    "double_triangle_supports": 1401,
+    "five_vertex_edge_masks_checked": 1024,
+    "independent_family_enumerators_agree": true,
+    "input_hash_corruption_rejected": true,
+    "pool_unit_triangles": 625,
+    "quartic_square_oracle_cases": 6561,
+    "valid_baseline_passed": true
+  },
+  "target_replay": {
+    "commands": [
+      "python3 -B verify.py",
+      "python3 -O -B verify.py",
+      "python3 -B verify.py --emit <temporary-directory>"
+    ],
+    "elapsed_seconds": [
+      2.187,
+      2.353,
+      2.240
+    ],
+    "outputs_byte_identical": true,
+    "temporary_emitted_geometry_bytes": 43937,
+    "temporary_output_published": false
+  },
+  "method": {
+    "external_solver": false,
+    "floating_point_geometry": false,
+    "probabilistic_filter": false,
+    "parallel_jobs": 1
+  }
+}
