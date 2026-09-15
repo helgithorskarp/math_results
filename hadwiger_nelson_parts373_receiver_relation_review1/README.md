@@ -176,6 +176,14 @@ for broadcast but remained absent from the stale local committed view during
 this review, so it is described as **pending/unindexed**, not committed, and
 was not resubmitted.
 
+This review's own Discovery contribution is
+`bafkreibq4vwdyunex63nkmddwdud3z2in3b7smwnmwbix3g6mjbryxv5lq`.  Its
+CheckTx code was 0, but it too remained absent from the stale committed view
+and is therefore only **pending/unindexed**.  Its sole initial graph relation
+is `ABOUT` the committed Hadwiger--Nelson problem.  No `VERIFIES` edge was
+asserted to the uncommitted target; `DISCOVERY_RECEIPT.json` preserves the
+receipt and prevents accidental resubmission.
+
 Committed Discovery evidence at height 4,363 includes the earlier Parts509
 20-class interface result and its independent accepting review.  That review
 did not check an unrelated 66,332-pattern side census, but the present
