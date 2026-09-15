@@ -1,0 +1,27 @@
+{
+  "checks": [
+    {
+      "command": ".venv/bin/python -B independent_check.py --check-expected",
+      "exit_code": 0,
+      "stdout_sha256": "6ba4ed4b21ddae5d3d57ce2a5f6b4c02a3ba1783c184d0d7fc78d3aa526b238d"
+    },
+    {
+      "command": ".venv/bin/python -O -B independent_check.py --check-expected",
+      "exit_code": 0,
+      "stdout_sha256": "6ba4ed4b21ddae5d3d57ce2a5f6b4c02a3ba1783c184d0d7fc78d3aa526b238d"
+    },
+    {
+      "command": ".venv/bin/python -B controls.py --check-expected",
+      "exit_code": 0,
+      "stdout_sha256": "a7cdee4e8c8c6f4571913ae198597522af53cfe085039fefb7daafe2fe5edb5c"
+    }
+  ],
+  "normal_optimized_identical": true,
+  "omitted_artifacts": false,
+  "requirements": {
+    "python": ">=3.11",
+    "sympy": "1.14.0"
+  },
+  "source_commit": "039ba6658345ebff92846ff1616004174c1857c3",
+  "trust_boundary": "SymPy exact algebraic-number and rational arithmetic, a directly inspectable exhaustive backtracker, Python, and ordinary hardware; no external solver or numerical tolerance."
+}
