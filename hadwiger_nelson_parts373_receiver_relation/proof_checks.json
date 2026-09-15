@@ -1,0 +1,37 @@
+{
+  "proof_format": "binary DRAT",
+  "solver": "CaDiCaL 1.9.5",
+  "enumerator": "python-sat 1.8.dev24 / cadical195",
+  "checker": "drat-trim",
+  "verification": "both independent checks exited0 and printed s VERIFIED",
+  "solver_limit_seconds_per_instance": 180,
+  "checker_limit_seconds_per_instance": 180,
+  "proofs": [
+    {
+      "name": "completeness",
+      "solver_exit": 20,
+      "checker_exit": 0,
+      "seconds": 9.664436646969989,
+      "verified": true,
+      "cnf_sha256": "70204a64d82d5675858cb57c0535449a8cb012e70d2cd9da49b69e0ef83fe7a1",
+      "cnf_bytes": 488989,
+      "drat_sha256": "ae9898e9ab43e0fc8581549110e8638384edfbb5008196703e77ac1c0d540222",
+      "drat_bytes": 7959061
+    },
+    {
+      "name": "parent",
+      "solver_exit": 20,
+      "checker_exit": 0,
+      "seconds": 72.29107421298977,
+      "verified": true,
+      "cnf_sha256": "bfad1c1cb96e983bfa83922b63d564da9db3cb9bd36012c15abe89240f227de8",
+      "cnf_bytes": 173825,
+      "drat_sha256": "54f27154135601003385b31adc7e38104fed22f7a2450dd62bebb79bd97a62ea",
+      "drat_bytes": 36964030
+    }
+  ],
+  "raw_proofs_committed": false,
+  "raw_proof_policy": "Bulky proof traces retained in authorized scratch; exact CNF regeneration and proof replay via verify.py and certify.py.",
+  "solver_binary_sha256": "19dc7cc71b68d938e707eb0fab422470005616c68afddb0b9b52481e07efa049",
+  "checker_binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+}
