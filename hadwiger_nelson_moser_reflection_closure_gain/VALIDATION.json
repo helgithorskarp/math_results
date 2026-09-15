@@ -1,0 +1,21 @@
+{
+  "date_utc": "2026-09-15",
+  "python": "CPython 3.11.2",
+  "normal": {
+    "command": "python3 -B verify.py --certificate certificate.json --check-expected --controls",
+    "wall_seconds": 3.035,
+    "status": "PASS"
+  },
+  "optimized": {
+    "command": "python3 -O -B verify.py --certificate certificate.json --check-expected --controls",
+    "wall_seconds": 3.188,
+    "status": "PASS"
+  },
+  "normal_optimized_stdout_identical": true,
+  "fresh_production_byte_identical": true,
+  "corruptions_rejected": 3,
+  "solver_calls_in_verifier": 0,
+  "floating_point_predicates": 0,
+  "hidden_artifacts": 0,
+  "review_status": "author-side exact validation; independent review not yet performed"
+}
