@@ -1,0 +1,21 @@
+{
+  "commands": [
+    "python3 -B hadwiger_nelson_fish_flex_contact_review1/verify.py --check-expected",
+    "python3 -B hadwiger_nelson_flex_fish_difference_fourcolour_stop/verify.py",
+    "python3 -O -B hadwiger_nelson_flex_fish_difference_fourcolour_stop/verify.py",
+    "python3 -B hadwiger_nelson_flex_fish_difference_fourcolour_stop/controls.py",
+    "python3 -B hadwiger_nelson_flex_fish_difference_fourcolour_review1/verify.py --check-expected",
+    "python3 -O -B hadwiger_nelson_flex_fish_difference_fourcolour_review1/verify.py --check-expected",
+    "python3 -B hadwiger_nelson_flex_fish_difference_fourcolour_review1/controls.py",
+    "sha256sum -c hadwiger_nelson_flex_fish_difference_fourcolour_review1/SHA256SUMS"
+  ],
+  "controls": {
+    "certificate_corruptions_rejected": 4,
+    "colouring_engine_comparisons": 1024,
+    "interval_sample_checks": 8235
+  },
+  "exact_arithmetic": "Python integers and fractions.Fraction only",
+  "python_minimum": "3.11",
+  "target_mathematical_commit": "a0630a216e1b10f00ccb342fe1d76a1eb94fc173",
+  "target_replays_agree": true
+}
