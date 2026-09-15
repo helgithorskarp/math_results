@@ -74,7 +74,8 @@ four independent field inverses, and three malformed colour words.
 
 Public source:
 <https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_pegg12_reflection_completion_review1>.
-The verified mathematical commit is recorded after the initial local commit.
+Verified mathematical commit:
+`9bb103a252a0001ce29e83d26c90298f336c0e06`.
 
 ## Scope and trust boundary
 

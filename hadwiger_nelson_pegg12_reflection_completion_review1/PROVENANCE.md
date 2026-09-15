@@ -51,4 +51,4 @@ this numerical comparison or trust Shibuya's floating-point predicates.
 
 Review host: CPython 3.11.2 on Linux. No third-party package is required for
 the published checker. Mathematical review commit:
-`MATHEMATICAL_COMMIT_TO_BE_RECORDED`.
+`9bb103a252a0001ce29e83d26c90298f336c0e06`.
