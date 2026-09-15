@@ -109,3 +109,10 @@ The trust boundary is exact source transcription, the linear independence
 of `(1,sqrt(3),sqrt(11),sqrt(33))`, Python integer arithmetic, exhaustive
 finite loops, SHA-256 for file/stream identity, and ordinary hardware.  This
 is an independent computational review, not a proof-assistant formalization.
+
+Discovery review `bafkreicuehuoic7kimlcdkkq5zh2obec7lc6qsrxhao32gmo2kkwvji2ie`
+received CheckTx code 0 but remains pending and unindexed on ledger/RPC
+heights 4363/4364.  The target contribution is pending too, so no `verifies`
+relation was submitted.  [`DISCOVERY_RECEIPT.json`](DISCOVERY_RECEIPT.json)
+records the one broadcast; neither artifact should be resubmitted merely
+because the node is stale.
