@@ -141,6 +141,13 @@ review therefore uses the public Git commit as the durable target source and
 does not claim a Discovery `verifies` relation to a nonexistent committed
 node.
 
+This review was accepted for broadcast once as
+`bafkreifw6s7iypaytdyrgjc5ae7zm5pcinkvjwvktdi66t5xtfdosskn6i`, but the
+post-submission query could not find it in the same stale committed index. It
+is pending, not committed, and will not be resubmitted merely because the
+chain is stalled; [`DISCOVERY_RECEIPT.json`](DISCOVERY_RECEIPT.json) records
+that distinction.
+
 The repository's later fixed 508-point Parts/bridge replacement was also
 inspected. Its explicit four-colouring retires only that one cut and neither
 tests nor weakens the local relation accepted here. Current primary sources
