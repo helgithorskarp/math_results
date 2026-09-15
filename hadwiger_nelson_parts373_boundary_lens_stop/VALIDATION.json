@@ -1,0 +1,68 @@
+{
+  "runs": [
+    {
+      "name": "normal",
+      "command": [
+        "python3",
+        "-B",
+        "verify.py"
+      ],
+      "exit": 0,
+      "seconds": 1.2015156745910645
+    },
+    {
+      "name": "optimized",
+      "command": [
+        "python3",
+        "-O",
+        "-B",
+        "verify.py"
+      ],
+      "exit": 0,
+      "seconds": 1.3452937602996826
+    },
+    {
+      "name": "precision192",
+      "command": [
+        "python3",
+        "-B",
+        "verify.py",
+        "--bits",
+        "192"
+      ],
+      "exit": 0,
+      "seconds": 1.2504265308380127
+    },
+    {
+      "name": "controls",
+      "command": [
+        "python3",
+        "-B",
+        "controls.py"
+      ],
+      "exit": 0,
+      "seconds": 4.395188331604004
+    }
+  ],
+  "normal_optimized_precision192_agree": true,
+  "solver_needed": false,
+  "controls": {
+    "status": "CONTROLS_PASS",
+    "dependent_radical_cases": 2,
+    "false_root_branch_rejected": true,
+    "certificate_corruptions_rejected": [
+      {
+        "mutation": "new_vertex_edge_colour",
+        "rejection": "all physical unit edges properly coloured"
+      },
+      {
+        "mutation": "boundary_word",
+        "rejection": "exact receiving boundary word"
+      },
+      {
+        "mutation": "physical_count",
+        "rejection": "expected exact census"
+      }
+    ]
+  }
+}
