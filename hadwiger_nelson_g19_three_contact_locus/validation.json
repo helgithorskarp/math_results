@@ -1,0 +1,83 @@
+{
+  "CNF_regeneration_byte_identical": true,
+  "certificate_regeneration_byte_identical": true,
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "verify.py",
+        "--check-expected"
+      ],
+      "elapsed_seconds": 1.4378018459537998,
+      "name": "normal",
+      "stdout_sha256": "e0aaf2fbc8725ed1d2999e3274fc1243b16010fdb40aaf9de0c6ef51317396b6"
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "-B",
+        "verify.py",
+        "--check-expected"
+      ],
+      "elapsed_seconds": 1.6184194879606366,
+      "name": "optimized",
+      "stdout_sha256": "e0aaf2fbc8725ed1d2999e3274fc1243b16010fdb40aaf9de0c6ef51317396b6"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "produce.py",
+        "--out",
+        "/tmp/g19-locus-fresh.json",
+        "--cnf",
+        "/tmp/g19-locus.cnf"
+      ],
+      "elapsed_seconds": 0.8813625980401412,
+      "name": "regenerate",
+      "stdout_sha256": "e252f99805ac5b5c09e457780b1e0fe48610bb3d6caa38fb67dedfe9b9db5bd7"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "controls.py"
+      ],
+      "elapsed_seconds": 7.401460264925845,
+      "name": "controls",
+      "stdout_sha256": "ea8324ca21ff0040727232803835890a297ed5764e2c065cd10f7a5f51462b5a"
+    }
+  ],
+  "controls": {
+    "independent_Gram_determinant_rows": 969,
+    "independent_distance_rows": 210,
+    "independent_point_rows": 19,
+    "rejected_mutations": [
+      "wrong_external_centre",
+      "missing_new_contact",
+      "incorrect_radius_census",
+      "improper_extension_word",
+      "missing_centre_multiplicity"
+    ],
+    "status": "CONTROLS_PASS"
+  },
+  "initial_solver_probe": {
+    "cnf_sha256": "7d1c3c379e53f4489e5a2a9379ef66adce8ae55828e75e9b6bc3d745fdbe63d4",
+    "command": [
+      "kissat",
+      "--time=120",
+      "--conflicts=1000000",
+      "/tmp/g19-locus.cnf",
+      "/tmp/g19-locus.drat"
+    ],
+    "elapsed_seconds": 0.003463868983089924,
+    "returncode": 10,
+    "solver_sha256": "8664d542108e494c8aebc90e762d7e719c63b556506a65f0c6ff7c9c6bc5c15b"
+  },
+  "normal_optimized_identical": true,
+  "python": "3.11.2",
+  "solver_required_for_verification": false,
+  "trust_boundary": "Exact degree-eight field argument, complete triple enumeration, circumcentre uniqueness and elementary colour extension. Author verification, not independent review or formalization."
+}
