@@ -1,0 +1,49 @@
+{
+  "audit": {
+    "parameters": {
+      "distinct_charts": 66,
+      "distinct_real_parameters": 340,
+      "status": "PASS"
+    },
+    "provenance": {
+      "asymmetric_pairs": 64,
+      "pinned_residual_checked": true,
+      "status": "PASS"
+    }
+  },
+  "checker": {
+    "elapsed_seconds": 905.7274482600624,
+    "expected_summary_entrywise_equal": true,
+    "method": "resultant/quotient-field gcd coverage and direct Cartesian all-pairs distances",
+    "mode": "python -O -B",
+    "workers": 2
+  },
+  "compact_projection": {
+    "all_other_fields_entrywise_equal": true,
+    "compact_bytes": 130446,
+    "compact_sha256": "b633c50f5a21be5f808c5fc9c772ce1d81475e45349aa1de749169f8d4e4bb47",
+    "full_bytes": 2804998,
+    "full_sha256": "0df345712dee05f6299259fa1676f4d55037c525fb1af14d9fc5a85df42a3709",
+    "removed_fields": [
+      "x",
+      "y"
+    ],
+    "status": "PASS"
+  },
+  "completed_utc": "2026-09-15T23:15:47.099004+00:00",
+  "controls_normal_and_optimized": {
+    "elementary_complete_graphs": 3,
+    "exact_root_cover_cases": 6,
+    "semantic_corruptions_rejected": 8,
+    "status": "PASS"
+  },
+  "floating_predicates_used": false,
+  "independently_peer_reviewed": false,
+  "producer": {
+    "elapsed_seconds": 611.159,
+    "method": "lexicographic Groebner decomposition and event-owned edges",
+    "workers": 2
+  },
+  "sat_unsat_claims_used": false,
+  "status": "PASS"
+}
