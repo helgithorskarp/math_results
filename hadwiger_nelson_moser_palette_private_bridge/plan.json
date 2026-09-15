@@ -1,0 +1,20 @@
+{
+  "architecture": "Place P1 at M0+i and P2 at M3+i, preserving P8 orientation with rotation u=-(sqrt(3)+i)/2. Full P8 points transformed by z -> i + u*(z-P1). Moser frame unchanged.",
+  "baseline": "Full projected four-colour relation of the merged graph retaining only inherited component edges; all shared vertices already identified. A gain attributable solely to new terminal-terminal unit edges will be reported separately.",
+  "exact_rotation_norm": 1,
+  "gate": "Reconstruct all points and all pairs exactly first, then require a strictly smaller complete four-colour projection and check a proper five-colouring. Stop on unchanged relation, impossible geometry, cap loss or unshrunk UNKNOWN.",
+  "lane": "heterogeneous physical relation amplification",
+  "no_variants": "One exact frame only; no phase, copy-count, driver or source sweep.",
+  "prescribed_new_contacts": [
+    "M0-P1",
+    "M3-P2"
+  ],
+  "primary_approach": "math-approach-computer-assisted",
+  "projected_interface": "four Moser terminals plus six P8 terminals, with physical collisions merged",
+  "raw_label_budget": 19,
+  "sources": [
+    "reviewed Moser11",
+    "reviewed eight-point P8 palette core, no deleted caps"
+  ],
+  "started_utc": "2026-09-15T02:38:11+00:00"
+}

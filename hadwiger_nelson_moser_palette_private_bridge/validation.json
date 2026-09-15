@@ -1,0 +1,59 @@
+{
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "verify.py",
+        "--check-expected"
+      ],
+      "elapsed_seconds": 3.735193722997792,
+      "name": "normal",
+      "output_sha256": "3410822c553d2145483725dd661274b812e69e0fd6c10354f7ee136632129d0d"
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "-B",
+        "verify.py",
+        "--check-expected"
+      ],
+      "elapsed_seconds": 3.861850360990502,
+      "name": "optimized",
+      "output_sha256": "3410822c553d2145483725dd661274b812e69e0fd6c10354f7ee136632129d0d"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "produce.py",
+        "--out",
+        "/tmp/fresh-private-bridge.json"
+      ],
+      "elapsed_seconds": 2.8905415859771892,
+      "name": "regeneration",
+      "output_sha256": "c190bae7f28341c978c965a76921f5f34fcec2ce84fd1b7580d396d9ccd4f989"
+    }
+  ],
+  "complete_truth_stream_equal": true,
+  "controls": {
+    "complete_edges_compared_entrywise": 34,
+    "norm_pairs_compared_entrywise": 171,
+    "point_rows_compared_entrywise": 19,
+    "rejected_mutations": [
+      "coordinate",
+      "collision",
+      "missing_cross_contact",
+      "improper_five_word",
+      "terminal_order",
+      "overstated_relation"
+    ]
+  },
+  "native_solver_calls": 0,
+  "normal_optimized_equal": true,
+  "python": "3.11.2",
+  "regeneration_byte_identical": true,
+  "source_geometry_compared_entrywise": true,
+  "trust_boundary": "Exact Python rational/integer arithmetic, degree-eight field argument, complete named enumeration and written colour elimination. Author verification, not independent external review or formalization."
+}
