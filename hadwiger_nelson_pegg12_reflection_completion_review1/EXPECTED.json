@@ -1,0 +1,172 @@
+{
+  "all_axes": {
+    "census": [
+      {
+        "axes": 3,
+        "blocked_inputs": 0,
+        "collision_classes": 12,
+        "points": 12,
+        "private_edges": 0
+      },
+      {
+        "axes": 6,
+        "blocked_inputs": 136,
+        "collision_classes": 6,
+        "points": 18,
+        "private_edges": 0
+      },
+      {
+        "axes": 3,
+        "blocked_inputs": 0,
+        "collision_classes": 4,
+        "points": 20,
+        "private_edges": 0
+      },
+      {
+        "axes": 18,
+        "blocked_inputs": 0,
+        "collision_classes": 2,
+        "points": 22,
+        "private_edges": 0
+      },
+      {
+        "axes": 12,
+        "blocked_inputs": 0,
+        "collision_classes": 2,
+        "points": 22,
+        "private_edges": 2
+      },
+      {
+        "axes": 6,
+        "blocked_inputs": 0,
+        "collision_classes": 2,
+        "points": 22,
+        "private_edges": 4
+      },
+      {
+        "axes": 6,
+        "blocked_inputs": 136,
+        "collision_classes": 2,
+        "points": 22,
+        "private_edges": 4
+      },
+      {
+        "axes": 12,
+        "blocked_inputs": 136,
+        "collision_classes": 2,
+        "points": 22,
+        "private_edges": 8
+      }
+    ],
+    "census_sha256": "f625f8ed98c5825652eea0d774ade500d5545dabede4084612567fd5fe59bd35",
+    "checked_axes": 66,
+    "private_contact_and_loss_axes": 18,
+    "selected_axes_exact": true
+  },
+  "checker": "independent radicand/conjugate-norm and labelled-colouring census",
+  "full_completion": {
+    "axes": 18,
+    "chromatic_number": 4,
+    "collision_classes": 27,
+    "collision_size_histogram": {
+      "2": 12,
+      "3": 6,
+      "5": 6,
+      "6": 3
+    },
+    "complete_unit_edges": 597,
+    "coordinate_sha256": "33f7d2a5d803b3031f0b53a04dc6b41dd1f2f424f8d358766e25e59369f01fcd",
+    "edge_sha256": "49a7798a4973a994017d044fee5a9a989065cf76e7dbd89a89749cbdbae87fc4",
+    "four_colour_word_sha256": "0d9895688ba451c723a3daf7b82fd0c3ddf4f6556e09d5fb820b8a40849a2b93",
+    "points": 165,
+    "selected_relation_sha256": "d3d1755a01251ce4c058325028d886eeeb7ad2492aeb615aa71f822b8b9ed8cb"
+  },
+  "record_candidate": false,
+  "scope": "one exact Pegg12 realization, its 66 source-pair reflection axes, and the fixed union of the 18 private-contact loss axes",
+  "single_axis": {
+    "axis": [
+      0,
+      6
+    ],
+    "blocked_inputs": 136,
+    "complete_unit_edges": 50,
+    "coordinate_sha256": "f2694ce84e79c018b93f3f2988847ca99de3ef7a2ef2ab6a7b44ae1f6a4f03a7",
+    "critical_private_edges": [
+      [
+        2,
+        17
+      ],
+      [
+        4,
+        17
+      ],
+      [
+        11,
+        17
+      ]
+    ],
+    "edge_sha256": "1f3861c4b97f41dc695f37a27a6d8d1e45724eb7ca480566cdd10c5acd43fb03",
+    "generated_extension_sha256": "a60d601eaf80ec3725abb8b36ae168ea9b3b8ec3c08cff024635bc6c113f0e83",
+    "overlap_pairs": [
+      [
+        0,
+        0
+      ],
+      [
+        6,
+        6
+      ]
+    ],
+    "points": 22,
+    "private_edges": [
+      [
+        1,
+        12
+      ],
+      [
+        2,
+        17
+      ],
+      [
+        4,
+        17
+      ],
+      [
+        7,
+        13
+      ],
+      [
+        7,
+        15
+      ],
+      [
+        7,
+        21
+      ],
+      [
+        11,
+        17
+      ],
+      [
+        11,
+        21
+      ]
+    ],
+    "surviving_inputs": 620,
+    "surviving_words_sha256": "42b42d8b5c646a8362084a62655846cb15f73600991226fe0504391c251d04d6",
+    "three_cuts": 6,
+    "three_cuts_sha256": "09a8b2ce32325707998fce55074b5fa582c861bfaadc10b554ee385e936f3e7f",
+    "vertex_connectivity": 3
+  },
+  "source": {
+    "canonical_four_colourings": 756,
+    "canonical_three_colourings": 0,
+    "complete_unit_edges": 21,
+    "coordinate_sha256": "7107181abda16fbe95444a25ed3ec62f665fd667597a1d89838e366abc1ff6a9",
+    "edge_sha256": "39581074aba7c4a440f81ff4eddff8bf186cb1a71a48b34eab7c33104680e42f",
+    "labelled_four_colourings": 18144,
+    "points": 12
+  },
+  "target_code_imported": false,
+  "verdict": "ACCEPT_WITH_FIXED_COMPLETION_SCOPE"
+}
