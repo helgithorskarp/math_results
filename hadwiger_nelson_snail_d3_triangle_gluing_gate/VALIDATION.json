@@ -1,0 +1,43 @@
+{
+  "certificate_bytes": 590125,
+  "certificate_sha256": "327c0ffe977232d725df7efa1b88cc5af4518cf442d2827e839022b7c48613c2",
+  "checker_output_sha256": "1274c2161327c98f219ee3aa06e46b19f460d222cf3307282b583cda0abfae0a",
+  "controls": {
+    "rejected_corruptions": 4,
+    "verified": true
+  },
+  "dependencies": {
+    "parent_certificate_sha256": "c217efc0649faf986475dac157e7f2ac4bb992e4f4ac88a108e3217808d20dc3",
+    "parent_geometry_sha256": "2d25983290e6e912bc434f8286e6d2771d893949af83fb16433d1bb74b4bfc0e",
+    "parent_independent_field_sha256": "a3c053154d7ba19b9651eee4d0a10a5917446f35a99574cf42e1154e37a39324",
+    "parent_seed_sha256": "9d03aaf2233e7b96109484a1fe3c8d311025bb95186b6927d517d716e774f614"
+  },
+  "environment": {
+    "checker": "CPython 3.11.2, standard library",
+    "producer": "CPython 3.11.2, python-sat 1.9.dev15, CaDiCaL 1.9.5"
+  },
+  "full_checker": {
+    "colour_edge_checks": 2918784,
+    "modular_survivors": 422643,
+    "physical_pairs_checked": 78782177,
+    "unit_edges_checked": 422643,
+    "verified": true
+  },
+  "normal_replay": {
+    "status": "passed on the semantically identical draft certificate",
+    "note": "The canonical certificate deletes only the draft's nondeterministic elapsed_seconds metadata. All 3930 rows, words, counts and mathematical fields compare equal."
+  },
+  "optimized_canonical_replay": {
+    "elapsed_seconds": 471.573,
+    "expected_output_match": true,
+    "status": "passed"
+  },
+  "producer_replay": {
+    "elapsed_seconds": 290.9347961030435,
+    "max_solver_conflicts": 207,
+    "semantic_comparison": "all mathematical data equal to the independently checked draft",
+    "status": "passed"
+  },
+  "record_candidate": false,
+  "validated_utc": "2026-09-15"
+}
