@@ -1,0 +1,90 @@
+{
+  "verdict": "accept_at_restricted_family_scope",
+  "review_environment": {
+    "python": "CPython 3.11.2",
+    "sympy": "1.14.0",
+    "sat_solver_required": false
+  },
+  "target_replays": {
+    "normal_128": "pass",
+    "optimized_128": "pass",
+    "normal_192": "pass",
+    "controls": "pass",
+    "sha256sum_manifest": "pass",
+    "normal_optimized_192_output_sha256": "fdfb2f8e6735e028d78e72d908923f95ae7fbecec73a07a51bf601754e632a86"
+  },
+  "independent_runs": [
+    {
+      "mode": "normal",
+      "interval_bits": 128,
+      "status": "pass",
+      "output_sha256": "ed0ae4b4f1b623b8fbea2c71064fdf19b5f1840c3078899093f1bb47869b1aa4"
+    },
+    {
+      "mode": "optimized",
+      "interval_bits": 128,
+      "status": "pass",
+      "output_sha256": "ed0ae4b4f1b623b8fbea2c71064fdf19b5f1840c3078899093f1bb47869b1aa4"
+    },
+    {
+      "mode": "normal",
+      "interval_bits": 96,
+      "status": "pass",
+      "output_sha256": "9bc587f2ddafdee32af6cedb3092baf7d01dbf0e21dcbb6d5e4187e3fdb85d65"
+    },
+    {
+      "mode": "normal",
+      "interval_bits": 192,
+      "status": "pass",
+      "output_sha256": "7f6f3984d7855ccabf0d2f25863fe9520b9498d3e8ad23e511cb3856f3fa56ae"
+    }
+  ],
+  "all_precision_independent_fields_equal": true,
+  "independent_method": {
+    "target_modules_imported": false,
+    "base_field": "nested Q(sqrt(3))(sqrt(11)) arithmetic",
+    "noncontact_proof": "outward exact rational intervals",
+    "surviving_equality_proof": "SymPy exact real-algebraic simplification",
+    "dependent_radical_control": "pass",
+    "positive_root_branch_control": "pass"
+  },
+  "independent_exact_results": {
+    "boundary_pairs": 253,
+    "secant_tangent_disjoint": [
+      81,
+      24,
+      148
+    ],
+    "formal_lens_occurrences": 186,
+    "unmerged_occurrences": 559,
+    "pairwise_collision_equalities": 141,
+    "redundant_occurrences": 71,
+    "collision_class_size_distribution": {
+      "1": 451,
+      "2": 24,
+      "4": 10,
+      "6": 1,
+      "7": 2
+    },
+    "physical_points": 488,
+    "new_physical_points": 115,
+    "complete_unit_edges": 2200,
+    "host_new_edges": 308,
+    "new_new_edges": 36,
+    "actual_host_interface": 80,
+    "extra_host_interface_outside_marked_boundary": 58,
+    "interval_rejected_nonunit_pairs": 116628,
+    "exact_mixed_radical_unit_checks": 344,
+    "unresolved_pairs": 0,
+    "proper_four_word_checked": true,
+    "three_colour_assignments_exhausted": 2187,
+    "chromatic_number": 4
+  },
+  "entry_level_hash_match": {
+    "point_formulas": "10e010eeb24478d67b17a2b2fc5e860ca26e962aa24593e0d59b7db800e994e4",
+    "routes": "e01a98146d5f70aba9595648e9523e237d5f59e90d28de193e6b1fac9c29a1e6",
+    "representative_origins": "b040ddca9799f6ea2f4274ae91b707cc3efdf830cea69aab25959ee118600e1f",
+    "edges": "800eaa425b8ba5371a93b7370a18c632ef562d0c967481be7acdd49e6d22441f"
+  },
+  "persistent_computations_running_at_checkpoint": false
+}

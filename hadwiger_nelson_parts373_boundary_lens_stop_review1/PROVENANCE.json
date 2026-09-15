@@ -1,0 +1,68 @@
+{
+  "reviewed_target": {
+    "repository": "https://github.com/helgithorskarp/math_results",
+    "commit": "45d40bcc8adb05c1aee7b0830b1b506f77de0323",
+    "directory": "hadwiger_nelson_parts373_boundary_lens_stop",
+    "discovery_status": "no_committed_or_pending_target_contribution_identified"
+  },
+  "input_hashes": {
+    "points.tsv": "f69ce1adef2f47c666f57c5e2096cb766fbc16654d75e3b24fbf0f5913d5be50",
+    "certificate.json": "8edec4d854e010106643619b561aee30f2e62bbb5e0b4b74037cb0db4f641d09",
+    "target_verify.py": "4dce08e1d0e6b4254d910534fa50a531afca6fd5d491c10335d5346502975594",
+    "target_PROOF.md": "dfb588400cb42447ed7f39e98ddabca85a01db6ebb29db77be0452a1597f151e",
+    "target_README.md": "0d50d0215c70ef26cfa25ddac329082f40b5301f07864fa8ef711ef5cefa4bb6"
+  },
+  "dependencies": [
+    {
+      "commit": "0fdb37bb7772a835307f904403589ba1d4676f20",
+      "directory": "hadwiger_nelson_parts373_receiver_relation",
+      "role": "fixed host, marked boundary and retained host word"
+    },
+    {
+      "commit": "d86266c0e09db808865b6c379d68d1c133a86756",
+      "directory": "hadwiger_nelson_parts373_receiver_relation_review1",
+      "role": "independent acceptance of receiver geometry and relation; negative SAT proofs are not premises here"
+    }
+  ],
+  "coordinate_identity": {
+    "byte_identical_to_receiver_points": true,
+    "byte_identical_to_parts509_completion_census_points": true
+  },
+  "discovery_refresh": {
+    "indexed_height": 4363,
+    "rpc_height": 4364,
+    "rpc_latest_block_time": "2026-09-11T02:40:58.067131057Z",
+    "ledger_status": "stale",
+    "title_query_boundary_lens_matches": 0,
+    "title_query_parts373_matches": 0,
+    "new_review_submission_status": "not_yet_submitted"
+  },
+  "newer_team_results_inspected": [
+    {
+      "commit": "2c0f69ae8643873d148148a3cb0f86d1db5f49df",
+      "directory": "hadwiger_nelson_parts373_root150_transfer_stop",
+      "relevance": "later one-vertex-sum transfer is exactly four-chromatic and does not supersede the broader two-pin lens-family exclusion"
+    },
+    {
+      "commit": "0c528f4b83cb8fbce8cf373b87a154efed6dd5b7",
+      "directory": "hadwiger_nelson_two_distance_lens_closure",
+      "relevance": "different 426-point all-lenses architecture is exactly four-chromatic; it does not alter this host-specific universal exclusion"
+    },
+    {
+      "commit": "119e7444ff958ce30e017dbff9fddfe45f5915f2",
+      "directory": "hadwiger_nelson_parts136_reverse_receiver",
+      "relevance": "new reverse receiver exposes a different 19-pin relation and a 372-point replacement budget; it is unreviewed and is not a premise or counterexample to this theorem"
+    }
+  ],
+  "record_sources_checked_2026_09_15": [
+    {
+      "url": "https://arxiv.org/abs/2010.12665",
+      "supported_fact": "Parts reports a 509-vertex, 2442-edge five-chromatic unit-distance graph"
+    },
+    {
+      "url": "https://arxiv.org/html/2608.04542v4",
+      "supported_fact": "Haugland v4 identifies 509 vertices as the current unrestricted record"
+    }
+  ],
+  "publication_baseline_after_final_refresh": "119e7444ff958ce30e017dbff9fddfe45f5915f2"
+}
