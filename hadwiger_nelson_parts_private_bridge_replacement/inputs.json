@@ -1,0 +1,59 @@
+{
+  "input_sha256": {
+    "hadwiger_nelson_parts509_completion_census_degree9/points.tsv": "f69ce1adef2f47c666f57c5e2096cb766fbc16654d75e3b24fbf0f5913d5be50",
+    "hadwiger_nelson_moser_palette_private_bridge/certificate.json": "270221951dd383df3cc044205b02b338935aa7fc7756a17d78dcf00e8db15a95",
+    "hadwiger_nelson_moser_palette_private_bridge/produce.py": "7a8a07a6b1c51758dee269a71c4b882917d4c6591942a63c940003babdbf840c"
+  },
+  "bridge_source_commit": "2e26eadaa928d089c86462f567e3e29dfa9f0511",
+  "scale": 96,
+  "base_radicals": [
+    1,
+    3,
+    5,
+    15,
+    11,
+    33,
+    55,
+    165
+  ],
+  "extension": "eta=sqrt(2-sqrt(3)/2), positive",
+  "point_format": "x base8, x eta-times-base8, y base8, y eta-times-base8; integer coefficients divided by96",
+  "deleted_parent_labels": [
+    201,
+    207,
+    57,
+    16,
+    328,
+    99,
+    272,
+    310,
+    316,
+    69,
+    130,
+    132,
+    330,
+    190
+  ],
+  "bridge_to_support": [
+    0,
+    147,
+    144,
+    302,
+    500,
+    165,
+    505,
+    152,
+    502,
+    507,
+    495,
+    496,
+    506,
+    499,
+    497,
+    498,
+    503,
+    504,
+    501
+  ],
+  "selection_rule": "Protect parent points in the whole frozen bridge. Let C be parent vertices adjacent to at least one new point. Repeatedly delete the unprotected remaining original vertex maximizing |N_remaining(v) intersect C|/max(1,degree_remaining(v)), breaking ties by least remaining degree then least label; delete k+1 originals for k new points. This is a deterministic heuristic, not an obstruction certificate."
+}
