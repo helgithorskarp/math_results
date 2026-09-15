@@ -1,0 +1,33 @@
+{
+  "validated_at_utc": "2026-09-15T12:29:43Z",
+  "python": "3.11.2",
+  "commands": [
+    "python3 -B verify.py --check-expected",
+    "python3 -O -B verify.py --check-expected",
+    "python3 -B verify.py --controls",
+    "python3 -m py_compile geometry.py verify.py"
+  ],
+  "results": {
+    "ordinary_chromatic_number": 3,
+    "vertices": 27,
+    "complete_unit_edges": 49,
+    "saved_pair_separating_words": 17,
+    "forced_equal_pairs": 0,
+    "controls": "passed",
+    "source_matrix_live_html_comparison": "4 rows by 27 columns; exact match"
+  },
+  "discovery_refresh": {
+    "indexed_height": "4363",
+    "rpc_height": "4364",
+    "rpc_time": "2026-09-11T02:40:58.067131057Z",
+    "targeted_title_searches": [
+      "Moser lattice",
+      "geometric",
+      "27-vertex",
+      "Matolcsi"
+    ],
+    "matching_hn_contributions": 0,
+    "errors": []
+  },
+  "trust_boundary": "Exact rational-coefficient reconstruction and positive colour certificates; author-side verification. The 4x27 matrix was compared to the live arXiv HTML. No solver UNSAT verdict, floating-point predicate, or external graph dump is used."
+}
