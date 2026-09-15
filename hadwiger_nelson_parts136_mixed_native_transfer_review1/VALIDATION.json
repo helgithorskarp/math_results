@@ -1,0 +1,57 @@
+{
+  "completed_utc": "2026-09-15T12:47:06Z",
+  "environment": {
+    "kernel": "Linux 6.1.0-52-cloud-amd64 x86_64",
+    "python": "CPython 3.11.2",
+    "witness_generator": "Kissat 4.0.4"
+  },
+  "review_runs": [
+    {
+      "command": "python3 -B verify.py",
+      "elapsed_seconds": 5.232,
+      "exit_code": 0
+    },
+    {
+      "command": "python3 -O -B verify.py",
+      "elapsed_seconds": 5.400,
+      "exit_code": 0,
+      "result": "byte-identical to normal output"
+    },
+    {
+      "command": "python3 -B verify.py --controls",
+      "elapsed_seconds": 25.962,
+      "exit_code": 0,
+      "result": "fresh_colour, fresh_fixture, input_hash and target_colour corruptions rejected"
+    },
+    {
+      "command": "python3 -B generate.py --solver /path/to/kissat --output /tmp/certificate.json",
+      "elapsed_seconds": 5.322,
+      "exit_code": 0,
+      "result": "byte-identical certificate regeneration"
+    }
+  ],
+  "target_replay": {
+    "normal": "passed",
+    "optimized": "passed",
+    "controls": "passed",
+    "sha256_manifest": "passed"
+  },
+  "hashes": {
+    "target_certificate": "2714c9bfebc2a88775ad0f512c5cdcbb510f7eb22caddc451d28504608c48cf2",
+    "review_certificate": "5313f8881c2650ca8bdeb7e844cbfe6947bdae7e20570508ae6742e3ffcfb8f1",
+    "review_checker": "b26de36a37e5ee1539b9ba3c1d3d99ee4fc6bb69bf4ddb4430d8e852fc60fb71"
+  },
+  "exact_result": {
+    "physical_points": 508,
+    "complete_edges": 2187,
+    "component_edges": [564, 646, 977],
+    "host_interface_parent_labels": [0],
+    "A_B_contacts": 0,
+    "chromatic_number": 4,
+    "every_host_four_colouring_extends": true
+  },
+  "fresh_word_difference_by_block": [96, 109, 170],
+  "floating_point_predicates": 0,
+  "negative_solver_claims": 0,
+  "running_computations": []
+}
