@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "verify.py",
+        "--check-expected"
+      ],
+      "elapsed_seconds": 6.182402892969549,
+      "name": "normal",
+      "stdout_sha256": "310475bb6370aa5db744e89de275f682ce17fb41d6905b9562e5200f13e0141e"
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "-B",
+        "verify.py",
+        "--check-expected"
+      ],
+      "elapsed_seconds": 6.276757580926642,
+      "name": "optimized",
+      "stdout_sha256": "310475bb6370aa5db744e89de275f682ce17fb41d6905b9562e5200f13e0141e"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "generate.py",
+        "--cnf",
+        "/tmp/g19-i450.cnf"
+      ],
+      "elapsed_seconds": 1.1703613019781187,
+      "name": "regenerate",
+      "stdout_sha256": "e86379a518f78ea7a60e7fb373d42c906dc0cc2252bc2cb0f8df8567b4a9d76c"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "controls.py"
+      ],
+      "elapsed_seconds": 32.29244530503638,
+      "name": "controls",
+      "stdout_sha256": "efa3b312106e46fe1b6f388310d858d8dd38f8742a4809b9503174a71758afe1"
+    }
+  ],
+  "cnf_regeneration_byte_identical": true,
+  "controls": {
+    "independent_coordinate_rows": 461,
+    "independent_distance_rows": 106030,
+    "independent_edge_entries": 2324,
+    "rejected_mutations": [
+      "improper_four_word",
+      "wrong_host_intersection_word",
+      "missing_private_contact"
+    ],
+    "status": "CONTROLS_PASS"
+  },
+  "normal_optimized_identical": true,
+  "python": "3.11.2",
+  "solver_used_for_discovery_only": {
+    "cnf_sha256": "01f80fa34ed7c3489af78925c169815b2768e09aa955da4bb2f238780233af10",
+    "command": [
+      "kissat",
+      "--time=120",
+      "--conflicts=1000000",
+      "/tmp/g19-i450.cnf",
+      "/tmp/g19-i450.drat"
+    ],
+    "elapsed_seconds": 0.005217722035013139,
+    "returncode": 10,
+    "solver_sha256": "8664d542108e494c8aebc90e762d7e719c63b556506a65f0c6ff7c9c6bc5c15b"
+  },
+  "trust_boundary": "Exact field arithmetic and explicit proper colouring; author verification, not independent review. No solver trust needed for this SAT certificate.",
+  "verification_requires_solver": false
+}
