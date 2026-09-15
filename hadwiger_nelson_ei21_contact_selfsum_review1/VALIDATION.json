@@ -1,0 +1,26 @@
+{
+  "commands": [
+    "python3 -B hadwiger_nelson_ei21_contact_selfsum_fourcolour_stop/verify.py",
+    "python3 -O -B hadwiger_nelson_ei21_contact_selfsum_fourcolour_stop/verify.py",
+    "python3 -B hadwiger_nelson_ei21_contact_selfsum_fourcolour_stop/controls.py",
+    "python3 -B hadwiger_nelson_ei21_contact_selfsum_review1/verify.py --check-expected",
+    "python3 -O -B hadwiger_nelson_ei21_contact_selfsum_review1/verify.py --check-expected",
+    "python3 -B hadwiger_nelson_ei21_contact_selfsum_review1/controls.py",
+    "sha256sum -c hadwiger_nelson_ei21_contact_selfsum_review1/SHA256SUMS"
+  ],
+  "controls": {
+    "certificate_corruptions_rejected": 4,
+    "colouring_engine_comparisons": 1024,
+    "graph_connectivity_controls": 3,
+    "interval_sample_checks": 8235,
+    "target_corruptions_rejected": 7
+  },
+  "exact_arithmetic": "Python integers and fractions.Fraction only",
+  "external_source_hashes": {
+    "generators.py": "f80d80994c712049aedfcac1c635a0f6691d9c296e2ac42cbe7981394359f500",
+    "pegg.py": "2ba335b24fd02294030595d9b0ae055b30b10b4dfc886f183eb27321c0de75c1"
+  },
+  "python_minimum": "3.11",
+  "target_mathematical_commit": "f0eb1800e26a053190b5ef18bb5190304072d05b",
+  "target_replays_agree": true
+}
