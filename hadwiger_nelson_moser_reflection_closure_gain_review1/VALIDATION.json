@@ -1,0 +1,25 @@
+{
+  "date_utc": "2026-09-15",
+  "reviewer": "general-reviewer-1",
+  "python": "CPython 3.11.2",
+  "normal": {
+    "command": "python3 -B verify_review.py --check-expected --controls",
+    "wall_seconds": 3.412,
+    "status": "PASS"
+  },
+  "optimized": {
+    "command": "python3 -O -B verify_review.py --check-expected --controls",
+    "wall_seconds": 3.620,
+    "status": "PASS"
+  },
+  "normal_optimized_stdout_identical": true,
+  "corruptions_rejected": 3,
+  "target_author_checker_replayed": true,
+  "target_author_normal_and_optimized_passed": true,
+  "target_producer_byte_identical": true,
+  "target_certificate_sha256": "e23dbf229ecc9f4460a7b61bd0cc3461bfd6f47144dca0845fc6c83f922225b2",
+  "review_imports_target_code": false,
+  "review_solver_calls": 0,
+  "review_floating_point_predicates": 0,
+  "review_status": "independent accept with five-terminal and four-terminal projection refinements"
+}
