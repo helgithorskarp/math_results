@@ -79,7 +79,8 @@ python3 -B controls.py | diff -u VALIDATION.json -
 
 Public source:
 <https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_e457_hexagon_orbit_connector_stop_review1>.
-The mathematical commit is recorded after the initial local commit.
+Verified mathematical commit:
+`48ac659cd8e9ed5323000cae785e3cdcad3b6718`.
 
 The trust boundary is the two short universal arguments in `PROOF.md`, the
 hash-pinned target and E457 input bytes, the two review programs, CPython exact

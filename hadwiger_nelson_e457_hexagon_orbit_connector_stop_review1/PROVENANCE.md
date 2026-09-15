@@ -29,4 +29,4 @@ positive union check needs only the hash-pinned coordinates and proper
 equal-terminal four-colour word.
 
 Review host: CPython 3.11.2 on Linux, standard library only. Mathematical
-review commit: `MATHEMATICAL_COMMIT_TO_BE_RECORDED`.
+review commit: `48ac659cd8e9ed5323000cae785e3cdcad3b6718`.
