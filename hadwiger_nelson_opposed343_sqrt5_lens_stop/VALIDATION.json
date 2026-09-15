@@ -1,0 +1,54 @@
+{
+  "validated_utc": "2026-09-15T17:59:25Z",
+  "python": "Python 3.11.2",
+  "baseline_origin_main": "52d68426414f7546739d87111ebc82df432282aa",
+  "commands": [
+    {
+      "command": "python3 -B hadwiger_nelson_opposed343_sqrt5_lens_stop/verify.py --check-expected",
+      "exit": 0,
+      "elapsed_seconds": 8.38
+    },
+    {
+      "command": "python3 -O -B hadwiger_nelson_opposed343_sqrt5_lens_stop/verify.py --check-expected",
+      "exit": 0,
+      "elapsed_seconds": 8.60
+    },
+    {
+      "command": "python3 -B hadwiger_nelson_opposed343_sqrt5_lens_stop/controls.py",
+      "exit": 0,
+      "elapsed_seconds": 11.33
+    },
+    {
+      "command": "python3 -O -B hadwiger_nelson_opposed343_sqrt5_lens_stop/controls.py",
+      "exit": 0,
+      "elapsed_seconds": 11.55
+    },
+    {
+      "command": "produce_certificate.py /tmp/opposed343-sqrt5-lens-certificate.json; cmp certificate.json /tmp/opposed343-sqrt5-lens-certificate.json",
+      "exit": 0,
+      "elapsed_seconds": 3.88,
+      "environment": "python-sat 1.9.dev15, CaDiCaL 1.9.5"
+    }
+  ],
+  "result": {
+    "source_points": 343,
+    "source_relation_patterns": 66,
+    "new_points": 108,
+    "complete_points": 451,
+    "complete_edges": 2170,
+    "old_new_edges": 216,
+    "new_new_edges": 172,
+    "complete_relation_patterns": 66,
+    "chromatic_number": 4,
+    "record_candidate": false
+  },
+  "controls": {
+    "alternative_pairs_scanned": 101475,
+    "alternative_edges_recovered": 2170,
+    "basis_products_checked": 64,
+    "improper_word_rejected": true,
+    "cut_controls_passed": true
+  },
+  "assertions_required": false,
+  "mandatory_third_party_packages": []
+}
