@@ -95,9 +95,9 @@ suite about 42 seconds on the review host.
 
 Public source:
 <https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_e477_mandatory_support_review2>.
-The verified mathematical commit is recorded in `PROVENANCE.md` after the
-initial local commit is created.  No solver trace, private state, credential,
-or large artifact is required.
+Verified mathematical commit:
+`97b79af1b2b8ad71caabf3f98f07b495621ec007`.  No solver trace, private
+state, credential, or large artifact is required.
 
 ## Trust boundary
 

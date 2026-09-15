@@ -37,4 +37,4 @@ f7593d3493cba8fbf6eb88121e1f0fc62879be81e1e62145b65d2986812db69f
 
 Review runtime was CPython 3.11.2 on Linux.  The package needs no third-party
 dependency.  Mathematical publication commit:
-`MATHEMATICAL_COMMIT_TO_BE_RECORDED`.
+`97b79af1b2b8ad71caabf3f98f07b495621ec007`.
