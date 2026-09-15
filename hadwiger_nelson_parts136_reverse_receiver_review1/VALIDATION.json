@@ -1,0 +1,85 @@
+{
+  "verdict": "accept_with_scope_limitations",
+  "target_replay": {
+    "normal_and_optimized_outputs_identical": true,
+    "verification_json_sha256": "a04a54c09d3b1b186533a144c22bc9ea6e2707cbb09a8bc897721e670259945b",
+    "fresh_python_sat_version": "1.9.dev15",
+    "fresh_enumeration_status": "COMPLETE_SOLVER_UNSAT",
+    "fresh_enumeration_patterns": 41025,
+    "fresh_enumeration_seconds": 122.13959842396434,
+    "fresh_relation_sha256": "aa8b608e084d376a183e77307af4a2940f65834954b4de2c49663ea08cd1cd37",
+    "fresh_pattern_stream_sha256": "f67f18e35fcd20c46c405c2b7458712091afd12f5fdeaee6443555735fb56649",
+    "fresh_one_hot_completeness_cnf_sha256": "a3c7d8754b49818f25b4319397ff489406e785b4ddc2c08a7cf7dd958d179287",
+    "fresh_one_hot_parent_cnf_sha256": "bfad1c1cb96e983bfa83922b63d564da9db3cb9bd36012c15abe89240f227de8",
+    "author_completeness_drat_sha256": "f0e08a48292ddd703180bab955fd9da606d4c565e2ade8f0e92f6a23f74197de",
+    "author_parent_drat_sha256": "54f27154135601003385b31adc7e38104fed22f7a2450dd62bebb79bd97a62ea",
+    "both_author_drat_proofs_replayed_verified": true
+  },
+  "independent_geometry_and_relation": {
+    "field_representation": "quadratic_tower_Q_sqrt3_sqrt5_sqrt11",
+    "all_parent_pairs_checked": 129286,
+    "parent_points": 509,
+    "parent_edges": 2442,
+    "host_points": 136,
+    "host_edges": 564,
+    "removed_points": 373,
+    "removed_edges": 1836,
+    "cross_edges": 42,
+    "boundary_points": 19,
+    "boundary_edges": 0,
+    "edge_streams_match_target_entry_for_entry": true,
+    "binary_enumerator": "glucose4",
+    "python_sat_version": "1.9.dev15",
+    "enumeration_status": "COMPLETE_SOLVER_UNSAT",
+    "enumeration_seconds": 376.05234423594084,
+    "canonical_patterns": 41025,
+    "exact_target_pattern_set_match": true,
+    "independent_relation_sha256": "f17aef9fde554e6bb6eca030ebf4f0228ba09a77a60b1394ba31ab5d33d27f02",
+    "pattern_stream_sha256": "f67f18e35fcd20c46c405c2b7458712091afd12f5fdeaee6443555735fb56649",
+    "independent_host_words_checked": 41025,
+    "host_words_identical_to_author": 738,
+    "host_words_different_from_author": 40287,
+    "normal_and_optimized_outputs_identical": true,
+    "verification_json_sha256": "9bb2d44b4da94e0836fbd08bc941c248027b8c67a996957ee9128e021a8a31e4",
+    "negative_controls_passed": true
+  },
+  "independent_binary_proofs": [
+    {
+      "name": "host_completeness_binary",
+      "variables": 272,
+      "clauses": 248408,
+      "cnf_sha256": "20c598da6dd0996515aad70d8012e89596c45d7517105191454dafccc58be402",
+      "cnf_bytes": 39301579,
+      "drat_sha256": "3eb0e0a66b5d019e4b05f612b2f6381bc6726b67bfe5f76486b206d45539f0c7",
+      "drat_bytes": 75081352,
+      "solver_exit": 20,
+      "checker_exit": 0,
+      "checker_reported_verified": true
+    },
+    {
+      "name": "parent_binary",
+      "variables": 1018,
+      "clauses": 9770,
+      "cnf_sha256": "17277d4755cd4cc374061d9a6767af4db5febf1625066b357e65cdccaa60a40d",
+      "cnf_bytes": 190530,
+      "drat_sha256": "258c3b9d1715136f54d4b0a94a2cd267388c43cd117d63147943113f4fcc9803",
+      "drat_bytes": 27751061,
+      "solver_exit": 20,
+      "checker_exit": 0,
+      "checker_reported_verified": true
+    }
+  ],
+  "proof_tools": {
+    "cadical_version": "1.9.5",
+    "cadical_sha256": "76eb1ad64c7a3fdb9eca46d21e7c020f2cb7052cad61a53ea8da827f2d7591ed",
+    "drat_trim_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+  },
+  "scope": {
+    "complete_fixed_host_relation": true,
+    "original_module_blocks_every_host_pattern": true,
+    "replacement_new_point_allowance": 372,
+    "replacement_supplied": false,
+    "record_candidate": false,
+    "global_replacement_exclusion": false
+  }
+}
