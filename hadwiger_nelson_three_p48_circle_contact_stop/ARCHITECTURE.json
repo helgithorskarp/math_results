@@ -1,0 +1,31 @@
+{
+  "selected_utc": "2026-09-16T03:06:18.476758+00:00",
+  "name": "P48 three-patch circle-contact assembly",
+  "exact_definition": {
+    "omega": "(1+i sqrt(3))/2",
+    "P48": "{a+b omega: a,b integers; a*a+a*b+b*b <=48}",
+    "r": "(5+i sqrt(11))/6",
+    "A": "2+omega",
+    "B": "r*A",
+    "D": "B-A",
+    "v": "D*(1+i sqrt(35)/7)/2",
+    "support": "P48 union r*P48 union (A+v*P48)"
+  },
+  "finite_cases": 1,
+  "raw_address_budget": 507,
+  "extra_points_allowed": 0,
+  "geometry_before_colouring": true,
+  "stops": [
+    "No exact global contact cycle",
+    "cap >508",
+    "complete proper four-word",
+    "UNKNOWN without checked residual shrink",
+    "need for a nearby placement sweep"
+  ],
+  "forbidden_escalations": [
+    "another A, phase, sign or circle branch",
+    "patch radius or copy-count changes",
+    "receiver or relation-intake work",
+    "Haugland induced-subset search"
+  ]
+}
