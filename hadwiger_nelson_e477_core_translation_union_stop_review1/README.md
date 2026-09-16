@@ -96,6 +96,8 @@ hadwiger_nelson_e477_core_translation_union_stop at mathematical commit
 
 Public source:
 <https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_e477_core_translation_union_stop_review1>.
+Verified mathematical review commit:
+6523d59fdf9b7a46e44f9e005b30275c5b45677b.
 
 The trust boundary is the pinned source bytes, the written biquadratic-field
 argument, exact Python integer/set/JSON/SHA-256 operations, exhaustive finite

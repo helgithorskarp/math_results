@@ -37,4 +37,4 @@ therefore pins and rechecks the needed positive deletion evidence directly.
 
 Review host: CPython 3.11.2 on Linux, standard library only. The independent
 checker does not import target code and uses no solver. Its mathematical
-publication commit is recorded after the proof files are frozen.
+publication commit is 6523d59fdf9b7a46e44f9e005b30275c5b45677b.
