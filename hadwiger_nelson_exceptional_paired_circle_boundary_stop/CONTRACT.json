@@ -1,0 +1,52 @@
+{
+  "frozen_utc": "2026-09-16T08:27:00.572431+00:00",
+  "pass_number": 101,
+  "lane_pass": 54,
+  "name": "Rational-orientation common-neighbour exceptional paired circles, complete first boundary",
+  "omega": "(1+i*sqrt(3))/2",
+  "r": "(3+4*i)/5",
+  "t": "(1-r)*omega",
+  "centres": [
+    "0",
+    "1",
+    "t",
+    "t+r"
+  ],
+  "common_unit_neighbour": "omega",
+  "exceptional_incidence": {
+    "slots": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "k": 1,
+    "x": "omega",
+    "y": "omega",
+    "parity": 1,
+    "factor": "F_{00,11,1}",
+    "singular": true
+  },
+  "kernel": "P={d+s: d in centres, s in U union r*U}, U=<omega>",
+  "support": "Q=P union all intersections C(d,1) intersect C(x,1), d in centres, x in P minus centres",
+  "finite_raw_kernel_bound": 48,
+  "finite_support_bound": 400,
+  "bound_proof": "|P|<=48, four centres lie in P, and at most eight added incidences per noncentre kernel point: |Q|<=48+8*(48-4)=400",
+  "cohort_size": 1,
+  "no_post_query_variants": true,
+  "rationale": "Exact exceptional placement with one point adjacent to all four centres defeats every distinct-centre-pin extension theorem. Full first boundary contains every unit contact from kernel to infinite support; direct ordinary complete-graph status is the sole chromatic gate.",
+  "preflight": "Distinct centres; nonparallel unit pairs, not common midpoint; cross squared distances 4/5,(7+4*sqrt(3))/5,(7-4*sqrt(3))/5,4/5 are regular and neither sqrt3 nor >2 distances. No accepted full-support colouring identified for this placement.",
+  "solver": "One Kissat4 query, 60 seconds/1000000 conflicts. If UNSAT check DRAT and seek proper5; SAT ends architecture.",
+  "stops": [
+    "unresolved exact real feasibility",
+    "accepted full-support colouring containment",
+    "cap failure",
+    "complete four-word",
+    "unverified ordinary negative",
+    "need for another parameter/factor/stratum"
+  ]
+}
