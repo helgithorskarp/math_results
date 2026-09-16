@@ -1,0 +1,33 @@
+{
+  "timestamp_utc": "2026-09-16T10:47:14Z",
+  "python": "3.11.2",
+  "geometry": {
+    "raw_point_occurrences": 177,
+    "collision_merged_points": 115,
+    "complete_pairs_checked": 6555,
+    "complete_unit_edges": 219,
+    "intended_distinct_segments": 141,
+    "incidental_unit_edges": 78,
+    "points_sha256": "0efc63af02992b922cf1bb801b3960e22ccc9beb428357499278dea5033c9292",
+    "edges_sha256": "521d505641e25290471a6486edecb5b1984d267b414a7ab68616d61bccc7bda8",
+    "segments_sha256": "e0f8d88fc32618cc78455d48caf5f2a3bd52c5427630429229d4c11f446081f7"
+  },
+  "chromatic_check": {
+    "chromatic_number": 3,
+    "lower_bound": "explicit source I1-I2-I3 unit triangle",
+    "upper_bound": "proper three-colouring checked on all 219 edges",
+    "long_source_constraints": 48,
+    "equal_endpoint_three_colour_witnesses_checked": 48,
+    "two_colour_search_nodes": 3,
+    "three_colour_search_nodes": 116,
+    "equality_witness_search_nodes": 5702
+  },
+  "replay": {
+    "producer_byte_identical": true,
+    "normal_verifier": "passed",
+    "optimized_verifier": "passed",
+    "controls": "5 deliberate corruptions rejected"
+  },
+  "trust_boundary": "Explicit source transcription, exact rational arithmetic in Q(sqrt(85),sqrt(3),sqrt(255)), Python execution, and checker logic. Positive colour words are checked directly; no solver UNSAT assertion or floating predicate is used.",
+  "scope": "One frozen straight-geodesic unit-chain architecture for the fixed odd21 source. No claim about other auxiliary gadgets or the sub-509 frontier globally."
+}
