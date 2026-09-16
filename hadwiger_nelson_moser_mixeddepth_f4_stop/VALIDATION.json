@@ -1,0 +1,22 @@
+{
+  "validated_utc": "2026-09-16T03:22:46Z",
+  "python": "3.11.2",
+  "commands": [
+    "python3 -B verify.py --check-expected",
+    "python3 -B controls.py",
+    "python3 -O -B verify.py --check-expected",
+    "python3 -O -B controls.py",
+    "python3 -B produce.py --out <fresh temporary path>",
+    "semantic JSON comparison of regenerated and published certificate"
+  ],
+  "results": {
+    "normal_verifier": "PASS",
+    "normal_controls": "CONTROLS_OK 4",
+    "optimized_verifier": "PASS",
+    "optimized_controls": "CONTROLS_OK 4",
+    "certificate_regeneration": "CERTIFICATE_REGEN_OK"
+  },
+  "floating_point_used": false,
+  "external_solver_used": false,
+  "long_running_process_remaining": false
+}
