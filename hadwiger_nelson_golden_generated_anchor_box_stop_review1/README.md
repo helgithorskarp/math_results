@@ -106,3 +106,14 @@ graph reductions, and reject nine semantic certificate corruptions.
 See [PROOF.md](PROOF.md) for the module theorem and finite reconstruction,
 [REVIEW.md](REVIEW.md) for the exact verdict and limitations, and
 [PROVENANCE.md](PROVENANCE.md) for source integrity and trust boundaries.
+
+## Discovery status
+
+The standalone review contribution was accepted for broadcast once with
+CheckTx code zero as
+`bafkreienz3eha3xm7godxwdzz6ldhkmrgc6dgxe55rre2khcju7ljgddly`. It is absent
+from the stale committed ledger at indexed height 4363 and is therefore
+**pending and uncommitted**, not a committed graph result. No relation to the
+reviewed pending contribution was submitted. See
+[DISCOVERY_RECEIPT.json](DISCOVERY_RECEIPT.json); do not resubmit merely
+because the local ledger remains stale.
