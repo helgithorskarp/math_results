@@ -1,0 +1,25 @@
+{
+  "name": "H516 distributed degree-four removal plus one coupled external completion edge",
+  "source": "Fixed exact 516-point/2538-edge Heule core, SOURCE.json sha256 3f60fe94c7cd3d9c70b7cc52124fa185d4b46d54bb59b21bca0c45d2b181fd51",
+  "removed_host_labels": [
+    102,
+    109,
+    293,
+    296,
+    299,
+    302,
+    305,
+    308,
+    569,
+    578
+  ],
+  "deletion_rule": "Remove all and only the ten original degree-four vertices; no deletion search. Labels 293 and 299 are distance 3, so no unit-radius disk contains the deleted set.",
+  "addition_rule": "Use the lexicographically first unit pair (p,q), p<q, in the already archived H632 minus H560, for which each endpoint has at least three unit neighbours in the retained H506. This is a deterministic geometric selector for one exchange; do not test another pair, degree threshold, omission or host.",
+  "selection_stop": "If no such edge exists, or fewer than two distinct points lie outside B/H560, stop; no alternative architecture.",
+  "budget": "516-10+2=508; additions outside H560 ensure no collision with retained base; complete all-pairs geometry must verify.",
+  "coupling_requirement": "The two new points have a unit edge and both attach to the retained host. No decomposition into two independent one-point augmentations is assumed.",
+  "chromatic_rationale": "Retain 506 points of a certified positive parent while replacing ten spatially distributed degree-four sites with one coupled physical edge. This is an experimental obstruction-survival test; no chromatic conclusion follows from degree or parenthood.",
+  "decision": "After exact selection, freeze literal coordinates and all 508-point unit edges; one ordinary four-colour query. A proper four-word stops. On non-four signal, check five-word and independent refutation on identical graph bytes.",
+  "scope_rejection": "Count two distinct points outside B, two outside H560, and their unit edge. h3999/h4003 applies only to B plus at most one point; H560 induced-subset closure does not contain this support.",
+  "frozen_at_utc": "2026-09-16T05:38:18.548514+00:00"
+}
