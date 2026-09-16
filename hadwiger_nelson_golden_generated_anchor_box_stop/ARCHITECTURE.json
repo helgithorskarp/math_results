@@ -1,0 +1,83 @@
+{
+  "name": "one fixed generated-anchor reciprocal address box",
+  "source": "Parts exact 16-point {1,phi} source",
+  "source_package_commit": "c72af06ed2d9e8ea9eda056ef095ab091a3d2972",
+  "zeta": "exp(2*pi*i/5)",
+  "physical_common_scale": "q=1/abs(1-zeta)",
+  "base": "B=5*zeta^4+sum epsilon_j*(zeta^j-zeta^4), epsilon in {0,1}^4",
+  "multiplier": "lambda=(1-zeta^4)/(zeta-zeta^4)",
+  "multiplier_power_basis": [
+    "0",
+    "-1",
+    "0",
+    "-1"
+  ],
+  "squared_scale": "1/phi^2",
+  "copy_C_k": "B0 + lambda*(sum k_j*d_j + B-B0), d_j=zeta^j-zeta^4",
+  "copy_lower_corner_ranges_inclusive": [
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      5
+    ]
+  ],
+  "whole_copies": 162,
+  "merged_grid_ranges_inclusive": [
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      6
+    ]
+  ],
+  "merged_grid_points": 448,
+  "generation_order": "lexicographic k; for k!=0 parent decrements its first positive coordinate; shared face has eight points",
+  "root_anchors_source_labels_one_based_to_base": [
+    [
+      1,
+      1
+    ],
+    [
+      5,
+      2
+    ]
+  ],
+  "necessary_terminal_copy": [
+    2,
+    2,
+    2,
+    5
+  ],
+  "terminal_unique_point_address": [
+    3,
+    3,
+    3,
+    6
+  ],
+  "cap_proof": "The four d_j form a rational basis (determinant 5). The lambda-scaled box has exactly 4*4*4*7=448 distinct points. Its root copy shares B labels1,2 with base, so total <=448+16-2=462 before expansion.",
+  "physical_order_upper_bound": 462,
+  "source_obstruction_target": "Test whether the single globally glued network of reciprocal whole copies lifts the complete {1,phi} obstruction; this is not assumed from copy membership. Check all original golden constraints against any ordinary four-word.",
+  "stop": "First complete four-word, containment in the closed base overlay, cap/admission/source failure; no second network, larger box, orientation or copy-placement sweep.",
+  "frozen_at_utc": "2026-09-16T10:27:31.199508+00:00"
+}
