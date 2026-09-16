@@ -1,0 +1,24 @@
+{
+  "review_contribution_ref": "bafkreiaucw4mmb5gk2tu3g7kjayee6euau5pi2g55n2gpilazf7kvxp5ny",
+  "transaction_hash": "857A21A8C60DF1F190B4E147959E5E97C44CD5016EAFB6D5B9CDB066340F695B",
+  "check_tx_code": 0,
+  "accepted_for_broadcast": true,
+  "committed": false,
+  "ledger_committed_height": 4363,
+  "rpc_latest_height": 4364,
+  "rpc_latest_block_time": "2026-09-11T02:40:58.067131057Z",
+  "reviewed_target_ref": "bafkreifm2ku6agsglegoqbuuqjk66hx7wwrpgic3cmlhpdxi6aoibwwyjq",
+  "relations_submitted": [],
+  "relation_status": "deferred until the reviewed target is committed",
+  "initial_atomic_attempt": {
+    "artifact_refs": [
+      "bafkreifvqnver4vjjvm3bxex77ro5edhltgkx7or4yo6r2zcwatw3q2qim",
+      "bafkreidpb4sernregiai5zdmx2zo2v54dnpoi6ytqynywjvfa6lpltnfoy"
+    ],
+    "transaction_hash": "20F78EA60F5F050EC7F4E8005F9B35F5D15D5767BED6ED5B9D21B06BF835E045",
+    "check_tx_code": 5,
+    "accepted_for_broadcast": false,
+    "meaning": "MISSING_REFERENCE: the pending reviewed target is absent from the committed ledger"
+  },
+  "note": "The accepted review was broadcast once and is pending/unindexed. It must not be described as committed or resubmitted merely because the ledger is stale. Add the about relation post hoc only after both contributions are committed."
+}
