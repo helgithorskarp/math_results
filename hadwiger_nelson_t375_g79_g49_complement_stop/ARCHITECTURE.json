@@ -1,0 +1,41 @@
+{
+  "architecture": "one G79 plus one G49 decoder in a fixed T375 triangle frame",
+  "G40_anchor_rows": [
+    [
+      0,
+      0,
+      30,
+      -6
+    ],
+    [
+      0,
+      0,
+      30,
+      6
+    ]
+  ],
+  "G49_shared_pair_indices": [
+    0,
+    1
+  ],
+  "G49_triangle_indices_to_T375_pins": [
+    4,
+    2,
+    3
+  ],
+  "G79_rotation_cos": "119/128",
+  "G79_rotation_sin": "3*sqrt(247)/128",
+  "final_frame_on_paper_numerator_coordinates": "(X,Y) -> (X,24-Y)",
+  "decoder_translation_before_final_frame": [
+    0,
+    0,
+    30,
+    -6
+  ],
+  "complement_upper_bound": 126,
+  "union_upper_bound": 498,
+  "unit_edges": "all physical pairs",
+  "stop": "One architecture only. A checked complete-union four-word or nonmonochromatic complement pin witness ends it. No other pair, triangle, decoder count or frame is selected.",
+  "gap": "G79 forces some distance-sqrt(11/3) pair equal, not the named pair; G49 yields some small monochromatic triangle, not the named one. Actual full contacts must eliminate the alternative colourings. Conditional implications alone are not an obstruction certificate.",
+  "frozen_utc": "2026-09-16T00:59:43.124449+00:00"
+}
