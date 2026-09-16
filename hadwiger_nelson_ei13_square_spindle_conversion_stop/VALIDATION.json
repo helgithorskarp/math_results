@@ -1,0 +1,35 @@
+{
+  "checks": {
+    "normal_optimized_verification": true,
+    "normal_optimized_controls": true,
+    "points.txt_entrywise": true,
+    "edges.txt_entrywise": true,
+    "producer_certificate_exact": true
+  },
+  "controls": {
+    "all_passed": true,
+    "mixed_radical_controls": 1,
+    "radical_square_controls": 8,
+    "rejected_corruptions": [
+      "physical conflicting edge",
+      "boolean colour",
+      "missing vertex colour",
+      "carrier collision map",
+      "coordinate bytes",
+      "edge bytes",
+      "omitted complete unit edge",
+      "carrier diagonal five-word",
+      "concealed failed conversion",
+      "spindle collision",
+      "coordinate scale"
+    ],
+    "small_colouring_controls": 2,
+    "square_geometry_controls": 2
+  },
+  "verifier_python": "3.11.2",
+  "producer_python": "3.11.2",
+  "producer_solver": "CaDiCaL 1.9.5 through python-sat 1.8.dev24",
+  "initial_producer_seconds": 4.529303,
+  "reproduced_producer_seconds": 4.396966,
+  "trust": "Author-side cross-method verification; not independent peer review. Final four-word is checked without a solver."
+}

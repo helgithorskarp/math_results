@@ -1,0 +1,28 @@
+{
+  "name": "EI13 directed-square side-spindle conversion",
+  "source": "Exoo--Ismailescu arXiv:1805.06055v1, Theorem 3.1 explicit second proof",
+  "source_url": "https://arxiv.org/html/1805.06055v1",
+  "source_vertices": 13,
+  "source_unit_edges": 20,
+  "source_sqrt2_edges": 14,
+  "coordinates": "Exact in Q(sqrt(3),sqrt(7),sqrt(11))^2; source coordinates per paper.",
+  "square_rule": "For every source distance-sqrt(2) pair A,B with source index A<B, add C=(A+B)/2+i(B-A)/2 and D=(A+B)/2-i(B-A)/2. Use directed sides A->D,D->B,B->C,C->A (counterclockwise).",
+  "unit_rule": "Also use every original source unit pair A->B with source index A<B. Retain the multiset of 20+4*14 directed sides; collision merge only final coordinates.",
+  "spindle_rule": "For directed unit side A->B put v=B-A, H=(A+B)/2-i*sqrt(11)*v/2. For X=A,B add H and both (H+X)/2 +/- i*(H-X)/(2*sqrt(3)). Together with A,B these seven points form a Moser spindle.",
+  "budgets": {
+    "source": 13,
+    "square_corners_upper": 28,
+    "directed_side_occurrences": 76,
+    "private_points_per_side": 5,
+    "raw_distinct_upper": 421,
+    "target_upper": 508
+  },
+  "rationale": "The source needs a fifth colour when all 14 diagonal inequalities are present. Every associated square side is placed in a four-chromatic spindle. Only nonseparable physical contacts in the global merged assembly could turn this into a strict unit-distance conversion; no inequality-forcing claim is assumed for an isolated spindle or square.",
+  "decision": "Reconstruct every unordered physical pair and decide ordinary four-colourability on those exact graph bytes. If SAT, independently check literal word and retire source/architecture. If UNSAT, check proper five-word and independent refutation.",
+  "stops": [
+    "one complete physical four-word",
+    "cap or exact-geometry failure",
+    "need for another frame, handedness, carrier or gadget sweep"
+  ],
+  "frozen_at_utc": "2026-09-16T02:54:06.415978+00:00"
+}
