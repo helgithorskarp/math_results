@@ -39,5 +39,5 @@ byte-identical with SHA-256
 cb6e06023fb334cf60d556df153dfd07c6b239a59214b2d1e6e27559eefec549.
 
 Independent proof checking uses CPython 3.11 standard-library exact
-arithmetic. The mathematical review commit is recorded in the metadata
-commit after the proof files are frozen.
+arithmetic. Mathematical review commit:
+da76985cabd273c524ec2825ae44241ff94b0bef.

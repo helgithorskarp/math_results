@@ -90,6 +90,8 @@ five-chromatic graph and no record improvement.
 
 Public source:
 <https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_ud93_equilateral_closure_stop_review1>.
+Verified mathematical review commit:
+da76985cabd273c524ec2825ae44241ff94b0bef.
 
 The trust boundary is the written contraction and closure arguments,
 hash-pinned target bytes, this standard-library checker, CPython exact
