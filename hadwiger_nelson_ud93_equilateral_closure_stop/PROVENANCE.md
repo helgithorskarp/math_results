@@ -15,7 +15,8 @@
   <https://github.com/helgithorskarp/math_results>.
 - Stable directory:
   <https://github.com/helgithorskarp/math_results/tree/main/hadwiger_nelson_ud93_equilateral_closure_stop>.
-- Verified mathematical publication commit: `TO_BE_RECORDED_AFTER_PUSH`.
+- Verified mathematical publication commit:
+  `9ac74f0c9858aa04d84a72e13f1b903f2dacb978`.
 
 The trust boundary is the written rational arithmetic, the contraction
 argument, exhaustive finite loops, CPython, and hardware.  The result is
