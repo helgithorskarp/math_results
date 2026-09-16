@@ -1,0 +1,122 @@
+{
+  "name": "Snail four-generator asymmetric cyclic word stencil",
+  "frozen_utc": "2026-09-16T05:50:08.462417+00:00",
+  "pass_number": 100,
+  "lane_pass": 53,
+  "source": "Ducz\u2013Varga augmented29, seed labels p=0,q=1,v_j=j+1",
+  "generator_anchors": [
+    [
+      0,
+      12,
+      7,
+      14,
+      0
+    ],
+    [
+      0,
+      12,
+      22,
+      27,
+      1
+    ],
+    [
+      0,
+      12,
+      9,
+      19,
+      0
+    ],
+    [
+      1,
+      25,
+      7,
+      4,
+      1
+    ]
+  ],
+  "isometry_definition": "g sends ordered source pair to ordered target pair; flip=0 direct, flip=1 reflected",
+  "words": [
+    [],
+    [
+      1
+    ],
+    [
+      2
+    ],
+    [
+      3
+    ],
+    [
+      4
+    ],
+    [
+      -1
+    ],
+    [
+      -2
+    ],
+    [
+      -3
+    ],
+    [
+      -4
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      2,
+      3,
+      4
+    ],
+    [
+      3,
+      4,
+      1
+    ],
+    [
+      4,
+      1,
+      2
+    ]
+  ],
+  "word_evaluation": "left-to-right composition f*g = f after g, negative index is inverse",
+  "raw_addresses": 493,
+  "point_cap": 508,
+  "cohort_size": 1,
+  "no_adaptation_after_query": true,
+  "rationale": "Nonuniform word stencil couples all three p-congruence targets and the q-congruence target, mixing direct and reflected motions; exact endpoint graph, not geometric-fractional equalities. The source positive geometric fractional bound motivates this bounded opportunity but gives no ordinary non-four premise.",
+  "stop": [
+    "four-colouring",
+    "cap failure",
+    "failed checked non-four certificate",
+    "UNKNOWN without certified shrink"
+  ],
+  "excluded": [
+    "uniform full-generator certificate",
+    "dihedral orbit closure",
+    "two-generator box",
+    "adaptive boundary-score cluster",
+    "marked triangle gluing"
+  ],
+  "solver": "Kissat 4.0.4, 60 seconds, 1000000 conflicts, single ordinary4 query with DRAT on UNSAT",
+  "completion": "Either literal proper four-word on complete graph or checked DRAT non-four plus proper five-word; no parameter successor."
+}
