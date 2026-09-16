@@ -1,0 +1,125 @@
+{
+  "chromatic_strengthening": {
+    "chromatic_number": 3,
+    "source_three_word": "1201012210010120",
+    "source_two_distance_chromatic_number": 5,
+    "submitted_four_word_checked": true,
+    "three_colour_formula": "a1+2*a2+a3 mod 3",
+    "three_colour_frequencies": {
+      "0": 154,
+      "1": 157,
+      "2": 151
+    },
+    "three_word_sha256": "3d554880750584f595f70c72c1b76a26d5f64dd7b373973e61645741fae0987a",
+    "unit_five_cycle_final_indices": [
+      9,
+      8,
+      0,
+      19,
+      10
+    ],
+    "unit_five_cycle_source_labels_one_based": [
+      6,
+      3,
+      1,
+      2,
+      5
+    ]
+  },
+  "construction": {
+    "articulation_vertices": 0,
+    "base_intersection_histogram": {
+      "0": 160,
+      "1": 1,
+      "2": 1
+    },
+    "base_overlap": 2,
+    "bridges": 0,
+    "complete_pairs": 106491,
+    "complete_unit_edges": 1532,
+    "components": 1,
+    "core_orders": {
+      "2": 462,
+      "3": 457,
+      "4": 428,
+      "5": 332
+    },
+    "edge_sha256": "44716e51e7b5c4798d10e6a1103dc1b6ecb75df689a7b33e10ca79d8a2c96c28",
+    "generated_anchor_copies": 161,
+    "grid_points": 448,
+    "maximum_degree": 10,
+    "minimum_degree": 2,
+    "outside_registered_overlay_points": 406,
+    "point_sha256": "c4705ba3e02ef24680a4357f9e52a22007526606548cfc6458ef343e2061b03c",
+    "terminal_corner_index": 461,
+    "vertices": 462,
+    "whole_copies": 162
+  },
+  "module_theorem": {
+    "coefficient_residue_form": [
+      0,
+      1,
+      2,
+      1
+    ],
+    "historical_priority_claimed": false,
+    "lower_bound_witness": "the source unit five-cycle is contained in the module",
+    "module": "q*Z_(3)[zeta_5]",
+    "possible_unit_difference_residues": 10,
+    "residue_colour_values": [
+      1,
+      2,
+      2,
+      1,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "statement": "the complete strict unit-distance graph on the module has chromatic number exactly 3",
+    "unit_residue_stream_sha256": "72a4922ae2dfb980b4caf4f752a60ac99d07adf7076884429e9c69bb569acaa3"
+  },
+  "pinned_public_files": 13,
+  "record_candidate": false,
+  "registered_overlay_corollary": {
+    "all_coefficients_integral_at_3": true,
+    "chromatic_number": 3,
+    "colour_frequencies": {
+      "0": 463,
+      "1": 463,
+      "2": 460
+    },
+    "down": {
+      "base_overlap_histogram": {
+        "2": 186,
+        "3": 64,
+        "4": 16,
+        "5": 24,
+        "6": 20,
+        "7": 18
+      },
+      "distinct_copies": 328,
+      "raw_specifications": 5568
+    },
+    "points": 1386,
+    "points_outside_generated_network": 1330,
+    "up": {
+      "base_overlap_histogram": {
+        "2": 186,
+        "3": 64,
+        "4": 16,
+        "5": 24,
+        "6": 20,
+        "7": 18
+      },
+      "distinct_copies": 328,
+      "raw_specifications": 5568
+    }
+  },
+  "reviewed_mathematical_commit": "3beda50683c9d24e033e30e4b35e9d0d5927f0d7",
+  "reviewed_receipt_commit": "14f6cf9288764cb9190f2a96f66d8a6a813b9d3e",
+  "scope": "the frozen network plus the explicit q*Z_(3)[zeta_5] module obstruction",
+  "status": "ACCEPT_AND_STRENGTHEN_GOLDEN_NETWORK_TO_EXACT_THREE_CHROMATIC"
+}
