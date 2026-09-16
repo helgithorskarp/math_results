@@ -87,3 +87,9 @@ fixture and conditional-core label list, derives the rotation, collision-
 merges both copies, tests every pair exactly, checks the literal colouring,
 and independently proves the Golomb lower bound. It imports no solver and
 uses no numerical edge tolerance.
+
+## Publication status
+
+The immutable mathematical source commit is
+[`3d0415fe410c7a0fa5b18aaacf71a7049014d382`](https://github.com/helgithorskarp/math_results/tree/3d0415fe410c7a0fa5b18aaacf71a7049014d382/hadwiger_nelson_opposed241_twenty_contact_stop).
+This is author-side exact evidence. No independent review is claimed.
