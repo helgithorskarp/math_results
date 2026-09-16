@@ -93,3 +93,10 @@ index remained stale and later accepted broadcasts remained pending; this
 package makes no commitment claim.  The published unrestricted comparison
 remains Parts' 509-point strict unit-distance construction.  Historical and
 teammate evidence was preserved, and no adjacent odd21 design was opened.
+
+The mathematical source was published in commit
+`f86de68966eb6be461b0cfc1f0bf8d574c0b989e`.  The corresponding Discovery
+finding was accepted for broadcast once with CheckTx code zero.  It was absent
+from the committed index at height 4363 when checked on 2026-09-16, so its
+receipt is **pending and uncommitted** and must not be resubmitted solely for
+that absence.  See [DISCOVERY_RECEIPT.json](DISCOVERY_RECEIPT.json).
