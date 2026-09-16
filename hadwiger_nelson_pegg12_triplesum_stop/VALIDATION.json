@@ -1,0 +1,17 @@
+{
+  "python": "CPython 3.11.2",
+  "dependencies": "Python standard library only",
+  "commands": [
+    "python3 -B verify.py",
+    "python3 -B controls.py",
+    "python3 -O -B verify.py",
+    "python3 -O -B controls.py"
+  ],
+  "normal_verifier": "VERIFIED_PEGG12_TRIPLESUM_FOUR_CHROMATIC_STOP",
+  "normal_controls": "CONTROLS_PASS",
+  "optimized_verifier": "VERIFIED_PEGG12_TRIPLESUM_FOUR_CHROMATIC_STOP",
+  "optimized_controls": "CONTROLS_PASS",
+  "randomness": false,
+  "external_solver": false,
+  "floating_point_geometry": false
+}
