@@ -1,0 +1,163 @@
+{
+  "certificate_sha256": "cb6e06023fb334cf60d556df153dfd07c6b239a59214b2d1e6e27559eefec549",
+  "checker": "independent dense-quadratic contraction and affine-interval closure audit",
+  "record_candidate": false,
+  "root_certificate": {
+    "beta_lt_1e64_inverse": true,
+    "contraction_factor_lt_1e33_inverse": true,
+    "exact_bound_tuple_sha256": "8c3fbba8ac5afb20a24dd4ec9a31cc332a0f448b3303db6c3c17cde33aa44cc5",
+    "inverse_determinant_nonzero": true,
+    "row_weighted_variation_lt_1e33_inverse": true,
+    "self_map_displacement_lt_1e68_inverse": true
+  },
+  "round_census": [
+    {
+      "complete_unit_edges": 15,
+      "completion_collision_excess": 15,
+      "distinct_generated_points": 24,
+      "maximum_generated_multiplicity": 3,
+      "new_points": 15,
+      "points": 9,
+      "raw_completion_attempts": 30,
+      "round": 0
+    },
+    {
+      "complete_unit_edges": 45,
+      "completion_collision_excess": 64,
+      "distinct_generated_points": 50,
+      "maximum_generated_multiplicity": 7,
+      "new_points": 26,
+      "points": 24,
+      "raw_completion_attempts": 90,
+      "round": 1
+    },
+    {
+      "complete_unit_edges": 108,
+      "completion_collision_excess": 175,
+      "distinct_generated_points": 91,
+      "maximum_generated_multiplicity": 12,
+      "new_points": 41,
+      "points": 50,
+      "raw_completion_attempts": 216,
+      "round": 2
+    },
+    {
+      "complete_unit_edges": 209,
+      "completion_collision_excess": 369,
+      "distinct_generated_points": 140,
+      "maximum_generated_multiplicity": 12,
+      "new_points": 49,
+      "points": 91,
+      "raw_completion_attempts": 418,
+      "round": 3
+    },
+    {
+      "complete_unit_edges": 333,
+      "completion_collision_excess": 610,
+      "distinct_generated_points": 196,
+      "maximum_generated_multiplicity": 12,
+      "new_points": 56,
+      "points": 140,
+      "raw_completion_attempts": 666,
+      "round": 4
+    },
+    {
+      "complete_unit_edges": 486,
+      "completion_collision_excess": 901,
+      "distinct_generated_points": 267,
+      "maximum_generated_multiplicity": 12,
+      "new_points": 71,
+      "points": 196,
+      "raw_completion_attempts": 972,
+      "round": 5
+    },
+    {
+      "complete_unit_edges": 677,
+      "completion_collision_excess": 1275,
+      "distinct_generated_points": 346,
+      "maximum_generated_multiplicity": 12,
+      "new_points": 79,
+      "points": 267,
+      "raw_completion_attempts": 1354,
+      "round": 6
+    },
+    {
+      "complete_unit_edges": 891,
+      "completion_collision_excess": 1696,
+      "distinct_generated_points": 432,
+      "maximum_generated_multiplicity": 12,
+      "new_points": 86,
+      "points": 346,
+      "raw_completion_attempts": 1782,
+      "round": 7
+    },
+    {
+      "complete_unit_edges": 1134,
+      "completion_collision_excess": 2167,
+      "distinct_generated_points": 533,
+      "maximum_generated_multiplicity": 12,
+      "new_points": 101,
+      "points": 432,
+      "raw_completion_attempts": 2268,
+      "round": 8
+    },
+    {
+      "complete_unit_edges": 1415,
+      "points": 533,
+      "round": 9
+    }
+  ],
+  "round_eight": {
+    "chromatic_number": 4,
+    "complete_unit_edges": 1134,
+    "edge_stream_sha256": "e0622f18fd97286e8f91b4a1c13ae249c7a7fa0cd841b2d72ec4f9d7336b3ea2",
+    "physical_audit": {
+      "nonedge_unit_gap_argmin_pair": [
+        273,
+        368
+      ],
+      "nonedge_unit_gap_gt_1e3_inverse": true,
+      "pair_checks": 93096,
+      "separation_argmin_pair": [
+        29,
+        283
+      ],
+      "separation_gt_1e4_inverse": true
+    },
+    "point_stream_sha256": "7549f8ed235894084dacf2035f4e7d38e92b5c150bd2ddea523811fa38751cf1",
+    "points": 432,
+    "proper_literal_four_word": true
+  },
+  "round_nine": {
+    "complete_unit_edges": 1415,
+    "edge_stream_sha256": "c462a02861c8b0f81f1fd7c65b746997f08c320cea80d6204a86bc953f142a9f",
+    "physical_audit": {
+      "nonedge_unit_gap_argmin_pair": [
+        330,
+        449
+      ],
+      "nonedge_unit_gap_gt_1e3_inverse": true,
+      "pair_checks": 141778,
+      "separation_argmin_pair": [
+        101,
+        275
+      ],
+      "separation_gt_1e4_inverse": true
+    },
+    "point_stream_sha256": "27644c447d6bbf16746694d6627915d83c515edd49af752dba8605a148b05a8e",
+    "points": 533
+  },
+  "scope": "one exact UD9-3 realization and its complete equilateral closure rounds zero through nine",
+  "source": {
+    "canonical_four_colourings": 72,
+    "canonical_three_colourings": 0,
+    "chromatic_number": 4,
+    "complete_unit_edges": 15,
+    "direction_classes": 5,
+    "oriented_unit_directions": 30,
+    "points": 9
+  },
+  "target_code_imported": false,
+  "target_mathematical_commit": "9ac74f0c9858aa04d84a72e13f1b903f2dacb978",
+  "verdict": "ACCEPT_COMPLETE_ROUND_STOP"
+}
