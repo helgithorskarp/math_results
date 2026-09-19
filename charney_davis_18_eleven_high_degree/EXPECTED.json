@@ -1,0 +1,259 @@
+{
+  "cycles": [
+    {
+      "allowed_pairs": 0,
+      "forced_label_classes": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "obstruction": "no compatible pair",
+      "vertices": 5
+    },
+    {
+      "allowed_pairs": 3,
+      "forced_label_classes": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "obstruction": "quartic triangle at a c=2 vertex",
+      "vertices": 6
+    },
+    {
+      "allowed_pairs": 7,
+      "forced_label_classes": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "obstruction": "at least three cubic neighbors of one quartic",
+      "vertices": 7
+    },
+    {
+      "allowed_pairs": 8,
+      "forced_label_classes": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "obstruction": "at least three cubic neighbors of one quartic",
+      "vertices": 8
+    },
+    {
+      "allowed_pairs": 9,
+      "forced_label_classes": [
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          1,
+          4,
+          7
+        ],
+        [
+          2,
+          5,
+          8
+        ]
+      ],
+      "obstruction": "at least three cubic neighbors of one quartic",
+      "vertices": 9
+    },
+    {
+      "allowed_pairs": 10,
+      "forced_label_classes": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "obstruction": "at least three cubic neighbors of one quartic",
+      "vertices": 10
+    }
+  ],
+  "incidences": [
+    {
+      "cubic_edges": 7,
+      "minimum_quartics_with_two_cubic_neighbors": 8,
+      "quartic_incidences": 16
+    },
+    {
+      "cubic_edges": 8,
+      "minimum_quartics_with_two_cubic_neighbors": 6,
+      "quartic_incidences": 14
+    },
+    {
+      "cubic_edges": 9,
+      "minimum_quartics_with_two_cubic_neighbors": 4,
+      "quartic_incidences": 12
+    },
+    {
+      "cubic_edges": 10,
+      "minimum_quartics_with_two_cubic_neighbors": 2,
+      "quartic_incidences": 10
+    }
+  ],
+  "local_suspension_patterns": {
+    "counts": {
+      "patterns": 100,
+      "rejected_cubic_common_neighbors": 2,
+      "rejected_cubic_triangle": 13,
+      "rejected_quartic_local_bound": 81
+    },
+    "survivors": [
+      {
+        "u_neighbors_in_A": [
+          0,
+          2
+        ],
+        "v_neighbors_in_A": [
+          1,
+          3
+        ]
+      },
+      {
+        "u_neighbors_in_A": [
+          0,
+          3
+        ],
+        "v_neighbors_in_A": [
+          1,
+          2
+        ]
+      },
+      {
+        "u_neighbors_in_A": [
+          1,
+          2
+        ],
+        "v_neighbors_in_A": [
+          0,
+          3
+        ]
+      },
+      {
+        "u_neighbors_in_A": [
+          1,
+          3
+        ],
+        "v_neighbors_in_A": [
+          0,
+          2
+        ]
+      }
+    ]
+  },
+  "paths": [
+    {
+      "allowed_pairs": 0,
+      "largest_forced_label_class": 0,
+      "maximum_matching": 0,
+      "vertices": 1
+    },
+    {
+      "allowed_pairs": 0,
+      "largest_forced_label_class": 0,
+      "maximum_matching": 0,
+      "vertices": 2
+    },
+    {
+      "allowed_pairs": 0,
+      "largest_forced_label_class": 1,
+      "maximum_matching": 0,
+      "vertices": 3
+    },
+    {
+      "allowed_pairs": 1,
+      "largest_forced_label_class": 1,
+      "maximum_matching": 1,
+      "vertices": 4
+    },
+    {
+      "allowed_pairs": 2,
+      "largest_forced_label_class": 1,
+      "maximum_matching": 2,
+      "vertices": 5
+    },
+    {
+      "allowed_pairs": 3,
+      "largest_forced_label_class": 2,
+      "maximum_matching": 3,
+      "vertices": 6
+    },
+    {
+      "allowed_pairs": 4,
+      "largest_forced_label_class": 2,
+      "maximum_matching": 3,
+      "vertices": 7
+    },
+    {
+      "allowed_pairs": 5,
+      "largest_forced_label_class": 2,
+      "maximum_matching": 3,
+      "vertices": 8
+    },
+    {
+      "allowed_pairs": 6,
+      "largest_forced_label_class": 3,
+      "maximum_matching": 3,
+      "vertices": 9
+    },
+    {
+      "allowed_pairs": 7,
+      "largest_forced_label_class": 3,
+      "maximum_matching": 4,
+      "vertices": 10
+    }
+  ],
+  "rooted_component_models": {
+    "middle_edges_with_degree_two_ends": 471,
+    "models": 282
+  },
+  "scope": "Supplementary finite audits of the written structural proof; no sphere census, attachment search, solver, or independent review.",
+  "status": "PASS"
+}
