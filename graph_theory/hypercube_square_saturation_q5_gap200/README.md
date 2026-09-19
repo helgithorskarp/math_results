@@ -132,13 +132,18 @@ Every catalog used by the thirteen residual rows is a single `Aut(Q_4)` orbit:
 
 | deficit | `(E,b,e_0)` | orbit size | stabilizer size |
 |---:|---:|---:|---:|
-| 0 | `(17,0,0)` | 64 | 6 |
+| 0 | `(17,0,1)` | 64 | 6 |
 | 28 | `(19,6,0)` | 192 | 2 |
 | 42 | `(20,0,0)` | 32 | 12 |
 | 48 | `(18,3,0)` | 192 | 2 |
 | 71 | `(16,2,1)` | 192 | 2 |
 | 99 | `(1,3,5)` | 32 | 12 |
 | 124 | `(21,1,0)` | 192 | 2 |
+
+For the equality orbit, the displayed boundary fields are computed
+descriptively even though the profile-compression definition of `b,e_0` is
+needed only for positive-deficit patterns.  Its representative has one empty
+boundary, as independently observed in the corrective review.
 
 Facet transitivity and these orbit classifications allow one distinguished
 facet to be fixed to a canonical representative.  The production verifier

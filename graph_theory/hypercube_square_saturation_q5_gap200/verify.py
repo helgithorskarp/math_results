@@ -182,7 +182,7 @@ def parity_counterexample_delta():
 
 
 def new_residual_searches(census, boundary, catalogs):
-    equality = catalogs[(0, 17, 0, 0)]
+    equality = catalogs[(0, 17, 0, 1)]
     d28 = catalogs[(28, 19, 6, 0)]
     d42 = catalogs[(42, 20, 0, 0)]
     d48 = catalogs[(48, 18, 3, 0)]
@@ -327,7 +327,7 @@ def verify():
         raise AssertionError("unexpected structural profile list below 200")
 
     profiles = (
-        (0, 17, 0, 0),
+        (0, 17, 0, 1),
         (28, 19, 6, 0),
         (42, 20, 0, 0),
         (48, 18, 3, 0),
