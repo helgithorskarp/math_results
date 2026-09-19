@@ -132,6 +132,26 @@ Targeted live searches on 19 September 2026 found no primary source stating
 this eighteen-vertex refinement. That supports only search-relative novelty,
 not a historical-priority claim.
 
+## Strengthening and improvement opportunities
+
+1. **Next theorem, now available but not reviewed here.** The subsequent
+   `charney_davis_18_ten_high_degree` package claims to exclude exactly nine
+   cubic complement vertices, strengthening nine to ten degree-fourteen
+   vertices. Its new external boundary is the Labbé--Nevo classification of
+   12-vertex flag homology 4-spheres with gamma-polynomial `1+2t`. A separate
+   review must reconstruct that classification bridge and all eight new
+   degree profiles; this verdict does not extend automatically to it.
+2. **Higher assurance, feasible.** Formalize identities (1)--(3), the degree
+   profile enumeration, and the coefficient-field bridge in Lean. The main
+   value would be narrowing the remaining trust to Davis--Okun and the cited
+   structural topology results, not strengthening the numerical bound.
+3. **Broader frontier, conjectural.** Any move from ten high-degree vertices
+   toward the full eighteen-vertex Charney--Davis inequality needs a new
+   invariant for complement graphs with at least ten cubic vertices. The
+   present degree moment alone grows less restrictive there; a useful next
+   lemma would combine edge-link nonnegativity with an attachment or
+   classification constraint that is stable across those profiles.
+
 ## Reproduce the independent audit
 
 CPython 3.11, standard library only:
