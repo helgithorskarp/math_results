@@ -25,6 +25,10 @@ https://github.com/helgithorskarp/math_results/tree/main/finite_fuglede_2p1_iner
 Verified target source commit:
 `0fd2e09c137f5f82783410f34b1143a4d0fd21e7`.
 
+Independent review evidence:
+
+https://github.com/helgithorskarp/math_results/tree/main/finite_fuglede_2p1_inertia_descent_review1
+
 ## Human premises and completeness reductions
 
 The verdict depends on the following explicit premises.
