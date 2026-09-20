@@ -1,0 +1,236 @@
+{
+  "cycle_oracle_states": 3193,
+  "empty_leaf": {
+    "configurations": 24300,
+    "verified_implications": 7814
+  },
+  "full_equivalence": {
+    "configurations": 3168,
+    "domains": [
+      {
+        "configurations": 165,
+        "maximum_mass": 8,
+        "order": 3,
+        "split_tests": 1485,
+        "stackable": 160
+      },
+      {
+        "configurations": 495,
+        "maximum_mass": 8,
+        "order": 4,
+        "split_tests": 5148,
+        "stackable": 457
+      },
+      {
+        "configurations": 792,
+        "maximum_mass": 7,
+        "order": 5,
+        "split_tests": 8580,
+        "stackable": 640
+      },
+      {
+        "configurations": 1716,
+        "maximum_mass": 7,
+        "order": 6,
+        "split_tests": 20592,
+        "stackable": 942
+      }
+    ],
+    "nonstackable": 969,
+    "split_tests": 35805,
+    "stackable": 2199
+  },
+  "induction": {
+    "case_counts": {
+      "cut_at_source": 5388,
+      "cut_at_target_empty": 2952,
+      "cut_at_target_positive": 3562,
+      "cut_elsewhere": 16360
+    },
+    "first_examples": {
+      "cut_at_source": {
+        "child": [
+          0,
+          0,
+          1
+        ],
+        "designated_child_split": [
+          0,
+          0
+        ],
+        "move": [
+          0,
+          2
+        ],
+        "original_split": [
+          0,
+          0
+        ],
+        "parent": [
+          2,
+          0,
+          0
+        ],
+        "parent_split": [
+          0,
+          0
+        ]
+      },
+      "cut_at_target_empty": {
+        "child": [
+          0,
+          0,
+          1
+        ],
+        "designated_child_split": [
+          0,
+          0
+        ],
+        "move": [
+          0,
+          2
+        ],
+        "original_split": [
+          2,
+          0
+        ],
+        "parent": [
+          2,
+          0,
+          0
+        ],
+        "parent_split": [
+          0,
+          0
+        ]
+      },
+      "cut_at_target_positive": {
+        "child": [
+          0,
+          0,
+          1
+        ],
+        "designated_child_split": [
+          2,
+          0
+        ],
+        "move": [
+          1,
+          2
+        ],
+        "original_split": [
+          2,
+          0
+        ],
+        "parent": [
+          0,
+          2,
+          0
+        ],
+        "parent_split": [
+          2,
+          0
+        ]
+      },
+      "cut_elsewhere": {
+        "child": [
+          0,
+          0,
+          1
+        ],
+        "designated_child_split": [
+          0,
+          0
+        ],
+        "move": [
+          1,
+          2
+        ],
+        "original_split": [
+          0,
+          0
+        ],
+        "parent": [
+          0,
+          2,
+          0
+        ],
+        "parent_split": [
+          0,
+          0
+        ]
+      }
+    },
+    "first_nontrivial_empty_endpoint": {
+      "child": [
+        0,
+        1,
+        2
+      ],
+      "move": [
+        0,
+        1
+      ],
+      "original_lift": [
+        1,
+        2,
+        0,
+        0
+      ],
+      "original_split": [
+        1,
+        1
+      ],
+      "parent": [
+        2,
+        0,
+        2
+      ],
+      "parent_split": [
+        0,
+        2
+      ],
+      "replacement_child_split": [
+        0,
+        0
+      ]
+    },
+    "nontrivial_empty_endpoint_cases": 2722,
+    "post_move_target_equal_to_one": 10252,
+    "stackable_child_lifts": 5656,
+    "transformations": 28262
+  },
+  "method": "direct legal-move recursion plus exhaustive inverse-move proof audit",
+  "path_oracle_states": 23759,
+  "quotient": {
+    "cut_path_edges": 2865,
+    "orders": 18
+  },
+  "status": "PASS",
+  "strict_gain": [
+    {
+      "configuration": [
+        0,
+        1,
+        1,
+        0,
+        6
+      ],
+      "ordinary_spanning_paths_all_fail": true,
+      "successful_splits": 2
+    },
+    {
+      "configuration": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        15
+      ],
+      "ordinary_spanning_paths_all_fail": true,
+      "successful_splits": 4
+    }
+  ]
+}
