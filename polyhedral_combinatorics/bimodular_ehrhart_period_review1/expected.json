@@ -1,0 +1,61 @@
+{
+  "basis_extension_audit": {
+    "alphabet": [
+      -1,
+      0,
+      1,
+      2
+    ],
+    "bases_by_abs_determinant": {
+      "1": 39036,
+      "2": 51510
+    },
+    "independent_proper_row_subsets": 543276,
+    "index_two_proper_row_subsets": 85320
+  },
+  "full_support_audit": {
+    "2x3": {
+      "full_support_characters": 72,
+      "index_two_matrices": 72,
+      "minimal_outside_rhs": 144,
+      "outside_binary_rhs": 144,
+      "partial_support_characters": 0,
+      "proper_subsystem_checks": 432
+    },
+    "3x4": {
+      "full_support_characters": 18048,
+      "index_two_matrices": 103296,
+      "minimal_outside_rhs": 72192,
+      "outside_binary_rhs": 413184,
+      "partial_support_characters": 85248,
+      "proper_subsystem_checks": 2892288
+    }
+  },
+  "implementation": "independent determinant, mod-two character, and direct-count audits",
+  "imports_reviewed_code": false,
+  "parallelepiped_cube_families": {
+    "cases": 28,
+    "definition_level_holdouts": 56,
+    "dense_shear": "(x,w)->(x+w_1*1,w), unimodular when f>=1",
+    "family_record_sha256": "f109799abd8832d6d1e1cf5201f357ae4f7f522b83041045129c3401b94f737e",
+    "free_dimensions": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "leading_B": "1/4",
+    "literal_inequality_checks": 16,
+    "outside_primitive_type_B_from_rank": 1,
+    "ranks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "status": "PASS"
+}
