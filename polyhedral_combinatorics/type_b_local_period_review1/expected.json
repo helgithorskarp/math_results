@@ -1,0 +1,53 @@
+{
+  "cycle_cube_families": {
+    "cases": 24,
+    "cycle_ranks": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "definition_level_holdouts": 48,
+    "free_dimensions": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "leading_B_by_cycle_rank": {
+      "2": "1/8",
+      "3": "1/16",
+      "4": "1/32",
+      "5": "1/64",
+      "6": "1/128",
+      "7": "1/256"
+    },
+    "residual_by_free_dimension": {
+      "0": "1",
+      "1": "2",
+      "2": "8",
+      "3": "48"
+    }
+  },
+  "family_record_sha256": "ed1e8ec099837f05d0e14fa9863f320d387979ab59c1dd2b4e9b0c2f3a0bda88",
+  "implementation": "independent cycle-chain summation and exact interpolation",
+  "imports_reviewed_code": false,
+  "literal_cycle_checks": 16,
+  "negative_controls": {
+    "McAllister_Woods_simple_non_type_B_triangle": {
+      "denominator": 2,
+      "dilations_checked": 18,
+      "formula": "binom(n+2,2)",
+      "period": 1
+    },
+    "Stanley_nonsimple_type_B": {
+      "denominator": 2,
+      "dilations_checked": 18,
+      "formula": "binom(n+3,3)",
+      "period": 1
+    }
+  },
+  "status": "PASS"
+}
