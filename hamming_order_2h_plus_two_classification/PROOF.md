@@ -11,7 +11,7 @@ Let `H=K_(n1) square ... square K_(nd)` be a finite Hamming graph. A coordinate 
 Then one of the following holds.
 
 - **(L)** `C` lies on one coordinate line.
-- **(E)** `C` is the disjoint union of two `(h+1)`-point subsets of distinct coordinate lines.
+- **(E)** `C` is the union of two vertex-disjoint `(h+1)`-point subsets of distinct coordinate lines; cross-edges between the subsets are allowed.
 - **(U)** `C=L union R`, where `L` is an `(h+2)`-point coordinate-line subset, `R` is an `h`-point subset of a distinct coordinate line, and every point of `R` has a neighbour in `L`.
 
 Conversely, each displayed form satisfies (1). Form (U) lies in a coordinate two-flat. A connected set satisfying (1) but lying in no coordinate two-flat is therefore of form (E), with different line directions and one cross-edge in a third direction.

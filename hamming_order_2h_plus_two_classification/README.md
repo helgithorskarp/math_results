@@ -15,8 +15,8 @@ be any finite Hamming graph. A set `C` is an `h`-core if the induced graph `H[C]
 For every `h >= 6`, every Hamming `h`-core `C` of order `2h+2` has one of three forms:
 
 1. one coordinate line;
-2. two disjoint `(h+1)`-point coordinate-line subsets;
-3. an `(h+2)`-point line and an `h`-point line, with every point of the smaller line adjacent to the larger line.
+2. the union of two vertex-disjoint `(h+1)`-point subsets of distinct coordinate lines (cross-edges are allowed);
+3. the union of an `(h+2)`-point line subset and an `h`-point subset of a distinct line, with every point of the smaller set adjacent to the larger set.
 
 All three forms are sufficient. The third is necessarily contained in a coordinate two-flat.
 
