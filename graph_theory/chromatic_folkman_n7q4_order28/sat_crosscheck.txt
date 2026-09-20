@@ -1,0 +1,18 @@
+Optional independent cross-check, run 2026-09-20 UTC
+
+generator: Python 3, generate_cnf.py
+formula: 168 variables, 1037 clauses, 11587 bytes
+formula_sha256: 4d3c608d7bfa4cf0641a123f79e9a8149d8e7cb6c89d42431ed31283161d64b6
+solver: CaDiCaL sc2021
+solver_command: cadical --no-binary six_colouring.cnf six_colouring.drat
+solver_result: UNSATISFIABLE
+proof: textual DRAT, 35437668 bytes (omitted; regenerable)
+proof_sha256: be11d4cfb48f24c6a49f5b279c422d0657d935305127d1ca2f7c5a524388d584
+checker: drat-trim (commit/build distributed in Debian package 2.2-1)
+checker_command: drat-trim six_colouring.cnf six_colouring.drat
+checker_result: VERIFIED
+checker_core: 868 of 1037 input clauses, 253835 of 312959 lemmas
+
+Trust boundary: this record and its hashes are supplementary.  The theorem's
+primary certificate is residual_odd_cycles.txt, checked without a SAT solver
+by verify.py.
