@@ -2,9 +2,10 @@
 
 This directory proves a structural reduction for the still-open degree-57
 diameter-two Moore graph problem.  It continues the sharp 398-coclique branch
-from Discovery Net contributions
-`bafkreiev5wvmyqs2gmz626ew3ugh3bqyq2fh372a3654igguqysczvj34m` and
-`bafkreidrcqwagnryekdj6rwp7p6sluy7riwrv2eesm7gtg5aicxzpe7lla`.
+from Discovery Net contribution
+`bafkreidrcqwagnryekdj6rwp7p6sluy7riwrv2eesm7gtg5aicxzpe7lla` and its
+independent review and edge-class refinement
+`bafkreieb2xpi4wz3chp6muyb7lqeyjm5vquotq24hhnerxwoumb7rylj4u`.
 
 ## Theorem
 
@@ -141,10 +142,12 @@ show that any of D1, D2, P admits the necessary cycle-compatible completion.
 Faber and Keegan explain why permutation systems without the correct global
 compatibility do not settle existence; Ishida gives the current automorphism
 restriction.  The proposed new content here is the exact `t=3` support-core
-classification and distance-two saturation in this 398-coclique branch, not
-the classical Moore parameters or local branch decomposition.
+classification, distance-two saturation, and raw matching countermodel in
+this 398-coclique branch.  The weight-three degree-23 conclusion and
+weight-class edge equations were already stated and independently verified
+in the height-2833 review; they are re-derived here as premises for the new
+classification, not claimed as new.
 
 - V. Faber and J. Keegan, *Existence of a Moore graph of degree 57 is still
   open*, arXiv:2210.09577.
 - Y. Ishida, *No involutions in the missing Moore graph*, arXiv:2606.29183.
-
