@@ -23,12 +23,18 @@ class BoundaryAuditTests(unittest.TestCase):
             self.assertEqual(verify.induced_min_degree(family), h)
             self.assertEqual(verify.essential_dimension(family), 3)
 
+    def test_overlap_is_canonical_U(self):
+        witness = verify.overlap_witness(6)
+        self.assertEqual(len(witness), 14)
+        self.assertEqual(verify.induced_min_degree(witness), 6)
+        self.assertEqual(verify.maximum_line_size(witness), 8)
+
     def test_line_incidence_catalogue(self):
         audited, counts, covered = verify.audit_line_incidence()
         self.assertEqual(audited, 88074)
         self.assertEqual(
             counts,
-            {"empty": 62478, "matching": 3240, "single": 19440, "star": 2916},
+            {"empty": 62478, "matching": 3240, "one_edge": 19440, "star": 2916},
         )
         self.assertEqual(covered, 3726)
 

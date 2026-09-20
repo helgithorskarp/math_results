@@ -50,6 +50,18 @@ def essential_dimension(vertices: set[Vertex]) -> int:
     return sum(len({v[i] for v in vertices}) > 1 for i in range(dimension))
 
 
+def maximum_line_size(vertices: set[Vertex]) -> int:
+    dimension = len(next(iter(vertices)))
+    maximum = 0
+    for direction in range(dimension):
+        fibres: dict[tuple[int, ...], int] = {}
+        for vertex in vertices:
+            fixed = vertex[:direction] + vertex[direction + 1 :]
+            fibres[fixed] = fibres.get(fixed, 0) + 1
+        maximum = max(maximum, *fibres.values())
+    return maximum
+
+
 def geometric_lines(dimension: int, alphabet: int):
     for direction in range(dimension):
         other = [i for i in range(dimension) if i != direction]
@@ -71,7 +83,7 @@ def nontrivial_line_subsets(dimension: int = 4, alphabet: int = 3):
 
 def audit_line_incidence() -> tuple[int, dict[str, int], int]:
     objects = list(nontrivial_line_subsets())
-    counts = {"empty": 0, "matching": 0, "single": 0, "star": 0}
+    counts = {"empty": 0, "matching": 0, "one_edge": 0, "star": 0}
     covered_pairs = 0
     audited = 0
 
@@ -87,7 +99,7 @@ def audit_line_incidence() -> tuple[int, dict[str, int], int]:
         degree_a = {x: sum(x == u for u, _ in edges) for x in a}
         degree_b = {y: sum(y == v for _, v in edges) for y in b}
         if len(edges) == 1:
-            counts["single"] += 1
+            counts["one_edge"] += 1
             if direction_a != direction_b:
                 assert essential_dimension(set(a | b)) == 3
         elif max(degree_a.values()) <= 1 and max(degree_b.values()) <= 1:
@@ -115,6 +127,12 @@ def skew_two_line_family(h: int) -> set[Vertex]:
     return {(a, 0, 0) for a in range(h + 1)} | {
         (0, b, 1) for b in range(h + 1)
     }
+
+
+def overlap_witness(h: int) -> set[Vertex]:
+    row = {(a, 0) for a in range(h + 1)}
+    punctured_column = {(0, b) for b in range(1, h + 2)}
+    return row | punctured_column
 
 
 def audit(max_h: int, profile_max_h: int) -> None:
@@ -152,12 +170,18 @@ def audit(max_h: int, profile_max_h: int) -> None:
     )
     assert maximum_line == 4
 
+    overlap = overlap_witness(6)
+    assert len(overlap) == 14
+    assert induced_min_degree(overlap) == 6
+    assert maximum_line_size(overlap) == 8
+
     line_pairs, pattern_counts, covered_pairs = audit_line_incidence()
     print(f"exhaustive profile range: h=6..{profile_max_h}")
     print(f"feasible capped profiles checked: {profile_count}")
     print(f"symbolic inequality instances checked: {algebra_count}")
     print(f"skew two-line witnesses checked: {max_h - 5}")
     print("h=5 sharp grid: order=12 minimum_degree=5 maximum_line=4")
+    print("E/U overlap witness canonicalized: h=6 maximum_line=8 case=U")
     print(f"disjoint ternary line-subset pairs checked: {line_pairs}")
     print(
         "cross-pattern counts: "

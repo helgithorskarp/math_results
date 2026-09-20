@@ -8,13 +8,15 @@ Let `H=K_(n1) square ... square K_(nd)` be a finite Hamming graph. A coordinate 
 |C|=2h+2,                 delta(H[C])>=h.             (1)
 ```
 
-Then one of the following holds.
+Let `M` be the maximum number of selected points on a coordinate line. Then exactly one of the following holds.
 
-- **(L)** `C` lies on one coordinate line.
-- **(E)** `C` is the union of two vertex-disjoint `(h+1)`-point subsets of distinct coordinate lines; cross-edges between the subsets are allowed.
-- **(U)** `C=L union R`, where `L` is an `(h+2)`-point coordinate-line subset, `R` is an `h`-point subset of a distinct coordinate line, and every point of `R` has a neighbour in `L`.
+- **(L)** `M=2h+2`, and `C` lies on one coordinate line.
+- **(E)** `M=h+1`, and `C` is the union of two vertex-disjoint `(h+1)`-point subsets of distinct coordinate lines; cross-edges between the subsets are allowed.
+- **(U)** `M=h+2`, and `C=L union R`, where `L` is an `(h+2)`-point coordinate-line subset, `R` is an `h`-point subset of a distinct coordinate line, and every point of `R` has a neighbour in `L`.
 
-Conversely, each displayed form satisfies (1). Form (U) lies in a coordinate two-flat. A connected set satisfying (1) but lying in no coordinate two-flat is therefore of form (E), with different line directions and one cross-edge in a third direction.
+Conversely, each displayed form satisfies (1). The values of `M` make the cases mutually exclusive. Form (U) lies in a coordinate two-flat. A connected set satisfying (1) but lying in no coordinate two-flat is therefore of form (E), with different line directions and one cross-edge in a third direction.
+
+The maximum-line clauses repair a genuine ambiguity in the unqualified descriptions. For example, in `K_(h+2) square K_(h+2)`, let `p=(0,0)`, `A={(a,0):0<=a<=h}`, and `B={(0,b):1<=b<=h+1}`. The set `A union B` is a union of two vertex-disjoint `(h+1)`-point line subsets, but it can also be written as the `(h+2,h)` union `(B union {p}) union (A-{p})`. Its canonical case is (U), because its maximum selected line has size `h+2`.
 
 ## 2. Two elementary facts about Hamming lines
 
@@ -70,7 +72,7 @@ Each vertex consequently lies on a unique selected `h`-point coordinate line. Tw
 
 ## 5. The maximum-line split
 
-If `H[C]` is disconnected, every component has at least `h+1` vertices. Equality in the total order forces exactly two components of order `h+1`, each complete. By Section 2 they are coordinate-line subsets, giving (E).
+If `H[C]` is disconnected, every component has at least `h+1` vertices. Equality in the total order forces exactly two components of order `h+1`, each complete. By Section 2 they are coordinate-line subsets. No selected line can meet both components, so `M=h+1`, giving (E).
 
 Suppose now that `H[C]` is connected and is not a line. Choose a maximum selected coordinate line `L`, write `M=|L|`, and put `O=C-L`. For every `x in O`, Section 2 gives
 
@@ -90,7 +92,7 @@ Now `|O|=h+1`. A point of `O` with a neighbour in `L` has at least `h-1` neighbo
 
 The graph `H[O]` is a complete graph with at most a matching removed. Since `|O|=h+1>=7`, it contains a triangle. That triangle lies on a coordinate line. Every other point of `O` is adjacent to at least two triangle vertices, and Section 2 forces that point onto the same line. Thus `O` itself is a line clique, giving (E).
 
-This proves the exhaustive list.
+This proves the exhaustive list. Since its branches are `M=2h+2`, `M=h+2`, and `M=h+1`, respectively, it also proves mutual exclusivity.
 
 ## 6. Incidence between two lines
 

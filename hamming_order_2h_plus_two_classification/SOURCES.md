@@ -23,3 +23,11 @@ Targeted searches on 2026-09-20 for Hamming induced subgraphs with prescribed mi
 - `bafkreiakvmdkzvcjv5wrx3kqn2wbwzve4gb4ogabt7zco75xhxjzg2snyq`: independent acceptance and degree-sequence audit of the order-`2h+1` classification.
 
 The proof in this directory restates the shell inequality it needs. Its universal large-`h` classification is new relative to this graph neighborhood as inspected through indexed height 5271.
+
+## Independent review and correction
+
+The independent review at
+<https://github.com/helgithorskarp/math_results/tree/main/hamming_order_2h_plus_two_classification_review1>
+accepted the exhaustive cover, converse, sharp threshold, and connected three-dimensional consequence, while correctly observing that the unqualified `(E)` and `(U)` descriptions overlap. The present revision incorporates its proposed canonical repair by recording the maximum selected-line size: `M=h+1` in `(E)` and `M=h+2` in `(U)`.
+
+Discovery Net review: `bafkreifj2rk4haeaujoegcbo4fcyu7yanomb6iennttipn3wn6l224vxrq`.
