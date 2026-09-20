@@ -1,0 +1,112 @@
+{
+  "binary_arithmetic": {
+    "congruence_solutions": 4724,
+    "half_translate_partitions": 1582,
+    "maximum_n": 96
+  },
+  "fixtures_and_controls": {
+    "fixtures": [
+      {
+        "complement_size": 4,
+        "n": 8,
+        "p": 3,
+        "valuation": 0
+      },
+      {
+        "complement_size": 4,
+        "n": 8,
+        "p": 3,
+        "valuation": 1
+      },
+      {
+        "complement_size": 6,
+        "n": 12,
+        "p": 5,
+        "valuation": 0
+      },
+      {
+        "complement_size": 6,
+        "n": 12,
+        "p": 5,
+        "valuation": 1
+      },
+      {
+        "complement_size": 105,
+        "n": 210,
+        "p": 11,
+        "valuation": 0
+      }
+    ],
+    "rejected_controls": [
+      "mixed valuations",
+      "repeated residual level",
+      "valuation equal to v2(n)",
+      "noncoprime graph-spectrum dichotomy"
+    ]
+  },
+  "graph_spectrum_dichotomy": {
+    "candidate_pairs": 14375,
+    "noncoprime_counterexample_profile": [
+      2,
+      1,
+      0
+    ],
+    "profile_counts": {
+      "2,3:levels=3": 28,
+      "3,2:levels=2": 45,
+      "4,3:levels=3": 640
+    },
+    "spectral_pairs": 713
+  },
+  "positive_case_digest_sha256": "d7800ac23e5e5025310b4240f71660b339fc324a053fe8af1cbe19fc6ff9dd4d",
+  "reads_target_code_or_certificate": false,
+  "root_zero_method": "Ramanujan-sum trace of squared norm",
+  "schema": "independent-full-prime-fiber-review-v1",
+  "small_full_fiber_censuses": [
+    {
+      "all_spectrum_deletion_selections": 8,
+      "base_spectral_sets_of_size_p": 0,
+      "candidate_sets": 1,
+      "n": 2,
+      "normalized_spectra": 1,
+      "p": 3,
+      "spectral_sets": 1
+    },
+    {
+      "all_spectrum_deletion_selections": 0,
+      "base_spectral_sets_of_size_p": 0,
+      "candidate_sets": 6,
+      "n": 3,
+      "normalized_spectra": 0,
+      "p": 2,
+      "spectral_sets": 0
+    },
+    {
+      "all_spectrum_deletion_selections": 0,
+      "base_spectral_sets_of_size_p": 0,
+      "candidate_sets": 252,
+      "n": 3,
+      "normalized_spectra": 0,
+      "p": 5,
+      "spectral_sets": 0
+    },
+    {
+      "all_spectrum_deletion_selections": 368,
+      "base_spectral_sets_of_size_p": 0,
+      "candidate_sets": 84,
+      "n": 4,
+      "normalized_spectra": 46,
+      "p": 3,
+      "spectral_sets": 9
+    },
+    {
+      "all_spectrum_deletion_selections": 0,
+      "base_spectral_sets_of_size_p": 0,
+      "candidate_sets": 28,
+      "n": 5,
+      "normalized_spectra": 0,
+      "p": 2,
+      "spectral_sets": 0
+    }
+  ]
+}
