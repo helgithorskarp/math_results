@@ -1,0 +1,64 @@
+{
+  "base_avoid": [
+    0,
+    0,
+    7,
+    7,
+    9,
+    10,
+    10,
+    11,
+    11
+  ],
+  "candidate_counts": {
+    "1": 21,
+    "2": 45,
+    "3": 9,
+    "4": 0
+  },
+  "capacity": [
+    11,
+    11,
+    4,
+    4,
+    2,
+    1,
+    1,
+    0,
+    0
+  ],
+  "one_block_immediately_excluded": 92,
+  "orbit_counts": {
+    "1": 9,
+    "2": 16,
+    "3": 3
+  },
+  "remaining_blocks": 113,
+  "status": "PASS",
+  "subgroup_order": 16,
+  "triple_orbit_sizes": [
+    4,
+    4,
+    1
+  ],
+  "triple_representatives": [
+    "16,57,67",
+    "36,57,67",
+    "56,57,67"
+  ]
+}
+base avoidance: [0, 0, 7, 7, 9, 10, 10, 11, 11]
+deletion capacities: [11, 11, 4, 4, 2, 1, 1, 0, 0]
+surviving counts m=1..4: [21, 45, 9, 0]
+independent bit-mask audit: PASS
+test_all_hard_singletons_survive (test_verify.CapacityTests.test_all_hard_singletons_survive) ... ok
+test_easy_singleton_is_rejected (test_verify.CapacityTests.test_easy_singleton_is_rejected) ... ok
+test_four_edges_cannot_survive (test_verify.CapacityTests.test_four_edges_cannot_survive) ... ok
+test_missing_67_fails_at_distance_three (test_verify.CapacityTests.test_missing_67_fails_at_distance_three) ... ok
+test_subgroup_preserves_base (test_verify.CapacityTests.test_subgroup_preserves_base) ... ok
+test_valid_triple_boundary (test_verify.CapacityTests.test_valid_triple_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.025s
+
+OK
