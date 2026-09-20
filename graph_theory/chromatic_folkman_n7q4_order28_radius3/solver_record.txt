@@ -1,0 +1,33 @@
+Solver/checker record, 2026-09-20 UTC
+
+Formula:
+  variables: 819
+  clauses: 18,678
+  bytes: 549,668
+  lines: 18,679
+  SHA-256: ec2fa762b02b8c385948e533cf9608fb5a290c7e2191cc701b23b38a41d5f421
+
+CaDiCaL:
+  version output: sc2021
+  executable SHA-256: c6de62662723ec4a7426c5ca2bc9bfb04c60aad81a423957e3cd1ffadd0f8aa7
+  command: cadical --no-binary radius3.cnf radius3.drat
+  result: UNSAT (exit status 20)
+  proof format: textual DRAT
+
+DRAT proof (generated, deliberately not committed):
+  bytes: 23,302,800
+  lines: 110,013
+  SHA-256: 79e3b0249e5e663f637a6aa599738dcfd1ee9b307f162846935fd17efdf87cc7
+
+drat-trim:
+  executable SHA-256: 9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a
+  result: VERIFIED
+  core input clauses: 2,426 of 18,678
+  core lemmas: 23,935 of 52,283
+  resolution steps: 3,448,010
+  RAT lemmas: 0
+
+The proof trace is excluded under the compact-evidence policy.  A clean repeat
+with the recorded solver produced the same proof byte-for-byte.  It can be
+regenerated from the byte-canonical CNF emitted by verify.py.  The theorem's
+radius-two subcase is also checked without a SAT solver by radius2_audit.py.
