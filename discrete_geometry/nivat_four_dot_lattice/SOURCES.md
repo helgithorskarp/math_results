@@ -6,7 +6,7 @@ Checked 2026-09-20.
    complexity in algebraic subshifts*, Theoretical Computer Science 777
    (2019), 379–386,
    [published article](https://www.sciencedirect.com/science/article/pii/S0304397519300088),
-   DOI 10.1016/j.tcs.2019.01.015,
+   DOI [10.1016/j.tcs.2018.12.029](https://doi.org/10.1016/j.tcs.2018.12.029),
    [author manuscript](https://emoutot.perso.math.cnrs.fr/static/publi/karimoutot19.1.pdf).
    The ordinary binary four-dot positive theorem is journal Theorem 11
    (manuscript Theorem 10). Their negative example, journal Theorem 12
