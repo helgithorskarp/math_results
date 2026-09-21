@@ -2,7 +2,8 @@
 
 This directory proves an exact `p`-adic valuation formula for an infinite
 arithmetic progression of Euler up/down numbers and applies it to the
-boundary class in the Euler-preperiod conjecture.
+boundary class in the Euler-preperiod conjecture.  It generalizes the
+previously proved diagonal case `q=1` (equivalently `r=p`) to every `q>=1`.
 
 ## Main theorem
 
@@ -25,6 +26,10 @@ v_p(A_(q(p-1)-1)) = w_p - 1.                         (1)
 ```
 
 The right side is independent of `q`, even when `p` divides `q`.
+The identity for `q=1` already appears in the accepted diagonal-preperiod
+lemma `bafkreifeajdiiqrfvux5w7xowmagwzcw2uync75vp5cdyct6hgo7cm33s4`.
+The new content is the uniform extension to all multiples of `p-1`, where
+the additional LTE valuation must cancel the possible `p`-power in `q`.
 
 ## Preperiod consequence
 
@@ -43,8 +48,9 @@ p^3 does not divide 2^(p-1)-1
 s(p^r) >= r-2.                                       (2)
 ```
 
-Equivalently, any failure of the conjectured lower bound in this exponent
-class forces the order-three base-two Wieferich condition
+Equivalently, any failure of the conjectured lower bound anywhere in this
+entire exponent congruence class—not just on the diagonal `r=p`—forces the
+order-three base-two Wieferich condition
 
 ```text
 p^3 divides 2^(p-1)-1.

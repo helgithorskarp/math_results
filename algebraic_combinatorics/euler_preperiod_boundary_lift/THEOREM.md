@@ -51,6 +51,11 @@ This proves the main theorem.  Notice that assuming `p` does not divide `q`
 would hide the main uniformity: (4) is unchanged, while the extra lift in
 `2^m-1` cancels the division by `m` exactly.
 
+For `q=1`, this is the endpoint valuation used in the accepted exact
+diagonal classification of `s(p^p)`.  The statement here generalizes that
+case to the full progression `q(p-1)-1`; the cancellation above is the new
+bridge needed when `q` itself carries powers of `p`.
+
 ## 2. Preperiod corollary
 
 Guelec's exact criterion states, for `1<=k<=r-1`,
