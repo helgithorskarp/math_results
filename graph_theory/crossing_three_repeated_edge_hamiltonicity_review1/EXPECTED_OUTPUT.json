@@ -1,0 +1,104 @@
+{
+  "H_vertex_connectivity_distribution": {
+    "3": 850,
+    "4": 150
+  },
+  "K6_projective_triangulation": {
+    "each_edge_face_incidence": 2,
+    "each_vertex_link": "connected 5-cycle",
+    "euler_characteristic": 1,
+    "faces": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        2,
+        4
+      ],
+      [
+        0,
+        3,
+        5
+      ],
+      [
+        0,
+        4,
+        5
+      ],
+      [
+        1,
+        2,
+        5
+      ],
+      [
+        1,
+        3,
+        4
+      ],
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        2,
+        3,
+        4
+      ],
+      [
+        2,
+        3,
+        5
+      ]
+    ]
+  },
+  "entrywise_sha256": "c12f61c9e47b168bfb515130d7a42f85a8d5e992172c31312d6852948007467e",
+  "failures": [],
+  "fixtures": {
+    "K5_minus_edge": {
+      "hamilton_path": [
+        0,
+        2,
+        3,
+        4,
+        1
+      ],
+      "planarity_by_edge_bound": "not_decided",
+      "vertex_connectivity": 3
+    },
+    "K6_minus_edge": {
+      "hamilton_path": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        1
+      ],
+      "planarity_by_edge_bound": "nonplanar",
+      "vertex_connectivity": 4
+    }
+  },
+  "orders": {
+    "5": {
+      "four_connected_graphs": 1,
+      "labelled_graphs": 1024,
+      "tested_edge_instances": 10
+    },
+    "6": {
+      "four_connected_graphs": 76,
+      "labelled_graphs": 32768,
+      "tested_edge_instances": 990
+    }
+  },
+  "python": "3.11.2",
+  "representation": "labelled vertices 0..n-1; lexicographic edge-mask bits"
+}
