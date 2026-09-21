@@ -1,0 +1,20 @@
+base: vertices=26 edges=52 regular_degree=4 girth=6
+orientation: indegree=2 outdegree=2 strongly_connected=yes
+expansion: vertices=78 edges=130 degree3=52 degree4=26
+equality: B_independent=yes A_matching=26 unique_closers=yes
+cycles: C3=26 C4=0 C5=0 C6=0 C7=0 C8=0
+criticality: all_130_single_edge_deletions_have_empty_3_core=yes
+certificate_sha256=c85ecd856f766afdb402601ce91d82314586504456a19cefacb5afb3b201c245
+ALL CHECKS PASSED
+
+test_cycle_canonicalization (test_verify.BarrierTests.test_cycle_canonicalization) ... ok
+test_every_edge_deletion_destroys_the_three_core (test_verify.BarrierTests.test_every_edge_deletion_destroys_the_three_core) ... ok
+test_expansion_profile (test_verify.BarrierTests.test_expansion_profile) ... ok
+test_projective_base (test_verify.BarrierTests.test_projective_base) ... ok
+test_short_cycle_profile (test_verify.BarrierTests.test_short_cycle_profile) ... ok
+test_unbalanced_orientation_is_rejected (test_verify.BarrierTests.test_unbalanced_orientation_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests
+
+OK
