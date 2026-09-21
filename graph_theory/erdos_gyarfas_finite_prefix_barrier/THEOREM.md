@@ -46,7 +46,8 @@ two-thirds theorem for minimal Erdős--Gyárfás counterexamples of girth three.
 
 ## 3. Degree-criticality
 
-**Lemma 1.** Every proper subgraph of `X` has a vertex of degree at most two.
+**Lemma 1.** Every nonempty proper subgraph of `X` has a vertex of degree at
+most two.
 
 **Proof.** Suppose a nonempty subgraph `Y` has minimum degree at least three,
 and put `S=B intersect V(Y)`.  The `A`-induced graph is a matching, so `S` is
@@ -120,7 +121,8 @@ The argument permits repeated vertices in the projected trail and chords in
 **Theorem.** For every integer `R>=2`, there is a finite simple graph `X_R`
 such that
 
-1. `delta(X_R)=3` and every proper subgraph has minimum degree at most two;
+1. `delta(X_R)=3` and every nonempty proper subgraph has minimum degree at
+   most two;
 2. two thirds of its vertices have degree three and one third have degree
    four;
 3. the degree-four vertices are independent;

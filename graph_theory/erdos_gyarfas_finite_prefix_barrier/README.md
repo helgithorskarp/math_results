@@ -4,7 +4,7 @@ For every integer `R>=2`, there is a finite simple graph `X_R` with all of
 the following properties:
 
 - its minimum degree is three;
-- every proper subgraph has a vertex of degree at most two;
+- every nonempty proper subgraph has a vertex of degree at most two;
 - exactly two thirds of its vertices have degree three and the rest have
   degree four;
 - the degree-four vertices are independent;
