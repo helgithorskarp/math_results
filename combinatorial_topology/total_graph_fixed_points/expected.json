@@ -1,0 +1,1000 @@
+{
+  "schema": 1,
+  "fixtures": [
+    {
+      "name": "K3_trivial",
+      "vertices_edges_triangles": [
+        3,
+        3,
+        1
+      ],
+      "generators": [],
+      "m1_m2_m3": [
+        0,
+        0,
+        1
+      ],
+      "fixed_face_counts": {
+        "A": [
+          3,
+          3,
+          1
+        ],
+        "X": [
+          6,
+          12,
+          8
+        ]
+      },
+      "betti": {
+        "2": {
+          "A": [
+            1
+          ],
+          "X": [
+            1,
+            0,
+            1
+          ]
+        },
+        "3": {
+          "A": [
+            1
+          ],
+          "X": [
+            1,
+            0,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "name": "K3_transposition",
+      "vertices_edges_triangles": [
+        3,
+        3,
+        1
+      ],
+      "generators": [
+        [
+          1,
+          0,
+          2
+        ]
+      ],
+      "m1_m2_m3": [
+        0,
+        1,
+        0
+      ],
+      "fixed_face_counts": {
+        "A": [
+          2,
+          1
+        ],
+        "X": [
+          4,
+          4
+        ]
+      },
+      "betti": {
+        "2": {
+          "A": [
+            1
+          ],
+          "X": [
+            1,
+            1
+          ]
+        },
+        "3": {
+          "A": [
+            1
+          ],
+          "X": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "name": "K3_C3",
+      "vertices_edges_triangles": [
+        3,
+        3,
+        1
+      ],
+      "generators": [
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "m1_m2_m3": [
+        1,
+        0,
+        0
+      ],
+      "fixed_face_counts": {
+        "A": [
+          1
+        ],
+        "X": [
+          2
+        ]
+      },
+      "betti": {
+        "2": {
+          "A": [
+            1
+          ],
+          "X": [
+            2
+          ]
+        },
+        "3": {
+          "A": [
+            1
+          ],
+          "X": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "K3_S3",
+      "vertices_edges_triangles": [
+        3,
+        3,
+        1
+      ],
+      "generators": [
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "m1_m2_m3": [
+        1,
+        0,
+        0
+      ],
+      "fixed_face_counts": {
+        "A": [
+          1
+        ],
+        "X": [
+          2
+        ]
+      },
+      "betti": {
+        "2": {
+          "A": [
+            1
+          ],
+          "X": [
+            2
+          ]
+        },
+        "3": {
+          "A": [
+            1
+          ],
+          "X": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "K4_C3",
+      "vertices_edges_triangles": [
+        4,
+        6,
+        4
+      ],
+      "generators": [
+        [
+          1,
+          2,
+          0,
+          3
+        ]
+      ],
+      "m1_m2_m3": [
+        1,
+        0,
+        0
+      ],
+      "fixed_face_counts": {
+        "A": [
+          2,
+          1
+        ],
+        "X": [
+          4,
+          2
+        ]
+      },
+      "betti": {
+        "2": {
+          "A": [
+            1
+          ],
+          "X": [
+            2
+          ]
+        },
+        "3": {
+          "A": [
+            1
+          ],
+          "X": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "K4_transposition",
+      "vertices_edges_triangles": [
+        4,
+        6,
+        4
+      ],
+      "generators": [
+        [
+          1,
+          0,
+          2,
+          3
+        ]
+      ],
+      "m1_m2_m3": [
+        0,
+        2,
+        0
+      ],
+      "fixed_face_counts": {
+        "A": [
+          3,
+          3,
+          1
+        ],
+        "X": [
+          7,
+          12,
+          4
+        ]
+      },
+      "betti": {
+        "2": {
+          "A": [
+            1
+          ],
+          "X": [
+            1,
+            2
+          ]
+        },
+        "3": {
+          "A": [
+            1
+          ],
+          "X": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "K4_S4",
+      "vertices_edges_triangles": [
+        4,
+        6,
+        4
+      ],
+      "generators": [
+        [
+          1,
+          2,
+          3,
+          0
+        ],
+        [
+          1,
+          0,
+          2,
+          3
+        ]
+      ],
+      "m1_m2_m3": [
+        0,
+        0,
+        0
+      ],
+      "fixed_face_counts": {
+        "A": [
+          1
+        ],
+        "X": [
+          1
+        ]
+      },
+      "betti": {
+        "2": {
+          "A": [
+            1
+          ],
+          "X": [
+            1
+          ]
+        },
+        "3": {
+          "A": [
+            1
+          ],
+          "X": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "name": "two_triangles_exchange",
+      "vertices_edges_triangles": [
+        6,
+        6,
+        2
+      ],
+      "generators": [
+        [
+          3,
+          4,
+          5,
+          0,
+          1,
+          2
+        ]
+      ],
+      "m1_m2_m3": [
+        0,
+        0,
+        0
+      ],
+      "fixed_face_counts": {
+        "A": [],
+        "X": []
+      },
+      "betti": {
+        "2": {
+          "A": [],
+          "X": []
+        },
+        "3": {
+          "A": [],
+          "X": []
+        }
+      }
+    },
+    {
+      "name": "triangle_wedge_C4_trivial",
+      "vertices_edges_triangles": [
+        6,
+        7,
+        1
+      ],
+      "generators": [],
+      "m1_m2_m3": [
+        0,
+        0,
+        1
+      ],
+      "fixed_face_counts": {
+        "A": [
+          6,
+          7,
+          1
+        ],
+        "X": [
+          13,
+          32,
+          24,
+          5,
+          1
+        ]
+      },
+      "betti": {
+        "2": {
+          "A": [
+            1,
+            1
+          ],
+          "X": [
+            1,
+            1,
+            1
+          ]
+        },
+        "3": {
+          "A": [
+            1,
+            1
+          ],
+          "X": [
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "name": "triangle_wedge_C4_reflection",
+      "vertices_edges_triangles": [
+        6,
+        7,
+        1
+      ],
+      "generators": [
+        [
+          0,
+          2,
+          1,
+          3,
+          4,
+          5
+        ]
+      ],
+      "m1_m2_m3": [
+        0,
+        1,
+        0
+      ],
+      "fixed_face_counts": {
+        "A": [
+          5,
+          5
+        ],
+        "X": [
+          11,
+          22,
+          11,
+          1
+        ]
+      },
+      "betti": {
+        "2": {
+          "A": [
+            1,
+            1
+          ],
+          "X": [
+            1,
+            2
+          ]
+        },
+        "3": {
+          "A": [
+            1,
+            1
+          ],
+          "X": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "octahedron_trivial",
+      "vertices_edges_triangles": [
+        6,
+        12,
+        8
+      ],
+      "generators": [],
+      "m1_m2_m3": [
+        0,
+        0,
+        8
+      ],
+      "fixed_face_counts": {
+        "A": [
+          6,
+          12,
+          8
+        ],
+        "X": [
+          18,
+          72,
+          88,
+          30,
+          6
+        ]
+      },
+      "betti": {
+        "2": {
+          "A": [
+            1,
+            0,
+            1
+          ],
+          "X": [
+            1,
+            0,
+            9
+          ]
+        },
+        "3": {
+          "A": [
+            1,
+            0,
+            1
+          ],
+          "X": [
+            1,
+            0,
+            9
+          ]
+        }
+      }
+    },
+    {
+      "name": "octahedron_antipodal",
+      "vertices_edges_triangles": [
+        6,
+        12,
+        8
+      ],
+      "generators": [
+        [
+          1,
+          0,
+          3,
+          2,
+          5,
+          4
+        ]
+      ],
+      "m1_m2_m3": [
+        0,
+        0,
+        0
+      ],
+      "fixed_face_counts": {
+        "A": [],
+        "X": []
+      },
+      "betti": {
+        "2": {
+          "A": [],
+          "X": []
+        },
+        "3": {
+          "A": [],
+          "X": []
+        }
+      }
+    },
+    {
+      "name": "octahedron_pair_cycle",
+      "vertices_edges_triangles": [
+        6,
+        12,
+        8
+      ],
+      "generators": [
+        [
+          2,
+          3,
+          4,
+          5,
+          0,
+          1
+        ]
+      ],
+      "m1_m2_m3": [
+        2,
+        0,
+        0
+      ],
+      "fixed_face_counts": {
+        "A": [
+          2
+        ],
+        "X": [
+          4
+        ]
+      },
+      "betti": {
+        "2": {
+          "A": [
+            2
+          ],
+          "X": [
+            4
+          ]
+        },
+        "3": {
+          "A": [
+            2
+          ],
+          "X": [
+            4
+          ]
+        }
+      }
+    },
+    {
+      "name": "octahedron_one_pair_flip",
+      "vertices_edges_triangles": [
+        6,
+        12,
+        8
+      ],
+      "generators": [
+        [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "m1_m2_m3": [
+        0,
+        0,
+        0
+      ],
+      "fixed_face_counts": {
+        "A": [
+          4,
+          4
+        ],
+        "X": [
+          12,
+          28,
+          20,
+          4
+        ]
+      },
+      "betti": {
+        "2": {
+          "A": [
+            1,
+            1
+          ],
+          "X": [
+            1,
+            1
+          ]
+        },
+        "3": {
+          "A": [
+            1,
+            1
+          ],
+          "X": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "name": "triangular_prism_layer_swap",
+      "vertices_edges_triangles": [
+        6,
+        9,
+        2
+      ],
+      "generators": [
+        [
+          3,
+          4,
+          5,
+          0,
+          1,
+          2
+        ]
+      ],
+      "m1_m2_m3": [
+        0,
+        0,
+        0
+      ],
+      "fixed_face_counts": {
+        "A": [
+          3
+        ],
+        "X": [
+          6,
+          3
+        ]
+      },
+      "betti": {
+        "2": {
+          "A": [
+            3
+          ],
+          "X": [
+            3
+          ]
+        },
+        "3": {
+          "A": [
+            3
+          ],
+          "X": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "name": "wheel_C4_reflection",
+      "vertices_edges_triangles": [
+        5,
+        8,
+        4
+      ],
+      "generators": [
+        [
+          1,
+          0,
+          3,
+          2,
+          4
+        ]
+      ],
+      "m1_m2_m3": [
+        0,
+        2,
+        0
+      ],
+      "fixed_face_counts": {
+        "A": [
+          3,
+          2
+        ],
+        "X": [
+          7,
+          9,
+          1
+        ]
+      },
+      "betti": {
+        "2": {
+          "A": [
+            1
+          ],
+          "X": [
+            1,
+            2
+          ]
+        },
+        "3": {
+          "A": [
+            1
+          ],
+          "X": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "name": "cross_polytope_S3_trivial",
+      "vertices_edges_triangles": [
+        8,
+        24,
+        32
+      ],
+      "generators": [],
+      "m1_m2_m3": [
+        0,
+        0,
+        32
+      ],
+      "fixed_face_counts": {
+        "A": [
+          8,
+          24,
+          32,
+          16
+        ],
+        "X": [
+          32,
+          192,
+          368,
+          296,
+          168,
+          56,
+          8
+        ]
+      },
+      "betti": {
+        "2": {
+          "A": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "X": [
+            1,
+            0,
+            32,
+            1
+          ]
+        },
+        "3": {
+          "A": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "X": [
+            1,
+            0,
+            32,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "name": "cross_polytope_S3_one_pair_flip",
+      "vertices_edges_triangles": [
+        8,
+        24,
+        32
+      ],
+      "generators": [
+        [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "m1_m2_m3": [
+        0,
+        0,
+        8
+      ],
+      "fixed_face_counts": {
+        "A": [
+          6,
+          12,
+          8
+        ],
+        "X": [
+          24,
+          102,
+          148,
+          90,
+          36,
+          6
+        ]
+      },
+      "betti": {
+        "2": {
+          "A": [
+            1,
+            0,
+            1
+          ],
+          "X": [
+            1,
+            0,
+            9
+          ]
+        },
+        "3": {
+          "A": [
+            1,
+            0,
+            1
+          ],
+          "X": [
+            1,
+            0,
+            9
+          ]
+        }
+      }
+    },
+    {
+      "name": "sd_projective_plane_trivial",
+      "vertices_edges_triangles": [
+        31,
+        90,
+        60
+      ],
+      "generators": [],
+      "m1_m2_m3": [
+        0,
+        0,
+        60
+      ],
+      "fixed_face_counts": {
+        "A": [
+          31,
+          90,
+          60
+        ],
+        "X": [
+          121,
+          780,
+          1700,
+          2405,
+          2997,
+          2842,
+          1990,
+          990,
+          330,
+          66,
+          6
+        ]
+      },
+      "betti": {
+        "2": {
+          "A": [
+            1,
+            1,
+            1
+          ],
+          "X": [
+            1,
+            1,
+            61
+          ]
+        },
+        "3": {
+          "A": [
+            1
+          ],
+          "X": [
+            1,
+            0,
+            60
+          ]
+        }
+      }
+    }
+  ],
+  "fixture_count": 19,
+  "integer_cycles_checked": 182,
+  "integer_action_signs_checked": 85,
+  "rational_star_controls": 126,
+  "negative_controls_rejected": [
+    "K3_transposition_trivial_sphere_prediction",
+    "K3_C3_trivial_sphere_prediction",
+    "nonautomorphism"
+  ],
+  "coefficient_fields": [
+    2,
+    3
+  ],
+  "trust_boundary": "Finite corroboration; universal theorem is the written proof."
+}
