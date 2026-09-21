@@ -1,0 +1,66 @@
+{
+  "algebra_grid": {
+    "all_variable_zero_jacobians": 512,
+    "all_variables": 18980,
+    "both_conditions": 6048,
+    "coefficient_vectors": 19683,
+    "constant_line_certificates": 18225,
+    "coordinate_condition": 6560,
+    "direct_line_evaluations": 91125
+  },
+  "cantor": {
+    "base": 27,
+    "image_dimension_upper": "log(25)/log(27)",
+    "input_digits": 9,
+    "input_dimension": "2/3",
+    "level_two_input_points": 81,
+    "level_two_sum_points": 625,
+    "triple_sum_digits": 25
+  },
+  "evidence_sha256": "d95525a4d46a5946f335ab2a6a5ccd852f94844ef290b6e4d2eeba9240c368dd",
+  "fixtures": [
+    {
+      "line_condition": false,
+      "name": "x(y+z)",
+      "rank_condition": true
+    },
+    {
+      "line_condition": true,
+      "name": "sum of squares",
+      "rank_condition": false
+    },
+    {
+      "line_condition": true,
+      "name": "square of sum",
+      "rank_condition": false
+    },
+    {
+      "line_condition": true,
+      "name": "squares plus xy",
+      "rank_condition": true
+    },
+    {
+      "line_condition": true,
+      "name": "x2+y2+xy+z",
+      "rank_condition": true
+    },
+    {
+      "line_condition": false,
+      "name": "constant",
+      "rank_condition": false
+    },
+    {
+      "line_condition": false,
+      "name": "shifted rational collapse",
+      "rank_condition": true
+    }
+  ],
+  "formal_jacobian_monomials": [
+    6,
+    6,
+    6
+  ],
+  "rejected_controls": 5,
+  "status": "VERIFIED",
+  "trust_boundary": "Written proof plus Frostman and Ren-Wang; no numerical dimension inference"
+}
