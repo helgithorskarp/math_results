@@ -1,0 +1,36 @@
+{
+  "factor_avoidance": {
+    "annihilation_checks": 3072,
+    "p_A_avoids_1_plus_X": true,
+    "p_B_avoids_1_plus_Y": true,
+    "p_C_avoids_1_plus_XY": true,
+    "torus_size": 4
+  },
+  "gauge_audits": [
+    {
+      "common_fiber_size": 4,
+      "gauge_kernel": 4,
+      "image_size": 128,
+      "n": 3
+    },
+    {
+      "common_fiber_size": 8,
+      "gauge_kernel": 8,
+      "image_size": 512,
+      "n": 4
+    }
+  ],
+  "period_audits": [
+    {
+      "n": 3,
+      "translation_tests": 4608,
+      "triples": 512
+    },
+    {
+      "n": 4,
+      "translation_tests": 65536,
+      "triples": 4096
+    }
+  ],
+  "scope": "finite cyclic audits only; universal claims use THEOREM.md"
+}
