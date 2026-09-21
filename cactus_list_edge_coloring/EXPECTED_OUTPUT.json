@@ -1,0 +1,88 @@
+{
+  "claim": "exact line-graph degeneracy of cactus multigraphs",
+  "even_cycle_two_list_assignments": {
+    "2": 36,
+    "4": 1296,
+    "6": 46656
+  },
+  "multigraph_audit": {
+    "labelled_cactus_multigraphs_by_order": {
+      "1": 1,
+      "2": 3,
+      "3": 20,
+      "4": 232,
+      "5": 3993
+    },
+    "maximum_order": 5,
+    "pair_multiplicity_range": [
+      0,
+      2
+    ],
+    "tested": 4249
+  },
+  "parallel_edge_fixtures": [
+    {
+      "cycle_lengths": [
+        2,
+        2
+      ],
+      "degrees": [
+        2,
+        4,
+        2
+      ],
+      "line_degeneracy": 3,
+      "name": "two_digons_at_a_cut_vertex"
+    },
+    {
+      "cycle_lengths": [
+        2,
+        3
+      ],
+      "degrees": [
+        4,
+        2,
+        2,
+        2
+      ],
+      "line_degeneracy": 3,
+      "name": "triangle_with_leaf_digon"
+    },
+    {
+      "cycle_lengths": [
+        2
+      ],
+      "degrees": [
+        3,
+        2,
+        1
+      ],
+      "line_degeneracy": 2,
+      "name": "digon_with_pendant_edge"
+    }
+  ],
+  "rejection_controls": {
+    "K4_rejected": true,
+    "triple_parallel_edge_block_rejected": true
+  },
+  "simple_audit": {
+    "labelled_cacti_by_order": {
+      "1": 1,
+      "2": 2,
+      "3": 8,
+      "4": 57,
+      "5": 623,
+      "6": 9334
+    },
+    "line_degeneracy_distribution": {
+      "0": 119,
+      "1": 1617,
+      "2": 6223,
+      "3": 1910,
+      "4": 156
+    },
+    "maximum_order": 6,
+    "tested": 10025
+  },
+  "universal_claim_source": "README.md block-cut proof"
+}
