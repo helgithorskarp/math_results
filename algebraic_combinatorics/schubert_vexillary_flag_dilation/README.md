@@ -98,8 +98,9 @@ The proof imports the classical vexillary Schubert-to-flagged-Schur theorem
 and the flagged Jacobi--Trudi determinant.  The closure and dilation lemmas
 are proved directly.  The finite audit trusts readable Python 3 source,
 exact integer arithmetic, the interpreter, operating system, and hardware.
-It uses no floating point, solver, external dataset, generated catalogue, or
-omitted certificate.
+It uses no floating point, solver, external dataset, generated catalogue,
+nondeterminism, or omitted certificate; the sampled frontier cases use the
+fixed seed printed in `verify.py`.
 
 Primary sources and the bounded novelty/status search are listed in
 [SOURCES.md](SOURCES.md).
