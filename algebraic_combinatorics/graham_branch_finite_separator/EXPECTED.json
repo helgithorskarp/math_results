@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "arithmetic": "Python integers and Fraction",
+  "explicit_cases": [
+    {
+      "name": "characteristic_two_branch",
+      "row_rank": 4,
+      "top_determinantal_divisor": 2,
+      "least_separator_modulus": 2,
+      "row_subgroup_order": 8,
+      "quotient_order": 8,
+      "forbidden_targets_preserved": 21
+    },
+    {
+      "name": "characteristic_three_branch",
+      "row_rank": 5,
+      "top_determinantal_divisor": 3,
+      "least_separator_modulus": 3,
+      "row_subgroup_order": 81,
+      "quotient_order": 9,
+      "forbidden_targets_preserved": 21
+    }
+  ],
+  "binary_matrix_audit": {
+    "max_width": 5,
+    "maximum_rows": 3,
+    "matrices": 5640,
+    "terminal_matrices": 5030,
+    "separated_matrices": 610,
+    "separator_histogram": {
+      "2": 86,
+      "3": 464,
+      "4": 60
+    },
+    "record_sha256": "637f6e282a8610b2b3fb4cb92fb21b6e0b417881730662c924223744b5e35c94"
+  }
+}
