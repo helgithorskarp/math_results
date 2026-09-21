@@ -1,0 +1,203 @@
+{
+  "construction": [
+    {
+      "added_points": 9,
+      "competitor_points": 45,
+      "core_points": 36,
+      "directions": 12,
+      "gap": 10,
+      "pencil_lower_bound": 55,
+      "residue_order": 3,
+      "ring": "Z/9"
+    },
+    {
+      "added_points": 9,
+      "competitor_points": 45,
+      "core_points": 36,
+      "directions": 12,
+      "gap": 10,
+      "pencil_lower_bound": 55,
+      "residue_order": 3,
+      "ring": "F3[e]/e^2"
+    },
+    {
+      "added_points": 50,
+      "competitor_points": 325,
+      "core_points": 275,
+      "directions": 30,
+      "gap": 52,
+      "pencil_lower_bound": 377,
+      "residue_order": 5,
+      "ring": "Z/25"
+    },
+    {
+      "added_points": 50,
+      "competitor_points": 325,
+      "core_points": 275,
+      "directions": 30,
+      "gap": 52,
+      "pencil_lower_bound": 377,
+      "residue_order": 5,
+      "ring": "F5[e]/e^2"
+    },
+    {
+      "added_points": 147,
+      "competitor_points": 1225,
+      "core_points": 1078,
+      "directions": 56,
+      "gap": 150,
+      "pencil_lower_bound": 1375,
+      "residue_order": 7,
+      "ring": "Z/49"
+    },
+    {
+      "added_points": 147,
+      "competitor_points": 1225,
+      "core_points": 1078,
+      "directions": 56,
+      "gap": 150,
+      "pencil_lower_bound": 1375,
+      "residue_order": 7,
+      "ring": "F7[e]/e^2"
+    },
+    {
+      "added_points": 605,
+      "competitor_points": 7381,
+      "core_points": 6776,
+      "directions": 132,
+      "gap": 610,
+      "pencil_lower_bound": 7991,
+      "residue_order": 11,
+      "ring": "Z/121"
+    },
+    {
+      "added_points": 605,
+      "competitor_points": 7381,
+      "core_points": 6776,
+      "directions": 132,
+      "gap": 610,
+      "pencil_lower_bound": 7991,
+      "residue_order": 11,
+      "ring": "F11[e]/e^2"
+    },
+    {
+      "added_points": 324,
+      "competitor_points": 3321,
+      "core_points": 2997,
+      "directions": 90,
+      "gap": 328,
+      "pencil_lower_bound": 3649,
+      "residue_order": 9,
+      "ring": "F9[e]/e^2"
+    },
+    {
+      "added_points": 324,
+      "competitor_points": 3321,
+      "core_points": 2997,
+      "directions": 90,
+      "gap": 328,
+      "pencil_lower_bound": 3649,
+      "residue_order": 9,
+      "ring": "GR(9,2)"
+    }
+  ],
+  "controls": [
+    "finite-slope core misses vertical direction",
+    "competitor system has no common residue point",
+    "nonfree directions rejected",
+    "length-three square shortcut fails",
+    "even residue field has no nonsquare unit"
+  ],
+  "fiber_checks": [
+    {
+      "all_offset_functions": true,
+      "groups_checked": 108,
+      "point_memberships_compared": 8748,
+      "ring": "Z/9",
+      "smallest_pencil_census": {
+        "minimum_observed": 56,
+        "size_histogram": {
+          "56": 11664,
+          "57": 320112,
+          "62": 15552,
+          "63": 150336,
+          "68": 7776,
+          "69": 23328,
+          "73": 216,
+          "74": 1296,
+          "75": 1080,
+          "79": 72,
+          "81": 9
+        },
+        "systems": 531441
+      }
+    },
+    {
+      "all_offset_functions": true,
+      "groups_checked": 108,
+      "point_memberships_compared": 8748,
+      "ring": "F3[e]/e^2",
+      "smallest_pencil_census": {
+        "minimum_observed": 56,
+        "size_histogram": {
+          "56": 11664,
+          "57": 320112,
+          "62": 15552,
+          "63": 150336,
+          "68": 7776,
+          "69": 23328,
+          "73": 216,
+          "74": 1296,
+          "75": 1080,
+          "79": 72,
+          "81": 9
+        },
+        "systems": 531441
+      }
+    },
+    {
+      "all_offset_functions": true,
+      "groups_checked": 18750,
+      "point_memberships_compared": 11718750,
+      "ring": "Z/25",
+      "smallest_pencil_census": null
+    },
+    {
+      "all_offset_functions": true,
+      "groups_checked": 18750,
+      "point_memberships_compared": 11718750,
+      "ring": "F5[e]/e^2",
+      "smallest_pencil_census": null
+    },
+    {
+      "all_offset_functions": false,
+      "groups_checked": 224,
+      "point_memberships_compared": 537824,
+      "ring": "Z/49",
+      "smallest_pencil_census": null
+    },
+    {
+      "all_offset_functions": false,
+      "groups_checked": 224,
+      "point_memberships_compared": 537824,
+      "ring": "F7[e]/e^2",
+      "smallest_pencil_census": null
+    },
+    {
+      "all_offset_functions": false,
+      "groups_checked": 360,
+      "point_memberships_compared": 2361960,
+      "ring": "F9[e]/e^2",
+      "smallest_pencil_census": null
+    },
+    {
+      "all_offset_functions": false,
+      "groups_checked": 360,
+      "point_memberships_compared": 2361960,
+      "ring": "GR(9,2)",
+      "smallest_pencil_census": null
+    }
+  ],
+  "status": "VERIFIED",
+  "trust": "finite exact corroboration; universal theorem imports Blokhuis--Mazzocca Proposition 7"
+}
