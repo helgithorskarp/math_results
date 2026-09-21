@@ -187,4 +187,3 @@ Primary links:
 - <https://arxiv.org/abs/1712.08666>
 - <https://arxiv.org/abs/math/0409223>
 - <https://arxiv.org/abs/1212.3602>
-
