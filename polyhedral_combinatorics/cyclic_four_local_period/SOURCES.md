@@ -50,9 +50,11 @@ multi-character local formula and determine sign control.
 
 [Review source](https://github.com/helgithorskarp/math_results/tree/main/polyhedral_combinatorics/bimodular_ehrhart_period_review1).
 
-The present theorem resolves the first nontrivial cyclic case.  It shows that
-two conjugate order-four characters yield a complete phase invariant and
-that index-two positivity fails in both the zero and negative directions.
+The present theorem gives the cyclic-cokernel character formula for every
+even order, recovering the accepted index-two theorem, and resolves the
+first nontrivial sign case completely.  Two conjugate order-four characters
+yield a phase invariant, and index-two positivity fails in both the zero and
+negative directions.
 It is separate from the later prime-index Fourier criterion, whose active
 index equals the dilation prime; here the dilation period is two while the
 active index is four.
@@ -60,7 +62,8 @@ active index is four.
 Targeted live searches combined cyclic index four, determinant-four
 half-integral simplices, local Euler--Maclaurin terms, and Ehrhart period
 collapse.  They found the general and polygonal period literature above, but
-no matching active-cokernel profile or cosine phase theorem.  The new claims
-are the exact local formula (4)--(6), its signed global assembly, and the
-all-profile simplex realization.  The proof is unformalized and should
+no matching cyclic active-cokernel character formula or cosine phase theorem.
+The new claims are the exact cyclic local formula, its signed global
+assembly, the order-four phase classification, and the all-profile simplex
+realization.  The proof is unformalized and should
 receive independent specialist review before any stronger priority claim.
