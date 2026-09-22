@@ -1,0 +1,71 @@
+{
+  "axis_cases": 15,
+  "axis_sha256": "3e50ae09ec47c6c89695a8033d46b3c3951ff3a10619d75862bb77dbee426ed8",
+  "centroid_deficit": "127/1512",
+  "dual_circuits": 8,
+  "fixtures": [
+    {
+      "envelope_vertices": 4,
+      "joint_vertices": 36,
+      "name": "shadow_start",
+      "ratio": "4"
+    },
+    {
+      "envelope_vertices": 16,
+      "joint_vertices": 38,
+      "name": "shadow_midpoint",
+      "ratio": "94/21"
+    },
+    {
+      "envelope_vertices": 16,
+      "joint_vertices": 38,
+      "name": "shadow_endpoint",
+      "ratio": "34/7"
+    },
+    {
+      "envelope_vertices": 16,
+      "joint_vertices": 38,
+      "name": "kite_optimal_origin",
+      "ratio": "34/7"
+    },
+    {
+      "envelope_vertices": 12,
+      "joint_vertices": 36,
+      "name": "kite_centroid",
+      "ratio": "1031/216"
+    },
+    {
+      "envelope_vertices": 12,
+      "joint_vertices": 24,
+      "name": "triangular_endpoint",
+      "ratio": "16/3"
+    },
+    {
+      "envelope_vertices": 4,
+      "joint_vertices": 36,
+      "name": "parallelogram_noncentral_origin",
+      "ratio": "4"
+    }
+  ],
+  "identity": {
+    "cleared_degrees": [
+      3,
+      2,
+      2
+    ],
+    "exact_evaluations": 36,
+    "grid": [
+      4,
+      3,
+      3
+    ]
+  },
+  "midpoint_excess": "1/21",
+  "rejected_corruptions": [
+    "wrong ratio",
+    "wrong maximizing origin",
+    "outside origin"
+  ],
+  "scope": "Global planar optimum unresolved; continuum kite optimization uses PROOF.md.",
+  "status": "VERIFIED_SHADOW_CONVEXITY_OBSTRUCTION"
+}
