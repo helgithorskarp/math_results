@@ -1,0 +1,207 @@
+{
+  "arithmetic": "fractions.Fraction; exp degree 32, outward 2^-160 grid; log 80 terms",
+  "fixtures": [
+    {
+      "D": "0",
+      "covariance_lower": "2/3",
+      "entropy": [
+        {
+          "alpha": 2,
+          "cD_interval": [
+            "0",
+            "0"
+          ],
+          "gap_interval": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "alpha": 3,
+          "cD_interval": [
+            "0",
+            "0"
+          ],
+          "gap_interval": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "alpha": 4,
+          "cD_interval": [
+            "0",
+            "0"
+          ],
+          "gap_interval": [
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "gram_norm_squared": "0",
+      "name": "reflection_translation",
+      "optimal_rigid_error_squared": "0"
+    },
+    {
+      "D": "8/9",
+      "covariance_lower": "2/3",
+      "entropy": [
+        {
+          "alpha": 2,
+          "cD_interval": [
+            "2035070987/1000000000000",
+            "508767747/250000000000"
+          ],
+          "gap_interval": [
+            "169350149853/1000000000000",
+            "84675074927/500000000000"
+          ]
+        },
+        {
+          "alpha": 3,
+          "cD_interval": [
+            "68854227/250000000000",
+            "275416909/1000000000000"
+          ],
+          "gap_interval": [
+            "35283709629/200000000000",
+            "88209274073/500000000000"
+          ]
+        },
+        {
+          "alpha": 4,
+          "cD_interval": [
+            "298189/8000000000",
+            "18636813/500000000000"
+          ],
+          "gap_interval": [
+            "36107699597/200000000000",
+            "90269248993/500000000000"
+          ]
+        }
+      ],
+      "gram_norm_squared": "40/81",
+      "name": "absolute_value_fold",
+      "optimal_rigid_error_squared": "8/9"
+    },
+    {
+      "D": "9/8",
+      "covariance_lower": "3/2",
+      "entropy": [
+        {
+          "alpha": 2,
+          "cD_interval": [
+            "17354503/1000000000000",
+            "2169313/125000000000"
+          ],
+          "gap_interval": [
+            "68986037871/500000000000",
+            "137972075743/1000000000000"
+          ]
+        },
+        {
+          "alpha": 3,
+          "cD_interval": [
+            "192791/1000000000000",
+            "24099/125000000000"
+          ],
+          "gap_interval": [
+            "7331074771/50000000000",
+            "146621495421/1000000000000"
+          ]
+        },
+        {
+          "alpha": 4,
+          "cD_interval": [
+            "2141/1000000000000",
+            "1071/500000000000"
+          ],
+          "gap_interval": [
+            "152367436567/1000000000000",
+            "19045929571/125000000000"
+          ]
+        }
+      ],
+      "gram_norm_squared": "153/256",
+      "name": "asymmetric_clipping",
+      "optimal_rigid_error_squared": "3/16"
+    },
+    {
+      "D": "7/8",
+      "covariance_lower": "1/4",
+      "entropy": [
+        {
+          "alpha": 2,
+          "cD_interval": [
+            "2003273/4000000000",
+            "500818251/1000000000000"
+          ],
+          "gap_interval": [
+            "5091343079/25000000000",
+            "203653723161/1000000000000"
+          ]
+        },
+        {
+          "alpha": 3,
+          "cD_interval": [
+            "67778379/1000000000000",
+            "3388919/50000000000"
+          ],
+          "gap_interval": [
+            "41620168717/200000000000",
+            "104050421793/500000000000"
+          ]
+        },
+        {
+          "alpha": 4,
+          "cD_interval": [
+            "4586403/500000000000",
+            "9172807/1000000000000"
+          ],
+          "gap_interval": [
+            "105256668323/500000000000",
+            "210513336647/1000000000000"
+          ]
+        }
+      ],
+      "gram_norm_squared": "25/256",
+      "name": "square_coordinate_contraction",
+      "optimal_rigid_error_squared": "5/16"
+    }
+  ],
+  "path_pair_checks": 215,
+  "rejected_invalid_fixtures": 4,
+  "scope": "Finite corroboration only; the all-order theorem is analytic.",
+  "sharpness": [
+    {
+      "D": "9/8",
+      "covariance_lower": "3/2",
+      "epsilon": "1/4",
+      "gram_norm_squared": "153/256",
+      "optimal_rigid_error_squared": "3/16"
+    },
+    {
+      "D": "21/32",
+      "covariance_lower": "21/16",
+      "epsilon": "1/8",
+      "gram_norm_squared": "1225/4096",
+      "optimal_rigid_error_squared": "7/64"
+    },
+    {
+      "D": "93/512",
+      "covariance_lower": "279/256",
+      "epsilon": "1/32",
+      "gram_norm_squared": "70153/1048576",
+      "optimal_rigid_error_squared": "31/1024"
+    },
+    {
+      "D": "381/8192",
+      "covariance_lower": "4191/4096",
+      "epsilon": "1/128",
+      "gram_norm_squared": "4274185/268435456",
+      "optimal_rigid_error_squared": "127/16384"
+    }
+  ],
+  "status": "FINITE_RATIONAL_CHECKS_PASS"
+}
