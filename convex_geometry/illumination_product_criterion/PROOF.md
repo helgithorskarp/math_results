@@ -11,6 +11,7 @@ same fractional number for a polytope.
 Products below are Cartesian products in complementary vector spaces,
 also called direct vector sums. They are not convex hull free sums or
 Minkowski sums in a common factor space. Put `P^r=P x ... x P`.
+Here `log` denotes the natural logarithm.
 
 ## The product criterion
 
@@ -65,13 +66,19 @@ for every convex body `K`, and
 
 for polytopes `P,Q`.
 
-These claims are obtained from classical finite fractional-cover
-machinery. Fractional illumination, LP duality, product covers, and
-greedy rounding are prior ideas. The contribution here is their explicit
-geometric equivalence, including the all-partner quantifier, the finite
-failure certificate, and the self-contained geometric audit below. It is
-not a claim that product submultiplicativity or its failure is new. See
-[SOURCES.md](SOURCES.md) for the primary literature and priority limits.
+These claims use classical finite fractional-cover machinery.
+Scheinerman--Ullman, *Fractional Graph Theory*, Section 1.6, defines
+exactly the rectangle product used here. Their Theorem 1.6.1 gives
+fractional-cover multiplicativity, Theorem 1.6.2 identifies the covering
+power rate, and Lemma 1.6.3 gives the finite-hypergraph mixed bound.
+Thus the abstract tensor and power-limit mechanism is prior art.
+Sections 1--3 below make the geometric reduction explicit and give
+self-contained proofs, including arbitrary convex-body partners.
+Potentially new content is limited to that all-partner geometric iff
+criterion, the mixed illumination bound, and the finite strict-power
+certificate. Priority remains unresolved until the full 2007
+Boltyanski--Martini paper can be compared. See
+[SOURCES.md](SOURCES.md) for precise attribution and access limits.
 
 Baladze--Boltyanski (2006), Theorem 3, already proves multiplicativity
 when a factor has `I(P)` pairwise antipodal boundary points. Such points
@@ -136,7 +143,7 @@ would have to be both negative and positive. Assigning these two vertices
 dual weight one shows `tau>=2`.
 
 For rational input polytopes, each nonempty class has a rational
-representative as far as its illuminated set is concerned: a sufficiently
+direction whose illuminated set contains it: a sufficiently
 small rational perturbation preserves all its strict negative
 inequalities and may add coverage. Thus rational feasible directions
 suffice for optimization and greedy certificates. The abstract theorem

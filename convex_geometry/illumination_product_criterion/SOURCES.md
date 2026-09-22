@@ -47,6 +47,21 @@ polytopes multiply illumination numbers with every partner.
    construction are not new claims of this note. The classical
    Hadwiger conjecture remains outside the present result.
 
+5. E. R. Scheinerman and D. H. Ullman, *Fractional Graph Theory: A
+   Rational Approach to the Theory of Graphs*, Wiley, 1997;
+   authors' freely distributed 2008 text, Section 1.6, printed pp. 7--11
+   (PDF pages 18--22, counting the cover as page 1).
+   [Full text](https://scispace.com/pdf/fractional-graph-theory-a-rational-approach-to-the-theory-of-157bznenje.pdf).
+   Definitions and proofs were checked during the 2026-09-22 attribution
+   update. The ground set is our vertex set and hyperedges are illuminated
+   subsets: their `k(H), k_f(H)` are our integer and fractional cover
+   numbers, with no hypergraph dualization. Their rectangle product is
+   exactly (8). Theorem 1.6.1 matches (4); Theorem 1.6.2 matches the
+   abstract power limit in (1). Lemma 1.6.3 is the finite-hypergraph
+   antecedent of (3). The abstract tensor and power-limit mechanism is
+   therefore prior art, as is the mixed finite-cover argument. Our
+   arbitrary-convex-body fiber proof is its geometric application.
+
 Additional reading during selection included V. Boltyanski and
 H. Martini, *Illumination of direct vector sums of convex bodies*,
 Studia Scientiarum Mathematicarum Hungarica **44**(3) (2007), 367--376,
@@ -64,9 +79,15 @@ primary papers above, and the relevant committed graph neighborhood.
 It did not locate the explicit all-partner iff criterion for polytopes.
 This is a search-relative observation, not an exhaustive priority claim.
 The unavailable 2007 full text is a material bibliographic limitation.
+Its published abstract mentions an equality condition. It cannot establish
+whether the precise all-partner characterization here was already proved;
+that priority question remains unresolved until the full paper is compared.
 
 The scoped result is: a polytope multiplies ordinary illumination with
 every convex-body partner exactly when its finite fractional covering
-LP has no gap, with a finite strict-power bound otherwise. No
+LP has no gap, with a mixed illumination bound for arbitrary convex-body
+partners and a finite strict-power bound otherwise. These geometric
+statements and the finite certificate are the only potentially new content;
+no abstract finite-hypergraph tensor or power-limit theorem is claimed. No
 classification of all such polytopes, nonpolytopal power-limit theorem,
 new general Hadwiger bound, or new pentagon value is asserted.

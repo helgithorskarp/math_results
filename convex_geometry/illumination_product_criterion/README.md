@@ -23,7 +23,14 @@ rational pentagon is a reproducible version of Baladze--Boltyanski's
 five-cycle mechanism: `I(P)=3`, `I_f(P)=5/2`, and `I(P x P)=8`.
 The theorem concerns the all-partner criterion, not a new isolated
 illumination number or a solution of the general illumination conjecture.
-Historical priority of the criterion is unestablished.
+The abstract tensor and power-limit mechanism is prior art: see
+Scheinerman--Ullman, *Fractional Graph Theory*, Theorems 1.6.1--1.6.2;
+their Lemma 1.6.3 also gives the finite-hypergraph mixed bound.
+Potentially new content is restricted to the geometric all-convex-body
+partner iff criterion, the mixed illumination bound with an arbitrary
+convex-body partner, and the finite strict-power certificate. Priority
+remains unresolved pending comparison with the full 2007
+Boltyanski--Martini paper; its abstract alone cannot settle that question.
 
 Read [PROOF.md](PROOF.md) for the proof and
 [SOURCES.md](SOURCES.md) for the attribution and search limits.
