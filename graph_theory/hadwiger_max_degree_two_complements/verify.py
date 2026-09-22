@@ -98,6 +98,17 @@ def independence_number(sig: Signature) -> int:
     return sum((m + 1) // 2 if kind == "P" else m // 2 for kind, m in sig)
 
 
+def complement_chromatic_number(sig: Signature) -> int:
+    """Clique-partition number of a disjoint union of paths and cycles."""
+    total = 0
+    for kind, m in sig:
+        if kind == "C" and m == 3:
+            total += 1
+        else:
+            total += (m + 1) // 2
+    return total
+
+
 def canonical_set(components: list[tuple[Component, list[int]]]) -> set[int]:
     stable: set[int] = set()
     for (kind, m), vertices in components:
@@ -313,6 +324,9 @@ def audit(max_order: int = 16) -> dict[str, object]:
             a = independence_number(sig)
             upper = (n + a) // 2
             claimed = upper - int(is_exception(sig))
+            chromatic = complement_chromatic_number(sig)
+            if claimed < chromatic:
+                raise AssertionError(f"Hadwiger inequality fails for {signature_text(sig)}")
             branches = certificate(sig)
             if len(branches) != claimed or not verify_minor(h_adj, branches):
                 raise AssertionError(f"bad certificate for {signature_text(sig)}")
@@ -323,6 +337,7 @@ def audit(max_order: int = 16) -> dict[str, object]:
                     "signature": signature_text(sig),
                     "n": n,
                     "alpha": a,
+                    "chromatic": chromatic,
                     "upper": upper,
                     "claimed": claimed,
                     "branches": [sorted(b) for b in branches],
@@ -347,6 +362,7 @@ def audit(max_order: int = 16) -> dict[str, object]:
         "audit_max_order": max_order,
         "component_signature_counts": counts,
         "exception_instances_through_bound": exception_instances,
+        "hadwiger_conjecture_instances_checked": len(records),
         "exceptional_core_equality_models": exceptional_audit,
         "auxiliary_matching_failures_through_order_10": failures,
         "certificate_record_sha256": hashlib.sha256(encoded).hexdigest(),

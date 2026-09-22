@@ -18,7 +18,8 @@ C5 + P2, C5 + P3, C6 + P2, C6 + P3.
 
 For those eight families the value is one smaller.  The proof is in
 [THEOREM.md](THEOREM.md).  [SOURCES.md](SOURCES.md) records the primary prior
-art and the deliberately narrow status claim.
+art and the deliberately narrow status claim.  As a corollary, Hadwiger's
+conjecture holds throughout this complement class.
 
 ## Reproduction
 

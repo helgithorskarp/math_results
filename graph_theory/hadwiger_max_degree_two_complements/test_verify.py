@@ -15,6 +15,13 @@ class AuditTests(unittest.TestCase):
         forbidden = {(0, 1), (0, 2), (1, 2)}
         self.assertEqual(verify.maximum_allowed_matching(vertices, forbidden), [])
 
+    def test_complement_chromatic_boundary(self):
+        self.assertEqual(verify.complement_chromatic_number((('C', 3),)), 1)
+        self.assertEqual(verify.complement_chromatic_number((('C', 5),)), 3)
+        self.assertEqual(
+            verify.complement_chromatic_number((('P', 3), ('C', 5))), 5
+        )
+
     def test_mutated_branch_fails_connectivity(self):
         h_adj, _ = verify.build_graph((('P', 4),))
         self.assertFalse(verify.verify_minor(h_adj, [{0}, {1, 2}]))

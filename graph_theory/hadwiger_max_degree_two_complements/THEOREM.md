@@ -172,6 +172,33 @@ families have value exactly `U(H)-1`.
 
 This completes the proof.
 
+## 5. Corollary: Hadwiger's conjecture for the class
+
+A proper coloring of `complement(H)` is a partition of `V(H)` into cliques.
+On a path or an even cycle the minimum number of such cliques equals that
+component's independence number.  The same is true for `C_3`.  On an odd
+cycle of order at least five it is one more than the independence number.
+Consequently
+
+```text
+chi(complement(H)) = alpha(H) + z,
+```
+
+where `z` is the number of odd-cycle components of `H` having order at least
+five.  Since every such component contributes at least three vertices to
+`R=V(H)-S`, we have `floor(|R|/2) >= z`.  For a nonexceptional graph the
+theorem gives
+
+```text
+eta(complement(H)) = alpha(H) + floor(|R|/2)
+                   >= chi(complement(H)).
+```
+
+For the eight exceptional cores the same inequality follows directly from
+the displayed small values in Section 4, and adding isolated vertices raises
+both sides by one.  Thus Hadwiger's conjecture holds for the complement of
+every graph of maximum degree at most two.
+
 ## Evidence boundary
 
 The Python checker reconstructs all certificates through order 16 and checks
