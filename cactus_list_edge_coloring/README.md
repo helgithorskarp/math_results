@@ -4,6 +4,18 @@ This note proves the List Edge-Coloring Conjecture for every finite loopless
 cactus multigraph.  The proof is greedy and parameter-uniform; its structural
 core is an exact formula for the degeneracy of the line graph.
 
+**Provenance correction (2026-09-22).**  The list-edge-colouring conclusion
+for *simple* cacti is not new: it follows from Juvan--Mohar--Thomas's 1999
+theorem that every simple series-parallel graph of maximum degree at most
+`k>=3` is `k`-edge-choosable, together with the elementary maximum-degree-two
+cases.  Fujino--Zhou--Nishizeki later proved the stronger endpoint-sensitive
+list condition `|L(uv)|>=max{3,d(u),d(v)}` for simple series-parallel graphs.
+The claims not supplied by those sources are Theorem 1's exact identity
+`d(L(G))=Delta(G)-1` and the equal-size-list extension in Theorem 2 to
+loopless cactus multigraphs, including parallel 2-cycle blocks.  These exact
+statements were not located in the bounded search recorded in
+[`SOURCES.md`](SOURCES.md); no priority claim is made for them.
+
 ## Conventions
 
 A **cactus multigraph** is a finite loopless multigraph every block of which
@@ -140,11 +152,19 @@ cases.  The universal result rests on the block-cut proof above.
 
 The general List Edge-Coloring Conjecture remains open, even for complete
 graphs of arbitrary even order.  Galvin's theorem covers bipartite
-multigraphs, whereas the cactus class here includes arbitrary odd cycles and
-trees of cyclic blocks.  A targeted search on 2026-09-21 did not locate this
-exact cactus/line-degeneracy statement in the searched primary literature or
+multigraphs.  For simple cacti, the list-edge-colouring equality already
+follows from Juvan--Mohar--Thomas (1999), since every simple cactus is
+series-parallel; Fujino--Zhou--Nishizeki (2003) also gives the stronger
+endpoint-sensitive list theorem stated above.  The former paper discusses a
+limited series-parallel multigraph extension, but requires lists of size at
+least `k+1` on every edge parallel to another edge, so it does not imply the
+equal-size-list assertion here for parallel 2-cycles.
+
+A targeted search on 2026-09-21, corrected and expanded on 2026-09-22, did
+not locate the exact line-degeneracy formula or the resulting loopless
+cactus-multigraph classification in the searched primary literature or
 bibliographic indexes.  The argument is elementary, and no historical
-priority claim is made.
+priority claim is made for either statement.
 
 This theorem does not address graphs whose blocks contain theta subgraphs or
 other edges lying in multiple cycles.  Source details and the search boundary
