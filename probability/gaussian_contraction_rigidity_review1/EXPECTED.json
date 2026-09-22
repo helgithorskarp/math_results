@@ -1,0 +1,85 @@
+{
+  "alignment_necessity_adversary": {
+    "aligned_error": "0",
+    "dimension": 2,
+    "unaligned_H_norm_squared": "0",
+    "unaligned_kappa_error_over_2": "2"
+  },
+  "arithmetic": "fractions.Fraction; standard library only",
+  "non_diagonal_aligned_fixture": {
+    "A": [
+      [
+        "2",
+        "1"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "A_transpose_B": [
+      [
+        "2",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1"
+      ]
+    ],
+    "B": [
+      [
+        "1",
+        "1/4"
+      ],
+      [
+        "-1/2",
+        "3/4"
+      ]
+    ],
+    "H_norm_squared": "1215/64",
+    "covariances_noncommute": true,
+    "kappa": "1/2",
+    "kappa_error_over_2": "15/32",
+    "trace_term_1": "1247/128",
+    "trace_term_2": "1183/128"
+  },
+  "one_dimensional_exhaustion": {
+    "absolute_value_fold": {
+      "D": "8/9",
+      "optimal_rigid_error_squared": "8/9"
+    },
+    "admissible_maps": 75,
+    "image_grid": [
+      "-1",
+      "-1/2",
+      "0",
+      "1/2",
+      "1"
+    ],
+    "isometric_maps": 2,
+    "largest_error_over_D": "1",
+    "strict_maps": 73,
+    "support": [
+      "-1",
+      "0",
+      "1"
+    ]
+  },
+  "scope": "Exact finite audit of the alignment and Gram reductions only; the analytic entropy theorem remains human-checked.",
+  "singular_aligned_fixture": {
+    "A_transpose_B": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "H_norm_squared": "1",
+    "kappa_error_over_2": "1/2"
+  },
+  "status": "INDEPENDENT_EXACT_CHECKS_PASS"
+}
