@@ -1,0 +1,47 @@
+{
+  "claim": "consecutive multipliers give the explicit threshold in THEOREM.md",
+  "examples": {
+    "(2, 10, 10, 10)": {
+      "chosen_closure_index": 0,
+      "chosen_closure_length": 2,
+      "new_required_edges": 213,
+      "new_required_leaves": 181,
+      "old_exponential_packing_edges": 13313,
+      "superdock_spider_criterion_edges": 2560
+    },
+    "(3, 20, 15, 10, 5)": {
+      "chosen_closure_index": 0,
+      "chosen_closure_length": 3,
+      "new_required_edges": 1163,
+      "new_required_leaves": 1110,
+      "old_exponential_packing_edges": 972408,
+      "superdock_spider_criterion_edges": 524288
+    },
+    "(4, 25, 25, 25, 25, 25, 25, 25, 25)": {
+      "chosen_closure_index": 0,
+      "chosen_closure_length": 4,
+      "new_required_edges": 4403,
+      "new_required_leaves": 4199,
+      "old_exponential_packing_edges": 5220676614403,
+      "superdock_spider_criterion_edges": 251658240
+    }
+  },
+  "maximum_threshold_edges_in_grid": 624,
+  "profile_digest_sha256": "eeb368fcb4ac650c377d7d09ac0b8ad58313ed8e822c0b5c78dc3c60ecfa2ad1",
+  "profiles_checked": 11574,
+  "test_grid": {
+    "closure_lengths": [
+      2,
+      10
+    ],
+    "other_arm_count": [
+      1,
+      5
+    ],
+    "other_arm_lengths": [
+      2,
+      9
+    ]
+  },
+  "trust_boundary": "the universal claim rests on THEOREM.md; code audits formulas and definitions"
+}
