@@ -1,0 +1,100 @@
+{
+  "algebra": {
+    "collision_identities": 21,
+    "conditional_edge_marginals": 15,
+    "conditional_proxy_sums": 120,
+    "joint_partition_checks": 720,
+    "overlap_identities": 165,
+    "zero_target_path_identities": 214
+  },
+  "algebra_digest": "f664dd8e718e18fd1c4f9b7e89e26b2991762f5222f128121b57193c2bf39193",
+  "finite_examples": {
+    "false_positive": {
+      "eccentricity": -1,
+      "edges": [],
+      "n": 2,
+      "probe": 0,
+      "singletons": 0,
+      "zeros": 1
+    }
+  },
+  "fixtures": [
+    {
+      "name": "three_cube",
+      "resolving": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "disconnected_proxy",
+      "resolving": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "complete",
+      "resolving": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "star",
+      "resolving": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "six_cycle",
+      "resolving": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "repeated_large_code",
+      "resolving": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "graph": {
+    "auxiliary_comparisons": 25440,
+    "connected_graphs": 27475,
+    "labelled_graphs": 33866,
+    "probe_checks": 202012,
+    "proxy_false_positive": 17832,
+    "rational_graph_probabilities": 30,
+    "resolving_probes": 39808
+  },
+  "graph_digest": "b3383143b68408c3cbaa566a7c4aa567ca69db4032a0e1b50ecae35621509de2",
+  "rejected_inputs": 8
+}
