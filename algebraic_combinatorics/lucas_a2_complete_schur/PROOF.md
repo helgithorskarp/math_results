@@ -8,7 +8,7 @@ F_0=0,\qquad F_1=1,\qquad F_{n+1}=e_1F_n+e_2F_{n-1}.
 \]
 
 Write \(\binom nk_F=F_n!/(F_k!F_{n-k}!)\). For homogeneous polynomials
-of the same degree, `A >=_S B` means that `A-B` has nonnegative rational
+of the same degree, `A >=_S B` means that `A-B` has nonnegative real
 coefficients in the two-variable Schur basis. Multiplication by a
 Schur-positive polynomial preserves this order.
 
@@ -181,6 +181,10 @@ setting `q=t=1`. In particular, (12)--(13) bound any sign in the tail of
 \ \ge_S\ -8\left(\sum_{i=12}^{\infty}\frac{p(i)}{2^i}\right)G.
                                                                \tag{14}
 \]
+
+Equivalently, one can keep the finite rational sum through `d` on the
+right of (14) and bound that scalar by `449/960` in Section 4. Thus no
+completion or limit operation on the polynomial ring is required.
 
 ## 4. An exact rational tail budget
 
