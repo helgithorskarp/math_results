@@ -1,0 +1,30 @@
+{
+  "tested_utc_date": "2026-09-23",
+  "runs": [
+    {
+      "command": "python3 -O verify.py",
+      "interpreter": "Python 3.11.2",
+      "elapsed_seconds": 2.597,
+      "stdout_sha256": "2abfc5df6fad6fd9a6b0b6286b3b10fc73bbe9adecaf26807ba52aac756ec155",
+      "returncode": 0
+    },
+    {
+      "command": "python3 verify.py",
+      "interpreter": "Python 3.12.14",
+      "elapsed_seconds": 2.575,
+      "stdout_sha256": "2abfc5df6fad6fd9a6b0b6286b3b10fc73bbe9adecaf26807ba52aac756ec155",
+      "returncode": 0
+    },
+    {
+      "command": "python3 audit.py",
+      "interpreter": "Python 3.11.2",
+      "elapsed_seconds": 0.067,
+      "stdout_sha256": "a2f9391ca991be506281bf9ecefe3727487ab07e93ee6e48aa90a26dd942e717",
+      "returncode": 0
+    }
+  ],
+  "peak_child_rss_kib": 22588,
+  "classification": "exact exhaustive cycle enumeration",
+  "second_audit": "independent spectral and weight checks; not an independent classification",
+  "third_party_proof_dependencies": []
+}
