@@ -1,0 +1,107 @@
+{
+  "expanded_checks": [
+    {
+      "family": "tournament",
+      "minimum_out_degree": 13,
+      "order": 36,
+      "profile_sha256": "d3efbabb256c6c2b1ae64098b4c4f8cb4fc69674af8b3e77b02fafd61a43b95f",
+      "transitive": false
+    },
+    {
+      "family": "tournament",
+      "minimum_out_degree": 13,
+      "order": 36,
+      "profile_sha256": "0232125a1d1cfdb56ec03c59f6bb09e6c4b2902f6049fa6e7a027faf734dbbc7",
+      "transitive": true
+    },
+    {
+      "family": "missing_arc",
+      "minimum_out_degree": 18,
+      "order": 51,
+      "profile_sha256": "765290b540bbbbfadba5e739b0064e92cb1d5163703376148b08b744b1297bbc",
+      "transitive": false
+    },
+    {
+      "family": "missing_arc",
+      "minimum_out_degree": 18,
+      "order": 51,
+      "profile_sha256": "ec903f8f9d3f19b78fe40dd059ebfabc0750f4f05795be5a40123ba3c20e716f",
+      "transitive": true
+    }
+  ],
+  "minimum_weight_deficiencies": {
+    "missing_arc": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "tournament": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "native_audit": {
+    "augmentation_counts": [
+      1,
+      2,
+      7,
+      42,
+      582,
+      21480
+    ],
+    "blocked_by_coefficients_at_most_three": 235505,
+    "blocked_only_after_allowing_coefficient_four": 1,
+    "closed_hall_systems": 235526,
+    "families": {
+      "missing_arc": {
+        "cone_minima": [
+          51,
+          57,
+          63,
+          66,
+          75,
+          78,
+          78,
+          96
+        ],
+        "cones": 8,
+        "minimum_external_out_degree": 18,
+        "minimum_total": 51
+      },
+      "tournament": {
+        "cone_minima": [
+          36,
+          39,
+          42,
+          42,
+          45,
+          48,
+          48,
+          54,
+          56,
+          64,
+          72,
+          88
+        ],
+        "cones": 12,
+        "minimum_external_out_degree": 13,
+        "minimum_total": 36
+      }
+    },
+    "feasible_systems": 20,
+    "oriented_types": 21480,
+    "status": "REVIEWER EXHAUSTIVE CLASSIFICATION VERIFIED",
+    "zero_root_types": 13348
+  },
+  "source_commit": "c4a7893cf346a8a761d05f3195b06b542249b94c",
+  "status": "INDEPENDENT REVIEW OF SIX-QUOTIENT CLASSIFICATION VERIFIED",
+  "target_files_bound": 14,
+  "target_tree_sha256": "21347c39096a4e997241fdf69bcf75d0adc92ac7bc12f1aaa95e871c3cbdb9b7"
+}

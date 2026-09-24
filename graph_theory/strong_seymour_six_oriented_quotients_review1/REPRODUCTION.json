@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "reviewed_contribution": "bafkreiazsjreqa3bfywunpv7cv52h2zdq7gkd4hjexbcftzy3xeadfej4i",
+  "target_commit": "c4a7893cf346a8a761d05f3195b06b542249b94c",
+  "environment": {
+    "primary_python": "3.11.2",
+    "secondary_python": "3.12.14",
+    "compiler": "g++ 12.2.0",
+    "numpy": "2.5.3",
+    "pynauty": "2.8.8.1"
+  },
+  "target_reproduction": {
+    "manifest_entries_passed": 13,
+    "primary_normal_seconds": 2,
+    "primary_sanitized_seconds": 10,
+    "primary_output_sha256": "2fd8a49b3e48b0fe0676b03cae4564f28febaecb546834d120f6e6d2c8f33f77",
+    "secondary_normal_seconds": 10,
+    "secondary_optimized_seconds": 10,
+    "secondary_output_sha256": "d0dad08f12f3fc249a7a7fd5222362c911a7d83929b2318f7b96192595875bf4",
+    "literal_construction_match": true
+  },
+  "reviewer_reproduction": {
+    "command": "python3 -B independent_check.py",
+    "sanitizer_command": "python3 -B independent_check.py --sanitize",
+    "normal_seconds": 5,
+    "optimized_seconds": 6,
+    "sanitized_seconds": 24,
+    "output_sha256": "7abc973f6d0185f6faec318590e9007b56e611d9de54b7ce550e00c6c3467963",
+    "native_source_sha256": "20a8f0d83a2be89be9b6582d070b9d16e31f57eb0c6439030b9b66ca33ea07b1",
+    "python_source_sha256": "4cc84197c621fa4a49694af2e8f70e693062fd56741f3e55b3990f602596539b"
+  },
+  "result": {
+    "oriented_types": 21480,
+    "closed_hall_systems": 235526,
+    "coefficient_three_obstructions": 235505,
+    "coefficient_four_only_obstructions": 1,
+    "feasible_systems": 20,
+    "feasible_quotient_types": 2
+  }
+}
