@@ -1,0 +1,41 @@
+{
+  "review_date_utc": "2026-09-24",
+  "target_artifact": "bafkreifs3epeuwqoiofrkb6q77edryqpntvpbh345tmjzt5f5sotwleraa",
+  "target_source_commit": "26909e416526f7c67d4eaeaa430325e0f8c99559",
+  "environment": {
+    "python": "3.11.2",
+    "python_sat": "1.9.dev15",
+    "pypblib": "0.0.4",
+    "ortools": "9.15.6755",
+    "drat_trim_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+  },
+  "author_audit": {
+    "normal_seconds": 4.463,
+    "optimized_seconds": 4.421,
+    "output_sha256": "82773d293d8bf3d8087e1330c7670573aaa39fd1769cbbc0b4d5aea6f8dcd03c",
+    "matches_committed_output": true
+  },
+  "certificate_replay": {
+    "wall_seconds": 236.075,
+    "generated_bytes": 494259744,
+    "case_count": 25,
+    "stable_case_fields_match_expected": true,
+    "all_drat_verified": true,
+    "all_lrat_verified": true
+  },
+  "independent_integer_model": {
+    "wall_seconds": 363.803,
+    "solver_seconds": 340.895682,
+    "case_count": 25,
+    "all_statuses": "INFEASIBLE",
+    "total_conflicts": 17232,
+    "total_branches": 212026,
+    "stable_fields_match_committed_output": true
+  },
+  "reviewer_audit": {
+    "wall_seconds": 26.712,
+    "output_sha256": "a364962703b372be034970722f82dc0c97384a4fbda33e7b568c1755b93f2b73",
+    "imports_target_modules": false,
+    "imports_sat_solver": false
+  }
+}
