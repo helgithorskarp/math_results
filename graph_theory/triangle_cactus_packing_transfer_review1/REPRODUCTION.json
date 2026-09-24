@@ -1,0 +1,20 @@
+{
+  "date_utc": "2026-09-24",
+  "python": "CPython 3.11.2",
+  "target_contribution": "bafkreifqalcytmhya466pmwitt7vb3252e67anpbzf3hxvddcenfks2o44",
+  "target_source_commit": "bd5c50a327e21ab32193da113e55012f5b23c5d2",
+  "target_manifest_entries": 10,
+  "target_command": "PYTHONDONTWRITEBYTECODE=1 python3 check.py",
+  "target_optimized_command": "PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=271828 python3 -O check.py",
+  "target_audit_sha256": "b7ca4ff56c74e2bcd1a27818f2e8637e7092c8f69793342ef8a3a9f9de56d62a",
+  "review_command": "PYTHONDONTWRITEBYTECODE=1 python3 independent_check.py",
+  "review_optimized_command": "PYTHONDONTWRITEBYTECODE=1 python3 -O independent_check.py",
+  "review_output_sha256": "a7833f1a1656a98e033eb6acb7139aa4af5519b263e679fe1fdff42b541f45f2",
+  "normal_and_optimized_outputs_equal": true,
+  "review_exact_cases": 342036,
+  "review_checker_dependencies": [
+    "Python standard library",
+    "ten target files bound by SHA-256"
+  ],
+  "result": "accept_with_minor_wording_correction"
+}
