@@ -1,0 +1,188 @@
+{
+  "independent_lifts": [
+    {
+      "edges_used": 66,
+      "factor": 1,
+      "scale": 2,
+      "triangles": 22
+    },
+    {
+      "edges_used": 264,
+      "factor": 2,
+      "scale": 4,
+      "triangles": 88
+    },
+    {
+      "edges_used": 594,
+      "factor": 3,
+      "scale": 6,
+      "triangles": 198
+    },
+    {
+      "edges_used": 1650,
+      "factor": 5,
+      "scale": 10,
+      "triangles": 550
+    },
+    {
+      "edges_used": 4224,
+      "factor": 8,
+      "scale": 16,
+      "triangles": 1408
+    },
+    {
+      "edges_used": 14850,
+      "factor": 15,
+      "scale": 30,
+      "triangles": 4950
+    }
+  ],
+  "label_substitutions": [
+    {
+      "edges": 264,
+      "order": 3,
+      "triangles": 88,
+      "vertices": 33
+    },
+    {
+      "edges": 1848,
+      "order": 7,
+      "triangles": 616,
+      "vertices": 77
+    },
+    {
+      "edges": 3168,
+      "order": 9,
+      "triangles": 1056,
+      "vertices": 99
+    },
+    {
+      "edges": 9240,
+      "order": 15,
+      "triangles": 3080,
+      "vertices": 165
+    },
+    {
+      "edges": 40920,
+      "order": 31,
+      "triangles": 13640,
+      "vertices": 341
+    }
+  ],
+  "negative_controls": [
+    "overloaded primal",
+    "deficient dual",
+    "missing spare-edge component",
+    "repeated packing edge",
+    "packing nonedge",
+    "broken Latin rule",
+    "missing diagonal triangle"
+  ],
+  "profiles": [
+    {
+      "P": "11/2",
+      "edge_types": 19,
+      "fractional_hosts": [
+        {
+          "edges": 114,
+          "t": 3,
+          "triangles": 90,
+          "value": "33"
+        },
+        {
+          "edges": 228,
+          "t": 4,
+          "triangles": 360,
+          "value": "66"
+        },
+        {
+          "edges": 798,
+          "t": 7,
+          "triangles": 3150,
+          "value": "231"
+        }
+      ],
+      "name": "reviewed_nine_vertex_seed",
+      "packet": {
+        "D": 2,
+        "edges": 38,
+        "spare_edges": 5,
+        "triangles": 11,
+        "vertices": 43
+      },
+      "triangle_types": 15,
+      "typicality_checks": 18153
+    },
+    {
+      "P": "44/3",
+      "edge_types": 48,
+      "fractional_hosts": [
+        {
+          "edges": 264,
+          "t": 3,
+          "triangles": 656,
+          "value": "88"
+        },
+        {
+          "edges": 528,
+          "t": 4,
+          "triangles": 2624,
+          "value": "176"
+        },
+        {
+          "edges": 1848,
+          "t": 7,
+          "triangles": 22960,
+          "value": "616"
+        }
+      ],
+      "name": "three_type_boolean_template",
+      "packet": {
+        "D": 6,
+        "edges": 264,
+        "spare_edges": 0,
+        "triangles": 88,
+        "vertices": 264
+      },
+      "triangle_types": 150,
+      "typicality_checks": 33044
+    },
+    {
+      "P": "1/6",
+      "edge_types": 1,
+      "fractional_hosts": [
+        {
+          "edges": 3,
+          "t": 3,
+          "triangles": 1,
+          "value": "1"
+        },
+        {
+          "edges": 6,
+          "t": 4,
+          "triangles": 4,
+          "value": "2"
+        },
+        {
+          "edges": 21,
+          "t": 7,
+          "triangles": 35,
+          "value": "7"
+        }
+      ],
+      "name": "one_clique_type",
+      "packet": {
+        "D": 6,
+        "edges": 3,
+        "spare_edges": 0,
+        "triangles": 1,
+        "vertices": 3
+      },
+      "triangle_types": 1,
+      "typicality_checks": 29
+    }
+  ],
+  "scope": "Exact finite certificate audit; universal existence imports Keevash Theorems 3.2 and 3.3.",
+  "small_templates": 74,
+  "status": "PASS"
+}
