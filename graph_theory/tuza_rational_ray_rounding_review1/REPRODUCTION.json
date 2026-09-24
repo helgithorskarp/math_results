@@ -1,0 +1,30 @@
+{
+  "environment": {
+    "kernel": "Linux 6.1.0-53-cloud-amd64 x86_64",
+    "python": "Python 3.11.2",
+    "scipy_available": false
+  },
+  "independent_checker": {
+    "command": "python3 independent_check.py ../tuza_rational_ray_rounding/CERTIFICATES.json",
+    "expected_output_sha256": "74629887ecf333f1b59f0e3d0fa4721a7d2bb593b29ece9a51fc8b45ede3b01a",
+    "normal_seconds": 0.52,
+    "optimized_seconds": 0.58,
+    "status": "PASS; normal and optimized outputs byte-identical"
+  },
+  "reviewed_checker": {
+    "audit_sha256": "222d1a564c862064826cf4c4069bb5659eecb63abe66806c66e223584fb981ee",
+    "normal_seconds": 1.07,
+    "optimized_seconds": 1.12,
+    "status": "PASS; both outputs byte-identical to committed AUDIT.json"
+  },
+  "reviewed_source": {
+    "certificate_sha256": "74c85bd77fab417232f5467b32b0b7b1283165f21a55e67c38277a6fa38e5bba",
+    "commit": "2bb30a63997c573fa4f1e9704a0035b33dedcfce",
+    "directory": "graph_theory/tuza_rational_ray_rounding",
+    "sha256sums_status": "all entries OK"
+  },
+  "solver_producer": {
+    "reason_not_run": "SciPy is absent; the producer is optional discovery code and its floating-point solver output is not part of the proof trust boundary.",
+    "status": "NOT RUN"
+  }
+}
