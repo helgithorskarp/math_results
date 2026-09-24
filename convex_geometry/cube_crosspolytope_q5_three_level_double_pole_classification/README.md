@@ -1,18 +1,19 @@
-# Complete double-pole missing-wall classification in active dimension five
+# Complete ordering classification of double-pole walls in active dimension five
 
-This directory classifies every double-pole missing wall for ordered
+This directory classifies every double-pole missing wall for distinct
 three-level active weights
 
 \[
-                  (1,1,a,a,b),\qquad 0<b<a<1,quad B>0.
+                  (1,1,a,a,b),\qquad 0<a,b<1,\quad a\ne b,\quad B>0.
 \]
 
-There are exactly three.  One is the previously known wall at \(2b\); two are
-the walls at \(2a\) and \(2(2a+b)\) found by the isolated classification.
-The subsequent non-isolated analysis proves that no additional simple-pole
-row can complete a cancellation.  Thus the list is complete without an
-isolation hypothesis.  All three families are specified by exact algebraic
-numbers, and no numerical approximation is used in either proof.
+There are exactly three when the singleton lower weight satisfies \(b<a\),
+and none when \(a<b\).  One is the previously known wall at \(2b\); two are
+the walls at \(2a\) and \(2(2a+b)\).  The non-isolated analysis proves that no
+additional row can complete a cancellation, and the complementary-order
+analysis excludes the entire opposite ordering.  Thus the list is complete
+without an isolation or lower-level ordering hypothesis.  All decisions are
+exact.
 
 The proof reduces the 36 possible unit/\(a\)-supplier tail pairs to eight by
 sign and boundary positivity, factors every leading cancellation equation,
@@ -22,7 +23,9 @@ the intended two double-pole rows reach the wall.
 
 See [`PROOF.md`](PROOF.md) for the three-family isolated classification and
 [`NONISOLATED_PROOF.md`](NONISOLATED_PROOF.md) for the strengthening to all
-double-pole walls.
+double-pole walls in \(b<a\).  See
+[`COMPLEMENTARY_PROOF.md`](COMPLEMENTARY_PROOF.md) for the exclusion in
+\(a<b\) and the combined complete classification.
 
 ## Reproduce
 
@@ -62,3 +65,22 @@ diff -u COLLISION_CERTIFICATE.json actual-collision-certificate.json
 
 Its expected verifier status is
 `Q5_NONISOLATED_DOUBLE_POLE_WALLS_EXCLUSION_VERIFIED`.
+
+The complementary-order exclusion uses a 46-factor certificate:
+
+~~~sh
+PYTHONDONTWRITEBYTECODE=1 python3 verify_complementary.py \
+  > actual-complementary.json
+diff -u EXPECTED_COMPLEMENTARY.json actual-complementary.json
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python derive_complementary.py \
+  > actual-complementary-derivation.json
+diff -u EXPECTED_COMPLEMENTARY_DERIVATION.json \
+  actual-complementary-derivation.json
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python derive_complementary.py \
+  --certificate > actual-complementary-certificate.json
+diff -u COMPLEMENTARY_CERTIFICATE.json actual-complementary-certificate.json
+sha256sum -c SHA256SUMS
+~~~
+
+Its expected verifier status is
+`Q5_COMPLEMENTARY_DOUBLE_POLE_WALLS_EXCLUSION_VERIFIED`.

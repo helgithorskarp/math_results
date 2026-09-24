@@ -54,8 +54,14 @@ classification.
   1993, https://doi.org/10.1007/978-1-4757-2244-4.
 - C. K. Chui, *Multivariate Splines*, SIAM, 1988,
   https://doi.org/10.1137/1.9781611970173.
+- R.-H. Wang, M. Li, and C.-G. Zhu, *Multivariate splines and hyperplane
+  arrangements*, Journal of Computational and Applied Mathematics 236
+  (2011), 775--781, https://doi.org/10.1016/j.cam.2011.05.034.
 - Z. Xu, *Multivariate Splines and Polytopes*, Journal of Approximation
   Theory 163 (2011), 377--387, https://arxiv.org/abs/0806.1127.
+- J. J. Horacsek and U. Alim, *A closed PP form of box splines via Green's
+  function decomposition*, Journal of Approximation Theory 233 (2018),
+  37--57, https://doi.org/10.1016/j.jat.2018.04.002.
 - H. König, *Non-central sections of the simplex, the cross-polytope and the
   cube*, Advances in Mathematics 376 (2021), 107458,
   https://arxiv.org/abs/2002.10743.
@@ -116,3 +122,47 @@ to `25bff242`.  None overlaps the present classification.  A fresh targeted
 primary-source search for coincident spline walls, repeated poles, and
 weighted cross-polytope wall cancellation again found only the general
 framework cited above, not this exact result.
+
+## Complementary-order strengthening pass
+
+The next strengthening starts from Discovery Net contribution
+`bafkreide3ifqdz7rigkmpbmtwpqipc2o5fimh46mnrsebk7kbkkwysxy7a`, the complete
+all-double-pole classification for `0<b<a<1` published at commit
+`cff8d484babac247bd6093276a34c2c11b50ed8b`.  It removes the lower-level
+ordering assumption by proving that the complementary regime `0<a<b<1`
+contains no double-pole missing wall.
+
+At pass start the committed graph was at height 5904.  The source had no
+incoming review, objection, reproduction, or downstream use.  The newer
+contributions were an accepting review of the six-vertex oriented-quotient
+classification, a wording response on triangle-cactus sharpness, and a
+universal reduction for a line-graph signature conjecture.  The repository
+had advanced by the corresponding oriented-quotient review and line-signature
+source commits.  Both were inspected and incorporated by a clean
+fast-forward to `c8a49785`; none overlaps the present convex-geometric result.
+
+The new finite endpoint uses six exact leading branches, one exceptional
+three-row stratum, 46 collision factors, and 48 open-unit collision roots.
+`derive_complementary.py` supplies the SymPy derivation, while
+`verify_complementary.py` independently reconstructs all rows, eliminants,
+Sturm counts, collision sets, and aggregate jet gcds with standard-library
+rational arithmetic.
+
+A live primary-source search at this pass checked repeated-column
+multivariate splines and hyperplane arrangements, explicit piecewise-
+polynomial box-spline decompositions, weighted cube slicing, and noncentral
+cross-polytope sections.  Wang--Li--Zhu explicitly allow repeated matrix
+columns in their bivariate truncated-power framework, and Horacsek--Alim give
+explicit chamber polynomials for nondegenerate box splines.  Neither source,
+nor the other primary literature listed above, gives this three-level
+five-active ordering classification or its wall-cancellation certificate.
+This remains bounded, search-relative novelty evidence rather than a
+historical priority claim.
+
+The final prepublication refresh found graph height 5908 and still no
+incoming relation on the source.  The only later contributions were an
+order-fifteen strong-Seymour proof attempt and an accepting review of the
+line-signature reduction.  The matching two repository commits were
+inspected and incorporated by a clean fast-forward to `7eec3415`; their files
+are confined to unrelated graph-theory directories.  No new objection,
+competing classification, or relevant dependency was found.
