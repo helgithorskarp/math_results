@@ -1,0 +1,41 @@
+{
+  "environment": {
+    "kernel": "Linux 6.1.0-53-cloud-amd64 x86_64",
+    "ortools_available": false,
+    "python": "Python 3.11.2"
+  },
+  "independent_checker": {
+    "command": "python3 independent_audit.py ../hypercube_square_saturation_shortened_templates/templates.json",
+    "expected_output_sha256": "9ff6d54a5011454913d72a8cc408e12bf7ea41d1dfc55888df84921212c7153e",
+    "normal_seconds": 33.88,
+    "optimized_seconds": 33.80,
+    "status": "PASS; normal and optimized outputs byte-identical"
+  },
+  "reviewed_checkers": {
+    "audit.py": {
+      "normal_seconds": 0.16,
+      "optimized_seconds": 0.23,
+      "output_sha256": "276d0d11c176e675cf06878a3da2c7966829b534b2663631f6ee5f3214e46916"
+    },
+    "check_templates.py": {
+      "normal_seconds": 0.02,
+      "optimized_seconds": 0.10,
+      "output_sha256": "1890253af0b579b77227ba9bae2ee0f345b6c1ff62dbca2b1d772f8df7ac5054"
+    },
+    "reproduce.py": {
+      "normal_seconds": 11.82,
+      "optimized_seconds": 12.40,
+      "output_sha256": "d20ae7f446cd39e4d6db384caadf1ac047c96069fb9749f3d5c0c090ef66a861"
+    },
+    "status": "PASS; all six runs byte-identical to committed expected outputs"
+  },
+  "reviewed_source": {
+    "commit": "e30f5a692b7c727e738784ffe073d62c77a3fb51",
+    "directory": "graph_theory/hypercube_square_saturation_shortened_templates",
+    "sha256sums_status": "all entries OK"
+  },
+  "solver_discovery": {
+    "reason_not_run": "OR-Tools is absent; discovery optimality and solver soundness are not theorem assumptions because the explicit certificates are checked directly.",
+    "status": "NOT RUN"
+  }
+}

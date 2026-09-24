@@ -1,0 +1,103 @@
+{
+  "arithmetic": {
+    "consecutive_dimensions_checked": 99987,
+    "last_dimension": 100000
+  },
+  "dimension_19_extension": {
+    "blocks": [
+      [
+        "H",
+        2
+      ],
+      [
+        "S",
+        4
+      ]
+    ],
+    "bound_coefficient": "211/32",
+    "completion_edges": 358811,
+    "exceptional_vertices": 49152,
+    "final": {
+      "faces": 22413312,
+      "missing_edges": 3044965,
+      "selected_edges": 1935771,
+      "three_edge_faces": 5061268,
+      "unwitnessed_edges": 0
+    },
+    "initial": {
+      "faces": 22413312,
+      "missing_edges": 3403776,
+      "selected_edges": 1576960,
+      "three_edge_faces": 3258368,
+      "unwitnessed_edges": 811008
+    },
+    "initial_edges": 1576960,
+    "padding": 1
+  },
+  "finite_templates": [
+    {
+      "affine_cycle_orderings": 3,
+      "class_sizes": [
+        1,
+        2
+      ],
+      "core_edges": 4,
+      "missing_core_boundary_edges": 2,
+      "missing_outside_incidences": 4,
+      "name": "H",
+      "outside_edges_per_nonzero_layer": 8,
+      "outside_rectangle_tests": 12
+    },
+    {
+      "affine_cycle_orderings": 3,
+      "class_sizes": [
+        2,
+        2
+      ],
+      "core_edges": 3,
+      "missing_core_boundary_edges": 1,
+      "missing_outside_incidences": 4,
+      "name": "S",
+      "outside_edges_per_nonzero_layer": 8,
+      "outside_rectangle_tests": 24
+    },
+    {
+      "affine_cycle_orderings": 420,
+      "class_sizes": [
+        2,
+        3
+      ],
+      "core_edges": 29,
+      "missing_core_boundary_edges": 11,
+      "missing_outside_incidences": 17,
+      "name": "F",
+      "outside_edges_per_nonzero_layer": 33,
+      "outside_rectangle_tests": 160
+    }
+  ],
+  "new_scale_32_quotients": [
+    {
+      "boundary_edges_checked": 127,
+      "edges": 252,
+      "name": "H",
+      "order": 128,
+      "scale": 32
+    },
+    {
+      "boundary_edges_checked": 126,
+      "edges": 251,
+      "name": "S",
+      "order": 128,
+      "scale": 32
+    },
+    {
+      "boundary_edges_checked": 540,
+      "edges": 1052,
+      "name": "F",
+      "order": 512,
+      "scale": 32
+    }
+  ],
+  "status": "PASS",
+  "trust_boundary": "Exact finite corroboration. The universal replication, composition, greedy completion, and interval arguments remain human-audited proofs."
+}
