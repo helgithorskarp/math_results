@@ -489,3 +489,95 @@ square Gram candidate is sign-decomposable.  As an encoding control, the same
 checker reconstructs the published `R0`, computes its scaled inverse, and
 verifies (19) for all 23 of its actual columns.  This completes the
 graph-valued sign-Gram classification through radius six.
+
+## 12. Symmetry-compressed sign-column certificate
+
+The full `2^22` Gray-code check in Section 11 has a much smaller exact
+quotient.  Write `G_1,G_2` for the two exceptional Grams in the order displayed
+in Section 10.  Direct inspection of the edited edges gives the following
+row-permutation subgroups:
+
+\[
+H_1=C_2^2\times(S_4\mathop{\rm wr}C_2),\qquad |H_1|=4608,
+\]
+
+where the two `C2` factors swap `(3,4)` and `(9,10)`, and
+
+\[
+H_2=C_2^3\times(S_4\mathop{\rm wr}C_2),\qquad |H_2|=9216,
+\]
+
+where the three `C2` factors swap `(3,4)`, `(7,8)`, and `(11,12)`.  In both
+cases `S4 wr C2` independently permutes the two four-sets
+`{15,16,17,18}` and `{19,20,21,22}` and exchanges the sets.  Every other
+vertex is fixed.  In particular, both groups fix vertices zero and one.
+`candidate_orbit_obstructions.py` checks each displayed generator directly
+against both `G_i` and its exact scaled inverse numerator `P_i`.
+
+Consequently a normalized sign vector is classified under `H_i` by:
+
+- its signs on every fixed vertex other than vertex zero;
+- the number `0,1,2` of negative signs in each interchangeable pair; and
+- the unordered pair `(a,b)`, with `0<=a<=b<=4`, of negative counts in the
+  two interchangeable four-sets.
+
+There are 15 possibilities for `(a,b)`.  Hence the complete normalized cube
+for the first candidate has only
+
+\[
+2^{10}3^2\cdot15=138240
+\]
+
+canonical representatives.  For the second obstruction, the forbidden
+condition `v_0v_1=-1` becomes `v_1=-1` after normalizing `v_0=1`; since
+`H_2` fixes vertex one, it leaves only
+
+\[
+2^7 3^3\cdot15=51840
+\]
+
+representatives.  Orbit multiplicities are elementary: a pair with `k`
+negative signs contributes `binom(2,k)`; the two four-sets contribute
+`binom(4,a)^2` when `a=b` and
+`2 binom(4,a)binom(4,b)` when `a<b`.  Summing these products gives exactly
+`2^22` normalized columns in the first census and `2^21` columns in the
+forbidden second census, so this is an exact quotient rather than a sample.
+
+Exact evaluation of `v^T P_i v` on the canonical representatives finds no
+solution for `G_1` and none in the forbidden `v_1=-1` half for `G_2`.  As a
+positive and multiplicity control, the unrestricted `G_2` quotient has
+103,680 representatives and exactly two solution orbits, of sizes 32 and 16.
+Their union is exactly the 48 columns found by the independent Gray-code
+enumeration.  `verify_candidate_orbit_obstructions.py` reconstructs that full
+enumeration, expands the two reported orbits from explicit generators, and
+requires exact equality of the two 48-element sets.  This supplies a compact
+structural certificate for both contradictions in Section 11.
+
+### Retained SAT experiment
+
+As a separate certificate experiment, write `v_i=(-1)^{x_i}` and
+`y_ij=x_i xor x_j`.  If `q_+` is the all-plus value, then
+
+\[
+v^T P v=q_+-4\sum_{i<j}P_{ij}y_{ij}.
+\]
+
+`candidate_sat_certificates.py` converts this exact weighted equality to a
+34- or 35-bit Tseitin ripple-adder CNF.  CaDiCaL 3.0.1 proved the two target
+instances UNSAT, while the unrestricted second-candidate control was SAT and
+its model satisfied every clause and the decoded integer quadratic identity.
+The respective CNF SHA-256 values are
+`1b4feba975193380c1e0d7e5b161c43e6a87454dadbd373b3accb3ea9c727019`,
+`2af668ee1f3ae525cde318ded8ba5989249c4a2ff1c31ca71e2ade27ca31f822`,
+and `383532438d208952cd5bee6a844fd8f0887f212c202179a1149b8fa23e7b2248`
+for the positive control.
+The binary DRAT traces had sizes 35,664,691 and 34,108,768 bytes.  Their
+SHA-256 values were
+`afef22e578dc70bddab625ee250fcc028bbff7add0f0eb1a50e0842b2c69e8ee`
+and `cf7e1d3abfa0cdb286f5b91e780544a305800fb82672b0af44b98e0fb057d2fe`.
+Independent `drat-trim` verification succeeded, but core extraction produced
+still larger 67 MiB and 60 MiB ASCII proofs.  Those bulky generated traces are
+deliberately not published; the generator, exact CNF hashes, solver versions,
+and negative size result are retained to make the abandoned certificate
+direction reproducible.  The compact symmetry quotient above is the published
+proof artifact.

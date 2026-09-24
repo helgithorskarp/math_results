@@ -130,6 +130,15 @@ the larger candidate.  The smaller candidate has 48 admissible columns, but
 all have `v_0v_1=1`; any 23-column decomposition would therefore give
 `G_01=23`, whereas this candidate has `G_01=3`.  Thus neither decomposes.
 
+The same obstruction now has a compact symmetry quotient.  Explicit
+row-permutation subgroups of orders 4,608 and 9,216 reduce the first complete
+normalized sign cube to 138,240 canonical vectors and the second forbidden
+`v_0v_1=-1` half-cube to 51,840.  Exact orbit multiplicities recover all
+`2^22` and `2^21` labeled vectors.  The unrestricted second quotient has two
+admissible orbits, of sizes 32 and 16, whose expansion is exactly the original
+48-column list.  This independently structured certificate replaces the
+four-million-vector trace as the smallest published proof layer.
+
 ## Exact symmetry quotient
 
 An edit set is a subset of the 253 unordered off-diagonal positions.
@@ -181,6 +190,8 @@ g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow -pedantic \
 ./radius6 record23.txt > radius6_result.json
 python3 verify_radius6.py radius6_result.json
 python3 candidate_obstructions.py
+python3 candidate_orbit_obstructions.py > candidate_orbit_result.json
+python3 verify_candidate_orbit_obstructions.py candidate_orbit_result.json
 ```
 
 The terminal output ends with
@@ -196,6 +207,7 @@ exact arbitrary radius-three covering certificate verified
 radius-six canonical orbit enumeration and modular sieve verified
 exact radius-six symmetry-quotient certificate verified
 both record-beating radius-six Gram candidates are indecomposable
+symmetry-compressed sign-column certificate verified
 ```
 
 `enumerate.cpp` performs 172,701,826 evaluations, including the overlapping
@@ -238,6 +250,19 @@ at 289,908 KiB resident memory.  The independent Python checker takes about
 determinants and traversal of all 359 survivor orbits.  The column-obstruction
 checker takes about 20 seconds.  The deterministic `radius6_result.json`
 SHA-256 is `8145a2fdf28d61be0abb24813385c9b4f28f358668875be5f40ef9bc2c8e46e2`.
+The symmetry-compressed column generator takes about 15 seconds and its
+definition-level checker, including the independent full Gray-code control,
+takes about 19 seconds.  The deterministic
+`candidate_orbit_certificate.json` SHA-256 is
+`8b8a282bdcaacaea67f9c354fc40e2637a61ddb510864aa3e7b3d4e199c5a764`.
+
+An optional SAT experiment can be regenerated with
+`python3 candidate_sat_certificates.py /tmp/order23-sat`.  At official-source
+commits `c60730422e758ef1cebe7aeddf2dda31c996bf04` (CaDiCaL 3.0.1) and
+`2e3b2dc0ecf938addbd779d42877b6ed69d9a985` (`drat-trim`), the two target
+CNFs were independently proved and checked UNSAT.  Their raw binary traces
+were 35 MiB and 33 MiB, and extracted core proofs were larger, so no SAT trace
+is committed.  `PROOF.md` records the exact CNF hashes and experiment scope.
 
 ## Known frontier and sources
 
@@ -283,4 +308,9 @@ have been deduplicated.  All arithmetic is exact; no positivity assumption or
 floating-point filter is used.  The radius-six decomposition obstruction
 trusts the identity `R^T(RR^T)^{-1}R=I` and exhaustive Gray-code traversal of
 the normalized sign cube; exact rational inversion is checked by multiplying
-`G P=Q I`, and the published record matrix supplies a positive control.
+`G P=Q I`, and the published record matrix supplies a positive control.  The
+compact obstruction additionally trusts only the explicit candidate
+permutation subgroups and their elementary binary-color orbit classification;
+the checker expands the reported solution orbits and compares them exactly to
+the full Gray-code result.  The optional SAT traces are not part of the
+published proof boundary.
