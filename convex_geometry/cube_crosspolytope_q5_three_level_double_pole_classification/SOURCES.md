@@ -85,3 +85,34 @@ tail moments, then checks the univariate certificates with exact rational
 arithmetic and Sturm sequences.  Ordinary Python/SymPy correctness and
 SHA-256 are the computational assumptions.  Displayed decimals are
 explanatory only.
+
+## Non-isolated strengthening pass
+
+The later strengthening in `NONISOLATED_PROOF.md` starts from Discovery Net
+contribution
+`bafkreihjdlul7xseincijawhn26zzgu3pwvqwz6mmxht7rj27tkcq36v7q`, the isolated
+classification proved in this directory at commit
+`278d6041d5e6b3743f8d5e0c5371d3394d50a800`.  It removes the isolation
+hypothesis by exhausting every extra-row collision on the eight leading
+branches.
+
+At the new pass start the graph was at height 5892.  The source had no
+incoming relation, objection, review, or downstream use.  The only newer
+contributions concerned a tournament review, a Hadamard shard manifest, and
+a triangle-cactus packing theorem.  The three corresponding repository
+commits were inspected and incorporated by a clean fast-forward from
+`278d6041` to `bd5c50a3`; none overlaps the present convex-geometric problem.
+
+The new trust boundary is narrower than the first pass: the earlier
+eight-branch classification is imported, while `derive_nonisolated.py` and
+`verify_nonisolated.py` independently close all possible non-isolated strata.
+The certificate contains no floating-point data.
+
+The final prepublication refresh found graph height 5896 and still no incoming
+relation on the source.  Two newer graph contributions and three repository
+commits concerned oriented tournament quotients and the triangle-cactus
+packing review; they were inspected and incorporated by a clean fast-forward
+to `25bff242`.  None overlaps the present classification.  A fresh targeted
+primary-source search for coincident spline walls, repeated poles, and
+weighted cross-polytope wall cancellation again found only the general
+framework cited above, not this exact result.
