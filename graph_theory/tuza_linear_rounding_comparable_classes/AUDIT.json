@@ -1,0 +1,147 @@
+{
+  "compressed_role_checks": {
+    "boundary_profiles": 6,
+    "mixed_templates": 74,
+    "positive_dropped_coordinates_in_mixed_tests": 132,
+    "retained_coordinates_in_mixed_tests": 286,
+    "total_intervals": 669
+  },
+  "degree_construction_operations": {
+    "direct_additions": 12660,
+    "single_vertex_augmentations": 4,
+    "two_vertex_augmentations": 40
+  },
+  "forbidden_degree_instances": 25,
+  "integrated_sparse_and_remainder": {
+    "remainder_edges": 4096,
+    "remainder_maximum_degree": 4,
+    "remainder_sha256": "4b92aee9916668bb3aa0ae1dba75a47b4b20c96ca68e812cc71ed4d0a42565e9",
+    "sparse_edges": 30720,
+    "vertices": 2048
+  },
+  "intermediate_optimum_profiles": [
+    {
+      "N": 1998999,
+      "side": -1,
+      "small_mass": "500000000/3",
+      "small_mass_over_N_squared": "500000000/11987991006003",
+      "t": 1000
+    },
+    {
+      "N": 2000999,
+      "side": 1,
+      "small_mass": "1000000000",
+      "small_mass_over_N_squared": "1000000000/4003996998001",
+      "t": 1000
+    },
+    {
+      "N": 199989999,
+      "side": -1,
+      "small_mass": "500000000000/3",
+      "small_mass_over_N_squared": "500000000000/119987999100060003",
+      "t": 10000
+    },
+    {
+      "N": 200009999,
+      "side": 1,
+      "small_mass": "1000000000000",
+      "small_mass_over_N_squared": "1000000000000/40003999699980001",
+      "t": 10000
+    },
+    {
+      "N": 1999998999999,
+      "side": -1,
+      "small_mass": "500000000000000000/3",
+      "small_mass_over_N_squared": "500000000000000000/11999987999991000006000003",
+      "t": 1000000
+    },
+    {
+      "N": 2000000999999,
+      "side": 1,
+      "small_mass": "1000000000000000000",
+      "small_mass_over_N_squared": "1000000000000000000/4000003999996999998000001",
+      "t": 1000000
+    }
+  ],
+  "negative_controls": [
+    "same-component swap",
+    "different-pattern swap",
+    "corrupt final component",
+    "forbidden edge inserted",
+    "repeated realization edge",
+    "tiny coordinate retained",
+    "wrong local role count",
+    "incorrect spare capacity"
+  ],
+  "scope": "exact finite constructive bridges; universal dense completion is imported and unformalized",
+  "sparse_instances": [
+    {
+      "components": 514,
+      "components_sha256": "7f853502f867e027926bb8a9dfde58cfc47f9b4f77f568d48a976107535c61be",
+      "edges": 1028,
+      "initial_excess": 514,
+      "maximum_degree": 8,
+      "minimum_candidate_margin": 440,
+      "name": "one_clique",
+      "patterns": 2,
+      "replayed_switches": 297,
+      "trace_sha256": "40850683efdcbddff9274e20828da4c30874fc7df19f4d060bd8c5262825863a",
+      "vertices": 257
+    },
+    {
+      "components": 7308,
+      "components_sha256": "3ce8380ab73112f1c764eba340204a4c29762cf31a9cd47bae0b50119a763e51",
+      "edges": 15660,
+      "initial_excess": 8380,
+      "maximum_degree": 38,
+      "minimum_candidate_margin": 259,
+      "name": "unequal_two_cliques",
+      "patterns": 7,
+      "replayed_switches": 4587,
+      "trace_sha256": "a80282c42cf4ac3eb99a5669c6c54e637d65315de849566c8aafa9bb71e337c9",
+      "vertices": 1044
+    },
+    {
+      "components": 14336,
+      "components_sha256": "70f5219160a6b3b6d5dbea10a0cdcd4d11c18301d3966d116eeca92cfdc1ffba",
+      "edges": 30720,
+      "initial_excess": 21510,
+      "maximum_degree": 30,
+      "minimum_candidate_margin": 1548,
+      "name": "balanced_two_cliques",
+      "patterns": 7,
+      "replayed_switches": 11078,
+      "trace_sha256": "8d03ba84e5f5597c48c28fc92ba99b83c6a2bdc28bdd4a52ee4e7a79b6e98f2a",
+      "vertices": 2048
+    },
+    {
+      "components": 49216,
+      "components_sha256": "884eeaa690dc41d155a60cb9d61a1c87b544d697e4bbf82e9c6974c1fb7bb765",
+      "edges": 110736,
+      "initial_excess": 58654,
+      "maximum_degree": 87,
+      "minimum_candidate_margin": 605,
+      "name": "unequal_three_cliques",
+      "patterns": 16,
+      "replayed_switches": 33128,
+      "trace_sha256": "947a94c3a78106a6210655dd6d37146e990f8b6eb66928379b5ce96c9a803a35",
+      "vertices": 3076
+    },
+    {
+      "components": 22149,
+      "components_sha256": "074665ee140d23f33c7891935ca1fd079b6f62ff9b89d24f38e1a442ee7bbdce",
+      "edges": 46759,
+      "initial_excess": 23892,
+      "maximum_degree": 71,
+      "minimum_candidate_margin": 438,
+      "name": "proper_split_template",
+      "patterns": 9,
+      "replayed_switches": 13062,
+      "trace_sha256": "25e71f44b610d371a570152073c36a1bf8cd12b0f784582bc79730f498603ad7",
+      "vertices": 2461
+    }
+  ],
+  "status": "PASS",
+  "threshold_endpoint_checks": 64,
+  "total_replayed_switches": 62152
+}

@@ -1,0 +1,12 @@
+{
+  "sparse_instances": [
+    {"name": "one_clique", "sizes": [257], "clique_types": [0], "cross_pairs": []},
+    {"name": "unequal_two_cliques", "sizes": [521, 523], "clique_types": [0, 1], "cross_pairs": [[0, 1]]},
+    {"name": "balanced_two_cliques", "sizes": [1024, 1024], "clique_types": [0, 1], "cross_pairs": [[0, 1]]},
+    {"name": "unequal_three_cliques", "sizes": [1021, 1024, 1031], "clique_types": [0, 1, 2], "cross_pairs": [[0, 1], [0, 2], [1, 2]]},
+    {"name": "proper_split_template", "sizes": [811, 823, 827], "clique_types": [0, 1], "cross_pairs": [[0, 1], [0, 2]]}
+  ],
+  "count_rule": "Every supported triangle and single-edge pattern has count N=sum(sizes).",
+  "degree_seed": 20260924,
+  "boundary_scales": [1000, 10000, 1000000]
+}
