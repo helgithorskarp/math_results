@@ -21,7 +21,9 @@ frontier:
    attaining the current determinant record.  That global lower bound does
    not assert an exhaustive sign-decomposition census for the particular
    Gram used here; it bounds the novelty claim to that explicitly stated
-   fixed-center classification.
+   fixed-center classification.  The paper uses transposition while
+   generating classes in its order-26 analysis, but does not state an
+   order-23 transpose-orbit classification.
 5. R. P. Brent, [*Finding D-optimal designs by randomised decomposition and
    switching*](https://arxiv.org/abs/1112.4671).  This is the primary
    methodological comparison for generating H-classes by decomposing Gram

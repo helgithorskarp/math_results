@@ -131,6 +131,23 @@ the graph with arbitrary-precision integers, independently repeats the
 9,804,083-node clique census, reconstructs every representative matrix, and
 traverses all fourteen orbits.
 
+The transpose action on these classes is also exact.  Every representative's
+column Gram is signed-permutation-congruent to `G0`, so transposition closes
+on the same fourteen classes.  In the certificate's canonical numbering it
+has four two-cycles
+
+```text
+(1,11), (2,12), (3,7), (4,8)
+```
+
+and fixes classes `5,6,9,10,13,14`.  Thus exactly six of the fourteen
+classes are self-dual under transposition.  This conclusion does not depend
+on an isomorphism black box: `transpose_duality_certificate.json` gives, for
+each class `i`, explicit signed row and column permutations carrying
+`R_i^T` to the stated canonical representative `R_j`.  The independent
+checker reconstructs the fourteen matrices from their masks and verifies
+all fourteen entrywise equalities.
+
 This does **not** determine the maximal determinant in order 23.  Graph-valued
 candidate Gram matrices at distance seven or farther from `G0`, arbitrary
 legal-entry matrices at distance four or farther, and other possible Gram
@@ -267,6 +284,10 @@ g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow -pedantic \
 ./gram_decompositions record23.txt record23_class2.txt \
   > gram_decomposition_result.json
 python3 verify_gram_decompositions.py gram_decomposition_result.json
+python3 transpose_duality.py gram_decomposition_certificate.json \
+  > transpose_duality_result.json
+python3 verify_transpose_duality.py gram_decomposition_certificate.json \
+  transpose_duality_result.json
 ```
 
 The terminal output ends with
@@ -287,6 +308,8 @@ second H-class and signed Gram-center equivalence verified
 the two record matrices are Hadamard-inequivalent
 552960 exact 23-cliques independently enumerated
 14 decomposition orbits cover every clique
+fourteen explicit signed transpose equivalences verified
+self-dual classes: 5, 6, 9, 10, 13, 14
 ```
 
 `enumerate.cpp` performs 172,701,826 evaluations, including the overlapping
@@ -350,6 +373,13 @@ representatives, and orbit traversals.  The deterministic
 `7b94f5918015a250db3619c7e1f2f37a8d31a3e2ad589afe21a99a30a445aa81`.
 A complete address- and undefined-behavior-sanitizer run also emits that
 same byte-identical certificate without a diagnostic.
+
+The transpose-certificate producer takes about 18 seconds, dominated by
+reconstructing the normalized sign-column set and its automorphism action;
+the definition-level checker takes under one second.  Repeated producer runs
+emit byte-identical JSON.  The SHA-256 of
+`transpose_duality_certificate.json` is
+`12284e4fc6c0f06ab54615b56574b99070177772fcb620544280f97ab462fa16`.
 
 An optional SAT experiment can be regenerated with
 `python3 candidate_sat_certificates.py /tmp/order23-sat`.  At official-source
@@ -423,3 +453,9 @@ exact clique recursion.  The C++ and Python implementations use different
 bit-set representations and independently obtain the same graph, node, and
 clique counts.  Orbit representatives are expanded again by the Python
 checker; their disjoint sizes sum to the full independent clique count.
+The transpose extension depends on the exhaustive fourteen-class result,
+then reduces its new content to fourteen displayed finite identities.  For
+each canonical representative, the compact certificate records two
+permutations and two sign vectors whose direct application carries the
+transpose to another canonical representative.  The independent checker
+does not import the producer and verifies every entry of every identity.

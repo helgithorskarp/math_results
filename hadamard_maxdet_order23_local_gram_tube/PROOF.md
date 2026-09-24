@@ -790,3 +790,59 @@ This proves exactly fourteen H-classes among the sign decompositions of the
 specified published Gram `G0`.  It does not prove that every order-23 matrix
 at the record determinant has a Gram signed-permutation-equivalent to `G0`,
 nor does it determine `D(23)`.
+
+## 15. Transpose duality of all fourteen classes
+
+Let `R_i`, for `1<=i<=14`, be the canonical representative reconstructed
+from class `i` in `gram_decomposition_certificate.json`.  For every `i`, the
+new certificate gives permutations `p_i,q_i` of `{0,...,22}` and sign
+vectors `d_i,e_i` such that, entrywise,
+
+\[
+(R_{\tau(i)})_{p_i(a),q_i(b)}
+   =d_i(a)e_i(b)(R_i^T)_{a,b}.
+\tag{30}
+\]
+
+These are ordinary signed row and column operations, so (30) is an explicit
+Hadamard equivalence rather than an invariant-based identification.  Direct
+integer checking gives
+
+\[
+\tau=(1\ 11)(2\ 12)(3\ 7)(4\ 8),
+\tag{31}
+\]
+
+with `5,6,9,10,13,14` fixed.  Equation (31) is an involution, as it must be
+because transposing twice returns the original matrix.  Section 14 proves
+that the fourteen representatives are exhaustive and mutually
+H-inequivalent among decompositions of `G0`; hence (31) is the complete
+transpose action on those classes, and its six fixed points are exactly the
+self-dual classes.
+
+There is also a Gram consequence.  Write (30) as
+`R_tau(i)=A_i R_i^T B_i` for signed permutation matrices `A_i,B_i`.
+Since every representative has row Gram `G0`,
+
+\[
+G_0=R_{\tau(i)}R_{\tau(i)}^T
+   =A_i(R_i^T R_i)A_i^T.
+\tag{32}
+\]
+
+Thus the column Gram of every one of the fourteen representatives is
+signed-permutation-congruent to `G0`.  In particular, both the row and column
+versions of the radius-six local theorem apply throughout this complete
+fixed-center family.
+
+The producer obtains (30) constructively.  It switches signs in `R_i^T R_i`
+so every magnitude-three entry is positive and every magnitude-one entry is
+negative.  The magnitude-three graph always has components of orders
+`15,4,4` and the degree structure from Section 5, yielding an explicit
+permutation to `G0`.  It then traverses the thirteen known generators of
+`Aut(G0)` until the normalized columns equal a canonical representative and
+extracts the final column signs and order.  None of that search logic is
+trusted by the new conclusion: `verify_transpose_duality.py` independently
+reconstructs the input and target matrices from their masks, checks that all
+reported maps and signs have the required types, and verifies all
+`14*23^2` entries of (30) directly.
