@@ -201,3 +201,32 @@ not mathematical evidence for novelty.
 These are scope and assurance limits, not defects in the stated theorem.
 Within its stated range, the result is mathematically sound and ready for
 circulation with the existing qualifications preserved.
+
+## Strengthening and improvement opportunities
+
+1. **Expose the closed special-function structure.**  The finite coefficient
+   array strongly suggests identifying `Q_N` as a classical hypergeometric or
+   orthogonal polynomial.  Such an identity would replace the algorithmic
+   all-orders construction by a differential equation and explicit
+   recurrences for every `Psi_j`.  The later, unreviewed commit `2ac7ecac`
+   now claims precisely a Legendre-polynomial realization; because it changed
+   both proof and checker after the reviewed snapshot, it requires its own
+   audit before being treated as established review evidence.
+2. **Classify successive mixed-tail chambers.**  When the excess slack lies
+   between `2r` and `2(r+1)`, at most `r` opposite-tail coordinates can occur.
+   A finite signed-stratum or inclusion--exclusion calculation should yield a
+   piecewise polynomial/hypergeometric hierarchy.  Making this rigorous would
+   extend the exact theorem past its essential first threshold and connect it
+   to the full affine-section formula.
+3. **Develop uniform transition asymptotics.**  The present expansion fixes
+   `z` in a compact set.  Uniform estimates for growing `z=z_N`, with explicit
+   error terms through the onset of the next tail chamber, would identify the
+   overlap with interior large-deviation asymptotics.  This likely requires a
+   uniform special-function or saddle-point analysis, not merely termwise
+   Taylor expansion.
+4. **Separate the coordinate-symmetric phenomenon from the chosen normal.**
+   For a general affine normal, the inactive-simplex cancellation loses its
+   exact symmetry.  Determining which weighted normals retain an
+   offset-independent boundary polynomial would turn the present identity
+   into a classification theorem.  This is a conjectural direction; no such
+   extension is proved by the current argument.
