@@ -22,7 +22,7 @@ This artifact proves the following finite local classification.
 >    off-diagonal positions, then `det(M)` cannot be a square at least `L^2`
 >    unless `M=G0`.
 > 2. If every off-diagonal entry belongs to `{-1,3}` and `M` differs from
->    `G0` in at most four positions, then `det(M)` cannot be a square at
+>    `G0` in at most five positions, then `det(M)` cannot be a square at
 >    least `L^2` unless `M` is permutation-congruent to `G0`.  More
 >    precisely, the equality cases are `G0` and twelve labeled copies at
 >    distance four.
@@ -44,7 +44,7 @@ tests all matrices in the stated discrete neighborhoods, whether or not they
 are positive definite.  A parity-normalized Gram matrix of a nonsingular
 order-23 sign matrix satisfies the entry conditions in part 1, so the lemma
 excludes every record-beating sign decomposition in these neighborhoods and
-classifies graph-valued record equality through distance four.
+classifies graph-valued record equality through distance five.
 
 The artifact also determines the complete row-permutation symmetry of `G0`:
 
@@ -59,12 +59,12 @@ form one orbit.  The two 24-element orbits immediately below the record have
 the same determinant but are not related by an automorphism of `G0`.
 
 This does **not** determine the maximal determinant in order 23.  Candidate
-Gram matrices farther from `G0`, including other graph-Gram matrices and
-matrices containing larger inner products, remain untreated.
+Gram matrices at distance six or farther from `G0`, including graph-Gram
+matrices and matrices containing larger inner products, remain untreated.
 
 ## Exact census
 
-The four nonoverlapping searches cover 172,552,831 edited matrices:
+The five nonoverlapping searches cover 8,473,982,506 labeled edited matrices:
 
 | neighborhood | matrices | square-determinant survivors | largest square root |
 |---|---:|---:|---:|
@@ -72,6 +72,7 @@ The four nonoverlapping searches cover 172,552,831 edited matrices:
 | exactly two arbitrary legal edits | 3,187,800 | 756 | 2,743,271,424,000,000 |
 | exactly three `-1`/`3` toggles | 2,667,126 | 24 | 2,740,715,520,000,000 |
 | exactly four `-1`/`3` toggles | 166,695,375 | 372 | 2,779,447,296,000,000 |
+| exactly five `-1`/`3` toggles | 8,301,429,675 | 14,784 | 2,743,153,459,200,000 |
 
 All 1,152 survivors are evaluated by direct exact integer determinants.
 Their complete determinant/multiplicity census is in `certificate.json`.
@@ -83,6 +84,13 @@ other survivor is strictly below `L`, with largest root
 As a retained directional control, the enumerator also checks the 148,995
 ways to delete four existing `3`-edges.  This overlaps the radius-four
 search and has no modular survivors.
+
+The radius-five row is proved by testing one representative of every
+automorphism orbit.  Exactly 27 of the 4,132,509 representatives have square
+determinant.  Their orbit sizes sum to 14,784, their determinants are all
+distinct, and their largest square root is
+`2,743,153,459,200,000`, about 1.306% below `L`.  The complete exact list is
+in `radius5_certificate.json`.
 
 ## Exact symmetry quotient
 
@@ -100,12 +108,11 @@ following exact orbit counts:
 | 5 | 8,301,429,675 | 4,132,509 |
 | 6 | 343,125,759,900 | 81,094,402 |
 
-The machine-readable certificate continues the exact Burnside count through
-12 toggles.  In particular, a radius-five graph-valued search needs at most
-4,132,509 determinant tests once one representative of each orbit is
-generated, rather than 8.3 billion labeled tests.  This artifact proves the
-orbit count; it does not yet implement the canonical representative
-generator or make a radius-five determinant claim.
+The machine-readable symmetry certificate continues the exact Burnside count
+through 12 toggles.  `radius5.cpp` independently generates the 4,132,509
+radius-five representatives by colored connected-component decomposition and
+tests all of them.  Its counts for every radius from zero through five agree
+with the Burnside calculation.
 
 ## Reproduction
 
@@ -117,6 +124,10 @@ g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow -pedantic \
 ./enumerate record23.txt > result.json
 python3 verify.py result.json
 python3 symmetry.py result.json
+g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow -pedantic \
+  radius5.cpp -o radius5
+./radius5 record23.txt > radius5_result.json
+python3 verify_radius5.py radius5_result.json
 ```
 
 The terminal output ends with
@@ -125,6 +136,8 @@ The terminal output ends with
 modular local Gram classification verified
 exact local Gram classification certificate verified
 exact Gram-graph symmetry and orbit certificate verified
+radius-five canonical orbit enumeration and modular sieve verified
+exact radius-five symmetry-quotient certificate verified
 ```
 
 `enumerate.cpp` performs 172,701,826 evaluations, including the overlapping
@@ -144,6 +157,13 @@ The symmetry checker takes under one second after `result.json` exists.  It
 independently constructs the two automorphism factors, verifies their
 generator closures, computes their induced cycle types and Burnside
 coefficients with exact integers, and traverses the six survivor orbits.
+The radius-five C++ generator and sieve take about 25 seconds on one core and
+use about 259 MiB peak resident memory.
+The Python checker independently evaluates all 27 surviving determinants by
+Bareiss elimination and traverses their 13-generator orbits in under one
+second.  A full `-fsanitize=address,undefined` run produced byte-identical
+JSON without a diagnostic.  The deterministic `radius5_result.json` SHA-256
+is `ac9e23d4fe04fda81012cd736c77c610956858635a45912a65497a8a21457efc`.
 
 ## Known frontier and sources
 
@@ -179,4 +199,8 @@ for the permutation description of every record-equality survivor.
 The symmetry extension additionally trusts Burnside's lemma and the
 elementary component-based proof of the displayed automorphism group.  Its
 Python checker performs only exact permutation and integer arithmetic.  The
-radius-five number is an orbit count, not a completed determinant search.
+radius-five generator additionally trusts the completeness of the colored
+connected-component canonicalization proved in `PROOF.md`.  Its independently
+predicted class count agrees at every radius through five with Burnside's
+lemma.  All arithmetic is exact; no positivity assumption or floating-point
+filter is used.

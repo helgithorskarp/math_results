@@ -156,8 +156,8 @@ The Python checker constructs the edit set of every transposition in (6)
 directly from `G0` and verifies that these are exactly the twelve survivors
 with root `L`.  Hence every graph-valued square determinant at least `L^2`
 through distance four is permutation-congruent to `G0`.  Together with the
-arbitrary-entry searches at distances one and two, this proves the lemma in
-`README.md`.
+arbitrary-entry searches at distances one and two, this proves the
+radius-four portion of the lemma in `README.md`.
 
 ## 5. The full permutation automorphism group
 
@@ -237,10 +237,8 @@ N_4=197931,\qquad N_5=4132509,\qquad N_6=81094402.
 
 Because simultaneous row/column permutation preserves the determinant, one
 determinant evaluation per edit-set orbit is sufficient.  Equation (13)
-therefore reduces the prospective radius-five search from
+therefore reduces the radius-five search from
 `binom(253,5)=8,301,429,675` labeled sets to 4,132,509 symmetry classes.
-The present certificate counts those classes but does not enumerate their
-canonical representatives.
 
 Finally, `symmetry.py` applies its 13 generators directly to the 372
 distance-four survivors emitted by `enumerate.cpp`.  They split into six
@@ -258,3 +256,85 @@ orbits:
 The orbit sizes sum to 372.  In particular, the record-equality shell is one
 orbit, while equality of determinant does not merge the two distinct
 24-element orbits at the next determinant value.
+
+## 7. Canonical generation at radius five
+
+The Burnside calculation predicts the number of orbits but does not produce
+representatives.  `radius5.cpp` uses a different, constructive quotient.
+View a five-toggle set as a simple graph `H` with five edges, omitting its
+isolated vertices.  Each connected component with `e` edges has at most
+`e+1` vertices.  Exhausting all simple graphs on at most six vertices and
+canonicalizing under the full symmetric group gives the following numbers
+of connected unlabeled shapes:
+
+| edges | 1 | 2 | 3 | 4 | 5 |
+|---:|---:|---:|---:|---:|---:|
+| connected shapes | 1 | 1 | 3 | 5 | 12 |
+
+Thus there are only 22 connected shapes relevant through radius five.  This
+small shape census is generated at runtime rather than stored as an input.
+
+The component structure in Section 5 divides the 23 vertices into 11 bins:
+
+\[
+(C_c,I_c,A_c)\quad(c=0,1,2),\qquad K_0,K_1,
+\tag{14}
+\]
+
+with capacities `(1,2,2)` for each indexed triple and capacities `(4,4)`
+for the two `K4` bins.  The normal subgroup
+
+\[
+N=C_2^6\times S_4^2
+\tag{15}
+\]
+
+acts as the complete symmetric group within every bin.  Consequently,
+`N`-orbits of edit graphs are exactly isomorphism classes of graphs whose
+vertices carry the 11 bin colors, subject to the capacities in (14).
+
+For each of the 22 connected shapes, the generator exhausts all valid color
+assignments and takes the lexicographically least assignment under the exact
+automorphism group of that shape.  It then takes all multisets of colored
+connected components whose edge counts form an integer partition of `k` and
+whose combined occupancies respect (14).  The uniqueness of connected
+components and the nondecreasing order imposed on repeated component types
+give exactly one representative of every `N`-orbit.
+
+The quotient `Aut(G0)/N` is `S3 x C2`: `S3` permutes the three indexed
+triples in (14), while `C2` swaps `K0` and `K1`.  Keeping the least of the 12
+images therefore gives exactly one representative of every full
+`Aut(G0)`-orbit.  This proves both coverage and absence of duplicates in the
+canonical generator.  The intermediate and final counts are
+
+| `k` | internally colored graphs | full symmetry classes |
+|---:|---:|---:|
+| 0 | 1 | 1 |
+| 1 | 63 | 16 |
+| 2 | 2,445 | 380 |
+| 3 | 73,707 | 8,887 |
+| 4 | 1,886,683 | 197,931 |
+| 5 | 42,883,999 | 4,132,509 |
+
+The last column agrees entry-for-entry with the independent cycle-index and
+Burnside computation in Section 6.
+
+For each of the 4,132,509 radius-five representatives, `radius5.cpp`
+reconstructs a labeled edit set and applies the low-rank exact modular test
+of Section 2.  Its edge-index convention is
+`index(i,j)=i(i-1)/2+j` for `0 <= j < i < 23`.  The first nonresidue
+witnesses account for 4,132,482 classes,
+leaving 27 representatives.  `verify_radius5.py` evaluates all 27 determinants
+directly by fraction-free Bareiss elimination.  Every survivor is a square,
+but the largest square root is only
+
+\[
+2743153459200000 < L=2779447296000000.
+\tag{16}
+\]
+
+The same checker independently traverses each survivor orbit using the 13
+generators from Section 5.  The 27 orbit sizes sum to 14,784 labeled edit
+sets.  Hence no graph-valued Gram matrix at distance five has square
+determinant at least `L^2`.  Combined with Section 4, this proves the
+graph-valued assertion in `README.md` through distance five.
