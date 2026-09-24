@@ -1,0 +1,26 @@
+{
+  "date_utc": "2026-09-24",
+  "scope": "Author exact-arithmetic audit; not independent mathematical review",
+  "runs": [
+    {
+      "interpreter": "Python 3.11.2 -O",
+      "exit_code": 0,
+      "wall_seconds": 15.715,
+      "peak_kib": 21760,
+      "stdout": "{\"fixtures\": 11, \"graph_instances\": 135619, \"sha256\": \"b30063d70d13873b42862c9f2dc1973a212352a157874e4eb26eb6245b59bc30\", \"status\": \"PASS\"}\n",
+      "stderr": ""
+    },
+    {
+      "interpreter": "Python 3.12.14",
+      "exit_code": 0,
+      "wall_seconds": 14.078,
+      "peak_kib": 18160,
+      "stdout": "{\"fixtures\": 11, \"graph_instances\": 135619, \"sha256\": \"b30063d70d13873b42862c9f2dc1973a212352a157874e4eb26eb6245b59bc30\", \"status\": \"PASS\"}\n",
+      "stderr": ""
+    }
+  ],
+  "parallel_run_note": "The two final interpreter checks ran concurrently; wall times include shared-host load.",
+  "initial_generation": "Python 3.11.2 ordinary mode also passed before these final checks.",
+  "new_dependencies": "Python standard library only",
+  "inherited_computation": "The accepted 18-vertex theorem and its independent review retain their own certificate and topology boundaries."
+}
