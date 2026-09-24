@@ -1,0 +1,111 @@
+{
+  "computer_algebra": "SymPy 1.13.3 over QQ with lexicographic subresultants",
+  "pair_factor_table_sha256": "7819174c61617018f4b6dc5c1eba84bba53ed95fdea5793f17280aee09882a12",
+  "pair_label_patterns_checked": 16,
+  "pair_third_supplier_exceptions": [
+    {
+      "approximation": "0.6144372602732827",
+      "event": "0100:third_tail_y",
+      "isolating_interval": [
+        "614437/1000000",
+        "307219/500000"
+      ],
+      "polynomial": "r**7 - 2*r**6 + 4*r**5 - 6*r**4 + 7*r**3 - 5*r**2 + 3*r - 1"
+    },
+    {
+      "approximation": "0.6477988712610424",
+      "event": "0100:weight_equality_u_1",
+      "isolating_interval": [
+        "323899/500000",
+        "647799/1000000"
+      ],
+      "polynomial": "2*r**3 - 2*r**2 + 2*r - 1"
+    },
+    {
+      "approximation": "0.6823278038280193",
+      "event": "0100:third_tail_xy",
+      "isolating_interval": [
+        "682327/1000000",
+        "85291/125000"
+      ],
+      "polynomial": "r**3 + r - 1"
+    },
+    {
+      "approximation": "0.7361902147685308",
+      "event": "1001:third_tail_empty",
+      "isolating_interval": [
+        "73619/100000",
+        "736191/1000000"
+      ],
+      "polynomial": "r**10 + 2*r**9 + r**8 - 3*r**6 - r**5 + 3*r**4 + r**3 + 3*r**2 - 2*r - 1"
+    }
+  ],
+  "positive_boundary_triple_orbits": 2,
+  "scope": "Together with PROOF.md, the exact elimination classifies every missing positive candidate wall for three distinct active weights.",
+  "sorted_triple_common_zero_orbits": [
+    {
+      "B_approximation": "0.8967192171490265",
+      "B_sign": "positive",
+      "a_approximation": "0.7158859479030005",
+      "a_isolating_interval": [
+        "143177/200000",
+        "715887/1000000"
+      ],
+      "b_approximation": "0.3851074252162481",
+      "b_formula": "a**2*(2*a**4 - a**3 - 7*a**2 - 5*a - 3)/((a + 1)*(2*a**4 + a**3 - 6*a**2 - 5*a - 2))",
+      "eliminant": "4*a**10 - 15*a**8 - 5*a**7 + 15*a**6 + 29*a**5 + 29*a**4 + a**3 - 11*a**2 - 9*a - 2",
+      "pattern": "120"
+    },
+    {
+      "B_approximation": "3.351254367605204",
+      "B_sign": "positive",
+      "a_approximation": "0.8670933734627566",
+      "a_isolating_interval": [
+        "867093/1000000",
+        "433547/500000"
+      ],
+      "b_approximation": "0.5430223000666330",
+      "b_formula": "-a*(a - 1)*(a + 2)*(a**3 + 2*a**2 + a - 1)/(a**5 + 2*a**4 + 3*a**3 + 3*a**2 - 3*a - 2)",
+      "eliminant": "3*a**9 + 7*a**8 - 3*a**7 - 17*a**6 - 11*a**5 + 13*a**4 + 23*a**3 - a**2 - 8*a - 4",
+      "pattern": "310"
+    },
+    {
+      "B_approximation": "-1.342637470045809",
+      "B_sign": "negative",
+      "a_approximation": "0.7928188324349120",
+      "a_isolating_interval": [
+        "396409/500000",
+        "39641/50000"
+      ],
+      "b_approximation": "0.2930728813448755",
+      "b_formula": "-(a**5 + a**3 - 3*a**2 - 2*a + 2)/(a*(2*a**3 + 2*a**2 + 2*a - 1))",
+      "eliminant": "a**10 - 2*a**9 - 6*a**7 - 6*a**5 + 2*a**4 + 14*a**3 - a**2 - 10*a + 4",
+      "pattern": "312"
+    }
+  ],
+  "status": "Q3_MISSING_WALL_CLASSIFICATION_DERIVED",
+  "triple_elimination_table_sha256": "f9901d78ab9b9c23748efbdbc178f4cff011f214b32466e175d0149ed499a6b6",
+  "triple_tail_patterns_checked": 64,
+  "two_label_normal_forms": [
+    {
+      "beta": "2*r**2*(r**2 - r + 1)/((r - 1)**2*(r**2 + 1))",
+      "bits": "0100",
+      "u": "-r*(r**2 - r + 1)/((r - 1)*(r**2 + 1))"
+    },
+    {
+      "beta": "-2*r**2/(r - 1)",
+      "bits": "1000",
+      "u": "r*(r**4 + r**3 - r + 1)/(r**5 + r**4 - r + 1)"
+    },
+    {
+      "beta": "-2*r*(r + 1)*(r**4 + r**3 - 1)/(r**5 + r**4 - r + 1)",
+      "bits": "1001",
+      "u": "r*(r**2 + 1)*(r**2 + r - 1)/(r**5 + r**4 - r + 1)"
+    },
+    {
+      "beta": "-2*r**2*(r - 1)*(r**3 + 2*r**2 + 2*r + 2)/(r**5 + r**4 - r + 1)",
+      "bits": "1100",
+      "u": "-r*(r**2 + 1)*(r**2 + r - 1)/(r**5 + r**4 - r + 1)"
+    }
+  ]
+}
