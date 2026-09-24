@@ -96,9 +96,13 @@ interpretations, switching, or general design existence.
 ## What is still excluded
 
 The original core cells have sizes at least alpha*n and must be compatible
-with all independent neighborhoods. Arbitrary sublinear clique cells and
-edges between exceptional vertices remain untreated. Deleting those cells
-can cost superlinear mass; the present argument does not justify doing so.
+with all added neighborhoods. A direct edge-deletion corollary allows q
+internal exceptional edges at an additional loss of at most q. Thus O(n)
+such edges, including arbitrary exceptional sets of order O(sqrt(n)), retain
+linear loss. This corollary is proved by fractional edge-capacity accounting,
+not by finite computation. Arbitrary growing clique cells with superlinear
+internal edge count remain untreated by a linear guarantee. Deleting the
+vertices themselves can cost much more; the proof does not justify doing so.
 No unrestricted bounded-type O(N) theorem, all-split-graph result, solution
 of Tuza's conjecture, effective universal threshold, proof-assistant
 formalization, or independent acceptance is claimed.

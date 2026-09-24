@@ -30,8 +30,8 @@ large-core threshold remain existential, because of the dense design input.
 Finite small core orders are included by enlarging K, not by asserting that
 the asymptotic construction already works at those orders.
 
-The comparable-core condition remains. Small clique classes or edges within
-the exceptional set are outside this theorem; it is not an unrestricted
+The comparable-core condition remains. Section 6.1 permits linearly many
+edges within the exceptional set as a direct corollary. This is not an unrestricted
 O_d(N) result for every bounded-type graph and does not resolve Tuza's
 conjecture. Even complete cores already require linear error order by the
 standard parity obstruction.
@@ -337,8 +337,33 @@ not change either optimum by section 5.
 
 This proves Theorem 1 with existential K(d,r,alpha). It covers small
 independent classes at all scales, including multiple incomparable growing
-scales. It does not cover small clique classes or edges within the exceptional
-set, and it is not a complete bounded-neighborhood-diversity result.
+scales. It is not a complete bounded-neighborhood-diversity result.
+
+## 6.1. A sparse graph on the exceptional vertices
+
+**Corollary 3.** Keep the comparable core H of order n and at most r
+neighborhood types into its classes, but allow an arbitrary graph on the
+added set X. Put q=|E(G[X])|. With the same constant as Theorem 1,
+
+    nu*(G)-nu(G) <= K(d,r,alpha)*n + q.                  (3)
+
+In particular, the loss is linear in n whenever q<=beta*n for a fixed beta.
+The vertices of X need not be twins in the full graph; only their
+neighborhoods into H have at most r types. This includes arbitrary induced
+graphs on at most C*sqrt(n) exceptional vertices, for fixed C, since then
+q<=C^2*n/2.
+
+To prove this, delete the q internal X edges, obtaining G_0 to which
+Theorem 1 applies. From any fractional packing of G discard triangles using
+one of those edges. Their total weight is at most q, by summing the unit
+fractional capacities of the deleted edges; repeated counting only increases
+that upper bound. Thus nu*(G)<=nu*(G_0)+q, while nu(G)>=nu(G_0).
+The displayed inequality follows. This is a direct edge-deletion corollary,
+not another design-existence input or a finite-test inference.
+
+When the exceptional induced graph has superlinear edge count, (3) does
+not give linear loss. In particular, growing clique cells larger than the
+square-root scale remain a substantive excluded boundary.
 
 ## 7. Exact evidence and limits
 

@@ -20,9 +20,12 @@ The constant `K` is existential. The proof has an asymptotic construction
 and includes all smaller core orders by enlarging the constant; it does not
 supply a practical universal starting order. See [PROOF.md](PROOF.md).
 
-The core classes must remain comparable, and the added vertices must form
-one independent set. Small clique classes and edges within the exceptional
-set are excluded. This is not an unrestricted bounded-type theorem, a result
+The core classes must remain comparable. A direct corollary allows an
+arbitrary graph on the added vertices: if it has `q` edges, the loss is at
+most `K*n+q`. Thus `O(n)` internal edges, or `O(sqrt(n))` arbitrary exceptional
+vertices, still give linear loss. Only the neighborhoods into the core need
+at most `r` types. Growing clique cells with superlinear internal edge count
+remain outside the linear guarantee. This is not an unrestricted bounded-type theorem, a result
 for every split graph, or a resolution of Tuza's conjecture.
 
 ## What handles small independent classes
