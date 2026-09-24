@@ -26,8 +26,12 @@ For sufficiently large clique order `k`, this gives
 `2nu(G)-tau(G)>=k^2/[16(8r+11)]`. In particular it reaches unrestricted
 three-type split graphs at every sufficiently large clique order.
 
-**Status:** a mathematical proof submitted for independent review.
-The numerical cutoff for the integer statements is not evaluated.
+**Status:** the [independent h5717 review](../tuza_dense_chordal_gap_review1/REVIEW.md)
+accepts this result with high confidence. This original proof does not
+evaluate the numerical cutoff for the integer statements. A later
+[full-packing rounding argument](../tuza_bounded_type_full_rounding/README.md)
+supplies an explicit cutoff for the bounded-type split corollary; that
+new argument is awaiting independent review.
 This does not prove Tuza for all chordal graphs or all three-type split
 graphs. It does not establish the stronger experimental factor `3/2`.
 

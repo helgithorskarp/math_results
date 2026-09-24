@@ -1,0 +1,324 @@
+{
+  "boundary": "Finite audits do not prove concentration or the universal theorem; see NIBBLE.md and PROOF.md.",
+  "cutoffs": [
+    {
+      "A": 19,
+      "B": "966153703362580141635010560000000000",
+      "C": 800,
+      "K": "510129155375442314783285575680000000000",
+      "d": 3,
+      "digits": 39,
+      "ell": 132,
+      "r": 1
+    },
+    {
+      "A": 27,
+      "B": "4400821247355961833033364930560000000000",
+      "C": 1200,
+      "K": "2534873038477034015827218200002560000000000",
+      "d": 6,
+      "digits": 43,
+      "ell": 144,
+      "r": 2
+    },
+    {
+      "A": 35,
+      "B": "2088856956270560474143129600000000000000000",
+      "C": 1600,
+      "K": "1286735885062665252072167833600000000000000000",
+      "d": 11,
+      "digits": 46,
+      "ell": 154,
+      "r": 3
+    },
+    {
+      "A": 43,
+      "B": "291863011287176839168000000000000000000000000",
+      "C": 2000,
+      "K": "187959779268941884424192000000000000000000000000",
+      "d": 20,
+      "digits": 48,
+      "ell": 161,
+      "r": 4
+    },
+    {
+      "A": 83,
+      "B": "6217906509201609167288978636800000000000000000000000",
+      "C": 4000,
+      "K": "4650994068882803657132156020326400000000000000000000000",
+      "d": 521,
+      "digits": 55,
+      "ell": 187,
+      "r": 9
+    },
+    {
+      "A": 171,
+      "B": "30457315275684060520412562925939543161835764936867840000000000",
+      "C": 8400,
+      "K": "26802437442601973257963055374826797982415473144443699200000000000",
+      "d": 1048596,
+      "digits": 65,
+      "ell": 220,
+      "r": 20
+    }
+  ],
+  "influences": [
+    {
+      "conditional_states": 1,
+      "coordinate_toggles": 0,
+      "name": "empty"
+    },
+    {
+      "conditional_states": 12,
+      "coordinate_toggles": 24,
+      "name": "single"
+    },
+    {
+      "conditional_states": 48,
+      "coordinate_toggles": 160,
+      "name": "unequal_bowtie"
+    },
+    {
+      "conditional_states": 384,
+      "coordinate_toggles": 2304,
+      "name": "graph_K4"
+    },
+    {
+      "conditional_states": 7168,
+      "coordinate_toggles": 71680,
+      "name": "Fano"
+    },
+    {
+      "conditional_states": 320,
+      "coordinate_toggles": 1792,
+      "name": "linear_cycle"
+    }
+  ],
+  "negative_controls": 5,
+  "one_round": [
+    {
+      "abort_probability": "0",
+      "alpha": "1/20",
+      "expected_matching": "0",
+      "expected_next_value": "0",
+      "expected_raw_value": "0",
+      "fractional_value": "0",
+      "hyperedges": 0,
+      "name": "empty",
+      "outcome_sha256": "736b33b46ab1c74dbd4d0278f10429502aab03a184d64b45f777ac465906a269",
+      "outcomes": 2,
+      "vertices": 1
+    },
+    {
+      "abort_probability": "0",
+      "alpha": "1/100",
+      "expected_matching": "0",
+      "expected_next_value": "0",
+      "expected_raw_value": "0",
+      "fractional_value": "0",
+      "hyperedges": 0,
+      "name": "empty",
+      "outcome_sha256": "e2daa3118f43680eefe5c7ddaedfde58f7775ced0734375fb77ea503a8598d39",
+      "outcomes": 2,
+      "vertices": 1
+    },
+    {
+      "abort_probability": "19/20",
+      "alpha": "1/20",
+      "expected_matching": "1/20",
+      "expected_next_value": "0",
+      "expected_raw_value": "8000/7619",
+      "fractional_value": "1",
+      "hyperedges": 1,
+      "name": "single",
+      "outcome_sha256": "7a6d73f46b3a41f72a220138b8f0e6d0da99311ccfa8cd7e975151aa3061960d",
+      "outcomes": 9,
+      "vertices": 3
+    },
+    {
+      "abort_probability": "99/100",
+      "alpha": "1/100",
+      "expected_matching": "1/100",
+      "expected_next_value": "0",
+      "expected_raw_value": "1000000/990099",
+      "fractional_value": "1",
+      "hyperedges": 1,
+      "name": "single",
+      "outcome_sha256": "b746117d6d193d3f54a9cfe9be0f75c333f9ffc58e178da058247519f9252806",
+      "outcomes": 9,
+      "vertices": 3
+    },
+    {
+      "abort_probability": "200564019/234201680",
+      "alpha": "1/20",
+      "expected_matching": "11/225",
+      "expected_next_value": "66006000/1173935921",
+      "expected_raw_value": "1177164000/1173935921",
+      "fractional_value": "1",
+      "hyperedges": 2,
+      "name": "unequal_bowtie",
+      "outcome_sha256": "c7f543fa4ad0760573a038b6407f9c1e5fc6f6d7dc40ff893a83ff46c681bc7f",
+      "outcomes": 41,
+      "vertices": 5
+    },
+    {
+      "abort_probability": "770301940419/793916640400",
+      "alpha": "1/100",
+      "expected_matching": "56/5625",
+      "expected_next_value": "221190750000/19849900801601",
+      "expected_raw_value": "19869745500000/19849900801601",
+      "fractional_value": "1",
+      "hyperedges": 2,
+      "name": "unequal_bowtie",
+      "outcome_sha256": "9b2b1e255150ec48723abdb7a6f0ee083c7072c5cab527d974db3ed17c7d6029",
+      "outcomes": 41,
+      "vertices": 5
+    },
+    {
+      "abort_probability": "4836514654720/5352009260481",
+      "alpha": "1/20",
+      "expected_matching": "59319/640000",
+      "expected_next_value": "5546176000/2146155713452881",
+      "expected_raw_value": "1216000/609921",
+      "fractional_value": "2",
+      "hyperedges": 4,
+      "name": "graph_K4",
+      "outcome_sha256": "1948bd7036c90e330a3e4d14ef7e8420b0e426883b47afeca4875e24c5d7ad94",
+      "outcomes": 113,
+      "vertices": 6
+    },
+    {
+      "abort_probability": "2410554362645721600/2459374191553118401",
+      "alpha": "1/100",
+      "expected_matching": "7880599/400000000",
+      "expected_next_value": "94090392000000/24596201289722737128401",
+      "expected_raw_value": "792000000/396049601",
+      "fractional_value": "2",
+      "hyperedges": 4,
+      "name": "graph_K4",
+      "outcome_sha256": "ef5c1308e82692230a99d457f81cfaf958a918f2bac38b2a98adae987072d19c",
+      "outcomes": 113,
+      "vertices": 6
+    },
+    {
+      "abort_probability": "5472461846544756480000000/6193386212891813387462761",
+      "alpha": "1/20",
+      "expected_matching": "295263735487/2799360000000",
+      "expected_next_value": "19773165363961232284152000/2483547871369617168372567161",
+      "expected_raw_value": "3192000/1395881",
+      "fractional_value": "7/3",
+      "hyperedges": 7,
+      "name": "Fano",
+      "outcome_sha256": "6354bfd230e2074603731287cac75f7a6a8a707328dae2980583f0955337c79c",
+      "outcomes": 458,
+      "vertices": 7
+    },
+    {
+      "abort_probability": "44580396650133480533100000000000000/45645359987515812435930238280185801",
+      "alpha": "1/100",
+      "expected_matching": "5001786729437407/218700000000000000",
+      "expected_next_value": "142788410228651647173581777679000000/456499245235145640171738313040138195801",
+      "expected_raw_value": "2079000000/894099401",
+      "fractional_value": "7/3",
+      "hyperedges": 7,
+      "name": "Fano",
+      "outcome_sha256": "8594a4c75c97c56bda4fa714ec96be19f80f672f79d94ce69e47d06dc3802ab0",
+      "outcomes": 458,
+      "vertices": 7
+    },
+    {
+      "abort_probability": "24147749417264/26760046302405",
+      "alpha": "1/20",
+      "expected_matching": "1521/16000",
+      "expected_next_value": "2816702272000/55029633678279",
+      "expected_raw_value": "1216000/609921",
+      "fractional_value": "2",
+      "hyperedges": 4,
+      "name": "linear_cycle",
+      "outcome_sha256": "bf54834c759e69524c14f1991c3547db0be3361ddc6b2b121b37ccc919ce51d2",
+      "outcomes": 433,
+      "vertices": 8
+    },
+    {
+      "abort_probability": "60260755186778574384/61484354788827960025",
+      "alpha": "1/100",
+      "expected_matching": "39601/2000000",
+      "expected_next_value": "1242107703144000000/123599001455893151399",
+      "expected_raw_value": "792000000/396049601",
+      "fractional_value": "2",
+      "hyperedges": 4,
+      "name": "linear_cycle",
+      "outcome_sha256": "a1786e126e46a578a0acf8a566ecc4735351d7fd2d8dfbfe069fbecb9b12f421",
+      "outcomes": 433,
+      "vertices": 8
+    }
+  ],
+  "parameters": [
+    {
+      "alpha": "1/20",
+      "epsilon": "1/2",
+      "eta": "1/400",
+      "rounds": 28
+    },
+    {
+      "alpha": "1/50",
+      "epsilon": "1/5",
+      "eta": "1/2500",
+      "rounds": 114
+    },
+    {
+      "alpha": "1/100",
+      "epsilon": "1/10",
+      "eta": "1/10000",
+      "rounds": 299
+    },
+    {
+      "alpha": "1/200",
+      "epsilon": "1/20",
+      "eta": "1/40000",
+      "rounds": 736
+    }
+  ],
+  "status": "all exact finite audits passed",
+  "symmetry": [
+    {
+      "deletion_checks": 3,
+      "graph_edges": 36,
+      "permutations": 216,
+      "seed_packing": 8,
+      "sizes": [
+        3,
+        3,
+        3
+      ],
+      "triangles": 84,
+      "vertices": 9
+    },
+    {
+      "deletion_checks": 3,
+      "graph_edges": 27,
+      "permutations": 216,
+      "seed_packing": 7,
+      "sizes": [
+        3,
+        3,
+        3
+      ],
+      "triangles": 27,
+      "vertices": 9
+    },
+    {
+      "deletion_checks": 4,
+      "graph_edges": 30,
+      "permutations": 288,
+      "seed_packing": 6,
+      "sizes": [
+        2,
+        3,
+        4
+      ],
+      "triangles": 50,
+      "vertices": 9
+    }
+  ]
+}
