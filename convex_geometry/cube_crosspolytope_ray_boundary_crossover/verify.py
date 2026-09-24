@@ -1,4 +1,4 @@
-"""Exact checks for ray-boundary universality and its Bessel crossover."""
+"""Exact checks for the ray-boundary Legendre law and Bessel bounds."""
 
 from decimal import Decimal as D, getcontext
 from fractions import Fraction as F
@@ -9,7 +9,6 @@ from pathlib import Path
 
 
 getcontext().prec = 80
-ONE = D(1)
 
 
 def require(condition, message):
@@ -24,8 +23,15 @@ def falling(value, length):
     return answer
 
 
-def universal_ratio(size, z):
-    """The polynomial Q_N(z), evaluated exactly for rational z."""
+def rising(value, length):
+    answer = 1
+    for offset in range(length):
+        answer *= value + offset
+    return answer
+
+
+def simplex_ratio(size, z):
+    """The pre-collapse simplex-integral formula, in exact arithmetic."""
     z = F(z)
     answer = F(1)
     for inactive in range(1, size):
@@ -43,6 +49,70 @@ def universal_ratio(size, z):
     return answer
 
 
+def simplex_coefficient(size, degree):
+    """Coefficient extracted directly from the nested sum above."""
+    if degree == 0:
+        return F(1)
+    return sum(
+        F(
+            falling(size, inactive) * falling(size - 1, inactive),
+            factorial(inactive)
+            * size ** (2 * inactive)
+            * factorial(inactive - 1),
+        )
+        * F(comb(size - inactive - 1, degree - inactive),
+            size ** (2 * (degree - inactive)) * degree)
+        for inactive in range(1, degree + 1)
+    )
+
+
+def legendre_coefficients(size):
+    """Coefficients of 2F1(1-N,N;1;-z/N^2)."""
+    return [
+        F(
+            falling(size - 1, degree) * rising(size, degree),
+            factorial(degree) ** 2 * size ** (2 * degree),
+        )
+        for degree in range(size)
+    ]
+
+
+def evaluate(coefficients, value):
+    value = F(value)
+    answer = F(0)
+    for coefficient in reversed(coefficients):
+        answer = answer * value + coefficient
+    return answer
+
+
+def legendre_value(degree, value):
+    """Three-term Legendre recurrence, evaluated exactly."""
+    value = F(value)
+    previous = F(1)
+    if degree == 0:
+        return previous
+    current = value
+    for order in range(1, degree):
+        previous, current = (
+            current,
+            F(2 * order + 1, order + 1) * value * current
+            - F(order, order + 1) * previous,
+        )
+    return current
+
+
+def check_differential_equation(size, coefficients):
+    """Check the transformed Legendre ODE coefficient by coefficient."""
+    extended = coefficients + [F(0)]
+    for degree in range(size):
+        residual = (
+            (degree + 1) ** 2 * extended[degree + 1]
+            + F(degree * (degree + 1), size ** 2) * extended[degree]
+            - F(size - 1, size) * extended[degree]
+        )
+        require(residual == 0, "transformed Legendre differential equation")
+
+
 def load_exact_section():
     path = (Path(__file__).resolve().parent.parent
             / "affine_cube_crosspolytope_sections" / "exact_section.py")
@@ -58,8 +128,8 @@ def affine_ratio(module, size, theta, z):
     """Ratio from the independent all-strata affine section engine."""
     theta, z = F(theta), F(z)
     margin = abs(theta) - 1
-    require(margin > 0 and margin * z / size < 2,
-            "parameters outside the one-ray gap")
+    require(margin > 0 and margin * z / size <= 2,
+            "parameters outside the first ray segment")
     boundary_radius = margin * size
     radius = boundary_radius + margin * z / size
     boundary = module.section(size, boundary_radius, theta * size)
@@ -73,26 +143,26 @@ def as_decimal(value):
 
 
 def bessel_data(z):
-    """Phi and Psi from their independent entire series."""
+    """F, KF, (K^3-K)F, Psi_1, and Psi_2 from entire series."""
     z = D(z)
     phi = D(0)
-    psi_closed = D(0)
-    psi_strata = D(0)
+    k_phi = D(0)
+    k3_minus_k = D(0)
+    psi2_direct = D(0)
     for order in range(300):
         weight = z ** order / D(factorial(order) ** 2)
         phi += weight
-        if order:
-            psi_closed -= (
-                z ** order
-                / D(factorial(order - 1) * factorial(order))
-            )
-        psi_strata += weight * (
-            -D(order ** 2) + D(order) * z / D(order + 1)
+        k_phi += D(order) * weight
+        k3_minus_k += D(order ** 3 - order) * weight
+        psi2_direct -= (
+            D(order * (order - 1) * (2 * order - 1)) * weight / D(6)
         )
         if order > 50 and abs(weight) < D("1e-90"):
-            require(abs(psi_closed - psi_strata) < D("1e-72"),
-                    "closed and stratum first corrections")
-            return phi, psi_closed
+            psi1 = -k_phi
+            psi2_closed = (z * phi - (D(2) * z + D(1)) * k_phi) / D(6)
+            require(abs(psi2_direct - psi2_closed) < D("1e-72"),
+                    "direct and closed second corrections")
+            return phi, k_phi, k3_minus_k, psi1, psi2_closed
     raise ArithmeticError("Bessel series did not terminate")
 
 
@@ -103,8 +173,18 @@ def text(value, digits=18):
 def main():
     exact = load_exact_section()
 
-    # These cases contain distinct offsets with z=1, a reflected offset,
-    # and two further z values.  Equality is exact, not a tolerance check.
+    coefficient_checks = 0
+    ode_checks = 0
+    for size in range(2, 17):
+        coefficients = legendre_coefficients(size)
+        for degree, coefficient in enumerate(coefficients):
+            require(simplex_coefficient(size, degree) == coefficient,
+                    "Vandermonde coefficient collapse")
+            coefficient_checks += 1
+        check_differential_equation(size, coefficients)
+        ode_checks += 1
+
+    # Distinct offsets, reflection, and several scaled radii.
     exact_parameters = (
         (F(2), F(1)),
         (F(3), F(1)),
@@ -112,15 +192,34 @@ def main():
         (F(3, 2), F(2)),
         (F(2), F(4)),
     )
-    exact_check_count = 0
+    exact_checks = 0
     for size in (3, 4, 6, 8):
         for theta, z in exact_parameters:
-            direct = affine_ratio(exact, size, theta, z)
-            universal = universal_ratio(size, z)
-            require(direct == universal, "finite-N universality identity")
-            exact_check_count += 1
+            coefficients = legendre_coefficients(size)
+            hypergeometric = evaluate(coefficients, z)
+            legendre = legendre_value(
+                size - 1, F(1) + F(2) * z / size ** 2
+            )
+            require(simplex_ratio(size, z) == hypergeometric == legendre,
+                    "simplex, hypergeometric, and Legendre identity")
+            require(affine_ratio(exact, size, theta, z) == legendre,
+                    "affine section and Legendre identity")
+            exact_checks += 1
 
-    require(universal_ratio(8, 0) == 1, "zero-thickness identity")
+    endpoint_checks = 0
+    for size in (3, 4, 6, 8):
+        for theta in (F(3, 2), F(2), F(3), F(-2)):
+            margin = abs(theta) - 1
+            z = F(2 * size, margin)
+            expected = legendre_value(
+                size - 1, F(1) + F(2) * z / size ** 2
+            )
+            require(affine_ratio(exact, size, theta, z) == expected,
+                    "closed first-segment endpoint")
+            endpoint_checks += 1
+
+    require(evaluate(legendre_coefficients(8), 0) == 1,
+            "zero-thickness identity")
     require(
         affine_ratio(exact, 8, F(2), F(1))
         == affine_ratio(exact, 8, F(3), F(1))
@@ -128,57 +227,80 @@ def main():
         "offset and reflection collapse",
     )
 
-    # Beyond slack two a minus-tail stratum enters; the one-ray polynomial
-    # must no longer be mistaken for the full section.
+    # Just beyond total slack two, a minus-tail stratum has positive measure.
     outside_size, outside_z = 3, F(7)
     outside_boundary = exact.section(outside_size, 3, 6)
-    outside_ratio = (
-        exact.section(outside_size, F(16, 3), 6) / outside_boundary
-    )
-    require(outside_ratio != universal_ratio(outside_size, outside_z),
-            "opposite-tail threshold negative control")
+    outside_ratio = exact.section(outside_size, F(16, 3), 6) / outside_boundary
+    require(outside_ratio != evaluate(
+        legendre_coefficients(outside_size), outside_z
+    ), "opposite-tail threshold negative control")
 
+    monotonicity_checks = 0
+    for size in range(2, 24):
+        current = legendre_coefficients(size)
+        following = legendre_coefficients(size + 1)
+        for degree in range(size):
+            require(current[degree] <= following[degree],
+                    "coefficientwise dimension monotonicity")
+            monotonicity_checks += 1
+        require(following[size] > 0, "new positive terminal coefficient")
+
+    bound_checks = 0
     asymptotic_samples = []
     for z in (1, 2, 4):
-        phi, psi = bessel_data(z)
+        phi, k_phi, k3_minus_k, psi1, psi2 = bessel_data(z)
         rows = []
-        for size in (4, 8, 16, 32, 64):
-            ratio = as_decimal(universal_ratio(size, F(z)))
-            scaled = D(size) * (ratio - phi)
+        previous = F(0)
+        for size in (8, 16, 32, 64, 128):
+            ratio_exact = evaluate(legendre_coefficients(size), F(z))
+            require(ratio_exact > previous, "strict numerical monotonicity")
+            previous = ratio_exact
+            ratio = as_decimal(ratio_exact)
+            upper = bessel_data(D(z) * D(size - 1) / D(size))[0]
+            lower = (
+                phi - k_phi / D(size)
+                - k3_minus_k / (D(3) * D(size ** 2))
+            )
+            require(lower <= ratio <= upper <= phi,
+                    "finite-N global Bessel bounds")
+            bound_checks += 1
+            scaled = D(size ** 2) * (
+                ratio - phi - psi1 / D(size)
+            )
             rows.append({
                 "N": size,
                 "Q_N": text(ratio),
-                "N_times_leading_residual": text(scaled),
-                "first_correction_residual": text(scaled - psi),
+                "N2_times_two_term_residual": text(scaled),
+                "second_correction_residual": text(scaled - psi2),
             })
-        require(abs(D(rows[-1]["Q_N"]) - phi)
-                < abs(D(rows[0]["Q_N"]) - phi),
-                "Bessel leading convergence")
-        require(abs(D(rows[-1]["first_correction_residual"])) < D("0.4"),
-                "first-correction corroboration outside tolerance")
+        require(abs(D(rows[-1]["second_correction_residual"]))
+                < abs(D(rows[0]["second_correction_residual"])),
+                "second-correction convergence")
         asymptotic_samples.append({
             "z": z,
             "Phi_I0": text(phi),
-            "Psi_minus_sqrt_z_I1": text(psi),
-            "finite_universal_polynomials": rows,
+            "Psi1_minus_sqrt_z_I1": text(psi1),
+            "Psi2": text(psi2),
+            "finite_legendre_polynomials": rows,
         })
 
     output = {
-        "status": "RAY_BOUNDARY_UNIVERSALITY_VERIFIED",
-        "exact_affine_engine_checks": exact_check_count,
-        "exact_engine_sizes": [3, 4, 6, 8],
-        "exact_parameter_pairs_theta_z": [
-            [str(theta), str(z)] for theta, z in exact_parameters
-        ],
+        "status": "RAY_BOUNDARY_LEGENDRE_VERIFIED",
+        "vandermonde_coefficient_checks": coefficient_checks,
+        "exact_differential_equation_polynomials": ode_checks,
+        "exact_affine_engine_checks": exact_checks,
+        "closed_endpoint_checks": endpoint_checks,
+        "coefficient_monotonicity_checks": monotonicity_checks,
+        "global_bessel_bound_checks": bound_checks,
         "exact_offset_reflection_collapse": True,
-        "outside_gap_negative_control": True,
+        "outside_segment_negative_control": True,
         "zero_thickness_Q_N": "1",
         "series_agreement_bound": "1e-72",
         "asymptotic_samples": asymptotic_samples,
         "scope": (
-            "Exact rational comparison with the independent affine-stratum "
-            "engine, plus independent 80-digit Bessel and correction series; "
-            "PROOF.md establishes the identity and all-orders expansion."
+            "Independent exact simplex, hypergeometric, Legendre-recurrence, "
+            "differential-equation, and affine-stratum checks, plus 80-digit "
+            "global bounds and two correction terms; PROOF.md is universal."
         ),
     }
     print(dumps(output, indent=2, sort_keys=True))

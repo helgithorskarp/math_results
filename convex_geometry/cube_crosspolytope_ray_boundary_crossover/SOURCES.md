@@ -2,7 +2,16 @@
 
 Checked on 24 September 2026.
 
-- The direct Discovery Net source is contribution
+- The immediate Discovery Net source is contribution
+  `bafkreicsmuxch2aorgrvanesvplarfrjs3xz2zc4wgnrejd5surntnqihm`,
+  *Exact finite-N ray-boundary universality for affine cube-crosspolytope
+  sections*, committed at height 5715.  Its first version derived the
+  simplex-integral polynomial $Q_N$, exact offset cancellation, and the first
+  Bessel correction.  The present version identifies $Q_N$ exactly as a
+  Legendre polynomial, closes the geometric endpoint, proves global monotone
+  bounds, makes every asymptotic order recursive, and computes the second
+  correction.
+- The preceding Discovery Net source is contribution
   `bafkreifhe75mcqczfk4rgme3u3xcnaho7ud45dt67y6jeqhljodkfdn2ie`,
   *Bessel crossover at the cube boundary for affine cube--crosspolytope
   sections*, committed at height 5705.  Its public source is the adjacent
@@ -28,17 +37,31 @@ Checked on 24 September 2026.
   *f-Vectors of Minkowski Additions of Convex Polytopes*, gives combinatorial
   context for cube-related Minkowski sums, but not section volumes or the
   universal polynomial in this theorem.
+- [NIST DLMF 15.9.7](https://dlmf.nist.gov/15.9.E7) records the standard
+  hypergeometric representation of $P_n$.  The Legendre differential
+  equation and classical special-function facts used after the new geometric
+  reduction are catalogued in [DLMF Chapter 14](https://dlmf.nist.gov/14).
+  These standard identities do not supply the affine-section formula (4),
+  its parameter range, or the new coefficientwise Bessel bounds.
 
 Targeted live searches combined “cube cross-polytope Minkowski sum,” “affine
 hyperplane section,” “ray boundary,” “Bessel asymptotics,” and “exact scaling
-collapse.”  They found the individual-body and general Minkowski/Orlicz
-antecedents above, but no primary source stating the finite-$N$ identity
-$Q_N(z)$, its offset independence, or its Bessel expansion.  This is a
-bounded, search-relative novelty statement, not certification of historical
-priority.
+collapse,” “Legendre polynomial,” and “hypergeometric section formula.”  They
+found the individual-body and general Minkowski/Orlicz antecedents above and
+the classical special-function identity, but no primary source applying a
+Legendre polynomial to this affine section, stating its exact first boundary
+segment, or proving the monotone finite-$N$ Bessel bounds.  This is a bounded,
+search-relative novelty statement, not certification of historical priority.
 
-A prepublication refresh through Discovery Net height 5714 found no incoming
-relation to the source result and no second ray-boundary or Bessel result.  The
-only new team contribution since the pass checkpoint concerns Tuza gaps in
-chordal graphs.  Repository `main` was fast-forwarded through that unrelated
-commit before this package was finalized.
+A pass-start refresh through Discovery Net height 5720 found no incoming
+relation to the height-5715 source and no second ray-boundary or Bessel
+result.  New team contributions concern a Tuza review and an order-23 Gram
+symmetry quotient.  Repository `main` was fast-forwarded through both
+unrelated commits before this strengthening was developed.
+
+The mandatory prepublication refresh reached height 5722.  The source still
+had no incoming relation, the only graph title containing “ray-boundary” was
+the source itself, and no relevant Legendre-polynomial contribution appeared.
+The sole intervening team result and repository commit classify optimal
+twelve-point pair coverings and do not overlap this work; `main` was again
+fast-forwarded before publication.
