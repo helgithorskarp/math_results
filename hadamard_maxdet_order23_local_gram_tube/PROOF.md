@@ -846,3 +846,93 @@ trusted by the new conclusion: `verify_transpose_duality.py` independently
 reconstructs the input and target matrices from their masks, checks that all
 reported maps and signs have the required types, and verifies all
 `14*23^2` entries of (30) directly.
+
+## 16. A four-orbit factorization of the decomposition census
+
+The thirteen generators of `Aut(G0)` partition the 1,382 candidate columns
+into four orbits `O_0,O_1,O_2,O_3`, ordered here by sizes
+
+\[
+(|O_0|,|O_1|,|O_2|,|O_3|)=(6,512,432,432).
+\tag{33}
+\]
+
+Counting, for one vertex in each orbit, its neighbors in all four orbits
+gives the equitable quotient
+
+\[
+\begin{pmatrix}
+2&512&216&216\\
+6&131&216&216\\
+3&256&73&108\\
+3&256&108&73
+\end{pmatrix}.
+\tag{34}
+\]
+
+Exact clique searches in the four induced graphs give the following table.
+The fourth column is independently obtained by fixing one vertex; orbit
+transitivity then recovers the third column by double-counting
+vertex--clique incidences.
+
+| orbit | clique number | maximum cliques | through a fixed vertex |
+|---:|---:|---:|---:|
+| `O_0` | 3 | 2 | 1 |
+| `O_1` | 8 | 276,480 | 4,320 |
+| `O_2` | 6 | 11,520 | 160 |
+| `O_3` | 6 | 11,520 | 160 |
+
+The anchored checker also finds no clique of the next size in the fixed
+vertex neighborhood.  By transitivity this proves the displayed clique
+numbers.  In particular,
+
+\[
+3+8+6+6=23,
+\tag{35}
+\]
+
+so every 23-clique in the full compatibility graph must attain all four
+induced bounds.  The graph on `O_0` is exactly two disjoint triangles, whose
+mask triples are
+
+```text
+(3901,15602,4181043), (12541,16142,4190223).
+```
+
+Now fix either triangle `T` and any maximum 8-clique `K` in `O_1`.  In each
+of `O_2` and `O_3`, intersect the 216 vertices compatible with `T` with the
+neighborhoods of all eight vertices of `K`.  Exhaustion of the 276,480
+possibilities gives exactly six vertices in each intersection.  Each
+six-set is a clique, and the two six-sets are cross-complete.  They therefore
+give a decomposition, and (35) shows that they are the only possible
+completion of `(T,K)`.  Consequently projection onto `(T,K)` is a bijection
+and independently yields
+
+\[
+2\cdot276480=552960
+\tag{36}
+\]
+
+full decompositions.
+
+The maximum cliques of `O_1` form ten automorphism orbits: two of size
+9,216, four of size 27,648, two of size 55,296, and two of size 18,432.
+For each middle-clique orbit, consider the action on oriented pairs `(K,T)`.
+For six orbits the stabilizer of `K` interchanges the two triangles, so their
+two extensions merge into one full orbit.  For four orbits it does not, so
+the two extensions remain separate.  Hence the number of full orbits is
+
+\[
+6+2\cdot4=14.
+\tag{37}
+\]
+
+The resulting full orbit sizes are six copies of 18,432 and eight copies of
+55,296, agreeing with Section 14.  `gram_factorization_certificate.json`
+records the ten canonical middle cliques, stabilizer orders, merge/split
+flags, and corresponding full-class labels.  The producer uses greedy-color
+branch-and-bound on the four induced graphs.  The independent checker instead
+uses elementary ordered recursion only inside one fixed vertex neighborhood,
+expands the ten reported group orbits, and checks both forced completions of
+each representative.  Thus (36)--(37) do not depend on the original
+9,804,083-node 23-clique search.

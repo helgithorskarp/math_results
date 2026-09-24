@@ -131,6 +131,37 @@ the graph with arbitrary-precision integers, independently repeats the
 9,804,083-node clique census, reconstructs every representative matrix, and
 traverses all fourteen orbits.
 
+There is a second, structurally different census.  The 1,382 candidate
+columns form four `Aut(G0)`-orbits of sizes `6,512,432,432`.  Their equitable
+compatibility quotient is
+
+```text
+  2 512 216 216
+  6 131 216 216
+  3 256  73 108
+  3 256 108  73
+```
+
+and the four induced graphs have clique numbers `3,8,6,6`.  Since these
+sum to 23, every decomposition must attain all four bounds.  The six-point
+graph is two disjoint triangles.  The 512-point graph has exactly 276,480
+maximum 8-cliques.  For either triangle, every such 8-clique has exactly six
+common neighbors in each 432-point orbit; both six-sets are cliques and are
+cross-complete.  Hence the remaining twelve columns are forced and
+
+```text
+2*276480 = 552960.
+```
+
+The 276,480 middle cliques form ten automorphism orbits.  In six orbits the
+two triangle extensions merge under the stabilizer, while in four they
+split, giving `6+2*4=14` full decomposition classes.  The independent
+checker counts middle cliques by anchoring one vertex: its neighborhood has
+4,320 seven-cliques and no eight-clique, so transitivity gives
+`512*4320/8=276480`.  It then expands ten explicit orbit representatives and
+checks only their two forced completions.  This avoids the original
+9,804,083-node full-clique recursion.
+
 The transpose action on these classes is also exact.  Every representative's
 column Gram is signed-permutation-congruent to `G0`, so transposition closes
 on the same fourteen classes.  In the certificate's canonical numbering it
@@ -284,6 +315,10 @@ g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow -pedantic \
 ./gram_decompositions record23.txt record23_class2.txt \
   > gram_decomposition_result.json
 python3 verify_gram_decompositions.py gram_decomposition_result.json
+python3 factor_gram_decompositions.py gram_decomposition_certificate.json \
+  > gram_factorization_result.json
+python3 verify_gram_factorization.py gram_decomposition_certificate.json \
+  gram_factorization_result.json
 python3 transpose_duality.py gram_decomposition_certificate.json \
   > transpose_duality_result.json
 python3 verify_transpose_duality.py gram_decomposition_certificate.json \
@@ -308,6 +343,8 @@ second H-class and signed Gram-center equivalence verified
 the two record matrices are Hadamard-inequivalent
 552960 exact 23-cliques independently enumerated
 14 decomposition orbits cover every clique
+candidate compatibility graph factors into clique numbers 3+8+6+6
+six merged and four split middle orbits give exactly fourteen classes
 fourteen explicit signed transpose equivalences verified
 self-dual classes: 5, 6, 9, 10, 13, 14
 ```
@@ -373,6 +410,14 @@ representatives, and orbit traversals.  The deterministic
 `7b94f5918015a250db3619c7e1f2f37a8d31a3e2ad589afe21a99a30a445aa81`.
 A complete address- and undefined-behavior-sanitizer run also emits that
 same byte-identical certificate without a diagnostic.
+
+The factored producer takes about 31 seconds and its independent
+vertex-anchored checker about 46 seconds.  Their deterministic compact
+certificate is `gram_factorization_certificate.json`, with SHA-256
+`0e02a35023db47594a469c42e3e30111630ea3ef018fd9c3566ad8c679def26d`.
+It contains the equitable quotient, induced clique counts, ten middle-orbit
+representatives, merge/split data, and hashes of both the 276,480 middle
+cliques and the forced 552,960-clique stream.
 
 The transpose-certificate producer takes about 18 seconds, dominated by
 reconstructing the normalized sign-column set and its automorphism action;
@@ -453,6 +498,12 @@ exact clique recursion.  The C++ and Python implementations use different
 bit-set representations and independently obtain the same graph, node, and
 clique counts.  Orbit representatives are expanded again by the Python
 checker; their disjoint sizes sum to the full independent clique count.
+The factorized extension supplies a second coverage argument.  It trusts
+four much smaller induced-graph clique bounds, vertex-transitive incidence
+counting, and the forced common-neighbor construction.  Its checker uses
+plain recursive anchored clique counting rather than the producer's greedy
+color recursion, expands all ten reported middle-clique orbits, and checks
+both representative completions entrywise in the compatibility graph.
 The transpose extension depends on the exhaustive fourteen-class result,
 then reduces its new content to fourteen displayed finite identities.  For
 each canonical representative, the compact certificate records two
