@@ -1,0 +1,36 @@
+{
+  "arithmetic": "Python arbitrary-precision integers and fractions.Fraction",
+  "audit_sha256": "b7ca4ff56c74e2bcd1a27818f2e8637e7092c8f69793342ef8a3a9f9de56d62a",
+  "dependencies": "Python 3.11.2 standard library only",
+  "independent_parent_review": {
+    "commit": "75da8ab2ef4f0ec0591c4104b1a00b9495fe9794",
+    "graph_ref": "bafkreiaqjunnetdfeaz2lb54wuxrtnhslsstg3w5sncc2hucr472gvf4nm",
+    "scope": "Parent theorem only; new transfer unreviewed"
+  },
+  "normal": {
+    "command": "python3 check.py",
+    "elapsed_seconds": 14.035468,
+    "maximum_rss_kib": 25068,
+    "python": "3.11.2",
+    "returncode": 0
+  },
+  "optimized": {
+    "audit_sha256": "b7ca4ff56c74e2bcd1a27818f2e8637e7092c8f69793342ef8a3a9f9de56d62a",
+    "byte_identical": true,
+    "command": "PYTHONHASHSEED=271828 python3 -O check.py",
+    "elapsed_seconds": 14.365677,
+    "maximum_rss_kib": 27100,
+    "python": "3.11.2",
+    "returncode": 0
+  },
+  "scope": "Finite author checks of the new transfer; imported universal balanced-profile theorem not implemented",
+  "seeded_stress_cases": {
+    "generator": "random.Random; 27 cases specified in check.py",
+    "seed": 2026092415
+  },
+  "source_dependency": {
+    "commit": "665271e6c595fae209c6715d49484c62b9e5b7ba",
+    "graph_ref": "bafkreienkkf63nylhemuybw7f6qfcbkgfehhwcvjmoaj265dqnbuuchve4",
+    "theorem": "B(t,1): below-input full profiles, total component loss CN, actual role discrepancy D"
+  }
+}
