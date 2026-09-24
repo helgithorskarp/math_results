@@ -158,3 +158,103 @@ with root `L`.  Hence every graph-valued square determinant at least `L^2`
 through distance four is permutation-congruent to `G0`.  Together with the
 arbitrary-entry searches at distances one and two, this proves the lemma in
 `README.md`.
+
+## 5. The full permutation automorphism group
+
+Regard an off-diagonal entry `3` as an edge.  The resulting graph has three
+connected components, on the vertex sets
+
+\[
+\{0,\ldots,14\},\qquad \{15,16,17,18\},\qquad
+\{19,20,21,22\}.
+\tag{8}
+\]
+
+In the first component, `0,1,2` are exactly the degree-six vertices and form
+a triangle.  For each core vertex `c`, there is a four-clique split into two
+inactive twins and two active twins: the inactive pair has no core neighbor,
+while the active pair is adjacent to the two core vertices other than `c`.
+These are precisely the three blocks in (6), indexed by their missing core
+vertex.
+
+Consequently an automorphism of the 15-vertex component first permutes the
+core triangle, which forces the corresponding permutation of the three
+four-cliques, and then independently swaps each of the six twin pairs.  All
+these choices preserve the graph, so this factor is
+
+\[
+C_2^6\rtimes S_3,\qquad |C_2^6\rtimes S_3|=64\cdot6=384.
+\tag{9}
+\]
+
+The other two components are indistinguishable copies of `K4`.  Their
+automorphism group is
+
+\[
+(S_4\times S_4)\rtimes C_2=S_4\mathop{\rm wr}C_2,
+\qquad |S_4\mathop{\rm wr}C_2|=24^2\cdot2=1152.
+\tag{10}
+\]
+
+Component sizes preclude mixing either `K4` with the 15-vertex component,
+and every cross-component Gram entry is `-1`.  Thus
+
+\[
+\operatorname{Aut}(G_0)
+=(C_2^6\rtimes S_3)\times(S_4\mathop{\rm wr}C_2),
+\qquad |\operatorname{Aut}(G_0)|=442368.
+\tag{11}
+\]
+
+`symmetry.py` reconstructs this description from `record23.txt`, explicitly
+generates all 384 and 1,152 factor elements, verifies that each preserves
+`G0`, and verifies that the stated 13 elementary generators close to the two
+complete factors.
+
+## 6. Burnside counts for edit sets
+
+Every automorphism of `G0` induces a permutation of the 253 unordered vertex
+pairs.  If the induced cycle lengths of an element `g` are
+`l_1,...,l_t`, the number of size-`k` edit sets fixed by `g` is
+
+\[
+[x^k]\prod_{i=1}^t(1+x^{l_i}).
+\tag{12}
+\]
+
+The first and second factors have respectively 17 and 16 distinct combined
+vertex/pair action types.  For a vertex cycle of length `a` in the first
+factor and one of length `b` in the second, their Cartesian product on cross
+pairs consists of `gcd(a,b)` cycles of length `lcm(a,b)`.  This constructs
+the complete induced action and gives 154 distinct pair-action cycle types.
+Averaging (12), with exact integer arithmetic, proves the orbit counts in
+`symmetry_certificate.json`.  For example,
+
+\[
+N_4=197931,\qquad N_5=4132509,\qquad N_6=81094402.
+\tag{13}
+\]
+
+Because simultaneous row/column permutation preserves the determinant, one
+determinant evaluation per edit-set orbit is sufficient.  Equation (13)
+therefore reduces the prospective radius-five search from
+`binom(253,5)=8,301,429,675` labeled sets to 4,132,509 symmetry classes.
+The present certificate counts those classes but does not enumerate their
+canonical representatives.
+
+Finally, `symmetry.py` applies its 13 generators directly to the 372
+distance-four survivors emitted by `enumerate.cpp`.  They split into six
+orbits:
+
+| square root of determinant | orbit size |
+|---:|---:|
+| 2,779,447,296,000,000 | 12 |
+| 2,760,297,676,800,000 | 24 |
+| 2,760,297,676,800,000 | 24 |
+| 2,722,666,905,600,000 | 24 |
+| 2,696,085,504,000,000 | 96 |
+| 2,695,954,432,000,000 | 192 |
+
+The orbit sizes sum to 372.  In particular, the record-equality shell is one
+orbit, while equality of determinant does not merge the two distinct
+24-element orbits at the next determinant value.

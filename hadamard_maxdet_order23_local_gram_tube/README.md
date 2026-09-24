@@ -46,6 +46,18 @@ order-23 sign matrix satisfies the entry conditions in part 1, so the lemma
 excludes every record-beating sign decomposition in these neighborhoods and
 classifies graph-valued record equality through distance four.
 
+The artifact also determines the complete row-permutation symmetry of `G0`:
+
+```text
+Aut(G0) = (C2^6 semidirect S3) x (S4 wreath C2),
+|Aut(G0)| = 442368.
+```
+
+Under this group, the 372 distance-four square survivors form exactly six
+orbits, of sizes `12, 24, 24, 24, 96, 192`.  The 12 record-equality cases
+form one orbit.  The two 24-element orbits immediately below the record have
+the same determinant but are not related by an automorphism of `G0`.
+
 This does **not** determine the maximal determinant in order 23.  Candidate
 Gram matrices farther from `G0`, including other graph-Gram matrices and
 matrices containing larger inner products, remain untreated.
@@ -72,6 +84,29 @@ As a retained directional control, the enumerator also checks the 148,995
 ways to delete four existing `3`-edges.  This overlaps the radius-four
 search and has no modular survivors.
 
+## Exact symmetry quotient
+
+An edit set is a subset of the 253 unordered off-diagonal positions.
+Burnside's lemma applied to the induced action of `Aut(G0)` gives the
+following exact orbit counts:
+
+| number of toggles | labeled edit sets | symmetry classes |
+|---:|---:|---:|
+| 0 | 1 | 1 |
+| 1 | 253 | 16 |
+| 2 | 31,878 | 380 |
+| 3 | 2,667,126 | 8,887 |
+| 4 | 166,695,375 | 197,931 |
+| 5 | 8,301,429,675 | 4,132,509 |
+| 6 | 343,125,759,900 | 81,094,402 |
+
+The machine-readable certificate continues the exact Burnside count through
+12 toggles.  In particular, a radius-five graph-valued search needs at most
+4,132,509 determinant tests once one representative of each orbit is
+generated, rather than 8.3 billion labeled tests.  This artifact proves the
+orbit count; it does not yet implement the canonical representative
+generator or make a radius-five determinant claim.
+
 ## Reproduction
 
 Only Python 3.10 or later and a C++20 compiler are required.
@@ -81,6 +116,7 @@ g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow -pedantic \
   enumerate.cpp -o enumerate
 ./enumerate record23.txt > result.json
 python3 verify.py result.json
+python3 symmetry.py result.json
 ```
 
 The terminal output ends with
@@ -88,6 +124,7 @@ The terminal output ends with
 ```text
 modular local Gram classification verified
 exact local Gram classification certificate verified
+exact Gram-graph symmetry and orbit certificate verified
 ```
 
 `enumerate.cpp` performs 172,701,826 evaluations, including the overlapping
@@ -103,6 +140,10 @@ requires exact agreement with the emitted equality cases.
 On the research host, GCC 12.2.0 completed the documented strict `-O3` build
 in 734.6 seconds on one core; the Python checker took 3.1 seconds.  An
 allocation-heavy baseline produced byte-identical JSON in 770.8 seconds.
+The symmetry checker takes under one second after `result.json` exists.  It
+independently constructs the two automorphism factors, verifies their
+generator closures, computes their induced cycle types and Burnside
+coefficients with exact integers, and traverses the six survivor orbits.
 
 ## Known frontier and sources
 
@@ -135,3 +176,7 @@ scaled-update entries are below `2*10^9`, so signed 64-bit arithmetic is
 safe.  The C++ enumerator is the exhaustive coverage component; the Python
 program is an independent exact checker for its compact survivor list and
 for the permutation description of every record-equality survivor.
+The symmetry extension additionally trusts Burnside's lemma and the
+elementary component-based proof of the displayed automorphism group.  Its
+Python checker performs only exact permutation and integer arithmetic.  The
+radius-five number is an orbit count, not a completed determinant search.
