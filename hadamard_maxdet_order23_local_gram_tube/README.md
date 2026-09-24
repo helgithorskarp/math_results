@@ -38,6 +38,12 @@ This artifact proves the following finite local classification.
 >    has square root equal to `L`, and all 26 record-beating matrices are
 >    positive definite but sign-indecomposable.  Consequently the conclusion
 >    of part 3 holds with distance seven in place of distance six.
+> 5. If every off-diagonal entry satisfies the arbitrary legal-entry
+>    conditions in part 1 and `M` differs from `G0` in at most four positions,
+>    then a positive-definite `M` with square determinant at least `L^2` is
+>    permutation-congruent to `G0` and has determinant exactly `L^2`.  At
+>    exactly four positions the complete normalized cover has only one square
+>    determinant above `L^2`, and that matrix is not positive definite.
 
 The twelve nontrivial equality cases have a simple description.  In each of
 the three four-vertex blocks
@@ -201,8 +207,8 @@ checker reconstructs the fourteen matrices from their masks and verifies
 all fourteen entrywise equalities.
 
 This does **not** determine the maximal determinant in order 23.  Graph-valued
-candidate Gram matrices at distance seven or farther from `G0`, arbitrary
-legal-entry matrices at distance four or farther, and other possible Gram
+candidate Gram matrices at distance eight or farther from `G0`, arbitrary
+legal-entry matrices at distance five or farther, and other possible Gram
 classes remain untreated.  In particular, the result classifies every sign
 decomposition of the published Gram center, not every order-23 sign matrix
 whose determinant equals or exceeds the record.
@@ -237,6 +243,19 @@ assignments for one representative of each orbit gives a complete
 direct exact determinants show that all are squares with 880 distinct roots.
 The largest root is only `2,740,715,520,000,000 < L`.  This search overlaps
 the three-toggle row above, so it is not included in the disjoint total.
+
+The arbitrary-entry cover now extends to exactly four positions.  Its labeled
+domain has `binom(253,4)*10^4 = 1,666,953,750,000` matrices.  The 197,931
+underlying edit-set orbits, independently predicted by Burnside's lemma, give
+a complete 1,979,310,000-evaluation cover after all 10,000 transported value
+assignments are tested for each representative.  The 48-prime sieve leaves
+990,410 encodings; exact low-rank determinants show that every survivor is a
+square.  Of these, 990,408 lie below the record, one equals it, and one has
+root `2,791,505,920,000,000 > L`.  The latter matrix is not positive definite:
+its order-14 leading principal minor is exactly `-43,620,761,600,000`.  The
+equality encoding belongs to the already certified 12-element
+row-permutation orbit.  Thus no order-23 sign Gram in the full arbitrary
+legal-entry radius-four neighborhood beats the record.
 
 As a retained directional control, the enumerator also checks the 148,995
 ways to delete four existing `3`-edges.  This overlaps the radius-four
@@ -330,6 +349,16 @@ g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow -pedantic \
   radius3_arbitrary.cpp -o radius3_arbitrary
 ./radius3_arbitrary record23.txt > radius3_arbitrary_result.json
 python3 verify_radius3_arbitrary.py radius3_arbitrary_result.json
+g++ -std=c++20 -O3 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Werror \
+  radius4_arbitrary.cpp -o radius4_arbitrary
+mkdir -p /tmp/radius4-arbitrary-parts
+seq 0 31 | xargs -P 8 -I SHARD sh -c \
+  './radius4_arbitrary SHARD 32 record23.txt \
+   > /tmp/radius4-arbitrary-parts/part_SHARD.json \
+   2> /tmp/radius4-arbitrary-parts/part_SHARD.log'
+python3 merge_radius4_arbitrary.py -o radius4_arbitrary_result.json \
+  /tmp/radius4-arbitrary-parts/part_*.json
+python3 verify_radius4_arbitrary.py radius4_arbitrary_result.json
 g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow -pedantic \
   radius6.cpp -o radius6
 ./radius6 record23.txt > radius6_result.json
@@ -378,6 +407,7 @@ radius-five canonical orbit enumeration and modular sieve verified
 exact radius-five symmetry-quotient certificate verified
 arbitrary radius-three covering quotient and modular sieve verified
 exact arbitrary radius-three covering certificate verified
+exact arbitrary radius-four covering certificate verified
 radius-six canonical orbit enumeration and modular sieve verified
 exact radius-six symmetry-quotient certificate verified
 both record-beating radius-six Gram candidates are indecomposable
@@ -428,6 +458,16 @@ survivors exactly in about four seconds.  The deterministic
 `a5302735167229496e3bc4d294bc5821ed5132922e53b576a9b4a8632bac98af`.
 A complete `-fsanitize=address,undefined` run also produced byte-identical
 JSON without a diagnostic.
+
+The arbitrary radius-four cover was run as 32 deterministic hash-balanced
+shards with eight workers in about 21 minutes of wall time.  It evaluated
+1,979,310,000 transported assignments and retained 990,410 modular survivors.
+The streaming Python merger classified every survivor by exact integer
+low-rank determinants in about two minutes, checked positive definiteness by
+fraction-free Sylvester elimination, and emitted the compact certificate
+`radius4_arbitrary_certificate.json`.  Its SHA-256 is recorded in
+`SHA256SUMS`; the canonical survivor-encoding SHA-256 is
+`1bc15ff2431fb08ec0ad7faedefe8eff124e88f735a00e9a33f2e7e7cef803de`.
 
 The radius-six C++ run takes about 9 minutes 44 seconds on one core and peaks
 at 289,908 KiB resident memory.  The independent Python checker takes about
@@ -529,17 +569,21 @@ for the permutation description of every record-equality survivor.
 The symmetry extension additionally trusts Burnside's lemma and the
 elementary component-based proof of the displayed automorphism group.  Its
 Python checker performs only exact permutation and integer arithmetic.  The
-radius-five, radius-six, radius-seven, and arbitrary radius-three generators
+radius-five, radius-six, radius-seven, and arbitrary radius-three and
+radius-four generators
 additionally trust the completeness of the colored connected-component
 canonicalization proved in `PROOF.md`.  Their independently predicted
 underlying edit-set class counts agree with Burnside's lemma.  Radius seven
 additionally trusts the multiplicity-vector/stabilizer factorization proved
 there; its complete radius-six regression and final Burnside agreement test
-both levels of that quotient.  For arbitrary radius three, all
-1,000 value assignments are tested over every underlying representative;
-this is a complete cover, not a claim that stabilizer-equivalent valued edits
-have been deduplicated.  All arithmetic is exact; no positivity assumption or
-floating-point filter is used.  The radius-six decomposition obstruction
+both levels of that quotient.  For arbitrary radii three and four,
+respectively all 1,000 and 10,000 value assignments are tested over every
+underlying representative; these are complete covers, not claims that
+stabilizer-equivalent valued edits have been deduplicated.  The radius-four
+modular survivors are evaluated through the exact determinant lemma over
+Python integers, and its sole above-record square is rejected by an exact
+negative leading principal minor.  No floating-point filter is used.  The
+radius-six decomposition obstruction
 trusts the identity `R^T(RR^T)^{-1}R=I` and exhaustive Gray-code traversal of
 the normalized sign cube; exact rational inversion is checked by multiplying
 `G P=Q I`, and the published record matrix supplies a positive control.  The

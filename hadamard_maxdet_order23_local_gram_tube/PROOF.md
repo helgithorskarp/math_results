@@ -1059,3 +1059,94 @@ through distance seven.
 full normalized sign cubes, and each displayed obstruction.  The modular
 sieve never certifies a square; it only reduces the list on which exact
 integer arithmetic is performed.
+
+## 19. Arbitrary legal entries through radius four
+
+At exactly four edited positions, allowing any of the ten alternatives in
+(1) gives
+
+\[
+{253\choose4}10^4=1666953750000
+\tag{42}
+\]
+
+labeled matrices.  The colored-component construction of Section 7, stopped
+after four edges, gives the following independent partition census:
+
+| component partition | internally colored graphs | full edit-set orbits |
+|---|---:|---:|
+| `(4)` | 142,566 | 16,797 |
+| `(3,1)` | 447,294 | 48,567 |
+| `(2,2)` | 164,757 | 17,874 |
+| `(2,1,1)` | 806,188 | 82,215 |
+| `(1,1,1,1)` | 325,878 | 32,478 |
+| total | 1,886,683 | 197,931 |
+
+The last total is exactly the independently computed Burnside coefficient
+`N_4` in (13).  For each underlying representative,
+`radius4_arbitrary.cpp` tests all `10^4` assignments of alternative legal
+values to its sorted edges.  Hence it evaluates
+
+\[
+197931\cdot10^4=1979310000
+\tag{43}
+\]
+
+matrices.  As at radius three, this is a complete cover rather than an exact
+valued-edit orbit quotient: transporting any labeled valued edit to its
+generated underlying representative carries its values to one of the tested
+assignments.  Stabilizers may cause harmless repetition but cannot cause an
+omission.
+
+The enumeration is divided into 32 disjoint shards.  A fixed 64-bit hash of
+the sorted connected-component identifiers assigns each internally colored
+component multiset to one shard before the outer `S3 x C2` test.  Thus every
+internal object, and consequently every accepted full representative, is
+assigned exactly once.  The merger requires every shard label once, the five
+partition totals above, the Burnside total, and closed first-witness
+accounting.
+
+The 48-prime sieve rejects 1,978,319,590 assignments and retains 990,410.
+For every survivor the merger evaluates the matrix determinant lemma exactly.
+If the changed positions involve the vertex set `U`, of size at most eight,
+and `E` is the supported perturbation, then the checked scaled inverse
+`G0^-1=P/Q` gives
+
+\[
+\det(G_0+E)=L^2\frac{\det(QI+P_{U,U}E_{U,U})}{Q^{|U|}}.
+\tag{44}
+\]
+
+Fraction-free Bareiss elimination over Python integers evaluates the small
+determinant in (44); exact division by `Q^{|U|}` is required.  All 990,410
+survivors are squares.  Exactly 990,408 have root below `L`, with largest
+root `2760297676800000`.  One has root exactly `L`; its encoding belongs to
+the explicit 12-element row-permutation orbit from Section 4.
+
+The sole above-record square has edits
+
+```text
+(23,-21), (105,19), (110,-21), (178,-21)
+```
+
+and root `2791505920000000`.  It is not positive definite.  Exact
+fraction-free Sylvester elimination finds its first nonpositive leading
+principal minor at order 14, with value
+
+\[
+-43620761600000.
+\tag{45}
+\]
+
+Every nonsingular sign Gram `RR^T` is positive definite.  Therefore (45)
+eliminates the only arbitrary-entry radius-four square above the record;
+the unique equality orbit is already realized by row permutations of `R0`.
+Together with Section 8, this proves local sign maximality and equality
+classification for every legal Gram edit through arbitrary distance four.
+
+`verify_radius4_arbitrary.py` independently recomputes the Burnside
+coefficient, both retained full 23-by-23 determinants, the equality
+row-permutation encoding, and all leading minors through the obstruction in
+(45).  Canonical SHA-256 digests bind the complete survivor stream and its
+exact roots.  The modular sieve is only a lossless rejection stage; the final
+claims use exact integer arithmetic throughout.
