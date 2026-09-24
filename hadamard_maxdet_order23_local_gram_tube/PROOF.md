@@ -1,4 +1,4 @@
-# Proof of the local Gram exclusion
+# Proof of the local Gram classification
 
 ## 1. Necessary Gram entries
 
@@ -84,17 +84,20 @@ ten alternative values in (1).  Hence the arbitrary-edit searches contain
 matrices.  The graph-valued neighborhood toggles `-1` and `3`, giving
 
 \[
-\binom{253}{3}=2667126
+\binom{253}{3}=2667126,
+\qquad
+\binom{253}{4}=166695375
 \]
 
-matrices at distance three.  Finally, choosing four of the 45 existing
-`3`-edges to delete gives
+matrices at distances three and four.  As an auxiliary overlapping control,
+choosing four of the 45 existing `3`-edges to delete gives
 
 \[
 \binom{45}{4}=148995.
 \]
 
-The loops use increasing edge indices, so every matrix occurs exactly once.
+Within each domain the loops use increasing edge indices, so every matrix
+occurs exactly once.
 
 For every matrix, `enumerate.cpp` computes (4) modulo each of 48 primes until
 it finds the first nonresidue witness.  The program verifies primality by
@@ -103,15 +106,15 @@ determinant modulo every prime.  It also checks the complete vector of first-
 witness counts stored in `certificate.json`; those counts plus the survivor
 count equal the domain size in every case.
 
-## 4. Exact survivors
+## 4. Exact survivors and equality classification
 
 The residue sieve leaves no one-edit or four-deletion matrix.  It leaves 756
-two-edit matrices and 24 three-toggle matrices.  `verify.py` applies direct
-23-by-23 integer Bareiss elimination to all 780 matrices.  Every survivor
-does have square determinant, so the modular sieve loses no further
-information.  There are 13 determinant values in the two-edit case and two
-in the three-toggle case; `certificate.json` records every value, square
-root, and multiplicity.
+two-edit matrices, 24 three-toggle matrices, and 372 four-toggle matrices.
+`verify.py` applies direct 23-by-23 integer Bareiss elimination to all 1,152
+matrices.  Every survivor does have square determinant, so the modular sieve
+loses no further information.  There are 13 determinant values in the
+two-edit case, two in the three-toggle case, and five in the four-toggle
+case; `certificate.json` records every value, square root, and multiplicity.
 
 The largest roots are respectively
 
@@ -121,5 +124,37 @@ The largest roots are respectively
 2740715520000000<L.
 \]
 
-Together with the unedited record matrix, this proves all three parts of the
-lemma in `README.md`.
+Among the four-toggle survivors, 360 have root at most
+
+\[
+2760297676800000<L.
+\]
+
+The remaining twelve have root exactly `L`.  The `3`-edge graph of `G0`
+contains the three blocks
+
+\[
+\{3,4\mid5,6\},\qquad
+\{7,8\mid9,10\},\qquad
+\{11,12\mid13,14\}.
+\tag{6}
+\]
+
+Within each block all four vertices form a clique.  The two vertices to the
+right have the same two neighbors in the core triangle, while the two on the
+left have neither core neighbor.  Transposing one left vertex with one right
+vertex therefore removes two core edges and adds two core edges, changing
+exactly four Gram entries.  There are `3*2*2=12` such transpositions, and
+simultaneously applying one to the rows and columns gives
+
+\[
+M=\Pi G_0\Pi^T=(\Pi R_0)(\Pi R_0)^T.
+\tag{7}
+\]
+
+The Python checker constructs the edit set of every transposition in (6)
+directly from `G0` and verifies that these are exactly the twelve survivors
+with root `L`.  Hence every graph-valued square determinant at least `L^2`
+through distance four is permutation-congruent to `G0`.  Together with the
+arbitrary-entry searches at distances one and two, this proves the lemma in
+`README.md`.

@@ -2,6 +2,7 @@
 #include <array>
 #include <cstdint>
 #include <fstream>
+#include <initializer_list>
 #include <iostream>
 #include <stdexcept>
 #include <string>
@@ -69,6 +70,15 @@ constexpr std::array<std::uint64_t, 48> kExpectedGraphThree = {
     5988, 2898, 1536, 5280, 0, 0, 384, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0,
+};
+constexpr std::array<std::uint64_t, 48> kExpectedGraphFour = {
+    83035556, 42080074, 20554302, 10506903, 5233902, 2612088,
+    1344108, 719934, 295314, 164928, 74106, 44304,
+    13452, 7488, 3696, 144, 4608, 0,
+    0, 0, 96, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0,
 };
 constexpr std::array<std::uint64_t, 48> kExpectedDeletionFour = {
@@ -235,6 +245,19 @@ class Enumerator {
     return summary;
   }
 
+  Summary graph_four_edits() const {
+    Summary summary;
+    const int count = static_cast<int>(edges_.size());
+    for (int first = 0; first < count; ++first)
+      for (int second = first + 1; second < count; ++second)
+        for (int third = second + 1; third < count; ++third)
+          for (int fourth = third + 1; fourth < count; ++fourth)
+            evaluate({{first, toggle(first)}, {second, toggle(second)},
+                      {third, toggle(third)}, {fourth, toggle(fourth)}},
+                     summary);
+    return summary;
+  }
+
   Summary delete_four_three_edges() const {
     Summary summary;
     const int count = static_cast<int>(three_edges_.size());
@@ -250,16 +273,18 @@ class Enumerator {
  private:
   int toggle(int edge) const { return edges_[edge].value == -1 ? 3 : -1; }
 
-  void evaluate(const std::vector<Edit>& edits, Summary& summary) const {
+  void evaluate(std::initializer_list<Edit> edits, Summary& summary) const {
     ++summary.total;
-    std::vector<int> vertices;
+    std::array<int, 8> vertices{};
+    int vertex_count = 0;
     for (const Edit& edit : edits) {
-      vertices.push_back(edges_[edit.edge_index].i);
-      vertices.push_back(edges_[edit.edge_index].j);
+      vertices[vertex_count++] = edges_[edit.edge_index].i;
+      vertices[vertex_count++] = edges_[edit.edge_index].j;
     }
-    std::sort(vertices.begin(), vertices.end());
-    vertices.erase(std::unique(vertices.begin(), vertices.end()), vertices.end());
-    const int size = static_cast<int>(vertices.size());
+    std::sort(vertices.begin(), vertices.begin() + vertex_count);
+    const int size = static_cast<int>(
+        std::unique(vertices.begin(), vertices.begin() + vertex_count) -
+        vertices.begin());
     std::array<int, kOrder> position{};
     position.fill(-1);
     for (int i = 0; i < size; ++i) position[vertices[i]] = i;
@@ -295,7 +320,7 @@ class Enumerator {
       }
     }
     ++summary.survivors;
-    summary.survivor_edits.push_back(edits);
+    summary.survivor_edits.push_back(std::vector<Edit>(edits));
   }
 
   const std::vector<std::vector<int>>& gram_;
@@ -382,6 +407,7 @@ int main(int argc, char** argv) {
     const Summary arbitrary_one = enumerator.arbitrary_one_edit();
     const Summary arbitrary_two = enumerator.arbitrary_two_edits();
     const Summary graph_three = enumerator.graph_three_edits();
+    const Summary graph_four = enumerator.graph_four_edits();
     const Summary deletion_four = enumerator.delete_four_three_edges();
     if (arbitrary_one.total != 2530 || arbitrary_one.survivors != 0 ||
         arbitrary_one.witness_counts != kExpectedOne ||
@@ -389,6 +415,8 @@ int main(int argc, char** argv) {
         arbitrary_two.witness_counts != kExpectedTwo ||
         graph_three.total != 2667126 || graph_three.survivors != 24 ||
         graph_three.witness_counts != kExpectedGraphThree ||
+        graph_four.total != 166695375 || graph_four.survivors != 372 ||
+        graph_four.witness_counts != kExpectedGraphFour ||
         deletion_four.total != 148995 || deletion_four.survivors != 0 ||
         deletion_four.witness_counts != kExpectedDeletionFour)
       throw std::runtime_error("enumeration result disagrees with certificate");
@@ -402,9 +430,10 @@ int main(int argc, char** argv) {
     print_summary("arbitrary_one_edit", arbitrary_one, true);
     print_summary("arbitrary_two_edits", arbitrary_two, true);
     print_summary("graph_three_edits", graph_three, true);
+    print_summary("graph_four_edits", graph_four, true);
     print_summary("delete_four_three_edges", deletion_four, false);
     std::cout << "  }\n}\n";
-    std::cerr << "modular local Gram exclusion verified\n";
+    std::cerr << "modular local Gram classification verified\n";
     return 0;
   } catch (const std::exception& error) {
     std::cerr << "error: " << error.what() << '\n';

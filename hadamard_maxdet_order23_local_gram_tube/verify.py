@@ -124,6 +124,7 @@ def validate_edit(case_name: str, edits: list[list[int]], edges: list[tuple[int,
         "arbitrary_one_edit": 1,
         "arbitrary_two_edits": 2,
         "graph_three_edits": 3,
+        "graph_four_edits": 4,
         "delete_four_three_edges": 4,
     }
     assert len(edits) == expected_lengths[case_name]
@@ -133,7 +134,7 @@ def validate_edit(case_name: str, edits: list[list[int]], edges: list[tuple[int,
         assert 0 <= edge_index < len(edges)
         old_value = edges[edge_index][2]
         assert new_value in range(-21, 20, 4) and new_value != old_value
-        if case_name == "graph_three_edits":
+        if case_name in {"graph_three_edits", "graph_four_edits"}:
             assert new_value == (3 if old_value == -1 else -1)
         if case_name == "delete_four_three_edges":
             assert old_value == 3 and new_value == -1
@@ -147,6 +148,33 @@ def expected_groups(case: dict) -> Counter[int]:
         assert root * root == determinant
         groups[determinant] = int(item["multiplicity"])
     return groups
+
+
+def expected_distance_four_relabelings(
+    gram: list[list[int]], edges: list[tuple[int, int, int]]
+) -> set[tuple[tuple[int, int], ...]]:
+    """The twelve labeled copies obtained by an active/inactive swap."""
+    expected = set()
+    for inactive, active in (
+        ((3, 4), (5, 6)),
+        ((7, 8), (9, 10)),
+        ((11, 12), (13, 14)),
+    ):
+        for left in inactive:
+            for right in active:
+                permutation = list(range(23))
+                permutation[left], permutation[right] = (
+                    permutation[right], permutation[left]
+                )
+                edits = tuple(
+                    (edge_index, gram[permutation[i]][permutation[j]])
+                    for edge_index, (i, j, old_value) in enumerate(edges)
+                    if gram[permutation[i]][permutation[j]] != old_value
+                )
+                assert len(edits) == 4
+                expected.add(edits)
+    assert len(expected) == 12
+    return expected
 
 
 def main() -> None:
@@ -167,6 +195,7 @@ def main() -> None:
     assert all(is_prime(prime) and certificate["inverse_scale"] % prime for prime in PRIMES)
 
     edges = [(i, j, gram[i][j]) for i in range(23) for j in range(i)]
+    expected_relabelings = expected_distance_four_relabelings(gram, edges)
     one_edit_squares = 0
     for i, j, old_value in edges:
         for new_value in range(-21, 20, 4):
@@ -194,6 +223,7 @@ def main() -> None:
         assert len(canonical_survivors) == len(survivors)
 
         determinant_groups: Counter[int] = Counter()
+        equality_edits = set()
         for edits in survivors:
             validate_edit(case_name, edits, edges)
             modified = [row[:] for row in gram]
@@ -204,15 +234,27 @@ def main() -> None:
             assert determinant >= 0
             root = math.isqrt(determinant)
             assert root * root == determinant
-            assert root < record_determinant
+            if case_name == "graph_four_edits" and root == record_determinant:
+                equality_edits.add(
+                    tuple((int(edge), int(value)) for edge, value in edits)
+                )
+            else:
+                assert root < record_determinant
             determinant_groups[determinant] += 1
         assert determinant_groups == expected_groups(expected)
+        if case_name == "graph_four_edits":
+            assert equality_edits == expected_relabelings
         print(
             f"{case_name}: {observed['total']} matrices, "
-            f"{len(survivors)} exact square survivors, all below record"
+            f"{len(survivors)} exact square survivors, "
+            + (
+                "12 record-equality relabelings and all others below record"
+                if case_name == "graph_four_edits"
+                else "all below record"
+            )
         )
 
-    print("exact local Gram exclusion certificate verified")
+    print("exact local Gram classification certificate verified")
 
 
 if __name__ == "__main__":

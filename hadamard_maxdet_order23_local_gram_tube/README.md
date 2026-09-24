@@ -1,4 +1,4 @@
-# A local Gram exclusion tube around the order-23 record
+# A local Gram classification tube around the order-23 record
 
 ## Result
 
@@ -13,7 +13,7 @@ and measure the distance between symmetric matrices by the number of
 different entries strictly above the diagonal.  The off-diagonal entries of
 `G0` consist of 208 copies of `-1` and 45 copies of `3`.
 
-This artifact proves the following finite local exclusion.
+This artifact proves the following finite local classification.
 
 > **Lemma.** Let `M` be symmetric of order 23 with diagonal entries 23.
 >
@@ -21,16 +21,30 @@ This artifact proves the following finite local exclusion.
 >    absolute value below 23, and `M` differs from `G0` in at most two
 >    off-diagonal positions, then `det(M)` cannot be a square at least `L^2`
 >    unless `M=G0`.
-> 2. If every off-diagonal entry belongs to `{-1,3}`, the same conclusion
->    holds through distance three.
-> 3. The same conclusion holds for matrices obtained by changing at most
->    four of the 45 entries `3` in `G0` to `-1`.
+> 2. If every off-diagonal entry belongs to `{-1,3}` and `M` differs from
+>    `G0` in at most four positions, then `det(M)` cannot be a square at
+>    least `L^2` unless `M` is permutation-congruent to `G0`.  More
+>    precisely, the equality cases are `G0` and twelve labeled copies at
+>    distance four.
+
+The twelve nontrivial equality cases have a simple description.  In each of
+the three four-vertex blocks
+
+```text
+{3,4 | 5,6}, {7,8 | 9,10}, {11,12 | 13,14},
+```
+
+swap one vertex on the left with one on the right.  There are
+`3*2*2=12` choices.  Simultaneously permuting the corresponding rows and
+columns of `G0` changes exactly four entries, so every such matrix is the
+Gram matrix of a row permutation of `R0`.
 
 The computation is stronger than a positive-definite candidate search: it
 tests all matrices in the stated discrete neighborhoods, whether or not they
 are positive definite.  A parity-normalized Gram matrix of a nonsingular
 order-23 sign matrix satisfies the entry conditions in part 1, so the lemma
-excludes every record-beating sign decomposition in these neighborhoods.
+excludes every record-beating sign decomposition in these neighborhoods and
+classifies graph-valued record equality through distance four.
 
 This does **not** determine the maximal determinant in order 23.  Candidate
 Gram matrices farther from `G0`, including other graph-Gram matrices and
@@ -38,19 +52,25 @@ matrices containing larger inner products, remain untreated.
 
 ## Exact census
 
-The four searches cover 6,006,451 matrices:
+The four nonoverlapping searches cover 172,552,831 edited matrices:
 
 | neighborhood | matrices | square-determinant survivors | largest square root |
 |---|---:|---:|---:|
 | exactly one arbitrary legal edit | 2,530 | 0 | — |
 | exactly two arbitrary legal edits | 3,187,800 | 756 | 2,743,271,424,000,000 |
 | exactly three `-1`/`3` toggles | 2,667,126 | 24 | 2,740,715,520,000,000 |
-| exactly four deletions of existing `3`-edges | 148,995 | 0 | — |
+| exactly four `-1`/`3` toggles | 166,695,375 | 372 | 2,779,447,296,000,000 |
 
-All 780 survivors are evaluated by direct exact integer determinants.  Their
-complete determinant/multiplicity census is in `certificate.json`; every
-square root is strictly below `L`.  The nearest one is about 1.30% below the
-record.
+All 1,152 survivors are evaluated by direct exact integer determinants.
+Their complete determinant/multiplicity census is in `certificate.json`.
+At distance four, twelve have square root exactly `L`; the independent
+checker reconstructs the twelve row/column transpositions above.  Every
+other survivor is strictly below `L`, with largest root
+`2,760,297,676,800,000`, about 0.689% below the record.
+
+As a retained directional control, the enumerator also checks the 148,995
+ways to delete four existing `3`-edges.  This overlaps the radius-four
+search and has no modular survivors.
 
 ## Reproduction
 
@@ -66,22 +86,23 @@ python3 verify.py result.json
 The terminal output ends with
 
 ```text
-modular local Gram exclusion verified
-exact local Gram exclusion certificate verified
+modular local Gram classification verified
+exact local Gram classification certificate verified
 ```
 
-`enumerate.cpp` checks all 6,006,451 matrices and assigns every nonsquare a
-quadratic-nonresidue witness among 48 explicitly checked primes.  It emits
-the 780 cases that survive those tests.  `verify.py` independently rebuilds
+`enumerate.cpp` performs 172,701,826 evaluations, including the overlapping
+four-deletion control, and assigns every nonsquare a quadratic-nonresidue
+witness among 48 explicitly checked primes.  It emits the 1,152 cases that
+survive those tests.  `verify.py` independently rebuilds
 `G0`, checks `det(G0)=L^2` by fraction-free Bareiss elimination, recomputes
 the scaled inverse, validates the survivor encodings, and evaluates every
-survivor determinant directly with Python integers.
+survivor determinant directly with Python integers.  It derives the twelve
+distance-four equality edit sets from explicit vertex transpositions and
+requires exact agreement with the emitted equality cases.
 
-On the research host, GCC 12.2.0 completed the enumeration in 16.7 seconds
-on one core with peak resident memory about 10.2 MiB.  The Python checker
-took 2.9 seconds with peak resident memory about 12.3 MiB.  The full C++ run
-also passed AddressSanitizer and UndefinedBehaviorSanitizer using `-O1 -g`,
-`-fsanitize=address,undefined`, and `-fno-omit-frame-pointer`.
+On the research host, GCC 12.2.0 completed the documented strict `-O3` build
+in 734.6 seconds on one core; the Python checker took 3.1 seconds.  An
+allocation-heavy baseline produced byte-identical JSON in 770.8 seconds.
 
 ## Known frontier and sources
 
@@ -112,4 +133,5 @@ zero modulo every prime.  All listed primes are checked by trial division at
 runtime.  Products modulo primes are bounded below `10^18`, and the raw
 scaled-update entries are below `2*10^9`, so signed 64-bit arithmetic is
 safe.  The C++ enumerator is the exhaustive coverage component; the Python
-program is an independent exact checker for its compact survivor list.
+program is an independent exact checker for its compact survivor list and
+for the permutation description of every record-equality survivor.
