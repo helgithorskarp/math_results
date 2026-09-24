@@ -1,0 +1,111 @@
+{
+  "status": "EXACT_EXCLUSION_WITH_INDEPENDENT_AUDIT",
+  "date_utc": "2026-09-24",
+  "production_python": "3.11.2",
+  "prototype_python": "3.12.14",
+  "production_dependencies": "Python standard library only",
+  "determinism": "No randomness, floating point, time limit, node limit, or external solver.",
+  "primary": {
+    "command": [
+      "python3",
+      "verify.py",
+      "--write-reference"
+    ],
+    "returncode": 0,
+    "seconds": 191.794,
+    "peak_rss_kib": 22896,
+    "stderr": ""
+  },
+  "independent_audit": {
+    "command": [
+      "python3",
+      "audit.py",
+      "--workers",
+      "3",
+      "--write-reference"
+    ],
+    "returncode": 0,
+    "seconds": 355.855,
+    "peak_rss_kib": 23636,
+    "stderr": ""
+  },
+  "controls": {
+    "command": [
+      "python3",
+      "controls.py"
+    ],
+    "returncode": 0,
+    "seconds": 0.085,
+    "peak_rss_kib": 11776,
+    "stderr": ""
+  },
+  "memory_measurement": "Linux resource.getrusage(RUSAGE_CHILDREN).ru_maxrss, KiB; maximum reported process footprint, not the sum over concurrent audit workers.",
+  "audit_partitioning": {
+    "workers": 3,
+    "ranges": [
+      [
+        0,
+        234
+      ],
+      [
+        234,
+        469
+      ],
+      [
+        469,
+        704
+      ]
+    ],
+    "merge": "increasing root id; all 704 indices required"
+  },
+  "entry_level_primary_comparison": {
+    "status": "ENTRY_LEVEL_PROTOTYPE_REPLAY_MATCH",
+    "roots": 442,
+    "compatible_joins": 226534,
+    "links_exactly_imported": 107
+  },
+  "independent_prototype_comparison": {
+    "status": "ALL_704_ROOTS_UNSAT_AND_COMMON_STATISTICS_AGREE",
+    "prototype": {
+      "status": "INDEPENDENT_PROTOTYPE_COMPLETE",
+      "roots": 704,
+      "compatible_joins": 647196,
+      "raw_identifications": 6322904,
+      "roots_without_compatible_joins": 151,
+      "primary_join_sets_matched": 141,
+      "point_states": 687823,
+      "bundle_states": 495148863,
+      "partitions": [
+        [
+          0,
+          235
+        ],
+        [
+          235,
+          470
+        ],
+        [
+          470,
+          704
+        ]
+      ]
+    },
+    "public_bundle_states": 119139875,
+    "optimization": "For the last block of a larger point-star bundle, intersect the incidence sets of all remaining triples instead of trying every block; also apply the necessary ten-triples-per-block bound. This reduces bundle states, preserving all point states and configuration sets.",
+    "independence": "Different full point-bijection join enumeration and whole-point-star completion branching. Both methods share LINKS.json and the mathematical point-link reduction; this is not external peer review."
+  },
+  "positive_and_negative_controls": {
+    "status": "POSITIVE_COMPLETIONS_AND_MUTATIONS_PASSED",
+    "positive_cases": 14,
+    "inconsistent_degree_cases": 2,
+    "witness_records_sha256": "9a98455315baf246520c771d7dff8828abd6137f255a4bd7444be6893b51620c"
+  },
+  "reference_generation": "The measured full runs used --write-reference. Default entry points independently regenerate and compare these compact reference values.",
+  "trust_boundaries": [
+    "Completeness of the imported 107-class catalogue, including its upstream maximum-degree-five theorem.",
+    "Unformalized finite reduction and exhaustive Python implementations.",
+    "Earlier exceptional-profile exclusion is additionally required only for the balanced-profile corollary."
+  ],
+  "external_review": "pending at publication",
+  "large_artifacts": "No exhaustive joined-configuration dump, search log, or private ledger is published; all cases regenerate from source."
+}
