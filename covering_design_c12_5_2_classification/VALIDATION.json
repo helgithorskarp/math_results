@@ -1,0 +1,104 @@
+{
+  "status": "ALL_VALIDATIONS_PASSED",
+  "date_utc": "2026-09-24",
+  "python_versions": [
+    "3.11.2",
+    "3.12.14"
+  ],
+  "networkx": "3.7",
+  "runs": [
+    {
+      "command": "python3.11 verify.py",
+      "seconds": 10.882,
+      "peak_rss_kib": 41728,
+      "exit_code": 0,
+      "output_matches": "EXPECTED.json",
+      "output_sha256": "1ceb87a6cf91e0f5a9c070a91f8beb79e71ad44cab8c17ec7c4f0e0e179cc972"
+    },
+    {
+      "command": "python3.11 -O verify.py",
+      "seconds": 11.056,
+      "peak_rss_kib": 38228,
+      "exit_code": 0,
+      "output_matches": "EXPECTED.json",
+      "output_sha256": "1ceb87a6cf91e0f5a9c070a91f8beb79e71ad44cab8c17ec7c4f0e0e179cc972"
+    },
+    {
+      "command": "python3.12 verify.py",
+      "seconds": 10.604,
+      "peak_rss_kib": 30716,
+      "exit_code": 0,
+      "output_matches": "EXPECTED.json",
+      "output_sha256": "1ceb87a6cf91e0f5a9c070a91f8beb79e71ad44cab8c17ec7c4f0e0e179cc972"
+    },
+    {
+      "command": "python3.11 verify.py",
+      "seconds": 9.793,
+      "peak_rss_kib": 41824,
+      "exit_code": 0,
+      "output_matches": "EXPECTED.json",
+      "output_sha256": "1ceb87a6cf91e0f5a9c070a91f8beb79e71ad44cab8c17ec7c4f0e0e179cc972"
+    },
+    {
+      "command": "python3.12 -O audit.py",
+      "seconds": 58.991,
+      "peak_rss_kib": 45872,
+      "exit_code": 0,
+      "output_matches": "AUDIT_EXPECTED.json",
+      "output_sha256": "8132502a18ef809659860630fe4d2653e0e6e94a790c0f77f1e01624b0842b5c"
+    },
+    {
+      "command": "python3.12 audit.py",
+      "seconds": 55.356,
+      "peak_rss_kib": 40760,
+      "exit_code": 0,
+      "output_matches": "AUDIT_EXPECTED.json",
+      "output_sha256": "8132502a18ef809659860630fe4d2653e0e6e94a790c0f77f1e01624b0842b5c"
+    },
+    {
+      "command": "python3.12 marked_five.py",
+      "seconds": 104.752,
+      "peak_rss_kib": 40328,
+      "exit_code": 0,
+      "output_matches": "MARKED_EXPECTED.json",
+      "output_sha256": "6a6f9e5295e8658553ad44856a8d2b3b6c162a6209105b6e3a621721ffce1bb2"
+    }
+  ],
+  "fixtures_and_mutations": {
+    "status": "FIXTURES_AND_MUTATIONS_PASSED",
+    "fixtures": [
+      {
+        "fixture": "earlier_degree_pattern_0",
+        "catalogue_id": 34
+      },
+      {
+        "fixture": "earlier_degree_pattern_1",
+        "catalogue_id": 65
+      },
+      {
+        "fixture": "earlier_degree_pattern_2",
+        "catalogue_id": 99
+      },
+      {
+        "fixture": "earlier_degree_pattern_3",
+        "catalogue_id": 106
+      },
+      {
+        "fixture": "LJCR_entry_checked_2026-09-24",
+        "catalogue_id": 0
+      }
+    ],
+    "rejected": [
+      "primary_uncovered_pair",
+      "audit_uncovered_pair",
+      "primary_missing_point"
+    ]
+  },
+  "notes": [
+    "Times measured on the research host, with some checks run concurrently.",
+    "Optimized execution disables Python assertions; no proof program uses assert.",
+    "All 27 labelled completion sets match across independent searches.",
+    "Imported maximum-degree-five theorem is not replayed here.",
+    "Independent algorithms are internal validation, not an external peer review."
+  ]
+}
