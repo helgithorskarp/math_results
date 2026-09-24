@@ -1,0 +1,246 @@
+{
+  "closed_jump_coefficient_checks": 1793,
+  "exact_arithmetic": "fractions.Fraction",
+  "exact_polygon_lower_derivative_checks": 56,
+  "exact_polygon_section_evaluations": 198,
+  "exact_polygon_wall_jump_checks": 33,
+  "nonresonant_family_summary": [
+    {
+      "active_coordinates": 1,
+      "expected_wall_count": 1,
+      "wall_count": 1
+    },
+    {
+      "active_coordinates": 2,
+      "expected_wall_count": 4,
+      "wall_count": 4
+    },
+    {
+      "active_coordinates": 3,
+      "expected_wall_count": 12,
+      "wall_count": 12
+    },
+    {
+      "active_coordinates": 4,
+      "expected_wall_count": 32,
+      "wall_count": 32
+    },
+    {
+      "active_coordinates": 5,
+      "expected_wall_count": 80,
+      "wall_count": 80
+    },
+    {
+      "active_coordinates": 6,
+      "expected_wall_count": 192,
+      "wall_count": 192
+    },
+    {
+      "active_coordinates": 7,
+      "expected_wall_count": 448,
+      "wall_count": 448
+    },
+    {
+      "active_coordinates": 8,
+      "expected_wall_count": 1024,
+      "wall_count": 1024
+    }
+  ],
+  "representative_polygon_jumps": [
+    {
+      "B": "7/5",
+      "checked_walls": 12,
+      "normal": [
+        "1",
+        "-3/5",
+        "1/7"
+      ],
+      "samples": [
+        {
+          "derivative_order": 2,
+          "jump": "1225/36",
+          "supplier": 0,
+          "tail": [],
+          "wall": "0"
+        },
+        {
+          "derivative_order": 2,
+          "jump": "-1323/640",
+          "supplier": 1,
+          "tail": [
+            0
+          ],
+          "wall": "64/15"
+        },
+        {
+          "derivative_order": 2,
+          "jump": "25/4368",
+          "supplier": 2,
+          "tail": [
+            0,
+            1
+          ],
+          "wall": "154/5"
+        }
+      ]
+    },
+    {
+      "B": "11/6",
+      "checked_walls": 12,
+      "normal": [
+        "35",
+        "-21",
+        "5"
+      ],
+      "samples": [
+        {
+          "derivative_order": 2,
+          "jump": "35/36",
+          "supplier": 0,
+          "tail": [],
+          "wall": "0"
+        },
+        {
+          "derivative_order": 2,
+          "jump": "-189/3200",
+          "supplier": 1,
+          "tail": [
+            0
+          ],
+          "wall": "41/9"
+        },
+        {
+          "derivative_order": 2,
+          "jump": "5/30576",
+          "supplier": 2,
+          "tail": [
+            0,
+            1
+          ],
+          "wall": "167/5"
+        }
+      ]
+    },
+    {
+      "B": "7/5",
+      "checked_walls": 4,
+      "normal": [
+        "1",
+        "-2/5",
+        "0"
+      ],
+      "samples": [
+        {
+          "derivative_order": 1,
+          "jump": "25/3",
+          "supplier": 0,
+          "tail": [],
+          "wall": "0"
+        },
+        {
+          "derivative_order": 1,
+          "jump": "-4/3",
+          "supplier": 1,
+          "tail": [],
+          "wall": "21/10"
+        },
+        {
+          "derivative_order": 1,
+          "jump": "-4/7",
+          "supplier": 1,
+          "tail": [
+            0
+          ],
+          "wall": "71/10"
+        }
+      ]
+    },
+    {
+      "B": "11/6",
+      "checked_walls": 4,
+      "normal": [
+        "7",
+        "-3",
+        "0"
+      ],
+      "samples": [
+        {
+          "derivative_order": 1,
+          "jump": "7/6",
+          "supplier": 0,
+          "tail": [],
+          "wall": "0"
+        },
+        {
+          "derivative_order": 1,
+          "jump": "-3/14",
+          "supplier": 1,
+          "tail": [],
+          "wall": "22/9"
+        },
+        {
+          "derivative_order": 1,
+          "jump": "-3/35",
+          "supplier": 1,
+          "tail": [
+            0
+          ],
+          "wall": "64/9"
+        }
+      ]
+    },
+    {
+      "B": "7/5",
+      "checked_walls": 1,
+      "normal": [
+        "5",
+        "0",
+        "0"
+      ],
+      "samples": [
+        {
+          "derivative_order": 0,
+          "jump": "4/5",
+          "supplier": 0,
+          "tail": [],
+          "wall": "0"
+        }
+      ]
+    }
+  ],
+  "resonant_negative_controls": [
+    {
+      "B": "2",
+      "distinct_numeric_walls": 3,
+      "labeled_candidates": 12,
+      "weights": [
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "B": "1",
+      "distinct_numeric_walls": 3,
+      "labeled_candidates": 4,
+      "weights": [
+        "1",
+        "1/2"
+      ]
+    },
+    {
+      "B": "7/5",
+      "distinct_numeric_walls": 31,
+      "labeled_candidates": 32,
+      "weights": [
+        "1",
+        "1/2",
+        "1/3",
+        "1/6"
+      ]
+    }
+  ],
+  "scope": "PROOF.md proves q*2^(q-1) genuine walls and exact C^(q-2) smoothness for every real wall-nonresonant ray-side parameter; the checker supplies exact rational corroboration.",
+  "status": "GENERIC_WALL_SMOOTHNESS_VERIFIED",
+  "uniform_hinge_order_checks": 1793
+}
