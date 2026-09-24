@@ -24,7 +24,10 @@ overlaps is imposed. No regularity or asymptotic packing theorem is used.
 This is a theorem about **centered** rounding with a conditional Tuza
 corollary. It does not bound the unrestricted `nu*-nu` by a linear error
 or make the cutoff in the earlier [dense chordal theorem](../tuza_dense_chordal_gap/README.md)
-effective for every fixed-type split graph. Independent review is pending.
+effective for every fixed-type split graph. The
+[independent h5735 review](../tuza_centered_rounding_review1/REVIEW.md)
+accepts both statements with high confidence. Its literature-attribution
+recommendation is addressed in SOURCES.md.
 
 - [Complete proof, hypotheses, sharpness example, and limitation](PROOF.md)
 - [Exact LP and packing implementation](rounding.py)

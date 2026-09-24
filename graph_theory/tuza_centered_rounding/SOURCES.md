@@ -37,6 +37,15 @@
 
 ## Nearby literature and novelty scope
 
+- G. J. Puleo, *Maximal k-Edge-Colorable Subgraphs, Vizing's Theorem, and
+  Tuza's Conjecture*, Discrete Mathematics 340 (2017), 1573--1580,
+  [author manuscript](https://arxiv.org/abs/1510.07017), Section 1.
+  This explicitly identifies packings in `I_m join H`, for triangle-free
+  `H`, with partial `m`-edge colorings of `H`. The same correspondence
+  applies to the centered triangles over an arbitrary base. This prior
+  correspondence is not claimed new here. The multi-type additive LP
+  rounding estimate and conditional numerical cutoff are distinct.
+  This attribution was added following the independent h5735 review.
 - M. Bonamy et al., *Tuza's Conjecture for Threshold Graphs*,
   [primary paper](https://dmtcs.episciences.org/9916/pdf).
   Its complete-split packing lemmas use proper edge coloring. We do not
@@ -59,5 +68,8 @@ neighborhood classes and its numerical Tuza consequence under fractional
 spoke saturation. Bounded searches on 2026-09-24 did not locate the same
 statement. No priority claim is made for the underlying LP rounding
 principle, edge-coloring theorem, or residual triangle count. The constant
-is not optimized. Both universal statements are author proofs, pending
-independent review; the finite audit is not their proof.
+is not optimized. Both universal statements were accepted with high
+confidence in the [independent h5735 review](../tuza_centered_rounding_review1/REVIEW.md),
+`bafkreifgnq3kx7jvhocxxtgqznianlvjhhsqu4u5y4yrl6od2qdxurpozu`.
+That review's minor literature-attribution recommendation is addressed
+above. The finite audit is not the proof of either universal statement.
