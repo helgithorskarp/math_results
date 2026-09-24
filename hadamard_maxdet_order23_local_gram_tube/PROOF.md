@@ -581,3 +581,107 @@ deliberately not published; the generator, exact CNF hashes, solver versions,
 and negative size result are retained to make the abandoned certificate
 direction reproducible.  The compact symmetry quotient above is the published
 proof artifact.
+
+## 13. A second H-class over the same Gram center
+
+Two sign matrices are Hadamard-equivalent when one is obtained from the other
+by signed row and column permutations.  `record23_class2.txt` gives a second
+matrix `R1`.  Exact elimination in `verify_multicenter.py` and two-prime exact
+CRT reconstruction in `multicenter.cpp` independently give
+
+\[
+|\det R_1|=|\det R_0|=2779447296000000.
+\tag{23}
+\]
+
+The two-prime reconstruction is exact because the prime product exceeds
+twice the order-23 Hadamard bound.  Both primes are checked at runtime.
+
+### Structured switch census
+
+Use the three blocks from (6), now written as ordered pairs of twin pairs:
+
+\[
+B_0=(\{7,8\},\{9,10\}),\quad
+B_1=(\{3,4\},\{5,6\}),\quad
+B_2=(\{11,12\},\{13,14\}).
+\tag{24}
+\]
+
+For every core vertex `c` independently choose a block `B_m`, one of its two
+pairs `C`, and one of its two pairs `D`.  Flip the two entries in row `c` and
+columns `C`, and the two entries in column `c` and rows `D`.  Each core has
+`3*2*2=12` choices, giving exactly `12^3=1728` specified matrices.  Direct
+exact determinant evaluation finds 770 distinct absolute values.  The maximum
+is the record (23), attained by exactly two labeled choices; all other choices
+are smaller.  The choice
+
+```text
+((block 1, pair 1, pair 0),
+ (block 0, pair 1, pair 0),
+ (block 2, pair 1, pair 0))
+```
+
+is exactly `R1`, so the witness is generated rather than inserted without a
+derivation.
+
+### Signed Gram congruences
+
+Let `G1=R1 R1^T`.  In zero-based notation define
+
+```text
+p = (0,1,2,5,6,11,12,9,10,3,4,13,14,7,8,15,16,17,18,19,20,21,22)
+s = (1,1,1,-1,-1,1,1,-1,-1,1,1,-1,-1,1,1,1,1,1,1,1,1,1,1).
+```
+
+Entrywise exact multiplication verifies
+
+\[
+(G_1)_{ij}=s_i s_j(G_0)_{p_i p_j}.
+\tag{25}
+\]
+
+The analogous column-Gram identity uses
+
+```text
+p' = (1,2,0,5,6,11,12,9,10,3,4,13,14,7,8,15,16,17,18,19,20,21,22)
+s' = (1,1,1,1,1,-1,-1,1,1,-1,-1,1,1,-1,-1,1,1,1,1,1,1,1,1).
+```
+
+Thus both Grams of `R1` lie in the same signed-permutation classes as those
+of `R0`.  In particular, applying (25) transports the radius-six local Gram
+theorem to this second matrix class.
+
+### Exact H-inequivalence
+
+Hadamard equivalence bijects the `k`-by-`k` minors and preserves their
+absolute determinants.  Exhausting all
+`binom(23,4)^2=78,411,025` four-minors gives
+
+| matrix | `|det|=0` | `|det|=8` | `|det|=16` |
+|---|---:|---:|---:|
+| `R0` | 45,245,701 | 31,659,704 | 1,505,620 |
+| `R1` | 45,247,429 | 31,657,400 | 1,506,196 |
+
+The counts in either row sum to 78,411,025; their disagreement proves that
+`R0` and `R1` are not H-equivalent.  The C++ checker obtains each 4-minor by
+normalizing its first row and column and reducing it to eight times the
+determinant of a 3-by-3 zero-one matrix.
+
+For an independent invariant, fix four rows and regard every column sign
+pattern modulo complement, giving eight projective patterns.  Canonicalize
+the eight-bin histogram under all 192 signed permutations of the selected
+four rows, then take the multiset over all 8,855 row subsets.  Signed row and
+column permutations preserve this multiset.  The canonical signature
+
+```text
+(2,3,3,2,3,3,3,4)
+```
+
+has multiplicity 2,508 for `R0` and 2,460 for `R1`.  The complete profiles
+have respectively 29 and 31 signature types and SHA-256 values
+`7c65ef560b5f9f212909c2bb8e982dfbee240ec989031fcbf4b752bff357c90b`
+and
+`b5fd7c94de3fe7d27f7e9bf40054584a6710f8e322ac2237138586de8bc792c9`.
+This second certificate is definition-level Python and does not rely on
+nauty or another graph-isomorphism implementation.

@@ -67,10 +67,45 @@ orbits, of sizes `12, 24, 24, 24, 96, 192`.  The 12 record-equality cases
 form one orbit.  The two 24-element orbits immediately below the record have
 the same determinant but are not related by an automorphism of `G0`.
 
+The artifact now also supplies `record23_class2.txt`, a second exact record
+matrix `R1`.  It differs from `R0` in 12 entries and has
+
+```text
+|det(R1)| = L.
+```
+
+Nevertheless, `R1` is not Hadamard-equivalent to `R0`: their exhaustive
+absolute 4-by-4 minor distributions, listed for determinant magnitudes
+`0,8,16`, are
+
+```text
+R0: 45245701, 31659704, 1505620
+R1: 45247429, 31657400, 1506196.
+```
+
+Signed row and column permutations are bijections on minors of each size, so
+this discrepancy is an exact inequivalence certificate.  Explicit signed
+permutations in both checkers map `R1 R1^T` and `R1^T R1` to the corresponding
+Grams of `R0`.  Thus the local Gram classification above applies, after the
+displayed normalization, to at least two distinct H-classes among the 14 or
+more record classes reported in the literature.
+
+The second class is found without randomized search.  For each core index
+`c=0,1,2`, independently choose one of the three four-vertex blocks, one of
+its two twin pairs for two flips in row `c`, and one twin pair for two flips
+in column `c`.  These `12^3=1728` structured 12-flip matrices have exactly
+770 absolute determinant values.  Exactly two labeled choices attain `L`,
+and none exceeds it; `R1` is one of the two.  The C++ program exhausts this
+family and the complete 4-minor distributions.  An independent Python
+checker instead separates the H-classes by a canonical four-row
+column-pattern profile: the signature `(2,3,3,2,3,3,3,4)` occurs 2,508 times
+for `R0` and 2,460 times for `R1`.
+
 This does **not** determine the maximal determinant in order 23.  Graph-valued
 candidate Gram matrices at distance seven or farther from `G0`, arbitrary
 legal-entry matrices at distance four or farther, and neighborhoods of other
-record designs remain untreated.
+Gram classes represented by the remaining known record designs remain
+untreated.
 
 ## Exact census
 
@@ -192,6 +227,10 @@ python3 verify_radius6.py radius6_result.json
 python3 candidate_obstructions.py
 python3 candidate_orbit_obstructions.py > candidate_orbit_result.json
 python3 verify_candidate_orbit_obstructions.py candidate_orbit_result.json
+g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow -pedantic \
+  multicenter.cpp -o multicenter
+./multicenter record23.txt record23_class2.txt
+python3 verify_multicenter.py
 ```
 
 The terminal output ends with
@@ -208,6 +247,8 @@ radius-six canonical orbit enumeration and modular sieve verified
 exact radius-six symmetry-quotient certificate verified
 both record-beating radius-six Gram candidates are indecomposable
 symmetry-compressed sign-column certificate verified
+second H-class and signed Gram-center equivalence verified
+the two record matrices are Hadamard-inequivalent
 ```
 
 `enumerate.cpp` performs 172,701,826 evaluations, including the overlapping
@@ -256,6 +297,12 @@ takes about 19 seconds.  The deterministic
 `candidate_orbit_certificate.json` SHA-256 is
 `8b8a282bdcaacaea67f9c354fc40e2637a61ddb510864aa3e7b3d4e199c5a764`.
 
+The multicenter C++ census takes about three seconds on one core; the
+independent Python checker takes about five seconds.  They use different
+H-invariants (complete 4-minor distribution versus canonical four-row
+pattern profile), while both verify the exact determinants, the structured
+switch family, and explicit signed Gram congruences.
+
 An optional SAT experiment can be regenerated with
 `python3 candidate_sat_certificates.py /tmp/order23-sat`.  At official-source
 commits `c60730422e758ef1cebe7aeddf2dda31c996bf04` (CaDiCaL 3.0.1) and
@@ -277,9 +324,12 @@ results; the relevant definitions and algorithms are given by
 At least 14 inequivalent order-23 matrices attaining the same record were
 already known by 2005; see Orrick's
 [*On the enumeration of some D-optimal
-designs*](https://arxiv.org/abs/math/0511141).  This artifact is anchored to
-the particular published matrix `R0`.  It does not assert that the Gram
-neighborhoods of the other record designs are equivalent to this one.
+designs*](https://arxiv.org/abs/math/0511141).  The second class certified
+here is therefore not claimed as a new count of record designs.  The advance
+is an explicit reproducible second representative and a proof that its row
+and column Grams lie in the signed-permutation class of the center already
+classified.  No claim is made about the Gram classes of the remaining known
+record designs.
 
 The present result is a local certificate around the order-23 record.  No
 claim is made that the local neighborhood had previously been studied, or
@@ -313,4 +363,8 @@ compact obstruction additionally trusts only the explicit candidate
 permutation subgroups and their elementary binary-color orbit classification;
 the checker expands the reported solution orbits and compares them exactly to
 the full Gray-code result.  The optional SAT traces are not part of the
-published proof boundary.
+published proof boundary.  The multicenter extension trusts exhaustive exact
+enumeration of a stated 1,728-member switch family and invariance of minor
+distributions under signed permutations.  Its independent checker uses the
+separate elementary four-row projective-pattern invariant; no graph
+isomorphism package or floating-point determinant enters the certificate.

@@ -18,5 +18,7 @@ frontier:
 4. W. P. Orrick, [*On the enumeration of some D-optimal
    designs*](https://arxiv.org/abs/math/0511141).  Its survey of known
    classifications reports at least 14 inequivalent order-23 matrices
-   attaining the current determinant record.  This bounds the scope of the
-   present computation, which is centered at one specified record matrix.
+   attaining the current determinant record.  This bounds the novelty claim
+   for the explicit second H-class here: its existence is not claimed as a
+   new record-class count.  The certified same-Gram-center relation and local
+   classification transfer are the new computational content.
