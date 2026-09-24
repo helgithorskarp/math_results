@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import math
 import sys
@@ -65,6 +66,9 @@ EXPECTED_SQUARE_SHA256 = (
 EXPECTED_ABOVE_SHA256 = (
     "9a9c32da935a1a0d7e54e9b5bfad82eb00f0a329e17862c5b5fd2c58aa73abb4"
 )
+EXPECTED_MANIFEST_SHA256 = (
+    "620a30c9b8cb199de869f135e9667ba945d8607e845a2eac047c4de2acc50954"
+)
 
 
 def independent_underlying_orbit_count() -> int:
@@ -93,12 +97,82 @@ def decode_candidate(
     return matrix
 
 
-def main() -> None:
-    if len(sys.argv) != 2:
-        raise SystemExit(
-            "usage: python3 verify_radius4_arbitrary.py CERTIFICATE.json"
+def verify_shard_manifest(
+    path: Path, certificate_path: Path, certificate: dict
+) -> None:
+    manifest_bytes = path.read_bytes()
+    assert hashlib.sha256(manifest_bytes).hexdigest() == EXPECTED_MANIFEST_SHA256
+    manifest = json.loads(manifest_bytes)
+    assert manifest["schema"] == "radius4-arbitrary-shard-manifest-v1"
+    assert manifest["shard_count"] == certificate["shard_count"] == 32
+    here = Path(__file__).resolve().parent
+    assert manifest["generator_sha256"] == hashlib.sha256(
+        (here / "radius4_arbitrary.cpp").read_bytes()
+    ).hexdigest()
+    assert manifest["merger_sha256"] == hashlib.sha256(
+        (here / "merge_radius4_arbitrary.py").read_bytes()
+    ).hexdigest()
+    assert manifest["certificate_sha256"] == hashlib.sha256(
+        certificate_path.read_bytes()
+    ).hexdigest()
+    assert manifest["certificate_survivor_encoding_sha256"] == certificate[
+        "survivor_encoding_sha256"
+    ]
+
+    shards = manifest["shards"]
+    assert len(shards) == 32
+    assert [item["shard"] for item in shards] == list(range(32))
+    partition_totals = {
+        name: {"internally_colored_graphs": 0, "underlying_edit_set_orbits": 0}
+        for name in ("4", "3+1", "2+2", "2+1+1", "1+1+1+1")
+    }
+    for item in shards:
+        assert item["json_size_bytes"] > 0
+        assert len(item["json_sha256"]) == 64
+        assert len(item["survivor_encoding_sha256"]) == 64
+        assert len(item["witness_counts"]) == 48
+        assert item["normalized_cover_evaluations"] == (
+            10_000 * item["underlying_edit_set_orbits"]
         )
-    result = json.loads(Path(sys.argv[1]).read_text())
+        assert sum(item["witness_counts"]) + item[
+            "survives_48_nonsquare_tests"
+        ] == item["normalized_cover_evaluations"]
+        for partition in item["partitions"]:
+            totals = partition_totals[partition["partition"]]
+            totals["internally_colored_graphs"] += partition[
+                "internally_colored_graphs"
+            ]
+            totals["underlying_edit_set_orbits"] += partition[
+                "underlying_edit_set_orbits"
+            ]
+    assert [
+        {"partition": name, **partition_totals[name]}
+        for name in ("4", "3+1", "2+2", "2+1+1", "1+1+1+1")
+    ] == certificate["partitions"]
+    totals = manifest["totals"]
+    assert totals["internally_colored_underlying_graphs"] == certificate[
+        "internally_colored_underlying_graphs"
+    ]
+    assert totals["underlying_edit_set_orbits"] == certificate[
+        "underlying_edit_set_orbits"
+    ]
+    assert totals["normalized_cover_evaluations"] == certificate[
+        "normalized_cover_evaluations"
+    ]
+    assert totals["survives_48_nonsquare_tests"] == certificate[
+        "survives_48_nonsquare_tests"
+    ]
+    assert totals["witness_counts"] == certificate["witness_counts"]
+
+
+def main() -> None:
+    if len(sys.argv) not in (2, 3):
+        raise SystemExit(
+            "usage: python3 verify_radius4_arbitrary.py "
+            "CERTIFICATE.json [SHARD_MANIFEST.json]"
+        )
+    certificate_path = Path(sys.argv[1])
+    result = json.loads(certificate_path.read_text())
     gram = gram_matrix(read_record())
     edges = tuple((left, right) for left in range(23) for right in range(left))
     assert bareiss_determinant(gram) == RECORD**2
@@ -164,6 +238,8 @@ def main() -> None:
     ]
     assert all(value > 0 for value in leading_minors[:13])
     assert leading_minors[13] == -43_620_761_600_000
+    if len(sys.argv) == 3:
+        verify_shard_manifest(Path(sys.argv[2]), certificate_path, result)
 
     print(
         json.dumps(

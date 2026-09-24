@@ -1150,3 +1150,14 @@ row-permutation encoding, and all leading minors through the obstruction in
 (45).  Canonical SHA-256 digests bind the complete survivor stream and its
 exact roots.  The modular sieve is only a lossless rejection stage; the final
 claims use exact integer arithmetic throughout.
+
+The 44.4 MB of raw shard JSON is regenerable and is not committed.  The
+compact `radius4_arbitrary_shard_manifest.json` instead records, for every
+shard, its exact byte length and SHA-256 together with all five partition
+counts, all 48 first-witness counts, the survivor count, and a canonical
+survivor-encoding SHA-256.  Its global sums reproduce (43), the 1,886,683
+internal objects, and the 990,410 survivors.  The manifest generator checks
+every local accounting identity before emitting these checkpoints; the
+definition-level verifier checks their global consistency with the compact
+certificate.  This localizes any reproduction discrepancy without making the
+manifest a second canonical-generation proof.

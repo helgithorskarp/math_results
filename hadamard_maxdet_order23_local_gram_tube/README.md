@@ -255,7 +255,10 @@ root `2,791,505,920,000,000 > L`.  The latter matrix is not positive definite:
 its order-14 leading principal minor is exactly `-43,620,761,600,000`.  The
 equality encoding belongs to the already certified 12-element
 row-permutation orbit.  Thus no order-23 sign Gram in the full arbitrary
-legal-entry radius-four neighborhood beats the record.
+legal-entry radius-four neighborhood beats the record.  The compact shard
+manifest records the exact JSON hash, five partition counts, 48-prime witness
+distribution, survivor count, and survivor digest for each of the 32 omitted
+bulk shard files.
 
 As a retained directional control, the enumerator also checks the 148,995
 ways to delete four existing `3`-edges.  This overlaps the radius-four
@@ -358,7 +361,13 @@ seq 0 31 | xargs -P 8 -I SHARD sh -c \
    2> /tmp/radius4-arbitrary-parts/part_SHARD.log'
 python3 merge_radius4_arbitrary.py -o radius4_arbitrary_result.json \
   /tmp/radius4-arbitrary-parts/part_*.json
-python3 verify_radius4_arbitrary.py radius4_arbitrary_result.json
+python3 make_radius4_arbitrary_manifest.py \
+  -o radius4_arbitrary_shard_manifest_result.json \
+  radius4_arbitrary_result.json /tmp/radius4-arbitrary-parts/part_*.json
+cmp radius4_arbitrary_shard_manifest_result.json \
+  radius4_arbitrary_shard_manifest.json
+python3 verify_radius4_arbitrary.py radius4_arbitrary_result.json \
+  radius4_arbitrary_shard_manifest_result.json
 g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow -pedantic \
   radius6.cpp -o radius6
 ./radius6 record23.txt > radius6_result.json
@@ -468,6 +477,10 @@ fraction-free Sylvester elimination, and emitted the compact certificate
 `radius4_arbitrary_certificate.json`.  Its SHA-256 is recorded in
 `SHA256SUMS`; the canonical survivor-encoding SHA-256 is
 `1bc15ff2431fb08ec0ad7faedefe8eff124e88f735a00e9a33f2e7e7cef803de`.
+`radius4_arbitrary_shard_manifest.json` supplies 32 compact restart and
+reproduction checkpoints; regenerating it from the omitted shard files is
+byte-identical, with SHA-256
+`620a30c9b8cb199de869f135e9667ba945d8607e845a2eac047c4de2acc50954`.
 
 The radius-six C++ run takes about 9 minutes 44 seconds on one core and peaks
 at 289,908 KiB resident memory.  The independent Python checker takes about
@@ -583,6 +596,9 @@ stabilizer-equivalent valued edits have been deduplicated.  The radius-four
 modular survivors are evaluated through the exact determinant lemma over
 Python integers, and its sole above-record square is rejected by an exact
 negative leading principal minor.  No floating-point filter is used.  The
+per-shard manifest binds every omitted raw JSON output by SHA-256 and preserves
+all local count and witness summaries without treating the manifest as an
+independent proof of canonical coverage.  The
 radius-six decomposition obstruction
 trusts the identity `R^T(RR^T)^{-1}R=I` and exhaustive Gray-code traversal of
 the normalized sign cube; exact rational inversion is checked by multiplying
