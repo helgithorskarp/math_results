@@ -1,7 +1,13 @@
 # Uniform realization of robust triangle profiles
 
-Complete author proof, awaiting independent mathematical review. This package
-extends the [accepted fixed rational-ray result](../tuza_rational_ray_rounding/README.md)
+Independently accepted with high confidence at Discovery Net h5850:
+[full review](../tuza_uniform_profile_realization_review1/REVIEW.md).
+The review audited source commit `2460d4f3574e852d0cb10081b5844c5b5c9d992e`
+and added independent role and padded-embedding checks. The proof, code and
+certificates are unchanged by this status update. Acceptance is restricted
+to the hypotheses below; it does not automatically validate later extensions.
+
+This package extends the [accepted fixed rational-ray result](../tuza_rational_ray_rounding/README.md)
 to varying proportions and real profile values in a specified robust region.
 The new mechanism assigns integer vertex roles and uses private auxiliary
 edges to prescribe the number of copies of each component in a family

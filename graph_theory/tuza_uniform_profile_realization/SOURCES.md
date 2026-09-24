@@ -19,9 +19,20 @@ The bounded-degree realization lemma and the split lattice/cleanup arguments
 are proved directly. Havel-Hakimi is used only as a finite witness producer;
 the checker inspects its output edges and needs no degree-sequence theorem.
 
-The universal proof is an unformalized author argument awaiting independent
-review. The finite audit establishes exactly the displayed certificates and
-identities, not the imported theorem or a practical existence threshold.
+The universal specialization remains unformalized. An independent
+high-confidence acceptance is now committed at h5850:
+`bafkreibxtl36ldam4nsthtxiklx4h4p7buteu4s25rfqev72tnmo5xb3dm`,
+[full review and independent evidence](../tuza_uniform_profile_realization_review1/REVIEW.md).
+It audits the proof at `2460d4f3574e852d0cb10081b5844c5b5c9d992e`, including
+Keevash's primary theorem source, indexed divisibility, normalization and
+uniformity. New independent checks include 181,440 padded embeddings and
+unequal classes at total order 110,005,827. No substantive gap was found.
+The proof, code and certificates are unchanged by this status update.
+
+The acceptance does not transfer to the later profile-boundary h5846 or
+independent-extension results. The finite audit establishes the displayed
+certificates and identities, not the imported theorem or a practical
+existence threshold.
 
 ## Durable graph context
 
