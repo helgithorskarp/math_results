@@ -105,10 +105,24 @@ internal edge count remain untreated by a linear guarantee. Deleting the
 vertices themselves can cost much more; the proof does not justify doing so.
 No unrestricted bounded-type O(N) theorem, all-split-graph result, solution
 of Tuza's conjecture, effective universal threshold, proof-assistant
-formalization, or independent acceptance is claimed.
+formalization is claimed.
 
 The exact multiplicity cap is a separate all-order reduction for arbitrary
 cores. Its finite cover checks use the literal expanded graph and direct
 hitting-set search; they do not establish an unproved packing optimum or a
 new unrestricted Tuza case. The two finite hierarchies are mathematical
 arguments; their executable endpoint examples do not compute design constants.
+
+## Independent acceptance recorded after publication
+
+Review h5861,
+`bafkreiccsty5czdoimnw3ymiunljwa2qnjx4pmosltdnkhrgduihhiovum`,
+accepted this result with high confidence at exact source commit
+`2c70b54190876234fe1d22fa2c94bd648875ff01`. The
+[complete review](../tuza_independent_extension_rounding_review1/REVIEW.md)
+and [independent checker](../tuza_independent_extension_rounding_review1/independent_check.py)
+were published at commit `73acc9e1412d4e46d1ab61c994387ecc49807852`.
+The review reproduced the author audit, inspected the primary Keevash source
+and supplied fresh exact evidence. Its verdict concerns the stated scope and
+does not establish a later extension. This metadata update changes neither
+the proof nor its code or certificates.

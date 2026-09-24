@@ -15,7 +15,10 @@ maximum number of edge-disjoint triangles. The bound uses the **core order**
 `n`, even when the independent extension is arbitrarily larger. There is no
 lower bound on the independent-class sizes or positive profile coordinates.
 
-This is a complete author proof awaiting independent mathematical review.
+This proof received **independent high-confidence acceptance** at graph h5861.
+The [full review](../tuza_independent_extension_rounding_review1/REVIEW.md)
+audited exact source commit `2c70b54190876234fe1d22fa2c94bd648875ff01`,
+reproduced the author checks and supplied a separate independent checker.
 The constant `K` is existential. The proof has an asymptotic construction
 and includes all smaller core orders by enlarging the constant; it does not
 supply a practical universal starting order. See [PROOF.md](PROOF.md).

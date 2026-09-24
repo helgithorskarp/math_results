@@ -1,0 +1,211 @@
+{
+  "affine_designs": [
+    {
+      "order": 3,
+      "sha256": "100151846910eef0db7e3dbad564b7d235998f44c8c2a8971c919aa7664ab647"
+    },
+    {
+      "order": 9,
+      "sha256": "b2a22d78d8b898d187900f33f53525e3b68be3b2cdaf4525e2658440689ff5c0"
+    },
+    {
+      "order": 27,
+      "sha256": "cb38f9c1cf4059d710baf19926708bb8c5edac62419ad3bfb5a06007f31c0f92"
+    },
+    {
+      "order": 81,
+      "sha256": "df84f5cea2ef5c66d6ca9638d89981a0b4fc892eb43cf7730569b9976d05f207"
+    }
+  ],
+  "clique_stages": {
+    "instances": 105,
+    "recoloring_paths": 31921,
+    "records_sha256": "a5af310dbb36c81cbf982571cae4f3e9f0d54489cb989b2577a37c6f8c184181"
+  },
+  "equitable_coloring": {
+    "instances": 2285,
+    "records_sha256": "864d9a8d0480cfa34f17615e6be7242cc972584076f797eca46c0dbf8d2e5432",
+    "replayed_paths": 6217,
+    "seed": 20260924
+  },
+  "exhaustive_flow_rounding": {
+    "instances": 5307,
+    "records_sha256": "7752b9ba6a37b9652e5da7eec9b6b6affd5ede8013bbd56d75c50c8fdb0cd6c3"
+  },
+  "integrated_extensions": [
+    {
+      "XHH_triangles": 33660,
+      "certificate_sha256": "f3e07c93004825ca7aea8742dfad789aaece56a713def8ba9d453a130367ce96",
+      "clique_order": 22,
+      "core_order": 3072,
+      "dense_matching_checks": 22,
+      "exact_external_loss": "605/21",
+      "flow_column_discrepancies": [
+        "373/128"
+      ],
+      "matching_repairs": 87,
+      "maximum_core_degree": 22,
+      "maximum_type_discrepancy": "373/128",
+      "name": "clique_core_saturated_spokes",
+      "preserved_core_fractional_mass": "32783771/42",
+      "residual_core_spare_mass": "32783773/14",
+      "stage": {
+        "XXH_triangles": [
+          104
+        ],
+        "internal_triangles": 13,
+        "recoloring_paths": 93,
+        "remainder_degree_spread": 4
+      },
+      "triangles": 33777,
+      "triangles_sha256": "79cb4d95823c3451d8804275fe1aa34c7d5460a77672dd46a1c800667bf5e40c",
+      "universal_elementary_bounds": true
+    },
+    {
+      "XHH_triangles": 126000,
+      "certificate_sha256": "dc9620ff695d64f13f96fae9a752b22c1020e2e967151a05dc73357573ba1d3f",
+      "clique_order": 24,
+      "core_order": 12100,
+      "dense_matching_checks": 72,
+      "exact_external_loss": "217/6",
+      "flow_column_discrepancies": [
+        "3/5",
+        "1",
+        "54/61",
+        "132/61"
+      ],
+      "matching_repairs": 51,
+      "maximum_core_degree": 22,
+      "maximum_type_discrepancy": "132/61",
+      "name": "two_clique_core_all_edge_types",
+      "preserved_core_fractional_mass": "146059795/24",
+      "residual_core_spare_mass": "438523805/8",
+      "stage": {
+        "XXH_triangles": [
+          58,
+          68
+        ],
+        "internal_triangles": 20,
+        "recoloring_paths": 113,
+        "remainder_degree_spread": 4
+      },
+      "triangles": 126146,
+      "triangles_sha256": "a0c52dc56f34259860109cf9e928a760d751a0f72110f54c015a6a4ffa46544c",
+      "universal_elementary_bounds": true
+    },
+    {
+      "XHH_triangles": 52000,
+      "certificate_sha256": "956cecb84396f1b242a6f60f86ce26b881073ecf4491761905340ef78b032866",
+      "clique_order": 26,
+      "core_order": 12200,
+      "dense_matching_checks": 26,
+      "exact_external_loss": "365/12",
+      "flow_column_discrepancies": [
+        "2/3",
+        "43/31"
+      ],
+      "matching_repairs": 8,
+      "maximum_core_degree": 9,
+      "maximum_type_discrepancy": "43/31",
+      "name": "bipartite_core_with_clique_extension",
+      "preserved_core_fractional_mass": "0",
+      "residual_core_spare_mass": "37148000",
+      "stage": {
+        "XXH_triangles": [
+          76,
+          87
+        ],
+        "internal_triangles": 24,
+        "recoloring_paths": 148,
+        "remainder_degree_spread": 2
+      },
+      "triangles": 52187,
+      "triangles_sha256": "ca13f223f235667c2c689afad51ed45f27763291bdb6c7eb655c6f02c583a27c",
+      "universal_elementary_bounds": true
+    }
+  ],
+  "negative_controls": [
+    "nonpartition_parallel_class",
+    "forbidden_spoke",
+    "wrong_row_degree",
+    "column_overload",
+    "infeasible_row_quota",
+    "improper_initial_coloring",
+    "missing_triangle",
+    "wrong_uniform_quota",
+    "missing_allocated_spoke",
+    "repeated_matching_endpoint"
+  ],
+  "parameter_endpoints": {
+    "instances": 144,
+    "records_sha256": "aa030a11991a10b26c0a2bc146d843d3e2df290c80c29d2f6044891826652272"
+  },
+  "scope": "finite elementary bridge only; Kirkman and dense core existence remain imported",
+  "status": "PASS",
+  "superlinear_internal_edge_profiles": {
+    "profiles": [
+      {
+        "XHH_mass": "40751458785664",
+        "XHH_rounding_loss": "170368",
+        "XXX_mass": "38700283776",
+        "clique_order": 681472,
+        "core_order": 119939072,
+        "each_XXH_mass": "58050425664",
+        "internal_edges": 232201702656,
+        "internal_edges_per_core_vertex": "681471/352",
+        "quota": 59799168,
+        "t": 88
+      },
+      {
+        "XHH_mass": "44107089749031",
+        "XHH_rounding_loss": "0",
+        "XXX_mass": "124245146498/3",
+        "clique_order": 704969,
+        "core_order": 125484482,
+        "each_XXH_mass": "62122573249",
+        "internal_edges": 248490292996,
+        "internal_edges_per_core_vertex": "176242/89",
+        "quota": 62565999,
+        "t": 89
+      },
+      {
+        "XHH_mass": "99750000250000",
+        "XHH_rounding_loss": "250000",
+        "XXX_mass": "83333250000",
+        "clique_order": 1000000,
+        "core_order": 200000000,
+        "each_XXH_mass": "124999875000",
+        "internal_edges": 499999500000,
+        "internal_edges_per_core_vertex": "999999/400",
+        "quota": 99750000,
+        "t": 100
+      },
+      {
+        "XHH_mass": "999750000000250000000",
+        "XHH_rounding_loss": "250000000",
+        "XXX_mass": "83333333250000000",
+        "clique_order": 1000000000,
+        "core_order": 2000000000000,
+        "each_XXH_mass": "124999999875000000",
+        "internal_edges": 499999999500000000,
+        "internal_edges_per_core_vertex": "999999999/4000",
+        "quota": 999750000000,
+        "t": 1000
+      },
+      {
+        "XHH_mass": "9999750000000000250000000000",
+        "XHH_rounding_loss": "250000000000",
+        "XXX_mass": "83333333333250000000000",
+        "clique_order": 1000000000000,
+        "core_order": 20000000000000000,
+        "each_XXH_mass": "124999999999875000000000",
+        "internal_edges": 499999999999500000000000,
+        "internal_edges_per_core_vertex": "999999999999/40000",
+        "quota": 9999750000000000,
+        "t": 10000
+      }
+    ],
+    "records_sha256": "0c16afece8045293b6a79e66ece40fef2f5209020e6d9b78cdffd91001702f5c",
+    "scope": "exact feasible fractional profiles and explicit parameter inequalities; no large packing is materialized"
+  }
+}
