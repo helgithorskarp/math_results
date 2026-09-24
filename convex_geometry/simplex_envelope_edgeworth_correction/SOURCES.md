@@ -42,3 +42,12 @@ search-relative novelty statement, not certification of historical
 priority. Multivariate Edgeworth expansion itself is classical and is not
 claimed as new; the advance is its singular-mixture implementation and the
 resulting exact first correction for these constants.
+
+The follow-up all-orders search on 23 September 2026 additionally used
+“all-order asymptotic expansion,” “Poincaré expansion,” and “higher-order
+Orlicz volume.” It located the same leading-volume, Maxwell-principle, and
+large-deviation literature, but no primary result giving a full expansion
+for this exact diagonal section or the displayed second coefficient. The
+source graph target for that follow-up is Discovery Net artifact
+`bafkreieagokxm3ks7m75uj3muwb3fymbmkcedg4wcfiy3i7yxnx4e55kku`,
+committed at height 5671.

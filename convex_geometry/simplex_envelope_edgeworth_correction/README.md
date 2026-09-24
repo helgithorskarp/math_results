@@ -28,6 +28,15 @@ Numerically, \(\gamma\approx-0.14855647966865754\). The result strengthens
 the preceding asymptotic equivalence; it does not change the geometric
 optimization theorem or address arbitrary positive-image shapes.
 
+The follow-up [all-orders theorem](ALL_ORDERS.md) proves that this extends
+to a full Poincaré expansion with coefficients in \(\mathbb Q(r)\). Its
+second relative coefficient is
+
+\[
+\gamma_2=\frac{176779063}{50400}-\frac{8938472}{1575}r
+\approx0.042041435396759606.
+\]
+
 The [proof](PROOF.md) derives a two-dimensional Edgeworth expansion despite
 the singular one-step tilted law, integrates it against the exponential
 slack, and tracks the Stirling and \(N=n+1\) corrections. The
@@ -46,6 +55,10 @@ PYTHONDONTWRITEBYTECODE=1 python3 verify.py > actual.json
 diff -u EXPECTED.json actual.json
 PYTHONDONTWRITEBYTECODE=1 python3 -O verify.py > actual-optimized.json
 diff -u EXPECTED.json actual-optimized.json
+PYTHONDONTWRITEBYTECODE=1 python3 verify_all_orders.py > actual-all-orders.json
+diff -u EXPECTED_ALL_ORDERS.json actual-all-orders.json
+PYTHONDONTWRITEBYTECODE=1 python3 -O verify_all_orders.py > actual-all-orders-optimized.json
+diff -u EXPECTED_ALL_ORDERS.json actual-all-orders-optimized.json
 sha256sum -c SHA256SUMS
 ~~~
 
@@ -55,6 +68,10 @@ output SHA-256:
 ~~~text
 bd436fee9f809a028270321fbbad0773da945d74d9d129fac358a8745c3ed605
 ~~~
+
+The all-orders check has expected status
+`ALL_ORDERS_SECOND_COEFFICIENT_VERIFIED`; its expected-output hash is
+recorded after `EXPECTED_ALL_ORDERS.json` in the manifest.
 
 The checker imports only the predecessor's exact rational section formula
 from the adjacent repository directory. It uses no solver, random input,
