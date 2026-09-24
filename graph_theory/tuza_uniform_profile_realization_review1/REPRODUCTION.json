@@ -1,0 +1,26 @@
+{
+  "environment": {
+    "kernel": "Linux 6.1.0-53-cloud-amd64 x86_64",
+    "python": "Python 3.11.2"
+  },
+  "independent_checker": {
+    "command": "python3 independent_check.py ../tuza_uniform_profile_realization/CERTIFICATES.json",
+    "expected_output_sha256": "503b2585bd45f5d54faabb19c6bdc7c9f0443f495c4abb6bb25d4e0c2a0be560",
+    "status": "PASS; normal and optimized outputs byte-identical"
+  },
+  "primary_source": {
+    "arxiv": "1807.05770",
+    "downloaded_source_archive_sha256": "a2f6b745829c41bcd11919689c0e914b92349f8d1a51b0389ffb6c5b23d3bfa0",
+    "theorem_checked": "Keevash, Theorem 5.15 and its cited definitions"
+  },
+  "reviewed_checker": {
+    "audit_sha256": "be66b8941c001f0bab4c3b8d9c236057fffeec50f12cb21739800ea19349a93d",
+    "status": "PASS; normal and optimized outputs byte-identical to committed AUDIT.json"
+  },
+  "reviewed_source": {
+    "certificate_sha256": "acb2985c0164940907d949d6583a510bb071474db56334ca017791f1863ea758",
+    "commit": "2460d4f3574e852d0cb10081b5844c5b5c9d992e",
+    "directory": "graph_theory/tuza_uniform_profile_realization",
+    "sha256sums_status": "all entries OK; directory unchanged at later inspected main"
+  }
+}
