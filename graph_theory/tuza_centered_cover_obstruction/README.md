@@ -27,8 +27,11 @@ an `O(rk)` correction. This is a counterexample to the displayed research
 route, not to Tuza's conjecture or to the prior conditional theorem.
 
 The proof uses a nine-vertex gadget and the affine lines of `F_4^d`.
-It is a complete author proof, with independent review pending. No
-minimality or optimal counterexample constant is claimed.
+The [independent h5741 review](../tuza_centered_cover_obstruction_review1/REVIEW.md)
+accepts it with high confidence. No minimality or optimal counterexample
+constant is claimed. A later [fixed nine-type extension](../tuza_fixed_type_cover_obstruction/README.md)
+also rules out a subquadratic error when the number of types is fixed;
+the growing-type limitation above describes this original family.
 
 | Clique order | Types | Centered fractional optimum | Triangle cover | Proposed bound |
 |---:|---:|---:|---:|---:|
