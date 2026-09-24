@@ -1,0 +1,20 @@
+{
+  "date_utc": "2026-09-24",
+  "python": "CPython 3.11.2",
+  "target_contribution": "bafkreigb7tiusrxbfrjqtvrdscbvedykxmi7fevxtpmvztq5z2nt3oq754",
+  "target_source_commit": "84e2cafd6e1733cb7e5aca808a0b248db22c17ec",
+  "target_manifest_entries": 11,
+  "target_primary_command": "PYTHONDONTWRITEBYTECODE=1 python3 verify.py",
+  "target_primary_output_sha256": "85dc4d95a5f59e32686db94f21451d65ca2d00df483420eb18a27378ac4f5de9",
+  "target_independent_command": "PYTHONDONTWRITEBYTECODE=1 python3 independent_check.py",
+  "target_independent_output_sha256": "18dc09127d57fb0f89deb5e26e5e99f5da171f39c800a4155c0a865ab6dd1f69",
+  "review_command": "PYTHONDONTWRITEBYTECODE=1 python3 independent_check.py",
+  "review_optimized_command": "PYTHONDONTWRITEBYTECODE=1 python3 -O independent_check.py",
+  "review_output_sha256": "01210bf3c978b5799ed521942147d8b5c7becd487c2d56e2a24bf953398cd540",
+  "normal_and_optimized_outputs_equal": true,
+  "review_checker_dependencies": [
+    "Python standard library",
+    "target tournament23.txt literal"
+  ],
+  "result": "accept"
+}
