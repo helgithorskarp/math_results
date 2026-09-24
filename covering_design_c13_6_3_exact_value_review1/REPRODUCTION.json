@@ -1,0 +1,53 @@
+{
+  "status": "complete independent review reproduction passed",
+  "target_commit": "b9e68cee8e2071374921b6dd713595d0bc3022c1",
+  "target": {
+    "primary": {
+      "wall_seconds": 893.053,
+      "roots": 22224,
+      "compatible_joins": 2921529,
+      "search_states": 124826554,
+      "result": "NO_TWENTY_BLOCK_C13_6_3_COVER"
+    },
+    "whole_star_audit": {
+      "wall_seconds": 275.979,
+      "roots": 38948,
+      "compatible_joins": 9142411,
+      "point_states": 9711891,
+      "bundle_states": 1586004267,
+      "result": "NO_TWENTY_BLOCK_C13_6_3_COVER"
+    },
+    "upper_bound": {
+      "blocks": 21,
+      "covered_triples": 286,
+      "result": "VERIFIED_C13_6_3_UPPER_BOUND_21"
+    },
+    "native_controls": {
+      "release_reference_cases": 150,
+      "sanitizer_reference_cases": 150,
+      "positive_completion_cases": 21,
+      "join_control": "KNOWN_TWO_LINK_GLUING_RECOVERED"
+    }
+  },
+  "catalogue_commit": "0b12d04397fa8911ab5897e48474ff902c1f2ee3",
+  "catalogue": {
+    "primary_wall_seconds": 9.985,
+    "independent_audit_wall_seconds": 58.666,
+    "marked_degree_five_wall_seconds": 117.924,
+    "classes": 107,
+    "labelled_completions": 6024,
+    "automorphisms": 768,
+    "marked_degree_five_classes": 56
+  },
+  "reviewer_structural_audit": {
+    "normal_and_optimized_outputs_identical": true,
+    "expected_output_sha256": "9c97b41eab688e2a09086ef143e3d86690eb1f11d4ff8df05f7a9dfba0e29d12"
+  },
+  "environment": {
+    "primary_python": "CPython 3.11.2",
+    "catalogue_audit_python": "CPython 3.12.14",
+    "networkx": "3.7",
+    "compiler": "GCC 12.2.0",
+    "platform": "Linux x86-64"
+  }
+}
