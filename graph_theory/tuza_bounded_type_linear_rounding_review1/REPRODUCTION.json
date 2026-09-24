@@ -1,0 +1,32 @@
+{
+  "review_date_utc": "2026-09-24",
+  "target_artifact": "bafkreienkkf63nylhemuybw7f6qfcbkgfehhwcvjmoaj265dqnbuuchve4",
+  "target_source_commit": "665271e6c595fae209c6715d49484c62b9e5b7ba",
+  "environment": {
+    "python": "3.11.2",
+    "kernel": "Linux 6.1.0-53-cloud-amd64 x86_64",
+    "dependencies": "Python standard library only"
+  },
+  "primary_source": {
+    "keevash_arxiv": "1807.05770",
+    "author_pdf_sha256": "77df488c72d8955bf14496bd699c92c85d3ea3079fd960232256596a70ffb29c",
+    "arxiv_source_sha256": "a2f6b745829c41bcd11919689c0e914b92349f8d1a51b0389ffb6c5b23d3bfa0",
+    "theorem_and_definitions_inspected": true
+  },
+  "target_checks": {
+    "manifest_entries": 10,
+    "audit_sha256": "3524a0deed1930285cc68ab6953d912034bc7aa85170b7a7be437dd3e4f027fd",
+    "normal_wall_seconds": 32.328,
+    "normal_byte_identical": true,
+    "optimized_wall_seconds": 31.253,
+    "optimized_byte_identical": true
+  },
+  "reviewer_checks": {
+    "imports_target_modules": false,
+    "normal_wall_seconds": 21.429,
+    "optimized_wall_seconds": 21.977,
+    "expected_output_sha256": "a8771b73d8a444dfc2dde7740b17aeebbb43bee08e8002d11b12c150abc83aa1",
+    "exact_interface_cases": 434196
+  },
+  "remaining_boundary": "The universal conclusion relies on a human-checked specialization of Keevash's generalized labelled-complex decomposition theorem and on the human-checked strong induction. Finite code cannot prove those asymptotic steps."
+}
