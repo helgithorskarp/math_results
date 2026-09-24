@@ -1,0 +1,176 @@
+{
+  "status": "COMPLETE_EXACT_SEARCHES_AND_VALIDATION_PASSED",
+  "date_utc": "2026-09-24T07:25:07.220287+00:00",
+  "claim": "C(13,6,3)=21",
+  "external_review": "pending for this result and the 107-class catalogue",
+  "environment": {
+    "python": "3.11.2",
+    "platform": "Linux x86-64",
+    "compiler": "c++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "python_production_dependencies": "standard library only",
+    "upstream_audit_environment": "Python 3.12.14; NetworkX 3.7"
+  },
+  "native_build": {
+    "release": "c++ -std=c++20 -O3 -Wall -Wextra -Wpedantic -Wconversion -fPIC -shared star_audit.cpp -o star_audit.so",
+    "checking": "c++ -std=c++20 -O1 -g -Wall -Wextra -Wpedantic -Wconversion -DCOVER_AUDIT_MAIN -fsanitize=address,undefined -fno-omit-frame-pointer star_audit.cpp -o star_audit_sanitize",
+    "compiler_diagnostics": "none",
+    "threading": "one native call at a time per process; separate process caches"
+  },
+  "full_packaged_replays": {
+    "primary": {
+      "command": "python3 verify.py --workers 3",
+      "workers": 3,
+      "returncode": 0,
+      "wall_seconds": 990.641,
+      "reported_child_peak_rss_kib": 43276,
+      "root_count": 22224,
+      "compatible_joins": 2921529,
+      "search_states": 124826554,
+      "bundle_states": 0,
+      "expected_file": "EXPECTED.json",
+      "expected_file_sha256": "1204705378ebe35601683e8c304b411805a82ac92b729a31f54ca5ce4c697c86",
+      "reference_generation_used_write_reference": true
+    },
+    "audit": {
+      "command": "python3 verify.py --method audit --workers 3",
+      "workers": 3,
+      "returncode": 0,
+      "wall_seconds": 429.435,
+      "reported_child_peak_rss_kib": 60604,
+      "root_count": 38948,
+      "compatible_joins": 9142411,
+      "search_states": 9711891,
+      "bundle_states": 1586004267,
+      "expected_file": "AUDIT_EXPECTED.json",
+      "expected_file_sha256": "0a1f9b9079d40648033bed675643af319fcfe94638d76a4a1f65322328679ed1",
+      "reference_generation_used_write_reference": true
+    }
+  },
+  "memory_measurement": "resource.getrusage(RUSAGE_CHILDREN).ru_maxrss; largest reported child high-water mark, not total memory across workers",
+  "prototype_comparison": {
+    "production_comparison": {
+      "primary": {
+        "status": "ALL_ROOT_RECORD_DIGESTS_MATCH",
+        "total_roots": 22224,
+        "compatible_joins": 2921529,
+        "per_design_records": 321
+      },
+      "audit": {
+        "status": "ALL_ROOT_RECORD_DIGESTS_MATCH",
+        "total_roots": 38948,
+        "compatible_joins": 9142411,
+        "per_design_records": 321
+      }
+    },
+    "independent_join_comparison": {
+      "twelve": {
+        "root_configuration_sets": 474,
+        "compatible_joins": 20681
+      },
+      "eleven": {
+        "root_configuration_sets": 3928,
+        "compatible_joins": 307532
+      },
+      "balanced": {
+        "root_configuration_sets": 5799,
+        "compatible_joins": 640625
+      }
+    }
+  },
+  "upper_bound": {
+    "status": "VERIFIED_C13_6_3_UPPER_BOUND_21",
+    "blocks": 21,
+    "covered_triples": 286,
+    "point_degrees": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      9,
+      10,
+      9,
+      9,
+      10,
+      10,
+      10,
+      9
+    ],
+    "triple_multiplicity_histogram": {
+      "1": 188,
+      "2": 73,
+      "3": 14,
+      "4": 11
+    },
+    "fixture_sha256": "98605f294cd4a765ffde035930da8bbd36127b93498ae9cd9e0f07e668f7e3da"
+  },
+  "completion_controls": {
+    "status": "POSITIVE_COMPLETIONS_AND_MUTATIONS_PASSED",
+    "positive_cases": 21,
+    "inconsistent_degree_cases": 3
+  },
+  "join_control": {
+    "status": "KNOWN_TWO_LINK_GLUING_RECOVERED",
+    "low_link_classes": [
+      [
+        5,
+        62
+      ],
+      [
+        7,
+        28
+      ],
+      [
+        8,
+        86
+      ],
+      [
+        12,
+        53
+      ]
+    ],
+    "first_design": 86,
+    "second_design": 62,
+    "shared_blocks": 4,
+    "fixed_blocks": 14,
+    "primary_identifications": 2,
+    "independent_unique_union": true
+  },
+  "compact_native_validation": {
+    "status": "NATIVE_REFERENCE_AND_CONTROLS_MATCH",
+    "cases": 150,
+    "point_states": 2040,
+    "bundle_states": 386211,
+    "sanitizer_checked": true,
+    "command": "python3 validate_native.py --sanitizer ./star_audit_sanitize",
+    "wall_seconds": 3.494,
+    "reported_child_peak_rss_kib": 18984,
+    "sanitizer_diagnostics": "none"
+  },
+  "native_python_balanced_prefix_comparison": {
+    "completed_roots": 13214,
+    "instances": 3559694,
+    "point_states": 3742205,
+    "bundle_states": 587973947,
+    "comparison": "all per-root fields other than wall time identical",
+    "full_python_audit_completed": false
+  },
+  "catalogue_input": {
+    "projected_entries": 107,
+    "projection_matches_upstream_entries_exactly": true,
+    "file": "LINKS.json",
+    "file_sha256": "9692432b695c08e844deefa60c727f603cbf59c0fa7cc6d9d00bcbc9a2944887",
+    "upstream_primary_replay_matches": true,
+    "upstream_independent_replay_matches": true,
+    "upstream_degree_bound_SAT_DRAT_replayed": false
+  },
+  "run_completion": {
+    "mathematical_time_or_node_limits": null,
+    "worker_partition": "for each N-root profile and w workers, interval i is [N*i//w,N*(i+1)//w)",
+    "merge_check": "every root index present exactly once; canonical order by root index",
+    "prototype_interruptions": "Two balanced primary workers ended with exit 143; only completed root records were retained and the remaining intervals were fully resumed. The cause of interruption was not established. Both final packaged replays completed uninterrupted.",
+    "python_reference_scope": "Balanced Python reference workers were deliberately stopped after completing the recorded prefixes; native audit completed every root.",
+    "preliminary_fixture_race": "One preliminary validation invocation ran before the fixture file existed and failed with FileNotFoundError. After fixture generation completed, the full 150-case validation passed."
+  },
+  "omitted": "raw root logs, search trees, upstream DRAT traces, binaries, caches and exploratory files; all substantive compact inputs and source are supplied"
+}
