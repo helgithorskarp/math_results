@@ -500,7 +500,7 @@ struct ConnectedCounts6 {
   std::uint64_t accepted = 0;
 };
 
-ConnectedCounts6 stream_connected6(
+[[maybe_unused]] ConnectedCounts6 stream_connected6(
     const std::vector<Shape6>& shapes, SquareSieve6& sieve) {
   const auto actions = outer_color_actions();
   ConnectedCounts6 counts;
@@ -552,6 +552,7 @@ ConnectedCounts6 stream_connected6(
 
 }  // namespace
 
+#ifndef RADIUS6_NO_MAIN
 int main(int argc, char** argv) {
   try {
     if (argc > 2)
@@ -649,3 +650,4 @@ int main(int argc, char** argv) {
     return 1;
   }
 }
+#endif

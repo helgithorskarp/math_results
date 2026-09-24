@@ -936,3 +936,126 @@ uses elementary ordered recursion only inside one fixed vertex neighborhood,
 expands the ten reported group orbits, and checks both forced completions of
 each representative.  Thus (36)--(37) do not depend on the original
 9,804,083-node 23-clique search.
+
+## 17. Multiplicity-first generation at radius seven
+
+Canonical augmentation of the 30 connected six-edge shapes is complete by
+the same edge-or-leaf deletion argument as Section 9.  It gives
+
+| vertices | 5 | 6 | 7 | 8 | total |
+|---:|---:|---:|---:|---:|---:|
+| connected seven-edge shapes | 4 | 19 | 33 | 23 | 79 |
+
+The last 23 shapes are precisely the unlabeled trees on eight vertices.
+Scanning all `11^8` color words for each tree is unnecessary.  Let `A` be
+the automorphism group of a fixed uncolored shape, let `H=S3 x C2` be the
+outer color group, and let `n(c)` be the color-multiplicity vector of a
+coloring `c`.  The actions of `A` and `H` commute, and `A` fixes `n(c)`.
+Choose one lexicographically least multiplicity vector in each `H`-orbit.
+If `H_n` is its stabilizer, then the full `(A x H)`-orbits whose chosen
+multiplicity vector is `n` are exactly the `(A x H_n)`-orbits of distinct
+multiset assignments with multiplicities `n`.  Indeed, any full orbit first
+has a unique chosen multiplicity-vector orbit, and two assignments above its
+chosen representative are full-equivalent exactly when the color action lies
+in `H_n`.  This proves both coverage and uniqueness of the multiplicity-first
+quotient.
+
+The implementation enumerates every capacity-bounded vector, takes its exact
+`H`-minimum, enumerates its distinct multiset assignments, and compares each
+assignment under `A x H_n`.  As a regression test, applying this new method
+to all 30 connected six-edge shapes gives exactly 4,361,518 classes, matching
+the independent radius-six generator.  On an asymmetric eight-vertex tree,
+the new method visits 11,832,590 assignments rather than `11^8` raw words.
+
+The component partition `(6,1)` is handled by adjoining a disjoint edge to
+each six-edge shape.  Its automorphism group is the direct product of the
+six-edge shape automorphisms and the endpoint transposition.  Thus the same
+multiplicity argument applies even when the resulting shape has nine
+vertices.  Every other disconnected partition of seven has components of at
+most five edges and is generated from the stored catalogue of Section 7.
+The connected-component multiset is unique, so these three cases are
+disjoint and exhaustive.
+
+The exact counts are
+
+| case | pre-quotient assignments represented | full symmetry classes |
+|---|---:|---:|
+| connected seven-edge shapes | 321,458,435 | 75,778,019 |
+| partition `(6,1)` | 1,225,628,975 | 158,015,168 |
+| remaining disconnected partitions | 14,527,883,922 | 1,269,767,232 |
+| total classes | -- | 1,503,560,419 |
+
+For the first two rows the middle column counts assignments above canonical
+color-multiplicity vectors; for the third it counts internally canonical
+colored component multisets, so those middle entries are not intended to be
+added as one common orbit statistic.  The final class count is exactly the
+radius-seven Burnside coefficient from Section 6.
+
+The computation is divided into 32 disjoint shards.  For multiplicity-first
+cases, the canonical multiplicity-vector ordinal chooses the shard.  For a
+stored-component partition, the first canonical component index chooses it.
+Every generated full orbit therefore belongs to exactly one shard.  The
+merger requires all shard labels once, sums every category and first-prime
+witness count, rejects duplicate survivors, and requires the Burnside total.
+
+## 18. Exact radius-seven survivors and sign obstructions
+
+First-nonresidue witnesses among the same 48 checked primes reject
+1,503,557,476 radius-seven classes and leave 2,943.  Independent fraction-free
+Bareiss elimination proves that every survivor determinant is a square.
+There are 2,436 distinct square roots, no root equals the record `L`, and the
+largest root below it is
+
+\[
+2777874432000000<L.
+\tag{38}
+\]
+
+Exactly 26 square roots exceed `L`; the largest is
+
+\[
+2838233088000000.
+\tag{39}
+\]
+
+All 23 leading principal minors of all 26 candidates are positive.  For each
+candidate `G`, `radius7_candidate_obstructions.py` checks an exact scaled
+inverse `G^{-1}=P/Q`, verifies `GP=QI`, and exhausts all `2^22` normalized
+sign vectors using the Gray-code update (21).  Eleven candidates have no
+vector satisfying `v^T P v=Q`.  For fourteen candidates, every admissible
+vector has one fixed pair product `v_i v_j=s`, but `23s` differs from the
+required entry `G_ij`.  These 25 matrices therefore cannot be sign Grams.
+
+The remaining candidate toggles edge indices
+
+```text
+(0,2,10,15,38,55,172)
+```
+
+and has square root `2799304704000000`.  It admits 424 normalized columns.
+Every one satisfies the exact identity (with zero-based row subscripts)
+
+\[
+1+v_{11}v_{13}+v_{11}v_{14}+v_{13}v_{14}=0.
+\tag{40}
+\]
+
+If 23 such columns formed a sign matrix `R`, summing (40) over the columns
+would give zero.  But the three corresponding entries of this candidate
+Gram are all 3, so `RR^T=G` would instead make the sum
+
+\[
+23+G_{11,13}+G_{11,14}+G_{13,14}=23+3+3+3=32,
+\tag{41}
+\]
+
+a contradiction.  Thus all 26 record-beating square Gram orbits are
+indecomposable.  Combined with the radius-six equality classification, this
+proves graph-valued local sign maximality and record-equality classification
+through distance seven.
+
+`verify_radius7.py` independently recomputes the Burnside coefficient, all
+2,943 determinants, the survivor-stream hash, every scaled inverse, all 26
+full normalized sign cubes, and each displayed obstruction.  The modular
+sieve never certifies a square; it only reduces the list on which exact
+integer arithmetic is performed.

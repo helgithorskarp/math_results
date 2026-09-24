@@ -33,6 +33,11 @@ This artifact proves the following finite local classification.
 >    `M=R R^T` for a sign matrix `R`, `M` is graph-valued, and its distance
 >    from `G0` is at most six, then `|det(R)| <= L`; equality occurs only in
 >    the cases described in part 2.
+> 4. At distance seven there are exactly 2,943 automorphism orbits with
+>    square determinant.  Exactly 26 have square root greater than `L`, none
+>    has square root equal to `L`, and all 26 record-beating matrices are
+>    positive definite but sign-indecomposable.  Consequently the conclusion
+>    of part 3 holds with distance seven in place of distance six.
 
 The twelve nontrivial equality cases have a simple description.  In each of
 the three four-vertex blocks
@@ -51,9 +56,25 @@ tests all matrices in the stated discrete neighborhoods, whether or not they
 are positive definite.  A parity-normalized Gram matrix of a nonsingular
 order-23 sign matrix satisfies the entry conditions in part 1, so the lemma
 excludes every record-beating sign decomposition in these neighborhoods and
-classifies graph-valued sign-Gram record equality through distance six.  The
+classifies graph-valued sign-Gram record equality through distance seven.  The
 distinction between square candidate Grams and actual sign Grams is essential
-at distance six.
+at distances six and seven.
+
+At distance seven the largest square determinant root is
+`2838233088000000`; the largest root below the record is
+`2777874432000000`.  Exhaustive normalized-column searches eliminate the 26
+record-beating candidates: eleven admit no column satisfying
+`v^T G^-1 v=1`, fourteen force a row-pair product inconsistent with the
+candidate Gram, and the remaining candidate has 424 admissible columns but
+forces
+
+```text
+1 + v_11*v_13 + v_11*v_14 + v_13*v_14 = 0
+```
+
+for every one (row subscripts are zero-based).  Summing over 23 columns would
+give zero, whereas its three relevant Gram entries are all 3 and require
+`23+3+3+3=32`.
 
 The artifact also determines the complete row-permutation symmetry of `G0`:
 
@@ -268,6 +289,7 @@ following exact orbit counts:
 | 4 | 166,695,375 | 197,931 |
 | 5 | 8,301,429,675 | 4,132,509 |
 | 6 | 343,125,759,900 | 81,094,402 |
+| 7 | 12,107,437,527,900 | 1,503,560,419 |
 
 The machine-readable symmetry certificate continues the exact Burnside count
 through 12 toggles.  `radius5.cpp` independently generates the 4,132,509
@@ -280,6 +302,15 @@ much larger six-edge connected catalogue.  It streams the 30 connected
 six-edge shapes and reuses the stored catalogue only for disconnected edit
 graphs.  Its 81,094,402 generated representatives agree exactly with the
 independent radius-six Burnside coefficient.
+
+`radius7.cpp` adds 79 connected seven-edge shapes and handles the exceptional
+`6+1` partition without materializing either colored catalogue.  It first
+quotients color-multiplicity vectors by the outer `S3 x C2`, then quotients
+assignments by the stabilizer of that vector and the graph automorphism group.
+An exact radius-six regression reproduces all 4,361,518 connected classes.
+Thirty-two deterministic, disjoint shards give 75,778,019 connected classes,
+158,015,168 classes of type `6+1`, and 1,269,767,232 classes from the remaining
+partitions.  Their sum is the independent radius-seven Burnside coefficient.
 
 ## Reproduction
 
@@ -306,6 +337,18 @@ python3 verify_radius6.py radius6_result.json
 python3 candidate_obstructions.py
 python3 candidate_orbit_obstructions.py > candidate_orbit_result.json
 python3 verify_candidate_orbit_obstructions.py candidate_orbit_result.json
+g++ -std=c++20 -O3 -Wall -Wextra -Wpedantic -Werror \
+  radius7.cpp -o radius7
+mkdir -p /tmp/radius7-parts
+seq 0 31 | xargs -P 8 -I SHARD sh -c \
+  './radius7 SHARD 32 record23.txt > /tmp/radius7-parts/part_SHARD.json \
+   2> /tmp/radius7-parts/part_SHARD.log'
+python3 merge_radius7.py -o radius7_result.json \
+  /tmp/radius7-parts/part_*.json
+python3 radius7_candidate_obstructions.py \
+  radius7_result.json radius7_candidate_result.json 8
+python3 verify_radius7.py \
+  radius7_result.json radius7_candidate_result.json 8
 g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow -pedantic \
   multicenter.cpp -o multicenter
 ./multicenter record23.txt record23_class2.txt
@@ -339,6 +382,9 @@ radius-six canonical orbit enumeration and modular sieve verified
 exact radius-six symmetry-quotient certificate verified
 both record-beating radius-six Gram candidates are indecomposable
 symmetry-compressed sign-column certificate verified
+radius seven: 1,503,560,419 symmetry classes and 2,943 exact square Gram orbits
+all 26 record-beating square Gram orbits are indecomposable
+exact radius-seven symmetry-quotient certificate verified
 second H-class and signed Gram-center equivalence verified
 the two record matrices are Hadamard-inequivalent
 552960 exact 23-cliques independently enumerated
@@ -394,6 +440,15 @@ definition-level checker, including the independent full Gray-code control,
 takes about 19 seconds.  The deterministic
 `candidate_orbit_certificate.json` SHA-256 is
 `8b8a282bdcaacaea67f9c354fc40e2637a61ddb510864aa3e7b3d4e199c5a764`.
+
+The radius-seven census was run as 32 deterministic shards with eight workers
+in about 42 minutes of wall time.  The strict C++20 build and a sparse
+end-to-end address/undefined-behavior sanitizer shard completed without a
+diagnostic.  Merging requires exact shard coverage, unique survivors, closed
+sieve accounting, and agreement with the independent Burnside coefficient.
+The obstruction producer and verifier each repeat 26 exhaustive `2^22`
+normalized-column traversals, using eight workers.  Their exact hashes are
+listed in `SHA256SUMS`.
 
 The multicenter C++ census takes about three seconds on one core; the
 independent Python checker takes about five seconds.  They use different
@@ -454,9 +509,12 @@ that the published Gram `G0` itself has exactly fourteen H-inequivalent sign
 decompositions, together with explicit representatives.  No claim is made
 that every record design has Gram equivalent to `G0`.
 
-The present result is a local certificate around the order-23 record.  No
-claim is made that the local neighborhood had previously been studied, or
-that this replaces global candidate-Gram enumeration.
+The targeted September 2026 primary-literature refresh found no later
+order-23 exact classification beyond the sources above.  This is only a
+novelty check, not a proof of absence.  The present result is a local
+certificate around the order-23 record.  No claim is made that the local
+neighborhood had previously been studied, or that this replaces global
+candidate-Gram enumeration.
 
 ## Trust boundary
 
@@ -471,10 +529,13 @@ for the permutation description of every record-equality survivor.
 The symmetry extension additionally trusts Burnside's lemma and the
 elementary component-based proof of the displayed automorphism group.  Its
 Python checker performs only exact permutation and integer arithmetic.  The
-radius-five, radius-six, and arbitrary radius-three generators additionally
-trust the completeness of the colored connected-component canonicalization
-proved in `PROOF.md`.  Their independently predicted underlying edit-set
-class counts agree with Burnside's lemma.  For arbitrary radius three, all
+radius-five, radius-six, radius-seven, and arbitrary radius-three generators
+additionally trust the completeness of the colored connected-component
+canonicalization proved in `PROOF.md`.  Their independently predicted
+underlying edit-set class counts agree with Burnside's lemma.  Radius seven
+additionally trusts the multiplicity-vector/stabilizer factorization proved
+there; its complete radius-six regression and final Burnside agreement test
+both levels of that quotient.  For arbitrary radius three, all
 1,000 value assignments are tested over every underlying representative;
 this is a complete cover, not a claim that stabilizer-equivalent valued edits
 have been deduplicated.  All arithmetic is exact; no positivity assumption or
@@ -485,7 +546,11 @@ the normalized sign cube; exact rational inversion is checked by multiplying
 compact obstruction additionally trusts only the explicit candidate
 permutation subgroups and their elementary binary-color orbit classification;
 the checker expands the reported solution orbits and compares them exactly to
-the full Gray-code result.  The optional SAT traces are not part of the
+the full Gray-code result.  The radius-seven obstructions use the same exact
+scaled-inverse identity and full Gray-code domain.  Their only final steps are
+zero-column contradictions, forced pair correlations, or one displayed
+three-row identity; the verifier checks every admissible column directly.
+The optional SAT traces are not part of the
 published proof boundary.  The multicenter extension trusts exhaustive exact
 enumeration of a stated 1,728-member switch family and invariance of minor
 distributions under signed permutations.  Its independent checker uses the
