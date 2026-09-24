@@ -1,0 +1,39 @@
+{
+  "author_artifact": {
+    "directory": "graph_theory/hypercube_square_saturation_upper7",
+    "source_commit": "c10eb6e676cfe8d3846c1bc0c96db0a2bc543c19",
+    "sha256_manifest": "all entries passed",
+    "template_actual_sha256": "f9b551eeb597f3fc4c56b58776a2cee9d9453c89d94a0ae45843b119b105b2a6",
+    "template_result": "byte-identical to EXPECTED_TEMPLATE.json",
+    "template_wall_seconds": 0.383,
+    "expanded_actual_sha256": "1a1d2b90d85a32352d81bf2615674e4aca2f1f02953688afeecbcf7309e39cf9",
+    "expanded_result": "byte-identical to EXPECTED_OUTPUT.json",
+    "expanded_wall_seconds": 2.631,
+    "optimized_mode": "both outputs byte-identical to normal mode"
+  },
+  "environment": {
+    "kernel": "Linux 6.1.0-53-cloud-amd64 x86_64",
+    "python": "CPython 3.11.2",
+    "review_date_utc": "2026-09-24"
+  },
+  "independent_audit": {
+    "blocks": [
+      [3, 3, 4],
+      [7, 7, 1],
+      [15, 3, 0]
+    ],
+    "dimensions": [10, 15, 18],
+    "faces_checked": 10898688,
+    "missing_edges_away_from_exceptional_set_checked": 1070848,
+    "quotient_sizes": [4, 8, 16, 32, 64],
+    "exact_arithmetic_cases": 10094,
+    "output_sha256": "9c863f34f48b1ecdeb20a7b1343b96fb5ac992ef1a9c4983e67e23e6837c4c01",
+    "script_sha256": "8d538a739c822a8eb66e9c166b73fd9173560e51fe836d097a3a6517818beec4",
+    "status": "INDEPENDENT_AUDIT_VERIFIED",
+    "wall_seconds": 8.602
+  },
+  "target": {
+    "artifact_ref": "bafkreihymxy3z5qbwukjqnahkhym24ummet7sxwoqtbno5t4isz2phazv4",
+    "title": "Asymptotic upper constant seven for square-saturated hypercubes"
+  }
+}
