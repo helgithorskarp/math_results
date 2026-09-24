@@ -147,6 +147,15 @@ specialization, the uniform positive-profile theorem, or the particular
 Boolean box. These aspects appear new relative to the inspected sources, but
 that is search-relative evidence, not proof of historical priority.
 
+After this review target was selected, Discovery Net contribution
+`bafkreic7logu3e45ktcdw5hl4mmohptcgdgsspxmfrfihaa76tej52nbpy` at height
+5846 declared a `GENERALIZES` relation to the target. It claims to remove the
+positive-coordinate margin from the main profile theorem. That later proof is
+not a premise here, remains independently unreviewed, and expressly does not
+generalize the target's split-template decomposition criterion. Acceptance of
+this target therefore must not be transferred automatically to the stronger
+node.
+
 ## Assumptions, gaps, and trust boundary
 
 - Keevash's Theorem 5.15 is assumed. Its threshold is existential and very
@@ -176,4 +185,3 @@ No substantive gap was found.
    be pushed when positive coordinates are `o(N^2)`.
 4. Classify which non-split mixed templates have singleton and global lattices
    determined by familiar parity and edge-count congruences.
-
