@@ -1,0 +1,81 @@
+{
+  "checks": {
+    "drat_trim": {
+      "maxrss_kib": 211664,
+      "returncode": 0,
+      "seconds": 195.55071841300378
+    },
+    "lex_flow": {
+      "maxrss_kib": 39796,
+      "returncode": 0,
+      "seconds": 13.909450510996976
+    },
+    "negative_witness": {
+      "maxrss_kib": 45012,
+      "returncode": 0,
+      "seconds": 3.875500497997564
+    },
+    "strict_rup": {
+      "maxrss_kib": 88756,
+      "returncode": 0,
+      "seconds": 29.196713438999723
+    },
+    "upstream_replay": {
+      "maxrss_kib_children": 259996,
+      "returncode": 0,
+      "seconds": 901.6166384870012
+    }
+  },
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "controls": {
+    "all_three_point_families": 256,
+    "broken_nineteen_point_family": "rejected",
+    "hintless_empty_clause": "rejected",
+    "invalid_flow_vectors": 4,
+    "invalid_tree_inputs": 4,
+    "public_sat_encoder": "CNF byte-identical to independently executed experiment",
+    "upstream_data_match": "A, closure, all nine auxiliaries match entry-by-entry; copied tree byte-identical"
+  },
+  "date_utc": "2026-09-24",
+  "platform": "Linux-6.1.0-53-cloud-amd64-x86_64-with-glibc2.36",
+  "sanitizers": {
+    "compiler_flags": [
+      "-O1",
+      "-g",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-fsanitize=address,undefined",
+      "-fno-sanitize-recover=all",
+      "-fno-omit-frame-pointer"
+    ],
+    "runs": [
+      {
+        "result": "status 0 nodes 3015 leaves 1508 conflicts 0 depth 26 seconds 1.81129",
+        "returncode": 0,
+        "seconds_including_compile": 8.105518422999012,
+        "source": "fc49/src/verify_positive.cpp",
+        "warnings": ""
+      },
+      {
+        "result": "DONE cases 68 visits 714494 leaves 0 pruned7 0 pruned8 7004537 pruneddeg 419425",
+        "returncode": 0,
+        "seconds_including_compile": 5.5985462949975044,
+        "source": "fc49/src/audit_enumerate9.cpp",
+        "warnings": ""
+      }
+    ]
+  },
+  "sat_solver": {
+    "conflicts": 147262,
+    "decisions": 186387,
+    "drat_lines": 438979,
+    "name": "Glucose 4.1 through python-sat 1.9.dev15",
+    "propagations": 1238369619,
+    "restarts": 587,
+    "seconds": 253.07280798200372
+  },
+  "scope": "Full upper bound is upstream execution replay plus source inspection; independent lower and lex checks do not depend on enumeration.",
+  "stdlib_python": "3.11.2",
+  "venv_python": "Python 3.12.14"
+}
