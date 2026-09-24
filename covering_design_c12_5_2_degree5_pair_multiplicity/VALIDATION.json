@@ -1,0 +1,68 @@
+{
+  "runs": [
+    {
+      "interpreter": "Python 3.11.2",
+      "flags": [],
+      "script": "verify.py",
+      "seconds": 0.1689,
+      "output_sha256": "fac3a7002ae5401552af9acd666a28cf89159207a76cff57ba9038baee956242"
+    },
+    {
+      "interpreter": "Python 3.11.2",
+      "flags": [],
+      "script": "audit.py",
+      "seconds": 1.244,
+      "output_sha256": "f0cb2af31a4b5a8ebffb78faabbc62a3ce41431e8a4fe86240b7327a5ee9e880"
+    },
+    {
+      "interpreter": "Python 3.11.2",
+      "flags": [
+        "-O"
+      ],
+      "script": "verify.py",
+      "seconds": 0.2409,
+      "output_sha256": "fac3a7002ae5401552af9acd666a28cf89159207a76cff57ba9038baee956242"
+    },
+    {
+      "interpreter": "Python 3.11.2",
+      "flags": [
+        "-O"
+      ],
+      "script": "audit.py",
+      "seconds": 1.3236,
+      "output_sha256": "f0cb2af31a4b5a8ebffb78faabbc62a3ce41431e8a4fe86240b7327a5ee9e880"
+    },
+    {
+      "interpreter": "Python 3.12.14",
+      "flags": [],
+      "script": "verify.py",
+      "seconds": 0.1867,
+      "output_sha256": "fac3a7002ae5401552af9acd666a28cf89159207a76cff57ba9038baee956242"
+    },
+    {
+      "interpreter": "Python 3.12.14",
+      "flags": [],
+      "script": "audit.py",
+      "seconds": 1.2045,
+      "output_sha256": "f0cb2af31a4b5a8ebffb78faabbc62a3ce41431e8a4fe86240b7327a5ee9e880"
+    }
+  ],
+  "independent_census_equal": true,
+  "negative_controls": [
+    {
+      "mutation": "missing_type",
+      "rejected": true,
+      "reason": "ValueError: certificate census mismatch"
+    },
+    {
+      "mutation": "zero_weight",
+      "rejected": true,
+      "reason": "ValueError: invalid integer weight"
+    },
+    {
+      "mutation": "duplicate_completion",
+      "rejected": true,
+      "reason": "ValueError: wrong completion size"
+    }
+  ]
+}
