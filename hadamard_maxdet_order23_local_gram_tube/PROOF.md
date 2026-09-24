@@ -156,8 +156,9 @@ The Python checker constructs the edit set of every transposition in (6)
 directly from `G0` and verifies that these are exactly the twelve survivors
 with root `L`.  Hence every graph-valued square determinant at least `L^2`
 through distance four is permutation-congruent to `G0`.  Together with the
-arbitrary-entry searches at distances one and two, this proves the
-radius-four portion of the lemma in `README.md`.
+arbitrary-entry searches at distances one and two, this proves the original
+radius-four classification and the first two arbitrary shells.  Section 8
+extends the arbitrary-entry conclusion through distance three.
 
 ## 5. The full permutation automorphism group
 
@@ -339,7 +340,42 @@ sets.  Hence no graph-valued Gram matrix at distance five has square
 determinant at least `L^2`.  Combined with Section 4, this proves the
 graph-valued assertion in `README.md` through distance five.
 
-## 8. Memory-bounded canonical generation at radius six
+## 8. Arbitrary-entry covering quotient at radius three
+
+At exactly three edited positions there are
+`binom(253,3)*10^3 = 2,667,126,000` matrices when every new entry may be any
+of the ten alternatives in (1).  Direct labeled enumeration is unnecessary.
+The component generator in Section 7 produces exactly one representative of
+each underlying three-position edit set under `Aut(G0)`.  It produces 73,707
+orbits under the normal subgroup (15), and quotienting by `S3 x C2` leaves
+8,887 representatives, exactly the independently computed Burnside count
+`N_3` from Section 6.
+
+For every underlying representative, `radius3_arbitrary.cpp` tests all
+`10^3=1,000` ordered assignments of alternative legal values to its three
+sorted positions.  This gives 8,887,000 determinant evaluations.  It is a
+cover rather than an asserted canonical quotient of valued edits: the
+stabilizer of an underlying representative may identify two assignments.
+Completeness is nevertheless immediate.  Given any labeled valued edit,
+choose an automorphism carrying its underlying position set to the generated
+representative; transporting the three values along the same automorphism
+produces one of the 1,000 assignments tested there.
+
+The 48-prime sieve assigns a first nonresidue witness to 8,882,175
+evaluations and leaves 4,825 survivor encodings.  The independent checker
+rebuilds `G0` from `record23.txt`, validates the encodings, and evaluates all
+4,825 full 23-by-23 determinants by fraction-free Bareiss elimination.  Every
+survivor is a square.  There are 880 distinct roots, and the largest is
+
+\[
+2740715520000000<L=2779447296000000.
+\]
+
+Thus no legal three-position edit has square determinant at least `L^2`.
+Together with Sections 3--4, this proves part 1 of the lemma in `README.md`
+through arbitrary distance three.
+
+## 9. Memory-bounded canonical generation at radius six
 
 Every connected simple graph with six edges is obtained from a connected
 five-edge graph in one of two ways.  If it contains a cycle, remove an edge
@@ -376,7 +412,7 @@ The final total is exactly the independent Burnside coefficient `N_6` from
 (13).  This agreement checks both coverage and absence of duplicate full
 orbits.
 
-## 9. Exact radius-six survivors
+## 10. Exact radius-six survivors
 
 The modular determinant sieve tests one representative of each of the
 81,094,402 classes.  First-nonresidue witnesses account for 81,094,043, leaving
@@ -402,7 +438,7 @@ are positive definite.  The next largest square root is
 \tag{17}
 \]
 
-## 10. Exact sign-column obstructions
+## 11. Exact sign-column obstructions
 
 Let one of the exceptional matrices be `G`, and suppose `G=R R^T` for an
 invertible sign matrix `R`.  Then

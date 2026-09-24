@@ -18,7 +18,7 @@ This artifact proves the following finite local classification.
 > **Lemma.** Let `M` be symmetric of order 23 with diagonal entries 23.
 >
 > 1. If every off-diagonal entry of `M` is congruent to 3 modulo 4 and has
->    absolute value below 23, and `M` differs from `G0` in at most two
+>    absolute value below 23, and `M` differs from `G0` in at most three
 >    off-diagonal positions, then `det(M)` cannot be a square at least `L^2`
 >    unless `M=G0`.
 > 2. If every off-diagonal entry belongs to `{-1,3}` and `M` differs from
@@ -67,9 +67,10 @@ orbits, of sizes `12, 24, 24, 24, 96, 192`.  The 12 record-equality cases
 form one orbit.  The two 24-element orbits immediately below the record have
 the same determinant but are not related by an automorphism of `G0`.
 
-This does **not** determine the maximal determinant in order 23.  Candidate
-Gram matrices at distance seven or farther from `G0`, and nearby matrices
-containing larger inner products, remain untreated.
+This does **not** determine the maximal determinant in order 23.  Graph-valued
+candidate Gram matrices at distance seven or farther from `G0`, arbitrary
+legal-entry matrices at distance four or farther, and neighborhoods of other
+record designs remain untreated.
 
 ## Exact census
 
@@ -91,6 +92,16 @@ At distance four, twelve have square root exactly `L`; the independent
 checker reconstructs the twelve row/column transpositions above.  Every
 other survivor is strictly below `L`, with largest root
 `2,760,297,676,800,000`, about 0.689% below the record.
+
+A broader, overlapping search permits all ten alternative legal values at
+each of exactly three positions.  Its labeled domain has
+`binom(253,3)*10^3 = 2,667,126,000` matrices.  The 2,667,126 underlying edit
+sets form 8,887 automorphism orbits; testing all 1,000 transported value
+assignments for one representative of each orbit gives a complete
+8,887,000-evaluation cover.  The modular sieve leaves 4,825 encodings, and
+direct exact determinants show that all are squares with 880 distinct roots.
+The largest root is only `2,740,715,520,000,000 < L`.  This search overlaps
+the three-toggle row above, so it is not included in the disjoint total.
 
 As a retained directional control, the enumerator also checks the 148,995
 ways to delete four existing `3`-edges.  This overlaps the radius-four
@@ -162,6 +173,10 @@ g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow -pedantic \
 ./radius5 record23.txt > radius5_result.json
 python3 verify_radius5.py radius5_result.json
 g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow -pedantic \
+  radius3_arbitrary.cpp -o radius3_arbitrary
+./radius3_arbitrary record23.txt > radius3_arbitrary_result.json
+python3 verify_radius3_arbitrary.py radius3_arbitrary_result.json
+g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow -pedantic \
   radius6.cpp -o radius6
 ./radius6 record23.txt > radius6_result.json
 python3 verify_radius6.py radius6_result.json
@@ -176,6 +191,8 @@ exact local Gram classification certificate verified
 exact Gram-graph symmetry and orbit certificate verified
 radius-five canonical orbit enumeration and modular sieve verified
 exact radius-five symmetry-quotient certificate verified
+arbitrary radius-three covering quotient and modular sieve verified
+exact arbitrary radius-three covering certificate verified
 radius-six canonical orbit enumeration and modular sieve verified
 exact radius-six symmetry-quotient certificate verified
 both record-beating radius-six Gram candidates are indecomposable
@@ -205,6 +222,15 @@ Bareiss elimination and traverses their 13-generator orbits in under one
 second.  A full `-fsanitize=address,undefined` run produced byte-identical
 JSON without a diagnostic.  The deterministic `radius5_result.json` SHA-256
 is `ac9e23d4fe04fda81012cd736c77c610956858635a45912a65497a8a21457efc`.
+
+The arbitrary radius-three C++ cover takes about 26 seconds on one core and
+uses about 10 MiB peak resident memory.  Two complete optimized runs produced
+byte-identical JSON, and the independent Python checker evaluates all 4,825
+survivors exactly in about four seconds.  The deterministic
+`radius3_arbitrary_result.json` SHA-256 is
+`a5302735167229496e3bc4d294bc5821ed5132922e53b576a9b4a8632bac98af`.
+A complete `-fsanitize=address,undefined` run also produced byte-identical
+JSON without a diagnostic.
 
 The radius-six C++ run takes about 9 minutes 44 seconds on one core and peaks
 at 289,908 KiB resident memory.  The independent Python checker takes about
@@ -247,10 +273,13 @@ for the permutation description of every record-equality survivor.
 The symmetry extension additionally trusts Burnside's lemma and the
 elementary component-based proof of the displayed automorphism group.  Its
 Python checker performs only exact permutation and integer arithmetic.  The
-radius-five and radius-six generators additionally trust the completeness of
-the colored connected-component canonicalization proved in `PROOF.md`.  Their
-independently predicted class counts agree at every radius through six with
-Burnside's lemma.  All arithmetic is exact; no positivity assumption or
+radius-five, radius-six, and arbitrary radius-three generators additionally
+trust the completeness of the colored connected-component canonicalization
+proved in `PROOF.md`.  Their independently predicted underlying edit-set
+class counts agree with Burnside's lemma.  For arbitrary radius three, all
+1,000 value assignments are tested over every underlying representative;
+this is a complete cover, not a claim that stabilizer-equivalent valued edits
+have been deduplicated.  All arithmetic is exact; no positivity assumption or
 floating-point filter is used.  The radius-six decomposition obstruction
 trusts the identity `R^T(RR^T)^{-1}R=I` and exhaustive Gray-code traversal of
 the normalized sign cube; exact rational inversion is checked by multiplying
