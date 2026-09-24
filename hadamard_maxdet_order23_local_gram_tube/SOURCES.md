@@ -18,7 +18,12 @@ frontier:
 4. W. P. Orrick, [*On the enumeration of some D-optimal
    designs*](https://arxiv.org/abs/math/0511141).  Its survey of known
    classifications reports at least 14 inequivalent order-23 matrices
-   attaining the current determinant record.  This bounds the novelty claim
-   for the explicit second H-class here: its existence is not claimed as a
-   new record-class count.  The certified same-Gram-center relation and local
-   classification transfer are the new computational content.
+   attaining the current determinant record.  That global lower bound does
+   not assert an exhaustive sign-decomposition census for the particular
+   Gram used here; it bounds the novelty claim to that explicitly stated
+   fixed-center classification.
+5. R. P. Brent, [*Finding D-optimal designs by randomised decomposition and
+   switching*](https://arxiv.org/abs/1112.4671).  This is the primary
+   methodological comparison for generating H-classes by decomposing Gram
+   matrices and switching.  Its reported applications concern orders 26,
+   27, and 33, rather than the exact order-23 fixed-Gram census here.

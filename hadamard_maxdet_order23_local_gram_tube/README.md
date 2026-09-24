@@ -87,8 +87,7 @@ Signed row and column permutations are bijections on minors of each size, so
 this discrepancy is an exact inequivalence certificate.  Explicit signed
 permutations in both checkers map `R1 R1^T` and `R1^T R1` to the corresponding
 Grams of `R0`.  Thus the local Gram classification above applies, after the
-displayed normalization, to at least two distinct H-classes among the 14 or
-more record classes reported in the literature.
+displayed normalization, to two distinct H-classes.
 
 The second class is found without randomized search.  For each core index
 `c=0,1,2`, independently choose one of the three four-vertex blocks, one of
@@ -101,11 +100,43 @@ checker instead separates the H-classes by a canonical four-row
 column-pattern profile: the signature `(2,3,3,2,3,3,3,4)` occurs 2,508 times
 for `R0` and 2,460 times for `R1`.
 
+The full decomposition census is now exact.  Normalize every sign column by
+making its first entry positive and disregard column order.  There are
+exactly 552,960 normalized unordered sign matrices `R` satisfying
+
+```text
+R R^T = G0.
+```
+
+They form exactly **14 Hadamard-equivalence classes**.  Under `Aut(G0)`, six
+classes have orbit size 18,432 and stabilizer order 24; eight have orbit size
+55,296 and stabilizer order 8.  Thus
+
+```text
+6*18432 + 8*55296 = 552960.
+```
+
+The published `R0` and the independently certified `R1` are classes 14 and
+13 in the canonical list.  All fourteen class representatives are recorded
+as explicit normalized-column masks in
+`gram_decomposition_certificate.json`.
+
+The key reduction is exact orthogonality.  Exhausting the `2^22` normalized
+sign vectors leaves 1,382 vectors `v` with `v^T G0^-1 v=1`.  Join two when
+`v^T G0^-1 w=0`; the resulting graph has 338,582 edges.  A decomposition of
+`G0` is then exactly a 23-clique.  Exact colored branch-and-bound enumerates
+all 552,960 such cliques, and the 13 generators of `Aut(G0)` partition them
+into the fourteen classes above.  A separate Python implementation rebuilds
+the graph with arbitrary-precision integers, independently repeats the
+9,804,083-node clique census, reconstructs every representative matrix, and
+traverses all fourteen orbits.
+
 This does **not** determine the maximal determinant in order 23.  Graph-valued
 candidate Gram matrices at distance seven or farther from `G0`, arbitrary
-legal-entry matrices at distance four or farther, and neighborhoods of other
-Gram classes represented by the remaining known record designs remain
-untreated.
+legal-entry matrices at distance four or farther, and other possible Gram
+classes remain untreated.  In particular, the result classifies every sign
+decomposition of the published Gram center, not every order-23 sign matrix
+whose determinant equals or exceeds the record.
 
 ## Exact census
 
@@ -231,6 +262,11 @@ g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow -pedantic \
   multicenter.cpp -o multicenter
 ./multicenter record23.txt record23_class2.txt
 python3 verify_multicenter.py
+g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow -pedantic \
+  gram_decompositions.cpp -o gram_decompositions
+./gram_decompositions record23.txt record23_class2.txt \
+  > gram_decomposition_result.json
+python3 verify_gram_decompositions.py gram_decomposition_result.json
 ```
 
 The terminal output ends with
@@ -249,6 +285,8 @@ both record-beating radius-six Gram candidates are indecomposable
 symmetry-compressed sign-column certificate verified
 second H-class and signed Gram-center equivalence verified
 the two record matrices are Hadamard-inequivalent
+552960 exact 23-cliques independently enumerated
+14 decomposition orbits cover every clique
 ```
 
 `enumerate.cpp` performs 172,701,826 evaluations, including the overlapping
@@ -303,6 +341,16 @@ H-invariants (complete 4-minor distribution versus canonical four-row
 pattern profile), while both verify the exact determinants, the structured
 switch family, and explicit signed Gram congruences.
 
+The complete Gram-decomposition C++ census takes about nine seconds on one
+core and emits byte-identical JSON.  The independent pure-Python checker
+takes about 75 seconds, including its own 1,382-vertex graph construction,
+9,804,083-node clique search, exact reconstruction of all fourteen
+representatives, and orbit traversals.  The deterministic
+`gram_decomposition_certificate.json` SHA-256 is
+`7b94f5918015a250db3619c7e1f2f37a8d31a3e2ad589afe21a99a30a445aa81`.
+A complete address- and undefined-behavior-sanitizer run also emits that
+same byte-identical certificate without a diagnostic.
+
 An optional SAT experiment can be regenerated with
 `python3 candidate_sat_certificates.py /tmp/order23-sat`.  At official-source
 commits `c60730422e758ef1cebe7aeddf2dda31c996bf04` (CaDiCaL 3.0.1) and
@@ -324,12 +372,12 @@ results; the relevant definitions and algorithms are given by
 At least 14 inequivalent order-23 matrices attaining the same record were
 already known by 2005; see Orrick's
 [*On the enumeration of some D-optimal
-designs*](https://arxiv.org/abs/math/0511141).  The second class certified
-here is therefore not claimed as a new count of record designs.  The advance
-is an explicit reproducible second representative and a proof that its row
-and column Grams lie in the signed-permutation class of the center already
-classified.  No claim is made about the Gram classes of the remaining known
-record designs.
+designs*](https://arxiv.org/abs/math/0511141).  That is a global lower bound
+obtained by gradient ascent, not an exhaustive decomposition statement for a
+specified Gram in the cited text.  The advance here is a reproducible proof
+that the published Gram `G0` itself has exactly fourteen H-inequivalent sign
+decompositions, together with explicit representatives.  No claim is made
+that every record design has Gram equivalent to `G0`.
 
 The present result is a local certificate around the order-23 record.  No
 claim is made that the local neighborhood had previously been studied, or
@@ -368,3 +416,10 @@ enumeration of a stated 1,728-member switch family and invariance of minor
 distributions under signed permutations.  Its independent checker uses the
 separate elementary four-row projective-pattern invariant; no graph
 isomorphism package or floating-point determinant enters the certificate.
+The complete decomposition extension additionally trusts the elementary
+identity `R^T G0^-1 R=I`, the equivalence between a square orthonormal column
+set and a Gram decomposition, and the greedy-color upper bound used in the
+exact clique recursion.  The C++ and Python implementations use different
+bit-set representations and independently obtain the same graph, node, and
+clique counts.  Orbit representatives are expanded again by the Python
+checker; their disjoint sizes sum to the full independent clique count.

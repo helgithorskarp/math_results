@@ -685,3 +685,108 @@ and
 `b5fd7c94de3fe7d27f7e9bf40054584a6710f8e322ac2237138586de8bc792c9`.
 This second certificate is definition-level Python and does not rely on
 nauty or another graph-isomorphism implementation.
+
+## 14. Complete sign decompositions of the record Gram
+
+Let `G=G0` and write its exact inverse as `G^-1=P/Q`, where the integer
+table in `order23_inverse.hpp` has `Q=170492220`.  If a sign matrix `R`
+satisfies `R R^T=G`, then
+
+\[
+R^T G^{-1}R=I.
+\tag{26}
+\]
+
+Column negation does not change a Hadamard class, so normalize every column
+`v` by requiring `v_0=1`.  Equation (26) says that every normalized column
+must satisfy
+
+\[
+v^T P v=Q,
+\tag{27}
+\]
+
+and two distinct columns must satisfy `v^T P w=0`.  Conversely, suppose 23
+normalized sign vectors obey (27) and are pairwise orthogonal for this
+bilinear form.  The matrix `V` having these vectors as columns satisfies
+`V^T G^-1 V=I`, so it is invertible and
+
+\[
+G^{-1}=V^{-T}V^{-1},\qquad G=VV^T.
+\tag{28}
+\]
+
+Thus no extra decomposition condition remains: the decompositions are
+exactly the 23-cliques in the compatibility graph below.
+
+### Exact compatibility and clique census
+
+`gram_decompositions.cpp` traverses all `2^22` normalized sign vectors by a
+Gray code and evaluates (27) with signed 64-bit integer arithmetic.  It finds
+exactly 1,382 candidates.  Encoding their Gray-code traversal order as one
+decimal mask per line gives SHA-256
+
+```text
+bc8cd93dff3f9d88ffddcf428f4d107d452be4a197ec902fc53364f3cfd05ecb
+```
+
+The compatibility graph joins `v` and `w` precisely when `v^T P w=0`.  It
+has 338,582 edges and degree distribution
+
+| degree | vertices |
+|---:|---:|
+| 440 | 864 |
+| 569 | 512 |
+| 946 | 6 |
+
+The clique recursion greedily partitions each current candidate set into
+independent color classes.  The number of colors is therefore an upper bound
+on the size of any extension.  Processing vertices in reverse color order,
+intersecting with the chosen vertex's neighborhood, and deleting that vertex
+from the current set enumerates every 23-clique exactly once.  The complete
+search visits 9,804,083 recursive nodes and finds exactly 552,960 cliques.
+
+`verify_gram_decompositions.py` independently rebuilds the 1,382-vertex
+graph with arbitrary-precision Python integers and repeats the clique
+recursion using one unbounded integer as each bit set.  It obtains the same
+edge, degree, recursive-node, and clique counts.  It also reconstructs every
+reported representative as a sign matrix and verifies (28) and the record
+determinant by exact Bareiss elimination.
+
+### From decomposition orbits to H-classes
+
+After column signs and column order have been removed, the remaining action
+on decompositions of this fixed `G` is its signed row stabilizer.  Every
+off-diagonal entry of `G` is nonzero.  Taking absolute values shows that the
+permutation part of a signed stabilizer preserves the `3`-edge graph and
+hence belongs to `Aut(G)` from Section 5.  Removing that permutation leaves
+a diagonal sign matrix `D` with `DGD=G`; the nonzero off-diagonal entries
+force all signs of `D` to be equal.  The resulting global row negation is
+removed again by the normalized-column convention.  Consequently the
+effective action is exactly `Aut(G)`, of order 442,368.
+
+The thirteen generators from Section 5 induce four orbits of candidate
+columns, of sizes 6, 432, 432, and 512.  Exact orbit traversal on the full
+clique set gives fourteen orbits:
+
+| number of orbits | orbit size | stabilizer order |
+|---:|---:|---:|
+| 6 | 18,432 | 24 |
+| 8 | 55,296 | 8 |
+
+Their sizes satisfy
+
+\[
+6\cdot18432+8\cdot55296=552960,
+\tag{29}
+\]
+
+so the orbits exhaust the independent clique census.  The canonical mask
+tuple for every orbit appears in `gram_decomposition_certificate.json`.
+The published matrix `R0` lies in class 14 and the matrix `R1` from Section
+13 lies in class 13.
+
+This proves exactly fourteen H-classes among the sign decompositions of the
+specified published Gram `G0`.  It does not prove that every order-23 matrix
+at the record determinant has a Gram signed-permutation-equivalent to `G0`,
+nor does it determine `D(23)`.
