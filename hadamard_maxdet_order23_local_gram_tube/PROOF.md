@@ -338,3 +338,118 @@ generators from Section 5.  The 27 orbit sizes sum to 14,784 labeled edit
 sets.  Hence no graph-valued Gram matrix at distance five has square
 determinant at least `L^2`.  Combined with Section 4, this proves the
 graph-valued assertion in `README.md` through distance five.
+
+## 8. Memory-bounded canonical generation at radius six
+
+Every connected simple graph with six edges is obtained from a connected
+five-edge graph in one of two ways.  If it contains a cycle, remove an edge
+of that cycle and then add that edge back.  If it is a tree, remove a leaf
+and its incident edge and then add the leaf back.  Canonical augmentation of
+the 12 five-edge shapes in Section 7 therefore gives the complete six-edge
+shape census:
+
+| vertices | 4 | 5 | 6 | 7 | total |
+|---:|---:|---:|---:|---:|---:|
+| connected six-edge shapes | 1 | 5 | 13 | 11 | 30 |
+
+The 11 seven-vertex shapes are precisely the unlabeled trees on seven
+vertices.  `radius6.cpp` independently canonicalizes every augmentation under
+the full symmetric group and computes the exact automorphism group of every
+resulting shape.
+
+For an edit graph with more than one connected component, every component has
+at most five edges, so the stored radius-five colored-component catalogue can
+be reused unchanged.  Only the one-part partition `(6)` needs the new shapes.
+Their valid color orbits are streamed one shape at a time, and the quotient by
+`S3 x C2` is taken before the determinant test.  Thus the radius-six extension
+does not materialize a large colored six-edge catalogue.
+
+The exact intermediate counts are
+
+| component case | internally colored graphs | full symmetry classes |
+|---|---:|---:|
+| connected | 43,702,833 | 4,361,518 |
+| disconnected | 844,837,661 | 76,732,884 |
+| total | 888,540,494 | 81,094,402 |
+
+The final total is exactly the independent Burnside coefficient `N_6` from
+(13).  This agreement checks both coverage and absence of duplicate full
+orbits.
+
+## 9. Exact radius-six survivors
+
+The modular determinant sieve tests one representative of each of the
+81,094,402 classes.  First-nonresidue witnesses account for 81,094,043, leaving
+359 representatives.  `verify_radius6.py` directly evaluates all 359
+determinants by fraction-free Bareiss elimination.  Every survivor is a
+square.  Independent traversal under the 13 generators proves that the 359
+representatives are in distinct full orbits whose sizes sum to 420,647.
+There are 298 distinct square roots.
+
+Exactly two roots exceed the published record:
+
+| edge indices | square root | orbit size |
+|---|---:|---:|
+| `(10,22,38,47,89,92)` | 2,823,605,452,800,000 | 96 |
+| `(2,11,36,38,46,78)` | 2,783,182,848,000,000 | 48 |
+
+Here `index(i,j)=i(i-1)/2+j` as in Section 7.  All 23 leading principal minors
+of both matrices are positive, checked exactly, so the two exceptional Grams
+are positive definite.  The next largest square root is
+
+\[
+2771425689600000<L.
+\tag{17}
+\]
+
+## 10. Exact sign-column obstructions
+
+Let one of the exceptional matrices be `G`, and suppose `G=R R^T` for an
+invertible sign matrix `R`.  Then
+
+\[
+R^T G^{-1}R=R^T(RR^T)^{-1}R=I.
+\tag{18}
+\]
+
+Consequently every column `v` of `R` must satisfy
+
+\[
+v^T G^{-1}v=1.
+\tag{19}
+\]
+
+Column negation preserves (19) and the Gram decomposition, so normalize
+`v_0=1`.  There are exactly `2^22` normalized sign vectors.  For the two
+candidates, `candidate_obstructions.py` computes and verifies integral scaled
+inverses `G^{-1}=P/Q` with
+
+\[
+Q=51563888640\quad\hbox{and}\quad Q=18035310240,
+\tag{20}
+\]
+
+respectively.  It checks `GP=QI` entry by entry and enumerates the normalized
+cube in binary-reflected Gray order.  When coordinate `k` is flipped, the
+integer quadratic form `v^T P v` is updated exactly using
+
+\[
+q(v-2v_ke_k)=q(v)-4v_k\sum_{j\ne k}P_{kj}v_j.
+\tag{21}
+\]
+
+For the larger candidate, no normalized sign vector satisfies
+`v^T P v=Q`, so it cannot contain even one column of a decomposition.  For
+the smaller candidate exactly 48 normalized vectors satisfy the equation,
+but every one has `v_0v_1=1`.  If 23 such columns formed `R`, then
+
+\[
+G_{01}=\sum_{a=1}^{23}R_{0a}R_{1a}=23,
+\tag{22}
+\]
+
+contrary to the actual candidate entry `G_01=3`.  Thus neither record-beating
+square Gram candidate is sign-decomposable.  As an encoding control, the same
+checker reconstructs the published `R0`, computes its scaled inverse, and
+verifies (19) for all 23 of its actual columns.  This completes the
+graph-valued sign-Gram classification through radius six.

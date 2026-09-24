@@ -26,6 +26,13 @@ This artifact proves the following finite local classification.
 >    least `L^2` unless `M` is permutation-congruent to `G0`.  More
 >    precisely, the equality cases are `G0` and twelve labeled copies at
 >    distance four.
+> 3. At distance six, exactly two automorphism orbits have square determinant
+>    greater than `L^2`, with square roots `2823605452800000` and
+>    `2783182848000000`.  Both matrices are positive definite, but neither is
+>    the row Gram matrix of a 23-by-23 sign matrix.  Consequently, if
+>    `M=R R^T` for a sign matrix `R`, `M` is graph-valued, and its distance
+>    from `G0` is at most six, then `|det(R)| <= L`; equality occurs only in
+>    the cases described in part 2.
 
 The twelve nontrivial equality cases have a simple description.  In each of
 the three four-vertex blocks
@@ -44,7 +51,9 @@ tests all matrices in the stated discrete neighborhoods, whether or not they
 are positive definite.  A parity-normalized Gram matrix of a nonsingular
 order-23 sign matrix satisfies the entry conditions in part 1, so the lemma
 excludes every record-beating sign decomposition in these neighborhoods and
-classifies graph-valued record equality through distance five.
+classifies graph-valued sign-Gram record equality through distance six.  The
+distinction between square candidate Grams and actual sign Grams is essential
+at distance six.
 
 The artifact also determines the complete row-permutation symmetry of `G0`:
 
@@ -59,12 +68,12 @@ form one orbit.  The two 24-element orbits immediately below the record have
 the same determinant but are not related by an automorphism of `G0`.
 
 This does **not** determine the maximal determinant in order 23.  Candidate
-Gram matrices at distance six or farther from `G0`, including graph-Gram
-matrices and matrices containing larger inner products, remain untreated.
+Gram matrices at distance seven or farther from `G0`, and nearby matrices
+containing larger inner products, remain untreated.
 
 ## Exact census
 
-The five nonoverlapping searches cover 8,473,982,506 labeled edited matrices:
+The six nonoverlapping searches cover 351,599,742,406 labeled edited matrices:
 
 | neighborhood | matrices | square-determinant survivors | largest square root |
 |---|---:|---:|---:|
@@ -73,9 +82,11 @@ The five nonoverlapping searches cover 8,473,982,506 labeled edited matrices:
 | exactly three `-1`/`3` toggles | 2,667,126 | 24 | 2,740,715,520,000,000 |
 | exactly four `-1`/`3` toggles | 166,695,375 | 372 | 2,779,447,296,000,000 |
 | exactly five `-1`/`3` toggles | 8,301,429,675 | 14,784 | 2,743,153,459,200,000 |
+| exactly six `-1`/`3` toggles | 343,125,759,900 | 420,647 | 2,823,605,452,800,000 |
 
-All 1,152 survivors are evaluated by direct exact integer determinants.
-Their complete determinant/multiplicity census is in `certificate.json`.
+The 1,152 survivors in the first four rows are evaluated by direct exact
+integer determinants.  Their complete determinant/multiplicity census is in
+`certificate.json`.
 At distance four, twelve have square root exactly `L`; the independent
 checker reconstructs the twelve row/column transpositions above.  Every
 other survivor is strictly below `L`, with largest root
@@ -91,6 +102,22 @@ determinant.  Their orbit sizes sum to 14,784, their determinants are all
 distinct, and their largest square root is
 `2,743,153,459,200,000`, about 1.306% below `L`.  The complete exact list is
 in `radius5_certificate.json`.
+
+At distance six, the 343,125,759,900 labeled edit sets form 81,094,402
+automorphism classes.  The modular sieve leaves 359 classes; direct exact
+determinants show that all 359 are squares, representing 420,647 labeled
+matrices and 298 distinct determinant values.  Exactly two classes exceed
+the record, with orbit sizes 96 and 48.  The next largest square root is
+`2,771,425,689,600,000 < L`.
+
+The two apparent improvements are genuine positive-definite square Gram
+candidates, not numerical artifacts.  They fail a stronger necessary column
+condition.  If `G=R R^T` with invertible sign matrix `R`, every sign column
+`v` of `R` obeys `v^T G^{-1}v=1`.  After normalizing `v_0=1`, exhaustive
+exact enumeration of all `2^22` sign vectors finds no admissible column for
+the larger candidate.  The smaller candidate has 48 admissible columns, but
+all have `v_0v_1=1`; any 23-column decomposition would therefore give
+`G_01=23`, whereas this candidate has `G_01=3`.  Thus neither decomposes.
 
 ## Exact symmetry quotient
 
@@ -114,6 +141,12 @@ radius-five representatives by colored connected-component decomposition and
 tests all of them.  Its counts for every radius from zero through five agree
 with the Burnside calculation.
 
+`radius6.cpp` extends the same constructive quotient without storing the
+much larger six-edge connected catalogue.  It streams the 30 connected
+six-edge shapes and reuses the stored catalogue only for disconnected edit
+graphs.  Its 81,094,402 generated representatives agree exactly with the
+independent radius-six Burnside coefficient.
+
 ## Reproduction
 
 Only Python 3.10 or later and a C++20 compiler are required.
@@ -128,6 +161,11 @@ g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow -pedantic \
   radius5.cpp -o radius5
 ./radius5 record23.txt > radius5_result.json
 python3 verify_radius5.py radius5_result.json
+g++ -std=c++20 -O3 -Wall -Wextra -Wconversion -Wshadow -pedantic \
+  radius6.cpp -o radius6
+./radius6 record23.txt > radius6_result.json
+python3 verify_radius6.py radius6_result.json
+python3 candidate_obstructions.py
 ```
 
 The terminal output ends with
@@ -138,6 +176,9 @@ exact local Gram classification certificate verified
 exact Gram-graph symmetry and orbit certificate verified
 radius-five canonical orbit enumeration and modular sieve verified
 exact radius-five symmetry-quotient certificate verified
+radius-six canonical orbit enumeration and modular sieve verified
+exact radius-six symmetry-quotient certificate verified
+both record-beating radius-six Gram candidates are indecomposable
 ```
 
 `enumerate.cpp` performs 172,701,826 evaluations, including the overlapping
@@ -164,6 +205,13 @@ Bareiss elimination and traverses their 13-generator orbits in under one
 second.  A full `-fsanitize=address,undefined` run produced byte-identical
 JSON without a diagnostic.  The deterministic `radius5_result.json` SHA-256
 is `ac9e23d4fe04fda81012cd736c77c610956858635a45912a65497a8a21457efc`.
+
+The radius-six C++ run takes about 9 minutes 44 seconds on one core and peaks
+at 289,908 KiB resident memory.  The independent Python checker takes about
+14 seconds, including exact Bareiss
+determinants and traversal of all 359 survivor orbits.  The column-obstruction
+checker takes about 20 seconds.  The deterministic `radius6_result.json`
+SHA-256 is `8145a2fdf28d61be0abb24813385c9b4f28f358668875be5f40ef9bc2c8e46e2`.
 
 ## Known frontier and sources
 
@@ -199,8 +247,11 @@ for the permutation description of every record-equality survivor.
 The symmetry extension additionally trusts Burnside's lemma and the
 elementary component-based proof of the displayed automorphism group.  Its
 Python checker performs only exact permutation and integer arithmetic.  The
-radius-five generator additionally trusts the completeness of the colored
-connected-component canonicalization proved in `PROOF.md`.  Its independently
-predicted class count agrees at every radius through five with Burnside's
-lemma.  All arithmetic is exact; no positivity assumption or floating-point
-filter is used.
+radius-five and radius-six generators additionally trust the completeness of
+the colored connected-component canonicalization proved in `PROOF.md`.  Their
+independently predicted class counts agree at every radius through six with
+Burnside's lemma.  All arithmetic is exact; no positivity assumption or
+floating-point filter is used.  The radius-six decomposition obstruction
+trusts the identity `R^T(RR^T)^{-1}R=I` and exhaustive Gray-code traversal of
+the normalized sign cube; exact rational inversion is checked by multiplying
+`G P=Q I`, and the published record matrix supplies a positive control.
