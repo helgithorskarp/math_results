@@ -1,0 +1,72 @@
+{
+  "controls": {
+    "negative_controls": [
+      {
+        "control": "weight_on_covered_pair",
+        "reason": "weight on an unrequired set",
+        "rejected": true
+      },
+      {
+        "control": "insufficient_weight_gap",
+        "reason": "no strict five-block weight gap",
+        "rejected": true
+      },
+      {
+        "control": "size_preserving_block_corruption",
+        "reason": "uncovered link pair",
+        "rejected": true
+      }
+    ],
+    "positive_links": 72,
+    "status": "CONTROLS_PASSED"
+  },
+  "external_review": "pending",
+  "independent_algorithms": [
+    "row-extension through census",
+    "four-bit point-signature completions",
+    "point-bijection matching with all 72 roots",
+    "unweighted exact set-cover final exclusion"
+  ],
+  "omitted_new_large_proof_artifacts": false,
+  "primary_initial": {
+    "seconds": 48.26066953799818,
+    "status": "VERIFIED_NO_EXCEPTIONAL_12_9_PROFILE"
+  },
+  "proof_dependencies": [
+    "Python standard library only for the new finite theorem",
+    "covering application imports optimal-link degree bound and no-three-through-rows theorem"
+  ],
+  "replays": [
+    {
+      "flags": [
+        "-O"
+      ],
+      "interpreter": "Python 3.11.2",
+      "label": "audit_optimized",
+      "output_sha256": "618197ad86bba7a1cc88bc415a9e4e9f4a184acf040ae33b4d3a19399fca5497",
+      "peak_child_rss_kib": 24724,
+      "script": "audit.py",
+      "seconds": 105.416238384998
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "interpreter": "Python 3.11.2",
+      "label": "primary_optimized",
+      "output_sha256": "b866ac4bf0102460c2805b6b5824e4da72d9c32a4ce682e05e3c4639921027f1",
+      "peak_child_rss_kib": 27756,
+      "script": "verify.py",
+      "seconds": 48.44583875999888
+    },
+    {
+      "flags": [],
+      "interpreter": "Python 3.12.14",
+      "label": "primary_python312",
+      "output_sha256": "b866ac4bf0102460c2805b6b5824e4da72d9c32a4ce682e05e3c4639921027f1",
+      "peak_child_rss_kib": 27756,
+      "script": "verify.py",
+      "seconds": 51.64754006399744
+    }
+  ]
+}
