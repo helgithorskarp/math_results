@@ -1,0 +1,91 @@
+{
+  "class_scale_hierarchy": {
+    "endpoint_and_random_profiles": 1869,
+    "new_seed": "0x51a1e5",
+    "note": "Illustrative exact tolerances; this checks the hierarchy logic, not Keevash constants.",
+    "type_counts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "dense_private_edge_normalization": {
+    "deleted_edge": [
+      [
+        "A",
+        0
+      ],
+      [
+        "A",
+        1
+      ]
+    ],
+    "full_original_edge_loads_all_one": true,
+    "labelled_valid_embeddings": 504,
+    "minimum_private_load": "5/6",
+    "minimum_surviving_original_load": "13/15",
+    "original_order": 9,
+    "original_part_sizes": {
+      "A": 4,
+      "B": 5
+    },
+    "patterns": [
+      {
+        "auxiliary_size": 1,
+        "count": 4,
+        "embedding_weight": "1/60",
+        "maximum_missing_degree": 5,
+        "name": "AAB_triangle",
+        "pattern": "AAB",
+        "restricted_private_load": "5/6",
+        "valid_labelled_embeddings": 240
+      },
+      {
+        "auxiliary_size": 1,
+        "count": 2,
+        "embedding_weight": "1/12",
+        "maximum_missing_degree": 7,
+        "name": "AA_spare",
+        "pattern": "AA",
+        "restricted_private_load": "5/6",
+        "valid_labelled_embeddings": 24
+      },
+      {
+        "auxiliary_size": 2,
+        "count": 12,
+        "embedding_weight": "1/20",
+        "maximum_missing_degree": 3,
+        "name": "AB_spare",
+        "pattern": "AB",
+        "restricted_private_load": "1",
+        "valid_labelled_embeddings": 240
+      }
+    ]
+  },
+  "fractional_cap_map": {
+    "exact_rational_profiles": 248,
+    "maximum_mapped_spoke_load": "104/171",
+    "new_seed": "0xc0ffee123456789",
+    "universal_bound_checked": "(n-1)/n"
+  },
+  "multiplicity_cap": {
+    "invariants_per_graph": [
+      "maximum edge-disjoint triangle packing",
+      "minimum edge triangle cover"
+    ],
+    "literal_graph_pairs": 1600,
+    "maximum_triangle_count": 40,
+    "records_sha256": "4e1c61c5239a2a92f8ecaff574de1f05543b2866ed1331d3707e87121405540b"
+  },
+  "near_regular_arithmetic": {
+    "minimum_strict_margin_to_three_quarters": "9/2",
+    "parameter_tuples": 384,
+    "scale_values": 64
+  },
+  "status": "PASS",
+  "trust_boundary": "Exact finite and algebraic checks only. Keevash's universal family-decomposition theorem, its specialization, and the asymptotic rounding proof are audited mathematically rather than proved by this program."
+}
