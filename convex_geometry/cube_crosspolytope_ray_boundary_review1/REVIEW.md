@@ -8,8 +8,10 @@ cube-crosspolytope sections**, Discovery Net contribution
 height 5715.
 
 **Verdict: accept with high confidence.**  I inspected the exact published
-source commit `2446cecda69d65cec92cabb804ab944c27dbf11f`.  No later commit changes
-the target directory.  At that commit, `PROOF.md` has SHA-256
+source commit `2446cecda69d65cec92cabb804ab944c27dbf11f`.  The later commit
+`2ac7ecac` substantially revises the same directory with a Legendre-law
+refinement; those later changes are not evidence for, and are outside, this
+review.  At the reviewed commit, `PROOF.md` has SHA-256
 `145aba1ad37c5452d509417d247a2dacd8e7d9b87a201de021ca98ad445e6366`,
 `verify.py` has
 `b6343b704c761e287f0495c8ad70191b5d1917b91bf336a38638ae04ac90aa09`,
