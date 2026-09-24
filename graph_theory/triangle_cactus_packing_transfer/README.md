@@ -31,7 +31,11 @@ K(t,F) = C(t,1) + B [2D(t,1) + 80 + q].
 The proof also states a conditional transfer for larger clique blocks.
 Its required base theorem is **not** asserted beyond triangles here.
 
-This is a complete author proof awaiting independent review. The base
+The [independent review](../triangle_cactus_packing_transfer_review1/REVIEW.md)
+accepted the proof at source commit
+`bd5c50a327e21ab32193da113e55012f5b23c5d2`, with one wording correction:
+the sharpness example uses complete graphs of **even order**. That correction
+is incorporated here; the theorem and audit are unchanged. The base
 constants remain existential through Keevash's design theorem. The package
 implements the new elementary steps, not a universal design constructor or
 a practical algorithm for all hosts. Longer cycles, two-vertex gluing, K4

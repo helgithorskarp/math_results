@@ -49,8 +49,8 @@ profile theorem. One valid transfer coefficient is
 This expresses the new loss in terms of the existing constants; it does
 not make C or D effective. In particular this is not a practical universal
 algorithm. The order N cannot be replaced uniformly by o(N) for this whole
-pattern class, since it contains K3 and even complete hosts of order at least
-four have triangle packing loss at least N/6. Sharp constants for individual
+pattern class, since it contains K3 and complete graphs of even order N >= 4
+have triangle packing loss at least N/6. Sharp constants for individual
 F are not claimed. The empty pattern family is trivially handled separately.
 
 More generally, the proof gives a **conditional clique-block transfer**.
