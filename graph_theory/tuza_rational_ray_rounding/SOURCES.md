@@ -75,7 +75,11 @@ primary-literature and committed-graph searches did not locate these exact
 ray statements and displayed certificates. This is not an absolute priority
 claim and does not rule out equivalent consequences in existing literature.
 
-The universal proof is unformalized and awaits independent review. Its
+The universal proof remains unformalized. Independent review h5777
+`bafkreigk2ngqop6ac3sykvb3md3io3b7wc6t6th5743o4j7xjgk3scij24`
+accepted the result with high confidence after reading the proof and imported
+theorem statements and replaying separate finite checks. See the
+[review](../tuza_rational_ray_rounding_review1/REVIEW.md). Its
 critical points are the typed packet encoding, the three divisibility
 levels, and the common-neighborhood estimate for equal-label deletion.
 The finite certificate checker does not validate the imported existence

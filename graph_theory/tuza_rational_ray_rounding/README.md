@@ -1,6 +1,9 @@
 # Exact rational profiles and linear triangle-packing loss
 
-Complete author proof submitted for independent review. This package applies
+Independently reviewed and accepted at graph h5777 (high confidence). See the
+[review](../tuza_rational_ray_rounding_review1/REVIEW.md) and its separate
+checker. That review concerns this package, not subsequent extensions.
+This package applies
 Keevash's generalized partite decomposition theorem to the full fractional
 triangle-packing LP. It also supplies two finite packing certificates with
 explicit infinite lifting rules. It does not claim a new design-existence
