@@ -1,4 +1,4 @@
-# Hasse obstructions for order-23 Ehlich-block Gram matrices
+# Eliminating record-level order-23 Ehlich-block Gram matrices
 
 ## Result
 
@@ -18,14 +18,14 @@ L=2^{22}\,3\,5^6\,67\,211
  =2779447296000000.
 \]
 
-This artifact proves the following finite reduction.
+This artifact proves the following exact exclusion.
 
 > **Theorem.** Among the 1,255 integer partitions of 23, exactly 894 give
 > `det(G) >= L^2`.  Exactly 16 of those determinants are rational squares, a
 > necessary condition for `G=RR^T`.  Eleven of the 16 matrices are not even
 > rationally congruent to the identity, and hence cannot equal `RR^T` for any
 > rational matrix `R`, much less for a sign matrix.  The five partitions not
-> excluded by this rational obstruction are
+> excluded by the rational obstruction are
 >
 > ```text
 > (9,8,2,2,2)
@@ -34,15 +34,20 @@ This artifact proves the following finite reduction.
 > (5,5,5,4,1,1,1,1)
 > (5,5,5,3,2,1,1,1)
 > ```
+>
+> An independent column block-sum moment argument excludes all 16 candidates
+> directly.  Consequently, **no** order-23 sign matrix `R` with
+> `|det(R)| >= L` has an Ehlich-block row Gram matrix.
 
 The full list of 16 candidates, square roots of their determinants, and every
-bad finite prime found is in [`certificate.json`](certificate.json).  In
-particular, this reduces the Ehlich-block part of any attempted improvement on
-the order-23 record from 16 arithmetically possible partitions to five.
+bad finite prime found is in [`certificate.json`](certificate.json).  The
+independent moment certificates are in
+[`moment_certificate.json`](moment_certificate.json), with a complete proof in
+[`MOMENT_PROOF.md`](MOMENT_PROOF.md).
 
-This does **not** determine the maximal determinant in order 23.  It neither
-rules out the five rational survivors nor treats non-Ehlich-block Gram
-matrices.
+This does **not** determine the maximal determinant in order 23.  It rules out
+the entire record-level Ehlich-block subcase but does not treat non-Ehlich-block
+Gram matrices.
 
 ## Exact argument
 
@@ -96,13 +101,28 @@ trivial symbols, so the local check is finite.  Positivity handles the real
 place, and Hilbert reciprocity is checked: every obstruction list has even
 cardinality.
 
+For each of the 16 square candidates, a column of a hypothetical sign
+decomposition has a vector of sums over the row blocks.  The diagonal entries
+of `X^T G^{-1} X=I` leave at most 46 normalized block-sum types; one candidate
+has none.  The identity `XX^T=G` also prescribes their aggregate second
+moments.  Fifteen short quadratic Farkas certificates are nonnegative on
+every allowed type but have negative prescribed aggregate values.  These
+contradictions exclude every candidate without invoking Hasse--Minkowski.
+[`MOMENT_PROOF.md`](MOMENT_PROOF.md) derives the equations and lists all
+certificates explicitly.
+
 ## Reproduction
 
-Python 3.10 or later is sufficient; there are no third-party dependencies.
+Python 3.10 or later and a C++20 compiler are sufficient; there are no
+third-party dependencies.
 
 ```bash
 python3 verify.py
 python3 independent_check.py
+python3 moment_obstruction.py
+g++ -std=c++20 -O2 -Wall -Wextra -Wconversion -Wshadow -pedantic \
+  independent_moment_check.cpp -o independent_moment_check
+./independent_moment_check
 ```
 
 `verify.py` does all of the following with exact integer or rational
@@ -126,7 +146,19 @@ uses a second diagonalization.  It first splits off each block's internal
 zero-sum directions and then diagonalizes only the block-sum core.  The two
 diagonalizations agree on all bad-prime sets.
 
-Typical runtime is under two seconds on an ordinary workstation.
+`moment_obstruction.py` verifies all 16 exact moment obstructions using
+rational arithmetic.  `independent_moment_check.cpp` independently enumerates
+all `2^23` sign columns for every candidate rather than block-sum tuples and
+checks the denominator-cleared identities using bounded 64-bit integers.  As
+a positive control, the Python verifier reconstructs the order-7 design
+obtained from a Sylvester Hadamard matrix of order 8.  GCC 12.2.0
+with the displayed release flags completed the direct-column check in about
+8.1 seconds.  The same full run passed AddressSanitizer and
+UndefinedBehaviorSanitizer using `-O1 -g`,
+`-fsanitize=address,undefined`, and `-fno-omit-frame-pointer`.
+
+The complete non-sanitized suite typically runs in about 20 seconds on an
+ordinary workstation.
 
 ## Known frontier and sources
 
@@ -148,14 +180,17 @@ candidate maximal-determinant Gram matrices is described by
 [Brent--Orrick--Osborn--Zimmermann](https://arxiv.org/abs/1112.4160), and
 [Tamura](https://doi.org/10.1002/jcd.20103) applies the same arithmetic
 framework to block-structured D-optimal designs.
+Tamura's open manuscript [*Ehlich block
+matrices*](https://www.kurims.kyoto-u.ac.jp/~kyodo/kokyuroku/contents/pdf/1465-8.pdf)
+also gives the block-sum moment criterion specialized here.
 
 ## Trust boundary
 
-The mathematical input trusted here is the Hasse--Minkowski classification of
-rational quadratic forms and the standard formulas for rational Hilbert
-symbols.  The record matrix itself is checked, not trusted as a numeric
-constant.  Exhaustiveness is over all integer partitions defining
-order-23 **Ehlich-block** matrices; no claim of exhaustive enumeration of all
-positive-definite candidate Gram matrices is made.  Absence of a bad prime is
-only failure of this obstruction, not evidence that a sign decomposition
-exists.
+The mathematical inputs trusted here are the Hasse--Minkowski classification
+of rational quadratic forms, the standard rational Hilbert-symbol formulas,
+and elementary exact matrix identities.  The record matrix itself is checked,
+not trusted as a numeric constant.  Exhaustiveness is over all integer
+partitions defining order-23 **Ehlich-block** matrices and over every possible
+normalized sign-column type for all 16 square candidates.  No claim of
+exhaustive enumeration of all positive-definite candidate Gram matrices is
+made.
