@@ -1,0 +1,234 @@
+{
+  "critical_profiles": {
+    "by_dimension": {
+      "10": {
+        "profiles_tested": 27405,
+        "survivors": []
+      },
+      "11": {
+        "profiles_tested": 35960,
+        "survivors": []
+      },
+      "12": {
+        "profiles_tested": 46376,
+        "survivors": []
+      },
+      "8": {
+        "profiles_tested": 14950,
+        "survivors": [
+          {
+            "D": 2,
+            "S_at_T0": 2,
+            "degree_counts_3_to_7": [
+              20,
+              2,
+              0,
+              0,
+              0
+            ],
+            "gamma2": 7
+          },
+          {
+            "D": 4,
+            "S_at_T0": 0,
+            "degree_counts_3_to_7": [
+              21,
+              0,
+              0,
+              0,
+              1
+            ],
+            "gamma2": 6
+          },
+          {
+            "D": 2,
+            "S_at_T0": 5,
+            "degree_counts_3_to_7": [
+              21,
+              0,
+              1,
+              0,
+              0
+            ],
+            "gamma2": 7
+          },
+          {
+            "D": 0,
+            "S_at_T0": 22,
+            "degree_counts_3_to_7": [
+              22,
+              0,
+              0,
+              0,
+              0
+            ],
+            "gamma2": 8
+          }
+        ]
+      },
+      "9": {
+        "profiles_tested": 20475,
+        "survivors": []
+      }
+    },
+    "total_profiles_tested": 145166
+  },
+  "endpoint_logic": [
+    {
+      "ell": 0,
+      "interior_indices_beyond_gamma2_gamma3": []
+    },
+    {
+      "ell": 1,
+      "interior_indices_beyond_gamma2_gamma3": []
+    },
+    {
+      "ell": 2,
+      "interior_indices_beyond_gamma2_gamma3": []
+    },
+    {
+      "ell": 3,
+      "interior_indices_beyond_gamma2_gamma3": []
+    },
+    {
+      "ell": 4,
+      "interior_indices_beyond_gamma2_gamma3": []
+    },
+    {
+      "ell": 5,
+      "interior_indices_beyond_gamma2_gamma3": []
+    },
+    {
+      "ell": 6,
+      "interior_indices_beyond_gamma2_gamma3": [
+        4
+      ]
+    }
+  ],
+  "identity_audit": {
+    "graph_instances": 351,
+    "individual_link_instances": 9828,
+    "maximum_d": 18,
+    "maximum_ell": 8,
+    "new_seed": "0x6e1ce55"
+  },
+  "status": "PASS",
+  "trust_boundary": "Exact finite identities and explicit flag-sphere fixtures only. The Labb\u00e9-Nevo and Davis-Okun inputs, the two finite base theorems, and the universal induction are audited mathematically rather than proved here.",
+  "two_antipode_fixtures": [
+    {
+      "d": 3,
+      "edge_link_gamma": [
+        1
+      ],
+      "ell": 2,
+      "faces_including_empty": 39,
+      "gamma": [
+        1,
+        2
+      ],
+      "link_gamma": [
+        1,
+        1
+      ],
+      "vertices": 8
+    },
+    {
+      "d": 5,
+      "edge_link_gamma": [
+        1,
+        1
+      ],
+      "ell": 3,
+      "faces_including_empty": 429,
+      "gamma": [
+        1,
+        3,
+        2
+      ],
+      "link_gamma": [
+        1,
+        2,
+        1
+      ],
+      "vertices": 13
+    },
+    {
+      "d": 7,
+      "edge_link_gamma": [
+        1,
+        2,
+        1
+      ],
+      "ell": 4,
+      "faces_including_empty": 4719,
+      "gamma": [
+        1,
+        4,
+        5,
+        2
+      ],
+      "link_gamma": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "vertices": 18
+    },
+    {
+      "d": 9,
+      "edge_link_gamma": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "ell": 5,
+      "faces_including_empty": 51909,
+      "gamma": [
+        1,
+        5,
+        9,
+        7,
+        2
+      ],
+      "link_gamma": [
+        1,
+        4,
+        6,
+        4,
+        1
+      ],
+      "vertices": 23
+    },
+    {
+      "d": 11,
+      "edge_link_gamma": [
+        1,
+        4,
+        6,
+        4,
+        1
+      ],
+      "ell": 6,
+      "faces_including_empty": 570999,
+      "gamma": [
+        1,
+        6,
+        14,
+        16,
+        9,
+        2
+      ],
+      "link_gamma": [
+        1,
+        5,
+        10,
+        10,
+        5,
+        1
+      ],
+      "vertices": 28
+    }
+  ]
+}
