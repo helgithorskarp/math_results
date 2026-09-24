@@ -1,0 +1,51 @@
+{
+  "pysat_package": "python-sat==1.9.dev15",
+  "solver": "glucose4",
+  "drat_trim_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "cases": [
+    {
+      "index": 4,
+      "solver": "glucose4",
+      "result": false,
+      "seconds": 32.18108401599966,
+      "variables": 6579,
+      "clauses": 31080,
+      "statistics": {
+        "restarts": 1044,
+        "conflicts": 318883,
+        "decisions": 413839,
+        "propagations": 115796957
+      },
+      "cnf_sha256": "cfdac8a13ecfff47d15d3cb1abfbda39a40f1829d6ef65676ababf5158c96460",
+      "proof_sha256": "53d23cf1c57b843b4d289c3a60613003e5ddd7f8306e5cf85a444e1363b67c71",
+      "proof_bytes": 91527998,
+      "drat_verified": true,
+      "checker_seconds": 42.238,
+      "checker_status": "s VERIFIED",
+      "rat_lemmas_in_core": 0
+    },
+    {
+      "index": 5,
+      "solver": "glucose4",
+      "result": false,
+      "seconds": 31.636866990998897,
+      "variables": 6579,
+      "clauses": 31080,
+      "statistics": {
+        "restarts": 829,
+        "conflicts": 317685,
+        "decisions": 405046,
+        "propagations": 117074338
+      },
+      "cnf_sha256": "72baa1d5a3708081d8706d2caeef3f800f1eda4d34c214400850e068beb9a73f",
+      "proof_sha256": "a12577bc6207fb8cc7fb1eb38c4af4516593097d0cb18666df2c3e5a8165a536",
+      "proof_bytes": 88914240,
+      "drat_verified": true,
+      "checker_seconds": 41.748,
+      "checker_status": "s VERIFIED",
+      "rat_lemmas_in_core": 0
+    }
+  ],
+  "public_cnf_generator_reproduces_exact_verified_instances": true,
+  "proof_traces_in_public_repository": false
+}

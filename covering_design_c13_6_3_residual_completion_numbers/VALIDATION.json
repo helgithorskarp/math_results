@@ -1,0 +1,93 @@
+{
+  "standard_library_runs": [
+    {
+      "interpreter": "Python 3.11.2",
+      "flags": [
+        "-O"
+      ],
+      "args": [],
+      "seconds": 21.621,
+      "output_sha256": "469b89b98e73bf3303ee35a7319a907a79a9e397eff9af65f360a9361c2dacb4"
+    },
+    {
+      "interpreter": "Python 3.12.14",
+      "flags": [],
+      "args": [],
+      "seconds": 22.2904,
+      "output_sha256": "469b89b98e73bf3303ee35a7319a907a79a9e397eff9af65f360a9361c2dacb4"
+    },
+    {
+      "interpreter": "Python 3.11.2",
+      "flags": [],
+      "args": [
+        "--all-local-labels"
+      ],
+      "seconds": 68.7661,
+      "output_sha256": "469b89b98e73bf3303ee35a7319a907a79a9e397eff9af65f360a9361c2dacb4"
+    }
+  ],
+  "normal_run_resource_measurement": "elapsed_seconds=22.101 peak_rss_kib=147916",
+  "sat_positive_controls": [
+    {
+      "case": 0,
+      "status": "VERIFIED_SAT_WITNESS",
+      "conflicts": 0
+    },
+    {
+      "case": 1,
+      "status": "VERIFIED_SAT_WITNESS",
+      "conflicts": 0
+    },
+    {
+      "case": 2,
+      "status": "VERIFIED_SAT_WITNESS",
+      "conflicts": 0
+    },
+    {
+      "case": 3,
+      "status": "VERIFIED_SAT_WITNESS",
+      "conflicts": 0
+    }
+  ],
+  "negative_controls": [
+    {
+      "control": "malformed_through_row",
+      "rejected": true,
+      "reason": "through-row domain"
+    },
+    {
+      "control": "removed_upper_block",
+      "rejected": true,
+      "reason": "missed triple in completion"
+    },
+    {
+      "control": "unsupported_empty_clause_proof",
+      "rejected": true,
+      "exit_code": 1,
+      "checker_verdict": [
+        "s NOT VERIFIED"
+      ]
+    }
+  ],
+  "public_sat_case4_replay": {
+    "case": 4,
+    "clauses": 31080,
+    "cnf_sha256": "cfdac8a13ecfff47d15d3cb1abfbda39a40f1829d6ef65676ababf5158c96460",
+    "proof_bytes": 91527998,
+    "proof_sha256": "53d23cf1c57b843b4d289c3a60613003e5ddd7f8306e5cf85a444e1363b67c71",
+    "solve_seconds": 31.683557573000144,
+    "solver_result": false,
+    "solver_statistics": {
+      "conflicts": 318883,
+      "decisions": 413839,
+      "propagations": 115796957,
+      "restarts": 1044
+    },
+    "status": "INDEPENDENTLY_CHECKED_UNSAT",
+    "variables": 6579
+  },
+  "public_case5_cnf_matches_independently_checked_instance": true,
+  "unquotiented_and_quotiented_complete_outputs_equal": true,
+  "fixtures_sha256": "c49e0374051645c7838be08b51ad745a746930f3e6d40ef26f31a262356cfe39",
+  "drat_trim_compiler": "cc (Debian 12.2.0-14+deb12u1) 12.2.0"
+}
