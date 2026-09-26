@@ -454,3 +454,49 @@ None of these inputs is used as if it were an unrestricted sign. The
 direct oracle remains applicable to the paired-cubature family with its
 unchanged huge configuration count. No complete cover, exact-zero decision
 procedure, or new Kneser--Poulsen conclusion is claimed in this packet.
+
+## Threshold-relative sign certificates (pass 10)
+
+[RELATIVE_HINGE.md](RELATIVE_HINGE.md) changes the numerical error scale,
+using the equal-mass identity for clipped densities. Classical midpoint
+Peano kernels and the positive variation of a concave clip supply a
+threshold-proportional bound. The proof derives its constants and handles
+critical levels, arbitrary mixing laws, and the finite-cube boundary.
+The all-window rational ratio sweep and exact coordinate-table compression
+are new implementations; their standard underlying methods are not claimed
+as inventions. The exponentials are the existing pass-9 certified routine.
+
+R8 already proved the
+[signed endpoint/middle architecture](../gaussian_majorisation_open_stability/CERTIFICATE_INTERFACE.md)
+and [low-threshold geometric estimate](../gaussian_majorisation_open_stability/PROOF.md).
+Those results were read and retained as dependencies for a possible
+all-threshold consumer, rather than reproved as a new bridge. The present
+window oracle has an independent, self-contained quadrature proof and does
+not assume a positive Gaussian sign or a mean-width margin. Its role on
+the paired-cubature spine is evaluation and sign certification of the actual
+finite instances, with cost polynomial in the logarithmic threshold radius
+at fixed support and fixed relative accuracy.
+
+The control is a classical two-point collapse with a continuous contracting
+motion. It is used to test the certificate at tiny thresholds, not offered
+as a new class. Source-relative error and target-relative error are combined
+in the adverse convention, opposite to the beta profiles. The full sweep
+tests every knot. No floating evaluation is a mathematical premise.
+
+The fresh R8 [seven-factor result](../gaussian_seven_factor_kernel/PROOF.md),
+source commit f5bbd92be43517c18a6958acf900ddd67bac62f8, proves the universal
+strip N-j<=7. The final refresh found R5's
+[independent acceptance](../gaussian_seven_factor_review_r5/REVIEW.md),
+source c93cddbbe5e3943acead1d964d8de2cce6a419de; its complete scope and
+independence statement were read without replaying the computation.
+The first general unsigned entry is now b_(8,0). This replaces the earlier
+context above but is not a premise of the quadrature theorem. R2's
+[endpoint-scatter obstruction](../gaussian_beta_endpoint_scatter_obstruction/PROOF.md)
+closes that particular positive-representation method without contradicting
+the seven-factor sign. Both were inspected before this pass's target was
+selected. The primary [Aishwarya--Li v2 source](https://arxiv.org/html/2609.07041v2)
+was checked live; the unrestricted Conjecture1.1 in R3 remains the target.
+
+[RELATIVE_INPUTS.json](RELATIVE_INPUTS.json) pins the exact code and analytic
+interfaces consumed. This packet supplies no all-configuration signed cover,
+unrestricted theorem, counterexample, or new Kneser--Poulsen consequence.
