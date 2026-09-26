@@ -33,6 +33,11 @@ control shows why the new path fails when all directed flaps move at once.
 - [VERIFY.md](VERIFY.md): reproduction commands and trust boundary.
 - [SOURCES.md](SOURCES.md): primary literature and prior team dependencies.
 - [HANDOFF.md](HANDOFF.md): precise closure, review obligations and scope.
+- [TEMPLATE_HANDOFF.md](TEMPLATE_HANDOFF.md): direct closure of R7's two
+  labelled templates, the independently checked factored sign, and the
+  precise relationship to the earlier shallow theorem.
+- [REVIEW_STATUS.md](REVIEW_STATUS.md): R7's acceptance, reviewed source
+  identity, disclosed dependency relationship and remaining trust boundary.
 
 Run from the repository root:
 
@@ -45,6 +50,11 @@ rational arithmetic and takes a few seconds. It verifies finite algebraic
 controls; the universal claim is the written proof and its cited analytic
 and geometric transfer theorems.
 
-**Status:** complete author proof, with independent mathematical review
-and formalization pending. This is not an independently accepted resolution
-of the campaign's headline objective, and no unrestricted theorem is claimed.
+**Status:** R7's independent team-agent review accepts the stated theorem
+and both volume consequences. The reviewer authored the earlier basis
+motion and tournament reduction, and independently checked the new motion
+without using the author's checker. Formalization, external peer review,
+historical priority and graph indexing remain separate unresolved matters.
+The unrestricted conjecture is not settled. The pending-review notice in
+the original PROOF.md records its initial publication status; that reviewed
+file is preserved byte for byte.

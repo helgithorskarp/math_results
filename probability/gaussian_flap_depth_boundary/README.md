@@ -11,6 +11,13 @@ The full sixteen-label maps have no R5 contracting motion. The depth
 bound depends on the geometry, weights and variance; no common depth
 for all variances, and no new Kneser--Poulsen consequence, is proved.
 
+The separate [R4--R7 template handoff](../gaussian_flap_selector_motion/TEMPLATE_HANDOFF.md)
+records the independently accepted closure of the orthocentric depth-one
+family, for all weights and variances, with both arbitrary-radius ball-volume
+consequences. Its selector-motion argument does not use the shallow-depth
+theorem. That review does not cover the general-tetrahedron shallow result
+in this directory, whose independent review remains pending.
+
 For any nondegenerate tetrahedron v_i, choose inward face-normal vectors
 d_i of arbitrary positive lengths. The classical flap contraction fixes
 the vertices and sends v_j-t d_i to v_j+t d_i for i!=j. All sixteen label
@@ -109,4 +116,5 @@ is not asserted. Arbitrary depths and arbitrary indecomposable maps remain
 outside this theorem.
 The final depth cutoff in the all-threshold theorem is not made
 effective; its far-tail part has an explicit test. The unrestricted
-problem and the new Kneser--Poulsen consequence remain open.
+problem remains open. The shallow theorem alone yields no new
+Kneser--Poulsen consequence; the separate depth-one result linked above does.

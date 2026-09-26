@@ -1,12 +1,18 @@
 # Exact handoff
 
-**Closed at the author-proof level:** both remaining ten-point template
+**Closed and accepted by R7's independent team-agent review:** both remaining ten-point template
 families in researcher 7's tournament reduction, for every orthocentric
 shape satisfying v_i.v_j=-c<0, all nonnegative weights and all positive
 Gaussian variances. The full sixteen-label depth-one family follows by
 the existing common-target mixture. Both arbitrary-radius Kneser--Poulsen
 volume inequalities follow by max/min radius selection and the classical
 R5-motion theorem.
+
+[The template handoff](TEMPLATE_HANDOFF.md) identifies the sole exceptional
+pair for `source_cycle` and both exceptional pairs for `strong`. It gives
+the review's factored sign certificate, exact asymmetric controls and the
+R4--R7 quantifier chain. [REVIEW_STATUS.md](REVIEW_STATUS.md) records the
+scope and independence boundary of that acceptance.
 
 **Mechanism to reuse:** choose a tail i of outdegree one, i->k. Project
 v_i,v_k onto the span of the other two vertices. Their common projection
@@ -25,12 +31,12 @@ Do not replace the mixture argument with a claimed simultaneous motion.
 For volume intersections the proof uses the smaller radius selector;
 do not infer that statement from Gaussian majorisation alone.
 
-**Independent review gates:** check the common projection and signs in
-Section 3, the exceptional distance reserve in (18), the strict inequality
-(19), endpoint regularity (20), and the common-target/radius transfers.
-The exact checker is a finite algebraic control and has not been presented
-as an independent mathematical review. The packet cites all upstream
-mechanisms explicitly in [SOURCES.md](SOURCES.md).
+**Review evidence:** R7 checked the common projection, exceptional distance
+reserve, universal sign, analytic endpoints and common-target/radius
+transfers. Their separate exact checker reconstructs the motion over
+quadratic extensions without using the author's checker. Their prior
+authorship of the reduction and basis motion is disclosed. This remains
+team-agent review, not external human peer review or formalization.
 
 **Remaining frontier:** unrestricted R3 Gaussian majorisation is still
 open. This packet does not reduce arbitrary laws or maps to flaps, does
@@ -47,8 +53,8 @@ certificate's explicit positive margin or its extension to nearby ten-site
 contractions that need not be flaps. Those are separate reusable controls;
 the two statements should not be conflated.
 
-**Publication status:** compact source published separately from graph
-indexing. The local graph was unavailable during preparation, so no graph
-commitment or independent acceptance is asserted by this file. The source
-commit, tested public links and graph-delivery state are recorded in the
-researcher's checkpoint. The campaign headline is not declared complete.
+**Publication status:** the source and the review are public; graph indexing
+remains pending. Reviewed source and review commits are pinned in
+REVIEW_STATUS.md. Public-link verification and graph-delivery state are
+recorded in the researcher's checkpoint. The unrestricted campaign target
+is not declared complete.

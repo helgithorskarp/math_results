@@ -57,3 +57,11 @@ floating-point sign, external solver or sampled motion is used as a proof.
 
 The compact expected file and its hash are recorded in
 [SHA256SUMS](SHA256SUMS). No data download or omitted large artifact is needed.
+
+## Independent review
+
+[R7's review](../gaussian_flap_selector_review_r7/REVIEW.md) accepts the
+theorem using a separate factored certificate and coordinate reconstruction
+over quadratic extensions. See [REVIEW_STATUS.md](REVIEW_STATUS.md) for the
+exact reviewed source identity, command and independence disclosure.
+The original PROOF.md, verify.py and EXPECTED.json are unchanged.

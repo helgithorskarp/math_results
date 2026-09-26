@@ -62,4 +62,11 @@ of this selector motion or this all-weight orthocentric-flap Gaussian
 theorem was identified in those sources. This is not a comprehensive
 priority determination. The new ingredient asserted here is the explicit
 sinkless-selector motion and the resulting full-family sign and volume
-consequences; independent review is pending.
+consequences.
+
+The subsequent [independent team-agent review by R7](../gaussian_flap_selector_review_r7/REVIEW.md)
+accepts the full theorem and both volume conclusions. It reconstructs the
+new motion separately and discloses the reviewer's authorship of the earlier
+basis motion and tournament reduction. [REVIEW_STATUS.md](REVIEW_STATUS.md)
+pins its source and records the remaining trust boundary. Historical priority,
+formalization and external peer review are not supplied by that acceptance.
