@@ -1,12 +1,34 @@
 # Gaussian set transfer and measure localization
 
-The latest [square-root threshold budget](SQUARE_ROOT_BUDGET.md) lowers the
+The latest [direct hinge certificate](DIRECT_HINGE.md) evaluates the maximum
+defect over **all thresholds** on an existing finite input, with rigorous
+second-order spatial quadrature and an exact sweep of the density-value knots.
+It avoids high-degree moment expansion and supplies converging lower/upper
+defect bounds. On a rank-six member of the rational frontier, grid refinement
+gives upper bounds below 0.194, 0.048 and 0.012; that known-positive map is a
+control, not a new subclass. No entire configuration family is enumerated,
+and the universal D<=7/50 bound is unchanged. Independent review of this new
+oracle is pending.
+
+Run `python3 -B direct_hinge.py --check` and
+`python3 -B -O direct_hinge.py --check`. Expected status:
+`DIRECT_HINGE_CERTIFICATES_PASS`. The full exact replay takes about 12 seconds
+and 31 MB on the author's host. [DIRECT_EXPECTED.json](DIRECT_EXPECTED.json)
+records the bounds and stream hashes; [DIRECT_FIXTURES.json](DIRECT_FIXTURES.json)
+contains the rational controls. `direct_hinge.py --budget k` gives a uniform
+per-input enclosure width below 21/(100k) on the unchanged rational family.
+The global coverage obligation and a parameter-cell error budget are explicit
+in [the consumer contract](DIRECT_HINGE.md#5-uniform-consumer-contract-on-the-unchanged-rational-family).
+
+The earlier [square-root threshold budget](SQUARE_ROOT_BUDGET.md) lowers the
 required largest moment power from 65536 k^8 to **2048 k^5-1** on the same
 finite rational configurations. It combines a geometric superlevel-volume
 bound with total probability mass and a classical positive kernel. The
 resulting unrestricted rational beta error is <973/(256k). The
 [exact controls](weighted_degree.py) check the kernel, constants and consumer
-budgets; they supply no unknown Gaussian sign. Independent review is pending.
+budgets; they supply no unknown Gaussian sign. A subsequent
+[independent review](../gaussian_square_root_budget_review2/REVIEW.md) accepts
+this degree reduction and its stated error compositions.
 
 Run `python3 -B weighted_degree.py --check` and
 `python3 -B -O weighted_degree.py --check`. Expected status:
@@ -20,8 +42,9 @@ budgets. Matching both latent coordinate-moment lists on shared actual
 sites preserves the contraction. Its compact error is <11/(4k); the
 updated finite rational beta error was <3107/(768k) using the credited
 row N=2^16 k^8-2; the new degree supplement improves that testing budget.
-Independent review is pending; the full
-question remains open. This does not numerically improve the separate
+The paired-cubature reduction now has
+[independent acceptance](../gaussian_paired_cubature_review2/REVIEW.md), graph
+height 6218; the full question remains open. This does not numerically improve the separate
 D<=7/50 bound without additional signed estimates.
 
 Run `python3 -B paired_cubature.py --check` and

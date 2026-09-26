@@ -1,0 +1,300 @@
+{
+  "controls": {
+    "C_interval": [
+      "71487478783461/1125899906842624",
+      "35743739391731/562949953421312"
+    ],
+    "budgets": [
+      {
+        "bits": 20,
+        "half_grid": 28,
+        "interval_width_upper": "21/100",
+        "k": 1,
+        "lattice_sites_per_endpoint": 185193,
+        "localization_rounding_error": "865/256",
+        "step": "1/4",
+        "tail_radius": 4
+      },
+      {
+        "bits": 22,
+        "half_grid": 80,
+        "interval_width_upper": "21/200",
+        "k": 2,
+        "lattice_sites_per_endpoint": 4173281,
+        "localization_rounding_error": "865/512",
+        "step": "1/8",
+        "tail_radius": 4
+      },
+      {
+        "bits": 28,
+        "half_grid": 324,
+        "interval_width_upper": "3/100",
+        "k": 7,
+        "lattice_sites_per_endpoint": 273359449,
+        "localization_rounding_error": "865/1792",
+        "step": "1/12",
+        "tail_radius": 6
+      },
+      {
+        "bits": 32,
+        "half_grid": 864,
+        "interval_width_upper": "21/1600",
+        "k": 16,
+        "lattice_sites_per_endpoint": 5168743489,
+        "localization_rounding_error": "865/4096",
+        "step": "1/16",
+        "tail_radius": 6
+      },
+      {
+        "bits": 40,
+        "half_grid": 6336,
+        "interval_width_upper": "21/6400",
+        "k": 64,
+        "lattice_sites_per_endpoint": 2035346265217,
+        "localization_rounding_error": "865/16384",
+        "step": "1/32",
+        "tail_radius": 6
+      },
+      {
+        "bits": 56,
+        "half_grid": 394240,
+        "interval_width_upper": "21/102400",
+        "k": 1024,
+        "lattice_sites_per_endpoint": 490200441240688641,
+        "localization_rounding_error": "865/262144",
+        "step": "1/128",
+        "tail_radius": 8
+      },
+      {
+        "bits": 96,
+        "half_grid": 12000040000,
+        "interval_width_upper": "21/100000000",
+        "k": 1000000,
+        "lattice_sites_per_endpoint": 13824138242188812032091200240001,
+        "localization_rounding_error": "173/51200000",
+        "step": "1/4000",
+        "tail_radius": 10
+      }
+    ],
+    "direct_profile_comparisons": 4096,
+    "exponential_enclosures": 67,
+    "gaussian_hinge_controls": [
+      {
+        "certified_error_below": "1/100",
+        "t": "1/4"
+      },
+      {
+        "certified_error_below": "1/100",
+        "t": "1"
+      },
+      {
+        "certified_error_below": "1/100",
+        "t": "4"
+      }
+    ],
+    "peano_controls": 43,
+    "rejected_inputs": 10
+  },
+  "fixtures": [
+    {
+      "name": "rational_frontier_full_rank_control",
+      "rows": [
+        {
+          "bits": 40,
+          "contraction": true,
+          "density_interval_width_sums": [
+            8258,
+            8201
+          ],
+          "finite_lattice_mass_intervals": [
+            [
+              "154740812698442644565284263/154742504910672534362390528",
+              "2475853003322702846372798835/2475880078570760549798248448"
+            ],
+            [
+              "4951730701510911941224425915/4951760157141521099596496896",
+              "4951730701804115615081045861/4951760157141521099596496896"
+            ]
+          ],
+          "fixed_point_profile_maxima": [
+            0,
+            0
+          ],
+          "half_grid": 9,
+          "lattice_defect_interval": [
+            "0",
+            "0"
+          ],
+          "lattice_sites_per_endpoint": 6859,
+          "lower": "0",
+          "max_density_interval_width_units": [
+            3,
+            4
+          ],
+          "maximizing_lower_threshold_over_C": "1070887583095/1099511627776",
+          "maximizing_upper_threshold_over_C": "1070887583093/1099511627776",
+          "quadrature_pair_error": "3169/16384",
+          "source_groups": 7,
+          "step": "1/2",
+          "tail_error": "1233937214696835/4611686018427387904",
+          "tail_radius": "4",
+          "target_groups": 4,
+          "upper": "893228138410765699/4611686018427387904",
+          "value_stream_sha256": [
+            "9931b330a1a1d0e3a9ed0038b9016adcd5a479aa262e5d23668a00cd71782266",
+            "36a07ef5096b1ae6996b3f9d37c05b0de0b6d02f30a817951d616d80034b0332"
+          ],
+          "variance": 1
+        },
+        {
+          "bits": 40,
+          "contraction": true,
+          "density_interval_width_sums": [
+            61730,
+            61597
+          ],
+          "finite_lattice_mass_intervals": [
+            [
+              "309477983490798046229682195/309485009821345068724781056",
+              "19806590944514582538803325475/19807040628566084398385987584"
+            ],
+            [
+              "9903392325751894615811698689/9903520314283042199192993792",
+              "39613569305209839711534381759/39614081257132168796771975168"
+            ]
+          ],
+          "fixed_point_profile_maxima": [
+            0,
+            0
+          ],
+          "half_grid": 18,
+          "lattice_defect_interval": [
+            "0",
+            "0"
+          ],
+          "lattice_sites_per_endpoint": 50653,
+          "lower": "0",
+          "max_density_interval_width_units": [
+            4,
+            4
+          ],
+          "maximizing_lower_threshold_over_C": "1070887583095/1099511627776",
+          "maximizing_upper_threshold_over_C": "1070887583093/1099511627776",
+          "quadrature_pair_error": "49537/1048576",
+          "source_groups": 7,
+          "step": "1/4",
+          "tail_error": "18855784379954115/73786976294838206464",
+          "tail_radius": "4",
+          "target_groups": 4,
+          "upper": "3504712264708895683/73786976294838206464",
+          "value_stream_sha256": [
+            "8b23b91350f0e69fc0bf19c0b3b0ccbd80e1df9b48d570c3f6b9b915e1ae8ae2",
+            "3cdb7b57790ecf7a64c3bfca2c55afe2acfa4f50a3fd345797f9b27a4b92fcb9"
+          ],
+          "variance": 1
+        },
+        {
+          "bits": 40,
+          "contraction": true,
+          "density_interval_width_sums": [
+            475778,
+            476273
+          ],
+          "finite_lattice_mass_intervals": [
+            [
+              "316902757534656503913057364425/316912650057057350374175801344",
+              "79225689387916755434021960017/79228162514264337593543950336"
+            ],
+            [
+              "633813828950011125864869792553/633825300114114700748351602688",
+              "158453457246016886982306743913/158456325028528675187087900672"
+            ]
+          ],
+          "fixed_point_profile_maxima": [
+            0,
+            0
+          ],
+          "half_grid": 36,
+          "lattice_defect_interval": [
+            "0",
+            "0"
+          ],
+          "lattice_sites_per_endpoint": 389017,
+          "lower": "0",
+          "max_density_interval_width_units": [
+            4,
+            4
+          ],
+          "maximizing_lower_threshold_over_C": "1074041468355/1099511627776",
+          "maximizing_upper_threshold_over_C": "1074041468351/1099511627776",
+          "quadrature_pair_error": "787969/67108864",
+          "source_groups": 7,
+          "step": "1/8",
+          "tail_error": "298194694999588035/1180591620717411303424",
+          "tail_radius": "4",
+          "target_groups": 4,
+          "upper": "14160291940232019139/1180591620717411303424",
+          "value_stream_sha256": [
+            "09078cfa959d6b0f50f1b9ee0a39425f70cf19f19d9592f87db2faa1bc0108d7",
+            "576c92967e46f89ead399b968ff84e49284d5650e420e012fa5e28da1a943e27"
+          ],
+          "variance": 1
+        }
+      ]
+    },
+    {
+      "name": "deliberately_noncontracting_sign_control",
+      "rows": [
+        {
+          "bits": 40,
+          "contraction": false,
+          "density_interval_width_sums": [
+            292556,
+            292561
+          ],
+          "finite_lattice_mass_intervals": [
+            [
+              "4951760156835645740093861055/4951760157141521099596496896",
+              "9903520316285691370593673229/9903520314283042199192993792"
+            ],
+            [
+              "9903432700514786619735527433/9903520314283042199192993792",
+              "39613730812516924754360579035/39614081257132168796771975168"
+            ]
+          ],
+          "fixed_point_profile_maxima": [
+            231514802271497,
+            231514802280353
+          ],
+          "half_grid": 32,
+          "lattice_defect_interval": [
+            "16550409515440810316995311117/79228162514264337593543950336",
+            "8275204758037067471951961043/39614081257132168796771975168"
+          ],
+          "lattice_sites_per_endpoint": 274625,
+          "lower": "12787253375737109837305165325/79228162514264337593543950336",
+          "max_density_interval_width_units": [
+            4,
+            3
+          ],
+          "maximizing_lower_threshold_over_C": "178480678041/1099511627776",
+          "maximizing_upper_threshold_over_C": "178480678039/1099511627776",
+          "quadrature_pair_error": "49537/1048576",
+          "source_groups": 1,
+          "step": "1/4",
+          "tail_error": "18855784379954115/73786976294838206464",
+          "tail_radius": "4",
+          "target_groups": 2,
+          "upper": "10156782827888917711797033939/39614081257132168796771975168",
+          "value_stream_sha256": [
+            "3cc34ed3b508796623d2229d3bc110fdbbf740282f0adf04f3b8574baaf29755",
+            "74ebafd16a199a8ab4643c42e64285bb75dd90fe74657222ec885ad2d8dc4b2c"
+          ],
+          "variance": 1
+        }
+      ]
+    }
+  ],
+  "pinned_inputs": 5,
+  "status": "DIRECT_HINGE_CERTIFICATES_PASS"
+}
