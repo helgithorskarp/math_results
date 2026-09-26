@@ -1,11 +1,26 @@
 # Gaussian set transfer and measure localization
 
-The latest [paired-cubature frontier](CUBATURE_FRONTIER.md) reduces the
+The latest [square-root threshold budget](SQUARE_ROOT_BUDGET.md) lowers the
+required largest moment power from 65536 k^8 to **2048 k^5-1** on the same
+finite rational configurations. It combines a geometric superlevel-volume
+bound with total probability mass and a classical positive kernel. The
+resulting unrestricted rational beta error is <973/(256k). The
+[exact controls](weighted_degree.py) check the kernel, constants and consumer
+budgets; they supply no unknown Gaussian sign. Independent review is pending.
+
+Run `python3 -B weighted_degree.py --check` and
+`python3 -B -O weighted_degree.py --check`. Expected status:
+`SQUARE_ROOT_DEGREE_BUDGET_CONTROLS_PASS`. The [expected record](WEIGHTED_EXPECTED.json)
+and [pinned sources](WEIGHTED_INPUTS.json) are compact and use only standard
+library Python. The existing paired rational producer is unchanged.
+
+The [paired-cubature frontier](CUBATURE_FRONTIER.md) reduces the
 previous k^6 atom bound to O(k^3(1+log k)^(3/2)), with explicit integer
 budgets. Matching both latent coordinate-moment lists on shared actual
 sites preserves the contraction. Its compact error is <11/(4k); the
-updated finite rational beta error is <3107/(768k). Gaussian testing still
-uses the credited row N=2^16 k^8-2. Independent review is pending; the full
+updated finite rational beta error was <3107/(768k) using the credited
+row N=2^16 k^8-2; the new degree supplement improves that testing budget.
+Independent review is pending; the full
 question remains open. This does not numerically improve the separate
 D<=7/50 bound without additional signed estimates.
 

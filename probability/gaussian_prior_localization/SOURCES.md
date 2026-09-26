@@ -373,3 +373,39 @@ the localization or cubature theorem.
 The [independent second review](../gaussian_uniform_defect_bound_review2/REVIEW.md),
 committed at h6204, accepts the separate bound D<=7/50. That review does not
 cover the present cubature proof. No teammate computations were replayed.
+
+## Square-root threshold budget (pass 8)
+
+[SQUARE_ROOT_BUDGET.md](SQUARE_ROOT_BUDGET.md) keeps the same compact and
+rational configuration families, beta normalization and replica identities.
+Its new campaign estimate combines the support-ball superlevel bound from
+R8's h6150 with the unit-mass bound u C V(Cu)<=1. This makes H Lipschitz as
+a function of sqrt(u), with an explicit constant of order r^(3/2). The
+resulting degree is of order k^5 instead of k^8. No unknown sign or optimal
+approximation rate is asserted.
+
+The positive kernel used to convert that modulus into the beta estimate is
+classical. Syed Abdul Mohiuddine, Tuncer Acar and Mohammed A. Alghamdi,
+[Genuine modified Bernstein--Durrmeyer operators](https://link.springer.com/article/10.1186/s13660-018-1693-z),
+Journal of Inequalities and Applications 2018, article 104, equations
+(2.1)--(2.5), record the genuine operator at the identity coordinate and
+its moments, crediting earlier work of Chen and Goodman--Sharma. Weighted
+approximation in this setting is established, not invented here. The new
+note derives its particular square-root error directly from the variance;
+no external approximation theorem or unspecified constant is imported.
+
+The compact atom/rational schema is the previous paired-cubature result,
+now committed at h6212. The degree note uses the existing beta identity
+from R5's h6088 and the all-degree perturbation/precision estimates from
+h6194. It does not alter the prior paired producer or expected record.
+[WEIGHTED_INPUTS.json](WEIGHTED_INPUTS.json) pins these concrete inputs and
+the previous R8 modulus. The previously deferred cubature contribution was
+confirmed with its exact body and all thirteen initial relations before
+this new degree handoff.
+
+The [finite checker](weighted_degree.py) evaluates beta square-root moments
+by a positive product and separately by exact polynomial density integration.
+Whole-interval Bernstein certificates check the kernel risk at finitely many
+degrees. Those controls do not prove the all-degree assertion by extrapolation,
+evaluate a Gaussian moment, or certify a signed configuration. The universal
+geometric, integration and calculus arguments remain a written author proof.
