@@ -57,6 +57,17 @@ The statements are non-strict. These quantifiers are part of the claims;
 checking a finite set of weights, variances, energies or radii cannot
 replace them. General affine changes of the Gaussian metric are excluded.
 
+The later [quantitative module H](HINGE_MARGIN.md) improves the effectiveness
+of these same positive classes. Given any continuous R5 contracting motion,
+it bounds the actual hinge gap below by kappa times D/s for 0<h<m, where
+D is average endpoint squared-distance loss and m is a certified source
+peak lower bound. Its proof extends the established pressure identity to
+C1 tests and uses a uniform radial shell estimate before a one-sided
+threshold limit. This module is an author proof awaiting review. It does
+not depend on G, introduce a new geometric class, or strengthen the ball
+conclusions. The exact constant, strictness cases, original benchmark
+substitution and R4/R8 interfaces are stated in that source.
+
 | Module | Exact positive claim | Scope boundary |
 | --- | --- | --- |
 | **A: original axial theorem**, [PROOF.md](PROOF.md), Sections 1--3 | Let P,Q be centrally symmetric compact convex planar bodies with zero in their interiors. Set C(P)={(zu,z):z>=0,u in P}, and W=conv{conjugate(u)v:u in P,v in Q}. If per W<=4, T fixes C(P) and maps -b to b for b in C(Q). It has an R4 contracting motion, full Gaussian comparison and both ball conclusions. | Same original, undamped endpoints. Whole domains, arbitrary heights and distributions; probability support is bounded. Necessity of per W<=4 is proved only within the specified absolutely continuous axial rotation form. |

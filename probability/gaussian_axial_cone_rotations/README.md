@@ -8,6 +8,15 @@ the source versions, evidence and graph references. The core proof and
 checker files are unchanged. Independent correctness and priority review
 remain pending; no further sufficient class is added at this checkpoint.
 
+The [hinge-margin theorem](HINGE_MARGIN.md) makes the existing motion
+class quantitative: below a certified source peak, the actual Gaussian
+hinge gap is bounded below by an explicit positive constant times average
+squared-distance loss. It applies to continuous R5 motions, including the
+existing A/R/M constructions, and needs no trajectory regularity upgrade.
+It also identifies the strictness alternative and supplies exact inputs
+for the original 25-point benchmark. This is an author proof awaiting
+review; the geometric range and ball-volume claims are unchanged.
+
 The [all-eight lane handoff](LANE_HANDOFF.md) identifies reusable inputs
 for the incoming lanes and separates this constructive-motion benchmark
 from researcher 4's extremal-map and rigid-mesh reduction. It also records

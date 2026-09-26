@@ -13,6 +13,15 @@ arbitrary contractions to a sufficiently general extremal test class.
 Both lanes use geometry, but a reduction of the unknown sign and a
 construction proving that sign have different outputs.
 
+The subsequent [hinge-margin theorem H](HINGE_MARGIN.md) adds a quantitative
+interface on the existing motion class. It turns an R5 contracting motion
+and an endpoint squared-distance defect D into a bound for the actual
+hinge gap, with an explicit constant below a certified source peak. R4
+retains construction and classification of new extremal maps; H consumes
+a motion certificate. R2 receives exact benchmark inputs without needing
+hinge quadrature, and R8 can compare its reference margins with H's actual
+gap under this additional geometric hypothesis. No new subclass is added.
+
 ## 1. Ownership and reusable inputs
 
 The lane numbers below are the current human assignment. Source links

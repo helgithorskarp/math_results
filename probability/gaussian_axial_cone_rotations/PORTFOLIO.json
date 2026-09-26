@@ -460,7 +460,10 @@
       "reserve_lower": "11/280",
       "core_and_G_unchanged": true,
       "piecewise_smooth_impossibility_claimed": false,
-      "new_computational_theorem": false
+      "new_computational_theorem": false,
+      "graph_ref": "bafkreie5h2utoqns47a2vp52xsei7oedz6vkvpdk3fkq3ag5d7vqnoczqq",
+      "committed_height": "6172",
+      "relations_verified": 6
     }
   },
   "cap_representation_boundary": {
@@ -483,6 +486,45 @@
         "source_commit": "58ef0e6a38d607cf14f56692d2e80d227760715a",
         "role": "class comparison; its positive proof and exact certificates are not premises of the equality lemma or independently reviewed here"
       }
-    ]
+    ],
+    "graph_ref": "bafkreigxif2ddmh2b57ooafdtkhjb7h7zqrvandtekbsfi5gc37teh3lru",
+    "committed_height": "6178",
+    "relations_verified": 7
+  },
+  "hinge_margin": {
+    "reader_path": "HINGE_MARGIN.md",
+    "status": "complete_author_proof_independent_review_pending",
+    "claim": "For any bounded law admitting a continuous R5 contraction, the actual hinge gap is at least kappa(R,s,m,h) D/s whenever 0<h<m<=source peak.",
+    "mechanism": "C1 extension of Aishwarya--Li equation (66), uniform radial shell bound, and two-coordinate Gaussian density-value sampling.",
+    "proof_sha256": "ea0fd4b6ce6bf4b99a367fee2930a5ab908448adb00a7eafeab7ea869f82162c",
+    "inputs": [
+      "support radius about a moving anchor",
+      "source peak lower bound",
+      "average endpoint squared-distance loss",
+      "continuous contracting motion in at most five dimensions"
+    ],
+    "geometric_premises": [
+      "PROOF.md",
+      "ROBUSTNESS.md",
+      "MATRIX_PATHS.md"
+    ],
+    "not_premises": [
+      "REGULARITY.md",
+      "COMPOSITIONS.md",
+      "LIFT_BOUNDARY.md",
+      "CAP_COMPARISON.md"
+    ],
+    "strictness": "Nonisometric support matching has strictly larger hinges for every 0<h<target peak; an isometric matching has identical profiles.",
+    "new_subclass": false,
+    "new_Kneser_Poulsen_claim": false,
+    "new_computational_theorem": false,
+    "boundary": "No quantitative bound at or above the source peak, and no arbitrary-contraction inference from a positive second-energy defect.",
+    "benchmark": {
+      "weights": "1/25",
+      "D": "1152/625",
+      "R": "sqrt(41)/5",
+      "peak_lower": "C3*(1+12*exp(-25/(32*s))+12*exp(-41/(50*s)))/25"
+    },
+    "ownership": "R6 quantitative pressure transfer; R4 retains new motion/extremal-map ownership; R8 reference-test error is not removed outside the motion class."
   }
 }
