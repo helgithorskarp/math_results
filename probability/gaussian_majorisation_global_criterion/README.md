@@ -69,6 +69,14 @@ positive comparison family or full sign theorem is added. The functional
 lane's exact finite certificate retains its distinct signed endpoint and
 strict-margin obligations.
 
+The [isometric-reference dependency](../gaussian_isometric_reference/PROOF.md)
+now gives an exact common-set boundary for every contraction: a Gaussian
+superlevel set of an isometric reference prior has minimax value zero,
+and all its zero minimizers must be jointly isometric with that reference
+and share its maximizing source set. This includes diffuse priors and
+degenerate pointwise slack. Arbitrary source sets remain outside the
+result; it does not establish the full zero-defect criterion.
+
 The later [geometric-endpoint annex](GEOMETRIC_LIMIT.md) specifies the
 normalized coupling defect needed along an exponential weight path to
 obtain an unequal-radius ball inequality. It also completely classifies
