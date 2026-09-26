@@ -1,0 +1,26 @@
+[
+  {
+    "name": "rational_frontier_full_rank_control",
+    "require_contraction": true,
+    "steps": ["1/2", "1/4", "1/8"],
+    "tail": "4",
+    "bits": 40,
+    "instance": {
+      "source": [[0,0,0],["1/2",0,0],["-1/2",0,0],[0,"1/2",0],[0,"-1/2",0],[0,0,"1/2"],[0,0,"-1/2"]],
+      "target": [[0,0,0],["1/4",0,0],["1/4",0,0],[0,"1/4",0],[0,"1/4",0],[0,0,"1/4"],[0,0,"1/4"]],
+      "weights": ["2/13","11/78","11/78","11/78","11/78","11/78","11/78"]
+    }
+  },
+  {
+    "name": "deliberately_noncontracting_sign_control",
+    "require_contraction": false,
+    "steps": ["1/4"],
+    "tail": "4",
+    "bits": 40,
+    "instance": {
+      "source": [[0,0,0],[0,0,0]],
+      "target": [[-2,0,0],[2,0,0]],
+      "weights": ["1/2","1/2"]
+    }
+  }
+]

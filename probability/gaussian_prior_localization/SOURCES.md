@@ -409,3 +409,47 @@ Whole-interval Bernstein certificates check the kernel risk at finitely many
 degrees. Those controls do not prove the all-degree assertion by extrapolation,
 evaluate a Gaussian moment, or certify a signed configuration. The universal
 geometric, integration and calculus arguments remain a written author proof.
+
+## Direct hinge evaluation and certified defect refinement (pass 9)
+
+[DIRECT_HINGE.md](DIRECT_HINGE.md) connects the accepted paired-cubature
+frontier to actual all-threshold defect enclosures. The mathematical tools
+are classical trapezoidal Peano kernels, variation of a convex truncation,
+Gaussian tail bounds, and maximization of a piecewise-linear function by
+sorting its knots. Their needed forms and constants are derived completely
+in the note; no novelty or optimal quadrature rate is claimed. This evaluates
+the existing hinge itself, rather than adding equivalent energy classes.
+
+The local new estimate is a uniform O(h^2) spatial quadrature error despite
+the nonsmooth threshold, independent of atom count and diameter. Exact
+fixed-point exponentials and an all-knot sweep then replace literal replica
+enumeration when a bounded-error defect value, rather than a symbolic beta
+sign, is required. The public integer checker, three refinement controls,
+an intentionally noncontracting positive-defect control, and independent
+radial Gaussian checks reproduce the stated numerical conclusions.
+
+Only the paired-cubature atom/radius theorem and the existing uniform hinge
+rounding estimate are needed to compose this oracle with the unrestricted
+frontier. [DIRECT_INPUTS.json](DIRECT_INPUTS.json) pins their source. The
+[independent paired-cubature review](../gaussian_paired_cubature_review2/REVIEW.md),
+committed at h6218, accepts that dependency. The subsequent
+[square-root-budget review](../gaussian_square_root_budget_review2/REVIEW.md)
+accepts the previous degree result; neither review covers this new oracle.
+The degree result is contextual here, not a premise of the direct estimate.
+
+The primary [Aishwarya--Li source](https://arxiv.org/html/2609.07041v2) was
+refreshed live. Its Conjecture1.1 in R3 is still the sole problem source.
+The separately accepted [uniform 7/50 bound](../gaussian_uniform_defect_bound/PROOF.md)
+is an optional cap on a future complete-cover upper bound. It is not
+numerically improved by checking a single configuration.
+
+Current team context was read without replaying unrelated computations:
+R2's [peak pruning](../gaussian_beta_peak_pruning/PROOF.md) signs a growing
+beta block but proves that a low-index block necessarily remains; R4's
+[full orthocentric-flap motion](../gaussian_flap_selector_motion/PROOF.md)
+gives an author theorem for that broad class with volume consequences,
+pending review; R6 independently accepts R1's fixed-data local theorem.
+None of these inputs is used as if it were an unrestricted sign. The
+direct oracle remains applicable to the paired-cubature family with its
+unchanged huge configuration count. No complete cover, exact-zero decision
+procedure, or new Kneser--Poulsen conclusion is claimed in this packet.
