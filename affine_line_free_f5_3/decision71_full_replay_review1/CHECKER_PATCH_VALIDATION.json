@@ -1,0 +1,115 @@
+{
+  "status": "COMPLETE_PRODUCTION_SANITIZER_CORPUS_VERIFIED",
+  "full_family_recheck_complete": true,
+  "upstream": {
+    "commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee"
+  },
+  "patch": {
+    "generator_sha256": "0b39d9a8202482d7f1f950435016949725b43358302f3a046376b2afaaeabdd9",
+    "warning_safe_source_sha256": "12173598973df1d7d374cfedea977451c10d5a7aea7c90dc77f41c8cf2fad1b0",
+    "changed_raw_buffer_calls": 2,
+    "proof_logic_changes": 0,
+    "warnings_suppressed": false,
+    "checker_options": []
+  },
+  "build": {
+    "compiler": "gcc (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "flags": [
+      "-std=gnu99",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer"
+    ],
+    "binary_sha256": "a308c0326e754913efce49e73682aa170ce31db48b220a1c02f8e031a6436c9d",
+    "required_runtime_symbols": [
+      "__asan_init",
+      "__ubsan_handle_"
+    ]
+  },
+  "unpatched_failure": {
+    "case_index": 20750,
+    "cnf_sha256": "61936c6ff544b02a3b0c738790e5a65b1792245787c46b01e9ad8df06c871a39",
+    "proof_sha256": "0f871232570c5ca11fb5c3bbe3a77b07cb4972ebfe929ddd3d59d267d3197494",
+    "proof_bytes": 3482287,
+    "binary_sha256": "7aca0b604d391a619cdde49305f52f04961e959d1c3ebe7e2ea66bc9250be227",
+    "result": "AddressSanitizer heap-buffer-overflow",
+    "location": "printClause at drat-trim.c:79, called by parse at line 1183",
+    "captured_log_sha256": "c7b0ea38255a517a2d64890c04317c7500c28d5c011eacf210fd232a5c8df425"
+  },
+  "patched_positive_controls": [
+    {
+      "case_index": 0,
+      "cnf_sha256": "4b9faa0795626a70d87cb20fbeaa6cf2c47f687e0cc07cb9c37eb8e4a5f711a7",
+      "proof_sha256": "c8c175f02f459379135c87968341040c35a023a4529feec037cf963c593c2736",
+      "proof_bytes": 105114,
+      "warnings": 0,
+      "status": "VERIFIED_WITHOUT_SANITIZER_DIAGNOSTIC",
+      "captured_log_sha256": "fc770a6722dce7d5f6a2fd37a79e65a1228ff3a70f837841d2be46e947ad7b43"
+    },
+    {
+      "case_index": 20750,
+      "cnf_sha256": "61936c6ff544b02a3b0c738790e5a65b1792245787c46b01e9ad8df06c871a39",
+      "proof_sha256": "0f871232570c5ca11fb5c3bbe3a77b07cb4972ebfe929ddd3d59d267d3197494",
+      "proof_bytes": 3482287,
+      "warnings": 18,
+      "status": "VERIFIED_WITHOUT_SANITIZER_DIAGNOSTIC",
+      "captured_log_sha256": "63dce04157b4c215ec9f0d972546ee38dc83a50ea0d067c333db1a8b5d019797"
+    },
+    {
+      "case_index": 103000,
+      "cnf_sha256": "b50646afed1068557fc5e66b779d333f0f80c9b32ad1388ea42acbef7aeebab7",
+      "proof_sha256": "0d9746a9669fd2279094d1cd9ed84075fd288576412231322424f7a8a543aebd",
+      "proof_bytes": 267560,
+      "warnings": 0,
+      "status": "VERIFIED_WITHOUT_SANITIZER_DIAGNOSTIC",
+      "captured_log_sha256": "0bd1855cd3f05493a24a934bb63488e62594692166acff5a7b49de307c987088"
+    }
+  ],
+  "full_family_recheck": {
+    "status": "COMPLETE_RANGE_SANITIZED_DRAT_VERIFIED",
+    "verified_records": 109676,
+    "record_and_log_pairs": 109676,
+    "canonical_ranges": 16,
+    "records_revalidated_by_final_range_resumes": 109676,
+    "proof_bytes": 19782095082,
+    "summed_checker_seconds": 137219.50620257127,
+    "final_range_revalidation_seconds": 1489.4056727869975,
+    "warning_logs": 22300,
+    "raw_warning_lines": 230148,
+    "maximum_warnings_in_one_log": 351,
+    "maximum_warning_case_index": 88599,
+    "warnings_enabled": true,
+    "asan_or_ubsan_diagnostics": 0,
+    "canonical_range_summaries_ordered_sha256": "6e22c02e7ed09963bcccd6716b9eb5bef75b187bc17f30c2a053b82709a590e2"
+  },
+  "independent_final_audit": {
+    "status": "INDEPENDENT_COMPLETE_DIAGNOSTIC_SAFE_REPLAY_AUDITED",
+    "complete_family": true,
+    "verified_records": 109676,
+    "ordinary_ranges": 16,
+    "sanitized_ranges": 16,
+    "published_input_blocks_matched": 112,
+    "published_full_proof_blocks_matched": 85,
+    "audit_seconds": 531.2465450730015,
+    "source_sha256": "6086fc9faf7663eecbbe8a849c97ef5ac44287d39db73f02f7d9d2c27df9845c",
+    "output_sha256": "89db2dfa729b3ba8c022fcd1df266727486a55ae2456fb1f161efdfef02eb45e"
+  },
+  "signed_shift_boundary": {
+    "known_defect": "left shift of a negative dependency identifier in addDependency",
+    "patched_here": false,
+    "production_conclusion": "not reached by any accepted proof path in the 109676-case instrumented corpus",
+    "arbitrary_invalid_input_safety_claimed": false
+  },
+  "negative_controls": {
+    "unpinned_patch_input_rejected": true,
+    "stock_source_as_patched_source_rejected": true,
+    "unsanitized_binary_rejected": true,
+    "stale_warning_suppressed_record_rechecked": true,
+    "diagnostic_safe_record_resume_passed": true,
+    "final_source_and_binary_identity_recheck_passed": true,
+    "empty_range_rejected": true,
+    "partial_range_partition_rejected": true
+  }
+}

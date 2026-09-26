@@ -1,5 +1,21 @@
 # Gaussian set transfer and measure localization
 
+The new [threshold-relative certificate](RELATIVE_HINGE.md) bounds the error
+in a hinge divided by its threshold. It certifies entire positive threshold
+windows directly, including exponentially small levels. An exact known-positive
+Gaussian control has upper adverse relative gap below -30 throughout
+`[2^-26,2^-24]`, where the old absolute error divided by the threshold exceeds
+one million. The replay takes about nine seconds. This is a sign-certificate
+method control; no unknown contraction or full configuration cover is signed.
+Independent review is pending, and the global `D<=7/50` bound is unchanged.
+
+Run `python3 -B relative_hinge.py --check` and
+`python3 -B -O relative_hinge.py --check`. Expected status:
+`RELATIVE_HINGE_WINDOW_CERTIFICATES_PASS`. The [proof](RELATIVE_HINGE.md)
+states the link to R8's existing signed-endpoint/middle certificate and the
+remaining coverage obligation. [RELATIVE_EXPECTED.json](RELATIVE_EXPECTED.json)
+records the exact bounds; [RELATIVE_INPUTS.json](RELATIVE_INPUTS.json) pins inputs.
+
 The latest [direct hinge certificate](DIRECT_HINGE.md) evaluates the maximum
 defect over **all thresholds** on an existing finite input, with rigorous
 second-order spatial quadrature and an exact sweep of the density-value knots.
