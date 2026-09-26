@@ -1,0 +1,354 @@
+{
+  "budget_controls": [
+    {
+      "L": 256,
+      "W": 4,
+      "atoms": 1,
+      "global_error_bound": "4067/768",
+      "k": 1,
+      "largest_power": 65536
+    },
+    {
+      "L": 2048,
+      "W": 512,
+      "atoms": 64,
+      "global_error_bound": "4067/1536",
+      "k": 2,
+      "largest_power": 16777216
+    },
+    {
+      "L": 6912,
+      "W": 8748,
+      "atoms": 729,
+      "global_error_bound": "4067/2304",
+      "k": 3,
+      "largest_power": 429981696
+    },
+    {
+      "L": 131072,
+      "W": 8388608,
+      "atoms": 262144,
+      "global_error_bound": "4067/6144",
+      "k": 8,
+      "largest_power": 1099511627776
+    },
+    {
+      "L": 1048576,
+      "W": 1073741824,
+      "atoms": 16777216,
+      "global_error_bound": "4067/12288",
+      "k": 16,
+      "largest_power": 281474976710656
+    }
+  ],
+  "cases": [
+    {
+      "assignments": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        2
+      ],
+      "coordinate_denominator": 2048,
+      "hinge_transfer_bound": "161/512",
+      "input_atoms": 6,
+      "k": 2,
+      "minimum_integer_pair_margin": 267059,
+      "ordered_expected_distance_loss": "7167596501/137438953472",
+      "output_atoms": 3,
+      "pair_count": 3,
+      "positive_weights": 3,
+      "representatives": [
+        0,
+        3,
+        5
+      ],
+      "source_integer_centers": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          2112,
+          0,
+          0
+        ],
+        [
+          0,
+          2112,
+          0
+        ]
+      ],
+      "target_integer_centers": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1229,
+          1638,
+          0
+        ],
+        [
+          -1638,
+          1229,
+          0
+        ]
+      ],
+      "weight_denominator": 512,
+      "weight_l1_error": "1/640",
+      "weight_numerators": [
+        154,
+        256,
+        102
+      ]
+    },
+    {
+      "assignments": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "coordinate_denominator": 2048,
+      "hinge_transfer_bound": "161/512",
+      "input_atoms": 4,
+      "k": 2,
+      "minimum_integer_pair_margin": 91204,
+      "ordered_expected_distance_loss": "11651311/34359738368",
+      "output_atoms": 3,
+      "pair_count": 3,
+      "positive_weights": 2,
+      "representatives": [
+        0,
+        1,
+        2
+      ],
+      "source_integer_centers": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          302,
+          0,
+          0
+        ],
+        [
+          -302,
+          0,
+          0
+        ]
+      ],
+      "target_integer_centers": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "weight_denominator": 512,
+      "weight_l1_error": "61/32000",
+      "weight_numerators": [
+        0,
+        1,
+        511
+      ]
+    },
+    {
+      "assignments": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "coordinate_denominator": 2048,
+      "hinge_transfer_bound": "161/512",
+      "input_atoms": 4,
+      "k": 2,
+      "minimum_integer_pair_margin": 91204,
+      "ordered_expected_distance_loss": "0",
+      "output_atoms": 3,
+      "pair_count": 3,
+      "positive_weights": 1,
+      "representatives": [
+        0,
+        1,
+        2
+      ],
+      "source_integer_centers": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          302,
+          0,
+          0
+        ],
+        [
+          -302,
+          0,
+          0
+        ]
+      ],
+      "target_integer_centers": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "weight_denominator": 512,
+      "weight_l1_error": "1/5000",
+      "weight_numerators": [
+        0,
+        0,
+        512
+      ]
+    },
+    {
+      "assignments": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "coordinate_denominator": 2048,
+      "hinge_transfer_bound": "161/512",
+      "input_atoms": 4,
+      "k": 2,
+      "minimum_integer_pair_margin": null,
+      "ordered_expected_distance_loss": "0",
+      "output_atoms": 1,
+      "pair_count": 0,
+      "positive_weights": 1,
+      "representatives": [
+        0
+      ],
+      "source_integer_centers": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "target_integer_centers": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "weight_denominator": 512,
+      "weight_l1_error": "0",
+      "weight_numerators": [
+        512
+      ]
+    },
+    {
+      "assignments": [
+        0
+      ],
+      "coordinate_denominator": 256,
+      "hinge_transfer_bound": "161/256",
+      "input_atoms": 1,
+      "k": 1,
+      "minimum_integer_pair_margin": null,
+      "ordered_expected_distance_loss": "0",
+      "output_atoms": 1,
+      "pair_count": 0,
+      "positive_weights": 1,
+      "representatives": [
+        0
+      ],
+      "source_integer_centers": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "target_integer_centers": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "weight_denominator": 4,
+      "weight_l1_error": "0",
+      "weight_numerators": [
+        4
+      ]
+    },
+    {
+      "assignments": [
+        0,
+        0
+      ],
+      "coordinate_denominator": 2048,
+      "hinge_transfer_bound": "161/512",
+      "input_atoms": 2,
+      "k": 2,
+      "minimum_integer_pair_margin": null,
+      "ordered_expected_distance_loss": "0",
+      "output_atoms": 1,
+      "pair_count": 0,
+      "positive_weights": 1,
+      "representatives": [
+        0
+      ],
+      "source_integer_centers": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "target_integer_centers": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "weight_denominator": 512,
+      "weight_l1_error": "0",
+      "weight_numerators": [
+        512
+      ]
+    }
+  ],
+  "coefficient_norm_controls": 91,
+  "malformed_inputs_rejected": 4,
+  "scope": "Exact rational construction controls only; no Gaussian moment, beta sign, global enumeration or independent review.",
+  "status": "RATIONAL_COMPACT_FRONTIER_CONTROLS_PASS",
+  "unmerged_integer_loss": -1
+}

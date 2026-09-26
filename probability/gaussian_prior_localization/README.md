@@ -21,7 +21,25 @@ cube then preserves the original pairwise contraction.
 This is a uniform finite-dimensional frontier with an error bound, not a
 computed sign or an exact finite-support optimizer theorem. Its atom bounds
 are large. Conditioning need not preserve a prescribed dominant atom, and
-separately rounding input and output sites is not valid.
+unprotected independent rounding of input and output sites is not valid.
+
+The [effective rational interface](RATIONAL_INTERFACE.md) now supplies that
+missing rounding guarantee. For R8's moment budget and R2's exact producer,
+it gives at most k^6 labels, radius 3k, coordinate denominator 256k^3,
+weight denominator 4k^7 and integer-verifiable positive pair margins.
+With R8's existing largest power 2^16 k^8, the maximum beta defect F_k
+over this explicit finite integer family satisfies
+
+    0 <= D-F_k < 4067/(768k) < 16/(3k).
+
+The interface specifies the complete input schema, conditional detection
+at a prescribed gap, a uniform absolute-error certificate obligation,
+configuration counts and a moment-precision budget. It also supplies an
+exact pair-distance-loss floor for non-point laws. Its new content is
+effectivity of the existing compact frontier. No global enumeration,
+Gaussian moment, unknown sign, or efficient exhaustive procedure is claimed.
+The proof and the [exact rational producer](rational_frontier.py) cover
+collisions and zero weights by merging before expansion and rounding.
 
 The [shift-averaging boundary](SHIFT_AVERAGING_BOUNDARY.md) shows why one
 proposed cancellation of the partition error fails. For eight equally
@@ -71,6 +89,8 @@ python3 localization_audit.py --check
 python3 -O localization_audit.py --check
 python3 interaction_audit.py --check
 python3 -O interaction_audit.py --check
+python3 -B rational_frontier.py --check
+python3 -B -O rational_frontier.py --check
 sha256sum -c SHA256SUMS
 ```
 
@@ -92,6 +112,15 @@ cube partitions, Walsh orthogonality, all 28 pair types, rational motion
 controls and the exact radical sign margin. There is no quadrature or
 claim that the audited rational parameters lie in the asymptotic sign
 range. Existence of that range follows from the written analytic proof.
+
+[RATIONAL_EXPECTED.json](RATIONAL_EXPECTED.json) records six producer
+controls, including near-colliding isometries, zero weights, target
+coincidences, point laws and a rounding failure when merging is omitted.
+The audit checks exact integer constraints and rational budgets, four
+malformed-input rejections and 91 coefficient-norm controls. Its expected
+SHA256 is `22f543a40f8a2a1298ce2ff933bb78422f57528b032db957b5d481725d1d227c`.
+The universal denominator and error bounds rely on the written proof;
+finite controls do not establish an all-configuration beta sign.
 
 See [SOURCES.md](SOURCES.md) for mathematical attribution, team dependencies,
 the literature boundary, and the distinction from existing per-law endpoint

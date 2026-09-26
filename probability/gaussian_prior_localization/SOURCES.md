@@ -257,3 +257,59 @@ proofs. The remaining trust is the written derivation and standard
 functional-analysis facts. The mathematical contribution is an exact
 reduction and a limitation of optimizer localization, not a resolution of
 the campaign's full objective.
+
+
+## Effective rational frontier and finite-atomic handoff
+
+[RATIONAL_INTERFACE.md](RATIONAL_INTERFACE.md) supplies an explicit finite
+rational producer for the existing compact frontier; [RATIONAL_INPUTS.json](RATIONAL_INPUTS.json)
+pins each premise and distinguishes scope comparisons from dependencies.
+
+The base localization is this lane's h6134, source
+`4ed178725774e2fd3bb486f952825f58e52766cc`. Its proof bytes and k^6 atom
+bound are unchanged. R8's [uniform frontier](../gaussian_majorisation_open_stability/UNIFORM_FRONTIER.md),
+h6150, source `88bc098a0f98080f8762ddae9b11cc4e63669e95`, supplies the
+2^16 k^8 largest power and the bound14/(3k); neither is claimed anew here.
+R5's [global criterion](../gaussian_majorisation_global_criterion/PROOF.md),
+h6088, source `713e542a0bd389681a3fb4ee0c0b61a4f272f104`, supplies the
+beta probability-kernel and replica identities used by both inputs.
+The earlier [strict rational-witness proof](../gaussian_majorisation_rank_abel/PROOF.md),
+h5964, already uses strictification and rational approximation. The new
+step is to control separation first, allowing fixed denominators, a
+uniform approximation budget, explicit finite input counts and a stated
+moment precision rather than an unspecified sufficiently small perturbation.
+No priority is claimed for greedy nets, largest remainders or norm bounds.
+
+The new rounding loss161/(256k) transfers directly to every beta average.
+It is added to the existing global error rather than multiplied by
+alternating moment coefficients. Arithmetic errors in individual moment
+values are different: the note separately bounds that amplification by
+(N+1)3^N. This distinction is part of the producer/consumer contract.
+
+For R2, the [degree barrier](../gaussian_certificate_degree_barrier/PROOF.md),
+source `e90c31e08a4c1487fde4c43261aa222dcbb9cd16`, concerns the supplied
+exact positive-certificate recipe for one pair. The rational frontier
+gives an absolute-error global approximation and does not repair or refute
+that barrier. For R8, the [common-set stability interface](../gaussian_common_set_stability/INTERFACE.md),
+source `07dc648282cc625294828c885b9c0365cdf15851`, can use the new exact
+non-point pair-loss floor1/(2048k^18). Reference coefficient bounds and
+the source-set error remain separate requirements. That optional consumer
+is not a premise of the rationalization or the global approximation.
+No sign is silently supplied by positivity of one energy or pair loss.
+
+The standard-library implementation accepts exact rational inputs only,
+checks original contractions, merges nearby labels, expands sources,
+rounds both endpoints and rounds masses. Its six controls cover tight
+rotations, collisions, zero weights, coincident targets and point laws.
+The unmerged two-site rounding shortcut produces integer loss-1 and is
+rejected; the actual producer merges it. Four malformed inputs are
+rejected, also under optimized Python. Five budget rows and91 exact
+coefficient-norm controls supplement the all-k inequalities in the proof.
+No Gaussian moment, beta value or exhaustive parameter set is evaluated.
+
+CPython3.11.2 normal and optimized runs agree on canonical report SHA256
+`22f543a40f8a2a1298ce2ff933bb78422f57528b032db957b5d481725d1d227c`.
+The complete universal argument is a written author proof using the cited
+localization and moment results. This supplement has no independent
+mathematical acceptance or formalization. It changes no prior theorem's
+source or constants and yields no new Kneser--Poulsen consequence.
