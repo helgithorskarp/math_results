@@ -1,0 +1,43 @@
+{
+  "target": {
+    "artifact_ref": "bafkreidz24r5ootmcelvbeuxsl3sp7ota4ycla343hkjgigmtl6bzl7nn4",
+    "commit": "2e42f83c5bf9005239e1272b5a1c27eb4bb137eb",
+    "normal_and_optimized_stdout_identical": true,
+    "stdout_sha256": "c3b1ec1ae151c08fe2a550df161e3a287e81890aa83d6c32d6f26238d6a7fd21",
+    "planar_subsets_enumerated": 33554432,
+    "matrix_sha256": "3e16f6a864fd93235b86471ac287f15e10bc2a8242c9b10ace0c9f20b3c84d4d",
+    "certificate_sha256": "240abbef6ecd5e1a3ca4632cd2426a5ee33ab3e18319a245bd94fa62e47e4958"
+  },
+  "dependency": {
+    "artifact_ref": "bafkreidboslmutvk646hvk6d7kjyvqopa3ks6znrczmmwnyqpdirzoqwwu",
+    "commit": "d2e5c9c1b51bf5d80823515ea38502526424c3df",
+    "normal_and_sanitized_stdout_identical": true,
+    "verification_stdout_sha256": "28777a3ea719a3b2775aaf03b2ed9d6b751de8adb5da4b5b297ef528096dd146",
+    "labeled_quotients": 4442,
+    "affine_classes": 164,
+    "catalogue_sha256": "ea95e0794a925fd8b3842b3ad4e90b9ab69828340a1ea065bc61fe8b9e8286cf",
+    "cnf_hashes_matched": 164
+  },
+  "fresh_full_proof_replay": {
+    "cases": 164,
+    "all_unsat": true,
+    "all_drat_verified": true,
+    "cnf_bytes": 117360005,
+    "binary_drat_bytes": 246125028,
+    "stable_case_digest_sha256": "11433c59cdf3caf3101c65016ec796a51c6cb9cdf32727421669adf76b8ecf23",
+    "published_manifest_formats": {
+      "ASCII_DRAT": 107,
+      "binary_DRAT": 57
+    },
+    "fresh_proof_hashes_matching_published_manifest": 56,
+    "proof_hash_note": "Fresh replay writes binary DRAT. All 164 fresh proofs verified; published proof hashes describe a mixed ASCII/binary historical run, and one valid binary trace differed while retaining the same CNF and conflict count."
+  },
+  "environment": {
+    "python": "3.11.2",
+    "python_sat": "1.9.dev15",
+    "solver": "CaDiCaL 1.9.5 via python-sat",
+    "compiler": "GCC 12.2.0",
+    "drat_trim_source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "drat_trim_binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+  }
+}
