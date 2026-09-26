@@ -14,6 +14,12 @@ relative error, valid down to scaling parameter zero and at unbounded
 scaling parameter. Without the extra support condition, the same error
 forces any shallow negative hinge into an extremely low-threshold region.
 
+**Continuation:** [SUPPORT_SIGN.md](SUPPORT_SIGN.md), Theorem 7, now proves
+the support condition for every nonisometric weighted simplex-flap map.
+Consequently Theorem 6 applies to arbitrary tetrahedra, arbitrary positive
+normal lengths and arbitrary nonnegative weights at each fixed variance.
+The proof and explicit open-class control below are preserved.
+
 ## 1. Setup and the quantitative estimate
 
 Use the vertices v_j, inward normals d_i=h_i grad(lambda_i), weights
@@ -598,7 +604,7 @@ The quantifier is: for each fixed variance and positive weighted geometry
 in this class, sufficiently small depths satisfy every hinge. No common
 positive depth for all variances has been proved. Consequently no new
 Kneser--Poulsen volume consequence, unrestricted Gaussian theorem, or
-solution for arbitrary tetrahedra or arbitrary indecomposable maps is
-claimed. The all-threshold result uses (27)>0; that strict inequality
-remains undecided for the full arbitrary-weight-support, arbitrary-
-tetrahedron flap family.
+solution for arbitrary indecomposable maps is claimed. The all-threshold
+result uses (27)>0; the later SUPPORT_SIGN.md establishes its exact
+strictness criterion for the full arbitrary-weight-support,
+arbitrary-tetrahedron flap family.

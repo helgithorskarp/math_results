@@ -9,6 +9,10 @@ the subsequent effective relative error and logarithmically growing
 positive window. The continuation proves full all-threshold comparison
 at each fixed variance for shallow flaps with a positive support
 coefficient, and verifies that coefficient on an open asymmetric class.
+SUPPORT_SIGN.md proves the coefficient strictly positive exactly off
+the isometry boundary on all tetrahedra and label supports, so full
+shallow comparison now holds throughout the classical flap family
+at each fixed variance.
 Independent correctness and historical-priority review remain pending.
 
 1. **G. Aishwarya and D. Li, Gaussian Convolution, Internal Energies, and
@@ -144,10 +148,48 @@ positive weights. Unlike the common-target all-variance result, our
 depth bound depends on the fixed variance. These quantifiers do not
 give a new Kneser--Poulsen consequence.
 
+10. **F. Voigtlaender, A general version of Price's theorem**, Theorem 1,
+    [author manuscript](https://arxiv.org/pdf/1710.03576), arXiv:1710.03576v2.
+    This gives covariance differentiation of Gaussian expectations with
+    distributional derivatives for tempered inputs. SUPPORT_SIGN.md uses
+    precisely that setting: a maximum of coordinate functions times an
+    orthant indicator. It also derives the needed density identity by
+    Fourier transform. The Price identity, Gaussian radial decomposition
+    and integration by parts are prior tools, not new claims. The normal-
+    edge diagonal pairing, resulting exact support equality criterion and
+    explicit lower bound give the new application to arbitrary shallow
+    simplex flaps. The degree-one support function permits passage from
+    a Gaussian integral to a spherical coefficient; it does not justify
+    that passage for the finite-parameter logarithmic coefficient.
+
+The universal support-sign continuation retains the earlier finite-tau
+sign as a premise. Its six-dimensional Gaussian interpolation is an
+analytic covariance calculation, not a geometric contracting motion.
+It removes the earlier open-neighborhood and full-label-support
+restrictions but retains the fixed-variance, sufficiently-small-depth
+quantifiers. No historical priority over all uses of Gaussian comparison
+for simplex flaps is asserted.
+
+11. **Concurrent orthocentric tournament reduction.**
+    [Proof](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_flap_tournament_reduction/PROOF.md),
+    source commit `88643d73027fce12f5da146eff282ed0f4ee51cd`, was read
+    during the final refresh. It compresses any depth-one counterexample
+    in its orthocentric family to one of two ten-point template families,
+    using target collisions and a common-target convex decomposition.
+    It proves all-variance positivity for its sink selectors by an R5
+    motion, while leaving the two residual template families unsigned.
+    Our arbitrary-tetrahedron theorem covers their sufficiently shallow
+    deformations at each fixed law and variance. It does not cover depth
+    one merely by rescaling the normal parameter. Neither proof depends
+    on the other, and the depth-one reduction is not extended to general
+    normals or depths here.
+
 The exact checkers are internal controls, not independent reviews.
-EXPECTED.json, TAIL_EXPECTED.json and RELATIVE_EXPECTED.json do not
-certify an analytic Gaussian integral, an asymptotic error rate, or the
-final uniform depth cutoff. The last record audits the arithmetic in an
-effective sufficient radius condition and the support-positivity
-fixture, not the universal analytic proof.
+EXPECTED.json, TAIL_EXPECTED.json, RELATIVE_EXPECTED.json and
+SUPPORT_EXPECTED.json do not certify an analytic Gaussian integral, an
+asymptotic error rate, or the final uniform depth cutoff.
+RELATIVE_EXPECTED.json audits the effective-radius arithmetic and the
+earlier support-positivity fixture; SUPPORT_EXPECTED.json checks
+covariance algebra and zero-label controls. Neither certifies the
+universal analytic proof.
 No primary-source search establishes historical priority.

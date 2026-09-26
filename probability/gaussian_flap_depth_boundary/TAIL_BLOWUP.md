@@ -6,7 +6,9 @@ including arbitrary tetrahedra and asymmetric weights. It excludes a
 specific joint depth/threshold regime. The continuation in
 [RELATIVE_TAIL.md](RELATIVE_TAIL.md) closes all thresholds at each fixed
 variance for an open asymmetric class at sufficiently small positive
-depth. The unrestricted dimension-three conjecture remains open.
+depth. [SUPPORT_SIGN.md](SUPPORT_SIGN.md) subsequently extends that result
+to every tetrahedron and nonnegative weight vector at fixed variance.
+The unrestricted dimension-three conjecture remains open.
 
 ## 1. Statement and normalizations
 
@@ -463,8 +465,8 @@ tau->infinity, occupied weights vanish, or variance degenerates. The first
 of these boundaries and a logarithmically growing tau window are now
 controlled in [RELATIVE_TAIL.md](RELATIVE_TAIL.md). Its positive-support
 criterion closes all thresholds for an open asymmetric class at each
-fixed variance and sufficiently small depth. That criterion's strictness
-for arbitrary geometry and label support, and uniform control of the
-other degenerations, remain open. No counterexample or new
-Kneser--Poulsen consequence is claimed.
+fixed variance and sufficiently small depth. SUPPORT_SIGN.md subsequently
+proves its exact strictness criterion for arbitrary tetrahedral geometry
+and label support. Uniform control of the other degenerations remains
+open. No counterexample or new Kneser--Poulsen consequence is claimed.
 See [SOURCES.md](SOURCES.md) for the upstream dependencies.

@@ -6,7 +6,9 @@ majorisation problem remains open. This controls a deformation of asymmetric
 extremal maps. The first-variation argument here leaves a tail boundary;
 [RELATIVE_TAIL.md](RELATIVE_TAIL.md), Theorem 6 and Section 8, subsequently
 closes it for an open asymmetric class at each fixed variance and
-sufficiently small depth. No new Kneser--Poulsen volume inequality is proved.
+sufficiently small depth. [SUPPORT_SIGN.md](SUPPORT_SIGN.md) extends that
+conclusion to all tetrahedra and nonnegative weight vectors. No new
+Kneser--Poulsen volume inequality is proved.
 
 ## 1. Geometry and statement
 
@@ -319,6 +321,7 @@ heavy enumeration, or claimed effective value of t_*.
 The compactness argument must not be extended to zero threshold without
 a uniform tail estimate. The continuation in RELATIVE_TAIL.md supplies
 one and proves full shallow comparison under a positive support
-coefficient. It verifies that condition on an open asymmetric class;
-arbitrary geometric and weight-support cases remain undecided. The full
-named problem remains unrestricted and is not settled by these results.
+coefficient. SUPPORT_SIGN.md then proves that coefficient positive
+exactly off the isometry boundary, on arbitrary tetrahedra and label
+supports. The full named problem remains unrestricted and is not settled
+by these results.
