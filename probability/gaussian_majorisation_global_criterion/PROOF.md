@@ -433,6 +433,12 @@ test, with valid contraction data, settles the opposite direction.
 Finally, a Kneser--Poulsen consequence needs its own quantifiers.
 Aishwarya--Li, Theorem 1.8, applies full majorisation for every input law
 on a compact domain and all variances to congruent-ball neighbourhood
-volumes. The team's motion proofs separately justify the stated
-individual-radius conclusions. A single-law or high-variance zero of
-`Delta_s` is not by itself a new Kneser--Poulsen theorem.
+volumes; Theorem 5.1 gives the variable-radius version using exponential
+weights. Its all-law premise is sufficient. For an individual radius
+assignment, the same limiting argument only needs a particular weight
+path and threshold. [GEOMETRIC_LIMIT.md](GEOMETRIC_LIMIT.md) states that
+pathwise criterion with the exact normalization of `Delta_s`, and
+classifies what the fixed orbit weight cones can supply. The team's motion
+proofs separately justify their stated individual-radius conclusions.
+A single-law or high-variance zero of `Delta_s` is not by itself a new
+Kneser--Poulsen theorem.

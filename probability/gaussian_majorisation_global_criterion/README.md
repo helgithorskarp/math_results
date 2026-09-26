@@ -50,6 +50,15 @@ classical stochastic-order, Hausdorff and Bernstein--Durrmeyer ingredients.
 Those ingredients are not claimed as new. Independent review of this
 consolidation and its constants is pending.
 
+The later [geometric-endpoint annex](GEOMETRIC_LIMIT.md) specifies the
+normalized coupling defect needed along an exponential weight path to
+obtain an unequal-radius ball inequality. It also completely classifies
+the logarithmic profiles allowed by the orbit theorem's two fixed weight
+cones: `lambda_0=lambda_2=lambda_3>=lambda_1`. Every resulting radius
+pattern already has a coordinate-preserving relabelling proof. This is a
+precise requirement for extending the functional certificate toward a new
+volume class; it is not a counterexample or a new Kneser--Poulsen theorem.
+
 ## Reproduction
 
 From this directory, using CPython 3.11 or later, with no packages:
@@ -79,3 +88,23 @@ moment data, or prove the open conjecture. The universal argument is the
 written proof, including measure disintegration and its credited motion
 theorem. No solver, floating-point computation, external dataset, or large
 certificate is required.
+
+For the annex, also run:
+
+```sh
+python3 geometric_limit_audit.py --check
+python3 -O geometric_limit_audit.py --check
+```
+
+Expected:
+
+```text
+GEOMETRIC_PROFILE_CLASSIFICATION_PASS 97cccdd40fc962b778df43ed06468a19d2d3cb61cdb6a32017260e07b15f1ee1
+```
+
+The exact digest is recorded in the annex's reproduction record. This
+audit reads the original orbit order certificate by its relative path in
+the same repository and verifies its SHA256 before use; it checks all
+366,660 endpoint coefficient inequalities and the eleven selected ratio
+constraints. See [GEOMETRIC_LIMIT.md](GEOMETRIC_LIMIT.md) for the analytic
+proof, dependency and scope. The original global-criterion audit is unchanged.

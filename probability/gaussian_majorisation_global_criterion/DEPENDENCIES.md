@@ -17,6 +17,8 @@ Source commits and primary attribution are in [SOURCES.md](SOURCES.md).
 | [Ray relabelling](../gaussian_ray_relabelling/PROOF.md) and [fixed-core relabelling](../gaussian_majorisation_fixed_core/PROOF.md) | An alternate contraction has the same output law and a lower-dimensional motion. Equality of output laws makes the global criterion identical. | The exact whole-radial-measure balances in those sources are essential. These are statements about a law as well as its labelled map. |
 | [Common-target gluing](../gaussian_majorisation_common_target/PROOF.md) | Convexity in the source gives `Delta(sum alpha_i f_i,g)<=sum alpha_i Delta(f_i,g)`. | Component constructions must have **one identical target law**. The fixed-core/ray result allows the published open range of weights and arbitrary permitted radial laws. General paired mixtures with varying targets do not follow from this argument. |
 | [Finite density-orbit comparison](../gaussian_majorisation_square_cone_orbits/PROOF.md) | The 48-element orbit hinge inequality integrates to `Delta_s=0` by (17), and hence supplies the endpoint coupling (4). | Every variance on the full radius-`1/552` nine-point weight ball and the stated arbitrary bounded radial laws with directional weights in two explicit cones. The exact computer-assisted proof awaits independent review. It does not require a centre motion or cover arbitrary weights. |
+| [Spatial-cloud stability](../gaussian_majorisation_open_stability/PROOF.md) | Strict hinges, a peak gap and a mean-support gap preserve `Delta_s=0` under the stated perturbations. | For the nine-point pair, one arbitrary-cloud radius works on each compact positive variance interval and the radius-`1/4000` weight ball. It is existential and need not work as variance tends to zero. The general finite-law bridge follows after strict target homothety. Author proof, review pending. |
+| [Paired-layer all-variance completion](../gaussian_paired_layers_majorisation/ALL_VARIANCES.md) | Uniform small- and large-variance hinge proofs join the compact-interval stability theorem, giving `Delta_s=0` for every variance on one neighborhood. | A positive, uncomputed spatial radius for centrally symmetric transverse four-point layers satisfying the stated contraction inequalities, with weights in the radius-`1/25000` ball. This is a constrained geometric neighborhood, not arbitrary clouds at every variance. Author proof, review pending. |
 
 The damped-cone source also proves that an undamped **full** proper
 dual-cone reflection has an `R^5` motion exactly when the cone is
@@ -86,9 +88,17 @@ zero-failure certificates for its classes, and the adversarial lane can
 settle a failure with a single negative finite test. The integrated
 hinge sign is still missing for the unrestricted problem.
 
-For a geometric consequence from internal energies, preserve all input
-laws and all variances as required by the cited Aishwarya--Li theorem.
-The existing motion sources separately establish their arbitrary-radius
-ball comparisons. The density-orbit source explicitly claims no new
-Kneser--Poulsen case from its weight family. Neither does this consolidation.
-Finite moment checks and unsigned entropy bounds supply no such claim.
+The all-law/all-variance premise of Aishwarya--Li Theorem 5.1 supplies
+arbitrary-radius ball comparisons. For an individual radius assignment,
+the [geometric-endpoint annex](GEOMETRIC_LIMIT.md) states the weaker
+sufficient requirement precisely: a single exponential weight path,
+tested at one threshold per variance, or a coupling defect negligible
+at its specified scale. The existing motion sources already give their
+arbitrary-radius comparisons. The annex completely classifies the finite
+logarithmic profiles of the two fixed density-orbit coefficient cones;
+all the resulting radius assignments retain a coordinate-preserving
+relabelling proof. Extending that functional theorem toward a new volume
+case requires escaping those radius-matching conditions, or a different
+endpoint. Neither the density-orbit source nor this consolidation claims
+a new Kneser--Poulsen case. Finite moment checks and unsigned entropy
+bounds supply no such claim.

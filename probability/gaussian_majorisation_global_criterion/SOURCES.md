@@ -11,8 +11,9 @@ to invent stochastic order, Hausdorff moments or positive approximation.
   The sole problem source. Lemma 3.2 uses stochastic order of sampled
   density values and disintegration; Theorem 1.4 supplies such couplings
   for continuous contractions. Theorem 1.5 explains two-Gaussian-coordinate
-  marginalisation; Theorem 1.8 specifies the quantifiers needed for volume
-  consequences. Our proof spells out the uniform-variable identity and
+  marginalisation; Theorems 1.8 and 5.1 give volume consequences, with
+  the latter already treating variable radii by exponential weights.
+  Our proof spells out the uniform-variable identity and
   the exact nonzero coupling defect rather than asserting a new coupling
   principle.
 * Persi Diaconis and David Freedman, [The Markov Moment Problem and de
@@ -49,6 +50,8 @@ versions; links intentionally use readable branch paths.
 | Axial cone rotation | `984e1edaaf7f02bf4572c80754edff1e296fdd19` |
 | Damped cone reflection | `57ff1129224b92a88404817b164bf8c17bd2ecd1` |
 | All-variance square-cone density orbits | `241e48a3c393b659ad90fbe5db145a6f58395d6e` |
+| Compact-variance spatial-cloud stability | `b48c5ca31f3c573f2ffe6874944de83bc1a92710` |
+| Paired-layer all-variance completion | `465f892ad569fe12fb2634395c21bc7025abff41` |
 | Fixed-core relabelling | `e78d73bcae9a21f1344e74166153abe308bf51e9` |
 | Common-target gluing | `3ad6ed0be174d1292b250efcad734d03eed01af5` |
 | Common-target independent acceptance | `193f0e8fbf34bba8db0ef54d2aa87efa75de7034` |
@@ -67,3 +70,34 @@ The written proofs in this packet are self-contained for the global
 criterion. Motion claims and the nine-point separation use the credited
 team results at their stated status; their inclusion here is not a new
 independent review. No priority or general-conjecture resolution is claimed.
+
+## Geometric-endpoint annex
+
+[GEOMETRIC_LIMIT.md](GEOMETRIC_LIMIT.md) specializes the primary Theorem 5.1
+to one logarithmic weight path and gives the exact defect scale using our
+global criterion. The variable-radius transfer itself is existing work.
+The new finite classification concerns the particular coefficient cones
+defined in the [square-cone orbit source](../gaussian_majorisation_square_cone_orbits/PROOF.md),
+commit `241e48a3c393b659ad90fbe5db145a6f58395d6e`. Its original compact order
+certificate is a hash-checked input to the annex audit, not an omitted
+dataset. Four exact cone vectors prove attainability; eleven retained
+inequalities prove necessity for all finite logarithmic profiles.
+
+The relabelling explanation uses the already available
+[paired-rank/coordinate-preserving mechanism](../gaussian_majorisation_rank_abel/PROOF.md)
+and the primary planar majorisation theorem. It is included to establish
+that the extracted radius family is not a new geometric consequence.
+The refreshed [axial-cone scope statement](../gaussian_axial_cone_rotations/SCOPE.md),
+commit `79f59b8ab07215fea46a00e8ca57381393d19f67`, also emphasizes the
+distinction between new weighted Gaussian comparisons and new volume cases.
+This annex does not classify alternative finite orders, arbitrary positive
+weight families, or all valid Kneser--Poulsen radius assignments.
+
+The prepublication refresh also incorporates the
+[spatial-cloud stability proof](../gaussian_majorisation_open_stability/PROOF.md)
+and [paired-layer completion](../gaussian_paired_layers_majorisation/ALL_VARIANCES.md)
+at the commits recorded above. They supply additional exact-zero classes
+in the dependency map, with their stated variance and weight quantifiers.
+The annex explains the radius-matching scope of their immediate geometric
+endpoints. They are author proofs awaiting review, not new premises of our
+fixed-cone classification or independently accepted results here.
