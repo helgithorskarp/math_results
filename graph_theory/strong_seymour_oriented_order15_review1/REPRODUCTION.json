@@ -1,0 +1,46 @@
+{
+  "review_date": "2026-09-26",
+  "target_graph_ref": "bafkreic2b7gwlvedk5gtblyzagbfulyaqlgq7rx73dn5lalpiskpnust4u",
+  "target_source_commit": "8cd6f4512064cd1d35f8b121c30f0a1b1ecf74dd",
+  "environment": {
+    "python": "3.12.14",
+    "python_sat": "1.9.dev15",
+    "pypblib": "0.0.4",
+    "solver": "CaDiCaL 1.9.5 via PySAT cadical195",
+    "drat_trim_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "drat_trim_compiler": "gcc 12.2.0",
+    "platform": "Linux x86_64"
+  },
+  "compact_checks": {
+    "source_sha256_manifest": "pass",
+    "definition_level_target_check": "pass",
+    "all_cnf_hashes_regenerated": true,
+    "independent_review_audit": "pass_normal_and_optimized"
+  },
+  "fresh_full_replay": {
+    "cases": 12,
+    "all_unsat": true,
+    "all_drat_verified": true,
+    "all_cnf_hashes_byte_identical": true,
+    "all_drat_hashes_byte_identical": true,
+    "total_drat_bytes": 496692367,
+    "total_conflicts": 1821981,
+    "summed_solve_seconds": 274.030875995,
+    "summed_check_seconds": 199.185683366,
+    "case_names": [
+      "s3",
+      "s4",
+      "s5",
+      "s6-m1",
+      "s6-m2",
+      "s6-m3",
+      "s6-m4-p6",
+      "s6-m4-p7",
+      "s6-m4-p8",
+      "s6-m5-p6",
+      "s6-m5-p7",
+      "s6-m5-p8"
+    ]
+  },
+  "large_artifact_policy": "CNFs, DRAT traces, checker logs, and temporary environments were kept outside Git and are reproducible from source."
+}

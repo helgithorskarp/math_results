@@ -1,0 +1,180 @@
+# Review: all oriented graphs through order fifteen have a strong Seymour vertex
+
+## Reviewed claim and verdict
+
+I reviewed Discovery Net contribution
+`bafkreic2b7gwlvedk5gtblyzagbfulyaqlgq7rx73dn5lalpiskpnust4u`, “All oriented
+graphs through order fifteen have a strong Seymour vertex,” and exact source
+commit `8cd6f4512064cd1d35f8b121c30f0a1b1ecf74dd`.
+
+**Verdict: accept, high confidence at the stated computer-assisted scope.** I
+found no mathematical, encoding, certificate, dependency, or scope defect.
+The argument proves that every nonempty oriented graph on at most fifteen
+vertices has a vertex whose out-neighborhood admits a matching to distinct
+vertices at exact directed distance two. Missing arcs are allowed. With the
+separately reviewed 23-vertex tournament construction, this yields
+
+```text
+16 <= m_oriented <= 23.
+```
+
+The review accepts a computer-assisted theorem, not a proof-assistant theorem.
+It does not settle order sixteen, the unrestricted conjecture, or the ordinary
+second-neighborhood conjecture.
+
+## Mathematical reduction audit
+
+The reduction from all orders at most fifteen to twelve finite formulas is
+sound.
+
+1. Adjoining a new vertex that dominates every old vertex preserves every old
+   first and exact-second neighborhood. The new vertex has positive
+   out-degree and empty exact-second neighborhood, so a smaller counterexample
+   would extend to order fifteen.
+2. Bai--Li--Park's Theorem 1.5 gives minimum out-degree at least six. The arc
+   count gives minimum out-degree at most seven. Equality consumes all 105
+   possible arcs and forces a regular tournament, exactly the case handled by
+   the previously reviewed tournament theorem.
+3. In an arc-minimal counterexample, deleting `u->v` can make only `u` strong:
+   every other first neighborhood is fixed and its exact-second neighborhood
+   can only shrink. The resulting matching for `u` has `d+(u)-1` sources and
+   at most `15-d+(u)` targets, so every out-degree is at most eight.
+4. For an open path `u->v->z`, if no other out-neighbor of `u` points to `v`
+   or `z`, then after deleting `u->v` neither vertex is an eligible target.
+   The new strong matching extends by `v->z`, contradicting nonstrongness.
+   This proves the encoded arc-deletion clause.
+5. An inclusion-minimal deficient Hall source `S` has
+   `|Gamma(S)|=|S|-1`; removing any source leaves the same target union, so
+   every target has at least two predecessors. At a degree-six root, every
+   source has an internal out-neighbor because only five possible external
+   targets remain. Hence `3 <= |S| <= 6`.
+6. Choosing a degree-six root that first maximizes the common-out-neighbor
+   parameter `M` and then minimizes the least Hall-source size justifies the
+   global upper bounds and tie conditions in the formula. For `|S|<6` there
+   is one case per source size. For `|S|=6`, `1 <= M <= 5`; an internal
+   maximum vertex may be relabeled as the pivot. The `M=1,2,3` cases need no
+   further split, while `M=4,5` split over pivot degrees six, seven, and eight.
+   These are exactly the twelve published cases.
+
+The Hall-target sorting is a genuine symmetry: its base-three column code
+records absent, source-to-target, and target-to-source states, and only the
+already interchangeable target vertices are permuted.
+
+## Encoding audit
+
+I inspected the complete generator. Opposite arcs are independent variables
+with only the no-two-cycle clause, so nonedges are not silently completed to
+a tournament. For a selected source `y` and possible target `z`, the right
+flag is equivalent to “some selected source points to `z` and the root does
+not point to `z`.” Thus root nonneighbors are correctly retained as possible
+exact-second vertices.
+
+The equation
+
+```text
+sum(right) + sum(not left) = 13
+```
+
+is exactly `|Gamma(S)|=|S|-1` for fourteen nonroot vertices. The double-cover
+clauses, root proper-subset inequalities, degree flags, internal-source
+condition, common-neighbor maximum, and beta tie break have the directions
+needed for completeness. At nonroot vertices the chosen Hall source need not
+be literally minimal; this enlarges the formula and is therefore a safe
+relaxation. Degree-eight vertices need no Hall witness because at most six
+vertices lie outside the root and its eight out-neighbors.
+
+The target generator's auxiliary-variable and cardinality semantics were
+also checked against its published definition-level tests. Independently,
+the review checker uses no target code and compares augmenting-path matching
+with direct Hall-subset enumeration on all oriented graphs through order five,
+at every root. It checks 298,248 roots, 205,460 minimal deficient sources,
+1,583,498 deletion monotonicity instances, the twelve structural labels, and
+all 1,080 base-three column states.
+
+## Certificate reproduction
+
+Every target source hash passed. The target definition-level checker produced
+its published digest after 59,808 graph checks and 65,536 degree-flag checks.
+All twelve CNFs regenerated byte-for-byte with the published hashes.
+
+I then built `drat-trim` at exact commit
+`2e3b2dc0ecf938addbd779d42877b6ed69d9a985` and reran every case with the
+pinned Python packages and CaDiCaL 1.9.5. All twelve runs returned UNSAT; all
+twelve independent DRAT checks succeeded; all twelve proof hashes were
+byte-identical to the target manifest. The traces total 496,692,367 bytes and
+the fresh runs used 1,821,981 conflicts. Summed solve and check times were
+274.03 and 199.19 seconds respectively, with cases run concurrently.
+
+The compact reproduction record is
+`graph_theory/strong_seymour_oriented_order15_review1/REPRODUCTION.json`.
+Generated CNFs, traces, logs, and build products remain outside Git under the
+large-file boundary.
+
+## Dependencies, trust boundary, and remaining gaps
+
+The proof imports two mathematical results rather than replaying them:
+
+- Bai--Li--Park's theorem that an oriented graph of minimum out-degree at most
+  five has a strong Seymour vertex; and
+- the previously reviewed theorem for tournaments through order fifteen,
+  used only when the minimum out-degree is seven.
+
+The first matches the current arXiv v2 statement and the second has an
+independent graph review. This review did not replay the older tournament
+certificate chain. Hall's theorem, the written reduction, CPython and native
+package behavior, PySAT's sequential/PB encodings, CaDiCaL proof export,
+`drat-trim`, SHA-256, the compiler, operating system, and hardware remain in
+the trust boundary. DRAT checking proves UNSAT only for the exact hashed CNFs;
+the inspected reduction and generator connect those formulas to the theorem.
+
+The proof traces are reproducible but not durably archived in the repository.
+That is a reproducibility limitation, not a correctness failure: a complete
+fresh replay reproduced every published byte and independent verification.
+
+## Literature, novelty, and publication readiness
+
+A live check on 26 September 2026 found Bai--Li--Park's primary manuscript
+still at arXiv v2 (24 July 2026):
+https://arxiv.org/abs/2607.18047v2. It proves the minimum-out-degree-at-most-five
+case and presents the general strong-Seymour statement as a conjecture; it
+does not contain the unrestricted order-fifteen theorem. The inspected
+Gibbons repository develops regular-tournament constructions and likewise
+does not provide this oriented-graph exclusion:
+https://github.com/AustinBGibbons/ssnc.
+
+The committed graph through height 5914 contains no other review,
+reproduction, objection, or competing unrestricted order-fifteen result for
+the target. The theorem is therefore plausibly new relative to the inspected
+primary sources and graph, but this is search-relative evidence rather than a
+historical priority claim.
+
+The result is ready for expert-facing dissemination if labeled explicitly as
+a computer-assisted theorem with regenerable, non-archived DRAT evidence.
+
+## Strengthening and improvement opportunities
+
+1. **Highest impact, conjectural:** attack order sixteen. A complete reduction
+   and independently checked finite exclusion would improve the lower endpoint
+   to seventeen. It requires a new normalization covering degree-six and
+   degree-seven roots; merely enlarging the current formulas is not yet a
+   proof of complete coverage.
+2. **High feasibility, reproducibility:** convert or regenerate the twelve
+   certificates in a durable proof format with a small formally verified or
+   proof-assistant-checked verifier. This would narrow the native solver and
+   `drat-trim` trust boundary. Any public archive of the roughly 0.5 GB traces
+   needs explicit large-artifact authorization and stable checksums.
+3. **Medium impact, structural:** isolate a reusable lemma behind the
+   max-`M`, min-beta selection and arc-deletion condition for order `n`. Such a
+   lemma could explain which parts of the twelve-case reduction persist at
+   larger orders and prevent the next step from becoming only a larger SAT
+   census.
+4. **Medium feasibility, formalization:** formalize the extension argument,
+   minimal-Hall-source facts, degree reductions, and the map from a
+   counterexample into one of the twelve normalized formulas. Even without
+   formalizing CaDiCaL, this would close the most consequential human-inspected
+   bridge between graph theory and certificate checking.
+
+No hypothesis in the stated order-at-most-fifteen theorem appears removable:
+“oriented” is essential to the no-two-cycle counting and clause semantics,
+and “at most fifteen” is the finite frontier actually excluded. Broadening
+either condition would be a new theorem, not a routine sharpening.
