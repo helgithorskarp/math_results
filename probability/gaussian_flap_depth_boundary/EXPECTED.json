@@ -1,0 +1,171 @@
+{
+  "fixtures": [
+    {
+      "controls": {
+        "asymmetric": {
+          "Gamma": "63/68",
+          "isometry": false
+        },
+        "near_isometry": {
+          "Gamma": "333/250000",
+          "isometry": false
+        },
+        "nontrivial_isometry": {
+          "Gamma": "0",
+          "isometry": true
+        },
+        "two_flaps_no_core": {
+          "Gamma": "2",
+          "isometry": false
+        },
+        "uniform": {
+          "Gamma": "3/4",
+          "isometry": false
+        }
+      },
+      "divergence_coefficients": 48,
+      "heights": [
+        "4",
+        "4",
+        "4",
+        "4"
+      ],
+      "name": "regular",
+      "normal_gram_rank": 3,
+      "normals": [
+        [
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "-1",
+          "-1"
+        ],
+        [
+          "-1",
+          "1",
+          "-1"
+        ],
+        [
+          "-1",
+          "-1",
+          "1"
+        ]
+      ],
+      "pair_polynomials": 120,
+      "pair_types": {
+        "strict": 42,
+        "tight": 78
+      },
+      "vertices": [
+        [
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "-1",
+          "-1"
+        ],
+        [
+          "-1",
+          "1",
+          "-1"
+        ],
+        [
+          "-1",
+          "-1",
+          "1"
+        ]
+      ],
+      "weight_polynomial_terms": 42
+    },
+    {
+      "controls": {
+        "asymmetric": {
+          "Gamma": "405/544",
+          "isometry": false
+        },
+        "near_isometry": {
+          "Gamma": "999/1000000",
+          "isometry": false
+        },
+        "nontrivial_isometry": {
+          "Gamma": "0",
+          "isometry": true
+        },
+        "two_flaps_no_core": {
+          "Gamma": "3/4",
+          "isometry": false
+        },
+        "uniform": {
+          "Gamma": "33/64",
+          "isometry": false
+        }
+      },
+      "divergence_coefficients": 48,
+      "heights": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "name": "asymmetric_unequal_depths",
+      "normal_gram_rank": 3,
+      "normals": [
+        [
+          "-1/2",
+          "-1/6",
+          "-1/12"
+        ],
+        [
+          "1",
+          "-1/3",
+          "-1/6"
+        ],
+        [
+          "0",
+          "1",
+          "-1/4"
+        ],
+        [
+          "0",
+          "0",
+          "5/4"
+        ]
+      ],
+      "pair_polynomials": 120,
+      "pair_types": {
+        "strict": 42,
+        "tight": 78
+      },
+      "vertices": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "2",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "3",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "4"
+        ]
+      ],
+      "weight_polynomial_terms": 42
+    }
+  ],
+  "scope": "Exact geometric/coefficient controls; analytic hinge theorem is in PROOF.md"
+}
