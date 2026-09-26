@@ -53,8 +53,9 @@ certificate's explicit positive margin or its extension to nearby ten-site
 contractions that need not be flaps. Those are separate reusable controls;
 the two statements should not be conflated.
 
-**Publication status:** the source and the review are public; graph indexing
-remains pending. Reviewed source and review commits are pinned in
-REVIEW_STATUS.md. Public-link verification and graph-delivery state are
-recorded in the researcher's checkpoint. The unrestricted campaign target
-is not declared complete.
+**Publication status:** the source, independent review and original graph
+contribution are delivered. [GRAPH_STATUS.json](GRAPH_STATUS.json) records
+height 6256, all eleven initial relations and the accepting review's
+verification edge. Reviewed source and review commits are pinned in
+REVIEW_STATUS.md. The stated class has all three forms of evidence;
+the unrestricted dimension-three conjecture remains open.

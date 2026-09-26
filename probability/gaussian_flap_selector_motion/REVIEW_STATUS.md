@@ -52,6 +52,15 @@ theorem. The all-weight/all-variance depth-one obligation is settled at
 the recorded review scope. Arbitrary tetrahedra at depth one, other depths,
 and the unrestricted R3 conjecture remain outside this result.
 
-This acceptance is not external human peer review, formalization, historical
-priority verification or a Discovery Net commitment. Graph indexing and
-the campaign's full evidence gate are recorded separately.
+The original theorem is now committed to Discovery Net at height 6256:
+`bafkreiagf73saryvgmds7qu5375wsohaeguz5x3nf4rh2vmmx7ej5b22ia`.
+Readback at height 6257 verified the exact title, body and all eleven initial
+relations. These include DEPENDS_ON/REFINES to R7's selector reduction and
+the incoming VERIFIES relation from its accepting review at height 6234.
+[GRAPH_STATUS.json](GRAPH_STATUS.json) records the references and provenance.
+The stated class now has public source, scoped independent acceptance and
+committed graph evidence.
+
+This is not external human peer review, formalization, historical priority
+verification or a proof of the unrestricted dimension-three conjecture.
+Graph delivery adds no further mathematical validation.
