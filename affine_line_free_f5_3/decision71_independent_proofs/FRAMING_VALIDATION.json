@@ -1,0 +1,56 @@
+{
+  "controls": {
+    "chunk_sizes": [
+      1,
+      2,
+      7,
+      65536
+    ],
+    "false_empty_clause_passes_syntax_as_expected": true,
+    "fixture_runs": 56,
+    "malformed_fixtures": [
+      "bad_prefix",
+      "missing_clause",
+      "unterminated_clause",
+      "truncated_literal",
+      "signed_zero",
+      "noncanonical_literal",
+      "signed_int_overflow",
+      "excess_continuation",
+      "bad_prefix_after_clause"
+    ],
+    "valid_fixtures": 5
+  },
+  "full_corpus_framing_audited": false,
+  "global_unsat_accepted": false,
+  "native_checks": 0,
+  "samples": [
+    {
+      "additions": 4093,
+      "bytes": 105114,
+      "deletions": 2877,
+      "empty_clauses": 1,
+      "global_unsat_accepted": false,
+      "index": 0,
+      "literals": 56264,
+      "max_variable": 125,
+      "sha256": "c8c175f02f459379135c87968341040c35a023a4529feec037cf963c593c2736",
+      "status": "BINARY_DRAT_FRAMING_VALID",
+      "syntax_only": true
+    },
+    {
+      "additions": 91090,
+      "bytes": 3482287,
+      "deletions": 81920,
+      "empty_clauses": 1,
+      "global_unsat_accepted": false,
+      "index": 20750,
+      "literals": 2169581,
+      "max_variable": 125,
+      "sha256": "0f871232570c5ca11fb5c3bbe3a77b07cb4972ebfe929ddd3d59d267d3197494",
+      "status": "BINARY_DRAT_FRAMING_VALID",
+      "syntax_only": true
+    }
+  ],
+  "status": "FRAMING_CONTROLS_PASSED"
+}

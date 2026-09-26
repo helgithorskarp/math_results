@@ -1,5 +1,10 @@
 # Independent formula audit and stock proof replay
 
+**Acceptance update:** see [HANDOFF.md](HANDOFF.md) for the native warning
+printer issue and the binary-format condition on warning suppression.
+The saved ordinary replay is parked; it is not complete independent
+acceptance or sanitizer coverage. The all-formula audit remains complete.
+
 This package checks the remaining software boundary of the author's
 [exact-value proof](../decision71/README.md). It independently reconstructs
 the whole input formula for each of the 109,676 quotient representatives

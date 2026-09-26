@@ -1,5 +1,11 @@
 # Review of the complete formula and certificate boundary
 
+**Subsequent trust-boundary update:** [HANDOFF.md](HANDOFF.md) records the
+native warning-printer defect reported during independent review and a
+source-level qualification to `-w`. The partial ordinary replay below is
+preserved as historical evidence and parked. It is not sanitizer coverage;
+finishing its old command alone is not the updated acceptance route.
+
 **Verdict:** accept the independent reconstruction and integrity audit of
 all 109,676 published lift inputs. **Independent acceptance of the exact
 value 70 is still pending.** The separate native proof replay has checked
@@ -161,10 +167,11 @@ reported verdict alone is not used to accept a case.
 
 ## Strengthening and improvement opportunities
 
-The highest-value next step is to finish the same global replay, using
-the durable checkpoints already validated. No additional local subcase,
-classification, or marginal relaxation is needed for this acceptance
-route. Further reducing trust through a formally checked proof format
+The highest-value next step is complete independent proof checking with
+the trust conditions in [HANDOFF.md](HANDOFF.md) accounted for. The
+structural lane's ordinary replay is parked while the independent reviewers
+perform that work. No additional local subcase, classification, or marginal
+relaxation is needed. Further reducing trust through a formally checked proof format
 would require a separate conversion/checking bridge; this review makes
 no claim that such a bridge has been supplied.
 
