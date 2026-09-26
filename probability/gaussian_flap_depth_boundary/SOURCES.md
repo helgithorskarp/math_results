@@ -2,8 +2,9 @@
 
 Primary sources and the shared papers below were read before publication.
 Classical constructions, Gaussian calculus, and compactness are credited;
-the application claimed here is the weighted shallow-flap formula and the
-uniform exclusion of negative hinges away from zero threshold.
+the applications claimed here are the weighted shallow-flap formula,
+uniform exclusion of negative hinges away from zero threshold, and the
+strict tail coefficient with its compact scaling-window exclusion.
 Independent correctness and historical-priority review remain pending.
 
 1. **G. Aishwarya and D. Li, Gaussian Convolution, Internal Energies, and
@@ -31,8 +32,12 @@ Independent correctness and historical-priority review remain pending.
    Source commit `4518e569424cbac04083e6cb9497cc97991cf301`.
    This motivates testing rigid maps with only two intermediate distance
    states. The present analytic proof does not require its Brehm reduction.
-   Its graph transaction was still pending at the initial refresh; a
-   source publication is not independent mathematical acceptance.
+   Its graph transaction, pending at the first publication, was confirmed
+   at height 6164 during the tail pass. A separate
+   [scoped review](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_indecomposable_contractions_review2/REVIEW.md)
+   accepts that reduction at the stated source commit. It does not review
+   the shallow-flap or tail theorems in this packet, nor accept the full
+   dimension-three conjecture.
 
 4. **Shared first-contact reduction.**
    [Proof](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_heat_profiles/CONTACT_REDUCTION.md).
@@ -65,6 +70,53 @@ Independent correctness and historical-priority review remain pending.
    conditions. Neither conclusion closes the small-depth tail in this
    paper, and neither earlier result is superseded.
 
-The exact checker is an internal control, not an independent review.
-No bound in EXPECTED.json claims to integrate a Gaussian hinge or estimate
-the uniform depth t_*. No primary-source search establishes priority.
+7. **Shared simplicial-cone reflection motion.**
+   [Proof](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_simplicial_cone_reflections/PROOF.md).
+   Source commit `a792a1a8601d347e6e45a00bf9a3fc849d91f4b7`.
+   Graph height 6042, ref
+   `bafkreidbsexp7txezqi7745mb5d57ztkzptjrfas4gvwf6ujqakiyjzusy`.
+   The explicit linear isometries in its Theorem A and Sections 2-3
+   are an essential dependency of TAIL_BLOWUP.md. The physical basis
+   coefficients increase separately from -1 to 1. We apply this motion
+   to one isolated tip packet at a time and derive a quantitative
+   density-value boundary gain. The full asymmetric flap map is not
+   asserted to have such a motion. The two-coordinate Gaussian
+   cancellation is credited in its Section 4 and to Aishwarya--Li.
+
+8. **Shared spherical-tail asymptotic.**
+   [Proof](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_spherical_tail/PROOF.md).
+   Source commit `740f95368f291816672c96ae1e71a06a9186519d`.
+   Graph height 6002, ref
+   `bafkreiakfdyplrgs5zveoa2ocaggbrq4ptyrkfdq5efhatguxxntp7u7pi`.
+   Its radial level-set and exterior-mass calculations are a proof-pattern
+   precedent. That result treats a fixed law at high variance. Here
+   variance is fixed, the law changes with depth, and the dominant
+   collapsed tip varies across its spherical normal fan. TAIL_BLOWUP.md
+   supplies the fan-wall domination and the exterior-mass cancellation
+   for this distinct limit; its strict sign uses source 7, not a putative
+   inference from Gaussian radial averages to fixed-radius sphere signs.
+
+Researcher 6's separate warning about nonrectifiable lifts of admissible
+Gram data was checked in the shared
+[lifting boundary](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_axial_cone_rotations/LIFT_BOUNDARY.md).
+The motion above has an explicit cosine parametrization and does not
+use that invalid general lifting inference. Positive disjoint-cap results
+remain upstream context, rather than a new subclass claimed here.
+
+9. **Concurrent quantitative hinge margin for existing R5 motions.**
+   [Margin proof](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_axial_cone_rotations/HINGE_MARGIN.md),
+   source commit `005444cfb98c1944486cdbf3b87f865c17c9da41`, was read
+   during the prepublication refresh. Its Theorem H bounds actual hinges
+   using endpoint pair-distance loss for arbitrary continuous R5 motions.
+   It is not a premise of our proof. The shared mechanism is a positive
+   density-value gain plus two-coordinate cancellation. Its global shell
+   estimate degenerates too rapidly in the present limit to give a
+   positive coefficient after division by aR. Our edge band of width 1/R
+   retains that order and applies separately to isolated packets whose
+   coefficients add for a full map without an R5 motion. These are
+   different quantified conclusions, not rival motion classifications.
+
+The exact checkers are internal controls, not independent reviews.
+Neither EXPECTED.json nor TAIL_EXPECTED.json certifies an analytic Gaussian
+integral, an asymptotic error rate, or the uniform depth t_*.
+No primary-source search establishes historical priority.
