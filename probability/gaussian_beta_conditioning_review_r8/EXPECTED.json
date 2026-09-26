@@ -1,0 +1,205 @@
+{
+  "record": {
+    "algebra": {
+      "polarization_identities": 455,
+      "positive_tail_controls": 3,
+      "scaled_product_checks": 30
+    },
+    "cases": [
+      {
+        "affine_rank": 5,
+        "case": "off_centroid_five_plane",
+        "identity_sha256": "ef146186788544012662fad903f7d69feb1b321f0cfaef9ce38190a20660adad",
+        "positive_positions": 3,
+        "remaining_positions": 6,
+        "residual_energy": "43",
+        "squared_residual_sum": "45",
+        "subsets_verified": 64
+      },
+      {
+        "affine_rank": 1,
+        "case": "many_remaining_positions",
+        "identity_sha256": "59fa744deb703911b397e812cb7e65b4be5e0dc639a2bc378bcfb9498d550d73",
+        "positive_positions": 7,
+        "remaining_positions": 9,
+        "residual_energy": "514",
+        "squared_residual_sum": "3292",
+        "subsets_verified": 512
+      },
+      {
+        "affine_rank": 1,
+        "case": "centroid_special_case",
+        "identity_sha256": "a45edc7f39e1967ad04100c1b899cf673c0fe5a4d6488962ae2bb72cd4b66a33",
+        "positive_positions": 2,
+        "remaining_positions": 2,
+        "residual_energy": "2",
+        "squared_residual_sum": "0",
+        "subsets_verified": 4
+      },
+      {
+        "affine_rank": 0,
+        "case": "coincident_remaining_centers",
+        "identity_sha256": "7f82c19bf4b530d7d51d8fcc0414d3611cb208f6207e73e89bc1c3e2407fbfca",
+        "positive_positions": 4,
+        "remaining_positions": 4,
+        "residual_energy": "66",
+        "squared_residual_sum": "164",
+        "subsets_verified": 16
+      },
+      {
+        "affine_rank": 5,
+        "case": "actual_R3_contraction_lift",
+        "distinguished_squared_distance_loss": "16",
+        "identity_sha256": "107d95f2290bcbb2b264a26bfdf228b7545991961582d6183b8eaec5c58cb00f",
+        "interpolation_time": "9/25",
+        "positive_positions": 2,
+        "remaining_positions": 6,
+        "residual_energy": "1152/625",
+        "squared_residual_sum": "1152/625",
+        "subsets_verified": 64
+      }
+    ],
+    "compact_strip": {
+      "entries": [
+        {
+          "N": 429981694,
+          "j": 429981694,
+          "mantissa": "429981695/1024",
+          "negative_binary_exponent": 163393044480,
+          "q": 0
+        },
+        {
+          "N": 429981694,
+          "j": 429981693,
+          "mantissa": "92442128802545665/1536",
+          "negative_binary_exponent": 163393044100,
+          "q": 1
+        },
+        {
+          "N": 429981694,
+          "j": 429981692,
+          "mantissa": "13249474349014215915503615/3072",
+          "negative_binary_exponent": 163393043720,
+          "q": 2
+        },
+        {
+          "N": 429981694,
+          "j": 429981691,
+          "mantissa": "1424257849674932772850393352454145/6912",
+          "negative_binary_exponent": 163393043340,
+          "q": 3
+        },
+        {
+          "N": 429981694,
+          "j": 429981690,
+          "mantissa": "612404798623251393981531023703392267059195/82944",
+          "negative_binary_exponent": 163393042960,
+          "q": 4
+        },
+        {
+          "N": 429981694,
+          "j": 429981689,
+          "mantissa": "8777428342537843589301151278647155524101466537985/41472",
+          "negative_binary_exponent": 163393042580,
+          "q": 5
+        },
+        {
+          "N": 429981694,
+          "j": 429981688,
+          "mantissa": "3774133463800892532945531356437213567298828789379772956665/746496",
+          "negative_binary_exponent": 163393042200,
+          "q": 6
+        }
+      ],
+      "frontier": 3
+    },
+    "position_level_coverage": {
+      "automatically_signed_pair_cases": 610200,
+      "distinct_label_pair_cases": 612252,
+      "position_partitions": 21147,
+      "residual_pair_cases": 2052,
+      "residuals": [
+        {
+          "multiplicities": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "pair_multiplicities": [
+            1,
+            1
+          ],
+          "position_pair_cases": 36
+        },
+        {
+          "multiplicities": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "pair_multiplicities": [
+            2,
+            1
+          ],
+          "position_pair_cases": 504
+        },
+        {
+          "multiplicities": [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "pair_multiplicities": [
+            2,
+            2
+          ],
+          "position_pair_cases": 1512
+        }
+      ]
+    },
+    "rank_boundary": {
+      "distinguished_loss": "16",
+      "distinguished_pair": [
+        0,
+        4
+      ],
+      "endpoint_pairs": 21,
+      "labels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        10
+      ],
+      "midpoint_determinant": "-64",
+      "paired_determinant": -512,
+      "strict_pairs": 5
+    },
+    "rejected": [
+      "seven_affinely_independent_remaining_centers",
+      "overlapping_positions",
+      "repeated_position",
+      "omitted_inverse_cardinality_correction"
+    ],
+    "scope": "Exact finite identity controls; universal positivity follows from the written proof.",
+    "status": "AFFINE_GAUSSIAN_PROJECTION_AUDIT_PASS"
+  },
+  "sha256": "56cbdbde6f5bb00b3360a4b3e6d10974fffd946ecb020e2274b1d9eb1b640b3d"
+}

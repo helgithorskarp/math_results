@@ -8,10 +8,13 @@ the compact frontier `K_3` after translations.
 
 [PROOF.md](PROOF.md) gives the exact claim and analytic pruning: every
 polarized coefficient involving at most six distinct labels is already
-nonnegative by a five-dimensional Gaussian product identity. Only 11440
-seven-distinct coefficients need enclosure for each test. This is a
+nonnegative by a five-dimensional Gaussian product identity. The original
+certificate encloses 11440 seven-distinct coefficients per test to prove
+its explicit quantitative margins. This is a
 finite-row certificate, not full majorisation or a new Kneser--Poulsen
-class. Independent review is pending.
+class. An [independent review](../gaussian_beta_weight_certificate_review2/REVIEW.md)
+accepts the original source at `a006501b012a7084676d632df4d73af1fdd92a58`,
+including every stated margin. The proof and numerical source are preserved.
 
 From the repository root, run:
 
@@ -48,3 +51,11 @@ domains. On this cell, the six coefficient margins are explicitly in
 coefficients are handled uniformly without a weight grid. This is one
 signed cell and one beta row, not the high-degree compact-frontier cover.
 The existing full-axis degree barrier and all untested signs remain open.
+
+Subsequent [affine conditioning](../gaussian_beta_pair_conditioning/PROOF.md),
+accepted in the [functional-lane audit](../gaussian_beta_conditioning_review_r8/REVIEW.md),
+signs every polarized coefficient with `N-k<=6`, on every R3 contraction
+and at every variance. Those seven columns can now be omitted from unknown
+sign obligations throughout the compact frontier. This global qualitative
+sign does not replace this cell's stronger numerical margins. The first
+remaining beta entry is `b_(7,0)`; full majorisation remains open.
