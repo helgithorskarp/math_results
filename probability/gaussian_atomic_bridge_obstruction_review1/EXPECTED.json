@@ -1,0 +1,122 @@
+{
+  "approximate_common_output": {
+    "approximate_output_l1_bound": "1/851",
+    "identity_requires_cited_nonliftability": true,
+    "minimizer_count": 1,
+    "minimizer_rank_distribution": {
+      "5": 1
+    },
+    "minimum_nonidentity_margin": "1/8464",
+    "origin_swap_rejected": true,
+    "repeated_weight_control": true,
+    "weight_range_half": "37/368"
+  },
+  "classification": {
+    "contracting_bijections": 64,
+    "paired_rank_distribution": {
+      "4": 8,
+      "5": 32,
+      "6": 24
+    },
+    "prescribed_pair_losses": {
+      "0": 28,
+      "8": 8
+    },
+    "rejected_partial_extensions": 720,
+    "search_algorithm": "incremental reverse-target backtracking",
+    "search_nodes": 354,
+    "square_symmetries_each": 8,
+    "structural_cover_exact": true
+  },
+  "covariance": {
+    "central_middle_eigenvalue_gap_lower_bound": "1/100",
+    "certificates": [
+      {
+        "characteristic_polynomial": [
+          "-27733801/71639296",
+          "234327/135424",
+          "-40651/16928",
+          "1"
+        ],
+        "characteristic_value_at_threshold": "-1340459009/1119364000000",
+        "denominator": 33856,
+        "eigenvalues_above_threshold": 1,
+        "law": "source",
+        "matrix_numerator": [
+          [
+            21911,
+            -1939,
+            4308
+          ],
+          [
+            -1939,
+            27407,
+            -13124
+          ],
+          [
+            4308,
+            -13124,
+            31984
+          ]
+        ],
+        "sturm_degrees": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "threshold": "16/25"
+      },
+      {
+        "characteristic_polynomial": [
+          "-1279997/71639296",
+          "1523913/3114752",
+          "-23027/16928",
+          "1"
+        ],
+        "characteristic_value_at_threshold": "1853737/35819648000",
+        "denominator": 33856,
+        "eigenvalues_above_threshold": 2,
+        "law": "target",
+        "matrix_numerator": [
+          [
+            22271,
+            77,
+            216
+          ],
+          [
+            77,
+            22375,
+            -568
+          ],
+          [
+            216,
+            -568,
+            1408
+          ]
+        ],
+        "sturm_degrees": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "threshold": "13/20"
+      }
+    ],
+    "covariance_l1_lipschitz_constant_each": 9,
+    "robust_middle_eigenvalue_gap": "11/2000",
+    "weight_l1_radius": "1/4000"
+  },
+  "motion_obstruction": {
+    "moving_circuit": "b0-b1+b2-b3=0",
+    "moving_gram_determinant": 16,
+    "moving_gram_rank": 3,
+    "orthogonal_complement_dimension_in_R5": 2,
+    "projection_constraint_rank": 8,
+    "projection_kernel": "scalar multiples of the identity",
+    "zero_cross_incidences": 8
+  },
+  "scope": "Exact finite classification, Sturm covariance certificates, motion linear algebra, and perturbation constants; no Gaussian majorisation verdict is claimed.",
+  "status": "INDEPENDENT_ATOMIC_BRIDGE_REVIEW_PASSED"
+}
