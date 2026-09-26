@@ -1,0 +1,93 @@
+{
+  "claim_status": "exact computer-assisted lemma; independent peer review pending",
+  "enumeration_and_input_verification": {
+    "status": "NO_EIGHT_PLANE_REDUCTION_VERIFIED",
+    "labeled_mixed_quotients": 5428,
+    "inherited_two_eight_exclusions": 144,
+    "remaining_mixed_quotients": 5284,
+    "mixed_affine_classes": 1252,
+    "catalogue_sha256": "765937a860439729986f457b6cad703d362aa87a71ae6b3cb30631fbe5038792",
+    "independent_enumeration": "entry-level equality",
+    "affine_group_controls": 6,
+    "lines": 775,
+    "planes": 155,
+    "positive_control_size": 70,
+    "cnf_hashes_matched": 1252,
+    "proofs_rechecked": false,
+    "nine_planes_if_no_eight": 11,
+    "dependencies": [
+      "two_eight_planes72",
+      "low_planes72",
+      "nine_plane_frame72"
+    ],
+    "proof_replay": "Run replay.py with DRAT-trim; replay the cited dependencies separately."
+  },
+  "certificate_audit": {
+    "verified_mixed_cases": 1252,
+    "proof_format": "binary DRAT",
+    "proof_bytes": 1963456313,
+    "max_conflicts": 13042,
+    "max_conflict_case": 1091,
+    "sum_solver_seconds": 955.8648499029878,
+    "sum_solver_and_checker_seconds": 1395.6410063579865,
+    "max_case_seconds": 2.297211361999871,
+    "manifest_sha256": "b0ee1b371d77ad951aefe33cced505b352b8b9407a87920cf2c8ce2eb12d0980",
+    "production_intervals": [
+      [
+        0,
+        20
+      ],
+      [
+        20,
+        636
+      ],
+      [
+        636,
+        1252
+      ]
+    ],
+    "production_parallelism": "20-case pilot, then two disjoint workers",
+    "conflict_limit_per_case": 500000,
+    "all_original_proof_hashes_rechecked": true,
+    "all_original_cnf_hashes_rechecked": true,
+    "all_original_logs_verified": true
+  },
+  "versions": {
+    "python": "3.12.14",
+    "python_sat": "1.9.dev15",
+    "gxx": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "checker_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+    "checker_source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+  },
+  "sanitizer_checks": {
+    "address": true,
+    "undefined_behavior": true,
+    "both_outputs_match_baseline": true
+  },
+  "source_replayed_cases": [
+    0,
+    1,
+    1091,
+    1251
+  ],
+  "rejection_controls": {
+    "unknown_rejected": true,
+    "empty_proof_rejected": true
+  },
+  "source_verification_resources": {
+    "exit_code": 0,
+    "seconds": 245.2484346709998,
+    "peak_process_rss_KiB": 103456
+  },
+  "hardest_case_replay_resources": {
+    "exit_code": 0,
+    "seconds": 2.607321098000284,
+    "peak_process_rss_KiB": 71232
+  },
+  "teammate_weighted_certificate": "240abbef6ecd5e1a3ca4632cd2426a5ee33ab3e18319a245bd94fa62e47e4958",
+  "dependency_commit": "2e42f83c5bf9005239e1272b5a1c27eb4bb137eb",
+  "known_interval": [
+    70,
+    72
+  ]
+}

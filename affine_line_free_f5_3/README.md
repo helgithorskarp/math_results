@@ -141,3 +141,13 @@ in general position. Consequently BBB alone is an exhaustive normal form,
 with the additional count and frame constraints stated in that package.
 This covers candidates that might also admit an ABB description; it does
 not exclude all eight-point planes or settle existence at 72.
+
+## Excluding every eight-point plane at 72
+
+The [complete mixed-plane exclusion](no_eight_planes72/README.md) now
+proves that every plane section of a 72-point line-free set has size at
+least nine. Its 1,252 new lifting proofs all pass DRAT-trim, and two exact
+enumerations agree on the complete mixed quotient catalogue. Together
+with the weighted bound above, this gives `a_8=0` and `a_9>=11`.
+The remaining two-nine-plane lifting family is still unresolved here;
+the numerical interval remains 70--72.
