@@ -1,5 +1,10 @@
 # Sources, dependencies, and scope
 
+This file records the original fixed-base result. The subsequent unbounded
+ordered-weight cone and unequal-radius geometric consequence have their own
+[source and class-landscape audit](ORDERED_SOURCES.md). The original proof
+and certificates remain unchanged.
+
 The sole problem source is Gautam Aishwarya and Dongbin Li,
 [*Gaussian Convolution, Internal Energies, and the Kneser--Poulsen
 Conjecture*](https://arxiv.org/html/2609.07041v2), arXiv:2609.07041v2,

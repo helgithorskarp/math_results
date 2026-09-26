@@ -3,7 +3,17 @@
 Exact computer-assisted author proof, 26 September 2026. Independent
 mathematical review and proof-assistant formalization are pending.
 
-The [proof](PROOF.md) establishes full Gaussian majorisation at **every
+The new [ordered-weight annex](ORDERED_WEIGHTS.md) establishes full Gaussian
+majorisation for **arbitrary ratios of ordered directional weights**, at
+every variance and threshold, including bounded radial measures. It also
+proves a **Kneser--Poulsen union class with independently ordered individual
+radii at every shell**. Its stronger orbitwise ball-coverage inequality
+works for every locally finite measure invariant under the 48 signed
+coordinate permutations. A strict all-distinct-radius fixture escapes the
+previous radius-rematching and motion mechanisms. The annex has its own
+certificate and [sources/class comparison](ORDERED_SOURCES.md).
+
+The original [proof](PROOF.md) establishes full Gaussian majorisation at **every
 variance and threshold** for the team's asymmetric nine-point contraction,
 throughout an explicit L1 weight ball of radius **1/552**. This includes the
 entire radius-1/4000 family whose center-law martingale and deterministic
@@ -13,8 +23,9 @@ The theorem also covers **arbitrary bounded radial laws**, independent
 cluster masses, and radius-dependent directional weights in two explicit
 polyhedral cones. The directional classes have nonempty interior. No small
 mass or large variance assumption is imposed. The unrestricted R3 conjecture
-and the arbitrary-weight square-cone case remain open; no new
-Kneser--Poulsen volume case is claimed here.
+and the arbitrary-weight square-cone case remain open. The new unequal-radius
+consequence belongs to the ordered-weight annex, rather than to the original
+fixed-base weight cones.
 
 The proof acts on 48 signed coordinate permutations of the smoothed density.
 Exact polynomial coefficient inequalities give two finite partial orders;
@@ -24,6 +35,31 @@ This compares density values after convolution and is compatible with the
 previously proved obstructions on center laws and contracting motions.
 
 ## Reproduction
+
+For the ordered-weight and unequal-radius annex, CPython >=3.11 and the
+standard library suffice. From this directory:
+
+```bash
+python3 verify_ordered_weights.py --check
+python3 independent_ordered_check.py --check
+python3 ordered_geometry.py --check
+```
+
+All checks were also run under `python3 -O`. The exact results are 5294
+A-upper sets, 5783 B-upper sets, **30,615,202** checked pairs, minimum
+correlation gap zero, and a rational nine-ball fixture with orbit coverage
+48 versus 32. Successful output hashes:
+
+```text
+ORDERED_WEIGHT_ORBIT_MATCHINGS_PASS 5ffe59c3dbbf29ff5adc8fa146311857e5ec56f0a249ce1c1cf1b6e400b91738
+ORDERED_WEIGHT_ALL_UPPER_SETS_CROSSCHECK_PASS a5f0522a648bbc98578e42e0d54109ccf31c3e73d1beb4c485db313a31f20b58
+ORDERED_RADII_GEOMETRY_FIXTURE_PASS e0ea0261422b96c48a2d5928b9096a2ceaa48342172dbbc99f2d0c330fd0d7ff
+```
+
+The primary checker takes about five seconds and the separate all-pairs
+checker about 45 seconds on the recorded CPython 3.11.2 run. The original
+proof and both of its exact programs/certificates remain unchanged. Their
+reproduction instructions follow.
 
 CPython >=3.11, standard library only. Verified on CPython 3.11.2, both
 normally and with optimization, and CPython 3.12.14. From the repository root:
@@ -49,6 +85,10 @@ records. `python3 verify.py --certificate` regenerates CERTIFICATE.json.
 Checks remain active under `-O`; failures raise an error and return nonzero.
 
 ## What is certified
+
+The following table concerns the original fixed-base theorem. The new
+prefix-order certificate and geometric transfer are detailed separately in
+[ORDERED_WEIGHTS.md](ORDERED_WEIGHTS.md).
 
 | Obligation | Exact evidence |
 |---|---|
