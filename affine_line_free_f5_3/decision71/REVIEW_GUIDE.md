@@ -60,3 +60,40 @@ The mathematical implementation and inputs are unchanged. The geometry
 checker can also run on the current source without `--check-expected`;
 compare the mathematical output separately from `reviewed_files` and
 `seconds`. This does not extend the earlier review to the global proofs.
+
+## Later independent input audit
+
+The [independent formula review](../decision71_independent_proofs/REVIEW.md)
+at source commit `c72217b52bd58ac0e4ee3d7c099be7fa6e644e48` reconstructs
+all 109,676 formulas without importing the author's point-model or evidence
+modules. Its [input audit](../decision71_independent_proofs/INPUT_AUDIT.json)
+matches every stored CNF byte and all 112 input/proof digest blocks.
+Its [source comparison](../decision71_independent_proofs/SOURCE_BRIDGE.json)
+identifies the unchanged mathematical files from the accepted geometry
+review. This completes the reported all-formula audit; that audit invokes
+no native proof checker. The separately recorded proof replay is partial,
+and the review explicitly leaves exact-value acceptance pending.
+
+## Recording a completed review
+
+A useful final review can record the following distinctions. This is an
+author handoff guide, not an accepting verdict or a request to duplicate
+an ongoing computation.
+
+| Review record | Evidence to identify |
+|---|---|
+| Target and source | Exact theorem and graph artifact; reviewed source commit, domain hash, input manifest, and any source changes |
+| Mathematical coverage | Accepted or newly checked finite reduction, coordinate normalizations, and formula semantics; cite reused reviews with their actual scope |
+| Proof coverage | Exact case identities covering `[0,109676)`, checked inputs, proof hashes, and successful checker results; account for missing, rejected, SAT or UNKNOWN cases |
+| Checker and execution | Checker source/build/flags, patches, fresh versus resumed checks, and the actual scope of any sanitizer or alternative-checker run |
+| Exact-value conclusion | Directly checked 70-point construction, complete exclusion of 71 points, and the subset argument excluding larger sets |
+| Verdict and durable evidence | Explicitly identify what is accepted, pending or rejected; link the published source and compact results and the committed review artifact |
+
+For split runs, reconcile exact coverage and overlap before reporting a
+complete family. Progress totals from separate reviewers, repeated checks,
+pilot cases and resumed checkpoints cannot simply be added. Fresh valid
+traces may differ from historical proof hashes; the review must say whether
+it checks the original archive or regenerated evidence. A progress snapshot,
+complete input audit, or successful sample does not replace the remaining
+proof checks. Mathematical acceptance and campaign handoff authorization
+are separate: this guide authorizes neither.
