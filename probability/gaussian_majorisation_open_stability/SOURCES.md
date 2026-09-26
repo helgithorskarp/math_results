@@ -264,3 +264,51 @@ radius is analytic, and no numerical value for it is advertised. Exact
 Python arithmetic validates the new finite lemma; the cited all-hinge
 proof and the analytic arguments remain unformalized. Independent review
 is pending. No new Kneser--Poulsen case is claimed from a variance-band result.
+
+## Uniform compact moment budget
+
+[UNIFORM_FRONTIER.md](UNIFORM_FRONTIER.md) supplies a Gaussian support
+modulus and composes it with the two existing reductions: the global
+beta-moment criterion and the uniform spatial defect localization.
+[UNIFORM_SOURCES.json](UNIFORM_SOURCES.json) records exact source hashes,
+commits and observed graph references. The spatial localization, atom
+count and compactness are researcher 3's result. The moment identity,
+degree elevation and Bernstein--Durrmeyer kernel are researcher 5's
+credited inputs. Researcher 8 supplies the global modulus and explicit
+uniform moment/error schedule. These author proofs await independent
+review; recording a dependency is not independent acceptance.
+
+The sole problem source remains [Aishwarya--Li, arXiv:2609.07041v2](https://arxiv.org/html/2609.07041v2).
+The primary paper proves the restricted pressure-class comparison in R3;
+our absolute truncation bound does not supply the unrestricted sign.
+The classical kernel is also recorded in Section 5.1 of Berdysheva, Dyn,
+Farkhi and Mokhov, [Metric Approximation of Set-Valued Functions of Bounded
+Variation by Integral Operators](https://link.springer.com/article/10.1007/s00365-024-09681-5),
+Constructive Approximation 61 (2025), 347--377. No set-valued theorem is
+used. The kernel moments and concave-modulus argument are explicit in the
+annex. Layer cake, Gaussian radial integration, positive approximation,
+Jensen's inequality and elementary logarithmic bounds carry no novelty
+claim. The contribution is their quantitative interface to the unrestricted
+finite-atomic frontier, not a new moment representation principle.
+
+Current context includes the common-set equality-face certificates, the
+transverse heat-contact reduction, and the axial eight-lane handoff at
+the versions in UNIFORM_SOURCES.json. None supplies a premise for the
+new modulus. The old strict signed-endpoint certificate, bounded-law
+interior theorem, ordered-weight source and all their proof/checker bytes
+are preserved. No new positive geometric class or counterexample is claimed.
+The arithmetic audit checks identities and budget controls only; it does
+not evaluate the continuous maxima B_k, perform high-order replica sums,
+or certify an unknown Gaussian pair. An all-configuration beta enclosure
+is a separate required input to any numerical bound on the full defect.
+
+The final prepublication refresh found the concurrently completed analytic
+handoff at graph 6144, source commit 8b004c6a747883fcf96f895a052a292a62683f5f.
+Its Section 4 already composes localization and global moments with a
+uniform degree-O(k^16) diagonal and error below 5/k. That formulation,
+its monotonicity and full-question equivalence are credited explicitly;
+our new modulus refines the degree to O(k^8). The exact commit is also
+recorded programmatically in UNIFORM_SOURCES.json; use that provenance
+record for the source revision. The simultaneous three-cap reflection
+source at graph 6146 is retained as geometric context, without an
+independent review or an additional class claim by this annex.

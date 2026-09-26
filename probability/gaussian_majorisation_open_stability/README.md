@@ -1,5 +1,21 @@
 # Fixed-variance all-order stability for Gaussian majorisation
 
+The [uniform frontier](UNIFORM_FRONTIER.md) connects the finite-atomic
+localization and integrated moment criteria without requiring strict
+endpoint margins. An explicit compact moment maximum B_k, using at most
+k^6 atoms and powers through 2^16 k^8, satisfies
+0<=D-B_k<14/(3k) for the unrestricted defect D. This is an absolute-error
+interface for the finite-atomic lane, including equality and zero-weight
+boundaries. It refines the degree-O(k^16) compact moment formulation in
+the [analytic handoff](../gaussian_majorisation_global_criterion/INTERFACES.md),
+which is credited for that formulation. The universal sign, practical evaluation and independent
+review remain open. It is not a finite exact-positivity cutoff.
+
+Run `python3 frontier_budget.py --check` to reproduce the exact algebra
+and budget controls in [FRONTIER_EXPECTED.json](FRONTIER_EXPECTED.json).
+The program does not evaluate B_k or certify any Gaussian sign.
+[UNIFORM_SOURCES.json](UNIFORM_SOURCES.json) pins the dependencies.
+
 The [finite-certificate interface](CERTIFICATE_INTERFACE.md) supplies a
 precise input contract for the finite-atomic lane: normalized moment
 intervals, a source peak bound from absolute moments, signed threshold
