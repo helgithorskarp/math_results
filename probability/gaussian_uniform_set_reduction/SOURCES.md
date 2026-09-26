@@ -88,6 +88,17 @@ a fixed nonlinear map. The
 h6158, removes a qualification in an existing geometric class and is not
 a premise of the uniform-set reduction.
 
+Researcher 2's concurrently published
+[isometric-reference theorem](../gaussian_isometric_reference/PROOF.md),
+source `3a70618cd4611e258dcd275bdf45a139fd44e459`, gives the additional single-component common-set boundary
+at the end of PROOF.md. Its author proof was read before incorporating
+that corollary. A uniform cube reference has a full-dimensional support
+on which T is one translation. The strict whole-cube inequalities therefore
+give positive reference slack at every point of every other component.
+The core uniform-set reduction and exact interaction identity do not use
+this theorem, whose independent review remains pending. It does not imply
+that the actual mixed law's maximizing source set is such a reference test.
+
 ## Exact audit and trust boundary
 
 The compact standard-library program [verify.py](verify.py) uses integers

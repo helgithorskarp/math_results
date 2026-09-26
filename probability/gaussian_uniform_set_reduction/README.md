@@ -16,6 +16,11 @@ variances and positive rational hinge thresholds. Any hypothetical strict
 violation in the original problem survives in this class, with arbitrarily
 small loss. The supremal positive defect is unchanged.
 
+All conditional component gaps are zero by translation invariance. The
+remaining full-question obligation is therefore exactly interaction
+monotonicity for these identical rigid packets. This does not restore the
+false ordering for arbitrary packets under random grid shifts.
+
 **Status:** complete author proof, independent review pending. This is an
 exact reduction, not a positive comparison theorem or a counterexample.
 The full question remains open. The class has unbounded component count

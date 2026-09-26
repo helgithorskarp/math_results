@@ -225,6 +225,34 @@ on the multiplicity N or dilation q introduced here. The
 is also unchanged. This proof uses a globally coherent approximation; it
 does not discard or cancel conditional interaction terms.
 
+There is an exact interaction formulation on the new class. Put
+h=1_Q*gamma_(q^2), f_i=h(. -X_i)/N and g_i=h(. -Y_i)/N. If
+I(f_i;a)=H_(sum_i f_i)(a)-sum_i H_(f_i)(a), translation invariance gives
+
+    sum_i H_(f_i)(a)=sum_i H_(g_i)(a)=H_h(Na),
+    H_(mu_E*gamma_(q^2))(a)-H_(mu_F*gamma_(q^2))(a)
+                       = I(f_i;a)-I(g_i;a).               (12)
+
+Every conditional component gap is exactly zero. Consequently the full
+question is equivalent to interaction monotonicity for these identical
+rigid packets satisfying (1)--(2). This assertion is still unproved.
+It differs from the disproved ordering for arbitrary conditional packets
+under random source-grid shifts: that example's grouped conditional laws
+were not isometric at the two endpoints. The current reduction changes
+the witness globally rather than selecting a partition with zero error
+for the original witness.
+
+The concurrent [isometric-reference theorem](../gaussian_isometric_reference/PROOF.md)
+supplies an additional common-set boundary: take its reference law to be
+uniform on any one source cube. T is a translation there, so every positive
+superlevel set of that component's Gaussian convolution has a nonnegative
+common-set value against all laws on E. For the uniform law on all N>=2
+cubes, the value at each such test is strictly positive, since all distances
+to every other component strictly decrease. Thus a negative common-set
+witness cannot use one of these single-component reference tests. This
+corollary uses that separately credited author theorem; the reduction and
+the elementary interaction identity (12) do not depend on it.
+
 No new positive map class or Kneser--Poulsen consequence is proved. The
 analytic approximation and equivalence are written proofs. The compact
 [exact audit](verify.py) checks the integer geometry and its corner
