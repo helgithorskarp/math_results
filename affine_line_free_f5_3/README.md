@@ -131,3 +131,13 @@ coordinate profiles AAA, AAB, ABB and BBB, where A=(8,16,16,16,16) and
 B=(9,15,16,16,16). The optimizer-free replay checks complete planar spectra
 and 128 exact rational certificates. These four cases remain open; the
 numerical interval is still 70–72.
+
+## A single frame-normalized case at 72
+
+The [nine-plane-frame theorem](nine_plane_frame72/README.md) proves
+`3a_8+a_9>=11`. Combined with the [two-eight-plane exclusion](two_eight_planes72/README.md),
+this forces at least eight nine-point planes, with four normal directions
+in general position. Consequently BBB alone is an exhaustive normal form,
+with the additional count and frame constraints stated in that package.
+This covers candidates that might also admit an ABB description; it does
+not exclude all eight-point planes or settle existence at 72.
