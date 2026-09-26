@@ -3,8 +3,10 @@
 Complete author proof, 26 September 2026. Independent correctness and
 historical-priority review are pending. The full three-dimensional Gaussian
 majorisation problem remains open. This controls a deformation of asymmetric
-extremal maps; it does not prove comparison at all positive thresholds for
-any fixed nonzero depth, or a new Kneser--Poulsen volume inequality.
+extremal maps. The first-variation argument here leaves a tail boundary;
+[RELATIVE_TAIL.md](RELATIVE_TAIL.md), Theorem 6 and Section 8, subsequently
+closes it for an open asymmetric class at each fixed variance and
+sufficiently small depth. No new Kneser--Poulsen volume inequality is proved.
 
 ## 1. Geometry and statement
 
@@ -314,8 +316,9 @@ The written proof of Theorems A and B is the analytic trust boundary.
 There is no Gaussian quadrature, floating-point sign, numerical optimizer,
 heavy enumeration, or claimed effective value of t_*.
 
-The highest-value remaining question for this family is the joint limit
-t down to zero and a down to zero, followed by positive-depth comparison.
-The compactness argument must not be extended to that boundary without
-a uniform tail estimate. The full named problem remains unrestricted;
-this family and this result do not settle it.
+The compactness argument must not be extended to zero threshold without
+a uniform tail estimate. The continuation in RELATIVE_TAIL.md supplies
+one and proves full shallow comparison under a positive support
+coefficient. It verifies that condition on an open asymmetric class;
+arbitrary geometric and weight-support cases remain undecided. The full
+named problem remains unrestricted and is not settled by these results.

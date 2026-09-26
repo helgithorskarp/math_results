@@ -3,8 +3,10 @@
 Author proof, 26 September 2026; independent review pending. This supplies
 sign information for the indecomposable flap maps in [PROOF.md](PROOF.md),
 including arbitrary tetrahedra and asymmetric weights. It excludes a
-specific joint depth/threshold regime. It does not prove full comparison
-at positive depth, or the unrestricted dimension-three conjecture.
+specific joint depth/threshold regime. The continuation in
+[RELATIVE_TAIL.md](RELATIVE_TAIL.md) closes all thresholds at each fixed
+variance for an open asymmetric class at sufficiently small positive
+depth. The unrestricted dimension-three conjecture remains open.
 
 ## 1. Statement and normalizations
 
@@ -119,6 +121,11 @@ the limiting approximation (5) is only asserted for fixed weights.
 The assertion is strict for these very small positive levels. No effective
 t_* is claimed. This extends the positive-threshold-floor exclusion in
 PROOF.md, but does not join it uniformly to all thresholds.
+
+The subsequent [relative-error proof](RELATIVE_TAIL.md) strengthens this
+conclusion: it gives explicit tail error constants, removes the lower
+tau cutoff, and permits tau to grow logarithmically with R. The original
+argument below and its coefficient remain unchanged.
 
 ## 2. Outer level radii and proof of the limit
 
@@ -451,7 +458,13 @@ Those remain written-proof obligations, not computer certificates.
 The result is restricted to the classical flap family, even though its
 full positive-label geometry has no R5 motion. The isolated packets have
 R5 motions; their limiting coefficients add, but their actual hinges do
-not. Uniform approximation as tau->0 or tau->infinity, as weights vanish,
-or across unrestricted variances has not been proved. No all-threshold
-positive-depth result, counterexample, or new Kneser--Poulsen consequence
-is claimed. See [SOURCES.md](SOURCES.md) for the upstream dependencies.
+not. This argument alone gives no relative approximation as tau->0,
+tau->infinity, occupied weights vanish, or variance degenerates. The first
+of these boundaries and a logarithmically growing tau window are now
+controlled in [RELATIVE_TAIL.md](RELATIVE_TAIL.md). Its positive-support
+criterion closes all thresholds for an open asymmetric class at each
+fixed variance and sufficiently small depth. That criterion's strictness
+for arbitrary geometry and label support, and uniform control of the
+other degenerations, remain open. No counterexample or new
+Kneser--Poulsen consequence is claimed.
+See [SOURCES.md](SOURCES.md) for the upstream dependencies.

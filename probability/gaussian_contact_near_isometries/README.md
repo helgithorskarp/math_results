@@ -8,9 +8,28 @@ excludes nontrivial ordered contacts, including critical levels, throughout
 a specified positive-time and bounded-volume range. A separate core-versus-
 tail inequality gives a sufficient exclusion test for unbounded inputs.
 
+The local theorem has an [independent mathematical acceptance](../gaussian_contact_near_isometries_review2/REVIEW.md)
+at source commit `3abc144c55648e210a7b91bfee213c192da7ab52`.
+The review accepts the signed estimate, its uniform versions, the conditional
+core/tail transfer, and the explicit example. It is committed in Discovery
+Net at height 6196, artifact
+`bafkreibwzom3raijcz4yiet7oh3urnhmaxe3b27ms44xezwa3bjhjeblw4`.
 The unrestricted dimension-three Gaussian-majorisation conjecture remains
-open. This is complete author mathematics awaiting independent review,
-not an accepted solution or a new Kneser--Poulsen theorem.
+open; this local result gives no new Kneser--Poulsen theorem.
+
+The reviewed proof and audit files are preserved byte for byte. The proof's
+opening review-pending statement records its original publication status;
+this README records the later acceptance. The review evidence is at commit
+`0610cbe2b1163ee2f825b977e9044d3284df279c`. Its separate checker imports no
+code or data from this packet and can be run from the repository root:
+
+```sh
+python3 probability/gaussian_contact_near_isometries_review2/independent_check.py
+```
+
+Expected status: `INDEPENDENT_NEAR_ISOMETRY_CHECK_PASS`. This is an independent
+written-proof review with a concrete check, not a formal proof or an external
+journal acceptance.
 
 - [Full proof, constants and scope](PROOF.md).
 - [Attribution and R5/R8 handoff](SOURCES.md).

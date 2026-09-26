@@ -4,7 +4,11 @@ Primary sources and the shared papers below were read before publication.
 Classical constructions, Gaussian calculus, and compactness are credited;
 the applications claimed here are the weighted shallow-flap formula,
 uniform exclusion of negative hinges away from zero threshold, and the
-strict tail coefficient with its compact scaling-window exclusion.
+strict tail coefficient with its compact scaling-window exclusion, and
+the subsequent effective relative error and logarithmically growing
+positive window. The continuation proves full all-threshold comparison
+at each fixed variance for shallow flaps with a positive support
+coefficient, and verifies that coefficient on an open asymmetric class.
 Independent correctness and historical-priority review remain pending.
 
 1. **G. Aishwarya and D. Li, Gaussian Convolution, Internal Energies, and
@@ -15,7 +19,7 @@ Independent correctness and historical-priority review remain pending.
    mechanism to their earlier work. Our finite numerator is derived
    directly, rather than claiming a new general velocity theorem.
    The all-variance/all-energy requirements of the volume application
-   are not met by the present threshold-truncated conclusion.
+   are not met by the present fixed-variance, depth-dependent conclusion.
 
 2. **H. Cheng, S. C. Tan and Y. Zheng, Continuous expansions in Euclidean
    space**, arXiv:1107.0140.
@@ -115,8 +119,35 @@ remain upstream context, rather than a new subclass claimed here.
    retains that order and applies separately to isolated packets whose
    coefficients add for a full map without an R5 motion. These are
    different quantified conclusions, not rival motion classifications.
+   The later Theorem H2 extension through the target density peak, source
+   commit `32f04f8f67c0dae00eda7443912cb5b3a0ca2f02`, was also read.
+   Its continuous-motion assumption remains different from the full flap
+   geometry here; that extension is not a premise of our proof.
+
+The relative-error continuation in [RELATIVE_TAIL.md](RELATIVE_TAIL.md)
+consumes the strict coefficient bound in TAIL_BLOWUP.md and the earlier
+positive-threshold-floor theorem in PROOF.md. Its additional work is
+quantitative differentiation of the radial boundary and exterior mass,
+uniform through normal-fan wall bands. The new error rate is a written
+analytic theorem, not inferred from numerical fits or finite controls.
+The lower bound retains the dependency on the simplicial-cone motion;
+there is no new motion class or symmetry classification.
+
+Theorem 6 in that continuation closes all thresholds when the support
+coefficient is positive. Its regular-fan calculation and quantitative
+perturbation bound establish this on an open class, including an exact
+asymmetric example whose inward normals follow from inverse-transpose
+duality. The full-map R5 obstruction remains the classical flap
+mechanism credited in source 2. Unlike source 6's small-rare-mass
+conclusions, the parameter made small here is depth at arbitrary fixed
+positive weights. Unlike the common-target all-variance result, our
+depth bound depends on the fixed variance. These quantifiers do not
+give a new Kneser--Poulsen consequence.
 
 The exact checkers are internal controls, not independent reviews.
-Neither EXPECTED.json nor TAIL_EXPECTED.json certifies an analytic Gaussian
-integral, an asymptotic error rate, or the uniform depth t_*.
+EXPECTED.json, TAIL_EXPECTED.json and RELATIVE_EXPECTED.json do not
+certify an analytic Gaussian integral, an asymptotic error rate, or the
+final uniform depth cutoff. The last record audits the arithmetic in an
+effective sufficient radius condition and the support-positivity
+fixture, not the universal analytic proof.
 No primary-source search establishes historical priority.

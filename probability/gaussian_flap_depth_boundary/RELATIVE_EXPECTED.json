@@ -1,0 +1,120 @@
+{
+  "all_threshold_asymmetric_control": {
+    "Gamma_for_displayed_weights": "6300000117/6800000000",
+    "claim": "All hinges at every fixed variance for sufficiently small depth; depth depends on weights and variance",
+    "delta": "1/100000000",
+    "distinct_core_edge_lengths": 6,
+    "eta": "13/100000000",
+    "matrix_A": [
+      [
+        "1",
+        "1/100000000",
+        "0"
+      ],
+      [
+        "0",
+        "100000001/100000000",
+        "1/100000000"
+      ],
+      [
+        "1/100000000",
+        "0",
+        "50000001/50000000"
+      ]
+    ],
+    "normal_edge_identities": 64,
+    "regular_cone_branch_coefficients": [
+      [
+        2,
+        0,
+        2
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "regular_lower_bound": "pi/(72 sqrt(3))",
+    "squared_edge_polynomials": [
+      [
+        8,
+        32,
+        36
+      ],
+      [
+        8,
+        24,
+        40
+      ],
+      [
+        8,
+        16,
+        12
+      ],
+      [
+        8,
+        0,
+        12
+      ],
+      [
+        8,
+        8,
+        8
+      ],
+      [
+        8,
+        16,
+        20
+      ]
+    ],
+    "support_coefficient_strict_lower_bound": "1/50",
+    "weights": "(1,2,...,16)/136 in the order of verify.py"
+  },
+  "coefficient_audit": {
+    "both_sign_wall_constant_before_rounding": "33/4",
+    "error_coefficients": {
+      "M": 560,
+      "M*D*T": 80,
+      "W": 480,
+      "constant": 496
+    },
+    "exterior_integral_moments": [
+      "3/2",
+      "9/4",
+      "27/4"
+    ]
+  },
+  "effective_asymmetric_fixture": {
+    "A0_upper": "7896",
+    "A1": "1100/3",
+    "D": "2",
+    "Gamma": "33/64",
+    "M": "7",
+    "V": "5",
+    "c_geometry": "1/61440000",
+    "g0_lower_bound": "11/(1310720000*3^153)",
+    "logarithmic_window_divisor": "24",
+    "nu": "2",
+    "radius_10_pow_40_fails_sufficient_test": true,
+    "radius_sufficient": "10^400",
+    "requirement_power_ten_upper_exponents": {
+      "A0_term": 173,
+      "A1_term": 342,
+      "T_at_most_R": 0,
+      "radial_regularity": 2
+    },
+    "squared_vertex_distances": [
+      4,
+      10,
+      18,
+      10,
+      18,
+      20
+    ],
+    "sufficient_test_failure_is_not_a_counterexample": true,
+    "threshold_cutoff_c": "1/400",
+    "w_min": "1/4"
+  },
+  "scope": "Exact coefficient and effectivity controls; the analytic proof is RELATIVE_TAIL.md"
+}
