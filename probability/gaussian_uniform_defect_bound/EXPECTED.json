@@ -1,0 +1,63 @@
+{
+  "independent_check.py": {
+    "record": {
+      "coarse_pi_interval": [
+        "314159/100000",
+        "3927/1250"
+      ],
+      "error": "7/50",
+      "multiplier": "57/50",
+      "positive_rational_margins": {
+        "critical_maximum": "51028456626074301663964383284760579542170098411616819255640495803205824289391436118801884949/43140664648532867431640625000000000000000000000000000000000000000000000000000000000000000000000",
+        "finite_endpoint": "698150759175086965868328589100884384671525127/990748059082031250000000000000000000000000000000",
+        "left_derivative": "17858813736466987/76293945312500000000",
+        "right_derivative": "211869317552107273/751018524169921875000"
+      },
+      "shift": "17/50",
+      "status": "SEPARATE_POLYNOMIAL_ENVELOPE_PASS",
+      "wide_critical_bracket": [
+        "533/625",
+        "853/1000"
+      ]
+    },
+    "record_sha256": "6011b4110c860ce0d5ed15c9991e834c06dc1fd6156c037f6ce3691eb3e81492"
+  },
+  "verify.py": {
+    "record": {
+      "critical_bracket": [
+        "85289/100000",
+        "8529/10000"
+      ],
+      "critical_derivative_signs": [
+        "positive",
+        "negative"
+      ],
+      "error": "7/50",
+      "global_defect_upper_bound": "7/50",
+      "global_envelope": [
+        "-7/50",
+        "0"
+      ],
+      "multiplier": "57/50",
+      "schema": "shifted-gamma-envelope-v1",
+      "shift": "17/50",
+      "status": "UNIFORM_GAUSSIAN_DEFECT_BOUND_PASS",
+      "trust": "written global reduction + exact Python rational arithmetic; not independent acceptance",
+      "verified_enclosures": {
+        "critical_value": [
+          "-419/1000000",
+          "-409/1000000"
+        ],
+        "d_zero": [
+          "-139197/1000000",
+          "-139196/1000000"
+        ],
+        "pi": [
+          "3141592653589793/1000000000000000",
+          "1570796326794897/500000000000000"
+        ]
+      }
+    },
+    "record_sha256": "091917b9e63599ad5ad19351b61b68ea35c7b34fc4904a0e14af84f1b5bb41d9"
+  }
+}
