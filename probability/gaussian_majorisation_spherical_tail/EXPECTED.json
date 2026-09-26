@@ -1,0 +1,114 @@
+{
+  "angular_quadrature": "composite Simpson 256 and 512 panels; target 1024",
+  "conditional_variance_arithmetic": {
+    "L": "2",
+    "error_bound": "96/9601",
+    "hypothetical_eta": "1/100",
+    "lambda": "3/2",
+    "s": "38404/9",
+    "status": "conditional arithmetic only; no witness supplied"
+  },
+  "exact_constant_fixtures": 21,
+  "fixtures": [
+    {
+      "R": 4.0,
+      "R_squared_times_error": 0.0018793,
+      "analytic_error_bound": 0.6875,
+      "lambda": 0.5,
+      "normalized_hinge_gap": 0.04078932,
+      "spherical_gap": 0.04067186
+    },
+    {
+      "R": 8.0,
+      "R_squared_times_error": 0.0022164,
+      "analytic_error_bound": 0.171875,
+      "lambda": 0.5,
+      "normalized_hinge_gap": 0.04070649,
+      "spherical_gap": 0.04067186
+    },
+    {
+      "R": 16.0,
+      "R_squared_times_error": 0.0023003,
+      "analytic_error_bound": 0.04296875,
+      "lambda": 0.5,
+      "normalized_hinge_gap": 0.04068084,
+      "spherical_gap": 0.04067186
+    },
+    {
+      "R": 32.0,
+      "R_squared_times_error": 0.0023213,
+      "analytic_error_bound": 0.01074219,
+      "lambda": 0.5,
+      "normalized_hinge_gap": 0.04067412,
+      "spherical_gap": 0.04067186
+    },
+    {
+      "R": 4.0,
+      "R_squared_times_error": 0.0218792,
+      "analytic_error_bound": 1.25,
+      "lambda": 1.0,
+      "normalized_hinge_gap": 0.15394755,
+      "spherical_gap": 0.15258009
+    },
+    {
+      "R": 8.0,
+      "R_squared_times_error": 0.0263793,
+      "analytic_error_bound": 0.3125,
+      "lambda": 1.0,
+      "normalized_hinge_gap": 0.15299227,
+      "spherical_gap": 0.15258009
+    },
+    {
+      "R": 16.0,
+      "R_squared_times_error": 0.0274934,
+      "analytic_error_bound": 0.078125,
+      "lambda": 1.0,
+      "normalized_hinge_gap": 0.15268749,
+      "spherical_gap": 0.15258009
+    },
+    {
+      "R": 32.0,
+      "R_squared_times_error": 0.0277712,
+      "analytic_error_bound": 0.01953125,
+      "lambda": 1.0,
+      "normalized_hinge_gap": 0.15260721,
+      "spherical_gap": 0.15258009
+    },
+    {
+      "R": 4.0,
+      "R_squared_times_error": 0.1353188,
+      "analytic_error_bound": 3.125,
+      "lambda": 2.0,
+      "normalized_hinge_gap": 0.51636889,
+      "spherical_gap": 0.50791147
+    },
+    {
+      "R": 8.0,
+      "R_squared_times_error": 0.1861132,
+      "analytic_error_bound": 0.78125,
+      "lambda": 2.0,
+      "normalized_hinge_gap": 0.51081948,
+      "spherical_gap": 0.50791147
+    },
+    {
+      "R": 16.0,
+      "R_squared_times_error": 0.1986537,
+      "analytic_error_bound": 0.1953125,
+      "lambda": 2.0,
+      "normalized_hinge_gap": 0.50868746,
+      "spherical_gap": 0.50791147
+    },
+    {
+      "R": 32.0,
+      "R_squared_times_error": 0.2017783,
+      "analytic_error_bound": 0.04882812,
+      "lambda": 2.0,
+      "normalized_hinge_gap": 0.50810851,
+      "spherical_gap": 0.50791147
+    }
+  ],
+  "radial_tail": "Gaussian erfc antiderivative",
+  "refinement_error_below": 2e-09,
+  "status": "FORMULA_AUDITS_PASSED",
+  "trust_boundary": "analytic proof; floating quadrature only audits solvable fixtures"
+}
