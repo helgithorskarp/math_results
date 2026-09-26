@@ -84,6 +84,16 @@ claim on the additional vertices must provide a motion on those vertices
 or another all-hinge proof. The geometric lane has not supplied a theorem
 that all compatible tetrahedral maps obey the desired comparison.
 
+The later [lift regularity audit](LIFT_BOUNDARY.md) adds a precise caution
+for prescribed Gram deformations. Even AC relative Gram data with strictly
+subcritical support cost can force every geometric lift of that curve to
+have infinite variation, including in moving frames. This uses the existing
+25-label positive benchmark, whose endpoints admit a different analytic
+R4 motion. It obstructs an automatic regularity upgrade of the curve;
+it neither obstructs arbitrary endpoint deformations nor changes the mesh
+reduction. The [regularity completion](REGULARITY.md) replaces the curve
+and controls squared distances instead of differentiating its square root.
+
 ## 3. Two existing benchmarks distinguish extremality from rigidity
 
 These are structural descriptions of existing fixtures, not new positive

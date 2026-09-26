@@ -43,6 +43,27 @@ used here; they are not a priority certification. The approximation and
 scaling estimates are proved in the note, and the original core files remain
 unchanged.
 
+The subsequent [lift boundary](LIFT_BOUNDARY.md) embeds the elementary
+loss of total variation under square roots into M1 with the original
+cone slopes and strict reserve. A projection identity makes the failure
+invariant under moving frames and increasing finite ambient dimension.
+This is a counterexample to an auxiliary regularity assertion, not to M1,
+G, or the full Gaussian problem. No novelty is claimed for the general
+fact that a square root of an AC nonnegative function need not be BV.
+
+The primary-source audit also checked the distinction in
+[Bezdek--Connelly's 2004 spherical paper, page 102](https://pi.math.cornell.edu/~connelly/pdf/10.1007_s00454-004-0831-1.pdf):
+its spherical result and the earlier Euclidean motion-to-volume theorem
+have different hypotheses. For M's separate priority question, the
+intrinsic norm-sphere metric in
+[Messerschmidt--Wortel, Theorem 3.6](https://arxiv.org/pdf/1510.07442)
+is classical context; their universal metric comparison does not identify
+the particular antipodal distance computed in M2. Their cited
+[Schaeffer 1967 article](https://link.springer.com/article/10.1007/BF01351519)
+is an unresolved priority lead: only its publisher metadata was accessible,
+so no assertion about what its full text does or does not contain is made.
+No historical priority certificate follows from the targeted search.
+
 The later consolidation in [SCOPE.md](SCOPE.md) keeps the original theorem
 and checker intact, proves the reverse class comparison with the standard
 orthant, and applies the team's later scalar-defect and common-target

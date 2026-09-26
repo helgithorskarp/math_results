@@ -20,6 +20,12 @@ class. Its proof uses vanishing target scaling and includes the equality
 case and colliding labels. This is an additional author proof, not an
 independent review of the frozen modules; their original files are unchanged.
 
+[LIFT_BOUNDARY.md](LIFT_BOUNDARY.md) supplies a counterexample to an
+unjustified regularity shortcut: an admissible AC relative Gram curve,
+with strict cost reserve and the original endpoints, can have no BV
+geometric lift in any finite dimension. This concerns the prescribed
+curve, not all motions between its endpoints. G does not use that shortcut.
+
 The mathematical baseline is source commit
 `01b707bf3eb19f7bd44b8c45771fffa7b7651b55`.
 [PORTFOLIO.json](PORTFOLIO.json) records the proof modules, source commits,

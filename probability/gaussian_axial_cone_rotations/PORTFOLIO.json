@@ -135,7 +135,9 @@
       "new_subclass": false,
       "new_threshold": false,
       "analytic_evidence": "Strong W1,1 norm-sphere approximation, finite cost convergence, integrated distance-error scaling, collision pruning and volume continuity; no finite test replaces the proof.",
-      "proof_sha256": "20a2d4cfa3ff8222247b952b31379ea208c2fee8f77c71035a6b3e3ed6efbfeb"
+      "proof_sha256": "20a2d4cfa3ff8222247b952b31379ea208c2fee8f77c71035a6b3e3ed6efbfeb",
+      "introduced_commit": "01d440efe03900ace15eb58eb67e1ed19c1df5ce",
+      "graph_ref": "bafkreibrg52l72pqngtovmlfwq7m7lcdslacs43yi4sftltbonpl7k6vs4"
     }
   ],
   "primary_inputs": [
@@ -430,6 +432,18 @@
     "exact_smooth_undamped_motion_claimed": false,
     "new_subclass": false,
     "independent_review": "pending",
-    "initial_indexed_height": "6141"
+    "initial_indexed_height": "6141",
+    "audit_boundary": {
+      "reader_path": "LIFT_BOUNDARY.md",
+      "claim": "An admissible AC prescribed relative Gram curve on the original benchmark has no BV lift in any finite ambient dimension, even with moving frames and monotone time changes.",
+      "scope": "Auxiliary lifting assertion only; the original endpoints have an analytic R4 motion. No new sufficient class or negative Gaussian hinge.",
+      "status": "complete_author_counterexample_independent_review_pending",
+      "proof_sha256": "4785eabe8420f835c99173c78b9e0819d9c60838211fca39ece3fa736f7ef441",
+      "reserve_upper": "549/280",
+      "reserve_lower": "11/280",
+      "core_and_G_unchanged": true,
+      "piecewise_smooth_impossibility_claimed": false,
+      "new_computational_theorem": false
+    }
   }
 }
