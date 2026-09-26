@@ -1,0 +1,332 @@
+{
+  "arithmetic": "integer and Fraction; outward rational Taylor enclosures",
+  "coverage": "finite corroboration only; continuum and asymptotic claims require PROOF.md",
+  "finite_entropy_cases": 42,
+  "fractional_overlap_controls": 1125,
+  "matrix_cases": 10,
+  "one_dimensional_contractions": 95,
+  "rejected_invalid_inputs": 9,
+  "replica_coefficients": [
+    {
+      "difference_epsilon2": [
+        [
+          "-1",
+          "1/2"
+        ],
+        [
+          "0",
+          "-1/2"
+        ]
+      ],
+      "dimension": 1,
+      "order": 2
+    },
+    {
+      "difference_epsilon2": [
+        [
+          "-1",
+          "3/2"
+        ],
+        [
+          "-1/3",
+          "-3/2"
+        ]
+      ],
+      "dimension": 1,
+      "order": 3
+    },
+    {
+      "difference_epsilon2": [
+        [
+          "-1",
+          "3"
+        ],
+        [
+          "-1/2",
+          "-3"
+        ]
+      ],
+      "dimension": 1,
+      "order": 4
+    },
+    {
+      "difference_epsilon2": [
+        [
+          "-1",
+          "14"
+        ],
+        [
+          "-3/4",
+          "-14"
+        ]
+      ],
+      "dimension": 1,
+      "order": 8
+    },
+    {
+      "difference_epsilon2": [
+        [
+          "-1",
+          "18"
+        ],
+        [
+          "-7/9",
+          "-18"
+        ]
+      ],
+      "dimension": 1,
+      "order": 9
+    },
+    {
+      "difference_epsilon2": [
+        [
+          "-1",
+          "1/4"
+        ],
+        [
+          "0",
+          "-1/4"
+        ]
+      ],
+      "dimension": 2,
+      "order": 2
+    },
+    {
+      "difference_epsilon2": [
+        [
+          "-1",
+          "3/4"
+        ],
+        [
+          "-1/3",
+          "-3/4"
+        ]
+      ],
+      "dimension": 2,
+      "order": 3
+    },
+    {
+      "difference_epsilon2": [
+        [
+          "-1",
+          "3/2"
+        ],
+        [
+          "-1/2",
+          "-3/2"
+        ]
+      ],
+      "dimension": 2,
+      "order": 4
+    },
+    {
+      "difference_epsilon2": [
+        [
+          "-1",
+          "7"
+        ],
+        [
+          "-3/4",
+          "-7"
+        ]
+      ],
+      "dimension": 2,
+      "order": 8
+    },
+    {
+      "difference_epsilon2": [
+        [
+          "-1",
+          "9"
+        ],
+        [
+          "-7/9",
+          "-9"
+        ]
+      ],
+      "dimension": 2,
+      "order": 9
+    },
+    {
+      "difference_epsilon2": [
+        [
+          "-1",
+          "1/6"
+        ],
+        [
+          "0",
+          "-1/6"
+        ]
+      ],
+      "dimension": 3,
+      "order": 2
+    },
+    {
+      "difference_epsilon2": [
+        [
+          "-1",
+          "1/2"
+        ],
+        [
+          "-1/3",
+          "-1/2"
+        ]
+      ],
+      "dimension": 3,
+      "order": 3
+    },
+    {
+      "difference_epsilon2": [
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1/2",
+          "-1"
+        ]
+      ],
+      "dimension": 3,
+      "order": 4
+    },
+    {
+      "difference_epsilon2": [
+        [
+          "-1",
+          "14/3"
+        ],
+        [
+          "-3/4",
+          "-14/3"
+        ]
+      ],
+      "dimension": 3,
+      "order": 8
+    },
+    {
+      "difference_epsilon2": [
+        [
+          "-1",
+          "6"
+        ],
+        [
+          "-7/9",
+          "-6"
+        ]
+      ],
+      "dimension": 3,
+      "order": 9
+    }
+  ],
+  "selected_entropy_certificates": [
+    {
+      "case": "sparse_n1_e1/2_k2",
+      "certified_margin": [
+        "47052747819833913/1000000000000000000",
+        "23526373909916957/500000000000000000"
+      ],
+      "claimed_lower_bound": [
+        "4598493014643029/100000000000000000",
+        "45984930146430291/1000000000000000000"
+      ],
+      "gap": [
+        "93037677966264203/1000000000000000000",
+        "23259419491566051/250000000000000000"
+      ]
+    },
+    {
+      "case": "sparse_n1_e1/2_k9",
+      "certified_margin": [
+        "91764967322447141/1000000000000000000",
+        "45882483661223571/500000000000000000"
+      ],
+      "claimed_lower_bound": [
+        "572363715272943/250000000000000000",
+        "2289454861091773/1000000000000000000"
+      ],
+      "gap": [
+        "47027211091769457/500000000000000000",
+        "18810884436707783/200000000000000000"
+      ]
+    },
+    {
+      "case": "sparse_n1_e1/100_k2",
+      "certified_margin": [
+        "1335159503387/100000000000000000",
+        "13351595033871/1000000000000000000"
+      ],
+      "claimed_lower_bound": [
+        "4598493014643/250000000000000000",
+        "18393972058573/1000000000000000000"
+      ],
+      "gap": [
+        "15872783546221/500000000000000000",
+        "31745567092443/1000000000000000000"
+      ]
+    },
+    {
+      "case": "nonlinear_2d_5_k3",
+      "certified_margin": [
+        "48571092344913013/500000000000000000",
+        "97142184689826027/1000000000000000000"
+      ],
+      "claimed_lower_bound": [
+        "27413133961092807/1000000000000000000",
+        "3426641745136601/125000000000000000"
+      ],
+      "gap": [
+        "62277659325459417/500000000000000000",
+        "24911063730183767/200000000000000000"
+      ]
+    }
+  ],
+  "sharp_constant_controls": [
+    {
+      "D": "1/5000",
+      "constant_ratio_squared": "39601/20000",
+      "dimension": 1,
+      "epsilon": "1/100",
+      "rho_squared": "199/10000"
+    },
+    {
+      "D": "1/10000",
+      "constant_ratio_squared": "159201/40000",
+      "dimension": 2,
+      "epsilon": "1/100",
+      "rho_squared": "399/20000"
+    },
+    {
+      "D": "1/15000",
+      "constant_ratio_squared": "358801/60000",
+      "dimension": 3,
+      "epsilon": "1/100",
+      "rho_squared": "599/30000"
+    },
+    {
+      "D": "1/20000",
+      "constant_ratio_squared": "638401/80000",
+      "dimension": 4,
+      "epsilon": "1/100",
+      "rho_squared": "799/40000"
+    },
+    {
+      "D": "1/25000",
+      "constant_ratio_squared": "998001/100000",
+      "dimension": 5,
+      "epsilon": "1/100",
+      "rho_squared": "999/50000"
+    },
+    {
+      "D": "1/30000",
+      "constant_ratio_squared": "1437601/120000",
+      "dimension": 6,
+      "epsilon": "1/100",
+      "rho_squared": "1199/60000"
+    }
+  ],
+  "sparse_geometries": 36,
+  "status": "COVARIANCE_FREE_GAUSSIAN_CHECKS_PASS",
+  "strict_entropy_cases": 40,
+  "symbolic_replica_cases": 15,
+  "two_dimensional_geometries": 6
+}
