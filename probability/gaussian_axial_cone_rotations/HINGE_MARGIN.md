@@ -14,6 +14,11 @@ three-dimensional hinge gap. In particular, we use neither a regular-value
 assumption nor differentiability or bounded variation of the trajectories.
 No historical priority for quantitative strictness is asserted.
 
+Section 7 completes the quantitative estimate through every threshold
+below a certified **target** peak. It retains the same motion hypothesis
+and uses a terminal part of its squared-distance loss. The earlier
+source-peak bound remains valid and can be stronger when it applies.
+
 ## 1. Statement and usable inputs
 
 Let mu be a probability measure with compact support K in R3, and suppose
@@ -59,6 +64,9 @@ $$
 \tag{1}
 $$
 
+The expression (1) is defined for all 0<h<m<=C_3; the source-peak
+restriction is a hypothesis of the first bound (2).
+
 **Theorem H.** Under these hypotheses,
 
 $$
@@ -81,6 +89,27 @@ Euclidean isometry, so all their hinges agree. This gives a strictness
 alternative **within the motion class**. The explicit formula (2) only
 applies below the certified source peak; both hinges vanish at/above
 the target peak, and they agree at h=0.
+
+**Theorem H2 (target-peak completion).** Keep the same hypotheses on mu,
+T, the motion, R and s. Let 0<M<=||g||_infinity and 0<h<M. Then
+
+$$
+\begin{split}
+H(g,h)-H(f,h)\ \ge\ &
+\kappa\!\left(R,s,\frac{M+h}{2},h\right)\\
+&\times\min\left\{\frac D s,
+       4e^{-R^2/s}\log\frac{2M}{M+h}\right\}.
+\end{split}
+\tag{14}
+$$
+
+Here kappa is exactly the function (1). In particular, (14) gives an
+explicit strictly positive bound at every 0<h<||g||_infinity when D>0,
+by choosing M between h and the target peak. A target density evaluation
+also supplies a usable M. This removes the source-peak restriction of
+(2), without asserting that (14) dominates (2) where both apply. The
+proof is in Section 7; it does not apply Theorem H to an intermediate
+configuration that might fail to lie in R3.
 
 ## 2. Extending the established pressure identity
 
@@ -316,3 +345,120 @@ Verification is the written proof, including the C1 approximation,
 radial estimate, endpoint sampling identity and exact substitution (13).
 No new computational theorem or unreported numerical certificate is
 used. The original core proof and checker files are unchanged.
+
+## 7. Control the peak by the remaining pair loss
+
+The [earlier entropy-rigidity source, Theorems B/C and Section 5](../gaussian_contraction_rigidity/PROOF.md)
+already proves the posterior **lower** peak estimate, including the sharp
+posterior coefficient 1/(4s) and a bounded-support lower bound in terms
+of D. These are not new claims here. We use the following elementary
+upper companion, with the posterior taken at a target mode.
+
+### 7.1 Upper peak increment
+
+Let U,V be bounded vectors on the same probability space, in R^n, with
+|V-V'|<=|U-U'| for independent copies. Suppose V lies in a ball of radius
+R. Let F and G be the respective Gaussian density maxima at variance s,
+and put Delta=|U-U'|^2-|V-V'|^2 and d=E Delta. Then
+
+$$
+\log(G/F)\le \frac{e^{R^2/s}}{4s}\,d.
+\tag{15}
+$$
+
+To prove it, write C_n=(2 pi s)^(-n/2), choose a target mode y, and
+put d nu=gamma_(n,s)(y-V)dP/G on the common label space. The mode
+equation gives E_nu V=y. Set x=E_nu U. The kernel ratio and Jensen give
+
+$$
+\frac{f_U(x)}{G}
+=\mathbb E_\nu\exp\!\left[
+       \frac{|y-V|^2-|x-U|^2}{2s}\right]
+\ge \exp\!\left[-\frac{\mathbb E_{\nu\otimes\nu}\Delta}{4s}\right].
+\tag{16}
+$$
+
+The variances in (16) are traces. Since F>=f_U(x), this bounds
+log(G/F) by the posterior pair loss divided by 4s. Evaluation at the
+center of the radius-R ball gives G>=C_n exp(-R^2/(2s)); hence
+d nu/dP<=C_n/G<=exp(R^2/(2s)). Nonnegativity of Delta now proves
+(15). The proof works on labels even when some intermediate centers
+coincide. It requires no inverse of U or V and no velocity field.
+
+### 7.2 Select a terminal interval
+
+Return to the R5 motion, translated by the anchor, and write P_t=max f_t
+for its lifted density peak. Define its remaining average pair loss
+
+$$
+d(t)=\mathbb E\big[
+ |F_t(X)-F_t(X')|^2-|F_1(X)-F_1(X')|^2\big].
+\tag{17}
+$$
+
+This is continuous and nonincreasing, with d(0)=D and d(1)=0.
+Boundedness and continuity of the pair distances justify the expectation
+and its continuity. Set
+
+$$
+\ell=\min\left\{D,
+4s e^{-R^2/s}\log\frac{2M}{M+h}\right\}.
+\tag{18}
+$$
+
+If D=0, (14) is the already proved equality case. Otherwise ell>0;
+choose t_* with d(t_*)=ell, taking t_*=0 if ell=D. Apply (15) to
+the coupled configurations at t and 1. For every t>=t_*,
+
+$$
+P_t\ge P_1\exp[-e^{R^2/s}d(t)/(4s)]
+\ge C_2\frac{M+h}{2},\qquad C_2=(2\pi s)^{-1}.
+\tag{19}
+$$
+
+The last inequality uses P_1=C_2||g||_infinity>=C_2 M and
+(18). Thus the radial estimate (8), with m=(M+h)/2, holds throughout
+this terminal interval.
+
+For every smooth increasing step Q_epsilon used in Sections 3--4,
+the integrand of (3) is nonnegative over the **entire** motion. Retain
+only times in (t_*,1]. Their expected Stieltjes mass is d(t_*)=ell.
+Consequently the right side of (9) has D replaced by ell and
+m replaced by (M+h)/2. Take the same one-sided threshold limit and
+use the product identity (10) at the two original endpoints. This proves
+(14). No product decomposition at t_* is assumed: the intermediate
+configuration may span all five dimensions. Continuity of pair distances
+also excludes a time atom at t_*, so the interval convention causes no loss.
+
+### 7.3 Concrete meaning and scope
+
+For the original equally weighted 25-point benchmark, one additional
+target density evaluation is
+
+$$
+M_s=g(0,0,1)
+=\frac{C_3}{25}\left[
+ e^{-1/(2s)}+12e^{-9/(32s)}+12e^{-8/(25s)}\right].
+\tag{20}
+$$
+
+Together with R and D from (13), this supplies all inputs to (14).
+It is a lower bound on the target peak, not a claimed exact mode or an
+upper bound on the source peak. One may take the maximum of this value
+and the target density at zero, which equals the earlier m_s.
+
+The additional threshold range is real, rather than a change of
+notation. For the already known two-point control with equal atoms at
++/-a e_1, 0<a<=sqrt(s), collapsed to zero, the source peak is
+C_3 exp(-a^2/(2s)) and the target peak is C_3. Taking M=C_3 in (14)
+covers thresholds between these peaks, where (2) has no admissible m.
+The mode computation is the same cosh/tanh calculation in the earlier
+entropy-rigidity source. This is a sanity control, not a new map family.
+
+The improvement is confined to quantitative effectiveness of the existing
+motion theorem. An arbitrary contraction obeys the peak estimate (15),
+but that does not supply a positive Stieltjes pressure representation in
+R5. Such a representation is still the geometric premise of (14).
+Critical levels, zero weights and diffuse laws are included. No new
+Kneser--Poulsen statement, endpoint deformation or optimal constant is
+claimed. The original source-peak theorem and its proof are unchanged.

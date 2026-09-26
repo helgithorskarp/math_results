@@ -494,12 +494,12 @@
   "hinge_margin": {
     "reader_path": "HINGE_MARGIN.md",
     "status": "complete_author_proof_independent_review_pending",
-    "claim": "For any bounded law admitting a continuous R5 contraction, the actual hinge gap is at least kappa(R,s,m,h) D/s whenever 0<h<m<=source peak.",
+    "claim": "H: source-peak bound kappa D/s. H2: for 0<h<M<=target peak, gap >= kappa(R,s,(M+h)/2,h) min(D/s,4 exp(-R^2/s) log(2M/(M+h))).",
     "mechanism": "C1 extension of Aishwarya--Li equation (66), uniform radial shell bound, and two-coordinate Gaussian density-value sampling.",
-    "proof_sha256": "ea0fd4b6ce6bf4b99a367fee2930a5ab908448adb00a7eafeab7ea869f82162c",
+    "proof_sha256": "4bed51d25196c01c5593b10f88b9f77f0392efbee8e292ecc50d9214c286390a",
     "inputs": [
       "support radius about a moving anchor",
-      "source peak lower bound",
+      "source or target peak lower bound, according to H or H2",
       "average endpoint squared-distance loss",
       "continuous contracting motion in at most five dimensions"
     ],
@@ -518,13 +518,24 @@
     "new_subclass": false,
     "new_Kneser_Poulsen_claim": false,
     "new_computational_theorem": false,
-    "boundary": "No quantitative bound at or above the source peak, and no arbitrary-contraction inference from a positive second-energy defect.",
+    "boundary": "Both estimates require the existing R5 contracting motion; no unrestricted sign from peak comparison alone. H2 covers every threshold below a certified target peak, but constants degenerate at the ends.",
     "benchmark": {
       "weights": "1/25",
       "D": "1152/625",
       "R": "sqrt(41)/5",
       "peak_lower": "C3*(1+12*exp(-25/(32*s))+12*exp(-41/(50*s)))/25"
     },
-    "ownership": "R6 quantitative pressure transfer; R4 retains new motion/extremal-map ownership; R8 reference-test error is not removed outside the motion class."
+    "ownership": "R6 quantitative pressure transfer; R4 retains new motion/extremal-map ownership; R8 reference-test error is not removed outside the motion class.",
+    "target_peak_completion": {
+      "proof_section": 7,
+      "mechanism": "Upper log-peak increment bounded by remaining pair loss; apply the positive pressure shell bound on a terminal interval.",
+      "intermediate_R3_embedding_assumed": false,
+      "prior_peak_source": "../gaussian_contraction_rigidity/PROOF.md",
+      "prior_peak_source_commit": "33bb5788b6ecf84a706fbd3eea99cf336f23e25b",
+      "prior_peak_source_sha256": "d1b2daa37c88f9c2759b234b69a9c351f0adfb51f7df109e2864331413a582c8",
+      "prior_lower_peak_estimate_reclaimed": false,
+      "benchmark_target_value": "C3*(exp(-1/(2s))+12exp(-9/(32s))+12exp(-8/(25s)))/25",
+      "optimality_claimed": false
+    }
   }
 }

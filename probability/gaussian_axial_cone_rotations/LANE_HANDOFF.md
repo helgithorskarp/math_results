@@ -21,6 +21,10 @@ retains construction and classification of new extremal maps; H consumes
 a motion certificate. R2 receives exact benchmark inputs without needing
 hinge quadrature, and R8 can compare its reference margins with H's actual
 gap under this additional geometric hypothesis. No new subclass is added.
+The same source's H2 completion replaces the source-peak cutoff with any
+certified target peak, using a terminal pair-loss interval. It requires
+the same motion certificate, and no R3 representation of the intermediate
+configuration is assumed. The source and target bounds can be used together.
 
 ## 1. Ownership and reusable inputs
 

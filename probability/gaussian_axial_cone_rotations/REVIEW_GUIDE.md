@@ -61,12 +61,16 @@ The later [quantitative module H](HINGE_MARGIN.md) improves the effectiveness
 of these same positive classes. Given any continuous R5 contracting motion,
 it bounds the actual hinge gap below by kappa times D/s for 0<h<m, where
 D is average endpoint squared-distance loss and m is a certified source
-peak lower bound. Its proof extends the established pressure identity to
-C1 tests and uses a uniform radial shell estimate before a one-sided
+peak lower bound. H2 now supplies an explicit bound at every threshold
+below a certified target peak. It controls the remaining peak increment
+by remaining pair loss and keeps a terminal part of the pressure integral;
+only the two original endpoints need lie in R3. H's proof extends the
+established pressure identity to C1 tests and uses a uniform radial shell estimate before a one-sided
 threshold limit. This module is an author proof awaiting review. It does
 not depend on G, introduce a new geometric class, or strengthen the ball
 conclusions. The exact constant, strictness cases, original benchmark
-substitution and R4/R8 interfaces are stated in that source.
+substitution and R4/R8 interfaces are stated in that source. The prior
+posterior lower-peak theorem is credited separately and is not claimed anew.
 
 | Module | Exact positive claim | Scope boundary |
 | --- | --- | --- |
