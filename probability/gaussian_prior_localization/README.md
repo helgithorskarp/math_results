@@ -1,9 +1,27 @@
 # Gaussian set transfer and measure localization
 
-This packet proves an exact measure-side reduction of the dimension-three
-Gaussian-majorisation question and identifies a limit on atomic localization.
+This packet proves measure-side reductions of the dimension-three
+Gaussian-majorisation question and identifies a limit on exact atomic localization.
 It does **not** settle the open conjecture or add a Kneser--Poulsen class.
 Complete author proof; independent review pending.
+
+The new [uniform defect localization](DEFECT_LOCALIZATION.md) proves that
+the worst possible Gaussian hinge defect D satisfies
+
+    0 <= D-D_k < 4/k,
+
+where D_k is an attained maximum over at most k^6 matched atoms, both
+supports in B(0,2k), at variance one. Consequently any violation of size
+delta>0 has a witness retaining at least delta/2 with k=ceil(8/delta).
+The bounds do not depend on the original support extent. A randomly
+shifted cube partition controls source overlap by Gaussian boundary
+crossing; target overlap has a favorable sign. Quantizing one conditioned
+cube then preserves the original pairwise contraction.
+
+This is a uniform finite-dimensional frontier with an error bound, not a
+computed sign or an exact finite-support optimizer theorem. Its atom bounds
+are large. Conditioning need not preserve a prescribed dominant atom, and
+separately rounding input and output sites is not valid.
 
 For a compact support K, continuous map T, Gaussian variance s, and a set A
 of finite positive volume v, define
@@ -39,6 +57,8 @@ Reproduce the compact algebra controls with standard-library Python 3.11+:
 ```sh
 python3 verify.py --check
 python3 -O verify.py --check
+python3 localization_audit.py --check
+python3 -O localization_audit.py --check
 sha256sum -c SHA256SUMS
 ```
 
@@ -48,6 +68,12 @@ and finite-cell saddle controls. Finite-cell data are explicitly not Gaussian
 contraction examples; their ties explain why the analytic no-plateau step
 in the proof is needed. The universal result relies on the written proof,
 standard minimax and analytic facts, not numerical integration or a solver.
+
+[LOCALIZATION_EXPECTED.json](LOCALIZATION_EXPECTED.json) records the new
+partition controls at every finite-model breakpoint, exact shifted-grid
+crossing controls, a failure of independent endpoint rounding, and the
+rational constant check. Its finite cells are not Gaussian counterexamples.
+The reported k^6 frontiers are symbolic sizes; none was enumerated.
 
 See [SOURCES.md](SOURCES.md) for mathematical attribution, team dependencies,
 the literature boundary, and the distinction from existing per-law endpoint

@@ -1,6 +1,85 @@
 # Sources, dependencies and trust boundary
 
+## Uniform defect localization supplement
+
+[DEFECT_LOCALIZATION.md](DEFECT_LOCALIZATION.md) adds a sign-preserving
+restriction to a spatial cell and the quantitative compact frontier
+0<=D-D_k<4/k, with at most k^6 atoms and radius 2k at variance one.
+It is a complete author proof awaiting independent review. Neither its
+finite-dimensional maximum nor the full Gaussian comparison is settled.
+
+The scalar hinge interaction in researcher 5's
+[fixed-atom reduction](../gaussian_majorisation_global_criterion/ANCHOR_REDUCTION.md),
+graph h6112, is a useful dependency in discovering the partition argument.
+Here it is proved for any finite number of components, with only the
+source interaction charged to an error. The global hinge defect agrees
+with [the earlier criterion](../gaussian_majorisation_global_criterion/PROOF.md),
+graph h6088. The supplement proves all its analytic estimates directly;
+it does not require the fixed-atom equivalence as a premise.
+
+The previous [strict rational witness reduction](../gaussian_majorisation_rank_abel/PROOF.md),
+graph h5964, provides qualitative finite witnesses. The earlier source-net
+estimate in this packet depends on a given support's extent. The new step
+is a uniform control of that extent in terms of the gap one is willing to
+lose. It does not preserve exact minimizers, fixed atom masses, or a fixed
+coordinate denominator. The diffuse-optimizer obstruction, graph h6122,
+is therefore unchanged.
+
+The latest [finite orthogonal averaging obstruction](../gaussian_majorisation_finite_orbit_obstruction/PROOF.md)
+rules out a universal finite averaging extension of the ordered-weight
+certificate. Our partition argument neither uses that method nor assigns
+a sign to any averaged Gaussian hinge. The [heat-profile analysis](../gaussian_majorisation_heat_profiles/PROOF.md)
+and the [stability handoff](../gaussian_majorisation_open_stability/HANDOFF.md)
+retain their explicit boundary and signed-threshold obligations. Restricting
+to finitely many compact parameter regions does not discharge those signs.
+The [axial review portfolio](../gaussian_axial_cone_rotations/REVIEW_GUIDE.md)
+and the ordered-weight geometric class keep their original scope; no new
+Kneser--Poulsen consequence is claimed here.
+
+The prepublication source refresh also inspected researcher 4's
+[extremal-map reduction](../gaussian_majorisation_extremal_maps/PROOF.md),
+source `c68eb50ea52c9b578e90e89b5954ea4c63a0d89a`, present in the freshly fetched main. It supplies
+rigid tetrahedral support enlargements without a mesh-complexity bound.
+Our new bound is on the witness before that enlargement. The two reductions
+are independent and complementary; neither establishes the remaining sign.
+These newer contributions had been published in source while their graph
+commitments remained unconfirmed at the inspected index 6123.
+
+The primary Aishwarya--Li source was refreshed live on 26 September 2026
+and remains v2. Targeted searches for Gaussian majorisation, partition
+localization and support bounds, together with the inspected team sources,
+did not supply this quantitative restriction theorem. This is not an
+exhaustive novelty assessment. Hinge superadditivity, random grid shifts,
+Gaussian derivative estimates and compactness are elementary or standard
+ingredients; no priority claim is made for them. Kirszbraun's classical
+extension theorem is needed only if one insists that a finite contraction
+be defined on all of R3, not for the localization inequalities themselves.
+
+The supplementary standard-library Python checker is
+[localization_audit.py](localization_audit.py). Run it with `--check`, also
+under `python3 -O`. It checks three finite-cell families at all their
+piecewise-linear knots, 36 exact one-coordinate grid crossings, five product
+controls, the explicit endpoint-rounding pitfall, and a rational upper bound
+on the constant in (2). The finite-cell controls are explicitly not Gaussian
+data; one is deliberately negative to show why source overlap cannot be
+discarded. [LOCALIZATION_EXPECTED.json](LOCALIZATION_EXPECTED.json) records
+the exact output. No enumeration of k^6-site configurations, Gaussian
+quadrature, optimization, external numerical library or proof assistant
+is used. These checks supplement the universal written proof.
+Normal and optimized CPython 3.11.2 produce report SHA256
+`0ec4dc938214a44b0c70cc09b05f3cf3245451619c170977cca0556c8aa28c42`.
+A damaged expected report is rejected under optimized Python. The original
+minimax/sphere checker and its expected output remain unchanged.
+
 ## Primary literature
+
+- M. Kirszbraun, *Über die zusammenziehende und Lipschitzsche Transformationen*,
+  Fundamenta Mathematicae 22 (1934), 77--108,
+  [publisher page](https://impan.pl/en/publishing-house/journals-and-series/fundamenta-mathematicae/all/22/0/93089/uber-die-zusammenziehende-und-lipschitzsche-transformationen).
+  The classical Euclidean extension theorem identifies finite contractions
+  with restrictions of globally defined contractions without increasing
+  their Lipschitz constant. Our restriction and quantization themselves
+  retain actual images and do not require a constructive extension.
 
 - Gautam Aishwarya and Dongbin Li, *Gaussian Convolution, Internal Energies,
   and the Kneser--Poulsen Conjecture*,

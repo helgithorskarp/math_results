@@ -1,0 +1,144 @@
+{
+  "constant_square_upper_using_pi_gt_3": "361/24",
+  "grid_controls": {
+    "interval_cases": 36,
+    "three_coordinate_controls": [
+      {
+        "crossing": "5/7",
+        "union_bound": "17/21"
+      },
+      {
+        "crossing": "127/343",
+        "union_bound": "3/7"
+      },
+      {
+        "crossing": "0",
+        "union_bound": "0"
+      },
+      {
+        "crossing": "94/189",
+        "union_bound": "34/63"
+      },
+      {
+        "crossing": "1",
+        "union_bound": "3"
+      }
+    ]
+  },
+  "invalid_rounding_control": {
+    "input": [
+      "1/10",
+      "1/5"
+    ],
+    "output": [
+      "49/100",
+      "59/100"
+    ],
+    "rounded_input": [
+      0,
+      0
+    ],
+    "rounded_output": [
+      0,
+      1
+    ]
+  },
+  "partition_controls": [
+    {
+      "component_defects": [
+        "0",
+        "0"
+      ],
+      "global_defect": "1/2",
+      "knots": [
+        "0",
+        "1/2",
+        "1"
+      ],
+      "masses": [
+        "1/2",
+        "1/2"
+      ],
+      "model": "finite cells; not Gaussian contraction data",
+      "name": "source overlap requires its error",
+      "source_interaction_max": "1/2",
+      "source_leakage": "1/2",
+      "target_interaction_max": "0",
+      "unscaled_threshold_changes_value": false
+    },
+    {
+      "component_defects": [
+        "0",
+        "0"
+      ],
+      "global_defect": "0",
+      "knots": [
+        "0",
+        "1/2",
+        "1"
+      ],
+      "masses": [
+        "1/2",
+        "1/2"
+      ],
+      "model": "finite cells; not Gaussian contraction data",
+      "name": "target merging is favorable",
+      "source_interaction_max": "0",
+      "source_leakage": "0",
+      "target_interaction_max": "1/2",
+      "unscaled_threshold_changes_value": false
+    },
+    {
+      "component_defects": [
+        "1/2",
+        "1/2"
+      ],
+      "global_defect": "1/4",
+      "knots": [
+        "0",
+        "1/8",
+        "1/4",
+        "3/8",
+        "1/2",
+        "3/4"
+      ],
+      "masses": [
+        "1/4",
+        "3/4"
+      ],
+      "model": "finite cells; not Gaussian contraction data",
+      "name": "unequal component masses change thresholds",
+      "source_interaction_max": "0",
+      "source_leakage": "0",
+      "target_interaction_max": "1/8",
+      "unscaled_threshold_changes_value": true
+    }
+  ],
+  "scope": "finite exact controls; universal theorem is the written proof",
+  "symbolic_frontiers_not_enumerated": [
+    {
+      "atom_bound": 1,
+      "defect_error_bound": "4",
+      "k": 1,
+      "radius_bound": 2
+    },
+    {
+      "atom_bound": 64,
+      "defect_error_bound": "2",
+      "k": 2,
+      "radius_bound": 4
+    },
+    {
+      "atom_bound": 262144,
+      "defect_error_bound": "1/2",
+      "k": 8,
+      "radius_bound": 16
+    },
+    {
+      "atom_bound": 262144000000,
+      "defect_error_bound": "1/20",
+      "k": 80,
+      "radius_bound": 160
+    }
+  ]
+}
