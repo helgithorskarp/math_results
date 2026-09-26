@@ -43,7 +43,7 @@ discard 144 normalized quotient matrices with two weight-eight lines, then
 uses a separate 1,252-class SAT computation for the remaining mixed cases.
 The present verdict validates only the inherited two-eight-plane dependency.
 It does **not** validate that later class enumeration, its certificates, or
-the resulting claim that every plane section has size at most seven.
+the resulting claim that every plane section has at least nine points.
 
 ## Proof audit
 
