@@ -510,6 +510,29 @@ corollary is not obtained by lifting this configuration to a continuous
 contraction in dimension five. Neither the flap construction nor its
 nonliftability is new here.
 
+There is also a simple way to exclude a different deterministic matching
+of the same two atomic laws. Index the sixteen rare input labels by
+$j=0,\ldots,15$ and give them weights $2^j/(2^{16}-1)$. Take
+$0<\varepsilon<1/2$. The atom at zero has mass greater than one half, so
+any deterministic map with the prescribed output law must send it to zero.
+It cannot send any other atom there. At each nonzero output point, the
+remaining required mass specifies a sum of distinct powers of two, which
+has a unique representing subset of input labels. Therefore every such
+map agrees with the specified contraction on the entire input support.
+This argument includes coincident output labels, such as $q_{ij}=q_{ji}$
+when $b=1$. For these weights, no alternative deterministic realization of
+the same pair of measures has paired rank at most five or an $\mathbb R^5$
+continuous contraction.
+
+This qualification matters because the concurrently published
+[balanced-ray theorem](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_ray_relabelling/PROOF.md)
+does obtain full majorisation for a different ray class by changing the
+contracting realization while preserving its output law. Its balanced ray
+conditions permit arbitrary mass at zero and every variance; its proof
+does not permit the four fixed tetrahedron anchors here. The uniqueness
+argument above excludes that deterministic-rematching route for a concrete
+subclass of our theorem. It does not exclude other proof methods.
+
 ### A concrete rational tail certificate
 
 At $b=1$, $L=\sqrt8$, $r=2$. Choose any outward vertex $p$ and the cap
@@ -544,7 +567,8 @@ all 136 augmented-flap squared-distance polynomials; the degree-three
 paired determinant; the radius and support-gap identities for the entire
 depth intervals; an independent barycentric hull certificate at depth one;
 and every rational inequality in (26)--(27). It checks degenerate depth zero
-and a depth-three failure of nesting. None of these checks samples or proves
+and a depth-three failure of nesting, and decodes the uniquely forced
+matching for the binary rare weights at depth one. None of these checks samples or proves
 the analytic uniformity in Sections 2--5: that is the written proof above.
 
 The primary problem is

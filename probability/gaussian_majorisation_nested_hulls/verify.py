@@ -176,11 +176,36 @@ def check_geometry():
                 tuple(evaluate(c, F(0)) for c in q)
                 for p, q in zip(source, target)), "depth-zero equality")
     encoded = json.dumps({"pairs": records, "hull": barycentric}, sort_keys=True, separators=(",", ":"))
+    # Superincreasing positive masses uniquely encode each target preimage.
+    # The dominant origin is forced separately by its mass > 1/2.
+    rare_labels = labels[1:]
+    require(len({p1[name] for name in rare_labels}) == 16, "distinct rare inputs")
+    masses = {name: 2 ** j for j, name in enumerate(rare_labels)}
+    prior_sum = 0
+    for name in rare_labels:
+        require(masses[name] > prior_sum, "superincreasing mass property")
+        prior_sum += masses[name]
+    require(prior_sum == 65535, "rare mass denominator")
+    groups = {}
+    for name in rare_labels:
+        require(q1[name] != (0, 0, 0), "unexpected zero target")
+        groups.setdefault(q1[name], []).append(name)
+    for names in groups.values():
+        remainder = sum(masses[name] for name in names)
+        decoded = []
+        for name in reversed(rare_labels):
+            if masses[name] <= remainder:
+                decoded.append(name)
+                remainder -= masses[name]
+        require(remainder == 0 and set(decoded) == set(names), "forced preimage decoding")
+    require(len(groups) == 10, "target mass group count")
     return {
         "labels": len(labels), "pairs": len(records), "deficit_coefficient_counts": dict(count),
         "rank_minor_labels": chosen, "rank_minor_coefficients": strings(det),
         "barycentric_images_checked": len(barycentric),
         "geometry_records_sha256": hashlib.sha256(encoded.encode()).hexdigest(),
+        "unique_binary_weight_preimages": len(groups),
+        "binary_rare_weight_denominator": prior_sum,
     }
 
 

@@ -42,6 +42,9 @@ The resulting seventeen-label examples retain the known obstruction to a
 continuous contracting motion in dimension five. Their construction and
 nonliftability are due to
 [Cheng--Tan--Zheng](https://arxiv.org/abs/1107.0140), not this work.
+For rare weights proportional to distinct powers of two, the prescribed
+output law also forces the deterministic matching uniquely. Thus changing
+the matching cannot produce a rank-five realization for that subclass.
 
 ## Reproduce the supplementary exact certificate
 
@@ -71,6 +74,8 @@ The certificate checks:
   $0<\varepsilon\le1/2$, $R\ge65536$, and $c\le5/2$, where
   $(H_g-H_f)/(4\pi aR^2)>17/24576$.
 - Depth-zero equality and a depth-three failure of the nesting hypothesis.
+- Unique recovery of every output preimage for binary rare weights, excluding
+  an alternative deterministic matching of that pair of atomic laws.
 
 The last positive bound combines the written finite-mixture tail estimate
 with an exact spherical-cap calculation. Its large radius is a convenient
@@ -78,7 +83,7 @@ sufficient constant, not an optimisation claim. It does not specify the
 mass bound needed at all other thresholds.
 
 Expected-output SHA256:
-`524b8edc202d0362bf3cd9d95b6fc0c58d070127cd3d63c8c62e241374e6b416`.
+`167ae125881aa658bacd92dff04b81ab380fa43c5dfbb2ffbfdd7732554f2d22`.
 
 Canonical pair and barycentric record SHA256:
 `3abcfeb478e55e2a435b70649d73116f1cf45ceec0a3327b8c517a4e16d49817`.
@@ -107,3 +112,7 @@ handles fixed laws at growing variance and gives an arbitrary-offset
 geometric test. Its full proof was read at the final refresh. The present
 small-mass theorem fixes the variance and completes all thresholds under
 the stated support conditions; these are different conclusions.
+The new [balanced-ray theorem](../gaussian_ray_relabelling/PROOF.md) uses an
+alternative contraction with the same output law. Its fixed-anchor-free
+class is different; the binary-weight subclass above excludes such an
+alternative deterministic realization.
