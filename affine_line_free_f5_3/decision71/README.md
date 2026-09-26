@@ -90,8 +90,8 @@ checker again on saved traces. A partial range reports incomplete family
 coverage; the final audit must cover all indices exactly once.
 
 The audit regenerates every formula from the published source, compares
-the input bytes and all saved proof hashes, checks original acceptance
-logs, and creates compact ordered block digests. It does not recheck
+the input SHA256 hashes and all saved proof hashes, checks original
+acceptance logs, and creates compact ordered block digests. It does not recheck
 DRAT inferences; that is the replay's job. Hashes identify evidence and
 cannot establish an UNSAT claim by themselves.
 

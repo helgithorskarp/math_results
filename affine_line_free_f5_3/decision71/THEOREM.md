@@ -287,9 +287,10 @@ missing records, malformed inputs, and checker failures are not counted
 as exclusions. The recorded run has no unresolved cases.
 
 Four disjoint range audits cover all indices in $[0,109676)$. Each audit
-regenerated every formula from the public source, compared its exact
-DIMACS bytes, checked the record's index, type, weights and gauge, and
-verified the saved proof hash, size and acceptance log. The merge rejects
+regenerated every formula from the public source, compared the SHA256 of
+its generated DIMACS bytes with the saved input hash, checked the record's
+index, type, weights and gauge, and verified the saved proof hash, size
+and acceptance log. The merge rejects
 gaps, overlaps, incorrect type coverage, and incomplete digest blocks.
 This source/evidence audit does not itself recheck DRAT inferences;
 the separate checker invocations provide that part of the proof.
