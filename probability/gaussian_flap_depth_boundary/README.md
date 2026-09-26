@@ -1,15 +1,15 @@
-# Gaussian majorisation for shallow asymmetric simplex flaps
+# Gaussian majorisation for all shallow simplex flaps
 
 Author proof; independent review pending. The full R3 conjecture is open.
 
-The strongest conclusion is [RELATIVE_TAIL.md](RELATIVE_TAIL.md),
-Theorem 6 and Section 8: an open geometric class of asymmetric tetrahedral
-flaps satisfies **every Gaussian hinge inequality**, for arbitrary
-positive atom weights and each fixed variance, at sufficiently small
-depth. An explicit rational example has six distinct core edge lengths.
-The full maps have no R5 contracting motion. The depth bound depends on
-the variance; no common depth for all variances, and no new
-Kneser--Poulsen consequence, is proved.
+The strongest conclusion is [SUPPORT_SIGN.md](SUPPORT_SIGN.md),
+Corollary 8: **every tetrahedral simplex-flap map satisfies all Gaussian
+hinge inequalities at sufficiently small depth**, for every fixed
+nonnegative probability weight vector and every fixed positive variance.
+The tetrahedron and positive inward-normal lengths are arbitrary.
+The full sixteen-label maps have no R5 contracting motion. The depth
+bound depends on the geometry, weights and variance; no common depth
+for all variances, and no new Kneser--Poulsen consequence, is proved.
 
 For any nondegenerate tetrahedron v_i, choose inward face-normal vectors
 d_i of arbitrary positive lengths. The classical flap contraction fixes
@@ -56,9 +56,11 @@ depth, for every 0<c<1/(72D^2). General fixed variance follows by scaling.
 The same proof records why the full geometric configuration has only its
 two endpoint distance states even in R5, so it admits no R5 contracting
 motion. This uses tight Gram constraints, including for the asymmetric
-control. A positive large-parameter support coefficient, verified on
-an open asymmetric geometric class in RELATIVE_TAIL.md, closes the
-remaining tail and yields the all-threshold theorem above.
+control. A positive large-parameter support coefficient closes the
+remaining tail. RELATIVE_TAIL.md first verified it on an open asymmetric
+class. SUPPORT_SIGN.md now proves positivity exactly for nonisometric
+weighted maps on every tetrahedron, by covariance interpolation and
+degree-one homogeneity. This establishes the all-threshold theorem above.
 
 From this directory run:
 
@@ -69,6 +71,8 @@ python3 verify_tail.py --check
 python3 -O verify_tail.py --check
 python3 verify_relative.py --check
 python3 -O verify_relative.py --check
+python3 verify_support.py --check
+python3 -O verify_support.py --check
 sha256sum -c SHA256SUMS
 ```
 
@@ -91,11 +95,18 @@ arithmetic, a deliberately conservative effective-radius example, the
 regular support-sign calculation, and an exact fully asymmetric
 perturbation with a positive support coefficient.
 The large radius is stored symbolically; no tiny Gaussian value is
-computed. Each checker takes well under a second on the author's host.
+computed. The earlier checkers take under a second on the author's host.
 
-For arbitrary tetrahedral geometry and label support, strict positivity
-of the support coefficient remains undecided. Uniformity as occupied
-weights vanish or variances and geometry degenerate is not asserted.
+[verify_support.py](verify_support.py) checks the dual-basis and covariance
+algebra, the box bounds, all 120 local support/occupied-set cases at each
+tip of two exact geometries, and an isometric moving-mass control.
+[SUPPORT_EXPECTED.json](SUPPORT_EXPECTED.json) records compact lower-bound
+data. These controls supplement the written Gaussian interpolation proof;
+they do not evaluate its integrals or supply independent review.
+
+Uniformity as occupied weights vanish or variances and geometry degenerate
+is not asserted. Arbitrary depths and arbitrary indecomposable maps remain
+outside this theorem.
 The final depth cutoff in the all-threshold theorem is not made
 effective; its far-tail part has an explicit test. The unrestricted
 problem and the new Kneser--Poulsen consequence remain open.

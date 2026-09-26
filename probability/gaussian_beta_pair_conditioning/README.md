@@ -1,7 +1,7 @@
 # Seven positive diagonals of the Gaussian beta criterion
 
 For every bounded probability law in R3, every contraction and every
-positive Gaussian variance, the [author proof](PROOF.md) establishes
+positive Gaussian variance, the [reviewed proof](PROOF.md) establishes
 
     b_(N,j) >= 0 whenever 0<=N-j<=6.
 
@@ -38,7 +38,11 @@ Its first unpruned tuple patterns are exactly (2,2,1,1,1,1,1),
 in the proof. A rational seven-site contraction certifies a remaining
 affine-rank-six case, not a negative coefficient. No optimal strip width,
 new all-threshold map class or Kneser--Poulsen consequence is claimed.
-Independent correctness and historical-priority review are pending.
+Two independent team reviews now accept the theorem and quantitative
+bound: see [REVIEW_STATUS.md](REVIEW_STATUS.md) for their exact scopes,
+source revisions and shared-background disclosures. Historical priority
+remains unassessed. The proof and certificate files are preserved at the
+reviewed revision; their original pending-review language is historical.
 
 ## Reproduce
 
