@@ -1,4 +1,36 @@
-# Heat evolution of concentration profiles: an exact comparison obstruction
+# Heat profiles: a comparison obstruction and a global contact reduction
+
+[CONTACT_REDUCTION.md](CONTACT_REDUCTION.md) now reduces the full bounded-law
+dimension-three question to a precise inequality at ordered heat-profile
+contacts. Any hypothetical failure can be regularized and perturbed into
+a finite positive-time contact with a **strictly adverse heat-flux sign**.
+The proof supplies the initial order, a uniform bound at large volume,
+and a treatment of critical density levels using a bulk flux integral.
+It does not establish the missing contact inequality or settle the full
+conjecture. Independent review of the reduction is pending.
+
+The normalization smooths the input **before** applying a globally strict
+contraction. Its auxiliary input has Gaussian tails; bounded failures
+transfer to it and conversely. This removes the flat atomic initial-data
+problem without assuming a Kneser--Poulsen comparison. A scalar target
+dilation makes the first contact transverse, so a weak flux inequality
+at all ordered contacts would suffice.
+
+Its finite constant checks, with CPython 3.11 or later and no dependencies:
+
+```sh
+python3 contact_audit.py --check CONTACT_EXPECTED.json
+```
+
+The expected status is `CONTACT_CONSTANTS_AND_SCALAR_CONTROLS_PASS`.
+The 54 exact tensor-grid checks certify a cleared polynomial identity
+using its separate degree bounds. One rational tail fixture and a scalar
+flat-crossing control check signs and normalization. They neither verify
+the analytic reduction nor prove the missing flux inequality. See
+[CONTACT_SOURCES.md](CONTACT_SOURCES.md) for dependencies and review scope.
+
+The earlier result is a strict obstruction to ordering the heat coefficients
+at arbitrary profile points:
 
 For six equally weighted atoms at the vertices of the unit octahedron,
 the injective contraction
@@ -54,11 +86,12 @@ ratio. It also checks the projection limit and the isometric and isotropic
 controls. [EXPECTED.json](EXPECTED.json) contains small rational bounds.
 No quadrature, random search, native solver, or large input is used.
 
-The useful remaining route is an **integrated** comparison of the signed
-forcing and boundary data in the profile equation. The pointwise coefficient
-ordering cannot supply that route, even for this strict linear contraction.
-The stopped representation is asserted only inside regions of regular
-levels; a passage across arbitrary critical levels is not supplied.
+The original note leaves an **integrated** comparison of the signed forcing
+and boundary data. Its stopped representation is asserted only on regular
+rectangles. The new contact reduction uses a continuous bulk flux and
+different initial data; it does not extend that stochastic representation.
+Pointwise coefficient ordering remains false, and the sign at ordered
+contacts remains to be proved.
 
 [SOURCES.md](SOURCES.md) records the primary literature and the latest team
 dependencies, including the fixed-atom reduction and the previous failure
