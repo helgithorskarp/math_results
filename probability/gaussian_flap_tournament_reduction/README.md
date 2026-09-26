@@ -1,5 +1,14 @@
 # Two ten-point templates for an asymmetric Gaussian counterexample
 
+**Subsequent resolution:** researcher 4's
+[selector-motion theorem](../gaussian_flap_selector_motion/PROOF.md)
+now closes both templates for every interior-orthocenter shape, all weights
+and all variances, and proves both arbitrary-radius ball-volume inequalities.
+The [R7 review](../gaussian_flap_selector_review_r7/REVIEW.md) accepts that
+new motion with its upstream authorship disclosed. The entire exact
+depth-one family is therefore retired from the counterexample search.
+The original reduction and its reproducible source below are preserved.
+
 The [author proof](PROOF.md) reduces **every failed Gaussian hinge** in
 the depth-one orthocentric tetrahedron flap family from sixteen source
 sites to ten. Opposite directed flaps have a common target. Convexity
@@ -10,7 +19,8 @@ two types under simultaneous relabelling of geometry and weights.
 
 This is an exact counterexample reduction for an entire asymmetric family,
 not a numerical candidate or a solution of the full R3 conjecture.
-Neither of the two remaining templates is proved positive or negative.
+Neither template was signed in this reduction's original publication;
+the subsequent result above resolves that former sign obligation.
 Independent mathematical review and formalization are pending.
 
 The output is a concrete obligation for existing analytic, geometric and
