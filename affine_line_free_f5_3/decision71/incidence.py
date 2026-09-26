@@ -1,4 +1,4 @@
-"""Exploratory exact incidence matrix for the 71-point decision."""
+"""Exact incidence matrix for the complete 71-point reduction."""
 from itertools import combinations_with_replacement
 
 

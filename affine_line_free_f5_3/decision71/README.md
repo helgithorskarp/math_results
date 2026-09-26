@@ -87,6 +87,24 @@ logs, and creates compact ordered block digests. It does not recheck
 DRAT inferences; that is the replay's job. Hashes identify evidence and
 cannot establish an UNSAT claim by themselves.
 
+For concurrent auditing, run one `audit.py` process for each of the four
+intervals above, supplying the matching `--start` and `--stop` values
+and a distinct output JSON. The optional `--wait-for-records` flag follows
+the producer and waits for each atomic record instead of skipping it.
+After all four audits finish, merge them:
+
+```sh
+python3 merge_audits.py --domain /tmp/decision71-reduction/orbits.json \
+  --out /tmp/decision71-audit.json \
+  /tmp/audit0.json /tmp/audit1.json /tmp/audit2.json /tmp/audit3.json
+```
+
+Missing or overlapping intervals are rejected. Digest blocks are fixed
+relative to these standard four ranges, including their partial final
+blocks, so a full serial audit and this merge produce identical ordered
+input and proof digests. Reproduction need not match timing fields or
+historical proof bytes; all regenerated traces must verify.
+
 Pipeline controls exercise type and process boundaries, resumption,
 invalid proofs, damaged records, missing cases, and a budget-one UNKNOWN:
 

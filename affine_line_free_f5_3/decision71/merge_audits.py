@@ -1,4 +1,4 @@
-"""Join complete, disjoint range audits; hashes do not replace DRAT checking."""
+"""Join the standard four range audits; hashes do not replace DRAT checking."""
 import argparse
 from collections import Counter
 import json

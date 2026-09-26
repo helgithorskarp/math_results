@@ -1,20 +1,8 @@
 --- a/drat-trim.c
 +++ b/drat-trim.c
-@@ -27,7 +27,7 @@
- //#define PARTIALPROOF
- 
- #define TIMEOUT     40000
+@@ -30 +30 @@
 -#define BIGINIT     1000000
 +#define BIGINIT     65536
- #define INIT        4
- #define END         0
- #define UNSAT       0
-@@ -1194,7 +1194,7 @@
-         end_delete:;
-         if (del) { del = 0; size = 0; continue; } }
- 
+@@ -1197 +1197 @@
 -      if (S->mem_used + size + EXTRA >= DBsize) { DBsize = (DBsize * 3) >> 1;
 +      while (S->mem_used + size + EXTRA >= DBsize) { DBsize = (DBsize * 3) >> 1;
- 	S->DB = (int *) realloc (S->DB, DBsize * sizeof (int));
- //        printf("c database increased to %li\n", DBsize);
-         if (S->DB == NULL) { printf("c MEMOUT: reallocation of clause database failed\n"); exit (0); } }

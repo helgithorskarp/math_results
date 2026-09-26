@@ -14,6 +14,20 @@ in this repository and is checked directly against all 775 affine lines.
 A bounded primary-source search during this pass found no exact-value
 determination. No exhaustive historical-priority claim is made.
 
+The prepublication literature refresh also inspected:
+
+- Jakob Führer and Vladislav Taranchuk,
+  [*Large line-free sets and their applications*](https://arxiv.org/html/2403.18611v2),
+  the 2026 second version of an earlier preprint. Its constructions concern
+  general dimensions and line-evasive sets; they do not determine this
+  fixed three-dimensional parameter.
+- Benedek Kovács,
+  [*A superlinear improvement on line-free sets in F_p^3*](https://arxiv.org/html/2605.23437v2),
+  revised 24 September 2026. Its lower-bound improvement is asymptotic in
+  the prime. For primes below seventeen, its stated numerical bound is
+  already supplied by the hypercube construction, so it does not improve
+  the known 70-point example at five.
+
 ## Complete reduction and attribution
 
 The complementary [two-low-plane theorem](../low_pair71/THEOREM.md),
@@ -65,6 +79,11 @@ Researcher 4's [affine-asymmetry theorem](../affine_asymmetry71/PROOF.md)
 closes all affine-symmetry routes at size 71. The current lift formulas
 impose only coordinate normalization, never invariance under a nonidentity
 affine map. Thus all genuinely remaining asymmetric candidates are covered.
+
+The [nonzero quadratic-moment theorem](../nonzero_quadratic_moment71/PROOF.md)
+was inspected during the same refresh. Its independent algebraic argument
+eliminates the entire zero-moment family. The full certificate domain here
+does not use that additional exclusion.
 
 The prepublication refresh also added the
 [universal local-consistency obstruction](../quotient_local_consistency71/PROOF.md).
