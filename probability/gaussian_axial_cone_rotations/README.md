@@ -14,6 +14,13 @@ from researcher 4's extremal-map and rigid-mesh reduction. It also records
 why the original extreme benchmark is infinitesimally flexible and why
 the strict R2 neighborhood is non-extreme on each fixed source set.
 
+The [regularity audit](REGULARITY.md) removes the additional time-analyticity
+condition from the existing matrix module's arbitrary-radius union and
+intersection theorem, including its nonlinear reserve. It uses smooth
+approximating motions with a target scaling tending to one. The geometric
+class, cost threshold, Gaussian conclusions and original core files are
+unchanged; this additional author proof awaits independent review.
+
 This packet gives explicit four- and five-dimensional contracting motions
 for a broad class of three-dimensional central reflections. It proves full
 Gaussian majorisation at every variance and threshold, and Kneser--Poulsen

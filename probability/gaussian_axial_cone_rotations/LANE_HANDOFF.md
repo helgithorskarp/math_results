@@ -252,7 +252,7 @@ identify its labels, law, variance, threshold and geometric module:
 | --- | --- | --- |
 | A | Original axial reflection; per W<=4; arbitrary bounded laws, weights and variances; arbitrary finite radii, both unions and intersections. The original circular range is pq<=2/pi. | The perimeter necessity concerns its stated axial form only. The original fixture has p=3/4,q=4/5 and includes the anchor. |
 | R2 | Every endpoint error <=1/2000 about (X,(19/20)Y), with all 50 endpoint positions free. All weights, variances, hinges and individual radii are allowed. | The reference target is scaled. The finite strong-chain exclusion does not extend to this neighborhood. |
-| M | Existing undamped matrix extension; an operator-norm boundary path with support cost <=2 gives an R5 motion. Circular pq<=1/(1+cos(1)) has the required finite analytic paths. | The matrix fixture has p=4/5,q=81/100. Restricted optimality is only for block-diagonal relative Gram motions; the general ball statement retains its time-regularity hypothesis. |
+| M | Existing undamped matrix extension; an operator-norm boundary path with support cost <=2 gives an R5 motion. [REGULARITY.md](REGULARITY.md) gives both arbitrary-radius ball conclusions under the same AC path hypothesis, including after the existing nonlinear reserve. | The matrix fixture has p=4/5,q=81/100. Restricted optimality is only for block-diagonal relative Gram motions. The regularity completion uses vanishing target scaling; an exact smooth motion at the undamped endpoint is not claimed. |
 
 Use isotropic covariance s I_3 and retain the prescribed labels. Target
 collisions must retain and then combine their probability masses correctly;
@@ -289,7 +289,7 @@ extremality statement and Brehm extension were checked in the primary
 sources cited above. This handoff is not independent acceptance of the
 mesh reduction, the axial proofs or a historical-priority claim.
 
-No proof source, checker or old certificate has changed. The existing
+No original core proof, checker or old certificate has changed. The existing
 reproduction commands stay in [README.md](README.md). Review should first
 address the frozen portfolio's concrete correctness and priority questions.
 An unrestricted deformation or extremal-map development belongs with

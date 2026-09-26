@@ -118,6 +118,24 @@
       ],
       "status": "complete_author_proof_independent_review_pending",
       "dependency_scope": "A supplies the written Gaussian/ball bridge; C and common_target are used only for fixture comparisons."
+    },
+    {
+      "id": "G",
+      "title": "Regularity completion of the existing matrix ball theorem",
+      "proof": "REGULARITY.md",
+      "introduced_after_commit": "e53a354f22c282b9a040392f610ba9c1d859969d",
+      "kind": "PROOF_ATTEMPT",
+      "depends_on": [
+        "M",
+        "R",
+        "BC_motion_volume"
+      ],
+      "status": "complete_author_proof_independent_review_pending",
+      "dependency_scope": "M supplies the geometric hypothesis and reference motion; R supplies the unchanged endpoint segment reserve; the classical volume theorem and a vanishing-scaling limit give unions and intersections.",
+      "new_subclass": false,
+      "new_threshold": false,
+      "analytic_evidence": "Strong W1,1 norm-sphere approximation, finite cost convergence, integrated distance-error scaling, collision pruning and volume continuity; no finite test replaces the proof.",
+      "proof_sha256": "20a2d4cfa3ff8222247b952b31379ea208c2fee8f77c71035a6b3e3ed6efbfeb"
     }
   ],
   "primary_inputs": [
@@ -404,5 +422,14 @@
       "sha256": "be277134f471d0e93bf20b8c6b993455dd28720f9c21c847481459ad0b175509",
       "scope": "Signed fixed-variance input contract and per-strict-instance finite certificate; no uniform degree on the localized compact frontier or on a tight mesh"
     }
+  },
+  "regularity_completion": {
+    "reader_path": "REGULARITY.md",
+    "scope": "Both arbitrary-radius ball inequalities for the original AC matrix hypothesis and its existing nonlinear reserve; removes only the extra time-analyticity qualification.",
+    "source_core_unchanged": true,
+    "exact_smooth_undamped_motion_claimed": false,
+    "new_subclass": false,
+    "independent_review": "pending",
+    "initial_indexed_height": "6141"
   }
 }

@@ -21,6 +21,28 @@ from the existing contracting motions. The elementary extremality and
 rigidity descriptions there concern the existing 25-point benchmarks;
 they add no positive subclass or independent acceptance.
 
+The [regularity completion](REGULARITY.md) subsequently addresses M1's
+extra finite-motion analyticity hypothesis. Radially normalized polygonal
+matrix curves converge strongly in W1,1; finite support costs then converge.
+A target scaling tending to one pays for the resulting positive distance
+derivative error, including at support cost two. The classical volume theorem
+and continuity give both ball inequalities on M1's unchanged geometric class.
+The existing nonlinear reserve is handled by scaling its final segment too.
+No independent acceptance or new cone threshold is claimed.
+
+For this audit the primary [Bezdek--Connelly source](https://arxiv.org/pdf/math/0108098),
+Section 3 and Theorem 1, was reread to check the precise finite-breakpoint
+smoothness requirement. [Aishwarya--Li v2](https://arxiv.org/html/2609.07041v2)
+remains revised 13 September 2026. Its Theorem 5.1 already removes the time
+condition for unions via all-weight hinges; the intersection proof here
+uses the separate classical intersection theorem. The team's
+[logarithmic-weight endpoint](../gaussian_majorisation_global_criterion/GEOMETRIC_LIMIT.md)
+is credited for the precise union/defect normalization. Targeted primary
+searches on contraction-motion approximation located no additional input
+used here; they are not a priority certification. The approximation and
+scaling estimates are proved in the note, and the original core files remain
+unchanged.
+
 The later consolidation in [SCOPE.md](SCOPE.md) keeps the original theorem
 and checker intact, proves the reverse class comparison with the standard
 orthant, and applies the team's later scalar-defect and common-target

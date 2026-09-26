@@ -27,6 +27,13 @@ displayed finite product perimeter exceeds four by at least `3379/62500`.
 The old perimeter theorem and the historical comparisons below remain valid.
 Independent review of this extension is pending.
 
+The subsequent [regularity completion](REGULARITY.md) proves both ball
+inequalities under M1's original absolutely continuous path hypothesis,
+including its existing nonlinear reserve. It removes the extra finite-time
+analyticity condition by a volume limit of smooth contracting approximants.
+The class and cost threshold are unchanged; an exact smooth undamped
+motion is not asserted by that completion.
+
 The [ordered-weight orbit result](../gaussian_majorisation_square_cone_orbits/ORDERED_WEIGHTS.md)
 also supplies an unequal-radius union theorem, on ordered square-cone
 shells, including invariant measures. Its no-R5-motion fixture and the

@@ -14,6 +14,12 @@ extremal-map/mesh reduction and this constructive-motion portfolio.
 It changes no positive hypothesis and supplies structural descriptions
 of the existing benchmarks for that interface.
 
+The subsequent [regularity audit](REGULARITY.md), module G, closes the extra
+time-regularity qualification in M's ball transfer on the same geometric
+class. Its proof uses vanishing target scaling and includes the equality
+case and colliding labels. This is an additional author proof, not an
+independent review of the frozen modules; their original files are unchanged.
+
 The mathematical baseline is source commit
 `01b707bf3eb19f7bd44b8c45771fffa7b7651b55`.
 [PORTFOLIO.json](PORTFOLIO.json) records the proof modules, source commits,
@@ -51,7 +57,7 @@ replace them. General affine changes of the Gaussian metric are excluded.
 | **R: uniform nonlinear closure**, [ROBUSTNESS.md](ROBUSTNESS.md), Sections 1--2 | If a base map T has an R^m motion, S=Id+e on D with Lip(e)<=epsilon<1, and V=lambda Id+g on T(D) with Lip(g)<=eta, assume lambda>0, eta<=lambda and epsilon+eta+lambda<=1. Then V T S^(-1) has a motion in the same dimension. Applied to A, it has all the conclusions above on S(D). | The target scaling is essential to this sufficient reserve. At lambda=1 it permits only constant errors. The target error is a function on T(D), so it respects collisions of T. Spatial smoothness is unnecessary; ball transfer needs the base finite motions' time regularity. |
 | **R2: a full endpoint neighborhood**, ROBUSTNESS, Sections 3--5 | For the original 25-point pair (X,Y), all independent endpoint errors of norm at most 1/2000 around (X,(19/20)Y) retain every Gaussian and ball conclusion. Every such matching has minimum ambient motion dimension exactly four, paired affine rank six and no scalar-defect certificate. | The strict interior is open in all 150 labeled endpoint coordinates. No plane, cone, fixed-anchor or rigid-cluster equality remains. This is centered at a damped pair, not at (X,Y). The finite strong-composition exclusion is **not** extended to this neighborhood. |
 | **C: method separation**, [COMPOSITIONS.md](COMPOSITIONS.md) | For an anchored flip (0,A,-B)->(0,A,B), with A and B spanning R3, a finite sequence of strong contractions in R3, allowing new rigid frames at every step, requires I_3 to be a finite sum of u v^T with u in A*, v in B*. A dual matrix disproves this for the original fixture and circular cones with pq>1/2. | A necessary condition, not a factorization characterization. Exact within-cluster endpoint rigidity and prescribed labels are premises. No exclusion of higher-dimensional steps, infinite limiting factorizations or compositions of other methods. |
-| **M: existing secondary extension**, [MATRIX_PATHS.md](MATRIX_PATHS.md) | For compact planar sections P,Q containing zero, an absolutely continuous operator-norm-one path A(t) from -I to I with integral max[-u^T A'(t)v]<=2 supplies an R5 motion and full Gaussian comparison. The explicit circular path gives pq<=1/(1+cos(1)). | General sections need not be convex or symmetric. The general ball statement additionally requires piecewise analytic finite motions; the explicit circular construction meets this. The circular cost is optimal only among the specified block-diagonal relative Gram motions. No R4 impossibility or arbitrary-R5 optimality is asserted. |
+| **M: existing secondary extension**, [MATRIX_PATHS.md](MATRIX_PATHS.md), with [G's regularity completion](REGULARITY.md) | For compact planar sections P,Q containing zero, an absolutely continuous operator-norm-one path A(t) from -I to I with integral max[-u^T A'(t)v]<=2 supplies an R5 motion and full Gaussian comparison. G gives both ball conclusions under these same hypotheses, also after R's existing nonlinear reserve. The explicit circular path gives pq<=1/(1+cos(1)). | General sections need not be convex or symmetric. G uses finite smooth approximants with target scaling tending to one; it does not assert an exact smooth motion at the undamped endpoint. The circular cost is optimal only among the specified block-diagonal relative Gram motions. No R4 impossibility or arbitrary-R5 optimality is asserted. |
 
 Module M was published before this checkpoint and is retained for review.
 It is not needed for A, C or the explicit R2 neighborhood. Review of the
@@ -68,14 +74,14 @@ flowchart TD
   R --> G
   M[Existing transverse matrix R5 motion] --> G
   G --> H[All Gaussian hinges and convex internal energies]
-  A --> B[Finite piecewise analytic motion]
+  A --> B[Finite smooth motion or vanishing-shrink approximation]
   R --> B
   M --> B
   B --> K[Bezdek-Connelly: arbitrary-radius unions and intersections]
   A --> C[Separate anchored-rigidity method comparisons]
 ```
 
-The edge M -> B uses the regularity qualification in the claim table.
+The edge M -> B uses G's approximation and volume-limit argument.
 The comparison branch C does not establish the positive inequalities and
 is not a premise of them. R2's negative R3 result uses an additional
 orientation argument with uniform Gram bounds, not C's exact rigidity.
@@ -89,6 +95,7 @@ orientation argument with uniform Gram bounds, not C's exact rigidity.
 | R2's whole neighborhood | Separation bounds give epsilon=1/200, eta=1/50, r=49/50, hence map Lipschitz constant <=194/199. For any hypothetical R3 motion, both selected anchored Gram matrices stay >=(2223/10000)I, while their relative orientation must change. ROBUSTNESS Sections 3--4. | Checking sampled perturbed endpoints would not prove either the uniform neighborhood or absence of every intermediate R3 motion. |
 | C's arbitrary chain length | Normalize the first anchored rigid cloud at each stage. Equality of all within-cloud distances forces each changed frame coordinate to have a common sign on a spanning cloud. Each step's relative orthogonal increment is 2 sum u v^T with the required positive-dual signs. Telescope from -I to I. | A single-step obstruction or a search over bounded chain lengths would not give the finite-composition claim. |
 | M's lift and optimality boundary | A continuous rank-one residual square root must join through all rank drops. For the lower bound, use L=diag(A,c), rank(I-L^T L)<=2, and reparametrize by monotone c. The norm-boundary path length is at least 2(1+cos(1)). MATRIX_PATHS Sections 1--3. | Failure here affects M's extension or restricted optimality; it would not invalidate the independent original R4 proof. |
+| G's regularity completion | Radially normalized polygonal matrix curves converge strongly in W1,1 even at nonsmooth norm strata. Finite support costs converge; a positive minimum target separation permits vanishing scaling to absorb their distance-speed errors. Remove colliding targets with the correct radius extremum, separately for unions and intersections. REGULARITY Sections 2--6. | A uniform approximation alone does not control derivatives; an unproved assertion of smooth exact-endpoint motions would not suffice. Failure would restore M's earlier extra regularity qualification, without changing A/R's explicit finite motions. |
 
 The analytic bridge is also written in Team B's
 [rank-five source](../gaussian_majorisation_rank_abel/PROOF.md); the needed
