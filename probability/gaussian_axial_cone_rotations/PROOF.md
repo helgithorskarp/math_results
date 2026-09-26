@@ -5,6 +5,11 @@ formalization are pending. The unrestricted dimension-three conjecture remains
 open. The new input here is a contracting motion for a geometric class; the
 implications from such a motion are established results.
 
+The [consolidated scope statement](SCOPE.md) records the exact quantifiers,
+comparison with later Team B work, and the claimed Kneser--Poulsen advance.
+This revision retains Theorem 1 and the original exact checker unchanged;
+it adds the class comparisons in Sections 4.1 and 5.1.
+
 Write a point of Euclidean three-space as $(u,z)\in\mathbb C\times\mathbb R$,
 with the usual real inner product on $\mathbb C$. For a centrally symmetric
 compact convex planar body $P$ with $0$ in its interior, put
@@ -174,7 +179,10 @@ $$
 
 Indeed, central symmetry lets $u\cdot JR_\theta v$ attain both $k(\theta)$
 and $-k(\theta)$. The cross-pair derivative must be nonnegative for every
-$u,v$. Integrating (13) and using the endpoints and periodicity gives
+$u,v$. To use a common set of full measure in this assertion, first take a
+countable dense subset of $P\times Q$, intersect its derivative sets, and
+then use continuity in $u,v$. Integrating (13) and using the endpoints and
+periodicity gives
 
 $$
 2\ge\int_0^1 |\theta'|k(\theta)\,dt\ge L.
@@ -314,8 +322,41 @@ disk of radius $1/p$. Formula (19) proves necessity of $pq\le1/2$. The
 equilateral triangle proves sufficiency. The theorem of
 [researcher 7 on simplicial cone reflections](../gaussian_simplicial_cone_reflections/PROOF.md)
 applies under exactly such an enclosure. Thus the circular range in Corollary
-2 beyond $1/2$ is not covered by that criterion. The two general class
-theorems are not asserted to contain one another.
+2 beyond $1/2$ is not covered by that criterion.
+
+### 4.1. The converse containment also fails
+
+The positive orthant $O=\operatorname{pos}\{e_1,e_2,e_3\}$ is simplicial
+and self-dual. Therefore its central reflection, fixing $O$ and sending
+$-O$ to $O$, is covered by the simplicial theorem (and by successive
+one-sided coordinate folds). It does not satisfy our perimeter criterion,
+even after choosing another common axis and larger centrally symmetric
+sections.
+
+Indeed, let $e$ be any unit axis for which both full positive clusters could
+be contained in cones with compact height-one sections. Necessarily
+$a_j=e\cdot e_j>0$ for $j=1,2,3$: a nonzero ray with nonpositive height
+cannot belong to such a cone. Since $\sum_j a_j^2=1$, choose $j$ with
+$a_j^2\le1/3$. The transverse coordinate of this ray at height one is
+
+$$
+u_j=\frac{e_j-a_j e}{a_j}\in e^\perp,
+\qquad |u_j|^2=\frac1{a_j^2}-1\ge2.
+$$
+
+Both centrally symmetric sections $P,Q$ must contain $\pm u_j$. Identifying
+$e^\perp$ isometrically with $\mathbb C$, their product body contains
+$\pm\overline{u_j}u_j=\pm|u_j|^2$. A convex body's perimeter is at least
+twice its diameter, so
+
+$$
+\operatorname{per}W(P,Q)\ge4|u_j|^2\ge8>4.
+$$
+
+This proves noncontainment in both directions between the two stated
+geometric criteria. It is not an obstruction to other four-dimensional
+motions: the coordinate folds give such motions for this orthant map.
+Nor does it compare closures under arbitrary compositions of the criteria.
 
 ## 5. A rational 25-point witness to the additional scope
 
@@ -411,6 +452,41 @@ the determinants are $-1$ and $1$. The explicit motion therefore has minimal
 ambient dimension four for this fixture. This is a motion obstruction only;
 the Gaussian and ball comparisons are positive results.
 
+### 5.1. Scalar-defect and common-target comparisons
+
+The later [scalar-defect criterion](../gaussian_majorisation_scalar_defect/PROOF.md)
+asks for fixed unit vectors $e,f\in\mathbb R^3$ satisfying, for all pairs,
+
+$$
+|x-x'|^2-|T(x)-T(x')|^2
+\ge |e\cdot(x-x')-f\cdot(T(x)-T(x'))|^2.
+$$
+
+It cannot establish (21). Every distance to the origin is preserved, so
+the pairs $(0,a)$ and $(0,-b)$ would force
+$(e-f)\cdot a=0$ and $(e+f)\cdot b=0$. Spanning by $A$ and $B$ gives
+$e=f$ and $e=-f$, impossible for unit vectors. This is precisely the
+norm-preserving spanning obstruction already proved in that source,
+specialized here and accompanied by an exact six-column matrix certificate.
+Independent rigid alignments are included in the freedom to choose $e,f$.
+The obstruction is to this sufficient inequality, not to a five-dimensional
+motion; our four-dimensional motion exists.
+
+For a measure-level comparison, give the displayed 25 labels distinct
+positive weights $w_i=2^i/(2^{25}-1)$, $0\le i\le24$. The
+[common-target theorem B](../gaussian_majorisation_common_target/PROOF.md)
+then says that every positive finite mixture of source laws, each mapped
+deterministically to this same 25-atom output law, has every component
+source equal to the original law. Each component map is a bijection on
+the support. Distinct weights force it to use the prescribed labels.
+Thus such a mixture cannot rescue any criterion already excluded for this
+prescribed map, including the scalar-defect and paired-rank-five criteria.
+With repeated weights a component may instead permute equal-weight labels;
+the injective-target theorem alone does not exclude those rematchings.
+This argument does not exclude stochastic couplings or decompositions after
+smoothing. The axial theorem itself needs neither distinct weights nor a
+mixture, and applies to all probability weights.
+
 ## 6. Scope and verification
 
 The criterion (2) is a geometric sufficient condition for the full shared
@@ -428,3 +504,9 @@ all-time, all-angle, Gaussian, or volume inequality: those depend on the
 written argument and the cited primary theorems. Computation uses exact
 integers and fractions, without a solver, floating sign test, external data,
 or missing large certificate.
+
+[scope_audit.py](scope_audit.py) supplements the unchanged original checker:
+it checks the scalar-obstruction matrix, a positive identity-map control,
+and the distinct normalized weights in Section 5.1. The all-axis orthant
+argument in Section 4.1 is a written proof, not an axis search. These are
+author checks; no independent review is implied.

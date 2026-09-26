@@ -40,6 +40,14 @@ this additional scope even for a finite configuration. It has paired affine
 rank six, admits no motion in three dimensions, and is not a strong
 coordinatewise contraction, even after independent rigid alignments.
 
+Read [SCOPE.md](SCOPE.md) for the consolidated correctness boundary,
+breadth, comparison with the current Team B classes, and precise
+Kneser--Poulsen claim. The axial and simplicial criteria are not nested;
+the standard orthant proves the reverse noncontainment under every common
+axis. The existing 25-point fixture also fails the later scalar-defect
+criterion. These are comparisons of sufficient methods, not negative
+Gaussian inequalities.
+
 Read [PROOF.md](PROOF.md) for the full proof and qualifications, and
 [SOURCES.md](SOURCES.md) for primary inputs, team dependencies, and novelty
 scope. The Gaussian lifting implication is due to Aishwarya--Li; the
@@ -53,6 +61,8 @@ From this directory:
 ```sh
 python3 verify.py --check
 python3 -O verify.py --check
+python3 scope_audit.py --check
+python3 -O scope_audit.py --check
 sha256sum -c SHA256SUMS
 ```
 
@@ -60,6 +70,7 @@ Standard library only. Checked with CPython 3.11.2 and 3.12.14. Expected:
 
 ```text
 AXIAL_CONE_EXACT_AUDITS_PASS 50ce427908f4f6e355ea7ed58996954bc2b5ebc72c2ac547417659be6b8196c4
+AXIAL_CONE_SCOPE_AUDITS_PASS de6ff71916e4afddfce10a93b3d8e0d9a566c8d08660dd333ea12fdd3ad8da0a
 ```
 
 Running `python3 verify.py` prints the exact [EXPECTED.json](EXPECTED.json).
@@ -72,3 +83,11 @@ finite numerical checks. The analytic proof and the two primary lifting
 theorems are the mathematical trust boundary. No external dataset, solver,
 large certificate, or proof assistant is needed for these supplementary
 checks. Independent mathematical review is pending.
+
+The consolidation leaves the original `verify.py` and `EXPECTED.json`
+unchanged. The new [scope_audit.py](scope_audit.py) and
+[EXPECTED_SCOPE.json](EXPECTED_SCOPE.json) record the scalar-obstruction
+matrix (rank six, determinant `-288/25`), an identity-map positive control,
+and a distinct positive weight certificate for the common-target comparison.
+The all-axis orthant exclusion is a written proof in Section 4.1, not an
+axis search. These are supplementary author audits, not independent review.

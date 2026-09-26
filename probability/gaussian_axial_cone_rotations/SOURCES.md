@@ -5,6 +5,12 @@ Gaussian-convolution majorisation question in Aishwarya--Li. Primary source
 revisions and the committed Team B neighborhood were checked on
 26 September 2026 before publication.
 
+The later consolidation in [SCOPE.md](SCOPE.md) keeps the original theorem
+and checker intact, proves the reverse class comparison with the standard
+orthant, and applies the team's later scalar-defect and common-target
+obstructions to the existing fixture. Primary revisions and current Team B
+work were refreshed again for that consolidation.
+
 ## Primary inputs
 
 - Gautam Aishwarya and Dongbin Li,
@@ -56,8 +62,9 @@ is checked exactly. Neither constant is inferred from a numerical sample.
   Its full proof was read. It contracts two rigid clusters in five dimensions
   when an intermediate simplicial cone exists. The triangle argument in
   Sections 4--5 proves that our circular class includes domains and a finite
-  fixture outside every such separator. Neither general class is claimed
-  to subsume the other. Its nine-point square-cone obstruction remains a
+  fixture outside every such separator. Section 4.1 now proves reverse
+  noncontainment using the standard orthant, allowing every common axis.
+  Its nine-point square-cone obstruction remains a
   separate adversarial target, not decided by the theorem here.
 - [Fixed-core rematching](../gaussian_majorisation_fixed_core/PROOF.md),
   this lane, source commit `e78d73bcae9a21f1344e74166153abe308bf51e9`, graph
@@ -85,13 +92,71 @@ is checked exactly. Neither constant is inferred from a numerical sample.
   uses no such mixture. The previously open uniform-flap Gaussian continuation
   of our fixed-core pass is therefore parked as resolved by this source.
 - [Atomic bridge obstruction](../gaussian_atomic_bridge_obstruction/PROOF.md),
-  researcher 7, source commit `d05dd54b551a5a14329cfbe31f8b66c13cc0e217`.
+  researcher 7, source commit `d05dd54b551a5a14329cfbe31f8b66c13cc0e217`, graph
+  `bafkreihqcqwjylfikk74mclhloshmpkpap7xdr233z6bu2rw7wryagqx2i`.
   This arrived at the final repository refresh and its full proof was read.
   The nine-point square-cone law has an open set of asymmetric weights
   excluding both martingale certificates and common-target decompositions
   into five-dimensional motions. It also has a quantified obstruction to
   nearby component output weights. These are barriers to those methods, not
   Gaussian counterexamples, and do not affect the present positive motion.
+- [Scalar transport-defect budget](../gaussian_majorisation_scalar_defect/PROOF.md),
+  researcher 5, source commit `a8c8a21bde0eb356cf1fc302e3f9b13f1e9b113e`, graph
+  `bafkreidpgtehewdn2wn72hfi4c6aoq5bohkdss6dv36o37rjyxg6ndzxlq`.
+  Section 6 already excludes norm-preserving anchored flips when both
+  clusters span three-space. We credit that obstruction, specialize it to
+  our fixture, and provide a small matrix certificate. No new scalar
+  obstruction theorem is claimed.
+- [Damped cone reflections](../gaussian_damped_cone_reflections/PROOF.md),
+  this lane, source commit `57ff1129224b92a88404817b164bf8c17bd2ecd1`, graph
+  `bafkreif2xczco4rxrlznq6cbvtv3qt6pdbhsce6vkl6ynfvh7h6k6vf3nm`.
+  The product-cost criterion contains this axial motion at damping one.
+  The wider class uses smaller damping and changes the endpoints. Its
+  full exact-dual-cone obstruction to five-dimensional motions is not an
+  obstruction throughout the interval between our circular threshold and
+  the dual boundary, and is not a Gaussian counterexample.
+- [Asymmetric eventual majorisation](../gaussian_asymmetric_eventual_majorisation/PROOF.md),
+  researcher 5, source commit `733f2f1ffeec6a97089fbdaa5bd89aa997da2240`, graph
+  `bafkreih6hv45oxpx3stcfy7ucq3b7bcdwrexn5kxm6aevahfnvwxd36qom`.
+  It gives all hinges for an asymmetric nine-atom law at variance at least
+  13200 and a full-dimensional weight neighborhood at variance at least
+  16896. It is a different class with a variance threshold and no claimed
+  new Kneser--Poulsen consequence. The newly arrived orbit theorem below
+  removes those variance restrictions on a larger weight neighborhood.
+- [Tail-deficit obstruction](../gaussian_tail_deficit_obstruction/PROOF.md),
+  researcher 8, source commit `54372e691479d94f8c4a6ee9a7c3a7ab4ffdac3d`, graph
+  `bafkreidevccw36nby6zvy3vp5ae2j5lzbpji27qctfk4uyiqib7iwhrku4`.
+  Its failure of a proposed uniform stability modulus and signed test at
+  spherical zeros are limitations of other methods. It supplies no negative
+  hinge and imposes no additional assumption here.
+- [Square-cone orbit comparison](../gaussian_majorisation_square_cone_orbits/PROOF.md),
+  researcher 8, source commit `241e48a3c393b659ad90fbe5db145a6f58395d6e`, graph
+  `bafkreicpvcw53nvwenb2uiq7fk5fhuhl6sqcnwgucw5bgrgcjsj6m65lfu`.
+  Its full proof was read at the publication refresh. Exact polynomial
+  orders on 48 signed permutations and a finite upper-set correlation
+  certificate establish all hinges at every variance on the asymmetric
+  nine-point weight ball of radius 1/552. A bounded radial extension uses
+  explicit cones of directional weights. It compares densities after
+  smoothing, preserving the validity of prior center-law and motion
+  obstructions. It claims no new Kneser--Poulsen case. This is coordination
+  context, not a premise of the axial proof.
+- [Global coupling and moment criterion](../gaussian_majorisation_global_criterion/PROOF.md),
+  researcher 5, source commit `3177065da9c38e8735e8c1b39c41510e43e4bcde`.
+  Its proof and dependency map were read at the final repository refresh.
+  The least endpoint density-value coupling failure equals the largest
+  failed hinge and the limit of a complete finite-difference hierarchy.
+  It incorporates the axial motion as a sufficient zero-failure
+  construction, without enlarging its domain or transferring a finite
+  positive moment test to full majorisation. It is not a premise here.
+
+The later independent reviews of the
+[common-target source](../gaussian_majorisation_common_target_review2/README.md),
+source commit `193f0e8fbf34bba8db0ef54d2aa87efa75de7034`, and the
+[atomic bridge source](../gaussian_atomic_bridge_obstruction_review1/README.md),
+source commit `b89f9f31a95637f92f7235a5693d2edbc5e530f6`, were also inspected.
+Neither is a review of the axial theorem. No review or objection to the
+axial theorem was present in the committed incoming neighborhood at the
+consolidation's initial graph refresh.
 
 The common-target, eventual-variance, and fixed-core results are coordination
 context, not analytic assumptions hidden in our proof. The new motion and
@@ -114,3 +179,10 @@ optimal for the stated axial form only. Larger cone domains, other motions,
 and the unrestricted dimension-three question are left open. The rational
 fixture's exclusion from the listed prior criteria is proved; exhaustive
 exclusion of every possible prior method is not asserted.
+
+The consolidation makes a further narrow comparison, not a new positive
+subclass: the standard orthant is in the simplicial class but outside this
+perimeter criterion under every common axis. A common-target comparison
+with forced labels additionally uses distinct positive weights; injectivity
+alone does not prevent rematching equal-weight labels. These qualifications
+are recorded with proofs in Sections 4.1 and 5.1.
