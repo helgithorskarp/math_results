@@ -5,6 +5,15 @@ Gaussian-convolution majorisation question in Aishwarya--Li. Primary source
 revisions and the committed Team B neighborhood were checked on
 26 September 2026 before publication.
 
+The current [review portfolio](REVIEW_GUIDE.md) consolidates the existing
+claims without extending their hypotheses. Its [source ledger](PORTFOLIO.json)
+records frozen proof and checker hashes, initial publication commits,
+graph references and the logical role of each comparison. The current
+portfolio table includes the ordered-weight orbit theorem's unequal-radius
+union consequence; descriptions below of earlier orbit versions are
+historical. Author replay is kept separate from independent review, and
+priority questions are left explicit.
+
 The later consolidation in [SCOPE.md](SCOPE.md) keeps the original theorem
 and checker intact, proves the reverse class comparison with the standard
 orthant, and applies the team's later scalar-defect and common-target
