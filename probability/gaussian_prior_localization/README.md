@@ -1,5 +1,23 @@
 # Gaussian set transfer and measure localization
 
+The latest [paired-cubature frontier](CUBATURE_FRONTIER.md) reduces the
+previous k^6 atom bound to O(k^3(1+log k)^(3/2)), with explicit integer
+budgets. Matching both latent coordinate-moment lists on shared actual
+sites preserves the contraction. Its compact error is <11/(4k); the
+updated finite rational beta error is <3107/(768k). Gaussian testing still
+uses the credited row N=2^16 k^8-2. Independent review is pending; the full
+question remains open. This does not numerically improve the separate
+D<=7/50 bound without additional signed estimates.
+
+Run `python3 -B paired_cubature.py --check` and
+`python3 -B -O paired_cubature.py --check` from this directory. The expected
+status is `PAIRED_CUBATURE_FRONTIER_CONTROLS_PASS`; the exact
+[record](CUBATURE_EXPECTED.json) and [pinned inputs](CUBATURE_INPUTS.json)
+cover finite cubature and rounding controls, not Gaussian signs. The new
+`round_instance` in [paired_cubature.py](paired_cubature.py) uses W=4kA_k;
+the earlier producer keeps its original interface and fixtures.
+
+
 This packet proves measure-side reductions of the dimension-three
 Gaussian-majorisation question and identifies limits on exact localization.
 It does **not** settle the open conjecture or add a Kneser--Poulsen class.

@@ -315,3 +315,59 @@ mathematical acceptance or formalization. It changes no prior theorem's
 source or constants and yields no new Kneser--Poulsen consequence.
 
 The final source refresh inspected R8's [weight-cell producer](../gaussian_beta_weight_certificate/certificate.py), source `a006501b012a7084676d632df4d73af1fdd92a58`. The integer-center output here decodes directly to its rational `Cell` input at squared-distance radius zero. Its current code has beta degree N=5 fixed and needs at least seven labels. The higher degree in the present global bound is not implemented or certified by that packet. No seven-distinct coefficient enclosure or full-row replay was duplicated in this pass.
+
+
+## Paired cubature and the smaller atom budget (pass 7)
+
+The new [CUBATURE_FRONTIER.md](CUBATURE_FRONTIER.md) applies established
+approximation methods to the two linked marginals of an arbitrary
+contraction. It claims the explicit campaign-bound improvement, not
+invention of cubature or local Gaussian moment matching.
+
+* Christian Bayer and Josef Teichmann, [The proof of Tchakaloff's
+  theorem](https://arxiv.org/abs/math/0502473), in particular Corollary2
+  of the [author manuscript](https://people.math.ethz.ch/~jteichma/tchakaloff120405.pdf),
+  supplies finite-function cubature on actual input sites. Our compact
+  application also follows directly from Caratheodory's convex-hull theorem.
+* Yun Ma, Yihong Wu and Pengkun Yang, [On the best approximation by finite
+  Gaussian mixtures](https://arxiv.org/html/2404.08913v2), Section3 and
+  Section5.4/Proposition5, explicitly develop local moment matching and
+  multidimensional approximation. These methods predate this campaign.
+  Our Gaussian-kernel tail estimate is rederived in the note with its
+  normalization and constants, without importing their rate theorem.
+* The original [shifted-cell localization](DEFECT_LOCALIZATION.md), h6134,
+  supplies the support-independent large cube and its source-overlap cost.
+  The new ingredient at the campaign interface is simultaneous matching
+  of source and image coordinate moments with common weights, followed
+  by explicit schedules. Matching each marginal on unrelated supports
+  would not retain the given contraction.
+* R8's [uniform frontier](../gaussian_majorisation_open_stability/UNIFORM_FRONTIER.md),
+  h6150, supplies its radius-only Theorem2 and the same density-power degree.
+  The coordinate moments used for cubature are different from this beta
+  testing row. R5's [global criterion](../gaussian_majorisation_global_criterion/PROOF.md),
+  h6088, supplies the normalized beta/replica identities.
+* The [prior rationalization](RATIONAL_INTERFACE.md), h6194, supplies the
+  feasible geometric rounding and the arithmetic-error calculation. Its
+  atom bound and weight denominator are changed explicitly in the new
+  producer; the older code is not retroactively treated as implementing
+  the new contract. Only four elementary exact helper functions are reused.
+* The current [R8 N=5 consumer](../gaussian_beta_weight_certificate/certificate.py),
+  h6190, and [R2 uniform defect bound](../gaussian_uniform_defect_bound/PROOF.md),
+  h6186, retain their distinct scope. Neither signs the required full row
+  on the newly smaller finite frontier. No numerical improvement on7/50,
+  new positive map class, or Kneser--Poulsen consequence is asserted.
+
+[CUBATURE_INPUTS.json](CUBATURE_INPUTS.json) pins all reused source and labels
+context separately from premises. The finite exact controls are author
+checks only. Universal Caratheodory existence, Gaussian integration, TV
+error transfer and the credited localization/beta proofs are unformalized.
+Historical priority for the paired application has not been established.
+
+The final source refresh also reads the [centroid-projection proof](../gaussian_beta_projection/PROOF.md)
+and the stronger [pair-conditioning proof](../gaussian_beta_pair_conditioning/PROOF.md).
+The latter signs all beta indices with N-j<=6, so the first unsigned index
+is now b_(7,0). These are optional analytic pruning results, not premises
+of the smaller atom bound; their independent acceptance is not asserted.
+The [independent second review](../gaussian_uniform_defect_bound_review2/REVIEW.md),
+committed at h6204, accepts the separate bound D<=7/50. That review does not
+cover the present cubature proof. No teammate computations were replayed.
