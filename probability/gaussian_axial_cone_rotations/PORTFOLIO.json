@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-26",
+  "purpose": "Frozen author portfolio for correctness and priority review; no added sufficient class",
+  "review_guide": "REVIEW_GUIDE.md",
+  "mathematical_baseline_commit": "01b707bf3eb19f7bd44b8c45771fffa7b7651b55",
+  "headline_modules": [
+    "A",
+    "R"
+  ],
+  "supporting_comparison_module": "C",
+  "secondary_existing_extension": "M",
+  "general_R3_question": "OPEN",
+  "modules": [
+    {
+      "id": "A",
+      "title": "Original axial theorem and geometric fixture",
+      "proof": "PROOF.md",
+      "introduced_commit": "984e1edaaf7f02bf4572c80754edff1e296fdd19",
+      "graph_ref": "bafkreiao6gmik3rvanspc76z6zukxlkk447ylprpkitnt6ht6tmdayl2zy",
+      "kind": "PROOF_ATTEMPT",
+      "depends_on": [
+        "AL_density_value_order",
+        "BC_motion_volume"
+      ],
+      "audit": "verify.py",
+      "expected": "EXPECTED.json",
+      "expected_stdout": "AXIAL_CONE_EXACT_AUDITS_PASS 50ce427908f4f6e355ea7ed58996954bc2b5ebc72c2ac547417659be6b8196c4",
+      "commands": [
+        "python3 verify.py --check",
+        "python3 -O verify.py --check"
+      ],
+      "status": "complete_author_proof_independent_review_pending",
+      "dependency_scope": "Primary transfers support positive conclusions; comparison sources are separated below."
+    },
+    {
+      "id": "S",
+      "title": "Scope and method comparisons",
+      "proof": "SCOPE.md",
+      "introduced_commit": "79f59b8ab07215fea46a00e8ca57381393d19f67",
+      "graph_ref": "bafkreicrwkpa57lfog6vtbqh5txfau7tr6dbz3youne5hxsfbq5iks3uem",
+      "kind": "SUMMARY",
+      "depends_on": [
+        "A",
+        "scalar_defect",
+        "common_target"
+      ],
+      "audit": "scope_audit.py",
+      "expected": "EXPECTED_SCOPE.json",
+      "expected_stdout": "AXIAL_CONE_SCOPE_AUDITS_PASS de6ff71916e4afddfce10a93b3d8e0d9a566c8d08660dd333ea12fdd3ad8da0a",
+      "commands": [
+        "python3 scope_audit.py --check",
+        "python3 -O scope_audit.py --check"
+      ],
+      "status": "author_scope_summary",
+      "dependency_scope": "Comparison assertions depend on the named sufficient criteria, not conversely."
+    },
+    {
+      "id": "C",
+      "title": "Finite aligned strong-composition obstruction",
+      "proof": "COMPOSITIONS.md",
+      "introduced_commit": "8e8cb2a62e575adbf0ec3ff74e681ee9688f1768",
+      "graph_ref": "bafkreiddw3bmdgooqxosmfgckzm5qxgnwitkah6dkv4whnafobuqpsvxn4",
+      "kind": "PROOF_ATTEMPT",
+      "depends_on": [
+        "A"
+      ],
+      "audit": "composition_audit.py",
+      "expected": "EXPECTED_COMPOSITIONS.json",
+      "expected_stdout": "AXIAL_STRONG_COMPOSITION_AUDITS_PASS 754bfdbc1cb7ad7a884003dadc90ddeac33e4b2554d7fd7d2b4a385e24cf66ab",
+      "commands": [
+        "python3 composition_audit.py --check",
+        "python3 -O composition_audit.py --check"
+      ],
+      "status": "complete_author_proof_independent_review_pending",
+      "dependency_scope": "Universal necessary condition is self-contained; A supplies the positive class and fixture to which it is applied."
+    },
+    {
+      "id": "R",
+      "title": "Uniform nonlinear closure and full endpoint neighborhood",
+      "proof": "ROBUSTNESS.md",
+      "introduced_commit": "a63bee4157117a2d2abb2a358119dfd57ebb5a9d",
+      "graph_ref": "bafkreico6twre4tzlewepj3ej7vay764gyeajof4ni25s4jksd3p4sed2y",
+      "kind": "PROOF_ATTEMPT",
+      "depends_on": [
+        "A",
+        "firm_segment",
+        "scalar_defect"
+      ],
+      "audit": "robustness_audit.py",
+      "expected": "EXPECTED_ROBUSTNESS.json",
+      "expected_stdout": "AXIAL_UNIFORM_ROBUSTNESS_AUDITS_PASS 4004b3eb13fc1e1089966da5d33859c607ce0b159e2dba379b3ed3c6b5c640a6",
+      "commands": [
+        "python3 robustness_audit.py --check",
+        "python3 -O robustness_audit.py --check"
+      ],
+      "status": "complete_author_proof_independent_review_pending",
+      "dependency_scope": "A is the positive base motion; firm_segment is classical; scalar_defect is used only for the negative method comparison."
+    },
+    {
+      "id": "M",
+      "title": "Existing transverse matrix-path extension",
+      "proof": "MATRIX_PATHS.md",
+      "introduced_commit": "01b707bf3eb19f7bd44b8c45771fffa7b7651b55",
+      "graph_ref": "bafkreigbbgjyf5dy5wbhowdlqdrsc24ykargcfqfc6xzir4lvktnyxzmry",
+      "kind": "PROOF_ATTEMPT",
+      "depends_on": [
+        "A",
+        "C",
+        "common_target"
+      ],
+      "audit": "matrix_path_audit.py",
+      "expected": "EXPECTED_MATRIX_PATHS.json",
+      "expected_stdout": "AXIAL_MATRIX_PATH_AUDITS_PASS 148015152cbb1c3a22a75cee680510d272d511a2de841e8f37e4fc7d499aef32",
+      "commands": [
+        "python3 matrix_path_audit.py --check",
+        "python3 -O matrix_path_audit.py --check"
+      ],
+      "status": "complete_author_proof_independent_review_pending",
+      "dependency_scope": "A supplies the written Gaussian/ball bridge; C and common_target are used only for fixture comparisons."
+    }
+  ],
+  "primary_inputs": [
+    {
+      "id": "AL_density_value_order",
+      "url": "https://arxiv.org/html/2609.07041v2",
+      "locator": "Theorem 1.4(i)(a); source revised 13 September 2026",
+      "role": "established_analytic_transfer"
+    },
+    {
+      "id": "BC_motion_volume",
+      "url": "https://arxiv.org/pdf/math/0108098",
+      "locator": "Theorem 1",
+      "role": "established_arbitrary_radius_volume_transfer"
+    },
+    {
+      "id": "firm_segment",
+      "url": "https://cmps-people.ok.ubc.ca/bauschke/Research/c10.pdf",
+      "locator": "Definition 2.1 and Fact 2.2",
+      "role": "classical_segment_criterion_proved_directly_in_R"
+    }
+  ],
+  "comparisons_and_context": [
+    {
+      "id": "simplicial",
+      "role": "comparison_only",
+      "reader_path": "../gaussian_simplicial_cone_reflections/PROOF.md",
+      "source_commit": "a792a1a8601d347e6e45a00bf9a3fc849d91f4b7",
+      "graph_ref": "bafkreidbsexp7txezqi7745mb5d57ztkzptjrfas4gvwf6ujqakiyjzusy"
+    },
+    {
+      "id": "strong_contractions",
+      "role": "classical_definition_and_method_comparison",
+      "url": "https://arxiv.org/pdf/1701.05074"
+    },
+    {
+      "id": "paired_rank",
+      "role": "sampling_identity_reproduced_locally_and_rank_comparison",
+      "reader_path": "../gaussian_majorisation_rank_abel/PROOF.md",
+      "source_commit": "f7c122d6a5ade217930d63da27e67f9a9e55a539",
+      "graph_ref": "bafkreidnqtxulerp64z7i2syzjymc3beilgovd4gyfcu5h2mzmim5l5ytu"
+    },
+    {
+      "id": "scalar_defect",
+      "role": "comparison_only",
+      "reader_path": "../gaussian_majorisation_scalar_defect/PROOF.md",
+      "source_commit": "a8c8a21bde0eb356cf1fc302e3f9b13f1e9b113e",
+      "graph_ref": "bafkreidpgtehewdn2wn72hfi4c6aoq5bohkdss6dv36o37rjyxg6ndzxlq"
+    },
+    {
+      "id": "common_target",
+      "role": "comparison_only",
+      "reader_path": "../gaussian_majorisation_common_target/PROOF.md",
+      "source_commit": "3ad6ed0be174d1292b250efcad734d03eed01af5",
+      "graph_ref": "bafkreiefowbrpgnu2cjyyuyig4y2gzk5zdchubp3xqpcgu2rzzpy5fe25m"
+    },
+    {
+      "id": "common_target_review",
+      "role": "independent_review_of_common_target_only",
+      "reader_path": "../gaussian_majorisation_common_target_review2/README.md",
+      "source_commit": "193f0e8fbf34bba8db0ef54d2aa87efa75de7034",
+      "graph_ref": "bafkreic5pfe7pyr2tmqdg322zdggf3zvyydxge4fejgkzodd5lhfhbrdyi"
+    },
+    {
+      "id": "damped",
+      "role": "comparison_only",
+      "reader_path": "../gaussian_damped_cone_reflections/PROOF.md",
+      "source_commit": "57ff1129224b92a88404817b164bf8c17bd2ecd1",
+      "graph_ref": "bafkreif2xczco4rxrlznq6cbvtv3qt6pdbhsce6vkl6ynfvh7h6k6vf3nm"
+    },
+    {
+      "id": "ordered_orbit",
+      "role": "complementary_weight_ordered_union_class",
+      "reader_path": "../gaussian_majorisation_square_cone_orbits/ORDERED_WEIGHTS.md",
+      "source_commit": "6056a43fd6c806cc2d92243e551528e238e40a23",
+      "graph_ref": "bafkreihyai4xolryx3kpmntk4velamfjwaywuer6omhwvpttyqvmqexpy4"
+    },
+    {
+      "id": "bounded_stability",
+      "role": "comparison_only",
+      "reader_path": "../gaussian_majorisation_open_stability/BOUNDED_LAWS.md",
+      "source_commit": "52ef6716a271b31ac1046207764fc78d3db6165c",
+      "graph_ref": "bafkreietfhclp4t463gjaeyh4ldpj2eeognjhwdphuywmdxyrepqwskdiu"
+    },
+    {
+      "id": "paired_layers",
+      "role": "comparison_only",
+      "reader_path": "../gaussian_paired_layers_majorisation/ALL_VARIANCES.md",
+      "source_commit": "465f892ad569fe12fb2634395c21bc7025abff41",
+      "graph_ref": "bafkreib4j6gpea55bkfajd73g2tcmfr5bvdhulhaeqjcw5v5guw2miflki"
+    },
+    {
+      "id": "fixed_atom",
+      "role": "global_problem_context_not_positive_premise",
+      "reader_path": "../gaussian_majorisation_global_criterion/ANCHOR_REDUCTION.md",
+      "source_commit": "138993ba3ec2efde720c789a2a3d887c9c417c69",
+      "graph_ref": "bafkreievpgikszwz2kggan4dnfbbhvtvjohiycou6xuhlsqpxjvvxrhaai"
+    },
+    {
+      "id": "global_handoff",
+      "role": "companion_author_summary_not_independent_review",
+      "reader_path": "../gaussian_majorisation_global_criterion/DEPENDENCIES.md",
+      "source_commit": "713e542a0bd389681a3fb4ee0c0b61a4f272f104",
+      "graph_ref": "bafkreidn73gtnin3ojvmr6hz6hipasfpf6hl7uhhu3szlauiqhwpkvte2q"
+    },
+    {
+      "id": "common_set",
+      "role": "global_equivalence_and_diffuse_optimizer_obstruction_not_positive_premise",
+      "reader_path": "../gaussian_prior_localization/PROOF.md",
+      "source_commit": "541d4b7de3d73b41444e5350378a8ecc43d914ea",
+      "graph_ref": "bafkreiam5rzibygouwnzj7aokt23ld4twuarsvrpr4ffdxvokehvtl7gd4"
+    },
+    {
+      "id": "stability_handoff",
+      "role": "companion_author_summary_not_independent_review",
+      "reader_path": "../gaussian_majorisation_open_stability/HANDOFF.md",
+      "source_commit": "d62369c107285b40d0e55afdcac455c9069f4ab5",
+      "graph_ref_status": "not_observed_at_indexed_height_6123"
+    },
+    {
+      "id": "finite_averaging",
+      "role": "method_obstruction_not_counterexample_or_positive_premise",
+      "reader_path": "../gaussian_majorisation_finite_orbit_obstruction/PROOF.md",
+      "source_commit": "5e686ec7c361a368e562496c23e06dc4706ba281",
+      "graph_ref_status": "not_observed_at_indexed_height_6123"
+    }
+  ],
+  "frozen_core_files": [
+    {
+      "path": "COMPOSITIONS.md",
+      "bytes": 12139,
+      "sha256": "23a3a850c3d2e3b69ede387b99e3d8db4a415d6b54db416ff8248429731e7ac7"
+    },
+    {
+      "path": "EXPECTED.json",
+      "bytes": 2657,
+      "sha256": "50ce427908f4f6e355ea7ed58996954bc2b5ebc72c2ac547417659be6b8196c4"
+    },
+    {
+      "path": "EXPECTED_COMPOSITIONS.json",
+      "bytes": 2623,
+      "sha256": "754bfdbc1cb7ad7a884003dadc90ddeac33e4b2554d7fd7d2b4a385e24cf66ab"
+    },
+    {
+      "path": "EXPECTED_MATRIX_PATHS.json",
+      "bytes": 2434,
+      "sha256": "148015152cbb1c3a22a75cee680510d272d511a2de841e8f37e4fc7d499aef32"
+    },
+    {
+      "path": "EXPECTED_ROBUSTNESS.json",
+      "bytes": 5177,
+      "sha256": "4004b3eb13fc1e1089966da5d33859c607ce0b159e2dba379b3ed3c6b5c640a6"
+    },
+    {
+      "path": "EXPECTED_SCOPE.json",
+      "bytes": 1745,
+      "sha256": "de6ff71916e4afddfce10a93b3d8e0d9a566c8d08660dd333ea12fdd3ad8da0a"
+    },
+    {
+      "path": "MATRIX_PATHS.md",
+      "bytes": 16132,
+      "sha256": "c4f20586c2612df285d8b6d5245d00370e507f71df70ce2bac36cdcf4208beb7"
+    },
+    {
+      "path": "PROOF.md",
+      "bytes": 21926,
+      "sha256": "5596c3c7135b815356d754812a1378230cd56626f9f1b520bda48cbf6f46c23e"
+    },
+    {
+      "path": "ROBUSTNESS.md",
+      "bytes": 17446,
+      "sha256": "101d42be18afe3d9a8c0364e2da8af25d58a50d178c1ddee291f6dbf3837d69c"
+    },
+    {
+      "path": "composition_audit.py",
+      "bytes": 8623,
+      "sha256": "d2ca38a5522692bbaf279495283e4afeebf9ee791a3629413fa02199c4ae29c9"
+    },
+    {
+      "path": "matrix_path_audit.py",
+      "bytes": 12503,
+      "sha256": "1dc5cdceb7be24e92a02976928d8d774f4a59ecff879c151bf50af7a4373bcca"
+    },
+    {
+      "path": "robustness_audit.py",
+      "bytes": 14243,
+      "sha256": "861127440e35ea97b0744e81929638b267861f4d26ff2ddbd16a641811fb2ece"
+    },
+    {
+      "path": "scope_audit.py",
+      "bytes": 3941,
+      "sha256": "1542f2f4d312ed400ed26479b0f5cfee34b6018781600b07a9470bd223ae6131"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 13950,
+      "sha256": "f68e6b11b743d143e1ac97d491a754e2411cdb9eac4f0836fee2f2117c446427"
+    }
+  ],
+  "reproduction": {
+    "python": "CPython 3.11.2 and 3.12.14",
+    "dependencies": "standard_library_only",
+    "modes": [
+      "normal",
+      "-O"
+    ],
+    "expected_runs": 20,
+    "evidence_status": "author_replay_not_independent_verification",
+    "manifest_command": "sha256sum -c SHA256SUMS",
+    "trust_boundary": [
+      "unformalized_universal_geometric_proofs",
+      "credited_primary_transfer_theorems",
+      "exact_standard_library_arithmetic",
+      "no_finite_test_substitutes_for_all_law_all_hinge_quantifiers"
+    ]
+  },
+  "review_status": {
+    "initial_indexed_height": "6119",
+    "independent_reviews_of_portfolio_modules": [],
+    "historical_priority": "UNRESOLVED",
+    "subclass_expansion": "DEFERRED_FOR_REVIEW",
+    "prepublication_indexed_height": "6123"
+  }
+}

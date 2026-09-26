@@ -1,12 +1,20 @@
 # Axial cone rotations: Gaussian majorisation and ball volumes
 
+Start with the [review portfolio](REVIEW_GUIDE.md). It consolidates the
+original axial theorem, its nonlinear robustness and the existing matrix
+extension, with exact quantifiers, proof dependencies, method comparisons
+and unresolved priority questions. [PORTFOLIO.json](PORTFOLIO.json) freezes
+the source versions, evidence and graph references. The core proof and
+checker files are unchanged. Independent correctness and priority review
+remain pending; no further sufficient class is added at this checkpoint.
+
 This packet gives explicit four- and five-dimensional contracting motions
 for a broad class of three-dimensional central reflections. It proves full
 Gaussian majorisation at every variance and threshold, and Kneser--Poulsen
 inequalities for unions and intersections of balls with arbitrary individual
 radii. The general dimension-three conjecture remains open.
 
-The latest [matrix-path extension](MATRIX_PATHS.md) keeps the original
+The existing [matrix-path extension](MATRIX_PATHS.md) keeps the original
 undamped endpoints and extends the circular range to
 
 ```text
@@ -76,9 +84,9 @@ and the scalar-defect obstruction also persist. This is a quantitative
 closure consequence of the axial theorem, using classical contracting
 segments, with independent review pending.
 
-Read [SCOPE.md](SCOPE.md) for the consolidated correctness boundary,
-breadth, comparison with the current Team B classes, and precise
-Kneser--Poulsen claim. The axial and simplicial criteria are not nested;
+Read [SCOPE.md](SCOPE.md) for further correctness and breadth details,
+and the review portfolio for the current Team B comparisons and precise
+Kneser--Poulsen claim. The original perimeter and simplicial criteria are not nested;
 the standard orthant proves the reverse noncontainment under every common
 axis. The existing 25-point fixture also fails the later scalar-defect
 criterion. These are comparisons of sufficient methods, not negative

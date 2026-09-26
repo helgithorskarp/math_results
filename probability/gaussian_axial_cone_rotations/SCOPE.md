@@ -5,6 +5,11 @@ is unchanged. This document makes its scope and relation to the team's
 other results explicit. Independent mathematical review remains pending;
 the full dimension-three question remains open.
 
+The [review portfolio](REVIEW_GUIDE.md) now brings the existing axial,
+nonlinear-robustness and matrix modules into one frozen review checkpoint.
+It distinguishes logical dependencies from comparison inputs and separates
+correctness obligations from unresolved historical priority questions.
+
 The subsequent [composition theorem](COMPOSITIONS.md) strengthens the
 strong-contraction comparison below to every finite composition in R3,
 including independent rigid alignments at each step.
@@ -22,12 +27,12 @@ displayed finite product perimeter exceeds four by at least `3379/62500`.
 The old perimeter theorem and the historical comparisons below remain valid.
 Independent review of this extension is pending.
 
-The latest [ordered-weight orbit result](../gaussian_majorisation_square_cone_orbits/ORDERED_WEIGHTS.md)
+The [ordered-weight orbit result](../gaussian_majorisation_square_cone_orbits/ORDERED_WEIGHTS.md)
 also supplies an unequal-radius union theorem, on ordered square-cone
 shells, including invariant measures. Its no-R5-motion fixture and the
 present unrestricted weights/full-domain/intersection result are
-complementary. Earlier historical comparisons below refer to the earlier
-fixed-base orbit cones, not to this new ordered cone.
+complementary. The comparison table below includes that ordered cone;
+older fixed-base orbit statements remain historical context in SOURCES.
 
 ## Exact statement and breadth
 
@@ -134,7 +139,7 @@ motion in five dimensions: this example has one already in four.
 | [Fixed-core rematching](../gaussian_majorisation_fixed_core/PROOF.md) | That construction fixes a tetrahedral core and rematches ray labels subject to output-law or radius-incidence conditions. Here the prescribed labels move and all weights and individual radii are allowed. No general containment claim is made. |
 | [Common-target mixtures](../gaussian_majorisation_common_target/PROOF.md) | This measure-dependent method needs the same output law from every component. On our injective fixture, each deterministic component must have the original source law; with distinct weights its matching is forced too. PROOF Section 5.1. Repeated weights can permit rematchings. No conclusion about stochastic couplings or post-convolution decompositions follows. |
 | [Eventual majorisation](../gaussian_majorisation_eventual_endpoint/PROOF.md) and its [asymmetric nine-atom realization](../gaussian_asymmetric_eventual_majorisation/PROOF.md) | Those results require a spherical comparison and a lower variance bound. The new orbit theorem below removes that restriction for the stated square-cone weight family. The axial theorem covers every variance without a spherical premise and supplies ball inequalities at every radius. |
-| [Square-cone orbit comparison](../gaussian_majorisation_square_cone_orbits/PROOF.md) | The newest result proves every hinge at every variance on the asymmetric nine-point L1 weight ball of radius $1/552$, with a bounded radial-law extension in explicit weight cones. It compares smoothed density values using an exact finite order certificate, despite the prescribed matching's five-dimensional motion obstruction. It has weight restrictions and claims no new Kneser--Poulsen case. Neither general geometric class is asserted to contain the other. |
+| [Ordered square-cone orbit comparison](../gaussian_majorisation_square_cone_orbits/ORDERED_WEIGHTS.md) | Ordered directional weights, including suitable bounded radial measures, give every hinge at every variance despite the prescribed matching's five-dimensional motion obstruction. The same order permits individual radii and yields a new unequal-radius union comparison, including invariant measures. This improves the older fixed-weight orbit result. Its ordered weights/radii and union conclusion are complementary to the axial unrestricted-weight and arbitrary-radius union/intersection theorem; no general containment is asserted. |
 | [Damped cone reflections](../gaussian_damped_cone_reflections/PROOF.md) | The later product-cost motion criterion contains the present axial path at damping factor one. Its wider positive class uses damping less than one and changes both endpoints. It does not enlarge the undamped perimeter range proved here. |
 | [Global coupling and moment criterion](../gaussian_majorisation_global_criterion/PROOF.md) | This identifies full majorisation with zero failure in a coupling of five-dimensional endpoint density values, equivalently a complete moment hierarchy. The axial motion constructs such a coupling for every law and variance in its domain. The equivalence alone adds no geometric class; finitely many nonnegative tests do not prove zero failure. |
 | [Spatial all-order stability](../gaussian_majorisation_open_stability/PROOF.md) | Finite positive instances become stable under small independent spatial clouds on compact positive variance intervals after strict target damping; the square-cone case needs no damping. Its interval-dependent radius and weight hypotheses do not enlarge the axial all-law, all-variance domain. The strong-composition obstruction requires exact anchored rigidity and is not asserted for arbitrary clouds. |
@@ -143,9 +148,9 @@ motion in five dimensions: this example has one already in four.
 
 For circular cones the endpoint map is a contraction all the way to
 $pq\le1$, because the smallest cross inner product is $z_a z_b(1-pq)$.
-Thus $2/\pi<pq\le1$ is outside our axial certificate despite endpoint
-contraction. This document supplies no positive or negative conclusion for
-the full circular-cone map on all bounded laws in that remaining interval.
+The old axial rotation certificate stops at $2/\pi$; the existing matrix
+extension now reaches $1/(1+\cos 1)$. The full circular-cone map on all
+bounded laws in $1/(1+\cos 1)<pq\le1$ is not decided by this packet.
 The damped paper's obstruction to five-dimensional
 motions on full nonsimplicial exact-dual cones applies at $pq=1$; it does
 not settle the intervening interval or refute majorisation at the boundary.
