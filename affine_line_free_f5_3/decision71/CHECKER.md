@@ -1,8 +1,10 @@
 # Proof-checker configuration and controls
 
-The proof format is standard binary DRAT. All traces can be checked with
-the unmodified official [DRAT-trim](https://github.com/marijnheule/drat-trim)
-at source commit `2e3b2dc0ecf938addbd779d42877b6ed69d9a985`.
+The proof format is standard binary DRAT. The author computation used
+the official [DRAT-trim](https://github.com/marijnheule/drat-trim) source
+at commit `2e3b2dc0ecf938addbd779d42877b6ed69d9a985`, with the two
+configurations below. The upstream diagnostic issue described at the end
+of this document is an additional boundary for independent review.
 The upstream `drat-trim.c` SHA256 is
 `d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee`.
 
@@ -74,3 +76,32 @@ After the first full range completed, its hardest production case, index
 trace has 3,482,287 bytes. This supplemental control is recorded in
 `VALIDATION.json`; it does not change the original per-case checker
 identities or claim that the entire corpus was replayed with stock code.
+
+## Warning-printer issue under independent review
+
+The [independent checker handoff](../decision71_independent_proofs/HANDOFF.md),
+published at source commit `bbbbfe7e02fa7808947b2f95ba42c7f806cea65d`,
+records a reviewer-reported sanitizer failure on case 20750. Static source
+inspection corroborates the mechanism: `ID` is -1, `printClause` reads
+`clause[ID]`, and two parser warning sites pass the unshifted allocated
+`buffer`. That accesses an element before the allocation. The production
+allocation patch does not change those warning sites. Using stock source
+therefore removes the allocation patch, but does not remove this upstream
+diagnostic issue. The earlier three sanitizer controls do not establish
+complete coverage of this path.
+
+The official `-w` option suppresses those calls, but it also changes
+malformed-binary-prefix handling: the parser's `break` is inside a warning
+guard. It cannot be described as globally changing only printed output.
+The linked handoff supplies a restricted binary framing guard and its
+precise scope; that guard checks syntax and byte identity, not DRAT
+derivations or UNSAT. Its samples are not a full-corpus result.
+
+The active reviewer is investigating a narrower diagnostic patch. Its
+complete validation and final review remain pending; this author update
+adopts no new checker, changes no archived acceptance record, and launches
+no replacement replay. The existing ordinary checker acceptances remain
+historical execution evidence. Neither the diagnostic finding nor this
+source inspection demonstrates a false UNSAT acceptance or a mathematical
+counterexample. Independent exact-value acceptance must account for the
+checker implementation and the complete execution evidence explicitly.

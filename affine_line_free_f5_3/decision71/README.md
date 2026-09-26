@@ -12,6 +12,11 @@ theorem is pending.** Earlier accepting reviews concern the upper bound
 71, the two-low-plane theorem, and the complete finite reduction,
 not the present global exclusion.
 
+A newly reported upstream checker diagnostic issue is documented in
+[CHECKER.md](CHECKER.md#warning-printer-issue-under-independent-review).
+The complete author corpus is preserved; ordinary acceptance logs do not
+substitute for resolving that review boundary or for independent acceptance.
+
 The [written reduction](THEOREM.md) covers every hypothetical 71-point
 line-free set by 309,611 normalized quotient matrices in 109,676 affine
 classes. Two different complete enumerators agree entry by entry. A
