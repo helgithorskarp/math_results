@@ -1,0 +1,94 @@
+{
+  "status": "COMPLETE_REDUCTION_VERIFIED_LIFT_DECISION_PENDING",
+  "complete_proof_family": 109676,
+  "finite_reduction_normal_seconds": 54.28615288100082,
+  "finite_reduction_sanitize_seconds": 344.2661738860006,
+  "normal_optimized_sanitizer_outputs_identical": true,
+  "full_affine_maps_per_representative": 12000,
+  "full_affine_representatives": 109676,
+  "public_pipeline_controls": {
+    "status": "REPLAY_PIPELINE_CONTROLS_PASSED",
+    "fresh_checked_indices": [
+      0,
+      251,
+      252,
+      9807,
+      9808,
+      20807,
+      20808,
+      27418,
+      27419,
+      54837,
+      54838,
+      82256,
+      82257,
+      109675
+    ],
+    "damaged_records_rejected": 3,
+    "invalid_proofs_rejected": 3,
+    "unknown_rejected": true,
+    "missing_case_rejected": true,
+    "partial_scope_checked": true,
+    "resume_checked": true
+  },
+  "checker_build_controls": {
+    "status": "REPLAY_PIPELINE_CONTROLS_PASSED",
+    "fresh_checked_indices": [
+      0,
+      251,
+      252,
+      9807,
+      9808,
+      20807,
+      20808,
+      27418,
+      27419,
+      54837,
+      54838,
+      82256,
+      82257,
+      109675
+    ],
+    "damaged_records_rejected": 3,
+    "invalid_proofs_rejected": 3,
+    "unknown_rejected": true,
+    "missing_case_rejected": true,
+    "partial_scope_checked": true,
+    "resume_checked": true
+  },
+  "checker_build": {
+    "upstream_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "upstream_source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "modified_source_sha256": "9c8dfa3e02fe7ab6102ee799165f04188d6738c1dbe5ba249b1cb86a1dd2b288",
+    "binary_sha256": "db09d85ae4c11ddc0bc22163b88316951e33b01eb23d0ad437fb0ac29927921e",
+    "flags": [
+      "-std=gnu99",
+      "-O2"
+    ]
+  },
+  "author_checker_validation": {
+    "status": "SMALL_ALLOCATION_CHECKER_CONTROLS_PASSED",
+    "valid_proofs_rechecked": 122,
+    "negative_controls_rejected_by_both": 3,
+    "total_recheck_seconds": 42.738540533007836,
+    "stock_binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+    "modified_binary_sha256": "4cb27fe1b1f45ea9441f5dbe271f2b279305621c3019195b7ea4060631c18eb2"
+  },
+  "checker_sanitizers": {
+    "status": "ADDRESS_AND_UNDEFINED_BEHAVIOR_CHECKS_PASSED",
+    "cases": [
+      "pilot/0_0",
+      "pilot/109675_0",
+      "batches/70000_70032"
+    ],
+    "leak_detection_enabled": false,
+    "reason": "Upstream standalone checker leaves small allocations for process exit; the initial leak-enabled control reported only those exit leaks. Invalid memory-access and UB checks remain enabled."
+  },
+  "versions": {
+    "python": "3.12.14",
+    "python_sat": "1.9.dev15",
+    "cadical": "1.9.5",
+    "gcc": "12.2.0"
+  },
+  "claim_scope": "Complete reduction and certified domain only. The global lift proof run is pending."
+}

@@ -1,0 +1,126 @@
+{
+  "status": "COMPLETE_71_POINT_REDUCTION_VERIFIED",
+  "spectra": 91,
+  "incidence_rows": 67,
+  "incidence_columns": 636,
+  "low_plane_certificates": [
+    {
+      "cutoff": 9,
+      "numerator": 155000,
+      "denominator": 1000000,
+      "integer_lower_bound": 1,
+      "rows": 67,
+      "columns": 636
+    },
+    {
+      "cutoff": 10,
+      "numerator": 1255376,
+      "denominator": 1000000,
+      "integer_lower_bound": 2,
+      "rows": 67,
+      "columns": 636
+    }
+  ],
+  "unique_low_exclusions": [
+    {
+      "unique_low_size": 8,
+      "rhs_product": -991805,
+      "minimum_slack": 0,
+      "rows": 77,
+      "columns": 636
+    },
+    {
+      "unique_low_size": 9,
+      "rhs_product": -992009,
+      "minimum_slack": 0,
+      "rows": 77,
+      "columns": 636
+    }
+  ],
+  "profile_normalization": {
+    "raw_profile_counts_by_minimum": [
+      1,
+      4,
+      10,
+      20
+    ],
+    "normalized_profiles": 10,
+    "pair_types": 20
+  },
+  "typed_quotients": 309611,
+  "canonical_classes": 109676,
+  "labeled_counts_by_type": [
+    7264,
+    10252,
+    12000,
+    13797,
+    13789,
+    11464,
+    14565,
+    14565,
+    14565,
+    16844,
+    13403,
+    15036,
+    17078,
+    17104,
+    16641,
+    18792,
+    18731,
+    21216,
+    21261,
+    21244
+  ],
+  "canonical_counts_by_type": [
+    252,
+    2496,
+    2765,
+    2950,
+    1345,
+    2254,
+    2517,
+    2242,
+    2009,
+    1978,
+    6555,
+    13621,
+    14022,
+    6556,
+    7543,
+    15200,
+    7038,
+    8481,
+    7841,
+    2011
+  ],
+  "spectra_sha256": "8e65bcf9fab9c6a75a83368e3bef7339f9411f58f0231f4a3cbb10209be94bc9",
+  "catalogue_sha256": "a6d7af5e3cb1c4b6069892164453fed01da96e7ec1718d2333ace123a6909291",
+  "domain_sha256": "02727db9fb02d60a8597f84329f7376bba2c43422d63241da1c251fde97e4eb2",
+  "full_affine_group": {
+    "status": "FULL_AFFINE_PARTITION_VERIFIED",
+    "maps_per_representative": 12000,
+    "representatives": 109676,
+    "typed_matrices": 309611
+  },
+  "geometry": {
+    "lines": 775,
+    "planes": 155,
+    "parallel_plane_pairs": 310,
+    "intersecting_plane_pairs": 11625,
+    "fiber_truth_assignments": 160
+  },
+  "positive70_controls": [
+    "known70.json",
+    "odd_symmetry/witness70.json",
+    "affine_asymmetry71/witness70.json"
+  ],
+  "teammate_low_pair71": {
+    "status": "LOW_PAIR71_VERIFIED",
+    "certificate_sha256": "c1c05da8548ddb40f35db3d6cf86f9d353f468b2fd63412b18b27bc3d26833cb",
+    "covered_pair_types": 15,
+    "total_enumerated_pair_types": 20
+  },
+  "damaged_certificates_rejected": 3,
+  "proofs_rechecked": false,
+  "scope": "The complete finite reduction is verified. Run replay.py to discharge every lift obligation."
+}

@@ -5,8 +5,15 @@
 normalized quotient matrices in 4,332 affine classes and provides a
 checked UNSAT proof for every class. Its direct formulas use only the
 125 point variables. Source, two independent enumerators, compact proof
-manifests, and replay instructions are included; independent review of
-this new bound is pending. Existence at 71 remains unresolved here.
+manifests, and replay instructions are included. An
+[independent complete replay](upper_bound71_review2/README.md) accepts
+the upper bound with high confidence. Existence at 71 remains unresolved.
+
+A [complete reduction at 71 points](decision71/README.md) now supplies
+309,611 normalized quotients in 109,676 affine classes. Its entire affine
+partition and two independent enumerations are checked, and it includes
+reproducible direct lifting formulas. The full certificate run is still
+pending; this reduction alone does not determine the exact value.
 
 ## Earlier upper bound 72
 
