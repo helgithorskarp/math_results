@@ -56,7 +56,8 @@ For the eight-lane campaign, start with [INTERFACES.md](INTERFACES.md).
 It connects the fixed-atom reduction to the measure lane's common-set
 dual, preserves the anchor compensation term and prior quantifiers, and
 gives an explicit error budget for transferring a conditional strict
-witness to finite data. It records the finite-atomic lane's new
+witness to finite data and the map lane's rigid meshes while retaining
+the prescribed dominant atom. It records the finite-atomic lane's new
 finite-averaging obstruction without treating it as an integrated
 counterexample. This handoff adds no theorem or comparison family.
 

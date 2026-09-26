@@ -277,6 +277,21 @@ portfolio is a review synthesis; its original axial and nonlinear core
 does not depend on acceptance of the later matrix-path optimization.
 Neither input changes the arbitrary-packet obligation.
 
+The final source fetch added the map lane's rigid-mesh reduction:
+
+| Input | Source commit | SHA256 of the linked file |
+|---|---|---|
+| [Extremal maps by rigid support enlargement](../gaussian_majorisation_extremal_maps/PROOF.md) | `c68eb50ea52c9b578e90e89b5954ea4c63a0d89a` | `11c8464f8e4a664f63dbd823a93a1ff2d6594f3e087bbc000f853e921b1d1a08` |
+
+Its classical piecewise-isometric extension and rigidity arguments are
+explicit author-proof dependencies, not re-proved or independently accepted
+here. The interface retains a prescribed anchor mass by applying its
+auxiliary-mass step only to the rare law: the existing total-variation
+bound changes the hinge gap by at most `2 epsilon eta`. This is a direct
+compatibility calculation, without a new positive class, atom bound or
+fixed-domain extremizer claim. The separate uniform-weight variant is not
+imposed on that anchored combination.
+
 The common-set source was first committed in `541d4b7` and published after
 merging at `2cad43476404881bcd1dbcfa0dc70f96af5faac8`; its proof bytes above
 are unchanged. Its contribution

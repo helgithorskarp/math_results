@@ -97,7 +97,7 @@ not new task assignments or assumptions that a proposed method succeeds.
 | 1: semigroup/PDE evolution | A signed global profile evolution or endpoint comparison for arbitrary anchored inputs; the [new heat-profile source](../gaussian_majorisation_heat_profiles/PROOF.md) identifies the boundary and integrated-forcing obligation | Its representation is on regular rectangles with positive variance. Coefficient ordering fails even for a strict injective contraction that has full majorisation. Critical levels, boundary data and atomic initial time remain explicit obligations. |
 | 2: certified finite-atomic dependencies | Exact contraction data and a rigorously negative integrated hinge or beta test; alternatively all inputs of the existing finite positive certificate | Finite positive moments alone are incomplete. A universal finite orthogonal averaging rule for arbitrary square-cone weights is now excluded by the [finite-rule source](../gaussian_majorisation_finite_orbit_obstruction/PROOF.md). Weight-dependent rules, infinite averaging and radial transport are not excluded. |
 | 3: measure localization | For all source sets, the common-set certificate above; or a reduction of priors/sets that preserves a strict negative value with a proved error | The [unique diffuse optimizer](../gaussian_prior_localization/PROOF.md) rules out exact atomic attainment, including for a dominant fixed atom. It does not rule out finite detection of a strict failure. |
-| 4: extremal maps/deformation geometry | A map deformation or structural reduction that preserves the relevant signed hinge/concentration comparison, with the contraction constraints checked | An extreme point of the feasible map set is not automatically an extremizer of this nonlinear objective. No extremal-map theorem is claimed here. |
+| 4: extremal maps/deformation geometry | The [rigid-mesh reduction](../gaussian_majorisation_extremal_maps/PROOF.md) preserves strict failures after support enlargement into a continuous piecewise-isometric tetrahedral map; its anchored finite restriction is extreme and its tight framework rigid | This does not assert an extreme optimizer on the original fixed domain. Mesh complexity is unbounded; the class contains known R5-motion obstructions. The comparison for arbitrary compatible folds remains open. |
 | 5: analytic/optimal transport | A zero-failure endpoint density-value coupling, or a fully integrated hinge sign, with arbitrary rare packets retained | The exact reductions are dependencies, not positive assertions. A zero base defect plus the unsigned remote-anchor error does not prove finite-distance adjunction. |
 | 6: geometric/internal energy | Certified domain-wide motions and their stated Gaussian and ball consequences, organized in the [geometric review portfolio](../gaussian_axial_cone_rotations/REVIEW_GUIDE.md) | Such motions are sufficient coupling constructions. Failure of the motion mechanism is not a negative endpoint comparison. Review of the original axial/nonlinear core need not depend on the later matrix-path optimization. |
 | 7: actual counterexamples | A validated negative integrated hinge or convex energy for a genuine contraction | Negative finite-orbit averages and failed proof mechanisms are different statements. The finite-rule source even has a negative orbit control with identically zero integrated gap. |
@@ -160,6 +160,36 @@ conditional finite detection, with no practical degree claim; the remote
 support may make the elementary constant large. The three controls are
 different: anchor separation, approximation of the rare law, and moment
 localization. None can be replaced by bare finite positivity.
+
+The new map reduction can also retain the **same** prescribed dominant
+atom. Include zero among the finite interpolation sites and mesh vertices,
+so its piecewise-isometric extension `F` fixes zero. Instead of adding
+mass to the whole law, replace only its rare law by
+
+```text
+rho_eta=(1-eta)rho+eta nu,
+mu_eta=(1-epsilon)delta_0+epsilon rho_eta,
+```
+
+where `nu` gives positive mass to every nonzero mesh vertex. The full law
+then gives positive mass to every vertex and its anchor mass stays exactly
+`1-epsilon`. Each convolved endpoint changes in total variation by at most
+`epsilon eta`. The [existing hinge continuity bound](PROOF.md), Section 5,
+therefore changes any hinge gap by at most `2 epsilon eta`. A prior gap
+`d>0` survives whenever `2 epsilon eta<d`; the remaining margin is the one
+to use in the moment bound above. If extra sites are needed to obtain a
+full-dimensional source, add their mass inside the rare packet with the
+same bound before applying the mesh extension. Only finitely many such
+positive-margin steps are needed.
+
+This direct composition of the two published reductions requires neither
+an atomic minimizer nor a Jensen argument in map positions. Conditional on
+any failure, it gives a fixed-epsilon, variance-one witness on a weighted
+rigid mesh with the same anchor. It adds no positive comparison class and
+no mesh-size bound. The source's separate uniform-mass normalization is a
+different test class and is not imposed simultaneously here. The external
+piecewise-isometric extension and rigidity claims remain the map lane's
+author-proof dependencies, with independent review pending.
 
 ## 4. Geometric conclusions and validation boundary
 
