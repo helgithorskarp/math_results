@@ -1,0 +1,168 @@
+{
+  "arithmetic": "exact Fractions and outward rational intervals; no floating point",
+  "fixtures": [
+    {
+      "D": "3/8",
+      "atoms": 7,
+      "hankel_level": 1,
+      "moments_computed_through": 8,
+      "name": "seven-point coordinate fold, quartic threshold",
+      "positive_LDL_pivots": [
+        [
+          "9714850034726102940653/1000000000000000000000000",
+          "4857425017363051470327/500000000000000000000000"
+        ],
+        [
+          "125541450586051926409/500000000000000000000000",
+          "251082901172103852819/1000000000000000000000000"
+        ]
+      ],
+      "radius_squared": "1",
+      "strengthened_quartic_determinant": [
+        "2436866406499153389/1000000000000000000000000",
+        "243686640649915339/100000000000000000000000"
+      ],
+      "variance": "17/15",
+      "weighted_log_convexity_margins": {
+        "2": [
+          "4532742527087368488103/500000000000000000000000",
+          "9065485054174736976207/1000000000000000000000000"
+        ],
+        "3": [
+          "3969712255073826325667/1000000000000000000000000",
+          "992428063768456581417/250000000000000000000000"
+        ],
+        "4": [
+          "46120108925931583961/25000000000000000000000",
+          "1844804357037263358441/1000000000000000000000000"
+        ],
+        "5": [
+          "891379755959338027307/1000000000000000000000000",
+          "222844938989834506827/250000000000000000000000"
+        ],
+        "6": [
+          "442694460444633735921/1000000000000000000000000",
+          "221347230222316867961/500000000000000000000000"
+        ]
+      }
+    },
+    {
+      "D": "6",
+      "atoms": 16,
+      "hankel_level": 1,
+      "moments_computed_through": 4,
+      "name": "sixteen-point simplex flap, quartic threshold",
+      "positive_LDL_pivots": [
+        [
+          "1978313111642385919089/100000000000000000000000",
+          "19783131116423859190891/1000000000000000000000000"
+        ],
+        [
+          "512887260356429397171/1000000000000000000000000",
+          "128221815089107349293/250000000000000000000000"
+        ]
+      ],
+      "radius_squared": "8",
+      "strengthened_quartic_determinant": [
+        "1267003046400353957/125000000000000000000000",
+        "10136024371202831657/1000000000000000000000000"
+      ],
+      "variance": "136/15",
+      "weighted_log_convexity_margins": {
+        "2": [
+          "2413275382310304425003553/1000000000000000000000000",
+          "1206637691155152212501777/500000000000000000000000"
+        ]
+      }
+    },
+    {
+      "D": "3/8",
+      "atoms": 7,
+      "hankel_level": 2,
+      "moments_computed_through": 6,
+      "name": "seven-point coordinate fold, level-two threshold",
+      "positive_LDL_pivots": [
+        [
+          "1379286353001813339/1000000000000000000000000",
+          "68964317650090667/50000000000000000000000"
+        ],
+        [
+          "6218786869314807/100000000000000000000000",
+          "62187868693148071/1000000000000000000000000"
+        ],
+        [
+          "850853656081613/250000000000000000000000",
+          "3403414624326453/1000000000000000000000000"
+        ]
+      ],
+      "radius_squared": "1",
+      "strengthened_quartic_determinant": [
+        "85689895921/1000000000000000000000000",
+        "42844947961/500000000000000000000000"
+      ],
+      "variance": "12015",
+      "weighted_log_convexity_margins": {
+        "2": [
+          "982814844454368289/250000000000000000000000",
+          "3931259377817473157/1000000000000000000000000"
+        ],
+        "3": [
+          "1468812462270118777/500000000000000000000000",
+          "587524984908047511/200000000000000000000000"
+        ],
+        "4": [
+          "2346318709691823353/1000000000000000000000000",
+          "1173159354845911677/500000000000000000000000"
+        ]
+      }
+    }
+  ],
+  "isometry_zero_gap_checks": 5,
+  "jacobi_constant_table": [
+    {
+      "ell": 0,
+      "trace_inverse": "12",
+      "variance_radius_ratio": "9/2"
+    },
+    {
+      "ell": 1,
+      "trace_inverse": "360",
+      "variance_radius_ratio": "270"
+    },
+    {
+      "ell": 2,
+      "trace_inverse": "10680",
+      "variance_radius_ratio": "12015"
+    },
+    {
+      "ell": 3,
+      "trace_inverse": "331380",
+      "variance_radius_ratio": "497070"
+    },
+    {
+      "ell": 4,
+      "trace_inverse": "10494120",
+      "variance_radius_ratio": "19676475"
+    },
+    {
+      "ell": 5,
+      "trace_inverse": "335875680",
+      "variance_radius_ratio": "755720280"
+    },
+    {
+      "ell": 6,
+      "trace_inverse": "10825909920",
+      "variance_radius_ratio": "28418013540"
+    }
+  ],
+  "pinned_dependencies": {
+    "gaussian_majorisation_hankel_transport/bounds.py": "60ff5166c623797055f37442d5532b1a29c06275b8871fa4fdf34dcd12f54fc7",
+    "gaussian_majorisation_hankel_transport/certify.py": "71af430dbbecc055471b9f72b288cf4ff4d60ff797aacce8acd08ce7ca14551e",
+    "gaussian_majorisation_hankel_transport/example.json": "0c96a1d144417e0a4262e7d6d8a5a1d6d206d10679d627a474fcad16c16bc8c9",
+    "gaussian_majorisation_rank_abel/flap_fixture.json": "2edec28b8738cb0713c0ba70e4e8ec80147857503fbe2d801b43dbef4861ac08"
+  },
+  "quadratic_cone_checks": 64,
+  "scope": "Analytic universal proofs are in PROOF.md; finite checks alone prove no majorisation theorem.",
+  "status": "ALL_FINITE_CHECKS_PASSED",
+  "variance_identity_checks": 220
+}
