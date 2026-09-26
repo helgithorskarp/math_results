@@ -1,0 +1,97 @@
+{
+  "status": "COMPLETE_72_POINT_EXCLUSION_VALIDATED",
+  "claim": "70 <= r_5(F_5^3) <= 71; exact value unresolved",
+  "independent_peer_review": "pending",
+  "formalization": false,
+  "direct_proof_audit": {
+    "status": "ALL_DIRECT72_PROOFS_AUDITED",
+    "verified_cases": 4332,
+    "per_type_verified": [
+      164,
+      1252,
+      2916
+    ],
+    "proof_format": "binary DRAT",
+    "proof_bytes": 617263694,
+    "sum_solver_seconds": 304.3615490050188,
+    "sum_solver_and_checker_seconds": 965.2848842229878,
+    "max_conflicts": 18339,
+    "max_conflict_case": 88,
+    "max_case_seconds": 0.9006167010002173,
+    "clause_count_range": [
+      1083,
+      1121
+    ],
+    "point_variables_per_formula": 125,
+    "conflict_limit": 500000,
+    "all_original_hashes_rechecked": true,
+    "all_original_logs_verified": true,
+    "manifest_sha256": "4b632868b6b48cb49e6e54e90994504b61ad1302aa76b50dbb6d2eb8afb9f5dd"
+  },
+  "reduction_verifier": {
+    "exit_code": 0,
+    "seconds": 50.455739155999254,
+    "max_rss_kib": 105988,
+    "python_optimization": true,
+    "dependency_child_assertions_enabled": true
+  },
+  "normal_reduction_verifier": {
+    "exit_code": 0,
+    "seconds": 40.24552948000019,
+    "max_rss_kib": 105732
+  },
+  "normal_and_optimized_math_outputs_agree": true,
+  "pipeline_controls": {
+    "status": "DIRECT72_PIPELINE_CONTROLS_PASSED",
+    "replayed_indices": [
+      0,
+      88,
+      163,
+      164,
+      1415,
+      1416,
+      4331
+    ],
+    "proof_hashes_equal_original": 7,
+    "unknown_rejected": true,
+    "empty_proof_rejected": true,
+    "partial_runs_marked_incomplete": true,
+    "checker_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+  },
+  "sanitized_enumerations": {
+    "both_completed": true,
+    "flags": [
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer"
+    ],
+    "both_entrywise_equal_release": true,
+    "catalogue_sha256": "7ad44f1b9e1244da30d0ac28d29eb9f84e441323285b62cd21454827579fcb7f"
+  },
+  "full_affine_group_controls": 24,
+  "versions": {
+    "python": "3.12.14",
+    "python_sat": "1.9.dev15",
+    "solver": "CaDiCaL 1.9.5",
+    "compiler": "g++ 12.2.0",
+    "drat_trim_source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "drat_trim_binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+  },
+  "bulk_evidence": "Raw CNFs, binary proofs, logs and checkpoints are omitted from Git; regenerate with replay.py. Per-case proof bytes and hashes are in certificates.csv.",
+  "previous_AA_AB_proofs_required": false,
+  "graph_refresh_height": 5983,
+  "teammate_results_inspected": {
+    "frontier-researcher-1": "bafkreic6yhvtmdbh6t5dklqmzjgrsnjoguaycgz5kmnmydj2i3d23fumpy",
+    "frontier-researcher-3": "bafkreiamle5hqoxrssfa2xe4jatfux5g7u7sxdonwsf7iyus4vytsu7mqe",
+    "frontier-researcher-4": "bafkreic3tyudobjbkcrty6ihjmfggsqpef7a6g7lxqttj2gaes42a6gxee"
+  },
+  "trust_boundary": [
+    "written mathematical reduction",
+    "imported exact low-plane incidence certificate and planar enumeration",
+    "complete C++ quotient enumerations",
+    "affine normalization and canonicalization",
+    "direct 125-variable CNF generator",
+    "DRAT-trim independent checker"
+  ]
+}

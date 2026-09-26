@@ -1,4 +1,14 @@
-# Line-free sets in F_5^3 have at most 72 points
+# Line-free sets in F_5^3
+
+**Current computer-assisted bound: 70 <= r_5(F_5^3) <= 71.** The
+[complete 72-point exclusion](upper_bound71/README.md) covers 16,192
+normalized quotient matrices in 4,332 affine classes and provides a
+checked UNSAT proof for every class. Its direct formulas use only the
+125 point variables. Source, two independent enumerators, compact proof
+manifests, and replay instructions are included; independent review of
+this new bound is pending. Existence at 71 remains unresolved here.
+
+## Earlier upper bound 72
 
 **Theorem: 70 <= r_5(F_5^3) <= 72.** Here r_5(F_5^3) is the largest
 cardinality of a subset of the 125 affine points containing no complete
