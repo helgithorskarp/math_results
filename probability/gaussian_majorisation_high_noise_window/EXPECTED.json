@@ -1,0 +1,95 @@
+{
+  "algebra": {
+    "exact_polynomial_identities": 2,
+    "normalization_controls": 5,
+    "parameter_table": [
+      {
+        "L_epsilon": "9/32",
+        "epsilon": "1/2",
+        "simpler_level": "9/32"
+      },
+      {
+        "L_epsilon": "121/96",
+        "epsilon": "1/4",
+        "simpler_level": "9/16"
+      },
+      {
+        "L_epsilon": "1225/288",
+        "epsilon": "1/10",
+        "simpler_level": "45/32"
+      },
+      {
+        "L_epsilon": "156025/3168",
+        "epsilon": "1/100",
+        "simpler_level": "225/16"
+      }
+    ]
+  },
+  "arithmetic": "exact Fraction; outward intervals; no floating point",
+  "bounds_sha256": "60ff5166c623797055f37442d5532b1a29c06275b8871fa4fdf34dcd12f54fc7",
+  "claim_status": "finite rational audits of an analytic author proof",
+  "digits": 26,
+  "elementary": {
+    "hinge_branch_controls": 3,
+    "logarithm_controls": 6,
+    "pi_enclosure": [
+      "157079632679489661923/50000000000000000000",
+      "314159265358979323847/100000000000000000000"
+    ],
+    "sqrt_controls": 5
+  },
+  "hinge_controls": [
+    {
+      "R": "1",
+      "cells": 256,
+      "certified_actual_hinge_gap": [
+        "2593858636158211/200000000000000000",
+        "21587956270713/1562500000000000"
+      ],
+      "certified_theorem_lower_bound": [
+        "295266132913109/500000000000000000",
+        "590532265826219/1000000000000000000"
+      ],
+      "integration_cutoff": "10",
+      "log_inverse_normalized_threshold": "1",
+      "midpoint_error_before_normalization": "55/32768",
+      "s": "10",
+      "strict_margin_over_bound": "12378760914964837/1000000000000000000"
+    },
+    {
+      "R": "1",
+      "cells": 256,
+      "certified_actual_hinge_gap": [
+        "674952460379711/50000000000000000",
+        "2869209608011897/200000000000000000"
+      ],
+      "certified_theorem_lower_bound": [
+        "178492956396303/1000000000000000000",
+        "11155809774769/62500000000000000"
+      ],
+      "integration_cutoff": "10",
+      "log_inverse_normalized_threshold": "2",
+      "midpoint_error_before_normalization": "55/32768",
+      "s": "10",
+      "strict_margin_over_bound": "13320556251197917/1000000000000000000"
+    },
+    {
+      "R": "1",
+      "cells": 256,
+      "certified_actual_hinge_gap": [
+        "4760881343707113/1000000000000000000",
+        "2803940088086189/500000000000000000"
+      ],
+      "certified_theorem_lower_bound": [
+        "1110680678673/500000000000000000",
+        "2221361357347/1000000000000000000"
+      ],
+      "integration_cutoff": "10",
+      "log_inverse_normalized_threshold": "4",
+      "midpoint_error_before_normalization": "55/32768",
+      "s": "10",
+      "strict_margin_over_bound": "2379329991174883/500000000000000000"
+    }
+  ],
+  "scope": "These checks do not prove universal majorisation or replace PROOF.md."
+}
