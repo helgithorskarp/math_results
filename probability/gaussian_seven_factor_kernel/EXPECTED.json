@@ -1,0 +1,94 @@
+{
+  "spectral": {
+    "status": "exact PSD certificates verified",
+    "matrices": [
+      {
+        "k": 2,
+        "dimension": 42,
+        "roots": [
+          7,
+          15,
+          45,
+          105,
+          255
+        ],
+        "annihilated_columns": 42,
+        "maximum_intermediate_bits": 26,
+        "integer_matrix_sha256": "ad80fb3f3618c232b8a31504eb677b3b43fb5bd4d5a8b6025289daf23af06501"
+      },
+      {
+        "k": 3,
+        "dimension": 210,
+        "roots": [
+          0,
+          42,
+          45,
+          117,
+          132,
+          522,
+          585,
+          882,
+          1755,
+          3252
+        ],
+        "annihilated_columns": 210,
+        "maximum_intermediate_bits": 96,
+        "integer_matrix_sha256": "d5b6192b2856a1c5ec6025647528c325e44dddcde64030c51e68135388c00e38"
+      }
+    ]
+  },
+  "algebra": {
+    "status": "exact coefficient and independent PSD checks passed",
+    "matrices": [
+      {
+        "k": 2,
+        "dimension": 42,
+        "exact_rank": 42,
+        "polynomial_terms": 231,
+        "maximum_residual_bits": 179,
+        "positive_pivot_stream_sha256": "9662059c1833505bdade87659a9f43f03f312e377daab41d20f20e8a8169ab1c",
+        "integer_matrix_sha256": "ad80fb3f3618c232b8a31504eb677b3b43fb5bd4d5a8b6025289daf23af06501"
+      },
+      {
+        "k": 3,
+        "dimension": 210,
+        "exact_rank": 190,
+        "polynomial_terms": 665,
+        "maximum_residual_bits": 1285,
+        "positive_pivot_stream_sha256": "5ae60b36a7fac8c6b5e240ef40359c4fc52bdd85786e409738271dda3dfa3670",
+        "integer_matrix_sha256": "d5b6192b2856a1c5ec6025647528c325e44dddcde64030c51e68135388c00e38"
+      }
+    ],
+    "homogeneous_terms": 1850,
+    "inversion_terms": 925,
+    "indefinite_matrices_rejected": 3
+  },
+  "recentring": {
+    "status": "exact recentring identities verified; PSD checked by the other two programs",
+    "recentered_derivative_controls": 42,
+    "homogenization_controls": 42,
+    "integer_matching_terms": 1850,
+    "terms_by_gram_degree": [
+      1,
+      28,
+      231,
+      665,
+      665,
+      231,
+      28,
+      1
+    ],
+    "regular_simplex_coefficients": [
+      "11486475/128",
+      "2837835/128",
+      "375375/128",
+      "339955/1152",
+      "30905/1152",
+      "875/384",
+      "21/128",
+      "1/128"
+    ],
+    "polynomial_stream_sha256": "b046e72b0b22f1938ab43825a4a845cb60cf45220780c4a6cf3e2636c6a590e0",
+    "derivative_controls_sha256": "a8c66d736055584803208171f41b9577a873678b4a5146244dd7a40543ef7224"
+  }
+}

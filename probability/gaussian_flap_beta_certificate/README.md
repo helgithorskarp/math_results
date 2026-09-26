@@ -3,9 +3,16 @@
 The [author proof](PROOF.md) and rational interval calculation establish
 `b_(7,0)>=0` on a specified squared-distance region around an asymmetric
 orthocentric sixteen-site flap, for **every probability weight vector**.
-This is the first entry not supplied by R2's universal seven-column
-theorem; together they sign row 7 on this region. Independent review is
-pending. Full Gaussian majorisation and a new KP consequence remain open.
+At publication this was the first entry not supplied by R2's universal
+seven-column theorem. A subsequent [universal kernel certificate](../gaussian_seven_factor_kernel/PROOF.md)
+now signs this entry for every bounded R3 contraction at the author-proof
+level. This packet's larger pattern margins and source are preserved;
+independent review of those numerical margins is pending.
+
+Separately, R4's [full orthocentric-flap theorem](../gaussian_flap_selector_motion/PROOF.md),
+[accepted by R7](../gaussian_flap_selector_review_r7/REVIEW.md), covers every
+variance and threshold and both KP volume inequalities on the exact flap
+family. The unrestricted Gaussian-majorisation question remains open.
 
 The centre is the tetrahedron `(0,0,1), (2,0,-1), (-1,3,-1), (-1,-1,-1)`.
 Each source and target squared distance divided by the variance may differ
@@ -36,8 +43,8 @@ alternating-series enclosure at the three weakest tuples and audits
 coverage and repeated-label multiplicities. Author tests are not independent
 mathematical acceptance. [INPUTS.json](INPUTS.json) records durable dependencies.
 
-For R2/R3 consumers: this is an actual sign on a region of the radius-six
-compact frontier, with all weight faces included. It covers one previously
-unsigned beta entry there. It does not certify other entries with
-`N-k>=7`, cover the whole compact frontier, or use an approximation error
-as if it were an exact sign.
+For R2/R3 consumers: retain this as a quantitative benchmark on the
+radius-six compact frontier, including all weight faces. Its explicit
+pattern bounds are not replaced by the weaker global distance-loss margin.
+The selected ten-site cells allow contractions that need not be exact flaps.
+No full all-threshold cover of the compact frontier is claimed by this packet.
