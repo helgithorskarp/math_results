@@ -66,3 +66,9 @@ The remaining proof-checking trust is ordinary DRAT-trim execution and
 the documented patch. This is independent of the SAT solver, but it is
 not a formally verified proof checker. A reader may replay every trace
 with the stock checker to avoid trusting the allocation patch.
+
+After the first full range completed, its hardest production case, index
+20,750, also passed a fresh stock-checker replay. Its 84,295-conflict
+trace has 3,482,287 bytes. This supplemental control is recorded in
+`VALIDATION.json`; it does not change the original per-case checker
+identities or claim that the entire corpus was replayed with stock code.

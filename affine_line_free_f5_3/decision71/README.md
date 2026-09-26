@@ -1,9 +1,16 @@
 # Exact decision of the 71-point line-free problem
 
-**Work in progress:** the complete finite reduction is verified; the
-109,676 lifting proofs are being checked. No exact value is claimed until
-every case has a checked certificate. The established interval is
-$70\le r_5(\mathbb F_5^3)\le71$.
+**Exact computer-assisted result: $r_5(\mathbb F_5^3)=70$.** Every one
+of the 109,676 possible lift formulas has a separately checked UNSAT
+certificate. The complete source/evidence audit regenerates all inputs
+and covers every case. A directly checked known 70-point construction
+supplies the lower bound. Equivalently, the minimum size of a set meeting
+every affine line of AG(3,5) is 55.
+
+**Status: complete author proof; independent review of this exact-value
+theorem is pending.** Earlier accepting reviews concern the upper bound
+71, the two-low-plane theorem, and the complete finite reduction,
+not the present global exclusion.
 
 The [written reduction](THEOREM.md) covers every hypothetical 71-point
 line-free set by 309,611 normalized quotient matrices in 109,676 affine
@@ -56,7 +63,8 @@ Then run:
 python3 replay.py --domain /tmp/decision71-reduction/orbits.json \
   --out /tmp/decision71-proofs --drat-trim /path/to/drat-trim
 python3 audit.py --domain /tmp/decision71-reduction/orbits.json \
-  --proofs /tmp/decision71-proofs --out /tmp/decision71-audit.json
+  --proofs /tmp/decision71-proofs --out /tmp/decision71-audit.json \
+  --compare-inputs CERTIFICATES.json
 ```
 
 The replay must report `verified: 109676` and `complete_family: true`.
@@ -118,6 +126,21 @@ checkpoints are generated outside Git. Proof bytes may differ between
 solver builds: a new trace must verify against the specified input, but
 need not reproduce a historical search trace. The runner flushes and
 copies the native binary proof stream before deleting the solver object.
+
+## Recorded complete evidence
+
+[CERTIFICATES.json](CERTIFICATES.json) records all 109,676 cases, twenty
+type counts, 112 ordered digest blocks, and the actual checker identities.
+The original binary DRAT proofs total 19,782,097,200 bytes. The largest
+conflict count is 84,295, below the default limit 500,000.
+The summed per-case solver and checker wall times are 6.28
+hours; these are accumulated across workers and are not elapsed time for
+a parallel replay. Generated data require about 19.8 GB for
+the proof traces, plus formulas and logs. Large outputs stay outside Git.
+
+The [review guide](REVIEW_GUIDE.md) identifies the mathematical and
+computational obligations for an independent replay. [VALIDATION.json](VALIDATION.json)
+records the completed production ranges and validation scope.
 
 ## Scope and dependencies
 

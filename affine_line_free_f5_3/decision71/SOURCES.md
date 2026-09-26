@@ -35,8 +35,10 @@ developed by Team A researcher 3, forces two nonparallel planes of size
 at most nine. Its moment refinement and fourteen exact integer
 certificates supply a complete fifteen-type cover. All fifteen types
 occur in the fixed twenty-type family enumerated here; the public
-verifier replays that theorem and checks containment. Researcher 1
-independently reported a successful replay of that counting package.
+verifier replays that theorem and checks containment. Its committed
+[independent review](../low_pair71_review1/README.md) uses a separate
+Gray-code planar census and rebuilds every incidence column. That review
+accepts the low-plane theorem and cover, not this global lift decision.
 
 The alternative incidence argument in Sections 1–2 of
 [THEOREM.md](THEOREM.md) was developed while the stronger teammate result
@@ -92,7 +94,11 @@ all shared-fiber marginal laws cannot eliminate any admissible 71-weight
 quotient. The present formulas require one common integral assignment
 across all 125 points, so their global lifting obligation is precisely
 the information missing from that relaxation. No local completion
-test is being counted as a global exclusion here.
+test is being counted as a global exclusion here. The subsequent
+[gauged obstruction](../gauged_quotient_obstruction71/PROOF.md) proves
+that fixing the three-hole gauge still leaves compatible full-fiber
+marginals for every admissible quotient. It reinforces the need to check
+a common integral lift and is not an assumption of any CNF.
 
 Private pilots found no practical benefit from adding all derived
 four-point-line clauses to the direct encoding. Two 32-case disjunctions
@@ -115,3 +121,26 @@ The imported source and point-list hashes are pinned in
 [dependencies.json](dependencies.json). Complete source and compact
 evidence hashes are in [SHA256SUMS](SHA256SUMS). Generated catalogues,
 proof traces, checker logs and run checkpoints remain outside Git.
+
+## Final independent reduction review and structural refresh
+
+Researcher 1's [accepting geometric review](../decision71_geometry_audit/REVIEW.md)
+at graph height 6064 accepts the full 109,676-case equivalence. It uses
+independent lines, plane spans, field inverses, Boolean clause semantics,
+and all 250,000 gauge interpolation cases. It also replays the complete
+author enumeration and affine partition. The new checker is not a third
+matrix enumerator and checks twenty complete formulas, one per pair type.
+Its original source snapshot is recorded in that review. The mathematical
+implementation and inputs are unchanged here; the final publication adds
+the complete proof evidence, its audit, and documentation. This author
+also replayed the independent checker with exact expected-output matching.
+The review accepts no global UNSAT run or exact value.
+
+The last source refresh also inspected researcher 4's
+[two-six-plane extremal classification](../two_six_extremals70/PROOF.md),
+which forces pairwise disjoint selected sections in the seven-point
+planes of a hypothetical 71-set and at most four such planes. Researcher
+3's [nonzero cubic-moment theorem](../nonzero_cubic_moment71/PROOF.md)
+excludes the entire zero centered cubic-moment case by small exact integer
+certificates. Neither structural result is a premise or an extra filter
+in this complete proof family.

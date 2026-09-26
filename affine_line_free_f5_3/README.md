@@ -1,19 +1,23 @@
 # Line-free sets in F_5^3
 
-**Current computer-assisted bound: 70 <= r_5(F_5^3) <= 71.** The
-[complete 72-point exclusion](upper_bound71/README.md) covers 16,192
-normalized quotient matrices in 4,332 affine classes and provides a
-checked UNSAT proof for every class. Its direct formulas use only the
-125 point variables. Source, two independent enumerators, compact proof
-manifests, and replay instructions are included. An
-[independent complete replay](upper_bound71_review2/README.md) accepts
-the upper bound with high confidence. Existence at 71 remains unresolved.
+**Exact computer-assisted result: r_5(F_5^3) = 70.** The
+[complete 71-point exclusion](decision71/README.md) covers all 309,611
+normalized quotient matrices in 109,676 affine classes. Every class has
+a separately verified UNSAT certificate, and the complete corpus audit
+regenerates every direct point formula. The known 70-point construction
+supplies the matching lower bound. A smallest set meeting every affine
+line of AG(3,5) therefore has 55 points.
 
-A [complete reduction at 71 points](decision71/README.md) now supplies
-309,611 normalized quotients in 109,676 affine classes. Its entire affine
-partition and two independent enumerations are checked, and it includes
-reproducible direct lifting formulas. The full certificate run is still
-pending; this reduction alone does not determine the exact value.
+**The exact-value proof is complete as an author contribution; independent
+review is pending.** The accepting independent reviews of the
+[earlier upper bound 71](upper_bound71_review2/README.md) and the
+[two-low-plane theorem](low_pair71_review1/README.md) have narrower scope.
+The [complete geometric reduction](decision71_geometry_audit/README.md)
+also has independent acceptance, scoped to that reduction. The [written exact proof](decision71/THEOREM.md), compact evidence,
+reproduction commands, and explicit checker trust boundary are public.
+
+The sections below preserve earlier checkpoints and their historical
+bounds. The exact-value result above is the current author claim.
 
 ## Earlier upper bound 72
 

@@ -1,14 +1,24 @@
-# A complete finite reduction of the 71-point line-free problem
+# The exact line-free maximum in F_5^3
 
-**Current status:** the reduction and complete domain are verified. The
-109,676 lift exclusions are being checked; no exact value is claimed at
-this checkpoint. Independent review of this new reduction is pending.
+**Complete exact computer-assisted author proof; independent review of
+this exact-value theorem is pending.** All 109,676 lift formulas have
+verified UNSAT certificates, and the complete evidence corpus has been
+audited against regenerated inputs.
 
-Let $S\subseteq\mathbb F_5^3$ contain no complete five-point affine
-line, and suppose $|S|=71$. The theorem proved below reduces its
-existence to a finite disjunction of exactly 109,676 direct point formulas.
-The known 70-point construction and the earlier upper bound 71 give the
-current interval $70\le r_5(\mathbb F_5^3)\le71$.
+**Theorem.** The maximum cardinality of a subset of $\mathbb F_5^3$
+containing no complete five-point affine line is
+
+\[
+r_5(\mathbb F_5^3)=70.
+\]
+
+Equivalently, the minimum cardinality of a set meeting every affine line
+of $\operatorname{AG}(3,5)$ is 55. The known 70-point construction is
+checked directly. For the upper bound, suppose a line-free set $S$ has
+size 71. Sections 1–5 put it into one of exactly 109,676 direct point
+formulas; Section 6 excludes every formula by a checked certificate.
+Any larger line-free set would contain a 71-point subset, so the proof
+does not require the earlier 72-point exclusion.
 
 There are two complete routes to the pair cover used below. The team's
 [two-low-plane theorem](../low_pair71/THEOREM.md), due to Team A
@@ -206,7 +216,9 @@ d_{0y}=C_y-\sum_{x=1}^4d_{xy},\quad
 d_{00}=R_0+C_0-29+T,
 \]
 
-where $T$ is the interior sum. Interior deficits lie in $[0,4]$,
+where $T$ is the interior sum. Equivalently, $T+w_{00}=m_1+m_2-7$.
+Every retained pair has $m_1+m_2\le18$, so $T\le11$.
+Interior deficits lie in $[0,4]$,
 and all inferred zero-axis deficits lie in $[1,4]$. Equation (6) gives
 the lower endpoint for $d_{00}$. Both endpoints of every inferred
 entry are checked. The other quotient lines must have deficit at least
@@ -266,13 +278,65 @@ representative formula after these affine changes. Conversely any model
 of any formula is directly a 71-point line-free set. This proves the
 equivalence needed for the finite decision.
 
-The final numerical conclusion requires either an independently checked
-71-point witness or a verified UNSAT proof for **every** one of the
-109,676 formulas. Partial searches, solver limits and UNKNOWN results
-do not discharge this obligation. The proof run currently in progress
-will be reported separately from this complete reduction.
+## 6. Complete certificate exclusion and the exact value
 
-The trust boundary consists of the written reduction, the exact integer
-certificates, the complete ordinary enumerations, the two affine-orbit
-algorithms, the direct CNF generator, and the independently executed
-proof checker. The work is not a proof-assistant formalization.
+Every one of the **109,676** formulas is UNSAT. CaDiCaL 1.9.5 generated
+a binary DRAT trace for each input. A separate DRAT-trim process checked
+each trace and had to exit zero and report `s VERIFIED`. SAT, UNKNOWN,
+missing records, malformed inputs, and checker failures are not counted
+as exclusions. The recorded run has no unresolved cases.
+
+Four disjoint range audits cover all indices in $[0,109676)$. Each audit
+regenerated every formula from the public source, compared its exact
+DIMACS bytes, checked the record's index, type, weights and gauge, and
+verified the saved proof hash, size and acceptance log. The merge rejects
+gaps, overlaps, incorrect type coverage, and incomplete digest blocks.
+This source/evidence audit does not itself recheck DRAT inferences;
+the separate checker invocations provide that part of the proof.
+
+[CERTIFICATES.json](CERTIFICATES.json) identifies all 112 ordered blocks
+of inputs and proofs. The original traces occupy 19,782,097,200 bytes;
+the maximum conflict count is 84,295, below the per-case
+budget of 500,000. The formulas have 125 variables and between
+1,075 and 1,125 clauses. Source, commands, actual
+checker identities, validation controls and compact evidence are public.
+Raw traces are regenerated outside Git. Matching a historical trace hash
+is unnecessary for a fresh proof, but every regenerated trace must pass
+the checker against its specified input.
+
+The first part of the production corpus used stock DRAT-trim. Later
+proofs used the documented two-line allocation configuration in
+[CHECKER.md](CHECKER.md). It changes initial capacity and buffer growth,
+not proof rules or clause matching. The manifest records how many cases
+each binary checked. All traces use the standard binary DRAT format and
+can be replayed with the stock checker. This remaining checker trust is
+stated explicitly; a hash manifest alone proves no UNSAT assertion.
+
+Thus the assumed 71-point set cannot exist. Every larger line-free set
+would contain one of size 71, giving the upper bound 70. The explicit
+[known 70-point construction](../known70.json), due to Elsholtz et al.,
+is checked against all 775 affine lines. This establishes the matching
+lower bound and completes the exact determination.
+
+The ordinary and optimized sanitizer runs agree on the entire finite
+reduction, including every affine class. Three known 70-point sets pass
+direct incidence and satisfiable-formula controls. The public pipeline
+also rejects invalid proofs, altered records, missing cases and a
+budget-one UNKNOWN. These checks are detailed in
+[VALIDATION.json](VALIDATION.json).
+
+The trust boundary consists of the written reduction, exact integer
+certificates, exhaustive ordinary Python/C++ execution, direct CNF
+semantics, and DRAT-trim with its documented allocation configuration.
+The solver is only a proof-trace generator. This is not a proof-assistant
+formalization. Independent acceptance of the earlier upper bound and
+of the two-low-plane lemma does not constitute review of this new exact
+theorem; its independent review remains pending.
+
+The [independent geometric review](../decision71_geometry_audit/REVIEW.md)
+accepts the complete equivalence used in Sections 1–5. It reconstructs
+geometry, coordinate maps, profiles and gauge interpolation independently,
+and replays the full author enumeration. Its twenty formula comparisons
+cover all pair types; they are not a separate export of all 109,676 CNFs.
+That review rechecks no global UNSAT proof. The mathematical source and
+input family used here are unchanged from its reviewed snapshot.
