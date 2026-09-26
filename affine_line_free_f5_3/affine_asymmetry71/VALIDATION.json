@@ -1,0 +1,52 @@
+{
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "date_utc": "2026-09-26",
+  "independent_peer_review": "pending",
+  "language_standard": "C++20",
+  "large_generated_artifacts_required": false,
+  "new_family_bound": 70,
+  "new_reflected_witness_size": 70,
+  "prior_computations_replayed": false,
+  "python": "Python 3.11.2",
+  "release": {
+    "command": "python3 affine_line_free_f5_3/affine_asymmetry71/verify.py --out /tmp/fr4-asymmetry-release",
+    "complete": true,
+    "elapsed_seconds": 150.659,
+    "entrywise_crosschecked_pairs": 213309450,
+    "expected_sha256": "52549863c2d8cfaaa4d9f5510dc06bc60abcf92d9f7a76da82eb637e96ee00b7",
+    "record_count": 200,
+    "stdout_equals_expected": true
+  },
+  "release_flags": [
+    "-O3",
+    "-Wall",
+    "-Wextra",
+    "-Wconversion",
+    "-Werror",
+    "-pedantic"
+  ],
+  "same_author_alternative_algorithms": true,
+  "sanitize": {
+    "child_peak_rss_kib_including_build": 195700,
+    "command": "python3 affine_line_free_f5_3/affine_asymmetry71/verify.py --sanitize --check-expected --out /tmp/fr4-asymmetry-sanitize-checked",
+    "elapsed_seconds": 18.596214334998876,
+    "scope": [
+      "complete planar catalogue and affine orbit validation",
+      "two complete size-17 exclusions",
+      "all six representatives at b=c=16",
+      "one extremal boundary example",
+      "all three 70-point witnesses and their inequivalence profiles",
+      "64-point positive and 80-point negative Cartesian controls"
+    ],
+    "stdout_sha256": "4e5519c3980814703a477087da1d8ddb473dd16971f13ef4161da524732d555f"
+  },
+  "sanitize_flags": [
+    "-O1",
+    "-g",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer",
+    "-fno-pie",
+    "-no-pie"
+  ],
+  "third_party_solver_used": false
+}
