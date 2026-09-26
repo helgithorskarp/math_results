@@ -7,6 +7,11 @@ is an exact computer-assisted author proof awaiting review.
 [SOURCES.md](SOURCES.md) records source revisions and the current graph
 handoff. Every arrow retains the hypotheses stated here.
 
+The human-authorized expansion to eight lanes is recorded in the compact
+[fixed-atom/global-criterion interface](INTERFACES.md). It connects the
+new common-set dual and finite-rule obstruction to this criterion, with
+an explicit strict-witness error budget and the original lane ownership.
+
 ## 1. The full question and its equivalent endpoints
 
 For one bounded contraction pair `f=mu*gamma_s`, `g=(T#mu)*gamma_s`, set
@@ -18,6 +23,7 @@ For one bounded contraction pair `f=mu*gamma_s`, `g=(T#mu)*gamma_s`, set
 | Zero failure in the specified five-dimensional endpoint density-value coupling | Equivalent to `Delta_s=0`; the minimum failure probability is exactly `Delta_s` | A coupling of smoothed density values, not a position martingale or a motion of labelled centres. See [global proof, Theorem 1](PROOF.md). |
 | Every beta test is nonnegative, or the complete endpoint Hankel hierarchy is positive semidefinite | Equivalent to `Delta_s=0` | All orders at the **same** variance. [Global proof](PROOF.md) and [Hankel source](../gaussian_majorisation_hankel_transport/PROOF.md). |
 | At variance one, every `(1-epsilon)delta_0+epsilon rho` compares under every contraction fixing zero | Equivalent to the **full conjecture**, for any one fixed `0<epsilon<1` | `rho` is an arbitrary bounded law, with no support radius uniform over the class. This restricted assertion remains unproved. [Fixed-atom reduction](ANCHOR_REDUCTION.md). |
+| Every finite-volume source set has a common target set with the anchored compensation inequality | Equivalent to the all-prior fixed-atom assertion on each compact domain | The target set works simultaneously for every rare prior; retain `(1-epsilon)q(0)+epsilon min_K q`. [Common-set source](../gaussian_prior_localization/PROOF.md) and [quantifier interface](INTERFACES.md). |
 | Any violation yields a finite strict rational contraction witness | An exact witness reduction | It does not bound the atom count or produce a witness. [Finite/rational reduction](../gaussian_majorisation_rank_abel/PROOF.md). |
 
 The global finite differences give `D_N` increasing to `Delta_s`, with
@@ -169,6 +175,9 @@ neither a full positive theorem nor a certified negative contraction pair.
 | [Local-lift obstruction](../gaussian_majorisation_local_lift_obstruction/PROOF.md) | Instantaneous lifted Hankel positivity is not necessary for an endpoint comparison. The time integration must be retained. |
 | [Finite strong-composition obstruction](../gaussian_axial_cone_rotations/COMPOSITIONS.md) | Failure of all finite aligned strong-coordinate chains in `R^3` does not exclude higher-dimensional motions or smoothed density couplings. Its rigid anchored assumptions are essential. |
 | [Tail-deficit obstruction](../gaussian_tail_deficit_obstruction/PROOF.md) | Failure of the proposed uniform normalized-tail estimate is not failure of absolute global continuity or majorisation. Its extra signed tail hypothesis is not part of the global criterion. |
+| [Finite orthogonal averaging obstruction](../gaussian_majorisation_finite_orbit_obstruction/PROOF.md) | No fixed finite positive orthogonal rule works for all weights on the square-cone map, even with a prescribed origin mass below one. This leaves weight-dependent rules, infinite averaging, radial transport and integrated majorisation open. A negative orbit control can have zero integrated gap. |
+| [Diffuse minimizing prior](../gaussian_prior_localization/PROOF.md) | A common-set minimax problem can have a unique nonatomic minimizing rare law. Exact atomic attainment fails; finite detection of a strict negative value remains available with a controlled error. |
+| [Heat-profile coefficient ordering](../gaussian_majorisation_heat_profiles/PROOF.md) | A strict injective contraction with known full majorisation reverses the proposed pointwise diffusion-coefficient order. The regular-rectangle boundary plus integrated forcing remains the signed obligation. The proposed first-contact condition is not refuted or proved. |
 
 There is no valid reverse arrow from an unavailable motion, martingale,
 finite factorization, or particular local estimate to a negative Gaussian
@@ -192,6 +201,10 @@ directly on finite orbits, including boundaries.
 
 | Lane | Current ownership and concrete obligation |
 |---|---|
+| Researcher 1: semigroup/PDE | Own the regular-level profile evolution, geometric initial layer and the remaining global sign/first-contact obligation. Its source does not pass automatically through critical levels or atomic time zero. |
+| Researcher 2: certified finite-atomic dependencies | Certify finite inputs to the global comparison, preserving the distinction between integrated signs and finite-orbit obstructions. |
+| Researcher 3: measure localization | Own the common-set/contact-set formulation and sign-preserving prior or set reductions; exact diffuse optimizers and finite strict witnesses are compatible. |
+| Researcher 4: extremal maps/deformations | Own map-side structure with an actual link to the signed nonlinear objective. Feasible-set extremality alone is not a hinge reduction. |
 | Researcher 5: analytic/optimal transport | Maintain this common criterion and its exact quantifiers; seek a global endpoint coupling or integrated hinge sign. The arbitrary-weight square-cone origin-adjunction target remains open outside the certified classes. The fixed-atom reduction requires arbitrary rare geometry. This consolidation does not add another threshold family. |
 | Researcher 6: geometry/internal energy | Own the broad axial and damped motion classes, their geometric consequences and review obligations. Their all-weight statements should not be weakened into law-dependent stability claims. |
 | Researcher 7: counterexamples | Seek an actual certified negative hinge or finite negative convex-energy witness for valid contraction data. Preserve positive narrow examples; a failed proof mechanism or a finite positive table is not the requested endpoint. |

@@ -52,6 +52,14 @@ classical stochastic-order, Hausdorff and Bernstein--Durrmeyer ingredients.
 Those ingredients are not claimed as new. Independent review of this
 consolidation and its constants is pending.
 
+For the eight-lane campaign, start with [INTERFACES.md](INTERFACES.md).
+It connects the fixed-atom reduction to the measure lane's common-set
+dual, preserves the anchor compensation term and prior quantifiers, and
+gives an explicit error budget for transferring a conditional strict
+witness to finite data. It records the finite-atomic lane's new
+finite-averaging obstruction without treating it as an integrated
+counterexample. This handoff adds no theorem or comparison family.
+
 The later [geometric-endpoint annex](GEOMETRIC_LIMIT.md) specifies the
 normalized coupling defect needed along an exponential weight path to
 obtain an unequal-radius ball inequality. It also completely classifies

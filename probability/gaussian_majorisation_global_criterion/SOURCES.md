@@ -242,3 +242,61 @@ that one contains the other.
 Lane ownership remains unchanged. Current finite positive search evidence
 is not promoted to a theorem. The full dimension-three question remains
 open, and all prior source and review boundaries remain in force.
+
+
+## Eight-lane fixed-atom and global-criterion interface
+
+[INTERFACES.md](INTERFACES.md) composes the existing fixed-atom, endpoint
+coupling/moment and common-set formulations with their exact quantifiers.
+It supplies an explicit strict-witness error budget by substituting the
+anchor estimate, rare-law net estimate and global moment error; it claims
+no new theorem, independent review, numerical experiment or sufficient
+family. The human-authorized lanes 1--4 retain PDE, finite-atomic,
+measure-localization and extremal-map ownership alongside lanes 5--8.
+
+New source dependencies in this handoff:
+
+| Input | Source commit | SHA256 of the linked file |
+|---|---|---|
+| [Common-set dual and diffuse optimizer](../gaussian_prior_localization/PROOF.md) | `541d4b7de3d73b41444e5350378a8ecc43d914ea` | `1f7d2b83ea42269fd11d64c5cf398bd2d4378d22e0e9cbf1f421f463823d44e7` |
+| [Universal finite orthogonal-rule obstruction](../gaussian_majorisation_finite_orbit_obstruction/PROOF.md) | `5e686ec7c361a368e562496c23e06dc4706ba281` | `b85af8a5f69a3cc13c584160ce3e0f545876c6c3dcaee6fdbac41ef80a37a5dd` |
+| [Functional/stability handoff](../gaussian_majorisation_open_stability/HANDOFF.md) | `d62369c107285b40d0e55afdcac455c9069f4ab5` | `2b582312f8dd220914ccfb82467afe337d83f4d73a76804de78f49f9011c6e23` |
+
+The prepublication source refresh also incorporated these two inputs:
+
+| Input | Source commit | SHA256 of the linked file |
+|---|---|---|
+| [Heat-profile evolution and initial layer](../gaussian_majorisation_heat_profiles/PROOF.md) | `007ec4fddd5566a57106a7b0464b34fa8d7ad8f2` | `8c98aa80c136f18c36c3c2f1af216434bb2685fea6a54afff80bc64a362ebe02` |
+| [Axial/nonlinear review portfolio](../gaussian_axial_cone_rotations/REVIEW_GUIDE.md) | `e8fea4c40319da833258d926c4737198b133e670` | `4a3b41baa76b55cad56b3504ccaf8c679dc72dd3aa7698990f660c9f5a6ce4ce` |
+
+The PDE source supplies a regular-rectangle stopped representation, a
+coefficient-order obstruction with a positive endpoint comparison, and
+the tube-volume scale hidden in the flat atomic initial profile. Its
+first-contact proposal and global extension remain open. The geometric
+portfolio is a review synthesis; its original axial and nonlinear core
+does not depend on acceptance of the later matrix-path optimization.
+Neither input changes the arbitrary-packet obligation.
+
+The common-set source was first committed in `541d4b7` and published after
+merging at `2cad43476404881bcd1dbcfa0dc70f96af5faac8`; its proof bytes above
+are unchanged. Its contribution
+`bafkreiam5rzibygouwnzj7aokt23ld4twuarsvrpr4ffdxvokehvtl7gd4` is committed
+at height 6122. The preceding analytic class map is the summary
+`bafkreidn73gtnin3ojvmr6hz6hipasfpf6hl7uhhu3szlauiqhwpkvte2q`, height 6120.
+
+The common-set equality retains `(1-epsilon)q(0)` and minimizes only the
+rare contribution. Its unique spherical optimizer disproves exact atomic
+attainment, not finite detection of a strict negative value. The finite
+orthogonal-rule obstruction excludes a single finite rule working for
+all weights; even its congruent control has a negative orbit average and
+zero integrated gap. Neither source produces a negative contraction
+hinge. The functional handoff is an existing-result synthesis and does
+not upgrade its cited proofs' review status.
+
+These source dependencies were read in their stated scope. Their
+new mathematical proofs remain author work awaiting independent review;
+this pass did not replay their programs or claim independent acceptance.
+The fixed-atom proof and all mathematical programs/certificates here are
+unchanged. The source manifest includes this documentation interface.
+Graph references for new handoffs are added only when their
+commitment is observed; broadcast receipts are not treated as commitment.
