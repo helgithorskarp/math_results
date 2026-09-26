@@ -7,6 +7,82 @@ The full dimension-three conjecture remains open. Homothetic monotonicity
 is an established continuous-contraction phenomenon; our posterior-covariance
 calculation supplies the strictness needed for the stability bridge.
 
+## Bounded-law and finite-certificate consolidation
+
+[BOUNDED_LAWS.md](BOUNDED_LAWS.md) removes atomicity of the base laws in
+the general stability and homothety results. It also proves the exact
+interior characterization and density of the interior, and combines the
+credited beta representation with signed endpoint bounds to give a finite
+all-order certificate. These are analytic author proofs awaiting review.
+
+The initial version of this packet is source commit
+`b48c5ca31f3c573f2ffe6874944de83bc1a92710`. Its original PROOF.md SHA256 is
+`c1ccbe1663cf6174d1c917717f163e1393ee543d3e60cf1a2fbfb15c16101174`.
+The original graph submission is
+`bafkreiaudc3oja6vhz7so5q5nc5ieqd7xcqvuxmnfa5jlu7dnnbpttgwhu`;
+it was accepted for broadcast but not yet visible in the committed view
+at this pass's entry refresh. The mathematical dependency is the published
+source, not an assumption of graph commitment. Its positive low-threshold
+Lemma 2 is the sole earlier analytic estimate needed by the new general
+bounded-law theorem. The square-cone finite certificate is needed only
+for that explicit application, not for Theorems A--C in BOUNDED_LAWS.md.
+
+The global criterion at graph6088, specified below, supplies the exact
+hinge moments, beta averages, and explicit Holder constant. The new finite
+test adds a localization error
+L[1/(4(N+3))+1/(N+2)^2]^(1/4), a positive tail certificate, and a source
+peak certificate. Bare finite moment nonnegativity remains insufficient.
+The finite degree exists on the strict interior; no practical degree or
+newly evaluated Gaussian example outside the established classes is claimed.
+
+For the real-analytic zero-level fact in the homothety calculation, see
+Boris Mityagin, [*The Zero Set of a Real Analytic Function*](https://arxiv.org/abs/1512.07276),
+arXiv:1512.07276, checked live. All other support-net, coupling compactness,
+posterior-equivalence, and localization steps are proved in the new file.
+The unchanged exact checker and its output certify the finite square-cone
+inputs only; they do not certify these analytic arguments by sampling.
+
+The latest completed Team B reports at entry remain researcher5
+20260926T154902.810636Z, researcher6 20260926T155255.170231Z, and
+researcher7 20260926T151005.221293Z. The committed graph at6090 had no new
+Gaussian contribution or mathematical review of the preceding orbit result.
+The global criterion and axial scope document were reread. The positive
+bridge now covers arbitrary bounded-law members of those classes, while
+their domain-wide geometric quantifiers remain with their sources.
+
+Before publication, the repository refresh added three further sources,
+which were read and incorporated without changing their claims:
+
+- Researcher7's [paired-layer all-variance completion](../gaussian_paired_layers_majorisation/ALL_VARIANCES.md),
+  commit `465f892ad569fe12fb2634395c21bc7025abff41`, proof SHA256
+  `f6a1ab91b85aec6e43f43baeea1910b6d23b6746244c11be7b4fba5ef04d33f7`.
+  It uses this packet's original Theorem 1 on [10^-10,45056], with its
+  own uniform controls at both variance extremes. Its constrained finite
+  paired layers, central transverse symmetry, and weight ball1/25000
+  are essential. It does not assume the new bounded-law extension.
+- Researcher5's [geometric-endpoint annex](../gaussian_majorisation_global_criterion/GEOMETRIC_LIMIT.md),
+  commit `c4ab34bd94a7d08646803a5c1d6ad535bcbe877f`, SHA256
+  `b6b30d1a051868a7d7b7f058be16168239a4372012ba74a55fd387782dd45af3`.
+  It records the exact pathwise scale Delta_s/a_s and the old orbit cones'
+  logarithmic profiles lambda0=lambda2=lambda3>=lambda1. Their geometric
+  limits have an existing relabelling proof. Our bounded-law neighborhoods
+  and finite certificate do not supply a uniform estimate on that scale.
+  The beta moment formulas and Holder bound used here are unchanged;
+  the current global PROOF.md SHA256 is
+  `ac8913b33e21679b6f4f21f1a3aeca5975adadccd0a3ee39d4f48085cdfb3bc1`.
+- Researcher6's [axial composition comparison](../gaussian_axial_cone_rotations/COMPOSITIONS.md),
+  commit `8e8cb2a62e575adbf0ec3ff74e681ee9688f1768`, SHA256
+  `23a3a850c3d2e3b69ede387b99e3d8db4a415d6b54db416ff8248429731e7ac7`.
+  It excludes finite aligned strong-contraction compositions in R3 on
+  the stated axial classes. It leaves their positive geometric theorem
+  unchanged and is not a premise of our stability or certification proof.
+
+The refreshed completed reports are researcher5 20260926T163042.834844Z
+and researcher7 20260926T162917.947777Z; researcher6's latest report is
+still the one above, while its newer source commit is already public.
+The committed graph still reports6090. Source publication, accepted
+broadcasts and mathematical peer review are distinguished throughout.
+
 ## Essential positive dependency
 
 The [square-cone orbit theorem](../gaussian_majorisation_square_cone_orbits/PROOF.md)
@@ -79,12 +155,12 @@ SCOPE.md SHA256:
 `9dd8856823f2cf9f9b79919b982c1fbe5836192c0b1b0c8cda8cf9ef74daf06a`.
 It gives broader all-law and arbitrary-radius geometric quantifiers on its
 own domain. Our theorem does not enlarge its undamped perimeter range.
-Finite instances of it, the
+Arbitrary bounded-law instances of it, the
 [damped-cone class](../gaussian_damped_cone_reflections/PROOF.md),
 [scalar-defect class](../gaussian_majorisation_scalar_defect/PROOF.md),
 [simplicial class](../gaussian_simplicial_cone_reflections/PROOF.md), and
 [common-target class](../gaussian_majorisation_common_target/PROOF.md)
-feed the same regularization-and-stability principle. The source requirements
+feed the extended regularization-and-stability principle. The source requirements
 are retained: in particular common-target mixtures still need one target.
 
 Researcher7's latest completed report at the refresh was
@@ -104,10 +180,11 @@ interchanging their order-dependent variance quantifiers.
 
 ## Novelty and trust boundaries
 
-The contribution is the strict finite density-orbit certificate, its
-positive spatial-cloud stability theorem, and the unifying fixed-variance
-regularization principle with the stated endpoint controls. Continuity,
-layer-cake formulas, Gaussian differentiation and compactness are standard.
+The contribution comprises the strict finite density-orbit certificate,
+its spatial-cloud theorem, the general bounded-law stability and exact
+interior result, and the finite positive moment certificate with signed
+endpoint controls. Continuity, layer-cake formulas, Gaussian differentiation,
+Hausdorff moment representations and compactness are standard.
 Targeted primary-literature searches and bounded graph/source refreshes did
 not locate the same spatial result for this obstruction family. That is
 not a historical-priority guarantee.

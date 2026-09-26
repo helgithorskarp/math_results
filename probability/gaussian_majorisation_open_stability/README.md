@@ -1,9 +1,22 @@
 # Fixed-variance all-order stability for Gaussian majorisation
 
-The [author proof](PROOF.md) transfers the team's positive comparisons to
-spatially perturbed measures, with an exact strictness certificate for the
-asymmetric square-cone family. Independent review and formalization are
-pending. The unrestricted R3 problem remains open.
+The [bounded-law proof](BOUNDED_LAWS.md) gives a common stability theorem
+for arbitrary bounded probability measures, including nonatomic base laws.
+Its three strict conditions characterize the interior of the Gaussian
+majorisation set in the product W_infinity topology: a source mean-support
+gap, a target peak gap, and strict hinges below the target peak. Every
+known comparison with nonpoint target enters this interior after any
+strict target homothety. The full comparison set is the closure of its
+interior, also at each fixed variance.
+
+It also gives a **finite sufficient certificate for every hinge at one
+fixed variance**: signed low-threshold control, a source peak bound, and
+finitely many beta moments above an explicit localization error. Such a
+certificate exists for every interior pair. A practical degree is not
+computed; nonnegativity of a finite moment list alone is insufficient.
+The [original proof](PROOF.md) supplies the tail estimate and an undamped
+strictness certificate for the asymmetric square-cone family. Independent
+review and formalization are pending. The unrestricted R3 problem remains open.
 
 For **every compact variance interval** I inside (0,infinity), there exists
 epsilon_I>0 such that every atom of the asymmetric nine-point pair can be
@@ -19,20 +32,21 @@ variance range does not grow with the matrix size. The spatial radius is
 proved to exist; an optimized numerical value is not computed, and a
 uniform radius over all positive variances is not claimed.
 
-The general bridge applies to any strict finite atomic Gaussian comparison
-with a peak gap and a mean-support gap. Any known finite all-order comparison
-at one variance meets these strict conditions after an arbitrarily small
-target homothety, provided the target is not a point mass. This links the
-motion, common-target, scalar-defect and density-orbit mechanisms. The
-square-cone example needs **no damping** for its strictness certificate.
+The general bridge now applies to arbitrary bounded base laws. A finite
+support net supplies positive assigned cluster masses even for continuous
+laws; the net is fixed before taking a low-threshold limit. This links
+whole bounded-law members of the motion, common-target, scalar-defect and
+density-orbit mechanisms. The square-cone example needs **no damping**
+for its strictness certificate.
 
 ## Relation to Team B's global criterion
 
 | Result already available | What this packet adds |
 |---|---|
-| [Global coupling and moment criterion](../gaussian_majorisation_global_criterion/PROOF.md) | Exact zero defect persists under the specified spatial perturbations; all finite moment tests are positive. |
+| [Global coupling and moment criterion](../gaussian_majorisation_global_criterion/PROOF.md) | Exact zero-defect interior is characterized; signed endpoint controls turn finitely many strict beta tests into an all-order certificate at fixed variance. |
 | [Square-cone orbit theorem](../gaussian_majorisation_square_cone_orbits/PROOF.md) | Strict orbit maxima, strict hinges, and arbitrary small spatial clouds on compact variance intervals. |
-| [Axial-cone scope](../gaussian_axial_cone_rotations/SCOPE.md) and other geometric classes | Finite certified members enter the common local stability theorem after strict target homothety. The original geometric all-law and volume quantifiers stay with their sources. |
+| [Paired-layer all-variance completion](../gaussian_paired_layers_majorisation/ALL_VARIANCES.md) | This teammate source has already used the original stability theorem to join its two variance endpoints. Its constrained all-variance neighborhood is distinct from the arbitrary bounded-law neighborhoods here. |
+| [Axial-cone scope](../gaussian_axial_cone_rotations/SCOPE.md) and other geometric classes | Arbitrary bounded-law members enter the common local stability theorem after strict target homothety. The radius depends on the chosen law and variance band; the domain-wide geometric and volume quantifiers stay with their sources. |
 | Reviewed covariance obstruction | It persists in sufficiently small clouds, so the new positive examples still need a different density-level mechanism. |
 
 The low-threshold step has a signed geometric margin and a fixed positive
@@ -70,9 +84,11 @@ python3 ../gaussian_majorisation_square_cone_orbits/verify.py --check
 python3 ../gaussian_majorisation_square_cone_orbits/independent_check.py --check
 ```
 
-The new finite certificate proves strict maximum domination; it does not
+The finite certificate proves strict maximum domination; it does not
 replace the previous orbitwise hinge certificate. The volume bounds,
 posterior-covariance flow identity, continuity and compactness arguments
-are analytic proofs. The checker is supplementary exact evidence, not
+are analytic proofs. The bounded-law extension, exact interior, and finite
+beta certification theorem are also analytic proofs; this unchanged checker
+does not validate them by finite sampling. It is supplementary exact evidence, not
 independent peer review or proof-assistant formalization. Source provenance
 and the class relationships are recorded in [SOURCES.md](SOURCES.md).

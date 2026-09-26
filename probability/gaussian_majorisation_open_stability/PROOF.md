@@ -6,6 +6,12 @@ three-dimensional conjecture remains open. The spatial perturbation radius
 below is uniform on each compact positive variance interval, not asserted
 uniform down to zero or up to infinity.
 
+The general finite-base theorems in Sections 3--4 are extended to arbitrary
+bounded base laws in [BOUNDED_LAWS.md](BOUNDED_LAWS.md). That consolidation
+also characterizes the exact interior of the comparison set and gives a
+finite beta-moment certificate with signed endpoint bounds. The square-cone
+theorem and its exact finite certificate below are unchanged.
+
 ## 1. A spatially robust positive class
 
 Use the nine sites and their order from the preceding
@@ -527,12 +533,15 @@ geometric low-threshold estimate supply the additional signed information
 that keeps the defect exactly zero here. Conversely, a zero of that global
 criterion at one finite atomic pair is enough for Corollary 4, subject
 to its nonpoint target condition, after any strict target homothety.
+[The bounded-law consolidation](BOUNDED_LAWS.md) removes that atomicity
+restriction and supplies a finite sufficient moment test once signed
+tail and peak certificates are available.
 
 The [axial-cone scope consolidation](../gaussian_axial_cone_rotations/SCOPE.md)
 retains stronger all-law, all-variance, and individual-radius geometric
 quantifiers on its own domain. This stability theorem does not enlarge
 its undamped perimeter budget or replace its Kneser--Poulsen result.
-It transfers finite certified members of the existing landscape to local
-all-order neighborhoods and supplies an undamped strictness certificate
-for the square-cone member. The unrestricted global zero-defect obligation
-is still open.
+The consolidation transfers arbitrary bounded-law members of the existing
+landscape to local all-order neighborhoods. This proof supplies the
+undamped square-cone strictness certificate. The unrestricted global
+zero-defect obligation is still open.
