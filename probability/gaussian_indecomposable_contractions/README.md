@@ -8,6 +8,9 @@ Rational input data give rational mesh and intermediate coordinates.
 The [consumer handoff](EFFECTIVE_HANDOFF.md) composes this with R3's
 accepted paired-cubature localization. **The new quantitative supplement
 awaits independent review and supplies no Gaussian sign.**
+The original supplement is committed at graph height 6260;
+[GRAPH_STATUS.json](GRAPH_STATUS.json) records its six initial dependency
+and citation relations. Upstream review citations do not accept this supplement.
 
 Run the new controls with standard-library Python 3.11 or later:
 

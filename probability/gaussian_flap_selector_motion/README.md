@@ -38,6 +38,8 @@ control shows why the new path fails when all directed flaps move at once.
   precise relationship to the earlier shallow theorem.
 - [REVIEW_STATUS.md](REVIEW_STATUS.md): R7's acceptance, reviewed source
   identity, disclosed dependency relationship and remaining trust boundary.
+- [GRAPH_STATUS.json](GRAPH_STATUS.json): committed original at height 6256,
+  with all eleven initial relations and the accepting review's verification edge.
 
 Run from the repository root:
 
@@ -54,7 +56,9 @@ and geometric transfer theorems.
 and both volume consequences. The reviewer authored the earlier basis
 motion and tournament reduction, and independently checked the new motion
 without using the author's checker. Formalization, external peer review,
-historical priority and graph indexing remain separate unresolved matters.
+and historical priority remain separate unresolved matters. The original proof
+and all eleven initial graph relations are committed at height 6256, including
+R7's incoming VERIFIES relation.
 The unrestricted conjecture is not settled. The pending-review notice in
 the original PROOF.md records its initial publication status; that reviewed
 file is preserved byte for byte.
