@@ -1,5 +1,73 @@
 # Sources, dependencies and trust boundary
 
+## Shift-averaging boundary supplement
+
+[SHIFT_AVERAGING_BOUNDARY.md](SHIFT_AVERAGING_BOUNDARY.md) addresses the
+specific proposed inequality that random source-grid shifts make the
+target hinge interaction at least the source interaction. The eight-site
+family has strict contraction, distinct images and paired affine rank six,
+yet the reverse averaged inequality holds for sufficiently small scale.
+The primary Aishwarya--Li Theorem 1.4 gives full majorisation for this
+family because its straight trajectories contract every pair. This is
+a method obstruction on positive examples, not a conjecture counterexample
+or a new positive class. No numerical scale cutoff is claimed.
+
+The [uniform localization proof](DEFECT_LOCALIZATION.md), source
+`4ed178725774e2fd3bb486f952825f58e52766cc`, is now committed at graph h6134:
+`bafkreibn7nmsfuqqf4uo3nl4zvws5jogxzphra2zan4a7kbmdkofatx72u`.
+Its original body and all five initial relations were matched exactly.
+The theorem used the source interaction as an error and never asserted
+the false comparison. The scalar interaction is also used in the
+[fixed-atom source](../gaussian_majorisation_global_criterion/ANCHOR_REDUCTION.md),
+h6112; neither that reduction nor the compensation of a fixed atom is
+changed here. The new signed test is proved directly by L1 translation
+differentiation, a null Gaussian level, the divergence theorem and exact
+cube partition probabilities. These standard tools carry no priority claim.
+
+The prepublication refresh includes the following distinct dependencies:
+
+- The [global interface](../gaussian_majorisation_global_criterion/INTERFACES.md),
+  source `8b004c6a747883fcf96f895a052a292a62683f5f`, graph h6144,
+  composes localization with moments and a new dominant anchor. Its
+  additive errors remain valid; the present example does not justify
+  dropping them or disprove a sharper inequality retaining conditional gaps.
+- The [ordered-contact reduction](../gaussian_majorisation_heat_profiles/CONTACT_REDUCTION.md),
+  graph h6140, asks for a flux sign under profile order and contact. A
+  reversal of an unconditional quantity away from contact does not refute
+  that conditional obligation. Our partition test does not address its sign.
+- The [common-set equality faces](../gaussian_majorisation_minimax_faces/PROOF.md),
+  source `e53ad777d2aaa0556e646d4db44a2afc7235c7d0`, graph h6142,
+  give positive transfer for special source tests and an exact equality
+  reserve. They do not establish arbitrary-set transfer, nor rely on the
+  shifted-grid interaction comparison.
+- The [finite orthogonal-rule obstruction](../gaussian_majorisation_finite_orbit_obstruction/PROOF.md),
+  graph h6126, concerns a different averaging operation. Our shifts are
+  translations of a fixed-axis grid; no claim about averaging grid rotations
+  or adaptively choosing partitions follows from our proof.
+
+All seven other researchers' latest completed reports and relevant new
+sources were inspected. The finite-certificate, rigid-mesh and geometric
+handoffs preserve their stated boundaries. Researcher 7's latest completed
+search report supplies no certified negative integrated witness. Incoming
+citations of h6134 are not independent acceptance of its analytic proof.
+The primary paper was refreshed live on 26 September 2026. The focused
+literature/source inspection did not supply this particular grid interaction
+test; no exhaustive novelty or priority claim is made.
+
+[interaction_audit.py](interaction_audit.py) uses CPython 3.11+ and only
+the standard library. Normal and optimized runs of `--check` produce
+report SHA256
+`ed59655a2912164a7b1ff2aa40f0e6131778b214ba7fef4667e1d57cd085ed75`.
+The exact controls cover all cube cut masks and pair types, conditional
+mass/threshold normalization, the split-count probability polynomial, Walsh
+rank, straight-motion margins at three rational scales and the strict
+rational radical margin. A corrupted expected report is rejected under
+optimized Python. These checks do not compute Gaussian hinges or certify
+their sign at any specified finite scale. The universal asymptotic and
+sufficiently-small-scale conclusion remain a written proof, with independent
+review and formalization pending. The earlier proofs and audit source/output
+files are byte-preserved.
+
 ## Uniform defect localization supplement
 
 [DEFECT_LOCALIZATION.md](DEFECT_LOCALIZATION.md) adds a sign-preserving

@@ -1,11 +1,11 @@
 # Gaussian set transfer and measure localization
 
 This packet proves measure-side reductions of the dimension-three
-Gaussian-majorisation question and identifies a limit on exact atomic localization.
+Gaussian-majorisation question and identifies limits on exact localization.
 It does **not** settle the open conjecture or add a Kneser--Poulsen class.
 Complete author proof; independent review pending.
 
-The new [uniform defect localization](DEFECT_LOCALIZATION.md) proves that
+The [uniform defect localization](DEFECT_LOCALIZATION.md) proves that
 the worst possible Gaussian hinge defect D satisfies
 
     0 <= D-D_k < 4/k,
@@ -22,6 +22,16 @@ This is a uniform finite-dimensional frontier with an error bound, not a
 computed sign or an exact finite-support optimizer theorem. Its atom bounds
 are large. Conditioning need not preserve a prescribed dominant atom, and
 separately rounding input and output sites is not valid.
+
+The [shift-averaging boundary](SHIFT_AVERAGING_BOUNDARY.md) shows why one
+proposed cancellation of the partition error fails. For eight equally
+weighted sites, a strict contraction with paired affine rank six has
+**decreasing mean hinge interaction** under random shifts of a cubic
+source partition. An exact small-cube expansion gives the negative sign.
+The same sites admit a straight contracting motion, so full Gaussian
+majorisation remains true. This rules out a proposed interaction inequality;
+it does not refute a zero-error inequality for positive defects or settle
+the main question. The localization proof and its bounds are unchanged.
 
 For a compact support K, continuous map T, Gaussian variance s, and a set A
 of finite positive volume v, define
@@ -59,6 +69,8 @@ python3 verify.py --check
 python3 -O verify.py --check
 python3 localization_audit.py --check
 python3 -O localization_audit.py --check
+python3 interaction_audit.py --check
+python3 -O interaction_audit.py --check
 sha256sum -c SHA256SUMS
 ```
 
@@ -74,6 +86,12 @@ partition controls at every finite-model breakpoint, exact shifted-grid
 crossing controls, a failure of independent endpoint rounding, and the
 rational constant check. Its finite cells are not Gaussian counterexamples.
 The reported k^6 frontiers are symbolic sizes; none was enumerated.
+
+[INTERACTION_EXPECTED.json](INTERACTION_EXPECTED.json) records all eight
+cube partitions, Walsh orthogonality, all 28 pair types, rational motion
+controls and the exact radical sign margin. There is no quadrature or
+claim that the audited rational parameters lie in the asymptotic sign
+range. Existence of that range follows from the written analytic proof.
 
 See [SOURCES.md](SOURCES.md) for mathematical attribution, team dependencies,
 the literature boundary, and the distinction from existing per-law endpoint
