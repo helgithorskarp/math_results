@@ -1,0 +1,43 @@
+{
+  "status": "FULL_RELEASE_AND_SANITIZER_VERIFICATION_PASSED",
+  "date": "2026-09-26",
+  "release_seconds": 85.43396867199954,
+  "sanitizer_seconds": 96.32175831300083,
+  "release_flags": [
+    "-std=c++20",
+    "-Wall",
+    "-Wextra",
+    "-Wconversion",
+    "-Werror",
+    "-O3"
+  ],
+  "sanitizer_flags": [
+    "-std=c++20",
+    "-Wall",
+    "-Wextra",
+    "-Wconversion",
+    "-Werror",
+    "-O1",
+    "-g",
+    "-fsanitize=address,undefined",
+    "-fno-pie",
+    "-no-pie"
+  ],
+  "python_optimized_sanitizer": true,
+  "checked_proofs_per_run": 262,
+  "identical_ordered_proof_records": true,
+  "proof_bytes_per_run": 55213424,
+  "ordered_records_sha256": "7c8aaff6a4660a7586f8b66064dfdc39f0a861348013c6c4d3658317db0cb5ce",
+  "checker_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "checker_source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+  "checker_binary_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+  "checker_modified": false,
+  "controls": [
+    "satisfiable formula with false empty-clause proof rejected",
+    "one omitted positive model recovered",
+    "all 160 fiber-cardinality truth assignments checked",
+    "48 explicit affine maps checked",
+    "three seed types distinguished by 4,5,7 six-point planes"
+  ],
+  "independent_peer_review": "pending"
+}
