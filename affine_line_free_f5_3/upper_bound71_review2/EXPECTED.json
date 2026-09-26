@@ -1,0 +1,61 @@
+{
+  "status": "UPPER_BOUND71_INDEPENDENT_REVIEW_ACCEPTED",
+  "target_artifact": "bafkreia7wiim7o3xqlzuvr2ifw4ul6zcwvjnil4vcxhouyutvhv5fpq7si",
+  "target_commit": "e81f511a02ac5ef43f1005408ba370df110b7007",
+  "conclusion": "70 <= r_5(F_5^3) <= 71; exact value unresolved",
+  "submitted_verifier": {
+    "ordinary": "UPPER_BOUND71_REDUCTION_VERIFIED",
+    "sanitizers": "UPPER_BOUND71_REDUCTION_VERIFIED",
+    "cnf_hashes_matched": 4332,
+    "original_proofs_rechecked_by_verifier": false
+  },
+  "independent_low_plane_certificate": {
+    "spectra": 70,
+    "incidence_rows": 61,
+    "incidence_columns": 463,
+    "minimum_slack": 0,
+    "tight_columns": 5,
+    "bound_numerator": 440665,
+    "bound_denominator": 100000,
+    "integer_lower_bound": 5
+  },
+  "independent_catalogue_and_orbits": {
+    "parameterization": "multisets of unit deficits in the 4-by-4 interior",
+    "typed_quotients": 16192,
+    "labeled_counts_AA_AB_BB": [4442, 5428, 6322],
+    "catalogue_sha256": "7ad44f1b9e1244da30d0ac28d29eb9f84e441323285b62cd21454827579fcb7f",
+    "representatives": 4332,
+    "canonical_counts_AA_AB_BB": [164, 1252, 2916],
+    "affine_maps_per_representative": 12000,
+    "normalized_images": 16192,
+    "overlaps": 0,
+    "published_orbit_sizes_match": true
+  },
+  "fresh_full_proof_replay": {
+    "intervals": [[0, 2166], [2166, 4332]],
+    "verified": 4332,
+    "proof_bytes": 617263694,
+    "proof_hashes_matching_manifest": 4332,
+    "cnf_hashes_matching_manifest": 4332,
+    "conflicts_sum": 20812256,
+    "max_conflicts": 18339,
+    "max_conflict_case": 88,
+    "ordered_cnf_hashes_sha256": "745d1f1b864f59d0393845199212649813f658d54f5862cb1c00994e743bbfc1",
+    "ordered_proof_hashes_sha256": "ed556c74285d09a9fd1dd96693e2f88f169a3a451cb722be7370bb45d4325725",
+    "stable_case_records_sha256": "0f9caaa0394fb2b50d716d16b395407a47bee66a1201fea2e9273df121e968d5",
+    "checker_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a"
+  },
+  "controls": {
+    "known_70_point_sets_accepted": 2,
+    "fiber_truth_assignments": 160,
+    "unknown_rejected": true,
+    "empty_proof_rejected": true,
+    "partial_runs_marked_incomplete": true
+  },
+  "versions": {
+    "python": "3.11.2",
+    "python_sat": "1.9.dev15",
+    "gxx": "12.2.0",
+    "drat_trim_source": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+  }
+}

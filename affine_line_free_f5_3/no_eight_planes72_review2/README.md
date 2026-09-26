@@ -25,7 +25,7 @@ such a set, says nothing about existence at 71, and does not determine
 \(r_5(\mathbb F_5^3)\). The inputs independently accepted in this review
 leave \(70\le r_5(\mathbb F_5^3)\le72\). A downstream repository contribution
 claiming the upper bound 71 appeared during the final refresh; it uses this
-lemma, but its new 4,333-case computation is outside this review and receives
+lemma, but its new 4,332-case computation is outside this review and receives
 no verdict here.
 
 ## Mathematical audit
