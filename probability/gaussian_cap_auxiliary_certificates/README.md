@@ -25,6 +25,10 @@ priority review pending. The unrestricted dimension-three question remains
 open. The broad cap class, the particular finite controls, and the obstruction
 to a sufficient certificate have different scopes.
 
+The [positioning note](POSITIONING.md) records the subsequent axial
+rigid-cloud comparison and its limitation to one simultaneous cap map.
+The original mathematical proof and certificate corpus are unchanged.
+
 ## Replay
 
 Only the Python standard library is needed. CPython 3.11.2 and 3.12.14
