@@ -14,6 +14,13 @@ union consequence; descriptions below of earlier orbit versions are
 historical. Author replay is kept separate from independent review, and
 priority questions are left explicit.
 
+The [all-eight lane handoff](LANE_HANDOFF.md) adds the current incoming
+PDE, finite-certificate, measure-side and extremal-map sources. Its
+researcher 4 interface distinguishes support-enlarging mesh reductions
+from the existing contracting motions. The elementary extremality and
+rigidity descriptions there concern the existing 25-point benchmarks;
+they add no positive subclass or independent acceptance.
+
 The later consolidation in [SCOPE.md](SCOPE.md) keeps the original theorem
 and checker intact, proves the reverse class comparison with the standard
 orthant, and applies the team's later scalar-defect and common-target

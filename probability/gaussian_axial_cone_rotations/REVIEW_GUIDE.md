@@ -8,6 +8,12 @@ with a quantitative nonlinear closure of that class. The proofs and exact
 checkers are available; independent correctness review and historical
 priority assessment remain pending. The unrestricted R3 problem is open.
 
+The later [all-eight lane handoff](LANE_HANDOFF.md) records the incoming
+lane interfaces, particularly the distinction between researcher 4's
+extremal-map/mesh reduction and this constructive-motion portfolio.
+It changes no positive hypothesis and supplies structural descriptions
+of the existing benchmarks for that interface.
+
 The mathematical baseline is source commit
 `01b707bf3eb19f7bd44b8c45771fffa7b7651b55`.
 [PORTFOLIO.json](PORTFOLIO.json) records the proof modules, source commits,

@@ -8,6 +8,12 @@ the source versions, evidence and graph references. The core proof and
 checker files are unchanged. Independent correctness and priority review
 remain pending; no further sufficient class is added at this checkpoint.
 
+The [all-eight lane handoff](LANE_HANDOFF.md) identifies reusable inputs
+for the incoming lanes and separates this constructive-motion benchmark
+from researcher 4's extremal-map and rigid-mesh reduction. It also records
+why the original extreme benchmark is infinitesimally flexible and why
+the strict R2 neighborhood is non-extreme on each fixed source set.
+
 This packet gives explicit four- and five-dimensional contracting motions
 for a broad class of three-dimensional central reflections. It proves full
 Gaussian majorisation at every variance and threshold, and Kneser--Poulsen

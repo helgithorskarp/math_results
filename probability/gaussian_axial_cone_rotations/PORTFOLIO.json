@@ -340,5 +340,69 @@
     "historical_priority": "UNRESOLVED",
     "subclass_expansion": "DEFERRED_FOR_REVIEW",
     "prepublication_indexed_height": "6123"
+  },
+  "lane_handoff": {
+    "file": "LANE_HANDOFF.md",
+    "owning_lane": "6: geometric/internal-energy",
+    "standing_constraint": "Keep axial benchmark review-ready; no new overlapping sufficient subclass",
+    "incoming_lanes": [
+      {
+        "lane": "1",
+        "role": "independent semigroup/PDE evolution",
+        "reader_path": "../gaussian_majorisation_heat_profiles/PROOF.md",
+        "source_commit": "007ec4fddd5566a57106a7b0464b34fa8d7ad8f2",
+        "proof_sha256": "8c98aa80c136f18c36c3c2f1af216434bb2685fea6a54afff80bc64a362ebe02",
+        "scope": "Context or reduction; not a new positive premise of the frozen axial proof"
+      },
+      {
+        "lane": "2",
+        "role": "certified finite-atomic dependencies",
+        "reader_path": "../gaussian_majorisation_finite_orbit_obstruction/PROOF.md",
+        "source_commit": "5e686ec7c361a368e562496c23e06dc4706ba281",
+        "proof_sha256": "b85af8a5f69a3cc13c584160ce3e0f545876c6c3dcaee6fdbac41ef80a37a5dd",
+        "scope": "Context or reduction; not a new positive premise of the frozen axial proof"
+      },
+      {
+        "lane": "3",
+        "role": "measure-side localization/extremal reduction",
+        "reader_path": "../gaussian_prior_localization/PROOF.md",
+        "source_commit": "541d4b7de3d73b41444e5350378a8ecc43d914ea",
+        "proof_sha256": "1f7d2b83ea42269fd11d64c5cf398bd2d4378d22e0e9cbf1f421f463823d44e7",
+        "scope": "Context or reduction; not a new positive premise of the frozen axial proof"
+      },
+      {
+        "lane": "4",
+        "role": "extremal-map/deformation geometry",
+        "reader_path": "../gaussian_majorisation_extremal_maps/PROOF.md",
+        "source_commit": "c68eb50ea52c9b578e90e89b5954ea4c63a0d89a",
+        "proof_sha256": "11c8464f8e4a664f63dbd823a93a1ff2d6594f3e087bbc000f853e921b1d1a08",
+        "scope": "Context or reduction; not a new positive premise of the frozen axial proof"
+      }
+    ],
+    "benchmark_descriptions": {
+      "original_25_point": "Extreme after anchoring; two K13 tight clouds; rigidity ranks 66/66; existing R4 positive theorem",
+      "R2_neighborhood": "Strict contraction, non-extreme for each fixed source set; existing all-law all-variance positive theorem"
+    },
+    "evidence_status": "Written elementary benchmark applications and supplementary exact author rank calculation; no independent review",
+    "companion_analytic_interface": {
+      "reader_path": "../gaussian_majorisation_global_criterion/INTERFACES.md",
+      "source_commit": "68380d9e533f2acf259d2fcecebfc48735e92bb4",
+      "sha256": "4ef9e4dc9d39cf46aec901613ed6b7ba56cfca2a806b6dd469c74e8af0c9da5b",
+      "scope": "A strict-witness error budget preserving the prescribed anchor mass; no positive closure premise"
+    },
+    "companion_uniform_localization": {
+      "lane": "3",
+      "reader_path": "../gaussian_prior_localization/DEFECT_LOCALIZATION.md",
+      "source_commit": "4ed178725774e2fd3bb486f952825f58e52766cc",
+      "sha256": "57b179d6cdb98bab9a1fad42f12c441565c09880c3145588c6a39441d9c5180a",
+      "scope": "Defect-dependent support radius and original witness atom count; not an added-mesh-vertex bound or a prescribed-atom-preserving step; sign remains open"
+    },
+    "companion_finite_certificate": {
+      "lane": "8",
+      "reader_path": "../gaussian_majorisation_open_stability/CERTIFICATE_INTERFACE.md",
+      "source_commit": "9a1047c925763125c72fa862e9200c40717b9c25",
+      "sha256": "be277134f471d0e93bf20b8c6b993455dd28720f9c21c847481459ad0b175509",
+      "scope": "Signed fixed-variance input contract and per-strict-instance finite certificate; no uniform degree on the localized compact frontier or on a tight mesh"
+    }
   }
 }
