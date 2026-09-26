@@ -151,3 +151,14 @@ enumerations agree on the complete mixed quotient catalogue. Together
 with the weighted bound above, this gives `a_8=0` and `a_9>=11`.
 The remaining two-nine-plane lifting family is still unresolved here;
 the numerical interval remains 70--72.
+
+## Four collinear nine-plane normals at 72
+
+The [plane-pair refinement](four_collinear_nine_planes72/README.md) strengthens
+the count to at least twelve nine-point planes. An elementary projective
+argument then forces four collinear normals. Their affine planes reduce to
+two explicit arrangements, so every candidate has a quotient with four
+distinct profiles \(B=(9,15,16,16,16)\). This gives an additional global
+filter on the remaining lifting problem. Neither arrangement is excluded;
+the package includes exact controls showing the limits of aggregate pair
+counting and quotient weights. The interval remains 70--72.
