@@ -1,0 +1,75 @@
+{
+  "budgets_and_adversarial_control": {
+    "arrangement_recurrence_orders": 65,
+    "blind_zone_margin": "5/4",
+    "budgets": [
+      {
+        "N": 1,
+        "arrangement_cells": 61613748354,
+        "gap_bound": "delta * 2^(-M_N); exponent is not expanded",
+        "mesh_tetrahedra": 5306422463239896,
+        "mesh_vertices": 21225689852959584,
+        "planes": 7177
+      },
+      {
+        "N": 4,
+        "arrangement_cells": 91699808626434,
+        "gap_bound": "delta * 2^(-M_N); exponent is not expanded",
+        "mesh_tetrahedra": 90168788621607057936,
+        "mesh_vertices": 360675154486428231744,
+        "planes": 81942
+      },
+      {
+        "N": 7,
+        "arrangement_cells": 103089256944114526,
+        "gap_bound": "delta * 2^(-M_N); exponent is not expanded",
+        "mesh_tetrahedra": 1054021675129126795053360,
+        "mesh_vertices": 4216086700516507180213440,
+        "planes": 852030
+      },
+      {
+        "N": 10,
+        "arrangement_cells": 98388123923910338595,
+        "gap_bound": "delta * 2^(-M_N); exponent is not expanded",
+        "mesh_tetrahedra": 9904257024005253451602558960,
+        "mesh_vertices": 39617028096021013806410235840,
+        "planes": 8388764
+      }
+    ],
+    "mass_gap_controls": 60,
+    "zero_bisector_rejected": true
+  },
+  "repair": {
+    "axis_intercepts": [
+      "769/2400",
+      "769/1800",
+      "769/1440"
+    ],
+    "cone_edge_checks": 48,
+    "maximum_facets": 7,
+    "new_atom": [
+      "1/3",
+      "1/4",
+      "1/5"
+    ],
+    "new_cones": 8,
+    "old_new_boundary_vertex_checks": 24,
+    "orthogonality_entries": 72,
+    "preserved_old_atoms": 6,
+    "radial_shared_face_vertex_checks": 36,
+    "reflection_vertex_checks": 32,
+    "repair_volume": "454756609/4665600000",
+    "retained_pieces": 512,
+    "squared_norm": "769/3600",
+    "total_pieces": 520
+  },
+  "scope": "Exact finite controls; universal proof is EFFECTIVE_BOUND.md; no Gaussian sign.",
+  "seed": {
+    "edge_and_diagonal_checks": 14336,
+    "facets_per_piece": 6,
+    "pieces": 512,
+    "shared_face_vertex_checks": 5376,
+    "vertex_range_checks": 4096
+  },
+  "status": "EFFECTIVE_INDECOMPOSABLE_BOUND_CONTROLS_PASS"
+}
