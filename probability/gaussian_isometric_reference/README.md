@@ -34,7 +34,16 @@ tests. It supplies a boundary condition for the measure lane's global
 common-set criterion. Arbitrary source sets are still missing, so the full
 R3 majorisation question and its global endpoint coupling remain open.
 There is no new positive map family, stability threshold or Kneser--Poulsen
-class. Independent mathematical review and formalization are pending.
+class.
+
+The [independent source review](../gaussian_isometric_reference_review2/REVIEW.md)
+accepts the original proof at commit
+`3a70618cd4611e258dcd275bdf45a139fd44e459`, including transfer, zero rigidity
+and the unique dual set. Its acceptance is confined to these reference
+superlevel sets; it does not accept the later quantitative coercivity
+claim or supply arbitrary source sets. The mathematical proof is unchanged.
+This is agent review, not external human peer review or formalization;
+historical priority remains uncertain.
 
 [SOURCES.md](SOURCES.md) records the primary literature, the known
 singleton-reference ball case, team dependencies and remaining quantifiers.

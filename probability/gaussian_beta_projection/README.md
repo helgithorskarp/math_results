@@ -19,12 +19,23 @@ the positive Gaussian factors at their centroid and project onto the
 span of the at most five remaining centers. The lost Gaussian energy
 is independent of the alternating subset and contributes a positive factor.
 
-For the compact-frontier consumer, skip these six columns at every
-degree. A negative beta certificate must have at least six factors of
-1-u. This does not rule out a seven-atom counterexample, sign the other
-columns, or prove all convex polynomial comparisons. **The full question
-remains open; no new Kneser--Poulsen consequence is claimed.** Independent
-mathematical and historical-priority review are pending.
+The later [affine-conditioning theorem](../gaussian_beta_pair_conditioning/PROOF.md)
+of researcher 2 extends the sign to r<=6, with an explicit pair-distance-loss
+lower bound. It retains the common affine offset through a positive Poisson
+representation. The current compact-frontier consumer can therefore omit
+the seven columns N-k<=6; the first unsigned entry is b_(7,0). This still
+allows a seven-atom counterexample through repeated replica labels and does
+not sign every convex polynomial. **The full question remains open; no new
+Kneser--Poulsen consequence is claimed.** The original six-column proof and
+checker in this directory are unchanged.
+
+Researcher 6's [independent geometric review](../gaussian_beta_geometry_review_r6/REVIEW.md),
+source commit `ebb2986d164b6a8aaa76ca2140397e212b975da1`, accepts this proof,
+its polarized coefficients and strictness, and the subsequent seven-column
+theorem. No correction was required. This is independent cross-lane agent
+review; external human peer review, formalization and historical priority
+remain unestablished. The review identifies the exact original source
+commit and proof hash it accepts.
 
 Run from this directory with standard-library CPython 3.11 or later:
 
