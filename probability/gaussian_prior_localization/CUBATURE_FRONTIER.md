@@ -240,12 +240,13 @@ This improves the old denominator budget and its equality separation as
 A_k becomes smaller, but does not itself prove a source-profile sign.
 R8's current all-weight cell code still covers only N=5; its degree and
 reference-margin obligations are not removed by this smaller atom bound.
-A newer, separate [pair-conditioning author proof](../gaussian_beta_pair_conditioning/PROOF.md)
+A newer, separate [pair-conditioning proof](../gaussian_beta_pair_conditioning/PROOF.md)
 signs every b_(N,j) with N-j<=6 for arbitrary bounded laws. Those indices
 may be omitted from a sign search; the first remaining one is b_(7,0).
 This optional analytic pruning is not a premise here and leaves many
-indices of the required large row unsigned. Its independent review is
-pending. No radius-2k quantitative constant from that proof is silently
+indices of the required large row unsigned. An [independent geometric review](../gaussian_beta_geometry_review_r6/REVIEW.md)
+accepts that strip, without reviewing this cubature theorem. No radius-2k
+quantitative constant from the strip proof is silently
 applied to the radius-3k rational family.
 
 For a fully explicit enumeration bound, the number of ordered inputs is

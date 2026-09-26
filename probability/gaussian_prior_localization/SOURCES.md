@@ -367,7 +367,9 @@ The final source refresh also reads the [centroid-projection proof](../gaussian_
 and the stronger [pair-conditioning proof](../gaussian_beta_pair_conditioning/PROOF.md).
 The latter signs all beta indices with N-j<=6, so the first unsigned index
 is now b_(7,0). These are optional analytic pruning results, not premises
-of the smaller atom bound; their independent acceptance is not asserted.
+of the smaller atom bound. The [independent geometric review](../gaussian_beta_geometry_review_r6/REVIEW.md)
+accepts both sign strips within their stated scope; it does not review
+the localization or cubature theorem.
 The [independent second review](../gaussian_uniform_defect_bound_review2/REVIEW.md),
 committed at h6204, accepts the separate bound D<=7/50. That review does not
 cover the present cubature proof. No teammate computations were replayed.
