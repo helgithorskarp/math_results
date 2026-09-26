@@ -1,0 +1,47 @@
+{
+  "complete_release": {
+    "python_optimized": true,
+    "cases": 21,
+    "pairs": 676318125,
+    "seconds": 108.10682764699959,
+    "retained_pairs": 9276,
+    "models": 104
+  },
+  "sanitizer": {
+    "complete_cases": [
+      0,
+      18
+    ],
+    "pairs": 64411250,
+    "retained_pairs": 4304,
+    "models": 104,
+    "seconds": 68.58697065199885,
+    "identical_stage_counts_and_model_bytes": true
+  },
+  "independent_reference": {
+    "status": "MATCHING_REFERENCE_AUDIT_PASSED",
+    "cases": 2104,
+    "seed": 202609260703,
+    "solver_audit": {
+      "balanced": 3680,
+      "unbalanced": 39046,
+      "lower_matching_skipped": 624
+    },
+    "solver_audit_seconds": 161.28313212399735
+  },
+  "final_model_audit": {
+    "models": 104,
+    "affine_maps": 104,
+    "six_arc_histogram": {
+      "0": 9,
+      "1": 6,
+      "2": 15
+    }
+  },
+  "versions": {
+    "python": "3.12.14",
+    "gcc": "12.2.0",
+    "python_sat_optional": "1.9.dev15"
+  },
+  "trust": "Exact ordinary Python/C++ computation, not formalization; independent acceptance pending"
+}
