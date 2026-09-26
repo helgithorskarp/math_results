@@ -313,3 +313,5 @@ The complete universal argument is a written author proof using the cited
 localization and moment results. This supplement has no independent
 mathematical acceptance or formalization. It changes no prior theorem's
 source or constants and yields no new Kneser--Poulsen consequence.
+
+The final source refresh inspected R8's [weight-cell producer](../gaussian_beta_weight_certificate/certificate.py), source `a006501b012a7084676d632df4d73af1fdd92a58`. The integer-center output here decodes directly to its rational `Cell` input at squared-distance radius zero. Its current code has beta degree N=5 fixed and needs at least seven labels. The higher degree in the present global bound is not implemented or certified by that packet. No seven-distinct coefficient enclosure or full-row replay was duplicated in this pass.

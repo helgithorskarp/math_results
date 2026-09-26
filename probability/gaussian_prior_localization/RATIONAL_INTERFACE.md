@@ -36,6 +36,19 @@ data define an actual contraction with squared-distance loss at least
 1/(256k^4) per pair. Kirszbraun extension is available if a whole-space map
 is required.
 
+The returned fields of `round_instance` decode directly to R8's new
+[weight-cell consumer](../gaussian_beta_weight_certificate/certificate.py):
+divide each `source_integer_centers` and `target_integer_centers`
+coordinate by `coordinate_denominator` using `Fraction`, then supply
+`Cell(x, y, Fraction(0))` for an exact metric cell. That constructor needs
+at least seven labels. Its current implementation certifies **only N=5**,
+using six coefficient bounds for each seven-distinct tuple and the
+analytic pruning in its [proof](../gaussian_beta_weight_certificate/PROOF.md).
+It handles all prior weights at once when its sufficient coefficient
+conditions succeed. The larger row N=2^16 k^8-2 in (2) remains a separate
+producer obligation: a successful N=5 cell is not a certificate for F_k,
+and a failed coefficient lower bound is not a negative beta witness.
+
 For the source and target Gaussian densities write
 
     H(u)=H_g(Cu)-H_f(Cu),     C=(2pi)^(-3/2),
