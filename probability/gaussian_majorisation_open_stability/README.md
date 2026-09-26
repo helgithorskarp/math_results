@@ -1,5 +1,17 @@
 # Fixed-variance all-order stability for Gaussian majorisation
 
+The [finite-certificate interface](CERTIFICATE_INTERFACE.md) supplies a
+precise input contract for the finite-atomic lane: normalized moment
+intervals, a source peak bound from absolute moments, signed threshold
+endpoints, and bounded-law transport budgets. Its optional local beta
+error is O(N^(-1/2)) on a fixed positive threshold interval. It also records
+the exact equivalence between the full conjecture and certificate existence
+for every strict finite rational instance, using the existing reductions.
+No practical universal degree or new positive geometric class is claimed.
+The [exact arithmetic consumer](certificate_arithmetic.py) and
+[conformance record](INTERFACE_EXPECTED.json) keep external analytic evidence
+separate from arithmetic checks; no unknown Gaussian pair is certified.
+
 The [functional-inequality handoff](HANDOFF.md) consolidates the existing
 stability and finite-certificate results, with their exact quantifiers and
 their place among the full-question reductions, geometric classes and

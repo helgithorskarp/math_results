@@ -1,5 +1,68 @@
 # Sources, dependencies, and mathematical status
 
+## Current finite-certificate interface
+
+[CERTIFICATE_INTERFACE.md](CERTIFICATE_INTERFACE.md) is the functional-lane
+handoff to the finite-atomic producer. It preserves the earlier analytic
+proofs and supplies a local threshold modulus, an optional O(N^(-1/2)) beta
+localization bound, a source-peak bound from absolute normalized moments,
+and explicit transport budgets. Its all-strict-finite-instance equivalence
+to the full question is a composition of the credited rational reduction
+and interior theorem. It is not a new optimizer localization or an evolution
+argument, and gives no new positive class or certified unresolved instance.
+Independent mathematical review is pending.
+
+The local Lipschitz bound uses the mass-one layer-cake bound K=1/d,
+optionally improved by elementary Gaussian superlevel geometry;
+the beta-tail step is the one-sided variance inequality, proved directly
+in the annex. The source-peak bound uses the same completing-the-square
+identity as the Gaussian replica moment formula. No historical-priority
+claim is made for these standard tools. The purpose is a precise usable
+positive-certificate interface with its signs and normalizations exposed.
+
+The new [arithmetic module](certificate_arithmetic.py) consumes already
+certified moment intervals. It does not create their exponential enclosures,
+validate a signed tail premise, verify a map, or infer a Gaussian law from
+arbitrary scalar inputs. The polynomial control H(u)=u(1-u) is explicitly
+not asserted to be a Gaussian hinge gap. A separate exact Gaussian control
+certifies only a fourth-moment source peak bound. The audit passed standard
+and optimized CPython3.11.2 and3.12.14; report SHA256:
+`c052e7c5e9a9436dcf1dd4122294ed1ba261ecb088d6cf99fa692bb57cf4fffe`.
+The audit records182 beta identities,258 interval vertices,273 beta-tail
+controls,99 grid selections,16 direct Gaussian replica tuples, and rejection
+of malformed/missing/strict-boundary data. These checks supplement the written
+proof, not independent peer review or formalization.
+
+The inspected dependency revisions are pinned below. Existing graph entries
+identify the underlying result; later explanatory source updates retain their
+separate publication status. A missing graph entry
+means the public source was available but its contribution was not yet in
+the latest committed graph at index6123. Those sources are contextual, not
+uncommitted graph dependencies. The earlier handoff source d62369c is verified;
+its accepted graph summary likewise remains unconfirmed and is not assumed
+committed here.
+
+| Role | Source revision | Graph contribution |
+|---|---|---|
+| [bounded-law interior and original finite certificate](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_open_stability/BOUNDED_LAWS.md) | `52ef6716a271b31ac1046207764fc78d3db6165c` | `bafkreietfhclp4t463gjaeyh4ldpj2eeognjhwdphuywmdxyrepqwskdiu`, height 6102 |
+| [signed threshold endpoint and Gaussian transport bounds](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_open_stability/PROOF.md) | `52ef6716a271b31ac1046207764fc78d3db6165c` | `bafkreiaudc3oja6vhz7so5q5nc5ieqd7xcqvuxmnfa5jlu7dnnbpttgwhu`, height 6094 |
+| [normalized hinge moments and beta averages](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_global_criterion/PROOF.md) | `713e542a0bd389681a3fb4ee0c0b61a4f272f104` | `bafkreihp3see622wt3h2fxowhnp6cj4jtz5t53dxp5bmerz7aj5tfo2eeq`, height 6088 |
+| [strict finite rational-witness reduction](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_rank_abel/PROOF.md) | `f7c122d6a5ade217930d63da27e67f9a9e55a539` | `bafkreidnqtxulerp64z7i2syzjymc3beilgovd4gyfcu5h2mzmim5l5ytu`, height 5964 |
+| [common-set localization boundary](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_prior_localization/PROOF.md) | `541d4b7de3d73b41444e5350378a8ecc43d914ea` | `bafkreiam5rzibygouwnzj7aokt23ld4twuarsvrpr4ffdxvokehvtl7gd4`, height 6122 |
+| [team class and quantifier map](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_global_criterion/DEPENDENCIES.md) | `68380d9e533f2acf259d2fcecebfc48735e92bb4` | `bafkreidn73gtnin3ojvmr6hz6hipasfpf6hl7uhhu3szlauiqhwpkvte2q`, height 6120 |
+| [finite orthogonal averaging route closure](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_finite_orbit_obstruction/PROOF.md) | `5e686ec7c361a368e562496c23e06dc4706ba281` | Public source; graph not yet visible at this refresh |
+| [separate heat-profile lane](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_heat_profiles/PROOF.md) | `007ec4fddd5566a57106a7b0464b34fa8d7ad8f2` | Public source; graph not yet visible at this refresh |
+| [current eight-lane input/output handoff](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_global_criterion/INTERFACES.md) | `68380d9e533f2acf259d2fcecebfc48735e92bb4` | Public source; graph not yet visible at this refresh |
+| [distinct tight rigid-mesh test class](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_extremal_maps/PROOF.md) | `c68eb50ea52c9b578e90e89b5954ea4c63a0d89a` | Public source; graph not yet visible at this refresh |
+| [uniform defect localization with its own compactness quantifiers](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_prior_localization/DEFECT_LOCALIZATION.md) | `4ed178725774e2fd3bb486f952825f58e52766cc` | Public source; graph not yet visible at this refresh |
+
+These source snapshots were checked after the all-eight handoff. Researcher2
+owns certified finite-atomic dependencies; researchers1 and3 retain evolution
+and measure-side localization. The interface has no all-law radius or new
+Kneser--Poulsen implication. The full R3 problem remains open.
+
+## Preserved earlier source notes
+
 The current [functional-lane handoff](HANDOFF.md) consolidates these results
 with the later ordered-weight, matrix-path, axial robustness and fixed-atom sources.
 [HANDOFF_SOURCES.json](HANDOFF_SOURCES.json) records the inspected revisions
