@@ -1,0 +1,111 @@
+{
+  "algebra": {
+    "abstract_non_Gaussian_Hankel_determinant": "-1/2700",
+    "negative_prefix_interval": [
+      "-2301966193229361403051/1000000000000000000000000",
+      "-46039323864587228061/20000000000000000000000"
+    ],
+    "whole_interval_polynomial_lower_bound": "9276792454961/400000000000"
+  },
+  "arithmetic": "exact rational and outward rational intervals",
+  "averaging_identity_checks": 108,
+  "dependencies": {
+    "gaussian_majorisation_hankel_transport/bounds.py": "60ff5166c623797055f37442d5532b1a29c06275b8871fa4fdf34dcd12f54fc7",
+    "gaussian_majorisation_hankel_transport/certify.py": "71af430dbbecc055471b9f72b288cf4ff4d60ff797aacce8acd08ce7ca14551e",
+    "gaussian_majorisation_hankel_transport/example.json": "0c96a1d144417e0a4262e7d6d8a5a1d6d206d10679d627a474fcad16c16bc8c9",
+    "gaussian_majorisation_rank_abel/flap_fixture.json": "2edec28b8738cb0713c0ba70e4e8ec80147857503fbe2d801b43dbef4861ac08"
+  },
+  "fixtures": [
+    {
+      "degree_nine_energy_gap": [
+        "102792814356428204791/250000000000000000000000",
+        "82234251485142563833/200000000000000000000000"
+      ],
+      "name": "fold at degree-independent threshold",
+      "new_curvature_margins": [
+        [
+          "81519555920056395623/100000000000000000000000",
+          "815195559200563956231/1000000000000000000000000"
+        ],
+        [
+          "58574428061427493757/500000000000000000000000",
+          "23429771224570997503/200000000000000000000000"
+        ],
+        [
+          "9177860078443950163/500000000000000000000000",
+          "18355720156887900327/1000000000000000000000000"
+        ],
+        [
+          "3083567310998194339/1000000000000000000000000",
+          "154178365549909717/50000000000000000000000"
+        ],
+        [
+          "68385666276297031/125000000000000000000000",
+          "547085330210376249/1000000000000000000000000"
+        ],
+        [
+          "2027290275921521/20000000000000000000000",
+          "101364513796076051/1000000000000000000000000"
+        ]
+      ],
+      "positive_arbitrary_offset_minors": 56,
+      "radius_squared": "1",
+      "replicas_through": 9,
+      "strengthened_quartic_margin": [
+        "2352530107876160447/1000000000000000000000000",
+        "36758282935565007/15625000000000000000000"
+      ],
+      "variance": "2/5"
+    },
+    {
+      "name": "fold at new quartic threshold",
+      "new_curvature_margins": [
+        [
+          "362203056003749979659/1000000000000000000000000",
+          "18110152800187498983/50000000000000000000000"
+        ]
+      ],
+      "radius_squared": "1",
+      "replicas_through": 4,
+      "strengthened_quartic_margin": [
+        "1557803906807807541/1000000000000000000000000",
+        "778901953403903771/500000000000000000000000"
+      ],
+      "variance": "17/60"
+    },
+    {
+      "name": "simplex flap at degree-independent threshold",
+      "new_curvature_margins": [
+        [
+          "96848475273964252502887/500000000000000000000000",
+          "7747878021917140200231/40000000000000000000000"
+        ]
+      ],
+      "positive_arbitrary_offset_minors": 1,
+      "radius_squared": "8",
+      "replicas_through": 4,
+      "strengthened_quartic_margin": [
+        "1839058157583310049/200000000000000000000000",
+        "4597645393958275123/500000000000000000000000"
+      ],
+      "variance": "16/5"
+    }
+  ],
+  "scope": "Universal theorems rely on PROOF.md; finite cases alone prove no majorisation claim.",
+  "sharpness": {
+    "failed_constant_1_over_13": {
+      "lambda": "99/100",
+      "negative_margin": [
+        "-20327835800307654994607/250000000000000000000000000000",
+        "-81311343201230619978427/1000000000000000000000000000000"
+      ],
+      "radius_squared": "1",
+      "variance": "100"
+    },
+    "independent_ordered_replica_Taylor_checks": 3,
+    "non_log_convex_controls": 4,
+    "sharp_bound_controls": 18
+  },
+  "sparse_moment_controls": 27,
+  "status": "ALL_FINITE_CHECKS_PASSED"
+}
