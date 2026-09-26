@@ -1,0 +1,165 @@
+{
+  "dilation_controls": [
+    {
+      "center_squared_loss": 5,
+      "cube_margin": -5,
+      "dilation": 1,
+      "strict_checker_rejects": true
+    },
+    {
+      "center_squared_loss": 20,
+      "cube_margin": 0,
+      "dilation": 2,
+      "strict_checker_rejects": true
+    },
+    {
+      "center_squared_loss": 45,
+      "cube_margin": 15,
+      "dilation": 3,
+      "strict_checker_rejects": false
+    }
+  ],
+  "positive_controls": [
+    {
+      "N": 8,
+      "corner_pairs_checked": 1792,
+      "minimum_cube_margin": 12144,
+      "minimum_source_linf_separation": 128,
+      "minimum_target_linf_separation": 62,
+      "name": "eight_cube_rank_six_control",
+      "pair_count": 28,
+      "paired_affine_rank": 6,
+      "source_centers": [
+        [
+          -64,
+          -64,
+          -64
+        ],
+        [
+          -64,
+          -64,
+          64
+        ],
+        [
+          -64,
+          64,
+          -64
+        ],
+        [
+          -64,
+          64,
+          64
+        ],
+        [
+          64,
+          -64,
+          -64
+        ],
+        [
+          64,
+          -64,
+          64
+        ],
+        [
+          64,
+          64,
+          -64
+        ],
+        [
+          64,
+          64,
+          64
+        ]
+      ],
+      "target_centers": [
+        [
+          -31,
+          -31,
+          -31
+        ],
+        [
+          -33,
+          -33,
+          33
+        ],
+        [
+          -33,
+          33,
+          -33
+        ],
+        [
+          -31,
+          31,
+          31
+        ],
+        [
+          33,
+          -33,
+          -33
+        ],
+        [
+          31,
+          -31,
+          31
+        ],
+        [
+          31,
+          31,
+          -31
+        ],
+        [
+          33,
+          33,
+          33
+        ]
+      ]
+    },
+    {
+      "N": 3,
+      "corner_pairs_checked": 192,
+      "minimum_cube_margin": 7400,
+      "minimum_source_linf_separation": 100,
+      "minimum_target_linf_separation": 50,
+      "name": "rational_equal_weight_splitting",
+      "pair_count": 3,
+      "paired_affine_rank": 2,
+      "source_centers": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          3000,
+          0,
+          0
+        ],
+        [
+          3100,
+          0,
+          0
+        ]
+      ],
+      "target_centers": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          -2000,
+          0,
+          0
+        ],
+        [
+          -1950,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "scope": "Geometry and exact arithmetic only; no Gaussian hinge sign.",
+  "status": "LATTICE_CUBE_CONTRACTION_CONTROLS_PASS",
+  "thickening_error_upper_bound": "sqrt(3)/(q sqrt(2 pi)) < 1/q"
+}
