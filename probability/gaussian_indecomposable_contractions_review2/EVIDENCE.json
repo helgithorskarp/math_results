@@ -1,0 +1,26 @@
+{
+  "checker_boundary": "Exact fixture intervals and all-depth regular-simplex flap identities; no universal Brehm construction or Gaussian sign computation.",
+  "date_utc": "2026-09-26",
+  "graph_target": "bafkreihtkvrmyjs4cswetyjge4rpwvppjunbtmd4tnrw3o65cwvfa5wyey",
+  "independent_commands": [
+    "python3 probability/gaussian_indecomposable_contractions_review2/independent_check.py",
+    "python3 -O probability/gaussian_indecomposable_contractions_review2/independent_check.py"
+  ],
+  "reviewed_commands": [
+    "python3 probability/gaussian_indecomposable_contractions/verify.py",
+    "python3 -O probability/gaussian_indecomposable_contractions/verify.py",
+    "python3 probability/gaussian_indecomposable_contractions/verify.py --emit"
+  ],
+  "reviewed_packet_sha256": {
+    "EXPECTED.json": "199990784f6564a05139b53ac54102664fb80ca487ac48d4119d9c9d215de895",
+    "PROOF.md": "bc4eed76242de833971fa79bb28da984ed9e021262f852e2a3d24e320c0aa5ad",
+    "README.md": "cbf2711f6bb67dd3b66ee992b9066d2cb1d4f5b592df5e32b63a7d16b4ed2f98",
+    "SHA256SUMS": "b004dfdbfb7feee29c92b7fc1f923ce18c78395f1da92e0d1a94690a4951b99b",
+    "SOURCES.md": "72f1ed4a113e74a0c8e8de5be74fa9ee591a802e0b0072f20cabca6c14633eb5",
+    "verify.py": "3239fd70f6c23fef6e63de89d79506bde0515938253127d368c636e385999942"
+  },
+  "source_commit": "4518e569424cbac04083e6cb9497cc97991cf301",
+  "verdict": "accept",
+  "confidence": "high",
+  "verdict_scope": "Theorem A and the stated union/intersection reductions, not the missing sign on the reduced class and not the full Gaussian conjecture."
+}

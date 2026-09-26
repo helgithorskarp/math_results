@@ -1,0 +1,279 @@
+{
+  "fixtures": [
+    {
+      "anchor_sets": [
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ]
+      ],
+      "binary_candidates": 4,
+      "cover_edges": [
+        [
+          "00",
+          "01"
+        ],
+        [
+          "00",
+          "10"
+        ],
+        [
+          "01",
+          "11"
+        ],
+        [
+          "10",
+          "11"
+        ]
+      ],
+      "input_distinct": 6,
+      "interval_states": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "labels": 6,
+      "name": "two_independent_caps",
+      "output_distinct": 5,
+      "saturated_chains": [
+        [
+          "00",
+          "01",
+          "11"
+        ],
+        [
+          "00",
+          "10",
+          "11"
+        ]
+      ]
+    },
+    {
+      "anchor_sets": [
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "binary_candidates": 8,
+      "cover_edges": [
+        [
+          "000",
+          "111"
+        ]
+      ],
+      "input_distinct": 7,
+      "interval_states": [
+        "000",
+        "111"
+      ],
+      "labels": 7,
+      "name": "three_cyclic_caps",
+      "output_distinct": 7,
+      "saturated_chains": [
+        [
+          "000",
+          "111"
+        ]
+      ]
+    },
+    {
+      "anchor_sets": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "binary_candidates": 4096,
+      "cover_edges": [
+        [
+          "000000000000",
+          "111111111111"
+        ]
+      ],
+      "input_distinct": 16,
+      "interval_states": [
+        "000000000000",
+        "111111111111"
+      ],
+      "labels": 16,
+      "name": "classical_flaps_depth_1",
+      "output_distinct": 10,
+      "saturated_chains": [
+        [
+          "000000000000",
+          "111111111111"
+        ]
+      ]
+    },
+    {
+      "anchor_sets": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "binary_candidates": 4096,
+      "cover_edges": [
+        [
+          "000000000000",
+          "111111111111"
+        ]
+      ],
+      "input_distinct": 16,
+      "interval_states": [
+        "000000000000",
+        "111111111111"
+      ],
+      "labels": 16,
+      "name": "classical_flaps_depth_2",
+      "output_distinct": 16,
+      "saturated_chains": [
+        [
+          "000000000000",
+          "111111111111"
+        ]
+      ]
+    }
+  ],
+  "flap_identities": {
+    "common_tip_pairs_forcing_all_flap_signs_equal": 12,
+    "core_flap_coefficient_cases": 48,
+    "endpoint_cross_flap_squared_distance_coefficient": 8,
+    "flap_pair_coefficient_cases": 66,
+    "mixed_same_flap_extra_squared_distance_coefficient": 12,
+    "opposite_cross_flap_squared_distance_coefficient": 4,
+    "same_flap_pairs_forcing_one_sign_per_flap": 12
+  },
+  "scope": "Definition-level exact fixture intervals and all-depth flap identities only; Brehm extension and the universal reduction remain written-proof obligations."
+}
