@@ -66,6 +66,8 @@ The remaining proof-checking trust is ordinary DRAT-trim execution and
 the documented patch. This is independent of the SAT solver, but it is
 not a formally verified proof checker. A reader may replay every trace
 with the stock checker to avoid trusting the allocation patch.
+Use [recheck.py](recheck.py) with a new output directory to keep the
+original logs and checker identities intact; see [CORPUS.md](CORPUS.md).
 
 After the first full range completed, its hardest production case, index
 20,750, also passed a fresh stock-checker replay. Its 84,295-conflict

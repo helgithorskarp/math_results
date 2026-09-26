@@ -28,8 +28,13 @@ The written proof and reproducible checks have three separate parts:
    unknown or rejected cases. A partial range or sample is not a complete
    review of this claim.
 
-`replay.py --recheck-existing` rechecks saved proofs with a selected
-checker. It validates saved records before reuse. The separate `audit.py`
+For existing proofs, use `recheck.py` to write every fresh checker result
+into a new directory while preserving all four original case files. The
+[corpus guide](CORPUS.md) specifies the command, block hashes and complete
+success condition. The original large corpus is preserved privately;
+readers with only the repository can instead generate fresh proofs.
+The older `replay.py --recheck-existing` replaces saved checker logs and
+identities and is appropriate only for disposable copies. The separate `audit.py`
 regenerates formulas and checks evidence integrity but does not infer
 DRAT validity from logs or hashes alone. Missing and overlapping range
 audits are rejected by `merge_audits.py`.

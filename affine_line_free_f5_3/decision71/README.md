@@ -86,7 +86,10 @@ For four processes, partition the cases into these half-open intervals:
 Use the same output directory with disjoint ranges. Every completed case
 is saved atomically. Repeating a range checks saved input and proof hashes
 before resuming. Add `--recheck-existing` to invoke the selected proof
-checker again on saved traces. A partial range reports incomplete family
+checker again on saved traces in a disposable generated directory; this
+option replaces saved checker logs and identities. For preservation of
+an existing corpus, use the separate [recheck procedure](CORPUS.md).
+A partial range reports incomplete family
 coverage; the final audit must cover all indices exactly once.
 
 The audit regenerates every formula from the published source, compares
@@ -141,6 +144,9 @@ the proof traces, plus formulas and logs. Large outputs stay outside Git.
 The [review guide](REVIEW_GUIDE.md) identifies the mathematical and
 computational obligations for an independent replay. [VALIDATION.json](VALIDATION.json)
 records the completed production ranges and validation scope.
+The [corpus guide](CORPUS.md) distinguishes public compact evidence from
+the privately preserved original traces, specifies the digest format,
+and gives a recheck command that writes fresh evidence separately.
 
 ## Scope and dependencies
 

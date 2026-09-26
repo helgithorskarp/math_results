@@ -1,0 +1,72 @@
+{
+  "status": "AUTHOR_PRESERVATION_SUPPLEMENT_VALIDATED",
+  "checked_utc": "2026-09-26T15:17:49.772961+00:00",
+  "complete_global_recheck": false,
+  "independent_peer_acceptance": false,
+  "historical_manifest_unchanged": true,
+  "historical_manifest_sha256": "ec7fabe454c7a0e6297f3347de038028602a1aae81efd377ff4d938883af31c4",
+  "bounded_stock_recheck": {
+    "status": "PARTIAL_EXISTING_CORPUS_DRAT_RECHECKED",
+    "complete_family": false,
+    "start": 0,
+    "stop": 1000,
+    "fresh_checks": 1000,
+    "reused_acceptances": 0,
+    "domain_sha256": "02727db9fb02d60a8597f84329f7376bba2c43422d63241da1c251fde97e4eb2",
+    "reference_manifest_sha256": "ec7fabe454c7a0e6297f3347de038028602a1aae81efd377ff4d938883af31c4",
+    "input_and_proof_blocks_match_reference": true,
+    "original_source_hashes_unchanged": true,
+    "original_checker_counts": {
+      "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a": 1000
+    },
+    "recheck_checker_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+    "proof_bytes": 153604140,
+    "blocks": [
+      {
+        "start": 0,
+        "stop": 1000,
+        "count": 1000,
+        "ordered_cnf_hashes_sha256": "169294d6d2cb7d430a6d592dd06e48003806830bb626b7b9da1b9c08d9fd8556",
+        "ordered_proof_hashes_sha256": "ad9534c3b51b34b556820c3c60ecc4cb27b9615b07a9f45562dfd11a30f42665",
+        "proof_bytes": 153604140,
+        "ordered_original_record_hashes_sha256": "b354ff061f6f3bbdaeaaf9e4797bd233ad989cbc127c5e13f73eac7b8d1fbfb4",
+        "ordered_original_log_hashes_sha256": "6ba8567b7e91c7a9b17777088c62bd050765d3fbf678d6e6ac4a455b0340617f"
+      }
+    ],
+    "python_version": "3.12.14",
+    "driver_source_hashes": {
+      "recheck.py": "7fdc4bb40f2a88419129f621acd3e961cfa16a9245cf411dcdfb422ee82df38f",
+      "evidence.py": "1c79ceac506be0f0fea20d975d451cb1d1fbcd72f5560ca64591de2e2150b3ac",
+      "point_model.py": "328a8392e44fa33acd2595220659fa46d0e538229f45d6527ace4aa5a220c427"
+    },
+    "seconds": 291.19492285199885,
+    "scope": "Fresh DRAT checks and source integrity; no new mathematical reduction or peer acceptance"
+  },
+  "pipeline_controls": {
+    "status": "SOURCE_PRESERVING_RECHECK_CONTROLS_PASSED",
+    "fresh_valid_cases": [
+      0,
+      109675
+    ],
+    "original_four_files_per_case_unchanged": true,
+    "original_checkers_by_case": {
+      "0": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+      "109675": "4cb27fe1b1f45ea9441f5dbe271f2b279305621c3019195b7ea4060631c18eb2"
+    },
+    "damaged_case_rejections": [
+      "missing",
+      "cnf",
+      "unknown",
+      "proof",
+      "old_log"
+    ],
+    "invalid_range_rejections": 4,
+    "invalid_manifest_rejections": 4,
+    "source_output_overlap_rejections": 3,
+    "existing_output_and_record_rejected": true,
+    "recheck_checker_sha256": "9c09fe813af0b52f58d923837a1bc3ca5e6017987c1e9530d62fa5b4f018412a",
+    "scope": "Author pipeline controls, not complete proof replay or peer acceptance"
+  },
+  "validation_source_sha256": "223a1953a2174115df2a061cf326d2fbdfb7472b14ba9315883e9efea7453f1b",
+  "scope": "The original complete 109676-case author proof is unchanged. This supplement tests preservation and fresh DRAT checking on a 1000-case block plus boundary controls; it does not claim complete stock replay or independent acceptance."
+}
