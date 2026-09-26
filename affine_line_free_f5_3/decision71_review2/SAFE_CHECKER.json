@@ -1,0 +1,26 @@
+{
+  "status": "SAFE_CHECKER_SANITIZER_AND_ADVERSARIAL_CONTROLS_PASSED",
+  "upstream_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "upstream_source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+  "patch_sha256": "bb18260a983bdcbf58a997002291d02ac3bacf266a4f151468f17f8dedee3d72",
+  "safe_source_sha256": "6658bb2543bbf9c556171795f735a2c4418c9dd42c4aaea8281c16c6388afffb",
+  "safe_release_sha256": "e2076223bbd2a2bd2b60f90eaabb359b9d020fd6c5869bb40fe23c743060b34d",
+  "safe_sanitized_sha256": "66b10b6e6b7da8ce4d9bee51d77199c90679ab326f1127f67c1dc45bc6cf771b",
+  "build_source_path": "/tmp/frontier-reviewer2-drat-safe.c",
+  "sanitizer_build_cwd": "/scratch/research-team-jsb/workspaces/frontier-reviewer-2/math_results/affine_line_free_f5_3/decision71_adversarial_controls",
+  "release_flags": ["-std=gnu99", "-O2"],
+  "sanitizer_flags": ["-std=gnu99", "-O1", "-g", "-fsanitize=address,undefined", "-fno-omit-frame-pointer", "-no-pie"],
+  "sanitizer_environment": {
+    "ASAN_OPTIONS": "detect_leaks=0:halt_on_error=1",
+    "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1"
+  },
+  "complete_production_proofs_verified_by_release": 109676,
+  "production_proofs_cleanly_verified_by_sanitizer": [0, 20750, 109675],
+  "adversarial_valid_proofs_cleanly_verified_by_sanitizer": 8,
+  "adversarial_wrong_inputs_normally_rejected_by_sanitizer": 8,
+  "known_defects_addressed": [
+    "raw parser buffers passed to a metadata-aware warning printer",
+    "signed left shift of negative dependency identifiers"
+  ],
+  "scope": "The patch changes diagnostics and a checked dependency encoding, not DRAT proof rules, propagation, deletion matching, or the success condition. The checker is not formally verified."
+}

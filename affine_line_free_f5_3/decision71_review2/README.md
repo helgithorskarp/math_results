@@ -19,8 +19,9 @@ certificate manifest, or finite domain.
 
 This verdict does not follow merely from an accepted supporting lemma.
 It combines a complete finite-domain replay, a definition-level geometric
-audit, and a fresh all-case proof run using the unmodified official
-DRAT-trim checker.
+audit, a fresh all-case proof run using the unmodified official DRAT-trim
+checker, and a second all-case run with the two subsequently reported C
+undefined-behaviour/diagnostic defects narrowly repaired.
 
 ## Evidence produced in this review
 
@@ -76,6 +77,34 @@ trace paired with a satisfiable 70-point formula, damaged records,
 budget-one UNKNOWN, missing cases, and partial-family summaries were all
 rejected.
 
+## Checker hardening after the initial replay
+
+A late graph refresh exposed two upstream DRAT-trim implementation defects.
+The metadata-aware warning printer reads at index `-1`, but two parser
+warnings passed it a raw allocation with no metadata prefix.  Separately,
+dependency bookkeeping left-shifted negative identifiers, which is undefined
+in C.  Adversarial SAT wrong-input controls reproduce both diagnostics; no
+false proof acceptance or mathematical counterexample was found.
+
+[`safe-checker.patch`](safe-checker.patch) closes exactly these boundaries:
+the two raw-buffer warnings use a raw-clause printer, and dependency encoding
+uses checked `long` multiplication before conversion to `int`.  It does not
+change DRAT proof rules, propagation, deletion matching, warning guards,
+malformed-prefix control flow, or the success condition.  Applying the patch
+to the pinned upstream source gives source SHA-256
+`6658bb2543bbf9c556171795f735a2c4418c9dd42c4aaea8281c16c6388afffb`.
+
+The complete independent checker was then run again with this pinned build.
+All 109,676 production proofs passed, with the same CNF and proof digests;
+see [`SAFE_RESULT.json`](SAFE_RESULT.json).  An ASan/UBSan build cleanly
+verified cases 0, 20,750 and 109,675, cleanly verified all eight adversarial
+valid proofs, and normally rejected all eight paired SAT wrong inputs.  Leak
+detection was disabled because upstream leaves exit-time allocations; address
+and undefined-behaviour checks remained enabled and halt on a finding.  Exact
+build identities and scope are in [`SAFE_CHECKER.json`](SAFE_CHECKER.json),
+and [`safe_checker_controls.py`](safe_checker_controls.py) reproduces the
+instrumented controls.
+
 ## Mathematical scope
 
 The accepted reduction uses two nonparallel low planes, puts them at
@@ -129,11 +158,29 @@ python3 independent_check.py \
   --out /tmp/decision71-independent.json
 ```
 
-The review used Python 3.11.2, Python-SAT 1.9.dev15, GCC 12.2.0, and
-unmodified DRAT-trim.  The complete proof replay took about 85 minutes
-wall time under heavy shared-host load; the independent second proof check
-took 3,178 seconds.  The 20 GB proof corpus, CNFs, logs, binaries, and
-build products are intentionally omitted from Git.
+For the hardened replay, apply and build the pinned checker source, then pass
+its expected binary hash explicitly:
+
+```sh
+patch -o /tmp/frontier-reviewer2-drat-safe.c /path/to/drat-trim.c safe-checker.patch
+gcc -std=gnu99 -O2 /tmp/frontier-reviewer2-drat-safe.c \
+  -o /tmp/frontier-reviewer2-drat-safe
+python3 independent_check.py \
+  --source ../decision71 \
+  --domain /tmp/decision71-reduction/orbits.json \
+  --proofs /tmp/decision71-proofs \
+  --drat-trim /tmp/frontier-reviewer2-drat-safe \
+  --checker-sha256 e2076223bbd2a2bd2b60f90eaabb359b9d020fd6c5869bb40fe23c743060b34d \
+  --jobs 16 \
+  --out /tmp/decision71-safe-independent.json
+```
+
+The review used Python 3.11.2, Python-SAT 1.9.dev15, GCC 12.2.0, stock
+DRAT-trim, and the hash-pinned hardened build.  The complete proof generation
+and first checks took about 85 minutes wall time under heavy shared-host load;
+the stock and hardened independent rechecks took 3,178 and 2,859 seconds.
+The 20 GB proof corpus, CNFs, logs, binaries, and build products are
+intentionally omitted from Git.
 
 ## Trust boundary and novelty
 
@@ -141,8 +188,10 @@ The proved fact is the exact endpoint 70.  The checkers guarantee complete
 coverage of the published finite domain and DRAT-certified UNSAT for each
 direct formula.  Remaining trust lies in the written affine/incidence
 reduction, ordinary Python and C++ execution, exact finite-field arithmetic,
-and stock DRAT-trim.  Neither the theorem nor the proof checker has been
-formalized in a proof assistant.
+and the narrowly repaired DRAT-trim implementation.  The full safe-checker
+replay and sanitizer/adversarial controls materially reduce the two known
+implementation risks, but the checker is not formally verified.  Neither
+the theorem nor the checker has been formalized in a proof assistant.
 
 A bounded primary-source search found the published 70-point construction
 and previous upper bound below 74, plus newer asymptotic construction work,

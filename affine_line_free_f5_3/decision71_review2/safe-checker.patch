@@ -1,0 +1,23 @@
+--- drat-trim.c
++++ drat-trim-safe.c
+@@ -24,0 +25 @@
++#include <limits.h>
+@@ -81,0 +83,4 @@
++static inline void printRawClause (int* clause) {
++  printf ("[raw] ");
++  while (*clause) printf ("%i ", *clause++); printf ("0\n"); }
++
+@@ -144,2 +149,5 @@
+-//    printf("c adding dep %i\n", (dep << 1) + forced);
+-    S->dependencies[S->nDependencies++] = (dep << 1) + forced; } }
++    long encoded = 2L * dep + forced;
++    if (encoded < INT_MIN || encoded > INT_MAX) {
++      printf ("c ERROR: dependency encoding overflow\n"); exit (ERROR); }
++//    printf("c adding dep %li\n", encoded);
++    S->dependencies[S->nDependencies++] = (int) encoded; } }
+@@ -1171 +1179 @@
+-          printClause (buffer); }
++          printRawClause (buffer); }
+@@ -1183 +1191 @@
+-                printf ("\rc WARNING: deleted clause on proof line %i does not occur: ", fileLine); printClause (buffer); }
++                printf ("\rc WARNING: deleted clause on proof line %i does not occur: ", fileLine); printRawClause (buffer); }

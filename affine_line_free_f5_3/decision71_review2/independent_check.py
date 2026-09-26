@@ -151,6 +151,7 @@ def main():
     parser.add_argument("--domain", type=Path, required=True)
     parser.add_argument("--proofs", type=Path, required=True)
     parser.add_argument("--drat-trim", type=Path)
+    parser.add_argument("--checker-sha256", default=STOCK_DRAT_SHA256)
     parser.add_argument("--jobs", type=int, default=1)
     parser.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
@@ -158,6 +159,12 @@ def main():
         parser.error("--jobs must be positive")
     recheck = args.drat_trim is not None
     checker = args.drat_trim.resolve() if recheck else None
+    if len(args.checker_sha256) != 64:
+        parser.error("--checker-sha256 must be a SHA-256 hexadecimal digest")
+    try:
+        bytes.fromhex(args.checker_sha256)
+    except ValueError:
+        parser.error("--checker-sha256 must be a SHA-256 hexadecimal digest")
     expected = json.loads((Path(__file__).with_name("EXPECTED.json")).read_text())
     if (expected["domain_sha256"] != DOMAIN_SHA256
             or expected["cases"] != COUNT
@@ -168,8 +175,8 @@ def main():
     for name, wanted in expected["reviewed_source_sha256"].items():
         if file_sha256(args.source / name) != wanted:
             raise ValueError(f"reviewed source file changed: {name}")
-    if recheck and file_sha256(checker) != STOCK_DRAT_SHA256:
-        raise ValueError("selected checker is not the pinned stock DRAT-trim binary")
+    if recheck and file_sha256(checker) != args.checker_sha256:
+        raise ValueError("selected checker does not have the pinned binary hash")
     if file_sha256(args.domain) != DOMAIN_SHA256:
         raise ValueError("representative domain hash mismatch")
     domain = json.loads(args.domain.read_text())
@@ -203,7 +210,9 @@ def main():
                       flush=True)
 
     result = {
-        "status": ("COMPLETE_INDEPENDENT_STOCK_DRAT_RECHECK_PASSED"
+        "status": (("COMPLETE_INDEPENDENT_STOCK_DRAT_RECHECK_PASSED"
+                    if args.checker_sha256 == STOCK_DRAT_SHA256
+                    else "COMPLETE_INDEPENDENT_PINNED_DRAT_RECHECK_PASSED")
                    if recheck else "COMPLETE_INDEPENDENT_CORPUS_AUDIT_PASSED"),
         "cases": COUNT,
         "proofs_rechecked": COUNT if recheck else 0,
@@ -218,7 +227,7 @@ def main():
         "hardest_index": hardest[1],
         "ordered_cnf_hashes_sha256": all_cnf.hexdigest(),
         "ordered_proof_hashes_sha256": all_proofs.hexdigest(),
-        "checker_sha256": STOCK_DRAT_SHA256 if recheck else None,
+        "checker_sha256": args.checker_sha256 if recheck else None,
         "seconds": time.monotonic() - begun,
     }
     temporary = args.out.with_name(args.out.name + ".tmp")
