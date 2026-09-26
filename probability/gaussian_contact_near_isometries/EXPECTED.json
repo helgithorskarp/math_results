@@ -1,0 +1,71 @@
+{
+  "analytic_theorem_formalized": false,
+  "arithmetic": "fractions.Fraction; no floating point",
+  "auxiliary_gaussian_core": {
+    "aligned_delta": "1/10000000000",
+    "conditional_kappa": "1/2000000",
+    "core_margin_lower_bound": "1/19200000000000000",
+    "exponent": "31419/20000",
+    "moment_tail_upper_bound": "740152825310300019022126719/1427247692705959881058285969449495136382746624",
+    "pair_loss_lower_bound": "3/100000000000000",
+    "profile_gap_lower_bound": "1360984871531447755614793484554953705199/26133685779528073993987169850759798639820800000000000000",
+    "q_lower_bound": "1/9",
+    "tail_upper_bound": "7896877864610378476472739/1427247692705959881058285969449495136382746624"
+  },
+  "fixtures": [
+    {
+      "aligned_displacement_upper_bound": "0",
+      "gram_norm_squared": "0",
+      "labels": 6,
+      "mean_square_error": "0",
+      "name": "identity",
+      "pair_loss": "0"
+    },
+    {
+      "aligned_displacement_upper_bound": "1/2",
+      "gram_norm_squared": "22033/186624",
+      "labels": 6,
+      "mean_square_error": "61/432",
+      "name": "anisotropic",
+      "pair_loss": "251/216"
+    },
+    {
+      "aligned_displacement_upper_bound": "5/3",
+      "gram_norm_squared": "13/81",
+      "labels": 6,
+      "mean_square_error": "5/9",
+      "name": "fold_with_centering",
+      "pair_loss": "2/9"
+    },
+    {
+      "aligned_displacement_upper_bound": "13/6",
+      "gram_norm_squared": "3049/1296",
+      "labels": 8,
+      "mean_square_error": "61/36",
+      "name": "cube_fold_and_scale",
+      "pair_loss": "95/18"
+    },
+    {
+      "aligned_displacement_upper_bound": "3/1000000000000",
+      "gram_norm_squared": "27999999999928000000000049/4500000000000000000000000000000000000000000000000",
+      "labels": 6,
+      "mean_square_error": "7/1500000000000000000000000",
+      "name": "near_identity",
+      "pair_loss": "5999999999993/750000000000000000000000"
+    },
+    {
+      "aligned_displacement_upper_bound": "47/16",
+      "gram_norm_squared": "2072385841/191102976",
+      "labels": 6,
+      "mean_square_error": "58021/13824",
+      "name": "noncommuting_gram_matrices",
+      "pair_loss": "64091/6912"
+    }
+  ],
+  "rotation_negative_control": {
+    "pair_loss": "0",
+    "unaligned_error": "4/3"
+  },
+  "status": "CONTACT_NEAR_ISOMETRY_EXACT_CONTROLS_PASS",
+  "unrestricted_contact_sign_verified": false
+}
