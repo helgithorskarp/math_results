@@ -88,7 +88,7 @@ a fixed nonlinear map. The
 h6158, removes a qualification in an existing geometric class and is not
 a premise of the uniform-set reduction.
 
-Researcher 2's concurrently published
+Researcher 5's concurrently published
 [isometric-reference theorem](../gaussian_isometric_reference/PROOF.md),
 source `3a70618cd4611e258dcd275bdf45a139fd44e459`, gives the additional single-component common-set boundary
 at the end of PROOF.md. Its author proof was read before incorporating
