@@ -215,6 +215,12 @@ statement is not that the isometric-reference theorem cannot contribute
 to a solution. It says precisely why positive averaging of its source
 tests at one volume is insufficient as the missing localization bridge.
 
+The concurrent [quantitative common-set interface](../gaussian_common_set_stability/INTERFACE.md)
+retains a reference margin and subtracts a source-set error for a finite
+actual law. The present bound neither audits nor refutes that supplied
+signed criterion. It rules out replacing such a margin/error comparison
+by arbitrarily accurate same-volume coverage alone.
+
 The note neither proves a new positive map class nor creates a new
 normal form for hypothetical failures. It closes this proposed coverage
 step on the uniform-set frontier. The rigid-packet interaction sign in
