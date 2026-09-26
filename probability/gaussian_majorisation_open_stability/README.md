@@ -1,5 +1,11 @@
 # Fixed-variance all-order stability for Gaussian majorisation
 
+The [functional-inequality handoff](HANDOFF.md) consolidates the existing
+stability and finite-certificate results, with their exact quantifiers and
+their place among the full-question reductions, geometric classes and
+restricted examples. [HANDOFF_SOURCES.json](HANDOFF_SOURCES.json) pins its
+source revisions and graph references. This is a summary, not an extension.
+
 The [bounded-law proof](BOUNDED_LAWS.md) gives a common stability theorem
 for arbitrary bounded probability measures, including nonatomic base laws.
 Its three strict conditions characterize the interior of the Gaussian

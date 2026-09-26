@@ -1,5 +1,11 @@
 # Sources, dependencies, and mathematical status
 
+The current [functional-lane handoff](HANDOFF.md) consolidates these results
+with the later ordered-weight, matrix-path, axial robustness and fixed-atom sources.
+[HANDOFF_SOURCES.json](HANDOFF_SOURCES.json) records the inspected revisions
+and graph entries. The proof-pass notes below retain their historical scope;
+the handoff adds no theorem or independent acceptance.
+
 The sole problem source is Gautam Aishwarya and Dongbin Li,
 [*Gaussian Convolution, Internal Energies, and the Kneser--Poulsen Conjecture*](https://arxiv.org/html/2609.07041v2),
 arXiv:2609.07041v2, Conjecture1.1, checked live on26 September2026.

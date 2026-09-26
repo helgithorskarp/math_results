@@ -1,0 +1,411 @@
+{
+  "schema": "gaussian-stability-handoff-sources-v1",
+  "status": "source-backed consolidation; no new theorem or independent review",
+  "snapshot_main_commit": "2cad43476404881bcd1dbcfa0dc70f96af5faac8",
+  "snapshot_graph_height": 6123,
+  "primary_problem_source": "https://arxiv.org/html/2609.07041v2",
+  "provenance_note": "Graph entries identify mathematical contributions. Last-file commits and hashes pin the currently inspected source snapshots, which may include later explanatory edits. Graph kind and commitment do not establish peer acceptance.",
+  "sources": [
+    {
+      "id": "full_question",
+      "category": "full_question",
+      "graph_ref": "bafkreifx5vhi7azxuu4chant6r4c7vvgjsypwdoob4ug7ea2nmzctlsrhu",
+      "graph_height": 5950,
+      "graph_kind": "CONJECTURE",
+      "title": "Gaussian-convolution majorisation under arbitrary contractions in dimension three",
+      "source_files": []
+    },
+    {
+      "id": "global_criterion",
+      "category": "full_question_equivalence",
+      "graph_ref": "bafkreihp3see622wt3h2fxowhnp6cj4jtz5t53dxp5bmerz7aj5tfo2eeq",
+      "graph_height": 6088,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "A global Gaussian majorisation criterion: endpoint coupling defect and monotone moment certificates",
+      "source_files": [
+        {
+          "path": "probability/gaussian_majorisation_global_criterion/PROOF.md",
+          "last_file_commit": "713e542a0bd389681a3fb4ee0c0b61a4f272f104",
+          "sha256": "704482f4d0dad098dca9bf5280dea637a6b26b7f8bf1855a93b2f1a0cdcd713b",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_global_criterion/PROOF.md"
+        }
+      ]
+    },
+    {
+      "id": "global_team_handoff",
+      "category": "existing_team_synthesis",
+      "graph_ref": "bafkreidn73gtnin3ojvmr6hz6hipasfpf6hl7uhhu3szlauiqhwpkvte2q",
+      "graph_height": 6120,
+      "graph_kind": "SUMMARY",
+      "title": "Team B global Gaussian criterion: current implications, Kneser--Poulsen classes and dependency handoff",
+      "source_files": [
+        {
+          "path": "probability/gaussian_majorisation_global_criterion/DEPENDENCIES.md",
+          "last_file_commit": "713e542a0bd389681a3fb4ee0c0b61a4f272f104",
+          "sha256": "55338d1e1525ee749537b7d82648c9539f31e243b52d36f2772622c71944c07c",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_global_criterion/DEPENDENCIES.md"
+        }
+      ]
+    },
+    {
+      "id": "fixed_atom",
+      "category": "full_question_equivalence",
+      "graph_ref": "bafkreievpgikszwz2kggan4dnfbbhvtvjohiycou6xuhlsqpxjvvxrhaai",
+      "graph_height": 6112,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "Fixed-atom and near-Gaussian reduction of the full three-dimensional majorisation question",
+      "source_files": [
+        {
+          "path": "probability/gaussian_majorisation_global_criterion/ANCHOR_REDUCTION.md",
+          "last_file_commit": "138993ba3ec2efde720c789a2a3d887c9c417c69",
+          "sha256": "80abe01d8d27eabdedbdc167e2200b34eb15b5f8feea7a07187fc26c130d4ee4",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_global_criterion/ANCHOR_REDUCTION.md"
+        }
+      ]
+    },
+    {
+      "id": "common_set_transfer",
+      "category": "all_law_equivalence_and_localization_boundary",
+      "graph_ref": "bafkreiam5rzibygouwnzj7aokt23ld4twuarsvrpr4ffdxvokehvtl7gd4",
+      "graph_height": 6122,
+      "graph_kind": "LEMMA",
+      "title": "Common-set Gaussian transfer and a diffuse obstruction to exact prior localization",
+      "source_files": [
+        {
+          "path": "probability/gaussian_prior_localization/PROOF.md",
+          "last_file_commit": "541d4b7de3d73b41444e5350378a8ecc43d914ea",
+          "sha256": "1f7d2b83ea42269fd11d64c5cf398bd2d4378d22e0e9cbf1f421f463823d44e7",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_prior_localization/PROOF.md"
+        }
+      ]
+    },
+    {
+      "id": "paired_rank_and_rational_reduction",
+      "category": "full_question_reduction_and_geometric_class",
+      "graph_ref": "bafkreidnqtxulerp64z7i2syzjymc3beilgovd4gyfcu5h2mzmim5l5ytu",
+      "graph_height": 5964,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "Paired-rank reduction and exact half-order obstruction for three-dimensional Gaussian majorisation",
+      "source_files": [
+        {
+          "path": "probability/gaussian_majorisation_rank_abel/PROOF.md",
+          "last_file_commit": "f7c122d6a5ade217930d63da27e67f9a9e55a539",
+          "sha256": "85c5cd14f914e3b6d7d84f020e558f4637fdea176d31f7db5c967dc86ba0c068",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_rank_abel/PROOF.md"
+        }
+      ]
+    },
+    {
+      "id": "complete_hankel",
+      "category": "fixed_pair_equivalence",
+      "graph_ref": "bafkreids462diitdof5ijilzcq2xqwftk2bzjr5t2gihnxk327uezbndbm",
+      "graph_height": 5962,
+      "graph_kind": "LEMMA",
+      "title": "Exact Hankel certificates for Gaussian majorisation and failure of every aligned common-noise transport",
+      "source_files": [
+        {
+          "path": "probability/gaussian_majorisation_hankel_transport/PROOF.md",
+          "last_file_commit": "6f51c67737051a61290c070c9fb960e1da83b75b",
+          "sha256": "2f2f653710bd9214fca898c82b7d56119ec83ea1238c6860ceeb310d657e7fae",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_hankel_transport/PROOF.md"
+        }
+      ]
+    },
+    {
+      "id": "bounded_stability_and_finite_certificate",
+      "category": "stability_and_certification",
+      "graph_ref": "bafkreietfhclp4t463gjaeyh4ldpj2eeognjhwdphuywmdxyrepqwskdiu",
+      "graph_height": 6102,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "Bounded-law Gaussian stability: exact interior and finite certificates for all energy orders",
+      "source_files": [
+        {
+          "path": "probability/gaussian_majorisation_open_stability/BOUNDED_LAWS.md",
+          "last_file_commit": "52ef6716a271b31ac1046207764fc78d3db6165c",
+          "sha256": "c57cf927ca818c4d84811cbffbeb0b283a0e14bf48ca44d1732e5fb08bc2c49c",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_open_stability/BOUNDED_LAWS.md"
+        }
+      ]
+    },
+    {
+      "id": "original_spatial_stability",
+      "category": "stability_and_fixture",
+      "graph_ref": "bafkreiaudc3oja6vhz7so5q5nc5ieqd7xcqvuxmnfa5jlu7dnnbpttgwhu",
+      "graph_height": 6094,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "Fixed-variance all-order stability of Gaussian majorisation under arbitrary small spatial clouds",
+      "source_files": [
+        {
+          "path": "probability/gaussian_majorisation_open_stability/PROOF.md",
+          "last_file_commit": "52ef6716a271b31ac1046207764fc78d3db6165c",
+          "sha256": "ec382eca33145a0a7e487679d5205f31c42f94c290c2f98572c5e4a505b5e39b",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_open_stability/PROOF.md"
+        }
+      ]
+    },
+    {
+      "id": "original_orbit_cones",
+      "category": "functional_class",
+      "graph_ref": "bafkreicpvcw53nvwenb2uiq7fk5fhuhl6sqcnwgucw5bgrgcjsj6m65lfu",
+      "graph_height": 6086,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "Full Gaussian majorisation for the asymmetric square-cone family via finite density-orbit correlation",
+      "source_files": [
+        {
+          "path": "probability/gaussian_majorisation_square_cone_orbits/PROOF.md",
+          "last_file_commit": "241e48a3c393b659ad90fbe5db145a6f58395d6e",
+          "sha256": "772468055235aa579e58f0b29b379ac1f3e05548d154b19fa26e9bdfb2b7a575",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_square_cone_orbits/PROOF.md"
+        },
+        {
+          "path": "probability/gaussian_majorisation_square_cone_orbits/CERTIFICATE.json",
+          "last_file_commit": "241e48a3c393b659ad90fbe5db145a6f58395d6e",
+          "sha256": "06b7a995ad6594448faecd9559c0e9e443d36c4a7a21afc3bd4c73e52168dc7a",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_square_cone_orbits/CERTIFICATE.json"
+        }
+      ]
+    },
+    {
+      "id": "ordered_weight_and_radius_class",
+      "category": "functional_and_geometric_class",
+      "graph_ref": "bafkreihyai4xolryx3kpmntk4velamfjwaywuer6omhwvpttyqvmqexpy4",
+      "graph_height": 6114,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "Ordered-weight Gaussian majorisation and unequal-radius square-cone unions",
+      "source_files": [
+        {
+          "path": "probability/gaussian_majorisation_square_cone_orbits/ORDERED_WEIGHTS.md",
+          "last_file_commit": "6056a43fd6c806cc2d92243e551528e238e40a23",
+          "sha256": "4beb4cd857d93c45d0798089e2c87d78994859de7b9e4aa36a9d6a786d46f351",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_square_cone_orbits/ORDERED_WEIGHTS.md"
+        },
+        {
+          "path": "probability/gaussian_majorisation_square_cone_orbits/ORDERED_CERTIFICATE.json",
+          "last_file_commit": "6056a43fd6c806cc2d92243e551528e238e40a23",
+          "sha256": "9301619c92908a0aeacd2a928e037453d4fd6600aa3d571c8332484222c27044",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_square_cone_orbits/ORDERED_CERTIFICATE.json"
+        },
+        {
+          "path": "probability/gaussian_majorisation_square_cone_orbits/ORDERED_GEOMETRY_EXPECTED.json",
+          "last_file_commit": "6056a43fd6c806cc2d92243e551528e238e40a23",
+          "sha256": "e0ea0261422b96c48a2d5928b9096a2ceaa48342172dbbc99f2d0c330fd0d7ff",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_square_cone_orbits/ORDERED_GEOMETRY_EXPECTED.json"
+        }
+      ]
+    },
+    {
+      "id": "paired_layer_completion",
+      "category": "constrained_all_variance_neighborhood",
+      "graph_ref": "bafkreib4j6gpea55bkfajd73g2tcmfr5bvdhulhaeqjcw5v5guw2miflki",
+      "graph_height": 6100,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "All-variance Gaussian majorisation on a spatial neighborhood of asymmetric paired layers",
+      "source_files": [
+        {
+          "path": "probability/gaussian_paired_layers_majorisation/ALL_VARIANCES.md",
+          "last_file_commit": "465f892ad569fe12fb2634395c21bc7025abff41",
+          "sha256": "f6a1ab91b85aec6e43f43baeea1910b6d23b6746244c11be7b4fba5ef04d33f7",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_paired_layers_majorisation/ALL_VARIANCES.md"
+        }
+      ]
+    },
+    {
+      "id": "transverse_matrix_paths",
+      "category": "geometric_class_containing_axial_criterion",
+      "graph_ref": "bafkreigbbgjyf5dy5wbhowdlqdrsc24ykargcfqfc6xzir4lvktnyxzmry",
+      "graph_height": 6118,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "Undamped Gaussian majorisation via optimal transverse matrix paths in five dimensions",
+      "source_files": [
+        {
+          "path": "probability/gaussian_axial_cone_rotations/MATRIX_PATHS.md",
+          "last_file_commit": "01b707bf3eb19f7bd44b8c45771fffa7b7651b55",
+          "sha256": "c4f20586c2612df285d8b6d5245d00370e507f71df70ce2bac36cdcf4208beb7",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_axial_cone_rotations/MATRIX_PATHS.md"
+        }
+      ]
+    },
+    {
+      "id": "axial_motion",
+      "category": "geometric_class",
+      "graph_ref": "bafkreiao6gmik3rvanspc76z6zukxlkk447ylprpkitnt6ht6tmdayl2zy",
+      "graph_height": 6062,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "Axial cone rotations: full Gaussian majorisation and arbitrary-radius Kneser--Poulsen",
+      "source_files": [
+        {
+          "path": "probability/gaussian_axial_cone_rotations/PROOF.md",
+          "last_file_commit": "01b707bf3eb19f7bd44b8c45771fffa7b7651b55",
+          "sha256": "5596c3c7135b815356d754812a1378230cd56626f9f1b520bda48cbf6f46c23e",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_axial_cone_rotations/PROOF.md"
+        },
+        {
+          "path": "probability/gaussian_axial_cone_rotations/SCOPE.md",
+          "last_file_commit": "01b707bf3eb19f7bd44b8c45771fffa7b7651b55",
+          "sha256": "2fa17b8f3aad31d7480cc9c43ef7f81e6ed1aa53783d69da9dbd34aa196da731",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_axial_cone_rotations/SCOPE.md"
+        }
+      ]
+    },
+    {
+      "id": "axial_robustness",
+      "category": "geometric_uniform_stability",
+      "graph_ref": "bafkreico6twre4tzlewepj3ej7vay764gyeajof4ni25s4jksd3p4sed2y",
+      "graph_height": 6104,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "Uniform nonlinear robustness of the axial Gaussian and Kneser--Poulsen class",
+      "source_files": [
+        {
+          "path": "probability/gaussian_axial_cone_rotations/ROBUSTNESS.md",
+          "last_file_commit": "01b707bf3eb19f7bd44b8c45771fffa7b7651b55",
+          "sha256": "101d42be18afe3d9a8c0364e2da8af25d58a50d178c1ddee291f6dbf3837d69c",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_axial_cone_rotations/ROBUSTNESS.md"
+        }
+      ]
+    },
+    {
+      "id": "damped_motion",
+      "category": "geometric_class",
+      "graph_ref": "bafkreif2xczco4rxrlznq6cbvtv3qt6pdbhsce6vkl6ynfvh7h6k6vf3nm",
+      "graph_height": 6080,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "Damped cone reflections: a variational criterion for full Gaussian majorisation and ball volumes",
+      "source_files": [
+        {
+          "path": "probability/gaussian_damped_cone_reflections/PROOF.md",
+          "last_file_commit": "57ff1129224b92a88404817b164bf8c17bd2ecd1",
+          "sha256": "99e8d50730d5329154ca16a5ab7ebf3a48b69ab0f2cef1f8a86ecef3437e3022",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_damped_cone_reflections/PROOF.md"
+        }
+      ]
+    },
+    {
+      "id": "scalar_defect",
+      "category": "geometric_class",
+      "graph_ref": "bafkreidpgtehewdn2wn72hfi4c6aoq5bohkdss6dv36o37rjyxg6ndzxlq",
+      "graph_height": 6066,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "Full Gaussian majorisation from a scalar transport-defect budget",
+      "source_files": [
+        {
+          "path": "probability/gaussian_majorisation_scalar_defect/PROOF.md",
+          "last_file_commit": "a8c8a21bde0eb356cf1fc302e3f9b13f1e9b113e",
+          "sha256": "2888d9f0a1c0e03147260e5cbf510650fc1cacf33991d9a2ecf65d58714f0260",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_scalar_defect/PROOF.md"
+        }
+      ]
+    },
+    {
+      "id": "simplicial_motion",
+      "category": "geometric_class_and_scope_obstruction",
+      "graph_ref": "bafkreidbsexp7txezqi7745mb5d57ztkzptjrfas4gvwf6ujqakiyjzusy",
+      "graph_height": 6042,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "Full Gaussian majorisation and ball-volume comparison for simplicial-cone reflections",
+      "source_files": [
+        {
+          "path": "probability/gaussian_simplicial_cone_reflections/PROOF.md",
+          "last_file_commit": "a792a1a8601d347e6e45a00bf9a3fc849d91f4b7",
+          "sha256": "6495916425b70062986e55beef5e472f4d2deacfe93bd46f92ea365521713842",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_simplicial_cone_reflections/PROOF.md"
+        }
+      ]
+    },
+    {
+      "id": "common_target",
+      "category": "functional_class",
+      "graph_ref": "bafkreiefowbrpgnu2cjyyuyig4y2gzk5zdchubp3xqpcgu2rzzpy5fe25m",
+      "graph_height": 6052,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "Full Gaussian majorisation by common-target convex decomposition, with an injective-target obstruction",
+      "source_files": [
+        {
+          "path": "probability/gaussian_majorisation_common_target/PROOF.md",
+          "last_file_commit": "3ad6ed0be174d1292b250efcad734d03eed01af5",
+          "sha256": "9dd5d85334d1c8cc6b574c79fef16380fa5716f8a3cf7d8d98b3ccca7f5e375c",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_common_target/PROOF.md"
+        }
+      ]
+    },
+    {
+      "id": "geometric_endpoint",
+      "category": "geometric_transfer_and_old_class_boundary",
+      "graph_ref": "bafkreiefrksdmj7mopgxg5jcujfudenjflfrsvi5xo5lylees5vbpn3puu",
+      "graph_height": 6096,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "Exact geometric endpoint of the Gaussian orbit weight cones: logarithmic profiles and radius rematching",
+      "source_files": [
+        {
+          "path": "probability/gaussian_majorisation_global_criterion/GEOMETRIC_LIMIT.md",
+          "last_file_commit": "713e542a0bd389681a3fb4ee0c0b61a4f272f104",
+          "sha256": "ad5007c772ecffab97aab16acf1f2d93e3a117347ed9f16e242eb11e17699cc7",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_global_criterion/GEOMETRIC_LIMIT.md"
+        }
+      ]
+    },
+    {
+      "id": "sparse_hankel",
+      "category": "finite_order_estimate",
+      "graph_ref": "bafkreih5ygxepusexo3w53mvz6sjww4tir4gsjenwieqs6bnttybpu6lca",
+      "graph_height": 6010,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "Linear variance control of every sparse Gaussian Hankel order",
+      "source_files": [
+        {
+          "path": "probability/gaussian_sparse_hankel_hierarchy/PROOF.md",
+          "last_file_commit": "c8df5163dd314544b4f2a611483ab192349a8119",
+          "sha256": "1494bffc601d87152275c8f4af9a655afc633de457d571bdfcba3a3435e9cb1b",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_sparse_hankel_hierarchy/PROOF.md"
+        }
+      ]
+    },
+    {
+      "id": "replica_curvature",
+      "category": "restricted_energy_estimate",
+      "graph_ref": "bafkreigxtycueb6re2fvuohmmqw3er5l76jddrbhbyv2nqexhj6w7x356y",
+      "graph_height": 5994,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "Sharp replica curvature and Gaussian comparisons for sparse convex energies in all degrees",
+      "source_files": [
+        {
+          "path": "probability/gaussian_replica_curvature_sparse_energies/PROOF.md",
+          "last_file_commit": "5586f0d772d6b7861bd73207901e183690f4d22b",
+          "sha256": "76f0662527bbc9c4f044343f38fa75453596e4ffc1c97a7f32fd4754268bc372",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_replica_curvature_sparse_energies/PROOF.md"
+        }
+      ]
+    },
+    {
+      "id": "entropy_audit_and_unsigned_bridge",
+      "category": "review_and_unsigned_estimate",
+      "graph_ref": "bafkreibohj2zayll2fnt5zmiug23fkkai6oy4mv3mhinmh5etuxvgzofxq",
+      "graph_height": 5952,
+      "graph_kind": "REVIEW",
+      "title": "Independent acceptance of covariance-free Gaussian entropy rigidity; unsigned threshold consequence",
+      "source_files": [
+        {
+          "path": "probability/gaussian_majorisation_bridge_barrier/AUDIT.md",
+          "last_file_commit": "fc25eff113b59c72fa820def81698e914a80d15b",
+          "sha256": "5efbc465531f10e4eda32d91e50f656ba8564b9d86517fd63b28b4dd71de8f5d",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_bridge_barrier/AUDIT.md"
+        }
+      ]
+    },
+    {
+      "id": "closed_tail_route",
+      "category": "closed_method",
+      "graph_ref": "bafkreidevccw36nby6zvy3vp5ae2j5lzbpji27qctfk4uyiqib7iwhrku4",
+      "graph_height": 6070,
+      "graph_kind": "PROOF_ATTEMPT",
+      "title": "A fixed-variance Gaussian tail stability obstruction and the next signed spherical-zero test",
+      "source_files": [
+        {
+          "path": "probability/gaussian_tail_deficit_obstruction/PROOF.md",
+          "last_file_commit": "54372e691479d94f8c4a6ee9a7c3a7ab4ffdac3d",
+          "sha256": "6a7c1b6bd2ad1d5a54f938a74703e876106874efb0828a261c2e295ab85de717",
+          "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_tail_deficit_obstruction/PROOF.md"
+        }
+      ]
+    }
+  ]
+}
