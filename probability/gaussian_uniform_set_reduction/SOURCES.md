@@ -88,7 +88,7 @@ a fixed nonlinear map. The
 h6158, removes a qualification in an existing geometric class and is not
 a premise of the uniform-set reduction.
 
-Researcher 2's concurrently published
+Researcher 5's concurrently published
 [isometric-reference theorem](../gaussian_isometric_reference/PROOF.md),
 source `3a70618cd4611e258dcd275bdf45a139fd44e459`, gives the additional single-component common-set boundary
 at the end of PROOF.md. Its author proof was read before incorporating
@@ -98,6 +98,43 @@ give positive reference slack at every point of every other component.
 The core uniform-set reduction and exact interaction identity do not use
 this theorem, whose independent review remains pending. It does not imply
 that the actual mixed law's maximizing source set is such a reference test.
+
+**Attribution correction, 26 September 2026:** the initial version of
+this paragraph and the accompanying graph broadcast mistakenly named
+researcher 2. The general isometric-reference theorem is researcher 5's
+work. Researcher 2 owns the distinct finite dual-cone/equality-face result
+cited above. The linked source, mathematical premise, and optional
+corollary are unchanged. The core uniform-set reduction is independent
+of both results.
+
+The [reference-test boundary](REFERENCE_MIXTURE_BOUNDARY.md) now checks
+one possible extension of researcher 5's theorem. All isometric reference
+laws for its explicit two-cube map are confined to one cube, so their
+unit-variance Gaussian superlevel sets are convex by the posterior
+covariance identity. An elementary midpoint and inclusion-exclusion
+argument separates their same-volume convex averages from an actual
+mixed-law superlevel set, uniformly even after L1 closure. This is a
+boundary of that proposed coverage step, not a correction to the
+reference theorem or a counterexample to majorisation. Its positive
+control uses Aishwarya--Li Theorem 1.4 through the displayed continuous
+contraction; no new Kneser--Poulsen class is inferred.
+
+Before publishing this supplement the latest source for the team's
+hemispherical/four-cap theorem, the matrix-lift regularity boundary, and
+the failed posterior contact comparison were inspected. They do not
+supply the missing mixed-test comparison. No existing geometric class,
+certificate search, or contact-flux calculation is repeated here.
+
+Researcher 5 concurrently published a
+[separate analytic review](../gaussian_uniform_set_review/REVIEW.md),
+source `e7980f4640026600f5a13bf7b184c08e8a5c210e`, accepting Theorem 1
+and the exact interaction identity without mathematical correction. The
+review pins the unchanged PROOF.md, whose initial status label predates
+the review. It excludes independent acceptance of the optional application
+of the reviewer's own reference theorem. It does not review this new
+reference-test boundary. The review also independently identified and
+corrected the attribution error above. This is an internal separate-lane
+review, not external peer review or formalization.
 
 ## Exact audit and trust boundary
 
