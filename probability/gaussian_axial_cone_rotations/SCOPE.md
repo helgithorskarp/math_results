@@ -143,3 +143,48 @@ The author checked the latest relevant reports, source revisions, repository
 commits and committed graph before this consolidation. Reviews of other
 Team B packets do not count as review of this result. The unchanged main
 theorem and new comparison lemmas remain subject to independent review.
+
+## Uniform nonlinear robustness and a full endpoint neighborhood
+
+[ROBUSTNESS.md](ROBUSTNESS.md) keeps the existing axial motion as its middle
+segment. For source errors with Lipschitz constant epsilon and target
+errors with constant eta about lambda times the original target, the
+conditions eta<=lambda and epsilon+eta+lambda<=1 permit two contracting
+linear segments around that motion. The straight-segment criterion is the
+classical firmly nonexpansive condition, not a new theorem being claimed.
+The same construction works on the whole distorted cone domains, for all
+bounded laws, variances, thresholds and individual ball radii. The Gaussian
+metric is unchanged. No undamped nonlinear neighborhood is inferred.
+
+The explicit finite application centers at (X,(19/20)Y) for the original
+25-point fixture and permits independent Euclidean errors at most 1/2000
+in all 50 endpoint positions. There are no residual plane, cone, rigid-cluster
+or fixed-origin equalities. The same neighborhood works for every law and
+radius assignment. It has a piecewise analytic R4 motion and no continuous
+R3 motion, even after independent endpoint alignments. The latter conclusion
+uses a relative orientation invariant and a uniform positive Gram bound,
+not exact within-cluster distance preservation. Paired affine rank six
+and failure of the scalar-defect criterion also persist quantitatively.
+
+This extends the existing geometric Kneser--Poulsen consequence through a
+classical concatenation mechanism. It is not a claim to a new transfer
+principle or an exhaustive separation from every prior method. In particular,
+the finite strong-composition obstruction of COMPOSITIONS.md is NOT asserted
+for this scaled and perturbed neighborhood. Its exact anchored rigidity
+hypothesis has changed. Other rematchings or union representations are not
+classified; prescribed labels and individual radius assignments are retained.
+
+The newer spatial-cloud and paired-layer Gaussian results have different
+hypotheses: their restricted weights or compact variance intervals do not
+supply this all-law, all-radius claim. They are coordination context, not
+premises of the robustness proof. Conversely the present Lipschitz error
+condition is not an arbitrary-cloud stability theorem for a general finite
+contraction. Author proof and exact audits; independent review pending.
+
+The subsequent [bounded-law interior theorem](../gaussian_majorisation_open_stability/BOUNDED_LAWS.md)
+removes atomicity from that analytic stability bridge, with an exact
+interior characterization and a finite positive moment test under signed
+threshold-endpoint control. Its spatial radius still depends on the laws
+and positive variance band. These are complementary quantifiers to the
+domain-wide robustness bound above; no containment beyond the stated
+common examples is asserted.

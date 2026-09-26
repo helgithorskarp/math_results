@@ -1,0 +1,212 @@
+{
+  "arithmetic": "integers and fractions.Fraction; free polynomial identities",
+  "controls": [
+    "source reserve violation",
+    "negative output extreme",
+    "output reserve violation",
+    "nonexpansiveness alone fails the segment test",
+    "identity boundary accepted",
+    "large-damping orientation bound fails as expected"
+  ],
+  "orientation": {
+    "gram_entry_error_upper": "1659/10000",
+    "relative_orientation_sign_final": 1,
+    "relative_orientation_sign_initial": -1,
+    "source_endpoint_singular_margin": "797/1000",
+    "squared_edge_error_upper": "3201/1000000",
+    "target_endpoint_singular_margin": "757/1000",
+    "uniform_gram_eigenvalue_lower": "2223/10000"
+  },
+  "original_expected_sha256": "50ce427908f4f6e355ea7ed58996954bc2b5ebc72c2ac547417659be6b8196c4",
+  "paired_rank": {
+    "rank": 6,
+    "reference_minor": "31606272/1953125",
+    "smallest_singular_lower_after_perturbation": "377/500"
+  },
+  "parameters": {
+    "difference_error": "1/1000",
+    "endpoint_radius": "1/2000",
+    "epsilon": "1/200",
+    "eta": "1/50",
+    "lambda": "19/20",
+    "r": "49/50",
+    "squared_edge_allowance": "1/250"
+  },
+  "positive_motion": {
+    "endpoint_lipschitz_upper": "194/199",
+    "first_endpoint_test_upper": "-147/10000",
+    "last_endpoint_test_upper": "-97/10000"
+  },
+  "reference": {
+    "minimum_damped_squared_loss": "351/80000",
+    "pair_record_sha256": "ff056656b000db91573910b91cd9259e507d8cb526d65f0d71fbfce2958c9161",
+    "pairs_checked": 300,
+    "selected_clouds": [
+      {
+        "cloud": "A",
+        "coordinate_gram": [
+          [
+            "387/400",
+            "0",
+            "-3/20"
+          ],
+          [
+            "0",
+            "18/25",
+            "0"
+          ],
+          [
+            "-3/20",
+            "0",
+            "3"
+          ]
+        ],
+        "determinant": "36/25",
+        "gram_lower_bound": "18/25",
+        "matrix": [
+          [
+            "3/4",
+            "0",
+            "1"
+          ],
+          [
+            "-9/20",
+            "3/5",
+            "1"
+          ],
+          [
+            "-9/20",
+            "-3/5",
+            "1"
+          ]
+        ],
+        "maximum_internal_squared_edge": "9/5",
+        "maximum_selected_squared_edge": "9/5",
+        "second_moment": [
+          [
+            "9/32",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "9/32",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "squared_edge_box": {
+          "corner_record_sha256": "e965d56169ebe80f9d951ad893ecd5311ae2ab985a687396912f9c00ded2894e",
+          "corners_checked": 64,
+          "minimum_leading_principal_minors": [
+            "44997/32000",
+            "103818953/64000000",
+            "604639486099/400000000000"
+          ]
+        }
+      },
+      {
+        "cloud": "B",
+        "coordinate_gram": [
+          [
+            "688/625",
+            "0",
+            "-4/25"
+          ],
+          [
+            "0",
+            "512/625",
+            "0"
+          ],
+          [
+            "-4/25",
+            "0",
+            "3"
+          ]
+        ],
+        "determinant": "1024/625",
+        "gram_lower_bound": "512/625",
+        "matrix": [
+          [
+            "4/5",
+            "0",
+            "1"
+          ],
+          [
+            "-12/25",
+            "16/25",
+            "1"
+          ],
+          [
+            "-12/25",
+            "-16/25",
+            "1"
+          ]
+        ],
+        "maximum_internal_squared_edge": "256/125",
+        "maximum_selected_squared_edge": "256/125",
+        "second_moment": [
+          [
+            "8/25",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "8/25",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "squared_edge_box": {
+          "corner_record_sha256": "049bb4a5a66bb23ee94974995784be7becf9c8e86eb79cd7302e31a522def32d",
+          "corners_checked": 64,
+          "minimum_leading_principal_minors": [
+            "14761/10000",
+            "585006777/312500000",
+            "15297675306687/7812500000000"
+          ]
+        }
+      }
+    ],
+    "selected_direction_indices": [
+      0,
+      4,
+      8
+    ],
+    "sites": 25,
+    "source_minimum_squared_separation": "9/200",
+    "target_minimum_squared_separation": "1/400"
+  },
+  "scalar_defect": {
+    "D_A": "5131/32000",
+    "D_B": "1679/10000",
+    "anchor_pairs_used": 24,
+    "contradiction_gap": "151439/93750",
+    "necessary_lhs": "761/200",
+    "necessary_rhs": "821119/375000"
+  },
+  "scope": "All endpoint perturbations in the stated Euclidean balls; no perturbation grid",
+  "status": "AXIAL_UNIFORM_ROBUSTNESS_AUDITS_PASS",
+  "symbolic": {
+    "free_ring_identities": [
+      "firm_nonexpansive_identity",
+      "output_extreme_minus",
+      "output_extreme_plus",
+      "paired_parallelogram",
+      "polarization_error",
+      "scalar_error_square",
+      "segment_derivative"
+    ],
+    "nonzero_identity_control_rejected": true,
+    "trigonometric_reduction_used": false
+  }
+}

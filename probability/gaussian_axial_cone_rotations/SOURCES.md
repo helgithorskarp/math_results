@@ -257,3 +257,51 @@ bounded away from zero yields only equal logarithmic radii. This reinforces
 the distinction between those weight-restricted Gaussian classes and the
 present all-weight motion theorem. The axial arbitrary-radius conclusion
 uses Bezdek--Connelly directly and does not depend on that classification.
+
+
+## Uniform robustness extension
+
+[ROBUSTNESS.md](ROBUSTNESS.md) applies the classical firmly nonexpansive
+criterion to two affine-in-time segments around the axial motion. The
+criterion and its equivalence to nonexpansiveness of twice the map minus
+identity are explicitly credited to
+[Heinz H. Bauschke and Xianfu Wang, *Firmly nonexpansive and
+Kirszbraun-Valentine extensions: a constructive approach via monotone
+operator theory*, Definition 2.1 and Fact 2.2](https://cmps-people.ok.ubc.ca/bauschke/Research/c10.pdf).
+The manuscript was inspected directly. The proof here reproduces the
+pairwise identity on arbitrary subsets; it does not claim a new result
+about firmly nonexpansive maps. Kirszbraun extension is also classical.
+
+The new quantitative application is the full endpoint neighborhood of the
+existing axial fixture, with a uniform all-weight, all-variance and
+arbitrary-radius conclusion, and a robust relative-orientation obstruction
+to intrinsic R3 motions. The exact Gram and scalar budgets are proved in
+that annex. The scalar criterion itself is researcher 5's earlier result;
+the two-coordinate Gaussian argument and Bezdek--Connelly ball transfer
+remain the original proof's credited dependencies. No new pressure theorem,
+improved cone threshold, or historical priority for concatenation or
+singular-value perturbation is asserted.
+
+The latest committed graph now includes the spatial theorem at
+`bafkreiaudc3oja6vhz7so5q5nc5ieqd7xcqvuxmnfa5jlu7dnnbpttgwhu` (6094),
+the geometric-endpoint annex at
+`bafkreiefrksdmj7mopgxg5jcujfudenjflfrsvi5xo5lylees5vbpn3puu` (6096),
+and our finite-composition obstruction at
+`bafkreiddw3bmdgooqxosmfgckzm5qxgnwitkah6dkv4whnafobuqpsvxn4` (6098).
+Their source revisions above were retained. The latter exact body and all
+initial relations were checked in the committed view before this extension.
+None is an independent review of the axial theorem or of this robustness
+application. The strongest source quantifiers are compared in SCOPE.md;
+no newly committed claim is treated as a proof of the unrestricted problem.
+
+Before publication, researcher 8's subsequent
+[bounded-law interior and finite-certificate theorem](../gaussian_majorisation_open_stability/BOUNDED_LAWS.md),
+source commit `52ef6716a271b31ac1046207764fc78d3db6165c`, was read in full.
+It removes atomicity from the stability bridge and characterizes its
+interior using strict hinges, a peak gap and a mean-support gap. Its finite
+moment test requires signed threshold-endpoint certificates and strict
+localization margins. The neighborhood remains dependent on the laws and
+a compact positive variance band; it is not a domain-wide all-law radius.
+Thus it does not subsume the geometric uniformity in ROBUSTNESS.md, and it
+is not used as a premise there. Its original exact checker does not claim
+to formalize these new analytic arguments.

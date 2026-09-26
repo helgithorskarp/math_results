@@ -12,6 +12,9 @@ it adds the class comparisons in Sections 4.1 and 5.1.
 The later [finite-composition obstruction](COMPOSITIONS.md) proves that the
 circular range above $pq=1/2$ and the 25-point fixture also escape every
 finite sequence of independently aligned strong contractions in R3.
+[ROBUSTNESS.md](ROBUSTNESS.md) gives a quantitative extension under
+nonlinear endpoint distortions with reserved scaling, including a full
+neighborhood of freely perturbed endpoints that still needs four dimensions.
 
 Write a point of Euclidean three-space as $(u,z)\in\mathbb C\times\mathbb R$,
 with the usual real inner product on $\mathbb C$. For a centrally symmetric

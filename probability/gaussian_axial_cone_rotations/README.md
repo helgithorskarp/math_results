@@ -49,6 +49,17 @@ fixture has the strict certificate `diag(-8,-8,15)`, with trace `-1` and
 minimum dual-generator value `5/27`. This is a limitation of those methods,
 compatible with the positive four-dimensional motion.
 
+[ROBUSTNESS.md](ROBUSTNESS.md) extends the motion to controlled nonlinear
+changes of the whole source and target domains, with a reserved target
+scaling factor. Its explicit finite consequence allows every endpoint of
+the existing fixture to move freely within radius `1/2000` about
+`(X,(19/20)Y)`. Throughout this full neighborhood, all weights, variances,
+thresholds and individual radii are allowed. Four dimensions remain
+necessary even after independent endpoint alignments; paired rank six
+and the scalar-defect obstruction also persist. This is a quantitative
+closure consequence of the axial theorem, using classical contracting
+segments, with independent review pending.
+
 Read [SCOPE.md](SCOPE.md) for the consolidated correctness boundary,
 breadth, comparison with the current Team B classes, and precise
 Kneser--Poulsen claim. The axial and simplicial criteria are not nested;
@@ -74,6 +85,8 @@ python3 scope_audit.py --check
 python3 -O scope_audit.py --check
 python3 composition_audit.py --check
 python3 -O composition_audit.py --check
+python3 robustness_audit.py --check
+python3 -O robustness_audit.py --check
 sha256sum -c SHA256SUMS
 ```
 
@@ -83,6 +96,7 @@ Standard library only. Checked with CPython 3.11.2 and 3.12.14. Expected:
 AXIAL_CONE_EXACT_AUDITS_PASS 50ce427908f4f6e355ea7ed58996954bc2b5ebc72c2ac547417659be6b8196c4
 AXIAL_CONE_SCOPE_AUDITS_PASS de6ff71916e4afddfce10a93b3d8e0d9a566c8d08660dd333ea12fdd3ad8da0a
 AXIAL_STRONG_COMPOSITION_AUDITS_PASS 754bfdbc1cb7ad7a884003dadc90ddeac33e4b2554d7fd7d2b4a385e24cf66ab
+AXIAL_UNIFORM_ROBUSTNESS_AUDITS_PASS 4004b3eb13fc1e1089966da5d33859c607ce0b159e2dba379b3ed3c6b5c640a6
 ```
 
 Running `python3 verify.py` prints the exact [EXPECTED.json](EXPECTED.json).
@@ -111,3 +125,11 @@ Two invalid matrix certificates are rejected. Its compact output is
 [EXPECTED_COMPOSITIONS.json](EXPECTED_COMPOSITIONS.json). The exclusion of
 every finite chain length follows from the written telescoping proof, not
 from a bounded search over possible factorizations.
+
+The [robustness_audit.py](robustness_audit.py) checks the uniform nonlinear
+reserve, all reference separations, seven free-polynomial identities,
+the orientation and rank margins, and the scalar contradiction. A separate
+enclosure verifies all 128 corners of the two tetrahedral squared-edge
+boxes by exact principal minors. [EXPECTED_ROBUSTNESS.json](EXPECTED_ROBUSTNESS.json)
+records the compact evidence. No grid of endpoint perturbations is used;
+all such perturbations are covered by the written uniform inequalities.
