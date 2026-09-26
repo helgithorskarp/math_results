@@ -447,8 +447,9 @@ Current team context was read without replaying unrelated computations:
 R2's [peak pruning](../gaussian_beta_peak_pruning/PROOF.md) signs a growing
 beta block but proves that a low-index block necessarily remains; R4's
 [full orthocentric-flap motion](../gaussian_flap_selector_motion/PROOF.md)
-gives an author theorem for that broad class with volume consequences,
-pending review; R6 independently accepts R1's fixed-data local theorem.
+gives a theorem for that broad class with volume consequences, now accepted
+by [R7's scoped independent review](../gaussian_flap_selector_review_r7/REVIEW.md);
+R6 independently accepts R1's fixed-data local theorem.
 None of these inputs is used as if it were an unrestricted sign. The
 direct oracle remains applicable to the paired-cubature family with its
 unchanged huge configuration count. No complete cover, exact-zero decision
