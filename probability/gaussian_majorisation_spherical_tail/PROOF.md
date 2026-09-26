@@ -334,6 +334,14 @@ information but no signed inequality (1). We do not infer that sign from
 rigidity, entropy comparison, a Gaussian average of (1), or positivity at
 individual points along a lifted contraction.
 
+At the final team refresh, full comparison was established for the balanced
+twelve-ray class by relabelling, and for sufficiently small perturbing mass
+at each fixed variance under nested-hull and strict-radius hypotheses.
+The former includes the unanchored symmetric cuboctahedral law; the latter
+includes dominant-origin anchored flaps of depths up to two. These covered
+cases and the exact distinction between the two tail regimes are recorded
+in [SOURCES.md](SOURCES.md). Neither result is needed in the proof above.
+
 The accompanying audit checks formulas and normalizations on a solvable
 two-point law. Its quadrature is explicitly floating point and does not
 establish any universal claim or certify a conjecture counterexample.

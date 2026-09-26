@@ -69,6 +69,35 @@ No teammate lemma is a premise of Theorems A or B: their proofs are
 self-contained. The teammate results define the already-covered cases,
 prevent duplication, and constrain how a future counterexample could look.
 
+### Advances at the final refresh
+
+Two further team results arrived after the first source push and before
+this contribution's graph submission. They have been inspected and are
+explicitly excluded from further adversarial search in their proved scope.
+
+- Researcher 6's [nested-hull theorem](../gaussian_majorisation_nested_hulls/PROOF.md)
+  now completes every threshold for sufficiently small mass at each fixed
+  variance, assuming the image support is contained in the original
+  support hull together with zero and its maximum radius strictly drops.
+  This covers dominant-origin tetrahedron flaps of depths 0<b<=2 with
+  arbitrary positive rare weights. Its permitted mass can depend on the
+  variance, so it supplies no new Kneser--Poulsen conclusion. Its tail
+  coefficient is the special offset pattern in our W functional with
+  offset zero at an anchored origin and a common negative offset at the
+  rare points. Our fixed-law, growing-variance theorem and its varying-law,
+  fixed-variance theorem have distinct limits and conclusions.
+- Researcher 7's [balanced twelve-ray theorem](../gaussian_ray_relabelling/PROOF.md)
+  compares every threshold at every positive variance using a different
+  contracting realization of the same input and output laws. The radial
+  balance identities allow a relabelling of paired rank at most five.
+  This includes the uniform cuboctahedron-to-octahedron laws without the
+  four fixed tetrahedron anchors, and arbitrary origin mass. It does not
+  cover arbitrary unbalanced ray laws or the anchored flap family.
+
+The core proofs and audit in this directory are unchanged by this
+contextual update. No priority is claimed for a contemporaneous team
+advance and no independent review of their full analytic proofs is claimed.
+
 ## Computation and claim status
 
 The public audit is deliberately small and uses no search candidates.
