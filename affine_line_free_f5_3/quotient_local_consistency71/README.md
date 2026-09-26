@@ -19,6 +19,12 @@ survives a three-hole gauge at noncollinear quotient positions. The
 full marginal-consistency claim is **ungauged**; the stronger gauged
 relaxation remains open.
 
+The proof also glues any chosen collection of projection planes when
+all shared fibers have weight four and each plane has at most two of
+them. This includes triangles of planes with three distinct full-fiber
+intersections, and identifies which more complicated arrangements need
+to be investigated.
+
 This is a method obstruction for the exact 70-versus-71 problem. It
 does not construct or exclude a 71-point set. An explicit 72-weight
 control has all the local distributions but no global lift, using the

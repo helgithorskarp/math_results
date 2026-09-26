@@ -166,6 +166,20 @@ does not say that conditioning the separate distributions on the
 three prescribed holes keeps their overlap laws equal. Our explicit
 controls exhibit disagreements after this conditioning.
 
+There is also a useful positive gluing statement. Choose any subfamily
+of projection planes such that every shared fiber has weight four,
+and each chosen plane contains at most two distinct shared fibers.
+Prescribe an arbitrary missing height in each shared fiber. Every
+chosen plane can be completed with these prescriptions by the preceding
+argument. Other fibers belong to just one chosen plane, so the
+completions agree and give one assignment satisfying the whole chosen
+subfamily. This does not impose the unchosen planes' constraints.
+In particular a triangle of three projection planes with three distinct
+weight-four intersections cannot itself obstruct lifting. Cyclic
+incidence alone is insufficient in this situation; a plane with three
+shared fibers, or intersections of smaller fiber weight, is needed
+to go beyond this gluing argument.
+
 ## 5. Why this does not produce a global lift
 
 The 30 projection planes contain all 775 affine lines in three-space:
@@ -212,10 +226,10 @@ The theorem leaves open consistency tests **after** imposing that gauge,
 fixing a whole planar section, joint restrictions involving several
 projection planes, additional nonprojection-plane marginals, and integral global lifting. In
 particular it does not close the stronger relaxation formed from all
-155 planes with all their full shared-line laws. A natural next
-geometric object is a cycle of projection planes whose intersections
-are different fibers; the present averaging argument does not glue
-that cycle.
+155 planes with all their full shared-line laws. A concrete next
+geometric object is an arrangement with at least three shared fibers
+in one plane, or a cycle with smaller fiber weights at its intersections.
+These are outside the positive gluing statement above.
 
 The exact value of r_5(F_5^3) remains 70 or 71. This is a structural
 obstruction to a method and gives no new extremal bound. The trust
