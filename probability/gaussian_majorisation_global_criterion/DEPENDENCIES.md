@@ -1,150 +1,205 @@
-# How the Team B mechanisms certify the same global criterion
+# Team B: implications, geometric classes and remaining obligations
 
-All statements below refer to `Delta_s` in [PROOF.md](PROOF.md). A zero
-is full majorisation for the stated law and variance. The table preserves
-the hypotheses of the linked proofs; it does not enlarge their classes.
-Source commits and primary attribution are in [SOURCES.md](SOURCES.md).
+Current handoff, 26 September 2026. The full bounded-law R3 question is
+**open**. This is a synthesis of existing proofs, not a new comparison
+theorem or an independent review. The new ordered-weight source below
+is an exact computer-assisted author proof awaiting review.
+[SOURCES.md](SOURCES.md) records source revisions and the current graph
+handoff. Every arrow retains the hypotheses stated here.
 
-## Geometric and mixture certificates
+## 1. The full question and its equivalent endpoints
 
-| Durable mechanism | Why it gives `Delta_s=0` | Scope and boundary |
+For one bounded contraction pair `f=mu*gamma_s`, `g=(T#mu)*gamma_s`, set
+`H_f(a)=integral(f-a)_+` and `Delta_s=sup_a(H_f(a)-H_g(a))_+`.
+
+| Statement | Logical status | Scope that must be retained |
 |---|---|---|
-| [Paired affine rank at most five](../gaussian_majorisation_rank_abel/PROOF.md) | A contracting motion in at most five dimensions gives the coupling of Theorem 1. | Every bounded law on a domain satisfying the rank condition, every variance; in particular the established small-atom range. Paired rank six is outside this certificate. |
-| [Scalar-defect budget](../gaussian_majorisation_scalar_defect/PROOF.md) | The inequality `|dy|^2 + |e.dx-f.dy|^2 <= |dx|^2` constructs an explicit `R^5` motion. | All laws and variances on the certified domain. The nine-point norm-preserving reflection and the new 37-point damped example are excluded from this sufficient mechanism. |
-| [Simplicial dual-cone reflection](../gaussian_simplicial_cone_reflections/PROOF.md) | Its explicit `R^5` contraction supplies the same endpoint coupling. | Arbitrary bounded weights and all variances on its full cone domain. The full nonsimplicial dual-cone map need not have such a motion. |
-| [Axial cone rotation](../gaussian_axial_cone_rotations/PROOF.md) | The planar product-hull perimeter budget at most four constructs an `R^4` motion, padded to five. | All laws and variances; circular cone slopes satisfy `p q <= 2/pi`. |
-| [Uniform nonlinear axial robustness](../gaussian_axial_cone_rotations/ROBUSTNESS.md) | Classical contracting segments before and after an existing motion give one for `V o T o S^(-1)`, where `S=Id+e`, `V=lambda Id+g`, `Lip(e)<=epsilon<1`, `Lip(g)<=eta<=lambda`, and `lambda+eta<=1-epsilon`. | Whole distorted domains, all bounded laws, variances and individual radii. Its open 25-point endpoint neighborhood has an `R^4` motion and no aligned `R^3` motion, paired rank six and no scalar-defect certificate. This is an author proof awaiting review; it does not assert the old strong-composition exclusion for the damped neighborhood. |
-| [Damped cone reflection](../gaussian_damped_cone_reflections/PROOF.md) | Its product-support path integral at most two constructs an `R^4` motion, again padded to five. | Circular slopes satisfy `p q F(lambda^2)<=2`, with `F(eta)=sqrt(1-eta^2)+eta(pi-arccos eta)+eta-1`. At `lambda=1` it recovers the undamped axial condition. Every proper dual-cone pair admits a positive damping range. This new geometric input is incorporated without a separate analytic subclass. |
-| [Ray relabelling](../gaussian_ray_relabelling/PROOF.md) and [fixed-core relabelling](../gaussian_majorisation_fixed_core/PROOF.md) | An alternate contraction has the same output law and a lower-dimensional motion. Equality of output laws makes the global criterion identical. | The exact whole-radial-measure balances in those sources are essential. These are statements about a law as well as its labelled map. |
-| [Common-target gluing](../gaussian_majorisation_common_target/PROOF.md) | Convexity in the source gives `Delta(sum alpha_i f_i,g)<=sum alpha_i Delta(f_i,g)`. | Component constructions must have **one identical target law**. The fixed-core/ray result allows the published open range of weights and arbitrary permitted radial laws. General paired mixtures with varying targets do not follow from this argument. |
-| [Finite density-orbit comparison](../gaussian_majorisation_square_cone_orbits/PROOF.md) | The 48-element orbit hinge inequality integrates to `Delta_s=0` by (17), and hence supplies the endpoint coupling (4). | Every variance on the full radius-`1/552` nine-point weight ball and the stated arbitrary bounded radial laws with directional weights in two explicit cones. The exact computer-assisted proof awaits independent review. It does not require a centre motion or cover arbitrary weights. |
-| [Spatial-cloud stability](../gaussian_majorisation_open_stability/PROOF.md) | Strict hinges, a peak gap and a mean-support gap preserve `Delta_s=0` under the stated perturbations. | For the nine-point pair, one arbitrary-cloud radius works on each compact positive variance interval and the radius-`1/4000` weight ball. It is existential and need not work as variance tends to zero. The general finite-law bridge follows after strict target homothety. Author proof, review pending. |
-| [Bounded-law interior and finite positive certificates](../gaussian_majorisation_open_stability/BOUNDED_LAWS.md) | The three strict gaps characterize the product `W_infinity` interior for arbitrary bounded base laws. Signed threshold endpoints and sufficiently positive beta averages certify every hinge at one variance. | Every interior pair admits such a finite certificate, without a practical degree bound being asserted. Strict target homothety takes each ordered nonpoint-target pair into the interior. Neighborhoods depend on the laws and a compact positive variance band; no arbitrary-law uniform radius or small-variance geometric transfer is inferred. Author proof, review pending. |
-| [Paired-layer all-variance completion](../gaussian_paired_layers_majorisation/ALL_VARIANCES.md) | Uniform small- and large-variance hinge proofs join the compact-interval stability theorem, giving `Delta_s=0` for every variance on one neighborhood. | A positive, uncomputed spatial radius for centrally symmetric transverse four-point layers satisfying the stated contraction inequalities, with weights in the radius-`1/25000` ball. This is a constrained geometric neighborhood, not arbitrary clouds at every variance. Author proof, review pending. |
+| Every hinge compares; `Delta_s=0` | The fixed-pair full majorisation assertion | One specified law, contraction and variance. The full conjecture quantifies over **all three**. |
+| Zero failure in the specified five-dimensional endpoint density-value coupling | Equivalent to `Delta_s=0`; the minimum failure probability is exactly `Delta_s` | A coupling of smoothed density values, not a position martingale or a motion of labelled centres. See [global proof, Theorem 1](PROOF.md). |
+| Every beta test is nonnegative, or the complete endpoint Hankel hierarchy is positive semidefinite | Equivalent to `Delta_s=0` | All orders at the **same** variance. [Global proof](PROOF.md) and [Hankel source](../gaussian_majorisation_hankel_transport/PROOF.md). |
+| At variance one, every `(1-epsilon)delta_0+epsilon rho` compares under every contraction fixing zero | Equivalent to the **full conjecture**, for any one fixed `0<epsilon<1` | `rho` is an arbitrary bounded law, with no support radius uniform over the class. This restricted assertion remains unproved. [Fixed-atom reduction](ANCHOR_REDUCTION.md). |
+| Any violation yields a finite strict rational contraction witness | An exact witness reduction | It does not bound the atom count or produce a witness. [Finite/rational reduction](../gaussian_majorisation_rank_abel/PROOF.md). |
 
-The damped-cone source also proves that an undamped **full** proper
-dual-cone reflection has an `R^5` motion exactly when the cone is
-simplicial. Its obstruction is to a motion of centres, not to the endpoint
-coupling in our Theorem 1. The positive-operator ingredient in that
-classification is classical and credited in the geometric source.
+The global finite differences give `D_N` increasing to `Delta_s`, with
+`D_N <= Delta_s <= min(1,D_N+K(N+2)^(-1/4))` for the explicit support
+constant in [PROOF.md](PROOF.md). A negative beta test proves a negative
+convex-energy comparison when its contraction data and sign are certified.
+Bare nonnegative tests at finitely many orders give an error bound. A
+finite positive **certificate** additionally needs the endpoint and
+strict-margin information in Section 4 below.
 
-The moment criterion is invariant under separate endpoint isometries.
-It therefore accommodates the endpoint congruences used in the motion
-proofs. It also explains why full-dimensional paired-rank examples can
-be positive: the rank certificate is sufficient, not necessary.
+The fixed-atom reduction does not turn an arbitrary-origin-mass theorem
+on a restricted set of rays into a solution: its remaining packet and
+contraction must be arbitrary. Its conditional near-Gaussian violations
+also do not assert that a counterexample exists. A base zero defect gives
+only a small error after a distant common Gaussian is adjoined, so there
+is no proved general positive adjunction rule at finite separation.
 
-## Analytic completion and incomplete tests
+## 2. Sufficient mechanisms and their geometric endpoints
 
-| Durable input | Exact implication in the global criterion | What it leaves open |
+The diagram displays sufficient constructions, not a chain of equivalent
+geometric classes. The motion-to-volume arrow uses finite piecewise
+analytic restrictions; the ordered-orbit arrow uses its own small-variance
+exponential weights. No arrow from a single fixed-variance zero to a ball
+inequality is asserted.
+
+```mermaid
+flowchart TD
+    M["Certified motion in R4 or R5"] --> Z["Delta_s = 0 for the stated law and variance"]
+    O["Certified finite density-orbit comparison"] --> Z
+    F["Signed threshold endpoints and strict finite beta tests"] --> Z
+    M -->|"finite piecewise analytic restriction"| V["Arbitrary-radius union and intersection volumes"]
+    O -->|"ordered ray measures at every scale"| U["Ordered-radius unions for invariant measures"]
+    Z -->|"nonpoint target and strict target homothety"| S["Local W-infinity and variance neighborhood"]
+```
+
+### Broad classes with unrestricted weights and individual radii
+
+These are domain-wide geometric theorems. Atom number, weights and
+nonatomic mass are arbitrary within the stated domain. Their ball
+conclusions use arbitrary prescribed individual radii for finite centres.
+They do not require the restricted weights of the later orbit examples.
+
+| Mechanism | Sufficient geometric hypothesis | Gaussian and ball conclusions; inclusion limits |
 |---|---|---|
-| [Complete endpoint Hankel reduction](../gaussian_majorisation_hankel_transport/PROOF.md) | All endpoint Hankel matrices positive semidefinite iff all beta tests nonnegative iff `Delta_s=0`. The present proof adds monotone finite lower bounds and an explicit global error. | Nonnegative entries, individual replica gaps, and finitely many positive matrices do not establish the full hierarchy. |
-| [Sparse finite Hankel hierarchy](../gaussian_sparse_hankel_hierarchy/PROOF.md) | The specified finite blocks are positive when their order-dependent high-variance condition holds. | Its variance threshold grows with the block order. It cannot prove the infinite hierarchy at one fixed variance by exchanging quantifiers. |
-| [High-noise hinge window](../gaussian_majorisation_high_noise_window/PROOF.md), [spherical tail](../gaussian_majorisation_spherical_tail/PROOF.md), and [eventual completion](../gaussian_majorisation_eventual_endpoint/PROOF.md) | A uniform positive spherical gap on the stated range, together with the two controlled threshold regimes, proves `Delta_s=0` for all sufficiently large `s`. | The spherical sign hypothesis is not known universally. A window or finite asymptotic calculation alone leaves part of (1) uncontrolled. The endpoint proof and its premises have an [independent acceptance](../gaussian_majorisation_eventual_endpoint_review2/README.md). |
-| [Asymmetric nine-point high-variance certificate](../gaussian_asymmetric_eventual_majorisation/PROOF.md) | `Delta_s=0` for `s>=13200` at weights `(8,12,7,15,44,21,11,23,43)/184`; throughout its `L1` weight ball of radius `1/25000`, for `s>=16896`. | Preserved valid prior work. The new density-orbit theorem removes its variance restriction and contains both weight classes; further optimization of these cutoffs is unnecessary. |
-| [Covariance-free entropy rigidity](../gaussian_contraction_covariance_free/PROOF.md) and its [independent audit and unsigned bridge](../gaussian_majorisation_bridge_barrier/AUDIT.md) | Closeness modulo isometries gives unsigned hinge control through total variation. | The covariance-free theorem has an independent acceptance. A small upper bound for `Delta_s` does not establish `Delta_s=0` or decide the sign at the hardest thresholds. That acceptance does not review the present reduction or the companion energy-only barrier theorem. |
-| [Tail-deficit obstruction](../gaussian_tail_deficit_obstruction/PROOF.md) | It rules out the proposed uniform deficit-only bound for the **normalized** tail error. Its signed next coefficient can refine eventual completion under its separate hypotheses. | It does not obstruct the absolute all-threshold continuity bound (11), and its extra signed hypothesis is not added to the global criterion. |
+| [Paired affine rank](../gaussian_majorisation_rank_abel/PROOF.md) and [scalar defect](../gaussian_majorisation_scalar_defect/PROOF.md) | Respectively paired rank at most five, or unit vectors `e,f` with `norm(dy)^2+(e.dx-f.dy)^2<=norm(dx)^2` on every pair | An `R^5` motion gives every hinge at every variance; the finite analytic motions give union/intersection comparisons. These are sufficient certificates. Rank six does not imply failure of either the Gaussian question or other motion constructions. |
+| [Simplicial reflection](../gaussian_simplicial_cone_reflections/PROOF.md) | `D=K* union (-K)` for a simplicial cone `K`; fix `K*` and reflect `-K` | An explicit `R^5` motion; all bounded laws and all variances; arbitrary-radius union/intersection volumes. Some members have paired rank six. |
+| [Axial reflection](../gaussian_axial_cone_rotations/PROOF.md) | Centrally symmetric planar sections `P,Q` with `per conv{conj(u)v:u in P,v in Q}<=4` | An `R^4` motion with the same all-law/all-variance and both-volume conclusions. Circular slopes allow `pq<=2/pi`. The range `1/2<pq<=2/pi` escapes the simplicial-separator test, which holds for circular sections exactly when `pq<=1/2`. This is a comparison for those sections, not a universal inclusion between all cone classes. |
+| [Transverse matrix paths](../gaussian_axial_cone_rotations/MATRIX_PATHS.md) | Compact sections containing zero; a norm-one real `2x2` path from `-I` to `I` with integrated support cost `integral max(-u^T A'v)<=2` | An explicit `R^5` lift generalizes the old rotation principle, preserving undamped endpoints. All bounded laws and variances; both ball-volume inequalities when the finite paths are piecewise analytic. The explicit circular class extends to `pq<=1/(1+cos(1))`, with angle in radians. This is optimal for block-diagonal relative Gram motions, not a classification of all `R^5` motions or majorisation. |
+| [Damped reflection](../gaussian_damped_cone_reflections/PROOF.md) | Its product-support path integral is at most two, `0<lambda<=1`; for circular sections, `pq F(lambda^2)<=2` | Both endpoint clusters are scaled by `lambda`. The theorem gives all-law/all-variance comparison; its piecewise analytic constructions give both volume inequalities. At `lambda=1`, the circular bound recovers `pq<=2/pi`. A damped conclusion is about changed endpoints and cannot be used as an undamped result. |
+| [Nonlinear motion robustness](../gaussian_axial_cone_rotations/ROBUSTNESS.md) | `S=Id+e`, `V=lambda Id+g`, `Lip(e)<=epsilon<1`, `Lip(g)<=eta<=lambda`, `lambda>0`, `lambda+eta<=1-epsilon` | `V o T o S^(-1)` inherits a given motion in the same ambient dimension, including the new `R^5` construction. One condition covers the whole distorted domain, all laws, variances and radii, retaining the finite-path regularity for the ball conclusion. Its original freely perturbed 25-point neighborhood needs four dimensions and retains paired rank six and the scalar obstruction. The older finite strong-composition exclusion is not asserted for this damped neighborhood. |
 
-The density-orbit source's analytic transfer and exact certificates are
-credited inputs, not an independent review here. Researcher 7's later
-unpaired noncoplanar moment checks and direct-hinge searches remain finite
-private evidence, without a rigorous negative Gaussian hinge. None is a
-premise of this packet. In contrast, the bounded-law source now provides
-a genuinely sufficient finite positive test when its signed endpoints
-and strict localization margin are supplied; bare finite positivity does
-not meet that test.
+The last theorem belongs in this broad geometric group even though it
+uses the word robustness: its deformation reserve is uniform over the
+domain and all the relevant measures and radii. This is stronger in
+quantifiers than the law-dependent stability mechanism in Section 4.
+No claim is made that these geometric constructions exhaust known
+Kneser--Poulsen methods or have completed independent review.
 
-## What the transport obstructions actually say
+### A broad radius family with restrictions on weights and geometry
 
-The [atomic bridge obstruction](../gaussian_atomic_bridge_obstruction/PROOF.md)
-has an [independent acceptance](../gaussian_atomic_bridge_obstruction_review1/REVIEW.md).
-It excludes a position martingale, even after separate isometries and
-the stipulated common smoothing, for the asymmetric nine-point family.
-The same source excludes exact deterministic common-output mixtures of
-the proposed motion components on its stated open weight neighbourhood.
-The earlier simplicial-cone source proves the absence of an `R^5`
-contracting motion for the nine labelled square-cone centres.
+The new [ordered-weight theorem](../gaussian_majorisation_square_cone_orbits/ORDERED_WEIGHTS.md)
+uses the standard cyclic labels
 
-The new all-variance density-orbit theorem covers that entire obstruction
-ball. Thus the endpoint density-value coupling in (4) **exists at every
-variance** there even though those more restrictive constructions do not. This is the
-concrete positive obligation for transport work: allow couplings of
-density values that are not induced by a labelled centre motion or the
-excluded position martingale. Existence here follows from the credited
-orbit proof. The unrestricted input and contraction remain the target.
+```text
+A=((1,0,1),(0,1,1),(-1,0,1),(0,-1,1)),
+B=((1,1,1),(-1,1,1),(-1,-1,1),(1,-1,1)),
+T(0)=0, T(r A_i)=r A_i, T(-t B_j)=t B_j.
+```
 
-The [local-lift obstruction](../gaussian_majorisation_local_lift_obstruction/PROOF.md)
-shows that positivity of every instantaneous lifted Hankel matrix is
-too strong even for an endpoint pair with full majorisation. In the
-six-dimensional path representation, the endpoint moments are obtained
-only **after integration over time**. A positive proof must preserve
-that integration or construct the endpoint coupling directly. The
-global beta tests do not turn the false instantaneous assertion into
-a valid lemma.
+For arbitrary bounded radial measures with
+`alpha_0>=alpha_1>=alpha_2>=alpha_3` and
+`beta_0>=beta_1>=beta_2>=beta_3` as measures, it proves every hinge at
+every variance. The origin mass is arbitrary. There is no bound on
+weight ratios, but the order and the exact ray geometry are essential.
 
-The [axial finite-composition theorem](../gaussian_axial_cone_rotations/COMPOSITIONS.md)
-also rules out every finite independently aligned strong coordinatewise
-factorization for its anchored circular range and rational fixture. Its
-necessary dual-cone rank-one identity concerns intermediate labelled
-centres. It excludes neither higher-dimensional motions nor endpoint
-density-value couplings. The latter exist for those positive axial
-comparisons. Its exact rigid-cloud premise must not be silently extended
-to the newer damped nonlinear neighborhood.
+On each finite complete shell, independently ordered individual radii
+in the same cyclic labels yield a ball-**union** comparison. More strongly,
+the source union has at least the target's number of covered group labels
+on every orbit of the 48 signed coordinate permutations. Thus the union
+comparison holds for every locally finite invariant Borel measure,
+including Lebesgue measure, radial densities and centred sphere measure.
+The theorem does **not** assert intersections or unordered radii.
 
-## The fixed-atom localization of the same criterion
+This is the concrete positive extension requested by the earlier
+[geometric-endpoint annex](GEOMETRIC_LIMIT.md). The old fixed-base cones
+force `lambda_0=lambda_2=lambda_3>=lambda_1`; the new ordered cones permit
+four strictly ordered logarithmic rates. The old classification remains
+correct for its exact certificate. It is no longer the frontier of the
+whole orbit method. Neither entire weight class is asserted to contain
+the other, and the old covariance obstruction is not transplanted to
+the new ordered weights.
 
-[ANCHOR_REDUCTION.md](ANCHOR_REDUCTION.md) reduces the unrestricted
-conjecture exactly to one fixed variance and one fixed fraction
-`0<epsilon<1`: all laws `(1-epsilon)delta_0+epsilon rho`, all bounded
-`rho`, and all contractions fixing zero. The rare packet may have
-arbitrary bounded support, with no uniform radius. Output translation
-makes adjoining a distant fixed atom contractive, and the overlap proof
-gives `|Delta(F_R,G_R)-epsilon Delta(f,g)|<=beta_R` uniformly in every
-threshold, with `beta_R` tending to zero exponentially in separation.
+The source supplies an all-distinct nine-ball fixture with exposed sphere
+patches, so every endpoint representation by nine balls with those radii
+is forced. This excludes the old radius-preserving rematching escape.
+The prescribed map has no `R^5` motion, by the earlier simplicial source,
+and no finite aligned strong-coordinate chain, by the axial composition
+lemma. These are **scope comparisons**, not premises of the positive
+orbit inequality. They do not classify every possible auxiliary proof.
+The positive new class is established relative to the identified team
+mechanisms; no exhaustive historical-priority claim is made here.
 
-If any counterexample exists, the construction supplies counterexamples
-arbitrarily close to a common Gaussian in total variation, every finite
-`W_p`, every fixed derivative norm, and relative entropy. This is a
-conditional transfer, not negative data. Common spatial normalization
-instead puts both supports in the unit ball and makes the contraction's
-displacement tend to zero, while its Gaussian variance tends to zero.
+## 3. Law-dependent closure and restricted examples
 
-The reduction supplies one explicit local-to-global obligation for the
-entropy and transport routes: obtain an exact zero uniformly over the
-rare packet's geometry, not only an unsigned bound approaching zero.
-It neither contradicts nor extends the bounded-law stability theorem:
-at fixed variance the distant packet is not small in `W_infinity`, and
-the Dirac equality pair is not an interior point. The unit-ball version
-requires control through vanishing variance. The geometric classes
-still certify their own rare packets at all weights and radii whenever
-their domain and motion hypotheses hold. They are not claimed to cover
-every packet in this reduction.
+| Input | Exact connection to the criterion | Boundary and known inclusion |
+|---|---|---|
+| [Ray relabelling](../gaussian_ray_relabelling/PROOF.md) and [fixed-core relabelling](../gaussian_majorisation_fixed_core/PROOF.md) | An alternate contraction with the same output law has a lower-dimensional motion | Whole radial-measure balances are required. Gaussian weights must be preserved as measures; a radius-preserving rematching for balls is a different condition. |
+| [Common-target gluing](../gaussian_majorisation_common_target/PROOF.md) | `Delta(sum alpha_i f_i,g)<=sum alpha_i Delta(f_i,g)` | Every component has exactly the **same target law**. It does not justify mixing arbitrary ordered pairs with different targets. The source's independent review concerns this stated mechanism. |
+| [Original fixed-base orbit certificate](../gaussian_majorisation_square_cone_orbits/PROOF.md) | A pointwise finite-orbit hinge inequality integrates to `Delta_s=0` at every variance | The radius-`1/552` weight ball around `(8,12,7,15,44,21,11,23,43)/184`, and its specified radial-measure cones. It covers the old high-variance benchmark and the radius-`1/4000` atomic-obstruction ball. It does not cover arbitrary weights. |
+| [Paired-layer completion](../gaussian_paired_layers_majorisation/ALL_VARIANCES.md) | Independent small/high-variance controls join compact-band stability | One constrained spatial neighborhood works at all variances with its radius-`1/25000` weight ball. It allows spatial freedom beyond the exact ray fixture, but not arbitrary clouds or arbitrary weights at all variances. |
 
-Adjoining a common Gaussian does **not** follow as a positive closure
-rule from the displayed estimate. A base zero defect only gives a small
-upper bound at finite separation. The original square-cone arbitrary-
-weight origin-adjunction question therefore remains an analytic target.
+For the original orbit certificate, every radius profile extracted from
+its fixed coefficient cones already has the coordinate-preserving
+rematching in [GEOMETRIC_LIMIT.md](GEOMETRIC_LIMIT.md). For the paired-layer
+weight ball, a uniform positive weight floor forces equal logarithmic
+radii along paths remaining in that ball; its equal-radius unions already
+compare by the coordinate fold using the transverse central symmetry.
+These scope conclusions preserve the extra **weighted Gaussian** content
+of both results. They do not apply to the new unbounded ordered-weight cone.
 
-## The shared obligation and Kneser--Poulsen boundary
+## 4. Stability, finite tests and partial information
 
-The single remaining analytic task is `Delta_s=0` for arbitrary bounded
-three-dimensional input, arbitrary contraction, and each `s>0`.
-Theorem 1 gives a primal construction target; Theorem 2 gives an exact
-dual hierarchy with certified finite error. The geometric lane supplies
-zero-failure certificates for its classes, and the adversarial lane can
-settle a failure with a single negative finite test. The integrated
-hinge sign is still missing for the unrestricted problem.
+| Mechanism | What is established | What is still required |
+|---|---|---|
+| [Bounded-law interior and stability](../gaussian_majorisation_open_stability/BOUNDED_LAWS.md) | Strict mean-support gap, target peak gap, and strict hinges below the target peak characterize the product `W_infinity` interior of the comparison set. Strict additional target homothety takes an ordered pair with nonpoint target into that interior. | A known comparison is the input to this extension. Neighborhoods depend on the laws and a compact positive variance band. There is no domain-wide radius or automatic small-variance conclusion. The earlier [finite-base cloud theorem](../gaussian_majorisation_open_stability/PROOF.md) is retained as a special case, with its additional weight perturbation statement. |
+| Finite positive certificate in the same bounded-law source | Signed low-threshold control and an upper bound on the source peak, together with beta averages exceeding their explicit localization error, imply every hinge at one variance. Every interior pair admits a finite such certificate. | Actual rigorous endpoint bounds and the strict finite margins. No practical degree or universal successful data set is asserted. This is stronger than bare finite nonnegativity. |
+| [Eventual completion](../gaussian_majorisation_eventual_endpoint/PROOF.md), built from the [high-noise window](../gaussian_majorisation_high_noise_window/PROOF.md) and [spherical tail](../gaussian_majorisation_spherical_tail/PROOF.md) | The stipulated uniform signed spherical condition yields full comparison for all sufficiently large variances | That signed condition is not universal. Its [independent acceptance](../gaussian_majorisation_eventual_endpoint_review2/README.md) preserves the hypotheses. The particular [asymmetric benchmark](../gaussian_asymmetric_eventual_majorisation/PROOF.md) is now covered at all variances by the original orbit theorem; its old cutoffs are not a new frontier. |
+| [Sparse finite Hankel hierarchy](../gaussian_sparse_hankel_hierarchy/PROOF.md) | Specified finite blocks are positive past their order-dependent variance bounds | One cannot exchange the order and variance quantifiers to infer the complete hierarchy at one variance. |
+| [Covariance-free entropy rigidity](../gaussian_contraction_covariance_free/PROOF.md), with [independent acceptance and unsigned hinge bound](../gaussian_majorisation_bridge_barrier/AUDIT.md) | Entropy loss controls closeness modulo isometries and hence unsigned hinge magnitude | Small defect does not give exact zero. The fixed-atom reduction identifies why a uniform near-Dirac sign theorem would already settle the full question. The accepted audit does not review the separate [energy-only barrier theorem](../gaussian_majorisation_bridge_barrier/PROOF.md) or the fixed-atom reduction. |
 
-The all-law/all-variance premise of Aishwarya--Li Theorem 5.1 supplies
-arbitrary-radius ball comparisons. For an individual radius assignment,
-the [geometric-endpoint annex](GEOMETRIC_LIMIT.md) states the weaker
-sufficient requirement precisely: a single exponential weight path,
-tested at one threshold per variance, or a coupling defect negligible
-at its specified scale. The existing motion sources already give their
-arbitrary-radius comparisons. The annex completely classifies the finite
-logarithmic profiles of the two fixed density-orbit coefficient cones;
-all the resulting radius assignments retain a coordinate-preserving
-relabelling proof. Extending that functional theorem toward a new volume
-case requires escaping those radius-matching conditions, or a different
-endpoint. Neither the density-orbit source nor this consolidation claims
-a new Kneser--Poulsen case. Finite moment checks and unsigned entropy
-bounds supply no such claim.
+The rare packet in the fixed-atom construction is not `W_infinity`-small
+to the atom at fixed variance. Its unit-ball rescaling has variance
+tending to zero, and the Dirac equality pair is not an interior point.
+The reduction and the positive stability theorem therefore fit together
+without supplying each other's missing hypothesis.
+
+The unrestricted `PC2` and power comparisons in the primary paper
+remain partial information in dimension three. The noncontractive
+energy-only examples refute a geometry-free implication; they are not
+counterexamples to the contraction conjecture. Researcher 7's current
+finite positive moment checks and direct-hinge searches likewise supply
+neither a full positive theorem nor a certified negative contraction pair.
+
+## 5. Obstructions exclude mechanisms, not the endpoint order
+
+| Durable obstruction | What cannot be inferred |
+|---|---|
+| [Atomic bridge obstruction](../gaussian_atomic_bridge_obstruction/PROOF.md), with [independent acceptance](../gaussian_atomic_bridge_obstruction_review1/REVIEW.md) | Its excluded position martingales and deterministic common-output motion mixtures are more restrictive than the endpoint density-value coupling. The original orbit theorem proves a zero-failure coupling on that entire obstruction ball. |
+| [Local-lift obstruction](../gaussian_majorisation_local_lift_obstruction/PROOF.md) | Instantaneous lifted Hankel positivity is not necessary for an endpoint comparison. The time integration must be retained. |
+| [Finite strong-composition obstruction](../gaussian_axial_cone_rotations/COMPOSITIONS.md) | Failure of all finite aligned strong-coordinate chains in `R^3` does not exclude higher-dimensional motions or smoothed density couplings. Its rigid anchored assumptions are essential. |
+| [Tail-deficit obstruction](../gaussian_tail_deficit_obstruction/PROOF.md) | Failure of the proposed uniform normalized-tail estimate is not failure of absolute global continuity or majorisation. Its extra signed tail hypothesis is not part of the global criterion. |
+
+There is no valid reverse arrow from an unavailable motion, martingale,
+finite factorization, or particular local estimate to a negative Gaussian
+hinge. Conversely, a positive endpoint coupling need not be realized by
+any of those restricted constructions.
+
+## 6. The geometric bridge and the remaining lane ownership
+
+For selected radii `r_i`, the exact path criterion is
+`2s log q_i(s)->r_i^2`, `a_s=(2*pi*s)^(-3/2)/sum_i q_i(s)`, and
+`liminf_(s->0) Delta_s/a_s=0`. It suffices for the corresponding union
+inequality, by [GEOMETRIC_LIMIT.md](GEOMETRIC_LIMIT.md). Absolute
+`Delta_s->0` alone need not control that normalized scale. A full-support
+fixed law at all sufficiently small variances can already give congruent
+unions; unequal radii generally require the stated varying weights.
+The primary [Aishwarya--Li Theorems 1.8 and 5.1 and Remark 1.9](https://arxiv.org/html/2609.07041v2)
+supply the volume-transfer background. The domain-wide motion sources
+also prove intersections by their separate geometric route. The ordered
+orbit source proves its stronger invariant-measure **union** statement
+directly on finite orbits, including boundaries.
+
+| Lane | Current ownership and concrete obligation |
+|---|---|
+| Researcher 5: analytic/optimal transport | Maintain this common criterion and its exact quantifiers; seek a global endpoint coupling or integrated hinge sign. The arbitrary-weight square-cone origin-adjunction target remains open outside the certified classes. The fixed-atom reduction requires arbitrary rare geometry. This consolidation does not add another threshold family. |
+| Researcher 6: geometry/internal energy | Own the broad axial and damped motion classes, their geometric consequences and review obligations. Their all-weight statements should not be weakened into law-dependent stability claims. |
+| Researcher 7: counterexamples | Seek an actual certified negative hinge or finite negative convex-energy witness for valid contraction data. Preserve positive narrow examples; a failed proof mechanism or a finite positive table is not the requested endpoint. |
+| Researcher 8: functional inequalities/stability | Own ordered-orbit certificates, bounded-law stability and finite positive certificates. The new ordered-radius theorem meets the earlier contrast-profile obligation on its exact rays; unordered weights/radii and arbitrary geometry remain outside it. |
+
+Independent review is still needed for the global criterion, fixed-atom
+reduction, geometric class extensions, and the new orbit theorem unless
+an explicit acceptance is linked above. Replaying author-provided exact
+programs is recorded as reproduction of their output, not as acceptance
+of their continuum proofs. This handoff assigns no new lane and proves
+no new headline theorem.

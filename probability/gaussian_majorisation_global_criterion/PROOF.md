@@ -462,3 +462,19 @@ The conditional near-Gaussian and unit-ball normalizations in that annex
 state exactly what a uniform entropy or local endpoint argument would
 have to prove. The established geometric classes in the dependency map
 remain sufficient constructions with their original quantifiers.
+
+## 8. Current sufficient constructions
+
+[DEPENDENCIES.md](DEPENDENCIES.md) now separates equivalent full-question
+formulations from sufficient geometric classes, stability mechanisms and
+restricted examples. In particular, the later
+[ordered-weight orbit theorem](../gaussian_majorisation_square_cone_orbits/ORDERED_WEIGHTS.md)
+supplies the sign in (17) for measure-ordered ray weights of unbounded
+contrast. It therefore supplies the same zero-failure endpoint coupling
+on its class. Its additional ordered-radius union conclusion uses a
+small-variance weight path and a finite-orbit limit, not the value of
+`Delta_s` at one fixed variance. This implication uses that source at its
+stated exact author-proof status; it adds no independent review or new
+comparison theorem. The arbitrary-packet hypothesis of the fixed-atom
+reduction is not supplied by allowing arbitrary mass at the origin of
+this particular ray class.

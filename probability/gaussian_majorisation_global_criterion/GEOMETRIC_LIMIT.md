@@ -319,6 +319,23 @@ criterion while leaving the exponential-weight obligation above intact.
 They are cited at their author-proof status, not independently reviewed
 or used as premises for (G4)--(G10).
 
+### Subsequent positive extension with a new certificate
+
+The later [ordered-weight theorem](../gaussian_majorisation_square_cone_orbits/ORDERED_WEIGHTS.md)
+uses different finite orders. It permits arbitrary weight contrasts with
+four ordered coordinates in each cluster, including strictly different
+logarithmic rates on every shell. This meets the positive extension
+obligation above on those exact rays. Its finite-orbit argument proves
+ordered-radius unions for every locally finite invariant measure, and
+an all-distinct exposed-ball fixture escapes the old endpoint rematching.
+No intersection or unrestricted-weight theorem is asserted there.
+
+The fixed-cone classification (G4)--(G10), its checker and the source
+certificate used here remain unchanged. This annex classifies those
+specific old cones; it was not an impossibility statement for other
+orbit certificates. See [the current handoff](DEPENDENCIES.md) for the
+new class, its pending-review status and its geometric scope comparisons.
+
 ## Reproduction and trust boundary
 
 From this directory, with CPython 3.11 or later and no packages, run
