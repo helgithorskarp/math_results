@@ -5,6 +5,13 @@ the tangent cone of a numerical semigroup, over any field. It includes an explic
 finite cutoff, an absolute-complex version on at most one more vertex than the
 embedding dimension, and an extension to positive affine semigroups.
 
+[FIVE_GENERATORS.md](FIVE_GENERATORS.md) develops a further consequence: all
+fine, graded, and total Betti numbers of tangent cones of positive affine
+semigroups with at most five minimal generators are independent of the field.
+The proof uses factorization lengths to exclude the six-vertex projective plane
+from the absolute complexes. This is a complete written proof attempt awaiting
+external review; no sharpness or priority claim is made.
+
 The target is [Problem 1 of Moscariello–Sammartano,
 arXiv:2406.00790v2](https://arxiv.org/html/2406.00790v2). The argument is a direct
 application and explicit reformulation of the classical relative-divisor-complex
@@ -18,6 +25,7 @@ to expert review; no priority or independent peer-review claim is made.
 [THEOREM.md](THEOREM.md) contains the statement, proof, empty-complex conventions,
 finite support bound, prior-work comparison, and a characteristic-independence
 corollary for embedding dimension at most four.
+The five-generator extension has its own proof and supplementary verifier.
 
 For generators $n_1<\cdots<n_e$, let $\operatorname{ord}(a)$ be the maximum
 factorization length and $n_F=\sum_{v\in F}n_v$. Set
@@ -102,6 +110,33 @@ algorithm enumerates subsets of the generators and is exponential in embedding
 dimension; its arithmetic cutoff is not asserted to improve on specialized CAS
 methods. No exhaustive census beyond the stated regression corpus is claimed.
 
+## Five-generator extension
+
+Run from this directory:
+
+```sh
+python3 five_generator_check.py
+python3 five_generator_check.py --singular /path/to/Singular
+```
+
+The second command prints:
+
+```json
+{"checks": "PASS", "non_Cohen_Macaulay": 2, "projective_plane_apices": 6, "semigroups": 109, "singular_fine_entrywise_matches": 327, "tables": 327, "tables_sha256": "3ace201288ad61aaa5d5426ccb3655bba61b6d1c99d9c28323f128c5adfa91e3", "threshold_partitions": 192, "torsion_positive_control": "PASS"}
+```
+
+The first command has the same output except for the omitted
+`singular_fine_entrywise_matches` field. The hash uses the same canonical record
+format as `singular_check.py` and covers all five-generator minimal numerical
+generating subsets of `{5,...,15}` in characteristics 0, 2, and 3. The two
+non-Cohen–Macaulay examples are `<6,7,10,11,15>` and `<8,9,13,14,15>`.
+
+The topology check examines all six possible cone apices and all 32 threshold
+partitions at each apex of the projective plane. It also detects the genuine
+characteristic-two homology of the unrestricted relative pair, whose square
+boundary matrix has determinant of absolute value two. The universal theorem
+uses the additional support/length argument, not a numerical census.
+
 ## Trust and scope
 
 The code trusts Python's integer and rational arithmetic. The independent
@@ -113,3 +148,6 @@ needed or included here.
 Primary methodological dependencies are fully credited in THEOREM.md. The
 small-embedding-dimension corollary also uses
 [Björner–Tancer's combinatorial Alexander duality](https://arxiv.org/abs/0710.1172).
+The five-generator extension additionally uses the exact six-vertex
+classification in [Govc–Marzantowicz–Michalak–Pavešić,
+Theorem 3.6](https://arxiv.org/html/2511.02586v1).

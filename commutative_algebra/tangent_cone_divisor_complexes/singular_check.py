@@ -67,13 +67,10 @@ kill E,R;
 '''
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--singular", default="Singular")
-    args = parser.parse_args()
-    cases = [(g, p) for g in corpus() for p in (0, 2, 3)]
+def check_cases(cases, singular):
+    """Compare the specified (generator tuple, characteristic) cases exactly."""
     script = 'LIB "sing.lib";\n' + "\n".join(program(g, p, c) for c, (g, p) in enumerate(cases)) + "\nquit;\n"
-    run = subprocess.run([args.singular, "-q"], input=script, text=True,
+    run = subprocess.run([singular, "-q"], input=script, text=True,
                          capture_output=True, check=True, timeout=600)
     if "?" in run.stdout or "ERROR" in run.stdout or "error" in run.stderr.lower():
         raise RuntimeError(run.stdout + run.stderr)
@@ -102,9 +99,16 @@ def main():
         assert fine_seen[i] == expected_fine, (g, p, fine_seen[i], expected_fine)
         records.append([list(g), p, [[a, b, c, d] for (a, b, c), d in sorted(fine_seen[i].items())]])
     data = json.dumps(records, separators=(",", ":")).encode()
-    print(json.dumps({"tables": len(cases), "fine_entrywise_matches": len(cases),
-                      "tables_sha256": hashlib.sha256(data).hexdigest(),
-                      "checks": "PASS"}, sort_keys=True))
+    return {"tables": len(cases), "fine_entrywise_matches": len(cases),
+            "tables_sha256": hashlib.sha256(data).hexdigest(), "checks": "PASS"}
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--singular", default="Singular")
+    args = parser.parse_args()
+    cases = [(g, p) for g in corpus() for p in (0, 2, 3)]
+    print(json.dumps(check_cases(cases, args.singular), sort_keys=True))
 
 
 if __name__ == "__main__":

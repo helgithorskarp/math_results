@@ -264,6 +264,12 @@ complexes satisfy the same conclusion directly. The universal coefficient theore
 now shows that all the dimensions in (2) are characteristic independent.
 This is a consequence of classical topology and the formula, with no separate
 novelty claim for the small-embedding-dimension conclusion.
+It also follows directly from Bruns–Herzog, Corollary 1.4(a), through the
+monomial-quotient presentation in Section 4.
+
+The subsequent note [FIVE_GENERATORS.md](FIVE_GENERATORS.md) strengthens this to
+five minimal generators. Its additional ingredient is an arithmetic obstruction
+to the six-vertex projective plane, using factorizations supported on facets.
 
 ## 6. Checks and trust boundary
 
