@@ -36,7 +36,12 @@ work were refreshed again for that consolidation.
   Section 1.2 defines strong contraction by decreasing every coordinate
   distance; its examples include one-sided coordinate reflections. Our
   finite fixture fails that criterion, including after independent rigid
-  alignments. This does not exclude every composition of existing methods.
+  alignments. The subsequent [composition proof](COMPOSITIONS.md) excludes
+  every finite sequence of strong steps in R3 with independent alignments
+  at each step. Their Theorem 1.3 is the established ball-volume result
+  for each strong step, so the comparison now includes its finite
+  composition closure. Other combinations of existing methods remain outside
+  this exclusion.
 - Mojzesz D. Kirszbraun,
   [*Über die zusammenziehende und Lipschitzsche Transformationen*,
   Fundamenta Mathematicae 22 (1934), 77--108](https://doi.org/10.4064/fm-22-1-77-108).
@@ -186,3 +191,69 @@ perimeter criterion under every common axis. A common-target comparison
 with forced labels additionally uses distinct positive weights; injectivity
 alone does not prevent rematching equal-weight labels. These qualifications
 are recorded with proofs in Sections 4.1 and 5.1.
+
+## Finite-composition refinement
+
+[COMPOSITIONS.md](COMPOSITIONS.md) adds a self-contained necessary condition
+for factoring an anchored rigid-cluster flip into finitely many independently
+aligned strong contractions. The endpoint rigidity argument reduces every
+step to a sum of rank-one matrices in the two positive dual cones. Telescoping
+forces their positive hull to contain the identity. The construction of a
+rank-one positive hull and testing it by a separating linear functional are
+standard linear algebra; no new tensor-cone representation theorem is claimed.
+The new input is this reduction from the allowed geometric steps and its
+application to the already published axial class.
+
+The circular obstruction uses diag(-pq,-pq,1), with trace 1-2pq. The existing
+rational 25-point fixture has the strict certificate diag(-8,-8,15), trace
+-1 and minimum normalized generator value 5/27. The finite exact audit
+reconstructs dual polygons by all boundary intersections, rather than the
+adjacent-edge method in the original checker. The universal exclusion is
+proved for every finite chain length; it is not an unsuccessful factorization
+search. The previous scalar and common-target results are cited for the
+separate consequences involving mixture components and forced labels.
+
+The targeted literature refresh checked the definition, fold examples and
+Theorem 1.3 in Bezdek--Naszodi, and searched for strong-contraction
+factorizations, changing-frame fold compositions, and positive rank-one
+obstructions. No identical reduction was located in the inspected sources.
+This remains a bounded novelty check. The claim excludes the precise finite
+composition class in R3, including arbitrary one-sided hyperplane folds; it
+does not exclude arbitrary piecewise distance-preserving maps, higher
+dimensional intermediate configurations, approximate limiting factorizations,
+or compositions using other sufficient theorems.
+
+At the prepublication refresh, researcher 8's
+[spatial all-order stability proof](../gaussian_majorisation_open_stability/PROOF.md),
+source commit `b48c5ca31f3c573f2ffe6874944de83bc1a92710`, was read in full.
+It preserves positive comparisons under arbitrary small spatial clouds on
+compact positive variance intervals, with a strict undamped square-cone
+application and a target-damping bridge from other finite positive examples.
+It claims no new Kneser--Poulsen case. Its stability theorem is not a
+premise of the factorization obstruction: the latter uses exact rigidity
+of two anchored spanning clouds. Its radius is not uniform over all
+variances, and our obstruction is not asserted for arbitrary perturbed
+endpoint clouds.
+
+The final fetch also included researcher 7's
+[all-variance paired-layer neighborhood](../gaussian_paired_layers_majorisation/ALL_VARIANCES.md),
+source commit `465f892ad569fe12fb2634395c21bc7025abff41`. Both its small-variance
+proof and its all-variance completion were read. A uniform positive spatial
+neighborhood of the asymmetric nine-point reference works at every variance
+under its paired-plane, symmetry, contraction and weight hypotheses. Its
+radius is existential; the compact-interval spatial theorem above is an
+essential dependency of that completion. This removes an extreme-variance
+counterexample route near that constrained benchmark, but claims no new
+Kneser--Poulsen case. It is coordination context, not a dependency of the
+present anchored-rigidity argument.
+
+Researcher 5's subsequent
+[geometric endpoint classification](../gaussian_majorisation_global_criterion/GEOMETRIC_LIMIT.md),
+source commit `c4ab34bd94a7d08646803a5c1d6ad535bcbe877f`, was also read.
+It identifies the exponentially varying weight paths needed to extract
+prescribed unequal ball radii and proves that the current orbit coefficient
+cones yield radius patterns already covered by rematching. A weight ball
+bounded away from zero yields only equal logarithmic radii. This reinforces
+the distinction between those weight-restricted Gaussian classes and the
+present all-weight motion theorem. The axial arbitrary-radius conclusion
+uses Bezdek--Connelly directly and does not depend on that classification.

@@ -40,6 +40,15 @@ this additional scope even for a finite configuration. It has paired affine
 rank six, admits no motion in three dimensions, and is not a strong
 coordinatewise contraction, even after independent rigid alignments.
 
+[COMPOSITIONS.md](COMPOSITIONS.md) strengthens the last comparison to
+**every finite composition** of strong contractions in three dimensions,
+allowing different rigid alignments at each step. It also excludes arbitrary
+successive one-sided hyperplane folds. A general rank-one matrix obstruction
+proves this throughout the circular range above `1/2`; the existing finite
+fixture has the strict certificate `diag(-8,-8,15)`, with trace `-1` and
+minimum dual-generator value `5/27`. This is a limitation of those methods,
+compatible with the positive four-dimensional motion.
+
 Read [SCOPE.md](SCOPE.md) for the consolidated correctness boundary,
 breadth, comparison with the current Team B classes, and precise
 Kneser--Poulsen claim. The axial and simplicial criteria are not nested;
@@ -63,6 +72,8 @@ python3 verify.py --check
 python3 -O verify.py --check
 python3 scope_audit.py --check
 python3 -O scope_audit.py --check
+python3 composition_audit.py --check
+python3 -O composition_audit.py --check
 sha256sum -c SHA256SUMS
 ```
 
@@ -71,6 +82,7 @@ Standard library only. Checked with CPython 3.11.2 and 3.12.14. Expected:
 ```text
 AXIAL_CONE_EXACT_AUDITS_PASS 50ce427908f4f6e355ea7ed58996954bc2b5ebc72c2ac547417659be6b8196c4
 AXIAL_CONE_SCOPE_AUDITS_PASS de6ff71916e4afddfce10a93b3d8e0d9a566c8d08660dd333ea12fdd3ad8da0a
+AXIAL_STRONG_COMPOSITION_AUDITS_PASS 754bfdbc1cb7ad7a884003dadc90ddeac33e4b2554d7fd7d2b4a385e24cf66ab
 ```
 
 Running `python3 verify.py` prints the exact [EXPECTED.json](EXPECTED.json).
@@ -91,3 +103,11 @@ matrix (rank six, determinant `-288/25`), an identity-map positive control,
 and a distinct positive weight certificate for the common-target comparison.
 The all-axis orthant exclusion is a written proof in Section 4.1, not an
 axis search. These are supplementary author audits, not independent review.
+
+The new [composition_audit.py](composition_audit.py) checks the dual polygons
+by all boundary-line pairs, every one of the 144 generator tests, and a
+rotated-orthant positive control with independent frames and a moving origin.
+Two invalid matrix certificates are rejected. Its compact output is
+[EXPECTED_COMPOSITIONS.json](EXPECTED_COMPOSITIONS.json). The exclusion of
+every finite chain length follows from the written telescoping proof, not
+from a bounded search over possible factorizations.

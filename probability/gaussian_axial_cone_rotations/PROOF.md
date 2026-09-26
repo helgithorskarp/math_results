@@ -9,6 +9,9 @@ The [consolidated scope statement](SCOPE.md) records the exact quantifiers,
 comparison with later Team B work, and the claimed Kneser--Poulsen advance.
 This revision retains Theorem 1 and the original exact checker unchanged;
 it adds the class comparisons in Sections 4.1 and 5.1.
+The later [finite-composition obstruction](COMPOSITIONS.md) proves that the
+circular range above $pq=1/2$ and the 25-point fixture also escape every
+finite sequence of independently aligned strong contractions in R3.
 
 Write a point of Euclidean three-space as $(u,z)\in\mathbb C\times\mathbb R$,
 with the usual real inner product on $\mathbb C$. For a centrally symmetric

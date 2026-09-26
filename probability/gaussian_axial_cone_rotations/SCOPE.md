@@ -5,6 +5,10 @@ is unchanged. This document makes its scope and relation to the team's
 other results explicit. Independent mathematical review remains pending;
 the full dimension-three question remains open.
 
+The subsequent [composition theorem](COMPOSITIONS.md) strengthens the
+strong-contraction comparison below to every finite composition in R3,
+including independent rigid alignments at each step.
+
 ## Exact statement and breadth
 
 Work in ordinary Euclidean three-space with one common axis and height-one
@@ -87,10 +91,15 @@ PROOF Sections 4--5 establish the following actual exclusions:
   constructed four-dimensional motion therefore has minimal ambient
   dimension for these prescribed labels.
 - Strong coordinatewise contraction fails even after independent rigid
-  alignments. The later scalar-defect inequality fails as well.
+  alignments. COMPOSITIONS.md now rules out every finite sequence of such
+  steps, not just a single step; its strict rational matrix certificate
+  has trace $-1$ and generator margin $5/27$. The later scalar-defect
+  inequality fails as well.
 
 These prove added coverage relative to the named sufficient criteria.
-They do not exclude every composition, rematching, or other proof method.
+The finite-composition exclusion concerns strong steps in R3. It does not
+exclude compositions using other sufficient theorems, intermediate higher
+dimensions, rematching, or other proof methods.
 In particular, rank six is not an obstruction to a nonlinear continuous
 motion in five dimensions: this example has one already in four.
 
@@ -101,12 +110,15 @@ motion in five dimensions: this example has one already in four.
 | [Paired rank at most five](../gaussian_majorisation_rank_abel/PROOF.md) | The 25-point witness has rank six. The shared two-coordinate Gaussian identity is reproduced in this proof. |
 | [Simplicial cone reflections](../gaussian_simplicial_cone_reflections/PROOF.md) | Neither stated geometric criterion contains the other. Circular cones with $1/2<pq\le2/\pi$ escape every simplicial separator. Conversely, the standard self-dual orthant cannot meet this axial perimeter bound under any common axis; PROOF Section 4.1 proves $\operatorname{per}W\ge8$ for every centrally symmetric envelope. This is not an obstruction to other motions for the orthant. |
 | [Scalar-defect budget](../gaussian_majorisation_scalar_defect/PROOF.md) | Norm preservation at the origin and spanning of both clusters exclude its unit-vector criterion on the 25-point witness. PROOF Section 5.1 applies that source's existing obstruction; the new matrix audit records it exactly. |
+| Strong contractions and hyperplane folds | The new [rank-one obstruction](COMPOSITIONS.md) excludes every finite composition after arbitrary rigid alignments on the circular range $pq>1/2$ and on the existing 25-point fixture. It covers changing hyperplanes and moving anchors. The proof requires the original labels, the origin and two spanning rigid clouds; it does not exclude approximate limiting factorizations. |
 | [Fixed-core rematching](../gaussian_majorisation_fixed_core/PROOF.md) | That construction fixes a tetrahedral core and rematches ray labels subject to output-law or radius-incidence conditions. Here the prescribed labels move and all weights and individual radii are allowed. No general containment claim is made. |
 | [Common-target mixtures](../gaussian_majorisation_common_target/PROOF.md) | This measure-dependent method needs the same output law from every component. On our injective fixture, each deterministic component must have the original source law; with distinct weights its matching is forced too. PROOF Section 5.1. Repeated weights can permit rematchings. No conclusion about stochastic couplings or post-convolution decompositions follows. |
 | [Eventual majorisation](../gaussian_majorisation_eventual_endpoint/PROOF.md) and its [asymmetric nine-atom realization](../gaussian_asymmetric_eventual_majorisation/PROOF.md) | Those results require a spherical comparison and a lower variance bound. The new orbit theorem below removes that restriction for the stated square-cone weight family. The axial theorem covers every variance without a spherical premise and supplies ball inequalities at every radius. |
 | [Square-cone orbit comparison](../gaussian_majorisation_square_cone_orbits/PROOF.md) | The newest result proves every hinge at every variance on the asymmetric nine-point L1 weight ball of radius $1/552$, with a bounded radial-law extension in explicit weight cones. It compares smoothed density values using an exact finite order certificate, despite the prescribed matching's five-dimensional motion obstruction. It has weight restrictions and claims no new Kneser--Poulsen case. Neither general geometric class is asserted to contain the other. |
 | [Damped cone reflections](../gaussian_damped_cone_reflections/PROOF.md) | The later product-cost motion criterion contains the present axial path at damping factor one. Its wider positive class uses damping less than one and changes both endpoints. It does not enlarge the undamped perimeter range proved here. |
 | [Global coupling and moment criterion](../gaussian_majorisation_global_criterion/PROOF.md) | This identifies full majorisation with zero failure in a coupling of five-dimensional endpoint density values, equivalently a complete moment hierarchy. The axial motion constructs such a coupling for every law and variance in its domain. The equivalence alone adds no geometric class; finitely many nonnegative tests do not prove zero failure. |
+| [Spatial all-order stability](../gaussian_majorisation_open_stability/PROOF.md) | Finite positive instances become stable under small independent spatial clouds on compact positive variance intervals after strict target damping; the square-cone case needs no damping. Its interval-dependent radius and weight hypotheses do not enlarge the axial all-law, all-variance domain. The strong-composition obstruction requires exact anchored rigidity and is not asserted for arbitrary clouds. |
+| [Paired-layer neighborhood](../gaussian_paired_layers_majorisation/ALL_VARIANCES.md) | This combines a small-variance localization theorem, a robust spherical gap and the spatial-stability theorem to obtain one positive neighborhood of the asymmetric nine-point pair that works at every variance. It requires paired planes, transverse symmetry, contraction and a small weight ball; its spatial radius is existential. It claims no new Kneser--Poulsen case and is not a premise of the axial theorem or its factorization obstruction. |
 | [Atomic bridge](../gaussian_atomic_bridge_obstruction/PROOF.md) and [tail-deficit obstruction](../gaussian_tail_deficit_obstruction/PROOF.md) | These close particular methods on other configurations or proposed uniform estimates. They are not negative Gaussian hinges and do not contradict the axial theorem. |
 
 For circular cones the endpoint map is a contraction all the way to
