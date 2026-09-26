@@ -1,5 +1,30 @@
 # High-noise majorisation above an explicit density threshold
 
+The [small-radius defect consequence](SMALL_RADIUS_DEFECT.md) now bounds the
+possible adverse hinge at **every threshold and every moment order**:
+if `R^2/s<=1/(8k)`, then `D(f,g)<=16 k 2^(-5k)`. This is an exponentially
+vanishing error bound, not an exact sign. At variance one it can discard an
+entire small-radius cell from a search for violations above a prescribed
+tolerance. It also gives `M+E G>=0` for every finite Hankel matrix, with `G`
+the monomial Gram matrix. The accepted global7/50 bound remains the fallback.
+
+The exact consumer uses only Python's standard library:
+
+```sh
+python3 -B radius_defect.py --check
+python3 -B -O radius_defect.py --check
+python3 -B radius_defect.py --bits 1000000
+python3 -B radius_defect.py --radius-squared 1/64 --variance 1
+```
+
+The last command returns the compressed bound `8*2^(-36)=2^(-33)`.
+`--input instance.json` accepts the existing rational `source,target,weights`
+format, checks contractions and weights, and computes a source-anchor radius.
+The million-bit request stays compact; no large denominator is generated.
+[RADIUS_EXPECTED.json](RADIUS_EXPECTED.json) records the exact controls and
+[RADIUS_INPUTS.json](RADIUS_INPUTS.json) pins the mathematical dependencies.
+This consequence and its original coarea premise await independent review.
+
 For every probability measure supported in a radius-`R` ball in `R^3`
 and every 1-Lipschitz map, the author proof compares all Gaussian hinge
 energies at variance `s>=2R^2` above the threshold

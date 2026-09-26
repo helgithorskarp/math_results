@@ -19,8 +19,13 @@ orders 42 and210, certify the two remaining homogeneous forms. Their PSD
 certificates use exact annihilating polynomials and separate fraction-free
 elimination. No floating eigenvalue or sampled parameter sign is a premise.
 
-**Status:** author computer-assisted proof; independent mathematical review
-and formalization pending. All hypotheses, normalizations, formulas and
+**Status:** the original computer-assisted theorem, constants and polarized
+signs have independent acceptance in [R5's review](../gaussian_seven_factor_review_r5/REVIEW.md)
+and a [second review](../gaussian_seven_factor_review2/REVIEW.md). The latter
+is committed at graph height6262. These reconstruct complementary matrix and
+symbolic certificates. The original proof and executable sources are unchanged;
+their dated pending-review language records the publication status at that time.
+Formalization and external peer review remain pending. Full hypotheses and
 computational trust boundaries are in [PROOF.md](PROOF.md).
 
 Run from the repository root, with Python 3.11 or later and the standard library:
