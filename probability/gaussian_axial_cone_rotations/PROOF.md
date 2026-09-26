@@ -15,6 +15,9 @@ finite sequence of independently aligned strong contractions in R3.
 [ROBUSTNESS.md](ROBUSTNESS.md) gives a quantitative extension under
 nonlinear endpoint distortions with reserved scaling, including a full
 neighborhood of freely perturbed endpoints that still needs four dimensions.
+[MATRIX_PATHS.md](MATRIX_PATHS.md) subsequently extends the same undamped
+class through transverse matrix paths in R5. Its circular threshold is
+`1/(1+cos(1))`; Theorem 1 and its axial-form sharpness below remain unchanged.
 
 Write a point of Euclidean three-space as $(u,z)\in\mathbb C\times\mathbb R$,
 with the usual real inner product on $\mathbb C$. For a centrally symmetric

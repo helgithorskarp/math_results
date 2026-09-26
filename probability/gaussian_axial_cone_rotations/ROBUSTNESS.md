@@ -364,3 +364,8 @@ These finite checks audit the constants used in a universal written proof.
 No grid of perturbed configurations, Gaussian quadrature, solver,
 floating-point sign, large artifact, or formalization is a premise.
 Author computation is not independent mathematical review.
+
+The subsequent [matrix-path theorem](MATRIX_PATHS.md) gives additional
+undamped base motions in R5. Section 1 above applies to those motions in
+the same ambient dimension under exactly the existing error reserve.
+The numerical R4 neighborhood in Sections 3--5 is unchanged.

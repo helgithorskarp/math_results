@@ -9,6 +9,26 @@ The subsequent [composition theorem](COMPOSITIONS.md) strengthens the
 strong-contraction comparison below to every finite composition in R3,
 including independent rigid alignments at each step.
 
+The later [matrix-path theorem](MATRIX_PATHS.md) broadens the undamped
+positive class in the same packet. A support integral along a transverse
+operator-norm boundary path replaces the fixed rotation cost. Its circular
+condition is `pq<=1/(1+cos(1))`, with an R5 motion for all bounded laws,
+variances, thresholds and individual ball radii. It is exact among motions
+whose relative Gram matrix has zero transverse/axial cross blocks. The
+proof covers arbitrary continuous motions in that specified form by a
+Lipschitz reparametrization; it does not classify all R4 or R5 motions.
+The rational `p=4/5,q=81/100` example has a cost reserve `2/4375` and its
+displayed finite product perimeter exceeds four by at least `3379/62500`.
+The old perimeter theorem and the historical comparisons below remain valid.
+Independent review of this extension is pending.
+
+The latest [ordered-weight orbit result](../gaussian_majorisation_square_cone_orbits/ORDERED_WEIGHTS.md)
+also supplies an unequal-radius union theorem, on ordered square-cone
+shells, including invariant measures. Its no-R5-motion fixture and the
+present unrestricted weights/full-domain/intersection result are
+complementary. Earlier historical comparisons below refer to the earlier
+fixed-base orbit cones, not to this new ordered cone.
+
 ## Exact statement and breadth
 
 Work in ordinary Euclidean three-space with one common axis and height-one

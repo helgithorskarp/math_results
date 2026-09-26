@@ -1,10 +1,25 @@
 # Axial cone rotations: Gaussian majorisation and ball volumes
 
-This packet gives an explicit four-dimensional contracting motion for a
-broad class of three-dimensional central reflections. It proves full
+This packet gives explicit four- and five-dimensional contracting motions
+for a broad class of three-dimensional central reflections. It proves full
 Gaussian majorisation at every variance and threshold, and Kneser--Poulsen
 inequalities for unions and intersections of balls with arbitrary individual
 radii. The general dimension-three conjecture remains open.
+
+The latest [matrix-path extension](MATRIX_PATHS.md) keeps the original
+undamped endpoints and extends the circular range to
+
+```text
+p q <= 1/(1+cos(1)) = 0.649223...    (angle in radians).
+```
+
+It supplies a support-cost principle for general compact cone sections.
+A transverse operator-norm boundary path has an explicit isometric lift
+in R5; its optimal circular cost is `2(1+cos(1))`, below the old rotation
+cost `pi`. This is the exact boundary for block-diagonal relative Gram
+motions, including arbitrary continuous time parametrizations. Arbitrary
+R5 motions and the full majorisation question remain open. The numerical
+range extension is modest; the matrix-path principle is the new mechanism.
 
 For centrally symmetric planar convex bodies `P,Q` containing zero in their
 interiors, put
@@ -20,7 +35,8 @@ atom counts, and bounded nonatomic laws are unrestricted. The perimeter
 criterion is sharp within the specified axial rotation form, not claimed
 necessary for arbitrary motions or majorisation.
 
-For circular cones `C_p = {(u,z): z >= 0, |u| <= p z}`, this becomes
+For circular cones `C_p = {(u,z): z >= 0, |u| <= p z}`, the original R4
+rotation criterion becomes
 
 ```text
 p q <= 2/pi.
@@ -87,6 +103,8 @@ python3 composition_audit.py --check
 python3 -O composition_audit.py --check
 python3 robustness_audit.py --check
 python3 -O robustness_audit.py --check
+python3 matrix_path_audit.py --check
+python3 -O matrix_path_audit.py --check
 sha256sum -c SHA256SUMS
 ```
 
@@ -97,6 +115,7 @@ AXIAL_CONE_EXACT_AUDITS_PASS 50ce427908f4f6e355ea7ed58996954bc2b5ebc72c2ac547417
 AXIAL_CONE_SCOPE_AUDITS_PASS de6ff71916e4afddfce10a93b3d8e0d9a566c8d08660dd333ea12fdd3ad8da0a
 AXIAL_STRONG_COMPOSITION_AUDITS_PASS 754bfdbc1cb7ad7a884003dadc90ddeac33e4b2554d7fd7d2b4a385e24cf66ab
 AXIAL_UNIFORM_ROBUSTNESS_AUDITS_PASS 4004b3eb13fc1e1089966da5d33859c607ce0b159e2dba379b3ed3c6b5c640a6
+AXIAL_MATRIX_PATH_AUDITS_PASS 148015152cbb1c3a22a75cee680510d272d511a2de841e8f37e4fc7d499aef32
 ```
 
 Running `python3 verify.py` prints the exact [EXPECTED.json](EXPECTED.json).
@@ -133,3 +152,12 @@ enclosure verifies all 128 corners of the two tetrahedral squared-edge
 boxes by exact principal minors. [EXPECTED_ROBUSTNESS.json](EXPECTED_ROBUSTNESS.json)
 records the compact evidence. No grid of endpoint perturbations is used;
 all such perturbations are covered by the written uniform inequalities.
+
+The [matrix-path audit](matrix_path_audit.py) verifies fourteen polynomial
+identities and 150 direct rational isometric frames, including rank drops
+and the endpoints. Its new 25-site certificate has paired minor
+`209952/15625`, product perimeter lower bound `253379/62500`, and dual
+certificate margin `935/729`. These support the universal proof in
+[MATRIX_PATHS.md](MATRIX_PATHS.md); neither a path grid nor a Gaussian
+quadrature is a premise. The four earlier checkers and expected outputs
+are unchanged. All verification is author work, not independent review.

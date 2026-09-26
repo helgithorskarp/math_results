@@ -305,3 +305,74 @@ a compact positive variance band; it is not a domain-wide all-law radius.
 Thus it does not subsume the geometric uniformity in ROBUSTNESS.md, and it
 is not used as a premise there. Its original exact checker does not claim
 to formalize these new analytic arguments.
+
+
+## Undamped transverse matrix-path extension
+
+[MATRIX_PATHS.md](MATRIX_PATHS.md) adds an R5 support-cost principle to this
+same packet. The original R4 theorem and its sharpness within the axial
+rotation form remain valid. A real-linear planar map is written as
+`a*z+b*conjugate(z)`; its norm is `|a|+|b|`. The explicit lift, the
+operator-sphere path length and the continuous block-diagonal sharpness
+argument are derived in the new proof. No novelty is claimed for the
+real-linear decomposition, rank-one square roots, elementary convexity,
+Taylor estimates, or the classical outside-a-disk length calibration.
+The latter calibration was already used in our
+[damped-cone proof](../gaussian_damped_cone_reflections/PROOF.md), source
+`57ff1129224b92a88404817b164bf8c17bd2ecd1`. The new endpoint is undamped.
+
+The primary-source refresh on 26 September 2026 read
+[Aishwarya--Li v2](https://arxiv.org/html/2609.07041v2) and
+[Bezdek--Connelly, Theorem 1](https://arxiv.org/pdf/math/0108098) again.
+The former remains at its 13 September revision. The R5 density-value
+sampling argument and the R3 arbitrary-radius consequence are reused
+with attribution; neither transfer theorem is claimed new. The known
+all-positive-order Renyi result is not an all-hinge argument.
+
+Targeted searches covered circular/dual cones, central reflections,
+five-dimensional contracting motions, real two-by-two operator-norm
+spheres, and shortest paths in Hilbert-space direct sums. No identical
+matrix-path criterion or cone consequence was found in the inspected
+primary material. This bounded search is not a historical-priority
+certification. The numerical improvement from `2/pi` to `1/(1+cos(1))`
+is modest; the uniform path principle, its optimized block-diagonal
+boundary and its unchanged all-law/all-radius quantifiers are the claim.
+Optimality among arbitrary R5 motions, or failure in R4, is not asserted.
+
+The finite certificate reuses the original rational direction list, while
+changing the slopes to `4/5,81/100`. The original fixture and all four
+earlier checkers remain unchanged. The negative-trace theorem from
+[COMPOSITIONS.md](COMPOSITIONS.md), source
+`8e8cb2a62e575adbf0ec3ff74e681ee9688f1768`, supplies the finite strong-chain
+comparison. The existing [common-target theorem](../gaussian_majorisation_common_target/PROOF.md),
+source `3ad6ed0be174d1292b250efcad734d03eed01af5`, is used only when distinct
+weights force labels. The [scalar-defect source](../gaussian_majorisation_scalar_defect/PROOF.md),
+source `a8c8a21bde0eb356cf1fc302e3f9b13f1e9b113e`, and
+[paired-rank source](../gaussian_majorisation_rank_abel/PROOF.md), source
+`f7c122d6a5ade217930d63da27e67f9a9e55a539`, remain method comparisons.
+The nonlinear closure [ROBUSTNESS.md](ROBUSTNESS.md), source
+`a63bee4157117a2d2abb2a358119dfd57ebb5a9d`, applies in R5 under exactly
+its previous error reserve; no new perturbation constant is advertised.
+
+Team B's latest bounded-law stability and paired-layer completion are
+context, not premises of the motion. The
+[geometric endpoint annex](../gaussian_majorisation_global_criterion/GEOMETRIC_LIMIT.md)
+explains the significance of allowing all individual radii. Researcher7's
+latest durable private report found no actual Gaussian counterexample;
+its positive finite-order computation is not a proof input here. No
+independent review of the axial packet was visible at index6105.
+
+Immediately before publication, the full proofs in the fresh
+[fixed-atom reduction](../gaussian_majorisation_global_criterion/ANCHOR_REDUCTION.md),
+source `138993ba3ec2efde720c789a2a3d887c9c417c69`, and
+[ordered-weight orbit theorem](../gaussian_majorisation_square_cone_orbits/ORDERED_WEIGHTS.md),
+source `6056a43fd6c806cc2d92243e551528e238e40a23`, were read. The first is
+an equivalence/reduction and gives no new positive class. The second now
+gives all-variance ordered radial weights and ordered unequal-radius
+unions, even for invariant measures of its 48-element group. It is no
+longer accurate to describe the whole orbit route as lacking an unequal-
+radius consequence. That theorem covers a prescribed nine-point matching
+with no R5 motion; ours uses an R5 motion and allows arbitrary weights,
+full cone domains, individual radii and intersections. These are
+complementary inputs, not a containment assertion or hidden dependencies.
+Both team commits were preserved by fast-forwarding before publication.
