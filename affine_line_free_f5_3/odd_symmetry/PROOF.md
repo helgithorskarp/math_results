@@ -1,0 +1,260 @@
+# Symmetry obstructions for a 71- or 72-point line-free set
+
+Work in $V=\mathbb F_5^3$. A set is line-free if it contains no complete
+five-point affine line. Its affine automorphism group is
+$G(S)=\{g\in\operatorname{AGL}(3,5):g(S)=S\}$.
+
+**Theorem 1 (sharp order-three obstruction).** If a line-free set is
+invariant under a nonidentity affine transformation of order three,
+then it has at most 70 points. The bound is attained.
+
+**Theorem 2 (all-candidate symmetry restriction).** Suppose that $S$ is
+line-free and $|S|\in\{71,72\}$. Then $G(S)$ is a group of order a power
+of two, and $|G(S)|\le32$. It has no central inversion. If $G(S)$ is
+nontrivial, some affine image of $S$ is invariant under one of
+
+$$
+(x,y,z)\longmapsto(-x,y,z),\qquad
+(x,y,z)\longmapsto(-x,-y,z).                              \tag{1}
+$$
+
+Theorem 1 is an exact finite theorem with two complete enumerations.
+Theorem 2 uses, in addition, the known planar bound 16 and the campaign
+theorems that every 72-point candidate has at least five planes of size
+at most nine and at most one plane of size eight. These dependencies are
+specified in Section 5. Neither theorem determines whether 71 or 72
+points are possible.
+
+## 1. Complete normal form for order three
+
+An affine transformation $g$ of order three has a fixed point: average
+any three-point orbit in characteristic five. Translate this point to
+the origin. Its linear part is semisimple, because $t^3-1$ has distinct
+roots in characteristic five. Over $\mathbb F_5$ the nontrivial factor
+$t^2+t+1$ is irreducible. In dimension three, a nonidentity order-three
+map is therefore conjugate to
+
+$$
+g(x,y,z)=(x,-z,y-z).                                      \tag{2}
+$$
+
+The fixed points form $F=\{(x,0,0):x\in\mathbb F_5\}$. All other
+orbits have length three. In each invariant plane $x=c$, the 24
+noncentral points form eight orbits. The enumeration orders these
+orbits by their least point, with planar point number $5y+z$.
+No further symmetry assumption is imposed on the selected orbits.
+
+Let $k=|S\cap F|$. Since $F$ is a line, $0\le k\le4$.
+Cardinality modulo three leaves exactly the following normalized cases:
+
+| $|S|$ | $k$ | Selected fixed-point coordinates $x$ | Number of selected three-orbits |
+|---|---:|---|---:|
+| 71 | 2 | $\{0,1\}$ | 23 |
+| 72 | 0 | $\varnothing$ | 24 |
+| 72 | 3 | $\{2,3,4\}$ | 23 |
+
+Every two-element subset of $\mathbb F_5$ can be sent to $\{0,1\}$
+by an affine map $x\mapsto ax+b$. The same is true of the complements
+of the three-element subsets. These maps commute with (2), so the
+normalization is valid. The checker verifies all such subsets under
+all 20 affine maps of the fixed line.
+
+It suffices to exclude these three cases even without importing any
+global upper bound. Indeed, if an invariant set had more than 70 points,
+then, according to $k$, it would contain an invariant subset as follows:
+
+* $k=0$ or $1$: choose 24 three-orbits and no fixed points, giving 72.
+* $k=2$: choose 23 three-orbits and the two fixed points, giving 71.
+* $k=3$: choose 23 three-orbits and the three fixed points, giving 72.
+* $k=4$: choose 23 three-orbits and any two fixed points, giving 71.
+
+The required number of three-orbits follows in each case from
+$k+3r>70$. Deletion preserves line-freeness.
+
+## 2. Complete finite layer model
+
+In a plane $x=c$, specify whether its center is selected and choose a
+mask on its eight three-orbits. All $2^8=256$ masks are examined against
+all 30 affine lines of $\mathbb F_5^2$. The number of admissible masks,
+grouped by the number of selected three-orbits, is:
+
+| Center selected | 0 | 1 | 2 | 3 | 4 | 5 |
+|---|---:|---:|---:|---:|---:|---:|
+| No | 1 | 8 | 28 | 56 | 62 | 24 |
+| Yes | 1 | 8 | 28 | 56 | 60 | 16 |
+
+No mask with more than five orbits is admissible. This small complete
+check supplies the local cap required by the enumeration; it does not
+use a classification of maximum planar sets.
+
+The 625 lines not contained in an $x$-plane are exactly
+
+$$
+\{(x,u+ax,v+bx):x\in\mathbb F_5\},
+\qquad (u,v,a,b)\in\mathbb F_5^4.                          \tag{3}
+$$
+
+For each such line and each layer, record either the index $0,\ldots,7$
+of its noncentral orbit or the symbol 8 for the center. Duplicate
+five-symbol rows can be removed: this leaves 209 rows. A row forbids
+exactly those choices that select its specified point in all five
+layers. Center symbols are tested against the fixed-point pattern in
+Section 1. This is equivalent to checking all transverse lines.
+
+Thus the finite search is **equivalent** to the geometric question for
+the stated symmetry: every invariant line-free set gives one tuple of
+five admissible masks passing the rows, and every passing tuple decodes
+to such a set. There are no solver assumptions or heuristic cuts.
+
+## 3. Two complete enumerations
+
+The first program, [enumerate_constraints.cpp](enumerate_constraints.cpp),
+uses the explicit finite model generated by [model.py](model.py).
+For each admissible choice of the first three masks, it records which
+last-layer orbit is forbidden by each possible selected fourth-layer
+orbit. After selecting the fourth mask it takes the union of these
+forbidden bits. A center in the last layer contributes a separate
+unconditional-failure bit. The program then considers every admissible
+last mask of the required cardinality avoiding this union.
+
+If the total number of three-orbits required is $T$, every layer must
+contain at least $T-20$ of them, since each of the other four contains
+at most five. Similarly, a three-mask prefix is skipped only when its
+weight plus ten is less than $T$. These are the only weight pruning
+steps. All masks are otherwise considered, without an orbit quotient
+of the five-layer search space.
+
+The second program, [enumerate_lines.cpp](enumerate_lines.cpp), imports
+no model file. It independently builds the planar orbits and 30 lines,
+enumerates the actual 25-bit planar subsets, and constructs all 625
+geometric transversals (3). For each layer choice it stores a 625-bit
+incidence vector. A full line exists exactly when the intersection of
+the five vectors is nonempty. It checks candidate last masks directly,
+without constructing the first program's forbidden-orbit table.
+
+Both programs give:
+
+| Size | Fixed-point mask | Three-mask prefixes | Four-mask prefixes | Completions |
+|---:|---:|---:|---:|---:|
+| 71 | 3 | 330,880 | 12,507,136 | 0 |
+| 72 | 0 | 120,960 | 3,760,128 | 0 |
+| 72 | 28 | 406,720 | 12,507,136 | 0 |
+
+The fixed-point mask is $\sum_{x\in S\cap F}2^x$.
+The two representations agree on the entire output. In two
+boundary controls at size 70, the single-fixed-point normalization has
+zero completions, and the four-fixed-point normalization has 32.
+Every one of the latter 32 five-mask tuples agrees entry by entry.
+The Python verifier decodes and independently checks all 32 sets against
+all 775 affine lines, and checks their invariance under (2).
+
+All point indices are at most 124, layer masks at most 255, and individual
+forbidden bits at most 256 (their unions are at most 511).
+Enumeration counts use unsigned 64-bit integers;
+even the unpruned number of five-mask tuples is at most $256^5=2^{40}$.
+There is no overflow, approximation, timeout, or uncompleted branch in
+the stated enumeration.
+
+These zero-completion results and Section 1 prove the upper bound in
+Theorem 1. [witness70.json](witness70.json) supplies attainment. Its
+five masks are $(6,55,186,181,62)$ and its selected fixed points are
+$x=1,2,3,4$.
+
+This control reproduces the established lower bound 70. It has seven
+parallel classes with profile $(6,16,16,16,16)$, whereas the Figure 4
+witness of Elsholtz et al. has five such classes. Since affine maps
+preserve the multiset of parallel plane profiles, these two witnesses
+are not affinely equivalent. We claim neither a classification of all
+70-point sets nor priority for this additional affine class.
+
+## 4. Orders five and 31 cannot stabilize a larger candidate
+
+Suppose $|S|\in\{71,72\}$ and $g(S)=S$ with $g$ of order five.
+If $g$ has no fixed point, every orbit has length five, incompatible
+with either cardinality.
+
+If $g$ has a fixed point, translate it to zero. The linear part is
+unipotent. For Jordan type $(2,1)$, every nonfixed orbit is a complete
+line, so $S$ lies in the fixed plane and has at most 16 points.
+For type $(3)$ take
+
+$$
+g(x,y,z)=(x+y,y+z,z).
+$$
+
+In $z=0$, all nonfixed orbits are complete lines; hence only the fixed
+$x$-axis can contribute, and contributes at most four points.
+Each plane $z=c\ne0$ consists of five-point orbits, and its line-free
+section has size at most 16, hence at most 15. Therefore $|S|\le64$.
+The identity Jordan type would make $g$ the identity after the
+translation and is excluded. This rules out order five.
+
+The same argument shows, for every prime $p\ge3$, that a line-free
+subset of $\mathbb F_p^3$ invariant under a nonidentity order-$p$
+affine map with a fixed point has size at most $(p-1)^3$, using the
+classical planar bound $(p-1)^2$.
+
+An affine map of order 31 has a fixed point by averaging. Its nontrivial
+linear representation in dimension three is irreducible: the
+multiplicative order of 5 modulo 31 is three. Thus it has one fixed
+point and four orbits of length 31. An invariant set has cardinality
+0 or 1 modulo 31, excluding 71 and 72.
+
+Finally
+
+$$
+|\operatorname{AGL}(3,5)|
+=5^3(5^3-1)(5^3-5)(5^3-5^2)
+=2^7\cdot3\cdot5^6\cdot31.
+$$
+
+Theorem 1, the preceding arguments, and Cauchy's theorem exclude every
+odd prime divisor of $|G(S)|$. Therefore $G(S)$ is a 2-group.
+
+## 5. No central inversion; the bound 32
+
+Suppose first that a 71-point set is invariant under inversion about a
+point $O$. Since all nonfixed orbits have size two, $O\in S$.
+Each of the 31 lines through $O$ has two opposite pairs besides $O$;
+at most one such pair can belong to $S$. Thus $|S|\le1+2\cdot31=63$,
+a contradiction.
+
+For size 72, the center $O$ is absent. The
+[global low-plane theorem](../low_planes72/README.md) gives at least
+five planes meeting $S$ in at most nine points. Such a plane $H$ must
+contain $O$. Otherwise its inversion image is a distinct parallel
+plane with the same size, and the full parallel class has at most
+$9+9+3\cdot16=66$ points. A plane through $O$ is invariant under the
+inversion, so its section has even size. Every plane in a 72-point
+set has at least eight points, because its four parallel companions
+have at most 64. Therefore each of the five low planes has size eight.
+This contradicts the
+[two-eight-plane exclusion](../two_eight_planes72/THEOREM.md).
+
+These two cited campaign results are external premises for this
+72-point central-inversion argument. The order-three enumeration and
+the odd-prime exclusions above do not depend on them.
+
+The 2-group $G=G(S)$ has a common fixed point, obtained by averaging
+any orbit over all elements of $G$ in characteristic five. Translate
+that point to zero, making $G$ a subgroup of $\operatorname{GL}(3,5)$.
+Let $C=\{\lambda I:\lambda\in\mathbb F_5^\times\}$, a central cyclic
+group of order four. We have $G\cap C=\{I\}$: every nontrivial subgroup
+of $C$ contains $-I$, which has just been excluded.
+Hence $GC$ is a 2-subgroup of order $4|G|$. The 2-part of
+$|\operatorname{GL}(3,5)|$ is $2^7$, yielding $|G|\le32$.
+
+If $G$ is nontrivial, it contains an involution. In characteristic
+five this involution is diagonalizable with eigenvalues $\pm1$.
+It is neither $I$ nor $-I$, so its fixed-space dimension is one or
+two. This gives exactly the two normal forms (1), proving Theorem 2.
+
+## Research consequence and limits
+
+The construction route can now discard every odd-order affine symmetry.
+Any symmetric 71- or 72-point witness must occur in one of the two
+reflection families (1); asymmetric sets remain possible. The two
+enumerations give a complete obstruction for a natural construction
+family and a reusable constraint on every putative larger witness.
+They do not permit restricting a general upper-bound computation to
+symmetric sets. The global interval remains $70\le r_5(\mathbb F_5^3)\le72$.
