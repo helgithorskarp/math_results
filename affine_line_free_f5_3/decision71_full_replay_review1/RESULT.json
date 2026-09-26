@@ -1,0 +1,74 @@
+{
+  "status": "INDEPENDENT_COMPLETE_DIAGNOSTIC_SAFE_REPLAY_AUDITED",
+  "verdict": "ACCEPT_WITH_HIGH_CONFIDENCE",
+  "claim": "r_5(F_5^3) = 70",
+  "target_contribution": "bafkreic22u2qpq62lbr7vkt743ec37j4gygbnnufblyklm63o7rntyttja",
+  "reviewed_source_commit": "0df9ef5a2a1146f48283531290fac6c8c2a1459f",
+  "finite_reduction": {
+    "points": 125,
+    "affine_lines": 775,
+    "typed_quotients": 309611,
+    "affine_classes": 109676,
+    "domain_sha256": "02727db9fb02d60a8597f84329f7376bba2c43422d63241da1c251fde97e4eb2",
+    "direct_cnf_clause_range": [
+      1075,
+      1125
+    ]
+  },
+  "lower_bound": {
+    "selected_points": 70,
+    "complete_lines_contained": 0,
+    "fixture_sha256": "7679318e102d114f307ae37fe787b1fc08ac43f775eee77f388b4f0838ba81c5"
+  },
+  "fresh_ordinary_replay": {
+    "verified_records": 109676,
+    "canonical_ranges": 16,
+    "proof_bytes": 19782095082,
+    "maximum_conflicts": 84295,
+    "hardest_case_index": 20750,
+    "stock_checker_source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "stock_checker_binary_sha256": "ee60acfc7b4d5ef99a14e9486ea1099e855305400d60abb4cbeb5c37ead5bc31",
+    "summed_solver_seconds": 29719.650250409457,
+    "summed_solver_and_checker_seconds": 85794.6013719836
+  },
+  "complete_sanitizer_replay": {
+    "verified_records": 109676,
+    "canonical_ranges": 16,
+    "sanitizers": [
+      "address",
+      "undefined"
+    ],
+    "warnings_enabled": true,
+    "warning_printer_calls_patched": 2,
+    "proof_logic_changes": 0,
+    "signed_shift_patched": false,
+    "sanitizer_diagnostics": 0,
+    "checker_source_sha256": "12173598973df1d7d374cfedea977451c10d5a7aea7c90dc77f41c8cf2fad1b0",
+    "checker_binary_sha256": "a308c0326e754913efce49e73682aa170ce31db48b220a1c02f8e031a6436c9d",
+    "summed_checker_seconds": 137219.50620257127
+  },
+  "manifest_comparison": {
+    "manifest_sha256": "ec7fabe454c7a0e6297f3347de038028602a1aae81efd377ff4d938883af31c4",
+    "blocks": 112,
+    "matching_input_blocks": 112,
+    "matching_full_proof_blocks": 85,
+    "fresh_proof_byte_identity_required": false
+  },
+  "independent_audit": {
+    "source_sha256": "6086fc9faf7663eecbbe8a849c97ef5ac44287d39db73f02f7d9d2c27df9845c",
+    "output_sha256": "89db2dfa729b3ba8c022fcd1df266727486a55ae2456fb1f161efdfef02eb45e",
+    "audit_seconds": 531.2465450730015,
+    "imports_reviewed_decision_module": false,
+    "ordinary_records_revalidated": 109676,
+    "sanitized_records_revalidated": 109676
+  },
+  "scope": {
+    "proved_fact": "The checked finite reduction and complete UNSAT corpus exclude every 71-point line-free set; the direct fixture supplies 70 points.",
+    "checker_guarantee": "Every regenerated direct CNF has a fresh proof accepted by stock DRAT-trim and by the warning-safe ASan/UBSan build.",
+    "signed_shift_conclusion": "The known signed-left-shift defect is not reached on any accepted production proof path in this corpus.",
+    "invalid_input_guarantee": "No claim is made that stock DRAT-trim is free of undefined behavior on arbitrary rejected inputs.",
+    "remaining_trust": "Written finite reduction, ordinary exact Python execution, compiler and sanitizer runtimes, hardware, and DRAT-trim proof logic outside the diagnostic patch.",
+    "formalized": false,
+    "novelty": "A bounded primary-source search found no earlier exact determination; historical priority is not guaranteed."
+  }
+}
