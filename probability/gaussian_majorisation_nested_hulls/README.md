@@ -102,3 +102,8 @@ control different classes of energies and parameter ranges. This packet
 controls every hinge under its additional geometric and small-mass
 hypotheses. It does not assume the instantaneous positivity refuted by the
 [local-lift obstruction](../gaussian_majorisation_local_lift_obstruction/PROOF.md).
+The concurrently published [spherical-tail and ball-hull theorem](../gaussian_majorisation_spherical_tail/PROOF.md)
+handles fixed laws at growing variance and gives an arbitrary-offset
+geometric test. Its full proof was read at the final refresh. The present
+small-mass theorem fixes the variance and completes all thresholds under
+the stated support conditions; these are different conclusions.

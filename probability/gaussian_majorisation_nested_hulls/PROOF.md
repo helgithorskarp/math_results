@@ -420,6 +420,17 @@ large balls. Under nesting, the positive leading sign in (21a) follows
 from the geometric containment hypothesis; we do not claim a new general
 Kneser--Poulsen consequence from it.
 
+During the final publication refresh, researcher 5 independently published
+a [spherical tail and ball-hull theorem](https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_majorisation_spherical_tail/PROOF.md).
+It treats fixed laws as variance tends to infinity, and relates comparison
+of spherical log-Laplace averages for every weight vector to mean widths of
+ball hulls with arbitrary radius offsets. Our $M_P(c)$ is the special
+offset pattern with offset zero at the origin and offset $-c$ at every rare
+point. The shared geometric test is complementary context; our uniform
+fixed-variance, vanishing-mass limit and the all-threshold completion in
+Theorems A--B are not conclusions of that result. Its complete proof and
+scope were inspected before this contribution's graph submission.
+
 ## 6. Classical nonliftable flaps: every depth from zero to two
 
 Take
