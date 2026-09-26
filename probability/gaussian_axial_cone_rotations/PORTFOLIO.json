@@ -130,14 +130,15 @@
         "R",
         "BC_motion_volume"
       ],
-      "status": "complete_author_proof_independent_review_pending",
+      "status": "independent_review_accepts_G_and_nonlinear_reserve",
       "dependency_scope": "M supplies the geometric hypothesis and reference motion; R supplies the unchanged endpoint segment reserve; the classical volume theorem and a vanishing-scaling limit give unions and intersections.",
       "new_subclass": false,
       "new_threshold": false,
       "analytic_evidence": "Strong W1,1 norm-sphere approximation, finite cost convergence, integrated distance-error scaling, collision pruning and volume continuity; no finite test replaces the proof.",
       "proof_sha256": "20a2d4cfa3ff8222247b952b31379ea208c2fee8f77c71035a6b3e3ed6efbfeb",
       "introduced_commit": "01d440efe03900ace15eb58eb67e1ed19c1df5ce",
-      "graph_ref": "bafkreibrg52l72pqngtovmlfwq7m7lcdslacs43yi4sftltbonpl7k6vs4"
+      "graph_ref": "bafkreibrg52l72pqngtovmlfwq7m7lcdslacs43yi4sftltbonpl7k6vs4",
+      "review_reader_path": "regularity_review2/README.md"
     }
   ],
   "primary_inputs": [
@@ -431,7 +432,23 @@
     "source_core_unchanged": true,
     "exact_smooth_undamped_motion_claimed": false,
     "new_subclass": false,
-    "independent_review": "pending",
+    "independent_review": {
+      "reader_path": "regularity_review2/README.md",
+      "source_commit": "85b3f662ad567aa952e7a114f618f599699b9174",
+      "verdict": "INDEPENDENT_THEOREM_G_REVIEW_ACCEPTED",
+      "accepted_scope": "Theorem G and its stated nonlinear-reserve ball-volume extension",
+      "excluded_scope": [
+        "the unrestricted dimension-three Gaussian-majorisation conjecture",
+        "independent acceptance of the full axial portfolio",
+        "the M1 circular optimum and restricted sharpness theorem",
+        "the finite-composition obstruction",
+        "historical priority"
+      ],
+      "reviewed_hashes_match_current": true,
+      "reviewed_source_commit": "01d440efe03900ace15eb58eb67e1ed19c1df5ce",
+      "formalized": false,
+      "record_sha256": "31a0a5fbe434abf86ca2ae487cdc1cadd21ef11ada64e14819dcc5bbedec2333"
+    },
     "initial_indexed_height": "6141",
     "audit_boundary": {
       "reader_path": "LIFT_BOUNDARY.md",
@@ -445,5 +462,27 @@
       "piecewise_smooth_impossibility_claimed": false,
       "new_computational_theorem": false
     }
+  },
+  "cap_representation_boundary": {
+    "reader_path": "CAP_COMPARISON.md",
+    "claim": "On each distance-preserved cloud a disjoint-cap map is one global identity or hyperplane reflection; two spanning branch matrices differ by rank at most two.",
+    "benchmark_consequence": "The original anchored central flip cannot be one simultaneous disjoint-cap map for any finite cap count, even after independent rigid source/target changes.",
+    "composition_exclusion_claimed": false,
+    "damped_R2_exclusion_claimed": false,
+    "new_positive_class": false,
+    "status": "complete_author_proof_independent_review_pending",
+    "proof_sha256": "7c852e8949515da4d4e1f3690c3986a0958cad9f0fb5471487aa80cb2b98d3a6",
+    "source_dependencies": [
+      {
+        "reader_path": "../gaussian_disjoint_cap_reflections/PROOF.md",
+        "source_commit": "bd57aa06efc46fd737b962bbd6d96384c4efdf2c",
+        "role": "cap definition, convex separation and endpoint deficit; equality case developed in the comparison"
+      },
+      {
+        "reader_path": "../gaussian_cap_auxiliary_certificates/PROOF.md",
+        "source_commit": "58ef0e6a38d607cf14f56692d2e80d227760715a",
+        "role": "class comparison; its positive proof and exact certificates are not premises of the equality lemma or independently reviewed here"
+      }
+    ]
   }
 }

@@ -94,6 +94,19 @@ it neither obstructs arbitrary endpoint deformations nor changes the mesh
 reduction. The [regularity completion](REGULARITY.md) replaces the curve
 and controls squared distances instead of differentiating its square root.
 
+The newer disjoint-cap results also have a precise interface with the
+benchmark. [CAP_COMPARISON.md](CAP_COMPARISON.md) proves an equality lemma:
+a disjoint-cap map preserving every distance of a cloud acts on that
+cloud as the identity or one global hyperplane reflection. On two rigid
+spanning clouds the branch difference therefore has rank at most two.
+The original central flip has rank-three difference, including after
+independent rigid changes of source and target frames. No single cap map
+of any finite cap count can represent those 25 labels. This is a comparison
+with the [three-cap source](../gaussian_disjoint_cap_reflections/PROOF.md)
+and [new auxiliary certificates](../gaussian_cap_auxiliary_certificates/PROOF.md),
+not a new positive class or a result about arbitrary cap-map compositions.
+The latter remain outside this geometric benchmark claim.
+
 ## 3. Two existing benchmarks distinguish extremality from rigidity
 
 These are structural descriptions of existing fixtures, not new positive

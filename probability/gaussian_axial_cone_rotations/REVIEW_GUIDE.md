@@ -135,6 +135,7 @@ a review question.
 | --- | --- | --- |
 | [Team B simplicial reflections](../gaussian_simplicial_cone_reflections/PROOF.md) | A separator C_q subset K subset C_p* exists for the full circular cones exactly when pq<=1/2. The original 25-point fixture also has no simplicial separator. Conversely, the standard self-dual orthant forces per W>=8 under every common axis and symmetric enclosing sections. Thus the **original perimeter criterion** and the simplicial criterion are not nested. | The orthant argument is not an obstruction to all motions, or a classification against the later general matrix-path criterion. The simplicial packet is a team author result, not an independently reviewed theorem merely because it is cited here. |
 | Established strong contractions | [Bezdek--Naszodi, Section 1.2 and Theorem 1.3](https://arxiv.org/pdf/1701.05074) give ball comparisons for coordinatewise contractions. C excludes every finite composition in R3, with changing frames, on circular cones with pq>1/2 and on the undamped 25-point fixture. One-sided hyperplane folds are included. | This exclusion is not transferred to R2's damped perturbed configurations, or to compositions involving other sufficient classes. |
+| [Disjoint-cap reflections](../gaussian_disjoint_cap_reflections/PROOF.md), including [hemispherical or four-cap maps](../gaussian_cap_auxiliary_certificates/PROOF.md) | [CAP_COMPARISON.md](CAP_COMPARISON.md) proves that each rigid spanning cloud must have one identity/reflection branch, so the two branch matrices differ by rank at most two. The axial benchmark has difference rank three, invariant under independent rigid frames. Thus no single cap map represents it, for any cap count. | No exclusion of compositions of cap maps, no reverse containment, and no extension of this rigidity argument to the damped R2 neighborhood. The cap results have their own author proofs and are not independently reviewed here. |
 | [Paired rank <=5](../gaussian_majorisation_rank_abel/PROOF.md) and [scalar defect](../gaussian_majorisation_scalar_defect/PROOF.md) | The original fixture and the whole R2 neighborhood have rank six and fail the scalar unit-vector test. The underlying scalar obstruction for rigid anchored flips is credited to the scalar-defect source. | Failure of either certificate is not failure of majorisation or of a nonlinear R5 motion. |
 | [Common-target mixtures](../gaussian_majorisation_common_target/PROOF.md) | Injectivity forces each deterministic common-output component to use the original source law; distinct positive weights additionally force the prescribed matching. Combined with an applicable certificate obstruction, this restricts those decompositions. | Equal weights can permit rematching. Arbitrary stochastic couplings and post-convolution decompositions are not excluded. Its [independent review](../gaussian_majorisation_common_target_review2/README.md) reviews that packet alone. |
 | [Damped cone motions](../gaussian_damped_cone_reflections/PROOF.md) | The earlier support-cost route includes the original axial construction at damping one; its larger positive range changes the endpoints by damping. Its exact-dual nonsimplicial obstruction at pq=1 is an obstruction to R5 motion. | Neither that obstruction nor the other failed certificates are negative Gaussian hinges. The damped result does not prove the remaining undamped full-cone range. |
@@ -216,6 +217,16 @@ context. The current comparison table above supersedes older fixed-weight
 orbit descriptions when assessing the portfolio's present coverage.
 
 ## 6. Reproduction and review disposition
+
+The [independent regularity review](regularity_review2/README.md), source
+`85b3f662ad567aa952e7a114f618f599699b9174`, accepts Theorem G and its nonlinear-reserve
+ball-volume consequence with high confidence and no correction. Its three
+reviewed proof hashes match the unchanged files here. This is scoped
+acceptance of the AC approximation, critical-cost damping, collision
+pruning and reserve transfer. It excludes independent acceptance of the
+Gaussian bridge, circular optimum, restricted sharpness, composition
+obstruction and historical priority. The new cap comparison and lift
+boundary also remain separate unreviewed author results.
 
 Use the standard-library commands in [README.md](README.md), including the
 `-O` variants, then run `sha256sum -c SHA256SUMS`. The five audit markers and

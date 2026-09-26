@@ -19,7 +19,9 @@ condition from the existing matrix module's arbitrary-radius union and
 intersection theorem, including its nonlinear reserve. It uses smooth
 approximating motions with a target scaling tending to one. The geometric
 class, cost threshold, Gaussian conclusions and original core files are
-unchanged; this additional author proof awaits independent review.
+unchanged. The [independent review](regularity_review2/README.md) accepts
+Theorem G and its nonlinear-reserve consequence. Its acceptance excludes
+the circular optimum, composition obstruction and historical priority.
 
 The [lift regularity boundary](LIFT_BOUNDARY.md) gives an admissible AC
 matrix control on the original benchmark whose prescribed relative Gram
@@ -27,6 +29,12 @@ path has no rectifiable geometric lift, even with moving frames or a
 change of time. G avoids this obstruction by replacing the control and
 tracking squared distances. The original endpoints still have their
 analytic R4 motion; this is an auxiliary regularity counterexample.
+
+The [cap comparison](CAP_COMPARISON.md) proves that the original finite
+benchmark cannot be a single simultaneous disjoint-cap reflection, regardless
+of cap count or rigid source/target frames. Exact rigidity of each cloud
+forces one reflection or the identity on that cloud. This distinguishes
+the recent cap classes; compositions of cap maps remain outside this claim.
 
 This packet gives explicit four- and five-dimensional contracting motions
 for a broad class of three-dimensional central reflections. It proves full
