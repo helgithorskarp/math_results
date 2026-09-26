@@ -315,3 +315,59 @@ The fixed-atom proof and all mathematical programs/certificates here are
 unchanged. The source manifest includes this documentation interface.
 Graph references for new handoffs are added only when their
 commitment is observed; broadcast receipts are not treated as commitment.
+
+## Uniform localization and the current finite-certificate boundary
+
+The following new sources were read in full at the recorded revisions.
+Their author proofs await independent review; this handoff is not acceptance.
+The analytic calculations in INTERFACES Section 4 compose these bounds with
+the existing global moment and remote-anchor proofs. They establish no
+positive comparison family, evaluate no compact maximum, and imply no new
+Kneser--Poulsen case.
+
+| Input | Source commit | SHA256 of the linked file |
+|---|---|---|
+| [Uniform spatial localization](../gaussian_prior_localization/DEFECT_LOCALIZATION.md) | `4ed178725774e2fd3bb486f952825f58e52766cc` | `57b179d6cdb98bab9a1fad42f12c441565c09880c3145588c6a39441d9c5180a` |
+| [Finite positive-certificate interface](../gaussian_majorisation_open_stability/CERTIFICATE_INTERFACE.md) | `9a1047c925763125c72fa862e9200c40717b9c25` | `be277134f471d0e93bf20b8c6b993455dd28720f9c21c847481459ad0b175509` |
+| [Geometric benchmark and map interface](../gaussian_axial_cone_rotations/LANE_HANDOFF.md) | `e53a354f22c282b9a040392f610ba9c1d859969d` | `4017d375708b43a1b10ce867b1fd611efe01c3566881aa1e4121e54d12d65a21` |
+
+The localization maximum D_k is within 4/k of the unrestricted defect.
+Taking maxima of the existing uniform beta error gives the separate spatial
+and moment budget. The displayed N_k=(40k^4)^4 schedule follows from the
+written bound K(2k,1)<40k^3; it is not a practical computation or an exact
+finite positive certificate. Zero weights and equality configurations are
+retained. Localization followed by a new remote anchor uses L=8k and
+R=14k+sqrt(8 log(1/epsilon)); its contraction check and overlap error are
+written explicitly. This order supplies a different strict witness with
+controlled support and exactly the prescribed anchor mass. It neither
+preserves that mass under conditioning nor bounds later mesh enlargement.
+
+The functional interface supplies rigorous normalized-moment inputs, an
+absolute source-peak test, a local beta modulus and transport reserves.
+Its every-instance/exists-certificate equivalence needs signed endpoints
+and strict margins; compactness alone does not supply uniform strict degree.
+The geometric handoff distinguishes a positive extreme but flexible map
+from the rigid-mesh test class and retains the axial theorem's domain.
+
+No exploratory quadrature is a premise or public artifact of this update.
+The original proof files, mathematical programs and expected certificates
+are unchanged. The manuscript checks the direct compositions; source hashes,
+manifest and reader links are validated separately. No new independent
+review, Gaussian sign certificate or historical priority claim is made.
+
+The last source refresh added the PDE lane's completed contact reduction:
+
+| Input | Source commit | SHA256 of the linked file |
+|---|---|---|
+| [Transverse ordered heat contacts](../gaussian_majorisation_heat_profiles/CONTACT_REDUCTION.md) | `1d1f1c6e58ceb3010e05dcbe5fc477f4c7edde6f` | `949e497add957be5998b6653898308b4df888cf4403111a800392bd053de2c79` |
+
+Its author proof replaces the earlier open first-contact compactification
+with an exact reduction to a still-unproved flux sign under global profile
+order and contact. Input regularization, a strict contraction and a scalar
+target dilation supply initial order, volume-end controls and transversality.
+Bulk flux handles critical levels. The auxiliary law is unbounded and the
+bounded-law bridges are stated; no uniform contact cutoff is claimed.
+The posterior covariance integral is with respect to Lebesgue measure on
+the superlevel set, not density-weighted whole-space MMSE. This input changes
+the PDE interface, not the premises of our compact moment or anchor bounds.
+Independent review remains pending.

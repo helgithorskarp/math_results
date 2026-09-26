@@ -1,7 +1,8 @@
 # Fixed-atom and global-criterion handoff for the eight research lanes
 
 26 September 2026. This consolidates existing author proofs and their
-quantifiers; it is **not a new theorem or an independent review**. The full
+quantifiers, with direct compatibility bounds; it supplies **no new positive
+majorisation theorem or independent review**. The full
 bounded-law R3 question remains open. The human-assigned lanes below keep
 their independent ownership. [DEPENDENCIES.md](DEPENDENCIES.md) contains
 the broader class map; [SOURCES.md](SOURCES.md) pins this handoff's inputs.
@@ -94,14 +95,14 @@ not new task assignments or assumptions that a proposed method succeeds.
 
 | Owner | Result that the shared criterion can consume | Boundary to preserve |
 |---|---|---|
-| 1: semigroup/PDE evolution | A signed global profile evolution or endpoint comparison for arbitrary anchored inputs; the [new heat-profile source](../gaussian_majorisation_heat_profiles/PROOF.md) identifies the boundary and integrated-forcing obligation | Its representation is on regular rectangles with positive variance. Coefficient ordering fails even for a strict injective contraction that has full majorisation. Critical levels, boundary data and atomic initial time remain explicit obligations. |
+| 1: semigroup/PDE evolution | The [ordered-contact reduction](../gaussian_majorisation_heat_profiles/CONTACT_REDUCTION.md): the full question is equivalent to `J_f>=J_g` where regularized strict-contraction profiles are globally ordered and touch | The reduction now includes critical levels and a transverse first contact. The contact flux sign is still unproved. Its Gaussian-tailed auxiliary input is unbounded; the smoothing and truncation bridges are explicit. The earlier coefficient ordering remains false. |
 | 2: certified finite-atomic dependencies | Exact contraction data and a rigorously negative integrated hinge or beta test; alternatively all inputs of the existing finite positive certificate | Finite positive moments alone are incomplete. A universal finite orthogonal averaging rule for arbitrary square-cone weights is now excluded by the [finite-rule source](../gaussian_majorisation_finite_orbit_obstruction/PROOF.md). Weight-dependent rules, infinite averaging and radial transport are not excluded. |
-| 3: measure localization | For all source sets, the common-set certificate above; or a reduction of priors/sets that preserves a strict negative value with a proved error | The [unique diffuse optimizer](../gaussian_prior_localization/PROOF.md) rules out exact atomic attainment, including for a dominant fixed atom. It does not rule out finite detection of a strict failure. |
+| 3: measure localization | The common-set certificate above; and now the [uniform defect localization](../gaussian_prior_localization/DEFECT_LOCALIZATION.md), giving compact finite maxima within `4/k` of the unrestricted defect | The unique diffuse optimizer rules out exact atomic attainment, not finite detection. Conditioning changes the prior and need not preserve a prescribed dominant atom. Section 4 applies localization **before** a new anchor construction. |
 | 4: extremal maps/deformation geometry | The [rigid-mesh reduction](../gaussian_majorisation_extremal_maps/PROOF.md) preserves strict failures after support enlargement into a continuous piecewise-isometric tetrahedral map; its anchored finite restriction is extreme and its tight framework rigid | This does not assert an extreme optimizer on the original fixed domain. Mesh complexity is unbounded; the class contains known R5-motion obstructions. The comparison for arbitrary compatible folds remains open. |
 | 5: analytic/optimal transport | A zero-failure endpoint density-value coupling, or a fully integrated hinge sign, with arbitrary rare packets retained | The exact reductions are dependencies, not positive assertions. A zero base defect plus the unsigned remote-anchor error does not prove finite-distance adjunction. |
-| 6: geometric/internal energy | Certified domain-wide motions and their stated Gaussian and ball consequences, organized in the [geometric review portfolio](../gaussian_axial_cone_rotations/REVIEW_GUIDE.md) | Such motions are sufficient coupling constructions. Failure of the motion mechanism is not a negative endpoint comparison. Review of the original axial/nonlinear core need not depend on the later matrix-path optimization. |
+| 6: geometric/internal energy | Certified domain-wide motions and their stated Gaussian and ball consequences, organized in the [geometric review portfolio](../gaussian_axial_cone_rotations/REVIEW_GUIDE.md) and [eight-lane benchmark handoff](../gaussian_axial_cone_rotations/LANE_HANDOFF.md) | Such motions are sufficient coupling constructions. The known extreme but flexible positive benchmark is not a general rigid-mesh sign theorem. Review of the original axial/nonlinear core need not depend on the later matrix-path optimization. |
 | 7: actual counterexamples | A validated negative integrated hinge or convex energy for a genuine contraction | Negative finite-orbit averages and failed proof mechanisms are different statements. The finite-rule source even has a negative orbit control with identically zero integrated gap. |
-| 8: functional inequalities/stability | Its signed endpoint bounds, peak cutoff and strict finite beta margins, or its existing orbit certificates | The [functional handoff](../gaussian_majorisation_open_stability/HANDOFF.md) retains law-dependent neighborhoods and all certificate premises. Arbitrary origin mass on ordered rays does not supply arbitrary rare geometry. |
+| 8: functional inequalities/stability | Its [finite-certificate interface](../gaussian_majorisation_open_stability/CERTIFICATE_INTERFACE.md): rigorously enclosed normalized moments, an absolute source-peak bound, signed low-threshold control and strict beta margins | The localized beta error improves on a fixed positive threshold interval. It supplies no uniform degree on the compact frontier, whose equality and zero-weight cases remain. Arbitrary origin mass on ordered rays does not supply arbitrary rare geometry. |
 
 In the PDE source's notation, `L_p(s,v)=sup_(|A|=v) integral_A p_s` and
 `W=L_g-L_f`. Hence `Delta_s=sup_v(-W)_+` by the same concentration/hinge
@@ -109,12 +110,24 @@ identity used above. Its regular-rectangle formula is
 `W(endpoint)=E W(stopped boundary)+E integral F`, with
 `F=(kappa_g-kappa_f)(L_f)_(vv)/2`. The sign of this **sum** would be an
 input to the global criterion; a pointwise coefficient sign is not
-necessary. Its first-contact proposal remains unproved. For finite atomic
+necessary. The subsequent [contact reduction](../gaussian_majorisation_heat_profiles/CONTACT_REDUCTION.md)
+reaches a stronger equivalent frontier without extending that stopped
+representation. Gaussian regularization before applying a strict contraction
+gives strict initial order and both volume-end controls. A scalar target
+dilation makes a hypothetical first failure transverse. Its bulk flux
+`J_u=-integral_(u>a) Delta u` is defined through critical levels. At every
+globally ordered contact with equal positive finite volume and density level,
+the remaining condition is `J_f>=J_g`. Equivalently, its unweighted integrals
+of posterior covariance traces over the two superlevel sets obey `K_f<=K_g`.
+This is not a whole-space density-weighted MMSE comparison. The sign remains
+open, and no uniform time or volume cutoff is supplied. For finite atomic
 laws, `L_p(s,v)->1` hides the exponential scale
 `-2s log(1-L_p(s,v))->rho_support(v)^2`, where `rho_support` is inverse
 tube volume. The source's constants depend on the least atom weight.
-The flat initial limit gives no signed comparison. The fixed-atom reduction
-gives no uniform regular perturbation theorem at a Dirac law.
+The flat initial limit gives no signed comparison. The new contact reduction
+avoids that initial layer by changing to a regularized input, with an explicit
+error retaining a hypothetical violation. The fixed-atom reduction itself
+still gives no uniform regular perturbation theorem at a Dirac law.
 
 ## 3. Error budget for a strict witness
 
@@ -147,7 +160,9 @@ E_mesh = 2 epsilon h/sqrt(2*pi*s)
 for the hinge difference at any threshold. Choosing
 `E_mesh<=epsilon delta/4` leaves a finite contraction pair with gap at
 least `epsilon delta/4`. This approximates a strict witness; it does not
-assert that a minimizer is atomic or impose a universal atom bound.
+assert that a minimizer is atomic or impose a universal atom bound in this
+anchor-first construction. Section 4 instead localizes the base witness
+before adding a new anchor.
 Independent rational perturbations still need the separate
 [strict rational-witness reduction](../gaussian_majorisation_rank_abel/PROOF.md)
 and verified pairwise contraction inequalities.
@@ -191,7 +206,129 @@ different test class and is not imposed simultaneously here. The external
 piecewise-isometric extension and rigidity claims remain the map lane's
 author-proof dependencies, with independent review pending.
 
-## 4. Geometric conclusions and validation boundary
+## 4. Compact finite data, moment degree and a prescribed anchor
+
+This section composes the measure lane's new localization theorem with
+the existing global and fixed-atom bounds. It does not replace that
+theorem's proof or the finite-atomic lane's enclosure work. All three
+proof inputs remain author results awaiting independent review.
+
+Let `D` be the supremum of `Delta_s` over every bounded law, contraction
+and variance. Scaling permits variance one. Use the compact parameter
+set `P_k` from [DEFECT_LOCALIZATION.md](../gaussian_prior_localization/DEFECT_LOCALIZATION.md):
+at most `k^6` matched atoms, probability weights, `x_1=y_1=0`, both
+supports in `B(0,2k)`, and every pairwise contraction constraint. Zero
+weights and collisions are included. Its attained maximum `D_k` satisfies
+
+```text
+0 <= D-D_k < 4/k,              D_k increases to D.
+```
+
+Keep the localization index `k` distinct from the moment degree `N`.
+For a configuration `P` let `d_N(P)=max(0,-min_j b_(N,j)(P))`, the
+quantity called `D_N` in the global proof, and put
+
+```text
+B_(k,N) = max_(P in P_k) d_N(P),
+K_k = K(2k,1).
+```
+
+These maxima exist: every replica moment is a continuous finite
+exponential sum of the weights and squared distances, also at zero
+weights and collisions. The global estimate holds uniformly on `P_k`.
+Taking maxima and then applying localization therefore gives
+
+```text
+0 <= B_(k,N) <= D_k <= D,
+D <= min(1, B_(k,N) + K_k (N+2)^(-1/4) + 4/k).          (A)
+```
+
+This is a reusable **uniform** certificate contract. Certified lower
+bounds `b_(N,j)(P)>=-eta` for every `P in P_k` and every `0<=j<=N`
+give `B_(k,N)<=max(0,eta)`. Testing selected configurations does not give
+that bound. Conversely, one certified negative beta value at a feasible
+configuration is already a negative convex-energy witness.
+
+For a completely explicit diagonal, the global constant gives, for `k>=1`,
+
+```text
+K_k = (16/3)sqrt(2/pi) k^3 + 8sqrt(2) k^2
+                         + 16sqrt(2/pi) k + 4sqrt(2)
+    < (118/3) k^3 < 40 k^3.
+```
+
+Use `sqrt(2/pi)<1`, `sqrt(2)<3/2` and `k,k^2<=k^3`.
+Thus `N_k=(40 k^4)^4` and `L_k=B_(k,N_k)` obey
+
+```text
+L_k increases to D,          0 <= D-L_k < 5/k.          (B)
+```
+
+Monotonicity follows from nesting `P_k` and beta degree elevation. The
+full question is equivalent to `L_k=0` for every integer `k>=1`.
+This is an explicit accuracy schedule, not a practical enumeration,
+an evaluated maximum, or a finite decision procedure for `D=0`.
+The maxima still range over all real feasible configurations. No fixed
+coordinate denominator or certified optimizer is supplied.
+
+There is also a direct way to retain the prescribed atom while keeping
+defect-dependent finite bounds. **Localize first, then adjoin a new atom.**
+Fix `0<epsilon<1`, `k>=1`, a unit vector `e`, and set
+
+```text
+c_epsilon = sqrt(8 log(1/epsilon)),
+L=8k,       R=14k+c_epsilon,       z_R=R e.
+```
+
+For any `P in P_k`, translate its rare output sites to `y_i+L e` and
+adjoin the common atom `z_R` with mass `1-epsilon`; give the original
+pair total mass `epsilon`. The new anchor distances contract because
+
+```text
+e.(y_i+L e-x_i) >= 4k,
+|y_i+L e|^2-|x_i|^2 <= 100 k^2 < 8Rk.
+```
+
+Indeed the difference of squared distances to `z_R` is the second
+expression minus `2R` times the first. Every other distance constraint
+is inherited. The anchor proof's projection bound is `M<=10k`, so
+
+```text
+beta_R <= exp(-(R-10k)^2/8)
+        <= epsilon exp(-2k^2) < epsilon/k.              (C)
+```
+
+After translating the anchor to zero the rare input is `x_i-R e` and
+its image is `y_i+(8k-R)e`. Both supports lie in
+`B(0,16k+c_epsilon)`; every rare input has norm at least `12k+c_epsilon`,
+so the input atom has **exactly** the prescribed mass. At most `k^6+1`
+sites are used. A base gap `d` at a threshold `a` becomes a gap at least
+`epsilon(d-exp(-2k^2))` at threshold `epsilon a`.
+
+Consequently any original violation of size `delta>0`, after variance
+normalization, has such an anchored witness with gap at least
+`epsilon delta/2` whenever `k>=10/delta`: localization costs less than
+`4/k` and anchoring costs less than `epsilon/k`. This is a different
+conditional witness, not preservation of the original prior or its atom
+during conditioning. The support bound depends on the desired defect
+resolution and on epsilon; no single bounded test domain settles the
+full question. Subsequent rare-only mesh augmentation still costs
+`2 epsilon eta`, and no bound for the added mesh vertices is asserted.
+
+The functional lane's [exact certificate](../gaussian_majorisation_open_stability/CERTIFICATE_INTERFACE.md)
+has a different purpose from (A)--(B): for one strict finite rational
+instance it can prove **zero** defect, given its signed endpoint and
+strict localized beta margins. Its full-question equivalence is
+`for every such instance, there exists a finite certificate`. Compactness
+of `P_k` cannot exchange those quantifiers or supply a uniform strict
+degree: `P_k` contains equality and zero-weight cases. Its all-pair
+strict test class is also distinct from a rigid mesh with tight edges.
+An absolute peak bound needs absolute source moments, not only their
+target-minus-source differences. Neither its conditional exact test nor
+our uniform defect approximation generates the missing moment enclosures
+or establishes their required signs.
+
+## 5. Geometric conclusions and validation boundary
 
 The [existing class map](DEPENDENCIES.md) retains the broad motion classes
 with all weights on their domains and the ordered-orbit class with its
@@ -201,8 +338,9 @@ Gaussian transfer, the [geometric annex](GEOMETRIC_LIMIT.md) requires the
 normalized small-variance scale `liminf Delta_s/a_s=0`; absolute
 `Delta_s->0` does not suffice. Intersections use a separate motion theorem.
 
-All formulas here are sourced identities or direct substitutions in the
-linked estimates. The proof files, mathematical programs and certificates
+All formulas here are sourced identities or direct compositions of the
+linked estimates; Section 4 writes out the new constant and anchor-distance
+checks. The proof files, mathematical programs and certificates
 of the global criterion and fixed-atom reduction are unchanged. No new
 numerical experiment, program replay, formalization or independent
 acceptance is claimed by this documentation update. Validate the compact

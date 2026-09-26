@@ -24,7 +24,10 @@ For one bounded contraction pair `f=mu*gamma_s`, `g=(T#mu)*gamma_s`, set
 | Every beta test is nonnegative, or the complete endpoint Hankel hierarchy is positive semidefinite | Equivalent to `Delta_s=0` | All orders at the **same** variance. [Global proof](PROOF.md) and [Hankel source](../gaussian_majorisation_hankel_transport/PROOF.md). |
 | At variance one, every `(1-epsilon)delta_0+epsilon rho` compares under every contraction fixing zero | Equivalent to the **full conjecture**, for any one fixed `0<epsilon<1` | `rho` is an arbitrary bounded law, with no support radius uniform over the class. This restricted assertion remains unproved. [Fixed-atom reduction](ANCHOR_REDUCTION.md). |
 | Every finite-volume source set has a common target set with the anchored compensation inequality | Equivalent to the all-prior fixed-atom assertion on each compact domain | The target set works simultaneously for every rare prior; retain `(1-epsilon)q(0)+epsilon min_K q`. [Common-set source](../gaussian_prior_localization/PROOF.md) and [quantifier interface](INTERFACES.md). |
-| Any violation yields a finite strict rational contraction witness | An exact witness reduction | It does not bound the atom count or produce a witness. [Finite/rational reduction](../gaussian_majorisation_rank_abel/PROOF.md). |
+| Any violation yields a finite strict rational contraction witness | An exact witness reduction | This qualitative reduction does not bound the atom count or produce a witness. [Finite/rational reduction](../gaussian_majorisation_rank_abel/PROOF.md). |
+| `D_k=0` for every compact finite frontier, or `L_k=0` for every finite moment maximum in the interface | Equivalent to the full question; `0<=D-D_k<4/k` and `0<=D-L_k<5/k` | The [uniform localization](../gaussian_prior_localization/DEFECT_LOCALIZATION.md) controls support and atom number by the permitted loss. [The interface, Section 4](INTERFACES.md) adds the global moment error. Each maximum is over all real feasible configurations, not sampled points. No maximum's sign is evaluated. |
+| Every strict rational finite contraction has a finite signed certificate | Equivalent to the full question, with `for every instance, there exists a certificate` | The [functional interface](../gaussian_majorisation_open_stability/CERTIFICATE_INTERFACE.md) retains a signed low endpoint, absolute source peak and strict beta margins. The uniform approximation above does not give a uniform degree for an exact zero certificate. |
+| `J_f>=J_g` at every globally ordered contact for the regularized strict-contraction test class | Equivalent to the full question by the [PDE contact reduction](../gaussian_majorisation_heat_profiles/CONTACT_REDUCTION.md) | The author reduction reaches a transverse contact and includes critical levels using bulk flux. The contact sign remains open; its auxiliary input has Gaussian tails and no uniform time or volume cutoff is claimed. |
 | Every weighted rigid tetrahedral mesh restriction compares | Equivalent to the full question by support enlargement | The [map-lane source](../gaussian_majorisation_extremal_maps/PROOF.md) imposes no mesh-size bound and does not claim a fixed-domain extreme optimizer. The [interface](INTERFACES.md) explains preservation of a prescribed dominant atom by adding mass only to the rare packet. |
 
 The global finite differences give `D_N` increasing to `Delta_s`, with
@@ -41,6 +44,16 @@ contraction must be arbitrary. Its conditional near-Gaussian violations
 also do not assert that a counterexample exists. A base zero defect gives
 only a small error after a distant common Gaussian is adjoined, so there
 is no proved general positive adjunction rule at finite separation.
+
+There is now a quantitative composition for **strict failures**: first
+localize by the measure-lane theorem, then add a new anchor. At a prescribed
+rare mass epsilon, a hypothetical gap delta yields a variance-one anchored
+gap at least epsilon delta/2 with at most k^6+1 sites and radius
+16k+sqrt(8 log(1/epsilon)), for k>=10/delta. The [interface](INTERFACES.md)
+checks contraction and error constants. This changes the rare prior; it
+does not preserve a dominant atom while conditioning. The radius depends
+on the defect resolution, and later rigid-mesh enlargement has no proved
+vertex bound. This supplies no positive family or Kneser--Poulsen consequence.
 
 ## 2. Sufficient mechanisms and their geometric endpoints
 

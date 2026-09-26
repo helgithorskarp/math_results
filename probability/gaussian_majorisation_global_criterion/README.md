@@ -59,7 +59,15 @@ gives an explicit error budget for transferring a conditional strict
 witness to finite data and the map lane's rigid meshes while retaining
 the prescribed dominant atom. It records the finite-atomic lane's new
 finite-averaging obstruction without treating it as an integrated
-counterexample. This handoff adds no theorem or comparison family.
+counterexample. The current localization input makes the universal defect
+uniformly approximable by compact finite moment maxima: spatial resolution
+`k` and moment degree `N` have separate error terms. Localizing before a
+new anchor construction also gives explicit defect-dependent radius and
+atom bounds while keeping the prescribed anchor mass. These are direct
+compositions of the credited estimates; no maximum is evaluated and no
+positive comparison family or full sign theorem is added. The functional
+lane's exact finite certificate retains its distinct signed endpoint and
+strict-margin obligations.
 
 The later [geometric-endpoint annex](GEOMETRIC_LIMIT.md) specifies the
 normalized coupling defect needed along an exponential weight path to
