@@ -16,8 +16,8 @@ localization. No optimal degree or historical priority is claimed.
 ## 1. A modulus in the square root of the threshold
 
 Let f=mu*gamma_s and g=nu*gamma_s be Gaussian convolutions of probability
-laws on R3, at the SAME variance s>0. Their supports fit, after separate
-translations, in balls of radius R. A map between the laws is not needed
+laws on R3, at the SAME variance s>0. Assume the supports of mu and nu fit,
+after separate translations, in balls of radius R. A map between the laws is not needed
 in this section. Put
 
     C=(2 pi s)^(-3/2), r=R/sqrt(s),
