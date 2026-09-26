@@ -43,8 +43,10 @@ No such negative Gaussian-contraction certificate is provided here.
 [PROOF.md](PROOF.md) proves the identities, coupling minimum, monotonicity,
 error bound and closure rules. [DEPENDENCIES.md](DEPENDENCIES.md) maps the
 actual geometric classes and analytic mechanisms to this criterion,
-including the new damped-cone motion and the all-variance density-orbit
-proof for the previously obstructed nine-point family.
+with an implication diagram and separate accounts of full-question
+equivalences, broad geometric classes, stability and restricted examples.
+It preserves lane ownership and distinguishes proof dependencies from
+comparisons that merely exclude a particular method.
 [SOURCES.md](SOURCES.md) credits the
 classical stochastic-order, Hausdorff and Bernstein--Durrmeyer ingredients.
 Those ingredients are not claimed as new. Independent review of this
@@ -58,6 +60,23 @@ cones: `lambda_0=lambda_2=lambda_3>=lambda_1`. Every resulting radius
 pattern already has a coordinate-preserving relabelling proof. This is a
 precise requirement for extending the functional certificate toward a new
 volume class; it is not a counterexample or a new Kneser--Poulsen theorem.
+
+That positive extension obligation has now been met for a new restricted
+ray class by the team's
+[ordered-weight source](../gaussian_majorisation_square_cone_orbits/ORDERED_WEIGHTS.md).
+Its new certificate allows unbounded ordered weight ratios and proves
+ordered unequal-radius **union** comparisons, even for invariant ambient
+measures. The old fixed-cone classification is unchanged. The new result
+does not cover arbitrary weights, unordered radii, or intersections; its
+exact ray and measure-order hypotheses remain essential. Independent
+review of that computer-assisted author proof is pending. The handoff
+records how it differs from the domain-wide motion classes and from
+law-dependent spatial stability; this update claims no new theorem.
+It also includes the latest
+[transverse matrix-path principle](../gaussian_axial_cone_rotations/MATRIX_PATHS.md),
+which generalizes the old axial rotation while keeping undamped endpoints
+and unrestricted weights and radii. Its block-diagonal optimality statement
+is kept separate from the unrestricted majorisation question.
 
 The [fixed-atom reduction](ANCHOR_REDUCTION.md) gives an equivalent test
 class for the **full** conjecture. For any one fixed `0<epsilon<1`, it is
