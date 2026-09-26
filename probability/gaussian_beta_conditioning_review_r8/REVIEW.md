@@ -33,6 +33,13 @@ This is an independent cross-lane agent audit, not external human peer
 review or proof-assistant formalization. [INPUTS.json](INPUTS.json) pins
 the inspected sources and identifies the shared upstream work.
 
+A concurrent [geometric-lane review](../gaussian_beta_geometry_review_r6/REVIEW.md)
+appeared during the final push refresh and independently accepts the same
+strip and lower bound. It is credited as concurrent evidence, not a premise
+of this audit. The direct affine-projection controls, complete position-level
+enumeration and fraction-free boundary determinant below remain separate
+checks; the latter two are not replayed in that geometric review.
+
 ## 1. Separate reconstruction of the positive affine correction
 
 Here is a direct Gaussian-dimension expansion of the same offset mechanism;
