@@ -1,0 +1,104 @@
+{
+  "author_checker_or_certificate_used": false,
+  "deliberate_rejections": [
+    "deleted tetrahedral edge",
+    "translation gauge omitted",
+    "rotation gauge omitted",
+    "cube actual edges are not infinitesimally rigid",
+    "interior site controlled by hull equalities alone",
+    "zero prior weight in fixed-label theorem"
+  ],
+  "fixtures": [
+    {
+      "C_E": "308387/667286",
+      "R_x": "46/11",
+      "beta": "2/81",
+      "coercivity": "exact strain right inverse with zero weighted gauge",
+      "edges": 6,
+      "facets": 4,
+      "integer_tail_radius": 41713255616400,
+      "kappa": "4320/22759",
+      "name": "asymmetric_tetrahedron",
+      "nu_0": "2",
+      "positive_Gram_pivots": 12,
+      "sites": 4,
+      "tail_absorption": "certified with pi<4 and log(1/p*)<=1/p*"
+    },
+    {
+      "C_E": "14/33",
+      "R_x": "3",
+      "beta": "1/75",
+      "coercivity": "exact strain right inverse with zero weighted gauge",
+      "edges": 9,
+      "facets": 6,
+      "integer_tail_radius": 98914959360000,
+      "kappa": "72/205",
+      "name": "triangular_bipyramid",
+      "nu_0": "2",
+      "positive_Gram_pivots": 15,
+      "sites": 5,
+      "tail_absorption": "certified with pi<4 and log(1/p*)<=1/p*"
+    },
+    {
+      "C_E": "6047769613/12366767322",
+      "R_x": "94/21",
+      "beta": "13/672",
+      "coercivity": "exact strain right inverse with zero weighted gauge",
+      "edges": 12,
+      "facets": 8,
+      "integer_tail_radius": 685862202038841,
+      "kappa": "30680/80199",
+      "name": "sheared_octahedron",
+      "nu_0": "2",
+      "positive_Gram_pivots": 18,
+      "sites": 6,
+      "tail_absorption": "certified with pi<4 and log(1/p*)<=1/p*"
+    },
+    {
+      "C_E": "12184635/10022432",
+      "R_x": "35",
+      "beta": "7/4320",
+      "coercivity": "exact strain right inverse with zero weighted gauge",
+      "edges": 15,
+      "facets": 10,
+      "integer_tail_radius": 2788341648119999058564,
+      "kappa": "108/211",
+      "name": "moment_curve_7",
+      "nu_0": "1",
+      "positive_Gram_pivots": 21,
+      "sites": 7,
+      "tail_absorption": "certified with pi<4 and log(1/p*)<=1/p*"
+    }
+  ],
+  "interior_cone_control": {
+    "C_E": "24180891481355/154631808",
+    "C_H": "12184635/10022432",
+    "K": "1127/12",
+    "boundary": "C_E uses all pair-strain inequalities, not a full-rank edge matrix on eight sites.",
+    "facet_ball_checks": 10,
+    "gauged_zero_hull_strain_obstruction": {
+      "interior_velocity": [
+        "7/8",
+        "0",
+        "0"
+      ],
+      "positive_nonedge_strain": "3"
+    },
+    "interior_sites": 1,
+    "kappa": "189/422",
+    "rho": "120/161",
+    "sites": 8
+  },
+  "scalar_controls": {
+    "Gamma_moments": [
+      "3/2",
+      "9/4",
+      "27/4"
+    ],
+    "coefficient_rejection": "3M/R fails for r=3,m=1,A=1,B=-1,R=4",
+    "radial_corner_controls": 216,
+    "support_normalization": "12-edge axis box, exact coefficients of pi"
+  },
+  "scope": "Finite exact evidence for the written review, not an analytic formalization or full conjecture proof.",
+  "status": "INDEPENDENT_RIGID_HULL_GEOMETRY_REVIEW_PASS"
+}
