@@ -48,9 +48,12 @@ versions; links intentionally use readable branch paths.
 | Scalar-defect motion | `a8c8a21bde0eb356cf1fc302e3f9b13f1e9b113e` |
 | Simplicial cone reflection | `a792a1a8601d347e6e45a00bf9a3fc849d91f4b7` |
 | Axial cone rotation | `984e1edaaf7f02bf4572c80754edff1e296fdd19` |
+| Axial finite strong-composition obstruction | `8e8cb2a62e575adbf0ec3ff74e681ee9688f1768` |
+| Uniform nonlinear axial robustness | `a63bee4157117a2d2abb2a358119dfd57ebb5a9d` |
 | Damped cone reflection | `57ff1129224b92a88404817b164bf8c17bd2ecd1` |
 | All-variance square-cone density orbits | `241e48a3c393b659ad90fbe5db145a6f58395d6e` |
 | Compact-variance spatial-cloud stability | `b48c5ca31f3c573f2ffe6874944de83bc1a92710` |
+| Bounded-law interior and finite positive certificates | `52ef6716a271b31ac1046207764fc78d3db6165c` |
 | Paired-layer all-variance completion | `465f892ad569fe12fb2634395c21bc7025abff41` |
 | Fixed-core relabelling | `e78d73bcae9a21f1344e74166153abe308bf51e9` |
 | Common-target gluing | `3ad6ed0be174d1292b250efcad734d03eed01af5` |
@@ -64,6 +67,7 @@ versions; links intentionally use readable branch paths.
 | Atomic bridge obstruction | `d05dd54b551a5a14329cfbe31f8b66c13cc0e217` |
 | Atomic obstruction independent acceptance | `b89f9f31a95637f92f7235a5693d2edbc5e530f6` |
 | Covariance-free entropy rigidity | `a264d277a51683479424060972dafb44123db597` |
+| Covariance-free independent acceptance and unsigned hinge bound | `fc25eff113b59c72fa820def81698e914a80d15b` |
 | Signed tail-deficit obstruction | `54372e691479d94f8c4a6ee9a7c3a7ab4ffdac3d` |
 
 The written proofs in this packet are self-contained for the global
@@ -101,3 +105,49 @@ in the dependency map, with their stated variance and weight quantifiers.
 The annex explains the radius-matching scope of their immediate geometric
 endpoints. They are author proofs awaiting review, not new premises of our
 fixed-cone classification or independently accepted results here.
+
+## Fixed-atom reduction and refreshed obligations
+
+[ANCHOR_REDUCTION.md](ANCHOR_REDUCTION.md) is an analytic reduction of
+the entire open question, using the same global defect. It combines an
+explicit contractive anchor extension with the elementary nonnegative
+hinge interaction and a Gaussian half-space overlap estimate. The
+result is uniform over every threshold. The conditional near-Gaussian
+consequences use standard mixture entropy, Gaussian translation, and
+coupling identities derived there. These ingredients, and the standard
+Kirszbraun extension, carry no priority claim. No counterexample is
+assumed or constructed, and no new positive Kneser--Poulsen class is
+claimed. The reduction requires no external computational certificate.
+
+The prepublication refresh incorporates three durable advances:
+
+* [Axial finite compositions](../gaussian_axial_cone_rotations/COMPOSITIONS.md):
+  all finite aligned strong-coordinate chains are excluded on the stated
+  rigid anchored class. This does not constrain post-convolution couplings.
+* [Axial nonlinear robustness](../gaussian_axial_cone_rotations/ROBUSTNESS.md):
+  a reserved scaling gives one domain-wide bound for nonlinear endpoint
+  perturbations, all weights and variances, and arbitrary radii. Its
+  geometric input is retained; this source does not cover arbitrary
+  remote rare packets solely by their small probabilities.
+* [Bounded-law stability](../gaussian_majorisation_open_stability/BOUNDED_LAWS.md):
+  strict mean-support and peak gaps and strict hinges describe the exact
+  product `W_infinity` interior. Its finite positive moment certificate
+  has signed endpoint and localization premises. The fixed-atom
+  reduction explicitly records why neither a law-dependent neighborhood
+  nor convergence in weaker distances supplies the unrestricted sign.
+
+These author proofs are cited at their stated status, not independently
+reviewed here. Their source commits are recorded in the table. The
+paired-layer all-variance completion retains its separate spatial and
+weight hypotheses. New private searches and finite positive moment
+tables from the counterexample lane are not mathematical dependencies.
+The fixed-atom reduction leaves the original arbitrary-weight square-cone
+origin-adjunction question open; its remote-atom error tending to zero
+does not imply positive comparison at finite separation.
+
+The retained covariance-free theorem has an
+[independent acceptance](../gaussian_majorisation_bridge_barrier/AUDIT.md)
+in graph contribution `bafkreibohj2zayll2fnt5zmiug23fkkai6oy4mv3mhinmh5etuxvgzofxq`
+at height 5952. Its quantitative hinge consequence is unsigned. The
+separate energy-only obstruction in that packet is not what this audit
+accepted, and the audit does not establish the present fixed-atom proof.

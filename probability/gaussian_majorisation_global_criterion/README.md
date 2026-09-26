@@ -59,6 +59,27 @@ pattern already has a coordinate-preserving relabelling proof. This is a
 precise requirement for extending the functional certificate toward a new
 volume class; it is not a counterexample or a new Kneser--Poulsen theorem.
 
+The [fixed-atom reduction](ANCHOR_REDUCTION.md) gives an equivalent test
+class for the **full** conjecture. For any one fixed `0<epsilon<1`, it is
+enough to prove comparison at variance one for every bounded law
+`(1-epsilon) delta_0+epsilon rho` and every contraction fixing zero. The
+support bound on `rho` is not uniform. A translated rare packet and a
+distant common fixed atom give, uniformly in every threshold,
+
+```text
+|Delta(F_R,G_R)-epsilon Delta(f,g)|
+    <= exp(-(R-M)^2/(8s)).
+```
+
+Thus any possible violation would persist arbitrarily close to the same
+Gaussian in total variation, every finite Wasserstein distance, each
+fixed derivative norm and relative entropy. This is a conditional
+reduction; no violation is asserted, and the fixed-atom test is not yet
+proved. It specifies the uniform local-to-global obligation for the
+analytic and entropy routes. The updated dependency map preserves the
+stronger all-weight geometric classes and the bounded-law stability
+theorem's distinct support-sensitive hypotheses.
+
 ## Reproduction
 
 From this directory, using CPython 3.11 or later, with no packages:
@@ -108,3 +129,21 @@ the same repository and verifies its SHA256 before use; it checks all
 366,660 endpoint coefficient inequalities and the eleven selected ratio
 constraints. See [GEOMETRIC_LIMIT.md](GEOMETRIC_LIMIT.md) for the analytic
 proof, dependency and scope. The original global-criterion audit is unchanged.
+
+For the fixed-atom annex:
+
+```sh
+python3 anchor_audit.py --check
+python3 -O anchor_audit.py --check
+```
+
+Expected:
+
+```text
+FIXED_ATOM_REDUCTION_EXACT_AUDITS_PASS 218fbb2cbe4e4163e93bd58d5422e023f382e110c381470ab7079061d84c44dd
+```
+
+This supplementary rational audit checks the hinge interaction, mixture
+normalizations and a concrete contractive extension. The universal
+separation and localization statements are analytic proofs. Its negative
+finite-cell control is not a Gaussian-contraction example.

@@ -1,0 +1,80 @@
+{
+  "anchor_extension": {
+    "forward_margin_eta": "1",
+    "invalid_controls_rejected": 4,
+    "projection_bound_M": "3",
+    "rational_extensions": [
+      {
+        "R": "10",
+        "displacement_upper_bound": "7/16",
+        "minimum_anchor_loss": "45/2",
+        "unit_ball_scale": "16"
+      },
+      {
+        "R": "100",
+        "displacement_upper_bound": "7/106",
+        "minimum_anchor_loss": "405/2",
+        "unit_ball_scale": "106"
+      },
+      {
+        "R": "1000",
+        "displacement_upper_bound": "7/1006",
+        "minimum_anchor_loss": "4005/2",
+        "unit_ball_scale": "1006"
+      }
+    ],
+    "squared_norm_difference_bound_D": "17/4",
+    "translation_L": "2"
+  },
+  "disjoint_mixtures": {
+    "rows": [
+      {
+        "base_defect": "1/2",
+        "diluted_defect": "1/4",
+        "epsilon": "1/2"
+      },
+      {
+        "base_defect": "0",
+        "diluted_defect": "0",
+        "epsilon": "1/2"
+      },
+      {
+        "base_defect": "1/2",
+        "diluted_defect": "1/6",
+        "epsilon": "1/3"
+      },
+      {
+        "base_defect": "0",
+        "diluted_defect": "0",
+        "epsilon": "1/3"
+      },
+      {
+        "base_defect": "1/2",
+        "diluted_defect": "1/200",
+        "epsilon": "1/100"
+      },
+      {
+        "base_defect": "0",
+        "diluted_defect": "0",
+        "epsilon": "1/100"
+      }
+    ],
+    "scope": "non-Gaussian finite-cell normalization controls"
+  },
+  "interaction": {
+    "five_case_counts": [
+      285,
+      120,
+      120,
+      195,
+      9
+    ],
+    "rational_triples": 729
+  },
+  "overlapping_mixtures": {
+    "all_piecewise_linear_knots_checked": 448,
+    "mixture_pairs": 81
+  },
+  "status": "FIXED_ATOM_REDUCTION_EXACT_AUDITS_PASS",
+  "trust_boundary": "Supplementary rational controls. The universal Gaussian and entropy proofs are analytic; no counterexample is asserted."
+}

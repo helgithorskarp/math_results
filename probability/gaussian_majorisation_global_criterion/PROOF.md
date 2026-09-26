@@ -442,3 +442,23 @@ classifies what the fixed orbit weight cones can supply. The team's motion
 proofs separately justify their stated individual-radius conclusions.
 A single-law or high-variance zero of `Delta_s` is not by itself a new
 Kneser--Poulsen theorem.
+
+## 7. An equivalent fixed-atom target
+
+[ANCHOR_REDUCTION.md](ANCHOR_REDUCTION.md) proves that, for any one fixed
+`0<epsilon<1`, the full conjecture is equivalent to its variance-one
+restriction to all bounded laws `(1-epsilon)delta_0+epsilon rho` and all
+contractions fixing zero. The support of `rho` is unrestricted except
+for boundedness separately for each law. The proof translates the old
+output and adds a distant common fixed atom, obtaining a genuine
+contraction and a uniform all-threshold approximation of the full defect:
+`Delta(F_R,G_R) -> epsilon Delta(f,g)`.
+
+The global threshold test and all possible violating inputs are retained
+exactly. The restricted assertion remains unproved. The reduction does
+not assert that adding a common
+Gaussian preserves an already valid comparison at any finite separation.
+The conditional near-Gaussian and unit-ball normalizations in that annex
+state exactly what a uniform entropy or local endpoint argument would
+have to prove. The established geometric classes in the dependency map
+remain sufficient constructions with their original quantifiers.
