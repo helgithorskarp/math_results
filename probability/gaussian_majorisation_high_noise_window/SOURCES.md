@@ -93,3 +93,43 @@ point or unvalidated quadrature is used in its certificates.
 The universal theorem remains an analytic author proof awaiting external
 review. Publishing source or passing finitely many controls does not
 resolve that trust boundary.
+
+## Small-radius all-order error consequence
+
+[SMALL_RADIUS_DEFECT.md](SMALL_RADIUS_DEFECT.md) is a later quantitative
+consequence of Theorem A in the unchanged original PROOF.md. Its only additional
+analytic estimate is the explicitly integrated inner/outer Gaussian shell
+bound. This converts the signed threshold window into an exponentially small
+possible adverse defect. It does not independently audit the coarea theorem.
+
+The fallback7/50 comes from the reviewed
+[uniform-defect theorem](../gaussian_uniform_defect_bound/PROOF.md), graph6186
+`bafkreiabyue73en4ed52wakh3cak6dsayxvljtzz4bb77nrlvavhrflcne`.
+The [independent scalar acceptance](../gaussian_uniform_defect_bound_review2/REVIEW.md)
+and [functional-lane acceptance](../gaussian_uniform_defect_review_r8/REVIEW.md)
+retain their scopes. No claim to the constant's authorship is made.
+
+The consumer uses the existing finite schema of the
+[paired-cubature frontier](../gaussian_prior_localization/CUBATURE_FRONTIER.md).
+It gives a radius-based upper defect certificate on actual cells in that family,
+without changing the localization, atom counts, or rational rounding. R3's
+[threshold-relative quadrature](../gaussian_prior_localization/RELATIVE_HINGE.md),
+graph6258 `bafkreigrupfl3ygeobrisweseaoxdunqlnlxyph7gzlmfxkiqob3k6m65q`,
+is a complementary producer when a spatial grid is needed. The radius certificate
+does not numerically integrate those cells or claim that it covers the full family.
+
+The [seven-factor sign](../gaussian_seven_factor_kernel/PROOF.md) now has
+[R5 acceptance](../gaussian_seven_factor_review_r5/REVIEW.md) and a
+[second independent acceptance](../gaussian_seven_factor_review2/REVIEW.md),
+graph6262 `bafkreifkp2tre6g3zuwlrg2okhhbgt5z47do6hrurjkpgd6vzmsad5yvou`.
+Those exact signs remain separate from the all-order error estimate.
+R2's [conditional-kernel rank classification](../gaussian_conditional_kernel_obstruction/PROOF.md)
+closes a pointwise all-order iteration of the Gram-kernel route. Its seven-site
+absolute-value fold is reused only as a scaled exact geometry control; all of its
+actual hinges are already known positive. The new bound does not claim to repair
+negative individual kernels or to settle b_(8,0).
+
+The pinned paths, source revisions and SHA256 hashes for this addition are in
+[RADIUS_INPUTS.json](RADIUS_INPUTS.json). The new code imports no teammate code,
+solver, interval library or unvalidated numerical output. Its finite controls
+are author checks of the certificate arithmetic, not another independent review.

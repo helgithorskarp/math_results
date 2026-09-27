@@ -1,0 +1,173 @@
+{
+  "cutoff_polynomial": [
+    16,
+    -40,
+    25
+  ],
+  "exp4_lower": "103/3",
+  "exp_three_quarters_upper": "17/8",
+  "malformed_inputs_rejected": 10,
+  "million_bit_budget": {
+    "bits": 1000000,
+    "integer_budget_check": true,
+    "k": 250001,
+    "proof_of_unexpanded_comparison": "k<=2^k for every integer k>=1",
+    "radius_rule_bound": {
+      "binary_exponent": -1250001,
+      "denominator": "1",
+      "numerator": "250001"
+    },
+    "requested_upper_bound": {
+      "binary_exponent": -1000000,
+      "denominator": "1",
+      "numerator": "1"
+    },
+    "schema": "gaussian_radius_tolerance_v1",
+    "sufficient_radius_squared_over_variance": "1/2000008"
+  },
+  "paired_rank": 6,
+  "prefactor_upper": "3485/256",
+  "rank_six_control": {
+    "active_labels": 7,
+    "covers": [
+      "every density threshold",
+      "every beta degree and index",
+      "every finite Hankel matrix after adding E times its monomial Gram matrix"
+    ],
+    "defect_upper_bound": {
+      "binary_exponent": -36,
+      "denominator": "1",
+      "numerator": "8"
+    },
+    "epsilon": "1/64",
+    "exact_majorisation_certified": false,
+    "geometric_radius_is_supplied_input": false,
+    "k": 8,
+    "labels": 7,
+    "pair_contractions_checked": 21,
+    "radius_method": "minimum over active source-site anchors; not a minimum enclosing ball",
+    "radius_squared": "1/64",
+    "reason": "Exponential support-radius defect bound",
+    "schema": "gaussian_radius_defect_v1",
+    "source_anchor_index": 0,
+    "target_radius_squared": "1/64",
+    "variance": "1"
+  },
+  "shell_polynomial": [
+    [
+      0,
+      3,
+      2
+    ],
+    [
+      2,
+      1,
+      6
+    ]
+  ],
+  "small_bit_budgets_checked": 129,
+  "small_radius_parameters_checked": 128,
+  "status": "EXPONENTIAL_RADIUS_DEFECT_CERTIFICATES_PASS",
+  "table": [
+    {
+      "covers": [
+        "every density threshold",
+        "every beta degree and index",
+        "every finite Hankel matrix after adding E times its monomial Gram matrix"
+      ],
+      "defect_upper_bound": {
+        "binary_exponent": 0,
+        "denominator": "50",
+        "numerator": "7"
+      },
+      "epsilon": "1/8",
+      "exact_majorisation_certified": false,
+      "geometric_radius_is_supplied_input": true,
+      "k": 1,
+      "radius_squared": "1/8",
+      "reason": "Accepted uniform defect bound; radius rule not stronger",
+      "schema": "gaussian_radius_defect_v1",
+      "variance": "1"
+    },
+    {
+      "covers": [
+        "every density threshold",
+        "every beta degree and index",
+        "every finite Hankel matrix after adding E times its monomial Gram matrix"
+      ],
+      "defect_upper_bound": {
+        "binary_exponent": -6,
+        "denominator": "1",
+        "numerator": "2"
+      },
+      "epsilon": "1/16",
+      "exact_majorisation_certified": false,
+      "geometric_radius_is_supplied_input": true,
+      "k": 2,
+      "radius_squared": "1/16",
+      "reason": "Exponential support-radius defect bound",
+      "schema": "gaussian_radius_defect_v1",
+      "variance": "1"
+    },
+    {
+      "covers": [
+        "every density threshold",
+        "every beta degree and index",
+        "every finite Hankel matrix after adding E times its monomial Gram matrix"
+      ],
+      "defect_upper_bound": {
+        "binary_exponent": -16,
+        "denominator": "1",
+        "numerator": "4"
+      },
+      "epsilon": "1/32",
+      "exact_majorisation_certified": false,
+      "geometric_radius_is_supplied_input": true,
+      "k": 4,
+      "radius_squared": "1/32",
+      "reason": "Exponential support-radius defect bound",
+      "schema": "gaussian_radius_defect_v1",
+      "variance": "1"
+    },
+    {
+      "covers": [
+        "every density threshold",
+        "every beta degree and index",
+        "every finite Hankel matrix after adding E times its monomial Gram matrix"
+      ],
+      "defect_upper_bound": {
+        "binary_exponent": -36,
+        "denominator": "1",
+        "numerator": "8"
+      },
+      "epsilon": "1/64",
+      "exact_majorisation_certified": false,
+      "geometric_radius_is_supplied_input": true,
+      "k": 8,
+      "radius_squared": "1/64",
+      "reason": "Exponential support-radius defect bound",
+      "schema": "gaussian_radius_defect_v1",
+      "variance": "1"
+    },
+    {
+      "covers": [
+        "every density threshold",
+        "every beta degree and index",
+        "every finite Hankel matrix after adding E times its monomial Gram matrix"
+      ],
+      "defect_upper_bound": {
+        "binary_exponent": -76,
+        "denominator": "1",
+        "numerator": "16"
+      },
+      "epsilon": "1/128",
+      "exact_majorisation_certified": false,
+      "geometric_radius_is_supplied_input": true,
+      "k": 16,
+      "radius_squared": "1/128",
+      "reason": "Exponential support-radius defect bound",
+      "schema": "gaussian_radius_defect_v1",
+      "variance": "1"
+    }
+  ]
+}

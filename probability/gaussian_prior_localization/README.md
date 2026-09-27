@@ -1,5 +1,23 @@
 # Gaussian set transfer and measure localization
 
+The [uniform signed endpoints](SIGNED_ENDPOINTS.md) now discharge the
+low-threshold and source-peak obligations for **every non-point input** in
+the unchanged paired-cubature rational family. Its strict pair-loss floor
+gives an explicit mean-support gap; R8's existing low-tail theorem then
+supplies an actual sign, with a dyadic cutoff stored without expanding its
+huge denominator. Only the specified middle interval remains to be signed.
+This is a conservative endpoint certificate, not a full configuration cover
+or improvement of the unrestricted `D<=7/50` bound. Independent review of
+the new consequence is pending.
+
+Run `python3 -B signed_endpoints.py --check` and
+`python3 -B -O signed_endpoints.py --check`. Expected:
+`SIGNED_FRONTIER_ENDPOINTS_PASS`. `--budget 64` returns the uniform
+certificate, and `--instance input.json` handles strictly contracting finite
+rational data. [SIGNED_ENDPOINT_EXPECTED.json](SIGNED_ENDPOINT_EXPECTED.json)
+records exact controls; [SIGNED_ENDPOINT_INPUTS.json](SIGNED_ENDPOINT_INPUTS.json)
+pins the analytic and arithmetic dependencies.
+
 The new [threshold-relative certificate](RELATIVE_HINGE.md) bounds the error
 in a hinge divided by its threshold. It certifies entire positive threshold
 windows directly, including exponentially small levels. An exact known-positive
@@ -23,8 +41,10 @@ It avoids high-degree moment expansion and supplies converging lower/upper
 defect bounds. On a rank-six member of the rational frontier, grid refinement
 gives upper bounds below 0.194, 0.048 and 0.012; that known-positive map is a
 control, not a new subclass. No entire configuration family is enumerated,
-and the universal D<=7/50 bound is unchanged. Independent review of this new
-oracle is pending.
+and the universal D<=7/50 bound is unchanged. The direct oracle now has
+[independent acceptance](../gaussian_direct_hinge_review_frontier/REVIEW.md),
+committed at graph height 6271. That review does not cover the subsequent
+relative-window or signed-endpoint supplements.
 
 Run `python3 -B direct_hinge.py --check` and
 `python3 -B -O direct_hinge.py --check`. Expected status:
