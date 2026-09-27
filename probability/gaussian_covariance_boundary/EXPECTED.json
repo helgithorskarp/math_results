@@ -1,0 +1,123 @@
+{
+  "cutoff_equality_guard": {
+    "directional_variance_ceil_log2": -314,
+    "hinge_margin_neglog2": 156,
+    "loss_floor_log2": -1,
+    "normalized_directional_variance_bits": [
+      1,
+      315
+    ],
+    "normalized_directional_variance_sha256": "b50d5b08231be2a70e2a9c30f2ac6f806349f9d6628de9267787f1e866650567",
+    "normalized_mean_loss_bits": [
+      1,
+      2
+    ],
+    "normalized_mean_loss_sha256": "d939926f05444b0f4495fb9629ecbfa80d99a8ec1a20d06800ca5a3d5f4fd276",
+    "scope": "The new sign covers only u>=2^-m; its margin is through the source peak. The planar and isometric branches are credited prior full comparisons.",
+    "side": "source",
+    "status": "SIGNED_ABOVE_THRESHOLD",
+    "threshold_neglog2": 6
+  },
+  "damaged_inputs_rejected": 13,
+  "expanded_rational_budgets": 660,
+  "finite_guard": {
+    "directional_variance_ceil_log2": -319,
+    "hinge_margin_neglog2": 156,
+    "loss_floor_log2": -1,
+    "normalized_directional_variance_bits": [
+      2,
+      321
+    ],
+    "normalized_directional_variance_sha256": "2b68823b64cb0a8c3bcfc04144a06e545a62d3b59605c01a6ae7710c2d3b87cd",
+    "normalized_mean_loss_bits": [
+      322,
+      322
+    ],
+    "normalized_mean_loss_sha256": "b19a56be179be0c82413fc3221519e29a2220b8d0bc9105d89a64cb84c95365c",
+    "scope": "The new sign covers only u>=2^-m; its margin is through the source peak. The planar and isometric branches are credited prior full comparisons.",
+    "side": "source",
+    "status": "SIGNED_ABOVE_THRESHOLD",
+    "threshold_neglog2": 6
+  },
+  "fixture_determinant_over_h": "-1/32768",
+  "fixture_paired_affine_rank": 6,
+  "fixture_variance_over_h_squared": "6/49",
+  "headline_schedule": {
+    "directional_variance_ceiling_neglog2": 314,
+    "hinge_margin_neglog2": 156,
+    "loss_floor_neglog2": 1,
+    "peak_gap_neglog2": 14,
+    "projection_error_neglog2": 157,
+    "radius": 1,
+    "reference_margin_neglog2": 155,
+    "review": "Author proof; independent review pending.",
+    "root_ceiling": 4,
+    "scope": "At unit variance, D>=2^-k and either marginal directional covariance<=2^-L sign all u>=2^-m. The margin applies at thresholds no higher than the actual source peak.",
+    "status": "COVARIANCE_BOUNDARY_SCHEDULE",
+    "threshold_neglog2": 6
+  },
+  "huge_radius_schedule": {
+    "directional_variance_ceiling_neglog2": 110000000715552008000230002,
+    "hinge_margin_neglog2": 55000000357776004000115000,
+    "loss_floor_neglog2": 80,
+    "peak_gap_neglog2": 9000000000000000000000084,
+    "projection_error_neglog2": 55000000357776004000115001,
+    "radius": 1000000000000,
+    "reference_margin_neglog2": 55000000357776004000114999,
+    "review": "Author proof; independent review pending.",
+    "root_ceiling": 44722,
+    "scope": "At unit variance, D>=2^-k and either marginal directional covariance<=2^-L sign all u>=2^-m. The margin applies at thresholds no higher than the actual source peak.",
+    "status": "COVARIANCE_BOUNDARY_SCHEDULE",
+    "threshold_neglog2": 1000000000
+  },
+  "joint_extension_pair_controls": 91,
+  "known_branches": [
+    "PLANAR_FULL_MAJORISATION",
+    "ISOMETRIC_ZERO",
+    "PLANAR_FULL_MAJORISATION"
+  ],
+  "logarithm_controls": 2209,
+  "parameter_schedules": 60,
+  "scope": "Exact budgets, projected loss, labelled contractions and branch controls. Gaussian translation, peak comparison and the R5 hinge theorem are written mathematics, not independently verified here.",
+  "status": "COVARIANCE_BOUNDARY_EXACT_CONTROLS_PASS",
+  "target_fixture_determinant_over_h": "-243/16384",
+  "target_fixture_paired_affine_rank": 6,
+  "target_guard": {
+    "directional_variance_ceil_log2": -1593,
+    "hinge_margin_neglog2": 793,
+    "loss_floor_log2": 2,
+    "normalized_directional_variance_bits": [
+      2,
+      1595
+    ],
+    "normalized_directional_variance_sha256": "42e306eb22d7976eb89ffc18dda37c3dba5cb8d356f6383a0d8d6c1fd9122028",
+    "normalized_mean_loss_bits": [
+      1597,
+      1594
+    ],
+    "normalized_mean_loss_sha256": "6e31fc52629db597ac231aaee744206e740c14accf59f1fa53cc457dcc45ba67",
+    "scope": "The new sign covers only u>=2^-m; its margin is through the source peak. The planar and isometric branches are credited prior full comparisons.",
+    "side": "target",
+    "status": "SIGNED_ABOVE_THRESHOLD",
+    "threshold_neglog2": 19
+  },
+  "target_pair_controls": 21,
+  "target_schedule": {
+    "directional_variance_ceiling_neglog2": 1588,
+    "hinge_margin_neglog2": 793,
+    "loss_floor_neglog2": 0,
+    "peak_gap_neglog2": 85,
+    "projection_error_neglog2": 794,
+    "radius": 3,
+    "reference_margin_neglog2": 792,
+    "review": "Author proof; independent review pending.",
+    "root_ceiling": 7,
+    "scope": "At unit variance, D>=2^-k and either marginal directional covariance<=2^-L sign all u>=2^-m. The margin applies at thresholds no higher than the actual source peak.",
+    "status": "COVARIANCE_BOUNDARY_SCHEDULE",
+    "threshold_neglog2": 19
+  },
+  "unresolved_controls": [
+    "UNRESOLVED",
+    "UNRESOLVED"
+  ]
+}
