@@ -118,9 +118,16 @@ have variance cutoffs. R8's
 [small-target result6482](../gaussian_uniform_small_target/PROOF.md)
 works at every specified variance with a variance-dependent target bound.
 R5's accepted beta rows and retained-interaction result remain pressure
-comparisons, not full all-variance majorisation. These are complementary
-inputs to the shared problem; they are not used in this proof. The full
-three-dimensional all-variance question remains open.
+comparisons, not full all-variance majorisation. A final repository refresh
+also found R5's new
+[norm-preserving theorem](../gaussian_norm_preserving_majorisation/PROOF.md),
+source `7ec05f2b89b4ab69de7a6696f236aa1f6ecc3ffc`: it claims all variances
+and both ball-volume comparisons when all pointwise distances to an anchor
+are preserved. Its imported spherical identity has independent acceptance;
+these new consequences are still author-level. That exact anchor condition
+is absent here, and the two full classes are not identified. These results
+are complementary inputs to the shared problem and are not used in this
+proof. The full three-dimensional all-variance question remains open.
 
 ## Exact evidence and limitations
 
