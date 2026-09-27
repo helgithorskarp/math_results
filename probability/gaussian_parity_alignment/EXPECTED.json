@@ -1,0 +1,236 @@
+{
+  "arithmetic": "Python arbitrary integers and fractions.Fraction",
+  "continuous_box_application": {
+    "box_corner_labels": 64,
+    "opposite_parity_pairs": 1024,
+    "same_parity_pairs": 992,
+    "scope": "Corner checks supplement the written all-box proof.",
+    "universal_source_lower_bound": "4",
+    "universal_target_upper_bound": "3"
+  },
+  "damaged_inputs": [
+    {
+      "control": "negative coefficient",
+      "reason": "negative coefficient",
+      "rejected": true
+    },
+    {
+      "control": "invalid parity",
+      "reason": "invalid parity",
+      "rejected": true
+    },
+    {
+      "control": "invalid exponential variable",
+      "reason": "nonnegative log variables required",
+      "rejected": true
+    },
+    {
+      "control": "nonuniform orbit",
+      "reason": "nonuniform orbit weights",
+      "rejected": true
+    }
+  ],
+  "density_pair_controls": {
+    "anisotropic_three_orbits": {
+      "aligned_pair": [
+        "3863/1152",
+        "2735/1152"
+      ],
+      "breakpoint_count": 6,
+      "inverse_exponent_pair": [
+        "3071/1152",
+        "3527/1152"
+      ],
+      "maximum_breakpoint_gain": "7/24",
+      "orbit_count": 3,
+      "source_pair": [
+        "3527/1152",
+        "3071/1152"
+      ],
+      "status": "EXACT_DOUBLY_STOCHASTIC",
+      "theta": "33/47"
+    },
+    "balanced_equal_orbits": {
+      "aligned_pair": [
+        "469/60",
+        "181/60"
+      ],
+      "breakpoint_count": 5,
+      "inverse_exponent_pair": [
+        "65/12",
+        "65/12"
+      ],
+      "maximum_breakpoint_gain": "12/5",
+      "orbit_count": 2,
+      "source_pair": [
+        "65/12",
+        "65/12"
+      ],
+      "status": "EXACT_DOUBLY_STOCHASTIC",
+      "theta": "1/2"
+    },
+    "coordinate_plane": {
+      "aligned_pair": [
+        "463/144",
+        "463/144"
+      ],
+      "breakpoint_count": 3,
+      "inverse_exponent_pair": [
+        "463/144",
+        "463/144"
+      ],
+      "maximum_breakpoint_gain": "0",
+      "orbit_count": 2,
+      "source_pair": [
+        "463/144",
+        "463/144"
+      ],
+      "status": "EXACT_DOUBLY_STOCHASTIC",
+      "theta": "1/2"
+    },
+    "mixed": {
+      "aligned_pair": [
+        "7543/1120",
+        "3007/1120"
+      ],
+      "breakpoint_count": 6,
+      "inverse_exponent_pair": [
+        "6007/1120",
+        "649/160"
+      ],
+      "maximum_breakpoint_gain": "48/35",
+      "orbit_count": 2,
+      "source_pair": [
+        "649/160",
+        "6007/1120"
+      ],
+      "status": "EXACT_DOUBLY_STOCHASTIC",
+      "theta": "64/189"
+    },
+    "single_negative": {
+      "aligned_pair": [
+        "469/60",
+        "181/60"
+      ],
+      "breakpoint_count": 4,
+      "inverse_exponent_pair": [
+        "469/60",
+        "181/60"
+      ],
+      "maximum_breakpoint_gain": "0",
+      "orbit_count": 1,
+      "source_pair": [
+        "181/60",
+        "469/60"
+      ],
+      "status": "EXACT_DOUBLY_STOCHASTIC",
+      "theta": "0"
+    },
+    "single_positive": {
+      "aligned_pair": [
+        "469/60",
+        "181/60"
+      ],
+      "breakpoint_count": 4,
+      "inverse_exponent_pair": [
+        "181/60",
+        "469/60"
+      ],
+      "maximum_breakpoint_gain": "0",
+      "orbit_count": 1,
+      "source_pair": [
+        "469/60",
+        "181/60"
+      ],
+      "status": "EXACT_DOUBLY_STOCHASTIC",
+      "theta": "1"
+    }
+  },
+  "eight_site_geometry": {
+    "alignment_squared_distance_expansion": "80",
+    "distance_categories": {
+      "core": {
+        "source": "8",
+        "target": "8"
+      },
+      "diagonal_cross": {
+        "source": "1323",
+        "target": "3025/3"
+      },
+      "off_diagonal_cross": {
+        "source": "1163",
+        "target": "1163"
+      },
+      "outer": {
+        "source": "3200",
+        "target": "26912/9"
+      }
+    },
+    "full_interval_masks": [
+      0,
+      15
+    ],
+    "labels": 8,
+    "mixed_deficit": "12980/9",
+    "mixed_distance": "1548",
+    "mixed_lower_bound": "26912/9",
+    "pairs": 28,
+    "prior_controls": [
+      {
+        "alpha": "0",
+        "core_mass_per_atom": "1/4",
+        "outer_mass_per_atom": "0"
+      },
+      {
+        "alpha": "1/7",
+        "core_mass_per_atom": "3/14",
+        "outer_mass_per_atom": "1/28"
+      },
+      {
+        "alpha": "1/2",
+        "core_mass_per_atom": "1/8",
+        "outer_mass_per_atom": "1/8"
+      },
+      {
+        "alpha": "1",
+        "core_mass_per_atom": "0",
+        "outer_mass_per_atom": "1/4"
+      }
+    ],
+    "radial_profile_slope": "55/57",
+    "rejected_masks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "strict_pairs": 10,
+    "strict_target_factor": "1048575/1048576",
+    "strict_target_minimum_pair_loss": "2097151/137438953472",
+    "tight_pairs": 18
+  },
+  "laurent_identity": [
+    {
+      "coefficient": "1/4",
+      "nonzero_monomials": 4,
+      "parity": 1
+    },
+    {
+      "coefficient": "1/4",
+      "nonzero_monomials": 4,
+      "parity": -1
+    }
+  ],
+  "status": "PARITY_ALIGNMENT_EXACT_CONTROLS_PASS",
+  "trust_boundary": "Exact algebra and sixteen finite candidates only. Universal Gaussian integration, dominated limits and the credited radial theorem remain written proofs. No quadrature, old audit replay, or independent review."
+}
