@@ -168,4 +168,3 @@ def controls():
                 need(F(lo,1<<b)<=F(L,1<<(b+20))<=F(H,1<<(b+20))<=F(hi,1<<b), 'independent high-precision exp check')
                 cases+=1
     return {'exponential_controls':cases}
-
