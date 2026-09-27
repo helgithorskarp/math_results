@@ -151,6 +151,9 @@ For `0<epsilon<=1/4`, the numerator is at least 121/16 and the
 denominator is at most 6, so `L_epsilon>=121/96>1>log 2`.
 Its signed interval therefore contains `[1/2,1]`, and both hinges vanish
 above 1. This joins (2) with no gap. No low-endpoint overlap is inferred.
+If T is initially defined only on the source support, its standard
+Euclidean 1-Lipschitz extension supplies the global map used in that
+window theorem, with exactly the same pushforward law.
 
 ## 4. Ten extra features preserve the sign guard exactly
 

@@ -72,6 +72,12 @@
    production full histogram and radial cover; it does not independently
    regenerate that full computation. All eleven pinned target files,
    including their historical pending-review headers, remain unchanged.
+   The subsequent [second acceptance6406](../gaussian_extended_target_prior_cell_review2/REVIEW.md),
+   evidence `95b7a0e1923cc9384f402fc2d388c46f4da2f8f2`, independently
+   regenerates the full weighted computation. Its same-prior diffuse-transfer
+   clarification is recorded in the added
+   [acceptance notice](../gaussian_extended_target_prior_cell/ACCEPTANCE.md),
+   while preserving the frozen target manifest.
 
 The primary new content is the uniform rational middle-sign guard,
 its exact moment retention, and the loss-uniform parameter/prior handoff.
