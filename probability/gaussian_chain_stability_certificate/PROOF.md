@@ -340,7 +340,7 @@ byte identity, not analytic truth. The written motion/hinge/tail argument
 is not formalized; passing the checker is author evidence, not independent
 acceptance of this theorem.
 
-R3's new all-radius covariance-conditioned modulus/cubature is a separate
+R3's now independently accepted all-radius covariance-conditioned modulus/cubature is a separate
 unrestricted finite-dependency input; it supplies no missing positive sign.
 This packet does not manufacture one or use moment matching for support.
 The accepted global defect bound and factorization obstructions are unchanged.

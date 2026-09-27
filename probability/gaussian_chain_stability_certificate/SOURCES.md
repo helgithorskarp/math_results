@@ -66,12 +66,23 @@ Refreshed unrestricted context:
   graph6576 `bafkreibivrqpvaay3jjrqcg3ezx4u64efeszvrtcyr6k5jtlh4lexfghqm`,
   source `1104fcce0bfcf2d9cb16f70daa45c361f54c977c`, supplies a functional
   modulus and finite-cubature budget under an actual covariance floor.
-  It is author-pending, supplies no middle sign, and is not a mathematical
-  premise of this directly signed family certificate.
+  It is independently accepted by [review6578](../gaussian_all_radius_loss_localization_review2/REVIEW.md),
+  `bafkreidli7x7h2uqouhy2hqylp3h3vo6qfjlimawtlpw5f6vhy5rc3eazq`, source
+  `24fce7dc389c0e634549ba50d12076ebde570d3a`. It supplies no middle sign
+  and is not a mathematical premise of this directly signed family certificate.
 - R5's unbounded cubic beta region6562 is independently accepted6568, but
   is not an assumption here. R6's affine-fiber result6566 remains an
   author proof. R7's conditional two-body contact transfer6570 has review6574;
   it contains no adverse witness and is outside this exact-positive lane.
+- The last refresh through graph6585 also read R1's
+  [universal upper-density window6580](../gaussian_universal_peak_window/PROOF.md),
+  R4's [endpoint-block classification6582](../gaussian_endpoint_block_classification/HANDOFF.md),
+  and R7's [finite-symmetry reduction6584](../gaussian_finite_symmetry_reduction/HANDOFF.md).
+  These are author proofs pending review and separate handoffs, not premises
+  of this packet. The classification can supply positive reference chains
+  when the required motion/anchor certificates and uniform radii are supplied;
+  we do not duplicate its classification. The symmetry reduction preserves
+  absolute defect, not a loss-normalized margin or a positive variance cutoff.
 - The accepted global adverse-defect bound remains `7/50`. The current
   source gives no map factorization beyond a supplied certificate, no sign
   for inputs excluded by known mixed-chain obstructions, and no unrestricted
