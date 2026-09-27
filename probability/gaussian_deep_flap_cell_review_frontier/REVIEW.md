@@ -3,11 +3,14 @@
 ## Verdict
 
 **Accept for correctness in the stated scope; novelty remains uncertain.**  At
-source/main commit `8ee386da005a59786fbbab26eb673856e7200346` (original
-mathematical commit `9a3465863e32c53d9594f202a0bcc28fb58578f8`), the proof
-establishes every Gaussian hinge inequality at variance one throughout the
-specified 96-coordinate box around the sixteen-label depth-two simplex-flap
-configuration.  In the source notation,
+the graph-cited source/main commit
+`8ee386da005a59786fbbab26eb673856e7200346` (original mathematical commit
+`9a3465863e32c53d9594f202a0bcc28fb58578f8`), the proof establishes every
+Gaussian hinge inequality at variance one throughout the specified
+96-coordinate box around the sixteen-label depth-two simplex-flap
+configuration.  Later commit `c35bfcc212f282e2ac0f3c5c9f2b78055e11017c`
+only refreshes `SOURCES.md` with subsequent review boundaries; no theorem,
+input, checker, or expected-result byte changes.  In the source notation,
 
 ```text
 H(u) <= 0                         for every u>=0,
