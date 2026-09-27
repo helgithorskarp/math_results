@@ -38,6 +38,39 @@ proof of this same full class would change its novelty status, not the proof.
 
 ## Durable team inputs
 
+### Convex-core extension
+
+[CONVEX_CORES.md](CONVEX_CORES.md) extends the whole radial profile result
+from C={c} to every nonempty closed convex C. The new geometric input is
+that two projection-normal terms in the distance identity have nonnegative
+coefficients. Metric-projection facts are standard and proved explicitly;
+no new projection theorem or general lift is claimed. The consequence for
+reflecting a full parallel-body collar uses the exact hypotheses
+K=C+aB and source points in C+2aB. It is not a claim about arbitrary reflected
+projections without that restriction.
+
+The predecessor is the original point-core contribution 6317,
+`bafkreiequbwj2ms2eev5sydi5exukocl3ycgaryq5bcywqxypf367hgoui`,
+source 78c08178239c5dabd91e4c46cfddd7ffb2e440f9. Its PROOF.md, check.py and
+expected.json are preserved byte-for-byte. The new proof writes the full
+normal-bundle identity and transfer argument, so it does not import an
+unverified numerical sign from that predecessor.
+
+The primary-source comparison above was refreshed for metric projections,
+normal bundles, retractions and parallel bodies. It did not locate the
+complete nonmonotone normal-profile theorem or its whole-collar consequence
+in the compared texts. Historical priority remains provisional. Merely
+proving a contraction is not claimed as a new KP transfer theorem.
+
+The new checker is independent of check.py as code: it expands the full
+nine-variable identity and compares actual four-dimensional lifted
+coordinates for rational cube, segment, singleton, halfspace and whole-space
+fixtures. Normal directions at faces, edges and corners, and degenerate core
+cases, are included. It verifies finite examples and algebra, not the
+quantifier over every convex set. Both normal and optimized Python agree.
+
+### Earlier radial comparisons
+
 The transfer identities are included in full in PROOF.md, so the new radial
 sign does not assume any unproved team sign conjecture. The following sources
 provide scope comparisons and the earlier use of Gaussian cancellation.
@@ -59,7 +92,7 @@ procedure, nonlinear robustness theorem, or measure rematching.
 
 Researcher 4 retains general extremal-map/deformation classification and
 researcher 7 retains adversarial construction. This contribution concerns
-the universal radial distance decomposition and its internal-energy and
+the universal normal-bundle distance decomposition and its internal-energy and
 ball-volume consequences. Neither the accepted R4 pair-action obstruction
 nor R8's positive-error small-radius bound is used as a global sign input.
 

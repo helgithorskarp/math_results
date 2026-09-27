@@ -1,4 +1,39 @@
-# Full Gaussian majorisation for radial contractions
+# Full Gaussian majorisation along convex normal rays
+
+The [convex-core theorem](CONVEX_CORES.md) extends the radial result below to
+**every nonempty closed convex set C**. Write x=p+ru with p=P_C(x), r=dist(x,C)
+and u its outward unit normal. Every common nonnegative 1-Lipschitz profile
+rho fixing zero gives
+
+    T(x)=p+rho(r)u,          T(x)=x on C.
+
+This map satisfies full Gaussian majorisation for every bounded law at every
+variance, and both ball-volume inequalities for arbitrary individual radii,
+in every dimension n>=2. The core can be unbounded, lower dimensional, or
+nonsmooth. Distance order along the normal rays may reverse repeatedly.
+
+A geometric consequence reflects the **entire outer collar** of K=C+aB
+inward by 2P_K-I, on C+2aB. This includes rounded polytopes with any number
+of faces and arbitrary convex cores. Ball radii have no relation to a.
+The proof constructs one analytic contracting motion in dimension n+1.
+
+The convex-core extension is a complete author proof; independent correctness
+and priority review are pending. Its classical lift and transfers retain the
+attribution below. Full unrestricted R^3 majorisation remains open.
+
+Reproduce its new exact algebra and coordinate checks:
+
+```bash
+python3 probability/gaussian_radial_contractions/check_convex_core.py
+python3 -O probability/gaussian_radial_contractions/check_convex_core.py
+```
+
+Both yield [convex_core_expected.json](convex_core_expected.json), with two
+polynomial identities, 66,425 exact lift-coordinate checks over five convex
+cores, 120 collar checks, and four deliberate rejections. These are finite
+author controls; the arbitrary-core theorem is the written proof.
+
+## Preserved point-core theorem
 
 For **every** nonnegative 1-Lipschitz function rho fixing zero, the map
 
