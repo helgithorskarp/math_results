@@ -25,9 +25,11 @@ not be a contraction; applications to the named question require the
 complete prescribed endpoint map to be 1-Lipschitz. The eight-site example
 meets that condition.
 
-Independent review is pending. Historical novelty of the ball-volume
-consequence is not established. Full unrestricted majorisation remains
-open. [SOURCES.md](SOURCES.md) gives the scope and dependency boundaries.
+The theorem and stated applications now have an
+[independent correctness acceptance](ACCEPTANCE.md). Historical novelty of
+the ball-volume consequence is not established. Full unrestricted
+majorisation remains open. [SOURCES.md](SOURCES.md) gives the scope and
+dependency boundaries.
 
 From the repository root, standard-library Python 3.11 or later:
 
