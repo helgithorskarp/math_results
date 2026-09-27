@@ -52,7 +52,7 @@ Analytic dependencies:
 
 Context, not proof premises:
 
-- R2's [extended-target prior certificate](../gaussian_extended_target_prior_cell/PROOF.md),
+- R3's [extended-target prior certificate](../gaussian_extended_target_prior_cell/PROOF.md),
   source `4e006ae51713af09a45229d9df59341a6f4fd03c`, is a new actually signed fixed-variance prior simplex,
   pending independent review. Its extended target and signed endpoints
   are not replaced or assumed by our moment formulas.
