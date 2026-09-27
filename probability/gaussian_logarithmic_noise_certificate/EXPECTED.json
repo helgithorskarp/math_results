@@ -1,0 +1,114 @@
+{
+  "Gaussian_controls": {
+    "controls": [
+      {
+        "Q": 4,
+        "Taylor_error_over_loss": "38184053/464227514732017603087171584",
+        "control": "uniform",
+        "energy_over_loss_interval": [
+          "5305056259471851071/18446744073709551616",
+          "5305056259471851073/18446744073709551616"
+        ],
+        "epsilon": "19/1048576",
+        "exact_coefficients_digest": "9bddf408aa89a8a4e52f5b063806d8bb6890af2c762668d9c2fb2d9ee1d0d710",
+        "loss": "25719/2147483648",
+        "replica_multisets": 9656
+      },
+      {
+        "Q": 4,
+        "Taylor_error_over_loss": "38184053/464227514732017603087171584",
+        "control": "small_loss",
+        "energy_over_loss_interval": [
+          "1326283661080121263/4611686018427387904",
+          "2652567322160242527/9223372036854775808"
+        ],
+        "epsilon": "19/1048576",
+        "exact_coefficients_digest": "65ce57a14892af160168c26d04cbd2de10565e629ca4e3781cdfa2dd6d2ac706",
+        "loss": "1793578342809219/10141204801825835211973625643008",
+        "replica_multisets": 9656
+      }
+    ],
+    "paired_rank": 6
+  },
+  "Legendre_controls": {
+    "Laplace_polynomial_identities": 17,
+    "orthogonality_pairs": 289,
+    "reproduced_monomials": 225
+  },
+  "constants": {
+    "interior_lower": "1/1024",
+    "modulus_upper": "70473/5000",
+    "polynomial_margin_exponent": "-4k-6",
+    "tail_modulus": 16
+  },
+  "dependency_pins": 9,
+  "rejected_inputs": 12,
+  "schedules": {
+    "examples": [
+      {
+        "curvature_degree": 255,
+        "energy_degree": 257,
+        "energy_gap_over_loss_and_curvature_norm_lower_power_of_two": -54,
+        "k": 12,
+        "minimum_variance_over_radius_squared": 96,
+        "normalization_interval_left_power_of_two": -24,
+        "normalization_interval_right": "1/4",
+        "paired_cubature_atoms_upper": 25157483649,
+        "review": "independent acceptance pending",
+        "scope": "all bounded R3 laws and contractions; convex polynomial energies only",
+        "status": "UNIFORM_SIGNED_POLYNOMIAL_CONE_AUTHOR_THEOREM",
+        "taylor_error_over_loss_and_curvature_norm_upper_power_of_two": -56,
+        "taylor_functional_lower_mantissa": 3,
+        "taylor_functional_lower_power_of_two": -56,
+        "taylor_order": 2112
+      },
+      {
+        "curvature_degree": 4095,
+        "energy_degree": 4097,
+        "energy_gap_over_loss_and_curvature_norm_lower_power_of_two": -70,
+        "k": 16,
+        "minimum_variance_over_radius_squared": 128,
+        "normalization_interval_left_power_of_two": -32,
+        "normalization_interval_right": "1/4",
+        "paired_cubature_atoms_upper": 94522498260897,
+        "review": "independent acceptance pending",
+        "scope": "all bounded R3 laws and contractions; convex polynomial energies only",
+        "status": "UNIFORM_SIGNED_POLYNOMIAL_CONE_AUTHOR_THEOREM",
+        "taylor_error_over_loss_and_curvature_norm_upper_power_of_two": -72,
+        "taylor_functional_lower_mantissa": 3,
+        "taylor_functional_lower_power_of_two": -72,
+        "taylor_order": 32848
+      },
+      {
+        "curvature_degree": 268435455,
+        "energy_degree": 268435457,
+        "energy_gap_over_loss_and_curvature_norm_lower_power_of_two": -134,
+        "k": 32,
+        "minimum_variance_over_radius_squared": 256,
+        "normalization_interval_left_power_of_two": -64,
+        "normalization_interval_right": "1/4",
+        "paired_cubature_atoms_upper": 26409392854310921778944019489,
+        "review": "independent acceptance pending",
+        "scope": "all bounded R3 laws and contractions; convex polynomial energies only",
+        "status": "UNIFORM_SIGNED_POLYNOMIAL_CONE_AUTHOR_THEOREM",
+        "taylor_error_over_loss_and_curvature_norm_upper_power_of_two": -136,
+        "taylor_functional_lower_mantissa": 3,
+        "taylor_functional_lower_power_of_two": -136,
+        "taylor_order": 2147483792
+      }
+    ],
+    "large_k": [
+      12,
+      13,
+      16,
+      32,
+      64,
+      128,
+      1024
+    ],
+    "schedule_digest": "1f495a297517af1950d6296de6eba04c05b50eda8eca8520de29e81b80527fe0",
+    "small_schedules": 1025
+  },
+  "status": "LOGARITHMIC_NOISE_CERTIFICATE_PASS",
+  "trust": "author written universal theorem; exact controls; not independent acceptance"
+}
