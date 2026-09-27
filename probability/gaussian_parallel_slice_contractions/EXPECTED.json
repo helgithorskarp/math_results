@@ -1,0 +1,45 @@
+{
+  "status": "NONLINEAR_PARALLEL_SLICE_EXACT_CONTROLS_PASS",
+  "profiles": [
+    "nonlinear_fold",
+    "unit_and_zero_slopes",
+    "all_unused_length_zero"
+  ],
+  "points_per_profile": 45,
+  "counts": {
+    "endpoint_pairs": 2970,
+    "transverse_pairs": 2970,
+    "allocation_segments": 19278,
+    "zero_total_allocations": 4536,
+    "phase_derivatives": 6930,
+    "cauchy_controls": 6930,
+    "phase_endpoint_controls": 1980,
+    "fold_controls": 14850,
+    "surd_controls": 9,
+    "finite_extension_certificates": 3,
+    "finite_extension_pairs": 994
+  },
+  "global_G_frobenius_square": "3/8",
+  "global_T_frobenius_square": "147/200",
+  "positive_hessian_determinants": [
+    "1/100",
+    "9/676"
+  ],
+  "rejected_controls": [
+    "negative_surd_radicand",
+    "invalid_profile_speed",
+    "unordered_profile",
+    "wrong_planar_dimension",
+    "linear_instead_of_pythagorean_unused_length",
+    "finite_endpoints_substituted_for_whole_prism",
+    "raw_linear_height_clock",
+    "inflated_nonlinear_map",
+    "finite_scalar_height_inconsistent",
+    "finite_scalar_slope_too_large",
+    "finite_budget_mismatched",
+    "finite_isometry_wrong_prescribed_frames",
+    "finite_float_in_exact_certificate"
+  ],
+  "trust_boundary": "Exact finite algebra and nonlinear fixtures; dyadic convergence, universal geometry, C1 reparametrization and classical transfers are written proofs.",
+  "record_sha256": "6fd418efb87967baee6ee343e234e5ba04dc5a1999175626dd5d836937cc1945"
+}
