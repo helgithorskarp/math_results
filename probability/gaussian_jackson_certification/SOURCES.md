@@ -11,8 +11,7 @@ Primary literature was checked live on27 September 2026.
    fixed-variance approximation.
 2. Feilong Cao and Xiaofei Guo,
    [Approximation by Jackson-type operator on the sphere](https://hrcak.srce.hr/en/61810),
-   Mathematical Communications15(2),331--346(2010),
-   [publisher PDF](https://hrcak.srce.hr/en/file/92590), Section 2.
+   Mathematical Communications15(2),331--346(2010), Section 2.
    The positive sine-power Jackson kernel, zonal spherical operators and
    Legendre multipliers are classical. Our proof rederives the particular
    first-moment constant6/p and rational normalization needed here. We do
