@@ -66,3 +66,25 @@ transfer allows actual maps with preserved pairs and actual laws with no
 endpoint martingale, without a covariance floor. The finite control tests
 these interface distinctions; it is already positive by a classical
 continuous contraction and is not a new geometric class.
+
+## Consumer for the late universal spherical comparison
+
+R1's new [sinc comparison](../gaussian_spherical_sinc_comparison/PROOF.md)
+appeared at the source-publication refresh. It is an author proof pending
+review. It asserts J>=lambda^2 D exp(-4lambda R)/12 for every bounded
+contraction, eventual all-threshold signs for every finite contraction,
+and S_Y0<=c S_X0 for every uniformly c-Lipschitz reference map, c<1.
+The finite eventual statement alone is not a uniform diffuse-cloud result.
+
+Our proof only uses the martingale through J_0>=e S_X0 in (6).
+Consequently, conditional on acceptance of R1's assertion, exactly the
+same neighborhood budget and variance cutoff apply with **e=1-c** to
+EVERY such strictly contracting reference, without a martingale witness.
+Actual maps in the neighborhood may still have Lipschitz constant one.
+This is the direct parameter-uniformity consumer of that new sign; no
+different threshold mesh, tail calculation or localization is required.
+
+The executable in this packet deliberately checks the accepted martingale
+premise only. This late conditional extension is not reported as accepted
+or silently used in any certificate. Both the fixed-variance unrestricted
+problem and the old small-loss join remain open.

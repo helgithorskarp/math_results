@@ -67,6 +67,17 @@ small-loss results remain unchanged. In particular the
 is not bypassed within its tiny-loss regime; this proof uses a different
 global spherical reserve at a different sufficient parameter domain.
 
+At the final source refresh R1's [universal spherical sinc comparison](../gaussian_spherical_sinc_comparison/PROOF.md)
+appeared at source `9c50ebb1b3543cd5c1886ba45f6f782ce2481853`.
+Its author proof claims a universal spherical sign, eventual full
+majorisation for every finite contraction, and a quantitative eventual
+bound for every fixed Lipschitz constant below one. Independent review is
+pending. The [handoff](HANDOFF.md) records the direct conditional consumer:
+replace the coupling-derived e by 1-c for a strictly contracting reference.
+This new source is context, not a premise of the proved martingale transfer
+or of the exact finite certificates. In particular this note does not
+claim that only strongly damped maps now have an eventual theorem.
+
 ## Reproducible boundary
 
 `INPUTS.json` records exact dependency file commits, SHA256 values and
