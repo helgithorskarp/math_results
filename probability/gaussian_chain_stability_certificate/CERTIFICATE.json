@@ -1,0 +1,99 @@
+{
+  "accumulated_unordered_loss_sum": "270",
+  "conclusion": {
+    "actual_contraction_required": false,
+    "diffuse_clouds_allowed": true,
+    "endpoint_anchor_required": false,
+    "error_guard": "2*cloud_radius + l1(u-v) + l1(z-v) <= 2^-budget_exponent",
+    "independent_review": "PENDING",
+    "middle_band": "[C_s*2^-j, actual_source_peak]",
+    "middle_gap_exponent": 12564298226894,
+    "minimum_step_loss_required": false,
+    "prior_region": "v_i >= 2^-mass_exponent; sum v_i=1",
+    "threshold_interval": "[0,infinity)",
+    "variance_interval": [
+      "1",
+      "4"
+    ]
+  },
+  "endpoint_anchor_obstruction": {
+    "endpoint_anchors_exist": false,
+    "squared_norm_residual": "6"
+  },
+  "labels": 15,
+  "normalized_loss_exponent": 3,
+  "pairs_per_step": 105,
+  "schedule": {
+    "M": 12564298226893,
+    "N": 12564298226890,
+    "budget_exponent": 12564298226894,
+    "j": 3141074556214,
+    "k": 151,
+    "tail_A": "144",
+    "tail_Q": "23040000/13",
+    "width_exponent": 12
+  },
+  "schema": "chain-cloud-family-certificate-v1",
+  "status": "CERTIFIED_UNIFORM_ALL_THRESHOLD_CHAIN_FAMILY",
+  "step_records": [
+    {
+      "affine_ranks": null,
+      "kind": "norm",
+      "strict_pairs": 13,
+      "unordered_loss_sum": "46"
+    },
+    {
+      "affine_ranks": null,
+      "kind": "norm",
+      "strict_pairs": 13,
+      "unordered_loss_sum": "44"
+    },
+    {
+      "affine_ranks": null,
+      "kind": "norm",
+      "strict_pairs": 13,
+      "unordered_loss_sum": "46"
+    },
+    {
+      "affine_ranks": null,
+      "kind": "norm",
+      "strict_pairs": 13,
+      "unordered_loss_sum": "44"
+    },
+    {
+      "affine_ranks": null,
+      "kind": "norm",
+      "strict_pairs": 13,
+      "unordered_loss_sum": "46"
+    },
+    {
+      "affine_ranks": null,
+      "kind": "norm",
+      "strict_pairs": 13,
+      "unordered_loss_sum": "44"
+    }
+  ],
+  "steps": 6,
+  "uniform_ordered_loss_floor": "135/256",
+  "width": {
+    "cap_gap_lower": "13/200",
+    "lower": "13/20000",
+    "perpendicular_upper": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "17/8",
+      "17/8"
+    ]
+  }
+}

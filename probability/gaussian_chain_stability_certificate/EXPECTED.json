@@ -1,0 +1,149 @@
+{
+  "certificate_sha256": "0c4b5935504cd756a86497381d81685da0c723173189fcfcd3c145303fcdb2de",
+  "covariance_prior_controls": [
+    "9/8",
+    "9/8",
+    "9/8",
+    "1341/512",
+    "1341/512",
+    "9/8",
+    "9/8",
+    "1341/512",
+    "1341/512",
+    "9/8",
+    "9/8",
+    "1341/512",
+    "1341/512",
+    "9/8",
+    "9/8",
+    "12/5"
+  ],
+  "dependency_pins": 9,
+  "dyadic_budget_denominator_materialized": false,
+  "family": {
+    "accumulated_unordered_loss_sum": "270",
+    "budget_exponent": 12564298226894,
+    "comparison_radius": 4,
+    "endpoint_anchor_obstruction": {
+      "endpoint_anchors_exist": false,
+      "squared_norm_residual": "6"
+    },
+    "endpoint_diameters_squared": [
+      "27",
+      "27"
+    ],
+    "endpoint_radius": 3,
+    "labels": 15,
+    "same_reference_strict_homothety_buffer_excluded": true,
+    "steps": 6,
+    "uniform_ordered_loss_floor": "135/256",
+    "variance_interval": [
+      "1",
+      "4"
+    ],
+    "width_lower": "13/20000"
+  },
+  "independent_stage_translations": "PASS",
+  "integer_inequality_checker_imports_producer": false,
+  "negative_controls": [
+    "understated_j",
+    "understated_k",
+    "understated_N",
+    "understated_M",
+    "understated_budget_exponent",
+    "false_loss_floor",
+    "wrong_loss_telescope",
+    "wrong_step_loss",
+    "false_width",
+    "false_transverse_bound",
+    "false_cap_gap",
+    "false_anchor_residual",
+    "false_variance_scope",
+    "float_input",
+    "empty_prior_region",
+    "invalid_variance",
+    "step_anchor_mismatch",
+    "false_straight_guard",
+    "six_dimensional_lift",
+    "expanding_equal_norm_step",
+    "missing_label",
+    "endpoint_radius_too_small",
+    "incorrect_hull",
+    "nonunit_cap",
+    "incorrect_cap_sine",
+    "false_anchor_dual",
+    "zero_chain_loss"
+  ],
+  "refinement_controls": [
+    {
+      "budget_exponent": 243360573,
+      "minimum_step_unordered_loss": "3",
+      "steps": 1,
+      "uniform_ordered_loss_floor": "3/8"
+    },
+    {
+      "budget_exponent": 243360573,
+      "minimum_step_unordered_loss": "5/4",
+      "steps": 2,
+      "uniform_ordered_loss_floor": "3/8"
+    },
+    {
+      "budget_exponent": 243360573,
+      "minimum_step_unordered_loss": "15/49",
+      "steps": 7,
+      "uniform_ordered_loss_floor": "3/8"
+    },
+    {
+      "budget_exponent": 243360573,
+      "minimum_step_unordered_loss": "63/961",
+      "steps": 31,
+      "uniform_ordered_loss_floor": "3/8"
+    },
+    {
+      "budget_exponent": 243360573,
+      "minimum_step_unordered_loss": "515/66049",
+      "steps": 257,
+      "uniform_ordered_loss_floor": "3/8"
+    }
+  ],
+  "reused_R8_mixed_family": {
+    "accumulated_unordered_loss_sum": "1503/2",
+    "budget_exponent": 771658035,
+    "comparison_radius": 2,
+    "endpoint_anchor_obstruction": null,
+    "endpoint_diameters_squared": [
+      "12",
+      "1/16"
+    ],
+    "endpoint_radius": 2,
+    "labels": 18,
+    "same_reference_strict_homothety_buffer_excluded": false,
+    "step_records": [
+      {
+        "affine_ranks": null,
+        "kind": "norm",
+        "strict_pairs": 81,
+        "unordered_loss_sum": "324"
+      },
+      {
+        "affine_ranks": [
+          2,
+          3
+        ],
+        "kind": "orthogonal_lift",
+        "strict_pairs": 144,
+        "unordered_loss_sum": "855/2"
+      }
+    ],
+    "steps": 2,
+    "uniform_ordered_loss_floor": "1503/1024",
+    "variance_interval": [
+      "1",
+      "4"
+    ],
+    "width_lower": "47/800"
+  },
+  "status": "CHAIN_FAMILY_EXACT_CONTROLS_PASS",
+  "trust_boundary": "Imported mixed-chain margin and written all-threshold join; author checks, not independent review.",
+  "zero_loss_step_insertion": "PASS"
+}
