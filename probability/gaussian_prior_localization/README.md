@@ -1,5 +1,27 @@
 # Gaussian set transfer and measure localization
 
+The new [loss-proportional cubature estimate](LOSS_CUBATURE.md) makes the
+finite-measure error proportional to the mean squared-distance loss `d`.
+At radius ratio `R^2/s<=1/2`, row 32 has error at most `d/1024` using
+211,989 retained pairs, uniformly as `d` tends to zero. Exact marginal
+moment matching already preserved `d`; the new paired Taylor remainder
+preserves **normalized sign margins** without a positive lower bound on
+the loss. The beta-row estimate holds at any bounded radius. Composing
+with R8's accepted modulus gives a whole-curve and defect estimate at
+`R^2/s<=1/2`, and an explicit conditional middle-sign test. No new beta or
+hinge sign is asserted, and ordinary rational rounding is not covered by
+the relative bound. Independent review of this new estimate is pending.
+
+Run `python3 -B loss_cubature.py` and
+`python3 -B -O loss_cubature.py`. Expected:
+`LOSS_PROPORTIONAL_CUBATURE_PASS`, in about half a second with standard
+library Python. [LOSS_CUBATURE_EXPECTED.json](LOSS_CUBATURE_EXPECTED.json)
+records the exact schedules, near-isometry and finite moment controls;
+[LOSS_CUBATURE_INPUTS.json](LOSS_CUBATURE_INPUTS.json) pins eight dependencies.
+The proof also gives a finite same-row sign enclosure from retained
+coordinate moments; neither its positivity nor a gap-free parameter cell
+follows from the error estimate alone.
+
 The [source-cluster certificate](CLUSTER_DEFECT.md) supplies an actual
 all-threshold defect bound using local radius errors and Gaussian source
 overlap. No target separation is needed. For seven source balls of radius

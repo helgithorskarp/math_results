@@ -1,0 +1,264 @@
+{
+  "controls": {
+    "beta_bound_and_ratio_checks": 576,
+    "explicit_schedule_checks": 180,
+    "malformed_parameters_rejected": 6,
+    "paired_scalar_intervals": 147,
+    "three_dimensional_loss": "19/240",
+    "three_dimensional_replica_tuples": 336
+  },
+  "degree_budgets": [
+    {
+      "atoms": 5849,
+      "coordinate_degree": 24,
+      "error_bits": 10,
+      "exact_width_sha256": "00785e40fd7f7aca09000753e84c6a77b70a10645fda032c4b953e9118b5507f",
+      "radius_ratio": "1/2",
+      "relative_beta_upper": "11947294400187145/18446744073709551616",
+      "row": 8,
+      "safe_half_degree": 30,
+      "selected_half_degree": 12
+    },
+    {
+      "atoms": 211989,
+      "coordinate_degree": 84,
+      "error_bits": 10,
+      "exact_width_sha256": "1495d7c0f0484bd35255ade6d5677ec38a00acf1577257997235e22a053b4a5a",
+      "radius_ratio": "1/2",
+      "relative_beta_upper": "2104119302704525/9223372036854775808",
+      "row": 32,
+      "safe_half_degree": 80,
+      "selected_half_degree": 42
+    },
+    {
+      "atoms": 1755949,
+      "coordinate_degree": 172,
+      "error_bits": 20,
+      "exact_width_sha256": "db88117d14cfefb5d212c52fdcad6db44537b07f62ff1da4d298f693abbbe082",
+      "radius_ratio": "1/2",
+      "relative_beta_upper": "1542475733243/4611686018427387904",
+      "row": 64,
+      "safe_half_degree": 155,
+      "selected_half_degree": 86
+    },
+    {
+      "atoms": 575959,
+      "coordinate_degree": 118,
+      "error_bits": 10,
+      "exact_width_sha256": "c2721f08ab99873d9d21fe6899589f54f2c64daf089543bb58da782447c97fb6",
+      "radius_ratio": "4",
+      "relative_beta_upper": "6097971439802859/9223372036854775808",
+      "row": 8,
+      "safe_half_degree": 120,
+      "selected_half_degree": 59
+    },
+    {
+      "atoms": 219500709,
+      "coordinate_degree": 868,
+      "error_bits": 10,
+      "exact_width_sha256": "efa4a1eb5e741ce8be0db02dc7803b1de95dc0d8e99116c217f770dae9cf0464",
+      "radius_ratio": "9",
+      "relative_beta_upper": "14118583914128957/18446744073709551616",
+      "row": 32,
+      "safe_half_degree": 918,
+      "selected_half_degree": 434
+    }
+  ],
+  "dependency_sha256": {
+    "../gaussian_averaged_eighth_beta/PROOF.md": "487084d0467d720069f34cdc73b5f5cc5355b5e56571a3b54807e85c33f2b3ff",
+    "../gaussian_loss_normalized_hinges/PROOF.md": "92e7dcb81ae1f4c032e5528d7ff9568da94b826e84d110957542c0310337f2f8",
+    "../gaussian_loss_normalized_hinges_review_frontier/REVIEW.md": "093e2aee486bfd4af91a2eede7a0a31f678ac5d241725548d3858492b78b1b23",
+    "../gaussian_majorisation_global_criterion/PROOF.md": "704482f4d0dad098dca9bf5280dea637a6b26b7f8bf1855a93b2f1a0cdcd713b",
+    "CUBATURE_FRONTIER.md": "0dbcaf36263ee8ce2976d75d1073db4f878db908fd5c53161e55485c5da53632",
+    "direct_hinge.py": "94e9ee5f643a6d98bf18983eda3a13f5b8513f2f6e06753ad133ad046d2e5bb9",
+    "paired_cubature.py": "e533824e8e7260147a27ebe75607e7f4360aded6b23cb6d58080e7632bbe2b00",
+    "rational_frontier.py": "d2f0373812b17e1a710928121f7c16e581f6e298099df971efe295d76e10ae65"
+  },
+  "near_isometry_remainder_enclosures": {
+    "controls": [
+      {
+        "loss": "7/288",
+        "moment_based_beta_enclosures": [
+          [
+            "267104458372639937/4611686018427387904",
+            "1095439431254782725/18446744073709551616"
+          ],
+          [
+            "218490493618240175/4611686018427387904",
+            "900983572237183677/18446744073709551616"
+          ],
+          [
+            "206643681339725141/9223372036854775808",
+            "420042762120506027/18446744073709551616"
+          ]
+        ],
+        "normalized_beta_difference_intervals": [
+          [
+            "-290847399629/18446744073709551616",
+            "-72711849907/4611686018427387904"
+          ],
+          [
+            "-1399478081053/18446744073709551616",
+            "-349869520263/4611686018427387904"
+          ],
+          [
+            "-275959542787/4611686018427387904",
+            "-1103838171147/18446744073709551616"
+          ]
+        ],
+        "t": "1/4",
+        "zero_remainder_interval_rejected": true
+      },
+      {
+        "loss": "2047/18874368",
+        "moment_based_beta_enclosures": [
+          [
+            "1062537868673285835/18446744073709551616",
+            "272389866609377203/4611686018427387904"
+          ],
+          [
+            "867585589301648963/18446744073709551616",
+            "223651796766467985/4611686018427387904"
+          ],
+          [
+            "203987438682854741/9223372036854775808",
+            "414730276806765227/18446744073709551616"
+          ]
+        ],
+        "normalized_beta_difference_intervals": [
+          [
+            "-453963822721/18446744073709551616",
+            "-3546592365/144115188075855872"
+          ],
+          [
+            "-1103325002263/9223372036854775808",
+            "-2206650004525/18446744073709551616"
+          ],
+          [
+            "-108339023723/1152921504606846976",
+            "-1733424379567/18446744073709551616"
+          ]
+        ],
+        "t": "1/1024",
+        "zero_remainder_interval_rejected": true
+      },
+      {
+        "loss": "2199023255551/21760664753063325144711168",
+        "moment_based_beta_enclosures": [
+          [
+            "66406969628160309/1152921504606846976",
+            "1089533111814787921/18446744073709551616"
+          ],
+          [
+            "867557009670522715/18446744073709551616",
+            "223644651858686423/4611686018427387904"
+          ],
+          [
+            "407951066245999615/18446744073709551616",
+            "404986782897515/18014398509481984"
+          ]
+        ],
+        "normalized_beta_difference_intervals": [
+          [
+            "-454799246341/18446744073709551616",
+            "-113699811585/4611686018427387904"
+          ],
+          [
+            "-1105417429191/9223372036854775808",
+            "-2210834858381/18446744073709551616"
+          ],
+          [
+            "-1736673481525/18446744073709551616",
+            "-434168370381/4611686018427387904"
+          ]
+        ],
+        "t": "1/1099511627776",
+        "zero_remainder_interval_rejected": true
+      }
+    ],
+    "definition_level_replica_moments_checked": 18,
+    "exponential_bits": 160,
+    "half_degree": 2,
+    "indices": [
+      0,
+      2,
+      4,
+      5,
+      6
+    ],
+    "input_atoms": 7,
+    "radical_bits": 128,
+    "radius_ratio": "1/16",
+    "reported_interval_bits": 64,
+    "retained_atoms": 5,
+    "row": 2,
+    "theorem_relative_width": "3/2048",
+    "weights": [
+      "7/40",
+      "3/8",
+      "1/8",
+      "1/5",
+      "1/8"
+    ]
+  },
+  "nonlinear_common_cubature": {
+    "common_cubature_parameter_controls": [
+      {
+        "loss": "0",
+        "marginal_monomials_checked": 70,
+        "t": "0"
+      },
+      {
+        "loss": "2925/147968",
+        "marginal_monomials_checked": 70,
+        "t": "1/4"
+      },
+      {
+        "loss": "1191/36992",
+        "marginal_monomials_checked": 70,
+        "t": "1/2"
+      },
+      {
+        "loss": "81/2312",
+        "marginal_monomials_checked": 70,
+        "t": "1"
+      },
+      {
+        "loss": "887265/9697230848",
+        "marginal_monomials_checked": 70,
+        "t": "1/1024"
+      },
+      {
+        "loss": "953276581281249/11180145979796090607682715648",
+        "marginal_monomials_checked": 70,
+        "t": "1/1099511627776"
+      }
+    ],
+    "indices": [
+      0,
+      2,
+      4,
+      7,
+      8,
+      10,
+      12,
+      15,
+      16
+    ],
+    "nonlinear_input_atoms": 17,
+    "retained_atoms": 9,
+    "weights": [
+      "21/272",
+      "21/170",
+      "21/136",
+      "12/85",
+      "7/136",
+      "21/170",
+      "21/136",
+      "12/85",
+      "9/272"
+    ]
+  },
+  "scope": "Exact finite controls for the written loss-proportional approximation theorem. No new beta or hinge sign; full-curve transfer additionally requires epsilon<=1/2 and the accepted loss modulus.",
+  "status": "LOSS_PROPORTIONAL_CUBATURE_PASS"
+}

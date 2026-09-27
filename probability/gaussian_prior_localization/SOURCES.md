@@ -608,8 +608,11 @@ both require retaining compensation in other sign routes; the present
 bound assumes neither termwise positivity nor an unknown beta sign.
 All seven other researchers' newest completed reports were refreshed.
 The primary [Aishwarya--Li v2 manuscript](https://arxiv.org/html/2609.07041v2)
-was checked live on 27 September 2026. The full dimension-three problem
-and the first general unsigned beta `b_(8,0)` remain open.
+was checked live on 27 September 2026. At that pass-12 checkpoint both the
+full dimension-three problem and the general beta `b_(8,0)` were open.
+The latter was subsequently signed by the independently accepted
+[averaged eighth-beta proof](../gaussian_averaged_eighth_beta/PROOF.md),
+original graph6315 and acceptance6327. The full problem remains open.
 
 ## Separation-schedule correction (pass 13)
 
@@ -634,3 +637,51 @@ dyadic controls. It records the old factor-four exponent failure. The
 byte-for-byte unchanged as structured values. The repair follows the
 reviewers' supplied correction and is not a new theorem or a new defect
 bound. No original graph claim is silently treated as fully accepted.
+
+## Loss-proportional paired cubature (pass 14)
+
+[LOSS_CUBATURE.md](LOSS_CUBATURE.md) sharpens the error of the existing
+same-pair cubature, without changing its moment list. Exact preservation
+of the mean squared-distance loss was already in
+[CUBATURE_FRONTIER.md](CUBATURE_FRONTIER.md), original graph6212,
+[accepted at graph6218](../gaussian_paired_cubature_review2/REVIEW.md).
+The new ingredient is a paired Taylor remainder: the two candidate laws
+have the same polynomial part and their remainders lie in the same signed
+interval, of length proportional to the preserved loss. This avoids both
+an extra factor two and a degree depending on a positive loss floor.
+
+The replica normalization and Bernstein--Durrmeyer criterion are credited
+to the accepted [global criterion](../gaussian_majorisation_global_criterion/PROOF.md),
+graph6088. The [averaged eighth-beta proof](../gaussian_averaged_eighth_beta/PROOF.md)
+is a normalization cross-check, not an additional sign assumption.
+Finite-function cubature is classical; the primary reference is
+Bayer--Teichmann, [The proof of Tchakaloff's theorem](https://arxiv.org/abs/math/0502473).
+The named problem remains the full question in
+[Aishwarya--Li v2](https://arxiv.org/html/2609.07041v2), checked live this pass.
+No historical priority claim is made for Taylor approximation or moment
+matching.
+
+The all-radius conclusion is a beta-row estimate. The whole-curve and
+defect conclusions additionally consume R8's
+[loss-dependent modulus](../gaussian_loss_normalized_hinges/PROOF.md),
+original graph6325, [accepted at graph6333](../gaussian_loss_normalized_hinges_review_frontier/REVIEW.md),
+and retain its hypothesis `R^2/s<=1/2`. These conclusions cannot be applied
+silently to the larger-radius rational frontier or through ordinary
+rational rounding. The finite moment interval and conditional middle
+certificate preserve explicit margins; neither supplies an unrestricted
+positive sign. The full problem and the accepted `D<=7/50` cap are unchanged.
+
+The finite controls use the existing exact cubature elimination and the
+exponential/radical primitives of the accepted direct hinge oracle.
+[LOSS_CUBATURE_INPUTS.json](LOSS_CUBATURE_INPUTS.json) pins eight inputs.
+Near-isometry controls reach parameter `2^-40`; separate nonlinear controls
+include image collisions. The checks audit normalization, remainder signs,
+moment preservation and degree budgets, not the universal written proof.
+The new loss-proportional theorem awaits independent review.
+
+At this checkpoint the separate
+[prior-simplex cell](../gaussian_frontier_prior_cell/PROOF.md), original6335,
+has [independent acceptance6347](../gaussian_frontier_prior_cell_review2/REVIEW.md).
+That exact signed cell is not a premise of the present approximation
+theorem. All seven other researchers' newest completed reports and relevant
+graph updates were inspected; no previously closed beta row is reopened.
