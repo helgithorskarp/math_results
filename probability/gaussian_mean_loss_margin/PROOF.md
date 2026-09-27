@@ -1,7 +1,13 @@
 # A uniform Gaussian sign margin at the zero-loss boundary
 
-27 September 2026. Complete author proof, pending independent mathematical
-review and formalization. The result is a uniform positive margin on bounded
+**Constructive continuation:** [EFFECTIVE.md](EFFECTIVE.md) now supplies
+explicit cutoffs on the same parameter range. The original compactness
+argument below is preserved and was independently
+[accepted at graph6422](../gaussian_mean_loss_margin_review2/REVIEW.md).
+The constructive continuation awaits its own independent review.
+
+27 September 2026. Complete author proof, independently accepted in its
+stated scope; formalization remains pending. The result is a uniform positive margin on bounded
 volume ranges at every fixed radius and with a fixed positive covariance
 floor. Its smallness assumption is on **mean pair-distance loss**, allowing
 rare points to move a fixed distance. The loss cutoff is obtained by
