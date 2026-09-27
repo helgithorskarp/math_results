@@ -66,7 +66,7 @@ Gaussian-regularized contact regime. It is a different transfer with an
 explicit smoothing restriction, not a premise or a duplicate of the
 present bounded-law moving threshold theorem.
 
-R8's [covariance-collapse guard](../gaussian_covariance_collapse_guard/PROOF.md)
+R2's [covariance-collapse guard](../gaussian_covariance_collapse_guard/PROOF.md)
 is author work at source b3ecb0d0d611bd4bee0c83f26c648716176c9626, available during the final refresh.
 It signs a fixed middle window near either marginal's rank-two boundary.
 It is complementary and does not establish the missing joint limit

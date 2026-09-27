@@ -76,7 +76,7 @@ Its label ANNULAR_WINDOW_ONLY is deliberate: a separate fixed-window
 cutoff must also hold to infer a global upper window outside the worked
 normalization. Section 6 of the proof provides that cutoff explicitly.
 
-R8's new covariance-collapse guard is complementary: it signs the fixed
+R2's new covariance-collapse guard is complementary: it signs the fixed
 middle interval when either marginal variance in a direction is at most
 2^-86 d^2. It does not supply a fixed positive covariance floor for
 this flat-defect theorem. No unproved joint-boundary cover is inferred.
