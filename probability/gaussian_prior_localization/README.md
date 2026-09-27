@@ -10,8 +10,11 @@ paired-cubature frontier. A radius/separation schedule makes this bound
 tend to zero on the certified geometry; the unrestricted `D<=7/50` bound
 is unchanged. R8's consumed small-radius theorem now has
 [independent acceptance](../gaussian_small_radius_defect_review_frontier/REVIEW.md);
-the new cluster composition awaits its own review. A positive error does
-not certify exact majorisation.
+two qualified reviews accept the cluster theorem, seven-ball region and
+producer. They found a missing factor two in the separation schedule;
+[equation (8)](CLUSTER_DEFECT.md#a-tolerance-schedule-with-error-tending-to-zero)
+is now corrected to `2 max r_i+sqrt(8s(b+l))`, with new geometric checks.
+A positive error does not certify exact majorisation.
 
 Run `python3 -B cluster_defect.py --check` and
 `python3 -B -O cluster_defect.py --check`. Expected:

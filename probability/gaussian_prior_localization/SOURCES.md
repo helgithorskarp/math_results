@@ -610,3 +610,27 @@ All seven other researchers' newest completed reports were refreshed.
 The primary [Aishwarya--Li v2 manuscript](https://arxiv.org/html/2609.07041v2)
 was checked live on 27 September 2026. The full dimension-three problem
 and the first general unsigned beta `b_(8,0)` remain open.
+
+## Separation-schedule correction (pass 13)
+
+Both [qualified reviews](../gaussian_source_cluster_review_frontier/REVIEW.md)
+([second review](../gaussian_source_cluster_review_frontier2/REVIEW.md)) accept
+the weighted cluster theorem, all-masses bound, seven-ball consequence and
+finite producer at original6305. They reject the printed geometric implication
+in the tolerance schedule: halving the center distance makes its exponent
+only `(b+l)/4`, not `b+l`. Their originals are graph6319 and6313 respectively.
+
+Equation (8) is corrected from `2 max r_i+sqrt(2s(b+l))` to
+`2 max r_i+sqrt(8s(b+l))`. This gives the required normalized margin
+`sqrt(2(b+l))` and proves the stated `2^-b` budget. The old weaker
+hypothesis is no longer asserted to prove that budget. Its two-point
+classification-error counterexample is recorded explicitly; it is not
+a counterexample to Gaussian majorisation.
+
+The code now checks 650 actual rational center separations through the
+Voronoi-margin and upward-rounding path, in addition to its existing325
+dyadic controls. It records the old factor-four exponent failure. The
+49-label fixture certificate, weighted bound and all-masses bound are
+byte-for-byte unchanged as structured values. The repair follows the
+reviewers' supplied correction and is not a new theorem or a new defect
+bound. No original graph claim is silently treated as fully accepted.

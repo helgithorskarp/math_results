@@ -237,6 +237,7 @@ def controls():
             rhs=distance2(c,origin)-2*sum(a*b for a,b in zip(c,z))
             need(lhs==rhs,'Voronoi half-space identity');halfspaces+=1
     schedules=0
+    geometric_schedules=0
     for bits in range(65):
         k=1+(bits+4)//4
         need(F(16*k,1 << (5*k))<=F(1,1 << (bits+1)),'local tolerance schedule')
@@ -244,6 +245,20 @@ def controls():
             ell=(count-2).bit_length()
             need(F(count-1,1 << (bits+ell+1))<=F(1,1 << (bits+1)),'separation schedule')
             schedules+=1
+            B=bits+ell
+            for radius in (F(0),F(1,16)):
+                # Corrected center separation is 2R+sqrt(8B), at variance one.
+                # The extra dyadic unit keeps centers distinct when B=R=0.
+                distance=2*radius+sqrt_bounds(F(8*B),12)[1]+F(1,4096)
+                exponent=(distance/2-radius)**2/2
+                need(exponent>=B,'geometric schedule lost a factor in the exponent')
+                units=wrong_label_units(distance**2,radius,bits+ell+2,12)
+                need(F((count-1)*units,1 << (bits+ell+2))<=F(1,1 << (bits+1)),
+                     'actual geometric margin does not imply classification budget')
+                geometric_schedules+=1
+    old_margin_exponent=F(4)**2/8
+    need(old_margin_exponent==2 and old_margin_exponent<8,'old schedule witness')
+    need(F(1,18)>F(1,512),'old claimed eta budget is false using e<3')
     fixture=json.loads((HERE/'CLUSTER_FIXTURE.json').read_text())
     result=certify(fixture)
     xs,ys,ws,s=read_instance(fixture)
@@ -295,6 +310,11 @@ def controls():
     return {'status':'SOURCE_CLUSTER_DEFECT_CERTIFICATES_PASS','pinned_dependencies':dependencies,
             'mixture_controls':mixture,'root_controls':roots,'local_rounding_controls':rounding,
             'half_space_controls':halfspaces,'tolerance_controls':schedules,
+            'geometric_tolerance_controls':geometric_schedules,
+            'old_schedule_exponent_witness':{'b':8,'components':2,'radii':0,
+                'variance':1,'distance':4,'actual_gaussian_exponent':str(old_margin_exponent),
+                'required_exponent':8,'eta_lower_bound_using_e_lt_3':'1/18',
+                'incorrect_claimed_eta_upper':'1/512'},
             'malformed_controls_rejected':len(bad)+2,'symmetry_mass_target_controls':4,
             'huge_local_exponent_control':{'k':huge[1],'upward_units':huge[0],'bits':40},
             'uniform_seven_ball_bound':str(F(13,1<<33)),'fixture_grid':grid,
