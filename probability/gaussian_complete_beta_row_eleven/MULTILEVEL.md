@@ -104,7 +104,12 @@ kappa_k=2(k+1)^2/[k(k+2)],                if B_k>0.     (4)
 For clarity, (4) keeps the interaction of two extra iid replicas. Given
 the first k replicas, subtract their centroid from the next two to get
 U,V. The variance increment is
-[(k+1)/(k+2)](|U|^2+|V|^2)-2U.V/(k+2). Under the common Gaussian tilt,
+
+```
+[(k+1)/(k+2)](|U|^2+|V|^2)-2U.V/(k+2).
+```
+
+Under the common Gaussian tilt,
 E(U.V)=|E U|^2>=0. Jensen for the interaction exponential, for the
 one-replica power, and finally for the common positive marked base
 measure gives the second inequality in (4). This is the existing proof,

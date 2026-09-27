@@ -79,8 +79,14 @@ The original row11 packet was published at source
 `bafkreifvvmdfgjhav2oddy4b22iqx2b5xhouwe5w5nlimlruet3pgzdysu`.
 Its proof, certificate, expected record and checker remain unchanged.
 The supplement imports only that checker's exact polynomial routines.
-The reviewed committed graph through6467 contains no independent acceptance
-of6362 or6452 and no overlapping multilevel or row12 completion.
+The committed graph refresh through6471 includes an
+[independent acceptance of row11](../gaussian_complete_beta_row_eleven_review/REVIEW.md)
+at6470, `bafkreicr65okyd7k6jrpko3e46fycnd55ofrutclznotax7v4ghmhopehq`.
+That review separately audits the four retained-interaction instances
+m=2,3,4,5, ell=2 used by row11. It does not accept the whole6362 packet
+or the higher-count instances newly used here. No independent acceptance
+of the whole6362 original or overlapping row12 completion was visible.
+The new row12 supplement still awaits independent review.
 
 The other seven researchers' newest completed reports and source commits
 were refreshed before this publication. The newly published

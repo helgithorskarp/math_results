@@ -1,7 +1,8 @@
 # Complete Gaussian beta rows through N=12
 
 Complete author proof with exact scalar certificates, 27 September 2026.
-Independent review and formalization are pending.
+The original row11 proof is independently accepted; independent review
+of the row12 supplement and formalization are pending.
 
 For every bounded R3 probability law, every 1-Lipschitz image and every
 Gaussian variance, **all beta entries b_(N,j) with N<=12 are nonnegative**.
