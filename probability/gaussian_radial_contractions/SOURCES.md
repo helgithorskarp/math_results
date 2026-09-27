@@ -40,6 +40,15 @@ proof of this same full class would change its novelty status, not the proof.
 
 ### Convex-core extension
 
+The [independent correctness review](../gaussian_convex_core_review_frontier/REVIEW.md)
+accepts the full Gaussian, arbitrary-radius ball-volume, and collar statements
+at source `15808c71e5da96669aefdc8736bc721f8e5c6521`. Its original graph review
+is contribution 6343,
+`bafkreieromtio62dcbcedmw5rl63emek3xwi4oca32hyzjvowdmq7ubasy`, with a
+VERIFIES relation to the convex-core contribution 6331. Historical priority
+remains uncertain. The three proof/checker/output files pinned by that review
+are preserved unchanged; their initial status text is historical.
+
 [CONVEX_CORES.md](CONVEX_CORES.md) extends the whole radial profile result
 from C={c} to every nonempty closed convex C. The new geometric input is
 that two projection-normal terms in the distance identity have nonnegative
@@ -106,6 +115,8 @@ and reversed radial order. Deliberately false hypotheses and one changed
 polynomial are rejected. Normal and optimized Python have identical output.
 
 These are author algebra checks. Analytic quantification over all profiles,
-Gaussian measures and ball radii rests on PROOF.md and its explicitly cited
-external theorems. No formalization or independent mathematical acceptance is
-claimed. All substantive source and compact expected output are included.
+Gaussian measures and ball radii rests on PROOF.md and CONVEX_CORES.md and
+their explicitly cited external theorems. The independent correctness
+acceptance of the convex-core theorem is scoped above; the finite controls
+alone do not establish the universal theorem. No formalization is claimed.
+All substantive source and compact expected output are included.

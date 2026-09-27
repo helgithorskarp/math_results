@@ -17,9 +17,12 @@ inward by 2P_K-I, on C+2aB. This includes rounded polytopes with any number
 of faces and arbitrary convex cores. Ball radii have no relation to a.
 The proof constructs one analytic contracting motion in dimension n+1.
 
-The convex-core extension is a complete author proof; independent correctness
-and priority review are pending. Its classical lift and transfers retain the
-attribution below. Full unrestricted R^3 majorisation remains open.
+An [independent review](../gaussian_convex_core_review_frontier/REVIEW.md)
+accepts the convex-core extension for correctness in the stated scope.
+Historical priority remains uncertain. Its classical lift and transfers retain
+the attribution below. Full unrestricted R^3 majorisation remains open.
+The reviewed proof and checker are preserved at their original source bytes;
+the proof's opening status line records its pre-review publication state.
 
 Reproduce its new exact algebra and coordinate checks:
 
@@ -51,9 +54,10 @@ arbitrarily many radial folds. The input law need not be radially symmetric.
 
 [PROOF.md](PROOF.md) gives a simultaneous contracting motion in dimension
 n+1 and the exact distance identity proving its sign. The motion specializes
-the **classical Bezdek--Connelly norm-displacement lift**. The broad profile
-application is an author result; independent correctness and priority review
-are pending. The Gaussian and Kneser--Poulsen transfer theorems are established
+the **classical Bezdek--Connelly norm-displacement lift**. Its theorem is the
+singleton-core case of the independently accepted extension above. That review
+does not audit the additional benchmark comparisons below or establish
+historical priority. The Gaussian and Kneser--Poulsen transfer theorems are established
 inputs, not new results of this note. Full unrestricted R^3 majorisation
 remains open.
 
