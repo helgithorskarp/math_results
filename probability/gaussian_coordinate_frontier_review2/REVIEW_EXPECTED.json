@@ -1,0 +1,129 @@
+{
+  "budget_samples": [
+    {
+      "all_state_height_bit_length": 129,
+      "mesh_height_bit_length": 62,
+      "planes": 7177,
+      "prescribed_labels": 1,
+      "tetrahedra_bit_length": 53
+    },
+    {
+      "all_state_height_bit_length": 184,
+      "mesh_height_bit_length": 102,
+      "planes": 81942,
+      "prescribed_labels": 4,
+      "tetrahedra_bit_length": 67
+    },
+    {
+      "all_state_height_bit_length": 255,
+      "mesh_height_bit_length": 156,
+      "planes": 1835094,
+      "prescribed_labels": 8,
+      "tetrahedra_bit_length": 85
+    },
+    {
+      "all_state_height_bit_length": 326,
+      "mesh_height_bit_length": 209,
+      "planes": 37748998,
+      "prescribed_labels": 12,
+      "tetrahedra_bit_length": 102
+    }
+  ],
+  "concrete_repair_controls": {
+    "scenarios": [
+      {
+        "input_height": 5,
+        "maximum_side_height": 62,
+        "repaired_map_height": 74
+      },
+      {
+        "input_height": 5,
+        "maximum_side_height": 61,
+        "repaired_map_height": 75
+      },
+      {
+        "input_height": 6,
+        "maximum_side_height": 79,
+        "repaired_map_height": 93
+      }
+    ],
+    "stream_sha256": "5639281768c447a76efe8c431321d4d98afe5cf6aad1e41b22f2b1a17e2f518d"
+  },
+  "endpoint_exponent_checks": 36,
+  "frontier_inputs": [
+    {
+      "atom_bound": 529983,
+      "coordinate_denominator": 186624,
+      "delta": "1",
+      "input_height": 23,
+      "k": 9
+    },
+    {
+      "atom_bound": 1994888,
+      "coordinate_denominator": 702464,
+      "delta": "2/3",
+      "input_height": 25,
+      "k": 14
+    },
+    {
+      "atom_bound": 407826657,
+      "coordinate_denominator": 64012032,
+      "delta": "1/7",
+      "input_height": 34,
+      "k": 63
+    },
+    {
+      "atom_bound": 10412296875,
+      "coordinate_denominator": 2916000000,
+      "delta": "1/25",
+      "input_height": 41,
+      "k": 225
+    }
+  ],
+  "global_budget_inequalities": 72,
+  "height_factor_controls": {
+    "cramer_coordinate_factor_at_A_1": 46,
+    "cramer_determinant_factor_at_A_1": 23,
+    "face_reflection_factor_at_P_1": 12,
+    "repair_factors": {
+      "bisector": 95,
+      "cone_side": 259,
+      "constant": 95,
+      "difference": 3,
+      "normal": 16,
+      "normal_norm": 98,
+      "preimage": 14,
+      "reflection": 209,
+      "repaired_map": 634
+    },
+    "three_point_plane_factor": 44
+  },
+  "mass_denominator_checks": 12,
+  "pinned_files": 10,
+  "placement_controls": {
+    "cycle_constrained": {
+      "comparable_endpoint_pairs": 6,
+      "framework_states": 4,
+      "labels": 8,
+      "maximum_chain_height": 1,
+      "maximum_changing_bits": 1,
+      "maximum_interval_states": 2,
+      "state_stream_sha256": "0f397a719bb8cc9ac9b5bf26543a5891c97ac3ffcdd6c11032ea6388a0f9ff25",
+      "tetrahedra": 6
+    },
+    "stacked_tree": {
+      "comparable_endpoint_pairs": 32,
+      "framework_states": 16,
+      "labels": 8,
+      "maximum_chain_height": 2,
+      "maximum_changing_bits": 2,
+      "maximum_interval_states": 4,
+      "state_stream_sha256": "6fc9ae345aea0f2ed98cf1fb19436d73517b2e83dad80aeed647b92484e73789",
+      "tetrahedra": 5
+    }
+  },
+  "status": "INDEPENDENT_COORDINATE_FRONTIER_REVIEW_PASS",
+  "target_commit": "2bd8d341950153a750c20f9ad4638991ce3cbdb2",
+  "target_graph_ref": "bafkreieehxqfbfo4id7cx27wojc4qdfh4l37imy4egi33cpwjmsithpld4",
+  "verdict": "accept coordinate-height theorem and finite-input consequence; middle hinge remains open"
+}
