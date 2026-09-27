@@ -1,0 +1,79 @@
+{
+  "calibration": {
+    "conditional_band": {
+      "distance_below_target_peak_over_C": "1/4",
+      "h_over_C_lower": "1/8"
+    },
+    "endpoint_pairs": 153,
+    "endpoint_tight_pairs": 0,
+    "explicit_band": {
+      "lower": "1/8",
+      "nonempty": true,
+      "upper": "107/144"
+    },
+    "exponents": {
+      "chain": 328,
+      "motion": 308,
+      "norm": 241,
+      "whole_curve_coefficient": 304
+    },
+    "margin": {
+      "power_of_two": -328,
+      "prefactor": "167/36"
+    },
+    "normalized_loss": "167/36",
+    "ordered_loss": "167/36",
+    "paired_affine_rank": 6,
+    "scope": "Finite sufficient geometry guard plus analytic Theorem B; no Gaussian sign quadrature",
+    "sites": 18,
+    "stage_count": 2,
+    "stages": [
+      {
+        "kind": "norm",
+        "ordered_loss": "2",
+        "source_rank": 3,
+        "target_rank": 2,
+        "tight_pairs": 72
+      },
+      {
+        "kind": "orthogonal_lift",
+        "ordered_loss": "95/36",
+        "source_rank": 2,
+        "target_rank": 3,
+        "tight_pairs": 9
+      }
+    ],
+    "status": "STRICT_CHAIN_MARGIN",
+    "target_peak_over_C_lower": "143/144"
+  },
+  "content_pins": 6,
+  "independent_frame_cases": 6,
+  "negative_controls": 12,
+  "posterior_rate_cases": 50,
+  "pressure_transform_cases": 48,
+  "radial_cutoff_cases": 30,
+  "small_loss_controls": [
+    {
+      "loss": "7/2",
+      "t": "2^-1"
+    },
+    {
+      "loss": "14329/1572864",
+      "t": "2^-10"
+    },
+    {
+      "loss": "15393162788857/1813388729421943762059264",
+      "t": "2^-40"
+    }
+  ],
+  "status": "MOTION_CHAIN_STRICTNESS_CONTROLS_PASS",
+  "subdivision_counts": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "suffix_budget_cases": 3276,
+  "trust_boundary": "Exact finite author controls; analytic pressure, limits and openness are written proofs"
+}
