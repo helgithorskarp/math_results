@@ -500,3 +500,58 @@ was checked live; the unrestricted Conjecture1.1 in R3 remains the target.
 [RELATIVE_INPUTS.json](RELATIVE_INPUTS.json) pins the exact code and analytic
 interfaces consumed. This packet supplies no all-configuration signed cover,
 unrestricted theorem, counterexample, or new Kneser--Poulsen consequence.
+
+## Uniform signed rational-frontier endpoints (pass 11)
+
+[SIGNED_ENDPOINTS.md](SIGNED_ENDPOINTS.md) consumes the unchanged strict
+pair-loss, radius and weight floors of the accepted paired-cubature rational
+frontier. Its contribution is an explicit mean-support margin and a uniform
+signed low-threshold cutoff for the whole finite family, followed by a
+source-peak endpoint. The constants and executable certificate discharge
+previously external endpoint inputs. They do not sign the middle interval.
+
+Mean-width monotonicity is classical. The primary manuscript
+[Gorbovickis, Strict Kneser--Poulsen conjecture for large radii](https://arxiv.org/pdf/1006.0531),
+Theorem 1.4, states the non-strict comparison and attributes it to Sudakov,
+Alexander, Capoyleas and Pach. Its Theorem 1.5 strengthens this to strictness;
+we do not need that strengthening. Factoring out a small target homothety
+and using the mean support of a diameter segment supplies our quantitative
+lower bound. Neither mean-width monotonicity nor the usual Gaussian
+interpolation proof included for normalization is claimed as new.
+
+R8's [low-threshold lemma](../gaussian_majorisation_open_stability/PROOF.md),
+Section 2, is the analytic sign premise, and its
+[finite-certificate interface](../gaussian_majorisation_open_stability/CERTIFICATE_INTERFACE.md)
+already owns the endpoint/middle architecture. The new formulas use that
+architecture rather than introducing an equivalent test class. R2's
+[peak-pruning proof](../gaussian_beta_peak_pruning/PROOF.md) already uses the
+standard Gaussian pair-overlap inequality; its source-only specialization
+provides the other endpoint here. All consumed versions are pinned in
+[SIGNED_ENDPOINT_INPUTS.json](SIGNED_ENDPOINT_INPUTS.json).
+
+The final team refresh found independent acceptance of the
+[absolute direct-hinge oracle](../gaussian_direct_hinge_review_frontier/REVIEW.md),
+graph6271, and of the
+[effective indecomposable bound](../gaussian_effective_indecomposable_review2/REVIEW.md).
+These reviews do not review the present supplement. R8's new
+[small-radius defect estimate](../gaussian_majorisation_high_noise_window/SMALL_RADIUS_DEFECT.md)
+gives an exponentially decreasing all-threshold error near collapsed support,
+uniformly over bounded laws, and is complementary to this strict finite
+endpoint sign. It is an author proof awaiting review, not a premise here.
+
+R2's [conditional-kernel obstruction](../gaussian_conditional_kernel_obstruction/PROOF.md),
+now graph6267, rules out all-order pointwise conditional positivity on every
+rank-six paired geometry. We retain actual endpoint averaging throughout.
+The universal strip through seven factors remains independently accepted;
+the first general unsigned beta is still b_(8,0). Neither conditional
+failure nor the new endpoint signs change that status. The prior
+[covariance-free rigidity proof](../gaussian_contraction_covariance_free/PROOF.md)
+was inspected and a duplicate small-distance-loss route was set aside.
+
+The primary [Aishwarya--Li v2 source](https://arxiv.org/html/2609.07041v2)
+and Gorbovickis's primary manuscript were checked live. A bounded search on
+Gaussian low thresholds, mean width, strict contraction and large-radius
+Kneser--Poulsen found the classical geometric background and the team's
+existing tail theorem. The claimed progress is the effective signed handoff
+on the existing rational frontier, not a historical-priority claim about
+those mechanisms. No new positive Kneser--Poulsen class is asserted.
