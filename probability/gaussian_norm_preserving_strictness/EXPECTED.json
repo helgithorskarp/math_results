@@ -1,0 +1,42 @@
+{
+  "calibration": {
+    "conditional_band": {
+      "distance_below_target_peak_over_C": "1/4",
+      "h_over_C_lower": "1/8"
+    },
+    "explicit_band": {
+      "lower": "1/8",
+      "nonempty": true,
+      "upper": "1/4"
+    },
+    "margin": {
+      "power_of_two": -723,
+      "prefactor": "129/392"
+    },
+    "normalized_loss": "129/392",
+    "ordered_loss": "129/392",
+    "paired_affine_rank": 6,
+    "pairs": 21,
+    "scope": "Analytic Theorems 1/2 conditional on exact finite hypotheses; no peak oracle",
+    "sites": 7,
+    "status": "STRICT_NORM_PRESERVING_HINGES",
+    "tight_pairs": 15
+  },
+  "constant_cases": 125,
+  "content_pins": 5,
+  "kernel_cases": 192,
+  "negative_controls": 12,
+  "posterior_cases": 19,
+  "status": "STRICT_NORM_HINGE_CONTROLS_PASS",
+  "trust_boundary": "Exact finite author checks, not formal or independent analytic verification",
+  "vanishing_loss_family": {
+    "explicit_h_over_C_band": [
+      "1/8",
+      "1/4"
+    ],
+    "margin": "t*2^-723",
+    "ordered_loss": "t",
+    "parameter_interval": "0<=t<=1/16",
+    "proof_check": "Exact quadratic coefficients; theorem uniform in t"
+  }
+}
