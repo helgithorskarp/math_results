@@ -1,0 +1,123 @@
+{
+  "assembly_and_errors": {
+    "coefficient_checks": 576,
+    "error_scales": [
+      {
+        "D": "1/256",
+        "alpha_squared_over_D": "30625/256",
+        "squared_alpha_sqrtM_over_D": "214375/256"
+      },
+      {
+        "D": "1/65536",
+        "alpha_squared_over_D": "30625/65536",
+        "squared_alpha_sqrtM_over_D": "214375/65536"
+      },
+      {
+        "D": "1/4294967296",
+        "alpha_squared_over_D": "30625/4294967296",
+        "squared_alpha_sqrtM_over_D": "214375/4294967296"
+      },
+      {
+        "D": "1/18446744073709551616",
+        "alpha_squared_over_D": "30625/18446744073709551616",
+        "squared_alpha_sqrtM_over_D": "214375/18446744073709551616"
+      }
+    ]
+  },
+  "damaged_or_adverse_rejections": 5,
+  "fold_and_operator": {
+    "exact_contraction_pairs": 175,
+    "pair_and_operator_identities": 385,
+    "rare_mass_scales": 7,
+    "records": [
+      {
+        "D": "7/2",
+        "M": "1",
+        "M_core": "1/2",
+        "Q_over_D": "52/7",
+        "alpha": "1/2",
+        "covariance_determinant": "381/4096"
+      },
+      {
+        "D": "28/9",
+        "M": "8/9",
+        "M_core": "8/27",
+        "Q_over_D": "52/7",
+        "alpha": "1/3",
+        "covariance_determinant": "65/432"
+      },
+      {
+        "D": "56/25",
+        "M": "16/25",
+        "M_core": "16/125",
+        "Q_over_D": "52/7",
+        "alpha": "1/5",
+        "covariance_determinant": "102/625"
+      },
+      {
+        "D": "105/128",
+        "M": "15/64",
+        "M_core": "15/1024",
+        "Q_over_D": "52/7",
+        "alpha": "1/16",
+        "covariance_determinant": "1711125/16777216"
+      },
+      {
+        "D": "1785/32768",
+        "M": "255/16384",
+        "M_core": "255/4194304",
+        "Q_over_D": "52/7",
+        "alpha": "1/256",
+        "covariance_determinant": "44222527125/1099511627776"
+      },
+      {
+        "D": "7340025/549755813888",
+        "M": "1048575/274877906944",
+        "M_core": "1048575/288230376151711744",
+        "Q_over_D": "52/7",
+        "alpha": "1/1048576",
+        "covariance_determinant": "10880719756989530256703125/309485009821345068724781056"
+      },
+      {
+        "D": "8070450532247928825/664613997892457936451903530140172288",
+        "M": "1152921504606846975/332306998946228968225951765070086144",
+        "M_core": "1152921504606846975/383123885216472214589586756787577295904684780545900544",
+        "Q_over_D": "52/7",
+        "alpha": "1/1152921504606846976",
+        "covariance_determinant": "15901623583005459481168179237624921639211824670803800540302927822992703125/452312848583266388373324160190187140051835877600158453279131187530910662656"
+      }
+    ]
+  },
+  "one_point": {
+    "center_comparisons": 16,
+    "covariance_determinant": "9/256",
+    "one_point_cases": [
+      {
+        "length": "1/4",
+        "minimum_center_loss": "1/16",
+        "q": "7/16"
+      },
+      {
+        "length": "1/2",
+        "minimum_center_loss": "1/4",
+        "q": "1"
+      },
+      {
+        "length": "1",
+        "minimum_center_loss": "1",
+        "q": "5/2"
+      },
+      {
+        "length": "2",
+        "minimum_center_loss": "4",
+        "q": "7"
+      }
+    ],
+    "posterior_floor_checks": 48
+  },
+  "pinned_target_files": 6,
+  "status": "INDEPENDENT_MEAN_LOSS_MARGIN_REVIEW_PASS",
+  "target_commit": "888c64db59feccd280575061612804854b0f658c",
+  "target_graph_ref": "bafkreie5iago7b2rtbm5oyabb3fshfabujmwms37a3vsojzo7efsgfybey",
+  "verdict": "accept the fixed-radius, fixed-covariance-floor, bounded-volume small-mean-loss theorem; the compactness cutoff is non-effective and unrestricted dimension-three majorisation remains open"
+}
