@@ -1,0 +1,66 @@
+{
+  "coefficients": {
+    "loss_assembly_cases": 256,
+    "mixed_pair_multiplicity": 2,
+    "robust_polarization_cases": 24
+  },
+  "pinned_target_files": 11,
+  "reflection": {
+    "midpoint_exponent_checks": 54
+  },
+  "repair": {
+    "center_repair_checks": 96,
+    "damaged_interpolation_rejections": 24
+  },
+  "schedules": {
+    "expanded_budget_checks": 75,
+    "rows": [
+      {
+        "constraint_exponents": [
+          18,
+          543,
+          567,
+          423,
+          494
+        ],
+        "cutoff_exponent": 567,
+        "kappa": "1/32",
+        "margin_exponent": 69,
+        "radius": "1",
+        "volume_radius": "1"
+      },
+      {
+        "constraint_exponents": [
+          25,
+          965,
+          967,
+          711,
+          918
+        ],
+        "cutoff_exponent": 967,
+        "kappa": "1/384",
+        "margin_exponent": 123,
+        "radius": "1/2",
+        "volume_radius": "9/2"
+      },
+      {
+        "constraint_exponents": [
+          20,
+          2855,
+          2900,
+          2093,
+          2544
+        ],
+        "cutoff_exponent": 2900,
+        "kappa": "3/32",
+        "margin_exponent": 401,
+        "radius": "3",
+        "volume_radius": "1"
+      }
+    ]
+  },
+  "status": "INDEPENDENT_MIDPOINT_POLARIZATION_REVIEW_PASS",
+  "target_commit": "9117b9b64127df8ee18337d9205e4aa7a9b70960",
+  "target_graph_ref": "bafkreicnf26bdsf25pg7bceowk7lep36lzqgz5d4bdlpyncaqd7pkh34ni",
+  "verdict": "accept the midpoint-polarization effective mean-loss theorem and compressed schedule in their stated fixed-volume, positive-covariance, sufficiently-small-loss scope"
+}
