@@ -1,17 +1,25 @@
 # Independent acceptance and replay boundary
 
-As of 27 September 2026, this certificate has **independent correctness
-acceptance in its stated scope**. Historical novelty remains uncertain.
+As of 27 September 2026, this certificate has **two independent correctness
+acceptances in its stated scope**. Historical novelty remains uncertain.
 The full bounded-law dimension-three Gaussian-majorisation problem remains
 open.
 
-The accepting [review](../gaussian_deep_flap_cell_review_frontier/REVIEW.md)
+The first accepting [review](../gaussian_deep_flap_cell_review_frontier/REVIEW.md)
 is Discovery Net contribution6358,
 `bafkreih4knvvl5grkggcsm26sa33esepgwus6zqcwwi2hzm5ie7w32ipcm`,
 with a committed VERIFIES relation to original6341,
 `bafkreidewnncabhfdz4rugy7wqmrcl6hnuyqyj6d2vbehj7vdji3mkdt7m`.
 The verified review publication is
 `660c395774692d339baba960d89c612ba2702e62`.
+
+The [second review](../gaussian_deep_flap_cell_review2/REVIEW.md) is
+contribution6368,
+`bafkreibxn2ygmtwzppadlyftige2zl2qbsaommaseqyiipkdzwsg6ygkge`,
+also with a committed VERIFIES relation to original6341. Its verified
+publication is `6480ef8462647da531a090022b486ab0ea2509b9`.
+It independently reimplements the middle histogram left to code inspection
+and target replay by the first review, and supplies a third full radial check.
 
 ## Accepted statement
 
@@ -34,7 +42,7 @@ nonliftability of the damped cell, or a Kneser--Poulsen volume consequence.
 
 ## What was independently checked
 
-The review's [checker](../gaussian_deep_flap_cell_review_frontier/independent_check.py)
+The first review's [checker](../gaussian_deep_flap_cell_review_frontier/independent_check.py)
 imports none of this packet's code. It reconstructs the geometry and the
 complete finite radial cover using binomial exponential bounds instead of
 the author's alternating Taylor bounds. It verifies all194,280 radial
@@ -43,13 +51,30 @@ mean-support enclosure, and deliberate corruption rejections. Its
 [expected record](../gaussian_deep_flap_cell_review_frontier/EXPECTED.json)
 contains the exact independent margins.
 
-The review accepts the middle and high ranges through code inspection,
+That review accepts the middle and high ranges through code inspection,
 normal and optimized target replays, small entry-level controls, and the
 previously reviewed quadrature theorem. It does **not** independently
-reimplement the entire13.9-million-site middle histogram. Layer cake,
-star-shapedness, symmetry, perturbation transfer, and the infinite-tail
-argument remain reviewed written mathematics. There is no proof-assistant
-formalization or claim that every component has a second implementation.
+reimplement the entire13.9-million-site middle histogram.
+
+The second review's
+[checker](../gaussian_deep_flap_cell_review2/independent_check.py) imports
+and executes none of the target code. It constructs all597,861 tetrahedral
+orbits explicitly, reconstructs all13,997,521 sites, and checks124,992
+candidate thresholds at56-bit precision. Its exact cell upper bound is
+
+    -194265938362851489846245777476205532474452798247 /
+    23384026197294446691258957323460528314494920687616 < -1/128.
+
+Its source-peak bound is also below9/32. The additional full194,280-root
+radial check uses a positive exponential series, geometric remainder,
+outward reciprocal, and range-reduced squaring. The
+[second expected record](../gaussian_deep_flap_cell_review2/REVIEW_EXPECTED.json)
+contains both independently reconstructed computations and their exact
+enclosures. It pins twelve target, inherited-dependency, and first-review files.
+
+Layer cake, star-shapedness, symmetry, perturbation transfer, the infinite-tail
+argument, and the inherited quadrature theorem remain reviewed written
+mathematics. There is no proof-assistant formalization.
 
 ## Preserve the reviewed source while recording its later status
 
@@ -72,11 +97,14 @@ From the repository root, with standard-library Python3.11 or later:
 ```sh
 python3 -B probability/gaussian_deep_flap_cell/verify.py
 python3 -B probability/gaussian_deep_flap_cell_review_frontier/independent_check.py
+python3 -B probability/gaussian_deep_flap_cell_review2/independent_check.py --check
 ```
 
-The respective expected markers are `GAP_FREE_DEEP_FLAP_CELL_PASS` and
-`DEEP_FLAP_CELL_INDEPENDENT_ACCEPT`. Each complete run takes about two
-minutes on one CPU; optimized Python is also supported. Both directories
-provide SHA256SUMS. No private dataset, large omitted certificate, or
+The respective expected markers are `GAP_FREE_DEEP_FLAP_CELL_PASS`,
+`DEEP_FLAP_CELL_INDEPENDENT_ACCEPT`, and `INDEPENDENT_DEEP_FLAP_CELL_REVIEW_PASS`.
+The author and first-review runs each take about two minutes on one CPU;
+the second also reconstructs the entire middle grid. Optimized Python is
+supported. All three directories provide SHA256SUMS.
+No private dataset, large omitted certificate, or
 reviewer workspace is required. Recording this acceptance needs only the
 source-pin and manifest checks, not another complete replay.
