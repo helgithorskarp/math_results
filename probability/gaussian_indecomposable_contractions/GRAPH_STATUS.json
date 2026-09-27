@@ -1,5 +1,5 @@
 {
-  "status": "COMMITTED_INDEPENDENT_REVIEW_PENDING",
+  "status": "COMMITTED_WITH_SCOPED_INDEPENDENT_ACCEPTANCE",
   "contribution_ref": "bafkreib6l2ras4jqduttk2diybnooir2qrzg6jyin65ms44e45imfe7dkq",
   "contribution_height": 6260,
   "kind": "PROOF_ATTEMPT",
@@ -47,7 +47,7 @@
     }
   ],
   "source_commit_cited_by_original": "de9a0bb7af7179ea6e1b2c5b4013f84d6955f981",
-  "independent_review_of_effective_supplement": false,
+  "independent_review_of_effective_supplement": true,
   "upstream_review_refs": [
     "bafkreifbrvpx4z32sbzb4ipdejnfrlvdxgshekcw2xn7mcytnrutxunt54",
     "bafkreihpgx3azzmahatd3g3e6ndgqexqsxt3xqbucd6td3sgqgqlkeo7qu"
@@ -58,5 +58,33 @@
   "new_KP_consequence": false,
   "unrestricted_R3_question_settled": false,
   "historical_priority_verified": false,
-  "formalized": false
+  "formalized": false,
+  "subsequent_review": {
+    "ref": "bafkreibe2mcci6kxg7l2bkazlgih4lr5gs63ca2zfzivy7zodopt7cfnna",
+    "height": 6273,
+    "reviewed_source_commit": "de9a0bb7af7179ea6e1b2c5b4013f84d6955f981",
+    "verified_review_source_commit": "57d54289ba7a63d7438bdd1910231adc82cf7596",
+    "review_source": "https://github.com/helgithorskarp/math_results/blob/main/probability/gaussian_effective_indecomposable_review2/REVIEW.md",
+    "review_sha256": "a30233010093b644710039067381a603fc17e63feb81f0e8d94ded96356e64a9",
+    "verified_indexed_height": 6290,
+    "incoming_relations": [
+      {
+        "artifactRef": "bafkreih6lwdaxwkmwigvohk4e7lki7wgudmbvf2bk5ce3hatzajm3msuri",
+        "kind": "VERIFIES",
+        "fromContributionRef": "bafkreibe2mcci6kxg7l2bkazlgih4lr5gs63ca2zfzivy7zodopt7cfnna",
+        "toContributionRef": "bafkreib6l2ras4jqduttk2diybnooir2qrzg6jyin65ms44e45imfe7dkq"
+      },
+      {
+        "artifactRef": "bafkreicwdquglimzzg7p7dgukylfwhtioakg3av3smrlapc3k3bp4b4hme",
+        "kind": "REPRODUCES",
+        "fromContributionRef": "bafkreibe2mcci6kxg7l2bkazlgih4lr5gs63ca2zfzivy7zodopt7cfnna",
+        "toContributionRef": "bafkreib6l2ras4jqduttk2diybnooir2qrzg6jyin65ms44e45imfe7dkq"
+      }
+    ],
+    "scope": "Explicit mesh/count/rationality/mass/gap bounds and paired-cubature substitution; no Gaussian sign, practical runtime, coordinate bit-length bound or priority determination.",
+    "provenance_note": "Two commit strings in the review graph body are incorrect. The valid source and publication merge are recorded here after checking the repository objects and public source; the verdict and reviewed author commit are unaffected.",
+    "incorrect_graph_review_commit": "57d54289f731a6c6627165bed10882743629c702",
+    "incorrect_graph_merge_commit": "5085c9460a3cd77d6ec27e9be5a8f2eff24e8c20",
+    "verified_publication_merge_commit": "5085c94614d5e1ab0a4d69a58066d57c395a6c88"
+  }
 }
