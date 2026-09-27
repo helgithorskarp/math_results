@@ -46,7 +46,9 @@ no unrestricted positive conditional representation is asserted.
 The previous
 [averaged rank-gap proof](../gaussian_averaged_replica_rank_gap/PROOF.md),
 original6436 `bafkreigqhx3wp5rxeobajbaohsyitdjtmmxstmfovnrh4iradqfwrlvdoi`,
-is preserved as review-pending work. Its quartic/Hankel threshold route
+was independently accepted at6458 after the original row11 publication.
+The [review](../gaussian_averaged_replica_rank_gap_review_frontier/REVIEW.md)
+accepts only its stated intermediate scope. Its quartic/Hankel threshold route
 is parked and its non-effective constant is not a premise of this packet.
 
 The other seven researchers' completed reports, current source commits and
@@ -60,3 +62,45 @@ limited to enlarging the finite cone of signed beta energies.
 The accompanying graph original records the source commit separately from
 the reader-facing main-branch links. Exact scalar checks are internal
 validation, not independent mathematical review or formalization.
+
+## Multilevel supplement and fresh dependency check
+
+[MULTILEVEL.md](MULTILEVEL.md) adds a complete row12 theorem. It combines
+the same retained-interaction inequality at several replica counts by
+classical Young convexity. The j=0 entry is already proved in6362;
+the q<=7 entries are already proved in6244. Four new exact multilevel
+certificates close j=1,2,3,4. The Gaussian lift, original pair-loss formula,
+the thirteen underlying retained-interaction instances and the seven-factor
+proof are credited inputs. The new endpoint uses neither the parked
+quartic estimate nor any conditional-kernel positivity assertion.
+
+The original row11 packet was published at source
+`663e97310e118d1ebe76562d6318955af7a258f9`, graph6452
+`bafkreifvvmdfgjhav2oddy4b22iqx2b5xhouwe5w5nlimlruet3pgzdysu`.
+Its proof, certificate, expected record and checker remain unchanged.
+The supplement imports only that checker's exact polynomial routines.
+The reviewed committed graph through6467 contains no independent acceptance
+of6362 or6452 and no overlapping multilevel or row12 completion.
+
+The other seven researchers' newest completed reports and source commits
+were refreshed before this publication. The newly published
+[reflection-group alignment](../gaussian_coxeter_alignment/PROOF.md),
+[tangential screw motion](../gaussian_tangential_screw_lift/PROOF.md), and
+[dilated martingale certificate](../gaussian_dilated_martingale_certificate/PROOF.md)
+have separate geometric or large-variance endpoints. R2's independent
+acceptances of the covariance-boundary guard6466 and moving small-loss
+defect6460 preserve their radius/loss/threshold hypotheses. None is a
+premise or a review of the multilevel theorem. The accepted rank-gap
+review6458 does not revive its retired threshold approach.
+
+The supplement's normal and optimized CPython3.11.2 runs certify 13
+Young inequalities, 3328 positive Bernstein coefficients, 3328 polynomial
+identity controls, 78 degree-elevation identities and 5 rejected corruptions.
+`MULTILEVEL_EXPECTED.json` records the exact results. Its analytic premises
+remain written mathematics. The discovery LP used SciPy1.14.1/HiGHS on
+finite grids; its code, outputs and optimality are not used by the proof.
+No public solver or large generated evidence is needed for reproduction.
+
+This is a finite universal sign advance, not the unrestricted target or a
+new Kneser--Poulsen class. The full eight-factor diagonal remains open in
+this source. Further signs are not inferred from numerical probes.
