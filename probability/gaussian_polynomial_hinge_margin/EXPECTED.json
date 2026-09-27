@@ -1,0 +1,112 @@
+{
+  "beta_integral_comparisons": 364,
+  "calibration": {
+    "band": {
+      "conditional_peak_separation": "1/4",
+      "explicit_upper": "1/4",
+      "lower": "1/8",
+      "new_margin_power_of_two": -112,
+      "nonempty": true,
+      "prior_margin_power_of_two": -723
+    },
+    "beta_margins_divided_by_d_A": [
+      "646907/1937307074560",
+      "93293/242163384320",
+      "117869/484326768640",
+      "25491/242163384320",
+      "6405/193730707456",
+      "1827/242163384320",
+      "581/484326768640",
+      "29/242163384320",
+      "1/176118824960"
+    ],
+    "beta_row": 8,
+    "envelope": {
+      "certified_lower_peak_over_C": "1/2",
+      "coefficient_power_of_two": -87,
+      "low_threshold_power": 3,
+      "peak_gap_power": 8
+    },
+    "loss_modulus_budget": {
+      "log2_N_plus_2": 533,
+      "premise": "K<=2^20 in the separately required small-radius regime",
+      "prior_log2_N_plus_2": 2977,
+      "radius_le_half_sqrt_variance_verified": false
+    },
+    "normalized_ordered_loss": "129/392",
+    "pairs": 21,
+    "scope": "Finite guards and analytic theorem; no Gaussian quadrature or all-radius relative modulus",
+    "sites": 7,
+    "status": "POLYNOMIAL_HINGE_MARGIN",
+    "tight_pairs": 15
+  },
+  "invariance_controls": 1,
+  "negative_controls": 11,
+  "row_error_budget": {
+    "atom_cap": 547637,
+    "coordinate_degree": 116,
+    "error": "2527445417322111749574367879997223795544402993108236749/107540186775132128899784099494096069693104765745318692228993971339950401258730291200000000000",
+    "normalized_row_margin": "1/27253068136234676515249442607993978880",
+    "q": 58,
+    "radius_squared": "1",
+    "row": 8,
+    "scope": "Accepted same-row error only, not full-curve transfer"
+  },
+  "schedules": [
+    {
+      "j": 3,
+      "loss_modulus_log2_N_plus_2": 533,
+      "new_margin_bits": 112,
+      "prior_loss_modulus_log2_N_plus_2": 2977,
+      "prior_margin_bits": 723
+    },
+    {
+      "j": 6,
+      "loss_modulus_log2_N_plus_2": 569,
+      "new_margin_bits": 121,
+      "prior_loss_modulus_log2_N_plus_2": 136033,
+      "prior_margin_bits": 33987
+    },
+    {
+      "j": 10,
+      "loss_modulus_log2_N_plus_2": 617,
+      "new_margin_bits": 133,
+      "prior_loss_modulus_log2_N_plus_2": 33628513,
+      "prior_margin_bits": 8407107
+    },
+    {
+      "j": 20,
+      "loss_modulus_log2_N_plus_2": 737,
+      "new_margin_bits": 163,
+      "prior_loss_modulus_log2_N_plus_2": 35184447586657,
+      "prior_margin_bits": 8796111896643
+    }
+  ],
+  "small_radius_calibration": {
+    "K_upper": "2^20",
+    "coordinate_factor": "1/2",
+    "log2_N_plus_2": 533,
+    "margin": "(129/1568)*2^-112",
+    "normalized_loss": "129/1568",
+    "prior_log2_N_plus_2": 2977
+  },
+  "source_pins": 9,
+  "square_controls": 205,
+  "status": "POLYNOMIAL_HINGE_MARGIN_CONTROLS_PASS",
+  "trust": "Exact finite author controls; written analytic proof is unformalized",
+  "vanishing_loss_controls": [
+    {
+      "loss": "1/8",
+      "t": "1/4"
+    },
+    {
+      "loss": "1/128",
+      "t": "1/16"
+    },
+    {
+      "loss": "1/576460752303423488",
+      "t": "1/1073741824"
+    }
+  ],
+  "zero_loss_controls": 1
+}
