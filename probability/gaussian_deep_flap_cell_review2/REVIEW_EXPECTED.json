@@ -1,0 +1,76 @@
+{
+  "analytic_tail": {
+    "far_error_at_64": "1743464522020333/8589934592000000",
+    "inner_ball_exponent_upper": "9249793/2097152",
+    "mean_support_lower": "127879066476765543630230550243401/446213011280336749326839528292352",
+    "source_crosspolytope_witnesses": 6,
+    "support_gap_floor": "41/3584",
+    "target_midpoint_witnesses": 16
+  },
+  "fixed_point_parameters": {
+    "angular_bits": 44,
+    "radial_exponential_bits": 58,
+    "root_bits": 22
+  },
+  "geometry": {
+    "cell_pair_loss_floor": "1/32",
+    "minimum_source_squared_separation": "2",
+    "minimum_target_squared_separation": "3969/4096",
+    "paired_rank_six_determinant": "-250047/4096",
+    "reference_pair_loss": "127/2048"
+  },
+  "method": "positive-series reciprocal radial exponentials; tighter exact angular radii; explicit 24-transformation middle orbits",
+  "middle": {
+    "argmax_over_C": "1/512",
+    "cell_adverse_upper": "-194265938362851489846245777476205532474452798247/23384026197294446691258957323460528314494920687616",
+    "discrete_adverse_upper": "-285643425501409338807663581533224180210504624935/23384026197294446691258957323460528314494920687616",
+    "evaluated_thresholds": 124992,
+    "explicit_group_orbits": 597861,
+    "gaussian_constant_lower": "5030484106419577526351631835/79228162514264337593543950336",
+    "gaussian_constant_upper": "1257621026604894381587907959/19807040628566084398385987584",
+    "orbit_stream_sha256": "89b694e0eb25a31e02024294ac3c8dde3ce31b5157a7ab63566ed2bd1ec4e1b7",
+    "polygon_maximum_units": "-56782492392111869861",
+    "precision_bits": 56,
+    "quadrature_error": "12589057/4294967296",
+    "sites": 13997521,
+    "small_unquotiented_control_sites": 125,
+    "source_peak_upper": "124091402636767683/450359962737049600",
+    "tail_error": "19325151369551161831329/2535301200456458802993406410752"
+  },
+  "pinned_files": 12,
+  "positive_series_exponential_controls": 12,
+  "radial_bands": [
+    {
+      "minimum_relative_slack_units": 22417027953111,
+      "n": 24,
+      "patches": 600,
+      "start": "7/2",
+      "step": "1/16",
+      "stop": "6",
+      "stream_sha256": "986b807921192b6c8ad3aceb97d618dccd04f811776509167db73013acd70f72",
+      "verified_roots": 49200,
+      "volume_lower": "2830909891356874710162247650145836881927/127605887595351923798765477786913079296",
+      "windows": 40,
+      "worst_S": "7/2"
+    },
+    {
+      "minimum_relative_slack_units": 47754218755987,
+      "n": 12,
+      "patches": 156,
+      "start": "6",
+      "step": "1/8",
+      "stop": "64",
+      "stream_sha256": "ee0634a40fb7281f85a555cc1a6243624560297139e05dcc0e09c37956670d0b",
+      "verified_roots": 145080,
+      "volume_lower": "224618509917193810995970841674548649671/21267647932558653966460912964485513216",
+      "windows": 464,
+      "worst_S": "6"
+    }
+  ],
+  "rejected_radial_endpoint_mutations": 2,
+  "status": "INDEPENDENT_DEEP_FLAP_CELL_REVIEW_PASS",
+  "target_commit": "8ee386da005a59786fbbab26eb673856e7200346",
+  "target_graph_ref": "bafkreidewnncabhfdz4rugy7wqmrcl6hnuyqyj6d2vbehj7vdji3mkdt7m",
+  "total_verified_radial_endpoints": 194280,
+  "verdict": "accept the stated fixed-variance all-threshold 96-coordinate cell; unrestricted majorisation and all-variance claims remain open"
+}
