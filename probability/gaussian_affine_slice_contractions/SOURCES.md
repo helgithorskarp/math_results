@@ -119,7 +119,7 @@ have variance cutoffs. R8's
 works at every specified variance with a variance-dependent target bound.
 R5's accepted beta rows and retained-interaction result remain pressure
 comparisons, not full all-variance majorisation. A final repository refresh
-also found R5's new
+also found R8's new
 [norm-preserving theorem](../gaussian_norm_preserving_majorisation/PROOF.md),
 source `7ec05f2b89b4ab69de7a6696f236aa1f6ecc3ffc`: it claims all variances
 and both ball-volume comparisons when all pointwise distances to an anchor
