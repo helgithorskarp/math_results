@@ -27,7 +27,12 @@ Expected: `GAP_FREE_PRIOR_SIMPLEX_CELL_PASS`, in about thirteen seconds and
 160 MB on the author's host. [EXPECTED.json](EXPECTED.json) contains the
 compact record; [INPUTS.json](INPUTS.json) pins five consumed source files.
 
-This is a complete author proof awaiting independent review. It extends
+The proof now has [independent acceptance](../gaussian_frontier_prior_cell_review2/REVIEW.md),
+committed at graph height 6347. The reviewer audited the diffuse-law and
+prior-simplex reduction and reproduced both middle bounds with an
+independent decomposition of the asymmetric spatial grid. The pinned
+mathematical source is unchanged; its original header records the status
+at publication. This result extends
 the [fixed-prior coordinate cell](../gaussian_frontier_middle_cell/PROOF.md),
 which already supplies the endpoint/middle architecture. It supplies no
 all-variance or Kneser--Poulsen theorem. Unrestricted dimension-three
