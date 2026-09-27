@@ -555,3 +555,58 @@ Kneser--Poulsen found the classical geometric background and the team's
 existing tail theorem. The claimed progress is the effective signed handoff
 on the existing rational frontier, not a historical-priority claim about
 those mechanisms. No new positive Kneser--Poulsen class is asserted.
+
+## Source-cluster defect certificates (pass 12)
+
+[CLUSTER_DEFECT.md](CLUSTER_DEFECT.md) combines the source-only interaction
+charge in [DEFECT_LOCALIZATION.md](DEFECT_LOCALIZATION.md), Lemma 2,
+with nearest-center Gaussian classification and valid local defect bounds.
+The new content is a computable, all-threshold error on actual source
+parameter regions, including configurations of large total extent. The
+component thresholds are rescaled by their masses; target overlap has the
+favorable sign and no target separation is imposed. Voronoi half-spaces,
+the union bound and the elementary normal-tail estimate are standard.
+No historical-priority claim is made for those ingredients.
+
+The small local errors come from R8's
+[small-radius defect theorem](../gaussian_majorisation_high_noise_window/SMALL_RADIUS_DEFECT.md),
+source `debfb7ae35895c71f36d5d89ac4efb372ae7435b`, original graph6279.
+The fresh [independent review](../gaussian_small_radius_defect_review_frontier/REVIEW.md),
+source `563855ce0af5e32051fc25483e3a4e7470b9d3f4`, graph6301,
+accepts this theorem, its compressed dyadic consequence and the required
+signed-window theorem in the pinned high-noise proof. It explicitly does
+not review every other high-noise conclusion. This changes the local
+premise's status recorded in the previous pass; it does not independently
+accept the new cluster composition. The accepted
+[global cap](../gaussian_uniform_defect_bound/PROOF.md) remains `7/50`.
+
+The complete seven-ball source region at variance one has error at most
+`13/2^33`. Arbitrary masses, diffuse component laws and all contracted
+images are allowed. The 49-label fixture tests the unchanged paired-cubature
+rational contract at `k=8`, with rank six within each seven-label component;
+it is not the evidence for the whole region, and its full hinge sign is
+not asserted. The decreasing tolerance schedule conditions on progressively
+smaller local radii and adequate source separation; it is not an improved
+unrestricted global bound. No new exact-majorisation or Kneser--Poulsen
+class follows from a positive additive error.
+
+[CLUSTER_INPUTS.json](CLUSTER_INPUTS.json) pins nine analytic, fixture and
+code dependencies. The standard-library producer checks rational inputs,
+pair contractions, source covers and upward rounding; its small controls
+do not replace or formalize the written Gaussian argument. A single-linkage
+partition is only a deterministic proposal. No optimal partition,
+minimum enclosing ball, exhaustive configuration cover, Gaussian hinge
+evaluation or large omitted data is claimed.
+
+The prepublication refresh also found two independent acceptances of the
+[signed endpoint consequence](../gaussian_signed_endpoints_review_frontier/REVIEW.md)
+([second review](../gaussian_signed_endpoints_review2/REVIEW.md)). These
+do not accept the still-unreviewed relative-window oracle or its middle
+sign. The accepted conditional-rank obstruction and newly reviewed
+[straight-path pair obstruction](../gaussian_straight_path_pair_obstruction/PROOF.md)
+both require retaining compensation in other sign routes; the present
+bound assumes neither termwise positivity nor an unknown beta sign.
+All seven other researchers' newest completed reports were refreshed.
+The primary [Aishwarya--Li v2 manuscript](https://arxiv.org/html/2609.07041v2)
+was checked live on 27 September 2026. The full dimension-three problem
+and the first general unsigned beta `b_(8,0)` remain open.

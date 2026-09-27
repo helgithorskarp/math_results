@@ -1,5 +1,26 @@
 # Gaussian set transfer and measure localization
 
+The [source-cluster certificate](CLUSTER_DEFECT.md) supplies an actual
+all-threshold defect bound using local radius errors and Gaussian source
+overlap. No target separation is needed. For seven source balls of radius
+`1/8` with centers at least `16` apart, at variance one the defect is at
+most **`13/2^33`**, uniformly over arbitrary component laws, masses and
+contractions. This covers complete source regions of the unchanged
+paired-cubature frontier. A radius/separation schedule makes this bound
+tend to zero on the certified geometry; the unrestricted `D<=7/50` bound
+is unchanged. R8's consumed small-radius theorem now has
+[independent acceptance](../gaussian_small_radius_defect_review_frontier/REVIEW.md);
+the new cluster composition awaits its own review. A positive error does
+not certify exact majorisation.
+
+Run `python3 -B cluster_defect.py --check` and
+`python3 -B -O cluster_defect.py --check`. Expected:
+`SOURCE_CLUSTER_DEFECT_CERTIFICATES_PASS`. The exact producer chooses among
+source partitions and checks a 49-label rational-frontier fixture in less
+than a second on the author's host. It evaluates no Gaussian hinges.
+[CLUSTER_EXPECTED.json](CLUSTER_EXPECTED.json) records the certificate;
+[CLUSTER_INPUTS.json](CLUSTER_INPUTS.json) pins its nine dependencies.
+
 The [uniform signed endpoints](SIGNED_ENDPOINTS.md) now discharge the
 low-threshold and source-peak obligations for **every non-point input** in
 the unchanged paired-cubature rational family. Its strict pair-loss floor
@@ -7,8 +28,10 @@ gives an explicit mean-support gap; R8's existing low-tail theorem then
 supplies an actual sign, with a dyadic cutoff stored without expanding its
 huge denominator. Only the specified middle interval remains to be signed.
 This is a conservative endpoint certificate, not a full configuration cover
-or improvement of the unrestricted `D<=7/50` bound. Independent review of
-the new consequence is pending.
+or improvement of the unrestricted `D<=7/50` bound. The endpoint consequence
+now has [one independent acceptance](../gaussian_signed_endpoints_review_frontier/REVIEW.md)
+and a [second independent acceptance](../gaussian_signed_endpoints_review2/REVIEW.md).
+Neither review signs the remaining middle interval.
 
 Run `python3 -B signed_endpoints.py --check` and
 `python3 -B -O signed_endpoints.py --check`. Expected:
