@@ -1,0 +1,280 @@
+{
+  "controls": {
+    "azimuth_entries": 145,
+    "rejected_damaged_or_malformed_inputs": 10,
+    "remainder_comparisons": 150
+  },
+  "cubature_schedules": [
+    {
+      "atom_budget": 329,
+      "epsilon": "1/64",
+      "error_bits": 12,
+      "moment_degree": 6,
+      "p": 4,
+      "relative_reconstruction_error_upper": "21105/4294967296",
+      "safe_q": 36,
+      "selected_q": 4
+    },
+    {
+      "atom_budget": 32429,
+      "epsilon": "1/2",
+      "error_bits": 10,
+      "moment_degree": 14,
+      "p": 8,
+      "relative_reconstruction_error_upper": "5599585779759795/18446744073709551616",
+      "safe_q": 60,
+      "selected_q": 22
+    },
+    {
+      "atom_budget": 294879,
+      "epsilon": "1/2",
+      "error_bits": 10,
+      "moment_degree": 30,
+      "p": 16,
+      "relative_reconstruction_error_upper": "4319739416387231/18446744073709551616",
+      "safe_q": 110,
+      "selected_q": 47
+    },
+    {
+      "atom_budget": 2666599,
+      "epsilon": "4",
+      "error_bits": 10,
+      "moment_degree": 14,
+      "p": 8,
+      "relative_reconstruction_error_upper": "3041344715547229/9223372036854775808",
+      "safe_q": 192,
+      "selected_q": 99
+    },
+    {
+      "atom_budget": 200403579,
+      "epsilon": "9",
+      "error_bits": 10,
+      "moment_degree": 30,
+      "p": 16,
+      "relative_reconstruction_error_upper": "1725827854598373/2305843009213693952",
+      "safe_q": 864,
+      "selected_q": 421
+    }
+  ],
+  "gaussian_controls": {
+    "Taylor_degree": 8,
+    "controls": [
+      {
+        "loss": "1/8",
+        "normalized_J_points": [
+          {
+            "normalized_J": [
+              "430552927745530959/9223372036854775808",
+              "861105855491061919/18446744073709551616"
+            ],
+            "u": "0"
+          },
+          {
+            "normalized_J": [
+              "1182262023540639007/18446744073709551616",
+              "36945688235644969/576460752303423488"
+            ],
+            "u": "1/4"
+          },
+          {
+            "normalized_J": [
+              "922470892191676639/18446744073709551616",
+              "28827215380989895/576460752303423488"
+            ],
+            "u": "1/2"
+          },
+          {
+            "normalized_J": [
+              "243303797955665875/9223372036854775808",
+              "486607595911331751/18446744073709551616"
+            ],
+            "u": "3/4"
+          },
+          {
+            "normalized_J": [
+              "21223084449676707/4611686018427387904",
+              "84892337798706829/18446744073709551616"
+            ],
+            "u": "1"
+          }
+        ],
+        "normalized_moment_radius_upper": "1/18446744073709551616",
+        "t": "0",
+        "zero_remainder_rejected": true
+      },
+      {
+        "loss": "3/32",
+        "normalized_J_points": [
+          {
+            "normalized_J": [
+              "427654866843892909/9223372036854775808",
+              "855309733687785819/18446744073709551616"
+            ],
+            "u": "0"
+          },
+          {
+            "normalized_J": [
+              "1175707071829344895/18446744073709551616",
+              "9185211498666757/144115188075855872"
+            ],
+            "u": "1/4"
+          },
+          {
+            "normalized_J": [
+              "915818493487146521/18446744073709551616",
+              "457909246743573261/9223372036854775808"
+            ],
+            "u": "1/2"
+          },
+          {
+            "normalized_J": [
+              "60036875482319669/2305843009213693952",
+              "480295003858557353/18446744073709551616"
+            ],
+            "u": "3/4"
+          },
+          {
+            "normalized_J": [
+              "81197730855754291/18446744073709551616",
+              "20299432713938573/4611686018427387904"
+            ],
+            "u": "1"
+          }
+        ],
+        "normalized_moment_radius_upper": "1/18446744073709551616",
+        "t": "1/2",
+        "zero_remainder_rejected": true
+      },
+      {
+        "loss": "2147483647/9223372036854775808",
+        "normalized_J_points": [
+          {
+            "normalized_J": [
+              "838429738143421241/18446744073709551616",
+              "419214869071710621/9223372036854775808"
+            ],
+            "u": "0"
+          },
+          {
+            "normalized_J": [
+              "1156274954610569723/18446744073709551616",
+              "289068738652642431/4611686018427387904"
+            ],
+            "u": "1/4"
+          },
+          {
+            "normalized_J": [
+              "896042091034418353/18446744073709551616",
+              "448021045517209177/9223372036854775808"
+            ],
+            "u": "1/2"
+          },
+          {
+            "normalized_J": [
+              "230866545690419461/9223372036854775808",
+              "461733091380838923/18446744073709551616"
+            ],
+            "u": "3/4"
+          },
+          {
+            "normalized_J": [
+              "71450421892032353/18446744073709551616",
+              "35725210946016177/9223372036854775808"
+            ],
+            "u": "1"
+          }
+        ],
+        "normalized_moment_radius_upper": "1/18446744073709551616",
+        "t": "1073741823/1073741824",
+        "zero_remainder_rejected": true
+      },
+      {
+        "loss": "2305843009213693951/10633823966279326983230456482242756608",
+        "normalized_J_points": [
+          {
+            "normalized_J": [
+              "838429738102417365/18446744073709551616",
+              "419214869051208683/9223372036854775808"
+            ],
+            "u": "0"
+          },
+          {
+            "normalized_J": [
+              "72267184660171189/1152921504606846976",
+              "1156274954562739025/18446744073709551616"
+            ],
+            "u": "1/4"
+          },
+          {
+            "normalized_J": [
+              "896042090985642121/18446744073709551616",
+              "448021045492821061/9223372036854775808"
+            ],
+            "u": "1/2"
+          },
+          {
+            "normalized_J": [
+              "57716636416932547/2305843009213693952",
+              "461733091335460377/18446744073709551616"
+            ],
+            "u": "3/4"
+          },
+          {
+            "normalized_J": [
+              "71450421870092753/18446744073709551616",
+              "35725210935046377/9223372036854775808"
+            ],
+            "u": "1"
+          }
+        ],
+        "normalized_moment_radius_upper": "1/18446744073709551616",
+        "t": "1152921504606846975/1152921504606846976",
+        "zero_remainder_rejected": true
+      }
+    ],
+    "exponential_bits": 220,
+    "kernel_parameter": 4,
+    "moment_degree": 6,
+    "radical_bits": 180,
+    "scope": "Known two-atom positive class; normalization and loss-retention controls, not a new Gaussian sign."
+  },
+  "kernels": [
+    {
+      "I": "16/3",
+      "angular_cost_upper": "352/245",
+      "degree": 2,
+      "operator_sha256": "ff50e5dd12187f908402539b0c529e2ce90fae43789ef6192ca632b91e175422",
+      "p": 2
+    },
+    {
+      "I": "61/5",
+      "angular_cost_upper": "9092/8967",
+      "degree": 4,
+      "operator_sha256": "3efaddcbbc44f68132d22623048455fa52c8187915878075f5000ed7223f985a",
+      "p": 3
+    },
+    {
+      "I": "768/35",
+      "angular_cost_upper": "1952/2457",
+      "degree": 6,
+      "operator_sha256": "f102417a8ac541439b3b89d4239b92f2d50f305aa441fcf66205615ec8d22e61",
+      "p": 4
+    },
+    {
+      "I": "569344/6435",
+      "angular_cost_upper": "286488158176/682326422715",
+      "degree": 14,
+      "operator_sha256": "a7958c0600445cd85bc4a462b06f8710ee6315cf6add4dd5073c5e7c2e3745a7",
+      "p": 8
+    },
+    {
+      "I": "11191344889856/31556720475",
+      "angular_cost_upper": "13746254163783014921504/63613807759090333095533",
+      "degree": 30,
+      "operator_sha256": "f149f80da4d4cc601f4aaf124accfaec4b4abd4fa8e16e89bee9ad0ec45267d5",
+      "p": 16
+    }
+  ],
+  "scope": "Exact finite controls for uniform reconstruction. No universal positive margin, full Gaussian comparison, or KP consequence.",
+  "status": "JACKSON_GAUSSIAN_CERTIFICATION_PASS"
+}
