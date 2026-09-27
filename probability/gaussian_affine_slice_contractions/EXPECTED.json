@@ -1,0 +1,68 @@
+{
+  "arithmetic": "exact rational and sparse polynomial",
+  "horizontal_completion": {
+    "frame_jet_point_checks": 432,
+    "omitted_translation_velocity_rejected": 144,
+    "positive_square_root_gauge_residual": "(17/65) J, nonzero",
+    "rational_frames": 72,
+    "wrong_inverse_instead_of_inverse_transpose_rejected": 144
+  },
+  "prism_example": {
+    "first_phase_pair_time_controls": 4950,
+    "folding_pair_time_controls": 4950,
+    "global_contraction_slack": "4441/28800",
+    "jacobian_frobenius_square_bound": "24359/28800",
+    "jacobian_gram_commutator_entry_12": "3913/36864000",
+    "labels": 45,
+    "matrix_commutator_off_diagonal": [
+      "1/80",
+      "-1/160"
+    ],
+    "minimum_sampled_bridge_slack": "67019/921600",
+    "time_nodes": [
+      {
+        "q_minus": "3/5",
+        "q_plus": "4/5",
+        "t": "1"
+      },
+      {
+        "q_minus": "2071/2921",
+        "q_plus": "2479/2921",
+        "t": "6630000/8532241"
+      },
+      {
+        "q_minus": "223/287",
+        "q_plus": "253/287",
+        "t": "51000/82369"
+      },
+      {
+        "q_minus": "47/52",
+        "q_plus": "197/208",
+        "t": "12375/43264"
+      },
+      {
+        "q_minus": "1",
+        "q_plus": "1",
+        "t": "0"
+      }
+    ],
+    "unordered_pairs": 990,
+    "wrong_linear_height_clock_positive_derivative": "445993/921600"
+  },
+  "record_sha256": "b0589efc9f0158c120d9ed2cf95600145d576fc5ca1366031dc861ceff171338",
+  "singular_boundary": {
+    "axial_block_slack": "4/9",
+    "strict_approximants_checked": 4,
+    "unit_matrix_norm_endpoint": "A=diag(1,0), b'=(0,1/3), h'=2/3"
+  },
+  "status": "PASS",
+  "trust_boundary": "Author algebra controls; continuum proof and ODE existence in PROOF.md; independent review pending",
+  "universal_identities": {
+    "identities": [
+      "det(I-A^T A)=det(I-A A^T)",
+      "det(D) I + A adj(D) A^T = adj(P), four entries"
+    ],
+    "ring": "Q[a11,a12,a21,a22]",
+    "zero_polynomials": 5
+  }
+}
