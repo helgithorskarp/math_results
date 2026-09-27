@@ -1,0 +1,280 @@
+{
+  "coupling_checks": {
+    "below_variance": {
+      "Q_over_normalized_loss": "330913/1049200200",
+      "coupled_squared_residual": "143/48",
+      "coupling_entries": 64,
+      "normalized_loss": "575/2432928",
+      "pair_loss": "575/96",
+      "paired_affine_rank": 6,
+      "result": "DILATED_MARTINGALE_RECORD_PASS",
+      "zero_coupling_entries": 0
+    },
+    "dilated_map_expands": {
+      "Q_over_normalized_loss": "73939041/12625000000000",
+      "coupled_squared_residual": "11995191/7000000",
+      "coupling_entries": 196,
+      "normalized_loss": "29997/8750000000",
+      "pair_loss": "29997/8750",
+      "paired_affine_rank": 6,
+      "result": "DILATED_MARTINGALE_RECORD_PASS",
+      "zero_coupling_entries": 0
+    },
+    "family": {
+      "Q_over_normalized_loss": "30083/95385600",
+      "coupled_squared_residual": "143/48",
+      "coupling_entries": 64,
+      "normalized_loss": "575/2433024",
+      "pair_loss": "575/96",
+      "paired_affine_rank": 6,
+      "result": "DILATED_MARTINGALE_RECORD_PASS",
+      "zero_coupling_entries": 0
+    },
+    "isometry": {
+      "Q_over_normalized_loss": null,
+      "normalized_loss": "0",
+      "pair_loss": "0",
+      "paired_affine_rank": 3,
+      "result": "ISOMETRIC_ZERO_CHECK_PASS"
+    },
+    "kernel_equality": {
+      "Q_over_normalized_loss": "113/362880",
+      "coupled_squared_residual": "8/3",
+      "coupling_entries": 64,
+      "normalized_loss": "35/152064",
+      "pair_loss": "35/6",
+      "paired_affine_rank": 6,
+      "result": "DILATED_MARTINGALE_RECORD_PASS",
+      "zero_coupling_entries": 8
+    },
+    "negative_kernel": {
+      "Q_over_normalized_loss": "233/760320",
+      "normalized_loss": "5/22528",
+      "pair_loss": "45/8",
+      "paired_affine_rank": 6,
+      "result": "NO_SIGN_ASSERTED"
+    },
+    "singular": {
+      "Q_over_normalized_loss": "67/285696",
+      "normalized_loss": "31/202752",
+      "pair_loss": "31/8",
+      "paired_affine_rank": 3,
+      "result": "NO_SIGN_ASSERTED"
+    },
+    "tiny_mass": {
+      "Q_over_normalized_loss": "74921965207583813553158333515272403375144722299232981861220442217625746469036806258097831902801483955510433979349196711448054786254364309935095811/12486994201263968925526388919192366226092589810266024123486684104052889016431457250952367476429891355155966138933937764896528012120865511613399040000000",
+      "coupled_squared_residual": "3533694129556768659166595001491412217954600449536621845811370094915223549/1766847064778384329583297500742918515827483896875618958121606201292619776",
+      "coupling_entries": 64,
+      "normalized_loss": "2826955303645414927333276001193129774363680359629297476649096075932178841/706738825911353731833319000297167406330993558750247583248642480517047910400000",
+      "pair_loss": "14134776518227074636666380005965648871818401798146487383245480379660894205/3533694129556768659166595001485837031654967793751237916243212402585239552",
+      "paired_affine_rank": 6,
+      "result": "DILATED_MARTINGALE_RECORD_PASS",
+      "zero_coupling_entries": 0
+    }
+  },
+  "parameter_schedules": 64,
+  "pinned_sources": 6,
+  "records": {
+    "below_variance": {
+      "active_sites": 8,
+      "certified_thresholds": "[0,infinity)",
+      "certified_variances": "[variance_cutoff,infinity)",
+      "dilation": "2",
+      "matrix": [
+        [
+          "2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "2"
+        ]
+      ],
+      "minimum_kernel": "3/4",
+      "pair_loss": "575/96",
+      "pair_loss_floor": "9/2",
+      "schema": "dilated-martingale-v1",
+      "source_radius_squared": "3",
+      "source_scatter": "3",
+      "spherical_gap": "1/192",
+      "status": "UNRESOLVED_AT_REQUESTED_VARIANCE",
+      "variance": "25343",
+      "variance_cutoff": "25344"
+    },
+    "dilated_map_expands": {
+      "active_sites": 14,
+      "certified_thresholds": "[0,infinity)",
+      "certified_variances": "[variance_cutoff,infinity)",
+      "dilation": "2",
+      "matrix": [
+        [
+          "14000000/4000001",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "14000000/4000001",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "14000000/4000001"
+        ]
+      ],
+      "minimum_kernel": "3580001/4000001",
+      "pair_loss": "29997/8750",
+      "pair_loss_floor": "36000009/14000000",
+      "schema": "dilated-martingale-v1",
+      "source_radius_squared": "3",
+      "source_scatter": "12000003/7000000",
+      "spherical_gap": "4000001/1344000000",
+      "status": "SIGNED_ALL_THRESHOLDS",
+      "variance": "1000000",
+      "variance_cutoff": "177408000000/4000001"
+    },
+    "family": {
+      "active_sites": 8,
+      "certified_thresholds": "[0,infinity)",
+      "certified_variances": "[variance_cutoff,infinity)",
+      "dilation": "2",
+      "matrix": [
+        [
+          "2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "2"
+        ]
+      ],
+      "minimum_kernel": "3/4",
+      "pair_loss": "575/96",
+      "pair_loss_floor": "9/2",
+      "schema": "dilated-martingale-v1",
+      "source_radius_squared": "3",
+      "source_scatter": "3",
+      "spherical_gap": "1/192",
+      "status": "SIGNED_ALL_THRESHOLDS",
+      "variance": "25344",
+      "variance_cutoff": "25344"
+    },
+    "isometry": {
+      "active_sites": 8,
+      "dilation": "2",
+      "pair_loss": "0",
+      "schema": "dilated-martingale-v1",
+      "source_radius_squared": "3",
+      "source_scatter": "3",
+      "status": "ISOMETRIC_ZERO",
+      "variance": "1"
+    },
+    "kernel_equality": {
+      "active_sites": 8,
+      "certified_thresholds": "[0,infinity)",
+      "certified_variances": "[variance_cutoff,infinity)",
+      "dilation": "2",
+      "matrix": [
+        [
+          "2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "2"
+        ]
+      ],
+      "minimum_kernel": "0",
+      "pair_loss": "35/6",
+      "pair_loss_floor": "9/2",
+      "schema": "dilated-martingale-v1",
+      "source_radius_squared": "3",
+      "source_scatter": "3",
+      "spherical_gap": "1/192",
+      "status": "SIGNED_ALL_THRESHOLDS",
+      "variance": "25344",
+      "variance_cutoff": "25344"
+    },
+    "negative_kernel": {
+      "active_sites": 8,
+      "dilation": "2",
+      "minimum_kernel": "-1/2",
+      "pair_loss": "45/8",
+      "reason": "negative coupling density",
+      "schema": "dilated-martingale-v1",
+      "source_radius_squared": "3",
+      "source_scatter": "3",
+      "status": "UNRESOLVED",
+      "variance": "25344"
+    },
+    "singular": {
+      "active_sites": 4,
+      "dilation": "2",
+      "pair_loss": "31/8",
+      "reason": "singular source covariance",
+      "schema": "dilated-martingale-v1",
+      "source_radius_squared": "2",
+      "source_scatter": "2",
+      "status": "UNRESOLVED",
+      "variance": "25344"
+    },
+    "tiny_mass": {
+      "active_sites": 8,
+      "certified_thresholds": "[0,infinity)",
+      "certified_variances": "[variance_cutoff,infinity)",
+      "dilation": "2",
+      "matrix": [
+        [
+          "803469022129495137770981046170581301261101496891396417650688/1267650600228229401496703205375",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "2"
+        ]
+      ],
+      "minimum_kernel": "664613680979807879394553155964370943/664613997892457936451903530140172288",
+      "pair_loss": "14134776518227074636666380005965648871818401798146487383245480379660894205/3533694129556768659166595001485837031654967793751237916243212402585239552",
+      "pair_loss_floor": "2410407066388485413312943138515546855583989178878679362568189/803469022129495137770981046170581301261101496891396417650688",
+      "schema": "dilated-martingale-v1",
+      "source_radius_squared": "2410407066388485413312943138509208602582848031871195846541313/401734511064747568885490523085290650630550748445698208825344",
+      "source_scatter": "803469022129495137770981046171848951861329726292893120856063/401734511064747568885490523085290650630550748445698208825344",
+      "spherical_gap": "803469022129495137770981046171848951861329726292893120856063/462798156746589199356085082593768051695906822119269602535932096",
+      "status": "SIGNED_ALL_THRESHOLDS",
+      "variance": "1000000",
+      "variance_cutoff": "191732053447952962781951998520820298545666426872488693581371771549943119019558253516868542313309369885527952678732320210977/1260864198284623334792929283206584934708190803223515822366931103020831074620909171487662574147285912905001113183322112"
+    }
+  },
+  "rejected_inputs": 12,
+  "rotated_record_sha256": "3eb57a6d51fe8b425516df6564f16f09fd2b44b59819c965d71b4e65558278ff",
+  "status": "DILATED_MARTINGALE_UNIFORM_FAMILY_PASS"
+}
