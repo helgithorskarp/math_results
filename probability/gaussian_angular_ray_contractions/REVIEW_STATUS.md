@@ -6,6 +6,10 @@ correctness acceptance in their stated scopes. Historical priority remains
 uncertain. The unrestricted dimension-three Gaussian-majorisation problem
 remains open.
 
+The separate [historical-scope comparison](PRIORITY.md) records seven primary
+antecedents, the distinction from finite partial dilations, and the remaining
+priority gaps. It adds no theorem and does not upgrade the novelty assessment.
+
 The original proof and source files retain their historical status wording.
 All fifteen files from the two reviewed source packets remain byte-for-byte
 unchanged; this notice is separate from their pinned manifests.
