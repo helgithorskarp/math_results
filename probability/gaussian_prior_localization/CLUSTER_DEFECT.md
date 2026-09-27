@@ -1,7 +1,10 @@
 # Source-cluster certificates for the full Gaussian hinge defect
 
-Complete author proof, with a finite exact certificate producer; independent
-review pending. The result combines the existing source-interaction
+Complete author proof, with a finite exact certificate producer. Two
+independent reviews accept the weighted bound, seven-ball region and
+producer, and found a missing factor two in the separation schedule.
+Equation (8) and its geometric controls below are corrected accordingly.
+The result combines the existing source-interaction
 localization with R8's new small-radius estimate. It supplies a practical
 all-threshold upper bound on parts of the unchanged finite frontier,
 including source configurations of large total radius. The unrestricted
@@ -161,9 +164,11 @@ For an integer `b>=0` and `M>=2`, put
 
 If every `r_i^2/s<=1/(8k)` and every pair has
 
-    d_ij >= 2 max_h r_h + sqrt(2s(b+l)),                  (8)
+    d_ij >= 2 max_h r_h + sqrt(8s(b+l)),                  (8)
 
 then (3) and R8's existing tolerance arithmetic give `E_i<=2^(-b-1)`.
+The normalized margin `(d_ij/2-r_i)/sqrt(s)` is then at least
+`sqrt(2(b+l))`, so its Gaussian exponent is at least `b+l`.
 Equations (1) and (6) give `eta_i<=2^(-b-1)`, since
 `M-1<=2^l` and `e>2`. Hence
 
@@ -173,6 +178,20 @@ This is uniform over masses, all source measures in those balls and all
 contractions. It gives a decreasing defect estimate for the certified
 source geometry; it is **not** a sequence of improved unrestricted global
 bounds. For `M=1` only the local radius estimate is needed.
+
+**Correction to the original schedule.** The first publication used
+`sqrt(2s(b+l))` in (8). Halving the center distance in the Voronoi
+margin makes that hypothesis give only exponent `(b+l)/4`. Both
+[independent reviews](../gaussian_source_cluster_review_frontier/REVIEW.md)
+([second review](../gaussian_source_cluster_review_frontier2/REVIEW.md))
+identified the omission. For `M=2,b=8,l=0,s=1,r_i=0,d_12=4`, the old
+hypothesis holds, but the defined classification error is
+`exp(-2)/2>1/18>1/512`. Thus its claimed classification budget fails.
+This refutes that intermediate estimate, not Gaussian majorisation or
+the defect conclusion under the weaker hypothesis. The stronger (8)
+above proves the advertised conclusion. The weighted theorem, numerical
+seven-ball bound and finite producer do not use this schedule and remain
+unchanged. The new controls check the geometry before the dyadic count.
 
 ## 3. Exact finite producer and automatic partition selection
 
@@ -239,7 +258,8 @@ Expected status: `SOURCE_CLUSTER_DEFECT_CERTIFICATES_PASS`.
 record; [CLUSTER_INPUTS.json](CLUSTER_INPUTS.json) pins the consumed sources.
 Controls check the finite mixture inequality directly on small rational
 arrays, half-space algebra, root enclosure directions, upward error rounding,
-the dyadic schedule, the entire49-label original rational contract, local
+the corrected geometric and dyadic schedule, its old failed margin,
+the entire49-label original rational contract, local
 paired ranks, rescaling, collisions, zero weights and invalid-map rejection.
 The ordinary and optimized runs must agree. Damaging the reported upper bound
 must fail the expected-record check.
@@ -248,8 +268,11 @@ The new proof rests on the existing localization inequality, elementary
 Gaussian tails, R8's now independently accepted local defect theorem and
 the previously accepted global cap. Its exponential estimate still rests
 on the written analytic high-noise argument audited in that review. The
-new cluster composition has not itself been independently reviewed, and
-exact arithmetic controls do not formalize its analytic premises.
+weighted cluster theorem, seven-ball region and producer now have two
+qualified independent acceptances. The separation repair is the correction
+specified in those reviews; the original contribution is not accepted in
+its entirety as printed. Exact arithmetic controls do not formalize the
+analytic premises.
 There is no external numerical
 library, floating sign, solver, hidden data or large omitted certificate.
 
