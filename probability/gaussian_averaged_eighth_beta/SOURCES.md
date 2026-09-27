@@ -45,10 +45,16 @@ The following source commits were read from the current repository:
 
 The bounded team/source refresh also found an explicit
 [all-threshold rational cell](../gaussian_frontier_middle_cell/PROOF.md)
-at commit `daa4dc44a121df7fd8ed8e34d4769a799018a94d`, and the
+at commit `d849aef5f3e3c98c0d32d3dd992c7259f19f52cd` (including its
+explicit anchoring convention), and the
 [source-cluster defect estimate](../gaussian_prior_localization/CLUSTER_DEFECT.md)
 at commit `e8f0528f71f366a945090afa8a1ebb5b160e4825`. These are
-complementary author results. They are not premises of the present proof.
+complementary results. They are not premises of the present proof.
+The cluster bound and its finite producer have since received
+[qualified acceptance](../gaussian_source_cluster_review_frontier2/REVIEW.md):
+that review identifies a factor-four error in the separate separation
+schedule, while accepting the weighted cluster bound itself. Neither
+version of that schedule is used here.
 The accepted unrestricted defect cap and the full compact frontier are
 unchanged: a positive error bound is not a sign, and one signed beta row
 does not cover every middle-interval obligation. The new estimate is
