@@ -55,10 +55,18 @@ Consequently every pair has squared-distance loss at least
 
     (63/64)^2-3/64 = 3777/4096 > 1/256.                      (4)
 
-Both supports lie in B(0,3). On restricting every coordinate to the lattice
-(1/256)Z, (1) is a cell of the unchanged R3 family R^c_1: seven labels are
-at most A_1=39; the weights are (24,22,22,22,22,22,22)/156 and W_1=156;
-the coordinate denominator is 256; and (4) implies its strict loss floor.
+The frontier also requires its first source and target labels to be zero.
+Anchor each endpoint separately: x'_i=x_i-x_0 and y'_i=y_i-y_0. This preserves
+all pair losses and both hinge profiles. The anchored source radius is at
+most 1+2epsilon<3 and target radius at most 2r_Y<3. Restricting the original
+coordinates to (1/256)Z therefore gives, after anchoring, members of the
+unchanged R3 family R^c_1: seven labels are at most A_1=39; the weights are
+(24,22,22,22,22,22,22)/156 and W_1=156; the coordinate denominator stays 256;
+and (4) implies its strict loss floor. The literal slice x_0=y_0=0 of (1)
+is an independently varying 36-coordinate box already in that gauge.
+The usual Kirszbraun extension premise used by the rational frontier turns
+these finite contractions into global 1-Lipschitz maps when needed. The
+endpoint comparison itself requires no extension theorem.
 Checking all parameters by sampling or enumeration is unnecessary: (4)
 and the analytic perturbation estimates are uniform on their entire boxes.
 
