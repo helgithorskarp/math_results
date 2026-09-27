@@ -1,0 +1,164 @@
+{
+  "beta_variance_controls": 78,
+  "direct_remainder_controls": [
+    {
+      "B": 1,
+      "bound": "at_most_2^-m",
+      "m": 16
+    },
+    {
+      "B": 2,
+      "bound": "at_most_2^-m",
+      "m": 64
+    },
+    {
+      "B": 3,
+      "bound": "at_most_2^-m",
+      "m": 144
+    },
+    {
+      "B": 4,
+      "bound": "at_most_2^-m",
+      "m": 256
+    },
+    {
+      "B": 6,
+      "bound": "at_most_2^-m",
+      "m": 576
+    }
+  ],
+  "interpolation_and_gaussian_controls": 119,
+  "middle_budgets": [
+    {
+      "B": 6,
+      "J": 43,
+      "L": 4,
+      "R": 1,
+      "eta": "1/256",
+      "holder_denominator": 1151,
+      "kappa": "1/64",
+      "mesh_negative_log2": 49493
+    },
+    {
+      "B": 8,
+      "J": 46,
+      "L": 4,
+      "R": 2,
+      "eta": "1/256",
+      "holder_denominator": 2047,
+      "kappa": "1/64",
+      "mesh_negative_log2": 94162
+    },
+    {
+      "B": 20,
+      "J": 66,
+      "L": 6,
+      "R": 8,
+      "eta": "1/1024",
+      "holder_denominator": 12799,
+      "kappa": "1/1000",
+      "mesh_negative_log2": 844734
+    }
+  ],
+  "pins": 9,
+  "rejected": [
+    "zero_covariance",
+    "zero_radius_integer",
+    "noninteger_radius",
+    "negative_level_index",
+    "zero_margin",
+    "zero_tolerance",
+    "inflated_covariance",
+    "undersized_radius",
+    "expansive_map",
+    "wrong_mass",
+    "zero_variance",
+    "floating_input",
+    "floating_covariance",
+    "floating_margin",
+    "floating_tolerance"
+  ],
+  "status": "ALL_RADIUS_LOSS_LOCALIZATION_CONTROLS_PASS",
+  "straight_path_pair_identities": 7040,
+  "strict_screw_hypothesis_control": {
+    "D": "11394669992621031545064118069539959088381653360985995988782863639199719734172327491651217135/4583330946752593694104002798921100862365803885748356563931316011047357924467507588912644096",
+    "Gaussian_sign": "NOT_TESTED",
+    "R": 8,
+    "covariance": [
+      [
+        "701/576",
+        "-27/64",
+        "545/2304"
+      ],
+      [
+        "-27/64",
+        "151/192",
+        "-215/768"
+      ],
+      [
+        "545/2304",
+        "-215/768",
+        "19297/4608"
+      ]
+    ],
+    "kappa": "1/1000",
+    "max_centered_radius_squared": "236705/9216",
+    "s": 1,
+    "sites": 24
+  },
+  "trust": "Exact finite controls; universal analytic theorem unformalized.",
+  "vanishing_and_zero_loss": [
+    {
+      "D": "0",
+      "M": "0",
+      "t": "0"
+    },
+    {
+      "D": "21/32",
+      "M": "3/64",
+      "t": "1/4"
+    },
+    {
+      "D": "6141/2097152",
+      "M": "3/4194304",
+      "t": "1/1024"
+    },
+    {
+      "D": "6597069766653/2417851639229258349412352",
+      "M": "3/4835703278458516698824704",
+      "t": "1/1099511627776"
+    }
+  ],
+  "whole_curve_budgets": [
+    {
+      "B": 38,
+      "L": 642,
+      "R": 1,
+      "atom_cap": "2*binom(2*q+3,3)-1",
+      "cubature_b": 5,
+      "holder_denominator": 46207,
+      "kappa": "1/64",
+      "log2_N_plus_2": 181408682,
+      "p": 1963,
+      "q_equals_prefactor_times_2_to_exponent": 181408691,
+      "q_exponent": 181408682,
+      "status": "SYMBOLIC_BUDGET_ONLY_NO_ENUMERATION",
+      "zeta": "1/16"
+    },
+    {
+      "B": 74,
+      "L": 2426,
+      "R": 2,
+      "atom_cap": "2*binom(2*q+3,3)-1",
+      "cubature_b": 5,
+      "holder_denominator": 175231,
+      "kappa": "1/64",
+      "log2_N_plus_2": 2565381840,
+      "p": 7320,
+      "q_equals_prefactor_times_2_to_exponent": 2565381858,
+      "q_exponent": 2565381840,
+      "status": "SYMBOLIC_BUDGET_ONLY_NO_ENUMERATION",
+      "zeta": "1/16"
+    }
+  ]
+}
