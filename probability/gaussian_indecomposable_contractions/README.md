@@ -1,5 +1,32 @@
 # Indecomposable finite contractions as a full-question test class
 
+The new [strong-chain closure theorem](STRONG_CLOSURE.md) shows that on a
+finite distance interval, approximation by finite strong-contraction chains
+implies an exact such chain. The existing seven-site positive control
+therefore has a neighborhood excluding all these factorizations, even with
+changing frames, unbounded factor counts and auxiliary labels. Strict
+rational inputs in the shared finite frontier inherit the exclusion.
+This is a **complete author proof pending independent review**, with no
+new Gaussian sign, cap family, or computed neighborhood radius.
+
+The [primary-literature comparison](CAP_PRIOR_ART.md) separates this stable
+obstruction from established Gaussian and ball-volume transfer theorems.
+It clarifies the accepted cap theorem's extension beyond strong chains,
+without claiming exhaustive historical priority. The former orthocentric
+templates and depth-one family remain closed at their reviewed scope.
+
+Run only the new compact exact controls with:
+
+```sh
+python3 -B probability/gaussian_indecomposable_contractions/strong_closure_control.py --check
+python3 -B -O probability/gaussian_indecomposable_contractions/strong_closure_control.py --check
+```
+
+Expected status: `FINITE_INTERVAL_STRONG_CLOSURE_CONTROLS_PASS`.
+[STRONG_CLOSURE_EXPECTED.json](STRONG_CLOSURE_EXPECTED.json) records the old
+fixture's two-state interval, exact determinants and three damaged-input
+rejections. The compactness and all-frame arguments remain written proofs.
+
 The [effective supplement](EFFECTIVE_BOUND.md) now bounds the auxiliary
 mesh by an explicit `M_N=O(N^4 16^N)` tetrahedra for N prescribed atoms.
 It gives at most `4M_N` labels and a surviving indecomposable gap greater

@@ -1,0 +1,75 @@
+{
+  "control": {
+    "core_determinant": "-2",
+    "cyclic_table": [
+      "54",
+      "34/3",
+      "130/3",
+      "134/9"
+    ],
+    "endpoint_pairs": 21,
+    "excluded_states": {
+      "001": {
+        "cyclic_pair": [
+          2,
+          0
+        ],
+        "squared_shortfall": "32/9"
+      },
+      "010": {
+        "cyclic_pair": [
+          1,
+          2
+        ],
+        "squared_shortfall": "32/9"
+      },
+      "011": {
+        "cyclic_pair": [
+          2,
+          0
+        ],
+        "squared_shortfall": "32/9"
+      },
+      "100": {
+        "cyclic_pair": [
+          0,
+          1
+        ],
+        "squared_shortfall": "32/9"
+      },
+      "101": {
+        "cyclic_pair": [
+          0,
+          1
+        ],
+        "squared_shortfall": "32/9"
+      },
+      "110": {
+        "cyclic_pair": [
+          1,
+          2
+        ],
+        "squared_shortfall": "32/9"
+      }
+    },
+    "interval_bits": [
+      "000",
+      "111"
+    ],
+    "labels": 7,
+    "normal_determinant": "4",
+    "paired_determinant": "4096/27",
+    "tight_pairs": 15,
+    "uniform_obstruction_squared": [
+      2,
+      30
+    ]
+  },
+  "damaged_inputs_rejected": [
+    "changed_target",
+    "wrong_tight_face",
+    "false_intermediate_state"
+  ],
+  "scope": "Exact old fixture only; no numerical neighborhood, general-frame solver, chain enumeration or Gaussian sign calculation.",
+  "status": "FINITE_INTERVAL_STRONG_CLOSURE_CONTROLS_PASS"
+}
