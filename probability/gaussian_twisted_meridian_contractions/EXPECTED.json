@@ -1,0 +1,69 @@
+{
+  "arithmetic": "Python integers and Fraction; no floats",
+  "clock": {
+    "benchmark_allowance_squared": "105/2",
+    "exact_clock_controls": 72
+  },
+  "families": [
+    {
+      "all_azimuth_budget_controls": 2100,
+      "axis_controls": 770,
+      "individual_azimuth_derivative_controls": 12600,
+      "meridian_labels": 25,
+      "name": "folding helical benchmark",
+      "pairs": 300
+    },
+    {
+      "all_azimuth_budget_controls": 2100,
+      "axis_controls": 770,
+      "individual_azimuth_derivative_controls": 12600,
+      "meridian_labels": 25,
+      "name": "variable-factor control",
+      "pairs": 300
+    }
+  ],
+  "negative_controls": {
+    "doubled_phase_budget": "-12175/1048576",
+    "invalid_parameters_rejected": 3,
+    "invalid_phase_schedules_rejected": 2,
+    "linear_clock_budget": "-3095839/1048576"
+  },
+  "scope": {
+    "gram_commutator": [
+      [
+        "0",
+        "4145/262144",
+        "5947/524288"
+      ],
+      [
+        "-4145/262144",
+        "0",
+        "-8005/524288"
+      ],
+      [
+        "-5947/524288",
+        "8005/524288",
+        "0"
+      ]
+    ],
+    "jacobian_determinants": [
+      "-1/1024",
+      "1/1024"
+    ],
+    "mean_gram_diagonal": [
+      "33/256",
+      "33/256",
+      "113/1024"
+    ],
+    "mean_jacobian_zero": true,
+    "rational_jacobians": 16
+  },
+  "status": "PASS",
+  "symbolic": {
+    "damaged_formulas_rejected": 3,
+    "distance_monomials": 31,
+    "distance_sha256": "252c0b49a6f184dd5ee34832524b9f1889a3f2956619ac0ca35f37e860d0664a",
+    "formal_variables": 12,
+    "universal_identities": 5
+  }
+}
