@@ -1,0 +1,45 @@
+{
+  "conclusion": {
+    "actual_contraction_required": false,
+    "diffuse_clouds_allowed": true,
+    "error_guard": "2*cloud_radius + l1(u-v) + l1(z-v) <= 2^-budget_exponent",
+    "independent_review": "PENDING",
+    "middle_gap_exponent": 1966080255,
+    "prior_region": "v_i >= 2^-mass_exponent; sum v_i=1",
+    "threshold_interval": "[0,infinity)",
+    "variance_interval": [
+      "1",
+      "4"
+    ]
+  },
+  "labels": 7,
+  "normalized_loss_exponent": 7,
+  "schedule": {
+    "M": 1966080254,
+    "N": 1966080247,
+    "budget_exponent": 1966080255,
+    "j": 655360000,
+    "k": 20,
+    "tail_A": "64",
+    "tail_Q": "25600",
+    "width_exponent": 7
+  },
+  "schema": "anchored-cloud-family-certificate-v1",
+  "status": "CERTIFIED_UNIFORM_ALL_THRESHOLD_FAMILY",
+  "strict_pairs": 1,
+  "uniform_loss_floor": "1/32",
+  "unordered_pairs": 21,
+  "width": {
+    "cap_gap_lower": "1/5",
+    "lower": "1/50",
+    "perpendicular_upper": [
+      "0",
+      "1",
+      "1",
+      "1",
+      "1",
+      "0",
+      "0"
+    ]
+  }
+}

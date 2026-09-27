@@ -1,0 +1,80 @@
+{
+  "certificate_sha256": "9d9a182294760b1122bd2e7d3a3a49fce129d95f1bf5897ccd192ecc479a9f19",
+  "covariance_prior_controls": [
+    "1/32",
+    "1/32",
+    "1/32",
+    "1/32",
+    "1/32",
+    "5/16",
+    "5/16",
+    "8/49"
+  ],
+  "dependency_pins": 6,
+  "dyadic_budget_denominator_materialized": false,
+  "family": {
+    "budget_exponent": 1966080255,
+    "labels": 7,
+    "same_reference_strict_homothety_MGF_buffer_excluded": true,
+    "source_diameter_squared": "4",
+    "strict_pairs": 1,
+    "target_diameter_squared": "4",
+    "uniform_loss_floor": "1/32",
+    "variance_interval": [
+      "1",
+      "4"
+    ],
+    "width_lower": "1/50"
+  },
+  "independent_endpoint_translation": "PASS",
+  "integer_inequality_checker_imports_producer": false,
+  "negative_controls": [
+    "understated_j",
+    "understated_k",
+    "understated_N",
+    "understated_M",
+    "understated_budget_exponent",
+    "false_loss_floor",
+    "false_width",
+    "undersized_transverse_bound",
+    "false_cap_gap",
+    "false_variance_scope",
+    "float_input",
+    "empty_prior_region",
+    "invalid_variance",
+    "anchor_mismatch",
+    "expanding_reference",
+    "incorrect_hull_witness",
+    "nonunit_cap_axis",
+    "invalid_cap_sine",
+    "zero_loss"
+  ],
+  "parameter_controls": [
+    {
+      "budget_exponent": 7864320255,
+      "mass_exponent": 3,
+      "scale": "1/4",
+      "variance_max": "1"
+    },
+    {
+      "budget_exponent": 2920320264,
+      "mass_exponent": 4,
+      "scale": "1/2",
+      "variance_max": "3/2"
+    },
+    {
+      "budget_exponent": 2154720591,
+      "mass_exponent": 4,
+      "scale": "2",
+      "variance_max": "8"
+    },
+    {
+      "budget_exponent": 12910080627,
+      "mass_exponent": 5,
+      "scale": "3/2",
+      "variance_max": "16"
+    }
+  ],
+  "status": "EFFECTIVE_ANCHORED_FAMILY_EXACT_CONTROLS_PASS",
+  "trust_boundary": "Written analytic proof and imported kernel/peak/tail lemmas; author controls, not peer review."
+}

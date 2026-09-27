@@ -1,0 +1,25 @@
+{
+  "schema": "anchored-cloud-family-input-v1",
+  "source": [[0,0,0],[1,0,0],[-1,0,0],[0,1,0],[0,-1,0],[0,0,1],[0,0,-1]],
+  "target": [[0,0,0],[1,0,0],[-1,0,0],[0,1,0],[0,-1,0],[0,0,1],[0,0,1]],
+  "anchors": [[0,0,0],[0,0,0]],
+  "radius": 1,
+  "mass_exponent": 4,
+  "variance_ratio": 4,
+  "width_witness": {
+    "kind": "nested-hulls-rational-cap-v1",
+    "target_in_source_hull": [
+      [1,0,0,0,0,0,0],
+      [0,1,0,0,0,0,0],
+      [0,0,1,0,0,0,0],
+      [0,0,0,1,0,0,0],
+      [0,0,0,0,1,0,0],
+      [0,0,0,0,0,1,0],
+      [0,0,0,0,0,1,0]
+    ],
+    "cap_axis": [0,0,-1],
+    "cap_cosine": "4/5",
+    "cap_sine_upper": "3/5",
+    "source_witness": 6
+  }
+}
