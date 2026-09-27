@@ -6,11 +6,15 @@ It gives at most `4M_N` labels and a surviving indecomposable gap greater
 than `delta*2^(-M_N)`, with positive masses bounded below explicitly.
 Rational input data give rational mesh and intermediate coordinates.
 The [consumer handoff](EFFECTIVE_HANDOFF.md) composes this with R3's
-accepted paired-cubature localization. **The new quantitative supplement
-awaits independent review and supplies no Gaussian sign.**
-The original supplement is committed at graph height 6260;
-[GRAPH_STATUS.json](GRAPH_STATUS.json) records its six initial dependency
-and citation relations. Upstream review citations do not accept this supplement.
+accepted paired-cubature localization. The supplement now has an
+[accepting independent review](../gaussian_effective_indecomposable_review2/REVIEW.md)
+at its original source commit de9a0bb7af7179ea6e1b2c5b4013f84d6955f981.
+**It supplies no Gaussian sign.** The original is committed at graph height
+6260, with the accepting review at 6273. [GRAPH_STATUS.json](GRAPH_STATUS.json)
+records the six original relations, subsequent verification/reproduction
+edges, and the verified review source commit 57d54289ba7a63d7438bdd1910231adc82cf7596.
+Two incorrect commit strings in the review graph body are documented there;
+the source verdict and reviewed mathematical bytes are unaffected.
 
 Run the new controls with standard-library Python 3.11 or later:
 
@@ -38,10 +42,11 @@ the same finite geometric factorization reduces both ball-volume questions.
 The original qualitative proof has an
 [accepting independent review](../gaussian_indecomposable_contractions_review2/REVIEW.md)
 at commit `4518e569424cbac04083e6cb9497cc97991cf301`; its historical pending
-status header is preserved with the reviewed bytes. That acceptance does
-not extend to the new effective supplement. The unrestricted Gaussian sign
-and historical priority remain unresolved. Classical Brehm extension is
-an explicit external dependency.
+status header is preserved with the reviewed bytes. The separate effective
+supplement review cited above supplies its own scoped acceptance. Both
+original proof files retain their historical review-pending headers unchanged.
+The unrestricted Gaussian sign and historical priority remain unresolved.
+Classical Brehm extension is an explicit external dependency.
 
 The compact [exact controls](EXPECTED.json) distinguish a decomposable diamond,
 the positive seven-site cap example, and the classical nonliftable simplex
