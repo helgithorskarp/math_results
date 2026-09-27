@@ -1,0 +1,342 @@
+{
+  "status": "ENDPOINT_BLOCK_CLASSIFICATION_CONTROLS_PASS",
+  "directed_graphs": 4096,
+  "weak_orders_per_graph": 75,
+  "exact_minimum_batch_histogram": {
+    "1": 543,
+    "2": 867,
+    "3": 1080,
+    "4": 1606
+  },
+  "direct_geometric_order_checks": 180,
+  "three_mover_paired_rank": 6,
+  "unanchored_displacement_plane_rank": 2,
+  "unanchored_displacement_plane_augmented_rank": 3,
+  "ordered_loss": "211968/4235",
+  "stage_ordered_losses": [
+    "927048/21175",
+    "12072/1925"
+  ],
+  "independently_expanded_inconsistency_minors": 4,
+  "rejected_controls": 10,
+  "fixtures": [
+    {
+      "labels": 7,
+      "movers": 3,
+      "status": "CERTIFIED",
+      "component_sizes": [
+        3
+      ],
+      "primitive_kinds": [
+        "COMMON_ANCHOR"
+      ],
+      "whole_map": {
+        "indices": [
+          4,
+          5,
+          6
+        ],
+        "kind": "COMMON_ANCHOR",
+        "anchor": [
+          "-161/1688",
+          "-161/1688",
+          "-175/1688"
+        ],
+        "rank": 3
+      },
+      "checked": {
+        "status": "ENDPOINT_BLOCK_CERTIFICATE_VERIFIED",
+        "labels": 7,
+        "stages": 1,
+        "pair_stage_checks": 21,
+        "trust": "Rational stage hypotheses checked; analytic conclusions use PROOF.md inputs."
+      }
+    },
+    {
+      "labels": 10,
+      "movers": 6,
+      "status": "CERTIFIED",
+      "component_sizes": [
+        3,
+        3
+      ],
+      "primitive_kinds": [
+        "COMMON_ANCHOR",
+        "COMMON_ANCHOR"
+      ],
+      "whole_map": {
+        "indices": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "kind": "NOT_COVERED",
+        "rank": 3,
+        "augmented_rank": 4,
+        "minor_indices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "augmented_minor": "-4431/256"
+      },
+      "checked": {
+        "status": "ENDPOINT_BLOCK_CERTIFICATE_VERIFIED",
+        "labels": 10,
+        "stages": 2,
+        "pair_stage_checks": 90,
+        "trust": "Rational stage hypotheses checked; analytic conclusions use PROOF.md inputs."
+      }
+    },
+    {
+      "labels": 13,
+      "movers": 9,
+      "status": "CERTIFIED",
+      "component_sizes": [
+        3,
+        3,
+        3
+      ],
+      "primitive_kinds": [
+        "COMMON_ANCHOR",
+        "COMMON_ANCHOR",
+        "COMMON_ANCHOR"
+      ],
+      "whole_map": {
+        "indices": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "kind": "NOT_COVERED",
+        "rank": 3,
+        "augmented_rank": 4,
+        "minor_indices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "augmented_minor": "-4431/256"
+      },
+      "checked": {
+        "status": "ENDPOINT_BLOCK_CERTIFICATE_VERIFIED",
+        "labels": 13,
+        "stages": 3,
+        "pair_stage_checks": 234,
+        "trust": "Rational stage hypotheses checked; analytic conclusions use PROOF.md inputs."
+      }
+    },
+    {
+      "labels": 16,
+      "movers": 12,
+      "status": "CERTIFIED",
+      "component_sizes": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "primitive_kinds": [
+        "COMMON_ANCHOR",
+        "COMMON_ANCHOR",
+        "COMMON_ANCHOR",
+        "COMMON_ANCHOR"
+      ],
+      "whole_map": {
+        "indices": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "kind": "NOT_COVERED",
+        "rank": 3,
+        "augmented_rank": 4,
+        "minor_indices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "augmented_minor": "-4431/256"
+      },
+      "checked": {
+        "status": "ENDPOINT_BLOCK_CERTIFICATE_VERIFIED",
+        "labels": 16,
+        "stages": 4,
+        "pair_stage_checks": 480,
+        "trust": "Rational stage hypotheses checked; analytic conclusions use PROOF.md inputs."
+      }
+    },
+    {
+      "labels": 7,
+      "movers": 3,
+      "status": "CERTIFIED",
+      "component_sizes": [
+        2,
+        1
+      ],
+      "primitive_kinds": [
+        "DISPLACEMENT_PLANE",
+        "DISPLACEMENT_PLANE"
+      ],
+      "whole_map": {
+        "indices": [
+          4,
+          5,
+          6
+        ],
+        "kind": "DISPLACEMENT_PLANE",
+        "normal": [
+          "0",
+          "0",
+          "1"
+        ],
+        "rank": 2
+      },
+      "checked": {
+        "status": "ENDPOINT_BLOCK_CERTIFICATE_VERIFIED",
+        "labels": 7,
+        "stages": 2,
+        "pair_stage_checks": 42,
+        "trust": "Rational stage hypotheses checked; analytic conclusions use PROOF.md inputs."
+      }
+    },
+    {
+      "labels": 4,
+      "movers": 4,
+      "status": "NOT_COVERED",
+      "component_sizes": [
+        4
+      ],
+      "primitive_kinds": [
+        "NOT_COVERED"
+      ],
+      "whole_map": {
+        "indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "kind": "NOT_COVERED",
+        "rank": 3,
+        "augmented_rank": 4,
+        "minor_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "augmented_minor": "7203/128"
+      },
+      "checked": {
+        "status": "NOT_COVERED_IS_NOT_A_COUNTEREXAMPLE"
+      }
+    },
+    {
+      "labels": 4,
+      "movers": 0,
+      "status": "CERTIFIED",
+      "component_sizes": [],
+      "primitive_kinds": [],
+      "whole_map": {
+        "kind": "IDENTITY"
+      },
+      "checked": {
+        "status": "ENDPOINT_BLOCK_CERTIFICATE_VERIFIED",
+        "labels": 4,
+        "stages": 0,
+        "pair_stage_checks": 0,
+        "trust": "Rational stage hypotheses checked; analytic conclusions use PROOF.md inputs."
+      }
+    },
+    {
+      "labels": 4,
+      "movers": 4,
+      "status": "CERTIFIED",
+      "component_sizes": [
+        4
+      ],
+      "primitive_kinds": [
+        "DISPLACEMENT_PLANE"
+      ],
+      "whole_map": {
+        "indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "kind": "DISPLACEMENT_PLANE",
+        "normal": [
+          "-1",
+          "1",
+          "0"
+        ],
+        "rank": 1
+      },
+      "checked": {
+        "status": "ENDPOINT_BLOCK_CERTIFICATE_VERIFIED",
+        "labels": 4,
+        "stages": 1,
+        "pair_stage_checks": 6,
+        "trust": "Rational stage hypotheses checked; analytic conclusions use PROOF.md inputs."
+      }
+    },
+    {
+      "labels": 3,
+      "movers": 2,
+      "status": "CERTIFIED",
+      "component_sizes": [
+        1,
+        1
+      ],
+      "primitive_kinds": [
+        "DISPLACEMENT_PLANE",
+        "DISPLACEMENT_PLANE"
+      ],
+      "whole_map": {
+        "indices": [
+          1,
+          2
+        ],
+        "kind": "DISPLACEMENT_PLANE",
+        "normal": [
+          "0",
+          "1",
+          "0"
+        ],
+        "rank": 1
+      },
+      "checked": {
+        "status": "ENDPOINT_BLOCK_CERTIFICATE_VERIFIED",
+        "labels": 3,
+        "stages": 2,
+        "pair_stage_checks": 6,
+        "trust": "Rational stage hypotheses checked; analytic conclusions use PROOF.md inputs."
+      }
+    }
+  ],
+  "gaussian_integrals_evaluated": false,
+  "old_motion_checkers_replayed": false
+}
