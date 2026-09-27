@@ -1,0 +1,114 @@
+{
+  "status": "INDEPENDENT_COMPLETE_BETA_ROW_ELEVEN_ACCEPT",
+  "verdict": "accept all beta entries in every row N<=11",
+  "target_artifact": "bafkreifvvmdfgjhav2oddy4b22iqx2b5xhouwe5w5nlimlruet3pgzdysu",
+  "target_source_commit": "663e97310e118d1ebe76562d6318955af7a258f9",
+  "input_files": 9,
+  "sqrt_denominator": 1000000000000000000,
+  "sqrt_enclosures": 42,
+  "cases": [
+    {
+      "base": 2,
+      "q": 11,
+      "j": 0,
+      "exponent": "9/4",
+      "epsilon": "1/300",
+      "minorant": {
+        "intervals": 128,
+        "minimum_numerator_bits": 134,
+        "minimum_denominator_bits": 146,
+        "minimum_sha256": "fbba42766f02d3edcf2c27ac4441c0e46dab400d157d073e97b120f6a15e4b5b",
+        "bounds_sha256": "ea58d5afdc4058344bb30a0fd7d202c87173d421baae94ac081496e6a68b75be"
+      },
+      "substituted_degree": 9,
+      "nonlinear_margin": {
+        "intervals": 64,
+        "minimum_numerator_bits": 67,
+        "minimum_denominator_bits": 79,
+        "minimum_sha256": "ccafe080cfd33c20d9ad28fc9075219969096113ce4845e80732fc0b4d0f8cdf",
+        "bounds_sha256": "f3af36763170f4fc303c4c179201086f18852ba8c65d27fc3f411be49468358c"
+      }
+    },
+    {
+      "base": 3,
+      "q": 10,
+      "j": 1,
+      "exponent": "32/15",
+      "epsilon": "1/6000",
+      "minorant": {
+        "intervals": 64,
+        "minimum_numerator_bits": 113,
+        "minimum_denominator_bits": 129,
+        "minimum_sha256": "058f826f1f3cf944273e6139256f6a75e6e5f9116b18558be8697dca852d19b4",
+        "bounds_sha256": "c33eedba1682527b98f16204f3ff7f4da68840990016ef14955950021ae2be78"
+      },
+      "substituted_degree": 32,
+      "nonlinear_margin": {
+        "intervals": 256,
+        "minimum_numerator_bits": 295,
+        "minimum_denominator_bits": 310,
+        "minimum_sha256": "2f61181a2c9510c7664dfd2a770da247df5a68ae1bb36a5a76161d88c4420325",
+        "bounds_sha256": "71673aa4925266d5decb145e52e6219ac945fa4dd8da3e23b564e6b881652b2a"
+      }
+    },
+    {
+      "base": 4,
+      "q": 9,
+      "j": 2,
+      "exponent": "25/12",
+      "epsilon": "1/30000",
+      "minorant": {
+        "intervals": 64,
+        "minimum_numerator_bits": 118,
+        "minimum_denominator_bits": 131,
+        "minimum_sha256": "20685f72f218b4128384d64da20dda3418604dca9d92c385a93c3f237ede3aa6",
+        "bounds_sha256": "260102f038c3ef61ec96ba413b51a5643adcf9258fbc5fab5ad21381795e1e86"
+      },
+      "substituted_degree": 25,
+      "nonlinear_margin": {
+        "intervals": 256,
+        "minimum_numerator_bits": 231,
+        "minimum_denominator_bits": 250,
+        "minimum_sha256": "148aab4455a0e99dd5849bef1a72296ef375b56a682c0794689f2dd360b5f610",
+        "bounds_sha256": "71369b9c611a31a9253ac06712bcb50509c7d2ffce1d266eabdc06289b195bb8"
+      }
+    },
+    {
+      "base": 5,
+      "q": 8,
+      "j": 3,
+      "exponent": "72/35",
+      "epsilon": "1/60000",
+      "minorant": {
+        "intervals": 64,
+        "minimum_numerator_bits": 103,
+        "minimum_denominator_bits": 115,
+        "minimum_sha256": "54f6113f8f4dcc3ed5a85ba3da12da87e861e1e9dde2705fdf163735c80a2fa8",
+        "bounds_sha256": "005efa6be74dd54e670bd90d4a556318dda60caefec1c148028cfe9555c0e19e"
+      },
+      "substituted_degree": 72,
+      "nonlinear_margin": {
+        "intervals": 1024,
+        "minimum_numerator_bits": 800,
+        "minimum_denominator_bits": 820,
+        "minimum_sha256": "b3d1b90e6feb3721602f1e8b1d857ac76cb0cb9962d172d8f457edb134603f11",
+        "bounds_sha256": "a0dd61d7536d7d1c07e143c3a4ae1e622b3790a36ecd5cd26018f48c582d6bd8"
+      }
+    }
+  ],
+  "retained_interaction_controls": 4,
+  "monotonicity_controls": 5,
+  "degree_elevation_controls": 66,
+  "credited_seven_factor_cases": [
+    [4, 7],
+    [5, 6],
+    [6, 5],
+    [7, 4],
+    [8, 3],
+    [9, 2],
+    [10, 1],
+    [11, 0]
+  ],
+  "full_majorisation_proved": false,
+  "formalized": false
+}
