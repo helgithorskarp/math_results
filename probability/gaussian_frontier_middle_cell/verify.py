@@ -163,6 +163,8 @@ def calculate():
          and cell['weight_denominator'] == 156, 'wrong frontier normalization')
     need(F(cell['source_coordinate_radius']) == F(1, 256)
          and F(cell['target_coordinate_radius']) == F(1, 16), 'wrong cell radii')
+    need(cell['frontier_anchoring'] == 'subtract each endpoint label 0 separately'
+         and cell['anchored_subcell_dimension'] == 36, 'wrong frontier gauge')
     a, b = map(F, cell['middle_window'])
     need((a, b) == (F(1, 256), F(11, 16)), 'wrong window')
     need(F(cell['claimed_adverse_middle_upper']) == -F(1, 200), 'wrong margin')
@@ -170,7 +172,8 @@ def calculate():
     need(3*F(1, 256)**2 < eps**2
          and 3*F(1, 16)**2 < target_radius**2, 'invalid Euclidean bounds')
     loss_floor = (1-2*eps)**2-F(3, 64)
-    need(loss_floor > F(1, 256) and 1+eps < 3, 'frontier cell not strict')
+    need(loss_floor > F(1, 256) and 1+2*eps < 3 and 2*target_radius < 3,
+         'anchored frontier cell not strict or outside its radius')
     example = [tuple(F(v, 256) for v in row)
                for row in cell['rank_six_target_integer_numerators']]
     need(len(example) == 7 and all(len(row) == 3 for row in example),
@@ -226,6 +229,9 @@ def calculate():
         'outer_exp_upper': str(outer_exp_upper),
         'source_inside_lower': str(source_inside), 'target_inside_lower': str(target_inside),
         'source_peak_upper': str(peak), 'uniform_pair_loss_lower': str(loss_floor),
+        'anchored_source_radius_upper': str(1+2*eps),
+        'anchored_target_radius_upper': str(2*target_radius),
+        'anchored_independent_coordinates': 36,
         'example_paired_determinant': str(det), 'example_minimum_loss': str(min(losses)),
         'orbit_stream_sha256': digest, 'controls': checked,
         'scope': 'All thresholds and every point of the stated continuous cell at variance one. Independent review pending; unrestricted majorisation remains open.'}
