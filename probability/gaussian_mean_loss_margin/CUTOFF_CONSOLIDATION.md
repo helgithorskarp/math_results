@@ -62,6 +62,9 @@ family. The [signed finite endpoints](../gaussian_prior_localization/SIGNED_ENDP
 and the [bounded-law tail mechanism](../gaussian_majorisation_open_stability/BOUNDED_LAWS.md)
 retain their own geometric and mass assumptions. They do not provide the
 missing uniform overlap merely by existing alongside the cutoff theorem.
+R3 subsequently [proved non-overlap](../gaussian_endpoint_join_obstruction/PROOF.md),
+graph6478, for the displayed finite-cloud tail and small-loss window schedules.
+The limitation is to that composition, not to Gaussian majorisation itself.
 
 The [covariance-boundary guard](../gaussian_covariance_boundary/PROOF.md)
 is complementary and still requires a positive threshold floor. It does
@@ -70,6 +73,15 @@ Further functional work should address this join, not extend both
 effective cutoff formulations separately. R2 retains exact certification;
 R3 retains parameter/cubature uniformity; R8 retains the functional sign
 bridge. No new Kneser--Poulsen consequence follows from this notice.
+
+Two subsequent functional results do complete the join for whole strongly
+damped families. R2's [dilated-martingale theorem](../gaussian_dilated_martingale_certificate/PROOF.md)
+allows relatively large targets at sufficiently large variance. R8's
+[uniform small-target theorem](../gaussian_uniform_small_target/PROOF.md)
+allows every specified variance with a much smaller target, using aggregate
+directional mass and the classical homothety flow. Both cover all thresholds,
+including diffuse laws. Neither completes the unrestricted small-loss join,
+and neither extends the two effective cutoff formulations consolidated here.
 
 ## Versioned evidence
 

@@ -1,0 +1,145 @@
+{
+  "claim_status": "complete author proof pending independent review",
+  "exact_log_boundary_controls": 805,
+  "exact_scalar_schedules": 30,
+  "example_schedule": {
+    "B": 43728,
+    "R": 1,
+    "S": 208,
+    "Z": 6,
+    "contraction_damping": {
+      "divisor": 1,
+      "negative_exponent": 43730
+    },
+    "hinge_margin_negative_exponent": 43729,
+    "j": 2,
+    "m": 43681,
+    "target_radius_negative_exponent": 43729
+  },
+  "finite_law_cases": {
+    "compact_dyadic_json": {
+      "guards": {
+        "source_covariance": true,
+        "source_radius": true,
+        "target_radius": true
+      },
+      "positive_source_atoms": 4,
+      "positive_target_atoms": 7,
+      "status": "CERTIFIED"
+    },
+    "independent_4_and_7_atom_laws_at_cap": {
+      "guards": {
+        "source_covariance": true,
+        "source_radius": true,
+        "target_radius": true
+      },
+      "positive_source_atoms": 4,
+      "positive_target_atoms": 7,
+      "status": "CERTIFIED"
+    },
+    "joint_orthogonal_rotation": {
+      "guards": {
+        "source_covariance": true,
+        "source_radius": true,
+        "target_radius": true
+      },
+      "positive_source_atoms": 4,
+      "positive_target_atoms": 7,
+      "status": "CERTIFIED"
+    },
+    "point_target": {
+      "guards": {
+        "source_covariance": true,
+        "source_radius": true,
+        "target_radius": true
+      },
+      "positive_source_atoms": 4,
+      "positive_target_atoms": 1,
+      "status": "CERTIFIED"
+    },
+    "rank_deficient_source": {
+      "guards": {
+        "source_covariance": false,
+        "source_radius": true,
+        "target_radius": true
+      },
+      "positive_source_atoms": 2,
+      "positive_target_atoms": 7,
+      "status": "UNRESOLVED"
+    },
+    "separate_translations": {
+      "guards": {
+        "source_covariance": true,
+        "source_radius": true,
+        "target_radius": true
+      },
+      "positive_source_atoms": 4,
+      "positive_target_atoms": 7,
+      "status": "CERTIFIED"
+    },
+    "source_outside_radius": {
+      "guards": {
+        "source_covariance": true,
+        "source_radius": false,
+        "target_radius": true
+      },
+      "positive_source_atoms": 4,
+      "positive_target_atoms": 7,
+      "status": "UNRESOLVED"
+    },
+    "too_small_source_covariance": {
+      "guards": {
+        "source_covariance": false,
+        "source_radius": true,
+        "target_radius": true
+      },
+      "positive_source_atoms": 4,
+      "positive_target_atoms": 7,
+      "status": "UNRESOLVED"
+    },
+    "twice_the_target_cap": {
+      "guards": {
+        "source_covariance": true,
+        "source_radius": true,
+        "target_radius": false
+      },
+      "positive_source_atoms": 4,
+      "positive_target_atoms": 7,
+      "status": "UNRESOLVED"
+    },
+    "variance_rescaling": {
+      "guards": {
+        "source_covariance": true,
+        "source_radius": true,
+        "target_radius": true
+      },
+      "positive_source_atoms": 4,
+      "positive_target_atoms": 7,
+      "status": "CERTIFIED"
+    },
+    "zero_mass_outlier_ignored": {
+      "guards": {
+        "source_covariance": true,
+        "source_radius": true,
+        "target_radius": true
+      },
+      "positive_source_atoms": 4,
+      "positive_target_atoms": 7,
+      "status": "CERTIFIED"
+    }
+  },
+  "malformed_rejections": [
+    "rational_0",
+    "rational_1",
+    "rational_2",
+    "rational_3",
+    "zero_radius",
+    "negative_covariance_bits",
+    "zero_variance",
+    "incorrect_total_mass",
+    "negative_mass",
+    "wrong_dimension"
+  ],
+  "record_sha256": "9e5c2ce70103299fc2497f85a4d406898b20a085a89f5436f07b49517828f574",
+  "trust_boundary": "The controls do not prove the analytic identities or the diffuse-law theorem."
+}
