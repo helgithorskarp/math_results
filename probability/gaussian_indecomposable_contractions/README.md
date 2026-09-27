@@ -1,5 +1,35 @@
 # Indecomposable finite contractions as a full-question test class
 
+The new [linear-height theorem](LINEAR_HEIGHT.md) replaces the previous
+exponential chain-length bound by `v-4` for a common tetrahedral framework
+with v vertices. Selected opposite-vertex distances are binary and can
+decrease only once; they determine every placement after fixing a root.
+For an N-atom input with negative hinge gap delta, this improves the
+guaranteed indecomposable gap from `delta*2^(-M_N)` to
+`delta/[2(M_N-1)]`. The label bound improves to `M_N+3`.
+
+The [new handoff](LINEAR_HANDOFF.md) carries this into the accepted
+paired-cubature frontier and distinguishes absolute-error requirements
+from working precision and runtime. This is a **complete author proof
+pending independent review**. It gives effective complexity information,
+not a Gaussian sign or a new positive map family. Previously reviewed
+proof and evidence files remain unchanged.
+
+Run the new compact controls with standard-library Python 3.11 or later:
+
+```sh
+python3 -B probability/gaussian_indecomposable_contractions/linear_height.py --check
+python3 -B -O probability/gaussian_indecomposable_contractions/linear_height.py --check
+python3 -B probability/gaussian_indecomposable_contractions/linear_height.py --budget 7
+```
+
+Expected status: `LINEAR_CHAIN_HEIGHT_CONTROLS_PASS`.
+[LINEAR_HEIGHT_EXPECTED.json](LINEAR_HEIGHT_EXPECTED.json) records complete
+small distance intervals, cycle and collision handling, a failed converse,
+four damaged-input rejections, and exact loss/precision budgets. The controls
+do not integrate Gaussians, construct the enormous bounded mesh, or prove
+the universal theorem by enumeration.
+
 The new [strong-chain closure theorem](STRONG_CLOSURE.md) shows that on a
 finite distance interval, approximation by finite strong-contraction chains
 implies an exact such chain. The existing seven-site positive control
