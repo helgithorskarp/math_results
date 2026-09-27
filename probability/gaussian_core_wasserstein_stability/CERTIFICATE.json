@@ -1,0 +1,119 @@
+{
+  "accumulated_core_unordered_loss_sum": "270",
+  "background_vertices": 8,
+  "conclusion": {
+    "actual_contraction_required": false,
+    "actual_source_support_bound_required": false,
+    "background_atom_count_bound_required": false,
+    "diffuse_background_allowed": true,
+    "endpoint_anchor_required": false,
+    "error_guard": "W1(mu,mu_actual)+W1(nu,nu_actual) <= 2^-budget_exponent",
+    "independent_review": "PENDING",
+    "middle_band": "[C_s*2^-j, actual_source_peak]",
+    "middle_gap_exponent": 12564298226894,
+    "minimum_background_mass_required": false,
+    "minimum_step_loss_required": false,
+    "reference_prior_region": "core v_i >= 2^-mass_exponent; arbitrary remaining law on the background polytope",
+    "target_support_guard": "supp(nu_actual) subset K + B(0,2^-target_thickening_exponent)",
+    "threshold_interval": "[0,infinity)",
+    "variance_interval": [
+      "1",
+      "4"
+    ]
+  },
+  "core_labels": 15,
+  "endpoint_anchor_obstruction": {
+    "endpoint_anchors_exist": false,
+    "squared_norm_residual": "6"
+  },
+  "geometry_labels": 23,
+  "normalized_loss_exponent": 3,
+  "pairs_per_step": 253,
+  "schedule": {
+    "M": 12564298226893,
+    "N": 12564298226890,
+    "budget_exponent": 12564298226894,
+    "j": 3141074556214,
+    "k": 151,
+    "tail_A": "144",
+    "tail_Q": "23040000/13",
+    "target_thickening_exponent": 13
+  },
+  "schema": "core-wasserstein-family-certificate-v1",
+  "status": "CERTIFIED_CORE_WASSERSTEIN_ALL_THRESHOLD_FAMILY",
+  "step_records": [
+    {
+      "affine_ranks": null,
+      "all_vertex_loss_sum": "70",
+      "core_unordered_loss_sum": "46",
+      "kind": "norm",
+      "strict_pairs": 21
+    },
+    {
+      "affine_ranks": null,
+      "all_vertex_loss_sum": "68",
+      "core_unordered_loss_sum": "44",
+      "kind": "norm",
+      "strict_pairs": 21
+    },
+    {
+      "affine_ranks": null,
+      "all_vertex_loss_sum": "70",
+      "core_unordered_loss_sum": "46",
+      "kind": "norm",
+      "strict_pairs": 21
+    },
+    {
+      "affine_ranks": null,
+      "all_vertex_loss_sum": "68",
+      "core_unordered_loss_sum": "44",
+      "kind": "norm",
+      "strict_pairs": 21
+    },
+    {
+      "affine_ranks": null,
+      "all_vertex_loss_sum": "70",
+      "core_unordered_loss_sum": "46",
+      "kind": "norm",
+      "strict_pairs": 21
+    },
+    {
+      "affine_ranks": null,
+      "all_vertex_loss_sum": "68",
+      "core_unordered_loss_sum": "44",
+      "kind": "norm",
+      "strict_pairs": 21
+    }
+  ],
+  "steps": 6,
+  "uniform_ordered_loss_floor": "135/256",
+  "width": {
+    "cap_gap_lower": "13/200",
+    "lower": "13/20000",
+    "perpendicular_upper": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "17/8",
+      "17/8",
+      "1/2",
+      "1/2",
+      "1/2",
+      "1/2",
+      "1/2",
+      "1/2",
+      "1/2",
+      "1/2"
+    ]
+  }
+}
