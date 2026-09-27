@@ -1,0 +1,54 @@
+{
+  "status": "INDEPENDENT_UNIFORM_LIPSCHITZ_ACCEPT",
+  "verdict": "accept the stated uniform eventual Gaussian majorisation family",
+  "target_artifact": "bafkreicig6auyae5d2ofi6rkpoqdkoij34sb6pra2ytn7xbqfyrsnsa7cq",
+  "target_source_commit": "ba0c239ecafa9d02a611dde4960ca3682e9adc17",
+  "pinned_files": 13,
+  "analytic_constant_controls": {
+    "frame_product_dimensions": [
+      [2, 4, "1"],
+      [3, 8, "2"],
+      [4, 16, "3"],
+      [5, 32, "4"],
+      [6, 64, "5"],
+      [7, 128, "6"],
+      [8, 256, "7"]
+    ],
+    "cosh_second_derivative_coefficients": 32,
+    "cosh_second_derivative_last": "1/515478162005154416670198144174093515761641159459089843307632695899309735936000000000000000",
+    "scatter_constant": "1/96",
+    "endpoint_error_constant": 44,
+    "threshold_overlap": "1/64",
+    "cutoff_coefficient": 4224,
+    "one_sixth_cutoff_coefficient": 33792,
+    "parameter_schedules": 72,
+    "automatic_factor_controls": 4
+  },
+  "thin_family_controls": {
+    "pair_controls": 459,
+    "operator_remainder": "(a-b)^2",
+    "sharp_squared_lipschitz": "1/48",
+    "parameter_records": [
+      ["1/100", "40003/30000", "20001/10000"],
+      ["1/1000", "4000003/3000000", "2000001/1000000"],
+      [
+        "1/1180591620717411303424",
+        "5575186299632655785383929568162090376495107/4181389724724491839037947176121567782371328",
+        "2787593149816327892691964784081045188247553/1393796574908163946345982392040522594123776"
+      ]
+    ],
+    "target_covariance": [
+      ["1/648", "0", "1/1944"],
+      ["0", "1/648", "1/1944"],
+      ["1/1944", "1/1944", "11/2916"]
+    ],
+    "covariance_floor_scaled_leading_minors": [3, 9, 90],
+    "paired_affine_determinant_coefficient": "-1/54",
+    "uniform_cutoff_upper": "39603960099/781250",
+    "published_epsilon_cutoff": "1267326723168/25001875"
+  },
+  "rejected_corruptions": 4,
+  "all_variances_proved": false,
+  "unrestricted_contractions_proved": false,
+  "formalized": false
+}
