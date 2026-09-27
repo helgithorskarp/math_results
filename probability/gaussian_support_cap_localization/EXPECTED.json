@@ -1,0 +1,161 @@
+{
+  "byte_pins": 10,
+  "center_law_martingale_obstruction": true,
+  "coarse_signed_cell_checks": [
+    [
+      1,
+      1,
+      0,
+      2
+    ],
+    [
+      1,
+      7,
+      0,
+      2
+    ],
+    [
+      1,
+      16,
+      0,
+      2
+    ],
+    [
+      2,
+      1,
+      -8,
+      8
+    ],
+    [
+      2,
+      7,
+      -8,
+      8
+    ],
+    [
+      2,
+      16,
+      -8,
+      8
+    ],
+    [
+      3,
+      1,
+      -22,
+      22
+    ],
+    [
+      3,
+      7,
+      -22,
+      22
+    ],
+    [
+      3,
+      16,
+      -22,
+      22
+    ],
+    [
+      4,
+      1,
+      -40,
+      40
+    ],
+    [
+      4,
+      7,
+      -40,
+      40
+    ],
+    [
+      4,
+      16,
+      -40,
+      40
+    ],
+    [
+      8,
+      1,
+      -176,
+      176
+    ],
+    [
+      8,
+      7,
+      -176,
+      176
+    ],
+    [
+      8,
+      16,
+      -176,
+      176
+    ]
+  ],
+  "control_has_known_straight_motion": true,
+  "endpoint_overlap": "1/64",
+  "fixture": {
+    "active_sites": 8,
+    "actual_cloud_contraction_required": true,
+    "actual_loss_lower": "421731432931327/140737488355328",
+    "actual_radius": "32769/16384",
+    "aggregate_mass_lower": "4095/32768",
+    "analytical_premise": "universal spherical comparison6494 and endpoint6032/6048",
+    "certified_thresholds": "[0,infinity)",
+    "certified_variances": "[prefactor*2^power_of_two,infinity)",
+    "cloud_radius": "1/16384",
+    "common_label_weights_required": true,
+    "mass_exponent": 4,
+    "reference_loss": "25165823/8388608",
+    "reference_radius": "2",
+    "relative_weight_error": "1/4096",
+    "schema": "support-cap-localization-v1",
+    "status": "CERTIFIED_UNIFORM_EVENTUAL_FAMILY",
+    "tail_join": 64,
+    "tail_slope_lower": "21743516067/137438953472",
+    "variance_cutoff": {
+      "power_of_two": 512,
+      "prefactor": "38051054201746882593/3373851463450616"
+    },
+    "width": {
+      "face_cells": 393216,
+      "mesh": 256,
+      "normalized_floor_sum": 215890192012,
+      "normalized_integral_lower": "21760293283/17179869184",
+      "reference_width_lower": "21760293283/137438953472",
+      "rounding_bits": 36
+    }
+  },
+  "lipschitz_constant": 1,
+  "rejected_inputs": [
+    "negative_weight",
+    "wrong_total",
+    "float",
+    "radius",
+    "rho",
+    "expansion",
+    "negative_cloud",
+    "mesh",
+    "bits",
+    "dimension"
+  ],
+  "rejected_records": [
+    "rounding",
+    "width",
+    "cutoff",
+    "contraction",
+    "weights"
+  ],
+  "scaling_factor": 9,
+  "segment_width_lower": "680049485/4294967296",
+  "status": "SUPPORT_CAP_LOCALIZATION_PASS",
+  "tiny_mass_exponent": 80,
+  "unresolved": [
+    "coarse",
+    "isometry",
+    "loss_reserve",
+    "width_reserve"
+  ],
+  "zero_mass_site_removed": true
+}
