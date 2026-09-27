@@ -1,0 +1,579 @@
+{
+  "budgets": [
+    {
+      "M_N": 5306422463239896,
+      "N": 1,
+      "absolute_error_digits": 66,
+      "coarse_absolute_error_digits": 73,
+      "delta": "1/1000",
+      "labels_at_most": 5306422463239899,
+      "minimum_mass": "1/10623457771406277798",
+      "minimum_negative_gap": "1/10612844926479790000"
+    },
+    {
+      "M_N": 90168788621607057936,
+      "N": 4,
+      "absolute_error_digits": 80,
+      "coarse_absolute_error_digits": 89,
+      "delta": "1/1000",
+      "labels_at_most": 90168788621607057939,
+      "minimum_mass": "1/180517914820457329993878",
+      "minimum_negative_gap": "1/180337577243214115870000"
+    },
+    {
+      "M_N": 1054021675129126795053360,
+      "N": 7,
+      "absolute_error_digits": 93,
+      "coarse_absolute_error_digits": 101,
+      "delta": "1/1000",
+      "labels_at_most": 1054021675129126795053363,
+      "minimum_mass": "1/2110151393608511843696832726",
+      "minimum_negative_gap": "1/2108043350258253590106718000"
+    },
+    {
+      "M_N": 9904257024005253451602558960,
+      "N": 10,
+      "absolute_error_digits": 106,
+      "coarse_absolute_error_digits": 113,
+      "delta": "1/1000",
+      "labels_at_most": 9904257024005253451602558963,
+      "minimum_mass": "1/19828322562058517410108323043926",
+      "minimum_negative_gap": "1/19808514048010506903205117918000"
+    }
+  ],
+  "damaged_inputs_rejected": {
+    "bits_decrease_but_pair_expands": "endpoints are not a contraction",
+    "changed_tight_edge": "endpoint changed a mesh edge",
+    "disconnected_framework": "disconnected facet graph",
+    "zero_cell_height": "degenerate tetrahedron"
+  },
+  "fixtures": [
+    {
+      "all_framework_states": 8,
+      "binary_distance_values": [
+        [
+          "2",
+          "6"
+        ],
+        [
+          "2",
+          "6"
+        ],
+        [
+          "2",
+          "6"
+        ]
+      ],
+      "bit_decrease_without_contraction": [],
+      "covers": [
+        [
+          "001",
+          "000"
+        ],
+        [
+          "010",
+          "000"
+        ],
+        [
+          "011",
+          "001"
+        ],
+        [
+          "011",
+          "010"
+        ],
+        [
+          "100",
+          "000"
+        ],
+        [
+          "101",
+          "001"
+        ],
+        [
+          "101",
+          "100"
+        ],
+        [
+          "110",
+          "010"
+        ],
+        [
+          "110",
+          "100"
+        ],
+        [
+          "111",
+          "011"
+        ],
+        [
+          "111",
+          "101"
+        ],
+        [
+          "111",
+          "110"
+        ]
+      ],
+      "interval_states": 8,
+      "longest_strict_chain": 3,
+      "name": "eight_states_height_three",
+      "order_comparisons_checked": 27,
+      "r": 3,
+      "selected_pairs": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "states": [
+        {
+          "bits": "000",
+          "distance_vector": [
+            "1",
+            "1",
+            "1",
+            "3",
+            "3",
+            "3",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "bits": "001",
+          "distance_vector": [
+            "1",
+            "1",
+            "1",
+            "3",
+            "3",
+            "3",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "6",
+            "0",
+            "4",
+            "4"
+          ]
+        },
+        {
+          "bits": "010",
+          "distance_vector": [
+            "1",
+            "1",
+            "1",
+            "3",
+            "3",
+            "3",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "6",
+            "2",
+            "2",
+            "2",
+            "2",
+            "4",
+            "0",
+            "4"
+          ]
+        },
+        {
+          "bits": "011",
+          "distance_vector": [
+            "1",
+            "1",
+            "1",
+            "3",
+            "3",
+            "3",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "6",
+            "2",
+            "2",
+            "2",
+            "6",
+            "4",
+            "4",
+            "8"
+          ]
+        },
+        {
+          "bits": "100",
+          "distance_vector": [
+            "1",
+            "1",
+            "1",
+            "3",
+            "3",
+            "3",
+            "2",
+            "2",
+            "6",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "4",
+            "4",
+            "0"
+          ]
+        },
+        {
+          "bits": "101",
+          "distance_vector": [
+            "1",
+            "1",
+            "1",
+            "3",
+            "3",
+            "3",
+            "2",
+            "2",
+            "6",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "6",
+            "4",
+            "8",
+            "4"
+          ]
+        },
+        {
+          "bits": "110",
+          "distance_vector": [
+            "1",
+            "1",
+            "1",
+            "3",
+            "3",
+            "3",
+            "2",
+            "2",
+            "6",
+            "2",
+            "2",
+            "2",
+            "2",
+            "6",
+            "2",
+            "2",
+            "2",
+            "2",
+            "8",
+            "4",
+            "4"
+          ]
+        },
+        {
+          "bits": "111",
+          "distance_vector": [
+            "1",
+            "1",
+            "1",
+            "3",
+            "3",
+            "3",
+            "2",
+            "2",
+            "6",
+            "2",
+            "2",
+            "2",
+            "2",
+            "6",
+            "2",
+            "2",
+            "2",
+            "6",
+            "8",
+            "8",
+            "8"
+          ]
+        }
+      ],
+      "tetrahedra": 4,
+      "vertices": 7,
+      "zero_edge_components": 4
+    },
+    {
+      "all_framework_states": 8,
+      "binary_distance_values": [
+        [
+          "2",
+          "6"
+        ],
+        [
+          "2",
+          "6"
+        ],
+        [
+          "2",
+          "6"
+        ]
+      ],
+      "bit_decrease_without_contraction": [],
+      "covers": [
+        [
+          "111",
+          "110"
+        ]
+      ],
+      "interval_states": 2,
+      "longest_strict_chain": 1,
+      "name": "two_zero_dual_edges",
+      "order_comparisons_checked": 27,
+      "r": 1,
+      "selected_pairs": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "states": [
+        {
+          "bits": "110",
+          "distance_vector": [
+            "1",
+            "1",
+            "1",
+            "3",
+            "3",
+            "3",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "6",
+            "2",
+            "2",
+            "2",
+            "6",
+            "4",
+            "4",
+            "8"
+          ]
+        },
+        {
+          "bits": "111",
+          "distance_vector": [
+            "1",
+            "1",
+            "1",
+            "3",
+            "3",
+            "3",
+            "2",
+            "2",
+            "6",
+            "2",
+            "2",
+            "2",
+            "2",
+            "6",
+            "2",
+            "2",
+            "2",
+            "6",
+            "8",
+            "8",
+            "8"
+          ]
+        }
+      ],
+      "tetrahedra": 4,
+      "vertices": 7,
+      "zero_edge_components": 2
+    },
+    {
+      "all_framework_states": 4,
+      "binary_distance_values": [
+        [
+          "100",
+          "104"
+        ],
+        [
+          "100",
+          "104"
+        ]
+      ],
+      "bit_decrease_without_contraction": [
+        "01"
+      ],
+      "covers": [
+        [
+          "11",
+          "00"
+        ]
+      ],
+      "interval_states": 2,
+      "longest_strict_chain": 1,
+      "name": "other_pairs_exclude_mixed_bits",
+      "order_comparisons_checked": 7,
+      "r": 2,
+      "selected_pairs": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "states": [
+        {
+          "bits": "00",
+          "distance_vector": [
+            "1",
+            "1",
+            "1",
+            "101",
+            "101",
+            "2",
+            "2",
+            "100",
+            "122",
+            "2",
+            "82",
+            "100",
+            "102",
+            "102",
+            "202"
+          ]
+        },
+        {
+          "bits": "11",
+          "distance_vector": [
+            "1",
+            "1",
+            "1",
+            "101",
+            "101",
+            "2",
+            "2",
+            "104",
+            "122",
+            "2",
+            "82",
+            "104",
+            "102",
+            "102",
+            "202"
+          ]
+        }
+      ],
+      "tetrahedra": 3,
+      "vertices": 6,
+      "zero_edge_components": 3
+    },
+    {
+      "all_framework_states": 1,
+      "binary_distance_values": [
+        [
+          "1",
+          "5"
+        ]
+      ],
+      "bit_decrease_without_contraction": [],
+      "covers": [],
+      "interval_states": 1,
+      "longest_strict_chain": 0,
+      "name": "cycle_consistency",
+      "order_comparisons_checked": 1,
+      "r": 0,
+      "selected_pairs": [
+        [
+          2,
+          4
+        ]
+      ],
+      "states": [
+        {
+          "bits": "1",
+          "distance_vector": [
+            "4",
+            "2",
+            "2",
+            "3",
+            "2",
+            "2",
+            "3",
+            "2",
+            "5",
+            "5"
+          ]
+        }
+      ],
+      "tetrahedra": 3,
+      "vertices": 5,
+      "zero_edge_components": 1
+    }
+  ],
+  "mass_gap_checks": 840,
+  "scope": "Exact small geometry and budget controls; universal proof pending independent review; no Gaussian sign.",
+  "status": "LINEAR_CHAIN_HEIGHT_CONTROLS_PASS"
+}
