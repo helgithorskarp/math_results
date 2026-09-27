@@ -1,0 +1,81 @@
+{
+  "coefficient_budgets": {
+    "R1_error_over_z": "4405/64",
+    "R1_max": "3125/256",
+    "R2_absolute_max": "9375/128",
+    "R2_epsilon_coefficient": "3125/128",
+    "R2_error_over_z": "13757/32",
+    "outer_error_coefficient_of_pi": "25/4",
+    "polynomial_coefficients_q2_q3_q4": [
+      440,
+      705,
+      338
+    ]
+  },
+  "formal_identity": {
+    "monomials": 4,
+    "status": "IDENTITY_PASS"
+  },
+  "modal_budget": {
+    "actual_prefix_constant": 256,
+    "high_noise_overlap": true,
+    "limit_prefix_constant": 64,
+    "max_epsilon": "1/64",
+    "min_lambda_R": "1/2",
+    "prefix_error_over_D_epsilon_upper": "5/1024",
+    "small_lambda_J_over_D_coefficient": "1/12"
+  },
+  "schema": "relative-spherical-transfer-v1",
+  "status": "EXACT_RELATIVE_TRANSFER_CHECKS_PASS",
+  "trust_boundary": "unformalized continuum proof; general spherical margin and overlapping tail remain premises",
+  "two_point_calibration": {
+    "C2_upper": 8857351,
+    "analytic_J_over_D_lower": "1/3888",
+    "controls": [
+      {
+        "Gaussian_normalized_error_upper": "8857351/68719476736",
+        "assumed_from_analytic_control_J_lower": "1/1944",
+        "loss": "2",
+        "target_radius": "0"
+      },
+      {
+        "Gaussian_normalized_error_upper": "26572053/274877906944",
+        "assumed_from_analytic_control_J_lower": "1/2592",
+        "loss": "3/2",
+        "target_radius": "1/2"
+      },
+      {
+        "Gaussian_normalized_error_upper": "274577881/17592186044416",
+        "assumed_from_analytic_control_J_lower": "31/497664",
+        "loss": "31/128",
+        "target_radius": "15/16"
+      },
+      {
+        "Gaussian_normalized_error_upper": "1160941852921/295147905179352825856",
+        "assumed_from_analytic_control_J_lower": "131071/8349416423424",
+        "loss": "131071/2147483648",
+        "target_radius": "65535/65536"
+      },
+      {
+        "Gaussian_normalized_error_upper": "326778574136030741422201081/23384026197294446691258957323460528314494920687616",
+        "assumed_from_analytic_control_J_lower": "36893488147419103231/661508921294304372972800236847357403070464",
+        "loss": "36893488147419103231/170141183460469231731687303715884105728",
+        "target_radius": "18446744073709551615/18446744073709551616"
+      },
+      {
+        "Gaussian_normalized_error_upper": "6028000725859082440591569085020759199007168761/7957171782556586274486115970349133441607298412757563479047423630290551952200534008528896",
+        "assumed_from_analytic_control_J_lower": "680564733841876926926749214863536422911/225099821477342683903421994856889292866756850190005256492705543311383124020035584",
+        "loss": "680564733841876926926749214863536422911/57896044618658097711785492504343953926634992332820282019728792003956564819968",
+        "target_radius": "340282366920938463463374607431768211455/340282366920938463463374607431768211456"
+      }
+    ],
+    "one_sufficient_variance": 137438953472,
+    "scope": "normalization control on an already positive two-point class",
+    "spherical_parameter_interval": [
+      "1/2",
+      "2"
+    ],
+    "variance_requirement_upper": "68874761376",
+    "zero_loss_equalities": true
+  }
+}
