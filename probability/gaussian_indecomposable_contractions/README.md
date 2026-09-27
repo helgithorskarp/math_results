@@ -1,5 +1,34 @@
 # Indecomposable finite contractions as a full-question test class
 
+The new [coordinate-height theorem](COORDINATE_HEIGHT.md) bounds every
+rational root-aligned placement by an explicit numerator/denominator height
+`H=O(N^7 2^(17N)(B+4))` for N rational input pairs of height B. This fills
+the arithmetic gap left by the earlier effective construction. Clearing
+affine-matrix denominators before multiplying reflection words keeps their
+height growth linear in the word length.
+
+The [finite-input handoff](COORDINATE_HANDOFF.md) combines this with the
+rational paired-cubature producer and linear chain-height bound. For every
+fixed hypothetical defect it supplies an indecomposable witness with fully
+specified coordinate, label, weight, radius and adverse-gap bounds. The
+exposed-edge theorem then supplies uniform signed outer threshold intervals
+for this finite class. The middle sign is still open. This is a **complete
+author proof pending independent review**, with no practical enumeration,
+new positive class or Kneser--Poulsen conclusion.
+
+Run its compact exact controls with standard-library Python 3.11 or later:
+
+```sh
+python3 -B probability/gaussian_indecomposable_contractions/coordinate_height.py --check
+python3 -B -O probability/gaussian_indecomposable_contractions/coordinate_height.py --check
+```
+
+Expected status: `RATIONAL_COORDINATE_HEIGHT_CONTROLS_PASS`.
+[COORDINATE_EXPECTED.json](COORDINATE_EXPECTED.json) records plane-repair,
+barycentre, reflection-product, mass-denominator and endpoint-budget checks.
+[COORDINATE_SOURCES.md](COORDINATE_SOURCES.md) credits the geometric and
+analytic inputs. Earlier reviewed source files are preserved unchanged.
+
 The new [linear-height theorem](LINEAR_HEIGHT.md) replaces the previous
 exponential chain-length bound by `v-4` for a common tetrahedral framework
 with v vertices. Selected opposite-vertex distances are binary and can
