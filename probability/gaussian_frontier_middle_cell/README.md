@@ -5,8 +5,10 @@ point of an explicit 42-coordinate parameter box. Sources lie within
 coordinate distance 1/256 of (0,+/-e1,+/-e2,+/-e3); every target lies in
 [-1/16,1/16]^3; the weights are (24,22,22,22,22,22,22)/156.
 
-The lattice slice belongs to R3's existing strict rational frontier R^c_1,
-and the cell contains injective paired-rank-six maps. The exact adverse
+After separate anchoring of source and target label 0, the lattice slice
+belongs to R3's existing strict rational frontier R^c_1. The literal slice
+x_0=y_0=0 is a 36-coordinate box in that gauge. The cell contains injective
+paired-rank-six maps. The exact adverse
 hinge bound is below -1/200 on the entire interval [1/256,11/16]. Analytic
 signs cover both complementary threshold ranges, including zero. This is
 parameter-box and threshold coverage, not a finite sample of configurations.

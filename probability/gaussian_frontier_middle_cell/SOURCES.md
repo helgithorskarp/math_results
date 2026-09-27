@@ -18,7 +18,10 @@ written theorem premises. We do not repeat the reviewer's audit.
 The cell is interpreted using the R3
 [paired-cubature frontier](../gaussian_prior_localization/CUBATURE_FRONTIER.md),
 in its unchanged variance-one convention: A_1=39, L=256, W=156,
-support radius 3 and squared pair-loss floor 1/256. The definition is pinned.
+support radius 3, anchored first labels X_1=Y_1=0, and squared pair-loss
+floor 1/256. Independent endpoint translations put every certified lattice
+pair in that gauge; the anchor-zero slice is a 36-coordinate cell already
+in the family. The definition is pinned.
 The accepted generic [signed endpoints](../gaussian_prior_localization/SIGNED_ENDPOINTS.md),
 source 7bec0b3ac781fcc74a3d003a1e4d9fca2335c2b1, graph 6287, explain the
 remaining middle obligation. Its independent review is graph 6297, source
