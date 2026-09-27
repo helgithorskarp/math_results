@@ -1,0 +1,143 @@
+{
+  "exponent_budget": {
+    "alignment_upper": 32766,
+    "alpha_upper": 49142,
+    "beta_lower": 4466,
+    "beta_prefactor_lower": 1090,
+    "beta_volume_lower": 3376,
+    "bulk_error_upper": 8194,
+    "c0_lower": 38,
+    "eta_upper": 24570,
+    "mass_error_upper": 32740,
+    "mixed_error_upper": 16364,
+    "rho_lower": 1125,
+    "tau_lower": 364
+  },
+  "fold_pair_checks": 175,
+  "polynomial_inductions": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      1,
+      1
+    ],
+    [
+      3,
+      1,
+      1
+    ],
+    [
+      6,
+      1,
+      2
+    ],
+    [
+      6,
+      2,
+      2
+    ],
+    [
+      12,
+      2,
+      2
+    ],
+    [
+      96,
+      2,
+      3
+    ],
+    [
+      24,
+      2,
+      3
+    ],
+    [
+      16,
+      2,
+      2
+    ],
+    [
+      2,
+      3,
+      2
+    ],
+    [
+      102,
+      4,
+      4
+    ]
+  ],
+  "projection_checks": 51,
+  "rare_fold": [
+    {
+      "D": "7/72",
+      "M": "1/36",
+      "Q_over_D": "13/63",
+      "alpha": "1/2",
+      "projection_moves": 1
+    },
+    {
+      "D": "35/1536",
+      "M": "5/768",
+      "Q_over_D": "13/63",
+      "alpha": "1/16",
+      "projection_moves": 1
+    },
+    {
+      "D": "595/393216",
+      "M": "85/196608",
+      "Q_over_D": "13/63",
+      "alpha": "1/256",
+      "projection_moves": 1
+    },
+    {
+      "D": "152915/25769803776",
+      "M": "21845/12884901888",
+      "Q_over_D": "13/63",
+      "alpha": "1/65536",
+      "projection_moves": 1
+    },
+    {
+      "D": "13048945/562949953421312",
+      "M": "1864135/281474976710656",
+      "Q_over_D": "13/63",
+      "alpha": "1/16777216",
+      "projection_moves": 1
+    },
+    {
+      "D": "2565527131475/7253554917687775048237056",
+      "M": "366503875925/3626777458843887524118528",
+      "Q_over_D": "13/63",
+      "alpha": "1/1099511627776",
+      "projection_moves": 1
+    },
+    {
+      "D": "43042402838655620435/2041694201525630780780247644590609268736",
+      "M": "6148914691236517205/1020847100762815390390123822295304634368",
+      "Q_over_D": "13/63",
+      "alpha": "1/18446744073709551616",
+      "projection_moves": 1
+    }
+  ],
+  "reflection_checks": 204,
+  "rejected_controls": [
+    "m_below_two",
+    "noninteger_m",
+    "covariance_collapse",
+    "missing_AB_factor",
+    "excess_error",
+    "zero_projection_normal",
+    "wrong_projection_orientation"
+  ],
+  "scope": "exact finite algebra and exponent controls; analytic proof not formalized",
+  "status": "EXPLICIT_RARE_MOVE_CONTROLS_PASS",
+  "symbolic_small_mass_calibration": {
+    "bulk_displacement_exponent": 1208549376,
+    "loss_exponent": 9663676416,
+    "margin_exponent": 1208107008
+  }
+}
