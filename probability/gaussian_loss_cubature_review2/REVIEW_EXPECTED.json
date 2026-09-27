@@ -1,0 +1,91 @@
+{
+  "caratheodory_atom_counts": {
+    "12": 5849,
+    "2": 69,
+    "42": 211989,
+    "86": 1755949
+  },
+  "degree_ratio_checks": 504,
+  "degree_schedules": [
+    {
+      "atoms": 5849,
+      "error_bits": 10,
+      "radius_ratio": "1/2",
+      "relative_beta_bound_upper_decimal": "0.000647664127200341",
+      "row": 8,
+      "selected_half_degree": 12
+    },
+    {
+      "atoms": 211989,
+      "error_bits": 10,
+      "radius_ratio": "1/2",
+      "relative_beta_bound_upper_decimal": "0.000228129071916094",
+      "row": 32,
+      "selected_half_degree": 42
+    },
+    {
+      "atoms": 1755949,
+      "error_bits": 20,
+      "radius_ratio": "1/2",
+      "relative_beta_bound_upper_decimal": "0.000000334471108198",
+      "row": 64,
+      "selected_half_degree": 86
+    },
+    {
+      "atoms": 575959,
+      "error_bits": 10,
+      "radius_ratio": "4",
+      "relative_beta_bound_upper_decimal": "0.000661143388278882",
+      "row": 8,
+      "selected_half_degree": 59
+    },
+    {
+      "atoms": 219500709,
+      "error_bits": 10,
+      "radius_ratio": "9",
+      "relative_beta_bound_upper_decimal": "0.000765369967605876",
+      "row": 32,
+      "selected_half_degree": 434
+    }
+  ],
+  "finite_law_controls": {
+    "controls": [
+      {
+        "loss": "3003/46208",
+        "maximum_normalized_a_error_upper_decimal": "0.000006014770777284",
+        "maximum_normalized_beta_error_upper_decimal": "0.000009235892418482",
+        "negative_side_contraction": "3/4",
+        "retained_atoms": 9,
+        "theorem_normalized_beta_bound_decimal": "0.246037500000000000"
+      },
+      {
+        "loss": "4108071/15141437440",
+        "maximum_normalized_a_error_upper_decimal": "0.000009136432759836",
+        "maximum_normalized_beta_error_upper_decimal": "0.000014051405575571",
+        "negative_side_contraction": "1023/1024",
+        "retained_atoms": 9,
+        "theorem_normalized_beta_bound_decimal": "0.246037500000000000"
+      },
+      {
+        "loss": "4308711190311/16648186526522870333440",
+        "maximum_normalized_a_error_upper_decimal": "0.000009151324313697",
+        "maximum_normalized_beta_error_upper_decimal": "0.000014074333502546",
+        "negative_side_contraction": "1073741823/1073741824",
+        "retained_atoms": 9,
+        "theorem_normalized_beta_bound_decimal": "0.246037500000000000"
+      }
+    ],
+    "feature_count": 9,
+    "interval_stream_sha256": "6beaea614cfcc3bf8d705d8c951595a8d87c831da27e06fef8358af5938bb4ec",
+    "matched_moment_checks": 30,
+    "original_atoms": 19,
+    "replica_polynomial_moment_checks": 54
+  },
+  "method": "independent RREF cubature, definition-level replica histograms, positive-series exponential enclosures, linear degree search",
+  "pinned_files": 7,
+  "signed_taylor_interval_checks": 168,
+  "status": "INDEPENDENT_LOSS_CUBATURE_REVIEW_PASS",
+  "target_commit": "afacddeb257993b31ee118ff92e7360a7870cbc6",
+  "target_graph_ref": "bafkreicuyedmct5zhkt5cxba2nkvgel3tkursxckgxcryd45ed53khps5e",
+  "verdict": "accept the loss-proportional beta and conditional full-curve transfer bounds; no new universal hinge sign follows"
+}
