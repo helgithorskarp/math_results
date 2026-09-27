@@ -1,0 +1,215 @@
+{
+  "analytic_tail": {
+    "S_cutoff": "7/2",
+    "far_error_at_64": "1743464522020333/8589934592000000",
+    "far_tail_A": "269/25",
+    "far_tail_B": "277/200",
+    "far_volume_margin": "1/2",
+    "inner_ball_exponent_upper": "9249793/2097152",
+    "mean_support_lower": "45482348743216177507234990463/163408085185670196286684397568",
+    "threshold_overlap": "exp(-49/8)>1/512"
+  },
+  "cell_sha256": "0128192ba0572151cfbbf7611d627d2177e1f25628f1424ef99d99ddbc59e4d0",
+  "controls": {
+    "definition_level_window_sweeps": 768,
+    "exponential_controls": 216,
+    "rejected_root_corruptions": 2,
+    "root_scale_exponential_controls": 128
+  },
+  "dependency_pins": {
+    "CUBATURE_FRONTIER.md": "0dbcaf36263ee8ce2976d75d1073db4f878db908fd5c53161e55485c5da53632",
+    "DIRECT_HINGE.md": "b6abfa8a14481aa834869403f80c424c7d9f62b75a62e5db6890d1278c4867ea",
+    "direct_hinge.py": "94e9ee5f643a6d98bf18983eda3a13f5b8513f2f6e06753ad133ad046d2e5bb9"
+  },
+  "geometry": {
+    "cell_pair_loss_floor": "1/32",
+    "frontier": {
+      "A": 888,
+      "L": 2048,
+      "W": 7104,
+      "k": 2,
+      "mass_units": 444
+    },
+    "minimum_source_squared_separation": "2",
+    "minimum_target_squared_separation": "3969/4096",
+    "minor_determinant": "-250047/4096",
+    "minor_labels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      10
+    ],
+    "paired_rank": 6,
+    "reference_minimum_pair_loss": "127/2048",
+    "reference_symmetries": 24,
+    "source_crosspolytope_witnesses": [
+      [
+        5,
+        6,
+        8,
+        9
+      ],
+      [
+        10,
+        11,
+        13,
+        14
+      ],
+      [
+        4,
+        6,
+        11,
+        12
+      ],
+      [
+        7,
+        8,
+        13,
+        15
+      ],
+      [
+        4,
+        5,
+        14,
+        15
+      ],
+      [
+        7,
+        9,
+        10,
+        12
+      ]
+    ],
+    "target_midpoint_witnesses": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        10,
+        13
+      ],
+      [
+        7,
+        13
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        11,
+        14
+      ],
+      [
+        4,
+        14
+      ],
+      [
+        4,
+        11
+      ],
+      [
+        8,
+        15
+      ],
+      [
+        5,
+        15
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        9,
+        12
+      ],
+      [
+        6,
+        12
+      ],
+      [
+        6,
+        9
+      ]
+    ]
+  },
+  "middle": {
+    "M": 120,
+    "bits": 48,
+    "cell_adverse_upper": "-345085628268564267007366684564175/41538374868278621028243970633760768",
+    "controls": {
+      "unquotiented_sites": 495
+    },
+    "h": "1/16",
+    "histogram_sha256": "1b822640b14e81862cb2be420282036da0b7d98d447c512427480f8d8777949d",
+    "knots": 124991,
+    "maximizing_threshold": "1/512",
+    "orbits": 597861,
+    "quadrature_error": "12589057/4294967296",
+    "reference_polygon_upper": "-507404652514409458623904067443407/41538374868278621028243970633760768",
+    "sites": 13997521,
+    "source_peak_upper": "969464083099761/3518437208883200",
+    "status": "DEEP_FLAP_MIDDLE_AND_PEAK_PASS",
+    "tail_error": "17997953112459/2361183241434822606848",
+    "window": [
+      "1/512",
+      "9/32"
+    ]
+  },
+  "radial_bands": [
+    {
+      "minimum_relative_slack_units": 88050301552,
+      "n": 24,
+      "patches": 600,
+      "start": "7/2",
+      "step": "1/16",
+      "stop": "6",
+      "stream_sha256": "5a13acfbba02ccd67728e84de2af9fff3bc01a794a7d1d824ff4dd83700a9964",
+      "verified_roots": 49200,
+      "verified_volume_margin": "1/2",
+      "volume_lower": "312839906160412718671941179129316299/15576890575604482885591488987660288",
+      "windows": 40,
+      "worst_S": "7/2"
+    },
+    {
+      "minimum_relative_slack_units": 187757579922,
+      "n": 12,
+      "patches": 156,
+      "start": "6",
+      "step": "1/8",
+      "stop": "64",
+      "stream_sha256": "78084a12d60d0d37f667c33c3302400e0615b542c8bba4dc1e8c86c9b0d841c0",
+      "verified_roots": 145080,
+      "verified_volume_margin": "1/2",
+      "volume_lower": "2757227753172129861081079005694477/3894222643901120721397872246915072",
+      "windows": 464,
+      "worst_S": "6"
+    }
+  ],
+  "status": "GAP_FREE_DEEP_FLAP_CELL_PASS",
+  "theorem": {
+    "all_thresholds": true,
+    "high": "source hinge vanishes for u>=9/32",
+    "independent_review": "PENDING",
+    "low_adverse_upper": "-C*u/2 for 0<u<=1/512",
+    "middle_adverse_upper": "-1/128 for 1/512<=u<=9/32",
+    "variance": 1
+  }
+}
