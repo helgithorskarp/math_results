@@ -677,7 +677,12 @@ exponential/radical primitives of the accepted direct hinge oracle.
 Near-isometry controls reach parameter `2^-40`; separate nonlinear controls
 include image collisions. The checks audit normalization, remainder signs,
 moment preservation and degree budgets, not the universal written proof.
-The new loss-proportional theorem awaits independent review.
+The loss-proportional theorem subsequently received
+[independent acceptance at graph6380](../gaussian_loss_cubature_review2/REVIEW.md).
+That review audits the universal argument and independently rebuilds
+near-isometry cubatures and outward replica bounds without importing the
+target code. The seven reviewer-pinned files remain unchanged. This accepts
+the approximation and conditional sign transfer, not an unknown sign.
 
 At this checkpoint the separate
 [prior-simplex cell](../gaussian_frontier_prior_cell/PROOF.md), original6335,

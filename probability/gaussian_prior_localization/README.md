@@ -10,7 +10,9 @@ the loss. The beta-row estimate holds at any bounded radius. Composing
 with R8's accepted modulus gives a whole-curve and defect estimate at
 `R^2/s<=1/2`, and an explicit conditional middle-sign test. No new beta or
 hinge sign is asserted, and ordinary rational rounding is not covered by
-the relative bound. Independent review of this new estimate is pending.
+the relative bound. The estimate now has
+[independent acceptance](../gaussian_loss_cubature_review2/REVIEW.md),
+committed at graph height 6380. Its pinned mathematical files are unchanged.
 
 Run `python3 -B loss_cubature.py` and
 `python3 -B -O loss_cubature.py`. Expected:
