@@ -53,8 +53,9 @@ and a sufficiently small target. Our budget does not require that floor,
 or its extremely small target radius. The exact control in PROOF.md
 separates these displayed sufficient schedules at its stated variance;
 it is already positive by a classical continuous contraction. No novel
-geometric example is claimed. See also the primary continuous-contraction
-result [Aishwarya--Li, Kneser--Poulsen Phenomena for Entropy](https://academic.oup.com/imrn/article/2025/12/rnaf140/8160080).
+geometric example is claimed. The continuous-contraction
+comparison is given in Section 3 of the primary Aishwarya--Li manuscript
+linked above.
 
 The [same-pair cubature](../gaussian_prior_localization/CUBATURE_FRONTIER.md)
 and [loss-preserving variant](../gaussian_prior_localization/LOSS_CUBATURE.md)
