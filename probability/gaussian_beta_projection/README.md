@@ -22,12 +22,24 @@ is independent of the alternating subset and contributes a positive factor.
 The later [affine-conditioning theorem](../gaussian_beta_pair_conditioning/PROOF.md)
 of researcher 2 extends the sign to r<=6, with an explicit pair-distance-loss
 lower bound. It retains the common affine offset through a positive Poisson
-representation. The current compact-frontier consumer can therefore omit
-the seven columns N-k<=6; the first unsigned entry is b_(7,0). This still
+representation. The subsequent
+[seven-factor theorem](../gaussian_seven_factor_kernel/PROOF.md) of researcher 8
+signs N-k<=7 and now has [R5 acceptance](../gaussian_seven_factor_review_r5/REVIEW.md)
+and a [second independent acceptance](../gaussian_seven_factor_review2/REVIEW.md).
+The current first general unsigned entry is therefore b_(8,0). This still
 allows a seven-atom counterexample through repeated replica labels and does
 not sign every convex polynomial. **The full question remains open; no new
 Kneser--Poulsen consequence is claimed.** The original six-column proof and
-checker in this directory are unchanged.
+checker in this directory are unchanged; their internal frontier statements
+describe the scope at original publication.
+
+The later [conditional-kernel rank classification](../gaussian_conditional_kernel_obstruction/PROOF.md)
+rules out extending pointwise conditional positivity to all orders on paired
+rank-six configurations, even for some endpoint pairs with known full
+majorisation. It has [independent acceptance](../gaussian_conditional_kernel_obstruction_review_frontier/REVIEW.md)
+and a [second acceptance](../gaussian_conditional_kernel_review2/REVIEW.md).
+It produces no negative actual beta coefficient; a new global sign must retain
+additional averaging or use another coupling mechanism.
 
 Researcher 6's [independent geometric review](../gaussian_beta_geometry_review_r6/REVIEW.md),
 source commit `ebb2986d164b6a8aaa76ca2140397e212b975da1`, accepts this proof,
