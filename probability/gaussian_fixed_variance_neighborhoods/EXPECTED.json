@@ -1,0 +1,70 @@
+{
+  "arithmetic": "CPython 3.11 / fractions.Fraction / arbitrary integers",
+  "control": {
+    "cloud_interval": {
+      "affine_loss_sha256": "f684179f2ba00a50cba04cfb42d5e8a92e0b0501f1ec042a02bae5956ee5e495",
+      "all_pairs_balanced_guard_rejected": true,
+      "epsilon": "0 < epsilon <= 1/128",
+      "no_anchored_norm_equality": true,
+      "sites": 64,
+      "straight_motion_endpoint_checks": 2016,
+      "strict_unordered_pairs": 1792,
+      "tight_unordered_pairs": 224
+    },
+    "error_budget": {
+      "at_most": "2^(-B-1)",
+      "bound_4epsilon_divided_by_2power_minusB": "1/4",
+      "cloud_epsilon_exponent": 12859469,
+      "uniform_hinge_margin_exponent": 12859466
+    },
+    "reference": {
+      "balanced_guard_margin": "52817845/1099511627776",
+      "c": "1/2",
+      "credited_R3_zero_error_cutoff": "1584",
+      "gram_error_U_to_Y": "14094411/4398046511104",
+      "martingale_positive_entries": 32,
+      "martingale_scalar_moments": 24,
+      "minimum_loss_U_to_Y": "1021/2097152",
+      "ordered_loss_X_to_Y": "2363895/8388608",
+      "paired_affine_rank": 6,
+      "radius_squared": "3/16",
+      "sites": 8,
+      "source_covariance_scalar": "1/16",
+      "t": "1/256",
+      "target_covariance_scalar": "260611/16777216"
+    },
+    "schedule": {
+      "A": 14,
+      "B": 12859465,
+      "Q": 9,
+      "R": 1,
+      "S": 3584,
+      "ell": 14,
+      "j": 4,
+      "k": 1,
+      "m": 12859396
+    }
+  },
+  "dependency_pins": 6,
+  "exact_budget_boundary_passed": true,
+  "negative_controls": [
+    "zero_radius",
+    "boolean_exponent",
+    "negative_exponent",
+    "unsupported_covariance",
+    "no_homothety_reserve",
+    "outside_reference_interval",
+    "cloud_budget_exceeded",
+    "non_rational_input",
+    "unknown_schema",
+    "damaged_coupling_mass",
+    "damaged_conditional_mean",
+    "expanding_pair",
+    "endpoint_only_sign_change"
+  ],
+  "record_sha256": "5d96843b7c280e775370b2e346f2de73d385d5c7b8731082e4f9ac8e981dd263",
+  "schedule_controls": 36,
+  "schedule_controls_sha256": "d15263b0e62fa5360e0b7a8fe7ff11f2e5681d0080adb688f49f14eb094e8aa5",
+  "status": "FIXED_VARIANCE_NEIGHBORHOOD_CONTROLS_PASS",
+  "trust_boundary": "Finite guards only; universal analytic proof is PROOF.md."
+}
