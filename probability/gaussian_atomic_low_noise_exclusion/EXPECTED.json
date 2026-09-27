@@ -1,0 +1,549 @@
+{
+  "status": "FINITE_ATOMIC_LOW_NOISE_EXCLUSION_EXACT_PASS",
+  "headline_status": "OPEN: no full Gaussian majorisation or KP consequence",
+  "fixtures": {
+    "oblique_rank_six": {
+      "source": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "2",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "2",
+          "0"
+        ],
+        [
+          "1/2",
+          "1/3",
+          "3"
+        ],
+        [
+          "127/6",
+          "97/9",
+          "89/9"
+        ],
+        [
+          "-59/2",
+          "142/9",
+          "13/3"
+        ],
+        [
+          "5/6",
+          "-359/9",
+          "49/9"
+        ]
+      ],
+      "target": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "2",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "2",
+          "0"
+        ],
+        [
+          "1/2",
+          "1/3",
+          "3"
+        ],
+        [
+          "-113/6",
+          "-83/9",
+          "-71/9"
+        ],
+        [
+          "61/2",
+          "-128/9",
+          "-7/3"
+        ],
+        [
+          "5/6",
+          "361/9",
+          "-31/9"
+        ]
+      ],
+      "weights": [
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/4",
+        "1/8",
+        "1/8"
+      ],
+      "paired_affine_rank": 6,
+      "boundary_certificate": {
+        "D": 5,
+        "energy_degree": 12,
+        "b": 3,
+        "variance": "1/792",
+        "active_pairs": 6,
+        "tight_pairs": 15,
+        "branch": "DISTINCT_TARGETS",
+        "beta": "400/3",
+        "M": 12,
+        "K": 2640,
+        "L": 40,
+        "variance_upper_bound": "1/792",
+        "conclusion": "H_D >= diag(H_D)/2 > 0"
+      },
+      "all_nearest_target_pairs_tight": true,
+      "exponent_controls": {
+        "active_count_vectors_checked": 4950,
+        "direct_scatter_controls": 43,
+        "surviving_branches": 12,
+        "beta": "400/3",
+        "orders": [
+          {
+            "m": 2,
+            "E_m": "162641/1296",
+            "has_third_site_minimizer": false
+          },
+          {
+            "m": 3,
+            "E_m": "162641/972",
+            "has_third_site_minimizer": false
+          },
+          {
+            "m": 4,
+            "E_m": "162641/864",
+            "has_third_site_minimizer": false
+          },
+          {
+            "m": 5,
+            "E_m": "162641/810",
+            "has_third_site_minimizer": false
+          },
+          {
+            "m": 6,
+            "E_m": "813205/3888",
+            "has_third_site_minimizer": false
+          },
+          {
+            "m": 7,
+            "E_m": "162641/756",
+            "has_third_site_minimizer": false
+          },
+          {
+            "m": 8,
+            "E_m": "1138487/5184",
+            "has_third_site_minimizer": false
+          }
+        ],
+        "minimum_digest": "528de0fb33456369065e402e0662470e564e668c3d3c8e36eab550461317e63e"
+      }
+    },
+    "eight_site_benchmark": {
+      "source": [
+        [
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "-1",
+          "-1"
+        ],
+        [
+          "-1",
+          "1",
+          "-1"
+        ],
+        [
+          "-1",
+          "-1",
+          "1"
+        ],
+        [
+          "-20",
+          "-20",
+          "-20"
+        ],
+        [
+          "-20",
+          "20",
+          "20"
+        ],
+        [
+          "20",
+          "-20",
+          "20"
+        ],
+        [
+          "20",
+          "20",
+          "-20"
+        ]
+      ],
+      "target": [
+        [
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "-1",
+          "-1"
+        ],
+        [
+          "-1",
+          "1",
+          "-1"
+        ],
+        [
+          "-1",
+          "-1",
+          "1"
+        ],
+        [
+          "58/3",
+          "58/3",
+          "58/3"
+        ],
+        [
+          "58/3",
+          "-58/3",
+          "-58/3"
+        ],
+        [
+          "-58/3",
+          "58/3",
+          "-58/3"
+        ],
+        [
+          "-58/3",
+          "-58/3",
+          "58/3"
+        ]
+      ],
+      "weights": [
+        "1/255",
+        "2/255",
+        "4/255",
+        "8/255",
+        "16/255",
+        "32/255",
+        "64/255",
+        "128/255"
+      ],
+      "paired_affine_rank": 6,
+      "boundary_certificate": {
+        "D": 5,
+        "energy_degree": 12,
+        "b": 8,
+        "variance": "59/74250",
+        "active_pairs": 10,
+        "tight_pairs": 18,
+        "branch": "DISTINCT_TARGETS",
+        "beta": "1888/9",
+        "M": 12,
+        "K": 2640,
+        "L": 100,
+        "variance_upper_bound": "59/74250",
+        "conclusion": "H_D >= diag(H_D)/2 > 0"
+      },
+      "all_nearest_target_pairs_tight": true,
+      "exponent_controls": {
+        "active_count_vectors_checked": 11055,
+        "direct_scatter_controls": 97,
+        "surviving_branches": 22,
+        "beta": "1888/9",
+        "orders": [
+          {
+            "m": 2,
+            "E_m": "3025/12",
+            "has_third_site_minimizer": false
+          },
+          {
+            "m": 3,
+            "E_m": "3025/9",
+            "has_third_site_minimizer": false
+          },
+          {
+            "m": 4,
+            "E_m": "3025/8",
+            "has_third_site_minimizer": false
+          },
+          {
+            "m": 5,
+            "E_m": "1210/3",
+            "has_third_site_minimizer": false
+          },
+          {
+            "m": 6,
+            "E_m": "15125/36",
+            "has_third_site_minimizer": false
+          },
+          {
+            "m": 7,
+            "E_m": "3025/7",
+            "has_third_site_minimizer": false
+          },
+          {
+            "m": 8,
+            "E_m": "21175/48",
+            "has_third_site_minimizer": false
+          }
+        ],
+        "minimum_digest": "64c57c106c51aae53e82067a9a3bf7fd55ceae1b2d3284c46cbc93d1a084fd36"
+      }
+    },
+    "third_site_dominant": {
+      "source": [
+        [
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "target": [
+        [
+          "-4/5",
+          "3/5",
+          "0"
+        ],
+        [
+          "4/5",
+          "3/5",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "weights": [
+        "1/3",
+        "1/3",
+        "1/3"
+      ],
+      "paired_affine_rank": 2,
+      "boundary_certificate": {
+        "D": 5,
+        "energy_degree": 12,
+        "b": 2,
+        "variance": "3/154000",
+        "active_pairs": 1,
+        "tight_pairs": 2,
+        "branch": "DISTINCT_TARGETS",
+        "beta": "36/25",
+        "M": 12,
+        "K": 2640,
+        "L": 28,
+        "variance_upper_bound": "3/154000",
+        "conclusion": "H_D >= diag(H_D)/2 > 0"
+      },
+      "all_nearest_target_pairs_tight": true,
+      "exponent_controls": {
+        "active_count_vectors_checked": 286,
+        "direct_scatter_controls": 2,
+        "surviving_branches": 2,
+        "beta": "36/25",
+        "orders": [
+          {
+            "m": 2,
+            "E_m": "16/25",
+            "has_third_site_minimizer": true
+          },
+          {
+            "m": 3,
+            "E_m": "19/25",
+            "has_third_site_minimizer": true
+          },
+          {
+            "m": 4,
+            "E_m": "41/50",
+            "has_third_site_minimizer": true
+          },
+          {
+            "m": 5,
+            "E_m": "107/125",
+            "has_third_site_minimizer": true
+          },
+          {
+            "m": 6,
+            "E_m": "22/25",
+            "has_third_site_minimizer": true
+          },
+          {
+            "m": 7,
+            "E_m": "157/175",
+            "has_third_site_minimizer": true
+          },
+          {
+            "m": 8,
+            "E_m": "91/100",
+            "has_third_site_minimizer": true
+          },
+          {
+            "m": 9,
+            "E_m": "23/25",
+            "has_third_site_minimizer": true
+          },
+          {
+            "m": 10,
+            "E_m": "116/125",
+            "has_third_site_minimizer": true
+          },
+          {
+            "m": 11,
+            "E_m": "257/275",
+            "has_third_site_minimizer": true
+          },
+          {
+            "m": 12,
+            "E_m": "47/50",
+            "has_third_site_minimizer": true
+          }
+        ],
+        "minimum_digest": "714d3217932133501def668f0902a881fc4f1562ddba22c2b902d2607920592d"
+      }
+    },
+    "collision_rank_six": {
+      "source": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-2",
+          "0"
+        ],
+        [
+          "0",
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-3"
+        ],
+        [
+          "0",
+          "0",
+          "3"
+        ]
+      ],
+      "target": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "3"
+        ],
+        [
+          "0",
+          "0",
+          "3"
+        ]
+      ],
+      "weights": [
+        "1/127",
+        "2/127",
+        "4/127",
+        "8/127",
+        "16/127",
+        "32/127",
+        "64/127"
+      ],
+      "paired_affine_rank": 6,
+      "boundary_certificate": {
+        "D": 5,
+        "energy_degree": 12,
+        "b": 7,
+        "variance": "1/3780",
+        "active_pairs": 3,
+        "tight_pairs": 18,
+        "branch": "TARGET_COLLISION",
+        "delta": "1",
+        "variance_upper_bound": "1/3780",
+        "identity_matrix_margin": "1/6693195169205051239902592924385280000000000",
+        "conclusion": "H_D >= identity_matrix_margin * I > 0"
+      },
+      "collision_controls": {
+        "count_vectors_checked": 1708,
+        "target_groups": 4,
+        "zero_scatter_digest": "063b0299bb811abbca315d5c32518260da27b6226783561d741bbab9eeb8661f",
+        "hinge_controls": 9
+      }
+    }
+  },
+  "active_count_vectors_checked": 16291,
+  "legendre_controls": {
+    "orthogonality_entries": 243,
+    "inverse_entries": 417,
+    "inverse_trace_digest": "b2efdfe8ae3edd8576ffdb3a3b2c366b5abf7ed2be74be7f37661c5895733b06"
+  },
+  "scalar_controls": {
+    "curvature_prefactor_controls": 1830,
+    "budget_controls": 1000,
+    "scalar_digest": "3bd8a5cf1edd5de6cc5a066b8147cece9ac9378e906e0847fc165a313ac9fb7b"
+  },
+  "damaged_controls_rejected": 11,
+  "trust_boundary": "Finite exact controls supplement the universal written proof. No finite control is an exhaustive check of all measures, contractions, variances, or polynomial orders."
+}
