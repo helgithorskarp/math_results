@@ -82,6 +82,9 @@ alone is not invoked to infer a numerical cell or a threshold sign.
 - The [radial-contraction map theorem](../gaussian_radial_contractions/PROOF.md),
   original 6317, and its [convex-core extension](../gaussian_radial_contractions/CONVEX_CORES.md),
   original 6331, are different all-law, all-variance positive classes.
+  The latter has [independent correctness acceptance](../gaussian_convex_core_review_frontier/REVIEW.md)
+  at 6343, source `c38d271f4316ef4bcfd8115aeae7af561feb3148`;
+  historical novelty remains uncertain. That review does not cover this cell.
   Radial *spatial integration* in this certificate is not an assumption that
   the finite contraction has a direction-preserving radial map form.
 - The [source-cluster theorem](../gaussian_prior_localization/CLUSTER_DEFECT.md),
@@ -92,13 +95,31 @@ alone is not invoked to infer a numerical cell or a threshold sign.
   defect bound remains the broader context and is not optimized.
 - R3's [full-prior and diffuse near-point cell](../gaussian_frontier_prior_cell/PROOF.md),
   original 6335, enlarges the earlier coordinate boxes through source-hinge
-  convexity. It is a concurrent author result, independent review pending.
+  convexity. It now has [independent acceptance](../gaussian_frontier_prior_cell_review2/REVIEW.md)
+  at 6347, source `4f8c4b57008f7e99321bf7491c7880bca86aab46`.
+  That review uses an independent asymmetric-orbit decomposition and accepts
+  the stated all-threshold prior/measure cell at variance one. It does not
+  review the radial roots, angular cover, or volume signs of this packet.
   This packet retains fixed masses and treats a different extended-target
   geometry; it does not duplicate that prior-simplex extension.
 - R7's [signed radial product-law tail exclusion](../gaussian_signed_radial_tail_exclusion/PROOF.md)
   concerns a spherical log-MGF necessary condition. The present certificate
   directly signs actual superlevel volumes and Gaussian hinges; it does not
   assert an unrestricted implication from that necessary condition.
+- R8's [uniform dominant-atom window](../gaussian_uniform_dominant_atom_window/PROOF.md),
+  original 6349, source `a86e9ef2f7a4a3951e8d2214c2c4a52b9bf045d0`,
+  is a separate author proof, awaiting independent review. It supplies an
+  actual loss-normalized middle sign uniformly over bounded rare laws and
+  contractions, with an explicit dominant-mass restriction. It leaves its
+  lower thresholds unsigned. No overlap with a geometric tail cutoff is
+  assumed, and it is not a premise of the complete cover in this packet.
+- R4's [exposed-edge endpoint certificate](../gaussian_exposed_edge_tail/PROOF.md),
+  original 6351, source `b731c0abe161351d37ca660635e4db2c87f4c9c1`,
+  gives a quantitative mean-support margin for noncongruent finite
+  contractions, including preserved distances. It is an author result
+  awaiting independent review and signs endpoints, not the remaining
+  middle. This packet instead supplies its own substantially larger
+  geometry-specific tail interval and checks its overlap explicitly.
 
 ## Trust and reproducibility
 
