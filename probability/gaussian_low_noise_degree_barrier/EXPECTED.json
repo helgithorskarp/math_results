@@ -1,0 +1,197 @@
+{
+  "status": "LOW_NOISE_DEGREE_BARRIER_EXACT_PASS",
+  "conjecture_status": "OPEN: finite polynomial degree exclusion only",
+  "fixture": {
+    "source": [
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "2",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "2",
+        "0"
+      ],
+      [
+        "1/2",
+        "1/3",
+        "3"
+      ],
+      [
+        "19/6",
+        "16/9",
+        "17/9"
+      ],
+      [
+        "-5/2",
+        "41/18",
+        "4/3"
+      ],
+      [
+        "5/6",
+        "-35/9",
+        "13/9"
+      ]
+    ],
+    "target": [
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "3/2",
+        "0",
+        "0"
+      ],
+      [
+        "3/4",
+        "3/2",
+        "0"
+      ],
+      [
+        "3/8",
+        "1/4",
+        "9/4"
+      ],
+      [
+        "-5/8",
+        "-1/6",
+        "1/12"
+      ],
+      [
+        "21/8",
+        "-13/24",
+        "1/2"
+      ],
+      [
+        "5/8",
+        "37/12",
+        "5/12"
+      ]
+    ],
+    "weights": [
+      "1/8",
+      "1/8",
+      "1/8",
+      "1/8",
+      "1/4",
+      "1/8",
+      "1/8"
+    ],
+    "paired_determinant": "-648",
+    "certificate": {
+      "status": "EXACT_HYPOTHESES_PASS",
+      "curvature_square_degree": 5,
+      "energy_degree": 12,
+      "mass_exponent": 3,
+      "K_D": 2640,
+      "L_D_b": 40,
+      "variance": "1/422400",
+      "delta": "245/576",
+      "eta": "84659/5184",
+      "chosen_nearest_pair": [
+        0,
+        4
+      ],
+      "minimum_pair_loss": "7/4",
+      "variance_upper_bound": "49/12165120",
+      "normalized_matrix_lower_bound": "1/2"
+    },
+    "exact_boundary_certificate": {
+      "status": "EXACT_HYPOTHESES_PASS",
+      "curvature_square_degree": 5,
+      "energy_degree": 12,
+      "mass_exponent": 3,
+      "K_D": 2640,
+      "L_D_b": 40,
+      "variance": "49/12165120",
+      "delta": "245/576",
+      "eta": "84659/5184",
+      "chosen_nearest_pair": [
+        0,
+        4
+      ],
+      "minimum_pair_loss": "7/4",
+      "variance_upper_bound": "49/12165120",
+      "normalized_matrix_lower_bound": "1/2"
+    }
+  },
+  "algebra_controls": {
+    "nonconstant_compositions": 77176,
+    "sharp_composition_cases": 1176,
+    "curvature_and_prefactor_checks": 45760,
+    "algebra_sha256": "c4c02d168ee41892d13a15d4426cdd9d90064dc64c444077cc781e48b773d823",
+    "uniform_class": {
+      "minimum_weight": "1/8",
+      "minimum_target_separation_squared": "1/4",
+      "minimum_loss_at_some_nearest_target_pair": "1"
+    },
+    "uniform_cutoffs": [
+      {
+        "curvature_degree": 1,
+        "energy_degree": 4,
+        "K_D": 48,
+        "L_D_b": 13,
+        "uniform_variance_cutoff": "1/2496"
+      },
+      {
+        "curvature_degree": 2,
+        "energy_degree": 6,
+        "K_D": 240,
+        "L_D_b": 20,
+        "uniform_variance_cutoff": "1/19200"
+      },
+      {
+        "curvature_degree": 5,
+        "energy_degree": 12,
+        "K_D": 2640,
+        "L_D_b": 40,
+        "uniform_variance_cutoff": "1/422400"
+      },
+      {
+        "curvature_degree": 10,
+        "energy_degree": 22,
+        "K_D": 18480,
+        "L_D_b": 71,
+        "uniform_variance_cutoff": "1/5248320"
+      },
+      {
+        "curvature_degree": 20,
+        "energy_degree": 42,
+        "K_D": 137760,
+        "L_D_b": 132,
+        "uniform_variance_cutoff": "1/72737280"
+      },
+      {
+        "curvature_degree": 50,
+        "energy_degree": 102,
+        "K_D": 2060400,
+        "L_D_b": 313,
+        "uniform_variance_cutoff": "1/2579620800"
+      },
+      {
+        "curvature_degree": 100,
+        "energy_degree": 202,
+        "K_D": 16240800,
+        "L_D_b": 614,
+        "uniform_variance_cutoff": "1/39887404800"
+      },
+      {
+        "curvature_degree": 1000,
+        "energy_degree": 2002,
+        "K_D": 16024008000,
+        "L_D_b": 6017,
+        "uniform_variance_cutoff": "1/385665824544000"
+      }
+    ]
+  },
+  "damaged_controls_rejected": 9,
+  "trust_boundary": "Exact finite controls. Universal theorem is the written replica and diagonal-dominance proof; no full Gaussian sign."
+}
