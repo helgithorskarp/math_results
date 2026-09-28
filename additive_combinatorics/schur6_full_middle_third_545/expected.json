@@ -1,0 +1,125 @@
+{
+  "audit": {
+    "status": "PASS",
+    "small": {
+      "status": "REDUCED_REFLECTED_ENCODING_AUDIT_OK",
+      "axis_factor": 7,
+      "complete_assignments": 32000,
+      "valid_assignments": 2988,
+      "valid_assignments_with_canonical_representative": 2988
+    },
+    "clause_audits": [
+      {
+        "axis_factor": 7,
+        "modulus": 35,
+        "literal_pairs": 578,
+        "distinct_projected_clauses": 137,
+        "auxiliary_definitions": 18,
+        "clauses_before_expansion": 140,
+        "expanded_reduced_clauses": 131,
+        "subsumed_literal_clauses": 6,
+        "subsumed_reduced_clauses": 0,
+        "status": "EXACT_CLAUSE_EQUIVALENCE_BY_SUBSUMPTION"
+      },
+      {
+        "axis_factor": 47,
+        "modulus": 235,
+        "literal_pairs": 27378,
+        "distinct_projected_clauses": 4920,
+        "auxiliary_definitions": 135,
+        "clauses_before_expansion": 3921,
+        "expanded_reduced_clauses": 4878,
+        "subsumed_literal_clauses": 42,
+        "subsumed_reduced_clauses": 0,
+        "status": "EXACT_CLAUSE_EQUIVALENCE_BY_SUBSUMPTION"
+      },
+      {
+        "axis_factor": 109,
+        "modulus": 545,
+        "literal_pairs": 147968,
+        "distinct_projected_clauses": 26640,
+        "auxiliary_definitions": 324,
+        "clauses_before_expansion": 20268,
+        "expanded_reduced_clauses": 26532,
+        "subsumed_literal_clauses": 108,
+        "subsumed_reduced_clauses": 0,
+        "status": "EXACT_CLAUSE_EQUIVALENCE_BY_SUBSUMPTION"
+      }
+    ]
+  },
+  "controls": {
+    "status": "PASS",
+    "controls": [
+      {
+        "status": "REFLECTED_SHARED_WORD_OK",
+        "modulus": 235,
+        "endpoint": 234,
+        "colours": 6,
+        "class_sizes": [
+          24,
+          24,
+          64,
+          36,
+          42,
+          44
+        ],
+        "integer_pairs": 13689,
+        "modular_pairs": 27378,
+        "asymmetric_fibre_pairs": 3,
+        "special_axis_mergeable": false,
+        "residual_size": 8,
+        "common_sizes": [
+          16,
+          6,
+          8,
+          9
+        ],
+        "full_middle_third_size": 16,
+        "absent_axis_colour": 2
+      },
+      {
+        "status": "REFLECTED_SHARED_WORD_OK",
+        "modulus": 235,
+        "endpoint": 234,
+        "colours": 6,
+        "class_sizes": [
+          24,
+          34,
+          40,
+          50,
+          42,
+          44
+        ],
+        "integer_pairs": 13689,
+        "modular_pairs": 27378,
+        "asymmetric_fibre_pairs": 3,
+        "special_axis_mergeable": false,
+        "residual_size": 9,
+        "common_sizes": [
+          8,
+          11,
+          8,
+          11
+        ],
+        "free_support_interval_dilations": [],
+        "interval_dilations": [
+          1,
+          4,
+          23
+        ],
+        "absent_axis_colour": 5
+      }
+    ]
+  },
+  "certificate": {
+    "status": "DRAT_VERIFIED",
+    "cnf_sha256": "0b2b8adecfdd9f5f6e9144fcad75449ea9355e3afb6454beb873c3a8c6d55886",
+    "proof_sha256": "622c570d13299c138f8131877ef1445d564239fbb080fe76c3ff733ed8b8e4f5",
+    "proof_bytes": 52312176,
+    "drat_trim_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "cadical_commit": "146207318796f094dcded87349a64f0c6927309e",
+    "cnf_bytes": 388678,
+    "variables": 666,
+    "clauses": 20574
+  }
+}
