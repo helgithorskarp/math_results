@@ -4,22 +4,34 @@
 
 Fix the 537-entry word `W` in [`seed537.txt`](seed537.txt). For an offset
 `r` from 1 to 10, begin with the blocks `[1,r]` and then successive
-ten-position blocks, truncating the last block at 537. For a period `p`,
-split the **first** ten-position block of every `p` consecutive blocks into
-two five-position blocks. The final short block is split after its fifth
-position when it contains more than five positions. On every resulting block `B`, choose an arbitrary
+ten-position blocks, truncating the last block at 537. Number the blocks
+after `[1,r]` by `j=0,1,...`. For period `p` and phase `s`, split every
+block with `j congruent to s (mod p)` after its fifth position. A final
+short block is split when it contains more than five positions. On every
+resulting block `B`, choose an arbitrary
 function `f_B:{1,...,6}->{1,...,6}` and recolour position `v` by
 `f_B(W(v))`. The functions need not be injective and there is no limit on
 the number of changed positions.
 
-**No Schur-free recolouring exists for `p=4` and
-`r in {3,5,6,7,8,9,10}`, or for `p=2` and `r=3`.** Here Schur-free means
+**No Schur-free recolouring exists for the following `(p,s,r)` cases:**
+
+| Period `p` | Phase `s` | Offsets `r` |
+| ---: | ---: | :--- |
+| 4 | 0 | 2, 3, 4, 5, 6, 7, 8, 9, 10 |
+| 4 | 1 | 1, 2, 4 |
+| 4 | 2 | 2, 4 |
+| 4 | 3 | 2, 4 |
+| 2 | 0 | 3 |
+
+Here Schur-free means
 no monochromatic `x+y=z` in `[1,537]`, including `x=y`.
 
-For each stated case the new partition strictly refines the corresponding
-ten-position grid. Thus it excludes a genuinely larger family than the
+For every offset `r=1,...,10`, at least one listed `p=4` phase is excluded;
+choose `s=1` for `r=1` and `s=0` otherwise. Each stated partition
+strictly refines the corresponding ten-position grid. Thus these
+certificates exclude larger families than the
 [all-ten decadal-grid result](../schur_s6_all_decadal_maps/README.md) on
-those offsets. A `p=2,r=3` map can change colours independently on half of
+every offset. A `p=2,s=0,r=3` map can change colours independently on half
 the ten-position blocks. This theorem remains conditional on `W` and
 these partitions; it gives no new numerical bound for the classical sixth
 Schur number. The published lower bound is
@@ -69,10 +81,15 @@ sha256sum -c SHA256SUMS
 python3 -B verify.py --cadical /path/to/cadical --drat-trim /path/to/drat-trim
 ```
 
-`--cases 2-3 4-10` selects two cases. The verifier regenerates each CNF,
+`--cases 2-3 4-10 4-1-1` selects three cases. Two-part keys use
+`period-offset` and have phase zero; three-part keys use
+`period-phase-offset`. The verifier regenerates each CNF,
 checks every clause independently, solves it, verifies the resulting DRAT
 proof, checks the recorded sizes and digests, and removes temporary files.
 Different solver builds can produce a different valid proof digest; the
 independent DRAT result is decisive. Some harder cases can take several
-minutes. The checked cases are exactly those listed above: the other
-`p=4` offsets and other `p=2` offsets have no conclusion here.
+minutes; the manifest records any case-specific solver seed. The checked
+cases are exactly those listed above. In particular, the `p=4,s=0,r=1`
+case remained `UNKNOWN` after 600 seconds with solver seed 42. That
+timeout has no mathematical implication; all other unlisted period,
+phase, and offset choices have no conclusion here.

@@ -9,9 +9,10 @@ HERE = Path(__file__).resolve().parent
 SOURCE_HASH = "58c26704225562a6cde8346f0febe1e09f5604c18f9ec0397e8bf16b3e3497b3"
 
 
-def check(period, offset, path):
+def check(period, offset, path, phase=0):
     assert period in (2, 4)
     assert 1 <= offset <= 10
+    assert 0 <= phase < period
     source = (HERE / "seed537.txt").read_bytes()
     assert hashlib.sha256(source).hexdigest() == SOURCE_HASH
     digits = source.decode("ascii").strip()
@@ -23,9 +24,10 @@ def check(period, offset, path):
         if v <= offset:
             return 0
         t = v - offset - 1
-        original_blocks = 1 + t // 10
-        extra_splits = max(0, 1 + (t - 5) // (10 * period))
-        return original_blocks + extra_splits
+        old_block, within_block = divmod(t, 10)
+        earlier_splits = max(0, 1 + (old_block - phase - 1) // period)
+        current_split = old_block % period == phase and within_block >= 5
+        return 1 + old_block + earlier_splits + current_split
 
     rows = sorted({(block(v), old[v]) for v in range(1, 538)})
     index = {row: i for i, row in enumerate(rows)}
@@ -75,13 +77,16 @@ def check(period, offset, path):
     assert actual == expected, (sum((expected - actual).values()),
                                 sum((actual - expected).values()))
     rgs_clauses = 1 + 5 * (len(rows) - 1)
-    print(f"PASS period={period} offset={offset} rows={len(rows)} supports={len(supports)} "
+    print(f"PASS period={period} offset={offset} phase={phase} rows={len(rows)} supports={len(supports)} "
           f"clauses={sum(actual.values())} triples={triples} doubling=268 "
           f"rgs_clauses={rgs_clauses} exact_clause_multiset=yes")
-    return {"period": period, "offset": offset, "rows": len(rows),
-            "supports": len(supports), "variables": 6 * len(rows),
-            "clauses": sum(actual.values()), "rgs_clauses": rgs_clauses,
-            "triples": triples}
+    result = {"period": period, "offset": offset, "rows": len(rows),
+              "supports": len(supports), "variables": 6 * len(rows),
+              "clauses": sum(actual.values()), "rgs_clauses": rgs_clauses,
+              "triples": triples}
+    if phase:
+        result["phase"] = phase
+    return result
 
 
 if __name__ == "__main__":
@@ -89,5 +94,6 @@ if __name__ == "__main__":
     parser.add_argument("period", type=int, choices=(2, 4))
     parser.add_argument("offset", type=int)
     parser.add_argument("cnf", type=Path)
+    parser.add_argument("--phase", type=int, default=0)
     args = parser.parse_args()
-    check(args.period, args.offset, args.cnf)
+    check(args.period, args.offset, args.cnf, args.phase)

@@ -7,9 +7,10 @@ HERE = Path(__file__).resolve().parent
 N = 537
 
 
-def instance(period, offset):
+def instance(period, offset, phase=0):
     assert period in (2, 4)
     assert 1 <= offset <= 10
+    assert 0 <= phase < period
     digits = (HERE / "seed537.txt").read_text(encoding="ascii").strip()
     assert len(digits) == N and set(digits) == set("123456")
     old = [0] + list(map(int, digits))
@@ -18,13 +19,11 @@ def instance(period, offset):
         if v <= offset:
             return 0
         cycle, within = divmod(v - offset - 1, 10 * period)
-        if within < 5:
-            local = 0
-        elif within < 10:
-            local = 1
-        else:
-            local = 2 + (within - 10) // 10
-        return 1 + (period + 1) * cycle + local
+        block_in_cycle, within_block = divmod(within, 10)
+        prior_split = block_in_cycle > phase
+        current_split = block_in_cycle == phase and within_block >= 5
+        return (1 + (period + 1) * cycle + block_in_cycle
+                + prior_split + current_split)
 
     rows = sorted({(block(v), old[v]) for v in range(1, N + 1)})
     index = {row: i for i, row in enumerate(rows)}
@@ -40,8 +39,8 @@ def instance(period, offset):
     return rows, supports
 
 
-def write_cnf(period, offset, path):
-    rows, supports = instance(period, offset)
+def write_cnf(period, offset, path, phase=0):
+    rows, supports = instance(period, offset, phase)
     count_rows = len(rows)
     variables = 6 * count_rows
     rgs_clauses = 1 + 5 * (count_rows - 1)
@@ -73,10 +72,13 @@ def write_cnf(period, offset, path):
             for colour in range(1, 7):
                 emit([-var(row, colour) for row in support])
     assert emitted == clauses
-    return {"period": period, "offset": offset, "rows": count_rows,
-            "supports": len(supports), "variables": variables,
-            "clauses": clauses, "rgs_clauses": rgs_clauses,
-            "triples": 72092}
+    result = {"period": period, "offset": offset, "rows": count_rows,
+              "supports": len(supports), "variables": variables,
+              "clauses": clauses, "rgs_clauses": rgs_clauses,
+              "triples": 72092}
+    if phase:
+        result["phase"] = phase
+    return result
 
 
 if __name__ == "__main__":
@@ -84,5 +86,6 @@ if __name__ == "__main__":
     parser.add_argument("period", type=int, choices=(2, 4))
     parser.add_argument("offset", type=int)
     parser.add_argument("output", type=Path)
+    parser.add_argument("--phase", type=int, default=0)
     args = parser.parse_args()
-    print(write_cnf(args.period, args.offset, args.output))
+    print(write_cnf(args.period, args.offset, args.output, args.phase))

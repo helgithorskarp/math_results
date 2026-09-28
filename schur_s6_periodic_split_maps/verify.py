@@ -28,19 +28,27 @@ def verify(args):
     selected = args.cases if args.cases else sorted(cases)
     for key in selected:
         reference = cases[key]
-        period, offset = map(int, key.split("-"))
-        assert (reference["period"], reference["offset"]) == (period, offset)
+        parts = list(map(int, key.split("-")))
+        if len(parts) == 2:
+            period, offset = parts
+            phase = 0
+        else:
+            assert len(parts) == 3
+            period, phase, offset = parts
+        assert (reference["period"], reference["offset"],
+                reference.get("phase", 0)) == (period, offset, phase)
         with tempfile.TemporaryDirectory(prefix=f"schur-periodic-{key}-") as temp:
             cnf = Path(temp) / "case.cnf"
             proof = Path(temp) / "case.drat"
-            dimensions = write_cnf(period, offset, cnf)
-            assert dimensions == audit_cnf(period, offset, cnf)
+            dimensions = write_cnf(period, offset, cnf, phase)
+            assert dimensions == audit_cnf(period, offset, cnf, phase)
             assert dimensions == {key: reference[key] for key in dimensions}
             assert cnf.stat().st_size == reference["cnf_bytes"]
             assert sha256(cnf) == reference["cnf_sha256"]
 
             solved = subprocess.run(
-                [str(args.cadical), "-q", "--sat", "--seed=20260928",
+                [str(args.cadical), "-q", "--sat",
+                 f"--seed={reference.get('solver_seed', 20260928)}",
                  "-t", str(args.timeout), str(cnf), str(proof)],
                 text=True, capture_output=True, check=False,
             )
@@ -68,5 +76,5 @@ if __name__ == "__main__":
     parser.add_argument("--cadical", type=Path, required=True)
     parser.add_argument("--drat-trim", type=Path, required=True)
     parser.add_argument("--cases", nargs="*")
-    parser.add_argument("--timeout", type=int, default=600)
+    parser.add_argument("--timeout", type=int, default=900)
     verify(parser.parse_args())
