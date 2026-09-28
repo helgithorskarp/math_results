@@ -92,6 +92,12 @@ half-balanced facial border. Consequently `G_n` is not face-separable.
 
 The prior face-separable theorem is in E. Diot and C. Gavoille,
 [On the Path Separability of Planar Graphs](https://dept-info.labri.fr/~gavoille/article/DG09a),
-Electronic Notes in Discrete Mathematics 34 (2009), 549–552. The present
-claim is an elementary consequence of balanced tree-decomposition bags;
-no literature priority claim is made.
+Electronic Notes in Discrete Mathematics 34 (2009), 549–552. Their later
+[Path Separability of Graphs](https://emilie-diot.eu/Article/DG10a)
+(2010), Proposition 1(1), already proves that every graph of treewidth at
+most three has a half-balanced separator formed by two shortest paths,
+including with nonnegative vertex masses. Since adding a universal vertex
+to a width-two graph gives a width-three decomposition, the universal-vertex
+corollary here is an explicit construction within that prior theorem, not a
+new path-separability class. The family above only shows that it is not
+covered by the *face-separable* subclass. No literature priority claim is made.

@@ -1,5 +1,10 @@
 # Two geodesic half separators from a universal vertex
 
+**Prior work:** Diot and Gavoille's 2010 Proposition 1(1) already covers
+this corollary via its general treewidth-three theorem. See [PROOF.md](PROOF.md)
+for the explicit specialization and citation. This note does not claim a
+new path-separability class.
+
 This contribution addresses the unweighted half-balance question in
 [Barbados 2026 Problem 31](https://web.math.princeton.edu/~pds/barbados26/problems.pdf).
 
