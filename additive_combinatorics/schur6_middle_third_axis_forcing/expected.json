@@ -1,0 +1,396 @@
+{
+  "audit": {
+    "status": "PASS",
+    "clauses": [
+      {
+        "axis_factor": 7,
+        "modulus": 35,
+        "literal_pairs": 578,
+        "distinct_projected_clauses": 157,
+        "auxiliary_definitions": 18,
+        "clauses_before_expansion": 160,
+        "expanded_reduced_clauses": 151,
+        "subsumed_literal_clauses": 6,
+        "subsumed_reduced_clauses": 0,
+        "status": "EXACT_CLAUSE_EQUIVALENCE_BY_SUBSUMPTION"
+      },
+      {
+        "axis_factor": 47,
+        "modulus": 235,
+        "literal_pairs": 27378,
+        "distinct_projected_clauses": 5234,
+        "auxiliary_definitions": 135,
+        "clauses_before_expansion": 4235,
+        "expanded_reduced_clauses": 5192,
+        "subsumed_literal_clauses": 42,
+        "subsumed_reduced_clauses": 0,
+        "status": "EXACT_CLAUSE_EQUIVALENCE_BY_SUBSUMPTION"
+      },
+      {
+        "axis_factor": 109,
+        "modulus": 545,
+        "literal_pairs": 147968,
+        "distinct_projected_clauses": 27935,
+        "auxiliary_definitions": 324,
+        "clauses_before_expansion": 21563,
+        "expanded_reduced_clauses": 27827,
+        "subsumed_literal_clauses": 108,
+        "subsumed_reduced_clauses": 0,
+        "status": "EXACT_CLAUSE_EQUIVALENCE_BY_SUBSUMPTION"
+      }
+    ],
+    "small": {
+      "status": "REDUCED_REFLECTED_ENCODING_AUDIT_OK",
+      "axis_factor": 7,
+      "complete_assignments": 55296,
+      "valid_assignments": 5760,
+      "valid_assignments_with_canonical_representative": 5760
+    },
+    "axis_cover": [
+      {
+        "axis_factor": 7,
+        "allowed_orbits": [
+          2,
+          3
+        ],
+        "forbidden_hyperedges": [
+          [
+            2,
+            3
+          ]
+        ],
+        "subsets": 4,
+        "valid_subsets": 3,
+        "maximal_supports": [
+          [
+            3
+          ],
+          [
+            2
+          ]
+        ],
+        "status": "SATURATION_COVER_OK"
+      },
+      {
+        "axis_factor": 47,
+        "allowed_orbits": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "forbidden_hyperedges": [],
+        "subsets": 256,
+        "valid_subsets": 256,
+        "maximal_supports": [
+          [
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ]
+        ],
+        "status": "SATURATION_COVER_OK"
+      },
+      {
+        "axis_factor": 83,
+        "allowed_orbits": [
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ],
+        "forbidden_hyperedges": [],
+        "subsets": 16384,
+        "valid_subsets": 16384,
+        "maximal_supports": [
+          [
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41
+          ]
+        ],
+        "status": "SATURATION_COVER_OK"
+      },
+      {
+        "axis_factor": 109,
+        "allowed_orbits": [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54
+        ],
+        "forbidden_hyperedges": [
+          [
+            36,
+            37
+          ]
+        ],
+        "subsets": 524288,
+        "valid_subsets": 393216,
+        "maximal_supports": [
+          [
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54
+          ],
+          [
+            36,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54
+          ]
+        ],
+        "status": "SATURATION_COVER_OK"
+      }
+    ],
+    "saturation": {
+      "status": "FULL_WORD_SATURATION_AUDIT_OK",
+      "assignments": 55296,
+      "valid_words": 5760,
+      "checked_saturations": 8748
+    }
+  },
+  "controls": {
+    "status": "PASS",
+    "controls": [
+      {
+        "status": "REFLECTED_SHARED_WORD_OK",
+        "modulus": 235,
+        "endpoint": 234,
+        "colours": 6,
+        "class_sizes": [
+          24,
+          24,
+          64,
+          36,
+          42,
+          44
+        ],
+        "integer_pairs": 13689,
+        "modular_pairs": 27378,
+        "asymmetric_fibre_pairs": 3,
+        "special_axis_mergeable": false,
+        "residual_size": 8,
+        "common_sizes": [
+          16,
+          6,
+          8,
+          9
+        ],
+        "axis_two": []
+      },
+      {
+        "status": "REFLECTED_SHARED_WORD_OK",
+        "modulus": 235,
+        "endpoint": 234,
+        "colours": 6,
+        "class_sizes": [
+          22,
+          16,
+          80,
+          34,
+          38,
+          44
+        ],
+        "integer_pairs": 13689,
+        "modular_pairs": 27378,
+        "asymmetric_fibre_pairs": 3,
+        "special_axis_mergeable": true,
+        "residual_size": 8,
+        "common_sizes": [
+          16,
+          6,
+          8,
+          9
+        ],
+        "axis_two": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        "branch": 0
+      },
+      {
+        "status": "REFLECTED_SHARED_WORD_OK",
+        "modulus": 35,
+        "endpoint": 34,
+        "colours": 6,
+        "class_sizes": [
+          6,
+          6,
+          10,
+          8,
+          4,
+          0
+        ],
+        "integer_pairs": 289,
+        "modular_pairs": 578,
+        "asymmetric_fibre_pairs": 1,
+        "special_axis_mergeable": false,
+        "residual_size": 2,
+        "common_sizes": [
+          2,
+          2,
+          1,
+          0
+        ],
+        "axis_two": [
+          2,
+          5
+        ],
+        "branch": 1
+      },
+      {
+        "status": "REFLECTED_SHARED_WORD_OK",
+        "modulus": 305,
+        "endpoint": 304,
+        "colours": 6,
+        "class_sizes": [
+          36,
+          36,
+          100,
+          42,
+          42,
+          48
+        ],
+        "integer_pairs": 23104,
+        "modular_pairs": 46208,
+        "asymmetric_fibre_pairs": 13,
+        "special_axis_mergeable": true,
+        "residual_size": 17,
+        "common_sizes": [
+          20,
+          8,
+          7,
+          9
+        ],
+        "axis_two": [
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40
+        ],
+        "branch": 0
+      }
+    ],
+    "saturation_image_checked": true
+  },
+  "certificate": {
+    "cnf_sha256": "aad9f09ccc92f42fd7a0b7b5c843f6db08efac92a5c612edd401cdac9d256686",
+    "variables": 720,
+    "clauses": 21923,
+    "cnf_bytes": 411114,
+    "solver_returncode": 20,
+    "solver_seconds": 58.571719644998666,
+    "proof_bytes": 57503666,
+    "proof_sha256": "25057d902fe6ac8e6aa802c632b73e13978ea908a3918c25f9bfc436c435eab5",
+    "checker_returncode": 0,
+    "checker_seconds": 71.2148326440074,
+    "status": "DRAT_VERIFIED",
+    "cadical_commit": "146207318796f094dcded87349a64f0c6927309e",
+    "drat_trim_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+  }
+}

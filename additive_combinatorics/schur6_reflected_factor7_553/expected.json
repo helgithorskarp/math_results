@@ -1,0 +1,283 @@
+{
+  "audit": {
+    "status": "PASS",
+    "clauses": [
+      {
+        "axis_factor": 5,
+        "short_factor": 7,
+        "modulus": 35,
+        "literal_pairs": 578,
+        "distinct_projected_clauses": 138,
+        "auxiliary_definitions": 18,
+        "clauses_before_expansion": 135,
+        "expanded_reduced_clauses": 126,
+        "subsumed_literal_clauses": 12,
+        "subsumed_reduced_clauses": 0,
+        "status": "EXACT_CLAUSE_EQUIVALENCE_BY_SUBSUMPTION"
+      },
+      {
+        "axis_factor": 13,
+        "short_factor": 7,
+        "modulus": 91,
+        "literal_pairs": 4050,
+        "distinct_projected_clauses": 996,
+        "auxiliary_definitions": 54,
+        "clauses_before_expansion": 792,
+        "expanded_reduced_clauses": 960,
+        "subsumed_literal_clauses": 36,
+        "subsumed_reduced_clauses": 0,
+        "status": "EXACT_CLAUSE_EQUIVALENCE_BY_SUBSUMPTION"
+      },
+      {
+        "axis_factor": 79,
+        "short_factor": 7,
+        "modulus": 553,
+        "literal_pairs": 152352,
+        "distinct_projected_clauses": 34788,
+        "auxiliary_definitions": 351,
+        "clauses_before_expansion": 24453,
+        "expanded_reduced_clauses": 34554,
+        "subsumed_literal_clauses": 234,
+        "subsumed_reduced_clauses": 0,
+        "status": "EXACT_CLAUSE_EQUIVALENCE_BY_SUBSUMPTION"
+      }
+    ],
+    "small": {
+      "status": "PASS",
+      "assignments": 9216,
+      "valid_words": 1344,
+      "all_valid_words_canonicalized": true
+    },
+    "orientations": [
+      {
+        "T": [
+          1,
+          2,
+          3
+        ],
+        "positive_sum": [
+          1,
+          1,
+          2
+        ],
+        "negative_sum": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "T": [
+          1,
+          2,
+          4
+        ],
+        "positive_sum": [
+          1,
+          1,
+          2
+        ],
+        "negative_sum": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "T": [
+          1,
+          3,
+          5
+        ],
+        "positive_sum": [
+          3,
+          5,
+          1
+        ],
+        "negative_sum": [
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "T": [
+          1,
+          4,
+          5
+        ],
+        "positive_sum": [
+          1,
+          4,
+          5
+        ],
+        "negative_sum": [
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "T": [
+          2,
+          3,
+          6
+        ],
+        "positive_sum": [
+          3,
+          3,
+          6
+        ],
+        "negative_sum": [
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "T": [
+          2,
+          4,
+          6
+        ],
+        "positive_sum": [
+          2,
+          2,
+          4
+        ],
+        "negative_sum": [
+          2,
+          6,
+          1
+        ]
+      },
+      {
+        "T": [
+          3,
+          5,
+          6
+        ],
+        "positive_sum": [
+          3,
+          3,
+          6
+        ],
+        "negative_sum": [
+          3,
+          5,
+          1
+        ]
+      },
+      {
+        "T": [
+          4,
+          5,
+          6
+        ],
+        "positive_sum": [
+          5,
+          6,
+          4
+        ],
+        "negative_sum": [
+          4,
+          4,
+          1
+        ]
+      }
+    ]
+  },
+  "controls": {
+    "status": "PASS",
+    "controls": [
+      {
+        "status": "ODD_FACTOR_WORD_OK",
+        "modulus": 35,
+        "endpoint": 34,
+        "class_sizes": [
+          4,
+          4,
+          2,
+          12,
+          12,
+          0
+        ],
+        "modular_pairs": 578,
+        "integer_pairs": 289,
+        "residual_size": 1,
+        "common_sizes": [
+          2,
+          2,
+          0
+        ],
+        "asymmetric_pairs": 0,
+        "special_axis_union_sum_free": false
+      },
+      {
+        "status": "ODD_FACTOR_WORD_OK",
+        "modulus": 91,
+        "endpoint": 90,
+        "class_sizes": [
+          6,
+          6,
+          6,
+          24,
+          24,
+          24
+        ],
+        "modular_pairs": 4050,
+        "integer_pairs": 2025,
+        "residual_size": 1,
+        "common_sizes": [
+          4,
+          4,
+          4
+        ],
+        "asymmetric_pairs": 0,
+        "special_axis_union_sum_free": false
+      },
+      {
+        "status": "ODD_FACTOR_WORD_OK",
+        "modulus": 35,
+        "endpoint": 34,
+        "class_sizes": [
+          6,
+          6,
+          6,
+          8,
+          8,
+          0
+        ],
+        "modular_pairs": 578,
+        "integer_pairs": 289,
+        "residual_size": 3,
+        "common_sizes": [
+          1,
+          1,
+          0
+        ],
+        "asymmetric_pairs": 1,
+        "special_axis_union_sum_free": true
+      }
+    ],
+    "orientation_variants_checked": 24
+  },
+  "certificate": {
+    "axis_factor": 79,
+    "short_factor": 7,
+    "variables": 663,
+    "clauses": 24765,
+    "axis_normalized": false,
+    "cnf_bytes": 451030,
+    "cnf_sha256": "c18a9e6d9ffaeb5fb32158a360bd147fea35bb4328b7a5c15a8689a6447dd9c6",
+    "solver_returncode": 20,
+    "solver_seconds": 91.10227738399408,
+    "proof_bytes": 57810991,
+    "proof_sha256": "e3ade4fa9022aebf7fe50fdb8929a21fcda987f75816a492afe319eca4197659",
+    "checker_returncode": 0,
+    "checker_seconds": 88.73314087998006,
+    "status": "DRAT_VERIFIED",
+    "cadical_commit": "146207318796f094dcded87349a64f0c6927309e",
+    "drat_trim_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+  }
+}
