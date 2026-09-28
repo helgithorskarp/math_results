@@ -1,0 +1,262 @@
+{
+  "status": "PASS",
+  "counts": {
+    "annular_metrics": 60,
+    "branch_pairs": 1280,
+    "mass_cases": 2432,
+    "nongeodesic_full_branches": 156,
+    "spherical_embeddings": 63,
+    "boundary_metrics": 3,
+    "rejected_controls": 6,
+    "zero_face_metrics": 3,
+    "zero_face_branch_pairs": 19,
+    "zero_face_mass_cases": 304
+  },
+  "marked_face_control": {
+    "vertices": 20,
+    "edges": 54,
+    "marked_vertices": [
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15,
+      17,
+      19
+    ],
+    "cheap_edges": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        14
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        1,
+        16
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        18
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        4,
+        18
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        8,
+        11
+      ],
+      [
+        8,
+        12
+      ],
+      [
+        10,
+        13
+      ],
+      [
+        12,
+        15
+      ],
+      [
+        12,
+        16
+      ],
+      [
+        14,
+        17
+      ],
+      [
+        14,
+        18
+      ],
+      [
+        16,
+        19
+      ]
+    ],
+    "cheap_length": 1,
+    "other_length": 22,
+    "core_branches": [
+      [
+        0,
+        2,
+        6,
+        10,
+        1
+      ],
+      [
+        0,
+        8,
+        12,
+        16,
+        1
+      ],
+      [
+        0,
+        14,
+        18,
+        4,
+        1
+      ]
+    ],
+    "all_full_branch_pairs_fail": [
+      {
+        "branches": [
+          0,
+          1
+        ],
+        "component_marked_counts": [
+          1,
+          1,
+          1,
+          6
+        ]
+      },
+      {
+        "branches": [
+          0,
+          2
+        ],
+        "component_marked_counts": [
+          1,
+          1,
+          1,
+          6
+        ]
+      },
+      {
+        "branches": [
+          1,
+          2
+        ],
+        "component_marked_counts": [
+          1,
+          1,
+          1,
+          6
+        ]
+      }
+    ],
+    "positive_separator": {
+      "paths": [
+        [
+          3,
+          18,
+          4,
+          1,
+          10,
+          6,
+          9
+        ],
+        [
+          3,
+          18,
+          4,
+          1,
+          16,
+          12,
+          15
+        ]
+      ],
+      "component_marked_counts": [
+        1,
+        1,
+        1,
+        3
+      ]
+    },
+    "four_vertex_cuts_checked": 4845,
+    "balanced_four_vertex_cuts": 0,
+    "longitudinal_metric_positive_separator": {
+      "paths": [
+        [
+          3,
+          2,
+          0,
+          11
+        ],
+        [
+          4,
+          1,
+          13,
+          12
+        ]
+      ],
+      "component_marked_counts": [
+        3,
+        3
+      ]
+    }
+  },
+  "interval_scope_control": {
+    "vertices": 20,
+    "positive_mass_vertices": 20,
+    "metric_parameters": [
+      6,
+      3,
+      1
+    ],
+    "maximum_interval_vertices": 12,
+    "triangles_checked": 36,
+    "maximum_rooted_triangle_interval_union_vertices": 17,
+    "positive_separator": {
+      "paths": [
+        [
+          3,
+          2,
+          0,
+          8
+        ],
+        [
+          4,
+          1,
+          10,
+          9
+        ]
+      ],
+      "component_vertex_counts": [
+        3,
+        9
+      ]
+    }
+  },
+  "scope": "Regression evidence for the written all-order proof; no unrestricted planar counterexample claim."
+}
