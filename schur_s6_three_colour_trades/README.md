@@ -1,5 +1,11 @@
 # Three-colour trades cannot repair four explicit Schur assignments
 
+**Stronger result:** every valid 537-colouring must split at least four
+original colour classes of each of the four specified assignments. This
+remains true after arbitrary colour relabelling and allows new entries
+into otherwise intact classes. See [the splitting theorem and proof](SPLITTING.md)
+and run `python3 -B check_splitting.py` for its separate certificate.
+
 This directory proves 50 restricted exclusions relevant to the classical
 sixth Schur number, with repeated summands included. It gives no new lower
 or unrestricted upper bound for `S(6)`.
