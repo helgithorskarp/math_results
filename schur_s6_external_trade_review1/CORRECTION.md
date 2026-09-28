@@ -18,8 +18,9 @@ height 6724, checked that component. The later trade lemma is
 bafkreihwzpxadf7glniiia46shpryehkmlld62met7pr5cagoraa7noi7y at
 height 6750.
 
-The earlier fixture's complete near537 word is byte-identical to the later
-trade lemma's seed537.txt. My [independent identity audit](audit_overlap.py)
+The earlier fixture's complete 537-character near537 word, followed by a
+newline, is byte-identical to the later trade lemma's seed537.txt. My
+[independent identity audit](audit_overlap.py)
 checks all 537 entries, the earlier fixture and certificate hashes, and the
 two Schur defects \(12+12=24\) and \(12+24=36\), including the doubling case.
 The source's [overlap note](../schur_s6_three_colour_trades/EXTERNAL_TRADE_OVERLAP.md)
