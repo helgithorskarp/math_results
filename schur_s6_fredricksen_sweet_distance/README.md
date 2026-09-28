@@ -1,4 +1,4 @@
-# A 51-edit obstruction around the Fredricksen–Sweet S(6) colouring
+# A 52-edit obstruction around the Fredricksen–Sweet S(6) colouring
 
 ## Claim and convention
 
@@ -12,7 +12,7 @@ page 6. Their exceptional symmetric pair is `179,358`, with different colours.
 The colour-class sizes are `129,86,110,77,64,70`.
 
 **Proved local obstruction.** If a valid six-colouring of `[1,537]` exists,
-its restriction to `[1,536]` differs from `baseline.txt` in at least **51**
+its restriction to `[1,536]` differs from `baseline.txt` in at least **52**
 positions. This holds for every labelling of its six colours. The claim is a
 distance bound around one specified baseline. It does not prove that 537 is
 uncolourable or improve the published lower bound `S(6) >= 536`.
@@ -42,6 +42,33 @@ Disjoint supports force one *additional* change per selected pair. The
 certificate supplies `0,8,0,13,19,16` selected pairs for colours 1 through 6,
 giving respective lower bounds `64,51,55,51,51,51`. Their minimum is 51.
 
+## Saturation step: excluding exactly 51 edits
+
+Suppose a valid extension had at most 51 edits, and 537 had colour `c`. The
+pair/support lower bound already excludes `c=1,3`. For each of `c=2,4,5,6`,
+the certificate gives exactly 51 **disjoint mandatory edit groups**: all
+`P_c` pairs, plus one support set for each selected pair. Every group must
+contain an edit. Thus each contains exactly one edit, and every position
+outside these groups keeps its baseline colour.
+
+The standard-library [saturation_check.py](saturation_check.py) independently
+validates the baseline, the pair counts, every certificate witness, and group
+disjointness. For each of the four colours it then builds the exact finite
+constraints under this forced 51-edit pattern:
+
+* each free position has exactly one of six colours;
+* each mandatory group has exactly one edit;
+* every `x+y=z` on `[1,537]`, including `x=y`, is nonmonochromatic.
+
+Fixed positions are substituted directly. The checker performs only unit
+propagation: it repeatedly assigns the sole remaining literal of each unit
+clause and rejects an empty clause. All four cases yield an empty clause,
+without branching or trusting a SAT solver. Consequently 51 edits are
+impossible, and the distance is at least 52. The printed clause counts are
+57,349, 97,660, 169,996, and 131,512 for `c=2,4,5,6` respectively. These
+clauses are regenerated from the baseline and certificate, not stored as an
+external proof dump.
+
 As a small example, `(9,528)` is one of the colour-5 pairs. If 9 changes to
 colour 1, `(1,8,9)` forces another edit; if 528 changes to colour 1,
 `(1,528,529)` does. `certificate.json` gives analogous triples for all five
@@ -54,12 +81,18 @@ The theorem needs only CPython 3.11 or later and the standard library:
 ```sh
 cd schur_s6_fredricksen_sweet_distance
 python3 check.py
+python3 saturation_check.py
 ```
 
 Expected output:
 
 ```text
 PASS triples=71824 pair_counts=64,43,55,38,32,35 selected_counts=0,8,0,13,19,16 witnesses=560 distance_at_least=51
+colour=2 groups=51 free=203 clauses=57349 unit_rounds=2 assigned=876 UNSAT
+colour=4 groups=51 free=266 clauses=97660 unit_rounds=2 assigned=930 UNSAT
+colour=5 groups=51 free=347 clauses=169996 unit_rounds=4 assigned=1056 UNSAT
+colour=6 groups=51 free=307 clauses=131512 unit_rounds=2 assigned=871 UNSAT
+PASS distance_at_least=52
 ```
 
 The checker enumerates all `71,824` unordered Schur triples on `[1,536]`,
@@ -98,13 +131,14 @@ python3 sat_probe.py --n 537 --colors 6 --symmetry --conflicts 100000
 `SAT` output includes a definition-level checked colouring. `UNKNOWN` means
 the conflict budget was exhausted. A solver `UNSAT` result would concern only
 the encoded class; this script emits no independently checked UNSAT proof.
-The certificate theorem does not use PySAT or the SAT probe.
+The distance theorem does not use PySAT or the SAT probe.
 
 ## Scope and trust boundary
 
-The distance theorem follows from the displayed pair-and-support argument and
-the finite data checked by `check.py`. The remaining trust boundary is the
-checker and standard Python integer/file operations; the proof uses no solver
+The distance theorem follows from the displayed pair-and-support argument,
+the saturation step, and the finite data checked by `check.py` and
+`saturation_check.py`. The remaining trust boundary is the two small checkers
+and standard Python integer/file operations; the proof uses no solver
 soundness assumption. Certificate generation is untrusted. The baseline is
 also verified as a valid 536-colouring regardless of its source attribution.
 No conclusion is drawn about the existence of a six-colouring at 537 or about
