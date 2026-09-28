@@ -1,0 +1,117 @@
+{
+  "bare_subdivision_negative_control_rejected": true,
+  "integer_obstruction_lift": {
+    "B": 25,
+    "M": 26,
+    "N": 155,
+    "core": "K5 (nonplanar)",
+    "k": 1,
+    "minimum_largest_remaining_component": 97,
+    "path_masks": 24670
+  },
+  "leaf_equivalence_checks": [
+    {
+      "masses": [
+        1
+      ],
+      "name": "single_total_one",
+      "separator_k1_k2": [
+        true,
+        true
+      ]
+    },
+    {
+      "masses": [
+        4
+      ],
+      "name": "single_heavy",
+      "separator_k1_k2": [
+        true,
+        true
+      ]
+    },
+    {
+      "masses": [
+        2,
+        1,
+        4
+      ],
+      "name": "disconnected",
+      "separator_k1_k2": [
+        true,
+        true
+      ]
+    },
+    {
+      "masses": [
+        3,
+        1,
+        2
+      ],
+      "name": "weighted_path",
+      "separator_k1_k2": [
+        true,
+        true
+      ]
+    },
+    {
+      "masses": [
+        2,
+        3,
+        1,
+        1,
+        2
+      ],
+      "name": "weighted_cycle",
+      "separator_k1_k2": [
+        true,
+        true
+      ]
+    },
+    {
+      "masses": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "name": "K5_negative_control",
+      "separator_k1_k2": [
+        false,
+        true
+      ]
+    }
+  ],
+  "metric_projection_and_component_checks": [
+    {
+      "families": 6903,
+      "geodesics": 117,
+      "name": "unequal_path",
+      "path_masks": 117,
+      "vertices": 12
+    },
+    {
+      "families": 9591,
+      "geodesics": 138,
+      "name": "triangle",
+      "path_masks": 138,
+      "vertices": 12
+    },
+    {
+      "families": 55611,
+      "geodesics": 333,
+      "name": "nongeodesic_edge",
+      "path_masks": 333,
+      "vertices": 21
+    },
+    {
+      "families": 289180,
+      "geodesics": 760,
+      "name": "K4",
+      "path_masks": 760,
+      "vertices": 22
+    }
+  ],
+  "status": "PASS"
+}
