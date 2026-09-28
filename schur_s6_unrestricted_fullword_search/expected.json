@@ -1,0 +1,53 @@
+{
+  "plain": {
+    "cnf": {
+      "variables": 3222,
+      "clauses": 441145,
+      "triples": 72092,
+      "sha256": "fd6503a79cfeb53c614fe436669f192e81416b6e7292069938cf607f41b070e2"
+    },
+    "reference_run": {
+      "solver": "Kissat 4.0.4 commit 8af8e56f174b778aef3aa45af9f739b2a5f492c2",
+      "configuration": "--sat --time=600 --seed=20260929",
+      "status": "UNKNOWN",
+      "conflicts": 2981103
+    }
+  },
+  "rgs": {
+    "cnf": {
+      "variables": 5907,
+      "clauses": 451879,
+      "triples": 72092,
+      "sha256": "332e4b211a672836c68320f9403b0454462a96df2071aefcc2a72f809820eb7c"
+    },
+    "reference_run": {
+      "solver": "Kissat 4.0.4 commit 8af8e56f174b778aef3aa45af9f739b2a5f492c2",
+      "configuration": "--sat --time=300 --seed=20260930",
+      "status": "UNKNOWN",
+      "conflicts": 1511371
+    }
+  },
+  "partial_search": {
+    "solver": "YalSAT commit a0fd39f072f2d4693dd5a1977de3c3d3f69c8850",
+    "configuration": "-T 2 on plain CNF, seed 20260928",
+    "elapsed_seconds": 10.50,
+    "unsatisfied_clauses": 2,
+    "uncoloured_positions": [2, 4],
+    "partial_sha256": "ac4a47397942961b3755bd8129b4e6187068eee2afb5a5e2fbc90f89e34cd6d5",
+    "best_direct_completion_defects": 11,
+    "completed11_sha256": "90ba9bdad8f127548fbf4d1397d5111bfebda20b013460f243d0b4d4a1e1d146"
+  },
+  "whole_word_continuation": {
+    "steps": 10000000,
+    "seed": 20260930,
+    "best_defects": 4,
+    "best4_sha256": "a947b6e20966bb3d7931f82b9958facd066436c7d928fb5be6b244ed89b1e845"
+  },
+  "phase_probe": {
+    "solver": "CaDiCaL 1.9.5 commit 146207318796f094dcded87349a64f0c6927309e",
+    "source": "best4.txt",
+    "conflict_budget": 200000,
+    "status": "UNKNOWN",
+    "elapsed_seconds": 28.84
+  }
+}
