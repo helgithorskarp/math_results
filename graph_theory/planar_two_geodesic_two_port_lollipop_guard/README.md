@@ -1,22 +1,31 @@
 # Two-port transfer and weighted lollipop guards
 
-An all-spanning geodesic-cover theorem for a fragment with an attached ear transfers to arbitrary exterior networks meeting that fragment at two ports. Applying this rule to the [one-ear lollipop classification](../planar_two_geodesic_lollipop_spanning_cover/README.md) produces a weighted guard theorem and a planar family of unbounded order and treewidth at least four. It is a sufficient result for [Barbados 2026 Problem 31](https://web.math.princeton.edu/~pds/barbados26/problems.pdf), not a settlement of that unrestricted question. All edges here have unit length, and vertex masses are arbitrary nonnegative reals.
+An all-spanning geodesic-cover theorem for a fragment with an attached ear transfers exactly to arbitrary exterior networks meeting that fragment at two ports. Applying this rule to the [reviewed one-ear lollipop classification](../planar_two_geodesic_lollipop_spanning_cover_review1/REVIEW.md) produces a sharp fragment threshold, a weighted guard theorem, and a planar family of unbounded order and treewidth at least four. This is a sufficient result for [Barbados 2026 Problem 31](https://web.math.princeton.edu/~pds/barbados26/problems.pdf), not a settlement of that unrestricted question. All edges here have unit length, and vertex masses are arbitrary nonnegative reals.
 
 ## Abstract two-port transfer
 
-Let `F` be a finite simple graph on vertex set `C`, with distinct ports `a,b`. For integer `s>=2`, let `F_s` add a fresh `s`-edge path between `a,b`. Say that `F_s` has the **anchored all-spanning `k`-cover property** if, for every spanning edge subgraph `J` of `F_s`, each component of `J[C]` is covered by at most `k` `J`-geodesics whose endpoints lie in `C`.
+Let `F` be a finite simple graph on vertex set `C`, with distinct ports `a,b`. For integer `s>=2`, let `F_s` add a fresh `s`-edge path between `a,b`; write `F_infinity=F`. Say that `F_s` has the **all-spanning `k`-cover property** if, for every spanning edge subgraph `J` of `F_s`, each component of `J[C]` is covered by at most `k` `J`-geodesics. Path endpoints may lie anywhere in `F_s`.
 
-**Transfer lemma.** Suppose `F_s` has this property for every integer `s>=L`, where `L>=2`. Let `G[C]=F`, and suppose every edge from `C` to `G-C` meets `C` at `a` or `b`. If every `a`-to-`b` path with internal vertices outside `C` has length at least `L`, then, for every spanning edge subgraph `H` of `G`, each component of `H[C]` is covered by at most `k` ambient `H`-geodesics with endpoints in `C`.
+For a finite simple host `G` with `G[C]=F` and all edges from `C` to `G-C` meeting `C` at `a` or `b`, let `Lambda(G,C)` be the set of lengths of its simple `a`-to-`b` paths with **at least one** internal vertex, all outside `C`.
 
-**Proof.** If `H` has an outside `a`-to-`b` path, choose one of minimum length `s>=L` and set `J=H[C]` plus this path, viewed as a spanning edge subgraph of `F_s`. For every `u,v` in `C`, `d_H(u,v)=d_J(u,v)`: one inequality is immediate, and in the other direction a simple `H`-path between fragment vertices has at most one outside excursion, necessarily between distinct ports. Replace it by the chosen shortest outside path, obtaining a `J`-walk no longer than the original path. If no outside route exists, choose any `s>=L` and let `J` contain just `H[C]` and isolated ear vertices. Then a simple `H`-path between vertices of `C` cannot leave `C`, so the same distance identity holds. The anchored cover in `J` transfers path by path to `H` by this distance identity. This includes disconnected `H` and `J`. `□`
+**Exact transfer theorem.** The following are equivalent:
+
+1. Every spanning edge subgraph `H` of `G` has the `k`-cover property for each component of `H[C]`, using ambient `H`-geodesics.
+2. `F_s` has the all-spanning `k`-cover property for every `s` in `Lambda(G,C) union {infinity}`.
+
+**Proof.** For `2 => 1`, fix `H`. If it has an exterior `a`-to-`b` path, choose a shortest such path `P` of length `s`; otherwise put `J=H[C]`. In the first case put `J=H[C] union P`, a spanning edge subgraph of `F_s`. **`J` is isometric in `H`.** Indeed, any path in `H` between vertices of `J` can be split into segments within `J` and maximal segments whose interiors avoid `J`. Each latter segment has both ends on `P` (the only fragment vertices with outside neighbors are its endpoints). If a segment joining `p_i,p_j` along `P` were shorter than `|i-j|`, splice it into `P` to get an exterior `a`-to-`b` walk shorter than `s`, and then erase loops. This contradicts the choice of `P`. Replace every off-`J` segment by its `P` subpath. If there is no exterior `a`-to-`b` route, a simple path between vertices of `C` cannot leave `C`, so `J=H[C]` is isometric too. Covering geodesics of `J` remain geodesics in `H`, regardless of their endpoints.
+
+For `1 => 2`, take any `s` in `Lambda(G,C)` and choose an exterior path `P` of length `s` in `G`. Any spanning edge subgraph of `F_s` embeds as a spanning edge subgraph of `G` on `C union V(P)` by deleting all other edges; its other vertices are isolated. Thus a failed fragment cover in `F_s` would fail in `G`. The case `s=infinity` follows by deleting every exterior edge. `□`
+
+In particular, if every exterior route has length at least `L>=2` and `F_s` has the property for all `s>=L`, then `G` has it. This remains true for disconnected spanning subgraphs and requires no restriction on the endpoints of the model's covering paths.
 
 ## Two-port completion lemma
 
-Let `C` be an **induced** lollipop in a finite simple graph `G`: an `m`-cycle `0-1-...-(m-1)-0`, `m>=5`, and one pendant leaf `t` at `0`. Suppose every edge between `C` and `G-C` is incident in `C` with either `1` or `3`. Let `lambda` be the shortest length of a `1`-to-`3` path whose internal vertices lie outside `C`, or infinity if none exists. Assume `lambda>=max(2,m-8)`.
+Let `C` be an **induced** lollipop in a finite simple graph `G`: an `m`-cycle `0-1-...-(m-1)-0`, `m>=5`, and one pendant leaf `t` at `0`. Suppose every edge between `C` and `G-C` is incident in `C` with either `1` or `3`. Let `lambda` be the shortest length of a `1`-to-`3` path with internal vertices outside `C`, or infinity if none exists.
 
-**Lemma.** For every spanning edge subgraph `H` of `G`, every connected vertex set `D` in `H[C]` is contained in the union of at most two ambient `H`-geodesics. The geodesics can be chosen with their endpoints in `C`.
+**Sharp lemma.** Every spanning edge subgraph `H` of `G` covers every component of `H[C]` by at most two ambient `H`-geodesics **if and only if** `lambda>=max(2,m-8)`. In the positive case, the geodesics can be chosen with endpoints in `C`, and hence cover any connected subset of a component.
 
-**Proof.** The all-spanning classification applies to every ear length `s>=max(2,m-8)`. Its constructive case proof chooses the endpoints of each covering path in `C`: tree leaves, cycle vertices, or the pendant leaf. Thus it proves the anchored all-spanning two-cover property required by the transfer lemma. Apply that lemma with `a=1,b=3,L=max(2,m-8)` to the component of `H[C]` containing `D`. The exterior network can have arbitrary order and many alternate routes; only its shortest two-port length matters. `□`
+**Proof.** The [one-ear classification](../planar_two_geodesic_lollipop_spanning_cover/README.md) says `F_(m,s)` has the all-spanning two-cover property exactly when `s>=m-8`, for `s>=2`. The bare lollipop `F_infinity` has the property by its tree/whole-cycle case. If `lambda>=max(2,m-8)`, exact transfer applies. Conversely, if `lambda<m-8`, choose a shortest exterior route `P` of length `lambda` and keep only the edges of `C-12` and `P`. This reproduces the classification's failing `F_(m,lambda)-12` witness, with all other host vertices isolated. The original constructive positive covers have endpoints in `C`; the isometric transfer preserves them. `□`
 
 ## Four-vertex weighted guard corollary
 
@@ -40,7 +49,7 @@ From the repository root, run with Python 3.11+ and only the standard library:
 PYTHONDONTWRITEBYTECODE=1 python3 graph_theory/planar_two_geodesic_two_port_lollipop_guard/verify.py
 ```
 
-The checker reconstructs the graph and spherical rotation, checks Euler's identity, component structure, two-port boundary and outside distance, and all-pairs fragment isometry. It independently tests the exact distance reduction and geodesic pair coverage after sampled edge deletions. The universal weighted result is the written lemma plus the heavy-component argument; the finite checks do not replace them.
+The checker reconstructs the graph and spherical rotation, checks Euler's identity, component structure, two-port boundary and outside distance, and all-pairs fragment isometry. It independently tests isometry of the **entire reduced graph** and geodesic pair coverage after sampled edge deletions, checks all 2,048 spanning subgraphs of a small two-port host with cross-links in its exterior network, and confirms a short-route failure inside a host with two exterior routes. The universal claims rest on the written exact transfer and heavy-component proofs; the finite checks do not replace them.
 
 Expected output:
 
@@ -49,6 +58,8 @@ family r=1 vertices=18 edges=26 faces=10 ports=3 isometric=yes
 family r=5 vertices=66 edges=82 faces=18 ports=3 isometric=yes
 family r=8 vertices=102 edges=124 faces=24 ports=3 isometric=yes
 family r=2 vertices=30 edges=40 faces=12 ports=3 isometric=yes
-sampled_subgraphs=100 exact_distance_reductions=200 component_covers=768 PASS
+sampled_subgraphs=100 exact_distance_reductions=200 full_isometries=200 routed=102 component_covers=768 PASS
+two_route_host shortest_exterior=2 m=11 deletion=12 two_cover=no PASS
+tiny_host_spanning=2048 routed=944 isometric=2048 PASS
 PASS
 ```
