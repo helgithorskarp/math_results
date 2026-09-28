@@ -104,8 +104,10 @@ word only; they do not exclude a valid colouring elsewhere.
 individual entries and finds no word with fewer than four violations. There
 are 2,177 legal one-entry recolourings; 98 preserve score four. For two
 nonadjacent entries in the doubling graph, both individual moves must be
-legal. The script evaluates 233,367 pairs whose individual score changes sum
-to at most six. Any omitted pair has score at least seven: its two entries
+legal. The script evaluates 233,367 pairs of individually legal moves whose
+individual score changes sum to at most six; some pairs touch adjacent
+doubling positions. Any omitted pair of individually legal moves with a
+larger change sum has score at least seven: its two entries
 share at most two distinct-summand Schur triples, each of which contributes a
 correction of at least minus two to the sum of individual score changes.
 It also evaluates all 4,551 final-legal moves on doubling-adjacent entries,
