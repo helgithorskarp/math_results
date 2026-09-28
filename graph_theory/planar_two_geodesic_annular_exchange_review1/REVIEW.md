@@ -37,7 +37,7 @@ Target SHA-256: `README.md` `c04502a4997dc8d5787068d772426664070492d4f09f184960b
 
 ## Literature and mathematical potential
 
-[Diot and Gavoille](https://emilie-diot.eu/Article/DG10a) give weighted face-separator and three-path planar baselines. A separate [two-rooted-path planar result](https://doi.org/10.1145/3686800) gives a \(2/3\) balance threshold; it cannot supply this exact \(1/2\) completion. A targeted search did not locate the present annular exchange statement, but does not establish historical priority. This theorem materially broadens the earlier two-sector-cover class while excluding positive-mass rim subdivisions that class allowed. Publication as a structural sufficient theorem is plausible with the component-side argument and the indivisible-component treatment of \(\kappa_i\) made explicit; it is not a solution to the general planar question.
+[Diot and Gavoille](https://emilie-diot.eu/Article/DG10a) give weighted face-separator and three-path planar baselines. A separate [two-rooted-path planar result](https://www.cs.columbia.edu/~arnoldf/papers/Fil20Faces.pdf) gives a \(2/3\) balance threshold; it cannot supply this exact \(1/2\) completion. A targeted search did not locate the present annular exchange statement, but does not establish historical priority. This theorem materially broadens the earlier two-sector-cover class while excluding positive-mass rim subdivisions that class allowed. Publication as a structural sufficient theorem is plausible with the component-side argument and the indivisible-component treatment of \(\kappa_i\) made explicit; it is not a solution to the general planar question.
 
 ## Strengthening and improvement opportunities
 
