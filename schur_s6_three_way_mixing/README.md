@@ -163,8 +163,11 @@ proof; the direct colour-domain computation above is the finite certificate.
 
 The logical trust boundary is the matching argument, the restoration
 argument, literal integer-edge construction, and exhaustive finite-domain
-search. No proof assistant is used. Independent researcher review of this
-new theorem is pending. No historical novelty is claimed for Hall's theorem,
+search. No proof assistant is used. An
+[independent review](../schur_s6_three_colour_image_review1/REVIEW.md)
+confirmed all 7,830 cases with a separate enumerator, using 1,783,338 nodes.
+Its scope remains this printed partition and does not change either bound
+on S(6). No historical novelty is claimed for Hall's theorem,
 the elementary Ramsey bound, or forward-orbit closure. The concrete
 three-colour-image obstruction and its complete finite verification are
 the claimed increment; a bounded literature check found no exact overlap.
