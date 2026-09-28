@@ -149,3 +149,54 @@ The first program reports `minimum_single 4` and `overall_minimum_pair 4`.
 The C++ scans report `improving_pairs=0 best=4`. These statements use exact
 integer counts; no solver result or heuristic objective is treated as a
 Schur bound.
+
+## A second, independently seeded search checkpoint
+
+The public [independent Schur-6 attempt by umaia1234](https://github.com/umaia1234/agentic-conjectures/blob/main/problems/schur-6/README.md)
+saved a six-colouring of `[1,537]` with exactly two violations,
+`12+12=24` and `12+24=36`. Its original [six-class file](https://github.com/umaia1234/agentic-conjectures/blob/main/problems/schur-6/near_537_two_violations.col)
+has SHA-256 `ece0ce91784aca0199ffe24e36104c666c036a6c735181385fd2fabcc7627f25`.
+We independently parsed its six lines as colour classes, checked that they
+partition `[1,537]`, and enumerated all classical Schur triples. The
+resulting 537-digit representation is `external_two.txt`. The upstream
+repository distributes its original work under Apache-2.0; attribution and
+the original file are linked here.
+
+Starting from `external_two.txt`, the existing `doubling_safe.cpp` search
+repaired the doubling constraint and explored all 537 entries with no
+distance restriction. SplitMix64 seed `20260929`, 100 restarts of 50,000
+steps, kick 18, 5% global noise, 5% local noise, and tabu tenure 4 yielded
+the stored `best3.txt`. It has no doubling violation and precisely three
+distinct-summand violations:
+
+```text
+5+41=46    5+46=51    46+51=97
+```
+
+It differs from the independent two-defect seed at 433 entries. Thus this
+is a substantially different region of the unrestricted six-colour search,
+although its raw defect count is **worse** than that seed's two. The
+standard-library `check_best3.py` reconstructs the defects of both files
+and checks every one of the 72,092 classical triples, including `x=y`.
+`reproduce_best3.py` reruns and compares the entire result word. A separate
+exact scan of every pair of complete-chain palette permutations around
+`best3.txt` checked 118,675,786 distinct-chain pairs from 15,541
+nonidentity single-chain permutations; none reduced the score below three.
+This pair scan is a bounded neighbourhood result about `best3.txt` only.
+
+```sh
+sha256sum -c SHA256SUMS
+curl -L -sS -o /tmp/schur-upstream-two.col https://raw.githubusercontent.com/umaia1234/agentic-conjectures/main/problems/schur-6/near_537_two_violations.col
+python3 -B check_external_source.py /tmp/schur-upstream-two.col
+python3 -B check_best3.py
+g++ -O3 -std=c++20 -Wall -Wextra -Wpedantic doubling_safe.cpp -o /tmp/schur-s6-doubling-safe
+python3 -B reproduce_best3.py --binary /tmp/schur-s6-doubling-safe
+g++ -O3 -std=c++20 -Wall -Wextra -Wpedantic chain_pair_scan.cpp -o /tmp/schur-s6-chain-pair
+/tmp/schur-s6-chain-pair best3.txt --full-all
+```
+
+Expected summaries are `seed_defects=2 result_defects=3 doubling_defects=0
+distance_from_seed=433`, `replay_steps=5000000 candidate_defects=3
+exact_word_match=yes`, and `distinct_chain_pairs=118675786
+improving_pairs=0 best=3`. No valid 537-colouring was found; this checkpoint
+does not change the published numerical lower bound.
