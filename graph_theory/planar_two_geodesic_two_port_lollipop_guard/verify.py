@@ -88,10 +88,29 @@ def components(graph, allowed):
     return answer
 
 
+def outside_route(graph, fragment, ports=None):
+    start, goal = ports if ports is not None else (fragment[1], fragment[3])
+    allowed = set(range(len(graph))) - set(fragment) | {start, goal}
+    parent = {start: None}
+    todo = deque([start])
+    while todo:
+        u = todo.popleft()
+        if u == goal:
+            route = []
+            while u is not None:
+                route.append(u)
+                u = parent[u]
+            return route[::-1]
+        for v in sorted(graph[u] & allowed):
+            if v not in parent:
+                parent[v] = u
+                todo.append(v)
+    return []
+
+
 def outside_length(graph, gadget):
-    ports = gadget[1], gadget[3]
-    allowed = set(range(len(graph))) - set(gadget) | set(ports)
-    return distances(graph, ports[0], allowed)[ports[1]]
+    route = outside_route(graph, gadget)
+    return len(route) - 1 if route else -1
 
 
 def reduced(graph, gadget, length):
@@ -158,7 +177,7 @@ def audit_family(r, m=11):
 def random_subgraphs(graph, gadgets, samples=100):
     rng = Random(310031)
     edges = [(u, v) for u, row in enumerate(graph) for v in row if u < v]
-    reductions = covers = 0
+    reductions = covers = isometries = routed = 0
     for trial in range(samples):
         current = [set() for _ in graph]
         retain = 0.45 + 0.5 * ((trial % 13) / 12)
@@ -168,19 +187,83 @@ def random_subgraphs(graph, gadgets, samples=100):
                 current[v].add(u)
         masks = geodesic_masks(current)
         for gadget in gadgets:
-            length = outside_length(current, gadget)
+            route = outside_route(current, gadget)
+            routed += bool(route)
+            length = len(route) - 1 if route else -1
             model = reduced(current, gadget, length)
-            for i, u in enumerate(gadget):
+            embedded = gadget + route[1:-1]
+            assert len(embedded) == len(model)
+            for i, u in enumerate(embedded):
                 host_d = distances(current, u)
                 model_d = distances(model, i)
                 assert all(host_d[v] == model_d[j]
-                           for j, v in enumerate(gadget))
+                           for j, v in enumerate(embedded))
             reductions += 1
+            isometries += 1
             for part in components(current, gadget):
                 target = sum(1 << v for v in part)
                 assert has_two_cover(masks, target)
                 covers += 1
-    print(f"sampled_subgraphs={samples} exact_distance_reductions={reductions} component_covers={covers} PASS")
+    print(f"sampled_subgraphs={samples} exact_distance_reductions={reductions} full_isometries={isometries} routed={routed} component_covers={covers} PASS")
+
+
+def short_route_obstruction():
+    m = 11
+    gadget = list(range(m + 1))
+    graph = [set() for _ in range(m + 5)]
+
+    def add(u, v):
+        graph[u].add(v)
+        graph[v].add(u)
+
+    for i in range(m):
+        add(i, (i + 1) % m)
+    add(0, m)
+    add(1, m + 1)
+    add(m + 1, 3)
+    long_route = [1, m + 2, m + 3, m + 4, 3]
+    for u, v in zip(long_route, long_route[1:]):
+        add(u, v)
+    assert outside_length(graph, gadget) == 2
+    witness = [set(row) for row in graph]
+    witness[1].remove(2)
+    witness[2].remove(1)
+    for u, v in zip(long_route, long_route[1:]):
+        witness[u].remove(v)
+        witness[v].remove(u)
+    assert len(components(witness, gadget)) == 1
+    target = sum(1 << u for u in gadget)
+    assert not has_two_cover(geodesic_masks(witness), target)
+    print("two_route_host shortest_exterior=2 m=11 deletion=12 two_cover=no PASS")
+
+
+def exhaustive_tiny_host():
+    fragment = {0, 1, 2, 3}
+    edges = [(0, 2), (2, 1), (1, 3), (3, 0),
+             (0, 4), (4, 1), (0, 5), (5, 6), (6, 1),
+             (4, 5), (4, 6)]
+    routed = 0
+    for mask in range(1 << len(edges)):
+        host = [set() for _ in range(7)]
+        for i, (u, v) in enumerate(edges):
+            if mask & (1 << i):
+                host[u].add(v)
+                host[v].add(u)
+        route = outside_route(host, fragment, (0, 1))
+        routed += bool(route)
+        keep = set(fragment) | set(route)
+        model = [set() for _ in host]
+        for u in fragment:
+            for v in host[u] & fragment:
+                model[u].add(v)
+        for u, v in zip(route, route[1:]):
+            model[u].add(v)
+            model[v].add(u)
+        for u in keep:
+            host_d = distances(host, u)
+            model_d = distances(model, u)
+            assert all(host_d[v] == model_d[v] for v in keep)
+    print(f"tiny_host_spanning={1 << len(edges)} routed={routed} isometric={1 << len(edges)} PASS")
 
 
 def main():
@@ -188,6 +271,8 @@ def main():
         audit_family(r)
     graph, gadgets = audit_family(2)
     random_subgraphs(graph, gadgets)
+    short_route_obstruction()
+    exhaustive_tiny_host()
     print("PASS")
 
 
