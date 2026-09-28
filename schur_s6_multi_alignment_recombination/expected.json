@@ -1,0 +1,65 @@
+{
+  "sources_sha256": "9003e0f0c22d01f066d3354def7936af056f057b8e4f472f294f6cfd351251a0",
+  "cases_sha256": "a096844accc35d776d6a70c72a588327ec95d61b14f920dc2b4c2f5b97da91ef",
+  "triples": 72092,
+  "doubling_triples": 268,
+  "reference_solver": "Kissat 4.0.4 commit 8af8e56f174b778aef3aa45af9f739b2a5f492c2",
+  "reference_checker": "DRAT-trim commit 2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "cases": {
+    "two_347_alignments": {
+      "status": "certified_unsat",
+      "variables": 1718,
+      "clauses": 71232,
+      "constrained_triples": 49824,
+      "schur_clauses": 68650,
+      "domain_histogram": [
+        2,
+        91,
+        258,
+        170,
+        16,
+        0
+      ],
+      "cnf_bytes": 1250861,
+      "cnf_sha256": "c25ebf4e5024b35b6dc3fe9af5727a3e70b1ed5070fa28874e0007b57a57ae4f",
+      "reference_proof_bytes": 32574929,
+      "reference_proof_sha256": "1d3b8f63c4be540a2beb7807094ea7c4419252616142a5ed2efdc91b23a8358d",
+      "reference_core_input_clauses": 19632,
+      "reference_core_lemmas": 374343
+    },
+    "three_347_alignments_zero_fixed": {
+      "status": "open",
+      "variables": 1806,
+      "clauses": 81481,
+      "constrained_triples": 53489,
+      "schur_clauses": 78650,
+      "domain_histogram": [
+        0,
+        67,
+        238,
+        203,
+        28,
+        1
+      ],
+      "cnf_bytes": 1438864,
+      "cnf_sha256": "63eb7cd6e37c8989acfeb49f2163764ec56f63919720ad73c4b7421059764a88"
+    },
+    "three_347_alignments_wide": {
+      "status": "open",
+      "variables": 1857,
+      "clauses": 89987,
+      "constrained_triples": 56215,
+      "schur_clauses": 86999,
+      "domain_histogram": [
+        1,
+        52,
+        229,
+        212,
+        41,
+        2
+      ],
+      "cnf_bytes": 1595372,
+      "cnf_sha256": "0bccfd36ab33454fc943f115655154baf7accfcf61f069c810f268a533d74da0"
+    }
+  }
+}
