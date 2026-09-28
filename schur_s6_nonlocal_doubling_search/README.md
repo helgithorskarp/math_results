@@ -93,3 +93,57 @@ python3 four_trade_sat.py seed_359.txt --defect-colour 2 --budget 100000
 ```
 
 The last preprint checked for context, [*Shifted S-templates* (July 2026)](https://arxiv.org/abs/2607.15034), still uses `S(6)>=536`. The present search gives neither a new lower bound nor an unrestricted upper bound.
+
+## Exact neighbourhood audit around `best4.txt`
+
+The following finite checks explain why repair moves involving several
+entries are needed from this particular four-defect word. They concern this
+word only; they do not exclude a valid colouring elsewhere.
+
+`two_flip_landscape.py` checks every doubling-safe recolouring of one or two
+individual entries and finds no word with fewer than four violations. There
+are 2,177 legal one-entry recolourings; 98 preserve score four. For two
+nonadjacent entries in the doubling graph, both individual moves must be
+legal. The script evaluates 233,367 pairs whose individual score changes sum
+to at most six. Any omitted pair has score at least seven: its two entries
+share at most two distinct-summand Schur triples, each of which contributes a
+correction of at least minus two to the sum of individual score changes.
+It also evaluates all 4,551 final-legal moves on doubling-adjacent entries,
+including moves whose individual stages would violate doubling. The minimum
+is four in every group. The incremental score formula is directly recounted
+for 161 sampled pair moves and for all reported minima.
+
+For an odd root `r`, let `D_r={r,2r,4r,...} intersect [1,537]`. A global
+permutation of colour names on all entries of one `D_r` preserves all
+doubling constraints. `chain_pair_scan.cpp` first scans all pairs of
+nontrivial colour transpositions on distinct chains: 2,180,868 pairs from
+2,093 single-chain events, with minimum score four. With `--full-root1`, it
+allows any of the 719 nonidentity colour permutations on the longest chain
+`D_1`, plus transpositions on other chains. Its 3,643,780 distinct-chain
+distinct-root pairs also have minimum four. The stronger `--full-all` scan
+allows every distinct palette permutation on either of two distinct doubling
+chains. It has 15,841 nonidentity single-chain events and checks 123,114,286
+event pairs, again with no score below four. Scores of all single-chain
+events in the first two modes, every tenth single-chain event in full mode,
+and periodic pair samples in every mode are independently recounted from all
+71,824 distinct-summand triples. In full mode, 1,231 pairs receive such a
+direct recount. The
+paired-move score uses an exact inclusion-exclusion correction on triples
+touching both chains. Equal-root pairs are excluded from the pair scan. In
+`--full-all` mode their composition is itself a single-chain permutation,
+and every such permutation appears among the single-chain events.
+
+Reproduce with CPython 3.11 and GCC 12.2 or later:
+
+```sh
+python3 -B two_flip_landscape.py best4.txt
+g++ -O3 -std=c++20 -Wall -Wextra -Wpedantic chain_pair_scan.cpp -o /tmp/schur-s6-chain-pair
+/tmp/schur-s6-chain-pair best4.txt
+/tmp/schur-s6-chain-pair best4.txt --full-root1
+/tmp/schur-s6-chain-pair best4.txt --full-all
+```
+
+The first program reports `minimum_single 4` and `overall_minimum_pair 4`.
+The C++ scans report `improving_pairs=0 best=4`. These statements use exact
+integer counts; no solver result or heuristic objective is treated as a
+Schur bound.
