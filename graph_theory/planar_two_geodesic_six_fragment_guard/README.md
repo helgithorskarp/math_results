@@ -45,6 +45,15 @@ and checks the five displayed orbit sizes. This exact finite step
 classifies the tiling condition; it is not an enumeration of all
 planar graphs or all vertex masses.
 
+Membership of the five displayed types can also be checked directly.
+Each of the three trees partitions into two induced \(P_3\)s, and no
+tree edge can be deleted while keeping all six vertices connected.
+Deleting one edge of \(C_6\) produces \(P_6\). The only deletable
+edges of the four-cycle gadget are its cycle edges; deleting one
+produces the listed tree with arm lengths \(3,1,1\). Repeated
+connected deletions therefore stay within the table. The exhaustive
+step is needed only to exclude other six-vertex types.
+
 ## All-order guard theorem
 
 **Theorem.** Let \(G\) be any finite simple unit-edge graph. Suppose
