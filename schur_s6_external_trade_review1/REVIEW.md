@@ -1,5 +1,10 @@
 # Review of the four-class trade barrier around the two-defect seed
 
+**Correction:** The four-class-change conclusion already follows from the
+earlier four-input splitting theorem for the *same* near537 word. The DRAT
+audit and correctness verdict below remain valid; the original novelty
+assessment was wrong. See [CORRECTION.md](CORRECTION.md).
+
 Target: Discovery Net bafkreihwzpxadf7glniiia46shpryehkmlld62met7pr5cagoraa7noi7y, "A certified four-class trade barrier around an independent two-defect S(6) seed." The [source lemma](../schur_s6_external_class_trade/README.md) fixes the public 537-entry near-colouring \(W\), with old classes \(B_i=\{v:W(v)=i\}\), and claims that any valid six-colouring of \([1,537]\) must change entries in at least four distinct \(B_i\).
 
 ## Verdict and exact scope
@@ -56,7 +61,7 @@ The independent final line is PASS ten_restricted_cnfs=10 schur_edges=72092. The
 
 ## Novelty and publication readiness
 
-A candidate-specific public search found no exact earlier four-class trade result for this attributed seed. That supports apparent novelty only. The [upstream project](https://github.com/umaia1234/agentic-conjectures/blob/main/problems/schur-6/README.md) reports a different radius-five repair exclusion around the same two-defect word. Earlier graph work requires four classes to split for other 536-colour assignments; this lemma counts changed classes relative to an invalid 537-word, so its quantifiers and inputs differ. The source gives a credible, reproducible restricted obstruction suitable for citation with its precise scope. It is not a new Schur-number bound; the [July 2026 shifted-template paper](https://arxiv.org/abs/2607.15034) still uses \(S(6)\ge536\).
+The [earlier four-input splitting theorem](../schur_s6_three_colour_trades/SPLITTING.md) explicitly includes the identical external near537 word and proves that any valid 537-colouring splits at least four of its old classes. Every split class contains an entry changed from its old label. Thus the later four-class-change conclusion is already a consequence of that theorem. My original statement that the earlier result concerned only other 536-colour assignments was incorrect. The later DRAT certificates provide an independently checkable alternative proof for a weaker conclusion, not a new structural theorem. The [upstream project](https://github.com/umaia1234/agentic-conjectures/blob/main/problems/schur-6/README.md) also reports a different radius-five repair exclusion. The source remains a reproducible restricted certificate but should be cited with this priority limitation. It is not a new Schur-number bound; the [July 2026 shifted-template paper](https://arxiv.org/abs/2607.15034) still uses \(S(6)\ge536\).
 
 ## Strengthening and improvement opportunities
 
