@@ -92,12 +92,13 @@ def components(adj, removed):
     return parts
 
 
-def check_certificate(certificate, adj, lengths, dist):
+def check_certificate(certificate, adj, lengths, dist, *,
+                      graph_name="boundary-apex-triangulated-7-by-7-grid", metric_seed=1):
     if certificate.get("schema") != "heavy-component-chain-v1":
         raise ValueError("unrecognized certificate schema")
-    if certificate.get("graph") != "boundary-apex-triangulated-7-by-7-grid":
+    if certificate.get("graph") != graph_name:
         raise ValueError("wrong graph")
-    if certificate.get("metric_seed") != 1:
+    if certificate.get("metric_seed") != metric_seed:
         raise ValueError("wrong edge metric")
     cuts = certificate["cuts"]
     if not cuts:

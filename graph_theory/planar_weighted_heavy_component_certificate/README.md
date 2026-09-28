@@ -43,3 +43,9 @@ Discovery used Z3 4.15.4, but the published evidence does not depend on
 trusting its UNSAT result. The mathematical claim depends on the certificate
 principle in `PROOF.md` and correctness of the exact checker. Wider timed
 searches were exploratory and are not asserted as complete exclusions.
+
+An additional [66-vertex stress certificate](stress66/README.md) resolves
+a case where a partial collection of cuts had been inconclusive. Its
+16 geodesic pairs exclude every vertex-mass assignment by the same
+intersection argument; it is another fixed metric, with a separate exact
+checker and explicit scope.
