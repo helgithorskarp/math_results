@@ -1,0 +1,242 @@
+{
+  "status": "PASS",
+  "metrics": 227,
+  "case_counts": {
+    "middle": 187,
+    "all_A": 5,
+    "all_B": 5,
+    "mixed_outer": 30
+  },
+  "original_midpoint_ties": 32,
+  "weighted_cases": 3690,
+  "top_four_cases": 2327,
+  "augmented_metrics": 4,
+  "maximum_vertices": 56,
+  "rejected_controls": 4,
+  "marked_facial_groups": [
+    [
+      5,
+      9,
+      13
+    ],
+    [
+      11,
+      15,
+      19
+    ],
+    [
+      17,
+      3,
+      7
+    ]
+  ],
+  "sweep_comparison": {
+    "longitudinal_error_bound_witnesses": [
+      {
+        "total_mass": 20,
+        "root": 0,
+        "face": [
+          12,
+          16,
+          13
+        ],
+        "outside_mass": 3,
+        "first_path_mass": 6,
+        "paths": [
+          [
+            0,
+            2,
+            3,
+            4,
+            1,
+            13
+          ],
+          [
+            0,
+            11,
+            12
+          ]
+        ],
+        "component_masses": [
+          6,
+          6
+        ]
+      },
+      {
+        "total_mass": 9,
+        "root": 0,
+        "face": [
+          12,
+          16,
+          13
+        ],
+        "outside_mass": 2,
+        "first_path_mass": 3,
+        "paths": [
+          [
+            0,
+            17,
+            18,
+            19,
+            1,
+            13
+          ],
+          [
+            0,
+            11,
+            12
+          ]
+        ],
+        "component_masses": [
+          1,
+          4
+        ]
+      }
+    ],
+    "marked_leaf_maximum_interval_marks": 2,
+    "marked_leaf_maximum_facial_union_marks": 2
+  },
+  "examples": [
+    {
+      "label": "MMM",
+      "case": "middle",
+      "paths": [
+        [
+          9,
+          6,
+          2,
+          0,
+          14,
+          18
+        ],
+        [
+          13,
+          10,
+          1,
+          4
+        ]
+      ],
+      "component_marked_counts": [
+        1,
+        1,
+        1,
+        4
+      ],
+      "original_midpoint_ties": 0,
+      "weighted_cases": 526,
+      "top_four_cases": 519,
+      "vertices": 20
+    },
+    {
+      "label": "AAA",
+      "case": "all_A",
+      "paths": [
+        [
+          0,
+          2,
+          6,
+          10,
+          1
+        ],
+        [
+          16,
+          12,
+          8,
+          0,
+          14,
+          18,
+          4
+        ]
+      ],
+      "component_marked_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "original_midpoint_ties": 0,
+      "weighted_cases": 14,
+      "top_four_cases": 8,
+      "vertices": 20
+    },
+    {
+      "label": "BBB",
+      "case": "all_B",
+      "paths": [
+        [
+          0,
+          2,
+          6,
+          10,
+          1
+        ],
+        [
+          8,
+          12,
+          16,
+          1,
+          4,
+          18,
+          14
+        ]
+      ],
+      "component_marked_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "original_midpoint_ties": 0,
+      "weighted_cases": 14,
+      "top_four_cases": 8,
+      "vertices": 20
+    },
+    {
+      "label": "AAB",
+      "case": "mixed_outer",
+      "paths": [
+        [
+          10,
+          6,
+          2,
+          0,
+          8,
+          12,
+          16
+        ],
+        [
+          14,
+          18,
+          4,
+          1
+        ]
+      ],
+      "component_marked_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "original_midpoint_ties": 0,
+      "weighted_cases": 14,
+      "top_four_cases": 8,
+      "vertices": 20
+    }
+  ],
+  "scope": "Exact regression of a written real-parameter theorem; no unrestricted counterexample claim."
+}

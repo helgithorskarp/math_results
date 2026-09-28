@@ -83,7 +83,8 @@ The marked-face control checks all three core-branch pairs and all 4,845
 four-vertex cuts. A separate check compares all metric intervals and all
 rooted triangle interval unions on the 20-vertex longitudinal metric.
 No solver, graph census, external data, private discovery code, or large
-certificate is required. Independent mathematical review is pending.
+certificate is required. An [independent review](../planar_parallel_path_metrics_review1/REVIEW.md)
+confirms the conditional theorem and independently checks the finite controls.
 
 ## Literature and scope
 
@@ -116,6 +117,16 @@ therefore applies directly to this metric with all 20 masses positive,
 whereas the parallel-path criterion gives an explicit half separator.
 This is a comparison of the stated hypotheses, not a claim about all
 possible reductions between the two results.
+
+The [reviewed quantitative extension](../planar_two_geodesic_interval_sweep_review1/REVIEW.md)
+does cover this particular example: for root 0 and face (12,16,13), the
+mass outside the facial interval union is 3, while the geodesic
+(0,2,3,4,1,13) removes mass 6. Its bound `(W - w(P) + E)/2` is therefore
+at most W/2. The [marked-face supplement](marked_faces/README.md) records
+explicit witnesses and proves a different exclusion for every positive
+choice of core and pendant lengths in the original nine-leaf obstruction,
+under its stated isometry condition. The marked-leaf metric family on
+that original 20-vertex triangulation escapes even this error criterion.
 
 A targeted search did not locate this particular parallel-path formulation;
 that is not an originality claim.
