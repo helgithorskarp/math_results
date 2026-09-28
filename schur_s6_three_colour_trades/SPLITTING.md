@@ -1,5 +1,9 @@
 # At least four original colour classes must split
 
+The baseline component has a [fixed-core family extension](CORE_FAMILY.md):
+225 core positions suffice, with a certified `2^53`-member subfamily of valid
+536-colourings. The original four-input statement below remains unchanged.
+
 Let `F` be any of the four explicit assignments in `fixtures.json`: the
 Fredricksen--Sweet colouring of `[1,536]`, the external two-defect assignment
 on `[1,537]`, or Sol's one-defect assignments 190 and 359 on `[1,537]`.

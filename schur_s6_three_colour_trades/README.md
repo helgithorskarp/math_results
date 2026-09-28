@@ -1,5 +1,10 @@
 # Three-colour trades cannot repair four explicit Schur assignments
 
+**Family extension:** a [fixed-core criterion](CORE_FAMILY.md) now makes the
+baseline splitting conclusion uniform over all valid 536-colourings fixing
+225 specified positions. A checked Cartesian subfamily contains `2^53`
+distinct valid colourings. Run `python3 -B check_core_family.py`.
+
 **Stronger result:** every valid 537-colouring must split at least four
 original colour classes of each of the four specified assignments. This
 remains true after arbitrary colour relabelling and allows new entries
