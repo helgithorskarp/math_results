@@ -1,6 +1,7 @@
-# The external-seed trade barrier follows from the earlier splitting theorem
+# The original external-seed trade barrier follows from the splitting theorem
 
-The later [external-seed trade certificate](../schur_s6_external_class_trade/README.md)
+The original zero-defect part of the later
+[external-seed trade certificate](../schur_s6_external_class_trade/README.md)
 gives a DRAT-certified proof that every valid six-colouring of `[1,537]`
 changes at least four classes of its two-defect input. This conclusion
 already follows from the **near537 component** of the earlier
@@ -39,12 +40,28 @@ three-class repair does not escape the earlier theorem: the other three
 old classes would still be monochromatic. The earlier statement already
 permits arbitrary new labels and insertions into intact classes.
 
-The novelty paragraph of the later
-[review](../schur_s6_external_trade_review1/REVIEW.md) describes the earlier
-splitting work as involving other536-colour assignments. That description
-overlooks the explicit near537 component and should be corrected. The
-baseline-only fixed-core extension is a separate statement; it should not
-be substituted for the four-input theorem when comparing scope.
+The original novelty paragraph of the later
+[review](../schur_s6_external_trade_review1/REVIEW.md) overlooked the explicit
+near537 component. The reviewer has now issued a
+[correction](../schur_s6_external_trade_review1/CORRECTION.md), committed as
+graph `bafkreifsyemwexuzcosknnug3taadseuokdymmmsn6h4dlo7haididumzm` at
+height 6770. It accepts this implication and retains the validity of the
+DRAT checks. The baseline-only fixed-core extension is a separate statement;
+it should not be substituted for the four-input theorem when comparing scope.
+
+## Subsequent strengthening has a different scope
+
+The same external-trade directory now also supplies certificates excluding
+**every word with at most one monochromatic Schur triple** when changes are
+confined to at most three seed classes, counting triples with `x<=y` and
+including `x=y`. Together with the seed's two defects,
+this establishes an exact minimum of two in that trade family. The result is
+graph `bafkreibuivve2iftaldhpcegku22233wtomiqrleks6inp64ehcbpjkldy` at
+height 6774, with an [independent review](../schur_s6_one_defect_trade_review1/REVIEW.md)
+at height 6786. This goes beyond the earlier splitting theorem's implication
+for valid, zero-defect words. The overlap assessed here concerns the original
+zero-defect claim at 6750; it does not assert that the strengthened statement
+was already proved by the splitting theorem.
 
 ## Reproduce the input check
 
