@@ -1,0 +1,307 @@
+{
+  "constructive_fixtures": [
+    {
+      "component_sizes": [],
+      "method": "already_balanced",
+      "n": 0,
+      "name": "empty",
+      "paths": []
+    },
+    {
+      "component_sizes": [],
+      "method": "endpoint_cover",
+      "n": 1,
+      "name": "K1",
+      "paths": [
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "component_sizes": [],
+      "method": "endpoint_cover",
+      "n": 2,
+      "name": "K2",
+      "paths": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "component_sizes": [],
+      "method": "endpoint_cover",
+      "n": 3,
+      "name": "K3",
+      "paths": [
+        [
+          0,
+          1
+        ],
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "component_sizes": [],
+      "method": "endpoint_cover",
+      "n": 4,
+      "name": "K4",
+      "paths": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "component_sizes": [
+        1
+      ],
+      "method": "endpoint_cover",
+      "n": 5,
+      "name": "K5_nonplanar_endpoint_control",
+      "paths": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "component_sizes": [
+        2
+      ],
+      "method": "endpoint_cover",
+      "n": 6,
+      "name": "K6_nonplanar_endpoint_control",
+      "paths": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "component_sizes": [
+        3
+      ],
+      "method": "endpoint_cover",
+      "n": 7,
+      "name": "K7_nonplanar_endpoint_control",
+      "paths": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "component_sizes": [
+        4
+      ],
+      "method": "endpoint_cover",
+      "n": 8,
+      "name": "K8_nonplanar_endpoint_control",
+      "paths": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "component_sizes": [
+        4,
+        4,
+        4
+      ],
+      "method": "already_balanced",
+      "n": 12,
+      "name": "three_disjoint_K4s",
+      "paths": []
+    },
+    {
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "method": "diametral_path_alone",
+      "n": 12,
+      "name": "star12",
+      "paths": [
+        [
+          1,
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "component_sizes": [
+        5,
+        1
+      ],
+      "method": "diametral_path_plus_P3",
+      "n": 12,
+      "name": "wheel12",
+      "paths": [
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          4,
+          5,
+          6
+        ]
+      ]
+    },
+    {
+      "component_sizes": [
+        6
+      ],
+      "method": "diametral_path_plus_P3",
+      "n": 12,
+      "name": "bipyramid12",
+      "paths": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          10,
+          3,
+          11
+        ]
+      ]
+    },
+    {
+      "component_sizes": [
+        5
+      ],
+      "method": "diametral_path_plus_P3",
+      "n": 12,
+      "name": "icosahedron12",
+      "paths": [
+        [
+          0,
+          1,
+          6,
+          11
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "component_sizes": [
+        6
+      ],
+      "method": "diametral_path_plus_P3",
+      "n": 12,
+      "name": "K6_6_nonplanar_packing_control",
+      "paths": [
+        [
+          0,
+          6,
+          1
+        ],
+        [
+          7,
+          2,
+          8
+        ]
+      ]
+    },
+    {
+      "component_sizes": [
+        5
+      ],
+      "method": "diametral_path_plus_P3",
+      "n": 15,
+      "name": "grid3x5_diameter_case",
+      "paths": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          9,
+          14
+        ],
+        [
+          6,
+          5,
+          10
+        ]
+      ]
+    }
+  ],
+  "induced_P4_is_not_necessarily_ambient_geodesic": true,
+  "negative_control_K6_7": {
+    "geodesic_masks": 286,
+    "minimum_largest_component": 7,
+    "n": 13,
+    "pairs": 41041
+  },
+  "packing_controls": [
+    {
+      "k": 1,
+      "max_component": 3,
+      "n": 6
+    },
+    {
+      "k": 2,
+      "max_component": 6,
+      "n": 12
+    },
+    {
+      "k": 3,
+      "max_component": 9,
+      "n": 18
+    },
+    {
+      "k": 4,
+      "max_component": 12,
+      "n": 24
+    }
+  ],
+  "status": "PASS"
+}
