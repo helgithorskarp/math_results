@@ -5,6 +5,7 @@ Python 3.10+, standard library only. This script does not decide S(6),
 R_5(3), or the existence of the target interval colouring.
 """
 from itertools import combinations, product
+from collections import Counter
 import json
 
 
@@ -126,6 +127,48 @@ def audit_smaller_supports():
     return rows
 
 
+def general_independence(n, a):
+    """Proved formula and an attaining set, for n >= 5a-4 and a>=2."""
+    assert a >= 2 and n >= 5*a-4
+    choices = [(min(j*a, n-a+1-(j-1)*(2*a-2)), j)
+               for j in range(1, (n-a)//(2*a-1)+2)]
+    size, count = max(choices)
+    lengths = [1]*count
+    extra = size-count
+    for i in range(count):
+        add = min(a-1, extra)
+        lengths[i] += add
+        extra -= add
+    assert extra == 0
+    points, start = [], 0
+    for length in lengths:
+        points.extend(range(start, start+length))
+        start += length+2*a-2
+    reserved = set(range(a, 2*a-1)) | set(range(n+1-a, n+1))
+    assert len(points) == size and max(points) <= n-a
+    assert all(y-x not in reserved for x, y in combinations(points, 2))
+    return size, points
+
+
+def audit_general_independence(n, a):
+    reserved = set(range(a, 2*a-1)) | set(range(n+1-a, n+1))
+    assert sum_free(reserved)
+    neighbours = [sum(1 << y for y in range(n+1)
+                      if abs(x-y) in reserved) for x in range(n+1)]
+    good = bytearray(1 << (n+1))
+    good[0] = 1
+    maximum = 0
+    for mask in range(1, len(good)):
+        bit = mask & -mask
+        rest = mask ^ bit
+        if good[rest] and not neighbours[bit.bit_length()-1] & rest:
+            good[mask] = 1
+            maximum = max(maximum, mask.bit_count())
+    predicted, points = general_independence(n, a)
+    assert maximum == predicted and good[sum(1 << p for p in points)]
+    return dict(n=n, a=a, all_subsets=len(good), maximum=maximum)
+
+
 def main():
     identities = [audit_constraint_identity(q) for q in (1, 2, 3, 6, 21, 107)]
     assignments = [audit_assignments(q, k) for q in (1, 2, 3) for k in (2, 3)]
@@ -141,6 +184,47 @@ def main():
     assert literal_triangles(vertices, colours)
     assert not literal_schur([1, 1])  # Repeated summands must be rejected.
     smaller = audit_smaller_supports()
+    general = [audit_general_independence(n, a) for n, a in
+               ((6,2),(10,2),(14,2),(18,2),(11,3),(14,3),(18,3),(16,4),(18,4))]
+    screen = [{'a':a, 'alpha':general_independence(537,a)[0]}
+              for a in range(2,109)]
+    least = min(row['alpha'] for row in screen)
+    minimizers = [row['a'] for row in screen if row['alpha']==least]
+    assert least == 156 and minimizers == [78]
+    _, replacement_points = general_independence(537,78)
+    assert replacement_points == list(range(78))+list(range(232,310))
+    # Check the optional SAT encoder against complete literal assignments;
+    # importing its generator needs no solver package.
+    from complete import encoding
+    encoding_assignments = 0
+    for n,a,k in ((6,2,2),(7,2,2),(11,3,3),(12,3,3)):
+        reserved,positions,clauses = encoding(n,a,k)
+        for values in product(range(1,k+1),repeat=len(positions)):
+            by_position = dict(zip(positions,values))
+            word = [k+1 if v in reserved else by_position[v] for v in range(1,n+1)]
+            names = {}
+            canonical = tuple(names.setdefault(c,len(names)+1) for c in values)
+            selected = {i*k+c for i,c in enumerate(values)}
+            cnf_ok = all(any((lit in selected) if lit>0 else (-lit not in selected)
+                            for lit in clause) for clause in clauses)
+            assert cnf_ok == (literal_schur(word) and canonical==values)
+            encoding_assignments += 1
+    target_reserved,target_positions,target_clauses = encoding(537,78,5)
+    # Distinct x-first sum pairs and z-first direct rows must agree exactly.
+    target_rows = set()
+    target_set = set(target_positions)
+    for z in target_positions:
+        for x in range(1,z//2+1):
+            if x in target_set and z-x in target_set:
+                target_rows.add((x,z-x,z))
+    assert target_rows == schur_rows(target_set)
+    assert len(target_rows)==27664 and len(target_clauses)==144050
+    target_index = {v:i for i,v in enumerate(target_positions)}
+    expected_clauses = Counter(tuple(sorted({-target_index[v]*5-c for v in row}))
+                               for row in target_rows for c in range(1,6))
+    actual_clauses = Counter(tuple(sorted(clause)) for clause in
+                             target_clauses[-5*len(target_rows):])
+    assert expected_clauses == actual_clauses
     output = dict(constraint_identities=identities,
                   assignment_audits=assignments,
                   total_assignments=sum(r['assignments'] for r in assignments),
@@ -148,6 +232,15 @@ def main():
                   independence_audits=independence,
                   positive_word32=''.join(map(str, word)),
                   smaller_supports=smaller,
+                  general_independence_audits=general,
+                  replacement_screen=dict(cases=len(screen), minimum_alpha=least,
+                                          minimizers=minimizers,
+                                          all_values=screen,
+                                          witness=replacement_points),
+                  optional_encoder=dict(complete_assignments=encoding_assignments,
+                                        target_variables=len(target_positions)*5,
+                                        target_clauses=len(target_clauses),
+                                        target_schur_rows=len(target_rows)),
                   target_status='UNRESOLVED: no 537 word and no impossibility claim')
     print(json.dumps(output, indent=2, sort_keys=True))
 

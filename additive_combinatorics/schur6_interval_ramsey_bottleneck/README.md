@@ -10,7 +10,9 @@ not a new bound, an impossibility proof, or evidence that S(6)=536.
 The underlying difference-colouring implication is classical. We claim
 no novelty for it. The useful information here is its exact application
 to this proposed interval family, including a converse, a sharp auxiliary
-independence calculation, and the screening of 46 smaller supports.
+independence calculation, and the screening of 46 smaller supports. A
+generalization then selects a different support at 537 with auxiliary
+independence number 156; its completion remains open.
 
 ## Exact correspondence
 
@@ -109,6 +111,72 @@ number of reserved points alone can silently impose a much stronger
 Ramsey construction. This does not justify imposing 161 as a universal
 upper bound on colour-class sizes or on auxiliary independence numbers.
 
+## A replacement chosen by the exact independence number
+
+The calculation extends to
+
+    T(N,a) = [a,2a-2] union [N+1-a,N],
+    a>=2, N>=5a-4.
+
+These hypotheses make T(N,a) sum-free. Write D=N-a. For the graph on
+[0,N] with edges at differences in T(N,a), the exact independence number is
+
+    max over 1<=j<=1+floor(D/(2a-1)) of
+        min(j*a, D+1-(j-1)*(2a-2)).
+
+Proof: any independent set has diameter at most D, by the upper forbidden
+interval. Greedily group its points into clusters whose span is at most
+a-1, starting each cluster at the next ungrouped point. The next cluster
+starts at least 2a-1 after the preceding cluster's first point. Its
+distance from the preceding cluster's last point is therefore at least a;
+the lower forbidden interval forces that distance to be at least 2a-1.
+Thus j clusters contain at most ja points, and their j-1 intervening gaps
+omit at least (j-1)(2a-2) integers from a span containing at most D+1
+integers. Even j singleton clusters need span at least (j-1)(2a-1), which
+gives the stated range of j.
+
+Conversely, for each j in that range take
+B=min(ja,D+1-(j-1)(2a-2)). There are j positive integers at most a whose
+sum is B. Use them as the lengths of consecutive interval clusters,
+separated by gaps of exactly 2a-2 missing integers. The total span is
+B-1+(j-1)(2a-2)<=D. All internal differences are below a, and all
+differences between clusters are at least 2a-1 and at most D, so the
+resulting B-point set is independent. This proves equality.
+
+For N=537, exact evaluation over all 107 permitted integers 2<=a<=108
+has the **unique minimum 156 at a=78**. The replacement support is
+
+    T = [78,154] union [460,537],     |T|=155,
+    M = [1,77] union [155,459],       |M|=382.
+
+An attaining independent set is [0,77] union [232,309]. The j=1,2,3
+terms of the formula are 78,156,152. This support therefore avoids the
+forced new R_5(3) bound identified above; that does not establish its
+five-colourability. All 382 complement positions can be coloured
+independently, so there is no restriction to old-colour images or fibres.
+Unlike the original q=107 reduction, the high interval now contains
+Schur triples wholly within itself. These additional constraints must be
+included in any completion search.
+
+A bounded joint pilot was inconclusive at 100,000 CaDiCaL conflicts. No
+full 537 word, certified negative result, or feasibility inference follows
+from choosing the minimum of this auxiliary parameter.
+
+The optional `complete.py` runner supplies the full construction instance:
+
+    python3 -m pip install -r requirements.txt
+    python3 -B complete.py --budget 100000 --word /tmp/schur-interval-word.txt
+
+It uses 1,910 Boolean variables and 144,050 clauses. Each of the 382
+positions has exactly one of five colours. Every Schur triple wholly in
+M forbids each common colour, and colour names are ordered by their first
+appearance. This last condition loses no colouring because all five
+names are interchangeable. There are no other symmetry restrictions.
+The 27,664 remaining triples include 1,482 low, 20,482 mixed, and 5,700
+wholly high triples. The runner checks a satisfying complete word against
+all integer Schur triples before writing it. UNSAT output would remain
+an uncertified solver observation; the runner emits no proof trace.
+
 ## Reproduction and trust boundary
 
 Run from this directory, using Python 3.10 or newer:
@@ -122,7 +190,14 @@ The verifier uses only the standard library and was run with Python
 triangles, including the full q=107 case. It independently enumerates
 62,485 small complete assignments (7,270 valid), checks all 270,592
 subsets for the auxiliary graphs q=1,2,3, verifies all 46 smaller support
-witnesses, and checks a complete positive 32-point four-colouring.
+witnesses, and checks a complete positive 32-point four-colouring. Nine
+further small graphs test the general formula against all 1,775,744
+subsets, and exact integer evaluation checks the 107-case replacement
+screen and its attaining set.
+The optional SAT encoder is also checked against 2,940 complete small
+assignments, including its colour symmetry, and its target row set is
+compared with a separate literal traversal. The mathematical verifier
+does not import PySAT or invoke a solver.
 
 These finite audits check the construction and implementation. The
 general claims are proved above, without a solver or an enumeration
@@ -142,4 +217,5 @@ at 537 or new lower bound is made.
   Ramsey consequence applies to arbitrary complement colourings.
 
 Prepared 2026-09-28. The standalone 537 construction remains the research
-target; the oversized two-interval family is deprioritized.
+target; the oversized interval supports are deprioritized in favour of
+the a=78 model. None of these supports is claimed impossible.
