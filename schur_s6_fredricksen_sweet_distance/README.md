@@ -1,4 +1,4 @@
-# A 53-edit obstruction around the Fredricksen–Sweet S(6) colouring
+# A 54-edit obstruction around the Fredricksen–Sweet S(6) colouring
 
 ## Claim and convention
 
@@ -12,7 +12,7 @@ page 6. Their exceptional symmetric pair is `179,358`, with different colours.
 The colour-class sizes are `129,86,110,77,64,70`.
 
 **Proved local obstruction.** If a valid six-colouring of `[1,537]` exists,
-its restriction to `[1,536]` differs from `baseline.txt` in at least **53**
+its restriction to `[1,536]` differs from `baseline.txt` in at least **54**
 positions. This holds for every labelling of its six colours. The claim is a
 distance bound around one specified baseline. It does not prove that 537 is
 uncolourable or improve the published lower bound `S(6) >= 536`.
@@ -98,6 +98,31 @@ CNFs from a fixed two-variable clause universe. The full computation uses
 only the standard library. Thus 52 edits are impossible, giving the stated
 53-edit obstruction.
 
+## Two-slack step: excluding exactly 53 edits
+
+With 53 edits, choose one edited position from each of the 51 mandatory
+groups as its regular edit. The other two edited positions are slack, whether
+they lie inside or outside those groups. Colours 1 and 3 are already excluded
+by their 64 and 55 mandatory pairs.
+
+[two_slack_check.py](two_slack_check.py) applies the same dependency argument
+twice. The 51-edit unit cores require at least one slack position `j` among
+`16,16,36,16` possible positions for colours 2, 4, 5, and 6. For each such
+`j`, the checker extracts an independently rechecked refutation core from the
+corresponding one-slack case. Seventy-eight of these cores use unit
+propagation; six use exhaustive binary branching. A second slack position
+`k` outside that core's tagged dependencies cannot change its contradiction.
+The union of the remaining unordered pairs has size `151,178,959,225`, or
+1,513 pairs in total.
+
+For every remaining pair, the checker forces both slack positions to change,
+forces exactly one other edit in each mandatory group, substitutes all fixed
+colours, and checks every classical Schur triple through 537. All 1,513 exact
+cases are contradictory: 1,108 by unit propagation and 405 by exhaustive
+binary branching, with at most 11 search nodes and depth five. The checker
+regenerates the cores and pair list; it trusts no SAT solver or stored search
+result. This excludes 53 edits and proves the stated 54-edit bound.
+
 As a small example, `(9,528)` is one of the colour-5 pairs. If 9 changes to
 colour 1, `(1,8,9)` forces another edit; if 528 changes to colour 1,
 `(1,528,529)` does. `certificate.json` gives analogous triples for all five
@@ -112,9 +137,10 @@ cd schur_s6_fredricksen_sweet_distance
 python3 check.py
 python3 saturation_check.py
 python3 one_slack_check.py --workers 4
+python3 two_slack_check.py --workers 16
 ```
 
-Expected output:
+Expected summary lines (the last checker also prints progress counts):
 
 ```text
 PASS triples=71824 pair_counts=64,43,55,38,32,35 selected_counts=0,8,0,13,19,16 witnesses=560 distance_at_least=51
@@ -132,6 +158,15 @@ colour=4 checked_slack=16 branching_cases=0 max_nodes=1
 colour=5 checked_slack=36 branching_cases=6 max_nodes=5
 colour=6 checked_slack=16 branching_cases=0 max_nodes=1
 PASS distance_at_least=53
+colour=2 first_slack=16 branching_first=0 candidate_pairs=151
+colour=4 first_slack=16 branching_first=0 candidate_pairs=178
+colour=5 first_slack=36 branching_first=6 candidate_pairs=959
+colour=6 first_slack=16 branching_first=0 candidate_pairs=225
+colour=2 checked_pairs=151 branching_cases=0 max_nodes=1
+colour=4 checked_pairs=178 branching_cases=0 max_nodes=1
+colour=5 checked_pairs=959 branching_cases=405 max_nodes=11
+colour=6 checked_pairs=225 branching_cases=0 max_nodes=1
+PASS distance_at_least=54
 ```
 
 The checker enumerates all `71,824` unordered Schur triples on `[1,536]`,
@@ -143,6 +178,7 @@ The compact certificate is 31,621 bytes. SHA-256:
 baseline.txt    2fdf85110de782426dd5deccfa7244f182441fda9870db64ba8e4eea7e3d600d
 certificate.json b9c28cde217a6b4d06f672d0f389c1c9fa9e7544897cf4eb392fad3985edaa4f
 one_slack_check.py 0b7383d61addb9fd081d654b8df136238cb84f6ec057d72c103b5ca7b628a366
+two_slack_check.py 41e78e150b5e26b9fd4af62a1d3c200c3ef438fd52aa970a1a0e79a08530e678
 ```
 
 The witness search is deterministic but heuristic; its success is not needed
@@ -176,13 +212,16 @@ The distance theorem does not use PySAT or the SAT probe.
 ## Scope and trust boundary
 
 The distance theorem follows from the displayed pair-and-support argument,
-the saturation and one-slack steps, and the finite data checked by
-`check.py`, `saturation_check.py`, and `one_slack_check.py`. The remaining trust
-boundary is these checkers and standard Python integer/file operations; the
-proof uses no solver soundness assumption. Certificate generation is
-untrusted. The baseline is also verified as a valid 536-colouring regardless
-of its source attribution. The 52-edit saturation step has an
+the saturation, one-slack, and two-slack steps, and the finite data checked by
+`check.py`, `saturation_check.py`, `one_slack_check.py`, and
+`two_slack_check.py`. The remaining trust boundary is these checkers and
+standard Python integer/file operations; the proof uses no solver soundness
+assumption. Certificate generation is untrusted. The baseline is also
+verified as a valid 536-colouring regardless of its source attribution. The
+52-edit saturation step has an
 [independent domain-based audit](../schur_s6_fredricksen_sweet_distance_review2/REVIEW.md);
-the new 53-edit step has not yet received independent researcher review.
+the 53-edit step has an
+[independent CNF audit](../schur_s6_fredricksen_sweet_distance_review3/REVIEW.md).
+The new 54-edit step has not yet received independent researcher review.
 No conclusion is drawn about the existence of a six-colouring at 537 or about
 all 536-colourings.
