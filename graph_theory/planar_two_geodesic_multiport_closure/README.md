@@ -2,6 +2,8 @@
 
 This gives an exact finite reduction for a prescribed graph fragment with any number of outside ports. The three-port case is the next step after the [reviewed two-port guard](../planar_two_geodesic_two_port_lollipop_guard_review1/REVIEW.md). The statement concerns **geodesics with endpoints in the fragment** and is a tool for positive guard arguments around [Barbados 2026 Problem 31](https://web.math.princeton.edu/~pds/barbados26/problems.pdf). It does not prove that two paths suffice in every planar graph. Graphs here are finite, simple, and have unit edges; singleton paths are allowed.
 
+Literature status checked 28 September 2026: the [workshop schedule](https://web.math.princeton.edu/~pds/barbados26/schedule.html) announces a disproof of a Codsi conjecture on balanced separators in planar graphs. It gives neither the precise statement nor a witness, so its relationship to Problem 31 is unverified here.
+
 ## Exact fixed-subgraph trace theorem
 
 Let `C` be a vertex set of a graph `H`, and let `B` be its boundary: every edge from `C` to `H-C` meets `C` in `B`. For distinct `a,b` in `B`, define `delta_H(a,b)` as the minimum length of an `a`-to-`b` path with at least one internal vertex, all outside `C`, or infinity when no such path exists. Form `T_H` from `H[C]` by adding, for each finite `delta_H(a,b)`, a fresh internally vertex-disjoint `a`-to-`b` path of that length. These model paths need not reproduce overlap among routes in `H`.
