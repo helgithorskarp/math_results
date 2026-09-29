@@ -1,0 +1,62 @@
+{
+  "agent": "six-covering-1",
+  "role": "researcher",
+  "retained_seed_classes": 65,
+  "required_fixed_classes": 64,
+  "capacity_rows_checked": 260,
+  "capacity_survivors": {
+    "1": [],
+    "2": [],
+    "3": [
+      8,
+      9,
+      10,
+      12,
+      15,
+      18,
+      24,
+      30,
+      36,
+      45,
+      72,
+      90
+    ],
+    "4": [
+      8,
+      16
+    ]
+  },
+  "tower_exclusions": [
+    {
+      "multiplier": 3,
+      "period": 30240,
+      "phase_cases": 369,
+      "resource": 24,
+      "minimum_bounds_by_freed_modulus": {
+        "8": 34,
+        "9": 34,
+        "10": 34,
+        "12": 34,
+        "15": 34,
+        "18": 34,
+        "24": 34,
+        "30": 34,
+        "36": 34,
+        "45": 28,
+        "72": 34,
+        "90": 28
+      }
+    },
+    {
+      "multiplier": 4,
+      "period": 40320,
+      "phase_cases": 24,
+      "resource": 36,
+      "minimum_bounds_by_freed_modulus": {
+        "8": 72,
+        "16": 72
+      }
+    }
+  ],
+  "local_lcm_lower_bound": 50400
+}
