@@ -295,11 +295,129 @@ and compactness of the bounded reciprocal coordinates. The binomial
 configuration `p(z)=z^9-1` has variance zero and remains a possible limiting
 obstruction to this argument.
 
+## 7. Boundary equality classification and concentration of possible failures
+
+The boundary equality condition in section 4 admits the following explicit
+classification in every degree `n>=4`. For a polynomial with all roots in
+the unit disk and a distinguished unit-modulus root `a`,
+
+\[
+\sum_{j=1}^{n-1}|a-\zeta_j|^{-1}=n-1
+\]
+
+holds if and only if, for some nonzero constant `C`,
+
+\[
+p(z)=C(z^n-a^n)
+\quad\hbox{or}\quad
+p(z)=C(z-a)(z+a)^{n-1}.\tag{7}
+\]
+
+Here a multiple distinguished root has infinite sum and is automatically
+excluded. The boundary inequality and equality condition from section 4
+work identically with `m=n-1` in place of eight.
+
+For the classification, rotate to `a=1` and make `p` monic. Boundary
+equality forces the other roots onto the unit circle and the critical
+points onto the real interval `[-1,1)`. Therefore `p'` has real coefficients,
+and `p(1)=0` makes `p` real as well. Set
+
+\[
+u_j=\frac1{1-z_j}=\frac12+it_j,\qquad
+q_j=\frac1{1-\zeta_j}\ge\frac12,\qquad
+x_j=q_j-\frac12\ge0.
+\]
+
+The multiset of `t_j` is invariant under negation, so the monic polynomial
+
+\[
+T(X)=\prod_j(X-it_j)
+\]
+
+has only powers congruent to `m` modulo two. Write its first terms as
+`T(X)=X^m+A X^(m-2)+...`. On expanding `p(1+w)` and differentiating,
+
+\[
+\prod_j(1+q_jw)=\frac{d}{dw}\left[w\prod_j(1+u_jw)\right],
+\]
+
+so `e_k(q)=(k+1)e_k(u)`. Equivalently, with
+`U(S)=prod_j(S-u_j)=T(S-1/2)` and `Q(S)=prod_j(S-q_j)`,
+
+\[
+Q(S)=(m+1)U(S)-S U'(S).
+\]
+
+Substitute `S=X+1/2` and compare the first four coefficients:
+
+\[
+\prod_j(X-x_j)=X^m-\frac m2X^{m-1}
+ +3A X^{m-2}-\frac{m-2}{2}A X^{m-3}+\cdots.
+\]
+
+Thus `e_1(x)=m/2`, `e_2(x)=3A`, and
+`e_3(x)=(m-2)e_2(x)/6`. These formulas also apply when `m=3` and the
+fourth displayed coefficient is constant.
+
+If `e_2(x)=0`, nonnegativity shows that at most one `x_j` is nonzero.
+The sum forces that one value to be `m/2`. Hence the reciprocal multiset
+is `q=(1/2,...,1/2,(m+1)/2)`, and the critical points are `-1` with
+multiplicity `n-2`, and `(n-2)/n` once. Integrating the derivative and
+using the root at one gives `p(z)=(z-1)(z+1)^(n-1)`.
+
+Otherwise put `E_k=e_k(x)/binom(m,k)`. The coefficient relation gives
+`E_3/E_2=1/2=E_1`. Maclaurin's inequalities for the nonnegative `x_j` give
+
+\[
+\frac{E_3}{E_2}\le\sqrt{E_2}\le E_1.
+\]
+
+Both inequalities must be equalities, so `E_2=E_1^2`. Equivalently the
+variance of the `x_j` is zero. All `x_j=1/2`, all `q_j=1`, and all critical
+points are zero. Integration and `p(1)=0` give `p(z)=z^n-1`. Both families
+in (7) do attain the stated sum, proving the converse and the classification.
+
+The degree restriction matters: in degree three,
+`p(z)=(z-1)(z^2+(8/5)z+1)` has unit-circle roots and real critical points,
+so it attains the boundary first-power sum two but belongs to neither
+family. The two critical points have discriminant `216/25>0` and lie
+strictly between minus one and one. There is no third elementary
+symmetric function when `m=2`, so the coefficient saturation argument
+does not apply.
+
+Return to degree nine. Any sequence of putative failures with `a_k -> 1`
+has `mu_k -> 1` and `D_k -> 0` by section 6. Monic polynomials with roots
+in the unit disk form a compact coefficient set. The reciprocal bounds
+`1/(1+a_k)<=|q_j|<=R` prevent a derivative root from approaching `a_k`;
+indeed `|p'_k(a_k)|=9/prod_j|q_j|>=9/(9/2)^8>0`.
+
+Each coefficient limit therefore has a simple root at one and a finite
+reciprocal sum equal to eight. Classification (7) permits only `z^9-1`
+and `(z-1)(z+1)^8`. Their reciprocal-modulus variances are respectively
+zero and `7/4`. The latter is excluded by (6), since its variance exceeds
+one. Every convergent subsequence consequently has limit `z^9-1`, and
+compactness gives the full conclusion
+
+\[
+p_k\longrightarrow z^9-1\quad\hbox{coefficientwise},\qquad
+\max_j|\zeta_{j,k}|\longrightarrow0.\tag{8}
+\]
+
+The root multisets also converge to the ninth roots of unity. Thus possible
+near-boundary failures of the **first-power** inequality are reduced to
+the binomial configuration, even though the hypothesis is weaker than
+requiring every critical distance to be at least one. This is a conditional
+concentration theorem; it does not assert that failures exist or exclude
+all perturbations of the binomial configuration.
+
 ## Trust boundary
 
 Sections 1, 3--6 are written analytic arguments. Section 2 uses a finite
 exact certificate, independently reproducible by two standard-library
-checkers using different coefficient algorithms. The coefficient identity
+checkers using different coefficient algorithms. Section 7 uses a symbolic
+coefficient argument and Maclaurin's inequalities; `verify_boundary.py`
+checks exact positive families and the degree-three exception, not the
+universal analytic step. The coefficient identity
 and every positivity decision are exact;
 no search completeness or floating-point tolerance is assumed. No external
 formalization is imported as a mathematical dependency. Neither the full

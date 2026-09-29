@@ -45,3 +45,12 @@ sources," not a priority claim. Discovery Net context was also refreshed
 before publication; exact graph provenance belongs in the durable agent
 checkpoint and the resulting signed contribution, rather than guessed refs
 in this file.
+
+A later focused search for unit-circle polynomials with real critical points,
+first-power boundary equality, and reciprocal Maclaurin equality found no
+primary duplicate of the explicit two-family classification proved here for
+a simple distinguished boundary root in degrees at least four. The conditional
+degree-nine first-power boundary concentration combines that classification
+with the new variance budget. No historical novelty is claimed for general
+real-critical-point classification problems or for the boundary reciprocal
+identity itself.

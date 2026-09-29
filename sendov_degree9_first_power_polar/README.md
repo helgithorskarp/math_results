@@ -27,7 +27,12 @@ relaxation, not a polynomial counterexample.
 
 [PROOF.md](PROOF.md) gives the analytic reduction, strictness, an exact
 refinement retaining angular defect and modulus variance, and a necessary
-variance condition for possible failures approaching the boundary.
+variance condition for possible failures approaching the boundary. It also
+classifies first-power boundary equality in degrees at least four into two
+families, `C(z^n-a^n)` and `C(z-a)(z+a)^(n-1)`, and proves that every possible
+degree-nine first-power failure approaching the boundary must converge,
+after normalization, to `z^9-1`. The other equality family is excluded by
+the variance budget. This leaves the binomial perturbation problem open.
 [STATUS.md](STATUS.md) explains why the assigned degree-nine Sendov target is
 already covered by current primary literature and identifies the still
 conjectural first-power endpoint.
@@ -39,6 +44,7 @@ Python 3.11 or later; standard library only. Tested with Python 3.11.2.
 ```bash
 python3 sendov_degree9_first_power_polar/verify.py
 python3 sendov_degree9_first_power_polar/verify_interpolation.py
+python3 sendov_degree9_first_power_polar/verify_boundary.py
 ```
 
 Expected output: [EXPECTED.txt](EXPECTED.txt). The checker uses arbitrary
@@ -55,6 +61,11 @@ Bernstein interpolation system by rational Gaussian elimination. It checks
 positivity independently, then compares every coefficient with the first
 algorithm. This checks the finite arithmetic certificate; it is not an
 independent specialist review of the written analytic argument.
+
+The third script checks the exact coefficient mechanism on the two equality
+families in degrees 4--15, checks their variances, and verifies the degree-three
+exception. These are exact controls for the hand proof, not an enumeration
+of all polynomials.
 
 The certificate is [certificate.json](certificate.json). It contains only
 small rational parameters and interval endpoints. The numerical constants
