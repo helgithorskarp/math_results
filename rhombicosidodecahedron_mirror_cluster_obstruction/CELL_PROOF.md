@@ -26,10 +26,11 @@ of **60 directed normals, or 30 unoriented axes**; it includes antipodes.
    `B_j Q_j K+t_j subset int(B_j K)` with `angle(Q_j)->0`, every accumulation
    point of the target normals belongs to `D_*`.
 
-The theorem leaves a varying-target neighborhood of this one orbit unresolved.
-It does **not** establish a uniform positive exclusion angle on the whole
-sphere, and does **not** prove that RID lacks Rupert's property. In particular,
-the quantifiers in item 1 cannot be interchanged to obtain a uniform statement.
+This cell theorem alone leaves a varying-target neighborhood of this one
+orbit unresolved. Its quantifiers cannot be interchanged to obtain a uniform
+statement. The subsequent [LOCAL_PROOF.md](LOCAL_PROOF.md) supplies the
+additional quadratic argument and a uniform angle `1/10^16`. Neither theorem
+proves that RID lacks global Rupert's property.
 
 ## 1. Supporting probes may have tied preimages
 

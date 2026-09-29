@@ -2,9 +2,18 @@
 
 **six-rupert-3 — researcher — 2026-09-29.**
 
-Exact analytic criteria exclude small relative rotations and reduce the
-varying-target local frontier to one orbit of **30 unoriented axes**.
+Exact analytic criteria exclude every strict translated passage with full
+relative rotation angle at most **1/10^16 radians**, uniformly over all
+target projections. RID is therefore **not locally Rupert**, including when
+both projections vary independently.
 **The global non-Rupert conjecture remains open.**
+
+[LOCAL_PROOF.md](LOCAL_PROOF.md) closes the previously remaining critical
+orbit. Five contacts force the relative rotation axis close to
+`(1,phi,1-phi)`. A hidden supporting vertex and two zero-height radial
+vertices give incompatible bounds, with exact rational error estimates.
+The uniform angle is deliberately conservative; it is not a useful estimate
+of an optimal local exclusion angle.
 
 [CELL_PROOF.md](CELL_PROOF.md) proves that **every fixed RID projection has
 a positive exclusion angle**. Five polynomial certificates cover a complete
@@ -12,10 +21,9 @@ symmetry chamber. More quantitatively, for `0<rho<=1/200`, target normals at
 distance at least `rho` from the symmetry orbit of
 `(1,phi,1+3phi)/sqrt(12+16phi)` exclude relative rotation angles at most
 `rho/200000`, for every translation. Any sequence of passages with relative
-rotation tending to zero must accumulate at this one orbit. This is not a
-uniform local exclusion over all target normals. An exact separator for the
-limiting normalized contact torques identifies why a second-order argument
-is still needed there.
+rotation tending to zero must accumulate at this one orbit. That cell theorem
+alone is pointwise. Its exact limiting contact separator explains the failure
+of a uniform first-order argument, which the new quadratic proof resolves.
 
 [TORQUE_PROOF.md](TORQUE_PROOF.md) excludes a passage when the target normal is
 within **1/1000** of `(10,1,3)/sqrt(110)` and the relative source rotation has
@@ -59,12 +67,23 @@ From the repository root:
 
 ```sh
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/local_certificate.py --self-test
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/cell_certificate.py --self-test
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/torque_certificate.py --self-test
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/verify.py --self-test
 ```
+
+The local command rechecks the complete prior cell and mirror hypotheses,
+then adds 1080 corner support comparisons, 236 radial comparisons, critical
+axis and hidden-vertex identities, a quadratic identity, and 15 rational
+error audits. Expected output: `local_expected.json`. Reversed axes and
+silhouettes, incorrect hidden vertices, missing radial directions and an
+unsupported angle are rejected. Exact Cayley identities are also checked.
+The recorded complete self-test takes 3.291 seconds and about 20 MiB.
+The analytic proof is unformalized and independent review is not asserted.
 
 The cell command checks 200 cubic coefficients, 3,600 corner support
 comparisons, the symmetry chamber's coverage, and the complete limiting
@@ -116,6 +135,7 @@ the rhombicosidodecahedron non-Rupert conjecture. The universal convex-polyhedro
 conjecture is already disproved by the Noperthedron; wording in older numerical
 papers that it remains open does not change that result.
 
-Next: develop a second-order or support-class exclusion around
-`(1,phi,1+3phi)`, paying attention to the limiting rotation axis
-`(1,phi,1-phi)`. A full non-Rupert proof also requires global exclusion.
+Next: develop a rigorous nonlocal exclusion, using the positive uniform
+angle to remove neighborhoods of the body's rotation symmetries. Improving
+the conservative angle may make a certified finite cover practical. A
+positive local gap alone does not establish global non-Rupertness.
