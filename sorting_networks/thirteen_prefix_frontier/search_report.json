@@ -1,0 +1,126 @@
+{
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "date": "2026-09-29",
+  "pysat_version": "1.8.dev24",
+  "solver": "MiniSat 2.2 (m22)",
+  "threads": 1,
+  "cpu_intensive_jobs_at_a_time": 1,
+  "scope_limit_gib": 2,
+  "frontier_instances": [
+    {
+      "case": 1,
+      "state_count": 146,
+      "variables": 61381,
+      "clauses": 1966117,
+      "clause_stream_sha256": "321142d45722598b7617e835d5bbe5fe3aabb79bc62e89b880fa342219c75858",
+      "dimacs_sha256": "bd4630e7add6ae7eb1f06560dbbc092e4434bf6c482642b444b7424719ba7dd4",
+      "dimacs_bytes": 42279406,
+      "status": "UNKNOWN",
+      "seed_deleted_known_suffix_gate": 19,
+      "segments_seconds": [
+        45.002423074969556,
+        45.00123991101282,
+        45.00084151700139,
+        45.00085227098316
+      ],
+      "final_solver_stats": {
+        "restarts": 680,
+        "conflicts": 222750,
+        "decisions": 524525,
+        "propagations": 335516184
+      },
+      "total_elapsed_seconds": 184.14451217697933
+    },
+    {
+      "case": 2,
+      "state_count": 145,
+      "variables": 60981,
+      "clauses": 1952219,
+      "clause_stream_sha256": "a5d76b27bc92ec82d94a4a414d86aeb2e7b857dc91d8572293462479824396cf",
+      "dimacs_sha256": "5c45e168872b2fdbb34d7c0a3f14f8a08bb947f7af677295540ad32bdb182972",
+      "dimacs_bytes": 41974609,
+      "status": "UNKNOWN",
+      "seed_deleted_known_suffix_gate": 19,
+      "segments_seconds": [
+        45.00924723199569,
+        45.00123604602413,
+        45.003519344027154,
+        45.00199129502289
+      ],
+      "final_solver_stats": {
+        "restarts": 534,
+        "conflicts": 166727,
+        "decisions": 473740,
+        "propagations": 269036699
+      },
+      "total_elapsed_seconds": 184.52244426094694
+    }
+  ],
+  "small_controls": {
+    "short_sequence_checks": [
+      {
+        "n": 3,
+        "budget": 0,
+        "all_sequences": 1
+      },
+      {
+        "n": 3,
+        "budget": 1,
+        "all_sequences": 3
+      },
+      {
+        "n": 3,
+        "budget": 2,
+        "all_sequences": 9
+      },
+      {
+        "n": 3,
+        "budget": 3,
+        "all_sequences": 27
+      },
+      {
+        "n": 4,
+        "budget": 0,
+        "all_sequences": 1
+      },
+      {
+        "n": 4,
+        "budget": 1,
+        "all_sequences": 6
+      },
+      {
+        "n": 4,
+        "budget": 2,
+        "all_sequences": 36
+      },
+      {
+        "n": 4,
+        "budget": 3,
+        "all_sequences": 216
+      },
+      {
+        "n": 4,
+        "budget": 4,
+        "answer": false
+      },
+      {
+        "n": 4,
+        "budget": 5,
+        "answer": true
+      }
+    ],
+    "touch_bound_checks": 1728
+  },
+  "positive_controls": {
+    "cases": [
+      0,
+      1,
+      2
+    ],
+    "comparators": 45,
+    "all_boolean_inputs_per_case": 8192,
+    "cases_1_and_2_recovered_by_sat": true
+  },
+  "claim": "Exact prefix reduction only. Both budget20 searches were UNKNOWN; no UNSAT certificate or size44 network."
+}
