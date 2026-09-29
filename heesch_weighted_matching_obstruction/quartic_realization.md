@@ -37,8 +37,9 @@ unmarked topological disk `T`. The following properties hold.
 2. Every admissible complete corona patch in the marked grid model transfers
    to a patch of `T` with the same tiles and layers. Its strict containment and
    hole-free properties are preserved.
-3. If any color has unequal positive and negative edge counts, `T` has a
-   finite Heesch number with the explicit upper certificates of the README.
+3. If any color has unequal positive and negative edge counts, `T` does not
+   tile the plane and has a finite Heesch number with the explicit upper
+   certificates of the README.
    If the original marked model has an `H`-corona patch, then this construction
    gives a rigorously finite unmarked shape with Heesch number at least `H`.
 
@@ -102,6 +103,17 @@ is independent of the determinant of either tile's placement isometry, and
 so includes reflected copies. A third tile sharing the same whole port
 would occupy the same local side as one of the first two and would overlap
 it. Pairing is consequently one-to-one.
+
+This also excludes a plane tiling directly, without relying on a convention
+that assigns infinity to tilers. In any putative plane tiling only finitely
+many tiles can meet a bounded region: each meeting tile lies in that region
+enlarged by the fixed tile diameter, and disjoint interiors of fixed positive
+area bound their number. Thus the same finite-contact argument pairs every
+nonflat arc of every tile. Let `N_i` now count tiles at boundary-contact graph
+distance at most `i` from one fixed tile. These graph balls are finite, all
+positive ports at distance at most `i-1` have distinct negative mates at
+distance at most `i`, and all their tiles lie in the radius `(i+1)*D` disk.
+The recurrence and packing contradiction from the README applies unchanged.
 
 Only nonflat arcs are ports in this argument. Straight boundary edges are
 uncharged and need not be atomic: they may slide or split among contacts.
