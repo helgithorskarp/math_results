@@ -1,0 +1,33 @@
+{
+  "checker_controls.py": {
+    "positive_control": true,
+    "rejected_corruptions": [
+      "incomplete_coverage",
+      "overlapping_petals",
+      "invalid_progression",
+      "unblocked_endpoint_color",
+      "unsupported_radius",
+      "duplicate_elimination"
+    ]
+  },
+  "verify.py": {
+    "certificate_sha256": "6ddaaaaed5497f8e2d5f6f9a24263eb1276e11540fc7f545939ab0ccfa36952b",
+    "eliminated_positions": 3696,
+    "empty_records": 1541,
+    "exceptional_prefix_positions_free": 7,
+    "excluded_radius_nonzero_positions": 28,
+    "new_endpoint_free": true,
+    "packing_records": 307,
+    "prefix_nonzero_positions": 3696,
+    "records": 1848,
+    "required_nonzero_changes": 29,
+    "verified": true
+  },
+  "verify_baseline.py": {
+    "canonical_seed_sha256_without_newline": "a27ec1e5f03030b2e88f0e5d7b493a8cd18976bbdbce94a0043f95b2823da83f",
+    "covered_seven_term_aps": 1140833,
+    "monochromatic_seven_term_aps": 0,
+    "valid_exceptional_assignments": 126,
+    "verified_length": 3703
+  }
+}
