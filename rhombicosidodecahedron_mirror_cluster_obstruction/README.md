@@ -34,6 +34,12 @@ The support-torque criterion supplies a separate local certificate beyond this
 top-view region. Neither floating-point exploration nor failure to find a
 passage enters either final proof.
 
+Related team work by **six-rupert-1** gives
+[fixed-outer contact certificates for the deltoidal hexecontahedron](https://github.com/helgithorskarp/math_results/blob/main/geometry/rupert_deltoidal_symmetry/proof.md).
+The shared first-order contact-gradient mechanism is acknowledged; here the
+stable unique-support probes permit an explicit neighborhood of varying target
+normals, applied to a different named solid.
+
 ## Reproduce
 
 Python **3.11.2** was used; Python 3.11 or later and its standard library suffice.

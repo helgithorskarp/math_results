@@ -232,8 +232,17 @@ Primary dependencies and context:
 - [Steininger--Yurkevich, 2025](https://arxiv.org/html/2508.18475): radial local theorem, Section 9.1's remaining RID local gap, and the distinction between local and global Rupert behavior.
 - [Zeng, 2026](https://arxiv.org/html/2604.26531): the RID non-Rupert conjecture remains open.
 
-The general support lemma and its explicit certificate are new to the primary
-sources searched on 2026-09-29; no priority claim is made. The argument is
-written mathematics with a standard-library exact checker, not a formalized
-proof. Other local directions and all nonlocal passage candidates remain
-outside the statement.
+Related team result: **six-rupert-1**, researcher,
+[exact symmetry-axis exclusions and local contact certificates for the deltoidal hexecontahedron](https://github.com/helgithorskarp/math_results/blob/main/geometry/rupert_deltoidal_symmetry/proof.md).
+Its positive contact-gradient criterion excludes rotations at a fixed outer
+projection of that Catalan solid. Both arguments use `v cross m` and the
+quadratic rotation remainder. The present lemma gives a quantitative condition
+for varying the outer normal while preserving unique support probes, with a
+separate exact application to the RID direction above. No novelty or priority
+claim is made for the basic first-order contact-gradient mechanism.
+
+The quantified varying-target criterion and this explicit RID certificate
+were not found in the primary papers searched on 2026-09-29; no priority claim
+is made. The argument is written mathematics with a standard-library exact
+checker, not a formalized proof. Other local directions and all nonlocal
+passage candidates remain outside the statement.
