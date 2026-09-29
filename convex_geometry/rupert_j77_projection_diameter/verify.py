@@ -167,6 +167,18 @@ def verify():
     ring = [p for p in core if dot(p, axis) == k]
     assert len(ring) == 5
     assert tuple(sum((p[j] for p in ring), Q()) for j in range(3)) == scale(5*k/dot(axis, axis), axis)
+    # Exact 72-degree rotation: cos(72) = k, sin(72)/|axis| = 1/2.
+    assert k*k+dot(axis, axis)/4 == 1
+    p = ring[0]
+    orbit = []
+    for _ in range(5):
+        orbit.append(p)
+        p = add(add(scale(k, p), scale((1-k)*dot(axis, p)/dot(axis, axis), axis)),
+                scale(Q(1)/2, cross(axis, p)))
+    assert p == ring[0] and set(orbit) == set(ring)
+    cosine36 = Q(1, 1)/4
+    cone_ratio2 = t2/(r2*cosine36*cosine36)
+    assert cone_ratio2 == Q(123, -55)/2 and 0 < cone_ratio2 < 1
 
     scale2 = R2/L2
     assert scale2 == Q(2797, -75)/2552
@@ -192,8 +204,10 @@ def verify():
         'passage_scale_upper_bound_squared': str(scale2),
         'certified_scale_upper_bound_enclosure': ['1.015031019664', '1.015031019665'],
         'axial_ring_count': len(ring),
+        'axial_ring_regular_pentagon': True,
         'axial_height_squared': str(t2),
         'axial_projection_radius_squared': str(r2),
+        'axial_cone_tan_half_angle_squared': str(cone_ratio2),
     }
     return result
 

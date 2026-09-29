@@ -20,7 +20,7 @@ It follows that every strict passage scale satisfies
 The Nieuwland number is at most the radical. A separate analytic lemma
 excludes an axial receiver when the inner projection axis is within the
 explicit cone in Section 6 of [PROOF.md](PROOF.md), of half-angle about
-4.17 degrees. **J77's Rupert property remains unresolved.** These are
+10.3 degrees. **J77's Rupert property remains unresolved.** These are
 intermediate geometric results, not a proof of non-Rupertness.
 
 The exact upper bound is certified by a finite reduction with 9,825

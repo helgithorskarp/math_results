@@ -276,7 +276,7 @@ and put
 \[
 t_0^2=\frac{5-2s}{20},\qquad
 r_0^2=\frac{25+11s}{10}=R^2-t_0^2,\qquad
-\gamma_0=\arctan(t_0/r_0).
+\gamma_*=2\arctan\frac{t_0}{r_0\cos(\pi/5)}.
 \tag{12}
 \]
 
@@ -287,29 +287,44 @@ ring vertices.
 
 The five core vertices with \(A\cdot v=(s-1)/4\) have common axial height
 \(t_0\), transverse length \(r_0\), and sum \(5t_0n\); these identities are
-checked exactly. Call them \(b_1,\ldots,b_5\).
+checked exactly. Their transverse components form a regular pentagon:
+the checker verifies that the exact 72-degree rotation about \(A\) takes
+these five vertices through a single orbit. Call them \(b_1,\ldots,b_5\).
 
 Take an inner projection direction whose unoriented axis makes angle
-\(0\le\gamma\le\gamma_0\) with the fivefold axis. Choose its sign so that
+\(0\le\gamma\le\gamma_*\) with the fivefold axis. Choose its sign so that
 \(d=\cos\gamma\,n+\sin\gamma\,u\), where \(u\perp n\) is a unit vector
-(the choice of \(u\) is immaterial when \(\gamma=0\)). For every ring vertex,
+(the choice of \(u\) is immaterial when \(\gamma=0\)). Let \(\ell_i=b_i-t_0n\)
+be the transverse pentagon vertices. The direction \(-u\) lies in a
+72-degree arc between two adjacent \(\ell_i\). Choose the endpoint farther
+from \(-u\). Its angular distance from \(-u\) is between 36 and 72 degrees.
+It follows that this endpoint satisfies
 
 \[
-b_i\cdot d\ge t_0\cos\gamma-r_0\sin\gamma\ge0.
+-r_0\cos(\pi/5)\le\ell_i\cdot u\le0.
 \]
 
-The mean of these five nonnegative dot products is \(t_0\cos\gamma\), so
-one of them is at most that mean. Its antipodal partner belongs to J77.
-The inner shadow therefore has diameter at least
+Consequently
 
 \[
-2\sqrt{R^2-t_0^2\cos^2\gamma}\ge2r_0.
+t_0\cos\gamma-r_0\cos(\pi/5)\sin\gamma
+\le b_i\cdot d\le t_0\cos\gamma\le t_0.
 \]
+
+The lower endpoint is at least \(-t_0\) when
+\(\tan(\gamma/2)\le t_0/(r_0\cos(\pi/5))\), exactly the condition in (12).
+Thus \(|b_i\cdot d|\le t_0\). Its antipodal partner belongs to J77, so the
+inner shadow has diameter at least \(2\sqrt{R^2-t_0^2}=2r_0\).
 
 For any scale \(\lambda\ge1\), strict containment in the axial receiver
 would require a strictly smaller diameter, an impossibility. This proves
 the axial exclusion, allowing every translation and in-plane rotation.
-The half-angle is about \(4.17^\circ\); the exact statement is (12).
+The half-angle is about \(10.3^\circ\); the exact statement is (12). Its
+algebraic parameter is checked as
+
+\[
+\tan^2(\gamma_*/2)=\frac{123-55\sqrt5}{2}.
+\]
 
 This excludes an explicit cone of inner directions for one fixed receiver
 axis. It does not exclude arbitrary receiver directions or all axial
