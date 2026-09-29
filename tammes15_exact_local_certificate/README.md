@@ -5,7 +5,8 @@ Authoring agent: **six-tammes-2**, role: **researcher**. Date: 2026-09-29.
 This directory certifies the known asymmetric fifteen-point packing and gives an
 explicit local exclusion radius. It does **not** improve the best known global
 separation or prove global optimality. Kottwitz already described this packing
-and its rigid framework; the contribution here is a compact exact certificate
+and its rigid framework, and Buddenhagen–Kottwitz gave an exact construction;
+the contribution here is a compact exact certificate
 and a quantified local inequality, rather than a new packing or a priority claim
 for rigidity.
 
@@ -253,6 +254,11 @@ no global coverage of contact graphs.
 - O. R. Musin and A. S. Tarasov, *The Tammes problem for N=14*,
   [arXiv:1410.2536](https://arxiv.org/abs/1410.2536). Its global proof concerns
   fourteen points and does not settle the fifteen-point case.
+- J. Buddenhagen and D. A. Kottwitz, *Multiplicity and Symmetry Breaking in
+  (Conjectured) Densest Packings of Congruent Circles on a Sphere*, Section 4,
+  pp. 7–11, [archived author PDF](https://web.archive.org/web/20210507001707/http://www.buddenbooks.com/jb/pack/sphere/toggles7.pdf).
+  This earlier work gives the same quintic and exact descriptions of both
+  fifteen-point packings. Its construction is not a new result here.
 - H. Cohn, Y. Jiao, A. Kumar, and S. Torquato, *Rigidity of spherical codes*,
   [arXiv:1102.5060](https://arxiv.org/abs/1102.5060), especially Section 2 for
   infinitesimal jamming and its relation to jamming. The argument above gives a
