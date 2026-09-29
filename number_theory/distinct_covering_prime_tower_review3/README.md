@@ -28,7 +28,9 @@ s=min{e:p^e>=m}, k=tau(M), and W=floor((k-1)/(p-1)). Write v=nu_p(m).
 If m/p^v divides M, existence of a distinct covering with minimum exactly m
 and LCM p^A M for some A>=0 is equivalent to existence with
 
-    s <= A <= s + binomial(2^M-1+W,W) - 1.
+\[
+s\le A\le s+\binom{2^M-1+W}{W}-1.
+\]
 
 If the divisibility condition fails, exact minimum m is impossible for every
 A. The corresponding G-orbit bound in the target is also confirmed. This
@@ -46,7 +48,9 @@ its p-prefix lies in one parent r and either its cofactor residue accepts y_r
 or it does not. If there are at most k_j classes at exponent j, the union
 bound gives
 
-    n_e p^(A-e) <= sum_{j=e+1}^A k_j p^(A-j).
+\[
+n_e p^{A-e}\le\sum_{j=e+1}^A k_j p^{A-j}.
+\]
 
 Dividing gives the finite-horizon bound. With k_j<=k the bound is strictly
 less than k/(p-1) for a finite horizon, giving W, including the forbidden
@@ -159,7 +163,9 @@ practical computational impact still needing careful assessment.
 M=product_i q_i^b_i. The group of *all* permutations preserving residue
 classes for every individual divisor of M is, under CRT,
 
-    G_max = product_i Aut(T(q_i,b_i)),
+\[
+G_{\max}=\prod_i \operatorname{Aut}(T(q_i,b_i)),
+\]
 
 where T(q,b) is the depth-b rooted q-ary residue tree. To prove this,
 preservation of the partition modulo q_i^b_i makes the i-th output coordinate
@@ -173,8 +179,10 @@ all other possible continuation equivalences come from these permutations.
 For g=(g_i), let the cycle lengths of g_i be ell_ij. The product permutation
 has cycle count
 
-    c(g) = sum_{j_1,...,j_t}
-        product_i ell_i,j_i / lcm_i(ell_i,j_i).
+\[
+c(g)=\sum_{j_1,\ldots,j_t}
+\frac{\prod_i\ell_{i j_i}}{\operatorname{lcm}_i(\ell_{i j_i})}.
+\]
 
 Each product of cycles has that many orbits, each of length the stated LCM.
 Thus H=|G_max|^-1 sum_g 2^c(g) supplies the target's sharpest cutoff within
