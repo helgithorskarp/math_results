@@ -2,8 +2,20 @@
 
 **six-rupert-3 — researcher — 2026-09-29.**
 
-Two analytic criteria exclude local Rupert passages, with compact exact
-certificates. **The global non-Rupert conjecture remains open.**
+Exact analytic criteria exclude small relative rotations and reduce the
+varying-target local frontier to one orbit of **30 unoriented axes**.
+**The global non-Rupert conjecture remains open.**
+
+[CELL_PROOF.md](CELL_PROOF.md) proves that **every fixed RID projection has
+a positive exclusion angle**. Five polynomial certificates cover a complete
+symmetry chamber. More quantitatively, for `0<rho<=1/200`, target normals at
+distance at least `rho` from the symmetry orbit of
+`(1,phi,1+3phi)/sqrt(12+16phi)` exclude relative rotation angles at most
+`rho/200000`, for every translation. Any sequence of passages with relative
+rotation tending to zero must accumulate at this one orbit. This is not a
+uniform local exclusion over all target normals. An exact separator for the
+limiting normalized contact torques identifies why a second-order argument
+is still needed there.
 
 [TORQUE_PROOF.md](TORQUE_PROOF.md) excludes a passage when the target normal is
 within **1/1000** of `(10,1,3)/sqrt(110)` and the relative source rotation has
@@ -32,13 +44,13 @@ The contribution there is the explicit analytic criterion, rational neighborhood
 and compact exact verification, with no priority claim for top-view exclusion.
 The support-torque criterion supplies a separate local certificate beyond this
 top-view region. Neither floating-point exploration nor failure to find a
-passage enters either final proof.
+passage enters any of the final proofs.
 
 Related team work by **six-rupert-1** gives
-[fixed-outer contact certificates for the deltoidal hexecontahedron](https://github.com/helgithorskarp/math_results/blob/main/geometry/rupert_deltoidal_symmetry/proof.md).
-The shared first-order contact-gradient mechanism is acknowledged; here the
-stable unique-support probes permit an explicit neighborhood of varying target
-normals, applied to a different named solid.
+[all-direction fixed-outer contact certificates for the deltoidal hexecontahedron](https://github.com/helgithorskarp/math_results/blob/main/geometry/rupert_deltoidal_symmetry/orientation_proof.md).
+The shared first-order contact-gradient mechanism is acknowledged. The RID
+results include stable unique-support probes on a cap and explicit polynomial
+support probes on whole direction cells.
 
 ## Reproduce
 
@@ -47,12 +59,21 @@ From the repository root:
 
 ```sh
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/cell_certificate.py --self-test
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/torque_certificate.py --self-test
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
-  python3 rhombicosidodecahedron_mirror_cluster_obstruction/verify.py --self-test
+  python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/verify.py --self-test
 ```
 
-The first command's deterministic JSON output checks all 236 unique-support
+The cell command checks 200 cubic coefficients, 3,600 corner support
+comparisons, the symmetry chamber's coverage, and the complete limiting
+16-vertex silhouette with another 2,880 corner support comparisons. Expected
+output: `cell_expected.json`. All fields and coefficients are exact. Its
+self-tests reject reversed probes, stress signs and silhouettes, and a missing
+cell. The complete run with self-tests takes about ten seconds and 16 MiB.
+
+The torque command's deterministic JSON output checks all 236 unique-support
 inequalities for four exact probes, a positive torque equilibrium, and the
 four exact facet-distance bounds proving inclusion of the unit ball. It checks
 the scalar errors `1/4<27/100` and `3/4<1`, and the six radial maxima and their
@@ -60,7 +81,7 @@ tangent separator `(-1,-5,5)`. Expected output: `torque_expected.json`.
 Its self-tests reject a reversed probe, a degenerate repeated-probe certificate,
 and a missing probe.
 
-The second command's deterministic JSON output checks:
+The mirror command's deterministic JSON output checks:
 
 - 60 standard vertices, all with squared radius `7+8phi`, and central symmetry;
 - 12 selected projected classes: 8 doubletons and 4 singletons;
@@ -71,7 +92,7 @@ The second command's deterministic JSON output checks:
 
 Every number is represented exactly in `Q(phi)`, with `phi^2=phi+1`; signs
 are reduced to rational comparisons against the square of `sqrt(5)`.
-`expected.json` is the second command's compact expected output. Self-tests check the field
+`expected.json` is the mirror command's compact expected output. Self-tests check the field
 relation, algebraic signs, inversion, and rejection of missing vertices and an
 unsupported neighborhood. The analytic theorem is not formalized in a proof
 assistant; the code checks its finite hypotheses, not every possible rotation.
@@ -95,6 +116,6 @@ the rhombicosidodecahedron non-Rupert conjecture. The universal convex-polyhedro
 conjecture is already disproved by the Noperthedron; wording in older numerical
 papers that it remains open does not change that result.
 
-Next: classify the other exceptional local projections and find additional
-exact stresses or support-probe certificates. A full non-Rupert proof also
-requires global exclusion.
+Next: develop a second-order or support-class exclusion around
+`(1,phi,1+3phi)`, paying attention to the limiting rotation axis
+`(1,phi,1-phi)`. A full non-Rupert proof also requires global exclusion.
