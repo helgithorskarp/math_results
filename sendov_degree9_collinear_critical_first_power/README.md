@@ -8,7 +8,9 @@ $$\sum_{j=1}^8|a-\zeta_j|^{-1}\ge8,$$
 
 strictly for $|a|<1$. The other polynomial zeros may be complex and noncollinear. If the common line has distance $h<1$ from the disk center, the stronger bound is $8/\sqrt{1-h^2}$. Boundary equality consists exactly of the binomial and thin families described in [PROOF.md](PROOF.md).
 
-The analytic proof separates the signs of the real reciprocal critical coordinates. The polar identity rules out a negative coordinate under a hypothetical failure. A symmetric multiaffine minimizer reduction handles the positive case through eight bivariate polynomials. Their 636 rational Bernstein coefficients are all nonnegative, with 634 positive; this yields the explicit origin gap $8(1-a)^{16}/(1+a)^8$. Rotation, reflection of the transformed roots, and scaling handle arbitrary affine lines.
+The analytic proof separates the signs of the real reciprocal critical coordinates. The polar identity rules out a negative coordinate under a hypothetical failure. A symmetric multiaffine minimizer reduction handles the positive case through eight bivariate polynomials. Their 636 rational Bernstein coefficients are all nonnegative, with 634 positive; this yields the explicit origin gap $8(1-a^9)/(1+a)^8\ge9(1-a)/32$. Rotation, reflection of the transformed roots, and scaling handle arbitrary affine lines.
+
+The linear gap also proves a complex case. After rotating an interior root to $a=|a|$, put $q_j=(a-\zeta_j)^{-1}$. If $\sum_j|q_j-|q_j||\le(1-a)/2000$, then the first-power sum is strictly greater than eight, without a collinearity hypothesis. The proof telescopes the origin product with an exact rational Lipschitz bound; the cone constant is not claimed sharp.
 
 This is a structural case of the still-conjectural degree-nine first-power Tang-Zhang inequality. See [STATUS.md](STATUS.md) for primary literature and the distinction from the published collinear-polynomial-zero case. This work does not claim the full conjecture or an independent review. The boundary equality classification uses the earlier [degree-nine polar contribution](../sendov_degree9_first_power_polar/PROOF.md).
 

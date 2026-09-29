@@ -73,7 +73,9 @@ def main():
         found = [[sum((left[i][s] * iu[j][s] for s in range(e + 1)), Q(0))
                   for j in range(e + 1)] for i in range(d + 1)]
         assert found == expected, f"entry-level interpolation mismatch for k={k}"
-        assert all(v >= 0 for row in found for v in row)
+        assert all(v == 0 or v >= 8 for row in found for v in row)
+        zeros = [(i, j) for i, row in enumerate(found) for j, v in enumerate(row) if not v]
+        assert zeros == ([(d, e)] if k in (0, 7) else [])
         count += (d + 1) * (e + 1)
         print(f"PASS: independent tensor interpolation k={k}, entries={(d + 1) * (e + 1)}")
     assert count == 636

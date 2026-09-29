@@ -8,7 +8,8 @@ PASS: k=5, degrees=(11,3), coefficients=48, zeros=0
 PASS: k=6, degrees=(10,2), coefficients=33, zeros=0
 PASS: k=7, degrees=(9,1), coefficients=20, zeros=1
 PASS: all 636 Bernstein coefficients, 634 positive, minimum positive 8
-PASS: all a-index-zero rows equal 8; uniform origin gap follows
+PASS: corner zeros give origin gap >= 8(1-a^9)/(1+a)^8
+PASS: linear origin gap >= 9(1-a)/32 and exact complex phase-cone constant
 PASS: all 3 exact negative-coordinate polar bounds are < 1
 
 $ python3 sendov_degree9_collinear_critical_first_power/verify_interpolation.py

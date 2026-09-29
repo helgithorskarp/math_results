@@ -68,6 +68,20 @@ def verify_negative_bounds():
     print("PASS: all 3 exact negative-coordinate polar bounds are < 1")
 
 
+def verify_linear_gap_and_phase_constant():
+    # Clear denominators in the identity following (11) in PROOF.md.
+    coeffs = [F(0)] * 9
+    for h, v in enumerate([9, 84, 126, 36, 1]):
+        for i in range(2 * h + 1):
+            for j in range(9 - 2 * h):
+                coeffs[i + j] += v * comb(2 * h, i) * (-1) ** i * comb(8 - 2 * h, j)
+    assert coeffs == [F(256)] * 9
+    k0 = 9 * sum((F(comb(7, j), j + 2) * F(8, 7) ** j for j in range(8)), F(0))
+    assert k0 == F(570801247, 1647086) < 500
+    assert F(9, 32) - F(500, 2000) == F(1, 32) > 0
+    print("PASS: linear origin gap >= 9(1-a)/32 and exact complex phase-cone constant")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write-certificate", action="store_true",
@@ -105,7 +119,8 @@ def main():
         print(f"PASS: k={k}, degrees=({d},{e}), coefficients={len(flat)}, zeros={len(zeros)}")
     assert (total, positives) == (636, 634)
     print("PASS: all 636 Bernstein coefficients, 634 positive, minimum positive 8")
-    print("PASS: all a-index-zero rows equal 8; uniform origin gap follows")
+    print("PASS: corner zeros give origin gap >= 8(1-a^9)/(1+a)^8")
+    verify_linear_gap_and_phase_constant()
     verify_negative_bounds()
 
 

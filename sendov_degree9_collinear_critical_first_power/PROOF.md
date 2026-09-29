@@ -16,7 +16,7 @@ Equality in the unit-disk bound $S_1=8$ holds exactly when $|a|=1$ and
 
 $$p(z)=C(z^9-a^9)\quad\hbox{or}\quad p(z)=C(z-a)(z+a)^8,\qquad C\ne0. \tag{2}$$
 
-The other polynomial zeros need not lie on $L$. The claim proves this structural case of the first-power Tang-Zhang conjecture; it does not prove the general complex case. Boundary equality classification in (2) uses the [previous proved lemma](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_first_power_polar/PROOF.md). All remaining parts are proved here. The finite positivity certificate below is checked by two distinct exact algorithms, without floating-point arithmetic.
+The other polynomial zeros need not lie on $L$. A further corollary in Section 3 proves strict first power for arbitrary complex critical points whose reciprocal phase deviation is at most $(1-|a|)/2000$. These are structural cases of the first-power Tang-Zhang conjecture; they do not prove the general complex case. Boundary equality classification in (2) uses the [previous proved lemma](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_first_power_polar/PROOF.md). All remaining parts are proved here. The finite positivity certificate below is checked by two distinct exact algorithms, without floating-point arithmetic.
 
 ## 1. Diameter normalization and the two classical identities
 
@@ -85,7 +85,7 @@ Thus (6) contradicts (5). Any hypothetical $S_1\le8$ at an interior real root mu
 The following purely real inequality is the main new finite reduction. For $0\le a<1$, any eight real numbers $q_j\ge1/(1+a)$ with $\sum_jq_j\le8$ satisfy
 
 $$E_a(q):=9\int_0^1\prod_{j=1}^8(1-atq_j)\,dt-\prod_{j=1}^8q_j
-\ge\frac{8(1-a)^{16}}{(1+a)^8}>0. \tag{7}$$
+\ge\frac{8(1-a^9)}{(1+a)^8}\ge\frac9{32}(1-a)>0. \tag{7}$$
 
 **Reduction to eight profiles.** The domain is nonempty and compact. $E_a$ is symmetric and multiaffine, meaning it has degree at most one in each $q_j$ separately. Choose a global minimizer with the fewest coordinates strictly above $l=1/(1+a)$. Holding all but two such coordinates fixed, symmetry and multiaffinity give
 
@@ -138,14 +138,44 @@ c_{rs}\frac{\binom ir}{\binom dr}\frac{\binom js}{\binom es}. \tag{11}$$
 
 `verify.py` regenerates these 636 fractions and compares every entry with the certificate. `verify_interpolation.py` uses a distinct algorithm: rational grid evaluation by multiplication of the eight linear factors in $t$, exact integration, and inversion of two Bernstein sampling matrices. It independently reconstructs and compares all 636 entries. Both checkers use only Python's standard library and rational arithmetic. They certify this finite algebraic step; the minimizer argument and geometric reductions are written mathematical proofs, not formalized code.
 
-Because the Bernstein basis is nonnegative on the unit square and its sums equal one, the $i=0$ row gives
+Because the Bernstein basis is nonnegative on the unit square and its sums equal one, $P_k\ge8$ for $1\le k\le6$. For $k=0,7$, its sole zero coefficient is the top-right one, giving
 
-$$P_k(a,u)\ge8(1-a)^{16-k}\ge8(1-a)^{16}.$$
+$$P_k(a,u)\ge8(1-a^{16-k}u^{8-k})\ge8(1-a^9).$$
 
-This holds at a global minimizing profile and therefore throughout the domain, proving (7).
+Thus every profile has $P_k\ge8(1-a^9)$. This holds at a global minimizing profile and therefore throughout the domain. For the simpler linear lower bound in (7), put $v=(1-a)/(1+a)\ge0$. The binomial identity
+
+$$\frac{8(1-a^9)}{(1+a)^8}
+=\frac{1-a}{32}(9+84v^2+126v^4+36v^6+v^8)
+\ge\frac9{32}(1-a)$$
+
+finishes the proof of (7). Its polynomial form after clearing denominators is checked exactly by `verify.py`.
 
 Return to the polynomial. With all $q_j>0$ and $S_1\le8$, (7) gives
 $O>\prod_jq_j>0$. This contradicts $|O|\le\prod_jq_j$ in (4). Together with Section 2, this proves $S_1>8$ for every interior real distinguished root with real critical points.
+
+**Complex reciprocal phase corollary.** Drop collinearity. Rotate an interior distinguished root to $a=|a|\in[0,1)$, and suppose all its critical reciprocals $q_j=(a-\zeta_j)^{-1}$ are finite. Then
+
+$$\sum_{j=1}^8|q_j-|q_j||\le\frac{1-a}{2000}
+\quad\Longrightarrow\quad S_1(p,a)>8. \tag{12}$$
+
+No reality assumption on the critical points or other zeros is made in (12). To prove it, assume $S_1\le8$ and set $r_j=|q_j|$. Gauss-Lucas gives $r_j\ge1/(1+a)$, so the real inequality (7) applies to $r$. Write $\epsilon=\sum_j|q_j-r_j|$. Telescoping the products in (4), and using AM-GM on the other seven factors, gives
+
+$$\left|\prod_j(1-atq_j)-\prod_j(1-atr_j)\right|
+\le at\epsilon\left(1+\frac{8at}{7}\right)^7.$$
+
+Indeed, each of those seven factors, whether it uses $q_k$ or $r_k$, has modulus at most $1+atr_k$, and their $r_k$ sum is at most eight. Consequently
+
+$$|O(q)-O(r)|\le K_0\epsilon,\qquad
+K_0=9\int_0^1t\left(1+\frac{8t}{7}\right)^7dt
+=\frac{570801247}{1647086}<500.$$
+
+Here $O(q)$ denotes the origin integral in (4), which is valid for complex reciprocals as well. The triangle inequality, (7), and (12)'s hypothesis imply
+
+$$|O(q)|\ge O(r)-K_0\epsilon
+>\prod_jr_j+\frac9{32}(1-a)-\frac14(1-a)
+=\prod_jr_j+\frac1{32}(1-a),$$
+
+contradicting (4). A critical point at $a$ already gives an infinite first-power sum. The numerical cone constant is conservative, with no sharpness claim.
 
 ## 4. Boundary and affine lines
 
