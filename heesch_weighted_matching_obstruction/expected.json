@@ -1,0 +1,245 @@
+{
+  "examples": {
+    "balanced_component": {
+      "components": [
+        {
+          "bipartite": true,
+          "negative_count": 2,
+          "negative_types": [
+            "b"
+          ],
+          "positive_count": 2,
+          "positive_types": [
+            "a"
+          ],
+          "types": [
+            "a",
+            "b"
+          ]
+        }
+      ],
+      "geometry_ratio_upper": "2",
+      "status": "no_additive_charge"
+    },
+    "balanced_total_two_colors": {
+      "closed_certificate": {
+        "binary_exponent": 8,
+        "block_capacity_constant": 57,
+        "block_length": 2,
+        "excluded_depth": 32,
+        "heesch_upper_bound": 31
+      },
+      "components": [
+        {
+          "bipartite": true,
+          "negative_count": 2,
+          "negative_types": [
+            "a_minus"
+          ],
+          "positive_count": 3,
+          "positive_types": [
+            "a_plus"
+          ],
+          "types": [
+            "a_minus",
+            "a_plus"
+          ]
+        },
+        {
+          "bipartite": true,
+          "negative_count": 2,
+          "negative_types": [
+            "b_plus"
+          ],
+          "positive_count": 3,
+          "positive_types": [
+            "b_minus"
+          ],
+          "types": [
+            "b_minus",
+            "b_plus"
+          ]
+        }
+      ],
+      "depth_certificate": {
+        "excluded_depth": 18,
+        "heesch_upper_bound": 17,
+        "packing_capacity_upper": 2269,
+        "tile_count_lower": 2397
+      },
+      "geometry_ratio_upper": "2",
+      "negative_count": 2,
+      "optimal_ratio": "3/2",
+      "positive_count": 3,
+      "refinement_status": "complete",
+      "status": "additive_charge",
+      "weights": {
+        "a_minus": -1,
+        "a_plus": 1,
+        "b_minus": 0,
+        "b_plus": 0
+      }
+    },
+    "marked_hexagon_counts": {
+      "closed_certificate": {
+        "binary_exponent": 8,
+        "block_capacity_constant": 46,
+        "block_length": 2,
+        "excluded_depth": 32,
+        "heesch_upper_bound": 31
+      },
+      "components": [
+        {
+          "bipartite": true,
+          "negative_count": 2,
+          "negative_types": [
+            "bump"
+          ],
+          "positive_count": 3,
+          "positive_types": [
+            "nick"
+          ],
+          "types": [
+            "bump",
+            "nick"
+          ]
+        },
+        {
+          "bipartite": false,
+          "types": [
+            "flat"
+          ]
+        }
+      ],
+      "depth_certificate": {
+        "excluded_depth": 18,
+        "heesch_upper_bound": 17,
+        "packing_capacity_upper": 1815,
+        "tile_count_lower": 2397
+      },
+      "geometry_ratio_upper": "8/5",
+      "negative_count": 2,
+      "optimal_ratio": "3/2",
+      "positive_count": 3,
+      "refinement_status": "complete",
+      "status": "additive_charge",
+      "weights": {
+        "bump": -1,
+        "flat": 0,
+        "nick": 1
+      }
+    },
+    "missing_supply": {
+      "components": [
+        {
+          "bipartite": true,
+          "negative_count": 0,
+          "negative_types": [
+            "b"
+          ],
+          "positive_count": 1,
+          "positive_types": [
+            "a"
+          ],
+          "types": [
+            "a",
+            "b"
+          ]
+        }
+      ],
+      "depth_certificate": {
+        "excluded_depth": 1,
+        "heesch_upper_bound": 0,
+        "reason": "a required type has no matching supply"
+      },
+      "geometry_ratio_upper": "2",
+      "negative_count": 0,
+      "optimal_ratio": "infinity",
+      "positive_count": 1,
+      "refinement_status": "complete",
+      "status": "additive_charge",
+      "weights": {
+        "a": 1,
+        "b": -1
+      }
+    },
+    "odd_cycle": {
+      "components": [
+        {
+          "bipartite": false,
+          "types": [
+            "a",
+            "b",
+            "c"
+          ]
+        }
+      ],
+      "geometry_ratio_upper": "2",
+      "status": "no_additive_charge"
+    }
+  },
+  "quartic_fixture": {
+    "closed_certificate": {
+      "binary_exponent": 8,
+      "block_capacity_constant": 177,
+      "block_length": 2,
+      "excluded_depth": 32,
+      "heesch_upper_bound": 31
+    },
+    "components": [
+      {
+        "bipartite": true,
+        "negative_count": 2,
+        "negative_types": [
+          "a_minus"
+        ],
+        "positive_count": 3,
+        "positive_types": [
+          "a_plus"
+        ],
+        "types": [
+          "a_minus",
+          "a_plus"
+        ]
+      },
+      {
+        "bipartite": true,
+        "negative_count": 2,
+        "negative_types": [
+          "b_plus"
+        ],
+        "positive_count": 3,
+        "positive_types": [
+          "b_minus"
+        ],
+        "types": [
+          "b_minus",
+          "b_plus"
+        ]
+      }
+    ],
+    "depth_certificate": {
+      "excluded_depth": 22,
+      "heesch_upper_bound": 21,
+      "packing_capacity_upper": 10395,
+      "tile_count_lower": 12137
+    },
+    "geometry_ratio_upper": "48024003/7680320",
+    "negative_count": 2,
+    "optimal_ratio": "3/2",
+    "positive_count": 3,
+    "refinement_status": "complete",
+    "status": "additive_charge",
+    "weights": {
+      "a_minus": -1,
+      "a_plus": 1,
+      "b_minus": 0,
+      "b_plus": 0
+    }
+  },
+  "self_check": {
+    "independent_models_checked": 1732,
+    "recurrence_and_rejection_checks": "passed",
+    "status": "passed"
+  }
+}
