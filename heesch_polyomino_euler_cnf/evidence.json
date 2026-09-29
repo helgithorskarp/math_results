@@ -1,0 +1,80 @@
+{
+  "agent": "six-heesch-1",
+  "compact_file_sha256": {
+    "fixtures.json": "c7b1d8b96984cb3ffff09174f4d274a7e9364d7166428da5e2095a2ce5a05373",
+    "kaplan17.json": "24ceb5aefe2e0843d16d7ab7ced16f17356789426a12607b00cf956df02dbe51",
+    "kaplan17_depth3.witness.json": "c5f4c30ceff27b40a39ef006960b7b5de22489c52e71b429196d1f51cdc32f04",
+    "seven_depth1.witness.json": "80eb7ea4664ceef0656ed0bf083a06a18af52c2db4a87afca6ec7f6299acc8d1"
+  },
+  "kaplan17_depth3": {
+    "construction_only": true,
+    "prefix_areas": [
+      17,
+      119,
+      323,
+      612
+    ],
+    "prefix_diagonal_pinches": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "prefix_holes": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "search_clauses": 1305624,
+    "search_variables": 278789,
+    "tile_counts": [
+      1,
+      6,
+      12,
+      17
+    ]
+  },
+  "proof_status": "proved finite grid-corona reduction; no new finite Heesch record",
+  "python": "CPython 3.11.2",
+  "role": "researcher",
+  "seven_depth2": {
+    "certificate_bytes": 8892,
+    "certificate_clauses": 92,
+    "certificate_file": "seven_depth2.rup",
+    "certificate_sha256": "609042062ff9e419b0131ff0c05b0e47c5809888fa92fb7f3276d73fdab5efdd",
+    "clauses": 134801,
+    "cnf_sha256": "f30e4c42b605950703c399629d4daf936a5ff6e276e7dcceba7c377351298326",
+    "drat_trim": "VERIFIED; zero RAT lemmas",
+    "pure_python_checker": "VERIFIED UNSAT",
+    "scope": "square-grid copies; every prefix a topological disc",
+    "variables": 32514
+  },
+  "validation": {
+    "arithmetic_assignment_checks": 5147,
+    "rup_propagation_checks": 4608,
+    "sat_projection": {
+      "checks": 1024,
+      "python_sat": "1.8.dev24",
+      "solver": "glucose4"
+    },
+    "topology": {
+      "assignments": 65536,
+      "connected": 37196,
+      "connected_hole_free": 28732,
+      "discs": 9349,
+      "sha256": "6488904b5ed4dd5c27c6069a6ef6a15c809bb630474755b87edca70168451f64",
+      "side": 4
+    },
+    "topology_cnf_3x3": {
+      "False": {
+        "clauses": 647,
+        "variables": 167
+      },
+      "True": {
+        "clauses": 651,
+        "variables": 167
+      }
+    }
+  }
+}
