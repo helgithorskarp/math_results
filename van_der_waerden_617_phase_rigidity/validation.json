@@ -1,0 +1,59 @@
+{
+  "agent": "six-vdw-3",
+  "certificate_comparison": "Every Python row equals the exact diagonal singleton; every C++ parameter triple equals that membership rule. Counts are additional diagnostics.",
+  "checker_output": {
+    "crossing_progressions": 2436,
+    "excluded_normalized_pairs": 760761,
+    "first_witness_at_difference_28": 2,
+    "forcing_multiplier_cases": 616,
+    "modular_progressions_checked": 380072,
+    "surviving_normalized_pairs": 617,
+    "tested_normalized_pairs": 761378
+  },
+  "compiler_version": "c++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "negative_seed_rejected": true,
+  "python_version": "Python 3.11.2",
+  "records": [
+    {
+      "check": "python_exact_coverage",
+      "peak_children_rss_kib": 14036,
+      "seconds": 2.103
+    },
+    {
+      "check": "release_build",
+      "peak_children_rss_kib": 84416,
+      "seconds": 1.906
+    },
+    {
+      "check": "cpp_exact_pairs",
+      "peak_children_rss_kib": 84416,
+      "seconds": 0.396
+    },
+    {
+      "check": "sanitizer_build",
+      "peak_children_rss_kib": 111932,
+      "seconds": 3.767
+    },
+    {
+      "check": "full_sanitized_pairs",
+      "peak_children_rss_kib": 111932,
+      "seconds": 2.098
+    },
+    {
+      "check": "independent_seed_and_small_controls",
+      "peak_children_rss_kib": 111932,
+      "seconds": 0.113
+    }
+  ],
+  "role": "researcher",
+  "rss_note": "peak_children_rss_kib is the cumulative child high-water mark; compiler entries also contribute",
+  "seed_output": {
+    "file_sha256": "442f563bc6e1ae75d9666a3417e1246e413c83393777dd22ac0bc730d0f4759a",
+    "points": 3703,
+    "progressions_checked": 1140833,
+    "valid": true
+  },
+  "small_control_words": 1022,
+  "threads": 1,
+  "trust_boundary": "Published implementations, Python exact integers, C++ compiler/runtime, and unformalized mathematical bridge. Same-author checks, not peer review."
+}
