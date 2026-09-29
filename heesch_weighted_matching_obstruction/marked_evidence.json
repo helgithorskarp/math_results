@@ -1,0 +1,117 @@
+{
+  "agent": "six-heesch-3",
+  "role": "researcher",
+  "status": "proved reduction; checked grid census and baseline reproduction; no record improvement",
+  "python": "3.11.2",
+  "python_sat": "1.8.dev24",
+  "solver": "glucose4 (single thread)",
+  "dependency_commit": "83e43d5f74c89e36b90caa606f727a8cb6ca37c8",
+  "dependency_file_sha256": {
+    "circuit.py": "be6a80950052bb3b5b09874b3ecd16a22fb5caa1cec55b0734891e591a00c975",
+    "topology.py": "65f914feed3f60a63304b36651e3b5fc99c35847ffa4a5ccc27bdec7bc361f54"
+  },
+  "checker": {
+    "name": "drat-trim",
+    "commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "compiler": "cc (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "flags": [
+      "-O2",
+      "-std=gnu11"
+    ]
+  },
+  "rect4_class": {
+    "sign_assignments": 1260,
+    "counts": [
+      5,
+      4,
+      1
+    ],
+    "exact_grid_Hc_max": 3,
+    "Euclidean_equality": "not proved for this square-grid class",
+    "depth4_cnf_sha256": "ba6e1a38f17bce17850c614e1a695a2d18b312e0a76d732f89ddb41954d0a839",
+    "variables": 124960,
+    "clauses": 925914,
+    "depth4_proof_sha256": "b0623a8cce272162b1ce28e2803fbc1dbd0b13fd484b9ee85db3d7ff2ad46916",
+    "proof_bytes": 4812109,
+    "checked": "VERIFIED with -U; zero RAT lemmas",
+    "verification_seconds": 5.523,
+    "build_seconds": 7.207,
+    "solve_seconds": 4.956,
+    "peak_rss_kib": 303416,
+    "lower_witness_sha256": "aa1e55973ebb156223f215d192bf927a2396ad218cbf98f3d5ad6c77681cf049"
+  },
+  "hex4_baseline": {
+    "counts": [
+      9,
+      8,
+      1
+    ],
+    "exact_grid_Hc": 5,
+    "exact_Euclidean_Hc": 5,
+    "Euclidean_Hh_interval": [
+      5,
+      6
+    ],
+    "geometry_dependency": "hex_grid_locking.md (written proof, not formalized)",
+    "novelty": "classical Mann hexapillar marking up to reflection and sign inversion; no new record",
+    "lower_witness_sha256": "d857774a28daa5e8f28e45a4ce711cc45ebc11cb759904fa98309122892aed0a",
+    "depth6_cnf_sha256": "e0a96de5008266cfbcb9f71d95f044506b9771a58053b047ed758111524a4d88",
+    "depth6_proof_sha256": "0c2a2ac0ba97664af6903288ed2968e25ee10ecaba93f02f4a916b2d01bfc875",
+    "variables": 327711,
+    "clauses": 2429564,
+    "proof_bytes": 3530343,
+    "build_seconds": 12.636,
+    "solve_seconds": 5.661,
+    "peak_rss_kib": 743844,
+    "checked": "VERIFIED with -U -p; zero RAT lemmas",
+    "verification_seconds": 6.234,
+    "charged_graph_component": {
+      "ports": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "part_counts": [
+        9,
+        8
+      ],
+      "dimension": 1
+    },
+    "flat_port_self_loop": 17,
+    "contact_pairs": 35,
+    "charge_only_all_conventions_upper": 84
+  },
+  "incomplete_searches": [
+    {
+      "class": "4x1 rectangle, any p>q>0",
+      "depth": 4,
+      "configured_conflict_budget": 20000,
+      "observed_conflicts": 20879,
+      "result": "UNKNOWN; no exclusion"
+    },
+    {
+      "class": "four-cell hex strip, 8 bumps, 7 nicks, 3 flats",
+      "depth": 5,
+      "configured_conflict_budget": 20000,
+      "observed_conflicts": 20372,
+      "result": "UNKNOWN; no exclusion"
+    }
+  ],
+  "omitted_generated_state": "CNF and DRAT corpora are private scratch outputs; regenerate with the supplied commands. No binaries, corpora or private graph snapshots are published.",
+  "trust_boundary": "Written geometry/encoding proofs, Python generator and direct checker, and the pinned native RUP checker; no formalization or peer-review claim."
+}

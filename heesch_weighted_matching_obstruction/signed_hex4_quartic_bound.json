@@ -1,0 +1,73 @@
+{
+  "model": {
+    "counts": {
+      "plus": 9,
+      "minus": 8,
+      "flat": 1
+    },
+    "pairs": [
+      [
+        "plus",
+        "minus"
+      ],
+      [
+        "flat",
+        "flat"
+      ]
+    ],
+    "area_lower": 10,
+    "diameter_squared_upper": "31371201/640000"
+  },
+  "certificate": {
+    "status": "additive_charge",
+    "components": [
+      {
+        "types": [
+          "flat"
+        ],
+        "bipartite": false
+      },
+      {
+        "types": [
+          "minus",
+          "plus"
+        ],
+        "bipartite": true,
+        "positive_types": [
+          "plus"
+        ],
+        "negative_types": [
+          "minus"
+        ],
+        "positive_count": 9,
+        "negative_count": 8
+      }
+    ],
+    "positive_count": 9,
+    "negative_count": 8,
+    "optimal_ratio": "9/8",
+    "weights": {
+      "plus": 1,
+      "minus": -1,
+      "flat": 0
+    },
+    "geometry_ratio_upper": "31371201/6400000",
+    "closed_certificate": {
+      "block_length": 8,
+      "block_capacity_constant": 1248,
+      "binary_exponent": 11,
+      "excluded_depth": 176,
+      "heesch_upper_bound": 175
+    },
+    "depth_certificate": {
+      "excluded_depth": 85,
+      "heesch_upper_bound": 84,
+      "tile_count_lower": 115764,
+      "packing_capacity_upper": 113939
+    },
+    "refinement_status": "complete"
+  },
+  "base_diameter_squared": "49",
+  "exact_area": "6*sqrt(3)+1/3000",
+  "quartic_amplitude": "1/100"
+}

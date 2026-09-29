@@ -13,6 +13,15 @@ quartic profiles. It preserves valid grid corona constructions under rotations
 and reflections and proves finiteness without assuming that all geometric
 patches align with the original grid.
 
+[hex_grid_locking.md](hex_grid_locking.md) proves the converse for complete
+coronas of quartic decorated regular polyhexes, including flat edges:
+arbitrary Euclidean placements align with the central honeycomb, and disc
+prefixes correspond exactly to the complementary marked-grid model.
+[marked_corona.md](marked_corona.md) gives the constructive port-graph
+criterion, a marked SAT adapter with independent witness checks, a checked
+1260-marking rectangle exclusion, and an exact `H_c=5` curved hexapillar
+baseline reproduction. There is still no seven-corona construction.
+
 Combinatorial imbalance as a reason for nontiling is established prior art.
 Mann discusses it for marked hexagons and polyhexes, including a size-dependent
 upper bound. The contribution here is the explicit matching-table criterion,

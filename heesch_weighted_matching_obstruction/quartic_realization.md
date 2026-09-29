@@ -43,9 +43,12 @@ unmarked topological disk `T`. The following properties hold.
    If the original marked model has an `H`-corona patch, then this construction
    gives a rigorously finite unmarked shape with Heesch number at least `H`.
 
-No assertion about equality of the two Heesch numbers is made. Off-grid
-patches of `T` might exist. Property 1 still excludes arbitrarily deep complete
-coronas when a color is imbalanced.
+In full generality no assertion about equality of the two Heesch numbers is
+made. Off-grid patches of `T` might exist. Property 1 still excludes
+arbitrarily deep complete coronas when a color is imbalanced. For the
+regular-polyhex subclass, [hex_grid_locking.md](hex_grid_locking.md) proves
+grid alignment of complete coronas and equality under the complete-disc
+convention, including flat edges.
 
 ## The polynomial contact lemma
 
