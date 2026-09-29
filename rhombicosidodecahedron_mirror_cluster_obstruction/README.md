@@ -1,0 +1,94 @@
+# Rhombicosidodecahedron: exact local obstructions
+
+**six-rupert-3 — researcher — 2026-09-29.**
+
+Two analytic criteria exclude local Rupert passages, with compact exact
+certificates. **The global non-Rupert conjecture remains open.**
+
+[TORQUE_PROOF.md](TORQUE_PROOF.md) excludes a passage when the target normal is
+within **1/1000** of `(10,1,3)/sqrt(110)` and the relative source rotation has
+angle at most **1/100 radians**, for any translation. Four non-radial support
+probes give torques whose tetrahedron contains the unit ball. The same exact
+checker proves that the positive radial maxima at this direction cannot span
+its normal: the published radial criterion does not apply here.
+
+A complementary class-based criterion excludes strict containment between two
+rhombicosidodecahedron projections whose orthonormal row frames are within
+operator norm **1/100** of the standard xy projection. Translations are
+arbitrary, and small in-plane rotations are included in the frame condition.
+An exactly checked 60-rotation symmetry group transports this neighborhood to
+15 unoriented axes and to independently symmetry-equivalent frames.
+Both criteria transport under independently chosen verified vertex symmetries.
+
+[PROOF.md](PROOF.md) gives a general criterion for centrally symmetric,
+sphere-inscribed vertex sets with paired off-plane vertices and singleton
+equatorial vertices. It explains how coincident projected vertices can be
+handled by a radial support class, rather than individually. It then combines
+absolute axial inequalities with a positive quadratic stress.
+
+The top-view region was already identified as amenable to a polynomial
+exclusion by [Steininger--Yurkevich, Section 9.1](https://arxiv.org/html/2508.18475#S9.SS1).
+The contribution there is the explicit analytic criterion, rational neighborhood,
+and compact exact verification, with no priority claim for top-view exclusion.
+The support-torque criterion supplies a separate local certificate beyond this
+top-view region. Neither floating-point exploration nor failure to find a
+passage enters either final proof.
+
+## Reproduce
+
+Python **3.11.2** was used; Python 3.11 or later and its standard library suffice.
+From the repository root:
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/torque_certificate.py --self-test
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 rhombicosidodecahedron_mirror_cluster_obstruction/verify.py --self-test
+```
+
+The first command's deterministic JSON output checks all 236 unique-support
+inequalities for four exact probes, a positive torque equilibrium, and the
+four exact facet-distance bounds proving inclusion of the unit ball. It checks
+the scalar errors `1/4<27/100` and `3/4<1`, and the six radial maxima and their
+tangent separator `(-1,-5,5)`. Expected output: `torque_expected.json`.
+Its self-tests reject a reversed probe, a degenerate repeated-probe certificate,
+and a missing probe.
+
+The second command's deterministic JSON output checks:
+
+- 60 standard vertices, all with squared radius `7+8phi`, and central symmetry;
+- 12 selected projected classes: 8 doubletons and 4 singletons;
+- all 700 radial gap comparisons, with exact minimum 1;
+- support error less than `201/250` and support gap greater than `49/250`;
+- the two positive quadratic stress coefficients and all scalar proof bounds.
+- 60 proper vertex-preserving rotations and 15 unoriented axes in the orbit.
+
+Every number is represented exactly in `Q(phi)`, with `phi^2=phi+1`; signs
+are reduced to rational comparisons against the square of `sqrt(5)`.
+`expected.json` is the second command's compact expected output. Self-tests check the field
+relation, algebraic signs, inversion, and rejection of missing vertices and an
+unsupported neighborhood. The analytic theorem is not formalized in a proof
+assistant; the code checks its finite hypotheses, not every possible rotation.
+On the recorded host the complete command takes a few seconds.
+
+## Current named frontier
+
+Primary literature searched on 2026-09-29 leaves these named cases unresolved:
+
+| Family | Named solids |
+| --- | --- |
+| Archimedean | snub cube, rhombicosidodecahedron, snub dodecahedron |
+| Catalan | deltoidal hexecontahedron, pentagonal hexecontahedron |
+| Johnson | gyrate rhombicosidodecahedron J72; parabigyrate rhombicosidodecahedron J73; metabigyrate rhombicosidodecahedron J74; trigyrate rhombicosidodecahedron J75; paragyrate diminished rhombicosidodecahedron J77 |
+
+The named list comes from [Fredriksson](https://arxiv.org/html/2210.00601),
+with later status checked against [Gosain--Grimmer](https://arxiv.org/html/2509.08190)
+and its [May 2026 journal article](https://doi.org/10.1080/00029890.2026.2662830).
+[Zeng's April 2026 paper](https://arxiv.org/html/2604.26531) explicitly retains
+the rhombicosidodecahedron non-Rupert conjecture. The universal convex-polyhedron
+conjecture is already disproved by the Noperthedron; wording in older numerical
+papers that it remains open does not change that result.
+
+Next: classify the other exceptional local projections and find additional
+exact stresses or support-probe certificates. A full non-Rupert proof also
+requires global exclusion.
