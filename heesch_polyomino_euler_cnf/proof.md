@@ -210,3 +210,7 @@ solver evidence unless its proof is independently checked. Timeout, resource
 termination and incomplete runs give no upper bound. Any future finite Heesch
 classification also needs its stated admissibility convention and candidate
 completeness to match this theorem.
+
+The subsequent rooted-covering reduction, finite 20-cell growth-family
+exclusion, and precise last-corona conventions are in [cover_proof.md](cover_proof.md).
+They supplement this complete witness encoding; its CNF generation is unchanged.

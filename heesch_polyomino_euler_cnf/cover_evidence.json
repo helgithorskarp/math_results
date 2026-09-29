@@ -1,0 +1,100 @@
+{
+  "agent": "six-heesch-1",
+  "date": "2026-09-29",
+  "growth20": {
+    "C_distribution": {
+      "0": 434,
+      "1": 308,
+      "2": 74,
+      "3": 9,
+      "infinity": 408
+    },
+    "family_sha256": "935192a6bead7d979d7ed60f3907e52278962940d9b3c008d18af94a85fc36ef",
+    "family_size": 1233,
+    "finite_upper_proofs_checked": 825,
+    "independent_connected_subsets": 1237,
+    "independent_potential_cells": 63,
+    "independent_subsets_examined": 39711,
+    "layer_counts": [
+      17,
+      166,
+      1237
+    ],
+    "manifest_sha256": "8f96c536c15f739130b6ca7e5a67fcba1ff1e51fa4bbc18b16d652182c24ff85",
+    "periodic_certificates_checked": 408,
+    "periodic_copy_counts": {
+      "1": 46,
+      "2": 302,
+      "4": 60
+    },
+    "publication_source_replay": {
+      "first_range_verified_seconds": 291.863,
+      "first_range_verified_through": 1099,
+      "last_range_seconds": 34.281,
+      "periodic_certificates": 408,
+      "preceding_coverings": 825,
+      "ranges": [
+        [
+          0,
+          1100
+        ],
+        [
+          1100,
+          1233
+        ]
+      ],
+      "status": "complete, all native UNSAT traces checked with DRAT-trim; all SAT witnesses directly checked",
+      "upper_proofs": 825
+    }
+  },
+  "kaplan17_covering_radius": {
+    "exact_C": 9,
+    "radius10": {
+      "checker": "DRAT-trim",
+      "clauses": 322189,
+      "cnf_sha256": "b44664a0b5d5405761780207ab4e3555ca30d16ba702ab326ecb474ea257c3fa",
+      "original_proof_bytes": 4129377,
+      "original_proof_sha256": "682e8df35d3d03e88f40675069782ec0a5828dbdcf1800f819d249276059e02d",
+      "proof_omitted": "regenerate in private scratch from the compact source",
+      "target_cells": 637,
+      "variables": 113993
+    },
+    "radius9": {
+      "clauses": 275315,
+      "cnf_sha256": "5dc88c633217c39e4aead94f3f036da68ee176696409095657af1e722983ff71",
+      "copies": 45,
+      "occupied_cells": 765,
+      "target_cells": 539,
+      "variables": 97427,
+      "witness_sha256": "f95aef1c6b72f4ca1b3841da81d14cd70047e92a7af93799ced7d47de65aaf82"
+    }
+  },
+  "no_new_record": true,
+  "role": "researcher",
+  "scope": "common unit square grid, quarter turns and reflections",
+  "seven_radius2": {
+    "candidates": 576,
+    "checkers": [
+      "check_rup.py",
+      "DRAT-trim"
+    ],
+    "clauses": 11453,
+    "cnf_sha256": "dd8ba393ff9b463ec39c46b1fcd6183d17236d75be846679b3fbc900ea50a5a1",
+    "proof_bytes": 4113,
+    "proof_clauses": 68,
+    "proof_sha256": "5c5bf9dad0fd0aae7303428fdaa2f64d9c57068f9402487d16f9d5914b40efd7",
+    "target_cells": 55,
+    "variables": 4436
+  },
+  "trust": "written reductions and exact Python; independently checked solver certificates; no proof-assistant formalization",
+  "validation": {
+    "SAT": 64,
+    "UNSAT": 1,
+    "cases": 65,
+    "invalid_periodic_certificates_rejected": 2,
+    "malformed_cover_witnesses_rejected": 3,
+    "outside_target_overlap_mutation_detected": true,
+    "periodic_positive_certificates": 21,
+    "reference_backtracking_nodes": 523
+  }
+}

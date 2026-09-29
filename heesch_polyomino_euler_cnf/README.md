@@ -21,6 +21,10 @@ the topology requirement only in the last corona. Upper obstructions apply to
 the stated grid convention. No reduction of arbitrary rigid motions to this grid
 is asserted, and no new finite Heesch record is claimed.
 
+The directory also supplies a smaller rooted-covering upper certificate and a
+1,233-shape 20-cell growth-family exclusion, under the same grid scope. See the
+last section and [cover_proof.md](cover_proof.md).
+
 The Euler identity is established prior art, notably Gray (1971). Kaplan (2022)
 already developed the grid-corona SAT approach and used iterative hole cuts.
 This is a self-contained application and exact encoding refinement, with no
@@ -60,7 +64,8 @@ Expected substantive results:
 - The published 17-cell tile's depth-three witness has 6, 12, and 17 added copies.
   Prefix areas are 17, 119, 323, and 612; every prefix has Euler characteristic
   one, zero holes, and zero diagonal pinches. This reproduces the existing
-  construction side only; the included artifacts do not certify its upper bound.
+  construction side only. The covering section gives a separate loose grid
+  upper bound.
 
 Exact hashes and counts are in [evidence.json](evidence.json). Timings are machine
 dependent: the full standard-library validation took about eight seconds, the
@@ -114,3 +119,94 @@ coronas. Generated CNFs, native binaries, the full untrimmed trace, and scratch
 search output are omitted; source and the small certificate suffice to reproduce
 the reported checks. No comparison of solver performance with Kaplan's method
 has been established.
+
+## Rooted covering certificates and a 20-cell growth exclusion
+
+Any H-corona patch covers every cell within H Chebyshev steps of its root.
+Every copy relevant to covering radius r lies in the root box expanded by r+d,
+where d is the tile's cell diameter. The exact covering CNF has O(m(r+L)^2)
+size and omits ranks and topology. UNSAT is a sound grid upper obstruction;
+SAT gives metric coverage. The proofs are in [cover_proof.md](cover_proof.md).
+
+All disc polyominoes obtained by adding exactly three cells to the specified
+17-cell Hc=Hh=3 seed form exactly 1,233 free twenty-cell shapes. Independent
+growth-path and bounded-triple enumerations agree. Their exact largest rooted
+covering radii C are:
+
+| C | 0 | 1 | 2 | 3 | infinity |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Number | 434 | 308 | 74 | 9 | 408 |
+
+Every finite member has **grid Hh<=3**. The 408 infinite members have periodic
+tilings: 46 one-copy, 302 two-copy, and 60 four-copy fundamental domains. This
+excludes a finite grid Heesch-number-four or -five example from this precise
+growth family. For C=0, Hc=Hh=0; for C=1, Hh=1 and Hc<=1. Exact Heesch values
+for C=2 and C=3 are undetermined. Other 20-cell families and arbitrary-motion
+upper bounds are not included.
+
+Here Hc uses disc prefixes throughout; Hh uses disc prefixes before the last
+and permits holes and corner pinches in the final prefix. The upper bounds
+also apply if the final-prefix convention is more restrictive.
+
+[growth20_manifest.json](growth20_manifest.json) contains formula hashes and
+periodic poses. [cover_evidence.json](cover_evidence.json) records the checks.
+No raw proof corpus is published. Standard-library reproduction:
+
+```bash
+python3 heesch_polyomino_euler_cnf/growth.py --independent
+mkdir -p scratch/heesch-cover
+python3 heesch_polyomino_euler_cnf/cover.py \
+  heesch_polyomino_euler_cnf/fixtures.json --radius 2 --generate-only \
+  --cnf scratch/heesch-cover/seven.cnf
+python3 heesch_polyomino_euler_cnf/check_rup.py \
+  scratch/heesch-cover/seven.cnf heesch_polyomino_euler_cnf/seven_cover2.rup
+python3 heesch_polyomino_euler_cnf/cover.py \
+  heesch_polyomino_euler_cnf/kaplan17.json --radius 9 \
+  --check-only heesch_polyomino_euler_cnf/kaplan17_cover9.witness.json
+```
+
+Expected family SHA256:
+`935192a6bead7d979d7ed60f3907e52278962940d9b3c008d18af94a85fc36ef`.
+The 68-clause, 4,113-byte RUP proof has SHA256
+`5c5bf9dad0fd0aae7303428fdaa2f64d9c57068f9402487d16f9d5914b40efd7`.
+It verifies a 4,436-variable, 11,453-clause formula, versus the full depth-two
+disc formula's 32,514 variables and 134,801 clauses. The formulas answer
+different questions; this is not a general runtime comparison.
+
+Full replay needs Python-SAT as installed above and the inspected
+[DRAT-trim](https://github.com/marijnheule/drat-trim) version
+`2e3b2dc0ecf938addbd779d42877b6ed69d9a985`, built in private scratch:
+
+```bash
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  scratch/heesch-euler-venv/bin/python heesch_polyomino_euler_cnf/validate_cover.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  scratch/heesch-euler-venv/bin/python heesch_polyomino_euler_cnf/verify_growth.py \
+  --checker /path/to/drat-trim --work-dir scratch/heesch-cover/replay \
+  --independent-family
+```
+
+Expected: 825 checked finite upper proofs, all preceding covering witnesses,
+and 408 checked periodic certificates. The direct-cover validator checks 65
+cases with a separate exact-cover backtracker and detects a deliberately
+omitted outside-target nonoverlap constraint. Use `--start I --stop J` for
+batches; their half-open ranges must cover 0 through 1233. UNKNOWN, proof-check
+failure or external timeout leaves the batch incomplete. Keep one solver or
+checker active and all numerical threads at one.
+
+The 17-cell input has exact C=9. Regenerate its larger upper trace in scratch:
+
+```bash
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  scratch/heesch-euler-venv/bin/python heesch_polyomino_euler_cnf/cover.py \
+  heesch_polyomino_euler_cnf/kaplan17.json --radius 10 \
+  --cnf scratch/heesch-cover/kaplan17.cnf --proof scratch/heesch-cover/kaplan17.drat
+/path/to/drat-trim scratch/heesch-cover/kaplan17.cnf scratch/heesch-cover/kaplan17.drat
+```
+
+The formula has 113,993 variables, 322,189 clauses, and SHA256
+`b44664a0b5d5405761780207ab4e3555ca30d16ba702ab326ecb474ea257c3fa`.
+The original 4.1 MB trace is omitted. DRAT-trim prints `s VERIFIED`; this version
+returns status 1 for a trivially unit-contradictory input, handled explicitly by
+the verifier. Written reductions, exact Python and checked solver traces are
+the trust base. No proof-assistant formalization or reviewer verdict is claimed.
