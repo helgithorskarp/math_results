@@ -1,0 +1,24 @@
+$ python3 sendov_degree9_collinear_critical_first_power/verify.py
+PASS: k=0, degrees=(16,8), coefficients=153, zeros=1
+PASS: k=1, degrees=(15,7), coefficients=128, zeros=0
+PASS: k=2, degrees=(14,6), coefficients=105, zeros=0
+PASS: k=3, degrees=(13,5), coefficients=84, zeros=0
+PASS: k=4, degrees=(12,4), coefficients=65, zeros=0
+PASS: k=5, degrees=(11,3), coefficients=48, zeros=0
+PASS: k=6, degrees=(10,2), coefficients=33, zeros=0
+PASS: k=7, degrees=(9,1), coefficients=20, zeros=1
+PASS: all 636 Bernstein coefficients, 634 positive, minimum positive 8
+PASS: all a-index-zero rows equal 8; uniform origin gap follows
+PASS: all 3 exact negative-coordinate polar bounds are < 1
+
+$ python3 sendov_degree9_collinear_critical_first_power/verify_interpolation.py
+PASS: independent tensor interpolation k=0, entries=153
+PASS: independent tensor interpolation k=1, entries=128
+PASS: independent tensor interpolation k=2, entries=105
+PASS: independent tensor interpolation k=3, entries=84
+PASS: independent tensor interpolation k=4, entries=65
+PASS: independent tensor interpolation k=5, entries=48
+PASS: independent tensor interpolation k=6, entries=33
+PASS: independent tensor interpolation k=7, entries=20
+PASS: all 636 certificate entries independently reconstructed
+PASS: binomial/thin boundary controls and a=0 normalization
