@@ -1,0 +1,132 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "date": "2026-09-30",
+  "target_ref": "bafkreic57itmbz4klkff2gooq5hyby3ssu4cniwz4mhs76uwsqlblesqdi",
+  "target_height": 8012,
+  "reviewed_source_commit": "ce3177a731086284ee89f18a8a3948b672b3c64e",
+  "reviewed_inputs": [
+    {
+      "path": "book_ramsey_b4_b7_degree11_gram_exclusion/.gitignore",
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "path": "book_ramsey_b4_b7_degree11_gram_exclusion/PROOF.md",
+      "bytes": 12114,
+      "sha256": "daa5d59f7a602296ec78cdb8b66a5749dfa01415e69150d17ace87d17f6d9ba3"
+    },
+    {
+      "path": "book_ramsey_b4_b7_degree11_gram_exclusion/README.md",
+      "bytes": 3698,
+      "sha256": "e5862ff168e09dd2b478652d180b72e4bb8c827cff59175bfefda14c99b4da93"
+    },
+    {
+      "path": "book_ramsey_b4_b7_degree11_gram_exclusion/baseline21.rows",
+      "bytes": 462,
+      "sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec"
+    },
+    {
+      "path": "book_ramsey_b4_b7_degree11_gram_exclusion/expected.json",
+      "bytes": 2545,
+      "sha256": "25dd162675b9efc94d75fcfa23527d5418f2ffc8c6314acd6fd5ca66a2919913"
+    },
+    {
+      "path": "book_ramsey_b4_b7_degree11_gram_exclusion/generate.py",
+      "bytes": 13470,
+      "sha256": "a8e7480ef057ade91efb7dfa0fc77d5fa75d7b71fe827eacdf8b0fbf4a40e956"
+    },
+    {
+      "path": "book_ramsey_b4_b7_degree11_gram_exclusion/negative_vectors.json",
+      "bytes": 19476,
+      "sha256": "408b67d3466518f085d879645a592500b3bb446a2637d07c0b7caac79cfc3ddc"
+    },
+    {
+      "path": "book_ramsey_b4_b7_degree11_gram_exclusion/parallel_orbits.json",
+      "bytes": 493,
+      "sha256": "c8474b39dff75e6f3abe70554b45abbcc27a4539d2bb020b3cc3ab53c088b6c6"
+    },
+    {
+      "path": "book_ramsey_b4_b7_degree11_gram_exclusion/provenance.json",
+      "bytes": 6211,
+      "sha256": "69616101bbd9c08364142160ff2989952cc28a2e0ed1a95de2b58aa3b820742e"
+    },
+    {
+      "path": "book_ramsey_b4_b7_degree11_gram_exclusion/verify.py",
+      "bytes": 21371,
+      "sha256": "6f906c49b910dae0cd69e277ec00893fe8e6fc075de37e6669882015748b2bf9"
+    },
+    {
+      "path": "book_ramsey_b4_b7_degree11_leaf_reduction/expected.json",
+      "bytes": 11867,
+      "sha256": "84ede53e93669f86db7ab7c512d5732e7fdc44ef95f4c72ff0f5caa8861e8f3f"
+    }
+  ],
+  "python_version": "3.11.2",
+  "methodology": "Adaptive largest-residual-degree graph enumeration, explicit complete permutation-orbit partition, bitset page equations and positive integer Schur pivots with pulled-back primitive integer negative forms checked in the original matrix. Independent checker imports no author executable, catalogue, vector pool, determinant modulus, solver or CAS. Optional comparison executes pinned original generator with a passive per-case matrix observer; this is attribution/reproduction, not a premise of the independent proof.",
+  "expected_sha256": "9d2295127f4c61f0a272a21a5e279b96736320c8e7d388d2766d04213aee4474",
+  "primary_literature": [
+    "https://arxiv.org/html/2407.07285v2#S2",
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+  ],
+  "runs": {
+    "normal_all_matrices": {
+      "exit_code": 0,
+      "seconds": 25.304842542042024,
+      "peak_child_rss_kib": 53128,
+      "timeout_seconds": 180
+    },
+    "optimized_complete_replay": {
+      "exit_code": 0,
+      "seconds": 26.606726814003196,
+      "peak_child_rss_kib": 54984,
+      "timeout_seconds": 180
+    },
+    "passive_author_comparison": {
+      "exit_code": 0,
+      "seconds": 15.864789330982603,
+      "peak_child_rss_kib": 51472,
+      "timeout_seconds": 120
+    },
+    "separate_author_verifier": {
+      "exit_code": 0,
+      "seconds": 8.56375469599152,
+      "peak_child_rss_kib": 51472,
+      "timeout_seconds": 120,
+      "peak_child_rss_kib_is_upper_bound": true,
+      "memory_note": "Cumulative child maximum in sequential wrapper; this upper bound includes the earlier passive comparison child."
+    }
+  },
+  "native_numeric_threads": 1,
+  "intensive_jobs": "sequential",
+  "process_limits": "oneCPU/twoGiB, unchanged",
+  "enumeration_visit_cap_per_domain": 4000000,
+  "trust_boundary": "Complete computer-assisted finite PSD obstruction with written unformalized reduction. Unique-neighborhood and degree/capacity reductions credited, existing independent reviews reused; inherited minimum8 corollary additionally imports reviewed degree7 exclusion and its accepted historicalBCS theorem. No full22host census or flag-algebra certificate is a premise.",
+  "new_refinement": "Every one of68895 forced symmetric matrices is indefinite, without entry-nonnegativity, miss-row filters, determinant/rank conditions or Boolean factorization.",
+  "commands": {
+    "normal": "python3 -B book_ramsey_degree11_gram_review1/audit.py",
+    "optimized": "python3 -B -O book_ramsey_degree11_gram_review1/audit.py --check book_ramsey_degree11_gram_review1/expected.json",
+    "comparison": "python3 -B -O book_ramsey_degree11_gram_review1/compare_author.py",
+    "separate_author_replay": "python3 -B -O book_ramsey_b4_b7_degree11_gram_exclusion/verify.py"
+  },
+  "normal_optimized_expected_bytes_identical": true,
+  "all177_author_orbit_records_match_entrywise": true,
+  "complete_case_matrix_comparison": {
+    "all_state_and_matrix_stream_sha256": "93dad33197d9951fd15982a0723cdfd37e11975defa74f7535ff795b9e493cbf",
+    "author_cases": 68895,
+    "author_expected_sha256": "25dd162675b9efc94d75fcfa23527d5418f2ffc8c6314acd6fd5ca66a2919913",
+    "full_entry_level_comparison_passed": true,
+    "original_stdout_unchanged": true,
+    "schema": "degree11-passive-author-comparison-v1",
+    "source_sha256": "a8e7480ef057ade91efb7dfa0fc77d5fa75d7b71fe827eacdf8b0fbf4a40e956"
+  },
+  "later_context_read_only": {
+    "graph_ref": "bafkreihrh6ngmajbg6zs2wzztlk5g5ywwyyguvnu46eaemree6kj7i6bve",
+    "height": 8042,
+    "source_commit": "0f8eb6294a74294ddeada944705bcba28e51c04c",
+    "path": "book_ramsey_4_7_degree_reductions/first_slack.md",
+    "bytes": 12770,
+    "sha256": "3521879e43a452763ea04b4a3789d9dcf45939f1d68475ceedb7a0ea3b277b80",
+    "scope": "Full body and source note read. New53-case histogram extension is not reviewed and not a premise of the degree11 or finite PSD verdict."
+  }
+}
