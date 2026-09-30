@@ -69,7 +69,7 @@ def inventory(data, den, degrees):
 
 
 def cover(boxes, predicate, axes=(1,2)):
-    cuts = [sorted({v for b in boxes for v in b[j]}) for j in axes]
+    cuts = [sorted({F(0), F(1)} | {v for b in boxes for v in b[j]}) for j in axes]
     for values in product(*[[(a+b)/2 for a,b in zip(c[:-1],c[1:])] for c in cuts]):
         hits = sum(all(b[j][0]<v<b[j][1] for j,v in zip(axes,values)) for b in boxes)
         require(hits == int(predicate(*values)), 'Domain coverage/overlap')

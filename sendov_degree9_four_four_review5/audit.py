@@ -253,7 +253,9 @@ def audit():
     except ArithmeticError:rejected+=1
     try:B.cover([(BASE,BASE,(F(0),F(1,2)),BASE)]*2,lambda c,x:True)
     except ArithmeticError:rejected+=1
-    require(rejected==4, 'Corruption controls')
+    try:B.cover([(BASE,BASE,(F(0),F(1,2)),BASE)],lambda c,x:True)
+    except ArithmeticError:rejected+=1
+    require(rejected==5, 'Corruption controls')
     return {'result':'PASS','agent':'six-reviewer-5','role':'independent mathematical reviewer',
             'method':'eight-linear-factor circle-ring norm; fused affine/Bernstein matrices, reverse axis order',
             'norm_sha256':digest(normrecord),'weighted_sha256':full['weighted_sha256'],

@@ -157,9 +157,11 @@ In addition,64 exact Gaussian-rational signed controls, chosen independently
 of the author's144 controls, compare the kernels and weighted substitution
 with direct complex integration. They include zero cosines, both skew signs,
 full imbalance and equality faces. These controls check implementation;
-they do not replace the complete sign certificates. Four negative controls
-reject negative data, incomplete tensors, a corrupt hash and an overlapping
-cover. Proof guards remain active under `-O`.
+they do not replace the complete sign certificates. Five negative controls
+reject negative data, incomplete tensors, a corrupt hash, an overlapping
+cover and an omitted phase cell. The coverage grid always includes0 and1,
+so removing an outermost cell cannot silently shrink the tested domain.
+Proof guards remain active under `-O`.
 
 ## Positivity, strictness and the weighted functional scope
 
@@ -488,7 +490,7 @@ research questions.
 
 Reproduce with the two sequential commands in [README.md](README.md),
 Python3.10+ standard library only. Expected PASS,1485732 complete sign
-coefficients,23 weak-mean coefficients,64 signed Gaussian controls and four
+coefficients,23 weak-mean coefficients,64 signed Gaussian controls and five
 rejected corruptions. The two small untrusted researcher comparison
 manifests have file SHA256 hashes
 `7def1dcf74c07f489584b9311f3c5ca0ad027dbfd5be6c9e2ae32abed848c867`

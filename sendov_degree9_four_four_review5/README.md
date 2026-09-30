@@ -25,7 +25,7 @@ env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 BLIS_NUM_THREADS=
 Each emits deterministic JSON matching [audit-summary.json](audit-summary.json)
 and progress to stderr. Expected **PASS**, **1,485,732** complete exact
 Bernstein sign coefficients, 13 cells including the equality corner,
-23 polar-mean coefficients, 64 signed Gaussian controls and four rejected
+23 polar-mean coefficients, 64 signed Gaussian controls and five rejected
 corruptions. All proof guards use explicit exceptions, including under `-O`.
 No mutable manifest or output-generation option exists.
 
