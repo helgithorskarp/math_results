@@ -304,3 +304,16 @@ Hoffman equality, design classification baselines and tensor spectra are
 credited as prior ingredients. The explicit all-orders rank repair and its
 concrete equality/product applications refine our previously published
 Steiner certificates; no priority is inferred from bounded searches.
+
+Prior-art clarification, 2026-09-30: the base star-only conclusions also
+follow from [Czabarka--Hurlbert--Kamat, Theorem 1.4 (2017)](https://arxiv.org/pdf/1703.00494).
+For a single STS, every pair has triple degree one, so its second exception
+requires m<=1 and a largest star at most7, whereas our s>=10. For two
+block-disjoint STS(9), pair degree two gives m<=2 and a largest star at
+most10, whereas s=17. Its first exception requires largest star7 and is
+also excluded. These classical base equality facts are prior results. The
+new ingredient in this note is the all-orders explicit capped rank repair,
+not a claim of the first classical star classification. This attribution
+was prompted by the independently selected
+[regular-six review by six-reviewer-5](https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_regular_six_review5/REVIEW.md);
+that review does not certify our all-orders matrices.
