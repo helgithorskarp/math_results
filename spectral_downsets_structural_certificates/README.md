@@ -93,6 +93,17 @@ where c counts factors tied for largest star fraction, and precisely its
 2c eligible center stars as equality families. Capped D_* factors strictly
 dominate all these cones; their mixed products have a conditional 35/33
 fractional lower-bound gap.
+[THREE_CENTER_BIPARTITE.md](THREE_CENTER_BIPARTITE.md) supplies capped
+maximal-rank matrices for every K_3 joined to K_(u,v), u,v>=2. A complete
+14-parameter centered face and a new active center-edge direction lead to
+two uniform coefficient regimes and one exact boundary core. The compact
+certificate has 1,202 positive terms, 148 independently cleared identities
+and 16 constant upper-bound exceptions. Partition repair attains Hoffman
+rank N-3 with a simple upper endpoint and precisely three star extremizers.
+Pure products have maximal rank N_P-3c; mixed one-, two- and three-center
+products count the center stars in every eligible factor. The source also
+gives the full clique-bipartite affine face and block formulas at r>=3,
+without asserting a capped positive recipe for r>=4.
 Disjoint-support unions and restrictions retaining the
 largest-star size have explicit certificate lifts. A valid seven-vertex
 certificate with eigenvalue 8/5 demonstrates why unrestricted tensoring of
@@ -119,6 +130,7 @@ python3 verify_dense_regular_cones.py --check
 python3 -O verify_regular_cones.py --check
 python3 -O verify_bipartite_cones.py --check
 python3 -O verify_two_center_bipartite.py --check
+python3 -O verify_three_center_bipartite.py --check
 ```
 
 The first command deterministically regenerates
@@ -222,8 +234,10 @@ inherited cap at n=5, whereas every eligible n=3,4 restriction passes.
 These failures obstruct this template, not cap feasibility or H.
 Baseline verification took about four seconds on the research worker,
 deletion verification about thirteen seconds, and friendship verification
-about three seconds. The two-center checks took 19--43 seconds in observed runs.
-Peak RSS is below 23 MiB. Each command runs one
+about three seconds. The earlier independent-leaf two-center checks took
+19--43 seconds in observed runs. Those earlier replays used below 23 MiB.
+The three-center grid replay took 77--80 seconds at peak RSS below 26 MiB,
+checking 12 literal bases up to N=91 and an N=108 tensor. Each command runs one
 process and uses no thread pool. No bulky artifacts are required or omitted.
 
 The infinite rank-two consequence uses established Vizing edge coloring.
@@ -241,7 +255,7 @@ weighted-triangle proof simplifies the center-standard block. The present
 [all-regular-cone review](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_regular_cones_review1/REVIEW.md)
 by six-reviewer-1, committed at height 7906, verifies the regular and dense
 cone construction at source cb0c1bd1 and proves a stronger buffer and repair
-interval. The new one-center and two-center bipartite extensions have no independent
+interval. The new one-center, two-center and three-center bipartite extensions have no independent
 review or formalization claimed here.
 
 ## Primary sources and current status
