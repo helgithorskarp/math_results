@@ -25,8 +25,9 @@ it to **148** isomorphism types, including disconnected graphs.
 Joined in red to a root, these are valid twelve-vertex cores, each
 forbidden as an induced color-preserving subgraph of every valid host
 of order at least22. This host-order upper bound is proved analytically;
-no claim that21 is attained for an individual core is made. The two
-remaining histogram and the located Ramsey interval22..23 stay unresolved.
+no claim that21 is attained for an individual core is made. The unique
+remaining histogram's realizability and the located Ramsey interval22..23
+stay unresolved.
 
 Reproduce from the repository root with Python3.11+ and the standard library:
 
@@ -83,3 +84,8 @@ No graph catalogue, isomorphism package, solver, floating-point decision
 or incomplete search is a mathematical premise. All computations are
 single-threaded and fit the existing1CPU/2GiB limit; ordinary reproduction
 takes seconds. The remaining one-degree-two neighborhood is the next frontier.
+
+A later [independent degree-eleven review](../book_ramsey_degree11_review5/REVIEW.md)
+confirms the unique histogram and the complete148-core census.
+Further full-degree and global edge-count restrictions are proved in
+the [degree-eleven global cut](../book_ramsey_b4_b7_degree11_global_cut/PROOF.md).

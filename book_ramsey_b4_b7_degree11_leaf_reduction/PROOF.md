@@ -19,7 +19,7 @@ and let n_i count its vertices of degree i.
 The residual budget initially also allows (0,0,3,8), with E=3,
 and (0,1,1,9), with E=2. They are impossible by Sections6 and7.
 The complete local classification of the leaf case gives
-classification gives **148 induced twelve-vertex obstructions**:
+**148 induced twelve-vertex obstructions**:
 each is the root joined in red to a leaf-modified cubic graph on ten
 vertices, with all remaining pairs colored by red adjacency or its blue
 complement. No valid coloring of order at least22 contains an induced
