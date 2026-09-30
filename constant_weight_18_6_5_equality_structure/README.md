@@ -6,6 +6,16 @@ A binary length-18, weight-5 code of minimum distance at least six is
 equivalently a family of five-element subsets with intersections of size
 at most two. The maintained table still gives **69–72**.
 
+[UNIT_HIGH_CORE.md](UNIT_HIGH_CORE.md) proves that a replication-twenty
+star with positive deficit row `(1^5)` has at most seven leave edges among
+its five deficient neighbors. The only four-clique-free eight-edge core
+reduces by an ordinary low-point incidence count to 2448 fixed prefixes
+and seven orbits under actual leave permutations. A separate carrier
+reconstruction and literal replay checks the complete 602-node,
+9605-byte rejection certificate. This is a local necessary condition;
+independent review and formalization are pending, and the interval remains
+69–72.
+
 [NO_DEFICIT_THREE.md](NO_DEFICIT_THREE.md) proves **upper68 for every
 multiplicity-two pair whose endpoints both have replication twenty**,
 removing the extra hypothesis of the earlier replacement result.
@@ -138,6 +148,8 @@ python3 -B constant_weight_18_6_5_equality_structure/verify_single_isolate.py --
 python3 -B constant_weight_18_6_5_equality_structure/check_pair_completion.py
 python3 -B constant_weight_18_6_5_equality_structure/check_pair_two.py
 python3 -B constant_weight_18_6_5_equality_structure/verify_pair_two.py --compare-primary
+python3 -B constant_weight_18_6_5_equality_structure/check_unit_eight.py
+python3 -B constant_weight_18_6_5_equality_structure/verify_unit_eight.py --compare-primary
 ```
 
 Run from the repository root. The script regenerates the catalog in
