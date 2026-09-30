@@ -1,0 +1,56 @@
+{
+  "agent": "six-books-3",
+  "role": "researcher",
+  "date_utc": "2026-09-30",
+  "problem": "R(B4,B7)",
+  "python": "3.11.2",
+  "claim_status": "written unformalized universal counting proof; two author exact identity/boundary checks; not independent review",
+  "dependencies": [
+    {
+      "name": "capacity theorem",
+      "source_commit": "2e6f85b554f425b546c5f45af2d2d4228ea8b2c4",
+      "source_url": "https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_4_7_degree_reductions/capacity.md",
+      "graph_ref": "bafkreibkiwk47unu3xyrylwyxlsqvg4q6l7fwaowvbsjfusvjgqm4wre5y",
+      "height": 7526
+    },
+    {
+      "name": "unique degree-eleven histogram",
+      "source_commit": "29237a5fd374210a82227f4028b4d29d3ef8fe9a",
+      "source_url": "https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_b4_b7_degree11_leaf_reduction/PROOF.md",
+      "graph_ref": "bafkreiedsth63die6rv5jbohvmazbo6azc7pomkiuc5dqo3qzk3ukda5wu",
+      "height": 7861
+    }
+  ],
+  "independent_capacity_review": {
+    "source_url": "https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_4_7_capacity_review3/review.md",
+    "graph_ref": "bafkreib3mrljr63wcemeaslba5qnhvgz3wwjwcopakek4g4lgux7kwf4ia",
+    "scope": "review of the capacity predecessor, not this result"
+  },
+  "primary_literature": [
+    "https://arxiv.org/html/2407.07285v2#S2",
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+  ],
+  "primary_witness_url": "https://github.com/gwen-mckinley/ramsey-books-wheels/blob/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+  "primary_witness_raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+  "baseline21_red_complement_sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec",
+  "fixtures_role": "small local algebra controls only; not a classification or proof dependency",
+  "large_external_artifact_required": false,
+  "related_106_edge_reduction": {
+    "source_commit": "bfc23e63e5e9ab26543023f0fc4df13fb968ad64",
+    "source_url": "https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_4_7_degree_reductions/degree106_columns.md",
+    "graph_ref": "bafkreigq3pi3typbwhc5xkahtbnhkrhqjy6emptwibyift24nmhtyxrmoe",
+    "height": 7899,
+    "role": "context; not a premise; new universal degree7 exclusion removes all degree7 cases, including both remaining106-edge branches"
+  },
+  "additional_degree7_exclusion_dependency": {
+    "name": "uniform-incidence exclusion",
+    "source_commit": "b47d605206c780288d2e704efe58fa8bb6806324",
+    "source_url": "https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_4_7_degree_reductions/uniform_cross.md",
+    "graph_ref": "bafkreiajpvexfhiph6inrrba5ptnvzm2mlm5j2g6oc55dvp5ktpj54ytqm",
+    "height": 7761,
+    "external_classification": "https://pure.tue.nl/ws/portalfiles/portal/4386333/696566.pdf",
+    "classification_scope": "Theorem1.12 and Proposition5.10; accepted historical classification, not rerun",
+    "reproduced_main_stdout_sha256": "00c9e12429ace465f4d83a4de49584e226645c20e27d4de190c09bac8b88d37e",
+    "reproduced_independent_stdout_sha256": "8b3acf3c3a6164c82aa24929aba240f516de323ea19304f50daf0046c991fe20"
+  }
+}
