@@ -1,0 +1,47 @@
+{
+  "native": {
+    "status": "COMPLETE_H17_PHASE_FAMILY_OBSTRUCTIONS",
+    "checked": 46656,
+    "progression_pairs_tested": 15725418,
+    "independent_checker_required": true,
+    "unrestricted_exclusion": false
+  },
+  "independent_verification": {
+    "status": "VERIFIED_H17_PHASE_FAMILY_EXCLUSION",
+    "normalized_words_checked": 46656,
+    "original_words_covered_up_to_crt_translation": 279936,
+    "point_colors_checked": 326592,
+    "q": 103,
+    "period": 618,
+    "column_phase_subgroup_order": 17,
+    "interval_realizations_all_below": 2472,
+    "target_interval_length": 3704,
+    "certificate_bytes": 186636,
+    "certificate_sha256": "91297899505896e510d0aa438b46f4cc76f48e22608609c1b4d93042657612a9",
+    "scope": "Only H17-invariant CRT column phases; no unrestricted period/interval exclusion.",
+    "bridge_controls": {
+      "six_bit_words_checked": 64,
+      "valid_local_phases": [
+        "000111",
+        "001110",
+        "011100",
+        "100011",
+        "110001",
+        "111000"
+      ],
+      "unit_multipliers": 204,
+      "order17_unit_multipliers": 16,
+      "order17_affine_maps_conjugated": 1648
+    },
+    "negative_controls_rejected": [
+      "bad_header",
+      "missing_word",
+      "extra_record",
+      "zero_step",
+      "outside_start",
+      "nonmonochromatic_pair"
+    ]
+  },
+  "fail_closed_time_control": true,
+  "deterministic_certificate_replay": true
+}
