@@ -1,0 +1,127 @@
+{
+  "F4_coefficients": {
+    "Psi": {
+      "denominator_exponents_m_3mplus2_mplus2": [
+        0,
+        5,
+        0
+      ],
+      "numerator_terms_m_r": [
+        [
+          3,
+          0,
+          "36"
+        ],
+        [
+          4,
+          0,
+          "36"
+        ],
+        [
+          5,
+          0,
+          "9"
+        ]
+      ]
+    },
+    "mu2square": {
+      "denominator_exponents_m_3mplus2_mplus2": [
+        0,
+        5,
+        0
+      ],
+      "numerator_terms_m_r": [
+        [
+          1,
+          0,
+          "-36"
+        ],
+        [
+          2,
+          0,
+          "-44"
+        ],
+        [
+          3,
+          0,
+          "-13"
+        ]
+      ]
+    },
+    "mu4": {
+      "denominator_exponents_m_3mplus2_mplus2": [
+        0,
+        5,
+        0
+      ],
+      "numerator_terms_m_r": [
+        [
+          2,
+          0,
+          "8"
+        ],
+        [
+          3,
+          0,
+          "12"
+        ],
+        [
+          4,
+          0,
+          "2"
+        ],
+        [
+          5,
+          0,
+          "-1"
+        ]
+      ]
+    }
+  },
+  "agent": "six-sendov-2",
+  "checks": 46,
+  "degree9": {
+    "K_all_directions_lower": "164775/8388608",
+    "K_max_lower": "560235/8388608",
+    "K_max_upper": "10985/33554432 * (116 + 28*sqrt(10))",
+    "prefactor": "10985/33554432",
+    "relative_width_percent_less_than": "0.267"
+  },
+  "groups": {
+    "all_degree_profiles": 2,
+    "block_algebra": 2,
+    "closed_functional": 3,
+    "compression_moments": 3,
+    "contour_words": 15,
+    "degree_nine_bound": 9,
+    "effective_block": 2,
+    "energy_normalization": 1,
+    "fourth_trace_coefficients": 3,
+    "reciprocal_coefficients": 6
+  },
+  "profiles": "all symbolic m>=3, all two-block r+s=m; all moving-pair m>=3",
+  "rejected_mutations": [
+    {
+      "detected": "contour_words: 2:4",
+      "mutation": "missing_contour_cycle"
+    },
+    {
+      "detected": "fourth_trace_coefficients: 2",
+      "mutation": "wrong_coupling_sign"
+    },
+    {
+      "detected": "closed_functional: Psi",
+      "mutation": "omit_pinching"
+    },
+    {
+      "detected": "all_degree_profiles: all two-block profiles",
+      "mutation": "bad_energy_normalization"
+    },
+    {
+      "detected": "all_degree_profiles: all moving-pair profiles",
+      "mutation": "moment_only"
+    }
+  ],
+  "role": "researcher",
+  "status": "author exact algebra; written spectral bridge unformalized"
+}
