@@ -1,0 +1,99 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "date_utc": "2026-09-30",
+  "proof_status": "Complete computer-assisted independent reproduction with written unformalized reductions and reviewed classical inputs",
+  "versions": {
+    "python": "CPython 3.11.2",
+    "cpp": "g++ 12.2.0, C++17",
+    "dependencies": "standard libraries only"
+  },
+  "cold_full_run": {
+    "cases": 45100,
+    "states": 235922791,
+    "maximum_case_states": 14780,
+    "seconds_including_domain_and_main_checks": 309.1866,
+    "child_peak_rss_kib": 66596,
+    "all_cases_complete": true
+  },
+  "marked_run": {
+    "occurrences": 1277,
+    "normalized_star_pairs": 1093,
+    "seconds": 13.8617,
+    "colors_at_most": 19
+  },
+  "reference_sanitizer_run": {
+    "geometric_cases": 100,
+    "geometric_covers": 1927,
+    "seconds_total": 21.8861,
+    "seconds_native_sanitized": 3.326,
+    "child_peak_rss_kib": 66508,
+    "sanitizer_diagnostics": 0
+  },
+  "entry_point_runs": {
+    "optimized_record_then_normal_default_comparison": "both complete, stable expected bytes identical",
+    "normal_default_output": {
+      "cases": 45100,
+      "covers": {
+        "0": 839,
+        "1": 1927,
+        "2": 0
+      },
+      "expected_sha256": "644c94f2d564cf3ffb27cf590c2c5de191b85601ef1d004e82574231a13077fc",
+      "marked_star_pairs": 1093,
+      "status": "COMPLETE computer-assisted independent review"
+    },
+    "cached_run_scope": "Regenerated domain, exact mathematical checks, marked certificates, Python/sanitizer controls; reused hash-bound complete native batches. Not another cold full census."
+  },
+  "guards": {
+    "case_states": 200000,
+    "case_seconds": 10,
+    "failure_is_incomplete": true,
+    "raised_cap_rejected": true
+  },
+  "resources": {
+    "cpu_scope": 1,
+    "memory_scope_gib": 2,
+    "native_threads": 1,
+    "all_blas_openmp_threads": 1,
+    "concurrent_intensive_jobs": 1,
+    "limits_changed": false
+  },
+  "expected_sha256": "644c94f2d564cf3ffb27cf590c2c5de191b85601ef1d004e82574231a13077fc",
+  "trust": "Ordinary Python/C++ execution and written normalization, orbit and replacement bridges; imported reviewed order-four normalization and saturated56. Dow is read at statement level, not its full original proof. Target-author executables never imported or run.",
+  "omitted_outputs": "Large regenerated domains, batch traces and full marked certificate corpus; regenerate with README commands.",
+  "publication_copy_validation": [
+    {
+      "mode": "normal",
+      "seconds": 62.27757577999728,
+      "output": {
+        "cases": 45100,
+        "covers": {
+          "0": 839,
+          "1": 1927,
+          "2": 0
+        },
+        "expected_sha256": "644c94f2d564cf3ffb27cf590c2c5de191b85601ef1d004e82574231a13077fc",
+        "marked_star_pairs": 1093,
+        "status": "COMPLETE computer-assisted independent review"
+      },
+      "native_batches": "previous complete hash-bound native batches replayed"
+    },
+    {
+      "mode": "optimized",
+      "seconds": 67.68157193000661,
+      "output": {
+        "cases": 45100,
+        "covers": {
+          "0": 839,
+          "1": 1927,
+          "2": 0
+        },
+        "expected_sha256": "644c94f2d564cf3ffb27cf590c2c5de191b85601ef1d004e82574231a13077fc",
+        "marked_star_pairs": 1093,
+        "status": "COMPLETE computer-assisted independent review"
+      },
+      "native_batches": "previous complete hash-bound native batches replayed"
+    }
+  ]
+}
