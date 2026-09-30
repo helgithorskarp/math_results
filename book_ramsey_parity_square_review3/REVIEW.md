@@ -1,4 +1,4 @@
-# Independent parity-square audit and exclusion of the saturated 99-edge equality case
+# Independent parity-square and saturation audit
 
 Reviewer: **six-reviewer-3**, role **independent mathematical reviewer**, 2026-09-30.
 The shared signing key does not establish separate authorship. This reviewer
@@ -10,11 +10,16 @@ correctly excludes the equality degree histograms \((7,12,3)\) and \((9,6,7)\).
 The reduction of the remaining equality case to a saturated 99-edge graph
 with an equitable \(11+11\) partition is also correct. A further proof below,
 using two named classical classifications as external premises, excludes that
-last case. Consequently every book-avoiding graph on 22 vertices whose red
-degrees are all in \(8,\ldots,10\) satisfies
+last case. During the final refresh, six-books-1's concurrent
+[saturation theorem](../book_ramsey_4_7_degree_reductions/saturation.md),
+committed at height 8006, was found to contain the same closure and its
+broader global parity consequence. Both are independently confirmed here.
+Using the already reviewed global degree theorem, every book-avoiding
+graph on 22 vertices satisfies
 \[
-  3n_8+n_9\le32,\qquad 2T\ge n_9+4.
+  3n_8+n_9+n_{11}\le32,\qquad 2T\ge n_9+n_{11}+4.
 \]
+In particular \(n_8\le10\), \(T\ge2\), and full spine saturation is impossible.
 This excludes the histogram \((11,0,11)\) at 99 edges. Other 99-edge
 histograms remain possible necessary cases; the argument gives no
 unrestricted Ramsey endpoint.
@@ -23,6 +28,14 @@ The reviewed target is LEMMA
 bafkreidagwfnpcg6aip47vp6bqfo35ptfacaciwplggiqokuarmcls5zcm,
 committed at height 7970. Its title is “R(B4,B7): parity-tight degrees force a saturated 99-edge pattern and exclude two 97/98-edge histograms”.
 Reviewed source commit: a8ad66ca39524465dad0920996469c8678cf9ced.
+The second reviewed target is LEMMA
+bafkreiex7pi66nvmx7cbnsmcgnvgif5bnwttlr6vpjsoxepnzfccobsmnm,
+height 8006, “R(B4,B7): no saturated22-vertex witness and universal strict
+parity defect bound”, source commit
+376634cee9f2766ccc9469a50f2b124bc063a973. Its full committed body and source
+proof were read after it appeared in the original target's neighborhood.
+The closure above is concurrent independent derivation, with researcher
+publication credited; it is not a new reviewer-only theorem.
 
 ## Hypotheses and exact defect reduction
 
@@ -205,7 +218,48 @@ Since
 \]
 strictness gives \(2T\ge b+4\) and \(3a+b\le32\) also when \(b=0\).
 This is a classical-classification specialization applied to the target's
-new square reduction, with no claim of historical priority.
+square reduction, with no claim of historical priority. It independently
+verifies the same exclusion in the concurrent theorem 8006.
+
+### Confirmed concurrent extension: global strict parity budget
+
+The second target also removes the degree-eight-through-ten restriction
+using the already reviewed global theorem 7924. Write
+\((a,b,c,h)=(n_8,n_9,n_{10},n_{11})\). Its premises supply degrees
+8 through 11, \(h\le6\), and \(h>0\Rightarrow e\ge106\).
+The literal incident parity argument now gives
+\[
+ 2T=132-3(4a+b+h)\ge b+h,\qquad 3a+b+h\le33.
+\]
+Equality would force \(c=2a-11\) and \(b+h=33-3a\) even.
+Thus \(a=7,9,11\). These give respectively
+\((c,b+h,e)=(3,12,97+h),(7,6,98+h),(11,0,99)\).
+If \(h>0\), the first two have \(e\le103,104\) since \(h\le6\),
+contradicting \(e\ge106\); the third has \(h=0\) already.
+The remaining three \(h=0\) cases are exactly those excluded above.
+Consequently \(3a+b+h\le32\) and
+\[
+ 2T-(b+h)=4(33-3a-b-h)\ge4.
+\]
+This independently confirms the whole universal strict-budget statement
+of 8006, including \(n_8\le10\) and \(T\ge2\). The checker generates
+all handshake-compatible four-degree histograms, finding all 21 equality
+histograms before the two degree-eleven cuts and exactly the three
+audited survivors after them. The cuts themselves are reused accepted
+premises, not re-proved by this histogram loop.
+
+The concurrent author's alternative partition argument was also checked.
+For every 22-vertex graph, literal page sums give
+\[
+ (F\mathbf1)_i=2e-294+38d_i-d_i^2
+                 -2\sum_{j\in N_R(i)}d_j.
+\]
+In the \((11,0,11)\) histogram the neighbor-degree sum is \(10d_i-2s_i\),
+where \(s_i\) counts degree-eight red neighbors. The expression becomes
+\(4(s_i-4)\), so \(F=0\) forces \(s_i=4\).
+The review's universal literal controls check this extra row equation.
+The full proof here derives the same partition through the matrix square;
+either route closes the arbitrary-host bridge.
 
 ### Proved: an alternative rational obstruction at 97 edges
 
@@ -275,11 +329,13 @@ exceptional census. Neither additional task is claimed complete here.
 [independent_check.py](independent_check.py) uses only Python standard-library
 integers. It imports no target code or fixture. Its 128 deterministic
 22-vertex graph controls check 29,568 literal spines, 61,952 square entries,
-2,816 incident equations, the general adjacency-square identity, and
+2,816 incident triangle equations, 2,816 neighbor-degree row equations,
+the general adjacency-square identity, and
 monochromatic triangles by literal triples. The three full forced
 characteristic polynomials use trace/Newton arithmetic with checked
 divisions; quotient row sums are checked independently. All 144
-handshake-compatible degree histograms in 8 through 10 are covered by
+handshake-compatible degree histograms in 8 through 10, and every
+handshake-compatible four-degree histogram in 8 through 11, are covered by
 the finite bookkeeping. The block controls and classification-related
 integer arithmetic are additional checks of the written bridges,
 not an exhaustive graph census.
@@ -291,7 +347,8 @@ asymmetric adjacency. The independent checker passes identically with
 Python optimization enabled; correctness checks do not disappear with
 assertions. Both original author programs were also rerun successfully.
 Their successful runs are reproduction evidence separate from reviewer
-independence.
+independence. The concurrent author's two saturation programs were also
+replayed; these are separate reproduction checks.
 
 From the repository root:
 
@@ -309,12 +366,9 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 Expected output: complete; 128 graph controls, 64 block controls, three
 full characteristic polynomials; seven corruptions rejected. Expected
 JSON SHA256:
-363208beefa9be6159df9667d5ded62f1bf528ef3c3b34baae15a5b0aa08c487.
+0e30341af3357935b481ff69412093ec7879df8bc7045311cd8d575a2db32307.
 Environment: CPython 3.11.2, no solver or CAS, numerical threads one,
-one CPU-intensive child at a time. The independent run completed in
-0.670 seconds with peak child RSS 17,072 KiB; optimized run in 1.471
-seconds, corruption controls in 0.407 seconds. The latter two and
-author replays shared a measured peak-child upper bound of 20,192 KiB.
+one CPU-intensive child at a time. The final expanded independent run completed in 0.717 seconds, optimized run in 0.896 seconds, and corruption controls in 0.218 seconds; peak-child RSS upper bound 20560 KiB. The two saturation-author replays completed in 0.379 and 0.479 seconds, respectively.
 No timeout, UNKNOWN, killed job, floating-point decision, missing
 certificate, or omitted proof corpus supports the mathematical exclusion.
 
@@ -356,9 +410,11 @@ for this Book Ramsey application.
 
 Classical triangle counting, parity, the earlier matching observation,
 and the spectral classifications are prior work. The graph-level
-increment is validation of the target's square obstruction and the
-classification-based closure of its remaining equality class.
-The target and this derivative proof are ready for ordinary mathematical
+increment is independent validation of the original square obstruction
+and the concurrent researcher's classification-based saturation theorem
+and universal strict parity budget. The alternative rational obstruction
+and complete necessary square spectra are proved reviewer refinements.
+The two targets and reviewer refinements are ready for ordinary mathematical
 scrutiny with compact independent evidence, subject to the explicit
 external-theorem boundary. The published global upper certificate was
 not independently replayed, and the Ramsey gap remains unresolved.

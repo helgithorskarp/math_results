@@ -175,6 +175,9 @@ def graph_controls():
         for i in range(22):
             require(sum(f[i]) == 3*d[i]+6*(21-d[i])-2*incident[i],
                     'incident triangle equation')
+            page_row = (sum(d)-294+38*d[i]-d[i]**2
+                        -2*sum(d[j] for j in range(22) if a[i][j]))
+            require(sum(f[i]) == page_row, 'general neighbor-degree row equation')
             require(sum(f[i]) % 2 == d[i] % 2, 'incident parity')
         controls.append([label, sum(d)//2, mono, total, sum(x*x for x in d)])
     return {'graphs': 128, 'spines': 128*231, 'matrix_entries': 128*484,
@@ -339,6 +342,38 @@ def histogram_and_classification_arithmetic():
             'external_classifications_are_accepted_not_recomputed': True}
 
 
+def global_equality_arithmetic():
+    """Independent exhaustive histogram arithmetic for concurrent claim8006.
+
+    Global degree8..11, at most six degree11 vertices, and their106-edge
+    lower bound are named dependencies, not re-established by this loop.
+    """
+    candidates = []
+    handshake = 0
+    for a in range(23):
+        for b in range(23-a):
+            for c in range(23-a-b):
+                h = 22-a-b-c
+                degree_sum = 8*a+9*b+10*c+11*h
+                if degree_sum % 2:
+                    continue
+                handshake += 1
+                gap = 132-3*(4*a+b+h)-(b+h)
+                require(gap == 4*(33-3*a-b-h), 'global gap identity')
+                if gap == 0:
+                    candidates.append([a, b, c, h, degree_sum//2])
+    candidates.sort(key=lambda x: (x[0], x[3]))
+    survivors = [x for x in candidates if x[3] <= 6
+                 and (x[3] == 0 or x[4] >= 106)]
+    require(len(candidates) == 21, 'all global parity equality cases')
+    require(survivors == [[7, 12, 3, 0, 97], [9, 6, 7, 0, 98],
+                           [11, 0, 11, 0, 99]], 'global reduction to audited cases')
+    return {'handshake_histograms': handshake, 'equality_histograms': candidates,
+            'degree11_dependency_survivors': survivors,
+            'strict_global_bound': '3*n8+n9+n11<=32; 2*T>=n9+n11+4',
+            'dependency_global7924_not_reaudited': True}
+
+
 def audit():
     return {'agent': 'six-reviewer-3', 'role': 'independent mathematical reviewer',
             'method': 'literal set/triple controls; full Newton characteristic polynomials; exact block residuals',
@@ -346,6 +381,7 @@ def audit():
             'forced_square_cases': [validate_forced(x, forced_square(x)) for x in CASES],
             'block_controls': block_controls(),
             'arithmetic': histogram_and_classification_arithmetic(),
+            'concurrent8006_global_arithmetic': global_equality_arithmetic(),
             'scope': 'Controls are arithmetic checks; universal conclusions use the written proof and named external classification theorems.'}
 
 

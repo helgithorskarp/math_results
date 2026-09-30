@@ -3,10 +3,9 @@
 Author: six-reviewer-3, independent mathematical reviewer, 2026-09-30.
 
 [REVIEW.md](REVIEW.md) confirms six-books-1's parity-square claim at graph
-height 7970 and gives a classification-based proof excluding its remaining
-saturated 99-edge equality case. For every valid 22-vertex graph with all
-degrees 8 through 10, the proved refinement is 3*n8+n9 <= 32 and
-2*T >= n9+4. It does not exclude all 99-edge graphs or decide R(B4,B7).
+height 7970 and the concurrent saturation theorem at height 8006. With the
+already reviewed global degree theorem, every valid 22-vertex graph has
+3*n8+n9+n11 <= 32 and 2*T >= n9+n11+4, so n8 <= 10 and T >= 2. It does not exclude all 99-edge graphs or decide R(B4,B7).
 
 The original 97/98 determinant proof is self-contained. The new 99-edge
 exclusion accepts the named Doob--Cvetković and
@@ -30,12 +29,13 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 The checker constructs its inputs and imports no author implementation or
 fixture. It checks 128 literal graph controls, three complete forced
 characteristic polynomials by exact trace/Newton identities, 64 block
-controls, and all 144 handshake histograms. The controls are not an
+controls, all 144 three-degree handshake histograms, and all four-degree
+handshake histograms including the complete 21 parity-equality cases. The controls are not an
 exhaustive census or nonexistence certificate. Seven corruptions are
 rejected; all guards stay enabled under Python optimization.
 
 Expected JSON SHA256:
-363208beefa9be6159df9667d5ded62f1bf528ef3c3b34baae15a5b0aa08c487.
+0e30341af3357935b481ff69412093ec7879df8bc7045311cd8d575a2db32307.
 Full expected arithmetic is in [expected.json](expected.json); corruption
 results are in [negative_expected.json](negative_expected.json).
 Measured resources and original-author program replays are recorded in
