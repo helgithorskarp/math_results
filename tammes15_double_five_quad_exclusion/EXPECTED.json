@@ -1,0 +1,972 @@
+{
+  "P_negative_above_strip": {
+    "closed": true,
+    "d": [
+      1
+    ],
+    "denominator_Bernstein_range": [
+      "1",
+      "1"
+    ],
+    "interval": [
+      "14/25",
+      "3/5"
+    ],
+    "n": [
+      1,
+      2,
+      -5,
+      -8,
+      6,
+      4
+    ],
+    "numerator_Bernstein_range": [
+      "-748/3125",
+      "-415679/9765625"
+    ],
+    "sign": -1
+  },
+  "P_positive_below_strip": {
+    "closed": true,
+    "d": [
+      1
+    ],
+    "denominator_Bernstein_range": [
+      "1",
+      "1"
+    ],
+    "interval": [
+      "1/2",
+      "11/20"
+    ],
+    "n": [
+      1,
+      2,
+      -5,
+      -8,
+      6,
+      4
+    ],
+    "numerator_Bernstein_range": [
+      "5481/800000",
+      "1/4"
+    ],
+    "sign": 1
+  },
+  "agent": "six-tammes-1",
+  "alias_coordinate_difference": {
+    "P": [
+      1,
+      2,
+      -5,
+      -8,
+      6,
+      4
+    ],
+    "d": [
+      1,
+      3,
+      -3,
+      -11,
+      4,
+      12,
+      2
+    ],
+    "factor": [
+      0,
+      -2
+    ],
+    "n": [
+      0,
+      -2,
+      -4,
+      10,
+      16,
+      -12,
+      -8
+    ]
+  },
+  "all_fifteen_formal_positions_distinct_asserted": false,
+  "all_fifteen_formal_positions_unit": true,
+  "branches": [
+    {
+      "endpoint_gap": {
+        "closed": false,
+        "d": [
+          1,
+          7,
+          21,
+          35,
+          35,
+          21,
+          7,
+          1
+        ],
+        "denominator_Bernstein_range": [
+          "2187/128",
+          "2097152/78125"
+        ],
+        "interval": [
+          "1/2",
+          "3/5"
+        ],
+        "n": [
+          0,
+          0,
+          32,
+          160,
+          128,
+          -320,
+          -224,
+          288,
+          -64
+        ],
+        "numerator_Bernstein_range": [
+          "49/2",
+          "13406976/390625"
+        ],
+        "sign": 1
+      },
+      "endpoint_identity": false,
+      "sign": -1
+    },
+    {
+      "endpoint_identity": true,
+      "sign": 1
+    }
+  ],
+  "conclusion": "No double-five Q; aliases and strip endpoints included.",
+  "controls": [
+    {
+      "name": "wrong_B_seed",
+      "reason": "chosen seed satisfies endpoint condition",
+      "rejected": true
+    },
+    {
+      "name": "wrong_base_Q_endpoint",
+      "reason": "forced missing-sector endpoints",
+      "rejected": true
+    },
+    {
+      "name": "reused_original_core_label",
+      "reason": "preserve original core labels",
+      "rejected": true
+    },
+    {
+      "name": "omitted_base_Q",
+      "reason": "two shared-four Q completions",
+      "rejected": true
+    },
+    {
+      "name": "wrong_last_Q_endpoint",
+      "reason": "forced missing-sector endpoints",
+      "rejected": true
+    },
+    {
+      "name": "omitted_last_Q",
+      "reason": "three last Q completions",
+      "rejected": true
+    },
+    {
+      "name": "wrong_alias_pair",
+      "reason": "uniform forbidden gap forces original alias",
+      "rejected": true
+    },
+    {
+      "name": "alias_pair_claimed_distinct",
+      "reason": "critical other positions are always distinct",
+      "rejected": true
+    },
+    {
+      "name": "wrong_alias_polynomial",
+      "reason": "second coordinate difference numerator is -2cP",
+      "rejected": true
+    },
+    {
+      "name": "root_strip_misses_root",
+      "reason": "no alias-polynomial root below strip, endpoints included",
+      "rejected": true
+    }
+  ],
+  "core10": {
+    "all_distinct": true,
+    "all_unit": true,
+    "contacts": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ]
+    ],
+    "coordinate_poles_excluded": true,
+    "pairs": 45,
+    "strict_noncontacts": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        7,
+        9
+      ]
+    ],
+    "vertices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "core12": {
+    "all_distinct": true,
+    "all_unit": true,
+    "contacts": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        11
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        7,
+        11
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        10
+      ]
+    ],
+    "coordinate_poles_excluded": true,
+    "pairs": 66,
+    "strict_noncontacts": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        0,
+        10
+      ],
+      [
+        0,
+        11
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        1,
+        11
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        2,
+        11
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        3,
+        10
+      ],
+      [
+        3,
+        11
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        4,
+        11
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        8,
+        11
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        10,
+        11
+      ]
+    ],
+    "vertices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  "distinct_critical_pair": {
+    "distance": {
+      "closed": false,
+      "d": [
+        1,
+        7,
+        5,
+        -57,
+        -73,
+        249,
+        283,
+        -731,
+        -432,
+        1408,
+        20,
+        -1376,
+        484,
+        308,
+        32
+      ],
+      "denominator_Bernstein_range": [
+        "5328214528/6103515625",
+        "2299/2048"
+      ],
+      "interval": [
+        "1/2",
+        "3/5"
+      ],
+      "n": [
+        0,
+        0,
+        2,
+        10,
+        -22,
+        -158,
+        78,
+        990,
+        -226,
+        -3218,
+        1376,
+        5608,
+        -4560,
+        -3480,
+        5400,
+        -1800
+      ],
+      "numerator_Bernstein_range": [
+        "169/4096",
+        "548683776/1220703125"
+      ],
+      "sign": 1
+    },
+    "pair": [
+      12,
+      13
+    ]
+  },
+  "forbidden_alias_gap": {
+    "closed": false,
+    "d": [
+      1,
+      5,
+      -2,
+      -38,
+      -11,
+      125,
+      48,
+      -196,
+      -64,
+      116,
+      44,
+      4
+    ],
+    "denominator_Bernstein_range": [
+      "24109568/48828125",
+      "363/512"
+    ],
+    "interval": [
+      "1/2",
+      "3/5"
+    ],
+    "n": [
+      1,
+      6,
+      -1,
+      -64,
+      -65,
+      242,
+      321,
+      -436,
+      -540,
+      404,
+      312,
+      -120,
+      -60
+    ],
+    "numerator_Bernstein_range": [
+      "-1368343/4950000",
+      "-4720192/48828125"
+    ],
+    "sign": -1
+  },
+  "forbidden_strip_gap": {
+    "gap": {
+      "closed": true,
+      "d": [
+        1,
+        7,
+        5,
+        -57,
+        -73,
+        249,
+        283,
+        -731,
+        -432,
+        1408,
+        20,
+        -1376,
+        484,
+        308,
+        32
+      ],
+      "denominator_Bernstein_range": [
+        "34277015488419164687/37252902984619140625",
+        "96707014878336017/102400000000000000"
+      ],
+      "interval": [
+        "11/20",
+        "14/25"
+      ],
+      "n": [
+        -1,
+        -6,
+        4,
+        72,
+        -6,
+        -480,
+        44,
+        2004,
+        -525,
+        -5058,
+        2764,
+        7004,
+        -6420,
+        -3304,
+        5676,
+        -1768
+      ],
+      "numerator_Bernstein_range": [
+        "-994851881390410281/4096000000000000000",
+        "-167636745156009479757/931322574615478515625"
+      ],
+      "sign": -1
+    },
+    "pair": [
+      12,
+      13
+    ]
+  },
+  "forced_missing_sectors": [
+    {
+      "known_link_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          9
+        ]
+      ],
+      "missing_sector": [
+        4,
+        9
+      ],
+      "vertex": 2
+    },
+    {
+      "known_link_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "missing_sector": [
+        6,
+        7
+      ],
+      "vertex": 3
+    },
+    {
+      "known_link_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          10
+        ]
+      ],
+      "missing_sector": [
+        5,
+        10
+      ],
+      "vertex": 4
+    },
+    {
+      "known_link_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          10
+        ]
+      ],
+      "missing_sector": [
+        8,
+        10
+      ],
+      "vertex": 9
+    },
+    {
+      "known_link_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          3,
+          11
+        ]
+      ],
+      "missing_sector": [
+        5,
+        11
+      ],
+      "vertex": 6
+    }
+  ],
+  "interval": [
+    "1/2",
+    "3/5"
+  ],
+  "last_Qs": [
+    [
+      4,
+      5,
+      12,
+      10
+    ],
+    [
+      9,
+      8,
+      13,
+      10
+    ],
+    [
+      6,
+      5,
+      14,
+      11
+    ]
+  ],
+  "role": "researcher"
+}
