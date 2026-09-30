@@ -1,0 +1,98 @@
+{
+  "agent": "six-reviewer-4",
+  "cpu_scope": 1,
+  "independent_checks": [
+    {
+      "command": "python3 -B audit.py --check",
+      "elapsed_seconds": 2.7088,
+      "result": {
+        "expected_sha256": "3133476b6f0fd802e488a701e77af81e8edd0071e77510a90d45742dadc44b66",
+        "python": "3.11.2",
+        "status": "passed",
+        "sympy": "1.14.0"
+      },
+      "returncode": 0
+    },
+    {
+      "command": "python3 -B -O audit.py --check",
+      "elapsed_seconds": 6.0972,
+      "result": {
+        "expected_sha256": "3133476b6f0fd802e488a701e77af81e8edd0071e77510a90d45742dadc44b66",
+        "python": "3.11.2",
+        "status": "passed",
+        "sympy": "1.14.0"
+      },
+      "returncode": 0
+    }
+  ],
+  "independent_peak_RSS_KiB": 67100,
+  "memory_scope": "2 GiB",
+  "native_author_checks": {
+    "checks": [
+      {
+        "byte_match_expected": true,
+        "command": [
+          "python3",
+          "-B",
+          "scratch/publication/tammes15_nine_quad_degree_four_exclusion/check.py"
+        ],
+        "elapsed_seconds": 1.8395140240318142,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "byte_match_expected": true,
+        "command": [
+          "python3",
+          "-B",
+          "-O",
+          "scratch/publication/tammes15_nine_quad_degree_four_exclusion/check.py"
+        ],
+        "elapsed_seconds": 1.729071053036023,
+        "returncode": 0,
+        "stderr": ""
+      },
+      {
+        "byte_match_expected": true,
+        "command": [
+          "python3",
+          "-B",
+          "scratch/publication/tammes15_nine_quad_degree_four_exclusion/audit.py"
+        ],
+        "elapsed_seconds": 2.834682428976521,
+        "returncode": 0,
+        "stderr": ""
+      }
+    ],
+    "peak_RSS_KiB": 16876
+  },
+  "native_threads": 1,
+  "primary_source_refresh": {
+    "checked_utc": "2026-09-30T18:44:05.500066+00:00",
+    "primary_sources": [
+      {
+        "error": "Remote end closed connection without response",
+        "url": "https://cohn.mit.edu/spherical-codes/"
+      },
+      {
+        "bytes": 890,
+        "http_status": 200,
+        "sha256": "1b77ee43d73613885d3fdcfb03dc8fad2e40302ff9c9ff639559cc9b326fb805",
+        "url": "https://spherical-codes.org/data/3/15"
+      },
+      {
+        "bytes": 234781,
+        "http_status": 200,
+        "sha256": "4b6aaee6e6024f0b2329251952fcf12c024b32f6f99c289fcfaa433f70c8ed12",
+        "url": "https://arxiv.org/html/1410.2536"
+      },
+      {
+        "bytes": 40268,
+        "http_status": 200,
+        "sha256": "1ea2a967b854ae4fc24f4bc334824e6d8633f0172757796b67b7679916d88396",
+        "url": "https://arxiv.org/abs/2311.01183"
+      }
+    ]
+  },
+  "role": "independent mathematical reviewer"
+}
