@@ -1,4 +1,37 @@
-# Spectral Chvátal H through six elements and capped regular products
+# Spectral Chvátal H: finite classifications and capped certificate ranks
+
+**Sparse rank trades:** rational perturbations on disjoint
+singletons and pairs raise a centered H certificate to the largest
+possible rank, under the exact kernel and strict-cap hypotheses in
+[KERNEL_TRADE_PROOF.md](KERNEL_TRADE_PROOF.md). It gives maximal-rank
+capped certificates for every uniform rank-two downset on n>=4 points.
+The two-singleton template also gives maximal-rank caps for every
+friendship downset with at least two triangles and every two-center
+downset with at least two independent leaves.
+The proof also classifies equality from a star/empty kernel, with the
+three-point triangle downset as its sole exception, and gives a cylinder
+classification for all strict capped products with simple unit endpoints.
+The trade's all-orders Steiner application is an alternative to the
+already published, credited convex-mixture rank repair.
+
+Reproduce its 19 exact base audits and 18 perturbed matrices from the full
+repository root, using Python 3.11+ and the standard library:
+
+~~~bash
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 python3 -O spectral_downset_six_exact/kernel_trade.py --check spectral_downset_six_exact/KERNEL_TRADE_RESULTS.json
+~~~
+
+The verifier reads the small public two-STS9 fixture in the sibling
+contribution. For an isolated export, pass its local path with --two-sts9.
+All other new checks use generated matrices and explicit exceptions.
+The final run took 81.84 seconds and 34,852 KiB RSS, with one CPU.
+The infinite construction and equality theorems are written proofs;
+the finite audits are implementation validation.
+The separate --boundaries-only mode checks two attributed nine-point
+examples: it sharpens their centered rank bounds to 71 and 74 and proves
+that the full trade fails at every nonzero parameter. It constructs no H
+matrix for those examples; see
+[KERNEL_BOUNDARY_RESULTS.json](KERNEL_BOUNDARY_RESULTS.json).
 
 **Regular triple classification:** every nonempty regular triple collection
 on six points, with the full two-skeleton included, has a rational H
@@ -7,6 +40,10 @@ The complete cohort consists of 34 permutation classes representing
 3,435 labeled collections. Its maximum intersecting families are precisely
 the six coordinate stars. These capped certificates also cover all finite
 mixed products, with their complete maximum-family classification.
+An [independent review](https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_regular_six_review5/REVIEW.md)
+confirms this result. It also credits the previously known classical
+base equality classification; capped spectral certificates and their
+ranks are the separate claims here.
 See [REGULAR_SIX_PROOF.md](REGULAR_SIX_PROOF.md) for the scope, kernel
 lemma, exact separation from convex partition templates, and mixed fractional
 obstructions. Reproduce the new finite classification with
@@ -88,3 +125,7 @@ theorem and adds a capped certificate for the fractional exception.
 The regular triple result adds 34 exact maximal-rank capped bases, a kernel
 lemma classifying their extremizers and mixed products, and a linear
 obstruction to every convex mixture of partition lifts for eight classes.
+The disjoint-pair trade now supplies a conditional rank-lifting mechanism
+and all-orders uniform rank-two, friendship and two-center maximal certificates. Prior source
+dependencies and concurrent Steiner/two-center overlap are credited
+explicitly in its proof.
