@@ -69,6 +69,18 @@ endpoints. All finite regular-factor products have explicit maximal ranks
 and only eligible center stars. Every product containing a capped D_*
 factor and any of these regular factors has fractional independence at
 least 49/48 times its largest star, even when D_* is not dominant.
+[BIPARTITE_CONES.md](BIPARTITE_CONES.md) supplies a different rational
+core for every K_1 joined to K_(u,v), u,v>=2. This closes an unbounded
+nonregular class beyond the balanced members covered above. A complete
+six-level grid decomposition and 721 exact positive polynomial terms,
+with ten small constant exceptions, prove the cap for arbitrary imbalance.
+A deterministic partition repair gives maximal rank N-1, simple endpoints,
+and the unique center-star extremizer. Off-diagonal entries are nonnegative
+when the smaller part is u and the larger part v satisfies v<=u^2.
+All finite products have the corresponding maximal rank and star-only
+equality families; mixed capped D_* products have a uniform 49/48
+fractional lower-bound gap. The new formula is distinct on the balanced
+overlap and does not generalize all regular leaf graphs.
 Disjoint-support unions and restrictions retaining the
 largest-star size have explicit certificate lifts. A valid seven-vertex
 certificate with eigenvalue 8/5 demonstrates why unrestricted tensoring of
@@ -93,6 +105,7 @@ python3 verify_two_centers.py --check
 python3 verify_clique_centers.py --check
 python3 verify_dense_regular_cones.py --check
 python3 -O verify_regular_cones.py --check
+python3 -O verify_bipartite_cones.py --check
 ```
 
 The first command deterministically regenerates
@@ -150,6 +163,19 @@ normalization, both PSD bounds and every base maximum family are checked.
 Three dense matrices agree entry by entry with the earlier constructor.
 Two full tensors have dimensions 68 and 196. Twelve malformed inputs,
 three coefficient-table corruptions and three PSD controls are rejected.
+The ninth command compares with [bipartite_cones_expected.json](bipartite_cones_expected.json).
+It proves 55 independent polynomial clearing identities, regenerates all
+721 positive coefficient terms and ten exact constant LDL exceptions,
+and checks 676 supplementary rational entry substitutions. Seventeen
+literal bases have N<=86 and complete rational grid images/spanning bases;
+two full tensors have dimensions 72 and 196. Both caps, quantitative
+buffers, maximal ranks and all base equality families are checked.
+Two published balanced matrices reproduce their saved fingerprints.
+Balanced recoloring, two affine-face points, an older face's exact negative
+quadratic form, ten malformed inputs, three fixture corruptions and three
+PSD controls are checked. The final optimized run passed in 134.16 seconds
+with 36,264 KiB peak child RSS. Infinite coverage is the written grid
+proof and coefficient identities, rather than the finite examples.
 
 Fixture SHA-256:
 
@@ -186,8 +212,11 @@ Six-reviewer-5's [independent clique-center audit](https://github.com/helgithors
 committed at height 7779, confirms the all-r construction, friendship
 repair and their stated products at source b95d1958. Its rational
 weighted-triangle proof simplifies the center-standard block. The present
-dense-regular-cone extension has no independent review or formalization
-claimed here.
+[all-regular-cone review](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_regular_cones_review1/REVIEW.md)
+by six-reviewer-1, committed at height 7906, verifies the regular and dense
+cone construction at source cb0c1bd1 and proves a stronger buffer and repair
+interval. The new nonregular bipartite extension has no independent review
+or formalization claimed here.
 
 ## Primary sources and current status
 
