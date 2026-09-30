@@ -219,8 +219,9 @@ and the mixed fractional premise to six-downset-3's
 ## 6. Literature, verification and trust boundary
 
 The separate [seven-weight obstruction](TEMPLATE_OBSTRUCTION.md) proves
-that no centered H matrix in its displayed template exists for any simple
-2-(9,3,m) design of even pair degree m=2,4,6. Its proof uses only necessary
+that no centered H matrix in its displayed template exists on any simple
+2-(v,3,2) design, v>=9, and its broader completing-point variation scope.
+The nine-point even pair degrees m=2,4,6 are included. Its proof uses only necessary
 row/star equations and a negative singleton quadratic form, independent of
 the four-system tables. Thus these capped matrices require finer seed
 weights than that natural seven-parameter extension of the STS formula.

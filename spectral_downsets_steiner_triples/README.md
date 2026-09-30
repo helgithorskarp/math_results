@@ -11,8 +11,10 @@ matrices pass two exact PSD methods and the quantitative rank repair. All
 finite products are covered with rank 94^k-9k and precisely 9k maximum stars.
 The new extension is author-checked and unformalized.
 The separate [seven-weight obstruction](TEMPLATE_OBSTRUCTION.md) proves
-that a natural centered template cannot satisfy H for any simple nine-point
-triple design with even pair degree 2, 4 or 6. The forced singleton block is
+that a natural centered template cannot satisfy H for any simple
+2-(v,3,2) design with v>=9, and more generally under its stated
+completing-point variation hypothesis. The nine-point even degrees 2, 4 or 6
+are included. The forced singleton block is
 indefinite; this does not exclude matrices outside that template.
 
 The [three-system theorem](THREE_STS9_PROOF.md) gives capped maximal-rank
@@ -135,7 +137,7 @@ and 27,392 KiB RSS, checking the additional quantitative buffers.
 The complete three-system verifier took 249.78 seconds and 26,884 KiB RSS.
 The four-system verifier took 566.32 seconds and 31,332 KiB RSS. The separate
 template checker independently solves the actual seven-variable affine
-system on three concrete designs and checks explicit negative witnesses;
+system on four concrete designs at orders9 and13 and checks explicit negative witnesses;
 its universal statement is proved by the accompanying counting argument.
 
 Expected principal results:
