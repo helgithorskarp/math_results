@@ -1,0 +1,119 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "proof_status": "Exact computer-assisted self-contained fixed-QR edit-region lemma, same-author independent exact checker.",
+  "validated_utc": "2026-09-30T04:02:29.725921+00:00",
+  "python_version": "3.11.2",
+  "class_bounds": [
+    28,
+    1820
+  ],
+  "max_count_at_least": 30,
+  "min_count_at_most": 1818,
+  "total_bounds": [
+    58,
+    3638
+  ],
+  "branches_checked": 36,
+  "terminal_reasons": {
+    "empty_required": 33,
+    "required_packing": 3
+  },
+  "total_forbidden_steps": 82119,
+  "mixed_steps": 31122,
+  "forcing_steps": 78,
+  "weight_guides": 0,
+  "external_numerical_cut_assumptions": 0,
+  "generation": {
+    "generated": 36,
+    "seconds": 275.783,
+    "max_rss_kib": 101204,
+    "weight_guides": 0
+  },
+  "longest_branch_seconds": 34.954,
+  "checker": {
+    "seconds": 11.378,
+    "max_rss_kib": 194360
+  },
+  "corruption_controls_rejected": 18,
+  "abstract_hypergraph_budget_cases": 4840,
+  "oracle_certificates_checked": 1898,
+  "normalized_baseline_comparisons": [
+    {
+      "endpoint": 0,
+      "root": 1,
+      "budget": [
+        29,
+        29
+      ],
+      "all_normalized_entries_equal": true
+    },
+    {
+      "endpoint": 0,
+      "root": 1,
+      "budget": [
+        1848,
+        27
+      ],
+      "all_normalized_entries_equal": true
+    }
+  ],
+  "checked_partial_resume": {
+    "prefix_records": 100,
+    "resumed_proof": {
+      "budget": [
+        1848,
+        27
+      ],
+      "endpoint": 0,
+      "root": 1,
+      "forbidden_steps": 2405,
+      "forcing_steps": 0,
+      "packing_steps": 639,
+      "empty_steps": 1766,
+      "mixed_steps": 490,
+      "budget_steps": 0,
+      "final_forced": 1,
+      "final_allowed": 1291,
+      "contradiction": "empty_required"
+    },
+    "seconds": 8.185,
+    "same_bytes_as_full_generation": false
+  },
+  "time_limit_control": {
+    "status": "INCOMPLETE_TIME_LIMIT",
+    "partial_check": {
+      "proof_steps_verified": true,
+      "complete_exclusion": false,
+      "budget": [
+        29,
+        29
+      ],
+      "endpoint": 0,
+      "root": 1,
+      "allowed": 3696,
+      "forced": 1,
+      "step_counts": {
+        "forbidden": 0,
+        "forced": 0,
+        "packing": 0,
+        "empty": 0,
+        "budget": 0,
+        "mixed": 0
+      }
+    },
+    "complete_exclusion_rejected": true
+  },
+  "expected_sha256": "32f2866cc417167ff44d13e99d2bc5d83e9df3a5645c43ad1e813a4b2f995b9d",
+  "generated_certificate_bytes_omitted": 12449428,
+  "second_full_regeneration_asserted": false,
+  "resource_limits": {
+    "threads": 1,
+    "cpu_intensive_jobs_concurrent": 1,
+    "seconds_per_case": 90,
+    "scope_cpu": "1CPU",
+    "scope_memory": "2GiB",
+    "resource_settings_changed": false
+  },
+  "trust_boundary": "Unformalized AP-clause/invariant bridge, exact standard-library checker, Python integer arithmetic. No independent peer review or proof-assistant formalization of this result."
+}
