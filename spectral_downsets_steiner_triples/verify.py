@@ -147,9 +147,16 @@ def run():
         result["baseline_cube_ranks"][str(v)] = rank
     D, s, Q = fano_certificate()
     rank = check_definition(D, s, Q)
-    assert (len(D), s, rank) == (36, 10, 29)
+    assert (len(D), s, rank) == (36, 10, 28)
+    upper = [[F(len(D) if i == j else 0) - Q[i][j]
+              for j in range(len(D))] for i in range(len(D))]
+    upper_rank = exact_psd_rank(upper)
+    assert upper_rank == 35
     result["fano"] = {"N": len(D), "s": s, "rank": rank, "matrix_sha256": matrix_hash(Q),
-                      **fano_coverage(D, s, Q)}
+                      "upper_slack_rank": upper_rank, **fano_coverage(D, s, Q)}
+    D0, s0, Q0 = fano_certificate(balanced=False)
+    assert check_definition(D0, s0, Q0) == 29
+    result["fano_initial"] = {"rank": 29, "matrix_sha256": matrix_hash(Q0)}
     first = affine_sts9()
     second, perm = second_disjoint_sts9(first)
     result["union9_relabel_permutation"] = list(perm)

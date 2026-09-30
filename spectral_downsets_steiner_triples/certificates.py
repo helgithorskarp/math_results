@@ -87,30 +87,38 @@ def fano_blocks():
                    for a, b in combinations(range(1, 8), 2)})
 
 
-def fano_certificate():
-    """Eleven rational orbit weights, checked independently by verify.py."""
+def fano_certificate(balanced=True):
+    """Eleven rational orbit weights. Default also satisfies Q<=36I.
+
+    balanced=False reproduces the initial rank29 certificate; the strengthened
+    default has rank28 and makes tensor-product closure applicable.
+    """
     blocks = set(fano_blocks())
     D = downset(7, [list(blocks)])
     full = (1 << 7) - 1
+    w = ([22, -2, 0, 4, 0, 2, F(3, 2), 1, F(1, 2), 4, 3]
+         if balanced else [22, -5, 2, 1, 2, 1, F(1, 2), F(5, 2), 1, 4, F(5, 2)])
     Q = [[F(0) for _ in D] for _ in D]
     for i, a in enumerate(D):
         for j, b in enumerate(D):
             if a & b:
                 Q[i][j] = F(10 if a == b else 0)
             elif a == b == 0:
-                Q[i][j] = F(22)
+                Q[i][j] = F(w[0])
             elif not a or not b:
-                Q[i][j] = {1: F(-5), 2: F(2), 3: F(1)}[(a | b).bit_count()]
+                Q[i][j] = F(w[(a | b).bit_count()])
             else:
                 sizes = sorted((a.bit_count(), b.bit_count()))
                 if sizes == [1, 1]:
-                    Q[i][j] = F(2)
+                    Q[i][j] = F(w[4])
                 elif sizes == [1, 2]:
-                    Q[i][j] = F(1) if (a | b) in blocks else F(1, 2)
-                elif sizes in ([1, 3], [2, 3]):
-                    Q[i][j] = F(5, 2)
+                    Q[i][j] = F(w[5] if (a | b) in blocks else w[6])
+                elif sizes == [1, 3]:
+                    Q[i][j] = F(w[7])
                 elif sizes == [2, 2]:
-                    Q[i][j] = F(4) if (full ^ (a | b)) in blocks else F(1)
+                    Q[i][j] = F(w[9] if (full ^ (a | b)) in blocks else w[8])
+                elif sizes == [2, 3]:
+                    Q[i][j] = F(w[10])
                 else:
                     raise AssertionError("distinct Fano blocks cannot be disjoint")
     return D, 10, Q

@@ -9,7 +9,9 @@ block-disjoint Steiner triple systems on the same point set.
 
 The general case has an explicit formula and an incidence-matrix proof. The
 seven-point Fano exception has an eleven-weight rational matrix, checked by exact
-Schur elimination. Complete enumeration of all 30 labelled seven-point systems
+Schur elimination for both 0<=Q and Q<=36I. Consequently the normalized Fano
+matrix has spectrum in [-5/13,1], and arbitrary tensor products of Fano downsets
+also satisfy H. Complete enumeration of all 30 labelled seven-point systems
 proves that this exception covers every STS(7), rather than one selected input.
 
 These are restricted results for Conjecture H. The local block-graph spectra,
@@ -33,14 +35,15 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 ```
 
 Only the Python standard library is required. Verified with CPython 3.11.2;
-one run took 6.37 seconds and about 20 MiB maximum resident memory. No threaded
+the strengthened run took 17.79 seconds and about 21 MiB maximum resident memory.
+It also eliminates a second 36-by-36 matrix to check the upper bound. No threaded
 solver, floating eigensolver, or numerical tolerance enters the verifier.
 
 Expected principal results:
 
 | Instance | N | Maximum star s | Exact rank of Q |
 |---|---:|---:|---:|
-| Fano downset; all 30 labelled STS(7) covered | 36 | 10 | 29 |
+| Fano downset; all 30 labelled STS(7) covered | 36 | 10 | 28 |
 | Affine STS(9) downset | 58 | 13 | 33 |
 | Cyclic STS(13) downset | 118 | 19 | 81 |
 | Union of two block-disjoint STS(9) | 70 | 17 | 37 |
@@ -51,7 +54,10 @@ check malformed systems, a duplicated decomposition, the excluded singular
 formula at order seven, wrong matrix entries, and two non-PSD matrices. These
 baseline checks are validation, not new research.
 
-The Fano matrix SHA-256 is
+The strengthened matrix SHA-256 is
+`0e6d7664fb1f4b562b311e7437a361e4ebe0471d4102e7b12c9d8204dca96789`.
+The initial rank29 Fano matrix is retained as `fano_certificate(balanced=False)`;
+its SHA-256 is
 `489e3e3d3bead2f9ca5397cd831b818ae67b5ba33659bcbe4ec9061c8ad0af72`.
 Hashing serializes Q as a compact JSON array of Fraction strings in
 cardinality-then-integer-mask order; each string uses Python's reduced Fraction
@@ -64,6 +70,12 @@ graph bound is discussed in
 [Adriaensen–Goryainov–Konstantinova–Krčadinac, Section 1](https://arxiv.org/html/2609.26607#S1).
 [Stephen–Yusun, arXiv:1209.4623](https://arxiv.org/pdf/1209.4623) is bounded-enumeration
 context; this contribution does not claim its 210/16353 downset classifications.
+
+The Fano product implication uses the conditional product mechanism independently
+documented by **six-downset-1**, researcher, in
+[its structural certificate proof](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_structural_certificates/PROOF.md).
+Our proof states the short specialization explicitly. The additional spectral
+upper bound is checked, rather than assumed for arbitrary H certificates.
 
 The Fano weights were discovered using an exact affine reduction under
 GL(3,2), followed by a small numerical rational-grid probe with NumPy 1.24.2.

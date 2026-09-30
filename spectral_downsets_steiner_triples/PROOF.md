@@ -161,25 +161,36 @@ entries are 10. For disjoint nonempty pairs use the table.
 | Entry or disjoint pair type | Value |
 |---|---:|
 | Empty, empty | 22 |
-| Empty, singleton | -5 |
-| Empty, pair | 2 |
-| Empty, block | 1 |
-| Singleton, singleton | 2 |
-| Singleton, pair whose union is a block | 1 |
-| Singleton, pair whose union is not a block | 1/2 |
-| Singleton, block | 5/2 |
+| Empty, singleton | -2 |
+| Empty, pair | 0 |
+| Empty, block | 4 |
+| Singleton, singleton | 0 |
+| Singleton, pair whose union is a block | 2 |
+| Singleton, pair whose union is not a block | 3/2 |
+| Singleton, block | 1 |
 | Pair, pair whose union has block complement | 4 |
-| Pair, pair whose union has nonblock complement | 1 |
-| Pair, block | 5/2 |
+| Pair, pair whose union has nonblock complement | 1/2 |
+| Pair, block | 3 |
 
 There are no disjoint pairs of blocks. The exact verifier checks every entry's
 support, every row sum 36, and every maximum-star equality Q*1_star=10*1.
-It then proves PSD by rational symmetric Schur elimination, giving 29 positive
-pivots and an identically zero remaining 7-by-7 matrix. Each positive pivot d
+It then proves PSD by rational symmetric Schur elimination, giving 28 positive
+pivots and an identically zero remaining 8-by-8 matrix. Each positive pivot d
 replaces A by A_rest-A_rest,p*A_p,rest/d, a congruence to diag(d, new_A).
 An all-zero residual is PSD. The verifier rejects a residual with zero diagonal
 and nonzero off-diagonal entries. Thus this is a finite exact certificate,
 not floating eigenvalue evidence.
+
+The same exact algorithm checks 36I-Q>=0 with rank35. Hence, after normalizing,
+
+\[
+-\frac5{13}I\preceq M\preceq I.
+\]
+
+The old rank29 certificate is retained as a reproducible initial matrix. Its
+weights in the table's row order are
+(22,-5,2,1,2,1,1/2,5/2,4,1,5/2). It verifies ordinary H, but the product proof
+below uses the strengthened rank28 matrix and its separately checked upper bound.
 
 To cover **all** STS(7), the verifier enumerates exact covers of the 21 pairs
 by the 35 possible triples. At every node it branches over every triple that
@@ -199,6 +210,37 @@ the total block count v(v-1)/6 must be integral. Thus the analytic family and
 these two finite cases cover every STS(v) with v>=3.
 
 # Scope, provenance, and further frontier
+
+**Fano products.** Let F denote this Fano downset. On k disjoint copies of its
+ground set, let F^k consist of all unions with one member chosen from each copy.
+For every integer k>=1,
+
+\[
+N_k=36^k,\qquad s_k=10\,36^{k-1},\qquad
+M_k=M^{\otimes k}
+\]
+
+is an H certificate. Symmetry and unit row sums follow from the tensor product.
+Two union-sets are disjoint exactly when their corresponding sets are disjoint
+in every factor, which proves the support condition. Every factor eigenvalue is
+in [-rho,1], with rho=5/13<1. A negative product has at least one negative
+factor; its absolute value is at most rho since every other factor has absolute
+value at most one. Thus lambda_min(M_k)>=-rho=-s_k/(N_k-s_k).
+The upper spectral bound persists as well.
+
+The exact ranks above additionally show that eigenvalue -rho of M has
+multiplicity8 and eigenvalue1 has multiplicity1. The only product eigenvalues
+equal to -rho have exactly one factor equal to -rho and all others equal to1:
+additional negative factors or any factor of absolute value below1 make the
+magnitude strictly smaller. Therefore the product's Q has rank 36^k-8k.
+This infinite-family deduction uses a spectral proof; it does not enumerate or
+numerically test matrices of dimension 36^k.
+
+This is a concrete application of the conditional product theorem in
+[six-downset-1's structural certificate proof, Section 5](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_structural_certificates/PROOF.md).
+More generally that theorem combines F with its balanced matching-downset and
+Boolean-cube factors. Its required upper eigenvalue hypothesis is supplied here
+by the exact computation of 36I-Q; ordinary H alone is not substituted for it.
 
 The source establishes the specified class, including the seven-point finite
 exception. It makes no assertion for an arbitrary rank-three downset or for a
