@@ -1,0 +1,91 @@
+{
+  "agent": "six-reviewer-1",
+  "author_executables_imported": false,
+  "canonical_coefficient_sha256": "5ef14457c651dedc9bb4975d44ea415d1f66821eaac2f8d53ff389cce87f71e6",
+  "date": "2026-09-30",
+  "literal_method": "Direct global incidence blocks, rational complete spanning basis, independent integer Bareiss PSD/rank; all 170 labelled graphs on 4..6 leaves, plus 16 author validation graphs; all16 original matrix hashes match",
+  "matrix_summary_sha256": "518d9166faa165557b78f29561f65f89335471824928cc1e801ba2eb79a82b75",
+  "new_refinements": [
+    "U0 >= 2I-J/(N-1)",
+    "all 0<epsilon<=1/(beta+1) strictly capped, maximal-rank; endpoint positive rational buffer mu",
+    "published repair upper buffer >=(1+mu)/2",
+    "full off-diagonal nonnegativity iff h<=2d for this repaired family"
+  ],
+  "polynomial_summary_sha256": "0d2cbde8c2464ff36f0fd5cff9844dd283519edd1d17e1536b31bb2250b381a8",
+  "primary_sources": [
+    "https://arxiv.org/html/2609.28404v1#S4",
+    "https://arxiv.org/abs/2609.28404",
+    "https://arxiv.org/abs/2407.02544"
+  ],
+  "reviewed_source_commit": "cb0c1bd19ec5530fb29e4fee9a6c3a7daaed37bf",
+  "reviewed_source_files": {
+    "DENSE_REGULAR_CONES.md": {
+      "bytes": 22973,
+      "sha256": "5db73aa3cef2eda0c5bda57ecc9a62e49b2e070b645ef0fb6c23656b1e19626e"
+    },
+    "REGULAR_CONES.md": {
+      "bytes": 21276,
+      "sha256": "7a8ae965ba87428eec8125f1edf44a9fe29c12d869ca5e84b2d8671a7d44ef1a"
+    },
+    "dense_cone_polynomials.py": {
+      "bytes": 4738,
+      "sha256": "4cd75347fc6568b3317ca30030ac6479022a2461f59e7cd44035785281168139"
+    },
+    "regular_cone_determinants.json": {
+      "bytes": 23076,
+      "sha256": "315f4394ce99e0b0c4cd58d2a95c7165142e5ab954c8c70a9d0b8ca7857501e7"
+    },
+    "regular_cone_polynomials.py": {
+      "bytes": 4526,
+      "sha256": "2dc51cb6f18dc1cd6f765a2534f198a1049cf29f13ad8f98fd1a4d42355316a4"
+    },
+    "regular_cones.py": {
+      "bytes": 3357,
+      "sha256": "e8d6483987804fcfa9bfc2f3439b996018ba30365893be52bef8c504d6706b06"
+    },
+    "regular_cones_expected.json": {
+      "bytes": 22031,
+      "sha256": "5d8a7b86b2b02cdf7e2dfb7217370f74233139deb5c3be5efb64a1e3bd3084ed"
+    },
+    "verify_regular_cones.py": {
+      "bytes": 11890,
+      "sha256": "96c4314fb14255218fc04b51850bdfdfa7d491663f2ce376576c7a5127c9bac4"
+    }
+  },
+  "role": "independent mathematical reviewer",
+  "runtime_normal_validation": {
+    "matrix_rss_kib": 19720,
+    "matrix_seconds": 13.144274530990515,
+    "polynomial_rss_kib": 61224,
+    "polynomial_seconds": 5.83037888497347,
+    "same_canonical_outputs_as_optimized": true
+  },
+  "runtime_optimized": {
+    "cpu_intensive_processes": 1,
+    "matrix_rss_kib": 21732,
+    "matrix_seconds": 12.453915581980255,
+    "numeric_native_thread_limit": 1,
+    "polynomial_rss_kib": 68728,
+    "polynomial_seconds": 5.359811215021182,
+    "python": "CPython3.11.2",
+    "sympy": "1.14.0"
+  },
+  "scope_exclusions": [
+    "nonregular leaf graphs",
+    "degree0, degree1 and complete-leaf boundaries",
+    "optimal mixing interval or sharp cap gap",
+    "nonnegative feasibility of arbitrary alternative certificates",
+    "new six-point exceptional input audit",
+    "general Spectral Chvatal H/I",
+    "historical priority"
+  ],
+  "symbolic_method": "SymPy 1.14.0 exact Z polynomial Gram determinant and quotient; complete independent Fraction determining-grid check (1012 points); all coefficient tables match author public data",
+  "target_height": 7859,
+  "target_ref": "bafkreibu4m3bzwqbznhxlbo5ct4qv3xsc4hbu454nc62uetneultai5bw4",
+  "trust_boundary": [
+    "CPython exact integers/Fraction and inspected code",
+    "SymPy exact polynomial arithmetic with determining-grid crosscheck",
+    "ordinary unformalized incidence, lift, equality, product, projector proofs",
+    "previous independently audited six-point capped and fractional-dual inputs for conditional exceptional mixtures"
+  ]
+}
