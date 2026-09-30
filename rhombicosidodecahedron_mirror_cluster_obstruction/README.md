@@ -1,6 +1,22 @@
-# Rhombicosidodecahedron: local obstructions and global receiver caps
+# Rhombicosidodecahedron: local obstructions and adaptive receiver regions
 
 **six-rupert-3 — researcher — updated 2026-09-30.**
+
+[ADAPTIVE_RECEIVER_PROOF.md](ADAPTIVE_RECEIVER_PROOF.md) gives a sufficient
+exclusion criterion depending only on the receiver, and certifies a whole
+receiver polygon from exact corner inequalities. It excludes **every source
+orientation** in the closed chord caps of radius **1/200** about the ten
+unoriented threefold axes, enlarging the prior radius by 35. An explicit
+two-dimensional receiver triangle extends beyond even the radius-1/190 cap.
+Source roll, translation and scale at least one remain arbitrary.
+
+The complete persistent contact pool has 36 endpoint probes. Its exact center
+torque hull has sharp ball radius `phi-1`, verified by all 816 torque triples
+and 15 supporting facets. A concave long-edge gap rejects the remote roll
+branch: for one-sided shadow error `eta<=77/1000`, the roll chord modulo `C6`
+is at most `eta`. Combined with axial coercivity and full frame transports,
+this reduces a certified receiver patch from five passage parameters to two
+receiver parameters. The complementary normal domain remains unresolved.
 
 [LINEAR_ROLL_PROOF.md](LINEAR_ROLL_PROOF.md) excludes **every source orientation**
 when the receiver normal is within chord distance **1/7000** of one of the ten
@@ -82,6 +98,8 @@ From the repository root:
 
 ```sh
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/adaptive_receiver_certificate.py --self-test
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/linear_roll_certificate.py --self-test
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/global_cap_certificate.py --self-test
@@ -94,6 +112,20 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/verify.py --self-test
 ```
+
+The adaptive command rechecks and compares the entire linear-roll output and
+its inherited diameter/sign-region/cell hypotheses. It regenerates all 120
+standard edges, tests 43,200 corner gaps for both edge orientations, verifies
+6,480 selected support gaps and all 14,688 torque-triple support comparisons,
+and computes all 15 center facets. It checks ten roll-branch comparisons,
+23 cap bounds, exact rational radical enclosures on a fixed denominator-`10^12`
+grid, and every example-triangle corner hypothesis. Ten new malformed controls
+and twelve inherited controls are rejected. Every byte must match
+[adaptive_receiver_expected.json](adaptive_receiver_expected.json), SHA256
+`53c852471e2d787b8958f01cc6f6e1b5c210ce3ee2b3a524ddbe1a59e9514e98`.
+The first full replay took 45.98 seconds and 24,796 KiB peak child RSS, with
+one CPU job. No floating-point or solver verdict is a proof input; continuous
+polygon coverage and the source-elimination bridges are proved in prose.
 
 The linear-roll command rechecks the entire global-cap output, then validates
 the complete dodecagon against all sixty original vertices (720 inequalities),
@@ -176,8 +208,7 @@ the rhombicosidodecahedron non-Rupert conjecture. The universal convex-polyhedro
 conjecture is already disproved by the Noperthedron; wording in older numerical
 papers that it remains open does not change that result.
 
-Next: exclude the complementary receiver directions and nonlocal relative
-rotations, using the threefold sign-region gap and the positive uniform local
-angle to reduce the remaining domain. Improving conservative bounds may make
-a certified finite cover practical. The present results do not establish
-global non-Rupertness.
+Next: extend the adaptive criterion over a specified larger receiver domain,
+using actual receiver torque facets or certified polygon subdivisions.
+Other axial regions and the complementary nonlocal domain still need their
+own argument. The present results do not establish global non-Rupertness.
