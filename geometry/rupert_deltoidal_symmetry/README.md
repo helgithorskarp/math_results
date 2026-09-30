@@ -1,7 +1,7 @@
-# Deltoidal hexecontahedron: exact local exclusions and limiting axes
+# Deltoidal hexecontahedron: local exclusions, limiting axes and contact family
 
 Researcher: **six-rupert-1**. The named Catalan solid remains unresolved
-in the primary literature checked on 2026-09-29.
+in the primary literature checked through 2026-09-30.
 
 The strongest result excludes small relative rotations **with a moving
 receiver direction**, locally around every axis outside two exact symmetry
@@ -10,6 +10,20 @@ angle tends to zero must approach this 45-axis set. Every fixed inner
 orientation is also excluded from arbitrarily small reverse passages.
 [stable_proof.md](stable_proof.md) gives the precise quantifiers and proof.
 The global Rupert property remains unresolved.
+
+A further exact reduction at the 30-axis orbit leaves **one oriented
+rotation-axis ray** at each representative for a possible strict passage
+sequence with angles tending to zero: the corresponding body mirror
+normal. Two of its three incident receiver cells are also excluded.
+[contact_family_proof.md](contact_family_proof.md) proves this with two
+three-contact polynomial stresses, without assuming a rate at which
+the receiver approaches the exceptional direction.
+
+That proof additionally constructs a two-parameter family of nontrivial
+**proper closed containments** with angles tending to zero and exactly
+sixteen permanent vertex-edge contacts. The optimal closed scale is one;
+the family supplies no strict passage. It shows why uniform exclusion of
+closed containment cannot extend across the second exceptional orbit.
 
 The exceptional representatives are `(0,0,1)` and `(1,phi,1+3phi)`, where
 `phi=(1+sqrt(5))/2`. At each of their 45 orbit axes, a maximum-radius vertex
@@ -59,8 +73,9 @@ obstruction at other fixed projections.
 
 This is an intermediate result about restricted passages. It gives
 neither a passage nor a global non-Rupert proof for the solid. The
-remaining search includes moving pairs approaching the 45 exceptional
-axes and larger relative rotations; the global named question remains unresolved.
+remaining search includes the mirror-normal rotation case near the
+30-axis orbit, moving pairs near the 15 twofold axes, and larger relative
+rotations; the global named question remains unresolved.
 
 Read [proof.md](proof.md) for the analytic proof and precise scope.
 [verify.py](verify.py) checks the geometric input, exact hulls, invariant
@@ -74,13 +89,24 @@ python3 geometry/rupert_deltoidal_symmetry/verify.py
 python3 geometry/rupert_deltoidal_symmetry/local_certificate.py
 python3 -B geometry/rupert_deltoidal_symmetry/orientation_certificate.py --self-test
 python3 -B geometry/rupert_deltoidal_symmetry/stable_certificate.py --self-test
+python3 -B geometry/rupert_deltoidal_symmetry/contact_family_certificate.py --self-test
+python3 -B geometry/rupert_deltoidal_symmetry/frontier_certificate.py
+python3 -B geometry/rupert_deltoidal_symmetry/stress_limit_certificate.py
 ```
 
 Python 3.11 or later; no third-party packages. Verified with Python
 3.11.2. Expected outputs are [expected.json](expected.json),
 [expected_local.json](expected_local.json),
 [expected_orientation.json](expected_orientation.json), and
-[expected_stable.json](expected_stable.json). The stable checker rechecks
+[expected_stable.json](expected_stable.json),
+[expected_contact_family.json](expected_contact_family.json),
+[expected_frontier.json](expected_frontier.json), and
+[expected_stress_limit.json](expected_stress_limit.json). The contact-family
+checker verifies 744 cubic gap polynomials over an entire parameter rectangle,
+using 11,904 exact tensor Bernstein coefficients, and rejects three malformed
+controls. The limiting-stress checker replays the full polynomial cofactor
+identities, exact divisibility and leading-coefficient signs; it imports no
+CAS transcript. The stable checker rechecks
 the orientation certificate and takes approximately 19 seconds, including
 four malformed-certificate rejection tests. The two older
 checkers take approximately one second each; the orientation checker,

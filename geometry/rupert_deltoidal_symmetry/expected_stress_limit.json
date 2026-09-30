@@ -1,0 +1,157 @@
+{
+  "status": "exact stress identities: strict passage limits at E have only the mirror-normal axis",
+  "Tstar": "(5/2) + (-1)*sqrt(5)",
+  "remaining_oriented_axis_ray": [
+    "(-1) + (0)*sqrt(5)",
+    "(-1/2) + (-1/2)*sqrt(5)",
+    "(-1/2) + (1/2)*sqrt(5)"
+  ],
+  "body_mirror_normal": [
+    "(-1/2) + (-1/2)*sqrt(5)",
+    "(-3/2) + (-1/2)*sqrt(5)",
+    "(1) + (0)*sqrt(5)"
+  ],
+  "stress_certificates": [
+    {
+      "name": "minus",
+      "contacts": [
+        [
+          61,
+          58,
+          55
+        ],
+        [
+          58,
+          45,
+          45
+        ],
+        [
+          44,
+          57,
+          57
+        ]
+      ],
+      "positive_weight_limits": [
+        {
+          "epsilon_power": 2,
+          "coefficients": [
+            "(-500/99) + (-1000/297)*sqrt(5)",
+            "(1000/99) + (2000/297)*sqrt(5)",
+            "(12800/297) + (5600/297)*sqrt(5)"
+          ],
+          "Bernstein_on_Tstar_to_1": [
+            "(0) + (0)*sqrt(5)",
+            "(250/27) + (200/27)*sqrt(5)",
+            "(1300/27) + (200/9)*sqrt(5)"
+          ]
+        },
+        {
+          "epsilon_power": 1,
+          "coefficients": [
+            "(1250/297) + (650/297)*sqrt(5)",
+            "(2600/297) + (1000/297)*sqrt(5)"
+          ],
+          "Bernstein_on_Tstar_to_1": [
+            "(250/27) + (50/27)*sqrt(5)",
+            "(100/9) + (100/27)*sqrt(5)",
+            "(350/27) + (50/9)*sqrt(5)"
+          ]
+        },
+        {
+          "epsilon_power": 1,
+          "coefficients": [
+            "(875/66) + (-425/66)*sqrt(5)",
+            "(-25/33) + (25/11)*sqrt(5)"
+          ],
+          "Bernstein_on_Tstar_to_1": [
+            "(0) + (0)*sqrt(5)",
+            "(25/4) + (-25/12)*sqrt(5)",
+            "(25/2) + (-25/6)*sqrt(5)"
+          ]
+        }
+      ],
+      "determinant_divisor": "epsilon^2*z",
+      "determinant_quotient_limit_coefficients": [
+        "(2500/81) + (-500/27)*sqrt(5)",
+        "(-1000/27) + (200/81)*sqrt(5)"
+      ],
+      "determinant_limit_sign": -1,
+      "determinant_monomials": 55,
+      "determinant_sha256": "49fc83881b14f0b9baab7f84419a7709d46e097f3bdb3fc96f0054efd6984bf6"
+    },
+    {
+      "name": "plus",
+      "contacts": [
+        [
+          61,
+          58,
+          59
+        ],
+        [
+          45,
+          34,
+          45
+        ],
+        [
+          57,
+          61,
+          57
+        ]
+      ],
+      "positive_weight_limits": [
+        {
+          "epsilon_power": 2,
+          "coefficients": [
+            "(-500/99) + (-1000/297)*sqrt(5)",
+            "(1000/99) + (2000/297)*sqrt(5)",
+            "(12800/297) + (5600/297)*sqrt(5)"
+          ],
+          "Bernstein_on_Tstar_to_1": [
+            "(0) + (0)*sqrt(5)",
+            "(250/27) + (200/27)*sqrt(5)",
+            "(1300/27) + (200/9)*sqrt(5)"
+          ]
+        },
+        {
+          "epsilon_power": 1,
+          "coefficients": [
+            "(500/297) + (200/297)*sqrt(5)",
+            "(800/297) + (400/297)*sqrt(5)"
+          ],
+          "Bernstein_on_Tstar_to_1": [
+            "(500/297) + (400/297)*sqrt(5)",
+            "(100/33) + (500/297)*sqrt(5)",
+            "(1300/297) + (200/99)*sqrt(5)"
+          ]
+        },
+        {
+          "epsilon_power": 1,
+          "coefficients": [
+            "(250/33) + (-400/99)*sqrt(5)",
+            "(100/99) + (200/99)*sqrt(5)"
+          ],
+          "Bernstein_on_Tstar_to_1": [
+            "(0) + (0)*sqrt(5)",
+            "(425/99) + (-100/99)*sqrt(5)",
+            "(850/99) + (-200/99)*sqrt(5)"
+          ]
+        }
+      ],
+      "determinant_divisor": "epsilon^2*z",
+      "determinant_quotient_limit_coefficients": [
+        "(-4000/297) + (2000/297)*sqrt(5)",
+        "(8000/891) + (4000/891)*sqrt(5)"
+      ],
+      "determinant_limit_sign": 1,
+      "determinant_monomials": 54,
+      "determinant_sha256": "f46c2dea8ec4f8dc7413c453b38f68d09dd3dde45c470740ed67653302e628d2"
+    }
+  ],
+  "axial_mirror_ray_multipliers": [
+    "(1) + (4/5)*sqrt(5)",
+    "(-5/11) + (4/11)*sqrt(5)"
+  ],
+  "receiver_support_domain": "cell 0 union its body-mirror image",
+  "receiver_support_comparisons": 1860,
+  "solver_or_floating_point_decisions": 0
+}
