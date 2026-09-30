@@ -1,0 +1,135 @@
+{
+  "formula": {
+    "base_binary_conflicts": 1767678,
+    "base_cnf_sha256": "a1df05627a7f8708e81cd6ce7d7f57c290da596acf75e6a37ef8a75e27c18bf5",
+    "clauses": 1770654,
+    "cnf_sha256": "ce5753a51680719ab24db4ad43f4763679dd846284db6f6e3896564212899185",
+    "distinct_pattern_clauses": 1091,
+    "inventory": {
+      "anchored_trials": 99511,
+      "boundary_vertices": 812,
+      "candidate_pair_exclusions": 10139,
+      "candidates": 7693,
+      "fixed_cells": 16906,
+      "fixed_copies": 79,
+      "fixed_pair_pruned": 417,
+      "required_cells": 1468
+    },
+    "pattern_instance_counts": [
+      1049,
+      25,
+      17
+    ],
+    "status": "UNSAT; independently DRAT verified",
+    "variables": 7693
+  },
+  "geometry": {
+    "patterns": [
+      {
+        "copies": 2,
+        "hole_area_units": 1,
+        "pattern_sha256": "d4db8ccf7f8ac787c59ebb5da85f1de01067150ceb4e4c8513ccf97ba6ff7b2d",
+        "verified": true
+      },
+      {
+        "copies": 3,
+        "filled_star_mask": 62,
+        "pattern_sha256": "a27b52a91c80d641f471c4417b2c6a36efc01c8f426d8db00af67080e1cd2564",
+        "provider_trials": 22,
+        "verified": true
+      },
+      {
+        "available_providers": [
+          1,
+          1
+        ],
+        "copies": 4,
+        "forced_poses": [
+          [
+            {
+              "matrix": [
+                -1,
+                -1,
+                0,
+                1
+              ],
+              "translation": [
+                -3,
+                -3
+              ]
+            }
+          ],
+          [
+            {
+              "matrix": [
+                -1,
+                -1,
+                1,
+                0
+              ],
+              "translation": [
+                -3,
+                -3
+              ]
+            }
+          ]
+        ],
+        "pattern_sha256": "e6801cdd85e119faae7cc7d3f11912e47ff3302a1a9d4414cb8fe281d741affb",
+        "provider_trials": [
+          22,
+          72
+        ],
+        "verified": true
+      }
+    ],
+    "prefixes": [
+      {
+        "cells": 214,
+        "chi": 1,
+        "level": 0
+      },
+      {
+        "cells": 1284,
+        "chi": 1,
+        "level": 1
+      },
+      {
+        "cells": 3638,
+        "chi": 1,
+        "level": 2
+      },
+      {
+        "cells": 8560,
+        "chi": 1,
+        "level": 3
+      },
+      {
+        "cells": 16906,
+        "chi": 1,
+        "level": 4
+      }
+    ],
+    "root_cells": 214
+  },
+  "reference_native": {
+    "checker_returncode": 0,
+    "proof_bytes": 1,
+    "proof_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "solver_stats": {
+      "conflicts": 0,
+      "decisions": 0,
+      "propagations": 6432,
+      "restarts": 0
+    }
+  },
+  "reference_resources": {
+    "checker_timeout_seconds": 10,
+    "conflict_guard": 20000,
+    "formula_seconds": 38.401,
+    "geometry_seconds": 5.416,
+    "maximum_intensive_local_jobs": 1,
+    "maximum_peak_parent_rss_kib": 723372,
+    "threads": 1,
+    "wrapper_wall_seconds": 55
+  }
+}
