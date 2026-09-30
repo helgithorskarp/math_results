@@ -2,6 +2,24 @@
 
 **six-rupert-3 — researcher — updated 2026-09-30.**
 
+[ACTUAL_TORQUE_HULL_PROOF.md](ACTUAL_TORQUE_HULL_PROOF.md) certifies an
+**actual receiver torque ball** over an entire closed triangle, allowing
+the hull's facets to change. The receiver criterion includes the preceding
+directional criterion. The triangle `B,L45,C10` contains `B,L60,C20` and has
+**8/3 times its unit-z chart area**. Every receiver in it excludes every
+source orientation, arbitrary roll and translation, and scale at least one.
+Its actual torque ball has radius at least **3/5** throughout; the strict
+passage-exclusion margin exceeds **1/30**. The normal at `L45` has chord
+greater than **1/52** from the center. Global RID Rupertness remains open.
+
+Ten persistent original endpoint probes retain the complete center torque
+hull. For all 120 possible actual facet triples, exact homogeneous
+polynomials certify all seven simplex strata: 726 cases have opposite
+strict support gaps and 114 have the required squared facet-distance bound.
+Thus all 840 cases cover the interior, edges and corners without assuming
+the center's facet topology persists. This supplies a reusable finite
+certificate for affine torque hulls and continuous receiver coverage.
+
 [DIRECTIONAL_TRANSPORT_PROOF.md](DIRECTIONAL_TRANSPORT_PROOF.md) sharpens the
 receiver criterion using the actual axial heights of supporting vertices.
 It includes the entire preceding adaptive criterion, excludes **every source
@@ -120,6 +138,8 @@ From the repository root:
 
 ```sh
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/actual_torque_hull_certificate.py --self-test
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/directional_transport_certificate.py --self-test
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/adaptive_receiver_certificate.py --self-test
@@ -136,6 +156,28 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/verify.py --self-test
 ```
+
+The actual-hull command validates all 1,800 original-vertex/corner supports
+for the ten probes, regenerates their complete center subhull with 120
+triples and 1,200 support comparisons, and checks all 540 full-pool torque
+supports there. It generates and certifies every one of the 840 possible
+facet/stratum cases, plus direct arithmetic audits of 480 normal/support,
+4,800 gap and 480 homogenized squared-distance identities. Exact corner and
+radical bounds cover the entire receiver triangle. Thirteen malformed
+controls are rejected. Every byte must match
+[actual_torque_hull_expected.json](actual_torque_hull_expected.json), SHA256
+`b74584ad4ed343925de777ca5b98f1217c95fdb08f073920acee28c8cd8aaaac`.
+Normal and optimized (`-O -B`) replays both matched every expected byte.
+They took 14.91 and 15.06 seconds, with 21,108 and 24,820 KiB peak child
+RSS respectively, one process and all configured threads one.
+
+The actual-hull checker pins the directional and adaptive compact inputs;
+the preceding directional source/roll theorem is its published dependency.
+A separate full parent replay in this pass reached its 55-second bound and
+was stopped, with no mathematical verdict or limit increase. The parent
+source is unchanged and its preceding normal and optimized replays below
+already match exactly. The new checker independently regenerates every
+new actual-hull hypothesis and continuum coefficient certificate.
 
 The directional command replays and compares the entire adaptive output,
 then regenerates the dodecagon, validates all 360 long-edge/vertex height
