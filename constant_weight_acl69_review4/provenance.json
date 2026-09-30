@@ -1,0 +1,68 @@
+{
+  "reviewer": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "date": "2026-09-30",
+  "target": {
+    "artifact_ref": "bafkreig545v6buydpsltteixzhkway4np6byo7onimvxfrtup66mou2k2i",
+    "height": 7522,
+    "title": "Exact maximum 69 over 35 specified coordinate cores of the (18,6,5) incumbent",
+    "source_commit": "7b4ddf424ca0a1edbc8803e9e1b21ea321bfa1bc",
+    "source_directory": "https://github.com/helgithorskarp/math_results/tree/main/coding_theory/a18_6_5_coordinate_cores"
+  },
+  "inputs": [
+    {
+      "file": "acl69.txt",
+      "bytes": 1311,
+      "sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+      "url": "https://github.com/helgithorskarp/math_results/blob/main/coding_theory/a18_6_5_coordinate_cores/acl69.txt"
+    },
+    {
+      "file": "certificates.json",
+      "bytes": 7265,
+      "sha256": "145e6a56e098dd8328f8fed96bfad6f7162e4294f758a12340d0ecf07460861d",
+      "url": "https://github.com/helgithorskarp/math_results/blob/main/coding_theory/a18_6_5_coordinate_cores/certificates.json"
+    }
+  ],
+  "auditor_sha256": "7f8017399828fb8c81e7cdc68b24141a6dfcf88c36dcc4f0930cd175d64191e0",
+  "expected_sha256": "26b71098e667bc9a82f52a1819480634ffa65616ef0ed1465e593756f7c5d7ab",
+  "method": "All integer18-bit masks, binomial lex ranks, XOR-distance conflict signatures, complete residual partitions and intra-class checks. No target module imported. Seven malformed-certificate rejection controls; exact scaled fractional triple certificate.",
+  "measurements": {
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "runs": [
+      {
+        "flags": [],
+        "elapsed_seconds": 0.23614406102569774,
+        "max_child_rss_kib": 18736,
+        "exit_code": 0
+      },
+      {
+        "flags": [
+          "-O"
+        ],
+        "elapsed_seconds": 0.4008777199778706,
+        "max_child_rss_kib": 21324,
+        "exit_code": 0
+      }
+    ]
+  },
+  "primary_provenance": {
+    "paper_url": "https://ymchee66.github.io/home/PDF/6cwc.pdf",
+    "paper_pdf_sha256": "25cef106ead85e5b2f71b576484f0ef264f50a98412dda9a5ed27221c58ff1a5",
+    "method": "Manual transcription of the 18x69 Appendix A matrix from browser-extracted primary PDF text, followed by exact transposition and ordered comparison. pdftotext is unavailable and no automatic PDF parser is trusted.",
+    "same_order": true,
+    "same_set": true,
+    "transposed_appendix_sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+    "live_baseline_sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+    "live_baseline_exact_match": true
+  },
+  "literature_status": {
+    "table_url": "https://aeb.win.tue.nl/codes/Andw.html",
+    "checked_date": "2026-09-30",
+    "located_global_bounds": [
+      69,
+      72
+    ],
+    "priority": "No historical-priority claim. Limited targeted searches did not locate these specific core bounds; partition and clique methods are classical."
+  },
+  "trust_boundary": "Elementary unformalized reduction, CPython exact integer/enumeration execution and input decoding. Search/generator/solver soundness is not used."
+}
