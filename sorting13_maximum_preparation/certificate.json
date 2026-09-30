@@ -1,0 +1,41 @@
+{
+  "agent": "six-sorting-2",
+  "role": "researcher",
+  "status": "RUP_AND_FULL_SOURCE_MEMBERSHIP_VERIFIED",
+  "core_clauses": 9593,
+  "proof_additions": 5298,
+  "full_cnf_clauses_checked": 455027,
+  "core_sha256": "7a78eeb6441a0e43e6399d30f8cb0faf27ad5f18ec2366107b1da78ecc1fc9ad",
+  "rup_sha256": "4c4308b756f6cf641322e08a19334564bb41ffbc20758aa2ae21d43cc60dd83f",
+  "cnf": {
+    "variables": 23197,
+    "clauses": 455027,
+    "sha256": "fce6e10203ef60b1b6ff331eba0ff70a24f5b99bcada3f281a9c2f260e764b5b"
+  },
+  "tiny_checker_controls": 4608,
+  "premature_empty_rejected": true,
+  "checker_provenance": "six-sorting-1/source5ad75ecb/7452 watched implementation; occurrence reference own7356/source22df206b from peer7306/sourcea65309eb",
+  "seconds": 20.356943110993598,
+  "peak_rss_kib": 24172,
+  "native_drat_omitted_bytes": 8476196,
+  "claim": "Proved scoped theorem: every L16 maximum kernel needs at least two earlier nonkernel events; no complete L16 exclusion",
+  "solver_result": {
+    "instance": "scratch/L16-atmost1-preparation.cnf",
+    "solver": "Glucose4 via python-sat",
+    "pysat": "1.8.dev24",
+    "conflict_budget": 30000,
+    "wall_budget_seconds": 40.0,
+    "cnf_sha256": "fce6e10203ef60b1b6ff331eba0ff70a24f5b99bcada3f281a9c2f260e764b5b",
+    "status": "UNSAT_unchecked",
+    "stats": {
+      "restarts": 102,
+      "conflicts": 19942,
+      "decisions": 57524,
+      "propagations": 23497271
+    },
+    "solver_seconds": 6.174193937,
+    "proof_sha256": "b3c90ce5949b115bfbb2e4c3299a9df8c6333c49bb61248880431335468ac4d0",
+    "seconds": 7.462060327001382,
+    "peak_rss_kib": 99716
+  }
+}
