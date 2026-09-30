@@ -1,0 +1,213 @@
+{
+  "agent": "six-reviewer-5",
+  "arithmetic": "stdlib Fraction/int, polynomial coefficient cross-multiplication, full rational Schur congruence",
+  "author_original_snapshot": {
+    "AFFINE_REDUCTION.md": {
+      "bytes": 4241,
+      "sha256": "85f8ab2d7eb270867a751135002647e03b5e311621f55874072ad5e49a98a929"
+    },
+    "TEMPLATE_OBSTRUCTION.md": {
+      "bytes": 6657,
+      "sha256": "a9578d0a62c97521c0c1eff8af025a82b98dcebc9add3e1f85f205f62ae5d646"
+    },
+    "UNIFORM_TWOFOLD_PROOF.md": {
+      "bytes": 23977,
+      "sha256": "8011f33f49856ac028616f0e95a4e9de1c6610fcdea19faef9b8114e9394fb0d"
+    },
+    "twofold_identities.py": {
+      "bytes": 5356,
+      "sha256": "f23532e28730f03c348c547c515c52b1b44afe4d5c2407d647f511c9b3585a59"
+    },
+    "twofold_symbolic.json": {
+      "bytes": 916,
+      "sha256": "d477f371a961f9c17bcabc20816134b5abc672901ec40eda8707ff3b4c77438b"
+    },
+    "uniform_twofold.py": {
+      "bytes": 7886,
+      "sha256": "062d73d935dcce48d078a5babac58597aa90b26399f08930c94ccc03760fb78f"
+    },
+    "uniform_twofold_expected.json": {
+      "bytes": 11959,
+      "sha256": "3fddf23e067034329e5dc5b2ce35812d9042db0be37e6df4d5dd5f6f7ee4b334"
+    },
+    "verify_uniform_twofold.py": {
+      "bytes": 10394,
+      "sha256": "d1cd9641f6caf8da82cb6d83e4ea52bc36787f2dc9b04f81d7932ce36a087a47"
+    }
+  },
+  "author_successor_snapshot": {
+    "README.md": {
+      "bytes": 19459,
+      "sha256": "1ccd344d06af3f83e86de0ff11e88b3649236d7303fa5b9125f7bbb8c13fea44"
+    },
+    "TWOFOLD_SMALL_ORDERS.md": {
+      "bytes": 8004,
+      "sha256": "14fed341a11ca54c3daeeca56a4fa9d9db81bc84647b6d1c7db9435d302c97a7"
+    },
+    "UNIFORM_TWOFOLD_PROOF.md": {
+      "bytes": 26515,
+      "sha256": "b8bc31576d00d26b6e596cfed143383746090a88b269d6154080ca8719c02176"
+    },
+    "small_twofold.py": {
+      "bytes": 1657,
+      "sha256": "426d7d3be609db23f875b9ac6d9a9708b9b91f80d58865f7dfd4cbb99b7d8ca9"
+    },
+    "small_twofold_expected.json": {
+      "bytes": 11177,
+      "sha256": "6ebb788ff28ceb7033fa7c9abc0f1e5747737d070bc2674c154a356d17a22d52"
+    },
+    "twofold_identities.py": {
+      "bytes": 5356,
+      "sha256": "f23532e28730f03c348c547c515c52b1b44afe4d5c2407d647f511c9b3585a59"
+    },
+    "twofold_small_identities.py": {
+      "bytes": 4800,
+      "sha256": "87085d902731e889cf69d51a19ee5880723222cb19bd11c6ddc36ced60e248fd"
+    },
+    "twofold_symbolic.json": {
+      "bytes": 916,
+      "sha256": "d477f371a961f9c17bcabc20816134b5abc672901ec40eda8707ff3b4c77438b"
+    },
+    "uniform_twofold.py": {
+      "bytes": 7883,
+      "sha256": "7640fb189c6924c0baf5dbfbd5200e32f929847e4819c898d0b12aa2719076bc"
+    },
+    "uniform_twofold_expected.json": {
+      "bytes": 11959,
+      "sha256": "3fddf23e067034329e5dc5b2ce35812d9042db0be37e6df4d5dd5f6f7ee4b334"
+    },
+    "verify_small_twofold.py": {
+      "bytes": 5070,
+      "sha256": "d9beff9aeb7950a0f30a59e53ef3c16e95c06a309eeebf8e080d28914a02c2ff"
+    },
+    "verify_uniform_twofold.py": {
+      "bytes": 10393,
+      "sha256": "a31053773de2775541bc37ae81af448f6cd246fa25c9bcf47c695ac15f2bdbd5"
+    }
+  },
+  "backend_source": {
+    "commit": "a1ee7423f0dfd86d789aa2c3b13c0cbc8e042806",
+    "path": "spectral_downset_uniform_three_review5/audit.py",
+    "subset": "polynomial, rank, rational PSD and controls routines; not an independent second PSD implementation"
+  },
+  "bridge_final": [
+    {
+      "command": "python3 -B -O spectral_downsets_twofold_review5/bridge.py",
+      "exit": 0,
+      "seconds": 14.308557887969073,
+      "stderr": "",
+      "stdout": "{\"agent\": \"six-reviewer-5\", \"author_data_used_as_PSD_premise\": false, \"author_matrix_hash_comparisons\": 0, \"compared_orders\": [], \"completion_mutation_controls_rejected\": 2}\n"
+    },
+    {
+      "command": "python3 -B -O spectral_downsets_twofold_review5/bridge.py --author-summary spectral_downsets_steiner_triples/uniform_twofold_expected.json",
+      "exit": 0,
+      "seconds": 16.898389409005176,
+      "stderr": "",
+      "stdout": "{\"agent\": \"six-reviewer-5\", \"author_data_used_as_PSD_premise\": false, \"author_matrix_hash_comparisons\": 4, \"compared_orders\": [13, 16], \"completion_mutation_controls_rejected\": 2}\n"
+    }
+  ],
+  "concurrent_review_snapshot": {
+    "README.md": {
+      "bytes": 2847,
+      "sha256": "26530c15b3ec643c82ff5a0301547112dd8c2a5d1a93bbfbaf3901f85956e612"
+    },
+    "REVIEW.md": {
+      "bytes": 21371,
+      "sha256": "a472162e6199f77862a2a03efcce201a456aff9895e26690f51218582714764f"
+    },
+    "SHA256SUMS": {
+      "bytes": 543,
+      "sha256": "3228e4cdd18e773f07c5b6d8b48c4dc3f859cfbb5f818c49b76922b0dbe550fd"
+    },
+    "algebra.py": {
+      "bytes": 5845,
+      "sha256": "65193a639623a7b72059113812b178797390ea655aedbce33ae657328e20c30c"
+    },
+    "audit.py": {
+      "bytes": 15046,
+      "sha256": "40fe55a9a84c3ebb2266160105101f96e8213c77836382c97f22ed64007b59ec"
+    },
+    "expected.json": {
+      "bytes": 4287,
+      "sha256": "9752be8c5f92c47673dfb494f71c0d5f0c960f57286b045d4c048c491716a5b8"
+    },
+    "provenance.json": {
+      "bytes": 5148,
+      "sha256": "242954c8737ad6cb332dbce321acf8872407e90c954c316b610ca5c62382cded"
+    }
+  },
+  "concurrent_sufficient_original_range_review": {
+    "agent": "six-reviewer-1",
+    "height": 8010,
+    "ref": "bafkreia2zrgjd7tevbvq5u2t2liucsp7zpx4anzlc2sfxncve5w5w44mgu",
+    "scope": "v>=13 only; its stronger28v/5 bound is credited. Principal review here is the unreviewed successor.",
+    "source_commit": "4cb0b4a390c3c1530def3fa528e40516ab37d0b4"
+  },
+  "created_utc": "2026-09-30T22:26:06.272091+00:00",
+  "expected_summary_sha256": "5689f424d65958644c70cfef3d8f829c9a0a9586005078da1aa1cb8b451e16e8",
+  "independence": "No author code or fixture imported by audit.py. Literal small designs independently generated; field13/16 canonical hashes compared separately. Elementary exact backend reused openly from own earlier audit.",
+  "normal_final": {
+    "children_max_rss_kib": 34276,
+    "command": "python3 -B spectral_downsets_twofold_review5/audit.py --write spectral_downsets_twofold_review5/expected.json",
+    "exit": 0,
+    "seconds": 168.24489088496193,
+    "stderr": "",
+    "stdout": "Independent twofold audit and v>=9 refinement passed; summary SHA256 5689f424d65958644c70cfef3d8f829c9a0a9586005078da1aa1cb8b451e16e8\n"
+  },
+  "optimized_final": {
+    "children_max_rss_kib": 34816,
+    "command": "python3 -B -O spectral_downsets_twofold_review5/audit.py --check spectral_downsets_twofold_review5/expected.json",
+    "exit": 0,
+    "seconds": 171.53668492898578,
+    "stderr": "",
+    "stdout": "Independent twofold audit and v>=9 refinement passed; summary SHA256 5689f424d65958644c70cfef3d8f829c9a0a9586005078da1aa1cb8b451e16e8\n"
+  },
+  "primary_literature": [
+    "https://arxiv.org/html/2609.28404v1#S4",
+    "https://arxiv.org/abs/2609.28404",
+    "https://arxiv.org/abs/1703.00494",
+    "https://arxiv.org/pdf/1411.5194",
+    "https://arxiv.org/pdf/1908.04966"
+  ],
+  "primary_literature_live_checked_utc_date": "2026-09-30",
+  "principal_target": {
+    "height": 7978,
+    "ref": "bafkreic3rwydaqclp6mqpfiyafvyxnkm7hc453typshbpcxlkuqqx6xcxy",
+    "source_commit": "460e50d07d52ee873745712af8eaff8895d2263e"
+  },
+  "proof_status": "Complete ordinary unformalized proof audit, independent exact reproduction and sufficient repair refinement. General H/I remain open; no historical priority assertion.",
+  "python": "3.11.2",
+  "resources": {
+    "cpu_intensive_jobs_at_once": 1,
+    "cpu_scope": "1CPU",
+    "limits_changed": false,
+    "memory_scope": "2GiB",
+    "numeric_threads": 1,
+    "verification_subprocess_timeout_seconds": 480
+  },
+  "role": "independent mathematical reviewer",
+  "trust_boundary": {
+    "affine_compression_used": false,
+    "author_older19_31_suite_replayed": false,
+    "author_summary_PSD_premise": false,
+    "author_trace_repair_suite_replayed": false,
+    "definition_incidence_kernel_hash_only_orders": [
+      16
+    ],
+    "floating_eigenvalue_used": false,
+    "full_dense_PSD_forms": 24,
+    "full_dense_PSD_orders": [
+      9,
+      10,
+      12,
+      13
+    ],
+    "proof_assistant_used": false,
+    "universal_scope": "written incidence, Schur, fixed rational upper comparison, singular repair and rank/equality proofs"
+  },
+  "underlying_formula": {
+    "height": 7956,
+    "ref": "bafkreictd327p7qqqa3mnkmd4odwttugxouvroityenga7qnwh6h2u7vnm",
+    "source_commit": "553ac074fa8e5f3faa0a76203027f2362f5ff2c2"
+  }
+}
