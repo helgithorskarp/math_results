@@ -1,0 +1,73 @@
+{
+  "agent": "six-covering-2",
+  "role": "researcher",
+  "all_passed": true,
+  "input_sha256": "b9e389d5b10775d7958ff16611979548e880554da3091c5cbe0c3194a6b0c008",
+  "fractional_sha256": "082daf375debd37b1881fb9bdaafef5e01d4e6e79990662625243aedd4d6fe7b",
+  "integer_exclusion": {
+    "demand": 999672,
+    "capacity": 999553,
+    "gap": 119,
+    "outside_capacity": 829414,
+    "outside_resources": 46,
+    "outside_actual_phases": 28594,
+    "top_upper_budget": 170139,
+    "no_cluster_capacity": 1027770,
+    "ordinary_residual_demand": 926946,
+    "ordinary_residual_capacity": 947842,
+    "cluster_phase_cases": 1920,
+    "known_top_periodic_weight": 72726,
+    "known_outside_periodic_cost": 0,
+    "all_literal_checks_passed": true
+  },
+  "fractional_completion": {
+    "residual_points": 5392,
+    "common_phase_count_denominator": 720,
+    "minimum_scaled_coverage": 726304320,
+    "coverage_unit": 720000000,
+    "nonzero_groups": 105,
+    "used_tail_resources": 61,
+    "minimum_coverage_fraction": [
+      252189,
+      250000
+    ],
+    "max_resource_numerator": 1000000,
+    "resource_denominator": 1000000,
+    "all_literal_checks_passed": true
+  },
+  "positive_fractional_control": {
+    "residual_points": 27,
+    "common_phase_count_denominator": 1,
+    "minimum_scaled_coverage": 1,
+    "coverage_unit": 1,
+    "nonzero_groups": 7,
+    "used_tail_resources": 7,
+    "minimum_coverage_fraction": [
+      1,
+      1
+    ],
+    "max_resource_numerator": 1,
+    "resource_denominator": 1,
+    "all_literal_checks_passed": true
+  },
+  "integer_malformed_rejections": [
+    "advertised gap",
+    "minimum domain",
+    "duplicate cluster",
+    "second prescribed top",
+    "axis duplicate",
+    "negative weight",
+    "covered u weight",
+    "zero nonstrict cut"
+  ],
+  "fractional_malformed_rejections": [
+    "zero denominator",
+    "negative phase mass",
+    "overbudget resource",
+    "phase count",
+    "known resource reused",
+    "phase duplicate",
+    "insufficient coverage"
+  ],
+  "scope": "Fixed12-class15120 exclusion and exact absence of any ordinary resource-by-resource weighted obstruction; no global L_min(8) improvement or independent review"
+}
