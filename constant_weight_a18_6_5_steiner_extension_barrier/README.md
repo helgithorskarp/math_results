@@ -1,4 +1,63 @@
-# Six old-point outsiders are necessary to reach 70
+# Seven old-point outsiders are necessary to reach 70
+
+Author: **six-code-2, researcher**, 2026-09-30.
+
+Fix the classical68-circle Steiner `S(3,5,17)` and add an eighteenth
+point. Among `(18,6,5)` packings with at most **six** old-point words
+outside this design, the exact maximum is **69**. Thus every packing
+of size at least70 needs at least **seven** outsiders, relative to
+every coordinate copy of this classical design and every added point.
+The packing itself is arbitrary. The unrestricted
+[primary bounds remain69--72](https://aeb.win.tue.nl/codes/Andw.html).
+
+The [new proof](FOUR_GAP_PROOF.md) establishes two exact finite lemmas:
+
+- `s>=5` implies `R-a>=5`, for arbitrary `t`. All814385 unordered
+  four-gap choices are covered by92 actual permutation orbits. Their
+  full record graphs are five-clique-free. Cases61 and91 have maximum
+  outsider count three; the other90 have maximum four.
+- If `t=1` and `R-a=5`, then `s<=5`. One noncontained four-set normalizes
+  to mask15. Its actual eight-element stabilizer partitions the64
+  possible extra gap circles into13 cases. Their maximum outsider
+  counts are4 or5, with checked69-word packings attaining5 in three cases.
+
+The first census has2669983 records over92 cases. Production mask
+enumeration and separate fixed-order set enumeration agree on every
+record. Explicit four-set conflicts and pair-incidence graph reconstruction
+agree on all canonical graph-row digests. The original construction
+search excludes six-cliques; the separate complete clique census also
+excludes five-cliques in every four-gap case. The latter strengthens
+the production target. No solver or floating-point inference is used.
+
+Use CPython3.11+, standard library only, one process at a time:
+
+```sh
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
+python3 -B generate_four_gap.py
+python3 -B generate_five_gap_single.py
+python3 -B verify_four_gap.py --compare
+python3 -B audit_four_gap.py
+```
+
+The [compact manifest](four_gap_expected.json) contains exact orbit
+representatives, counts, canonical digests, and small attaining fixtures.
+Full record/graph corpora and verbose logs are omitted. The verifier
+can save compact per-case summaries under a workspace scratch path
+with `--checkpoint-dir`. A `--case N` replay identifies partial coverage;
+adding `--single` selects a one-word case. Only the default full replay
+checks all105 cases.
+
+The complete separate replay with entrywise comparison took1237.82 seconds
+and147108 KiB peak RSS on CPython3.11.2, with one CPU process. Every
+phase remained within its45-second guard; the slowest complete case
+took25.47 seconds across its phases. The audit checks both clique
+kernels against all32768 graphs on six vertices for targets3--6,
+3528 actual record pairs, including122 positive identical-replacement
+pairs, and rejects nine corrupted witnesses. The written completeness
+and geometric bridges are unformalized. Both implementations are by
+this same researcher; no independent peer review is claimed.
+
+## Earlier six-outsider barrier
 
 Author: **six-code-2, researcher**, 2026-09-30.
 
@@ -91,6 +150,5 @@ python3 -B verify_two_gap.py
 python3 -B audit_two_gap.py
 ```
 
-For a70-word packing with exactly six outsiders, the remaining minimal
-branches are `t=0,R-a=4` and `t=1,R-a=5`. These construction frontiers are
-not excluded here.
+The new four-gap proof closes both former six-outsider construction
+frontiers, `t=0,R-a=4` and `t=1,R-a=5`.
