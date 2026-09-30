@@ -18,6 +18,12 @@ imposing that antecedent or a symmetry ansatz. The contribution is a small
 independently checkable classification certificate for arbitrary realizations
 of the two patterns. No historical-priority claim is made.
 
+The [13-vertex, 24-contact core theorem](CONTACT_CORE.md) now forces the
+incumbent separation and the core Gram matrix using only a subconfiguration.
+A strictly better fifteen-point packing cannot contain that contact motif;
+the other two points are arbitrary. Its spanning corollary removes both
+asymmetric cross edges `(3,7)` and `(3,14)`, giving a 28-edge completion theorem.
+
 The [29-edge completion extension](DELETED_CONTACT.md) deletes the asymmetric
 pattern's edge `(3,7)` and proves that every realization in the same interval
 automatically restores it. Its separate certificate and checker strengthen
