@@ -2,6 +2,47 @@
 
 **six-rupert-3 — researcher — updated 2026-09-30.**
 
+[THRESHOLD_RECEIVER_PROOF.md](THRESHOLD_RECEIVER_PROOF.md) now excludes
+every strict passage for **all receivers with `f(n)^2>=beta`**, where
+`f(n)=min |v.n|` and `beta=(19-8phi)/29`. Every strict Rupert passage must
+therefore receive at **`f(n)^2<beta`**, with squared receiving diameter
+**strictly greater than `(736+960phi)/29`**. The global RID question remains
+**open** in the region below this threshold.
+
+The sixty isolated nonwinning threshold axes form two proper-body orbits of
+thirty. A validated four-quarter cover of the entire roll circle excludes
+every winning source on both receiving orbits with physical support margin
+greater than **`569/48000`**, after angular and actual source-corner losses.
+The certificate checks 198,144 facet–corner–parameter cases. Positive original
+vertex balances and the published complete global spectrum establish
+exhaustiveness of all sixty axes.
+
+All closed threshold containments are classified exactly. The lower-area
+orbit has 120 proper equal-shadow orientations, `G union J_n G`. The
+higher-area orbit has **240 proper orientations in four disjoint left
+cosets**: 120 equal shadows and 120 unequal closed containments. A **36-degree
+turn about `(0,phi,-1)`** realizes the latter. Its eight shared outer-circle
+points prevent strict passage. Unit scale and zero translation are forced
+in all closed threshold cases. This unequal example is a boundary
+containment, with no claim of a Rupert certificate.
+
+Reproduce with Python 3.11+ standard library:
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/threshold_receiver_certificate.py --self-test
+```
+
+Every byte must match [threshold_receiver_expected.json](threshold_receiver_expected.json),
+SHA256 `5516794048036b35ce73b63b0fdf5eb1c01620b260b11f87dfc401e0e5ccfeac`.
+The checker regenerates all new interval witnesses, both actual full shadows,
+all sixty active balances, all circle correspondences and the exact proper
+rotation/coset matrices. It rejects fifteen malformed controls. The pinned
+winning and global predecessors are explicit dependencies; the complete
+old global/directional/winning self-tests are not claimed rerun. The written
+proof is unformalized and unreviewed; priority is not asserted.
+
+## The preceding winning receiver theorem
+
 [WINNING_RECEIVER_PROOF.md](WINNING_RECEIVER_PROOF.md) excludes every source
 on the **entire closed winning receiver superlevel components**
 `f(n)^2>=beta`, where `f(n)=min |v.n|` and `beta=(19-8phi)/29`.
@@ -13,12 +54,11 @@ circle-point obstruction closes the threshold boundary.
 Closed containments have exactly the same 120 proper equal-shadow rotations
 `G union J_n G`, with unit scale and zero translation.
 
-Any strict passage must therefore receive at `f(n)^2<beta`, or at one of
-the sixty isolated unoriented nonwinning optimizer axes at equality.
-Its squared receiver diameter must be at least `(736+960phi)/29`.
-These remaining directions and the global RID question are **open**.
-The written proof is unformalized; independent review and priority are
-not asserted.
+That preceding theorem left sixty isolated nonwinning threshold axes.
+The new threshold theorem above closes all sixty and makes the receiving
+diameter bound strict. The region `f(n)^2<beta` and the global RID question
+remain **open**. The written proofs are unformalized; independent review
+and priority are not asserted.
 
 Reproduce with Python 3.11+ standard library:
 
