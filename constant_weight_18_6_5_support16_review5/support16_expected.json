@@ -1,0 +1,142 @@
+{
+  "affine": {
+    "distinguished_frames": 36,
+    "inverse_splits_checked": 30,
+    "pair_partition": 120,
+    "plane_lines": 20,
+    "plane_lines_sha256": "497b60893ec09c9202450bbf7f576b618683dd3781f0e2e093bff3ef9e3e513f",
+    "z_star_sha256": "8f49bf7ec1e12d650c2b8ab59b230050510f235a6091405b5da5429e22e9ceb3"
+  },
+  "all_six_cases_complete": true,
+  "cases": [
+    {
+      "case": [
+        2,
+        3
+      ],
+      "conflicting_pairs": [
+        [
+          8,
+          12
+        ]
+      ],
+      "status": "FIXED_BLOCK_LEAVE_CONFLICT"
+    },
+    {
+      "candidate_quads": 449,
+      "candidate_quads_sha256": "9ae7755ceec41142770c71ea0c5b0214f6b67813e4f25d57aa078cd87ce62b3b",
+      "case": [
+        2,
+        8
+      ],
+      "center": 14,
+      "center_neighbors": 12,
+      "center_quads": 88,
+      "center_star_states": 1757,
+      "complete_center_stars": 435,
+      "memo_hits": 0,
+      "memo_states": 1508,
+      "nodes": 3265,
+      "residual_calls": 1508,
+      "rows_sha256": "e4426cd6a00b1e62f3d21607f48c1a4e886df6197db41b4d23f7205792f0cdd0",
+      "star_stream_sha256": "75c1505b3306e769c09365946672d8ae51510f795afceca483541b76be5f233d",
+      "status": "COMPLETE_NO_COVER",
+      "zero_option_leaves": 596
+    },
+    {
+      "candidate_quads": 450,
+      "candidate_quads_sha256": "95782b665a166f7cb3d29c23d2f00d68f3c4e339cc29b6a2d060d1a1ddac0057",
+      "case": [
+        2,
+        12
+      ],
+      "center": 14,
+      "center_neighbors": 12,
+      "center_quads": 93,
+      "center_star_states": 1938,
+      "complete_center_stars": 540,
+      "memo_hits": 0,
+      "memo_states": 1785,
+      "nodes": 3723,
+      "residual_calls": 1785,
+      "rows_sha256": "58384e456e044be6c6301668bc0d4b09cbaff392b04f689be9e09fc7ac9b20b6",
+      "star_stream_sha256": "10c3342e60a5a4a35f0e53d89a7f7441dad1420026eae0ae5c22d8ba37904051",
+      "status": "COMPLETE_NO_COVER",
+      "zero_option_leaves": 724
+    },
+    {
+      "candidate_quads": 443,
+      "candidate_quads_sha256": "daafca549acd54b38ca965493851223aeb20076ba3e9bfee05426c7395747e82",
+      "case": [
+        3,
+        8
+      ],
+      "center": 14,
+      "center_neighbors": 12,
+      "center_quads": 83,
+      "center_star_states": 1260,
+      "complete_center_stars": 288,
+      "memo_hits": 0,
+      "memo_states": 968,
+      "nodes": 2228,
+      "residual_calls": 968,
+      "rows_sha256": "63187b859f0ded236fc22c29519895f673557c45fff627ca020c6cd81eb50cee",
+      "star_stream_sha256": "966dfed5f8179e40d013a5afdf82d8ba8d117da01b800bca9c5e67cabc633419",
+      "status": "COMPLETE_NO_COVER",
+      "zero_option_leaves": 382
+    },
+    {
+      "candidate_quads": 449,
+      "candidate_quads_sha256": "49b4b58087f83edcaf65524c4d6b5ae9f6bceaf5917f8bb314c8151ad1f02b46",
+      "case": [
+        3,
+        12
+      ],
+      "center": 14,
+      "center_neighbors": 12,
+      "center_quads": 88,
+      "center_star_states": 1506,
+      "complete_center_stars": 435,
+      "memo_hits": 0,
+      "memo_states": 1519,
+      "nodes": 3025,
+      "residual_calls": 1519,
+      "rows_sha256": "ae2a772c0ccd72af1c49fc1d9f0bd78bc08b74fdd8175d4fe504df7fc2e8b9f3",
+      "star_stream_sha256": "7833f335c76665af768887cc42f66d79fc66dec399768146d5bbf85d47e89a2e",
+      "status": "COMPLETE_NO_COVER",
+      "zero_option_leaves": 597
+    },
+    {
+      "case": [
+        8,
+        12
+      ],
+      "conflicting_pairs": [
+        [
+          2,
+          3
+        ]
+      ],
+      "status": "FIXED_BLOCK_LEAVE_CONFLICT"
+    }
+  ],
+  "global_72_word_exclusion": false,
+  "method": "determinant collinearity; forbidden triples; C-centered four-block stars; memoized residual pair masks",
+  "positive_controls": [
+    {
+      "complete_center_stars": 1,
+      "fixture": "affine_plane",
+      "nodes": 29,
+      "quadruples": 20
+    },
+    {
+      "complete_center_stars": 1,
+      "fixture": "published_69_word_point_0",
+      "nodes": 24,
+      "quadruples": 20
+    }
+  ],
+  "reviewer": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "total_complete_C_stars": 1698
+}
