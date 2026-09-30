@@ -320,10 +320,11 @@ missing, overlapping or invalid leaves, false norm bounds, unknown
 contacts, a wrong Bernstein mixed coefficient, reversed original supports,
 an unsafe Cayley radius, nonstrict coefficients and a discarded signed
 quadratic. Optimized Python is refused before computation.
-Every executed exact Q(sqrt5) sign decision also has an independent
-rational enclosure of sqrt(5): 20,756 calls, 7,039 distinct enclosures,
+Every exact Q(sqrt5) sign decision in the main verification phase also
+has an independent rational enclosure of sqrt(5): 20,756 calls, 7,039 distinct enclosures,
 at most 16 decimal digits. The wrapper restores the original exact kernel
-on exit. There are no floating predicates, solvers or large external
+on exit. Imported, byte-pinned dependency constructors belong to the
+inherited proof and are outside this audit counter. There are no floating predicates, solvers or large external
 certificates. Private exploratory grids and adaptive discovery are not
 public proof inputs.
 
