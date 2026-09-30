@@ -6,6 +6,20 @@ A binary length-18, weight-5 code of minimum distance at least six is
 equivalently a family of five-element subsets with intersections of size
 at most two. The maintained table still gives **69–72**.
 
+[PAIR_COMPLETION.md](PAIR_COMPLETION.md) proves a conditional **upper68**:
+at a replication-twenty multiplicity-two pair, if the eighteen remaining
+quadruples at one endpoint complete with two lines, a replacement discards
+at most six residual words and transfers to six-code-3's degree20/18
+absent-pair upper62. Every `(3,2)` row has this completion. For a
+`(3,1,1)` row, exactly two of five tail/leave cases have it. Thus each
+oriented weight-three edge of a 72-word code has just three local cases
+remaining, and the argument also gives another proof of minimum
+deficit-support degree three. The proof is ordinary, with an imported
+computer-assisted upper62 and unformalized bridges. Its compact checker
+validates the five cases and three positive replacement interfaces;
+it performs no full-star census. Neither the new result nor the imported
+upper62 has an independent review recorded here.
+
 [SUPPORT18.md](SUPPORT18.md) proves that **all eighteen** points of a
 72-word code have deficit-support degree at least three. The new local
 lemma bounds the secondary anchor's replication by nineteen whenever
@@ -28,8 +42,9 @@ compatible pairs of links; nineteen fail an ordinary point-capacity
 bound, while the other eleven give 78 anchor leave cases, each excluded
 by a fixed-pair conflict or an explicit missing-pair certificate.
 The global corollary imports the preceding support and adjacency results
-and the complementary six-code-3 pair theorems. This new result has not
-received independent review and does not improve the numerical upper bound.
+and the complementary six-code-3 pair theorems. Six-reviewer-2's
+[independent audit](../constant_weight_support17_review2/REVIEW.md) confirms
+this result and its adjacency input. It does not improve the numerical upper bound.
 
 [SUPPORT16.md](SUPPORT16.md) proves a computer-assisted necessary restriction:
 in any 72-word code, at least **sixteen** points have three or more neighbors
@@ -60,7 +75,8 @@ The complementary six-code-3
 now excludes absent pairs at size 72; that result is separate from the
 adjacency proof here. The earlier sixteen-point theorem has an
 [independent audit by six-reviewer-5](../constant_weight_18_6_5_support16_review5/REVIEW.md);
-the new adjacency theorem has not received independent review.
+the [independent adjacency audit](../constant_weight_support17_review2/REVIEW.md)
+also sharpens the distinct-anchor weight-three bound from nineteen to sixteen.
 [PROOF.md](PROOF.md) supplies the incidence facts, the original nine-point
 restriction and the local catalog. [SUPPORT12.md](SUPPORT12.md) and
 [SUPPORT14.md](SUPPORT14.md) establish intermediate restrictions.
@@ -102,6 +118,7 @@ python3 -B constant_weight_18_6_5_equality_structure/check_two_isolates.py
 python3 -B constant_weight_18_6_5_equality_structure/verify_two_isolates.py --compare-primary
 python3 -B constant_weight_18_6_5_equality_structure/check_single_isolate.py
 python3 -B constant_weight_18_6_5_equality_structure/verify_single_isolate.py --compare-primary
+python3 -B constant_weight_18_6_5_equality_structure/check_pair_completion.py
 ```
 
 Run from the repository root. The script regenerates the catalog in
@@ -178,6 +195,15 @@ fifteen cases give secondary replication at most nineteen by the ordinary
 pair-union degree bound. The compact manifests are `single_isolate_expected.json`
 and `single_isolate_replay_expected.json`; the complete mathematical deduction
 and its shorter dependency chain are in SUPPORT18.
+
+The pair-completion checker independently regenerates the three canonical
+high-core leaves and their five shared-tail orbits, with completion
+indicator `1,0,1,0,0`. It compares direct clique-pair and component
+recognition, reconstructs three field-plane first-star fixtures, and checks
+every old quadruple/five-set against the replacement interface. Its compact
+manifest is `pair_completion_expected.json`. The new upper bound follows
+from the six-triple counting proof and the imported upper62, which this
+checker does not re-prove. No numerical global bound is improved.
 
 ## Baseline provenance and scope
 
