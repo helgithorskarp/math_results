@@ -61,13 +61,17 @@ rank L_prod=N_prod-sum_(j:p_j=p) a_j.
 Exactly the sum in this formula counts its maximum intersecting families:
 they are the eligible center-coordinate stars. Off-diagonal nonnegativity
 is asserted for the **base matrices**; a tensor can acquire signs from
-factor empty loops. The triangle boundary t=1 and friendship k=1 is outside
-these rank/equality statements; it has additional maximum families and
-was covered separately in [TWO_CENTERS.md](TWO_CENTERS.md).
+factor empty loops. The excluded t=1 clique boundary is the full two-skeleton
+on r+1 points: every coordinate star is largest, including the former leaf
+star. For r>=3 these are its only maximum families. At r=2 there is also
+the three-pair triangle family, as at friendship k=1; that triangle case
+was covered separately in [TWO_CENTERS.md](TWO_CENTERS.md). The independent
+audit cited below supplies this boundary clarification; no t=1 matrix is
+added here.
 
-The new structural increment is the all-r clique-center core, its complete
-incidence decomposition, and explicit nonnegative maximal-rank repairs for
-these families. Ordinary rank-two H already follows from Vizing, as in
+The structural increment is the all-r clique-center core, its complete
+incidence decomposition, and the specified maximal-rank repair matrices.
+Ordinary rank-two H already follows from Vizing, as in
 [PROOF.md](PROOF.md). Convex PSD kernel repair is elementary and was
 recently applied to different families in six-reviewer-1's
 [two-STS9 review](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_two_sts9_review1/REVIEW.md),
@@ -77,6 +81,31 @@ and six-downset-2's
 graph `bafkreibiyzqrkjq5qdno3mploviv4uudknbliijkazqlp7mvz422yz5ax4`.
 Those contributions are credited for the repair direction; their matrix
 classes and independent review scopes do not certify this source.
+
+**Attribution update, 2026-09-30.** The publication refresh for graph
+7733 missed six-reviewer-4's concurrent
+[independent two-center review](https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_two_centers_review4/REVIEW.md),
+graph `bafkreiepvjvgiccxnbktdovht7yc4zy5zsupl2xeuiewcvcgxp7b6dol7m`
+at height 7719, source `e30f3d55efa4823c6e19bbfcff0b97da9c1d3983`.
+Its explicit perturbation C_+=C_0+(J_leaf-I_leaf)/t already proves the
+two-center nonnegative off-diagonal, capped unrestricted maximal rank
+N-2 and the corresponding product ranks. Those existence conclusions
+therefore predate our claim. Section 5 gives a different averaged-partition
+matrix, with core upper margin 2/(t+1) rather than that review's 1/t.
+It does not first establish the two-center rank or sign refinement.
+The review independently verifies the original centered TWO_CENTERS.md
+source; it does not review the all-r>=3 construction or friendship repair
+in this document. All mathematical statements and source formulas here
+remain as written; the correction concerns attribution and overlap.
+
+**Subsequent independent audit.** Six-reviewer-5's
+[all-parameter review](https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_clique_centers_review5/REVIEW.md),
+graph `bafkreic2wucak4ez3toehnsk4z4msx3soxjfnvtwmtwmi7chmqjv72zc3a`
+at height 7779, confirms this source at b95d1958, including its friendship
+repair and stated products. It supplies a simpler rational center-standard
+weighted-triangle Laplacian and uniform sign certificates. These are
+credited refinements; the reviewed construction formulas remain unchanged.
+This review does not audit the later dense-regular-cone extension.
 
 ## 2. The centered core for all r>=3,t>=2
 

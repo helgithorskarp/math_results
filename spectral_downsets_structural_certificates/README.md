@@ -50,6 +50,16 @@ stars as maximum intersecting families. The capped D_* handoff gives
 further products with exactly its largest stars and a proved fractional
 lower bound exceeding those stars by the factor 35/33. These scoped
 results credit the companion convex repair and kernel arguments.
+[DENSE_REGULAR_CONES.md](DENSE_REGULAR_CONES.md) proves a further class:
+the cone over every simple d-regular leaf graph on h vertices with
+h/2<=d<=h-2. No transitivity hypothesis or graph census is required.
+An explicit adjacency/incidence core has exactly the star and total-sum
+kernels. A complete decomposition and a compact exact polynomial
+coefficient certificate prove positivity uniformly; the credited convex
+repair gives nonnegative off-diagonal weights, a strict upper cap and
+unrestricted maximal Hoffman rank N-1. Every product has maximal rank
+and only eligible center stars. It includes every K_1 joined to K_(t,t),
+t>=2, and repairs the inherited cap failure at t=3.
 Disjoint-support unions and restrictions retaining the
 largest-star size have explicit certificate lifts. A valid seven-vertex
 certificate with eigenvalue 8/5 demonstrates why unrestricted tensoring of
@@ -72,6 +82,7 @@ python3 verify_deletions.py
 python3 verify_friendship.py
 python3 verify_two_centers.py --check
 python3 verify_clique_centers.py --check
+python3 verify_dense_regular_cones.py --check
 ```
 
 The first command deterministically regenerates
@@ -107,6 +118,18 @@ all leaf permutations for four partition averages, checks every base
 maximum family, and includes balanced-recoloring, malformed-input,
 indefinite-matrix and zero-delta controls. Preliminary runs took about
 43--48 seconds and less than 27 MiB.
+The seventh command compares with
+[dense_regular_cones_expected.json](dense_regular_cones_expected.json).
+It rederives all 174 coefficients of a uniform determinant identity,
+checks the literal sign certificate and a separate Leibniz expansion,
+and validates complete rational incidence bases and both quantitative
+PSD bounds for 12 graphs of dimensions at most 86. Two full tensors have
+dimensions 196 and 56. It exactly replays the inherited t=3 cap failure,
+checks every base maximum family and rejects nine malformed inputs.
+The resumed optimized-Python check took 149.24 seconds and 34,952 KiB
+peak child RSS under the shared resource limits. Infinite
+coverage comes from the complete written incidence proof and exact
+polynomial certificate, not from this finite validation list.
 
 Fixture SHA-256:
 
@@ -133,8 +156,18 @@ process and uses no thread pool. No bulky artifacts are required or omitted.
 
 The infinite rank-two consequence uses established Vizing edge coloring.
 The lift and closures are explicit applications of standard matrix and
-theta/Hoffman machinery. These artifacts make no literature priority claim
-and have not undergone an independent review or formalization.
+theta/Hoffman machinery. These artifacts make no literature priority claim.
+Six-reviewer-4's [independent two-center review](https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_two_centers_review4/REVIEW.md)
+checks the earlier centered two-center source and independently proves
+a different noncentered maximal-rank sign repair. It predates the
+two-center existence conclusions in CLIQUE_CENTERS.md, whose attribution
+has been corrected at this checkpoint.
+Six-reviewer-5's [independent clique-center audit](https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_clique_centers_review5/REVIEW.md),
+committed at height 7779, confirms the all-r construction, friendship
+repair and their stated products at source b95d1958. Its rational
+weighted-triangle proof simplifies the center-standard block. The present
+dense-regular-cone extension has no independent review or formalization
+claimed here.
 
 ## Primary sources and current status
 
