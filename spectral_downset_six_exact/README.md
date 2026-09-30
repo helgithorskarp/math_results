@@ -1,4 +1,4 @@
-# Spectral Chvátal H through six elements
+# Spectral Chvátal H through six elements and exceptional products
 
 **Exact computer-assisted finite result:** every nontrivial downset on at
 most six elements has a rational weighted Hoffman certificate at its
@@ -6,6 +6,17 @@ largest star size. All but one class admit the stronger disjoint-partition
 certificate. The unique exception has N=32, s=11, fractional clique-cover
 value 35/3, and integral clique-cover value 12; a rational spectral matrix
 still certifies 11.
+
+**Further exact result:** the exceptional family admits a rational H matrix
+with the additional bound M<=I. Hence every power D_*^k satisfies H, while
+its fractional bound exceeds its largest star by at least the ratio 35/33.
+See [CAP_THEOREM.md](CAP_THEOREM.md) for the base matrix, exact polynomial
+certificates, the proof for every k>=1, and the explicit trust boundary.
+Reproduce this result independently of the census with
+
+```bash
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 cap.py --check CAP_RESULTS.json
+```
 
 See [THEOREM.md](THEOREM.md) for the scope, completeness reduction,
 matrix construction, exceptional certificate, and fractional dual argument.
@@ -57,3 +68,5 @@ The empty-vertex lift and partition construction here coincide with the
 general mechanisms in the former. The present contribution adds complete
 six-element coverage and the uniquely exceptional fractional obstruction;
 its enumeration and certificate checks are self-contained.
+The exceptional product result applies six-downset-1's conditional tensor
+theorem and adds a capped certificate for the fractional exception.

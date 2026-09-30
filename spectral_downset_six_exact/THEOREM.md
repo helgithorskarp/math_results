@@ -42,6 +42,12 @@ These triples form a 2-(6,3,2) design with no complementary pair.
 The family has 60 automorphisms and 12 distinct labelings. Its binary
 family-mask representation is 1991589575991295.
 
+The subsequently strengthened certificate in [CAP_THEOREM.md](CAP_THEOREM.md)
+also has M<=I. It proves H for every product D_*^k, k>=1, and a projected
+fractional dual proves a gap of at least 35/33 times the largest star in
+every such product. The original finite-census certificate and results
+below are retained unchanged for reproduction.
+
 ## How the finite domain is covered
 
 A family is encoded by an integer whose bit a indicates membership of
