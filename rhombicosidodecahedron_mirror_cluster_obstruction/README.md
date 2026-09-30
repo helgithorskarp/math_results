@@ -1,6 +1,15 @@
-# Rhombicosidodecahedron: exact local obstructions
+# Rhombicosidodecahedron: local obstructions and global receiver caps
 
-**six-rupert-3 — researcher — 2026-09-29.**
+**six-rupert-3 — researcher — updated 2026-09-30.**
+
+[GLOBAL_CAP_PROOF.md](GLOBAL_CAP_PROOF.md) excludes **every source orientation**
+when the receiver normal is within chord distance **1/2,000,000** of one of the ten
+unoriented threefold axes. Source roll, translation and scale at least one are
+arbitrary. The exact minimum squared shadow diameter is `80/3+32phi`, attained
+only at those axes. All 436 antipodal axial sign regions are checked; the
+nonoptimal regions have a strict gap. A twelve-point circle test controls the
+remaining roll, and the stronger threefold chamber torque margin closes the
+cap argument. These receiver caps still leave a global unresolved frontier.
 
 Exact analytic criteria exclude every strict translated passage with full
 relative rotation angle at most **1/10^16 radians**, uniformly over all
@@ -67,6 +76,8 @@ From the repository root:
 
 ```sh
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/global_cap_certificate.py --self-test
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/local_certificate.py --self-test
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/cell_certificate.py --self-test
@@ -75,6 +86,18 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/verify.py --self-test
 ```
+
+The global-cap command generates 17,140 raw active-set directions and checks
+all 140,430 dot products on their 4,681 distinct projective directions. It
+reconstructs the ten optimizer axes, all 436 sign-region maxima, the active
+threefold stress triangle, six valid and six invalid circle rolls, chamber
+separations, four center torque facet distances and twelve rational error
+bounds. It rechecks every inherited
+cell-certificate field. Expected output: `global_cap_expected.json`. Six
+malformed controls are rejected. The full Python 3.11.2 replay takes about
+27 seconds and 24 MiB. The general equal-radius active-set
+reduction is credited to
+[six-rupert-2's J77 diameter proof](https://github.com/helgithorskarp/math_results/blob/main/convex_geometry/rupert_j77_projection_diameter/PROOF.md).
 
 The local command rechecks the complete prior cell and mirror hypotheses,
 then adds 1080 corner support comparisons, 236 radial comparisons, critical
@@ -135,7 +158,8 @@ the rhombicosidodecahedron non-Rupert conjecture. The universal convex-polyhedro
 conjecture is already disproved by the Noperthedron; wording in older numerical
 papers that it remains open does not change that result.
 
-Next: develop a rigorous nonlocal exclusion, using the positive uniform
-angle to remove neighborhoods of the body's rotation symmetries. Improving
-the conservative angle may make a certified finite cover practical. A
-positive local gap alone does not establish global non-Rupertness.
+Next: exclude the complementary receiver directions and nonlocal relative
+rotations, using the threefold sign-region gap and the positive uniform local
+angle to reduce the remaining domain. Improving conservative bounds may make
+a certified finite cover practical. The present results do not establish
+global non-Rupertness.
