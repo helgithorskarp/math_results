@@ -1,0 +1,86 @@
+{
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "date": "2026-09-30",
+  "family": "Symmetric two-color/seven-term W(2,7)",
+  "source_directory": "van_der_waerden_617_class197_cover",
+  "proof_status": "Exact rational certificates and complete binary membership coverage; written bridges unformalized; same-author independent checker; no external review",
+  "dependencies": [
+    {
+      "name": "QR617 complete reflection-seam weights",
+      "scope": "Four included local base screens; all617 corollary additionally uses the old per-phase bounds at the other613 phases",
+      "source_commit": "9a2bb02c0ddf0aabdba44e083d14a89c608b2c64",
+      "url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_617_reflection_seam_weights",
+      "graph_ref": "bafkreibhwl2tw6yj4f62kc4icradwaq2tpn4z56tox4okqmpy62mn4edma"
+    },
+    {
+      "name": "Integer AP-cover spatial cuts",
+      "scope": "Credited combinatorial architecture; prior class196/far55 numerical cut not imported",
+      "source_commit": "7df5157a04ea691d6091aa146dd4d4f49b987550",
+      "url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_617_integer_cover_cuts",
+      "graph_ref": "bafkreihcweqttdkpoisly3tjntoy5ruji3kv7vgfpdovx4nbxprcae4cum"
+    }
+  ],
+  "complementary_sources": [
+    {
+      "name": "Fixed aligned QR617 joint edit-box62 result",
+      "scope": "Complementary citation only; fixed1848-point reference classes and prefix domain differ",
+      "source_commit": "bc987b1e75efcc6966135728c2f7bf2b61e32f93",
+      "url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_62_edit_profile",
+      "graph_ref": "bafkreieu7guaiaarct57a7ohr2y32mcvgc5d4uwaj6kwodienf3o5u2i2e"
+    },
+    {
+      "name": "Period618 triple-column pruning",
+      "scope": "Complementary construction citation; no numerical premise",
+      "source_commit": "38f6aafa414319c5afbeeeadd388e2d8b7f43242",
+      "url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_618_triple_pruning",
+      "graph_ref": "bafkreiemx6cex2evfgpb5hfsgyrinjqgjdofj2g2jb67xp7z44vnz5ktbi"
+    }
+  ],
+  "problem_graph_ref": "bafkreihbsyzlpqcibwae7vxelgoqcfofwzqdshfmkjrjyhqe7lydcjdlaa",
+  "primary_source": {
+    "author": "Monroe",
+    "title": "New Lower Bounds for van der Waerden Numbers Using Distributed Computing",
+    "url": "https://combinatorialpress.com/jcmcc-articles/volume-128/new-lower-bounds-for-van-der-waerden-numbers-using-distributed-computing/",
+    "scope": "Table1 length7/two colors>3703, Table2 prime617, notation W(length,colors) reversed relative to this campaign",
+    "live_checked": "2026-09-30",
+    "exhaustive_current_best_verification": false
+  },
+  "vendored_base_checker": {
+    "source": "van_der_waerden_617_reflection_seam_weights/verify.py",
+    "copied_without_edits": true,
+    "sha256": "3d50dd599758ab93e7e9e80d8fd92e3f4d7f3f4f62d658cfb811a651313b4bf2"
+  },
+  "trust_boundary": {
+    "no_solver_status_trusted": true,
+    "new_checker_imports_generator": false,
+    "new_generator_imports_new_checker": false,
+    "generator_imports_old_exact_screen_checker": true,
+    "all_original_APs_reenumerated_in_optional_generator": true,
+    "fresh_bytes_need_not_match_frozen_weights": true,
+    "all_four_base_screens_included": true,
+    "other613_phase_certificates_not_included_or_rechecked": true,
+    "native_solve_seconds": 15,
+    "all_threads": 1,
+    "one_math_job_at_a_time": true
+  },
+  "claims": {
+    "local_new_phases": [
+      184,
+      201,
+      205,
+      269
+    ],
+    "per_reference_color_lower_bound": 197,
+    "dependent_all617_total_lower_bound": 394,
+    "candidate_arbitrary": true,
+    "candidate_reflection_required": false,
+    "pole_colors_free": true,
+    "far_edit_budget_required": false,
+    "other_color_budget_required": false,
+    "all760761_incompatible_keys_covered": false,
+    "new_W_bound": false,
+    "coloring_witness": false,
+    "attained_minimum_claim": false
+  }
+}

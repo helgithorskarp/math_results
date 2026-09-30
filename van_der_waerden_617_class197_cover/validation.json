@@ -1,0 +1,166 @@
+{
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "checks": [
+    {
+      "python": "Python 3.11.2",
+      "mode": "frozen_and_controls",
+      "seconds": 1.6342989879776724,
+      "returncode": 0,
+      "summaries": [
+        {
+          "agent": "six-vdw-3",
+          "role": "researcher",
+          "status": "EXACT_COMPLETE_FOUR_PHASE_CLASS196_EXCLUSION",
+          "phases": [
+            184,
+            201,
+            205,
+            269
+          ],
+          "required_edits_per_reference_color_each_phase": 197,
+          "nodes": 12,
+          "splits": 4,
+          "leaves": 8,
+          "checked_AP_instances": 15304,
+          "checked_original_incidences": 107128,
+          "other_613_phase_bounds_not_rechecked_here": true,
+          "no_new_W_bound_or_coloring": true
+        },
+        {
+          "agent": "six-vdw-3",
+          "role": "researcher",
+          "negative_controls": 29,
+          "all_rejected": true,
+          "conditional_child_scope_checked": true
+        }
+      ]
+    },
+    {
+      "python": "Python 3.12.14",
+      "mode": "frozen_controls_and_fresh_regeneration",
+      "seconds": 9.694864240009338,
+      "returncode": 0,
+      "summaries": [
+        {
+          "agent": "six-vdw-3",
+          "role": "researcher",
+          "status": "EXACT_COMPLETE_FOUR_PHASE_CLASS196_EXCLUSION",
+          "phases": [
+            184,
+            201,
+            205,
+            269
+          ],
+          "required_edits_per_reference_color_each_phase": 197,
+          "nodes": 12,
+          "splits": 4,
+          "leaves": 8,
+          "checked_AP_instances": 15304,
+          "checked_original_incidences": 107128,
+          "other_613_phase_bounds_not_rechecked_here": true,
+          "no_new_W_bound_or_coloring": true
+        },
+        {
+          "agent": "six-vdw-3",
+          "role": "researcher",
+          "negative_controls": 29,
+          "all_rejected": true,
+          "conditional_child_scope_checked": true
+        },
+        {
+          "phase": 184,
+          "certificate_sha256": "7752c9a396db28d5587d0281b2c0d5978fb20da971fc17b48eee1c39113814a3",
+          "certificate_bytes": 48511,
+          "requires_independent_exact_check": true
+        },
+        {
+          "phase": 201,
+          "certificate_sha256": "57fd364bf3f1e79d40f8f1e658bdafc7de03da82a39ecfb1054cc32e2d83d490",
+          "certificate_bytes": 31727,
+          "requires_independent_exact_check": true
+        },
+        {
+          "phase": 205,
+          "certificate_sha256": "d5f9ddf732de9253c511da5eed5fcc7b22130ca3c0ccafcd6e10cff7ee9b4188",
+          "certificate_bytes": 32814,
+          "requires_independent_exact_check": true
+        },
+        {
+          "phase": 269,
+          "certificate_sha256": "7a0efb927b3d0613e050c3966b6606796cdd98b91e0453bf1d83f6bdd98d713d",
+          "certificate_bytes": 16465,
+          "requires_independent_exact_check": true
+        },
+        {
+          "agent": "six-vdw-3",
+          "role": "researcher",
+          "python": "3.12.14",
+          "seconds": 7.6411631620139815,
+          "peak_rss_kib": 63944,
+          "numeric_status_is_not_proof": true
+        },
+        {
+          "agent": "six-vdw-3",
+          "role": "researcher",
+          "status": "EXACT_COMPLETE_FOUR_PHASE_CLASS196_EXCLUSION",
+          "phases": [
+            184,
+            201,
+            205,
+            269
+          ],
+          "required_edits_per_reference_color_each_phase": 197,
+          "nodes": 12,
+          "splits": 4,
+          "leaves": 8,
+          "checked_AP_instances": 15306,
+          "checked_original_incidences": 107142,
+          "other_613_phase_bounds_not_rechecked_here": true,
+          "no_new_W_bound_or_coloring": true
+        }
+      ]
+    }
+  ],
+  "first_fresh_run": {
+    "python": "3.12.14",
+    "seconds": 7.527198767988011,
+    "peak_rss_kib": 64592,
+    "native_limit_seconds_per_leaf": 15,
+    "threads": 1,
+    "nodes": 12,
+    "leaves": 8,
+    "checked_AP_instances": 15306,
+    "checked_original_incidences": 107142,
+    "cases": [
+      {
+        "phase": 184,
+        "certificate_sha256": "7752c9a396db28d5587d0281b2c0d5978fb20da971fc17b48eee1c39113814a3",
+        "minimum_leaf_strict_gap": "293613/1000000"
+      },
+      {
+        "phase": 201,
+        "certificate_sha256": "57fd364bf3f1e79d40f8f1e658bdafc7de03da82a39ecfb1054cc32e2d83d490",
+        "minimum_leaf_strict_gap": "12617/40000"
+      },
+      {
+        "phase": 205,
+        "certificate_sha256": "d5f9ddf732de9253c511da5eed5fcc7b22130ca3c0ccafcd6e10cff7ee9b4188",
+        "minimum_leaf_strict_gap": "106353/500000"
+      },
+      {
+        "phase": 269,
+        "certificate_sha256": "7a0efb927b3d0613e050c3966b6606796cdd98b91e0453bf1d83f6bdd98d713d",
+        "minimum_leaf_strict_gap": "15507/125000"
+      }
+    ]
+  },
+  "frozen_data": {
+    "new_tree_bytes": 129504,
+    "base_screen_bytes": 61263
+  },
+  "independent_implementation_same_author": true,
+  "external_review_or_formalization": false,
+  "prior_other613_phase_bounds_not_rechecked": true,
+  "no_large_artifacts_or_private_inputs": true
+}
