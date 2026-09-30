@@ -2,6 +2,20 @@
 
 Agent: **six-downset-2**, role: **researcher**. Prepared 2026-09-30.
 
+The [cyclic thirteen-point theorem](CYCLIC_TWO_STS13_PROOF.md) gives a capped
+maximal-rank certificate for every union of two block-disjoint STS(13) that
+are invariant under a common thirteen-cycle. The complete cyclic cohort
+has four systems, two disjoint pairs and one union. Here N=144,s=25,
+rank Q=131 and the upper endpoint is simple. All finite products, and mixed
+products with the earlier Steiner factors, have the stated maximal ranks
+and only their largest coordinate stars as maximum families. These scoped
+spectral constructions are author-checked and unformalized. The
+[affine reduction](AFFINE_REDUCTION.md) proves that two fixed-space forms of
+orders12 and15 suffice for exact PSD and rank checking; the verifier also
+provides a full144-by-144 Schur fallback. The design itself and classical
+base strict-EKR property are not claimed new. This does not cover arbitrary
+two-STS(13) pairs or assert a uniform affine field-family certificate.
+
 The [four-system theorem](FOUR_STS9_PROOF.md) gives capped maximal-rank
 certificates for **every union of four block-disjoint STS(9)**. Here N=94,
 s=25, rank Q=85, and the upper endpoint is simple. Its complete verifier
@@ -125,6 +139,10 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 spectral_downsets_steiner_triples/verify_four9.py --check
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 spectral_downsets_steiner_triples/verify_template_obstruction.py --check
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 spectral_downsets_steiner_triples/verify_cyclic13.py --check
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 spectral_downsets_steiner_triples/verify_cyclic13.py --full --check
 ```
 
 Only the Python standard library is required. Verified with CPython 3.11.2;
@@ -135,6 +153,11 @@ and 21,564 KiB. No threaded solver, floating eigensolver, or numerical tolerance
 enters any verifier. The maximal-rank validation took 99.12 seconds
 and 27,392 KiB RSS, checking the additional quantitative buffers.
 The complete three-system verifier took 249.78 seconds and 26,884 KiB RSS.
+The cyclic thirteen-point verifier took 8.05 seconds and 40,516 KiB with the
+exact affine reduction; its full Schur fallback passed in 278.91 seconds
+and 40,780 KiB. Both require only the standard library. Fixed weights and
+compact outputs are [cyclic13_certificate.json](cyclic13_certificate.json)
+and [cyclic13_expected.json](cyclic13_expected.json).
 The four-system verifier took 566.32 seconds and 31,332 KiB RSS. The separate
 template checker independently solves the actual seven-variable affine
 system on four concrete designs at orders9 and13 and checks explicit negative witnesses;
@@ -144,6 +167,8 @@ Expected principal results:
 
 | Instance | N | Maximum star s | Exact rank of Q |
 |---|---:|---:|---:|
+| Maximal-rank capped common-cycle two-STS(13) | 144 | 25 | 131 |
+| Centered capped common-cycle two-STS(13) | 144 | 25 | 130 |
 | Maximal-rank capped union of any four STS(9) | 94 | 25 | 85 |
 | Centered capped union of any four STS(9) | 94 | 25 | 84 |
 | Maximal-rank capped union of any three STS(9) | 82 | 21 | 73 |
