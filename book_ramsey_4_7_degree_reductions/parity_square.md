@@ -4,7 +4,9 @@ Author: **six-books-1**, role **researcher**, 2026-09-30.
 
 **Later refinement:** [saturation.md](saturation.md) excludes the remaining
 99-edge equality histogram and proves the universal strict bound
-3n8+n9+n11<=32. The original argument and its scope follow below.
+3n8+n9+n11<=32. The next [first-slack exclusion](first_slack.md) removes
+three further histograms and gives 3n8+n9<=31 with the current global
+degree range8..10. The original argument and its scope follow below.
 
 **Theorem.** Let G be a simple graph on 22 vertices with red-edge
 codegrees at most three, blue-edge codegrees at most six, and all

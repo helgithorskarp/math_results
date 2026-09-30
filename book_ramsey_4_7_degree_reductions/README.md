@@ -8,8 +8,9 @@ B7 subgraph in its complement. Books are ordinary, not induced,
 subgraphs. Equivalently, every edge of G has at most three common
 neighbors, and every edge of its complement has at most six.
 
-The current combined necessary range is **degrees 8..11, edges 97..112**;
-the low-edge histogram cuts are in item 14, and the strict parity budget is in item 15.
+The current combined necessary range is **degrees 8..10, edges 97..110**,
+using six-books-3's [degree-eleven exclusion](../book_ramsey_b4_b7_degree11_gram_exclusion/PROOF.md).
+The latest defect budget and low-edge histograms are in item 16.
 
 **Proved necessary conditions:**
 
@@ -79,7 +80,7 @@ the low-edge histogram cuts are in item 14, and the strict parity budget is in i
     exceptional-row certificates violating it. Both exact implementations
     agree entry by entry. The later global degree theorem in item 13
     excludes all degree-seven branches.
-13. Every full red degree is now **8..11** and **97 <= e(G) <= 112**,
+13. The earlier full red degree range was **8..11** and **97 <= e(G) <= 112**,
     by six-books-3's [global degree-eleven cut](../book_ramsey_b4_b7_degree11_global_cut/PROOF.md).
     Its degree-seven exclusion uses our earlier uniform-incidence theorem.
     A degree-eleven vertex forces at least 106 edges. Items 6--12 record
@@ -90,8 +91,8 @@ the low-edge histogram cuts are in item 14, and the strict parity budget is in i
     Every vertex then has four red neighbors in the degree-eight class.
     [parity_square.md](parity_square.md) excludes the two other equality
     histograms by nonsquare determinants of a forced integer matrix square.
-    At 97 edges only **(n8,n9,n10)=(4,18,0),(5,16,1),(6,14,2)** remain.
-    At 98 edges the counts are **(a,24-2a,a-2),2<=a<=8**.
+    This first cut left **(n8,n9,n10)=(4,18,0),(5,16,1),(6,14,2)** at 97 edges.
+    At 98 edges it left **(a,24-2a,a-2),2<=a<=8**.
     These are necessary conditions, with no realizability assertion.
 
 15. The last parity-equality histogram **8:11,10:11** is excluded by
@@ -101,8 +102,19 @@ the low-edge histogram cuts are in item 14, and the strict parity budget is in i
     valid 22-vertex graph satisfies **3n8+n9+n11<=32** and
     **2T>=n9+n11+4**, where T is total unused spine capacity.
     At most ten vertices have degree eight and full saturation is
-    impossible. At 99 edges only (a,22-2a,a), 0<=a<=10, remain.
-    Other 99-edge histograms and the unrestricted problem stay open.
+    impossible. This cut left (a,22-2a,a), 0<=a<=10 at 99 edges.
+    Item 16 supplies the latest refinement.
+
+16. The first positive parity-slack histograms **(6,14,2), (8,8,6),
+    (10,2,10)** are excluded by [first_slack.md](first_slack.md).
+    All **53** possible weighted-defect normal forms force positive
+    nonsquare integer determinants. Separate labeled-surplus and exact
+    rational checks agree on every record. With the prior equality
+    exclusion and the current degree range, **3n8+n9<=31** and
+    **2T>=n9+8**. At 97 edges only **(4,18,0),(5,16,1)** remain;
+    at 98 only **(a,24-2a,a-2),2<=a<=7**; at 99 only
+    **(a,22-2a,a),0<=a<=9**. These are necessary possibilities.
+    No whole low-edge boundary or unrestricted Ramsey endpoint is decided.
 
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
@@ -174,6 +186,11 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 book_ramsey_4_7_degree_reductions/saturation_check.py
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -O book_ramsey_4_7_degree_reductions/saturation_independent.py \
+  --negative-controls
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 book_ramsey_4_7_degree_reductions/first_slack_check.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_4_7_degree_reductions/first_slack_independent.py \
   --negative-controls
 ```
 

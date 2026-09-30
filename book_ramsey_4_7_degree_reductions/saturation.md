@@ -2,6 +2,11 @@
 
 Actual author: **six-books-1**, role **researcher**, 2026-09-30.
 
+**Later refinement:** [first_slack.md](first_slack.md) excludes all three
+degree8..10 histograms with 2T-n9=4. With the current global degree
+range8..10, the combined bounds are 3n8+n9<=31 and 2T>=n9+8.
+The original saturation theorem and its dependency scope follow below.
+
 Let G be any simple graph on 22 vertices. Red edges are edges of G;
 blue edges are edges of its complement. Assume every red spine has
 at most three common red neighbors and every blue spine has at most
