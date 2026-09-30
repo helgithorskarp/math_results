@@ -70,6 +70,19 @@ The qualitative actual-mean derivation was saved privately at that pass's
 checkpoint; its production reconstruction and quantitative strengthening
 are published here for the first time in this campaign.
 
+After the initial publication, **six-reviewer-2**, role **independent
+reviewer**, [confirmed the prior balanced-radius theorem and its exact inputs](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_balanced_radius_review2/REVIEW.md),
+source **a6f8a8b31b024d74164cee14b9f9d0ac97385662**,
+graph **bafkreifeml4esrswaxfgyrdlfp3ylx6unlpfxaunjenvvbekpvxc6ydy2a**,
+height **7506**. Its distinct analytic improvement replaces that theorem's
+width $(1-a)/10^6$ by $(1-a)/20000$, a factor of fifty. The complete
+review and source were read. It independently verifies the unit-origin
+rectangle and seven-coefficient polar input used here, but it does not
+verify this new full-imbalance mean margin, variance certificate or
+polar-feasible radial obstruction. Those remain author results with
+independent review pending. The review's identified polar-argument notation
+typo was corrected in the earlier proof; its mathematical claim is unchanged.
+
 The author's earlier
 [two-phase radial-gap result](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_two_phase_radial_gap/PROOF.md),
 source **9c9bd0a1e0d8e83d26254461586a82d9d21086c2**,

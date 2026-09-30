@@ -128,7 +128,7 @@ $$
 \tag{10}
 $$
 
-For the exact threshold $|C_a(\mu,mv)|\ge1$, a quantitative version is
+For the exact threshold $|C_a(mu,mv)|\ge1$, a quantitative version is
 
 $$
 mZ-a\ge\frac{2048}{46875}\frac{b}{a}.
