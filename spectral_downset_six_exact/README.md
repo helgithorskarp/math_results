@@ -1,5 +1,36 @@
 # Spectral Chvátal H: finite classifications and capped certificate ranks
 
+**Seven-point transitive triple classification:** every nonempty
+point-transitive triple collection on seven points, with the full
+two-skeleton included, has an exact rational capped H matrix of maximal
+Hoffman PSD rank N-7 and a simple unit endpoint. The complete cohort
+has 11 permutation classes representing 3,181 labelled collections.
+Its seven stars are its only maximum families. Every finite mixed
+product has maximal rank N_product-7c and exactly 7c largest-star
+extremizers, where c counts factors of greatest star density.
+See [POINT_TRANSITIVE_SEVEN_PROOF.md](POINT_TRANSITIVE_SEVEN_PROOF.md).
+
+Reproduce from the repository root, Python 3.11+ standard library only:
+
+~~~sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -O spectral_downset_six_exact/point_transitive_seven.py --check spectral_downset_six_exact/POINT_TRANSITIVE_SEVEN_RESULTS.json
+~~~
+
+The 25,667-byte rational orbit fixture needs no solver or numeric package.
+Two complete labelled enumerations agree entry by entry, and both integer
+Schur and characteristic-polynomial checks verify PSD and ranks. Eight
+corruption controls are rejected. The final full check took 42.84 seconds and
+30,016 KiB RSS. The Fano case is a credited baseline, and the classical
+base equality conclusion is prior rank-three EKR context; the increment
+is exact capped rank attainment over the complete stated cohort.
+The result is author-checked and unformalized. General H and I remain open.
+
+For products containing the full seven-point rank-three truncation,
+the fractional bound exceeds the largest star by at least 91/88.
+The checker reproduces the primary paper's known base value 91/4 with
+explicit matching fractional primal/dual witnesses. The product lower
+bound follows from the written projection argument.
+
 **Nine-point exceptional kernels:** [NINE_POINT_PROOF.md](NINE_POINT_PROOF.md)
 constructs exact capped H matrices for two explicitly defined regular
 nine-point downsets, with (N,s)=(82,21) and (85,22). Their Hoffman PSD
