@@ -1,0 +1,127 @@
+{
+  "agent": "six-books-3",
+  "claim": "Every valid ten-regular graph on22 vertices has at least13 red edges in every red neighborhood; hence96..110 red triangles. This is necessary for the110-edge boundary, not its exclusion.",
+  "date": "2026-09-30",
+  "dependencies": [
+    {
+      "graph_ref": "bafkreic57itmbz4klkff2gooq5hyby3ssu4cniwz4mhs76uwsqlblesqdi",
+      "height": 8012,
+      "role": "Only the corollary interpreting110 red edges as ten-regular; local regular theorem is self-contained",
+      "source_commit": "ce3177a731086284ee89f18a8a3948b672b3c64e",
+      "source_url": "https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_b4_b7_degree11_gram_exclusion/PROOF.md"
+    }
+  ],
+  "family_context": [
+    {
+      "agent": "six-books-1",
+      "graph_ref": "bafkreihrh6ngmajbg6zs2wzztlk5g5ywwyyguvnu46eaemree6kj7i6bve",
+      "height": 8042,
+      "role": "researcher",
+      "role_in_proof": "Separate low-edge context, no premise.",
+      "source_commit": "0f8eb6294a74294ddeada944705bcba28e51c04c",
+      "source_url": "https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_4_7_degree_reductions/first_slack.md"
+    }
+  ],
+  "implementation": "CPython3.11.2 standard library; exact arbitrary-precision int/Fraction; one CPU job and all numerical threads1",
+  "independent_review_of_prerequisite": {
+    "agent": "six-reviewer-1",
+    "graph_ref": "bafkreibor5a5i6qhsljhbabkuqgahgoy5ou3ts6gpnw27sexbiwtizzm2m",
+    "height": 8060,
+    "role": "independent mathematical reviewer",
+    "source_commit": "b3e45c1ca194e1becece046ed2e4695f9692406c",
+    "source_url": "https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_degree11_gram_review1/REVIEW.md",
+    "verdict": "Verified and strengthened: all68895 prior reduced matrices indefinite. This does not review the present neighborhood theorem."
+  },
+  "negative_vectors_sha256": "359c662a2e990002434d8f28fff7c5e4bed83b51295f3e5217b62cdc65e1c109",
+  "primary_baseline": {
+    "agent": "six-books-3",
+    "blue_cap": 6,
+    "fixture_equal": true,
+    "raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+    "raw_url": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "red_cap": 3,
+    "red_degree_histogram": {
+      "10": 1,
+      "8": 4,
+      "9": 16
+    },
+    "red_edges": 93,
+    "red_rows_sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec",
+    "role": "researcher"
+  },
+  "primary_literature": [
+    {
+      "live_refreshed": "2026-09-30",
+      "located_status": "22<=R(B4,B7)<=23",
+      "location": "Table1",
+      "url": "https://arxiv.org/html/2407.07285v2"
+    },
+    {
+      "live_refreshed": "2026-09-30",
+      "located_status": "22<=R(B4,B7)<=23",
+      "location": "DS1.18 TableIXa",
+      "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+    }
+  ],
+  "problem": "ordinary Book Ramsey R(B4,B7)",
+  "publication_scope": "Source, small baseline fixture, complete compact census and53 short integer vectors; no raw corpora or operational checkpoints.",
+  "role": "researcher",
+  "source_checks": [
+    {
+      "agent": "six-books-3",
+      "command": [
+        "python3",
+        "-O",
+        "book_ramsey_b4_b7_regular110_neighborhood_floor/generate.py",
+        "--write-certificates"
+      ],
+      "elapsed_seconds": 0.7086725109838881,
+      "exit_code": 0,
+      "label": "allnegative-generation",
+      "numerical_threads": 1,
+      "peak_child_rss_upper_bound_KiB": 22060,
+      "role": "researcher",
+      "stderr": ""
+    },
+    {
+      "agent": "six-books-3",
+      "command": [
+        "python3",
+        "-O",
+        "book_ramsey_b4_b7_regular110_neighborhood_floor/verify.py"
+      ],
+      "elapsed_seconds": 1.294204137986526,
+      "exit_code": 0,
+      "label": "allnegative-independent",
+      "numerical_threads": 1,
+      "peak_child_rss_upper_bound_KiB": 24016,
+      "role": "researcher",
+      "stderr": ""
+    },
+    {
+      "agent": "six-books-3",
+      "command": [
+        "python3",
+        "-O",
+        "book_ramsey_b4_b7_regular110_neighborhood_floor/verify.py",
+        "--negative-controls"
+      ],
+      "elapsed_seconds": 4.003520481986925,
+      "exit_code": 0,
+      "label": "allnegative-corruption",
+      "numerical_threads": 1,
+      "peak_child_rss_upper_bound_KiB": 24328,
+      "role": "researcher",
+      "stderr": ""
+    }
+  ],
+  "summary_sha256": "82e80f3c6fd9b6034bc32973d1c026693647a3031a29cec7b0465e73e3e71375",
+  "trust_boundary": [
+    "Ordinary written local counting, incidence, normalization and completeness bridges; no formalization.",
+    "Two implementations by the same author, not independent peer review of the new theorem.",
+    "Every normalized residual matrix has a strict checked negative integer form. Stream hashes are diagnostic.",
+    "The110-edge application imports maximum red degree10. No historical spectral classification is needed for the local regular theorem.",
+    "No solver, floating arithmetic, host symmetry, connectedness filter, timeout or incomplete run supports a mathematical claim.",
+    "The primary global flag-algebra upper certificate was not independently replayed."
+  ]
+}
