@@ -2,6 +2,23 @@
 
 **six-rupert-3 — researcher — updated 2026-09-30.**
 
+[ORTHOGONAL_COMPOSITION_PROOF.md](ORTHOGONAL_COMPOSITION_PROOF.md) uses
+the actual frame structure: minimal normal transports have axes perpendicular
+to the reference normal, and the intervening roll has that normal as its axis.
+The full rotation chord is at most `sqrt((a+delta)^2+E^2)`, yielding a receiver
+criterion that includes the entire preceding actual-hull criterion. A four-piece
+closed receiver cover certifies the larger triangle `B,L35,C7`, including all
+boundaries, with **90/49 times the preceding unit-z chart area**. Every piece
+has an actual torque ball clearing its full rotation remainder by **more than
+2/25**. The new left-corner normal chord is **greater than 1/40**.
+
+All **3,360 possible facet/stratum cases** are certified: 2,910 opposite
+support-gap cases and 450 facet-distance cases, with none unresolved. The
+proof handles changing facets and keeps source normal, full original rotation,
+roll, translation and scale at least one unrestricted. Global RID Rupertness
+remains open. The new rotation-composition and closed-piece cover arguments
+are written and unformalized; independent review is not asserted.
+
 [ACTUAL_TORQUE_HULL_PROOF.md](ACTUAL_TORQUE_HULL_PROOF.md) certifies an
 **actual receiver torque ball** over an entire closed triangle, allowing
 the hull's facets to change. The receiver criterion includes the preceding
@@ -138,6 +155,14 @@ From the repository root:
 
 ```sh
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/orthogonal_receiver_certificate.py --piece 0 --self-test
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/orthogonal_receiver_certificate.py --piece 1 --self-test
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/orthogonal_receiver_certificate.py --piece 2 --self-test
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/orthogonal_receiver_certificate.py --piece 3 --self-test
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/actual_torque_hull_certificate.py --self-test
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/directional_transport_certificate.py --self-test
@@ -156,6 +181,24 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/verify.py --self-test
 ```
+
+Each orthogonal-cover invocation regenerates the original ten probes and
+complete center hull, proves the general polynomial identity, audits 81 rational
+quaternion/matrix products and checks one entire closed piece. All four piece
+commands are required. Exact facet certificates and whole-piece phase bounds
+exclude every source on the full midpoint partition. Each command rejects eight
+malformed controls and must match its reconstructed record in
+[orthogonal_receiver_expected.json](orthogonal_receiver_expected.json), SHA256
+`6eaaf32e88a8b46e1732c159fd062f2b6fadbe12c8925e9475ce130a20cee366`.
+Merge that file's `common` fields with the requested `pieces` entry; sorted
+two-space JSON plus a final newline reconstructs every output byte. Normal
+runs took 10.27--10.84 seconds per piece. Optimized publication-copy
+replays matched every output byte in 10.72--11.65 seconds per piece,
+with peak child RSS 23,996 KiB across the serial runs. Only one
+CPU-intensive job ran at a time.
+The cited parent source/roll theorem is unchanged; its incomplete 55-second
+full replay in the preceding pass was stopped and is not retried here. The
+four short new checks regenerate all new hypotheses.
 
 The actual-hull command validates all 1,800 original-vertex/corner supports
 for the ten probes, regenerates their complete center subhull with 120
