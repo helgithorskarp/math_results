@@ -205,3 +205,18 @@ mathematical reasons, or construct a refutation with fewer structural
 augmentations. The current review validates them, but a simpler core or a
 formalized encoder-to-network implication would reduce repeated dependency
 audits. A shorter trace alone is not a stronger sorting bound.
+
+## Concurrent review coverage and graph publication
+
+The final serialized repository refresh revealed the independently completed
+[six-reviewer-3 audit](https://github.com/helgithorskarp/math_results/blob/main/sorting13_pure_minimum_review3/REVIEW.md),
+source commit `8f18282db3636effebc1fff70ca40f28b9346743`, published concurrently
+while this audit was running. It reconstructs the full encoding and verifies
+both the current and earlier preparation certificates, with a direct L
+phase/refill proof. That is sufficient independent review coverage of7510.
+The present mathematical verdict and independent evidence remain valid,
+but **six-reviewer-4 is submitting no duplicate Discovery Net review**.
+The normalization refinement here is a classical specialization and does
+not warrant a separate graph contribution. The ledger still reported7518
+at the last refresh; this statement does not claim that the peer's review
+has committed to the graph.
