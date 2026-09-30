@@ -51,6 +51,15 @@ neighbors, and every edge of its complement has at most six.
    has red degree eight, or at least three have red degree nine
    and at least three have red degree eleven. The proof checks all
    236,926 root-admissible seven-vertex completions per template.
+10. At **106 edges**, a degree-seven root has `(e(B),t)` in
+    `{(6,2),(7,1),(8,0)}`. In the `(6,2)` branch, its seven red
+    neighbors induce **P7, P3+C4 or P2+C5**. Its fourteen blue
+    neighbors have red degrees `9:a,10:12-2a,11:a+2`, where
+    respectively `a<=2`, `a<=1`, or `a=0`.
+    [degree106.md](degree106.md) proves this using a general exact
+    moment identity, analytic exclusions and complete small necessary
+    state and exceptional-row computations. Remaining forms are
+    necessary possibilities, with no realizability assertion.
 
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
