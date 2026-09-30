@@ -153,6 +153,8 @@ def main():
     expected = [1, 2, 4, 11, 34, 156]
     seen = {n: set() for n in range(1, 7)}
     ranks = Counter()
+    bounded_rank_two = 0
+    excluded_partition_caps = 0
     for item in fixtures:
         n, mask, s, colors = (item[k] for k in ("n", "edge_mask", "s", "colors"))
         require(1 <= n <= 6 and 0 <= mask < 1 << (n * (n - 1) // 2), "Bad graph encoding")
@@ -168,6 +170,19 @@ def main():
         matrix = direct_partition_matrix(colors, s)
         require(matrix == build.coloring_certificate(colors, s), "Lift/formula mismatch")
         ranks[str(check(family, matrix, s))] += 1
+        counts = [colors.count(c) for c in range(s)]
+        require(max(counts) - min(counts) <= 1, "Partition is not equitable")
+        if len(family) % s in (0, 1):
+            check(family, matrix, s, upper=True)
+            bounded_rank_two += 1
+        else:
+            try:
+                psd_ldl([[F(int(i == j)) - matrix[i][j]
+                          for j in range(len(family))] for i in range(len(family))])
+            except ValueError:
+                excluded_partition_caps += 1
+            else:
+                raise RuntimeError("Partition-cap classification contradicted")
     computed = build.graph_classes(6)
     for n in range(1, 7):
         require(sorted(seen[n]) == computed[n], "Vertex-extension coverage mismatch")
@@ -202,10 +217,16 @@ def main():
         product = build.product_certificate(factors)
         check(*product, upper=True)
         products.append({"N": len(product[0]), "s": product[2]})
+    triangles = build.product_certificate([build.rank_two_certificate(3, 7),
+                                          build.rank_two_certificate(3, 7, 3)])
+    check(*triangles, upper=True)
+    products.append({"N": len(triangles[0]), "s": triangles[2]})
     obstruction = tensor_obstruction()
     rejection_controls()
     print(json.dumps({"rank_two_classes_by_active_coordinates": expected,
                       "rank_two_total": len(fixtures), "rank_two_N_max": 22,
+                      "bounded_rank_two_certificates": bounded_rank_two,
+                      "uncapped_equitable_partition_certificates": excluded_partition_caps,
                       "rank_two_fixtures_sha256": sha256(raw).hexdigest(),
                       "independent_full_labeled_orbits_through": 5,
                       "exact_PSD_rank_histogram": dict(sorted(ranks.items())),

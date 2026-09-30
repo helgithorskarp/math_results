@@ -23,8 +23,9 @@ containing i, so 0 < s <= N/2.
 We prove an explicit empty-vertex lift, exact certificate transport under
 disjoint-support unions and restrictions preserving s, and conditional
 product closure with an explicit spectral upper bound. Consequences include
-all downsets of rank at most two and arbitrary finite products of matching
-downsets. All displayed constructions preserve rationality.
+all downsets of rank at most two and arbitrary finite products of rank-two
+downsets satisfying N=0 or 1 modulo s, including all matching downsets.
+All displayed constructions preserve rationality.
 
 The unrestricted conjecture is not settled. We do not infer product closure
 from H alone, or claim these applications of standard theta/Hoffman and
@@ -185,7 +186,72 @@ closure for arbitrary real certificates, and exact rational closure when
 the factors are rational. It is a standard tensor-spectrum argument with
 its necessary upper-bound hypothesis made explicit.
 
-## 6. An infinite family satisfying both bounds
+## 6. Exactly which partition certificates have the upper bound
+
+For the certificate (4)-(5), assume all t classes are nonempty, and put
+S=N-1=sum_c m_c. The following classification is exact:
+
+```
+M <= I  iff all m_c are equal,
+         or one m_c is one smaller than every other m_c.              (7)
+```
+
+The case t=1 is immediate since C=Q=0. Assume t>=2. The lifted Q has rank
+t-1 and trace
+
+```
+Tr Q = (t-1)S + u,       u=t*sum_c m_c^2-S^2.
+```
+
+If M<=I, section 2 gives Q<=N I, so u<=t-1. Write S=tq+r, 0<=r<t.
+Among integer class sizes with this sum, the minimum sum of squares is
+attained exactly at equitable sizes q and q+1, giving u=r(t-r).
+Any other size pattern increases the sum of squares by at least two:
+balancing two entries differing by at least two strictly decreases it,
+and sums of squares of integer entries have the same parity as their sum.
+Thus a non-equitable pattern has u>=r(t-r)+2t>t-1 and is impossible.
+For equitable sizes, r(t-r)<=t-1 leaves only r=0,1,t-1.
+
+To distinguish these cases, put P=I_t-J_t/t. Let R have rows e_c(A) at
+nonempty vertices and first row -m^T. Then Q=t R P R^T and
+R^T R=diag(m)+mm^T. Hence its nonzero eigenvalues are those of
+
+```
+B=t P[diag(m)+mm^T]P     on 1_t-perpendicular.
+```
+
+For r=0, m=q1 and B=tqP=(N-1)P, giving the upper bound. For r=t-1,
+m=(q+1)1-e_i; the projected contributions -Pe_i e_i^T P from diag(m)
+and +Pe_i e_i^T P from mm^T cancel. Therefore B=t(q+1)P=NP.
+For r=1, m=q1+e_i and B=tqP+2t(Pe_i)(Pe_i)^T. Its largest eigenvalue is
+tq+2(t-1), whereas N=tq+2. This exceeds N for t>=3. When t=2 this is
+already the r=t-1 case. These calculations prove (7).
+
+**Equitable rank-two partitions.** Every rank-two downset admits an
+equitable partition into s=Delta+1 disjoint classes. Start with the coloring
+from section 4. Replace each singleton {v} by a new pendant edge vv', using
+a separate new vertex v' for each original vertex. The colored two-element
+sets and these pendant edges form a properly s-edge-colored simple graph.
+This graph's edge intersections correspond exactly to intersections of
+the original nonempty sets.
+
+If one color has at least two more edges than another, their bicolored
+subgraph consists of alternating paths and even cycles. The total color
+imbalance guarantees a path with one more edge of the larger color.
+Interchanging the colors on that component preserves proper coloring and
+decreases the sum of squared color-class sizes by 2(d-1)>0, where d>=2
+was the imbalance. This integer potential ensures termination with all
+class sizes differing by at most one. Translating the pendant edges back
+to singletons gives the required equitable partition.
+
+Combining this with (7), every rank-two downset with N congruent to 0 or 1
+modulo s has a rational H certificate with M<=I. Section 5 consequently
+proves H for every finite product of such factors, also allowing cube
+factors. If N has another residue, no certificate from the particular
+partition formula (4)-(5) has this upper bound. This is a limitation of that
+formula, not nonexistence of another capped or ordinary H certificate.
+
+## 7. Explicit matching-family specialization
 
 A **matching downset** here consists of the empty set, all singletons on
 2k+l active coordinates, and k pairwise vertex-disjoint two-element sets.
@@ -226,7 +292,7 @@ for disjoint-support unions of these families and rank-two downsets, and
 for restrictions preserving their largest-star size. We do not claim the
 union or restriction rules preserve the additional upper spectral bound.
 
-## 7. Why naive tensoring is insufficient
+## 8. Why naive tensoring is insufficient
 
 Let D={0,{1},{2},{1,2},{3},{4},{3,4}}. It has N=7 and s=2. Partition its
 nonempty members into the two edges in one class and all four singletons
@@ -248,10 +314,10 @@ at least -2/5. In fact
 
 This exactly refutes the proposed rule "tensor any two H certificates."
 It does not refute H or H product closure by another construction. The
-balanced certificate in section 6 gives a valid tensor certificate for
+balanced certificate in section 7 gives a valid tensor certificate for
 this very same product family.
 
-## 8. Finite coverage and trust boundary
+## 9. Finite coverage and trust boundary
 
 Every rank-two downset is a simple graph on its active singleton coordinates,
 with the empty set and all those singletons included. The generator starts
@@ -274,9 +340,12 @@ on an ambient six-element set.
 
 Every finite matrix is checked with exact Fraction arithmetic for support,
 symmetry, row sums, star size, and PSD by symmetric LDL elimination with
-zero-pivot checks. Additional tests check both spectral bounds for 24
-matching examples and three products, six full-cube baselines, a union, a
-restriction, the negative tensor quadratic form, and rejection controls.
+zero-pivot checks. Additional tests check both spectral bounds for 111 of
+the rank-two certificates, 24 matching examples and four products, six
+full-cube baselines, a union, a restriction, the negative tensor quadratic
+form, and rejection controls. The remaining 97 equitable partition
+certificates fail the upper bound exactly as predicted by (7). This
+excludes that construction for the extra upper bound, not any downset from H.
 The derivations prove the infinite subclasses independently of this finite
 experiment. The trust base is ordinary mathematical reasoning, the cited
 Vizing theorem, and Python's standard integer/Fraction semantics. No

@@ -102,6 +102,59 @@ def edge_coloring(n, mask):
     return t, [result[a] for a in graph_family(n, mask)[1:]]
 
 
+def equitable_colors(n, family, colors, t):
+    """Balance an edge coloring after replacing each singleton by a pendant edge."""
+    edges = []
+    for a in family[1:]:
+        vertices = [v for v in range(n) if a & (1 << v)]
+        if len(vertices) == 1:
+            v = vertices[0]
+            edges.append((v, n + v))
+        elif len(vertices) == 2:
+            edges.append(tuple(vertices))
+        else:
+            raise ValueError("Equitable recoloring is only for rank-two families")
+    result = colors[:]
+    while True:
+        counts = [result.count(c) for c in range(t)]
+        high = max(range(t), key=lambda c: (counts[c], -c))
+        low = min(range(t), key=lambda c: (counts[c], c))
+        if counts[high] - counts[low] <= 1:
+            return result
+        incident = [[] for _ in range(2 * n)]
+        unseen = {i for i, c in enumerate(result) if c in (high, low)}
+        for i in unseen:
+            for v in edges[i]:
+                incident[v].append(i)
+        chosen = None
+        while unseen:
+            stack = [min(unseen)]
+            component = set()
+            while stack:
+                i = stack.pop()
+                if i not in unseen:
+                    continue
+                unseen.remove(i)
+                component.add(i)
+                for v in edges[i]:
+                    stack.extend(incident[v])
+            difference = sum(1 if result[i] == high else -1 for i in component)
+            if difference == 1:
+                chosen = component
+                break
+        if chosen is None:
+            raise RuntimeError("Bicolored path decomposition invariant failed")
+        for i in chosen:
+            result[i] = low if result[i] == high else high
+
+
+def rank_two_certificate(n, mask, shift=0):
+    family = graph_family(n, mask)
+    t, colors = edge_coloring(n, mask)
+    colors = equitable_colors(n, family, colors, t)
+    return [a << shift for a in family], coloring_certificate(colors, t), t
+
+
 def lift(core, t):
     """Empty-vertex lift; core is indexed by the nonempty sets."""
     m = len(core)
@@ -229,6 +282,7 @@ def main():
     for n in range(1, 7):
         for mask in classes[n]:
             t, colors = edge_coloring(n, mask)
+            colors = equitable_colors(n, graph_family(n, mask), colors, t)
             fixtures.append({"n": n, "edge_mask": mask, "s": t, "colors": colors})
     path = Path(__file__).with_name("rank_two_certificates.json")
     path.write_text(json.dumps(fixtures, separators=(",", ":")) + "\n")
