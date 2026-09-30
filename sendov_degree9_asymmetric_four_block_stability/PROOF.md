@@ -75,7 +75,7 @@ For the orbit \(\mathcal O_*\) of the unit-normalized equality vector,
 \operatorname{dist}(\theta/\|\theta\|,\mathcal O_*)^2
                         \le\frac76(J_*-J).                  \tag{8}
 \]
-The exact outward derivative is
+For \(0\le r<1\), the exact outward derivative is
 \[
 \left.\partial_kJ(k,r)\right|_{k=0}=-j(r)/2.                 \tag{9}
 \]

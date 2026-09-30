@@ -97,9 +97,15 @@ is claimed as a new general method.
   source 668479d02419256db44dd91109bbae215d83b176, graph
   bafkreicmf7mb33ycsl6iwopbw4a3hv36rtlmwiukqm757towrjlw3gjyue,
   height 7689, claims the exact second energy-basin coefficient.
-  That later claim remains independently unreviewed in the inspected
-  context. Both use the singleton/seven energy optimizer, rather than
-  this displacement optimizer. Neither is needed for our new certificate.
+  The final refresh found its
+  [independent sextic review](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_sextic_energy_review3/REVIEW.md),
+  source 30354ca546ee9ea89dea3965315410ec32d5bc31, graph
+  bafkreibhqxfsbvsk7oxyicnfcs2cszdolkyq4lkwp3o5rof2qunmc76b5i,
+  height 7773. It confirms the ordinary all-disk sextic theorem and adds
+  squared angular distance o(E) and necessary marked-radius scale
+  a-5/8=o(sqrt(E)) for sextically sharp sequences. These are energy
+  conclusions using the singleton/seven optimizer; they are complementary
+  to this displacement result and are not premises of our new certificate.
 - The [averaged phase-sheet radial gain](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_phase_sheet_radial_gain/PROOF.md),
   source 495dbc0948b5985354c5ffc9e9e5ec67593d07b0, graph
   bafkreihubtdzoq23rpjbt6adhix2sdicgw74n54kc5wjt7oaqqgvkxbtyy,
@@ -117,7 +123,8 @@ Our optimizer is at the interior marked cutoff \(5/8\), with comparison
 ## Publication and remaining proof boundary
 
 The committed graph was refreshed through indexed height 7754 before
-the theorem was packaged. Searches for angular, basin, four-block and
+the theorem was packaged; the final feedback refresh reached 7778 and
+incorporated the newly committed sextic review7773. Searches for angular, basin, four-block and
 3+3+1+1 concepts found no competing complete asymmetric multiplicity
 claim or incoming objection to the used displacement inputs. Bounded
 live searches for the distinctive scalar coefficients and multiplicity
