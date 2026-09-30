@@ -1,0 +1,91 @@
+{
+  "agent": "six-sorting-2",
+  "role": "researcher",
+  "scope": "Three nine-wire14-gate exclusions; conditional pure-binary maximum kernels only",
+  "cases": [
+    {
+      "case": 0,
+      "states": 81,
+      "budget": 14,
+      "lower_bound": 15,
+      "full_cnf": {
+        "variables": 13909,
+        "clauses": 291098,
+        "sha256": "35ccbb756858981aabfcf542f9fee3d08ed234be7fc274cfe472035f36c04859"
+      },
+      "core_file": "J0-core.cnf",
+      "core_sha256": "6876b554b80b5dc690b1b9dfea19bb31699b4707f979d865fa3a58cdad030825",
+      "core_clauses": 2202,
+      "proof_file": "J0-proof.rup",
+      "proof_sha256": "031dd5b8be2d21722120592342b4604f0ecd831b3f4c40207910a2933f3eae36",
+      "proof_additions": 611,
+      "drat_check": "VERIFIED;0 RAT lemmas",
+      "solver": "Glucose4 via python-sat",
+      "solver_stats": {
+        "restarts": 4,
+        "conflicts": 881,
+        "decisions": 2707,
+        "propagations": 542683
+      },
+      "solver_seconds": 0.35574540899999996,
+      "peak_rss_kib": 49372
+    },
+    {
+      "case": 1,
+      "states": 82,
+      "budget": 14,
+      "lower_bound": 15,
+      "full_cnf": {
+        "variables": 14000,
+        "clauses": 293358,
+        "sha256": "412b3da36f0a7f23b0104939deec58a66f373f9f02235dc5218a87c813c14ade"
+      },
+      "core_file": "J1-core.cnf",
+      "core_sha256": "d402d8c1c4da7c3b9948308fdedebff3e217e675afad40876855db5543c44611",
+      "core_clauses": 2738,
+      "proof_file": "J1-proof.rup",
+      "proof_sha256": "db2537a7f2fb8fb70de54710a5dbbd5badef2c5b0d054c360c972619f37936f1",
+      "proof_additions": 1034,
+      "drat_check": "VERIFIED;0 RAT lemmas",
+      "solver": "Glucose4 via python-sat",
+      "solver_stats": {
+        "restarts": 6,
+        "conflicts": 2056,
+        "decisions": 6775,
+        "propagations": 1267939
+      },
+      "solver_seconds": 0.4516531140000001,
+      "peak_rss_kib": 51740
+    },
+    {
+      "case": 2,
+      "states": 80,
+      "budget": 14,
+      "lower_bound": 15,
+      "full_cnf": {
+        "variables": 13779,
+        "clauses": 288742,
+        "sha256": "bf32833b0254597bb4c908a5d4d406a7724046304ea8f976687d0b5051ad98c6"
+      },
+      "core_file": "J2-core.cnf",
+      "core_sha256": "81facdd742841025a6be2a1b66389263039bdc51d7d0fb81d509127c1be32737",
+      "core_clauses": 2531,
+      "proof_file": "J2-proof.rup",
+      "proof_sha256": "6de7897094c6b3d08f70a8ff746a5ccbb043849a7821575616cee4628d3a2cc5",
+      "proof_additions": 853,
+      "drat_check": "VERIFIED;0 RAT lemmas",
+      "solver": "Glucose4 via python-sat",
+      "solver_stats": {
+        "restarts": 4,
+        "conflicts": 1190,
+        "decisions": 3994,
+        "propagations": 770560
+      },
+      "solver_seconds": 0.41750121500000004,
+      "peak_rss_kib": 49300
+    }
+  ],
+  "imported_bound": "S(11)=35, https://arxiv.org/abs/2012.04400v3",
+  "checker_credit": "RUP algorithm adapted from six-sorting-1, https://github.com/helgithorskarp/math_results/blob/main/sorting_networks/thirteen_endpoint_frontier/check_exclusion.py; source a65309ebb91b28c66b5e3be1f6fc0f2bf3c22e73",
+  "native_checker": "DRAT-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+}
