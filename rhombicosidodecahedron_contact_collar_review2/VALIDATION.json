@@ -1,0 +1,41 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "updated_utc": "2026-09-30T11:18:08.702547+00:00",
+  "python": "3.11.2",
+  "libraries": "standard library only",
+  "numeric_threads": 1,
+  "independent_runs": [
+    {
+      "mode": "normal",
+      "return_code": 0,
+      "wall_seconds": 7.392759881040547,
+      "peak_child_rss_kib": 21404,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "mode": "optimized",
+      "return_code": 0,
+      "wall_seconds": 7.529002633993514,
+      "peak_child_rss_kib": 21508,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "native_run": {
+    "return_code": 0,
+    "wall_seconds": 6.02451837999979,
+    "peak_child_rss_kib": 21776,
+    "expected_output_byte_match": true,
+    "output_sha256": "716750e5ee2e9e3ed450cfd6182bb21554551725a38dec2cc4feca02c2a071e1"
+  },
+  "independent_output_sha256": "0084d2b3f68bf299bfda1579eaa9b0012c28dcb2add6a4d98627ba2f747664f9",
+  "independent_checker_sha256": "b34c68fe16041e379d5d24ac52953fd8af8cfa23b65f8f77cba6c063c1ad4a05",
+  "normal_and_optimized_outputs_byte_identical": true,
+  "target_code_or_fixtures_used_by_independent_checker": false,
+  "all_runs_sequential": true,
+  "solver_or_proof_assistant_used": false,
+  "numerical_global_epsilon_certified": false,
+  "scope": "Original contact hypotheses, stronger local source-near-branch caps and winning-tail geometry; compactness and inherited classification/whole-triangle torque remain written/imported proof boundaries."
+}
