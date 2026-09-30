@@ -1,0 +1,1473 @@
+{
+  "agent": "six-rupert-1",
+  "role": "researcher",
+  "global_Rupert_property": "OPEN",
+  "prerequisites": {
+    "agent": "six-rupert-1",
+    "role": "researcher",
+    "full_normalized_cap_prerequisite_matched": true,
+    "parent_expected_sha256": "15257430be1a1b999e1b96e9b076ad47d253150f465dba14ffc1c3d93922a2cc",
+    "receiver_geometry": {
+      "macro_regions": [
+        {
+          "cell": 4,
+          "name": "near3",
+          "rays": [
+            [
+              "(-5/6) + (1/2)*sqrt(5)",
+              "(-1/6) + (1/6)*sqrt(5)",
+              "(1) + (0)*sqrt(5)"
+            ],
+            [
+              "(-19/24) + (19/40)*sqrt(5)",
+              "(-1/12) + (2/15)*sqrt(5)",
+              "(1) + (0)*sqrt(5)"
+            ],
+            [
+              "(-7/16) + (5/16)*sqrt(5)",
+              "(1/16) + (1/16)*sqrt(5)",
+              "(1) + (0)*sqrt(5)"
+            ]
+          ]
+        },
+        {
+          "cell": 4,
+          "name": "near7",
+          "rays": [
+            [
+              "(-5/6) + (1/2)*sqrt(5)",
+              "(-1/6) + (1/6)*sqrt(5)",
+              "(1) + (0)*sqrt(5)"
+            ],
+            [
+              "(-7/16) + (5/16)*sqrt(5)",
+              "(1/16) + (1/16)*sqrt(5)",
+              "(1) + (0)*sqrt(5)"
+            ],
+            [
+              "(25/38) + (-7/38)*sqrt(5)",
+              "(9/38) + (-1/38)*sqrt(5)",
+              "(1) + (0)*sqrt(5)"
+            ]
+          ]
+        },
+        {
+          "cell": 9,
+          "name": "near8",
+          "rays": [
+            [
+              "(-5/6) + (1/2)*sqrt(5)",
+              "(-1/6) + (1/6)*sqrt(5)",
+              "(1) + (0)*sqrt(5)"
+            ],
+            [
+              "(1/2) + (-1/10)*sqrt(5)",
+              "(-1/2) + (3/10)*sqrt(5)",
+              "(1) + (0)*sqrt(5)"
+            ],
+            [
+              "(-4/9) + (1/3)*sqrt(5)",
+              "(4/9) + (-1/9)*sqrt(5)",
+              "(1) + (0)*sqrt(5)"
+            ]
+          ]
+        }
+      ],
+      "closed_cell4_convex_quadrilateral_rays": [
+        [
+          "(-5/6) + (1/2)*sqrt(5)",
+          "(-1/6) + (1/6)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ],
+        [
+          "(-19/24) + (19/40)*sqrt(5)",
+          "(-1/12) + (2/15)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ],
+        [
+          "(-7/16) + (5/16)*sqrt(5)",
+          "(1/16) + (1/16)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ],
+        [
+          "(25/38) + (-7/38)*sqrt(5)",
+          "(9/38) + (-1/38)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ]
+      ],
+      "closed_midpoint_cover_paths": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "exact_child_area_ratio": "1/4",
+      "new_receiver_witness": {
+        "ray": [
+          "(-439/1368) + (119/456)*sqrt(5)",
+          "(73/1368) + (89/1368)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ],
+        "strict_inside_cell": 4,
+        "strict_inside_piece": 2,
+        "distance_from_all60_directed_minimum_centers_lower": "1/50",
+        "all30_projective_axis_comparisons": 30,
+        "cap_separation_margin_sha256": "11413b69d6a9909398aef2216666d6e16ae9726f0dc487d922709f033ae54dbe",
+        "complete_projective_reflection_orbit": 60,
+        "images_in_old_closed_cell7_cone": 0,
+        "all_projective_cone_coordinates_sha256": "558b5f896948ced9d37b5f9bcc7b332b9bd340022f41f02134a1c9836809d88d"
+      }
+    },
+    "malformed_controls_rejected": [
+      "missing closed midpoint child",
+      "prefix-overlapping closed cover",
+      "duplicate closed cover leaf",
+      "reversed original support",
+      "repeated origin stress point",
+      "false actual facet ball100",
+      "false radial gap1/20",
+      "false unit angle derivative"
+    ]
+  },
+  "pieces": [
+    {
+      "agent": "six-rupert-1",
+      "role": "researcher",
+      "status": "complete exact finite hypotheses",
+      "global_Rupert_property": "OPEN",
+      "piece_index": 0,
+      "cell": 4,
+      "macro": "near3",
+      "path": "",
+      "rays": [
+        [
+          "(-5/6) + (1/2)*sqrt(5)",
+          "(-1/6) + (1/6)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ],
+        [
+          "(-19/24) + (19/40)*sqrt(5)",
+          "(-1/12) + (2/15)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ],
+        [
+          "(-7/16) + (5/16)*sqrt(5)",
+          "(1/16) + (1/16)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ]
+      ],
+      "phase": {
+        "area": {
+          "max_squared": "(45665441950/390516489) + (17552702650/390516489)*sqrt(5)",
+          "active_strata": [
+            "edge1"
+          ],
+          "edge_critical_points": [
+            {
+              "edge": 0,
+              "positive_cone_critical_point": false,
+              "alpha": "(-1180/33) + (-1010/33)*sqrt(5)",
+              "beta": "(1400/33) + (1120/33)*sqrt(5)"
+            },
+            {
+              "edge": 1,
+              "positive_cone_critical_point": true,
+              "alpha": "(30942900/3944611) + (1230380/3944611)*sqrt(5)",
+              "beta": "(-7216920/3944611) + (12790680/3944611)*sqrt(5)"
+            },
+            {
+              "edge": 2,
+              "positive_cone_critical_point": false,
+              "alpha": "(66080/2299) + (38080/2299)*sqrt(5)",
+              "beta": "(-51885/2299) + (-29705/2299)*sqrt(5)"
+            }
+          ],
+          "interior_critical_point": false
+        },
+        "area_excess_upper": "3653/125000",
+        "receiver_chord_upper": "21523/1000000",
+        "source_chord_upper": "76713/1000000",
+        "radial_error_upper": "357887824827/10000000000000",
+        "old1_28gate_passes": false,
+        "radial_positive_branch_left": "(-6753714427159622641689817941/2900000000000000000000000000) + (65/58)*sqrt(5)",
+        "radial_squared_margin": "(98209721788365916587128788984010305618579053153725479481/8410000000000000000000000000000000000000000000000000000) + (-87798287553075094341967633233/16820000000000000000000000000)*sqrt(5)",
+        "roll_chord_upper": "447208274827/5000000000000",
+        "composition_squared_upper": "441253033473741561879929/25000000000000000000000000",
+        "quaternion_product_margin": "26106177027794613170616407616016578284880068696271/1600000000000000000000000000000000000000000000000000",
+        "dynamic_angle_derivative_margin": "156995477048114725074734506639/100000000000000000000000000000000",
+        "full_angle_upper": "133253/1000000"
+      },
+      "normalized_torque_ball_lower": "153253/1000000",
+      "base_distance_test_radius": "153253/1000000",
+      "strict_normalized_remainder_margin": "1/50",
+      "fixed_support_denominators": [
+        "89323/100000",
+        "909671/1000000",
+        "99127/250000",
+        "16271/40000",
+        "1202739/1000000",
+        "58619/50000",
+        "58619/50000",
+        "1202739/1000000",
+        "16271/40000",
+        "99127/250000",
+        "909671/1000000",
+        "89323/100000"
+      ],
+      "actual_weak_support_comparisons": 2232,
+      "positive_origin_stress": [
+        1,
+        3,
+        8,
+        10
+      ],
+      "positive_cubic_origin_coefficients": 40,
+      "identically_zero_balance_coordinates": 3,
+      "all220potential_facets": 220,
+      "all7simplex_strata": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "all1540facet_strata": 1540,
+      "base_classifications": {
+        "opposite": 1417,
+        "distance": 123,
+        "degenerate": 0,
+        "unresolved": 0
+      },
+      "base_arithmetic_audits": 13200,
+      "base_coefficient_sha256": "a43c706982ec9170e29a1da754596f836216a3e264aa433ce196ab75f94868ba",
+      "base_case_record_sha256": "fa8cb7e6663a346c334982076488183623fdbb5dcd96a1b2f672d172949b9435",
+      "refinements": [],
+      "refinement_coefficient_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "additional_refinement_nodes": 0,
+      "additional_arithmetic_audits": 0,
+      "terminal_unresolved_strata": 0
+    },
+    {
+      "agent": "six-rupert-1",
+      "role": "researcher",
+      "status": "complete exact finite hypotheses",
+      "global_Rupert_property": "OPEN",
+      "piece_index": 1,
+      "cell": 4,
+      "macro": "near7",
+      "path": "0",
+      "rays": [
+        [
+          "(-5/6) + (1/2)*sqrt(5)",
+          "(-1/6) + (1/6)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ],
+        [
+          "(-61/96) + (13/32)*sqrt(5)",
+          "(-5/96) + (11/96)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ],
+        [
+          "(-5/57) + (3/19)*sqrt(5)",
+          "(2/57) + (4/57)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ]
+      ],
+      "phase": {
+        "area": {
+          "max_squared": "(618110672425/5611182489) + (268178201875/5611182489)*sqrt(5)",
+          "active_strata": [
+            "corner1"
+          ],
+          "edge_critical_points": [
+            {
+              "edge": 0,
+              "positive_cone_critical_point": false,
+              "alpha": "(-117965/2299) + (-67785/2299)*sqrt(5)",
+              "beta": "(132160/2299) + (76160/2299)*sqrt(5)"
+            },
+            {
+              "edge": 1,
+              "positive_cone_critical_point": false,
+              "alpha": "(19194960/1378421) + (21161440/4135263)*sqrt(5)",
+              "beta": "(-10013625/1378421) + (-7778935/4135263)*sqrt(5)"
+            },
+            {
+              "edge": 2,
+              "positive_cone_critical_point": false,
+              "alpha": "(19390/1353) + (10430/1353)*sqrt(5)",
+              "beta": "(-10370/1353) + (-5920/1353)*sqrt(5)"
+            }
+          ],
+          "interior_critical_point": false
+        },
+        "area_excess_upper": "15147/1000000",
+        "receiver_chord_upper": "21423/1000000",
+        "source_chord_upper": "318087/8000000",
+        "radial_error_upper": "1028565845823/51200000000000",
+        "old1_28gate_passes": true,
+        "radial_positive_branch_left": "(-176977880483276613918789872541/76021760000000000000000000000) + (65/58)*sqrt(5)",
+        "radial_squared_margin": "(67566996144826166264470069561514028124807197149907025796681/5779307993497600000000000000000000000000000000000000000000) + (-2300712446282595980944268343033/440926208000000000000000000000)*sqrt(5)",
+        "roll_chord_upper": "1483761749823/25600000000000",
+        "composition_squared_upper": "4654867175009650840531329/655360000000000000000000000",
+        "quaternion_product_margin": "49796605930643096159439184827214287436603421330916271/2684354560000000000000000000000000000000000000000000000",
+        "dynamic_angle_derivative_margin": "11069394688135716167567918244039/2621440000000000000000000000000000",
+        "full_angle_upper": "84531/1000000"
+      },
+      "normalized_torque_ball_lower": "104531/1000000",
+      "base_distance_test_radius": "104531/1000000",
+      "strict_normalized_remainder_margin": "1/50",
+      "fixed_support_denominators": [
+        "89177/100000",
+        "113523/125000",
+        "198417/500000",
+        "40711/100000",
+        "1192703/1000000",
+        "581299/500000",
+        "46647/40000",
+        "299093/250000",
+        "16271/40000",
+        "99127/250000",
+        "14192/15625",
+        "27871/31250"
+      ],
+      "actual_weak_support_comparisons": 2232,
+      "positive_origin_stress": [
+        1,
+        3,
+        8,
+        10
+      ],
+      "positive_cubic_origin_coefficients": 40,
+      "identically_zero_balance_coordinates": 3,
+      "all220potential_facets": 220,
+      "all7simplex_strata": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "all1540facet_strata": 1540,
+      "base_classifications": {
+        "opposite": 1428,
+        "distance": 112,
+        "degenerate": 0,
+        "unresolved": 0
+      },
+      "base_arithmetic_audits": 13200,
+      "base_coefficient_sha256": "a6d0b85d4288befab8656b50e14d786a82270472a0389b5cd7351bf88ddfbb1a",
+      "base_case_record_sha256": "ff4133e5b6b0c21f064cd95e570cd62210a5aeab893644069e9f1995cf80330b",
+      "refinements": [],
+      "refinement_coefficient_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "additional_refinement_nodes": 0,
+      "additional_arithmetic_audits": 0,
+      "terminal_unresolved_strata": 0
+    },
+    {
+      "agent": "six-rupert-1",
+      "role": "researcher",
+      "status": "complete exact finite hypotheses",
+      "global_Rupert_property": "OPEN",
+      "piece_index": 2,
+      "cell": 4,
+      "macro": "near7",
+      "path": "1",
+      "rays": [
+        [
+          "(-61/96) + (13/32)*sqrt(5)",
+          "(-5/96) + (11/96)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ],
+        [
+          "(-7/16) + (5/16)*sqrt(5)",
+          "(1/16) + (1/16)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ],
+        [
+          "(67/608) + (39/608)*sqrt(5)",
+          "(91/608) + (11/608)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ]
+      ],
+      "phase": {
+        "area": {
+          "max_squared": "(2565025/23481) + (1136075/23481)*sqrt(5)",
+          "active_strata": [
+            "corner1"
+          ],
+          "edge_critical_points": [
+            {
+              "edge": 0,
+              "positive_cone_critical_point": false,
+              "alpha": "(-103770/2299) + (-59410/2299)*sqrt(5)",
+              "beta": "(117965/2299) + (67785/2299)*sqrt(5)"
+            },
+            {
+              "edge": 1,
+              "positive_cone_critical_point": false,
+              "alpha": "(45115/2607) + (5845/869)*sqrt(5)",
+              "beta": "(-28630/2607) + (-2890/869)*sqrt(5)"
+            },
+            {
+              "edge": 2,
+              "positive_cone_critical_point": false,
+              "alpha": "(91044845/8166147) + (52200545/8166147)*sqrt(5)",
+              "beta": "(-12822175/2722049) + (-8037595/2722049)*sqrt(5)"
+            }
+          ],
+          "interior_critical_point": false
+        },
+        "area_excess_upper": "28679/1000000",
+        "receiver_chord_upper": "15717/500000",
+        "source_chord_upper": "602259/8000000",
+        "radial_error_upper": "9882012401379/256000000000000",
+        "old1_28gate_passes": false,
+        "radial_positive_branch_left": "(-4426511970903929242155831947589/1900544000000000000000000000000) + (65/58)*sqrt(5)",
+        "radial_squared_margin": "(42169158554363042169612456057474890633211300590965380842912921/3612067495936000000000000000000000000000000000000000000000000) + (-57544655621751080148025815318657/11023155200000000000000000000000)*sqrt(5)",
+        "roll_chord_upper": "13221560561379/128000000000000",
+        "composition_squared_upper": "361396958490628577626381641/16384000000000000000000000000",
+        "quaternion_product_margin": "261280315797656698444234081368617872452159072888399031/16777216000000000000000000000000000000000000000000000000",
+        "dynamic_angle_derivative_margin": "30237231185801235250661431719231/65536000000000000000000000000000000",
+        "full_angle_upper": "29793/200000"
+      },
+      "normalized_torque_ball_lower": "33793/200000",
+      "base_distance_test_radius": "33793/200000",
+      "strict_normalized_remainder_margin": "1/50",
+      "fixed_support_denominators": [
+        "889109/1000000",
+        "452737/500000",
+        "12211/31250",
+        "40087/100000",
+        "238857/200000",
+        "58207/50000",
+        "585589/500000",
+        "240301/200000",
+        "195251/500000",
+        "76129/200000",
+        "908393/1000000",
+        "35679/40000"
+      ],
+      "actual_weak_support_comparisons": 2232,
+      "positive_origin_stress": [
+        1,
+        3,
+        8,
+        10
+      ],
+      "positive_cubic_origin_coefficients": 40,
+      "identically_zero_balance_coordinates": 3,
+      "all220potential_facets": 220,
+      "all7simplex_strata": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "all1540facet_strata": 1540,
+      "base_classifications": {
+        "opposite": 1413,
+        "distance": 127,
+        "degenerate": 0,
+        "unresolved": 0
+      },
+      "base_arithmetic_audits": 13200,
+      "base_coefficient_sha256": "f67e493f9637bfc704987a8cc2d92e4fbe070c06b5c818c7ceaed6d27029817d",
+      "base_case_record_sha256": "c3d21ee459891330fd900eddacc54b8a22dab2cdfaa0cf1911aee423b89e56d4",
+      "refinements": [],
+      "refinement_coefficient_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "additional_refinement_nodes": 0,
+      "additional_arithmetic_audits": 0,
+      "terminal_unresolved_strata": 0
+    },
+    {
+      "agent": "six-rupert-1",
+      "role": "researcher",
+      "status": "complete exact finite hypotheses",
+      "global_Rupert_property": "OPEN",
+      "piece_index": 3,
+      "cell": 4,
+      "macro": "near7",
+      "path": "2",
+      "rays": [
+        [
+          "(-5/57) + (3/19)*sqrt(5)",
+          "(2/57) + (4/57)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ],
+        [
+          "(67/608) + (39/608)*sqrt(5)",
+          "(91/608) + (11/608)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ],
+        [
+          "(25/38) + (-7/38)*sqrt(5)",
+          "(9/38) + (-1/38)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ]
+      ],
+      "phase": {
+        "area": {
+          "max_squared": "(785764712225/7180570881) + (346371458075/7180570881)*sqrt(5)",
+          "active_strata": [
+            "corner1"
+          ],
+          "edge_critical_points": [
+            {
+              "edge": 0,
+              "positive_cone_critical_point": false,
+              "alpha": "(-7026665/168421) + (-3765005/168421)*sqrt(5)",
+              "beta": "(24409840/505263) + (13043680/505263)*sqrt(5)"
+            },
+            {
+              "edge": 1,
+              "positive_cone_critical_point": false,
+              "alpha": "(5600/237) + (800/79)*sqrt(5)",
+              "beta": "(-45115/2607) + (-5845/869)*sqrt(5)"
+            },
+            {
+              "edge": 2,
+              "positive_cone_critical_point": false,
+              "alpha": "(10370/1353) + (5920/1353)*sqrt(5)",
+              "beta": "(-450/451) + (-470/451)*sqrt(5)"
+            }
+          ],
+          "interior_critical_point": false
+        },
+        "area_excess_upper": "24127/1000000",
+        "receiver_chord_upper": "43149/1000000",
+        "source_chord_upper": "506667/8000000",
+        "radial_error_upper": "48171243812319/1280000000000000",
+        "old1_28gate_passes": false,
+        "radial_positive_branch_left": "(-110659293593182350564801988575069/47513600000000000000000000000000) + (65/58)*sqrt(5)",
+        "radial_squared_margin": "(26358279561161549783108063215798099218700447962652373205048354761/2257542184960000000000000000000000000000000000000000000000000000) + (-1438570816711370557342425851475897/275578880000000000000000000000000)*sqrt(5)",
+        "roll_chord_upper": "71091992612319/640000000000000",
+        "composition_squared_upper": "9698319451228419273830557761/409600000000000000000000000000",
+        "quaternion_product_margin": "25756375198217487087719287870843308772512099928447472671/1677721600000000000000000000000000000000000000000000000000",
+        "dynamic_angle_derivative_margin": "88548947189149154752994417414151/1638400000000000000000000000000000000",
+        "full_angle_upper": "154337/1000000"
+      },
+      "normalized_torque_ball_lower": "164337/1000000",
+      "base_distance_test_radius": "174337/1000000",
+      "strict_normalized_remainder_margin": "1/100",
+      "fixed_support_denominators": [
+        "882843/1000000",
+        "899093/1000000",
+        "399599/1000000",
+        "204973/500000",
+        "296521/250000",
+        "1156147/1000000",
+        "1169691/1000000",
+        "59999/50000",
+        "382027/1000000",
+        "11637/31250",
+        "226803/250000",
+        "178163/200000"
+      ],
+      "actual_weak_support_comparisons": 2232,
+      "positive_origin_stress": [
+        1,
+        3,
+        8,
+        10
+      ],
+      "positive_cubic_origin_coefficients": 40,
+      "identically_zero_balance_coordinates": 3,
+      "all220potential_facets": 220,
+      "all7simplex_strata": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "all1540facet_strata": 1540,
+      "base_classifications": {
+        "opposite": 1394,
+        "distance": 131,
+        "degenerate": 0,
+        "unresolved": 15
+      },
+      "base_arithmetic_audits": 13200,
+      "base_coefficient_sha256": "e82ca4889ecc3932c7aa1d41e0db76d6fff44785ef39b98e8175ed66b0c6566d",
+      "base_case_record_sha256": "eef27a15e07b846579cca380af7594fe3a83ef85d5d08fc8ce7224c6080b00e2",
+      "refinements": [
+        {
+          "triple": [
+            0,
+            7,
+            8
+          ],
+          "nodes": 9,
+          "closed_leaf_paths": [
+            "0",
+            "1",
+            "20",
+            "21",
+            "22",
+            "23",
+            "3"
+          ],
+          "max_leaf_depth": 2,
+          "all_node_classifications": {
+            "opposite": 54,
+            "distance": 4,
+            "degenerate": 0,
+            "unresolved": 5
+          },
+          "all_leaf_classifications": {
+            "opposite": 45,
+            "distance": 4,
+            "degenerate": 0,
+            "unresolved": 0
+          },
+          "all7faces_checked_on_each_closed_leaf": true,
+          "arithmetic_audits": 135,
+          "terminal_unresolved_strata": 0,
+          "case_record_sha256": "19f02c8b1c05958a76fc1368dff49a589de17399c5e01eb0fe4bc444a954ef94"
+        },
+        {
+          "triple": [
+            2,
+            7,
+            8
+          ],
+          "nodes": 9,
+          "closed_leaf_paths": [
+            "0",
+            "1",
+            "20",
+            "21",
+            "22",
+            "23",
+            "3"
+          ],
+          "max_leaf_depth": 2,
+          "all_node_classifications": {
+            "opposite": 14,
+            "distance": 43,
+            "degenerate": 0,
+            "unresolved": 6
+          },
+          "all_leaf_classifications": {
+            "opposite": 12,
+            "distance": 37,
+            "degenerate": 0,
+            "unresolved": 0
+          },
+          "all7faces_checked_on_each_closed_leaf": true,
+          "arithmetic_audits": 135,
+          "terminal_unresolved_strata": 0,
+          "case_record_sha256": "db8803dcddb17293c30c3545d73084c457b3ae0816f32c429c0853a1c99f813e"
+        },
+        {
+          "triple": [
+            3,
+            7,
+            8
+          ],
+          "nodes": 37,
+          "closed_leaf_paths": [
+            "0",
+            "1",
+            "20",
+            "21",
+            "220",
+            "2210",
+            "2211",
+            "22120",
+            "22121",
+            "22122",
+            "22123",
+            "2213",
+            "22200",
+            "22201",
+            "22202",
+            "22203",
+            "2221",
+            "2222",
+            "2223",
+            "2230",
+            "22310",
+            "22311",
+            "22312",
+            "22313",
+            "2232",
+            "2233",
+            "23",
+            "3"
+          ],
+          "max_leaf_depth": 5,
+          "all_node_classifications": {
+            "opposite": 88,
+            "distance": 146,
+            "degenerate": 0,
+            "unresolved": 25
+          },
+          "all_leaf_classifications": {
+            "opposite": 73,
+            "distance": 123,
+            "degenerate": 0,
+            "unresolved": 0
+          },
+          "all7faces_checked_on_each_closed_leaf": true,
+          "arithmetic_audits": 555,
+          "terminal_unresolved_strata": 0,
+          "case_record_sha256": "9e0b6f0f0e4161a8a265bb2416cecdfb469f50007980de09ce92507414f2d0b5"
+        },
+        {
+          "triple": [
+            4,
+            7,
+            8
+          ],
+          "nodes": 21,
+          "closed_leaf_paths": [
+            "0",
+            "1",
+            "20",
+            "21",
+            "220",
+            "221",
+            "22200",
+            "22201",
+            "22202",
+            "22203",
+            "2221",
+            "2222",
+            "2223",
+            "223",
+            "23",
+            "3"
+          ],
+          "max_leaf_depth": 5,
+          "all_node_classifications": {
+            "opposite": 123,
+            "distance": 11,
+            "degenerate": 0,
+            "unresolved": 13
+          },
+          "all_leaf_classifications": {
+            "opposite": 103,
+            "distance": 9,
+            "degenerate": 0,
+            "unresolved": 0
+          },
+          "all7faces_checked_on_each_closed_leaf": true,
+          "arithmetic_audits": 315,
+          "terminal_unresolved_strata": 0,
+          "case_record_sha256": "3dbeadffff4db548b9f3f24d98ef159d9e956e2d4901fbc9c681af1bac63c223"
+        },
+        {
+          "triple": [
+            6,
+            7,
+            8
+          ],
+          "nodes": 73,
+          "closed_leaf_paths": [
+            "0",
+            "1",
+            "20",
+            "21",
+            "220",
+            "2210",
+            "2211",
+            "22120",
+            "22121",
+            "22122",
+            "22123",
+            "2213",
+            "222000",
+            "222001",
+            "222002",
+            "222003",
+            "22201",
+            "22202",
+            "22203",
+            "2221",
+            "2222",
+            "2223",
+            "2230",
+            "22310",
+            "22311",
+            "223120",
+            "223121",
+            "223122",
+            "223123",
+            "2231300",
+            "2231301",
+            "2231302",
+            "2231303",
+            "223131",
+            "223132",
+            "2231330",
+            "2231331",
+            "2231332",
+            "2231333",
+            "22320",
+            "223210",
+            "223211",
+            "223212",
+            "223213",
+            "22322",
+            "22323",
+            "22330",
+            "223310",
+            "223311",
+            "223312",
+            "223313",
+            "22332",
+            "22333",
+            "23",
+            "3"
+          ],
+          "max_leaf_depth": 7,
+          "all_node_classifications": {
+            "opposite": 264,
+            "distance": 198,
+            "degenerate": 0,
+            "unresolved": 49
+          },
+          "all_leaf_classifications": {
+            "opposite": 222,
+            "distance": 163,
+            "degenerate": 0,
+            "unresolved": 0
+          },
+          "all7faces_checked_on_each_closed_leaf": true,
+          "arithmetic_audits": 1095,
+          "terminal_unresolved_strata": 0,
+          "case_record_sha256": "70a8981967fbfe9db659292c2f460c03e999025befd4f298b947a26a52d00237"
+        }
+      ],
+      "refinement_coefficient_sha256": "0c2641cd9f4fae125fea93e24307e8fbcd81a6a2e065b9d9cc7c1ef9d9bf6bd2",
+      "additional_refinement_nodes": 149,
+      "additional_arithmetic_audits": 2235,
+      "terminal_unresolved_strata": 0
+    },
+    {
+      "agent": "six-rupert-1",
+      "role": "researcher",
+      "status": "complete exact finite hypotheses",
+      "global_Rupert_property": "OPEN",
+      "piece_index": 4,
+      "cell": 4,
+      "macro": "near7",
+      "path": "3",
+      "rays": [
+        [
+          "(-61/96) + (13/32)*sqrt(5)",
+          "(-5/96) + (11/96)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ],
+        [
+          "(67/608) + (39/608)*sqrt(5)",
+          "(91/608) + (11/608)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ],
+        [
+          "(-5/57) + (3/19)*sqrt(5)",
+          "(2/57) + (4/57)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ]
+      ],
+      "phase": {
+        "area": {
+          "max_squared": "(785764712225/7180570881) + (346371458075/7180570881)*sqrt(5)",
+          "active_strata": [
+            "corner1"
+          ],
+          "edge_critical_points": [
+            {
+              "edge": 0,
+              "positive_cone_critical_point": false,
+              "alpha": "(-12822175/2722049) + (-8037595/2722049)*sqrt(5)",
+              "beta": "(91044845/8166147) + (52200545/8166147)*sqrt(5)"
+            },
+            {
+              "edge": 1,
+              "positive_cone_critical_point": false,
+              "alpha": "(24409840/505263) + (13043680/505263)*sqrt(5)",
+              "beta": "(-7026665/168421) + (-3765005/168421)*sqrt(5)"
+            },
+            {
+              "edge": 2,
+              "positive_cone_critical_point": false,
+              "alpha": "(-10013625/1378421) + (-7778935/4135263)*sqrt(5)",
+              "beta": "(19194960/1378421) + (21161440/4135263)*sqrt(5)"
+            }
+          ],
+          "interior_critical_point": false
+        },
+        "area_excess_upper": "24127/1000000",
+        "receiver_chord_upper": "15717/500000",
+        "source_chord_upper": "506667/8000000",
+        "radial_error_upper": "42536490760479/1280000000000000",
+        "old1_28gate_passes": true,
+        "radial_positive_branch_left": "(-110644471238340273144736700973789/47513600000000000000000000000000) + (65/58)*sqrt(5)",
+        "radial_squared_margin": "(26369084587011819895200648922003415600611184817570013660865016521/2257542184960000000000000000000000000000000000000000000000000000) + (-1438378126098423550881577112659257/275578880000000000000000000000000)*sqrt(5)",
+        "roll_chord_upper": "59234231560479/640000000000000",
+        "composition_squared_upper": "7187252545814846427434709441/409600000000000000000000000000",
+        "quaternion_product_margin": "6925460077620092030806708321322107904314497169115590639/419430400000000000000000000000000000000000000000000000000",
+        "dynamic_angle_derivative_margin": "2614704853637352160382835389969031/1638400000000000000000000000000000000",
+        "full_angle_upper": "132863/1000000"
+      },
+      "normalized_torque_ball_lower": "152863/1000000",
+      "base_distance_test_radius": "152863/1000000",
+      "strict_normalized_remainder_margin": "1/50",
+      "fixed_support_denominators": [
+        "889109/1000000",
+        "452737/500000",
+        "198417/500000",
+        "40711/100000",
+        "1192703/1000000",
+        "581299/500000",
+        "1169691/1000000",
+        "59999/50000",
+        "195251/500000",
+        "76129/200000",
+        "14192/15625",
+        "27871/31250"
+      ],
+      "actual_weak_support_comparisons": 2232,
+      "positive_origin_stress": [
+        1,
+        3,
+        8,
+        10
+      ],
+      "positive_cubic_origin_coefficients": 40,
+      "identically_zero_balance_coordinates": 3,
+      "all220potential_facets": 220,
+      "all7simplex_strata": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "all1540facet_strata": 1540,
+      "base_classifications": {
+        "opposite": 1417,
+        "distance": 123,
+        "degenerate": 0,
+        "unresolved": 0
+      },
+      "base_arithmetic_audits": 13200,
+      "base_coefficient_sha256": "ddc9bb9dbe58150e4c6299feeb648c60417157ee171b8343155f4162510a28f1",
+      "base_case_record_sha256": "aaddfbcece6611d2f9aca58b1cf3b0193419ae657dd480b8b43a2f0d914e3d1e",
+      "refinements": [],
+      "refinement_coefficient_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "additional_refinement_nodes": 0,
+      "additional_arithmetic_audits": 0,
+      "terminal_unresolved_strata": 0
+    },
+    {
+      "agent": "six-rupert-1",
+      "role": "researcher",
+      "status": "complete exact finite hypotheses",
+      "global_Rupert_property": "OPEN",
+      "piece_index": 5,
+      "cell": 9,
+      "macro": "near8",
+      "path": "",
+      "rays": [
+        [
+          "(-5/6) + (1/2)*sqrt(5)",
+          "(-1/6) + (1/6)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ],
+        [
+          "(1/2) + (-1/10)*sqrt(5)",
+          "(-1/2) + (3/10)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ],
+        [
+          "(-4/9) + (1/3)*sqrt(5)",
+          "(4/9) + (-1/9)*sqrt(5)",
+          "(1) + (0)*sqrt(5)"
+        ]
+      ],
+      "phase": {
+        "area": {
+          "max_squared": "(2613884050/23357961) + (1102298650/23357961)*sqrt(5)",
+          "active_strata": [
+            "corner2"
+          ],
+          "edge_critical_points": [
+            {
+              "edge": 0,
+              "positive_cone_critical_point": false,
+              "alpha": "(-685/451) + (-515/451)*sqrt(5)",
+              "beta": "(12050/1353) + (5570/1353)*sqrt(5)"
+            },
+            {
+              "edge": 1,
+              "positive_cone_critical_point": false,
+              "alpha": "(-2425/606) + (-560/303)*sqrt(5)",
+              "beta": "(13020/1111) + (5070/1111)*sqrt(5)"
+            },
+            {
+              "edge": 2,
+              "positive_cone_critical_point": false,
+              "alpha": "(515/11) + (225/11)*sqrt(5)",
+              "beta": "(-1295/33) + (-195/11)*sqrt(5)"
+            }
+          ],
+          "interior_critical_point": false
+        },
+        "area_excess_upper": "14401/500000",
+        "receiver_chord_upper": "16647/500000",
+        "source_chord_upper": "302421/4000000",
+        "radial_error_upper": "12617319488991/320000000000000",
+        "old1_28gate_passes": false,
+        "radial_positive_branch_left": "(-6916616705781530891171735744349/2969600000000000000000000000000) + (65/58)*sqrt(5)",
+        "radial_squared_margin": "(102943311264919473571842990151899684959714737535805105085433801/8818524160000000000000000000000000000000000000000000000000000) + (-89916017175159901585232564676537/17223680000000000000000000000000)*sqrt(5)",
+        "roll_chord_upper": "17038762688991/160000000000000",
+        "composition_squared_upper": "593911028226151812992598081/25600000000000000000000000000",
+        "quaternion_product_margin": "100688988285172485111415535548085163533272936351018711/6553600000000000000000000000000000000000000000000000000",
+        "dynamic_angle_derivative_margin": "17841760405237240763129397131271/102400000000000000000000000000000000",
+        "full_angle_upper": "38193/250000"
+      },
+      "normalized_torque_ball_lower": "40693/250000",
+      "base_distance_test_radius": "43193/250000",
+      "strict_normalized_remainder_margin": "1/100",
+      "fixed_support_denominators": [
+        "89177/100000",
+        "113523/125000",
+        "214123/500000",
+        "87867/200000",
+        "47651/40000",
+        "580603/500000",
+        "580603/500000",
+        "47651/40000",
+        "431263/1000000",
+        "210189/500000",
+        "113523/125000",
+        "89177/100000"
+      ],
+      "actual_weak_support_comparisons": 2232,
+      "positive_origin_stress": [
+        1,
+        3,
+        8,
+        10
+      ],
+      "positive_cubic_origin_coefficients": 40,
+      "identically_zero_balance_coordinates": 3,
+      "all220potential_facets": 220,
+      "all7simplex_strata": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "all1540facet_strata": 1540,
+      "base_classifications": {
+        "opposite": 1405,
+        "distance": 118,
+        "degenerate": 0,
+        "unresolved": 17
+      },
+      "base_arithmetic_audits": 13200,
+      "base_coefficient_sha256": "edfb3eb8c39ae79f228f7b7d33363518cdadf141a2a06e9fae2d1aead16bba26",
+      "base_case_record_sha256": "0fef96484fcec5012297620bfd407e207303e1d58336e59da62c0decdec89691",
+      "refinements": [
+        {
+          "triple": [
+            0,
+            7,
+            8
+          ],
+          "nodes": 9,
+          "closed_leaf_paths": [
+            "0",
+            "10",
+            "11",
+            "12",
+            "13",
+            "2",
+            "3"
+          ],
+          "max_leaf_depth": 2,
+          "all_node_classifications": {
+            "opposite": 57,
+            "distance": 0,
+            "degenerate": 0,
+            "unresolved": 6
+          },
+          "all_leaf_classifications": {
+            "opposite": 49,
+            "distance": 0,
+            "degenerate": 0,
+            "unresolved": 0
+          },
+          "all7faces_checked_on_each_closed_leaf": true,
+          "arithmetic_audits": 135,
+          "terminal_unresolved_strata": 0,
+          "case_record_sha256": "b9da507f1ed757145c5bf1278c6deda4f9c1f0aa8381306080ab0a86da2ce1c1"
+        },
+        {
+          "triple": [
+            2,
+            7,
+            8
+          ],
+          "nodes": 13,
+          "closed_leaf_paths": [
+            "0",
+            "10",
+            "110",
+            "111",
+            "112",
+            "113",
+            "12",
+            "13",
+            "2",
+            "3"
+          ],
+          "max_leaf_depth": 3,
+          "all_node_classifications": {
+            "opposite": 15,
+            "distance": 67,
+            "degenerate": 0,
+            "unresolved": 9
+          },
+          "all_leaf_classifications": {
+            "opposite": 12,
+            "distance": 58,
+            "degenerate": 0,
+            "unresolved": 0
+          },
+          "all7faces_checked_on_each_closed_leaf": true,
+          "arithmetic_audits": 195,
+          "terminal_unresolved_strata": 0,
+          "case_record_sha256": "c8de2e11c0ba2ab0e7d5cf61bf364273cc9a5a483e7c85210fc7ecba9bfd662c"
+        },
+        {
+          "triple": [
+            3,
+            4,
+            6
+          ],
+          "nodes": 1,
+          "closed_leaf_paths": [
+            ""
+          ],
+          "max_leaf_depth": 0,
+          "all_node_classifications": {
+            "opposite": 3,
+            "distance": 4,
+            "degenerate": 0,
+            "unresolved": 0
+          },
+          "all_leaf_classifications": {
+            "opposite": 3,
+            "distance": 4,
+            "degenerate": 0,
+            "unresolved": 0
+          },
+          "all7faces_checked_on_each_closed_leaf": true,
+          "arithmetic_audits": 15,
+          "terminal_unresolved_strata": 0,
+          "case_record_sha256": "a9bc84b809e14a615af6026e2338641215090f0e0b2c419fb97cf35aa154a138"
+        },
+        {
+          "triple": [
+            3,
+            7,
+            8
+          ],
+          "nodes": 17,
+          "closed_leaf_paths": [
+            "0",
+            "10",
+            "110",
+            "1110",
+            "1111",
+            "1112",
+            "1113",
+            "112",
+            "113",
+            "12",
+            "13",
+            "2",
+            "3"
+          ],
+          "max_leaf_depth": 4,
+          "all_node_classifications": {
+            "opposite": 16,
+            "distance": 91,
+            "degenerate": 0,
+            "unresolved": 12
+          },
+          "all_leaf_classifications": {
+            "opposite": 12,
+            "distance": 79,
+            "degenerate": 0,
+            "unresolved": 0
+          },
+          "all7faces_checked_on_each_closed_leaf": true,
+          "arithmetic_audits": 255,
+          "terminal_unresolved_strata": 0,
+          "case_record_sha256": "cabd4255c65d1bcb0eef979229d0d949be3cba324eaf4ea5f837f71b8f559de0"
+        },
+        {
+          "triple": [
+            4,
+            7,
+            8
+          ],
+          "nodes": 17,
+          "closed_leaf_paths": [
+            "0",
+            "10",
+            "110",
+            "1110",
+            "1111",
+            "1112",
+            "1113",
+            "112",
+            "113",
+            "12",
+            "13",
+            "2",
+            "3"
+          ],
+          "max_leaf_depth": 4,
+          "all_node_classifications": {
+            "opposite": 98,
+            "distance": 9,
+            "degenerate": 0,
+            "unresolved": 12
+          },
+          "all_leaf_classifications": {
+            "opposite": 82,
+            "distance": 9,
+            "degenerate": 0,
+            "unresolved": 0
+          },
+          "all7faces_checked_on_each_closed_leaf": true,
+          "arithmetic_audits": 255,
+          "terminal_unresolved_strata": 0,
+          "case_record_sha256": "882c2462a71d5cba5b5f0245ba917bcb72da2e8afff2e888ffd1c2961ac4a106"
+        },
+        {
+          "triple": [
+            6,
+            7,
+            8
+          ],
+          "nodes": 73,
+          "closed_leaf_paths": [
+            "0",
+            "10",
+            "110",
+            "1110",
+            "1111",
+            "11120",
+            "111210",
+            "1112110",
+            "1112111",
+            "1112112",
+            "1112113",
+            "111212",
+            "111213",
+            "11122",
+            "11123",
+            "1113000",
+            "1113001",
+            "1113002",
+            "1113003",
+            "1113010",
+            "1113011",
+            "1113012",
+            "1113013",
+            "111302",
+            "1113030",
+            "1113031",
+            "1113032",
+            "1113033",
+            "1113100",
+            "1113101",
+            "1113102",
+            "1113103",
+            "1113110",
+            "1113111",
+            "1113112",
+            "1113113",
+            "111312",
+            "1113130",
+            "1113131",
+            "1113132",
+            "1113133",
+            "11132",
+            "1113300",
+            "1113301",
+            "1113302",
+            "1113303",
+            "111331",
+            "111332",
+            "111333",
+            "112",
+            "113",
+            "12",
+            "13",
+            "2",
+            "3"
+          ],
+          "max_leaf_depth": 7,
+          "all_node_classifications": {
+            "opposite": 248,
+            "distance": 213,
+            "degenerate": 0,
+            "unresolved": 50
+          },
+          "all_leaf_classifications": {
+            "opposite": 205,
+            "distance": 180,
+            "degenerate": 0,
+            "unresolved": 0
+          },
+          "all7faces_checked_on_each_closed_leaf": true,
+          "arithmetic_audits": 1095,
+          "terminal_unresolved_strata": 0,
+          "case_record_sha256": "e22dbbdec7570abca366a2ba402aa86d9a6f4e5c071b109b7f368eec7d22d244"
+        }
+      ],
+      "refinement_coefficient_sha256": "0b367ce133a8ff481351cd243ef0c4b428b622b666bd2f4f0739ed6392caaf99",
+      "additional_refinement_nodes": 130,
+      "additional_arithmetic_audits": 1950,
+      "terminal_unresolved_strata": 0
+    }
+  ]
+}

@@ -1,9 +1,25 @@
-# Deltoidal hexecontahedron: full all-source caps and a closed receiver cell
+# Deltoidal hexecontahedron: closed all-source receiver regions
 
 Researcher: **six-rupert-1**. The named Catalan solid remains unresolved
 in the primary literature checked through 2026-09-30.
 
-The newest result excludes every source orientation on **whole closed
+The newest extension excludes every original source orientation on an
+exact **closed quadrilateral in cell4** and an exact **closed triangle in
+cell9**, including all boundaries. Six receiver pieces use fixed individual
+support remainders, complete affine torque hulls, all220potential facets
+and every simplex boundary stratum. Eleven exceptional triples have
+complete four-way closed covers through depth7. Every closed containment
+has scale1, translation0 and the120proper equal-shadow rotations
+`G union J_nG`. An exact witness has distance greater than1/50from every
+minimum center and lies outside every old cell7image, extending the union
+of previous wholecell7and1/64cap exclusions. **Global Rupert property
+remains OPEN.** The complete proof, seven bounded reproduction commands
+and trust boundary are in
+[normalized_receiver_piece_proof.md](normalized_receiver_piece_proof.md);
+see the [exact checker](normalized_receiver_piece_certificate.py) and
+[compact fixture](expected_normalized_receiver_pieces.json).
+
+The earlier result excludes every source orientation on **whole closed
 normal caps of chord radius 1/64** about all sixty directed minimizing
 normals, or thirty axes. Each original support is normalized by its own
 full rotation remainder. A complete twelve-point center hull has sixteen
