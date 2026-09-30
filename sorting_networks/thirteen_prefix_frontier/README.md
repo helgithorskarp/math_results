@@ -204,3 +204,12 @@ proof corpora are not copied here.
 The next concrete frontier is a directly verified 20-comparator completion
 of Y_1 or Y_2, or a checked exclusion of both conditional instances. If both
 are excluded, other thirteen-input prefixes still remain to be investigated.
+
+## Mixed pruning and the four route branches
+
+[The follow-up mixed-pruning lemma](MIXED.md) proves that each 20-gate target
+has a completion in one of two explicit route branches. It supplies 134
+witness-certified mixed extreme bounds, phase-wise redundant gate bans, and
+branch-specific shortcut requirements. The four bounded branch searches
+remain UNKNOWN. `filtered_search.py` provides the additional optional search
+layer; the original baseline encoder and certificate are unchanged.

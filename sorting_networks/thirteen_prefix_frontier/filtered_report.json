@@ -1,0 +1,252 @@
+{
+  "schema": 1,
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "proof_status": "Four-branch reduction and witnessed necessary bounds; no exclusion or size44 witness",
+  "base_certificate_sha256": "480820392fb33bf4502e6595d8a78ada5d4fcd87458657a807de4629903bd277",
+  "mixed_certificate_sha256": "c4434c95c9a359916c8b93fb40661815d19b21dfe3d75043a2a1cf2b3e392a83",
+  "solver": "m22",
+  "pysat_version": "1.8.dev24",
+  "python_version": "3.11.2",
+  "solver_threads": 1,
+  "controls": {
+    "complete_short_words": 9452,
+    "mixed_touch_cases": 2916,
+    "partial_eleven_wire_branch_words": 9216,
+    "first_pivot_phase_words": 4681,
+    "all_original_boolean_inputs_per_positive_model": 8192
+  },
+  "targets": [
+    {
+      "case": 1,
+      "states": 146,
+      "budget": 20,
+      "route_branch": "max_once",
+      "phase_gate_bans": false,
+      "branch_shortcut_added": false,
+      "status": "UNKNOWN",
+      "variables": 52623,
+      "clauses": 1371028,
+      "clause_stream_sha256": "1f9fcdbb028ce9b5f19fddf3f75594b1651b18ed08ba5d03f7cbcaa1d0f2590a",
+      "reproduction_argv": [
+        "python3",
+        "filtered_search.py",
+        "--case",
+        "1",
+        "--budget",
+        "20",
+        "--route-branch",
+        "max_once",
+        "--mixed-bounds",
+        "mixed_certificate.json",
+        "--seconds",
+        "45",
+        "--segments",
+        "2",
+        "--seed-deletion",
+        "19",
+        "--out",
+        "scratch/case1-max_once.json",
+        "--no-phase-bans"
+      ],
+      "segment_seconds": [
+        45.00533383199945,
+        45.00225827697432
+      ],
+      "solver_stats": {
+        "restarts": 331,
+        "conflicts": 111128,
+        "decisions": 313993,
+        "propagations": 152763794
+      },
+      "elapsed_seconds": 95.26261260302272,
+      "cpu_seconds": 94.881540339,
+      "peak_rss_kib_linux": 129160
+    },
+    {
+      "case": 1,
+      "states": 146,
+      "budget": 20,
+      "route_branch": "min_once",
+      "phase_gate_bans": true,
+      "branch_shortcut_added": false,
+      "status": "UNKNOWN",
+      "variables": 52683,
+      "clauses": 1372886,
+      "clause_stream_sha256": "9cd541f90f27fc27ca944215d5730c4aca91a968700b005ade21ed8fb4296c66",
+      "reproduction_argv": [
+        "python3",
+        "filtered_search.py",
+        "--case",
+        "1",
+        "--budget",
+        "20",
+        "--route-branch",
+        "min_once",
+        "--mixed-bounds",
+        "mixed_certificate.json",
+        "--seconds",
+        "45",
+        "--segments",
+        "2",
+        "--seed-deletion",
+        "19",
+        "--out",
+        "scratch/case1-min_once.json"
+      ],
+      "segment_seconds": [
+        45.0009913709946,
+        45.00196719402447
+      ],
+      "solver_stats": {
+        "restarts": 313,
+        "conflicts": 92794,
+        "decisions": 278583,
+        "propagations": 137642517
+      },
+      "elapsed_seconds": 95.67186680302257,
+      "cpu_seconds": 70.794131553,
+      "peak_rss_kib_linux": 119884
+    },
+    {
+      "case": 2,
+      "states": 145,
+      "budget": 20,
+      "route_branch": "max_once",
+      "phase_gate_bans": true,
+      "branch_shortcut_added": false,
+      "status": "UNKNOWN",
+      "variables": 52042,
+      "clauses": 1351750,
+      "clause_stream_sha256": "c0fe80249582f0cb4739711db4413ecdaf7bd801e3f795f9e06df1e61ded1867",
+      "reproduction_argv": [
+        "python3",
+        "filtered_search.py",
+        "--case",
+        "2",
+        "--budget",
+        "20",
+        "--route-branch",
+        "max_once",
+        "--mixed-bounds",
+        "mixed_certificate.json",
+        "--seconds",
+        "45",
+        "--segments",
+        "2",
+        "--seed-deletion",
+        "19",
+        "--out",
+        "scratch/case2-max_once.json"
+      ],
+      "segment_seconds": [
+        45.00343834795058,
+        45.00181544898078
+      ],
+      "solver_stats": {
+        "restarts": 386,
+        "conflicts": 125744,
+        "decisions": 305137,
+        "propagations": 184445974
+      },
+      "elapsed_seconds": 95.19654159998754,
+      "cpu_seconds": 94.484674712,
+      "peak_rss_kib_linux": 127372
+    },
+    {
+      "case": 2,
+      "states": 145,
+      "budget": 20,
+      "route_branch": "min_once",
+      "phase_gate_bans": true,
+      "branch_shortcut_added": false,
+      "status": "UNKNOWN",
+      "variables": 52081,
+      "clauses": 1353506,
+      "clause_stream_sha256": "59bee06d7b6cc2ce1463f40576777c633935fd8cb9811c956f69cfdb6621370f",
+      "reproduction_argv": [
+        "python3",
+        "filtered_search.py",
+        "--case",
+        "2",
+        "--budget",
+        "20",
+        "--route-branch",
+        "min_once",
+        "--mixed-bounds",
+        "mixed_certificate.json",
+        "--seconds",
+        "45",
+        "--segments",
+        "2",
+        "--seed-deletion",
+        "19",
+        "--out",
+        "scratch/case2-min_once.json"
+      ],
+      "segment_seconds": [
+        45.00187806301983,
+        45.00093616201775
+      ],
+      "solver_stats": {
+        "restarts": 301,
+        "conflicts": 93870,
+        "decisions": 307886,
+        "propagations": 130093935
+      },
+      "elapsed_seconds": 95.26531333103776,
+      "cpu_seconds": 69.840805028,
+      "peak_rss_kib_linux": 126540
+    }
+  ],
+  "positive_controls": [
+    {
+      "case": 1,
+      "route_branch": "max_once",
+      "budget": 21,
+      "full_size": 45,
+      "phase_gate_bans": false,
+      "status": "SAT_independently_verified_all_8192_inputs",
+      "variables": 56605,
+      "clauses": 1441962,
+      "clause_stream_sha256": "a960b7fcc5633b9dee6d800586dbeffbe9972af5eb250206249acd225e5a64dd",
+      "peak_rss_kib_linux": 90740
+    },
+    {
+      "case": 1,
+      "route_branch": "min_once",
+      "budget": 21,
+      "full_size": 45,
+      "phase_gate_bans": true,
+      "status": "SAT_independently_verified_all_8192_inputs",
+      "variables": 56668,
+      "clauses": 1443934,
+      "clause_stream_sha256": "8764a0256b822c82b4686ebc6516c2c7fe7b892b02195642bdb6eabdace5c205",
+      "peak_rss_kib_linux": 93780
+    },
+    {
+      "case": 2,
+      "route_branch": "max_once",
+      "budget": 21,
+      "full_size": 45,
+      "phase_gate_bans": true,
+      "status": "SAT_independently_verified_all_8192_inputs",
+      "variables": 55985,
+      "clauses": 1421705,
+      "clause_stream_sha256": "65d9596ca12ff6871bbd11511f1a851a1f227fca957bc10008f96fd1c48c7e1e",
+      "peak_rss_kib_linux": 90184
+    },
+    {
+      "case": 2,
+      "route_branch": "min_once",
+      "budget": 21,
+      "full_size": 45,
+      "phase_gate_bans": true,
+      "status": "SAT_independently_verified_all_8192_inputs",
+      "variables": 56026,
+      "clauses": 1423570,
+      "clause_stream_sha256": "e5c6994a834ffcbd4cf716a9a5bca4e3efa9fac5ec5abcfd5a484cac2ae54903",
+      "peak_rss_kib_linux": 92712
+    }
+  ]
+}
