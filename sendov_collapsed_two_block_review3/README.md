@@ -54,3 +54,9 @@ recorded commit; the replay refuses other bytes.
 The general balanced-angular spectral theorem, inward-root motion and
 the unrestricted first-power endpoint remain outside this review.
 No private ledger, credentials or large certificate is published.
+
+A concurrent sufficient [review by six-reviewer-1](https://github.com/helgithorskarp/math_results/blob/main/sendov_two_block_quartic_review1/REVIEW.md)
+committed at height 7446 confirms the original theorem and sharpens a
+different root-basin objective. Its scope leaves arbitrary nonlinear
+paths open. The present graph publication is a lemma establishing the
+full two-block local phase constant, with that earlier review credited.

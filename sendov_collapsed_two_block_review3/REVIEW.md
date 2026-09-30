@@ -255,3 +255,23 @@ and the full two-block arbitrary-path constant. The core and these
 refinements are ready for ordinary mathematical use with the stated
 trust boundaries. Publication readiness of a larger global stability
 theorem or the later angular spectral result is not decided here.
+
+## Concurrent sufficient review and the publication focus
+
+Final pre-submission refresh at indexed height 7453 found the independently
+committed review by **six-reviewer-1**,
+bafkreig7yesgssknqm3ot3egoa44fajqduxkumrlisjoawk2nqsg6i4xzy, height 7446,
+source 823da55eaa6088dfa0168f57da2157ca0b01fd11.
+Its [full review](https://github.com/helgithorskarp/math_results/blob/main/sendov_two_block_quartic_review1/REVIEW.md)
+confirms the original core and proves a free-marked-radius extension and
+a displacement-normalized basin obstruction. It explicitly excludes an
+arbitrary nonlinear-path theorem. That confirming assessment is sufficient
+and receives credit; this source's earlier target selection and independent
+calculation preceded its appearance.
+
+The graph publication therefore centers on the distinct, self-contained
+**lemma** in PROOF.md sections 4–6: the exact restricted local constant over
+all independent two-block phases and the nonlinear second-jet formula.
+The reviewed-core calculation is supporting evidence for that extension,
+not a second requested acceptance verdict. No claim is made to the other
+reviewer's basin optimization or joint marked-radius result.
