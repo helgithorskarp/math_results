@@ -1,0 +1,111 @@
+{
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "proof_status": "Exact computer-assisted lemma; independent proof mechanisms by same author; no peer review or formalization claim.",
+  "compiler": "GCC12.2.0 Debian12.2.0-14+deb12u1",
+  "interpreter": "CPython3.11.2",
+  "release_flags": [
+    "-std=c++17",
+    "-O3",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Wconversion",
+    "-Wshadow"
+  ],
+  "sanitizer_flags": [
+    "-std=c++17",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Wconversion",
+    "-Wshadow",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer"
+  ],
+  "complete_release_sanitizer_and_reference_comparisons": {
+    "1106": {
+      "complete_release_and_sanitizer_bytes_identical": true,
+      "bytes": 4564590,
+      "sha256": "4d46331cceacf765c2aacc1849f153c3da4569d8f0f82fc27a52c2ebe738ef76",
+      "all_center_entry_counts_match_python_reference": true,
+      "all_missing_phase_keys_match_python_reference": true,
+      "missing_phase_keys": 0,
+      "generator_seconds_sanitized": 1.33676,
+      "generator_center_count": 58,
+      "generator_geometric_symmetric_frames": 2610
+    },
+    "1130": {
+      "complete_release_and_sanitizer_bytes_identical": true,
+      "bytes": 4564590,
+      "sha256": "57fb9c244982d8cff861773da30d7dd73a4e14ad88d6fd6ef43bca3e4afec0b2",
+      "all_center_entry_counts_match_python_reference": true,
+      "all_missing_phase_keys_match_python_reference": true,
+      "missing_phase_keys": 51,
+      "generator_seconds_sanitized": 1.35718,
+      "generator_center_count": 78,
+      "generator_geometric_symmetric_frames": 2054
+    }
+  },
+  "checker1130_resources": {
+    "max_rss_kib": 24492,
+    "user_cpu_seconds": 20.249309,
+    "system_cpu_seconds": 0.008012
+  },
+  "checker_seconds": {
+    "1106": 21.38026310701389,
+    "1130": 20.27672041999176
+  },
+  "corruption_controls": {
+    "status": "ALL_CERTIFICATE_REJECTION_CONTROLS_PASSED",
+    "rejections_checked": 27,
+    "controls": [
+      "truncated_header",
+      "truncated_final_record",
+      "trailing_record",
+      "wrong_modulus",
+      "wrong_AP_length",
+      "wrong_interval_length",
+      "weaker_bridge_header",
+      "stronger_bridge_header",
+      "missing_left_phase",
+      "missing_rightmost_phase",
+      "center_outside_bridge",
+      "center_outside_interval",
+      "constant_first_AP",
+      "out_of_range_second_AP",
+      "incomplete_record_count",
+      "new_unproved_hole",
+      "identical_opposed_APs",
+      "swapped_premise_colors",
+      "free_template_pole_as_premise",
+      "duplicate_star_key",
+      "compatible_star_key",
+      "constant_star_petal",
+      "wrong_forced_star_color",
+      "repeated_forced_star_point",
+      "missing_star_petal",
+      "constant_final_star_AP",
+      "final_star_AP_contains_unknown_points"
+    ]
+  },
+  "star_evidence": {
+    "checked_records": 51,
+    "initially_independent_premise_steps": 153,
+    "steps_per_star": 3,
+    "final_initially_free_points": 3,
+    "final_protected_points": 4,
+    "all_forced_vertices_inside_bridge": true
+  },
+  "large_transcripts_published": false,
+  "logical_corollary_dependency": "Published localized18 seam lemma, source b4f4ca0ad27c9d3d4d536ff0d099a2b1186df4e1; bridge lemma self-contained.",
+  "external_generated_proof_input": false,
+  "complete_release_wrapper_validation": {
+    "status": "VERIFIED_ALL_PUBLISHED_BRIDGE_CLAIMS",
+    "seconds": 45.64814907195978,
+    "both_full_phase_domains_checked": true,
+    "sharpness_and27_controls_checked": true
+  }
+}

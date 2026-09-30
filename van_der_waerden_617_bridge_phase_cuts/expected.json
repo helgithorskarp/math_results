@@ -1,0 +1,128 @@
+{
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "bridges": {
+    "1106": {
+      "status": "VERIFIED_COMPLETE_PROTECTED_EXTERIOR_CUT",
+      "length": 3704,
+      "half_width": 553,
+      "bridge": [
+        1299,
+        2405
+      ],
+      "normalized_incompatible_cases_checked": 760761,
+      "opposed_symmetric_AP_pairs_checked": 760761,
+      "AP_premises_checked": 9129132,
+      "implication_refutations_checked": 0,
+      "implication_steps_histogram": {},
+      "implication_steps_checked": 0,
+      "opposed_AP_center_range": [
+        1823,
+        1880
+      ],
+      "maximum_opposed_AP_difference": 617,
+      "certificate_bytes": 4564590,
+      "certificate_sha256": "4d46331cceacf765c2aacc1849f153c3da4569d8f0f82fc27a52c2ebe738ef76",
+      "supplement_sha256": null
+    },
+    "1130": {
+      "status": "VERIFIED_COMPLETE_PROTECTED_EXTERIOR_CUT",
+      "length": 3704,
+      "half_width": 565,
+      "bridge": [
+        1287,
+        2417
+      ],
+      "normalized_incompatible_cases_checked": 760761,
+      "opposed_symmetric_AP_pairs_checked": 760710,
+      "AP_premises_checked": 9128520,
+      "implication_refutations_checked": 51,
+      "implication_steps_histogram": {
+        "3": 51
+      },
+      "implication_steps_checked": 153,
+      "opposed_AP_center_range": [
+        1818,
+        1885
+      ],
+      "maximum_opposed_AP_difference": 617,
+      "certificate_bytes": 4564590,
+      "certificate_sha256": "57fb9c244982d8cff861773da30d7dd73a4e14ad88d6fd6ef43bca3e4afec0b2",
+      "supplement_sha256": "f0f428d0639dd21d3e679082e4fd3d7ed6d005a292a392eec8a3187f5eb470fa"
+    }
+  },
+  "sharpness": {
+    "status": "VERIFIED_SPECIFIED_CRITERION_EXCEPTIONS",
+    "half_width": 554,
+    "bridge": [
+      1298,
+      2406
+    ],
+    "center_difference_combinations_visited_per_case": 683636,
+    "cases": [
+      {
+        "key": [
+          463,
+          154,
+          1
+        ],
+        "geometric_symmetric_AP_frames": 3008,
+        "protected_nonpole_frames": 2990,
+        "homogeneous_six_premise_frames": 61,
+        "centers_forcing_each_color": [
+          23,
+          24
+        ],
+        "opposed_symmetric_completion_pairs": 0
+      },
+      {
+        "key": [
+          464,
+          155,
+          1
+        ],
+        "geometric_symmetric_AP_frames": 3008,
+        "protected_nonpole_frames": 2990,
+        "homogeneous_six_premise_frames": 61,
+        "centers_forcing_each_color": [
+          24,
+          23
+        ],
+        "opposed_symmetric_completion_pairs": 0
+      }
+    ]
+  },
+  "controls": {
+    "status": "ALL_CERTIFICATE_REJECTION_CONTROLS_PASSED",
+    "rejections_checked": 27,
+    "controls": [
+      "truncated_header",
+      "truncated_final_record",
+      "trailing_record",
+      "wrong_modulus",
+      "wrong_AP_length",
+      "wrong_interval_length",
+      "weaker_bridge_header",
+      "stronger_bridge_header",
+      "missing_left_phase",
+      "missing_rightmost_phase",
+      "center_outside_bridge",
+      "center_outside_interval",
+      "constant_first_AP",
+      "out_of_range_second_AP",
+      "incomplete_record_count",
+      "new_unproved_hole",
+      "identical_opposed_APs",
+      "swapped_premise_colors",
+      "free_template_pole_as_premise",
+      "duplicate_star_key",
+      "compatible_star_key",
+      "constant_star_petal",
+      "wrong_forced_star_color",
+      "repeated_forced_star_point",
+      "missing_star_petal",
+      "constant_final_star_AP",
+      "final_star_AP_contains_unknown_points"
+    ]
+  }
+}
