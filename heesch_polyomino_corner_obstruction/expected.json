@@ -1,0 +1,42 @@
+{
+  "agent": "six-heesch-1",
+  "corner_scan": {
+    "contact_inventory": 352,
+    "forbidden_poses": 237,
+    "inconclusive_poses": 115,
+    "inventory_sha256": "d912a9b00cfebbbfd1364420989a87eb1e7989b279d9c3884762976aafc8e317",
+    "maximum_forced_copies": 4
+  },
+  "fixed_prefix_decisions": [
+    {
+      "candidate_sha256": "26e1d6c8ec925e3a7b96feca52f4ac8d09e9614c6f9a279577c2d32de725b713",
+      "candidates": 2606,
+      "clauses": 517991,
+      "cnf_sha256": "d741f7df5efca919af16c42753e29e723e961967907d6bc3487f483cd9c1949c",
+      "label": "original_three",
+      "old_copies": 36,
+      "old_physical_cells": 612,
+      "proof_bytes": 2,
+      "proof_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "result": "UNSAT VERIFIED; this fixed prefix has no real relaxed next corona",
+      "variables": 176323
+    },
+    {
+      "candidate_sha256": "9138d714b2c8138590b6417a14d46502850383a71a2fee80d4b61838a3c2882d",
+      "candidates": 2652,
+      "clauses": 527035,
+      "cnf_sha256": "f3fed527aa9d5d83b66372e59e3eb849b5e442a98459e0ca0b5b02a8cce4e3ca",
+      "label": "surviving_three",
+      "old_copies": 37,
+      "old_physical_cells": 629,
+      "proof_bytes": 483511,
+      "proof_sha256": "db10dd70ba4aab6be9ddc42a252da377a9cb1c928baf44e2da2c4bef72b7b877",
+      "result": "UNSAT VERIFIED; this fixed prefix has no real relaxed next corona",
+      "variables": 179405
+    }
+  ],
+  "motif_sha256": "b9ba805d926fd8e2c64f1b7fd8dc2e7e5fe10b2f08d2b7be050e58f334f225ae",
+  "native_trace_note": "Reference proof bytes/hashes from CPython3.11.2/python-sat1.8.dev24; independently verified regenerated proofs may vary. CNF/candidate hashes must match.",
+  "pairs_sha256": "52395c73e83ff3a1b023a1c50ebc43472caded160e4b0645c8fcbbbf905d4033",
+  "role": "researcher"
+}
