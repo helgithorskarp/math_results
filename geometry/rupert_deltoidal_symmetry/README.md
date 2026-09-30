@@ -1,17 +1,29 @@
-# Deltoidal hexecontahedron: adaptive area reduction and all-source receiver regions
+# Deltoidal hexecontahedron: directional transports and all-source receiver regions
 
 Researcher: **six-rupert-1**. The named Catalan solid remains unresolved
 in the primary literature checked through 2026-09-30.
 
-The newest result supplies a **reusable adaptive receiver criterion** and
-excludes every source orientation on a **whole closed receiver triangle**
-with a corner more than normal chord **1/500** from the minimizing
-direction. It strengthens the global area coercivity to
-`dist(k,G.m)<=6(A(k)-Amin)` and proves a linear bound on the complete
-planar-roll interval modulo `C2`. For every receiver in the triangle,
-closed containment occurs exactly at scale one, zero translation, and
-120 proper relative rotations giving equal shadows. No source-angle or
-roll restriction is assumed. See
+The newest result excludes every source orientation on the **whole closed
+half-cell7 receiver triangle**, with **100 times** the preceding triangle's
+unit-z chart area and a corner more than normal chord **1/50** from the
+minimizing direction. It proves the global source bound
+`dist(k,G.m)<=(153/50)(A(k)-Amin)`, controls arbitrary reduced roll by
+actual vertex heights, and uses the perpendicular axes of the two normal
+transports to bound the full rotation. All 40 cubic and 112 degree-six
+coefficient signs certify the actual torque ball throughout the triangle;
+the rotation remainder margin is **157/8000**. For every such receiver,
+closed containment occurs exactly at scale one, zero translation and
+120 proper relative rotations giving equal shadows. See
+[directional_area_proof.md](directional_area_proof.md) and its
+[exact checker](directional_area_certificate.py). The source, roll,
+translation and scale-at-least-one quantifiers are unrestricted.
+The proof is unformalized; independent review is not asserted.
+
+The preceding result supplies a reusable adaptive receiver criterion,
+source coefficient 6 and a linear bound on the complete planar-roll
+interval modulo `C2`. Its whole closed receiver triangle has a corner
+more than normal chord 1/500 from the minimum. The new criterion includes
+that entire sufficient domain. See
 [adaptive_area_proof.md](adaptive_area_proof.md) for the triangle rays,
 actual weak-support criterion and continuous bounds, and the
 [exact checker](adaptive_area_certificate.py).
@@ -140,6 +152,7 @@ python3 -B geometry/rupert_deltoidal_symmetry/mirror_branch_certificate.py
 python3 -B geometry/rupert_deltoidal_symmetry/twofold_area_certificate.py --self-test
 python3 -B geometry/rupert_deltoidal_symmetry/global_area_certificate.py --self-test
 python3 -B geometry/rupert_deltoidal_symmetry/adaptive_area_certificate.py --self-test
+python3 -B geometry/rupert_deltoidal_symmetry/directional_area_certificate.py --self-test
 ```
 
 Python 3.11 or later; no third-party packages. Verified with Python
@@ -153,7 +166,14 @@ Python 3.11 or later; no third-party packages. Verified with Python
 [expected_mirror_branch.json](expected_mirror_branch.json), and
 [expected_twofold_area.json](expected_twofold_area.json), and
 [expected_global_area.json](expected_global_area.json), and
-[expected_adaptive_area.json](expected_adaptive_area.json). The adaptive-area
+[expected_adaptive_area.json](expected_adaptive_area.json), and
+[expected_directional_area.json](expected_directional_area.json).
+The directional-area checker fully replays both preceding finite
+certificates, checks all original vertex candidates for the two selected
+receiver-support errors, and reconstructs the homogeneous polynomial
+certificate on the entire closed half-cell7 triangle. It rejects ten
+malformed or unsupported certificates. No floating-point decision or
+sampled receiver cover is a proof premise. The adaptive-area
 checker takes approximately 12 seconds, fully replays the parent once,
 and rejects seven malformed or unsupported certificates. Its new checks
 include thirteen global corner coercivity bounds, both roll signs,
