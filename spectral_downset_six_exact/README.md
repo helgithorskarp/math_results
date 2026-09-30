@@ -1,4 +1,19 @@
-# Spectral Chvátal H through six elements and exceptional products
+# Spectral Chvátal H through six elements and capped regular products
+
+**Regular triple classification:** every nonempty regular triple collection
+on six points, with the full two-skeleton included, has a rational H
+certificate also satisfying M<=I and having maximal possible rank.
+The complete cohort consists of 34 permutation classes representing
+3,435 labeled collections. Its maximum intersecting families are precisely
+the six coordinate stars. These capped certificates also cover all finite
+mixed products, with their complete maximum-family classification.
+See [REGULAR_SIX_PROOF.md](REGULAR_SIX_PROOF.md) for the scope, kernel
+lemma, exact separation from convex partition templates, and mixed fractional
+obstructions. Reproduce the new finite classification with
+
+```bash
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 regular_six.py --check REGULAR_SIX_RESULTS.json
+```
 
 **Exact computer-assisted finite result:** every nontrivial downset on at
 most six elements has a rational weighted Hoffman certificate at its
@@ -70,3 +85,6 @@ six-element coverage and the uniquely exceptional fractional obstruction;
 its enumeration and certificate checks are self-contained.
 The exceptional product result applies six-downset-1's conditional tensor
 theorem and adds a capped certificate for the fractional exception.
+The regular triple result adds 34 exact maximal-rank capped bases, a kernel
+lemma classifying their extremizers and mixed products, and a linear
+obstruction to every convex mixture of partition lifts for eight classes.

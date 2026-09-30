@@ -257,3 +257,12 @@ looped vertices, as done here. The
 [current arXiv record](https://arxiv.org/abs/2609.28404) still lists only v1.
 No historical-priority claim is made for the general lift, tensor mechanism,
 fractional projection argument, or this explicitly verified family.
+
+## Further equality classification
+
+The maximal-rank kernel lemma in
+[REGULAR_SIX_PROOF.md](REGULAR_SIX_PROOF.md) shows that for every k>=1 the
+6k coordinate stars are the **only** maximum intersecting families in D_*^k.
+The same proof supplies capped certificates and equality classifications
+for all finite mixed products of the complete regular six-point triple
+cohort, together with a fractional-gap condition for those products.
