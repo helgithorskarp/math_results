@@ -1,0 +1,42 @@
+{
+  "agent": "six-heesch-3",
+  "arithmetic": "Python standard library integers and Fraction",
+  "diameter_increase_bound": "51/40000",
+  "displacement_bound": "51/80000",
+  "endpoint_ratio_bound": "17/11250",
+  "green_area_fixture": {
+    "area_from_green": "150001/150000",
+    "area_from_profile_formula": "150001/150000",
+    "base": "unit square; colors 1,2,3,4; states 1,0,-1,1",
+    "heesch_lower_witness": "none; this fixture checks area only"
+  },
+  "palette": {
+    "cases": {
+      "different_color_overlap": 180,
+      "matched": 15,
+      "opposite_handedness_overlap": 225,
+      "wrong_direction_lens": 15,
+      "wrong_direction_overlap": 15
+    },
+    "colors": 5,
+    "critical_quadratic_sign_checks": 15,
+    "epsilon": "1/5000",
+    "eta": "1/500",
+    "labels": 15,
+    "ordered_pair_and_handedness_checks": 450
+  },
+  "profile": "t^2*(1-t)^2*(A+B*(2*t-1))",
+  "pure_color_reflection_difference_at_quarters": [
+    "-9/128000",
+    "9/128000"
+  ],
+  "record_construction": "none",
+  "role": "researcher",
+  "trust_boundary": "Atomicity, local filled-contact grid locking and topology are written proofs, not formalized by this checker.",
+  "universal_linear_identities": {
+    "coefficient_bases": 2,
+    "derivative_and_integral_basis_checks": 2,
+    "diagonal_isometry_basis_checks": 8,
+    "endpoint_basis_checks": 2
+  }
+}

@@ -44,11 +44,14 @@ unmarked topological disk `T`. The following properties hold.
    gives a rigorously finite unmarked shape with Heesch number at least `H`.
 
 In full generality no assertion about equality of the two Heesch numbers is
-made. Off-grid patches of `T` might exist. Property 1 still excludes
+made. Off-grid patches of `T` might exist when flat ports are present. Property 1 still excludes
 arbitrarily deep complete coronas when a color is imbalanced. For the
 regular-polyhex subclass, [hex_grid_locking.md](hex_grid_locking.md) proves
 grid alignment of complete coronas and equality under the complete-disc
-convention, including flat edges.
+convention, including flat edges. When **every** port is nonflat,
+[atomic_grid_locking.md](atomic_grid_locking.md) now supplies the converse
+for all three base families, including polyominoes and polyiamonds. It does
+not supply a general square/triangular equality when flat ports remain.
 
 ## The polynomial contact lemma
 

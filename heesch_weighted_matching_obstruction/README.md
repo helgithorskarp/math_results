@@ -22,6 +22,27 @@ criterion, a marked SAT adapter with independent witness checks, a checked
 1260-marking rectangle exclusion, and an exact `H_c=5` curved hexapillar
 baseline reproduction. There is still no seven-corona construction.
 
+[atomic_grid_locking.md](atomic_grid_locking.md) now extends grid locking to
+fully nonflat polyominoes and polyiamonds as well as polyhexes. Its local
+filled-contact cycle uses whole-port endpoint matching, including at
+collinear joins. [quintic_realization.md](quintic_realization.md) realizes
+self-compatible colors and directed states with positive odd quintic
+profiles: complete geometric coronas force a common handedness and exactly
+the specified rotations-only grid model. Color-only outer-hole coronas
+also correspond exactly. The explicit matching/motion table is essential.
+
+[self_color_refinement.md](self_color_refinement.md) gives a canonical
+refinement rule and a checked dead end: after the five-corona baseline is
+reinterpreted with uniform handedness, both port components have self-loops,
+all directed states vanish, and its strongest two-color marking tiles
+periodically. No compatible color/state refinement of that fixed patch
+yields a finite record. Both new checkers use only the standard library:
+
+```
+python3 heesch_weighted_matching_obstruction/quintic_profiles.py
+python3 heesch_weighted_matching_obstruction/self_color_refinement.py
+```
+
 Combinatorial imbalance as a reason for nontiling is established prior art.
 Mann discusses it for marked hexagons and polyhexes, including a size-dependent
 upper bound. The contribution here is the explicit matching-table criterion,
@@ -217,10 +238,11 @@ checks are also performed. Expected output is in `expected.json`.
   [Primary manuscript](https://arxiv.org/html/2509.12216v1).
   It still reports six as the largest known finite Euclidean Heesch number.
 
-The concrete next frontier is an exact planar shape with a sound atomic matching
-table having an imbalanced bipartite component, together with a verified
-seven-corona patch. Alternatively, a complementary marked polyform with an
-imbalanced color and seven verified grid coronas transfers by the quartic
-realization lemma. The lemmas then supply a finite upper bound without an
-exhaustive search for its precise Heesch number. The small finite fixture is
-proved in the realization note; the seven-corona construction is still missing.
+The concrete next frontier is a new seven-corona patch admitted by one of
+the explicit matching/motion tables above, with a sound finite upper
+obstruction. An imbalanced complementary or directed color supplies the
+additive upper bound. A complete checked grid upper exclusion or a separate
+marked nontiling proof is another route for the realized subclasses.
+The canonical refinement result excludes using the specified uniform
+five-corona strip patch to obtain finiteness; other patches remain open.
+The seven-corona construction is still missing.
