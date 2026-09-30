@@ -123,6 +123,29 @@ def seed_cover():
     need(set(good)=={1},'one admissible seed among BOTH signs')
     return branches,good
 
+def disjoint_ear_budget():
+    # The written original-face bridge proves every promoted fan endpoint
+    # is separated. The two free Ts share precisely the outside R vertices.
+    rows=[]
+    for p in (0,1):
+        for k in range(5):
+            outside_D=k-2*p;outside_U=p;outside_R=3-k+p
+            if min(outside_D,outside_U,outside_R)<0:continue
+            need(outside_D+outside_U+outside_R==3,'three outside original points')
+            need((4-k)+outside_D==4-2*p,'total deficit-one fours')
+            need(6+k+outside_R==9+p,'total ordinary fours')
+            need(k+outside_D+2*outside_R==6,'two free Ts, six corner incidences')
+            if outside_R==3:continue # would force the same T twice
+            need(outside_R<=2,'two distinct Ts share at most an edge')
+            s=k+int(outside_R==1)
+            rows.append({'p':p,'promoted_ears':k,'outside_D':outside_D,
+                         'outside_U':outside_U,'outside_R':outside_R,
+                         'free_T_intersection_size':outside_R,'separated_fours':s})
+    possible={p:sorted({r['separated_fours'] for r in rows if r['p']==p}) for p in (0,1)}
+    need(possible=={0:[1,3],1:[2,4]},'two sharper necessary s lists')
+    return {'rows':rows,'p0_s':possible[0],'p1_s':possible[1],
+            'triangle_realizability_asserted':False}
+
 def verify(cert):
     branches,good=seed_cover()
     need(cert['B_seed_sign'] in good,'chosen seed satisfies endpoint condition')
@@ -189,6 +212,7 @@ def controls(cert):
 def main():
     cert=json.loads(Path(__file__).with_name('CERTIFICATE.json').read_text())
     result=verify(cert);result['controls']=controls(cert)
+    result['disjoint_free_triangle_budget']=disjoint_ear_budget()
     print(json.dumps(result,indent=2,sort_keys=True))
 
 if __name__=='__main__':main()

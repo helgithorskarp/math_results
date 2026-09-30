@@ -10,6 +10,11 @@ and the original-fan overlap argument, their six-point four-T fans must
 be **disjoint sets of original vertices**. In the inherited eight-Q/beta
 branch, this leaves twelve fan points and three outside points.
 
+The endpoint incidence corollary also removes separated-four count
+`s=0` from the second profile: the two remaining lists are `{1,3}` and
+`{2,4}`. Six free-triangle count rows are checked, without claiming
+their realizability.
+
 The proof includes possible aliases of newly forced Q opposites. It
 does not infer nonexistence by counting sixteen distinct points. No
 global bound improvement, full eight-Q exclusion or optimality is claimed.

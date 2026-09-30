@@ -35,9 +35,10 @@ the [three-five exclusion](../tammes15_three_five_exclusion/PROOF.md)
 supplies degree pattern `(5^2,4^13)` and two ordinary fives. Both
 corollaries apply. The two necessary profiles remain
 `(d41,d42,d51,n3)=(4,0,0,0),(2,1,0,0)`, with thirteen fours and two
-fives. The preceding separated-four lists `{1,3}` and `{0,2,4}` and
-eleven inherited H types are unchanged: deleting one geometric branch
-does not delete a whole value from those lists.
+fives. The separated-four lists are now `{1,3}` and **`{2,4}`**:
+the second profile's formerly allowed `s=0` is excluded by the endpoint
+incidence argument in Section4a. The eleven inherited H types are
+unchanged; these s restrictions need not delete a whole H type.
 
 This is a reduction, not a realized packing or a complete enumeration.
 The disjoint-fan branch, the entire eight-Q exclusion, larger faces and
@@ -271,12 +272,59 @@ original points12,13. This excludes the double-five Q, including
 possible aliases and strip endpoints. Section1 then proves the original
 fans are disjoint.
 
+## 4a. The free-triangle budget removes s=0 from the second profile
+
+The two disjoint fans contain six internal ordinary fours R, each with
+two consecutive Ts, and four endpoints, each with one known T. Let k
+of these endpoints be ordinary fours with a second T (the promoted
+ears). The other4-k endpoints are deficit-one fours D. Every promoted
+endpoint is **separated**: its known T has edges to F and the neighboring
+internal R. The edge to F has the known sole Q on its other side; the
+internal R already has its maximum two Ts. An extra T cannot share
+either edge of the endpoint's known T, so the two Ts are separated.
+
+Degree sum gives31edges, and Euler gives18faces. Solving
+`T+Q=18`, `3T+4Q=62` gives exactly10Ts and8Qs. The eight fan Ts are
+all distinct, leaving two free Ts. They cannot involve either F or
+the six internal Rs, which already exhaust their T sectors. A promoted
+endpoint belongs to exactly one free T; each outside R belongs to both;
+each outside D to exactly one; an outside U (zero-T four) to neither.
+The two free Ts therefore share exactly the outside Rs. Three such Rs
+would force the same convex T face twice, two mean a shared edge and
+consecutive Ts at those Rs, one means a shared vertex and a separated
+R, and zero mean disjoint Ts.
+
+Put p=d42 in the two remaining eight-Q/beta profiles. There are
+`4-2p` Ds, `9+p` Rs, and p Us. All Us are outside because every fan
+point has a T. On the three outside original points the counts are
+
+```text
+outside D=k-2p; outside U=p; outside R=3-k+p.
+```
+
+The exact finite count audit gives:
+
+| p | promoted endpoints k | outside (D,R,U) | free-T intersection | s |
+|---|---:|---|---|---:|
+| 0 | 1 | (1,2,0) | edge | 1 |
+| 0 | 2 | (2,1,0) | vertex | 3 |
+| 0 | 3 | (3,0,0) | empty | 3 |
+| 1 | 2 | (0,2,1) | edge | 2 |
+| 1 | 3 | (1,1,1) | vertex | 4 |
+| 1 | 4 | (2,0,1) | empty | 4 |
+
+These are necessary counts, not realizable triangle placements or a
+complete edge/face enumeration. In particular the second profile has
+at least two promoted endpoints and hence cannot have s=0. No symmetry
+or triangle-connectedness premise enters this deduction.
+
 ## 5. Reproducibility, dependencies and limitations
 
 [check.py](check.py) verifies both seed branches, all45/66 core pairs,
 five complete saturated-star paths, all unit and denominator identities,
 the alias polynomial factor, its outside-strip signs, full-interval
-critical distinctness and the closed-strip forbidden gap. Ten altered
+critical distinctness, the closed-strip forbidden gap and the six
+necessary free-triangle count rows. Ten altered
 certificates are rejected, including a wrong seed, an omitted Q, a
 reused original core label, a claim that the alias pair is uniformly
 distinct, and a strip that misses a possible root. All conditions use
