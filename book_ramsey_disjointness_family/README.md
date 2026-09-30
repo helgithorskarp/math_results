@@ -33,6 +33,11 @@ routes toward the unresolved 22-versus-23 book Ramsey number.
   cross assignments. Separate exact implementations reconstruct every
   decisive domain and twelve explicit triangle books. Retaining this
   core therefore requires **at least four internal red edges**.
+* [CORE_EXTENSION.md](CORE_EXTENSION.md) excludes **every** 22-vertex
+  extension of that fixed Steiner16 core, with arbitrary colors on all
+  111 unspecified pairs. All 156 six-vertex internal graph types are
+  covered. Every valid host containing the core therefore has at most
+  21 vertices; attainment at 21 is not asserted.
 
 Neither family can supply a 22-vertex witness through these operations.
 The unrestricted Ramsey bounds remain 22 <= R(B4,B7) <= 23.
@@ -50,6 +55,9 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 book_ramsey_d
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 book_ramsey_disjointness_family/independent_two_edges.py scratch/books_two_edges/two_edges.trace
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 book_ramsey_disjointness_family/check_three_edges.py --scratch scratch/books_three_edges
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 book_ramsey_disjointness_family/independent_three_edges.py scratch/books_three_edges
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 book_ramsey_disjointness_family/check_core_extension.py --scratch scratch/books_core_extension
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 book_ramsey_disjointness_family/independent_core_extension.py scratch/books_core_extension
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 book_ramsey_disjointness_family/controls_core_extension.py scratch/books_core_extension --scratch scratch/books_core_controls
 ```
 
 The first command independently checks the published irregular baseline,
@@ -79,11 +87,19 @@ The sixth and seventh commands prove the two-red-edge exclusion. The 2.46 MB tra
 is regenerated in scratch and checked entry by entry; it is not published.
 [TWO_RED_EDGES.md](TWO_RED_EDGES.md) gives coverage and trust boundaries.
 
-The last two commands prove the three-red-edge exclusion. All traces are
+The eighth and ninth commands prove the three-red-edge exclusion. All traces are
 regenerated in scratch and compared entry by entry. The five complete
 prefix searches and their coverage are described in
 [THREE_RED_EDGES.md](THREE_RED_EDGES.md). No teammate degree or edge bound
 is used in either implementation.
+
+The final three commands prove and audit the unrestricted fixed-core
+exclusion. The generator and separate checker compare all 30,414,874
+proof-tree records entry by entry. Traces totaling about 934 MB are
+regenerated in scratch and stay outside the contribution. The final
+command checks rejection of malformed or incomplete evidence.
+[CORE_EXTENSION.md](CORE_EXTENSION.md) states the exact coverage and
+remaining unformalized bridges.
 
 The universal bounds are analytic proofs. Their finite checks are validation,
 not exhaustive enumeration of arbitrary root graphs. The minimum 39 is an
