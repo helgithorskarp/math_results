@@ -52,6 +52,15 @@ This excludes this fixed-patch profile-refinement route without classifying
 other five-corona patches. Run the standard-library certificate with
 `python3 heesch_weighted_matching_obstruction/mixed_hand_profiles.py`.
 
+[endpoint_rigidity.md](endpoint_rigidity.md) now allows the original 18
+boundary vertices and all surrounding poses to vary near that fixture. An
+exact `2410 x 426` endpoint Jacobian has rank 422; its kernel consists precisely
+of translations, rotation and scaling. The implicit function theorem gives
+local rigidity modulo similarities, provided the same complete labelled
+endpoint network is preserved. A 422-square minor has determinant 379 modulo
+1009. Run `python3 heesch_weighted_matching_obstruction/endpoint_rigidity.py`.
+Other contact networks and large deformations remain open.
+
 Combinatorial imbalance as a reason for nontiling is established prior art.
 Mann discusses it for marked hexagons and polyhexes, including a size-dependent
 upper bound. The contribution here is the explicit matching-table criterion,
