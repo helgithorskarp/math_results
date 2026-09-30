@@ -81,6 +81,46 @@ def steiner_certificate(v, systems):
     return D, s, Q
 
 
+def capped_steiner_certificate(v, blocks):
+    """Uniform rational certificate for every STS(v), v>=7; 0<=Q<=N I.
+
+    An STS(3) generates the full cube and uses its complement certificate.
+    Proof uses point/pair/block incidences and a fixed-size decomposition,
+    independent of the isomorphism type of the triple system.
+    """
+    check_sts(v, blocks)
+    if v == 3:
+        return complement_cube(3)
+    if v < 7:
+        raise ValueError("a nontrivial STS has v=3 or v>=7")
+    D = downset(v, [blocks])
+    s = (3 * v - 1) // 2
+    w = F(1) + F(v + 3, (v - 3) * (v - 2))
+    h = F(v + 3, v - 3)
+    beta = F(-5, v - 2)
+    block_set = set(blocks)
+    Q = [[F(0) for _ in D] for _ in D]
+    for i, a in enumerate(D):
+        for j, b in enumerate(D):
+            if a & b:
+                Q[i][j] = F(s if i == j else 0)
+            elif not a or not b:
+                Q[i][j] = F(1)
+            else:
+                sizes = sorted((a.bit_count(), b.bit_count()))
+                if sizes == [1, 1]:
+                    Q[i][j] = F(0)
+                elif sizes == [1, 2]:
+                    Q[i][j] = beta if a | b in block_set else w
+                elif sizes == [2, 2]:
+                    Q[i][j] = w
+                elif sizes == [3, 3]:
+                    Q[i][j] = F(1)
+                else:
+                    Q[i][j] = h
+    return D, s, Q
+
+
 def fano_blocks():
     """Nonzero vectors of F_2^3 are labelled 0..6 by integer vector minus1."""
     return sorted({mask((a - 1, b - 1, (a ^ b) - 1))
