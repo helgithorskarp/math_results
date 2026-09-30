@@ -1,0 +1,46 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "python": "3.11.2",
+  "arithmetic": "Q(sqrt5) exact Fraction pairs; integer homogeneous polynomials",
+  "numerical_threads": 1,
+  "intensive_jobs_simultaneous": 1,
+  "scope_limits_unchanged": "1CPU2GiB",
+  "independent_runs": [
+    {
+      "mode": "normal",
+      "exit_code": 0,
+      "seconds": 4.180087164975703,
+      "children_max_rss_KiB_upper": 19912
+    },
+    {
+      "mode": "optimized",
+      "exit_code": 0,
+      "seconds": 4.228963133005891,
+      "children_max_rss_KiB_upper": 23660
+    }
+  ],
+  "normal_and_optimized_bytes_identical": true,
+  "expected_sha256": "44668892fbec6c8ff78a12db998d6806e640563d2dca9ee06532695c3957afbe",
+  "audit_sha256": "6415d19b418be05f9bf151210a09ea573c8a6a7624de4705d58a2ce66b6b5a9c",
+  "malformed_controls_rejected_each_mode": 7,
+  "native_expanded_normal_run": {
+    "exit_code": 0,
+    "seconds": 14.512299972993787,
+    "children_max_rss_KiB": 21964,
+    "all_expected_bytes_equal": true
+  },
+  "native_expanded_expected_sha256": "614312c468a3eb5b018473b1ebb1a3bb0982e5c137c7e5283ff57c1a86d7d2ad",
+  "native_controls_rejected": 32,
+  "native_source_commit": "6afb6b9e4585a35561752b3ef34eccabaa0d7e3e",
+  "new_torque_strata": 840,
+  "exact_original_rank_permutations": 720,
+  "formalization": false,
+  "global_non_rupert_proved": false,
+  "publication_copy_default_input_run": {
+    "default_sibling_inputs_work": true,
+    "all_expected_bytes_equal": true,
+    "seconds": 3.9785214429721236,
+    "children_max_rss_KiB": 22216
+  }
+}
