@@ -1,0 +1,104 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "fresh_generation": {
+    "seconds": 431.614,
+    "max_rss_kib": 96972,
+    "threads": 1
+  },
+  "first_exact_replay": {
+    "seconds": 7.59,
+    "max_rss_kib": 130552,
+    "threads": 1
+  },
+  "documented_reproduction": {
+    "seconds": 97.289,
+    "max_rss_kib": 131824,
+    "threads": 1
+  },
+  "reproduction_mode": "Separate fresh source-only generation, then documented entry point --resume over that same fresh corpus. No private certificate input.",
+  "all24_proofs_match_prior_checked_cohort_by_name_bytes_sha256_and_full_result": true,
+  "original_generation_progress_summary_manifest_preserved": true,
+  "normal_optimized_full_results_match_expected": true,
+  "normal_optimized_controls_bytes_identical": true,
+  "per_box_controls": [
+    {
+      "budget": [
+        30,
+        33
+      ],
+      "normal_optimized_bytes_identical": true,
+      "audit_sha256": "1e113a2b8770fb0ed3814b195d5b3e440fd5b9b844b53065e679d8bcdb03b31e",
+      "controls_rejected": 15,
+      "full_state_regressions": 6
+    },
+    {
+      "budget": [
+        31,
+        32
+      ],
+      "normal_optimized_bytes_identical": true,
+      "audit_sha256": "2cd272c2d10cc002268e1dfc64975f6cfd860c1d737965c7ad37b5587365481e",
+      "controls_rejected": 15,
+      "full_state_regressions": 6
+    },
+    {
+      "budget": [
+        32,
+        31
+      ],
+      "normal_optimized_bytes_identical": true,
+      "audit_sha256": "dedd2a7bfd7df1be7cc926e901810befeca823fddc8acc8eed691aee22555944",
+      "controls_rejected": 15,
+      "full_state_regressions": 6
+    },
+    {
+      "budget": [
+        33,
+        30
+      ],
+      "normal_optimized_bytes_identical": true,
+      "audit_sha256": "fbd66f03b9e1e305a91239c5800a1004dc1f771939aa4c331731b540ec74479e",
+      "controls_rejected": 15,
+      "full_state_regressions": 6
+    }
+  ],
+  "corruption_controls_per_mode": 60,
+  "full_parent_state_regressions_per_mode": 24,
+  "resume_guard_cases": [
+    {
+      "name": "interrupted_parent_without_proof",
+      "rejected_without_mutating_saved_state": true,
+      "reason": "no automatic retry"
+    },
+    {
+      "name": "existing_progress_without_resume",
+      "rejected_without_mutating_saved_state": true,
+      "reason": "Saved progress exists"
+    },
+    {
+      "name": "saved_timed_out_parent",
+      "rejected_without_mutating_saved_state": true,
+      "reason": "Saved timed-out parent"
+    },
+    {
+      "name": "saved_stalled_parent",
+      "rejected_without_mutating_saved_state": true,
+      "reason": "Stalled parent has no published covering AP"
+    },
+    {
+      "name": "wrong_saved_budget",
+      "rejected_without_mutating_saved_state": true,
+      "reason": "Wrong saved quantified case"
+    }
+  ],
+  "generated_corpus_bytes": 7943849,
+  "generated_corpus_published": false,
+  "private_certificate_input_required": false,
+  "python_version": "3.11.2",
+  "threads": 1,
+  "primitive_cap_seconds": 90,
+  "validation_cap_seconds": 90,
+  "external_numeric_proofs_replayed": false,
+  "external_review_or_formalization_claimed": false
+}
