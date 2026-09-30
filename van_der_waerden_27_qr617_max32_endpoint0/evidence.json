@@ -1,0 +1,343 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "python": "3.11.2",
+  "standard_library_only": true,
+  "fresh_source_only_generation": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "generated": 6,
+    "seconds": 138.402,
+    "max_rss_kib": 125964,
+    "case_timings": [
+      {
+        "endpoint": 0,
+        "root": 1,
+        "budget": [
+          31,
+          31
+        ],
+        "child": null,
+        "status": "STALLED",
+        "seconds": 22.936
+      },
+      {
+        "endpoint": 0,
+        "root": 1,
+        "budget": [
+          31,
+          31
+        ],
+        "child": 286,
+        "status": "EXCLUDED",
+        "seconds": 7.201
+      },
+      {
+        "endpoint": 0,
+        "root": 1,
+        "budget": [
+          31,
+          31
+        ],
+        "child": 571,
+        "status": "EXCLUDED",
+        "seconds": 6.883
+      },
+      {
+        "endpoint": 0,
+        "root": 1,
+        "budget": [
+          31,
+          31
+        ],
+        "child": 856,
+        "status": "EXCLUDED",
+        "seconds": 7.587
+      },
+      {
+        "endpoint": 0,
+        "root": 1,
+        "budget": [
+          31,
+          31
+        ],
+        "child": 1141,
+        "status": "EXCLUDED",
+        "seconds": 8.471
+      },
+      {
+        "endpoint": 0,
+        "root": 1,
+        "budget": [
+          31,
+          31
+        ],
+        "child": 1426,
+        "status": "EXCLUDED",
+        "seconds": 8.861
+      },
+      {
+        "endpoint": 0,
+        "root": 1,
+        "budget": [
+          31,
+          31
+        ],
+        "child": 1711,
+        "status": "EXCLUDED",
+        "seconds": 8.696
+      },
+      {
+        "endpoint": 0,
+        "root": 618,
+        "budget": [
+          31,
+          31
+        ],
+        "child": null,
+        "status": "EXCLUDED",
+        "seconds": 7.589
+      },
+      {
+        "endpoint": 0,
+        "root": 1235,
+        "budget": [
+          31,
+          31
+        ],
+        "child": null,
+        "status": "EXCLUDED",
+        "seconds": 8.655
+      },
+      {
+        "endpoint": 0,
+        "root": 1852,
+        "budget": [
+          31,
+          31
+        ],
+        "child": null,
+        "status": "EXCLUDED",
+        "seconds": 9.947
+      },
+      {
+        "endpoint": 0,
+        "root": 2469,
+        "budget": [
+          31,
+          31
+        ],
+        "child": null,
+        "status": "EXCLUDED",
+        "seconds": 8.714
+      },
+      {
+        "endpoint": 0,
+        "root": 3086,
+        "budget": [
+          31,
+          31
+        ],
+        "child": null,
+        "status": "EXCLUDED",
+        "seconds": 8.298
+      }
+    ]
+  },
+  "primitive_seconds_cap": 90,
+  "validation_seconds_cap": 90,
+  "threads": 1,
+  "max_concurrent_cpu_intensive_jobs": 1,
+  "proof_corpus_bytes": 6305338,
+  "proof_corpus_published": false,
+  "public_source_requires_private_transcripts": false,
+  "all_certificate_bytes_and_full_root_results_match_previous_local_audit": true,
+  "previous_local_audit_sha256": "9bdd9a72d6b1e40953ae4e03477bc9b14a846b6a9fd9b4c7ad9330857bd33708",
+  "expected_manifest_sha256": "c0eda46520e7ab0046762b6a2c1743227829d263b5244c23540f5ff0c2249d31",
+  "controls": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "input_cases": 6,
+    "primitive_regressions": 6,
+    "controls_rejected": 26,
+    "rejections": [
+      {
+        "name": "missing_root_tree-0-1-31-31.json",
+        "reason": "Missing, extra or unexpected endpoint-zero equal-cap31 root coverage"
+      },
+      {
+        "name": "missing_root_tree-0-618-31-31.json",
+        "reason": "Missing, extra or unexpected endpoint-zero equal-cap31 root coverage"
+      },
+      {
+        "name": "missing_root_tree-0-1235-31-31.json",
+        "reason": "Missing, extra or unexpected endpoint-zero equal-cap31 root coverage"
+      },
+      {
+        "name": "missing_root_tree-0-1852-31-31.json",
+        "reason": "Missing, extra or unexpected endpoint-zero equal-cap31 root coverage"
+      },
+      {
+        "name": "missing_root_tree-0-2469-31-31.json",
+        "reason": "Missing, extra or unexpected endpoint-zero equal-cap31 root coverage"
+      },
+      {
+        "name": "missing_root_tree-0-3086-31-31.json",
+        "reason": "Missing, extra or unexpected endpoint-zero equal-cap31 root coverage"
+      },
+      {
+        "name": "wrong_endpoint",
+        "reason": "Wrong quantified ORIGINAL equal-cap endpoint/root case"
+      },
+      {
+        "name": "Boolean_endpoint",
+        "reason": "Wrong quantified ORIGINAL equal-cap endpoint/root case"
+      },
+      {
+        "name": "unsupported_square_cap",
+        "reason": "Wrong quantified ORIGINAL equal-cap endpoint/root case"
+      },
+      {
+        "name": "unsupported_nonsquare_cap",
+        "reason": "Wrong quantified ORIGINAL equal-cap endpoint/root case"
+      },
+      {
+        "name": "wrong_root",
+        "reason": "Wrong quantified ORIGINAL equal-cap endpoint/root case"
+      },
+      {
+        "name": "unsupported_endpoint_cover",
+        "reason": "Missing, extra or unexpected endpoint-zero equal-cap31 root coverage"
+      },
+      {
+        "name": "missing_petal_child",
+        "reason": "Incomplete or duplicated disjunctive coverage"
+      },
+      {
+        "name": "duplicate_petal_child",
+        "reason": "Missing or repeated petal child"
+      },
+      {
+        "name": "child_outside_required_petal",
+        "reason": "Child assumption outside the required petal"
+      },
+      {
+        "name": "Boolean_child_assumption",
+        "reason": "Child assumption outside the required petal"
+      },
+      {
+        "name": "nonmandatory_split",
+        "reason": "Prefix AP touches an exceptional position"
+      },
+      {
+        "name": "wrong_child_cap",
+        "reason": "Child metadata differs from its parent"
+      },
+      {
+        "name": "extra_child_hypothesis",
+        "reason": "Certificate-supplied initial state or hypotheses"
+      },
+      {
+        "name": "extra_tree_hypothesis",
+        "reason": "Tree supplied additional initial hypotheses"
+      },
+      {
+        "name": "supplied_child_U",
+        "reason": "Certificate-supplied initial state or hypotheses"
+      },
+      {
+        "name": "supplied_child_T",
+        "reason": "Certificate-supplied initial state or hypotheses"
+      },
+      {
+        "name": "false_child_terminal",
+        "reason": "No class-count contradiction"
+      },
+      {
+        "name": "incomplete_child_terminal",
+        "reason": "Open leaf prevents parent exclusion"
+      },
+      {
+        "name": "intersecting_packing",
+        "reason": "Packing empty or intersecting"
+      },
+      {
+        "name": "empty_packing",
+        "reason": "Packing empty or intersecting"
+      }
+    ]
+  },
+  "normal_and_optimized_controls_identical": true,
+  "fresh_check_seconds": 5.791,
+  "validation_job_summary": [
+    {
+      "label": "fresh-check",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 5.791,
+      "max_rss_kib": 105996
+    },
+    {
+      "label": "controls-normal",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 34.127,
+      "max_rss_kib": 207092
+    },
+    {
+      "label": "controls-optimized",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 34.628,
+      "max_rss_kib": 208492
+    },
+    {
+      "label": "cached-resume",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 5.944,
+      "max_rss_kib": 73484
+    },
+    {
+      "label": "tiny-limit",
+      "status": "FINISHED",
+      "returncode": 1,
+      "seconds": 3.277,
+      "max_rss_kib": 87412
+    },
+    {
+      "label": "saved-timeout-refusal",
+      "status": "FINISHED",
+      "returncode": 1,
+      "seconds": 0.115,
+      "max_rss_kib": 17092
+    },
+    {
+      "label": "interrupted-parent-refusal",
+      "status": "FINISHED",
+      "returncode": 1,
+      "seconds": 0.115,
+      "max_rss_kib": 16708
+    },
+    {
+      "label": "interrupted-child-refusal",
+      "status": "FINISHED",
+      "returncode": 1,
+      "seconds": 0.165,
+      "max_rss_kib": 18008
+    }
+  ],
+  "cached_resume_preserves_proofs_manifests_and_fresh_timings": true,
+  "intentional_tiny_limit_rejected_as_exclusion": true,
+  "saved_incomplete_refused_without_retry": true,
+  "interrupted_parent_refused_without_retry": true,
+  "interrupted_child_refused_without_retry": true,
+  "all_source_checks_complete": true,
+  "earlier_numeric_bounds_used_by_new_branch_replay": false,
+  "independent_external_review_or_formalization": false,
+  "global_W_bound_or_witness": false,
+  "independent_lemma": "Endpoint0 implies max(a,b)>=32 for ORIGINAL aligned QR617 edit classes",
+  "uniform_max32_uses_cited_endpoint1_lemma": true,
+  "boundary_pair_corollary_uses_cited_uniform_class30_total62_profile": true,
+  "total63_or_boundary_feasibility_asserted": false
+}

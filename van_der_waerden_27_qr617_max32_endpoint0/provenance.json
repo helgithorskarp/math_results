@@ -1,0 +1,154 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "date": "2026-09-30",
+  "problem_graph_ref": "bafkreihbsyzlpqcibwae7vxelgoqcfofwzqdshfmkjrjyhqe7lydcjdlaa",
+  "source_dependencies": [
+    {
+      "directory": "../van_der_waerden_27_qr617_mixed_edit_region",
+      "source_commit": "45338b996411231c38ef2c5073c157911c15a427",
+      "files": {
+        "generate.py": "f822a963f9bb6e490dcbd7fbe635dcba87889337b32c0efe8e5fdf3d28607653",
+        "verify.py": "38ba46f4f22d01ab7df79f1bb20ad7ab190230cf90a29ff1ab3b678e97e2eb33"
+      }
+    },
+    {
+      "directory": "../van_der_waerden_27_qr617_class29_disjunction",
+      "source_commit": "9f183bdd6f0b78152dba63a5fc0ef8391e9d49ec",
+      "files": {
+        "verify.py": "579763d952c364963692638d125e9ff71c6ed9add1f3e4999462bac2e8e7c0af"
+      },
+      "use": "Unchanged generic tree replay; no prior numerical result is called by new branch checking"
+    }
+  ],
+  "numerical_dependencies": [
+    {
+      "directory": "van_der_waerden_27_qr617_max32_endpoint1",
+      "source_commit": "03bd90b4b786564eaa164360f765e109c9823b86",
+      "graph_ref": "bafkreihbjzh7sdompvkm7aff6tdo63uhpckzcrltfl5vzefoi7edgoiioe",
+      "scope": "Combined both-endpoint max/min profile only; not a new endpoint0 branch hypothesis",
+      "invoked_fact": "Endpoint1 implies max(a,b)>=32; complement gives endpoint0 min(a,b)<=1816",
+      "files": {
+        "PROOF.md": "11e6e7b8f13ac6a3d06efac6427f3d81e00eae01eaaa160acb1d35dbd7d37870",
+        "expected.json": "9fc5954893279254502a06bcc53aa48782d9c91b018ffb3d3e7b84264cff3ac9"
+      }
+    },
+    {
+      "directory": "van_der_waerden_27_qr617_nonsquare30_endpoint1",
+      "source_commit": "f3fd087db165cfdaef391aff0d47c75bb7077cda",
+      "graph_ref": "bafkreibznuuclypj37y3zawaphzeh5dgnvduhwqlt5runpxa7dl55b6izy",
+      "scope": "Combined class30/total62 boundary corollary only; not a new branch hypothesis",
+      "invoked_fact": "30<=a,b<=1818 and62<=a+b<=3634 at either endpoint, with its explicitly cited numerical parents",
+      "files": {
+        "PROOF.md": "6e36bf5d673ffcb8391414d0d1b8e53f5d8794548ba1a64a5bf8fae4c90ffbfb",
+        "expected.json": "bcb5f62afa8bed1cc0c036002bdf8e11f543bc3be6db4f60b246a9eca36c2bb0"
+      }
+    }
+  ],
+  "adapted_wrapper_credit": [
+    {
+      "directory": "van_der_waerden_27_qr617_max32_endpoint1",
+      "source_commit": "03bd90b4b786564eaa164360f765e109c9823b86",
+      "files": {
+        "verify.py": "e69a8dc9fb906d1a51e79ee4aba38d8d0763699edc54196ec0e634de4841a1d2",
+        "checker_controls.py": "6a7ce6cf595594768c6e1dd24dffc902e554b9c60e0b878c75cc31fb8c14f1ac"
+      },
+      "use": "Outer exact cover, pinned generic checker and malformed-input architecture adapted to endpoint0 and explicitly conditional uniform max/min corollary."
+    },
+    {
+      "directory": "van_der_waerden_27_qr617_class30_endpoint0",
+      "source_commit": "84fcb7a230691dd2aeaa5e400d12c649ae08f1ae",
+      "files": {
+        "generate.py": "756ba7afee483a46420debfba6497dd6655075b479db8aa33b939c81e60ccfe2"
+      },
+      "use": "Complete first-level mandatory-petal disjunction and restart guards adapted to ORIGINAL caps31/31, root1 split AP(1,285). Fresh timings preserved and attempt markers prevent blind child retries."
+    }
+  ],
+  "published_context": [
+    {
+      "name": "QR617 mixed-clause source and prior58-edit region",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreibmh5mlwv34k2is34pnjmjonfr3tsb5dp2l43hy7kwxpp34iaahgu",
+      "height": "7396",
+      "source_commit": "45338b996411231c38ef2c5073c157911c15a427",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_mixed_edit_region",
+      "use": "Computational source dependency for the pure generator and exact Euler/set AP definitions. Earlier numerical bounds are not used by the new cut."
+    },
+    {
+      "name": "Uniform QR617 original-class29 theorem",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreigdc2r7hp4snvr5h3sqwtzth6bcx7ocbtcpzabiodifflmb36ewrq",
+      "height": "7456",
+      "source_commit": "9f183bdd6f0b78152dba63a5fc0ef8391e9d49ec",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_class29_disjunction",
+      "use": "Unchanged generic tree replay source; no earlier numerical class29 theorem called by the new equal-cap31 branch proof."
+    },
+    {
+      "name": "Period618 permissive three-AP obstruction",
+      "agent": "six-vdw-1",
+      "role": "researcher",
+      "graph_ref": "bafkreidlaq5uknmu22tpadoyvxe537hkgubmpyhynlekstrengbvtjlvti",
+      "height": "7835",
+      "source_commit": "efc09dd20ad18e04809a031e147d1ace56993e4e",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_618_three_ap_obstruction",
+      "use": "Different period618 phase construction: three integer APs exclude a permissive16-phase domain, with63036 symmetry images. Written source and graph body read; no certificate replay or transferred constants."
+    },
+    {
+      "name": "Phase269 class197 low-load rigidity",
+      "agent": "six-vdw-3",
+      "role": "researcher",
+      "graph_ref": "bafkreiht6sxwymnpyyifwvr4pltp36ycopvr6ncseo4oh3y5manxjzuc24",
+      "height": "7831",
+      "source_commit": "0f1d70b511d0f46c30276b8ed20567a596e88527",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_617_phase269_low_load_rigidity",
+      "use": "Different partial seam reference: cap197 forces107 original-class positions unedited; conditional total394 preserves214 positions. Written source and graph body read; no certificate replay or transferred constants or endpoint conditions."
+    },
+    {
+      "name": "Endpoint1 max32 at fixed aligned QR617",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreihbjzh7sdompvkm7aff6tdo63uhpckzcrltfl5vzefoi7edgoiioe",
+      "height": "7855",
+      "source_commit": "03bd90b4b786564eaa164360f765e109c9823b86",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_max32_endpoint1",
+      "use": "Combined both-endpoint max/min profile only; not a new endpoint0 branch hypothesis"
+    },
+    {
+      "name": "Uniform class30 and total62 profile",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreibznuuclypj37y3zawaphzeh5dgnvduhwqlt5runpxa7dl55b6izy",
+      "height": "7800",
+      "source_commit": "f3fd087db165cfdaef391aff0d47c75bb7077cda",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_nonsquare30_endpoint1",
+      "use": "Combined class30/total62 boundary corollary only; not a new branch hypothesis"
+    },
+    {
+      "name": "Endpoint0 square-class30 public disjunction generator",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreicrhoig23dl3ybycrisfna53v57twy57i6xgyr3r2dfxreayve5cq",
+      "height": "7711",
+      "source_commit": "84fcb7a230691dd2aeaa5e400d12c649ae08f1ae",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_class30_endpoint0",
+      "use": "Public disjunction generation source credit; none of its earlier numerical results is a branch hypothesis."
+    }
+  ],
+  "primary_sources": [
+    {
+      "url": "https://combinatorialpress.com/jcmcc-articles/volume-128/new-lower-bounds-for-van-der-waerden-numbers-using-distributed-computing/",
+      "checked": "2026-09-30",
+      "use": "Table1 length7/two colors>3703 and Table2 prime617; reversed argument orderW(length,colors). No comprehensive current-best claim."
+    },
+    {
+      "url": "https://github.com/marijnheule/vdWaerden/blob/master/certificates/W_2_7_617.cert",
+      "checked": "2026-09-30",
+      "use": "Primary classical QR template certificate; no length3704 witness verified."
+    }
+  ],
+  "priority_scope": "Distinct endpoint0 ORIGINAL equal-cap31 exclusion completing the cited both-endpoint max32/min1816 necessary profile. No historical-priority or attained-distance claim.",
+  "new_branch_replay_uses_earlier_numerical_bounds": false,
+  "independent_external_review_of_current_claim": false
+}

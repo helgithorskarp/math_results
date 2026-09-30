@@ -1,0 +1,441 @@
+{
+  "certificates": [
+    {
+      "file": "tree-0-1-31-31.json",
+      "bytes": 3357848,
+      "sha256": "b4173eb291ea4a0e41813a94d9995d74bcba7b0957b537d1b04b9d8484e56195"
+    },
+    {
+      "file": "tree-0-1235-31-31.json",
+      "bytes": 664620,
+      "sha256": "9fc01a9bd63923542f658894b8708caa6d1e214ee107cb2ad6cfcdb855a48f5b"
+    },
+    {
+      "file": "tree-0-1852-31-31.json",
+      "bytes": 662210,
+      "sha256": "7c10945fd73fe046fed0ad3427b7c434193eef88c0f6cb0af3bf27b1bfec48d3"
+    },
+    {
+      "file": "tree-0-2469-31-31.json",
+      "bytes": 620889,
+      "sha256": "0665a553c930aa66942aa9b4e74458c8da6049ed7112cd1e19f15f3545e3a94e"
+    },
+    {
+      "file": "tree-0-3086-31-31.json",
+      "bytes": 504076,
+      "sha256": "f37fa233465a0ba93f54f84bddf24b9040ccd4b7c144046d288f48825e17a100"
+    },
+    {
+      "file": "tree-0-618-31-31.json",
+      "bytes": 495695,
+      "sha256": "9b2d3a56a5ad91ea607791a4f0dffb444576f13b6d76a656b4f1bb18bafa2982"
+    }
+  ],
+  "verification": {
+    "verified": true,
+    "verified_independent_lemma": "Endpoint0 implies max(a,b)>=32 for ORIGINAL QR617 edit classes",
+    "endpoint": 0,
+    "excluded_budget": [
+      31,
+      31
+    ],
+    "required_roots": [
+      1,
+      618,
+      1235,
+      1852,
+      2469,
+      3086
+    ],
+    "roots_checked": 6,
+    "nodes_checked": 12,
+    "splits_checked": 1,
+    "leaves_checked": 11,
+    "original_class_sizes": [
+      1848,
+      1848
+    ],
+    "exceptional_prefix_positions_free": 7,
+    "earlier_numerical_bounds_used_by_new_branch_replay": false,
+    "complement_consequence": "Endpoint1 implies min(a,b)<=1816",
+    "total63_asserted": false,
+    "conditional_corollary_given_cited_endpoint1_max32_and_uniform_class30_total62": {
+      "premise_graph_refs": [
+        "bafkreihbjzh7sdompvkm7aff6tdo63uhpckzcrltfl5vzefoi7edgoiioe",
+        "bafkreibznuuclypj37y3zawaphzeh5dgnvduhwqlt5runpxa7dl55b6izy"
+      ],
+      "premise_reproved_by_this_command": false,
+      "original_class_bounds_both_endpoints": [
+        30,
+        1818
+      ],
+      "total_edit_bounds": [
+        62,
+        3634
+      ],
+      "both_endpoints_max_class_edits_at_least": 32,
+      "both_endpoints_min_class_edits_at_most": 1816,
+      "remaining_boundary_pairs_by_total_and_endpoint": {
+        "62": {
+          "0": [
+            [
+              30,
+              32
+            ],
+            [
+              32,
+              30
+            ]
+          ],
+          "1": [
+            [
+              30,
+              32
+            ],
+            [
+              32,
+              30
+            ]
+          ]
+        },
+        "3634": {
+          "0": [
+            [
+              1816,
+              1818
+            ],
+            [
+              1818,
+              1816
+            ]
+          ],
+          "1": [
+            [
+              1816,
+              1818
+            ],
+            [
+              1818,
+              1816
+            ]
+          ]
+        }
+      },
+      "boundary_feasibility_or_attained_minimum_asserted": false
+    },
+    "step_totals": {
+      "forbidden": 28910,
+      "forced": 3,
+      "packing": 17912,
+      "empty": 10998,
+      "mixed": 18396,
+      "budget": 0
+    },
+    "root_results": [
+      {
+        "agent": "six-vdw-2",
+        "role": "researcher",
+        "endpoint": 0,
+        "root": 1,
+        "budget": [
+          31,
+          31
+        ],
+        "closed": true,
+        "nodes": 7,
+        "splits": 1,
+        "leaves": [
+          {
+            "path": [
+              286
+            ],
+            "closed": true,
+            "allowed": 504,
+            "forced": 3,
+            "counts": {
+              "forbidden": 3105,
+              "forced": 1,
+              "packing": 1392,
+              "empty": 1713,
+              "budget": 0,
+              "mixed": 1704
+            }
+          },
+          {
+            "path": [
+              571
+            ],
+            "closed": true,
+            "allowed": 2277,
+            "forced": 4,
+            "counts": {
+              "forbidden": 1332,
+              "forced": 2,
+              "packing": 1324,
+              "empty": 8,
+              "budget": 0,
+              "mixed": 1332
+            }
+          },
+          {
+            "path": [
+              856
+            ],
+            "closed": true,
+            "allowed": 1986,
+            "forced": 2,
+            "counts": {
+              "forbidden": 1623,
+              "forced": 0,
+              "packing": 1548,
+              "empty": 75,
+              "budget": 0,
+              "mixed": 1622
+            }
+          },
+          {
+            "path": [
+              1141
+            ],
+            "closed": true,
+            "allowed": 1770,
+            "forced": 2,
+            "counts": {
+              "forbidden": 1839,
+              "forced": 0,
+              "packing": 1830,
+              "empty": 9,
+              "budget": 0,
+              "mixed": 1839
+            }
+          },
+          {
+            "path": [
+              1426
+            ],
+            "closed": true,
+            "allowed": 1710,
+            "forced": 2,
+            "counts": {
+              "forbidden": 1899,
+              "forced": 0,
+              "packing": 1819,
+              "empty": 80,
+              "budget": 0,
+              "mixed": 1899
+            }
+          },
+          {
+            "path": [
+              1711
+            ],
+            "closed": true,
+            "allowed": 1767,
+            "forced": 2,
+            "counts": {
+              "forbidden": 1842,
+              "forced": 0,
+              "packing": 1835,
+              "empty": 7,
+              "budget": 0,
+              "mixed": 1842
+            }
+          }
+        ],
+        "step_totals": {
+          "forbidden": 11727,
+          "forced": 3,
+          "packing": 9834,
+          "empty": 1893,
+          "budget": 0,
+          "mixed": 10320
+        }
+      },
+      {
+        "agent": "six-vdw-2",
+        "role": "researcher",
+        "endpoint": 0,
+        "root": 618,
+        "budget": [
+          31,
+          31
+        ],
+        "closed": true,
+        "nodes": 1,
+        "splits": 0,
+        "leaves": [
+          {
+            "path": [],
+            "closed": true,
+            "allowed": 534,
+            "forced": 1,
+            "counts": {
+              "forbidden": 3162,
+              "forced": 0,
+              "packing": 1375,
+              "empty": 1787,
+              "budget": 0,
+              "mixed": 1374
+            }
+          }
+        ],
+        "step_totals": {
+          "forbidden": 3162,
+          "forced": 0,
+          "packing": 1375,
+          "empty": 1787,
+          "budget": 0,
+          "mixed": 1374
+        }
+      },
+      {
+        "agent": "six-vdw-2",
+        "role": "researcher",
+        "endpoint": 0,
+        "root": 1235,
+        "budget": [
+          31,
+          31
+        ],
+        "closed": true,
+        "nodes": 1,
+        "splits": 0,
+        "leaves": [
+          {
+            "path": [],
+            "closed": true,
+            "allowed": 3,
+            "forced": 1,
+            "counts": {
+              "forbidden": 3693,
+              "forced": 0,
+              "packing": 1845,
+              "empty": 1848,
+              "budget": 0,
+              "mixed": 1845
+            }
+          }
+        ],
+        "step_totals": {
+          "forbidden": 3693,
+          "forced": 0,
+          "packing": 1845,
+          "empty": 1848,
+          "budget": 0,
+          "mixed": 1845
+        }
+      },
+      {
+        "agent": "six-vdw-2",
+        "role": "researcher",
+        "endpoint": 0,
+        "root": 1852,
+        "budget": [
+          31,
+          31
+        ],
+        "closed": true,
+        "nodes": 1,
+        "splits": 0,
+        "leaves": [
+          {
+            "path": [],
+            "closed": true,
+            "allowed": 34,
+            "forced": 1,
+            "counts": {
+              "forbidden": 3662,
+              "forced": 0,
+              "packing": 1814,
+              "empty": 1848,
+              "budget": 0,
+              "mixed": 1814
+            }
+          }
+        ],
+        "step_totals": {
+          "forbidden": 3662,
+          "forced": 0,
+          "packing": 1814,
+          "empty": 1848,
+          "budget": 0,
+          "mixed": 1814
+        }
+      },
+      {
+        "agent": "six-vdw-2",
+        "role": "researcher",
+        "endpoint": 0,
+        "root": 2469,
+        "budget": [
+          31,
+          31
+        ],
+        "closed": true,
+        "nodes": 1,
+        "splits": 0,
+        "leaves": [
+          {
+            "path": [],
+            "closed": true,
+            "allowed": 155,
+            "forced": 1,
+            "counts": {
+              "forbidden": 3541,
+              "forced": 0,
+              "packing": 1693,
+              "empty": 1848,
+              "budget": 0,
+              "mixed": 1693
+            }
+          }
+        ],
+        "step_totals": {
+          "forbidden": 3541,
+          "forced": 0,
+          "packing": 1693,
+          "empty": 1848,
+          "budget": 0,
+          "mixed": 1693
+        }
+      },
+      {
+        "agent": "six-vdw-2",
+        "role": "researcher",
+        "endpoint": 0,
+        "root": 3086,
+        "budget": [
+          31,
+          31
+        ],
+        "closed": true,
+        "nodes": 1,
+        "splits": 0,
+        "leaves": [
+          {
+            "path": [],
+            "closed": true,
+            "allowed": 571,
+            "forced": 1,
+            "counts": {
+              "forbidden": 3125,
+              "forced": 0,
+              "packing": 1351,
+              "empty": 1774,
+              "budget": 0,
+              "mixed": 1350
+            }
+          }
+        ],
+        "step_totals": {
+          "forbidden": 3125,
+          "forced": 0,
+          "packing": 1351,
+          "empty": 1774,
+          "budget": 0,
+          "mixed": 1350
+        }
+      }
+    ]
+  }
+}
