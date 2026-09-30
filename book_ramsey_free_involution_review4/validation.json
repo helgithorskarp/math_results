@@ -1,0 +1,97 @@
+{
+  "agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "independent_checks": [
+    {
+      "mode": "normal",
+      "result": {
+        "status": "passed",
+        "expected_sha256": "e97930d6a5775d7ea449750f97516f5397c13d4264fc03a563e43323f9e95411",
+        "wall_seconds": 7.690952841017861,
+        "python": "3.11.2",
+        "peak_child_rss_kib_linux": 91980,
+        "peak_self_rss_kib_linux": 25560
+      },
+      "returncode": 0,
+      "elapsed_seconds": 7.764300581999123
+    },
+    {
+      "mode": "optimized",
+      "result": {
+        "status": "passed",
+        "expected_sha256": "e97930d6a5775d7ea449750f97516f5397c13d4264fc03a563e43323f9e95411",
+        "wall_seconds": 7.161791030026507,
+        "python": "3.11.2",
+        "peak_child_rss_kib_linux": 90904,
+        "peak_self_rss_kib_linux": 28388
+      },
+      "returncode": 0,
+      "elapsed_seconds": 7.413508808007464
+    }
+  ],
+  "author_replay": {
+    "agent": "six-books-2",
+    "role": "researcher",
+    "complete": true,
+    "validation_not_theorem_premise": true,
+    "census_totals": {
+      "all_patterns": 3858660,
+      "matching_budget_pass": 7700,
+      "color_pattern_survivors": 56,
+      "flag_survivors": 3584
+    },
+    "all_survivor_flag_entries_match": true,
+    "analytic_shapes": 2,
+    "threads": 1,
+    "wall_seconds": 52.243568520992994,
+    "peak_child_rss_kib_linux": 100876,
+    "measurements": [
+      {
+        "step": "build_census",
+        "returncode": 0,
+        "wall_seconds": 1.5583493619924411
+      },
+      {
+        "step": "build_formula_controls",
+        "returncode": 0,
+        "wall_seconds": 1.3287408159812912
+      },
+      {
+        "step": "census",
+        "returncode": 0,
+        "wall_seconds": 4.40043738798704
+      },
+      {
+        "step": "formula_controls",
+        "returncode": 0,
+        "wall_seconds": 1.9855968359624967
+      },
+      {
+        "step": "matrix_controls",
+        "returncode": 0,
+        "wall_seconds": 1.9119955149944872
+      },
+      {
+        "step": "independent_census",
+        "returncode": 0,
+        "wall_seconds": 41.0579993109568
+      }
+    ],
+    "full_order22_enumeration": false
+  },
+  "environment": {
+    "python": "3.11.2",
+    "g++": "12.2.0",
+    "standard": "C++17",
+    "cpu_scope": 1,
+    "memory_scope": "2GiB",
+    "native_threads": 1
+  },
+  "sanitizer_check": {
+    "address_and_undefined_sanitizers": "full-coverage-passed",
+    "all_records_equal_to_release": true,
+    "release_and_sanitized_stdout_sha256": "4f35a3f1244d6a59ec69803c6dd3795760792bf35b68b0858f57174c901919a2",
+    "elapsed_seconds": 4.965499297017232,
+    "peak_child_RSS_KiB": 146152
+  }
+}
