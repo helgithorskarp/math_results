@@ -13,6 +13,12 @@ largest-star size s. This yields arbitrary products of these factors,
 including matching downsets, and Boolean cubes. A separate incidence
 projection supplies capped certificates for every uniform rank-two
 downset, including the even orders excluded by the partition formula.
+[DELETIONS.md](DELETIONS.md) extends that projection to dense nonuniform
+families: arbitrary pair deletion preserving s=n has an exact rational
+cap test, and regular deletion line graphs have a closed top eigenvalue.
+Deleting a partial star or a matching always passes under the stated
+untouched-coordinate hypothesis, providing more product factors.
+An explicit restriction shows why the cap requires a new check.
 Disjoint-support unions and restrictions retaining the
 largest-star size have explicit certificate lifts. A valid seven-vertex
 certificate with eigenvalue 8/5 demonstrates why unrestricted tensoring of
@@ -31,6 +37,7 @@ Run from this directory:
 ```bash
 python3 certificates.py
 python3 verify.py
+python3 verify_deletions.py
 ```
 
 The first command deterministically regenerates
@@ -41,8 +48,12 @@ largest-star sizes, and positive semidefiniteness using exact rational LDL
 elimination. It independently partitions all labeled graphs through order
 five into isomorphism orbits and compares individual representatives.
 Order six coverage uses unrestricted vertex extension and the induction in
-the proof. The analytic proofs of the infinite classes do not depend on
-the finite enumeration.
+the proof. The third command prints
+[deletions_expected.json](deletions_expected.json), comparing the scalar
+cap criterion with direct full-matrix exact LDL, and checking the regular
+top eigenvalues, restriction obstructions and capped products.
+The analytic proofs of the infinite classes do not depend on the finite
+enumeration.
 
 Fixture SHA-256:
 
@@ -56,8 +67,14 @@ checks; product parameters `(49,14)`, `(35,14)`, `(15,6)`, `(49,21)`,
 `(33,12)`; six uniform projection checks for n=3 through 8; the
 naive tensor quadratic form `-168`. The 97 other equitable partition
 certificates fail the extra upper bound; all 208 satisfy ordinary H.
-Verification took 4.23 seconds on the research worker, with peak RSS
-about 18 MiB. Each command runs one
+The deletion checks include all 74 labelled deletion graphs on n-1
+coordinates for n=3,4,5, 28 partial stars, 16 matchings, 36 clique
+deletions, and two irregular examples. A deleted C4 already loses the
+inherited cap at n=5, whereas every eligible n=3,4 restriction passes.
+These failures obstruct this template, not cap feasibility or H.
+Baseline verification took about four seconds on the research worker,
+and deletion verification about thirteen seconds, with peak RSS about
+18 MiB. Each command runs one
 process and uses no thread pool. No bulky artifacts are required or omitted.
 
 The infinite rank-two consequence uses established Vizing edge coloring.

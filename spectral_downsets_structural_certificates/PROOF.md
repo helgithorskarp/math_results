@@ -29,6 +29,13 @@ A separate projection construction also covers every uniform rank-two
 downset as a product factor, including the excluded even-order residues.
 All displayed constructions preserve rationality.
 
+[DELETIONS.md](DELETIONS.md) extends section 9 by coalescing deleted-pair
+Gram vectors at the empty vertex. It proves an exact rational cap test,
+the complete top-eigenvalue formula for regular deletion line graphs,
+and infinite capped classes from partial-star and matching deletion.
+It also gives exact failures of cap preservation under restriction;
+ordinary H still holds for those inherited matrices.
+
 The unrestricted conjecture is not settled. We do not infer product closure
 from H alone, or claim these applications of standard theta/Hoffman and
 edge-coloring machinery have priority over the literature.

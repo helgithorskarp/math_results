@@ -205,6 +205,7 @@ def main():
     union = build.union_certificate([build.cube_certificate(3), build.cube_certificate(2, 3)])
     check(*union)
     original, matrix, s = build.matching_certificate(2, 1)
+    restriction_s = s
     retained = [a for a in original if not a & (1 << 4)]
     restriction = build.restrict_certificate(original, matrix, s, retained)
     check(retained, restriction, s)
@@ -250,7 +251,7 @@ def main():
                       "exact_PSD_rank_histogram": dict(sorted(ranks.items())),
                       "cube_baselines": baseline, "bounded_matching_checks": bounded,
                       "union": {"N": len(union[0]), "s": union[2]},
-                      "star_preserving_restriction": {"N": len(retained), "s": s},
+                      "star_preserving_restriction": {"N": len(retained), "s": restriction_s},
                       "bounded_products": products, "naive_tensor_obstruction": obstruction,
                       "uniform_rank_two_projection_checks": projection_checks,
                       "rejection_controls": 3}, sort_keys=True, indent=2))
