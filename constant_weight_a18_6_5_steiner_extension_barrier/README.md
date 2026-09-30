@@ -1,36 +1,88 @@
-# Five old-point outsiders are necessary to reach 70
+# Six old-point outsiders are necessary to reach 70
 
 Author: **six-code-2, researcher**, 2026-09-30.
 
-Fix the classical 68-block Steiner `S(3,5,17)`, and add an eighteenth point.
-Among `(18,6,5)` packings having at most four old-point words outside this
-design, the exact maximum is **69**. Hence every packing of size at least70
-must have at least five such outsiders, for every coordinate copy of the
-classical design. The packing itself can be arbitrary.
+Fix the classical68-circle Steiner `S(3,5,17)`, and add an eighteenth
+point. Among `(18,6,5)` packings with at most **five** old-point words
+outside this design, the exact maximum is **69**. Thus every packing
+of size at least70 has at least **six** outsiders, relative to every
+coordinate copy of this classical design and every choice of added
+point. The packing itself is arbitrary.
 
-The new local statement is **`R>=a+3` whenever there are at least three
-old-point outsiders**. The [two-gap proof](TWO_GAP_PROOF.md) covers all
-three possible circle-pair configurations and excludes a triangle in each
-complete replacement graph. Their respective record/edge counts are
-17160/51295, 17272/53160 and 16734/45756. A separate set enumeration and
-pair-incidence graph reconstruction reproduce the full finite result.
+The [new proof](THREE_GAP_PROOF.md) establishes two exact finite lemmas:
 
-The earlier local statement is `R>=a+2` whenever there are at least two
-old-point outsiders, where `R` counts removed design circles and `a` counts
-contained new-point replacements. The [proof](PROOF.md) excludes every
-possible pair of outsiders when at most one removed circle lacks a
-contained replacement. It combines a complete 10620-record enumeration
-with explicit checked symmetry coverage and a separate direct checker.
+- `s>=4` implies `R-a>=4`, for any number of noncontained new-point words.
+  All50116 unordered gap triples lie in13 explicitly checked permutation
+  orbits. Their complete record graphs are four-clique-free.
+- If there is one noncontained new-point word and `R-a=4`, then `s<=4`.
+  All2040 possible old four-sets normalize to one actual orbit. Its
+  4004-record graph has a checked proper four-coloring.
 
-`witness69.json` specifies an attaining 69-word construction by ten circle
-replacements and one outsider. It reaches the known lower bound and has a
-different degree multiset from the published Aw--Chee--Ling fixture. The
-unrestricted bounds remain [69--72](https://aeb.win.tue.nl/codes/Andw.html).
+Here `s` counts old-point outsiders, `R` counts removed design circles,
+`a` counts contained replacements through the new point, and `t` counts
+other words through that point. The exact cardinality is `68+s+t-(R-a)`.
+The new lemmas and the earlier ordinary Steiner trade costs cover every
+`t` when `s<=5`. This is a restriction near the classical design; the
+unrestricted [primary bounds remain69--72](https://aeb.win.tue.nl/codes/Andw.html).
 
-Use CPython3.11 or newer, standard library only, one process at a time:
+The compact [69-word example](single_word_witness69.json) attains
+`s=4,a=16,t=1,R=20`. The checker verifies every word pair directly. Its
+point-degree multiset is `12^1,17^1,19^4,20^12`. This attains the historical
+numerical lower bound; no numerical improvement or historical priority
+for the example is claimed. The earlier `witness69.json` provides a
+second positive control with `s=1,a=10,t=0,R=10`.
+
+Use CPython3.11+, standard library only, one process at a time:
 
 ```sh
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
+python3 -B generate_three_gap.py --check three_gap_expected.json
+python3 -B verify_three_gap.py
+python3 -B audit_three_gap.py
+```
+
+The generator uses integer masks, a smallest-domain recursion, explicit
+four-set conflicts, and a complete clique recursion with proper-color
+pruning. The separate checker imports no production generator or record
+corpus. It closes all16320 actual permutations, uses fixed-order set
+recursion and pair ownership, rebuilds graph rows by pair incidences,
+and checks every triangle for a fourth common neighbor. In the one-word
+branch it independently enumerates all28213 four-gap records before
+postfiltering to4004 records and verifies the full color partition.
+
+Both implementations rebuild every record and graph row. The record
+streams were also matched entry for entry during validation, for all13
+cases and the one-word branch. The [replay manifest](three_gap_expected.json)
+contains only exact counts and hashes. The
+[color certificate](single_word_colors.json) is19115 bytes and has SHA-256
+`af3c0d76f5aa513268e3081df9a69bb16378d8ee8503d623e4e5fed543668604`.
+The checker reconstructs its record and graph universes; the hash alone
+is not an exclusion proof. Full corpora and graph dumps are omitted.
+
+The audit compares the clique kernels with direct enumeration on all1024
+graphs on five vertices, checks1176 actual record pairs using direct set
+intersections, includes26 positive pairs with identical shared replacements,
+and rejects two corrupted color certificates and two corrupted witnesses.
+Normal and optimized (`-O`) checker outputs agree. The default checker
+took62.83 seconds and159680 KiB peak RSS on CPython3.11.2, using one CPU
+process. Failed elapsed-time or record-count guards raise `INCOMPLETE`
+and cannot establish nonexistence. This fits the1-CPU,2-GiB research scope.
+
+The ownership, deletion, enumeration-completeness, normalization, and
+cardinality bridges are written in the proof and have not been formalized.
+Both implementations are by this same researcher; no independent peer
+review is claimed for the new lemmas.
+
+Earlier results remain in this directory:
+
+- [One-gap proof](PROOF.md): `s>=2` implies `R-a>=2`; exact maximum69 for
+  `s<=3`. Its10620-record graph has zero edges.
+- [Two-gap proof](TWO_GAP_PROOF.md): `s>=3` implies `R-a>=3`; exact maximum69
+  for `s<=4`. Its three complete record graphs are triangle-free.
+
+Their original reproduction commands are:
+
+```sh
 python3 -B generate.py --check expected.json
 python3 -B verify.py
 python3 -B audit.py
@@ -39,50 +91,6 @@ python3 -B verify_two_gap.py
 python3 -B audit_two_gap.py
 ```
 
-The generator enumerates all old five-subsets and mandatory replacements
-using integer masks and proves the full compatibility graph has zero edges.
-The checker independently rebuilds all records using sets and old-pair
-ownership, verifies the actual design/gap automorphisms, and checks every
-record against every symmetry-class representative. Both canonical record
-streams match entry for entry. This is algorithmic validation by one
-researcher, not independent peer review or formal proof-assistant verification.
-
-The earlier checker reports 10620 records, 46 record orbits, zero compatibility
-edges, and its original minimum of 4 old outsiders. The new checker covers
-all three gap pairs, proves their graphs triangle-free, and strengthens
-the necessary outsider count to **5**.
-`expected.json` contains deterministic counts and hashes; it is a compact
-replay manifest rather than a standalone exclusion certificate. An elapsed
-guard raises `INCOMPLETE`; it never reports nonexistence after a timeout.
-The [proof](PROOF.md) states the ordinary mathematical coverage obligations
-and the dependency on the earlier Steiner trade inequality. The historical
-circle design is generated and checked directly; no external degree bound
-or large data file is required.
-
-On CPython 3.11.2 the generator took 1.19 seconds, the separate checker
-2.87 seconds, and the audit 0.10 seconds; peak child RSS was 53800 KiB.
-Normal and optimized (`-O`) checker outputs agree. The audit checks all
-630 pairs in a small compatibility universe, all 36 singleton cases, the
-empty case, equality of shared four-sets, and two actual corrupted witnesses.
-All work used one CPU process and fits the 1-CPU, 2-GiB research scope.
-
-The full canonical record stream, encoded as compact JSON plus a newline,
-has SHA-256
-`a3ba7154299a3c3130816397870182cc57760b3743860b7f711d9a822d18b101`.
-Both programs rebuild this stream; the generated 10620-record corpus is
-omitted from publication.
-
-The two-gap manifests likewise contain only exact counts and hashes.
-Both implementations rebuild every record and every graph row; the separate
-checker verifies explicit first-circle transitivity and second-circle orbit
-sizes 12,15,40. These normalize all possible gaps without assuming a
-packing automorphism. Both new canonical enumerations were compared entry
-for entry during validation. The new audit compares graph adjacency with
-direct set intersections and expands a positive edge of each type into a
-valid 68-word code, checking that identical shared replacements are allowed.
-The [two-gap proof](TWO_GAP_PROOF.md) states the finite coverage, deletion,
-and cardinality arguments and the earlier trade-bound dependencies.
-The new generator took 5.40 seconds, the separate checker 7.50 seconds,
-and the direct audit 5.79 seconds on CPython 3.11.2. Normal and optimized
-checker outputs agree; peak child RSS was 69824 KiB, with one CPU process
-at a time. The earlier one-gap checker was also replayed successfully.
+For a70-word packing with exactly six outsiders, the remaining minimal
+branches are `t=0,R-a=4` and `t=1,R-a=5`. These construction frontiers are
+not excluded here.
