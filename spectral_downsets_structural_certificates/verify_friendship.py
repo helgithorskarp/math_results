@@ -85,10 +85,23 @@ def main():
             and inherited_s == new_s == 5, "Cycle deletion is not F_2")
     require(not deletions.cap_test(5, removed_cycle)[0], "Inherited cycle restriction is unexpectedly capped")
     check(new_members, new_matrix, new_s, upper=True)
+    edges = list(combinations(range(5), 2))
+    cycle_mask = sum(1 << i for i, (a, b) in enumerate(edges)
+                     if ((1 << a) | (1 << b)) in new_members)
+    cycle_partition = build.rank_two_certificate(5, cycle_mask)
+    require(cycle_partition[0] == new_members, "Wrong friendship partition comparison")
+    check(*cycle_partition)
+    try:
+        psd_ldl([[F(int(i == j)) - cycle_partition[1][i][j]
+                  for j in range(12)] for i in range(12)])
+    except ValueError as error:
+        require(str(error) in ("Negative exact LDL pivot", "Zero pivot with nonzero residual row"),
+                "Unexpected partition cap failure")
+    else:
+        raise RuntimeError("Friendship partition template is unexpectedly capped")
     # The other small failure already has a capped equitable partition (N=11,s=5).
     removed_diamond = [e for e in combinations(range(4), 2) if e != (0, 1)]
     retained = deletions.deletion_certificate(5, removed_diamond)[0]
-    edges = list(combinations(range(5), 2))
     mask = sum(1 << i for i, (a, b) in enumerate(edges) if ((1 << a) | (1 << b)) in retained)
     partition = build.rank_two_certificate(5, mask)
     require(partition[0] == retained and len(retained) == 11 and partition[2] == 5,
@@ -105,6 +118,7 @@ def main():
             raise RuntimeError("Invalid friendship family accepted")
     print(json.dumps({"friendship_cases": cases, "friendship_N_max": 52,
                       "cycle_deletion_repaired": {"N": 12, "s": 5, "L_rank": 10},
+                      "friendship_partition_cap_rejected_at_k2": True,
                       "diamond_deletion_partition_repair": {"N": 11, "s": 5},
                       "mixed_capped_product": {"N": len(product[0]), "s": product[2], "L_rank": product_rank},
                       "rejection_controls": 2}, indent=2, sort_keys=True))
