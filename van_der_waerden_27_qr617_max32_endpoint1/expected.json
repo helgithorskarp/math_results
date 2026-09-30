@@ -1,0 +1,362 @@
+{
+  "certificates": [
+    {
+      "file": "tree-1-3421-31-31.json",
+      "bytes": 391561,
+      "sha256": "3c40d65fe285f545a3571b18a8d894a61c3d749aaaf013df9a0a05218203d362"
+    },
+    {
+      "file": "tree-1-3468-31-31.json",
+      "bytes": 353395,
+      "sha256": "3b06a34b32f5c3231bacc801f27f994012df26dd4a774d961ba79e8909a3fe84"
+    },
+    {
+      "file": "tree-1-3515-31-31.json",
+      "bytes": 354603,
+      "sha256": "a5312841c17ef1f5471871628bd58054aa1856f855d6f625fd066d2259816884"
+    },
+    {
+      "file": "tree-1-3562-31-31.json",
+      "bytes": 391153,
+      "sha256": "9e477c68a674ae980b639c833ce485621c603878b38e9b6c179f0f0548bbf5d5"
+    },
+    {
+      "file": "tree-1-3609-31-31.json",
+      "bytes": 362768,
+      "sha256": "0cdef4e163df73f48055b2b2b54324ad70a772c45683bfd72587fa140129c4c8"
+    },
+    {
+      "file": "tree-1-3656-31-31.json",
+      "bytes": 315232,
+      "sha256": "3b86636e64ccb5cc58dc8158fd07494e69547dcc96e88b374495631d5b94c4f9"
+    }
+  ],
+  "verification": {
+    "verified": true,
+    "verified_independent_lemma": "Endpoint1 implies max(a,b)>=32 for ORIGINAL QR617 edit classes",
+    "endpoint": 1,
+    "excluded_budget": [
+      31,
+      31
+    ],
+    "required_roots": [
+      3421,
+      3468,
+      3515,
+      3562,
+      3609,
+      3656
+    ],
+    "roots_checked": 6,
+    "nodes_checked": 6,
+    "splits_checked": 0,
+    "leaves_checked": 6,
+    "original_class_sizes": [
+      1848,
+      1848
+    ],
+    "exceptional_prefix_positions_free": 7,
+    "earlier_numerical_bounds_used_by_new_branch_replay": false,
+    "complement_consequence": "Endpoint0 implies min(a,b)<=1816",
+    "endpoint0_max32_or_total63_asserted": false,
+    "conditional_corollary_given_cited_uniform_class30_and_total62": {
+      "premise_graph_ref": "bafkreibznuuclypj37y3zawaphzeh5dgnvduhwqlt5runpxa7dl55b6izy",
+      "premise_reproved_by_this_command": false,
+      "original_class_bounds_both_endpoints": [
+        30,
+        1818
+      ],
+      "total_edit_bounds": [
+        62,
+        3634
+      ],
+      "remaining_boundary_pairs_by_total_and_endpoint": {
+        "62": {
+          "0": [
+            [
+              30,
+              32
+            ],
+            [
+              31,
+              31
+            ],
+            [
+              32,
+              30
+            ]
+          ],
+          "1": [
+            [
+              30,
+              32
+            ],
+            [
+              32,
+              30
+            ]
+          ]
+        },
+        "3634": {
+          "0": [
+            [
+              1816,
+              1818
+            ],
+            [
+              1818,
+              1816
+            ]
+          ],
+          "1": [
+            [
+              1816,
+              1818
+            ],
+            [
+              1817,
+              1817
+            ],
+            [
+              1818,
+              1816
+            ]
+          ]
+        }
+      },
+      "boundary_feasibility_or_attained_minimum_asserted": false
+    },
+    "step_totals": {
+      "forbidden": 14890,
+      "forced": 11,
+      "packing": 4993,
+      "empty": 9897,
+      "mixed": 5739,
+      "budget": 0
+    },
+    "root_results": [
+      {
+        "agent": "six-vdw-2",
+        "role": "researcher",
+        "endpoint": 1,
+        "root": 3421,
+        "budget": [
+          31,
+          31
+        ],
+        "closed": true,
+        "nodes": 1,
+        "splits": 0,
+        "leaves": [
+          {
+            "path": [],
+            "closed": true,
+            "allowed": 1717,
+            "forced": 4,
+            "counts": {
+              "forbidden": 1979,
+              "forced": 3,
+              "packing": 966,
+              "empty": 1013,
+              "budget": 0,
+              "mixed": 1084
+            }
+          }
+        ],
+        "step_totals": {
+          "forbidden": 1979,
+          "forced": 3,
+          "packing": 966,
+          "empty": 1013,
+          "budget": 0,
+          "mixed": 1084
+        }
+      },
+      {
+        "agent": "six-vdw-2",
+        "role": "researcher",
+        "endpoint": 1,
+        "root": 3468,
+        "budget": [
+          31,
+          31
+        ],
+        "closed": true,
+        "nodes": 1,
+        "splits": 0,
+        "leaves": [
+          {
+            "path": [],
+            "closed": true,
+            "allowed": 1176,
+            "forced": 1,
+            "counts": {
+              "forbidden": 2520,
+              "forced": 0,
+              "packing": 807,
+              "empty": 1713,
+              "budget": 0,
+              "mixed": 930
+            }
+          }
+        ],
+        "step_totals": {
+          "forbidden": 2520,
+          "forced": 0,
+          "packing": 807,
+          "empty": 1713,
+          "budget": 0,
+          "mixed": 930
+        }
+      },
+      {
+        "agent": "six-vdw-2",
+        "role": "researcher",
+        "endpoint": 1,
+        "root": 3515,
+        "budget": [
+          31,
+          31
+        ],
+        "closed": true,
+        "nodes": 1,
+        "splits": 0,
+        "leaves": [
+          {
+            "path": [],
+            "closed": true,
+            "allowed": 1281,
+            "forced": 3,
+            "counts": {
+              "forbidden": 2415,
+              "forced": 2,
+              "packing": 782,
+              "empty": 1633,
+              "budget": 0,
+              "mixed": 936
+            }
+          }
+        ],
+        "step_totals": {
+          "forbidden": 2415,
+          "forced": 2,
+          "packing": 782,
+          "empty": 1633,
+          "budget": 0,
+          "mixed": 936
+        }
+      },
+      {
+        "agent": "six-vdw-2",
+        "role": "researcher",
+        "endpoint": 1,
+        "root": 3562,
+        "budget": [
+          31,
+          31
+        ],
+        "closed": true,
+        "nodes": 1,
+        "splits": 0,
+        "leaves": [
+          {
+            "path": [],
+            "closed": true,
+            "allowed": 619,
+            "forced": 1,
+            "counts": {
+              "forbidden": 3077,
+              "forced": 0,
+              "packing": 894,
+              "empty": 2183,
+              "budget": 0,
+              "mixed": 1010
+            }
+          }
+        ],
+        "step_totals": {
+          "forbidden": 3077,
+          "forced": 0,
+          "packing": 894,
+          "empty": 2183,
+          "budget": 0,
+          "mixed": 1010
+        }
+      },
+      {
+        "agent": "six-vdw-2",
+        "role": "researcher",
+        "endpoint": 1,
+        "root": 3609,
+        "budget": [
+          31,
+          31
+        ],
+        "closed": true,
+        "nodes": 1,
+        "splits": 0,
+        "leaves": [
+          {
+            "path": [],
+            "closed": true,
+            "allowed": 1519,
+            "forced": 2,
+            "counts": {
+              "forbidden": 2177,
+              "forced": 1,
+              "packing": 842,
+              "empty": 1335,
+              "budget": 0,
+              "mixed": 983
+            }
+          }
+        ],
+        "step_totals": {
+          "forbidden": 2177,
+          "forced": 1,
+          "packing": 842,
+          "empty": 1335,
+          "budget": 0,
+          "mixed": 983
+        }
+      },
+      {
+        "agent": "six-vdw-2",
+        "role": "researcher",
+        "endpoint": 1,
+        "root": 3656,
+        "budget": [
+          31,
+          31
+        ],
+        "closed": true,
+        "nodes": 1,
+        "splits": 0,
+        "leaves": [
+          {
+            "path": [],
+            "closed": true,
+            "allowed": 974,
+            "forced": 6,
+            "counts": {
+              "forbidden": 2722,
+              "forced": 5,
+              "packing": 702,
+              "empty": 2020,
+              "budget": 0,
+              "mixed": 796
+            }
+          }
+        ],
+        "step_totals": {
+          "forbidden": 2722,
+          "forced": 5,
+          "packing": 702,
+          "empty": 2020,
+          "budget": 0,
+          "mixed": 796
+        }
+      }
+    ]
+  }
+}

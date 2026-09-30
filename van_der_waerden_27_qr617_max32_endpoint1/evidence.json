@@ -1,0 +1,248 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "python": "3.11.2",
+  "standard_library_only": true,
+  "fresh_source_only_generation": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "generated": 6,
+    "seconds": 86.805,
+    "max_rss_kib": 95360,
+    "case_timings": [
+      {
+        "endpoint": 1,
+        "root": 3421,
+        "budget": [
+          31,
+          31
+        ],
+        "status": "EXCLUDED",
+        "seconds": 8.575
+      },
+      {
+        "endpoint": 1,
+        "root": 3468,
+        "budget": [
+          31,
+          31
+        ],
+        "status": "EXCLUDED",
+        "seconds": 11.467
+      },
+      {
+        "endpoint": 1,
+        "root": 3515,
+        "budget": [
+          31,
+          31
+        ],
+        "status": "EXCLUDED",
+        "seconds": 14.744
+      },
+      {
+        "endpoint": 1,
+        "root": 3562,
+        "budget": [
+          31,
+          31
+        ],
+        "status": "EXCLUDED",
+        "seconds": 9.747
+      },
+      {
+        "endpoint": 1,
+        "root": 3609,
+        "budget": [
+          31,
+          31
+        ],
+        "status": "EXCLUDED",
+        "seconds": 15.293
+      },
+      {
+        "endpoint": 1,
+        "root": 3656,
+        "budget": [
+          31,
+          31
+        ],
+        "status": "EXCLUDED",
+        "seconds": 23.669
+      }
+    ]
+  },
+  "primitive_seconds_cap": 90,
+  "validation_seconds_cap": 90,
+  "threads": 1,
+  "max_concurrent_cpu_intensive_jobs": 1,
+  "proof_corpus_bytes": 2168712,
+  "proof_corpus_published": false,
+  "public_source_requires_private_transcripts": false,
+  "all_certificate_bytes_and_full_root_results_match_previous_local_audit": true,
+  "previous_local_audit_sha256": "33614ba2eb22f9d6be84b1ddfcaac427d3f88731ebd3be0af730d9271f6fdd5b",
+  "expected_manifest_sha256": "9fc5954893279254502a06bcc53aa48782d9c91b018ffb3d3e7b84264cff3ac9",
+  "controls": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "primitive_regressions": 6,
+    "input_cases": 6,
+    "controls_rejected": 25,
+    "rejections": [
+      {
+        "name": "missing_root_tree-1-3421-31-31.json",
+        "reason": "Missing, extra or unexpected endpoint-one equal-cap31 root coverage"
+      },
+      {
+        "name": "missing_root_tree-1-3468-31-31.json",
+        "reason": "Missing, extra or unexpected endpoint-one equal-cap31 root coverage"
+      },
+      {
+        "name": "missing_root_tree-1-3515-31-31.json",
+        "reason": "Missing, extra or unexpected endpoint-one equal-cap31 root coverage"
+      },
+      {
+        "name": "missing_root_tree-1-3562-31-31.json",
+        "reason": "Missing, extra or unexpected endpoint-one equal-cap31 root coverage"
+      },
+      {
+        "name": "missing_root_tree-1-3609-31-31.json",
+        "reason": "Missing, extra or unexpected endpoint-one equal-cap31 root coverage"
+      },
+      {
+        "name": "missing_root_tree-1-3656-31-31.json",
+        "reason": "Missing, extra or unexpected endpoint-one equal-cap31 root coverage"
+      },
+      {
+        "name": "wrong_endpoint",
+        "reason": "Wrong quantified ORIGINAL equal-cap endpoint/root case"
+      },
+      {
+        "name": "Boolean_endpoint",
+        "reason": "Wrong quantified ORIGINAL equal-cap endpoint/root case"
+      },
+      {
+        "name": "unsupported_larger_cap",
+        "reason": "Wrong quantified ORIGINAL equal-cap endpoint/root case"
+      },
+      {
+        "name": "unsupported_other_class_cap",
+        "reason": "Wrong quantified ORIGINAL equal-cap endpoint/root case"
+      },
+      {
+        "name": "wrong_root",
+        "reason": "Wrong quantified ORIGINAL equal-cap endpoint/root case"
+      },
+      {
+        "name": "unsupported_endpoint_cover",
+        "reason": "Missing, extra or unexpected endpoint-one equal-cap31 root coverage"
+      },
+      {
+        "name": "changed_trace_budget",
+        "reason": "Child metadata differs from its parent"
+      },
+      {
+        "name": "extra_trace_hypothesis",
+        "reason": "Certificate-supplied initial state or hypotheses"
+      },
+      {
+        "name": "extra_tree_hypothesis",
+        "reason": "Tree supplied additional initial hypotheses"
+      },
+      {
+        "name": "supplied_U",
+        "reason": "Certificate-supplied initial state or hypotheses"
+      },
+      {
+        "name": "supplied_T",
+        "reason": "Certificate-supplied initial state or hypotheses"
+      },
+      {
+        "name": "false_terminal",
+        "reason": "No class-count contradiction"
+      },
+      {
+        "name": "unproved_partial_terminal",
+        "reason": "Open leaf prevents parent exclusion"
+      },
+      {
+        "name": "constant_AP",
+        "reason": "AP outside domain or constant"
+      },
+      {
+        "name": "Boolean_AP",
+        "reason": "Noninteger AP"
+      },
+      {
+        "name": "AP_hits_pole",
+        "reason": "Prefix AP touches an exceptional position"
+      },
+      {
+        "name": "forbid_forced_root",
+        "reason": "Invalid forbidden target"
+      },
+      {
+        "name": "intersecting_packing",
+        "reason": "Packing empty or intersecting"
+      },
+      {
+        "name": "empty_packing",
+        "reason": "Packing empty or intersecting"
+      }
+    ]
+  },
+  "normal_and_optimized_controls_identical": true,
+  "fresh_check_seconds": 2.071,
+  "validation_job_summary": [
+    {
+      "label": "fresh-check",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 2.071,
+      "max_rss_kib": 47708
+    },
+    {
+      "label": "controls-normal",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 7.189,
+      "max_rss_kib": 58904
+    },
+    {
+      "label": "controls-optimized",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 7.289,
+      "max_rss_kib": 61588
+    },
+    {
+      "label": "cached-resume",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 5.131,
+      "max_rss_kib": 97260
+    },
+    {
+      "label": "tiny-limit",
+      "status": "FINISHED",
+      "returncode": 1,
+      "seconds": 3.175,
+      "max_rss_kib": 87040
+    },
+    {
+      "label": "saved-timeout-refusal",
+      "status": "FINISHED",
+      "returncode": 1,
+      "seconds": 3.225,
+      "max_rss_kib": 85816
+    }
+  ],
+  "cached_resume_preserves_proofs_manifests_and_fresh_timings": true,
+  "intentional_tiny_limit_rejected_as_exclusion": true,
+  "saved_incomplete_refused_without_retry": true,
+  "all_source_checks_complete": true,
+  "earlier_numeric_bounds_used_by_new_branch_replay": false,
+  "independent_external_review_or_formalization": false,
+  "global_W_bound_or_witness": false,
+  "endpoint0_max32_or_total63_asserted": false
+}

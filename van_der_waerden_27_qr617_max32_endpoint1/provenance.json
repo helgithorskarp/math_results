@@ -1,0 +1,116 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "date": "2026-09-30",
+  "problem_graph_ref": "bafkreihbsyzlpqcibwae7vxelgoqcfofwzqdshfmkjrjyhqe7lydcjdlaa",
+  "source_dependencies": [
+    {
+      "directory": "../van_der_waerden_27_qr617_mixed_edit_region",
+      "source_commit": "45338b996411231c38ef2c5073c157911c15a427",
+      "files": {
+        "generate.py": "f822a963f9bb6e490dcbd7fbe635dcba87889337b32c0efe8e5fdf3d28607653",
+        "verify.py": "38ba46f4f22d01ab7df79f1bb20ad7ab190230cf90a29ff1ab3b678e97e2eb33"
+      }
+    },
+    {
+      "directory": "../van_der_waerden_27_qr617_class29_disjunction",
+      "source_commit": "9f183bdd6f0b78152dba63a5fc0ef8391e9d49ec",
+      "files": {
+        "verify.py": "579763d952c364963692638d125e9ff71c6ed9add1f3e4999462bac2e8e7c0af"
+      },
+      "use": "Unchanged generic tree replay; no prior numerical result is called by new branch checking"
+    }
+  ],
+  "numerical_dependencies": [
+    {
+      "directory": "van_der_waerden_27_qr617_nonsquare30_endpoint1",
+      "source_commit": "f3fd087db165cfdaef391aff0d47c75bb7077cda",
+      "graph_ref": "bafkreibznuuclypj37y3zawaphzeh5dgnvduhwqlt5runpxa7dl55b6izy",
+      "scope": "Boundary-pair corollary only; no earlier numerical premise in any new branch",
+      "invoked_fact": "30<=a,b<=1818 and62<=a+b<=3634 at either endpoint, with its three explicit numerical parents",
+      "files": {
+        "PROOF.md": "6e36bf5d673ffcb8391414d0d1b8e53f5d8794548ba1a64a5bf8fae4c90ffbfb",
+        "expected.json": "bcb5f62afa8bed1cc0c036002bdf8e11f543bc3be6db4f60b246a9eca36c2bb0"
+      }
+    }
+  ],
+  "adapted_wrapper_credit": [
+    {
+      "directory": "van_der_waerden_27_qr617_nonsquare30_endpoint1",
+      "source_commit": "f3fd087db165cfdaef391aff0d47c75bb7077cda",
+      "files": {
+        "generate.py": "d89dec15a2165282152b91f9d45dcd832c03d2030e9e1f7d968b35c07c471795",
+        "verify.py": "50ba8abf7953343d4dbd197df639216906ffc9b2273c910c3c24e4a59fbe1664",
+        "checker_controls.py": "830425a92a35fb86192f212f9c9ba7c068db9163b42a80b4c9095236236584ea"
+      },
+      "use": "Outer coverage, direct generator, dependency guards, corruption controls and fresh timing preservation adapted to ORIGINAL equal caps(31,31). New outer checker states only the endpoint1 max32 lemma and its explicit corollary."
+    }
+  ],
+  "published_context": [
+    {
+      "name": "QR617 mixed-clause source and prior58-edit region",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreibmh5mlwv34k2is34pnjmjonfr3tsb5dp2l43hy7kwxpp34iaahgu",
+      "height": "7396",
+      "source_commit": "45338b996411231c38ef2c5073c157911c15a427",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_mixed_edit_region",
+      "use": "Computational source dependency for the pure generator and exact Euler/set AP definitions. Earlier numerical bounds are not used by the new cut."
+    },
+    {
+      "name": "Uniform QR617 original-class29 theorem",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreigdc2r7hp4snvr5h3sqwtzth6bcx7ocbtcpzabiodifflmb36ewrq",
+      "height": "7456",
+      "source_commit": "9f183bdd6f0b78152dba63a5fc0ef8391e9d49ec",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_class29_disjunction",
+      "use": "Unchanged generic tree replay source; no earlier numerical class29 theorem called by the new class30 branch proof."
+    },
+    {
+      "name": "Fixed aligned QR617 uniform class30 and total62 profile",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreibznuuclypj37y3zawaphzeh5dgnvduhwqlt5runpxa7dl55b6izy",
+      "height": "7800",
+      "source_commit": "f3fd087db165cfdaef391aff0d47c75bb7077cda",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_nonsquare30_endpoint1",
+      "use": "Separate numerical premise only for the boundary-pair corollary; outer-wrapper source credit. No prior numerical bound enters a new branch."
+    },
+    {
+      "name": "Period618 permissive three-AP obstruction",
+      "agent": "six-vdw-1",
+      "role": "researcher",
+      "graph_ref": "bafkreidlaq5uknmu22tpadoyvxe537hkgubmpyhynlekstrengbvtjlvti",
+      "height": "7835",
+      "source_commit": "efc09dd20ad18e04809a031e147d1ace56993e4e",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_618_three_ap_obstruction",
+      "use": "Different period618 phase construction: three integer APs exclude a permissive16-phase domain, with63036 symmetry images. Written source and graph body read; no certificate replay or transferred constants."
+    },
+    {
+      "name": "Phase269 class197 low-load rigidity",
+      "agent": "six-vdw-3",
+      "role": "researcher",
+      "graph_ref": "bafkreiht6sxwymnpyyifwvr4pltp36ycopvr6ncseo4oh3y5manxjzuc24",
+      "height": "7831",
+      "source_commit": "0f1d70b511d0f46c30276b8ed20567a596e88527",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_617_phase269_low_load_rigidity",
+      "use": "Different partial seam reference: cap197 forces107 original-class positions unedited; conditional total394 preserves214 positions. Written source and graph body read; no certificate replay or transferred constants or endpoint conditions."
+    }
+  ],
+  "primary_sources": [
+    {
+      "url": "https://combinatorialpress.com/jcmcc-articles/volume-128/new-lower-bounds-for-van-der-waerden-numbers-using-distributed-computing/",
+      "checked": "2026-09-30",
+      "use": "Table1 length7/two colors>3703 and Table2 prime617; reversed argument orderW(length,colors). No comprehensive current-best claim."
+    },
+    {
+      "url": "https://github.com/marijnheule/vdWaerden/blob/master/certificates/W_2_7_617.cert",
+      "checked": "2026-09-30",
+      "use": "Primary classical QR template certificate; no length3704 witness verified."
+    }
+  ],
+  "priority_scope": "Distinct endpoint1 ORIGINAL equal-cap31 exclusion in the cited campaign, removing the balanced total62 possibility there. No historical-priority or attained-distance claim.",
+  "new_branch_replay_uses_earlier_numerical_bounds": false,
+  "independent_external_review_of_current_claim": false
+}
