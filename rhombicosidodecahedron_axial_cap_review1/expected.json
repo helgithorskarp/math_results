@@ -1,0 +1,257 @@
+{
+  "agent": "six-reviewer-1",
+  "all_source_cap": {
+    "cap": {
+      "exact_error_guards": {
+        "bad_roll_error_below_1_10": true,
+        "chamber_gap": true,
+        "chart_error_below_3_delta": true,
+        "circle_error_below_1_32": true,
+        "circle_radial_gap": true,
+        "receiver_in_ABD": true,
+        "receiver_z_above_79_100": true,
+        "relative_angle_below_1_63": true,
+        "source_chord_36_delta": true,
+        "source_height_above_one_half": true,
+        "source_winning_region": true,
+        "torque_remainder_margin": true
+      },
+      "full_relative_angle_upper": "15699/1000000",
+      "one_sided_shadow_error": "19/200000",
+      "perturbed_torque_radius_lower": "19997/200000",
+      "receiver_chord_radius": "1/2000000",
+      "squared_circle_error": "19/20000"
+    },
+    "chamber": {
+      "chart_gap_to_ADC": [
+        "1",
+        "-2/5"
+      ],
+      "minimum_negative_wall_distance_squared": [
+        "1/2",
+        "-1/6"
+      ],
+      "signed_axis_orbit": 20
+    },
+    "negative_controls": {
+      "missing_original_vertex_rejected": true,
+      "reversed_supporting_edge_rejected": true,
+      "unsupported_larger_cap_rejected": true
+    },
+    "proved_winning_component_refinement": {
+      "sharp_active_hexagon_inradius_squared": [
+        "14/3",
+        "2"
+      ],
+      "squared_comparison_margin": [
+        "-447093628213121/3695800781250000",
+        "16696308862477/307983398437500"
+      ],
+      "strict_chord_radius_upper": "1/25",
+      "winning_superlevel_squared": [
+        "15/29",
+        "-4/29"
+      ]
+    },
+    "shadow": {
+      "active_hexagon_facet_distances_squared": [
+        {
+          "edges": 3,
+          "squared_distance": [
+            "14/3",
+            "2"
+          ]
+        },
+        {
+          "edges": 3,
+          "squared_distance": [
+            "29/3",
+            "4"
+          ]
+        }
+      ],
+      "axial_stabilizer": 3,
+      "circle_points": 12,
+      "circle_radius_squared": [
+        "32/3",
+        "4"
+      ],
+      "invalid_rolls": 6,
+      "minimum_bad_roll_defect_squared": [
+        "128/57",
+        "-16/19"
+      ],
+      "other_radius_gap": [
+        "4/3",
+        "0"
+      ],
+      "positive_active_vertices": 6,
+      "projected_points": 60,
+      "valid_rolls": 6
+    },
+    "support_torque": {
+      "center_ball_radius_greater_than_one_tenth": true,
+      "center_facet_distances_squared": [
+        [
+          "12744/37561",
+          "-5528/37561"
+        ],
+        [
+          "16840/2449",
+          "-7320/2449"
+        ],
+        [
+          "16840/2449",
+          "-7320/2449"
+        ],
+        [
+          "12744/37561",
+          "-5528/37561"
+        ]
+      ],
+      "positive_center_weights": [
+        [
+          "7/44",
+          "1/44"
+        ],
+        [
+          "15/44",
+          "-1/44"
+        ],
+        [
+          "15/44",
+          "-1/44"
+        ],
+        [
+          "7/44",
+          "1/44"
+        ]
+      ],
+      "whole_ABD_support_comparisons": 720
+    }
+  },
+  "axial": {
+    "active_count_histogram": {
+      "3": 270,
+      "4": 120,
+      "5": 6,
+      "6": 40
+    },
+    "anchored_simplex_cases": 1771,
+    "minimum_squared_shadow_diameter": [
+      "128/3",
+      "16"
+    ],
+    "optimizer_records_sha256": "4379fb6314158e318402352f572ab08528cad39da604429f54086b9bb3d7bc54",
+    "passing_cases_by_simplex_size": {
+      "3": 86
+    },
+    "passing_distinct_anchor_points": 52,
+    "projective_regions": 436,
+    "rejected_cases": {
+      "outside_active_triangle": 705,
+      "violates_signed_hull_support": 892,
+      "zero_projection": 88
+    },
+    "spectrum": [
+      {
+        "height_squared": [
+          "1/3",
+          "0"
+        ],
+        "regions": 10
+      },
+      {
+        "height_squared": [
+          "15/29",
+          "-4/29"
+        ],
+        "regions": 60
+      },
+      {
+        "height_squared": [
+          "1/7",
+          "0"
+        ],
+        "regions": 30
+      },
+      {
+        "height_squared": [
+          "1",
+          "-2/5"
+        ],
+        "regions": 6
+      },
+      {
+        "height_squared": [
+          "11/41",
+          "-4/41"
+        ],
+        "regions": 30
+      },
+      {
+        "height_squared": [
+          "7/87",
+          "-2/87"
+        ],
+        "regions": 30
+      },
+      {
+        "height_squared": [
+          "26/71",
+          "-11/71"
+        ],
+        "regions": 60
+      },
+      {
+        "height_squared": [
+          "51/2521",
+          "-4/2521"
+        ],
+        "regions": 60
+      },
+      {
+        "height_squared": [
+          "41/61",
+          "-18/61"
+        ],
+        "regions": 30
+      },
+      {
+        "height_squared": [
+          "127/449",
+          "-56/449"
+        ],
+        "regions": 60
+      },
+      {
+        "height_squared": [
+          "299/2281",
+          "-132/2281"
+        ],
+        "regions": 60
+      }
+    ],
+    "strict_passage_squared_scale_upper": [
+      "21/19",
+      "-3/76"
+    ]
+  },
+  "field": "a+b*sqrt(5)",
+  "group": {
+    "anchor": [
+      0,
+      2,
+      4
+    ],
+    "order": 60,
+    "ordered_triangular_frames": 120,
+    "reference_vertex_orbit": 60,
+    "triangular_faces": 20,
+    "vertex_degrees": {
+      "4": 60
+    }
+  },
+  "role": "independent mathematical reviewer",
+  "vertices": 60
+}
