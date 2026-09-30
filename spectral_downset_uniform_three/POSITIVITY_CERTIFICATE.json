@@ -1,0 +1,194 @@
+{
+  "agent": "six-downset-3",
+  "role": "researcher",
+  "coefficient_domain": "Q[n]",
+  "substitution": "n=6+u, u>=0",
+  "CAS_discovery": "SymPy 1.14.0",
+  "margins": {
+    "C0_gap1": {
+      "expression": "(n**2 + 5*n - 10)/2",
+      "numerator_ascending": [
+        56,
+        17,
+        1
+      ],
+      "denominator_ascending": [
+        2
+      ]
+    },
+    "U0_gap1": {
+      "expression": "(n - 4)*(n - 2)*(n + 3)/6",
+      "numerator_ascending": [
+        72,
+        62,
+        15,
+        1
+      ],
+      "denominator_ascending": [
+        6
+      ]
+    },
+    "C1_shift_trace": {
+      "expression": "(n**3 - 2*n**2 - 5*n + 12)/(n - 2)",
+      "numerator_ascending": [
+        126,
+        79,
+        16,
+        1
+      ],
+      "denominator_ascending": [
+        4,
+        1
+      ]
+    },
+    "C1_shift_det": {
+      "expression": "(n**6 - 5*n**5 - 5*n**4 + 57*n**3 - 88*n**2 - 40*n + 120)/(4*(n - 3)*(n - 2))",
+      "numerator_ascending": [
+        10320,
+        14996,
+        8498,
+        2457,
+        385,
+        31,
+        1
+      ],
+      "denominator_ascending": [
+        48,
+        28,
+        4
+      ]
+    },
+    "U1_shift_trace": {
+      "expression": "(n**4 - 5*n**3 + 11*n**2 - n - 24)/(3*(n - 2))",
+      "numerator_ascending": [
+        582,
+        455,
+        137,
+        19,
+        1
+      ],
+      "denominator_ascending": [
+        12,
+        3
+      ]
+    },
+    "U1_shift_det": {
+      "expression": "n*(n - 4)*(n**2 - 2*n + 6)*(n**4 - 5*n**3 + 11*n**2 + 17*n - 48)/(36*(n - 3)*(n - 2))",
+      "numerator_ascending": [
+        239760,
+        410040,
+        300852,
+        125854,
+        33094,
+        5617,
+        601,
+        37,
+        1
+      ],
+      "denominator_ascending": [
+        432,
+        252,
+        36
+      ]
+    },
+    "C2_shift_diag": {
+      "expression": "(n**4 - 6*n**3 + 11*n**2 + 10*n - 36)/(2*(n - 3)*(n - 2))",
+      "numerator_ascending": [
+        420,
+        358,
+        119,
+        18,
+        1
+      ],
+      "denominator_ascending": [
+        24,
+        14,
+        2
+      ]
+    },
+    "C2_shift_det": {
+      "expression": "(n**7 - 8*n**6 + 22*n**5 - 16*n**4 - 31*n**3 + 72*n**2 - 72)/(4*(n - 3)**2*(n - 2))",
+      "numerator_ascending": [
+        52848,
+        79596,
+        51354,
+        18305,
+        3884,
+        490,
+        34,
+        1
+      ],
+      "denominator_ascending": [
+        144,
+        132,
+        40,
+        4
+      ]
+    },
+    "U2_shift_diag": {
+      "expression": "(n - 4)*(n**4 - 4*n**3 + 13*n**2 - 12*n - 18)/(6*(n - 3)*(n - 2))",
+      "numerator_ascending": [
+        1620,
+        1962,
+        890,
+        197,
+        22,
+        1
+      ],
+      "denominator_ascending": [
+        72,
+        42,
+        6
+      ]
+    },
+    "U2_shift_det": {
+      "expression": "n**2*(n - 4)*(n**6 - 10*n**5 + 48*n**4 - 152*n**3 + 305*n**2 - 438*n + 342)/(36*(n - 3)**2*(n - 2))",
+      "numerator_ascending": [
+        501552,
+        1147608,
+        1121508,
+        619302,
+        214948,
+        49009,
+        7384,
+        712,
+        40,
+        1
+      ],
+      "denominator_ascending": [
+        1296,
+        1188,
+        360,
+        36
+      ]
+    },
+    "C3_gap1": {
+      "expression": "(n**3 - 6*n**2 + 3*n - 2)/(2*(n - 5))",
+      "numerator_ascending": [
+        16,
+        39,
+        12,
+        1
+      ],
+      "denominator_ascending": [
+        2,
+        2
+      ]
+    },
+    "U3_gap1": {
+      "expression": "(n - 2)*(n**3 - 6*n**2 + 11*n - 18)/(6*(n - 5))",
+      "numerator_ascending": [
+        192,
+        236,
+        95,
+        16,
+        1
+      ],
+      "denominator_ascending": [
+        6,
+        6
+      ]
+    }
+  },
+  "status": "Exact positivity identities; soundness requires the harmonic and rank-lifting proofs in PROOF.md."
+}
