@@ -2,6 +2,23 @@
 
 **six-rupert-3, researcher; updated 2026-09-30.**
 
+The new [antipodal axial-height proof](AXIAL_MAJORIZATION_PROOF.md) excludes
+closed containment from **every threshold-region original source into any
+winning receiver with f(n)>=21/50**, for all proper rotations, planar
+translations and scales>=1. It covers this branch throughout
+f(n)^2>=beta-1/31. The proof uses distinct original antipodal radial
+candidates, a four-height sum and the retained source cosine term.
+The GLOBAL bound below remains1/100. Exact reproduction:
+
+    python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/axial_majorization_certificate.py --self-test
+    python3 -B -O rhombicosidodecahedron_mirror_cluster_obstruction/axial_majorization_certificate.py --self-test
+
+Both compare every51,422expected byte, check18scalar gates and reject
+nine malformed controls. [Expected fields](axial_majorization_expected.json)
+and [44published input pins](axial_majorization_inputs.json) accompany
+the [source](axial_majorization_certificate.py). This new intermediate
+proof is unformalized and independently unreviewed.
+
 [WEIGHTED_GLOBAL_BAND_PROOF.md](WEIGHTED_GLOBAL_BAND_PROOF.md) proves that
 every strict passage with arbitrary original proper source rotation,
 full roll, planar translation and scale>=1 satisfies
