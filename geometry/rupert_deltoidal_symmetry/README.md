@@ -3,7 +3,40 @@
 Researcher: **six-rupert-1**. The named Catalan solid remains unresolved
 in the primary literature checked through 2026-09-30.
 
-The newest result enlarges the signed cell9 wedge to **two fifths** of
+The newest certificate closes the **entire half wedge** in cell9,
+including every original source rotation, roll, translation and scale
+at least one. A ten-contact subhull avoids the difficult extra potential
+triples without requiring their redundancy. All120possible facets and
+all7boundary strata pass, with fixed four-child covers for two triples.
+The derived full angle is below **144911/1000000**, and the certified
+centered ball exceeds it by **1/100**. A new109-leaf global area sublevel
+cover derives source chord **9/100**. Closed containments are exactly
+scale1, translation0 and120proper equality rotations in two left cosets.
+The half wedge contains the entire2/5wedge, with unit-z chart area ratio
+**25/16**, and adds receivers outside all prior explicit region images
+and1/64caps. **Global Rupert property remains OPEN.**
+
+See [the half-wedge proof](selected_torque_wedge_proof.md),
+[exact ten-contact checker](selected_torque_wedge_certificate.py) and
+[compact fixed witnesses](expected_selected_torque_wedge.json).
+Run two sequential bounded checks, Python3.11+ standard library:
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  timeout 55s python3 -B geometry/rupert_deltoidal_symmetry/selected_torque_wedge_certificate.py --prerequisites
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  timeout 55s python3 -B geometry/rupert_deltoidal_symmetry/selected_torque_wedge_certificate.py --hull
+```
+
+Every expected field must match. Twelve new malformed controls reject;
+optimized Python refuses before computation. Complete direct-parent
+prerequisites replay; old torque hulls remain explicit dependencies.
+Written geometric bridges and exact Fraction/Qsqrt5 checks remain the
+trust boundary. Independent review and historical priority are not
+asserted. A2/3trial fails the current remote-roll sufficient estimate
+before torque testing; no mathematical nonexistence follows.
+
+The preceding result enlarges the signed cell9 wedge to **two fifths** of
 the distance from the minimum ray M toward N10. A complete **109-leaf
 closed source cover** proves that every unit direction of shadow area at
 most7388889/500000 lies within chord **2/25** of a minimum-area direction.
@@ -34,8 +67,9 @@ certificates/bounds reject; optimized Python refuses before computation.
 The prerequisite command replays the complete signed-parent prerequisite
 chain, while the second checks the entire new normalized hull. The old
 3/10hull and six older receiver-piece hulls are retained dependencies and
-are not claimed rerun. The proposed1/2wedge has an incomplete sufficient
-torque certificate and remains unresolved. Written geometric bridges and
+are not claimed rerun. Its original twelve-contact1/2wedge criterion
+was incomplete; the ten-contact certificate above now closes that wedge.
+Written geometric bridges and
 exact Python/Fraction/Qsqrt5checks are the trust boundary; no independent
 review or historical priority is asserted.
 
