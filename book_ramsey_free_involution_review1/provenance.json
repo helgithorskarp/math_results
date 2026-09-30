@@ -1,0 +1,124 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "date": "2026-09-30",
+  "target_ref": "bafkreifn2ikm7lrucpramztb7nvhxzugua3isgyopjjhjoyl56irwcyvtm",
+  "target_height": 7914,
+  "reviewed_source": {
+    "commit": "4d55cb9c0ac987ffb6ad81e351e0ea6cdef50d53",
+    "files": {
+      "book_ramsey_b4_b7_free_involution/PROOF.md": {
+        "sha256": "a6ede7b4e5f61bfb8a0480962ac4181aee7df1011b085f4182c652631a1381ea",
+        "bytes": 18099
+      },
+      "book_ramsey_b4_b7_free_involution/README.md": {
+        "sha256": "433f6004b08f36ba2bc48dcb3cd8a37c33383b0699aa62a74f293be3008ba150",
+        "bytes": 5909
+      },
+      "book_ramsey_b4_b7_free_involution/census.cpp": {
+        "sha256": "14d3f19658293cc3c246e477fc3866eb1a06367fdcba0df748ccd1cb0f99fad3",
+        "bytes": 4494
+      },
+      "book_ramsey_b4_b7_free_involution/check.py": {
+        "sha256": "9900e221bb9e25b0e5bc65cb2ccca13b0f2d59bcf2b7e25e963ff65b2a60dd8e",
+        "bytes": 3981
+      },
+      "book_ramsey_b4_b7_free_involution/expected.json": {
+        "sha256": "2b7b74993fa7bad40f970f7841c8aa82c43dd8d85ca67e98092165277211b74d",
+        "bytes": 3994
+      },
+      "book_ramsey_b4_b7_free_involution/formula_controls.cpp": {
+        "sha256": "8d78364dcf197bd946a486b7bf57a7ef5fafb19a6d7dde3bab0a7735eef1eaf3",
+        "bytes": 7390
+      },
+      "book_ramsey_b4_b7_free_involution/independent_census.py": {
+        "sha256": "057b421791b7b326db34323ed1457d19b36bce0f6bda97453b959a275fce7482",
+        "bytes": 6040
+      },
+      "book_ramsey_b4_b7_free_involution/matrix_controls.py": {
+        "sha256": "4dedb4a866012c6b61de0dbd8ef3fd1db99c297cf4c022ae6d9add090064a81e",
+        "bytes": 4059
+      }
+    }
+  },
+  "python": "CPython3.11.2, standard library only",
+  "primary_method": "Independent ordinary orbit/page-count and finite case proof, with necessary Gram-action self-adjointness and exact rational least-squares refinements",
+  "independent_computation": "Literal mask common neighbors for all3/4-orbit lifts; set-based uniform graphs and interval/parity signed-product relaxation; exhaustive2/3-red normalized blue choices, allinside flags; independent balanced-sign Gram enumeration; exact Fraction residual certificates",
+  "author_executables_imported": false,
+  "author_census_replayed_for_entrywise_comparison": true,
+  "all56_survivors_and3584_flags_equal": true,
+  "author_formula_control_suite_replayed": false,
+  "independent_expected_sha256": "8806f5573cd8f4962ade71c10b3e8d1b735205906c5d64990ae8d75bb12edef6",
+  "expanded_survivor_sha256": "4ba7a8ba574b6b85fb71740945c8ada02a97971a01dd8e2c59d600a6137a748c",
+  "resources": {
+    "optimized_independent": {
+      "exit_code": 0,
+      "seconds": 8.064852770010475,
+      "rss_kib": 21216
+    },
+    "normal_independent_with_entrywise_comparison": {
+      "exit_code": 0,
+      "seconds": 7.9937010100111365,
+      "rss_kib": 18372,
+      "full_56_records_and_3584_flags_match": true
+    },
+    "author_census_and_sanitizer": {
+      "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+      "runs": [
+        {
+          "name": "release_build",
+          "exit_code": 0,
+          "seconds": 1.4194771379698068,
+          "peak_child_rss_kib": 100468
+        },
+        {
+          "name": "census_six",
+          "exit_code": 0,
+          "seconds": 4.630426393006928,
+          "peak_child_rss_kib": 100468
+        },
+        {
+          "name": "sanitized_build",
+          "exit_code": 0,
+          "seconds": 4.278640358999837,
+          "peak_child_rss_kib": 176552
+        },
+        {
+          "name": "sanitized_five",
+          "exit_code": 0,
+          "seconds": 1.7707886639982462,
+          "peak_child_rss_kib": 176552
+        }
+      ],
+      "six_output_exactly_matches_published_expected": true,
+      "sanitizer_coverage": "complete five-uniform diagnostic, ASan and UBSan, no diagnostic"
+    },
+    "native_numeric_threads": 1,
+    "maximum_simultaneous_intensive_jobs": 1
+  },
+  "new_proved_refinements": [
+    "At least4 uniformly blue orbit pairs, at arbitrary uniform density",
+    "Exactly7 uniform pairs: only red/blue counts2/5 or3/4",
+    "Gram-action commutator witnesses16 and-4 exclude both6-pair shapes",
+    "Sharp abstract squared row-action residuals16 for A (any linear operator),16/5 for B (symmetric operator)"
+  ],
+  "trust_boundary": [
+    "Ordinary unformalized orbit decoding, complete cases, switching, parity and real symmetric linear algebra",
+    "Inspected CPython arbitrary-precision integer/Fraction code",
+    "GNU C++12.2.0 only for optional author-census entrywise comparison; ASan/UBSan five-pair coverage"
+  ],
+  "primary_literature": [
+    "https://arxiv.org/html/2407.07285v2#S2",
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://arxiv.org/html/2410.03625v2"
+  ],
+  "literature_checked_at": "2026-09-30",
+  "scope_exclusions": [
+    "Arbitrary22-vertex colorings without a given free involution",
+    "Complete matching-signing enumeration",
+    "Validity/attainment of unsigned necessary patterns",
+    "An optimal total uniform-pair bound or unrestricted Ramsey endpoint",
+    "Historical priority",
+    "Primary general upper certificate or21-vertex witness replay in this review"
+  ]
+}
