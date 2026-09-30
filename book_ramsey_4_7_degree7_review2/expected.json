@@ -1,0 +1,228 @@
+{
+  "agent": "six-reviewer-2",
+  "conditional_edges": {
+    "edges": [
+      102,
+      115
+    ],
+    "endpoint_scalar_cases": {
+      "lower": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "upper": [
+        [
+          7,
+          10
+        ]
+      ]
+    },
+    "integer_cases": 72,
+    "not_endpoint_realizability": true
+  },
+  "cubic6": {
+    "Z_nullity_upper_bound_by_number_K33_blocks": [
+      4,
+      3,
+      2
+    ],
+    "Z_positive_dimension_lower_bound_by_number_K33_blocks": [
+      8,
+      9,
+      10
+    ],
+    "graphs": 7,
+    "spectra": {
+      "K3,3": {
+        "characteristic_polynomial_descending": [
+          1,
+          -6,
+          6,
+          16,
+          -39,
+          30,
+          -8
+        ],
+        "positive_dimension": 5
+      },
+      "triangular prism": {
+        "characteristic_polynomial_descending": [
+          1,
+          -6,
+          6,
+          12,
+          -15,
+          -6,
+          8
+        ],
+        "positive_dimension": 4
+      }
+    },
+    "type_counts": {
+      "K3,3": 1,
+      "triangular prism": 6
+    }
+  },
+  "cubic8": {
+    "graphs": 553,
+    "masks_sha256": "738fb212f8ba7151cc2e6f85873acdf44855b5abb7b2363d7efd76549c46e50f",
+    "negative_principal_minors": 552,
+    "obstructions": [
+      {
+        "canonical_mask": 62,
+        "covered_graphs": 456,
+        "determinant": -4,
+        "order": 5
+      },
+      {
+        "canonical_mask": 126,
+        "covered_graphs": 24,
+        "determinant": -16,
+        "order": 5
+      },
+      {
+        "canonical_mask": 48560,
+        "covered_graphs": 72,
+        "determinant": -6,
+        "order": 7
+      }
+    ],
+    "retained": [
+      264249735
+    ],
+    "saturated_Gram_entries": 35392,
+    "witness_sha256": "56217bf23a2bae67fa5d44af11f6a5ee55c17eded16fa4033e2b74b5334ca66b"
+  },
+  "moments": {
+    "blue_minimum_square_sum": 96,
+    "blue_required_square_sum": 72,
+    "generic_moment_graphs": 1100,
+    "red_cases": [
+      {
+        "allowed_after_zero_square_identity": false,
+        "degree_three_count": 0,
+        "row_sum": 16,
+        "square_sum": -64
+      },
+      {
+        "allowed_after_zero_square_identity": false,
+        "degree_three_count": 1,
+        "row_sum": 20,
+        "square_sum": -32
+      },
+      {
+        "allowed_after_zero_square_identity": false,
+        "degree_three_count": 2,
+        "row_sum": 24,
+        "square_sum": 0
+      },
+      {
+        "allowed_after_zero_square_identity": false,
+        "degree_three_count": 3,
+        "row_sum": 28,
+        "square_sum": 32
+      },
+      {
+        "allowed_after_zero_square_identity": false,
+        "degree_three_count": 4,
+        "row_sum": 32,
+        "square_sum": 64
+      },
+      {
+        "allowed_after_zero_square_identity": false,
+        "degree_three_count": 5,
+        "row_sum": 36,
+        "square_sum": 96
+      },
+      {
+        "allowed_after_zero_square_identity": false,
+        "degree_three_count": 6,
+        "row_sum": 40,
+        "square_sum": 128
+      },
+      {
+        "allowed_after_zero_square_identity": false,
+        "degree_three_count": 7,
+        "row_sum": 44,
+        "square_sum": 160
+      },
+      {
+        "allowed_after_zero_square_identity": true,
+        "degree_three_count": 8,
+        "row_sum": 48,
+        "square_sum": 192
+      }
+    ]
+  },
+  "negative_controls": 9,
+  "rank": {
+    "blue_Gram_total": 72,
+    "centered_Gram_entries": 64,
+    "centered_positive_minor": 256,
+    "centered_rank": 6
+  },
+  "role": "independent mathematical reviewer",
+  "scope": "At most one degree-seven vertex in any22-vertex ordinary red-B4/blue-B7 witness; conditional105..115edge window (older102..115also audited)",
+  "sharp_window": {
+    "Fano_systems": 30,
+    "algebra": {
+      "available_distinct_pair_rows": 1,
+      "difference_polynomial_checked": true,
+      "distinct_load_two_supports_excluded_by_divisibility": true,
+      "forced_neighbor_overlap": 2
+    },
+    "boundary_graphs": {
+      "K2_plus_C5": 12,
+      "normalized_graphs": 167
+    },
+    "incidence": {
+      "all_Fano_unions": 465,
+      "duplicate_pair_vectors_in_image": 735,
+      "fixture_stream_sha256": "91ac0aea324a9a73732c61a03adde30d2ad29b15fa8dd417cc31dbc712f6a57f",
+      "load_two_vectors": 48825,
+      "not_all_twofold_designs": true,
+      "projection_entries": 91140
+    },
+    "literal_spines": {
+      "B_spines": 1008,
+      "fixture_graphs": 48,
+      "mixed_spines": 4704,
+      "not_valid22_witnesses": true,
+      "row_defects": 672
+    },
+    "negative_controls": 3,
+    "scalar": {
+      "equality_histogram_0_to_3": [
+        0,
+        2,
+        5,
+        0
+      ],
+      "equality_parameters": [
+        6,
+        0,
+        22,
+        0
+      ],
+      "equality_states": 21,
+      "ordered_states": 134184,
+      "upper_budgets": [
+        -90,
+        -70,
+        -50,
+        -30,
+        -16,
+        -8,
+        0
+      ]
+    },
+    "trust": "Written universal analytic proof; generated design fixtures are arithmetic controls, not a completeness premise."
+  },
+  "status": "exact independent local audit plus written unformalized proof; unrestricted Ramsey gap unresolved"
+}
