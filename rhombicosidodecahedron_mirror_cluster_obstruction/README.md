@@ -24,8 +24,11 @@ caps 1/162 are not asserted.
 
 Winning sources at the threshold receivers are covered by TWO NEW full
 closed-circle Bernstein trees: 26+54 leaves, 48+104 nodes, maximum depth 6,
-29184 candidate checks and 240 selected coefficient bounds. Their reference
-unit-support gap>1/16 survives the new, legitimate original source chord
+29184 candidate checks and 240 selected coefficient bounds. These reconstruct
+the reference unit-support gap>1/16 already proved by
+[six-reviewer-2's threshold review](https://github.com/helgithorskarp/math_results/blob/main/rhombicosidodecahedron_threshold_receiver_review2/REVIEW.md),
+graph7576, which also supplied the sharp active-quadrilateral disk formula.
+That known gap survives the new, legitimate original source chord
 4343/100000 (larger than old 1/24) and the whole receiving-body error, with
 margin 154258654511/29160000000000>1/200. No historical 1/24 movement bound is
 reused. All 104 other-original heights, 56 circle-pair distances, 12 forbidden

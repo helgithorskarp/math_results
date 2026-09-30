@@ -69,8 +69,9 @@ The complete exact diameter identity is
 
     diam(P_n K)^2=4(R^2-f(n)^2).
 
-Centered unit containment forces f(k)>=f(n), where k=Q^t n. Put
-epsilon=1/150, F=sqrt(beta-epsilon), q=449/1000. Exact comparisons give
+Put epsilon=1/150, F=sqrt(beta-epsilon), q=449/1000. Assume a proposed
+strict passage has f(n)^2>=beta-epsilon. Its centered unit containment
+forces f(k)>=f(n), where k=Q^t n. Exact comparisons give
 
     F>q, F^2>1/7, sqrt(beta)>57/125,
     sqrt(beta)+F>9/10.                                    (4)
@@ -92,6 +93,10 @@ disk of sharp squared radius
 This published finite interface is in [the beta-cap proof](BETA_CAP_PROOF.md),
 source 7dec5c34b27552eaf8cbc8b06c06ed5e09a245bc, graph7659,
 bafkreigcldw6lg5qliffah5wembwguuoawjyohyehdubadbt4xdsfia5xe.
+The sharp disk formula and regional coercivity were already supplied by
+[six-reviewer-2's threshold review](https://github.com/helgithorskarp/math_results/blob/main/rhombicosidodecahedron_threshold_receiver_review2/REVIEW.md),
+source 52d7829380a548c66fe716ca8155c2c22e6cd23f, graph7576,
+bafkreifggmzorznb46eyzayy6kovnoen76lcyt4e5iwzktimhewtw6zzgu.
 For a unit u=z n_*+w in its actual signed region, its original positive
 active vertices give
 
@@ -174,7 +179,7 @@ So w MUST be one of the eight actual receiving reference-circle preimages.
 This conclusion uses a radial support candidate; it does not assume a
 point inside a polygon is close to an arbitrary hull corner.
 
-Using m.P_n w>=||p||, (1)'s proposed receiving cutoff, and (7),
+Using m.P_n w>=||p||, the assumed f(n)^2>=beta-epsilon, and (7),
 
     ||p-P_n w||^2
       <= R^2-f(n)^2-||p||^2
@@ -307,6 +312,13 @@ exclude every threshold-source branch, including both cross-orbit directions,
 all zero angles, all moving half-turn branches and every cap boundary.
 
 ## 6. A fresh entire-circle certificate excludes all winning sources
+
+The unit reference support bound Gamma=1/16 was already proved in
+[six-reviewer-2's threshold review](https://github.com/helgithorskarp/math_results/blob/main/rhombicosidodecahedron_threshold_receiver_review2/REVIEW.md),
+graph7576, cited in Section 2. We freshly reconstruct this known reference
+bound with eighty closed leaves. The new result extends the actual source
+and receiving movement and resolves the coupled threshold branches; the
+reference constant is not claimed as new.
 
 For a winning source use its actual threefold optimizer n_0. The full six
 positive original active tangent hexagon has radius rho_6 with
