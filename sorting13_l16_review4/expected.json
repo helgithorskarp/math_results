@@ -1,0 +1,86 @@
+{
+  "audit": {
+    "agent": "six-reviewer-4",
+    "role": "independent mathematical reviewer",
+    "status": "VERIFIED",
+    "pinned_inputs": 23,
+    "mathematics": {
+      "original_inputs": 2048,
+      "K_states": 127,
+      "L_states": 109,
+      "original_positive_controls": 4096,
+      "old_markers": {
+        "witnesses": 53,
+        "assignments": 8874,
+        "distinct_rank_controls": 106
+      },
+      "new_markers": {
+        "witnesses": 92,
+        "assignments": 10936,
+        "distinct_rank_controls": 184
+      },
+      "K_markers": {
+        "witnesses": 5,
+        "assignments": 1802,
+        "distinct_rank_controls": 10
+      },
+      "binary_F_markers": [
+        {
+          "witnesses": 2,
+          "assignments": 100,
+          "distinct_rank_controls": 4
+        },
+        {
+          "witnesses": 2,
+          "assignments": 100,
+          "distinct_rank_controls": 4
+        },
+        {
+          "witnesses": 2,
+          "assignments": 100,
+          "distinct_rank_controls": 4
+        }
+      ],
+      "sole_zero_gate": {
+        "states": 1048,
+        "transitions": 37728,
+        "allowed": 24021
+      },
+      "binary_maximum_exclusion": {
+        "states": 188,
+        "transitions": 5264,
+        "allowed": 3131
+      },
+      "maximum_word_cover": {
+        "binary_words": 3,
+        "unary_words": 21,
+        "exact_passages": [
+          4,
+          4,
+          2,
+          4,
+          1
+        ]
+      }
+    },
+    "certificate": {
+      "variables": 34194,
+      "full_source_clauses": 726755,
+      "core_clauses": 13374,
+      "rup_additions": 13084,
+      "full_cnf_sha256": "4fb7cabafebaa7a4287be430eec234ae5d59aa048d92bb99bb5c4a141c3d7875",
+      "rup_sha256": "db2fbd1257789f51eb810591e776abf2ebbabcb051af6e39db7899e7eb93f061",
+      "core_sha256": "fed63e0fce0629399ae5ccb901f926d60bad57ddffd721d9359d7c2ebb148989",
+      "tiny_controls": 10233,
+      "premature_empty_rejected": true,
+      "invalid_unit_rejected": true
+    }
+  },
+  "encoder_controls": {
+    "cardinality": {
+      "formulas": 22,
+      "truth_assignments": 9772
+    },
+    "generated_gate_cases": 24
+  }
+}
