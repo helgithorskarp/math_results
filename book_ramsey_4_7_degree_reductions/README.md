@@ -37,6 +37,13 @@ neighbors, and every edge of its complement has at most six.
    proves this analytically, by an exact capacity identity and an
    integer-defect projection argument, without assuming uniqueness.
    Edge counts **97..104** and **116..121** require minimum degree eight.
+8. The current necessary window is **106 <= e(G) <= 115** whenever
+   a degree-seven vertex exists. [degree105.md](degree105.md) excludes
+   the 105-edge boundary: exact identities force a regular cross
+   incidence matrix; a classical least-eigenvalue classification
+   leaves two explicit line-graph templates, whose complete seven-vertex
+   completions fail literal books. Edge counts **97..105** and
+   **116..121** therefore require minimum degree eight.
 
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
@@ -58,6 +65,9 @@ the degree-seven multiplicity restriction and
 [single_degree7.md](single_degree7.md) for the sharper analytic edge
 window. [proof.md](proof.md) and [degree6.md](degree6.md) preserve the
 earlier independent proofs.
+The current refinement [degree105.md](degree105.md) explicitly separates
+its written incidence reductions, published spectral classification
+dependency, and small final exact enumeration.
 
 ## Reproduction
 
@@ -75,6 +85,10 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 book_ramsey_4_7_degree_reductions/two_degree7_check.py
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 book_ramsey_4_7_degree_reductions/single_degree7_check.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 book_ramsey_4_7_degree_reductions/degree105_check.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 book_ramsey_4_7_degree_reductions/degree105_independent.py
 ```
 
 The deterministic JSON output matches [expected.json](expected.json).
@@ -145,6 +159,20 @@ the proof uses no enumeration of witnesses or twofold triple systems.
 The output matches
 [single_degree7_expected.json](single_degree7_expected.json).
 
+The last two commands support the 106–115 refinement. The main checker
+controls the new row-capacity and exceptional-row identities, including
+143,572 scalar states and 291,060 row configurations. It completely
+checks 3,003 binary columns per template and all 116,280 seven-edge
+graphs on B per template. The second implementation imports no generator
+code, reconstructs binary columns through triangle potentials, generates
+all 66,090 root-admissible B graphs by binary recursion, and checks literal
+22-vertex neighborhoods. Their 25 surviving B-spine configurations agree
+entry by entry and each has fourteen violating blue cross spines.
+The compact expected records and explicit B7 pages are in
+[degree105_expected.json](degree105_expected.json). These are author
+implementation cross-checks; the classical spectral classification's
+historical enumeration is a named external dependency, not rerun here.
+
 ## Primary sources and baseline provenance
 
 - Lidicky, McKinley, Pfender, Van Overberghe,
@@ -166,6 +194,11 @@ The output matches
 - Dai and Lin, [*Book Ramsey numbers via algebraic constructions*](https://arxiv.org/abs/2606.07214),
   concerns diagonal and difference-two regimes, rather than settling
   this difference-three parameter.
+- Bussemaker, Cvetkovic, Seidel,
+  [*Graphs related to exceptional root systems*, 1976](https://pure.tue.nl/ws/portalfiles/portal/4386333/696566.pdf),
+  Theorem 1.12 and Proposition 5.10, supply the external classification
+  used only in the 106–115 refinement. The exact specialization and
+  trust boundary are stated in [degree105.md](degree105.md).
 
 Sources were refreshed on 2026-09-30. The published upper bound is
 used as literature context; its flag-algebra certificate is not
