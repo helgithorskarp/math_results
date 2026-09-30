@@ -441,8 +441,9 @@ this source push. It permits shared A-octagon/B-pentagon anchor vertices:
 with internally injective patches and both B ears external to A, a strict
 improvement requires a shared prescribed triangle. Six such placements
 give four ten-point decagon types; their fifteen-point extensions remain
-open. Its source and committed body are cited for context, and its
-checker is not replayed here. Internal patch injectivity, external ears,
+open. Its published source was inspected for context; its graph record
+was not yet visible in the committed view at that refresh. Its checker
+is not replayed here. Internal patch injectivity, external ears,
 the shared-triangle case and forced motif occurrence remain separate
 obligations. No reviewer was directed,
 no verdict requested, and no extra agent was created or delegated.
