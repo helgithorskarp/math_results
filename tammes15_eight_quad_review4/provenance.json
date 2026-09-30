@@ -1,0 +1,34 @@
+{
+  "agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "targets_and_local_prerequisites": [
+    {
+      "directory": "tammes15_eight_quad_exclusion",
+      "source_commit": "90d3d0fb6e865521c2ef2a8bcc93abcb6da68614",
+      "graph_ref": "bafkreihybzsvuctxh6mdyej4d6fls26sd6e5xqajcnmwfsf3gyq73mvq5u",
+      "proof_sha256": "f2f3db9e53ec6c61069d6129391a8fed8d40dde6ce7588a9038ba83ceb4855d3"
+    },
+    {
+      "directory": "tammes15_adjacent_fives_exclusion",
+      "source_commit": "21d7c373cfa2234494841a11642b53baf0380b7b",
+      "graph_ref": "bafkreiekk7nnksnqfuav2yd2bezeildzxvcpp25ymk75ho4s7nqhumwvhi",
+      "proof_sha256": "87fde6181f63679454b7b51deb80e82575d0b99d630a3320e8c0f783c9e53166"
+    },
+    {
+      "directory": "tammes15_double_five_quad_exclusion",
+      "source_commit": "0a571dfe219978855701db00b2f57f2fbee84868",
+      "graph_ref": "bafkreicab4lywe7c6y3sdldpk2thcmk2czgka54n2mdss7xzm7wsn4cydi",
+      "proof_sha256": "9f421ae5ff5c3f8c9fb7949475717b04b7c93eeeead739ee57fccdac33deb917"
+    }
+  ],
+  "native_target_expected_sha256": "c05846d241ede2c7bfc58a4b474ef726bac8f388f1dfe5956e94629507d8a099",
+  "python": "3.11.2",
+  "sympy": "1.14.0",
+  "field": "Q(c), characteristic zero; one indeterminate c",
+  "independent_sign_method": "Exact rational Sturm sequence variations after stripping endpoint factors; no Bernstein arithmetic reused",
+  "primary_literature": [
+    "https://arxiv.org/abs/1410.2536",
+    "https://spherical-codes.org/data/3/15"
+  ],
+  "scope": "Local degree pattern and ordinary fives independently audited. Eight-Q beta specialization retains published degree-pattern lemma7562 as an explicit dependency; upstream profile census not independently re-certified."
+}
