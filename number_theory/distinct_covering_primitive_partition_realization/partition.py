@@ -151,3 +151,34 @@ def realize(B, p, c, W, witness):
     return {"N": B*p**c, "T": T, "classes": classes,
             "merged_groups": [{"label": t, "indices": sorted(js)}
                               for t, js in sorted(merged.items())]}
+
+
+def realize_distinct(B, p, c, W, witness):
+    """Two actual B-positions per block attain the support-aware budget.
+
+    In every group, cofactor cosets are laminar. Color their inclusion forest
+    alternately; any fibre with two active classes contains a parent-child
+    pair and therefore two distinct physical B-coordinates.
+    """
+    basic = realize(B, p, c, W, witness)  # Full hypothesis/witness validation.
+    T = basic["T"]
+    phases = witness["cofactor_phases"]
+    colors, labels = {}, {}
+    for group in basic["merged_groups"]:
+        q = group["label"]
+        for j in group["indices"]:
+            parents = [i for i in group["indices"] if i < j
+                       and phases[j] % (p**i) == phases[i]]
+            parent = max(parents) if parents else None
+            colors[j] = 0 if parent is None else 1 - colors[parent]
+            labels[j] = q
+    classes = []
+    for j, r in enumerate(phases):
+        t = labels[j] + T*colors[j]
+        if not 0 <= t < B:
+            raise ValueError("Two-position realization escaped B-axis")
+        power = p**j
+        a = t if j == 0 else t + B*((r-t)*pow(B, -1, power) % power)
+        classes.append([B*power, a])
+    return {**basic, "classes": classes,
+            "B_position_colors": [colors[j] for j in range(c + 1)]}

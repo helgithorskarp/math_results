@@ -48,7 +48,7 @@ def coarse_maximum(W, p, c):
     return best, count
 
 
-def physical_useful(B, p, c, W, classes):
+def physical_useful(B, p, c, W, classes, distinct=False):
     """Literal actual congruence progressions at the full physical period."""
     N = B*p**c
     # Trial division independent of the model's radical helper.
@@ -63,9 +63,10 @@ def physical_useful(B, p, c, W, classes):
     total = 0
     for n, a in classes:
         for x in range(a, N, n):
-            active = sum(a2 % T == a % T and x % (n2//B) == a2 % (n2//B)
-                         for n2, a2 in classes)
-            if active >= 2:
+            active = [a2 % B for n2, a2 in classes
+                      if a2 % T == a % T and x % (n2//B) == a2 % (n2//B)]
+            population = len(set(active)) if distinct else len(active)
+            if population >= 2:
                 total += v[x % Q]
     return total
 
@@ -121,10 +122,18 @@ def run(seconds):
         realization = model.realize(B, p, c, W, witness)
         physical = physical_useful(B, p, c, W, realization["classes"])
         require(physical == F, "Actual CRT realization missed maximum")
+        # Coincident top classes alone do not create support-aware charge.
+        coarse_distinct = physical_useful(B, p, c, W, realization["classes"], distinct=True)
+        require(coarse_distinct == 0, "Constant-position realization has distinct support")
+        alternating = model.realize_distinct(B, p, c, W, witness)
+        support_mass = physical_useful(B, p, c, W, alternating["classes"], distinct=True)
+        require(support_mass == F, "Two-position laminar realization missed maximum")
         entry = {"case": name, "p": p, "c": c, "b": b, "B": B,
                  "F": F, "raw_useful_maximum": raw, "physical_useful_mass": physical,
                  "raw_phase_label_tuples": count,
                  "partitions": len(tuple(model.partitions(c + 1))),
+                 "support_aware_physical_mass": support_mass,
+                 "realization_colors": alternating["B_position_colors"],
                  "weight_sha256": sha256(json.dumps(W, separators=(",", ":")).encode()).hexdigest()}
         if c == 3:
             cube = model.cube_budget(W, p)
@@ -136,6 +145,9 @@ def run(seconds):
             # Explicit physical top phases attaining the pair mode.
             explicit = [[20, 0], [60, 0], [180, 1], [540, 1]]
             require(physical_useful(20, 3, 3, W, explicit) == 26, "Literal pair fixture")
+            separated = [[20, 0], [60, 42], [180, 1], [540, 163]]
+            require(physical_useful(20, 3, 3, W, separated, distinct=True) == 26,
+                    "Literal separated-position fixture")
         results.append(entry)
         configurations += count
     covers, maximum_checks = genuine_cover_controls()
@@ -164,6 +176,7 @@ def run(seconds):
         "scope": "finite controls for written general realization and cube-budget proofs",
         "cases": results, "raw_phase_label_tuples": configurations,
         "genuine_cover_weight_checks": covers, "literal_outside_maxima_checks": maximum_checks,
+        "two_position_support_aware_realizations": len(rows),
         "malformed_hypotheses_rejected": rejected,
         "full43200_exclusion": False, "global_numeric_bound_improved": False,
     }
@@ -186,6 +199,7 @@ def main():
     print(f"{evidence['raw_phase_label_tuples']} complete raw phase/label tuples; "
           f"{evidence['genuine_cover_weight_checks']} true-cover weights passed.")
     print("Strict pair mode26>K3=22; every tested partition maximum physically attained.")
+    print("Eight two-position laminar witnesses also attain the support-aware maximum.")
     print("No full43200 exclusion or numerical-bound improvement.")
     print(f"Elapsed seconds: {elapsed:.6f}")
 

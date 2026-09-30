@@ -93,6 +93,40 @@ useful-mass maximum**. It remains a necessary covering budget, and it can
 still exceed what a covering completion can realize together with all other
 resources. No compatibility or cover-existence conclusion is added.
 
+**Support-aware version.** In A, replace the condition of at least two active
+classes by the condition of at least two *distinct actual B-coordinates* in
+the primitive block. Count the retained top points with class multiplicity
+as before. Call this mass A_distinct. Then
+
+    max_{actual top phases} A_distinct = F_c(W).
+
+Indeed, A_distinct<=A<=F_c. Start from the maximizing partition and equal-phase
+merging just proved. In each merged group the cofactor footprints
+{z:z=r_j mod p^j} are nested or disjoint. Form their inclusion forest, connecting
+each footprint to the closest strictly larger footprint present in the group.
+Color each root0 and each child with the opposite color to its parent.
+
+For everyz, the active footprints form a chain. If its length is at least two,
+it contains an edge of that inclusion forest and hence both colors. If its
+length is at most one, its useful charge is zero. In the group of block labelq
+choose actual B-coordinates
+
+    t_j=q+T*color(j).
+
+They lie in0..B-1 because rho>=2. Their block label remainsq and their weight
+phase remainsq modb because b|T. CRT with the same r_j produces actual top
+phases. In each fibre all k>=2 active classes now have two distinct physical
+positions, while all their weights remain W_z(q). Thus A_distinct attains the
+full merged F_c charge. This construction uses only two positions per block,
+independently ofc.
+
+The primitive-period sign argument can ignore a block whenever its top
+classes occupy at most one actual B-coordinate: the other footprints meet
+its demand by the same one-exception-point argument. The support-aware
+useful-mass maximum therefore shows that this strengthening of the ignored
+blocks alone leaves the worst-case F_c budget unchanged. It still counts
+class multiplicity, and it is still not a top-class union bound.
+
 ## Explicit prime-cube formula
 
 Now c=3. For r modulo p and u modulo p^2 define
@@ -164,6 +198,10 @@ Therefore K3=22. But M1=9 and M3=4, so
 Actual top phases (20,0),(60,0),(180,1),(540,1) have block labels0,0,1,1.
 The first pair contributes18 useful mass in the nine mod3 fibres; the
 second contributes8 atz1. Literal physical progression counting confirms26.
+The separated-position phases (20,0),(60,42),(180,1),(540,163) also attain26
+in A_distinct: their B-coordinates are0,2,1,3. The block label of each first
+pair remains0 and each second pair remains1, with two distinct positions in
+each useful block.
 This fixture is a component comparison, not a distinct covering at540 or an
 exclusion there. The earlier square-of-prime formula cannot be transferred
 unchanged to the cube.
@@ -212,6 +250,12 @@ Potential applications, with all eligibility/support hypotheses still needed:
 |43200|1600|3|3|80|2160|
 |43200|1600|3|3|160|4320|
 
+For15120, Q216 is coprime to35. A prefix prescribing any class modulo35
+admits no nonzero Q216-periodic weight vanishing on that class: CRT makes
+every base residue meet it in the physical period. Thus that parameter row
+must be used before such a class is prescribed, or with another justified
+decomposition; it is not a direct replacement for a later15120 search model.
+
 For43200, the existing Q3600 five-square weights do not meet this ternary
 block-period hypothesis unchanged: their B-side period includes25, whereas
 T160 includes only one factor5. New weights would have to satisfy the stated
@@ -241,6 +285,10 @@ Its20-second control limit raises without a proof conclusion if incomplete.
 The compact manifest records289971 complete raw phase/block-label tuples,
 eighteen genuine-cover weights, ninety literal outside-resource maxima and
 seven rejected hypotheses. The exponent-four case tests all52 set partitions.
+All eight alternating-color CRT witnesses separately attain the support-aware
+maximum using at most two positions per block. The constant-position witnesses
+have zero support-aware mass, which checks the distinction between the two
+definitions.
 
 The universal results are the written proofs; the finite controls supplement
 the implementation. The proof is unformalized, and the code is ordinary exact
