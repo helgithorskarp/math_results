@@ -1,0 +1,149 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "python": "3.11.2",
+  "native_threads": 1,
+  "intensive_jobs_at_once": 1,
+  "scope_limits": "unchanged1CPU2GiB",
+  "normal_optimized_identical": true,
+  "all_runs": [
+    {
+      "implementation": "independent reviewer",
+      "mode": "normal",
+      "script": "audit.py",
+      "seconds": 10.625150129024405,
+      "exit_code": 0,
+      "cumulative_child_peak_rss_KiB": 19896,
+      "stderr_empty": true
+    },
+    {
+      "implementation": "independent reviewer",
+      "mode": "optimized",
+      "script": "audit.py",
+      "seconds": 10.11893533798866,
+      "exit_code": 0,
+      "cumulative_child_peak_rss_KiB": 22548,
+      "stderr_empty": true
+    },
+    {
+      "implementation": "supplementary author replay",
+      "mode": "normal",
+      "script": "check_two_isolates.py",
+      "seconds": 0.7956079800496809,
+      "exit_code": 0,
+      "cumulative_child_peak_rss_KiB": 22548,
+      "stderr_empty": true
+    },
+    {
+      "implementation": "supplementary author replay",
+      "mode": "normal",
+      "script": "verify_two_isolates.py",
+      "seconds": 2.032603357976768,
+      "exit_code": 0,
+      "cumulative_child_peak_rss_KiB": 22548,
+      "stderr_empty": true
+    },
+    {
+      "implementation": "supplementary author replay",
+      "mode": "normal",
+      "script": "check_adjacent_low.py",
+      "seconds": 0.5478254449553788,
+      "exit_code": 0,
+      "cumulative_child_peak_rss_KiB": 22548,
+      "stderr_empty": true
+    },
+    {
+      "implementation": "supplementary author replay",
+      "mode": "normal",
+      "script": "verify_adjacent_low.py",
+      "seconds": 3.9248989580082707,
+      "exit_code": 0,
+      "cumulative_child_peak_rss_KiB": 22548,
+      "stderr_empty": true
+    }
+  ],
+  "expected_sha256": "80c93b9970bd429127c443bacbb2eaa4574dd1413b12111f159393370cce8477",
+  "audit_sha256": "90bc43ca79b5a950d7e9c70b8cc2a62b6cfc580278ae1a7493f560857cfcd412",
+  "shared_clique_states": 18577,
+  "adjacent_clique_states": 261149,
+  "optimization_states": 1572,
+  "controls": {
+    "affine_uniqueness_graph": [
+      24,
+      72
+    ],
+    "all_target_clique_checks": 6505,
+    "inverse_merge_splits": 30,
+    "negative_controls": 6,
+    "ordinary_weight_two_checks": 100,
+    "positive_affine_fixture": true,
+    "small_graphs": 1100
+  },
+  "state_cap_per_search": 200000,
+  "seconds_cap_per_search": 10,
+  "largest_adjacency_case_states": 13298,
+  "source_check_status": "COMPLETE",
+  "final_independent_runs": [
+    {
+      "mode": "normal",
+      "seconds": 21.89379221899435,
+      "cumulative_child_peak_rss_KiB": 19900,
+      "stdout": {
+        "adjacent_clique_states": 261149,
+        "adjacent_stars": 16,
+        "result_sha256": "80c93b9970bd429127c443bacbb2eaa4574dd1413b12111f159393370cce8477",
+        "shared_clique_states": 18577,
+        "shared_leave_cases": 78,
+        "shared_stars": [
+          0,
+          8,
+          12,
+          10
+        ],
+        "status": "COMPLETE"
+      },
+      "stderr_empty": true
+    },
+    {
+      "mode": "optimized",
+      "seconds": 20.514849208993837,
+      "cumulative_child_peak_rss_KiB": 22288,
+      "stdout": {
+        "adjacent_clique_states": 261149,
+        "adjacent_stars": 16,
+        "result_sha256": "80c93b9970bd429127c443bacbb2eaa4574dd1413b12111f159393370cce8477",
+        "shared_clique_states": 18577,
+        "shared_leave_cases": 78,
+        "shared_stars": [
+          0,
+          8,
+          12,
+          10
+        ],
+        "status": "COMPLETE"
+      },
+      "stderr_empty": true
+    }
+  ],
+  "repository_default_command": {
+    "agent": "six-reviewer-2",
+    "role": "independent mathematical reviewer",
+    "default_command_passed": true,
+    "seconds": 9.846000210032798,
+    "stdout": {
+      "adjacent_clique_states": 261149,
+      "adjacent_stars": 16,
+      "result_sha256": "80c93b9970bd429127c443bacbb2eaa4574dd1413b12111f159393370cce8477",
+      "shared_clique_states": 18577,
+      "shared_leave_cases": 78,
+      "shared_stars": [
+        0,
+        8,
+        12,
+        10
+      ],
+      "status": "COMPLETE"
+    },
+    "stderr_empty": true
+  }
+}
