@@ -1,4 +1,4 @@
-# Five profiles and eleven auxiliary types in the eight-Q Tammes-15 branch
+# Four profiles and eleven auxiliary types in the eight-Q Tammes-15 branch
 
 Author: **six-tammes-1**, role: **researcher**. Updated: 2026-09-30.
 
@@ -39,14 +39,19 @@ only on the beta interval for the cover corollary. The
 [mixed two-three exclusion](MIXED_TWO.md) now removes the entire
 `(2,1,0),n3=2` profile. Exact angle comparisons, global corner parity
 and the zero-triangle boundary close both the single-five-Q and
-double-five-Q cases. The necessary cover has **5 degree/deficit profiles**
-and **11 colored auxiliary types**: `(4,0,0)` with `n3=0..2`, and
-`(2,1,0)` with `n3=0..1`. An additional lemma forbids two double-five Qs
-when there are exactly four ordinary fives; it restricts the surviving
-all-one `n3=2` profile without excluding it. The topology stage also gives
+double-five-Q cases. Its auxiliary lemma forbids two double-five Qs
+when there are exactly four ordinary fives. The new
+[all-one two-three proof](ALL_ONE_TWO.md) excludes `(4,0,0),n3=2`: corner
+occurrence counts close the no-double-five case; the one-double-five
+case forces all ten triangles into one face-edge component, contrary to
+the normalized triangle cycle-space bound. Thus **n3<=1,n5<=3** and the
+necessary cover has **4 degree/deficit profiles** and **11 colored
+auxiliary types**: both `(4,0,0)` and `(2,1,0)` with `n3=0..1`. The topology stage also gives
 `(n3+d42+s-1)/2<=K_Q`, where s counts ordinary
 fours with separated Q sectors and K_Q counts Q face components joined
-through Q-Q edges.
+through Q-Q edges. The new triangle analogue gives
+`K_T>=(5-n3-d42+s)/2`; it uses independent T boundary cycles after
+splitting separated T fans and does not assume T connectedness.
 
 The [original proof](PROOF.md) uses spherical diagonal lengths, four-point
 Gram rank, the two-point intersection of contact planes with the sphere,
@@ -61,7 +66,7 @@ a proof assistant. The original proof and checker remain unchanged, with
 their earlier 35-profile/18-type claims; the two-five files retain 29/17.
 The one-five files retain 23/16, the boundary-patch files give 14/13,
 and the two-zero files give 10/11. The topology files give 7/11, and the
-corner-capacity files give 6/11, and the mixed-two files give 5/11.
+corner-capacity files give 6/11, the mixed-two files give 5/11, and the all-one-two files give 4/11.
 The latest exclusion is an elementary
 hand proof; it adds no solver or
 numerical angle certificates. The planar fan normalization and face
@@ -106,15 +111,20 @@ python3 -B tammes15_eight_quad_reduction/check_mixed_two.py | cmp - tammes15_eig
 python3 -B -O tammes15_eight_quad_reduction/check_mixed_two.py | cmp - tammes15_eight_quad_reduction/EXPECTED_mixed_two.json
 python3 -B tammes15_eight_quad_reduction/check_mixed_two.py --selftest
 python3 -B -O tammes15_eight_quad_reduction/check_mixed_two.py --selftest
+python3 -B tammes15_eight_quad_reduction/check_all_one_two.py | cmp - tammes15_eight_quad_reduction/EXPECTED_all_one_two.json
+python3 -B -O tammes15_eight_quad_reduction/check_all_one_two.py | cmp - tammes15_eight_quad_reduction/EXPECTED_all_one_two.json
+python3 -B tammes15_eight_quad_reduction/check_all_one_two.py --selftest
+python3 -B -O tammes15_eight_quad_reduction/check_all_one_two.py --selftest
 (cd tammes15_eight_quad_reduction && sha256sum -c SHA256SUMS)
 ```
 
 The current deterministic JSON gives all nine initial deficit distributions,
-the two survivors and each of the 5 degree profiles with its permissible
+the two survivors and each of the 4 degree profiles with its permissible
 colored auxiliary codes. The topology stage removes three profiles;
 the corner-capacity stage removes the last profile with three degree
 threes, `(d41,d42,d51,n3)=(4,0,0,3)`. The mixed-two stage then removes
-`(2,1,0,2)`, for every separated-Q count. The
+`(2,1,0,2)`, for every separated-Q count. The all-one-two stage removes
+`(4,0,0,2)` for both remaining double-five counts. The
 two-zero-triangle distribution is excluded for every degree-three count.
 The preceding two-zero checker classifies 74 small labeled zero-triangle graphs and
 all 16 Q corner masks, solves the face-count equations independently in
@@ -136,11 +146,17 @@ five. The mixed-two checker checks the exact seventh-angle numerator
 with a separate sparse complex-power derivation, 81 opposite-five
 assignments, 48,048 original-labeled zero-boundary vectors, 48 cyclic
 corner frames and all 16 K2,2 five-contact masks. Twenty controls pass
-with and without Python optimization. The incidence-to-geometry
+with and without Python optimization. The all-one-two checker audits2304marked-x
+assignments,3240gamma-provider assignments,384sector masks,432late R
+allocations and all64four-F contact masks. Sixteen local T-star masks
+reconstruct the triangle component inequality; seven fixtures test
+triangle disks, an annulus, pinched fans and the full-sphere boundary
+dependence. Twenty-five new controls pass normally and with Python-O;
+the full nine-stage suite has148controls. The incidence-to-geometry
 eliminations are written hand proofs, not spherical embedding searches.
 Earlier JSON
 outputs retain the 35-profile, 29-profile, 23-profile, 14-profile,
-10-profile, 7-profile and 6-profile stages.
+10-profile, 7-profile, 6-profile and 5-profile stages.
 Codes enumerate unordered pairs in lexicographic
 order and minimize over permutations preserving vertex colors. A second
 enumeration by partitions into paths and a possible four-cycle compares
@@ -150,7 +166,7 @@ distribution. Cover enumeration takes well under a second; polynomial
 certificate verification also takes only seconds, using one thread.
 These computations are not searches over spherical embeddings.
 
-Primary context and dependencies appear in the eight proof files. The current
+Primary context and dependencies appear in the nine proof files. The current
 Cohn table still lists the fifteen-point cosine approximately
 `0.592605902926` without an optimality
 asterisk, and its coordinate bytes were refreshed before this work. The
@@ -170,11 +186,17 @@ Its [exceptional octagon bridge saturation](../tammes15_octagon_exception_exclus
 now excludes the lone thirteen-point exceptional core by exact extension
 polytope bounds, removing an earlier old-neighbor condition for strict
 improvements. Original-label disjointness remains explicit. This is also
-cited context, not a premise of the mixed-two proof.
+cited context, not a premise of either two-three proof.
 The concurrent [prescribed-triangle overlap reduction](../tammes15_bridge_overlap_reduction/PROOF.md)
 allows shared non-ear vertices: with internally injective A/B patches and
 both B ears external to A, a strict improvement must share a prescribed
 triangle. Six ten-point placements remain. Those local hypotheses and
 forced motif occurrence are still to be established for a retained
-profile here; this result is cited context.
-No historical-priority claim is made.
+profile here; this result is cited context. It was actually committed
+at height7488 before the mixed-two claim at7492. The preceding
+graph-visibility statement was a filtering error; ALL_ONE_TWO.md gives
+the exact reference and metadata correction without changing the prior
+mathematical result. The [independent exceptional-core review](../tammes15_octagon_saturation_review1/PROOF.md)
+confirms and strengthens the disjoint thirteen-point saturation; its
+verdict does not apply to these eight-Q profile exclusions or the
+overlap lemma. No historical-priority claim is made.

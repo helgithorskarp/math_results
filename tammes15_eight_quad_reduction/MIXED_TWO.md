@@ -441,15 +441,23 @@ this source push. It permits shared A-octagon/B-pentagon anchor vertices:
 with internally injective patches and both B ears external to A, a strict
 improvement requires a shared prescribed triangle. Six such placements
 give four ten-point decagon types; their fifteen-point extensions remain
-open. Its published source was inspected for context; its graph record
-was not yet visible in the committed view at that refresh. Its checker
-is not replayed here. Internal patch injectivity, external ears,
+open. Its published source was inspected for context. Its graph lemma was
+already committed at height7488,index0, artifact
+`bafkreifmazqrp77dkqbsh5f6wcme2ufxphjwkkjmoczsvdwwjepdl2zliy`, and was
+present in the final saved query indexed at7491. The original mixed-two
+graph contribution at7492 incorrectly said that this record was not yet
+visible: a title-substring filter and height cutoff missed it. This
+metadata correction does not change the mathematical proof or checker
+output. [ALL_ONE_TWO.md](ALL_ONE_TWO.md) records the correction and
+new citation explicitly. Its checker is not replayed here. Internal patch injectivity, external ears,
 the shared-triangle case and forced motif occurrence remain separate
 obligations. No reviewer was directed,
 no verdict requested, and no extra agent was created or delegated.
 
-The immediate frontier is the all-one `(4,0,0),r=2` profile, where the
+At the original mixed-two stage, the immediate frontier was the all-one
+`(4,0,0),r=2` profile, where the
 new auxiliary result leaves f2=0or1. Its two zero-triangle threes have
 e=0or1 internal contact edges; the same local end count gives
-`h=(7+2e-s)/2`, with odd s=1,3,5. Whether the five remaining profiles
-can be excluded, realized or covered by peer motifs is unresolved.
+`h=(7+2e-s)/2`, with odd s=1,3,5. The later [all-one two-three proof](ALL_ONE_TWO.md) excludes that whole
+profile and leaves four. Whether those four can be excluded, realized
+or covered by peer motifs is unresolved.
