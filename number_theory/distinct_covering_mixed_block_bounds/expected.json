@@ -1,0 +1,1147 @@
+{
+  "author": "six-covering-2",
+  "role": "researcher",
+  "all_passed": true,
+  "scope": "Mixed-weight and four-resource budget controls; no new numerical L_min(8) bound",
+  "identity_fixtures": [
+    {
+      "kind": "pq",
+      "p": 2,
+      "q": 3,
+      "fixture": "zero",
+      "budget": 0,
+      "all_one_group": 0,
+      "two_pairs": 0,
+      "phase_table_rows": 36,
+      "phase_table_sha256": "5df51d882e5d0e1330eba9c078ea2467f24bdea36a278930f38b3b4bf2672c84",
+      "phase_partition_rows": 540
+    },
+    {
+      "kind": "pq",
+      "p": 2,
+      "q": 3,
+      "fixture": "constant",
+      "budget": 11,
+      "all_one_group": 11,
+      "two_pairs": 8,
+      "phase_table_rows": 36,
+      "phase_table_sha256": "608d125ba5facb947a7b74319d7e188d71d142626f3a3ceb5ff9d0e5a32acdff",
+      "phase_partition_rows": 540
+    },
+    {
+      "kind": "pq",
+      "p": 2,
+      "q": 3,
+      "fixture": "single_point",
+      "budget": 4,
+      "all_one_group": 4,
+      "two_pairs": 4,
+      "phase_table_rows": 36,
+      "phase_table_sha256": "5fa1aa95719ff785c4ed6a4eb005ea220bed88dc6551ecba8762c898b1bc49b5",
+      "phase_partition_rows": 540
+    },
+    {
+      "kind": "pq",
+      "p": 2,
+      "q": 3,
+      "fixture": "three_labels",
+      "budget": 61,
+      "all_one_group": 61,
+      "two_pairs": 44,
+      "phase_table_rows": 36,
+      "phase_table_sha256": "5a07b825aeb6f7369d5736f09a35e159784c9e2d76a2687a871182436575d1f2",
+      "phase_partition_rows": 540
+    },
+    {
+      "kind": "pq",
+      "p": 2,
+      "q": 3,
+      "fixture": "two_pairs",
+      "budget": 10,
+      "all_one_group": 8,
+      "two_pairs": 10,
+      "phase_table_rows": 36,
+      "phase_table_sha256": "264570bf676dd5b2f76cdfc4f4a3bb45ae1b447f46cfff6848657a5122d62a4e",
+      "phase_partition_rows": 540
+    },
+    {
+      "kind": "pq",
+      "p": 3,
+      "q": 5,
+      "fixture": "zero",
+      "budget": 0,
+      "all_one_group": 0,
+      "two_pairs": 0,
+      "phase_table_rows": 225,
+      "phase_table_sha256": "edbb3b44038ae54a88b26c6cad29ac3e010e66523d4b0182e62621b4f3781cef",
+      "phase_partition_rows": 3375
+    },
+    {
+      "kind": "pq",
+      "p": 3,
+      "q": 5,
+      "fixture": "constant",
+      "budget": 17,
+      "all_one_group": 17,
+      "two_pairs": 12,
+      "phase_table_rows": 225,
+      "phase_table_sha256": "c11048f30adf22ec383cd03ae4c1c26f9ff5b60020aa1648c87db3518f0be55c",
+      "phase_partition_rows": 3375
+    },
+    {
+      "kind": "pq",
+      "p": 3,
+      "q": 5,
+      "fixture": "single_point",
+      "budget": 4,
+      "all_one_group": 4,
+      "two_pairs": 4,
+      "phase_table_rows": 225,
+      "phase_table_sha256": "c1c91303d8f2e14511ce31671138f017871586493220f9413bcf21cb095c52b8",
+      "phase_partition_rows": 3375
+    },
+    {
+      "kind": "pq",
+      "p": 3,
+      "q": 5,
+      "fixture": "three_labels",
+      "budget": 97,
+      "all_one_group": 97,
+      "two_pairs": 68,
+      "phase_table_rows": 225,
+      "phase_table_sha256": "2b21cfee4c954ea3703d8d63f49f123527b20b4bd4edaed36c75fe6467cd9f0e",
+      "phase_partition_rows": 3375
+    },
+    {
+      "kind": "pq",
+      "p": 3,
+      "q": 5,
+      "fixture": "two_pairs",
+      "budget": 16,
+      "all_one_group": 12,
+      "two_pairs": 16,
+      "phase_table_rows": 225,
+      "phase_table_sha256": "6d23c4f2b3c2137141d33560828b8a6a165d4658cee0b3590ec00ba272ff8983",
+      "phase_partition_rows": 3375
+    },
+    {
+      "kind": "pq",
+      "p": 5,
+      "q": 7,
+      "fixture": "zero",
+      "budget": 0,
+      "all_one_group": 0,
+      "two_pairs": 0,
+      "phase_table_rows": 1225,
+      "phase_table_sha256": "f4248849ccfb0eed0ed914353a09288d2efefbe62adaa27082deb9c22aa0be68",
+      "phase_partition_rows": 18375
+    },
+    {
+      "kind": "pq",
+      "p": 5,
+      "q": 7,
+      "fixture": "constant",
+      "budget": 25,
+      "all_one_group": 25,
+      "two_pairs": 16,
+      "phase_table_rows": 1225,
+      "phase_table_sha256": "fc1a1d0245293af7bc79795ac4214c05e540231ca9412dc0b06ccf24af15cabd",
+      "phase_partition_rows": 18375
+    },
+    {
+      "kind": "pq",
+      "p": 5,
+      "q": 7,
+      "fixture": "single_point",
+      "budget": 4,
+      "all_one_group": 4,
+      "two_pairs": 4,
+      "phase_table_rows": 1225,
+      "phase_table_sha256": "57526d55d4c4dfc568269b51a14cbfa6a7c64dd67e65cb468eb81c5dbaa8cf76",
+      "phase_partition_rows": 18375
+    },
+    {
+      "kind": "pq",
+      "p": 5,
+      "q": 7,
+      "fixture": "three_labels",
+      "budget": 125,
+      "all_one_group": 125,
+      "two_pairs": 76,
+      "phase_table_rows": 1225,
+      "phase_table_sha256": "5b75ca0d6cd53f26f2770846efc8eeb70e10d20dbdf9ac46e61262779627fa7c",
+      "phase_partition_rows": 18375
+    },
+    {
+      "kind": "pq",
+      "p": 5,
+      "q": 7,
+      "fixture": "two_pairs",
+      "budget": 22,
+      "all_one_group": 16,
+      "two_pairs": 22,
+      "phase_table_rows": 1225,
+      "phase_table_sha256": "6a8d2df5b30c2b40d278218ad9411c6e7e3f722b2b6925212bb21850ff48383b",
+      "phase_partition_rows": 18375
+    },
+    {
+      "kind": "p3",
+      "p": 2,
+      "q": null,
+      "fixture": "zero",
+      "budget": 0,
+      "all_one_group": 0,
+      "two_pairs": 0,
+      "phase_table_rows": 64,
+      "phase_table_sha256": "6ebd687e182366fa9bb251c729d13be191e3c4a13511f4eea020218fc67716ad",
+      "phase_partition_rows": 960
+    },
+    {
+      "kind": "p3",
+      "p": 2,
+      "q": null,
+      "fixture": "constant",
+      "budget": 14,
+      "all_one_group": 14,
+      "two_pairs": 10,
+      "phase_table_rows": 64,
+      "phase_table_sha256": "fd81a27286bb6c367fce4ca5ef04249dc9749e6600341c3e3c5305acce931112",
+      "phase_partition_rows": 960
+    },
+    {
+      "kind": "p3",
+      "p": 2,
+      "q": null,
+      "fixture": "single_point",
+      "budget": 4,
+      "all_one_group": 4,
+      "two_pairs": 4,
+      "phase_table_rows": 64,
+      "phase_table_sha256": "0440652a9521e10cd814a123876dc2e8aced414282a4d2c67f9bbcb12df9bd87",
+      "phase_partition_rows": 960
+    },
+    {
+      "kind": "p3",
+      "p": 2,
+      "q": null,
+      "fixture": "three_labels",
+      "budget": 62,
+      "all_one_group": 62,
+      "two_pairs": 46,
+      "phase_table_rows": 64,
+      "phase_table_sha256": "fc5444bbbee52fb6fade3ad0dddd4fa870b6cb850d53076e969b30aa6e0a4967",
+      "phase_partition_rows": 960
+    },
+    {
+      "kind": "p3",
+      "p": 2,
+      "q": null,
+      "fixture": "two_pairs",
+      "budget": 12,
+      "all_one_group": 11,
+      "two_pairs": 12,
+      "phase_table_rows": 64,
+      "phase_table_sha256": "3ae4164c0739b970a448b1261afd7709ac02d2123db4dc7e2cd871e8588773d7",
+      "phase_partition_rows": 960
+    },
+    {
+      "kind": "p3",
+      "p": 3,
+      "q": null,
+      "fixture": "zero",
+      "budget": 0,
+      "all_one_group": 0,
+      "two_pairs": 0,
+      "phase_table_rows": 729,
+      "phase_table_sha256": "878eb595e4e142f66874024d2b577c94185e5af37e7a08c2c361d6b4516d2931",
+      "phase_partition_rows": 10935
+    },
+    {
+      "kind": "p3",
+      "p": 3,
+      "q": null,
+      "fixture": "constant",
+      "budget": 26,
+      "all_one_group": 26,
+      "two_pairs": 20,
+      "phase_table_rows": 729,
+      "phase_table_sha256": "fc5fee2be3a484fbd0d019ee2348392aad53d27f1fdf322884d3166bc53b4e76",
+      "phase_partition_rows": 10935
+    },
+    {
+      "kind": "p3",
+      "p": 3,
+      "q": null,
+      "fixture": "single_point",
+      "budget": 4,
+      "all_one_group": 4,
+      "two_pairs": 4,
+      "phase_table_rows": 729,
+      "phase_table_sha256": "f088cf8028f33df8a1e4848df3b226602a845164841078f437613c26aad6289e",
+      "phase_partition_rows": 10935
+    },
+    {
+      "kind": "p3",
+      "p": 3,
+      "q": null,
+      "fixture": "three_labels",
+      "budget": 126,
+      "all_one_group": 126,
+      "two_pairs": 92,
+      "phase_table_rows": 729,
+      "phase_table_sha256": "b6c9eec093759cbe53aaebeb6bb2243c4713803ef700b50606b7a19ecb809997",
+      "phase_partition_rows": 10935
+    },
+    {
+      "kind": "p3",
+      "p": 3,
+      "q": null,
+      "fixture": "two_pairs",
+      "budget": 28,
+      "all_one_group": 22,
+      "two_pairs": 28,
+      "phase_table_rows": 729,
+      "phase_table_sha256": "ab6271d4d567ce99228c2941e43755553e22470023174f63eba9a48baaf949ae",
+      "phase_partition_rows": 10935
+    }
+  ],
+  "phase_partition_rows_checked": 170925,
+  "all_one_phase_table_rows_compared": 11395,
+  "proper_local_period_footprints_checked": 1907,
+  "malformed_inputs_rejected": 20,
+  "genuine_cover_weight_cases": [
+    {
+      "shift": 0,
+      "case": 0,
+      "N": 60,
+      "B": 4,
+      "b": 2,
+      "C": 15,
+      "Q": 30,
+      "actual_unused_resources": 9,
+      "demand": 168,
+      "component_demands": [
+        60,
+        108
+      ],
+      "ordinary_capacity": 422,
+      "mixed_capacity": 416,
+      "capacity_saving": 6,
+      "gap": -248,
+      "partition_budget": 106,
+      "top_u_capacities": [
+        [
+          4,
+          30
+        ],
+        [
+          12,
+          18
+        ],
+        [
+          20,
+          9
+        ],
+        [
+          60,
+          5
+        ]
+      ],
+      "actual_capacity_sha256": "78a6174ed8b4c55086706ca899541e65e9f836254d37ac2a022e45b5cc16e240"
+    },
+    {
+      "shift": 0,
+      "case": 1,
+      "N": 60,
+      "B": 4,
+      "b": 2,
+      "C": 15,
+      "Q": 30,
+      "actual_unused_resources": 9,
+      "demand": 124,
+      "component_demands": [
+        62,
+        62
+      ],
+      "ordinary_capacity": 305,
+      "mixed_capacity": 303,
+      "capacity_saving": 2,
+      "gap": -179,
+      "partition_budget": 64,
+      "top_u_capacities": [
+        [
+          4,
+          31
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          20,
+          8
+        ],
+        [
+          60,
+          5
+        ]
+      ],
+      "actual_capacity_sha256": "33b1a427957967f4f7f82a451a6c0780502435dbae545a051012695e2e2c0afd"
+    },
+    {
+      "shift": 0,
+      "case": 2,
+      "N": 60,
+      "B": 4,
+      "b": 2,
+      "C": 15,
+      "Q": 30,
+      "actual_unused_resources": 9,
+      "demand": 96,
+      "component_demands": [
+        36,
+        60
+      ],
+      "ordinary_capacity": 271,
+      "mixed_capacity": 269,
+      "capacity_saving": 2,
+      "gap": -173,
+      "partition_budget": 64,
+      "top_u_capacities": [
+        [
+          4,
+          18
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          20,
+          6
+        ],
+        [
+          60,
+          6
+        ]
+      ],
+      "actual_capacity_sha256": "06ff7f9a08f4b13fcaf67250a78c9cb801ab1e3aab44cf733d359cdfb31a53ad"
+    },
+    {
+      "shift": 1,
+      "case": 0,
+      "N": 60,
+      "B": 4,
+      "b": 2,
+      "C": 15,
+      "Q": 30,
+      "actual_unused_resources": 9,
+      "demand": 179,
+      "component_demands": [
+        79,
+        100
+      ],
+      "ordinary_capacity": 439,
+      "mixed_capacity": 436,
+      "capacity_saving": 3,
+      "gap": -257,
+      "partition_budget": 98,
+      "top_u_capacities": [
+        [
+          4,
+          40
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          20,
+          12
+        ],
+        [
+          60,
+          6
+        ]
+      ],
+      "actual_capacity_sha256": "c9206b0ae43b3cc2d37b6cf9182eaa3f9848d0544e858999f83a7547fd8fc54e"
+    },
+    {
+      "shift": 1,
+      "case": 1,
+      "N": 60,
+      "B": 4,
+      "b": 2,
+      "C": 15,
+      "Q": 30,
+      "actual_unused_resources": 9,
+      "demand": 157,
+      "component_demands": [
+        81,
+        76
+      ],
+      "ordinary_capacity": 368,
+      "mixed_capacity": 360,
+      "capacity_saving": 8,
+      "gap": -203,
+      "partition_budget": 69,
+      "top_u_capacities": [
+        [
+          4,
+          41
+        ],
+        [
+          12,
+          22
+        ],
+        [
+          20,
+          10
+        ],
+        [
+          60,
+          6
+        ]
+      ],
+      "actual_capacity_sha256": "c32751462cda1d057299e0e43a19f5d93b9685d12483a9874733886b2125ae5e"
+    },
+    {
+      "shift": 1,
+      "case": 2,
+      "N": 60,
+      "B": 4,
+      "b": 2,
+      "C": 15,
+      "Q": 30,
+      "actual_unused_resources": 9,
+      "demand": 93,
+      "component_demands": [
+        41,
+        52
+      ],
+      "ordinary_capacity": 225,
+      "mixed_capacity": 222,
+      "capacity_saving": 3,
+      "gap": -129,
+      "partition_budget": 49,
+      "top_u_capacities": [
+        [
+          4,
+          21
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          20,
+          6
+        ],
+        [
+          60,
+          4
+        ]
+      ],
+      "actual_capacity_sha256": "8d05b4e83ec0679a931bc54690c9646ce4dd329bbb4c3170d00d6b0cdacb959f"
+    },
+    {
+      "shift": 2,
+      "case": 0,
+      "N": 60,
+      "B": 4,
+      "b": 2,
+      "C": 15,
+      "Q": 30,
+      "actual_unused_resources": 9,
+      "demand": 187,
+      "component_demands": [
+        67,
+        120
+      ],
+      "ordinary_capacity": 455,
+      "mixed_capacity": 443,
+      "capacity_saving": 12,
+      "gap": -256,
+      "partition_budget": 106,
+      "top_u_capacities": [
+        [
+          4,
+          34
+        ],
+        [
+          12,
+          19
+        ],
+        [
+          20,
+          12
+        ],
+        [
+          60,
+          6
+        ]
+      ],
+      "actual_capacity_sha256": "8993e87efb65324e1b4b21385e72efd9cb24e276622910c61055474383c25cf9"
+    },
+    {
+      "shift": 2,
+      "case": 1,
+      "N": 60,
+      "B": 4,
+      "b": 2,
+      "C": 15,
+      "Q": 30,
+      "actual_unused_resources": 9,
+      "demand": 136,
+      "component_demands": [
+        62,
+        74
+      ],
+      "ordinary_capacity": 357,
+      "mixed_capacity": 357,
+      "capacity_saving": 0,
+      "gap": -221,
+      "partition_budget": 78,
+      "top_u_capacities": [
+        [
+          4,
+          34
+        ],
+        [
+          12,
+          18
+        ],
+        [
+          20,
+          10
+        ],
+        [
+          60,
+          5
+        ]
+      ],
+      "actual_capacity_sha256": "4dfb362bd853c74f2aced97b2430e4dd497b2612b4281c44ffe97c95cefed092"
+    },
+    {
+      "shift": 2,
+      "case": 2,
+      "N": 60,
+      "B": 4,
+      "b": 2,
+      "C": 15,
+      "Q": 30,
+      "actual_unused_resources": 9,
+      "demand": 129,
+      "component_demands": [
+        57,
+        72
+      ],
+      "ordinary_capacity": 340,
+      "mixed_capacity": 338,
+      "capacity_saving": 2,
+      "gap": -209,
+      "partition_budget": 80,
+      "top_u_capacities": [
+        [
+          4,
+          29
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          20,
+          8
+        ],
+        [
+          60,
+          5
+        ]
+      ],
+      "actual_capacity_sha256": "a6edf90eeabfe9ba1c0db5610a9412e3cb9af788bdbc90a8a5fc3c1119470f80"
+    },
+    {
+      "shift": 0,
+      "case": 0,
+      "N": 216,
+      "B": 8,
+      "b": 4,
+      "C": 27,
+      "Q": 108,
+      "actual_unused_resources": 13,
+      "demand": 577,
+      "component_demands": [
+        219,
+        358
+      ],
+      "ordinary_capacity": 1397,
+      "mixed_capacity": 1382,
+      "capacity_saving": 15,
+      "gap": -805,
+      "partition_budget": 146,
+      "top_u_capacities": [
+        [
+          8,
+          59
+        ],
+        [
+          24,
+          30
+        ],
+        [
+          72,
+          13
+        ],
+        [
+          216,
+          5
+        ]
+      ],
+      "actual_capacity_sha256": "5df0cbffa539183906d1efa70a934c4b920002b6ea8e1b6da07089887298f701"
+    },
+    {
+      "shift": 0,
+      "case": 1,
+      "N": 216,
+      "B": 8,
+      "b": 4,
+      "C": 27,
+      "Q": 108,
+      "actual_unused_resources": 13,
+      "demand": 491,
+      "component_demands": [
+        215,
+        276
+      ],
+      "ordinary_capacity": 1227,
+      "mixed_capacity": 1222,
+      "capacity_saving": 5,
+      "gap": -731,
+      "partition_budget": 132,
+      "top_u_capacities": [
+        [
+          8,
+          57
+        ],
+        [
+          24,
+          31
+        ],
+        [
+          72,
+          11
+        ],
+        [
+          216,
+          5
+        ]
+      ],
+      "actual_capacity_sha256": "fe93f02950d245021809f6dd5f9cef002d1d9dc649e054bc91fe7fa677df471e"
+    },
+    {
+      "shift": 0,
+      "case": 2,
+      "N": 216,
+      "B": 8,
+      "b": 4,
+      "C": 27,
+      "Q": 108,
+      "actual_unused_resources": 13,
+      "demand": 401,
+      "component_demands": [
+        141,
+        260
+      ],
+      "ordinary_capacity": 1018,
+      "mixed_capacity": 1012,
+      "capacity_saving": 6,
+      "gap": -611,
+      "partition_budget": 118,
+      "top_u_capacities": [
+        [
+          8,
+          38
+        ],
+        [
+          24,
+          21
+        ],
+        [
+          72,
+          12
+        ],
+        [
+          216,
+          6
+        ]
+      ],
+      "actual_capacity_sha256": "8abd945304fb8475622cc99156c302c50da6bc5cfccca95748cae138ec48579d"
+    },
+    {
+      "shift": 1,
+      "case": 0,
+      "N": 216,
+      "B": 8,
+      "b": 4,
+      "C": 27,
+      "Q": 108,
+      "actual_unused_resources": 13,
+      "demand": 655,
+      "component_demands": [
+        285,
+        370
+      ],
+      "ordinary_capacity": 1612,
+      "mixed_capacity": 1593,
+      "capacity_saving": 19,
+      "gap": -938,
+      "partition_budget": 156,
+      "top_u_capacities": [
+        [
+          8,
+          77
+        ],
+        [
+          24,
+          39
+        ],
+        [
+          72,
+          16
+        ],
+        [
+          216,
+          6
+        ]
+      ],
+      "actual_capacity_sha256": "1024e28e51c4f6cf2e99485819471a8833e8e771ed77662219faa685fff0e08e"
+    },
+    {
+      "shift": 1,
+      "case": 1,
+      "N": 216,
+      "B": 8,
+      "b": 4,
+      "C": 27,
+      "Q": 108,
+      "actual_unused_resources": 13,
+      "demand": 576,
+      "component_demands": [
+        288,
+        288
+      ],
+      "ordinary_capacity": 1448,
+      "mixed_capacity": 1435,
+      "capacity_saving": 13,
+      "gap": -859,
+      "partition_budget": 132,
+      "top_u_capacities": [
+        [
+          8,
+          74
+        ],
+        [
+          24,
+          40
+        ],
+        [
+          72,
+          14
+        ],
+        [
+          216,
+          6
+        ]
+      ],
+      "actual_capacity_sha256": "c72a92733b364f2b80fe2d96e3be6d45507dda85ca9040e4672bf7e62f65b07c"
+    },
+    {
+      "shift": 1,
+      "case": 2,
+      "N": 216,
+      "B": 8,
+      "b": 4,
+      "C": 27,
+      "Q": 108,
+      "actual_unused_resources": 13,
+      "demand": 416,
+      "component_demands": [
+        144,
+        272
+      ],
+      "ordinary_capacity": 1067,
+      "mixed_capacity": 1053,
+      "capacity_saving": 14,
+      "gap": -637,
+      "partition_budget": 118,
+      "top_u_capacities": [
+        [
+          8,
+          38
+        ],
+        [
+          24,
+          22
+        ],
+        [
+          72,
+          8
+        ],
+        [
+          216,
+          4
+        ]
+      ],
+      "actual_capacity_sha256": "a9155d15d57d95777ed59b174cd6a73a00a4a7811a758e488e0f5f216d860ca7"
+    },
+    {
+      "shift": 2,
+      "case": 0,
+      "N": 216,
+      "B": 8,
+      "b": 4,
+      "C": 27,
+      "Q": 108,
+      "actual_unused_resources": 13,
+      "demand": 582,
+      "component_demands": [
+        222,
+        360
+      ],
+      "ordinary_capacity": 1478,
+      "mixed_capacity": 1456,
+      "capacity_saving": 22,
+      "gap": -874,
+      "partition_budget": 160,
+      "top_u_capacities": [
+        [
+          8,
+          58
+        ],
+        [
+          24,
+          29
+        ],
+        [
+          72,
+          12
+        ],
+        [
+          216,
+          6
+        ]
+      ],
+      "actual_capacity_sha256": "1b32d6aaa93ddc95a3a875f362fdfa14c1728016aef2f6afa2c957b2be72a56f"
+    },
+    {
+      "shift": 2,
+      "case": 1,
+      "N": 216,
+      "B": 8,
+      "b": 4,
+      "C": 27,
+      "Q": 108,
+      "actual_unused_resources": 13,
+      "demand": 496,
+      "component_demands": [
+        218,
+        278
+      ],
+      "ordinary_capacity": 1275,
+      "mixed_capacity": 1263,
+      "capacity_saving": 12,
+      "gap": -767,
+      "partition_budget": 130,
+      "top_u_capacities": [
+        [
+          8,
+          60
+        ],
+        [
+          24,
+          30
+        ],
+        [
+          72,
+          13
+        ],
+        [
+          216,
+          5
+        ]
+      ],
+      "actual_capacity_sha256": "39e2fb42af162d3a639ae4d24ec9b56e84f388177be0bcf2be35c1900ec1fd6d"
+    },
+    {
+      "shift": 2,
+      "case": 2,
+      "N": 216,
+      "B": 8,
+      "b": 4,
+      "C": 27,
+      "Q": 108,
+      "actual_unused_resources": 13,
+      "demand": 498,
+      "component_demands": [
+        214,
+        284
+      ],
+      "ordinary_capacity": 1261,
+      "mixed_capacity": 1242,
+      "capacity_saving": 19,
+      "gap": -744,
+      "partition_budget": 124,
+      "top_u_capacities": [
+        [
+          8,
+          56
+        ],
+        [
+          24,
+          28
+        ],
+        [
+          72,
+          11
+        ],
+        [
+          216,
+          5
+        ]
+      ],
+      "actual_capacity_sha256": "27c75c05b5b92f8de70ffa5662211c8714f1b64845fe359f2a5be601029c5b42"
+    }
+  ],
+  "nonperiodic_strengthening": [
+    {
+      "N": 10080,
+      "B": 288,
+      "b": 48,
+      "C": 35,
+      "Q": 1680,
+      "actual_unused_resources": 64,
+      "demand": 8821,
+      "component_demands": [
+        1,
+        8820
+      ],
+      "ordinary_capacity": 11596,
+      "mixed_capacity": 11573,
+      "capacity_saving": 23,
+      "gap": -2752,
+      "partition_budget": 25,
+      "top_u_capacities": [
+        [
+          288,
+          1
+        ],
+        [
+          1440,
+          1
+        ],
+        [
+          2016,
+          1
+        ],
+        [
+          10080,
+          1
+        ]
+      ],
+      "actual_capacity_sha256": "2fd9879cf0a49d28686790f4d1eb3ca8210803ecee0497c205a1dbe06086beb4"
+    },
+    {
+      "N": 15120,
+      "B": 432,
+      "b": 72,
+      "C": 35,
+      "Q": 2520,
+      "actual_unused_resources": 72,
+      "demand": 13231,
+      "component_demands": [
+        1,
+        13230
+      ],
+      "ordinary_capacity": 17826,
+      "mixed_capacity": 17803,
+      "capacity_saving": 23,
+      "gap": -4572,
+      "partition_budget": 25,
+      "top_u_capacities": [
+        [
+          432,
+          1
+        ],
+        [
+          2160,
+          1
+        ],
+        [
+          3024,
+          1
+        ],
+        [
+          15120,
+          1
+        ]
+      ],
+      "actual_capacity_sha256": "7f1df0b66d23276de2e58a59fe4c6050e9f4ac719fd109e0e2b099e3233c911d"
+    }
+  ],
+  "published_20160_positive_control": {
+    "external_sha256": "f3b7ab8112f2fdba3ab32ea992f2380c43c404e8b54c8abdd71c839a9f5424e3",
+    "classes": 77,
+    "minimum": 8,
+    "actual_lcm": 20160,
+    "prefix": [
+      [
+        8,
+        1
+      ],
+      [
+        9,
+        8
+      ],
+      [
+        10,
+        2
+      ]
+    ],
+    "N": 20160,
+    "B": 576,
+    "b": 96,
+    "C": 35,
+    "Q": 3360,
+    "actual_unused_resources": 74,
+    "demand": 20359,
+    "component_demands": [
+      55,
+      20304
+    ],
+    "ordinary_capacity": 35213,
+    "mixed_capacity": 35180,
+    "capacity_saving": 33,
+    "gap": -14821,
+    "partition_budget": 56,
+    "top_u_capacities": [
+      [
+        576,
+        10
+      ],
+      [
+        2880,
+        10
+      ],
+      [
+        4032,
+        10
+      ],
+      [
+        20160,
+        10
+      ]
+    ],
+    "actual_capacity_sha256": "eb19ef5c9ab3df27ce4bd618a377116ffe187817271dd1519a7aff7570b20847"
+  }
+}
