@@ -1,4 +1,73 @@
-# Rhombicosidodecahedron: global receiving-height gap 1/450
+# Rhombicosidodecahedron: wider winning receiver rigidity
+
+**six-rupert-3 — researcher — updated 2026-09-30.**
+
+[WIDER_WINNING_BAND_PROOF.md](WIDER_WINNING_BAND_PROOF.md) proves that for
+EVERY winning signed-region receiver with **f(n)^2>=beta-1/150**, closed
+containment with arbitrary proper source rotation, full roll, translation
+and scale>=1 occurs exactly at **lambda=1, t=0, Q in G union J_n G**.
+The two disjoint LEFT cosets contain exactly 120 proper equality orientations.
+No strict passage uses this whole winning band, including its cutoff.
+**Global RID Rupertness remains OPEN.** This new result is unformalized and
+independently unreviewed; historical priority is unasserted.
+
+The new exact certificate covers the larger q=449/1000 torque triangle:
+all 1800 original support comparisons and all 840 relative-face strata,
+726 opposite exclusions and 114 distance cases, none unresolved. Sharper
+source/receiver chords 1/23 give full spatial angle<99/1000 and positive
+rotation margin 943/50000. Original circles inject eight source points
+into at most four actual receiving originals; the strengthened complete
+rank-cone and wider-transport margin is 2436127/3645000000.
+[WIDE_THRESHOLD_SOURCE_PROOF.md](WIDE_THRESHOLD_SOURCE_PROOF.md) gives
+that source-conditional branch separately, with its inexpensive checker.
+
+The [independent global review](https://github.com/helgithorskarp/math_results/blob/main/rhombicosidodecahedron_global_slack_review2/REVIEW.md)
+by six-reviewer-2, independent mathematical reviewer, confirms the preceding
+1/1200 and 1/450 global gaps and proves **1/445**, source
+e9b77dc0a403bd7093e03bb271db39a7f33e6401, graph 7792. It independently audits
+all 720 rank permutations and the older expanded torque triangle. It does
+not review this new 1/150 winning-band theorem. The resulting necessary
+condition is f^2<beta-1/150 for WINNING receivers, and f^2<beta-1/445 for
+NONWINNING receivers. A GLOBAL 1/150 gap is not asserted.
+
+Python 3.11+ standard library, complete repository checkout, threads one:
+
+~~~sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+ python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/wider_winning_band_certificate.py --self-test
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+ python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/wide_threshold_source_certificate.py --self-test
+~~~
+
+Wide command: every byte matches
+[wider_winning_band_expected.json](wider_winning_band_expected.json),
+SHA256 **2c586997ef577d18893ebb51dd23a6fc70954dae4c329451380931d93c49a4ec**. It replays every original injection-parent byte
+and all 15 parent controls, computes the full NEW 840 strata, and rejects 26 new
+controls. Measured with Python 3.11.2: 18.024 s,
+21592 KiB child peak RSS. The entire cut, center, outer
+geometry and all 840 cases matches the saved exact prototype.
+
+Standalone threshold command: every byte matches
+[wide_threshold_source_expected.json](wide_threshold_source_expected.json),
+SHA256 **ac1b2831a3d57bc6356a9fa8ada2ae9b08ba9368393bf6d4628c563bafafdce3**; all 30 scalar guards and 26 malformed controls pass.
+Python 3.11.2: 2.321 s/20428 KiB.
+Both commands use exact Q(phi)/Fraction and no solver or floating predicate.
+The old full region, balanced and independent-review enumerations are
+inherited rather than claimed rerun. These native checks are author
+validation, not independent algorithms, review or formalization.
+
+Exact new-band witness: u=(0,349/1000,1),
+f(u/||u||)^2=(911005-421592phi)/1121801. Every actual original sign agrees
+with the winning center. Its height is below the independent 1/445 global
+cutoff and the preceding conditional winning q=909/2000 domain; it is a
+receiving-domain witness, not a strict passage.
+
+Next: exclude the nonwinning receiving band between beta-1/150 and
+beta-1/445. Coercivity localizes it to threshold-axis chord <1/162,
+whereas the largest cited all-source beta-axis cap is 1/480. Lower receiving
+heights remain unresolved even after a hypothetical extension.
+
+## Preceding global receiving-height gap 1/450
 
 **six-rupert-3 — researcher — updated 2026-09-30.**
 
@@ -38,7 +107,7 @@ Both modes match every expected byte and reject all32controls.
 The source expected.json in the neighboring review directory is required;
 --review-input can select those exact public bytes locally.
 Regression is not an independent review or a formal proof.
-The new theorem is unreviewed, historical priority unasserted.
+The 1/450 theorem is now independently confirmed by the global review above; historical priority is unasserted.
 
 ## The preceding global receiving gap 1/1200
 
