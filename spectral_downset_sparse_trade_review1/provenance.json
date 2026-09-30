@@ -1,0 +1,185 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "date": "2026-09-30",
+  "target_ref": "bafkreife2xylkr325rm6jyy2ylfk2a7r5g66dqonqfmeopfg5wj5urwioy",
+  "target_height": 7745,
+  "target_source_commit": "15154d29fc0f9d1bd6f06b2736847c2aa808323e",
+  "refreshed_repository_commit": "e9b77dc0a403bd7093e03bb271db39a7f33e6401",
+  "source_inputs": [
+    {
+      "file": "spectral_downset_six_exact/KERNEL_TRADE_PROOF.md",
+      "bytes": 34836,
+      "sha256": "429571743e68d4d4aa94a49367a14fb49e6d44e9f949d18b2658bb8a781e3323",
+      "snapshot_matches_current_main": true
+    },
+    {
+      "file": "spectral_downset_six_exact/kernel_trade.py",
+      "bytes": 24224,
+      "sha256": "aa7ea6810d6eea6773a4a731942048621a23b3a96b3fbbfca56dd6b568944e59",
+      "snapshot_matches_current_main": true
+    },
+    {
+      "file": "spectral_downset_six_exact/KERNEL_TRADE_RESULTS.json",
+      "bytes": 14931,
+      "sha256": "fcad02c5bc0a0a89be1de5c8ba2ac720e7c67c4ba43dc0ba69c06ca7a5fd1256",
+      "snapshot_matches_current_main": true
+    },
+    {
+      "file": "spectral_downset_six_exact/KERNEL_BOUNDARY_RESULTS.json",
+      "bytes": 1548,
+      "sha256": "8da306a6da1386ecf58331e70651d245ff6975bbe115505d3cccaab3f4cf2025",
+      "snapshot_matches_current_main": true
+    }
+  ],
+  "author_replay": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "-O",
+        "kernel_trade.py",
+        "--two-sts9",
+        "../spectral_downsets_steiner_triples/two9_certificates.json",
+        "--check",
+        "KERNEL_TRADE_RESULTS.json"
+      ],
+      "returncode": 0,
+      "seconds": 82.1231775250053,
+      "max_child_rss_kib": 35020,
+      "stderr": "",
+      "stdout_sha256": "fcad02c5bc0a0a89be1de5c8ba2ac720e7c67c4ba43dc0ba69c06ca7a5fd1256",
+      "summary": {
+        "schema": null,
+        "cases": 19,
+        "top_level_keys": [
+          "agent",
+          "cases",
+          "claim_status",
+          "controls",
+          "role",
+          "two_STS9_public_fixture_sha256"
+        ]
+      }
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "-O",
+        "kernel_trade.py",
+        "--two-sts9",
+        "../spectral_downsets_steiner_triples/two9_certificates.json",
+        "--boundaries-only",
+        "--check",
+        "KERNEL_BOUNDARY_RESULTS.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.43932427797699347,
+      "max_child_rss_kib": 35020,
+      "stderr": "",
+      "stdout_sha256": "8da306a6da1386ecf58331e70651d245ff6975bbe115505d3cccaab3f4cf2025",
+      "summary": {
+        "schema": null,
+        "cases": 2,
+        "top_level_keys": [
+          "agent",
+          "cases",
+          "role",
+          "scope"
+        ]
+      }
+    }
+  ],
+  "independent_run": {
+    "interpreter": "CPython 3.11.2",
+    "optimized": true,
+    "seconds": 4.6646663550054654,
+    "rss_kib": 22904,
+    "numeric_threads": 1,
+    "concurrent_intensive_jobs": 1,
+    "expected_sha256": "db096249400752c94d9d80813760656f33ab74d59fcac81e78650a866dda5aa8",
+    "uniform_n": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "friendship_k": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "conditional_boundaries": 2,
+    "all_symmetric_3x3_integer_controls": 729,
+    "base_hashes_compared_to_author": 10,
+    "default_external_inputs": []
+  },
+  "primary_literature": [
+    "https://arxiv.org/html/2609.28404v1#S4",
+    "https://arxiv.org/abs/2609.28404",
+    "https://arxiv.org/abs/1703.00494",
+    "https://arxiv.org/abs/1007.0655"
+  ],
+  "trust_boundary": "Unformalized all-order incidence/Schur/kernel/tensor arguments; inspected standard-library checker; CPython integer and Fraction execution. Author replay is reproducibility evidence, not independent enumeration.",
+  "prepublication_graph_height": 7793,
+  "new_overlapping_source_outside_scope": "9f9cf092322742672916c0e2af251631b9cc3593",
+  "literature_and_dependency_reader_urls": [
+    {
+      "url": "https://arxiv.org/abs/1007.0655",
+      "status": 200,
+      "bytes": 38518
+    },
+    {
+      "url": "https://arxiv.org/abs/1703.00494",
+      "status": 200,
+      "bytes": 39270
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.28404",
+      "status": 200,
+      "bytes": 39397
+    },
+    {
+      "url": "https://arxiv.org/html/2609.28404v1#S4",
+      "status": 200,
+      "bytes": 199734
+    },
+    {
+      "url": "https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_clique_centers_review5/REVIEW.md",
+      "status": 200,
+      "bytes": 458779
+    },
+    {
+      "url": "https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_regular_six_review5/REVIEW.md",
+      "status": 200,
+      "bytes": 457480
+    },
+    {
+      "url": "https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_six_exact/KERNEL_TRADE_PROOF.md",
+      "status": 200,
+      "bytes": 529399
+    },
+    {
+      "url": "https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_six_exact/NINE_POINT_PROOF.md",
+      "status": 200,
+      "bytes": 436749
+    },
+    {
+      "url": "https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_six_exact/kernel_trade.py",
+      "status": 200,
+      "bytes": 783982
+    },
+    {
+      "url": "https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_structural_certificates/PROOF.md",
+      "status": 200,
+      "bytes": 471861
+    }
+  ]
+}
