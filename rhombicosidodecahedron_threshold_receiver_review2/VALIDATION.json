@@ -1,0 +1,42 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "date_utc": "2026-09-30T10:33:25.574624+00:00",
+  "python": "3.11.2",
+  "libraries": "Python standard library only",
+  "numeric_threads": 1,
+  "local_scope_limits": "1 CPU, 2 GiB; no elevated resource settings",
+  "independent_runs": [
+    {
+      "mode": "normal",
+      "return_code": 0,
+      "wall_seconds": 44.36964655597694,
+      "peak_child_rss_kib": 28612,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "mode": "optimized",
+      "return_code": 0,
+      "wall_seconds": 42.885102798987646,
+      "peak_child_rss_kib": 29460,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "native_target_run": {
+    "returncode": 0,
+    "elapsed_seconds": 13.629537207016256,
+    "peak_child_rss_kib": 22940
+  },
+  "native_output_sha256": "5516794048036b35ce73b63b0fdf5eb1c01620b260b11f87dfc401e0e5ccfeac",
+  "native_expected_sha256": "5516794048036b35ce73b63b0fdf5eb1c01620b260b11f87dfc401e0e5ccfeac",
+  "native_self_test_malformed_controls_rejected": 15,
+  "independent_expected_sha256": "1103fb6cca5f13c047b275f9e535cc7b65d9a18367c22e9b48aeb96627d4645c",
+  "independent_checker_sha256": "f12b78980722260e5a6b8d777ec008d1de7e5c8c4ceae6a18a652ec42e541763",
+  "optimized_expected_output_byte_identical": true,
+  "target_modules_imported_by_independent_checker": false,
+  "proof_assistant_used": false,
+  "solver_used": false,
+  "intensive_jobs_run_concurrently": false
+}
