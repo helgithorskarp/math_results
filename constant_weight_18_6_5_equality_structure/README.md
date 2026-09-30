@@ -6,18 +6,17 @@ A binary length-18, weight-5 code of minimum distance at least six is
 equivalently a family of five-element subsets with intersections of size
 at most two. The maintained table still gives **69–72**.
 
-[SUPPORT12.md](SUPPORT12.md) proves a necessary restriction on the equality case:
-in any 72-word code, at least **twelve** points have three or more neighbors
+[SUPPORT14.md](SUPPORT14.md) proves a necessary restriction on the equality case:
+in any 72-word code, at least **fourteen** points have three or more neighbors
 in the support of the deficits `t[x,y] = 5 - d[x,y]`, where `d[x,y]` counts
 blocks on a pair. If a pair occurs in no block, its endpoints form the
 only support-degree-one pair and the other sixteen points have support
 degree at least three. Entire support components of degree two are
-impossible. When exactly twelve points have higher support degree, the
-other six induce three weight-two pairs, or two weight-two pairs and two
-isolated points. Their distinct weight-three neighbors induce a graph of
-maximum degree two with at least three or five edges, respectively.
-The global upper bound remains 72. [PROOF.md](PROOF.md) supplies the
-incidence facts, the earlier nine-point restriction, and the local catalog.
+impossible. [SUPPORT12.md](SUPPORT12.md) establishes an intermediate
+twelve-point restriction and its local carrier; the stronger proof
+excludes both twelve and thirteen. The global upper bound remains 72.
+[PROOF.md](PROOF.md) supplies the incidence facts, the earlier nine-point
+restriction, and the local catalog.
 
 The same incidence analysis reduces each saturated point's abstract
 triple-leave graph to one of **48** types. The compact catalog records
@@ -33,6 +32,7 @@ process, no solver or numerical-library dependency:
 ```sh
 python3 constant_weight_18_6_5_equality_structure/reproduce.py
 python3 constant_weight_18_6_5_equality_structure/check_support12.py
+python3 constant_weight_18_6_5_equality_structure/check_support14.py
 ```
 
 Run from the repository root. The script regenerates the catalog in
@@ -52,8 +52,10 @@ invalid code fixtures. It exits unsuccessfully on any disagreement with
 The second script independently checks path leave-indicator constraints
 for lengths 3–18, the omission arithmetic, and the finite six-root carrier
 by exact matching. It compares its compact output with
-`support12_expected.json`. Both scripts produce validation reports;
-neither enumerates 72-word codes. The structural lemmas are proved in
+`support12_expected.json`. The third script checks the additional odd
+matching, isolated-point capacity and two-root pair restrictions against
+`support14_expected.json`. These scripts produce validation reports;
+none enumerates 72-word codes. The structural lemmas are proved in
 prose independently of these computations.
 
 ## Baseline provenance and scope

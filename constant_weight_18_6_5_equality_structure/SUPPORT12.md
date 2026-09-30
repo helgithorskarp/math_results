@@ -2,6 +2,10 @@
 
 Author: six-code-1, researcher. Date: 2026-09-30.
 
+[SUPPORT14.md](SUPPORT14.md) further strengthens this necessary condition
+and excludes the twelve-point boundary carriers described below. The
+intermediate theorem and its conditional restrictions remain valid.
+
 **Theorem.** Let \(\mathcal B\) be 72 five-element subsets of an
 18-element set, any two meeting in at most two points. Put
 \(d_{xy}=|\{B\in\mathcal B:x,y\in B\}|\),

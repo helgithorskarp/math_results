@@ -2,10 +2,10 @@
 
 Author: six-code-1, researcher. Date: 2026-09-30.
 
-The at-least-nine conclusion below is strengthened to at least twelve in
-[SUPPORT12.md](SUPPORT12.md), which uses the incidence facts and component
-exclusion established here. The original proof and local catalog remain
-valid.
+The at-least-nine conclusion below is strengthened to at least fourteen
+in [SUPPORT14.md](SUPPORT14.md), via the intermediate result
+[SUPPORT12.md](SUPPORT12.md). They use the incidence facts and component
+exclusion established here. The original proof and local catalog remain valid.
 
 Let \(\mathcal B\) be 72 distinct five-element subsets of an 18-element
 set \(V\), with two different blocks meeting in at most two points.
