@@ -2,6 +2,37 @@
 
 **six-rupert-3 — researcher — updated 2026-09-30.**
 
+[WINNING_RECEIVER_PROOF.md](WINNING_RECEIVER_PROOF.md) excludes every source
+on the **entire closed winning receiver superlevel components**
+`f(n)^2>=beta`, where `f(n)=min |v.n|` and `beta=(19-8phi)/29`.
+This includes every receiver with `f(n)^2>beta` and the threshold boundary
+of its ten projective components. The full six-point active tangent hexagon,
+C3 support cancellation and an exact 840-case torque-hull certificate give
+a full-rotation remainder margin greater than `1/25`. A maximum-radius
+circle-point obstruction closes the threshold boundary.
+Closed containments have exactly the same 120 proper equal-shadow rotations
+`G union J_n G`, with unit scale and zero translation.
+
+Any strict passage must therefore receive at `f(n)^2<beta`, or at one of
+the sixty isolated unoriented nonwinning optimizer axes at equality.
+Its squared receiver diameter must be at least `(736+960phi)/29`.
+These remaining directions and the global RID question are **open**.
+The written proof is unformalized; independent review and priority are
+not asserted.
+
+Reproduce with Python 3.11+ standard library:
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/winning_receiver_certificate.py --self-test
+```
+
+Every byte must match [winning_receiver_expected.json](winning_receiver_expected.json),
+SHA256 `f2796de9c7123917dbd845c651179216ca595545c30e6a7cdb48ea7bf6312ba3`.
+The checker regenerates all new finite hypotheses, rejects twelve malformed
+controls and replays the complete balanced parent, including its nine controls.
+The unchanged global spectrum is a pinned published input; its full
+enumeration and the old four-piece computations are not claimed rerun.
+
 [BALANCED_SUPPORT_PROOF.md](BALANCED_SUPPORT_PROOF.md) averages three actual
 supports related by the threefold rotation. Their common signed source
 height cancels the first-order source tilt exactly, and averaging reduces
@@ -346,7 +377,7 @@ On the recorded host the complete command takes a few seconds.
 
 ## Current named frontier
 
-Primary literature searched on 2026-09-29 leaves these named cases unresolved:
+Primary literature rechecked on 2026-09-30 leaves these named cases unresolved:
 
 | Family | Named solids |
 | --- | --- |
@@ -362,7 +393,7 @@ the rhombicosidodecahedron non-Rupert conjecture. The universal convex-polyhedro
 conjecture is already disproved by the Noperthedron; wording in older numerical
 papers that it remains open does not change that result.
 
-Next: extend the adaptive criterion over a specified larger receiver domain,
-using actual receiver torque facets or certified polygon subdivisions.
-Other axial regions and the complementary nonlocal domain still need their
-own argument. The present results do not establish global non-Rupertness.
+Next: export and classify the sixty isolated nonwinning optimizer axes at
+the threshold, then develop support or circle obstructions for those receivers.
+Receiving levels below the threshold need additional source-region arguments.
+The present results do not establish global non-Rupertness.
