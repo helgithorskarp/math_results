@@ -1,4 +1,4 @@
-# Seven profiles and eleven auxiliary types in the eight-Q Tammes-15 branch
+# Six profiles and eleven auxiliary types in the eight-Q Tammes-15 branch
 
 Author: **six-tammes-1**, role: **researcher**. Updated: 2026-09-30.
 
@@ -29,10 +29,16 @@ degree threes. The new [quadrilateral connectivity proof](TOPOLOGY.md)
 removes the mixed profiles with three and four degree threes, and the
 four-one-deficit profile with four. It splits separated Q fans in the
 planar edge graph and proves a component inequality before establishing
-the needed edge connectedness in each case. The necessary cover now has
-**7 degree/deficit profiles** and **11 colored auxiliary types**, across
-two deficit distributions: `(4,0,0)`, with `n3=0..3`, and `(2,1,0)`, with
-`n3=0..2`. More generally `(n3+d42+s-1)/2<=K_Q`, where s counts ordinary
+the needed edge connectedness in each case. The new
+[ordinary-five corner-capacity proof](FIVE_CORNER_CAPACITY.md) proves
+`2n5<=n4-d42+s`: each four can supply at most one large corner adjacent
+to a five, and a Q with two opposite fives uses two separated ordinary
+fours. Capacity and Q-Q edge parity force **n3<=2**. This auxiliary lemma
+holds on `1/2<c<3/5` when all fives are ordinary; that premise is inherited
+only on the beta interval for the cover corollary. The necessary cover
+now has **6 degree/deficit profiles** and **11 colored auxiliary types**,
+across two deficit distributions: `(4,0,0)` and `(2,1,0)`, each with
+`n3=0..2`. The topology stage also gives `(n3+d42+s-1)/2<=K_Q`, where s counts ordinary
 fours with separated Q sectors and K_Q counts Q face components joined
 through Q-Q edges.
 
@@ -42,14 +48,15 @@ and the sides of an embedded cycle. The hand proof is complete and
 author-audited; independent review is pending. The exact checker audits
 arithmetic identities, strict rational margins, and the finite auxiliary
 cover. The refinements use contact-star incidence, the rhombus angle
-involution and exact angle inequalities. The latest two polynomial signs
+involution and exact angle inequalities. The earlier two polynomial signs
 have 158 positive rational Bernstein coefficients. These checks
 do not certify the geometric arguments in
 a proof assistant. The original proof and checker remain unchanged, with
 their earlier 35-profile/18-type claims; the two-five files retain 29/17.
 The one-five files retain 23/16, the boundary-patch files give 14/13,
-and the two-zero files give 10/11. The topology files give 7/11. The
-latest exclusion is an elementary hand proof; it adds no solver or
+and the two-zero files give 10/11. The topology files give 7/11, and the
+corner-capacity files give 6/11. The latest exclusion is an elementary
+hand proof; it adds no solver or
 numerical angle certificates. The planar fan normalization and face
 connectedness arguments are unformalized, and no connectedness of the
 triangle subcomplex is assumed.
@@ -85,12 +92,17 @@ python3 -B tammes15_eight_quad_reduction/check_two_zeros.py --selftest
 python3 -B tammes15_eight_quad_reduction/check_topology.py | cmp - tammes15_eight_quad_reduction/EXPECTED_topology.json
 python3 -B -O tammes15_eight_quad_reduction/check_topology.py | cmp - tammes15_eight_quad_reduction/EXPECTED_topology.json
 python3 -B tammes15_eight_quad_reduction/check_topology.py --selftest
+python3 -B tammes15_eight_quad_reduction/check_five_corner_capacity.py | cmp - tammes15_eight_quad_reduction/EXPECTED_five_corner_capacity.json
+python3 -B -O tammes15_eight_quad_reduction/check_five_corner_capacity.py | cmp - tammes15_eight_quad_reduction/EXPECTED_five_corner_capacity.json
+python3 -B tammes15_eight_quad_reduction/check_five_corner_capacity.py --selftest
 (cd tammes15_eight_quad_reduction && sha256sum -c SHA256SUMS)
 ```
 
 The current deterministic JSON gives all nine initial deficit distributions,
-the two survivors, each of the 7 degree profiles with its permissible
-colored auxiliary codes, and the three newly removed profiles. The
+the two survivors and each of the 6 degree profiles with its permissible
+colored auxiliary codes. The topology stage removes three profiles;
+the latest corner-capacity stage removes the last profile with three
+degree threes, `(d41,d42,d51,n3)=(4,0,0,3)`. The
 two-zero-triangle distribution is excluded for every degree-three count.
 The preceding two-zero checker classifies 74 small labeled zero-triangle graphs and
 all 16 Q corner masks, solves the face-count equations independently in
@@ -101,8 +113,16 @@ T/Q and Z-neighbor masks, 1668 boundary-slot vectors, and the small Z
 graphs. It compares 3840 possible two-Z pair vectors in the disconnected
 case, with 396 retained and all connecting the zero components through
 Q sectors. It tests planar/cycle-rank bookkeeping on explicit disk,
-annulus, pinched-disk and sphere fixtures. Earlier JSON outputs retain
-the 35-profile, 29-profile, 23-profile, 14-profile and 10-profile stages.
+annulus, pinched-disk and sphere fixtures. The new corner-capacity checker
+compares exact dense and sparse polynomial identities, checks all 16
+cyclic five-corner masks and 28 degree-four Q sectors, and enumerates 17
+degree/T-corner allocations and 74 integer face-capacity models. It
+checks Q-Q parity and the angle identities behind two further restrictions:
+no Q at a degree three
+contains a five, and an ordinary four meets at most one Q containing a
+five. Their geometric bridges are written hand proofs. Earlier JSON
+outputs retain the 35-profile, 29-profile, 23-profile, 14-profile,
+10-profile and 7-profile stages.
 Codes enumerate unordered pairs in lexicographic
 order and minimize over permutations preserving vertex colors. A second
 enumeration by partitions into paths and a possible four-cycle compares
@@ -112,7 +132,7 @@ distribution. Cover enumeration takes well under a second; polynomial
 certificate verification also takes only seconds, using one thread.
 These computations are not searches over spherical embeddings.
 
-Primary context and dependencies appear in the six proof files. The current
+Primary context and dependencies appear in the seven proof files. The current
 Cohn table still lists the fifteen-point cosine approximately
 `0.592605902926` without an optimality
 asterisk, and its coordinate bytes were refreshed before this work. The
@@ -123,4 +143,9 @@ by six-tammes-2 are complementary, and are citations rather than premises.
 The new [ten-/eleven-label pentagon-bridge obstruction](../tammes15_pentagon_bridge_exclusion/PROOF.md)
 is also complementary; no forced motif occurrence in the surviving
 profiles is asserted.
+The newer [contact-pair closure classification](../tammes15_contact_pair_closure/PROOF.md)
+proves closure through seven vertices and classifies the single octagon
+exception. Its corollaries remove the old-neighbor requirement from two
+bridge exclusions. It is cited context, with original-label patch
+disjointness and forced occurrence still to be established here.
 No historical-priority claim is made.
