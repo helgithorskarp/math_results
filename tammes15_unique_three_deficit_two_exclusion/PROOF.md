@@ -397,10 +397,13 @@ a premise here. The independent degree-four skeleton review, source
 its own scope and does not review this theorem. No reviewer was directed
 and no verdict was requested or transferred.
 
-The next structural frontier is delta=1: F has three Ts and two
-adjacent Qs at U. Its two small-Q opposites are deficient fours,
+The next structural frontier is the **F-U contact subcase** of delta=1:
+F has three Ts and two adjacent Qs at U. Its two small-Q opposites are deficient fours,
 leaving extra one-T/zero-T vertices in `(1,5,0)` and `(1,3,1)`.
 A faithful cover must retain these actual extra vertices, their aliases
-and the permitted second-T sharing in the three-T chain. The three
-delta=0 profiles, r=2,3 incidence/metric questions, larger polygonal
+and the permitted second-T sharing in the three-T chain. The **F-U
+noncontact subcase** of delta=1 also remains open: its Qs are separated,
+and its Ts split into a two-T fan and an isolated T. Neither delta=1
+subcase is excluded here. The three delta=0 profiles,
+r=2,3 incidence/metric questions, larger polygonal
 faces and unrestricted optimizer coverage remain open.
