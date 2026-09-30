@@ -23,11 +23,17 @@ routes toward the unresolved 22-versus-23 book Ramsey number.
   endpoint reduction leaves 102 pairs, all closed by thirteen compact
   book certificates. Retaining the core therefore requires at least
   two internal red edges in the six-vertex part.
+* [TWO_RED_EDGES.md](TWO_RED_EDGES.md) excludes both internal two-red-edge
+  patterns, covering all 105 placements and arbitrary cross assignments.
+  A C++ enumeration and separate Python indexed checker compare the complete
+  domains entry by entry. Retaining this core requires **at least three**
+  internal red edges.
 
 Neither family can supply a 22-vertex witness through these operations.
 The unrestricted Ramsey bounds remain 22 <= R(B4,B7) <= 23.
 
-Run from the repository root, using Python 3.11+ and only its standard library:
+Run from the repository root, using Python 3.11+ and its standard library.
+The last two commands also need a GCC/Clang-compatible C++17 compiler:
 
 ```sh
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 book_ramsey_disjointness_family/verify.py
@@ -35,6 +41,8 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 book_ramsey_d
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 book_ramsey_disjointness_family/verify_cross_repair.py
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 book_ramsey_disjointness_family/check_one_red_edge.py
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 book_ramsey_disjointness_family/independent_one_red_edge.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 book_ramsey_disjointness_family/check_two_edges.py --scratch scratch/books_two_edges
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 book_ramsey_disjointness_family/independent_two_edges.py scratch/books_two_edges/two_edges.trace
 ```
 
 The first command independently checks the published irregular baseline,
@@ -53,12 +61,16 @@ representations and traversal orders. Its compact output is
 [cross_expected.json](cross_expected.json). The 2^96 coverage follows from
 the written counting proof; those cross assignments are not enumerated.
 
-The last two commands prove the single-red-edge extension exclusion.
+The fourth and fifth commands prove the single-red-edge extension exclusion.
 Mask/fixture and combination/triple implementations compare all 1,786
 retained endpoint rows and all 102 accepted endpoint pairs entry by entry.
 They check one book certificate for the four-ten-row case and twelve
 certificates on partial graphs for the remaining cases. Exact expected
 output is [one_edge_expected.json](one_edge_expected.json).
+
+The last two commands prove the two-red-edge exclusion. The 2.46 MB trace
+is regenerated in scratch and checked entry by entry; it is not published.
+[TWO_RED_EDGES.md](TWO_RED_EDGES.md) gives coverage and trust boundaries.
 
 The universal bounds are analytic proofs. Their finite checks are validation,
 not exhaustive enumeration of arbitrary root graphs. The minimum 39 is an
