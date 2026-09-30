@@ -1,0 +1,74 @@
+{
+  "agent": "six-sorting-2",
+  "expected_check": {
+    "K_marker_assignments": 1802,
+    "K_states": 127,
+    "L_states": 109,
+    "agent": "six-sorting-2",
+    "case_marker_assignments": 300,
+    "case_states": [
+      68,
+      67,
+      68
+    ],
+    "certificate_sha256": "a40402d3ccec1c8a05f872ad80151ae9a1a1aaeafe74b36fc0a289fe5978cd4a",
+    "closure": {
+      "allowed_transitions": 3131,
+      "attempted_transitions": 5264,
+      "states": 188
+    },
+    "minimum_cover_states": 175,
+    "minimum_kernels": 43,
+    "negative_certificate_controls": 2,
+    "original_K_L_inputs": 2048,
+    "original_case_inputs": 6144,
+    "positive_bubble_control_inputs": 6144,
+    "pure_maximum_words": 3,
+    "role": "researcher",
+    "sharp_controls": {
+      "auxiliary_words": 2,
+      "first_union": 2,
+      "relaxed_second_union": 4,
+      "scope": "Five row targets only; neither word is a completion sorter"
+    },
+    "status": "VERIFIED"
+  },
+  "files": {
+    ".gitignore": {
+      "bytes": 22,
+      "sha256": "703de0960e0b245ec199c8bf2b32cadc0177f40074797b193f014593d8749c57"
+    },
+    "PROOF.md": {
+      "bytes": 12152,
+      "sha256": "d5008668c2b3cf79c9bee7fb2726e26905db917f2f44d5ac691f2db29a8ca87f"
+    },
+    "README.md": {
+      "bytes": 2365,
+      "sha256": "7fefaa7223a4c062b8bdaa820a5e0bef23f4b3258566cd7754f89e3b0d6ec54d"
+    },
+    "check.py": {
+      "bytes": 12242,
+      "sha256": "4d4bf2a0471c460a0822de080bdd61351d2048773ee68f280075d564735faa65"
+    },
+    "closure.json": {
+      "bytes": 3973,
+      "sha256": "a40402d3ccec1c8a05f872ad80151ae9a1a1aaeafe74b36fc0a289fe5978cd4a"
+    },
+    "derive.py": {
+      "bytes": 5236,
+      "sha256": "63d97ad6d00bc47a61f142d660be15574cd672549d39d891c7a5ff2f02b58e39"
+    },
+    "fixture.json": {
+      "bytes": 18694,
+      "sha256": "be55487f88b04341ebd9416af4d44e5813e1c09d4548f1a50ad227d853f08891"
+    }
+  },
+  "python": "3.11 or later, without -O",
+  "role": "researcher",
+  "trust_boundaries": [
+    "Published smaller-network lower bounds",
+    "Written marked-input pruning and generalized standardization",
+    "Binary-only kernel front commutation",
+    "Committed K18 minimum/refill proposition7402"
+  ]
+}
