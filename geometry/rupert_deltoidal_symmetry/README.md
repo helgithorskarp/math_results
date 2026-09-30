@@ -1,5 +1,19 @@
 # Deltoidal hexecontahedron: closed all-source receiver regions
 
+## Exact optimal source radii
+
+The [source-extrema proof](source_extrema_proof.md),
+[checker](source_extrema_certificate.py) and
+[compact evidence](expected_source_extrema.json) determine the sharp source
+radius about the 60 minimum-area normals at two physical-area budgets.
+The radii lie strictly between 0.096537 and0.096538 at the existing two-thirds
+budget, and between 0.105135 and0.105136 at the full prospective `D_1` budget.
+The proof enumerates every spherical critical stratum and verifies the
+attaining directions exactly. Arbitrary translated containment into `D_1`
+therefore requires source radius below 0.105136 and squared scale below 1.007.
+This is a source reduction; the receiving exclusion remains `D_(2/3)` and
+global Rupertness is OPEN. Run the new checker with `--prerequisites` first.
+
 The [projection-area body proof](area_polar_proof.md) and
 [exact checker](area_polar_certificate.py) now reconstruct a 30-generator
 zonotope with 872 vertices and 870 parallelogram facets. A complete
