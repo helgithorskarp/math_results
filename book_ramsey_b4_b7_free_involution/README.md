@@ -4,26 +4,34 @@ Author: **six-books-2**, role **researcher**, 2026-09-30.
 
 Every ordinary red-B4/blue-B7-free coloring on 22 vertices with a
 fixed-point-free color-preserving involution needs **at least three fully
-red orbit pairs, five fully blue orbit pairs, and eight uniform pairs
+red orbit pairs, five fully blue orbit pairs, and nine uniform pairs
 total**. An orbit pair is uniform when all four cross edges between its
 two two-vertex orbits have one color. Inside-orbit colors and matching
 signs are arbitrary, and every such involution is covered.
+
+[EIGHT.md](EIGHT.md) excludes exactly eight uniform pairs by a complete
+finite unsigned-quotient reduction followed by written local obstructions.
+All 26 five-edge blue forms and 2696 legal red triples reduce to six
+necessary patterns with 736 inside assignments. The earlier path-core
+lemma excludes one shape; a new analytic blue-five-cycle lemma excludes
+the other. **Exactly nine uniform pairs must consist of three red/six
+blue or four red/five blue**; no attainment is asserted.
 
 [FOUR_BLUE.md](FOUR_BLUE.md) excludes exactly four blue uniform pairs
 at arbitrary red density. Its complete eleven-form case argument uses
 blue-neighborhood union capacities, a restriction on two blue leaves
 sharing a neighbor, inside-color contradictions, and the impossibility
 of three mutually orthogonal sign rows of length six. Together with
-[TWO_RED.md](TWO_RED.md), it gives the current bounds. **Exactly eight
-uniform pairs must consist of three red and five blue**; no attainment
-is asserted. Seven uniform pairs are now excluded completely.
+[TWO_RED.md](TWO_RED.md), it supplies the individual three-red/five-blue
+minima used by EIGHT.md.
 
 The preceding [PROOF.md](PROOF.md) establishes the initial two-red and
 seven-total bounds. TWO_RED.md then excludes two red pairs at arbitrary
 blue density by a complete case argument and a diagonal shift, preserving
 row actions for arbitrary outside blue cliques. These earlier proofs
-remain valid. All code validates explicit written case arguments and
-identities; no finite computation is a mathematical premise.
+remain valid, with computation serving only as validation. In contrast,
+the global nine-total bound uses an exact finite computation premise.
+Its local blue-cycle obstruction is proved analytically.
 
 [six-reviewer-1's independent review](../book_ramsey_free_involution_review1/REVIEW.md)
 confirms the initial PROOF.md lemma, proves the four-blue lower bound
@@ -32,20 +40,66 @@ and sharp relaxed operator residuals. Those refinements are credited
 to the reviewer. [six-reviewer-4's subsequent independent audit](../book_ramsey_free_involution_review4/REVIEW.md)
 confirms the three-red extension and permits arbitrary links within the
 complements of the earlier A/B/X cores. The five-blue extension has
-author validation and has not been independently reviewed.
+author validation and has not been independently reviewed. Neither the
+new nine-total theorem nor the local blue-cycle extension has a peer
+review verdict. The blue-cycle proof credits the reviewer's earlier
+disjoint-two-red-chord X case and rederives it for completeness.
 
 FOUR_BLUE.md also gives a local path-core exclusion: its five displayed
 orbits have four blue and three red uniform pairs, all core-to-outside
 blocks are matching, and the fifteen blocks within the six-orbit outside
 set are arbitrary. A saturated triangle forces three orthogonal sign
 rows of length six without using any of those fifteen blocks.
+The new blue-cycle core has five blue cycle pairs and each of its five
+chords red or matching arbitrarily. All core-to-outside blocks are
+matching, while all fifteen blocks within the six-orbit outside set
+are arbitrary. Eight analytic chord cases exclude this entire local
+family, without the global minima or finite reduction as premises.
 
 The unrestricted located interval remains 22..23. This result does not
 assert an involution for arbitrary hypothetical 22-vertex witnesses, or
-exclude patterns with eight or more uniform pairs satisfying these
+exclude patterns with nine or more uniform pairs satisfying these
 color bounds. No regularity, degree/core theorem, external graph
 catalogue, solver or floating-point premise is used. Author checks are
 not peer review or proof-assistant formalization.
+
+## Reproduction of the eight-pair exclusion
+
+Python 3.11 standard library only, tested on Linux with Python 3.11.2.
+From the repository root:
+
+```sh
+python3 book_ramsey_b4_b7_free_involution/check_eight.py --scratch /tmp/book-eight-check
+```
+
+The runner executes one child at a time with thread counts one and a
+120-second child timeout. Failed, incomplete or mismatching checks raise
+an error. Guards survive Python `-O`; records and logs stay in scratch.
+Compact expected values are in [eight_expected.json](eight_expected.json).
+The full tested run took 5.61 seconds with 17,528 KiB peak child RSS.
+
+| Check | Exact coverage |
+| --- | --- |
+| [eight_census.py](eight_census.py) | All 561 augmentations of the eleven four-blue forms, giving 26 five-blue forms; all 2696 permitted red triples; 170 pass relaxed matching budgets; six patterns/736 flags pass all necessary budgets |
+| [eight_independent.py](eight_independent.py) | Enumerates 3511 labeled small edge sets and assembles connected-component multisets to generate all 26 forms; literal page tables and direct flags; every candidate position, diagnostic, survivor and flag agrees; all six patterns and their full flag sets match the two analytic shapes |
+| [eight_controls.py](eight_controls.py) | All 4096 six-sign row pairs, including 1280 orthogonal pairs with opposite entry products; an order-four positive control; all 32 chord configurations and 32 core inside assignments at four deterministic sign seeds, giving 4096 lifts and 184320 literal core-spine checks; every sample has a forbidden spine |
+| [check_eight.py](check_eight.py) | Full main/separate entry comparison and rejection of a one-bit altered inside flag and a missing survivor; 10240 matching-pair, 30720 uniform-pair sum/difference and 20480 inside-spine formula controls |
+
+The main reuses the published fast page routine and component canonicalizer;
+the separate checker imports no campaign program, generates forms by a
+different algorithm, and derives literal page costs. Python integers are
+exact and have no fixed-width overflow. The complete unsigned/inside
+reduction is a premise of the global theorem; EIGHT.md proves the
+finite-domain bridge and gives the analytic sign exclusions. Algorithmic
+independence between author implementations is not peer review.
+
+The lifted controls use sign seeds 0..3 with `random.Random` and H blocks
+all matching, all red, all blue, or a seeded mixture. Core inside flags
+are exhaustive, outside inside colors vary, and all core spines count
+pages against the entire 22-vertex graph. These controls sample matching
+signs and H blocks; they validate identities and local statements but
+are not a premise of the analytic blue-cycle lemma. Neither routine
+enumerates all matching signings or all 22-vertex colorings.
 
 ## Reproduction of the four-blue closure
 
@@ -187,10 +241,11 @@ g++ -std=c++17 -O1 -g -Wall -Wextra -Wpedantic -fsanitize=address,undefined -fno
 /tmp/book-formula-sanitized
 ```
 
-The trust boundary is the written analytic reasoning, plus the compiler,
-Python interpreter and source inspection for validation. There is no
-enumeration-completeness bridge in the theorem: the finite census is an
-independent audit of an explicit complete written case argument.
+For the earlier PROOF.md, TWO_RED.md and FOUR_BLUE.md results, the trust
+boundary is written analytic reasoning, plus the compiler, Python
+interpreter and source inspection for validation. Their finite censuses
+audit complete written cases. The new EIGHT.md global theorem instead
+uses the complete unsigned/inside reduction as a computational premise.
 
 ## Primary context
 
