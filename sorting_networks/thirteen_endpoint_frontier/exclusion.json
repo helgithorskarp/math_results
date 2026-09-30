@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "target": "Z19 after P25; depth unrestricted",
+  "conclusion": "No nineteen-comparator completion of Z; every twenty-comparator Y2 completion avoids(0,10)",
+  "full_cnf": {
+    "variables": 40894,
+    "clauses": 1037230,
+    "sha256": "1c448f077f435d01c2866cfa8d8f4a2617f1b253ac547138fa4465f942ac18e8"
+  },
+  "clause_stream_sha256": "3f971e4ceba4bbb381cc02ee6e2f394a5f15d9e4d3ba20501887e90ec62f74f5",
+  "core_file": "Z19-core.cnf",
+  "core_clauses": 777,
+  "core_sha256": "81b7275e3f48e05fe803906f59c3b4164df6e4c240cc95f225ea27248f51c988",
+  "proof_file": "Z19-proof.rup",
+  "proof_additions": 119,
+  "proof_sha256": "50a961f6b38fd6490cbcdff63b5ebadfa8595be8a47f4e77fb485cbcff40b333",
+  "proof_format": "addition-only RUP; deletions removed from checked trimmed DRAT",
+  "solver": "Glucose4 via python-sat1.8.dev24",
+  "native_proof_sha256": "8b035022885f926e6025e0eae118ce86ffff655e08f93d8f4b6c80b1818cb44c",
+  "external_checker": "drat-trim",
+  "external_checker_source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "external_check_verified": true,
+  "generator_command": "python3 search.py --target Z --solver g4 --mode full --minimal --seconds 45 --segments 1 --seed-deletions 19 20 --dimacs /tmp/Z19.cnf --proof /tmp/Z19-native.drat --out /tmp/Z19-result.json",
+  "status": "Native DRAT and standalone forward RUP verified; all core clauses match source-generated full CNF",
+  "scope": "Fixed P21,T2; no conclusion for Y2 without(0,10), Y1, or other thirteen-wire prefixes"
+}
