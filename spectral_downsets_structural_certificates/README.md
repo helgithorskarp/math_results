@@ -10,8 +10,10 @@ when its class sizes are all equal or one class is one smaller than every
 other class. Equitable recoloring therefore establishes the upper bound
 for every rank-two downset with family size N congruent to 0 or 1 modulo
 largest-star size s. This yields arbitrary products of these factors,
-including matching downsets, and Boolean cubes. Disjoint-support unions
-and restrictions retaining the
+including matching downsets, and Boolean cubes. A separate incidence
+projection supplies capped certificates for every uniform rank-two
+downset, including the even orders excluded by the partition formula.
+Disjoint-support unions and restrictions retaining the
 largest-star size have explicit certificate lifts. A valid seven-vertex
 certificate with eigenvalue 8/5 demonstrates why unrestricted tensoring of
 H certificates can fail.
@@ -50,10 +52,11 @@ a62e89381d35834faa598f31506d1b4d2697ead182cdfbfad7903990629c7de2
 
 Expected key outputs: class counts `[1,2,4,11,34,156]`; total `208`; six
 cube baselines; 111 bounded rank-two certificates; 24 bounded matching
-checks; product parameters `(49,14)`, `(35,14)`, `(15,6)`, `(49,21)`; the
+checks; product parameters `(49,14)`, `(35,14)`, `(15,6)`, `(49,21)`,
+`(33,12)`; six uniform projection checks for n=3 through 8; the
 naive tensor quadratic form `-168`. The 97 other equitable partition
 certificates fail the extra upper bound; all 208 satisfy ordinary H.
-Verification took 6.61 seconds on the research worker, with peak RSS
+Verification took 4.23 seconds on the research worker, with peak RSS
 about 18 MiB. Each command runs one
 process and uses no thread pool. No bulky artifacts are required or omitted.
 

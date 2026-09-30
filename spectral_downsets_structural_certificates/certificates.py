@@ -155,6 +155,21 @@ def rank_two_certificate(n, mask, shift=0):
     return [a << shift for a in family], coloring_certificate(colors, t), t
 
 
+def uniform_rank_two_certificate(n, shift=0):
+    """A capped rational projection certificate, also at the excluded even residues."""
+    if n < 1:
+        raise ValueError("Nontrivial uniform downset required")
+    if n <= 2:
+        return cube_certificate(n, shift)
+    family = graph_family(n, (1 << (n * (n - 1) // 2)) - 1)
+    disjoint_weight = F(2, n - 2)
+    core = [[F(n - 1) if a == b else
+             (F(-1) if a & b or (a.bit_count() == b.bit_count() == 1)
+              else disjoint_weight)
+             for b in family[1:]] for a in family[1:]]
+    return [a << shift for a in family], lift(core, n), n
+
+
 def lift(core, t):
     """Empty-vertex lift; core is indexed by the nonempty sets."""
     m = len(core)

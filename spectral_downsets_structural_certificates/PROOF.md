@@ -25,6 +25,8 @@ disjoint-support unions and restrictions preserving s, and conditional
 product closure with an explicit spectral upper bound. Consequences include
 all downsets of rank at most two and arbitrary finite products of rank-two
 downsets satisfying N=0 or 1 modulo s, including all matching downsets.
+A separate projection construction also covers every uniform rank-two
+downset as a product factor, including the excluded even-order residues.
 All displayed constructions preserve rationality.
 
 The unrestricted conjecture is not settled. We do not infer product closure
@@ -317,7 +319,71 @@ It does not refute H or H product closure by another construction. The
 balanced certificate in section 7 gives a valid tensor certificate for
 this very same product family.
 
-## 9. Finite coverage and trust boundary
+## 9. Uniform rank-two projection certificates beyond partitions
+
+Let D_n consist of all subsets of [n] of size at most two. For n>=3,
+N=1+n+e, e=n(n-1)/2, and s=n. Define a symmetric core on the nonempty
+sets by
+
+```
+C[A,A]=n-1;
+C[A,B]=-1 for intersecting distinct sets;
+C[A,B]=-1 for distinct singleton sets;
+C[A,B]=2/(n-2) for every other disjoint distinct pair.
+```
+
+Then
+
+```
+C 1=0,    C^2=kappa C,    kappa=n(n-1)/(n-2).        (8)
+```
+
+Here is a uniform proof. Let R be the n by e incidence matrix of the
+complete graph, and order the core by singleton and pair levels. Use
+J_ab for the a by b all-ones matrix. Direct counting gives
+RR^T=(n-2)I_n+J_n, R1_e=(n-1)1_n and R^T1_n=2*1_e. In this order C is
+
+```
+[ nI_n-J_n                  (2J_ne-nR)/(n-2)           ]
+[ (2J_en-nR^T)/(n-2)   (n(n-1)I_e-nR^TR+2J_e)/(n-2) ].
+```
+
+It annihilates both vectors constant on one level and zero on the other,
+which in particular proves C1=0. For u perpendicular to 1_n, the vector
+R^Tu has squared norm (n-2)||u||^2. On the two-dimensional space with
+orthonormal level directions (u,0) and (0,R^Tu/sqrt(n-2)), the core has
+matrix
+
+```
+[ n                 -n/sqrt(n-2) ]
+[ -n/sqrt(n-2)        n/(n-2)     ].
+```
+
+This symmetric matrix has determinant zero and trace kappa, and hence
+eigenvalues 0 and kappa. On (0,v) with Rv=0, C acts as kappa I. These
+subspaces, together with the level constants, form an orthogonal
+decomposition: R has full row rank because RR^T is positive definite,
+and its image decomposes into the pair constant and centered incidence
+directions. This proves (8). The multiplicity of kappa is
+(n-1)+(e-n)=e-1, and C is PSD.
+
+Because C1=0, the empty lift Q has zero empty row and column and otherwise
+equals C. Its largest eigenvalue is kappa. Moreover
+
+```
+N-kappa = [n(n-1)(n-2)-4]/[2(n-2)] > 0    for n>=3.
+```
+
+Thus both H and the upper spectral bound hold. The cases n=1,2 are full
+Boolean cubes and use their complement-permutation certificates. Every
+uniform rank-two downset therefore supplies a rational factor for the
+conditional product theorem, irrespective of the partition congruence.
+For example n=4 has N=11,s=4: its equitable class sizes cannot produce a
+capped partition certificate, while this projection core has nonzero
+eigenvalue 6. This is an explicit separation between the limitations of
+the partition construction and actual capped feasibility.
+
+## 10. Finite coverage and trust boundary
 
 Every rank-two downset is a simple graph on its active singleton coordinates,
 with the empty set and all those singletons included. The generator starts
@@ -341,11 +407,13 @@ on an ambient six-element set.
 Every finite matrix is checked with exact Fraction arithmetic for support,
 symmetry, row sums, star size, and PSD by symmetric LDL elimination with
 zero-pivot checks. Additional tests check both spectral bounds for 111 of
-the rank-two certificates, 24 matching examples and four products, six
+the rank-two certificates, 24 matching examples and five products, six
 full-cube baselines, a union, a restriction, the negative tensor quadratic
 form, and rejection controls. The remaining 97 equitable partition
 certificates fail the upper bound exactly as predicted by (7). This
 excludes that construction for the extra upper bound, not any downset from H.
+The uniform projection certificates are checked for n=3,...,8, including
+the centering and exact scaled-projection identity (8) and both PSD bounds.
 The derivations prove the infinite subclasses independently of this finite
 experiment. The trust base is ordinary mathematical reasoning, the cited
 Vizing theorem, and Python's standard integer/Fraction semantics. No

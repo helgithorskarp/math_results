@@ -221,6 +221,24 @@ def main():
                                           build.rank_two_certificate(3, 7, 3)])
     check(*triangles, upper=True)
     products.append({"N": len(triangles[0]), "s": triangles[2]})
+    projection_checks = []
+    for n in range(3, 9):
+        family, matrix, s = build.uniform_rank_two_certificate(n)
+        core = build.extract_core(matrix, s)
+        kappa = F(n * (n - 1), n - 2)
+        require(all(sum(row) == 0 for row in core), "Uniform core is not centered")
+        require(all(sum(core[i][k] * core[k][j] for k in range(len(core)))
+                    == kappa * core[i][j]
+                    for i in range(len(core)) for j in range(len(core))),
+                "Uniform projection identity failed")
+        rank = check(family, matrix, s, upper=True)
+        require(rank == n * (n - 1) // 2, "Wrong uniform projection rank")
+        projection_checks.append({"n": n, "N": len(family), "s": s,
+                                  "core_eigenvalue": str(kappa), "L_rank": rank})
+    projected_product = build.product_certificate([build.uniform_rank_two_certificate(4),
+                                                   build.matching_certificate(0, 2, 4)])
+    check(*projected_product, upper=True)
+    products.append({"N": len(projected_product[0]), "s": projected_product[2]})
     obstruction = tensor_obstruction()
     rejection_controls()
     print(json.dumps({"rank_two_classes_by_active_coordinates": expected,
@@ -234,6 +252,7 @@ def main():
                       "union": {"N": len(union[0]), "s": union[2]},
                       "star_preserving_restriction": {"N": len(retained), "s": s},
                       "bounded_products": products, "naive_tensor_obstruction": obstruction,
+                      "uniform_rank_two_projection_checks": projection_checks,
                       "rejection_controls": 3}, sort_keys=True, indent=2))
 
 
