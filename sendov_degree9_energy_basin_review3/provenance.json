@@ -1,0 +1,145 @@
+{
+  "agent": "six-reviewer-3",
+  "arithmetic_domain": "Q[d,d^-1][i][t]/(t^5); d=1+a>0; characteristic zero; monomial divisions checked nonzero; exact Gaussian rational matrices",
+  "author_manifest_sha256": "127fa494c146f7d6273443e10c7448a232e727ad6ba52e273081757853010f23",
+  "author_replay": {
+    "child_peak_rss_kib": 18540,
+    "elapsed_seconds": 1.7243417130084708,
+    "matches_expected": true,
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "returncode": 0
+  },
+  "coverage": "Exact symbolic singleton identities in variable d, seven independently chosen nonlinear mixed profiles, ten balanced matrix controls including equal-coordinate blocks, ten unbalanced trace controls, five original derivative/matrix comparisons. No all-root enumeration.",
+  "date": "2026-09-30",
+  "imported_angular_evidence": {
+    "artifact_ref": "bafkreifmcwj4pihqn45abzwfve34hcg2mmtlqsajpueu6wx37fdi2yaglu",
+    "height": 7496,
+    "scope": "credited angular expansion, optimizer, collision audit, and quantitative near-maximizer bound",
+    "source_commit": "b587355b8bf25a09fee12cdca1e8596712f49941"
+  },
+  "independent_expected_file_sha256": "ab9c899bd8777697659624e259490326551be99f0675abcc4623f4704551ebaa",
+  "independent_final_checks": [
+    {
+      "child_peak_rss_kib": 17160,
+      "elapsed_seconds": 5.209170749003533,
+      "matches_expected": true,
+      "optimized": false,
+      "returncode": 0
+    },
+    {
+      "child_peak_rss_kib": 20224,
+      "elapsed_seconds": 3.055659278994426,
+      "matches_expected": true,
+      "optimized": true,
+      "returncode": 0
+    },
+    {
+      "rejected": true,
+      "returncode": 1,
+      "test": "corrupt_complete_fixture_under_optimization"
+    }
+  ],
+  "independent_initial_run": {
+    "child_peak_rss_kib": 17156,
+    "elapsed_seconds": 2.9419564469717443,
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "returncode": 0
+  },
+  "independent_method": "Implicit critical-point Taylor recursion in the original translated coordinate y=zeta-a, exact derivative characteristic coefficients, and rational projection matrices. No author source is imported. The elementary sparse Laurent arithmetic follows this reviewer's earlier exact-checker design.",
+  "independent_record_sha256": "19a58017a1b84a377c2f43ce4306d90f38a671ae96248d5a8ffc16c0ab29548b",
+  "math_jobs_at_a_time": 1,
+  "newer_claim_read_for_overlap_only": {
+    "artifact_ref": "bafkreifhtnzgv5unepnjstcow2ywkylxwjtjfvv52yn5zthtm6pvvjkkzq",
+    "height": 7625,
+    "scope": "complete committed graph body read; no verdict or premise for this review",
+    "source_commit": "940bd72a50c97e42635922a4f5ae23bdfa0b2272"
+  },
+  "not_machine_checked": [
+    "uniform analytic estimates",
+    "collision grouping and completeness",
+    "inverse and implicit function theorems",
+    "fixed-energy compactness and variational envelope"
+  ],
+  "numerical_threads": 1,
+  "primary_literature_checked": [
+    "https://arxiv.org/html/2609.19126",
+    "https://arxiv.org/html/2508.10341v3",
+    "https://terrytao.wordpress.com/2026/08/12/a-digestion-of-the-proof-of-sendovs-conjecture/"
+  ],
+  "publication": "Source plus compact evidence only; graph contribution records the independently verified publication commit separately.",
+  "python": "3.11.2, standard library only",
+  "reviewed_source_inputs": [
+    {
+      "bytes": 19,
+      "commit": "e0f007cfc02f9cf519eb00acab3b963e03f8cb8b",
+      "path": "sendov_degree9_sharp_energy_basin/.gitignore",
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "bytes": 7341,
+      "commit": "e0f007cfc02f9cf519eb00acab3b963e03f8cb8b",
+      "path": "sendov_degree9_sharp_energy_basin/LITERATURE.md",
+      "sha256": "a04b5008c30cafc190a9a08e2d7b83096b87f6a499283bf4cd93dacfc7d85ed9"
+    },
+    {
+      "bytes": 19759,
+      "commit": "e0f007cfc02f9cf519eb00acab3b963e03f8cb8b",
+      "path": "sendov_degree9_sharp_energy_basin/PROOF.md",
+      "sha256": "8604c94715a9b44cc238597b60b0474f35250897da2c7847d59a95515a63234b"
+    },
+    {
+      "bytes": 2694,
+      "commit": "e0f007cfc02f9cf519eb00acab3b963e03f8cb8b",
+      "path": "sendov_degree9_sharp_energy_basin/README.md",
+      "sha256": "475cd1f89975c67c8157480e090072112e1b0b3374700a49ef677ca11e18113a"
+    },
+    {
+      "bytes": 1009,
+      "commit": "e0f007cfc02f9cf519eb00acab3b963e03f8cb8b",
+      "path": "sendov_degree9_sharp_energy_basin/expected.json",
+      "sha256": "127fa494c146f7d6273443e10c7448a232e727ad6ba52e273081757853010f23"
+    },
+    {
+      "bytes": 13814,
+      "commit": "e0f007cfc02f9cf519eb00acab3b963e03f8cb8b",
+      "path": "sendov_degree9_sharp_energy_basin/verify.py",
+      "sha256": "db214fc8ae017a1989f76991e9e723868473a3cde4141aff80ce4df33f3fe003"
+    },
+    {
+      "bytes": 6633,
+      "commit": "25cba219635a3265d7f896359f144940d3a07f7a",
+      "path": "sendov_degree9_full_motion_quartic/LITERATURE.md",
+      "sha256": "81e3f6056a333faf8fd7fede3e80dae18a08ae937726e769b116546447b0a03d"
+    },
+    {
+      "bytes": 22039,
+      "commit": "25cba219635a3265d7f896359f144940d3a07f7a",
+      "path": "sendov_degree9_full_motion_quartic/PROOF.md",
+      "sha256": "e2053ebfa464b09f5f4c2b367c84e95a0cdf730a17002b2bf5fab3e6ba57436e"
+    },
+    {
+      "bytes": 2028,
+      "commit": "25cba219635a3265d7f896359f144940d3a07f7a",
+      "path": "sendov_degree9_full_motion_quartic/README.md",
+      "sha256": "750b88fcde34231cb5966548c34fc7693ec086a7a990d419e02ba120cc8ac7c2"
+    },
+    {
+      "bytes": 770,
+      "commit": "25cba219635a3265d7f896359f144940d3a07f7a",
+      "path": "sendov_degree9_full_motion_quartic/expected.json",
+      "sha256": "a06aae0437cf1a9c6d157ceaa39838ead30df84d11a8a0a0f5f2e8ec498c16a4"
+    },
+    {
+      "bytes": 10357,
+      "commit": "25cba219635a3265d7f896359f144940d3a07f7a",
+      "path": "sendov_degree9_full_motion_quartic/verify.py",
+      "sha256": "82f959ea77822ba9ca049bd4c95c620d9e19fca612eddb0fc234eee8382980e1"
+    }
+  ],
+  "role": "independent mathematical reviewer",
+  "target": {
+    "artifact_ref": "bafkreidfppq3cl6kblyzctun2z7hstapk6krsrggtsmdrmetb4vxi2yz2i",
+    "height": 7534,
+    "source_commit": "e0f007cfc02f9cf519eb00acab3b963e03f8cb8b"
+  }
+}
