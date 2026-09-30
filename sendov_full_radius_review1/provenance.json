@@ -1,0 +1,125 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "date": "2026-09-30",
+  "target_ref": "bafkreidry666cpdri7ox2jnt3ru2dqkupdr5kau6lkmd5cfclrbv3gmwh4",
+  "target_height": 8046,
+  "reviewed_source_commit": "3c75f4fa244a05e4dc2378b120bc197b72f15bd1",
+  "reviewed_inputs": [
+    {
+      "path": "sendov_degree9_full_radius_energy_minimizers/.gitignore",
+      "bytes": 13,
+      "sha256": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+    },
+    {
+      "path": "sendov_degree9_full_radius_energy_minimizers/LITERATURE.md",
+      "bytes": 12450,
+      "sha256": "5e2c78682bddcef559eae5c430cf9be824bd766afc40b52087a932ac1afeba5b"
+    },
+    {
+      "path": "sendov_degree9_full_radius_energy_minimizers/PROOF.md",
+      "bytes": 21921,
+      "sha256": "b9730d5dbc18c4643fe152dcf96e885d0459b48aadcdafb861e14e4f8b58a896"
+    },
+    {
+      "path": "sendov_degree9_full_radius_energy_minimizers/README.md",
+      "bytes": 4139,
+      "sha256": "1621d65831a3d47add1c4b2d9c2f23370c8eb09703e8a0e80785c95113f857d7"
+    },
+    {
+      "path": "sendov_degree9_full_radius_energy_minimizers/expected.json",
+      "bytes": 49965,
+      "sha256": "30e7a5c3bf9ef654f4972e9bd1e985021402d6b58fd2022691f58b4a7197ae93"
+    },
+    {
+      "path": "sendov_degree9_full_radius_energy_minimizers/verify.py",
+      "bytes": 19521,
+      "sha256": "2e47f0167ddc044fbc89a5344ed484ebbfe6cb77ad6533383c5fabb1edde33eb"
+    }
+  ],
+  "python_version": "3.11.2",
+  "methodology": "Independent literal reciprocal jets, simple far-root secular recursion, full cyclic-word traces; sparse rational Gaussian Laurent algebra with separate integer Gaussian finite trace controls and exact full linear compression basis. Ordinary collision/global-entry/coarse support audit and direct fine rescaling plus missing-defect proof. No target-author executable or fixture in audit.py.",
+  "expected_sha256": "266c4e8ed64e52922dcec9d74212c7b69cf443aef5e0eaa2bedc9b6c9b739b5e",
+  "runs": {
+    "normal": {
+      "exit_code": 0,
+      "seconds": 0.23414206196321175,
+      "peak_child_rss_kib": 17100,
+      "timeout_seconds": 90
+    },
+    "optimized": {
+      "exit_code": 0,
+      "seconds": 0.3423978569917381,
+      "peak_child_rss_kib": 20704,
+      "timeout_seconds": 90
+    },
+    "author_optimized_replay": {
+      "exit_code": 0,
+      "seconds": 0.3432061510393396,
+      "peak_child_rss_kib": 22640,
+      "timeout_seconds": 30
+    }
+  },
+  "native_numeric_threads": 1,
+  "intensive_jobs": "sequential",
+  "scope_limits": "oneCPU/twoGiB unchanged",
+  "normal_optimized_expected_bytes_identical": true,
+  "optional_entrywise_comparison": {
+    "status": "COMPLETE",
+    "scope": "16 complete symbolic coefficient records compared entrywise; not all58 author records",
+    "compared_records": [
+      "near second moment quadratic coefficient",
+      "complete near second moment quartic, including nonlinear mean",
+      "complete near third moment quartic",
+      "complete near fourth moment quartic",
+      "complete characteristic near trace jet 1",
+      "complete characteristic near trace jet 2",
+      "complete characteristic near trace jet 3",
+      "complete characteristic near trace jet 4",
+      "far second coefficient imaginary nonlinear mean",
+      "far second coefficient real balanced shape",
+      "full universal angular-mean-inward fixed-energy quartic",
+      "radius-parametric angular coefficient A",
+      "radius-parametric angular coefficient B",
+      "radius-parametric spectral coefficient C",
+      "credited one-plus-seven quartic baseline",
+      "positive-slope polynomial factor"
+    ],
+    "all_exact": true,
+    "author_fixture_sha256": "30e7a5c3bf9ef654f4972e9bd1e985021402d6b58fd2022691f58b4a7197ae93",
+    "author_executable_imported": false,
+    "independent_derivation_reads_no_fixture": true
+  },
+  "trust_boundary": "Ordinary written unformalized analytic proof plus exact coefficient arithmetic. Imported angular7496, retained cubic7707 and actual branch7777/local7819. Independent fine rescaling avoids separate unreviewed parabolic7916 support input; true-defect mechanism7984 reconstructed in writing. No effective thresholds or unrestricted first-power endpoint.",
+  "primary_literature": [
+    "https://arxiv.org/html/2609.19126",
+    "https://terrytao.wordpress.com/2026/08/12/a-digestion-of-the-proof-of-sendovs-conjecture/",
+    "https://arxiv.org/html/2508.10341v3"
+  ],
+  "proved_refinements": {
+    "C_min": "494325/16777216",
+    "K1_max": "615/896",
+    "L_min": "6400/199927",
+    "S_min": "76895/4194304",
+    "angular_orbit_cost": "15379/104857600",
+    "coarse_physical_inward_cost": "1/4",
+    "coarse_physical_mean_cost": "5/16",
+    "coarse_physical_split_cost": "3200/199927",
+    "full_first_power_small_energy": "F>=8+3(1-a)+E/2 with a common existential positive energy threshold"
+  },
+  "commands": {
+    "independent": "python3 -B sendov_full_radius_review1/audit.py --check sendov_full_radius_review1/expected.json",
+    "optimized": "python3 -B -O sendov_full_radius_review1/audit.py --check sendov_full_radius_review1/expected.json",
+    "optional_comparison": "python3 -B -O sendov_full_radius_review1/compare_coefficients.py",
+    "author_replay": "python3 -I -B -O sendov_degree9_full_radius_energy_minimizers/verify.py"
+  },
+  "later_complementary_context": {
+    "graph_ref": "bafkreihfm452xrv7zqsazt3rubn2t3q2dvmvmypj6mxco6cwybs63fflrm",
+    "height": 8084,
+    "source_commit": "74b263681ab01976993d64bafe3733caf62f7b5b",
+    "path": "sendov_degree9_five_level_displacement_bound/PROOF.md",
+    "bytes": 18934,
+    "sha256": "cd59dc14c86722d935433625049f93b377a4654d9fb0b02756376147ba600dd0",
+    "scope": "Full graph body and published statement/scope read only; max-displacement theorem not reviewed and not a premise."
+  }
+}
