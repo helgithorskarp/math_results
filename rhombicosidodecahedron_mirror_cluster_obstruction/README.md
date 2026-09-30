@@ -1,6 +1,28 @@
-# Rhombicosidodecahedron: local obstructions and adaptive receiver regions
+# Rhombicosidodecahedron: local obstructions and receiver regions
 
 **six-rupert-3 — researcher — updated 2026-09-30.**
+
+[DIRECTIONAL_TRANSPORT_PROOF.md](DIRECTIONAL_TRANSPORT_PROOF.md) sharpens the
+receiver criterion using the actual axial heights of supporting vertices.
+It includes the entire preceding adaptive criterion, excludes **every source
+orientation** in the closed threefold receiver caps of chord radius **1/100**,
+and certifies a larger closed receiver triangle containing the previous one
+with **163/30 times its unit-z chart area**. Its second corner has normal
+chord greater than **1/70** from the center; the whole triangle is excluded.
+Source roll, translation and scale at least one are arbitrary. The global
+non-Rupert conjecture remains open.
+
+Minimal normal transport of chord `x` moves a projected vertex by at most
+`|v.n0| x+R x^2/2`. All twelve center corner preimages have axial height
+`1/sqrt(3)`, and the four original ties of each long edge have height at most
+`sqrt(5/3)`. Exact gaps absorb all other vertices' larger heights for receiver
+normal chord at most `1/2`. Actual containment therefore forces the selected
+long-edge roll gap to be at most
+`E=(1/sqrt(3))a+sqrt(5/3)delta+(R/2)(a^2+delta^2)`.
+The inherited concavity argument and verified proper body/planar-half-turn
+gauge bound the full relative angle. This is a directional support estimate;
+the continuous proof uses it to certify receiver polygons, with no sampled
+source or receiver cover.
 
 [ADAPTIVE_RECEIVER_PROOF.md](ADAPTIVE_RECEIVER_PROOF.md) gives a sufficient
 exclusion criterion depending only on the receiver, and certifies a whole
@@ -98,6 +120,8 @@ From the repository root:
 
 ```sh
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/directional_transport_certificate.py --self-test
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/adaptive_receiver_certificate.py --self-test
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/linear_roll_certificate.py --self-test
@@ -112,6 +136,23 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/verify.py --self-test
 ```
+
+The directional command replays and compares the entire adaptive output,
+then regenerates the dodecagon, validates all 360 long-edge/vertex height
+and support checks, 216 excess-height gap comparisons, all twelve unique
+corner preimages, three proper axial body matrices, and six signed planar
+actions on all sixty projected vertices and twelve corner preimages.
+It checks thirteen general-criterion comparisons, seventeen cap comparisons,
+the inherited ten roll comparisons and the larger triangle's exact corner,
+containment and chart-area bounds. Eleven new malformed controls and all
+twenty-two inherited controls are rejected. Every byte must match
+[directional_transport_expected.json](directional_transport_expected.json),
+SHA256 `cda8f8555f21e41b412478adb776416a9161828e53f5dce77f51376adc250b33`.
+The first full replay took 47.78 seconds and 25,076 KiB peak child RSS,
+with one CPU job. The publication-copy replay with `-O -B` took 50.73
+seconds and 28,068 KiB; every output byte matched the same expected file.
+The displayed analytic proof establishes actual
+containment-to-roll transport and whole-polygon coverage.
 
 The adaptive command rechecks and compares the entire linear-roll output and
 its inherited diameter/sign-region/cell hypotheses. It regenerates all 120

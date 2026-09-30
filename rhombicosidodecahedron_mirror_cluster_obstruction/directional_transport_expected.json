@@ -1,0 +1,1195 @@
+{
+  "agent": "six-rupert-3",
+  "arbitrary_source_orientation_roll_translation_scale_ge_one": true,
+  "cap_constants": {
+    "checks": {
+      "center_chart_norm_below_twentyseven_over_twentyfive": true,
+      "chart_error_below_three_delta": true,
+      "directional_error_coefficients_valid": true,
+      "directional_error_within_roll_branch": true,
+      "factor_chords_below_one_tenth": true,
+      "full_angle_below_one": true,
+      "full_angle_coefficient_valid": true,
+      "perturbed_chart_norm_below_ten_over_nine": true,
+      "positive_radius": true,
+      "receiver_axial_value_above_one_half": true,
+      "receiver_stays_in_closed_ABD": true,
+      "sharp_center_ball_above_three_over_five": true,
+      "source_chord_coefficient_valid": true,
+      "strict_center_z_margin_allows_closed_cap": true,
+      "strict_chamber_separation_allows_closed_cap": true,
+      "strict_torque_margin_positive": true,
+      "support_remainder_coefficient_at_most_ten": true
+    },
+    "directional_long_support_error_upper": "112861/4000000",
+    "full_relative_angle_upper": "63/1000",
+    "receiver_normal_chord_radius": "1/100",
+    "source_normal_chord_upper": "23/1000",
+    "strict_torque_margin_lower": "3/200",
+    "unsimplified_full_relative_angle_upper": "24730961/400000000"
+  },
+  "cap_radius_improvement_over_adaptive_predecessor": 2,
+  "center_corner_preimages": [
+    {
+      "original_vertex": [
+        [
+          "-1",
+          "-2"
+        ],
+        [
+          "-1",
+          "0"
+        ],
+        [
+          "-1",
+          "0"
+        ]
+      ],
+      "projected_corner": [
+        [
+          "-1",
+          "-2"
+        ],
+        [
+          "-2/3",
+          "-1/3"
+        ],
+        [
+          "-1",
+          "1/3"
+        ]
+      ]
+    },
+    {
+      "original_vertex": [
+        [
+          "-1",
+          "-2"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "projected_corner": [
+        [
+          "-1",
+          "-2"
+        ],
+        [
+          "2/3",
+          "1/3"
+        ],
+        [
+          "1",
+          "-1/3"
+        ]
+      ]
+    },
+    {
+      "original_vertex": [
+        [
+          "0",
+          "-2"
+        ],
+        [
+          "-1",
+          "-1"
+        ],
+        [
+          "0",
+          "-1"
+        ]
+      ],
+      "projected_corner": [
+        [
+          "0",
+          "-2"
+        ],
+        [
+          "-2/3",
+          "-4/3"
+        ],
+        [
+          "0",
+          "-2/3"
+        ]
+      ]
+    },
+    {
+      "original_vertex": [
+        [
+          "0",
+          "-2"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "projected_corner": [
+        [
+          "0",
+          "-2"
+        ],
+        [
+          "2/3",
+          "4/3"
+        ],
+        [
+          "0",
+          "2/3"
+        ]
+      ]
+    },
+    {
+      "original_vertex": [
+        [
+          "-1",
+          "0"
+        ],
+        [
+          "-1",
+          "-2"
+        ],
+        [
+          "-1",
+          "0"
+        ]
+      ],
+      "projected_corner": [
+        [
+          "-1",
+          "0"
+        ],
+        [
+          "-4/3",
+          "-5/3"
+        ],
+        [
+          "-1",
+          "-1/3"
+        ]
+      ]
+    },
+    {
+      "original_vertex": [
+        [
+          "-1",
+          "0"
+        ],
+        [
+          "1",
+          "2"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "projected_corner": [
+        [
+          "-1",
+          "0"
+        ],
+        [
+          "4/3",
+          "5/3"
+        ],
+        [
+          "1",
+          "1/3"
+        ]
+      ]
+    },
+    {
+      "original_vertex": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "-1",
+          "-2"
+        ],
+        [
+          "-1",
+          "0"
+        ]
+      ],
+      "projected_corner": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "-4/3",
+          "-5/3"
+        ],
+        [
+          "-1",
+          "-1/3"
+        ]
+      ]
+    },
+    {
+      "original_vertex": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "2"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "projected_corner": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "4/3",
+          "5/3"
+        ],
+        [
+          "1",
+          "1/3"
+        ]
+      ]
+    },
+    {
+      "original_vertex": [
+        [
+          "0",
+          "2"
+        ],
+        [
+          "-1",
+          "-1"
+        ],
+        [
+          "0",
+          "-1"
+        ]
+      ],
+      "projected_corner": [
+        [
+          "0",
+          "2"
+        ],
+        [
+          "-2/3",
+          "-4/3"
+        ],
+        [
+          "0",
+          "-2/3"
+        ]
+      ]
+    },
+    {
+      "original_vertex": [
+        [
+          "0",
+          "2"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "projected_corner": [
+        [
+          "0",
+          "2"
+        ],
+        [
+          "2/3",
+          "4/3"
+        ],
+        [
+          "0",
+          "2/3"
+        ]
+      ]
+    },
+    {
+      "original_vertex": [
+        [
+          "1",
+          "2"
+        ],
+        [
+          "-1",
+          "0"
+        ],
+        [
+          "-1",
+          "0"
+        ]
+      ],
+      "projected_corner": [
+        [
+          "1",
+          "2"
+        ],
+        [
+          "-2/3",
+          "-1/3"
+        ],
+        [
+          "-1",
+          "1/3"
+        ]
+      ]
+    },
+    {
+      "original_vertex": [
+        [
+          "1",
+          "2"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "projected_corner": [
+        [
+          "1",
+          "2"
+        ],
+        [
+          "2/3",
+          "1/3"
+        ],
+        [
+          "1",
+          "-1/3"
+        ]
+      ]
+    }
+  ],
+  "closed_receiver_cap_chord_radius": "1/100",
+  "concavity_roll_branch": {
+    "checks": {
+      "angle_over_chord_bound_to_one_tenth": true,
+      "coarse_derivative_lower": true,
+      "coarse_support_upper": true,
+      "half_roll_cosine_above_ninety_nine_hundredths": true,
+      "long_derivative_lower": true,
+      "long_support_upper": true,
+      "near_identity_gap_per_chord_above_one": true,
+      "one_tenth_roll_chord_gap_above_threshold": true,
+      "pi_over_six_gap_above_threshold": true,
+      "sqrt_three_lower": true
+    },
+    "near_identity_support_slope_lower": "41/40",
+    "one_sided_error_threshold": "77/1000",
+    "one_tenth_chord_support_gap_lower": "533093/5000000",
+    "pi_over_six_support_gap_lower": "389063/5000000",
+    "roll_chord_per_error_upper": "1"
+  },
+  "directional_error_formula": "c0*a+sqrt(5/3)*delta+(R/2)*(a*a+delta*delta)",
+  "directional_receiver_and_whole_polygon_criterion_proved": true,
+  "general_criterion_constants": {
+    "checks": {
+      "beta_greater_than_four_over_twentyfive": true,
+      "c0_less_than_seven_over_twelve": true,
+      "c0_less_than_three_over_five": true,
+      "error_threshold_implies_receiver_chord_below_one_tenth": true,
+      "error_threshold_implies_receiver_chord_within_height_gap_audit": true,
+      "full_relative_angle_below_one": true,
+      "kappa_greater_than_one": true,
+      "kappa_less_than_thirteen_over_ten": true,
+      "old_adaptive_error_implies_both_chords_below_one_over_fifty": true,
+      "receiver_directional_coefficient_below_R": true,
+      "source_chord_below_one_tenth": true,
+      "source_directional_coefficient_below_R": true,
+      "vertex_radius_between_four_and_nine_over_two": true
+    },
+    "criterion_generalizes_every_previous_adaptive_receiver": true,
+    "unconditional_winning_region_source_chord_upper": "1111/12000"
+  },
+  "global_non_rupert_proved": false,
+  "inherited_adaptive_expected_sha256": "53c852471e2d787b8958f01cc6f6e1b5c210ce3ee2b3a524ddbe1a59e9514e98",
+  "inherited_adaptive_graph": "bafkreicsflhs33t2yft342slfzk46vnr55unjj3uf6pnmsaxmtgum6rvz4",
+  "inherited_linear_roll_graph": "bafkreih2r7gsrai6kr32c2vapf5v5debgmkr2ri3n2uysvdtmfgxp3mbtm",
+  "inherited_malformed_controls_replayed": 22,
+  "larger_receiver_triangle": {
+    "all_patch_axial_value_lower": "12854965297/25000000000",
+    "all_patch_chart_displacement_upper": "16666666667/1000000000000",
+    "all_patch_chart_norm_upper": "26761656733/25000000000",
+    "all_patch_normal_chord_upper": "7312357549/500000000000",
+    "checks": {
+      "all_factor_chords_below_one_tenth": true,
+      "axial_lower_clears_region_gap": true,
+      "common_sixty_vertex_strict_axial_signs": true,
+      "directional_error_within_roll_branch": true,
+      "nonnegative_source_deficit_bound": true,
+      "positive_normal_cap_cone_coefficient": true,
+      "receiver_chord_within_height_gap_audit": true,
+      "strict_torque_margin_positive": true,
+      "sum_of_factor_angles_below_one": true
+    },
+    "comparison_to_previous_triangle": {
+      "contains_entire_previous_receiver_triangle": true,
+      "second_corner_normal_chord_greater_than_one_over_seventy": true,
+      "spherical_area_ratio_claimed": false,
+      "strict_torque_margin_greater_than_one_over_twenty": true,
+      "unit_z_chart_area_ratio_to_previous_triangle": "163/30"
+    },
+    "corner_barycentric_coordinates_in_ABD": [
+      [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "1/60",
+          "1/60"
+        ],
+        [
+          "59/60",
+          "-1/60"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "19/20",
+          "0"
+        ],
+        [
+          "1/20",
+          "0"
+        ]
+      ]
+    ],
+    "corners": [
+      {
+        "all_sixty_axial_signs_match_center": true,
+        "axial_value": [
+          "577350269189/1000000000000",
+          "57735026919/100000000000"
+        ],
+        "chart_displacement": [
+          "0",
+          "0"
+        ],
+        "chart_norm": [
+          "1070466269319/1000000000000",
+          "26761656733/25000000000"
+        ],
+        "normal_chord": [
+          "0",
+          "0"
+        ],
+        "squared_axial_value": [
+          "1/3",
+          "0"
+        ],
+        "squared_axial_value_exceeds_nonoptimal_region_bound": true,
+        "u": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "2",
+            "-1"
+          ],
+          [
+            "1",
+            "0"
+          ]
+        ]
+      },
+      {
+        "all_sixty_axial_signs_match_center": true,
+        "axial_value": [
+          "12854965297/25000000000",
+          "514198611881/1000000000000"
+        ],
+        "chart_displacement": [
+          "8333333333/500000000000",
+          "16666666667/1000000000000"
+        ],
+        "chart_norm": [
+          "1064633087571/1000000000000",
+          "266158271893/250000000000"
+        ],
+        "normal_chord": [
+          "14624715097/1000000000000",
+          "7312357549/500000000000"
+        ],
+        "squared_axial_value": [
+          "36030725/114094441",
+          "-3624232/114094441"
+        ],
+        "squared_axial_value_exceeds_nonoptimal_region_bound": true,
+        "u": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "119/60",
+            "-1"
+          ],
+          [
+            "1",
+            "0"
+          ]
+        ]
+      },
+      {
+        "all_sixty_axial_signs_match_center": true,
+        "axial_value": [
+          "274713069063/500000000000",
+          "549426138127/1000000000000"
+        ],
+        "chart_displacement": [
+          "5020285397/500000000000",
+          "2008114159/200000000000"
+        ],
+        "chart_norm": [
+          "133578530527/125000000000",
+          "1068628244217/1000000000000"
+        ],
+        "normal_chord": [
+          "9229051413/1000000000000",
+          "4614525707/500000000000"
+        ],
+        "squared_axial_value": [
+          "707921/2244507",
+          "-18772/2244507"
+        ],
+        "squared_axial_value_exceeds_nonoptimal_region_bound": true,
+        "u": [
+          [
+            "-1/25",
+            "3/100"
+          ],
+          [
+            "193/100",
+            "-24/25"
+          ],
+          [
+            "1",
+            "0"
+          ]
+        ]
+      }
+    ],
+    "directional_long_support_error_upper": "2002085263321304803696657912813577997/50000000000000000000000000000000000000",
+    "entire_closed_receiver_triangle_excludes_every_source": true,
+    "full_relative_angle_upper": "437117936895179285173362449194171377697/5000000000000000000000000000000000000000",
+    "source_normal_chord_upper": "637831738831/20000000000000",
+    "strict_torque_margin_lower": "400263547727747538982924756004416925968153027016728751686023/7812500000000000000000000000000000000000000000000000000000000"
+  },
+  "long_edge_axial_heights_and_support_gaps": {
+    "all_long_edge_original_ties": 24,
+    "edges": [
+      {
+        "higher_height_strict_gap_comparisons": 36,
+        "outward_normal": [
+          [
+            "-2",
+            "-1"
+          ],
+          [
+            "1",
+            "3"
+          ],
+          [
+            "-1",
+            "2"
+          ]
+        ],
+        "tied_original_squared_axial_heights": [
+          [
+            "1/3",
+            "0"
+          ],
+          [
+            "1/3",
+            "0"
+          ],
+          [
+            "5/3",
+            "0"
+          ],
+          [
+            "5/3",
+            "0"
+          ]
+        ]
+      },
+      {
+        "higher_height_strict_gap_comparisons": 36,
+        "outward_normal": [
+          [
+            "2",
+            "1"
+          ],
+          [
+            "1",
+            "3"
+          ],
+          [
+            "-1",
+            "2"
+          ]
+        ],
+        "tied_original_squared_axial_heights": [
+          [
+            "1/3",
+            "0"
+          ],
+          [
+            "1/3",
+            "0"
+          ],
+          [
+            "5/3",
+            "0"
+          ],
+          [
+            "5/3",
+            "0"
+          ]
+        ]
+      },
+      {
+        "higher_height_strict_gap_comparisons": 36,
+        "outward_normal": [
+          [
+            "4",
+            "2"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "tied_original_squared_axial_heights": [
+          [
+            "1/3",
+            "0"
+          ],
+          [
+            "1/3",
+            "0"
+          ],
+          [
+            "5/3",
+            "0"
+          ],
+          [
+            "5/3",
+            "0"
+          ]
+        ]
+      },
+      {
+        "higher_height_strict_gap_comparisons": 36,
+        "outward_normal": [
+          [
+            "2",
+            "1"
+          ],
+          [
+            "-1",
+            "-3"
+          ],
+          [
+            "1",
+            "-2"
+          ]
+        ],
+        "tied_original_squared_axial_heights": [
+          [
+            "1/3",
+            "0"
+          ],
+          [
+            "1/3",
+            "0"
+          ],
+          [
+            "5/3",
+            "0"
+          ],
+          [
+            "5/3",
+            "0"
+          ]
+        ]
+      },
+      {
+        "higher_height_strict_gap_comparisons": 36,
+        "outward_normal": [
+          [
+            "-2",
+            "-1"
+          ],
+          [
+            "-1",
+            "-3"
+          ],
+          [
+            "1",
+            "-2"
+          ]
+        ],
+        "tied_original_squared_axial_heights": [
+          [
+            "1/3",
+            "0"
+          ],
+          [
+            "1/3",
+            "0"
+          ],
+          [
+            "5/3",
+            "0"
+          ],
+          [
+            "5/3",
+            "0"
+          ]
+        ]
+      },
+      {
+        "higher_height_strict_gap_comparisons": 36,
+        "outward_normal": [
+          [
+            "-4",
+            "-2"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "tied_original_squared_axial_heights": [
+          [
+            "1/3",
+            "0"
+          ],
+          [
+            "1/3",
+            "0"
+          ],
+          [
+            "5/3",
+            "0"
+          ],
+          [
+            "5/3",
+            "0"
+          ]
+        ]
+      }
+    ],
+    "higher_height_strict_gap_comparisons": 216,
+    "maximum_tied_squared_axial_height": "5/3",
+    "minimum_gap_over_excess_axial_height_lower": "618033988749/1154700538381",
+    "original_vertex_height_support_checks": 360,
+    "receiver_normal_chord_range": "1/2",
+    "regenerated_long_edges": 6
+  },
+  "new_malformed_controls_rejected": 11,
+  "proof_status": "unformalized_analytic_theorem_with_exact_finite_and_radical_hypotheses",
+  "proper_body_and_planar_halfturn_gauge": {
+    "actions": [
+      {
+        "body_matrix": [
+          [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "1",
+              "0"
+            ]
+          ]
+        ],
+        "planar_cosine": [
+          "-1",
+          "0"
+        ],
+        "planar_sine_over_axis_norm": [
+          "0",
+          "0"
+        ],
+        "source_planar_halfturn_sign": -1
+      },
+      {
+        "body_matrix": [
+          [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "1",
+              "0"
+            ]
+          ]
+        ],
+        "planar_cosine": [
+          "1",
+          "0"
+        ],
+        "planar_sine_over_axis_norm": [
+          "0",
+          "0"
+        ],
+        "source_planar_halfturn_sign": 1
+      },
+      {
+        "body_matrix": [
+          [
+            [
+              "-1/2",
+              "0"
+            ],
+            [
+              "0",
+              "-1/2"
+            ],
+            [
+              "1/2",
+              "-1/2"
+            ]
+          ],
+          [
+            [
+              "0",
+              "1/2"
+            ],
+            [
+              "1/2",
+              "-1/2"
+            ],
+            [
+              "-1/2",
+              "0"
+            ]
+          ],
+          [
+            [
+              "-1/2",
+              "1/2"
+            ],
+            [
+              "-1/2",
+              "0"
+            ],
+            [
+              "0",
+              "1/2"
+            ]
+          ]
+        ],
+        "planar_cosine": [
+          "1/2",
+          "0"
+        ],
+        "planar_sine_over_axis_norm": [
+          "-1/2",
+          "1/2"
+        ],
+        "source_planar_halfturn_sign": -1
+      },
+      {
+        "body_matrix": [
+          [
+            [
+              "-1/2",
+              "0"
+            ],
+            [
+              "0",
+              "-1/2"
+            ],
+            [
+              "1/2",
+              "-1/2"
+            ]
+          ],
+          [
+            [
+              "0",
+              "1/2"
+            ],
+            [
+              "1/2",
+              "-1/2"
+            ],
+            [
+              "-1/2",
+              "0"
+            ]
+          ],
+          [
+            [
+              "-1/2",
+              "1/2"
+            ],
+            [
+              "-1/2",
+              "0"
+            ],
+            [
+              "0",
+              "1/2"
+            ]
+          ]
+        ],
+        "planar_cosine": [
+          "-1/2",
+          "0"
+        ],
+        "planar_sine_over_axis_norm": [
+          "1/2",
+          "-1/2"
+        ],
+        "source_planar_halfturn_sign": 1
+      },
+      {
+        "body_matrix": [
+          [
+            [
+              "-1/2",
+              "0"
+            ],
+            [
+              "0",
+              "1/2"
+            ],
+            [
+              "-1/2",
+              "1/2"
+            ]
+          ],
+          [
+            [
+              "0",
+              "-1/2"
+            ],
+            [
+              "1/2",
+              "-1/2"
+            ],
+            [
+              "-1/2",
+              "0"
+            ]
+          ],
+          [
+            [
+              "1/2",
+              "-1/2"
+            ],
+            [
+              "-1/2",
+              "0"
+            ],
+            [
+              "0",
+              "1/2"
+            ]
+          ]
+        ],
+        "planar_cosine": [
+          "1/2",
+          "0"
+        ],
+        "planar_sine_over_axis_norm": [
+          "1/2",
+          "-1/2"
+        ],
+        "source_planar_halfturn_sign": -1
+      },
+      {
+        "body_matrix": [
+          [
+            [
+              "-1/2",
+              "0"
+            ],
+            [
+              "0",
+              "1/2"
+            ],
+            [
+              "-1/2",
+              "1/2"
+            ]
+          ],
+          [
+            [
+              "0",
+              "-1/2"
+            ],
+            [
+              "1/2",
+              "-1/2"
+            ],
+            [
+              "-1/2",
+              "0"
+            ]
+          ],
+          [
+            [
+              "1/2",
+              "-1/2"
+            ],
+            [
+              "-1/2",
+              "0"
+            ],
+            [
+              "0",
+              "1/2"
+            ]
+          ]
+        ],
+        "planar_cosine": [
+          "-1/2",
+          "0"
+        ],
+        "planar_sine_over_axis_norm": [
+          "-1/2",
+          "1/2"
+        ],
+        "source_planar_halfturn_sign": 1
+      }
+    ],
+    "all_corner_squared_axial_heights": "1/3",
+    "corner_preimage_action_checks": 72,
+    "projected_vertex_action_checks": 360,
+    "proper_body_matrices": 3,
+    "proper_body_vertex_permutation_checks": 180,
+    "signed_planar_rotation_actions": 6
+  },
+  "radical_enclosure_grid_denominator": 1000000000000,
+  "role": "researcher",
+  "unoriented_receiver_axes": 10
+}
