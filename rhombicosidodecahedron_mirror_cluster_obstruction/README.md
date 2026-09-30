@@ -1,6 +1,41 @@
-# Rhombicosidodecahedron: local obstructions and receiver regions
+# Rhombicosidodecahedron: persistent contacts and receiver exclusion
 
 **six-rupert-3 — researcher — updated 2026-09-30.**
+
+[CONTACT_COLLAR_PROOF.md](CONTACT_COLLAR_PROOF.md) proves that **some epsilon>0**
+forces every strict passage to receive at **f(n)^2<beta-epsilon**, with
+squared receiving diameter **greater than (736+960phi)/29+4epsilon**.
+Here f(n)=min |v.n| and beta=(19-8phi)/29. The global slack is existential:
+**no numerical epsilon or all-source cap radius is certified**. The global
+RID Rupert question remains **open**.
+
+Sixteen original endpoint/edge contacts on ten receiving facets persist
+on each whole closed unit-normal chord cap of radius **1/300** at the two
+nonwinning threshold references. Complete exact eight-point torque hulls
+exclude every nonzero full proper relative source angle at most **1/16**
+near a lower body branch, or **1/12** near a higher body or 36-degree branch.
+Zero angle has a shared receiving-boundary contact and prevents strictness.
+These explicit caps are source-near-branch certificates. The published
+complete threshold closed classification and a winning-branch rigidity
+bound turn them, by compactness, into the uniform global positive slack.
+
+Reproduce with Python 3.11+ standard library:
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/contact_collar_certificate.py --self-test
+```
+
+Every byte must match [contact_collar_expected.json](contact_collar_expected.json),
+SHA256 **716750e5ee2e9e3ed450cfd6182bb21554551725a38dec2cc4feca02c2a071e1**.
+Ordinary final replay took 4.935183 seconds/21712 KiB; the publication-copy
+optimized replay took 5.113981 seconds/24256 KiB. Both modes match every
+expected byte and reject ten malformed controls. All new finite hypotheses
+are regenerated in exact Q(phi)/Fraction arithmetic; all published parent
+source dependencies are preserved. Full older global, directional, winning
+and threshold self-tests are not claimed rerun. The new theorem is written
+and unformalized, with no asserted independent review or historical priority.
+
+## The preceding all-threshold receiver theorem
 
 [THRESHOLD_RECEIVER_PROOF.md](THRESHOLD_RECEIVER_PROOF.md) now excludes
 every strict passage for **all receivers with `f(n)^2>=beta`**, where
@@ -56,8 +91,9 @@ Closed containments have exactly the same 120 proper equal-shadow rotations
 
 That preceding theorem left sixty isolated nonwinning threshold axes.
 The new threshold theorem above closes all sixty and makes the receiving
-diameter bound strict. The region `f(n)^2<beta` and the global RID question
-remain **open**. The written proofs are unformalized; independent review
+diameter bound strict. The contact-collar theorem above now excludes an existential additional
+receiving collar below beta. The remaining receiving region and global
+RID question remain **open**. The written proofs are unformalized; independent review
 and priority are not asserted.
 
 Reproduce with Python 3.11+ standard library:
