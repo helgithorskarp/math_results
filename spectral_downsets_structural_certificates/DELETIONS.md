@@ -268,6 +268,12 @@ triangle. These are covered above. Thus five is the least coordinate
 order where this particular projection restriction can lose the cap.
 This minimality statement concerns the transport construction only.
 
+These two five-coordinate failure templates have other capped matrices.
+The C4 deletion retains the friendship graph F_2, whose different centered
+core is proved in [FRIENDSHIP.md](FRIENDSHIP.md). Deleting K4 minus an edge
+gives N=11,s=5, already covered by the equitable partition criterion
+N=1 modulo s. Neither failed inherited matrix obstructs cap feasibility.
+
 ## 7. Validation, dependencies, and next frontier
 
 [deletions.py](deletions.py) constructs (1), the rational criterion (3),
@@ -308,9 +314,10 @@ solver, floating-point inference, imported census, or missing completeness
 bridge is needed for the deletion theorems. The proofs are unformalized.
 
 The next mathematical question is whether different capped cores cover
-the dense cone graphs whose inherited projection fails (3), starting
-with the two five-coordinate templates (deleted C4 and K4 minus one
-edge), and split-graph families such as the 19-vertex example.
+further split-graph families whose inherited projection fails (3),
+starting with the 19-vertex example. Its pair graph is K2 joined to five
+independent leaves. The two smallest failure templates are repaired as
+described above.
 Formula (3) diagnoses this inherited template;
 it is not a universal nonexistence test. General H and unrestricted capped
 rank-two feasibility remain unresolved by this source.

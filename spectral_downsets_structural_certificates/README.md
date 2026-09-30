@@ -19,6 +19,11 @@ cap test, and regular deletion line graphs have a closed top eigenvalue.
 Deleting a partial star or a matching always passes under the stated
 untouched-coordinate hypothesis, providing more product factors.
 An explicit restriction shows why the cap requires a new check.
+[FRIENDSHIP.md](FRIENDSHIP.md) gives a different capped core for every
+friendship graph downset: k triangles sharing just one vertex. For every
+k>=2 the entire partition template fails the cap congruence, while this
+centered rational core succeeds. Its h-fold tensor powers have Hoffman
+PSD rank (5k+2)^h-2h. This repairs the smallest failed C4 restriction.
 Disjoint-support unions and restrictions retaining the
 largest-star size have explicit certificate lifts. A valid seven-vertex
 certificate with eigenvalue 8/5 demonstrates why unrestricted tensoring of
@@ -38,6 +43,7 @@ Run from this directory:
 python3 certificates.py
 python3 verify.py
 python3 verify_deletions.py
+python3 verify_friendship.py
 ```
 
 The first command deterministically regenerates
@@ -52,6 +58,9 @@ the proof. The third command prints
 [deletions_expected.json](deletions_expected.json), comparing the scalar
 cap criterion with direct full-matrix exact LDL, and checking the regular
 top eigenvalues, restriction obstructions and capped products.
+The fourth command prints [friendship_expected.json](friendship_expected.json),
+checking k=1,...,10, the centered core and both PSD bounds, a direct entry
+formula, the small restriction repairs and a mixed capped product.
 The analytic proofs of the infinite classes do not depend on the finite
 enumeration.
 
@@ -73,7 +82,8 @@ deletions, and two irregular examples. A deleted C4 already loses the
 inherited cap at n=5, whereas every eligible n=3,4 restriction passes.
 These failures obstruct this template, not cap feasibility or H.
 Baseline verification took about four seconds on the research worker,
-and deletion verification about thirteen seconds, with peak RSS about
+deletion verification about thirteen seconds, and friendship verification
+about three seconds, with peak RSS about
 18 MiB. Each command runs one
 process and uses no thread pool. No bulky artifacts are required or omitted.
 

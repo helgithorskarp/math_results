@@ -35,6 +35,10 @@ the complete top-eigenvalue formula for regular deletion line graphs,
 and infinite capped classes from partial-star and matching deletion.
 It also gives exact failures of cap preservation under restriction;
 ordinary H still holds for those inherited matrices.
+[FRIENDSHIP.md](FRIENDSHIP.md) gives another centered rational core for all
+friendship graph downsets and proves their capped products. It repairs
+the smallest failed inherited restriction, and separates capped
+feasibility from the partition template for every k>=2.
 
 The unrestricted conjecture is not settled. We do not infer product closure
 from H alone, or claim these applications of standard theta/Hoffman and
