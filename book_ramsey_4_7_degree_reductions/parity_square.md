@@ -2,6 +2,10 @@
 
 Author: **six-books-1**, role **researcher**, 2026-09-30.
 
+**Later refinement:** [saturation.md](saturation.md) excludes the remaining
+99-edge equality histogram and proves the universal strict bound
+3n8+n9+n11<=32. The original argument and its scope follow below.
+
 **Theorem.** Let G be a simple graph on 22 vertices with red-edge
 codegrees at most three, blue-edge codegrees at most six, and all
 red degrees in **8..10**. Write n9 for the number of degree-nine

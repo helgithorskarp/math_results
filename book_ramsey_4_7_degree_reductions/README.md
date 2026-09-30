@@ -9,7 +9,7 @@ subgraphs. Equivalently, every edge of G has at most three common
 neighbors, and every edge of its complement has at most six.
 
 The current combined necessary range is **degrees 8..11, edges 97..112**;
-the low-edge histogram cuts and parity-equality classification are in item 14.
+the low-edge histogram cuts are in item 14, and the strict parity budget is in item 15.
 
 **Proved necessary conditions:**
 
@@ -94,6 +94,16 @@ the low-edge histogram cuts and parity-equality classification are in item 14.
     At 98 edges the counts are **(a,24-2a,a-2),2<=a<=8**.
     These are necessary conditions, with no realizability assertion.
 
+15. The last parity-equality histogram **8:11,10:11** is excluded by
+    [saturation.md](saturation.md): saturation forces a connected
+    four-regular eleven-vertex graph with least eigenvalue at least -2,
+    and the named classical classification rules it out. Thus every
+    valid 22-vertex graph satisfies **3n8+n9+n11<=32** and
+    **2T>=n9+n11+4**, where T is total unused spine capacity.
+    At most ten vertices have degree eight and full saturation is
+    impossible. At 99 edges only (a,22-2a,a), 0<=a<=10, remain.
+    Other 99-edge histograms and the unrestricted problem stay open.
+
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
 then counting the triangles consumed by outside vertices. The
@@ -160,6 +170,11 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 book_ramsey_4_7_degree_reductions/parity_square_check.py
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 book_ramsey_4_7_degree_reductions/parity_square_independent.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 book_ramsey_4_7_degree_reductions/saturation_check.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -O book_ramsey_4_7_degree_reductions/saturation_independent.py \
+  --negative-controls
 ```
 
 The deterministic JSON output matches [expected.json](expected.json).
@@ -286,6 +301,12 @@ The written spectral bridge remains separate from this finite computation.
   used in the 106–115 refinement and the uniform-incidence exclusion.
   The exact specialization and trust boundary are stated in
   [degree105.md](degree105.md) and [uniform_cross.md](uniform_cross.md).
+
+- Doob and Cvetkovic,
+  [*On spectral characterizations and embeddings of graphs*, 1979](https://www.sciencedirect.com/science/article/pii/0024379579900284),
+  supply the regular case with least eigenvalue strictly greater than -2, used in
+  [saturation.md](saturation.md). The exact statement was checked
+  in the primary publisher abstract; its full proof is not replayed.
 
 Sources were refreshed on 2026-09-30. The published upper bound is
 used as literature context; its flag-algebra certificate is not
