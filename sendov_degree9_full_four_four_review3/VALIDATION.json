@@ -1,0 +1,178 @@
+{
+  "additional_weak_mean_coefficients": 23,
+  "agent": "six-reviewer-3",
+  "basis_inversion_scope": "every column of each distinct univariate cell blossom matrix; four tensor axes are then composed",
+  "date_utc": "2026-09-30",
+  "definition_controls": {
+    "count": 120,
+    "sha256": "f9a0a0e75da8b19fdc714b73e085e85dd641f821bd38b314912114fd73618a81"
+  },
+  "independently_generated_coefficients": 1485732,
+  "python_version": "3.11.2",
+  "role": "independent mathematical reviewer",
+  "runs": {
+    "author_secondary": {
+      "child_maxrss_kib": 135652,
+      "command": "python3 -I -B sendov_degree9_full_critical_four_four_first_power/verify.py",
+      "exit_code": 0,
+      "seconds": 85.7922682359931,
+      "stderr": "",
+      "stdout": "{\"all_cells_inverted\": true, \"all_envelope_entries_compared\": true, \"certified_coefficients\": 923763, \"envelope_cells\": 3, \"envelope_sha256\": \"ac0b613ac993e5366ba0d162206154cb83d1cfb9afa31241d2359cb7cf49af3c\", \"explicit_polynomial_control_checked\": true, \"gaussian_controls\": 144, \"physical_imbalance_constant_checked\": true, \"rejected_corruptions\": 7, \"result\": \"PASS\", \"weighted_sha256\": \"9a2b1eb8f424ce01ed16a6ac7e5f546b0534f7f0e88d1a30f3633054b9c3f355\"}\n"
+    },
+    "reviewer_normal": {
+      "child_maxrss_kib": 51816,
+      "command": "python3 -I -B sendov_degree9_full_four_four_review3/audit.py --expected sendov_degree9_full_four_four_review3/expected.json",
+      "exit_code": 0,
+      "seconds": 38.798306003038306,
+      "stderr": "",
+      "stdout": "{\"dependency_coefficients\": 561969, \"envelope_sha256\": \"ac0b613ac993e5366ba0d162206154cb83d1cfb9afa31241d2359cb7cf49af3c\", \"record_sha256\": \"bb180f3d7dfbc70e82b03d03af5309eea9a799df65424e2dff0276461de3dad0\", \"result\": \"PASS\", \"target_coefficients\": 923763, \"weak_mean_minimum\": \"8/9\", \"weighted_sha256\": \"9a2b1eb8f424ce01ed16a6ac7e5f546b0534f7f0e88d1a30f3633054b9c3f355\"}\n"
+    },
+    "reviewer_optimized": {
+      "child_maxrss_kib": 55000,
+      "command": "python3 -I -O -B sendov_degree9_full_four_four_review3/audit.py --expected sendov_degree9_full_four_four_review3/expected.json",
+      "exit_code": 0,
+      "seconds": 38.96953587397002,
+      "stderr": "",
+      "stdout": "{\"dependency_coefficients\": 561969, \"envelope_sha256\": \"ac0b613ac993e5366ba0d162206154cb83d1cfb9afa31241d2359cb7cf49af3c\", \"record_sha256\": \"bb180f3d7dfbc70e82b03d03af5309eea9a799df65424e2dff0276461de3dad0\", \"result\": \"PASS\", \"target_coefficients\": 923763, \"weak_mean_minimum\": \"8/9\", \"weighted_sha256\": \"9a2b1eb8f424ce01ed16a6ac7e5f546b0534f7f0e88d1a30f3633054b9c3f355\"}\n"
+    }
+  },
+  "secondary_author_fixture_comparisons": [
+    {
+      "cell": 0,
+      "common_fields_checked": [
+        "box",
+        "coefficients",
+        "degrees",
+        "minimum",
+        "minimum_positive",
+        "sha256",
+        "zeros",
+        "zeroth_c_minimum",
+        "zeroth_x_minimum"
+      ],
+      "complete_coefficient_sha256_matches": true,
+      "source": "target"
+    },
+    {
+      "cell": 1,
+      "common_fields_checked": [
+        "box",
+        "coefficients",
+        "degrees",
+        "minimum",
+        "minimum_positive",
+        "sha256",
+        "zeros",
+        "zeroth_c_minimum",
+        "zeroth_x_minimum"
+      ],
+      "complete_coefficient_sha256_matches": true,
+      "source": "target"
+    },
+    {
+      "cell": 2,
+      "common_fields_checked": [
+        "box",
+        "coefficients",
+        "degrees",
+        "minimum",
+        "minimum_positive",
+        "sha256",
+        "zeros",
+        "zeroth_c_minimum",
+        "zeroth_x_minimum"
+      ],
+      "complete_coefficient_sha256_matches": true,
+      "source": "target"
+    },
+    {
+      "cell": 3,
+      "common_fields_checked": [
+        "box",
+        "coefficients",
+        "degrees",
+        "minimum",
+        "minimum_positive",
+        "sha256",
+        "zero_indices_sha256",
+        "zeros",
+        "zeroth_c_minimum",
+        "zeroth_x_minimum"
+      ],
+      "complete_coefficient_sha256_matches": true,
+      "source": "target"
+    },
+    {
+      "cell": 4,
+      "common_fields_checked": [
+        "box",
+        "coefficients",
+        "degrees",
+        "minimum",
+        "minimum_positive",
+        "sha256",
+        "zero_indices_sha256",
+        "zeros",
+        "zeroth_c_minimum",
+        "zeroth_x_minimum"
+      ],
+      "complete_coefficient_sha256_matches": true,
+      "source": "target"
+    },
+    {
+      "cell": 5,
+      "common_fields_checked": [
+        "box",
+        "coefficients",
+        "degrees",
+        "minimum",
+        "minimum_positive",
+        "sha256",
+        "zero_indices_sha256",
+        "zeros",
+        "zeroth_c_minimum",
+        "zeroth_x_minimum"
+      ],
+      "complete_coefficient_sha256_matches": true,
+      "source": "target"
+    },
+    {
+      "cell": 0,
+      "complete_coefficient_sha256_matches": true,
+      "source": "unweighted functional premise"
+    },
+    {
+      "cell": 1,
+      "complete_coefficient_sha256_matches": true,
+      "source": "unweighted functional premise"
+    },
+    {
+      "cell": 2,
+      "complete_coefficient_sha256_matches": true,
+      "source": "unweighted functional premise"
+    },
+    {
+      "cell": 3,
+      "complete_coefficient_sha256_matches": true,
+      "source": "unweighted functional premise"
+    },
+    {
+      "cell": 4,
+      "complete_coefficient_sha256_matches": true,
+      "source": "unweighted functional premise"
+    },
+    {
+      "cell": 5,
+      "complete_coefficient_sha256_matches": true,
+      "source": "unweighted functional premise"
+    },
+    {
+      "cell": 6,
+      "complete_coefficient_sha256_matches": true,
+      "source": "unweighted functional premise"
+    }
+  ],
+  "simultaneous_cpu_intensive_math_jobs": 1,
+  "threads": 1,
+  "trust_boundary": "CPython arbitrary-precision integers/Fraction; independent inspected source and ordinary analytic proof; no formal kernel"
+}
