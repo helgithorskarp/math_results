@@ -1,0 +1,354 @@
+{
+  "agent": "six-tammes-1",
+  "cover": {
+    "auxiliary_four_five_restriction": "f2<=1 when n5=4 and all fives are ordinary",
+    "distributions": [
+      {
+        "allowed_H_codes": [],
+        "d41": 0,
+        "d42": 0,
+        "d51": 4,
+        "surviving_degree_profiles": 0
+      },
+      {
+        "allowed_H_codes": [],
+        "d41": 0,
+        "d42": 1,
+        "d51": 2,
+        "surviving_degree_profiles": 0
+      },
+      {
+        "allowed_H_codes": [],
+        "d41": 0,
+        "d42": 2,
+        "d51": 0,
+        "surviving_degree_profiles": 0
+      },
+      {
+        "allowed_H_codes": [],
+        "d41": 1,
+        "d42": 0,
+        "d51": 3,
+        "surviving_degree_profiles": 0
+      },
+      {
+        "allowed_H_codes": [],
+        "d41": 1,
+        "d42": 1,
+        "d51": 1,
+        "surviving_degree_profiles": 0
+      },
+      {
+        "allowed_H_codes": [],
+        "d41": 2,
+        "d42": 0,
+        "d51": 2,
+        "surviving_degree_profiles": 0
+      },
+      {
+        "allowed_H_codes": [
+          "000",
+          "001",
+          "011",
+          "100",
+          "101"
+        ],
+        "d41": 2,
+        "d42": 1,
+        "d51": 0,
+        "surviving_degree_profiles": 2
+      },
+      {
+        "allowed_H_codes": [],
+        "d41": 3,
+        "d42": 0,
+        "d51": 1,
+        "surviving_degree_profiles": 0
+      },
+      {
+        "allowed_H_codes": [
+          "000000",
+          "000001",
+          "000011",
+          "001100",
+          "001101",
+          "011110"
+        ],
+        "d41": 4,
+        "d42": 0,
+        "d51": 0,
+        "surviving_degree_profiles": 3
+      }
+    ],
+    "previous_colored_H_types": 11,
+    "previous_degree_profiles": 6,
+    "profiles": [
+      {
+        "H_codes": [
+          "000",
+          "001",
+          "011",
+          "100",
+          "101"
+        ],
+        "d41": 2,
+        "d42": 1,
+        "d51": 0,
+        "n3": 0,
+        "n4": 13,
+        "n5": 2
+      },
+      {
+        "H_codes": [
+          "000",
+          "001",
+          "011",
+          "100",
+          "101"
+        ],
+        "d41": 2,
+        "d42": 1,
+        "d51": 0,
+        "n3": 1,
+        "n4": 11,
+        "n5": 3
+      },
+      {
+        "H_codes": [
+          "000000",
+          "000001",
+          "000011",
+          "001100",
+          "001101",
+          "011110"
+        ],
+        "d41": 4,
+        "d42": 0,
+        "d51": 0,
+        "n3": 0,
+        "n4": 13,
+        "n5": 2
+      },
+      {
+        "H_codes": [
+          "000000",
+          "000001",
+          "000011",
+          "001100",
+          "001101",
+          "011110"
+        ],
+        "d41": 4,
+        "d42": 0,
+        "d51": 0,
+        "n3": 1,
+        "n4": 11,
+        "n5": 3
+      },
+      {
+        "H_codes": [
+          "000000",
+          "000001",
+          "000011",
+          "001100",
+          "001101",
+          "011110"
+        ],
+        "d41": 4,
+        "d42": 0,
+        "d51": 0,
+        "n3": 2,
+        "n4": 9,
+        "n5": 4
+      }
+    ],
+    "remaining_colored_H_types": 11,
+    "remaining_deficit_distributions": 2,
+    "remaining_degree_profiles": 5,
+    "removed_profiles": [
+      {
+        "H_codes": [
+          "000",
+          "001",
+          "011",
+          "100",
+          "101"
+        ],
+        "d41": 2,
+        "d42": 1,
+        "d51": 0,
+        "n3": 2,
+        "n4": 9,
+        "n5": 4
+      }
+    ],
+    "restriction": "mixed zero-triangle-four distribution has n3<=1"
+  },
+  "cyclic_frame_checks": {
+    "free_D_D_and_R_R_angle_contradiction": 16,
+    "free_D_R_opposite_pair_rejected": 32,
+    "labeled_cyclic_frames": 48
+  },
+  "four_five_matching_checks": {
+    "admissible_matchings": 7,
+    "conclusion": "Exactly four ordinary fives cannot occupy two double-five Qs",
+    "labeled_K2_2_contact_masks_checked": 16,
+    "matchings_by_edge_count": {
+      "0": 1,
+      "1": 4,
+      "2": 2
+    },
+    "maximum_T_five_corners": 14,
+    "maximum_two_five_T_faces": 4,
+    "ordinary_five_premise_explicit_on_auxiliary_interval": true,
+    "required_T_five_corners": 16
+  },
+  "labeled_boundary_checks": {
+    "counts": {
+      "e1_remaining_angle_frame_models": 36,
+      "e1_two_single_Q_opposites_exceed_Z0_boundary": 80,
+      "e2_insufficient_Y_for_any_required_D_opposite": 498,
+      "labeled_vectors_checked": 48048,
+      "s2e1_before_five_roles": 116,
+      "s2e1_column_matched": 116,
+      "s2e2_before_five_roles": 498,
+      "s2e2_column_matched": 600,
+      "s2e2_common_neighbor_rejected": 30,
+      "s2e2_nongraphical": 72,
+      "s4e2_column_matched": 5,
+      "s4e2_common_neighbor_rejected": 5
+    },
+    "e1_distinct_D_pair_patterns": 4,
+    "e2_model_histogram_by_possible_D_single_Q_opposites": {
+      "1": 288,
+      "2": 210
+    },
+    "not_an_embedding_enumeration": true,
+    "s6_forbidden_by_negative_W_W_QQ_edge_count": true,
+    "separated_R_labels_fixed_by_relabeling": true,
+    "zero_label_order": [
+      "U1",
+      "U2",
+      "Z0"
+    ]
+  },
+  "linear_angle_checks": {
+    "D_alpha_y_two_x_excess": [
+      "2",
+      "-7",
+      "1"
+    ],
+    "formal_variable_order": [
+      "pi",
+      "alpha",
+      "y"
+    ],
+    "sign_bridges_are_written_geometric_proofs": true,
+    "three_x_residual_delta": [
+      "-4",
+      "12",
+      "0"
+    ],
+    "two_x_residual": [
+      "-2",
+      "8",
+      "0"
+    ],
+    "two_x_residual_minus_two_zeta": [
+      "-2",
+      "2",
+      "2"
+    ],
+    "x": [
+      "2",
+      "-4",
+      "0"
+    ],
+    "z": [
+      "2",
+      "-2",
+      "-1"
+    ],
+    "zeta": [
+      "0",
+      "3",
+      "-1"
+    ]
+  },
+  "local_star_checks": {
+    "D_mask_histogram_by_Z_neighbors": {
+      "0": 4,
+      "1": 8,
+      "2": 4
+    },
+    "one_Z_D_edge_connection_checked_on_every_local_mask": true,
+    "one_triangle_four_masks": 16,
+    "ordinary_five_masks": 5,
+    "ordinary_four_histogram_by_Z_neighbors_and_extra_Q_fans": {
+      "(0, 0)": 4,
+      "(0, 1)": 2,
+      "(1, 0)": 4
+    },
+    "ordinary_four_masks": 10,
+    "zero_four_masks": 16,
+    "zero_three_masks": 8
+  },
+  "no_double_five_corner_checks": {
+    "admitted_opposite_assignments": 20,
+    "counts_by_marked_Z0_x_corners": {
+      "2": 12,
+      "3": 8
+    },
+    "even_global_x_occurrence_candidates": [
+      8
+    ],
+    "four_labeled_opposite_slots_checked": 81,
+    "geometric_elimination_of_both_k_values_is_written": true,
+    "global_x_occurrence_lower_bound": 8,
+    "global_x_occurrence_upper_bound": 9,
+    "late_Q_R_corner_count_vectors": [
+      [
+        2,
+        2,
+        2
+      ]
+    ],
+    "two_D_small_opposite_pairings": [
+      "D1/D2",
+      "D1/Z0 and D2/Z0"
+    ]
+  },
+  "polynomial_checks": {
+    "D_at_B2": -13,
+    "D_derivative_upper_bound": "-862/25",
+    "alpha_3pi8_square_margin": 17,
+    "auxiliary_sign_interval": "1/2<c<3/5",
+    "coefficient_order": "ascending powers of c",
+    "independent_sparse_complex_seventh_power_verified": true,
+    "proved_in_written_branch_argument": [
+      "y>7alpha-2pi",
+      "rho(z)>4alpha-pi"
+    ],
+    "seven_angle_positive_numerator": [
+      "-8",
+      "-8",
+      "80",
+      "16",
+      "-200",
+      "120"
+    ],
+    "shift_c": "1/2+v, 0<v<1/10",
+    "shifted_coefficients": [
+      "5/4",
+      "43/2",
+      "-46",
+      "-84",
+      "100",
+      "120"
+    ],
+    "strict_lower_bound": "P>5/4+(803/50)v>0",
+    "w_comparison_positive_gap": "2-A=(1-c)^2"
+  },
+  "role": "researcher",
+  "scope": "exact necessary corner/boundary cover; geometric eliminations written separately"
+}
