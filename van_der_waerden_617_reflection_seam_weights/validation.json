@@ -1,0 +1,92 @@
+{
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "complete_fresh_source_reproduction": true,
+  "phases": 617,
+  "all_guidance_finished_optimal": true,
+  "solver_used_only_for_discovery": true,
+  "solver_trusted_for_bound": false,
+  "fresh_reproduction_seconds": 795.4737047750386,
+  "peak_child_rss_kib": 53696,
+  "solver_seconds_limit_per_phase": 15,
+  "maximum_observed_generation_and_guidance_seconds": 2.8709923169808462,
+  "threads": 1,
+  "scope_limits": "CPU1/memory2GiB/tasks128 unchanged",
+  "generated_certificate_files": 617,
+  "generated_certificate_bytes_omitted": 9855886,
+  "exact_APs_checked": 1165716,
+  "exact_incidences_checked": 8160012,
+  "portable_complete_check": {
+    "same_entry_level_complete_results_python311_python312": true,
+    "seconds": 9.824394298018888,
+    "child_peak_rss_kib": 19180,
+    "minimum_phases": [
+      184,
+      201,
+      205,
+      269
+    ],
+    "maximum_bound_each_color": 208
+  },
+  "controls": {
+    "status": "EXACT_CHECKER_CONTROLS_PASSED",
+    "rejections": [
+      "zero denominator",
+      "zero step",
+      "negative weight",
+      "boolean weight",
+      "coordinate outside word",
+      "duplicate AP",
+      "overloaded position",
+      "wrong phase relation",
+      "wrong relative orientation",
+      "wrong modulus",
+      "unknown field",
+      "opposite color AP presented as color0",
+      "free pole in AP",
+      "incomplete family passed as complete",
+      "phase filename mismatch",
+      "trailing non-JSON data"
+    ],
+    "count": 16,
+    "positive_per_color": 201
+  },
+  "arithmetic": {
+    "status": "VERIFIED_REFERENCE_REFLECTION_AND_COMPLEMENT",
+    "phases": 617,
+    "point_reflections": 2285368,
+    "pointwise_complement_cases": 4563328,
+    "pole_histogram": {
+      "6": 616,
+      "8": 1
+    },
+    "reference_class_sizes": {
+      "phase1": [
+        1848,
+        1848
+      ],
+      "other616": [
+        1849,
+        1849
+      ]
+    }
+  },
+  "generator_version": "3.12.14",
+  "checker_portable_version": "3.11.2",
+  "native_dependencies": {
+    "highspy": "1.11.0",
+    "numpy": "2.2.6"
+  },
+  "no_external_peer_review_claimed": true,
+  "unformalized_bridges": [
+    "reference reflection",
+    "weighted hitting",
+    "integer rounding",
+    "class counts and candidate complement"
+  ],
+  "cached_replay_with_final_wrapper": {
+    "seconds": 55.23494848801056,
+    "child_peak_rss_kib": 18616,
+    "published_bounds_compared": true
+  }
+}

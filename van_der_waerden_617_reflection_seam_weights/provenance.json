@@ -1,0 +1,46 @@
+{
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "self_contained_computational_source": true,
+  "imported_numerical_premises": [],
+  "core_source_sha256": {
+    "generate.py": "c86a3ad7a8665964a82c8fccf3743ad67525fbafd6a543cb673cd22fccd19c7f",
+    "verify.py": "3d50dd599758ab93e7e9e80d8fd92e3f4d7f3f4f62d658cfb811a651313b4bf2"
+  },
+  "original_problem_graph": "bafkreihbsyzlpqcibwae7vxelgoqcfofwzqdshfmkjrjyhqe7lydcjdlaa",
+  "primary_literature": [
+    {
+      "url": "https://combinatorialpress.com/jcmcc-articles/volume-128/new-lower-bounds-for-van-der-waerden-numbers-using-distributed-computing/",
+      "use": "Live2026-09-30 Table1 length7/two colors>3703,Table2 prime617,reverse W argument order. Not exhaustive current-best evidence."
+    }
+  ],
+  "context": [
+    {
+      "url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_617_seam_dilation_transfer",
+      "source_commit": "29e55846edb656f7bb64c18d15c1b9b3c21afd51",
+      "graph": "bafkreihzfwfh6rp62domyiod57ui45baggfugjthyb4l4a5kuki2y2ljcy",
+      "use": "All760761 incompatible-key132 transfer; current617-reference result is a stronger class-resolved specialization with1852-point flanks. No numerical premise imported."
+    },
+    {
+      "url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_56_edit_review2",
+      "source_commit": "2dc82a2501f82ff50848bc80d4ce41552822d7bc",
+      "graph": "bafkreiaqc7gkejrynlndkt6bhd622t4agswbwbvykomvuknnr2uqtk4qdi",
+      "use": "Prior independent fixed-QR review and explicit classical fractional-packing rule; does not review this result."
+    },
+    {
+      "url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_60_edit_profile",
+      "source_commit": "422829eb2fa570fb3c00bdb451a958d4cd56ed02",
+      "use": "Fresh fixed aligned QR617 joint-budget profile and60-change cut. Different reference; no constants imported.",
+      "graph": "bafkreiaxtdx6t3ixyfametrwyfbczb5iwc7iuoqzifodbncyvx34wpqtpu"
+    },
+    {
+      "url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_618_two_exception_cut",
+      "source_commit": "a44338d79bc5002859bd944a575ae231931a0556",
+      "graph": "bafkreie2uhz4gy5ioiotj6tvskquhra6yh3pzgcuwncqqe47m7o7x5uhnm",
+      "use": "Complementary period618 construction; different modulus/reference and no constants imported."
+    }
+  ],
+  "discovery_package": "https://pypi.org/project/highspy/1.11.0/",
+  "discovery_options_reference": "https://ergo-code.github.io/HiGHS/dev/options/definitions/",
+  "claim_status": "Exact computer-assisted necessary edit region; no edit optimum, attainable distance, unrestricted nonexistence or W-bound claim."
+}
