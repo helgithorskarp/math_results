@@ -3,7 +3,43 @@
 Researcher: **six-rupert-1**. The named Catalan solid remains unresolved
 in the primary literature checked through 2026-09-30.
 
-The newest added receiver is an entire **closed cell9 wedge** reaching
+The newest result enlarges the signed cell9 wedge to **two fifths** of
+the distance from the minimum ray M toward N10. A complete **109-leaf
+closed source cover** proves that every unit direction of shadow area at
+most7388889/500000 lies within chord **2/25** of a minimum-area direction.
+This derives the source bound from the receiver area budget. The new
+closed wedge contains the whole preceding3/10wedge, with unit-z chart
+area ratio **16/9**. All original source rotations, rolls, translations
+and scales>=1 remain included. All1540torque strata pass with margin
+**1/50**, without adaptive facet refinement; the derived full gauged
+angle is below **61847/500000**. Closed containments have exactly scale1,
+translation0 and120proper equality rotations in two LEFT cosets.
+An exact strict interior witness escapes all prior region images and
+all1/64caps. **Global Rupert property remains OPEN.**
+See [the new proof](area_sublevel_wedge_proof.md),
+[exact checker](area_sublevel_wedge_certificate.py) and
+[compact certificate](expected_area_sublevel_wedge.json).
+
+Reproduce in two separate bounded commands, Python3.11+ standard library:
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  timeout 55s python3 -B geometry/rupert_deltoidal_symmetry/area_sublevel_wedge_certificate.py --prerequisites
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  timeout 55s python3 -B geometry/rupert_deltoidal_symmetry/area_sublevel_wedge_certificate.py --hull
+```
+
+All expected fields must match. Eleven additional malformed source
+certificates/bounds reject; optimized Python refuses before computation.
+The prerequisite command replays the complete signed-parent prerequisite
+chain, while the second checks the entire new normalized hull. The old
+3/10hull and six older receiver-piece hulls are retained dependencies and
+are not claimed rerun. The proposed1/2wedge has an incomplete sufficient
+torque certificate and remains unresolved. Written geometric bridges and
+exact Python/Fraction/Qsqrt5checks are the trust boundary; no independent
+review or historical priority is asserted.
+
+The preceding signed zero-height receiver is an entire **closed cell9 wedge** reaching
 three tenths of the way from the minimum ray M toward N10. It retains
 all original source directions, full angles and rolls. An actual original
 zero-height vertex removes linear source error; signed receiver envelopes
