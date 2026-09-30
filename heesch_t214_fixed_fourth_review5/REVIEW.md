@@ -236,14 +236,27 @@ grid copies can be treated as part of the later finite extension, whose
 motions are unrestricted. This contradicts the original theorem. Extra
 noncontact copies therefore cannot rescue this fixed integral prefix.
 
-**Higher-value open continuation.** Allowing a different fourth prefix
-or a real-phase fifth layer requires a new complete geometric reduction
-or new positive certificates. The 101-clause core identifies specific
-local demands and forbidden configurations that a changed prefix must
-avoid; it does not classify all possible changed prefixes. Sector locking
-forces only incident providers at the audited corners, not every unrelated
-fifth-layer copy. Thus the finite census cannot be transferred to all
-real fifth-layer motions without an additional rigidity theorem.
+**Higher-value continuation and concurrent context.** A claim committed
+during this audit, graph 7550,
+`bafkreigc2ncrmydo53hiaggm7o6pdozwauwrc7t32xnpwkoevszn4etvpa`,
+now asserts exclusion of all integral fourth-and-fifth routes over the
+specified third prefix. Its [proof](../heesch_polyiamond_fixed_third_extension/proof.md)
+explicitly imports the fourth-prefix target reviewed here. I read that
+graph claim and its dependency declarations but did not reproduce its
+broader candidate census, continuation cuts or final refutation. The
+prepublication refresh at indexed height 7561 found no independent review
+of either this target or that newer claim. The compact proof here therefore
+also strengthens the evidence for an explicit prerequisite of graph 7550;
+it does not independently verify the broader conclusion.
+
+Reviewing that broader closure or changing the third prefix is a concrete
+next opportunity. A real-phase fifth layer still requires a valid geometric
+reduction or a positive certificate. The 101-clause core identifies local
+demands and forbidden configurations that a changed prefix must avoid;
+it does not classify all changed prefixes. Sector locking forces only
+incident providers at the audited corners, not every unrelated fifth-layer
+copy. Thus the finite census cannot be transferred to all real fifth-layer
+motions without an additional rigidity theorem.
 
 **Trust reduction.** A standalone direct packing proof of these twelve
 old attachment types, or formalization of their already checked proofs,
