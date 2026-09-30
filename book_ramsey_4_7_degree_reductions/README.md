@@ -29,9 +29,14 @@ neighbors, and every edge of its complement has at most six.
    three. The exact attachment budget and its eight possible local
    degree histograms are in [capacity.md](capacity.md).
 6. There is **at most one degree-seven vertex**. If one exists,
-   **102 <= e(G) <= 115**, and every other degree is eight through
-   eleven. [two_degree7.md](two_degree7.md) gives the two-root proof
+   the earlier proof gives **102 <= e(G) <= 115**, and every other
+   degree is eight through eleven. [two_degree7.md](two_degree7.md) gives the two-root proof
    and its complete 553-case cubic-eight auxiliary classification.
+7. The sharper necessary window is **105 <= e(G) <= 115** whenever a
+   degree-seven vertex exists. [single_degree7.md](single_degree7.md)
+   proves this analytically, by an exact capacity identity and an
+   integer-defect projection argument, without assuming uniqueness.
+   Edge counts **97..104** and **116..121** require minimum degree eight.
 
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
@@ -49,8 +54,10 @@ These conditions do not settle whether a 22-vertex graph exists.
 The best located primary literature still has
 `22 <= R(B4,B7) <= 23`. See [capacity.md](capacity.md) for the
 analytic degree reductions and [two_degree7.md](two_degree7.md) for
-the subsequent degree-seven multiplicity restriction. [proof.md](proof.md)
-and [degree6.md](degree6.md) preserve the earlier independent proofs.
+the degree-seven multiplicity restriction and
+[single_degree7.md](single_degree7.md) for the sharper analytic edge
+window. [proof.md](proof.md) and [degree6.md](degree6.md) preserve the
+earlier independent proofs.
 
 ## Reproduction
 
@@ -66,6 +73,8 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 book_ramsey_4_7_degree_reductions/degree6_check.py
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 book_ramsey_4_7_degree_reductions/two_degree7_check.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 book_ramsey_4_7_degree_reductions/single_degree7_check.py
 ```
 
 The deterministic JSON output matches [expected.json](expected.json).
@@ -123,6 +132,18 @@ is a local computation, with no catalogue or solver dependency.
 The checker also reproduces the known KG(7,2) baseline (105 edges,
 red/blue edge-codegrees 3/5) and uses a split of it to control the
 14 by 7 Gram identity. That split is not a 22-vertex witness.
+
+The fifth command supports the analytic 105–115 edge-window refinement.
+It checks 9,408 mixed spines, 2,016 spines within a seven-vertex root
+neighborhood, and 1,344 row-defect identities by literal common-page
+counts on 96 controlled graphs. Its scalar audit covers 134,184 labeled
+states; two local generators agree on 167 boundary neighborhood graphs,
+and four incidence fixtures check the integer-defect projection argument.
+A known KG(7,2) split controls the saturated Gram and weighted row-defect
+identities. These are arithmetic controls for a written analytic proof;
+the proof uses no enumeration of witnesses or twofold triple systems.
+The output matches
+[single_degree7_expected.json](single_degree7_expected.json).
 
 ## Primary sources and baseline provenance
 
