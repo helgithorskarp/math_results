@@ -1,0 +1,187 @@
+#!/usr/bin/env python3
+"""Independent exact replay using direct sets and maximal clique enumeration."""
+import argparse
+import hashlib
+import itertools
+import json
+import time
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+SEED_HASH = "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d"
+
+
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
+def cliques(adjacency, active, target):
+    """All target-subsets of maximal cliques, with sound conflict-cover pruning."""
+    if target == 0:
+        return [()]
+    found = set()
+
+    def upper(vertices):
+        remaining = set(vertices)
+        count = 0
+        while remaining:
+            count += 1
+            group = set(remaining)
+            while group:
+                v = min(group)
+                remaining.remove(v)
+                group.remove(v)
+                group.difference_update(adjacency[v])
+        return count
+
+    def visit(selected, possible, excluded, budget):
+        budget[0] += 1
+        if budget[0] > 20_000 or (budget[0] % 128 == 0
+                                and time.monotonic() - budget[1] > 10):
+            raise RuntimeError("INCOMPLETE: independent enumeration limit")
+        if not possible and not excluded:
+            if len(selected) >= target:
+                found.update(itertools.combinations(sorted(selected), target))
+            return
+        if len(selected) < target and (len(selected) + len(possible) < target
+                                      or len(selected) + upper(possible) < target):
+            return
+        pivot = max(possible | excluded, key=lambda v: (len(possible & adjacency[v]), -v))
+        for vertex in sorted(possible - adjacency[pivot]):
+            child_budget = [0, time.monotonic()] if not selected else budget
+            visit(selected + [vertex], possible & adjacency[vertex],
+                  excluded & adjacency[vertex], child_budget)
+            possible.remove(vertex)
+            excluded.add(vertex)
+
+    visit([], set(active), set(), [0, time.monotonic()])
+    return sorted(found)
+
+
+def cover_count(adjacency, vertices):
+    remaining = set(vertices)
+    count = 0
+    while remaining:
+        count += 1
+        group = set(remaining)
+        while group:
+            vertex = min(group)
+            remaining.remove(vertex)
+            group.remove(vertex)
+            group.difference_update(adjacency[vertex])
+    return count
+
+
+def verify():
+    raw = (ROOT / "acl69.txt").read_bytes()
+    require(hashlib.sha256(raw).hexdigest() == SEED_HASH, "wrong seed hash")
+    rows = raw.decode("ascii").splitlines()
+    require(len(rows) == 69 and all(len(s) == 18 and set(s) <= set("01")
+                                  and s.count("1") == 5 for s in rows), "malformed seed")
+    seed = [frozenset(p for p, c in enumerate(s) if c == "1") for s in rows]
+    require(len(set(seed)) == 69
+            and min(2 * (5 - len(a & b)) for a, b in itertools.combinations(seed, 2)) == 6,
+            "invalid historical baseline")
+    cores = {(p, q): [w for w in seed if p not in w and q not in w]
+             for p, q in itertools.combinations(range(18), 2)}
+    minimum_pairs = {pair for pair, core in cores.items() if len(core) == min(map(len, cores.values()))}
+    coordinate17_pairs = {pair for pair in cores if 17 in pair}
+    supports = [pair for pair in cores if pair not in minimum_pairs | coordinate17_pairs]
+    require(len(cores) == 153 and len(minimum_pairs) == 82 and len(coordinate17_pairs) == 17
+            and not minimum_pairs & coordinate17_pairs and len(supports) == 54, "wrong complete partition")
+    require({size: sum(len(cores[pair]) == size for pair in supports) for size in (35, 36, 37)}
+            == {35: 35, 36: 18, 37: 1}, "wrong remaining core-size cohort")
+    universe = [frozenset(t) for t in itertools.combinations(range(18), 5)]
+    require(len(universe) == 8568, "wrong full universe")
+    cases = []
+    for p, q in supports:
+        core = cores[p, q]
+        words = [w for w in universe if w not in core and all(len(w & d) <= 2 for d in core)]
+        words.sort(key=lambda w: sum(1 << v for v in w))
+        n = len(words)
+        adjacency = [frozenset(j for j, b in enumerate(words) if i != j and len(a & b) <= 2)
+                     for i, a in enumerate(words)]
+        zeros = [i for i, w in enumerate(words) if p not in w and q not in w]
+        states = []
+        for selection in range(1 << len(zeros)):
+            chosen = [v for i, v in enumerate(zeros) if selection >> i & 1]
+            if any(len(words[a] & words[b]) >= 3 for a, b in itertools.combinations(chosen, 2)):
+                continue
+            h = len(chosen)
+            minimum = max(0, 50 - len(core) - h)
+            total = max(2 * minimum, 65 - len(core) - h)
+            require(len(core) + h + total == 65, "uncovered anchor size")
+            allowed = set(range(n))
+            for v in chosen:
+                allowed.intersection_update(adjacency[v])
+            branches = []
+            targets = [(a, b) for a, b in itertools.product(range(21), repeat=2)
+                       if a >= minimum and b >= minimum and a + b == total]
+            for p_target, q_target in targets:
+                point = p if p_target >= q_target else q
+                other = q if point == p else p
+                left_target, right_target = max(p_target, q_target), min(p_target, q_target)
+                left = {v for v in allowed if point in words[v] and other not in words[v]}
+                right = {v for v in allowed if other in words[v] and point not in words[v]}
+                families = cliques(adjacency, left, left_target)
+                digest = hashlib.sha256()
+                right_count = direct_queries = maximum = 0
+                queries, opposite_cache = set(), {}
+                for a in families:
+                    active = set(right)
+                    for v in a:
+                        active.intersection_update(adjacency[v])
+                    key = frozenset(active)
+                    if key not in opposite_cache:
+                        if len(opposite_cache) >= 256:
+                            opposite_cache.clear()
+                        opposite_cache[key] = cliques(adjacency, active, right_target)
+                    opposite = opposite_cache[key]
+                    digest.update((json.dumps([a, opposite], separators=(",", ":")) + "\n").encode())
+                    right_count += len(opposite)
+                    for b in opposite:
+                        anchor = set(chosen) | set(a) | set(b)
+                        require(len(anchor) == h + total and len(core) + len(anchor) == 65,
+                                "wrong anchor size or overlapping parts")
+                        available = set(range(n))
+                        for v in anchor:
+                            available.intersection_update(adjacency[v])
+                        available.difference_update(zeros)
+                        key = frozenset(available)
+                        maximum = max(maximum, len(available))
+                        if key not in queries:
+                            if cover_count(adjacency, available) > 4:
+                                direct_queries += 1
+                            require(not cliques(adjacency, available, 5),
+                                    "compatible anchor has an extension to70")
+                            queries.add(key)
+                branches.append({"p_target": p_target, "q_target": q_target,
+                                 "enumerated_first": point, "left_families": len(families),
+                                 "right_families": right_count, "extension_queries": len(queries),
+                                 "direct_extension_queries": direct_queries,
+                                 "maximum_extension_words": maximum,
+                                 "families_sha256": digest.hexdigest()})
+            states.append({"zero_selection": selection, "zero_count": h,
+                           "minimum_pure_count": minimum, "pure_total": total, "branches": branches})
+        cases.append({"coordinates": [p, q], "core_size": len(core), "residual_words": n,
+                      "zero_words": len(zeros), "states": states})
+        print(json.dumps({"independently_checked_pair": [p, q], "core_size": len(core)}), flush=True)
+    return {"schema": "acl69-all-pair-core-report-v1", "seed_sha256": SEED_HASH,
+            "new_pairs": len(cases), "previous_minimum_pairs": len(minimum_pairs),
+            "previous_coordinate17_pairs": len(coordinate17_pairs), "all_pair_cores": len(cores), "cases": cases}
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--expect", type=Path, default=ROOT / "expected.json")
+    args = parser.parse_args()
+    result = verify()
+    require(result == json.loads(args.expect.read_text()), "independent replay differs from expected report")
+    print(json.dumps({"verified_new_pairs": result["new_pairs"],
+                      "all_pair_cores": result["all_pair_cores"],
+                      "completion_maximum": 69, "omitted_seed_transversal_lower_bound": 3}))
+
+
+if __name__ == "__main__":
+    main()
