@@ -1,0 +1,142 @@
+{
+  "agent": "six-heesch-1",
+  "dependency_crosscheck": {
+    "kaplan17": {
+      "conditional_upper_from_blocking_radius10": 81,
+      "contact_distances_equal_levels": true,
+      "contact_edges": 89,
+      "copies": 36,
+      "independent_arrangement_prefixes": [
+        {
+          "boundary_components": 1,
+          "disc": true,
+          "foreground_components": 1,
+          "level": 0,
+          "nonmanifold_vertices": 0,
+          "tiles": 1
+        },
+        {
+          "boundary_components": 1,
+          "disc": true,
+          "foreground_components": 1,
+          "level": 1,
+          "nonmanifold_vertices": 0,
+          "tiles": 6
+        },
+        {
+          "boundary_components": 1,
+          "disc": true,
+          "foreground_components": 1,
+          "level": 2,
+          "nonmanifold_vertices": 0,
+          "tiles": 12
+        },
+        {
+          "boundary_components": 1,
+          "disc": true,
+          "foreground_components": 1,
+          "level": 3,
+          "nonmanifold_vertices": 0,
+          "tiles": 17
+        }
+      ],
+      "mesh_budget": 101,
+      "nonconsecutive_contacts_absent": true
+    },
+    "pixel_geometry_comparisons": [
+      {
+        "name": "original",
+        "prefixes": [
+          {
+            "cells": 4,
+            "diagonal_pinches": 0,
+            "euler": 1,
+            "holes": 0,
+            "level": 0,
+            "tiles": 1
+          },
+          {
+            "cells": 28,
+            "diagonal_pinches": 0,
+            "euler": 1,
+            "holes": 0,
+            "level": 1,
+            "tiles": 6
+          }
+        ]
+      },
+      {
+        "name": "compressed",
+        "prefixes": [
+          {
+            "cells": 81,
+            "diagonal_pinches": 0,
+            "euler": 1,
+            "holes": 0,
+            "level": 0,
+            "tiles": 1
+          },
+          {
+            "cells": 567,
+            "diagonal_pinches": 0,
+            "euler": 1,
+            "holes": 0,
+            "level": 1,
+            "tiles": 6
+          }
+        ]
+      }
+    ]
+  },
+  "fractional_example": {
+    "compressed_prefixes": [
+      {
+        "boundary_components": 1,
+        "disc": true,
+        "foreground_components": 1,
+        "level": 0,
+        "nonmanifold_vertices": 0,
+        "tiles": 1
+      },
+      {
+        "boundary_components": 1,
+        "disc": true,
+        "foreground_components": 1,
+        "level": 1,
+        "nonmanifold_vertices": 0,
+        "tiles": 6
+      }
+    ],
+    "contact_graph_preserved": true,
+    "copies": 7,
+    "copy_budget": 9,
+    "flooring_corona_failure": "incomplete surround",
+    "prefixes": [
+      {
+        "boundary_components": 1,
+        "disc": true,
+        "foreground_components": 1,
+        "level": 0,
+        "nonmanifold_vertices": 0,
+        "tiles": 1
+      },
+      {
+        "boundary_components": 1,
+        "disc": true,
+        "foreground_components": 1,
+        "level": 1,
+        "nonmanifold_vertices": 0,
+        "tiles": 6
+      }
+    ],
+    "whole_cell_requirement_detected": "incomplete whole-cell coverage"
+  },
+  "integer_threshold_floor_inequalities": 2245,
+  "invalid_inputs_rejected": 5,
+  "nonoverlap_floor_pairs": 2520,
+  "phase_order_pairs": 1250,
+  "role": "researcher",
+  "rooted_independent_row_covers": 25,
+  "scope": "finite exact diagnostics; universal geometry is proved in proof.md",
+  "shifted_rectangular_whole_covers": 100
+}
