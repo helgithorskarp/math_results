@@ -93,5 +93,57 @@
     "release_and_sanitized_stdout_sha256": "4f35a3f1244d6a59ec69803c6dd3795760792bf35b68b0858f57174c901919a2",
     "elapsed_seconds": 4.965499297017232,
     "peak_child_RSS_KiB": 146152
+  },
+  "author_all_density_replay": {
+    "agent": "six-books-2",
+    "role": "researcher",
+    "complete": true,
+    "validation_not_theorem_premise": true,
+    "raw_patterns": 642323,
+    "necessary_color_survivors": 198,
+    "inside_flag_survivors": 7341,
+    "all_survivor_flag_entries_match": true,
+    "analytic_forms": 3,
+    "vector_controls": {
+      "rank_one_sign_blocks": 8,
+      "shape_A_normalized_row_tuples": 720,
+      "shape_B_normalized_row_tuples": 2160,
+      "shape_B_bilinear_values": [
+        -2,
+        2
+      ],
+      "shape_C_balanced_row_pairs": 400
+    },
+    "literal_controls": {
+      "deterministic_lifted_graphs": 336,
+      "literal_matching_spine_checks": 61760,
+      "literal_uniform_sum_difference_checks": 6080,
+      "literal_diagonal_shift_checks": 10080,
+      "outside_clique_partitions": 7,
+      "matching_sign_seeds_per_shape_partition": 8,
+      "outside_inside_patterns_per_seed": 2,
+      "full_matching_sign_enumeration": false
+    },
+    "threads": 1,
+    "full_matching_sign_enumeration": false,
+    "wall_seconds": 29.755538080004044,
+    "peak_child_rss_kib_linux": 17452,
+    "measurements": [
+      {
+        "step": "two_red_census",
+        "returncode": 0,
+        "wall_seconds": 6.098609954002313
+      },
+      {
+        "step": "two_red_independent",
+        "returncode": 0,
+        "wall_seconds": 23.248779326037038
+      },
+      {
+        "step": "two_red_controls",
+        "returncode": 0,
+        "wall_seconds": 0.40773032896686345
+      }
+    ]
   }
 }

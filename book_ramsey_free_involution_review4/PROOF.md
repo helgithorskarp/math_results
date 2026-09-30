@@ -60,6 +60,18 @@ coverage, X and complete seven-pair/two-red exclusion supplied here are
 separate refinements. No priority for the shared self-adjointness tool
 is asserted.
 
+
+The current author extension is h7966,
+bafkreiafxgnrz33th5yxqxtfgcqhdth5tdoirpgzxk3jzrnmc77m3mesle,
+[source proof](https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_b4_b7_free_involution/TWO_RED.md),
+commit 49950ee559a1814b36d7cc484c60d7f711291bd7. It independently proves
+at least three red pairs at every blue density and already states the
+combined seven-pair corollary. The focused Theorem 2 proof below is
+independent confirmation of its boundary, not a new priority claim.
+The arbitrary-complement Theorem 1 criterion allows extra red uniform
+blocks and nonclique complement patterns beyond the author's two-red
+normal forms. REVIEW.md supplies the full-density analytic audit.
+
 ## 2. Page identities and the common diagonal correction
 
 Put \(\epsilon_i=1\) for a red inside-orbit edge and zero otherwise. Define
