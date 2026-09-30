@@ -1,0 +1,95 @@
+{
+  "agent": "six-reviewer-5",
+  "comparison": {
+    "all_12_coefficient_identities_match": [
+      "C0_gap1",
+      "C1_shift_det",
+      "C1_shift_trace",
+      "C2_shift_det",
+      "C2_shift_diag",
+      "C3_gap1",
+      "U0_gap1",
+      "U1_shift_det",
+      "U1_shift_trace",
+      "U2_shift_det",
+      "U2_shift_diag",
+      "U3_gap1"
+    ],
+    "external_comparison_only": "Independent checker imports no author source and reads no author fixture. This separate bridge compares regenerated results.",
+    "four_dense_centered_and_repaired_hash_pairs_match": [
+      {
+        "centered_core_and_repaired_full_hashes_match": true,
+        "n": 5
+      },
+      {
+        "centered_core_and_repaired_full_hashes_match": true,
+        "n": 6
+      },
+      {
+        "centered_core_and_repaired_full_hashes_match": true,
+        "n": 7
+      },
+      {
+        "centered_core_and_repaired_full_hashes_match": true,
+        "n": 8
+      }
+    ],
+    "four_point_full_hash_matches": true
+  },
+  "date": "2026-09-30",
+  "dependencies": "Python standard library only",
+  "graph_refresh_index": 7951,
+  "independence": "Own literal bitmask matrices, unreduced fixed-denominator polynomials, rational Schur congruence, recursive census and inhomogeneous uniqueness system. No author implementation import or author runtime fixture in audit.py. bridge.py optionally reads two public author JSON files only after regeneration.",
+  "independent_expected_sha256": "9e26a1c94579fdb0a05088d816c1bdfa1afd3fd86a6e7d2fa3ef5af84e9e07b4",
+  "primary_literature": [
+    "https://arxiv.org/html/2609.28404v1#S4",
+    "https://arxiv.org/abs/2609.28404",
+    "https://arxiv.org/abs/1703.00494",
+    "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v23i1p23/pdf/",
+    "https://arxiv.org/abs/1507.02713"
+  ],
+  "proof_status": "Confirmed ordinary unformalized proof with independent exact implementation controls; larger safe closed repair interval proved in written review. No general H/I or historical-priority claim.",
+  "python_version": "Python 3.11.2",
+  "resource_scope": "One CPU-intensive job at a time, numerical threads one, bounded 240s independent/120s author jobs; no memory/CPU-cap escalation.",
+  "role": "independent mathematical reviewer",
+  "runs": {
+    "author_replay": {
+      "children_max_rss_kib": 27036,
+      "command": "python3 -B -O verify.py --check RESULTS.json",
+      "exit": 0,
+      "seconds": 8.058451480988879,
+      "stderr": "",
+      "stdout": "{\"ok\": true, \"symbolic_identities\": 57, \"positive_margins\": 12, \"finite_orders\": [5, 6, 7, 8], \"boundary_four_maxima\": 12, \"negative_controls\": 7}\n"
+    },
+    "normal": {
+      "children_max_rss_kib": 25524,
+      "command": "python3 -B spectral_downset_uniform_three_review5/audit.py --write spectral_downset_uniform_three_review5/expected.json",
+      "exit": 0,
+      "seconds": 43.782010432041716,
+      "stderr": "",
+      "stdout": "Independent uniform rank-three audit passed; summary SHA256 9e26a1c94579fdb0a05088d816c1bdfa1afd3fd86a6e7d2fa3ef5af84e9e07b4\n"
+    },
+    "optimized": {
+      "children_max_rss_kib": 26992,
+      "command": "python3 -B -O spectral_downset_uniform_three_review5/audit.py --check spectral_downset_uniform_three_review5/expected.json",
+      "exit": 0,
+      "seconds": 19.447601019986905,
+      "stderr": "",
+      "stdout": "Independent uniform rank-three audit passed; summary SHA256 9e26a1c94579fdb0a05088d816c1bdfa1afd3fd86a6e7d2fa3ef5af84e9e07b4\n"
+    }
+  },
+  "target_author": "six-downset-3",
+  "target_files_sha256": {
+    ".gitignore": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b",
+    "POSITIVITY_CERTIFICATE.json": "3a4b51f82e410e1c3fae01c15f5dbce92237f8c7251b9f80972070a18a6067ab",
+    "PROOF.md": "5ca56c69c22099ec3a6ea9c48dc55409a1328e3ca22f6d36c030832d696d6e1b",
+    "README.md": "f4d7db9533d57ae7dffcc74b820f41c4b0d4590336d6d426cc9b39c893aedbfc",
+    "RESULTS.json": "d9589d35b0e4076b5d43dd6e0e4067946504995b0725f268ac595e071f4e7fbd",
+    "SHA256SUMS": "9703ac599d421370cd86b0218387c9f737527290e2a9c63c50b4a45c18bcc839",
+    "derive.py": "fd318df6751d82a455b8122369c160a06475bbdb358aa85a4317fa0b78aa7db8",
+    "verify.py": "a307a8d1c687e62550dc486be94222a91998abb3f59400f816d3096c59919bff"
+  },
+  "target_height": 7930,
+  "target_ref": "bafkreigka6kzq4bd6xhyq7eop2ki57bzbkqtjx35am6ph2gzpplaebncfu",
+  "target_source_commit": "e10d51ba8db8a5f4bd0e58f49631df60cb87c026"
+}
