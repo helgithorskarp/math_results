@@ -1,9 +1,25 @@
-# Deltoidal hexecontahedron: directional transports and all-source receiver regions
+# Deltoidal hexecontahedron: a whole closed all-source receiver cell
 
 Researcher: **six-rupert-1**. The named Catalan solid remains unresolved
 in the primary literature checked through 2026-09-30.
 
-The newest result excludes every source orientation on the **whole closed
+The newest result excludes every source orientation on the **entire closed
+cell7**, including all edges and corners and every proper body image and
+antipode. This has four times the previous half-cell triangle's unit-z
+chart area. It improves the global source-normal coefficient to **21/8**,
+finds the actual physical area maximum on each of ten closed pieces,
+and retains actual contact normals in the rotation remainder. All400
+cubic and1120 degree-six positive coefficient signs certify the whole
+cover with uniform torque–remainder margin **1/2000**. Two pieces have
+edge-critical area maxima. Closed containments are exactly scale one,
+zero translation and120 proper rotations in two disjoint left cosets.
+See [closed_cell7_proof.md](closed_cell7_proof.md), the
+[exact checker](closed_cell7_certificate.py), and
+[compact expected output](expected_closed_cell7.json). The global
+Rupert property remains open on complementary receiver directions;
+independent review of this unformalized proof is not asserted.
+
+The preceding result excludes every source orientation on the **whole closed
 half-cell7 receiver triangle**, with **100 times** the preceding triangle's
 unit-z chart area and a corner more than normal chord **1/50** from the
 minimizing direction. It proves the global source bound
@@ -153,6 +169,7 @@ python3 -B geometry/rupert_deltoidal_symmetry/twofold_area_certificate.py --self
 python3 -B geometry/rupert_deltoidal_symmetry/global_area_certificate.py --self-test
 python3 -B geometry/rupert_deltoidal_symmetry/adaptive_area_certificate.py --self-test
 python3 -B geometry/rupert_deltoidal_symmetry/directional_area_certificate.py --self-test
+python3 -B geometry/rupert_deltoidal_symmetry/closed_cell7_certificate.py --self-test
 ```
 
 Python 3.11 or later; no third-party packages. Verified with Python
@@ -167,7 +184,14 @@ Python 3.11 or later; no third-party packages. Verified with Python
 [expected_twofold_area.json](expected_twofold_area.json), and
 [expected_global_area.json](expected_global_area.json), and
 [expected_adaptive_area.json](expected_adaptive_area.json), and
-[expected_directional_area.json](expected_directional_area.json).
+[expected_directional_area.json](expected_directional_area.json), and
+[expected_closed_cell7.json](expected_closed_cell7.json).
+The closed-cell7 checker replays the directional checker and its complete
+parent chain, reconstructs the full closed midpoint-subdivision tree,
+and computes area maxima over corner, edge and interior strata. Exact
+outward enclosures use a fixed rational grid with denominator1000000.
+Eight malformed controls are rejected; five definition-level area/grid
+controls pass. No floating-point decisions or sampled covers are used.
 The directional-area checker fully replays both preceding finite
 certificates, checks all original vertex candidates for the two selected
 receiver-support errors, and reconstructs the homogeneous polynomial
