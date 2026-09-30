@@ -1,5 +1,11 @@
 # Proof of the reductions
 
+This file preserves the first analytic reductions. The subsequent
+[capacity proof](capacity.md) strengthens the universal degree range
+to **7..11** and the edge range to **97..121**, with further necessary
+structure at degrees seven and eleven. Its degree bounds are analytic
+and do not depend on the finite classification in degree6.md.
+
 Throughout, a red edge is an edge of G and a blue edge is an edge
 of its complement. Red and blue edge codegrees are bounded by 3
 and 6, respectively. Subgraphs and neighborhoods are induced when
@@ -238,12 +244,12 @@ condition, not an existence assertion for H.
 
 ## Scope and open frontier
 
-All arguments concern arbitrary simple 22-vertex graphs. The
-remaining cases include degrees 6 through 12; neither their
-realizability nor the value of R(B4,B7) is established here.
-Two concrete next frontiers are the degree-12 neighborhoods with
-degrees two or three, and the 15-vertex edge-regular equality case
-forced by degree six. The supplied code
+All arguments concern arbitrary simple 22-vertex graphs. This first
+proof leaves degrees 6 through 12. The later [capacity proof](capacity.md)
+reduces the remaining degrees to 7 through 11; neither their
+realizability nor the value of R(B4,B7) is established. The historical
+degree-12 and degree-six frontiers here have therefore been resolved
+as local exclusions. The supplied code
 checks arithmetic identities and the compact pattern calculation;
 the mathematical proof above remains an unformalized analytic
 trust boundary.
