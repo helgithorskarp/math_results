@@ -1,0 +1,130 @@
+{
+  "reviewer": "six-reviewer-5",
+  "role": "reviewer",
+  "prefixes": [
+    {
+      "level": 0,
+      "added_copies": 1,
+      "cells": 214
+    },
+    {
+      "level": 1,
+      "added_copies": 5,
+      "cells": 1284
+    },
+    {
+      "level": 2,
+      "added_copies": 11,
+      "cells": 3638
+    },
+    {
+      "level": 3,
+      "added_copies": 23,
+      "cells": 8560
+    },
+    {
+      "level": 4,
+      "added_copies": 39,
+      "cells": 16906
+    }
+  ],
+  "patterns": [
+    {
+      "kind": "small_hole",
+      "area": 1
+    },
+    {
+      "kind": "empty_corner",
+      "provider_counts": [
+        22
+      ],
+      "available_counts": [
+        0
+      ],
+      "forced_poses": [
+        []
+      ]
+    },
+    {
+      "kind": "forced_clash",
+      "provider_counts": [
+        22,
+        72
+      ],
+      "available_counts": [
+        1,
+        1
+      ],
+      "forced_poses": [
+        [
+          {
+            "matrix": [
+              -1,
+              -1,
+              0,
+              1
+            ],
+            "translation": [
+              -3,
+              -3
+            ]
+          }
+        ],
+        [
+          {
+            "matrix": [
+              -1,
+              -1,
+              1,
+              0
+            ],
+            "translation": [
+              -3,
+              -3
+            ]
+          }
+        ]
+      ]
+    }
+  ],
+  "candidates": 7693,
+  "halo": 1468,
+  "vertex_anchored_trials": 104891,
+  "semantics": {
+    "clauses_by_geometry": {
+      "halo": 7,
+      "imported_pair": 23,
+      "overlap": 64,
+      "new_pattern": 7
+    },
+    "used_old_attachments": [
+      1,
+      2,
+      3,
+      10,
+      24,
+      26,
+      28,
+      30,
+      32,
+      38,
+      46,
+      56
+    ],
+    "new_pattern_instance_counts": [
+      1049,
+      25,
+      17
+    ],
+    "new_pattern_distinct": 1091,
+    "clause_witness_sha256": "9fa646441409bb8a418f8a9d4b8002b53563f751f439b746b145f691ab152c37"
+  },
+  "unit_steps": 100,
+  "core_clauses": 101,
+  "core_variables": 100,
+  "core_literals": 281,
+  "source_pose_sha256": "8f05187721638dda0c3ebb1c19bc81ab9f0bd626828f2337e4da0376f5640b44",
+  "input_sha256": "30af36c50478a38c2c5f55329631aecb60838c31744bbd2a9fb4fba7f088cd10",
+  "unit_core_sha256": "5e0c9cf9e213cda6a3d8eeec816c4900ef161a48a6e211a24b1e121b4c459ba9",
+  "rejected_invalid_traces": 2
+}
