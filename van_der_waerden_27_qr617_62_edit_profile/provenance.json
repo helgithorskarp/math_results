@@ -1,0 +1,143 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "date": "2026-09-30",
+  "problem_graph_ref": "bafkreihbsyzlpqcibwae7vxelgoqcfofwzqdshfmkjrjyhqe7lydcjdlaa",
+  "source_dependencies": [
+    {
+      "directory": "../van_der_waerden_27_qr617_mixed_edit_region",
+      "source_commit": "45338b996411231c38ef2c5073c157911c15a427",
+      "files": {
+        "generate.py": "f822a963f9bb6e490dcbd7fbe635dcba87889337b32c0efe8e5fdf3d28607653",
+        "verify.py": "38ba46f4f22d01ab7df79f1bb20ad7ab190230cf90a29ff1ab3b678e97e2eb33"
+      }
+    },
+    {
+      "directory": "../van_der_waerden_27_qr617_class29_disjunction",
+      "source_commit": "9f183bdd6f0b78152dba63a5fc0ef8391e9d49ec",
+      "files": {
+        "verify.py": "579763d952c364963692638d125e9ff71c6ed9add1f3e4999462bac2e8e7c0af"
+      },
+      "use": "Unchanged generic tree replay; no prior numerical result is called by new branch checking"
+    }
+  ],
+  "numerical_dependencies": [
+    {
+      "scope": "total62 and complement corollary only",
+      "graph_ref": "bafkreigdc2r7hp4snvr5h3sqwtzth6bcx7ocbtcpzabiodifflmb36ewrq",
+      "source_commit": "9f183bdd6f0b78152dba63a5fc0ef8391e9d49ec",
+      "directory": "van_der_waerden_27_qr617_class29_disjunction",
+      "invoked_fact": "a,b>=29 at either endpoint",
+      "files": {
+        "PROOF.md": "a0327c05eea44c8f721fc2ec9e12213d8ce93d584413779181f465d87772e422",
+        "expected.json": "e2fee9023ee20b6460757da89fe1578431e62cbec455aa06936663c31313a2f6"
+      }
+    }
+  ],
+  "adapted_wrapper_credit": [
+    {
+      "directory": "van_der_waerden_27_qr617_class29_disjunction",
+      "source_commit": "9f183bdd6f0b78152dba63a5fc0ef8391e9d49ec",
+      "files": {
+        "generate.py": "fe3b92207c28f6c24f495979b33d0c8cf0c269165bc9907f13de3743668eb62a",
+        "check_controls.py": "e4517a13f1f4e5ff784fd2c0172c3bad56f437b062cfdb46815130bb8058911f"
+      },
+      "use": "Generator and inherited-state/control architecture"
+    },
+    {
+      "directory": "van_der_waerden_27_qr617_60_edit_profile",
+      "source_commit": "422829eb2fa570fb3c00bdb451a958d4cd56ed02",
+      "files": {
+        "verify.py": "12b43902e9ee83756dfd06ad7f521ec599bd5ae4b3bb8187d859e5cc3293d572"
+      },
+      "use": "Outer cover and arithmetic/dependency output layout"
+    },
+    {
+      "directory": "van_der_waerden_27_qr617_61_edit_profile",
+      "source_commit": "758b205d7f14db77cc84f384ffccf83f5f6d5f05",
+      "files": {
+        "generate.py": "137625dc4de709d7a4a3add43a6a15695402be2a7d3b7938fe8bdceb4aa53062",
+        "verify.py": "bdaafc447d482347f5fa10371f03e752587576d2923a16ad5efedd91bc023ae7",
+        "checker_controls.py": "7889ac2f07e81b3b84a110774b7e32593e68734caf2198ebc0dc3b9f2f56ce14"
+      },
+      "use": "48-case generation, outer coverage/arithmetic and inherited-state controls adapted from the published61 profile"
+    }
+  ],
+  "published_context": [
+    {
+      "name": "Earlier fixed QR61760 profile",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreiaxtdx6t3ixyfametrwyfbczb5iwc7iuoqzifodbncyvx34wpqtpu",
+      "height": "7490",
+      "source_commit": "422829eb2fa570fb3c00bdb451a958d4cd56ed02",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_60_edit_profile",
+      "use": "Outer coverage and arithmetic/dependency layout source credit. Its60 numerical cut is not a new-branch premise."
+    },
+    {
+      "name": "QR617 mixed-clause source and prior58-edit region",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreibmh5mlwv34k2is34pnjmjonfr3tsb5dp2l43hy7kwxpp34iaahgu",
+      "height": "7396",
+      "source_commit": "45338b996411231c38ef2c5073c157911c15a427",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_mixed_edit_region",
+      "use": "Computational source dependency for the pure generator and exact Euler/set AP definitions. Earlier numerical bounds are not used by the new cut."
+    },
+    {
+      "name": "Uniform QR617 original-class29 theorem",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreigdc2r7hp4snvr5h3sqwtzth6bcx7ocbtcpzabiodifflmb36ewrq",
+      "height": "7456",
+      "source_commit": "9f183bdd6f0b78152dba63a5fc0ef8391e9d49ec",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_class29_disjunction",
+      "use": "Required unchanged generic tree checker source, plus the separate a,b>=29 numerical theorem for either endpoint. Only the latter is a mathematical premise of the total62 corollary; no numerical cut is imported into new branch replay."
+    },
+    {
+      "name": "Previous fixedQR61761 profile",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreifegm7xr7nukplsxhvg5insn6uq2n4ymi6onstjfsoe65vhfqwdea",
+      "height": "7520",
+      "source_commit": "758b205d7f14db77cc84f384ffccf83f5f6d5f05",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_61_edit_profile",
+      "use": "Previous region strengthened; wrapper/control source credit. Its61 numerical cut is not a new-branch premise."
+    },
+    {
+      "name": "Period618 minority-row triple pruning",
+      "agent": "six-vdw-1",
+      "role": "researcher",
+      "graph_ref": "bafkreiemx6cex2evfgpb5hfsgyrinjqgjdofj2g2jb67xp7z44vnz5ktbi",
+      "height": "7564",
+      "source_commit": "38f6aafa414319c5afbeeeadd388e2d8b7f43242",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_618_triple_pruning",
+      "use": "Complementary different period618 construction; invalid fixed words and local move barriers. No constants imported."
+    },
+    {
+      "name": "QR617 seam integer cover cuts beyond a feasible fractional relaxation",
+      "agent": "six-vdw-3",
+      "role": "researcher",
+      "graph_ref": "bafkreihcweqttdkpoisly3tjntoy5ruji3kv7vgfpdovx4nbxprcae4cum",
+      "height": "7607",
+      "source_commit": "7df5157a04ea691d6091aa146dd4d4f49b987550",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_617_integer_cover_cuts",
+      "use": "Complementary key(184,434,1), different reference/count domain:196 class budget forces56 far edits, fractional screened originalAP system feasible at196/55. No constants imported; no review of the present result."
+    }
+  ],
+  "primary_sources": [
+    {
+      "url": "https://combinatorialpress.com/jcmcc-articles/volume-128/new-lower-bounds-for-van-der-waerden-numbers-using-distributed-computing/",
+      "checked": "2026-09-30",
+      "use": "Table1 length7/two colors>3703 and Table2 prime617; reversed argument orderW(length,colors). No comprehensive current-best claim."
+    },
+    {
+      "url": "https://github.com/marijnheule/vdWaerden/blob/master/certificates/W_2_7_617.cert",
+      "checked": "2026-09-30",
+      "use": "Primary classical QR template certificate; no length3704 witness verified."
+    }
+  ],
+  "priority_scope": "Strengthens the cited campaign edit region from61 to62; no historical priority claim for packing or covering.",
+  "new_box_replay_uses_earlier_numerical_bounds": false,
+  "independent_external_review_of_current_claim": false
+}

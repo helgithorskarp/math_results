@@ -1,0 +1,269 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "python": "3.11.2",
+  "standard_library_only": true,
+  "fresh_generation": {
+    "generated": 48,
+    "seconds": 744.643,
+    "max_rss_kib": 128552
+  },
+  "fresh_primitive_search_rows": 65,
+  "maximum_recorded_primitive_seconds": 27.346,
+  "case_status_counts": {
+    "EXCLUDED": 62,
+    "STALLED": 3
+  },
+  "complete_validation": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "all_source_checks_passed": true,
+    "jobs": [
+      {
+        "job": "full-verification",
+        "returncode": 0,
+        "seconds": 30.46,
+        "max_rss_kib": 433300,
+        "script_sha256": "7a4666eb317d0bc904ea50a5a3a6869415c3b3506671a2876e1feba9e8983777",
+        "hash_recorded_after_success_without_script_change": true
+      },
+      {
+        "job": "primitive-controls",
+        "returncode": 0,
+        "seconds": 36.863,
+        "max_rss_kib": 432308,
+        "script_sha256": "a203b85560bfd84713d2d3b774f1b37dae1287fbc2aab3ac777f584ac44dadeb",
+        "hash_recorded_after_success_without_script_change": true
+      },
+      {
+        "job": "primitive-controls-optimized",
+        "returncode": 0,
+        "seconds": 36.616,
+        "max_rss_kib": 434896,
+        "script_sha256": "a203b85560bfd84713d2d3b774f1b37dae1287fbc2aab3ac777f584ac44dadeb",
+        "hash_recorded_after_success_without_script_change": true
+      },
+      {
+        "job": "tree-controls",
+        "returncode": 0,
+        "seconds": 7.271,
+        "max_rss_kib": 509932,
+        "script_sha256": "a203b85560bfd84713d2d3b774f1b37dae1287fbc2aab3ac777f584ac44dadeb",
+        "hash_recorded_after_success_without_script_change": true
+      },
+      {
+        "job": "tree-controls-optimized",
+        "returncode": 0,
+        "seconds": 6.79,
+        "max_rss_kib": 511204,
+        "script_sha256": "a203b85560bfd84713d2d3b774f1b37dae1287fbc2aab3ac777f584ac44dadeb",
+        "hash_recorded_after_success_without_script_change": true
+      },
+      {
+        "job": "cached-resume",
+        "returncode": 0,
+        "seconds": 30.314,
+        "script_sha256": "73c75f261a2ba85793cceaca80bedebb84b5c3adf9e07aca8c1d39ad2b6f0457",
+        "max_rss_kib": 148972
+      },
+      {
+        "job": "tiny-limit",
+        "returncode": 1,
+        "seconds": 3.134,
+        "script_sha256": "73c75f261a2ba85793cceaca80bedebb84b5c3adf9e07aca8c1d39ad2b6f0457",
+        "max_rss_kib": 88116
+      },
+      {
+        "job": "reject-saved-timeout",
+        "returncode": 1,
+        "seconds": 3.188,
+        "script_sha256": "73c75f261a2ba85793cceaca80bedebb84b5c3adf9e07aca8c1d39ad2b6f0457",
+        "max_rss_kib": 86660
+      }
+    ],
+    "controls_identical_under_optimized_python": true,
+    "cached_resume_manifest_byte_identical": true,
+    "tiny_limit_fails_without_full_summary": true,
+    "saved_timeout_not_retried": true
+  },
+  "checker_controls": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "phase": "primitive_and_tree",
+    "full_suite_rechecked": false,
+    "input_case_metadata_checked": 48,
+    "primitive_regressions": 48,
+    "oracle_states": 175,
+    "oracle_models": 1040,
+    "valid_six_way_tree": true,
+    "valid_partial_five_way_tree": true,
+    "controls_rejected": 34,
+    "rejections": [
+      {
+        "name": "child_trace_alone_has_no_global_cover",
+        "reason": "No color cardinality contradiction"
+      },
+      {
+        "name": "missing_child",
+        "reason": "Incomplete or duplicated disjunctive coverage"
+      },
+      {
+        "name": "duplicate_child",
+        "reason": "Missing or repeated petal child"
+      },
+      {
+        "name": "nonpetal_child",
+        "reason": "Child assumption outside the required petal"
+      },
+      {
+        "name": "changed_child_budget",
+        "reason": "Child metadata differs from its parent"
+      },
+      {
+        "name": "extra_child_hypothesis",
+        "reason": "Certificate-supplied initial state or hypotheses"
+      },
+      {
+        "name": "supplied_U",
+        "reason": "Certificate-supplied initial state or hypotheses"
+      },
+      {
+        "name": "supplied_T",
+        "reason": "Certificate-supplied initial state or hypotheses"
+      },
+      {
+        "name": "changed_child_root",
+        "reason": "Child metadata differs from its parent"
+      },
+      {
+        "name": "constant_AP",
+        "reason": "AP outside domain or constant"
+      },
+      {
+        "name": "Boolean_AP",
+        "reason": "Noninteger AP"
+      },
+      {
+        "name": "AP_hits_pole",
+        "reason": "Prefix AP touches an exceptional position"
+      },
+      {
+        "name": "satisfied_AP",
+        "reason": "Endpoint clause already satisfied"
+      },
+      {
+        "name": "root_outside_cover",
+        "reason": "Tree root outside the prescribed endpoint cover"
+      },
+      {
+        "name": "extra_tree_hypothesis",
+        "reason": "Tree supplied additional initial hypotheses"
+      },
+      {
+        "name": "open_child_cannot_close_parent",
+        "reason": "Open leaf prevents parent exclusion"
+      },
+      {
+        "name": "false_terminal",
+        "reason": "AP has no mandatory unsatisfied clause at this state"
+      },
+      {
+        "name": "forbid_inherited_root",
+        "reason": "Invalid forbidden target"
+      },
+      {
+        "name": "unverified_shrinking_of_parent_petal",
+        "reason": "Incomplete or duplicated disjunctive coverage"
+      },
+      {
+        "name": "partial_tree_blocks_exclusion",
+        "reason": "Open leaf prevents parent exclusion"
+      },
+      {
+        "name": "missing_endpoint_root",
+        "reason": "Missing, extra or unexpected root/cap coverage"
+      },
+      {
+        "name": "changed_quantified_budget",
+        "reason": "Wrong quantified endpoint/root/cap case"
+      },
+      {
+        "name": "missing_entire_box_0_[29, 32]",
+        "reason": "Missing, extra or unexpected root/cap coverage"
+      },
+      {
+        "name": "missing_entire_box_0_[30, 31]",
+        "reason": "Missing, extra or unexpected root/cap coverage"
+      },
+      {
+        "name": "missing_entire_box_0_[31, 30]",
+        "reason": "Missing, extra or unexpected root/cap coverage"
+      },
+      {
+        "name": "missing_entire_box_0_[32, 29]",
+        "reason": "Missing, extra or unexpected root/cap coverage"
+      },
+      {
+        "name": "missing_entire_box_1_[29, 32]",
+        "reason": "Missing, extra or unexpected root/cap coverage"
+      },
+      {
+        "name": "missing_entire_box_1_[30, 31]",
+        "reason": "Missing, extra or unexpected root/cap coverage"
+      },
+      {
+        "name": "missing_entire_box_1_[31, 30]",
+        "reason": "Missing, extra or unexpected root/cap coverage"
+      },
+      {
+        "name": "missing_entire_box_1_[32, 29]",
+        "reason": "Missing, extra or unexpected root/cap coverage"
+      },
+      {
+        "name": "extra_unproved_box",
+        "reason": "Missing, extra or unexpected root/cap coverage"
+      },
+      {
+        "name": "unsupported_endpoint_transfer",
+        "reason": "Wrong quantified endpoint/root/cap case"
+      },
+      {
+        "name": "intersecting_packing",
+        "reason": "Packing empty or intersecting"
+      },
+      {
+        "name": "empty_packing",
+        "reason": "Packing empty or intersecting"
+      }
+    ]
+  },
+  "fresh_private_full_manifest_comparison": {
+    "cases": 48,
+    "mismatching_files": [],
+    "status": "BYTE_IDENTICAL"
+  },
+  "expected_sha256": "24d9561a79a7490ce33d1d0e9dffebb036b40993c4335c3ce263d9d1a1a6a3e4",
+  "certificate_corpus_bytes": 29395428,
+  "primitive_seconds_cap": 90,
+  "threads": 1,
+  "sequential_math_jobs": true,
+  "no_solver_or_fractional_arithmetic_used": true,
+  "prior_numeric_premise_reproved": false,
+  "externally_reviewed": false,
+  "formalized": false,
+  "new_W_bound_or_coloring": false,
+  "earlier_operational_limits": {
+    "combined_control_job_seconds_cap": 90,
+    "concurrent_graph_read_seconds_cap": 55,
+    "limited_jobs_stopped": true,
+    "limits_not_increased": true,
+    "mathematical_exclusion_from_time_limits": false,
+    "subsequent_validation_uses_separate_control_phases_and_serialized_graph_reads": true,
+    "cached_resumption_seconds_cap": 90,
+    "cached_cases_completed_before_limit": 30,
+    "cached_resumption_limit_proved_no_exclusion": true
+  },
+  "fresh_generator_source_sha256": "77d327cc5cc23ab1a0248c4fdcc1a54a38bf9b4a1ad01c938748b6a977c9a558",
+  "final_generator_source_sha256": "73c75f261a2ba85793cceaca80bedebb84b5c3adf9e07aca8c1d39ad2b6f0457",
+  "post_fresh_generator_change": "Cached closed trees are replayed once instead of repeatedly. The fresh-generation branch is unchanged; the final generator passed the recorded cached-resumption and fail-closed controls."
+}
