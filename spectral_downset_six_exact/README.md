@@ -1,5 +1,29 @@
 # Spectral Chvátal H: finite classifications and capped certificate ranks
 
+**Nine-point exceptional kernels:** [NINE_POINT_PROOF.md](NINE_POINT_PROOF.md)
+constructs exact capped H matrices for two explicitly defined regular
+nine-point downsets, with (N,s)=(82,21) and (85,22). Their Hoffman PSD
+ranks 72 and 75 attain the upper bounds forced by nine stars and one
+nonstar maximum family. These are exactly their ten maximum families.
+Every finite mixed product has rank N_product-10c and exactly 10c
+maximum-family cylinders, where c counts factors of largest star density.
+The earlier conditional trade obstruction remains valid; the new cores
+preserve the additional nonstar kernel directly.
+
+Reproduce both certificates from the full repository root with Python
+3.11+ and standard library only:
+
+~~~bash
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -O spectral_downset_six_exact/nine_point_exceptions.py --check spectral_downset_six_exact/NINE_POINT_RESULTS.json
+~~~
+
+The 5208-byte orbit fixture needs no numeric library or solver. Integer
+and Fraction Schur checks both verify the PSD inequalities and ranks;
+eight damaged/indefinite/asymmetric controls are rejected. The check took
+6.66 seconds and 23,972 KiB RSS. The new proof is author-checked,
+unformalized and has no independent review claim. Its exact scope is the
+two specified domains and their products.
+
 **Sparse rank trades:** rational perturbations on disjoint
 singletons and pairs raise a centered H certificate to the largest
 possible rank, under the exact kernel and strict-cap hypotheses in
