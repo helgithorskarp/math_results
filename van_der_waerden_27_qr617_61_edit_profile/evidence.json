@@ -1,0 +1,165 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "date": "2026-09-30",
+  "new_exact_claim": "Both endpoint colors exclude upper-cap boxes(29,31),(30,30),(31,29),36 roots and two full AP splits",
+  "dependent_corollary": "Cited uniform class29 theorem gives29<=a,b<=1819 and61<=a+b<=3635",
+  "numerical_premise_graph_ref": "bafkreigdc2r7hp4snvr5h3sqwtzth6bcx7ocbtcpzabiodifflmb36ewrq",
+  "numerical_premise_reproved_here": false,
+  "new_branch_replay_uses_prior_numerical_bounds": false,
+  "branches_checked": 36,
+  "nodes_checked": 44,
+  "splits_checked": 2,
+  "child_nodes_checked": 8,
+  "terminal_leaves_checked": 42,
+  "step_totals": {
+    "forbidden": 108239,
+    "forced": 53,
+    "packing": 53004,
+    "empty": 55235,
+    "mixed": 56190,
+    "budget": 0
+  },
+  "terminal_contradictions": {
+    "required_packing": 2,
+    "empty_required": 40
+  },
+  "fresh_generation": {
+    "seconds": 534.405,
+    "peak_rss_kib": 118760,
+    "max_primitive_case_seconds": 42.691,
+    "primitive_cases": 44,
+    "source_inputs_only": true,
+    "all36_hashes_match_discovery_reference": true
+  },
+  "reference_checking": {
+    "seconds": 17.573,
+    "exit_code": 0,
+    "peak_child_rss_kib": 295268
+  },
+  "validation_runs": [
+    {
+      "name": "fresh-exact-replay",
+      "seconds": 20.66,
+      "exit_code": 0,
+      "max_child_rss_kib_so_far": 295256
+    },
+    {
+      "name": "checker-controls-final-source-label",
+      "seconds": 59.495,
+      "exit_code": 0,
+      "max_child_rss_kib_so_far": 379540
+    },
+    {
+      "name": "optimized-exact-replay",
+      "seconds": 22.339,
+      "exit_code": 0,
+      "max_child_rss_kib_so_far": 379740
+    }
+  ],
+  "controls": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "checked_trees": 36,
+    "checked_terminal_leaves": 42,
+    "primitive_regressions": 36,
+    "oracle_states": 175,
+    "oracle_models": 1040,
+    "valid_six_way_tree": true,
+    "valid_partial_five_way_tree": true,
+    "controls_rejected": 32
+  },
+  "resumption_controls": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "both_saved_contexts_replayed": true,
+    "all36_resumed_trees_exactly_verified": true,
+    "fresh_byte_identity_preserved": false,
+    "changed_cases": [
+      {
+        "file": "tree-0-1-29-31.json",
+        "fresh_sha256": "a0c159e02959be1c779ba230351c86a9c4d11835ba09fcb297e585254858f2bf",
+        "resumed_sha256": "a3bb7faff7b3f3af87531c535a57c29268915db02925475492cfd922cfb767bf",
+        "fresh_bytes": 1415765,
+        "resumed_bytes": 1415755
+      },
+      {
+        "file": "tree-0-1-30-30.json",
+        "fresh_sha256": "ff75b3d5364968febab007c5f13e8a3f0f9686978b94742838f8c32b63d4173f",
+        "resumed_sha256": "23c8c8a3075253f6026c4f7b5b349f8112c2d077c90253fe9e6bc1871d39eee1",
+        "fresh_bytes": 2673937,
+        "resumed_bytes": 2674243
+      }
+    ],
+    "resumed_nodes": 44,
+    "resumed_splits": 2,
+    "resumed_step_totals": {
+      "forbidden": 108240,
+      "forced": 53,
+      "packing": 53004,
+      "empty": 55236,
+      "mixed": 56191,
+      "budget": 0
+    },
+    "independent_replay_seconds": 20.699,
+    "independent_replay_peak_rss_kib": 295168,
+    "fresh_expected_manifest_comparison_failed": true,
+    "fresh_expected_mismatch_reason": "Changed witness ordering/bytes; separate full proof replay passed"
+  },
+  "resumption_generation_seconds": 120.61,
+  "fresh_expected_manifest_comparison": {
+    "exit_code": 1,
+    "reason": "Resumed witnesses changed in two cases; separate complete proof replay passed"
+  },
+  "expected_manifest_sha256": "a0aa529455a8121282c2902c42056a95cd964b45967c15f36fdb1bfc3d34eced",
+  "generated_certificate_bytes_omitted_from_git": 19703139,
+  "remaining_total61_pairs_by_endpoint": {
+    "0": [
+      [
+        29,
+        32
+      ],
+      [
+        30,
+        31
+      ],
+      [
+        31,
+        30
+      ],
+      [
+        32,
+        29
+      ]
+    ],
+    "1": [
+      [
+        29,
+        32
+      ],
+      [
+        30,
+        31
+      ],
+      [
+        31,
+        30
+      ],
+      [
+        32,
+        29
+      ]
+    ]
+  },
+  "resource_limits": {
+    "cpu_threads": 1,
+    "cpu_intensive_jobs_at_once": 1,
+    "search_seconds_per_primitive_case": 90,
+    "scope_memory_limit_bytes": 2147483648,
+    "scope_tasks_limit": 128
+  },
+  "largest_observed_mathematical_peak_rss_kib": 379740,
+  "proof_status": "Complete same-author exact AP/tree replay and unformalized written bridges; explicit prior numerical premise. No current external review or formalization.",
+  "length3704_witness_found": false,
+  "global_W_bound_improved": false
+}
