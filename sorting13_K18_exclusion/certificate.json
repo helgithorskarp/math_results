@@ -1,0 +1,88 @@
+{
+  "agent": "six-sorting-2",
+  "role": "researcher",
+  "kind": "exact computer-assisted lemma",
+  "claim": "No ordinary18-comparator sorter of K exists at any depth; 19<=s(K)<=20",
+  "conditional_target": {
+    "wires": 10,
+    "states": 127
+  },
+  "newly_excluded_minimum_words": 36,
+  "remaining_K18_minimum_words": 0,
+  "parent_source_commit": "4be17abc650f757d8cd03b99c9ebedfba45b967d",
+  "parent_graph": "bafkreibhpxtdzaws5ybf6ljhui2pxexjnnllm6si7blj7g2g3pytjves64",
+  "cnf": {
+    "variables": 40891,
+    "clauses": 1300995,
+    "sha256": "11206cbb52f569fe7f91fcee1373f9093deb15a363a193084c3fb06ecae27aab"
+  },
+  "core_clauses": 29346,
+  "proof_additions": 12016,
+  "core_sha256": "63c41913ebd4a0d42a571e228c3e97e556d4cc41d942fe58bc15ccf3374885db",
+  "rup_sha256": "3a62fb0800344d8e68643f686ac6e98e656e616b797d2b11a84af87d3e9e2742",
+  "proof_deletions": 0,
+  "language_data_sha256": "682ea09bed65c66dacbd0ddaf67878291d7e85a6360d30ce51ff009d008ddae2",
+  "minimum_language": {
+    "words": 36,
+    "states": 11,
+    "transitions": 495,
+    "actual_clause_assignments": 5445,
+    "commutation_cases": 6930,
+    "repeated_stationary_unaries_count": true,
+    "no_unary_front_loading": true
+  },
+  "filters": {
+    "interval_variables": 171,
+    "interval_clauses": 9252,
+    "activity_variables": 2088,
+    "activity_clauses": 273300,
+    "boundary_rank_variables": 0,
+    "boundary_rank_clauses": 73737,
+    "total_witnesses": 108
+  },
+  "native": {
+    "solver": "Glucose4 via python-sat",
+    "python_sat": "1.8.dev24",
+    "conflicts": 23507,
+    "solver_seconds": 16.974256083,
+    "total_seconds": 20.39922275999561,
+    "peak_rss_kib": 200060,
+    "conflict_cap": 30000,
+    "seconds_cap": 40,
+    "DRAT_sha256": "417a52ab1fe1ba2b9dc6a6b973b6fb46e8ff1072cac472436c15ae36e15918eb"
+  },
+  "independent_private_replay_seconds": 57.623511587968096,
+  "positive_control": {
+    "gates": 22,
+    "variables": 58899,
+    "clauses": 1616029,
+    "sha256": "b6e1c6e11b171056c3594126baa3392223838c511f5a26cc10579533ac06d6ac",
+    "K_rows": 127,
+    "original_inputs": 2048,
+    "marker_bounds": 108,
+    "phase_rows": 23,
+    "actual_activity_flags": 2552,
+    "model_published": false
+  },
+  "bounds": {
+    "K": [
+      19,
+      20
+    ],
+    "X": [
+      21,
+      22
+    ],
+    "L": [
+      17,
+      18
+    ],
+    "S13": [
+      44,
+      45
+    ]
+  },
+  "X_corollary": "Two X21 maximum words C,B1,B2 and B1,C,B2 excluded; other X21 classes unresolved",
+  "trust_boundary": "Imported S11>=35, published7402/7436/7510/7605 necessities, separately audited108 marker bounds, sequential encoder correspondence; no formalization or external-person review; imported7671 excludes the other seven minimum words",
+  "native_full_formula_and_trace_published": false
+}
