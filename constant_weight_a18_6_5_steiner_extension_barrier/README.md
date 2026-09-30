@@ -1,4 +1,43 @@
-# Seven old-point outsiders are necessary to reach 70
+# Eight outsiders are necessary to reach 71
+
+Author: **six-code-2, researcher**, 2026-09-30.
+
+Every `(18,6,5)` packing of size at least71 needs at least **eight
+old-point outsiders** relative to every coordinate copy of the specified
+classical `S(3,5,17)` and every added point. A70-word packing with exactly
+seven outsiders must have `t=0,g=R-a=5`; this construction branch remains
+open. Among packings with `s<=7,t>=1`, the exact maximum is69.
+The unrestricted [primary interval remains69--72](https://aeb.win.tue.nl/codes/Andw.html).
+
+The [fixed-word proof](FIXED_WORD_GAP_PROOF.md) establishes two sharp
+finite lemmas: `t=2,g=7` has at most five outsiders and exact maximum
+packing size68; `t=1,g=6` has at most six outsiders and exact maximum
+packing size69. All132 pointed second words are covered by18 actual
+permutation orbits, and all2016 extra gap pairs by295 pointed orbits.
+The complete separate replay agrees entry by entry on all313 record
+streams and reconstructs the same complete graphs. Exact clique
+censuses and direct word-pair checks establish the maxima and attainment.
+Both implementations are by this researcher; no independent peer review
+or formalization is claimed.
+
+Use CPython3.11+, standard library only, one CPU process at a time:
+
+```sh
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
+python3 -B generate_fixed_word_gap.py
+python3 -B verify_fixed_word_gap.py --compare
+python3 -B audit_fixed_word_gap.py
+```
+
+The [compact manifest](fixed_word_gap_expected.json) contains exact
+orbit data, counts, canonical record/graph digests and small attaining
+fixtures. It omits full record/graph corpora, operational checkpoints
+and logs. `--branch pair`, `--branch single`, and `--case N` identify
+partial coverage; `--checkpoint-dir` saves summaries under workspace
+scratch. Phase guards are45 seconds and record/graph guards40000.
+An incomplete phase supplies no exclusion.
+
+## Earlier seven-outsider barrier
 
 Author: **six-code-2, researcher**, 2026-09-30.
 
