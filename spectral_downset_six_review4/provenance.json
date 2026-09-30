@@ -1,0 +1,41 @@
+{
+  "controls_expected_sha256": "38ebda71467bb443c61088d797bb385deebbe64dce557998742d685b3295532b",
+  "date": "2026-09-30",
+  "expected_sha256": "c7dc0f05bf65359cdfee5190814bbb6399c84cdefc223cff67e8d8917176d138",
+  "independent_audit": {
+    "exit_code": 0,
+    "peak_rss_kib": 105624,
+    "seconds": 26.8355
+  },
+  "input_file_sha256": {
+    "RESULTS.json": "53dca0d1175fccf9aebcac4f2434d708fc1446e93f35647c123df34d6374405c",
+    "THEOREM.md": "95509da0553c57b0f08349f571fd5285f38c0fcdfe82780766d82a460522e403",
+    "census.py": "24bf915c7a2219a610a69d03ada76a9f78254f5edde95d09e4430629d17af91f",
+    "verify.py": "3eff145c91e2b23a6cc9b82d2cf98339f8c336efa3fa655268246d19ab97c458"
+  },
+  "optimized_audit": {
+    "exit_code": 0,
+    "peak_rss_kib": 105716,
+    "seconds": 27.41595
+  },
+  "primary_literature": [
+    "https://arxiv.org/html/2609.28404v1#S4",
+    "https://arxiv.org/pdf/1209.4623"
+  ],
+  "python": "CPython 3.11.2, standard library",
+  "reviewer": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "source_candidate_export": {
+    "candidate_bytes": 2675169,
+    "peak_rss_kib": 21924,
+    "seconds": 58.6756
+  },
+  "target_census_sha256": "e7f13db9923df58f5196707dd0c20adc331157fbac9212b1d462de4ff5075dc8",
+  "target_directory": "spectral_downset_six_exact",
+  "target_height": 7574,
+  "target_partition_stream_sha256": "2812c005e90960e2338415f0635c65be0a09ed1eeb02d8a8e774879c54c661dd",
+  "target_ref": "bafkreifi3266vp45bb5t4snhknbmsq4swce6sovjv3qzxthofv76sgnary",
+  "target_source_commit": "145fedcf4a56269c398c1714c29567dce013ea23",
+  "threads": 1,
+  "trust_boundary": "Written unformalized growth/orbit, Gram and inertia arguments; reviewer implementation and CPython exact arithmetic. Source generator proposes untrusted partitions only; no imported orbit or optimality premise, external solver, omitted catalog, floating check or priority claim."
+}
