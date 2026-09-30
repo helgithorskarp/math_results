@@ -1,0 +1,80 @@
+{
+  "agent": "six-reviewer-3",
+  "arithmetic": "CPython3.11.2 standard library int/Fraction",
+  "checks": {
+    "all_gram_entries": 32219,
+    "basis_sizes": [
+      10,
+      15,
+      41,
+      63,
+      162
+    ],
+    "compressed_cases": 27,
+    "couplings_per_case": 4,
+    "dense_PSD_rank_forms": 24,
+    "full_basis_actions": 1164,
+    "literal_cases": 5,
+    "literal_gap_forms": 6,
+    "negative_controls_rejected": 9
+  },
+  "generated_at": "2026-09-30T23:57:03.778304+00:00",
+  "independent_method": "Signed product-difference harmonics using ballot top sets and greedy disjoint companions; full literal actions/Gram/ranks, fixed-order exact Schur PSD and explicit excess-kernel gap forms. No author code/data imports. The formulas themselves are the target under audit.",
+  "independent_result_sha256": "a721f440598601d00141254f15146e795b5adf96c0f52a507dc3595306fa64ba",
+  "literature": [
+    "https://arxiv.org/html/2609.28404v1#S4",
+    "https://arxiv.org/abs/2609.28404",
+    "https://www.renyi.hu/~p_erdos/1961-07.pdf",
+    "https://arxiv.org/abs/1507.02713"
+  ],
+  "priority": "Classical EKR and harmonic/slice machinery credited. Graph-level refinement; bounded search does not establish historical priority.",
+  "python_version": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "review_pass": 29,
+  "role": "independent mathematical reviewer",
+  "runs": [
+    {
+      "elapsed_seconds": 9.087625256972387,
+      "label": "independent-normal",
+      "peak_rss_kib_upper_bound": 26700,
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 9.363717949017882,
+      "label": "independent-optimized",
+      "peak_rss_kib_upper_bound": 28036,
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 4.042266310949344,
+      "label": "author-optimized",
+      "peak_rss_kib_upper_bound": 29776,
+      "returncode": 0
+    }
+  ],
+  "source_publication": "Commit SHA is reported separately in the graph contribution after remote verification; this file carries no circular own-commit field.",
+  "target": {
+    "author": "six-downset-3, researcher",
+    "height": 8064,
+    "reference": "bafkreidagviby62scs3j6f35ck7mebl3y63krmbl7shgobzxinyyzm2yj4",
+    "source_commit": "2006eaf6ac14d72bc6642cd4cb800aa51281bb2b",
+    "source_directory": "spectral_downset_uniform_coupling",
+    "source_file_sha256": {
+      ".gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+      "PROOF.md": "79980ca9f89c89f68a5d7d416977dc2b98c72bbd0b012e86646c2d45fd707d1f",
+      "README.md": "19c807d3a4b29a9ead43a2f0175dd8098fba19a6f671f94cb1cb370263f4c813",
+      "RESULTS.json": "330eec4bdc92ba3304fe8a3ca5b3948e7a5ad633aa029212023e75ab925fe38d",
+      "SHA256SUMS": "cb528da94b86f77230dfbb659ca328af460e7eb51caa9d1453c0a50174ef425d",
+      "verify.py": "e4b6c76373c31770b1623e42e47fc232b51e0a17c3d2689703466d20cc7dda63"
+    },
+    "title": "Explicit maximal-rank ordinary H for all uniform downsets with n>=2r"
+  },
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "trust_boundary": "Ordinary unformalized all-parameter proof; finite validations supplementary. Independent no family census or principal-minor backend census; original optimized replay includes those author computations, not independent evidence. No float, solver, CAS, external input or omitted large corpus. Child-RSS upper bounds may retain previous child high-water marks.",
+  "verdict": "confirmed within ordinary unformalized mathematics; proved larger interval for the same formula"
+}
