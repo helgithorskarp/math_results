@@ -1,0 +1,202 @@
+{
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "status": "VERIFIED_COMPLETE_TWO_SUPPORT_SOURCE",
+  "fresh_release_reproduction": {
+    "status": "VERIFIED_ALL_EXTERIOR_SUPPORT_CLAIMS",
+    "seconds": 75.67625889700139,
+    "child_peak_rss_kib": 259560,
+    "checker_peak_rss_kib": 66676,
+    "phase_keys": 760761,
+    "corruption_controls": 33
+  },
+  "expected_comparison": "Every compact verification, hash and control field matches the recorded fresh independent check.",
+  "sanitizers": {
+    "agent": "six-vdw-3",
+    "role": "researcher",
+    "status": "VERIFIED_SANITIZER_REGENERATION",
+    "full_first_and_second_transcripts_byte_identical": true,
+    "representative_implication_proofs_byte_identical_and_directly_checked": 31,
+    "seconds": 34.79945047199726,
+    "peak_child_rss_kib": 580900
+  },
+  "sanitizer_representative_keys": [
+    [
+      0,
+      184,
+      0
+    ],
+    [
+      0,
+      19,
+      0
+    ],
+    [
+      1,
+      185,
+      0
+    ],
+    [
+      1,
+      20,
+      0
+    ],
+    [
+      1,
+      30,
+      0
+    ],
+    [
+      1,
+      616,
+      1
+    ],
+    [
+      2,
+      0,
+      1
+    ],
+    [
+      2,
+      186,
+      0
+    ],
+    [
+      2,
+      31,
+      0
+    ],
+    [
+      208,
+      405,
+      1
+    ],
+    [
+      226,
+      519,
+      1
+    ],
+    [
+      256,
+      355,
+      1
+    ],
+    [
+      3,
+      32,
+      0
+    ],
+    [
+      4,
+      33,
+      0
+    ],
+    [
+      429,
+      613,
+      0
+    ],
+    [
+      452,
+      83,
+      1
+    ],
+    [
+      5,
+      3,
+      1
+    ],
+    [
+      541,
+      126,
+      0
+    ],
+    [
+      610,
+      561,
+      0
+    ],
+    [
+      610,
+      577,
+      1
+    ],
+    [
+      613,
+      15,
+      0
+    ],
+    [
+      613,
+      180,
+      0
+    ],
+    [
+      613,
+      216,
+      0
+    ],
+    [
+      614,
+      16,
+      0
+    ],
+    [
+      614,
+      217,
+      0
+    ],
+    [
+      615,
+      17,
+      0
+    ],
+    [
+      615,
+      613,
+      1
+    ],
+    [
+      615,
+      96,
+      0
+    ],
+    [
+      616,
+      18,
+      0
+    ],
+    [
+      616,
+      183,
+      0
+    ],
+    [
+      99,
+      392,
+      1
+    ]
+  ],
+  "release_generation_seconds": {
+    "first": 0.17759,
+    "second": 1.43865,
+    "implications": 37.2575
+  },
+  "arithmetic_audit": {
+    "positions_and_differences": "0<=x<3704,1<=d<=617; all coordinate arithmetic fits signed32 bits.",
+    "phase_and_incidence_indices": "761378 phase slots and7990150 incidences fit uint32; matrix offsets use size_t.",
+    "bit_shifts": "All uint64 shifts are in[0,63]; count bitfields stay<=7 before a checked contradiction."
+  },
+  "versions": {
+    "python": "3.11.2",
+    "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0"
+  },
+  "limits": "One CPU-intensive job at a time; threads1; existing CPU1/memory2GiB/tasks128; no escalation.",
+  "trust": "Exact Python direct checker and elementary support/affine bridges; same-author independence with earlier first-cut code reused. No independent peer review/formalization.",
+  "omitted_generated_data": {
+    "first_and_second_binary_bytes_each": 4564590,
+    "second_implication_corpus_bytes": 128920,
+    "residual_proofs": 1260
+  },
+  "known_bounds": "No3704 witness, unrestricted exclusion, new W lower bound or exact value. Total20 smaller than older44; new18+2 constraint locates edits."
+}
