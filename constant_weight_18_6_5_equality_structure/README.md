@@ -6,19 +6,23 @@ A binary length-18, weight-5 code of minimum distance at least six is
 equivalently a family of five-element subsets with intersections of size
 at most two. The maintained table still gives **69–72**.
 
-[SUPPORT15.md](SUPPORT15.md) proves a necessary restriction on the equality case:
-in any 72-word code, at least **fifteen** points have three or more neighbors
+[SUPPORT16.md](SUPPORT16.md) proves a computer-assisted necessary restriction:
+in any 72-word code, at least **sixteen** points have three or more neighbors
 in the support of the deficits `t[x,y] = 5 - d[x,y]`, where `d[x,y]` counts
-blocks on a pair. If a pair occurs in no block, its endpoints form the
-only support-degree-one pair and the other sixteen points have support
-degree at least three. Entire support components of degree two are
-impossible. [SUPPORT12.md](SUPPORT12.md) establishes an intermediate
-twelve-point restriction and its local carrier; [SUPPORT14.md](SUPPORT14.md)
-excludes twelve and thirteen. The final strengthening excludes fourteen,
-using actual forced blocks and the established nonexistence of a resolvable
-triple group divisible design of type `2^6`. The global upper bound remains 72.
-[PROOF.md](PROOF.md) supplies the incidence facts, the earlier nine-point
-restriction, and the local catalog.
+blocks on a pair. The final step excludes every carrier with three points
+of support degree two. A three-point path gives a direct block conflict;
+a weight-four pair plus an isolated point has six normalized local cases,
+excluded by two finite exact implementations. This imposes no symmetry
+assumption on a global code. The global upper bound remains 72.
+
+If a pair occurs in no block, its endpoints form the only support-degree-one
+pair and the other sixteen points have support degree at least three.
+[PROOF.md](PROOF.md) supplies the incidence facts, the original nine-point
+restriction and the local catalog. [SUPPORT12.md](SUPPORT12.md) and
+[SUPPORT14.md](SUPPORT14.md) establish intermediate restrictions.
+[SUPPORT15.md](SUPPORT15.md) gives the ordinary fifteen-point proof,
+using forced blocks and the established nonexistence of a resolvable
+triple group divisible design of type `2^6`.
 
 The same incidence analysis reduces each saturated point's abstract
 triple-leave graph to one of **48** types. The new design obstruction filters
@@ -32,7 +36,9 @@ compatibility remain additional obligations.
 [AFFINE_SPLIT.md](AFFINE_SPLIT.md) proves that a degree-two point's twenty
 shortened quadruples are obtained by splitting a point of an affine plane
 of order four. This applies at any replication-twenty point, including in
-codes smaller than 72. No uniqueness classification of affine planes is used.
+codes smaller than 72. That split lemma uses no affine-plane classification. The sixteen-point
+strengthening uses the self-contained historical uniqueness proof and
+normalization in [AFFINE_NORMALIZATION.md](AFFINE_NORMALIZATION.md).
 
 ## Reproduce
 
@@ -44,6 +50,8 @@ python3 constant_weight_18_6_5_equality_structure/reproduce.py
 python3 constant_weight_18_6_5_equality_structure/check_support12.py
 python3 constant_weight_18_6_5_equality_structure/check_support14.py
 python3 constant_weight_18_6_5_equality_structure/check_support15.py
+python3 constant_weight_18_6_5_equality_structure/check_support16.py
+python3 constant_weight_18_6_5_equality_structure/verify_support16.py --compare-primary
 ```
 
 Run from the repository root. The script regenerates the catalog in
@@ -70,9 +78,24 @@ weighted carrier and 91 forced-block conflicts, identifies the one excluded
 catalog entry, and checks all thirty nonempty proper point splits of an explicit
 order-four affine plane. Its report is `support15_expected.json`. It reproduces
 the known twenty-word lower certificate for `A(17,6,4)` but does not re-prove the
-external resolvable-design nonexistence theorem. These scripts produce validation reports;
-none enumerates 72-word codes. The structural lemmas are proved in
-prose independently of these computations.
+external resolvable-design nonexistence theorem. The first four scripts produce validation reports;
+their structural lemmas are proved independently in prose.
+
+The fifth and sixth scripts complete all six local anchor cases needed
+for the computer-assisted sixteen-point theorem. Two have an immediate
+fixed-block conflict. For the other four, the primary search excludes
+exact covers of 108 pairs (449, 450, 443 and 449 candidate quadruples),
+using 8,170 total tree nodes. The replay constructs the plane from even
+permutations instead of field arithmetic, enumerates all 44,016 possible
+B-parallel classes, and exhausts each residual cover. With the indicated
+flag it compares every independently generated row and column with the
+primary instance. Both algorithms accept two genuine positive fixtures;
+the primary search also matches brute force on all 1,100 simple graphs
+of order at most five. `support16_expected.json` is a compact replay
+manifest, not a standalone certificate. The new theorem depends on these
+completed finite checks and its written coverage bridge. None of the
+scripts enumerates unrestricted 72-word codes. Node/time caps raise
+`INCOMPLETE` and verify no exclusion.
 
 ## Baseline provenance and scope
 

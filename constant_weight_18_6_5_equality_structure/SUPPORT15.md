@@ -9,7 +9,9 @@ on each pair of positive deficit. At least **fifteen** points have
 support degree at least three. In particular, at most three points
 have support degree two.
 
-This strengthens [SUPPORT14.md](SUPPORT14.md). It does not exclude
+This strengthens [SUPPORT14.md](SUPPORT14.md). The subsequent
+computer-assisted [SUPPORT16.md](SUPPORT16.md) excludes the remaining
+fifteen-point carrier. The present proof is ordinary combinatorics. It does not exclude
 72 blocks or improve the global interval \(69\le A(18,6,5)\le72\).
 
 ## 1. Facts and external dependencies

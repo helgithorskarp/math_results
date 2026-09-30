@@ -1,0 +1,216 @@
+{
+  "primary": {
+    "cases": [
+      {
+        "case": [
+          2,
+          3
+        ],
+        "conflicting_pairs": [
+          [
+            8,
+            12
+          ]
+        ],
+        "status": "fixed_block_leave_conflict"
+      },
+      {
+        "candidate_quads": 449,
+        "candidate_quads_sha256": "9ae7755ceec41142770c71ea0c5b0214f6b67813e4f25d57aa078cd87ce62b3b",
+        "case": [
+          2,
+          8
+        ],
+        "dead_leaf_stream_sha256": "896d48ce587ea61aa6d7400541729167a1be9931d15f7a355edaff1396b4298f",
+        "nodes": 2115,
+        "remaining_pairs": 108,
+        "status": "complete_no_cover"
+      },
+      {
+        "candidate_quads": 450,
+        "candidate_quads_sha256": "95782b665a166f7cb3d29c23d2f00d68f3c4e339cc29b6a2d060d1a1ddac0057",
+        "case": [
+          2,
+          12
+        ],
+        "dead_leaf_stream_sha256": "8b303cba8d7cde291c3450543fbd08e3759dd774145b62eac79de453021b98fb",
+        "nodes": 2071,
+        "remaining_pairs": 108,
+        "status": "complete_no_cover"
+      },
+      {
+        "candidate_quads": 443,
+        "candidate_quads_sha256": "daafca549acd54b38ca965493851223aeb20076ba3e9bfee05426c7395747e82",
+        "case": [
+          3,
+          8
+        ],
+        "dead_leaf_stream_sha256": "792085c5e170f0c2b7d71d918111bb0351891a03b0ab546604f09d3fde8d0c67",
+        "nodes": 2164,
+        "remaining_pairs": 108,
+        "status": "complete_no_cover"
+      },
+      {
+        "candidate_quads": 449,
+        "candidate_quads_sha256": "49b4b58087f83edcaf65524c4d6b5ae9f6bceaf5917f8bb314c8151ad1f02b46",
+        "case": [
+          3,
+          12
+        ],
+        "dead_leaf_stream_sha256": "da378b276779331b42e9fafece4cbb73a37e6575d9e81908a780d72116ba1bda",
+        "nodes": 1820,
+        "remaining_pairs": 108,
+        "status": "complete_no_cover"
+      },
+      {
+        "case": [
+          8,
+          12
+        ],
+        "conflicting_pairs": [
+          [
+            2,
+            3
+          ]
+        ],
+        "status": "fixed_block_leave_conflict"
+      }
+    ],
+    "controls": {
+      "all_simple_graphs_order_at_most_5": 1100,
+      "positive_controls": [
+        {
+          "fixture": "affine_plane_unused_point",
+          "nodes": 30,
+          "quadruples": 20
+        },
+        {
+          "fixture": "actual_incumbent_point_0",
+          "nodes": 30,
+          "quadruples": 20
+        }
+      ]
+    },
+    "global_72_word_exclusion": false,
+    "normalization_checks": {
+      "A4_and_F4_lines_match": true,
+      "connected": true,
+      "even_permutations": 12,
+      "permutations": 24,
+      "transposition_edges": 72
+    },
+    "theorem_depends_on_computation": true,
+    "weighted_cases_covered": 6
+  },
+  "replay": {
+    "B_parallel_classes_exhausted": 44016,
+    "cases": [
+      {
+        "case": [
+          2,
+          3
+        ],
+        "conflicting_pairs": [
+          [
+            8,
+            12
+          ]
+        ],
+        "status": "FIXED_BLOCK_LEAVE_CONFLICT"
+      },
+      {
+        "B_parallel_classes": 10984,
+        "B_partition_states": 56770,
+        "B_quads": 171,
+        "candidate_quads": 449,
+        "candidate_quads_sha256": "9ae7755ceec41142770c71ea0c5b0214f6b67813e4f25d57aa078cd87ce62b3b",
+        "case": [
+          2,
+          8
+        ],
+        "class_stream_sha256": "924730af6599606e6ebeaf7f0f5612c419dd585789f6b2672e78912d5d03b8c8",
+        "complete_negative": true,
+        "nodes": 74543,
+        "residual_queries": 10984,
+        "status": "COMPLETE_NO_COVER"
+      },
+      {
+        "B_parallel_classes": 11188,
+        "B_partition_states": 55781,
+        "B_quads": 171,
+        "candidate_quads": 450,
+        "candidate_quads_sha256": "95782b665a166f7cb3d29c23d2f00d68f3c4e339cc29b6a2d060d1a1ddac0057",
+        "case": [
+          2,
+          12
+        ],
+        "class_stream_sha256": "1b76ad4f599d149dca4fbe07b838f364f996aaa113d707a715388f95d1d5ae58",
+        "complete_negative": true,
+        "nodes": 74208,
+        "residual_queries": 11188,
+        "status": "COMPLETE_NO_COVER"
+      },
+      {
+        "B_parallel_classes": 10860,
+        "B_partition_states": 56085,
+        "B_quads": 170,
+        "candidate_quads": 443,
+        "candidate_quads_sha256": "daafca549acd54b38ca965493851223aeb20076ba3e9bfee05426c7395747e82",
+        "case": [
+          3,
+          8
+        ],
+        "class_stream_sha256": "e48049a3f09634b1de84985b9b8db7afde755c26107c0c03bb9b03ce1b11953c",
+        "complete_negative": true,
+        "nodes": 72718,
+        "residual_queries": 10860,
+        "status": "COMPLETE_NO_COVER"
+      },
+      {
+        "B_parallel_classes": 10984,
+        "B_partition_states": 55383,
+        "B_quads": 171,
+        "candidate_quads": 449,
+        "candidate_quads_sha256": "49b4b58087f83edcaf65524c4d6b5ae9f6bceaf5917f8bb314c8151ad1f02b46",
+        "case": [
+          3,
+          12
+        ],
+        "class_stream_sha256": "85b63863a6e6d5cb89dbca76685f4803ed8a6418b0c66621a8c95a6d7c37bbbd",
+        "complete_negative": true,
+        "nodes": 73181,
+        "residual_queries": 10984,
+        "status": "COMPLETE_NO_COVER"
+      },
+      {
+        "case": [
+          8,
+          12
+        ],
+        "conflicting_pairs": [
+          [
+            2,
+            3
+          ]
+        ],
+        "status": "FIXED_BLOCK_LEAVE_CONFLICT"
+      }
+    ],
+    "global_72_word_exclusion": false,
+    "independent_peer_review": false,
+    "positive_controls": [
+      {
+        "fixture": "affine_plane_unused_point",
+        "nodes": 29,
+        "quadruples": 20
+      },
+      {
+        "fixture": "actual_incumbent_point_0",
+        "nodes": 27,
+        "quadruples": 20
+      }
+    ],
+    "theorem_depends_on_computation": true,
+    "weighted_cases_covered": 6
+  }
+}

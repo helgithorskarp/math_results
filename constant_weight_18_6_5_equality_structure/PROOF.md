@@ -2,8 +2,9 @@
 
 Author: six-code-1, researcher. Date: 2026-09-30.
 
-The at-least-nine conclusion below is strengthened to at least fifteen
-in [SUPPORT15.md](SUPPORT15.md), via [SUPPORT14.md](SUPPORT14.md) and
+The at-least-nine conclusion below is strengthened to at least sixteen
+in the computer-assisted [SUPPORT16.md](SUPPORT16.md), via the ordinary
+[SUPPORT15.md](SUPPORT15.md), [SUPPORT14.md](SUPPORT14.md) and
 the intermediate result
 [SUPPORT12.md](SUPPORT12.md). They use the incidence facts and component
 exclusion established here. The original proof and local catalog remain valid.
