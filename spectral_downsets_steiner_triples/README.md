@@ -2,6 +2,24 @@
 
 Agent: **six-downset-2**, role: **researcher**. Prepared 2026-09-30.
 
+The [explicit nineteen-point field theorem](FIELD19_PROOF.md) gives a capped
+maximal-rank H matrix for the downset with blocks
+{x,x+d,x+8d} over F_19, d!=0, and all its point relabellings. Here N=305,
+s=37, rank Q=286, and the constant complement has a66-unit upper gap.
+All finite powers and mixed products with the earlier certified Steiner
+factors have the stated maximal ranks and star-only equality. The literal
+design's eight contained cyclic systems and four decompositions are
+regenerated; this does not enumerate all cyclic STS(19) or establish an
+all-prime field-family certificate. Its1.3 KiB fixed weight fixture needs
+no optimizer. Two exact affine restrictions of orders17 and20 certify
+PSD; a full305-by-305 fraction-free Schur fallback independently checks
+all seven forms. These scoped spectral constructions are author-checked
+and unformalized; the base design and strict EKR are classical.
+The [uniform field-family count corollary](FIELD_FAMILY_COUNTS.md) determines
+the exact affine restriction sizes at every prime p=1 mod6:
+(5p+7)/6 and(5p+25)/6. It gives a scalable PSD/rank reduction and
+search dimensions, while capped feasibility at general p remains open.
+
 The [cyclic thirteen-point theorem](CYCLIC_TWO_STS13_PROOF.md) gives a capped
 maximal-rank certificate for every union of two block-disjoint STS(13) that
 are invariant under a common thirteen-cycle. The complete cyclic cohort
@@ -143,6 +161,12 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 spectral_downsets_steiner_triples/verify_cyclic13.py --check
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 spectral_downsets_steiner_triples/verify_cyclic13.py --full --check
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 spectral_downsets_steiner_triples/verify_field19.py --check
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 spectral_downsets_steiner_triples/verify_field19.py --full --check
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 spectral_downsets_steiner_triples/verify_field_counts.py --check
 ```
 
 Only the Python standard library is required. Verified with CPython 3.11.2;
@@ -158,6 +182,14 @@ exact affine reduction; its full Schur fallback passed in 278.91 seconds
 and 40,780 KiB. Both require only the standard library. Fixed weights and
 compact outputs are [cyclic13_certificate.json](cyclic13_certificate.json)
 and [cyclic13_expected.json](cyclic13_expected.json).
+The explicit nineteen-point field verifier passed in43.89 seconds and
+94,628 KiB using the exact affine reduction. Fixed weights and compact
+outputs are [field19_certificate.json](field19_certificate.json) and
+[field19_expected.json](field19_expected.json); [integer_psd.py](integer_psd.py)
+implements its independent full-matrix check.
+That full seven-form check passed in673.80 seconds with107,052 KiB RSS.
+The uniform count proof is accompanied by exact input/orbit replays at
+7,13,19,31, with compact output in [field_counts_expected.json](field_counts_expected.json).
 The four-system verifier took 566.32 seconds and 31,332 KiB RSS. The separate
 template checker independently solves the actual seven-variable affine
 system on four concrete designs at orders9 and13 and checks explicit negative witnesses;
@@ -167,6 +199,8 @@ Expected principal results:
 
 | Instance | N | Maximum star s | Exact rank of Q |
 |---|---:|---:|---:|
+| Maximal-rank capped explicit affine field design on19 points | 305 | 37 | 286 |
+| Centered capped explicit affine field design on19 points | 305 | 37 | 285 |
 | Maximal-rank capped common-cycle two-STS(13) | 144 | 25 | 131 |
 | Centered capped common-cycle two-STS(13) | 144 | 25 | 130 |
 | Maximal-rank capped union of any four STS(9) | 94 | 25 | 85 |
