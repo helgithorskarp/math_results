@@ -3,28 +3,75 @@
 Author: **six-books-2**, role **researcher**, 2026-09-30.
 
 Every ordinary red-B4/blue-B7-free coloring on 22 vertices with a
-fixed-point-free color-preserving involution needs **at least two fully
+fixed-point-free color-preserving involution needs **at least three fully
 red orbit pairs and at least seven uniform orbit pairs**. An orbit pair
 is uniform when all four edges between its two two-vertex orbits have
 one color. Inside-orbit colors are arbitrary, and every such involution
 is covered.
 
-[PROOF.md](PROOF.md) gives a self-contained analytic proof. It excludes
-zero or one fully red pair at any blue density, then classifies and
-excludes both possible six-uniform-pair shapes. Its two matrix mechanisms
-are a commuting-square integer congruence and an invariant-space trace
-that forces eigenvalue eleven in a six-by-six sign matrix with row bound
-five. The checks below validate formulas and coverage; no finite
-computation is a premise of the analytic lemma.
+[TWO_RED.md](TWO_RED.md) excludes exactly two fully red pairs at every
+blue density. It reduces the quotient to three shapes with arbitrary
+outside blue cliques, absorbs those cliques into the diagonal of a
+symmetric matrix, and derives contradictions from linearity, symmetry
+and balanced-row parity. It builds on [PROOF.md](PROOF.md), which excludes
+zero or one red pair and proves at least seven uniform pairs total.
+The original six-pair invariant-space trace proof remains valid; the
+extension supplies a shorter symmetry contradiction that also permits
+the nonzero diagonal. The checks validate formulas and coverage; no
+finite computation is a premise of either analytic lemma.
+
+[six-reviewer-1's independent review](../book_ramsey_free_involution_review1/REVIEW.md)
+confirms the earlier lemma and proves at least four blue uniform pairs.
+Combined with the new three-red result, **exactly seven uniform pairs
+must consist of three red and four blue**. The review also supplies the
+shorter Gram symmetry obstruction and sharp relaxed operator residuals;
+those refinements are credited to the reviewer. This new arbitrary-density
+two-red extension has author validation and has not been independently
+reviewed.
 
 The unrestricted located interval remains 22..23. This result does not
 assert an involution for arbitrary hypothetical 22-vertex witnesses, or
-exclude patterns with seven or more uniform pairs and at least two red
+exclude patterns with seven or more uniform pairs and at least three red
 pairs. No regularity, degree, peer core theorem, external graph catalogue,
 solver or floating-point premise is used. Author checks are not peer
 review or proof-assistant formalization.
 
-## Reproduction
+## Reproduction of the two-red extension
+
+Only the Python standard library is needed for the extension. Tested on
+Linux with Python 3.11.2. From the repository root, run
+
+```sh
+python3 book_ramsey_b4_b7_free_involution/check_two_red.py --scratch /tmp/book-two-red-check
+```
+
+The runner executes one child at a time with thread counts one and a
+120-second timeout per child. Failure, timeout or mismatch raises an
+error; generated records and logs remain in scratch. Checks remain active
+under Python `-O`. The full tested run took 31.94 seconds with 17,544 KiB
+peak child RSS. Compact expected values are in
+[two_red_expected.json](two_red_expected.json).
+
+| Check | Exact coverage |
+| --- | --- |
+| [two_red_census.py](two_red_census.py) | 642,323 normalized adjacent/disjoint two-red quotients after the written low-clique reduction, at every permitted blue density; 198 necessary color patterns with 7,341 inside-color assignments |
+| [two_red_independent.py](two_red_independent.py) | Literal two-point page sets, set-based quotient budgets and Boolean constraint search; every survivor/flag entry agrees, and the exact A/B/C analytic classification is reconstructed |
+| [two_red_controls.py](two_red_controls.py) | Eight rank-one blocks; all 720 normalized A row tuples and 2,160 B row tuples; all 400 balanced-row pairs for C; 336 deterministic lifts with 61,760 matching-spine, 6,080 uniform sum/difference and 10,080 diagonal-shift checks |
+
+The fast flag census carries one bit for each of all 2^11 inside-color
+choices in a Python integer. The separate checker uses allowed binary
+constraints and complete Boolean branching, not this representation.
+Both are author checks; algorithmic independence is not peer review.
+The low cliques and attachment reduction is proved in writing, rather
+than assumed from the finite census. Matching signs are relaxed separately
+at each spine, so the survivors are necessary patterns, not valid graph
+witnesses. The full-size literal controls sample eight deterministic
+sign seeds in each of three shapes and seven outside clique partitions,
+with two outside inside-color patterns per seed. They may violate the
+book caps and test identities only. No matching-sign enumeration or
+floating-point arithmetic is used.
+
+## Earlier six-pair validation
 
 Requirements: Python standard library and a C++17 GNU-compatible compiler
 with `__builtin_popcount`. Tested on Linux with Python 3.11.2 and GNU
