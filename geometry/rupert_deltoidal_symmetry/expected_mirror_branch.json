@@ -1,0 +1,104 @@
+{
+  "status": "exact endpoint rate and positive stresses exclude the remaining strict mirror-normal branch",
+  "agent": "six-rupert-1",
+  "role": "researcher",
+  "positive_delta_box_radius": "1/1000000",
+  "two_sided_critical_box_radius": "1/10000000",
+  "necessary_axial_to_delta_ratio_bound": "1/1000",
+  "receiver_chart": "u=E+(X,Y,0); epsilon,|delta|,|z|,|X|,|Y|<=BOX, epsilon>0",
+  "mirror_bounds_on_CORE": "1/2<K<2; transformed epsilon,|delta|,|z|<=2*CORE; receiver |X|,|Y|<=8*CORE<=BOX",
+  "endpoint_certificates": [
+    {
+      "contact": [
+        58,
+        45,
+        45
+      ],
+      "axial_slope_at_origin": "(40/3) + (-16/3)*sqrt(5)",
+      "delta_coefficient_absolute_bound": "9107/90750000",
+      "axial_coefficient_error_bound": "43/500000",
+      "row_sha256": [
+        "9d9ec638bd98c7c0eac28d38d284b9e831428940013aa6e84954fac378bdd3cf",
+        "1075fc3958fcb93c61f94ac01ed76ac412591bc369773bc77eddd648c8eb18da",
+        "ea380f27db9b4688b70efcd554435aa96ec0fb4877cad0ce7a7a9826a58565f0"
+      ]
+    },
+    {
+      "contact": [
+        45,
+        34,
+        45
+      ],
+      "axial_slope_at_origin": "(-40/3) + (16/3)*sqrt(5)",
+      "delta_coefficient_absolute_bound": "3523/45375000",
+      "axial_coefficient_error_bound": "39/500000",
+      "row_sha256": [
+        "9352e5f06a41592f77fc9edfe1f7a5aa3c20126827410de16eebeb3c8ae0ea07",
+        "2376c3c6a223af1fb41c9d5b59be249f77a472ee5d8f23443e53975ec87ad10f",
+        "fa98a9ce7068aafe28bfedfa123a73c7011c772c917580c9380a2e03250eff1d"
+      ]
+    }
+  ],
+  "stress_certificates": [
+    {
+      "name": "minus",
+      "weights": [
+        {
+          "index": 1,
+          "delta_slope_at_origin": "(1000/27) + (400/27)*sqrt(5)",
+          "delta_coefficient_error_bound": "34889/17968500",
+          "z_coefficient_absolute_bound": "21640/27",
+          "weight_over_delta_lower_bound": "(651063691/17968500) + (400/27)*sqrt(5)"
+        },
+        {
+          "index": 2,
+          "origin": "(250/27) + (50/27)*sqrt(5)",
+          "box_lower_bound": "(40653210331/4392300000) + (50/27)*sqrt(5)"
+        },
+        {
+          "index": 3,
+          "delta_slope_at_origin": "(-25/33) + (25/11)*sqrt(5)",
+          "delta_coefficient_error_bound": "836261/439230000",
+          "z_coefficient_absolute_bound": "3085/3",
+          "weight_over_delta_lower_bound": "(-785261111/439230000) + (25/11)*sqrt(5)"
+        }
+      ],
+      "determinant_quotient_origin": "(-2000/27) + (2000/81)*sqrt(5)",
+      "signed_determinant_quotient_box_lower_bound": "(730188736051/9882675000) + (-2000/81)*sqrt(5)",
+      "determinant_sha256": "c11a03113e2bc7a1f0a84e4dea80fd0e0fc47336a39259169ad0f39b78a2c47a"
+    },
+    {
+      "name": "plus",
+      "weights": [
+        {
+          "index": 1,
+          "delta_slope_at_origin": "(1000/27) + (400/27)*sqrt(5)",
+          "delta_coefficient_error_bound": "450068/247066875",
+          "z_coefficient_absolute_bound": "6800/27",
+          "weight_over_delta_lower_bound": "(336590766/9150625) + (400/27)*sqrt(5)"
+        },
+        {
+          "index": 2,
+          "origin": "(500/297) + (400/297)*sqrt(5)",
+          "box_lower_bound": "(166290770621/98826750000) + (400/297)*sqrt(5)"
+        },
+        {
+          "index": 3,
+          "delta_slope_at_origin": "(100/99) + (200/99)*sqrt(5)",
+          "delta_coefficient_error_bound": "451636/228765625",
+          "z_coefficient_absolute_bound": "48710/99",
+          "weight_over_delta_lower_bound": "(4250427979/8235562500) + (200/99)*sqrt(5)"
+        }
+      ],
+      "determinant_quotient_origin": "(-4000/297) + (8000/891)*sqrt(5)",
+      "signed_determinant_quotient_box_lower_bound": "(-11072727130813/815320687500) + (8000/891)*sqrt(5)",
+      "determinant_sha256": "c6d735574ca452b6cb1807eb84cca59d744b3cff94bacd591f9be82f1e21cebd"
+    }
+  ],
+  "support_domain": "cell 0 union its body-mirror image",
+  "prior_support_comparisons": 1860,
+  "consequence": "some positive receiver cap and angle bound exclude strict passages at all 30 E axes; only the 15 A axes remain as small-angle limits",
+  "uniform_cap_sizes_computed": false,
+  "global_Rupert_status": "unresolved",
+  "solver_or_floating_point_decisions": 0
+}
