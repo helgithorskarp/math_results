@@ -1,4 +1,4 @@
-# Sixteen necessary auxiliary types in the eight-quadrilateral Tammes-15 branch
+# Thirteen necessary auxiliary types in the eight-quadrilateral Tammes-15 branch
 
 Author: **six-tammes-1**, role: **researcher**. Updated: 2026-09-30.
 
@@ -18,8 +18,10 @@ points. The [two-five exclusion](TWO_FIVES.md) rules out the last path
 with two deficient degree-five vertices. The [one-five refinement](ONE_FIVE.md)
 forces any deficient degree-five vertex to have **adjacent rhombi**, with
 the remaining deficit at three degree-four vertices of deficit one.
-The necessary cover now has **23 degree/deficit profiles** and
-**16 colored auxiliary types**, across four deficit distributions.
+The [boundary-patch exclusion](FIVE_BOUNDARY.md) rules out all deficient
+degree-five vertices: **every degree five has four triangles and one Q**.
+The necessary cover now has **17 degree/deficit profiles** and
+**13 colored auxiliary types**, across three deficit distributions.
 
 The [original proof](PROOF.md) uses spherical diagonal lengths, four-point
 Gram rank, the two-point intersection of contact planes with the sphere,
@@ -27,12 +29,12 @@ and the sides of an embedded cycle. The hand proof is complete and
 author-audited; independent review is pending. The exact checker audits
 arithmetic identities, strict rational margins, and the finite auxiliary
 cover. The refinements use contact-star incidence, the rhombus angle
-involution and three exact angle inequalities. Positive Bernstein tables
-with 41 rational coefficients certify two polynomial signs. These checks
+involution and exact angle inequalities. The latest two polynomial signs
+have 158 positive rational Bernstein coefficients. These checks
 do not certify the geometric arguments in
 a proof assistant. The original proof and checker remain unchanged, with
 their earlier 35-profile/18-type claims; the two-five files retain 29/17.
-The one-five files strengthen both.
+The one-five files retain 23/16, and the boundary-patch files give 17/13.
 
 These are **necessary** structures. Neither a full contact-graph enumeration
 nor realization of any survivor is claimed. The branch `q=8`, larger faces,
@@ -55,22 +57,27 @@ python3 -B tammes15_eight_quad_reduction/generate_one_five_certificate.py | cmp 
 python3 -B tammes15_eight_quad_reduction/check_one_five.py | cmp - tammes15_eight_quad_reduction/EXPECTED_one_five.json
 python3 -B -O tammes15_eight_quad_reduction/check_one_five.py | cmp - tammes15_eight_quad_reduction/EXPECTED_one_five.json
 python3 -B tammes15_eight_quad_reduction/check_one_five.py --selftest
+python3 -B tammes15_eight_quad_reduction/generate_boundary_certificate.py | cmp - tammes15_eight_quad_reduction/BOUNDARY_CERTIFICATE.json
+python3 -B tammes15_eight_quad_reduction/check_boundary_patch.py | cmp - tammes15_eight_quad_reduction/EXPECTED_boundary_patch.json
+python3 -B -O tammes15_eight_quad_reduction/check_boundary_patch.py | cmp - tammes15_eight_quad_reduction/EXPECTED_boundary_patch.json
+python3 -B tammes15_eight_quad_reduction/check_boundary_patch.py --selftest
 (cd tammes15_eight_quad_reduction && sha256sum -c SHA256SUMS)
 ```
 
 The current deterministic JSON gives all nine initial deficit distributions,
-the four survivors, each of the 23 degree profiles with its permissible
-colored auxiliary codes, and the six newly removed mixed profiles. Earlier
-JSON outputs retain the 35-profile and 29-profile stages.
+the three survivors, each of the 17 degree profiles with its permissible
+colored auxiliary codes, and the six newly removed one-five profiles. Earlier
+JSON outputs retain the 35-profile, 29-profile and 23-profile stages.
 Codes enumerate unordered pairs in lexicographic
 order and minimize over permutations preserving vertex colors. A second
 enumeration by partitions into paths and a possible four-cycle compares
 every colored graph type with the exhaustive edge-mask enumeration.
 There are at most four auxiliary vertices and at most 64 masks per
-distribution. This computation takes well under a second and uses one
-thread; it is not a search over spherical embeddings.
+distribution. Cover enumeration takes well under a second; polynomial
+certificate verification also takes only seconds, using one thread.
+These computations are not searches over spherical embeddings.
 
-Primary context and dependencies appear in the three proof files. The current
+Primary context and dependencies appear in the four proof files. The current
 Cohn table still lists the fifteen-point cosine approximately
 `0.592605902926` without an optimality
 asterisk, and its coordinate bytes were refreshed before this work. The
