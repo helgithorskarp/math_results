@@ -101,15 +101,17 @@ can be only one repeated minimum label, and it occurs at most twice.
 Maximum binary labels cannot repeat because their removed ports never
 reenter maximum support.
 
-A binary label cannot be effective in opposite polarities at two
-different times. Before the first10 event the supports are disjoint
+A binary label other than the first (p,10) label cannot be effective
+in opposite polarities at two different times. Before the first10
+event the supports are disjoint
 off10, and a preceding binary event avoids10. Afterward they are fully
 disjoint. Both endpoints of a minimum binary event are absent from
 maximum support then, and maximum support never grows. Both endpoints
 of a maximum binary event are absent from minimum support then. Only
 one of them could later acquire a minimum weight, namely p, whereas a
 minimum binary event requires two occupied endpoints. Thus changing
-polarity cannot cause repetition. The first (p,10) label itself cannot
+polarity cannot cause repetition for these other labels.
+The first (p,10) label itself cannot
 repeat effectively: no earlier event uses10, and afterward its two
 endpoints have disjoint low/high roles, with no support growth allowed.
 
