@@ -38,7 +38,7 @@
         "d41": 0,
         "d42": 2,
         "d51": 0,
-        "surviving_degree_profiles": 6
+        "surviving_degree_profiles": 3
       },
       {
         "allowed_H_codes": [],
@@ -101,8 +101,7 @@
     "profiles": [
       {
         "H_codes": [
-          "0",
-          "1"
+          "0"
         ],
         "d41": 0,
         "d42": 2,
@@ -113,8 +112,7 @@
       },
       {
         "H_codes": [
-          "0",
-          "1"
+          "0"
         ],
         "d41": 0,
         "d42": 2,
@@ -134,42 +132,6 @@
         "n3": 2,
         "n4": 9,
         "n5": 4
-      },
-      {
-        "H_codes": [
-          "0",
-          "1"
-        ],
-        "d41": 0,
-        "d42": 2,
-        "d51": 0,
-        "n3": 3,
-        "n4": 7,
-        "n5": 5
-      },
-      {
-        "H_codes": [
-          "0",
-          "1"
-        ],
-        "d41": 0,
-        "d42": 2,
-        "d51": 0,
-        "n3": 4,
-        "n4": 5,
-        "n5": 6
-      },
-      {
-        "H_codes": [
-          "0",
-          "1"
-        ],
-        "d41": 0,
-        "d42": 2,
-        "d51": 0,
-        "n3": 5,
-        "n4": 3,
-        "n5": 7
       },
       {
         "H_codes": [
@@ -344,8 +306,44 @@
     ],
     "remaining_colored_H_types": 13,
     "remaining_deficit_distributions": 3,
-    "remaining_degree_profiles": 17,
+    "remaining_degree_profiles": 14,
     "removed_profiles": [
+      {
+        "H_codes": [
+          "0",
+          "1"
+        ],
+        "d41": 0,
+        "d42": 2,
+        "d51": 0,
+        "n3": 3,
+        "n4": 7,
+        "n5": 5
+      },
+      {
+        "H_codes": [
+          "0",
+          "1"
+        ],
+        "d41": 0,
+        "d42": 2,
+        "d51": 0,
+        "n3": 4,
+        "n4": 5,
+        "n5": 6
+      },
+      {
+        "H_codes": [
+          "0",
+          "1"
+        ],
+        "d41": 0,
+        "d42": 2,
+        "d51": 0,
+        "n3": 5,
+        "n4": 3,
+        "n5": 7
+      },
       {
         "H_codes": [
           "000011",
@@ -425,7 +423,41 @@
         "n5": 7
       }
     ],
-    "restriction": "Every degree five is ordinary: four triangles and one quadrilateral"
+    "restriction": "All degree fives ordinary; two zero-triangle fours require n3<=2; their H edge requires n3>=2"
+  },
+  "incidence_checks": {
+    "excluded_two_zero_triangle_profiles": [
+      {
+        "boundary_capacity": 5,
+        "degree_sum": 17,
+        "internal_edges_at_most": 5,
+        "n3": 3,
+        "required_internal_edges_at_least": 6,
+        "zero_triangle_vertices": 5
+      },
+      {
+        "boundary_capacity": 3,
+        "degree_sum": 20,
+        "internal_edges_at_most": 8,
+        "n3": 4,
+        "required_internal_edges_at_least": 9,
+        "zero_triangle_vertices": 6
+      },
+      {
+        "boundary_capacity": 1,
+        "degree_sum": 23,
+        "internal_edges_at_most": 10,
+        "n3": 5,
+        "required_internal_edges_at_least": 11,
+        "zero_triangle_vertices": 7
+      }
+    ],
+    "five_vertex_admitted_masks": 378,
+    "five_vertex_masks_checked": 1024,
+    "five_vertex_max_edges": 5,
+    "geometry_and_planarity_are_written_hand_proofs": true,
+    "opposite_two_zero_triangle_Q_requires_n3_at_least": 2,
+    "triangle_norm_gap": "(1-c)(1+3c)>0"
   },
   "role": "researcher",
   "scope": "exact angle certificates and necessary cover; written geometry separate"

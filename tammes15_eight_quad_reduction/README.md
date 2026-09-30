@@ -20,7 +20,9 @@ forces any deficient degree-five vertex to have **adjacent rhombi**, with
 the remaining deficit at three degree-four vertices of deficit one.
 The [boundary-patch exclusion](FIVE_BOUNDARY.md) rules out all deficient
 degree-five vertices: **every degree five has four triangles and one Q**.
-The necessary cover now has **17 degree/deficit profiles** and
+Its incidence corollary bounds the degree-three count at two when the
+deficit lies at two zero-triangle degree fours.
+The necessary cover now has **14 degree/deficit profiles** and
 **13 colored auxiliary types**, across three deficit distributions.
 
 The [original proof](PROOF.md) uses spherical diagonal lengths, four-point
@@ -34,7 +36,7 @@ have 158 positive rational Bernstein coefficients. These checks
 do not certify the geometric arguments in
 a proof assistant. The original proof and checker remain unchanged, with
 their earlier 35-profile/18-type claims; the two-five files retain 29/17.
-The one-five files retain 23/16, and the boundary-patch files give 17/13.
+The one-five files retain 23/16, and the boundary-patch files give 14/13.
 
 These are **necessary** structures. Neither a full contact-graph enumeration
 nor realization of any survivor is claimed. The branch `q=8`, larger faces,
@@ -65,8 +67,9 @@ python3 -B tammes15_eight_quad_reduction/check_boundary_patch.py --selftest
 ```
 
 The current deterministic JSON gives all nine initial deficit distributions,
-the three survivors, each of the 17 degree profiles with its permissible
-colored auxiliary codes, and the six newly removed one-five profiles. Earlier
+the three survivors, each of the 14 degree profiles with its permissible
+colored auxiliary codes, and the nine newly removed profiles. Two-zero-triangle
+profiles with n3=0,1 have only the empty H code. Earlier
 JSON outputs retain the 35-profile, 29-profile and 23-profile stages.
 Codes enumerate unordered pairs in lexicographic
 order and minimize over permutations preserving vertex colors. A second

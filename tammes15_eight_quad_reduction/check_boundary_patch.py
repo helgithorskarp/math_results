@@ -121,6 +121,61 @@ def legal(labels, edges):
     return '5/1' not in labels and one.legal(labels,edges)
 
 
+def zero_graph_allowed(n, edges):
+    neighbors = [set() for _ in range(n)]
+    for a,b in edges:
+        neighbors[a].add(b)
+        neighbors[b].add(a)
+    if any(c in neighbors[a] and c in neighbors[b] for a,b in edges for c in range(n)):
+        return False
+    return all(len(neighbors[a]&neighbors[b])<=2 for a,b in combinations(range(n),2))
+
+
+def incidence_checks():
+    # An independent elementary hand proof in FIVE_BOUNDARY.md shows that
+    # every triangle-free five-vertex graph with six edges contains K2,3.
+    # Here all 1024 labeled edge masks are checked directly as a second check.
+    pairs = tuple(combinations(range(5),2))
+    admitted = []
+    for mask in range(1<<len(pairs)):
+        edges = frozenset(e for i,e in enumerate(pairs) if (mask>>i)&1)
+        if zero_graph_allowed(5,edges):
+            admitted.append(len(edges))
+    maximum = max(admitted)
+    prior.need(maximum==5, 'five-vertex zero-triangle graph bound')
+    c = prior.variable(0)
+    prior.need(not (1+2*c-3*c**2-(1-c)*(1+3*c)).terms,
+               'contact triangle norm-gap identity')
+    bounds = []
+    for n3 in range(3,6):
+        n4 = 13-2*n3
+        degree_sum = 3*n3+8
+        boundary_capacity = n4-2
+        minimum = (degree_sum-boundary_capacity+1)//2
+        maximum = 5 if n3==3 else 2*(n3+2)-4
+        prior.need(minimum>maximum, 'zero-triangle incidence exclusion')
+        bounds.append({'n3':n3,'zero_triangle_vertices':n3+2,
+                       'degree_sum':degree_sum,'boundary_capacity':boundary_capacity,
+                       'required_internal_edges_at_least':minimum,
+                       'internal_edges_at_most':maximum})
+    return {'five_vertex_masks_checked':1024,'five_vertex_admitted_masks':len(admitted),
+            'five_vertex_max_edges':5,'triangle_norm_gap':'(1-c)(1+3c)>0',
+            'excluded_two_zero_triangle_profiles':bounds,
+            'opposite_two_zero_triangle_Q_requires_n3_at_least':2,
+            'geometry_and_planarity_are_written_hand_proofs':True}
+
+
+def profile_allowed(p):
+    return p['d51']==0 and not (p['d42']==2 and p['n3']>=3)
+
+
+def refine_profile(p):
+    out = deepcopy(p)
+    if out['d42']==2 and out['n3']<2:
+        out['H_codes'] = ['0']
+    return out
+
+
 def cover():
     baseline = one.cover()
     rows, profiles = [], []
@@ -140,21 +195,25 @@ def cover():
         prior.need(sorted(codes)==(before['allowed_H_codes'] if d51==0 else []),
                    'entry-level prior cover comparison')
         added = [p for p in baseline['profiles']
-                 if (p['d41'],p['d42'],p['d51'])==(d41,d42,d51) and codes]
+                 if (p['d41'],p['d42'],p['d51'])==(d41,d42,d51) and codes
+                 and profile_allowed(p)]
+        added = [refine_profile(p) for p in added]
         profiles.extend(added)
         rows.append({'d41':d41,'d42':d42,'d51':d51,
                      'allowed_H_codes':sorted(codes),'surviving_degree_profiles':len(added)})
-    prior.need(profiles==[p for p in baseline['profiles'] if p['d51']==0],
+    prior.need(profiles==[refine_profile(p) for p in baseline['profiles'] if profile_allowed(p)],
                'entry-level degree profiles mismatch')
-    prior.need(len(profiles)==17 and sum(len(r['allowed_H_codes']) for r in rows)==13
+    prior.need(len(profiles)==14 and sum(len(r['allowed_H_codes']) for r in rows)==13
                and sum(bool(r['allowed_H_codes']) for r in rows)==3, 'cover totals')
-    removed = [p for p in baseline['profiles'] if p['d51']]
-    prior.need(len(removed)==6 and [p['n3'] for p in removed]==list(range(6)),
-               'removed one-five profiles')
-    return {'previous_degree_profiles':23,'remaining_degree_profiles':17,
+    removed = [p for p in baseline['profiles'] if not profile_allowed(p)]
+    prior.need(len(removed)==9
+               and [p['n3'] for p in removed if p['d51']]==list(range(6))
+               and [p['n3'] for p in removed if p['d42']==2]==[3,4,5],
+               'removed degree profiles')
+    return {'previous_degree_profiles':23,'remaining_degree_profiles':14,
             'previous_colored_H_types':16,'remaining_colored_H_types':13,
             'remaining_deficit_distributions':3,
-            'restriction':'Every degree five is ordinary: four triangles and one quadrilateral',
+            'restriction':'All degree fives ordinary; two zero-triangle fours require n3<=2; their H edge requires n3>=2',
             'removed_profiles':removed,'distributions':rows,'profiles':profiles}
 
 
@@ -186,7 +245,11 @@ def selftest(cert):
     test(legal(['4/2','4/2'],frozenset()), 'all-four empty graph retained')
     test(legal(['4/1','4/1','4/2'],prior.normalized_edges(((0,2),(1,2)))),
          'mixed all-four path retained')
-    test(len(cover()['profiles'])==17, 'complete updated cover')
+    k23 = frozenset((a,b) for a in (0,1) for b in (2,3,4))
+    test(not zero_graph_allowed(5,k23), 'three common neighbors forbidden')
+    cycle5 = prior.normalized_edges(((0,1),(1,2),(2,3),(3,4),(4,0)))
+    test(zero_graph_allowed(5,cycle5), 'five-edge zero-triangle graph retained')
+    test(len(cover()['profiles'])==14, 'complete updated cover')
     return controls
 
 
@@ -194,14 +257,16 @@ def main():
     prior.need(sys.argv[1:] in ([],['--selftest']), 'usage: check_boundary_patch.py [--selftest]')
     cert = json.loads(Path(__file__).with_name('BOUNDARY_CERTIFICATE.json').read_text())
     checks = certificate_checks(cert)
+    incidence = incidence_checks()
     if sys.argv[1:]:
         print(json.dumps({'status':'PASS','controls':selftest(cert),
-                          'degree_profiles':17,'colored_H_types':13,
+                          'degree_profiles':14,'colored_H_types':13,
                           'positive_angle_coefficients':158},sort_keys=True))
     else:
         print(json.dumps({'agent':'six-tammes-1','role':'researcher',
                           'scope':'exact angle certificates and necessary cover; written geometry separate',
-                          'angle_checks':checks,'cover':cover()},indent=2,sort_keys=True))
+                          'angle_checks':checks,'incidence_checks':incidence,
+                          'cover':cover()},indent=2,sort_keys=True))
 
 
 if __name__=='__main__': main()

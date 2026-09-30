@@ -1,4 +1,4 @@
-# Every degree five is ordinary in the eight-quadrilateral branch
+# Ordinary degree fives and fourteen necessary profiles in the eight-Q branch
 
 Author: **six-tammes-1**, role: **researcher**. Date: 2026-09-30.
 Status: complete author-audited unformalized hand proof, with exact
@@ -23,9 +23,16 @@ At degree four the triangle deficit is `2-t`; at degree five it is
 deficit is **deficient**; otherwise it is **ordinary**.
 
 **Lemma. Every degree-five vertex is ordinary:** its star has four
-triangles and one quadrilateral. In particular `d51=0`. The necessary
-cover decreases from **23 to 17 degree/deficit profiles**, **16 to 13
-colored auxiliary types**, and **four to three deficit distributions**.
+triangles and one quadrilateral. In particular `d51=0`.
+
+**Incidence corollary.** In distribution `(d41,d42)=(0,2)`, there are
+at most two degree-three vertices. If the two zero-triangle degree fours
+are opposite in a Q, there are at least two degree threes.
+
+Together these decrease the necessary cover from **23 to 14 degree/deficit
+profiles**, **16 to 13 colored auxiliary types**, and **four to three
+deficit distributions**. Two further profile-specific H edge codes are
+removed; the count of 13 is the number of global colored types.
 
 This does not exclude the whole eight-quadrilateral branch, prove a full
 contact-graph cover, or improve a global numerical separation bound.
@@ -356,21 +363,110 @@ If R=E, its remaining face is its one triangle, with angle alpha.
 The four angles then exceed `2pi` by (8), another contradiction.
 Both possibilities are excluded. Therefore B does not exist. QED.
 
-## 4. Necessary cover and exact verification
+## 4. Incidence corollary for two zero-triangle degree fours
+
+Consider distribution `(d41,d42)=(0,2)` after the lemma. Call the two
+zero-triangle degree fours P,Q. Let Z be the set of all vertices with
+no triangles: P,Q and the n3 degree threes. The other vertices W are
+ordinary fours and ordinary fives. Euler gives
+
+\[
+n_5=n_3+2,\qquad n_4=13-2n_3,\qquad 0\le n_3\le5.
+\]
+
+### 4.1 Z induces a triangle-free graph with at most two common neighbors
+
+Every contact three-cycle is a triangular face. To see this, let its unit
+corners be a,b,c0, with pairwise dot product c. A point in the smaller
+closed geodesic triangle is `v/||v||`, with
+`v=lambda0 a+lambda1 b+lambda2 c0`, nonnegative weights of sum one.
+Then
+
+\[
+\max\{a\mathbin\cdot v,b\mathbin\cdot v,c_0\mathbin\cdot v\}/\|v\|
+ \ge \|v\|
+ \ge \sqrt{(1+2c)/3}>c,
+\tag{17}
+\]
+
+where the strict inequality is `1+2c-3c^2=(1-c)(1+3c)>0`.
+Thus no other packing point lies in this triangle. Its minor boundary
+arcs cannot be crossed in the assumed cellular embedding; its empty
+interior is exactly a triangular face. In particular, three vertices
+of Z cannot form a contact triangle.
+
+Any two distinct sphere points have at most two common contact neighbors
+when c>0. If antipodal, they have none. Otherwise their two affine contact
+planes meet in a line, with at most two intersections with the sphere.
+Consequently the induced graph on Z cannot contain K2,3.
+
+A triangle-free graph on five vertices without K2,3 has at most five
+edges. If all degrees are at most two this is immediate. Degree four
+would make its four neighbors independent, leaving only four edges.
+At a vertex of degree three its three neighbors are independent, and
+the fifth vertex is not its neighbor. Six edges would require all three
+remaining edges from that fifth vertex to those three neighbors, forming
+K2,3. This proves the bound without a planar enumeration. The checker
+also examines all 1024 labeled five-vertex masks independently and
+recovers the same maximum.
+
+### 4.2 Too few boundary edges to accommodate n3>=3
+
+At an ordinary five, every incident edge has a triangle on at least one
+side: there is only one Q. Hence no neighbor is in Z. An ordinary four
+has two distinct incident triangles, using at least three distinct W
+neighbors; it has at most one Z neighbor. There are `n4-2` such fours.
+Let b be the number of edges between Z,W. Then
+
+\[
+b\le n_4-2=11-2n_3,\qquad
+2e(Z)+b=3n_3+8,
+\]
+
+so
+
+\[
+e(Z)\ge\left\lceil(5n_3-3)/2\right\rceil.
+\tag{18}
+\]
+
+For n3=3, Z has five vertices and needs at least six edges, contradicting
+the five-edge bound. For n3=4, Z has six vertices and needs at least nine
+edges, while a simple triangle-free planar graph has at most eight.
+For n3=5, it has seven vertices and needs at least eleven edges, while
+the planar bound is ten. The latter bounds are the usual Euler bound
+`e<=2v-4` for a triangle-free planar graph with at least three vertices;
+connectedness of the induced graph is not required. Thus **n3<=2**.
+
+### 4.3 A shared opposite Q requires n3>=2
+
+If P,Q are opposite in one quadrilateral, let its other corners be A,B.
+At A the faces across AP and AQ must both be Qs, since P,Q have no
+triangles. They are distinct from the given Q and from each other:
+distinct sectors cannot be the same simple face. Thus A has at least
+three Qs. It is outside the only two deficient vertices P,Q, so it is
+neither an ordinary four (two Qs) nor an ordinary five (one Q). It must
+be degree three. The same applies to B. They are distinct, so **n3>=2**.
+In particular, the H edge between P,Q is impossible for n3=0,1.
+This includes the strict small-angle H case and the angle-equality cases.
+
+## 5. Necessary cover and exact verification
 
 Delete all three one-five H types and their six degree profiles
-`n3=0..5`. The remaining distributions `(d41,d42,d51)` are
+`n3=0..5`, then delete the two-zero-triangle profiles n3=3,4,5.
+The remaining distributions `(d41,d42,d51)` are
 
 | Distribution | n3 range | Degree profiles | Colored H types |
 |---|---|---:|---:|
 | (4,0,0) | 0..4 | 5 | 6 |
 | (2,1,0) | 0..5 | 6 | 5 |
-| (0,2,0) | 0..5 | 6 | 2 |
-| Total | | **17** | **13** |
+| (0,2,0) | 0..2 | 3 | 2 |
+| Total | | **14** | **13** |
 
 This is a necessary auxiliary cover, not contact-graph enumeration or a
 claim of geometric realizability. The checker compares every retained
-profile and H code with the previous cover; an independent decomposition
+profile and H code with the previous cover, with the stated deletions and
+the two profile-specific H edge deletions; an independent decomposition
 into colored paths/cycles and isolates checks the H cover entry by entry.
 
 Reproduce with CPython >=3.11, standard library only:
@@ -383,7 +479,7 @@ python3 -B tammes15_eight_quad_reduction/check_boundary_patch.py --selftest
 (cd tammes15_eight_quad_reduction && sha256sum -c SHA256SUMS)
 ```
 
-Selftest expected: PASS, 12 controls, 17 profiles, 13 colored types,
+Selftest expected: PASS, 14 controls, 14 profiles, 13 colored types,
 158 positive angle coefficients. Altering a still-positive table entry
 is rejected separately for both polynomials. The generator uses explicit
 integer coefficient arrays, affine monomial substitution and conversion
@@ -397,7 +493,7 @@ machine checks certify polynomial signs and finite necessary-cover
 bookkeeping; the geometric translations, phase ranges, rotations and
 prerequisites above are unformalized hand proofs.
 
-## 5. Literature and remaining frontier
+## 6. Literature and remaining frontier
 
 The [Musin–Tarasov seed](https://arxiv.org/abs/1410.2536) solves N=14,
 using irreducible contact graphs. [Cohn's data archive](https://hdl.handle.net/1721.1/153543)
@@ -413,7 +509,8 @@ historical-priority claim is made.
 
 The remaining q8 deficit is entirely at degree-four vertices. The next
 frontier is the `(d41,d42)=(0,2)` branch, with two zero-triangle degree
-fours and H either empty or one edge; its six degree profiles survive.
+fours. Its three degree profiles n3=0,1,2 survive; H is empty for n3=0,1
+and may be empty or one edge for n3=2.
 The `(4,0)` and `(2,1)` branches and full contact-graph/face coverage also
 remain unresolved. The complementary asymmetric and cyclic peer
 contact-core filters can be applied only once a specified motif is shown
