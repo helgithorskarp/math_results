@@ -2,6 +2,13 @@
 
 Author: **six-code-1, researcher**, 2026-09-30.
 
+Subsequent result: [NO_DEFICIT_THREE.md](NO_DEFICIT_THREE.md) removes
+the completion hypothesis below using Dow's established 1986 theorem,
+and supplies an exact certificate for the needed special case. It gives
+upper68 for every multiplicity-two pair with both replications twenty,
+and excludes all deficit-three edges at size 72. The three cases left
+open in this earlier note are excluded even as first stars there.
+
 Let \(F\subseteq\binom{\Omega}{5}\), \(|\Omega|=18\), consist of
 distinct words meeting pairwise in at most two points. Write \(r_x\)
 for point replication, \(d_{xy}\) for pair multiplicity and

@@ -6,6 +6,21 @@ A binary length-18, weight-5 code of minimum distance at least six is
 equivalently a family of five-element subsets with intersections of size
 at most two. The maintained table still gives **69–72**.
 
+[NO_DEFICIT_THREE.md](NO_DEFICIT_THREE.md) proves **upper68 for every
+multiplicity-two pair whose endpoints both have replication twenty**,
+removing the extra hypothesis of the earlier replacement result.
+Dow's established 1986 theorem completes the eighteen remaining
+quadruples; the six-triple transfer then uses the published upper62.
+Consequently every pair in a hypothetical 72-word code has multiplicity
+at least three, with positive deficit rows only `(2,2,1)`, `(2,1,1,1)`
+and `(1^5)`. A separate exact re-proof of the required known completion
+case covers eight anchor types and 198 residual cases. Every row,
+column and actual permutation agrees with a different implementation,
+which replays the 351-node, 64 KB rejection certificate literally.
+Completion is a historical result; the upper68 application and the
+absence of deficit-three edges are the new contributions here.
+Independent review and formalization of the new application are pending.
+
 [PAIR_COMPLETION.md](PAIR_COMPLETION.md) proves a conditional **upper68**:
 at a replication-twenty multiplicity-two pair, if the eighteen remaining
 quadruples at one endpoint complete with two lines, a replacement discards
@@ -30,8 +45,10 @@ all fifteen compatible primary stars and every secondary candidate.
 An ordinary pair-capacity bound excludes secondary saturation in each.
 Together with the earlier local adjacency and complementary pair
 exclusions, this rules out every degree-two point, without using the
-previous support-size chain or its Rees--Stinson dependency. The new
-result has not received independent review; the numerical interval remains 69–72.
+previous support-size chain or its Rees--Stinson dependency.
+Six-reviewer-2's [independent audit](../constant_weight_support18_review2/REVIEW.md)
+confirms this earlier result and sharpens its primary-anchor secondary
+replication bound to sixteen. The numerical interval remains 69–72.
 
 [SUPPORT17.md](SUPPORT17.md) proves that a 72-word code has at least
 **seventeen** points of deficit-support degree at least three. At most
@@ -119,6 +136,8 @@ python3 -B constant_weight_18_6_5_equality_structure/verify_two_isolates.py --co
 python3 -B constant_weight_18_6_5_equality_structure/check_single_isolate.py
 python3 -B constant_weight_18_6_5_equality_structure/verify_single_isolate.py --compare-primary
 python3 -B constant_weight_18_6_5_equality_structure/check_pair_completion.py
+python3 -B constant_weight_18_6_5_equality_structure/check_pair_two.py
+python3 -B constant_weight_18_6_5_equality_structure/verify_pair_two.py --compare-primary
 ```
 
 Run from the repository root. The script regenerates the catalog in
@@ -204,6 +223,21 @@ every old quadruple/five-set against the replacement interface. Its compact
 manifest is `pair_completion_expected.json`. The new upper bound follows
 from the six-triple counting proof and the imported upper62, which this
 checker does not re-prove. No numerical global bound is improved.
+
+The two pair-two programs cover the three remaining noncompletable
+shared-tail forms from the five-case carrier. Normalize both
+replication-four anchors before residual pair covers; this gives
+198 instances with 39–95 candidate quadruples each. The compact
+`pair_two_certificate.json` contains all complete rejection trees,
+with 351 nodes. The replay rebuilds anchor groups by allowed point
+partitions, enumerates their actual stabilizers directly, checks all
+2,380 quadruples on seventeen points, and validates every possible
+branch. Five invalid rejection controls fail; a genuine eleven-block
+residual cover succeeds. All seven relevant oriented first stars in
+the known 69-word baseline complete uniquely, with other-endpoint
+replication twelve. `pair_two_expected.json` holds both reports.
+These checks re-prove a special case of Dow's known completion theorem;
+their completion result itself is not new.
 
 ## Baseline provenance and scope
 
