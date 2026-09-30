@@ -6,6 +6,18 @@ A binary length-18, weight-5 code of minimum distance at least six is
 equivalently a family of five-element subsets with intersections of size
 at most two. The maintained table still gives **69–72**.
 
+[SUPPORT17.md](SUPPORT17.md) proves that a 72-word code has at least
+**seventeen** points of deficit-support degree at least three. At most
+one degree-two point remains. The new local exclusion covers two
+saturated degree-two points with distinct primary anchors and a shared
+secondary anchor. Two different enumerations agree on all thirty
+compatible pairs of links; nineteen fail an ordinary point-capacity
+bound, while the other eleven give 78 anchor leave cases, each excluded
+by a fixed-pair conflict or an explicit missing-pair certificate.
+The global corollary imports the preceding support and adjacency results
+and the complementary six-code-3 pair theorems. This new result has not
+received independent review and does not improve the numerical upper bound.
+
 [SUPPORT16.md](SUPPORT16.md) proves a computer-assisted necessary restriction:
 in any 72-word code, at least **sixteen** points have three or more neighbors
 in the support of the deficits `t[x,y] = 5 - d[x,y]`, where `d[x,y]` counts
@@ -73,6 +85,8 @@ python3 constant_weight_18_6_5_equality_structure/check_support16.py
 python3 constant_weight_18_6_5_equality_structure/verify_support16.py --compare-primary
 python3 -B constant_weight_18_6_5_equality_structure/check_adjacent_low.py
 python3 -B constant_weight_18_6_5_equality_structure/verify_adjacent_low.py --compare-primary
+python3 -B constant_weight_18_6_5_equality_structure/check_two_isolates.py
+python3 -B constant_weight_18_6_5_equality_structure/verify_two_isolates.py --compare-primary
 ```
 
 Run from the repository root. The script regenerates the catalog in
@@ -129,6 +143,16 @@ candidate with the primary implementation. Their compact manifest is
 `adjacent_low_expected.json`. The coverage and capacity arguments are in
 ADJACENT_LOW; these are two different algorithms by the same researcher,
 not independent peer review. No unrestricted numerical bound is improved.
+
+The final two scripts prove the shared-anchor obstruction used for the
+seventeen-point theorem. The primary exact pair-cover computation completes
+127 cases in 1,183 nodes. The replay instead checks 41,472 split relative
+planes and reconstructs every three-edge anchor leave from its degree
+sequence. Their actual second stars, anchor rows and columns, and all
+45 missing-pair certificates agree entry by entry. The new manifests are
+`two_isolates_expected.json` and `two_isolates_replay_expected.json`.
+No anchor packing optimization is needed: all nonconflicting cases contain
+a required pair in no legal candidate quadruple.
 
 ## Baseline provenance and scope
 

@@ -2,6 +2,13 @@
 
 Author: six-code-1, researcher. Date: 2026-09-30.
 
+The current strongest support-size consequence in this directory is
+the computer-assisted [SUPPORT17.md](SUPPORT17.md): at least seventeen
+points have support degree at least three. It excludes the two-isolate
+carrier using the preceding adjacency result and the complementary
+six-code-3 pair theorems, whose additional dependencies are explicit there.
+The original incidence proof and local catalog below remain valid.
+
 The at-least-nine conclusion below is strengthened to at least sixteen
 in the computer-assisted [SUPPORT16.md](SUPPORT16.md), via the ordinary
 [SUPPORT15.md](SUPPORT15.md), [SUPPORT14.md](SUPPORT14.md) and
