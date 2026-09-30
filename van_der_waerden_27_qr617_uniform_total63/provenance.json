@@ -1,0 +1,122 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "family": "symmetric two-color/seven-term W(2,7)",
+  "proof_status": "Exact computer-assisted asymmetric box lemmas; uniform63 corollary dependent on explicitly cited numerical premises",
+  "python_version": "3.11.2",
+  "third_party_dependencies": [],
+  "source_dependencies": [
+    {
+      "directory": "../van_der_waerden_27_qr617_mixed_edit_region",
+      "source_commit": "45338b996411231c38ef2c5073c157911c15a427",
+      "files": {
+        "generate.py": "f822a963f9bb6e490dcbd7fbe635dcba87889337b32c0efe8e5fdf3d28607653",
+        "verify.py": "38ba46f4f22d01ab7df79f1bb20ad7ab190230cf90a29ff1ab3b678e97e2eb33"
+      }
+    },
+    {
+      "directory": "../van_der_waerden_27_qr617_class29_disjunction",
+      "source_commit": "9f183bdd6f0b78152dba63a5fc0ef8391e9d49ec",
+      "files": {
+        "verify.py": "579763d952c364963692638d125e9ff71c6ed9add1f3e4999462bac2e8e7c0af"
+      },
+      "use": "Unchanged generic tree replay; no prior numerical result is called by new branch checking"
+    }
+  ],
+  "numerical_dependencies": [
+    {
+      "directory": "van_der_waerden_27_qr617_nonsquare30_endpoint1",
+      "source_commit": "f3fd087db165cfdaef391aff0d47c75bb7077cda",
+      "graph_ref": "bafkreibznuuclypj37y3zawaphzeh5dgnvduhwqlt5runpxa7dl55b6izy",
+      "files": {
+        "PROOF.md": "6e36bf5d673ffcb8391414d0d1b8e53f5d8794548ba1a64a5bf8fae4c90ffbfb",
+        "expected.json": "bcb5f62afa8bed1cc0c036002bdf8e11f543bc3be6db4f60b246a9eca36c2bb0"
+      },
+      "scope": "Total corollary only: a,b>=30 at both endpoints, with its explicit published numerical parents. Previous total lower62 unused."
+    },
+    {
+      "directory": "van_der_waerden_27_qr617_max32_endpoint0",
+      "source_commit": "5449d6981e38020f76452e68be05de5a123b8900",
+      "graph_ref": "bafkreihgdtm5j53hqnupmkdhptjvlzeashiqgukum6p63ksj7l4ozqft4q",
+      "files": {
+        "PROOF.md": "3186535aed1dc1f04ad1cfa4ad85d0ff987b267d2dcf08bb7896c588d893cbc4",
+        "expected.json": "c0eda46520e7ab0046762b6a2c1743227829d263b5244c23540f5ff0c2249d31"
+      },
+      "scope": "Total corollary only: both-endpoint ORIGINAL31/31 exclusion, invoking its separately published endpoint1 parent graph7855/source03bd90b4b786564eaa164360f765e109c9823b86. No numerical theorem imported by new branch checker."
+    },
+    {
+      "directory": "van_der_waerden_27_qr617_max32_endpoint1",
+      "source_commit": "03bd90b4b786564eaa164360f765e109c9823b86",
+      "files": {
+        "PROOF.md": "11e6e7b8f13ac6a3d06efac6427f3d81e00eae01eaaa160acb1d35dbd7d37870",
+        "expected.json": "9fc5954893279254502a06bcc53aa48782d9c91b018ffb3d3e7b84264cff3ac9"
+      },
+      "scope": "Transitive numerical premise for both-endpoint balanced box, explicitly cited; not invoked by new branches"
+    }
+  ],
+  "adapted_wrapper_credit": [
+    {
+      "directory": "van_der_waerden_27_qr617_max32_endpoint0",
+      "source_commit": "5449d6981e38020f76452e68be05de5a123b8900",
+      "graph_ref": "bafkreihgdtm5j53hqnupmkdhptjvlzeashiqgukum6p63ksj7l4ozqft4q",
+      "files": {
+        "generate.py": "7bdecac24606497006c777915743cb2d383481714e50cc20e2f5e2479f3fd666",
+        "verify.py": "4eb5d932bc41688afb8a4d326e87693a76792cce46f33c6e80d98605b3d28ca4"
+      },
+      "scope": "Public resume/generation and outer-checking source adapted; none of its prior numerical outputs is a branch hypothesis."
+    },
+    {
+      "directory": "van_der_waerden_27_qr617_class30_endpoint0",
+      "source_commit": "84fcb7a230691dd2aeaa5e400d12c649ae08f1ae",
+      "files": {
+        "generate.py": "756ba7afee483a46420debfba6497dd6655075b479db8aa33b939c81e60ccfe2"
+      },
+      "scope": "Earlier public mandatory-petal generation design source credit only; no numerical values invoked"
+    }
+  ],
+  "primary_sources": [
+    {
+      "url": "https://combinatorialpress.com/jcmcc-articles/volume-128/new-lower-bounds-for-van-der-waerden-numbers-using-distributed-computing/",
+      "checked": "2026-09-30",
+      "use": "Table1 length7/two colors>3703 and Table2 prime617; reversed argument orderW(length,colors). No comprehensive current-best claim."
+    },
+    {
+      "url": "https://github.com/marijnheule/vdWaerden/blob/master/certificates/W_2_7_617.cert",
+      "checked": "2026-09-30",
+      "use": "Primary classical QR template certificate; no length3704 witness verified."
+    }
+  ],
+  "published_context": [
+    {
+      "agent": "six-vdw-1",
+      "role": "researcher",
+      "graph_ref": "bafkreic7axpkcg2kybbz5ldy6xp4lumihkvoetygo7kk5s5obrbq56sjye",
+      "height": 7950,
+      "source_commit": "c768156dd53b9d25d45439ecf9e63334dadcaa7e",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_622_degree3_character_repair",
+      "scope": "Different period622 polynomial-character template;20 column/220 coordinate repair bound within template,20 coordinate bound for unrestricted repairs. No transferred constants."
+    },
+    {
+      "agent": "six-vdw-3",
+      "role": "researcher",
+      "graph_ref": "bafkreiefgv6x2yz3mzhilqlmni55pptqyz2oqdizvx6pif4hcscc7q6ula",
+      "height": 7946,
+      "source_commit": "56592467f119c9ea374c1038e17993589bfd6021",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_617_phase201_zero_screen",
+      "scope": "Different phase201 partial reference,1849/class and6 free poles; necessary screens only, not wholebox exclusion. No transferred constants."
+    }
+  ],
+  "reference": "Aligned q=0 nonzero squares modulo617, q=1 nonsquares onD=[0,3702] minus multiples617; original classes1848 each;7 old poles andendpointfree/uncounted",
+  "candidate_symmetry_or_periodicity_assumed": false,
+  "new_branch_numeric_hypotheses": false,
+  "numerical_proofs_rerun_by_reproduction": false,
+  "trust_boundary": "Exact integers/sets and Euler AP definitions; unchanged generic disjunction checker and strict-parent regressions; independent representations share this author, no external review or formal proof. External numeric lemmas and unformalized implication/induction/complete-cover/finite-bridge proofs explicitly trusted.",
+  "generated_corpus_bytes": 16772267,
+  "generated_corpus_published": false,
+  "private_data_or_certificate_input_required": false,
+  "threads": 1,
+  "max_cpu_jobs": 1,
+  "primitive_cap_seconds": 90,
+  "validation_cap_seconds": 90,
+  "no_length3704_witness_global_W_bound_or_unrestricted_nonexistence_claim": true
+}

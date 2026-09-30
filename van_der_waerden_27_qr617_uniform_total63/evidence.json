@@ -1,0 +1,150 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "status": "FRESH_SOURCE_ONLY_REPRODUCTION_AND_EXACT_CHECKS_PASSED",
+  "fresh_source_generator": {
+    "generated_root_cases": 24,
+    "primitive_cases": 36,
+    "seconds": 453.227,
+    "max_rss_kib": 129532,
+    "STALLED_parent_requires_complete_checked_split": true,
+    "every_primitive_completed_without_time_limit": true,
+    "STALLED_parents": 2,
+    "closed_primitive_leaves": 34
+  },
+  "first_exact24_root_replay": {
+    "seconds": 17.798,
+    "max_rss_kib": 255028
+  },
+  "documented_public_reproduction_normal_and_optimized": {
+    "seconds": 266.023,
+    "max_rss_kib": 257856,
+    "status": "UNIFORM63_CERTIFICATES_AND_CONTROLS_PASSED",
+    "generator_phase": "No-op resume of freshly source-generated24 cases; no private certificate input"
+  },
+  "entry_level_private_comparison": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "status": "FRESH_SOURCE_ONLY_REPRODUCTION_MATCHES_ALL_PRIVATE_ENTRIES_AND_RESULTS",
+    "certificate_entries": 24,
+    "proof_corpus_bytes": 16772267,
+    "comparison_by_filename_and_quantified_case": true,
+    "full_root_results_compared": 24,
+    "boxes": [
+      {
+        "endpoint": 0,
+        "budget": [
+          30,
+          32
+        ],
+        "full_root_results_identical": 6
+      },
+      {
+        "endpoint": 0,
+        "budget": [
+          32,
+          30
+        ],
+        "full_root_results_identical": 6
+      },
+      {
+        "endpoint": 1,
+        "budget": [
+          30,
+          32
+        ],
+        "full_root_results_identical": 6
+      },
+      {
+        "endpoint": 1,
+        "budget": [
+          32,
+          30
+        ],
+        "full_root_results_identical": 6
+      }
+    ],
+    "expected_sha256": "287385f8652cb9aa0987726073aee8f4a8d8224df79022d430ab212759f82a6a"
+  },
+  "controls": [
+    {
+      "endpoint": 0,
+      "budget": [
+        30,
+        32
+      ],
+      "controls_rejected": 23,
+      "full_parent_state_regressions": 6,
+      "full_results_normal_optimized_identical": true
+    },
+    {
+      "endpoint": 0,
+      "budget": [
+        32,
+        30
+      ],
+      "controls_rejected": 23,
+      "full_parent_state_regressions": 6,
+      "full_results_normal_optimized_identical": true
+    },
+    {
+      "endpoint": 1,
+      "budget": [
+        30,
+        32
+      ],
+      "controls_rejected": 15,
+      "full_parent_state_regressions": 6,
+      "full_results_normal_optimized_identical": true
+    },
+    {
+      "endpoint": 1,
+      "budget": [
+        32,
+        30
+      ],
+      "controls_rejected": 15,
+      "full_parent_state_regressions": 6,
+      "full_results_normal_optimized_identical": true
+    }
+  ],
+  "resume_guards": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "guards_rejected": 5,
+    "no_discovery_search_run": true,
+    "results": [
+      {
+        "name": "interrupted_parent_without_proof",
+        "rejected_without_mutating_saved_state": true,
+        "reason": "no automatic retry"
+      },
+      {
+        "name": "existing_progress_without_resume",
+        "rejected_without_mutating_saved_state": true,
+        "reason": "Saved progress exists"
+      },
+      {
+        "name": "saved_timed_out_parent",
+        "rejected_without_mutating_saved_state": true,
+        "reason": "Saved timed-out parent"
+      },
+      {
+        "name": "interrupted_child",
+        "rejected_without_mutating_saved_state": true,
+        "reason": "not repeated search"
+      },
+      {
+        "name": "saved_timed_out_child",
+        "rejected_without_mutating_saved_state": true,
+        "reason": "Saved timed-out child"
+      }
+    ]
+  },
+  "original_generation_progress_summary_and_manifest_unchanged_after_resume": true,
+  "all_runs_sequential_one_thread": true,
+  "primitive_validation_caps_seconds": 90,
+  "proof_corpus_bytes": 16772267,
+  "proof_corpus_published": false,
+  "no_external_review_or_formal_proof": true
+}
