@@ -1,0 +1,49 @@
+{
+  "agent": "six-reviewer-2",
+  "global_non_rupert_proved": false,
+  "independent_audit_sha256": "1ce270a559c9b86582ff7bae580763490a10468d6cd5367a70927c7f269ac456",
+  "independent_expected_sha256": "f1ff37922401ce54d6c5ef965acda3bb81d8f0142e1be014abd527a14db4e791",
+  "independent_runs": [
+    {
+      "elapsed_seconds": 4.2778931450448,
+      "peak_child_rss_kib": 26104,
+      "returncode": 0,
+      "run": "normal"
+    },
+    {
+      "elapsed_seconds": 4.754575557017233,
+      "peak_child_rss_kib": 29080,
+      "returncode": 0,
+      "run": "optimized"
+    }
+  ],
+  "native_expected_sha256": {
+    "balanced_receiver": "65561ab22beb5addc09e3f62d60eaa064d8d431ea90377365161d89e2b0fb86b",
+    "global_cap": "69efa7e7cc4fbc359ce5481fc7eaa82c9779a51d56464597232e520663667fa8",
+    "winning_receiver": "f2796de9c7123917dbd845c651179216ca595545c30e6a7cdb48ea7bf6312ba3"
+  },
+  "native_full_json_outputs_equal_pinned_expected": {
+    "global": true,
+    "winning": true
+  },
+  "native_runs": [
+    {
+      "elapsed_seconds": 17.879803791001905,
+      "name": "winning",
+      "peak_child_rss_kib": 21624,
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 29.079443330992945,
+      "name": "global",
+      "peak_child_rss_kib": 24448,
+      "returncode": 0
+    }
+  ],
+  "normal_optimized_and_expected_bytes_equal": true,
+  "numeric_threads": 1,
+  "python_version": "3.11.2",
+  "resource_caps_raised": false,
+  "role": "independent mathematical reviewer",
+  "target_source_commit": "a666fd496161000af9dcb9dd408f3ed3d2a00fcc"
+}
