@@ -69,6 +69,12 @@ neighbors, and every edge of its complement has at most six.
     by incidence counts. In the six-edge branch only **P7 or P3+C4**
     remain. Two exact implementations agree entry by entry; no full
     incidence matrix or 22-vertex graph enumeration is used.
+12. At a degree-seven **106-edge** root the entire six-edge branch
+    is now excluded: **`(e(B),t)` is `(7,1)` or `(8,0)`**.
+    [degree106_columns.md](degree106_columns.md) proves a general
+    signed-column cross-defect inequality and regenerates 6,446
+    exceptional-row certificates violating it. Both exact implementations
+    agree entry by entry. The remaining branches are still unresolved.
 
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
@@ -126,6 +132,12 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 book_ramsey_4_7_degree_reductions/degree106_p2c5_independent.py \
   --compare-records /tmp/book-p2c5-records.json
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 book_ramsey_4_7_degree_reductions/degree106_columns_check.py \
+  --records /tmp/book-signed-columns.json
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 book_ramsey_4_7_degree_reductions/degree106_columns_independent.py \
+  --compare-records /tmp/book-signed-columns.json
 ```
 
 The deterministic JSON output matches [expected.json](expected.json).
