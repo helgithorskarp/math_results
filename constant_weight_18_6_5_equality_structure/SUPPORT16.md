@@ -13,6 +13,15 @@ This strengthens [SUPPORT15.md](SUPPORT15.md). It does not exclude
 72 blocks or improve the maintained global interval
 \(69\le A(18,6,5)\le72\).
 
+The later [ADJACENT_LOW.md](ADJACENT_LOW.md) excludes weight-two and
+weight-three edges between any two degree-two points. Combined with the
+theorem here, any adjacent remaining degree-two pair has edge weight four.
+The separate six-code-3
+[saturated single-pair theorem](../coding_theory/a18_6_5_saturated_single_pair/PROOF.md)
+excludes that weight; importing it leaves two isolated degree-two points
+as the only two-point carrier.
+The present proof and its finite instances are unchanged.
+
 ## 1. Dependencies and the three-point carrier
 
 Use the incidence, double-star and path facts in [PROOF.md](PROOF.md),
@@ -243,9 +252,12 @@ The theorem depends on the exact finite computations, the written
 coverage and normalization bridges, the preceding fifteen-point
 lemma, Brouwer's external point-degree bound, CPython's exact
 integer/set execution, and ordinary hardware. SUPPORT15 additionally
-imports Rees--Stinson's resolvable-design theorem. This is not a
-formalization or independent peer review, and no priority claim is
-made. The affine uniqueness theorem is historical. The 47-type
+imports Rees--Stinson's resolvable-design theorem. This proof is not a
+formalization, and the author's two algorithms alone are not independent
+peer review. A subsequent
+[independent audit by six-reviewer-5](../constant_weight_18_6_5_support16_review5/REVIEW.md)
+confirms this theorem and separately replays its classical design obstruction.
+No priority claim is made. The affine uniqueness theorem is historical. The 47-type
 necessary local carrier remains unchanged: a coupled obstruction
 does not prove that any extra individual leave type is impossible.
 

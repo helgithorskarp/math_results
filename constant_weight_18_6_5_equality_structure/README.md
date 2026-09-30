@@ -15,8 +15,27 @@ a weight-four pair plus an isolated point has six normalized local cases,
 excluded by two finite exact implementations. This imposes no symmetry
 assumption on a global code. The global upper bound remains 72.
 
+[ADJACENT_LOW.md](ADJACENT_LOW.md) further excludes deficit-two and
+deficit-three edges between degree-two points. Its local statement needs
+only replication twenty at the two endpoints: a weight-two edge with
+distinct external anchors forces a block conflict; a common anchor has
+replication at most seventeen (weight two) or eighteen (weight three).
+For distinct weight-three anchors, both have replication at most nineteen,
+by a completed classification of compatible links and an elementary
+point-capacity bound. The complementary six-code-3
+[saturated single-pair theorem](../coding_theory/a18_6_5_saturated_single_pair/PROOF.md)
+excludes deficit weight four. Combining that theorem, SUPPORT16 and the
+new adjacency exclusions, the degree-two points in a 72-word code form
+an independent set of size at most two.
+
 If a pair occurs in no block, its endpoints form the only support-degree-one
 pair and the other sixteen points have support degree at least three.
+The complementary six-code-3
+[saturated absent-pair theorem](../coding_theory/a18_6_5_saturated_absent_pair/PROOF.md)
+now excludes absent pairs at size 72; that result is separate from the
+adjacency proof here. The earlier sixteen-point theorem has an
+[independent audit by six-reviewer-5](../constant_weight_18_6_5_support16_review5/REVIEW.md);
+the new adjacency theorem has not received independent review.
 [PROOF.md](PROOF.md) supplies the incidence facts, the original nine-point
 restriction and the local catalog. [SUPPORT12.md](SUPPORT12.md) and
 [SUPPORT14.md](SUPPORT14.md) establish intermediate restrictions.
@@ -52,6 +71,8 @@ python3 constant_weight_18_6_5_equality_structure/check_support14.py
 python3 constant_weight_18_6_5_equality_structure/check_support15.py
 python3 constant_weight_18_6_5_equality_structure/check_support16.py
 python3 constant_weight_18_6_5_equality_structure/verify_support16.py --compare-primary
+python3 -B constant_weight_18_6_5_equality_structure/check_adjacent_low.py
+python3 -B constant_weight_18_6_5_equality_structure/verify_adjacent_low.py --compare-primary
 ```
 
 Run from the repository root. The script regenerates the catalog in
@@ -92,10 +113,22 @@ flag it compares every independently generated row and column with the
 primary instance. Both algorithms accept two genuine positive fixtures;
 the primary search also matches brute force on all 1,100 simple graphs
 of order at most five. `support16_expected.json` is a compact replay
-manifest, not a standalone certificate. The new theorem depends on these
+manifest, not a standalone certificate. The sixteen-point theorem depends on these
 completed finite checks and its written coverage bridge. None of the
 scripts enumerates unrestricted 72-word codes. Node/time caps raise
 `INCOMPLETE` and verify no exclusion.
+
+The seventh script checks all 280 partitions for the distinct-anchor
+weight-three case, retains 24 compatible partitions, and enumerates all
+sixteen second links by exact pair covers. Each link fixes eight anchor
+words, and its complete remaining candidate universe permits at most
+eleven additional words by the pair-union degree bound. The eighth script
+enumerates all 62,208 normalized relative affine planes and compares
+every initial pair row, candidate quadruple, second link and anchor
+candidate with the primary implementation. Their compact manifest is
+`adjacent_low_expected.json`. The coverage and capacity arguments are in
+ADJACENT_LOW; these are two different algorithms by the same researcher,
+not independent peer review. No unrestricted numerical bound is improved.
 
 ## Baseline provenance and scope
 

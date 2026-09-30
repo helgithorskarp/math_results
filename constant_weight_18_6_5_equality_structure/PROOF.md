@@ -9,6 +9,14 @@ the intermediate result
 [SUPPORT12.md](SUPPORT12.md). They use the incidence facts and component
 exclusion established here. The original proof and local catalog remain valid.
 
+[ADJACENT_LOW.md](ADJACENT_LOW.md) supplies stronger local restrictions:
+degree-two points in a 72-word code cannot share an edge of deficit two or
+three. Combined with SUPPORT16 and the separate six-code-3
+[saturated single-pair theorem](../coding_theory/a18_6_5_saturated_single_pair/PROOF.md),
+the degree-two vertices form an independent set of size at most two.
+The distinct-anchor weight-three exclusion
+uses complete link enumeration and an elementary pair-capacity bound.
+
 Let \(\mathcal B\) be 72 distinct five-element subsets of an 18-element
 set \(V\), with two different blocks meeting in at most two points.
 Write \(r_x\) for the number of blocks containing \(x\), and \(d_{xy}\)
