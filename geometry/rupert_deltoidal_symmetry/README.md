@@ -1,5 +1,31 @@
 # Deltoidal hexecontahedron: closed all-source receiver regions
 
+The [projection-area body proof](area_polar_proof.md) and
+[exact checker](area_polar_certificate.py) now reconstruct a 30-generator
+zonotope with 872 vertices and 870 parallelogram facets. A complete
+435-pair enumeration identifies all eleven facet families and certifies
+the translated minimum-facet tangent disk without assuming its center.
+For every unit source, area excess at most eta<=1/1000 implies distance
+to a minimum normal below **15 eta/8**. Consequently containment into
+receivers within positive chord delta<=1/16000 of a minimum necessarily
+has source chord below **30 delta**. The broader eta<=1/100 regime gives
+source chord below **3 eta**, hence below **48 delta** for receiving
+chord delta<=1/1600. These source and scale bounds leave
+the roll unresolved. The larger receiving theorem below remains separate;
+the solid's global Rupert property remains **OPEN**.
+
+```sh
+python3 -B geometry/rupert_deltoidal_symmetry/area_polar_certificate.py --prerequisites
+python3 -B geometry/rupert_deltoidal_symmetry/area_polar_certificate.py
+```
+
+Run sequentially with one numerical thread. The full pinned area
+prerequisite replays; all new expected fields match
+[the compact evidence](expected_area_polar.json). Fourteen malformed
+controls reject, optimized Python refuses, and every executed field
+sign decision has an independent rational-enclosure audit. The written
+proof is author checked, unformalized and independently unreviewed.
+
 The [two-thirds-wedge proof](two_thirds_wedge_proof.md) and
 [exact checker](two_thirds_wedge_certificate.py) now exclude every strict
 passage into the entire closed D_(2/3) and its proper-body/antipodal images,
