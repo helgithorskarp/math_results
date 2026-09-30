@@ -1,0 +1,254 @@
+{
+  "agent": "six-heesch-1",
+  "conclusion": "3 <= Hc(P17) <= Hh(P17) <= 4; no fourth-corona decision or new lower-bound construction",
+  "necessary_first_prefix_ids": [
+    0,
+    7,
+    8
+  ],
+  "necessary_first_prefixes": [
+    {
+      "copies": 7,
+      "first_prefix_id": 0,
+      "poses": [
+        [
+          0,
+          -4,
+          -4
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          1,
+          -1,
+          -5
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          2,
+          4,
+          -2
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          6,
+          -4,
+          2
+        ]
+      ]
+    },
+    {
+      "copies": 8,
+      "first_prefix_id": 7,
+      "poses": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          2,
+          4,
+          -2
+        ],
+        [
+          3,
+          -3,
+          3
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          -2,
+          -5
+        ],
+        [
+          7,
+          -6,
+          0
+        ],
+        [
+          7,
+          1,
+          -5
+        ]
+      ]
+    },
+    {
+      "copies": 7,
+      "first_prefix_id": 8,
+      "poses": [
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          1,
+          -6,
+          1
+        ],
+        [
+          2,
+          2,
+          -4
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          -3,
+          -3
+        ],
+        [
+          6,
+          -2,
+          3
+        ],
+        [
+          7,
+          1,
+          5
+        ]
+      ]
+    }
+  ],
+  "new_two_surround_exclusions": [
+    {
+      "core_clauses": 165,
+      "first_prefix_id": 1,
+      "reasons": {
+        "conditional_cover": 2,
+        "cover": 6,
+        "interior_pair": 27,
+        "overlap": 130
+      },
+      "rup_additions": 6,
+      "sparse_poses": 155
+    },
+    {
+      "core_clauses": 69,
+      "first_prefix_id": 2,
+      "reasons": {
+        "conditional_cover": 2,
+        "cover": 3,
+        "interior_pair": 25,
+        "overlap": 39
+      },
+      "rup_additions": 2,
+      "sparse_poses": 67
+    },
+    {
+      "core_clauses": 19,
+      "first_prefix_id": 3,
+      "reasons": {
+        "conditional_cover": 1,
+        "cover": 2,
+        "interior_pair": 4,
+        "overlap": 12
+      },
+      "rup_additions": 1,
+      "sparse_poses": 18
+    },
+    {
+      "core_clauses": 83,
+      "first_prefix_id": 4,
+      "reasons": {
+        "conditional_cover": 3,
+        "cover": 3,
+        "interior_pair": 21,
+        "overlap": 56
+      },
+      "rup_additions": 4,
+      "sparse_poses": 81
+    },
+    {
+      "core_clauses": 19,
+      "first_prefix_id": 9,
+      "reasons": {
+        "conditional_cover": 1,
+        "cover": 2,
+        "interior_pair": 4,
+        "overlap": 12
+      },
+      "rup_additions": 1,
+      "sparse_poses": 18
+    },
+    {
+      "core_clauses": 19,
+      "first_prefix_id": 10,
+      "reasons": {
+        "conditional_cover": 1,
+        "cover": 2,
+        "interior_pair": 4,
+        "overlap": 12
+      },
+      "rup_additions": 1,
+      "sparse_poses": 18
+    }
+  ],
+  "parent_atlas_checker_replayed": true,
+  "parent_first_prefixes": 11,
+  "positive_control": {
+    "complete_disc_coronas": 3,
+    "copies": 36,
+    "first_prefix_id": 8
+  },
+  "role": "researcher",
+  "status": "verified three necessary complete first prefixes under at least three real-motion coronas",
+  "total_new_core_clauses": 374,
+  "total_new_rup_additions": 15,
+  "transported_published_caps": [
+    {
+      "cap_matches": [
+        {
+          "anchor": [
+            3,
+            -6,
+            -3
+          ],
+          "cap_second_prefix_id": 1,
+          "transported_support_copies": 2
+        }
+      ],
+      "first_prefix_id": 5
+    },
+    {
+      "cap_matches": [
+        {
+          "anchor": [
+            0,
+            1,
+            3
+          ],
+          "cap_second_prefix_id": 1,
+          "transported_support_copies": 2
+        }
+      ],
+      "first_prefix_id": 6
+    }
+  ]
+}
