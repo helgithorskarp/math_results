@@ -59,7 +59,21 @@ of translations, rotation and scaling. The implicit function theorem gives
 local rigidity modulo similarities, provided the same complete labelled
 endpoint network is preserved. A 422-square minor has determinant 379 modulo
 1009. Run `python3 heesch_weighted_matching_obstruction/endpoint_rigidity.py`.
-Other contact networks and large deformations remain open.
+The global strengthening below closes large endpoint deformations of this
+particular labelled network.
+
+[first_corona_global.md](first_corona_global.md) proves global endpoint
+rigidity using only the six copies in its first corona. A contact cycle forces
+one neighbouring placement to be a translation; the remaining identities
+force the original regular skeleton, up to a similarity that may include a
+reflection. Two-endpoint contacts propagate this rigidity to all 131 poses.
+The first corona also already forces the one-symmetric-function profile law.
+Distinct prototype vertices and the labelled contacts are essential. In an
+admissible Jordan-disc packing preserving the cyclic full-port network,
+boundary-arc orientation forces the original relative handedness. Other
+networks remain open. Run the exact rational
+certificate with
+`python3 heesch_weighted_matching_obstruction/first_corona_global.py`.
 
 Combinatorial imbalance as a reason for nontiling is established prior art.
 Mann discusses it for marked hexagons and polyhexes, including a size-dependent
