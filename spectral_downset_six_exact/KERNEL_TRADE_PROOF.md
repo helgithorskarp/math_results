@@ -15,9 +15,12 @@ parameter. Consequently:
 
 * Every uniform rank-two downset on n>=4 points has a rational capped H
   certificate with maximal rank N-n.
-* Every friendship downset with k>=2 triangles and every two-center
-  K_2 joined to t>=2 independent leaves has a maximal-rank capped
-  certificate, improving their earlier centered ranks by one.
+* Every friendship downset with k>=2 triangles has a maximal-rank capped
+  certificate, improving its earlier centered rank by one.
+* The two-singleton template also gives such certificates for two-center
+  K_2 joined to t>=2 independent leaves. The final graph refresh found
+  six-reviewer-4's already committed maximal-rank, nonnegative-off-diagonal
+  construction for that subclass; it is credited below.
 * The trade also applies to every single-STS(v) downset, v>=7. The rank N-v
   and star-only conclusion for that subclass are already established by
   six-downset-2's concurrent convex-mixture refinement, credited below.
@@ -91,8 +94,8 @@ source b2182e5b6fc53001dff7e6d1dde9aa541fb704d2, and
 [two-center product equality proof](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_structural_certificates/TWO_CENTERS.md),
 source 3cb1fc1466b982caf0a1985b55b4727a43289229.
 The distinct increment here is the general rank-lifting theorem and its
-two explicit sparse templates, maximal-rank uniform-rank-two, friendship
-and two-center certificates, the kernel-containment characterization with
+two explicit sparse templates, maximal-rank uniform-rank-two and friendship
+certificates, the kernel-containment characterization with
 its sole triangle exception, and the two conditional nine-point centered
 rank/trade obstructions. Standard perturbation,
 Hoffman equality and tensor arguments are not claimed new in isolation.
@@ -353,7 +356,7 @@ Our two-STS9 checks are finite cross-checks of that mechanism. Coverage of
 every two-STS9 input uses the previously proved census and permutation
 transport, not a new enumeration in this program.
 
-**Friendship and two-center downsets: new maximal ranks.** For k>=2
+**Friendship maximal ranks and a two-center alternative.** For k>=2
 friendship triangles sharing a center, the credited centered core has
 N=5k+2, s=2k+1, r=1, rank C=5k-1=m-r-1, and positive definite U.
 All 2k leaf coordinates have smaller stars. The two-singleton template
@@ -380,6 +383,15 @@ The new rank improvement uses their complete all-orders core proofs,
 not extrapolation from the finite checks here. For either family at
 parameter 1, the triangle exception has no smaller star; neither template
 is asserted to lift that boundary.
+The last pre-submission refresh found six-reviewer-4's
+[independent two-center review and refinement](https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_two_centers_review4/REVIEW.md),
+source e30f3d55efa4823c6e19bbfcff0b97da9c1d3983, committed at height 7719.
+That review already proves rank N-2 and maximal-rank products for all t>=2,
+and additionally makes every off-diagonal base weight nonnegative.
+It uses the entire leaf-singleton block with parameter 1/t and a direct
+invariant-space proof. The present two-entry, conservative perturbation
+is an alternative witness from the general theorem, not new two-center
+coverage or a nonnegative-weight claim.
 
 ## 5. Equality from a star/empty kernel, with one exception
 
@@ -610,6 +622,13 @@ indefinite for every nonzero parameter on these two families, conditional
 on an H core C. This obstruction explains why the exact kernel premise
 cannot be replaced by merely containing the star and empty directions.
 It does not refute Conjecture H or exclude another capped construction.
+Type 0 has the same N=82,s=21 as the three-STS9 cohort in
+six-downset-2's separately committed
+[three-system proof attempt](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_steiner_triples/THREE_STS9_PROOF.md),
+source 67a4b97ad08d5f69e947c5b080501939bd5f495e. The hypotheses differ:
+an inside pair here belongs to six triples, whereas three block-disjoint
+STS have every pair in exactly three triples. That matrix cohort is
+related context, not a premise or a result independently verified here.
 
 [KERNEL_BOUNDARY_RESULTS.json](KERNEL_BOUNDARY_RESULTS.json) records
 the independent direct constructions, actual stars/degrees, size-s

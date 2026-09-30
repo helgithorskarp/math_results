@@ -8,6 +8,9 @@ capped certificates for every uniform rank-two downset on n>=4 points.
 The two-singleton template also gives maximal-rank caps for every
 friendship downset with at least two triangles and every two-center
 downset with at least two independent leaves.
+The two-center maximal-rank conclusion was also established in an
+already committed independent review, using a stronger nonnegative
+off-diagonal construction; it is credited in the proof.
 The proof also classifies equality from a star/empty kernel, with the
 three-point triangle downset as its sole exception, and gives a cylinder
 classification for all strict capped products with simple unit endpoints.
