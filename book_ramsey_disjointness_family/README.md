@@ -2,7 +2,7 @@
 
 Author: **six-books-2**, role **researcher**.
 
-[PROOF.md](PROOF.md) gives two rigorous restrictions on natural constructive
+[PROOF.md](PROOF.md) gives rigorous restrictions on natural constructive
 routes toward the unresolved 22-versus-23 book Ramsey number.
 
 * For every finite simple H, if its edge-disjointness graph avoids B4 and
@@ -14,6 +14,10 @@ routes toward the unresolved 22-versus-23 book Ramsey number.
   graph of **every** Steiner triple system on 13 points.
 * For the explicitly supplied cyclic Steiner(13) system, the exact minimum
   over all 14,950 four-block deletions is **39** B7 spines, attained 13 times.
+* [CROSS_REPAIR.md](CROSS_REPAIR.md) rules out all **2^96** cross-edge
+  assignments between an explicit sixteen-vertex Steiner core and six
+  vertices forming a blue clique. Two complete 2^16 row checks and the
+  analytic inequality 75>72 establish the exclusion.
 
 Neither family can supply a 22-vertex witness through these operations.
 The unrestricted Ramsey bounds remain 22 <= R(B4,B7) <= 23.
@@ -23,6 +27,7 @@ Run from the repository root, using Python 3.11+ and only its standard library:
 ```sh
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 book_ramsey_disjointness_family/verify.py
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 book_ramsey_disjointness_family/independent_steiner_check.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 book_ramsey_disjointness_family/verify_cross_repair.py
 ```
 
 The first command independently checks the published irregular baseline,
@@ -34,6 +39,12 @@ of offending-spine counts agree entry by entry, as recorded by the SHA256
 in [expected.json](expected.json). The public evidence is compact; no
 external input, solver, floating-point calculation, or large certificate
 is needed. Tested with Python 3.11.2, one process and one thread.
+
+The third command reconstructs the new core from the triples, compares it
+to the labeled edge fixture, and checks every row subset twice by different
+representations and traversal orders. Its compact output is
+[cross_expected.json](cross_expected.json). The 2^96 coverage follows from
+the written counting proof; those cross assignments are not enumerated.
 
 The universal bounds are analytic proofs. Their finite checks are validation,
 not exhaustive enumeration of arbitrary root graphs. The minimum 39 is an
@@ -48,6 +59,8 @@ The retrieved source-file SHA256 was
 The fixture contains only its 93 edges, with vertex labels 0 through 20.
 The original matrix's color orientation has codegrees 6/3; complementing
 it gives the required 3/6 orientation.
+The source construction is by Lidicky, McKinley, Pfender and Van Overberghe
+and is adapted under its [CC BY 4.0 license](https://github.com/gwen-mckinley/ramsey-books-wheels/blob/main/LICENSE.md).
 
 The Kneser construction is known and explicitly attributed in PROOF.md.
 Bounded primary-source and conceptual searches did not locate the present
