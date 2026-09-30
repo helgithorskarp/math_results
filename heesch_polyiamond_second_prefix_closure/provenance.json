@@ -1,0 +1,98 @@
+{
+  "agent": "six-heesch-2",
+  "role": "researcher",
+  "date_utc": "2026-09-30",
+  "claim_status": "exact computer-assisted lemma with stated older premises; no independent peer review claimed",
+  "prior_source_commit": "af2add12e99b38bf9274624f49180d3cbc153e82",
+  "reader": {
+    "python": "3.11.2",
+    "dependencies": "standard library and byte-pinned earlier source",
+    "validation_runs": [
+      {
+        "mode": "normal",
+        "output_byte_equal": true,
+        "expected_sha256": "37ae0914b429387568f4d247049633177ba97c00322f4135af1fb8fc92b62671",
+        "seconds": 21.49,
+        "peak_rss_kib": 167604
+      },
+      {
+        "mode": "optimized",
+        "output_byte_equal": true,
+        "expected_sha256": "37ae0914b429387568f4d247049633177ba97c00322f4135af1fb8fc92b62671",
+        "seconds": 22.711,
+        "peak_rss_kib": 167216
+      }
+    ],
+    "rejected_controls": [
+      "shifted_fixed_blocker",
+      "omitted_provider",
+      "truncated_cover",
+      "false_rup_unit",
+      "wrong_future_stage",
+      "flipped_rigidity_unit",
+      "deleted_terminal_provider",
+      "selected_only_terminal_point",
+      "wrong_rigidity_stage"
+    ]
+  },
+  "compact_inputs": {
+    "check.py": {
+      "bytes": 14917,
+      "sha256": "ad599a9e7d3c5da145d8e4bbd8fc6df451cc09e3b5f450194fe4e3010b765b1d"
+    },
+    "local-pattern.json": {
+      "bytes": 22743,
+      "sha256": "c765508986ca2b916e30250f4cfe4615b7865789296a709e02ec695acc6950e2"
+    },
+    "rigidity.json": {
+      "bytes": 73673,
+      "sha256": "8d2ec0b5daf128b728591e2f40c8902b879220a7ffb9e4883bb3e405c578b4df"
+    },
+    "expected.json": {
+      "bytes": 30180,
+      "sha256": "37ae0914b429387568f4d247049633177ba97c00322f4135af1fb8fc92b62671"
+    }
+  },
+  "local_certificate": {
+    "fixed_copies": 18,
+    "providers": 144,
+    "clauses": 157,
+    "complete_covers": 13,
+    "rup_additions": 5
+  },
+  "rigidity_certificate": {
+    "fixed_copies": 18,
+    "providers": 371,
+    "clauses": 371,
+    "complete_covers": 28,
+    "unit_steps": 371,
+    "forced_by_units": 28,
+    "forced_at_old_terminal_points": 2
+  },
+  "discovery": {
+    "support_orders": 96,
+    "seed": 21413,
+    "minimum_support_claimed": false,
+    "local_clause_and_rup_reduction": "retain only deletions preserving every remaining RUP implication",
+    "support_selection": "preserve old sectors, excluded-provider blockers and transported negative witnesses",
+    "rigidity": "adaptive old-point unit propagation followed by sparse forward dependency extraction",
+    "native_solver_used_this_pass": false,
+    "reader_independence": "centroid-face joins and bit masks versus vertex anchors and dictionary discovery logic"
+  },
+  "resource_policy": {
+    "cpu_threads": 1,
+    "intensive_jobs_at_once": 1,
+    "process_timeout_seconds": 55,
+    "scope_memory_gib": 2,
+    "pose_guard": 10000,
+    "timeout_or_incomplete_run_used_as_proof": false
+  },
+  "omitted_private_artifacts": [
+    "dense necessary formula",
+    "adaptive unit history",
+    "support optimizer",
+    "extractors",
+    "verbose run logs"
+  ],
+  "scope": "specified second prefix has no four further surrounds under all real motions and arbitrary topology; other earlier prefixes and global finite-six remain unresolved"
+}
