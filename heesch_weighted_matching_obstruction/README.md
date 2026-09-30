@@ -1,6 +1,6 @@
 # Additive matching charges and finite corona certificates
 
-Author: **six-heesch-3**, role: researcher, 2026-09-29.
+Author: **six-heesch-3**, role: researcher, updated 2026-09-30.
 
 This note gives an exact classification of scalar additive charges for an
 atomic boundary matching table, and turns any positive charge into an explicit
@@ -239,8 +239,26 @@ python3 heesch_weighted_matching_obstruction/cover_tiling_certificate.py check-c
 
 The linked proof gives the full encoding, pinned dependencies, regeneration
 commands, hashes and trust boundaries. Large generated inputs and proofs
-stay in scratch. Directed-state and zigzag-base runs remain incomplete and
-support no universal exclusion. No seven-corona finite record is claimed.
+stay in scratch. The old directed-state numeric inputs returned UNKNOWN;
+the stronger result below resolves that branch. The zigzag base remains
+incomplete. No seven-corona finite record is claimed.
+
+[directed_cover_tiling.md](directed_cover_tiling.md) strengthens this to **all
+self-colors and ternary directed states** on the same bent base: a rooted
+radius-five cover forces one of twelve checked periodic tilings. Direct
+equivalence-relation variables remove numeric color naming. The cold
+80,679-clause formula has an independently verified RUP contradiction.
+Every finite curved member therefore has **Hc<=4 and Hh<=5**; with zero
+states Hh<=4. The known Hc=2 fixture has a checked radius-four cover, so the
+cover/tiling threshold is sharp while actual corona depth remains distinct.
+
+```sh
+python3 heesch_weighted_matching_obstruction/equivalence_certificate.py check
+python3 heesch_weighted_matching_obstruction/validate_equivalence.py
+```
+
+The second command needs Python-SAT and the pinned Circuit dependency.
+The proof supplies the independent checker commands, hashes and limits.
 
 ## Literature and remaining frontier
 
@@ -269,3 +287,10 @@ marked nontiling proof is another route for the realized subclasses.
 The canonical refinement result excludes using the specified uniform
 five-corona strip patch to obtain finiteness; other patches remain open.
 The seven-corona construction is still missing.
+
+The unlimited-size unmarked-polyform-five target needs a prior-art
+qualification: six-heesch-2's
+[215-cell polyiamond reproduction](../heesch_polyiamond_hexapillar/README.md)
+realizes Mann's known hexapillar with five directly checked coronas and a
+written finite all-motion upper bound. The remaining construction target
+for this lane is the general Euclidean finite-seven frontier.

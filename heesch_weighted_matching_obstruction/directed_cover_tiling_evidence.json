@@ -1,0 +1,249 @@
+{
+  "agent": "six-heesch-3",
+  "role": "researcher",
+  "date": "2026-09-30",
+  "proof_status": "exact computer-assisted theorem; written geometric bridge, not formalized",
+  "scope": "All self-color partitions and ternary states on bent4 under six rotations; R5 cover forces one of twelve periodic tilings",
+  "partitions": 682076806159,
+  "ternary_state_tables": 387420489,
+  "parameter_pairs_up_to_color_renaming": 264250529777677991751,
+  "marked_finite_bounds": {
+    "Hc_upper": 4,
+    "Hh_upper": 4
+  },
+  "geometric_finite_bounds": {
+    "Hc_upper": 4,
+    "Hh_upper": 5,
+    "all_zero_states_Hh_upper": 4
+  },
+  "universal_certificate": {
+    "radius": 5,
+    "target_cells": 124,
+    "candidate_cells": 254,
+    "candidates": 900,
+    "reflections": false,
+    "mode": "equivalence_state_cover",
+    "equality_variables": 153,
+    "contacts": 66390,
+    "overlapping_contact_pairs_omitted": 19195,
+    "variables": 4917,
+    "clauses": 80679,
+    "state_mode": "all ternary states",
+    "initial_motifs": 12,
+    "cnf_sha256": "beefe212f62cf2a3de904eb2b4f074e06bdd6633604eca0ab2e210053c0b4d53"
+  },
+  "solver_stats": {
+    "restarts": 30,
+    "conflicts": 11229,
+    "decisions": 17871,
+    "propagations": 2396635
+  },
+  "proof_sha256": "0185bd4506ae71b5d353b7dfb690a3b2cf0a07653b310d2944832ff692ebedb1",
+  "proof_bytes": 1544726,
+  "independent_RUP": {
+    "command": [
+      "scratch/drat-trim",
+      "scratch/pass5/bend-equivalence-directed-r5.cnf",
+      "scratch/pass5/bend-equivalence-directed-r5.drat",
+      "-U",
+      "-p",
+      "-t",
+      "50"
+    ],
+    "exit_code": 0,
+    "verified": true,
+    "cnf_sha256": "beefe212f62cf2a3de904eb2b4f074e06bdd6633604eca0ab2e210053c0b4d53",
+    "proof_sha256": "0185bd4506ae71b5d353b7dfb690a3b2cf0a07653b310d2944832ff692ebedb1",
+    "checker_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "checker_source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "core_input_clauses": 14658,
+    "core_lemmas": 7870,
+    "total_lemmas": 11230,
+    "resolution_steps": 830181,
+    "RAT_core_lemmas": 0,
+    "verification_seconds": 0.768
+  },
+  "python": "3.11.2",
+  "python_sat": "1.8.dev24",
+  "solver": "glucose4",
+  "assumptions": "none",
+  "resources": {
+    "threads": 1,
+    "conflicts_per_input": 20000,
+    "wall_cap_seconds": 55,
+    "standing_cpu_cores": 1,
+    "standing_memory_bytes": 2147483648,
+    "standing_tasks_max": 128,
+    "search_peak_rss_kib": 59220
+  },
+  "sharpness": {
+    "radius": 4,
+    "copies": 30,
+    "cells": 120,
+    "matched_boundary_incidences": 422,
+    "Hc": 2,
+    "Hh_interval": [
+      2,
+      3
+    ],
+    "finite_bound_dependency": "cover_tiling_dichotomy.md",
+    "witness_sha256": "749215dd64ac98bfb9f9b4169c9d816e6e8db59739d19933fe555d8e67ad380f"
+  },
+  "validation": {
+    "partition_assignment_cases": 33867,
+    "partition_models": [
+      1,
+      2,
+      5,
+      15,
+      52,
+      203
+    ],
+    "compatibility_truth_cases_including_invalid_states": 3072,
+    "motif_exclusion_truth_cases": 8640,
+    "candidate_pair_cases_independently_decoded": 413832,
+    "geometry": [
+      {
+        "tile": [
+          [
+            0,
+            0
+          ]
+        ],
+        "radius": 0,
+        "candidates": 0,
+        "contacts": 0,
+        "overlapping_contact_pairs_omitted": 0
+      },
+      {
+        "tile": [
+          [
+            0,
+            0
+          ]
+        ],
+        "radius": 1,
+        "candidates": 36,
+        "contacts": 252,
+        "overlapping_contact_pairs_omitted": 0
+      },
+      {
+        "tile": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "radius": 0,
+        "candidates": 0,
+        "contacts": 0,
+        "overlapping_contact_pairs_omitted": 0
+      },
+      {
+        "tile": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "radius": 1,
+        "candidates": 60,
+        "contacts": 720,
+        "overlapping_contact_pairs_omitted": 152
+      },
+      {
+        "tile": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "radius": 0,
+        "candidates": 0,
+        "contacts": 0,
+        "overlapping_contact_pairs_omitted": 0
+      },
+      {
+        "tile": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "radius": 1,
+        "candidates": 108,
+        "contacts": 1963,
+        "overlapping_contact_pairs_omitted": 1014
+      },
+      {
+        "tile": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "radius": 5,
+        "candidates": 900,
+        "contacts": 66390,
+        "overlapping_contact_pairs_omitted": 19195
+      }
+    ],
+    "fixed_table_cover_comparisons": 24,
+    "independently_decoded_SAT_covers": 9,
+    "rechecked_periodic_motifs": 12
+  },
+  "source_sha256": {
+    "equivalence_state.py": "f1edabcc1b991079ba10f56f7132bb1a13856fd57c7438be54be8878896fb30b",
+    "equivalence_certificate.py": "e6e9b9efe2b587cc0b49aaf29a1ac02704d2e624f5c4e7fadd02e16cddf6ea04",
+    "validate_equivalence.py": "569730e50a12726b9e5f84bbf5c6db23992b95f48e3109ceb24c093e8adf1048",
+    "equivalence_validation_expected.json": "e815d4ce15950a8f785eb0d855a1c418f44c6684fed69e8efddac1f5220c2d2f",
+    "bend4_directed_cover_tiling.json": "9fecdcc516d52978fe36608efccaaba98b9196710bc1413f7bb540acc7461d93",
+    "bend4_fivecolor_radius4.cover.json": "749215dd64ac98bfb9f9b4169c9d816e6e8db59739d19933fe555d8e67ad380f"
+  },
+  "generated_corpora": "Regenerate into scratch with the source commands; CNF/proof omitted from repository",
+  "novelty": "Strengthens the earlier zero-state radius7 result; no seven-corona witness or record improvement; no historical priority claim"
+}
