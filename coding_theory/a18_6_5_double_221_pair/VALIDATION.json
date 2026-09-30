@@ -1,0 +1,124 @@
+{
+  "agent": "six-code-3",
+  "audit": {
+    "agent": "six-code-3",
+    "fixtures": {
+      "corrupted_fixtures_rejected": 4
+    },
+    "kernels": {
+      "binary_decision_checks": 7808,
+      "graphs": 1088,
+      "zero_cap_rejected": true
+    },
+    "native": {
+      "malformed_sparse_inputs": 14,
+      "node_guard_rejected": true,
+      "raised_cap_rejected": true,
+      "transport_input_rejections": 4
+    },
+    "role": "researcher",
+    "sanitizers": {
+      "bitset_cases": 7,
+      "complete_scan_branches": 9,
+      "complete_scan_maps": 58786560,
+      "diagnostics": 0,
+      "transport_branches": 9
+    },
+    "seconds": 55.844309,
+    "status": "COMPLETE"
+  },
+  "build_flags": [
+    "-std=c++17",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic"
+  ],
+  "commands": [
+    "python3 -B generate.py --work-dir /tmp/double221-replay --check expected.json",
+    "python3 -B verify.py --work-dir /tmp/double221-replay",
+    "python3 -B audit.py --work-dir /tmp/double221-replay --sanitizers",
+    "python3 -B -O audit.py --work-dir /tmp/double221-replay"
+  ],
+  "compiler": "g++12.2.0",
+  "environment": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "first_complete_covers": 6,
+  "first_degree_graphs": {
+    "cube_labeled": 24,
+    "path": 408,
+    "triangle": 2408
+  },
+  "first_highblock_cases": 629,
+  "guards": {
+    "node_cap_per_case_or_anchor": 200000,
+    "resource_limits_unchanged": true,
+    "seconds_per_case_or_anchor": 10
+  },
+  "independent": {
+    "attainment58": true,
+    "child_rss_kib_upper": 125068,
+    "degree_dfs_nodes": [
+      2721,
+      161,
+      21759
+    ],
+    "fixed_pair_cover_nodes": 36267,
+    "full_transport_maps": 58786560,
+    "max_first_case_nodes": 2392,
+    "max_residual_case_nodes": 1185,
+    "max_rss_kib": 25720,
+    "no_residual22": true,
+    "residual_binary_nodes": 8253,
+    "seconds": 16.614553
+  },
+  "marked_first_templates": 3,
+  "maximum_concurrent_cpu_intensive_jobs": 1,
+  "optimized_python_audit": {
+    "agent": "six-code-3",
+    "fixtures": {
+      "corrupted_fixtures_rejected": 4
+    },
+    "kernels": {
+      "binary_decision_checks": 7808,
+      "graphs": 1088,
+      "zero_cap_rejected": true
+    },
+    "native": {
+      "malformed_sparse_inputs": 14,
+      "node_guard_rejected": true,
+      "raised_cap_rejected": true,
+      "transport_input_rejections": 4
+    },
+    "role": "researcher",
+    "seconds": 0.269103,
+    "status": "COMPLETE"
+  },
+  "production": {
+    "first_cover_nodes": 2491,
+    "first_max_case_nodes": 34,
+    "joint_orbits": 31,
+    "joint_stars": 148,
+    "residual_max_case_nodes": 36425,
+    "residual_nodes": 223205,
+    "runtime": {
+      "child_rss_kib_upper": 122040,
+      "first_cases": 629,
+      "joint_orbits": 31,
+      "joint_stars": 148,
+      "max_rss_kib": 23196,
+      "restricted_maximum": 58,
+      "seconds": 21.690603,
+      "status": "COMPLETE"
+    }
+  },
+  "python": "CPython3.12.14",
+  "role": "researcher",
+  "source_manifest_sha256": "4e58c2b16995d550c1e0a90dbb9165f34244e52c79ac1467261449363548af58",
+  "status": "COMPLETE; sharp restricted58, global69..72unchanged",
+  "trust": "Exact same-author separate replay; written completeness bridges unformalized; no independent peer review; counts/digests are replay metadata, not standalone exclusion certificates.",
+  "unmarked_first_types": 2
+}
