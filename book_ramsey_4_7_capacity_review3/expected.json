@@ -1,0 +1,449 @@
+{
+  "agent": "six-reviewer-3",
+  "primary21_control": {
+    "incident_defects": [
+      10,
+      6,
+      5,
+      11,
+      7,
+      7,
+      8,
+      9,
+      7,
+      10,
+      13,
+      8,
+      13,
+      11,
+      9,
+      7,
+      11,
+      9,
+      11,
+      7,
+      7
+    ],
+    "input_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+    "max_red_blue_edge_codegrees": [
+      3,
+      6
+    ],
+    "red_degree_counts": {
+      "8": 4,
+      "9": 16,
+      "10": 1
+    },
+    "red_edges": 93,
+    "root_color_checks": 42,
+    "total_defect": 93,
+    "vertices": 21
+  },
+  "role": "independent mathematical reviewer",
+  "scalar_controls": {
+    "degree7_scores": [
+      0,
+      31,
+      56,
+      75,
+      88,
+      95,
+      96
+    ],
+    "edge97_histograms_after_proved_degree7_exclusion": [
+      [
+        0,
+        4,
+        18,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        16,
+        1,
+        0
+      ],
+      [
+        0,
+        6,
+        14,
+        2,
+        0
+      ],
+      [
+        0,
+        7,
+        12,
+        3,
+        0
+      ]
+    ],
+    "edge97_histograms_before_degree7_exclusion": [
+      [
+        0,
+        4,
+        18,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        16,
+        1,
+        0
+      ],
+      [
+        0,
+        6,
+        14,
+        2,
+        0
+      ],
+      [
+        0,
+        7,
+        12,
+        3,
+        0
+      ],
+      [
+        1,
+        2,
+        19,
+        0,
+        0
+      ],
+      [
+        1,
+        3,
+        17,
+        1,
+        0
+      ]
+    ],
+    "excluded_degrees": [
+      [
+        "red",
+        12,
+        -24
+      ],
+      [
+        "red",
+        13,
+        -99
+      ],
+      [
+        "red",
+        14,
+        -210
+      ],
+      [
+        "red",
+        15,
+        -363
+      ],
+      [
+        "red",
+        16,
+        -564
+      ],
+      [
+        "red",
+        17,
+        -819
+      ],
+      [
+        "red",
+        18,
+        -1134
+      ],
+      [
+        "red",
+        19,
+        -1515
+      ],
+      [
+        "red",
+        20,
+        -1968
+      ],
+      [
+        "red",
+        21,
+        -2499
+      ],
+      [
+        "blue",
+        15,
+        -48
+      ],
+      [
+        "blue",
+        16,
+        -126
+      ],
+      [
+        "blue",
+        17,
+        -240
+      ],
+      [
+        "blue",
+        18,
+        -396
+      ],
+      [
+        "blue",
+        19,
+        -600
+      ],
+      [
+        "blue",
+        20,
+        -858
+      ],
+      [
+        "blue",
+        21,
+        -1176
+      ]
+    ],
+    "global_histograms_tested": 14950,
+    "local_after_analytic_exclusions": [
+      [
+        0,
+        0,
+        1,
+        10
+      ],
+      [
+        0,
+        0,
+        3,
+        8
+      ],
+      [
+        0,
+        0,
+        5,
+        6
+      ],
+      [
+        0,
+        0,
+        7,
+        4
+      ],
+      [
+        0,
+        1,
+        1,
+        9
+      ],
+      [
+        0,
+        1,
+        3,
+        7
+      ],
+      [
+        0,
+        1,
+        5,
+        5
+      ],
+      [
+        0,
+        1,
+        7,
+        3
+      ]
+    ],
+    "local_histograms_tested": 364,
+    "local_scalar_survivors": [
+      [
+        0,
+        0,
+        1,
+        10,
+        10,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        8,
+        9,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        6,
+        8,
+        0
+      ],
+      [
+        0,
+        0,
+        7,
+        4,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        9,
+        6,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        7,
+        5,
+        0
+      ],
+      [
+        0,
+        1,
+        5,
+        5,
+        4,
+        0
+      ],
+      [
+        0,
+        1,
+        7,
+        3,
+        3,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        8,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        3,
+        6,
+        1,
+        0
+      ],
+      [
+        0,
+        2,
+        5,
+        4,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        10,
+        0,
+        0
+      ]
+    ]
+  },
+  "scope": "exact controls for analytic necessary conditions and conditional edge97 refinement; no Ramsey resolution",
+  "shifted22_controls": {
+    "examples": [
+      {
+        "red_edges": 0,
+        "signed_total_defect": -3234
+      },
+      {
+        "red_edges": 231,
+        "signed_total_defect": -3927
+      },
+      {
+        "red_edges": 22,
+        "signed_total_defect": -2046
+      },
+      {
+        "red_edges": 209,
+        "signed_total_defect": -2607
+      },
+      {
+        "red_edges": 121,
+        "signed_total_defect": 33
+      }
+    ],
+    "meaning": "signed arithmetic controls; these examples are not claimed to satisfy the book caps",
+    "root_color_checks": 220
+  },
+  "small_controls": {
+    "capacity_graphs": 1100,
+    "capacity_subsets_per_cap_pair": 33867,
+    "defect_graphs": 33867,
+    "root_color_checks": 404026,
+    "stream_sha256": "f61dbada2f8adfaa07ef8c765ce05e5477df6573f584e2bbf653019be8ec508f"
+  },
+  "spectral_control": {
+    "Gram_entries_checked": 100,
+    "characteristic_coefficients_descending": [
+      1,
+      0,
+      -15,
+      0,
+      75,
+      -24,
+      -165,
+      120,
+      120,
+      -160,
+      48
+    ],
+    "construction": "outer cycle / spokes / inner pentagram",
+    "independent_four_sets": [
+      [
+        0,
+        2,
+        8,
+        9
+      ],
+      [
+        0,
+        3,
+        6,
+        7
+      ],
+      [
+        1,
+        3,
+        5,
+        9
+      ],
+      [
+        1,
+        4,
+        7,
+        8
+      ],
+      [
+        2,
+        4,
+        5,
+        6
+      ]
+    ],
+    "meaning": "arithmetic control; no catalogue or universal graph enumeration"
+  }
+}
