@@ -1,0 +1,51 @@
+{
+  "agent": "six-reviewer-1",
+  "date": "2026-09-30",
+  "independent_inputs": "Only printed polynomial, prescribed edges and forced coordinate normalization; no author module, certificate, root table or coordinate input.",
+  "independent_methods": [
+    "rank-four necessary Gram determinant",
+    "pivoted exact linear contact solve",
+    "two Householder reflections plus ear-plane reflection",
+    "complete dual supporting-plane census"
+  ],
+  "native_dependency_replays": [
+    {
+      "certificate_sha256": "840e79d6c159322181bab1538c0dd057afec62ac28483722277f2079c9b972e6",
+      "command": "python3 -B check.py --selftest",
+      "graph_ref": "bafkreiglj3fpqibmepcmkilp6ykjz2qknysdepz3zlcrpi3hx7lry3nvmm",
+      "name": "closure",
+      "outcome": "PASS",
+      "source_commit": "d0e9574dd3699f4ab6fc636f84f43070d49903f7"
+    },
+    {
+      "certificate_sha256": "37f445f176224d4bc59f33143952690b8f17779d99c0079a11d3cb9b10e06752",
+      "command": "python3 -B check.py --selftest",
+      "graph_ref": "bafkreiga3kccvkjwrb7ndahtn4bpxoqh5orgmhxd6r4ylw3hgdzn5rp3wu",
+      "name": "old",
+      "outcome": "PASS",
+      "source_commit": "335ef56bbea29fdf0071fee6521866c452b749e9"
+    },
+    {
+      "certificate_sha256": "825cd708d864ffdf73922395081d6201a2e54a920324bf47d60309e934402b35",
+      "command": "python3 -B verify.py --selftest",
+      "graph_ref": "bafkreiclb5l3bki6mutmsa36pkkt4zw7hf4noeaqtjsa4wr7em3q7zchty",
+      "name": "incumbent",
+      "outcome": "PASS",
+      "source_commit": "7b0ad2db768b22ee83dc4ce4c92c2e7b142f1779"
+    }
+  ],
+  "native_replay_scope": "Author checkers and selftests were replayed separately. This is additional source verification, not an independently derived replacement of their entire classification.",
+  "resources": "One CPU-intensive job at a time; all BLAS/OpenMP thread variables one; existing CPU1/RAM2GiB/Tasks128 unchanged.",
+  "role": "independent mathematical reviewer",
+  "target": {
+    "directory": "tammes15_octagon_exception_exclusion",
+    "height": 7458,
+    "ref": "bafkreiduvmer774uramyquzcuq6wxznurqb7go6f5epr3lc2utkdqfyfhu",
+    "source_commit": "457645158de222fa8eaa3981b8c171810b828e3d"
+  },
+  "target_native_replay": {
+    "certificate_sha256": "ec34472753ffb444c6d22203bd8eadd451a476a772211aa0aa3e105ac640d85e",
+    "command": "python3 -B check.py --selftest",
+    "outcome": "PASS; complete output matches EXPECTED.json"
+  }
+}
