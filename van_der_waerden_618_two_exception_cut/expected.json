@@ -1,0 +1,112 @@
+{
+  "agent": "six-vdw-1",
+  "role": "researcher",
+  "normalized_orientations_per_representative": "5070602400912917605986812821504",
+  "two_exception_skeletons": 63036,
+  "orbit_sizes": {
+    "same": 31518,
+    "mixed": 31518
+  },
+  "proofs": {
+    "same": {
+      "checked_additions": 23862,
+      "deleted_clauses": 116239,
+      "propagation_hints_checked": 337561,
+      "cnf_sha256": "6e259e1e9e010be7a73ed42710f468396f50c2fffa4368412ecd8c7aaca458fc",
+      "proof_sha256": "3d58ba196d83b94b8cb0014b2f60e0ecb01e7b40d4f797ab406a820df67b4c0d"
+    },
+    "mixed": {
+      "checked_additions": 16079,
+      "deleted_clauses": 108543,
+      "propagation_hints_checked": 237862,
+      "cnf_sha256": "d164d7ef2bd8ec7c6f3a3d49327f639557385ec0c7f2afd0525d0e1eecee064b",
+      "proof_sha256": "21cd66d3a8bb1abdd32d1b2cc8d0aecef6f8e4e748769a747bb0e63ae0c695d6"
+    }
+  },
+  "models": {
+    "same": {
+      "variables": 103,
+      "clauses": 92405,
+      "edges": 46202,
+      "weights_histogram": {
+        "2": 30104,
+        "1": 6974,
+        "3": 9124
+      },
+      "cnf_sha256": "6e259e1e9e010be7a73ed42710f468396f50c2fffa4368412ecd8c7aaca458fc",
+      "weighted_sha256": "b2c479b60683c167bca6cd564aed0d4516987a55f2412d7f92828d21b658e6ed",
+      "non_period3_AP_supports": 691
+    },
+    "mixed": {
+      "variables": 103,
+      "clauses": 92497,
+      "edges": 46248,
+      "weights_histogram": {
+        "2": 30066,
+        "1": 7062,
+        "3": 9120
+      },
+      "cnf_sha256": "d164d7ef2bd8ec7c6f3a3d49327f639557385ec0c7f2afd0525d0e1eecee064b",
+      "weighted_sha256": "27c77ea1534fdfa9461cc5e8e0a62580b8ea44f320b8cf49ebbc856bbd1ee7cc",
+      "non_period3_AP_supports": 693
+    }
+  },
+  "construction_candidate": {
+    "phases": "0130300411404515300143132441330304440133334054205444131011035341133230400441030344341411113012310500431",
+    "status": "INVALID",
+    "static_cost": 594,
+    "cyclic_pairs": 2376,
+    "integer_APs_at3704": 7117
+  },
+  "dependency": {
+    "directory": "van_der_waerden_618_binary_fibers",
+    "source_commit": "223f0eaa45d24ff924e10edaa1e327fbf8a7259f",
+    "graph_ref": "bafkreic6ikxxfio6r5367szeoaz2mfhxt2vaakem7xr2mrmjgf5vy7cmou",
+    "files": {
+      "encode.py": {
+        "sha256": "55cc3d511d12ff12cc7e344f68e4d23003ddb2e5916a5ce0291c89dff2aa743a",
+        "url": "https://github.com/helgithorskarp/math_results/blob/main/van_der_waerden_618_binary_fibers/encode.py"
+      },
+      "direct_encode.cpp": {
+        "sha256": "5ff2c1c2e38548b2f305476556e22bba6cd172632bf41c78f9ead0dbf99e0488",
+        "url": "https://github.com/helgithorskarp/math_results/blob/main/van_der_waerden_618_binary_fibers/direct_encode.cpp"
+      },
+      "check_rup_lrat.py": {
+        "sha256": "55543f905d42aaf0955906f97a8484ec8522a182512b1d2e8fe132bb45cb545c",
+        "url": "https://github.com/helgithorskarp/math_results/blob/main/van_der_waerden_618_binary_fibers/check_rup_lrat.py"
+      },
+      "rup_controls.py": {
+        "sha256": "7d4cb9db7aa401f3877c840d4d5946a24b8fd5e41f5767dcf95ee7a5c3bfe33a",
+        "url": "https://github.com/helgithorskarp/math_results/blob/main/van_der_waerden_618_binary_fibers/rup_controls.py"
+      },
+      "check_coloring.py": {
+        "sha256": "f61dead94d65c99b30c7adb5dd12d46ccf40ae951101c9fec08081b16ca11188",
+        "url": "https://github.com/helgithorskarp/math_results/blob/main/van_der_waerden_618_binary_fibers/check_coloring.py"
+      }
+    }
+  },
+  "drat_converter": {
+    "upstream": "https://github.com/marijnheule/drat-trim",
+    "commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "files": {
+      "drat-trim.c": {
+        "url": "https://raw.githubusercontent.com/marijnheule/drat-trim/2e3b2dc0ecf938addbd779d42877b6ed69d9a985/drat-trim.c",
+        "bytes": 59546,
+        "sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee"
+      },
+      "LICENSE": {
+        "url": "https://raw.githubusercontent.com/marijnheule/drat-trim/2e3b2dc0ecf938addbd779d42877b6ed69d9a985/LICENSE",
+        "bytes": 1184,
+        "sha256": "71ab2a9dc5a294ad8fba4ccb8c45aaa8a439596d314a2a046ac9b62266872a18"
+      },
+      "README.md": {
+        "url": "https://raw.githubusercontent.com/marijnheule/drat-trim/2e3b2dc0ecf938addbd779d42877b6ed69d9a985/README.md",
+        "bytes": 12939,
+        "sha256": "fa0b7c5b81b332aad990a1980c5d7a5fda41b153159cf331982bf36d87483054"
+      }
+    }
+  },
+  "length3704_witness": false,
+  "product_excluded": false,
+  "one_exception_excluded": false
+}
