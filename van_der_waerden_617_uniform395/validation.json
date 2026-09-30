@@ -1,0 +1,72 @@
+{
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "expected_sha256": "eb5a74e2baf4bd4d767bc97c52836976df10c9270e9dc2ab853ddd066a0ca558",
+  "runs": {
+    "stdlib": {
+      "success": true,
+      "python_version": "3.11.2",
+      "python_optimization": 0,
+      "elapsed_seconds": 4.224728628993034,
+      "self_peak_rss_kib": 24020,
+      "child_peak_rss_kib": 0,
+      "controls": {
+        "success": true,
+        "python_optimization": 0,
+        "corruptions_rejected": 73,
+        "sole_root_activation_models": 64,
+        "actual_anchor_models": 160,
+        "clipped_capacity_models": 8500,
+        "removed_zero_triple_models": 26682
+      }
+    },
+    "optimized": {
+      "success": true,
+      "python_version": "3.11.2",
+      "python_optimization": 1,
+      "elapsed_seconds": 4.4340774090378545,
+      "self_peak_rss_kib": 25340,
+      "child_peak_rss_kib": 0,
+      "controls": {
+        "success": true,
+        "python_optimization": 1,
+        "corruptions_rejected": 73,
+        "sole_root_activation_models": 64,
+        "actual_anchor_models": 160,
+        "clipped_capacity_models": 8500,
+        "removed_zero_triple_models": 26682
+      }
+    },
+    "isolated-fresh": {
+      "success": true,
+      "python_version": "3.12.14",
+      "python_optimization": 0,
+      "elapsed_seconds": 119.58765583398053,
+      "self_peak_rss_kib": 39712,
+      "child_peak_rss_kib": 55964,
+      "controls": {
+        "success": true,
+        "python_optimization": 0,
+        "corruptions_rejected": 73,
+        "sole_root_activation_models": 64,
+        "actual_anchor_models": 160,
+        "clipped_capacity_models": 8500,
+        "removed_zero_triple_models": 26682
+      }
+    }
+  },
+  "fresh": {
+    "versions": {
+      "highspy": "1.11.0",
+      "numpy": "2.2.6"
+    },
+    "fresh_stages_exactly_checked": 50,
+    "fresh_final_exclusions": 41,
+    "all_guides_checked_on_independently_proved_frozen_domains": true,
+    "all_fresh_screens_recover_frozen": true,
+    "pure_fresh_chain_claim": false,
+    "certificate_byte_matches": 50,
+    "maximum_native_seconds": 2.7305897849728353,
+    "maximum_native_peak_rss_kib": 55964
+  }
+}
