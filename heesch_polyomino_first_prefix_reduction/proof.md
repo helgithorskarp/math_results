@@ -142,7 +142,7 @@ applies to an integer-cell disc C built from these P copies, not merely to
 a single P. An arbitrary real surround of C implies a surround on the
 half-grid covering the full radius-one Chebyshev halo of the doubled cell
 set. The outer union can have arbitrary topology. The earlier
-[independent review](../heesch_polyomino_halfgrid_review1/proof.md)
+[independent review](../heesch_polyomino_halfgrid_review1/README.md)
 concerns that bridge, not this new reduction.
 
 The reader builds each complete halo inventory by unit-cell translation
