@@ -1,4 +1,82 @@
-# Rhombicosidodecahedron: explicit global receiving gap 1/150
+# Rhombicosidodecahedron: weighted global receiving gap 1/100
+
+**six-rupert-3, researcher; updated 2026-09-30.**
+
+[WEIGHTED_GLOBAL_BAND_PROOF.md](WEIGHTED_GLOBAL_BAND_PROOF.md) proves that
+every strict passage with arbitrary original proper source rotation,
+full roll, planar translation and scale>=1 satisfies
+**f(n)^2<beta-1/100**, where f(n)=min_original_v|v.n| and
+beta=(19-8phi)/29. Equivalently its receiving squared diameter is
+**>(736+960phi)/29+1/25**. The same proof classifies closed containment
+throughout the larger winning receiving band f(n)^2>=beta-1/100:
+exactly lambda=1,t=0 and Q in the two disjoint LEFT cosets G union J_nG,
+with 120 proper equality orientations. Global RID Rupertness remains
+**OPEN**. This intermediate proof is written, unformalized and
+independently unreviewed; historical priority is unasserted.
+
+The substantive new mechanisms cover all four source/receiver branches:
+
+- Positive original-circle weights yield a full SO(3) moment inequality,
+  with rotation chord at most 19/5 times the threshold normal chord.
+  Both normal chords are <1/108, so the full spatial angle is <1919/54000,
+  independently of an initial small-angle assumption. The matched
+  original radial inequalities remain an explicit hypothesis of the lemma.
+- Three disjoint pairs of positive winning originals have tangent mean
+  squared norm 5/3. At most six signed originals have actual height <=1/2;
+  eight distinct threshold-source radial candidates cannot fit among them.
+  This handles every roll without the earlier eighteen rank cones.
+- Every original's reference support slack is retained, giving a whole
+  threshold receiving support error <=317/25920. The known reference
+  gap Gamma=1/16, already proved by
+  [six-reviewer-2's threshold review](https://github.com/helgithorskarp/math_results/blob/main/rhombicosidodecahedron_threshold_receiver_review2/REVIEW.md),
+  survives both actual transports with margin
+  64404756191/3240000000000>1/60. All 80 closed-circle leaves and 240
+  selected coefficient bounds are replayed from the published parent.
+- The newly generated q=89/200 winning torque triangle has a complete
+  fresh certificate for all 840 closed simplex strata: 726 opposite cases,
+  114 distance cases, none degenerate. It gives raw torque radius 1/2;
+  full-angle bound 64/625 leaves remainder margin 73/31250>1/500.
+  The original outer routine is unchanged; the new positive origin
+  interiority argument proves the larger triangle directly.
+
+All 1920 selected threshold-contact comparisons and 1920 whole receiving
+support-envelope comparisons are regenerated. The checker also verifies
+the full original circle orders, all twelve forbidden cyclic shifts, all
+four proper original/contact alignments, both reference torque hulls,
+the three actual winning pairs and all fifteen body half-turn axes.
+Exact original receiving rays in both classes lie below the preceding
+global 1/150 cutoff and in the newly excluded band. The threshold cap
+exclusions retain their receiving-height condition; unconditional
+all-source caps of chord 1/108 are not asserted.
+
+Python 3.11+ standard library, threads one, run sequentially:
+
+~~~sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+ python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/weighted_global_band_certificate.py --self-test
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+ python3 -B -O rhombicosidodecahedron_mirror_cluster_obstruction/weighted_global_band_certificate.py --self-test
+~~~
+
+Every output byte must match
+[weighted_global_band_expected.json](weighted_global_band_expected.json),
+96,617 bytes, SHA256
+**6351e7186946bbca117022fc5896a06bb277fbbae41d7d9748f15292d2194caa**.
+Python 3.11.2 ordinary replay: 26.600s, peak 26,748KiB; optimized replay:
+25.629s, peak 29,032KiB. Both reject all 37 malformed mathematical controls,
+with separate 55-second deadlines and explicit guards active under -O.
+The old 436-region enumeration, balanced C3 moment triples and old
+840-stratum triangle are cited, not claimed rerun. The new 840 cases are
+regenerated completely. Author replay does not replace independent review
+or the written continuum bridges.
+
+The lower receiving-height sphere remains unresolved. The next structural
+step is to retain the axis-dependent moment curvature and the directional
+source/receiver tilt constraints, then identify the limiting branch
+before attempting a larger global receiving domain. The dated sections
+below preserve the scopes and fixtures of preceding contributions.
+
+## Preceding global receiving gap 1/150
 
 **six-rupert-3, researcher; updated 2026-09-30.**
 
