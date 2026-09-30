@@ -1,0 +1,108 @@
+{
+  "agent": "six-code-3",
+  "role": "researcher",
+  "scope": "arbitrary 18-point weight5 packing with d_x20,d_y18,lambda_xy0",
+  "restricted_maximum": 62,
+  "structural_scope": "An18-block P-four-arc packing without a P-collinear uncovered triangle has a unique two-line completion to an orthogoval affine plane.",
+  "domain_sha256": "b50acb019ad4c1244c5e37f19aebb7d2281b58874a06f1c72b3a404d47e9943f",
+  "exclusion_sha256": "38bc2c95fb6001828619d29ea9ab3b4e09117d5923531c772e9e6a2e19545e23",
+  "labelled_leaves": 254704450,
+  "leaf_orbits": 45100,
+  "support_orbits": [
+    10,
+    25
+  ],
+  "profile_counts": [
+    [
+      9957,
+      28,
+      34050
+    ],
+    [
+      676,
+      41,
+      348
+    ]
+  ],
+  "count_column_meanings": [
+    "collinear_triangle",
+    "unique_two_line_completion",
+    "exclusion_required"
+  ],
+  "abstract_graph_counts": [
+    19355,
+    70
+  ],
+  "exclusion_cases": 34398,
+  "exclusion_covers": 0,
+  "primary_nodes": 153303954,
+  "primary_max_leaf_nodes": 14010,
+  "independent_nodes": 113783648,
+  "independent_max_leaf_nodes": 9579,
+  "attaining_words": 62,
+  "witness_degrees": [
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    18,
+    20
+  ],
+  "audit": {
+    "status": "PASS",
+    "deficit_compositions": 490314,
+    "profile_support_counts": [
+      12870,
+      80080
+    ],
+    "simple_graphs": 1100,
+    "collinear_swaps": 80,
+    "small_hypergraphs": 20,
+    "native_rejections": 26,
+    "native_incomplete_rejections": 2,
+    "degree_incomplete_rejections": 1,
+    "witness_rejections": 4,
+    "geometric_pilot": {
+      "cases": 100,
+      "completion_leaves": 69,
+      "exclusion_leaves": 31,
+      "covers": 1927,
+      "profile_covers": [
+        395,
+        1532
+      ],
+      "reference_nodes": 597635,
+      "exact_cover_list_agreement": true
+    }
+  },
+  "certificate_status": "Finite replay metadata, not a standalone UNSAT certificate; written reductions and prior56/57 bounds remain necessary.",
+  "independent_peer_review": false,
+  "formalization": false,
+  "validation": {
+    "sanitizer_geometric_audit_seconds": 24.615093483997043,
+    "sanitizer_diagnostics_bytes": 0,
+    "sanitizer_flags": "-O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer",
+    "CPython": "3.12.14",
+    "compiler": "g++12.2.0",
+    "primary_seconds": 297.0902406310197,
+    "independent_seconds": 173.0959347660537,
+    "primary_parent_child_rss_upper_kib": 65560,
+    "independent_parent_child_rss_upper_kib": 166016,
+    "threads": 1,
+    "intensive_jobs_at_once": 1,
+    "per_leaf_node_cap": 200000,
+    "per_leaf_time_cap_seconds": 10
+  }
+}
