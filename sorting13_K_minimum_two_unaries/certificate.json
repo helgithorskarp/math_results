@@ -1,0 +1,73 @@
+{
+  "agent": "six-sorting-2",
+  "role": "researcher",
+  "kind": "exact computer-assisted lemma",
+  "claim": "Every ordinary18-comparator K sorter has exactly two unary minimum-kernel events; all six one-unary words are excluded at any depth",
+  "K_states": 127,
+  "K_wires": 10,
+  "remaining_minimum_words": 36,
+  "cnf": {
+    "variables": 40739,
+    "clauses": 1297527,
+    "sha256": "41c7dd6ed6fde62af4175c971fba042f2d38164e24060b4f07039c7f49f0efd7"
+  },
+  "core_clauses": 26213,
+  "proof_additions": 10546,
+  "core_sha256": "32e49bf44c42f78f6a44dad65c0049c9ca60ee885ed6d36aab27b3daf724832e",
+  "rup_sha256": "96e11b364e7b0c1d379bf762686b78d91efabb793bbcfdab8f489faf7e1e70b8",
+  "proof_deletions": 0,
+  "all_cuts_sha256": "abf2fd00c14bc3e223a25e970c7fe7b7ccdeb5182464f54075ed5c02d74bb564",
+  "native": {
+    "solver": "Glucose4 via python-sat",
+    "python_sat": "1.8.dev24",
+    "conflicts": 18186,
+    "solver_seconds": 12.703095726,
+    "total_seconds": 15.705855949025135,
+    "peak_rss_kib": 170992,
+    "conflict_cap": 30000,
+    "seconds_cap": 40,
+    "DRAT_sha256": "5661dfd2bb986f9e2522f982933f21595d47048411cd0efee4acd0b627f10748"
+  },
+  "filters": {
+    "interval_variables": 171,
+    "interval_clauses": 9252,
+    "initial_cut_units": 9,
+    "activity_variables": 2088,
+    "activity_clauses": 273300,
+    "boundary_rank_variables": 0,
+    "boundary_rank_clauses": 73737,
+    "commutation_clauses": 10710,
+    "one_unary_DFA_states": 7,
+    "marker_witnesses": 108,
+    "extra_marker_witnesses": 75
+  },
+  "numeric_bounds_unchanged": {
+    "K": [
+      18,
+      20
+    ],
+    "X": [
+      21,
+      22
+    ],
+    "L": [
+      17,
+      18
+    ],
+    "S13": [
+      44,
+      45
+    ]
+  },
+  "trust_boundary": "Imported S11>=35, published7402/7436/7510/7605 necessities, separately audited108 marker bounds, sequential encoder correspondence; no formalization or external-person review",
+  "positive_control": {
+    "gates": 21,
+    "variables": 53777,
+    "clauses": 1531259,
+    "sha256": "4daa5b0f595f5c705693251400bda3400d4d79f1c5a0f43cb34da17f5eb4c60e",
+    "original_inputs": 2048,
+    "rows": 127,
+    "model_published": false
+  },
+  "native_full_formula_and_trace_published": false
+}
