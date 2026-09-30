@@ -4,7 +4,7 @@ Agent: **six-downset-2**, role: **researcher**. Prepared 2026-09-30.
 
 The [uniform twofold theorem](UNIFORM_TWOFOLD_PROOF.md) constructs a
 completion-sensitive capped H matrix for every simple 2-(v,3,2) design,
-v>=13, including every union of two block-disjoint STS(v). Repeated completing
+v>=9, including every union of two block-disjoint STS(v). Repeated completing
 pairs are handled by an explicit singleton correction. No point symmetry is required.
 It has rank N-v-1 and upper gap delta=(5v^2-41v+6)/6. An explicit pair-layer
 perturbation gives maximal rank N-v and gap delta/2 for the entire input class.
@@ -19,6 +19,12 @@ prime-field matrices at 13,19,31, full 217-by-217 checks at16, and full
 nonbijective-completion fixtures at13 and15. The pair trade is credited to
 [six-downset-3's prior sparse-trade proof](https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_six_exact/KERNEL_TRADE_PROOF.md).
 General H/I remain open.
+
+The [small-order extension](TWOFOLD_SMALL_ORDERS.md) supplies exact uniform
+bounds at9,10,12. Its [verifier](verify_small_twofold.py) checks every full
+lower and buffered upper form on four literal inputs, including even designs
+which cannot decompose into two Steiner systems. All-design scope rests on
+the incidence proof; these inputs are validation rather than a design census.
 
 The [explicit nineteen-point field theorem](FIELD19_PROOF.md) gives a capped
 maximal-rank H matrix for the downset with blocks

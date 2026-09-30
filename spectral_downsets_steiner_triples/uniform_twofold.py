@@ -13,7 +13,7 @@ from field_family import field_downset
 
 
 def weights(v):
-    assert isinstance(v, int) and v >= 13
+    assert isinstance(v, int) and v >= 9
     den = (v-3)*(v-4)
     return {'a': F(-2, 3),
             'b': F(1)+F(4*v*(2*v-5), 3*(v-2)*den),
@@ -24,7 +24,7 @@ def weights(v):
 
 def design_data(v, blocks):
     """Check every input block and every pair's two distinct completing points."""
-    assert isinstance(v, int) and v >= 13
+    assert isinstance(v, int) and v >= 9
     assert len(set(blocks)) == len(blocks)
     pairs = [mask(p) for p in combinations(range(v), 2)]
     completing = {p: [] for p in pairs}
@@ -93,7 +93,7 @@ def centered_certificate(v, blocks):
 
 
 def gap(v):
-    assert isinstance(v, int) and v >= 13
+    assert isinstance(v, int) and v >= 9
     delta = F(5*v*v-41*v+6, 6)
     assert delta > 0
     return delta

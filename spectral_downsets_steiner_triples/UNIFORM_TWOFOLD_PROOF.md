@@ -8,13 +8,20 @@ are prior ingredients. General Spectral Chvátal Conjectures H and I remain open
 
 ## 1. Precise input class and conclusions
 
-Let U be any simple 2-(v,3,2) design, v>=13: every unordered pair of distinct
+Let U be any simple 2-(v,3,2) design, v>=9: every unordered pair of distinct
 points lies in exactly two distinct triples. Define pi(P) to be the unordered
 pair of their two third points. Allow arbitrary multiplicities in pi.
 Every such design is covered, including every union of two block-disjoint
 STS(v) in the stated order range. No automorphism hypothesis is imposed.
 General rank-three downsets and degrees other than two remain outside this
 theorem.
+
+The initial version covered v>=13, graph7956. The extension proved here
+adds every simple input at the remaining admissible orders9,10,12. The
+previous exact two-STS9 theorem already covered the decomposable nine-point
+subclass. The new scope is justified by the uniform incidence proof and
+sharper all-design norm bounds, not by design enumeration. See the concise
+[small-order extension](TWOFOLD_SMALL_ORDERS.md) for the precise increment.
 
 Let D contain the empty set, every singleton and pair, and the triples U. Put
 
@@ -204,7 +211,7 @@ beta=t-d^2/alpha2,
 gamma=t-4d^2/(alpha2(v-2))+d^2(v-4)^2/((v-2)alpha1).
 ```
 
-For v>=13, 1<t<=4/3 and 0<d<=2, so beta>1-2/v>0.
+For v>=9, 1<t<=8/5 and 0<d<=7/3, so beta>1-49/(18v)>0.
 From PR=2B and PP^T=(v-2)I on sum-zero points,
 R^TR>=4B^TB/(v-2) on sum-zero triples. Hence
 
@@ -215,8 +222,8 @@ mu=v(3v^3-13v^2+32)/((v-3)(v-2)(3v^2-16))>0.
 ```
 
 The bracket is positive. The second inequality uses BB^T=(v-3)I on
-sum-zero points, so B^TB<=(v-3)I on sum-zero triples. For z=v-13>=0,
-the cubic in mu is 4426+1183z+104z^2+3z^3, strictly positive.
+sum-zero points, so B^TB<=(v-3)I on sum-zero triples. For z=v-9>=0,
+the cubic in mu is 1166+495z+68z^2+3z^3, strictly positive.
 All divided quantities are positive: v-2,v-3,v-4,alpha1,alpha2.
 This closes both Schur inequalities, without assumptions on R's remaining
 singular values or on an automorphism group.
@@ -238,45 +245,67 @@ having sum zero on each level and is also invariant. On that complement
 the diagonal blocks are bounded above by
 
 ```
-L11<(10v/3)I,       L22<=(2v+1/3)I,       L33<=(2v+17/3)I.
+L11<(18v/5)I,       L22<=(2v+1/3)I,       L33<=(2v+7)I.
 ```
 
 For the first, on sum-zero points L11=(s-a)I+tZ. Nonnegative C has row
 sum v-1 and column sum two, so ||C||^2<=2(v-1), giving Z<=vI there.
 For the latter two drop -cP^TP and -tB^TB and use ||R||^2<=6. The weights
-obey 0<w<=3/2, 0<c<=4/3, 0<d<=2, 0<h<=2, 1<t<=4/3. Their upper-bound
-numerators, over positive denominators, have coefficients in z=v-13 of
+obey 0<w<=7/4, 0<c<=4/3, 0<d<=7/3, 0<h<=5/2, 1<t<=8/5 for v>=9.
+For z=v-9, the bound minus its weight is the corresponding fraction
 
 ```
-w<=3/2:   786+521z+74z^2+3z^3,
-c<=4/3:   106+21z+z^2,
-d<=2:     28+13z+z^2,
-h<=2:     18+12z+z^2.
+w<=7/4:   (18+467z+130z^2+9z^3) / [12(v-2)(v-3)(v-4)],
+c<=4/3:   (38+13z+z^2) / [3(v-2)(v-3)],
+d<=7/3:   (6+26z+4z^2) / [3(v-3)(v-4)],
+h<=5/2:   (2+19z+3z^2) / [2(v-3)(v-4)],
+t<=8/5:   3z / [5(v-4)].
 ```
 
+The last is zero at9; all fractions are nonnegative and all denominators
+are positive.
 On layer-sum-zero vectors the J terms vanish. The off-diagonal norms satisfy
 
 ```
-||L12||=||-wP-dC|| <= w sqrt(v-2)+d sqrt(2(v-1)) <= (9/2)sqrt(v),
-||L13||=||-hB-tH|| <= h sqrt(v-3)+t sqrt(3(v-1)) <= (13/3)sqrt(v),
-||L23||=||dR-dP^TB|| <= d[sqrt(6)+sqrt((v-2)(v-3))] <=2v+5.
+||L12||=||-wP-dC|| <= w sqrt(v-2)+d sqrt(2(v-1)) <= (21/4)sqrt(v),
+||L13||=||-hB-tH|| <= h sqrt(v-3)+t sqrt(3(v-1)) <= (53/10)sqrt(v),
+||L23||=||dR-dP^TB|| <= d[sqrt(6)+sqrt((v-2)(v-3))] < dv <=(7/3)v.
 ```
 
-The first uses sqrt(2)<3/2; the second uses sqrt(3)<7/4; the last uses sqrt(6)<5/2.
+The first uses sqrt(2)<3/2; the second uses sqrt(3)<7/4. The sharper last
+bound uses sqrt(6)<5/2 and sqrt((v-2)(v-3))<v-5/2, because the difference
+of the latter squared quantities is1/4 and v-5/2>0.
 Bound the quadratic form by the three by three matrix of these diagonal
 upper bounds and off-diagonal norms. Its largest eigenvalue is at most its
-largest row sum. Using sqrt(v)<=v/3, valid for v>=13, the three row sums are
+largest row sum. For v>=10 use sqrt(v)<=8v/25: its squared condition is
+64v>=625. The three row sums are
 bounded by
 
 ```
-(113/18)v,       (11/2)v+16/3,       (49/9)v+32/3,
+(872/125)v,       (451/75)v+1/3,       (2261/375)v+7,
 ```
 
-each strictly below 7v. The last two margins have positive numerators
-9v-32 and 14v-96. The empty extension has eigenvalue zero. Thus
+each strictly below 7v, with margins
+3v/125, (74v-25)/75, and (364v-2625)/375, all positive for v>=10.
+
+At v=9 use the exact weights
+w=61/35,c=65/63,d=34/15,h=37/15,t=8/5, and s=17. The three diagonal
+bounds are481/15,1136/63,25. Using sqrt7<=8/3, sqrt6<=5/2,
+sqrt24<=5 and sqrt42<=13/2, the three cross norms are at most
+96/7,85/6,102/5. Thus the three row sums are at most
+
+```
+12589/210,       16426/315,       1787/30,
+```
+
+all below63, with exact gaps641/210,3419/315,103/30. These are bounds
+from the universal incidences, covering every simple nine-point twofold
+design; no special fixture or decomposition is used.
+
+The empty extension has eigenvalue zero. Thus
 Q_c|_(1 perpendicular)=L|_(1 perpendicular)<7v I.
-Finally delta=N-7v>0 since its numerator at v=13+z is
-318+89z+5z^2. Consequently NI-Q_c-delta(I-J_N/N) is PSD, has kernel
+Finally delta=N-7v>0 since its numerator at v=9+z is
+42+49z+5z^2. Consequently NI-Q_c-delta(I-J_N/N) is PSD, has kernel
 exactly the constant vector, and rank N-1. This proves the strict cap and
 the stated buffer.
 
@@ -367,9 +396,18 @@ alpha1>v, A<4v^2, and mu>1: indeed
 mu-1=2(v-4)(v^2+3v-12)/((v-3)(v-2)(3v^2-16))>0.
 ```
 
-Also delta<v^2 and 8mk>v^4, so 0<eta<1/v^2. To check the latter
-denominator inequality, write z=v-13; then
-8mk-v^4=v(443+217z+27z^2+z^3)>0.
+For all v>=9, 0<eta<1/v^2 follows directly from
+
+```
+6(8mk-delta*v^2)=v(7v^3-31v^2+126v-72)
+               =v(3654+1269z+158z^2+7z^3)>0,   z=v-9.
+```
+
+The stronger intermediate bound8mk>v^4 used in the initial v>=13 proof
+fails at9 and is not needed here. To certify A<4v^2, its positive-denominator
+numerator at v=9+z is8984+4924z+1003z^2+90z^3+3z^4.
+The inequality alpha1>v has numerator38+6z over3(v-2), and mu>1 follows
+from the displayed identity since v^2+3v-12=96+21z+z^2>0.
 It follows that alpha1'>alpha1/2, and
 
 ```
@@ -378,7 +416,7 @@ A(1/alpha1'-1/alpha1)
  <2*(4v^2)*(1/v^2)*v/v^2=8/v<1.
 ```
 
-Thus mu'>1-8/v>0 for v>=13. This proves positive definiteness on the
+Thus mu'>1-8/v>0 for v>=9. This proves positive definiteness on the
 entire sum-zero pair/triple space, with no ordinary H certificate assumed.
 K_0 consequently has rank (m+b-2)+2=m+b. Q_r-J_N has that same rank,
 annihilates constants, and is PSD, so rank Q_r=m+b+1=N-v.
@@ -475,6 +513,19 @@ v=13+z. It requires no CAS. The optional derivation script
 [derive_twofold_sympy.py](derive_twofold_sympy.py) uses SymPy1.14.0 over Q(v);
 its compact output is [twofold_symbolic.json](twofold_symbolic.json).
 CAS identities do not prove the surrounding incidence or spectral bridges.
+
+The [small-order coefficient checker](twofold_small_identities.py) checks
+twenty further identities, twelve strict margins and one weak weight bound
+in v-9, and four strict margins in v-10. It verifies the exact radical
+bounds and row sums at9. The [small-order verifier](verify_small_twofold.py)
+checks four full lower/buffered-upper forms for each of four inputs at9,10,12,
+including even orders with no STS decomposition. It also replays the old
+two9 PSD/cap inputs, checks every support/row/star/incidence identity and
+uses rational Schur on one input's four forms. Its compact output is
+[small_twofold_expected.json](small_twofold_expected.json); the initial
+validation passed in14.26s with24,160KiB maximum RSS. The input fixtures
+are deterministic implementation controls, not a design census. See
+[the extension note](TWOFOLD_SMALL_ORDERS.md) for commands and precise scope.
 
 [verify_uniform_twofold.py](verify_uniform_twofold.py) regenerates the inputs,
 checks the incidence identities, full closure/support/diagonal/row/star

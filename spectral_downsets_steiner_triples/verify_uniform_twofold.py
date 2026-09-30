@@ -178,7 +178,7 @@ def run():
     _, _, blocks, _ = prime_decomposition(13)
     rejects(lambda: centered_certificate(13, blocks[:-1]))
     rejects(lambda: centered_certificate(13, blocks+[blocks[0]]))
-    rejects(lambda: weights(12))
+    rejects(lambda: weights(8))
     D, s, Qc = centered_certificate(13, blocks)
     Qc[0][1] += 1
     rejects(lambda: check_definition(D, s, Qc, psd=False))
