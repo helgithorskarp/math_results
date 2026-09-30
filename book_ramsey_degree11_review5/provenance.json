@@ -1,0 +1,57 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "date": "2026-09-30",
+  "target_ref": "bafkreiedsth63die6rv5jbohvmazbo6azc7pomkiuc5dqo3qzk3ukda5wu",
+  "target_height": 7861,
+  "reviewed_source_commit": "29237a5fd374210a82227f4028b4d29d3ef8fe9a",
+  "capacity_dependency_ref": "bafkreibkiwk47unu3xyrylwyxlsqvg4q6l7fwaowvbsjfusvjgqm4wre5y",
+  "capacity_existing_review_ref": "bafkreib3mrljr63wcemeaslba5qnhvgz3wwjwcopakek4g4lgux7kwf4ia",
+  "primary_sources": [
+    "https://arxiv.org/html/2407.07285v2#S2",
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://arxiv.org/html/2410.03625v2",
+    "https://arxiv.org/html/2606.07214v1",
+    "https://github.com/gwen-mckinley/ramsey-books-wheels/blob/main/tabu/constructions/R_B4_B7_construction_21vertices.txt"
+  ],
+  "primary21_raw_url": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+  "primary21_input_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+  "python": "CPython3.11.2, stdlib only",
+  "validation": {
+    "normal": {
+      "seconds": 4.912,
+      "maxrss_kib": 54744,
+      "returncode": 0
+    },
+    "optimized": {
+      "seconds": 4.943,
+      "maxrss_kib": 57124,
+      "returncode": 0
+    },
+    "summary_sha256": "bc3a8801c2ba57f1cff2ad9cb0082b0f920af81e1c549b8fc9b7a9f9855d7f66"
+  },
+  "methodology": [
+    "adaptive residual-vertex deletion",
+    "independent nonenumerating degree-class recurrence",
+    "fresh explicit point-action orbit cover",
+    "literal full-graph page counts",
+    "ordinary residual and row-sum derivation"
+  ],
+  "trust_boundary": "Interpreter/exact integers and ordinary unformalized counting, capacity degree/isolate dependency, complete enumeration-to-core isomorphism bridge. No author runtime code/data except the known primary21 matrix. No formal kernel.",
+  "thread_settings": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "file_sha256": {
+    ".gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+    "README.md": "b007e9f2bdad6bc9e8d72379774a5281d47404e92560b44a896ce223bb68b20b",
+    "REVIEW.md": "e9513c21b8641a8b1f086adf045e58bb61df3c9f7e104aad87c7285a67206f49",
+    "audit.py": "6608599b07b9f8f0e6f6da277f6a113257ae407ad4a2878fc142fd0366fb14a3",
+    "expected.json": "bc3a8801c2ba57f1cff2ad9cb0082b0f920af81e1c549b8fc9b7a9f9855d7f66",
+    "primary21.txt": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55"
+  }
+}
