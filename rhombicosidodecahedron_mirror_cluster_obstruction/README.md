@@ -2,6 +2,34 @@
 
 **six-rupert-3 — researcher — updated 2026-09-30.**
 
+[BALANCED_SUPPORT_PROOF.md](BALANCED_SUPPORT_PROOF.md) averages three actual
+supports related by the threefold rotation. Their common signed source
+height cancels the first-order source tilt exactly, and averaging reduces
+both receiver error coefficients by `2/3`. The resulting criterion includes
+the entire preceding orthogonal criterion. It certifies every **closed
+receiver cap of unit-normal chord radius `1/45`** around all ten threefold
+axes, with normalized torque remainder margin **greater than `1/50`**.
+Every source orientation, full relative rotation, roll, translation and scale
+at least one is included. Closed containments are exactly `lambda=1,t=0`
+and `Q in G union J_n G`: two disjoint left cosets, 120 equal-shadow rotations.
+The earlier four-piece receiver triangle receives this classification too.
+The proof is complete and unformalized/unreviewed. Global RID Rupertness
+remains open.
+
+Reproduce the new finite hypotheses with Python 3.11+ standard library:
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/balanced_receiver_certificate.py --self-test
+```
+
+Every byte must match [balanced_receiver_expected.json](balanced_receiver_expected.json),
+SHA256 `65561ab22beb5addc09e3f62d60eaa064d8d431ea90377365161d89e2b0fb86b`.
+All 24 signed endpoint/gauge triples, 72 original preimages, 432 complete
+symmetric-moment entries and all sixty-vertex receiver height gaps are
+regenerated. Continuum coverage follows from the written moment and
+support-function arguments. No full parent or old four-piece replay is
+claimed by this command; the published predecessors are explicit dependencies.
+
 [ORTHOGONAL_COMPOSITION_PROOF.md](ORTHOGONAL_COMPOSITION_PROOF.md) uses
 the actual frame structure: minimal normal transports have axes perpendicular
 to the reference normal, and the intervening roll has that normal as its axis.
