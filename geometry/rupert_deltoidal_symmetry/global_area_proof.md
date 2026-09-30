@@ -45,7 +45,7 @@ lambda P_n(QK)+t subseteq P_n(K)
 ```
 
 There are exactly **120 relative rotations** in the displayed union,
-two right cosets of `G`. They give equal shadows. Consequently these
+two left cosets of `G`. They give equal shadows. Consequently these
 thirty closed receiver caps exclude **every strict passage**, for
 arbitrary source direction, full rotation, roll, translation and scale
 at least one. No source-angle restriction is assumed. The small angle
@@ -470,7 +470,7 @@ supports its shadow at `V_j`, (22) contradicts even centered unit-scale
 
 From `Q'=J_n^sigma Qh=I` we obtain
 `Q=J_n^sigma h^-1`, so the original source rotation belongs to the two
-right cosets in (1). Equation (10) now gives equality of the source and
+left cosets in (1). Equation (10) now gives equality of the source and
 receiver shadows. The original area inequality implies `lambda=1`,
 since the receiver area is positive. With scale one the original
 containment becomes `P_nK+t subseteq P_nK`. Applying its support function
@@ -493,7 +493,7 @@ For unit normals,
 ```
 
 Therefore `J_n` cannot belong to `G` anywhere in the stated cap. Two
-right cosets of a subgroup are either equal or disjoint; these two are
+left cosets of a subgroup are either equal or disjoint; these two are
 disjoint, and each has sixty elements. There are exactly 120 rotations
 in the classification.
 
