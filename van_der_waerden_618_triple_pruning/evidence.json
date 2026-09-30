@@ -1,0 +1,103 @@
+{
+  "agent": "six-vdw-1",
+  "checked_at": "2026-09-30T10:22:27.658285+00:00",
+  "dependencies": [
+    {
+      "graph_ref": "bafkreic6ikxxfio6r5367szeoaz2mfhxt2vaakem7xr2mrmjgf5vy7cmou",
+      "role": "construction model and four-to-one objective bridge",
+      "source_commit": "223f0eaa45d24ff924e10edaa1e327fbf8a7259f",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_618_binary_fibers"
+    },
+    {
+      "graph_ref": "bafkreifqxeobdid7w5k2fkv4zg67yzcx534zi6c33uenbwzoqhq2jgpbfm",
+      "role": "six-state phase normal form only",
+      "source_commit": "be7ac04e6732669d77b2c2b808834e8783b6b1c9",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_618_phase_symmetry"
+    }
+  ],
+  "internal_seconds_per_case": 30,
+  "max_simultaneous_cpu_intensive_children": 1,
+  "no_resource_escalation": true,
+  "parent_timeout_seconds": 45,
+  "python_version": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "residual_move_limit": 200000,
+  "role": "researcher",
+  "scope": "Reusable written minority-row bound and exact neighborhoods of two invalid words; no coloring, family exclusion, or W bound.",
+  "source_manifest": {
+    "ap_expected.json": {
+      "bytes": 1492,
+      "sha256": "28cbb147bedc856992a0c7cfa6a00f7b49a162d440776c938b9df8d9c86ee2d6"
+    },
+    "cases.json": {
+      "bytes": 1034,
+      "sha256": "47f251c67225f631c2321a65407ac8a2fe3af53ef1e02bffd20915e9622600ef"
+    },
+    "check_coloring.py": {
+      "bytes": 2290,
+      "sha256": "f61dead94d65c99b30c7adb5dd12d46ccf40ae951101c9fec08081b16ca11188"
+    },
+    "expected.json": {
+      "bytes": 7672,
+      "sha256": "cce44c38ed311c69c867d802e337b753ce1fe7f5aaee121907dac74dd1700d33"
+    },
+    "reproduce.py": {
+      "bytes": 3596,
+      "sha256": "1d3be59d14906ef02bd59bd4f4984c90024221145bc6fb12d9662fc7ba24068c"
+    },
+    "triple_pruning.py": {
+      "bytes": 18449,
+      "sha256": "d0bae5849d2c36f52c23339dbe2a1cff6438eb1b0558700fb2d724be7e84fdeb"
+    }
+  },
+  "thread_limit": 1,
+  "trust_boundary": "Written bridges and bound unformalized; same-author independent algorithms, direct truth controls and AP checks, no external review asserted.",
+  "verification": {
+    "agent": "six-vdw-1",
+    "cases": {
+      "gate585": {
+        "bound_and_residual_checked": true,
+        "cyclic_monochromatic_pairs": 2340,
+        "integer_monochromatic_APs": 7009,
+        "native_summary": {
+          "case": "gate585",
+          "cutoff_attained": false,
+          "cutoff_score": 1,
+          "initial_long_cost": 585,
+          "maximum_selected_score": -1,
+          "maxrss_kib": 81308,
+          "pruned_moves": 22100250,
+          "seconds": 13.305318024998996,
+          "selected_moves": 6125,
+          "status": "COMPLETE_CHECKED_REDUCTION",
+          "total_moves": 22106375
+        }
+      },
+      "preferred584": {
+        "bound_and_residual_checked": true,
+        "cyclic_monochromatic_pairs": 2336,
+        "integer_monochromatic_APs": 6995,
+        "native_summary": {
+          "case": "preferred584",
+          "cutoff_attained": false,
+          "cutoff_score": 0,
+          "initial_long_cost": 584,
+          "maximum_selected_score": -2,
+          "maxrss_kib": 81212,
+          "pruned_moves": 22099375,
+          "seconds": 13.900655440986156,
+          "selected_moves": 7000,
+          "status": "COMPLETE_CHECKED_REDUCTION",
+          "total_moves": 22106375
+        }
+      }
+    },
+    "fail_closed_deadline_control": true,
+    "length3704_witness": false,
+    "no_template_family_exclusion": true,
+    "peak_child_rss_kib": 81308,
+    "role": "researcher",
+    "seconds": 33.11821751098614,
+    "status": "VERIFIED_TRIPLE_PRUNING_APPLICATIONS",
+    "threads": 1
+  }
+}
