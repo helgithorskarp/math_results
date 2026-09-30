@@ -240,8 +240,8 @@ python3 heesch_weighted_matching_obstruction/cover_tiling_certificate.py check-c
 The linked proof gives the full encoding, pinned dependencies, regeneration
 commands, hashes and trust boundaries. Large generated inputs and proofs
 stay in scratch. The old directed-state numeric inputs returned UNKNOWN;
-the stronger result below resolves that branch. The zigzag base remains
-incomplete. No seven-corona finite record is claimed.
+the stronger result below resolves that branch. No seven-corona finite
+record is claimed.
 
 [directed_cover_tiling.md](directed_cover_tiling.md) strengthens this to **all
 self-colors and ternary directed states** on the same bent base: a rooted
@@ -259,6 +259,25 @@ python3 heesch_weighted_matching_obstruction/validate_equivalence.py
 
 The second command needs Python-SAT and the pinned Circuit dependency.
 The proof supplies the independent checker commands, hashes and limits.
+
+[zigzag_cover_tiling.md](zigzag_cover_tiling.md) proves the same sharp
+radius-five criterion on the distinct zigzag base
+`{(0,0),(1,0),(1,1),(2,1)}` for **all self-colors and ternary states**.
+Its 22 checked periodic motifs and independently verified RUP contradiction
+exclude finite curved **Hc>4 or Hh>5** in this second family. A new two-color,
+zero-state example has a checked radius-four cover and exact **Euclidean
+Hc=2**, with a direct two-corona witness and a third-corona RUP exclusion.
+The rooted-cover criterion is sharp; the maximum finite corona depth over
+all markings is not determined.
+
+```sh
+python3 heesch_weighted_matching_obstruction/zigzag_cover_certificate.py check
+python3 heesch_weighted_matching_obstruction/zigzag_cover_certificate.py audit
+```
+
+The contact audit needs the pinned Circuit dependency and checks every pair
+in the full research instance. The proof gives exact regeneration and
+independent checking commands for both contradictions.
 
 ## Literature and remaining frontier
 

@@ -1,0 +1,534 @@
+{
+  "agent": "six-heesch-3",
+  "role": "researcher",
+  "date": "2026-09-30",
+  "proof_status": "exact computer-assisted theorem; written geometric dependencies, not formalized or peer reviewed",
+  "scope": "All self-color partitions and ternary states on zigzag4 under six rotations; R5 cover forces one of22 periodic tilings",
+  "partitions": 682076806159,
+  "ternary_state_tables": 387420489,
+  "parameter_pairs_up_to_color_renaming": 264250529777677991751,
+  "marked_finite_bounds": {
+    "Hc_upper": 4,
+    "Hh_upper": 4
+  },
+  "geometric_finite_bounds": {
+    "Hc_upper": 4,
+    "Hh_upper": 5,
+    "all_zero_states_Hh_upper": 4
+  },
+  "universal_certificate": {
+    "assumptions": "none",
+    "candidate_cells": 254,
+    "candidates": 900,
+    "clauses": 81151,
+    "cnf_sha256": "3c498d3791e54a2f4f0ca72a2b61081e849576fac352646bb4bd0644f634477f",
+    "conflict_budget": 20000,
+    "contacts": 66852,
+    "equality_variables": 153,
+    "mode": "equivalence_state_cover",
+    "motifs": 22,
+    "overlapping_contact_pairs_omitted": 14880,
+    "peak_rss_kib": 59364,
+    "proof_bytes": 2361844,
+    "proof_sha256": "f5e72f13f2af1094e66226cb65425e7744926956fb3e0461e30658c6d61b917e",
+    "python_sat": "1.8.dev24",
+    "radius": 5,
+    "reflections": false,
+    "result": "UNSAT; independent proof checking required",
+    "seconds": 1.544,
+    "solver": "glucose4",
+    "solver_stats": {
+      "conflicts": 17789,
+      "decisions": 27412,
+      "propagations": 3734807,
+      "restarts": 19
+    },
+    "state_mode": "all ternary states",
+    "target_cells": 124,
+    "variables": 4917
+  },
+  "independent_RUP": {
+    "verified": true,
+    "cnf_sha256": "3c498d3791e54a2f4f0ca72a2b61081e849576fac352646bb4bd0644f634477f",
+    "proof_sha256": "f5e72f13f2af1094e66226cb65425e7744926956fb3e0461e30658c6d61b917e",
+    "checker_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "checker_source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "core_input_clauses": 15480,
+    "core_lemmas": 12085,
+    "total_lemmas": 17790,
+    "resolution_steps": 1136547,
+    "RAT_core_lemmas": 0
+  },
+  "motif_determinants": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    16,
+    8,
+    8,
+    32,
+    16,
+    8,
+    32,
+    8,
+    4,
+    4,
+    8,
+    16,
+    16,
+    4
+  ],
+  "sharpness": {
+    "radius": 4,
+    "copies": 30,
+    "cells": 120,
+    "matched_boundary_incidences": 408,
+    "Hc": 2,
+    "Hh_interval": [
+      2,
+      3
+    ],
+    "table_excludes_all22_motifs": true,
+    "cover_sha256": "c6d420ba6b5a02767b7085d6831fb548ea71a0dcf5e84eb592ebb24c9bbe24e2",
+    "corona_witness_sha256": "9feaaa56993998451f23089460e7ce4fba92cf07760b6b2408d7b5ac7d52c9ab",
+    "prefixes": [
+      {
+        "cells": 4,
+        "holes": 0,
+        "level": 0,
+        "tiles": 1
+      },
+      {
+        "cells": 28,
+        "holes": 0,
+        "level": 1,
+        "tiles": 6
+      },
+      {
+        "cells": 76,
+        "holes": 0,
+        "level": 2,
+        "tiles": 12
+      }
+    ]
+  },
+  "third_corona_exclusion": {
+    "assumptions": "none",
+    "box": [
+      -12,
+      14,
+      -12,
+      13
+    ],
+    "candidates": 2728,
+    "clauses": 340533,
+    "cnf_sha256": "be1099d3c3a61f147d2db805c7048d2490742425817d095d0ea89f05f34af87c",
+    "color_edges": 1716,
+    "conflict_budget": 20000,
+    "counts": "no charge constraint",
+    "depth": 3,
+    "grid_edges": 1716,
+    "matching": "equal color, opposite state",
+    "mode": "complete_disc_coronas",
+    "orientations": 6,
+    "peak_rss_kib": 129096,
+    "proof_bytes": 900863,
+    "proof_sha256": "d75f964492fdf5358007eb7280390256c04d488e5f6c9595980931d6e11c5712",
+    "python_sat": "1.8.dev24",
+    "reflections": false,
+    "result": "UNSAT; independent proof checking required",
+    "seconds": 2.165,
+    "solver": "glucose4",
+    "solver_stats": {
+      "conflicts": 132,
+      "decisions": 1049,
+      "propagations": 159168,
+      "restarts": 1
+    },
+    "topology": [
+      {
+        "adjacency_terms": 237,
+        "cells": 90,
+        "triple_terms": 148
+      },
+      {
+        "adjacency_terms": 753,
+        "cells": 270,
+        "triple_terms": 484
+      },
+      {
+        "adjacency_terms": 1557,
+        "cells": 546,
+        "triple_terms": 1012
+      }
+    ],
+    "variables": 50027
+  },
+  "third_corona_independent_RUP": {
+    "verified": true,
+    "cnf_sha256": "be1099d3c3a61f147d2db805c7048d2490742425817d095d0ea89f05f34af87c",
+    "proof_sha256": "d75f964492fdf5358007eb7280390256c04d488e5f6c9595980931d6e11c5712",
+    "checker_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "checker_source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "core_input_clauses": 2556,
+    "core_lemmas": 91,
+    "total_lemmas": 133,
+    "resolution_steps": 16426,
+    "RAT_core_lemmas": 0
+  },
+  "public_source_regeneration": {
+    "zigzag4_directed_cover_tiling": {
+      "input_and_proof_bytes_match": true,
+      "independent_RUP_verified": true
+    },
+    "zigzag4_twocolor_depth3": {
+      "input_and_proof_bytes_match": true,
+      "independent_RUP_verified": true
+    }
+  },
+  "validation": {
+    "boundary_incidences": [
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      72,
+      36,
+      36,
+      144,
+      72,
+      36,
+      144,
+      36,
+      18,
+      18,
+      36,
+      72,
+      72,
+      18
+    ],
+    "contact_audit": {
+      "candidate_pair_cases": 405450,
+      "contacts": 66852,
+      "geometry": {
+        "candidate_cells": 254,
+        "candidates": 900,
+        "radius": 5,
+        "reflections": false,
+        "target_cells": 124
+      },
+      "overlapping_contact_pairs_omitted": 14880,
+      "sorted_contact_inventory_sha256": "5872a893a85bda9553f67d9d67c6d7a5f03be1a6936761ad91446d8eee45174b"
+    },
+    "determinants": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      16,
+      8,
+      8,
+      32,
+      16,
+      8,
+      32,
+      8,
+      4,
+      4,
+      8,
+      16,
+      16,
+      4
+    ],
+    "example_excludes_all_motifs": true,
+    "motifs": 22,
+    "ports": 18,
+    "radius4_cover": {
+      "cells": 120,
+      "copies": 30,
+      "matched_boundary_incidences": 408,
+      "matching_port_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          14
+        ],
+        [
+          1,
+          16
+        ],
+        [
+          1,
+          17
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          2,
+          12
+        ],
+        [
+          2,
+          16
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          3,
+          17
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          5,
+          15
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          16,
+          16
+        ]
+      ],
+      "original_port_inverse_decoding": true
+    },
+    "two_coronas": {
+      "color_checks": {
+        "cells": 76,
+        "copies": 19,
+        "matched_boundary_incidences": 250,
+        "matching_port_pairs": [
+          [
+            0,
+            14
+          ],
+          [
+            0,
+            17
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            1,
+            15
+          ],
+          [
+            1,
+            16
+          ],
+          [
+            1,
+            17
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            3,
+            17
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            15
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            8,
+            15
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            12,
+            17
+          ],
+          [
+            14,
+            16
+          ],
+          [
+            15,
+            16
+          ],
+          [
+            16,
+            16
+          ],
+          [
+            16,
+            17
+          ]
+        ],
+        "original_port_inverse_decoding": true
+      },
+      "finite_charge": false,
+      "prefixes": [
+        {
+          "cells": 4,
+          "holes": 0,
+          "level": 0,
+          "tiles": 1
+        },
+        {
+          "cells": 28,
+          "holes": 0,
+          "level": 1,
+          "tiles": 6
+        },
+        {
+          "cells": 76,
+          "holes": 0,
+          "level": 2,
+          "tiles": 12
+        }
+      ],
+      "signed_counts": [
+        0,
+        0,
+        18
+      ]
+    }
+  },
+  "unchanged_core_validation_dependency": "directed_cover_tiling_evidence.json and equivalence_validation_expected.json",
+  "encoding_dependencies": {
+    "circuit.py": "be6a80950052bb3b5b09874b3ecd16a22fb5caa1cec55b0734891e591a00c975",
+    "topology.py": "65f914feed3f60a63304b36651e3b5fc99c35847ffa4a5ccc27bdec7bc361f54"
+  },
+  "python": "3.11.2",
+  "python_sat": "1.8.dev24",
+  "solver": "glucose4",
+  "assumptions": "none",
+  "resources": {
+    "threads": 1,
+    "conflicts_per_input": 20000,
+    "wall_cap_seconds": 55,
+    "standing_cpu_cores": 1,
+    "standing_memory_bytes": 2147483648,
+    "standing_tasks_max": 128,
+    "largest_recorded_peak_rss_kib": 129096
+  },
+  "source_sha256": {
+    "equivalence_state.py": "f1edabcc1b991079ba10f56f7132bb1a13856fd57c7438be54be8878896fb30b",
+    "equivalence_certificate.py": "e6e9b9efe2b587cc0b49aaf29a1ac02704d2e624f5c4e7fadd02e16cddf6ea04",
+    "color_state.py": "f2892b95d650436a5b1c1af8650bebcb9a67b1f4f0dac8859dd4eae022f52a75",
+    "hex_domain.py": "30828bf652628c103057d68a46d23192136f95712150c08662e76797a4725c7f",
+    "marked_corona.py": "973226344faa4f7c0e2aed4c421af593037e18028af821eab500d40a840fe971",
+    "zigzag_cover_certificate.py": "116f9a13f9a5810580e194d3c4f98deb9a3c0aaaf24279696adfd6b0680ae703",
+    "zigzag4_directed_cover_tiling.json": "596778836122ae43a7e076df9b612e83a3e3a91a1a4fc308c5d1eccde4755743",
+    "zigzag4_twocolor_radius4.cover.json": "c6d420ba6b5a02767b7085d6831fb548ea71a0dcf5e84eb592ebb24c9bbe24e2",
+    "zigzag4_twocolor_depth2.witness.json": "9feaaa56993998451f23089460e7ce4fba92cf07760b6b2408d7b5ac7d52c9ab",
+    "zigzag_validation_expected.json": "9b8a7ea8615f3a03364ff6799dedc9575968819cee95233d0612fb82dc7cf3d8",
+    "zigzag_cover_tiling.md": "67b079b36966c99541113f36acabf72429637eadd1fd4b5a2a3fe32740e98ccf"
+  },
+  "generated_corpora": "Regenerate CNF and proof traces in scratch; omitted from repository",
+  "remaining_frontier": "Finite Euclidean Heesch>=7; mixed-handed profile tables or larger footprints, exact geometry and finite upper obstruction required",
+  "novelty": "A second footprint dichotomy and a sharp Hc2 example; no seven-corona construction, record improvement or historical priority claim"
+}
