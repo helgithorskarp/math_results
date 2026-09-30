@@ -1,0 +1,279 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "date": "2026-09-30",
+  "python": "3.11.2",
+  "dependencies": "Python standard library; exact pinned sibling source in provenance.json",
+  "all_source_checks_complete": true,
+  "fresh_source_only_generation": {
+    "label": "fresh-generation",
+    "status": "FINISHED",
+    "returncode": 0,
+    "seconds": 255.924,
+    "max_rss_kib": 120568,
+    "threads": 1,
+    "primitive_caps_in_command": true,
+    "validation_timeout_seconds": null
+  },
+  "generated_root_trees": 6,
+  "primitive_searches": 34,
+  "primitive_search_seconds_cap": 90,
+  "per_primitive_timing_retention": "Fresh per-case timing file was overwritten by cached-resume generation; aggregate generation resource record was retained. No per-case speed or max-time claim is made.",
+  "fresh_independent_full_replay": {
+    "label": "fresh-check",
+    "status": "FINISHED",
+    "returncode": 0,
+    "seconds": 13.467,
+    "max_rss_kib": 220016,
+    "threads": 1,
+    "primitive_caps_in_command": false,
+    "validation_timeout_seconds": 90
+  },
+  "fresh_private_entry_level_comparison": {
+    "certificate_files": 6,
+    "all_certificate_bytes_and_full_root_results_identical": true,
+    "certificate_bytes": 14030344
+  },
+  "source_code_sha256": {
+    "verify.py": "a800f97f25f27e8254addc4ff24537ee838622bfa52f34f0c8e5983d378f9b89",
+    "generate.py": "756ba7afee483a46420debfba6497dd6655075b479db8aa33b939c81e60ccfe2",
+    "checker_controls.py": "a6a5926d8bd67646ad63920537f2a05462de17cfc7f979803c1cee4bdd84210e"
+  },
+  "expected_manifest_sha256": "0de4ae8a1ca8b637de526a2fef1b6396e4610b6cfbd49ff016c40cec9036a62f",
+  "checking_counts": {
+    "roots_checked": 6,
+    "nodes_checked": 34,
+    "splits_checked": 6,
+    "leaves_checked": 28,
+    "step_totals": {
+      "forbidden": 46041,
+      "forced": 2,
+      "packing": 46041,
+      "empty": 0,
+      "mixed": 45561,
+      "budget": 0
+    }
+  },
+  "controls": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "phase": "all",
+    "full_suite_rechecked": false,
+    "input_case_metadata_checked": 6,
+    "primitive_regressions": 6,
+    "oracle_states": 175,
+    "oracle_models": 1040,
+    "valid_six_way_tree": true,
+    "valid_partial_five_way_tree": true,
+    "controls_rejected": 31,
+    "rejections": [
+      {
+        "name": "child_trace_alone_has_no_global_cover",
+        "reason": "No color cardinality contradiction"
+      },
+      {
+        "name": "missing_child",
+        "reason": "Incomplete or duplicated disjunctive coverage"
+      },
+      {
+        "name": "duplicate_child",
+        "reason": "Missing or repeated petal child"
+      },
+      {
+        "name": "nonpetal_child",
+        "reason": "Child assumption outside the required petal"
+      },
+      {
+        "name": "changed_child_budget",
+        "reason": "Child metadata differs from its parent"
+      },
+      {
+        "name": "extra_child_hypothesis",
+        "reason": "Certificate-supplied initial state or hypotheses"
+      },
+      {
+        "name": "supplied_U",
+        "reason": "Certificate-supplied initial state or hypotheses"
+      },
+      {
+        "name": "supplied_T",
+        "reason": "Certificate-supplied initial state or hypotheses"
+      },
+      {
+        "name": "changed_child_root",
+        "reason": "Child metadata differs from its parent"
+      },
+      {
+        "name": "constant_AP",
+        "reason": "AP outside domain or constant"
+      },
+      {
+        "name": "Boolean_AP",
+        "reason": "Noninteger AP"
+      },
+      {
+        "name": "AP_hits_pole",
+        "reason": "Prefix AP touches an exceptional position"
+      },
+      {
+        "name": "satisfied_AP",
+        "reason": "Endpoint clause already satisfied"
+      },
+      {
+        "name": "root_outside_cover",
+        "reason": "Tree root outside the prescribed endpoint cover"
+      },
+      {
+        "name": "extra_tree_hypothesis",
+        "reason": "Tree supplied additional initial hypotheses"
+      },
+      {
+        "name": "open_child_cannot_close_parent",
+        "reason": "Open leaf prevents parent exclusion"
+      },
+      {
+        "name": "false_terminal",
+        "reason": "AP has no mandatory unsatisfied clause at this state"
+      },
+      {
+        "name": "forbid_inherited_root",
+        "reason": "Invalid forbidden target"
+      },
+      {
+        "name": "unverified_shrinking_of_parent_petal",
+        "reason": "Incomplete or duplicated disjunctive coverage"
+      },
+      {
+        "name": "partial_tree_blocks_exclusion",
+        "reason": "Open leaf prevents parent exclusion"
+      },
+      {
+        "name": "missing_root_tree-0-1-29-1848.json",
+        "reason": "Missing, extra or unexpected endpoint-zero root coverage"
+      },
+      {
+        "name": "missing_root_tree-0-1235-29-1848.json",
+        "reason": "Missing, extra or unexpected endpoint-zero root coverage"
+      },
+      {
+        "name": "missing_root_tree-0-1852-29-1848.json",
+        "reason": "Missing, extra or unexpected endpoint-zero root coverage"
+      },
+      {
+        "name": "missing_root_tree-0-2469-29-1848.json",
+        "reason": "Missing, extra or unexpected endpoint-zero root coverage"
+      },
+      {
+        "name": "missing_root_tree-0-3086-29-1848.json",
+        "reason": "Missing, extra or unexpected endpoint-zero root coverage"
+      },
+      {
+        "name": "missing_root_tree-0-618-29-1848.json",
+        "reason": "Missing, extra or unexpected endpoint-zero root coverage"
+      },
+      {
+        "name": "unsupported_larger_budget",
+        "reason": "Wrong quantified full-width endpoint/root/cap case"
+      },
+      {
+        "name": "extra_unproved_endpoint_case",
+        "reason": "Missing, extra or unexpected endpoint-zero root coverage"
+      },
+      {
+        "name": "unsupported_endpoint_transfer",
+        "reason": "Wrong quantified full-width endpoint/root/cap case"
+      },
+      {
+        "name": "intersecting_packing",
+        "reason": "Packing empty or intersecting"
+      },
+      {
+        "name": "empty_packing",
+        "reason": "Packing empty or intersecting"
+      }
+    ]
+  },
+  "normal_and_optimized_controls_identical": true,
+  "validation_jobs": [
+    {
+      "label": "fresh-check",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 13.467,
+      "max_rss_kib": 220016,
+      "threads": 1,
+      "primitive_caps_in_command": false,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "controls-normal",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 4.029,
+      "max_rss_kib": 291780,
+      "threads": 1,
+      "primitive_caps_in_command": false,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "controls-optimized",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 4.28,
+      "max_rss_kib": 293940,
+      "threads": 1,
+      "primitive_caps_in_command": false,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "cached-resume",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 16.018,
+      "max_rss_kib": 164136,
+      "threads": 1,
+      "primitive_caps_in_command": false,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "tiny-limit",
+      "status": "FINISHED",
+      "returncode": 1,
+      "seconds": 3.427,
+      "max_rss_kib": 87304,
+      "threads": 1,
+      "primitive_caps_in_command": false,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "saved-timeout-refusal",
+      "status": "FINISHED",
+      "returncode": 1,
+      "seconds": 3.278,
+      "max_rss_kib": 86304,
+      "threads": 1,
+      "primitive_caps_in_command": false,
+      "validation_timeout_seconds": 90
+    }
+  ],
+  "cached_resume_preserves_all_six_proofs_and_full_manifest": true,
+  "incomplete_tree_and_suite_rejected": true,
+  "saved_timeout_refused_without_retry": true,
+  "intentional_tiny_limit_is_only_a_negative_control": true,
+  "unexpected_search_or_validation_limits_reached": false,
+  "scope_limits": {
+    "cpu": 1,
+    "memory_gib": 2,
+    "tasks_max": 128,
+    "solver_BLAS_OpenMP_threads": 1,
+    "max_CPU_intensive_jobs": 1,
+    "limits_increased": false
+  },
+  "previous_private_audit_sha256": "8c52c9b0f709c4c45d7f34a4720893223159aaa3ddd4df153ee6239581ab6c82",
+  "proof_corpus_bytes": 14030344,
+  "proof_corpus_published": false,
+  "earlier_numerical_bounds_used_by_new_branch_replay": false,
+  "external_review_or_formalization": false,
+  "trust_boundary": "Same-author independent Euler/set/tree replay and written unformalized AP/invariant/root-cover/complement argument; combined corollary separately trusts published62 numerical theorem.",
+  "global_W_bound_or_witness": false
+}
