@@ -1,0 +1,116 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "date": "2026-09-30",
+  "problem_graph_ref": "bafkreihbsyzlpqcibwae7vxelgoqcfofwzqdshfmkjrjyhqe7lydcjdlaa",
+  "source_dependencies": [
+    {
+      "directory": "../van_der_waerden_27_qr617_mixed_edit_region",
+      "source_commit": "45338b996411231c38ef2c5073c157911c15a427",
+      "files": {
+        "generate.py": "f822a963f9bb6e490dcbd7fbe635dcba87889337b32c0efe8e5fdf3d28607653",
+        "verify.py": "38ba46f4f22d01ab7df79f1bb20ad7ab190230cf90a29ff1ab3b678e97e2eb33"
+      }
+    }
+  ],
+  "numerical_dependencies": [
+    {
+      "scope": "total60 and complement corollary only",
+      "graph_ref": "bafkreigdc2r7hp4snvr5h3sqwtzth6bcx7ocbtcpzabiodifflmb36ewrq",
+      "source_commit": "9f183bdd6f0b78152dba63a5fc0ef8391e9d49ec",
+      "directory": "van_der_waerden_27_qr617_class29_disjunction",
+      "invoked_fact": "a,b>=29 at either endpoint",
+      "files": {
+        "PROOF.md": "a0327c05eea44c8f721fc2ec9e12213d8ce93d584413779181f465d87772e422",
+        "verify.py": "579763d952c364963692638d125e9ff71c6ed9add1f3e4999462bac2e8e7c0af",
+        "expected.json": "e2fee9023ee20b6460757da89fe1578431e62cbec455aa06936663c31313a2f6"
+      }
+    }
+  ],
+  "adapted_wrapper_credit": {
+    "source_commit": "d985ef85989a97f417ccaa395d8c767b3b91048e",
+    "directory": "van_der_waerden_27_qr617_59_edit_profile",
+    "files": {
+      "generate.py": "7d96f5adb5f1a93441e6b31096616ac246312ef305a5d0ab2edd9d90243e0d7f",
+      "verify.py": "d1ab419b7343af184a4ae80539eb9602ba2270ef205ce1bfd2dc5cfdfbf50311",
+      "checker_controls.py": "0150be963e4c78adceb8a0d9efc32e57a1167b003612fc6a7a31b1982a424d5f"
+    }
+  },
+  "published_context": [
+    {
+      "name": "QR617 mixed-clause source and prior58-edit region",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreibmh5mlwv34k2is34pnjmjonfr3tsb5dp2l43hy7kwxpp34iaahgu",
+      "height": "7396",
+      "source_commit": "45338b996411231c38ef2c5073c157911c15a427",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_mixed_edit_region",
+      "use": "Computational source dependency for the pure generator and exact Euler/set AP definitions. Earlier numerical bounds are not used by the new cut."
+    },
+    {
+      "name": "QR617 endpoint edit profile and exact59-change distance cut",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreieme3c3x3udchmccittqryg57ztww7zhthgwf3pvd4hl3fvnvdh5y",
+      "height": "7426",
+      "source_commit": "d985ef85989a97f417ccaa395d8c767b3b91048e",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_59_edit_profile",
+      "use": "Credited generator/checker/control wrappers adapted to the new24-case cover. This is also a transitive numerical premise of the cited uniform class29 theorem; the new branch replay assumes no prior numerical bounds."
+    },
+    {
+      "name": "Independent QR617 seam review and stronger inner/reference-color geography",
+      "agent": "six-reviewer-2",
+      "role": "reviewer",
+      "graph_ref": "bafkreicfmd6gr46qfemzcf7mmkkpkxwssfdl2lvkpem6u4ucrkh6s6qxwq",
+      "height": "7442",
+      "source_commit": "141b9e539bc4cdd1a9284e579ab4f0139a92b936",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_617_seam_review2",
+      "use": "Fresh complementary fixed-seam scope only: merged per-reference-color inner packings, uniform71 and exceptional73 total cuts. Different comparison word and count regions; no numerical premise imported. This review does not review the present fixed-QR tree result."
+    },
+    {
+      "name": "Uniform QR617 original-class29 theorem",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreigdc2r7hp4snvr5h3sqwtzth6bcx7ocbtcpzabiodifflmb36ewrq",
+      "height": "7456",
+      "source_commit": "9f183bdd6f0b78152dba63a5fc0ef8391e9d49ec",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_class29_disjunction",
+      "use": "The only directly invoked earlier numerical theorem: a,b>=29 for either endpoint. Required only for the new total60 corollary, not the independent24-branch box exclusions."
+    },
+    {
+      "name": "Period618 forbids exactly two ternary phase exceptions",
+      "agent": "six-vdw-1",
+      "role": "researcher",
+      "graph_ref": "bafkreie2uhz4gy5ioiotj6tvskquhra6yh3pzgcuwncqqe47m7o7x5uhnm",
+      "height": "7460",
+      "source_commit": "a44338d79bc5002859bd944a575ae231931a0556",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_618_two_exception_cut",
+      "use": "Complementary construction scope: exactly-two-exception ternary skeletons for cyclicZ618. Different modulus and variables; no fixedQR numerical bound imported."
+    },
+    {
+      "name": "QR617 seam dilation gives132 edits and arithmetic-class window constraints",
+      "agent": "six-vdw-3",
+      "role": "researcher",
+      "graph_ref": "bafkreihzfwfh6rp62domyiod57ui45baggfugjthyb4l4a5kuki2y2ljcy",
+      "height": "7466",
+      "source_commit": "29e55846edb656f7bb64c18d15c1b9b3c21afd51",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_617_seam_dilation_transfer",
+      "use": "Complementary incompatible affine-seam reference, with a132-edit3-sublattice application. The fixed aligned reference here is compatible, so those numerical constants are not imported."
+    }
+  ],
+  "primary_sources": [
+    {
+      "url": "https://combinatorialpress.com/jcmcc-articles/volume-128/new-lower-bounds-for-van-der-waerden-numbers-using-distributed-computing/",
+      "checked": "2026-09-30",
+      "use": "Table1 length7/two colors>3703 and Table2 prime617; reversed argument orderW(length,colors). No comprehensive current-best claim."
+    },
+    {
+      "url": "https://github.com/marijnheule/vdWaerden/blob/master/certificates/W_2_7_617.cert",
+      "checked": "2026-09-30",
+      "use": "Primary classical QR template certificate; no length3704 witness verified."
+    }
+  ],
+  "priority_scope": "Strengthening of the cited campaign edit constraints; no historical-priority claim for AP implication, packing or covering.",
+  "new_box_replay_uses_earlier_numerical_bounds": false,
+  "independent_external_review_of_current_claim": false
+}
