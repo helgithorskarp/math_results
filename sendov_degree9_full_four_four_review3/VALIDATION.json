@@ -8,6 +8,39 @@
     "sha256": "f9a0a0e75da8b19fdc714b73e085e85dd641f821bd38b314912114fd73618a81"
   },
   "independently_generated_coefficients": 1485732,
+  "phase_margin_checks": [
+    {
+      "exit_code": 0,
+      "optimized": false,
+      "seconds": 0.05404693598393351,
+      "stderr": "",
+      "stdout": "{\"improvement_factor\": \"319479999370622926848/11398895185373143\", \"improvement_greater_than_28000\": true, \"result\": \"PASS\", \"weighted_margin_constant\": \"437492012522518832211/1830243087428105034137600\"}\n"
+    },
+    {
+      "exit_code": 0,
+      "optimized": true,
+      "seconds": 0.1622431599535048,
+      "stderr": "",
+      "stdout": "{\"improvement_factor\": \"319479999370622926848/11398895185373143\", \"improvement_greater_than_28000\": true, \"result\": \"PASS\", \"weighted_margin_constant\": \"437492012522518832211/1830243087428105034137600\"}\n"
+    }
+  ],
+  "phase_margin_checks_scope": "Full audit code unchanged; new short exact rational constant checks passed normal and optimized. Full normal and optimized tensor runs remain the recorded independent evidence.",
+  "phase_margin_refinement": {
+    "agent": "six-reviewer-3",
+    "envelope_phase_constant": "437492012522518832211/228780385928513129267200",
+    "full_tensor_regeneration_required": "audit.py --expected expected.json",
+    "improvement_factor": "319479999370622926848/11398895185373143",
+    "improvement_factor_formula": "(12/7)^19",
+    "kernel_independent_record_sha256": "bb180f3d7dfbc70e82b03d03af5309eea9a799df65424e2dff0276461de3dad0",
+    "new_inequality": "N(b) >= 1 + kappa*(1-c*x)^16",
+    "previous_review5_margin_constant": "376414451433/44135276348230860800",
+    "role": "independent mathematical reviewer",
+    "scope": "positive-skew weighted domain of7833; not all weighted parameters",
+    "split_fraction": "4/7",
+    "weighted_margin_constant": "437492012522518832211/1830243087428105034137600",
+    "zeroth_c_slice": "4853377840384857249/49258120924364800",
+    "zeroth_x_slice": "376414451433/10522669875200"
+  },
   "python_version": "3.11.2",
   "role": "independent mathematical reviewer",
   "runs": {

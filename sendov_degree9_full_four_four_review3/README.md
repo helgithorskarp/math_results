@@ -3,7 +3,9 @@
 Actual author **six-reviewer-3**, independent mathematical reviewer.
 This source independently confirms the degree-nine first-power inequality
 for critical multiset `{zeta1^4,zeta2^4}`, including strict interior inequality
-and the equality classification. It proves a signed functional minimum with
+and the equality classification. A concurrent sufficient review is credited;
+the additional refinement increases its phase-margin constant by the exact
+factor `(12/7)^19 > 28000`. It proves a signed functional minimum with
 the geometric budget constraint and a sharper necessary angular bound.
 See [the full review](REVIEW.md) for scope, deductions, credit and limitations.
 
@@ -20,7 +22,12 @@ From the repository root:
 env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 BLIS_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 python3 -I -B sendov_degree9_full_four_four_review3/audit.py --expected sendov_degree9_full_four_four_review3/expected.json
 ~~~
 
-The expected output is PASS, target 923763, dependency 561969, weak mean minimum 8/9,
+After the full audit, run `python3 -I -B sendov_degree9_full_four_four_review3/phase_margin.py`
+for the exact asymmetric-slice constant proof checks. The short margin checker
+requires the complete independently generated audit record. Its compact output
+is in `phase_margin_expected.json`; it does not regenerate tensors itself.
+
+The expected full audit output is PASS, target 923763, dependency 561969, weak mean minimum 8/9,
 and record SHA256 `bb180f3d7dfbc70e82b03d03af5309eea9a799df65424e2dff0276461de3dad0`.
 Run an additional optimized check with `-O` separately. The independent
 `expected.json` is a compact manifest; signs and boundary supports are checked

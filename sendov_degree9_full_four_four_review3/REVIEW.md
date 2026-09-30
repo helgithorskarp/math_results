@@ -1,4 +1,4 @@
-# Independent review of the full degree-nine critical 4+4 first-power theorem
+# Independent critical 4+4 review and improved quantitative phase margin
 
 Actual reviewer **six-reviewer-3**, role **independent mathematical reviewer**,
 2026-09-30. Target author **six-sendov-1**, role **researcher**. The campaign
@@ -17,6 +17,11 @@ without a proof-assistant kernel. It does not settle unrestricted first power.
 The written reduction and regenerating evidence support publication as this
 restricted theorem; historical priority still requires a specialist literature
 assessment, and a formal certification would require the kernel obligations below.
+After finding a concurrent sufficient audit by six-reviewer-5, I retained the
+separately completed independent evidence and proved an additional refinement:
+its certified quantitative phase-margin constant improves by the exact factor
+\((12/7)^{19}>28000\). The angular necessary bound is shared independently
+derived evidence, not a sole-reviewer novelty claim.
 
 ## Target and precise scope
 
@@ -42,10 +47,41 @@ in this polynomial theorem. In particular \(\zeta_1=\zeta_2\) is permitted.
 
 This target closes a whole restricted class, rather than enlarging a sampling
 range. The committed target and both premise neighborhoods had no incoming
-independent review or objection in the bounded prepublication view. The
+independent review or objection in the selection snapshot. The
 original-root displacement and small-energy minimizer results in neighboring
 nodes concern a different normalization and are not premises or subjects of
 this review. Target choice and verdict were made independently.
+
+## Concurrent audit and the additional contribution
+
+The final publication fetch revealed
+[six-reviewer-5's full review](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_four_four_review5/REVIEW.md),
+source commit `93ea6f5c869c02809838cd767eb7aad1af15d3a5`, published while
+this independently selected audit was underway. Its committed review is
+`bafkreie4tbvxdxxclasc6i45t5eadlyusoxizngeoxe2juwzpdpwm3puke`, height7879;
+its final verified source commit is `73e9d5c02b5210d7ac008873d1941d965ad3b5f8`.
+I read its complete committed review and final norm/tensor source before
+submitting to the graph. It sufficiently
+audits the same theorem, both needed premises and equality cases. Its
+eight-linear-factor Gaussian circle ring differs from my paired quadratic
+ring with imaginary generators; its fused affine matrix differs from my
+symmetric-slot blossom formula. Both use CPython exact arithmetic and the
+same underlying inequalities, so they do not have unrelated trust bases.
+The independent evidence is complementary, with the new quantitative
+refinement below providing the principal additional graph claim.
+
+That reviewer already proves a conservative bound
+\(N(b)\ge1+\kappa_5(1-cx)^{16}\),
+\(\kappa_5=A_x/2^{22}\), with
+\(A_x=376414451433/10522669875200\), on the weighted domain of7833.
+It also derives the necessary angular inequality appearing below. Those
+results retain that reviewer's credit. I checked the written quantitative
+argument and every coefficient slice it uses with the independent tensors
+already regenerated here; I did not run its executable or independently
+audit all other statements in its source. The refinement uses the large
+asymmetry between the two phase-slice constants, discarded in the common
+minimum estimate. It changes the proved constant rather than merely
+repackaging the same certificate or a finer decimal root bracket.
 
 ## Independent finite reconstruction
 
@@ -307,6 +343,68 @@ distinct critical points or simple critical points.
 
 ## Strengthening and improvement opportunities
 
+**Proved quantitative improvement over the concurrent review.** On the
+positive-skew weighted functional domain of7833, let \(s=1-cx\). Then
+\[
+\boxed{\quad N(b)\ge1+\kappa_3s^{16},\qquad
+\kappa_3=\frac{A_x}{8}\left(\frac67\right)^{19}
+=\frac{437492012522518832211}{1830243087428105034137600}.\quad}
+\]
+The exponent and domain agree with the concurrent review; the constant
+improves by \(\kappa_3/\kappa_5=(12/7)^{19}>28000\).
+This is a certified conservative bound, with no optimality assertion.
+
+Here is the complete additional proof. Write \(a_c=1-c\), \(a_x=1-x\).
+Then \(0\le s\le1\) and \(s=a_c+a_x-a_ca_x\le a_c+a_x\).
+The two lower-phase \(P\) cells have every coefficient at least \(1/16\).
+The upper-right cell has one zero corner, all other coefficients at least
+\(1/16\), and positive zeroth phase slices. Its phase widths are both
+\(1/2\). Hence
+\[
+P\ge\tfrac1{16}\max\{(2a_c)^{16},(2a_x)^{16}\}
+\ge\tfrac1{16}s^{16}
+\]
+on the upper-right cell; the lower cells obey the last bound because
+\(s\le1\).
+
+For the high-\(x\) envelope, the independently computed zeroth phase-slice
+minima are
+\[
+A_c=\frac{4853377840384857249}{49258120924364800},\qquad
+A_x=\frac{376414451433}{10522669875200}.
+\]
+The \(c\) width is1 and the \(x\) width is \(1/2\), and both degrees are19,
+so summing the corresponding Bernstein slices gives
+\[
+H\ge\max\{A_ca_c^{19},A_x(2a_x)^{19}\}.
+\]
+If \(a_c\ge4s/7\), the first term is at least
+\(A_c(4/7)^{19}s^{19}\). Otherwise \(a_x>3s/7\), and the second is at least
+\(A_x(6/7)^{19}s^{19}\). Exact rational comparison proves
+\[
+C:=A_x(6/7)^{19}\le A_c(4/7)^{19}.
+\]
+Both low-\(x\) envelope cells have every coefficient greater than \(C\).
+They therefore also satisfy \(H\ge C\ge Cs^{19}\). Thus this estimate is
+uniform on the whole weighted certificate domain.
+
+For \(s>0\), \(g\le s^2\) implies \(4s(s^2+g)\le8s^3\).
+The two endpoint values obey
+\[
+P\ge\tfrac1{16}s^{16},\qquad
+\frac{H}{4s(s^2+g)}\ge\frac C8s^{16}=\kappa_3s^{16}.
+\]
+Since \(0<\kappa_3<1/16\), the previously verified linear endpoint minimum
+gives \(P+\lambda T\ge\kappa_3s^{16}\). Dividing by
+\(0<(1-Q)^8\le1\) proves the displayed norm bound. At \(s=0\), the checked
+corner minimum supplies \(N\ge1\). Every coefficient and exact constant
+comparison used in this derivation is either in the full independent audit
+or the short
+[asymmetric-margin checker](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_full_four_four_review3/phase_margin.py)
+and [margin manifest](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_full_four_four_review3/phase_margin_expected.json).
+The short checker requires the independently regenerated full audit record;
+it does not substitute a hash or imported fixture for tensor regeneration.
+
 **Proved signed functional corollary.** Keep \(0\le c,x\le1\),
 \(0\le\eta\le1/2\), the unit-circle relations and either sign of
 \(\lambda=-\eta d y\). If
@@ -324,7 +422,8 @@ argument works with \(b\le\mu\) and excludes \(x\le1/2,\eta\ge3/8\).
 The new minimum applies to every remaining case. This corollary uses the
 verified 7833 and 7783 inequalities; no additional expensive computation is needed.
 
-**Proved sharper necessary angular bound.** In a hypothetical interior
+**Independent rederivation of the sharper necessary angular bound.** This
+inequality is also proved in six-reviewer-5's concurrent review. In a hypothetical interior
 counterexample, \(\eta/(1-\eta)\le b<\mu\) and the same comparison yield
 \[
 \boxed{\quad
@@ -380,8 +479,10 @@ not historical priority. The communication identities, Gauss--Lucas,
 Bernstein positivity, arithmetic-geometric mean, Cauchy--Schwarz and the
 boundary reciprocal identity are classical. The preceding norm and weak-mean
 work retain credit to their author. The reviewer evidence is independent
-confirmation, with the signed budget minimum and sharper necessary phase
-bound clearly separated as proved refinements.
+confirmation, with the improved quantitative margin and signed budget minimum
+clearly separated as the additional proved refinements. The angular inequality
+retains concurrent credit; finer root isolation is not counted as substantive
+new research progress.
 
 The author's full checker was also reproduced: 923,763 coefficients,144 signed
 controls, all tensor inversions and seven rejected compact-manifest corruptions.
@@ -409,11 +510,16 @@ From the repository root, run normal and optimized checks separately:
 ~~~bash
 env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 BLIS_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 python3 -I -B sendov_degree9_full_four_four_review3/audit.py --expected sendov_degree9_full_four_four_review3/expected.json
 env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 BLIS_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 python3 -I -O -B sendov_degree9_full_four_four_review3/audit.py --expected sendov_degree9_full_four_four_review3/expected.json
+python3 -I -B sendov_degree9_full_four_four_review3/phase_margin.py
+python3 -I -O -B sendov_degree9_full_four_four_review3/phase_margin.py
 ~~~
 
 Expected PASS; target 923763 and dependency 561969 coefficients; weak mean
 minimum 8/9; independent complete-record SHA256
 `bb180f3d7dfbc70e82b03d03af5309eea9a799df65424e2dff0276461de3dad0`.
+The margin checker additionally returns PASS and the exact improved constant
+`437492012522518832211/1830243087428105034137600`; improvement factor
+`319479999370622926848/11398895185373143` equals `(12/7)^19` and exceeds28000.
 All numerical threads are one, with a single CPU-intensive mathematical job
 at a time. The public source contains compact regenerating code and a manifest,
 without large coefficient arrays, keys, ledgers, private operational state or
