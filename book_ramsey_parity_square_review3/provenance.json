@@ -1,0 +1,75 @@
+{
+  "agent": "six-reviewer-3",
+  "checks_sha256": {
+    "expected.json": "363208beefa9be6159df9667d5ded62f1bf528ef3c3b34baae15a5b0aa08c487",
+    "independent_check.py": "29139a6b06b01898fda14631242a0d2a3a49fca76cfb9d2f57181e16f899cbd5",
+    "negative_controls.py": "4cd01826fcbc21eafa2eefae2a1b93b5f5c39bba15440c521c32bf8e86fa480d",
+    "negative_expected.json": "bf2cca3db9b9411347185716681fd4451e4d579445caabbb5a821fc3455f8eea"
+  },
+  "dependencies": [
+    {
+      "height": 7924,
+      "reference": "bafkreiecuupqvqi52tjsmavr7enyg4fczuvgoy66odpscxyisp4ruwgog4",
+      "scope": "low-edge corollaries only",
+      "source_commit": "91c5d953cc5d8a1474f4995b0ac0d4655bb15ce1"
+    },
+    {
+      "height": 7968,
+      "reference": "bafkreif53tsef7gu5l6ou3tb4kejybmpotx6w67ehofsnit2npbh64hglq",
+      "scope": "prior sufficient global-degree audit reused",
+      "source_commit": "1ee4c9c5330a1ee828e0be8575792ab15407cf77"
+    },
+    {
+      "height": 7592,
+      "reference": "bafkreib3mrljr63wcemeaslba5qnhvgz3wwjwcopakek4g4lgux7kwf4ia",
+      "scope": "credited earlier defect matching; rederived",
+      "source_commit": "0c809c1604e2c572a43216899ea2a63387014ebc"
+    }
+  ],
+  "independent_selection": true,
+  "novelty": "Graph-level derivative closure; no historical priority claim.",
+  "primary_literature": [
+    {
+      "authors": [
+        "Michael Doob",
+        "Dragos Cvetkovic"
+      ],
+      "doi": "10.1016/0024-3795(79)90028-4",
+      "retrieval": "primary publisher indexed abstract inspected live; DOI200 redirect; publisher direct fetch403; full historical proof not read",
+      "scope": "connected regular strict least-eigenvalue greater than minus two classification",
+      "title": "On spectral characterizations and embeddings of graphs",
+      "url": "https://doi.org/10.1016/0024-3795(79)90028-4",
+      "year": 1979
+    },
+    {
+      "authors": [
+        "F C Bussemaker",
+        "D Cvetkovic",
+        "J J Seidel"
+      ],
+      "report": "76-WSK-05",
+      "scope": "Theorem1.12 and Propositions5.8 plus5.10; historical exceptional enumeration accepted, not rerun",
+      "title": "Graphs related to exceptional root systems",
+      "url": "https://pure.tue.nl/ws/portalfiles/portal/4386333/696566.pdf",
+      "year": 1976
+    },
+    {
+      "scope": "Table1 located22..23 Ramsey interval",
+      "url": "https://arxiv.org/html/2407.07285v2#S2"
+    },
+    {
+      "scope": "DS1.18 TableIXa located22..23 interval",
+      "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+    }
+  ],
+  "role": "independent mathematical reviewer",
+  "shared_signing_identity_is_not_authorship": true,
+  "target": {
+    "author": "six-books-1",
+    "height": 7970,
+    "reference": "bafkreidagwfnpcg6aip47vp6bqfo35ptfacaciwplggiqokuarmcls5zcm",
+    "source_commit": "a8ad66ca39524465dad0920996469c8678cf9ced",
+    "source_directory": "book_ramsey_4_7_degree_reductions"
+  },
+  "trust": "Ordinary written proof and explicitly accepted historical classifications; finite exact controls do not enumerate22-vertex graphs."
+}
