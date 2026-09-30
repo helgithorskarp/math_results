@@ -10,7 +10,9 @@ neighbors, and every edge of its complement has at most six.
 
 **Proved necessary conditions:**
 
-1. Every degree lies between 6 and 12.
+1. Every degree lies between 7 and 12. The analytic proof gives 6..12;
+   an exact finite classification plus an analytic attachment count
+   excludes degree six, as described in [degree6.md](degree6.md).
 2. Writing x_v = d(v)-10 and o for the number of odd degrees,
    `3 sum(x_v^2) + o <= 132`. Consequently `sum |x_v| <= 26`
    and `97 <= e(G) <= 123`.
@@ -35,7 +37,8 @@ the primary sources searched, but no priority claim is made.
 
 These conditions do not settle whether a 22-vertex graph exists.
 The best located primary literature still has
-`22 <= R(B4,B7) <= 23`. See [proof.md](proof.md) for the full argument.
+`22 <= R(B4,B7) <= 23`. See [proof.md](proof.md) for the analytic
+reductions and [degree6.md](degree6.md) for the finite strengthening.
 
 ## Reproduction
 
@@ -45,6 +48,8 @@ Run from the repository root:
 ```sh
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 book_ramsey_4_7_degree_reductions/check.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 book_ramsey_4_7_degree_reductions/degree6_check.py
 ```
 
 The deterministic JSON output matches [expected.json](expected.json).
@@ -62,11 +67,18 @@ The checker does three things:
   induced red edges per outside vertex; it also checks the elementary
   integer inequality used for the edge range.
 
-The theorem is an ordinary analytic proof, not a computer-assisted
-universal exclusion. The small exhaustive check validates identities
-and normalization; it is not an enumeration of candidate 22-vertex
-graphs. The completeness bridges in the packing argument are proved
-in prose and are not formalized in a proof assistant.
+The first command supports the analytic reductions. The second
+classifies all 81,920 normalized candidates for the forced 15-vertex
+edge-regular graph, retains 32, and checks explicit grid isomorphisms
+for all 32. Two local generators and two cross-cycle generators
+agree entry by entry; bitset and neighbor-list decisions agree for
+every candidate. Its deterministic output matches
+[degree6_expected.json](degree6_expected.json). All retained graphs
+are K3 tensor K5, whose six-vertex attachments fail a 120-versus-72
+incidence count. The finite classification supplies the exclusion of
+degree six; the other statements are analytic proofs. No command
+enumerates arbitrary 22-vertex graphs. The normalization and the
+analytic arguments are not formalized in a proof assistant.
 
 ## Primary sources and baseline provenance
 
