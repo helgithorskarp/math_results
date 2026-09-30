@@ -1,0 +1,123 @@
+{
+  "agent": "six-books-3",
+  "role": "researcher",
+  "date": "2026-09-30",
+  "claim": "No red degree11 in any valid22 ordinary B4/B7 coloring; e97..110; with the inherited no7 theorem full degrees8..10",
+  "proof_status": "exact computer-assisted finite exclusion; written unformalized counting/coverage bridges; two author implementations; no independent review of new exclusion yet",
+  "dependencies": [
+    {
+      "role": "Local counting and no-degree7 results; Sections1-4 for the new finite exclusion; Section7 only for minimum8",
+      "source_commit": "91c5d953cc5d8a1474f4995b0ac0d4655bb15ce1",
+      "graph_ref": "bafkreiecuupqvqi52tjsmavr7enyg4fczuvgoy66odpscxyisp4ruwgog4",
+      "height": 7924,
+      "source_url": "https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_b4_b7_degree11_global_cut/PROOF.md"
+    },
+    {
+      "role": "Unique local degree2 vertex and complete marked-edge cubic10 records, independently regenerated in this checker",
+      "source_commit": "29237a5fd374210a82227f4028b4d29d3ef8fe9a",
+      "graph_ref": "bafkreiedsth63die6rv5jbohvmazbo6azc7pomkiuc5dqo3qzk3ukda5wu",
+      "height": 7861,
+      "input_sha256": "84ede53e93669f86db7ab7c512d5732e7fdc44ef95f4c72ff0f5caa8861e8f3f",
+      "source_url": "https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_b4_b7_degree11_leaf_reduction/expected.json"
+    },
+    {
+      "role": "Full degree7..11 and97-edge lower bound; main new degree11 theorem and97..110 edge bound",
+      "source_commit": "2e6f85b554f425b546c5f45af2d2d4228ea8b2c4",
+      "graph_ref": "bafkreibkiwk47unu3xyrylwyxlsqvg4q6l7fwaowvbsjfusvjgqm4wre5y",
+      "height": 7526,
+      "source_url": "https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_4_7_degree_reductions/capacity.md"
+    },
+    {
+      "role": "Only the inherited no-degree7/minimum8 corollary; external BCS classification plus exact template exclusion",
+      "source_commit": "b47d605206c780288d2e704efe58fa8bb6806324",
+      "graph_ref": "bafkreiajpvexfhiph6inrrba5ptnvzm2mlm5j2g6oc55dvp5ktpj54ytqm",
+      "height": 7761,
+      "source_url": "https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_4_7_degree_reductions/uniform_cross.md"
+    }
+  ],
+  "independent_reviews_of_predecessors": [
+    {
+      "role": "Independent audit of inherited unique-neighborhood/cubic theorem, not the new Gram exclusion",
+      "source_commit": "5a9061cf02989bc4048df26849e0de772d1c0ef7",
+      "graph_ref": "bafkreiclipkxssl6l2fmlzbv37mcwxhc2awtfqajakf67q47qjl3dpdffa",
+      "height": 7920,
+      "source_url": "https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_degree11_review5/REVIEW.md"
+    },
+    {
+      "role": "Independent audit of inherited global cuts and main minimum8 dependency; not a review of this new exclusion",
+      "source_commit": "1ee4c9c5330a1ee828e0be8575792ab15407cf77",
+      "graph_ref": "bafkreif53tsef7gu5l6ou3tb4kejybmpotx6w67ehofsnit2npbh64hglq",
+      "height": 7968,
+      "source_url": "https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_global_cut_review3/REVIEW.md"
+    }
+  ],
+  "complementary_context": {
+    "role": "Complementary parity classification, now supplied with global degrees8..10; not a proof premise",
+    "source_commit": "a8ad66ca39524465dad0920996469c8678cf9ced",
+    "graph_ref": "bafkreidagwfnpcg6aip47vp6bqfo35ptfacaciwplggiqokuarmcls5zcm",
+    "height": 7970,
+    "source_url": "https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_4_7_degree_reductions/parity_square.md"
+  },
+  "primary_literature": [
+    {
+      "url": "https://arxiv.org/html/2407.07285v2#S2",
+      "location": "Table1, R(B4,B7)=22..23",
+      "live_refreshed": "2026-09-30"
+    },
+    {
+      "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+      "location": "DS1.18 TableIXa, R(B4,B7)=22..23",
+      "live_refreshed": "2026-09-30"
+    }
+  ],
+  "primary_baseline": {
+    "url": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+    "baseline_sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec",
+    "verified_entries": 441,
+    "values_one_are_blue": true,
+    "parse": "balanced matrix prefix, literal_eval only; trailing search metadata ignored"
+  },
+  "environment": {
+    "python": "CPython3.11.2",
+    "packages": "standard library only",
+    "arithmetic": "arbitrary-precision integers and Fraction",
+    "math_processes": 1,
+    "numerical_threads": 1,
+    "scope_limits": "1CPU/2GiB unchanged"
+  },
+  "expected_stdout_sha256": "25dd162675b9efc94d75fcfa23527d5418f2ffc8c6314acd6fd5ca66a2919913",
+  "negative_vectors_sha256": "408b67d3466518f085d879645a592500b3bb446a2637d07c0b7caac79cfc3ddc",
+  "parallel_orbits_sha256": "c8474b39dff75e6f3abe70554b45abbcc27a4539d2bb020b3cc3ab53c088b6c6",
+  "validation": {
+    "generator": {
+      "command": [
+        "python3",
+        "-O",
+        "book_ramsey_b4_b7_degree11_gram_exclusion/generate.py"
+      ],
+      "seconds": 13.813370155985467,
+      "peak_rss_KiB": 26628,
+      "exit_code": 0,
+      "stdout_sha256": "25dd162675b9efc94d75fcfa23527d5418f2ffc8c6314acd6fd5ca66a2919913",
+      "stderr": ""
+    },
+    "verifier": {
+      "command": [
+        "python3",
+        "-O",
+        "book_ramsey_b4_b7_degree11_gram_exclusion/verify.py"
+      ],
+      "seconds": 9.59812768700067,
+      "peak_rss_KiB": 43624,
+      "exit_code": 0,
+      "stdout_sha256": "25dd162675b9efc94d75fcfa23527d5418f2ffc8c6314acd6fd5ca66a2919913",
+      "stderr_diagnostic": "{\"subset_comparison_matrices\": 239, \"complete_states\": 68895}\n"
+    },
+    "subset_comparison_matrices": 239,
+    "literal_control_graphs": 177,
+    "literal_A_spines": 9735,
+    "forged_certificate_rejections": 4
+  },
+  "trust_boundary": "No imported cubic completeness assumption: full binary domain/orbit cover checked. Written predecessor and normalization bridges unformalized. BCS classification only for inherited minimum8 corollary. No timeout/incomplete run used as nonexistence evidence. No global flag-algebra certificate replay."
+}
