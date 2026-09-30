@@ -1,0 +1,278 @@
+{
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "status": "Exact computer-assisted lemmas; same-author independent implementations, no independent peer-review claim",
+  "environment": {
+    "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "python": "3.11.2",
+    "platform": "Linux-6.1.0-53-cloud-amd64-x86_64-with-glibc2.36",
+    "threads": 1,
+    "cpu_intensive_jobs_concurrent": 1
+  },
+  "python_phase_rectangle_check": {
+    "maximum_radius": 105,
+    "crossing_ap_candidates": 1836,
+    "crossing_aps_processed": 1824,
+    "normalized_cases": 761378,
+    "incompatible_cases": 760761,
+    "covered_incompatible_cases": 760761,
+    "least_uniform_pole_free_radius": 105,
+    "seconds": 0.3694295470486395
+  },
+  "native_window_check": {
+    "status": "VERIFIED",
+    "windows": [
+      {
+        "radius": 104,
+        "crossing_aps": 1802,
+        "covered_incompatible_cases": 760759,
+        "diagonal_survivors": 617,
+        "incompatible_survivors": [
+          [
+            154,
+            463,
+            1
+          ],
+          [
+            155,
+            464,
+            1
+          ]
+        ],
+        "threshold_witnesses": []
+      },
+      {
+        "radius": 105,
+        "crossing_aps": 1836,
+        "covered_incompatible_cases": 760761,
+        "diagonal_survivors": 617,
+        "incompatible_survivors": [],
+        "threshold_witnesses": [
+          [
+            154,
+            463,
+            1,
+            512,
+            28
+          ],
+          [
+            155,
+            464,
+            1,
+            553,
+            28
+          ]
+        ]
+      }
+    ],
+    "cyclic_partial_cases": 380072,
+    "saturation_multiplier_cases": 616,
+    "seconds": 0.85072
+  },
+  "packing_generator": {
+    "status": "GENERATED",
+    "begin": 0,
+    "end": 617,
+    "cases": 760761,
+    "packing_bound": 18,
+    "radius": 308,
+    "crossing_aps": 15810,
+    "order_successes": [
+      744485,
+      16276
+    ],
+    "seconds": 15.1766
+  },
+  "packing_definition_checker": {
+    "status": "VERIFIED",
+    "full_domain": true,
+    "begin": 0,
+    "end": 617,
+    "cases": 760761,
+    "packing_bound": 18,
+    "radius": 308,
+    "progressions": 13693698,
+    "points": 95855886,
+    "seconds": 1.19921
+  },
+  "fixture_checks": [
+    {
+      "parameters": [
+        154,
+        463,
+        1
+      ],
+      "file_sha256": "e959ea0921d357df588d7ff65350bf95f66cec78451a8e6273c0c41d7f151e7d",
+      "points": 208,
+      "progressions_checked": 3502,
+      "valid": true,
+      "file": "sharpness_154_463_1.txt"
+    },
+    {
+      "parameters": [
+        155,
+        464,
+        1
+      ],
+      "file_sha256": "57779f1faba115f1e028d89d3167adeb5117dce69fd230e086a0f8ced7af3cb9",
+      "points": 208,
+      "progressions_checked": 3502,
+      "valid": true,
+      "file": "sharpness_155_464_1.txt"
+    }
+  ],
+  "normal_packing_controls": {
+    "status": "CONTROLS_PASSED",
+    "count": 18,
+    "controls": [
+      "valid_chunk",
+      "chunk_cannot_certify_full_domain",
+      "truncated_header",
+      "truncated_last_packing",
+      "trailing_byte",
+      "wrong_magic",
+      "wrong_modulus",
+      "wrong_terms",
+      "weaker_bound",
+      "wrong_window",
+      "range_outside_request",
+      "wrong_case_count",
+      "constant_progression",
+      "pole_progression",
+      "nonmonochromatic_progression",
+      "outside_window",
+      "intersecting_progressions",
+      "duplicate_chunk"
+    ]
+  },
+  "sanitizers": {
+    "flags": [
+      "-std=c++17",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer"
+    ],
+    "environment": {
+      "ASAN_OPTIONS": "detect_leaks=1:halt_on_error=1",
+      "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1"
+    },
+    "coverage": {
+      "window_complete": {
+        "status": "VERIFIED",
+        "windows": [
+          {
+            "radius": 104,
+            "crossing_aps": 1802,
+            "covered_incompatible_cases": 760759,
+            "diagonal_survivors": 617,
+            "incompatible_survivors": [
+              [
+                154,
+                463,
+                1
+              ],
+              [
+                155,
+                464,
+                1
+              ]
+            ],
+            "threshold_witnesses": []
+          },
+          {
+            "radius": 105,
+            "crossing_aps": 1836,
+            "covered_incompatible_cases": 760761,
+            "diagonal_survivors": 617,
+            "incompatible_survivors": [],
+            "threshold_witnesses": [
+              [
+                154,
+                463,
+                1,
+                512,
+                28
+              ],
+              [
+                155,
+                464,
+                1,
+                553,
+                28
+              ]
+            ]
+          }
+        ],
+        "cyclic_partial_cases": 380072,
+        "saturation_multiplier_cases": 616,
+        "seconds": 2.437
+      },
+      "packing_complete": {
+        "status": "VERIFIED",
+        "full_domain": true,
+        "begin": 0,
+        "end": 617,
+        "cases": 760761,
+        "packing_bound": 18,
+        "radius": 308,
+        "progressions": 13693698,
+        "points": 95855886,
+        "seconds": 2.85146
+      },
+      "packing_generator_representative": {
+        "status": "GENERATED",
+        "begin": 87,
+        "end": 88,
+        "cases": 1233,
+        "packing_bound": 18,
+        "radius": 308,
+        "crossing_aps": 15810,
+        "order_successes": [
+          1206,
+          27
+        ],
+        "seconds": 1.62709
+      },
+      "packing_representative_check": {
+        "status": "VERIFIED",
+        "full_domain": false,
+        "begin": 87,
+        "end": 88,
+        "cases": 1233,
+        "packing_bound": 18,
+        "radius": 308,
+        "progressions": 22194,
+        "points": 155358,
+        "seconds": 0.00445613
+      },
+      "controls": {
+        "status": "CONTROLS_PASSED",
+        "count": 18,
+        "controls": [
+          "valid_chunk",
+          "chunk_cannot_certify_full_domain",
+          "truncated_header",
+          "truncated_last_packing",
+          "trailing_byte",
+          "wrong_magic",
+          "wrong_modulus",
+          "wrong_terms",
+          "weaker_bound",
+          "wrong_window",
+          "range_outside_request",
+          "wrong_case_count",
+          "constant_progression",
+          "pole_progression",
+          "nonmonochromatic_progression",
+          "outside_window",
+          "intersecting_progressions",
+          "duplicate_chunk"
+        ]
+      }
+    },
+    "stderr_errors": false
+  },
+  "coverage_boundary": "Full native window checker and full transcript checker sanitized. Sanitized generator covers only phase87 (1233 cases), with both orders; it does not regenerate the entire domain under sanitizers.",
+  "large_transcript_published": false
+}
