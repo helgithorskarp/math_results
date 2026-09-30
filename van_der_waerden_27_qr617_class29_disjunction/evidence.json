@@ -1,0 +1,120 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "date": "2026-09-30",
+  "new_verified_claim": "Endpoint0 forbids a<=28 with b unrestricted; six full-width trees.",
+  "dependent_corollary": "Using the separately cited59-edit profile:29<=a,b<=1819, max(a,b)>=30, min(a,b)<=1818,59<=a+b<=3637.",
+  "original_class_sizes": [
+    1848,
+    1848
+  ],
+  "endpoint": 0,
+  "caps": [
+    28,
+    1848
+  ],
+  "trees": 6,
+  "nodes": 24,
+  "mandatory_splits": 6,
+  "children": 18,
+  "step_totals": {
+    "forbidden": 30298,
+    "forced": 4,
+    "packing": 30286,
+    "empty": 12,
+    "budget": 0,
+    "mixed": 29225
+  },
+  "terminal_contradictions": {
+    "required_packing": 1,
+    "empty_required": 17
+  },
+  "fresh_generation": {
+    "seconds": 175.207,
+    "peak_rss_kib": 112316,
+    "max_case_seconds_with_checking": 7.646,
+    "all_generated_hashes_match_discovery": true,
+    "source_inputs_only": true
+  },
+  "validation_runs": [
+    {
+      "name": "standalone-exact-replay",
+      "seconds": 8.493,
+      "exit_code": 0,
+      "max_child_rss_kib_so_far": 148328
+    },
+    {
+      "name": "checker-controls",
+      "seconds": 10.244,
+      "exit_code": 0,
+      "max_child_rss_kib_so_far": 171204
+    },
+    {
+      "name": "optimized-exact-replay",
+      "seconds": 8.857,
+      "exit_code": 0,
+      "max_child_rss_kib_so_far": 171204
+    }
+  ],
+  "controls": {
+    "checked_trees": 6,
+    "checked_children": 18,
+    "primitive_regressions": 6,
+    "oracle_states": 175,
+    "oracle_models": 1040,
+    "valid_six_way_tree": true,
+    "valid_partial_two_way_tree": true,
+    "controls_rejected": 24
+  },
+  "expected_manifest_sha256": "e2fee9023ee20b6460757da89fe1578431e62cbec455aa06936663c31313a2f6",
+  "generated_certificate_bytes_omitted_from_git": 8940387,
+  "remaining_total59_pairs_by_endpoint": {
+    "0": [
+      [
+        29,
+        30
+      ],
+      [
+        30,
+        29
+      ]
+    ],
+    "1": [
+      [
+        29,
+        30
+      ],
+      [
+        30,
+        29
+      ]
+    ]
+  },
+  "proof_status": "Complete same-author exact set replay and unformalized written bridge; not externally reviewed or proof-assistant formalized.",
+  "global_W_bound_improved": false,
+  "length3704_witness_found": false,
+  "resource_caps": {
+    "cpu_threads": 1,
+    "search_seconds_per_case": 90,
+    "scope_memory_limit_bytes": 2147483648,
+    "scope_tasks_limit": 128
+  },
+  "resumption_controls": {
+    "saved_parent_and_child_contexts_replayed": true,
+    "all_six_resumed_hashes_match_fresh_reference": true,
+    "runs": [
+      {
+        "name": "resume-two-checked-contexts",
+        "seconds": 73.238,
+        "exit_code": 0,
+        "max_child_rss_kib_so_far": 149876
+      },
+      {
+        "name": "resumed-full-exact-replay",
+        "seconds": 8.894,
+        "exit_code": 0,
+        "max_child_rss_kib_so_far": 149876
+      }
+    ]
+  }
+}
