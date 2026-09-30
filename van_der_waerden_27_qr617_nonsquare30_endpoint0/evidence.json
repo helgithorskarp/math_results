@@ -1,0 +1,90 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "date": "2026-09-30",
+  "python": "3.11.2",
+  "all_source_checks_complete": true,
+  "fresh_source_only_generation": {
+    "status": "FINISHED",
+    "returncode": 0,
+    "seconds": 45.041,
+    "max_rss_kib": 100344,
+    "threads": 1
+  },
+  "maximum_recorded_primitive_search_plus_replay_seconds": 15.276,
+  "validation_jobs": [
+    {
+      "label": "fresh-check",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 2.326,
+      "max_rss_kib": 52680,
+      "threads": 1,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "controls-normal",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 7.34,
+      "max_rss_kib": 60136,
+      "threads": 1,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "controls-optimized",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 7.641,
+      "max_rss_kib": 62996,
+      "threads": 1,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "cached-resume",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 5.533,
+      "max_rss_kib": 104016,
+      "threads": 1,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "tiny-limit",
+      "status": "FINISHED",
+      "returncode": 1,
+      "seconds": 3.226,
+      "max_rss_kib": 87096,
+      "threads": 1,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "saved-timeout-refusal",
+      "status": "FINISHED",
+      "returncode": 1,
+      "seconds": 3.326,
+      "max_rss_kib": 85816,
+      "threads": 1,
+      "validation_timeout_seconds": 90
+    }
+  ],
+  "corruption_controls_rejected": 25,
+  "primitive_compatibility_regressions": 6,
+  "normal_and_optimized_controls_identical": true,
+  "all_fresh_certificate_hashes_and_full_root_results_match_separately_audited_local_corpus": true,
+  "proof_corpus_bytes": 2502022,
+  "expected_manifest_sha256": "b732e7d2d359fffcb66087b6de6b694f609ba80ac0179c47e958efbdbc4137ea",
+  "cache_preserves_proofs_manifest_and_fresh_metadata": true,
+  "incomplete_tree_and_suite_rejected": true,
+  "saved_timeout_refused_without_retry": true,
+  "unexpected_operational_limit_reached": false,
+  "source_generation_uses_private_transcripts": false,
+  "earlier_numerical_bounds_in_new_branch": false,
+  "independent_external_review_or_formalization": false,
+  "uniform_nonsquare30_or_total63_claimed": false,
+  "new_W_bound_or_witness": false,
+  "primitive_seconds_cap": 90,
+  "verification_job_seconds_cap": 90,
+  "threads": 1,
+  "max_concurrent_CPU_intensive_jobs": 1
+}

@@ -1,0 +1,355 @@
+{
+  "certificates": [
+    {
+      "file": "tree-0-1-1848-29.json",
+      "bytes": 224990,
+      "sha256": "3326d948369f051046ed8cbc3d9e892e35f50a0f713a311a22f5b2491c5e27df"
+    },
+    {
+      "file": "tree-0-1235-1848-29.json",
+      "bytes": 602,
+      "sha256": "dcd5392ca76db0baa25d4b454655cce8f8516e0d8a6979456dfe45d471eb7f45"
+    },
+    {
+      "file": "tree-0-1852-1848-29.json",
+      "bytes": 634213,
+      "sha256": "d7bfb9ccedc565b6d6702a5dd5a6cb55b2c39f53ac7922503ae1e5de0e6c8a0d"
+    },
+    {
+      "file": "tree-0-2469-1848-29.json",
+      "bytes": 612412,
+      "sha256": "14d8c69c4163c304337812b25af984a94a9449973dd95297dc638e01c4ce40d1"
+    },
+    {
+      "file": "tree-0-3086-1848-29.json",
+      "bytes": 527380,
+      "sha256": "6059594d2757bd14e60d3f1f12e868938e0cef845c8c5722011fd06fd2a3fafc"
+    },
+    {
+      "file": "tree-0-618-1848-29.json",
+      "bytes": 502425,
+      "sha256": "140bc466048f615770304bfe37099ff4a701554f8f3f15c97f0399825837324c"
+    }
+  ],
+  "verification": {
+    "verified": true,
+    "verified_independent_lemma": "Endpoint0 implies at least30 original-q1 edits; original-q0 edits unrestricted",
+    "endpoint": 0,
+    "excluded_budget": [
+      1848,
+      29
+    ],
+    "required_roots": [
+      1,
+      618,
+      1235,
+      1852,
+      2469,
+      3086
+    ],
+    "roots_checked": 6,
+    "nodes_checked": 6,
+    "splits_checked": 0,
+    "leaves_checked": 6,
+    "original_class_sizes": [
+      1848,
+      1848
+    ],
+    "exceptional_prefix_positions_free": 7,
+    "earlier_numerical_bounds_used_by_new_branch_replay": false,
+    "complement_consequence": "Endpoint1 implies at most1818 original-q1 edits",
+    "uniform_both_endpoint_nonsquare30_or_total63_asserted": false,
+    "conditional_corollary_given_cited_square30_and_62": {
+      "premise_graph_refs": [
+        "bafkreifgkgk7nhqgg37tn2uevjg7u7zkmqobvmn4nvqycqp6bsba4vzfdq",
+        "bafkreieu7guaiaarct57a7ohr2y32mcvgc5d4uwaj6kwodienf3o5u2i2e"
+      ],
+      "premise_reproved_by_this_command": false,
+      "original_class0_bounds_both_endpoints": [
+        30,
+        1818
+      ],
+      "original_class1_bounds_by_endpoint": {
+        "0": [
+          30,
+          1819
+        ],
+        "1": [
+          29,
+          1818
+        ]
+      },
+      "total_edit_bounds": [
+        62,
+        3634
+      ],
+      "remaining_total62_pairs_by_endpoint": {
+        "0": [
+          [
+            30,
+            32
+          ],
+          [
+            31,
+            31
+          ],
+          [
+            32,
+            30
+          ]
+        ],
+        "1": [
+          [
+            30,
+            32
+          ],
+          [
+            31,
+            31
+          ],
+          [
+            32,
+            30
+          ],
+          [
+            33,
+            29
+          ]
+        ]
+      },
+      "boundary_feasibility_or_attained_minimum_asserted": false
+    },
+    "step_totals": {
+      "forbidden": 17111,
+      "forced": 0,
+      "packing": 7144,
+      "empty": 9967,
+      "mixed": 7052,
+      "budget": 0
+    },
+    "root_results": [
+      {
+        "agent": "six-vdw-2",
+        "role": "researcher",
+        "endpoint": 0,
+        "root": 1,
+        "budget": [
+          1848,
+          29
+        ],
+        "closed": true,
+        "nodes": 1,
+        "splits": 0,
+        "leaves": [
+          {
+            "path": [],
+            "closed": true,
+            "allowed": 564,
+            "forced": 1,
+            "counts": {
+              "forbidden": 3132,
+              "forced": 0,
+              "packing": 530,
+              "empty": 2602,
+              "budget": 0,
+              "mixed": 513
+            }
+          }
+        ],
+        "step_totals": {
+          "forbidden": 3132,
+          "forced": 0,
+          "packing": 530,
+          "empty": 2602,
+          "budget": 0,
+          "mixed": 513
+        }
+      },
+      {
+        "agent": "six-vdw-2",
+        "role": "researcher",
+        "endpoint": 0,
+        "root": 618,
+        "budget": [
+          1848,
+          29
+        ],
+        "closed": true,
+        "nodes": 1,
+        "splits": 0,
+        "leaves": [
+          {
+            "path": [],
+            "closed": true,
+            "allowed": 380,
+            "forced": 1,
+            "counts": {
+              "forbidden": 3316,
+              "forced": 0,
+              "packing": 1485,
+              "empty": 1831,
+              "budget": 0,
+              "mixed": 1466
+            }
+          }
+        ],
+        "step_totals": {
+          "forbidden": 3316,
+          "forced": 0,
+          "packing": 1485,
+          "empty": 1831,
+          "budget": 0,
+          "mixed": 1466
+        }
+      },
+      {
+        "agent": "six-vdw-2",
+        "role": "researcher",
+        "endpoint": 0,
+        "root": 1235,
+        "budget": [
+          1848,
+          29
+        ],
+        "closed": true,
+        "nodes": 1,
+        "splits": 0,
+        "leaves": [
+          {
+            "path": [],
+            "closed": true,
+            "allowed": 3696,
+            "forced": 1,
+            "counts": {
+              "forbidden": 0,
+              "forced": 0,
+              "packing": 0,
+              "empty": 0,
+              "budget": 0,
+              "mixed": 0
+            }
+          }
+        ],
+        "step_totals": {
+          "forbidden": 0,
+          "forced": 0,
+          "packing": 0,
+          "empty": 0,
+          "budget": 0,
+          "mixed": 0
+        }
+      },
+      {
+        "agent": "six-vdw-2",
+        "role": "researcher",
+        "endpoint": 0,
+        "root": 1852,
+        "budget": [
+          1848,
+          29
+        ],
+        "closed": true,
+        "nodes": 1,
+        "splits": 0,
+        "leaves": [
+          {
+            "path": [],
+            "closed": true,
+            "allowed": 4,
+            "forced": 1,
+            "counts": {
+              "forbidden": 3692,
+              "forced": 0,
+              "packing": 1844,
+              "empty": 1848,
+              "budget": 0,
+              "mixed": 1824
+            }
+          }
+        ],
+        "step_totals": {
+          "forbidden": 3692,
+          "forced": 0,
+          "packing": 1844,
+          "empty": 1848,
+          "budget": 0,
+          "mixed": 1824
+        }
+      },
+      {
+        "agent": "six-vdw-2",
+        "role": "researcher",
+        "endpoint": 0,
+        "root": 2469,
+        "budget": [
+          1848,
+          29
+        ],
+        "closed": true,
+        "nodes": 1,
+        "splits": 0,
+        "leaves": [
+          {
+            "path": [],
+            "closed": true,
+            "allowed": 70,
+            "forced": 1,
+            "counts": {
+              "forbidden": 3626,
+              "forced": 0,
+              "packing": 1778,
+              "empty": 1848,
+              "budget": 0,
+              "mixed": 1759
+            }
+          }
+        ],
+        "step_totals": {
+          "forbidden": 3626,
+          "forced": 0,
+          "packing": 1778,
+          "empty": 1848,
+          "budget": 0,
+          "mixed": 1759
+        }
+      },
+      {
+        "agent": "six-vdw-2",
+        "role": "researcher",
+        "endpoint": 0,
+        "root": 3086,
+        "budget": [
+          1848,
+          29
+        ],
+        "closed": true,
+        "nodes": 1,
+        "splits": 0,
+        "leaves": [
+          {
+            "path": [],
+            "closed": true,
+            "allowed": 351,
+            "forced": 1,
+            "counts": {
+              "forbidden": 3345,
+              "forced": 0,
+              "packing": 1507,
+              "empty": 1838,
+              "budget": 0,
+              "mixed": 1490
+            }
+          }
+        ],
+        "step_totals": {
+          "forbidden": 3345,
+          "forced": 0,
+          "packing": 1507,
+          "empty": 1838,
+          "budget": 0,
+          "mixed": 1490
+        }
+      }
+    ]
+  }
+}
