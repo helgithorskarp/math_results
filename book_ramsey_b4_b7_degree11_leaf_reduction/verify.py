@@ -3,7 +3,7 @@
 Author: six-books-3, researcher. Imports no research generator or predecessor
 checker. Explicit checks remain enabled under Python optimization.
 """
-from itertools import combinations, permutations
+from itertools import combinations, permutations, product
 from pathlib import Path
 from collections import Counter
 import hashlib
@@ -162,13 +162,44 @@ def audit_scalars(document):
             mandatory = sum((3 - x) * x for x in h)
             records.append({'n1': n1, 'n2': n2, 'n3': 11 - n1 - n2,
                             'old_budget_D': d, 'mandatory_column_cost': mandatory,
-                            'residual_E': d - mandatory, 'allowed': mandatory <= d})
+                            'residual_E': d - mandatory, 'residual_nonnegative': mandatory <= d})
     require(records == document['histograms'], 'histogram records differ')
     # All possible integer sizes; phi zero exactly at sizes3 and4.
     require([z for z in range(12) if (z - 3) * (z - 4) // 2 == 0] == [3, 4],
             'phi zero sizes differ')
     require(all((z - 3) * (z - 4) // 2 > 2 for z in range(6, 12)),
             'large-size budget bound failed')
+    # A saturated cubic row with t=3 and four-element miss rows would
+    # have Pt=2*Ph-6, but its three red spines require Pt>=3*(8-3).
+    for neighbors in product((1, 2, 3), repeat=3):
+        upper = 2 * sum(neighbors) - 6
+        lower = 3 * (8 - 3)
+        require(lower > upper, 'degree-ten leaf contradiction bound failed')
+    # All residual-budget states; the degree-eleven leaf contradicts
+    # its red spine, while the sole degree-ten state is handled above.
+    states = 0
+    for tp, tx, unused, large in product((1, 2), range(2, 5), range(3), range(3)):
+        if unused + large + 2 * (tp - 1) + (tx - 2) != 2:
+            continue
+        states += 1
+        if tp == 1:
+            require(2 * tp + 2 + unused + large < 8 - tp,
+                    'degree-eleven leaf spine contradiction bound failed')
+        else:
+            require((tx, unused, large) == (2, 0, 0), 'unexpected degree-ten state')
+    require(states == 7, 'incomplete scalar leaf-budget coverage')
+    # All possible miss sizes, and the two strict contradictions in the
+    # three-degree-two case, after its written column accounting.
+    for z in range(12):
+        require(z - 4 <= (z - 3) * (z - 4) // 2,
+                'miss-size correction bound failed')
+    for neighbor_degrees in product((2, 3), repeat=2):
+        upper = 2 - 6 + 2 * sum(neighbor_degrees) + 3
+        require(upper < 2 * (8 - 2), 'full-degree-eleven degree-two bound failed')
+    require(3 - 6 + 2 * (3 + 3) < 2 * (8 - 3),
+            'full-degree-ten degree-two bound failed')
+    require(document['final_degree11_histograms'] == [[0, 1, 10]],
+            'incorrect final histogram statement')
 
 
 def audit_baseline(document):
@@ -193,7 +224,7 @@ def audit_baseline(document):
 
 
 def verify(document):
-    require(document['schema'] == 'degree11-leaf-candidates-v1', 'unknown schema')
+    require(document['schema'] == 'degree11-leaf-obstructions-v2', 'unknown schema')
     audit_scalars(document)
     audit_baseline(document)
     controls = {str(n): len(binary_census(n)[0]) for n in (4, 6, 8)}
@@ -240,8 +271,12 @@ def verify(document):
             'literal_residual_identity_controls': 3 * len(document['records']),
             'literal_mixed_spine_identity_controls': 165 * len(document['records']),
             'literal_row_sum_identity_controls': 33 * len(document['records']),
-            'retained_histograms': [[x['n1'], x['n2'], x['n3']]
-                                    for x in document['histograms'] if x['allowed']]}
+            'degree_ten_leaf_scalar_controls': 27,
+            'leaf_budget_states_ruled_out': 7,
+            'three_degree_two_scalar_controls': 17,
+            'final_degree11_histograms': document['final_degree11_histograms'],
+            'scalar_histograms_before_leaf_exclusion': [[x['n1'], x['n2'], x['n3']]
+                                    for x in document['histograms'] if x['residual_nonnegative']]}
 
 
 if __name__ == '__main__':

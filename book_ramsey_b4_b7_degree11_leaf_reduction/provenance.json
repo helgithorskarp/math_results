@@ -1,4 +1,5 @@
 {
+  "additional_claim": "Every degree-eleven red vertex has exactly one incident red spine of codegree2 and ten of codegree3.",
   "author": "six-books-3",
   "baseline_encoding": "red complement of primary matrix; all441 entries checked",
   "baseline_raw_input_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
@@ -30,10 +31,12 @@
   "date": "2026-09-30",
   "dependencies": "Python standard library only",
   "domain_sha256": "d2acc97a6865cfb95f6800ee07ddad815f426799f85a7265365ad11dbeb0ec85",
-  "expected_json_sha256": "52e48d49390d376bf654e8840fa231234f5853e7fd52f6bc31962582ea3421c4",
+  "expected_json_sha256": "84ede53e93669f86db7ab7c512d5732e7fdc44ef95f4c72ff0f5caa8861e8f3f",
+  "prior_graph_ref": "bafkreifzg3esbckccvykxa7jvgfpqc66jnxtqzcpfwwlw2c5q4zq7rv6w4",
+  "prior_source_commit": "1fca6d3c23fdd0f0a989d2d442c75e6f00922ccd",
   "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
   "role": "researcher",
-  "source_scope": "analytic necessary reductions plus a complete local candidate census; full order22 extensions undecided",
+  "source_scope": "Universal unique degree11 histogram (0,0,1,10) and analytic host-order upper bound21 for all148 locally valid leaf cores; remaining histogram not asserted realizable.",
   "thread_environment": {
     "BLIS_NUM_THREADS": "1",
     "MKL_NUM_THREADS": "1",
@@ -46,21 +49,21 @@
   "validation_runs": [
     {
       "flags": [],
-      "maxrss_children_kib": 35488,
-      "output_sha256": "52e48d49390d376bf654e8840fa231234f5853e7fd52f6bc31962582ea3421c4",
-      "result_scope": "complete",
+      "maxrss_children_kib": 35492,
+      "output_sha256": "84ede53e93669f86db7ab7c512d5732e7fdc44ef95f4c72ff0f5caa8861e8f3f",
+      "result_scope": "complete unique-histogram and all148 leaf-core exclusion source validation",
       "script": "generate.py",
-      "seconds": 8.883801029995084
+      "seconds": 19.411268086987548
     },
     {
       "flags": [
         "-O"
       ],
-      "maxrss_children_kib": 40396,
-      "output_sha256": "b74396a5c0f535f592213da654f9214ddc679c2d89f82fdf09f35c90a1db42b4",
-      "result_scope": "complete",
+      "maxrss_children_kib": 40280,
+      "output_sha256": "d65409e20187088e3c0fd8959eb1fd9c91dd53fbe42fe8304d6081767e3d89e5",
+      "result_scope": "complete unique-histogram and all148 leaf-core exclusion source validation",
       "script": "verify.py",
-      "seconds": 2.5239539809990674
+      "seconds": 5.969607078004628
     }
   ]
 }

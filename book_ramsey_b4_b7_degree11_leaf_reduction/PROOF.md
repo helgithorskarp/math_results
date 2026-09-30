@@ -1,4 +1,4 @@
-# Three degree-eleven histograms and 148 candidate leaf neighborhoods
+# A unique degree-eleven histogram and 148 forbidden leaf neighborhoods
 
 Author: **six-books-3**, role **researcher**, 2026-09-30.
 
@@ -10,15 +10,24 @@ unrestricted. Fix a vertex v of red degree eleven, put A=N_R(v), and
 put B=V(G) minus (A union {v}). Thus |A|=11 and |B|=10. Let J=G_R[A]
 and let n_i count its vertices of degree i.
 
-**Theorem.** The only possible local degree histograms are
+**Theorem.** The only possible local degree histogram is
 
 | n_0 | n_1 | n_2 | n_3 | Residual budget E |
 |---:|---:|---:|---:|---:|
 | 0 | 0 | 1 | 10 | 8 |
-| 0 | 0 | 3 | 8 | 3 |
-| 0 | 1 | 1 | 9 | 2 |
 
-For the last histogram, let p be the unique degree-one vertex of J,
+The residual budget initially also allows (0,0,3,8), with E=3,
+and (0,1,1,9), with E=2. They are impossible by Sections6 and7.
+The complete local classification of the leaf case gives
+classification gives **148 induced twelve-vertex obstructions**:
+each is the root joined in red to a leaf-modified cubic graph on ten
+vertices, with all remaining pairs colored by red adjacency or its blue
+complement. No valid coloring of order at least22 contains an induced
+color-preserving copy of any of these148 graphs. All148 are themselves
+valid on twelve vertices. No assertion that the host-order upper bound21
+is attained for any particular core is made.
+
+For the initially possible leaf histogram, let p be the unique degree-one vertex of J,
 x its unique degree-two vertex, and q the neighbor of p in J. Then:
 
 1. q has local degree three and qx is not an edge of J. Deleting p
@@ -35,17 +44,19 @@ x its unique degree-two vertex, and q the neighbor of p in J. Then:
 
        U + l + 2(11-d_G(p)) + (11-d_G(x)) = 2.          (1)
 
-   In particular, d_G(p) is ten or eleven and d_G(x)>=9. If d_G(p)=11,
+   Initially d_G(p) is ten or eleven and d_G(x)>=9. If d_G(p)=11,
    then d_G(q)=7. If d_G(p)=10, then d_G(x)=11, l=U=0,
    d_G(q)=8, and the other two J-neighbors of q both have full red
-   degree eleven.
+   degree eleven. Section6 contradicts both alternatives.
 4. In this leaf case 109<=e(G)<=116. More precisely,
 
        111-l <= e(G) <= 116-l+floor(l/2),   0<=l<=2.    (2)
 
-The histogram list and 148 candidates are **necessary restrictions**.
-No candidate is claimed to extend to a valid graph on 22 vertices. Neither
-the leaf case nor the unrestricted Ramsey number is decided here.
+The final histogram is a necessary restriction, with no assertion
+of its realizability. The unrestricted Ramsey number remains undecided.
+**Corollary.** A full red degree-eleven vertex has exactly one incident
+red spine of codegree two and ten of codegree three. There is no symmetry
+assumption.
 
 ## 1. The additional column budget
 
@@ -84,7 +95,8 @@ gives the **exact residual identity**
 
 All three terms on the right of (4) are nonnegative. Thus
 12n_1+5n_2<=21. Intersecting this with the eight old histograms leaves
-exactly the three rows of the theorem. This excludes five histograms
+exactly three scalar histograms, including the subsequently excluded leaf case.
+This excludes five histograms
 without a graph catalogue or a search assumption. The generator records
 every old budget, mandatory column cost and residual budget, and the
 checker recomputes them from the unsimplified local-degree formula.
@@ -208,8 +220,107 @@ The domain stream is the sorted decimal masks, one per line, SHA256
 `d2acc97a6865cfb95f6800ee07ddad815f426799f85a7265365ad11dbeb0ec85`.
 Hashes are diagnostics; the explicit domain/orbit enumeration and the
 written normalization bridge supply completeness. No full22 host
-enumeration has been run or claimed. The cubic graph corpus is regenerated
+enumeration has been run or claimed. The analytic argument below excludes
+every catalogued leaf core. The cubic graph corpus is regenerated
 locally and is omitted from publication.
+
+## 6. Both leaf alternatives are impossible
+
+First suppose d_G(p)=11. Then t_p=1 and Section4 gives d_G(q)=7,
+so t_q=7. For each A-spine ij let epsilon_ij be its nonnegative unused
+capacity in the full graph, and let e_i=sum_{j!=i}epsilon_ij. Then
+e_i<=U. Let u_i be the number of five-element miss rows containing i,
+so u_i<=l. Formula (5) now has epsilon_ij subtracted from each
+off-diagonal entry. Row sums are4t_i+u_i, giving the general form
+
+    (3-h_i)t_i-(Pt)_i=5h_i-h_i^2-2(Ph)_i-e_i-u_i.  (7)
+
+At p, h_p=1, (Ph)_p=3 and (Pt)_p=t_q. Thus
+2t_p-t_q=-2-e_p-u_p, so e_p+u_p=3. But (1) and d_G(x)<=11 give
+e_p+u_p<=U+l<=2, a contradiction. Equivalently, the red spine pq
+requires t_q>=8-t_p=7, while (7) bounds t_q<=4+U+l<=6.
+This argument counts an unused spine once in U, even if it is incident
+to p; hence e_p<=U, not twice U.
+
+The degree-ten leaf alternative derived in Section4 is also impossible.
+In that alternative every miss row has size four, every A-spine is
+saturated, and q has two other local cubic neighbors r,s with t_r=t_s=3.
+For the cubic vertex r, equation (6) says
+
+    (Pt)_r=2(Ph)_r-6<=2*9-6=12.
+
+On every red J-edge ry, the nonnegative count in (5) gives
+
+    0<=S_ry=t_r+t_y-8-(P^2)_ry=t_y-5-(P^2)_ry.
+
+Thus t_y>=5 for all three J-neighbors of r, and (Pt)_r>=15,
+a contradiction. This is a written integer-counting proof; the
+prospective column-vector probe merely suggested the contradiction and
+is not a proof dependency. The checker audits the bounding arithmetic
+over all27 local neighbor-degree triples.
+
+Both possibilities for the leaf contradict the capacity identities.
+Only (0,0,1,10) and (0,0,3,8) remain. Every J-degree is consequently
+two or three. Section7 further excludes the latter histogram.
+
+To see the induced-core claim at every host order at least22, retain
+the twelve-vertex core and any ten other vertices. Heredity gives a
+valid22 coloring. Its core root already has eleven red neighbors;
+the universal degree bound forces all ten added edges from that root
+to be blue. It is therefore exactly a degree-eleven root with the
+prohibited leaf histogram. This contradiction requires no host
+connectedness, regularity, symmetry or prescribed outside coloring.
+
+The first committed version of this contribution, source
+`1fca6d3c23fdd0f0a989d2d442c75e6f00922ccd`, graph
+`bafkreifzg3esbckccvykxa7jvgfpqc66jnxtqzcpfwwlw2c5q4zq7rv6w4`
+(height7829), established the three histograms,148 candidates and both
+conditional leaf alternatives. Its statements remain valid. This
+additional argument strictly refines that result by eliminating both
+leaf alternatives and turning the148 candidates into obstructions.
+
+## 7. Three local degree-two vertices are impossible
+
+Suppose n_1=0,n_2=3,n_3=8. Then sum h_i=30 and E=3. Define
+epsilon_ij,e_i as in Section6, and define the now possibly negative
+
+    u_i=sum_{b:i in Z_b}(z_b-4).
+
+The general row identity (7) still holds, with no restriction on miss
+sizes: its correction is just the row sum of S minus4t_i. For every
+integer z, z-4<=phi(z), since phi(z)-(z-4)=(z-4)(z-5)/2>=0.
+Thus u_i<=F=sum_b phi(z_b), and e_i+u_i<=U+F.
+
+Let i be any of the three local degree-two vertices. If its full red
+degree were eleven, then t_i=2. Because h_i=2 and (Ph)_i<=6,
+the row identity gives
+
+    (Pt)_i=t_i-6+2(Ph)_i+e_i+u_i<=8+U+F<=11.
+
+But on each of its two red J-edges iy, the general spine formula gives
+
+    0<=S_iy=t_i+t_y-8-(P^2)_iy-epsilon_iy,
+
+so t_y>=6 and (Pt)_i>=12. This is a contradiction. Each of the
+three degree-two vertices therefore has full degree at most ten,
+and hence t_i>=3.
+
+Identity (4) now reads E=U+F+sum_{i:h_i=2}(t_i-2)=3. All three
+summands t_i-2 are at least one, so each t_i=3 and U=F=0. All miss
+rows have size3 or4. As in Section3, the blue root spines give internal
+B-degree at least three; a size-three miss row could have no red B-neighbor
+when all other rows have size at most four. Thus every row has size four.
+
+At one of the degree-two vertices i, every red J-neighbor y must have
+t_y>=5 by the saturated spine formula. Such a neighbor cannot be another
+degree-two vertex, whose t_y=3. Both neighbors are cubic, so (Ph)_i=6.
+The zero-slack four-row identity then gives (Pt)_i=3-6+12=9, whereas
+its two red neighbors give (Pt)_i>=10. This final contradiction excludes
+the entire (0,0,3,8) histogram.
+
+Exactly (0,0,1,10) remains, and the incident spine-codegree statement
+follows because c_R(v,a)=h_a. The argument is analytic, independent of
+the148-core census and of any solver or finite outside-host search.
 
 ## Provenance, verification and limits
 

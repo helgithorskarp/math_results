@@ -1,7 +1,7 @@
 """Exact degree11 scalar reduction and normalized cubic10 candidate census.
 
 Author: six-books-3, researcher. Python 3.11+, standard library only.
-This produces necessary local candidates, not order22 Ramsey witnesses.
+This classifies the local leaf cores excluded analytically in PROOF.md.
 """
 from collections import Counter
 from itertools import combinations, permutations
@@ -92,8 +92,8 @@ def histogram_reduction():
             records.append({'n1': n1, 'n2': n2, 'n3': n3,
                             'old_budget_D': old_d,
                             'mandatory_column_cost': minimum,
-                            'residual_E': residual, 'allowed': residual >= 0})
-    require([(x['n1'], x['n2']) for x in records if x['allowed']]
+                            'residual_E': residual, 'residual_nonnegative': residual >= 0})
+    require([(x['n1'], x['n2']) for x in records if x['residual_nonnegative']]
             == [(0, 1), (0, 3), (1, 1)], 'incorrect scalar reduction')
     return records
 
@@ -131,8 +131,9 @@ def generate():
     records = edge_orbits(domain)
     controls = {n: len(list(normalized_cubics(n))) for n in (4, 6, 8)}
     require(controls == {4: 1, 6: 7, 8: 553}, 'small census controls failed')
-    return {'schema': 'degree11-leaf-candidates-v1',
-            'scope': 'necessary local candidates; no full-host existence or exclusion',
+    return {'schema': 'degree11-leaf-obstructions-v2',
+            'scope': 'complete local leaf-core census; analytic proof excludes all cores from hosts of order at least22',
+            'final_degree11_histograms': [[0, 1, 10]],
             'histograms': histogram_reduction(), 'baseline': baseline(),
             'small_normalized_cubic_counts': {str(n): count for n, count in controls.items()},
             'normalized_labeled_count': len(domain), 'group_size': 1440,

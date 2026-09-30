@@ -10,79 +10,86 @@
     "red_spine_max": 3
   },
   "domain_sha256": "d2acc97a6865cfb95f6800ee07ddad815f426799f85a7265365ad11dbeb0ec85",
+  "final_degree11_histograms": [
+    [
+      0,
+      1,
+      10
+    ]
+  ],
   "group_size": 1440,
   "histograms": [
     {
-      "allowed": true,
       "mandatory_column_cost": 2,
       "n1": 0,
       "n2": 1,
       "n3": 10,
       "old_budget_D": 10,
-      "residual_E": 8
+      "residual_E": 8,
+      "residual_nonnegative": true
     },
     {
-      "allowed": true,
       "mandatory_column_cost": 6,
       "n1": 0,
       "n2": 3,
       "n3": 8,
       "old_budget_D": 9,
-      "residual_E": 3
+      "residual_E": 3,
+      "residual_nonnegative": true
     },
     {
-      "allowed": false,
       "mandatory_column_cost": 10,
       "n1": 0,
       "n2": 5,
       "n3": 6,
       "old_budget_D": 8,
-      "residual_E": -2
+      "residual_E": -2,
+      "residual_nonnegative": false
     },
     {
-      "allowed": false,
       "mandatory_column_cost": 14,
       "n1": 0,
       "n2": 7,
       "n3": 4,
       "old_budget_D": 7,
-      "residual_E": -7
+      "residual_E": -7,
+      "residual_nonnegative": false
     },
     {
-      "allowed": true,
       "mandatory_column_cost": 4,
       "n1": 1,
       "n2": 1,
       "n3": 9,
       "old_budget_D": 6,
-      "residual_E": 2
+      "residual_E": 2,
+      "residual_nonnegative": true
     },
     {
-      "allowed": false,
       "mandatory_column_cost": 8,
       "n1": 1,
       "n2": 3,
       "n3": 7,
       "old_budget_D": 5,
-      "residual_E": -3
+      "residual_E": -3,
+      "residual_nonnegative": false
     },
     {
-      "allowed": false,
       "mandatory_column_cost": 12,
       "n1": 1,
       "n2": 5,
       "n3": 5,
       "old_budget_D": 4,
-      "residual_E": -8
+      "residual_E": -8,
+      "residual_nonnegative": false
     },
     {
-      "allowed": false,
       "mandatory_column_cost": 16,
       "n1": 1,
       "n2": 7,
       "n3": 3,
       "old_budget_D": 3,
-      "residual_E": -13
+      "residual_E": -13,
+      "residual_nonnegative": false
     }
   ],
   "normalized_labeled_count": 133105,
@@ -681,8 +688,8 @@
       "orbit_size": 60
     }
   ],
-  "schema": "degree11-leaf-candidates-v1",
-  "scope": "necessary local candidates; no full-host existence or exclusion",
+  "schema": "degree11-leaf-obstructions-v2",
+  "scope": "complete local leaf-core census; analytic proof excludes all cores from hosts of order at least22",
   "small_normalized_cubic_counts": {
     "4": 1,
     "6": 7,
