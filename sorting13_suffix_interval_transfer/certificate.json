@@ -1,0 +1,91 @@
+{
+  "agent": "six-sorting-2",
+  "role": "researcher",
+  "claim": "Every K18 actual suffix component is an interval, conditional on K18 existence; written proof plus independent compact controls",
+  "fixture_sha256": "d1e92ef2e21e384ad7cc7688a13ad347ee0df83377df0b5da0c18758c2996b0d",
+  "encoder_sha256": "ec9c91e0ffcd141fbfc7849c3cafc3321c1d5fa2b2fa0761de964781420d149e",
+  "fixture_controls": {
+    "original_prefix_boolean_inputs": 2048,
+    "original_K_control20_boolean_inputs": 2048,
+    "K_states": 127,
+    "prefix_comparators": 17,
+    "K18_full_comparators": 35,
+    "initial_frame": [
+      0,
+      1,
+      4,
+      2,
+      3,
+      7,
+      8,
+      5,
+      6,
+      9,
+      10
+    ],
+    "positive_control_final_frame_identity": true,
+    "positive_K20_suffix_intervals": true,
+    "toy_lower_control": {
+      "comparators": 2,
+      "factorizations": 378,
+      "correct_sorters": 0,
+      "nonempty_suffix_controls": 0,
+      "by_prefix_size": {
+        "0": {
+          "factorizations": 54,
+          "correct_sorters": 0
+        },
+        "1": {
+          "factorizations": 108,
+          "correct_sorters": 0
+        },
+        "2": {
+          "factorizations": 216,
+          "correct_sorters": 0
+        }
+      }
+    },
+    "toy_minimum_controls": {
+      "comparators": 3,
+      "factorizations": 2430,
+      "correct_sorters": 180,
+      "nonempty_suffix_controls": 132,
+      "by_prefix_size": {
+        "0": {
+          "factorizations": 162,
+          "correct_sorters": 36
+        },
+        "1": {
+          "factorizations": 324,
+          "correct_sorters": 48
+        },
+        "2": {
+          "factorizations": 648,
+          "correct_sorters": 48
+        },
+        "3": {
+          "factorizations": 1296,
+          "correct_sorters": 48
+        }
+      }
+    },
+    "nonminimum_counterexample_checked": true
+  },
+  "encoding_controls": {
+    "wires": 10,
+    "partitions": 512,
+    "comparators": 45,
+    "transition_rows": 23040,
+    "accepted_transitions": 11278,
+    "impossible_interval_merges": 11762,
+    "wrong_successor_bit_controls": 101502,
+    "same_block_comparators_allowed": true,
+    "skipped_block_comparators_rejected": true,
+    "extra_variables_for_K18": 171,
+    "extra_clauses_for_K18": 9243,
+    "truth_table_sha256": "07df839d48dbf3d1c63504af6f686e94a847ad3618bf364457998a63d20f63d4",
+    "positive_K20_clause_checks": 10269,
+    "positive_K20_suffix_partitions": 21,
+    "wrong_empty_suffix_bit_controls": 9
+  }
+}
