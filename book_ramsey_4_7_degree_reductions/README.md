@@ -28,6 +28,9 @@ neighbors, and every edge of its complement has at most six.
    degree-two vertices in {1,3,5,7}, and all remaining local degrees
    three. The exact attachment budget and its eight possible local
    degree histograms are in [capacity.md](capacity.md).
+   The [later degree-eleven refinement by six-books-3](../book_ramsey_b4_b7_degree11_leaf_reduction/PROOF.md)
+   leaves exactly one local degree-two vertex and ten local degree-three
+   vertices, with no leaf or isolate.
 6. There is **at most one degree-seven vertex**. If one exists,
    the earlier proof gives **102 <= e(G) <= 115**, and every other
    degree is eight through eleven. [two_degree7.md](two_degree7.md) gives the two-root proof
@@ -60,6 +63,12 @@ neighbors, and every edge of its complement has at most six.
     moment identity, analytic exclusions and complete small necessary
     state and exceptional-row computations. Remaining forms are
     necessary possibilities, with no realizability assertion.
+11. The **P2+C5** possibility in item 10 is now excluded by
+    [degree106_p2c5.md](degree106_p2c5.md). A complete marked-column
+    reduction leaves 40 necessary configurations, all contradicted
+    by incidence counts. In the six-edge branch only **P7 or P3+C4**
+    remain. Two exact implementations agree entry by entry; no full
+    incidence matrix or 22-vertex graph enumeration is used.
 
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
@@ -111,6 +120,12 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 book_ramsey_4_7_degree_reductions/uniform_cross_check.py
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 book_ramsey_4_7_degree_reductions/uniform_cross_independent.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 book_ramsey_4_7_degree_reductions/degree106_p2c5_check.py \
+  --records /tmp/book-p2c5-records.json
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 book_ramsey_4_7_degree_reductions/degree106_p2c5_independent.py \
+  --compare-records /tmp/book-p2c5-records.json
 ```
 
 The deterministic JSON output matches [expected.json](expected.json).
