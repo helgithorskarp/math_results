@@ -24,6 +24,12 @@ A strictly better fifteen-point packing cannot contain that contact motif;
 the other two points are arbitrary. Its spanning corollary removes both
 asymmetric cross edges `(3,7)` and `(3,14)`, giving a 28-edge completion theorem.
 
+The [cyclic 13-vertex core](CYCLIC_CORE.md) also forces the incumbent
+separation with 24 contacts. Its arbitrary distinct unit-vector realizations
+have two labeled Gram matrices; only the incumbent branch satisfies the
+packing inequalities. Both cores are forbidden in any strictly better
+fifteen-point packing.
+
 The [29-edge completion extension](DELETED_CONTACT.md) deletes the asymmetric
 pattern's edge `(3,7)` and proves that every realization in the same interval
 automatically restores it. Its separate certificate and checker strengthen
