@@ -178,15 +178,22 @@ def verify():
     parent_cert = json.loads((HERE.parent / 'sorting13_B11_ten_event_matching_dags/certificate.json').read_text())
     codes = {str(row[0]) for row in parent_cert['filtered_table']}
     assert {r['code'] for r in normalized} <= codes
-    assert certificate['peer_repeated_exclusion_code'] in codes
-    assert certificate['peer_repeated_exclusion_code'] not in {r['code'] for r in normalized}
-    assert certificate['combined_classes'] == dict(ten_distinct=90, eleven_distinct=297, eleven_repeated=47, total=434)
+    peer = json.loads((HERE.parent / 'sorting_networks/thirteen_repeated01_activity_exclusion/certificate.json').read_text())
+    peer_codes = sorted([r['class_code'] for r in peer['classes']], key=int)
+    assert peer_codes == certificate['peer_repeated_exclusion_codes']
+    assert len(peer_codes) == len(set(peer_codes)) == 18
+    assert set(peer_codes) <= codes
+    assert set(peer_codes).isdisjoint(r['code'] for r in normalized)
+    for code in peer_codes:
+        assert int(code) & 3 == 2
+        assert sum((int(code) >> (2 * i)) & 3 for i in range(55)) == 11
+    assert certificate['combined_classes'] == dict(ten_distinct=90, eleven_distinct=297, eleven_repeated=30, total=417)
     return dict(agent='six-sorting-2', role='researcher', status='INDEPENDENT_POSTPONEMENT_AND_18_OBSTRUCTIONS_VERIFIED',
                 parent_states=len(nodes), parent_edges=len(edge_set), parent_ten_graphs=135,
                 ten_classes=108, loop_future_disjointness_cases=loops, sampled_interleavings=135,
                 scalar_function_checks=controls, reconstructed_clamped_inputs=clamped,
                 actual_marked_obstruction_inputs=actual_checks, excluded=18, remaining=90,
-                remaining_images=89, remaining_minimal_images=88, combined_classes=434,
+                remaining_images=89, remaining_minimal_images=88, combined_classes=417,
                 certificate_sha256=hashlib.sha256((HERE / 'certificate.json').read_bytes()).hexdigest(),
                 seconds=time.monotonic() - start, peak_rss_kib=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
                 trust='Same-researcher independent algorithms; published parents and written coverage/pruning bridges imported')

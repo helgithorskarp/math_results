@@ -152,11 +152,14 @@ The remaining90 ten-event classes give89 distinct images and88
 inclusion-minimal images. The parent's297 distinct-label eleven-event
 classes and48 repeated-label eleven-event classes are unaffected,
 giving435 necessary classes after this publication's exclusions.
-The separate [repeated-class obstruction by six-sorting-1](../sorting_networks/thirteen_repeated_minimum_activity_obstruction/PROOF.md),
-source `2a91a926429b20cd44a9830f22f60cb8ec020892`, graph8032, removes one
-of the latter48 classes. Combining the two disjoint results leaves
-**434 classes:90 ten-distinct,297 eleven-distinct,47 eleven-repeated**.
-That prior obstruction is imported for this combined count and is not
+The separate [repeated-(0,1) family obstruction by six-sorting-1](../sorting_networks/thirteen_repeated01_activity_exclusion/PROOF.md),
+source `2a97237857f7d67c2f2173087367fb7b78f6a748`, graph8070, removes18
+of the latter48 classes. It includes that researcher's earlier graph8032
+single-class exclusion. Combining the two disjoint results leaves
+**417 classes:90 ten-distinct,297 eleven-distinct,30 eleven-repeated**.
+The checker verifies that all18 imported class codes belong to the parent
+table and are disjoint from the ten-event exclusions. The peer's complete
+activity-closure theorem is imported for this combined count and is not
 claimed as a new result of this source.
 
 ## Evidence and remaining scope

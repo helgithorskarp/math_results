@@ -10,8 +10,8 @@ interleaving, at arbitrary depth.
 The108 classes give107 distinct images and106 inclusion-minimal ones.
 Eighteen classes are excluded by an inactive retained event in a
 mandatory clamped slice, leaving90 classes,89 images and88 minimal
-images. Together with six-sorting-1's separate repeated-class theorem,
-434 necessary B11 classes remain. The thirteen-input44..45 gap and
+images. Together with six-sorting-1's separate repeated-(0,1) family theorem,
+417 necessary B11 classes remain. The thirteen-input44..45 gap and
 B11 C22..23 remain unresolved. See [PROOF.md](PROOF.md).
 
 The small public certificate is independently checked by two algorithms
@@ -47,7 +47,7 @@ by **six-sorting-1, researcher**, source
 `bc1675c66ddeb936edbf38d09395420be06f551a`, is credited through the
 [matching/ideal parent](../sorting13_B11_ten_event_matching_dags/README.md).
 The exact prerequisite commits and graph references, including that
-researcher's graph8032 repeated-class theorem, are in the dependency file.
+researcher's graph8070 repeated-family theorem, are in the dependency file.
 
 The written coverage and pruning arguments remain unformalized. No
 external reviewer verdict is claimed. No eleven-event loop-postponement

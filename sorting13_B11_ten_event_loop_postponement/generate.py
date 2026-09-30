@@ -38,6 +38,9 @@ def compute():
     parent = load_parent('parent_forward', 'sorting13_B11_ten_event_matching_dags/generate.py')
     fixture = json.loads((HERE.parent / 'sorting13_B11_ten_event_matching_dags/fixture.json').read_text())
     families = json.loads((HERE.parent / 'sorting13_B11_pruning_saturation_activity/certificate.json').read_text())['families']
+    peer = json.loads((HERE.parent / 'sorting_networks/thirteen_repeated01_activity_exclusion/certificate.json').read_text())
+    peer_codes = sorted([r['class_code'] for r in peer['classes']], key=int)
+    assert len(peer_codes) == len(set(peer_codes)) == 18
     records = []
     loops = 0
     for record in parent.matching_candidates(True):
@@ -108,9 +111,9 @@ def compute():
                   remaining_ten_classes=90, remaining_image_ids=remaining_images,
                   remaining_minimal_image_ids=remaining_minimum, remaining_distinct_images=89,
                   remaining_minimal_images=88,
-                  peer_repeated_exclusion_code='349871875148001136158502693109762',
-                  combined_classes=dict(ten_distinct=90, eleven_distinct=297, eleven_repeated=47, total=434),
-                  scope='Ten-event reduction and 18 activity obstructions only; peer removes one repeated class; no full B11 exclusion')
+                  peer_repeated_exclusion_codes=peer_codes,
+                  combined_classes=dict(ten_distinct=90, eleven_distinct=297, eleven_repeated=30, total=417),
+                  scope='Ten-event reduction and 18 activity obstructions only; peer removes 18 repeated01 classes; no full B11 exclusion')
     assert len(records) == 135 and len(kept) == 108 and loops == 82305
     assert len(images) == 107 and len(minimum) == 106
     assert len(remaining) == 90 and len(remaining_images) == 89 and len(remaining_minimum) == 88
