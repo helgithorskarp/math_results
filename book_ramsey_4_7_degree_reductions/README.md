@@ -8,6 +8,9 @@ B7 subgraph in its complement. Books are ordinary, not induced,
 subgraphs. Equivalently, every edge of G has at most three common
 neighbors, and every edge of its complement has at most six.
 
+The current combined necessary range is **degrees 8..11, edges 97..112**;
+the low-edge histogram cuts and parity-equality classification are in item 14.
+
 **Proved necessary conditions:**
 
 1. Every degree lies between **7 and 11**, by the analytic capacity
@@ -74,7 +77,22 @@ neighbors, and every edge of its complement has at most six.
     [degree106_columns.md](degree106_columns.md) proves a general
     signed-column cross-defect inequality and regenerates 6,446
     exceptional-row certificates violating it. Both exact implementations
-    agree entry by entry. The remaining branches are still unresolved.
+    agree entry by entry. The later global degree theorem in item 13
+    excludes all degree-seven branches.
+13. Every full red degree is now **8..11** and **97 <= e(G) <= 112**,
+    by six-books-3's [global degree-eleven cut](../book_ramsey_b4_b7_degree11_global_cut/PROOF.md).
+    Its degree-seven exclusion uses our earlier uniform-incidence theorem.
+    A degree-eleven vertex forces at least 106 edges. Items 6--12 record
+    intermediate degree-seven reductions; the global result excludes
+    those whole branches.
+14. If only degrees 8,9,10 occur, equality in the incident parity defect
+    budget forces **8:11,9:0,10:11**, 99 red edges and full spine saturation.
+    Every vertex then has four red neighbors in the degree-eight class.
+    [parity_square.md](parity_square.md) excludes the two other equality
+    histograms by nonsquare determinants of a forced integer matrix square.
+    At 97 edges only **(n8,n9,n10)=(4,18,0),(5,16,1),(6,14,2)** remain.
+    At 98 edges the counts are **(a,24-2a,a-2),2<=a<=8**.
+    These are necessary conditions, with no realizability assertion.
 
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
@@ -138,6 +156,10 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 book_ramsey_4_7_degree_reductions/degree106_columns_independent.py \
   --compare-records /tmp/book-signed-columns.json
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 book_ramsey_4_7_degree_reductions/parity_square_check.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 book_ramsey_4_7_degree_reductions/parity_square_independent.py
 ```
 
 The deterministic JSON output matches [expected.json](expected.json).
@@ -222,7 +244,7 @@ The compact expected records and explicit B7 pages are in
 implementation cross-checks; the classical spectral classification's
 historical enumeration is a named external dependency, not rerun here.
 
-The last two commands exclude uniform cross incidence at every edge
+The two uniform-cross commands exclude uniform cross incidence at every edge
 count. The combinations generator visits all 1,048,576 B graphs with
 at most ten red edges per template; root caps leave 236,926. An
 independent binary recursion generates that entire root-admissible
