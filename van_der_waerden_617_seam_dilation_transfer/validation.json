@@ -1,0 +1,249 @@
+{
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "checked_at": "2026-09-30T06:31:18.300706+00:00",
+  "status": "VERIFIED_COMPLETE_SEAM_DILATION_SOURCE",
+  "cold_reproduction": {
+    "cold_base_transcripts_generated": 2,
+    "seconds": 110.945820226043,
+    "child_peak_rss_kib": 187580,
+    "self_peak_rss_kib": 18408,
+    "stages": [
+      {
+        "label": "compile-base-generator-0",
+        "seconds": 2.3607631879858673
+      },
+      {
+        "label": "compile-base-checker-0",
+        "seconds": 0.8584513289970346
+      },
+      {
+        "label": "generate-base-0",
+        "seconds": 47.70298936095787
+      },
+      {
+        "label": "check-base-0",
+        "seconds": 1.2821289320127107
+      },
+      {
+        "label": "compile-base-generator-1",
+        "seconds": 1.9923943370231427
+      },
+      {
+        "label": "compile-base-checker-1",
+        "seconds": 1.0097050160402432
+      },
+      {
+        "label": "generate-base-1",
+        "seconds": 10.170309217006434
+      },
+      {
+        "label": "check-base-1",
+        "seconds": 0.5032622379949316
+      },
+      {
+        "label": "compile-lift-checker",
+        "seconds": 1.6411007980350405
+      },
+      {
+        "label": "check-all-lifts",
+        "seconds": 37.143782088009175
+      },
+      {
+        "label": "check-transfer-identities",
+        "seconds": 5.6299766909796745
+      }
+    ]
+  },
+  "complete_lift_check": {
+    "agent": "six-vdw-3",
+    "role": "researcher",
+    "status": "VERIFIED_DIRECT_DILATION_LIFTS",
+    "full_domain": true,
+    "begin": 0,
+    "end": 617,
+    "incompatible_keys_per_profile": 760761,
+    "profiles": [
+      {
+        "base_radius": 617,
+        "dilation": 1,
+        "window": [
+          1235,
+          2469
+        ],
+        "edits_per_class": 44,
+        "total_edits": 44,
+        "classes_checked": 760761,
+        "APs_checked": 33473484
+      },
+      {
+        "base_radius": 617,
+        "dilation": 2,
+        "window": [
+          618,
+          3086
+        ],
+        "edits_per_class": 44,
+        "total_edits": 88,
+        "classes_checked": 1521522,
+        "APs_checked": 66946968
+      },
+      {
+        "base_radius": 617,
+        "dilation": 3,
+        "window": [
+          1,
+          3703
+        ],
+        "edits_per_class": 44,
+        "total_edits": 132,
+        "classes_checked": 2282283,
+        "APs_checked": 100420452
+      },
+      {
+        "base_radius": 308,
+        "dilation": 1,
+        "window": [
+          1544,
+          2160
+        ],
+        "edits_per_class": 18,
+        "total_edits": 18,
+        "classes_checked": 760761,
+        "APs_checked": 13693698
+      },
+      {
+        "base_radius": 308,
+        "dilation": 2,
+        "window": [
+          1236,
+          2468
+        ],
+        "edits_per_class": 18,
+        "total_edits": 36,
+        "classes_checked": 1521522,
+        "APs_checked": 27387396
+      },
+      {
+        "base_radius": 308,
+        "dilation": 3,
+        "window": [
+          928,
+          2776
+        ],
+        "edits_per_class": 18,
+        "total_edits": 54,
+        "classes_checked": 2282283,
+        "APs_checked": 41081094
+      },
+      {
+        "base_radius": 308,
+        "dilation": 4,
+        "window": [
+          620,
+          3084
+        ],
+        "edits_per_class": 18,
+        "total_edits": 72,
+        "classes_checked": 3043044,
+        "APs_checked": 54774792
+      },
+      {
+        "base_radius": 308,
+        "dilation": 5,
+        "window": [
+          312,
+          3392
+        ],
+        "edits_per_class": 18,
+        "total_edits": 90,
+        "classes_checked": 3803805,
+        "APs_checked": 68468490
+      },
+      {
+        "base_radius": 308,
+        "dilation": 6,
+        "window": [
+          4,
+          3700
+        ],
+        "edits_per_class": 18,
+        "total_edits": 108,
+        "classes_checked": 4564566,
+        "APs_checked": 82162188
+      }
+    ],
+    "total_classes_checked": 20540547,
+    "total_APs_checked": 488408562,
+    "total_point_incidences_checked": 3418859934
+  },
+  "independent_finite_transfer_check": {
+    "agent": "six-vdw-3",
+    "role": "researcher",
+    "status": "VERIFIED_FINITE_TRANSFER_IDENTITIES",
+    "dilations": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "point_phase_identities": 15988938,
+    "partition_points": 38850,
+    "seam_boundary_pairs": 25914,
+    "phase_permutation_entries": 12957,
+    "arithmetic_controls_rejected": [
+      "invalid_dilation_0",
+      "invalid_dilation_-1",
+      "invalid_dilation_617",
+      "invalid_dilation_1234",
+      "omitting_whole_color_exchange",
+      "omitting_inverse",
+      "omitting_class_shift",
+      "including_class_index_m",
+      "applying_color_exchange_to_only_one_side"
+    ],
+    "scope": "Finite identity check for target dilations. The elementary written proof establishes the general positive dilation theorem."
+  },
+  "controls_and_sanitizers": {
+    "agent": "six-vdw-3",
+    "role": "researcher",
+    "status": "SOURCE_PINS_CONTROLS_SANITIZERS_PASSED",
+    "source_pins_checked": 4,
+    "binary_controls": {
+      "agent": "six-vdw-3",
+      "role": "researcher",
+      "status": "ALL_BINARY_CORRUPTIONS_REJECTED",
+      "rejected_count": 13,
+      "rejected": [
+        "bad_full_magic",
+        "bad_local_magic",
+        "wrong_packing_bound",
+        "wrong_local_radius",
+        "missing_base_phase",
+        "wrong_base_case_count",
+        "constant_AP",
+        "AP_outside_base_window",
+        "AP_at_pole",
+        "nonmonochromatic_AP",
+        "duplicated_AP_support",
+        "truncated_base",
+        "trailing_base_bytes"
+      ],
+      "proper_subrange_positive_control": {
+        "full_domain": false,
+        "keys_per_profile": 1233,
+        "profiles": 9
+      }
+    },
+    "sanitizer_checked_keys_per_profile": 3699,
+    "sanitizer_profiles": 9,
+    "sanitizer_APs_checked": 2374758,
+    "sanitizer_math_fields_match_release": true,
+    "seconds": 16.006043527042493,
+    "child_peak_rss_kib": 214620
+  },
+  "limits": "All jobs sequential; all numerical threads1; each native invocation<=90s; existing CPU1/memory2GiB/tasks128 unchanged.",
+  "trust": "Explicit44/18 numerical dependencies, exact Euler/direct integer-AP/checker semantics and written unformalized dilation/hitting arguments. Same-author check independence; no external review of the new transfer claimed."
+}

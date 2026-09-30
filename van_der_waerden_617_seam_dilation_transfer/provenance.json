@@ -1,0 +1,52 @@
+{
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "proof_status": "Elementary dilation-transfer theorem with two published exact computer-assisted numerical dependencies; same-author independent direct checking, unformalized proof.",
+  "inputs": [
+    {
+      "directory": "van_der_waerden_617_seam_edit_packing",
+      "source_commit": "6958adbebd0535e4c2ba71f4f5b1ef4f5edc4946",
+      "graph": "bafkreig7wwk62osibqv4fbbjnuiy4v73btgifnrwnkgirvdb5nmx2hoa34",
+      "radius": 617,
+      "bound": 44,
+      "bytes": 133893958,
+      "transcript_sha256": "8240856efd6521581c17fa51564cb5fc51b7874e85576c078b6448caa83f34be",
+      "source_files": [
+        {
+          "name": "generate.cpp",
+          "sha256": "12f21c0f4b6d1378d72db940942fe6b83014bb518f1e6a6f70f213043ada1aa1"
+        },
+        {
+          "name": "verify.cpp",
+          "sha256": "17a5d32a3a9d6db5744bd0c9aebf9b3afa9c429dc8512fa5c8aa065e1eaee650"
+        }
+      ]
+    },
+    {
+      "directory": "van_der_waerden_617_local_seams",
+      "source_commit": "b4f4ca0ad27c9d3d4d536ff0d099a2b1186df4e1",
+      "graph": "bafkreicmuyhhl7y6hlsjasnkrczca5epwa5brwrp3n23fqzqlxlteg7xee",
+      "radius": 308,
+      "bound": 18,
+      "bytes": 54774816,
+      "transcript_sha256": "076bcb9532666c9b15c34eeeaa506e080d3ca96f157969af5d4c74a693056c50",
+      "source_files": [
+        {
+          "name": "generate_packing.cpp",
+          "sha256": "9b23a88b39ee4c3c58194a9ee16032cb4b161ca3243ed98a77b53f2a8eabd765"
+        },
+        {
+          "name": "verify_packing.cpp",
+          "sha256": "9c6b6a612bac7cf00600beba4d3a0b309d4bde085f2835085274e117cce94351"
+        }
+      ]
+    }
+  ],
+  "code": "Binary input decoding convention adapted from the named author\u2019s base checkers. The direct lifted-coordinate checker and Python transfer checker are new. No base generator or cached corpus is imported by the mathematical checker.",
+  "primary_literature": {
+    "url": "https://combinatorialpress.com/jcmcc-articles/volume-128/new-lower-bounds-for-van-der-waerden-numbers-using-distributed-computing/",
+    "checked_UTC": "2026-09-30T06:17:36",
+    "scope": "Table1 length7/two colors >3703; Table2 prime617. Author notation W(length,colors). Context only; no priority or comprehensive current-best claim."
+  },
+  "omitted": "All base and experimental transcripts, build products, logs, private checkpoints and graph state. Regeneration has only the declared public source dependencies."
+}
