@@ -4,37 +4,91 @@ Author: **six-books-2**, role **researcher**, 2026-09-30.
 
 Every ordinary red-B4/blue-B7-free coloring on 22 vertices with a
 fixed-point-free color-preserving involution needs **at least three fully
-red orbit pairs and at least seven uniform orbit pairs**. An orbit pair
-is uniform when all four edges between its two two-vertex orbits have
-one color. Inside-orbit colors are arbitrary, and every such involution
-is covered.
+red orbit pairs, five fully blue orbit pairs, and eight uniform pairs
+total**. An orbit pair is uniform when all four cross edges between its
+two two-vertex orbits have one color. Inside-orbit colors and matching
+signs are arbitrary, and every such involution is covered.
 
-[TWO_RED.md](TWO_RED.md) excludes exactly two fully red pairs at every
-blue density. It reduces the quotient to three shapes with arbitrary
-outside blue cliques, absorbs those cliques into the diagonal of a
-symmetric matrix, and derives contradictions from linearity, symmetry
-and balanced-row parity. It builds on [PROOF.md](PROOF.md), which excludes
-zero or one red pair and proves at least seven uniform pairs total.
-The original six-pair invariant-space trace proof remains valid; the
-extension supplies a shorter symmetry contradiction that also permits
-the nonzero diagonal. The checks validate formulas and coverage; no
-finite computation is a premise of either analytic lemma.
+[FOUR_BLUE.md](FOUR_BLUE.md) excludes exactly four blue uniform pairs
+at arbitrary red density. Its complete eleven-form case argument uses
+blue-neighborhood union capacities, a restriction on two blue leaves
+sharing a neighbor, inside-color contradictions, and the impossibility
+of three mutually orthogonal sign rows of length six. Together with
+[TWO_RED.md](TWO_RED.md), it gives the current bounds. **Exactly eight
+uniform pairs must consist of three red and five blue**; no attainment
+is asserted. Seven uniform pairs are now excluded completely.
+
+The preceding [PROOF.md](PROOF.md) establishes the initial two-red and
+seven-total bounds. TWO_RED.md then excludes two red pairs at arbitrary
+blue density by a complete case argument and a diagonal shift, preserving
+row actions for arbitrary outside blue cliques. These earlier proofs
+remain valid. All code validates explicit written case arguments and
+identities; no finite computation is a mathematical premise.
 
 [six-reviewer-1's independent review](../book_ramsey_free_involution_review1/REVIEW.md)
-confirms the earlier lemma and proves at least four blue uniform pairs.
-Combined with the new three-red result, **exactly seven uniform pairs
-must consist of three red and four blue**. The review also supplies the
-shorter Gram symmetry obstruction and sharp relaxed operator residuals;
-those refinements are credited to the reviewer. This new arbitrary-density
-two-red extension has author validation and has not been independently
-reviewed.
+confirms the initial PROOF.md lemma, proves the four-blue lower bound
+used by FOUR_BLUE.md, and supplies shorter Gram symmetry obstructions
+and sharp relaxed operator residuals. Those refinements are credited
+to the reviewer. [six-reviewer-4's subsequent independent audit](../book_ramsey_free_involution_review4/REVIEW.md)
+confirms the three-red extension and permits arbitrary links within the
+complements of the earlier A/B/X cores. The five-blue extension has
+author validation and has not been independently reviewed.
+
+FOUR_BLUE.md also gives a local path-core exclusion: its five displayed
+orbits have four blue and three red uniform pairs, all core-to-outside
+blocks are matching, and the fifteen blocks within the six-orbit outside
+set are arbitrary. A saturated triangle forces three orthogonal sign
+rows of length six without using any of those fifteen blocks.
 
 The unrestricted located interval remains 22..23. This result does not
 assert an involution for arbitrary hypothetical 22-vertex witnesses, or
-exclude patterns with seven or more uniform pairs and at least three red
-pairs. No regularity, degree, peer core theorem, external graph catalogue,
-solver or floating-point premise is used. Author checks are not peer
-review or proof-assistant formalization.
+exclude patterns with eight or more uniform pairs satisfying these
+color bounds. No regularity, degree/core theorem, external graph
+catalogue, solver or floating-point premise is used. Author checks are
+not peer review or proof-assistant formalization.
+
+## Reproduction of the four-blue closure
+
+Python 3.11 standard library only, tested on Linux with Python 3.11.2.
+From the repository root:
+
+```sh
+python3 book_ramsey_b4_b7_free_involution/check_four_blue.py --scratch /tmp/book-four-blue-check
+```
+
+The runner executes one child at a time, with thread counts one and a
+120-second child timeout. Failed, incomplete or mismatching checks raise
+an error. All guards survive Python `-O`; records and logs stay in scratch.
+Compact expected values are in [four_blue_expected.json](four_blue_expected.json).
+The full tested run took 3.15 seconds with 17,364 KiB peak child RSS.
+
+| Check | Exact coverage |
+| --- | --- |
+| [four_blue_census.py](four_blue_census.py) | All eleven four-edge blue forms; all 586 permitted red-candidate subsets, including 408 with at least three red pairs; 43 pass relaxed matching budgets, and one P5 pattern with 128 flags passes all necessary budgets |
+| [four_blue_independent.py](four_blue_independent.py) | Generates all 20,475 four-edge sets on eight vertices and canonicalizes components to recover all eleven forms; literal two-point page sets, independently derived red candidates, direct inside-flag search; every survivor/flag and case diagnostic agrees |
+| Same separate checker | All 1,280 ordered orthogonal six-sign row pairs and 81,920 third-row attempts give no orthogonal triple; an order-four positive control; 512 deterministic lifted graphs give 3,072 literal spine and 1,536 Gram-difference checks, each with an explicit book spine |
+| [check_four_blue.py](check_four_blue.py) | Full main/separate comparison and rejection of an altered inside flag and a missing survivor |
+
+The main fixes one representative of each blue graph form proved complete
+in writing. It derives all red candidates from the necessary neighborhood
+union bound, then exhausts every subset, assuming only the prior analytic
+three-red minimum. Arbitrary red density is covered: each four-blue form
+has at most seven possible red pairs. All 2^11 inside flags are retained
+by a Python integer flag carrier. The separate checker generates forms
+from scratch, derives literal page costs, and enumerates flags directly.
+Both are author implementations and import no code from each other.
+
+The row checks are exact integers. The 512 full-size controls use sign
+seeds 0..31 with `random.Random`, both orbit-2 inside colors and two
+constant outside inside-color patterns, with four choices of blocks
+within the outside set: all matching, all red, all blue, and a seeded
+mixture of red/blue/matching. They test the saturated triangle
+and extract an actual forbidden spine in each sampled lift; they are not
+an exhaustive matching-sign enumeration. Python integers have no fixed-width
+overflow. Small literal page tables and the written third-orbit counting
+supply the formula audit. The C++ diagnostic mentioned in FOUR_BLUE.md
+was initial discovery only; portable reproduction needs no compiler,
+external data, catalogue or bulky certificate.
 
 ## Reproduction of the two-red extension
 
