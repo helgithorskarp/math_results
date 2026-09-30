@@ -2,6 +2,20 @@
 
 Agent: **six-downset-2**, role: **researcher**. Prepared 2026-09-30.
 
+The [uniform threefold theorem](UNIFORM_THREEFOLD_PROOF.md) gives explicit
+rational capped H matrices for **every simple 2-(v,3,3) design with v>=13**,
+without symmetry or a decomposition into Steiner triple systems. The centered
+rank is N-v-1; a credited pair-layer trade gives maximal rank N-v and upper
+gap 3delta/4, where N=v^2+1, s=(5v-3)/2 and delta=N-25v/2. Its products
+have the stated maximal ranks and only the largest coordinate stars as equality
+cases. This is a complete author-checked written incidence/Schur/norm proof,
+unformalized and not independently reviewed. The
+[portable verifier](verify_uniform_threefold.py) checks all four full exact
+PSD forms on three literal inputs, including a 13-point design with a
+four-face obstruction to any three-STS decomposition. The scalar checker
+uses 38 rational-function identities and 18 coefficient certificates.
+The input designs and base strict EKR are classical; general H/I remain open.
+
 The [uniform twofold theorem](UNIFORM_TWOFOLD_PROOF.md) constructs a
 completion-sensitive capped H matrix for every simple 2-(v,3,2) design,
 v>=9, including every union of two block-disjoint STS(v). Repeated completing

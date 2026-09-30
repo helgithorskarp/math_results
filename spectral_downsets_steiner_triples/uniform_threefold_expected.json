@@ -1,0 +1,663 @@
+{
+  "agent": "six-downset-2",
+  "arithmetic": "Fraction and integer Schur congruence",
+  "identities": {
+    "agent": "six-downset-2",
+    "domain": "Q(v)",
+    "identity_names": [
+      "triple_star",
+      "triple_row",
+      "pair_star",
+      "pair_row",
+      "point_star",
+      "point_row",
+      "constant_pair",
+      "constant_cross",
+      "constant_triple",
+      "alpha1",
+      "alpha2",
+      "Schur_reduction",
+      "Schur_margin",
+      "gap",
+      "eta",
+      "eight_mk_minus_v4",
+      "constant_core_trace",
+      "row1_gap",
+      "row2_gap",
+      "row3_gap"
+    ],
+    "nonnegative_coefficients_in_v_minus_13": {
+      "t_le_3_over_2": [
+        0,
+        1
+      ]
+    },
+    "radical_bounds": [
+      "sqrt(9/2)<9/4",
+      "sqrt(3/2)<5/4",
+      "sqrt18<17/4",
+      "sqrt(v)<=v/3 forv>=13"
+    ],
+    "real_sign_domain": "v>=13; design applications are odd integer orders",
+    "role": "researcher",
+    "strict_positive_coefficients_in_v_minus_13": {
+      "A_lt_6v2": [
+        153768,
+        54108,
+        7113,
+        414,
+        9
+      ],
+      "alpha1_gt_v": [
+        192,
+        29,
+        1
+      ],
+      "alpha2_gt_2v": [
+        1304,
+        360,
+        33,
+        1
+      ],
+      "beta_bound_positive": [
+        11,
+        1
+      ],
+      "c_lt_1": [
+        8,
+        1
+      ],
+      "cap_gap_positive": [
+        15,
+        27,
+        2
+      ],
+      "constant_core_upper_margin": [
+        303,
+        24
+      ],
+      "d_le_2": [
+        28,
+        13,
+        1
+      ],
+      "eight_mk_gt_v4": [
+        443,
+        217,
+        27,
+        1
+      ],
+      "h_le_5_over_2": [
+        32,
+        34,
+        3
+      ],
+      "mu_denominator_positive": [
+        478,
+        77,
+        3
+      ],
+      "mu_gt_half": [
+        19076,
+        6660,
+        855,
+        48,
+        1
+      ],
+      "repair_bound_positive": [
+        1,
+        1
+      ],
+      "row1_margin": [
+        13,
+        1
+      ],
+      "row2_margin": [
+        131,
+        11
+      ],
+      "row3_margin": [
+        239,
+        26
+      ],
+      "w_le_3_over_2": [
+        6,
+        11,
+        1
+      ]
+    },
+    "zero_polynomial_identities": 38
+  },
+  "inputs": [
+    {
+      "N": 170,
+      "Q00": "47/32",
+      "Z_nonzero": true,
+      "Z_offdiagonal_values": [
+        -1,
+        0,
+        2
+      ],
+      "blocks": [
+        7,
+        14,
+        19,
+        28,
+        38,
+        56,
+        69,
+        76,
+        112,
+        133,
+        137,
+        138,
+        152,
+        224,
+        265,
+        266,
+        274,
+        276,
+        289,
+        304,
+        321,
+        448,
+        530,
+        532,
+        548,
+        552,
+        577,
+        578,
+        608,
+        641,
+        642,
+        896,
+        1041,
+        1057,
+        1060,
+        1064,
+        1096,
+        1104,
+        1154,
+        1156,
+        1216,
+        1282,
+        1284,
+        1537,
+        1792,
+        2065,
+        2081,
+        2082,
+        2114,
+        2120,
+        2128,
+        2192,
+        2208,
+        2308,
+        2312,
+        2432,
+        2564,
+        2568,
+        3074,
+        3584,
+        4099,
+        4105,
+        4130,
+        4162,
+        4164,
+        4228,
+        4240,
+        4256,
+        4384,
+        4416,
+        4616,
+        4624,
+        4864,
+        5128,
+        5136,
+        6145,
+        6148,
+        7168
+      ],
+      "centered_gap": "15/2",
+      "centered_sha256": "21030d7cd4852b1ba34ffcb04496e34e612d2030895dd838de289ebcdbbd71cc",
+      "eta": "1/9152",
+      "generation": {
+        "modulus": 13,
+        "seeds": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            2,
+            6
+          ],
+          [
+            0,
+            2,
+            7
+          ],
+          [
+            0,
+            3,
+            7
+          ],
+          [
+            0,
+            3,
+            8
+          ]
+        ]
+      },
+      "incidence_identities_checked": 10,
+      "maximal_gap": "45/8",
+      "maximal_sha256": "528425a6f3052f81769423ff11d260affef2edc238a4797a93de827d7177e8d7",
+      "name": "cyclic13",
+      "no_three_STS_decomposition_witness": null,
+      "outside_completion_values": [
+        0,
+        1
+      ],
+      "ranks": {
+        "centered": 156,
+        "centered_buffer": 169,
+        "maximal": 157,
+        "maximal_buffer": 169
+      },
+      "rational_Schur_also_checked": [
+        "centered",
+        "maximal"
+      ],
+      "s": 31,
+      "v": 13,
+      "weights": {
+        "a": "-1",
+        "c": "51/55",
+        "d": "76/45",
+        "h": "23/10",
+        "t": "3/2",
+        "w": "241/165"
+      }
+    },
+    {
+      "N": 170,
+      "Q00": "47/32",
+      "Z_nonzero": false,
+      "Z_offdiagonal_values": [
+        0
+      ],
+      "blocks": [
+        11,
+        19,
+        22,
+        38,
+        44,
+        49,
+        76,
+        88,
+        98,
+        133,
+        145,
+        152,
+        161,
+        176,
+        196,
+        261,
+        266,
+        290,
+        304,
+        321,
+        322,
+        352,
+        392,
+        515,
+        521,
+        522,
+        532,
+        580,
+        608,
+        642,
+        644,
+        704,
+        784,
+        1030,
+        1042,
+        1044,
+        1064,
+        1089,
+        1160,
+        1216,
+        1284,
+        1288,
+        1408,
+        1537,
+        1568,
+        2060,
+        2081,
+        2084,
+        2088,
+        2113,
+        2128,
+        2178,
+        2320,
+        2432,
+        2568,
+        2576,
+        2816,
+        3073,
+        3074,
+        3136,
+        4101,
+        4105,
+        4120,
+        4162,
+        4168,
+        4176,
+        4226,
+        4256,
+        4353,
+        4356,
+        4640,
+        4864,
+        5136,
+        5152,
+        5632,
+        6146,
+        6148,
+        6272
+      ],
+      "centered_gap": "15/2",
+      "centered_sha256": "fb740b7644b2ea1589566099d5e126d0b487d9fb1006316bed9c8bd27e897b0d",
+      "eta": "1/9152",
+      "generation": {
+        "modulus": 13,
+        "seeds": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            1,
+            9
+          ],
+          [
+            0,
+            3,
+            9
+          ],
+          [
+            1,
+            3,
+            9
+          ],
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            2,
+            7
+          ]
+        ],
+        "tetrahedron_witness": [
+          0,
+          1,
+          3,
+          9
+        ]
+      },
+      "incidence_identities_checked": 10,
+      "maximal_gap": "45/8",
+      "maximal_sha256": "f0f20e8b1b1c5ff80817650ee3f5d129ccb6a17243afb2c5d93b600f1b7e3e5b",
+      "name": "nondecomposable13",
+      "no_three_STS_decomposition_witness": [
+        0,
+        1,
+        3,
+        9
+      ],
+      "outside_completion_values": [
+        0,
+        1,
+        3
+      ],
+      "ranks": {
+        "centered": 156,
+        "centered_buffer": 169,
+        "maximal": 157,
+        "maximal_buffer": 169
+      },
+      "rational_Schur_also_checked": [],
+      "s": 31,
+      "v": 13,
+      "weights": {
+        "a": "-1",
+        "c": "51/55",
+        "d": "76/45",
+        "h": "23/10",
+        "t": "3/2",
+        "w": "241/165"
+      }
+    },
+    {
+      "N": 226,
+      "Q00": "109/32",
+      "Z_nonzero": true,
+      "Z_offdiagonal_values": [
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3
+      ],
+      "blocks": [
+        7,
+        13,
+        14,
+        25,
+        41,
+        42,
+        52,
+        76,
+        81,
+        82,
+        97,
+        146,
+        148,
+        168,
+        224,
+        259,
+        304,
+        324,
+        385,
+        448,
+        518,
+        584,
+        608,
+        641,
+        642,
+        770,
+        772,
+        776,
+        1042,
+        1060,
+        1089,
+        1090,
+        1153,
+        1156,
+        1160,
+        1282,
+        1296,
+        1537,
+        1568,
+        2051,
+        2072,
+        2082,
+        2084,
+        2116,
+        2128,
+        2184,
+        2320,
+        2432,
+        2592,
+        3136,
+        3584,
+        4120,
+        4129,
+        4226,
+        4228,
+        4240,
+        4353,
+        4360,
+        4624,
+        4672,
+        5124,
+        5128,
+        5152,
+        6145,
+        6400,
+        6656,
+        8197,
+        8212,
+        8226,
+        8264,
+        8352,
+        8480,
+        8512,
+        8712,
+        8720,
+        8832,
+        9232,
+        9472,
+        10241,
+        10242,
+        10248,
+        12290,
+        12292,
+        12352,
+        16394,
+        16401,
+        16432,
+        16450,
+        16576,
+        16644,
+        16648,
+        16672,
+        16897,
+        16900,
+        16912,
+        17416,
+        18436,
+        18560,
+        19456,
+        20482,
+        20512,
+        20544,
+        24577,
+        24704,
+        25600
+      ],
+      "centered_gap": "77/2",
+      "centered_sha256": "143aad84676f18ddb0eabd745954be79ccd465087f999079dbf157cf6f67bfc2",
+      "eta": "11/37440",
+      "generation": {
+        "first": "projective F2^4 triples {a,b,a+b}, labelled a-1",
+        "permutations": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          [
+            9,
+            2,
+            14,
+            11,
+            12,
+            5,
+            10,
+            1,
+            8,
+            3,
+            6,
+            0,
+            7,
+            13,
+            4
+          ],
+          [
+            1,
+            13,
+            12,
+            10,
+            6,
+            14,
+            3,
+            0,
+            8,
+            11,
+            5,
+            7,
+            4,
+            9,
+            2
+          ]
+        ]
+      },
+      "incidence_identities_checked": 10,
+      "maximal_gap": "231/8",
+      "maximal_sha256": "e7902129a87281436e2e367a142c9e127450bd4b43b0665d0802a464a9b880d2",
+      "name": "three_STS15",
+      "no_three_STS_decomposition_witness": null,
+      "outside_completion_values": [
+        0,
+        1,
+        2
+      ],
+      "ranks": {
+        "centered": 210,
+        "centered_buffer": 225,
+        "maximal": 211,
+        "maximal_buffer": 225
+      },
+      "rational_Schur_also_checked": [],
+      "s": 36,
+      "v": 15,
+      "weights": {
+        "a": "-1",
+        "c": "73/78",
+        "d": "103/66",
+        "h": "61/30",
+        "t": "7/5",
+        "w": "389/286"
+      }
+    }
+  ],
+  "rejection_controls": 6,
+  "role": "researcher"
+}

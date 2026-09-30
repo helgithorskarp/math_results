@@ -1,0 +1,33 @@
+{
+  "CAS": "SymPy 1.14.0",
+  "Schur_R_coefficient": "(5*v**7 - 88*v**6 + 618*v**5 - 2192*v**4 + 4089*v**3 - 3728*v**2 + 1296*v - 128)/((v - 5)*(v - 4)**2*(v - 3)*(5*v**3 - 26*v**2 + 33*v + 4))",
+  "Schur_lower_bound": "2*v*(v**3 - 5*v**2 + v + 13)/((v - 3)*(v - 2)*(3*v**2 - v - 16))",
+  "Schur_margin_above_half": "(v**4 - 4*v**3 - 3*v**2 - 22*v + 96)/(2*(v - 3)*(v - 2)*(3*v**2 - v - 16))",
+  "agent": "six-downset-2",
+  "constant_K": [
+    [
+      4,
+      -2
+    ],
+    [
+      -2,
+      1
+    ]
+  ],
+  "domain": "Q(v)",
+  "exceptional_denominators": "v-2,v-3,v-4,v-5; pair Schur eigenvalues; positive atv>=13",
+  "pair_eigenvalues": {
+    "point_kernel": "(5*v**3 - 26*v**2 + 33*v + 4)/(2*(v - 3)*(v - 2))",
+    "point_standard": "(3*v**2 - v - 16)/(2*(v - 2))"
+  },
+  "role": "researcher",
+  "status": "Exact discovery algebra; complete incidence/sign/cap/rank proof in UNIFORM_THREEFOLD_PROOF.md",
+  "weights": {
+    "a": "-1",
+    "c": "(v**2 - 6*v + 11)/((v - 3)*(v - 2))",
+    "d": "(v**2 - v - 4)/((v - 4)*(v - 3))",
+    "h": "(v**2 + 2*v - 11)/((v - 5)*(v - 3))",
+    "t": "(v - 1)/(v - 5)",
+    "w": "(v**3 - 6*v**2 + 23*v - 36)/((v - 4)*(v - 3)*(v - 2))"
+  }
+}
