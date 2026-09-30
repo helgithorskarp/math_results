@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "python": "CPython3.11+ without -O",
+  "dependencies": "standard library only",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 23,
+      "sha256": "34c093d2e62c2f8e7262ce41c8428181355396eab328e55e93cff30dea937e96"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4399,
+      "sha256": "0aa6fe6ae6d759586757d43d87a28c3aef07d9d082785a9415a72e5260dcae31"
+    },
+    {
+      "path": "PROOF.md",
+      "bytes": 8456,
+      "sha256": "f5b41e777c17b00cd4ba8d9c11d2933296a234b79ff3a3ddaf69c20a8fa2eb83"
+    },
+    {
+      "path": "fixture.json",
+      "bytes": 10515,
+      "sha256": "164a65a053d60196f496fd48b8ea3704e3e0ac1d375ec29f5692c15bcaf14b73"
+    },
+    {
+      "path": "certificate.json",
+      "bytes": 35599,
+      "sha256": "d9b648d5c8c802f6e2c1e456e2fe6fb208b0eefbc320cfaff36fd62c2163c82f"
+    },
+    {
+      "path": "generate.py",
+      "bytes": 3636,
+      "sha256": "7b2b953364b50229dec8e6ee47f8442c5baadb8b62ea120dcf21245eea5dea27"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 6867,
+      "sha256": "b26d05ae11b100e05e91ff6bd2cd4e4c498d723daa4615ce184893c54cb99cff"
+    },
+    {
+      "path": "driver.py",
+      "bytes": 3073,
+      "sha256": "a5d7ea511b4660b4ecbd4f77b04ff7b0b3d73e57c9966db5e1e119221f2e4d5e"
+    }
+  ],
+  "fixture_sha256": "164a65a053d60196f496fd48b8ea3704e3e0ac1d375ec29f5692c15bcaf14b73",
+  "certificate_sha256": "d9b648d5c8c802f6e2c1e456e2fe6fb208b0eefbc320cfaff36fd62c2163c82f",
+  "scope": "R137 minimum kernels with at most one unary; no fullR18 exclusion",
+  "required_imports": [
+    "S9=25,S11=35,S12=39,S13>=44",
+    "committed7494 minimum1exact2",
+    "marked-input pruning/standardization and binary commutation"
+  ],
+  "excluded_artifacts": "No state corpora, credentials, ledger, solver trace, logs or operational checkpoints."
+}
