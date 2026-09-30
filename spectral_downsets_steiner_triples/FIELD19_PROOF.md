@@ -46,8 +46,10 @@ families are precisely those r coordinate stars.
 This is a theorem about **the displayed block set**. Its contained
 cyclic decompositions are fully enumerated below; there is no census
 of all cyclic STS(19), all common-cycle pairs, all twofold triple
-systems, or all nineteen-point downsets. There is no all-prime field
-certificate assertion. The classical design construction and base
+systems, or all nineteen-point downsets. This retained finite certificate
+makes no all-prime assertion. The later
+[uniform twofold proof](UNIFORM_TWOFOLD_PROOF.md) gives a different explicit
+certificate for every eligible finite-field order. The classical design construction and base
 strict EKR are not claimed new. The latter is already covered by
 [Czabarka--Hurlbert--Kamat, 2017, Theorem1.4](https://arxiv.org/pdf/1703.00494).
 The new increment relative to our earlier matrices is this scoped

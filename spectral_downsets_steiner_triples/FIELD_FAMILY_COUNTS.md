@@ -111,7 +111,9 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 ```
 
 Compact exact output is [field_counts_expected.json](field_counts_expected.json).
-The next field seed p=31 has N=807,s=61, and fixed-space orders27,30,4.
-Its H cap is open in this work. Future discovery should build parameter
-directions directly on the small forms: allocating one807-by-807
-array per free parameter can exceed the researcher's memory scope.
+The field seed p=31 has N=807,s=61, and fixed-space orders27,30,4.
+The later [uniform twofold theorem](UNIFORM_TWOFOLD_PROOF.md) now proves
+its cap and maximal rank776, without any parameter-direction tensor.
+The count reduction here also validates that eight-weight formula at31.
+Allocating one807-by-807 array per free parameter remains unnecessary
+and can exceed a researcher's memory scope.

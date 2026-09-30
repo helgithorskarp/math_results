@@ -2,6 +2,21 @@
 
 Agent: **six-downset-2**, role: **researcher**. Prepared 2026-09-30.
 
+The [uniform twofold theorem](UNIFORM_TWOFOLD_PROOF.md) constructs an eight-weight
+capped H matrix for every simple 2-(v,3,2) design, v>=13, whose map from a pair
+to its two completing points is a bijection. No point symmetry is required.
+It has rank N-v-1 and upper gap delta=(5v^2-41v+6)/6. An explicit pair-layer
+perturbation gives maximal rank N-v and gap delta/2 for the entire input class.
+This covers the classical equilateral design over every finite field q>=13,
+q=1 mod3, with maximal rank at even orders and odd prime powers alike.
+Repaired factors and their products have only their largest coordinate stars
+as maximum families; this base strict EKR conclusion is classical.
+The new ingredient is the explicit uniform spectral certificate. All-orders
+scope rests on the written incidence/Schur/norm proof, author-checked and
+unformalized. The [portable verifier](verify_uniform_twofold.py) checks exact
+prime-field matrices at 13,19,31, with independent full 217-by-217 checks at16.
+It passed in 226.48s with 239,488KiB RSS. General H/I remain open.
+
 The [explicit nineteen-point field theorem](FIELD19_PROOF.md) gives a capped
 maximal-rank H matrix for the downset with blocks
 {x,x+d,x+8d} over F_19, d!=0, and all its point relabellings. Here N=305,
@@ -9,8 +24,8 @@ s=37, rank Q=286, and the constant complement has a66-unit upper gap.
 All finite powers and mixed products with the earlier certified Steiner
 factors have the stated maximal ranks and star-only equality. The literal
 design's eight contained cyclic systems and four decompositions are
-regenerated; this does not enumerate all cyclic STS(19) or establish an
-all-prime field-family certificate. Its1.3 KiB fixed weight fixture needs
+regenerated; this does not enumerate all cyclic STS(19). The later uniform
+theorem above supplies a separate all-field construction. Its1.3 KiB fixed weight fixture needs
 no optimizer. Two exact affine restrictions of orders17 and20 certify
 PSD; a full305-by-305 fraction-free Schur fallback independently checks
 all seven forms. These scoped spectral constructions are author-checked
@@ -18,7 +33,7 @@ and unformalized; the base design and strict EKR are classical.
 The [uniform field-family count corollary](FIELD_FAMILY_COUNTS.md) determines
 the exact affine restriction sizes at every prime p=1 mod6:
 (5p+7)/6 and(5p+25)/6. It gives a scalable PSD/rank reduction and
-search dimensions, while capped feasibility at general p remains open.
+search dimensions, now also used to validate the uniform theorem above.
 
 The [cyclic thirteen-point theorem](CYCLIC_TWO_STS13_PROOF.md) gives a capped
 maximal-rank certificate for every union of two block-disjoint STS(13) that
@@ -32,7 +47,8 @@ spectral constructions are author-checked and unformalized. The
 orders12 and15 suffice for exact PSD and rank checking; the verifier also
 provides a full144-by-144 Schur fallback. The design itself and classical
 base strict-EKR property are not claimed new. This does not cover arbitrary
-two-STS(13) pairs or assert a uniform affine field-family certificate.
+two-STS(13) pairs. Its earlier finite certificate is retained alongside
+the later uniform field-family construction.
 
 The [four-system theorem](FOUR_STS9_PROOF.md) gives capped maximal-rank
 certificates for **every union of four block-disjoint STS(9)**. Here N=94,
@@ -167,6 +183,8 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 spectral_downsets_steiner_triples/verify_field19.py --full --check
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 spectral_downsets_steiner_triples/verify_field_counts.py --check
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 spectral_downsets_steiner_triples/verify_uniform_twofold.py --check
 ```
 
 Only the Python standard library is required. Verified with CPython 3.11.2;
@@ -199,6 +217,9 @@ Expected principal results:
 
 | Instance | N | Maximum star s | Exact rank of Q |
 |---|---:|---:|---:|
+| Uniform repaired equilateral field design on31 points | 807 | 61 | 776 |
+| Uniform repaired equilateral field design on16 points | 217 | 31 | 201 |
+| Uniform centered equilateral field design on16 points | 217 | 31 | 200 |
 | Maximal-rank capped explicit affine field design on19 points | 305 | 37 | 286 |
 | Centered capped explicit affine field design on19 points | 305 | 37 | 285 |
 | Maximal-rank capped common-cycle two-STS(13) | 144 | 25 | 131 |
