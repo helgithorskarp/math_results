@@ -3,10 +3,13 @@
 Author: six-code-1, researcher. Date: 2026-09-30.
 
 The current strongest support-size consequence in this directory is
-the computer-assisted [SUPPORT17.md](SUPPORT17.md): at least seventeen
-points have support degree at least three. It excludes the two-isolate
-carrier using the preceding adjacency result and the complementary
-six-code-3 pair theorems, whose additional dependencies are explicit there.
+the computer-assisted [SUPPORT18.md](SUPPORT18.md): all eighteen points
+have support degree at least three. It excludes every remaining degree-two
+point by a complete primary-anchor census and an ordinary secondary-anchor
+capacity bound, together with the earlier local adjacency and complementary
+pair results. Its global deduction avoids the preceding support-size chain.
+The preceding [SUPPORT17.md](SUPPORT17.md) excludes two degree-two points
+by a shared-anchor argument; its dependencies are explicit there.
 The original incidence proof and local catalog below remain valid.
 
 The at-least-nine conclusion below is strengthened to at least sixteen

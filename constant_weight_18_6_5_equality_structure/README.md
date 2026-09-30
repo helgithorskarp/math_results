@@ -6,9 +6,22 @@ A binary length-18, weight-5 code of minimum distance at least six is
 equivalently a family of five-element subsets with intersections of size
 at most two. The maintained table still gives **69–72**.
 
+[SUPPORT18.md](SUPPORT18.md) proves that **all eighteen** points of a
+72-word code have deficit-support degree at least three. The new local
+lemma bounds the secondary anchor's replication by nineteen whenever
+a `(3,2)` point and its primary `(3,1,1)` anchor both have replication
+twenty. All 3,390 labeled primary-anchor leaves reduce under 36 checked
+permutations to 117 cases. Two separate finite implementations agree on
+all fifteen compatible primary stars and every secondary candidate.
+An ordinary pair-capacity bound excludes secondary saturation in each.
+Together with the earlier local adjacency and complementary pair
+exclusions, this rules out every degree-two point, without using the
+previous support-size chain or its Rees--Stinson dependency. The new
+result has not received independent review; the numerical interval remains 69–72.
+
 [SUPPORT17.md](SUPPORT17.md) proves that a 72-word code has at least
 **seventeen** points of deficit-support degree at least three. At most
-one degree-two point remains. The new local exclusion covers two
+one degree-two point remained at that stage. Its local exclusion covers two
 saturated degree-two points with distinct primary anchors and a shared
 secondary anchor. Two different enumerations agree on all thirty
 compatible pairs of links; nineteen fail an ordinary point-capacity
@@ -87,6 +100,8 @@ python3 -B constant_weight_18_6_5_equality_structure/check_adjacent_low.py
 python3 -B constant_weight_18_6_5_equality_structure/verify_adjacent_low.py --compare-primary
 python3 -B constant_weight_18_6_5_equality_structure/check_two_isolates.py
 python3 -B constant_weight_18_6_5_equality_structure/verify_two_isolates.py --compare-primary
+python3 -B constant_weight_18_6_5_equality_structure/check_single_isolate.py
+python3 -B constant_weight_18_6_5_equality_structure/verify_single_isolate.py --compare-primary
 ```
 
 Run from the repository root. The script regenerates the catalog in
@@ -144,7 +159,7 @@ candidate with the primary implementation. Their compact manifest is
 ADJACENT_LOW; these are two different algorithms by the same researcher,
 not independent peer review. No unrestricted numerical bound is improved.
 
-The final two scripts prove the shared-anchor obstruction used for the
+The two shared-anchor scripts prove the obstruction used for the
 seventeen-point theorem. The primary exact pair-cover computation completes
 127 cases in 1,183 nodes. The replay instead checks 41,472 split relative
 planes and reconstructs every three-edge anchor leave from its degree
@@ -153,6 +168,16 @@ sequence. Their actual second stars, anchor rows and columns, and all
 `two_isolates_expected.json` and `two_isolates_replay_expected.json`.
 No anchor packing optimization is needed: all nonconflicting cases contain
 a required pair in no legal candidate quadruple.
+
+The final two scripts exclude the remaining degree-two point. The primary
+search checks all 117 actual leave orbits in 195,044 nodes and records fifteen
+compatible primary stars. The replay independently generates the 3,390
+leaves from degree sequences and uses sparse Algorithm X in 191,510 nodes.
+It matches every primary cover and every secondary candidate entry. All
+fifteen cases give secondary replication at most nineteen by the ordinary
+pair-union degree bound. The compact manifests are `single_isolate_expected.json`
+and `single_isolate_replay_expected.json`; the complete mathematical deduction
+and its shorter dependency chain are in SUPPORT18.
 
 ## Baseline provenance and scope
 
