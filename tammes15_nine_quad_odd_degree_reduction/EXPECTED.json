@@ -1,0 +1,1285 @@
+{
+  "H_and_32_profile_interval": [
+    "1/2",
+    "beta"
+  ],
+  "agent": "six-tammes-1",
+  "arithmetic": {
+    "beta_endpoint_values": [
+      "385172741/5000000000",
+      "-112/3125"
+    ],
+    "beta_polynomial": [
+      1,
+      4,
+      2,
+      -4,
+      -11,
+      -24
+    ],
+    "polynomials": {
+      "1+c-4c^2": {
+        "Bernstein_on_closed_half_three_fifths": [
+          "1/2",
+          "7/20",
+          "4/25"
+        ],
+        "power": [
+          1,
+          1,
+          -4
+        ]
+      },
+      "D": {
+        "Bernstein_on_closed_half_three_fifths": [
+          "7/4",
+          "9/5",
+          "46/25"
+        ],
+        "power": [
+          1,
+          2,
+          -1
+        ]
+      },
+      "H": {
+        "Bernstein_on_closed_half_three_fifths": [
+          "2",
+          "11/5"
+        ],
+        "power": [
+          1,
+          2
+        ]
+      },
+      "H_edge_lower_plus_one_third_numerator": {
+        "Bernstein_on_closed_half_three_fifths": [
+          "0",
+          "1/2",
+          "28/25"
+        ],
+        "power": [
+          -2,
+          -2,
+          12
+        ]
+      },
+      "minus_beta_derivative": {
+        "Bernstein_on_closed_half_three_fifths": [
+          "10",
+          "501/40",
+          "387/25",
+          "2367/125",
+          "2872/125"
+        ],
+        "power": [
+          -4,
+          -4,
+          12,
+          44,
+          120
+        ]
+      }
+    },
+    "r4_rows": [
+      {
+        "a": 6,
+        "at_least_four_distinct_ordinary_fours": false,
+        "b": 0,
+        "if_b3_common_neighbors_of_two_zero_T_fours": null,
+        "ordinary_fours": 1
+      },
+      {
+        "a": 4,
+        "at_least_four_distinct_ordinary_fours": false,
+        "b": 1,
+        "if_b3_common_neighbors_of_two_zero_T_fours": null,
+        "ordinary_fours": 2
+      },
+      {
+        "a": 2,
+        "at_least_four_distinct_ordinary_fours": false,
+        "b": 2,
+        "if_b3_common_neighbors_of_two_zero_T_fours": null,
+        "ordinary_fours": 3
+      },
+      {
+        "a": 0,
+        "at_least_four_distinct_ordinary_fours": true,
+        "b": 3,
+        "if_b3_common_neighbors_of_two_zero_T_fours": 4,
+        "ordinary_fours": 4
+      }
+    ],
+    "y_minus_pi_minus_alpha_tangent_numerator": [
+      1,
+      2,
+      -3,
+      -4
+    ]
+  },
+  "conclusion": "q9 branch has 1<=n3=n5<=3; on beta it has 32 necessary count profiles, with a triangle-free small-corner graph and necessary original-neighbor stars. No realizability or global bound claimed.",
+  "controls": {
+    "negative_controls_rejected": 6,
+    "positive_controls_accepted": 2
+  },
+  "cover": {
+    "profiles": [
+      {
+        "H_labeled_count": 7,
+        "H_masks_sha256": "d71a595b6e83e7180caf80e813a0e1b08c48963fd436c20da78927c8f489902a",
+        "U_families_sha256": "100151846910eef0db7e3dbad564b7d235998f44c8c2a8971c919aa7664ab647",
+        "U_unlabeled_family_count": 1,
+        "a": 0,
+        "b": 3,
+        "first_H_mask": 0,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          1,
+          0,
+          0
+        ],
+        "ordinary_fours": 10,
+        "r": 1
+      },
+      {
+        "H_labeled_count": 12,
+        "H_masks_sha256": "717cc0ec01d9e276e5867abd0f1c7342693c24ec935cd4564a79466220d59903",
+        "U_families_sha256": "99ff8f3ab9e65cf854d51ae8241842365a0f7c3d3ea817958ed7435e96cb7b6f",
+        "U_unlabeled_family_count": 4,
+        "a": 1,
+        "b": 2,
+        "first_H_mask": 20,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          0,
+          1,
+          0
+        ],
+        "ordinary_fours": 10,
+        "r": 1
+      },
+      {
+        "H_labeled_count": 1,
+        "H_masks_sha256": "4b4529e9287b9371a97f0e8ec4b5599b9cb1ca2da200af4d36a8496fb9b2d83c",
+        "U_families_sha256": "99ff8f3ab9e65cf854d51ae8241842365a0f7c3d3ea817958ed7435e96cb7b6f",
+        "U_unlabeled_family_count": 4,
+        "a": 2,
+        "b": 1,
+        "first_H_mask": 52,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          0,
+          0,
+          1
+        ],
+        "ordinary_fours": 10,
+        "r": 1
+      },
+      {
+        "H_labeled_count": 39,
+        "H_masks_sha256": "a18f81bd2e78bdd4e24d373bb10d2021c6c2fdda8a0068e12a922519d3203ae4",
+        "U_families_sha256": "99ff8f3ab9e65cf854d51ae8241842365a0f7c3d3ea817958ed7435e96cb7b6f",
+        "U_unlabeled_family_count": 4,
+        "a": 2,
+        "b": 2,
+        "first_H_mask": 0,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          1,
+          0,
+          0
+        ],
+        "ordinary_fours": 9,
+        "r": 1
+      },
+      {
+        "H_labeled_count": 108,
+        "H_masks_sha256": "3d944b3ea4933601a2fb387e8f034a0e6c8bdc6749b26235c98c1224bf816c4f",
+        "U_families_sha256": "f2731f0428c9111c03b5830a42f2e3471668bfab43cf73333eda968c1235be1e",
+        "U_unlabeled_family_count": 10,
+        "a": 3,
+        "b": 1,
+        "first_H_mask": 72,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          0,
+          1,
+          0
+        ],
+        "ordinary_fours": 9,
+        "r": 1
+      },
+      {
+        "H_labeled_count": 28,
+        "H_masks_sha256": "2546c995e0e7e87863f532f4e9eb1b8a2283e97351beb28d98581b04ce3511ca",
+        "U_families_sha256": "f2731f0428c9111c03b5830a42f2e3471668bfab43cf73333eda968c1235be1e",
+        "U_unlabeled_family_count": 10,
+        "a": 4,
+        "b": 0,
+        "first_H_mask": 328,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          0,
+          0,
+          1
+        ],
+        "ordinary_fours": 9,
+        "r": 1
+      },
+      {
+        "H_labeled_count": 261,
+        "H_masks_sha256": "46f15ce56c24ad179f715b03d841b58ed9350a00ffbba8e098fe864227fad701",
+        "U_families_sha256": "f2731f0428c9111c03b5830a42f2e3471668bfab43cf73333eda968c1235be1e",
+        "U_unlabeled_family_count": 10,
+        "a": 4,
+        "b": 1,
+        "first_H_mask": 0,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          1,
+          0,
+          0
+        ],
+        "ordinary_fours": 8,
+        "r": 1
+      },
+      {
+        "H_labeled_count": 790,
+        "H_masks_sha256": "a3f96502dbb820ed712cd1a1a8a404b9da1dea9f98a6330f7557c3dcf37d8f02",
+        "U_families_sha256": "ad740bf9c94f9badb9359076032dde4406e23d1b01de38764c6712b7911f32a5",
+        "U_unlabeled_family_count": 20,
+        "a": 5,
+        "b": 0,
+        "first_H_mask": 272,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          0,
+          1,
+          0
+        ],
+        "ordinary_fours": 8,
+        "r": 1
+      },
+      {
+        "H_labeled_count": 1708,
+        "H_masks_sha256": "702c961621160e3576c3d53ae53f96cffbf0e0dead4841dabd3ed77eb7a3329e",
+        "U_families_sha256": "ad740bf9c94f9badb9359076032dde4406e23d1b01de38764c6712b7911f32a5",
+        "U_unlabeled_family_count": 20,
+        "a": 6,
+        "b": 0,
+        "first_H_mask": 0,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          1,
+          0,
+          0
+        ],
+        "ordinary_fours": 7,
+        "r": 1
+      },
+      {
+        "H_labeled_count": 5,
+        "H_masks_sha256": "8d9f7cdf2c24231117c891b07366f6738f4f91c29cf534fe8f6e3f0947f4a3f6",
+        "U_families_sha256": "058154595524c71f987a81afb65e9858612457077f3c57e2c41ee6c2a6a10cf3",
+        "U_unlabeled_family_count": 1,
+        "a": 0,
+        "b": 2,
+        "first_H_mask": 30,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          0,
+          2,
+          0
+        ],
+        "ordinary_fours": 9,
+        "r": 2
+      },
+      {
+        "H_labeled_count": 12,
+        "H_masks_sha256": "717cc0ec01d9e276e5867abd0f1c7342693c24ec935cd4564a79466220d59903",
+        "U_families_sha256": "9ba937c609549a8b2ee8c8b27c2c8b596fdd32b472cf07eaaa887040dabbecdd",
+        "U_unlabeled_family_count": 3,
+        "a": 1,
+        "b": 2,
+        "first_H_mask": 20,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          1,
+          1,
+          0
+        ],
+        "ordinary_fours": 8,
+        "r": 2
+      },
+      {
+        "H_labeled_count": 51,
+        "H_masks_sha256": "3f93431e98844b17c4e6ea85735b46f4b9810d599facd51a3c6d65ee7cb4ff7d",
+        "U_families_sha256": "1d1305f7684a4d946268c18ebbdb77a819e0c26695bbf0e73d1229a26eb18b0e",
+        "U_unlabeled_family_count": 15,
+        "a": 2,
+        "b": 1,
+        "first_H_mask": 108,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          0,
+          2,
+          0
+        ],
+        "ordinary_fours": 8,
+        "r": 2
+      },
+      {
+        "H_labeled_count": 1,
+        "H_masks_sha256": "4b4529e9287b9371a97f0e8ec4b5599b9cb1ca2da200af4d36a8496fb9b2d83c",
+        "U_families_sha256": "9882b0e3e9f322b1b35f06ee10c89da5364829f092226d1426d6bcfc31df1a3c",
+        "U_unlabeled_family_count": 6,
+        "a": 2,
+        "b": 1,
+        "first_H_mask": 52,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          1,
+          0,
+          1
+        ],
+        "ordinary_fours": 8,
+        "r": 2
+      },
+      {
+        "H_labeled_count": 39,
+        "H_masks_sha256": "a18f81bd2e78bdd4e24d373bb10d2021c6c2fdda8a0068e12a922519d3203ae4",
+        "U_families_sha256": "9882b0e3e9f322b1b35f06ee10c89da5364829f092226d1426d6bcfc31df1a3c",
+        "U_unlabeled_family_count": 6,
+        "a": 2,
+        "b": 2,
+        "first_H_mask": 0,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          2,
+          0,
+          0
+        ],
+        "ordinary_fours": 7,
+        "r": 2
+      },
+      {
+        "H_labeled_count": 12,
+        "H_masks_sha256": "eb196f47b55c855759fef4b785fa8798e33da3eb98f4a976322d54fb1ca4df4f",
+        "U_families_sha256": "5f8161e0ed7053b381039bc62c9892e055d1238fb961e8ee8fa38dbdebed423c",
+        "U_unlabeled_family_count": 18,
+        "a": 3,
+        "b": 0,
+        "first_H_mask": 364,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          0,
+          1,
+          1
+        ],
+        "ordinary_fours": 8,
+        "r": 2
+      },
+      {
+        "H_labeled_count": 108,
+        "H_masks_sha256": "3d944b3ea4933601a2fb387e8f034a0e6c8bdc6749b26235c98c1224bf816c4f",
+        "U_families_sha256": "73b1d8e07cd4aea72f0afc9edd1819f7d39bdc8cbc875dd38428a3fd59f20c91",
+        "U_unlabeled_family_count": 30,
+        "a": 3,
+        "b": 1,
+        "first_H_mask": 72,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          1,
+          1,
+          0
+        ],
+        "ordinary_fours": 7,
+        "r": 2
+      },
+      {
+        "H_labeled_count": 390,
+        "H_masks_sha256": "1097744c405c2ccf0a12e77456b8f4d27d1e782753d813f87fbfceb28c7a52df",
+        "U_families_sha256": "aede8b55d6ab027434bef396459bace495b637f9365a2d7f46c9d0d241d666ef",
+        "U_unlabeled_family_count": 90,
+        "a": 4,
+        "b": 0,
+        "first_H_mask": 408,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          0,
+          2,
+          0
+        ],
+        "ordinary_fours": 7,
+        "r": 2
+      },
+      {
+        "H_labeled_count": 28,
+        "H_masks_sha256": "2546c995e0e7e87863f532f4e9eb1b8a2283e97351beb28d98581b04ce3511ca",
+        "U_families_sha256": "21783bcc39a91681b54a00a2afb89e8fecea2deead1159e96df54415c9de4370",
+        "U_unlabeled_family_count": 45,
+        "a": 4,
+        "b": 0,
+        "first_H_mask": 328,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          1,
+          0,
+          1
+        ],
+        "ordinary_fours": 7,
+        "r": 2
+      },
+      {
+        "H_labeled_count": 261,
+        "H_masks_sha256": "46f15ce56c24ad179f715b03d841b58ed9350a00ffbba8e098fe864227fad701",
+        "U_families_sha256": "21783bcc39a91681b54a00a2afb89e8fecea2deead1159e96df54415c9de4370",
+        "U_unlabeled_family_count": 45,
+        "a": 4,
+        "b": 1,
+        "first_H_mask": 0,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          2,
+          0,
+          0
+        ],
+        "ordinary_fours": 6,
+        "r": 2
+      },
+      {
+        "H_labeled_count": 790,
+        "H_masks_sha256": "a3f96502dbb820ed712cd1a1a8a404b9da1dea9f98a6330f7557c3dcf37d8f02",
+        "U_families_sha256": "c2b68f2d6067f32ba7f47bbb4e32578a1b583f65b9bca09cb1c994fdcf838afb",
+        "U_unlabeled_family_count": 145,
+        "a": 5,
+        "b": 0,
+        "first_H_mask": 272,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          1,
+          1,
+          0
+        ],
+        "ordinary_fours": 6,
+        "r": 2
+      },
+      {
+        "H_labeled_count": 1708,
+        "H_masks_sha256": "702c961621160e3576c3d53ae53f96cffbf0e0dead4841dabd3ed77eb7a3329e",
+        "U_families_sha256": "ecf3363c812accfb546886a394a42d90964dc5acb15e557d132e0e7523ad38dd",
+        "U_unlabeled_family_count": 190,
+        "a": 6,
+        "b": 0,
+        "first_H_mask": 0,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          2,
+          0,
+          0
+        ],
+        "ordinary_fours": 5,
+        "r": 2
+      },
+      {
+        "H_labeled_count": 51,
+        "H_masks_sha256": "3f93431e98844b17c4e6ea85735b46f4b9810d599facd51a3c6d65ee7cb4ff7d",
+        "U_families_sha256": "6fca35dc3a32b490834009ed60144feadb077f7063af6a696232ed6e166b8018",
+        "U_unlabeled_family_count": 2,
+        "a": 2,
+        "b": 1,
+        "first_H_mask": 108,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            4
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          1,
+          2,
+          0
+        ],
+        "ordinary_fours": 6,
+        "r": 3
+      },
+      {
+        "H_labeled_count": 1,
+        "H_masks_sha256": "4b4529e9287b9371a97f0e8ec4b5599b9cb1ca2da200af4d36a8496fb9b2d83c",
+        "U_families_sha256": "257b7abc005f9bf75e269cb390ef1b733f98474730e1cbd8a902ca3d42c41020",
+        "U_unlabeled_family_count": 1,
+        "a": 2,
+        "b": 1,
+        "first_H_mask": 52,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          2,
+          0,
+          1
+        ],
+        "ordinary_fours": 6,
+        "r": 3
+      },
+      {
+        "H_labeled_count": 39,
+        "H_masks_sha256": "a18f81bd2e78bdd4e24d373bb10d2021c6c2fdda8a0068e12a922519d3203ae4",
+        "U_families_sha256": "1754cafae7d5a77ca3284ac3bfa165463b3b7f1ddb8a7184db01293196ff64cd",
+        "U_unlabeled_family_count": 2,
+        "a": 2,
+        "b": 2,
+        "first_H_mask": 0,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          3,
+          0,
+          0
+        ],
+        "ordinary_fours": 5,
+        "r": 3
+      },
+      {
+        "H_labeled_count": 204,
+        "H_masks_sha256": "627ffd7027dae9fb2d4075320e597247d2f29d35234b4b991067ebda036426d2",
+        "U_families_sha256": "1d7badf1fbcec474588d9d6d926423cf9a191814ba69b85bc901a21175219229",
+        "U_unlabeled_family_count": 6,
+        "a": 3,
+        "b": 0,
+        "first_H_mask": 1880,
+        "first_U_family": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            1,
+            2,
+            5
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          0,
+          3,
+          0
+        ],
+        "ordinary_fours": 6,
+        "r": 3
+      },
+      {
+        "H_labeled_count": 12,
+        "H_masks_sha256": "eb196f47b55c855759fef4b785fa8798e33da3eb98f4a976322d54fb1ca4df4f",
+        "U_families_sha256": "84e1ba87c0b5960aaa7a06ff6d9962f4ff17e938b6536a29920978513a1d7087",
+        "U_unlabeled_family_count": 3,
+        "a": 3,
+        "b": 0,
+        "first_H_mask": 364,
+        "first_U_family": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            1,
+            2,
+            4
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          1,
+          1,
+          1
+        ],
+        "ordinary_fours": 6,
+        "r": 3
+      },
+      {
+        "H_labeled_count": 108,
+        "H_masks_sha256": "3d944b3ea4933601a2fb387e8f034a0e6c8bdc6749b26235c98c1224bf816c4f",
+        "U_families_sha256": "85754212fc7a4eae35017be9d3eab802fad89c2a7b5f1e3ed6c62e33b3114343",
+        "U_unlabeled_family_count": 13,
+        "a": 3,
+        "b": 1,
+        "first_H_mask": 72,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          2,
+          1,
+          0
+        ],
+        "ordinary_fours": 5,
+        "r": 3
+      },
+      {
+        "H_labeled_count": 390,
+        "H_masks_sha256": "1097744c405c2ccf0a12e77456b8f4d27d1e782753d813f87fbfceb28c7a52df",
+        "U_families_sha256": "3653f4d9e3af932da494361d218270bcda758bbd3c52da46e82619f134388e44",
+        "U_unlabeled_family_count": 60,
+        "a": 4,
+        "b": 0,
+        "first_H_mask": 408,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          1,
+          2,
+          0
+        ],
+        "ordinary_fours": 5,
+        "r": 3
+      },
+      {
+        "H_labeled_count": 28,
+        "H_masks_sha256": "2546c995e0e7e87863f532f4e9eb1b8a2283e97351beb28d98581b04ce3511ca",
+        "U_families_sha256": "0d36dff3bf5a7ee4e3a10301f0193b37772aac93aae550caf0cca44a92abf802",
+        "U_unlabeled_family_count": 30,
+        "a": 4,
+        "b": 0,
+        "first_H_mask": 328,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          2,
+          0,
+          1
+        ],
+        "ordinary_fours": 5,
+        "r": 3
+      },
+      {
+        "H_labeled_count": 261,
+        "H_masks_sha256": "46f15ce56c24ad179f715b03d841b58ed9350a00ffbba8e098fe864227fad701",
+        "U_families_sha256": "bbce3f92b2d66058b7d415ff64841f6ddebbc6c449a35b1b22a405682bd18ca3",
+        "U_unlabeled_family_count": 46,
+        "a": 4,
+        "b": 1,
+        "first_H_mask": 0,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          3,
+          0,
+          0
+        ],
+        "ordinary_fours": 4,
+        "r": 3
+      },
+      {
+        "H_labeled_count": 790,
+        "H_masks_sha256": "a3f96502dbb820ed712cd1a1a8a404b9da1dea9f98a6330f7557c3dcf37d8f02",
+        "U_families_sha256": "e882fc0577147abfa37d8dff37526b0a124953a062e8843a1ea116abbde2553d",
+        "U_unlabeled_family_count": 210,
+        "a": 5,
+        "b": 0,
+        "first_H_mask": 272,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          2,
+          1,
+          0
+        ],
+        "ordinary_fours": 4,
+        "r": 3
+      },
+      {
+        "H_labeled_count": 1708,
+        "H_masks_sha256": "702c961621160e3576c3d53ae53f96cffbf0e0dead4841dabd3ed77eb7a3329e",
+        "U_families_sha256": "740d4034262fd059ffdf0c38d7cc4ef0debb4282a653815167d704c7a71f05e4",
+        "U_unlabeled_family_count": 480,
+        "a": 6,
+        "b": 0,
+        "first_H_mask": 0,
+        "first_U_family": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ]
+        ],
+        "five_counts_f0_f1_f2": [
+          3,
+          0,
+          0
+        ],
+        "ordinary_fours": 3,
+        "r": 3
+      }
+    ],
+    "raw_deficit_six_counts": {
+      "1": 14,
+      "2": 27,
+      "3": 36,
+      "4": 41,
+      "5": 42,
+      "6": 37,
+      "7": 20
+    },
+    "rejection_counts": {
+      "1": {
+        "five_deficit_at_least_three": 4,
+        "no_necessary_triangle_free_H": 1
+      },
+      "2": {
+        "five_deficit_at_least_three": 10,
+        "no_necessary_degree_three_neighbor_family": 1,
+        "no_necessary_triangle_free_H": 4
+      },
+      "3": {
+        "degree_three_contact_capacity": 6,
+        "five_deficit_at_least_three": 13,
+        "no_necessary_degree_three_neighbor_family": 4,
+        "no_necessary_triangle_free_H": 2
+      },
+      "4": {
+        "r_at_least_four_excluded_by_written_contact_incidence_proof": 41
+      },
+      "5": {
+        "r_at_least_four_excluded_by_written_contact_incidence_proof": 42
+      },
+      "6": {
+        "r_at_least_four_excluded_by_written_contact_incidence_proof": 37
+      },
+      "7": {
+        "r_at_least_four_excluded_by_written_contact_incidence_proof": 20
+      }
+    },
+    "surviving_count_profiles_by_r": {
+      "1": 9,
+      "2": 12,
+      "3": 11
+    },
+    "total_necessary_count_profiles": 32
+  },
+  "cyclic_star_audit": [
+    {
+      "all_cyclic_words": [
+        {
+          "Q_Q_edges": 3,
+          "word": "QQQ"
+        }
+      ],
+      "degree": 3,
+      "maximum_Q_Q_contacts": 3,
+      "triangles": 0
+    },
+    {
+      "all_cyclic_words": [
+        {
+          "Q_Q_edges": 4,
+          "word": "QQQQ"
+        }
+      ],
+      "degree": 4,
+      "maximum_Q_Q_contacts": 4,
+      "triangles": 0
+    },
+    {
+      "all_cyclic_words": [
+        {
+          "Q_Q_edges": 2,
+          "word": "TQQQ"
+        },
+        {
+          "Q_Q_edges": 2,
+          "word": "QTQQ"
+        },
+        {
+          "Q_Q_edges": 2,
+          "word": "QQTQ"
+        },
+        {
+          "Q_Q_edges": 2,
+          "word": "QQQT"
+        }
+      ],
+      "degree": 4,
+      "maximum_Q_Q_contacts": 2,
+      "triangles": 1
+    },
+    {
+      "all_cyclic_words": [
+        {
+          "Q_Q_edges": 1,
+          "word": "TTQQ"
+        },
+        {
+          "Q_Q_edges": 0,
+          "word": "TQTQ"
+        },
+        {
+          "Q_Q_edges": 1,
+          "word": "TQQT"
+        },
+        {
+          "Q_Q_edges": 1,
+          "word": "QTTQ"
+        },
+        {
+          "Q_Q_edges": 0,
+          "word": "QTQT"
+        },
+        {
+          "Q_Q_edges": 1,
+          "word": "QQTT"
+        }
+      ],
+      "degree": 4,
+      "maximum_Q_Q_contacts": 1,
+      "triangles": 2
+    },
+    {
+      "all_cyclic_words": [
+        {
+          "Q_Q_edges": 2,
+          "word": "TTQQQ"
+        },
+        {
+          "Q_Q_edges": 1,
+          "word": "TQTQQ"
+        },
+        {
+          "Q_Q_edges": 1,
+          "word": "TQQTQ"
+        },
+        {
+          "Q_Q_edges": 2,
+          "word": "TQQQT"
+        },
+        {
+          "Q_Q_edges": 2,
+          "word": "QTTQQ"
+        },
+        {
+          "Q_Q_edges": 1,
+          "word": "QTQTQ"
+        },
+        {
+          "Q_Q_edges": 1,
+          "word": "QTQQT"
+        },
+        {
+          "Q_Q_edges": 2,
+          "word": "QQTTQ"
+        },
+        {
+          "Q_Q_edges": 1,
+          "word": "QQTQT"
+        },
+        {
+          "Q_Q_edges": 2,
+          "word": "QQQTT"
+        }
+      ],
+      "degree": 5,
+      "maximum_Q_Q_contacts": 2,
+      "triangles": 2
+    },
+    {
+      "all_cyclic_words": [
+        {
+          "Q_Q_edges": 1,
+          "word": "TTTQQ"
+        },
+        {
+          "Q_Q_edges": 0,
+          "word": "TTQTQ"
+        },
+        {
+          "Q_Q_edges": 1,
+          "word": "TTQQT"
+        },
+        {
+          "Q_Q_edges": 0,
+          "word": "TQTTQ"
+        },
+        {
+          "Q_Q_edges": 0,
+          "word": "TQTQT"
+        },
+        {
+          "Q_Q_edges": 1,
+          "word": "TQQTT"
+        },
+        {
+          "Q_Q_edges": 1,
+          "word": "QTTTQ"
+        },
+        {
+          "Q_Q_edges": 0,
+          "word": "QTTQT"
+        },
+        {
+          "Q_Q_edges": 0,
+          "word": "QTQTT"
+        },
+        {
+          "Q_Q_edges": 1,
+          "word": "QQTTT"
+        }
+      ],
+      "degree": 5,
+      "maximum_Q_Q_contacts": 1,
+      "triangles": 3
+    },
+    {
+      "all_cyclic_words": [
+        {
+          "Q_Q_edges": 0,
+          "word": "TTTTQ"
+        },
+        {
+          "Q_Q_edges": 0,
+          "word": "TTTQT"
+        },
+        {
+          "Q_Q_edges": 0,
+          "word": "TTQTT"
+        },
+        {
+          "Q_Q_edges": 0,
+          "word": "TQTTT"
+        },
+        {
+          "Q_Q_edges": 0,
+          "word": "QTTTT"
+        }
+      ],
+      "degree": 5,
+      "maximum_Q_Q_contacts": 0,
+      "triangles": 4
+    }
+  ],
+  "geometry_trust_boundary": "written unformalized proof; all-degree-four lower exclusion is an external published dependency",
+  "local_degree_bound_interval": [
+    "1/2",
+    "3/5"
+  ],
+  "role": "researcher"
+}
