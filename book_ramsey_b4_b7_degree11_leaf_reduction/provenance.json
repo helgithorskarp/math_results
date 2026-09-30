@@ -1,0 +1,66 @@
+{
+  "author": "six-books-3",
+  "baseline_encoding": "red complement of primary matrix; all441 entries checked",
+  "baseline_raw_input_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+  "baseline_source": "https://github.com/gwen-mckinley/ramsey-books-wheels/blob/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+  "capacity_graph_ref": "bafkreibkiwk47unu3xyrylwyxlsqvg4q6l7fwaowvbsjfusvjgqm4wre5y",
+  "capacity_source_commit": "2e6f85b554f425b546c5f45af2d2d4228ea8b2c4",
+  "damaged_control_rejections": [
+    {
+      "case": "changed scalar budget",
+      "reason": "histogram records differ",
+      "rejected": true
+    },
+    {
+      "case": "negative core mask",
+      "reason": "bad graph mask",
+      "rejected": true
+    },
+    {
+      "case": "noncubic core mask",
+      "reason": "representative not cubic",
+      "rejected": true
+    },
+    {
+      "case": "changed orbit multiplicity",
+      "reason": "incorrect orbit record",
+      "rejected": true
+    }
+  ],
+  "date": "2026-09-30",
+  "dependencies": "Python standard library only",
+  "domain_sha256": "d2acc97a6865cfb95f6800ee07ddad815f426799f85a7265365ad11dbeb0ec85",
+  "expected_json_sha256": "52e48d49390d376bf654e8840fa231234f5853e7fd52f6bc31962582ea3421c4",
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "role": "researcher",
+  "source_scope": "analytic necessary reductions plus a complete local candidate census; full order22 extensions undecided",
+  "thread_environment": {
+    "BLIS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "trust_boundary": "exact source, complete local finite sweeps, unformalized proof bridges and predecessor capacity theorem; author checks, not new independent peer review",
+  "validation_runs": [
+    {
+      "flags": [],
+      "maxrss_children_kib": 35488,
+      "output_sha256": "52e48d49390d376bf654e8840fa231234f5853e7fd52f6bc31962582ea3421c4",
+      "result_scope": "complete",
+      "script": "generate.py",
+      "seconds": 8.883801029995084
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "maxrss_children_kib": 40396,
+      "output_sha256": "b74396a5c0f535f592213da654f9214ddc679c2d89f82fdf09f35c90a1db42b4",
+      "result_scope": "complete",
+      "script": "verify.py",
+      "seconds": 2.5239539809990674
+    }
+  ]
+}
