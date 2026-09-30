@@ -1,0 +1,80 @@
+{
+  "original_inputs": 8192,
+  "Y2_states": 145,
+  "Z_states": 144,
+  "W_states": 128,
+  "Z_W_upper_controls": [
+    21,
+    19
+  ],
+  "three_cut_witnesses": {
+    "46": {
+      "residual_state": 1536,
+      "high_prefix_deletions": 17,
+      "fixed_maxima": 4
+    },
+    "38": {
+      "residual_state": 512,
+      "high_prefix_deletions": 12,
+      "fixed_maxima": 3
+    },
+    "652": {
+      "residual_state": 68,
+      "high_prefix_deletions": 13,
+      "fixed_maxima": 4
+    }
+  },
+  "abstract_two_row_cut_bound": 3,
+  "Z_lower_bound": 20,
+  "W_lower_bound": 18,
+  "conditional_minimum_kernel_words": 8,
+  "threshold_attainers": 288,
+  "mixed_prefix_deletions": 17,
+  "mixed_masks": [
+    1024,
+    2045
+  ],
+  "mixed_union_cap_at_size44": 2,
+  "semantic_core": {
+    "semantic_clauses": 777,
+    "reasons": {
+      "at_most_one_maximum": 53,
+      "at_most_two_top_pair": 83,
+      "comparator_transition": 69,
+      "incidence": 56,
+      "initial_row": 12,
+      "maximum_pair": 171,
+      "minimum_phase": 36,
+      "minimum_pivot_exists": 1,
+      "sorted_row": 5,
+      "sorted_threshold_hit": 193,
+      "untouched_wire": 98
+    },
+    "counter_extension_patterns": {
+      "at_most_one_maximum": 20,
+      "at_most_two_top_pair": 191
+    },
+    "sorting_rows_needed": [
+      64,
+      68,
+      544,
+      2015
+    ],
+    "full_generated_cnf_needed": false,
+    "solver_or_cardinality_library_needed": false
+  },
+  "RUP": {
+    "RUP_additions": 119,
+    "final_empty_clause": true,
+    "distinct_core_variables": 620
+  },
+  "unit_propagation_truth_controls": 4608,
+  "rejected_controls": 3,
+  "abstract_cut_sharpness_controls": 330,
+  "input_hashes": {
+    "fixture.json": "ab8ef78a8a914f7f9b951253ddf80964abeee7fc1175df04382846f3b00cc02e",
+    "certificate.json": "c4c9120b24f1b50e9fd3fe8867c4f1f5538e5c0e1047052b31f42f0ad6935ff1",
+    "Z19-core.cnf": "81b7275e3f48e05fe803906f59c3b4164df6e4c240cc95f225ea27248f51c988",
+    "Z19-proof.rup": "50a961f6b38fd6490cbcdff63b5ebadfa8595be8a47f4e77fb485cbcff40b333"
+  }
+}
