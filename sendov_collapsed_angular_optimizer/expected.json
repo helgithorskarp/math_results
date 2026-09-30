@@ -1,0 +1,103 @@
+{
+  "agent": "six-sendov-2",
+  "check_labels": [
+    "polynomial linear factor division",
+    "rational cancellation",
+    "trace A",
+    "trace A squared",
+    "trace A cubed",
+    "trace A fourth",
+    "coupling zeroth moment",
+    "coupling first moment",
+    "coupling second moment",
+    "reversed quartic derivative has factor y",
+    "reversed derivative quadratic constant",
+    "reversed derivative quadratic linear",
+    "reversed derivative quadratic leading",
+    "classical discriminant is moment slack",
+    "Pearson square contraction",
+    "Gram D cleared representation",
+    "Gram N cleared representation",
+    "positive cleared pinching identity",
+    "singular D implies nonzero N off endpoint",
+    "line at fourth moment endpoint",
+    "line at moving pair",
+    "Pearson moment upper coefficient",
+    "all-degree positive shift polynomial",
+    "positive shift coefficients",
+    "affine angular slope",
+    "maximum matches two-block source",
+    "global moment deficit identity",
+    "degree-nine moment endpoint",
+    "degree-nine maximum bracket",
+    "degree-nine deficit slope",
+    "degree-nine prefactor",
+    "degree-nine maximum coefficient",
+    "degree-nine minimum coefficient",
+    "degree-nine lower bracket",
+    "near maximum coefficient threshold",
+    "degree-nine Pearson residual coefficient",
+    "degree-nine quadratic residual from coefficient",
+    "near maximum third moment lower square",
+    "third moment square above three fifths",
+    "third moment above 31/40",
+    "gap below 15/14",
+    "root-distance squared coefficient",
+    "count error below two thirds",
+    "zero positive levels excluded",
+    "two positive levels excluded",
+    "normalized contrast at least seven eighths",
+    "distance coefficient below six",
+    "geometry from angular deficit",
+    "moving-pair active weights",
+    "singleton active weight",
+    "singleton degree-nine moments",
+    "four/four degree-nine moments",
+    "moving-pair published coefficient",
+    "maximum profile consistency"
+  ],
+  "checks": 54,
+  "degree_nine": {
+    "maximum": "560235/8388608",
+    "minimum": "164775/8388608",
+    "moment_deficit_factor": "76895/4194304",
+    "near_maximum_threshold_divided_by_prefactor": "14/25",
+    "shape_distance_factor_multiplied_by_prefactor": "3/28"
+  },
+  "domain": "balanced real slopes, m>=4; angular maximum m>=8",
+  "positive_shift_coefficients": [
+    210,
+    515,
+    181,
+    23,
+    1
+  ],
+  "rejected_mutations": [
+    {
+      "detected": "trace A fourth",
+      "mutation": "wrong_trace_fourth"
+    },
+    {
+      "detected": "classical discriminant is moment slack",
+      "mutation": "weak_newton_constant"
+    },
+    {
+      "detected": "positive cleared pinching identity",
+      "mutation": "wrong_pinching_line"
+    },
+    {
+      "detected": "distance coefficient below six",
+      "mutation": "wrong_geometry_radius"
+    },
+    {
+      "detected": "moving-pair active weights",
+      "mutation": "moment_only_eta"
+    },
+    {
+      "detected": "maximum profile consistency",
+      "mutation": "wrong_maximum"
+    }
+  ],
+  "role": "researcher",
+  "status": "exact author algebra; ordinary proof bridges unformalized and independently unreviewed"
+}
