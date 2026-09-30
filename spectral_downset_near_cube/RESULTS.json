@@ -1,0 +1,206 @@
+{
+  "PSD_engine_audit": {
+    "PSD_count": 24,
+    "symmetric_ternary_3x3": 729
+  },
+  "agent": "six-downset-3",
+  "algebraic_threshold": {
+    "P_at_1": 1255,
+    "P_at_2": -312,
+    "discriminant": 2281956,
+    "expression": "(929-sqrt(570489))/97",
+    "literal_algebraic_matrix_evaluated": false,
+    "n": 5
+  },
+  "all_orders_bridge": "PROOF.md Sections 3-8; no inference from finite samples",
+  "arithmetic": "integers and fractions.Fraction; CPython 3.11.2 standard library",
+  "checker_sha256": "4f701f4efdd0213aa25a50323a6fb1964dc3273ef7402ff7f31585172b94e71e",
+  "coefficient_and_partition_cases": [
+    {
+      "N": 11,
+      "SOS_coefficient_entries": 200,
+      "middle_pairs": 3,
+      "n": 4,
+      "partitions": 4,
+      "s": 4,
+      "upper_congruence_parameters": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "N": 26,
+      "SOS_coefficient_entries": 1250,
+      "middle_pairs": 10,
+      "n": 5,
+      "partitions": 11,
+      "s": 11,
+      "upper_congruence_parameters": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "N": 57,
+      "SOS_coefficient_entries": 6272,
+      "middle_pairs": 25,
+      "n": 6,
+      "partitions": 26,
+      "s": 26,
+      "upper_congruence_parameters": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "N": 120,
+      "SOS_coefficient_entries": 28322,
+      "middle_pairs": 56,
+      "n": 7,
+      "partitions": 57,
+      "s": 57,
+      "upper_congruence_parameters": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "N": 247,
+      "SOS_coefficient_entries": 121032,
+      "middle_pairs": 119,
+      "n": 8,
+      "partitions": 120,
+      "s": 120,
+      "upper_congruence_parameters": [
+        "0",
+        "1",
+        "2"
+      ]
+    }
+  ],
+  "dense_capped_cases": [
+    {
+      "lower_rank": 7,
+      "n": 4,
+      "unit_multiplicity": 2,
+      "upper_T": "0",
+      "z": "15/13"
+    },
+    {
+      "lower_rank": 7,
+      "n": 4,
+      "unit_multiplicity": 1,
+      "upper_T": "1",
+      "z": "3/2"
+    },
+    {
+      "lower_rank": 6,
+      "n": 4,
+      "unit_multiplicity": 1,
+      "upper_T": "11/5",
+      "z": "2"
+    },
+    {
+      "lower_rank": 21,
+      "n": 5,
+      "unit_multiplicity": 1,
+      "upper_T": "16403/14219",
+      "z": "19/10"
+    },
+    {
+      "lower_rank": 20,
+      "n": 5,
+      "unit_multiplicity": 1,
+      "upper_T": "13/6",
+      "z": "2"
+    }
+  ],
+  "dense_lower_cases": [
+    {
+      "core_rank": 3,
+      "lower_rank": 4,
+      "n": 4,
+      "upper_T": "-5",
+      "z": "0"
+    },
+    {
+      "core_rank": 6,
+      "lower_rank": 7,
+      "n": 4,
+      "upper_T": "-1/2",
+      "z": "1"
+    },
+    {
+      "core_rank": 5,
+      "lower_rank": 6,
+      "n": 4,
+      "upper_T": "11/5",
+      "z": "2"
+    },
+    {
+      "core_rank": 10,
+      "lower_rank": 11,
+      "n": 5,
+      "upper_T": "-29",
+      "z": "0"
+    },
+    {
+      "core_rank": 20,
+      "lower_rank": 21,
+      "n": 5,
+      "upper_T": "-251/25",
+      "z": "1"
+    },
+    {
+      "core_rank": 19,
+      "lower_rank": 20,
+      "n": 5,
+      "upper_T": "13/6",
+      "z": "2"
+    },
+    {
+      "core_rank": 25,
+      "lower_rank": 26,
+      "n": 6,
+      "upper_T": "-99",
+      "z": "0"
+    },
+    {
+      "core_rank": 50,
+      "lower_rank": 51,
+      "n": 6,
+      "upper_T": "-2329/56",
+      "z": "1"
+    },
+    {
+      "core_rank": 49,
+      "lower_rank": 50,
+      "n": 6,
+      "upper_T": "-171/77",
+      "z": "2"
+    }
+  ],
+  "out_of_interval_witness_orders": [
+    4,
+    8
+  ],
+  "rejected_controls": [
+    "changed empty loop",
+    "changed nonempty diagonal",
+    "intersecting support insertion",
+    "broken singleton star weights",
+    "cap rejected n=4 z=1",
+    "cap rejected n=5 z=1",
+    "cap rejected n=6 z=2"
+  ],
+  "role": "researcher",
+  "scalar_identity_orders": [
+    4,
+    80
+  ],
+  "status": "Exact finite validation of the written all-n, all-real-parameter proof; not independently reviewed."
+}
