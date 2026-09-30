@@ -139,7 +139,8 @@ def edge_state_constraints(circuit, signs, incidences):
     return edge_states
 
 
-def build(tile, depth, p, q, Circuit, topology_constraint, fixed=None, domain=None):
+def build(tile, depth, p, q, Circuit, topology_constraint, fixed=None, domain=None,
+          allow_reflections=True, require_charge=True):
     boundary_fn = boundary if domain is None else domain.boundary
     oriented_fn = oriented if domain is None else domain.oriented
     halo_fn = halo if domain is None else domain.halo
@@ -160,16 +161,17 @@ def build(tile, depth, p, q, Circuit, topology_constraint, fixed=None, domain=No
         signs = [(circuit.new(), circuit.new()) for _ in ports]
     for plus, minus in signs:
         circuit.clause([-plus, -minus])
-    if p is None:
+    if p is None and require_charge:
         positive_charge_constraint(circuit, signs)
-    else:
+    elif p is not None:
         circuit.equal_count([x for x, y in signs], p)
         circuit.equal_count([y for x, y in signs], q)
     xmax, ymax = max(x for x, y in tile), max(y for x, y in tile)
     span = max(xmax + 1, ymax + 1) if domain is None else domain.span(tile)
     radius = depth * span
     candidates = []
-    for reflect, turns in itertools.product((False, True), range(turns_count)):
+    reflections = (False, True) if allow_reflections else (False,)
+    for reflect, turns in itertools.product(reflections, range(turns_count)):
         cells, edges = oriented_fn(tile, reflect, turns)
         oxmax, oymax = max(x for x, y in cells), max(y for x, y in cells)
         for tx in range(-radius, xmax + radius - oxmax + 1):
@@ -220,9 +222,10 @@ def build(tile, depth, p, q, Circuit, topology_constraint, fixed=None, domain=No
     incidences = itertools.chain([(circuit.true, oriented_fn(tile, False, 0)[1])],
                                  ((c["z"][depth], c["ports"]) for c in candidates))
     edge_states = edge_state_constraints(circuit, signs, incidences)
-    counts = [p, q, len(ports) - p - q] if p is not None else "any p>q>0"
+    counts = [p, q, len(ports) - p - q] if p is not None else (
+        "any p>q>0" if require_charge else "no charge constraint")
     return circuit, candidates, signs, {"depth": depth, "counts": counts,
-        "box": [-radius, xmax + radius, -radius, ymax + radius], "orientations": 2 * turns_count,
+        "box": [-radius, xmax + radius, -radius, ymax + radius], "orientations": len(reflections) * turns_count,
         "candidates": len(candidates), "variables": circuit.nv,
         "clauses": len(circuit.clauses), "grid_edges": len(edge_states), "topology": topology_sizes}
 

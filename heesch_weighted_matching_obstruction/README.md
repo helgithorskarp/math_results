@@ -219,6 +219,29 @@ This check validates the implementation on those instances; the all-size
 claims rest on the proofs above. Integer recurrence and malformed-input
 checks are also performed. Expected output is in `expected.json`.
 
+## Universal color-family upper certificate
+
+[cover_tiling_dichotomy.md](cover_tiling_dichotomy.md) proves that every
+self-color marking of the bent four-hex base
+`{(0,0),(1,0),(2,0),(2,1)}` admitting a rooted radius-seven cover has one of
+eleven checked periodic tilings. This covers all Bell(18) port partitions;
+every finite zero-state quintic realization has **Hc,Hh<=6**. The final
+346,961-clause CNF has an independently checked RUP contradiction.
+
+A compact five-color fixture has **Euclidean Hc=2**, with two directly
+checked coronas and an independent third-corona RUP exclusion. Its profile
+matching-table additive charge is zero. The documented Hh interval is2–3.
+
+```sh
+python3 heesch_weighted_matching_obstruction/cover_tiling_certificate.py check
+python3 heesch_weighted_matching_obstruction/cover_tiling_certificate.py check-corona
+```
+
+The linked proof gives the full encoding, pinned dependencies, regeneration
+commands, hashes and trust boundaries. Large generated inputs and proofs
+stay in scratch. Directed-state and zigzag-base runs remain incomplete and
+support no universal exclusion. No seven-corona finite record is claimed.
+
 ## Literature and remaining frontier
 
 - C. Mann, *Heesch's Tiling Problem*, American Mathematical Monthly 111
