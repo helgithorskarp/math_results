@@ -1,0 +1,66 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "python": "3.11.2",
+  "arithmetic": "exact Python integers, standard library only",
+  "execution_scope": "one CPU-intensive process at a time; all BLAS/OpenMP threads one; unchanged 1 CPU / 2 GiB scope",
+  "output_bytes": 67836,
+  "output_sha256": "7fd794d0bf95df1ced14e8a510a5ff91b08840231922448af2ac0da60fce3f86",
+  "independent_normal_seconds": 6.572074175986927,
+  "independent_optimized_seconds": 6.9153896840289235,
+  "independent_peak_rss_kib": 27064,
+  "author_primary_seconds": 6.706205110007431,
+  "author_entrywise_replay_seconds": 35.772366891033016,
+  "maximum_peak_rss_kib": 27876,
+  "exit_codes": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "output_normal_optimized_equal": true,
+  "controls": {
+    "clique_queries": 6505,
+    "degree_queries": 599,
+    "incomplete_controls": 3,
+    "invalid_input_controls": 6,
+    "literal_simple_graphs": 1100,
+    "pair_cover_queries": 1100,
+    "positive_covers": 2,
+    "restricted_degree_queries": 704
+  },
+  "raw_carrier_states": 57939,
+  "point_partition_states": 66662,
+  "residual_cover_states": 168846,
+  "maximum_cover_case_states": 5610,
+  "secondary_clique_states": 1491,
+  "incomplete_claimed_as_exclusion": false,
+  "formalized": false,
+  "repository_default_command": {
+    "exit_code": 0,
+    "seconds": 6.651101970986929,
+    "peak_child_rss_kib": 25588,
+    "summary": {
+      "controls": {
+        "clique_queries": 6505,
+        "degree_queries": 599,
+        "incomplete_controls": 3,
+        "invalid_input_controls": 6,
+        "literal_simple_graphs": 1100,
+        "pair_cover_queries": 1100,
+        "positive_covers": 2,
+        "restricted_degree_queries": 704
+      },
+      "orbits": 117,
+      "output_sha256": "7fd794d0bf95df1ced14e8a510a5ff91b08840231922448af2ac0da60fce3f86",
+      "raw_leaves": 3390,
+      "sharp_secondary_maximum": 16,
+      "stars": 15,
+      "status": "COMPLETE"
+    }
+  },
+  "source_sha256": {
+    "audit.py": "dcfb31a95303fc6b2887f5723f2f28235a1f00c1eaa92411395edb856fed213c",
+    "exact.py": "00239b149eb711bc405377d9c6ad00d4e0d096ebbc153cf307926de25016cc3c"
+  }
+}

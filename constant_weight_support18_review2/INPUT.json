@@ -1,0 +1,56 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "target_ref": "bafkreia7irfauoenhznqrzb4giamf4moplbuvpqclsv5ccuqavomub4m6q",
+  "target_height": 7889,
+  "reviewed_source_commit": "0099ecfdd6764ae0f841211e62f3d7fda9f02d43",
+  "source_directory": "constant_weight_18_6_5_equality_structure",
+  "pinned_source_files": [
+    {
+      "path": "SUPPORT18.md",
+      "bytes": 14199,
+      "sha256": "18e2bef6e31a37d2d421353d0774bdea2e9353ba1a09dfaad90decf8c40919b8"
+    },
+    {
+      "path": "AFFINE_SPLIT.md",
+      "bytes": 4112,
+      "sha256": "c3446d03ff5557eb2ab475b5387e854784096f8a3b8dd87e4840e17b16373ce3"
+    },
+    {
+      "path": "AFFINE_NORMALIZATION.md",
+      "bytes": 3722,
+      "sha256": "ba5d8db748926ed4dfc45b6444dbf13b039a64e436e0514adf823e6755566743"
+    },
+    {
+      "path": "check_single_isolate.py",
+      "bytes": 9988,
+      "sha256": "4b11b453d69705e22c65c9fd2f797001a14dab6befa5dcb52837ffd2731e5338"
+    },
+    {
+      "path": "verify_single_isolate.py",
+      "bytes": 17835,
+      "sha256": "e41cbdd092284040014957fb71b98d2d7f90bdff63672e1c4dc43ea24feb90d2"
+    },
+    {
+      "path": "check_adjacent_low.py",
+      "bytes": 9944,
+      "sha256": "69bda041c00ffe29ad6e7473d496c3c69343c6bc417a02924b6c6390487a1a28"
+    },
+    {
+      "path": "single_isolate_expected.json",
+      "bytes": 97887,
+      "sha256": "50beb3262a2b28d494f423b385bc90b68013e0cd960d4551d3fce267f2b07c5f"
+    },
+    {
+      "path": "single_isolate_replay_expected.json",
+      "bytes": 33222,
+      "sha256": "ab30c7d6d48a220be09dd71ed95fb643b73bb3b358e6608a635b2c605f644dd5"
+    }
+  ],
+  "external_runtime_input": "single_isolate_expected.json only; untrusted comparison, regenerated finite objects supply evidence",
+  "reused_own_primitives": {
+    "commit": "fad06f63a490bd7541990f1a3d18028ccd6b59d4",
+    "path": "constant_weight_support17_review2/audit.py",
+    "scope": "field arithmetic, packing/row checks, color-bounded clique census; no target author implementation imports"
+  }
+}
