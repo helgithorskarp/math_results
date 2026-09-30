@@ -1,0 +1,211 @@
+{
+  "certificate": {
+    "method": "exact degree-eight moment quadrature and rational tensor collocation",
+    "quadrature_nodes": [
+      "0",
+      "1/8",
+      "1/4",
+      "3/8",
+      "1/2",
+      "5/8",
+      "3/4",
+      "7/8",
+      "1"
+    ],
+    "quadrature_weights": [
+      "989/28350",
+      "2944/14175",
+      "-464/14175",
+      "5248/14175",
+      "-454/2835",
+      "5248/14175",
+      "-464/14175",
+      "2944/14175",
+      "989/28350"
+    ],
+    "moment_identities": 9,
+    "profiles": [
+      {
+        "k": 0,
+        "degree": [
+          16,
+          6,
+          12
+        ],
+        "coefficients": 1547,
+        "minimum_positive": "8",
+        "zero_indices": [],
+        "sha256": "09877e893f2c8d6bd2f4506b69211533ec74f9843648e3b30567e602f155c6d7"
+      },
+      {
+        "k": 1,
+        "degree": [
+          15,
+          5,
+          7
+        ],
+        "coefficients": 768,
+        "minimum_positive": "8",
+        "zero_indices": [],
+        "sha256": "55eb3b89ab05734f668fe13f59a89010afb7ea7b7a9faa5aabd05821405ecad0"
+      },
+      {
+        "k": 2,
+        "degree": [
+          14,
+          4,
+          6
+        ],
+        "coefficients": 525,
+        "minimum_positive": "8",
+        "zero_indices": [],
+        "sha256": "748987bcf2f468ca6677122892125407600f4ed7ca2e404a041cf1c889fedba4"
+      },
+      {
+        "k": 3,
+        "degree": [
+          13,
+          3,
+          5
+        ],
+        "coefficients": 336,
+        "minimum_positive": "8",
+        "zero_indices": [],
+        "sha256": "4bf75a0be9005ecda83d060bd681ad17a7f1f3489cf5d18c6acce158d7024bb0"
+      },
+      {
+        "k": 4,
+        "degree": [
+          12,
+          2,
+          4
+        ],
+        "coefficients": 195,
+        "minimum_positive": "8",
+        "zero_indices": [],
+        "sha256": "34372bcfd9a217c461d92d879b7f0c720aa102f9cffb3649b343f56a6a20b7af"
+      },
+      {
+        "k": 5,
+        "degree": [
+          11,
+          1,
+          3
+        ],
+        "coefficients": 96,
+        "minimum_positive": "44/7",
+        "zero_indices": [
+          [
+            11,
+            1,
+            0
+          ]
+        ],
+        "sha256": "50f384a5f9f8d7f294a49383f4bf2036457cacecf9ca20df9cbb2f51011376f7"
+      }
+    ],
+    "total_coefficients": 3467,
+    "reverse_tensor_grid_checks": 3467,
+    "off_grid_identity_checks": 18,
+    "negative_real_polar_dependency": [
+      {
+        "interval": [
+          "0",
+          "1/2"
+        ],
+        "degree": 16,
+        "minimum_deficit_coefficient": "24510169/50331648"
+      },
+      {
+        "interval": [
+          "1/2",
+          "5/8"
+        ],
+        "degree": 16,
+        "minimum_deficit_coefficient": "73563275/150994944"
+      },
+      {
+        "interval": [
+          "5/8",
+          "3/4"
+        ],
+        "degree": 16,
+        "minimum_deficit_coefficient": "1319828451238103/2533274790395904"
+      }
+    ],
+    "rejected_controls": 4,
+    "strengthened_gap8_certificate": [
+      {
+        "k": 0,
+        "coefficients": 1547,
+        "all_coefficients_nonnegative": true,
+        "zero_coefficients": 91,
+        "minimum_positive": "7/4",
+        "sha256": "e4ddcdf88b0b73ff051e55581efc10beb9738208ab0b40c0c8c2c0bd8ce374a8"
+      },
+      {
+        "k": 1,
+        "coefficients": 768,
+        "all_coefficients_nonnegative": true,
+        "zero_coefficients": 48,
+        "minimum_positive": "28/15",
+        "sha256": "ce9a9a4cae89a1948cf0a85ffe92085b74ac262c206794063669f82505e87161"
+      },
+      {
+        "k": 2,
+        "coefficients": 525,
+        "all_coefficients_nonnegative": true,
+        "zero_coefficients": 35,
+        "minimum_positive": "2",
+        "sha256": "685ba8b3b45527eb67d6a57f3b47b28227e6d8f3814243cd29eb8cc842335ea9"
+      },
+      {
+        "k": 3,
+        "coefficients": 336,
+        "all_coefficients_nonnegative": true,
+        "zero_coefficients": 24,
+        "minimum_positive": "28/13",
+        "sha256": "27aa562cfbfa920fe2420055f741f554dcc319d1c0a662f26cd403b6e99e10a4"
+      },
+      {
+        "k": 4,
+        "coefficients": 195,
+        "all_coefficients_nonnegative": true,
+        "zero_coefficients": 15,
+        "minimum_positive": "7/3",
+        "sha256": "6b1a6732a4a04497027ca62c5cabb2e056bf5c3cd1534364ae1ae62f9e30eb04"
+      },
+      {
+        "k": 5,
+        "coefficients": 96,
+        "all_coefficients_nonnegative": true,
+        "zero_coefficients": 9,
+        "minimum_positive": "28/11",
+        "sha256": "663a9264a7922a41af04ea0ae6ccfebfec7c35ab6fc99cd74026a2041b9869f1"
+      }
+    ],
+    "stronger_gap_reverse_grid_checks": 87,
+    "optimality_control": {
+      "a": "1/10000",
+      "all_reciprocals": "10000/10001",
+      "normalized_gap": "2667866946708670866946678666966670000/333333333333333333333333333333333333",
+      "proposed_coefficient_801_over_100_rejected": true
+    }
+  },
+  "scope_controls": {
+    "scope_example": {
+      "real_critical_multiplicity": 6,
+      "nonreal_critical_pairs": 1,
+      "cubic_discriminant": "-4174875/1024",
+      "derivative_at_zero": "-12393/16384",
+      "derivative_at_marked_root": "26973/1024",
+      "distance_product": "26973/1024",
+      "nonreal_original_root_radius_squared": "5/8"
+    },
+    "affine_equality_example": {
+      "axis_offset": "3/5",
+      "chord_radius": "4/5",
+      "first_power_sum": "10"
+    }
+  }
+}
