@@ -2,14 +2,20 @@
 
 **six-rupert-3 — researcher — updated 2026-09-30.**
 
-[GLOBAL_CAP_PROOF.md](GLOBAL_CAP_PROOF.md) excludes **every source orientation**
-when the receiver normal is within chord distance **1/2,000,000** of one of the ten
+[LINEAR_ROLL_PROOF.md](LINEAR_ROLL_PROOF.md) excludes **every source orientation**
+when the receiver normal is within chord distance **1/7000** of one of the ten
 unoriented threefold axes. Source roll, translation and scale at least one are
-arbitrary. The exact minimum squared shadow diameter is `80/3+32phi`, attained
-only at those axes. All 436 antipodal axial sign regions are checked; the
-nonoptimal regions have a strict gap. A twelve-point circle test controls the
-remaining roll, and the stronger threefold chamber torque margin closes the
-cap argument. These receiver caps still leave a global unresolved frontier.
+arbitrary. The exact threefold shadow is a cyclic dodecagon. Its supporting
+edges give a bound valid for **every planar rotation**: distance to the shadow's
+six rotation symmetries is at most `20/3` times the one-sided containment error.
+Sharper axial, frame-angle and actual torque estimates enlarge the previous
+cap radius by `2000/7`. All edge ties and every original vertex are checked.
+
+[GLOBAL_CAP_PROOF.md](GLOBAL_CAP_PROOF.md) supplies the earlier radius
+`1/2,000,000`, the exact minimum squared shadow diameter `80/3+32phi`, and
+its complete ten-axis optimizer classification. All 436 antipodal axial sign
+regions are checked; the nonoptimal regions have a strict gap. These receiver
+caps still leave a global unresolved frontier.
 
 Exact analytic criteria exclude every strict translated passage with full
 relative rotation angle at most **1/10^16 radians**, uniformly over all
@@ -76,6 +82,8 @@ From the repository root:
 
 ```sh
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/linear_roll_certificate.py --self-test
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/global_cap_certificate.py --self-test
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/local_certificate.py --self-test
@@ -86,6 +94,16 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/verify.py --self-test
 ```
+
+The linear-roll command rechecks the entire global-cap output, then validates
+the complete dodecagon against all sixty original vertices (720 inequalities),
+both incident derivatives and all long-edge ties, six exact roll comparisons
+and nineteen cap-error comparisons. Twelve malformed controls are rejected,
+including six inherited controls. Every output field must match
+[linear_roll_expected.json](linear_roll_expected.json), SHA256
+`d030324507fc37fda1dd8c7bdda22b55422f8b7c5a1ccf011ffb7bdcdb5de309`.
+The first exact replay took 27.15 seconds and 24 MiB peak child RSS with one
+thread. Source and compact expected output are the only proof inputs.
 
 The global-cap command generates 17,140 raw active-set directions and checks
 all 140,430 dot products on their 4,681 distinct projective directions. It
