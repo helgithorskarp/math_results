@@ -1,4 +1,66 @@
-# Rhombicosidodecahedron: wider winning receiver rigidity
+# Rhombicosidodecahedron: explicit global receiving gap 1/150
+
+**six-rupert-3, researcher; updated 2026-09-30.**
+
+[COUPLED_NONWINNING_PROOF.md](COUPLED_NONWINNING_PROOF.md) proves that EVERY
+strict passage with original proper source rotation, full roll, arbitrary
+translation and scale>=1 must satisfy **f(n)^2<beta-1/150**, equivalently
+**diam(P_n K)^2>(736+960phi)/29+2/75**. This closes the nonwinning receiving
+band left by the preceding winning-band theorem and combines with that
+published theorem at the same cutoff. Global RID Rupertness remains **OPEN**.
+The new proof is unformalized and independently unreviewed; historical
+priority is unasserted.
+
+The new mechanism couples the source and receiving threshold normals.
+All eight ORIGINAL outer-circle points force an eight-to-eight bijection;
+complete cyclic order and twelve exact chord-length witnesses eliminate
+six of the eight possible cyclic shifts. The surviving roll gives full
+spatial angle<10403/178200<1/16. All 1920 individual original receiving
+support comparisons clear the entire closed chord 1/162 neighborhood, and
+both regenerated moving torque hulls obstruct every nonzero surviving
+rotation. Shared original contacts exclude strictness at zero angle.
+These are conditional receiving-band exclusions; unconditional all-source
+caps 1/162 are not asserted.
+
+Winning sources at the threshold receivers are covered by TWO NEW full
+closed-circle Bernstein trees: 26+54 leaves, 48+104 nodes, maximum depth 6,
+29184 candidate checks and 240 selected coefficient bounds. Their reference
+unit-support gap>1/16 survives the new, legitimate original source chord
+4343/100000 (larger than old 1/24) and the whole receiving-body error, with
+margin 154258654511/29160000000000>1/200. No historical 1/24 movement bound is
+reused. All 104 other-original heights, 56 circle-pair distances, 12 forbidden
+shift witnesses and 4 proper spatial circle/contact alignments are regenerated.
+
+Python 3.11+ standard library, threads one, run SEQUENTIALLY:
+
+~~~sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+ python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/coupled_nonwinning_certificate.py --self-test
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+ python3 -B -O rhombicosidodecahedron_mirror_cluster_obstruction/coupled_nonwinning_certificate.py --self-test
+~~~
+
+Every expected byte matches [coupled_nonwinning_expected.json](coupled_nonwinning_expected.json),
+SHA256 **40c237c4143253e2c6df0f1c64b1d79bca0db587538198c9966f73b6efd199b9**. Both runs reject all 28 malformed mathematical controls.
+Python 3.11.2 ordinary 15.015s/25276KiB,
+optimized 14.868s/28092KiB, separate 55 s deadlines.
+The complete old 436-region spectrum and wider winning 840-stratum theorem
+are inherited with byte-pinned source records, not claimed rerun here.
+Native checks are author validation, not independent review or formalization.
+
+The [independent global review](https://github.com/helgithorskarp/math_results/blob/main/rhombicosidodecahedron_global_slack_review2/REVIEW.md)
+confirmed the previous 1/1200 and 1/450 results and proved 1/445. It does not
+review this new 1/150 theorem. The following sections preserve earlier
+contribution scopes and fixtures. Their historical global 1/150 flags describe
+what those particular checkers proved; the remaining nonwinning obligation
+is now discharged by COUPLED_NONWINNING_PROOF.md.
+
+Next: retain the lower receiving-height sphere as unresolved. Investigate
+weighted original-circle radial inequalities to replace the present square-root
+roll loss by a bound linear in the normal chords, and quantify any larger
+winning receiver triangle before claiming a stronger GLOBAL cutoff.
+
+## Preceding wider winning receiver rigidity
 
 **six-rupert-3 — researcher — updated 2026-09-30.**
 
