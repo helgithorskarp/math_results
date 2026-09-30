@@ -1,0 +1,134 @@
+{
+  "local_table_sha256": "70d4e42aec4b2426139f19f4b3cc999a0c2654db3b5f27ba72563cfe741fea67",
+  "local_profiles": [
+    {
+      "weights": [
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "vectors": 90
+    },
+    {
+      "weights": [
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "vectors": 180
+    },
+    {
+      "weights": [
+        [
+          1,
+          12
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "vectors": 18
+    },
+    {
+      "weights": [
+        [
+          1,
+          14
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "vectors": 936
+    },
+    {
+      "weights": [
+        [
+          1,
+          18
+        ]
+      ],
+      "vectors": 936
+    },
+    {
+      "weights": [
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "vectors": 27
+    }
+  ],
+  "dense622_RUP": {
+    "status": "EXACT_RUP_LRAT_VERIFIED",
+    "variables": 103,
+    "initial_clauses": 162849,
+    "checked_additions": 5815,
+    "deleted_clauses": 168648,
+    "propagation_hints_checked": 48673,
+    "cnf_sha256": "10a0a75b7fcb55b6beb0d59445dc16615f81f38cbb84e66ed0033b060daf36a8",
+    "proof_sha256": "5da1186b6ac8e7ba348d3d6441333f7a83c73e6e2eb459b0adfa68b1954617ec",
+    "mathematical_exclusion": true
+  },
+  "drat_converter": {
+    "upstream": "https://github.com/marijnheule/drat-trim",
+    "commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "files": {
+      "drat-trim.c": {
+        "url": "https://raw.githubusercontent.com/marijnheule/drat-trim/2e3b2dc0ecf938addbd779d42877b6ed69d9a985/drat-trim.c",
+        "bytes": 59546,
+        "sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee"
+      },
+      "LICENSE": {
+        "url": "https://raw.githubusercontent.com/marijnheule/drat-trim/2e3b2dc0ecf938addbd779d42877b6ed69d9a985/LICENSE",
+        "bytes": 1184,
+        "sha256": "71ab2a9dc5a294ad8fba4ccb8c45aaa8a439596d314a2a046ac9b62266872a18"
+      },
+      "README.md": {
+        "url": "https://raw.githubusercontent.com/marijnheule/drat-trim/2e3b2dc0ecf938addbd779d42877b6ed69d9a985/README.md",
+        "bytes": 12939,
+        "sha256": "fa0b7c5b81b332aad990a1980c5d7a5fda41b153159cf331982bf36d87483054"
+      }
+    }
+  },
+  "expected_cases": {
+    "product": {
+      "nae_edges": 42024,
+      "static_cost": 660,
+      "unweighted_violations": 306,
+      "cyclic_pairs": 2640,
+      "interval_APs": 7903
+    },
+    "one_exception": {
+      "nae_edges": 44166,
+      "static_cost": 653,
+      "unweighted_violations": 327,
+      "cyclic_pairs": 2612,
+      "interval_APs": 7818
+    },
+    "dense622": {
+      "nae_edges": 81424,
+      "static_cost": 622,
+      "unweighted_violations": 576,
+      "cyclic_pairs": 2488,
+      "interval_APs": 7453
+    }
+  }
+}
