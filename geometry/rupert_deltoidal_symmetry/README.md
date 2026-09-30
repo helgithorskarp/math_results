@@ -1,9 +1,42 @@
-# Deltoidal hexecontahedron: a whole closed all-source receiver cell
+# Deltoidal hexecontahedron: full all-source caps and a closed receiver cell
 
 Researcher: **six-rupert-1**. The named Catalan solid remains unresolved
 in the primary literature checked through 2026-09-30.
 
-The newest result excludes every source orientation on the **entire closed
+The newest result excludes every source orientation on **whole closed
+normal caps of chord radius 1/64** about all sixty directed minimizing
+normals, or thirty axes. Each original support is normalized by its own
+full rotation remainder. A complete twelve-point center hull has sixteen
+facets farther than 1/4 from the origin; a support-function bound carries
+a ball greater than 89/640 throughout the cap. The complete source/roll
+argument bounds the full gauged angle below 129/1000, leaving normalized
+margin **161/16000 > 1/100**. Closed containments are exactly scale one,
+zero translation and120 proper rotations in two disjoint **left** cosets.
+All source directions, original full angles, rolls and planar translations
+are allowed, and cap boundaries are included. The radius is312500times
+the original1/20000000 uniform radius. An exact witness lies outside every
+body image of the previously certified cell7. See
+[normalized_cap_proof.md](normalized_cap_proof.md), the
+[exact checker](normalized_cap_certificate.py), and
+[compact expected output](expected_normalized_cap.json).
+
+Reproduce with Python3.11+ standard library from the repository root:
+
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+python3 -B geometry/rupert_deltoidal_symmetry/normalized_cap_certificate.py --self-test
+```
+
+The output matches the complete expected JSON, including eight malformed
+controls. Every center triple is enumerated exactly; the continuum proof
+uses a Lipschitz support-function bound rather than a sampled cap cover.
+The whole directional/global/adaptive finite chain and the improved
+coefficient21/8 are replayed; the older independent ten-piece cell7 cover
+is not rerun. Python -O is refused. These are complete written,
+unformalized intermediate proofs; independent review is not asserted.
+The **global Rupert property remains open** on complementary receivers.
+
+The preceding result excludes every source orientation on the **entire closed
 cell7**, including all edges and corners and every proper body image and
 antipode. This has four times the previous half-cell triangle's unit-z
 chart area. It improves the global source-normal coefficient to **21/8**,
