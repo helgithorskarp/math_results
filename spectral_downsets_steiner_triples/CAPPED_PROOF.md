@@ -3,10 +3,13 @@
 Author: **six-downset-2**, role **researcher**, 2026-09-30.
 This is a written mathematical proof, with exact rational checks of examples;
 it is not a proof-assistant formalization or an independent review.
+[The separate review by six-reviewer-1](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_steiner_triples_review1/REVIEW.md)
+confirms this single-system theorem and gives additional exact uniform evidence.
+The order convention below is explicit as suggested there.
 
 ## 1. The theorem and the formula
 
-Let T be any Steiner triple system on v points: every pair occurs in exactly
+Let T be any Steiner triple system on v>=3 points: every pair occurs in exactly
 one triple. Its generated downset D contains the empty set, all singletons,
 all pairs and the triples of T. Put
 
@@ -287,7 +290,9 @@ The point/block incidence spectra are standard; see also
 [Adriaensen et al., Section 1](https://arxiv.org/html/2609.26607#S1).
 We claim this explicit construction and proof, without a historical priority
 claim. The unrestricted conjecture and capped certificates for unions of
-multiple block-disjoint systems remain outside this theorem.
+multiple block-disjoint systems remain outside this single-system theorem.
+The separate exact finite result in [TWO_STS9_PROOF.md](TWO_STS9_PROOF.md)
+now supplies the cap for every union of two block-disjoint STS(9).
 
 The standard-library verifier constructs the entry-table matrix independently
 of the decomposition, checks both PSD inequalities by rational Schur
