@@ -37,6 +37,19 @@ stars. The centered core also lies outside all convex mixtures of partition
 lifts, without excluding caps for other mixtures.
 The same deletion calculation shows inherited cap failure for every
 friendship F_k, k>=2, giving a uniform comparison with the successful core.
+[CLIQUE_CENTERS.md](CLIQUE_CENTERS.md) now proves capped rational matrices
+with nonnegative off-diagonal weights for every K_r joined to t independent
+leaves, r>=2,t>=2, and refines every friendship factor k>=2. The new
+all-r centered core has a complete center-edge incidence decomposition,
+including the extra edge-incidence kernel at r>=4. Explicit convex repairs
+attain maximal rank among all H matrices: N-r for clique-center factors
+and N-1 for friendship factors. A leaf-permutation average removes the
+two-center matrix's negative weights by allowing a noncentered core.
+Every mixed product has explicit maximal rank and only eligible center
+stars as maximum intersecting families. The capped D_* handoff gives
+further products with exactly its largest stars and a proved fractional
+lower bound exceeding those stars by the factor 35/33. These scoped
+results credit the companion convex repair and kernel arguments.
 Disjoint-support unions and restrictions retaining the
 largest-star size have explicit certificate lifts. A valid seven-vertex
 certificate with eigenvalue 8/5 demonstrates why unrestricted tensoring of
@@ -58,6 +71,7 @@ python3 verify.py
 python3 verify_deletions.py
 python3 verify_friendship.py
 python3 verify_two_centers.py --check
+python3 verify_clique_centers.py --check
 ```
 
 The first command deterministically regenerates
@@ -84,6 +98,15 @@ It rejects the two failed inherited/partition templates, validates the
 friendship comparison for k=2,...,8 and rejects four malformed inputs.
 The analytic proofs of the infinite classes do not depend on the finite
 enumeration.
+The sixth command compares with [clique_centers_expected.json](clique_centers_expected.json).
+It checks 15 clique-center inputs in both parameter regimes, seven companion
+mixtures, all rational invariant images and a full-rank basis, and both
+spectral inequalities with quantitative margins. Base dimensions reach 78;
+two fully checked mixed tensors have dimensions 150 and 120. It expands
+all leaf permutations for four partition averages, checks every base
+maximum family, and includes balanced-recoloring, malformed-input,
+indefinite-matrix and zero-delta controls. Preliminary runs took about
+43--48 seconds and less than 27 MiB.
 
 Fixture SHA-256:
 
