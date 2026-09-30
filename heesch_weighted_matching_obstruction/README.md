@@ -43,6 +43,15 @@ python3 heesch_weighted_matching_obstruction/quintic_profiles.py
 python3 heesch_weighted_matching_obstruction/self_color_refinement.py
 ```
 
+[mixed_hand_profiles.md](mixed_hand_profiles.md) retains the original
+reflections of that five-corona fixture and characterizes all function-valued
+normal profiles preserving its full unit-port contacts. Every odd part
+vanishes; the even parts are signed copies of one symmetric function and
+port 17 stays flat. An 18-equation geometric core has determinant four.
+This excludes this fixed-patch profile-refinement route without classifying
+other five-corona patches. Run the standard-library certificate with
+`python3 heesch_weighted_matching_obstruction/mixed_hand_profiles.py`.
+
 Combinatorial imbalance as a reason for nontiling is established prior art.
 Mann discusses it for marked hexagons and polyhexes, including a size-dependent
 upper bound. The contribution here is the explicit matching-table criterion,
