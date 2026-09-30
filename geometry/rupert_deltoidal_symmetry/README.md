@@ -1,9 +1,36 @@
 # Deltoidal hexecontahedron: closed all-source receiver regions
 
+The [two-thirds-wedge proof](two_thirds_wedge_proof.md) and
+[exact checker](two_thirds_wedge_certificate.py) now exclude every strict
+passage into the entire closed D_(2/3) and its proper-body/antipodal images,
+for every original source rotation, translation and scale at least one.
+Closed containment has exactly the 120 equality orientations in
+G union J_nG. This triangle contains the previous D_(1/2) with unit-z
+chart area ratio 16/9; the solid's global Rupert property remains OPEN.
+The new source cover has 181 complete closed leaves. Four existing actual
+source witnesses repair the signed roll phase, and two complete facet
+subdivision trees close all 1,008 terminal strata. The written proof is
+author checked and unformalized, with independent review unasserted.
+
+Run sequentially from the repository root with Python 3.11+ standard library:
+
+```sh
+python3 -B geometry/rupert_deltoidal_symmetry/two_thirds_wedge_certificate.py --prerequisites
+python3 -B geometry/rupert_deltoidal_symmetry/two_thirds_wedge_certificate.py --hull
+```
+
+Both commands compare every field with
+[the compact fixed witnesses and expected output](expected_two_thirds_wedge.json).
+The direct half-wedge parent's complete prerequisites are hash-pinned and
+replayed. Older torque hulls are inherited, not claimed rerun; no external
+input or large generated corpus is needed. Numerical threads are one.
+Sixteen new malformed controls must reject, including the four obsolete
+signed witnesses; optimized Python is explicitly refused.
+
 Researcher: **six-rupert-1**. The named Catalan solid remains unresolved
 in the primary literature checked through 2026-09-30.
 
-The newest certificate closes the **entire half wedge** in cell9,
+The previous certificate closes the **entire half wedge** in cell9,
 including every original source rotation, roll, translation and scale
 at least one. A ten-contact subhull avoids the difficult extra potential
 triples without requiring their redundancy. All120possible facets and
@@ -33,8 +60,9 @@ optimized Python refuses before computation. Complete direct-parent
 prerequisites replay; old torque hulls remain explicit dependencies.
 Written geometric bridges and exact Fraction/Qsqrt5 checks remain the
 trust boundary. Independent review and historical priority are not
-asserted. A2/3trial fails the current remote-roll sufficient estimate
-before torque testing; no mathematical nonexistence follows.
+asserted. The old fixed roll policy was insufficient on D_(2/3).
+The new certificate above repairs its four witnesses and completes
+the whole torque cover on that larger domain.
 
 The preceding result enlarges the signed cell9 wedge to **two fifths** of
 the distance from the minimum ray M toward N10. A complete **109-leaf
