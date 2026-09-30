@@ -1,34 +1,40 @@
 # Deltoidal hexecontahedron: closed all-source receiver regions
 
-The [signed rank-one transport proof](rank_transport_wedge_proof.md),
-[exact checker](rank_transport_wedge_certificate.py) and
-[compact fixed witnesses](expected_rank_transport_wedge.json) enlarge the
-receiving exclusion to the **entire closed D_(3/4)** and every proper-body
-or antipodal image. All original source rotations, translations and scales
-at least one are covered. Closed containment has exactly scale1,
-translation0 and the120proper rotations in the two left cosets G union J_nG.
-The new triangle contains D_(2/3), with raw unit-z chart area ratio **81/64**,
-and an exact receiver lies outside every earlier excluded region image.
+The [signed Cayley proof](cayley_wedge_proof.md),
+[fixed exact checker](cayley_wedge_certificate.py) and
+[compact witnesses](expected_cayley_wedge.json) exclude strict passage
+on the **entire closed D1** and every proper-body or antipodal image.
+Every original proper source rotation, planar translation and scale at
+least one is covered. Closed containment has exactly scale1, translation0
+and the120proper rotations in the two left cosets G union J_nG.
+The triangle contains the entire previous D_(3/4), with raw unit-z chart
+area ratio **16/9**. An exact new interior receiver lies outside every
+previously excluded region image; no spherical area ratio is claimed.
 
-The sharper signed quadratic transport also derives a necessary full
-spatial angle below **0.212461** on the whole prospective D1. D1 remains
-unexcluded. On D_(3/4) the angle is below0.186355; three complete closed
-facet covers certify a torque ball of radius0.187355. All **1155** terminal
-strata pass, with no unresolved or degenerate case. Global Rupertness is
-**OPEN**. This is an author-checked, unformalized intermediate proof;
-independent review and historical priority are unasserted.
+The exact signed quadratic support terms close the endpoint where the
+older isotropic torque ball was insufficient. Six actual original
+contacts and **57 closed axis patches** give **2223 strict coefficient
+bounds** across the whole receiving triangle. All axes, signs, seams and
+receiver boundaries are included. The necessary all-source full angle
+below0.212461 is inherited from the signed rank-one theorem and its sharp
+global area/source reduction. Global Rupertness remains **OPEN**.
+This is an author-checked, unformalized intermediate proof; independent
+review and historical priority are unasserted.
 
-Run these two commands sequentially, with numerical threads one:
+Python3.11+ standard library, numerical threads one:
 
 ```sh
-python3 -B geometry/rupert_deltoidal_symmetry/rank_transport_wedge_certificate.py --prerequisites
-python3 -B geometry/rupert_deltoidal_symmetry/rank_transport_wedge_certificate.py --hull
+python3 -B geometry/rupert_deltoidal_symmetry/cayley_wedge_certificate.py
 ```
 
-The original area and sharp-source hypotheses are fully replayed and pinned.
-Thirteen malformed controls reject; optimized Python refuses; exact field
-signs receive independent rational-enclosure audits. Older torque jobs are
-inherited and are not claimed rerun.
+Every expected field must match. Fifteen malformed controls reject;
+optimized Python refuses before computation. Exact field signs receive
+independent rational-enclosure audits. The parent wholeD1 phase is
+reconstructed; original global area and sharp-source proofs are inherited
+and byte-pinned, and older torque jobs are not rerun by this new checker.
+The [parent signed rank-one proof](rank_transport_wedge_proof.md) separately
+established D_(3/4) using its complete1155-stratum torque certificate and
+fully replayed global area/sharp-source prerequisites.
 
 ## Exact optimal source radii
 
@@ -41,8 +47,8 @@ budget, and between 0.105135 and0.105136 at the full prospective `D_1` budget.
 The proof enumerates every spherical critical stratum and verifies the
 attaining directions exactly. Arbitrary translated containment into `D_1`
 therefore requires source radius below 0.105136 and squared scale below 1.007.
-This is a source reduction. The newer signed transport proof above extends
-the receiving exclusion to `D_(3/4)`; global Rupertness is OPEN. Run the
+This is a source reduction. The signed Cayley proof above extends
+the receiving exclusion to the entire `D_1`; global Rupertness is OPEN. Run the
 source checker with `--prerequisites` first.
 
 The [projection-area body proof](area_polar_proof.md) and
