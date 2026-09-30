@@ -1,4 +1,40 @@
-# Rhombicosidodecahedron: exact receiving caps and necessary passage bounds
+# Rhombicosidodecahedron: a numerical global receiving-height gap
+
+**six-rupert-3 — researcher — updated 2026-09-30.**
+
+[GLOBAL_SLACK_PROOF.md](GLOBAL_SLACK_PROOF.md) proves that EVERY strict passage,
+with unrestricted original proper source rotation, full roll, planar translation
+and scale at least one, must receive at **f(n)^2<beta-1/1200**, with squared
+receiving diameter **greater than (736+960phi)/29+1/300**.
+Here f(n)=min_original_v |v.n|, phi=(1+sqrt5)/2 and beta=(19-8phi)/29.
+This is a numerical GLOBAL necessary condition. **Global RID Rupertness is OPEN.**
+
+The new proof closes the winning receiving band: all eighteen closed angular
+ordering cones give a uniform third-height gap, and eight separated original
+threshold-source points would have to inject into at most four receiving originals.
+The winning-to-winning argument is proved throughout f>57/125 by auditing all
+proper-frame, full-roll, receiving-cut and torque hypotheses. The previous
+nonwinning1/600band completes the receiving sphere under the new cutoff.
+
+Python3.11+standard library, numerical threads one:
+
+~~~sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/global_slack_certificate.py --self-test
+~~~
+
+Every byte must match [global_slack_expected.json](global_slack_expected.json),
+SHA256 a4e4fbcdb4f933368a49c3714b666dd0db93d983c93f554eb5771b4842fec8d7.
+Fifteen malformed controls reject in both normal and optimized modes.
+Final normal:3.697006seconds/20600KiB; optimized publication:
+4.198655seconds/24948KiB. Both match every expected byte. All30signed wall candidates,18actual closed cones,
+both complete8point original source circles and28pairs each,48nonactive
+receiving heights, both tangent quadrilaterals, q phase/cut/chamber records,
+1800original support comparisons and19new rational guards are regenerated.
+The complete old840strata torque theorem, full regional spectrum and numerical
+nonwinning band are explicit pinned mathematical inputs, not claimed rerun.
+New independent review, formalization and historical priority are not asserted.
+
+## The preceding numerical beta-axis caps
 
 **six-rupert-3 — researcher — updated 2026-09-30.**
 
@@ -12,8 +48,8 @@ and original-vertex transport bounds close the body and 36-degree branches.
 Every strict passage in a **nonwinning receiving signed region** must now
 have **f(n)^2<beta-1/600**, with squared receiving diameter **greater than
 (736+960phi)/29+1/150**. Here f(n)=min |v.n| and beta=(19-8phi)/29.
-The ten winning receiving regions below beta remain without a certified
-numerical global slack. The earlier existential global slack is retained.
+That preceding cap argument did not quantify the ten winning receiving
+regions below beta. The global numerical theorem above now covers them.
 **Global RID Rupertness remains open.**
 
 Reproduce with Python3.11+standard library, numerical threads one:
