@@ -1,0 +1,281 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "claim_status": "Exact computer-assisted necessary profile for arbitrary length3704 target colorings relative to a fixed QR617 reference; no witness or global W upper bound.",
+  "verification": {
+    "verified": true,
+    "branches_checked": 42,
+    "original_class_sizes": [
+      1848,
+      1848
+    ],
+    "total_edit_bounds": [
+      59,
+      3637
+    ],
+    "minimum_changes_by_endpoint": {
+      "0": [
+        28,
+        29
+      ],
+      "1": [
+        29,
+        29
+      ]
+    },
+    "maximum_changes_by_endpoint": {
+      "0": [
+        1819,
+        1819
+      ],
+      "1": [
+        1820,
+        1819
+      ]
+    },
+    "maximum_of_edit_counts_at_least": 30,
+    "minimum_of_edit_counts_at_most": 1818,
+    "endpoint0_lower_corner": "a>=29 or b>=31",
+    "endpoint1_upper_corner": "a<=1819 or b<=1817",
+    "remaining_total59_pairs_by_endpoint": {
+      "0": [
+        [
+          28,
+          31
+        ],
+        [
+          29,
+          30
+        ],
+        [
+          30,
+          29
+        ]
+      ],
+      "1": [
+        [
+          29,
+          30
+        ],
+        [
+          30,
+          29
+        ]
+      ]
+    },
+    "exceptional_prefix_positions_free": 7,
+    "both_endpoint_values_covered": true,
+    "external_numerical_cut_assumptions": 0
+  },
+  "expected_sha256": "60feade862cd8358f85d458c7b902e676771a012b030a27f168e0554e5b39745",
+  "certificate_corpus_bytes_omitted": 16325943,
+  "source_generation": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "generated": 42,
+    "seconds": 384.384,
+    "max_rss_kib": 102296,
+    "weight_guides": 0
+  },
+  "longest_fresh_case_seconds": 33.12,
+  "complete_fresh_generation_byte_identical_to_assembled_reference": true,
+  "reference_case_reuse_before_fresh_reproduction": {
+    "unchanged_previous_cover": 18,
+    "new_budget_cases": 24,
+    "one_new_budget_case_uses_trimmed_previous_packing": true
+  },
+  "proof_step_totals": {
+    "forbidden_steps": 105327,
+    "forcing_steps": 28,
+    "mixed_steps": 42161,
+    "packing_steps": 44643,
+    "empty_steps": 60684,
+    "budget_steps": 0
+  },
+  "terminal_reasons": {
+    "empty_required": 40,
+    "required_packing": 2
+  },
+  "checker": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "exit_code": 0,
+    "seconds": 13.975,
+    "max_rss_kib": 249100
+  },
+  "control_resources": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "exit_code": 0,
+    "seconds": 30.096,
+    "max_rss_kib": 574764,
+    "stderr": ""
+  },
+  "controls": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "valid_suite_accepted": true,
+    "controls": [
+      {
+        "name": "earlier_format_with_mixed_tag",
+        "rejected": true,
+        "reason": "Not a completed branch transcript"
+      },
+      {
+        "name": "mixed_target_already_forced",
+        "rejected": true,
+        "reason": "Invalid mixed target"
+      },
+      {
+        "name": "missing_mixed_APs",
+        "rejected": true,
+        "reason": "Missing mixed AP witnesses"
+      },
+      {
+        "name": "insufficient_mixed_packing",
+        "rejected": true,
+        "reason": "Wrong opposite-color packing count"
+      },
+      {
+        "name": "intersecting_mixed_petals",
+        "rejected": true,
+        "reason": "Packing empty or intersecting"
+      },
+      {
+        "name": "constant_AP",
+        "rejected": true,
+        "reason": "AP outside domain or constant"
+      },
+      {
+        "name": "prefix_AP_hits_pole",
+        "rejected": true,
+        "reason": "Prefix AP touches an exceptional position"
+      },
+      {
+        "name": "prefix_AP_outside_interval",
+        "rejected": true,
+        "reason": "AP outside domain or constant"
+      },
+      {
+        "name": "legacy_tag_requires_target_in_every_AP",
+        "rejected": true,
+        "reason": "Conditional AP omits target"
+      },
+      {
+        "name": "extra_covering_hypothesis",
+        "rejected": true,
+        "reason": "Additional hypothesis in a covering branch"
+      },
+      {
+        "name": "unknown_status",
+        "rejected": true,
+        "reason": "Unknown proof status"
+      },
+      {
+        "name": "noninteger_budget",
+        "rejected": true,
+        "reason": "Invalid budgets"
+      },
+      {
+        "name": "wrong_endpoint_for_cover_clause",
+        "rejected": true,
+        "reason": "Endpoint clause is not uniformly colored or touches an exception"
+      },
+      {
+        "name": "mixed_endpoint_petal_wrong_original_class",
+        "rejected": true,
+        "reason": "Wrong mixed endpoint clause color or satisfied"
+      },
+      {
+        "name": "mixed_prefix_antecedent_unproved",
+        "rejected": true,
+        "reason": "Mixed antecedent unproved or consequent satisfied"
+      },
+      {
+        "name": "false_terminal_cardinality",
+        "rejected": true,
+        "reason": "No color cardinality contradiction"
+      },
+      {
+        "name": "missing_covering_root",
+        "rejected": true,
+        "reason": "Missing, duplicated, or unexpected case coverage"
+      },
+      {
+        "name": "wrong_budget_box_for_coverage",
+        "rejected": true,
+        "reason": "Wrong quantified branch"
+      },
+      {
+        "name": "missing_entire_endpoint0_corner",
+        "rejected": true,
+        "reason": "Missing, duplicated, or unexpected case coverage"
+      },
+      {
+        "name": "extra_unproved_full_width_class29_box",
+        "rejected": true,
+        "reason": "Missing, duplicated, or unexpected case coverage"
+      },
+      {
+        "name": "earlier_narrower_budget_cannot_cover_new_box",
+        "rejected": true,
+        "reason": "Wrong quantified branch"
+      },
+      {
+        "name": "endpoint_dependent_class29_transfer",
+        "rejected": true,
+        "reason": "Wrong quantified branch"
+      }
+    ],
+    "abstract_hypergraph_budget_cases": 4840,
+    "packing_certificates_checked_against_hitting_sets": 1898
+  },
+  "resource_policy": {
+    "threads": 1,
+    "cpu_intensive_jobs_concurrent": 1,
+    "seconds_per_case": 90,
+    "memory_scope_gib": 2,
+    "settings_changed": false
+  },
+  "external_numerical_premises": [],
+  "code_dependency": "Sibling published mixed-edit-region generator and exact replay; see provenance.json.",
+  "trust_boundary": [
+    "AP-clause and invariant bridge unformalized",
+    "Same-author Euler/set checker versus square/bitmask generation, with source reuse",
+    "Python exact integer semantics",
+    "No external human review or proof-assistant formalization of this contribution"
+  ],
+  "unresolved_frontiers": {
+    "full_width_endpoint0_caps": [
+      28,
+      1848
+    ],
+    "full_width_branches_stalled": 6,
+    "total59_pairs": {
+      "0": [
+        [
+          28,
+          31
+        ],
+        [
+          29,
+          30
+        ],
+        [
+          30,
+          29
+        ]
+      ],
+      "1": [
+        [
+          29,
+          30
+        ],
+        [
+          30,
+          29
+        ]
+      ]
+    }
+  }
+}

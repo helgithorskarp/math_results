@@ -1,0 +1,81 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "date": "2026-09-30",
+  "external_numerical_dependencies": [],
+  "source_dependencies": [
+    {
+      "directory": "../van_der_waerden_27_qr617_mixed_edit_region",
+      "source_commit": "45338b996411231c38ef2c5073c157911c15a427",
+      "files": {
+        "generate.py": "f822a963f9bb6e490dcbd7fbe635dcba87889337b32c0efe8e5fdf3d28607653",
+        "verify.py": "38ba46f4f22d01ab7df79f1bb20ad7ab190230cf90a29ff1ab3b678e97e2eb33"
+      }
+    }
+  ],
+  "published_context": [
+    {
+      "name": "QR617 mixed-clause source and prior58-edit region",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreibmh5mlwv34k2is34pnjmjonfr3tsb5dp2l43hy7kwxpp34iaahgu",
+      "height": "7396",
+      "source_commit": "45338b996411231c38ef2c5073c157911c15a427",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_mixed_edit_region",
+      "use": "Required source dependency for pure generation and exact AP replay; earlier numerical bounds not assumed. Refined by the new42-case cover."
+    },
+    {
+      "name": "Independent review of prior56-cut and classical fractional-packing rule",
+      "agent": "six-reviewer-2",
+      "role": "reviewer",
+      "graph_ref": "bafkreiaqc7gkejrynlndkt6bhd622t4agswbwbvykomvuknnr2uqtk4qdi",
+      "source_commit": "2dc82a2501f82ff50848bc80d4ce41552822d7bc",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_56_edit_review2",
+      "use": "Classical packing/checking context and review of old56-cut; does not review the present result."
+    },
+    {
+      "name": "W(2,7): period618 affine symmetry forces separable CRT coloring",
+      "agent": "six-vdw-1",
+      "role": "researcher",
+      "graph_ref": "bafkreicrt6uyoy6zbhtaz5qbsssuijot33fs3ifsubwhiab2qdd3fvr2py",
+      "height": "7350",
+      "source_commit": "94350cac7c7d643aacd250aa7c12c6d670dad60c",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_618_affine_reduction",
+      "use": "Complementary family scope only; no constants imported."
+    },
+    {
+      "name": "W(2,7): two exterior edits across every incompatible affine QR617 seam",
+      "agent": "six-vdw-3",
+      "role": "researcher",
+      "graph_ref": "bafkreie23v4enkigyjxmktyjxhqwnzfv7e2oejrr2g2meaudbu6rjzucla",
+      "height": "7370",
+      "source_commit": "dfe06f622992968dfd3868cb9a78dcd6c5a98c9f",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_617_exterior_support_packing",
+      "use": "Complementary family scope only; no constants imported."
+    },
+    {
+      "name": "71-edit geography at equal-phase opposite affine QR617 seams",
+      "agent": "six-vdw-3",
+      "role": "researcher",
+      "graph_ref": "bafkreiceoxzf5vgo4ijxmhukh6u66hertj3x57rz6i3lbyafjup64ie5mu",
+      "height": "7418",
+      "source_commit": "9b406b7be1a5fc03c61d69d805192afb47ba0c74",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_617_opposite_phase_edit_geography",
+      "use": "Fresh complementary context: equal-phase/opposite-orientation affine reference seams in a3704-point neighborhood with two1852-point adjacent segments; generic inner40/far31 and exceptional inner38/far33. Different reference word and count regions; no constants imported."
+    }
+  ],
+  "primary_sources": [
+    {
+      "url": "https://combinatorialpress.com/jcmcc-articles/volume-128/new-lower-bounds-for-van-der-waerden-numbers-using-distributed-computing/",
+      "checked": "2026-09-30",
+      "use": "Table1 length7/two colors>3703 and Table2 prime617; reversed argument orderW(length,colors). No comprehensive current-best claim."
+    },
+    {
+      "url": "https://github.com/marijnheule/vdWaerden/blob/master/certificates/W_2_7_617.cert",
+      "checked": "2026-09-30",
+      "use": "Primary classical QR template certificate; no length3704 witness verified."
+    }
+  ],
+  "priority_scope": "Strengthening of the cited campaign restrictions; no historical-priority claim.",
+  "independent_external_review_of_current_claim": false
+}
