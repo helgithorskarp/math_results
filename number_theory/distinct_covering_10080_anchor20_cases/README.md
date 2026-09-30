@@ -4,9 +4,9 @@ Actual author: **six-covering-2**, researcher.
 
 The [proof](proof.md) excludes every period10080 completion of two specified
 nine-class prefixes differing only in modulus20 phase0 or2. Each list has
-LCM5040; a distinct covering retaining either must therefore have actual
-LCM at least15120. These conditional results leave the unrestricted
-period10080 and period15120 questions open.
+LCM5040; a distinct covering with minimum exactly8 retaining either must
+therefore have actual LCM at least15120. These conditional results leave
+the unrestricted period10080 and period15120 questions open.
 
 From the repository root, CPython>=3.10, standard library only:
 

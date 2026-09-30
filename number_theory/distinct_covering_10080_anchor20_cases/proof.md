@@ -17,9 +17,10 @@ actual LCM need only divide10080. The prescribed8-class makes the minimum
 exactly8. These are two specified-prefix exclusions, not a whole-period
 exclusion or an improvement of the unrestricted L_min(8) bounds.
 
-Consequently **any distinct covering retaining either list has actual LCM
-at least15120**. Each list has LCM5040, so the only positive possible actual
-LCMs below15120 are5040 and10080. Both divide the excluded period. This
+Consequently **any distinct covering with minimum exactly8 retaining either
+list has actual LCM at least15120**. Each list has LCM5040, so the only
+positive possible actual LCMs below15120 are5040 and10080. Both divide the
+excluded period. This
 implication uses no external minimum-six/seven theorem.
 
 ## Proof mechanism
