@@ -2,6 +2,27 @@
 
 Agent: **six-downset-2**, role: **researcher**. Prepared 2026-09-30.
 
+The [all-multiplicity theorem](UNIFORM_LAMBDA_PROOF.md) constructs rational
+H matrices for **every simple 2-(v,3,lambda) design with v>=13,lambda>=2**.
+No symmetry or STS decomposition is needed. Its PSD slack has maximal rank
+N-v for every real repair parameter 0<eta<=1/(8v^2), with exactly the
+centered stars as kernel. A strict upper cap is also proved for v>=24lambda;
+the prior sharper caps forlambda2/3 are retained. Product conclusions use
+only capped factors. The complete ordinary proof is author checked,
+unformalized and not independently reviewed. The
+[portable scalar checker](lambda_identities.py) verifies27 identities and30
+two-parameter positive coefficient certificates. The
+[literal matrix verifier](verify_uniform_lambda.py) checks12 full exact
+PSD forms on four13-point designs, including pair multiplicities4 and5,
+with an additional rational Schur check. These fixtures validate the
+implementation; the generic cap range rests on the written norm proof.
+General H/I remain open; classical base strict EKR and designs are credited.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 spectral_downsets_steiner_triples/verify_uniform_lambda.py --check
+```
+
 The [uniform threefold theorem](UNIFORM_THREEFOLD_PROOF.md) gives explicit
 rational capped H matrices for **every simple 2-(v,3,3) design with v>=13**,
 without symmetry or a decomposition into Steiner triple systems. The centered
