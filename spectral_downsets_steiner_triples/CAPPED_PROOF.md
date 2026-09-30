@@ -6,6 +6,9 @@ it is not a proof-assistant formalization or an independent review.
 [The separate review by six-reviewer-1](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_steiner_triples_review1/REVIEW.md)
 confirms this single-system theorem and gives additional exact uniform evidence.
 The order convention below is explicit as suggested there.
+The centered formula below is retained. The subsequent
+[MAXRANK_PROOF.md](MAXRANK_PROOF.md) repairs its additional kernel direction
+for v>=7, giving maximal rank N-v and classifying every equality case.
 
 ## 1. The theorem and the formula
 

@@ -1,0 +1,123 @@
+{
+  "STS7_coverage": {
+    "enumeration_sha256": "7105fd19860923c79c2863258ed5a3a53d0a144c274683cb18ec070fbc67f101",
+    "isomorphism_classes": 1,
+    "labelled_systems": 30
+  },
+  "exception_mixed_dual_arithmetic": {
+    "N": 1152,
+    "fractional_lower_bound": "420",
+    "ratio_lower_bound": "35/33",
+    "s": 396
+  },
+  "product_parameter_examples": {
+    "STS7_times_STS9": {
+      "N": 2088,
+      "largest_coordinate_stars": 7,
+      "rank_Q": 2081,
+      "s": 580
+    },
+    "STS9_times_twoSTS9": {
+      "N": 4060,
+      "largest_coordinate_stars": 9,
+      "rank_Q": 4051,
+      "s": 986
+    },
+    "exception_times_STS7": {
+      "N": 1152,
+      "largest_coordinate_stars": 6,
+      "rank_Q": 1146,
+      "s": 396
+    },
+    "twoSTS9_squared": {
+      "N": 4900,
+      "largest_coordinate_stars": 18,
+      "rank_Q": 4882,
+      "s": 1190
+    }
+  },
+  "rejection_controls": 4,
+  "single_system_examples": [
+    {
+      "N": 36,
+      "epsilon": "1/1488",
+      "input_half_buffer_rank": 35,
+      "label": "STS7",
+      "matrix_sha256": "d3250e3a636419e537ab6af35e2ba0fcd55d4112d2d2b5f2e02be752d8909d21",
+      "new_empty_diagonal_Q": "503/496",
+      "ordinary_trace": "372",
+      "ordinary_w_component": "21",
+      "output_quarter_buffer_rank": 35,
+      "rank_Q": 29,
+      "rank_upper": 35,
+      "s": 10
+    },
+    {
+      "N": 58,
+      "epsilon": "1/4480",
+      "input_half_buffer_rank": 57,
+      "label": "STS9",
+      "matrix_sha256": "4d4d42b5d82eaaa723afc4cc47c971d24dac4cd5e1ddd6b9eaa848622178b292",
+      "new_empty_diagonal_Q": "347/320",
+      "ordinary_trace": "1120",
+      "ordinary_w_component": "-60",
+      "output_quarter_buffer_rank": 57,
+      "rank_Q": 49,
+      "rank_upper": 57,
+      "s": 13
+    },
+    {
+      "N": 118,
+      "epsilon": "3/42236",
+      "input_half_buffer_rank": 117,
+      "label": "STS13",
+      "matrix_sha256": "7bc30f831e4c6c70d8d23c1a435722aef81c6d632dd93c8390b215cdebdef4fb",
+      "new_empty_diagonal_Q": "46123/42236",
+      "ordinary_trace": "10559/3",
+      "ordinary_w_component": "-130",
+      "output_quarter_buffer_rank": 117,
+      "rank_Q": 105,
+      "rank_upper": 117,
+      "s": 19
+    }
+  ],
+  "two_system_coverage": {
+    "STS9_enumeration_sha256": "3da28f3153254033cd3780de89e3bb873ed5232a441a527bd306d3793a22594a",
+    "disjoint_second_systems": 192,
+    "labelled_STS9": 840,
+    "ordered_pair_orbit_sizes": [
+      144,
+      48
+    ]
+  },
+  "two_system_examples": [
+    {
+      "N": 70,
+      "epsilon": "1/7072",
+      "input_half_buffer_rank": 69,
+      "label": "twoSTS9-case0",
+      "matrix_sha256": "c6d2b4b7ec8624b3417d22b9676145c2d72c5d8190705cd959f906a0bcede031",
+      "new_empty_diagonal_Q": "3833/3536",
+      "ordinary_trace": "1768",
+      "ordinary_w_component": "-84",
+      "output_quarter_buffer_rank": 69,
+      "rank_Q": 61,
+      "rank_upper": 69,
+      "s": 17
+    },
+    {
+      "N": 70,
+      "epsilon": "1/7072",
+      "input_half_buffer_rank": 69,
+      "label": "twoSTS9-case1",
+      "matrix_sha256": "0a8c67eaedfa628fd249e27cd0bde0ed49282b5fd09cba700d324e14108ab9d3",
+      "new_empty_diagonal_Q": "3833/3536",
+      "ordinary_trace": "1768",
+      "ordinary_w_component": "-84",
+      "output_quarter_buffer_rank": 69,
+      "rank_Q": 61,
+      "rank_upper": 69,
+      "s": 17
+    }
+  ]
+}

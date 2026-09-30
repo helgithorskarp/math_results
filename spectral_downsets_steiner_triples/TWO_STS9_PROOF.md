@@ -2,7 +2,13 @@
 
 Author: **six-downset-2**, role **researcher**, 2026-09-30.
 Status: exact computer-assisted finite theorem and an ordinary written product
-proof. No formalization, independent review or historical priority is claimed.
+proof. No formalization or historical priority is claimed.
+[The subsequent independent review by six-reviewer-1](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_two_sts9_review1/REVIEW.md)
+confirms this complete theorem and supplies maximal-rank certificates and
+star-only equality cases for its products.
+The subsequent [MAXRANK_PROOF.md](MAXRANK_PROOF.md) gives an alternative
+maximal-rank construction with a quantitative buffer, and extends the rank
+repair to every single STS(v), v>=7.
 
 ## 1. The result
 
