@@ -1,0 +1,312 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "date": "2026-09-30",
+  "python": "3.11.2",
+  "dependencies": "Python standard library and pinned sibling sources in provenance.json",
+  "all_source_checks_complete": true,
+  "fresh_source_only_generation": {
+    "label": "fresh-generation",
+    "status": "FINISHED",
+    "returncode": 0,
+    "seconds": 38.246,
+    "max_rss_kib": 95392,
+    "threads": 1,
+    "primitive_caps_in_command": true,
+    "validation_timeout_seconds": null
+  },
+  "primitive_searches": 6,
+  "primitive_search_seconds_cap": 90,
+  "fresh_case_timings": [
+    {
+      "endpoint": 1,
+      "root": 3421,
+      "budget": [
+        29,
+        1848
+      ],
+      "status": "EXCLUDED",
+      "seconds": 5.003
+    },
+    {
+      "endpoint": 1,
+      "root": 3468,
+      "budget": [
+        29,
+        1848
+      ],
+      "status": "EXCLUDED",
+      "seconds": 4.962
+    },
+    {
+      "endpoint": 1,
+      "root": 3515,
+      "budget": [
+        29,
+        1848
+      ],
+      "status": "EXCLUDED",
+      "seconds": 5.144
+    },
+    {
+      "endpoint": 1,
+      "root": 3562,
+      "budget": [
+        29,
+        1848
+      ],
+      "status": "EXCLUDED",
+      "seconds": 4.722
+    },
+    {
+      "endpoint": 1,
+      "root": 3609,
+      "budget": [
+        29,
+        1848
+      ],
+      "status": "EXCLUDED",
+      "seconds": 6.207
+    },
+    {
+      "endpoint": 1,
+      "root": 3656,
+      "budget": [
+        29,
+        1848
+      ],
+      "status": "EXCLUDED",
+      "seconds": 8.889
+    }
+  ],
+  "maximum_recorded_primitive_search_plus_replay_seconds": 8.889,
+  "fresh_independent_full_replay": {
+    "label": "fresh-check",
+    "status": "FINISHED",
+    "returncode": 0,
+    "seconds": 1.721,
+    "max_rss_kib": 41684,
+    "threads": 1,
+    "primitive_caps_in_command": false,
+    "validation_timeout_seconds": 90
+  },
+  "fresh_private_entry_level_comparison": {
+    "certificate_files": 6,
+    "all_certificate_bytes_and_full_root_results_identical": true,
+    "certificate_bytes": 1727217
+  },
+  "source_code_sha256": {
+    "verify.py": "ef5b90b3c789a521f895eedaaedcfae03fa321de59f077f79f8259e3581ccd19",
+    "generate.py": "6bffcf9928c7fb0e8520958fc2e0c6ebd78d90f4b42229da9143c998ca4fd290",
+    "checker_controls.py": "7544469cb2231af531054119f172e20867c719233197e9a691fe36553e30c4b1"
+  },
+  "expected_manifest_sha256": "dd870ebcdc06b099ffa6aeedd926741e8d6c7e266436ec792e931208e44512ad",
+  "checking_counts": {
+    "roots_checked": 6,
+    "nodes_checked": 6,
+    "splits_checked": 0,
+    "leaves_checked": 6,
+    "step_totals": {
+      "forbidden": 14633,
+      "forced": 15,
+      "packing": 4681,
+      "empty": 9952,
+      "mixed": 4650,
+      "budget": 0
+    }
+  },
+  "controls": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "primitive_regressions": 6,
+    "input_cases": 6,
+    "controls_rejected": 25,
+    "rejections": [
+      {
+        "name": "missing_root_tree-1-3421-29-1848.json",
+        "reason": "Missing, extra or unexpected endpoint-one root coverage"
+      },
+      {
+        "name": "missing_root_tree-1-3468-29-1848.json",
+        "reason": "Missing, extra or unexpected endpoint-one root coverage"
+      },
+      {
+        "name": "missing_root_tree-1-3515-29-1848.json",
+        "reason": "Missing, extra or unexpected endpoint-one root coverage"
+      },
+      {
+        "name": "missing_root_tree-1-3562-29-1848.json",
+        "reason": "Missing, extra or unexpected endpoint-one root coverage"
+      },
+      {
+        "name": "missing_root_tree-1-3609-29-1848.json",
+        "reason": "Missing, extra or unexpected endpoint-one root coverage"
+      },
+      {
+        "name": "missing_root_tree-1-3656-29-1848.json",
+        "reason": "Missing, extra or unexpected endpoint-one root coverage"
+      },
+      {
+        "name": "wrong_endpoint",
+        "reason": "Wrong quantified full-width endpoint/root/cap case"
+      },
+      {
+        "name": "Boolean_endpoint",
+        "reason": "Wrong quantified full-width endpoint/root/cap case"
+      },
+      {
+        "name": "unsupported_larger_cap",
+        "reason": "Wrong quantified full-width endpoint/root/cap case"
+      },
+      {
+        "name": "swapped_original_class_caps",
+        "reason": "Wrong quantified full-width endpoint/root/cap case"
+      },
+      {
+        "name": "wrong_root",
+        "reason": "Wrong quantified full-width endpoint/root/cap case"
+      },
+      {
+        "name": "unsupported_endpoint_cover",
+        "reason": "Missing, extra or unexpected endpoint-one root coverage"
+      },
+      {
+        "name": "changed_trace_budget",
+        "reason": "Child metadata differs from its parent"
+      },
+      {
+        "name": "extra_trace_hypothesis",
+        "reason": "Certificate-supplied initial state or hypotheses"
+      },
+      {
+        "name": "extra_tree_hypothesis",
+        "reason": "Tree supplied additional initial hypotheses"
+      },
+      {
+        "name": "supplied_U",
+        "reason": "Certificate-supplied initial state or hypotheses"
+      },
+      {
+        "name": "supplied_T",
+        "reason": "Certificate-supplied initial state or hypotheses"
+      },
+      {
+        "name": "false_terminal",
+        "reason": "No class-count contradiction"
+      },
+      {
+        "name": "unproved_partial_terminal",
+        "reason": "Open leaf prevents parent exclusion"
+      },
+      {
+        "name": "constant_AP",
+        "reason": "AP outside domain or constant"
+      },
+      {
+        "name": "Boolean_AP",
+        "reason": "Noninteger AP"
+      },
+      {
+        "name": "AP_hits_pole",
+        "reason": "Prefix AP touches an exceptional position"
+      },
+      {
+        "name": "forbid_forced_root",
+        "reason": "Invalid forbidden target"
+      },
+      {
+        "name": "intersecting_packing",
+        "reason": "Packing empty or intersecting"
+      },
+      {
+        "name": "empty_packing",
+        "reason": "Packing empty or intersecting"
+      }
+    ]
+  },
+  "normal_and_optimized_controls_identical": true,
+  "validation_jobs": [
+    {
+      "label": "fresh-check",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 1.721,
+      "max_rss_kib": 41684,
+      "threads": 1,
+      "primitive_caps_in_command": false,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "controls-normal",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 6.235,
+      "max_rss_kib": 53068,
+      "threads": 1,
+      "primitive_caps_in_command": false,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "controls-optimized",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 6.487,
+      "max_rss_kib": 54916,
+      "threads": 1,
+      "primitive_caps_in_command": false,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "cached-resume",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 5.033,
+      "max_rss_kib": 95976,
+      "threads": 1,
+      "primitive_caps_in_command": false,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "tiny-limit",
+      "status": "FINISHED",
+      "returncode": 1,
+      "seconds": 3.428,
+      "max_rss_kib": 87084,
+      "threads": 1,
+      "primitive_caps_in_command": false,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "saved-timeout-refusal",
+      "status": "FINISHED",
+      "returncode": 1,
+      "seconds": 3.429,
+      "max_rss_kib": 85892,
+      "threads": 1,
+      "primitive_caps_in_command": false,
+      "validation_timeout_seconds": 90
+    }
+  ],
+  "cached_resume_preserves_all_six_proofs_and_full_manifest": true,
+  "cached_resume_preserves_fresh_timing_metadata": true,
+  "incomplete_tree_and_suite_rejected": true,
+  "saved_timeout_refused_without_retry": true,
+  "intentional_tiny_limit_is_only_a_negative_control": true,
+  "unexpected_search_or_validation_limits_reached": false,
+  "scope_limits": {
+    "cpu": 1,
+    "memory_gib": 2,
+    "tasks_max": 128,
+    "solver_BLAS_OpenMP_threads": 1,
+    "max_CPU_intensive_jobs": 1,
+    "limits_increased": false
+  },
+  "previous_private_both_endpoint_audit_sha256": "93cd903683afcae7290db4aec650ddbb9f3261c6da783bcf0d391cf367854420",
+  "proof_corpus_bytes": 1727217,
+  "proof_corpus_published": false,
+  "published_endpoint0_searches_repeated": false,
+  "earlier_numerical_bounds_used_by_new_branch_replay": false,
+  "external_review_or_formalization": false,
+  "trust_boundary": "Same-author independent Euler/set exact replay; written unformalized AP/invariant/root-cover/complement argument. Both-endpoint square-class corollary separately trusts published endpoint0 class30, and combined full profile additionally trusts published62.",
+  "global_W_bound_or_witness": false
+}

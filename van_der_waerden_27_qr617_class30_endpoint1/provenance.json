@@ -1,0 +1,136 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "date": "2026-09-30",
+  "problem_graph_ref": "bafkreihbsyzlpqcibwae7vxelgoqcfofwzqdshfmkjrjyhqe7lydcjdlaa",
+  "source_dependencies": [
+    {
+      "directory": "../van_der_waerden_27_qr617_mixed_edit_region",
+      "source_commit": "45338b996411231c38ef2c5073c157911c15a427",
+      "files": {
+        "generate.py": "f822a963f9bb6e490dcbd7fbe635dcba87889337b32c0efe8e5fdf3d28607653",
+        "verify.py": "38ba46f4f22d01ab7df79f1bb20ad7ab190230cf90a29ff1ab3b678e97e2eb33"
+      }
+    },
+    {
+      "directory": "../van_der_waerden_27_qr617_class29_disjunction",
+      "source_commit": "9f183bdd6f0b78152dba63a5fc0ef8391e9d49ec",
+      "files": {
+        "verify.py": "579763d952c364963692638d125e9ff71c6ed9add1f3e4999462bac2e8e7c0af"
+      },
+      "use": "Unchanged generic tree replay; no prior numerical result is called by new branch checking"
+    }
+  ],
+  "numerical_dependencies": [
+    {
+      "scope": "both-endpoint square-class30 corollary only; not used by new endpoint1 branch proofs",
+      "graph_ref": "bafkreicrhoig23dl3ybycrisfna53v57twy57i6xgyr3r2dfxreayve5cq",
+      "source_commit": "84fcb7a230691dd2aeaa5e400d12c649ae08f1ae",
+      "directory": "van_der_waerden_27_qr617_class30_endpoint0",
+      "invoked_fact": "e=0 implies a>=30; complement gives e=1 implies a<=1818",
+      "files": {
+        "PROOF.md": "2bc268f6050d7ed12232aac1258fb0c5a4f8a41dfbea86b814ccf514280b2e9a",
+        "expected.json": "0de4ae8a1ca8b637de526a2fef1b6396e4610b6cfbd49ff016c40cec9036a62f"
+      }
+    },
+    {
+      "scope": "combined both-endpoint full62 profile only; not used by new endpoint1 branch proofs",
+      "graph_ref": "bafkreieu7guaiaarct57a7ohr2y32mcvgc5d4uwaj6kwodienf3o5u2i2e",
+      "source_commit": "bc987b1e75efcc6966135728c2f7bf2b61e32f93",
+      "directory": "van_der_waerden_27_qr617_62_edit_profile",
+      "invoked_fact": "29<=a,b<=1819 and62<=a+b<=3634 at either endpoint",
+      "files": {
+        "PROOF.md": "524fbf7c29f81a075c74103f9cf655afbb4be49c3bf203760677f9246c5d26da",
+        "expected.json": "24d9561a79a7490ce33d1d0e9dffebb036b40993c4335c3ce263d9d1a1a6a3e4"
+      }
+    }
+  ],
+  "adapted_wrapper_credit": [
+    {
+      "directory": "van_der_waerden_27_qr617_class30_endpoint0",
+      "source_commit": "84fcb7a230691dd2aeaa5e400d12c649ae08f1ae",
+      "files": {
+        "generate.py": "756ba7afee483a46420debfba6497dd6655075b479db8aa33b939c81e60ccfe2",
+        "verify.py": "a800f97f25f27e8254addc4ff24537ee838622bfa52f34f0c8e5983d378f9b89",
+        "checker_controls.py": "a6a5926d8bd67646ad63920537f2a05462de17cfc7f979803c1cee4bdd84210e"
+      },
+      "use": "Outer coverage, exact dependency guards, fail-closed caching and corruption-control architecture adapted into a direct six-case endpoint1 suite. Old split-search paths and irrelevant synthetic child controls omitted. Fresh timing metadata is preserved during cache-only resumption."
+    }
+  ],
+  "published_context": [
+    {
+      "name": "QR617 mixed-clause source and prior58-edit region",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreibmh5mlwv34k2is34pnjmjonfr3tsb5dp2l43hy7kwxpp34iaahgu",
+      "height": "7396",
+      "source_commit": "45338b996411231c38ef2c5073c157911c15a427",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_mixed_edit_region",
+      "use": "Computational source dependency for the pure generator and exact Euler/set AP definitions. Earlier numerical bounds are not used by the new cut."
+    },
+    {
+      "name": "Uniform QR617 original-class29 theorem",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreigdc2r7hp4snvr5h3sqwtzth6bcx7ocbtcpzabiodifflmb36ewrq",
+      "height": "7456",
+      "source_commit": "9f183bdd6f0b78152dba63a5fc0ef8391e9d49ec",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_class29_disjunction",
+      "use": "Unchanged generic tree replay source; no earlier numerical class29 theorem called by the new class30 branch proof."
+    },
+    {
+      "name": "Fixed alignedQR61762 profile",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreieu7guaiaarct57a7ohr2y32mcvgc5d4uwaj6kwodienf3o5u2i2e",
+      "height": "7665",
+      "source_commit": "bc987b1e75efcc6966135728c2f7bf2b61e32f93",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_62_edit_profile",
+      "use": "Previous62 necessary region; separate numerical premise for combined b and total-edit bounds. New e1 full-width square-class cut removes pairs such as(29,1000) left by that region and the endpoint0 lemma."
+    },
+    {
+      "name": "Endpoint-zero full-width original-square class30 lemma",
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "graph_ref": "bafkreicrhoig23dl3ybycrisfna53v57twy57i6xgyr3r2dfxreayve5cq",
+      "height": "7711",
+      "source_commit": "84fcb7a230691dd2aeaa5e400d12c649ae08f1ae",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_class30_endpoint0",
+      "use": "Independent e0a>=30 theorem and complemented e1a<=1818; separate numerical premise for both-endpoint original-square class30 corollary. Supplies wrapper/control source credit. Its34 searches are not repeated by the new suite."
+    },
+    {
+      "name": "Period618 minority-row triple pruning",
+      "agent": "six-vdw-1",
+      "role": "researcher",
+      "graph_ref": "bafkreiemx6cex2evfgpb5hfsgyrinjqgjdofj2g2jb67xp7z44vnz5ktbi",
+      "height": "7564",
+      "source_commit": "38f6aafa414319c5afbeeeadd388e2d8b7f43242",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_618_triple_pruning",
+      "use": "Complementary different period618 construction; invalid fixed words and local move barriers. No constants imported."
+    },
+    {
+      "agent": "six-vdw-3",
+      "role": "researcher",
+      "graph_ref": "bafkreidd54kxpyjlspt4tww57ib3p5ldcdc72h7isybb6onoeugb2u7eta",
+      "height": 7675,
+      "source_commit": "12cb7739d9d179684bee19a50f9ebd54c2794ff7",
+      "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_617_class197_cover",
+      "scope": "Four new phase184/201/205/269 class196 exclusions; with old613-phase numerical bounds gives197 per reference class/394 total for617 reflection-antisymmetric keys(s,1-s,1). Classes1848 at s1 and1849 otherwise. No other-class/far cap or candidate symmetry. Different partial seam references; no constants transferred. Cites our62 as complementary context, not review. Body and publicREADME/PROOF/provenance read; no independent audit of its certificates performed."
+    }
+  ],
+  "primary_sources": [
+    {
+      "url": "https://combinatorialpress.com/jcmcc-articles/volume-128/new-lower-bounds-for-van-der-waerden-numbers-using-distributed-computing/",
+      "checked": "2026-09-30",
+      "use": "Table1 length7/two colors>3703 and Table2 prime617; reversed argument orderW(length,colors). No comprehensive current-best claim."
+    },
+    {
+      "url": "https://github.com/marijnheule/vdWaerden/blob/master/certificates/W_2_7_617.cert",
+      "checked": "2026-09-30",
+      "use": "Primary classical QR template certificate; no length3704 witness verified."
+    }
+  ],
+  "priority_scope": "New endpoint1 full-width original-square class30 cut in the cited campaign; with the explicit endpoint0 numerical premise gives30<=a<=1818 at both endpoints. No historical priority or attained-distance claim.",
+  "new_branch_replay_uses_earlier_numerical_bounds": false,
+  "independent_external_review_of_current_claim": false
+}
