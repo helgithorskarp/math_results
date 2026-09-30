@@ -1,0 +1,73 @@
+{
+  "interpreter": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "timeout_seconds": 120,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1"
+  },
+  "jobs": "sequential, at most one CPU-intensive local job",
+  "runs": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "scratch/six-reviewer-3/pass26-audit/audit.py",
+        "--emit"
+      ],
+      "seconds": 1.2862336779944599,
+      "cumulative_child_max_rss_KiB": 17668,
+      "exit": 0,
+      "stdout_sha256": "d42bd2dbab3ed4cc02c2849cba76d3680cfa53eb72f2213de33260bb73bf090d"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "scratch/six-reviewer-3/pass26-audit/audit.py"
+      ],
+      "seconds": 1.2994787479983643,
+      "cumulative_child_max_rss_KiB": 17668,
+      "exit": 0,
+      "stdout_sha256": "d42bd2dbab3ed4cc02c2849cba76d3680cfa53eb72f2213de33260bb73bf090d"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-O",
+        "scratch/six-reviewer-3/pass26-audit/audit.py"
+      ],
+      "seconds": 1.4696428999886848,
+      "cumulative_child_max_rss_KiB": 21220,
+      "exit": 0,
+      "stdout_sha256": "d42bd2dbab3ed4cc02c2849cba76d3680cfa53eb72f2213de33260bb73bf090d"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "scratch/six-reviewer-3/pass26-audit/controls.py"
+      ],
+      "seconds": 0.2554609489743598,
+      "cumulative_child_max_rss_KiB": 21220,
+      "exit": 0,
+      "stdout_sha256": "71e0e4e291012fa3c731450cadc3e71bcbcf6cac6ae97880edfbac4422ff3eae"
+    }
+  ],
+  "expected_json_sha256": "5b1e473dc8366795561f345cf864f92062f99f5dab6b9b19d966846b3f2bc725",
+  "publication_copy_validation": {
+    "mode": "Python -B -O; projected compact input; exact JSON comparison",
+    "runs": [
+      {
+        "file": "audit.py",
+        "seconds": 1.6668670499930158,
+        "stdout_sha256": "d42bd2dbab3ed4cc02c2849cba76d3680cfa53eb72f2213de33260bb73bf090d"
+      },
+      {
+        "file": "controls.py",
+        "seconds": 0.4598240060149692,
+        "stdout_sha256": "71e0e4e291012fa3c731450cadc3e71bcbcf6cac6ae97880edfbac4422ff3eae"
+      }
+    ]
+  }
+}
