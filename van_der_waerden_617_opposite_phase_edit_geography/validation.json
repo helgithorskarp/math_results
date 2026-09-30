@@ -1,0 +1,180 @@
+{
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "status": "VERIFIED_COMPLETE_71_EDIT_SOURCE",
+  "checked_at": "2026-09-30T05:03:58.290098+00:00",
+  "cold_reproduction": {
+    "started_empty": true,
+    "bounded_batches": 6,
+    "summed_batch_seconds": 513.3900047030183,
+    "mathematical_fields_and_hashes_match_expected": "PASSED",
+    "phase_values": 617,
+    "far_supports": 19131,
+    "inner_APs_after_selection": 28473,
+    "standalone_final_checker_seconds": 30.762644630973227,
+    "peak_release_child_rss_kib": 146564,
+    "peak_release_self_rss_kib": 132200,
+    "seed_sha256": "5e7fdc067a1cd8f4dbf4bc7289c4afec644402ee807100e612f5cfec86dd8618"
+  },
+  "controls": {
+    "agent": "six-vdw-3",
+    "role": "researcher",
+    "status": "ALL_CORRUPTION_CONTROLS_REJECTED",
+    "rejected_count": 35,
+    "rejected": [
+      "constant_opposed_AP",
+      "opposed_center_outside_bridge",
+      "duplicated_protected_support",
+      "wrong_implication_phase",
+      "flipped_forced_color",
+      "forced_point_out_of_bounds",
+      "Boolean_coordinate",
+      "floating_coordinate",
+      "constant_implication_AP",
+      "missing_required_implication",
+      "empty_implication_trace",
+      "constant_final_AP",
+      "final_AP_out_of_bounds",
+      "unknown_cut_kind",
+      "compatible_key_outside_claim",
+      "unequal_phase_key_outside_claim",
+      "duplicate_erasure",
+      "bridge_erasure_is_not_protected",
+      "pole_erasure_is_not_protected",
+      "erasing_a_used_proof_root",
+      "reflection_without_color_exchange",
+      "duplicated_inner_AP",
+      "inner_AP_at_pole",
+      "constant_inner_AP",
+      "inner_AP_outside_region",
+      "nonmonochromatic_inner_AP",
+      "missing_canonical_domain",
+      "exceptional_phase_missing_33rd_cut",
+      "missing_far_cut_family",
+      "extra_canonical_phase",
+      "missing_inner_phase",
+      "duplicate_inner_phase",
+      "wrong_inner_region",
+      "generic_phase_below_40",
+      "exceptional_phase_below_38"
+    ],
+    "positive_reflection_involution": true
+  },
+  "sanitizers": {
+    "status": "VERIFIED_SANITIZER_REGENERATION",
+    "full_seed_and_inner_transcripts_byte_identical": true,
+    "representative_implications_byte_identical_and_directly_checked": [
+      [
+        49,
+        2,
+        22,
+        3
+      ],
+      [
+        0,
+        3,
+        22,
+        3
+      ],
+      [
+        49,
+        3,
+        22,
+        3
+      ],
+      [
+        112,
+        3,
+        17,
+        2
+      ],
+      [
+        198,
+        3,
+        21,
+        3
+      ],
+      [
+        309,
+        3,
+        22,
+        3
+      ],
+      [
+        0,
+        16,
+        27,
+        4
+      ],
+      [
+        49,
+        16,
+        27,
+        4
+      ],
+      [
+        112,
+        16,
+        36,
+        6
+      ],
+      [
+        198,
+        16,
+        42,
+        7
+      ],
+      [
+        309,
+        16,
+        32,
+        5
+      ],
+      [
+        0,
+        31,
+        21,
+        3
+      ],
+      [
+        49,
+        31,
+        75,
+        14
+      ],
+      [
+        112,
+        31,
+        187,
+        42
+      ],
+      [
+        198,
+        31,
+        373,
+        102
+      ],
+      [
+        309,
+        31,
+        68,
+        13
+      ],
+      [
+        0,
+        33,
+        62,
+        11
+      ]
+    ],
+    "seconds": 25.662633007974364
+  },
+  "sanitizer_sequence_peak_child_rss_kib": 336192,
+  "versions": {
+    "python": "3.11.2",
+    "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0"
+  },
+  "limits": "One sequential CPU job; all threads1; each native search invocation<=90seconds. Existing CPU1/memory2GiB/tasks128 unchanged.",
+  "trust": "Exact Python direct checker and elementary support/reflection/affine proof. Same-author implementation independence; no peer-review/formalization claim.",
+  "omissions": "All generated proof families, native refutations, transcripts, binaries, logs and private checkpoints. No omitted external mathematical input."
+}
