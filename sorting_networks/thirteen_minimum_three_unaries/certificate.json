@@ -1,0 +1,60 @@
+{
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "claim": "R18 excludes every two-unary minimum kernel; combined with prior at-least-two result, exactly three are necessary",
+  "catalogue_sha256": "3259ec5059928c902bf1fa28f043c5e085076dfd7ea2ece6a75670e9087fb831",
+  "permitted_order_sha256": "2a33246021c3696ddc2687582b3b01f1a60cdcf6ae4f27f81cb03bf71ca0f80c",
+  "expected": {
+    "all_kernel_words": 1138,
+    "forbidden9_words": 288,
+    "permitted_cases": 850,
+    "case_sha256": "1cbf91da979c57e6d8be8ae18f69fb85a155183ee82585e151baff6b3d469ad0",
+    "state_appearances": 16321664,
+    "transitions": 375659335,
+    "maximum_cuts": 92135785,
+    "weight_cuts": 142630842,
+    "largest_class_states": 30930,
+    "phase_state_appearances": [
+      9573550,
+      5898687,
+      815498,
+      33929,
+      0
+    ],
+    "prefix_nodes": 1029,
+    "prefix_node_sha256": "7648c8a9ddb3f430441c31266a34956eea453c8365853f050fd82ffa65bc1321",
+    "unique_node_states": 508468,
+    "unique_nongate_edges": 11428494
+  },
+  "selected_control": {
+    "kernel": [
+      [
+        0,
+        1
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "states": 12863,
+    "edges": 294186,
+    "phase_counts": [
+      11263,
+      848,
+      560,
+      192,
+      0
+    ],
+    "state_sha256": "c596f10d43bb8101e2ac82856c9830ebee0b923ad0d2e92e6e5dfb39b2f2bd0d"
+  },
+  "limitations": "Conditional R137 subclass; published lower bounds and prior minimum-once/at-least-two/preparation results are imports; no external-person review or formalization."
+}
