@@ -1,0 +1,114 @@
+{
+  "agent": "six-reviewer-4",
+  "analytic_weight_completeness": {
+    "higher_trace_monomials": "at least three factors cost>=6; all radial factors cost>=6",
+    "scalar_defect_subsix": "base gradient O(t^2), argument change t^3*(quadratic x+linear y); only degree-five quadratic/linear term",
+    "trace_subsix_monomials": [
+      {
+        "first_possible_t_order": 2,
+        "physical_powers_T_M_eta_tau": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "reason": "vanishes by zero-sum seven-root symmetry"
+      },
+      {
+        "first_possible_t_order": 4,
+        "physical_powers_T_M_eta_tau": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "reason": "degree<=2; eliminated by exact stationarity/Hessian identities"
+      },
+      {
+        "first_possible_t_order": 4,
+        "physical_powers_T_M_eta_tau": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "reason": "degree<=2; eliminated by exact stationarity/Hessian identities"
+      },
+      {
+        "first_possible_t_order": 5,
+        "physical_powers_T_M_eta_tau": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "reason": "vanishes by zero-sum seven-root symmetry"
+      },
+      {
+        "first_possible_t_order": 4,
+        "physical_powers_T_M_eta_tau": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "reason": "degree<=2; eliminated by exact stationarity/Hessian identities"
+      },
+      {
+        "first_possible_t_order": 5,
+        "physical_powers_T_M_eta_tau": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "reason": "vanishes by zero-sum seven-root symmetry"
+      }
+    ]
+  },
+  "constants_and_parabolic_bridge": {
+    "L_at_cutoff": "6400/199927",
+    "a0": "5/8",
+    "basin_Gamma": "2965647537471488/20111391661725",
+    "basin_right_derivative": "1048576/43095",
+    "branch_Q_allowance_A0": "59319/229376",
+    "mean_cost_alpha0": "65/512",
+    "moment_cost_k0": "2197/131072",
+    "normalization_e3_over_t6": "12068239626469376/23298085122481",
+    "normalized_original_mean": "28561*sqrt(14)/458752",
+    "parabolic_chart_entry_Kr": "11098128384/62748517",
+    "parabolic_chart_entry_Kx_squared": "1189085184/28561",
+    "parabolic_chart_entry_Ky_squared": "2774532096/24134045",
+    "rejected_controls": [
+      "linear rather than quadratic radius mismatch",
+      "wrong basin second coefficient",
+      "wrong reciprocal-to-original cubic sign"
+    ],
+    "v0": "8/13"
+  },
+  "energy_chart": {
+    "A3": "-X2/112",
+    "A4": "0",
+    "A5": "-X2**2/25088 - 5*X2*v**2/7 + 5*X2*v/7 - 5*X2/84 - beta*y/7 + 12*v**2*y - 12*v*y - y**2/14 + y",
+    "all_energy_coefficients_through_degree": 6,
+    "circle_f4_over_v4": "-v**2 + v - 1/12",
+    "circle_f6_over_v4": "v**4 - 2*v**3 + 7*v**2/6 - v/6 + 1/360",
+    "radial_first_possible_energy_order": 8,
+    "rejected_controls": [
+      "wrong energy cubic amplitude",
+      "nonzero fourth amplitude"
+    ],
+    "zero_sum_directions": 6
+  },
+  "role": "independent mathematical reviewer",
+  "spectral_compression": {
+    "divided_internal_gap": 7,
+    "leading_eigenvalues_on_near_space": {
+      "-1": 6,
+      "6": 1
+    },
+    "multiplicity_safe_determinant_control": "passed",
+    "rejected_control": "wrong divided simple eigenvalue",
+    "zero_sum_first_expectation": "0"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "agent": "six-reviewer-4",
+  "author_replay": {
+    "checks": [
+      {
+        "command": [
+          "python3",
+          "-I",
+          "-B",
+          "verify.py"
+        ],
+        "elapsed_seconds": 18.810114004998468,
+        "output_sha256": "03533453c7764c16ed8e36cbdddc37fade21579079aa762287be3b6ca77e87ca",
+        "returncode": 0
+      },
+      {
+        "command": [
+          "python3",
+          "-I",
+          "-B",
+          "-O",
+          "verify.py"
+        ],
+        "elapsed_seconds": 19.36274781404063,
+        "output_sha256": "03533453c7764c16ed8e36cbdddc37fade21579079aa762287be3b6ca77e87ca",
+        "returncode": 0
+      }
+    ],
+    "corruption_control_count": 6,
+    "identity_count": 66,
+    "peak_child_RSS_KiB": 22976,
+    "profile_count": 6,
+    "records_sha256": "89750ea71c04b6dde42e551c16a58ac5fa6b415d94865614ae52335f645cb754"
+  },
+  "cpu_scope": 1,
+  "independent_checks": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "audit.py",
+        "--check"
+      ],
+      "elapsed_seconds": 2.7474,
+      "result": {
+        "expected_sha256": "6aeb0218850bdb4634a54e5c943b7d3e8bb06bc06aa55b2465ef38b8b54cd8e3",
+        "status": "passed",
+        "sympy": "1.14.0"
+      },
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "audit.py",
+        "--check"
+      ],
+      "elapsed_seconds": 6.7062,
+      "result": {
+        "expected_sha256": "6aeb0218850bdb4634a54e5c943b7d3e8bb06bc06aa55b2465ef38b8b54cd8e3",
+        "status": "passed",
+        "sympy": "1.14.0"
+      },
+      "returncode": 0
+    }
+  ],
+  "independent_peak_RSS_KiB": 66868,
+  "memory_scope": "2 GiB",
+  "native_threads": 1,
+  "python": "3.11.2",
+  "role": "independent mathematical reviewer",
+  "sympy": "1.14.0"
+}
