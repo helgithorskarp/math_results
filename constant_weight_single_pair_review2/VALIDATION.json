@@ -1,0 +1,42 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "python": "Python 3.11.2",
+  "exact_arithmetic": "Python arbitrary precision integers; fieldF4 bit-polynomial arithmetic",
+  "threads": 1,
+  "intensive_jobs_at_once": 1,
+  "scope_limits": "unchanged1CPU2GiB",
+  "independent_runs": [
+    {
+      "mode": "normal",
+      "seconds": 7.980601884017233,
+      "max_rss_KiB": 21568,
+      "entry_level_comparison": {
+        "all29plane_residual_lists_and_maxima_equal": true,
+        "all106carrier_rows_equal": true,
+        "original56word_witness_verified": true
+      }
+    },
+    {
+      "mode": "optimized",
+      "seconds": 7.865472023957409,
+      "max_rss_KiB": 24072,
+      "entry_level_comparison": {
+        "all29plane_residual_lists_and_maxima_equal": true,
+        "all106carrier_rows_equal": true,
+        "original56word_witness_verified": true
+      }
+    }
+  ],
+  "normal_optimized_identical": true,
+  "expected_sha256": "a2a60d929a3f255a3e1c310fdd5614932e5cc494e73f09b3bfe5e7c0577fbdb6",
+  "audit_sha256": "ae0c67b5fa65f1a5e96f3edc883e4cbe91165eca33cd87a17b15e74806c99c3c",
+  "native_replay": {
+    "agent": "six-reviewer-2",
+    "role": "independent mathematical reviewer",
+    "native_supplementary_verifier": true,
+    "seconds": 57.11230307997903,
+    "exit_code": 0,
+    "child_max_rss_KiB": 21876
+  }
+}
