@@ -1,0 +1,116 @@
+{
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "date": "2026-09-30",
+  "family": "Symmetric two colors/seven terms W(2,7)",
+  "source_directory": "van_der_waerden_617_phase269_zero_load_rigidity",
+  "status": "Exact rational proof with a written general zero-edit removal reduction; same-author independent checker; no external review or formalization",
+  "parent": {
+    "name": "Uniform class197 reflection-seam proof",
+    "source_commit": "12cb7739d9d179684bee19a50f9ebd54c2794ff7",
+    "graph_ref": "bafkreidd54kxpyjlspt4tww57ib3p5ldcdc72h7isybb6onoeugb2u7eta",
+    "url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_617_class197_cover",
+    "scope": "Includes the locally rechecked phase269 base packing. The numerical e_c>=197 theorem is a separate premise only of the total394/fixed146-position corollary; not of the new conditional zero-edit proof."
+  },
+  "source_credit": {
+    "name": "Complete reflection AP packing profile",
+    "source_commit": "9a2bb02c0ddf0aabdba44e083d14a89c608b2c64",
+    "graph_ref": "bafkreibhwl2tw6yj4f62kc4icradwaq2tpn4z56tox4okqmpy62mn4edma",
+    "url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_617_reflection_seam_weights",
+    "scope": "Original base checker and weighted-screen source credit. No other-phase numerical bound is imported into the new proof."
+  },
+  "complementary_sources": [
+    {
+      "name": "Fixed QR617 endpoint0 square-class30 lemma",
+      "source_commit": "84fcb7a230691dd2aeaa5e400d12c649ae08f1ae",
+      "graph_ref": "bafkreicrhoig23dl3ybycrisfna53v57twy57i6xgyr3r2dfxreayve5cq",
+      "url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_class30_endpoint0",
+      "scope": "Complementary fixed aligned prefix: endpoint0 forces30 square-class edits with the other class unrestricted; different reference and counting domain. No constant is imported and no endpoint1 lower30 is inferred."
+    },
+    {
+      "name": "Fixed QR61762-edit profile",
+      "source_commit": "bc987b1e75efcc6966135728c2f7bf2b61e32f93",
+      "graph_ref": "bafkreieu7guaiaarct57a7ohr2y32mcvgc5d4uwaj6kwodienf3o5u2i2e",
+      "url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_qr617_62_edit_profile",
+      "scope": "Complementary fixed aligned prefix with1848-point classes; no numerical constants used."
+    },
+    {
+      "name": "Period618 triple pruning",
+      "source_commit": "38f6aafa414319c5afbeeeadd388e2d8b7f43242",
+      "graph_ref": "bafkreiemx6cex2evfgpb5hfsgyrinjqgjdofj2g2jb67xp7z44vnz5ktbi",
+      "url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_618_triple_pruning",
+      "scope": "Complementary different invalid construction words and local column changes; no constants used."
+    }
+  ],
+  "problem_graph_ref": "bafkreihbsyzlpqcibwae7vxelgoqcfofwzqdshfmkjrjyhqe7lydcjdlaa",
+  "primary_literature": {
+    "author": "Monroe",
+    "url": "https://combinatorialpress.com/jcmcc-articles/volume-128/new-lower-bounds-for-van-der-waerden-numbers-using-distributed-computing/",
+    "live_checked": "2026-09-30",
+    "scope": "Table1 seven terms/two colors>3703 and Table2 prime617; W(length,colors) notation reversed relative to this campaign",
+    "exhaustive_current_best_or_priority_verification": false
+  },
+  "fixed_base": {
+    "sha256": "11357e254a79bb22b2ef5acde5ffbbef45afd16568f840eb50d05cdec8d695de",
+    "bytes": 15253,
+    "source_file": "van_der_waerden_617_class197_cover/base/certificates/phase-269.json",
+    "checker_sha256": "3d50dd599758ab93e7e9e80d8fd92e3f4d7f3f4f62d658cfb811a651313b4bf2",
+    "checker_vendored_without_edits": true,
+    "old_D0": 1000000,
+    "old_S": 195882130,
+    "point_sets_defined_from_exact_fixed_base": true
+  },
+  "proof": {
+    "key": [
+      269,
+      349,
+      1
+    ],
+    "N": 3704,
+    "seam": 1852,
+    "class_cap": 197,
+    "zero_positions_per_color": 73,
+    "other_edit_screen_positions_per_color": 1012,
+    "other_edit_cap": 196,
+    "weighted_numerator": 196096042,
+    "denominator": 1000000,
+    "gap_numerator": 96042,
+    "surplus": "48021/500000",
+    "case_enumeration_needed": false,
+    "positive_AP_weights": 869,
+    "positive_cover2_weights": 34,
+    "positive_surcharges": 0,
+    "candidate_arbitrary": true,
+    "other_class_budget_required": false,
+    "candidate_symmetry_required": false,
+    "poles_free": true
+  },
+  "scope": {
+    "new_local_claim": "If e_c<=197 then every specified zero-base-load point of that reference color remains unchanged. If any is edited then e_c>=198.",
+    "dependent_corollary": "At total394 against key(269,349,1), prior class197 lower bound forces e0=e1=197, hence all146 specified nonpoles match the reference. The forced endpoints are f(0)=0,f(3703)=1.",
+    "global_class198_lower_bound": false,
+    "all617_phases_covered": false,
+    "exact_edit_optimum": false,
+    "attained_repair_distance": false,
+    "new_W_bound": false,
+    "coloring_witness": false,
+    "global_nonexistence": false
+  },
+  "reproduction": {
+    "standard_library_frozen": true,
+    "python_versions": [
+      "3.11.2",
+      "3.12.14"
+    ],
+    "optional_solver": "highspy1.11.0",
+    "optional_numpy": "2.2.6",
+    "native_limit_seconds": 15,
+    "all_numeric_threads": 1,
+    "one_math_job_at_a_time": true,
+    "no_private_input_required": true,
+    "new_checker_imports_generator": false,
+    "new_generator_imports_new_checker": false,
+    "base_checker_is_the_only_shared_source_dependency": true,
+    "fresh_weights_need_not_match_frozen_bytes": true
+  }
+}
