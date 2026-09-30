@@ -1,0 +1,155 @@
+{
+  "agent": "six-sorting-2",
+  "role": "researcher",
+  "status": "RUP_AND_FULL_SOURCE_MEMBERSHIP_VERIFIED",
+  "claim": "No16-comparator L sorter at any depth or root timing; s(L)=17 or18. Pure-minimum K18 excluded by7436 binary-front normalization.",
+  "variables": 34194,
+  "full_cnf_clauses_checked": 726755,
+  "core_clauses": 13374,
+  "proof_additions": 13084,
+  "core_sha256": "fed63e0fce0629399ae5ccb901f926d60bad57ddffd721d9359d7c2ebb148989",
+  "rup_sha256": "db2fbd1257789f51eb810591e776abf2ebbabcb051af6e39db7899e7eb93f061",
+  "premature_empty_rejected": true,
+  "source_root_unit_removed": true,
+  "seconds": 44.91705299896421,
+  "peak_rss_kib": 91612,
+  "trust_boundary": "Published7474 necessary structural conditions, independent145 marker audits, imported lower bounds and sequential encoder correspondence; no formalization or external-person review",
+  "cnf": {
+    "variables": 34194,
+    "clauses": 726755,
+    "sha256": "4fb7cabafebaa7a4287be430eec234ae5d59aa048d92bb99bb5c4a141c3d7875"
+  },
+  "native_solver": {
+    "instance": "scratch/L16.cnf",
+    "solver": "Glucose4 via python-sat",
+    "pysat": "1.8.dev24",
+    "conflict_budget": 30000,
+    "wall_budget_seconds": 40.0,
+    "cnf_sha256": "4fb7cabafebaa7a4287be430eec234ae5d59aa048d92bb99bb5c4a141c3d7875",
+    "status": "UNSAT_unchecked",
+    "stats": {
+      "restarts": 137,
+      "conflicts": 23582,
+      "decisions": 59240,
+      "propagations": 31413572
+    },
+    "solver_seconds": 9.841399115,
+    "proof_sha256": "f6d286d51efa0f833dca5f88923c4667e015b8ca14611ee796d95d16765cb0d5",
+    "seconds": 11.725973288004752,
+    "peak_rss_kib": 125764
+  },
+  "additional_witnesses_sha256": "d415bfa839e1ff75d82d5d476d10049e1b4f1c5f1945b8e3f34ed0a741fe786f",
+  "new_marker_audit": {
+    "witnesses": 92,
+    "assignments": 10936,
+    "distinct_rank_controls": 184
+  },
+  "structural_dependency_source": "4ac1823cf27985a6ec871bd4b636e7cd17ccb7a3",
+  "structural_dependency_graph": "bafkreiguwkfdfvthhknoitmc6nzisn2kp7w4rhi2ssx6pi23lah5cpblxi",
+  "omitted_native_trace_bytes": 10476930,
+  "positive_L18_control": {
+    "agent": "six-sorting-2",
+    "role": "researcher",
+    "status": "VERIFIED",
+    "all_clauses": 827365,
+    "original_inputs": 2048,
+    "residual_states": 109,
+    "pruning_constraints": 145,
+    "gates": 18,
+    "word": [
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "cnf_sha256": "d7c06c6d6b9965af7e21e441c726920507f1ba3fb9d6a9413313248b7394ab97"
+  },
+  "public_replay": {
+    "agent": "six-sorting-2",
+    "role": "researcher",
+    "status": "VERIFIED",
+    "claim": "No16-comparator L sorter at any depth; s(L)=17 or18",
+    "additional_marker_audit": {
+      "witnesses": 92,
+      "assignments": 10936,
+      "distinct_rank_controls": 184
+    },
+    "core_clauses": 13374,
+    "proof_additions": 13084,
+    "tiny_truth_controls": 4608,
+    "full_source_membership_verified": true,
+    "full_cnf_clauses_checked": 726755,
+    "premature_empty_rejected": true,
+    "seconds": 51.25518141000066,
+    "peak_rss_kib": 32140,
+    "trust_boundary": "Published7474 structural necessity and source fixture; imported small-size bounds, pruning/commutation and sequential encoder correspondence"
+  }
+}
