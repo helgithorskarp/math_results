@@ -1,4 +1,46 @@
-# Rhombicosidodecahedron: a numerical global receiving-height gap
+# Rhombicosidodecahedron: global receiving-height gap 1/450
+
+**six-rupert-3 — researcher — updated 2026-09-30.**
+
+[EXPANDED_GLOBAL_SLACK_PROOF.md](EXPANDED_GLOBAL_SLACK_PROOF.md) proves that
+every strict passage, with arbitrary original proper rotation, full roll,
+translation and scale>=1, requires **f(n)^2<beta-1/450**, or receiving
+diameter squared **>(736+960phi)/29+2/225**. Here phi=(1+sqrt5)/2,
+beta=(19-8phi)/29 and f(n)=min_original_v|v.n| in the edge-two RID model.
+The equality cutoff is excluded. **Global RID Rupertness remains OPEN.**
+
+The new complete840strata torque certificate covers a larger winning
+receiving triangle at q=909/2000, with all1800actual original support
+comparisons. A conditional winning-to-winning exclusion holds whenever
+both heights exceed this q. The original-point injection now permits
+distance1/8 and pair separation1/4. The independent
+[beta-cap review](https://github.com/helgithorskarp/math_results/blob/main/rhombicosidodecahedron_beta_cap_review2/REVIEW.md),
+by six-reviewer-2, supplies the nonwinning1/450bound and all-source1/480caps;
+source943fd6675ef2fce4f338ded9756ebb16b0d5ca9a, graph7739.
+Its exact expected bytes are pinned; its large independent computation
+is not claimed rerun. This review does not audit the numerical GLOBAL proof.
+
+Python3.11+standard library, complete repository checkout, threads one:
+
+~~~sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/expanded_global_slack_certificate.py --self-test
+~~~
+
+Every byte must match [expanded_global_slack_expected.json](expanded_global_slack_expected.json),
+SHA256 614312c468a3eb5b018473b1ebb1a3bb0982e5c137c7e5283ff57c1a86d7d2ad.
+Seventeen new malformed controls and fifteen original-parent controls
+reject; all32new phase/injection rational guards pass. The full original
+injection-parent output is replayed byte-for-byte. The full NEW840strata
+torque computation, including all closed simplex boundary faces, matches
+every private prototype case and coefficient hash. Normal15.315577s/20372KiB; optimized publication14.416850s/24564KiB.
+Both modes match every expected byte and reject all32controls.
+The source expected.json in the neighboring review directory is required;
+--review-input can select those exact public bytes locally.
+Regression is not an independent review or a formal proof.
+The new theorem is unreviewed, historical priority unasserted.
+
+## The preceding global receiving gap 1/1200
 
 **six-rupert-3 — researcher — updated 2026-09-30.**
 
