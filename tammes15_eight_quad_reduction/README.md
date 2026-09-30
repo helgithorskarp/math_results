@@ -1,4 +1,4 @@
-# Eleven necessary auxiliary types in the eight-quadrilateral Tammes-15 branch
+# Seven profiles and eleven auxiliary types in the eight-Q Tammes-15 branch
 
 Author: **six-tammes-1**, role: **researcher**. Updated: 2026-09-30.
 
@@ -25,9 +25,16 @@ deficit lies at two zero-triangle degree fours. The new
 [two-zero exclusion](TWO_ZEROS.md) rules out that entire distribution
 using Q corner occurrences and the adjacent-angle sum.
 Its mixed-distribution corollary also removes the profile with five
-degree threes. The necessary cover now has **10 degree/deficit profiles**
-and **11 colored auxiliary types**, across two deficit distributions:
-`(4,0,0)` and `(2,1,0)`.
+degree threes. The new [quadrilateral connectivity proof](TOPOLOGY.md)
+removes the mixed profiles with three and four degree threes, and the
+four-one-deficit profile with four. It splits separated Q fans in the
+planar edge graph and proves a component inequality before establishing
+the needed edge connectedness in each case. The necessary cover now has
+**7 degree/deficit profiles** and **11 colored auxiliary types**, across
+two deficit distributions: `(4,0,0)`, with `n3=0..3`, and `(2,1,0)`, with
+`n3=0..2`. More generally `(n3+d42+s-1)/2<=K_Q`, where s counts ordinary
+fours with separated Q sectors and K_Q counts Q face components joined
+through Q-Q edges.
 
 The [original proof](PROOF.md) uses spherical diagonal lengths, four-point
 Gram rank, the two-point intersection of contact planes with the sphere,
@@ -41,9 +48,11 @@ do not certify the geometric arguments in
 a proof assistant. The original proof and checker remain unchanged, with
 their earlier 35-profile/18-type claims; the two-five files retain 29/17.
 The one-five files retain 23/16, the boundary-patch files give 14/13,
-and the two-zero files give 10/11. The latest exclusion is an elementary
-hand proof; it adds no solver or numerical angle certificates and does
-not require connectedness of the triangle subcomplex.
+and the two-zero files give 10/11. The topology files give 7/11. The
+latest exclusion is an elementary hand proof; it adds no solver or
+numerical angle certificates. The planar fan normalization and face
+connectedness arguments are unformalized, and no connectedness of the
+triangle subcomplex is assumed.
 
 These are **necessary** structures. Neither a full contact-graph enumeration
 nor realization of any survivor is claimed. The branch `q=8`, larger faces,
@@ -73,19 +82,27 @@ python3 -B tammes15_eight_quad_reduction/check_boundary_patch.py --selftest
 python3 -B tammes15_eight_quad_reduction/check_two_zeros.py | cmp - tammes15_eight_quad_reduction/EXPECTED_two_zeros.json
 python3 -B -O tammes15_eight_quad_reduction/check_two_zeros.py | cmp - tammes15_eight_quad_reduction/EXPECTED_two_zeros.json
 python3 -B tammes15_eight_quad_reduction/check_two_zeros.py --selftest
+python3 -B tammes15_eight_quad_reduction/check_topology.py | cmp - tammes15_eight_quad_reduction/EXPECTED_topology.json
+python3 -B -O tammes15_eight_quad_reduction/check_topology.py | cmp - tammes15_eight_quad_reduction/EXPECTED_topology.json
+python3 -B tammes15_eight_quad_reduction/check_topology.py --selftest
 (cd tammes15_eight_quad_reduction && sha256sum -c SHA256SUMS)
 ```
 
 The current deterministic JSON gives all nine initial deficit distributions,
-the two survivors, each of the 10 degree profiles with its permissible
-colored auxiliary codes, and the four newly removed profiles. The
+the two survivors, each of the 7 degree profiles with its permissible
+colored auxiliary codes, and the three newly removed profiles. The
 two-zero-triangle distribution is excluded for every degree-three count.
-The new checker classifies 74 small labeled zero-triangle graphs and
+The preceding two-zero checker classifies 74 small labeled zero-triangle graphs and
 all 16 Q corner masks, solves the face-count equations independently in
 nonnegative integers, checks the exact linear angle identities and
 rational margins in the hand proof, and verifies the six-vertex bound
-on all 32768 labeled graphs. Earlier JSON outputs retain the
-35-profile, 29-profile, 23-profile and 14-profile stages.
+on all 32768 labeled graphs. The topology checker enumerates all local
+T/Q and Z-neighbor masks, 1668 boundary-slot vectors, and the small Z
+graphs. It compares 3840 possible two-Z pair vectors in the disconnected
+case, with 396 retained and all connecting the zero components through
+Q sectors. It tests planar/cycle-rank bookkeeping on explicit disk,
+annulus, pinched-disk and sphere fixtures. Earlier JSON outputs retain
+the 35-profile, 29-profile, 23-profile, 14-profile and 10-profile stages.
 Codes enumerate unordered pairs in lexicographic
 order and minimize over permutations preserving vertex colors. A second
 enumeration by partitions into paths and a possible four-cycle compares
@@ -95,7 +112,7 @@ distribution. Cover enumeration takes well under a second; polynomial
 certificate verification also takes only seconds, using one thread.
 These computations are not searches over spherical embeddings.
 
-Primary context and dependencies appear in the five proof files. The current
+Primary context and dependencies appear in the six proof files. The current
 Cohn table still lists the fifteen-point cosine approximately
 `0.592605902926` without an optimality
 asterisk, and its coordinate bytes were refreshed before this work. The
@@ -103,4 +120,7 @@ prescribed 29-contact completion and its new
 [thirteen-vertex, twenty-four-contact core](../tammes15_contact_pattern_obstruction/CONTACT_CORE.md)
 and its [cyclic companion](../tammes15_contact_pattern_obstruction/CYCLIC_CORE.md)
 by six-tammes-2 are complementary, and are citations rather than premises.
+The new [ten-/eleven-label pentagon-bridge obstruction](../tammes15_pentagon_bridge_exclusion/PROOF.md)
+is also complementary; no forced motif occurrence in the surviving
+profiles is asserted.
 No historical-priority claim is made.
