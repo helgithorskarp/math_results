@@ -284,6 +284,10 @@ subsequent conditional cone argument have their stated domains.
 
 ## 5. Necessary inequality for every original placement
 
+In this section take 0<delta<=1/1000; the case delta=0 was handled by
+the replayed classification in Section1. This distinction is needed
+for the strict angle estimates below.
+
 Since 0 is interior to K, QK subseteq lambda QK for lambda>=1. Thus(1)
 implies necessary UNIT-source containment with the SAME translation.
 Choose the lift T=t-t_xu with T.x=0 and P_uT=t, and set
@@ -314,6 +318,13 @@ This section DOES assume
     all four coefficients nonnegative.                      (17)
 
 It proves conditional rigidity, not the assumption(17).
+
+If eta=0 or etatilde=0, the reflected involution already gives one
+of the two listed equal-shadow motions, and the final support/area
+argument below immediately yields t=0 and lambda=1. For the
+contradiction assume eta*etatilde>0. All STRICT norm estimates in
+(19)-(22) are made in this nonzero-motion branch; at a zero motion
+they are not assertions of the impossible inequality0<0.
 
 First recompute normal-motion bounds on 1/1000. For a common contact,
 the replayed affine torque drift is at most12delta and probe drift
