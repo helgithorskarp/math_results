@@ -39,6 +39,15 @@ mathematical inputs, not assumed consequences of the minimum-seven claim.
 The two corollaries additionally use the new binary-exponent barrier and
 LCM-20160 construction, refreshed and checked before publication.
 
+**Attribution at the refreshed frontier.** Three direct finite cases here,
+10800,16200 and27000, now also follow immediately from the freshly published
+binary-exponent barrier, because their binary exponents are at most four.
+Their explicit certificates are independent reproductions, not new
+nonexistence claims. The eleven-value sieve combines all the stated inputs;
+the complete21600 exclusion and resulting43200 corollary go beyond that
+binary barrier. The44 direct cases count completed proofs, not44 historically
+new theorems. No exhaustive novelty assertion is made for individual cases.
+
 ## 1. Exhaustive reduction of the LCM interval
 
 The modulus eight occurs, so 8 divides L. Every chosen modulus divides L,

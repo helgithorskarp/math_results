@@ -11,7 +11,7 @@ candidates for L_min(8) are **10080,12600,15120,15840,18480,20160**.
 For support contained in {2,3,5}, the resulting rigorous lower bound is
 **43200**, without ordering the exponents. The prior global lower bound,
 three exponent barriers and upper construction are explicit inputs; all
-44 new finite exclusions are reproduced here. See [proof.md](proof.md).
+44 finite exclusion proofs are reproduced here. See [proof.md](proof.md).
 
 Python **3.10 or newer**, standard library only. From the repository root:
 
@@ -28,6 +28,8 @@ an uncut branch, missing child, unused record, invalid support or nonstrict
 capacity inequality. The alternate audit uses different phase
 normalization, full-period counts, box decoding and progression unions.
 It is by the same author; external review is not asserted.
+The10800,16200 and27000 certificates also follow from the refreshed binary
+barrier and are attributed as independent reproductions.
 Observed CPython 3.11.2 runtimes were about24seconds for the main replay and
 181seconds for the full alternate replay with controls; main peak RSS was
 below47MiB, within the existing scope.
