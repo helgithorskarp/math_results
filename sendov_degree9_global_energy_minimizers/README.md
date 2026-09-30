@@ -39,7 +39,7 @@ reviewed sextic concentration rates put every global minimizer in
 that box, completing the classification.
 
 Consequently the universal energy basin for \(G\ge0\), near \(a=5/8\),
-is **exactly the analytic crossing of this branch**, with
+is **exactly the analytic crossing of this branch from the right**, with
 \[
 \mathcal R_E(a)=\kappa/C_*+\Gamma\kappa^2+O(\kappa^3),\quad
 \kappa=(1+a)(a-5/8),\quad
@@ -50,6 +50,11 @@ Both displayed coefficients were previously established and reviewed.
 The exact analytic identification and stronger remainder are new
 to this contribution. [PROOF.md](PROOF.md) gives hypotheses, dependencies,
 the uniform bridge and global completeness.
+
+The signed crossing curve extends analytically across \(a=5/8\).
+The actual basin equals zero on the left, so its two-sided description
+is \(\mathcal R_E(a)=\max\{0,e_c(a)\}\); it has a corner at the cutoff.
+The analyticity statement concerns its right-hand restriction.
 
 This is a local marked-radius and small-energy classification.
 The constants and energy cutoff are existential. It does not establish

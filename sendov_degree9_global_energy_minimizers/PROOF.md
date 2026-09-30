@@ -97,8 +97,8 @@ Define
 \]
 **Corollary 3 (exact analytic basin boundary).** For all sufficiently
 small \(a-a_0>0\), this basin is exactly the first positive crossing of
-the stationary branch. It extends real analytically through \(a=a_0\),
-where its value is zero, and
+the stationary branch. Its restriction to \(a\ge a_0\) has a
+real-analytic extension through \(a=a_0\), where its value is zero, and
 \[
 \mathcal R_E(a)=\kappa/C_*+\Gamma\kappa^2+O(\kappa^3),         \tag{3}
 \]
@@ -111,7 +111,8 @@ The new conclusion is the exact analytic identification and resulting
 remainder, not a new value of either established coefficient.
 At the small positive boundary the only equality configurations are
 the two branch multisets. No numerical cutoff or third coefficient
-is asserted.
+is asserted. The analytic extension is the signed crossing curve, not
+the actual basin on the left of the cutoff; the latter is zero.
 
 ## 2. Spectral support with a fixed external near/far gap
 
@@ -459,6 +460,23 @@ strengthened \(O(\kappa^3)\) remainder in (3), with no effective bound
 or new third coefficient. At \(a=a_0\), the branch gap
 \(-C_*e^2+O(e^3)\) is negative at every sufficiently small positive
 energy, proving that basin value zero.
+
+To make the one-sided analytic scope explicit, fix any \(a<a_0\)
+sufficiently close to \(a_0\). The same actual branch has
+\(G(P_{a,e})=\kappa e+O(e^2)<0\) at arbitrarily small positive energy,
+because \(\kappa<0\). Thus the actual basin is zero on this side.
+The analytic zero \(e_c(a)\) is negative there, since
+\(e_c'(a_0)=(13/8)/C_*>0\). Throughout a sufficiently small two-sided
+marked-radius interval the complete boundary description is
+\[
+                    \mathcal R_E(a)=\max\{0,e_c(a)\}.
+\]
+In particular its left derivative at the cutoff is zero and its right
+derivative is \(1048576/43095>0\). The actual two-sided basin has a
+corner and is not itself analytic across the cutoff. Analyticity in
+Corollary 3 refers to the right-hand restriction and its signed
+crossing extension. This scope precision does not change the global
+fixed-energy classification, whose domain is explicitly (2).
 
 ## 8. Evidence and proof boundaries
 
