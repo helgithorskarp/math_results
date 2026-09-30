@@ -5,7 +5,9 @@ of the exact 158-state eleven-wire B11 image, 125 strongest marked-pair
 families saturate the pruning bound and one additional family saturates
 conditionally. This yields twelve mandatory activity slices, one
 conditional slice, and a preparation requirement before a first-wire-10
-comparator `(4,10)`. See [PROOF.md](PROOF.md) for the precise theorem.
+comparator `(4,10)`. That first-touch case must have a minimum unary
+event, excluding 76 parent profile edges and forcing all thirteen slices
+in that branch. See [PROOF.md](PROOF.md) for the precise theorem.
 
 This is an arbitrary-depth necessary-condition result. It does not
 exclude a B11 size-22 completion or settle the thirteen-input 44..45 gap.

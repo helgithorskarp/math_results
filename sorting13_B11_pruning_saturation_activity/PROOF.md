@@ -185,6 +185,29 @@ retained by this saturated pruning. Lemma 2 gives a contradiction. The
 checker audits the invariant on all 32256 Boolean state/gate transitions
 on wires 0 through 9 excluding the three preparation gates. □
 
+**Further corollary.** If the first wire-10 comparator is `(4,10)`,
+its minimum part is unary. Hence its effective profile word has eleven
+events, all 126 strongest families have D=9, and all thirteen listed
+slice requirements are mandatory in this branch.
+
+**Proof.** Each required earlier comparator has upper endpoint 4 and
+therefore sends any positive minimum partner weight at 4 to its lower
+endpoint, leaving port 4 empty. An empty minimum port cannot refill
+before the first wire-10 comparison: every other positive weight is at
+least 64, so doing this would be a unary event costing at least 64,
+whereas the available slack is only 32. Equivalently, once port 4 has
+become empty, every admitted pre-first-touch profile transition preserves
+its emptiness. Thus the first `(4,10)` merges (0,32), a minimum unary
+part. Apply the parent's event count and Lemma 1. □
+
+Both algorithms check all 603 pre-first-touch edges with empty port 4
+and all 184 preparation edges. Consequently 76 parent first-wire-10
+edges with partner 4 and a minimum binary part are excluded as candidate
+sorting trajectories. The 100 unary first-4 edges are only remaining
+relaxation edges; no sorting completion is asserted for them. The parent
+profile hashes retained in the certificate refer to the entire parent
+language, before this additional necessary restriction.
+
 Initially the imported profile language allows 18 comparator choices.
 The mandatory slice activity test rules out `(4,10)` and leaves 17.
 No existence assertion is made for any of the remaining choices.

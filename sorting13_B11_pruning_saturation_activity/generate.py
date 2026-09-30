@@ -213,6 +213,14 @@ def main():
                     failed.append([f['mode'],f['partner'],len(domain)])
         if failed:failures.append([gate,failed])
     assert failures==[[(4,10),[['min',0,101]]]] and len(initial_gates)==18
+    pre_edges=[(s,g,d) for s,g,d in edges if not s[2] and not d[2]]
+    empty4=[e for e in pre_edges if e[0][0][4]==0]
+    preparatory=[e for e in pre_edges if e[1] in required]
+    assert all(e[2][0][4]==0 for e in empty4+preparatory)
+    first4=[(s,g,d) for s,g,d in edges if not s[2] and d[2] and g==(4,10)]
+    assert len(empty4)==603 and len(preparatory)==184
+    assert sum(bool(s[0][4]) for s,g,d in first4)==76
+    assert sum(not s[0][4] for s,g,d in first4)==100
     word=fixture['B11_known23_control']
     assert len(word)==23
     assert all(boolean(r,word)==((1<<r.bit_count())-1)<<(11-r.bit_count())
@@ -236,7 +244,10 @@ def main():
                 first4_preparation=dict(slice_original_pair=[1,5],slice_size=101,
                     required_prior_gates=required,invariant_transitions=invariant_transitions,
                     profile_allowed_initial_gates=initial_gates,
-                    activity_forbidden_initial_gates=failures),
+                    activity_forbidden_initial_gates=failures,
+                    prephase_empty4_edges=len(empty4),prephase_preparation_edges=len(preparatory),
+                    first4_binary_edges_excluded=76,first4_unary_edges_remaining_relaxation=100,
+                    minimum_unary_if_first_gate_on_10_is_4_10=True),
                 controls=dict(B11_known23_rows=158,lifted45_original_rows=8192,
                     duplicated46_original_rows=8192,duplicated_first_gate=word[0],
                     duplicated_gate_is_retained_and_inactive_in_min0_slice=True),
