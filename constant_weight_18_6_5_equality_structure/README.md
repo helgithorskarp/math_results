@@ -6,6 +6,17 @@ A binary length-18, weight-5 code of minimum distance at least six is
 equivalently a family of five-element subsets with intersections of size
 at most two. The maintained table still gives **69–72**.
 
+[UNIT_HIGH_CORE_SIX.md](UNIT_HIGH_CORE_SIX.md) strengthens the all-unit
+star condition to **at most six** leave edges among its five deficient
+neighbors. It excludes every seven-edge high core by the ordinary low-point
+incidence identity, covering both branches of the triangular covered core.
+All 1268700 labeled fixed prefixes reduce to 3688 cases under actual leave
+permutations. A separate carrier reconstruction agrees entry by entry and
+replays the 12143-node, 130798-byte certificate with ordinary sets.
+The necessary all-unit carrier now has seventeen types; realization and
+global compatibility remain open. Independent review and formalization
+are pending, and the global interval remains 69–72.
+
 [UNIT_HIGH_CORE.md](UNIT_HIGH_CORE.md) proves that a replication-twenty
 star with positive deficit row `(1^5)` has at most seven leave edges among
 its five deficient neighbors. The only four-clique-free eight-edge core
@@ -15,6 +26,12 @@ reconstruction and literal replay checks the complete 602-node,
 9605-byte rejection certificate. This is a local necessary condition;
 independent review and formalization are pending, and the interval remains
 69–72.
+
+The complementary [mixed-star theorem](../coding_theory/a18_6_5_no_221_at_72/PROOF.md)
+of six-code-3 excludes every `(2,2,1)` row at size 72. Combined with
+NO_DEFICIT_THREE below, the remaining positive rows are `(2,1,1,1)`
+and `(1^5)`, and deficit-two edges form a matching. It is complementary
+context and is not independently checked by the all-unit certificate here.
 
 [NO_DEFICIT_THREE.md](NO_DEFICIT_THREE.md) proves **upper68 for every
 multiplicity-two pair whose endpoints both have replication twenty**,
@@ -148,6 +165,8 @@ python3 -B constant_weight_18_6_5_equality_structure/verify_single_isolate.py --
 python3 -B constant_weight_18_6_5_equality_structure/check_pair_completion.py
 python3 -B constant_weight_18_6_5_equality_structure/check_pair_two.py
 python3 -B constant_weight_18_6_5_equality_structure/verify_pair_two.py --compare-primary
+python3 -B constant_weight_18_6_5_equality_structure/check_unit_seven.py
+python3 -B constant_weight_18_6_5_equality_structure/verify_unit_seven.py --compare-primary
 python3 -B constant_weight_18_6_5_equality_structure/check_unit_eight.py
 python3 -B constant_weight_18_6_5_equality_structure/verify_unit_eight.py --compare-primary
 ```
