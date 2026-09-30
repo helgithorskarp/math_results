@@ -1,0 +1,137 @@
+{
+  "schema": 1,
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "expected": {
+    "cases": [
+      {
+        "case": 1,
+        "Y_states": 146,
+        "R_states": 137,
+        "Y_image_sha256": "14894e70a407ef52d0d4aa2d7618cbbcf14c4a7e7f374810d32816d99179ea22",
+        "R_image_sha256": "44dba7e96d097ba54351be0aa875481d03b7000c69a291883da7ec636a1bb134",
+        "profile": [
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            17,
+            4
+          ],
+          [
+            33,
+            4
+          ],
+          [
+            34,
+            5
+          ],
+          [
+            130,
+            5
+          ],
+          [
+            257,
+            4
+          ]
+        ],
+        "initial_weight": 208,
+        "initial_anchor_mass": 160,
+        "one_zero_original_input": 10,
+        "one_zero_Y_port": 1,
+        "one_zero_prefix_deletions": 3,
+        "required_suffix_passages": 2,
+        "anchored_lower_bound": 640,
+        "weight_ceiling": 512,
+        "original_inputs_checked": 8192,
+        "Y21_and_R19_controls": true
+      },
+      {
+        "case": 2,
+        "Y_states": 145,
+        "R_states": 137,
+        "Y_image_sha256": "1d03883e761400839b30f8f91c8a86c68d7f08c4bc501d294abb96eeb1eab7ef",
+        "R_image_sha256": "44dba7e96d097ba54351be0aa875481d03b7000c69a291883da7ec636a1bb134",
+        "profile": [
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            17,
+            4
+          ],
+          [
+            33,
+            4
+          ],
+          [
+            34,
+            5
+          ],
+          [
+            130,
+            5
+          ],
+          [
+            257,
+            4
+          ]
+        ],
+        "initial_weight": 208,
+        "initial_anchor_mass": 160,
+        "one_zero_original_input": 10,
+        "one_zero_Y_port": 1,
+        "one_zero_prefix_deletions": 3,
+        "required_suffix_passages": 2,
+        "anchored_lower_bound": 640,
+        "weight_ceiling": 512,
+        "original_inputs_checked": 8192,
+        "Y21_and_R19_controls": true
+      }
+    ],
+    "local_controls": {
+      "orders": [
+        10,
+        11,
+        13
+      ],
+      "marker_transitions": 11134,
+      "two_preimage_fibers": 1713,
+      "port_gate_facts": 2069,
+      "transition_sha256": "b0b5606f5dc124a78c0c35379383ef194506ad59229befee0cd689028701491e",
+      "anchor_sha256": "fdffb6bda3739c3820d65a67c87ad24a8ad257690212e8ab641c93bc7aab481a"
+    },
+    "conclusion": {
+      "Y1_minimum": 21,
+      "Y2_minimum": 21,
+      "R137_minimum": 19,
+      "global_S13_interval": [
+        44,
+        45
+      ]
+    },
+    "imported_minimum_once_exclusion": "bafkreibd7xjljyxowbj3ly35iccehent53fkktliol35knttxsgblu56wu",
+    "independence_scope": "new local transport facts and fixture/control checks; prior exclusion imported"
+  },
+  "proof_status": "Exact new induction and fixture checks; prior minimum-once exclusion and primary lower bounds imported.",
+  "external_person_review": false,
+  "formalization": false
+}
