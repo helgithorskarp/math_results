@@ -60,6 +60,15 @@ repair gives nonnegative off-diagonal weights, a strict upper cap and
 unrestricted maximal Hoffman rank N-1. Every product has maximal rank
 and only eligible center stars. It includes every K_1 joined to K_(t,t),
 t>=2, and repairs the inherited cap failure at t=3.
+[REGULAR_CONES.md](REGULAR_CONES.md) extends the same centered formula to
+every simple d-regular leaf graph with 2<=d<=h-2, including disconnected
+graphs. Two new exact polynomial regimes prove core positivity; a
+normalized block cap proof permits signed entries below degree h/2.
+The repaired matrix again has unrestricted maximal rank N-1 and simple
+endpoints. All finite regular-factor products have explicit maximal ranks
+and only eligible center stars. Every product containing a capped D_*
+factor and any of these regular factors has fractional independence at
+least 49/48 times its largest star, even when D_* is not dominant.
 Disjoint-support unions and restrictions retaining the
 largest-star size have explicit certificate lifts. A valid seven-vertex
 certificate with eigenvalue 8/5 demonstrates why unrestricted tensoring of
@@ -83,6 +92,7 @@ python3 verify_friendship.py
 python3 verify_two_centers.py --check
 python3 verify_clique_centers.py --check
 python3 verify_dense_regular_cones.py --check
+python3 -O verify_regular_cones.py --check
 ```
 
 The first command deterministically regenerates
@@ -130,6 +140,16 @@ The resumed optimized-Python check took 149.24 seconds and 34,952 KiB
 peak child RSS under the shared resource limits. Infinite
 coverage comes from the complete written incidence proof and exact
 polynomial certificate, not from this finite validation list.
+The eighth command compares with [regular_cones_expected.json](regular_cones_expected.json).
+It verifies the new middle and sparse coefficient identities, the older
+dense identity, and 52 additional rational substitutions. Sixteen bases
+have dimensions at most 44 and include disconnected graphs with two and
+three bipartite components, nonconstant degree-eigenvalue modes, and the
+odd-order middle regime. Complete incidence images/bases, constant Gram
+normalization, both PSD bounds and every base maximum family are checked.
+Three dense matrices agree entry by entry with the earlier constructor.
+Two full tensors have dimensions 68 and 196. Twelve malformed inputs,
+three coefficient-table corruptions and three PSD controls are rejected.
 
 Fixture SHA-256:
 
