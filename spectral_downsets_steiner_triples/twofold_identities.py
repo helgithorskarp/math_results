@@ -123,7 +123,7 @@ def run():
         'alpha1_positive': (-16, 0, 3),
         'mu_positive': (32, 0, -13, 3),
         'cap_gap_positive': (6, -41, 5),
-        'row2_strict_gap': (-32, 11),
+        'row2_strict_gap': (-32, 9),
         'row3_strict_gap': (-96, 14),
         'eight_mk_gt_v4_cubic': (-12, 22, -12, 1),
         'delta_lt_v2': (-6, 41, 1),

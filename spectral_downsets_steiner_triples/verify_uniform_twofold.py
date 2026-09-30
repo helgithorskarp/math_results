@@ -18,7 +18,7 @@ from affine_psd import check_equivariance, compression, invariant_partitions
 from integer_psd import integer_psd_rank
 from twofold_identities import run as identities
 from uniform_twofold import (binary_field16, centered_certificate, design_data,
-                             gap, maximal_certificate, prime_decomposition,
+                             gap, maximal_certificate, nonbijective_fixture, prime_decomposition,
                              repaired_certificate, weights)
 from verify import check_definition, exact_psd_rank, matrix_hash, rejects
 from verify_three9 import buffered_upper, gram_rank
@@ -40,10 +40,11 @@ def incidence_check(v, blocks):
     for x in range(v):
         for y in range(v):
             dot = lambda A, Z: sum(a*b for a, b in zip(A[x], Z[y]))
-            assert dot(P, P) == dot(C, C) == (v-2)*int(x == y)+1
+            assert dot(P, P) == (v-2)*int(x == y)+1
+            E = dot(C, C)-dot(P, P)
             assert dot(B, B) == (v-3)*int(x == y)+2
             assert dot(P, C) == dot(C, P) == 2*int(x != y)
-            assert dot(B, H) == dot(H, B) == 3*int(x != y)
+            assert dot(B, H) == dot(H, B) == 3*int(x != y)+E
     for block in blocks:
         contained = [p for p in pairs if p & block == p]
         assert len(contained) == 3
@@ -57,7 +58,7 @@ def incidence_check(v, blocks):
         for x in range(v):
             assert sum(int(a >> x & 1) for a in containing) == (
                 2*int(p >> x & 1)+int(completion[p] >> x & 1))
-    return {'pair_completion_permutation': True,
+    return {'pair_completion_permutation': len(set(completion.values())) == len(pairs),
             'incidence_identities_checked': 10,
             'outside_completion_multiplicities': sorted({n for row in H for n in row})}
 
@@ -151,6 +152,28 @@ def run():
     result['binary16']['uniform_maximal'] = {
         'eta': str(eta), 'full_lower_rank': 201, 'full_buffered_upper_rank': 216,
         'gap': str(gap(16)/2), 'Q00': str(Qm[0][0]), 'matrix_sha256': matrix_hash(Qm)}
+    result['nonbijective'] = []
+    for v in (13, 15):
+        blocks, perm = nonbijective_fixture(v)
+        D, s, Qc = centered_certificate(v, blocks)
+        check_definition(D, s, Qc, psd=False)
+        n = len(D)
+        assert integer_psd_rank(Qc) == n-v-1
+        assert integer_psd_rank(buffered_upper(Qc, gap(v))) == n-1
+        _, _, Qm, eta = maximal_certificate(v, blocks, (D, s, Qc))
+        check_definition(D, s, Qm, psd=False)
+        assert integer_psd_rank(Qm) == n-v
+        assert integer_psd_rank(buffered_upper(Qm, gap(v)/2)) == n-1
+        pairs, completion, _ = design_data(v, blocks)
+        result['nonbijective'].append({
+            'v': v, 'N': n, 's': s, 'fixture_permutation': perm,
+            'distinct_completion_pairs': len(set(completion.values())),
+            'total_pairs': len(pairs), 'centered_rank': n-v-1,
+            'maximal_rank': n-v, 'buffered_upper_rank': n-1,
+            'centered_gap': str(gap(v)), 'maximal_gap': str(gap(v)/2),
+            'eta': str(eta), 'centered_sha256': matrix_hash(Qc),
+            'maximal_sha256': matrix_hash(Qm), **incidence_check(v, blocks)})
+        print('validated nonbijective', v, 'N', n, file=sys.stderr, flush=True)
     # Malformed mathematical inputs and a corrupted supported entry must fail.
     _, _, blocks, _ = prime_decomposition(13)
     rejects(lambda: centered_certificate(13, blocks[:-1]))

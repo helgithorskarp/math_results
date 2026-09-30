@@ -1,4 +1,4 @@
-# Uniform capped H matrices for completion-bijective twofold triple systems
+# Uniform capped maximal-rank H matrices for all simple twofold triple systems
 
 Author: **six-downset-2**, role **researcher**, 2026-09-30.
 Status: complete written incidence proof, with exact rational finite validation;
@@ -8,12 +8,13 @@ are prior ingredients. General Spectral Chvátal Conjectures H and I remain open
 
 ## 1. Precise input class and conclusions
 
-Let U be a simple 2-(v,3,2) design, v>=13: every unordered pair of distinct
+Let U be any simple 2-(v,3,2) design, v>=13: every unordered pair of distinct
 points lies in exactly two distinct triples. Define pi(P) to be the unordered
-pair of their two third points. **Assume pi is a bijection on all unordered
-pairs.** This extra hypothesis is essential to this proof; no assertion for
-all twofold designs, arbitrary two-STS(13) unions, or all rank-three downsets
-is made. No automorphism hypothesis is imposed.
+pair of their two third points. Allow arbitrary multiplicities in pi.
+Every such design is covered, including every union of two block-disjoint
+STS(v) in the stated order range. No automorphism hypothesis is imposed.
+General rank-three downsets and degrees other than two remain outside this
+theorem.
 
 Let D contain the empty set, every singleton and pair, and the triples U. Put
 
@@ -59,11 +60,12 @@ two. The repaired maximal-rank conclusion holds for **all these q**, including
 even orders and odd prime powers. Finite fields and the
 affine Mendelsohn design are classical, not newly constructed designs.
 
-## 2. The eight-weight formula and the incidence identities
+## 2. The completion-sensitive formula and the incidence identities
 
 For a triple A and point x outside it, let f_A(x) be the number of pairs
 P inside A whose other completing point is x. Count multiplicities: f_A(x)
-can equal three in characteristic two. Define
+can equal three in characteristic two. For distinct points x,y put
+Z_(x,y)=|{P:pi(P)={x,y}}|-1 and Z_(x,x)=0. Define
 
 ```
 a=-2/3,
@@ -79,14 +81,14 @@ intersecting sets set Q_c to zero. On disjoint nonempty sets use
 
 | Sizes | Entry |
 |---|---|
-| 1,1 | a |
+| 1,1 | a+t Z_(x,y) |
 | 1,2 | w-d if their union is a triple, otherwise w |
 | 1,3 | h-t f_A(x) |
 | 2,2 | c |
 | 2,3 | d |
 | 3,3 | t |
 
-The new completion term in sizes 1,3 lies outside the seven-weight template
+The completion terms in sizes 1,1 and 1,3 lie outside the seven-weight template
 excluded in [TEMPLATE_OBSTRUCTION.md](TEMPLATE_OBSTRUCTION.md). That earlier
 obstruction remains valid and does not obstruct this construction.
 
@@ -97,20 +99,25 @@ v by b, m by b, v by m, and v by b respectively. Here J always has the
 required rectangular dimensions. Direct counting gives
 
 ```
-PP^T=CC^T=(v-2)I+J,       BB^T=(v-3)I+2J,
+PP^T=(v-2)I+J,            BB^T=(v-3)I+2J,
+CC^T=(v-2)I+J+Z,
 PC^T=CP^T=2(J-I),         PR=2B,
 RB^T=2P^T+C^T,            CR=B+H,
-BH^T=HB^T=3(J-I).
+BH^T=HB^T=3(J-I)+Z.
 ```
 
-Only CC^T uses the completion-bijection hypothesis: C is a column permutation
-of P. For x!=y, (PC^T)_(x,y) counts the two triples through x,y, choosing
+The definition of Z gives the off-diagonal entries of CC^T. Each point
+completes the opposite pair in each of its v-1 blocks, so every row of C
+has v-1 ones. Thus Z has zero diagonal. Every column of C has two ones,
+so CC^T1=2(v-1)1 and Z1=0. If pi is bijective, Z vanishes and the formula
+reduces to the eight-weight field construction that suggested it.
+For x!=y, (PC^T)_(x,y) counts the two triples through x,y, choosing
 their pair containing x and excluding y. Its diagonal vanishes. Each pair's
 two blocks prove RB^T=2P^T+C^T. Each of a triple's three pairs contributes
 its third point inside the triple and one outside, proving CR=B+H. Finally
 
 ```
-BH^T=B(R^TC^T-B^T)=2PC^T+CC^T-BB^T=3(J-I).
+BH^T=B(R^TC^T-B^T)=2PC^T+CC^T-BB^T=3(J-I)+Z.
 ```
 
 P,C,B,H all have row sum v-1; their column sums are respectively 2,2,3,3.
@@ -139,7 +146,11 @@ giving the third equation. At a point coordinate, BH^T supplies the last
 completion correction. Substitution verifies all six identities over Q(v).
 The equations for a star coordinate inside the indexed set follow directly
 from the diagonal/support rule. Empty row and star sums are N and s.
-Thus Q_c1=N1 and Q_c x_i=s1 for every star indicator x_i.
+At a singleton x and another star coordinate y, the +tZ_(x,y) singleton
+correction cancels the -tZ_(x,y) correction from BH^T. Its row correction
+vanishes because Z1=0. The six scalar equations above are therefore unchanged
+for arbitrary completion multiplicities. Thus Q_c1=N1 and Q_c x_i=s1 for
+every star indicator x_i.
 
 ## 3. A uniform PSD factorization and exact rank
 
@@ -227,9 +238,11 @@ having sum zero on each level and is also invariant. On that complement
 the diagonal blocks are bounded above by
 
 ```
-L11<2v I,       L22<=(2v+1/3)I,       L33<=(2v+17/3)I.
+L11<(10v/3)I,       L22<=(2v+1/3)I,       L33<=(2v+17/3)I.
 ```
 
+For the first, on sum-zero points L11=(s-a)I+tZ. Nonnegative C has row
+sum v-1 and column sum two, so ||C||^2<=2(v-1), giving Z<=vI there.
 For the latter two drop -cP^TP and -tB^TB and use ||R||^2<=6. The weights
 obey 0<w<=3/2, 0<c<=4/3, 0<d<=2, 0<h<=2, 1<t<=4/3. Their upper-bound
 numerators, over positive denominators, have coefficients in z=v-13 of
@@ -244,23 +257,23 @@ h<=2:     18+12z+z^2.
 On layer-sum-zero vectors the J terms vanish. The off-diagonal norms satisfy
 
 ```
-||L12||=||-wP-dC|| <= (w+d)sqrt(v-2) <= (7/2)sqrt(v),
+||L12||=||-wP-dC|| <= w sqrt(v-2)+d sqrt(2(v-1)) <= (9/2)sqrt(v),
 ||L13||=||-hB-tH|| <= h sqrt(v-3)+t sqrt(3(v-1)) <= (13/3)sqrt(v),
 ||L23||=||dR-dP^TB|| <= d[sqrt(6)+sqrt((v-2)(v-3))] <=2v+5.
 ```
 
-The second bound uses sqrt(3)<7/4; the last uses sqrt(6)<5/2.
+The first uses sqrt(2)<3/2; the second uses sqrt(3)<7/4; the last uses sqrt(6)<5/2.
 Bound the quadratic form by the three by three matrix of these diagonal
 upper bounds and off-diagonal norms. Its largest eigenvalue is at most its
 largest row sum. Using sqrt(v)<=v/3, valid for v>=13, the three row sums are
 bounded by
 
 ```
-(83/18)v,       (31/6)v+16/3,       (49/9)v+32/3,
+(113/18)v,       (11/2)v+16/3,       (49/9)v+32/3,
 ```
 
 each strictly below 7v. The last two margins have positive numerators
-11v-32 and 14v-96. The empty extension has eigenvalue zero. Thus
+9v-32 and 14v-96. The empty extension has eigenvalue zero. Thus
 Q_c|_(1 perpendicular)=L|_(1 perpendicular)<7v I.
 Finally delta=N-7v>0 since its numerator at v=13+z is
 318+89z+5z^2. Consequently NI-Q_c-delta(I-J_N/N) is PSD, has kernel
@@ -268,6 +281,19 @@ exactly the constant vector, and rank N-1. This proves the strict cap and
 the stated buffer.
 
 ## 5. A universal maximal-rank perturbation and products
+
+The perturbation below is the empty lift of the prior full-two-skeleton
+sparse trade of **six-downset-3**, researcher,
+[KERNEL_TRADE_PROOF.md](https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_six_exact/KERNEL_TRADE_PROOF.md),
+graph7745. Its general mechanism has an
+[independent review by six-reviewer-1](https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_sparse_trade_review1/REVIEW.md),
+graph7798. The present increment is the uniform new input core, its quantified
+coverage, and the explicit eta/Schur bound specialized to that core.
+The trade itself is credited as prior work. The prepublication refresh also
+found its distinct application to all complete rank-three truncations in
+[six-downset-3's uniform theorem](https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_uniform_three/PROOF.md),
+graph7930; that class has triple degree v-2 rather than the degree two here.
+None of those reviews verifies the present twofold input formula.
 
 Put k=(v-2)(v-3)/2 and
 
@@ -438,7 +464,7 @@ capped results follow from Sections 2--5 with multiplicity-counted H.
 ## 7. Reproduction and the exact trust boundary
 
 [uniform_twofold.py](uniform_twofold.py) validates all blocks and the entire
-completion permutation before constructing the rational weights and universal
+pair multiplicities before constructing the rational weights and universal
 pair-layer perturbation. Its alternative trace repair requires and checks a
 supplied two-STS decomposition. It regenerates field
 inputs at primes and F16=F2[X]/(X^4+X+1); the latter includes H entries three.
@@ -451,7 +477,7 @@ its compact output is [twofold_symbolic.json](twofold_symbolic.json).
 CAS identities do not prove the surrounding incidence or spectral bridges.
 
 [verify_uniform_twofold.py](verify_uniform_twofold.py) regenerates the inputs,
-checks ten incidence identities, full closure/support/diagonal/row/star
+checks the incidence identities, full closure/support/diagonal/row/star
 conditions, the completion multiplicities, and exact matrices/hashes. At
 primes13,19,31 it checks both centered and maximal lower PSD and their
 delta and delta/2 buffered upper PSD using
@@ -461,7 +487,11 @@ checks on the small restrictions. Their orders are12/15,17/20,27/30.
 The proof of this reduction remains a written dependency; the uniform theorem
 above does not use it. At16 all four full217-by-217 forms are checked by
 fraction-free integer Schur with exact divisibility and zero-residual rules,
-independently of a symmetry reduction. The alternative ordinary, trace-repaired
+independently of a symmetry reduction. It also constructs literal simple
+twofold designs at13 and15 with repeated completing pairs, using displayed
+point permutations of two block-disjoint systems. All four full forms are
+checked for each, with no orbit reduction; these are implementation fixtures,
+not a census. The alternative ordinary, trace-repaired
 and buffered trace-repaired forms at13 are also checked in full. At19 and31 that alternative's PSD
 and rank use the written convex/kernel bridge, with full definition and
 kernel checks; they are not described as full elimination replays.
@@ -476,8 +506,10 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 Use CPython3.11+ (tested3.11.2), assertions enabled, one process/thread,
 standard library only. Compact output is
 [uniform_twofold_expected.json](uniform_twofold_expected.json).
-The complete validation passed in226.48 seconds with239,488 KiB maximum RSS;
-these are measured costs, not runtime guarantees. It includes five rejection
+The complete field and nonbijective-fixture validation passed in286.74 seconds
+with239,744 KiB maximum RSS. The final changed linear norm-margin certificate
+was rechecked separately by exact polynomial coefficient comparison.
+These are measured costs, not runtime guarantees. It includes five rejection
 controls for malformed inputs, a wrong entry and a non-PSD zero-diagonal form.
 Finite validations reproduce the implementation and test the analytic
 bridges; they do not extend quantifiers by extrapolation. All-orders scope
@@ -489,5 +521,5 @@ Primary target: [Ellis--Filmus--Friedgut, Section 4](https://arxiv.org/html/2609
 with [arXiv record](https://arxiv.org/abs/2609.28404) live rechecked on2026-09-30.
 This result replaces the former finite-only field scope in
 [FIELD19_PROOF.md](FIELD19_PROOF.md) with a uniform certificate under the
-explicit completion condition. Older fixed weights are retained for exact
+explicit simple twofold hypothesis. Older fixed weights are retained for exact
 comparison. No historical priority follows from a bounded literature check.

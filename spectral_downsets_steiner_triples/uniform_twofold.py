@@ -1,4 +1,4 @@
-"""Eight-weight capped H construction for completion-bijective 2-(v,3,2).
+"""Completion-sensitive capped H construction for every simple 2-(v,3,2).
 
 The all-orders proof is UNIFORM_TWOFOLD_PROOF.md. Standard library only;
 no search, numerical eigensolver or CAS is part of this constructor.
@@ -6,6 +6,7 @@ Author: six-downset-2, researcher.
 """
 from fractions import Fraction as F
 from itertools import combinations
+from collections import Counter
 
 from certificates import check_sts, mask, ordered, steiner_certificate
 from field_family import field_downset
@@ -22,7 +23,7 @@ def weights(v):
 
 
 def design_data(v, blocks):
-    """Check every input block/pair and the completion permutation exactly."""
+    """Check every input block and every pair's two distinct completing points."""
     assert isinstance(v, int) and v >= 13
     assert len(set(blocks)) == len(blocks)
     pairs = [mask(p) for p in combinations(range(v), 2)]
@@ -37,7 +38,6 @@ def design_data(v, blocks):
     assert all(len(xs) == 2 and xs[0] != xs[1]
                for xs in completing.values()), 'simple twofold design required'
     completion = {p: xs[0] | xs[1] for p, xs in completing.items()}
-    assert set(completion.values()) == set(pairs), 'completion map not bijective'
     outside = {}
     for block in blocks:
         counts = {}
@@ -59,6 +59,7 @@ def centered_certificate(v, blocks):
     n, s = len(D), 2*v-1
     assert n == (5*v*v+v+6)//6
     block_set = set(blocks)
+    completion_counts = Counter(completion.values())
     zero, one, diagonal = F(0), F(1), F(s)
     Q = [[zero]*n for _ in D]
     for i, a in enumerate(D):
@@ -75,7 +76,7 @@ def centered_certificate(v, blocks):
                 else:
                     a0, b0 = a, b
                 if (ka, kb) == (1, 1):
-                    value = w['a']
+                    value = w['a']+w['t']*(completion_counts[a0 | b0]-1)
                 elif (ka, kb) == (1, 2):
                     value = w['b']-w['d']*int(a0 | b0 in block_set)
                 elif (ka, kb) == (1, 3):
@@ -124,6 +125,28 @@ def maximal_certificate(v, blocks, centered=None):
                                                       else (1 if sizes == [2, 2] else 0))
             Qr[i][j] = Qr[j][i] = Qc[i][j]+eta*change
     return D, s, Qr, eta
+
+
+def nonbijective_fixture(v):
+    """Two literal labelled validation inputs, not a census of all designs."""
+    if v == 13:
+        first, second = prime_decomposition(13)[3]
+        perm = [10, 6, 4, 12, 9, 3, 5, 1, 11, 7, 8, 0, 2]
+    else:
+        assert v == 15
+        first = sorted({mask((a-1, b-1, (a ^ b)-1))
+                        for a, b in combinations(range(1, 16), 2)})
+        second = first
+        perm = [9, 2, 14, 11, 12, 5, 10, 1, 8, 3, 6, 0, 7, 13, 4]
+    moved = sorted(mask(perm[x] for x in range(v) if block >> x & 1)
+                   for block in second)
+    check_sts(v, first)
+    check_sts(v, moved)
+    assert set(first).isdisjoint(moved)
+    blocks = sorted(set(first) | set(moved))
+    pairs, completion, _ = design_data(v, blocks)
+    assert len(set(completion.values())) < len(pairs)
+    return blocks, perm
 
 
 def repaired_certificate(v, systems, centered=None):

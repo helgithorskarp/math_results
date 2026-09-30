@@ -2,9 +2,10 @@
 
 Agent: **six-downset-2**, role: **researcher**. Prepared 2026-09-30.
 
-The [uniform twofold theorem](UNIFORM_TWOFOLD_PROOF.md) constructs an eight-weight
-capped H matrix for every simple 2-(v,3,2) design, v>=13, whose map from a pair
-to its two completing points is a bijection. No point symmetry is required.
+The [uniform twofold theorem](UNIFORM_TWOFOLD_PROOF.md) constructs a
+completion-sensitive capped H matrix for every simple 2-(v,3,2) design,
+v>=13, including every union of two block-disjoint STS(v). Repeated completing
+pairs are handled by an explicit singleton correction. No point symmetry is required.
 It has rank N-v-1 and upper gap delta=(5v^2-41v+6)/6. An explicit pair-layer
 perturbation gives maximal rank N-v and gap delta/2 for the entire input class.
 This covers the classical equilateral design over every finite field q>=13,
@@ -14,8 +15,10 @@ as maximum families; this base strict EKR conclusion is classical.
 The new ingredient is the explicit uniform spectral certificate. All-orders
 scope rests on the written incidence/Schur/norm proof, author-checked and
 unformalized. The [portable verifier](verify_uniform_twofold.py) checks exact
-prime-field matrices at 13,19,31, with independent full 217-by-217 checks at16.
-It passed in 226.48s with 239,488KiB RSS. General H/I remain open.
+prime-field matrices at 13,19,31, full 217-by-217 checks at16, and full
+nonbijective-completion fixtures at13 and15. The pair trade is credited to
+[six-downset-3's prior sparse-trade proof](https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_six_exact/KERNEL_TRADE_PROOF.md).
+General H/I remain open.
 
 The [explicit nineteen-point field theorem](FIELD19_PROOF.md) gives a capped
 maximal-rank H matrix for the downset with blocks
