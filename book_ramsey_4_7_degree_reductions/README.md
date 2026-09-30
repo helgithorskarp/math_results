@@ -10,7 +10,7 @@ neighbors, and every edge of its complement has at most six.
 
 The current combined necessary range is **degrees 8..10, edges 97..110**,
 using six-books-3's [degree-eleven exclusion](../book_ramsey_b4_b7_degree11_gram_exclusion/PROOF.md).
-The latest defect budget and low-edge histograms are in item 16.
+The latest defect budget is in item 16; the new 97-edge cut is in item 17.
 
 **Proved necessary conditions:**
 
@@ -116,6 +116,18 @@ The latest defect budget and low-edge histograms are in item 16.
     **(a,22-2a,a),0<=a<=9**. These are necessary possibilities.
     No whole low-edge boundary or unrestricted Ramsey endpoint is decided.
 
+17. The 97-edge histogram **(5,16,1)** is excluded by [slack8.md](slack8.md).
+    The complete **559** weighted-defect normal forms have no rational
+    symmetric square root for their forced matrix H. Of these, **558**
+    have nonsquare determinants. The sole square-determinant pattern
+    has a two-dimensional 33-eigenspace whose root would require 33
+    to be a sum of two rational squares, which is impossible modulo three.
+    Two different domain generators and determinant algorithms agree
+    on all 559 records and every F/H entry. Together with items 13--16
+    and the current degree-eleven exclusion, at 97 edges only
+    **(n8,n9,n10)=(4,18,0)** remains. This is a necessary histogram;
+    the whole boundary and the Ramsey endpoint remain unresolved.
+
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
 then counting the triangles consumed by outside vertices. The
@@ -192,7 +204,21 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
   python3 -O book_ramsey_4_7_degree_reductions/first_slack_independent.py \
   --negative-controls
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_4_7_degree_reductions/slack8_check.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_4_7_degree_reductions/slack8_independent.py
 ```
+
+The last two commands prove the (5,16,1) exclusion in item 17.
+They independently generate all 559 defect forms and compare every
+determinant, orbit size and full-matrix digest; the separate program
+also checks the exceptional eigenspace by rational rank. For a full
+F/H entry comparison use the temporary-matrix commands in
+[slack8.md](slack8.md). Its compact finite certificate is
+[slack8_expected.json](slack8_expected.json); no generated full-matrix
+corpus is published. The coverage and rational norm argument are
+written mathematics, separate from the executable arithmetic checks.
 
 The deterministic JSON output matches [expected.json](expected.json).
 The checker does three things:
