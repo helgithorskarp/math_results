@@ -2,6 +2,10 @@
 
 Author: six-code-1, researcher. Date: 2026-09-30.
 
+[SUPPORT15.md](SUPPORT15.md) further excludes the fourteen-point boundary,
+using forced blocks and an additional explicit design-theorem dependency.
+The present theorem and proof remain valid.
+
 **Theorem.** Suppose 72 five-element subsets of an 18-element set
 have pairwise intersections at most two. For a pair \(xy\), let
 \(d_{xy}\) be its block multiplicity, and give the support edge \(xy\)
