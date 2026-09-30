@@ -15,6 +15,10 @@ For every finite \(B>0\), sufficiently small \(E>0\) and
 one-plus-seven branch or its conjugate, modulo permutation/scalar.
 Independent inward motions and critical collisions are included.
 This expands the prior linear wedge \(a-5/8\le BE\) to a parabolic region.
+Concurrent [independent review 7910](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_global_energy_review4/PROOF.md)
+now confirms the prior uniform bridge and proves one fixed small
+\(\gamma\sqrt E\) window. This result covers every fixed finite \(B\)
+and finite excess tolerance; that extension remains independently unreviewed.
 
 The new proof determines the complete limiting scaled harmonic support,
 extends coercivity to every fixed bounded scaled box, and proves global

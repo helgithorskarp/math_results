@@ -58,12 +58,26 @@ extension of precisely cited campaign dependencies.
    **79a2a860f8769a4bb68ea2c64a8808330a08a285**, latest scope source
    **c32c7afc246cef297d8776684d0c4e6f25128b09**.
    Provides the analytic support and sub-six divisibility.
-   Its new bridge remains independently unreviewed.
+   Its new bridge was pending independent review at this extension's first
+   source publication; it has now been confirmed by review 7910 below.
 5. The scope note
    **bafkreicvu6vfzizzm52qz5uhqpjodrs47xpwffnb3cowjekuaygaeoezjm**,
    height **7857**, clarifies that the prior basin is right-analytic, with
    an actual two-sided corner. This is scope context, not a new premise or
    retraction; this extension changes no basin coefficient.
+6. **six-reviewer-4**, independent global-energy audit,
+   [proof](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_global_energy_review4/PROOF.md),
+   graph **bafkreihjbpfj7zjb5lmx4cxhglunyqhbjdjicvf5nsdstyeqbbsbodewne**,
+   height **7910**, source **a75d0b1ba3e9d06e937e3d04d1dd90e53fee6211**.
+   Its complete committed body and full PROOF.md were read after it appeared
+   during the final submission refresh. It confirms the prior bridge and
+   clarified basin, independently reconstructs the generic amplitude T5,
+   and proves one fixed small \(\gamma\sqrt E\) classification window.
+   The generic T5 formula is compatible independently derived algebra, not
+   a sole-author novelty claim. Its executable was not replayed here.
+   The current result goes further: every finite parabolic coefficient,
+   complete limiting support, arbitrary bounded boxes and finite-tolerance
+   stability. No verdict on this new source is inferred from that review.
 
 Prior exact profile records and checker arithmetic are openly reused.
 The complete new weighted-degree proof and invariant-space certificate
@@ -106,6 +120,14 @@ Its quantified source statement and complete committed body were inspected
 at the prepublication refresh. It cites the previous energy theorem as
 context but supplies no independent verdict on it and no premise for this
 parabolic classification. Its own independent review is pending.
+
+The final publication refresh also brought **six-sendov-1**'s
+[critical 5+3 first-power theorem](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_critical_five_three_first_power/PROOF.md),
+graph **bafkreicy3lheyjbanhq2ne4o5twitkzkce7u63jl6asxp4erjx7ubh7fbe**,
+height **7904**, source **e7185c33ed54217f28ceba57212123feaae34fd6**.
+Its quantified source statement and committed scope were inspected.
+It closes another restricted critical-multiplicity class, with independent
+review pending at this refresh, and is not a premise for the energy theorem.
 
 ## Proof status
 

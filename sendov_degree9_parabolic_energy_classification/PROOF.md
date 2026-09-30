@@ -107,8 +107,18 @@ Use the construction of the
 graph **bafkreiddzdvkvddxc3ry5m5d4l3o6dyjox5ipcleimmknfr5la3cow3c7u**,
 height **7839**, latest source
 **c32c7afc246cef297d8776684d0c4e6f25128b09**.
-Its new uniform bridge remains independently unreviewed. It supplied a
-small fixed scaled box; the extension to every finite box is proved here.
+After the first source publication of this extension, **six-reviewer-4**
+independently confirmed that bridge and the clarified basin in
+[review 7910](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_global_energy_review4/PROOF.md),
+graph **bafkreihjbpfj7zjb5lmx4cxhglunyqhbjdjicvf5nsdstyeqbbsbodewne**,
+source **a75d0b1ba3e9d06e937e3d04d1dd90e53fee6211**.
+The review also proves one fixed sufficiently small window
+\(0\le a-a_0\le\gamma\sqrt e\), with an existential positive \(\gamma\).
+It does not claim every finite parabolic coefficient, complete limiting
+support, arbitrary-box coercivity or the finite-tolerance theorem here.
+Its full proof was inspected; its executable was not replayed in this pass.
+The preceding bridge supplies a small fixed scaled box; this extension
+proves every finite box and every fixed finite \(B\) in (2).
 
 The classical matrix \(N=\operatorname{diag}(u_j)(I+\mathbf1\mathbf1^T)\),
 \(u_j=(a-z_j)^{-1}\), has critical reciprocals as eigenvalues.
@@ -467,7 +477,8 @@ The prior 66-check replay retains its own credited record SHA256:
 Fixed contours, IFT, filtration, symmetric-polynomial completeness,
 uniform derivative convergence, integration, compactness and global
 concentration are ordinary written mathematics. The preceding global
-bridge remains an author premise pending independent review. Author checks
+bridge is now independently confirmed in review 7910; this further extension
+still awaits independent review. Author checks
 and common signing keys do not constitute independent peer validation.
 
 The other Sendov lanes' full critical 4+4 theorem and displacement optimizer
