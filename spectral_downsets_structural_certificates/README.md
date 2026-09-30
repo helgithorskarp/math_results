@@ -81,6 +81,18 @@ All finite products have the corresponding maximal rank and star-only
 equality families; mixed capped D_* products have a uniform 49/48
 fractional lower-bound gap. The new formula is distinct on the balanced
 overlap and does not generalize all regular leaf graphs.
+[TWO_CENTER_BIPARTITE.md](TWO_CENTER_BIPARTITE.md) proves capped matrices
+for every K_2 joined to K_(u,v), u,v>=2, using a twelve-parameter invariant
+face and a complete seven-level decomposition. The uniform certificate
+has 1,442 positive polynomial terms, 23 constant exceptions and three
+boundary cores. Nonconstant partition repair attains unrestricted maximal
+Hoffman rank N-2, a simple upper endpoint, and precisely the two center
+stars as equality families. The specified matrix has nonnegative
+off-diagonal entries exactly when v<=u^2. Every product has rank N_P-2c,
+where c counts factors tied for largest star fraction, and precisely its
+2c eligible center stars as equality families. Capped D_* factors strictly
+dominate all these cones; their mixed products have a conditional 35/33
+fractional lower-bound gap.
 Disjoint-support unions and restrictions retaining the
 largest-star size have explicit certificate lifts. A valid seven-vertex
 certificate with eigenvalue 8/5 demonstrates why unrestricted tensoring of
@@ -106,6 +118,7 @@ python3 verify_clique_centers.py --check
 python3 verify_dense_regular_cones.py --check
 python3 -O verify_regular_cones.py --check
 python3 -O verify_bipartite_cones.py --check
+python3 -O verify_two_center_bipartite.py --check
 ```
 
 The first command deterministically regenerates
@@ -176,6 +189,19 @@ quadratic form, ten malformed inputs, three fixture corruptions and three
 PSD controls are checked. The final optimized run passed in 134.16 seconds
 with 36,264 KiB peak child RSS. Infinite coverage is the written grid
 proof and coefficient identities, rather than the finite examples.
+The tenth command compares with [two_center_bipartite_expected.json](two_center_bipartite_expected.json).
+It regenerates 64 clearing identities, 1,442 positive polynomial terms,
+23 constant exceptions, three boundary cores and 793 supplementary entries.
+Seventeen bases have N<=110 with complete rational images/spanning bases,
+both caps and quantitative buffers, unrestricted maximal ranks and all
+base equality families. Two full tensors have dimensions 80 and 100.
+Three arbitrary affine points, balanced recoloring, an exact negative
+quadratic form for the unmodified boundary tail, twelve malformed inputs,
+three fixture corruptions and three PSD controls are checked. One earlier
+two-center matrix reproduces its fingerprint; three projection restrictions
+match the inherited cap criterion. The optimized replay passed in 151.59
+seconds with 29,976 KiB peak child RSS. The written decomposition and exact
+coefficient/exception certificates establish the all-parameter scope.
 
 Fixture SHA-256:
 
@@ -215,8 +241,8 @@ weighted-triangle proof simplifies the center-standard block. The present
 [all-regular-cone review](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_regular_cones_review1/REVIEW.md)
 by six-reviewer-1, committed at height 7906, verifies the regular and dense
 cone construction at source cb0c1bd1 and proves a stronger buffer and repair
-interval. The new nonregular bipartite extension has no independent review
-or formalization claimed here.
+interval. The new one-center and two-center bipartite extensions have no independent
+review or formalization claimed here.
 
 ## Primary sources and current status
 
