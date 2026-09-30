@@ -1,0 +1,116 @@
+{
+  "agent": "six-covering-2",
+  "role": "researcher",
+  "all_passed": true,
+  "input_sha256": "8f2fefdf29d520bad8633cd95ea0ff1c9e01f3684b0afd4c391bfaab7b1a95c1",
+  "application": {
+    "N": 15120,
+    "known_classes": 11,
+    "base_boxes": 52,
+    "periodic_weight_on_prescribed_16": 93771,
+    "demand": 2999745,
+    "known_outside_periodic_cost": 0,
+    "outside_resources": 47,
+    "outside_actual_phases": 28621,
+    "outside_maxima_sha256": "96dbd255aedd1ab0047a89142c183b24fc20b90cf16c4ee0b74c60b339cfe6f8",
+    "outside_capacity": 2577600,
+    "cluster_top_upper": 395838,
+    "total_capacity": 2973438,
+    "strict_gap": 26307,
+    "cluster_phase_cases": 192,
+    "no_cluster_top_upper": 396468,
+    "no_cluster_strict_gap": 25677,
+    "ordinary_residual_demand": 2905974,
+    "ordinary_residual_capacity": 2946125,
+    "all_unused_resources": 62,
+    "all_unused_actual_phases": 59325,
+    "alternative_ordinary_demand": 99003,
+    "alternative_ordinary_capacity": 98995,
+    "malformed_box_rejections": 3
+  },
+  "point_controls": {
+    "agent": "six-covering-2",
+    "role": "researcher",
+    "all_passed": true,
+    "fixtures": [
+      {
+        "name": "three_resources",
+        "sharp_budget": 2,
+        "multiplicity_budget": 3,
+        "actual_tuples": 1728,
+        "attaining_phases": {
+          "4": 0,
+          "12": 0,
+          "36": 18
+        }
+      },
+      {
+        "name": "unrestricted_component",
+        "sharp_budget": 4,
+        "multiplicity_budget": 6,
+        "actual_tuples": 1728,
+        "attaining_phases": {
+          "4": 0,
+          "12": 0,
+          "36": 18
+        }
+      },
+      {
+        "name": "fixed_coarsest_positive_v",
+        "sharp_budget": 4,
+        "multiplicity_budget": 5,
+        "actual_tuples": 432,
+        "attaining_phases": {
+          "4": 0,
+          "12": 6,
+          "36": 18
+        }
+      },
+      {
+        "name": "distinct_block_labels_required",
+        "sharp_budget": 2,
+        "multiplicity_budget": 4,
+        "actual_tuples": 57600,
+        "attaining_phases": {
+          "4": 0,
+          "12": 0,
+          "20": 0,
+          "60": 30
+        }
+      }
+    ],
+    "genuine_cover_weight_cases": 764,
+    "complete_actual_tuples_checked": 61668,
+    "negative_effective_demands": 98,
+    "positive_prescribed_top_cases": 267,
+    "malformed_or_incomplete_rejections": 4,
+    "scope": "Written distinct-point charge with fixed top phases; no numerical L_min(8) improvement or practical solver implementation"
+  },
+  "cluster_controls": {
+    "agent": "six-covering-2",
+    "role": "researcher",
+    "all_passed": true,
+    "fixtures": [
+      {
+        "C": 9,
+        "exact_point_budget": 2,
+        "cluster_upper": 2
+      },
+      {
+        "C": 9,
+        "exact_point_budget": 4,
+        "cluster_upper": 4
+      },
+      {
+        "C": 15,
+        "exact_point_budget": 2,
+        "cluster_upper": 2
+      }
+    ],
+    "genuine_cover_cases": 194,
+    "negative_effective_demands": 11,
+    "positive_prescribed_coarsest_cases": 80,
+    "scope": "Exact evaluation of a valid upper relaxation, not exact optimization of the full point-charge budget"
+  },
+  "scope": "Written lemmas and a complete fixed-prefix integer cut; both smaller global periods remain open and no numerical L_min(8) improvement"
+}
