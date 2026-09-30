@@ -44,6 +44,13 @@ neighbors, and every edge of its complement has at most six.
    leaves two explicit line-graph templates, whose complete seven-vertex
    completions fail literal books. Edge counts **97..105** and
    **116..121** therefore require minimum degree eight.
+9. A degree-seven vertex cannot have all fourteen blue neighbors
+   of red degree ten. [uniform_cross.md](uniform_cross.md) excludes
+   both forced uniform-incidence templates at **every edge count**.
+   If all seven cross columns have size six, either a blue neighbor
+   has red degree eight, or at least three have red degree nine
+   and at least three have red degree eleven. The proof checks all
+   236,926 root-admissible seven-vertex completions per template.
 
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
@@ -68,6 +75,8 @@ earlier independent proofs.
 The current refinement [degree105.md](degree105.md) explicitly separates
 its written incidence reductions, published spectral classification
 dependency, and small final exact enumeration.
+[uniform_cross.md](uniform_cross.md) extends its uniform-incidence
+obstruction to every edge count without using the conditional edge window.
 
 ## Reproduction
 
@@ -89,6 +98,10 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 book_ramsey_4_7_degree_reductions/degree105_check.py
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 book_ramsey_4_7_degree_reductions/degree105_independent.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 book_ramsey_4_7_degree_reductions/uniform_cross_check.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 book_ramsey_4_7_degree_reductions/uniform_cross_independent.py
 ```
 
 The deterministic JSON output matches [expected.json](expected.json).
@@ -159,7 +172,7 @@ the proof uses no enumeration of witnesses or twofold triple systems.
 The output matches
 [single_degree7_expected.json](single_degree7_expected.json).
 
-The last two commands support the 106–115 refinement. The main checker
+The sixth and seventh commands support the 106–115 refinement. The main checker
 controls the new row-capacity and exceptional-row identities, including
 143,572 scalar states and 291,060 row configurations. It completely
 checks 3,003 binary columns per template and all 116,280 seven-edge
@@ -172,6 +185,21 @@ The compact expected records and explicit B7 pages are in
 [degree105_expected.json](degree105_expected.json). These are author
 implementation cross-checks; the classical spectral classification's
 historical enumeration is a named external dependency, not rerun here.
+
+The last two commands exclude uniform cross incidence at every edge
+count. The combinations generator visits all 1,048,576 B graphs with
+at most ten red edges per template; root caps leave 236,926. An
+independent binary recursion generates that entire root-admissible
+domain directly, without specifying the edge count. Both implementations
+reject every completion. Their 188 B-spine survivor records and explicit
+books agree entry by entry, and whole-domain and per-size fingerprints
+agree. [uniform_cross_expected.json](uniform_cross_expected.json) is a
+compact certificate and diagnostic table. Every record also identifies
+an induced17 Kneser core, connecting this structural bridge to
+six-books-3's [17-core obstruction](../book_ramsey_b4_b7_kneser17_obstruction/PROOF.md).
+Both checkers verify every induced adjacency in these core certificates;
+the direct cross-book exclusion uses no peer computation as a premise.
+The written spectral bridge remains separate from this finite computation.
 
 ## Primary sources and baseline provenance
 
@@ -197,8 +225,9 @@ historical enumeration is a named external dependency, not rerun here.
 - Bussemaker, Cvetkovic, Seidel,
   [*Graphs related to exceptional root systems*, 1976](https://pure.tue.nl/ws/portalfiles/portal/4386333/696566.pdf),
   Theorem 1.12 and Proposition 5.10, supply the external classification
-  used only in the 106–115 refinement. The exact specialization and
-  trust boundary are stated in [degree105.md](degree105.md).
+  used in the 106–115 refinement and the uniform-incidence exclusion.
+  The exact specialization and trust boundary are stated in
+  [degree105.md](degree105.md) and [uniform_cross.md](uniform_cross.md).
 
 Sources were refreshed on 2026-09-30. The published upper bound is
 used as literature context; its flag-algebra certificate is not
