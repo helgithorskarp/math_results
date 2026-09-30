@@ -1,0 +1,124 @@
+{
+  "schema": "sorting13-repeated01-family-source-manifest-v1",
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "python_checked": "3.11.2",
+  "runtime_dependencies": "Python3.11+ standard library; assertions enabled",
+  "claim_status": "Exact computer-assisted lemma; unformalized mathematical bridges; no external review",
+  "solver_dependency": null,
+  "source_files": [
+    {
+      "path": ".gitignore",
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2677,
+      "sha256": "f399754a1f227eb8950c0cae91edbe63ea8cc39bbad8b6b2f8460e26fee2bea9"
+    },
+    {
+      "path": "PROOF.md",
+      "bytes": 12707,
+      "sha256": "a94376f1008b76391259a6f65188a748d2b02dd7de1ca690865285aa7800a889"
+    },
+    {
+      "path": "generate.py",
+      "bytes": 9698,
+      "sha256": "6891b58da6236405d2421e80ae51f4afecddc0b9f6d339a981fa8ed2213d8e42"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 17892,
+      "sha256": "f864e9ff1adc7b4d208ad36080581b255ae16750b86ed0df0ebde6f2568a521f"
+    },
+    {
+      "path": "fixture.json",
+      "bytes": 31915,
+      "sha256": "acd38ae2ececd30273153396c3ceb39ce3e9335039029942a2662e2a140ea478"
+    },
+    {
+      "path": "certificate.json",
+      "bytes": 28387,
+      "sha256": "11236275d75013a87fdcd9a70adca80b0a735066092dec59085e61303b9c20ad"
+    }
+  ],
+  "positive_commands": [
+    "python3 -B generate.py",
+    "python3 -B verify.py"
+  ],
+  "positive_checker_output": {
+    "status": "INDEPENDENT_EIGHTEEN_CLASS_ACTIVITY_OBSTRUCTION_VERIFIED",
+    "classes": 18,
+    "parent": {
+      "states": 2214,
+      "edges_including_loops": 22536,
+      "max_effective_path": 11,
+      "effective_words": 3018600,
+      "classes": 480,
+      "selected_classes": 18,
+      "class_table_sha256": "5ac42c7b2ec5cc5485ea107338ddd20eaf9f8e5a56a6cbb8aa3e87e803799042"
+    },
+    "clamped_assignments_checked": 26624,
+    "original_boolean_inputs_checked": 8192,
+    "known23_and_full45_control": true,
+    "activity_vertices": 775,
+    "admissible_edges": 1384,
+    "blocked_edges": 2085,
+    "profile_preserving_admissible_edges": 617,
+    "max_activity_path": 8,
+    "excluded_effective_words": 42660,
+    "certificate_sha256": "56edc3e895992cdaebf5b27110e70cb7f335ee0adf27fd5fa668eb956b5b3355"
+  },
+  "generator_wall_seconds": 0.3251376689877361,
+  "checker_wall_seconds": 23.76664567401167,
+  "positive_child_peak_rss_kib_linux": 27876,
+  "negative_controls": [
+    {
+      "case": "omit_class",
+      "rejected": true
+    },
+    {
+      "case": "omit_class_from_fixture_too",
+      "rejected": true
+    },
+    {
+      "case": "omit_viable_vertex",
+      "rejected": true
+    },
+    {
+      "case": "false_edge_hash",
+      "rejected": true
+    },
+    {
+      "case": "false_longest_path",
+      "rejected": true
+    },
+    {
+      "case": "clip_domain_with_updated_hash",
+      "rejected": true
+    },
+    {
+      "case": "clip_B11_with_updated_hash",
+      "rejected": true
+    },
+    {
+      "case": "erase_repeat",
+      "rejected": true
+    }
+  ],
+  "threads": 1,
+  "simultaneous_intensive_jobs": 1,
+  "canonical_certificate_sha256": "56edc3e895992cdaebf5b27110e70cb7f335ee0adf27fd5fa668eb956b5b3355",
+  "certificate_file_sha256": "11236275d75013a87fdcd9a70adca80b0a735066092dec59085e61303b9c20ad",
+  "canonical_B11_sha256": "2b776a68a6bfc671df43af0f186dfe42acc0ae870738bdd88fa153948bedeaf4",
+  "parent_class_table_sha256": "5ac42c7b2ec5cc5485ea107338ddd20eaf9f8e5a56a6cbb8aa3e87e803799042",
+  "parent_source_commit": "bc1675c66ddeb936edbf38d09395420be06f551a",
+  "parent_graph_ref": "bafkreicoencobrq3kbfwx2btjnulurvlmk3spul26w4efch2rct6yz2pry",
+  "activity_author": "six-sorting-2, researcher",
+  "activity_source_commit": "1d55b42316153c7a6a213efb60016f71f3719262",
+  "activity_graph_ref": "bafkreicerpa74bf5im5bcrs2youzgn4i5agvnvmldfagfyoqnbucden3bm",
+  "prior_single_class_source_commit": "2a91a926429b20cd44a9830f22f60cb8ec020892",
+  "prior_single_class_graph_ref": "bafkreibwjomxwcpf3o4kndr3wwi6zabcmu5mlvvvkcevgnfeomllynjpii",
+  "scope": "All18 repeated01 classes excluded;435 necessary classes remain after the separate27-class restriction. GlobalS13=44..45 and B11=22..23 remain open."
+}
