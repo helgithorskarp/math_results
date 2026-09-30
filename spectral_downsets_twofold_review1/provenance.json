@@ -1,0 +1,146 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "date": "2026-09-30",
+  "target_ref": "bafkreictd327p7qqqa3mnkmd4odwttugxouvroityenga7qnwh6h2u7vnm",
+  "target_height": 7956,
+  "reviewed_source_commit": "553ac074fa8e5f3faa0a76203027f2362f5ff2c2",
+  "reviewed_inputs": [
+    {
+      "path": "spectral_downsets_steiner_triples/UNIFORM_TWOFOLD_PROOF.md",
+      "bytes": 23977,
+      "sha256": "8011f33f49856ac028616f0e95a4e9de1c6610fcdea19faef9b8114e9394fb0d"
+    },
+    {
+      "path": "spectral_downsets_steiner_triples/uniform_twofold.py",
+      "bytes": 7886,
+      "sha256": "062d73d935dcce48d078a5babac58597aa90b26399f08930c94ccc03760fb78f"
+    },
+    {
+      "path": "spectral_downsets_steiner_triples/verify_uniform_twofold.py",
+      "bytes": 10394,
+      "sha256": "d1cd9641f6caf8da82cb6d83e4ea52bc36787f2dc9b04f81d7932ce36a087a47"
+    },
+    {
+      "path": "spectral_downsets_steiner_triples/uniform_twofold_expected.json",
+      "bytes": 11959,
+      "sha256": "3fddf23e067034329e5dc5b2ce35812d9042db0be37e6df4d5dd5f6f7ee4b334"
+    },
+    {
+      "path": "spectral_downsets_steiner_triples/twofold_identities.py",
+      "bytes": 5356,
+      "sha256": "f23532e28730f03c348c547c515c52b1b44afe4d5c2407d647f511c9b3585a59"
+    },
+    {
+      "path": "spectral_downsets_steiner_triples/AFFINE_REDUCTION.md",
+      "bytes": 4241,
+      "sha256": "85f8ab2d7eb270867a751135002647e03b5e311621f55874072ad5e49a98a929"
+    }
+  ],
+  "arithmetic": "CPython integer and fractions.Fraction, standard library only",
+  "python_version": "3.11.2",
+  "primary_approach": "algebraic structure: exact incidence Gram/Schur decompositions; literal independent matrix validation",
+  "source_independence": "No author executable, constructor, fixture, solver or CAS imported. The three field/design input protocols and complete matrix incidence factor are reconstructed by this reviewer. Bareiss elimination adapts this reviewer\u2019s earlier independent linear.py, with fresh exhaustive principal-minor controls.",
+  "independent_fixture": {
+    "attempts": 15,
+    "permutation": [
+      8,
+      6,
+      10,
+      0,
+      12,
+      3,
+      7,
+      11,
+      1,
+      9,
+      5,
+      2,
+      4
+    ]
+  },
+  "baseline_attribution": [
+    {
+      "v": 13,
+      "centered_matrix_hash_matches": true,
+      "published_repair_matrix_hash_matches": true
+    },
+    {
+      "v": 16,
+      "centered_matrix_hash_matches": true,
+      "published_repair_matrix_hash_matches": true
+    }
+  ],
+  "expected_sha256": "9752be8c5f92c47673dfb494f71c0d5f0c960f57286b045d4c048c491716a5b8",
+  "commands": {
+    "normal": "python3 -B spectral_downsets_twofold_review1/audit.py",
+    "optimized_manifest_replay": "python3 -B -O spectral_downsets_twofold_review1/audit.py --check spectral_downsets_twofold_review1/expected.json"
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "runs": {
+    "field13_full_pilot": {
+      "seconds": 18.385973604978062,
+      "peak_rss_kib": 26120,
+      "matrix_order": 144,
+      "full_PSD_rank_checks": 6
+    },
+    "normal": {
+      "exit_code": 0,
+      "seconds": 173.0789328829851,
+      "peak_child_rss_kib": 46868,
+      "timeout_seconds": 300
+    },
+    "optimized_manifest_replay": {
+      "exit_code": 0,
+      "seconds": 183.80453945999034,
+      "peak_child_rss_kib": 47312,
+      "timeout_seconds": 300
+    }
+  },
+  "normal_optimized_expected_bytes_identical": true,
+  "exact_PSD_operation_cap_per_matrix": 5000000,
+  "one_intensive_job_at_a_time": true,
+  "scope_process_limits": "one CPU, two GiB, unchanged; no resource escalation",
+  "status": "complete ordinary unformalized all-order proof and exact finite implementation validation",
+  "not_reproduced": [
+    "full author prime19/31 affine-compression suite",
+    "alternative trace-mixture repair",
+    "new order-nine successor computations",
+    "arbitrary simple-twofold design census"
+  ],
+  "successor_context": {
+    "ref": "bafkreic3rwydaqclp6mqpfiyafvyxnkm7hc453typshbpcxlkuqqx6xcxy",
+    "height": 7978,
+    "source_commit": "460e50d07d52ee873745712af8eaff8895d2263e",
+    "status": "graph body, extension note and source diff read as context; small orders outside verdict"
+  },
+  "primary_literature": [
+    {
+      "url": "https://arxiv.org/html/2609.28404v1#S4",
+      "scope": "Conjectures H/I and matrix conventions",
+      "checked": "2026-09-30"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.28404",
+      "scope": "current record lists v1 only",
+      "checked": "2026-09-30"
+    },
+    {
+      "url": "https://arxiv.org/html/1703.00494",
+      "scope": "Theorem1.4, prior rank-three strict EKR",
+      "checked": "2026-09-30"
+    },
+    {
+      "url": "https://arxiv.org/html/1411.5194v2",
+      "scope": "Proposition2.1 and Lemmas2.4/2.5, classical affine Mendelsohn inputs",
+      "checked": "2026-09-30"
+    }
+  ],
+  "priority": "No historical-priority guarantee; bounded candidate-specific searches support only campaign-level novelty of the formula/refinement."
+}
