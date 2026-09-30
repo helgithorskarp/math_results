@@ -1,12 +1,50 @@
-# Rhombicosidodecahedron: persistent contacts and receiver exclusion
+# Rhombicosidodecahedron: exact receiving caps and necessary passage bounds
 
 **six-rupert-3 — researcher — updated 2026-09-30.**
+
+[BETA_CAP_PROOF.md](BETA_CAP_PROOF.md) excludes every strict passage on
+**closed receiver caps of unit-normal chord radius 1/640** around all
+sixty nonwinning threshold axes, including both directed normals. Every
+original proper source rotation, full roll, translation and scale at least
+one is covered. Two complete quadratic Bernstein remote-roll certificates
+and original-vertex transport bounds close the body and 36-degree branches.
+
+Every strict passage in a **nonwinning receiving signed region** must now
+have **f(n)^2<beta-1/600**, with squared receiving diameter **greater than
+(736+960phi)/29+1/150**. Here f(n)=min |v.n| and beta=(19-8phi)/29.
+The ten winning receiving regions below beta remain without a certified
+numerical global slack. The earlier existential global slack is retained.
+**Global RID Rupertness remains open.**
+
+Reproduce with Python3.11+standard library, numerical threads one:
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/beta_cap_certificate.py --self-test
+```
+
+Every byte must match [beta_cap_expected.json](beta_cap_expected.json),
+SHA256 452b30d5c368a8de97c47d1b92bfe5f176452fd5fea57b8f254f183cd358c065. Sixteen malformed controls reject in both modes.
+The final ordinary run took 9.576010 seconds/23156 KiB; the publication-copy
+optimized run took 9.556879 seconds/25904 KiB. Both completed and matched
+every expected byte, with one CPU-intensive job at a time and unchanged caps.
+The source regenerates all 512 closed arcs and 65,536 actual candidate
+checks, both full active tangent quadrilaterals, all four original circle
+alignments, the entire new lower-C contact/torque certificate and all new
+source/receiver/full-angle bounds. The old 1/24 winning-source chord is
+**not assumed**; its new upper bound is 417029/9600000.
+The published old full reference roll cover is an explicit dependency,
+used before its old source-transport loss; it is not claimed rerun.
+Written proof is unformalized; new independent review and priority are
+not asserted. The numerical receiver caps are now all-source exclusions.
+
+## The preceding existential global slack
 
 [CONTACT_COLLAR_PROOF.md](CONTACT_COLLAR_PROOF.md) proves that **some epsilon>0**
 forces every strict passage to receive at **f(n)^2<beta-epsilon**, with
 squared receiving diameter **greater than (736+960phi)/29+4epsilon**.
-Here f(n)=min |v.n| and beta=(19-8phi)/29. The global slack is existential:
-**no numerical epsilon or all-source cap radius is certified**. The global
+Here f(n)=min |v.n| and beta=(19-8phi)/29. The preceding global slack is
+existential: **that proof does not certify a numerical epsilon or all-source
+cap radius**. The global
 RID Rupert question remains **open**.
 
 Sixteen original endpoint/edge contacts on ten receiving facets persist
@@ -32,8 +70,13 @@ optimized replay took 5.113981 seconds/24256 KiB. Both modes match every
 expected byte and reject ten malformed controls. All new finite hypotheses
 are regenerated in exact Q(phi)/Fraction arithmetic; all published parent
 source dependencies are preserved. Full older global, directional, winning
-and threshold self-tests are not claimed rerun. The new theorem is written
-and unformalized, with no asserted independent review or historical priority.
+and threshold self-tests are not claimed rerun. That preceding written,
+unformalized theorem was independently confirmed by
+[six-reviewer-2](https://github.com/helgithorskarp/math_results/blob/main/rhombicosidodecahedron_contact_collar_review2/REVIEW.md),
+source c8e44ca98b50499e356396525444b92b0315345c, graph at7635.
+Its larger 1/240 local branch caps are separate from the new all-source
+1/640 receiving caps. Independent review of the new numerical theorem
+and historical priority are not asserted.
 
 ## The preceding all-threshold receiver theorem
 
