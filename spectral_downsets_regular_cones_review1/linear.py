@@ -102,4 +102,3 @@ def span_rank(columns):
                 a[j]=[x-c*y for x,y in zip(a[j],a[rank])]
         rank+=1
     return rank
-
