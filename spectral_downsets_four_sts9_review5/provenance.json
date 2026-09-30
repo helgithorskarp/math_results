@@ -1,0 +1,62 @@
+{
+  "agent": "six-reviewer-5",
+  "arithmetic": "Python arbitrary-precision integers and fractions.Fraction",
+  "bounds_changed": "Cohort nonconstant gap from 1/4 to8; nonconstant M upper from275/276 to61/69; no global H/I solution or numerical campaign-bound improvement",
+  "candidate_specific_searches": [
+    "four disjoint STS(9)",
+    "weighted Hoffman Steiner matrices",
+    "decomposable 2-(9,3,4) designs",
+    "centered seven-weight Hoffman downset"
+  ],
+  "external_author_code_imports": false,
+  "max_simultaneous_cpu_jobs": 1,
+  "methodology": [
+    "MRV exact cover of pairs",
+    "all 9! point images compared to every exact cover",
+    "disjointness-graph three-cliques with multiplicities",
+    "exhaustive partial point-bijection isomorphisms",
+    "actual-pair canonical orbit decoder",
+    "fraction-free integer PSD and rank elimination",
+    "fresh layered ordinary matrix and exact original/improved mixtures",
+    "frozenset seven-weight row/star reconstruction",
+    "universal rational-function identities and positive polynomial certificate"
+  ],
+  "omitted": "Private logs, graph ledger/snapshots, receipts, credentials and exploratory discovery state",
+  "primary_literature": [
+    "https://arxiv.org/html/2609.28404v1#S4",
+    "https://arxiv.org/abs/2609.28404",
+    "https://arxiv.org/pdf/1703.00494",
+    "https://grannell.net/Papers/lsls9.pdf"
+  ],
+  "priority": "No historical-priority claim; exact cohort and stronger-gap construction potentially novel",
+  "python_version": "3.11.2",
+  "resource_measurements": {
+    "audit-resource.json": {
+      "peak_child_rss_kib": 23744,
+      "returncode": 0,
+      "seconds": 49.62717602401972
+    },
+    "optimized-resource.json": {
+      "peak_child_rss_kib": 26072,
+      "returncode": 0,
+      "seconds": 46.12821893201908
+    },
+    "template-resource.json": {
+      "peak_child_rss_kib": 17348,
+      "returncode": 0,
+      "seconds": 0.6674567509908229
+    }
+  },
+  "reviewed_source_commit": "378340c24eb832d7bf7022975d38904400beae57",
+  "role": "independent mathematical reviewer",
+  "seed_path": "spectral_downsets_steiner_triples/four9_certificates.json",
+  "seed_sha256": "8035b0ca8ae954922d649c67ab36aaa758fa9635960e067ef9312ff1bbaf7e99",
+  "summary_sha256": {
+    "audit_expected.json": "7ca14c460ed01d0961316cee3df33df90c8c04d4e1976cdd28d84cfe3c6d17de",
+    "template_expected.json": "7cec899ed7e4ebb2db7f65a2fc7577d203b6d2c02c9d8af2792acb197cb3a52b"
+  },
+  "target_height": 7769,
+  "target_ref": "bafkreig3zgdfzdcddiga34hkmpm4ifqwxx4wyhgrudvup4mpwt7xajprhu",
+  "threads": 1,
+  "trust_boundary": "Independent compact source, CPython integer/Fraction arithmetic and ordinary coverage/kernel/tensor mathematics; no formalization"
+}
