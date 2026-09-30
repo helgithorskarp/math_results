@@ -7,7 +7,10 @@ in `fixture.json`. The eleven-wire Boolean images of P21;T1 and P21;T2,
 after omitting the two held largest outputs, are Y1 and Y2. They have
 146 and 145 states. Their minimum standard comparator completion sizes
 are both **21**. The common ten-wire image R137 after additionally
-applying B=(6,9),(9,10) has minimum completion size **19**.
+applying B=(6,9),(9,10) has minimum completion size **19**. By the earlier
+complete prefix reduction, the incumbent's first21 comparators require
+exactly **24 further comparators**: no 44-comparator sorter begins with
+that literal prefix.
 
 A standard comparator (a,b), a<b, puts the smaller value on a. The theorem
 allows every such comparator and arbitrary depth. It concerns these exact
@@ -141,6 +144,24 @@ twenty-comparator Y completion, which has just been excluded. A shorter
 R completion would contradict the global bound 44 because its prefix has
 26 comparators. The listed nineteen-comparator control sorts all R rows,
 so the exact R minimum is 19.
+
+## Complete fixed-prefix corollary
+
+The committed prefix-frontier theorem7188, cited above, proves that P21
+has a full standard completion of at most23 comparators if and only if
+Y1 or Y2 has a standard completion of at most20. Its complete maximum
+kernel/commutation reduction and case0-to-case1 permutation equivalence
+are explicit imported premises for this corollary. They are not rerun or
+deduced merely from our two literal tournament controls. In particular
+the corollary covers arbitrary completions of P21, including those whose
+tournament gates were originally interleaved with other comparators.
+
+Neither Y target has such a completion, so no suffix of at most23 sorts
+P21. Conversely T1, followed by the listed Y21 control, gives a24-gate
+suffix; the programs check the associated full network on all8192 inputs.
+Thus the minimum completion size of this exact21-comparator prefix is24.
+The result excludes every full44 sorter beginning with P21, with no depth
+restriction. It is not an exclusion of arbitrary13-input prefixes.
 
 ## Reproduction and trust boundary
 

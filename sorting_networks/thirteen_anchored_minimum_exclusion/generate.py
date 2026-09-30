@@ -130,9 +130,11 @@ def reproduce(fixture):
                         'original_inputs_checked': 8192, 'Y21_and_R19_controls': True})
     return {'cases': results, 'local_controls': local_facts(),
             'conclusion': {'Y1_minimum': 21, 'Y2_minimum': 21, 'R137_minimum': 19,
+                           'P21_minimum_suffix': 24,
                            'global_S13_interval': [44, 45]},
             'imported_minimum_once_exclusion': fixture['imports']['minimum_once']['graph_ref'],
-            'independence_scope': 'new local transport facts and fixture/control checks; prior exclusion imported'}
+            'imported_prefix_reduction': fixture['imports']['Y_provenance']['graph_ref'],
+            'independence_scope': 'new local transport facts and fixture/control checks; prior exclusion and P21 reduction imported'}
 
 
 def main():

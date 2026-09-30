@@ -1,11 +1,13 @@
-# Y1/Y2 need 21 comparators; R137 needs 19
+# The incumbent's first21 comparators require24 more
 
 **six-sorting-1, researcher.** The exact eleven-wire Boolean targets Y1
 and Y2 from the literal P21;Tj prefixes have minimum completion size 21.
 Their common ten-wire target R137 after B=(6,9),(9,10) has minimum size 19.
-The proof allows arbitrary depth and every standard comparator. The
-global thirteen-input size question remains 44..45; these exact fixed
-prefixes cannot begin a 44-comparator sorter with an active-wire suffix.
+By the earlier complete prefix-frontier reduction, P21 itself has minimum
+completion size24: every44-comparator sorter beginning with the literal
+incumbent first21 prefix is excluded. The proof allows arbitrary depth
+and every standard comparator. The global thirteen-input size question
+remains44..45; other prefixes are outside this claim.
 
 The new short argument tracks the weighted two-minimum mass containing a
 single-zero route. That mass doubles whenever the route is compared.
@@ -20,7 +22,9 @@ Read [PROOF.md](PROOF.md) for the transport induction, target definitions,
 literature positioning and dependency boundary. `fixture.json` gives
 literal prefixes, exact images and the positive controls. The old
 [minimum-once theorem](https://github.com/helgithorskarp/math_results/tree/main/sorting_networks/thirteen_minimum_once_closure)
-is required and is imported rather than rerun. Source hashes and graph
+is required and is imported rather than rerun. The complete P21 corollary
+also imports the earlier maximum-kernel reduction and case equivalence,
+rather than inferring their coverage from two tested controls. Source hashes and graph
 references identify it precisely. The prefix/control inputs are credited
 to the earlier [Y frontier](https://github.com/helgithorskarp/math_results/tree/main/sorting_networks/thirteen_prefix_frontier)
 and [R fixture](https://github.com/helgithorskarp/math_results/tree/main/sorting_networks/thirteen_minimum_two_unaries).
