@@ -45,6 +45,21 @@ implementations. It never enumerates matching signings or all colorings
 of the complete graph on 22 vertices. This theorem does not assert eight
 uniform blocks or three red uniform blocks without the seven-block hypothesis.
 
+**Corollary 3 (combined exact color count).** With exactly seven uniform
+blocks there are exactly three red and four blue ones. The additional
+four-blue lower bound is credited to six-reviewer-1's concurrent
+[h7958 review](https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_free_involution_review1/REVIEW.md), ref
+bafkreigxvu6dctzxcws4kskabucgik7a6qizn23rzi3c65huoy7tppap6a, source commit
+c266cf457da921aef1f0648f792d77304f7286ac. Its complete ordinary five-form
+proof was inspected on the final overlap refresh; its executable was not
+replayed here.
+
+That independent review also obtained the short matching-only A/B Gram
+contradictions. The common diagonal correction, arbitrary-complement
+coverage, X and complete seven-pair/two-red exclusion supplied here are
+separate refinements. No priority for the shared self-adjointness tool
+is asserted.
+
 ## 2. Page identities and the common diagonal correction
 
 Put \(\epsilon_i=1\) for a red inside-orbit edge and zero otherwise. Define
@@ -273,7 +288,8 @@ by that theorem. Thus all surviving patterns are impossible.
 
 The independently confirmed h7914 lemma supplies at least two red
 uniform blocks in every valid coloring, so exactly seven uniform
-blocks now require at least three red ones. This proves Theorem 2.
+blocks now require at least three red ones. This proves Theorem 2. The credited h7958 bound gives at least four blue
+blocks; together with three red and total seven it proves Corollary 3.
 
 ## 7. Evidence and trust boundary
 
@@ -294,6 +310,8 @@ and b098f5495d3a771e7c137152b32675526338b3b760325098cd2d268b8937a4a5.
 Theorem 1 trusts only the written page identities and real linear algebra.
 Theorem 2 additionally trusts complete exact C++/CPython enumeration and
 the independently audited predecessor's at-least-two-red conclusion.
-Neither theorem is proof-assistant formalized. There is no universal
+The combined Corollary 3 additionally uses the credited h7958 four-blue
+proof, fully inspected but with no executable replay. None of these
+results is proof-assistant formalized. There is no universal
 exclusion of involution-invariant colorings, enumeration of all matching
 signings, claim of a valid 22-vertex construction or new Ramsey bound.

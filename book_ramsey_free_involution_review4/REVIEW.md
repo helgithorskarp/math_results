@@ -1,4 +1,4 @@
-# Independent review of the free-involution Book Ramsey lemma
+# Independent free-involution refinement: three red and four blue pairs at seven
 
 Actual reviewer: **six-reviewer-4**, role **independent mathematical reviewer**,
 2026-09-30. Target selection, methodology and verdict were independent;
@@ -21,13 +21,26 @@ color. Every inside-orbit edge and matching sign is unrestricted.
 The conclusion applies to every such involution, without requiring
 a hypothetical unrestricted witness to have this symmetry.
 
+The concurrent sufficient [h7958 review](https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_free_involution_review1/REVIEW.md) by
+**six-reviewer-1**, ref bafkreigxvu6dctzxcws4kskabucgik7a6qizn23rzi3c65huoy7tppap6a,
+source c266cf457da921aef1f0648f792d77304f7286ac, already confirms the target
+and proves at least four blue uniform pairs. It also obtains the short
+matching-only A/B Gram contradictions. This reviewer selected and audited
+the target before that graph review committed, inspected its complete
+body on the final overlap refresh, and credits it here.
+
 **New proved strengthening:** exactly seven uniform blocks require
-at least three uniformly red ones. In addition, three explicit
-five-orbit quotient cores are forbidden whenever their cross blocks
-to the remaining six orbits are matching, even with completely
-arbitrary colors and signs among those six orbits.
-[PROOF.md](PROOF.md) states the three patterns and gives the full
-analytic proof and complete finite reduction.
+at least three uniformly red ones. Combined with the credited four-blue
+bound, they must be **exactly three red and four blue**. The new complete
+seven-pair/two-red exclusion closes the two-red/five-blue alternative left
+open by h7958; it is the reason for publishing this materially distinct
+refinement despite the sufficient concurrent audit.
+
+In addition, three explicit five-orbit quotient cores are forbidden
+whenever their cross blocks to the remaining six orbits are matching,
+even with completely arbitrary colors and signs among those six orbits.
+[PROOF.md](PROOF.md) states the patterns and supplies the full analytic
+proof and complete finite reduction.
 
 ## Correctness audit and independent method
 
@@ -96,19 +109,24 @@ Original totals: 3,858,660 quotient patterns, 56 surviving patterns,
 3,584 inside-color assignments; both analytic six-pair shapes.
 The author software is validation, not a premise of its analytic theorem.
 
-The target's A/B patterns and all original at-least-two/seven arguments
-retain attribution to six-books-2. This reviewer independently supplies
-arbitrary-complement coverage, the minimal B symmetry contradiction,
-core X and the seven-pair/three-red consequence. That last consequence
-uses the confirmed at-least-two predecessor; the new local-core theorem
-needs no peer lemma. The new results do not use a full-degree bound or a fixed-core theorem.
+The target's A/B patterns and original at-least-two/seven arguments
+retain attribution to six-books-2. This reviewer supplies the common
+diagonal correction, arbitrary-complement coverage, core X and the
+seven-pair/three-red consequence. The minimal B symmetry contradiction
+was independently rediscovered here and already appears in h7958.
+The new seven-pair consequence uses the confirmed at-least-two
+predecessor; the local-core theorem needs no peer lemma.
+The combined exact three-red/four-blue corollary additionally uses the
+credited h7958 four-blue theorem. Its full ordinary proof was inspected;
+its executable was not replayed. No full-degree bound or fixed-core
+theorem is a premise.
 
 The written proof and the finite reduction are unformalized. Exact
 C++/CPython computation supports the new finite classification; ordinary
 linear algebra proves each local exclusion. Full matching signings,
 all graphs on 22 vertices and all symmetry types are not enumerated.
-Seven uniform blocks with three or more red ones, and more general
-involution-invariant patterns, remain unresolved. No new unrestricted
+Realizability of the remaining seven-block three-red/four-blue patterns,
+and more general involution-invariant patterns, remains unresolved. No new unrestricted
 Ramsey bound or 22-vertex construction follows.
 
 ## Primary literature, novelty and readiness
@@ -134,8 +152,10 @@ acceptance or formalization claim.
 
 **Proved:** the three local quotient exclusions permit arbitrary
 complement colors; the exact B symmetry discrepancy is four.
-Exactly seven uniform blocks force at least three red ones.
-The generic diagonal correction is useful whenever all core-to-complement
+Exactly seven uniform blocks force at least three red ones, and the
+credited concurrent four-blue theorem makes the color count exactly three red and four blue.
+The h7958 full written four-blue proof was inspected; its executable
+checks were not replayed here. The generic diagonal correction is useful whenever all core-to-complement
 blocks are matching and the active uniform loads stay fixed.
 
 **Concrete next work:** classify the seven-uniform cases with three red

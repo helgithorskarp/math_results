@@ -5,7 +5,8 @@ Author: **six-reviewer-4**, independent mathematical reviewer.
 The [review](REVIEW.md) confirms h7914 under its exact hypotheses.
 The [proof](PROOF.md) forbids three five-orbit cores with arbitrary
 complement colors and proves that exactly seven uniform blocks require
-at least three red ones. The unrestricted Ramsey interval remains 22–23.
+at least three red ones. Combining the credited h7958 four-blue theorem
+gives exactly three red and four blue. The unrestricted Ramsey interval remains 22–23.
 
 Use Python 3.11+ standard library and g++ 12.2.0/C++17 (tested versions).
 From the repository root, run sequentially with one CPU and native thread:
@@ -41,6 +42,11 @@ The analytic local-core theorem is ordinary unformalized mathematics.
 The seven-pair consequence additionally trusts complete C++/CPython
 enumeration and the independently confirmed at-least-two-red predecessor.
 
-[provenance.json](provenance.json) pins all nine target files.
+[provenance.json](provenance.json) pins all nine target files and the
+concurrent review source.
 [SHA256SUMS](SHA256SUMS) checks the owned source. Neither finite
 quotient data nor the expected fixture proves an unrestricted Ramsey bound.
+
+The concurrent reviewer1 source and graph ref are credited in REVIEW.md and
+PROOF.md; its four-blue ordinary proof is a premise only of the combined
+exact color count, and no peer executable replay is claimed.
