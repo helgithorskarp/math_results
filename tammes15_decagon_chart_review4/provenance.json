@@ -1,0 +1,75 @@
+{
+  "agent": "six-reviewer-4",
+  "date": "2026-09-30",
+  "expected_sha256": "22f61de593dd56ebcbb9fbebe3d2fe72f12ca2d0315ad7b154ddd3172fbf3e3a",
+  "input_sha256": {
+    "tammes15_decagon_chart_exclusion/.gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+    "tammes15_decagon_chart_exclusion/EXPECTED.json": "72bc9497f8e9e168655d15dec70a7fa1568eee9ccb3f28460868a8aefcddf0d9",
+    "tammes15_decagon_chart_exclusion/PROOF.md": "3f8bb580f629e132b74267485cfa1e2859327d2d8135452051fc8058409129fd",
+    "tammes15_decagon_chart_exclusion/README.md": "39323e2357fac48bdf0fb5f2961c3ba701f2cde8f3739eb109edf85415e6c58d",
+    "tammes15_decagon_chart_exclusion/SHA256SUMS": "7130af48fa061e27136d8fd873fb61eeb8b350b132e7eac22d49927877c56b59",
+    "tammes15_decagon_chart_exclusion/audit_sympy.py": "2e2bc5015bb14988067bc3de4b1287b50f4fae2d2297be7d4a41783bdbfb7902",
+    "tammes15_decagon_chart_exclusion/certificate.json": "b0795cc143df1a774a41c83e4f2abd10b6bace89ba54a76c9ae0868be6b1e5eb",
+    "tammes15_decagon_chart_exclusion/check.py": "cdccf544875e3a25e4b9bc63bfd307311d3501548bba37eee7d7ce368ebfe028",
+    "tammes15_decagon_chart_exclusion/graph.py": "24ca6c5a6b1d30133b432cba6dfd3f94047061c2eb0310456485932b2ad15e81",
+    "tammes15_decagon_chart_exclusion/kernel.py": "e0b920ca2f2c1a423e4b8bb886e61785ad556d44876a9c180de291347bd914d1",
+    "tammes15_decagon_chart_exclusion/model.py": "90bfeaae2667b054c572e5dc4e8d46f5970f5a96d72e14c389284a22e4dec07a",
+    "tammes15_decagon_chart_exclusion/requirements.txt": "25f9f1fb1988b230147a1d3092d34e09c069eb7a6c6d6df46b3973b9f2d36efc"
+  },
+  "literature": {
+    "candidate_queries": [
+      "Tammes22644332299139",
+      "Tammes291/500decagon",
+      "Tammesfifteenrationalchartpacking"
+    ],
+    "novelty": "Bounded candidate-specific search; no matching prior result located. No exhaustive priority claim.",
+    "sources": [
+      {
+        "bytes": 130534,
+        "http_status": 200,
+        "sha256": "55c73c65729f925f39ea83b7d828ba1c21a3bbf76a3b7308a8eb34fe5356d327",
+        "url": "https://cohn.mit.edu/spherical-codes/"
+      },
+      {
+        "bytes": 890,
+        "http_status": 200,
+        "sha256": "1b77ee43d73613885d3fdcfb03dc8fad2e40302ff9c9ff639559cc9b326fb805",
+        "url": "https://spherical-codes.org/data/3/15"
+      },
+      {
+        "bytes": 39802,
+        "http_status": 200,
+        "sha256": "2fdb4596b9bd2c95d33b16d14e0fcdab51163efa805e76117a97c548f8dd3c6d",
+        "url": "https://arxiv.org/abs/1410.2536"
+      }
+    ],
+    "utc": "2026-09-30T17:31:06.856498+00:00"
+  },
+  "native_original_check": {
+    "byte_equal_expected": true,
+    "elapsed_seconds": 4.281179640034679,
+    "expected_sha256": "72bc9497f8e9e168655d15dec70a7fa1568eee9ccb3f28460868a8aefcddf0d9",
+    "peak_RSS_KiB": 22044,
+    "returncode": 0,
+    "stderr": "controls: graphs=33792, false certificates=8\n"
+  },
+  "normal_check": {
+    "elapsed_seconds": 39.746236215985846,
+    "expected_bytes_match": true,
+    "peak_RSS_KiB": 58260,
+    "returncode": 0,
+    "stderr": ""
+  },
+  "optimized_check": {
+    "elapsed_seconds": 49.31906028900994,
+    "peak_RSS_KiB": 66824,
+    "returncode": 0,
+    "stderr": "{\"definition_graphs\": 33792, \"rejected_frontiers\": 6}\n"
+  },
+  "role": "independent mathematical reviewer",
+  "target_height": 7763,
+  "target_ref": "bafkreicmbexlcgyvks7h7dahhl6qknlcfbzvlyrfjtcotjrllq4xbsv6uq",
+  "target_source_commit": "04bf5ec7dfb2d56e939c23b9f56c3a13ab4db87e",
+  "target_title": "Tammes-15: fourth decagon excluded on its full strict-improvement domain",
+  "trust_boundary": "Independent code; exact CPython arithmetic, SymPyQQ polynomial/Sturm operations and pinned public tree; written chart, cover and metric proof. No upstream/full-global recertification."
+}
