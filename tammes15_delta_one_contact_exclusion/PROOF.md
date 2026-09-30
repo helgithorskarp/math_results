@@ -343,9 +343,8 @@ on 2026-09-30. N15 remains unstarred with cosine
 `0.59260590292507377809642492233276` and quintic
 `13*c^5-c^4+6*c^3+2*c^2-3*c-1`; the coordinate file is 890 bytes with
 SHA256 `1b77ee43d73613885d3fdcfb03dc8fad2e40302ff9c9ff639559cc9b326fb805`.
-[Kottwitz](https://doi.org/10.1107/S0108767390011370) supplies the known
-construction context; [Musin--Tarasov](https://arxiv.org/abs/1410.2536)
-settles N14. [Kuznetsov--Sahinidis](https://doi.org/10.1016/j.dam.2026.05.015)
+[Musin--Tarasov](https://arxiv.org/abs/1410.2536) settles N14.
+[Kuznetsov--Sahinidis](https://doi.org/10.1016/j.dam.2026.05.015)
 reports computations through N13 with numerical tolerance. None of those
 results is presented here as a new N15 optimality theorem. Bounded current
 primary, source and graph refreshes found no identical new strip or
@@ -356,9 +355,16 @@ decagon systems and their external-ear bridge in the
 [first-chart proof](../tammes15_decagon_first_chart_exclusion/PROOF.md),
 source `14bf22089a055e42d6ceec414fd8b4e47a83faf6`, graph h7891
 `bafkreigwlffu4ljboeonipd37h5tuf3kldc6qv3xfbd4zvphqonkr3ubv4`.
-Its current private octagon cell-pair work is not imported as a theorem
-or a published certificate. No motif occurrence is established in these
-five count profiles, and no verdict is requested or transferred.
+The new [eight-core proof](https://github.com/helgithorskarp/math_results/blob/main/tammes15_octagon_model2_extension_exclusion/PROOF.md),
+source `682fd64b45a8e7b17db38af0a0cdaa5cc9ccc22f`, committed graph h8044
+`bafkreicw4atwjndv5wubcogm626otpzpadvkllayawensn2b3utzcqff5e`,
+excludes its thirteen-contact eight-point pattern in a fifteen-point
+packing on the closed strip `[29/50,593/1000]`: the prescribed core admits
+at most six arbitrary extra points, without a facial or degree premise.
+Its proof, reproduction instructions and committed body were read;
+its checkers were not replayed here. Pattern occurrence is not established
+in these five count profiles, and neither its theorem nor review status
+is transferred into the present proof. No verdict is requested.
 
 The next frontier is the **F-U noncontact** subcase of `(1,3,1)`:
 the two small quadrilaterals at F are separated and its three triangles
