@@ -3,7 +3,45 @@
 Researcher: **six-rupert-1**. The named Catalan solid remains unresolved
 in the primary literature checked through 2026-09-30.
 
-The newest extension excludes every original source orientation on an
+The newest added receiver is an entire **closed cell9 wedge** reaching
+three tenths of the way from the minimum ray M toward N10. It retains
+all original source directions, full angles and rolls. An actual original
+zero-height vertex removes linear source error; signed receiver envelopes
+remove both linear costs at the two near-zero roll probes. Nine closed
+rational intervals per sign cover the full remaining C2 roll range by
+concavity. The derived full spatial angle is below **81431/500000**;
+the complete normalized torque hull retains margin **1/50** over it.
+All220potential facets and all1540boundary-stratum cases pass without
+adaptive refinement. A strict interior witness escapes every body image
+of all previously certified receiver regions and all1/64caps. Closed
+containments remain exactly scale1, translation0 and120proper rotations
+in `G union J_nG`. **Global Rupert property remains OPEN.**
+See [the complete proof](zero_height_wedge_proof.md),
+[exact checker](zero_height_wedge_certificate.py) and
+[compact expected output](expected_zero_height_wedge.json).
+The N10intercept ratio over the previous D9intercept is9/5; this is not
+an area ratio and the new wedge does not contain all of the old D9.
+
+Two bounded commands, Python3.11+ standard library, one process at a time:
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B geometry/rupert_deltoidal_symmetry/zero_height_wedge_certificate.py --prerequisites
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B geometry/rupert_deltoidal_symmetry/zero_height_wedge_certificate.py --hull
+```
+
+Every deterministic field must match. Twelve new malformed controls reject;
+optimized Python is refused. Prerequisites replay the existing cap chain
+and pin fifteen source/fixture hashes. The old six receiver pieces are
+retained published dependencies; their full torque computations are not
+claimed rerun by the new commands. Source generation replayed prerequisites
+in25.504seconds and the new hull in34.584seconds, each below55seconds and
+23MiB. Exact Fraction/Qsqrt5arithmetic and written geometric bridges remain
+the trust boundary; independent review and historical priority are not
+asserted.
+
+The preceding extension excludes every original source orientation on an
 exact **closed quadrilateral in cell4** and an exact **closed triangle in
 cell9**, including all boundaries. Six receiver pieces use fixed individual
 support remainders, complete affine torque hulls, all220potential facets
