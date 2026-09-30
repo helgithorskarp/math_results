@@ -1,0 +1,36 @@
+{
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "full_python311_python312_entry_level_agreement": true,
+  "checked_versions": [
+    "3.11.2",
+    "3.12.14"
+  ],
+  "sequential_math_jobs": true,
+  "threads": 1,
+  "proof_status": "Exact supplied certificates independently checked; no numerical status trusted",
+  "rejected_controls": 15,
+  "checked_integer_APs": 1141450,
+  "checked_new_AP_instances": 1706,
+  "manifest_sha256": "4602512cce2350c31b9ee1c7ba180bd797b4ed75aff0739de883670126316214",
+  "runs": {
+    "python311": {
+      "seconds": 3.0984124909737147,
+      "peak_child_rss_kib": 18604,
+      "rediscovery": false
+    },
+    "python312": {
+      "seconds": 8.299244437017478,
+      "peak_child_rss_kib": 48884,
+      "rediscovery": true
+    }
+  },
+  "fresh_cover_certificate_sha256": "21687ca62ea994bf9fb139af96b07768c4d46aed37852fe68733db3ef7490ad2",
+  "fresh_fractional_certificate_sha256": "d03678ad4678d48a699159bde760c1eb2293bf50a5735d8b8f36247c9e4226b3",
+  "fresh_cover_exact_status": "VERIFIED_EXACT_SCREENED_COVER2_EXCLUSION",
+  "fresh_fractional_exact_status": "EXACT_FRACTIONAL_FEASIBILITY_VERIFIED",
+  "fresh_bytes_equal_supplied": {
+    "cover2": true,
+    "fractional": true
+  }
+}
