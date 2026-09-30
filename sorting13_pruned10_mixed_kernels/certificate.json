@@ -1,0 +1,1375 @@
+{
+  "agent": "six-sorting-2",
+  "completion_budget": 21,
+  "derived_minimum_caps": {
+    "0": 3,
+    "1": 2,
+    "5": 4
+  },
+  "full_budget": 35,
+  "initially_ordered_max_min_pairs": [
+    [
+      6,
+      0
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      9,
+      1
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      10,
+      0
+    ],
+    [
+      10,
+      1
+    ]
+  ],
+  "kernel_cover": [
+    {
+      "candidate_touch_caps": [
+        3,
+        4,
+        1
+      ],
+      "canonical_word_sha256": "e32d317e6b909ed81f4ca0bd66b55b64723bd46def92d221eb29c7e351ffa6f0",
+      "counts_by_length": {
+        "2": 1,
+        "3": 23,
+        "4": 240,
+        "5": 1344
+      },
+      "id": "minimum_1608",
+      "initial_candidates": [
+        0,
+        5,
+        1
+      ],
+      "opposite_fixed_trajectory": {
+        "ordered_candidates": [
+          0,
+          1
+        ],
+        "polarity": "maximum",
+        "wire": 10
+      },
+      "polarity": "minimum",
+      "words": 1608
+    },
+    {
+      "candidate_touch_caps": [
+        2,
+        2,
+        2
+      ],
+      "canonical_word_sha256": "f33bced5bbb6aeb83d834b843d0ea731a2e218e9bb91c91cb55090e0bc1bb0ec",
+      "counts_by_length": {
+        "2": 3,
+        "3": 47,
+        "4": 0,
+        "5": 0
+      },
+      "id": "maximum_50",
+      "initial_candidates": [
+        6,
+        9,
+        10
+      ],
+      "opposite_fixed_trajectory": {
+        "ordered_candidates": [
+          6,
+          10
+        ],
+        "polarity": "minimum",
+        "wire": 0
+      },
+      "polarity": "maximum",
+      "words": 50
+    }
+  ],
+  "known_lower_sizes": {
+    "10": 29,
+    "11": 35,
+    "9": 25
+  },
+  "mixed_bounds": [
+    {
+      "deleted_steps": [
+        0,
+        4,
+        7,
+        9,
+        11
+      ],
+      "fixed_maxima": [
+        8
+      ],
+      "fixed_minima": [
+        0
+      ],
+      "maximum_holes": [
+        6
+      ],
+      "maximum_wire": 6,
+      "minimum_holes": [
+        0
+      ],
+      "minimum_wire": 0,
+      "output_order": [
+        3,
+        0,
+        1,
+        2,
+        7,
+        4,
+        5,
+        6,
+        8
+      ],
+      "retained_network": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "suffix_union_cap": 5
+    },
+    {
+      "deleted_steps": [
+        1,
+        4,
+        5,
+        8,
+        9,
+        11
+      ],
+      "fixed_maxima": [
+        8
+      ],
+      "fixed_minima": [
+        1
+      ],
+      "maximum_holes": [
+        6
+      ],
+      "maximum_wire": 6,
+      "minimum_holes": [
+        1
+      ],
+      "minimum_wire": 1,
+      "output_order": [
+        0,
+        3,
+        1,
+        2,
+        7,
+        4,
+        5,
+        6,
+        8
+      ],
+      "retained_network": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "suffix_union_cap": 4
+    },
+    {
+      "deleted_steps": [
+        4,
+        9,
+        11,
+        12
+      ],
+      "fixed_maxima": [
+        8
+      ],
+      "fixed_minima": [
+        9
+      ],
+      "maximum_holes": [
+        6
+      ],
+      "maximum_wire": 6,
+      "minimum_holes": [
+        5
+      ],
+      "minimum_wire": 5,
+      "output_order": [
+        0,
+        4,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "retained_network": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "suffix_union_cap": 6
+    },
+    {
+      "deleted_steps": [
+        0,
+        1,
+        6,
+        7,
+        12
+      ],
+      "fixed_maxima": [
+        1
+      ],
+      "fixed_minima": [
+        0
+      ],
+      "maximum_holes": [
+        9
+      ],
+      "maximum_wire": 9,
+      "minimum_holes": [
+        0
+      ],
+      "minimum_wire": 0,
+      "output_order": [
+        6,
+        5,
+        0,
+        1,
+        7,
+        2,
+        3,
+        4,
+        8
+      ],
+      "retained_network": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "suffix_union_cap": 5
+    },
+    {
+      "deleted_steps": [
+        1,
+        2,
+        5,
+        6,
+        8,
+        12
+      ],
+      "fixed_maxima": [
+        1
+      ],
+      "fixed_minima": [
+        2
+      ],
+      "maximum_holes": [
+        9
+      ],
+      "maximum_wire": 9,
+      "minimum_holes": [
+        1
+      ],
+      "minimum_wire": 1,
+      "output_order": [
+        0,
+        6,
+        5,
+        1,
+        7,
+        2,
+        3,
+        4,
+        8
+      ],
+      "retained_network": [
+        [
+          0,
+          8
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "suffix_union_cap": 4
+    },
+    {
+      "deleted_steps": [
+        1,
+        6,
+        12
+      ],
+      "fixed_maxima": [
+        1
+      ],
+      "fixed_minima": [
+        9
+      ],
+      "maximum_holes": [
+        9
+      ],
+      "maximum_wire": 9,
+      "minimum_holes": [
+        5
+      ],
+      "minimum_wire": 5,
+      "output_order": [
+        0,
+        7,
+        6,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8
+      ],
+      "retained_network": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "suffix_union_cap": 7
+    },
+    {
+      "deleted_steps": [
+        0,
+        3,
+        7,
+        10,
+        13
+      ],
+      "fixed_maxima": [
+        4
+      ],
+      "fixed_minima": [
+        0
+      ],
+      "maximum_holes": [
+        10
+      ],
+      "maximum_wire": 10,
+      "minimum_holes": [
+        0
+      ],
+      "minimum_wire": 0,
+      "output_order": [
+        6,
+        0,
+        1,
+        2,
+        7,
+        4,
+        3,
+        8,
+        5
+      ],
+      "retained_network": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          7,
+          5
+        ]
+      ],
+      "suffix_union_cap": 5
+    },
+    {
+      "deleted_steps": [
+        1,
+        3,
+        5,
+        8,
+        10,
+        13
+      ],
+      "fixed_maxima": [
+        4
+      ],
+      "fixed_minima": [
+        1
+      ],
+      "maximum_holes": [
+        10
+      ],
+      "maximum_wire": 10,
+      "minimum_holes": [
+        1
+      ],
+      "minimum_wire": 1,
+      "output_order": [
+        0,
+        6,
+        1,
+        2,
+        7,
+        4,
+        3,
+        8,
+        5
+      ],
+      "retained_network": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          7,
+          5
+        ]
+      ],
+      "suffix_union_cap": 4
+    },
+    {
+      "deleted_steps": [
+        3,
+        10,
+        12,
+        13
+      ],
+      "fixed_maxima": [
+        4
+      ],
+      "fixed_minima": [
+        9
+      ],
+      "maximum_holes": [
+        10
+      ],
+      "maximum_wire": 10,
+      "minimum_holes": [
+        5
+      ],
+      "minimum_wire": 5,
+      "output_order": [
+        0,
+        7,
+        1,
+        2,
+        3,
+        5,
+        4,
+        8,
+        6
+      ],
+      "retained_network": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "suffix_union_cap": 6
+    }
+  ],
+  "prefix_size": 14,
+  "role": "researcher",
+  "schema": 1,
+  "single_extremum_bounds": [
+    {
+      "deleted_steps": [
+        4,
+        9,
+        11
+      ],
+      "fixed_maxima": [
+        8
+      ],
+      "fixed_minima": [],
+      "maximum_holes": [
+        6
+      ],
+      "minimum_holes": [],
+      "output_order": [
+        0,
+        4,
+        1,
+        2,
+        3,
+        8,
+        5,
+        6,
+        7,
+        9
+      ],
+      "polarity": "maximum",
+      "retained_network": [
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "suffix_touch_cap": 3,
+      "wire": 6
+    },
+    {
+      "deleted_steps": [
+        1,
+        6,
+        12
+      ],
+      "fixed_maxima": [
+        1
+      ],
+      "fixed_minima": [],
+      "maximum_holes": [
+        9
+      ],
+      "minimum_holes": [],
+      "output_order": [
+        0,
+        7,
+        6,
+        1,
+        2,
+        8,
+        3,
+        4,
+        5,
+        9
+      ],
+      "polarity": "maximum",
+      "retained_network": [
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          9
+        ]
+      ],
+      "suffix_touch_cap": 3,
+      "wire": 9
+    },
+    {
+      "deleted_steps": [
+        3,
+        10,
+        13
+      ],
+      "fixed_maxima": [
+        4
+      ],
+      "fixed_minima": [],
+      "maximum_holes": [
+        10
+      ],
+      "minimum_holes": [],
+      "output_order": [
+        0,
+        7,
+        1,
+        2,
+        3,
+        8,
+        5,
+        4,
+        9,
+        6
+      ],
+      "polarity": "maximum",
+      "retained_network": [
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          8,
+          6
+        ]
+      ],
+      "suffix_touch_cap": 3,
+      "wire": 10
+    },
+    {
+      "deleted_steps": [
+        0,
+        7
+      ],
+      "fixed_maxima": [],
+      "fixed_minima": [
+        0
+      ],
+      "maximum_holes": [],
+      "minimum_holes": [
+        0
+      ],
+      "output_order": [
+        7,
+        0,
+        1,
+        2,
+        8,
+        3,
+        4,
+        5,
+        6,
+        9
+      ],
+      "polarity": "minimum",
+      "retained_network": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          5,
+          9
+        ]
+      ],
+      "suffix_touch_cap": 4,
+      "wire": 0
+    },
+    {
+      "deleted_steps": [
+        1,
+        5,
+        8
+      ],
+      "fixed_maxima": [],
+      "fixed_minima": [
+        1
+      ],
+      "maximum_holes": [],
+      "minimum_holes": [
+        1
+      ],
+      "output_order": [
+        0,
+        7,
+        1,
+        2,
+        8,
+        3,
+        4,
+        5,
+        6,
+        9
+      ],
+      "polarity": "minimum",
+      "retained_network": [
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          5,
+          9
+        ]
+      ],
+      "suffix_touch_cap": 3,
+      "wire": 1
+    },
+    {
+      "deleted_steps": [
+        12
+      ],
+      "fixed_maxima": [],
+      "fixed_minima": [
+        9
+      ],
+      "maximum_holes": [],
+      "minimum_holes": [
+        5
+      ],
+      "output_order": [
+        0,
+        8,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ],
+      "polarity": "minimum",
+      "retained_network": [
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "suffix_touch_cap": 5,
+      "wire": 5
+    }
+  ],
+  "states": [
+    0,
+    64,
+    80,
+    512,
+    544,
+    576,
+    584,
+    592,
+    600,
+    608,
+    616,
+    624,
+    632,
+    1024,
+    1088,
+    1089,
+    1092,
+    1104,
+    1105,
+    1108,
+    1280,
+    1344,
+    1345,
+    1348,
+    1360,
+    1361,
+    1364,
+    1365,
+    1536,
+    1568,
+    1600,
+    1601,
+    1604,
+    1608,
+    1612,
+    1616,
+    1617,
+    1620,
+    1624,
+    1625,
+    1628,
+    1632,
+    1633,
+    1636,
+    1640,
+    1644,
+    1648,
+    1649,
+    1652,
+    1656,
+    1657,
+    1660,
+    1664,
+    1696,
+    1728,
+    1732,
+    1736,
+    1740,
+    1742,
+    1744,
+    1748,
+    1752,
+    1756,
+    1758,
+    1760,
+    1764,
+    1768,
+    1772,
+    1774,
+    1776,
+    1780,
+    1784,
+    1788,
+    1790,
+    1792,
+    1824,
+    1856,
+    1857,
+    1860,
+    1864,
+    1868,
+    1872,
+    1873,
+    1876,
+    1877,
+    1880,
+    1881,
+    1884,
+    1885,
+    1888,
+    1889,
+    1892,
+    1896,
+    1900,
+    1904,
+    1905,
+    1908,
+    1909,
+    1912,
+    1913,
+    1916,
+    1917,
+    1920,
+    1952,
+    1984,
+    1985,
+    1988,
+    1992,
+    1996,
+    1998,
+    2000,
+    2001,
+    2004,
+    2005,
+    2008,
+    2009,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2020,
+    2024,
+    2028,
+    2030,
+    2032,
+    2033,
+    2036,
+    2037,
+    2040,
+    2041,
+    2044,
+    2045,
+    2046,
+    2047
+  ],
+  "tagged_cover_count": 1658,
+  "target": "X/10"
+}
