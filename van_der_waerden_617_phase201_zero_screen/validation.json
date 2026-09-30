@@ -1,0 +1,127 @@
+{
+  "stdlib": {
+    "python_version": "3.11.2",
+    "python_optimization": 0,
+    "success": true,
+    "elapsed_seconds": 0.9526064019883052,
+    "child_peak_rss_kib": 23960,
+    "control_optimization_flags": [
+      0,
+      0
+    ]
+  },
+  "optimized": {
+    "python_version": "3.11.2",
+    "python_optimization": 1,
+    "success": true,
+    "elapsed_seconds": 3.625487603014335,
+    "child_peak_rss_kib": 26504,
+    "control_optimization_flags": [
+      1,
+      1
+    ]
+  },
+  "isolated-fresh": {
+    "python_version": "3.12.14",
+    "python_optimization": 0,
+    "success": true,
+    "elapsed_seconds": 5.288802416995168,
+    "child_peak_rss_kib": 55372,
+    "control_optimization_flags": [
+      0,
+      0
+    ],
+    "fresh": {
+      "exact_result_matches_frozen": true,
+      "certificate_bytes_match_frozen": true,
+      "independent_exact_replay_passed": true
+    }
+  },
+  "controls": {
+    "zero/controls.py": {
+      "agent": "six-vdw-3",
+      "role": "researcher",
+      "all_rejected": true,
+      "rejected_controls": 32,
+      "names": [
+        "missing_edited_child",
+        "missing_unchanged_child",
+        "hidden_initial_edit",
+        "zero_load_split",
+        "boolean_split",
+        "wrong_tree_phase",
+        "wrong_tree_cap",
+        "wrong_tree_dependency",
+        "wrong_leaf_phase",
+        "wrong_leaf_cap",
+        "boolean_leaf_cap",
+        "wrong_leaf_dependency",
+        "missing_APs",
+        "hidden_leaf_states",
+        "zero_denominator",
+        "boolean_denominator",
+        "capacity_exceeded",
+        "no_strict_gap",
+        "zero_AP_step",
+        "out_of_bounds_AP",
+        "wrong_color_AP",
+        "zero_AP_weight",
+        "boolean_AP_weight",
+        "negative_AP_weight",
+        "duplicate_AP",
+        "zero_triple_weight",
+        "repeated_triple_AP",
+        "duplicate_triple",
+        "surcharge_outside_free_screen",
+        "negative_surcharge",
+        "empty_packing",
+        "triple_with_screened_common_point"
+      ],
+      "python_optimization": 0,
+      "removed_triple_model_cases": 5832,
+      "AP_hit_model_cases": 5525
+    },
+    "controls.py": {
+      "agent": "six-vdw-3",
+      "role": "researcher",
+      "all_rejected": true,
+      "rejected_controls": 26,
+      "names": [
+        "missing_cap",
+        "boolean_cap",
+        "wrong_cap",
+        "wrong_phase",
+        "boolean_root",
+        "wrong_root",
+        "wrong_zero_dependency",
+        "hidden_other_edit",
+        "hidden_restricted_screen",
+        "zero_denominator",
+        "boolean_denominator",
+        "capacity_overflow",
+        "no_nontrivial_screen",
+        "unsupported_claim_of_exclusion",
+        "zero_AP_step",
+        "out_of_bounds_AP",
+        "wrong_color_AP",
+        "zero_AP_weight",
+        "boolean_AP_weight",
+        "negative_AP_weight",
+        "duplicate_AP",
+        "zero_triple_weight",
+        "repeated_triple_AP",
+        "duplicate_triple",
+        "empty_packing",
+        "triple_with_permitted_common_point"
+      ],
+      "python_optimization": 0,
+      "activated_truth_table_cases": 64,
+      "small_defect_models": 7000,
+      "small_defect_models_meeting_lower_bound": 2250
+    }
+  },
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "parent_raw_files_verified": 3,
+  "parent_remote_verification_date": "2026-09-30"
+}

@@ -1,0 +1,103 @@
+{
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "primary_approach": "math-approach-combinatorial",
+  "problem": "symmetric two-color seven-term W(2,7)",
+  "coordinates": "0..3703",
+  "copied_unchanged_files": [
+    {
+      "path": "zero/base/phase-201.json",
+      "sha256": "2dcfe134ee32ae48daaff08548ae19965a53c6f62fee0b093c8788cf45cd144a",
+      "parent_path": "base/certificates/phase-201.json",
+      "parent_commit": "12cb7739d9d179684bee19a50f9ebd54c2794ff7"
+    },
+    {
+      "path": "zero/base/verify.py",
+      "sha256": "3d50dd599758ab93e7e9e80d8fd92e3f4d7f3f4f62d658cfb811a651313b4bf2",
+      "parent_path": "base/verify.py",
+      "parent_commit": "12cb7739d9d179684bee19a50f9ebd54c2794ff7"
+    },
+    {
+      "path": "zero/tree.json",
+      "sha256": "a1615a81342978109ac85aa9d359a46178f6b42e11fc5abf1df0d7404ba41188",
+      "parent_path": "certificates/phase-201.json",
+      "parent_commit": "12cb7739d9d179684bee19a50f9ebd54c2794ff7"
+    }
+  ],
+  "dependencies": [
+    {
+      "role": "complete frozen phase201 residual tree and its prior uniform class197 floor",
+      "graph_ref": "bafkreidd54kxpyjlspt4tww57ib3p5ldcdc72h7isybb6onoeugb2u7eta",
+      "source_commit": "12cb7739d9d179684bee19a50f9ebd54c2794ff7",
+      "source_directory": "van_der_waerden_617_class197_cover"
+    },
+    {
+      "role": "base packing original source",
+      "graph_ref": "bafkreibhwl2tw6yj4f62kc4icradwaq2tpn4z56tox4okqmpy62mn4edma",
+      "source_commit": "9a2bb02c0ddf0aabdba44e083d14a89c608b2c64",
+      "source_directory": "van_der_waerden_617_reflection_seam_weights"
+    },
+    {
+      "role": "methodological context, not a phase201 coordinate or gap premise",
+      "graph_ref": "bafkreib6hwys53rnc2hwfakkcak2ef2lkhaqm2k4knqfukdguofp4h5fhe",
+      "source_commit": "6f4a3d42cb193d04a539d65fa01d8b99bbd790e3",
+      "source_directory": "van_der_waerden_617_phase269_joint197"
+    }
+  ],
+  "complementary_checked_work": [
+    {
+      "agent": "six-vdw-2",
+      "graph_ref": "bafkreihgdtm5j53hqnupmkdhptjvlzeashiqgukum6p63ksj7l4ozqft4q",
+      "height": 7908,
+      "source_commit": "5449d6981e38020f76452e68be05de5a123b8900",
+      "source_directory": "van_der_waerden_27_qr617_max32_endpoint0",
+      "different_reference_family": true
+    },
+    {
+      "agent": "six-vdw-1",
+      "graph_ref": "bafkreidlaq5uknmu22tpadoyvxe537hkgubmpyhynlekstrengbvtjlvti",
+      "source_commit": "efc09dd20ad18e04809a031e147d1ace56993e4e",
+      "source_directory": "van_der_waerden_618_three_ap_obstruction",
+      "different_construction_family": true
+    }
+  ],
+  "root_certificate_sha256": "caff24aba426512f1f44b66b33030a8aacda8feaabe767990ff2a91ffa3081b5",
+  "root_full_domain_cut_discovery": {
+    "seconds_cap": 8,
+    "cut_cap": 256,
+    "positive_original_color1_triangles_added": 12,
+    "no_negative_certificate": true
+  },
+  "method": "New removed-edit residual replay in every inherited leaf; actual root activation plus nonnegative load defects",
+  "proof_trust": {
+    "generator": "square residues and floating one-thread LP proposals",
+    "new_exact_checkers": "Euler residues, actual integer APs, complete branches, full domain capacities, all removed zero losses",
+    "imported_prior_checker": "unchanged base only; no prior residual-leaf checker imported",
+    "unformalized_components": [
+      "displayed general proof bridges",
+      "Python execution and arithmetic"
+    ],
+    "external_review_asserted": false,
+    "solver_status_used_as_proof": false
+  },
+  "primary_literature": {
+    "Monroe": "https://combinatorialpress.com/jcmcc-articles/volume-128/new-lower-bounds-for-van-der-waerden-numbers-using-distributed-computing/",
+    "live_rechecked": "2026-09-30",
+    "Table1": "length7/two colors >3703",
+    "Table2": "prime617",
+    "notation": "Monroe W(length,colors), here W(colors,length)",
+    "exhaustive_current_best_or_novelty_audit_claimed": false
+  },
+  "not_claimed": [
+    "whole phase201197/197 box exclusion",
+    "a length3704 coloring",
+    "a new W bound",
+    "attainability of the repair constraints"
+  ],
+  "limits": {
+    "native_solver_seconds": 15,
+    "solver_threads": 1,
+    "one_CPU_intensive_local_job": true,
+    "no_scope_limits_changed": true
+  }
+}
