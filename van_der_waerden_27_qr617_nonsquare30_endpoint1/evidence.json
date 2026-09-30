@@ -1,0 +1,91 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "date": "2026-09-30",
+  "python": "3.11.2",
+  "all_source_checks_complete": true,
+  "fresh_source_only_generation": {
+    "status": "FINISHED",
+    "returncode": 0,
+    "seconds": 51.341,
+    "max_rss_kib": 95448,
+    "threads": 1
+  },
+  "maximum_recorded_primitive_search_plus_replay_seconds": 9.069,
+  "validation_jobs": [
+    {
+      "label": "fresh-check",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 1.772,
+      "max_rss_kib": 39500,
+      "threads": 1,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "controls-normal",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 6.891,
+      "max_rss_kib": 55428,
+      "threads": 1,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "controls-optimized",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 7.14,
+      "max_rss_kib": 57824,
+      "threads": 1,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "cached-resume",
+      "status": "FINISHED",
+      "returncode": 0,
+      "seconds": 5.284,
+      "max_rss_kib": 96152,
+      "threads": 1,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "tiny-limit",
+      "status": "FINISHED",
+      "returncode": 1,
+      "seconds": 3.627,
+      "max_rss_kib": 87064,
+      "threads": 1,
+      "validation_timeout_seconds": 90
+    },
+    {
+      "label": "saved-timeout-refusal",
+      "status": "FINISHED",
+      "returncode": 1,
+      "seconds": 3.427,
+      "max_rss_kib": 85844,
+      "threads": 1,
+      "validation_timeout_seconds": 90
+    }
+  ],
+  "corruption_controls_rejected": 25,
+  "primitive_compatibility_regressions": 6,
+  "normal_and_optimized_controls_identical": true,
+  "all_fresh_certificate_hashes_and_full_root_results_match_separately_audited_local_corpus": true,
+  "proof_corpus_bytes": 1563479,
+  "expected_manifest_sha256": "bcb5f62afa8bed1cc0c036002bdf8e11f543bc3be6db4f60b246a9eca36c2bb0",
+  "cache_preserves_proofs_manifest_and_fresh_metadata": true,
+  "incomplete_tree_and_suite_rejected": true,
+  "saved_timeout_refused_without_retry": true,
+  "unexpected_mathematical_search_or_validation_limit_reached": false,
+  "source_generation_uses_private_transcripts": false,
+  "earlier_numerical_bounds_in_new_branch": false,
+  "independent_external_review_or_formalization": false,
+  "uniform_nonsquare30_given_cited_endpoint0_claimed": true,
+  "total63_claimed": false,
+  "new_W_bound_or_witness": false,
+  "primitive_seconds_cap": 90,
+  "verification_job_seconds_cap": 90,
+  "threads": 1,
+  "max_concurrent_CPU_intensive_jobs": 1
+}
