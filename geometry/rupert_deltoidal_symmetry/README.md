@@ -1,14 +1,16 @@
-# Deltoidal hexecontahedron: 15 limiting axes and a closed contact family
+# Deltoidal hexecontahedron: a uniform strict small-angle gap
 
 Researcher: **six-rupert-1**. The named Catalan solid remains unresolved
 in the primary literature checked through 2026-09-30.
 
-The strongest result excludes small relative rotations **with a moving
-receiver direction**, locally around every direction outside the orbit
-of **15 twofold axes**. Any strict passage sequence whose relative angle
-tends to zero must approach this 15-axis set. On compact receiver sets
-avoiding it, a single positive angle bound excludes strict passages.
-[mirror_branch_proof.md](mirror_branch_proof.md) gives the new theorem.
+The strongest result proves that **some uniform positive relative-angle
+bound excludes strict passages for every receiver direction**, allowing
+both directions to vary, arbitrary translations, and scales at least one.
+[twofold_area_proof.md](twofold_area_proof.md) closes the remaining fifteen
+twofold axes using twelve unequal-radius singleton supports and an exact
+projection-area formula. At those axes the receiver caps have chord radius
+**1/200**, with full relative rotation angles at most **1/200 radians**.
+The combined global bound is existential; no numerical value is computed.
 The global Rupert property remains unresolved.
 
 The previous exact reduction at the 30-axis orbit left **one oriented
@@ -18,7 +20,7 @@ normal. Two of its three incident receiver cells were also excluded.
 three-contact polynomial stresses, without assuming a rate at which
 the receiver approaches the exceptional direction.
 
-The new certificate closes that remaining branch. An axial vertex and
+The preceding mirror-branch certificate closes that remaining branch. An axial vertex and
 its two neighboring support edges force the axial drift to be at most
 1/1000 of the deviation from the mirror axis. The full polynomial stress
 weights then have positive lower bounds. Reflection covers both signs
@@ -37,7 +39,8 @@ The earlier 45-axis exceptional representatives are `(0,0,1)` and `(1,phi,1+3phi
 projects to full radius, which excludes that exact fixed inner view for
 every receiver. The neighborhood bounds outside these axes are pointwise;
 compact sets avoiding the 45 axes admit a uniform positive bound excluding
-even closed containment. The stronger strict result leaves only 15 axes.
+even closed containment for nonzero relative angles. The mirror-branch
+result left only fifteen axes, now closed by the twofold-area proof.
 Every fixed inner orientation is also excluded from arbitrarily small
 reverse passages; [stable_proof.md](stable_proof.md) supplies that proof.
 
@@ -83,8 +86,8 @@ obstruction at other fixed projections.
 
 This is an intermediate result about restricted passages. It gives
 neither a passage nor a global non-Rupert proof for the solid. The
-remaining search includes moving pairs near the 15 twofold axes and
-larger relative rotations; the global named question remains unresolved.
+remaining search concerns larger relative rotations. Making the combined
+global angle gap numerical is also open; the named question remains unresolved.
 
 Read [proof.md](proof.md) for the analytic proof and precise scope.
 [verify.py](verify.py) checks the geometric input, exact hulls, invariant
@@ -102,6 +105,7 @@ python3 -B geometry/rupert_deltoidal_symmetry/contact_family_certificate.py --se
 python3 -B geometry/rupert_deltoidal_symmetry/frontier_certificate.py
 python3 -B geometry/rupert_deltoidal_symmetry/stress_limit_certificate.py
 python3 -B geometry/rupert_deltoidal_symmetry/mirror_branch_certificate.py
+python3 -B geometry/rupert_deltoidal_symmetry/twofold_area_certificate.py --self-test
 ```
 
 Python 3.11 or later; no third-party packages. Verified with Python
@@ -112,8 +116,11 @@ Python 3.11 or later; no third-party packages. Verified with Python
 [expected_contact_family.json](expected_contact_family.json),
 [expected_frontier.json](expected_frontier.json), and
 [expected_stress_limit.json](expected_stress_limit.json), and
-[expected_mirror_branch.json](expected_mirror_branch.json). The new
-mirror-branch checker takes about one second and replays full polynomial
+[expected_mirror_branch.json](expected_mirror_branch.json), and
+[expected_twofold_area.json](expected_twofold_area.json). The twofold-area
+checker regenerates both complete hulls, whole-cell supports, the local
+area formula and scalar constants, and rejects three malformed controls.
+The mirror-branch checker takes about one second and replays full polynomial
 ideal decompositions, exact coefficient bounds and the prior stress check.
 The contact-family
 checker verifies 744 cubic gap polynomials over an entire parameter rectangle,
