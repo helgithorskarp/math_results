@@ -1,0 +1,124 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "fresh_source_generation": {
+    "cases": 24,
+    "seconds": 397.105,
+    "max_rss_kib": 102104,
+    "compiled_guides": 336,
+    "maximum_observed_branch_seconds": 34.016,
+    "threads": 1,
+    "seconds_per_case_limit": 90
+  },
+  "checking": {
+    "all_new_box_exclusions_verified": true,
+    "branches": 24,
+    "seconds": 3.898,
+    "max_rss_kib": 82424,
+    "generated_certificate_bytes": 4270159
+  },
+  "private_prior_weighted_proofs_reproduced_exactly_after_metadata_normalization": [
+    "branch-0-1-29-27.json",
+    "branch-0-618-29-27.json",
+    "branch-1-3421-28-28.json",
+    "branch-1-3468-28-28.json",
+    "branch-1-3515-28-28.json",
+    "branch-1-3562-28-28.json",
+    "branch-1-3609-28-28.json",
+    "branch-1-3656-28-28.json",
+    "branch-1-3421-27-29.json",
+    "branch-1-3468-27-29.json",
+    "branch-1-3515-27-29.json",
+    "branch-1-3562-27-29.json",
+    "branch-1-3609-27-29.json",
+    "branch-1-3656-27-29.json"
+  ],
+  "expected_sha256": "32fe375ba440fc767c4e261635170321f842561929af7606791b5b0fa227a378",
+  "guide_sha256": "cee3c44a1e2f18b6a684e7af9d719b3d19a21d883c97078afa1c9fe56a43dd64",
+  "bulk_outputs_published": false,
+  "independent_external_review": false,
+  "python_version": "3.11.2",
+  "platform": "linux",
+  "cli_checker": {
+    "verified_new_box_exclusions": true,
+    "covering_branches": 24,
+    "seconds": 3.463,
+    "max_rss_kib": 77060
+  },
+  "checker_controls": {
+    "positive_suite_control": true,
+    "positive_weighted_rule_control": true,
+    "rejected_controls": [
+      {
+        "control": "weighted vertex overload",
+        "reason": "Weighted vertex capacity exceeded"
+      },
+      {
+        "control": "weighted sum must be strictly greater",
+        "reason": "Insufficient weighted packing sum"
+      },
+      {
+        "control": "nonpositive weighted scale",
+        "reason": "Invalid weighted scale"
+      },
+      {
+        "control": "nonpositive AP weight",
+        "reason": "Nonpositive or noninteger weight"
+      },
+      {
+        "control": "noninteger AP weight",
+        "reason": "Nonpositive or noninteger weight"
+      },
+      {
+        "control": "weighted AP touches a pole",
+        "reason": "Prefix AP touches an exceptional position"
+      },
+      {
+        "control": "weighted AP is constant",
+        "reason": "AP outside domain or constant"
+      },
+      {
+        "control": "unproved conditional antecedent",
+        "reason": "Conditional antecedent unproved or consequent already satisfied"
+      },
+      {
+        "control": "premature singleton forcing",
+        "reason": "Forced clause is not a singleton"
+      },
+      {
+        "control": "unexhausted original-color budget",
+        "reason": "Budget not exhausted"
+      },
+      {
+        "control": "final contradiction without deductions",
+        "reason": "AP has no mandatory unsatisfied clause at this state"
+      },
+      {
+        "control": "additional root hypothesis",
+        "reason": "A branch may assume only its single covering root"
+      },
+      {
+        "control": "missing covering root",
+        "reason": "Missing, duplicated, or unexpected case coverage"
+      },
+      {
+        "control": "missing endpoint color",
+        "reason": "Missing, duplicated, or unexpected case coverage"
+      },
+      {
+        "control": "missing budget box",
+        "reason": "Missing, duplicated, or unexpected case coverage"
+      },
+      {
+        "control": "substituted narrower budget",
+        "reason": "Wrong branch for quantified coverage"
+      },
+      {
+        "control": "substituted root",
+        "reason": "Wrong branch for quantified coverage"
+      }
+    ]
+  },
+  "corollary_mathematical_dependencies_reproved_in_this_directory": false,
+  "prior_weighted_proof_comparison_note": "14 clean-source certificates exactly match earlier independently checked weighted proofs after stripping private metadata.10 other fresh certificates are checked directly. No claim of a second complete byte-identical regeneration of all24."
+}
