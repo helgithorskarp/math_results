@@ -28,14 +28,19 @@ neighbors, and every edge of its complement has at most six.
    degree-two vertices in {1,3,5,7}, and all remaining local degrees
    three. The exact attachment budget and its eight possible local
    degree histograms are in [capacity.md](capacity.md).
+6. There is **at most one degree-seven vertex**. If one exists,
+   **102 <= e(G) <= 115**, and every other degree is eight through
+   eleven. [two_degree7.md](two_degree7.md) gives the two-root proof
+   and its complete 553-case cubic-eight auxiliary classification.
 
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
 then counting the triangles consumed by outside vertices. The
 isolated-vertex exclusion at degree eleven additionally uses an exact
 incidence Gram matrix and the real symmetric spectral theorem.
-No classification of cubic graphs, solver, or symmetry assumption
-is used. The degree-square and parity identities are applications of
+Those analytic degree bounds use no classification of cubic graphs,
+solver, or symmetry assumption. The degree-square and parity identities
+are applications of
 classical monochromatic-triangle counting; no novelty is claimed
 for that method. The particular local reductions were not found in
 the primary sources searched, but no priority claim is made.
@@ -43,8 +48,9 @@ the primary sources searched, but no priority claim is made.
 These conditions do not settle whether a 22-vertex graph exists.
 The best located primary literature still has
 `22 <= R(B4,B7) <= 23`. See [capacity.md](capacity.md) for the
-strongest analytic reductions. [proof.md](proof.md) and
-[degree6.md](degree6.md) preserve the earlier independent proofs.
+analytic degree reductions and [two_degree7.md](two_degree7.md) for
+the subsequent degree-seven multiplicity restriction. [proof.md](proof.md)
+and [degree6.md](degree6.md) preserve the earlier independent proofs.
 
 ## Reproduction
 
@@ -58,6 +64,8 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 book_ramsey_4_7_degree_reductions/capacity_check.py
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 book_ramsey_4_7_degree_reductions/degree6_check.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 book_ramsey_4_7_degree_reductions/two_degree7_check.py
 ```
 
 The deterministic JSON output matches [expected.json](expected.json).
@@ -96,10 +104,25 @@ every candidate. Its deterministic output matches
 [degree6_expected.json](degree6_expected.json). All retained graphs
 are K3 tensor K5, whose six-vertex attachments fail a 120-versus-72
 incidence count. The finite classification supplies an independent
-exclusion of degree six; the strongest current statements are
+exclusion of degree six; the current degree bounds also have
 analytic proofs. No command
 enumerates arbitrary 22-vertex graphs. The normalization and the
 analytic arguments are not formalized in a proof assistant.
+
+The fourth command supports the degree-seven multiplicity theorem.
+Two complete generators agree on all 553 normalized cubic-eight
+graphs; every one except two disjoint K4s has a directly checked
+integer negative quadratic vector for its adjacency matrix plus 2I.
+It also checks all seven normalized cubic-six graphs and their
+positive subspaces, the two-root scalar moments, the conditional
+edge window, and exact incidence matrix/rank controls. Its output
+matches [two_degree7_expected.json](two_degree7_expected.json).
+The main bridge is an unformalized two-root saturation argument
+and a positive-subspace/rank contradiction. Its auxiliary enumeration
+is a local computation, with no catalogue or solver dependency.
+The checker also reproduces the known KG(7,2) baseline (105 edges,
+red/blue edge-codegrees 3/5) and uses a split of it to control the
+14 by 7 Gram identity. That split is not a 22-vertex witness.
 
 ## Primary sources and baseline provenance
 
