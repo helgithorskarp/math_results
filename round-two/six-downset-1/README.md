@@ -8,6 +8,23 @@ does not cover the distinct-mark extension.
 The parent two-facet result8579 and three-petal result8642 have independent
 reviews8640 and8682, respectively. Those verdicts do not cover the extension.
 
+[one-heavy-many-lights/PROOF.md](one-heavy-many-lights/PROOF.md) extends
+the three-mark theorem to every integer r>=2,n>=r+1,D>t>=1,with
+one heavy mark and r equally loaded lighter marks. The explicit rational
+H attains greatest possible lower rankN-1,upper rankN-1,and full
+scaled cap gap1/2; the heavy star is the unique maximum family.
+The full S_r decomposition has invariant6 and r-1 standard3 mean
+sectors; one light internal inequality controls every standard sector.
+Eight universal signs in total light load u=rt reconstruct35042
+coefficient terms. A congruence reduces the last determinant to three
+small cofactors inside the unchanged resource guards. Five literal
+fixtures through N78 check5458 changed-frame entries,all actual empty/
+untouched actions,and12 original-index permutation generators.
+The new coverage is unbounded r>=3; r2 is credited to9063 and r1
+separately to9005. The proof is author-checked and unformalized;
+independent review pending. Equal-load boundary results are credited below.
+Distinct light loads and general H/I remain open.
+
 [three-mark-loads/PROOF.md](three-mark-loads/PROOF.md) covers every
 n>=3 and three distinct marks with arbitrary integer loads(D,t,t),D>t>=1.
 The rational capped H attains universally greatest lower rankN-1,
