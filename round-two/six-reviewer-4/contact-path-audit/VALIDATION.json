@@ -1,0 +1,528 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "compact_evidence_sha256": {
+    "audit.py": "9cc34ce08a12b107b0adb39b700f04ed87ea34c8133adf0342b17a035a06dee0",
+    "expected.json": "04251ecf8738278d61a3443d9083856767e9e5b6debd38a5126bd7f74d57dc78",
+    "geometry.py": "2d05f69f3bb126bff5ff275cde412c80d3ada9476965c2aa59f45971ee851309",
+    "inputs.json": "5388ef69e576fa486fe9f58265524555e40598b5800f772a9faa0f3ccc45749a"
+  },
+  "completed_at_utc": "2026-10-01T16:44:59.627668+00:00",
+  "entrywise_comparison": {
+    "all_agree": true,
+    "motion_scalar_entries": 198,
+    "normalized_weight_records": 72,
+    "original_vertex_entries": 60,
+    "physical_second_moment_entries": 54,
+    "source_vertex_map_file": "scratch/pass6-source-vertex-map.json"
+  },
+  "maximum_cpu_intensive_jobs": 1,
+  "numerical_threads": 1,
+  "pinned_author_inputs": {
+    "commit": "c038d0689b522a1be2b8ba5aa53d230df0b72181",
+    "files": [
+      {
+        "bytes": 19,
+        "file": "round-two/six-rupert-2/tangent_contacts/.gitignore",
+        "git_blob_sha1": "7a60b85e148f80966a550e5ab6a762a907c69ca6",
+        "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+      },
+      {
+        "bytes": 611,
+        "file": "round-two/six-rupert-2/tangent_contacts/DEPENDENCIES.json",
+        "git_blob_sha1": "f79ed9b2d5171b9c462b32ee3cd626772e170daa",
+        "sha256": "2033f47998d12d4b6c95ebe45bb659051d7e8b3c5ec841c0835a070940d90817"
+      },
+      {
+        "bytes": 16325,
+        "file": "round-two/six-rupert-2/tangent_contacts/PROOF.md",
+        "git_blob_sha1": "d871970644c7c1812fc11624e8e3b05873ab5004",
+        "sha256": "d0220cace1707261f2d693b784f84127fc1dd4e71bcf14829f5aee82732425e0"
+      },
+      {
+        "bytes": 4014,
+        "file": "round-two/six-rupert-2/tangent_contacts/README.md",
+        "git_blob_sha1": "eb52026f73040a7ab058b0f5bb5560e979395c48",
+        "sha256": "e53aa1b77409ca5d90d4aaf9e488f828e56e1a7defcc003b5a5006215faf9158"
+      },
+      {
+        "bytes": 5759,
+        "file": "round-two/six-rupert-2/tangent_contacts/certificate.json",
+        "git_blob_sha1": "e489c1f896f1ee3db7100fced16eb0bc6ff9e81a",
+        "sha256": "33a6c3851fb1fb3a65318ae6a2bee88cc2666382389f12362e392be5ee6ad7c2"
+      },
+      {
+        "bytes": 11577,
+        "file": "round-two/six-rupert-2/tangent_contacts/check.py",
+        "git_blob_sha1": "e88b8acfef26828af9e0e2c79a355e6ead0b0d54",
+        "sha256": "bbb09cc904b32d5e44d5a8d98eb1a7850253456587a72a8790f8f141e6624dcc"
+      },
+      {
+        "bytes": 8291,
+        "file": "round-two/six-rupert-2/tangent_contacts/expected.json",
+        "git_blob_sha1": "b411e4b0f0a6027e9421457a65f0c3e512675de2",
+        "sha256": "5f08de647fd7e1405389adec42fe6343d4b5494871585d89bea58f7bfaa91c22"
+      }
+    ]
+  },
+  "pinned_parent_inputs": {
+    "commit": "4b06f4ab2b476bf0237f4bce8ecc86d65a43e69a",
+    "files": [
+      {
+        "bytes": 2047,
+        "file": "q5.py",
+        "sha256": "cef1fe01c185fc5c63d729d8e27588b4efe56d8487c87a73f22a68297b18ed3c"
+      },
+      {
+        "bytes": 4254,
+        "file": "model.py",
+        "sha256": "cc0ce4358eea0139da13962b6abdf25a9710fb934e8e41ee3e6f3cbe3acb8cd7"
+      },
+      {
+        "bytes": 2935,
+        "file": "shadow.py",
+        "sha256": "c9a96722fab721c074c4193de9c4fab05527031e720285affad6e258c748f38c"
+      },
+      {
+        "bytes": 15165,
+        "file": "PROOF.md",
+        "sha256": "47fd66863b385f4feffc4a456ebfe4feb036c3de21afd82c68725edb2ccf4ddd"
+      },
+      {
+        "bytes": 12290,
+        "file": "expected.json",
+        "sha256": "d810c5579df8b2a38fcb041e57867927d60ff87d7a9f343d99d932d27f56d409"
+      }
+    ]
+  },
+  "post_validation_format_only_change": "Removed the extra blank line at geometry.py EOF; exact parsed AST unchanged. Mathematical checks were not repeated for this formatting change.",
+  "python_version": "3.11.2",
+  "role": "independent mathematical reviewer",
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-reviewer-4/contact-path-audit/audit.py"
+      ],
+      "cumulative_child_RSS_upper_KiB": 17888,
+      "elapsed_seconds": 1.530083,
+      "expected_rejection": null,
+      "label": "independent normal",
+      "result": {
+        "actual_reviewer": "six-reviewer-4",
+        "configuration_motions": {
+          "configuration_count_matrix": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "full_moved_original_support_comparisons": 15840,
+          "spatial_contact_matches": 440
+        },
+        "literal_controls": {
+          "arbitrary_frame_examples": 24,
+          "paired_norm_identities": 384,
+          "singleton_slack_identities": 24
+        },
+        "proved_constant_checks": {
+          "necessary_constraint_radius": "1/100",
+          "positive_support_margin": "2179777/49995000",
+          "support_error_upper_bound": "10318973/49995000",
+          "translation_bound": "12 eta^2"
+        },
+        "radial_comparisons": 4200,
+        "role": "independent mathematical reviewer",
+        "static_support_comparisons": 4320,
+        "status": "PASS",
+        "vertices": 60
+      },
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-4/contact-path-audit/audit.py"
+      ],
+      "cumulative_child_RSS_upper_KiB": 21128,
+      "elapsed_seconds": 1.762861,
+      "expected_rejection": null,
+      "label": "independent optimized",
+      "result": {
+        "actual_reviewer": "six-reviewer-4",
+        "configuration_motions": {
+          "configuration_count_matrix": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "full_moved_original_support_comparisons": 15840,
+          "spatial_contact_matches": 440
+        },
+        "literal_controls": {
+          "arbitrary_frame_examples": 24,
+          "paired_norm_identities": 384,
+          "singleton_slack_identities": 24
+        },
+        "proved_constant_checks": {
+          "necessary_constraint_radius": "1/100",
+          "positive_support_margin": "2179777/49995000",
+          "support_error_upper_bound": "10318973/49995000",
+          "translation_bound": "12 eta^2"
+        },
+        "radial_comparisons": 4200,
+        "role": "independent mathematical reviewer",
+        "static_support_comparisons": 4320,
+        "status": "PASS",
+        "vertices": 60
+      },
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-4/contact-path-audit/audit.py",
+        "--inputs",
+        "scratch/pass6-damaged/missing-axis.json"
+      ],
+      "cumulative_child_RSS_upper_KiB": 21128,
+      "elapsed_seconds": 0.215431,
+      "expected_rejection": "complete six-axis stress coverage",
+      "label": "optimized damaged missing-axis",
+      "rejection": "ValueError: complete six-axis stress coverage",
+      "returncode": 1
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-4/contact-path-audit/audit.py",
+        "--inputs",
+        "scratch/pass6-damaged/negative-singleton.json"
+      ],
+      "cumulative_child_RSS_upper_KiB": 21128,
+      "elapsed_seconds": 0.617723,
+      "expected_rejection": "strict positive stress weights",
+      "label": "optimized damaged negative-singleton",
+      "rejection": "ValueError: strict positive stress weights",
+      "returncode": 1
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-4/contact-path-audit/audit.py",
+        "--inputs",
+        "scratch/pass6-damaged/false-moment.json"
+      ],
+      "cumulative_child_RSS_upper_KiB": 21128,
+      "elapsed_seconds": 0.606641,
+      "expected_rejection": "entrywise physical second-moment equality",
+      "label": "optimized damaged false-moment",
+      "rejection": "ValueError: entrywise physical second-moment equality",
+      "returncode": 1
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-4/contact-path-audit/audit.py",
+        "--inputs",
+        "scratch/pass6-damaged/wrong-pair.json"
+      ],
+      "cumulative_child_RSS_upper_KiB": 21128,
+      "elapsed_seconds": 0.605068,
+      "expected_rejection": "complete physical paired assignment",
+      "label": "optimized damaged wrong-pair",
+      "rejection": "ValueError: complete physical paired assignment",
+      "returncode": 1
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-4/contact-path-audit/audit.py",
+        "--inputs",
+        "scratch/pass6-damaged/improper-motion.json"
+      ],
+      "cumulative_child_RSS_upper_KiB": 21128,
+      "elapsed_seconds": 0.625094,
+      "expected_rejection": "orthogonal proper motion",
+      "label": "optimized damaged improper-motion",
+      "rejection": "ValueError: orthogonal proper motion",
+      "returncode": 1
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-4/contact-path-audit/audit.py",
+        "--inputs",
+        "scratch/pass6-damaged/missing-motion.json"
+      ],
+      "cumulative_child_RSS_upper_KiB": 21128,
+      "elapsed_seconds": 0.648704,
+      "expected_rejection": "complete twenty-two motion records",
+      "label": "optimized damaged missing-motion",
+      "rejection": "ValueError: complete twenty-two motion records",
+      "returncode": 1
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scratch/pass6-native-parent/tangent_contacts/check.py"
+      ],
+      "cumulative_child_RSS_upper_KiB": 21128,
+      "elapsed_seconds": 2.334456,
+      "expected_rejection": null,
+      "label": "native author normal",
+      "result": {
+        "actual_spatial_contact_matches": 440,
+        "agent": "six-rupert-2",
+        "base_configuration_count_matrix": [
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "certificate_sha256": "33a6c3851fb1fb3a65318ae6a2bee88cc2666382389f12362e392be5ee6ad7c2",
+        "closed_minimum_configuration_count": 22,
+        "common_contacts_per_configuration": 20,
+        "local_necessary_constraint_frame_radius": "1/1000",
+        "minimum_radial_gap": "1/4",
+        "negative_certificate_controls": 4,
+        "pinned_source_commit": "4b06f4ab2b476bf0237f4bce8ecc86d65a43e69a",
+        "role": "researcher",
+        "total_radial_support_comparisons": 4200,
+        "total_silhouette_support_comparisons": 4320
+      },
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "scratch/pass6-native-parent/tangent_contacts/check.py"
+      ],
+      "cumulative_child_RSS_upper_KiB": 21128,
+      "elapsed_seconds": 2.3789,
+      "expected_rejection": null,
+      "label": "native author optimized",
+      "result": {
+        "actual_spatial_contact_matches": 440,
+        "agent": "six-rupert-2",
+        "base_configuration_count_matrix": [
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "certificate_sha256": "33a6c3851fb1fb3a65318ae6a2bee88cc2666382389f12362e392be5ee6ad7c2",
+        "closed_minimum_configuration_count": 22,
+        "common_contacts_per_configuration": 20,
+        "local_necessary_constraint_frame_radius": "1/1000",
+        "minimum_radial_gap": "1/4",
+        "negative_certificate_controls": 4,
+        "pinned_source_commit": "4b06f4ab2b476bf0237f4bce8ecc86d65a43e69a",
+        "role": "researcher",
+        "total_radial_support_comparisons": 4200,
+        "total_silhouette_support_comparisons": 4320
+      },
+      "returncode": 0
+    }
+  ],
+  "target": {
+    "height": 8724,
+    "reference": "bafkreigi24uk6zfaj5km7xoadqzhq7criyk4th3ob7swq6vsmbzetm556e",
+    "source_commit": "c038d0689b522a1be2b8ba5aa53d230df0b72181"
+  },
+  "trust_boundary": "Independent integer-pair geometry from this reviewer\u2019s earlier audit; no author modules imported. Normalized supplied weights and proper motions are untrusted and fully checked. Parent global catalogue completeness and named-model identification are credited, not rerun. Infinite fit/path conclusions use the complete ordinary proof, not finite controls."
+}
