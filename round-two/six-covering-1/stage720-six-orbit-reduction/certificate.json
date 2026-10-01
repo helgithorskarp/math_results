@@ -1,0 +1,1335 @@
+{
+  "agent": "six-covering-1",
+  "role": "researcher",
+  "period": 720,
+  "original_labels": [
+    8,
+    9,
+    10,
+    12,
+    15,
+    16,
+    18,
+    20,
+    24,
+    30,
+    36,
+    40,
+    45,
+    48,
+    60,
+    72,
+    80,
+    90,
+    120,
+    144,
+    180,
+    240,
+    360,
+    720
+  ],
+  "fixed": {
+    "8": 5,
+    "9": 6
+  },
+  "raw_mass": 654,
+  "forced_anchor_pairs": [
+    [
+      9,
+      8
+    ],
+    [
+      16,
+      9
+    ],
+    [
+      10,
+      9
+    ],
+    [
+      15,
+      8
+    ],
+    [
+      20,
+      9
+    ],
+    [
+      40,
+      9
+    ],
+    [
+      80,
+      9
+    ]
+  ],
+  "forced_overlap": 36,
+  "hole_lower_bound": 102,
+  "excluded_shapes": [
+    {
+      "a18": 0,
+      "c6": 0,
+      "reason": "hole_count",
+      "allowed_holes": 80
+    },
+    {
+      "a18": 0,
+      "c6": 1,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 430,
+      "capacity": 425,
+      "partition_id": 0
+    },
+    {
+      "a18": 0,
+      "c6": 3,
+      "reason": "hole_count",
+      "allowed_holes": 100
+    },
+    {
+      "a18": 0,
+      "c6": 5,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 430,
+      "capacity": 425,
+      "partition_id": 0
+    },
+    {
+      "a18": 1,
+      "c6": 0,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 450,
+      "capacity": 428,
+      "partition_id": 1
+    },
+    {
+      "a18": 1,
+      "c6": 1,
+      "reason": "hole_count",
+      "allowed_holes": 90
+    },
+    {
+      "a18": 1,
+      "c6": 2,
+      "reason": "count_envelope",
+      "representative": [
+        1,
+        2
+      ],
+      "affine_map": [
+        1,
+        0
+      ]
+    },
+    {
+      "a18": 1,
+      "c6": 3,
+      "reason": "hole_count",
+      "allowed_holes": 90
+    },
+    {
+      "a18": 1,
+      "c6": 4,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 410,
+      "capacity": 408,
+      "partition_id": 0
+    },
+    {
+      "a18": 1,
+      "c6": 5,
+      "reason": "scalar_budget",
+      "weights": [
+        3,
+        2
+      ],
+      "demand": 1000,
+      "capacity": 972,
+      "partition_id": 1
+    },
+    {
+      "a18": 2,
+      "c6": 0,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 440,
+      "capacity": 432,
+      "partition_id": 0
+    },
+    {
+      "a18": 2,
+      "c6": 1,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 430,
+      "capacity": 428,
+      "partition_id": 1
+    },
+    {
+      "a18": 2,
+      "c6": 2,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 440,
+      "capacity": 432,
+      "partition_id": 0
+    },
+    {
+      "a18": 2,
+      "c6": 3,
+      "reason": "hole_count",
+      "allowed_holes": 100
+    },
+    {
+      "a18": 2,
+      "c6": 4,
+      "reason": "count_envelope",
+      "representative": [
+        2,
+        4
+      ],
+      "affine_map": [
+        1,
+        0
+      ]
+    },
+    {
+      "a18": 2,
+      "c6": 5,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 430,
+      "capacity": 413,
+      "partition_id": 0
+    },
+    {
+      "a18": 3,
+      "c6": 0,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 450,
+      "capacity": 428,
+      "partition_id": 1
+    },
+    {
+      "a18": 3,
+      "c6": 3,
+      "reason": "hole_count",
+      "allowed_holes": 60
+    },
+    {
+      "a18": 4,
+      "c6": 0,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 440,
+      "capacity": 432,
+      "partition_id": 0
+    },
+    {
+      "a18": 4,
+      "c6": 1,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 430,
+      "capacity": 413,
+      "partition_id": 0
+    },
+    {
+      "a18": 4,
+      "c6": 2,
+      "reason": "count_envelope",
+      "representative": [
+        2,
+        4
+      ],
+      "affine_map": [
+        23,
+        66
+      ]
+    },
+    {
+      "a18": 4,
+      "c6": 3,
+      "reason": "hole_count",
+      "allowed_holes": 100
+    },
+    {
+      "a18": 4,
+      "c6": 4,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 440,
+      "capacity": 432,
+      "partition_id": 0
+    },
+    {
+      "a18": 4,
+      "c6": 5,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 430,
+      "capacity": 428,
+      "partition_id": 1
+    },
+    {
+      "a18": 5,
+      "c6": 0,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 450,
+      "capacity": 428,
+      "partition_id": 1
+    },
+    {
+      "a18": 5,
+      "c6": 1,
+      "reason": "scalar_budget",
+      "weights": [
+        3,
+        2
+      ],
+      "demand": 1000,
+      "capacity": 972,
+      "partition_id": 1
+    },
+    {
+      "a18": 5,
+      "c6": 2,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 410,
+      "capacity": 408,
+      "partition_id": 0
+    },
+    {
+      "a18": 5,
+      "c6": 3,
+      "reason": "hole_count",
+      "allowed_holes": 90
+    },
+    {
+      "a18": 5,
+      "c6": 4,
+      "reason": "count_envelope",
+      "representative": [
+        1,
+        2
+      ],
+      "affine_map": [
+        11,
+        30
+      ]
+    },
+    {
+      "a18": 5,
+      "c6": 5,
+      "reason": "hole_count",
+      "allowed_holes": 90
+    },
+    {
+      "a18": 6,
+      "c6": 0,
+      "reason": "hole_count",
+      "allowed_holes": 80
+    },
+    {
+      "a18": 6,
+      "c6": 1,
+      "reason": "hole_count",
+      "allowed_holes": 90
+    },
+    {
+      "a18": 6,
+      "c6": 2,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 440,
+      "capacity": 432,
+      "partition_id": 0
+    },
+    {
+      "a18": 6,
+      "c6": 3,
+      "reason": "hole_count",
+      "allowed_holes": 60
+    },
+    {
+      "a18": 6,
+      "c6": 4,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 440,
+      "capacity": 432,
+      "partition_id": 0
+    },
+    {
+      "a18": 6,
+      "c6": 5,
+      "reason": "hole_count",
+      "allowed_holes": 90
+    },
+    {
+      "a18": 7,
+      "c6": 0,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 450,
+      "capacity": 428,
+      "partition_id": 1
+    },
+    {
+      "a18": 7,
+      "c6": 1,
+      "reason": "hole_count",
+      "allowed_holes": 90
+    },
+    {
+      "a18": 7,
+      "c6": 2,
+      "reason": "count_envelope",
+      "representative": [
+        1,
+        2
+      ],
+      "affine_map": [
+        7,
+        18
+      ]
+    },
+    {
+      "a18": 7,
+      "c6": 3,
+      "reason": "hole_count",
+      "allowed_holes": 90
+    },
+    {
+      "a18": 7,
+      "c6": 4,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 410,
+      "capacity": 408,
+      "partition_id": 0
+    },
+    {
+      "a18": 7,
+      "c6": 5,
+      "reason": "scalar_budget",
+      "weights": [
+        3,
+        2
+      ],
+      "demand": 1000,
+      "capacity": 972,
+      "partition_id": 1
+    },
+    {
+      "a18": 8,
+      "c6": 0,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 440,
+      "capacity": 432,
+      "partition_id": 0
+    },
+    {
+      "a18": 8,
+      "c6": 1,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 430,
+      "capacity": 428,
+      "partition_id": 1
+    },
+    {
+      "a18": 8,
+      "c6": 2,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 440,
+      "capacity": 432,
+      "partition_id": 0
+    },
+    {
+      "a18": 8,
+      "c6": 3,
+      "reason": "hole_count",
+      "allowed_holes": 100
+    },
+    {
+      "a18": 8,
+      "c6": 4,
+      "reason": "count_envelope",
+      "representative": [
+        2,
+        4
+      ],
+      "affine_map": [
+        13,
+        36
+      ]
+    },
+    {
+      "a18": 8,
+      "c6": 5,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 430,
+      "capacity": 413,
+      "partition_id": 0
+    },
+    {
+      "a18": 9,
+      "c6": 0,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 450,
+      "capacity": 428,
+      "partition_id": 1
+    },
+    {
+      "a18": 9,
+      "c6": 3,
+      "reason": "hole_count",
+      "allowed_holes": 60
+    },
+    {
+      "a18": 10,
+      "c6": 0,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 440,
+      "capacity": 432,
+      "partition_id": 0
+    },
+    {
+      "a18": 10,
+      "c6": 1,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 430,
+      "capacity": 413,
+      "partition_id": 0
+    },
+    {
+      "a18": 10,
+      "c6": 2,
+      "reason": "count_envelope",
+      "representative": [
+        2,
+        4
+      ],
+      "affine_map": [
+        17,
+        48
+      ]
+    },
+    {
+      "a18": 10,
+      "c6": 3,
+      "reason": "hole_count",
+      "allowed_holes": 100
+    },
+    {
+      "a18": 10,
+      "c6": 4,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 440,
+      "capacity": 432,
+      "partition_id": 0
+    },
+    {
+      "a18": 10,
+      "c6": 5,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 430,
+      "capacity": 428,
+      "partition_id": 1
+    },
+    {
+      "a18": 11,
+      "c6": 0,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 450,
+      "capacity": 428,
+      "partition_id": 1
+    },
+    {
+      "a18": 11,
+      "c6": 1,
+      "reason": "scalar_budget",
+      "weights": [
+        3,
+        2
+      ],
+      "demand": 1000,
+      "capacity": 972,
+      "partition_id": 1
+    },
+    {
+      "a18": 11,
+      "c6": 2,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 410,
+      "capacity": 408,
+      "partition_id": 0
+    },
+    {
+      "a18": 11,
+      "c6": 3,
+      "reason": "hole_count",
+      "allowed_holes": 90
+    },
+    {
+      "a18": 11,
+      "c6": 4,
+      "reason": "count_envelope",
+      "representative": [
+        1,
+        2
+      ],
+      "affine_map": [
+        17,
+        48
+      ]
+    },
+    {
+      "a18": 11,
+      "c6": 5,
+      "reason": "hole_count",
+      "allowed_holes": 90
+    },
+    {
+      "a18": 12,
+      "c6": 0,
+      "reason": "hole_count",
+      "allowed_holes": 80
+    },
+    {
+      "a18": 12,
+      "c6": 1,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 430,
+      "capacity": 425,
+      "partition_id": 0
+    },
+    {
+      "a18": 12,
+      "c6": 3,
+      "reason": "hole_count",
+      "allowed_holes": 100
+    },
+    {
+      "a18": 12,
+      "c6": 5,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 430,
+      "capacity": 425,
+      "partition_id": 0
+    },
+    {
+      "a18": 13,
+      "c6": 0,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 450,
+      "capacity": 428,
+      "partition_id": 1
+    },
+    {
+      "a18": 13,
+      "c6": 1,
+      "reason": "hole_count",
+      "allowed_holes": 90
+    },
+    {
+      "a18": 13,
+      "c6": 2,
+      "reason": "count_envelope",
+      "representative": [
+        1,
+        2
+      ],
+      "affine_map": [
+        13,
+        36
+      ]
+    },
+    {
+      "a18": 13,
+      "c6": 3,
+      "reason": "hole_count",
+      "allowed_holes": 90
+    },
+    {
+      "a18": 13,
+      "c6": 4,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 410,
+      "capacity": 408,
+      "partition_id": 0
+    },
+    {
+      "a18": 13,
+      "c6": 5,
+      "reason": "scalar_budget",
+      "weights": [
+        3,
+        2
+      ],
+      "demand": 1000,
+      "capacity": 972,
+      "partition_id": 1
+    },
+    {
+      "a18": 14,
+      "c6": 0,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 440,
+      "capacity": 432,
+      "partition_id": 0
+    },
+    {
+      "a18": 14,
+      "c6": 1,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 430,
+      "capacity": 428,
+      "partition_id": 1
+    },
+    {
+      "a18": 14,
+      "c6": 2,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 440,
+      "capacity": 432,
+      "partition_id": 0
+    },
+    {
+      "a18": 14,
+      "c6": 3,
+      "reason": "hole_count",
+      "allowed_holes": 100
+    },
+    {
+      "a18": 14,
+      "c6": 4,
+      "reason": "count_envelope",
+      "representative": [
+        2,
+        4
+      ],
+      "affine_map": [
+        7,
+        18
+      ]
+    },
+    {
+      "a18": 14,
+      "c6": 5,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 430,
+      "capacity": 413,
+      "partition_id": 0
+    },
+    {
+      "a18": 15,
+      "c6": 0,
+      "reason": "hole_count",
+      "allowed_holes": 80
+    },
+    {
+      "a18": 15,
+      "c6": 1,
+      "reason": "hole_count",
+      "allowed_holes": 90
+    },
+    {
+      "a18": 15,
+      "c6": 2,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 440,
+      "capacity": 432,
+      "partition_id": 0
+    },
+    {
+      "a18": 15,
+      "c6": 3,
+      "reason": "hole_count",
+      "allowed_holes": 60
+    },
+    {
+      "a18": 15,
+      "c6": 4,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 440,
+      "capacity": 432,
+      "partition_id": 0
+    },
+    {
+      "a18": 15,
+      "c6": 5,
+      "reason": "hole_count",
+      "allowed_holes": 90
+    },
+    {
+      "a18": 16,
+      "c6": 0,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 440,
+      "capacity": 432,
+      "partition_id": 0
+    },
+    {
+      "a18": 16,
+      "c6": 1,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 430,
+      "capacity": 413,
+      "partition_id": 0
+    },
+    {
+      "a18": 16,
+      "c6": 2,
+      "reason": "count_envelope",
+      "representative": [
+        2,
+        4
+      ],
+      "affine_map": [
+        11,
+        30
+      ]
+    },
+    {
+      "a18": 16,
+      "c6": 3,
+      "reason": "hole_count",
+      "allowed_holes": 100
+    },
+    {
+      "a18": 16,
+      "c6": 4,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 440,
+      "capacity": 432,
+      "partition_id": 0
+    },
+    {
+      "a18": 16,
+      "c6": 5,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 430,
+      "capacity": 428,
+      "partition_id": 1
+    },
+    {
+      "a18": 17,
+      "c6": 0,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 450,
+      "capacity": 428,
+      "partition_id": 1
+    },
+    {
+      "a18": 17,
+      "c6": 1,
+      "reason": "scalar_budget",
+      "weights": [
+        3,
+        2
+      ],
+      "demand": 1000,
+      "capacity": 972,
+      "partition_id": 1
+    },
+    {
+      "a18": 17,
+      "c6": 2,
+      "reason": "scalar_budget",
+      "weights": [
+        1,
+        1
+      ],
+      "demand": 410,
+      "capacity": 408,
+      "partition_id": 0
+    },
+    {
+      "a18": 17,
+      "c6": 3,
+      "reason": "hole_count",
+      "allowed_holes": 90
+    },
+    {
+      "a18": 17,
+      "c6": 4,
+      "reason": "count_envelope",
+      "representative": [
+        1,
+        2
+      ],
+      "affine_map": [
+        23,
+        66
+      ]
+    },
+    {
+      "a18": 17,
+      "c6": 5,
+      "reason": "hole_count",
+      "allowed_holes": 90
+    }
+  ],
+  "envelope_cases": [
+    {
+      "representative": [
+        1,
+        2
+      ],
+      "odd_demand": 210,
+      "even_demand": 200,
+      "even_upper": 199
+    },
+    {
+      "representative": [
+        2,
+        4
+      ],
+      "odd_demand": 240,
+      "even_demand": 160,
+      "even_upper": 156
+    }
+  ],
+  "remaining_shapes": [
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      9,
+      1
+    ],
+    [
+      9,
+      2
+    ],
+    [
+      9,
+      4
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      12,
+      2
+    ],
+    [
+      12,
+      4
+    ]
+  ],
+  "remaining_orbits": [
+    {
+      "representative": [
+        0,
+        2
+      ],
+      "members": [
+        [
+          0,
+          2
+        ],
+        [
+          12,
+          4
+        ]
+      ]
+    },
+    {
+      "representative": [
+        0,
+        4
+      ],
+      "members": [
+        [
+          0,
+          4
+        ],
+        [
+          12,
+          2
+        ]
+      ]
+    },
+    {
+      "representative": [
+        3,
+        1
+      ],
+      "members": [
+        [
+          3,
+          1
+        ],
+        [
+          9,
+          5
+        ]
+      ]
+    },
+    {
+      "representative": [
+        3,
+        2
+      ],
+      "members": [
+        [
+          3,
+          2
+        ],
+        [
+          9,
+          4
+        ]
+      ]
+    },
+    {
+      "representative": [
+        3,
+        4
+      ],
+      "members": [
+        [
+          3,
+          4
+        ],
+        [
+          9,
+          2
+        ]
+      ]
+    },
+    {
+      "representative": [
+        3,
+        5
+      ],
+      "members": [
+        [
+          3,
+          5
+        ],
+        [
+          9,
+          1
+        ]
+      ]
+    }
+  ],
+  "scope": "Complete normalized24-label period720 first stage only. Remaining shapes are necessary, not claimed feasible. No global L_min8 change.",
+  "resource_partitions": [
+    [
+      [
+        10,
+        16
+      ],
+      [
+        12,
+        15
+      ],
+      [
+        18,
+        20
+      ],
+      [
+        24,
+        30
+      ],
+      [
+        36,
+        40
+      ],
+      [
+        45,
+        48
+      ],
+      [
+        60,
+        72
+      ],
+      [
+        80
+      ],
+      [
+        90
+      ],
+      [
+        120
+      ],
+      [
+        144
+      ],
+      [
+        180
+      ],
+      [
+        240
+      ],
+      [
+        360
+      ],
+      [
+        720
+      ]
+    ],
+    [
+      [
+        10
+      ],
+      [
+        12
+      ],
+      [
+        15
+      ],
+      [
+        16
+      ],
+      [
+        18
+      ],
+      [
+        20
+      ],
+      [
+        24
+      ],
+      [
+        30
+      ],
+      [
+        36
+      ],
+      [
+        40
+      ],
+      [
+        45
+      ],
+      [
+        48
+      ],
+      [
+        60
+      ],
+      [
+        72
+      ],
+      [
+        80
+      ],
+      [
+        90
+      ],
+      [
+        120
+      ],
+      [
+        144
+      ],
+      [
+        180
+      ],
+      [
+        240
+      ],
+      [
+        360
+      ],
+      [
+        720
+      ]
+    ]
+  ]
+}
