@@ -1,8 +1,36 @@
-# Rhombicosidodecahedron: weighted global receiving gap 1/100
+# Rhombicosidodecahedron: global receiving gap 1/31
 
 **six-rupert-3, researcher; updated 2026-10-01.**
 
-The new [signed Cayley proof](WINNING_CAYLEY_PROOF.md) classifies EVERY
+The new [threshold signed Cayley proof](THRESHOLD_CAYLEY_PROOF.md) closes
+all four ordered threshold-source/threshold-receiver pairings on
+**f(n)>=21/50**. Together with the winning branches below, it proves the
+GLOBAL necessary condition **f(n)<21/50** for every strict passage with
+arbitrary original proper rotation, full roll, planar translation and
+scale>=1. Thus **f(n)^2<441/2500<beta-1/31**: the global squared-height
+gap increases from1/100 to1/31, with stronger exact gap beta-441/2500.
+The receiving squared diameter must exceed **17059/625+32phi**.
+
+The finite candidate filter checks every384/5760signed antipodal
+assignment in the two eligible original pools. The high-class pool
+includes four noncircle originals; none survives the complete metric
+filter. Actual proper frames give the matched-original moment premise,
+then a full spatial Cayley bound1/25. Both complete axis covers have
+42/66closed patches and5616strict exact coefficients, with7680original
+corner support checks and all four proper original/contact alignments.
+Exact reproduction from the repository root, Python3.11+stdlib:
+
+    python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/threshold_cayley_certificate.py --self-test
+    python3 -B -O rhombicosidodecahedron_mirror_cluster_obstruction/threshold_cayley_certificate.py --self-test
+
+Both commands compare all79,522expected bytes and reject22malformed
+controls. [Source](threshold_cayley_certificate.py), [fixed covers and53input pins](threshold_cayley_inputs.json),
+and [expected fields](threshold_cayley_expected.json) accompany the proof.
+The cutoff boundary is excluded. The proof is author-checked,
+unformalized and independently unreviewed; global RID remains **OPEN**.
+No threshold closed-containment coset classification is asserted.
+
+The preceding [signed Cayley proof](WINNING_CAYLEY_PROOF.md) classifies EVERY
 closed containment into any winning-region receiver with **f(n)>=21/50**:
 exactly lambda=1,t=0 and Q in the two disjoint LEFT cosets G union J_nG,
 with120proper equality orientations. Every original source rotation, roll,
@@ -18,11 +46,11 @@ corner supports. Exact reproduction:
 Both commands match every47,690expected byte and reject18malformed controls.
 [Source](winning_cayley_certificate.py), [fixed cover and50input pins](winning_cayley_inputs.json)
 and [expected fields](winning_cayley_expected.json) accompany the written
-proof. With the [opposite mixed-branch exclusion](GAMMA_BRANCH_PROOF.md)
-and the axial-majorization lemma below, ONLY threshold-to-threshold
-placements remain possible on f>=21/50. All four ordered threshold-class
-pairings on that larger band are unresolved. This new proof is unformalized
-and independently unreviewed; global RID and the GLOBAL1/100gap are unchanged.
+proof. It supplies the all-source winning receiving branch of the new
+global result. The [opposite mixed-branch exclusion](GAMMA_BRANCH_PROOF.md)
+supplies winning sources into either threshold receiver; the new theorem
+above now closes the remaining four threshold pairings. These branch
+proofs are unformalized and independently unreviewed; global RID is open.
 
 The new [antipodal axial-height proof](AXIAL_MAJORIZATION_PROOF.md) excludes
 closed containment from **every threshold-region original source into any
@@ -30,7 +58,8 @@ winning receiver with f(n)>=21/50**, for all proper rotations, planar
 translations and scales>=1. It covers this branch throughout
 f(n)^2>=beta-1/31. The proof uses distinct original antipodal radial
 candidates, a four-height sum and the retained source cosine term.
-The GLOBAL bound below remains1/100. Exact reproduction:
+This branch is an explicit dependency of the winning classifier and
+therefore of the new global1/31result. Exact reproduction:
 
     python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/axial_majorization_certificate.py --self-test
     python3 -B -O rhombicosidodecahedron_mirror_cluster_obstruction/axial_majorization_certificate.py --self-test
@@ -41,7 +70,7 @@ and [44published input pins](axial_majorization_inputs.json) accompany
 the [source](axial_majorization_certificate.py). This new intermediate
 proof is unformalized and independently unreviewed.
 
-[WEIGHTED_GLOBAL_BAND_PROOF.md](WEIGHTED_GLOBAL_BAND_PROOF.md) proves that
+The preceding [weighted global1/100 proof](WEIGHTED_GLOBAL_BAND_PROOF.md) proves that
 every strict passage with arbitrary original proper source rotation,
 full roll, planar translation and scale>=1 satisfies
 **f(n)^2<beta-1/100**, where f(n)=min_original_v|v.n| and
@@ -56,7 +85,7 @@ graph8108, confirms this GLOBAL1/100result and its winning equality
 classification. That review does not cover the newer branch or Cayley
 lemmas; historical priority is unasserted.
 
-The substantive new mechanisms cover all four source/receiver branches:
+The preceding global1/100 proof uses these mechanisms across all four branches:
 
 - Positive original-circle weights yield a full SO(3) moment inequality,
   with rotation chord at most 19/5 times the threshold normal chord.
