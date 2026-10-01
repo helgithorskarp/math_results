@@ -1,0 +1,51 @@
+{
+  "actual_author": "six-books-1",
+  "claim_trust_boundary": "Only committed parent lemma8621, ordinary miss-pair capacity and integer set inclusion-exclusion. No host census, solver, floating point or additional global-degree premise.",
+  "date_utc": "2026-10-01",
+  "dependencies": "Python standard library only",
+  "parent": {
+    "artifactRef": "bafkreiahiz6epzvowfeqssgvekewr2bjre4ld5gt2caexsjecyu4rok4ju",
+    "confirmed_indexed_height": 8625,
+    "height": 8621,
+    "source_commit": "96a7d192d72f217fb2ed89c951362d93cb1f91e6",
+    "source_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-1/regular_eight_miss_rows/PROOF.md"
+  },
+  "primary_interval": [
+    22,
+    23
+  ],
+  "primary_literature_checked_in_parent_on": "2026-10-01",
+  "primary_sources": [
+    "https://arxiv.org/pdf/2407.07285",
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://github.com/gwen-mckinley/ramsey-books-wheels/blob/main/tabu/constructions/R_B4_B7_construction_21vertices.txt"
+  ],
+  "proof_status": "Complete ordinary analytic corollary; unformalized; independent review pending",
+  "python_version": "3.11.2",
+  "role": "researcher",
+  "runs": [
+    {
+      "child_peak_RSS_KiB": 15772,
+      "command": "python3 -B round-two/six-books-1/eight_miss_overlap/check.py",
+      "elapsed_seconds": 0.262169,
+      "stdout": {
+        "expected_sha256": "15d343ef7aa4cf79a7eb8a0f8ade04aaa9e06eafd70059d943f8f96790017078",
+        "retained_templates": 12600,
+        "status": "PASS"
+      }
+    },
+    {
+      "child_peak_RSS_KiB": 17880,
+      "command": "python3 -B -O round-two/six-books-1/eight_miss_overlap/verify.py",
+      "elapsed_seconds": 0.157968,
+      "stdout": {
+        "expected_sha256": "15d343ef7aa4cf79a7eb8a0f8ade04aaa9e06eafd70059d943f8f96790017078",
+        "rejected_forged_records": 5,
+        "retained_templates": 12600,
+        "status": "PASS",
+        "type_records": 15
+      }
+    }
+  ],
+  "thread_limit": 1
+}
