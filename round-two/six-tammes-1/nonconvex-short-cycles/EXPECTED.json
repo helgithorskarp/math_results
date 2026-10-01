@@ -1,0 +1,180 @@
+{
+  "arithmetic": {
+    "c_interval": [
+      "1/2",
+      "3/5"
+    ],
+    "cos_72_upper_bound": "3091/10000",
+    "edge_tolerance": "1/60",
+    "hemisphere_row_coefficients": {
+      "3": [
+        "1",
+        "2"
+      ],
+      "4": [
+        "0",
+        "2",
+        "2"
+      ],
+      "5": [
+        "-1",
+        "2",
+        "4"
+      ],
+      "6": [
+        "-1",
+        "-1",
+        "4",
+        "4"
+      ]
+    },
+    "margin_endpoint_lower_bounds": [
+      "928273/7500000000",
+      "178863073/7500000000"
+    ],
+    "narrower_band": {
+      "c_interval": [
+        "14/25",
+        "3/5"
+      ],
+      "edge_tolerance": "1/32",
+      "margin_endpoint_lower_bounds": [
+        "107/102400",
+        "14158371/1600000000"
+      ],
+      "strict_cover_margin": "1/400"
+    },
+    "planarity_endpoint_margins": [
+      "7/30",
+      "67/300"
+    ],
+    "sharp_uniform_tolerance": {
+      "a": "7/16",
+      "b": "-3/16",
+      "radicand": 5
+    },
+    "sqrt5_bound_square_gap": "9281/6250000",
+    "strict_cover_margin": "1/500",
+    "tolerance_derivative_lower_bound": {
+      "a": "-1/2",
+      "b": "3/10",
+      "radicand": 5
+    }
+  },
+  "exceptional_paths": {
+    "4": {
+      "exceptional_words": 0,
+      "run_lengths": {}
+    },
+    "5": {
+      "exceptional_words": 5,
+      "run_lengths": {
+        "2": 5
+      }
+    },
+    "6": {
+      "exceptional_words": 48,
+      "run_lengths": {
+        "2": 42,
+        "3": 6
+      }
+    }
+  },
+  "parent_checker_sha256": "52361f7a08e81b5c58433e1f88e18cea9ea7d4c9d391fdf4a45bdb9e910230fc",
+  "sharp_six_point_example": {
+    "axis_dot": "1/2",
+    "boundary_dot": {
+      "a": "1/16",
+      "b": "3/16",
+      "radicand": 5
+    },
+    "c": "1/2",
+    "nonadjacent_dot": {
+      "a": "1/16",
+      "b": "-3/16",
+      "radicand": 5
+    },
+    "pairs": 15,
+    "points": 6,
+    "positive_basis_rank": 3,
+    "rejected_controls": [
+      "overlarge_pair",
+      "nonrealizable_gram"
+    ],
+    "uniform_tolerance": {
+      "a": "7/16",
+      "b": "-3/16",
+      "radicand": 5
+    },
+    "zero_schur_entries": 9
+  },
+  "signed_winding_control": {
+    "c": "7/12",
+    "checked_pairs": 10,
+    "contact_set": [
+      "AP",
+      "AV",
+      "BQ",
+      "BV",
+      "PQ"
+    ],
+    "increments": [
+      {
+        "edge": "VA",
+        "projected_determinant": {
+          "a": "0",
+          "b": "144/16835",
+          "radicand": 3835
+        },
+        "sign": 1
+      },
+      {
+        "edge": "AP",
+        "projected_determinant": {
+          "a": "0",
+          "b": "288/16835",
+          "radicand": 3835
+        },
+        "sign": 1
+      },
+      {
+        "edge": "PQ",
+        "projected_determinant": {
+          "a": "16/3",
+          "b": "64/1443",
+          "radicand": 3835
+        },
+        "sign": 1
+      },
+      {
+        "edge": "QB",
+        "projected_determinant": {
+          "a": "11696/2331",
+          "b": "3440/30303",
+          "radicand": 3835
+        },
+        "sign": 1
+      },
+      {
+        "edge": "BV",
+        "projected_determinant": {
+          "a": "-5480/2331",
+          "b": "64/2331",
+          "radicand": 3835
+        },
+        "sign": -1
+      }
+    ],
+    "negative_increment_count": 1,
+    "query_cone_weights": {
+      "A": 8,
+      "P": 1,
+      "V": 1
+    },
+    "scope": "genuine concave spherical contact pentagon; tests signed winding",
+    "unit_points": 5,
+    "winding_number": 1
+  },
+  "status": "all exact auxiliary checks passed",
+  "trust_boundary": "continuous minimum, Jordan winding, and arc geometry remain written"
+}
