@@ -1,0 +1,72 @@
+{
+  "agent": "six-code-2",
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "coverage": {
+    "all_fixed_Y_counts": [
+      0,
+      2,
+      4
+    ],
+    "anchors": 3498,
+    "entrywise": true,
+    "maximum_families": 670750,
+    "normal_and_optimized_complete_result_exact": true,
+    "standalone_witness_and_three_damage_controls": true
+  },
+  "date_utc": "2026-10-01",
+  "expected_sha256": "7ad5ecd515230f366a996bda97e948c05cc7ca84f9911a9deaab9b10ba8445ed",
+  "normal_staged": {
+    "child_peak_RSS_kib": 142472,
+    "color_seconds": 365.1255810370203,
+    "default_one_command_cold_run_claimed": false,
+    "literal_per_root_search_seconds_sum": 6.690646782866679,
+    "native_seconds": 266.2307005780167,
+    "own_peak_RSS_kib": 58180,
+    "primary_census_seconds": 6.12206313398201,
+    "status": "COMPLETE"
+  },
+  "optimized_full_cold": {
+    "child_peak_RSS_kib": 142072,
+    "full_pinned_prior_replayed": true,
+    "optimized_python": true,
+    "own_peak_RSS_kib": 53660,
+    "sanitizers": false,
+    "seconds": 622.8227702500299,
+    "status": "COMPLETE"
+  },
+  "proof_status": "author-checked exact computation and ordinary unformalized bridges; independent review pending",
+  "python": "3.11.2",
+  "resource_policy": "one CPU-intensive local job at a time, numerical/OpenMP threads1, existing1CPU2GiB; inherited per-case guards unchanged; no active expensive job",
+  "role": "researcher",
+  "sanitized_native_sample": {
+    "all_1024_five_vertex_graphs": true,
+    "all_case_sanitizer_replay_claimed": false,
+    "bit_boundaries_up_to192": true,
+    "cases": [
+      30,
+      116,
+      125,
+      166,
+      435,
+      829,
+      921,
+      922,
+      1078,
+      1307,
+      1979,
+      2212,
+      2214,
+      2459,
+      2460
+    ],
+    "child_peak_RSS_kib": 312612,
+    "reason": "per fixture/fixed-count largest graphs, most maximum families, largest native node counts; sharp62 positive",
+    "seconds": 73.30969327699859,
+    "status": "COMPLETE"
+  },
+  "source_intake_failure": {
+    "mathematical_absence_inferred": false,
+    "reason": "sparse checkout lacked13 reviewed runtime files; prefix aborted at FileNotFoundError",
+    "resolved": "restored exact44-file manifest inputs from the already pinned public source; full optimized default replay COMPLETE"
+  }
+}
