@@ -1,0 +1,238 @@
+{
+  "agent": "six-reviewer-1",
+  "all_original_root_branches": 9,
+  "all_tangent_directions": 78,
+  "all_tangent_entries": 144,
+  "author_source_files": {
+    "LITERATURE.md": {
+      "bytes": 7745,
+      "sha256": "051bf5928b82eddb652e95dc4f5d52c18fad0afc214016e1dd71e494e3f9d0af"
+    },
+    "PROOF.md": {
+      "bytes": 22933,
+      "sha256": "dd73481149bea2d36266ef172b5d21a0b3b461fe15abc43a101dc5833ee6b240"
+    },
+    "README.md": {
+      "bytes": 2933,
+      "sha256": "1f17865c150a13098fbae14358f586047b44f3d8bad2a639f4cfacb05b2a965d"
+    },
+    "SHA256SUMS": {
+      "bytes": 546,
+      "sha256": "b4de631cb8eed09fdfc46a0f939959ac018a7c4f36c55e5f922ecf4f698dff47"
+    },
+    "algebra.py": {
+      "bytes": 8128,
+      "sha256": "ea5da1842affb7a5abe01134e5be7f7a86b219c586e23c3203350a7367ffbe2c"
+    },
+    "expected.json": {
+      "bytes": 31852,
+      "sha256": "f9bf58e64dd926dd006ed6b8ce59453c0df202751f90ef1c2f78c5126421a6e0"
+    },
+    "provenance.json": {
+      "bytes": 5697,
+      "sha256": "23690165fab6635288489c4f75e939c1a982f958a7db538655ebdb3cd9ca9334"
+    },
+    "verify.py": {
+      "bytes": 16415,
+      "sha256": "ff8c44ae057895fcb13f6fb8d0f218a4c9150949275fbf29944ccb85efbef630"
+    }
+  },
+  "candidate_specific_queries": [
+    "Sendov first power critical points degree nine analytic minimizer boundary stability",
+    "Sendov analytic minimizer boundary"
+  ],
+  "cross_comparison": {
+    "all_entrywise_match": true,
+    "counts": {
+      "all_nine_leading_radials": 9,
+      "even_rows_scalars": 4,
+      "generic_derivative_coefficients": 13,
+      "generic_polynomial_coefficients": 30,
+      "normal_determinants": 2,
+      "odd_rows_scalars": 6,
+      "shared_constants": 9,
+      "small_imaginary_split": 1,
+      "tangent_coefficients": 43,
+      "tangent_invariants": 2
+    },
+    "total_compared_scalars_and_terms": 119
+  },
+  "dependencies": {
+    "credited_asymptotic_context": [
+      8841,
+      8883
+    ],
+    "structural": [
+      7190,
+      8619,
+      8684
+    ],
+    "third_coefficient": [
+      8751,
+      8781
+    ]
+  },
+  "external_fixture_controls": 6,
+  "independent_checks": 675,
+  "independent_fixture_sha256": "d8b140aaa90a46b50ed71bea84e46ef46845c33dceb7e1a77c185c2741114ac7",
+  "major_refresh_index": 8944,
+  "mathematical_damage_controls": 11,
+  "not_claimed": [
+    "effective collar",
+    "uniform endpoint coefficient1/2",
+    "fifth objective coefficient",
+    "interior-radius minimizer classification",
+    "full first-power endpoint"
+  ],
+  "novelty_scope": "Miller derivative template and campaign coefficients/stability mechanisms credited; exact true-minimizer near-sharp bound and radial limits distinguished from8883 asymptotic one-half. Bounded search does not establish historical priority.",
+  "primary_literature": [
+    "https://arxiv.org/html/2609.19126",
+    "https://arxiv.org/pdf/math/0505424v3",
+    "https://terrytao.wordpress.com/2026/08/12/a-digestion-of-the-proof-of-sendovs-conjecture/"
+  ],
+  "prior_arithmetic_kernel": {
+    "agent": "six-reviewer-1",
+    "path": "round-two/six-reviewer-1/fourth-boundary-audit/check.py",
+    "runtime_import": false,
+    "source_commit": "7bf51b77755026292db72084d8338698e2f43925"
+  },
+  "proved_refinements": [
+    "error-free exact-minimizer gap with every kappa<1/2",
+    "individual radial weights every alpha_k<w_k/2",
+    "exact feasible centered-real and individual-radial witnesses prove the limiting constants sharp"
+  ],
+  "resources": {
+    "guard_each_seconds": 90,
+    "limits_unchanged": true,
+    "max_cpu_intensive_jobs": 1,
+    "native_threads": 1,
+    "peak_child_rss_kib_upper": 22628
+  },
+  "reviewer_method": "Single cyclotomic field Q[w]/(w^6+w^3+1), parity-graded Newton jets; complete affine root-curvature reconstruction; literal univariate78-direction chart polarization and complete tangent matrix; ordinary complex analytic proof audit",
+  "role": "independent mathematical reviewer",
+  "selection_index": 8934,
+  "software": {
+    "CAS": null,
+    "dependencies": "standard library only",
+    "formal_kernel": false,
+    "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+    "solver": null
+  },
+  "target": {
+    "height": 8921,
+    "ref": "bafkreig4fbumy4uayhto3w7hxj5mmppvn2kuddzmqlnol3leov7ffyq52m",
+    "source_commit": "ac6099018ea9e0e8e3092122db6ff24d549ebf32",
+    "source_directory": "round-two/six-sendov-3/analytic-boundary"
+  },
+  "trust_boundary": "Finite algebra independently reproduced. Root analytic maps/parity/IFT/coverage/global comparison/symmetry remain ordinary mathematics with inherited7190 concentration; shared signer not distinct authorship.",
+  "utc": "2026-10-01T20:38:00.122866+00:00",
+  "validation": {
+    "guard_each_seconds": 90,
+    "jobs_sequential": true,
+    "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+    "runs": [
+      {
+        "exit": 0,
+        "guard": 90,
+        "label": "author normal",
+        "peak_child_rss_kib": 19708,
+        "seconds": 4.156407540955115,
+        "stderr": "",
+        "stdout": "PASS: 61 exact checks; 8 mathematical damages rejected.\nRecord SHA256 f9bf58e64dd926dd006ed6b8ce59453c0df202751f90ef1c2f78c5126421a6e0\nFinite normal inversion and full12-variable positive Hessian; analytic bridges remain written proof.\n"
+      },
+      {
+        "exit": 0,
+        "guard": 90,
+        "label": "author optimized",
+        "peak_child_rss_kib": 22240,
+        "seconds": 4.340416298015043,
+        "stderr": "",
+        "stdout": "PASS: 61 exact checks; 8 mathematical damages rejected.\nRecord SHA256 f9bf58e64dd926dd006ed6b8ce59453c0df202751f90ef1c2f78c5126421a6e0\nFinite normal inversion and full12-variable positive Hessian; analytic bridges remain written proof.\n"
+      },
+      {
+        "exit": 0,
+        "guard": 90,
+        "label": "reviewer development fixture",
+        "peak_child_rss_kib": 22240,
+        "seconds": 1.3950933889718726,
+        "stderr": "",
+        "stdout": "PASS: 675 exact checks; 11 mathematical damages rejected; all78 tangent directions.\nRecord SHA256 d8b140aaa90a46b50ed71bea84e46ef46845c33dceb7e1a77c185c2741114ac7\nSmallest raw Hessian eigenvalue exactly1; sharp limiting gap1/2. Analytic bridges are ordinary proof.\n"
+      },
+      {
+        "exit": 0,
+        "guard": 90,
+        "label": "reviewer normal",
+        "peak_child_rss_kib": 22240,
+        "seconds": 1.6003914179746062,
+        "stderr": "",
+        "stdout": "PASS: 675 exact checks; 11 mathematical damages rejected; all78 tangent directions.\nRecord SHA256 d8b140aaa90a46b50ed71bea84e46ef46845c33dceb7e1a77c185c2741114ac7\nSmallest raw Hessian eigenvalue exactly1; sharp limiting gap1/2. Analytic bridges are ordinary proof.\n"
+      },
+      {
+        "exit": 0,
+        "guard": 90,
+        "label": "reviewer optimized",
+        "peak_child_rss_kib": 22604,
+        "seconds": 1.698077519016806,
+        "stderr": "",
+        "stdout": "PASS: 675 exact checks; 11 mathematical damages rejected; all78 tangent directions.\nRecord SHA256 d8b140aaa90a46b50ed71bea84e46ef46845c33dceb7e1a77c185c2741114ac7\nSmallest raw Hessian eigenvalue exactly1; sharp limiting gap1/2. Analytic bridges are ordinary proof.\n"
+      },
+      {
+        "exit": 1,
+        "guard": 90,
+        "label": "fixture missing.json normal",
+        "peak_child_rss_kib": 22604,
+        "seconds": 1.423622285015881,
+        "stderr": "Failure: Missing/malformed exact fixture",
+        "stdout": ""
+      },
+      {
+        "exit": 1,
+        "guard": 90,
+        "label": "fixture malformed.json normal",
+        "peak_child_rss_kib": 22604,
+        "seconds": 1.365137788001448,
+        "stderr": "Failure: Missing/malformed exact fixture",
+        "stdout": ""
+      },
+      {
+        "exit": 1,
+        "guard": 90,
+        "label": "fixture altered.json normal",
+        "peak_child_rss_kib": 22604,
+        "seconds": 1.406216227042023,
+        "stderr": "Failure: complete frozen record",
+        "stdout": ""
+      },
+      {
+        "exit": 1,
+        "guard": 90,
+        "label": "fixture missing.json optimized",
+        "peak_child_rss_kib": 22628,
+        "seconds": 1.5764276400441304,
+        "stderr": "Failure: Missing/malformed exact fixture",
+        "stdout": ""
+      },
+      {
+        "exit": 1,
+        "guard": 90,
+        "label": "fixture malformed.json optimized",
+        "peak_child_rss_kib": 22628,
+        "seconds": 1.6288534989580512,
+        "stderr": "Failure: Missing/malformed exact fixture",
+        "stdout": ""
+      },
+      {
+        "exit": 1,
+        "guard": 90,
+        "label": "fixture altered.json optimized",
+        "peak_child_rss_kib": 22628,
+        "seconds": 1.6670751860365272,
+        "stderr": "Failure: complete frozen record",
+        "stdout": ""
+      }
+    ],
+    "threads": 1,
+    "utc": "2026-10-01T20:30:40.664732+00:00"
+  },
+  "verdict": "Confirmed ordinary analytic theorem within inherited concentration and second-optimum premises; independent finite reconstruction supports all new bridges"
+}
