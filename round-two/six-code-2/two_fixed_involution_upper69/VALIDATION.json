@@ -1,0 +1,122 @@
+{
+  "agent": "six-code-2",
+  "all23_raw_fixture_bytes_equal": true,
+  "all9_upper_lower_records_equal": true,
+  "bound_and_pinned_input_damages": 28,
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "expected_sha256": "a473226948e61a79268ed2e46efe7cc670521246aa666c9b331298ed7fb83966",
+  "literal_damages": 9,
+  "max_child_peak_RSS_kib": 206088,
+  "native_controls": 6144,
+  "normal": {
+    "agent": "six-code-2",
+    "child_peak_RSS_kib": 104440,
+    "expected_sha256": "a473226948e61a79268ed2e46efe7cc670521246aa666c9b331298ed7fb83966",
+    "optimized_python": false,
+    "own_peak_RSS_kib": 25504,
+    "python": "3.11.2",
+    "role": "researcher",
+    "sanitized_native": false,
+    "seconds": 28.518643291958142,
+    "stages": [
+      {
+        "script": "run.py",
+        "seconds": 9.0140793750179
+      },
+      {
+        "script": "replay_groups.py",
+        "seconds": 1.8229323489940725
+      },
+      {
+        "script": "quotient3.py",
+        "seconds": 0.3063828049926087
+      },
+      {
+        "script": "complete3.py",
+        "seconds": 0.7901191579876468
+      },
+      {
+        "script": "native3.py",
+        "seconds": 1.9389445869601332
+      },
+      {
+        "script": "check_coverage.py",
+        "seconds": 0.2169812879874371
+      },
+      {
+        "script": "prerequisites.py",
+        "seconds": 14.283474116993602
+      }
+    ],
+    "status": "COMPLETE"
+  },
+  "optimized_all_native_sanitized": {
+    "agent": "six-code-2",
+    "child_peak_RSS_kib": 206088,
+    "expected_sha256": "a473226948e61a79268ed2e46efe7cc670521246aa666c9b331298ed7fb83966",
+    "optimized_python": true,
+    "own_peak_RSS_kib": 27684,
+    "python": "3.11.2",
+    "role": "researcher",
+    "sanitized_native": true,
+    "seconds": 35.563514345965814,
+    "stages": [
+      {
+        "script": "run.py",
+        "seconds": 9.380025624996051
+      },
+      {
+        "script": "replay_groups.py",
+        "seconds": 1.920829843962565
+      },
+      {
+        "script": "quotient3.py",
+        "seconds": 0.4610642089974135
+      },
+      {
+        "script": "complete3.py",
+        "seconds": 0.97199896001257
+      },
+      {
+        "script": "native3.py",
+        "seconds": 7.053051830967888
+      },
+      {
+        "script": "check_coverage.py",
+        "seconds": 0.21107755199773237
+      },
+      {
+        "script": "prerequisites.py",
+        "seconds": 15.402819002978504
+      }
+    ],
+    "status": "COMPLETE"
+  },
+  "prerequisites": {
+    "agent": "six-code-2",
+    "replays": [
+      {
+        "complete": true,
+        "name": "universal20"
+      },
+      {
+        "complete": true,
+        "name": "absent_pair"
+      },
+      {
+        "complete": true,
+        "name": "multiplicity_two"
+      }
+    ],
+    "role": "researcher",
+    "runtime_files": 13,
+    "scope": "Universal pointcap20/absent-pair56/pair-two60 pinned validators; upper57 complete census remains an explicitly imported reviewed premise, not rerun.",
+    "status": "COMPLETE_PUBLIC_PREREQUISITE_REPLAY",
+    "transitive_upper57_census_rerun": false
+  },
+  "proof_status": "Author-complete unformalized ordinary and exact finite proof; classification/structure/upper57 and prior sharp58/69 mathematical imports explicit; independent new review and historical priority unassessed.",
+  "resource_policy": "One CPU-intensive local stage at a time, threads1, inherited1CPU2GiB; unchanged guards; no active job.",
+  "role": "researcher",
+  "status": "AUTHOR_COMPLETE_COLD_PORTABLE_JOINT_SHARP69_AND_SHARP56",
+  "weighted_controls": 1099
+}
