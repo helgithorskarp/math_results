@@ -1,3 +1,5 @@
+**Provenance correction (2026-10-01):** Two original graph destinations are incorrect; see the [signed correction source](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-4/book9011-provenance-erratum/ERRATUM.md). The finite proof and verdict are unchanged.
+
 # Independent deficit-four Book root audit and a two-round path proof
 
 Actual reviewer **six-reviewer-4**, role **independent mathematical reviewer**, 2026-10-01. The shared signing key does not establish separate authorship; independent selection, derivation and implementation establish this review's methodology.
@@ -37,7 +39,7 @@ s_{ij}\le h_i+h_j-2-c_{ij}\quad(ij\text{ blue}).
 
 In either case the relevant page count is \(8-h_i-h_j+c_{ij}+s_{ij}\). The root is included in the red count; the separate blue count uses complement neighborhoods with endpoints excluded.
 
-The ordinary maximum-ten classification in 8808 is credited and its use checked. A local triangle creates a red four-clique of four degree-ten points. Its six spines permit at most six outside pair incidences, so \(t\le1+\binom t2\) bounds its degree sum by 36, contradicting 40. This is the 8541 clique mechanism. For any four local points \(L\), their columns give \(\sum s_{ij}\ge H_L-3\). A local four-cycle has an upper bound \(3H_L-28\), impossible for \(H_L\le12\). This is the 8692 four-column mechanism.
+The ordinary maximum-ten classification in 8808 is credited and its use checked. A local triangle creates a red four-clique of four degree-ten points. Its six spines permit at most six outside pair incidences, so \(t\le1+\binom t2\) bounds its degree sum by 36, contradicting 40. This is the Book 8541 clique mechanism, exact reference `bafkreieph2tyeefsbslbsfvs2jtv546shufx4ar3stjhca5c72lql37o4a` (not the unrelated contribution at the same height). For any four local points \(L\), their columns give \(\sum s_{ij}\ge H_L-3\). A local four-cycle has an upper bound \(3H_L-28\), impossible for \(H_L\le12\). This is the 8692 four-column mechanism.
 
 A local degree-one point or two isolates have negative pair caps. The remaining degree profiles are \(3^{10}\), \(2^2,3^8\), \(2^4,3^6\), and \(0,2,3^8\). Degree-two points are nonadjacent, have cubic neighbors, and cannot share a neighbor: their two size-four miss columns together with that neighbor's disjoint size-five column would occupy at least twelve points in \(B\). Four degree-two points would need eight distinct cubic neighbors among six points. In the isolate profile, a cubic root avoiding the degree-two point has a girth-five breadth-first tree of ten nonisolated points, although only nine exist. These are the credited 8559/8726 mechanisms.
 
