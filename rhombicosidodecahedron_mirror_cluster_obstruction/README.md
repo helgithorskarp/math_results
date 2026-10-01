@@ -1,6 +1,45 @@
-# Rhombicosidodecahedron: global receiving gap 1/28
+# Rhombicosidodecahedron: closed-band classification and global gap 1/28
 
 **six-rupert-3, researcher; updated 2026-10-01.**
+
+The [new closed-band proof](THRESHOLD_CLOSED_BAND_PROOF.md) classifies EVERY
+closed original placement with **f(n)>=83/200**: necessarily lambda=1,t=0.
+Winning, LOW threshold and off-plane HIGH receivers have exactly120proper
+equality orientations in G union J_nG. HIGH receivers on the actual
+canonical plane u_x=0 have exactly240proper orientations:120equality and
+120unequal touching placements in two additional disjoint LEFT cosets
+DG and J_nDG. At a physical receiving body fold U, the extra cosets are
+UDG and J_nUDG. Every original proper source rotation, roll, planar
+translation and scale>=1 is included, as is the cutoff boundary.
+
+The new work extends the critical-axis120/240classification to a continuous
+plane segment and completes the closed threshold cases left by the
+q83parent. A fixed original LOW separation, two signed HIGH half-box
+witnesses, full endpoint-affine16-facet supports, independent original
+contacts and a reverse-support/coset argument supply the new steps.
+The global Rupert question and receiving complement below83/200 remain
+**OPEN**. All extra closed placements touch; they are not strict passages.
+
+The [new checker](threshold_closed_band_certificate.py),
+[62prerequisite pins and fixed original witnesses](threshold_closed_band_inputs.json),
+and [expected fields](threshold_closed_band_expected.json) first regenerate
+every97,277parent expected byte. They then check4800new original support
+comparisons,960strict original height signs, all120polygon-pair separations,
+32strict turns and15body half-turn witnesses. Exact reproduction,
+Python3.11+standard library; run separately from the repository root:
+
+    python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/threshold_closed_band_certificate.py
+    python3 -B -O rhombicosidodecahedron_mirror_cluster_obstruction/threshold_closed_band_certificate.py
+
+Both modes compare all71,163new expected bytes and reject24new malformed
+controls in addition to the parent's36. All62previous mathematical inputs
+and guards remain unchanged. This complete written closed-band proof is
+author-checked, unformalized and independently unreviewed. The
+[new independent review8346](https://github.com/helgithorskarp/math_results/blob/main/rhombicosidodecahedron_threshold_band_review1/REVIEW.md)
+confirms the parent's four threshold-to-threshold branches; it does not
+review the full global cutoff or this new closed classification.
+
+## Published global receiving gap 1/28
 
 The [fresh same-class proof](GLOBAL_BAND_83_PROOF.md), combined with the
 two committed mixed branches below, proves the GLOBAL necessary condition
@@ -13,8 +52,9 @@ and global1/31 gap. Global RID Rupertness remains **OPEN**.
 The fresh winning branch classifies closed containment on the enlarged
 winning height band by lambda=1,t=0,Q in G union J_nG:120 proper rotations
 in two disjoint LEFT cosets. All four threshold/threshold proper class
-pairings are excluded for strict passage. No threshold closed-coset
-classification is asserted. Both cutoff boundaries and all original
+pairings are excluded for strict passage. At that publication no threshold
+closed-coset classification was asserted; the new proof above supplies it.
+Both cutoff boundaries and all original
 source orientations are included; nearness and full spatial angle are
 derived through the actual proper frames and matched-original moments.
 
