@@ -1,0 +1,180 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "audit_source_sha256": "f80738d714b119ee264cca774ba23fa4c125ce7f4c2eab83b676e09c4722c73d",
+  "complete_expected_record": {
+    "actual_reviewer": "six-reviewer-4",
+    "cases": {
+      "one8": {
+        "all_stars_nonempty": 0,
+        "arc_edge_search_nodes": 0,
+        "completions": 0,
+        "empty_star_cases": 135,
+        "incidence_records": 135,
+        "incidence_sha256": "1656c702becd8bb5a2dc879bc2d2bf19c4fa5a318632de5b5429dba7004e77fc",
+        "nonempty_domain_sizes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "two9": {
+        "all_stars_nonempty": 240,
+        "arc_edge_search_nodes": 240,
+        "completions": 0,
+        "empty_star_cases": 21860,
+        "incidence_records": 22100,
+        "incidence_sha256": "f59d493019e9ca1161258dfec1a9906c5676f4f3436d558d06f67919afeb40a6",
+        "nonempty_domain_sizes_sha256": "1337519fb45e2a307dbc79ae4ff72e49d5ddb127635285dd789498414b205d4c"
+      }
+    },
+    "complete_surplus_range": true,
+    "red_capped_high_multisets": [
+      1,
+      30,
+      425,
+      3360,
+      14980
+    ],
+    "role": "independent mathematical reviewer",
+    "row_domains": {
+      "0": {
+        "by_size": {
+          "4": 5,
+          "5": 30,
+          "6": 80,
+          "7": 90,
+          "8": 30
+        },
+        "count": 235
+      },
+      "1": {
+        "by_size": {
+          "5": 192,
+          "6": 200,
+          "7": 120,
+          "8": 45
+        },
+        "count": 557
+      },
+      "2": {
+        "by_size": {
+          "6": 200,
+          "7": 120,
+          "8": 45
+        },
+        "count": 365
+      }
+    }
+  },
+  "control_normal_expected_equal": true,
+  "jobs": "All computation sequential, no solver, no floating decisions. All complete runs finished without timeout.",
+  "local_normal_output": {
+    "actual_reviewer": "six-reviewer-4",
+    "degree_ten22_falsification_controls": 64,
+    "identity_trace_sha256": "daf9dcf45ffe8af3ec96e7ed19b6a0b6fcc588baa8ef6475600b9343ba8604a6",
+    "infinite_claim_proof": "ordinary double counting in REVIEW.md; controls are not an enumeration",
+    "negative_geometry_controls": 3,
+    "physical_selected_pair_counts": 3200,
+    "positive_valid_six_point_control": 1,
+    "primary21": {
+      "blue_page_max": 6,
+      "edges": 93,
+      "red_page_max": 3
+    },
+    "synthetic_identity_controls": 320
+  },
+  "local_optimized_output_equal": true,
+  "native_entrywise_validation": {
+    "RSS_upper_KiB": 58760,
+    "result": {
+      "entrywise_comparisons": {
+        "one8": {
+          "incidence_records_entrywise_equal": 135,
+          "nonempty_systems_entrywise_equal": 0,
+          "star_domains_entrywise_equal": 0,
+          "star_values_compared": 0
+        },
+        "two9": {
+          "incidence_records_entrywise_equal": 22100,
+          "nonempty_systems_entrywise_equal": 240,
+          "star_domains_entrywise_equal": 2640,
+          "star_values_compared": 60000
+        }
+      },
+      "native_controls": {
+        "damaged21_completions_rejected": 196,
+        "positive21_completion": 1,
+        "positive21_star_domains": 10,
+        "signed109_controls": 4,
+        "weighted_column_entries": 40,
+        "weighted_literal_pair_entries": 180
+      },
+      "source_commit": "8de2a7507e9ffe242e32a64d99b3f98dd4616954"
+    },
+    "returncode": 0,
+    "seconds": 20.270652065984905
+  },
+  "partial_pilot": "Surplus-two pilot intentionally incomplete; not exclusion evidence. Only complete surplus-four runs support the theorem.",
+  "primary_normalization_entries_equal": 441,
+  "role": "independent mathematical reviewer",
+  "runs": [
+    {
+      "RSS_upper_KiB": 26420,
+      "command": "python3 -B audit.py",
+      "deadline_seconds": 180,
+      "returncode": 0,
+      "seconds": 97.59349746699445,
+      "status": "PASS"
+    },
+    {
+      "RSS_upper_KiB": 33548,
+      "command": "python3 -B -O audit.py",
+      "deadline_seconds": 180,
+      "returncode": 0,
+      "seconds": 99.99300912301987,
+      "status": "PASS"
+    },
+    {
+      "RSS_upper_KiB": null,
+      "command": "python3 -B controls.py --emit",
+      "deadline_seconds": null,
+      "returncode": 0,
+      "seconds": 0.09397744503803551,
+      "status": "Expected output matched separately"
+    },
+    {
+      "command": "-O scratch/publication/round-two/six-reviewer-4/near109-audit/local.py",
+      "output": {
+        "actual_reviewer": "six-reviewer-4",
+        "degree_ten22_falsification_controls": 64,
+        "identity_trace_sha256": "daf9dcf45ffe8af3ec96e7ed19b6a0b6fcc588baa8ef6475600b9343ba8604a6",
+        "infinite_claim_proof": "ordinary double counting in REVIEW.md; controls are not an enumeration",
+        "negative_geometry_controls": 3,
+        "physical_selected_pair_counts": 3200,
+        "positive_valid_six_point_control": 1,
+        "primary21": {
+          "blue_page_max": 6,
+          "edges": 93,
+          "red_page_max": 3
+        },
+        "synthetic_identity_controls": 320
+      },
+      "returncode": 0,
+      "seconds": 0.19978054298553616
+    },
+    {
+      "command": "-O scratch/publication/round-two/six-reviewer-4/near109-audit/controls.py",
+      "output": {
+        "actual_reviewer": "six-reviewer-4",
+        "damaged_completions_rejected": 116,
+        "distinct_degree_preserving_B_switches": 116,
+        "edge_branch_completions": 3,
+        "edge_branch_literal_words": 64,
+        "edge_branch_search_nodes": 5,
+        "positive21_arc_nodes": 1,
+        "positive21_completion": 1,
+        "positive21_star_domains": 10
+      },
+      "returncode": 0,
+      "seconds": 0.2164429550175555
+    }
+  ],
+  "tested_runtime": "CPython 3.11.2",
+  "threads": 1
+}
