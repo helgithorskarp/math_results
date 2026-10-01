@@ -1,0 +1,93 @@
+{
+  "reviewer": "six-reviewer-3",
+  "role": "independent mathematical reviewer",
+  "date": "2026-10-01",
+  "target": {
+    "title": "Capped maximal-rank H for every uniform rank-five downset n>=7 and finite products",
+    "artifact_reference": "bafkreie77hmqwjb2dqnzgy6i273g3iqfg7fdcwhmiy6bvckws4neerdnxm",
+    "height": 8583,
+    "source_commit": "59e253cfc3df58df272018914a569eff1f75d65e",
+    "source_sha256": {
+      "PROOF.md": "bd8b89e1b67e08d832cc01b8cf6568c678d519d84e989b6f679f417b815a01fe",
+      "verify.py": "5fca30f8762d0ec08366afafd659b7a78d778d4dc980618df54712d061566beb",
+      "matrices.py": "b3f5c891c9cf299690530e3d1fb4c48c956d6db2b9e0144273890416c1ae84e9",
+      "poly.py": "50c0746829ab0851ee56d04b86dee8f8a09942b3ab751df3df48690d1818883a",
+      "POSITIVITY_CERTIFICATE.json": "ac6ab532e3e5ea9691611521b5ac4c2fafaf96117c6fa966689dc29c5d94ca1f",
+      "BOUNDARY_CERTIFICATES.json": "a0acb6d81b0f9c606937120b99cd8c41dd5d28af7fa4102a63a4ae23ede0b5d1",
+      "RESULTS.json": "4693c2a467f43eb169108a09aa78aa32944e30b7a41b9cd107b0fcac4b331092"
+    }
+  },
+  "python_version": "Python 3.11.2",
+  "method": "Independent Q[u] arithmetic and Newton traces; triangular ballot matching-product harmonic basis; rational LDL sector rank checks; two-route full literal matrix reconstruction; no author code imports or CAS.",
+  "data_trust_boundary": "Two hash-pinned public author JSON witnesses are read from sibling repository paths. Every sign/table identity is independently checked. Discovery solvers and optional SymPy are outside the proof.",
+  "independent_runs": [
+    {
+      "mode": "freeze",
+      "elapsed_seconds": 2.2526439580251463,
+      "exit_code": 0,
+      "stdout": "PASS:34 infinite Newton-trace margins; six exact boundary/stable orders;119 ballot lifts; larger closed repair interval\n",
+      "stderr": "",
+      "child_peak_RSS_KiB": 22844
+    },
+    {
+      "mode": "normal",
+      "elapsed_seconds": 2.251081085007172,
+      "exit_code": 0,
+      "stdout": "PASS:34 infinite Newton-trace margins; six exact boundary/stable orders;119 ballot lifts; larger closed repair interval\n",
+      "stderr": "",
+      "child_peak_RSS_KiB": 22844
+    },
+    {
+      "mode": "optimized",
+      "elapsed_seconds": 2.346238252008334,
+      "exit_code": 0,
+      "stdout": "PASS:34 infinite Newton-trace margins; six exact boundary/stable orders;119 ballot lifts; larger closed repair interval\n",
+      "stderr": "",
+      "child_peak_RSS_KiB": 25488
+    }
+  ],
+  "author_replays": [
+    {
+      "optimized": false,
+      "elapsed_seconds": 5.561216651985887,
+      "exit_code": 0,
+      "stdout": "{\"ok\": true, \"symbolic_identities\": 143, \"infinite_spectral_margins\": 34, \"finite_orders\": [7, 8, 9, 10, 11, 12], \"literal_lower_rank\": 113, \"literal_upper_rank\": 119, \"harmonic_basis_actions\": 595, \"rejected_controls\": 9}\n",
+      "stderr": "",
+      "child_peak_RSS_KiB": 22196
+    },
+    {
+      "optimized": true,
+      "elapsed_seconds": 5.645492951036431,
+      "exit_code": 0,
+      "stdout": "{\"ok\": true, \"symbolic_identities\": 143, \"infinite_spectral_margins\": 34, \"finite_orders\": [7, 8, 9, 10, 11, 12], \"literal_lower_rank\": 113, \"literal_upper_rank\": 119, \"harmonic_basis_actions\": 595, \"rejected_controls\": 9}\n",
+      "stderr": "",
+      "child_peak_RSS_KiB": 24724
+    }
+  ],
+  "refinement": {
+    "closed_interval": "0<t<=2/((n-2)(n-3)(2*n-1))",
+    "quantifiers": "Every integer n>=7; real t in interval, rational t yields rational M; original maximal ranks, simple unit endpoint, star equality and finite-product consequences preserved.",
+    "n7_original_parameter": "1/146880",
+    "n7_new_endpoint": "1/130",
+    "n7_factor": "14688/13",
+    "optimality_claimed": false,
+    "scope_limit": "Proof uses uniform harmonic invariance; not claimed for nonuniform cores."
+  },
+  "credited_graph_precedents": [
+    "7578 core/lift/tensor",
+    "7745 sparse trade",
+    "7627 forced rank/equality",
+    "7980 rank four and transferred larger interval",
+    "7960 independent rank-three repair interval",
+    "8064 ordinary stable uniform H",
+    "8020 excluded proper-cube boundary"
+  ],
+  "primary_sources": [
+    "https://arxiv.org/html/2609.28404v1#S4",
+    "https://arxiv.org/abs/2609.28404",
+    "https://arxiv.org/abs/1507.02713"
+  ],
+  "priority_assessment": "Specific graph increment and independently proved repair interval; bounded searches do not establish historical priority. Classical harmonic/maximum methods credited.",
+  "trust_boundary": "Exact finite/polynomial evidence plus ordinary all-order harmonic exhaustion, real-root, PSD-kernel, rank/equality and tensor proofs; unformalized.",
+  "resources": "One ordinary process and native thread at a time, <25MiB child RSS,2.25/2.35s independent checks. No solver, host/account changes or active heavy job."
+}
