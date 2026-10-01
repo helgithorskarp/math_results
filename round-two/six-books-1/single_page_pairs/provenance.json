@@ -1,0 +1,135 @@
+{
+  "agent": "six-books-1",
+  "role": "researcher",
+  "date": "2026-10-01",
+  "primary_method": "ordinary combinatorial page counting and saturation",
+  "main_hypotheses": [
+    "simple22-point red graph; red-edge pages<=3, blue-nonedge blue pages<=6",
+    "red uv, d(u)=d(v)=10, N_R(u) intersect N_R(v)={a}",
+    "d(a)=9 for the36-pattern/independent-T conclusions"
+  ],
+  "extra_hypotheses_used_in_leaf_corollary": [
+    "specified leaf local graphkey6790396772737",
+    "u degree10 and neighbor global degrees9,10^9 with mark a degree9",
+    "e(G)<=108"
+  ],
+  "main_dependencies": [],
+  "credited_context": [
+    {
+      "graph_ref": "bafkreiho6lqqnl7sfo7ttqewug4ffhpqynybcniatdser7vzrt4uialzzq",
+      "source_commit": "2f66cddc99118bddce735c8f1acbd674bfbe0ab2",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-1/leaf_neighbor_reduction/PROOF.md",
+      "role": "Earlier leaf-frontier T<=1 clause refined here; its second-low-neighbor result is not re-proved by this pair theorem."
+    },
+    {
+      "graph_ref": "bafkreidoqp2j7xs4otszqbipiilrlxcw6oxptzw7bgpifuolplvexg2nny",
+      "source_commit": "5a063abc29f41da9995f92341639b463f2a0e1d8",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-2/leaf-neighbor-audit/REVIEW.md",
+      "role": "Credits E>=108/equality hypothesis reduction in leaf corollary, rederived; confirms original9071, not this new theorem."
+    }
+  ],
+  "baseline_validation": {
+    "agent": "six-books-1",
+    "role": "researcher",
+    "source_url": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+    "entries": 441,
+    "red_edges": 93,
+    "maximum_red_pages": 3,
+    "maximum_blue_pages": 6,
+    "status": "Fresh reproduction of known primary21-point construction; no novelty."
+  },
+  "primary_literature": {
+    "located_interval": [
+      22,
+      23
+    ],
+    "checked_on": "2026-10-01",
+    "sources": [
+      "https://arxiv.org/pdf/2407.07285",
+      "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+    ],
+    "upper23_flag_certificate_replayed": false,
+    "exclusive_priority_claimed": false
+  },
+  "runtime": "3.12.14",
+  "dependencies": "Python standard library only; no catalogue, numerical library or solver",
+  "serial_measurements": [
+    {
+      "command": [
+        "python3",
+        "derive.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.065421,
+      "peak_RSS_KiB": 13544
+    },
+    {
+      "command": [
+        "python3",
+        "verify.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.16544,
+      "peak_RSS_KiB": 14832
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "derive.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.165967,
+      "peak_RSS_KiB": 17232
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "verify.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.315692,
+      "peak_RSS_KiB": 19880
+    },
+    {
+      "command": [
+        "python3",
+        "verify.py",
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.115117,
+      "peak_RSS_KiB": 14952
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "verify.py",
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.31572,
+      "peak_RSS_KiB": 19932
+    }
+  ],
+  "normal_optimized_bytes_equal": true,
+  "damaged_records_rejected": 6,
+  "fixed_external_guard_seconds": 90,
+  "native_thread_variables": {
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "NUMEXPR_NUM_THREADS": 1
+  },
+  "scope_CPU": 1,
+  "scope_GiB": 2,
+  "unformalized": [
+    "ordinary proof",
+    "implementation correspondence"
+  ],
+  "independent_peer_review": "pending for this theorem",
+  "coverage": "Complete necessary special/triple cores; selected-spine test matrices are not full valid hosts."
+}
