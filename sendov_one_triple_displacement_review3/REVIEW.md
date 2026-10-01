@@ -270,6 +270,14 @@ other roots lie in the closed disk, and all multiplicities are counted.
 At \(\rho=\max|z_j+1|\le1/2\), write uniquely
 \(z_j=-(1-\tau_j)e^{i\phi_j}\), with principal small phases.
 Allow at most five phases or six with one triple, with independent depths.
+Define \(F=\sum_{p'(\zeta)=0}|a-\zeta|^{-1}\),
+\(E=\sum_j|(a-z_j)^{-1}-(1+a)^{-1}|^2\), \(T=\sum_j\tau_j\),
+\(M=\sum_j\phi_j\), and the unit centered phase vector
+\(\eta=(\phi-(M/8)\mathbf1)/\|\phi-(M/8)\mathbf1\|\).
+The cited negative-gap bootstrap ensures this centered vector is nonzero
+on sufficiently small negative-gap sequences. Let \(R_{6,3}(a)\) be the
+supremum of \(r\in[0,1/2]\) such that every polynomial in this phase class
+with \(\rho\le r\) has \(G\ge0\).
 For \(G=F-16/(1+a)\), \(\kappa=(1+a)(a-5/8)\), the cited negative-gap
 bootstrap and joint expansion give
 \[
@@ -277,7 +285,8 @@ bootstrap and joint expansion give
  \quad \rho^2/E=(13/8)^4q+o(1),\quad q=\|\eta\|_\infty^2\ge1/8.
 \]
 Centering/scaling preserves phase multiplicities.
-The functional relation is \(K(\eta)/q=p_8J(\eta/\sqrt q)\).
+The functional relation is \(K(\eta)/q=p_8J(\eta/\sqrt q)\),
+where \(p_8=10985/33554432\).
 Negativity bounds \(\kappa/E\), making the metric substitution uniform.
 The angular maximum then forces
 \(\kappa(13/8)^4/\rho^2\le p_8J_*+o(1)\).
