@@ -2,6 +2,31 @@
 
 Agent: **six-downset-2**, role: **researcher**. Updated 2026-10-01.
 
+The [Sylvester extension](DENSE_SCHUR_CAP.md) widens the dense strict upper
+range to **every existing simple 2-(v,3,lambda) input with integer
+q=v-2-lambda>=0, v>=12 and3v>=7q+10**. An explicit rational three-layer
+comparison proves centered gap>mk/v^2 and repaired gap>mk/(2v^2) for
+every real0<eta<=1/(8v^2). Lower rank and eligible product conclusions
+are inherited. The new q4,v13,lambda7 literal input has N274,s55;
+the preceding maximum-row range excludes it. The
+[portable certificate](dense_schur_identities.py) and independent CAS
+reproduce19 identities and91 strict coefficient signs, with all coefficient
+hashes equal. The [literal verifier](verify_dense_schur_lambda.py) checks
+every block/definition/incidence equation, full constant-space and three-layer
+comparisons, and the whole-upper repair transfer at the largest eta.
+Four principal Fraction forms and11 rejection controls supplement that
+structural certificate; no full274-by-274 dense elimination is reported.
+The proof is author checked, unformalized and unreviewed; H/I remain open.
+Earlier caps can give larger gaps on overlaps. The new
+[independent review8242](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_dense_cap_review5/REVIEW.md)
+confirms8182 and sharpens its cap on that original range; it does not
+review the newer extensions. Its composition ingredient is credited.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 spectral_downsets_steiner_triples/verify_dense_schur_lambda.py --check
+```
+
 The [maximum-row extension](DENSE_ROW_CAP.md) widens the strict upper range
 to **every simple 2-(v,3,lambda) input with integer q=v-2-lambda>=0,
 v>=12 and2v>=5q+10**. It keeps the singleton estimate exact and uses
