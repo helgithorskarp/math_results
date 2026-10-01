@@ -1,0 +1,93 @@
+{
+  "reviewer": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "python": "CPython3.11.2",
+  "compiler": "GCC12.2.0 Debian12.2.0-14+deb12u1",
+  "language": "C++17",
+  "release_flags": "-O2 -Wall -Wextra -Wconversion -Wshadow -pedantic",
+  "checking_flags": "-O1 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -fsanitize=address,undefined -fno-omit-frame-pointer",
+  "sequential_jobs": true,
+  "library_threads": 1,
+  "fixed_native_guard": {
+    "nodes": 2000000,
+    "seconds": 20,
+    "outer_seconds": 30
+  },
+  "final_runs": [
+    {
+      "job": "final optimized full entrywise comparison",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-2/nineteen-star-audit/audit.py",
+        "--native",
+        "scratch/pass3-ordered",
+        "--author-manifest",
+        "scratch/pass3-author-star/expected.json",
+        "--author-carriers",
+        "scratch/pass3-author-reproduction/producer-carriers.json"
+      ],
+      "returncode": 0,
+      "seconds": 3.994255,
+      "cumulative_child_peak_RSS_KiB": 23720,
+      "output": "{\n  \"status\": \"COMPLETE\",\n  \"manifest_sha256\": \"83adc2817c988fa4450ede02c7da09b4da857e3f1850a0b0d0dee4cfd4a24bca\",\n  \"nine_cliques\": 1374,\n  \"marked_classes\": 46,\n  \"unmarked_classes\": 44,\n  \"refinement\": {\n    \"cyclic_point_group_distribution\": {\n      \"1\": 34,\n      \"2\": 8,\n      \"4\": 1,\n      \"6\": 1\n    },\n    \"reciprocal_automorphism_sum\": \"461/12\",\n    \"labeled_packings_on_fixed_seventeen_set\": 13664325362688000\n  },\n  \"performance\": [\n    {\n      \"nodes\": 543361,\n      \"seconds\": 0.0765914770308882,\n      \"larger_clique\": false\n    },\n    {\n      \"nodes\": 691196,\n      \"seconds\": 0.03233549901051447,\n      \"larger_clique\": false\n    }\n  ],\n  \"seconds\": 3.4875541759538464\n}\n",
+      "stderr": ""
+    },
+    {
+      "job": "final optimized controls",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-2/nineteen-star-audit/controls.py",
+        "--native",
+        "scratch/pass3-ordered",
+        "--result",
+        "round-two/six-reviewer-2/nineteen-star-audit/EXPECTED.json"
+      ],
+      "returncode": 0,
+      "seconds": 1.880411,
+      "cumulative_child_peak_RSS_KiB": 23720,
+      "output": "{\n  \"status\": \"COMPLETE\",\n  \"all_four_vertex_graph_target_checks\": 256,\n  \"bit_boundary_graphs\": 8,\n  \"malformed_native_inputs_rejected\": 5,\n  \"arbitrarily_relabeled_class_checks\": 44,\n  \"malformed_packings_or_marks_rejected\": 4,\n  \"essential_m_positive_boundary\": {\n    \"blocks\": 19,\n    \"unused_point\": 16,\n    \"positive_deficits\": [\n      1,\n      1,\n      1,\n      1,\n      5\n    ],\n    \"m\": 0,\n    \"e\": 10,\n    \"h\": 5\n  }\n}\n",
+      "stderr": ""
+    }
+  ],
+  "sanitized_full_two_carrier_run": {
+    "job": "sanitized complete two-carrier audit",
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "round-two/six-reviewer-2/nineteen-star-audit/audit.py",
+      "--native",
+      "scratch/pass3-ordered-sanitize"
+    ],
+    "seconds": 2.591848,
+    "returncode": 0,
+    "cumulative_child_peak_RSS_KiB": 23360
+  },
+  "earlier_full_entrywise_comparison": {
+    "job": "independent full entrywise comparison",
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-O",
+      "round-two/six-reviewer-2/nineteen-star-audit/audit.py",
+      "--native",
+      "scratch/pass3-ordered",
+      "--author-manifest",
+      "scratch/pass3-author-star/expected.json",
+      "--author-carriers",
+      "scratch/pass3-author-reproduction/producer-carriers.json"
+    ],
+    "seconds": 2.771627,
+    "returncode": 0,
+    "cumulative_child_peak_RSS_KiB": 23360
+  },
+  "author_four_command_reproduction": {
+    "status": "COMPLETE",
+    "seconds": 12.497451,
+    "child_peak_RSS_KiB": 91804,
+    "manifest_sha256": "83adc2817c988fa4450ede02c7da09b4da857e3f1850a0b0d0dee4cfd4a24bca"
+  }
+}
