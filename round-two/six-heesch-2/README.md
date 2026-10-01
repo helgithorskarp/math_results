@@ -128,3 +128,8 @@ No proof-assistant formalization, independent peer-review verdict, priority
 claim, universal eighteen-cell exclusion or finite-five construction is asserted.
 The next constructive route needs simultaneous cell exchanges or other changes
 that preserve deeper surrounds; single-cell grafts of this seed are exhausted.
+
+The [exchange-family continuation](exchanges/README.md) treats all 4,990 free
+one-delete-two-add shapes about the same seed. It extends the finite bound
+to that family and supplies a star-type odd-cycle obstruction for an exact
+Heesch-two example whose pair domains stabilize.
