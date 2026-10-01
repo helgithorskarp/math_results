@@ -1,0 +1,8624 @@
+{
+  "agent": "six-sorting-1",
+  "cases": [
+    {
+      "C_plus_B": 42,
+      "full_boolean_wrong_port_witnesses": [
+        [
+          2,
+          1855,
+          8052,
+          1,
+          0
+        ],
+        [
+          3,
+          234,
+          7240,
+          1,
+          0
+        ],
+        [
+          4,
+          511,
+          8168,
+          0,
+          1
+        ],
+        [
+          5,
+          43,
+          6240,
+          1,
+          0
+        ],
+        [
+          6,
+          11,
+          6208,
+          1,
+          0
+        ],
+        [
+          7,
+          63,
+          7520,
+          0,
+          1
+        ],
+        [
+          8,
+          30,
+          7424,
+          1,
+          0
+        ],
+        [
+          9,
+          15,
+          7232,
+          0,
+          1
+        ],
+        [
+          10,
+          11,
+          6208,
+          0,
+          1
+        ]
+      ],
+      "inner_anchors": {
+        "high": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 160,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 36,
+                "one_maximum": 4,
+                "two_maxima": 36
+              },
+              "label": 15,
+              "port": 3,
+              "units": 64
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 20,
+                "one_maximum": 2,
+                "two_maxima": 16
+              },
+              "label": 14,
+              "port": 4,
+              "units": 32
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 40,
+                "one_maximum": 4,
+                "two_maxima": 32
+              },
+              "label": 15,
+              "port": 5,
+              "units": 64
+            }
+          ]
+        },
+        "low": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 144,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 80,
+                "one_minimum": 8,
+                "two_minima": 72
+              },
+              "label": 16,
+              "port": 0,
+              "units": 128
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 16,
+                "one_minimum": 2,
+                "two_minima": 16
+              },
+              "label": 13,
+              "port": 2,
+              "units": 16
+            }
+          ]
+        }
+      },
+      "inner_bound": 17,
+      "inner_profiles": {
+        "mixed_pair": {
+          "envelope": [
+            [
+              1,
+              8,
+              5,
+              5
+            ],
+            [
+              1,
+              16,
+              4,
+              4
+            ],
+            [
+              1,
+              32,
+              5,
+              5
+            ],
+            [
+              4,
+              8,
+              2,
+              2
+            ],
+            [
+              4,
+              16,
+              2,
+              2
+            ],
+            [
+              4,
+              32,
+              3,
+              3
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 1,
+          "records_sha256": "e72f68d259e8e4879ca2519be3d321d8eb22c7a867802b4ca8366277bf86e65d",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 96,
+            "port_classes": 6,
+            "semantic_mass": 96
+          }
+        },
+        "one_maximum": {
+          "envelope": [
+            [
+              0,
+              8,
+              2,
+              2
+            ],
+            [
+              0,
+              16,
+              1,
+              1
+            ],
+            [
+              0,
+              32,
+              2,
+              2
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 0,
+          "records_sha256": "a510f04ccd96cf07b477c2fbe87edd4f4cdf957e3c2458579bd0d55700b76ba2",
+          "summary": {
+            "maximum_deletions": 2,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 2,
+            "ordinary_mass": 10,
+            "port_classes": 3,
+            "semantic_mass": 10
+          }
+        },
+        "one_minimum": {
+          "envelope": [
+            [
+              1,
+              0,
+              3,
+              3
+            ],
+            [
+              4,
+              0,
+              1,
+              1
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 1,
+          "records_sha256": "8303b9e0b09c8a09d057ed368cea78241a322c19ca7538c92e30cbcfbf55823f",
+          "summary": {
+            "maximum_deletions": 3,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 3,
+            "ordinary_mass": 10,
+            "port_classes": 2,
+            "semantic_mass": 10
+          }
+        },
+        "two_maxima": {
+          "envelope": [
+            [
+              0,
+              10,
+              3,
+              3
+            ],
+            [
+              0,
+              12,
+              2,
+              2
+            ],
+            [
+              0,
+              24,
+              3,
+              3
+            ],
+            [
+              0,
+              40,
+              4,
+              4
+            ],
+            [
+              0,
+              48,
+              3,
+              3
+            ],
+            [
+              0,
+              96,
+              3,
+              3
+            ]
+          ],
+          "high_count": 2,
+          "low_count": 0,
+          "records_sha256": "165286303a327a8a32dfb9a6f898120a502d4b5437f4b02202e5d5cf731423b6",
+          "summary": {
+            "maximum_deletions": 4,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 4,
+            "ordinary_mass": 52,
+            "port_classes": 6,
+            "semantic_mass": 52
+          }
+        },
+        "two_minima": {
+          "envelope": [
+            [
+              3,
+              0,
+              4,
+              4
+            ],
+            [
+              5,
+              0,
+              4,
+              4
+            ],
+            [
+              17,
+              0,
+              3,
+              3
+            ],
+            [
+              65,
+              0,
+              5,
+              5
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 2,
+          "records_sha256": "b4e648ba0ae25d46274c8267bb568f07b0c38e3b1d3643a86566cb270e851f8a",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 72,
+            "port_classes": 4,
+            "semantic_mass": 72
+          }
+        }
+      },
+      "kernel_id": 2,
+      "minimum_future_marked_touches": 3,
+      "prefix32_sha256": "d7e458eb46752d648e18093e963cb524477cd27976b70abec6da8a9bfe366129",
+      "prefix_cost": 25,
+      "pruning": {
+        "input_free_wires": [
+          1,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "input_to_output_wire": [
+          0,
+          2,
+          1,
+          6,
+          5,
+          3,
+          4
+        ],
+        "outer_record": [
+          21,
+          104,
+          19,
+          7168,
+          25,
+          0,
+          0
+        ],
+        "output_free_wires": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "retained_prefix": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            6,
+            5
+          ]
+        ]
+      },
+      "target9_image": [
+        0,
+        8,
+        16,
+        24,
+        32,
+        64,
+        96,
+        128,
+        256,
+        264,
+        272,
+        274,
+        276,
+        280,
+        282,
+        284,
+        288,
+        304,
+        306,
+        312,
+        314,
+        320,
+        336,
+        338,
+        340,
+        344,
+        346,
+        348,
+        352,
+        354,
+        368,
+        370,
+        372,
+        376,
+        378,
+        379,
+        380,
+        382,
+        384,
+        392,
+        400,
+        404,
+        408,
+        412,
+        448,
+        464,
+        466,
+        468,
+        472,
+        474,
+        476,
+        477,
+        478,
+        480,
+        482,
+        496,
+        498,
+        499,
+        500,
+        502,
+        504,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511
+      ],
+      "target9_sha256": "c54c9b64783152136081d0cf11375336bb27604cc1052646c79ae1c682448a4a",
+      "total_size_lower_bound": 45,
+      "two_touch_cover": {
+        "allowed_standard_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "compatible_words": [],
+        "complete_counts_by_marked_word_length": [
+          1,
+          13,
+          170
+        ],
+        "required_initial_marked_wrong_ports": [
+          4,
+          10
+        ],
+        "root_terminal_words": [
+          {
+            "untouched_required_ports": [
+              10
+            ],
+            "word": [
+              [
+                3,
+                4
+              ],
+              [
+                2,
+                3
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "C_plus_B": 42,
+      "full_boolean_wrong_port_witnesses": [
+        [
+          2,
+          1855,
+          7924,
+          1,
+          0
+        ],
+        [
+          3,
+          234,
+          7240,
+          1,
+          0
+        ],
+        [
+          4,
+          511,
+          8168,
+          0,
+          1
+        ],
+        [
+          5,
+          43,
+          6240,
+          1,
+          0
+        ],
+        [
+          6,
+          11,
+          6208,
+          1,
+          0
+        ],
+        [
+          7,
+          30,
+          7296,
+          1,
+          0
+        ],
+        [
+          8,
+          31,
+          7360,
+          0,
+          1
+        ],
+        [
+          9,
+          15,
+          7232,
+          0,
+          1
+        ],
+        [
+          10,
+          11,
+          6208,
+          0,
+          1
+        ]
+      ],
+      "inner_anchors": {
+        "high": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 160,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 36,
+                "one_maximum": 4,
+                "two_maxima": 36
+              },
+              "label": 15,
+              "port": 3,
+              "units": 64
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 20,
+                "one_maximum": 2,
+                "two_maxima": 16
+              },
+              "label": 14,
+              "port": 5,
+              "units": 32
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 40,
+                "one_maximum": 4,
+                "two_maxima": 32
+              },
+              "label": 15,
+              "port": 6,
+              "units": 64
+            }
+          ]
+        },
+        "low": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 144,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 80,
+                "one_minimum": 8,
+                "two_minima": 72
+              },
+              "label": 16,
+              "port": 0,
+              "units": 128
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 16,
+                "one_minimum": 2,
+                "two_minima": 16
+              },
+              "label": 13,
+              "port": 2,
+              "units": 16
+            }
+          ]
+        }
+      },
+      "inner_bound": 17,
+      "inner_profiles": {
+        "mixed_pair": {
+          "envelope": [
+            [
+              1,
+              8,
+              5,
+              5
+            ],
+            [
+              1,
+              32,
+              4,
+              4
+            ],
+            [
+              1,
+              64,
+              5,
+              5
+            ],
+            [
+              4,
+              8,
+              2,
+              2
+            ],
+            [
+              4,
+              32,
+              2,
+              2
+            ],
+            [
+              4,
+              64,
+              3,
+              3
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 1,
+          "records_sha256": "345f5541023556057eeacdc1f5c4e4988156c3524b41c05621226968d37f4536",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 96,
+            "port_classes": 6,
+            "semantic_mass": 96
+          }
+        },
+        "one_maximum": {
+          "envelope": [
+            [
+              0,
+              8,
+              2,
+              2
+            ],
+            [
+              0,
+              32,
+              1,
+              1
+            ],
+            [
+              0,
+              64,
+              2,
+              2
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 0,
+          "records_sha256": "8bee3daad7f1ba74e61efd01ee66d1fa4a61fd8ce33085266399e65b0de44d08",
+          "summary": {
+            "maximum_deletions": 2,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 2,
+            "ordinary_mass": 10,
+            "port_classes": 3,
+            "semantic_mass": 10
+          }
+        },
+        "one_minimum": {
+          "envelope": [
+            [
+              1,
+              0,
+              3,
+              3
+            ],
+            [
+              4,
+              0,
+              1,
+              1
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 1,
+          "records_sha256": "8303b9e0b09c8a09d057ed368cea78241a322c19ca7538c92e30cbcfbf55823f",
+          "summary": {
+            "maximum_deletions": 3,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 3,
+            "ordinary_mass": 10,
+            "port_classes": 2,
+            "semantic_mass": 10
+          }
+        },
+        "two_maxima": {
+          "envelope": [
+            [
+              0,
+              10,
+              3,
+              3
+            ],
+            [
+              0,
+              12,
+              2,
+              2
+            ],
+            [
+              0,
+              40,
+              3,
+              3
+            ],
+            [
+              0,
+              72,
+              4,
+              4
+            ],
+            [
+              0,
+              80,
+              3,
+              3
+            ],
+            [
+              0,
+              96,
+              3,
+              3
+            ]
+          ],
+          "high_count": 2,
+          "low_count": 0,
+          "records_sha256": "afca964a71d4273ab40a8f493554887829c8eb5747453cbc112b5de70ef56d10",
+          "summary": {
+            "maximum_deletions": 4,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 4,
+            "ordinary_mass": 52,
+            "port_classes": 6,
+            "semantic_mass": 52
+          }
+        },
+        "two_minima": {
+          "envelope": [
+            [
+              3,
+              0,
+              4,
+              4
+            ],
+            [
+              5,
+              0,
+              4,
+              4
+            ],
+            [
+              17,
+              0,
+              5,
+              5
+            ],
+            [
+              33,
+              0,
+              3,
+              3
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 2,
+          "records_sha256": "7ba132f321561aa1ed854d1a877602836f24390a294d992943b654f4158ff2c3",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 72,
+            "port_classes": 4,
+            "semantic_mass": 72
+          }
+        }
+      },
+      "kernel_id": 8,
+      "minimum_future_marked_touches": 3,
+      "prefix32_sha256": "b20941dcf1a73a703a42b1c6dc55cbaecad08190b0f4094625075f670af781e5",
+      "prefix_cost": 25,
+      "pruning": {
+        "input_free_wires": [
+          1,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "input_to_output_wire": [
+          0,
+          2,
+          1,
+          5,
+          6,
+          3,
+          4
+        ],
+        "outer_record": [
+          21,
+          104,
+          19,
+          7168,
+          25,
+          0,
+          0
+        ],
+        "output_free_wires": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "retained_prefix": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            6
+          ]
+        ]
+      },
+      "target9_image": [
+        0,
+        8,
+        16,
+        24,
+        32,
+        128,
+        160,
+        256,
+        264,
+        272,
+        274,
+        276,
+        280,
+        282,
+        284,
+        288,
+        304,
+        308,
+        312,
+        316,
+        320,
+        336,
+        338,
+        344,
+        346,
+        348,
+        384,
+        392,
+        400,
+        402,
+        404,
+        408,
+        410,
+        412,
+        416,
+        418,
+        432,
+        434,
+        436,
+        440,
+        442,
+        443,
+        444,
+        445,
+        446,
+        448,
+        464,
+        466,
+        468,
+        472,
+        474,
+        476,
+        478,
+        480,
+        482,
+        496,
+        498,
+        499,
+        500,
+        502,
+        504,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511
+      ],
+      "target9_sha256": "7e12eeceeeffc5301f21352d6a00f47fb681b77771bf1747497fb16daa3ff907",
+      "total_size_lower_bound": 45,
+      "two_touch_cover": {
+        "allowed_standard_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "compatible_words": [],
+        "complete_counts_by_marked_word_length": [
+          1,
+          13,
+          170
+        ],
+        "required_initial_marked_wrong_ports": [
+          4,
+          10
+        ],
+        "root_terminal_words": [
+          {
+            "untouched_required_ports": [
+              10
+            ],
+            "word": [
+              [
+                3,
+                4
+              ],
+              [
+                2,
+                3
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "C_plus_B": 42,
+      "full_boolean_wrong_port_witnesses": [
+        [
+          2,
+          1855,
+          7924,
+          1,
+          0
+        ],
+        [
+          3,
+          234,
+          6792,
+          1,
+          0
+        ],
+        [
+          4,
+          511,
+          8168,
+          0,
+          1
+        ],
+        [
+          5,
+          14,
+          6176,
+          1,
+          0
+        ],
+        [
+          6,
+          63,
+          7776,
+          1,
+          0
+        ],
+        [
+          7,
+          63,
+          7776,
+          0,
+          1
+        ],
+        [
+          8,
+          31,
+          7712,
+          0,
+          1
+        ],
+        [
+          9,
+          7,
+          6656,
+          1,
+          0
+        ],
+        [
+          10,
+          7,
+          6656,
+          0,
+          1
+        ]
+      ],
+      "inner_anchors": {
+        "high": {
+          "base": 9,
+          "lower_bound": 16,
+          "normalized_mass": 128,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 40,
+                "one_maximum": 4,
+                "two_maxima": 40
+              },
+              "label": 15,
+              "port": 4,
+              "units": 64
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 20,
+                "one_maximum": 2,
+                "two_maxima": 16
+              },
+              "label": 14,
+              "port": 5,
+              "units": 32
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 16,
+                "one_maximum": 2,
+                "two_maxima": 24
+              },
+              "label": 14,
+              "port": 6,
+              "units": 32
+            }
+          ]
+        },
+        "low": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 160,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 64,
+                "one_minimum": 8,
+                "two_minima": 72
+              },
+              "label": 16,
+              "port": 0,
+              "units": 128
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 12,
+                "one_minimum": 2,
+                "two_minima": 32
+              },
+              "label": 14,
+              "port": 3,
+              "units": 32
+            }
+          ]
+        }
+      },
+      "inner_bound": 17,
+      "inner_profiles": {
+        "mixed_pair": {
+          "envelope": [
+            [
+              1,
+              16,
+              5,
+              5
+            ],
+            [
+              1,
+              32,
+              4,
+              4
+            ],
+            [
+              1,
+              64,
+              4,
+              4
+            ],
+            [
+              8,
+              16,
+              3,
+              3
+            ],
+            [
+              8,
+              32,
+              2,
+              2
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 1,
+          "records_sha256": "0da5514016ec36fce56dbcf42f35d75b3782d9d87f41cf2e39a7b51384c26ab8",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 76,
+            "port_classes": 5,
+            "semantic_mass": 76
+          }
+        },
+        "one_maximum": {
+          "envelope": [
+            [
+              0,
+              16,
+              2,
+              2
+            ],
+            [
+              0,
+              32,
+              1,
+              1
+            ],
+            [
+              0,
+              64,
+              1,
+              1
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 0,
+          "records_sha256": "7d07f01f330bf7782e2c5ede71993f066cf42945617436b1e2326b9bab38b40c",
+          "summary": {
+            "maximum_deletions": 2,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 2,
+            "ordinary_mass": 8,
+            "port_classes": 3,
+            "semantic_mass": 8
+          }
+        },
+        "one_minimum": {
+          "envelope": [
+            [
+              1,
+              0,
+              3,
+              3
+            ],
+            [
+              8,
+              0,
+              1,
+              1
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 1,
+          "records_sha256": "d560c618d7ac54c30a981811415f4ea788e92366df15868664b6d77424cb4229",
+          "summary": {
+            "maximum_deletions": 3,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 3,
+            "ordinary_mass": 10,
+            "port_classes": 2,
+            "semantic_mass": 10
+          }
+        },
+        "two_maxima": {
+          "envelope": [
+            [
+              0,
+              18,
+              3,
+              3
+            ],
+            [
+              0,
+              20,
+              3,
+              3
+            ],
+            [
+              0,
+              48,
+              3,
+              3
+            ],
+            [
+              0,
+              80,
+              4,
+              4
+            ],
+            [
+              0,
+              96,
+              3,
+              3
+            ]
+          ],
+          "high_count": 2,
+          "low_count": 0,
+          "records_sha256": "ad57a7418636a7ecfc331122c52f459b5d0246b4fcc02928d3b962ceca07e482",
+          "summary": {
+            "maximum_deletions": 4,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 4,
+            "ordinary_mass": 48,
+            "port_classes": 5,
+            "semantic_mass": 48
+          }
+        },
+        "two_minima": {
+          "envelope": [
+            [
+              3,
+              0,
+              4,
+              4
+            ],
+            [
+              5,
+              0,
+              4,
+              4
+            ],
+            [
+              9,
+              0,
+              5,
+              5
+            ],
+            [
+              33,
+              0,
+              3,
+              3
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 2,
+          "records_sha256": "c22218c1cf0d9c060befcd2772980f237351e657cc7607d1588937f57e30fa45",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 72,
+            "port_classes": 4,
+            "semantic_mass": 72
+          }
+        }
+      },
+      "kernel_id": 15,
+      "minimum_future_marked_touches": 3,
+      "prefix32_sha256": "34c102aa0caad09e78ee38d82cca65a6c40a78f942896dae1be6cd13d31689e3",
+      "prefix_cost": 25,
+      "pruning": {
+        "input_free_wires": [
+          1,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "input_to_output_wire": [
+          0,
+          2,
+          1,
+          5,
+          6,
+          3,
+          4
+        ],
+        "outer_record": [
+          21,
+          104,
+          19,
+          6656,
+          25,
+          0,
+          0
+        ],
+        "output_free_wires": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          10
+        ],
+        "retained_prefix": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "target9_image": [
+        0,
+        8,
+        32,
+        40,
+        128,
+        136,
+        144,
+        160,
+        162,
+        168,
+        170,
+        176,
+        192,
+        224,
+        226,
+        232,
+        234,
+        256,
+        272,
+        384,
+        388,
+        392,
+        396,
+        400,
+        404,
+        408,
+        412,
+        416,
+        418,
+        420,
+        424,
+        426,
+        428,
+        432,
+        434,
+        436,
+        440,
+        442,
+        443,
+        444,
+        445,
+        446,
+        448,
+        464,
+        468,
+        480,
+        482,
+        484,
+        488,
+        490,
+        491,
+        492,
+        494,
+        496,
+        498,
+        500,
+        502,
+        504,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511
+      ],
+      "target9_sha256": "818ed2b1bb1b0f0fb89164a3f900e1147ce16f7922f6cbd2d9cf3dea35cfd876",
+      "total_size_lower_bound": 45,
+      "two_touch_cover": {
+        "allowed_standard_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "compatible_words": [],
+        "complete_counts_by_marked_word_length": [
+          1,
+          13,
+          170
+        ],
+        "required_initial_marked_wrong_ports": [
+          4,
+          9
+        ],
+        "root_terminal_words": []
+      }
+    },
+    {
+      "C_plus_B": 42,
+      "full_boolean_wrong_port_witnesses": [
+        [
+          2,
+          1855,
+          8148,
+          1,
+          0
+        ],
+        [
+          3,
+          234,
+          7208,
+          1,
+          0
+        ],
+        [
+          4,
+          511,
+          8168,
+          0,
+          1
+        ],
+        [
+          5,
+          106,
+          7200,
+          1,
+          0
+        ],
+        [
+          6,
+          45,
+          6336,
+          1,
+          0
+        ],
+        [
+          7,
+          7,
+          6272,
+          1,
+          0
+        ],
+        [
+          8,
+          30,
+          7424,
+          1,
+          0
+        ],
+        [
+          9,
+          15,
+          7296,
+          0,
+          1
+        ],
+        [
+          10,
+          7,
+          6272,
+          0,
+          1
+        ]
+      ],
+      "inner_anchors": {
+        "high": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 160,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 20,
+                "one_maximum": 2,
+                "two_maxima": 20
+              },
+              "label": 14,
+              "port": 2,
+              "units": 32
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 36,
+                "one_maximum": 4,
+                "two_maxima": 28
+              },
+              "label": 15,
+              "port": 4,
+              "units": 64
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 40,
+                "one_maximum": 4,
+                "two_maxima": 32
+              },
+              "label": 15,
+              "port": 5,
+              "units": 64
+            }
+          ]
+        },
+        "low": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 144,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 80,
+                "one_minimum": 8,
+                "two_minima": 68
+              },
+              "label": 16,
+              "port": 0,
+              "units": 128
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 16,
+                "one_minimum": 2,
+                "two_minima": 16
+              },
+              "label": 13,
+              "port": 3,
+              "units": 16
+            }
+          ]
+        }
+      },
+      "inner_bound": 17,
+      "inner_profiles": {
+        "mixed_pair": {
+          "envelope": [
+            [
+              1,
+              4,
+              4,
+              4
+            ],
+            [
+              1,
+              16,
+              5,
+              5
+            ],
+            [
+              1,
+              32,
+              5,
+              5
+            ],
+            [
+              8,
+              4,
+              2,
+              2
+            ],
+            [
+              8,
+              16,
+              2,
+              2
+            ],
+            [
+              8,
+              32,
+              3,
+              3
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 1,
+          "records_sha256": "a7a80ed74eba48e91832c5a4c198e7c497b8f9b683fd654880b0d867b6423ed4",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 96,
+            "port_classes": 6,
+            "semantic_mass": 96
+          }
+        },
+        "one_maximum": {
+          "envelope": [
+            [
+              0,
+              4,
+              1,
+              1
+            ],
+            [
+              0,
+              16,
+              2,
+              2
+            ],
+            [
+              0,
+              32,
+              2,
+              2
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 0,
+          "records_sha256": "9b90f7060007da834c829778e1b86230cb49b12f0b3a065a2cc150235dabc792",
+          "summary": {
+            "maximum_deletions": 2,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 2,
+            "ordinary_mass": 10,
+            "port_classes": 3,
+            "semantic_mass": 10
+          }
+        },
+        "one_minimum": {
+          "envelope": [
+            [
+              1,
+              0,
+              3,
+              3
+            ],
+            [
+              8,
+              0,
+              1,
+              1
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 1,
+          "records_sha256": "d560c618d7ac54c30a981811415f4ea788e92366df15868664b6d77424cb4229",
+          "summary": {
+            "maximum_deletions": 3,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 3,
+            "ordinary_mass": 10,
+            "port_classes": 2,
+            "semantic_mass": 10
+          }
+        },
+        "two_maxima": {
+          "envelope": [
+            [
+              0,
+              6,
+              2,
+              2
+            ],
+            [
+              0,
+              20,
+              3,
+              3
+            ],
+            [
+              0,
+              24,
+              2,
+              2
+            ],
+            [
+              0,
+              36,
+              3,
+              3
+            ],
+            [
+              0,
+              48,
+              4,
+              4
+            ],
+            [
+              0,
+              96,
+              3,
+              3
+            ]
+          ],
+          "high_count": 2,
+          "low_count": 0,
+          "records_sha256": "0f5315f103c6c4f05846815b1b020d39143b41220e84f2de5e4fbc5dece7743c",
+          "summary": {
+            "maximum_deletions": 4,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 4,
+            "ordinary_mass": 48,
+            "port_classes": 6,
+            "semantic_mass": 48
+          }
+        },
+        "two_minima": {
+          "envelope": [
+            [
+              3,
+              0,
+              4,
+              4
+            ],
+            [
+              5,
+              0,
+              2,
+              2
+            ],
+            [
+              9,
+              0,
+              4,
+              4
+            ],
+            [
+              65,
+              0,
+              5,
+              5
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 2,
+          "records_sha256": "fbad71041db23581dac84fa0be3be439caede7699351279b33fd922e1da0b035",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 68,
+            "port_classes": 4,
+            "semantic_mass": 68
+          }
+        }
+      },
+      "kernel_id": 20,
+      "minimum_future_marked_touches": 3,
+      "prefix32_sha256": "6600ddd20a184e405794b60a239e56bd3039d2dc2c29d3eac492b10111e31599",
+      "prefix_cost": 25,
+      "pruning": {
+        "input_free_wires": [
+          1,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "input_to_output_wire": [
+          0,
+          2,
+          1,
+          6,
+          5,
+          3,
+          4
+        ],
+        "outer_record": [
+          21,
+          104,
+          19,
+          7168,
+          25,
+          0,
+          0
+        ],
+        "output_free_wires": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "retained_prefix": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            5
+          ]
+        ]
+      },
+      "target9_image": [
+        0,
+        8,
+        32,
+        48,
+        64,
+        128,
+        192,
+        256,
+        264,
+        266,
+        288,
+        292,
+        296,
+        298,
+        304,
+        308,
+        312,
+        314,
+        320,
+        328,
+        330,
+        352,
+        354,
+        356,
+        360,
+        362,
+        364,
+        368,
+        370,
+        372,
+        376,
+        378,
+        379,
+        380,
+        382,
+        384,
+        416,
+        420,
+        432,
+        436,
+        448,
+        452,
+        456,
+        458,
+        460,
+        480,
+        482,
+        484,
+        488,
+        490,
+        491,
+        492,
+        494,
+        496,
+        498,
+        500,
+        501,
+        502,
+        504,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511
+      ],
+      "target9_sha256": "9df9de38c76f22bfbe0ae9f6eb07b0b31d66cc1bb6e970746ab3765b21b8ad81",
+      "total_size_lower_bound": 45,
+      "two_touch_cover": {
+        "allowed_standard_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "compatible_words": [],
+        "complete_counts_by_marked_word_length": [
+          1,
+          13,
+          170
+        ],
+        "required_initial_marked_wrong_ports": [
+          4,
+          10
+        ],
+        "root_terminal_words": [
+          {
+            "untouched_required_ports": [
+              10
+            ],
+            "word": [
+              [
+                3,
+                4
+              ],
+              [
+                2,
+                3
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "C_plus_B": 42,
+      "full_boolean_wrong_port_witnesses": [
+        [
+          2,
+          1855,
+          8148,
+          1,
+          0
+        ],
+        [
+          3,
+          234,
+          6696,
+          1,
+          0
+        ],
+        [
+          4,
+          511,
+          8168,
+          0,
+          1
+        ],
+        [
+          5,
+          106,
+          6688,
+          1,
+          0
+        ],
+        [
+          6,
+          63,
+          8000,
+          1,
+          0
+        ],
+        [
+          7,
+          63,
+          8000,
+          0,
+          1
+        ],
+        [
+          8,
+          14,
+          6400,
+          1,
+          0
+        ],
+        [
+          9,
+          7,
+          6656,
+          1,
+          0
+        ],
+        [
+          10,
+          7,
+          6656,
+          0,
+          1
+        ]
+      ],
+      "inner_anchors": {
+        "high": {
+          "base": 9,
+          "lower_bound": 16,
+          "normalized_mass": 128,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 20,
+                "one_maximum": 2,
+                "two_maxima": 16
+              },
+              "label": 14,
+              "port": 2,
+              "units": 32
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 40,
+                "one_maximum": 4,
+                "two_maxima": 32
+              },
+              "label": 15,
+              "port": 5,
+              "units": 64
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 16,
+                "one_maximum": 2,
+                "two_maxima": 20
+              },
+              "label": 14,
+              "port": 6,
+              "units": 32
+            }
+          ]
+        },
+        "low": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 160,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 64,
+                "one_minimum": 8,
+                "two_minima": 68
+              },
+              "label": 16,
+              "port": 0,
+              "units": 128
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 12,
+                "one_minimum": 2,
+                "two_minima": 32
+              },
+              "label": 14,
+              "port": 3,
+              "units": 32
+            }
+          ]
+        }
+      },
+      "inner_bound": 17,
+      "inner_profiles": {
+        "mixed_pair": {
+          "envelope": [
+            [
+              1,
+              4,
+              4,
+              4
+            ],
+            [
+              1,
+              32,
+              5,
+              5
+            ],
+            [
+              1,
+              64,
+              4,
+              4
+            ],
+            [
+              8,
+              4,
+              2,
+              2
+            ],
+            [
+              8,
+              32,
+              3,
+              3
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 1,
+          "records_sha256": "d93cbad6ec718c2adc3f4eef790e5fbd9e901af57e4b94057d5fd74325dd71f5",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 76,
+            "port_classes": 5,
+            "semantic_mass": 76
+          }
+        },
+        "one_maximum": {
+          "envelope": [
+            [
+              0,
+              4,
+              1,
+              1
+            ],
+            [
+              0,
+              32,
+              2,
+              2
+            ],
+            [
+              0,
+              64,
+              1,
+              1
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 0,
+          "records_sha256": "40184c33191b2d39a9591ed938189a3f5a8a36f69313e65bfdb410052c5d9f36",
+          "summary": {
+            "maximum_deletions": 2,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 2,
+            "ordinary_mass": 8,
+            "port_classes": 3,
+            "semantic_mass": 8
+          }
+        },
+        "one_minimum": {
+          "envelope": [
+            [
+              1,
+              0,
+              3,
+              3
+            ],
+            [
+              8,
+              0,
+              1,
+              1
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 1,
+          "records_sha256": "d560c618d7ac54c30a981811415f4ea788e92366df15868664b6d77424cb4229",
+          "summary": {
+            "maximum_deletions": 3,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 3,
+            "ordinary_mass": 10,
+            "port_classes": 2,
+            "semantic_mass": 10
+          }
+        },
+        "two_maxima": {
+          "envelope": [
+            [
+              0,
+              6,
+              2,
+              2
+            ],
+            [
+              0,
+              36,
+              3,
+              3
+            ],
+            [
+              0,
+              48,
+              3,
+              3
+            ],
+            [
+              0,
+              68,
+              2,
+              2
+            ],
+            [
+              0,
+              96,
+              4,
+              4
+            ]
+          ],
+          "high_count": 2,
+          "low_count": 0,
+          "records_sha256": "6e320c66c3fbca49de328a20a2ea060901cbb4dd6815c6e1fc317117a5b7b0a3",
+          "summary": {
+            "maximum_deletions": 4,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 4,
+            "ordinary_mass": 40,
+            "port_classes": 5,
+            "semantic_mass": 40
+          }
+        },
+        "two_minima": {
+          "envelope": [
+            [
+              3,
+              0,
+              4,
+              4
+            ],
+            [
+              5,
+              0,
+              2,
+              2
+            ],
+            [
+              9,
+              0,
+              5,
+              5
+            ],
+            [
+              17,
+              0,
+              4,
+              4
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 2,
+          "records_sha256": "854becd3181314174b9d62a028af2a6da4e34136c79192f5933e182024601067",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 68,
+            "port_classes": 4,
+            "semantic_mass": 68
+          }
+        }
+      },
+      "kernel_id": 24,
+      "minimum_future_marked_touches": 3,
+      "prefix32_sha256": "ed76957e1e4bccc8bf5a7b1a90079e0a5558b1940bc57bbc9c96f800c308a2cc",
+      "prefix_cost": 25,
+      "pruning": {
+        "input_free_wires": [
+          1,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "input_to_output_wire": [
+          0,
+          2,
+          1,
+          5,
+          6,
+          3,
+          4
+        ],
+        "outer_record": [
+          21,
+          104,
+          19,
+          6656,
+          25,
+          0,
+          0
+        ],
+        "output_free_wires": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          10
+        ],
+        "retained_prefix": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "target9_image": [
+        0,
+        8,
+        64,
+        72,
+        128,
+        136,
+        138,
+        144,
+        160,
+        192,
+        200,
+        202,
+        208,
+        224,
+        232,
+        234,
+        256,
+        272,
+        384,
+        388,
+        392,
+        394,
+        400,
+        404,
+        408,
+        410,
+        416,
+        420,
+        432,
+        436,
+        448,
+        450,
+        452,
+        456,
+        458,
+        460,
+        464,
+        466,
+        468,
+        472,
+        474,
+        475,
+        476,
+        478,
+        480,
+        482,
+        484,
+        488,
+        490,
+        491,
+        492,
+        494,
+        496,
+        498,
+        500,
+        501,
+        502,
+        504,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511
+      ],
+      "target9_sha256": "1ecfed6a2f2aa690595b26d32b1df916b977c2bfb484064c76831dbff8166684",
+      "total_size_lower_bound": 45,
+      "two_touch_cover": {
+        "allowed_standard_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "compatible_words": [],
+        "complete_counts_by_marked_word_length": [
+          1,
+          13,
+          170
+        ],
+        "required_initial_marked_wrong_ports": [
+          4,
+          9
+        ],
+        "root_terminal_words": []
+      }
+    },
+    {
+      "C_plus_B": 42,
+      "full_boolean_wrong_port_witnesses": [
+        [
+          2,
+          1855,
+          8116,
+          1,
+          0
+        ],
+        [
+          3,
+          234,
+          7688,
+          1,
+          0
+        ],
+        [
+          4,
+          511,
+          8168,
+          0,
+          1
+        ],
+        [
+          5,
+          255,
+          8136,
+          0,
+          1
+        ],
+        [
+          6,
+          105,
+          7232,
+          1,
+          0
+        ],
+        [
+          7,
+          30,
+          7296,
+          1,
+          0
+        ],
+        [
+          8,
+          31,
+          7808,
+          0,
+          1
+        ],
+        [
+          9,
+          11,
+          6656,
+          1,
+          0
+        ],
+        [
+          10,
+          11,
+          6656,
+          0,
+          1
+        ]
+      ],
+      "inner_anchors": {
+        "high": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 136,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 8,
+                "one_maximum": 1,
+                "two_maxima": 8
+              },
+              "label": 12,
+              "port": 3,
+              "units": 8
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 36,
+                "one_maximum": 4,
+                "two_maxima": 28
+              },
+              "label": 15,
+              "port": 5,
+              "units": 64
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 36,
+                "one_maximum": 4,
+                "two_maxima": 36
+              },
+              "label": 15,
+              "port": 6,
+              "units": 64
+            }
+          ]
+        },
+        "low": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 136,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 72,
+                "one_minimum": 8,
+                "two_minima": 72
+              },
+              "label": 16,
+              "port": 0,
+              "units": 128
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 8,
+                "one_minimum": 1,
+                "two_minima": 8
+              },
+              "label": 12,
+              "port": 3,
+              "units": 8
+            }
+          ]
+        }
+      },
+      "inner_bound": 17,
+      "inner_profiles": {
+        "mixed_pair": {
+          "envelope": [
+            [
+              1,
+              8,
+              3,
+              3
+            ],
+            [
+              1,
+              32,
+              5,
+              5
+            ],
+            [
+              1,
+              64,
+              5,
+              5
+            ],
+            [
+              8,
+              32,
+              2,
+              2
+            ],
+            [
+              8,
+              64,
+              2,
+              2
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 1,
+          "records_sha256": "6b9b2cd5a4b9033b0f168c328908dc6dc0b1a7683bd210565428100ef80192a9",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 80,
+            "port_classes": 5,
+            "semantic_mass": 80
+          }
+        },
+        "one_maximum": {
+          "envelope": [
+            [
+              0,
+              8,
+              0,
+              0
+            ],
+            [
+              0,
+              32,
+              2,
+              2
+            ],
+            [
+              0,
+              64,
+              2,
+              2
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 0,
+          "records_sha256": "2bac438c604416c31c4105101ed34c2f2ca72b01a36c002ae44dd90b2fece200",
+          "summary": {
+            "maximum_deletions": 2,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 2,
+            "ordinary_mass": 9,
+            "port_classes": 3,
+            "semantic_mass": 9
+          }
+        },
+        "one_minimum": {
+          "envelope": [
+            [
+              1,
+              0,
+              3,
+              3
+            ],
+            [
+              8,
+              0,
+              0,
+              0
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 1,
+          "records_sha256": "7e96f388423d93d86d5c890241b201d9149978a4d25ebe2b1f9f22c1c5858bef",
+          "summary": {
+            "maximum_deletions": 3,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 3,
+            "ordinary_mass": 9,
+            "port_classes": 2,
+            "semantic_mass": 9
+          }
+        },
+        "two_maxima": {
+          "envelope": [
+            [
+              0,
+              40,
+              2,
+              2
+            ],
+            [
+              0,
+              48,
+              3,
+              3
+            ],
+            [
+              0,
+              66,
+              3,
+              3
+            ],
+            [
+              0,
+              68,
+              3,
+              3
+            ],
+            [
+              0,
+              72,
+              2,
+              2
+            ],
+            [
+              0,
+              96,
+              4,
+              4
+            ]
+          ],
+          "high_count": 2,
+          "low_count": 0,
+          "records_sha256": "377a535b2cd71f4479409801da882a690d229eef5dd27162c920a2023d02dae6",
+          "summary": {
+            "maximum_deletions": 4,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 4,
+            "ordinary_mass": 48,
+            "port_classes": 6,
+            "semantic_mass": 48
+          }
+        },
+        "two_minima": {
+          "envelope": [
+            [
+              3,
+              0,
+              4,
+              4
+            ],
+            [
+              5,
+              0,
+              4,
+              4
+            ],
+            [
+              9,
+              0,
+              3,
+              3
+            ],
+            [
+              17,
+              0,
+              5,
+              5
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 2,
+          "records_sha256": "5269679607eaa83f3665cf175be3ac2b529d27743a6162a8a4c376d174aa72d1",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 72,
+            "port_classes": 4,
+            "semantic_mass": 72
+          }
+        }
+      },
+      "kernel_id": 31,
+      "minimum_future_marked_touches": 3,
+      "prefix32_sha256": "3e02becdeb10a966b161890cef83fcaca0f18a668a2b7224462b476ce528a53a",
+      "prefix_cost": 25,
+      "pruning": {
+        "input_free_wires": [
+          1,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "input_to_output_wire": [
+          0,
+          2,
+          1,
+          6,
+          5,
+          3,
+          4
+        ],
+        "outer_record": [
+          21,
+          104,
+          19,
+          7168,
+          25,
+          0,
+          0
+        ],
+        "output_free_wires": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "retained_prefix": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "target9_image": [
+        0,
+        8,
+        32,
+        64,
+        96,
+        128,
+        136,
+        256,
+        264,
+        272,
+        288,
+        320,
+        328,
+        336,
+        352,
+        354,
+        368,
+        370,
+        384,
+        386,
+        388,
+        392,
+        394,
+        396,
+        400,
+        402,
+        408,
+        410,
+        412,
+        416,
+        420,
+        424,
+        428,
+        448,
+        450,
+        452,
+        456,
+        458,
+        460,
+        464,
+        466,
+        468,
+        472,
+        474,
+        476,
+        478,
+        480,
+        482,
+        484,
+        488,
+        490,
+        491,
+        492,
+        493,
+        494,
+        496,
+        498,
+        499,
+        500,
+        502,
+        504,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511
+      ],
+      "target9_sha256": "0d569076aa1472915e4d2efbcb933485bc46e2eac9fa948f70964270314a1803",
+      "total_size_lower_bound": 45,
+      "two_touch_cover": {
+        "allowed_standard_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "compatible_words": [],
+        "complete_counts_by_marked_word_length": [
+          1,
+          13,
+          170
+        ],
+        "required_initial_marked_wrong_ports": [
+          4,
+          10
+        ],
+        "root_terminal_words": [
+          {
+            "untouched_required_ports": [
+              10
+            ],
+            "word": [
+              [
+                3,
+                4
+              ],
+              [
+                2,
+                3
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "C_plus_B": 42,
+      "full_boolean_wrong_port_witnesses": [
+        [
+          2,
+          1855,
+          8116,
+          1,
+          0
+        ],
+        [
+          3,
+          234,
+          7432,
+          1,
+          0
+        ],
+        [
+          4,
+          511,
+          8168,
+          0,
+          1
+        ],
+        [
+          5,
+          255,
+          8136,
+          0,
+          1
+        ],
+        [
+          6,
+          105,
+          6464,
+          1,
+          0
+        ],
+        [
+          7,
+          30,
+          6784,
+          1,
+          0
+        ],
+        [
+          8,
+          31,
+          7808,
+          0,
+          1
+        ],
+        [
+          9,
+          14,
+          6656,
+          1,
+          0
+        ],
+        [
+          10,
+          14,
+          6656,
+          0,
+          1
+        ]
+      ],
+      "inner_anchors": {
+        "high": {
+          "base": 9,
+          "lower_bound": 18,
+          "normalized_mass": 320,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 36,
+                "one_maximum": 2,
+                "two_maxima": 24
+              },
+              "label": 15,
+              "port": 2,
+              "units": 64
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 72,
+                "one_maximum": 8,
+                "two_maxima": 72
+              },
+              "label": 16,
+              "port": 5,
+              "units": 128
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 72,
+                "one_maximum": 4,
+                "two_maxima": 48
+              },
+              "label": 16,
+              "port": 6,
+              "units": 128
+            }
+          ]
+        },
+        "low": {
+          "base": 9,
+          "lower_bound": 18,
+          "normalized_mass": 288,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 160,
+                "one_minimum": 16,
+                "two_minima": 144
+              },
+              "label": 17,
+              "port": 0,
+              "units": 256
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 20,
+                "one_minimum": 2,
+                "two_minima": 32
+              },
+              "label": 14,
+              "port": 3,
+              "units": 32
+            }
+          ]
+        }
+      },
+      "inner_bound": 18,
+      "inner_profiles": {
+        "mixed_pair": {
+          "envelope": [
+            [
+              1,
+              4,
+              5,
+              5
+            ],
+            [
+              1,
+              32,
+              6,
+              6
+            ],
+            [
+              1,
+              64,
+              6,
+              6
+            ],
+            [
+              8,
+              4,
+              2,
+              2
+            ],
+            [
+              8,
+              32,
+              3,
+              3
+            ],
+            [
+              8,
+              64,
+              3,
+              3
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 1,
+          "records_sha256": "9e85c2c8fb870b9aa820b919acd7595a5857d2a5aaafe925313eeaf68f8de781",
+          "summary": {
+            "maximum_deletions": 6,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 6,
+            "ordinary_mass": 180,
+            "port_classes": 6,
+            "semantic_mass": 180
+          }
+        },
+        "one_maximum": {
+          "envelope": [
+            [
+              0,
+              4,
+              1,
+              1
+            ],
+            [
+              0,
+              32,
+              3,
+              3
+            ],
+            [
+              0,
+              64,
+              2,
+              2
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 0,
+          "records_sha256": "bba387910de0b23093eb75a56ab9e82e8b858bfedddd5e159aa91f064a5e7cd7",
+          "summary": {
+            "maximum_deletions": 3,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 3,
+            "ordinary_mass": 14,
+            "port_classes": 3,
+            "semantic_mass": 14
+          }
+        },
+        "one_minimum": {
+          "envelope": [
+            [
+              1,
+              0,
+              4,
+              4
+            ],
+            [
+              8,
+              0,
+              1,
+              1
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 1,
+          "records_sha256": "a0bde0812d916e8389befc80a1551077a052b0adb210c3d4f913a73b5f67894c",
+          "summary": {
+            "maximum_deletions": 4,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 4,
+            "ordinary_mass": 18,
+            "port_classes": 2,
+            "semantic_mass": 18
+          }
+        },
+        "two_maxima": {
+          "envelope": [
+            [
+              0,
+              34,
+              4,
+              4
+            ],
+            [
+              0,
+              36,
+              4,
+              4
+            ],
+            [
+              0,
+              40,
+              3,
+              3
+            ],
+            [
+              0,
+              68,
+              3,
+              3
+            ],
+            [
+              0,
+              80,
+              3,
+              3
+            ],
+            [
+              0,
+              96,
+              5,
+              5
+            ]
+          ],
+          "high_count": 2,
+          "low_count": 0,
+          "records_sha256": "2acab29bf7d0d1891c60e2dfac25d2a414e4925d62d22a8ead8b5f19cfa68640",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 88,
+            "port_classes": 6,
+            "semantic_mass": 88
+          }
+        },
+        "two_minima": {
+          "envelope": [
+            [
+              3,
+              0,
+              5,
+              5
+            ],
+            [
+              5,
+              0,
+              4,
+              4
+            ],
+            [
+              9,
+              0,
+              5,
+              5
+            ],
+            [
+              17,
+              0,
+              6,
+              6
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 2,
+          "records_sha256": "6bb429bb1c1d17561f8e6657cffc016716a0817424fbd0b08954d5ae91ba653b",
+          "summary": {
+            "maximum_deletions": 6,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 6,
+            "ordinary_mass": 144,
+            "port_classes": 4,
+            "semantic_mass": 144
+          }
+        }
+      },
+      "kernel_id": 32,
+      "minimum_future_marked_touches": 3,
+      "prefix32_sha256": "9e88c669447edc03b84fc56ed742fa85e55ea3c396abce995d5c2a3f07709b2d",
+      "prefix_cost": 24,
+      "pruning": {
+        "input_free_wires": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "input_to_output_wire": [
+          1,
+          0,
+          5,
+          2,
+          6,
+          3,
+          4
+        ],
+        "outer_record": [
+          21,
+          42,
+          19,
+          7168,
+          24,
+          0,
+          0
+        ],
+        "output_free_wires": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "retained_prefix": [
+          [
+            5,
+            2
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            6
+          ]
+        ]
+      },
+      "target9_image": [
+        0,
+        8,
+        32,
+        64,
+        80,
+        128,
+        136,
+        160,
+        256,
+        264,
+        288,
+        320,
+        322,
+        324,
+        328,
+        330,
+        332,
+        336,
+        338,
+        344,
+        346,
+        348,
+        352,
+        354,
+        368,
+        370,
+        384,
+        392,
+        396,
+        416,
+        420,
+        424,
+        428,
+        448,
+        450,
+        452,
+        456,
+        458,
+        460,
+        464,
+        466,
+        468,
+        472,
+        474,
+        476,
+        478,
+        480,
+        482,
+        484,
+        488,
+        490,
+        491,
+        492,
+        493,
+        494,
+        496,
+        498,
+        499,
+        500,
+        502,
+        504,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511
+      ],
+      "target9_sha256": "e7db8299adb22e6ca60234b486aec44e02ff138dc1ff00bbfb48fa17458324fa",
+      "total_size_lower_bound": 45,
+      "two_touch_cover": {
+        "allowed_standard_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "compatible_words": [],
+        "complete_counts_by_marked_word_length": [
+          1,
+          13,
+          170
+        ],
+        "required_initial_marked_wrong_ports": [
+          4,
+          10
+        ],
+        "root_terminal_words": [
+          {
+            "untouched_required_ports": [
+              10
+            ],
+            "word": [
+              [
+                3,
+                4
+              ],
+              [
+                2,
+                3
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "C_plus_B": 42,
+      "full_boolean_wrong_port_witnesses": [
+        [
+          2,
+          1855,
+          8052,
+          1,
+          0
+        ],
+        [
+          3,
+          234,
+          6920,
+          1,
+          0
+        ],
+        [
+          4,
+          511,
+          8168,
+          0,
+          1
+        ],
+        [
+          5,
+          255,
+          8136,
+          0,
+          1
+        ],
+        [
+          6,
+          63,
+          8000,
+          1,
+          0
+        ],
+        [
+          7,
+          63,
+          8000,
+          0,
+          1
+        ],
+        [
+          8,
+          14,
+          6400,
+          1,
+          0
+        ],
+        [
+          9,
+          7,
+          6656,
+          1,
+          0
+        ],
+        [
+          10,
+          7,
+          6656,
+          0,
+          1
+        ]
+      ],
+      "inner_anchors": {
+        "high": {
+          "base": 9,
+          "lower_bound": 16,
+          "normalized_mass": 128,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 20,
+                "one_maximum": 2,
+                "two_maxima": 16
+              },
+              "label": 14,
+              "port": 4,
+              "units": 32
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 40,
+                "one_maximum": 4,
+                "two_maxima": 40
+              },
+              "label": 15,
+              "port": 5,
+              "units": 64
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 16,
+                "one_maximum": 2,
+                "two_maxima": 24
+              },
+              "label": 14,
+              "port": 6,
+              "units": 32
+            }
+          ]
+        },
+        "low": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 160,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 64,
+                "one_minimum": 8,
+                "two_minima": 72
+              },
+              "label": 16,
+              "port": 0,
+              "units": 128
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 12,
+                "one_minimum": 2,
+                "two_minima": 32
+              },
+              "label": 14,
+              "port": 3,
+              "units": 32
+            }
+          ]
+        }
+      },
+      "inner_bound": 17,
+      "inner_profiles": {
+        "mixed_pair": {
+          "envelope": [
+            [
+              1,
+              16,
+              4,
+              4
+            ],
+            [
+              1,
+              32,
+              5,
+              5
+            ],
+            [
+              1,
+              64,
+              4,
+              4
+            ],
+            [
+              8,
+              16,
+              2,
+              2
+            ],
+            [
+              8,
+              32,
+              3,
+              3
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 1,
+          "records_sha256": "e5708262c27b3efe83cf30848936e5bb3ea246e51f601c484b8c18bba675f6ab",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 76,
+            "port_classes": 5,
+            "semantic_mass": 76
+          }
+        },
+        "one_maximum": {
+          "envelope": [
+            [
+              0,
+              16,
+              1,
+              1
+            ],
+            [
+              0,
+              32,
+              2,
+              2
+            ],
+            [
+              0,
+              64,
+              1,
+              1
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 0,
+          "records_sha256": "d7835ff20a19a962b242f975f9850707a5efaec1cbcaac0ed54b5ec03c4a3e48",
+          "summary": {
+            "maximum_deletions": 2,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 2,
+            "ordinary_mass": 8,
+            "port_classes": 3,
+            "semantic_mass": 8
+          }
+        },
+        "one_minimum": {
+          "envelope": [
+            [
+              1,
+              0,
+              3,
+              3
+            ],
+            [
+              8,
+              0,
+              1,
+              1
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 1,
+          "records_sha256": "d560c618d7ac54c30a981811415f4ea788e92366df15868664b6d77424cb4229",
+          "summary": {
+            "maximum_deletions": 3,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 3,
+            "ordinary_mass": 10,
+            "port_classes": 2,
+            "semantic_mass": 10
+          }
+        },
+        "two_maxima": {
+          "envelope": [
+            [
+              0,
+              34,
+              3,
+              3
+            ],
+            [
+              0,
+              36,
+              3,
+              3
+            ],
+            [
+              0,
+              48,
+              3,
+              3
+            ],
+            [
+              0,
+              80,
+              3,
+              3
+            ],
+            [
+              0,
+              96,
+              4,
+              4
+            ]
+          ],
+          "high_count": 2,
+          "low_count": 0,
+          "records_sha256": "c29dd2184c01f97deaf72804f55e2f5109d59e6a7af0f165547e4dff0fe8e075",
+          "summary": {
+            "maximum_deletions": 4,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 4,
+            "ordinary_mass": 48,
+            "port_classes": 5,
+            "semantic_mass": 48
+          }
+        },
+        "two_minima": {
+          "envelope": [
+            [
+              3,
+              0,
+              4,
+              4
+            ],
+            [
+              5,
+              0,
+              4,
+              4
+            ],
+            [
+              9,
+              0,
+              5,
+              5
+            ],
+            [
+              17,
+              0,
+              3,
+              3
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 2,
+          "records_sha256": "f6b081ffe713231750050f34b75a266105575688cc6447681c8222ef19bcaf0f",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 72,
+            "port_classes": 4,
+            "semantic_mass": 72
+          }
+        }
+      },
+      "kernel_id": 33,
+      "minimum_future_marked_touches": 3,
+      "prefix32_sha256": "1635bd61c3e457b553971368d2e2ab79a337fa2f9f6b8304d932c5ca809af603",
+      "prefix_cost": 25,
+      "pruning": {
+        "input_free_wires": [
+          1,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "input_to_output_wire": [
+          0,
+          2,
+          1,
+          5,
+          6,
+          3,
+          4
+        ],
+        "outer_record": [
+          21,
+          104,
+          19,
+          6656,
+          25,
+          0,
+          0
+        ],
+        "output_free_wires": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          10
+        ],
+        "retained_prefix": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "target9_image": [
+        0,
+        8,
+        32,
+        64,
+        96,
+        128,
+        136,
+        144,
+        152,
+        160,
+        192,
+        194,
+        200,
+        202,
+        224,
+        226,
+        232,
+        234,
+        256,
+        272,
+        384,
+        388,
+        392,
+        396,
+        400,
+        404,
+        408,
+        412,
+        416,
+        418,
+        432,
+        434,
+        448,
+        450,
+        452,
+        456,
+        458,
+        460,
+        464,
+        466,
+        468,
+        472,
+        474,
+        476,
+        477,
+        478,
+        480,
+        482,
+        484,
+        488,
+        490,
+        491,
+        492,
+        494,
+        496,
+        498,
+        499,
+        500,
+        502,
+        504,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511
+      ],
+      "target9_sha256": "e0f61b2fbf889f0b6a544637c464f29a29de6b9a782cde51cf0e7b6ec8416fdf",
+      "total_size_lower_bound": 45,
+      "two_touch_cover": {
+        "allowed_standard_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "compatible_words": [],
+        "complete_counts_by_marked_word_length": [
+          1,
+          13,
+          170
+        ],
+        "required_initial_marked_wrong_ports": [
+          4,
+          9
+        ],
+        "root_terminal_words": []
+      }
+    },
+    {
+      "C_plus_B": 42,
+      "full_boolean_wrong_port_witnesses": [
+        [
+          2,
+          1855,
+          8052,
+          1,
+          0
+        ],
+        [
+          3,
+          234,
+          7688,
+          1,
+          0
+        ],
+        [
+          4,
+          511,
+          8168,
+          0,
+          1
+        ],
+        [
+          5,
+          255,
+          8136,
+          0,
+          1
+        ],
+        [
+          6,
+          63,
+          8000,
+          1,
+          0
+        ],
+        [
+          7,
+          63,
+          8000,
+          0,
+          1
+        ],
+        [
+          8,
+          30,
+          7424,
+          1,
+          0
+        ],
+        [
+          9,
+          11,
+          6656,
+          1,
+          0
+        ],
+        [
+          10,
+          11,
+          6656,
+          0,
+          1
+        ]
+      ],
+      "inner_anchors": {
+        "high": {
+          "base": 9,
+          "lower_bound": 16,
+          "normalized_mass": 128,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 20,
+                "one_maximum": 2,
+                "two_maxima": 16
+              },
+              "label": 14,
+              "port": 4,
+              "units": 32
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 16,
+                "one_maximum": 2,
+                "two_maxima": 24
+              },
+              "label": 14,
+              "port": 5,
+              "units": 32
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 40,
+                "one_maximum": 4,
+                "two_maxima": 40
+              },
+              "label": 15,
+              "port": 6,
+              "units": 64
+            }
+          ]
+        },
+        "low": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 160,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 64,
+                "one_minimum": 8,
+                "two_minima": 72
+              },
+              "label": 16,
+              "port": 0,
+              "units": 128
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 12,
+                "one_minimum": 2,
+                "two_minima": 32
+              },
+              "label": 14,
+              "port": 3,
+              "units": 32
+            }
+          ]
+        }
+      },
+      "inner_bound": 17,
+      "inner_profiles": {
+        "mixed_pair": {
+          "envelope": [
+            [
+              1,
+              16,
+              4,
+              4
+            ],
+            [
+              1,
+              32,
+              4,
+              4
+            ],
+            [
+              1,
+              64,
+              5,
+              5
+            ],
+            [
+              8,
+              16,
+              2,
+              2
+            ],
+            [
+              8,
+              64,
+              3,
+              3
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 1,
+          "records_sha256": "1825fb5bb9e61345a86ba9aed6eb53e8765959541b17e93d51050c4229bff61c",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 76,
+            "port_classes": 5,
+            "semantic_mass": 76
+          }
+        },
+        "one_maximum": {
+          "envelope": [
+            [
+              0,
+              16,
+              1,
+              1
+            ],
+            [
+              0,
+              32,
+              1,
+              1
+            ],
+            [
+              0,
+              64,
+              2,
+              2
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 0,
+          "records_sha256": "3c7598f909c541cdd34af3b09c8c63cb32dbfbf94da4570a583f754dc172f3e6",
+          "summary": {
+            "maximum_deletions": 2,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 2,
+            "ordinary_mass": 8,
+            "port_classes": 3,
+            "semantic_mass": 8
+          }
+        },
+        "one_minimum": {
+          "envelope": [
+            [
+              1,
+              0,
+              3,
+              3
+            ],
+            [
+              8,
+              0,
+              1,
+              1
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 1,
+          "records_sha256": "d560c618d7ac54c30a981811415f4ea788e92366df15868664b6d77424cb4229",
+          "summary": {
+            "maximum_deletions": 3,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 3,
+            "ordinary_mass": 10,
+            "port_classes": 2,
+            "semantic_mass": 10
+          }
+        },
+        "two_maxima": {
+          "envelope": [
+            [
+              0,
+              48,
+              3,
+              3
+            ],
+            [
+              0,
+              66,
+              3,
+              3
+            ],
+            [
+              0,
+              68,
+              3,
+              3
+            ],
+            [
+              0,
+              80,
+              3,
+              3
+            ],
+            [
+              0,
+              96,
+              4,
+              4
+            ]
+          ],
+          "high_count": 2,
+          "low_count": 0,
+          "records_sha256": "bf50f266292a31869b0cd4c3fb60523ad1272252b442e600a14160b597803e8d",
+          "summary": {
+            "maximum_deletions": 4,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 4,
+            "ordinary_mass": 48,
+            "port_classes": 5,
+            "semantic_mass": 48
+          }
+        },
+        "two_minima": {
+          "envelope": [
+            [
+              3,
+              0,
+              4,
+              4
+            ],
+            [
+              5,
+              0,
+              4,
+              4
+            ],
+            [
+              9,
+              0,
+              5,
+              5
+            ],
+            [
+              17,
+              0,
+              3,
+              3
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 2,
+          "records_sha256": "ad9ef46609d27fc3abfd1ff285647021bf1a98ff8e6b1e2ffa9d05a0162710da",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 72,
+            "port_classes": 4,
+            "semantic_mass": 72
+          }
+        }
+      },
+      "kernel_id": 34,
+      "minimum_future_marked_touches": 3,
+      "prefix32_sha256": "77fd051278a0d1b1a7a446be906d34ca87c009cae5c0ed9f351bcaa655a334bd",
+      "prefix_cost": 25,
+      "pruning": {
+        "input_free_wires": [
+          1,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "input_to_output_wire": [
+          0,
+          2,
+          1,
+          6,
+          5,
+          3,
+          4
+        ],
+        "outer_record": [
+          21,
+          104,
+          19,
+          7168,
+          25,
+          0,
+          0
+        ],
+        "output_free_wires": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "retained_prefix": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "target9_image": [
+        0,
+        8,
+        32,
+        64,
+        96,
+        128,
+        136,
+        256,
+        264,
+        272,
+        280,
+        288,
+        320,
+        336,
+        352,
+        354,
+        368,
+        370,
+        384,
+        386,
+        388,
+        392,
+        394,
+        396,
+        400,
+        404,
+        408,
+        412,
+        416,
+        418,
+        424,
+        426,
+        448,
+        450,
+        452,
+        456,
+        458,
+        460,
+        464,
+        466,
+        468,
+        472,
+        474,
+        476,
+        477,
+        478,
+        480,
+        482,
+        484,
+        488,
+        490,
+        491,
+        492,
+        494,
+        496,
+        498,
+        499,
+        500,
+        502,
+        504,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511
+      ],
+      "target9_sha256": "56e9baca8d9139e096602881f8e0a69d41d8a840a6d147a9c87d3342181e9848",
+      "total_size_lower_bound": 45,
+      "two_touch_cover": {
+        "allowed_standard_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "compatible_words": [],
+        "complete_counts_by_marked_word_length": [
+          1,
+          13,
+          170
+        ],
+        "required_initial_marked_wrong_ports": [
+          4,
+          10
+        ],
+        "root_terminal_words": [
+          {
+            "untouched_required_ports": [
+              10
+            ],
+            "word": [
+              [
+                3,
+                4
+              ],
+              [
+                2,
+                3
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "C_plus_B": 42,
+      "full_boolean_wrong_port_witnesses": [
+        [
+          2,
+          1855,
+          7924,
+          1,
+          0
+        ],
+        [
+          3,
+          234,
+          7688,
+          1,
+          0
+        ],
+        [
+          4,
+          511,
+          8168,
+          0,
+          1
+        ],
+        [
+          5,
+          30,
+          6688,
+          1,
+          0
+        ],
+        [
+          6,
+          45,
+          6720,
+          1,
+          0
+        ],
+        [
+          7,
+          63,
+          7776,
+          0,
+          1
+        ],
+        [
+          8,
+          31,
+          7712,
+          0,
+          1
+        ],
+        [
+          9,
+          7,
+          6656,
+          1,
+          0
+        ],
+        [
+          10,
+          7,
+          6656,
+          0,
+          1
+        ]
+      ],
+      "inner_anchors": {
+        "high": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 160,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 36,
+                "one_maximum": 4,
+                "two_maxima": 28
+              },
+              "label": 15,
+              "port": 4,
+              "units": 64
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 20,
+                "one_maximum": 2,
+                "two_maxima": 16
+              },
+              "label": 14,
+              "port": 5,
+              "units": 32
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 40,
+                "one_maximum": 4,
+                "two_maxima": 32
+              },
+              "label": 15,
+              "port": 6,
+              "units": 64
+            }
+          ]
+        },
+        "low": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 144,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 80,
+                "one_minimum": 8,
+                "two_minima": 72
+              },
+              "label": 16,
+              "port": 0,
+              "units": 128
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 16,
+                "one_minimum": 2,
+                "two_minima": 16
+              },
+              "label": 13,
+              "port": 3,
+              "units": 16
+            }
+          ]
+        }
+      },
+      "inner_bound": 17,
+      "inner_profiles": {
+        "mixed_pair": {
+          "envelope": [
+            [
+              1,
+              16,
+              5,
+              5
+            ],
+            [
+              1,
+              32,
+              4,
+              4
+            ],
+            [
+              1,
+              64,
+              5,
+              5
+            ],
+            [
+              8,
+              16,
+              2,
+              2
+            ],
+            [
+              8,
+              32,
+              2,
+              2
+            ],
+            [
+              8,
+              64,
+              3,
+              3
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 1,
+          "records_sha256": "8756fe4bea8eb744d16805d2ca6ee3080211a77de4add847b844aec866e76b22",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 96,
+            "port_classes": 6,
+            "semantic_mass": 96
+          }
+        },
+        "one_maximum": {
+          "envelope": [
+            [
+              0,
+              16,
+              2,
+              2
+            ],
+            [
+              0,
+              32,
+              1,
+              1
+            ],
+            [
+              0,
+              64,
+              2,
+              2
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 0,
+          "records_sha256": "e834419fe0a9784b03e3ea7b2fbdd156a5d17d3dffba7f1d726213d1b70a77da",
+          "summary": {
+            "maximum_deletions": 2,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 2,
+            "ordinary_mass": 10,
+            "port_classes": 3,
+            "semantic_mass": 10
+          }
+        },
+        "one_minimum": {
+          "envelope": [
+            [
+              1,
+              0,
+              3,
+              3
+            ],
+            [
+              8,
+              0,
+              1,
+              1
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 1,
+          "records_sha256": "d560c618d7ac54c30a981811415f4ea788e92366df15868664b6d77424cb4229",
+          "summary": {
+            "maximum_deletions": 3,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 3,
+            "ordinary_mass": 10,
+            "port_classes": 2,
+            "semantic_mass": 10
+          }
+        },
+        "two_maxima": {
+          "envelope": [
+            [
+              0,
+              24,
+              2,
+              2
+            ],
+            [
+              0,
+              48,
+              3,
+              3
+            ],
+            [
+              0,
+              66,
+              3,
+              3
+            ],
+            [
+              0,
+              80,
+              4,
+              4
+            ],
+            [
+              0,
+              96,
+              3,
+              3
+            ]
+          ],
+          "high_count": 2,
+          "low_count": 0,
+          "records_sha256": "808ba38948d1b7dde7f4625fb230fb969ad30614391b802a266235dad5ad6b92",
+          "summary": {
+            "maximum_deletions": 4,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 4,
+            "ordinary_mass": 44,
+            "port_classes": 5,
+            "semantic_mass": 44
+          }
+        },
+        "two_minima": {
+          "envelope": [
+            [
+              3,
+              0,
+              4,
+              4
+            ],
+            [
+              5,
+              0,
+              5,
+              5
+            ],
+            [
+              9,
+              0,
+              4,
+              4
+            ],
+            [
+              33,
+              0,
+              3,
+              3
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 2,
+          "records_sha256": "65fce346395493dfecda884d9775b1961e4a558dde5afa1677ed3c43fae63378",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 72,
+            "port_classes": 4,
+            "semantic_mass": 72
+          }
+        }
+      },
+      "kernel_id": 36,
+      "minimum_future_marked_touches": 3,
+      "prefix32_sha256": "327b47499cdecd1e6bac04a184335b768a2f2fb223c3905a58eb68bb67816df8",
+      "prefix_cost": 25,
+      "pruning": {
+        "input_free_wires": [
+          1,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "input_to_output_wire": [
+          0,
+          2,
+          1,
+          5,
+          6,
+          3,
+          4
+        ],
+        "outer_record": [
+          21,
+          104,
+          19,
+          6656,
+          25,
+          0,
+          0
+        ],
+        "output_free_wires": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          10
+        ],
+        "retained_prefix": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "target9_image": [
+        0,
+        32,
+        128,
+        136,
+        144,
+        160,
+        164,
+        168,
+        176,
+        180,
+        192,
+        224,
+        240,
+        244,
+        256,
+        264,
+        384,
+        386,
+        392,
+        396,
+        400,
+        408,
+        412,
+        416,
+        418,
+        420,
+        424,
+        426,
+        428,
+        432,
+        434,
+        436,
+        440,
+        442,
+        443,
+        444,
+        445,
+        446,
+        448,
+        450,
+        456,
+        458,
+        460,
+        480,
+        482,
+        484,
+        488,
+        490,
+        491,
+        492,
+        494,
+        496,
+        498,
+        500,
+        502,
+        504,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511
+      ],
+      "target9_sha256": "9536f147a92e3a2e528bd9974227c24a68ca852eb708600f1794fe9583942caa",
+      "total_size_lower_bound": 45,
+      "two_touch_cover": {
+        "allowed_standard_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "compatible_words": [],
+        "complete_counts_by_marked_word_length": [
+          1,
+          13,
+          170
+        ],
+        "required_initial_marked_wrong_ports": [
+          4,
+          9
+        ],
+        "root_terminal_words": []
+      }
+    },
+    {
+      "C_plus_B": 42,
+      "full_boolean_wrong_port_witnesses": [
+        [
+          2,
+          1855,
+          7924,
+          1,
+          0
+        ],
+        [
+          3,
+          234,
+          7688,
+          1,
+          0
+        ],
+        [
+          4,
+          511,
+          8168,
+          0,
+          1
+        ],
+        [
+          5,
+          30,
+          7200,
+          1,
+          0
+        ],
+        [
+          6,
+          45,
+          6336,
+          1,
+          0
+        ],
+        [
+          7,
+          7,
+          6272,
+          1,
+          0
+        ],
+        [
+          8,
+          31,
+          7328,
+          0,
+          1
+        ],
+        [
+          9,
+          15,
+          7296,
+          0,
+          1
+        ],
+        [
+          10,
+          7,
+          6272,
+          0,
+          1
+        ]
+      ],
+      "inner_anchors": {
+        "high": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 160,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 36,
+                "one_maximum": 4,
+                "two_maxima": 28
+              },
+              "label": 15,
+              "port": 4,
+              "units": 64
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 20,
+                "one_maximum": 2,
+                "two_maxima": 16
+              },
+              "label": 14,
+              "port": 5,
+              "units": 32
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 40,
+                "one_maximum": 4,
+                "two_maxima": 32
+              },
+              "label": 15,
+              "port": 6,
+              "units": 64
+            }
+          ]
+        },
+        "low": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 144,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 80,
+                "one_minimum": 8,
+                "two_minima": 72
+              },
+              "label": 16,
+              "port": 0,
+              "units": 128
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 16,
+                "one_minimum": 2,
+                "two_minima": 16
+              },
+              "label": 13,
+              "port": 3,
+              "units": 16
+            }
+          ]
+        }
+      },
+      "inner_bound": 17,
+      "inner_profiles": {
+        "mixed_pair": {
+          "envelope": [
+            [
+              1,
+              16,
+              5,
+              5
+            ],
+            [
+              1,
+              32,
+              4,
+              4
+            ],
+            [
+              1,
+              64,
+              5,
+              5
+            ],
+            [
+              8,
+              16,
+              2,
+              2
+            ],
+            [
+              8,
+              32,
+              2,
+              2
+            ],
+            [
+              8,
+              64,
+              3,
+              3
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 1,
+          "records_sha256": "8756fe4bea8eb744d16805d2ca6ee3080211a77de4add847b844aec866e76b22",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 96,
+            "port_classes": 6,
+            "semantic_mass": 96
+          }
+        },
+        "one_maximum": {
+          "envelope": [
+            [
+              0,
+              16,
+              2,
+              2
+            ],
+            [
+              0,
+              32,
+              1,
+              1
+            ],
+            [
+              0,
+              64,
+              2,
+              2
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 0,
+          "records_sha256": "e834419fe0a9784b03e3ea7b2fbdd156a5d17d3dffba7f1d726213d1b70a77da",
+          "summary": {
+            "maximum_deletions": 2,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 2,
+            "ordinary_mass": 10,
+            "port_classes": 3,
+            "semantic_mass": 10
+          }
+        },
+        "one_minimum": {
+          "envelope": [
+            [
+              1,
+              0,
+              3,
+              3
+            ],
+            [
+              8,
+              0,
+              1,
+              1
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 1,
+          "records_sha256": "d560c618d7ac54c30a981811415f4ea788e92366df15868664b6d77424cb4229",
+          "summary": {
+            "maximum_deletions": 3,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 3,
+            "ordinary_mass": 10,
+            "port_classes": 2,
+            "semantic_mass": 10
+          }
+        },
+        "two_maxima": {
+          "envelope": [
+            [
+              0,
+              24,
+              2,
+              2
+            ],
+            [
+              0,
+              48,
+              3,
+              3
+            ],
+            [
+              0,
+              66,
+              3,
+              3
+            ],
+            [
+              0,
+              80,
+              4,
+              4
+            ],
+            [
+              0,
+              96,
+              3,
+              3
+            ]
+          ],
+          "high_count": 2,
+          "low_count": 0,
+          "records_sha256": "808ba38948d1b7dde7f4625fb230fb969ad30614391b802a266235dad5ad6b92",
+          "summary": {
+            "maximum_deletions": 4,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 4,
+            "ordinary_mass": 44,
+            "port_classes": 5,
+            "semantic_mass": 44
+          }
+        },
+        "two_minima": {
+          "envelope": [
+            [
+              3,
+              0,
+              4,
+              4
+            ],
+            [
+              5,
+              0,
+              5,
+              5
+            ],
+            [
+              9,
+              0,
+              4,
+              4
+            ],
+            [
+              33,
+              0,
+              3,
+              3
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 2,
+          "records_sha256": "65fce346395493dfecda884d9775b1961e4a558dde5afa1677ed3c43fae63378",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 72,
+            "port_classes": 4,
+            "semantic_mass": 72
+          }
+        }
+      },
+      "kernel_id": 38,
+      "minimum_future_marked_touches": 3,
+      "prefix32_sha256": "798e1821afac5b5ad1a78fd96285e6c459c2e24f49353ebb2c36b6fdf6cdf724",
+      "prefix_cost": 25,
+      "pruning": {
+        "input_free_wires": [
+          1,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "input_to_output_wire": [
+          0,
+          2,
+          1,
+          5,
+          6,
+          3,
+          4
+        ],
+        "outer_record": [
+          21,
+          104,
+          19,
+          7168,
+          25,
+          0,
+          0
+        ],
+        "output_free_wires": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "retained_prefix": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "target9_image": [
+        0,
+        32,
+        48,
+        128,
+        136,
+        256,
+        264,
+        288,
+        292,
+        296,
+        300,
+        304,
+        308,
+        312,
+        316,
+        320,
+        352,
+        368,
+        372,
+        384,
+        386,
+        392,
+        396,
+        416,
+        418,
+        420,
+        424,
+        426,
+        428,
+        432,
+        434,
+        436,
+        440,
+        442,
+        443,
+        444,
+        445,
+        446,
+        448,
+        450,
+        456,
+        458,
+        460,
+        480,
+        482,
+        484,
+        488,
+        490,
+        491,
+        492,
+        494,
+        496,
+        498,
+        500,
+        502,
+        504,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511
+      ],
+      "target9_sha256": "bac8c4fec2cf412187ae90b09273da18fd48181649628183606937bef806f4c2",
+      "total_size_lower_bound": 45,
+      "two_touch_cover": {
+        "allowed_standard_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "compatible_words": [],
+        "complete_counts_by_marked_word_length": [
+          1,
+          13,
+          170
+        ],
+        "required_initial_marked_wrong_ports": [
+          4,
+          10
+        ],
+        "root_terminal_words": [
+          {
+            "untouched_required_ports": [
+              10
+            ],
+            "word": [
+              [
+                3,
+                4
+              ],
+              [
+                2,
+                3
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "C_plus_B": 42,
+      "full_boolean_wrong_port_witnesses": [
+        [
+          2,
+          1855,
+          8116,
+          1,
+          0
+        ],
+        [
+          3,
+          234,
+          7688,
+          1,
+          0
+        ],
+        [
+          4,
+          511,
+          8168,
+          0,
+          1
+        ],
+        [
+          5,
+          30,
+          6688,
+          1,
+          0
+        ],
+        [
+          6,
+          105,
+          6720,
+          1,
+          0
+        ],
+        [
+          7,
+          63,
+          7968,
+          0,
+          1
+        ],
+        [
+          8,
+          31,
+          7712,
+          0,
+          1
+        ],
+        [
+          9,
+          7,
+          6656,
+          1,
+          0
+        ],
+        [
+          10,
+          7,
+          6656,
+          0,
+          1
+        ]
+      ],
+      "inner_anchors": {
+        "high": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 136,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 8,
+                "one_maximum": 1,
+                "two_maxima": 8
+              },
+              "label": 12,
+              "port": 3,
+              "units": 8
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 36,
+                "one_maximum": 4,
+                "two_maxima": 28
+              },
+              "label": 15,
+              "port": 5,
+              "units": 64
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 36,
+                "one_maximum": 4,
+                "two_maxima": 28
+              },
+              "label": 15,
+              "port": 6,
+              "units": 64
+            }
+          ]
+        },
+        "low": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 136,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 72,
+                "one_minimum": 8,
+                "two_minima": 72
+              },
+              "label": 16,
+              "port": 0,
+              "units": 128
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 8,
+                "one_minimum": 1,
+                "two_minima": 8
+              },
+              "label": 12,
+              "port": 3,
+              "units": 8
+            }
+          ]
+        }
+      },
+      "inner_bound": 17,
+      "inner_profiles": {
+        "mixed_pair": {
+          "envelope": [
+            [
+              1,
+              8,
+              3,
+              3
+            ],
+            [
+              1,
+              32,
+              5,
+              5
+            ],
+            [
+              1,
+              64,
+              5,
+              5
+            ],
+            [
+              8,
+              32,
+              2,
+              2
+            ],
+            [
+              8,
+              64,
+              2,
+              2
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 1,
+          "records_sha256": "4285feb385725407f09593a565aeb1673aee77641e68f6fc8b6e4b2fda475163",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 80,
+            "port_classes": 5,
+            "semantic_mass": 80
+          }
+        },
+        "one_maximum": {
+          "envelope": [
+            [
+              0,
+              8,
+              0,
+              0
+            ],
+            [
+              0,
+              32,
+              2,
+              2
+            ],
+            [
+              0,
+              64,
+              2,
+              2
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 0,
+          "records_sha256": "65a39f53e9ef5dde837daef64e0c6b0eefd5057a2a3d37412b1cded2d034be2d",
+          "summary": {
+            "maximum_deletions": 2,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 2,
+            "ordinary_mass": 9,
+            "port_classes": 3,
+            "semantic_mass": 9
+          }
+        },
+        "one_minimum": {
+          "envelope": [
+            [
+              1,
+              0,
+              3,
+              3
+            ],
+            [
+              8,
+              0,
+              0,
+              0
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 1,
+          "records_sha256": "7e96f388423d93d86d5c890241b201d9149978a4d25ebe2b1f9f22c1c5858bef",
+          "summary": {
+            "maximum_deletions": 3,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 3,
+            "ordinary_mass": 9,
+            "port_classes": 2,
+            "semantic_mass": 9
+          }
+        },
+        "two_maxima": {
+          "envelope": [
+            [
+              0,
+              40,
+              2,
+              2
+            ],
+            [
+              0,
+              48,
+              3,
+              3
+            ],
+            [
+              0,
+              66,
+              3,
+              3
+            ],
+            [
+              0,
+              72,
+              2,
+              2
+            ],
+            [
+              0,
+              96,
+              4,
+              4
+            ]
+          ],
+          "high_count": 2,
+          "low_count": 0,
+          "records_sha256": "d001c3ab1655f9f315dcd103a91558595f2b79af732215c928db4bc189b80b2e",
+          "summary": {
+            "maximum_deletions": 4,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 4,
+            "ordinary_mass": 40,
+            "port_classes": 5,
+            "semantic_mass": 40
+          }
+        },
+        "two_minima": {
+          "envelope": [
+            [
+              3,
+              0,
+              4,
+              4
+            ],
+            [
+              5,
+              0,
+              5,
+              5
+            ],
+            [
+              9,
+              0,
+              3,
+              3
+            ],
+            [
+              17,
+              0,
+              4,
+              4
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 2,
+          "records_sha256": "cc17718409e9a33a66309ac94f18b9db4192b0ba4c26a4e08b46de426970a105",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 72,
+            "port_classes": 4,
+            "semantic_mass": 72
+          }
+        }
+      },
+      "kernel_id": 39,
+      "minimum_future_marked_touches": 3,
+      "prefix32_sha256": "b90801d5eff456c53af660391645d5f1552840a8c03c8927b07965a9ee44e97a",
+      "prefix_cost": 25,
+      "pruning": {
+        "input_free_wires": [
+          1,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "input_to_output_wire": [
+          0,
+          2,
+          1,
+          5,
+          6,
+          3,
+          4
+        ],
+        "outer_record": [
+          21,
+          104,
+          19,
+          6656,
+          25,
+          0,
+          0
+        ],
+        "output_free_wires": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          10
+        ],
+        "retained_prefix": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "target9_image": [
+        0,
+        64,
+        128,
+        136,
+        144,
+        160,
+        192,
+        196,
+        200,
+        208,
+        224,
+        228,
+        240,
+        244,
+        256,
+        264,
+        384,
+        386,
+        392,
+        396,
+        400,
+        402,
+        408,
+        410,
+        416,
+        424,
+        428,
+        448,
+        450,
+        452,
+        456,
+        458,
+        460,
+        464,
+        466,
+        468,
+        472,
+        474,
+        475,
+        476,
+        478,
+        480,
+        482,
+        484,
+        488,
+        490,
+        491,
+        492,
+        493,
+        494,
+        496,
+        498,
+        500,
+        502,
+        504,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511
+      ],
+      "target9_sha256": "afc8f9391076e79f49456b808c16376f640eb52e593fd3513e169840ae0b66e3",
+      "total_size_lower_bound": 45,
+      "two_touch_cover": {
+        "allowed_standard_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "compatible_words": [],
+        "complete_counts_by_marked_word_length": [
+          1,
+          13,
+          170
+        ],
+        "required_initial_marked_wrong_ports": [
+          4,
+          9
+        ],
+        "root_terminal_words": []
+      }
+    },
+    {
+      "C_plus_B": 42,
+      "full_boolean_wrong_port_witnesses": [
+        [
+          2,
+          1855,
+          8116,
+          1,
+          0
+        ],
+        [
+          3,
+          234,
+          7432,
+          1,
+          0
+        ],
+        [
+          4,
+          511,
+          8168,
+          0,
+          1
+        ],
+        [
+          5,
+          30,
+          6688,
+          1,
+          0
+        ],
+        [
+          6,
+          105,
+          6464,
+          1,
+          0
+        ],
+        [
+          7,
+          63,
+          7968,
+          0,
+          1
+        ],
+        [
+          8,
+          31,
+          7712,
+          0,
+          1
+        ],
+        [
+          9,
+          14,
+          6656,
+          1,
+          0
+        ],
+        [
+          10,
+          14,
+          6656,
+          0,
+          1
+        ]
+      ],
+      "inner_anchors": {
+        "high": {
+          "base": 9,
+          "lower_bound": 18,
+          "normalized_mass": 288,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 20,
+                "one_maximum": 2,
+                "two_maxima": 24
+              },
+              "label": 14,
+              "port": 4,
+              "units": 32
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 72,
+                "one_maximum": 8,
+                "two_maxima": 56
+              },
+              "label": 16,
+              "port": 5,
+              "units": 128
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 72,
+                "one_maximum": 4,
+                "two_maxima": 48
+              },
+              "label": 16,
+              "port": 6,
+              "units": 128
+            }
+          ]
+        },
+        "low": {
+          "base": 9,
+          "lower_bound": 18,
+          "normalized_mass": 288,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 144,
+                "one_minimum": 16,
+                "two_minima": 144
+              },
+              "label": 17,
+              "port": 0,
+              "units": 256
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 20,
+                "one_minimum": 2,
+                "two_minima": 32
+              },
+              "label": 14,
+              "port": 3,
+              "units": 32
+            }
+          ]
+        }
+      },
+      "inner_bound": 18,
+      "inner_profiles": {
+        "mixed_pair": {
+          "envelope": [
+            [
+              1,
+              16,
+              4,
+              4
+            ],
+            [
+              1,
+              32,
+              6,
+              6
+            ],
+            [
+              1,
+              64,
+              6,
+              6
+            ],
+            [
+              8,
+              16,
+              2,
+              2
+            ],
+            [
+              8,
+              32,
+              3,
+              3
+            ],
+            [
+              8,
+              64,
+              3,
+              3
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 1,
+          "records_sha256": "133d244103525a794f1ce9f7fdc8cf01798a92b1e7c6ca4a2743bcd051586a16",
+          "summary": {
+            "maximum_deletions": 6,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 6,
+            "ordinary_mass": 164,
+            "port_classes": 6,
+            "semantic_mass": 164
+          }
+        },
+        "one_maximum": {
+          "envelope": [
+            [
+              0,
+              16,
+              1,
+              1
+            ],
+            [
+              0,
+              32,
+              3,
+              3
+            ],
+            [
+              0,
+              64,
+              2,
+              2
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 0,
+          "records_sha256": "6882606ac8992607952d53fa7ac55d36ddb0f456efbdbf0588ed32bceb9667b9",
+          "summary": {
+            "maximum_deletions": 3,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 3,
+            "ordinary_mass": 14,
+            "port_classes": 3,
+            "semantic_mass": 14
+          }
+        },
+        "one_minimum": {
+          "envelope": [
+            [
+              1,
+              0,
+              4,
+              4
+            ],
+            [
+              8,
+              0,
+              1,
+              1
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 1,
+          "records_sha256": "e124cf29f31ee7ec390badea1246c2464da71a3dfd0c77f6f84d505e400b8fca",
+          "summary": {
+            "maximum_deletions": 4,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 4,
+            "ordinary_mass": 18,
+            "port_classes": 2,
+            "semantic_mass": 18
+          }
+        },
+        "two_maxima": {
+          "envelope": [
+            [
+              0,
+              40,
+              3,
+              3
+            ],
+            [
+              0,
+              48,
+              4,
+              4
+            ],
+            [
+              0,
+              68,
+              3,
+              3
+            ],
+            [
+              0,
+              80,
+              3,
+              3
+            ],
+            [
+              0,
+              96,
+              5,
+              5
+            ]
+          ],
+          "high_count": 2,
+          "low_count": 0,
+          "records_sha256": "83db0c89567fac1c0fc023d8bb940be6b0b8c844927ed287d35211101d326a16",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 72,
+            "port_classes": 5,
+            "semantic_mass": 72
+          }
+        },
+        "two_minima": {
+          "envelope": [
+            [
+              3,
+              0,
+              6,
+              6
+            ],
+            [
+              5,
+              0,
+              5,
+              5
+            ],
+            [
+              9,
+              0,
+              5,
+              5
+            ],
+            [
+              17,
+              0,
+              4,
+              4
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 2,
+          "records_sha256": "da7414521a98bd7f5fd741e01b31318c21f1809967352ceb2047369ac72c2d2a",
+          "summary": {
+            "maximum_deletions": 6,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 6,
+            "ordinary_mass": 144,
+            "port_classes": 4,
+            "semantic_mass": 144
+          }
+        }
+      },
+      "kernel_id": 41,
+      "minimum_future_marked_touches": 3,
+      "prefix32_sha256": "1fe27765734273696a1d18ce51cc1c553a890a0b12e144eda39caf1efd0afc89",
+      "prefix_cost": 24,
+      "pruning": {
+        "input_free_wires": [
+          3,
+          5,
+          7,
+          9,
+          10,
+          11,
+          12
+        ],
+        "input_to_output_wire": [
+          1,
+          2,
+          0,
+          5,
+          6,
+          3,
+          4
+        ],
+        "outer_record": [
+          21,
+          322,
+          19,
+          7168,
+          24,
+          0,
+          0
+        ],
+        "output_free_wires": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "retained_prefix": [
+          [
+            1,
+            2
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "target9_image": [
+        0,
+        64,
+        80,
+        128,
+        136,
+        256,
+        264,
+        288,
+        320,
+        322,
+        324,
+        328,
+        336,
+        338,
+        344,
+        346,
+        352,
+        356,
+        368,
+        372,
+        384,
+        392,
+        396,
+        416,
+        424,
+        428,
+        448,
+        450,
+        452,
+        456,
+        458,
+        460,
+        464,
+        466,
+        468,
+        472,
+        474,
+        475,
+        476,
+        478,
+        480,
+        482,
+        484,
+        488,
+        490,
+        491,
+        492,
+        493,
+        494,
+        496,
+        498,
+        500,
+        502,
+        504,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511
+      ],
+      "target9_sha256": "2a94f47f137d2c71fc53224e08992f1aae3da6d44f6170d25ff917e9df06d5c9",
+      "total_size_lower_bound": 45,
+      "two_touch_cover": {
+        "allowed_standard_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "compatible_words": [],
+        "complete_counts_by_marked_word_length": [
+          1,
+          13,
+          170
+        ],
+        "required_initial_marked_wrong_ports": [
+          4,
+          10
+        ],
+        "root_terminal_words": [
+          {
+            "untouched_required_ports": [
+              10
+            ],
+            "word": [
+              [
+                3,
+                4
+              ],
+              [
+                2,
+                3
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "C_plus_B": 42,
+      "full_boolean_wrong_port_witnesses": [
+        [
+          2,
+          1855,
+          8052,
+          1,
+          0
+        ],
+        [
+          3,
+          234,
+          7688,
+          1,
+          0
+        ],
+        [
+          4,
+          511,
+          8168,
+          0,
+          1
+        ],
+        [
+          5,
+          30,
+          6688,
+          1,
+          0
+        ],
+        [
+          6,
+          127,
+          8096,
+          0,
+          1
+        ],
+        [
+          7,
+          63,
+          7968,
+          0,
+          1
+        ],
+        [
+          8,
+          31,
+          7712,
+          0,
+          1
+        ],
+        [
+          9,
+          7,
+          6656,
+          1,
+          0
+        ],
+        [
+          10,
+          7,
+          6656,
+          0,
+          1
+        ]
+      ],
+      "inner_anchors": {
+        "high": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 160,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 20,
+                "one_maximum": 2,
+                "two_maxima": 16
+              },
+              "label": 14,
+              "port": 4,
+              "units": 32
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 36,
+                "one_maximum": 4,
+                "two_maxima": 28
+              },
+              "label": 15,
+              "port": 5,
+              "units": 64
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 40,
+                "one_maximum": 4,
+                "two_maxima": 32
+              },
+              "label": 15,
+              "port": 6,
+              "units": 64
+            }
+          ]
+        },
+        "low": {
+          "base": 9,
+          "lower_bound": 17,
+          "normalized_mass": 144,
+          "rows": [
+            {
+              "anchored_masses": {
+                "mixed_pair": 80,
+                "one_minimum": 8,
+                "two_minima": 72
+              },
+              "label": 16,
+              "port": 0,
+              "units": 128
+            },
+            {
+              "anchored_masses": {
+                "mixed_pair": 16,
+                "one_minimum": 2,
+                "two_minima": 16
+              },
+              "label": 13,
+              "port": 3,
+              "units": 16
+            }
+          ]
+        }
+      },
+      "inner_bound": 17,
+      "inner_profiles": {
+        "mixed_pair": {
+          "envelope": [
+            [
+              1,
+              16,
+              4,
+              4
+            ],
+            [
+              1,
+              32,
+              5,
+              5
+            ],
+            [
+              1,
+              64,
+              5,
+              5
+            ],
+            [
+              8,
+              16,
+              2,
+              2
+            ],
+            [
+              8,
+              32,
+              2,
+              2
+            ],
+            [
+              8,
+              64,
+              3,
+              3
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 1,
+          "records_sha256": "938d20529b079c1d2d021f5d4e15ddc601c1cc066419d44efdb838a3d1bcdd47",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 96,
+            "port_classes": 6,
+            "semantic_mass": 96
+          }
+        },
+        "one_maximum": {
+          "envelope": [
+            [
+              0,
+              16,
+              1,
+              1
+            ],
+            [
+              0,
+              32,
+              2,
+              2
+            ],
+            [
+              0,
+              64,
+              2,
+              2
+            ]
+          ],
+          "high_count": 1,
+          "low_count": 0,
+          "records_sha256": "213b3a08873d2e91ab808acaeb20614fd3a23b70ec709b8f431d604a7814c38a",
+          "summary": {
+            "maximum_deletions": 2,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 2,
+            "ordinary_mass": 10,
+            "port_classes": 3,
+            "semantic_mass": 10
+          }
+        },
+        "one_minimum": {
+          "envelope": [
+            [
+              1,
+              0,
+              3,
+              3
+            ],
+            [
+              8,
+              0,
+              1,
+              1
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 1,
+          "records_sha256": "d560c618d7ac54c30a981811415f4ea788e92366df15868664b6d77424cb4229",
+          "summary": {
+            "maximum_deletions": 3,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 3,
+            "ordinary_mass": 10,
+            "port_classes": 2,
+            "semantic_mass": 10
+          }
+        },
+        "two_maxima": {
+          "envelope": [
+            [
+              0,
+              40,
+              2,
+              2
+            ],
+            [
+              0,
+              48,
+              3,
+              3
+            ],
+            [
+              0,
+              66,
+              3,
+              3
+            ],
+            [
+              0,
+              80,
+              3,
+              3
+            ],
+            [
+              0,
+              96,
+              4,
+              4
+            ]
+          ],
+          "high_count": 2,
+          "low_count": 0,
+          "records_sha256": "92b4f6608bef5a77a2dbc062bdfa561c032b1f5f2b030c2684a2204a18884026",
+          "summary": {
+            "maximum_deletions": 4,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 4,
+            "ordinary_mass": 44,
+            "port_classes": 5,
+            "semantic_mass": 44
+          }
+        },
+        "two_minima": {
+          "envelope": [
+            [
+              3,
+              0,
+              4,
+              4
+            ],
+            [
+              5,
+              0,
+              5,
+              5
+            ],
+            [
+              9,
+              0,
+              4,
+              4
+            ],
+            [
+              17,
+              0,
+              3,
+              3
+            ]
+          ],
+          "high_count": 0,
+          "low_count": 2,
+          "records_sha256": "41ec54e34df17af2c11e6895a92c0d3a24302af44efb69a3eefc8d3a444401d3",
+          "summary": {
+            "maximum_deletions": 5,
+            "maximum_redundancies": 0,
+            "maximum_semantic_deletions": 5,
+            "ordinary_mass": 72,
+            "port_classes": 4,
+            "semantic_mass": 72
+          }
+        }
+      },
+      "kernel_id": 42,
+      "minimum_future_marked_touches": 3,
+      "prefix32_sha256": "72d7c753e5bd6becdd7b76ac0e39de32f42618b1c216b8800e1f365515a3e4f9",
+      "prefix_cost": 25,
+      "pruning": {
+        "input_free_wires": [
+          1,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "input_to_output_wire": [
+          0,
+          2,
+          1,
+          5,
+          6,
+          3,
+          4
+        ],
+        "outer_record": [
+          21,
+          104,
+          19,
+          6656,
+          25,
+          0,
+          0
+        ],
+        "output_free_wires": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          10
+        ],
+        "retained_prefix": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "target9_image": [
+        0,
+        16,
+        32,
+        128,
+        136,
+        144,
+        148,
+        152,
+        160,
+        168,
+        192,
+        208,
+        212,
+        224,
+        240,
+        244,
+        256,
+        264,
+        384,
+        386,
+        392,
+        396,
+        400,
+        404,
+        408,
+        412,
+        416,
+        418,
+        424,
+        426,
+        428,
+        448,
+        450,
+        456,
+        458,
+        460,
+        464,
+        466,
+        468,
+        472,
+        474,
+        476,
+        477,
+        478,
+        480,
+        482,
+        488,
+        490,
+        491,
+        492,
+        494,
+        496,
+        498,
+        500,
+        502,
+        504,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511
+      ],
+      "target9_sha256": "17976859db4080ac56d7e34763f2df9ddb754b7d53221764440e89db8628882b",
+      "total_size_lower_bound": 45,
+      "two_touch_cover": {
+        "allowed_standard_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "compatible_words": [],
+        "complete_counts_by_marked_word_length": [
+          1,
+          13,
+          170
+        ],
+        "required_initial_marked_wrong_ports": [
+          4,
+          9
+        ],
+        "root_terminal_words": []
+      }
+    }
+  ],
+  "credited_fourteen_target_graph": "bafkreie4gyppvazofxko6ohk7jbbltjmae6caeamkvb3tqflb5x2l7qzre",
+  "excluded_kernel_ids": [
+    2,
+    8,
+    15,
+    20,
+    24,
+    31,
+    32,
+    33,
+    34,
+    36,
+    38,
+    39,
+    41,
+    42
+  ],
+  "native_prefix24_standard_size_lower_bound": 45,
+  "parent_files_sha256": {
+    "round-two/six-sorting-2/native24-kernel-cover/certificate.json": "21981cab47d3b795b85d9b7c3ab8dbb5a086aba8e059d54154770ec59edcac06",
+    "round-two/six-sorting-2/native24-kernel-cover/fixture.json": "93b7cda51cc14fa8f53c0ed89c7c1c2150b8ab6b58f823fc69b41ec7035022e6",
+    "round-two/six-sorting-2/native24-kernel-cover/normalize-certificate.json": "99bcad813962ff1495a7f9f217b5ec4a8b94b83e71020754ff5eacf6f7abe490",
+    "round-two/six-sorting-2/native24-kernel-cover/touch-certificate.json": "04bcf3e1617c3ae2ce026149d1c76f620c8acf6e38bdc448719e26fa3ecd2455"
+  },
+  "previous_nine_wire_ids": [
+    2,
+    8,
+    15,
+    20,
+    24,
+    31,
+    32,
+    33,
+    34,
+    36,
+    38,
+    39,
+    41,
+    42
+  ],
+  "remaining_nine_wire_ids": [],
+  "role": "researcher",
+  "schema": "native-three-marked-touch-certificate-v1"
+}
