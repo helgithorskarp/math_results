@@ -1,0 +1,94 @@
+{
+  "agent": "six-books-1",
+  "combined_consequence": "Every valid22 graph has at most108 red edges, conditional on credited8012/8726/8761/8692 campaign proofs.",
+  "created_utc": "2026-10-01T17:12:51.762061+00:00",
+  "dependency_split": {
+    "combined": "8012 upper degree10;8692 regular110 exclusion;8726 full-root classification;8761 local14 exclusion.",
+    "credits": "8738 regular common-subset motivation;8759 concurrent weighted four-column inequality.",
+    "finite": "8726 ordinary Petersen-root k<=8 bound; all max10/full-root Petersen hypotheses explicit. No regular finite floor/Hall premise."
+  },
+  "finite_theorem": "No valid22 graph with109 red edges,max degree10,and Petersen at every full-degree root.",
+  "fresh_primary_entries_verified": 441,
+  "fresh_primary_raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+  "independent_algorithms": "Producer quotient join+solved multiplicities+red-star formula CSP; checker exact ten-column vectors+direct3^5 multiplicities+literal blue-star search. Neither imports the other. Small shared fixtures only.",
+  "large_artifacts_omitted": true,
+  "peer_dependency_replay": {
+    "agent": "six-books-3",
+    "artifactRef": "bafkreibau6vmchmwtwosjc3rv34gbe4ptwhwonh7owdteea2fdsysal3fq",
+    "atomic_relations_verified": 10,
+    "compact_remote_files_verified": 13,
+    "full_body_bytes": 18642,
+    "height": 8761,
+    "index": 8772,
+    "runs": [
+      {
+        "child_peak_RSS_KiB": 20096,
+        "elapsed_seconds": 1.864902,
+        "exit_code": 0,
+        "file": "generate.py"
+      },
+      {
+        "child_peak_RSS_KiB": 20956,
+        "elapsed_seconds": 0.645665,
+        "exit_code": 0,
+        "file": "solve.py"
+      },
+      {
+        "child_peak_RSS_KiB": 20956,
+        "elapsed_seconds": 1.976981,
+        "exit_code": 0,
+        "file": "verify_multicover.py"
+      },
+      {
+        "child_peak_RSS_KiB": 20956,
+        "elapsed_seconds": 5.066386,
+        "exit_code": 0,
+        "file": "verify_literal.py"
+      },
+      {
+        "child_peak_RSS_KiB": 21332,
+        "elapsed_seconds": 9.386986,
+        "exit_code": 0,
+        "file": "controls.py"
+      }
+    ],
+    "source_commit": "6493b6ed6a5be610702b607bdcbe1bef610f1a97",
+    "status": "Optimized author replay of all5 published commands passes; no independent-review verdict."
+  },
+  "primary_interval": [
+    22,
+    23
+  ],
+  "primary_literature": [
+    "https://arxiv.org/pdf/2407.07285",
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+  ],
+  "proof_status": "Exact completed author computer-assisted proof with unformalized ordinary completeness bridges. Two author implementations are not independent peer review; new review pending.",
+  "python_version": "3.11.2",
+  "resources": "One1CPU/2GiB job at a time,all BLAS/OpenMP thread variables1. No solver or floating-point decision.",
+  "role": "researcher",
+  "runs": [
+    {
+      "child_peak_RSS_KiB": 41880,
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-books-1/near109_cubic_exclusion/make.py",
+        "--write"
+      ],
+      "elapsed_seconds": 29.076523,
+      "exit_code": 0
+    },
+    {
+      "child_peak_RSS_KiB": 33600,
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-books-1/near109_cubic_exclusion/verify.py"
+      ],
+      "elapsed_seconds": 60.283934,
+      "exit_code": 0
+    }
+  ]
+}
