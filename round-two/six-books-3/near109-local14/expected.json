@@ -1,0 +1,264 @@
+{
+  "controls": {
+    "agent": "six-books-3",
+    "all_pass": true,
+    "book_controls": {
+      "blueB7": true,
+      "redB4": true
+    },
+    "positive21": {
+      "blue_edges": 117,
+      "max_blue_pages": 6,
+      "max_red_pages": 3,
+      "raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+      "red_edges": 93
+    },
+    "rejections": [
+      {
+        "exit_code": 1,
+        "name": "missing_incidence",
+        "reason": "RuntimeError: ('enumeration mismatch', 135, 134)"
+      },
+      {
+        "exit_code": 1,
+        "name": "duplicate_incidence",
+        "reason": "RuntimeError: Incomplete/altered incidence input"
+      },
+      {
+        "exit_code": 1,
+        "name": "incorrect_total_deficit",
+        "reason": "RuntimeError: Incomplete/altered deficit-case input"
+      },
+      {
+        "exit_code": 1,
+        "name": "altered_star_domain",
+        "reason": "RuntimeError: all case/domain sizes do not match"
+      },
+      {
+        "exit_code": 1,
+        "name": "noninteger_cut",
+        "reason": "RuntimeError: Pair coefficients must be positive integers"
+      },
+      {
+        "exit_code": 1,
+        "name": "incorrect_cut_bound",
+        "reason": "RuntimeError: Integer cut upper bound is not zero"
+      }
+    ],
+    "restored_core_KG5_2_isomorphism": [
+      0,
+      7,
+      8,
+      9,
+      3,
+      6,
+      1,
+      2,
+      4,
+      5
+    ],
+    "role": "researcher"
+  },
+  "coupled14": {
+    "candidate_deficit_cases": 35,
+    "csp_totals": {
+      "empty_domains": 76,
+      "nodes": 83,
+      "removed_values": 5927
+    },
+    "incidence_matrices": 135,
+    "solutions": 0
+  },
+  "matrix_sha256": "95b5e500fb3c9f05257b7083ecfa3da25974031ac5ae8cfa94cb91aba98b75ce",
+  "transfer14": {
+    "F_mask": 51317328,
+    "deficit_candidate_matrices": 27,
+    "extendible_deficit_assignments": 35,
+    "high_multisets": [
+      [
+        [
+          5,
+          5,
+          5,
+          5
+        ],
+        1935
+      ],
+      [
+        [
+          6,
+          5,
+          5
+        ],
+        814
+      ],
+      [
+        [
+          6,
+          6
+        ],
+        27
+      ],
+      [
+        [
+          7,
+          5
+        ],
+        36
+      ],
+      [
+        [
+          8
+        ],
+        1
+      ]
+    ],
+    "incidence_matrices": 135,
+    "low_multisets": {
+      "10": 29,
+      "7": 5884,
+      "8": 1740,
+      "9": 286
+    },
+    "minimum_deficit_histogram": {
+      "1": 4,
+      "10": 19,
+      "2": 23,
+      "3": 13,
+      "4": 6,
+      "6": 24,
+      "7": 28,
+      "8": 2,
+      "9": 16
+    },
+    "patterns": [
+      [
+        [
+          5,
+          5,
+          5,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        81
+      ],
+      [
+        [
+          6,
+          5,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        42
+      ],
+      [
+        [
+          6,
+          6,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        3
+      ],
+      [
+        [
+          7,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        8
+      ],
+      [
+        [
+          8,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        1
+      ]
+    ],
+    "zero_rows_by_delta": [
+      92,
+      78,
+      42
+    ]
+  },
+  "verify14_literal": {
+    "all_cases_and_domains_match": true,
+    "assignment_types": [
+      [
+        [
+          1,
+          1
+        ],
+        21
+      ],
+      [
+        [
+          2
+        ],
+        14
+      ]
+    ],
+    "case_sha256": "72c4387f8528d9756b2236d79a517cde6d904d1037172e04a065c3328b187d9b",
+    "cases": 35,
+    "complete": true,
+    "incidences": 135,
+    "method": "literal22-vertex adjacency sets; forward-filtering search without arc consistency",
+    "search": {
+      "empty_domains": 288,
+      "filtered_values": 31856,
+      "nodes": 323
+    },
+    "solutions": 0
+  },
+  "verify14_multicover": {
+    "all_matrices_match_entrywise": true,
+    "complete": true,
+    "matrices": 135,
+    "matrix_sha256": "95b5e500fb3c9f05257b7083ecfa3da25974031ac5ae8cfa94cb91aba98b75ce",
+    "method": "column-driven exact multicover; no generator import",
+    "nodes": 10101,
+    "zero_rows_by_deficit": [
+      92,
+      78,
+      42
+    ]
+  }
+}

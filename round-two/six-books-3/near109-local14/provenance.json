@@ -1,0 +1,117 @@
+{
+  "agent": "six-books-3",
+  "claim": "No local Petersen-minus-edge full-degree root at109 red edges; credited8012/8726 give all full-degree roots Petersen. No unrestricted109 exclusion.",
+  "completed_checks": {
+    "all_pass": true,
+    "controls": 6,
+    "normal": [
+      {
+        "child_rss_upper_kib": 16628,
+        "complete": true,
+        "elapsed_seconds": 2.184685549000278,
+        "name": "generate",
+        "returncode": 0
+      },
+      {
+        "child_rss_upper_kib": 17348,
+        "complete": true,
+        "elapsed_seconds": 0.5015892369556241,
+        "name": "solve",
+        "returncode": 0
+      },
+      {
+        "child_rss_upper_kib": 17348,
+        "complete": true,
+        "elapsed_seconds": 1.6857164109824225,
+        "name": "verify_multicover",
+        "returncode": 0
+      },
+      {
+        "child_rss_upper_kib": 17348,
+        "complete": true,
+        "elapsed_seconds": 4.8006822490133345,
+        "name": "verify_literal",
+        "returncode": 0
+      }
+    ],
+    "optimized": [
+      {
+        "child_rss_upper_kib": 20352,
+        "complete": true,
+        "elapsed_seconds": 2.5196053629624657,
+        "name": "generate",
+        "returncode": 0
+      },
+      {
+        "child_rss_upper_kib": 21332,
+        "complete": true,
+        "elapsed_seconds": 0.6626039239927195,
+        "name": "solve",
+        "returncode": 0
+      },
+      {
+        "child_rss_upper_kib": 21332,
+        "complete": true,
+        "elapsed_seconds": 1.8442553160130046,
+        "name": "verify_multicover",
+        "returncode": 0
+      },
+      {
+        "child_rss_upper_kib": 21332,
+        "complete": true,
+        "elapsed_seconds": 4.6347299389890395,
+        "name": "verify_literal",
+        "returncode": 0
+      },
+      {
+        "child_rss_upper_kib": 21332,
+        "complete": true,
+        "elapsed_seconds": 7.45657935901545,
+        "name": "controls",
+        "returncode": 0
+      }
+    ],
+    "positive21": {
+      "blue_edges": 117,
+      "page_maxima": [
+        3,
+        6
+      ],
+      "red_edges": 93
+    }
+  },
+  "credits": {
+    "8541": "ordinary clique-degree count",
+    "8559": "disjoint-low/partition packing proof reproduced in this proof",
+    "8638": "integer zero-face cut copied and rechecked with new deficit domains; no prior regular-host finite exclusion imported",
+    "8686": "independent review of prior8638, not this theorem",
+    "8692": "four-column packing mechanism; current universal109 bound is context"
+  },
+  "date": "2026-10-01",
+  "dependencies": {
+    "fullroots8726": {
+      "artifact_ref": "bafkreieztrfin22gkvvmkydq45n2xgtx6hkzrkvx6fd2g5ckkgjcc6zjwm",
+      "body_sha256": "f775486d8cf10bd7cf143a1679e8974a80fa4cb95361ae4c15ec2ceb1e7a1584",
+      "height": 8726,
+      "scope": "Petersen/edge-deleted classification and guaranteed roots for corollary; full source and committed body read, checker not replayed",
+      "source_commit": "5cd8391a80d970034dbd8868a1607941e331e569"
+    },
+    "maximum_degree8012": {
+      "artifact_ref": "bafkreic57itmbz4klkff2gooq5hyby3ssu4cniwz4mhs76uwsqlblesqdi",
+      "scope": "upper degree ten for the unconditional corollary only",
+      "source_commit": "ce3177a731086284ee89f18a8a3948b672b3c64e"
+    }
+  },
+  "generated_output": "_work is ignored; no raw incidence/star corpus published",
+  "literature_checked": "Primary Table1 at line66 and DS1.18 TableIXa reopened2026-10-01; bounded search gives no located conflicting109 root exclusion, not exhaustive priority.",
+  "operational": "threads one; one CPU-intensive process at a time; no solver or resource escalation",
+  "primary_sources": [
+    "https://arxiv.org/pdf/2407.07285",
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://arxiv.org/abs/2410.03625",
+    "https://github.com/gwen-mckinley/ramsey-books-wheels/blob/main/tabu/constructions/R_B4_B7_construction_21vertices.txt"
+  ],
+  "python_version": "3.11.2",
+  "role": "researcher",
+  "trust": "All mathematical decisions exact; ordinary coverage bridges unformalized. Same author wrote distinct algorithms. No independent review/formalization asserted."
+}
