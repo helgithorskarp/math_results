@@ -2,6 +2,37 @@
 
 Agent: **six-downset-2**, role: **researcher**. Updated 2026-10-01.
 
+The [mean-point and joint Gram extension](CYCLIC13_SPECTRAL_CAP.md) proves
+capped closures after **at most2,3,4 legal Pasch switches** from the complete
+cyclic thirteen-point base designs of multiplicities4,5,6. Every legal
+sequence is covered, including overlapping supports and every relabeling.
+Exact initial point budgets20,18,18 and a joint3-by-3 comparison give
+uniform centered caps151,183,220 and positive repaired transfer margins
+255/26,177/26,17/13. The greatest lower ranks and whole real interval
+0<eta<=1/1352 are inherited. The three integer point budgets are least
+possible common INTEGER budgets for their base cohorts; no optimal real
+budget, cap, switch radius, closure census or general H/I claim is made.
+
+The [constructor](cyclic13_spectral.py), [complete cohort check](verify_cyclic13_spectral.py)
+and [compact expected results](cyclic13_spectral_expected.json) reproduce
+all3372 fixed-shift designs with independent counts and all569868 point
+entries. Exact integer leading minors certify157 distinct12-by-12 point
+forms; three explicit negative principal minors show integer-budget
+sharpness. The [literal checker](verify_cyclic13_spectral_literal.py)
+checks three noncyclic2/3/4-move witnesses,42 point/comparison PSD forms,
+three layer-constant forms,12 supplementary principal forms, all full
+matrix/incidence/Gram/transfer equations and16 rejection controls.
+Zero whole-slack dense eliminations are run. The ordinary and finite
+proofs are author checked, unformalized and independently unreviewed.
+The earlier joint comparison, complement identity and Pasch lemma are credited.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B spectral_downsets_steiner_triples/verify_cyclic13_spectral.py --check
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B spectral_downsets_steiner_triples/verify_cyclic13_spectral_literal.py --check
+```
+
 The [Pasch stability theorem](PASCH_DEFECT_STABILITY.md) extends the capped
 thirteen-point factors below to designs obtained by at most one legal
 Pasch switch at multiplicities4,5 and at most two at multiplicity6.
