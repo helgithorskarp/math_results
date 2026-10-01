@@ -286,8 +286,8 @@ proved here, with (11) explicitly inherited.
 ## 6. Labeled application: geometric complex phase allowance
 
 For 0<a<1 and arbitrary complex q with r=|q|>=1/(1+a), sum r<=8,
-put epsilon=sum|q_j-r_j|. The independently confirmed phase estimate
-in review7244 gives
+put epsilon=sum|q_j-r_j|. The quadratic phase estimate proved as a
+refinement in independently authored review7244 gives
 
     Re O_a(q)>=O_a(r)-K epsilon^2,
     K=570801247/1647086<350.                                 (17)

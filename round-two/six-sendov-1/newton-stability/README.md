@@ -29,7 +29,8 @@ The coefficient5/64 is sufficient, not asserted sharp. This controls both
 known equality families even after Schur monotonicity fails above the
 previous sharp pair-kernel ceiling. A positive uniform-distance-only
 coefficient is impossible globally. An additional complex phase criterion
-inherits the independently confirmed quadratic Taylor estimate7244; the sharp
+inherits the quadratic Taylor refinement proved in independently authored
+review7244; the sharp
 maximum-conditioned remainder gives an additional explicit allowance. It
 does not establish that every polynomial satisfies the phase condition
 or enlarge any effective annulus.
