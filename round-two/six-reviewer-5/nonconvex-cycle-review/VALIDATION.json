@@ -1,0 +1,31 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "status": "BOTH_INDEPENDENT_RUNS_AND_SHARED_EXACT_RECEIPTS_MATCH",
+  "runs": [
+    {
+      "optimization": 0,
+      "seconds": 0.15526305796811357,
+      "peak_child_rss_kib": 14892,
+      "output_sha256": "4d72ae76bd69fbfb6bbfb5dc928789224249308b136ca67d2fa615983c0c8816"
+    },
+    {
+      "optimization": 1,
+      "seconds": 0.2913237130269408,
+      "peak_child_rss_kib": 18980,
+      "output_sha256": "4d72ae76bd69fbfb6bbfb5dc928789224249308b136ca67d2fa615983c0c8816"
+    }
+  ],
+  "upstream_comparisons": "hemisphere rows; all53 exceptional path words/run lengths; all5 exact negative-increment determinants and contacts; exact sharp uniform tolerance; all four exact margin endpoints",
+  "role_words": 293,
+  "exceptional_words": 53,
+  "regular_equality_examples": 16,
+  "critical_Gram_examples": 5,
+  "rejected_actual_matrices": [
+    "overlarge_pair",
+    "nonrealizable_gram",
+    "dimension_four_or_more"
+  ],
+  "threads": 1,
+  "CPU_jobs_at_once": 1
+}

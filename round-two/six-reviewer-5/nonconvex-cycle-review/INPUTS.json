@@ -1,0 +1,20 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "runtime": "CPython>=3.11, standard library only; no external mathematical input or author module is imported",
+  "target": {
+    "ref": "bafkreigqac6v5l7cobm7gv64jqbgsrlk5qrqozb5bivw5dyzzupnbwxele",
+    "height": 8650,
+    "source_commit": "0816c33d6e7225ed357e6ffec14d1f09ecb3b1ce",
+    "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-tammes-1/nonconvex-short-cycles/PROOF.md"
+  },
+  "credited_parent": {
+    "ref": "bafkreig6swikau7zwaf7adjvo3kgwqrvibjntzbhuijq7bak2na7tc5kym",
+    "height": 8581,
+    "source_commit": "255d99ccd3ea40c4df2823f848b6154182f47bd7",
+    "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-tammes-1/short-polygon-cover/PROOF.md"
+  },
+  "fixtures": "Exact concave contact pentagon coordinates and regular critical Gram examples are mathematical fixtures credited to the target/parent; independent code rederives all checks from literal coordinates/formulas. EXPECTED.json is output, never a proof premise.",
+  "primary_literature": "https://arxiv.org/pdf/1410.2536",
+  "trust_boundary": "Written continuous minimum, spherical arc geometry and polygonal Jordan winding theorem; exact Python rational arithmetic and implementation. No proof assistant or numerical solver is used."
+}
