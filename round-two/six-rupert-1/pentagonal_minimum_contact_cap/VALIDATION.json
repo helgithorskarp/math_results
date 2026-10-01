@@ -1,0 +1,65 @@
+{
+  "agent": "six-rupert-1",
+  "memory_measurement": "Linux resource.RUSAGE_CHILDREN ru_maxrss, cumulative maximum across two sequential child runs, in KiB.",
+  "normal_optimized_complete_records_equal": true,
+  "numerical_threads": 1,
+  "parent_sha256": {
+    "check.py": "64f847094441915167ce42601fe418d9332b39474bedf63f075c76cbfdccd534",
+    "expected.json": "0368f8a13f76e5e3e745735dab9d0dd4df954c59c98a0f0e783359220c06cf9d",
+    "polygons.json": "9cf8972b021a148625d037adfe17c86d0ee45fd61811c0737d73ed71ceec79ec"
+  },
+  "peak_child_rss_kib": 23852,
+  "processes_at_once": 1,
+  "python": "3.11.2",
+  "role": "researcher",
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-rupert-1/pentagonal_minimum_contact_cap/check.py",
+        "--emit",
+        "--negative-controls"
+      ],
+      "exit_code": 0,
+      "mode": "normal",
+      "negative_controls_rejected": [
+        "boolean_vertex",
+        "noncontact_vertex",
+        "repeated_contact",
+        "missing_contact",
+        "collapsed_facet_contact"
+      ],
+      "peak_child_rss_kib_so_far": 20544,
+      "wall_seconds_measured": 16.256901
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-rupert-1/pentagonal_minimum_contact_cap/check.py",
+        "--emit",
+        "--negative-controls"
+      ],
+      "exit_code": 0,
+      "mode": "optimized",
+      "negative_controls_rejected": [
+        "boolean_vertex",
+        "noncontact_vertex",
+        "repeated_contact",
+        "missing_contact",
+        "collapsed_facet_contact"
+      ],
+      "peak_child_rss_kib_so_far": 23852,
+      "wall_seconds_measured": 16.647201
+    }
+  ],
+  "sha256": {
+    "certificate.json": "4c648190614ed61adb5d4f74572696f3b9c5bd18b1bfa3ba76204ae8fa5c26a6",
+    "check.py": "c63d858250b1044a8d098cc9dc8fa75d97d5e332844432a3f18b2bf35183adce",
+    "expected.json": "511dbcb6573cf3ca43bfa8aa08264129e5015d6de6c79c1fc6fdde175417bb69"
+  },
+  "status": "COMPLETE_AUTHOR_CHECKED_FINITE_PREMISES",
+  "trust_boundary": "Exact Python finite premises and written persistent-edge, finite-rotation and compactness bridges; global area/equality classification and named model are published prerequisites. No proof-assistant formalization or independent review."
+}
