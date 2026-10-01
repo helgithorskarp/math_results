@@ -41,8 +41,20 @@ rules out `lambda_uv=0` in both replication profiles
 `(16,19,20^16)` and `(17,18,20^16)`. Equality in the deficit budget
 reduces the latter to two aggregate configurations; uncovered-pair
 capacity gives the contradictions23>21 and30>28. Other pair
-multiplicities and profiles with three to five unsaturated points
-remain open. Independent review of these new stages is pending.
+multiplicities are treated by the next incidence argument. Independent
+review of these new stages is pending.
+
+The [two-unsaturated-point incidence bounds](TWO_UNSATURATED_INCIDENCES.md)
+charge at least two remaining homogeneous incidences to every covered
+common-tail point deficient to both hubs. They bound heavy saturated
+edges and exceptions to single-hub independence at every pair
+multiplicity. Consequently the `(16,19,20^16)` profile requires
+`lambda_uv>=2`; at equality, none of its six common-tail points is
+deficient to both hubs. The remaining cases in that profile, the
+`(17,18,20^16)` positive-multiplicity cases, and profiles with three to
+five unsaturated points remain open. This is an ordinary counting proof
+with the previously checked local certificates; independent review of
+the new transfer is pending, and the global interval remains69–71.
 
 [UNIT_HIGH_CORE_FOUR.md](UNIT_HIGH_CORE_FOUR.md) proves **exactly four**
 leave edges among the five replication-four points of every twenty-quadruple
