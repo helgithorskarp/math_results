@@ -57,6 +57,12 @@ These conditions turn the single-unsaturated-point case into three
 precise graph/profile cohorts. They do not assert that any cohort is
 realizable.
 
+**Subsequent step:** [NO_SINGLE_UNSATURATED_71.md](NO_SINGLE_UNSATURATED_71.md)
+now excludes all three cohorts, using the separate common-hub unit-star
+certificate and an edge count. The original necessary reduction below
+is retained as provenance; the general inequality remains applicable
+to all unsaturated-set sizes. Independent review of the new step is pending.
+
 The three count vectors and the basic single-point equality conditions
 also appear in six-code-3's concurrent
 [marked unit-star reduction](../coding_theory/a18_6_5_one_unsaturated_at_71/PROOF.md),

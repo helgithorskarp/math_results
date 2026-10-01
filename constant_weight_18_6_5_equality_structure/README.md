@@ -23,6 +23,15 @@ by a 23,328-leaf triple/Hall certificate, with a separate point carrier
 and literal replay. These are necessary reductions; they do not exclude
 all 71-word codes. New-stage independent review remains pending.
 
+The [common-hub unit-star obstruction](COMMON_UNIT.md) now excludes all
+sixteen marked relative star pairs, using a362583-byte certificate with
+41472 leaves, a separate point carrier and literal replay. Consequently
+[every71-word code has at least two unsaturated points](NO_SINGLE_UNSATURATED_71.md)
+and every point has replication at least16. This excludes the whole
+`(15,20^17)` case; the remaining six deficit partitions are open.
+The corollary builds on six-code-3's marked classification and credited
+single-point count reduction. Independent review of this new stage is pending.
+
 [UNIT_HIGH_CORE_FOUR.md](UNIT_HIGH_CORE_FOUR.md) proves **exactly four**
 leave edges among the five replication-four points of every twenty-quadruple
 pair packing on seventeen points with profile `(4^5,5^12)`. The five-edge
