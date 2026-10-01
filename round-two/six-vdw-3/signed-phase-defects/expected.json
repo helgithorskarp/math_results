@@ -1,0 +1,156 @@
+{
+  "agent": "six-vdw-3",
+  "audit": {
+    "finite_controls": {
+      "actual_negative_witnesses": 8239,
+      "actual_positive_cyclic_checks": 81,
+      "complete_enumerations": [
+        {
+          "normalized_orientations": 64,
+          "q": 7,
+          "valid_one_exception": 8,
+          "valid_separable": 21
+        },
+        {
+          "normalized_orientations": 4096,
+          "q": 13,
+          "valid_one_exception": 0,
+          "valid_separable": 52
+        }
+      ],
+      "positive_q7_one_exception": "0100000",
+      "q7_fixture_is_not_a_length3704_witness": true,
+      "q7_period": 42
+    },
+    "local": {
+      "boundary_reflections_checked": 24,
+      "missing_F_histogram": {
+        "0": 319,
+        "12": 546,
+        "4": 464,
+        "8": 858
+      },
+      "nonconflicting_vectors": 129,
+      "one_exception_truth_assignments": 896,
+      "pair_table": [
+        {
+          "missing_F_words": 0,
+          "position_pairs": 16,
+          "same_index_class": false,
+          "signs": "opposite"
+        },
+        {
+          "missing_F_words": 8,
+          "position_pairs": 5,
+          "same_index_class": true,
+          "signs": "opposite"
+        },
+        {
+          "missing_F_words": 4,
+          "position_pairs": 16,
+          "same_index_class": false,
+          "signs": "same"
+        },
+        {
+          "missing_F_words": 0,
+          "position_pairs": 5,
+          "same_index_class": true,
+          "signs": "same"
+        }
+      ],
+      "stable_realizations_checked": 2064,
+      "ternary_vectors": 2187
+    },
+    "model": {
+      "clauses": 35394,
+      "exceptional_supports": 357,
+      "field_pairs_with_21_supports": 5253,
+      "ladders": 5253,
+      "model_sha256": "ea4df0d39af79b7e8c59a317acd24bb7c9f26f4e388f30286f56b63d52b05dd8",
+      "puncture_clauses": 4284,
+      "q": 103,
+      "variables": 5253,
+      "xor_clauses": 20604
+    },
+    "model_corruptions_rejected": 3,
+    "normalization": {
+      "CRT_coordinate_entries": 63654,
+      "baseline_translation_truth_entries": 108,
+      "nearest_phase_truth_entries": 36,
+      "normalized_orientations_per_skeleton": "5070602400912917605986812821504",
+      "one_exception_skeletons": 618
+    },
+    "status": "EXACT_SIGNED_DEFECT_MODEL_VERIFIED"
+  },
+  "claim_scope": {
+    "excluded_one_exception_ternary_skeletons": 618,
+    "new_W_bound": false,
+    "normalized_orientations_each": "2^102",
+    "separable_103_family_excluded": false,
+    "unrestricted_period618_excluded": false
+  },
+  "model": {
+    "clauses": 35394,
+    "exceptional_supports": 357,
+    "field_pairs_with_21_supports": 5253,
+    "ladders": 5253,
+    "model_sha256": "ea4df0d39af79b7e8c59a317acd24bb7c9f26f4e388f30286f56b63d52b05dd8",
+    "puncture_clauses": 4284,
+    "q": 103,
+    "variables": 5253,
+    "xor_clauses": 20604
+  },
+  "proof": {
+    "checked_additions": 50662,
+    "cnf_sha256": "ea4df0d39af79b7e8c59a317acd24bb7c9f26f4e388f30286f56b63d52b05dd8",
+    "deleted_clauses": 86012,
+    "initial_clauses": 35394,
+    "mathematical_exclusion": true,
+    "proof_sha256": "c186c5a0c87025f7d62dd7a154a06d6609c5794130f30419f42c355c04a40daa",
+    "propagation_hints_checked": 1960881,
+    "status": "EXACT_RUP_LRAT_VERIFIED",
+    "variables": 5253
+  },
+  "proof_corpora": {
+    "drat_bytes": 6882465,
+    "drat_sha256": "69e5a1e8d9d18958a59bdccecb50565b7f08082435bdb188bf2e4ffcd434ef91",
+    "lrat_bytes": 15039613,
+    "lrat_sha256": "c186c5a0c87025f7d62dd7a154a06d6609c5794130f30419f42c355c04a40daa",
+    "published": false
+  },
+  "role": "researcher",
+  "solver": {
+    "conflict_budget": 200000,
+    "discovery_stats": {
+      "conflicts": 64271,
+      "decisions": 77325,
+      "propagations": 26679226,
+      "restarts": 972
+    },
+    "name": "cadical195",
+    "optional_phases_or_symmetry_constraints": false,
+    "proof_logging": true,
+    "python_sat_version": "1.8.dev24"
+  },
+  "sources": {
+    "RUP_checker": {
+      "author": "six-vdw-1, researcher",
+      "commit": "223f0eaa45d24ff924e10edaa1e327fbf8a7259f",
+      "sha256": "55543f905d42aaf0955906f97a8484ec8522a182512b1d2e8fe132bb45cb545c",
+      "url": "https://raw.githubusercontent.com/helgithorskarp/math_results/223f0eaa45d24ff924e10edaa1e327fbf8a7259f/van_der_waerden_618_binary_fibers/check_rup_lrat.py"
+    },
+    "cut_generator": {
+      "author": "six-vdw-3, researcher",
+      "commit": "8bb6a2734df70854472a1aed5c1703f01be1e6a9",
+      "sha256": "21bba5e30eae728ded9cc45a6a75c5522c644fd411980bc5c9310e96b19e637f",
+      "url": "https://raw.githubusercontent.com/helgithorskarp/math_results/8bb6a2734df70854472a1aed5c1703f01be1e6a9/round-two/six-vdw-3/parity-ladders/generate.py"
+    },
+    "drat_converter": {
+      "bytes": 59546,
+      "commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+      "sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+      "upstream": "https://github.com/marijnheule/drat-trim",
+      "url": "https://raw.githubusercontent.com/marijnheule/drat-trim/2e3b2dc0ecf938addbd779d42877b6ed69d9a985/drat-trim.c"
+    }
+  }
+}
