@@ -1,0 +1,81 @@
+{
+  "agent": "six-books-3",
+  "role": "researcher",
+  "created_utc_date": "2026-10-01",
+  "problem": "ordinary R(B4,B7)",
+  "interpreter": "Python 3.11.2",
+  "dependencies": "standard library only",
+  "processes": 1,
+  "threads": 1,
+  "proof_scope": "Under both book caps, ten-regular simple red graphs on22 vertices have red edge codegrees2 or3; no Ramsey endpoint claimed.",
+  "source_files": {
+    ".gitignore": {
+      "bytes": 13,
+      "sha256": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+    },
+    "PROOF.md": {
+      "bytes": 14296,
+      "sha256": "21de29a4bc51dd7301ae40336885192807198878dcbf92444f961ea1d3d7e1db"
+    },
+    "README.md": {
+      "bytes": 2003,
+      "sha256": "fa4d1edb9dacbbca5ba6d11468cce01b0ea9d59a9953fd39ca6609df4da43400"
+    },
+    "baseline21.rows": {
+      "bytes": 462,
+      "sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec"
+    },
+    "checks.py": {
+      "bytes": 8912,
+      "sha256": "d1b7e5f7c09e8ca9a48ee54efd94724fda5e6a11779cdc82b1ef311ad44115da"
+    },
+    "expected.json": {
+      "bytes": 2087,
+      "sha256": "ac82ce96c2a3ad23c38288a58f6768d0e7b04e93cb009faa02f4947adda3fe1d"
+    },
+    "generate.py": {
+      "bytes": 10464,
+      "sha256": "0c535609e1e0a45847b41b23d3c35964a7dce32ae290c9cb7fa4c02e43cf71b7"
+    },
+    "negative_vectors.json": {
+      "bytes": 2664,
+      "sha256": "e06edcb1b6dbddf4749da0894e9b91abd339264c186cb052b99ff95014dfd12b"
+    },
+    "verify.py": {
+      "bytes": 9594,
+      "sha256": "c25cbaa209a85d0a04a5437f66abb697e7bd42512a053dbbcbeeea2961a03fc0"
+    }
+  },
+  "resource_checks": [
+    {
+      "name": "generate.py",
+      "seconds": 4.259938246977981,
+      "exit_code": 0,
+      "peak_rss_KiB": 21256,
+      "stdout_sha256": "ac82ce96c2a3ad23c38288a58f6768d0e7b04e93cb009faa02f4947adda3fe1d"
+    },
+    {
+      "name": "verify.py",
+      "seconds": 7.813863215968013,
+      "exit_code": 0,
+      "peak_rss_KiB": 21256,
+      "stdout_sha256": "ac82ce96c2a3ad23c38288a58f6768d0e7b04e93cb009faa02f4947adda3fe1d"
+    },
+    {
+      "name": "checks.py",
+      "seconds": 15.514526415034197,
+      "exit_code": 0,
+      "peak_rss_KiB": 21256,
+      "stdout_sha256": "402f243453aef439137267d922caeaa492c802f11fb8cd1421149a7f4ba4eb09"
+    }
+  ],
+  "resource_peak_note": "Sequential child peak RSS values are cumulative observed upper bounds within the measurement script.",
+  "full_entry_comparison": {
+    "seconds": 12.216014075966086,
+    "exit_code": 0,
+    "peak_rss_KiB": 21604
+  },
+  "baseline_origin": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+  "baseline_original_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+  "literature_live_checked": "2026-10-01"
+}
