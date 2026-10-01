@@ -1,0 +1,113 @@
+{
+  "actual_reviewer": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "independent_runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scratch/publication/round-two/six-reviewer-4/rid-wedge-audit/check.py",
+        "--emit"
+      ],
+      "seconds": 3.1636579890036955,
+      "returncode": 0,
+      "stderr": "",
+      "guard_seconds": 40,
+      "peak_rss_upper_kib": 15764,
+      "expected_bytes": 57076,
+      "expected_sha256": "01ceac565960ac6a2a0346fa9dcfc8226045541a013c559973e0e6251faf89cf"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scratch/publication/round-two/six-reviewer-4/rid-wedge-audit/check.py"
+      ],
+      "seconds": 3.0114789229701273,
+      "returncode": 0,
+      "stderr": "",
+      "guard_seconds": 40,
+      "peak_rss_upper_kib": 15764,
+      "stdout": "PASS\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "scratch/publication/round-two/six-reviewer-4/rid-wedge-audit/check.py"
+      ],
+      "seconds": 3.2045877579948865,
+      "returncode": 0,
+      "stderr": "",
+      "guard_seconds": 40,
+      "peak_rss_upper_kib": 18012,
+      "stdout": "PASS\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scratch/publication/round-two/six-reviewer-4/rid-wedge-audit/compare.py",
+        "scratch/pass13-native-normal.json",
+        "--controls"
+      ],
+      "seconds": 0.07518029998755082,
+      "returncode": 0,
+      "stderr": "",
+      "guard_seconds": 40,
+      "peak_rss_upper_kib": 18012,
+      "stdout": "{\n  \"both_families_compared\": true,\n  \"common_exact_field_entries\": 26,\n  \"damaged_records_rejected\": [\n    \"missing_family\",\n    \"duplicate_family\",\n    \"wrong_area\",\n    \"wrong_support_face\",\n    \"wrong_cosine\",\n    \"wrong_original\"\n  ],\n  \"every_example_and_named_cover_field_compared\": true,\n  \"trust\": \"JSON comparison only; independent checker verifies its whole record separately\"\n}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "scratch/publication/round-two/six-reviewer-4/rid-wedge-audit/compare.py",
+        "scratch/pass13-native-normal.json",
+        "--controls"
+      ],
+      "seconds": 0.2265044219675474,
+      "returncode": 0,
+      "stderr": "",
+      "guard_seconds": 40,
+      "peak_rss_upper_kib": 18012,
+      "stdout": "{\n  \"both_families_compared\": true,\n  \"common_exact_field_entries\": 26,\n  \"damaged_records_rejected\": [\n    \"missing_family\",\n    \"duplicate_family\",\n    \"wrong_area\",\n    \"wrong_support_face\",\n    \"wrong_cosine\",\n    \"wrong_original\"\n  ],\n  \"every_example_and_named_cover_field_compared\": true,\n  \"trust\": \"JSON comparison only; independent checker verifies its whole record separately\"\n}\n"
+    }
+  ],
+  "native_runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scratch/pass13-native/rid_two_coordinate_wedges/check.py"
+      ],
+      "seconds": 31.57614094100427,
+      "returncode": 0,
+      "stderr": "",
+      "peak_rss_upper_kib": 21684,
+      "bytes": 9370,
+      "sha256": "4deca6c0c0f721afd75938b55274d96aa91882f2f6cf4f82bb21cac2837ea907",
+      "whole_expected_matches": true
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "scratch/pass13-native/rid_two_coordinate_wedges/check.py"
+      ],
+      "guard_seconds": 40,
+      "completed": false,
+      "status": "TimeoutExpired after 40 seconds; child terminated by subprocess.run; no increased budget or retry",
+      "mathematical_interpretation": "Incomplete operational replay, no counterexample or nonexistence conclusion."
+    }
+  ],
+  "numerical_threads": 1,
+  "cpu_intensive_jobs_at_once": 1,
+  "resource_cap": "one CPU / 2 GiB; unchanged",
+  "independent_whole_record_sha256": "01ceac565960ac6a2a0346fa9dcfc8226045541a013c559973e0e6251faf89cf",
+  "incomplete_native_optimized_interpretation": "Timeout is an operational limitation only; no extra budget or rerun. Independent optimized check completed."
+}
