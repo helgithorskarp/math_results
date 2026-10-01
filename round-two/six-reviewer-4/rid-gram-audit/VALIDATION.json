@@ -1,0 +1,161 @@
+{
+  "actual_reviewer": "six-reviewer-4",
+  "both_full16_corner_inventories_and_all16_directed_edge_entries_match": true,
+  "cpu_intensive_jobs_at_once": 1,
+  "fixed_plane_common_angle_checks": [
+    {
+      "active": 216,
+      "constraints": 256,
+      "parity": "proper",
+      "polar_vertices": 44,
+      "rejected_boundaries": 432,
+      "strict_squared_scale_deficit_exceeds_two_to_minus": 15
+    },
+    {
+      "active": 216,
+      "constraints": 256,
+      "parity": "reflected",
+      "polar_vertices": 42,
+      "rejected_boundaries": 432,
+      "strict_squared_scale_deficit_exceeds_two_to_minus": 6
+    }
+  ],
+  "independent_final_runs": [
+    {
+      "bytes": 40783,
+      "command": [
+        "python3",
+        "-B",
+        "scratch/publication/round-two/six-reviewer-4/rid-gram-audit/check.py",
+        "--emit"
+      ],
+      "guard_seconds": 40,
+      "name": "emission",
+      "peak_rss_upper_kib": 21564,
+      "returncode": 0,
+      "seconds": 5.392383913975209,
+      "sha256": "8aa0c7037c47652a9e3cdbc327d78b84db5afd59c7ad0fccb6bf82d2e5e27064",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scratch/publication/round-two/six-reviewer-4/rid-gram-audit/check.py"
+      ],
+      "guard_seconds": 40,
+      "name": "normal",
+      "peak_rss_upper_kib": 21668,
+      "returncode": 0,
+      "seconds": 5.309814686013851,
+      "stderr": "",
+      "stdout": "PASS\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "scratch/publication/round-two/six-reviewer-4/rid-gram-audit/check.py"
+      ],
+      "guard_seconds": 40,
+      "name": "optimized",
+      "peak_rss_upper_kib": 22104,
+      "returncode": 0,
+      "seconds": 5.508141594007611,
+      "stderr": "",
+      "stdout": "PASS\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scratch/publication/round-two/six-reviewer-4/rid-gram-audit/compare.py",
+        "scratch/pass15-native-normal.json",
+        "--controls"
+      ],
+      "guard_seconds": 40,
+      "name": "comparison",
+      "peak_rss_upper_kib": 22104,
+      "returncode": 0,
+      "seconds": 0.16622451698640361,
+      "stderr": "",
+      "stdout": "{\n  \"all16_edge_endpoints_excesses_and_actual_maximizers_match\": true,\n  \"all2304_circle_control_decisions_fingerprint_match\": true,\n  \"both_full_shadow_vertex_inventories_match\": true,\n  \"damaged_inputs_rejected\": [\n    \"missing_full_edge\",\n    \"duplicate_full_edge\",\n    \"wrong_actual_maximizer\",\n    \"changed_physical_width\",\n    \"unsigned_Gram\",\n    \"boolean_original_index\",\n    \"false_row_margin\",\n    \"changed_circle_fingerprint\"\n  ],\n  \"exact_field_or_inventory_comparisons\": 86,\n  \"physical_area_widths_rows_and_Gram_match\": true,\n  \"trust\": \"Partial decoded mathematical-entry comparison, separate from complete independent record and complete native replay; author executable never imported.\"\n}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "scratch/publication/round-two/six-reviewer-4/rid-gram-audit/compare.py",
+        "scratch/pass15-native-normal.json",
+        "--controls"
+      ],
+      "guard_seconds": 40,
+      "name": "comparison_optimized",
+      "peak_rss_upper_kib": 22104,
+      "returncode": 0,
+      "seconds": 0.3129268430056982,
+      "stderr": "",
+      "stdout": "{\n  \"all16_edge_endpoints_excesses_and_actual_maximizers_match\": true,\n  \"all2304_circle_control_decisions_fingerprint_match\": true,\n  \"both_full_shadow_vertex_inventories_match\": true,\n  \"damaged_inputs_rejected\": [\n    \"missing_full_edge\",\n    \"duplicate_full_edge\",\n    \"wrong_actual_maximizer\",\n    \"changed_physical_width\",\n    \"unsigned_Gram\",\n    \"boolean_original_index\",\n    \"false_row_margin\",\n    \"changed_circle_fingerprint\"\n  ],\n  \"exact_field_or_inventory_comparisons\": 86,\n  \"physical_area_widths_rows_and_Gram_match\": true,\n  \"trust\": \"Partial decoded mathematical-entry comparison, separate from complete independent record and complete native replay; author executable never imported.\"\n}\n"
+    }
+  ],
+  "independent_whole_record_bytes": 40783,
+  "independent_whole_record_sha256": "8aa0c7037c47652a9e3cdbc327d78b84db5afd59c7ad0fccb6bf82d2e5e27064",
+  "native_prerequisite_fingerprint_count": 12,
+  "native_runs": [
+    {
+      "bytes": 11052,
+      "command": [
+        "python3",
+        "-B",
+        "scratch/pass15-native/rid_pair_gram_relaxation/check.py"
+      ],
+      "guard_seconds": 40,
+      "peak_rss_upper_kib": 22244,
+      "returncode": 0,
+      "seconds": 17.92476576199988,
+      "sha256": "89bbc22470eb1cd5699abeb7e3384af27ff1ce0aceea0e96152453ca4b6ff9f2",
+      "stderr": "",
+      "whole_expected_matches": true
+    },
+    {
+      "bytes": 11052,
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "scratch/pass15-native/rid_pair_gram_relaxation/check.py"
+      ],
+      "guard_seconds": 40,
+      "peak_rss_upper_kib": 25580,
+      "returncode": 0,
+      "seconds": 16.884306417952757,
+      "sha256": "89bbc22470eb1cd5699abeb7e3384af27ff1ce0aceea0e96152453ca4b6ff9f2",
+      "stderr": "",
+      "whole_expected_matches": true
+    }
+  ],
+  "native_whole_expected_bytes": 11052,
+  "native_whole_expected_sha256": "89bbc22470eb1cd5699abeb7e3384af27ff1ce0aceea0e96152453ca4b6ff9f2",
+  "numerical_threads": 1,
+  "optional_partial_comparison_count": 86,
+  "optional_partial_damaged_inputs": 8,
+  "own_damaged_controls_rejected": [
+    "missing_receiving_edge",
+    "negative_normalization_root",
+    "improper_source_rotation",
+    "nonpositive_plane_metric",
+    "missing_original",
+    "wrong_positive_root_square"
+  ],
+  "python": "Python3.11.2 standard library; discovery SDK Python3.12 separate transport only",
+  "resource_scope": "oneCPU/2GiB; unchanged",
+  "role": "independent mathematical reviewer",
+  "scope": "Exact original9093 scope confirmed plus stronger fixed-pair-of-planes certificate, not a receiver-wide exclusion or global RID result",
+  "signed_zero_equality_controls": 7,
+  "three_constraint_controls": 2024,
+  "timeouts": [],
+  "trust": "Ordinary continuum proofs and exact finite reconstruction; optional86-entry comparison is explicitly partial, distinct from whole independent/native checks",
+  "two_pair_controls": 2304
+}
