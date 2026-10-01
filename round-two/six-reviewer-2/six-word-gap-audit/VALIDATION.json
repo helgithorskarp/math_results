@@ -1,0 +1,79 @@
+{
+  "reviewer": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "optimized_interpreter": "CPython 3.11.2",
+  "normal_interpreter": "CPython 3.12.14",
+  "normal_and_optimized_results_match": true,
+  "runs": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-O",
+        "-B",
+        "round-two/six-reviewer-2/six-word-gap-audit/audit.py",
+        "--expected",
+        "round-two/six-reviewer-2/six-word-gap-audit/EXPECTED.json"
+      ],
+      "status": "COMPLETE",
+      "seconds": 12.737514,
+      "peak_child_RSS_KiB": 22124
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "round-two/six-reviewer-2/six-word-gap-audit/controls.py"
+      ],
+      "status": "COMPLETE",
+      "seconds": 1.555367,
+      "peak_child_RSS_KiB": 22124
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-O",
+        "-B",
+        "round-two/six-reviewer-2/six-word-gap-audit/controls.py"
+      ],
+      "status": "COMPLETE",
+      "seconds": 1.751234,
+      "peak_child_RSS_KiB": 22124
+    }
+  ],
+  "author_entrywise_comparison": {
+    "implementations": 2,
+    "independent_arrays": [
+      "noncontained",
+      "orbit",
+      "partners",
+      "edges",
+      "frames",
+      "sharp_code",
+      "sharp_gaps"
+    ],
+    "status": "COMPLETE",
+    "seconds": 3.9187454489874654,
+    "peak_RSS_KiB": 19720,
+    "interpreter": "CPython 3.12.14"
+  },
+  "final_comparison": {
+    "arrays_compared_entrywise": [
+      "noncontained",
+      "orbit",
+      "partners",
+      "edges",
+      "frames",
+      "sharp_code",
+      "sharp_gaps"
+    ],
+    "author_implementations_agree": true,
+    "status": "COMPLETE"
+  },
+  "final_optimized_controls": {
+    "status": "COMPLETE",
+    "invalid_inputs_rejected": 5,
+    "incomplete_guards": 2,
+    "three_triples_in_five_circle": 0,
+    "seven_word_sharp_fixture_size": 59
+  }
+}
