@@ -1,0 +1,13 @@
+{
+  "agent": "six-covering-1",
+  "role": "researcher",
+  "date": "2026-10-01",
+  "seed_source": "https://github.com/helgithorskarp/math_results/blob/main/number_theory/distinct_covering_15120_low_prefix_barrier/seed.tsv",
+  "source_baseline_commit": "6dffbb940c10f415b71e275a45010a7141d1ee4e",
+  "seed_sha256": "b5632b89e49b9c4f59493d5b457e2471e81417bf818bbc45beb2500d2ed27d7d",
+  "search_source": "https://github.com/helgithorskarp/math_results/blob/main/number_theory/distinct_covering_min8_20160/search.cpp",
+  "search_command": "scratch/walk 30240 25 2026100102 seed.tsv output.tsv 80 5",
+  "search_result": "WITNESS at iteration164; largest-first redundancy deletion retained all26 prescribed classes",
+  "lp_discovery": "SciPy1.17.1/NumPy2.4.6, highs-ipm,5s,threads1; ordinary normalized resource LP. Weights rounded to scale1000000 and then to nearest1/4. Dual masses floored at denominator1000000 and verified exactly.",
+  "scope": "Exact conditional optimum30240 for covers retaining all26 prescribed classes; no new global L_min(8) bound."
+}
