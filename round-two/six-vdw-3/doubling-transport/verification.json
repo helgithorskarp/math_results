@@ -1,0 +1,434 @@
+{
+  "fresh": {
+    "agent": "six-vdw-3",
+    "both_colors_have_four_AP": true,
+    "cases": [
+      {
+        "audit": {
+          "additional_word_clauses": 10404,
+          "case": "no-four",
+          "clauses": 41516,
+          "cnf_sha256": "3fb9cd1ec8ea8038aafbe97c4773c621530c1b1ed5684625fd97c29dee978e46",
+          "counter_variables": 0,
+          "criterion_clauses": 31110,
+          "directed_ladders": 10506,
+          "distinct_ladders": 5253,
+          "midpoint_clauses": 5151,
+          "model_corruptions_rejected": 4,
+          "q": 103,
+          "three_AP_supports": 5253,
+          "variables": 5253,
+          "weight_cap": null,
+          "xor_clauses": 20604
+        },
+        "controls": {
+          "generic_bad_proofs_rejected": 8,
+          "production_corruptions_rejected": 2
+        },
+        "model": {
+          "base_variables": 5253,
+          "case": "no-four",
+          "clauses": 41516,
+          "cnf_sha256": "3fb9cd1ec8ea8038aafbe97c4773c621530c1b1ed5684625fd97c29dee978e46",
+          "counter_variables": 0,
+          "criterion_clauses": 31110,
+          "q": 103,
+          "variables": 5253,
+          "weight_cap": null
+        },
+        "name": "no-four",
+        "normal_and_optimized_audits_and_replays": true,
+        "one_conflict_UNKNOWN_control": true,
+        "proof": {
+          "checked_additions": 52,
+          "cnf_sha256": "3fb9cd1ec8ea8038aafbe97c4773c621530c1b1ed5684625fd97c29dee978e46",
+          "deleted_clauses": 0,
+          "initial_clauses": 41516,
+          "mathematical_exclusion": true,
+          "proof_sha256": "0bab8c6320073d20c5bd431aa0a9797ba1bacacbc7f05e2feb314e975cb543db",
+          "propagation_hints_checked": 572,
+          "status": "EXACT_RUP_LRAT_VERIFIED",
+          "variables": 5253
+        },
+        "proposal": {
+          "mathematical_exclusion": false,
+          "status": "COMPACT_PUBLISHED_CERTIFICATE"
+        },
+        "reference_trace_match": true
+      },
+      {
+        "audit": {
+          "case": "four",
+          "clauses": 40597,
+          "cnf_sha256": "4813fe328e843200ec73e82cfa4e2f7cb2d1b5e48a1f58a1ac893c81c9cf39b8",
+          "counter_variables": 2403,
+          "criterion_clauses": 31110,
+          "directed_ladders": 10506,
+          "distinct_ladders": 5253,
+          "model_corruptions_rejected": 4,
+          "q": 103,
+          "variables": 7656,
+          "weight_cap": 27,
+          "xor_clauses": 20604
+        },
+        "controls": {
+          "generic_bad_proofs_rejected": 8,
+          "production_corruptions_rejected": 2
+        },
+        "model": {
+          "base_variables": 5253,
+          "case": "four",
+          "clauses": 40597,
+          "cnf_sha256": "4813fe328e843200ec73e82cfa4e2f7cb2d1b5e48a1f58a1ac893c81c9cf39b8",
+          "counter_variables": 2403,
+          "criterion_clauses": 31110,
+          "q": 103,
+          "variables": 7656,
+          "weight_cap": 27
+        },
+        "name": "four",
+        "normal_and_optimized_audits_and_replays": true,
+        "one_conflict_UNKNOWN_control": true,
+        "proof": {
+          "checked_additions": 72549,
+          "cnf_sha256": "4813fe328e843200ec73e82cfa4e2f7cb2d1b5e48a1f58a1ac893c81c9cf39b8",
+          "deleted_clauses": 112559,
+          "initial_clauses": 40597,
+          "mathematical_exclusion": true,
+          "proof_sha256": "dc7aaf9dc6b662f0d91dc81bd14f9bcfe2c90edcd1aad6ed9405243393fab890",
+          "propagation_hints_checked": 2916598,
+          "status": "EXACT_RUP_LRAT_VERIFIED",
+          "variables": 7656
+        },
+        "proposal": {
+          "conflict_budget": 100000,
+          "mathematical_exclusion": false,
+          "seconds": 9.525665480003227,
+          "stats": {
+            "conflicts": 81639,
+            "decisions": 97983,
+            "propagations": 31870602,
+            "restarts": 1011
+          },
+          "status": "UNSAT_PENDING_CHECK"
+        },
+        "reference_trace_match": true
+      }
+    ],
+    "changed_counter_pin_rejected": true,
+    "child_peak_KiB": 132856,
+    "full_family_excluded": false,
+    "full_separable_orientation_weight_range": [
+      28,
+      75
+    ],
+    "length3704_witness_found": false,
+    "new_W_bound": false,
+    "no_four_branch_has_weight_cap": false,
+    "parent_peak_KiB": 132856,
+    "role": "researcher",
+    "runtime": {
+      "python": "3.11.2",
+      "python_sat": "1.8.dev24",
+      "six": "1.17.0"
+    },
+    "seconds": 56.54022190201795,
+    "small": [
+      {
+        "accepted": 3,
+        "all_eligible_normalizations": 126,
+        "case": "four",
+        "full_words": 21,
+        "literal_positive_cyclic_APs": 5166,
+        "normalized_words": 64,
+        "q": 7,
+        "weight_cap": 6
+      },
+      {
+        "accepted": 2,
+        "all_eligible_normalizations": 84,
+        "case": "no-four",
+        "full_words": 21,
+        "literal_positive_cyclic_APs": 3444,
+        "normalized_words": 64,
+        "q": 7,
+        "weight_cap": null
+      },
+      {
+        "accepted": 0,
+        "all_eligible_normalizations": 0,
+        "case": "four",
+        "full_words": 0,
+        "literal_positive_cyclic_APs": 0,
+        "normalized_words": 1024,
+        "q": 11,
+        "weight_cap": 8
+      },
+      {
+        "accepted": 0,
+        "all_eligible_normalizations": 0,
+        "case": "no-four",
+        "full_words": 0,
+        "literal_positive_cyclic_APs": 0,
+        "normalized_words": 1024,
+        "q": 11,
+        "weight_cap": null
+      },
+      {
+        "accepted": 10,
+        "all_eligible_normalizations": 1560,
+        "case": "four",
+        "full_words": 52,
+        "literal_positive_cyclic_APs": 60060,
+        "normalized_words": 4096,
+        "q": 13,
+        "weight_cap": 10
+      },
+      {
+        "accepted": 0,
+        "all_eligible_normalizations": 0,
+        "case": "no-four",
+        "full_words": 52,
+        "literal_positive_cyclic_APs": 0,
+        "normalized_words": 4096,
+        "q": 13,
+        "weight_cap": null
+      }
+    ],
+    "status": "VERIFIED_SEPARABLE_WEIGHT_28_75_AND_FOUR_AP_NORMALIZATION",
+    "structural": {
+      "complete_small_words": 5184,
+      "directed_triplets_tested": 84,
+      "full_F_words": 73,
+      "local_assignments": 64,
+      "no_four_color_classes": 87,
+      "nontrivial_transport_classes": 14,
+      "positive_q7_fixture": {
+        "S": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "per_direction": 1,
+        "triplets": 6
+      },
+      "q103_order_of_two": 51,
+      "q103_signed_step_orbit_size": 102,
+      "status": "DOUBLING_INJECTION_BIJECTION_AND_MIDPOINT_CONTROLS_CHECKED",
+      "valid_local_extensions": 4
+    }
+  },
+  "resume": {
+    "agent": "six-vdw-3",
+    "both_colors_have_four_AP": true,
+    "cases": [
+      {
+        "audit": {
+          "additional_word_clauses": 10404,
+          "case": "no-four",
+          "clauses": 41516,
+          "cnf_sha256": "3fb9cd1ec8ea8038aafbe97c4773c621530c1b1ed5684625fd97c29dee978e46",
+          "counter_variables": 0,
+          "criterion_clauses": 31110,
+          "directed_ladders": 10506,
+          "distinct_ladders": 5253,
+          "midpoint_clauses": 5151,
+          "model_corruptions_rejected": 4,
+          "q": 103,
+          "three_AP_supports": 5253,
+          "variables": 5253,
+          "weight_cap": null,
+          "xor_clauses": 20604
+        },
+        "controls": {
+          "generic_bad_proofs_rejected": 8,
+          "production_corruptions_rejected": 2
+        },
+        "model": {
+          "base_variables": 5253,
+          "case": "no-four",
+          "clauses": 41516,
+          "cnf_sha256": "3fb9cd1ec8ea8038aafbe97c4773c621530c1b1ed5684625fd97c29dee978e46",
+          "counter_variables": 0,
+          "criterion_clauses": 31110,
+          "q": 103,
+          "variables": 5253,
+          "weight_cap": null
+        },
+        "name": "no-four",
+        "normal_and_optimized_audits_and_replays": true,
+        "one_conflict_UNKNOWN_control": true,
+        "proof": {
+          "checked_additions": 52,
+          "cnf_sha256": "3fb9cd1ec8ea8038aafbe97c4773c621530c1b1ed5684625fd97c29dee978e46",
+          "deleted_clauses": 0,
+          "initial_clauses": 41516,
+          "mathematical_exclusion": true,
+          "proof_sha256": "0bab8c6320073d20c5bd431aa0a9797ba1bacacbc7f05e2feb314e975cb543db",
+          "propagation_hints_checked": 572,
+          "status": "EXACT_RUP_LRAT_VERIFIED",
+          "variables": 5253
+        },
+        "proposal": {
+          "mathematical_exclusion": false,
+          "status": "COMPACT_PUBLISHED_CERTIFICATE"
+        },
+        "reference_trace_match": true
+      },
+      {
+        "audit": {
+          "case": "four",
+          "clauses": 40597,
+          "cnf_sha256": "4813fe328e843200ec73e82cfa4e2f7cb2d1b5e48a1f58a1ac893c81c9cf39b8",
+          "counter_variables": 2403,
+          "criterion_clauses": 31110,
+          "directed_ladders": 10506,
+          "distinct_ladders": 5253,
+          "model_corruptions_rejected": 4,
+          "q": 103,
+          "variables": 7656,
+          "weight_cap": 27,
+          "xor_clauses": 20604
+        },
+        "controls": {
+          "generic_bad_proofs_rejected": 8,
+          "production_corruptions_rejected": 2
+        },
+        "model": {
+          "base_variables": 5253,
+          "case": "four",
+          "clauses": 40597,
+          "cnf_sha256": "4813fe328e843200ec73e82cfa4e2f7cb2d1b5e48a1f58a1ac893c81c9cf39b8",
+          "counter_variables": 2403,
+          "criterion_clauses": 31110,
+          "q": 103,
+          "variables": 7656,
+          "weight_cap": 27
+        },
+        "name": "four",
+        "normal_and_optimized_audits_and_replays": true,
+        "one_conflict_UNKNOWN_control": true,
+        "proof": {
+          "checked_additions": 72549,
+          "cnf_sha256": "4813fe328e843200ec73e82cfa4e2f7cb2d1b5e48a1f58a1ac893c81c9cf39b8",
+          "deleted_clauses": 112559,
+          "initial_clauses": 40597,
+          "mathematical_exclusion": true,
+          "proof_sha256": "dc7aaf9dc6b662f0d91dc81bd14f9bcfe2c90edcd1aad6ed9405243393fab890",
+          "propagation_hints_checked": 2916598,
+          "status": "EXACT_RUP_LRAT_VERIFIED",
+          "variables": 7656
+        },
+        "proposal": {
+          "mathematical_exclusion": false,
+          "status": "RESUMED_PROPOSAL"
+        },
+        "reference_trace_match": true
+      }
+    ],
+    "changed_counter_pin_rejected": true,
+    "child_peak_KiB": 131164,
+    "full_family_excluded": false,
+    "full_separable_orientation_weight_range": [
+      28,
+      75
+    ],
+    "length3704_witness_found": false,
+    "new_W_bound": false,
+    "no_four_branch_has_weight_cap": false,
+    "parent_peak_KiB": 131164,
+    "role": "researcher",
+    "runtime": {
+      "python": "3.11.2",
+      "python_sat": "1.8.dev24",
+      "six": "1.17.0"
+    },
+    "seconds": 39.71232087200042,
+    "small": [
+      {
+        "accepted": 3,
+        "all_eligible_normalizations": 126,
+        "case": "four",
+        "full_words": 21,
+        "literal_positive_cyclic_APs": 5166,
+        "normalized_words": 64,
+        "q": 7,
+        "weight_cap": 6
+      },
+      {
+        "accepted": 2,
+        "all_eligible_normalizations": 84,
+        "case": "no-four",
+        "full_words": 21,
+        "literal_positive_cyclic_APs": 3444,
+        "normalized_words": 64,
+        "q": 7,
+        "weight_cap": null
+      },
+      {
+        "accepted": 0,
+        "all_eligible_normalizations": 0,
+        "case": "four",
+        "full_words": 0,
+        "literal_positive_cyclic_APs": 0,
+        "normalized_words": 1024,
+        "q": 11,
+        "weight_cap": 8
+      },
+      {
+        "accepted": 0,
+        "all_eligible_normalizations": 0,
+        "case": "no-four",
+        "full_words": 0,
+        "literal_positive_cyclic_APs": 0,
+        "normalized_words": 1024,
+        "q": 11,
+        "weight_cap": null
+      },
+      {
+        "accepted": 10,
+        "all_eligible_normalizations": 1560,
+        "case": "four",
+        "full_words": 52,
+        "literal_positive_cyclic_APs": 60060,
+        "normalized_words": 4096,
+        "q": 13,
+        "weight_cap": 10
+      },
+      {
+        "accepted": 0,
+        "all_eligible_normalizations": 0,
+        "case": "no-four",
+        "full_words": 52,
+        "literal_positive_cyclic_APs": 0,
+        "normalized_words": 4096,
+        "q": 13,
+        "weight_cap": null
+      }
+    ],
+    "status": "VERIFIED_SEPARABLE_WEIGHT_28_75_AND_FOUR_AP_NORMALIZATION",
+    "structural": {
+      "complete_small_words": 5184,
+      "directed_triplets_tested": 84,
+      "full_F_words": 73,
+      "local_assignments": 64,
+      "no_four_color_classes": 87,
+      "nontrivial_transport_classes": 14,
+      "positive_q7_fixture": {
+        "S": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "per_direction": 1,
+        "triplets": 6
+      },
+      "q103_order_of_two": 51,
+      "q103_signed_step_orbit_size": 102,
+      "status": "DOUBLING_INJECTION_BIJECTION_AND_MIDPOINT_CONTROLS_CHECKED",
+      "valid_local_extensions": 4
+    }
+  }
+}
