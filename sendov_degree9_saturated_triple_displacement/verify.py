@@ -1,0 +1,325 @@
+#!/usr/bin/env python3
+"""Exact saturated-triple degree-nine angular displacement certificate.
+Actual author six-sendov-2, researcher, 2026-10-01.
+Integer homogeneous root forms, exact grouped scalar bounds, full matrices.
+Openly adapts the author's preceding filtered and moment-word arithmetic.
+Ordinary proof and imported local/scalar results remain outside a formal kernel.
+"""
+from fractions import Fraction as F
+from math import comb, factorial
+from itertools import combinations_with_replacement
+from pathlib import Path
+import argparse, hashlib, json
+CHECKS=0
+def require(ok,label):
+    global CHECKS
+    CHECKS+=1
+    if not ok:raise ValueError(label)
+class P:
+    def __init__(self,value=0):
+        if isinstance(value,P):value=value.t
+        if isinstance(value,int):value={(0,0,0,0,0):value}
+        self.t={e:int(c) for e,c in value.items() if c}
+    def __add__(self,other):
+        out=dict(self.t)
+        for e,c in P(other).t.items():out[e]=out.get(e,0)+c
+        return P(out)
+    __radd__=__add__
+    def __neg__(self):return P({e:-c for e,c in self.t.items()})
+    def __sub__(self,other):return self+-P(other)
+    def __rsub__(self,other):return P(other)+-self
+    def __mul__(self,other):
+        out={}
+        for e,c in self.t.items():
+            for f,b in P(other).t.items():
+                g=tuple(x+y for x,y in zip(e,f));out[g]=out.get(g,0)+c*b
+        return P(out)
+    __rmul__=__mul__
+    def __pow__(self,n):
+        out=P(1)
+        for _ in range(n):out*=self
+        return out
+    def __eq__(self,other):return self.t==P(other).t
+    def dump(self):return [[*e,str(c)] for e,c in sorted(self.t.items())]
+    def evaluate(self,values):return sum(c*product(x**i for x,i in zip(values,e)) for e,c in self.t.items())
+def product(values):
+    out=1
+    for value in values:out*=value
+    return out
+V=[P({tuple(int(i==j) for j in range(5)):1}) for i in range(5)]
+H=sum(V,P(0))
+def compositions(n,k):
+    if k==1:yield (n,);return
+    for i in range(n+1):
+        for rest in compositions(n-i,k-1):yield (i,*rest)
+def trace_words(r):
+    result={}
+    for mask in range(1<<r):
+        positions=[i for i in range(r) if mask>>i&1]
+        if not positions:key=(r,);c=8**r
+        else:
+            key=tuple(sorted((positions[(i+1)%len(positions)]-p)%r or r for i,p in enumerate(positions)))
+            c=(-1)**len(positions)*8**(r-len(positions))
+        result[key]=result.get(key,0)+c
+    return result
+def adj3(g):
+    out=[]
+    for i in range(3):
+        row=[]
+        for j in range(3):
+            a=[r for r in range(3) if r!=j];b=[c for c in range(3) if c!=i]
+            row.append((-1)**(i+j)*(g[a[0]][b[0]]*g[a[1]][b[1]]-g[a[0]][b[1]]*g[a[1]][b[0]]))
+        out.append(row)
+    return out
+def build():
+    # Vertex k has its last k deficits equal2/k. Common denominator30.
+    beta=[sum(((60//k)*V[k-1] for k in range(1,6) if i>=5-k),P(0)) for i in range(5)]
+    require(sum(beta,P(0))==60*H,'complete deficit sum2')
+    roots=[-30*H]*3+[30*H-b for b in beta]
+    mu=[sum((t**r for t in roots),P(0)) for r in range(1,9)]
+    require(mu[0]==0,'full balanced root forms')
+    traces=[P(7)]
+    for r in range(1,9):
+        traces.append(sum((c*product(mu[j-1] for j in word) for word,c in trace_words(r).items()),P(0)))
+    m2,m3,m4,m5,m6=mu[1:6]
+    base=[m2,8*m3,64*m4-8*m2**2,512*m5-128*m2*m3,
+          4096*m6-512*(2*m2*m4+m3**2)+64*m2**3]
+    a=(240*H)**2
+    gram=[[a*a*traces[i+j]-2*a*traces[i+j+2]+traces[i+j+4]
+           for j in range(3)] for i in range(3)]
+    rhs=[a*base[i]-base[i+2] for i in range(3)]
+    adj=adj3(gram);d=sum((gram[0][j]*adj[j][0] for j in range(3)),P(0))
+    n=sum((rhs[i]*adj[i][j]*rhs[j]*(1 if i==j else 2)
+           for i in range(3) for j in range(i,3)),P(0))
+    target=(785753*(30*H)**2*m2-122000*m2**2-224000*m4)*d+90000*n
+    moment=561753*(30*H)**2-104000*m2
+    for degree,p in ((18,d),(22,n),(22,target),(2,moment)):
+        require(all(sum(e)==degree for e in p.t),'exact homogeneous degree '+str(degree))
+    return roots,mu,traces,base,gram,rhs,d,n,target,moment
+
+def mm(a,b):
+    return [[sum(a[i][h]*b[h][j] for h in range(len(b)))
+             for j in range(len(b[0]))] for i in range(len(a))]
+def tr(a):return sum(a[i][i] for i in range(len(a)))
+def independent_rows(rows):
+    pivots={};selected=[]
+    for original in rows:
+        r=list(original)
+        for j,b in sorted(pivots.items()):
+            c=r[j]
+            if c:r=[u-c*v for u,v in zip(r,b)]
+        if any(r):
+            j=next(j for j,v in enumerate(r) if v);c=r[j]
+            pivots[j]=[v/c for v in r];selected.append(original)
+    return selected
+def solve(a,b):
+    a=[list(r)+[v] for r,v in zip(a,b)];n=len(b)
+    for j in range(n):
+        pivots=[i for i in range(j,n) if a[i][j]]
+        require(bool(pivots),'independent commutant nonzero pivot')
+        i=pivots[0];a[j],a[i]=a[i],a[j];t=a[j][j]
+        a[j]=[v/t for v in a[j]]
+        for i in range(j+1,n):
+            t=a[i][j]
+            if t:a[i]=[u-t*v for u,v in zip(a[i],a[j])]
+    x=[F(0)]*n
+    for j in range(n-1,-1,-1):x[j]=a[j][-1]-sum(a[j][h]*x[h] for h in range(j+1,n))
+    return x
+def pinching(theta):
+    # Adapted with attribution from the preceding author's defining
+    # symmetric-commutant controls. It does not use any moment quotient.
+    c=[[(theta[i] if i==j else F(0))-(theta[i]+theta[j])/8
+        for j in range(8)] for i in range(8)]
+    pairs=list(combinations_with_replacement(range(8),2))
+    weights=[F(1 if i==j else 2) for i,j in pairs]
+    ww=[theta[i]*theta[j]/8 for i,j in pairs];rows=[]
+    for i in range(8):
+        for j in range(i+1,8):
+            row=[]
+            for h,k in pairs:
+                v=(c[i][h] if k==j else 0)-(c[k][j] if i==h else 0)
+                if h!=k:v+=(c[i][k] if h==j else 0)-(c[h][j] if i==k else 0)
+                row.append(v)
+            rows.append(row)
+    selected=independent_rows(rows)
+    rhs=[sum(a*b for a,b in zip(row,ww)) for row in selected]
+    gram=[[sum(a*b/g for a,b,g in zip(row,other,weights)) for other in selected] for row in selected]
+    lam=solve(gram,rhs)
+    projected=[v-sum(row[k]*b for row,b in zip(selected,lam))/weights[k] for k,v in enumerate(ww)]
+    for row in rows:require(sum(a*b for a,b in zip(row,projected))==0,'full defining commutation equation')
+    residual=[a-b for a,b in zip(ww,projected)]
+    require(sum(g*a*b for g,a,b in zip(weights,projected,residual))==0,'defining Frobenius orthogonality')
+    return sum(g*v*v for g,v in zip(weights,projected)),len(selected)
+
+def digest(value):
+    return hashlib.sha256(json.dumps(value,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+def univariate(poly):
+    n=len(poly)-1;out=[F(0)]*(n+1)
+    for i,c in enumerate(poly):
+        for j in range(i,n+1):
+            out[j]+=c*comb(n,i)*comb(n-i,j-i)*(-1)**(j-i)
+    return out
+def affine_power(poly,a,b):
+    out=[F(0)]*len(poly)
+    for i,c in enumerate(poly):
+        for j in range(i+1):out[j]+=c*comb(i,j)*a**(i-j)*(b-a)**j
+    return out
+def power_to_bernstein(poly):
+    n=len(poly)-1
+    return [sum(poly[j]*F(comb(i,j),comb(n,j)) for j in range(i+1)) for i in range(n+1)]
+def certify_scalar(coefficients,a,b,label,strict=False):
+    original=univariate(coefficients)
+    transformed=affine_power(original,a,b)
+    values=power_to_bernstein(transformed)
+    require(univariate(values)==transformed,'complete scalar inverse '+label)
+    for value in values:require(value>0 if strict else value>=0,'exact scalar sign '+label)
+    return {'label':label,'interval':[str(a),str(b)],'degree':len(values)-1,
+            'entries':len(values),'minimum':str(min(values)),
+            'zeros':[i for i,v in enumerate(values) if not v],
+            'coefficient_sha256':digest(list(map(str,values)))}
+def j_value(u):
+    return (2058+21912*u-15876*u*u+19224*u**3+3402*u**4)/((3+u)*(1+3*u)**2)
+def scalar_groups(target):
+    from collections import defaultdict
+    groups=defaultdict(dict)
+    for e,c in target.t.items():groups[e[2:]][e[0]]=c
+    reconstructed={}
+    for gamma,terms in groups.items():
+        n=22-sum(gamma)
+        for i,c in terms.items():reconstructed[(i,n-i,*gamma)]=c
+    require(reconstructed==target.t,'complete grouped monomial identity')
+    high=[]
+    for e in compositions(22,5):
+        if sum(e[2:])>=4:
+            c=target.t.get(e,0)
+            require(c>=0,'complete high transverse degree coefficient sign')
+            high.append([*e,str(c)])
+    tables=[]
+    intervals=[(F(0),F(1,4)),(F(1,4),F(1,3)),(F(1,3),F(1))]
+    for k in (1,2,3):
+        for gamma in compositions(k,3):
+            n=22-k;terms=groups.get(gamma,{})
+            coefficients=[F(terms.get(i,0),comb(n,i)) for i in range(n+1)]
+            for a,b in intervals:
+                tables.append(certify_scalar(coefficients,a,b,'transverse-'+str(gamma)))
+    face=groups.get((0,0,0),{})
+    p0=[F(face.get(i,0),comb(22,i)) for i in range(23)]
+    for a,b in ((F(0),F(1,4)),(F(1,4),F(13,50)),(F(1,3),F(1))):
+        tables.append(certify_scalar(p0,a,b,'outer-face'))
+    domination=[]
+    for gamma in ((1,0,0),(0,1,0),(0,0,1)):
+        terms=groups[gamma]
+        b=[F(terms.get(i,0),comb(21,i)) for i in range(22)]
+        elevated=[F(22-i,22)*(b[i] if i<22 else 0)+F(i,22)*(b[i-1] if i else 0) for i in range(23)]
+        require(univariate(elevated)==univariate(b)+[F(0)],'complete first-order elevation identity')
+        domination.append(certify_scalar([119*a+c for a,c in zip(p0,elevated)],
+                          F(13,50),F(1,3),'first-order-domination-'+str(gamma),True))
+    require(F(6,5)*F(1,120)==F(1,100),'closed local total-deficit cutoff')
+    require(F(119,120)*F(13,50)>F(1,4),'closed local lower scalar cutoff')
+    require(F(1,3)**2==F(1,9),'closed local upper scalar cutoff')
+    margin=j_value(F(87,1000))-F(785753,1000)
+    require(margin>F(1,1250),'exact credited scalar strict threshold margin')
+    return {'high_degree_entries':len(high),'high_degree_zeros':sum(int(r[-1])==0 for r in high),
+            'high_degree_sha256':digest(high),'scalar_tables':tables,
+            'domination_tables':domination,'scalar_margin':str(margin),
+            'local_q_cutoff':'1/120','central_t_interval':['13/50','1/3']}
+
+def full_controls(rows):
+    roots,mu,traces,base,gram,rhs,d,n,target,moment=rows
+    profiles=[(F(3,10),F(7,10),F(0),F(0),F(0)),
+              (F(597,2000),F(1393,2000),F(1,600),F(1,600),F(1,600)),
+              (F(119,400),F(833,1200),F(1,360),F(1,360),F(1,360)),
+              (F(27,100),F(63,100),F(1,30),F(1,30),F(1,30)),
+              (F(4,25),F(16,25),F(1,15),F(1,15),F(1,15)),
+              (F(27,50),F(9,25),F(1,30),F(1,30),F(1,30)),
+              (F(0),F(0),F(1,3),F(1,3),F(1,3)),
+              (F(1),F(0),F(0),F(0),F(0)),
+              (F(0),F(0),F(0),F(0),F(1)),
+              (F(0),F(1),F(0),F(0),F(0))]
+    records=[]
+    for bary in profiles:
+        require(sum(bary)==1 and all(a>=0 for a in bary),'literal barycentric domain')
+        theta=[p.evaluate(bary)/30 for p in roots]
+        require(sum(theta)==0 and max(map(abs,theta))==1,'literal full physical profile')
+        beta=[1-t for t in theta[3:]]
+        inverse=[(beta[4]-beta[3])/2,beta[3]-beta[2],
+                 F(3,2)*(beta[2]-beta[1]),2*(beta[1]-beta[0]),F(5,2)*beta[0]]
+        require(inverse==list(bary),'complete ordered-section inverse control')
+        moments=[sum(t**r for t in theta) for r in range(1,9)]
+        for r in range(1,9):require(mu[r-1].evaluate(bary)==30**r*moments[r-1],'literal scaled moment')
+        c=[[(theta[i] if i==j else F(0))-(theta[i]+theta[j])/8 for j in range(8)] for i in range(8)]
+        ww=[[theta[i]*theta[j]/8 for j in range(8)] for i in range(8)]
+        identity=[[F(int(i==j)) for j in range(8)] for i in range(8)]
+        powers=[identity]
+        for r in range(1,9):powers.append(mm(powers[-1],c))
+        ss=[F(7)]+[tr(powers[r]) for r in range(1,9)]
+        for r in range(1,9):require(traces[r].evaluate(bary)==240**r*ss[r],'literal full trace versus integer word')
+        bb=[tr(mm(ww,powers[r])) for r in range(5)]
+        for r in range(5):require(base[r].evaluate(bary)==8*30**2*240**r*bb[r],'literal coupling numerator scaling')
+        matrices=[[[powers[r][i][j]-powers[r+2][i][j] for j in range(8)] for i in range(8)] for r in range(3)]
+        gg=[[tr(mm(matrices[i],matrices[j]))-F(int(i==j==0)) for j in range(3)] for i in range(3)]
+        rr=[tr(mm(ww,p)) for p in matrices]
+        for i in range(3):
+            require(rhs[i].evaluate(bary)==F(240**(i+4),8)*rr[i],'literal filtered rhs scaling')
+            for j in range(3):
+                require(gram[i][j].evaluate(bary)==240**(i+j+4)*gg[i][j],'literal filtered Gram scaling')
+        det=gg[0][0]*(gg[1][1]*gg[2][2]-gg[1][2]*gg[2][1])-gg[0][1]*(gg[1][0]*gg[2][2]-gg[1][2]*gg[2][0])+gg[0][2]*(gg[1][0]*gg[2][1]-gg[1][1]*gg[2][0])
+        require(d.evaluate(bary)==240**18*det,'full defining determinant scale')
+        psi,rank=pinching(theta)
+        actual=122*moments[1]+(224*moments[3]-5760*psi)/moments[1]
+        normal=sum(beta[:3]);x=(beta[4]-beta[3])/2;q=sum(bary[2:])
+        require(normal==F(2,3)*bary[2]+bary[3]+F(6,5)*bary[4] and x==bary[0],'exact local chart mapping')
+        lower=None
+        if det:
+            require(det>0,'physical Gram nonsingular control')
+            solution=solve(gg,rr);lower=sum(a*b for a,b in zip(rr,solution))
+            require(n.evaluate(bary)==64*30**4*240**18*det*lower,'full numerator versus independent Gaussian solve')
+            require(lower<=psi,'full pinching versus filtered lower bound')
+            cleared=(F(785753,1000)*moments[1]-122*moments[1]**2-224*moments[3])*det+5760*det*lower
+            require(target.evaluate(bary)==1000*30**4*240**18*cleared,'entire strict bound scale')
+        else:
+            require(n.evaluate(bary)==0 and target.evaluate(bary)==0,'rank-loss numerators vanish without division')
+        local=(normal<=F(1,100) and F(1,16)<=x*x<=F(1,9))
+        if q<1 and F(13,50)<=bary[0]/(1-q)<=F(1,3) and q<=F(1,120):
+            require(local,'whole-cover imported local classification')
+            require(actual<=j_value(x*x)-200*normal,'defining imported local loss control')
+            branch='local'
+        else:
+            require(actual<=F(785753,1000),'defining strict-region bound control')
+            branch='strict'
+        records.append({'bary':list(map(str,bary)),'theta':list(map(str,theta)),
+                        'D':str(det),'Psi':str(psi),'filtered_lower':str(lower) if lower is not None else None,
+                        'J':str(actual),'commutant_rank':rank,'branch':branch})
+    return records
+
+def derive():
+    rows=build()
+    certificate=scalar_groups(rows[8])
+    controls=full_controls(rows)
+    return {'normalization':'balanced max norm1 with fixed negative unit triple; other5 ordered',
+            'target_threshold':'785753/1000','homogeneous_degree':22,
+            'target_polynomial_sha256':digest(rows[8].dump()),
+            'determinant_sha256':digest(rows[6].dump()),'numerator_sha256':digest(rows[7].dump()),
+            'moment_sha256':digest([p.dump() for p in rows[1]]),
+            'trace_sha256':digest([p.dump() for p in rows[2]]),
+            'grouped_certificate':certificate,'full_definition_controls':controls,
+            'checks_before_manifest':CHECKS}
+def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--manifest',type=Path,default=Path(__file__).with_name('expected.json'))
+    parser.add_argument('--write-manifest',type=Path)
+    args=parser.parse_args();record=derive()
+    if args.write_manifest:
+        args.write_manifest.write_text(json.dumps(record,indent=2,sort_keys=True)+'\n')
+        status='AUTHOR_MANIFEST_REGENERATED'
+    else:
+        require(args.manifest.is_file(),'required compact manifest absent')
+        require(record==json.loads(args.manifest.read_text()),'complete exact record equality')
+        status='PASS'
+    cert=record['grouped_certificate']
+    signs=cert['high_degree_entries']+sum(r['entries'] for r in cert['scalar_tables']+cert['domination_tables'])
+    print(json.dumps({'status':status,'checks':CHECKS,'exact_sign_entries':signs,
+                      'scalar_tables':len(cert['scalar_tables']),'domination_tables':len(cert['domination_tables']),
+                      'full_definition_controls':len(record['full_definition_controls']),
+                      'canonical_record_sha256':digest(record)},sort_keys=True))
+if __name__=='__main__':main()
