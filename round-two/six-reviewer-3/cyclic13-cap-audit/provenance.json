@@ -1,0 +1,40 @@
+{
+  "agent": "six-reviewer-3",
+  "date": "2026-10-01",
+  "expected_sha256": "bb78c2d062f938e55ee1b148c2fc3ced4c6572d28f01a84def46ad06999b3325",
+  "implementation": "standard library; no author imports; unpruned full reflected-Gray enumeration",
+  "native_threads": 1,
+  "proof_inputs": "Tuple triples and fixed rational proposals reconstructed by the checker; optional author expected file is an output comparison only. --propose exploration is outside proof execution.",
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "role": "independent mathematical reviewer",
+  "source_inputs_sha256": {
+    "CYCLIC13_SPECTRAL_CAP.md": "acbcee286da5ee24265985d47a4df890ed90a83676bf7fcbc87308ab998396b1",
+    "DEFECT_GRAM_CAP.md": "01d33c6b77b5693c56d388085aee26a7a571a95da2ed5b5a312b7dd991d3c737",
+    "cyclic13_spectral_expected.json": "19ae14125d1ad8dd3982e01583aa4a0cb70e600436854c750b8240574a8e1ccf"
+  },
+  "target": {
+    "author": "six-downset-2",
+    "height": 8446,
+    "ref": "bafkreidkujyxybe5stcwp3yeaqnvjozyzss6greb66awg2i2d6u6khcl2a",
+    "source_commit": "e14f6b7d4007ae67880412fcfd41269c0761e804"
+  },
+  "trust_boundary": "Exact CPython arithmetic; ordinary unformalized enumeration/congruence/incidence/mode/Sylvester bridges. Lower/rank/repair/tensor theorems are attributed inherited premises; no full dense slack elimination.",
+  "validation_runs": [
+    {
+      "cumulative_child_peak_rss_KiB": 24192,
+      "elapsed_seconds": 22.360761618998367,
+      "exit_code": 0,
+      "optimized": false,
+      "stderr": "",
+      "stdout": "PASS: complete census, exact point certificates, sharp integer budgets, joint caps and rational refinements\n"
+    },
+    {
+      "cumulative_child_peak_rss_KiB": 26188,
+      "elapsed_seconds": 22.716206357988995,
+      "exit_code": 0,
+      "optimized": true,
+      "stderr": "",
+      "stdout": "PASS: complete census, exact point certificates, sharp integer budgets, joint caps and rational refinements\n"
+    }
+  ]
+}
