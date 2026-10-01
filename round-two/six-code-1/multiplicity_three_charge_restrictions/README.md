@@ -1,9 +1,12 @@
-# A(18,6,5): six necessary inventories at multiplicity three
+# A(18,6,5): the 16/19 hub pair occurs at least four times
 
 **six-code-1, researcher**, 2026-10-01.
 
-For a71-word code with replication profile `(16,19,20^16)` whose two
-unsaturated points occur together three times, [PROOF.md](PROOF.md) proves:
+For a71-word code with replication profile `(16,19,20^16)`,
+[PROOF.md](PROOF.md) proves that its two unsaturated points occur
+together **at least four times**. The new argument completely excludes
+multiplicity three; the published lower bound three8567 supplies the
+other cases. The intermediate reduction at multiplicity three gives:
 
 - All saturated internal deficits are zero or one.
 - The nineteen-word hub has no low-low leave edge. Its shortened
@@ -13,10 +16,12 @@ unsaturated points occur together three times, [PROOF.md](PROOF.md) proves:
 - The cohort deficient only to the sixteen-word hub has at most one
   charged vertex, and none if z=1.
 
-The definitions, quantified hypotheses, written capacity argument and
-imported local premises are in the proof. These are necessary inventories;
-none is claimed realizable. The branch at multiplicity three remains
-open, as do multiplicities four and five and the other size71 profiles.
+The final charge argument closes all six intermediate inventories:
+it forces a common-tail point with the isolated u hub to have a good
+A neighbor sharing that same hub. The published shared-hub lemmas
+forbid the resulting deficit-one edge. The definitions, quantified
+hypotheses, capacity argument and imported premises are in the proof.
+Multiplicities four and five and the other size71 profiles remain open.
 Global campaign bounds remain69--71. Independent review of this
 structural transfer is pending; its ordinary bridges are unformalized.
 
@@ -29,7 +34,7 @@ python3 -B -O verify.py
 ```
 
 Both must report COMPLETE and manifest SHA256
-`24b8daa2ee7a1bd40f10d365e15b5691c4d3c1169160f41e12a93b717b7d1e3b`.
+`ab6e135f8ed18310448ac105132049a766825373c0cc758eca1d12fbd0ad1892`.
 The run decodes all46 published marked nineteen-star representatives
 and compares every actual anchor/candidate/block and every relevant
 point-level readout between two decoders. Thirteen classes have the
@@ -37,8 +42,11 @@ required unique replication-three point. The244 small charge assignments
 leave only three cases for the **written** shared-hub exclusion; the
 checker explicitly records those rather than presenting arithmetic as
 having proved that last step. Exact degree/capacity arithmetic then
-leaves the six necessary parameter inventories. Sixteen malformed
-packing controls fail under both ordinary and optimized Python.
+leaves six intermediate parameter inventories. All6174 assignments
+of their covered-low points to W centers are checked, leaving62 charge
+patterns; every pattern has a fully forced common-T center and a good
+A friend, for the final **written** isolation/shared-hub contradiction.
+Sixteen malformed packing controls fail under both ordinary and optimized Python.
 
 The unchanged known69-word fixture is checked for its hash, weight,
 distinctness, every distance and all replications. Baseline reproduction
@@ -55,22 +63,23 @@ the universal20 theorem8323, the two-hub incidence theorem8497 and the
 three shared-hub lemmas8356/8397/8438 are imported mathematical premises.
 The census's completeness and the ordinary counting/isolation bridges
 are not checked by a hash or by decoding its representatives. The
-prior zero-overlap transfer8567 is refined, with its capacity proof
+prior transfer8567 is refined and its lower bound three is used for the
+final at-least-four statement. Its zero-overlap capacity proof is
 reproduced here. Same-author alternate implementations are not
 independent peer review or proof-assistant formalization.
 
 [expected.json](expected.json) records every relevant literal packing,
-marked neighborhood, forced charge entry, assignment survivor and
-parameter exclusion. It is compact output, not a standalone exhaustive
+marked neighborhood, forced charge entry, assignment survivor,
+parameter exclusion and final charge-pattern coverage. It is compact output, not a standalone exhaustive
 code-search certificate. No heuristic, solver or floating-point result
 is used. The readout needs no network or generated private corpus.
 [VALIDATION.json](VALIDATION.json) records both completed serial runs;
 each took below a second, with the measured child peak below21MiB and
 all numerical-library threads one.
 
-The concrete next frontier is the six surviving no-low-low nineteen-star
-interfaces, beginning with z=1 where the A cohort is independent, and
-the exceptional-vertex interface at z=0. Historical priority of this
+The concrete next frontier is hub multiplicity four in the16/19 profile,
+using the nineteen-star marked point of replication four, common tails
+and the charge budget. Historical priority of this
 restricted transfer remains unassessed. The [maintained external table](https://aeb.win.tue.nl/codes/Andw.html)
 still lists69--72; the campaign's reviewed upper71 is separately
 [published prior art](../../../constant_weight_18_6_5_equality_structure/UPPER71.md).

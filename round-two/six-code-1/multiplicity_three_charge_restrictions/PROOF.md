@@ -1,6 +1,17 @@
-# The multiplicity-three boundary in the 16/19 profile
+# No multiplicity-three pair in the 16/19 profile
 
 Actual author: **six-code-1, researcher**, 2026-10-01.
+
+**Theorem with the cited exact computational premises.** A71-word
+constant-weight `(18,6,5)` code with replication profile `(16,19,20^16)`
+has its two unsaturated points together in **at least four words**.
+The new argument below completely excludes their multiplicity-three
+case. The prior [at-least-three theorem8567](../two_unsaturated_pair_at_least_three/PROOF.md),
+`bafkreidalzlw7jaitp4nuhsugo6uzhthyaugbbdpezplwz2paa3up7kpii`,
+then gives the stated bound. Multiplicities four and five remain open;
+neither is claimed realizable. The campaign interval remains69--71.
+Independent review of this new transfer is pending and its ordinary
+bridges are unformalized.
 
 Let F consist of71 five-subsets of18 points, with distinct words meeting
 in at most two points. Assume its point-replication multiset is
@@ -24,8 +35,8 @@ Let mu be the number of uncovered pairs between replication-five
 points in the shortened nineteen-word v-star. Equivalently these are
 uncovered triples vxy with `lambda_vx=lambda_vy=5`.
 
-**Necessary structural theorem, with the explicit computational inputs
-below.** Under these hypotheses:
+**Intermediate necessary restrictions, before the final contradiction.**
+Under these hypotheses:
 
 1. **X=0 and mu=0.** Every saturated internal deficit is zero or one.
 2. **p=7.** Each point of W has `lambda_vx=4`; the other nine S points
@@ -45,11 +56,10 @@ below.** Under these hypotheses:
    meets the same possible exceptional vertex; there is at most
    one such vertex and its G-degree is at most four.
 
-This sharpens the preceding
+These restrictions sharpen the preceding
 [multiplicity-three alternative](../two_unsaturated_pair_at_least_three/MULTIPLICITY_THREE.md).
-It does not exclude multiplicity three or any remaining size71 profile.
-The campaign interval remains **69 <= A(18,6,5) <=71**. Independent
-review of this transfer is pending; ordinary bridges are unformalized.
+The final isolated-hub argument below excludes all six intermediate
+inventories. No entire size71 replication profile is excluded here.
 
 ## Imported premises and exact coverage
 
@@ -250,7 +260,67 @@ whereas (8) gives4D<=102, contradicting104<=4D.
 
 The six survivors give p=7, forcing all seven v-S deficits to be one.
 They also give h=1-z, proving the asserted H_A bound and exceptional-
-vertex description. This completes the conditional structural theorem.
+vertex description. These are intermediate necessary conditions.
+
+## A good neighbor closes every surviving inventory
+
+First **H_A=1-z** exactly. When z=1 the bound already gives zero.
+When z=0, A has nine points. If H_A=0, A is independent and (7) gives
+D>=26. Equation(8) gives4D<=102, a contradiction. Thus H_A=1 when
+z=0. Exactly one A center is charged, with exactly one one-hub
+homogeneous incidence. Every other A center is good.
+
+The remaining W-centered charge budget is at most
+
+```
+R-H_A=(3-z+c)-(1-z)=2+c.                                    (9)
+```
+
+If c=1, the inventory gives k=6. There are three forced covered-low
+charges at W. They exhaust (9), so every W-centered one-hub incidence
+is one of those v-centered triples. The single t in T intersect C
+needs at least two incidences, and hence q_t>=2. Every one-hub
+homogeneous incidence at t has v as its hub.
+
+If c=2, the two points of T intersect C each need at least two
+incidences. They exhaust (9), so each has exactly two and no other
+W point is charged. The9-k forced covered-low charges number three
+or four, all at those two T centers. At least one such t has q_t=2,
+and its two one-hub homogeneous incidences both have v as their hub.
+
+In both cases there is a t in T intersect C with **at least two distinct
+covered replication-five neighbors** x in the v-star giving uncovered
+vtx, and **no** one-hub homogeneous incidence with u at center t.
+The covered uv word implies that uv itself is not a leave edge in
+the t-star. Therefore **u is isolated in t's high leave**.
+
+Let alpha=delta_tu>0. We already know delta_tv=1 and all positive
+internal saturated deficits are one. Thus `g=deg_G(t)=4-alpha<=3`.
+The two distinct covered-low neighbors force g>=2 by the universal20
+argument: each uncovered vtx forces `delta_tx>0`. Consequently
+t has either a unit row `(1^5)` with isolated unit hub u, or a mixed
+row `(2,1,1,1)` with isolated deficit-two hub u.
+
+The two forced neighbors lie in A union Z. At z=1 there is only one
+Z point and every A point is good; at z=0 every one is in A and only
+one A point is charged. Hence **at least one of the two is a good A
+point x**. It has nonzero G-degree because tx is an edge. Its own
+row is unit or mixed and has the same deficient u hub isolated, as
+proved above. X=0 gives `delta_tx=1`, so `lambda_tx=4`.
+
+The applicable unit/unit, mixed/mixed or mixed/unit shared-isolated-
+hub theorem now forbids the edge tx. This contradiction closes
+all six inventories, proving that **lambda_uv=3 is impossible**.
+Combined with theorem8567, this proves **lambda_uv>=4**.
+
+The checker exhausts all6174 assignments of the three or four distinct
+covered-low points to the seven W centers. Exactly62 charge patterns
+meet (9) and the two-charge requirements. For each it finds such a
+fully forced common-T center and tests every possible location of the
+one exceptional covered-low point, always retaining a good A friend.
+Its compact pattern witnesses substantiate the finite pigeonhole step;
+the isolation and imported star-pair contradiction above remain an
+ordinary written proof, not a standalone computational verdict.
 
 ## Evidence and limits
 

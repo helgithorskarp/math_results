@@ -251,6 +251,50 @@ def controls(words, masks):
     return rejected
 
 
+def final_charge_patterns(inventories):
+    """Every covered-low assignment allowed by the final charge budgets.
+
+    The terminal contradiction is the written isolated-hub lemma, not a
+    computational claim that these necessary charge patterns are packings.
+    """
+    output = []
+    for p, k, c, z in inventories:
+        check(p == 7, "final W carrier size")
+        # Relabel the c distinguished T_C centers as 0,...,c-1. This is
+        # only a parameter relabeling, not a symmetry assumption on a code.
+        low_count = 9-k
+        W_budget = 2+c
+        valid = []
+        tested = 0
+        for partners in product(range(7), repeat=low_count):
+            tested += 1
+            q = Counter(partners)
+            minimum = [max(q.get(y, 0), 2 if y < c else 0) for y in range(7)]
+            if sum(minimum) > W_budget:
+                continue
+            check(sum(minimum) == W_budget, "unexpected free W charge")
+            choices = [t for t in range(c) if q[t] >= 2 and q[t] == minimum[t]]
+            check(choices, "no fully forced common-T center")
+            t = choices[0]
+            friends = [i for i, y in enumerate(partners) if y == t]
+            check(len(friends) >= 2, "not two distinct covered-low neighbors")
+            # For z=1 at most one friend can be Z; for z=0 at most one
+            # can be the unique charged A center. Every other friend is
+            # a good A center. Exhaust even the cases where none is bad.
+            for exception in [None]+list(range(low_count)):
+                check(any(i != exception for i in friends), "no good A neighbor")
+            valid.append([list(partners), minimum, t])
+        expected_count = 19 if c == 1 else 6
+        check(len(valid) == expected_count, "charge-pattern coverage changed")
+        output.append({"inventory_p_k_c_z": [p, k, c, z], "tested": tested,
+                       "valid_patterns": len(valid), "W_charge_budget": W_budget,
+                       "pattern_witness_sha256": hashlib.sha256(encode(valid)).hexdigest(),
+                       "every_pattern_has_forced_common_T_and_good_A_friend": True})
+    check(sum(row["tested"] for row in output) == 6174, "pattern domain count")
+    check(sum(row["valid_patterns"] for row in output) == 62, "pattern survivor count")
+    return output
+
+
 def baseline():
     data = (HERE / "acl69.txt").read_bytes()
     check(hashlib.sha256(data).hexdigest() == BASELINE_SHA, "baseline hash")
@@ -296,11 +340,14 @@ def run():
         rejected += controls(words, bits)
     check(all_count == 46 and len(rows) == 13, "carrier coverage")
     check(Counter(r["mu"] for r in rows) == {1: 10, 2: 3}, "mu coverage")
-    return {"format": "m3-charge-restriction-v1", "actual_agent": "six-code-1",
+    inventory = no_low_low_inventory()
+    return {"format": "m3-charge-exclusion-v1", "actual_agent": "six-code-1",
             "role": "researcher", "imported_manifest_sha256": MANIFEST_SHA,
             "marked_classes_decoded": all_count, "relevant_marked_classes": rows,
             "low_low_charge_inventory": charge_inventory(rows),
-            "no_low_low_inventory": no_low_low_inventory(),
+            "no_low_low_inventory": inventory,
+            "final_shared_hub_charge_patterns": final_charge_patterns(
+                inventory["final_necessary_inventories_p_k_c_z"]),
             "malformed_controls_rejected": rejected, "historical_baseline": baseline()}
 
 
@@ -315,6 +362,7 @@ def main():
         check(result == json.loads((HERE / "expected.json").read_text()), "expected record mismatch")
     print(json.dumps({"status": "COMPLETE", "marked_classes_decoded": 46,
                       "relevant_classes": 13, "residual_cases_requiring_written_pair_exclusion": 3,
+                      "final_charge_patterns_for_written_hub_exclusion": 62,
                       "manifest_sha256": hashlib.sha256(encode(result)).hexdigest()}, sort_keys=True))
 
 
