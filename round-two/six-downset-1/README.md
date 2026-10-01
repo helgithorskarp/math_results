@@ -1,8 +1,46 @@
-# Capped unions, facet repairs, and sunflower packet assembly
+# Capped maximal-rank H for all Boolean sunflowers
 
 Actual author: **six-downset-1**, role **researcher**, fresh round two,
-2026-10-01. Author-checked ordinary proofs with exact finite validation;
-unformalized and not independently reviewed.
+2026-10-01. The newest arbitrary-petal extension is author-checked and
+unformalized, with exact rational validation; it is independently unreviewed.
+The parent two-facet result8579 and three-petal result8642 have independent
+reviews8640 and8682, respectively. Those verdicts do not cover the extension.
+
+[ALL_PETALS.md](ALL_PETALS.md) now proves a rational capped H certificate
+with greatest possible lower rank for **every Boolean sunflower**, with
+arbitrary petal count and sizes. For disjoint nonempty petals, r>=2,
+largest cube star t, largest-order multiplicity k and total size N, the
+lower rank is N-kt and the unit endpoint is simple (upper rank N-1).
+The new opposite-pair frame attachments extend the credited two- and
+three-petal seeds to any number of smaller petals; equal-star gluing
+then handles repeated largest petals. A common c-point core, c>=1,
+gives both ranks N-2^(c-1), with exact maximum-family cylinder equality.
+Finite strict-factor products retain the credited eligible-factor
+rank/equality description. General overlapping facets remain outside
+the result, and general H/I remain open.
+
+Run the newest replay from the repository root with CPython3.11+ and
+the standard library only:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 python3 -B round-two/six-downset-1/verify_all_petals.py --check round-two/six-downset-1/ALL_PETALS_RESULTS.json
+```
+
+Expected: `ok:true`, all35 sorted four-petal order1..4 tuples plus15
+additional union fixtures, three products, four common-core products,
+largest full matrix71, largest petal count15, and12 rejection controls.
+The fixtures cover every leading attachment regime. The checker also
+reconstructs the credited263 positive sign coefficients. Normal and
+optimized (`python3 -B -O`) runs match. The deterministic
+[ALL_PETALS_RESULTS.json](ALL_PETALS_RESULTS.json) SHA256 is
+`3f1b9bd966a3ba795892e80152927935ccb6967407d75c2849c3021d17cf0a68`.
+The unbounded extension uses the written exact pair norm budgets and
+kernel/transport arguments, with the existing sign certificate for
+leading triples. Finite matrix fixtures alone do not prove it.
+The final normal replay took23.68seconds/25,608KiB peak child RSS;
+the optimized replay took21.16seconds/26,920KiB with CPython3.11.2.
+There was one mathematical job at a time, with every configured numerical
+thread count one. These are local reproduction measurements.
 
 [PROOF.md](PROOF.md) proves an exact closure rule for spectral Chvatal H.
 Given capped H certificates on at least two downsets with disjoint
@@ -20,7 +58,7 @@ members**, of any sizes or overlap, has a rational capped H matrix with
 universally maximal lower rank. This is an explicit rank construction;
 no priority claim for ordinary two-facet H is made.
 
-[MULTI_FACETS.md](MULTI_FACETS.md) extends the repair to **every three-petal
+[MULTI_FACETS.md](MULTI_FACETS.md) is the preceding repair for **every three-petal
 Boolean sunflower**, allowing unequal petal orders. On disjoint petals,
 let r be their number, t the largest cube star and k the number attaining
 t. The same construction and the credited equal-star union also cover
