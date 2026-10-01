@@ -1,0 +1,323 @@
+{
+  "agent": "six-code-3",
+  "baseline69": {
+    "distance_census": {
+      "10": 445,
+      "6": 1264,
+      "8": 637
+    },
+    "distinct_triples": 690,
+    "fixture_sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+    "point_degrees": [
+      20,
+      20,
+      20,
+      19,
+      19,
+      20,
+      18,
+      20,
+      20,
+      20,
+      20,
+      18,
+      20,
+      19,
+      20,
+      20,
+      20,
+      12
+    ],
+    "status": "PASS_LIVE_PRIMARY_BASELINE69",
+    "url": "https://aeb.win.tue.nl/codes/cwc/d6/a18.6.5.69",
+    "words": 69
+  },
+  "damage_controls": {
+    "census_completion_damages_rejected": 14,
+    "literal_color_damages_rejected": 12,
+    "literal_witness_damages_rejected": 6,
+    "native_input_damages_rejected_per_engine": [
+      11,
+      11
+    ],
+    "selected_domain_does_not_claim_all92": true,
+    "status": "PASS_MEANINGFUL_DAMAGE_CONTROLS"
+  },
+  "full_residual_generation": {
+    "peak_rss_kib": 51056,
+    "seconds": 159.53845101303887,
+    "status": "All4871 exact proper colors and standalone checks complete."
+  },
+  "generic_native_controls": [
+    {
+      "engine": 0,
+      "literal_graph_checks": 5128,
+      "status": "COMPLETE",
+      "twelve_point_four_tail_partitions": 15400
+    },
+    {
+      "engine": 1,
+      "literal_graph_checks": 5128,
+      "status": "COMPLETE",
+      "twelve_point_four_tail_partitions": 15400
+    }
+  ],
+  "guards": {
+    "execution_identity": "Machine-specific binaries retained privately, not a mathematical premise.",
+    "native_node_guard": 2000000,
+    "query_seconds": 20,
+    "whole_case_seconds": 60,
+    "wrapper_seconds": 65
+  },
+  "joint_census": {
+    "covers": 3080796,
+    "distinct_labelled_normalized_cores": 4871,
+    "engines": [
+      {
+        "engine": 0,
+        "full_query_nodes": 690907997,
+        "max_query_nodes": 4081
+      },
+      {
+        "engine": 1,
+        "full_query_nodes": 211783402,
+        "max_query_nodes": 1637
+      }
+    ],
+    "execution_source_hashes": {
+      "bindings.py": "bda851539ec67c44bf550ada7c8db6e1b3af5f0d16d4740a026d32c341463731",
+      "fast_census.cpp": "9f45ac0cf63398cc5c4b27b953cf29a23656b3c7abcdc1e78c73d837f94c0f42",
+      "fast_run.py": "f2f2f61bd34d21e06ae24bb9eaaa1f05c97bed5e7ed154450fad0b254de34bae",
+      "prior_color_server.cpp": "d7829561988c4f440bd11b2279ab0f0fcdff33d4e464a54a06a7a01a801d8ff4",
+      "prior_verify.py": "b3f95c741d304796cbe2d41e94feee68d750bf5e1926c692aa67496cccb4beda",
+      "reviewer_kernel.hpp": "4a2bf09fac5430cc9ba055a91004285d1413b671f7e24fd05578dd728570c6e7",
+      "verify.py": "f4e276336e210c8b42cfdeb6abe51d569037a6244dde9e190f4ed8dbf4f62b54"
+    },
+    "job_peak_child_rss_kib": 71084,
+    "job_scope": "90 orientations fresh;2 complete case10 orientations resumed with exact identical source/executable bindings. Their original complete dual-engine run took29.83880839101039s. All92 stored complete executions are checked; no single cold92 timing asserted.",
+    "job_seconds": 1411.7008039659704,
+    "orientations": 92,
+    "z20_prefixes": 39773
+  },
+  "literal_refinements": {
+    "groups": [
+      {
+        "anchor_cycle_half_lengths": [
+          2,
+          3
+        ],
+        "certified_total_upper_bound": 60,
+        "cores": 16,
+        "m_x": 1,
+        "m_y": 0,
+        "maximum_capacity": 16
+      },
+      {
+        "anchor_cycle_half_lengths": [
+          2,
+          3
+        ],
+        "certified_total_upper_bound": 58,
+        "cores": 9,
+        "m_x": 1,
+        "m_y": 1,
+        "maximum_capacity": 14
+      },
+      {
+        "anchor_cycle_half_lengths": [
+          5
+        ],
+        "certified_total_upper_bound": 67,
+        "cores": 4554,
+        "m_x": 1,
+        "m_y": 0,
+        "maximum_capacity": 23
+      },
+      {
+        "anchor_cycle_half_lengths": [
+          5
+        ],
+        "certified_total_upper_bound": 65,
+        "cores": 292,
+        "m_x": 1,
+        "m_y": 1,
+        "maximum_capacity": 21
+      }
+    ],
+    "invariant_records_sha256": "357f78b8d04ba3897e34543fc0ec0025950018997dddbd52f6971252594e1ca4",
+    "per_core_color_checks_sha256": "aacfa80dcbdc70f129d113266a22d54662806cc74a21306f62ee9103f4ad8e9a",
+    "scope": "Same uncovered19/19/20, pair5/5/4 hypotheses; subgroup bounds are not asserted sharp.",
+    "status": "PASS_ALL4871_LITERAL_INVARIANTS_AND_COLOR_REFINEMENTS"
+  },
+  "proof_status": "Complete author-checked exact census and certificates; conditional on marked19-star census. Independent review of new theorem and historical priority pending; ordinary completeness bridges unformalized.",
+  "resources": "Unchanged1CPU2GiB;all threads1;no overlapping CPU-intensive jobs. No resource settings increased.",
+  "role": "researcher",
+  "sanitizer_actual_case": {
+    "case": 10,
+    "engine": 1,
+    "exit_code": 1,
+    "orientation": 0,
+    "seconds": 60.50830968498485,
+    "status": "INCOMPLETE_INSTRUMENTED_CASE",
+    "stderr": "INCOMPLETE whole-case guard\n"
+  },
+  "sanitizer_controls": [
+    {
+      "controls": {
+        "engine": 0,
+        "literal_graph_checks": 5128,
+        "status": "COMPLETE",
+        "twelve_point_four_tail_partitions": 15400
+      },
+      "engine": 0,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "controls": {
+        "engine": 1,
+        "literal_graph_checks": 5128,
+        "status": "COMPLETE",
+        "twelve_point_four_tail_partitions": 15400
+      },
+      "engine": 1,
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ],
+  "sanitizer_limit": "Colored engine1 case10/orientation0 reached unchanged60s whole-case guard. No sanitizer all92 claim or exclusion from that failure; further instrumented case work paused. Both sanitizer generic-control suites completed with empty stderr. Earlier engine0 actual-case check passed in the sequential attempt, but its output was not retained before the subsequent engine1 guard, so no portable engine0 actual-case record is asserted.",
+  "slow_entrywise_regressions": [
+    {
+      "case": 0,
+      "cores": 0,
+      "covers": 32832,
+      "intervals": 7,
+      "orientation": 0,
+      "status": "COMPLETE_ENTRYWISE_SLOW_FAST_REGRESSION"
+    },
+    {
+      "case": 0,
+      "cores": 0,
+      "covers": 32832,
+      "intervals": 7,
+      "orientation": 1,
+      "status": "COMPLETE_ENTRYWISE_SLOW_FAST_REGRESSION"
+    },
+    {
+      "case": 1,
+      "cores": 8,
+      "covers": 33277,
+      "intervals": 7,
+      "orientation": 0,
+      "status": "COMPLETE_ENTRYWISE_SLOW_FAST_REGRESSION"
+    },
+    {
+      "case": 1,
+      "cores": 5,
+      "covers": 33277,
+      "intervals": 7,
+      "orientation": 1,
+      "status": "COMPLETE_ENTRYWISE_SLOW_FAST_REGRESSION"
+    },
+    {
+      "case": 2,
+      "cores": 1,
+      "covers": 33644,
+      "intervals": 7,
+      "orientation": 0,
+      "status": "COMPLETE_ENTRYWISE_SLOW_FAST_REGRESSION"
+    },
+    {
+      "case": 2,
+      "cores": 0,
+      "covers": 33644,
+      "intervals": 7,
+      "orientation": 1,
+      "status": "COMPLETE_ENTRYWISE_SLOW_FAST_REGRESSION"
+    },
+    {
+      "case": 3,
+      "cores": 21,
+      "covers": 33476,
+      "intervals": 7,
+      "orientation": 0,
+      "status": "COMPLETE_ENTRYWISE_SLOW_FAST_REGRESSION"
+    },
+    {
+      "case": 3,
+      "cores": 12,
+      "covers": 33476,
+      "intervals": 7,
+      "orientation": 1,
+      "status": "COMPLETE_ENTRYWISE_SLOW_FAST_REGRESSION"
+    },
+    {
+      "case": 4,
+      "cores": 90,
+      "covers": 33563,
+      "intervals": 7,
+      "orientation": 0,
+      "status": "COMPLETE_ENTRYWISE_SLOW_FAST_REGRESSION"
+    },
+    {
+      "case": 4,
+      "cores": 58,
+      "covers": 33563,
+      "intervals": 7,
+      "orientation": 1,
+      "status": "COMPLETE_ENTRYWISE_SLOW_FAST_REGRESSION"
+    },
+    {
+      "case": 10,
+      "cores": 375,
+      "covers": 32780,
+      "intervals": 7,
+      "orientation": 0,
+      "status": "COMPLETE_ENTRYWISE_SLOW_FAST_REGRESSION"
+    },
+    {
+      "case": 10,
+      "cores": 604,
+      "covers": 32780,
+      "intervals": 7,
+      "orientation": 1,
+      "status": "COMPLETE_ENTRYWISE_SLOW_FAST_REGRESSION"
+    }
+  ],
+  "source_integration": {
+    "scope": "Fresh public driver build, all92 source-bound resume checks, all4871 freshly regenerated residuals, normal/optimized standalone checks and failure controls; not a second cold census.",
+    "seconds": 213.7105783430161,
+    "status": "COMPLETE_REPRODUCTION_SHARP67_MIXED19"
+  },
+  "standalone": {
+    "candidate_range": [
+      30,
+      92
+    ],
+    "capacity_census": {
+      "10": 3,
+      "11": 11,
+      "12": 20,
+      "13": 23,
+      "14": 49,
+      "15": 156,
+      "16": 272,
+      "17": 440,
+      "18": 722,
+      "19": 841,
+      "20": 713,
+      "21": 1069,
+      "22": 450,
+      "23": 102
+    },
+    "certificate_sha256": "6e39d8a7116d4fcdb0a621f24f6b307b2cb949b0b16162b8522fdacfe683caba",
+    "certified_total_upper_bound": 67,
+    "core_count": 4871,
+    "maximum_capacity": 23,
+    "per_core_checks_sha256": "aacfa80dcbdc70f129d113266a22d54662806cc74a21306f62ee9103f4ad8e9a",
+    "status": "PASS_ALL4871_LITERAL_COLORS_AND_LITERAL67",
+    "witness_core_index": 1326,
+    "witness_sha256": "3fb2b6dccc54fe94c44a7c305d54ff3b971d1813457f6ea9b6ef0664ef8f54b5",
+    "witness_words": 67
+  }
+}
