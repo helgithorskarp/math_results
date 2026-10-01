@@ -1,0 +1,83 @@
+{
+  "agent": "six-books-1",
+  "role": "researcher",
+  "date": "2026-10-01",
+  "interpreter": "Python 3.11.2",
+  "dependencies": "Python standard library only; exact integers, sets and JSON.",
+  "source_directory": "round-two/six-books-1/dirty13_isolate_exclusion",
+  "result_status": "Author-checked exact conditional finite theorem. Ordinary coverage bridges and program correctness are unformalized; independent peer review is pending.",
+  "hypotheses": "Valid ordinary-book red graph on 22 vertices, 108 red edges, maximum degree at most 10; degree-10 root has exactly one degree-9 red neighbor and nine degree-10 red neighbors.",
+  "new_result": "The marked isolated-vertex local graph with key 710617334208 is excluded for all three outside deficit partitions. With credited classification 8939, the necessary marked local domain drops from 14 to 13 types and has no isolated vertex.",
+  "certificate_bytes": 952,
+  "counting_vectors": 6,
+  "split_branches": 297,
+  "split_branch_sha256": "dd273094b7ce62dd760ee3006d2c9ef78e8b5c12ff15e6f0748096190cfe4541",
+  "algorithmic_independence": "Bit-key graph and triangular bit-word branch loop versus literal adjacency sets, literal-page capacities, subset patterns and an ordered product followed by exchange quotient. No producer import; complete exact records match.",
+  "logical_trust_boundary": "The explicit conditional graph theorem is derived directly. The 13-type corollary imports published classification 8939. No rootlessness, outside minimum degree, historical lower-degree chain, full-root row cap, floating-point result, solver trace or incomplete enumeration is a proof premise.",
+  "classification_dependency": {
+    "artifactRef": "bafkreie3qf4riaoqbnnzarcfswufog6glhcghahfvaptehf3ia7iis6uji",
+    "source_commit": "5c04d6aaa9cedc7d8dda6082ef5ac7ae60cc40ae",
+    "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-1/rootless108_marked_profiles/PROOF.md"
+  },
+  "primary_baseline": {
+    "raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+    "matched_entries": 441,
+    "red_edges": 93,
+    "red_pages": 3,
+    "blue_pages": 6,
+    "raw_url": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "reader_url": "https://github.com/gwen-mckinley/ramsey-books-wheels/blob/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "array_convention": "Primary off-diagonal one is blue; checked red graph is its complement.",
+    "status": "Known prior art freshly reproduced this pass; validation only."
+  },
+  "primary_literature": [
+    {
+      "url": "https://arxiv.org/pdf/2407.07285",
+      "scope": "Table1 R(B4,B7)22..23 reopened this pass2026-10-01"
+    },
+    {
+      "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+      "scope": "TableIXa current interval; reopened2026-10-01"
+    }
+  ],
+  "measurements": {
+    "producer": {
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-books-1/dirty13_isolate_exclusion/check.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.767278,
+      "child_peak_RSS_KiB": 15080
+    },
+    "independent": {
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-books-1/dirty13_isolate_exclusion/verify.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.265493,
+      "child_peak_RSS_KiB": 15892
+    },
+    "independent_optimized": {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-books-1/dirty13_isolate_exclusion/verify.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.667277,
+      "child_peak_RSS_KiB": 18512
+    }
+  },
+  "normal_optimized_output_match": true,
+  "normal_optimized_output_sha256": "a9030b76fceebc2ccfdf9c39e724022a8699128b2f22b81949ca1579dc429fec",
+  "damaged_inputs_rejected": 8,
+  "resources": "Serial CPU jobs; solver/BLAS/OpenMP threads one; existing 1-CPU/2-GiB scope unchanged. Public replay needs less than one second and 20 MiB in the recorded runs.",
+  "private_discovery": "LP weights reconstructed as exact integers; 297 branch-specific candidates compressed to four reusable vectors by exact coverage. Optimizer, wheels, raw traces and exploratory outputs are not published and are not replay inputs.",
+  "remaining_frontier": "One 13-edge leaf type, 11 marked 14-edge types, dirty Petersen completion, and the rootless independent-four-nine exceptional signatures (1,4,4), (2,3,4), (3,3,3). No full 108-edge exclusion or Ramsey endpoint.",
+  "incomplete_probe": "An improved leaf column enumeration reached the unchanged 45-second guard. It is not a complete census and proves no exclusion. Expensive enumeration is paused."
+}
