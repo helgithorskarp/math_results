@@ -1,11 +1,23 @@
-# Native prefix: 39 nine-wire sorting targets with budget 12
+# Native prefix: 14 remaining nine-wire sorting targets with budget 12
 
 Author and executing agent: **six-sorting-2**, role **researcher**, 2026-10-01.
 
-The [paired-touch refinement](TOUCH.md) excludes six further initial kernels
+The [three-budget normalization and correction refinement](NORMALIZE.md)
+excludes ten further original kernels6,7,10,16,18,25,29,30,37,40. Combined
+with the credited peer [9/21 exclusion](../../six-sorting-1/joint_extreme_kernel_barrier/PROOF.md),
+the native standard size44 question is equivalent to **14 nine-wire
+targets at budget12**, with arbitrary order and depth. Exact surviving
+IDs and selected original-domain certificates are in
+[normalize-certificate.json](normalize-certificate.json). Reproduce with
+`normalize_generate.py` and the standalone scalar `normalize_verify.py`.
+The new bridge forces `(3,4),(2,3)` to commute to the front in those ten
+branches, then proves45-gate lower bounds by a required marked-port
+correction. The global13-input44..45 question remains unresolved.
+
+The preceding [paired-touch refinement](TOUCH.md) excluded six initial kernels
 3,4,5,12,27,28. Together with six-sorting-1's separately credited
 [kernel0 exclusion](../../six-sorting-1/six_extreme_kernel_barrier/PROOF.md),
-this leaves an equivalent **26-target nine-wire question at budget12**.
+this gave an equivalent **26-target nine-wire question at budget12**.
 The local touch certificate alone certifies the27-target intermediate
 refinement. It also proves that wire2 is touched exactly once, by `(2,3)`,
 in every completion of the preceding33 targets. Original clamping budgets
@@ -14,24 +26,25 @@ permutation. Reproduce the compact certificate with `touch_generate.py`
 and the standalone scalar checker `touch_verify.py`. Earlier pinned
 certificates and implementations are unchanged.
 
-The further [endpoint-deletion refinement](ENDPOINTS.md) excludes all four
-remaining eight-wire cases. The native size44 question is now equivalent
-to **33 nine-wire targets at budget12**. Its compact certificate and
+The earlier [endpoint-deletion refinement](ENDPOINTS.md) excluded all four
+then-remaining eight-wire cases, giving an equivalence with
+**33 nine-wire targets at budget12**. Its compact certificate and
 standalone scalar checker are `endpoint-certificate.json` and
 `endpoint_verify.py`; the original dependency files remain unchanged.
 
-The subsequent [third-minimum refinement](MINIMUM.md) excludes two more
-kernels and reduces four others to eight wires. Its equivalent disjunction
+The first [third-minimum refinement](MINIMUM.md) excluded two kernels
+and reduced four others to eight wires. Its intermediate disjunction
 has **33 nine-wire targets at budget12 and four eight-wire targets at
 budget10**. [minimum-certificate.json](minimum-certificate.json) and the
 separate producer/checker reproduce this refinement. The original
 39-case certificate and proof below remain unchanged as its dependency.
 
-For the literal first 24 gates of Dobbelaere's `N13L46D9`, a standard
+The original result for the literal first 24 gates of Dobbelaere's
+`N13L46D9` said that a standard
 sorting extension of total size at most 44 exists **iff one of 39 explicit
 nine-wire Boolean images has a sorting word of size at most 12**.
 No depth restriction is imposed. The global thirteen-input minimum
-remains 44..45; none of these 39 targets is claimed solved here.
+remains 44..45. Later linked refinements exclude some of those39 targets.
 
 Saturated extreme budgets force the normal form
 
