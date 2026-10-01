@@ -1,0 +1,369 @@
+{
+  "schema": "sorting13-repeated13-exclusion-source-manifest-v1",
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 18,
+      "sha256": "744a1502c1d7ad664e0677975e40beb6cf6abfe3f49da5311af22b109a50af68"
+    },
+    {
+      "path": "PROOF.md",
+      "bytes": 17592,
+      "sha256": "a65e2625f437e6845a1e7078e9077c81e2eed0e587730724046ef56e6abc34f8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4244,
+      "sha256": "1b99c2fa2c0998fe4937694fb36f32f3ebdfa530b47a2c6fd9d59f2e57c41ef1"
+    },
+    {
+      "path": "audit_data.py",
+      "bytes": 9172,
+      "sha256": "744eb54ad4ba72980f0ecb5b52e8de8b73de56eb1fa23ad168c00669d1eac0c7"
+    },
+    {
+      "path": "audit_encoding.py",
+      "bytes": 11312,
+      "sha256": "3c076572a4d1cd671bb831f6ef30be3e9ab5af4e206ee22aaae38fd941f6c386"
+    },
+    {
+      "path": "build.py",
+      "bytes": 6193,
+      "sha256": "caf1d168591583dd70725a845b02b8eae74596708110bc3b2c56ac2cd0bd178d"
+    },
+    {
+      "path": "certificate.json",
+      "bytes": 3580,
+      "sha256": "2447934ecb5e76ef3af0674be18c316bfed3eb55f9ba72e7bb327a63381cc735"
+    },
+    {
+      "path": "class245.core.cnf",
+      "bytes": 23877,
+      "sha256": "235b1069fcdccb4c12cdc07acd11281793dd7ec21454a27c7e9f7a5481311f66"
+    },
+    {
+      "path": "class245.rup",
+      "bytes": 19768,
+      "sha256": "86f23b5a842bdd302ebfd6df40d29778d2597577ce43990be9cd19dfaedb0a32"
+    },
+    {
+      "path": "class42.core.cnf",
+      "bytes": 22267,
+      "sha256": "8948160d66740065b6c473ca751c8524f8aa737a572940e21f2e0b6fa8d8f72c"
+    },
+    {
+      "path": "class42.rup",
+      "bytes": 15310,
+      "sha256": "cd833e17883189abca6f701ac4b1b3170ecb6afb5c7fc7c2e01af4297a3778d1"
+    },
+    {
+      "path": "controls.py",
+      "bytes": 4935,
+      "sha256": "3004f7f8d704ccb7065752f0916a46e455779fbbf07dec9c1fd7a798366dd17a"
+    },
+    {
+      "path": "dependencies.json",
+      "bytes": 10695,
+      "sha256": "d0186794d728ef8a0ec8598d9ba6e12520eefcc0cfe052f48077e4ebd029137b"
+    },
+    {
+      "path": "encoding.py",
+      "bytes": 5688,
+      "sha256": "450d130b3753b181edba2997ec2d68a81e22d0b0cf05d6cd18433e5591825585"
+    },
+    {
+      "path": "fixture.json",
+      "bytes": 9220,
+      "sha256": "f15afe0305d560516dec998f5648cf33c6f84fe01c5aee373cc2a96517f222cd"
+    },
+    {
+      "path": "frontier.py",
+      "bytes": 3917,
+      "sha256": "ebf359fa857b0f00070f55a309306dcaf3450646174ec6854ebef1286c101efa"
+    },
+    {
+      "path": "generate_reduction.py",
+      "bytes": 15756,
+      "sha256": "011baf39a2d58b86b0e1ff5997b3b22e5f743903af6609096b1f0645fa4619bd"
+    },
+    {
+      "path": "reduction.json",
+      "bytes": 20332,
+      "sha256": "c7e98634ab3d1694278994309207f8ded2d6b1a61257fb15c0e7b9f79b6ddab3"
+    },
+    {
+      "path": "tail_fixture.json",
+      "bytes": 3079,
+      "sha256": "666a867ab32670233e2df38fa43224770505f2f84862f912e1d952e0faf6e92c"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 5733,
+      "sha256": "8a73fa0a9e9e77e9f29dc299376883eacfd95f05a6e9b5d92e285a50289a24b3"
+    },
+    {
+      "path": "verify_reduction.py",
+      "bytes": 26042,
+      "sha256": "95c0316399fe57db3c1d4314e2883cdd8bb9fbc475d30aab3615905f2e1f36ad"
+    },
+    {
+      "path": "watched_rup.py",
+      "bytes": 4506,
+      "sha256": "8df045dbec0c992c246310e5e344f269d34059c3a65311b6c44d0471e8a787a8"
+    }
+  ],
+  "reduction_checker_output": {
+    "status": "INDEPENDENT_REPEATED13_REDUCTION_VERIFIED",
+    "covered_classes": 6,
+    "covered_effective_orders": 32310,
+    "excluded_classes": 4,
+    "excluded_effective_orders": 21540,
+    "profile_states": 2214,
+    "profile_edges": 22536,
+    "rank_monoid_counts": [
+      1,
+      2,
+      11,
+      261
+    ],
+    "original_B11_inputs": 8192,
+    "known_full45_inputs": 8192,
+    "actual_clamped_domain_assignments": 26624,
+    "normalized_prefixes": 1728,
+    "B11_prefix_rows": 273024,
+    "literal_image_budget_pairs": 487,
+    "prefix_activity_obstructions": 468,
+    "actual_marked_prefix_obstruction_checks": 958464,
+    "original_literal_prefix_inputs": 155648,
+    "actual_boundary_marked_free_assignments": 8192,
+    "local_cut_truth_checks": 73728,
+    "mandatory_internal_gate_checks": 72,
+    "boundary_obstructions": 16,
+    "imported_obstructions": 0,
+    "remaining_tails": [
+      [
+        42,
+        0,
+        54,
+        11
+      ],
+      [
+        245,
+        0,
+        51,
+        11
+      ],
+      [
+        245,
+        5,
+        46,
+        10
+      ]
+    ],
+    "certificate_sha256": "19448fa75c153b787f86eb83c63de21c015dd940e915018ad398dfe2940a1d8f"
+  },
+  "positive_checker_output": {
+    "agent": "six-sorting-1",
+    "role": "researcher",
+    "status": "COMPLETE_REPEATED13_EXCLUSION_INDEPENDENTLY_VERIFIED",
+    "cases": [
+      {
+        "parent_index": 42,
+        "image": 0,
+        "coverage": {
+          "status": "EVERY_CLAUSE_AND_AUXILIARY_INDEPENDENTLY_AUDITED",
+          "variables": 9671,
+          "clauses": 249217,
+          "cardinality_blocks": 98
+        },
+        "proof": {
+          "status": "COMPACT_CORE_MEMBERSHIP_AND_PYTHON_RUP_VERIFIED",
+          "core_clauses": 1349,
+          "RUP_additions": 475,
+          "deletions_ignored": 0,
+          "premature_empty_rejected": true
+        }
+      },
+      {
+        "parent_index": 245,
+        "image": 0,
+        "coverage": {
+          "status": "EVERY_CLAUSE_AND_AUXILIARY_INDEPENDENTLY_AUDITED",
+          "variables": 9218,
+          "clauses": 237682,
+          "cardinality_blocks": 95
+        },
+        "proof": {
+          "status": "COMPACT_CORE_MEMBERSHIP_AND_PYTHON_RUP_VERIFIED",
+          "core_clauses": 1413,
+          "RUP_additions": 613,
+          "deletions_ignored": 0,
+          "premature_empty_rejected": true
+        }
+      }
+    ],
+    "boundary_cases": 1,
+    "data_audit": {
+      "original_prefix_inputs": 24576,
+      "actual_marked_free_assignments": 48128,
+      "B11_prefix_inputs": 474,
+      "moving_cut_truth_checks": 36864,
+      "mandatory_gate_truth_checks": 72,
+      "known45_original_inputs": 8192,
+      "base_image_original_inputs": 8192,
+      "pooled_caps": 302,
+      "status": "ALL_LITERAL_IMAGES_PRUNING_CAPS_AND_MOVING_CUTS_INDEPENDENTLY_VERIFIED"
+    },
+    "tiny_RUP_controls": 4608,
+    "gadget_truth_controls": 72,
+    "cardinality_shapes": [
+      {
+        "flags": 36,
+        "cap": 1,
+        "exact": true,
+        "tests": 667
+      },
+      {
+        "flags": 11,
+        "cap": 0,
+        "exact": false,
+        "tests": 2048
+      },
+      {
+        "flags": 11,
+        "cap": 3,
+        "exact": false,
+        "tests": 2048
+      },
+      {
+        "flags": 11,
+        "cap": 6,
+        "exact": false,
+        "tests": 2048
+      },
+      {
+        "flags": 11,
+        "cap": 4,
+        "exact": false,
+        "tests": 2048
+      },
+      {
+        "flags": 11,
+        "cap": 5,
+        "exact": false,
+        "tests": 2048
+      },
+      {
+        "flags": 11,
+        "cap": 2,
+        "exact": false,
+        "tests": 2048
+      },
+      {
+        "flags": 11,
+        "cap": 9,
+        "exact": false,
+        "tests": 2048
+      },
+      {
+        "flags": 11,
+        "cap": 7,
+        "exact": false,
+        "tests": 2048
+      },
+      {
+        "flags": 11,
+        "cap": 8,
+        "exact": false,
+        "tests": 2048
+      },
+      {
+        "flags": 11,
+        "cap": 10,
+        "exact": false,
+        "tests": 2048
+      }
+    ],
+    "exact_cardinality_assignments": 21147,
+    "seconds": 4.912689015967771,
+    "peak_rss_kib": 78868,
+    "trust": "Written unformalized pruning/normalization/zero-one bridges and known smaller-size bounds; algorithmic checks are not external-person review"
+  },
+  "controls": {
+    "agent": "six-sorting-1",
+    "role": "researcher",
+    "positive": [
+      {
+        "parent_index": 42,
+        "total_size": 69,
+        "original_inputs": 8192,
+        "status": "FORCED_INSERTION_SORTER_SAT_AND_SCALAR_VERIFIED"
+      },
+      {
+        "parent_index": 245,
+        "total_size": 69,
+        "original_inputs": 8192,
+        "status": "FORCED_INSERTION_SORTER_SAT_AND_SCALAR_VERIFIED"
+      }
+    ],
+    "negative": [
+      {
+        "control": "omitted_literal_tail",
+        "status": "MALFORMED_CERTIFICATE_REJECTED"
+      },
+      {
+        "control": "wrong_pooled_touch_cap_with_updated_digest",
+        "status": "MALFORMED_CERTIFICATE_REJECTED"
+      },
+      {
+        "control": "invalid_exact_one_cardinality_with_updated_digests",
+        "status": "MALFORMED_CERTIFICATE_REJECTED"
+      },
+      {
+        "control": "premature_empty_RUP_step",
+        "status": "MALFORMED_CERTIFICATE_REJECTED"
+      }
+    ],
+    "status": "POSITIVE_SORTERS_AND_FOUR_SEMANTIC_REJECTION_CONTROLS_VERIFIED",
+    "seconds": 5.211172266048379,
+    "peak_rss_kib": 140176
+  },
+  "native_checks": [
+    {
+      "parent_index": 42,
+      "image": 0,
+      "status": "FULL_NATIVE_DRAT_AND_COMPACT_RUP_VERIFIED",
+      "seconds": 0.5574077289784327,
+      "core_file": "class42.core.cnf",
+      "proof_file": "class42.rup",
+      "core_bytes": 22267,
+      "proof_bytes": 15310,
+      "proof_additions": 475,
+      "core_sha256": "8948160d66740065b6c473ca751c8524f8aa737a572940e21f2e0b6fa8d8f72c",
+      "proof_sha256": "cd833e17883189abca6f701ac4b1b3170ecb6afb5c7fc7c2e01af4297a3778d1",
+      "native_trimmed_proof_sha256": "aa01eb7078f4d571bfba1a49c656a3bfb52b8d2e66b7c1f8a46d78d5d07b081e",
+      "checker_binary_sha256": "226b68d555a4ee7952a623236090d033437bc6f6bfe4ef97d30895539aa0c16e",
+      "core_clauses": 1349
+    },
+    {
+      "parent_index": 245,
+      "image": 0,
+      "status": "FULL_NATIVE_DRAT_AND_COMPACT_RUP_VERIFIED",
+      "seconds": 0.5459522600285709,
+      "core_file": "class245.core.cnf",
+      "proof_file": "class245.rup",
+      "core_bytes": 23877,
+      "proof_bytes": 19768,
+      "proof_additions": 613,
+      "core_sha256": "235b1069fcdccb4c12cdc07acd11281793dd7ec21454a27c7e9f7a5481311f66",
+      "proof_sha256": "86f23b5a842bdd302ebfd6df40d29778d2597577ce43990be9cd19dfaedb0a32",
+      "native_trimmed_proof_sha256": "c852b4733ef61170d57cbc2f7786ea33a03de5821702636fa5d52507dc084022",
+      "checker_binary_sha256": "226b68d555a4ee7952a623236090d033437bc6f6bfe4ef97d30895539aa0c16e",
+      "core_clauses": 1413
+    }
+  ],
+  "certificate_canonical_sha256": "b8868956927d81e2b600f29e3e690158ac4e932d09ed2611433a4ad93e094afa",
+  "proof_status": "Written unformalized computer-assisted intermediate lemma; completed separate exact checks, no external-person reviewer verdict."
+}
