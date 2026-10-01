@@ -1,0 +1,185 @@
+{
+  "agent": "six-books-3",
+  "claim": "No valid ten-regular red22 graph; all unrestricted valid22 graphs have at most109 red edges",
+  "current_primary_book_sources": [
+    "https://arxiv.org/pdf/2407.07285",
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://arxiv.org/pdf/2410.03625"
+  ],
+  "current_ramsey_bound": "22<=R(B4,B7)<=23, unchanged",
+  "date_utc": "2026-10-01T14:42:14.970710+00:00",
+  "exploratory_solver_role": "Earlier optional LP probing led to analytic packing; solver outputs are unnecessary and unpublished.",
+  "external_classification": {
+    "author": "J. I. Hall",
+    "journal": "Journal of Graph Theory4,173-187",
+    "title": "Locally Petersen graphs",
+    "url": "https://doi.org/10.1002/jgt.3190040206",
+    "verification": "Publisher abstract plus Cohen1990 printed p87 complete proposition/models; original journal PDF did not load; classification is imported.",
+    "year": 1980
+  },
+  "global_premises": [
+    {
+      "height": 8638,
+      "ref": "bafkreidkxsdjhx2pheg3xcq5ujblspc2l4gi5fftsj623vb7pmb2g47we4",
+      "source_commit": "0efb5185b1880be9a29f76ae05f206a8baf60368",
+      "url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-3/local14-exclusion/PROOF.md"
+    },
+    {
+      "height": 8541,
+      "ref": "bafkreieph2tyeefsbslbsfvs2jtv546shufx4ar3stjhca5c72lql37o4a",
+      "source_commit": "53fa7ea66251df9d255b7d0ff9d0ff309580d42a",
+      "url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-1/regular_blue_codegrees/PROOF.md"
+    },
+    {
+      "height": 8012,
+      "ref": "bafkreic57itmbz4klkff2gooq5hyby3ssu4cniwz4mhs76uwsqlblesqdi",
+      "scope": "109edge corollary only",
+      "source_commit": "ce3177a731086284ee89f18a8a3948b672b3c64e",
+      "url": "https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_b4_b7_degree11_gram_exclusion/PROOF.md"
+    }
+  ],
+  "imported_computer_assisted_dependency": "local14-exclusion, graph8638",
+  "new_proof": "ordinary integer four-column packing, elementary Moore construction, credited Hall classification",
+  "next_irregular_boundary": {
+    "complete_degree_patterns": [
+      "10^21,8",
+      "10^20,9^2"
+    ],
+    "red_edges": 109,
+    "status": "surviving candidate patterns only, not an existence claim"
+  },
+  "primary_fixtures": [
+    {
+      "bytes": 60,
+      "file": "primary_cubic10_g4.g6",
+      "sha256": "01324766dc1dfd3b64a9ab130f4162684e9df86f7fee664e6c904e0471eff285",
+      "status": "known census validation, not a new classification or proof premise",
+      "url": "https://houseofgraphs.org/data/cubics/Generated_graphs.10.04.g6"
+    },
+    {
+      "file": "primary21.txt",
+      "sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+      "status": "known21vertex baseline, zero entries are red",
+      "url": "https://github.com/gwen-mckinley/ramsey-books-wheels/blob/main/tabu/constructions/R_B4_B7_construction_21vertices.txt"
+    }
+  ],
+  "readable_primary_bridge": {
+    "author": "A. M. Cohen",
+    "model_orders": [
+      21,
+      63,
+      65
+    ],
+    "page": 87,
+    "url": "https://ir.cwi.nl/pub/2362/2362D.pdf",
+    "year": 1990
+  },
+  "resources": {
+    "final_optimized_checks": [
+      {
+        "child_peak_rss_kib_upper_bound": 19464,
+        "command": "python3 -O check.py",
+        "result": {
+          "agent": "six-books-3",
+          "excluded_non_Petersen_types": 5,
+          "known21": {
+            "blue": {
+              "edges": 117,
+              "max_pages": 6
+            },
+            "red": {
+              "edges": 93,
+              "max_pages": 3
+            }
+          },
+          "known_cubic_classes": 6,
+          "packing_minimum": 9,
+          "role": "researcher",
+          "rooted_classes": 11,
+          "status": "PASS"
+        },
+        "seconds": 0.993
+      },
+      {
+        "child_peak_rss_kib_upper_bound": 25560,
+        "command": "python3 -O verify.py",
+        "result": {
+          "Petersen_confirmed": true,
+          "agent": "six-books-3",
+          "class_sizes": [
+            900,
+            2160,
+            2160,
+            10800,
+            5400,
+            360
+          ],
+          "four_cycle_counts": [
+            6,
+            5,
+            5,
+            3,
+            2,
+            0
+          ],
+          "known21": {
+            "blue_edges": 117,
+            "blue_max_pages": 6,
+            "red_edges": 93,
+            "red_max_pages": 3
+          },
+          "normalized_graphs": 21780,
+          "normalized_sha256": "89062482c76071a010005eec73dddbd6bf7abcb7ba6b849b3f492bacaaf24c81",
+          "packing_minimum": 9,
+          "primary_data_core_ids": [
+            5,
+            4,
+            2,
+            6,
+            1,
+            3
+          ],
+          "recursion_calls": 132520,
+          "role": "researcher",
+          "status": "PASS"
+        },
+        "seconds": 3.069
+      },
+      {
+        "child_peak_rss_kib_upper_bound": 25560,
+        "command": "python3 -O controls.py",
+        "result": {
+          "integer_domain_required": true,
+          "packing_occurrence_boundary": [
+            19,
+            8,
+            20,
+            9
+          ],
+          "rejected_inputs": [
+            "wrong-graph-order",
+            "nonzero-graph-padding",
+            "repeated-cycle-vertex",
+            "false-cycle-witness",
+            "missing-core-edge"
+          ],
+          "status": "PASS"
+        },
+        "seconds": 0.179
+      }
+    ],
+    "maximum_intensive_jobs": 1,
+    "solver_BLAS_OpenMP_threads": 1
+  },
+  "role": "researcher",
+  "trust_boundaries": [
+    "new ordinary proof unformalized",
+    "Hall classification imported as a literature theorem",
+    "8638 previous finite bridge imported, not replayed by these checks",
+    "independent review of new result pending"
+  ],
+  "validation_versions": {
+    "CPython": "3.11.2",
+    "libraries": "standard library only"
+  }
+}
