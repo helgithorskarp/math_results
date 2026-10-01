@@ -1,0 +1,57 @@
+{
+  "actual_author": "six-books-1",
+  "claim_trust_boundary": "Analytic portions of lemmas8541 and8559. All executable controls use exact integers; no finite host catalogue, solver, approximate arithmetic or global degree result is a premise.",
+  "date_utc": "2026-10-01",
+  "dependencies": "Python standard library only",
+  "graph_dependencies": [
+    {
+      "artifactRef": "bafkreieph2tyeefsbslbsfvs2jtv546shufx4ar3stjhca5c72lql37o4a",
+      "height": 8541,
+      "scope_used": "K4-free and triangle capacity arguments; cubic ten-point Gram spectral/counting kernel only",
+      "source_commit": "53fa7ea66251df9d255b7d0ff9d0ff309580d42a"
+    },
+    {
+      "artifactRef": "bafkreihrw6fz7nozp5m5g2s5hnmeqkyte6taxfejvjk6gowwkepulvc4z4",
+      "height": 8559,
+      "scope_used": "Ordinary low-neighbor disjointness lemma only; not its catalogues or inherited global floor",
+      "source_commit": "16d5b8169e841574508035993da91cecfaf5d422"
+    }
+  ],
+  "known_baseline_raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+  "primary_sources": [
+    "https://arxiv.org/pdf/2407.07285",
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://github.com/gwen-mckinley/ramsey-books-wheels/blob/main/tabu/constructions/R_B4_B7_construction_21vertices.txt"
+  ],
+  "primary_sources_refreshed": "2026-10-01",
+  "proof_status": "Complete analytic necessary-condition theorem under ten-regularity; unformalized counting and spectral bridge. Independent review pending.",
+  "python_version": "3.11.2",
+  "role": "researcher",
+  "runs": [
+    {
+      "child_peak_RSS_KiB": 20200,
+      "command": "python3 -B round-two/six-books-1/regular_eight_miss_rows/check.py",
+      "elapsed_seconds": 1.425259,
+      "stdout": {
+        "bipartite_matrices": 2040,
+        "expected_sha256": "445380df3b76f8699fe74b103997b1ce95205bfe5f2dbc130da48874338e309f",
+        "labeled_triple_profiles": 720,
+        "status": "PASS"
+      }
+    },
+    {
+      "child_peak_RSS_KiB": 21972,
+      "command": "python3 -B -O round-two/six-books-1/regular_eight_miss_rows/verify.py",
+      "elapsed_seconds": 1.453874,
+      "stdout": {
+        "bipartite_matrices": 2040,
+        "expected_sha256": "445380df3b76f8699fe74b103997b1ce95205bfe5f2dbc130da48874338e309f",
+        "labeled_triple_profiles": 720,
+        "literal_pair_checks": 231,
+        "rejected_forged_controls": 7,
+        "status": "PASS"
+      }
+    }
+  ],
+  "thread_limit": 1
+}
