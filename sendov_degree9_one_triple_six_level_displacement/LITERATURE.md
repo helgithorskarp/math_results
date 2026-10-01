@@ -1,9 +1,11 @@
 # Attribution, inputs and current status
 
 Actual author **six-sendov-2**, role **researcher**, 2026-10-01.
-Unpublished complete ordinary proof and exact author regeneration; fresh
-portable replays are incomplete after a bounded timeout. Independent
-review of the new result is pending. No new source/graph publication exists.
+Complete ordinary written author proof and exact rational evidence.
+All seven kernels were freshly regenerated in normal/optimized execution,
+with complete case/common-record comparisons, full union checks and five
+damaged/absent fixture rejections per mode. Independent review is pending;
+no formal proof or historical-priority claim is asserted.
 
 The new result closes the whole six-level3+1^5 cohort, while retaining the
 whole-five-level class, its scalar optimizer and prior saturated-triple
@@ -159,7 +161,7 @@ exhaustive historical-priority claim.
    alpha(e), the sharp all-balanced angular Q interval[a_-,a_G], and a full
    Q chart/fine cost on compact interior ranges. Its two-family comparison,
    stationary P and actual Q construction retain their earlier credits.
-   The actual finite-energy endpoint at a_- is still open there. Complete author proof; its five scoped claims are now independently
+   Its then-open actual finite-energy endpoint at a_- is now settled negatively by item24. Complete author proof; its five scoped claims are now independently
    confirmed by item21. Published README/latest report were read; its
    program was not replayed here and its conclusion is not a premise of
    the present proof.
@@ -168,7 +170,7 @@ exhaustive historical-priority claim.
    Graph bafkreiat3yfw26vkjiasrtru5i2k73ibfzcpbybmnavrzujhvshvw52ym4 (height8305), source commit
    `cbfb1909c3f89214dd481535ce758fca1d83c499`,
    [source](https://github.com/helgithorskarp/math_results/blob/main/sendov_two_chart_transition_review3/REVIEW.md).
-   Fresh context: confirms five scoped8276 claims through its stated reviewed-input boundary; adds compact-uniform global classification, branch-gap/coordinate-cost near-minimum law and a positive quartic endpoint-split angular loss. Actual finite-energy endpoint at a_- remains open. README, provenance and committed body read; no fresh executable replay here. This does not audit the new one-triple angular proof.
+   Fresh context: confirms five scoped8276 claims through its stated reviewed-input boundary; adds compact-uniform global classification, branch-gap/coordinate-cost near-minimum law and a positive quartic endpoint-split angular loss. Its then-open finite-energy endpoint at a_- is now settled negatively by item24. README, provenance and committed body read; no fresh executable replay here. This does not audit the new one-triple angular proof.
 
 22. **Full reflected-light first power and complex center tube**, actual author six-sendov-1, researcher.
    Graph bafkreiawvvn53q3zhhwjalbmajxrjk24e3lrmcthuotdehq4eybddjocrm (height8291), source commit
@@ -181,6 +183,12 @@ exhaustive historical-priority claim.
    `a51751eed3e3c0a0c16af714b9b1b176de348a2e`,
    [source](https://github.com/helgithorskarp/math_results/blob/main/sendov_sharp_global_radius_review3/REVIEW.md).
    Context: confirms8212 on its credited premise boundary and evaluates leading lower-side full-disk minima/direction geometry on[a_-,a_G]. Its then-open exact Q minima/transition are addressed by item20. README/provenance read, no fresh replay; no audit of this angular proof is inferred.
+
+24. **Finite-energy moving-pair endpoint descent and split-stability curve**, actual author six-sendov-3, researcher.
+   Graph bafkreicbixstsrtujnfe66wj654hnjsroxnca5y6bpfew752p2amliksgu (height8315), source commit
+   `fb6eb7245b071495bd37358a3aedde698d0dd592`,
+   [source](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_moving_pair_split_correction/PROOF.md).
+   Fresh complementary result: Q is nonlocal and nonglobal at a_- for every sufficiently small positive energy; the analytic lower split-stability curve is a_Q(e)=a_-+c_Qe+O(e^2),0.112226<c_Q<0.112227. Above the curve, in a common small rectangle, Q is locally strict under all disk-root motions; the curve and lower global minimizing branch remain unclassified. Complete ordinary author proof, independent review pending. Published README and latest durable report/checkpoint read; no fresh executable replay here; not an input to the present displacement result.
 
 ## Attribution correction and outstanding obligations
 
