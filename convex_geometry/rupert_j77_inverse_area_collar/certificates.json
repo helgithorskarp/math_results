@@ -1,0 +1,346 @@
+{
+  "global_budget": {
+    "maximum_excess": "1/10",
+    "first_coarse_chord": "1/8",
+    "first_linear_factor": "3/7",
+    "second_coarse_chord": "3/70",
+    "linear_chord_factor": "7/20"
+  },
+  "raw_triangle": [
+    [
+      "1",
+      "-1/450",
+      "1/900"
+    ],
+    [
+      "1",
+      "-1/300",
+      "0"
+    ],
+    [
+      "1",
+      "-1/225",
+      "1/450"
+    ]
+  ],
+  "collar_bounds": {
+    "physical_chord_lower": "1/500",
+    "physical_chord_upper": "1/200",
+    "area_excess_upper": "13/500",
+    "source_chord_upper": "91/10000",
+    "scale_squared_upper": "501/500",
+    "outer_error": "1269/40000",
+    "remote_half_tangent": "1/20",
+    "near_half_tangent": "1/60",
+    "principal_full_angle_upper": "1/20",
+    "Bernstein_margin_lower": "1/1000"
+  },
+  "maximum_physical_area_squared": [
+    "280834381/3240080",
+    "31130667/810020"
+  ],
+  "roll": {
+    "norms_upper": [
+      "769421/500000",
+      "1",
+      "1",
+      "433013/500000",
+      "769421/500000",
+      "769421/250000",
+      "1",
+      "433013/500000",
+      "769421/500000",
+      "433013/500000"
+    ],
+    "covers": [
+      {
+        "family": 0,
+        "interval": [
+          "-1",
+          "-1/20"
+        ],
+        "leaves": [
+          {
+            "path": "0",
+            "edges": [
+              0,
+              5
+            ],
+            "source_vertices": [
+              1,
+              2
+            ]
+          },
+          {
+            "path": "1",
+            "edges": [
+              0,
+              5
+            ],
+            "source_vertices": [
+              18,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "family": 0,
+        "interval": [
+          "1/20",
+          "1"
+        ],
+        "leaves": [
+          {
+            "path": "0",
+            "edges": [
+              0,
+              5
+            ],
+            "source_vertices": [
+              24,
+              16
+            ]
+          },
+          {
+            "path": "1",
+            "edges": [
+              0,
+              5
+            ],
+            "source_vertices": [
+              23,
+              22
+            ]
+          }
+        ]
+      },
+      {
+        "family": 1,
+        "interval": [
+          "-1",
+          "1"
+        ],
+        "leaves": [
+          {
+            "path": "00",
+            "edges": [
+              0,
+              5
+            ],
+            "source_vertices": [
+              2,
+              1
+            ]
+          },
+          {
+            "path": "01",
+            "edges": [
+              1,
+              5,
+              8
+            ],
+            "source_vertices": [
+              2,
+              18,
+              16
+            ]
+          },
+          {
+            "path": "100",
+            "edges": [
+              1,
+              5,
+              8
+            ],
+            "source_vertices": [
+              0,
+              24,
+              22
+            ]
+          },
+          {
+            "path": "101",
+            "edges": [
+              0,
+              5
+            ],
+            "source_vertices": [
+              16,
+              17
+            ]
+          },
+          {
+            "path": "11",
+            "edges": [
+              0,
+              5
+            ],
+            "source_vertices": [
+              22,
+              23
+            ]
+          }
+        ]
+      },
+      {
+        "family": 2,
+        "interval": [
+          "-1",
+          "1"
+        ],
+        "leaves": [
+          {
+            "path": "000",
+            "edges": [
+              0,
+              5
+            ],
+            "source_vertices": [
+              18,
+              0
+            ]
+          },
+          {
+            "path": "0010",
+            "edges": [
+              1,
+              5,
+              8
+            ],
+            "source_vertices": [
+              24,
+              0,
+              1
+            ]
+          },
+          {
+            "path": "0011",
+            "edges": [
+              1,
+              5,
+              8
+            ],
+            "source_vertices": [
+              24,
+              16,
+              1
+            ]
+          },
+          {
+            "path": "01",
+            "edges": [
+              0,
+              5
+            ],
+            "source_vertices": [
+              24,
+              16
+            ]
+          },
+          {
+            "path": "10",
+            "edges": [
+              0,
+              5
+            ],
+            "source_vertices": [
+              23,
+              22
+            ]
+          },
+          {
+            "path": "11",
+            "edges": [
+              0,
+              5
+            ],
+            "source_vertices": [
+              0,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "family": 3,
+        "interval": [
+          "-1",
+          "1"
+        ],
+        "leaves": [
+          {
+            "path": "00",
+            "edges": [
+              1,
+              5,
+              8
+            ],
+            "source_vertices": [
+              16,
+              18,
+              2
+            ]
+          },
+          {
+            "path": "01",
+            "edges": [
+              0,
+              5
+            ],
+            "source_vertices": [
+              16,
+              24
+            ]
+          },
+          {
+            "path": "10",
+            "edges": [
+              0,
+              5
+            ],
+            "source_vertices": [
+              22,
+              23
+            ]
+          },
+          {
+            "path": "11",
+            "edges": [
+              0,
+              5
+            ],
+            "source_vertices": [
+              3,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "near": [
+      {
+        "sign": 1,
+        "edges": [
+          0,
+          5
+        ],
+        "source_vertices": [
+          24,
+          16
+        ]
+      },
+      {
+        "sign": -1,
+        "edges": [
+          0,
+          5
+        ],
+        "source_vertices": [
+          18,
+          0
+        ]
+      }
+    ]
+  }
+}
