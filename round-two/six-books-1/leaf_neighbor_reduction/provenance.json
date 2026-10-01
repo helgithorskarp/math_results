@@ -1,0 +1,194 @@
+{
+  "agent": "six-books-1",
+  "role": "researcher",
+  "date": "2026-10-01",
+  "proof_status": "Complete ordinary conditional proof with exact author controls; inherited finite classification audited independently; new independent review pending; unformalized ordinary and implementation bridges.",
+  "hypotheses": [
+    "simple red graph on22 vertices",
+    "ordinary red-edge page cap3 and blue-nonedge cap6",
+    "108 red edges",
+    "maximum red degree at most ten",
+    "specified marked thirteen-edge leaf neighborhood at a one-nine root"
+  ],
+  "conclusions": [
+    "the three blue-outside points of the full leaf induce at most one red edge",
+    "the full local leaf has another deficient red neighbor",
+    "leaf roots inject into multi-low-high / degree-nine-neighbor pairs",
+    "n_leaf+R <= e(D9,H)",
+    "under explicit rootlessness, degree pattern8,9,9,10^19 and degree-eight point adjacent to both degree-nine points: at least4 one-nine roots have14/15-edge neighborhoods"
+  ],
+  "excluded_claims": [
+    "complete leaf exclusion",
+    "all108-edge hosts excluded",
+    "Ramsey endpoint",
+    "formal proof",
+    "independent peer verdict on new reduction",
+    "unrestricted priority"
+  ],
+  "dependencies": [
+    {
+      "graph_height": 8939,
+      "graph_ref": "bafkreie3qf4riaoqbnnzarcfswufog6glhcghahfvaptehf3ia7iis6uji",
+      "scope": "DEPENDS_ON: reciprocal local classification",
+      "source_commit": "5c04d6aaa9cedc7d8dda6082ef5ac7ae60cc40ae",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-1/rootless108_marked_profiles/PROOF.md"
+    },
+    {
+      "graph_height": 8987,
+      "graph_ref": "bafkreic3cd6v7bi4yhhsl443kfmonuo3s4pau5l5rdahxmzjeyaaxev3me",
+      "scope": "DEPENDS_ON: scoped parent audit and credited rootless occurrence bound",
+      "source_commit": "a9ea2d82e36068ce6b4731a4185f8e5157048192",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-2/dirty-root-audit/REVIEW.md"
+    },
+    {
+      "graph_height": 8993,
+      "graph_ref": "bafkreibjv6i6monbosb566mqmrkei5fiyvyuopovfbaekihk2uqxrg5eea",
+      "scope": "DEPENDS_ON only for nonleaf14/15-type corollary",
+      "source_commit": "6fcb099c887612b81c3d4e0689629c9563c171fa",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-1/dirty13_isolate_exclusion/PROOF.md"
+    },
+    {
+      "graph_height": 9021,
+      "graph_ref": "bafkreibwr7orj32lzptfjqbmhq2ctcu7f5pj27dueljofh4nl25vpzmjym",
+      "scope": "CITES: confirms8993 and strengthens its exact isolated-key hypotheses; no leaf verdict",
+      "source_commit": "ea1d87633a4db00beb6a56a567ee68fdf9c2f01b",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-2/isolate-incidence-audit/REVIEW.md"
+    },
+    {
+      "graph_height": 8869,
+      "graph_ref": "bafkreibptgfpwfzyroiimshpps7hz4bjsbxd3bfoax6xhq4wbtbvwv36eq",
+      "scope": "CITES: credited column-degree mechanism, rederived in proof",
+      "source_commit": "7c656852626c284bad56f94d594fae5c02ca95fb",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-1/rootless108_structure/PROOF.md"
+    }
+  ],
+  "primary_baseline": {
+    "reader_url": "https://github.com/gwen-mckinley/ramsey-books-wheels/blob/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "agent": "six-books-1",
+    "role": "researcher",
+    "retrieved": "2026-10-01",
+    "source_url": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+    "entries": 441,
+    "red_edges": 93,
+    "maximum_red_pages": 3,
+    "maximum_blue_pages": 6,
+    "status": "Known primary construction validation; no novelty claimed.",
+    "public_fixture": "primary21.blue",
+    "fixture_sha256": "a444e585e8ec0020c8c355c3dd86ef220efb9897e10abb7b4bafd66d2e48a0c1",
+    "fixture_convention": "off-diagonal1blue and0red; diagonal0"
+  },
+  "primary_status": {
+    "interval": [
+      22,
+      23
+    ],
+    "checked_on": "2026-10-01",
+    "sources": [
+      "https://arxiv.org/pdf/2407.07285",
+      "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+    ],
+    "upper_flag_certificate_replayed": false,
+    "targeted_search_establishes_priority": false
+  },
+  "finite_control": {
+    "column_domain": 6561,
+    "row_pair_domain": 4900,
+    "labeled_interfaces": 12,
+    "interface_pairs": 144,
+    "red4": 48,
+    "blue7": 96,
+    "interface_sha256": "9b50aaadcd0357d0757e6d9cf6d00959842a51373c9f3d5abf0fe115a5e5e2d3",
+    "unknown_cross_edge_assignments": "All2^64 handled by written endpoint invariance, not completion enumeration.",
+    "same_author_separate_algorithms": true,
+    "inherited179_class_census_replayed_this_pass": false
+  },
+  "environment": {
+    "python_version": "3.12.14",
+    "libraries": "standard library only",
+    "mathematical_jobs": "serial",
+    "native_threads": 1,
+    "cpu_scope": 1,
+    "memory_scope_GiB": 2,
+    "guard_seconds_per_job": 90,
+    "resource_escalation": false
+  },
+  "validation": {
+    "jobs": [
+      {
+        "command": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "round-two/six-books-1/leaf_neighbor_reduction/check.py"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.114927,
+        "child_peak_RSS_KiB": 15332
+      },
+      {
+        "command": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "round-two/six-books-1/leaf_neighbor_reduction/verify.py"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.165203,
+        "child_peak_RSS_KiB": 16428
+      },
+      {
+        "command": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-O",
+          "round-two/six-books-1/leaf_neighbor_reduction/check.py"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.215463,
+        "child_peak_RSS_KiB": 19408
+      },
+      {
+        "command": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-O",
+          "round-two/six-books-1/leaf_neighbor_reduction/verify.py"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.31559,
+        "child_peak_RSS_KiB": 21072
+      },
+      {
+        "command": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "round-two/six-books-1/leaf_neighbor_reduction/verify.py",
+          "--self-test"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.165396,
+        "child_peak_RSS_KiB": 16476
+      },
+      {
+        "command": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-O",
+          "round-two/six-books-1/leaf_neighbor_reduction/verify.py",
+          "--self-test"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.31588,
+        "child_peak_RSS_KiB": 21396
+      }
+    ],
+    "normal_and_optimized_full_records_byte_identical": true,
+    "normal_and_optimized_damage_records_byte_identical": true,
+    "damages": {
+      "damage_names": [
+        "omitted interface",
+        "duplicate interface",
+        "changed actual incidence",
+        "wrong leaf key",
+        "erased blue-spine cases",
+        "lost unknown-edge controls",
+        "boolean numeric incidence",
+        "wrong injectivity pages"
+      ],
+      "damages_rejected": 8
+    }
+  }
+}
