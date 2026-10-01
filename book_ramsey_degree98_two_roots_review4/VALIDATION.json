@@ -1,0 +1,169 @@
+{
+  "reviewer_initial_passive_comparison": {
+    "name": "independent-normal-with-passive-source-comparison",
+    "exit_code": 0,
+    "seconds": 1.1185329210129566,
+    "maxrss_KiB": 17232
+  },
+  "reviewer_final_runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "controls.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5646035830141045,
+      "maxrss_KiB": 20092
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "bridge.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.2200432420358993,
+      "maxrss_KiB": 20092
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "audit.py",
+        "--expected",
+        "expected.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.030034510011319,
+      "maxrss_KiB": 20092
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "audit.py",
+        "--expected",
+        "expected.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.1572065079817548,
+      "maxrss_KiB": 20800
+    }
+  ],
+  "native_author_runs": [
+    {
+      "program": "degree98_two_roots_check.py",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "degree98_two_roots_check.py",
+        "--matrices",
+        "/scratch/research-team-sol61-six-20260929/workspaces/six-reviewer-4/scratch/pass18-native-matrices.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0467526340507902,
+      "maxrss_KiB": 28180
+    },
+    {
+      "program": "degree98_two_roots_independent.py",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "degree98_two_roots_independent.py",
+        "--matrices",
+        "/scratch/research-team-sol61-six-20260929/workspaces/six-reviewer-4/scratch/pass18-native-matrices.json"
+      ],
+      "exit_code": 0,
+      "seconds": 5.583836928999517,
+      "maxrss_KiB": 28180
+    }
+  ],
+  "native_primary_result": {
+    "complete": true,
+    "forms": 282,
+    "nonsquares": 264,
+    "square_cases": 18,
+    "square_orbits": 3,
+    "full_kernel_rank": 6,
+    "integer_trace_obstruction": true,
+    "adjacency_survivors": 0,
+    "matrix_records_written": true
+  },
+  "native_separate_result": {
+    "complete": true,
+    "separate_domain": "unordered pairs of perfect matchings; all internal matching placements",
+    "forms": 282,
+    "nonsquares": 264,
+    "square_cases": 18,
+    "square_orbits": 3,
+    "adjacency_survivors": 0,
+    "alternative_integral_basis": true,
+    "full_F_H_entry_comparison": true,
+    "corruptions_rejected": [
+      "missing form",
+      "duplicate form",
+      "wrong cross matrix",
+      "wrong determinant",
+      "wrong floor root",
+      "wrong F digest",
+      "wrong H digest",
+      "wrong orbit multiplicity",
+      "missing square rank",
+      "wrong full eigenspace rank",
+      "nonprimitive basis",
+      "wrong Gram entry",
+      "wrong Gram determinant",
+      "wrong trace",
+      "wrong polynomial",
+      "false rational root",
+      "changed signed mask",
+      "full matrix loop"
+    ],
+    "permutation_pairs": 300,
+    "labeled_placements": 2538,
+    "full_F_entries_compared": 1228392,
+    "full_H_entries_compared": 1228392
+  },
+  "reviewer_complete_stdout_bytes": 11374,
+  "reviewer_complete_stdout_sha256": "90451b7c5012d5d62a3992c63ccd14c47270f726e54bfd1dc1a67af3c9cbc630",
+  "reviewer_normal_optimized_stdout_identical": true,
+  "controls": {
+    "agent": "six-reviewer-4",
+    "all_F2_symplectic_rank4_self_adjoint_matrices": 1024,
+    "all_passed": true,
+    "determinant_boundary_controls": 5,
+    "invalid_inputs_rejected": 3,
+    "lattice_hypothesis_boundary_controls": 5,
+    "rank_boundary_controls": 3,
+    "role": "independent mathematical reviewer",
+    "ternary_3x3_determinant_controls": 19683
+  },
+  "bridge": {
+    "agent": "six-reviewer-4",
+    "all_passed": true,
+    "baseline_blue_cap": 6,
+    "baseline_red_cap": 3,
+    "baseline_red_edges": 93,
+    "baseline_sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec",
+    "baseline_vertices": 21,
+    "full_K_square_entries": 40656,
+    "incident_and_parity_checks": 1848,
+    "off_diagonal_red_square_checks": 19404,
+    "role": "independent mathematical reviewer",
+    "signed_target_histogram_graphs": 84,
+    "synthetic_graphs_are_admissible_hosts": false
+  },
+  "primary_baseline": {
+    "primary_url": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "primary_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+    "reviewer_fixture_sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec",
+    "all_441_complemented_entries_equal": true,
+    "parser": "ast.literal_eval of first expression; metadata not executed"
+  },
+  "all_checks_passed": true
+}
