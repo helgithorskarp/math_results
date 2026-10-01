@@ -1,0 +1,154 @@
+{
+  "schema": "research-source-manifest-v1",
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "environment": {
+    "python": "3.11.2; requires3.11+",
+    "dependencies": "standard library only",
+    "arithmetic": "exact integers",
+    "threads": 1,
+    "simultaneous_intensive_jobs": 1
+  },
+  "proof_status": "Exact conditional six-class reduction and three class exclusions; written bridges and imports unformalized; independently implemented algorithms by this researcher, no external reviewer verdict.",
+  "scope": "All32310 effective orders of six repeated-effective-(2,3) classes; three excluded, otherthree iff five listed literal tails can be sorted within budget.",
+  "canonical_certificate_sha256": "e5e69fa0611dfe4ad31500207721c3483bd8493367f4eee0b7d5330c23d84bef",
+  "certificate_file_sha256": "7f0ea4f3eec45727310b29684f622e93dc77bd342f168b58a2754dd05f0d1127",
+  "generator_wall_seconds": 4.035213992989156,
+  "checker_wall_seconds": 17.36609975999454,
+  "positive_checker_output": {
+    "status": "INDEPENDENT_REPEATED23_REDUCTION_VERIFIED",
+    "covered_classes": 6,
+    "covered_effective_orders": 32310,
+    "excluded_classes": 3,
+    "excluded_effective_orders": 16155,
+    "profile_states": 2214,
+    "profile_edges": 22536,
+    "rank_monoid_counts": [
+      1,
+      2,
+      11,
+      261
+    ],
+    "original_B11_inputs": 8192,
+    "known_full45_inputs": 8192,
+    "actual_clamped_domain_assignments": 26624,
+    "normalized_prefixes": 1728,
+    "B11_prefix_rows": 273024,
+    "literal_image_budget_pairs": 526,
+    "prefix_activity_obstructions": 506,
+    "actual_marked_prefix_obstruction_checks": 1036288,
+    "original_literal_prefix_inputs": 163840,
+    "actual_boundary_marked_free_assignments": 7168,
+    "local_cut_truth_checks": 73728,
+    "mandatory_internal_gate_checks": 72,
+    "boundary_obstructions": 14,
+    "imported_obstructions": 1,
+    "remaining_tails": [
+      [
+        40,
+        6,
+        48,
+        10
+      ],
+      [
+        155,
+        0,
+        52,
+        11
+      ],
+      [
+        155,
+        5,
+        47,
+        10
+      ],
+      [
+        243,
+        0,
+        52,
+        11
+      ],
+      [
+        243,
+        5,
+        47,
+        10
+      ]
+    ],
+    "certificate_sha256": "e5e69fa0611dfe4ad31500207721c3483bd8493367f4eee0b7d5330c23d84bef"
+  },
+  "child_peak_rss_kib_linux": 60352,
+  "negative_controls": [
+    {
+      "name": "omitted_complete_class",
+      "rejected": true,
+      "exit_code": 1,
+      "wall_seconds": 0.0831682090065442,
+      "peak_rss_kib": 17976
+    },
+    {
+      "name": "erased_activity_witness",
+      "rejected": true,
+      "exit_code": 1,
+      "wall_seconds": 17.814233380020596,
+      "peak_rss_kib": 59436
+    },
+    {
+      "name": "incorrect_maximum_marked_passages",
+      "rejected": true,
+      "exit_code": 1,
+      "wall_seconds": 18.118046907999087,
+      "peak_rss_kib": 59548
+    },
+    {
+      "name": "omitted_remaining_literal_row",
+      "rejected": true,
+      "exit_code": 1,
+      "wall_seconds": 17.818680336000398,
+      "peak_rss_kib": 59548
+    }
+  ],
+  "source_files": [
+    {
+      "path": ".gitignore",
+      "bytes": 56,
+      "sha256": "bfc1d5d4f58b6e52ea0b79b38888bfa272ebf2ed4a7c75a94359f6fb7266c163"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3072,
+      "sha256": "6074930adc82e5d11b312b6c49f5a264baa8bfb005221ed43ed280c47dc1ddc2"
+    },
+    {
+      "path": "PROOF.md",
+      "bytes": 15918,
+      "sha256": "2a74332e2a1eb606b697521ae8714414f7c14b99e30aada28947396249839a87"
+    },
+    {
+      "path": "fixture.json",
+      "bytes": 9140,
+      "sha256": "a99599c4d5be05534d54dee43f7565e08b82db24076b36a25eb57f71a206812b"
+    },
+    {
+      "path": "certificate.json",
+      "bytes": 21487,
+      "sha256": "7f0ea4f3eec45727310b29684f622e93dc77bd342f168b58a2754dd05f0d1127"
+    },
+    {
+      "path": "generate.py",
+      "bytes": 16581,
+      "sha256": "56fe7fc765730eacad3da70cbec51731b0704fc417cd4e87b0c73002b1ea467b"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 26859,
+      "sha256": "3fb7c7fa9dc63180a329b1086d6ab53da3f5619d30c74030d6842eb77bbddecc"
+    },
+    {
+      "path": "dependencies.json",
+      "bytes": 11389,
+      "sha256": "c824607ff58a703a759916ae5fb89c02917178eee2252f1940fcfee0cc86d643"
+    }
+  ],
+  "trust_boundary": "Imported necessary profiles, complete normal form, parent480-class theorem and established size bounds; written all-real threshold/commutation/pruning bridges. One graph8222 standalone image theorem is imported and not replayed here. No new local solver result is a premise."
+}
