@@ -1,0 +1,545 @@
+{
+  "actual_agent": "six-tammes-1",
+  "adjacent": {
+    "admitted_entries": [
+      {
+        "class": "A",
+        "omitted": 13,
+        "outside_neighbors": [
+          10,
+          11,
+          12
+        ],
+        "reason": "TRIANGLE_AT_THREE",
+        "witness": [
+          7,
+          9,
+          13
+        ]
+      },
+      {
+        "class": "A",
+        "omitted": 12,
+        "outside_neighbors": [
+          10,
+          11,
+          13
+        ],
+        "reason": "TRIANGLE_AT_THREE",
+        "witness": [
+          5,
+          8,
+          12
+        ]
+      },
+      {
+        "class": "A",
+        "omitted": 11,
+        "outside_neighbors": [
+          10,
+          12,
+          13
+        ],
+        "reason": "THREE_ORDINARY_CONTACT",
+        "witness": [
+          11,
+          4
+        ]
+      },
+      {
+        "class": "A",
+        "omitted": 10,
+        "outside_neighbors": [
+          11,
+          12,
+          13
+        ],
+        "reason": "THREE_ORDINARY_CONTACT",
+        "witness": [
+          10,
+          6
+        ]
+      },
+      {
+        "class": "B",
+        "omitted": 13,
+        "outside_neighbors": [
+          8,
+          9,
+          12
+        ],
+        "reason": "FOUR_ZERO_FOURS_EXCEED3",
+        "witness": [
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "class": "B",
+        "omitted": 12,
+        "outside_neighbors": [
+          8,
+          9,
+          13
+        ],
+        "reason": "FOUR_ZERO_FOURS_EXCEED3",
+        "witness": [
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "class": "B",
+        "omitted": 9,
+        "outside_neighbors": [
+          8,
+          12,
+          13
+        ],
+        "reason": "FIVE_OPPOSITE_THREE",
+        "witness": [
+          1,
+          3,
+          9,
+          7
+        ]
+      },
+      {
+        "class": "B",
+        "omitted": 8,
+        "outside_neighbors": [
+          9,
+          12,
+          13
+        ],
+        "reason": "FIVE_OPPOSITE_THREE",
+        "witness": [
+          0,
+          2,
+          8,
+          5
+        ]
+      }
+    ],
+    "admitted_entries_sha256": "4d7ffadb693491c3f04051b5e0cea0020ed6689154bb6988383be1f47d629d97",
+    "all_outside_bitmasks": 65536,
+    "raw_degree_candidates": 5460,
+    "released_geometric_terminal_tests_admitted": 8
+  },
+  "continuous_core_arithmetic_independently_audited": false,
+  "fan_word_cover": {
+    "admitted_word_pairs": 32,
+    "admitted_word_pairs_sha256": "a47049960321b7673d3bc2030947be829daa21b36b6ae42fe60d68f0d933cc87",
+    "all_fan_words_each": 120,
+    "distinct_T_sets": 8,
+    "permitted_words_each": 12,
+    "raw_word_pairs": 144,
+    "role_labeled_T_patch_sets_sha256": "67e503eafc7bc911e36cd2bd6abd46a5b41baa48e98ab53bee34a5557d2eb869"
+  },
+  "noncontact_b1": {
+    "admitted_aliases_sha256": "fc8a2c5cd11d89424c7934bcc4fc23a3cc3dce259a44004dab4cdb4642796115",
+    "raw_original_opposite_pairs": 225,
+    "terminal_entries": [
+      {
+        "H": 6,
+        "K": 4,
+        "additional_B_ends": 2,
+        "available_ends": 6,
+        "forced_deficient_ends": 6,
+        "forced_edges": [
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "required_ends": 8
+      },
+      {
+        "H": 6,
+        "K": 5,
+        "additional_B_ends": 2,
+        "available_ends": 6,
+        "forced_deficient_ends": 6,
+        "forced_edges": [
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "required_ends": 8
+      },
+      {
+        "H": 6,
+        "K": 8,
+        "additional_B_ends": 0,
+        "available_ends": 6,
+        "forced_deficient_ends": 8,
+        "forced_edges": [
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "required_ends": 8
+      },
+      {
+        "H": 7,
+        "K": 4,
+        "additional_B_ends": 2,
+        "available_ends": 6,
+        "forced_deficient_ends": 6,
+        "forced_edges": [
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "required_ends": 8
+      },
+      {
+        "H": 7,
+        "K": 5,
+        "additional_B_ends": 2,
+        "available_ends": 6,
+        "forced_deficient_ends": 6,
+        "forced_edges": [
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "required_ends": 8
+      },
+      {
+        "H": 7,
+        "K": 8,
+        "additional_B_ends": 0,
+        "available_ends": 6,
+        "forced_deficient_ends": 8,
+        "forced_edges": [
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "required_ends": 8
+      },
+      {
+        "H": 8,
+        "K": 4,
+        "additional_B_ends": 0,
+        "available_ends": 6,
+        "forced_deficient_ends": 8,
+        "forced_edges": [
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "required_ends": 8
+      },
+      {
+        "H": 8,
+        "K": 5,
+        "additional_B_ends": 0,
+        "available_ends": 6,
+        "forced_deficient_ends": 8,
+        "forced_edges": [
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "required_ends": 8
+      },
+      {
+        "H": 8,
+        "K": 8,
+        "additional_B_ends": 0,
+        "available_ends": 6,
+        "forced_deficient_ends": 8,
+        "forced_edges": [
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "required_ends": 8
+      }
+    ],
+    "terminal_entries_sha256": "30be87f55f88cdcbe775aff9105f3a92eab8d05bb1879214860f35f5683a103b"
+  },
+  "noncontact_b2": {
+    "credited_existing_case": true,
+    "endpoint_forms_sha256": "b4053116aa644e06ad1bdee0956ce74d7bd14ca73e5e947cbb17a7a0b035b1f9",
+    "opposite_aliases_sha256": "cce5b9f0e2a90b8d9b92dd1254c776cbfd3dbbd0d46ee97073e7f15f366220d6",
+    "ordered_endpoint_normal_forms": [
+      [
+        [
+          4,
+          12
+        ],
+        [
+          5,
+          12
+        ]
+      ],
+      [
+        [
+          4,
+          12
+        ],
+        [
+          12,
+          5
+        ]
+      ],
+      [
+        [
+          5,
+          12
+        ],
+        [
+          4,
+          12
+        ]
+      ],
+      [
+        [
+          5,
+          12
+        ],
+        [
+          12,
+          4
+        ]
+      ],
+      [
+        [
+          12,
+          4
+        ],
+        [
+          5,
+          12
+        ]
+      ],
+      [
+        [
+          12,
+          4
+        ],
+        [
+          12,
+          5
+        ]
+      ],
+      [
+        [
+          12,
+          5
+        ],
+        [
+          4,
+          12
+        ]
+      ],
+      [
+        [
+          12,
+          5
+        ],
+        [
+          12,
+          4
+        ]
+      ]
+    ],
+    "original_Q_opposite_aliases": [
+      [
+        0,
+        "REPEATED_Q_VERTEX"
+      ],
+      [
+        1,
+        "OUTSIDE_COMPLETE_G_CONTACTS"
+      ],
+      [
+        2,
+        "OUTSIDE_COMPLETE_P_CONTACTS"
+      ],
+      [
+        3,
+        "OUTSIDE_COMPLETE_P_CONTACTS"
+      ],
+      [
+        4,
+        "OUTSIDE_COMPLETE_P_CONTACTS"
+      ],
+      [
+        5,
+        "OUTSIDE_COMPLETE_P_CONTACTS"
+      ],
+      [
+        6,
+        "OUTSIDE_COMPLETE_P_CONTACTS"
+      ],
+      [
+        7,
+        "OUTSIDE_COMPLETE_P_CONTACTS"
+      ],
+      [
+        8,
+        "CONTACT_Q_DIAGONAL"
+      ],
+      [
+        9,
+        "OUTSIDE_COMPLETE_P_CONTACTS"
+      ],
+      [
+        10,
+        "OUTSIDE_COMPLETE_P_CONTACTS"
+      ],
+      [
+        11,
+        "ORDINARY_FOUR_OPPOSITE_FIVE"
+      ],
+      [
+        12,
+        "OUTSIDE_COMPLETE_P_CONTACTS"
+      ],
+      [
+        13,
+        "OUTSIDE_COMPLETE_P_CONTACTS"
+      ],
+      [
+        14,
+        "OUTSIDE_COMPLETE_P_CONTACTS"
+      ]
+    ]
+  },
+  "role": "researcher",
+  "shared_Q": [
+    {
+      "admitted": 0,
+      "common_contact_records_sha256": "79d48fe13de4a1311e08f9953b9919614e833f2941f1cae699a9c077abdc9622",
+      "ordinary_fours": 5,
+      "raw_subset_pairs": 1
+    },
+    {
+      "admitted": 0,
+      "common_contact_records_sha256": "c9374704b6df2f3ce1bca99c027b096ebaf392a236941178bfa9296cef0d5740",
+      "ordinary_fours": 6,
+      "raw_subset_pairs": 16
+    },
+    {
+      "admitted": 0,
+      "common_contact_records_sha256": "f0351de059b7c45c51f67c445396983fb88c2981516c7a0518931ea9eb8f93cb",
+      "ordinary_fours": 7,
+      "raw_subset_pairs": 100
+    },
+    {
+      "admitted": 20,
+      "common_contact_records_sha256": "82ce29aa960c331cd9f3cba6eac6bdf8a2665ad7e95c432df52b3d888d91fe14",
+      "ordinary_fours": 8,
+      "raw_subset_pairs": 400
+    }
+  ],
+  "status": "same-author distinct finite representation; continuous core shared as explicit input"
+}
