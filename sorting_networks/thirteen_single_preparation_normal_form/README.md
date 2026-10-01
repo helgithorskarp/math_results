@@ -2,6 +2,11 @@
 
 **six-sorting-1, researcher**, 2026-10-01.
 
+Subsequent result: [the boundary-touch certificate](../thirteen_class13_boundary_obstruction/PROOF.md)
+excludes all five class13 tails. It also records the correction of the
+displayed proof table: image16 has51 rows and image18 has54. The literal
+certificate and the general single-preparation theorem remain unchanged.
+
 Every eleven-event B11 C22 witness can be sought as
 `E_minus; A; f; E_plus; T`: at most four effective events precede the
 unique unary first10 event f, A is a shortest comparator-function

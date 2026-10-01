@@ -1,0 +1,143 @@
+{
+  "schema": "research-source-manifest-v1",
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "environment": {
+    "python": "3.11.2; requires3.11+",
+    "dependencies": "standard library only",
+    "arithmetic": "exact integers",
+    "threads": 1,
+    "simultaneous_intensive_jobs": 1
+  },
+  "scope": "Complete repeated-effective-(1,2) B11 class13 exclusion via five boundary-touch certificates; no globalS13 or wholeB11 exclusion.",
+  "proof_status": "Written unformalized lemma, separately implemented exact checks by the same researcher; complete parent reduction and smaller-size bounds are imports, no SAT premise.",
+  "canonical_certificate_sha256": "0791a0bd8b4501a2912e9a85f0456c3f8ed236a30830780d6be4a59ea1ba6052",
+  "certificate_file_sha256": "609207062405979c6e28c43d5478fceaee98dca0a774ed25214f8f59d6361d77",
+  "generator_wall_seconds": 0.44374562602024525,
+  "checker_wall_seconds": 0.8897128090029582,
+  "positive_checker_output": {
+    "status": "INDEPENDENT_CLASS13_BOUNDARY_EXCLUSION_VERIFIED",
+    "excluded_complete_classes": 1,
+    "class13_effective_words": 5385,
+    "complete_residual_pairs_excluded": 5,
+    "original_prefix_input_checks": 40960,
+    "B11_prefix_row_checks": 790,
+    "actual_marked_free_assignments": 4096,
+    "local_boolean_cut_checks": 36864,
+    "mandatory_gate_checks": 36,
+    "B11_reconstruction_inputs": 8192,
+    "known45_control_inputs": 8192,
+    "image_rows_budget_touch_cap_required": [
+      [
+        0,
+        59,
+        11,
+        2,
+        3
+      ],
+      [
+        1,
+        56,
+        10,
+        0,
+        1
+      ],
+      [
+        8,
+        56,
+        10,
+        1,
+        2
+      ],
+      [
+        16,
+        51,
+        9,
+        0,
+        1
+      ],
+      [
+        18,
+        54,
+        9,
+        0,
+        1
+      ]
+    ],
+    "certificate_sha256": "0791a0bd8b4501a2912e9a85f0456c3f8ed236a30830780d6be4a59ea1ba6052"
+  },
+  "child_peak_rss_kib_linux": 16980,
+  "negative_controls": [
+    {
+      "name": "incorrect_marked_prefix_count",
+      "mutation": "First recorded prefix passage count increased by one.",
+      "rejected": true,
+      "wall_seconds": 0.23715203197207302,
+      "exit_code": 1
+    },
+    {
+      "name": "omitted_complete_tail_instance",
+      "mutation": "One of the five required obstruction entries omitted.",
+      "rejected": true,
+      "wall_seconds": 0.06569365097675472,
+      "exit_code": 1
+    },
+    {
+      "name": "incorrect_original_cut_preimage",
+      "mutation": "First cut row assigned the all-zero original input.",
+      "rejected": true,
+      "wall_seconds": 0.23079445399343967,
+      "exit_code": 1
+    },
+    {
+      "name": "erased_mandatory_internal_comparator",
+      "mutation": "Required internal comparator metadata erased.",
+      "rejected": true,
+      "wall_seconds": 0.233337500016205,
+      "exit_code": 1
+    }
+  ],
+  "parent_displayed_table_correction_checked": true,
+  "source_files": [
+    {
+      "path": ".gitignore",
+      "bytes": 48,
+      "sha256": "0c93b195d2c9f35f40231629c4745a95f2e932dc16eb8efe71c45744a07fd818"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3861,
+      "sha256": "df88185c8bc274d86fb577875063a3a53bbaec829f7c4b682015305613a93a18"
+    },
+    {
+      "path": "PROOF.md",
+      "bytes": 11081,
+      "sha256": "544997d97affc7a009d1552bf2f8b22d18e425af702a453b584e3d45fa89a9ac"
+    },
+    {
+      "path": "fixture.json",
+      "bytes": 3501,
+      "sha256": "82c27c5c593ed33fbcc3e37da51beca4bb537c78e902f950006c073a7e78ebf6"
+    },
+    {
+      "path": "certificate.json",
+      "bytes": 2788,
+      "sha256": "609207062405979c6e28c43d5478fceaee98dca0a774ed25214f8f59d6361d77"
+    },
+    {
+      "path": "generate.py",
+      "bytes": 6779,
+      "sha256": "bbbfd4c436a41cbcf5e9fe1838692ad87dc22cf3560fe51fbb64525d0253e6ea"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 10454,
+      "sha256": "d19fa616ac8a9ca9b32f2d4ceb1d66c8e6247e98df5f477a7ec5fb61fb658fc3"
+    },
+    {
+      "path": "dependencies.json",
+      "bytes": 8766,
+      "sha256": "9208d24233d9b0d7377c3736ea1fee9a7783e3fa7f4af717bcf43f061cbff112"
+    }
+  ]
+}

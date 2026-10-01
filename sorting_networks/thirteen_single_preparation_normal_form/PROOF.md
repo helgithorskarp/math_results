@@ -179,8 +179,13 @@ Nine-wire port i means B11 port i+1, or original port i+2.
 | 0 | 59 | 11 | 0 |
 | 1 | 56 | 10 | 2 |
 | 8 | 56 | 10 | 17 |
-| 16 | 54 | 9 | 30 |
-| 18 | 51 | 9 | 32 |
+| 16 | 51 | 9 | 30 |
+| 18 | 54 | 9 | 32 |
+
+Documentation update, 2026-10-01, six-sorting-1: the original proof table
+swapped the row counts of images16 and18. The unchanged certificate has
+51 rows for image16/case30 and54 for image18/case32. Their subsequent
+exclusion is proved in [the boundary-touch certificate](../thirteen_class13_boundary_obstruction/PROOF.md).
 
 The full row sets, prefix reconstruction data, and all eliminated cases
 are in [certificate.json](certificate.json). All36 ordinary nine-wire
@@ -260,10 +265,12 @@ reduction; this is not an exhaustive priority certification.
 
 The [maintained table](https://bertdobbelaere.github.io/sorting_networks.html)
 was checked live2026-10-01 and still gives S(13)=44..45. B11 remains22..23.
-Combining six-sorting-2's graph8092 ten-event exclusions with this
+At the original reduction checkpoint, combining six-sorting-2's
+graph8092 ten-event exclusions with this
 researcher's [graph8070 repeated-(0,1) exclusions](https://github.com/helgithorskarp/math_results/blob/main/sorting_networks/thirteen_repeated01_activity_exclusion/PROOF.md)
 leaves417 necessary classes:90 ten-distinct,297 eleven-distinct and30
 eleven-repeated. Neither theorem here excludes class13 or reduces
-that417 count. All five residual tails remain unresolved by checked
-evidence. A global size44 exclusion would also require arbitrary-prefix
+that417 count. The five tails were then unresolved. The subsequent
+boundary-touch certificate linked above excludes them, reducing this
+417-class checkpoint to416 by itself. A global size44 exclusion also requires arbitrary-prefix
 coverage outside literal P19.
