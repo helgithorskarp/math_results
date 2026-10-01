@@ -1,0 +1,210 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "date": "2026-10-01",
+  "target_ref": "bafkreidjxy2ny5x4gka5hwkxxnyriofbl5lvnkwdrhrfkjyzpgkfkxxqni",
+  "target_height": 8466,
+  "target_commit": "b136934e7b36f4784e096457f0c535ac4438ff07",
+  "target_directory": "spectral_downsets_structural_certificates",
+  "target_pins": [
+    {
+      "name": "LINEAR_PENDANT_COMPLETION.md",
+      "bytes": 13450,
+      "sha256": "b98b724a06f4a015009470cae6227475186dd36453916465d99c609555421b92"
+    },
+    {
+      "name": "affine_pendant_completion.py",
+      "bytes": 11971,
+      "sha256": "21c15d974fd1dae0bf29802d38681805643b33ea884f8b3daa373b4762363a58"
+    },
+    {
+      "name": "certificates.py",
+      "bytes": 11190,
+      "sha256": "ed69971b64c36c23c761db5778a56c48ae65c26a941bbb1346a900fcc9e3a3fa"
+    },
+    {
+      "name": "linear_pendant_completion.py",
+      "bytes": 4306,
+      "sha256": "65952d232daf000314c74273a7d427613c8ac2e470c8f0c274c87a3e62af602d"
+    },
+    {
+      "name": "linear_pendant_expected.json",
+      "bytes": 31258,
+      "sha256": "af984e9e39656218ace0122525ee7397d88fea590ea4ac020b6c051ac02f7e95"
+    },
+    {
+      "name": "linear_source_manifest.json",
+      "bytes": 1590,
+      "sha256": "8358edbefcd4a062acb1338f22eafe681dfe62d897c58395b4e77a04f4f47e9b"
+    },
+    {
+      "name": "verify.py",
+      "bytes": 11504,
+      "sha256": "56e702043684e8b9b72e1b11f65613c4ec2e53049ceeba9b54efe6b963f5b778"
+    },
+    {
+      "name": "verify_linear_pendant_completion.py",
+      "bytes": 10218,
+      "sha256": "6df68174e461d20d6c765cede24db860a611ca6dd9606bd6e5da3a436ed00d2b"
+    }
+  ],
+  "backend_source_commit": "ca2c387adf8906c2bb11d9e8222343b6336f2039",
+  "backend_source_file": "spectral_downsets_balanced_pendant_review2/check.py",
+  "python": "3.11.2",
+  "canonical_sha256": "3845c2453e005c2bcce9c147085031cd22569c5f342d9b439b2ff099a7f2d6a9",
+  "main_cases": 37,
+  "boundary_cases": 22,
+  "resources": {
+    "cpu": 1,
+    "memory_scope": "existing 2GiB",
+    "numeric_threads": 1,
+    "timeout_seconds": 60
+  },
+  "trust_boundary": "Unformalized ordinary all-order proof; standard-library exact finite implementation checks; no author imports in default run.",
+  "measurements": {
+    "author-normal": {
+      "seconds": 2.903007819026243,
+      "peak_KiB": 19232,
+      "exit_code": 0
+    },
+    "author-optimized": {
+      "seconds": 5.847680725972168,
+      "peak_KiB": 20612,
+      "exit_code": 0
+    },
+    "final-independent": {
+      "seconds": 4.40072927903384,
+      "peak_KiB": 19712,
+      "exit_code": 0
+    },
+    "final-cold-normal": {
+      "seconds": 4.607955429004505,
+      "peak_KiB": 19672,
+      "exit_code": 0
+    },
+    "final-cold-optimized": {
+      "seconds": 4.9401910490123555,
+      "peak_KiB": 23156,
+      "exit_code": 0
+    },
+    "final-producer-bridges": {
+      "seconds": 12.476465576968621,
+      "peak_KiB": 20952,
+      "exit_code": 0
+    },
+    "boundary-author-normal": {
+      "seconds": 3.264958845975343,
+      "peak_KiB": 19512,
+      "exit_code": 0
+    },
+    "boundary-author-optimized": {
+      "seconds": 2.8549612700007856,
+      "peak_KiB": 22100,
+      "exit_code": 0
+    }
+  },
+  "comparison_context": [
+    {
+      "source_commit": "7b67ca11262e7cf8c7c91aec321ff557ed5b35b0",
+      "file": "spectral_downsets_structural_certificates/BALANCED_PENDANT_COMPLETION.md",
+      "bytes": 15276,
+      "sha256": "ae976ea7286c2b8def937d5c6a2742d9ff0284fe0ed8b75a92b50e9a81ec6ce2",
+      "scope": "balanced theorem used for universal count combination"
+    },
+    {
+      "source_commit": "ca2c387adf8906c2bb11d9e8222343b6336f2039",
+      "file": "spectral_downsets_balanced_pendant_review2/REVIEW.md",
+      "bytes": 22397,
+      "sha256": "feb210990f7c91c65db1431f7aa2e005a4790425eea3967f2590659a9c43b9fb",
+      "scope": "previous independent balanced review"
+    },
+    {
+      "source_commit": "5f75da73f54db2e1bf69e741a622b7a555c9cf96",
+      "file": "spectral_downset_balanced_pendant_review1/REVIEW.md",
+      "bytes": 22524,
+      "sha256": "ba5f79186c854e3eb1426e7e072329ddb0f29755cb75ec8f600207b5a25daeea",
+      "scope": "fresh independent balanced zero/one criterion; no executable audit verdict"
+    },
+    {
+      "source_commit": "ca2c387adf8906c2bb11d9e8222343b6336f2039",
+      "file": "spectral_downsets_balanced_pendant_review2/check.py",
+      "bytes": 19201,
+      "sha256": "cff7e5f6d5df26e546a64b10bfee1a38635e237b2e3f301edd50ef445096f26a",
+      "scope": "reused exact arithmetic backend"
+    }
+  ],
+  "literature": [
+    "https://arxiv.org/html/2609.28404v1#S4",
+    "https://arxiv.org/abs/2609.28404"
+  ],
+  "boundary_target_ref": "bafkreih6kswzmogru7x5pg7dvvcld3yfvnlwig3fzuxhhr3makbjglas5u",
+  "boundary_target_height": 8496,
+  "boundary_target_commit": "8bc0b596d53e9abf46162b52350dd3d15cd5b003",
+  "boundary_target_pins": [
+    {
+      "name": "BALANCED_PENDANT_COMPLETION.md",
+      "bytes": 15276,
+      "sha256": "ae976ea7286c2b8def937d5c6a2742d9ff0284fe0ed8b75a92b50e9a81ec6ce2"
+    },
+    {
+      "name": "BOUNDARY_PENDANT_COMPLETION.md",
+      "bytes": 14167,
+      "sha256": "e3381b20a049b4c4a0b531f95a64ad3d4d0fdcf03653c3554655a1e95b6f358c"
+    },
+    {
+      "name": "LINEAR_PENDANT_COMPLETION.md",
+      "bytes": 13450,
+      "sha256": "b98b724a06f4a015009470cae6227475186dd36453916465d99c609555421b92"
+    },
+    {
+      "name": "affine_pendant_completion.py",
+      "bytes": 11971,
+      "sha256": "21c15d974fd1dae0bf29802d38681805643b33ea884f8b3daa373b4762363a58"
+    },
+    {
+      "name": "boundary_pendant_completion.py",
+      "bytes": 4014,
+      "sha256": "0f8b542d8b45f2a9e12eac7e05ded71fc87e16706a4a8e65920af03f200abe4c"
+    },
+    {
+      "name": "boundary_pendant_expected.json",
+      "bytes": 21561,
+      "sha256": "3e10f22c7c67d0e30e6fba86c77494cbab0484c86aa788484ded59f5d911b4e3"
+    },
+    {
+      "name": "boundary_source_manifest.json",
+      "bytes": 2198,
+      "sha256": "ba6648193b5bb2808879edecda085f8a5c32e8e26395264f292c695e41a0a3f0"
+    },
+    {
+      "name": "certificates.py",
+      "bytes": 11190,
+      "sha256": "ed69971b64c36c23c761db5778a56c48ae65c26a941bbb1346a900fcc9e3a3fa"
+    },
+    {
+      "name": "linear_pendant_completion.py",
+      "bytes": 4306,
+      "sha256": "65952d232daf000314c74273a7d427613c8ac2e470c8f0c274c87a3e62af602d"
+    },
+    {
+      "name": "verify.py",
+      "bytes": 11504,
+      "sha256": "56e702043684e8b9b72e1b11f65613c4ec2e53049ceeba9b54efe6b963f5b778"
+    },
+    {
+      "name": "verify_boundary_pendant_completion.py",
+      "bytes": 10817,
+      "sha256": "eb516f10ab9216dacc162460f01bce597565d92835ff86ca235b84488f80ed98"
+    },
+    {
+      "name": "verify_linear_pendant_completion.py",
+      "bytes": 10218,
+      "sha256": "6df68174e461d20d6c765cede24db860a611ca6dd9606bd6e5da3a436ed00d2b"
+    }
+  ],
+  "final_matrix_checks": 81,
+  "derivative_scope": "1/3 raw and4/15 repaired lower gaps for8466; epsilon_plus=2*epsilon_author and doubled empty/lower/upper margins for8496. Boundary count and8/15 raw gap credited to8496.",
+  "boundary_author_canonical_sha256": "3013694c71e7d35d21f162f4ee730fa3142a3f0e5f6d72d86d4218012d46ba19",
+  "boundary_author_records": 24,
+  "source_refresh_index_before_publication": 8504
+}
