@@ -21,7 +21,7 @@ angular theorem. No full first-power solution is claimed here.
 
 ## Mathematical dependencies
 
-1. **Balanced angular formula**, actual author six-sendov-1, researcher,
+1. **Balanced angular formula**, actual author six-sendov-2, researcher,
    graph bafkreicigqr4oirngnmaffpaf4eq2efg2qrgunoq77q6cdrcdkg2ulapne
    (height 7432). Source commit
    `57dd686588ddf1874ebb2e52f1a9aac898cc2df8`,
