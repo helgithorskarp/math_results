@@ -1,0 +1,151 @@
+{
+  "agent": "six-reviewer-4",
+  "author_separate_replay": {
+    "agent": "six-books-1",
+    "binary_count_entries_compared": 9152,
+    "binary_count_vectors_compared": 143,
+    "cases": [
+      {
+        "binary_forms": 0,
+        "covered_positive_multisets": 120,
+        "profile": 4,
+        "weight": 0,
+        "weighted_moment_join_candidates": 3
+      },
+      {
+        "binary_forms": 0,
+        "covered_positive_multisets": 3465,
+        "profile": 4,
+        "weight": 1,
+        "weighted_moment_join_candidates": 6
+      },
+      {
+        "binary_forms": 0,
+        "covered_positive_multisets": 120,
+        "profile": 8,
+        "weight": 0,
+        "weighted_moment_join_candidates": 0
+      },
+      {
+        "binary_forms": 0,
+        "covered_positive_multisets": 3465,
+        "profile": 8,
+        "weight": 1,
+        "weighted_moment_join_candidates": 6
+      },
+      {
+        "binary_forms": 0,
+        "covered_positive_multisets": 14400,
+        "profile": 6,
+        "weight": 0,
+        "weighted_moment_join_candidates": 0
+      },
+      {
+        "binary_forms": 0,
+        "covered_positive_multisets": 13265,
+        "profile": 6,
+        "weight": 1,
+        "weighted_moment_join_candidates": 24
+      },
+      {
+        "binary_forms": 2,
+        "covered_positive_multisets": 3465,
+        "profile": 7,
+        "weight": 0,
+        "weighted_moment_join_candidates": 10
+      },
+      {
+        "binary_forms": 36,
+        "covered_positive_multisets": 1062600,
+        "profile": 5,
+        "weight": 0,
+        "weighted_moment_join_candidates": 646
+      },
+      {
+        "binary_forms": 105,
+        "covered_positive_multisets": 2656500,
+        "profile": 5,
+        "weight": 1,
+        "weighted_moment_join_candidates": 2218
+      }
+    ],
+    "complete": true,
+    "defect_assignments_compared": 475,
+    "independent_peer_review": false,
+    "literal_root_masks": 32768,
+    "literal_signed_defect_entries_compared": 15488,
+    "permitted_local_star_masks_compared": 12693,
+    "role": "researcher",
+    "root_defect_four_excluded": true,
+    "root_defect_lower_bound": 8,
+    "supported_deletion_negative_control_rejected": true,
+    "symmetry_candidate_pairs_checked": 4354,
+    "symmetry_deleted_candidates_checked": 1960,
+    "symmetry_exclusion_traces_replayed": 102,
+    "zero_surplus_feature_rank": 15
+  },
+  "controls_expected_sha256": "1c81ff97c4edaf6b330f08392eb42c549121433da6d7c51046b888a924103015",
+  "guards": {
+    "all_full_runs_complete_without_guard": true,
+    "deliberately_incomplete_low_state_limit_rejected_in_normal_and_optimized": true,
+    "full_reviewer_process_timeout_seconds": 180,
+    "incidence_state_guard_per_case": 2000000,
+    "per_case_operational_time_guard_seconds": 120
+  },
+  "main_expected_sha256": "1132c2dc6d5b6e7b51b2765961d0ee8328929e7a9cca4d989dc94d23cdaf9b94",
+  "one_intensive_local_job_at_a_time": true,
+  "passive_comparison": {
+    "all_agree": true,
+    "author_assignments_counted": 475,
+    "author_permitted_representative_mask_and_defect_pairs_checked_in_relaxed_domain": 12693,
+    "incidence_entries_compared": 9152,
+    "incidence_vectors_compared": 143,
+    "trust_boundary": "Passive comparison after standalone reviewer proof; no author records or code determine the reviewer domain."
+  },
+  "private_runtime_exports_published": false,
+  "python_version": "3.11.2",
+  "role": "independent mathematical reviewer",
+  "runs": {
+    "author-primary": {
+      "exit_code": 0,
+      "name": "author-primary",
+      "peak_RSS_KiB": 40832,
+      "seconds": 47.658581005001906
+    },
+    "author-separate": {
+      "exit_code": 0,
+      "name": "author-separate",
+      "peak_RSS_KiB": 45408,
+      "seconds": 57.058740490989294
+    },
+    "controls-normal": {
+      "exit_code": 0,
+      "peak_RSS_KiB": 16216,
+      "seconds": 0.09686373401200399,
+      "stdout_sha256": "1c81ff97c4edaf6b330f08392eb42c549121433da6d7c51046b888a924103015"
+    },
+    "controls-optimized": {
+      "exit_code": 0,
+      "peak_RSS_KiB": 19832,
+      "seconds": 0.2470353440148756,
+      "stdout_sha256": "1c81ff97c4edaf6b330f08392eb42c549121433da6d7c51046b888a924103015"
+    },
+    "reviewer-normal": {
+      "exit_code": 0,
+      "name": "reviewer-normal",
+      "peak_RSS_KiB": 35968,
+      "seconds": 49.27187897695694,
+      "stdout_sha256": "1132c2dc6d5b6e7b51b2765961d0ee8328929e7a9cca4d989dc94d23cdaf9b94"
+    },
+    "reviewer-optimized": {
+      "exit_code": 0,
+      "name": "reviewer-optimized",
+      "peak_RSS_KiB": 35760,
+      "seconds": 50.504161681979895,
+      "stdout_sha256": "1132c2dc6d5b6e7b51b2765961d0ee8328929e7a9cca4d989dc94d23cdaf9b94"
+    }
+  },
+  "scope_memory_limit": "unchanged 2 GiB",
+  "threads": 1,
+  "trust": "Written reduction/completeness proof, CPython exact integer execution and own source; not formalized. Author replays supplement but do not supply the independent domain."
+}
