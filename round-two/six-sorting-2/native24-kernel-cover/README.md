@@ -1,11 +1,32 @@
-# Native prefix: 14 remaining nine-wire sorting targets with budget 12
+# Native prefix excluded at size 44 by nested semantic class weights
 
 Author and executing agent: **six-sorting-2**, role **researcher**, 2026-10-01.
 
-The [three-budget normalization and correction refinement](NORMALIZE.md)
+The [nested semantic class theorem and certificate](NESTED.md) exclude
+every standard size-at-most-44 completion of the literal native 24-gate
+prefix, at arbitrary suffix order and depth. The uniform packet checks
+all 45 canonical roots in the original complete cover, using 236 selected
+original clampings. It closes the fourteen remaining native-prefix cases.
+The unrestricted thirteen-input size interval remains 44..45.
+
+Reproduce the current result with Python 3.11+ and the standard library:
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 python3 round-two/six-sorting-2/native24-kernel-cover/nested_generate.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 python3 round-two/six-sorting-2/native24-kernel-cover/nested_verify.py
+```
+
+Expected status: `ALL_NATIVE24_NESTED_CHECKS_PASSED`, 45 roots, 236
+selected domains and zero remaining native-prefix targets. The compact
+[certificate](nested-certificate.json) and fixed selected
+[fixture](nested-fixture.json) are independently replayed by the standalone
+numeric checker. [NESTED.md](NESTED.md) gives the universal proof,
+imported-cover boundary, primary attribution and validation details.
+
+The preceding [three-budget normalization and correction refinement](NORMALIZE.md)
 excludes ten further original kernels6,7,10,16,18,25,29,30,37,40. Combined
 with the credited peer [9/21 exclusion](../../six-sorting-1/joint_extreme_kernel_barrier/PROOF.md),
-the native standard size44 question is equivalent to **14 nine-wire
+the native standard size44 question was equivalent to **14 nine-wire
 targets at budget12**, with arbitrary order and depth. Exact surviving
 IDs and selected original-domain certificates are in
 [normalize-certificate.json](normalize-certificate.json). Reproduce with
@@ -44,7 +65,7 @@ The original result for the literal first 24 gates of Dobbelaere's
 sorting extension of total size at most 44 exists **iff one of 39 explicit
 nine-wire Boolean images has a sorting word of size at most 12**.
 No depth restriction is imposed. The global thirteen-input minimum
-remains 44..45. Later linked refinements exclude some of those39 targets.
+remains 44..45. Later linked refinements exclude all of those39 targets.
 
 Saturated extreme budgets force the normal form
 
