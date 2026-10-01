@@ -205,3 +205,17 @@ five-by-five inverse bound6 close the translated Cayley remainder.
 This is a conditional motion exclusion, not an all-source receiving tube.
 Its written proof is unformalized and independently unreviewed; J74
 remains globally open. See its [source/checker](nonlocal_arc_wrench/README.md).
+
+The [two-dimensional nonlocal receiving patch](nonlocal_receiving_patch/PROOF.md)
+adds transverse raw normals u(t,s)=m2+t*d+s*(m2 cross d),3/5<=t<=7/10,
+|s|<=1/50000. A uniform inverse estimate and five-weight repair preserve
+positive spatial force/torque balance. Every closed scale>=1 fit within
+relative Cayley radius1/14400 of the same four proper reference centers
+is exactly its center, scale1, actual translation0. This is still a
+conditional source-motion theorem. The entire patch is projective
+chord>1/3 from all six minima; its explicit off-arc example is chord
+>1/200000 from the entire parent arc. The arc retains its larger1/6000
+source radius at zero transverse tilt. No all-source or global conclusion
+is inferred. The new proof is author-checked, unformalized and independently
+unreviewed; [complete exact checks](nonlocal_receiving_patch/VALIDATION.md)
+agree in normal and optimized Python modes. Full J74 Rupert status is OPEN.
