@@ -1,0 +1,422 @@
+{
+  "schema": "T211-three-pair-NO-THREE-v1",
+  "prototype_mesh": {
+    "faces": 211,
+    "vertices": 134,
+    "edges": 344,
+    "chi": 1,
+    "boundary_vertices": 55
+  },
+  "replayed_primitive_NO_ONE_lemmas": 26,
+  "replayed_NO_TWO_sources": [
+    {
+      "id": "pair-r0",
+      "fixed_copies": 2,
+      "providers": 0,
+      "clauses": 2,
+      "covers": [
+        {
+          "vertex": [
+            10,
+            14
+          ],
+          "raw_suppliers": 42,
+          "retained_suppliers": 0,
+          "gap_faces": 2
+        }
+      ],
+      "whole_overlap_clauses": 0,
+      "NO_ONE_pair_clauses": 0,
+      "unit_steps": 0,
+      "conflict_clause": 0,
+      "unit_proof_sha256": "4542bb0dd6353d0d8ef631d701a873107cf39fda6319edd49e121dcae5aa266d",
+      "future_surrounds_ruled_out": 2
+    },
+    {
+      "id": "pair-r1",
+      "fixed_copies": 2,
+      "providers": 0,
+      "clauses": 2,
+      "covers": [
+        {
+          "vertex": [
+            13,
+            17
+          ],
+          "raw_suppliers": 42,
+          "retained_suppliers": 0,
+          "gap_faces": 2
+        }
+      ],
+      "whole_overlap_clauses": 0,
+      "NO_ONE_pair_clauses": 0,
+      "unit_steps": 0,
+      "conflict_clause": 0,
+      "unit_proof_sha256": "4542bb0dd6353d0d8ef631d701a873107cf39fda6319edd49e121dcae5aa266d",
+      "future_surrounds_ruled_out": 2
+    },
+    {
+      "id": "pair-r2",
+      "fixed_copies": 2,
+      "providers": 0,
+      "clauses": 2,
+      "covers": [
+        {
+          "vertex": [
+            16,
+            20
+          ],
+          "raw_suppliers": 42,
+          "retained_suppliers": 0,
+          "gap_faces": 2
+        }
+      ],
+      "whole_overlap_clauses": 0,
+      "NO_ONE_pair_clauses": 0,
+      "unit_steps": 0,
+      "conflict_clause": 0,
+      "unit_proof_sha256": "4542bb0dd6353d0d8ef631d701a873107cf39fda6319edd49e121dcae5aa266d",
+      "future_surrounds_ruled_out": 2
+    }
+  ],
+  "three_NO_THREE_pairs": [
+    {
+      "id": "NO-THREE-r0",
+      "fixed_copies": 2,
+      "forcing_vertex": [
+        18,
+        12
+      ],
+      "raw_suppliers": [
+        [
+          0,
+          -1,
+          -1,
+          0,
+          30,
+          21
+        ],
+        [
+          0,
+          -1,
+          1,
+          1,
+          30,
+          -9
+        ]
+      ],
+      "blocked_suppliers": [
+        {
+          "supplier": [
+            0,
+            -1,
+            1,
+            1,
+            30,
+            -9
+          ],
+          "old_blocker": [
+            1,
+            0,
+            0,
+            1,
+            9,
+            0
+          ],
+          "shared_face": [
+            58,
+            28
+          ]
+        }
+      ],
+      "forced_supplier": [
+        0,
+        -1,
+        -1,
+        0,
+        30,
+        21
+      ],
+      "NO_TWO_source_id": "pair-r2",
+      "NO_TWO_transfer": [
+        1,
+        0,
+        0,
+        1,
+        9,
+        0
+      ],
+      "supplier_later_strict_surround_stages": [
+        2,
+        3
+      ],
+      "future_surrounds_ruled_out": 3
+    },
+    {
+      "id": "NO-THREE-r1",
+      "fixed_copies": 2,
+      "forcing_vertex": [
+        21,
+        15
+      ],
+      "raw_suppliers": [
+        [
+          0,
+          -1,
+          -1,
+          0,
+          33,
+          24
+        ],
+        [
+          0,
+          -1,
+          1,
+          1,
+          33,
+          -6
+        ]
+      ],
+      "blocked_suppliers": [
+        {
+          "supplier": [
+            0,
+            -1,
+            1,
+            1,
+            33,
+            -6
+          ],
+          "old_blocker": [
+            1,
+            0,
+            0,
+            1,
+            12,
+            3
+          ],
+          "shared_face": [
+            67,
+            37
+          ]
+        }
+      ],
+      "forced_supplier": [
+        0,
+        -1,
+        -1,
+        0,
+        33,
+        24
+      ],
+      "NO_TWO_source_id": "pair-r1",
+      "NO_TWO_transfer": [
+        1,
+        0,
+        0,
+        1,
+        12,
+        3
+      ],
+      "supplier_later_strict_surround_stages": [
+        2,
+        3
+      ],
+      "future_surrounds_ruled_out": 3
+    },
+    {
+      "id": "NO-THREE-r2",
+      "fixed_copies": 2,
+      "forcing_vertex": [
+        24,
+        18
+      ],
+      "raw_suppliers": [
+        [
+          0,
+          -1,
+          -1,
+          0,
+          36,
+          27
+        ],
+        [
+          0,
+          -1,
+          1,
+          1,
+          36,
+          -3
+        ]
+      ],
+      "blocked_suppliers": [
+        {
+          "supplier": [
+            0,
+            -1,
+            1,
+            1,
+            36,
+            -3
+          ],
+          "old_blocker": [
+            1,
+            0,
+            0,
+            1,
+            15,
+            6
+          ],
+          "shared_face": [
+            76,
+            46
+          ]
+        }
+      ],
+      "forced_supplier": [
+        0,
+        -1,
+        -1,
+        0,
+        36,
+        27
+      ],
+      "NO_TWO_source_id": "pair-r0",
+      "NO_TWO_transfer": [
+        1,
+        0,
+        0,
+        1,
+        15,
+        6
+      ],
+      "supplier_later_strict_surround_stages": [
+        2,
+        3
+      ],
+      "future_surrounds_ruled_out": 3
+    }
+  ],
+  "positive_corona_packings": [
+    {
+      "id": "original-five",
+      "coronas": 5,
+      "counts": [
+        1,
+        5,
+        11,
+        23,
+        39,
+        52
+      ],
+      "prefix_face_counts": [
+        211,
+        1266,
+        3587,
+        8440,
+        16669,
+        27641
+      ],
+      "strict_containment_and_disc_meshes": true,
+      "primitive_and_two_future_calibrations_passed": true
+    },
+    {
+      "id": "alternate-four",
+      "coronas": 4,
+      "counts": [
+        1,
+        5,
+        17,
+        33,
+        47
+      ],
+      "prefix_face_counts": [
+        211,
+        1266,
+        4853,
+        11816,
+        21733
+      ],
+      "strict_containment_and_disc_meshes": true,
+      "primitive_and_two_future_calibrations_passed": true
+    }
+  ],
+  "three_future_calibrations": [
+    {
+      "fixture": "original-five",
+      "root_coronas": 5,
+      "protected_prefix_last_level": 2,
+      "protected_prefix_copies": 17,
+      "NO_THREE_occurrences": [
+        {
+          "id": "NO-THREE-r0",
+          "occurrences": 0
+        },
+        {
+          "id": "NO-THREE-r1",
+          "occurrences": 0
+        },
+        {
+          "id": "NO-THREE-r2",
+          "occurrences": 0
+        }
+      ]
+    },
+    {
+      "fixture": "alternate-four",
+      "root_coronas": 4,
+      "protected_prefix_last_level": 1,
+      "protected_prefix_copies": 6,
+      "NO_THREE_occurrences": [
+        {
+          "id": "NO-THREE-r0",
+          "occurrences": 0
+        },
+        {
+          "id": "NO-THREE-r1",
+          "occurrences": 0
+        },
+        {
+          "id": "NO-THREE-r2",
+          "occurrences": 0
+        }
+      ]
+    }
+  ],
+  "all_three_NO_THREE_pairs_verified": true,
+  "global_finite_upper_proved": false,
+  "peer_or_formal_audit_claimed": false,
+  "input_sha256": "5070b87d574aa00782a45d001387b8faff6c78982b63cdfb954c0c19a533fd10",
+  "malformed_controls": [
+    {
+      "malformation": "shortened_future_license",
+      "rejected": true,
+      "reason": "forced supplier needs TWO later surrounds S2,S3"
+    },
+    {
+      "malformation": "wrong_NO_TWO_transfer",
+      "rejected": true,
+      "reason": "NO-TWO transfer protects different copies"
+    },
+    {
+      "malformation": "wrong_forced_supplier",
+      "rejected": true,
+      "reason": "incorrect complete unique supplier census"
+    },
+    {
+      "malformation": "wrong_forcing_vertex",
+      "rejected": true,
+      "reason": "wrong forcing point"
+    },
+    {
+      "malformation": "duplicate_pair_copy",
+      "rejected": true,
+      "reason": "empty or duplicate fixed copy"
+    },
+    {
+      "malformation": "missing_pair_case",
+      "rejected": true,
+      "reason": "incomplete or duplicate three-pair family"
+    }
+  ]
+}

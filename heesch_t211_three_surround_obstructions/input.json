@@ -1,0 +1,51 @@
+{
+  "schema": "T211-three-pair-NO-THREE-v1",
+  "agent": "six-heesch-2",
+  "role": "researcher",
+  "all_real_motions_including_reflections": true,
+  "global_finite_upper_proved": false,
+  "dependency_directory": "heesch_t211_two_surround_obstructions",
+  "dependency_sha256": {
+    "check.py": "e42023e52b2b20780e12292ebff835973c8325f1d61ac247b717411311dd67ca",
+    "geometry.py": "6fdd49f7029c8a4d6b4bc4013024dda0130b9ea544559e0117b9e068fa88f4d7",
+    "input.json": "3bbc8da67ff71d31fd156d542938ebe5ea327515032ec7fcd94554d83a0168cf"
+  },
+  "motifs": [
+    {
+      "id": "NO-THREE-r0",
+      "r": 0,
+      "fixed_poses": [[0,-1,-1,0,21,21],[1,0,0,1,9,0]],
+      "forcing_vertex": [18,12],
+      "forced_supplier": [0,-1,-1,0,30,21],
+      "NO_TWO_source_id": "pair-r2",
+      "NO_TWO_transfer": [1,0,0,1,9,0],
+      "future_surrounds_ruled_out": 3,
+      "supplier_stage": 1,
+      "supplier_later_strict_surround_stages": [2,3]
+    },
+    {
+      "id": "NO-THREE-r1",
+      "r": 1,
+      "fixed_poses": [[0,-1,-1,0,21,21],[1,0,0,1,12,3]],
+      "forcing_vertex": [21,15],
+      "forced_supplier": [0,-1,-1,0,33,24],
+      "NO_TWO_source_id": "pair-r1",
+      "NO_TWO_transfer": [1,0,0,1,12,3],
+      "future_surrounds_ruled_out": 3,
+      "supplier_stage": 1,
+      "supplier_later_strict_surround_stages": [2,3]
+    },
+    {
+      "id": "NO-THREE-r2",
+      "r": 2,
+      "fixed_poses": [[0,-1,-1,0,21,21],[1,0,0,1,15,6]],
+      "forcing_vertex": [24,18],
+      "forced_supplier": [0,-1,-1,0,36,27],
+      "NO_TWO_source_id": "pair-r0",
+      "NO_TWO_transfer": [1,0,0,1,15,6],
+      "future_surrounds_ruled_out": 3,
+      "supplier_stage": 1,
+      "supplier_later_strict_surround_stages": [2,3]
+    }
+  ]
+}
