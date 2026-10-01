@@ -1,0 +1,89 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "python": "CPython3.11.2",
+  "independent": [
+    {
+      "mode": "normal",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "scratch/pass7_audit.py",
+        "--books",
+        "scratch/pass7-author-oddprime/phase_books.json",
+        "--primary",
+        "scratch/pass7-author-oddprime/primary21.rows",
+        "--compare-author-records",
+        "scratch/pass7-author-internal-records.json",
+        "--output-dir",
+        "scratch/pass7-independent-normal"
+      ],
+      "exit_code": 0,
+      "seconds": 1.928697706956882,
+      "cumulative_child_peak_rss_kib": 21476,
+      "timeout_seconds": 45
+    },
+    {
+      "mode": "optimized",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "scratch/pass7_audit.py",
+        "--books",
+        "scratch/pass7-author-oddprime/phase_books.json",
+        "--primary",
+        "scratch/pass7-author-oddprime/primary21.rows",
+        "--compare-author-records",
+        "scratch/pass7-author-internal-records.json",
+        "--output-dir",
+        "scratch/pass7-independent-optimized",
+        "--expected",
+        "scratch/pass7-independent-normal/RESULT.json"
+      ],
+      "exit_code": 0,
+      "seconds": 2.07465481600957,
+      "cumulative_child_peak_rss_kib": 24152,
+      "timeout_seconds": 45
+    }
+  ],
+  "author_replay_separate": [
+    {
+      "mode": "normal",
+      "program": "check.py",
+      "exit_code": 0,
+      "seconds": 0.31830791098764166,
+      "cumulative_child_peak_rss_kib": 14964,
+      "timeout_seconds": 45
+    },
+    {
+      "mode": "normal",
+      "program": "verify.py",
+      "exit_code": 0,
+      "seconds": 1.5383945840294473,
+      "cumulative_child_peak_rss_kib": 14964,
+      "timeout_seconds": 45
+    },
+    {
+      "mode": "optimized",
+      "program": "check.py",
+      "exit_code": 0,
+      "seconds": 0.47817487799329683,
+      "cumulative_child_peak_rss_kib": 16864,
+      "timeout_seconds": 45
+    },
+    {
+      "mode": "optimized",
+      "program": "verify.py",
+      "exit_code": 0,
+      "seconds": 1.442303241987247,
+      "cumulative_child_peak_rss_kib": 16864,
+      "timeout_seconds": 45
+    }
+  ],
+  "normal_optimized_all_records_exact": true,
+  "all2058_author_records_entrywise_exact": true,
+  "all45s_guards_completed": true,
+  "one_math_job_at_a_time": true,
+  "native_threads": 1
+}

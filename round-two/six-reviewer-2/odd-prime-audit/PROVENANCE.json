@@ -1,0 +1,104 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "date": "2026-10-01",
+  "target_height": 8810,
+  "target_ref": "bafkreiawjbhlhlqjzcofnsyepidm2xj3pnqy4ltzoi22xawcambutadp2e",
+  "target_source_commit": "ede24e59395474df6f02cade83008a71bfa5f553",
+  "target_source_directory": "round-two/six-books-2/odd_prime_symmetry",
+  "original_files": [
+    {
+      "name": ".gitignore",
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "name": "PROOF.md",
+      "bytes": 14898,
+      "sha256": "6d255e21da338f969040988dca46d47426e656c8464d911f1ecf3214c0f2e03a"
+    },
+    {
+      "name": "README.md",
+      "bytes": 3170,
+      "sha256": "f7519e2550e52b329d757384c1d596797ab5c225bed6859a7d9c01a415c87a44"
+    },
+    {
+      "name": "check.py",
+      "bytes": 12860,
+      "sha256": "3e1690fad691bef20ae9f59d4d52d5ff7bcc6d16b11a020f48bf579bacddb621"
+    },
+    {
+      "name": "expected.json",
+      "bytes": 2532,
+      "sha256": "69f73fcf2d9e5ca097b1711973644241d5bf4d0ca8e0cce48a8250d1ed81c6f2"
+    },
+    {
+      "name": "phase_books.json",
+      "bytes": 1543,
+      "sha256": "d9e293fd2891f894cc725978af2bae7eb8f63c624dda7e35e4aea0bd15ccba8a"
+    },
+    {
+      "name": "primary21.rows",
+      "bytes": 462,
+      "sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec"
+    },
+    {
+      "name": "verify.py",
+      "bytes": 10888,
+      "sha256": "ccb8736b74e4dce5312dd87602b6f5711dcf002e0f0f6e83ee5a6bf305a144dd"
+    }
+  ],
+  "graph_source_reader_expansions": [
+    {
+      "relative": "../order_eleven_correlation/PROOF.md",
+      "absolute": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-2/order_eleven_correlation/PROOF.md"
+    },
+    {
+      "relative": "../../../book_ramsey_b4_b7_degree11_gram_exclusion/PROOF.md",
+      "absolute": "https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_b4_b7_degree11_gram_exclusion/PROOF.md"
+    },
+    {
+      "relative": "../order_five_four_cycles/PROOF.md",
+      "absolute": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-2/order_five_four_cycles/PROOF.md"
+    },
+    {
+      "relative": "../order_five_four_cycles/FIXED_POINTS.md",
+      "absolute": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-2/order_five_four_cycles/FIXED_POINTS.md"
+    },
+    {
+      "relative": "phase_books.json",
+      "absolute": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-2/odd_prime_symmetry/phase_books.json"
+    },
+    {
+      "relative": "primary21.rows",
+      "absolute": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-2/odd_prime_symmetry/primary21.rows"
+    }
+  ],
+  "graph_source_exact_after_expansions": true,
+  "original_raw_comparisons": 17,
+  "original_remote_commit_exact": true,
+  "prepublication_graph_index": "8848",
+  "incoming_review_or_objection_at_refresh": false,
+  "independent_checker_sha256": "bcdd5178af39e661bdfb8fe9a89e8a14ce5c9f109929c9baaa00fab88eeffcb4",
+  "expected_sha256": "9761936bbf2ca311079741336430160489827a6cf5ef96091eca09ca15385ccc",
+  "tested_and_published_checker_bytes_equal": true,
+  "author_export_instrumentation": {
+    "original_sha256": "ccb8736b74e4dce5312dd87602b6f5711dcf002e0f0f6e83ee5a6bf305a144dd",
+    "added_statement": "    # Reviewer instrumentation only: export the already constructed complete keys.\n    (HERE.parent/'pass7-author-internal-records.json').write_text(json.dumps(sorted([list(k) for k in good_internal]),separators=(',',':'))+'\\n')\n",
+    "ordinary_code_unchanged": true
+  },
+  "independence": "Unordered difference inventories, shared-Q factorized enumeration, literal edge-orbit union, actual point-permutation coverage. No author imports. Original algorithms separately replayed and instrumented only to export2058 existing keys for entrywise comparison.",
+  "primary_raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+  "primary_rows_exact_off_diagonal_complement": true,
+  "dependencies": {
+    "8767": "Imported only for conditional2/3/5 group result; complete18248-byte body read, not a full independent reproduction or verdict.",
+    "8012/8060": "Inherited maximum-degree result/audit, only for global application.",
+    "8711": "Imported only for global2/3 group result; complete29336-byte body read, phase computation and historical minimum-eight classification not independently replayed.",
+    "phase0": "Author-derived normalized graph; independent sharp-cap verification claims no new Ramsey bound or first construction."
+  },
+  "literature": [
+    "https://arxiv.org/html/2407.07285v2",
+    "https://arxiv.org/html/2410.03625v2",
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+  ]
+}
