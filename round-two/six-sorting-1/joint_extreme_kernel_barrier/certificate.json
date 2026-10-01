@@ -1,0 +1,2426 @@
+{
+  "schema": "joint-six-extreme-complete-oriented-tree-v1",
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "fixture_sha256": "b4c5bf4dab6468b9443b63518d10a4316d4e2d8a9a584fe071961054a6fa0995",
+  "n": 13,
+  "l": 3,
+  "h": 3,
+  "free_inputs": 7,
+  "small_size_lower_bound": 16,
+  "size_budget": 44,
+  "cap": 268435456,
+  "oriented_comparators": 156,
+  "remaining_nine_wire_ids": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    12,
+    15,
+    16,
+    18,
+    20,
+    24,
+    25,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42
+  ],
+  "cases": [
+    {
+      "kernel_id": 9,
+      "prefix_size": 32,
+      "suffix_budget": 12,
+      "selected_original_domains": [
+        {
+          "original_low_mask": 261,
+          "original_high_mask": 26,
+          "current_low_mask": 7,
+          "current_high_mask": 6176,
+          "marked_touch_mask": 2815373151,
+          "redundancy_mask": 1073741824,
+          "D": 22,
+          "R": 1,
+          "C": 23
+        },
+        {
+          "original_low_mask": 1044,
+          "original_high_mask": 138,
+          "current_low_mask": 7,
+          "current_high_mask": 6272,
+          "marked_touch_mask": 2950397806,
+          "redundancy_mask": 1073741824,
+          "D": 24,
+          "R": 1,
+          "C": 25
+        },
+        {
+          "original_low_mask": 13,
+          "original_high_mask": 1282,
+          "current_low_mask": 7,
+          "current_high_mask": 6400,
+          "marked_touch_mask": 3890707455,
+          "redundancy_mask": 0,
+          "D": 26,
+          "R": 0,
+          "C": 26
+        },
+        {
+          "original_low_mask": 28,
+          "original_high_mask": 769,
+          "current_low_mask": 7,
+          "current_high_mask": 6656,
+          "marked_touch_mask": 3556171229,
+          "redundancy_mask": 0,
+          "D": 23,
+          "R": 0,
+          "C": 23
+        },
+        {
+          "original_low_mask": 7,
+          "original_high_mask": 1344,
+          "current_low_mask": 7,
+          "current_high_mask": 7168,
+          "marked_touch_mask": 3555195383,
+          "redundancy_mask": 67108864,
+          "D": 24,
+          "R": 1,
+          "C": 25
+        },
+        {
+          "original_low_mask": 265,
+          "original_high_mask": 22,
+          "current_low_mask": 11,
+          "current_high_mask": 6176,
+          "marked_touch_mask": 2806726623,
+          "redundancy_mask": 0,
+          "D": 22,
+          "R": 0,
+          "C": 22
+        },
+        {
+          "original_low_mask": 262,
+          "original_high_mask": 2113,
+          "current_low_mask": 11,
+          "current_high_mask": 6272,
+          "marked_touch_mask": 2944056535,
+          "redundancy_mask": 0,
+          "D": 22,
+          "R": 0,
+          "C": 22
+        },
+        {
+          "original_low_mask": 265,
+          "original_high_mask": 1030,
+          "current_low_mask": 11,
+          "current_high_mask": 6400,
+          "marked_touch_mask": 3882573823,
+          "redundancy_mask": 0,
+          "D": 25,
+          "R": 0,
+          "C": 25
+        },
+        {
+          "original_low_mask": 14,
+          "original_high_mask": 769,
+          "current_low_mask": 11,
+          "current_high_mask": 6656,
+          "marked_touch_mask": 3547258079,
+          "redundancy_mask": 0,
+          "D": 22,
+          "R": 0,
+          "C": 22
+        },
+        {
+          "original_low_mask": 1036,
+          "original_high_mask": 259,
+          "current_low_mask": 11,
+          "current_high_mask": 7168,
+          "marked_touch_mask": 3547062015,
+          "redundancy_mask": 0,
+          "D": 24,
+          "R": 0,
+          "C": 24
+        },
+        {
+          "original_low_mask": 21,
+          "original_high_mask": 1034,
+          "current_low_mask": 19,
+          "current_high_mask": 6176,
+          "marked_touch_mask": 2811718511,
+          "redundancy_mask": 0,
+          "D": 21,
+          "R": 0,
+          "C": 21
+        },
+        {
+          "original_low_mask": 21,
+          "original_high_mask": 138,
+          "current_low_mask": 19,
+          "current_high_mask": 6272,
+          "marked_touch_mask": 2946464591,
+          "redundancy_mask": 0,
+          "D": 23,
+          "R": 0,
+          "C": 23
+        },
+        {
+          "original_low_mask": 21,
+          "original_high_mask": 104,
+          "current_low_mask": 19,
+          "current_high_mask": 6400,
+          "marked_touch_mask": 3955227597,
+          "redundancy_mask": 0,
+          "D": 25,
+          "R": 0,
+          "C": 25
+        },
+        {
+          "original_low_mask": 21,
+          "original_high_mask": 832,
+          "current_low_mask": 19,
+          "current_high_mask": 6656,
+          "marked_touch_mask": 3551981013,
+          "redundancy_mask": 0,
+          "D": 21,
+          "R": 0,
+          "C": 21
+        },
+        {
+          "original_low_mask": 21,
+          "original_high_mask": 296,
+          "current_low_mask": 19,
+          "current_high_mask": 7168,
+          "marked_touch_mask": 3552046045,
+          "redundancy_mask": 0,
+          "D": 23,
+          "R": 0,
+          "C": 23
+        }
+      ],
+      "nodes": [
+        {
+          "word": [],
+          "selected_mass": 268435456,
+          "configurations": 15,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              5,
+              9
+            ],
+            [
+              9,
+              5
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "c30d314edbe8b9e76af22b996bf423f4dc5ce5d2a58d54a524009cc77ce81fe2"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "193f18eef18ed46db979cfc9611529d84672758daed7617bf99dbd9975518f97"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "b6f93b8f01c5b0c4c2ea7f0344ad8bd2e44cbf6eab7b87f8b0cb496cd79a9291"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              5
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "f768c7f32dcaa918e5a09050f2c16ccf020eab4c97821fab71efe23402f9ca5c"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              5,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "851cf6b04b738f7bdbe7c1bc7efa4cdcb552d16f195a3e8d5e03f71c1fb31e1d"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              6,
+              9
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              9,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "01fc51dab9ce7893831b59a210c4adf84c7d00e9799973071e7a04accd342efc"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              9,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              9
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "4f8fc37cd55bb2774ffc4626de559e4d0c9e2538ce78f050ed6e15dddd02e7c2"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              5,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "851cf6b04b738f7bdbe7c1bc7efa4cdcb552d16f195a3e8d5e03f71c1fb31e1d"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              5
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "f768c7f32dcaa918e5a09050f2c16ccf020eab4c97821fab71efe23402f9ca5c"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              9
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "4f8fc37cd55bb2774ffc4626de559e4d0c9e2538ce78f050ed6e15dddd02e7c2"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              9,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "01fc51dab9ce7893831b59a210c4adf84c7d00e9799973071e7a04accd342efc"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              5
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "f768c7f32dcaa918e5a09050f2c16ccf020eab4c97821fab71efe23402f9ca5c"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              5,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "851cf6b04b738f7bdbe7c1bc7efa4cdcb552d16f195a3e8d5e03f71c1fb31e1d"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              9,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "01fc51dab9ce7893831b59a210c4adf84c7d00e9799973071e7a04accd342efc"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              9
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "4f8fc37cd55bb2774ffc4626de559e4d0c9e2538ce78f050ed6e15dddd02e7c2"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              5,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "851cf6b04b738f7bdbe7c1bc7efa4cdcb552d16f195a3e8d5e03f71c1fb31e1d"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              5
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "f768c7f32dcaa918e5a09050f2c16ccf020eab4c97821fab71efe23402f9ca5c"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              9
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "4f8fc37cd55bb2774ffc4626de559e4d0c9e2538ce78f050ed6e15dddd02e7c2"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              9,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "01fc51dab9ce7893831b59a210c4adf84c7d00e9799973071e7a04accd342efc"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              5
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "f768c7f32dcaa918e5a09050f2c16ccf020eab4c97821fab71efe23402f9ca5c"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              5,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "851cf6b04b738f7bdbe7c1bc7efa4cdcb552d16f195a3e8d5e03f71c1fb31e1d"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              9,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "01fc51dab9ce7893831b59a210c4adf84c7d00e9799973071e7a04accd342efc"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              9
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "4f8fc37cd55bb2774ffc4626de559e4d0c9e2538ce78f050ed6e15dddd02e7c2"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              5,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "851cf6b04b738f7bdbe7c1bc7efa4cdcb552d16f195a3e8d5e03f71c1fb31e1d"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              5
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "f768c7f32dcaa918e5a09050f2c16ccf020eab4c97821fab71efe23402f9ca5c"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              9
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "4f8fc37cd55bb2774ffc4626de559e4d0c9e2538ce78f050ed6e15dddd02e7c2"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              9,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "01fc51dab9ce7893831b59a210c4adf84c7d00e9799973071e7a04accd342efc"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              5
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "f768c7f32dcaa918e5a09050f2c16ccf020eab4c97821fab71efe23402f9ca5c"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              5,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "851cf6b04b738f7bdbe7c1bc7efa4cdcb552d16f195a3e8d5e03f71c1fb31e1d"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              9,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "01fc51dab9ce7893831b59a210c4adf84c7d00e9799973071e7a04accd342efc"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              9
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "4f8fc37cd55bb2774ffc4626de559e4d0c9e2538ce78f050ed6e15dddd02e7c2"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              5,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "851cf6b04b738f7bdbe7c1bc7efa4cdcb552d16f195a3e8d5e03f71c1fb31e1d"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              5
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "f768c7f32dcaa918e5a09050f2c16ccf020eab4c97821fab71efe23402f9ca5c"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              9
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "4f8fc37cd55bb2774ffc4626de559e4d0c9e2538ce78f050ed6e15dddd02e7c2"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              9,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "01fc51dab9ce7893831b59a210c4adf84c7d00e9799973071e7a04accd342efc"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              5
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "f768c7f32dcaa918e5a09050f2c16ccf020eab4c97821fab71efe23402f9ca5c"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              5,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "851cf6b04b738f7bdbe7c1bc7efa4cdcb552d16f195a3e8d5e03f71c1fb31e1d"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              9,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "01fc51dab9ce7893831b59a210c4adf84c7d00e9799973071e7a04accd342efc"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              9
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "4f8fc37cd55bb2774ffc4626de559e4d0c9e2538ce78f050ed6e15dddd02e7c2"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              5,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "851cf6b04b738f7bdbe7c1bc7efa4cdcb552d16f195a3e8d5e03f71c1fb31e1d"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              5
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "f768c7f32dcaa918e5a09050f2c16ccf020eab4c97821fab71efe23402f9ca5c"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              6,
+              9
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "4f8fc37cd55bb2774ffc4626de559e4d0c9e2538ce78f050ed6e15dddd02e7c2"
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [
+            [
+              9,
+              6
+            ]
+          ],
+          "blocked_minimum_mass": 281018368,
+          "transition_mass_sha256": "01fc51dab9ce7893831b59a210c4adf84c7d00e9799973071e7a04accd342efc"
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": true,
+          "allowed_next": [],
+          "blocked_minimum_mass": null,
+          "transition_mass_sha256": null
+        },
+        {
+          "word": [
+            [
+              5,
+              9
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": true,
+          "allowed_next": [],
+          "blocked_minimum_mass": null,
+          "transition_mass_sha256": null
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": true,
+          "allowed_next": [],
+          "blocked_minimum_mass": null,
+          "transition_mass_sha256": null
+        },
+        {
+          "word": [
+            [
+              9,
+              5
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              9,
+              6
+            ]
+          ],
+          "selected_mass": 268435456,
+          "configurations": 12,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": true,
+          "allowed_next": [],
+          "blocked_minimum_mass": null,
+          "transition_mass_sha256": null
+        }
+      ],
+      "nodes_checked": 47,
+      "oriented_transitions_checked": 6708
+    },
+    {
+      "kernel_id": 21,
+      "prefix_size": 32,
+      "suffix_budget": 12,
+      "selected_original_domains": [
+        {
+          "original_low_mask": 276,
+          "original_high_mask": 138,
+          "current_low_mask": 7,
+          "current_high_mask": 6176,
+          "marked_touch_mask": 2816180062,
+          "redundancy_mask": 0,
+          "D": 23,
+          "R": 0,
+          "C": 23
+        },
+        {
+          "original_low_mask": 44,
+          "original_high_mask": 321,
+          "current_low_mask": 7,
+          "current_high_mask": 6208,
+          "marked_touch_mask": 2885090013,
+          "redundancy_mask": 0,
+          "D": 23,
+          "R": 0,
+          "C": 23
+        },
+        {
+          "original_low_mask": 13,
+          "original_high_mask": 5122,
+          "current_low_mask": 7,
+          "current_high_mask": 6272,
+          "marked_touch_mask": 3553050607,
+          "redundancy_mask": 0,
+          "D": 23,
+          "R": 0,
+          "C": 23
+        },
+        {
+          "original_low_mask": 276,
+          "original_high_mask": 2113,
+          "current_low_mask": 7,
+          "current_high_mask": 6400,
+          "marked_touch_mask": 2952457685,
+          "redundancy_mask": 1073741824,
+          "D": 23,
+          "R": 1,
+          "C": 24
+        },
+        {
+          "original_low_mask": 41,
+          "original_high_mask": 1284,
+          "current_low_mask": 7,
+          "current_high_mask": 6656,
+          "marked_touch_mask": 3958864893,
+          "redundancy_mask": 0,
+          "D": 26,
+          "R": 0,
+          "C": 26
+        },
+        {
+          "original_low_mask": 13,
+          "original_high_mask": 1282,
+          "current_low_mask": 7,
+          "current_high_mask": 7168,
+          "marked_touch_mask": 3555163135,
+          "redundancy_mask": 0,
+          "D": 25,
+          "R": 0,
+          "C": 25
+        },
+        {
+          "original_low_mask": 265,
+          "original_high_mask": 162,
+          "current_low_mask": 11,
+          "current_high_mask": 6176,
+          "marked_touch_mask": 2806726363,
+          "redundancy_mask": 0,
+          "D": 20,
+          "R": 0,
+          "C": 20
+        },
+        {
+          "original_low_mask": 259,
+          "original_high_mask": 2624,
+          "current_low_mask": 11,
+          "current_high_mask": 6208,
+          "marked_touch_mask": 2876955859,
+          "redundancy_mask": 1082130432,
+          "D": 20,
+          "R": 2,
+          "C": 22
+        },
+        {
+          "original_low_mask": 265,
+          "original_high_mask": 5122,
+          "current_low_mask": 11,
+          "current_high_mask": 6272,
+          "marked_touch_mask": 3545178107,
+          "redundancy_mask": 0,
+          "D": 22,
+          "R": 0,
+          "C": 22
+        },
+        {
+          "original_low_mask": 262,
+          "original_high_mask": 2113,
+          "current_low_mask": 11,
+          "current_high_mask": 6400,
+          "marked_touch_mask": 2944056535,
+          "redundancy_mask": 1073741824,
+          "D": 22,
+          "R": 1,
+          "C": 23
+        },
+        {
+          "original_low_mask": 1036,
+          "original_high_mask": 259,
+          "current_low_mask": 11,
+          "current_high_mask": 6656,
+          "marked_touch_mask": 3949715199,
+          "redundancy_mask": 0,
+          "D": 25,
+          "R": 0,
+          "C": 25
+        },
+        {
+          "original_low_mask": 265,
+          "original_high_mask": 1030,
+          "current_low_mask": 11,
+          "current_high_mask": 7168,
+          "marked_touch_mask": 3547029503,
+          "redundancy_mask": 0,
+          "D": 24,
+          "R": 0,
+          "C": 24
+        },
+        {
+          "original_low_mask": 21,
+          "original_high_mask": 138,
+          "current_low_mask": 19,
+          "current_high_mask": 6176,
+          "marked_touch_mask": 2812246863,
+          "redundancy_mask": 0,
+          "D": 22,
+          "R": 0,
+          "C": 22
+        },
+        {
+          "original_low_mask": 21,
+          "original_high_mask": 2368,
+          "current_low_mask": 19,
+          "current_high_mask": 6208,
+          "marked_touch_mask": 2880891349,
+          "redundancy_mask": 0,
+          "D": 20,
+          "R": 0,
+          "C": 20
+        },
+        {
+          "original_low_mask": 21,
+          "original_high_mask": 5122,
+          "current_low_mask": 19,
+          "current_high_mask": 6272,
+          "marked_touch_mask": 3549917031,
+          "redundancy_mask": 0,
+          "D": 21,
+          "R": 0,
+          "C": 21
+        },
+        {
+          "original_low_mask": 5376,
+          "original_high_mask": 2113,
+          "current_low_mask": 19,
+          "current_high_mask": 6400,
+          "marked_touch_mask": 2948001265,
+          "redundancy_mask": 1073741824,
+          "D": 22,
+          "R": 1,
+          "C": 23
+        },
+        {
+          "original_low_mask": 21,
+          "original_high_mask": 104,
+          "current_low_mask": 19,
+          "current_high_mask": 6656,
+          "marked_touch_mask": 3888118733,
+          "redundancy_mask": 0,
+          "D": 25,
+          "R": 0,
+          "C": 25
+        },
+        {
+          "original_low_mask": 21,
+          "original_high_mask": 770,
+          "current_low_mask": 19,
+          "current_high_mask": 7168,
+          "marked_touch_mask": 3552014167,
+          "redundancy_mask": 134217728,
+          "D": 22,
+          "R": 1,
+          "C": 23
+        }
+      ],
+      "nodes": [
+        {
+          "word": [],
+          "selected_mass": 268435456,
+          "configurations": 18,
+          "nonterminal_original_domain": 0,
+          "at_size_budget": false,
+          "allowed_next": [],
+          "blocked_minimum_mass": 269484032,
+          "transition_mass_sha256": "44d30e624060f528a2762e15bf34b0330d85aada453cbb1d548a2ed87a841f66"
+        }
+      ],
+      "nodes_checked": 1,
+      "oriented_transitions_checked": 156
+    }
+  ]
+}
