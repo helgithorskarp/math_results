@@ -19,6 +19,14 @@ cap test, and regular deletion line graphs have a closed top eigenvalue.
 Deleting a partial star or a matching always passes under the stated
 untouched-coordinate hypothesis, providing more product factors.
 An explicit restriction shows why the cap requires a new check.
+[STRICT_DELETION_REPAIR.md](STRICT_DELETION_REPAIR.md) strengthens the strict
+inherited-cap cases: for every arbitrary deleted-pair graph at n>=4 with
+an untouched coordinate and rational cap scalar f<1, an explicit repair
+attains unrestricted maximal lower rank N-r, where r counts untouched
+coordinates. Its top endpoint is simple and exactly those r stars are
+maximum. The full uniform perturbation and deleted-graph bipartite-component
+kernel proof cover all matching and partial-star deletions, and their
+eligible-factor products. Cases f>=1 remain outside this construction.
 [FRIENDSHIP.md](FRIENDSHIP.md) gives a different capped core for every
 friendship graph downset: k triangles sharing just one vertex. For every
 k>=2 the entire partition template fails the cap congruence, while this
@@ -271,6 +279,35 @@ cone construction at source cb0c1bd1 and proves a stronger buffer and repair
 interval. The new one-center, two-center and three-center bipartite extensions have no independent
 review or formalization claimed here. The four-center construction is also
 author-checked, unformalized and not independently reviewed.
+
+## Strict inherited deletion repair
+
+The new [complete proof](STRICT_DELETION_REPAIR.md),
+[constructor](strict_deletion_repair.py),
+[rational identities](strict_deletion_identities.py),
+[literal checker](verify_strict_deletion_repair.py) and
+[compact expected record](strict_deletion_repair_expected.json) are
+author-checked and unformalized, without independent review or priority
+assertion. Run from the repository root with one process and numeric
+threads one:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -B spectral_downsets_structural_certificates/verify_strict_deletion_repair.py --check
+```
+
+The checker reproduces the prior 74-case inherited-deletion baseline.
+At n=4,5, all 72 fixed-untouched-vertex masks split into 61 strict cases,
+two boundaries and nine inherited-cap failures. Only the strict cases
+enter the new theorem. In total 96 full repairs have N<=37, complete
+row/support/PSD/rank/buffer checks, principal kernels and base equality
+censuses. Five complete uniform image/spanning bases verify every mode;
+two full tensors have N=100 and N=27. Nineteen rational identities and
+five positive-coefficient records are regenerated, and malformed,
+excluded-domain, PSD and unperturbed-rank controls remain active under -O.
+Finite validation does not replace the complete all-parameter proof.
+Completed normal and optimized results agree exactly. The final optimized
+expected-output check took 31.98 seconds and 24,908 KiB peak child RSS.
 
 ## Primary sources and current status
 
