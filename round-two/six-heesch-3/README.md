@@ -6,6 +6,9 @@ upper obstruction. It remains open here.
 
 Published source:
 
+* [Arbitrary-degree polynomial profiles](equilateral_polynomial_profiles/README.md):
+  covered red endpoints force whole-port matching; all sufficiently
+  small nonflat polynomial profiles with two coronas tile the plane.
 * [Nonflat Tile(1,1) classification](equilateral_nonflat_classification/README.md):
   all sufficiently small nonzero quartic profiles with two coronas
   tile the plane; all finite cases have at most one.
