@@ -1,0 +1,82 @@
+{
+  "reviewer": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "python": "CPython3.11.2",
+  "compiler": "GCC12.2.0 Debian12.2.0-14+deb12u1",
+  "language": "C++17",
+  "release_flags": "-O2 -Wall -Wextra -Wconversion -Wshadow -pedantic",
+  "checking_flags": "-O1 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -fsanitize=address,undefined -fno-omit-frame-pointer",
+  "sequential_jobs": true,
+  "library_threads": 1,
+  "fixed_guards": {
+    "nodes_per_graph_or_cover": 2000000,
+    "seconds_per_graph_or_cover": 20,
+    "native_response_seconds": 30,
+    "seconds_per_marked_case": 60
+  },
+  "runs": [
+    {
+      "job": "final optimized full independent audit and strengthened61 certificate",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-2/three-star-audit/audit.py",
+        "--native",
+        "scratch/pass4-ordered",
+        "--certificate",
+        "scratch/pass4-author-triples/capacity.json",
+        "--work",
+        "scratch/pass4-final",
+        "--author-expected",
+        "scratch/pass4-author-triples/expected.json"
+      ],
+      "returncode": 0,
+      "seconds": 30.259989,
+      "child_peak_RSS_KiB": 24628,
+      "stdout": "{\"case\": 0, \"status\": \"COMPLETE\", \"seconds\": 4.0963488180423155, \"cover_nodes\": 44916, \"counts\": {\"partitions\": 1989, \"y_nine\": 1057, \"y_two\": 111, \"z_nine\": 44}, \"cores\": 44}\n{\"case\": 1, \"status\": \"COMPLETE\", \"seconds\": 4.440093002980575, \"cover_nodes\": 44665, \"counts\": {\"partitions\": 2026, \"y_nine\": 1031, \"y_two\": 97, \"z_nine\": 69}, \"cores\": 69}\n{\"case\": 2, \"status\": \"COMPLETE\", \"seconds\": 4.206602985039353, \"cover_nodes\": 44526, \"counts\": {\"partitions\": 2066, \"y_nine\": 1177, \"y_two\": 116, \"z_nine\": 21}, \"cores\": 21}\n{\"case\": 3, \"status\": \"COMPLETE\", \"seconds\": 3.8441031929687597, \"cover_nodes\": 44060, \"counts\": {\"partitions\": 1916, \"y_nine\": 1090, \"y_two\": 110, \"z_nine\": 31}, \"cores\": 31}\n{\"case\": 4, \"status\": \"COMPLETE\", \"seconds\": 4.457773846981581, \"cover_nodes\": 44115, \"counts\": {\"partitions\": 1928, \"y_nine\": 1121, \"y_two\": 104, \"z_nine\": 30}, \"cores\": 30}\n{\"case\": 5, \"status\": \"COMPLETE\", \"seconds\": 3.6437155910534784, \"cover_nodes\": 43819, \"counts\": {\"partitions\": 1954, \"y_nine\": 1106, \"y_two\": 113, \"z_nine\": 31}, \"cores\": 31}\n{\"status\": \"COMPLETE\", \"native\": {\"requests\": 18461, \"nodes\": 105769578, \"largest_request_nodes\": 94287}, \"capacity\": {\"status\": \"COMPLETE_EXACT\", \"cores\": 226, \"candidate_count_range\": [51, 94], \"additional_bound_census\": {\"14\": 6, \"15\": 42, \"16\": 51, \"17\": 57, \"18\": 60, \"19\": 9, \"20\": 1}, \"maximum_total_bound\": 62, \"certificate_sha256\": \"1ccf38f9ceaec313916c282b0453f0f4e2e050ca029e68416bbadb73b570428e\", \"record_sha256\": \"0df72b5f18b49053e551164485ceb1da372c168d1e79898fc1ece10e4e9549e7\"}, \"refinement\": {\"maximum_total_bound\": 61, \"vertex_disjointness_size_threshold\": 62, \"additional_bound_census\": {\"14\": 6, \"15\": 42, \"16\": 51, \"17\": 57, \"18\": 60, \"19\": 10}, \"color_certificate\": {\"status\": \"COMPLETE_LITERAL\", \"core_sha256\": \"93b425035952d424d74a1ceb94294488de1b44972d0be3cbd4f507abe1d18fbb\", \"nodes\": 44, \"empty_domain_leaves\": 15, \"additional_bound\": 19}, \"color_certificate_sha256\": \"9026eac2888481ded9aa7bfbd5a22595360731ee8297d2e4a049fb29d0a948f6\"}}\n",
+      "stderr": ""
+    },
+    {
+      "job": "complete sanitized independent enumeration and literal color-certificate check",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "round-two/six-reviewer-2/three-star-audit/audit.py",
+        "--native",
+        "scratch/pass4-ordered-sanitize",
+        "--certificate",
+        "scratch/pass4-author-triples/capacity.json",
+        "--work",
+        "scratch/pass4-sanitized",
+        "--author-expected",
+        "scratch/pass4-author-triples/expected.json"
+      ],
+      "returncode": 0,
+      "seconds": 39.117757,
+      "child_peak_RSS_KiB": 28936,
+      "stdout": "{\"case\": 0, \"status\": \"COMPLETE\", \"seconds\": 5.186896822997369, \"cover_nodes\": 44916, \"counts\": {\"partitions\": 1989, \"y_nine\": 1057, \"y_two\": 111, \"z_nine\": 44}, \"cores\": 44}\n{\"case\": 1, \"status\": \"COMPLETE\", \"seconds\": 6.249952946964186, \"cover_nodes\": 44665, \"counts\": {\"partitions\": 2026, \"y_nine\": 1031, \"y_two\": 97, \"z_nine\": 69}, \"cores\": 69}\n{\"case\": 2, \"status\": \"COMPLETE\", \"seconds\": 6.0159328959998675, \"cover_nodes\": 44526, \"counts\": {\"partitions\": 2066, \"y_nine\": 1177, \"y_two\": 116, \"z_nine\": 21}, \"cores\": 21}\n{\"case\": 3, \"status\": \"COMPLETE\", \"seconds\": 5.382147984055337, \"cover_nodes\": 44060, \"counts\": {\"partitions\": 1916, \"y_nine\": 1090, \"y_two\": 110, \"z_nine\": 31}, \"cores\": 31}\n{\"case\": 4, \"status\": \"COMPLETE\", \"seconds\": 5.425683191977441, \"cover_nodes\": 44115, \"counts\": {\"partitions\": 1928, \"y_nine\": 1121, \"y_two\": 104, \"z_nine\": 30}, \"cores\": 30}\n{\"case\": 5, \"status\": \"COMPLETE\", \"seconds\": 5.441556743986439, \"cover_nodes\": 43819, \"counts\": {\"partitions\": 1954, \"y_nine\": 1106, \"y_two\": 113, \"z_nine\": 31}, \"cores\": 31}\n{\"status\": \"COMPLETE\", \"native\": {\"requests\": 18461, \"nodes\": 105769578, \"largest_request_nodes\": 94287}, \"capacity\": {\"status\": \"COMPLETE_EXACT\", \"cores\": 226, \"candidate_count_range\": [51, 94], \"additional_bound_census\": {\"14\": 6, \"15\": 42, \"16\": 51, \"17\": 57, \"18\": 60, \"19\": 9, \"20\": 1}, \"maximum_total_bound\": 62, \"certificate_sha256\": \"1ccf38f9ceaec313916c282b0453f0f4e2e050ca029e68416bbadb73b570428e\", \"record_sha256\": \"0df72b5f18b49053e551164485ceb1da372c168d1e79898fc1ece10e4e9549e7\"}, \"refinement\": {\"maximum_total_bound\": 61, \"vertex_disjointness_size_threshold\": 62, \"color_certificate\": {\"status\": \"COMPLETE_LITERAL\", \"core_sha256\": \"93b425035952d424d74a1ceb94294488de1b44972d0be3cbd4f507abe1d18fbb\", \"nodes\": 44, \"empty_domain_leaves\": 15, \"additional_bound\": 19}, \"color_certificate_sha256\": \"9026eac2888481ded9aa7bfbd5a22595360731ee8297d2e4a049fb29d0a948f6\"}}\n",
+      "stderr": ""
+    },
+    {
+      "job": "optimized independent malformed-evidence and small-graph controls",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-2/three-star-audit/controls.py",
+        "--native",
+        "scratch/pass4-ordered",
+        "--certificate",
+        "scratch/pass4-author-triples/capacity.json",
+        "--work",
+        "scratch/pass4-independent"
+      ],
+      "returncode": 0,
+      "seconds": 1.524998,
+      "child_peak_RSS_KiB": 24484,
+      "stdout": "{\n  \"status\": \"COMPLETE\",\n  \"small_graph_decisions\": 5120,\n  \"bit_boundary_graphs\": 8,\n  \"malformed_native_streams\": 5,\n  \"literal_partition_control_count\": 10,\n  \"malformed_weight_or_binding_controls\": 11,\n  \"missing_xz_constraint_exposed\": true,\n  \"malformed_color_certificate_controls\": 6,\n  \"positive_color_check\": {\n    \"status\": \"COMPLETE_LITERAL\",\n    \"core_sha256\": \"93b425035952d424d74a1ceb94294488de1b44972d0be3cbd4f507abe1d18fbb\",\n    \"nodes\": 44,\n    \"empty_domain_leaves\": 15,\n    \"additional_bound\": 19\n  }\n}\n",
+      "stderr": ""
+    }
+  ]
+}
