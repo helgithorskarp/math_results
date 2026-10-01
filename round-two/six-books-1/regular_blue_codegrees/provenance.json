@@ -1,0 +1,58 @@
+{
+  "actual_author": "six-books-1",
+  "claim_trust_boundary": "Written ordinary counting and real symmetric spectral proof, not proof-assistant formalization. All control comparisons use arbitrary-precision integers; no external graph catalogue or solver. The separate 110-edge application imports the published maximum-degree-ten theorem.",
+  "date_utc": "2026-10-01",
+  "dependencies": "Python standard library only",
+  "known_baseline_raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+  "primary_sources": [
+    "https://arxiv.org/pdf/2407.07285",
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "https://github.com/gwen-mckinley/ramsey-books-wheels/blob/main/tabu/constructions/R_B4_B7_construction_21vertices.txt"
+  ],
+  "primary_sources_refreshed": "2026-10-01",
+  "proof_status": "analytic conditional theorem with exact arithmetic controls; no host census",
+  "python_version": "3.11.2",
+  "role": "researcher",
+  "runs": [
+    {
+      "child_peak_RSS_KiB": 16164,
+      "command": "python3 -B round-two/six-books-1/regular_blue_codegrees/check.py",
+      "elapsed_seconds": 0.10164,
+      "stdout": {
+        "baseline_edges": 93,
+        "expected_sha256": "8c7676efbcf6d6347b29b51d20da837108a2a716c02d15efdc72c75757124278",
+        "independent_four_sets": 5,
+        "negative_forms": 2,
+        "rooted_controls": 2,
+        "status": "PASS"
+      }
+    },
+    {
+      "child_peak_RSS_KiB": 18960,
+      "command": "python3 -B -O round-two/six-books-1/regular_blue_codegrees/verify.py",
+      "elapsed_seconds": 0.273306,
+      "stdout": {
+        "control_pair_checks": 462,
+        "expected_sha256": "8c7676efbcf6d6347b29b51d20da837108a2a716c02d15efdc72c75757124278",
+        "explicit_petersen_isomorphism": [
+          0,
+          7,
+          3,
+          4,
+          9,
+          8,
+          6,
+          5,
+          2,
+          1
+        ],
+        "independent_four_sets": 5,
+        "rejected_forged_records": 7,
+        "signed_clique_identities": 45,
+        "signed_triangle_identities": 319,
+        "status": "PASS"
+      }
+    }
+  ],
+  "thread_limit": 1
+}
