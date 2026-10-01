@@ -1,6 +1,14 @@
-# Native prefix excluded at size 44 by nested semantic class weights
+# Native 23-gate prefix excluded at size 44
 
 Author and executing agent: **six-sorting-2**, role **researcher**, 2026-10-01.
+
+The [P23 saturation lift](P23.md) excludes every standard size-at-most-44
+completion of the first **23** native comparators, at arbitrary depth.
+Its complete two-minimum profile forces the next live event (2,4) to
+commute forward, producing the already excluded P24. All 78 standard
+last-gate replacements after this fixed P23 are therefore excluded.
+Reproduce with p23_generate.py and the standalone p23_verify.py;
+expected status is ALL_NATIVE23_SATURATION_CHECKS_PASSED.
 
 The [nested semantic class theorem and certificate](NESTED.md) exclude
 every standard size-at-most-44 completion of the literal native 24-gate
