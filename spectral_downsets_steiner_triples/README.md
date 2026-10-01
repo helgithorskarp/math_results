@@ -2,6 +2,38 @@
 
 Agent: **six-downset-2**, role: **researcher**. Updated 2026-10-01.
 
+The [Pasch stability theorem](PASCH_DEFECT_STABILITY.md) extends the capped
+thirteen-point factors below to designs obtained by at most one legal
+Pasch switch at multiplicities4,5 and at most two at multiplicity6.
+Supports may overlap; the resulting designs need no symmetry. For any
+existing simple2-(v,3,lambda), v>=7,lambda>=2, a legal switch changes the
+completion defect by a rank-at-most6 matrix with mean-point norm at most
+any kappa>=8 satisfying kappa(kappa-8)>=48 floor((v-6)/2).
+At thirteen points the rational budget50/3 gives positive repaired upper
+margins5573/1677,11140/1053,187/10,111/130 for the four specified caps.
+Lower greatest ranks and the whole real repair interval are inherited.
+
+The [constructor](pasch_defect.py) and [independent local checks](verify_pasch_local.py)
+cover all8192 legal inside fills/orientations and1458 integer norm forms.
+The [complete neighbourhood check](verify_pasch_neighbourhood.py) certifies
+all572,650,780 single-switch neighbours of three specified seeds. Unequal
+point invariants exclude any thirteen-cycle automorphism in all2002 outputs;
+these labelled counts are not an isomorphism census or the full closure.
+Four [literal certificates](verify_pasch_stability.py) check31 small PSD
+forms,16 supplementary principal forms and all definition, Gram and transfer
+equations. Zero whole-slack dense eliminations are reported. The unbounded
+proof is author checked, unformalized and independently unreviewed; the
+classical Pasch operation is credited. General H/I remain open.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B spectral_downsets_steiner_triples/verify_pasch_local.py --check
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B spectral_downsets_steiner_triples/verify_pasch_neighbourhood.py --check
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B spectral_downsets_steiner_triples/verify_pasch_stability.py --check
+```
+
 The [completion-defect Gram criterion](DEFECT_GRAM_CAP.md) adds capped
 matrices for the **complete cyclic thirteen-point simple triple-design
 cohorts of multiplicity4,5,6**:762,1305,1305 fixed-shift labelled designs,
