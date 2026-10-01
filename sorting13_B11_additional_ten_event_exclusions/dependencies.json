@@ -1,0 +1,87 @@
+{
+  "agent": "six-sorting-2",
+  "role": "researcher",
+  "pinned_files": [
+    {
+      "path": "sorting13_B11_ten_event_loop_postponement/certificate.json",
+      "sha256": "5360120fc75814699b79879b4fc3a7c43f00a37af0876bf58e0fb8144cc2cdf9"
+    },
+    {
+      "path": "sorting13_B11_ten_event_matching_dags/fixture.json",
+      "sha256": "71f277e046e5f8c5281d7932523f696efa093856e376b5bc3b4061f7676c65db"
+    },
+    {
+      "path": "sorting13_B11_pruning_saturation_activity/certificate.json",
+      "sha256": "9f590927d7fad95f00103a8d4a6bc4e9865d38c6397fd3b6a65578d9b2fe0ed3"
+    },
+    {
+      "path": "sorting13_maximum_preparation/watched_rup.py",
+      "sha256": "d42bc922772f3c2f35947edb6cb79806a63166808cd6c2c33e7ffa79074e8d97"
+    },
+    {
+      "path": "sorting_networks/thirteen_extreme_multiset_quotient/certificate.json",
+      "sha256": "d670b600ed1c2e31990d6e2458b748d160a257b5dacf4bf15d3e270414202047"
+    }
+  ],
+  "mathematical_imports": [
+    {
+      "graph_height": 8092,
+      "artifact_ref": "bafkreihf2homkluete7hb3bhroupkf7gk3rsdoj5xhl6u46l27fgylqmn4",
+      "source_commit": "544efc2841774c670fe51563ab6e91658aa5d7d8",
+      "claim": "All ten-event interleavings normalize to canonicalE10 followed by12 ordinary gates"
+    },
+    {
+      "graph_height": 7944,
+      "artifact_ref": "bafkreicerpa74bf5im5bcrs2youzgn4i5agvnvmldfagfyoqnbucden3bm",
+      "source_commit": "1d55b42316153c7a6a213efb60016f71f3719262",
+      "claim": "Twelve mandatory D9 clamped domains force retained gate activity"
+    },
+    {
+      "graph_height": 7936,
+      "source_commit": "bc1675c66ddeb936edbf38d09395420be06f551a",
+      "claim": "Exact480-class table and effective-order counts"
+    }
+  ],
+  "checker_credit": {
+    "author": "six-sorting-1",
+    "role": "researcher",
+    "graph_height": 7452,
+    "source_commit": "5ad75ecb80164da04c921f1898cf62334668a027",
+    "path": "sorting13_maximum_preparation/watched_rup.py"
+  },
+  "literature": [
+    {
+      "url": "https://arxiv.org/abs/1411.6408",
+      "claim": "Theorem11: nonredundant sorting-network suffix blocks join adjacently; imported established theorem"
+    },
+    {
+      "url": "https://arxiv.org/abs/2012.04400v3",
+      "claim": "Established S11=35 and S12=39; pruning principle"
+    },
+    {
+      "url": "https://imada.sdu.dk/u/lcf/pubs/paper26.pdf",
+      "claim": "Established S9=25/S10=29"
+    }
+  ],
+  "software": {
+    "pysat": "1.8.dev24",
+    "solver": "Glucose4 single thread",
+    "drat_trim_repository": "https://github.com/marijnheule/drat-trim",
+    "drat_trim_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+  },
+  "method_source": {
+    "path": "sorting13_B11_image61_depth_free_exclusion",
+    "graph_height": 8166,
+    "source_commit": "8b0a3797c5334ac3cc415e912a151c072516ea40",
+    "scope": "Published encoding and independent auditor framework; new certificates cover disjoint classes"
+  },
+  "complementary_count_import": {
+    "agent": "six-sorting-1",
+    "role": "researcher",
+    "source_commit": "6bfc93f2bb48011283618c4938d434e0892bb560",
+    "path": "sorting_networks/thirteen_class13_boundary_obstruction/PROOF.md",
+    "scope": "One disjoint repeated-(1,2) class excluded; scalar certificate replayed here, whole class coverage imported",
+    "graph_height": 8198,
+    "artifact_ref": "bafkreihimpwswbsnmg2jkgibheuwgayzsvtlc3yg3do5q7wrwatozmfz2i"
+  }
+}

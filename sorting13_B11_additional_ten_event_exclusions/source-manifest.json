@@ -1,0 +1,80 @@
+{
+  "agent": "six-sorting-2",
+  "role": "researcher",
+  "source_files": {
+    ".gitignore": {
+      "bytes": 26,
+      "sha256": "7a02ce190d4b09421adcffc41cdfec59ef7e5bfcc346b8ed51e276d2fd765a8d"
+    },
+    "PROOF.md": {
+      "bytes": 12106,
+      "sha256": "794358642a1499f0c9ae8a13007568f40399bba49ce22d985ed0f934e392b585"
+    },
+    "README.md": {
+      "bytes": 3375,
+      "sha256": "24a5785dac5b1ca614c4e9b0dfcc391b23f348672fca5377848453aea7ad1e38"
+    },
+    "audit_data.py": {
+      "bytes": 8045,
+      "sha256": "32b625e8a316e69d36f6ea03f45ce70ead394cf60510849892405437cdfa088b"
+    },
+    "audit_encoding.py": {
+      "bytes": 12594,
+      "sha256": "651849b220ae477f986a0faac0ba8a2c70e31856f7953f0d256574ce0c7ffd32"
+    },
+    "build.py": {
+      "bytes": 14334,
+      "sha256": "0cf73e0f4fea041df41706b1c8bc016e54b8d8e72d08a4514b46fca18d0f0e64"
+    },
+    "certificate.json": {
+      "bytes": 18076,
+      "sha256": "20fd6df12896439431c2c61160a0b058d0c333b71a7c2c48582ecddc852d5c00"
+    },
+    "check_proof.py": {
+      "bytes": 4691,
+      "sha256": "938c7ffa8ef57196c61b35b69f71bd62ff6743ed3d021d1fd1ae4cd520085896"
+    },
+    "controls.py": {
+      "bytes": 5432,
+      "sha256": "39863aa79b0e204be291f9fb147e4ffcf5ce5415fa0bff357e80b18460f4b406"
+    },
+    "dependencies.json": {
+      "bytes": 3360,
+      "sha256": "380bb40f4182a79e22516e02da38899bec413882ce811ffe40afff343a1c8743"
+    }
+  },
+  "completed_checks": {
+    "clauses": 1484046,
+    "cardinality_blocks": 1322,
+    "flag_assignments": 45723,
+    "original_inputs": 98304,
+    "clamped_inputs": 294912,
+    "actual_marked_free_assignments": 294912,
+    "core_clauses": 202828,
+    "RUP_additions": 65845
+  },
+  "software": {
+    "python": "3.11.2",
+    "pysat": "1.8.dev24",
+    "glucose": "g4 single-thread",
+    "drat_trim_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "NUMEXPR_NUM_THREADS": 1
+  },
+  "measured": {
+    "generation_seconds": 25.99964637600351,
+    "generation_peak_rss_kib": 72136,
+    "data_and_coverage_seconds": 26.056113075988833,
+    "data_and_coverage_peak_rss_kib": 46056,
+    "serial_native_and_python_checks_seconds": 169.59129456500523,
+    "largest_native_and_python_check_seconds": 39.39349675900303,
+    "largest_proof_peak_rss_kib": 45980
+  },
+  "scope": "Twelve complete ten-event B11 classes only, no global13 optimality, upper13 witness or external reviewer verdict",
+  "bulk_outputs": "All exact traces regenerated and checked locally; omitted fromGit and never used as a substitute for source coverage",
+  "checks": "All final source hashes,12 formula/raw/core/trimmed hashes and final class/order-count provenance checks passed"
+}
