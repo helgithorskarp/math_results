@@ -1,0 +1,129 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "status": "COMPLETE",
+  "python_version": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "independent_method": "literal sets; individual column-count DP; six individual clique-spine budgets; full normalized residual six-cycle generation; generic adjacency isomorphisms",
+  "independent": [
+    {
+      "mode": "normal",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "round-two/six-reviewer-2/book-regular-audit/audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.1516874990193173,
+      "cumulative_child_peak_rss_kib": 18456,
+      "timeout_seconds": 45
+    },
+    {
+      "mode": "optimized",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-2/book-regular-audit/audit.py",
+        "--check",
+        "round-two/six-reviewer-2/book-regular-audit/EXPECTED.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.2581029490102082,
+      "cumulative_child_peak_rss_kib": 21684,
+      "timeout_seconds": 45
+    }
+  ],
+  "author_algorithm_replays": [
+    {
+      "mode": "normal-check",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8138915590243414,
+      "cumulative_child_peak_rss_kib": 16908,
+      "timeout_seconds": 45,
+      "result": "{\"agent\": \"six-books-3\", \"excluded_non_Petersen_types\": 5, \"known21\": {\"blue\": {\"edges\": 117, \"max_pages\": 6}, \"red\": {\"edges\": 93, \"max_pages\": 3}}, \"known_cubic_classes\": 6, \"packing_minimum\": 9, \"role\": \"researcher\", \"rooted_classes\": 11, \"status\": \"PASS\"}"
+    },
+    {
+      "mode": "normal-verify",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "verify.py"
+      ],
+      "exit_code": 0,
+      "seconds": 4.5041143909911625,
+      "cumulative_child_peak_rss_kib": 23096,
+      "timeout_seconds": 45,
+      "result": "{\"Petersen_confirmed\": true, \"agent\": \"six-books-3\", \"class_sizes\": [900, 2160, 2160, 10800, 5400, 360], \"four_cycle_counts\": [6, 5, 5, 3, 2, 0], \"known21\": {\"blue_edges\": 117, \"blue_max_pages\": 6, \"red_edges\": 93, \"red_max_pages\": 3}, \"normalized_graphs\": 21780, \"normalized_sha256\": \"89062482c76071a010005eec73dddbd6bf7abcb7ba6b849b3f492bacaaf24c81\", \"packing_minimum\": 9, \"primary_data_core_ids\": [5, 4, 2, 6, 1, 3], \"recursion_calls\": 132520, \"role\": \"researcher\", \"status\": \"PASS\"}"
+    },
+    {
+      "mode": "normal-controls",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "controls.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09247042797505856,
+      "cumulative_child_peak_rss_kib": 23096,
+      "timeout_seconds": 45,
+      "result": "{\"integer_domain_required\": true, \"packing_occurrence_boundary\": [19, 8, 20, 9], \"rejected_inputs\": [\"wrong-graph-order\", \"nonzero-graph-padding\", \"repeated-cycle-vertex\", \"false-cycle-witness\", \"missing-core-edge\"], \"status\": \"PASS\"}"
+    },
+    {
+      "mode": "optimized-check",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.468438888026867,
+      "cumulative_child_peak_rss_kib": 23096,
+      "timeout_seconds": 45,
+      "result": "{\"agent\": \"six-books-3\", \"excluded_non_Petersen_types\": 5, \"known21\": {\"blue\": {\"edges\": 117, \"max_pages\": 6}, \"red\": {\"edges\": 93, \"max_pages\": 3}}, \"known_cubic_classes\": 6, \"packing_minimum\": 9, \"role\": \"researcher\", \"rooted_classes\": 11, \"status\": \"PASS\"}"
+    },
+    {
+      "mode": "optimized-verify",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "verify.py"
+      ],
+      "exit_code": 0,
+      "seconds": 3.270616265013814,
+      "cumulative_child_peak_rss_kib": 25468,
+      "timeout_seconds": 45,
+      "result": "{\"Petersen_confirmed\": true, \"agent\": \"six-books-3\", \"class_sizes\": [900, 2160, 2160, 10800, 5400, 360], \"four_cycle_counts\": [6, 5, 5, 3, 2, 0], \"known21\": {\"blue_edges\": 117, \"blue_max_pages\": 6, \"red_edges\": 93, \"red_max_pages\": 3}, \"normalized_graphs\": 21780, \"normalized_sha256\": \"89062482c76071a010005eec73dddbd6bf7abcb7ba6b849b3f492bacaaf24c81\", \"packing_minimum\": 9, \"primary_data_core_ids\": [5, 4, 2, 6, 1, 3], \"recursion_calls\": 132520, \"role\": \"researcher\", \"status\": \"PASS\"}"
+    },
+    {
+      "mode": "optimized-controls",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "controls.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1607046719873324,
+      "cumulative_child_peak_rss_kib": 25468,
+      "timeout_seconds": 45,
+      "result": "{\"integer_domain_required\": true, \"packing_occurrence_boundary\": [19, 8, 20, 9], \"rejected_inputs\": [\"wrong-graph-order\", \"nonzero-graph-padding\", \"repeated-cycle-vertex\", \"false-cycle-witness\", \"missing-core-edge\"], \"status\": \"PASS\"}"
+    }
+  ],
+  "author_replay_is_not_independent_census": true,
+  "library_threads": 1,
+  "sequential_cpu_jobs": true,
+  "expected_sha256": "7a5f5fdb5ab721ba9a4a6f8c5c2d2b8354fb0406d4d3d3b6a66adbe773592e95",
+  "sampling_scope": "128 arbitrary hosts check identities only; no Book22 host search",
+  "universal_proof": "ordinary derivation in REVIEW.md; finite validation is not the source of universal coverage",
+  "hall_classification": "imported; original publisher abstract and complete Cohen proposition checked, original proof not replayed",
+  "deficit_one_pair_histograms": 324,
+  "deficit_one_row_multisets": 1,
+  "red_only_countercontrol": "KG(7,2) plus isolated vertex:105 red edges,page maxima3/10; rejects omitted blue cap."
+}
