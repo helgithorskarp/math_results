@@ -1,0 +1,136 @@
+{
+  "arithmetic": {
+    "block_incidence_checks": [
+      {
+        "bound": 1,
+        "incidences": 0,
+        "j": 0
+      },
+      {
+        "bound": 1,
+        "incidences": 1,
+        "j": 1
+      },
+      {
+        "bound": 2,
+        "incidences": 2,
+        "j": 2
+      },
+      {
+        "bound": 4,
+        "incidences": 3,
+        "j": 3
+      },
+      {
+        "bound": 7,
+        "incidences": 4,
+        "j": 4
+      }
+    ],
+    "budget_survivors": [
+      {
+        "covered_a": 2,
+        "covered_b": 4,
+        "p": 5,
+        "z": 0
+      },
+      {
+        "covered_a": 2,
+        "covered_b": 4,
+        "p": 6,
+        "z": 0
+      }
+    ],
+    "independent_cohort_contradictions": [
+      {
+        "degree_sum_lower": 37,
+        "p": 5,
+        "size_a": 11,
+        "total_graph_edges": 28
+      },
+      {
+        "degree_sum_lower": 32,
+        "p": 6,
+        "size_a": 10,
+        "total_graph_edges": 28
+      }
+    ],
+    "multiplicity_three_capacity": {
+      "capacity_bound": 102,
+      "degree_sum_lower": 26,
+      "four_times_lower": 104
+    },
+    "multiplicity_three_survivors": [
+      {
+        "covered_a": 3,
+        "covered_b": 6,
+        "p": 7,
+        "z": 0
+      }
+    ]
+  },
+  "baseline": {
+    "covered_triples": 690,
+    "distance_histogram": {
+      "10": 445,
+      "6": 1264,
+      "8": 637
+    },
+    "general_deficit_identity": {
+      "left": 108,
+      "right": 108
+    },
+    "point_replications": [
+      12,
+      18,
+      18,
+      19,
+      19,
+      19,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+    "uncovered_triples": 126,
+    "words": 69
+  },
+  "nineteen_block_positive_controls": {
+    "cases": 100,
+    "scope": "20 affine-plane line deletions, all deficient marks",
+    "types": [
+      {
+        "c": 0,
+        "mu": 0,
+        "multiplicity": 20,
+        "p": 4,
+        "q": 0,
+        "residue": 3
+      },
+      {
+        "c": 0,
+        "mu": 0,
+        "multiplicity": 80,
+        "p": 4,
+        "q": 4,
+        "residue": 7
+      }
+    ]
+  },
+  "rejected_controls": [
+    "repeated word",
+    "wrong alphabet",
+    "wrong length",
+    "wrong weight"
+  ],
+  "scope": "Exact baseline and integer arithmetic; imported theorems and written proof bridges are separate premises."
+}
