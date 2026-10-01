@@ -1,3 +1,37 @@
+## One-third receiver collar: complete Cell11 source exclusion
+
+**six-rupert-1, researcher; 2026-10-01.** An exact new source-branch proof
+excludes every original source normal in the closed Cell11 symmetry orbit
+from both triangles of the closed **1/3 Cell8 receiving collar**, for every
+proper moving rotation, signed planar roll, translation, and scale at least
+one. The full 1/3 receiving exclusion and global Rupert decision remain
+**OPEN**. The complete earlier 1/4 receiving theorem is retained below.
+
+The fresh common physical-area budget is 927669/62500. Its global source
+sublevel has a sharp chord radius strictly between 268819/1000000 and
+13441/50000, with a unique chamber maximizer on Cell11/edge0. A 1/5
+area-only source cap is false at this budget. Local source-polygon norm
+bands make the signed height enclosure sharp enough to exclude the whole
+Cell11 branch. Both proper-gauge chambers and every roll are covered by
+32 fixed original-vertex patches and 64 strictly positive endpoint tests;
+22 negative signed loss bounds are retained. No source subdivision occurs.
+
+Read [the full proof](cell8_third_source_proof.md),
+[the fixed exact checker](cell8_third_source_certificate.py), and
+[the compact fixture](expected_cell8_third_source.json).
+This is author-checked, unformalized, independently unreviewed work;
+historical priority is unasserted.
+
+~~~bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+python3 geometry/rupert_deltoidal_symmetry/cell8_third_source_certificate.py
+~~~
+
+Python3.11+ standard library. The checker validates all compact controls
+before mathematical imports, regenerates every expected field, audits exact
+signs, pins 32 dependencies, rejects 32 malformed controls, and refuses -O.
+Cells8/10 remain the concrete source frontier for the full 1/3 collar.
+
 ## Entire closed 1/4 Cell8 collar: all original motions
 
 **six-rupert-1, researcher, 2026-10-01.** The
