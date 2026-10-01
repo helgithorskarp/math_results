@@ -266,6 +266,60 @@ def tensor_parts(parts):
     return family, a, s, "tensor(" + ",".join(p[3] for p in parts) + ")"
 
 
+def unequal_cubes(large_order, small_order):
+    """Aligned full vectors, centered complementary residuals, and rank repair."""
+    require(large_order > small_order >= 1, "unequal cube orders required")
+    large = cube(large_order)
+    small = cube(small_order)
+    t, u = large[2], small[2]
+    f, shifted, s, _ = union_parts([large, small], equal=False)
+    n = len(f)
+    big_m, small_m = len(large[0]) - 1, len(small[0]) - 1
+    c = [[F(0) for _ in range(n - 1)] for _ in range(n - 1)]
+    big_core = core(large[1], t)
+    for i in range(big_m):
+        for j in range(big_m):
+            c[i][j] = big_core[i][j]
+    kappa = F(1 + t * (2 * u - 2 - t), t - 1)
+    for i in range(small_m):
+        for j in range(small_m):
+            if i == j:
+                v = F(t - 1)
+            elif i == small_m - 1 or j == small_m - 1:
+                v = F(-1)
+            elif (i + 1) ^ (j + 1) == small_m:
+                v = kappa
+            else:
+                v = F(-1)
+            c[big_m + i][big_m + j] = v
+    for i in range(big_m):
+        for j in range(small_m):
+            if i == big_m - 1 and j == small_m - 1:
+                v = F(t - 1)
+            elif i == big_m - 1 or j == small_m - 1:
+                v = F(-1)
+            else:
+                v = F(1, t - 1)
+            c[i][big_m + j] = c[big_m + j][i] = v
+    capped = lift(c, t)
+    beta = F((2 * u - 1) * (t - 2 * u + 1), t - 1)
+    q = (n - 1) * (t - 1) + t + u - 2 + (t - u) * (2 * u - 1)
+    epsilon = beta / (2 * (beta + q))
+    require(beta > 0 and 0 < epsilon < 1, "bad unequal cube repair parameters")
+    mixed = [[(1 - epsilon) * capped[i][j] + epsilon * shifted[i][j]
+              for j in range(n)] for i in range(n)]
+    shifted_core = core(shifted, t)
+    actual_q = sum(shifted_core[i][i] for i in range(n - 1)) + sum(sum(row) for row in shifted_core)
+    require(actual_q == q, "shifted Q trace formula")
+    mixed_core = [[(1 - epsilon) * c[i][j] + epsilon * shifted_core[i][j]
+                   for j in range(n - 1)] for i in range(n - 1)]
+    require(lift(mixed_core, t) == mixed, "unequal cube mixture/core mismatch")
+    metadata = {"large_order": large_order, "small_order": small_order,
+                "t": t, "u": u, "beta": str(beta), "shifted_Q_trace": q,
+                "epsilon": str(epsilon), "upper_gap_bound": str(beta / (2 * (n - t)))}
+    return (f, mixed, t, "unequal_cubes(%d,%d)" % (large_order, small_order)), capped, metadata
+
+
 def expect_error(fn):
     try:
         fn()
@@ -393,6 +447,41 @@ def run():
         require(entry["upper_rank"] == len(f) - (1 << (c - 1)), "common-core upper rank")
         entry.update(label=label, core_order=c, petal_order=2, petal_count=2)
         products.append(entry)
+    unequal = []
+    for large_order, small_order in [(2, 1), (3, 1), (3, 2), (4, 1), (4, 2),
+                                     (4, 3), (5, 2), (5, 4), (6, 1)]:
+        repaired, capped, metadata = unequal_cubes(large_order, small_order)
+        f, a, t, label = repaired
+        n = len(f)
+        entry = check(f, a, t)
+        seed = check(f, capped, t)
+        require(entry["lower_rank"] == n - t, "unequal universally maximal lower rank")
+        require(entry["upper_rank"] == n - 1, "unequal upper simplicity")
+        beta = F(metadata["beta"])
+        test = [[(n - t) * (int(i == j) - a[i][j])
+                 - beta / 2 * (int(i == j) - F(1, n)) for j in range(n)] for i in range(n)]
+        require(psd_rank(test) == n - 1, "unequal repaired upper gap")
+        cseed = core(capped, t)
+        qrows = [sum(row) for row in cseed]
+        qseed = [[sum(qrows)] + [-v for v in qrows]]
+        qseed += [[-qrows[i]] + cseed[i] for i in range(n - 1)]
+        threshold = F(n) - beta
+        test = [[threshold * (int(i == j) - F(1, n)) - qseed[i][j]
+                 for j in range(n)] for i in range(n)]
+        psd_rank(test)
+        entry.update(label=label, seed_lower_rank=seed["lower_rank"], **metadata)
+        unequal.append(entry)
+    for core_order, large_order, small_order in [(1, 3, 1), (2, 3, 2)]:
+        repaired, _, _ = unequal_cubes(large_order, small_order)
+        f, a, s, label = tensor_parts([cube(core_order), repaired])
+        entry = check(f, a, s)
+        forced = 1 << (core_order - 1)
+        require(2 * s == len(f), "unequal common-core balance")
+        require(entry["lower_rank"] == entry["upper_rank"] == len(f) - forced,
+                "unequal common-core rank")
+        entry.update(label=label, core_order=core_order,
+                     large_petal_order=large_order, small_petal_order=small_order)
+        products.append(entry)
     # A negative control for general shifted union, with a separate valid cap.
     singleton = cube(1)
     f, a, s, _ = union_parts([cube(3), singleton], equal=False)
@@ -426,6 +515,7 @@ def run():
     return {"ok": True, "agent": "six-downset-1", "role": "researcher",
             "arithmetic": "Python integers and fractions.Fraction",
             "baselines": baseline_results, "unions": unions, "products": products,
+            "unequal_cube_repairs": unequal,
             "forced_span_checks": [cube_forced_span(n) for n in range(2, 6)],
             "complete_cube_family_censuses": [cube_family_census(n) for n in range(2, 5)],
             "unequal_star_control": {"N": n, "s": s, "lower_rank": lower_rank,
@@ -434,7 +524,8 @@ def run():
             "rejection_controls": len(controls) + 1,
             "coverage": {"baseline_count": len(baseline_results),
                          "union_count": len(unions), "product_count": len(products),
-                         "largest_literal_matrix_order": max(x["N"] for x in products + unions)}}
+                         "unequal_cube_repair_count": len(unequal),
+                         "largest_literal_matrix_order": max(x["N"] for x in products + unions + unequal)}}
 
 
 def main():

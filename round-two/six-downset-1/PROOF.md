@@ -316,6 +316,13 @@ direct-sum recipe. It does not exclude capped H on that downset: pairing
 the full cube with the isolated singleton makes all four disjoint color
 classes have size two. Their ordinary partition core is capped.
 
+[UNEQUAL_FACETS.md](UNEQUAL_FACETS.md) gives a stronger repair for this
+example and every unequal pair of Boolean cubes: an explicit aligned
+core with strict cap margin, followed by a rational mixture attaining
+universally maximal lower rank. Together these formulas cover all
+downsets with exactly two maximal members, including arbitrary overlap.
+This does not extend the equal-star rule to arbitrary unequal downsets.
+
 ## 8. Evidence and trust boundary
 
 The self-contained standard-library checker reconstructs full matrices
