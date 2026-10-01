@@ -4,19 +4,32 @@ Author: **six-books-2**, role **researcher**, updated 2026-10-01.
 
 Every ordinary red-B4/blue-B7-free coloring on 22 vertices with a
 fixed-point-free color-preserving involution needs **at least three fully
-red orbit pairs, six fully blue orbit pairs, and ten uniform pairs
+red orbit pairs, seven fully blue orbit pairs, and ten uniform pairs
 total**. An orbit pair is uniform when all four cross edges between its
 two two-vertex orbits have one color. Inside-orbit colors and matching
 signs are arbitrary, and every such involution is covered.
 
-[NINE.md](NINE.md) excludes exactly nine uniform pairs. The inherited
+[BLUE_SIX.md](BLUE_SIX.md) proves the new **seven-blue minimum at
+arbitrary red uniform density**. Two entirely matching orbits give a
+two-row sign action; equality at six blue edges forces a forbidden
+shared-leaf shape. A support count then reduces the other six-blue
+possibilities to six written degree sequences and a forbidden blue path.
+Together with the prior three-red theorem, this supplies an analytic
+ten-total proof. At exactly ten, only **three red/seven blue** remains;
+at least **ten orbits** must be incident with uniform pairs. The same
+two-row argument excludes seven blue pairs when two orbits are entirely
+matching, giving a conditional **eight-blue minimum**. Attainment is not
+asserted. No finite enumeration is a proof premise of this extension.
+
+The preceding [NINE.md](NINE.md) excludes exactly nine uniform pairs. The inherited
 individual minima leave only three red/six blue at total nine. A complete
 exact reduction of all 67 six-edge blue forms and 26081 red triples leaves
 one necessary pattern with 72 inside assignments. The previously
 published arbitrary-complement path-core lemma excludes the survivor for
-every matching signing. This gives the new **ten-total minimum**. At
-exactly ten, the only possible color counts are **three red/seven blue**
-or **four red/six blue**; neither profile is asserted to exist.
+every matching signing. This supplies the preceding finite **ten-total
+minimum**. It left two necessary equality profiles, **three red/seven
+blue** or **four red/six blue**; BLUE_SIX.md now excludes the latter.
+Attainment of three red/seven blue remains unresolved.
 
 [SUPPORT.md](SUPPORT.md) proves that at least nine of the eleven orbits
 are incident with uniform pairs: three entirely matching orbits force
@@ -64,7 +77,8 @@ complements of the earlier A/B/X cores. The earlier five-blue extension has
 author validation and has not been independently reviewed. The finite
 nine-total theorem, local blue-cycle extension and new support/six-blue
 extension also have no peer review verdict. The new ten-total extension
-has no independent review verdict. The blue-cycle proof credits the reviewer's earlier
+has no independent review verdict. The new analytic seven-blue extension
+also has no independent peer-review verdict. The blue-cycle proof credits the reviewer's earlier
 disjoint-two-red-chord X case and rederives it for completeness.
 
 FOUR_BLUE.md also gives a local path-core exclusion: its five displayed
@@ -84,6 +98,37 @@ exclude patterns with ten or more uniform pairs satisfying these
 color and support bounds. No regularity, degree/core theorem, external graph
 catalogue, solver or floating-point premise is used. Author checks are
 not peer review or proof-assistant formalization.
+
+## Controls for the analytic seven-blue proof
+
+Python 3.11+ standard library only. From the repository root:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_b4_b7_free_involution/blue_six_controls.py
+```
+
+[blue_six_controls.py](blue_six_controls.py) imports no campaign program;
+its output matches [blue_six_expected.json](blue_six_expected.json). It
+checks all 86016 two-row Gram normalizations, a feasible joint Gram/action
+positive control with 76 H spines at exact caps, and 256 complete sampled
+lifts. Those give 31456 literal matching-spine checks, 4608 row-action
+residual checks, 256 Gram residual checks, 6216 uniform sums, 512 H inside
+spines and 5632 full switched adjacency rows. It also checks all 76
+positive-degree partitions of twelve with at most eleven parts, all
+3375 three-by-six row-degree-two matrices and the 90 equality shapes,
+and all 4096 permitted red subsets of the final P4+3K2 shape. At the
+seven-blue two-row boundary it checks 270 extra-P-P-blue cases,
+1350 extra-Q-Q-blue cases, and all 40500 one-P-Q-red configurations;
+the 1440 retained odd-column cases all have shared blue leaves.
+
+The full CPython 3.11.2 replay took 1.271 seconds and
+16508 KiB peak child RSS. It runs sequentially with numeric
+threads one and explicit guards active under -O. All other signs and
+blocks are covered by the written proof; the literal lifts sample them.
+The computations are author controls, with no finite proof premise or
+independent peer-review verdict. The earlier NINE.md theorem's original
+finite trust boundary remains unchanged.
 
 ## Reproduction of the nine-pair exclusion
 
