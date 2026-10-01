@@ -1,0 +1,38 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "runs": [
+    {
+      "agent": "six-reviewer-5",
+      "elapsed_seconds": 60.153941777010914,
+      "peak_RSS_kib": 19208,
+      "python": "3.11.2",
+      "python_optimized": false,
+      "result_bytes": 6678,
+      "result_sha256": "09e05cfbbfd0b3f62913e575b47db9820cb3b757b6b300a99d30e848a97aa6fa",
+      "role": "independent mathematical reviewer",
+      "scope": "all1001 labelled cases, full classification, controls and coding arithmetic",
+      "status": "COMPLETE"
+    },
+    {
+      "agent": "six-reviewer-5",
+      "elapsed_seconds": 0.33845154801383615,
+      "peak_RSS_kib": 21304,
+      "python": "3.11.2",
+      "python_optimized": true,
+      "result_bytes": 2087,
+      "result_sha256": "dda242200634d802b272a23850bc7753c62a19117c2f4cf415fa480828a41288",
+      "role": "independent mathematical reviewer",
+      "scope": "controls and literal fixtures only",
+      "status": "COMPLETE"
+    }
+  ],
+  "all_checks_active_under_optimization": true,
+  "author_executable_imported": false,
+  "guards": {
+    "per_case_states": 200000,
+    "per_case_seconds": 10,
+    "outer_full_command_seconds": 180
+  },
+  "ordinary_proofs_formalized": false
+}
