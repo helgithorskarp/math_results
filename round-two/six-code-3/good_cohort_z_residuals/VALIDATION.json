@@ -1,0 +1,129 @@
+{
+  "agent": "six-code-3",
+  "baseline": {
+    "agent": "six-code-3",
+    "distances": {
+      "10": 445,
+      "6": 1264,
+      "8": 637
+    },
+    "distinct_triples": 690,
+    "role": "researcher",
+    "sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+    "status": "PASS_LIVE_BASELINE69_NOT_NOVELTY",
+    "word_pairs": 2346,
+    "words": 69
+  },
+  "certificate_sha256": "ae6c681013e82fce4c69e55e43985ddeb041dfd8504afe93e17115bc702f872b",
+  "complete_raw_carrier_rerun": false,
+  "controls": {
+    "damaged_kinds": [
+      "missing certificate entry",
+      "duplicate certificate index",
+      "boolean certificate index",
+      "wrong product attribution",
+      "wrong first fixture",
+      "wrong candidate population",
+      "wrong candidate hash",
+      "wrong compatible edge population",
+      "missing color entry",
+      "boolean color",
+      "negative color",
+      "color outside capacity",
+      "boolean capacity",
+      "unused color class",
+      "wrong total upper bound",
+      "forged triangle statistic",
+      "actual compatible edge shares a color",
+      "missing raw interface",
+      "duplicate actual relative map",
+      "repeated point image",
+      "invalid five-subset mask",
+      "duplicate core word",
+      "invalid marked point",
+      "forged actual triangle list"
+    ],
+    "damages": 24,
+    "relabelings": 3,
+    "status": "PASS_SEMANTIC_DAMAGE_AND_POINT_TRANSPORT_CONTROLS",
+    "transported_interfaces": 102
+  },
+  "pre_existing_expected_and_certificate": true,
+  "prepublication_repairs": "None to the mathematical generator/checker after the complete cold normal/O checks. Subscope summary was added before freezing expected and those checks.",
+  "proof_status": "Exact positive proper-color bounds on all34 raw interfaces, conditional on complete carrier9045/reviewed8933/8323. Ordinary completeness/reduction unformalized; no new independent review, sharpness or priority claim.",
+  "resource_scope": "Unchanged1CPU2GiB;all threads1;serial jobs;no operational failures/resource escalation.",
+  "result": {
+    "candidate_domains_sha256": "3abef97cddb81b4238f481881bb08d4419e0b38985c38a718435aaaedbf574d4",
+    "color_range": [
+      25,
+      30
+    ],
+    "interfaces": 34,
+    "lambda_xu_subscopes": {
+      "3": {
+        "interfaces": 26,
+        "maximum_upper_bound": 66
+      },
+      "4": {
+        "interfaces": 8,
+        "maximum_upper_bound": 64
+      }
+    },
+    "maximum_upper_bound": 66,
+    "records_sha256": "5ea8cd6745a8bac988fa8f314e2962bff0310db49e90379e66899ca9877a4538",
+    "status": "PASS_ALL34_LITERAL_RESIDUAL_COLOR_CERTIFICATES",
+    "total_compatible_edges": 209622,
+    "total_residual_candidates": 4149,
+    "triangle_uncovered_interfaces": 32,
+    "triangle_witnesses": 45,
+    "universe_per_interface": 4368,
+    "upper_bound_census": {
+      "61": 2,
+      "62": 5,
+      "63": 7,
+      "64": 15,
+      "65": 1,
+      "66": 4
+    }
+  },
+  "role": "researcher",
+  "runs": [
+    {
+      "agent": "six-code-3",
+      "complete_carrier_dependency": "9045, not re-enumerated by this residual package",
+      "guards": "5s/product producer;20s subprocess;64 seeded priorities per new interface",
+      "optimized": false,
+      "peak_child_rss_kib": 17688,
+      "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+      "role": "researcher",
+      "seconds": 5.588336921995506,
+      "source_sha256": {
+        "controls.py": "6cf92ce0e4b20d77228aac3277679fffda753128bfa04d44689d28428738c856",
+        "generate.py": "ca314a92957651c56f4184d55e834292dcec79f30e58e9d662c8da25dd556459",
+        "reproduce.py": "8fe87ddb926d35f1966d60e2b83300ad0ede5685110ee0a5d87783698851b1bc",
+        "verify.py": "6f4f25dd587c4461f6b7b574834d1bed218e11c9a59365f9e3f2bb1a62d27d20"
+      },
+      "threads": 1
+    },
+    {
+      "agent": "six-code-3",
+      "complete_carrier_dependency": "9045, not re-enumerated by this residual package",
+      "guards": "5s/product producer;20s subprocess;64 seeded priorities per new interface",
+      "optimized": true,
+      "peak_child_rss_kib": 21136,
+      "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+      "role": "researcher",
+      "seconds": 6.099026975047309,
+      "source_sha256": {
+        "controls.py": "6cf92ce0e4b20d77228aac3277679fffda753128bfa04d44689d28428738c856",
+        "generate.py": "ca314a92957651c56f4184d55e834292dcec79f30e58e9d662c8da25dd556459",
+        "reproduce.py": "8fe87ddb926d35f1966d60e2b83300ad0ede5685110ee0a5d87783698851b1bc",
+        "verify.py": "6f4f25dd587c4461f6b7b574834d1bed218e11c9a59365f9e3f2bb1a62d27d20"
+      },
+      "threads": 1
+    }
+  ],
+  "status": "COMPLETE_COLD_NORMAL_AND_OPTIMIZED_WITH_FROZEN_CERTIFICATE",
+  "whole_certificate_bytes_match_regeneration": true,
+  "whole_stable_normal_and_optimized_result_match": true
+}
