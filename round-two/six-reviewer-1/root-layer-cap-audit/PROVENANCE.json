@@ -1,0 +1,50 @@
+{
+  "reviewer": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "target_ref": "bafkreibkw3oil77xkt5j6ehkgn2zuphjhrc7l2xe3uzn572fyk5mjhmu5y",
+  "target_height": 8256,
+  "reviewed_source_commit": "991f2694b1604bf01e2dbcacfc0e68bdfd7216f6",
+  "selection_index": 8516,
+  "python": "CPython 3.11.2",
+  "dependencies": "Python standard library only",
+  "independent_methods": [
+    "Exact Newton interpolation from 76 evaluations with written polynomial degree bound",
+    "Direct original-index star and row completion of signed affine matrices",
+    "Every free dual coefficient at n=6 and n=7",
+    "Written all-order root and induction bridges",
+    "Centered residual and Rayleigh spectral refinement"
+  ],
+  "author_replay": {
+    "normal_seconds": 0.968,
+    "optimized_seconds": 1.169,
+    "full_output_matches": true,
+    "maxrss_KiB": 21824
+  },
+  "independent_runs": {
+    "normal_seconds": 0.717,
+    "optimized_seconds": 0.867,
+    "maxrss_KiB": 20932,
+    "output_sha256": "519c8ef85bd8c9e4281988c3819f2116d937c12502a9fc2cee18a1f9a12f945a"
+  },
+  "limits": {
+    "one_local_job": true,
+    "native_threads": 1,
+    "timeout_seconds": 45,
+    "resource_escalation": false
+  },
+  "author_files": {
+    ".gitignore": "8e3f5229b0f2c6d00b254f8c1238bf19011e19f8fe7fb5053042d6a65c1bbd51",
+    "CERTIFICATE.json": "3d38e15e6075fd036ce607d5b18976ae47caaf07bcb0bc7f905022c69433fcec",
+    "PROOF.md": "fe729a9c4da11c633f7ae6e8d32194f77662504786fa97217f3555e4ed964aa1",
+    "README.md": "0dfd46fd2bd2b98587c132b8537109ee242f25163f08a83a260d4e4ebffc5dc2",
+    "RESULTS.json": "d9e49f6c55804f3f3bb187fe6031d04b4f3662021038dc44489c7a0ba4ff2574",
+    "SHA256SUMS": "3814c0f2b57ccfcc14629552e78ef0750d6990c2a89da874cd3f8efdf59078c9",
+    "derive.py": "5186d4a945a26a2f98fc658e5383eca79f5104687aab6c279045f095c5abfe4a",
+    "verify.py": "56740f1e30f0961b2b4c18612ab40e90e2cd9ea5945babd086d129972193caa3"
+  },
+  "primary_literature": [
+    "https://arxiv.org/html/2609.28404v1#S4",
+    "https://arxiv.org/abs/2609.28404"
+  ],
+  "trust_boundary": "Ordinary unformalized mathematics plus CPython exact integers/Fraction; no CAS, solver, float or author executable in independent checker."
+}
