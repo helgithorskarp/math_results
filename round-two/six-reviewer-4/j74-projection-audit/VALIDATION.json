@@ -1,0 +1,317 @@
+{
+  "actual_author": "six-reviewer-4",
+  "author_inputs": [
+    {
+      "bytes": 42,
+      "git_blob_sha1": "ebb56d81adce1b86ea352a8672e32e45868870c6",
+      "name": ".gitignore",
+      "sha256": "6a21e3d2fb88a34ad2a1c91f1686b9194cbdc659f43c1e6d0f96aa24696ab822"
+    },
+    {
+      "bytes": 15165,
+      "git_blob_sha1": "b0d243ec941f223257c46798d17472dce55de341",
+      "name": "PROOF.md",
+      "sha256": "47fd66863b385f4feffc4a456ebfe4feb036c3de21afd82c68725edb2ccf4ddd"
+    },
+    {
+      "bytes": 4721,
+      "git_blob_sha1": "736cc7d429626c5998d74ccd65682d4056206a73",
+      "name": "README.md",
+      "sha256": "78838605c4e9857048b9b44f02a16febb90476ecece90e8557356f63e1e47817"
+    },
+    {
+      "bytes": 12290,
+      "git_blob_sha1": "98abc29128d85ad7f646be06574d25c837f64e3e",
+      "name": "expected.json",
+      "sha256": "d810c5579df8b2a38fcb041e57867927d60ff87d7a9f343d99d932d27f56d409"
+    },
+    {
+      "bytes": 4254,
+      "git_blob_sha1": "66cac29616a0b867bd3d9e5d96980713cf5524b2",
+      "name": "model.py",
+      "sha256": "cc0ce4358eea0139da13962b6abdf25a9710fb934e8e41ee3e6f3cbe3acb8cd7"
+    },
+    {
+      "bytes": 2047,
+      "git_blob_sha1": "0c8388b65df377424381a094a4fe419c55906817",
+      "name": "q5.py",
+      "sha256": "cef1fe01c185fc5c63d729d8e27588b4efe56d8487c87a73f22a68297b18ed3c"
+    },
+    {
+      "bytes": 2935,
+      "git_blob_sha1": "3da4c022ed70a2242cea10b3433c91dbf920846e",
+      "name": "shadow.py",
+      "sha256": "c9a96722fab721c074c4193de9c4fab05527031e720285affad6e258c748f38c"
+    },
+    {
+      "bytes": 16602,
+      "git_blob_sha1": "3ebe9f437b2490fa3343b3ea31d06800032ab5c0",
+      "name": "verify.py",
+      "sha256": "c69e340d6d6faef17350e3fb6025a81a4ebe36c8aa20600c69a0da0c535e333d"
+    }
+  ],
+  "author_replay": {
+    "command": [
+      "python3",
+      "-B",
+      "-O",
+      "scratch/pass3-j74-source/verify.py"
+    ],
+    "elapsed_seconds": 47.04405,
+    "exit_code": 0,
+    "peak_child_rss_KiB": 20804,
+    "stderr": "",
+    "stdout": {
+      "brightness_zonotope_edge_count": 2792,
+      "brightness_zonotope_facet_count": 1226,
+      "brightness_zonotope_vertex_count": 1568,
+      "candidate_pairs": 1891,
+      "candidate_spectrum_sha256": "9fd4446ad39046a33194f408fdaac379296ac86c519337e2e66761bc026db768",
+      "common_shadow_cone_gates": 360,
+      "common_shadow_cone_ratio": "(-1/8)+(1/8)sqrt5",
+      "common_shadow_cone_zero_slacks": 2,
+      "edges": 120,
+      "face_boundary_gates": 480,
+      "face_inventory": {
+        "3": 20,
+        "4": 30,
+        "5": 12
+      },
+      "facets": 62,
+      "incident_chamber_entries": 2792,
+      "independent_maximum_polygon_area_checks": 2,
+      "independent_minimum_polygon_area_checks": 6,
+      "maximum_area_squared": "(113)+(50)sqrt5",
+      "maximum_shadow_corner_counts": [
+        18,
+        18
+      ],
+      "minimum_area_squared": "(207/2)+(91/2)sqrt5",
+      "minimum_shadow_congruence_counts": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "parallel_pairs": 14,
+      "passage_scale_upper_bound_fourth_power": "(641/722)+(67/722)sqrt5",
+      "pell_sign_controls": 80,
+      "projective_area_candidates": 613,
+      "proper_closed_minimum_receiver_fits": 22,
+      "scale_upper_bound_enclosure": [
+        "1.023021211654",
+        "1.023021211655"
+      ],
+      "status": "exact verification passed",
+      "support_sign_audits": 3720,
+      "vertices": 60,
+      "zonotope_controls": 2
+    }
+  },
+  "author_source_commit": "25fc9695745b6832d068d18544452b7852b5847f",
+  "date_utc": "2026-10-01",
+  "dependencies": "standard library only",
+  "external_coordinate_table": "McCooey live fetch returned HTTP465; not a verified input. Named-solid identification independently checked by exact two-cupola construction, preserved complete basal decagons, original radius and full facet inventory.",
+  "independent_expected_sha256": "ad0eca4deff6ab018746ecc7c1a2da2a8f24b0430797db6cb2d08f6e9764fcd1",
+  "independent_runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-reviewer-4/j74-projection-audit/audit.py",
+        "--author-source",
+        "scratch/pass3-j74-source"
+      ],
+      "elapsed_seconds": 2.016508,
+      "exit_code": 0,
+      "peak_child_rss_KiB": 20728,
+      "stderr": "",
+      "stdout": {
+        "author_comparison": {
+          "facet_sets": 62,
+          "proper_motion_matrices": 22,
+          "source_spectrum_sha256": "9fd4446ad39046a33194f408fdaac379296ac86c519337e2e66761bc026db768",
+          "spectrum_entries": 613,
+          "vertex_entries": 60
+        },
+        "facets": 62,
+        "maximum_corners": [
+          18,
+          18
+        ],
+        "proper_minimum_fits": 22,
+        "status": "PASS",
+        "zonotope_vertices": 1568
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-4/j74-projection-audit/audit.py",
+        "--author-source",
+        "scratch/pass3-j74-source"
+      ],
+      "elapsed_seconds": 2.113496,
+      "exit_code": 0,
+      "peak_child_rss_KiB": 23116,
+      "stderr": "",
+      "stdout": {
+        "author_comparison": {
+          "facet_sets": 62,
+          "proper_motion_matrices": 22,
+          "source_spectrum_sha256": "9fd4446ad39046a33194f408fdaac379296ac86c519337e2e66761bc026db768",
+          "spectrum_entries": 613,
+          "vertex_entries": 60
+        },
+        "facets": 62,
+        "maximum_corners": [
+          18,
+          18
+        ],
+        "proper_minimum_fits": 22,
+        "status": "PASS",
+        "zonotope_vertices": 1568
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-4/j74-projection-audit/audit.py",
+        "--author-source",
+        "scratch/pass3-j74-source"
+      ],
+      "elapsed_seconds": 2.121691,
+      "exit_code": 0,
+      "peak_child_rss_KiB": 23204,
+      "purpose": "final replay after adding strict irredundancy guard at every projected corner",
+      "stderr": "",
+      "stdout": {
+        "author_comparison": {
+          "facet_sets": 62,
+          "proper_motion_matrices": 22,
+          "source_spectrum_sha256": "9fd4446ad39046a33194f408fdaac379296ac86c519337e2e66761bc026db768",
+          "spectrum_entries": 613,
+          "vertex_entries": 60
+        },
+        "facets": 62,
+        "maximum_corners": [
+          18,
+          18
+        ],
+        "proper_minimum_fits": 22,
+        "status": "PASS",
+        "zonotope_vertices": 1568
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-4/j74-projection-audit/audit.py",
+        "--author-source",
+        "scratch/pass3-j74-source"
+      ],
+      "elapsed_seconds": 3.175186,
+      "exit_code": 0,
+      "peak_child_rss_KiB": 23076,
+      "purpose": "final replay with exact complete cupola base-decagon preservation and strict projected-corner guards",
+      "stderr": "",
+      "stdout": {
+        "author_comparison": {
+          "facet_sets": 62,
+          "proper_motion_matrices": 22,
+          "source_spectrum_sha256": "9fd4446ad39046a33194f408fdaac379296ac86c519337e2e66761bc026db768",
+          "spectrum_entries": 613,
+          "vertex_entries": 60
+        },
+        "facets": 62,
+        "maximum_corners": [
+          18,
+          18
+        ],
+        "proper_minimum_fits": 22,
+        "status": "PASS",
+        "zonotope_vertices": 1568
+      }
+    }
+  ],
+  "optimized_rejected_inputs": [
+    {
+      "arguments": [
+        "--expected",
+        "scratch/pass3-corrupt-expected.json"
+      ],
+      "exit_code": 1,
+      "rejection_reason": "complete expected result mismatch"
+    },
+    {
+      "arguments": [
+        "--author-source",
+        "scratch/pass3-missing-facet"
+      ],
+      "exit_code": 1,
+      "rejection_reason": "all author facet sets"
+    },
+    {
+      "arguments": [
+        "--author-source",
+        "scratch/pass3-forged-motion"
+      ],
+      "exit_code": 1,
+      "rejection_reason": "all22 author motion matrices"
+    }
+  ],
+  "python_version": "Python 3.11.2",
+  "role": "independent reviewer",
+  "thread_limit": 1,
+  "trust_boundary": "Unformalized hull, brightness, chamber coverage, isometry, cone and compactness arguments; exact common-denominator integer-pair arithmetic and Python execution. Optional restricted AST data parsing/serialization comparison is separately identified; no imported author program."
+}
