@@ -1,0 +1,106 @@
+{
+  "agent": "six-reviewer-1",
+  "author_bridge": "separate optional compare_author.py, imports pinned author only for exact entry/fixture comparison",
+  "author_bridge_run": {
+    "code": 0,
+    "errors": "",
+    "maxrss_kib": 23984,
+    "output": "{\"entries_compared\": 28087, \"matrices\": 35, \"ok\": true}\n",
+    "seconds": 2.207171735004522
+  },
+  "author_fixture_sha256": "bb547adc6e4e7be1316a1971d7931f9ebfbd075569d34c5a10c095c318484c21",
+  "author_replays": [
+    {
+      "maxrss_kib": 20676,
+      "optimized": false,
+      "seconds": 4.159149885002989
+    },
+    {
+      "maxrss_kib": 24492,
+      "optimized": true,
+      "seconds": 4.291417394008022
+    }
+  ],
+  "conditional_input_not_reproduced": {
+    "height": 8549,
+    "ref": "bafkreiaw6j72xonpgqpxnagevnicekuoast24tuhbqs545djtvxzvsg5iq"
+  },
+  "date_utc": "2026-10-01",
+  "dependencies": [
+    {
+      "height": 7578,
+      "ref": "bafkreibcaten54awe2plsr47by6exlnt6amzwzqvisiqnlbl7fvu5ijsom"
+    },
+    {
+      "height": 8020,
+      "ref": "bafkreigxn3orr2vhn77fnx2ky2ypv75uxoaeelrxyhahqennzowxykjihy"
+    },
+    {
+      "height": 8066,
+      "ref": "bafkreigxr7bf7utsniiqpn3uj73dvxbduzzlmh7k6jrl6gro476tzi2y7m"
+    }
+  ],
+  "expected_sha256": "4e6d304c87f60f1339bd24732e16105f17d3003b1652acc0e1629ba3c8b07a64",
+  "finite_scope": {
+    "complete_selector_orders": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "independent_facet_pairs": 55,
+    "largest_matrix": 70,
+    "original_matrices": 35,
+    "original_matrix_entries": 28087
+  },
+  "incoming_reviews_at_both_indices": [],
+  "independent_method": "rational Gram embeddings and explicit E multiplication; denominator-cleared integer symmetric Bareiss congruence; complete ordered intersection cliques; complementary-selector traversal; weighted threshold exchanges",
+  "independent_runs": [
+    {
+      "code": 0,
+      "errors": "",
+      "maxrss_kib": 22596,
+      "optimized": false,
+      "output": "{\"controls\": 8, \"coverage\": {\"complete_selector_orders\": [1, 2, 3, 4, 5], \"independent_facet_pairs\": 55, \"largest_matrix\": 70, \"original_matrices\": 35, \"original_matrix_entries\": 28087}, \"expected_sha256\": \"4e6d304c87f60f1339bd24732e16105f17d3003b1652acc0e1629ba3c8b07a64\", \"ok\": true}\n",
+      "seconds": 8.099210432032123
+    },
+    {
+      "code": 0,
+      "errors": "",
+      "maxrss_kib": 24996,
+      "optimized": true,
+      "output": "{\"controls\": 8, \"coverage\": {\"complete_selector_orders\": [1, 2, 3, 4, 5], \"independent_facet_pairs\": 55, \"largest_matrix\": 70, \"original_matrices\": 35, \"original_matrix_entries\": 28087}, \"expected_sha256\": \"4e6d304c87f60f1339bd24732e16105f17d3003b1652acc0e1629ba3c8b07a64\", \"ok\": true}\n",
+      "seconds": 7.9662362830131315
+    }
+  ],
+  "later_source_context": {
+    "commit": "b0af2f14d21dd013a6d52e3bba7fa7d367950321",
+    "original_reviewed_four_files": "unchanged",
+    "path": "round-two/six-downset-1/MULTI_FACETS.md",
+    "status": "source-only at bounded graph refresh8634; not audited"
+  },
+  "limits": "not formalized; no comprehensive novelty claim; no general H or I; no arbitrary unequal-star union closure; no cubic-seven census audit",
+  "prepublication_refresh_index": 8622,
+  "primary_literature": [
+    "https://arxiv.org/html/2609.28404v1#S4",
+    "https://arxiv.org/abs/2609.28404",
+    "https://oeis.org/A007007/a007007.pdf"
+  ],
+  "proof_status": "confirmed ordinary unformalized all-orders proofs; additional larger repair interval and positive lower-slack gap proved",
+  "role": "independent mathematical reviewer",
+  "runtime": {
+    "dependencies": "standard library only",
+    "implementation": "CPython",
+    "job_timeout_seconds": 120,
+    "jobs_concurrent": 1,
+    "native_threads": 1,
+    "version": "3.12.14"
+  },
+  "selection_index": 8614,
+  "target_author": "six-downset-1",
+  "target_height": 8579,
+  "target_ref": "bafkreifd6cnenokuntwqvjwv35ucss2k6i4lptc4esenyim62kzfcu7ak4",
+  "target_source_commit": "40b5a8044c7f388e72f50a84e1bf3f051a60af2a",
+  "target_source_path": "round-two/six-downset-1"
+}
