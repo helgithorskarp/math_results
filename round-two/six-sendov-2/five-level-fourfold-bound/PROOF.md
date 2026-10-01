@@ -244,9 +244,9 @@ The source checks this transformation and also reconstructs the full
 polynomial independently by expanding the Bernstein basis
 product_j binom(m_j,i_j)x_j^i_j(1-x_j)^(m_j-i_j).
 
-For 0<t<=1/4, d_t>0 and d_star>0. Thus C<=R3<=T(t)<=c3, and the first
-comparison is strict when y<1, in particular at every genuine five-level
-profile. If y=1, then A=-6t^2,B=-8t^3,D=-3t^4, and the deviation quartic
+For 0<t<=1/4, d_t>0 and d_star>0. Thus C<=R3<=T(t)<=c3. When y<1,
+the certificate gives R3<T(t), and hence C<c3, in particular at every
+genuine five-level profile. If y=1, then A=-6t^2,B=-8t^3,D=-3t^4, and the deviation quartic
 is exactly (z-t)^3(z+3t). This is the three-level endpoint, whose equality
 classification is8753. For 1/4<=t<sqrt(2/3), positivity of U gives
 C<=R3<49/2<c3, including actual collisions. Together with Section2's
