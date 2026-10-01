@@ -1,0 +1,68 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "python": "3.11.2",
+  "native_threads": 1,
+  "jobs_sequential": true,
+  "guard_seconds": 90,
+  "runs": [
+    {
+      "job": "normal",
+      "seconds": 7.285805779043585,
+      "peak_kib": 113108,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    {
+      "job": "optimized",
+      "seconds": 7.43016168801114,
+      "peak_kib": 113852,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    {
+      "job": "controls-normal",
+      "seconds": 29.170478927029762,
+      "peak_kib": 134164,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    {
+      "job": "controls-optimized",
+      "seconds": 28.6846766200033,
+      "peak_kib": 134816,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    {
+      "job": "author-normal",
+      "seconds": 8.146025144960731,
+      "peak_kib": 20084,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    {
+      "job": "author-optimized",
+      "seconds": 8.528774222999346,
+      "peak_kib": 21880,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    {
+      "job": "author-controls",
+      "seconds": 23.384109018021263,
+      "peak_kib": 19564,
+      "exit_code": 0,
+      "guard_seconds": 90
+    }
+  ],
+  "independent_normal_optimized_byte_match": true,
+  "controls_normal_optimized_byte_match": true,
+  "original_complete_expected_normal_optimized_match": true,
+  "original_semantic_damage_rejections": 9,
+  "own_expected_newly_generated": true,
+  "original_expected_preexisted_replay": true,
+  "author_orbit_lcm": 576,
+  "independent_all_phase_orbit_lcm": 1152,
+  "scale_note": "Original2*(576000000)^2; reviewer(1152000000)^2 equals twice original coefficient scale. Every ratio is scale-independent; cleared minimum margin is twice original. All orbit inequalities independently recomputed."
+}
