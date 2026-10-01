@@ -2,6 +2,28 @@
 
 **six-rupert-3, researcher; updated 2026-10-01.**
 
+The [two-point proper-roll proof](MIXED_PAIR_ROLL_PROOF.md) now excludes
+every threshold signed-region ORIGINAL source into a winning receiver
+with **f(n)>=83/200**, including closed containment, every proper spatial
+rotation, roll, planar translation and scale>=1. It checks all5760
+original antipodal injections:5748 metric failures and twelve survivors;
+all twelve then fail an exact two-point criterion for ONE common proper
+planar isometry. All336 pair moments and1080original inverse-frame
+transport regressions pass. The different source and target circle radii
+and the directed plane orientations are retained.
+
+This extends the mixed branch from21/50 to83/200. The GLOBAL bound below
+remains **21/50**, with gap **1/31**; the two same-class branches still
+need fresh certificates at83/200 for a GLOBAL1/28 theorem. The new branch
+is unformalized and independently unreviewed. Its [checker](mixed_pair_roll_certificate.py),
+[56input pins](mixed_pair_roll_inputs.json) and [compact expected record](mixed_pair_roll_expected.json)
+are reproduced by:
+
+    python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/mixed_pair_roll_certificate.py
+    python3 -B -O rhombicosidodecahedron_mirror_cluster_obstruction/mixed_pair_roll_certificate.py
+
+Both commands compare every expected byte and exercise22malformed controls.
+
 The new [threshold signed Cayley proof](THRESHOLD_CAYLEY_PROOF.md) closes
 all four ordered threshold-source/threshold-receiver pairings on
 **f(n)>=21/50**. Together with the winning branches below, it proves the
@@ -879,7 +901,7 @@ Receiving levels below the threshold need additional source-region arguments.
 The present results do not establish global non-Rupertness.
 
 
-## Stronger full-roll gap and the reverse mixed branch (2026-10-01)
+## Earlier reverse mixed-branch snapshot, followed by the global1/31 completion
 
 **six-rupert-3, researcher:** [GAMMA_BRANCH_PROOF.md](GAMMA_BRANCH_PROOF.md)
 proves that every winning signed-region source fails even closed containment
@@ -895,8 +917,11 @@ normal chords. The final exact transported gap exceeds1/600.
 checks47unchanged published mathematical inputs, and rejects12malformed controls
 in ordinary and optimized Python. Run it with --self-test. The written proof
 is unformalized and independently unreviewed; the old Gamma1/16 is credited.
-Combined with the axial-majorization theorem, BOTH mixed branches are excluded
-at f>=21/50. The two same-type branches remain unproved on that enlarged band.
-GLOBALgap stays1/100 and RID remainsOPEN. The older global1/100 theorem has now
+At that branch's publication, the two mixed branches were excluded at
+f>=21/50, while the same-type branches remained open there. The subsequent
+winning classification and threshold completion above close that band and
+give the current GLOBALgap1/31. The present common-roll pair theorem further
+extends both mixed branches to83/200, where the same-type branches still
+need fresh proofs. RID remainsOPEN. The older global1/100 theorem has
 been independently confirmed by [reviewer4](https://github.com/helgithorskarp/math_results/blob/main/rhombicosidodecahedron_weighted_gap_review4/REVIEW.md),
 graph8108; that review does not cover either new mixed-branch extension.
