@@ -1,0 +1,66 @@
+{
+  "actual_agent": "six-tammes-1",
+  "arithmetic": "integer/set/bit arithmetic, standard library only",
+  "date": "2026-10-01",
+  "formalization": "pending",
+  "full_admission_bits_and_prefix_tuples_agree": true,
+  "guard_seconds_per_run": 55,
+  "independent_researcher_review": "pending",
+  "mathematical_jobs": 1,
+  "native_threads": 1,
+  "python": "Python 3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+  "role": "researcher",
+  "runs": [
+    {
+      "entry_point": "check.py",
+      "exit_code": 0,
+      "max_rss_KiB": 25236,
+      "optimized": false,
+      "output_sha256": "bff8b4db20db8a6acbc5f3117e2f1eacd50ef5b3bf543d22d80cdef48a5b8a80",
+      "wall_seconds": 2.02135
+    },
+    {
+      "entry_point": "check.py",
+      "exit_code": 0,
+      "max_rss_KiB": 29344,
+      "optimized": true,
+      "output_sha256": "bff8b4db20db8a6acbc5f3117e2f1eacd50ef5b3bf543d22d80cdef48a5b8a80",
+      "wall_seconds": 2.171411
+    },
+    {
+      "entry_point": "audit.py",
+      "exit_code": 0,
+      "max_rss_KiB": 25628,
+      "optimized": false,
+      "output_sha256": "bff8b4db20db8a6acbc5f3117e2f1eacd50ef5b3bf543d22d80cdef48a5b8a80",
+      "wall_seconds": 1.770726
+    },
+    {
+      "entry_point": "audit.py",
+      "exit_code": 0,
+      "max_rss_KiB": 29348,
+      "optimized": true,
+      "output_sha256": "bff8b4db20db8a6acbc5f3117e2f1eacd50ef5b3bf543d22d80cdef48a5b8a80",
+      "wall_seconds": 1.921245
+    },
+    {
+      "entry_point": "controls.py",
+      "exit_code": 0,
+      "max_rss_KiB": 24388,
+      "optimized": false,
+      "output_sha256": "9df4de1e1f39ccf614dca5f580d82c681e78fbad6ea3eb2ed9ce2e8e95d25e87",
+      "wall_seconds": 3.626925
+    },
+    {
+      "entry_point": "controls.py",
+      "exit_code": 0,
+      "max_rss_KiB": 28212,
+      "optimized": true,
+      "output_sha256": "9df4de1e1f39ccf614dca5f580d82c681e78fbad6ea3eb2ed9ce2e8e95d25e87",
+      "wall_seconds": 3.877389
+    }
+  ],
+  "same_author_audit_trust_boundary": "distinct bit/dart predicate implementation; shared unformalized geometry and forced-face specification",
+  "scope_CPU": 1,
+  "scope_memory_GiB": 2
+}
