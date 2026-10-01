@@ -1,0 +1,68 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "date": "2026-10-01",
+  "targets": [
+    {
+      "ref": "bafkreibf3a2hbxxnlqvn2grzcpucwd2mwfuuxmxpv2cgkkisy4p4xkp5oe",
+      "height": 8287
+    },
+    {
+      "ref": "bafkreidmepnp3tga7vchltc7hwl4tj7plav5zeiplpmamcz6wqbucdkiny",
+      "height": 8285
+    }
+  ],
+  "reviewed_source_commit": "152fd9a715e46a51364a91b1fd67349dced849f0",
+  "implementation": "CPython 3.11.2 standard library; exact integers and literal sets; no campaign-source imports",
+  "certificate_sha256": "2555b641beb988c70160161ffce7dcec9b1b1b9630874851949bc9e03d5fd7dc",
+  "certificate_bytes": 36056,
+  "proof_nodes": 4672,
+  "primary_baseline": {
+    "url": "https://aeb.win.tue.nl/codes/cwc/d6/a18.6.5.69",
+    "bytes": 1311,
+    "sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d"
+  },
+  "primary_literature": [
+    "https://aeb.win.tue.nl/codes/Andw.html",
+    "https://ir.cwi.nl/pub/6883/6883D.pdf",
+    "https://ymchee66.github.io/home/PDF/6cwc.pdf"
+  ],
+  "validation": [
+    {
+      "task": "independent literal verifier",
+      "optimized": false,
+      "seconds": 0.7229123300057836,
+      "sha256": "3a317e55ef647dd7c1f4aaa9bc4c54ee4d0748d29d09bc6a26e162967c884632",
+      "child_peak_rss_kib": 20212
+    },
+    {
+      "task": "independent literal verifier",
+      "optimized": true,
+      "seconds": 0.9787127079907805,
+      "sha256": "3a317e55ef647dd7c1f4aaa9bc4c54ee4d0748d29d09bc6a26e162967c884632",
+      "child_peak_rss_kib": 22432
+    },
+    {
+      "task": "independent bitmask producer regeneration",
+      "optimized": false,
+      "seconds": 0.1219960330054164,
+      "sha256": "9cdf5e08baca3302d7e0ff933a5e1c4c8744b538b3ef94db879d87dff49f82b3",
+      "child_peak_rss_kib": 22432
+    },
+    {
+      "task": "independent bitmask producer regeneration",
+      "optimized": true,
+      "seconds": 0.2949370300048031,
+      "sha256": "9cdf5e08baca3302d7e0ff933a5e1c4c8744b538b3ef94db879d87dff49f82b3",
+      "child_peak_rss_kib": 22432
+    }
+  ],
+  "independent_discovery_validation": {
+    "raw_two_anchor_quota_cases": 22386,
+    "method": "All actual labeled high-cell/deficit placements; no orbit quotient; exact independent point/pair/budget search. Subsequent two-graph clique proof replaces this longer enumeration as the publication proof.",
+    "unit_and_mixed_seconds": 44.19400182698155,
+    "three_high_seconds": 2.118417972989846
+  },
+  "mathematical_dependencies": "No graph theorem or earlier certificate is a premise of the independent two-graph proof. Classical affine examples and the established69-word witness are openly attributed.",
+  "trust": "Finite geometry, coloring/branching induction, shortening and global incidence arguments are written proofs, not formalizations."
+}
