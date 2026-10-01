@@ -4,16 +4,25 @@ Author: **six-books-2**, role **researcher**, updated 2026-10-01.
 
 Every ordinary red-B4/blue-B7-free coloring on 22 vertices with a
 fixed-point-free color-preserving involution needs **at least three fully
-red orbit pairs, seven fully blue orbit pairs, and ten uniform pairs
+red orbit pairs, seven fully blue orbit pairs, and eleven uniform pairs
 total**. An orbit pair is uniform when all four cross edges between its
 two two-vertex orbits have one color. Inside-orbit colors and matching
 signs are arbitrary, and every such involution is covered.
 
+[ELEVEN.md](ELEVEN.md) analytically excludes the last **three red/seven
+blue** equality profile. Full support and a blue-leaf restriction leave
+six blue forms by a written degree argument. Matching-square and uniform
+page contradictions exclude five; the blue-path form forces the known
+arbitrary-complement path obstruction. **Three red pairs require eight
+blue pairs.** At exactly eleven total, only **3R8B** and **4R7B** remain;
+the latter has full uniform support eleven. No attainment is asserted.
+Computation validates this proof and is not a premise.
+
 [ONE_MATCHING.md](ONE_MATCHING.md) proves that **any entirely matching
 orbit forces at least eight blue uniform pairs**. Therefore exactly seven
 blue pairs require **all eleven orbits** to be incident with uniform
-pairs. At exactly ten uniform pairs, only **three red/seven blue with
-full support eleven** remains. A matching-orbit normalization gives a
+pairs. Its exact-ten analysis left only **three red/seven blue with
+full support eleven**, now excluded by ELEVEN.md. A matching-orbit normalization gives a
 cubic graph on the other ten orbits and the necessary tradeoff
 **3b-2r>=15**. A nonnegative triangle identity and written red-star/path
 cases exclude equality with exactly one matching orbit. No finite
@@ -25,7 +34,7 @@ two-row sign action; equality at six blue edges forces a forbidden
 shared-leaf shape. A support count then reduces the other six-blue
 possibilities to six written degree sequences and a forbidden blue path.
 Together with the prior three-red theorem, this supplies an analytic
-ten-total proof. At exactly ten, only **three red/seven blue** remains;
+ten-total proof. Its exact-ten analysis left only **three red/seven blue**;
 that proof gave support at least ten, now strengthened to eleven by
 ONE_MATCHING.md. The same two-row argument excludes seven blue pairs
 when two orbits are entirely
@@ -40,7 +49,7 @@ published arbitrary-complement path-core lemma excludes the survivor for
 every matching signing. This supplies the preceding finite **ten-total
 minimum**. It left two necessary equality profiles, **three red/seven
 blue** or **four red/six blue**; BLUE_SIX.md now excludes the latter.
-Attainment of three red/seven blue remains unresolved.
+ELEVEN.md now excludes the three red/seven blue profile as well.
 
 [SUPPORT.md](SUPPORT.md) proves that at least nine of the eleven orbits
 are incident with uniform pairs: three entirely matching orbits force
@@ -93,6 +102,7 @@ also has no independent peer-review verdict. The blue-cycle proof credits the re
 disjoint-two-red-chord X case and rederives it for completeness.
 The new one-matching-orbit/tradeoff extension likewise has author checks
 and no independent peer-review verdict.
+The new analytic eleven-total extension also awaits independent review.
 
 FOUR_BLUE.md also gives a local path-core exclusion: its five displayed
 orbits have four blue and three red uniform pairs, all core-to-outside
@@ -107,10 +117,42 @@ family, without the global minima or finite reduction as premises.
 
 The unrestricted located interval remains 22..23. This result does not
 assert an involution for arbitrary hypothetical 22-vertex witnesses, or
-exclude patterns with ten or more uniform pairs satisfying these
+exclude patterns with eleven or more uniform pairs satisfying these
 color and support bounds. No regularity, degree/core theorem, external graph
 catalogue, solver or floating-point premise is used. Author checks are
 not peer review or proof-assistant formalization.
+
+## Controls for the analytic eleven-total proof
+
+Python 3.11+ standard library only. From the repository root:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_b4_b7_free_involution/eleven_controls.py
+```
+
+[eleven_controls.py](eleven_controls.py) imports no campaign program or
+other census. Its stdout matches [eleven_expected.json](eleven_expected.json),
+SHA256 `e70f881a048e133bda94248d0970a2f1cac266bf73f6d25c4658bae58c1a3b4d`.
+It generates the ten positive-degree lists and six blue forms through
+42 nonleaf-core attempts, without taking the written table as input.
+Literal two-point costs and direct inside branching reproduce all
+7285 red triples:3730 with full support,711 passing matching relaxation,
+one necessary pattern/54 inside words. The entire record matches the
+known arbitrary-complement path core; altered/missing data are rejected.
+That necessary pattern is not a valid host.
+
+Separate controls check the six written exclusions:6072 triangle red-sum
+identities,2660 path matching-square identities,1632 two-leaf identities,
+and all relevant candidate red triples/support cases. The known path
+parity obstruction is checked on400 balanced-row pairs.48 sampled literal
+lifts give11088 full spines,2160 matching combined-page identities,
+480 uniform sums and528 inside identities. The final CPython3.11.2 -O
+run took **1.256 seconds/16184 KiB**, threads one; guards survive optimization.
+The written proof supplies all sign/inside and degree-case coverage.
+Neither these controls nor the independently agreeing private fast
+census is a theorem premise or independent peer review. Earlier source
+and finite trust boundaries remain unchanged.
 
 ## Controls for the one-matching-orbit theorem
 
