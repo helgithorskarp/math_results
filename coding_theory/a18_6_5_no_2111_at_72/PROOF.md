@@ -234,9 +234,14 @@ The [maintained primary table](https://aeb.win.tue.nl/codes/Andw.html),
 checked2026-10-01, retains69–72. Bounded primary searches did not locate
 this exact paired-profile bound; no comprehensive priority claim is made.
 
-The minimum-pair-three input has independent reviewer2 confirmation at
-height8080, with a stronger restricted bound60. That review does not cover
-this new theorem. The imported no221 and eight-class results and this
-new proof have independent review pending; the ordinary reduction and
-counting bridges are unformalized. The all-unit case remains open, and
-this source does not establish a global upper bound71.
+The imported inputs have independent reviewer2 confirmations:
+[minimum-pair-three](../../constant_weight_pair_two_review2/REVIEW.md)
+at height8080, including a stronger restricted bound60;
+[no221](../../constant_weight_mixed_stars_review2/REVIEW.md) at height8128;
+and the [eight-class theorem and corrected symmetries](../../constant_weight_2111_classification_review2/REVIEW.md)
+at height8214. The last review confirms the corrected orders and gives
+actual point-group presentations. Those reviews do not cover the new
+paired-star theorem or its global corollary. Independent review of this
+new proof is pending; the ordinary reduction and counting bridges are
+unformalized. The all-unit case remains open, and this source does not
+establish a global upper bound71.
