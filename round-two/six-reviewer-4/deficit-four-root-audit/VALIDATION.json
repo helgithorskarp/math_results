@@ -1,0 +1,218 @@
+{
+  "actual_reviewer": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "python_version": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "serial_jobs_only": true,
+  "all_native_thread_limits_one": true,
+  "process_scope": "Existing 1 CPU / 2 GiB; unchanged",
+  "independent_runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "check.py",
+        "--emit"
+      ],
+      "seconds": 3.7219022740027867,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "peak_rss_upper_kib": 23168
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "check.py"
+      ],
+      "seconds": 3.6210029150242917,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "peak_rss_upper_kib": 23180
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "check.py"
+      ],
+      "seconds": 3.7567308329744264,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "peak_rss_upper_kib": 25496
+    }
+  ],
+  "comparison_runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "compare.py",
+        "pass12-native-output",
+        "--controls"
+      ],
+      "seconds": 0.17286218999652192,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "peak_rss_upper_kib": 17864
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "compare.py",
+        "pass12-native-output",
+        "--controls"
+      ],
+      "seconds": 0.32214860297972336,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "peak_rss_upper_kib": 20656
+    }
+  ],
+  "native_additional_replays": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "generate.py",
+        "--output-dir",
+        "pass12-native-output"
+      ],
+      "seconds": 1.53924311400624,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "peak_rss_upper_kib": 16756
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "solve.py",
+        "--output-dir",
+        "pass12-native-output"
+      ],
+      "seconds": 0.9578473119763657,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "peak_rss_upper_kib": 19636
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "verify_multicover.py",
+        "--output-dir",
+        "pass12-native-output"
+      ],
+      "seconds": 2.2779022969771177,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "peak_rss_upper_kib": 19636
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "verify_literal.py",
+        "--output-dir",
+        "pass12-native-output"
+      ],
+      "seconds": 4.909823354973923,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "peak_rss_upper_kib": 19636
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "controls.py",
+        "--output-dir",
+        "pass12-native-output"
+      ],
+      "seconds": 13.098320521006826,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "peak_rss_upper_kib": 21544
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "generate.py",
+        "--output-dir",
+        "pass12-native-output"
+      ],
+      "seconds": 1.6249148359638639,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "peak_rss_upper_kib": 21544
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "solve.py",
+        "--output-dir",
+        "pass12-native-output"
+      ],
+      "seconds": 0.8503655590466224,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "peak_rss_upper_kib": 22092
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "verify_multicover.py",
+        "--output-dir",
+        "pass12-native-output"
+      ],
+      "seconds": 1.8740049339830875,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "peak_rss_upper_kib": 22092
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "verify_literal.py",
+        "--output-dir",
+        "pass12-native-output"
+      ],
+      "seconds": 4.929048913007136,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "peak_rss_upper_kib": 22092
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "controls.py",
+        "--output-dir",
+        "pass12-native-output"
+      ],
+      "seconds": 13.48932848800905,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "peak_rss_upper_kib": 22528
+    }
+  ],
+  "whole_normal_optimized_records_match": true,
+  "all_135_entries_and_41_tags_and_exact_domains_match": true,
+  "prior_raw_census_and_histograms_match": true,
+  "expected_raw_sha256": "f5dd5adc6e5c84cafe1340b7dd745dbaadef01c26bcd17851100a9d29b599ae1",
+  "own_source_compile_checked": true,
+  "guards_hit": false,
+  "active_jobs": []
+}
