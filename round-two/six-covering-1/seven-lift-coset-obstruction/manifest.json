@@ -1,0 +1,91 @@
+{
+  "agent": "six-covering-1",
+  "available_forced_copy_cost": 46,
+  "context_graph_refs": {
+    "integer_fractional7709": "bafkreiexerftc5olvjciiirgnyrzes5lrfdhuyfvjki5pv3ub2lnlxqtnm",
+    "mixed_budget8857": "bafkreiequc75bussll3w56aymsxhe3ltsq2tnbtwlzrzbrxd3z3z62gbb4",
+    "problem7093": "bafkreidhpdrjljbwoh3kwh3wqnqxyf773gqpsb67xp63hxtcehohdhqare",
+    "resource_cost8736": "bafkreihr43w3wggozgvvnwa3jj4lple7esqqnu772zsft4bhg72d4goilu",
+    "weighted7174": "bafkreidokkxgmeixbjd3k2ibu5j2cdbk3eavhiggfwq5437hz4ryikbhm4"
+  },
+  "corollary_scope": "All30 divisorsg of720 excluded ONLY for the written two-stage single-coset construction route toward15120",
+  "date": "2026-10-01",
+  "dependencies": "standard library only",
+  "files": [
+    {
+      "bytes": 13,
+      "path": ".gitignore",
+      "sha256": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+    },
+    {
+      "bytes": 2121,
+      "path": "README.md",
+      "sha256": "1627e16731f1c2048e8ffdde98eaaad3bca0a0ebd5971c7b802765f71fee6089"
+    },
+    {
+      "bytes": 15618,
+      "path": "proof.md",
+      "sha256": "6b1e363cc6eb020b34057cc6bccfd614c92c5399e4e0d6966d5ddcc4d9f77a36"
+    },
+    {
+      "bytes": 15382,
+      "path": "check.py",
+      "sha256": "bca75617f09617012c5ba5a9620bd4709733ad9ee5768ba427d8ff4379b935a9"
+    },
+    {
+      "bytes": 6265,
+      "path": "local40.py",
+      "sha256": "ada0cf67fccf35f4cad71a7c86c3c5811db77e94a38108b69dc94a3ecf746dc4"
+    },
+    {
+      "bytes": 14194,
+      "path": "expected.json",
+      "sha256": "2b27cd5f50395ac163af550ea5f08537f5bf44603a18b21d6cd5e57d76cae079"
+    }
+  ],
+  "fractional_uniform_coverage": [
+    141,
+    140
+  ],
+  "global_numerical_bound_changed": false,
+  "integral_cover_possible": false,
+  "interpreter": "CPython3.11.2",
+  "local_minimum_original_cost": 48,
+  "mathematical_evidence": "expected.json",
+  "no_solver_status_used": true,
+  "normal_optimized_validation": [
+    {
+      "args": [
+        "python3",
+        "-B",
+        "check.py",
+        "--expected",
+        "expected.json"
+      ],
+      "peak_children_rss_kib": 14196,
+      "returncode": 0,
+      "seconds": 3.046182827965822
+    },
+    {
+      "args": [
+        "python3",
+        "-B",
+        "-O",
+        "check.py",
+        "--expected",
+        "expected.json"
+      ],
+      "peak_children_rss_kib": 16924,
+      "returncode": 0,
+      "seconds": 2.3032958210096695
+    }
+  ],
+  "primary_literature": [
+    "https://arxiv.org/html/2607.19029",
+    "https://arxiv.org/html/2605.18644"
+  ],
+  "role": "researcher",
+  "status": "AUTHOR_CHECKED_ELEMENTARY_LEMMA",
+  "target": "A whole class modulo6 at period5040 using at most one phase for each original7d label,d|720,d>=2",
+  "trust_boundary": "Written unformalized reduction and elementary case proof, supported by exact literal author checks; no independent reviewer verdict or historical priority claimed"
+}
