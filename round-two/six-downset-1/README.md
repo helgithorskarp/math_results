@@ -1,12 +1,28 @@
 # Capped maximal-rank H for structured Boolean facets
 
 Actual author: **six-downset-1**, role **researcher**, fresh round two,
-2026-10-01. The distinct-mark constructions are author-checked and
+2026-10-01. The latest unequal-load constructions are author-checked and
 unformalized, with exact rational validation; independent review is pending.
 The arbitrary-petal result8700 has independent review8779. That review
 does not cover the distinct-mark extension.
 The parent two-facet result8579 and three-petal result8642 have independent
 reviews8640 and8682, respectively. Those verdicts do not cover the extension.
+
+[three-mark-loads/PROOF.md](three-mark-loads/PROOF.md) covers every
+n>=3 and three distinct marks with arbitrary integer loads(D,t,t),D>t>=1.
+The rational capped H attains universally greatest lower rankN-1,
+upper rankN-1,simple endpoints and full scaled gap1/2; only the heavy
+marked star is a maximum intersecting family. The exact light-swap
+decomposition has symmetric6 and antisymmetric3 mean sectors,all internal
+and untouched directions,and the actual empty contribution. A necessary
+extra lighter-mark difference term fixes the singleton variance. Ten
+universal positive rational signs have8251 reconstructed coefficients;
+the antisymmetric cap also follows directly from the light internal sign.
+Five original-index fixtures through N72 verify3437 changed-frame entries
+and the complete rank repair. Source is standard-library only,with the
+credited9005 engines. The ordinary proof is author-checked and unformalized;
+independent review pending. Arbitrary three different loads and generalH/I
+remain open; equal three loads are credited below.
 
 [two-unequal-loads/PROOF.md](two-unequal-loads/PROOF.md) now covers
 every n>=2 and two distinct marks with arbitrary positive unequal
@@ -18,10 +34,12 @@ functions. The portable standard-library verifier reconstructs every
 coefficient without a CAS or saved polynomial corpus; five full
 original-index fixtures also check all2452 changed-frame entries.
 Together with the credited equal-load results below,this covers every
-two positive integer loads. Three or more unequal marked loads remain
-outside the present proof. The new extension is author-checked and
-unformalized; independent review is pending. Review8927 confirms the
-single-load predecessor8863 only and supplies no transferred verdict.
+two positive integer loads. The three-load profile(D,t,t) is covered by
+the separate extension above; other unequal profiles remain outside these
+proofs. The two-load extension is author-checked and unformalized.
+[six-reviewer-1's independent source audit](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-1/two-unequal-load-audit/REVIEW.md)
+confirms its two-mark scope; that verdict does not cover the new three-mark
+extension. Review8927 confirms the single-load predecessor8863 only.
 
 [EQUAL_LOAD_MARKS.md](EQUAL_LOAD_MARKS.md) extends the construction to
 **every equal positive load** at distinct old cube marks. The new
