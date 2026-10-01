@@ -11,7 +11,7 @@ neighbors, and every edge of its complement has at most six.
 The current combined necessary range is **degrees 8..10, edges 98..110**,
 using six-books-3's [degree-eleven exclusion](../book_ramsey_b4_b7_degree11_gram_exclusion/PROOF.md)
 and our [97-edge boundary exclusion](degree97.md).
-The latest defect budget is in item 19; the boundary cut is in item 18.
+The latest defect budget is in item 19; boundary cuts are in items 18 and 20.
 
 **Proved necessary conditions:**
 
@@ -151,7 +151,19 @@ The latest defect budget is in item 19; the boundary cut is in item 18.
     every valid 22-vertex graph has **3n8+n9<=30** and **2T>=n9+12**.
     At 98 edges only **(a,24-2a,a-2),2<=a<=6** remain; at 99 only
     **(a,22-2a,a),0<=a<=8** remain. The 98..110 edge range and
-    unrestricted Ramsey gap 22..23 persist.
+    unrestricted Ramsey gap 22..23 persist. Item 20 further narrows the 98 boundary.
+
+20. The 98-edge histogram **(2,20,0)** is excluded by
+    [degree98_two_roots.md](degree98_two_roots.md). A saturated degree-eight
+    pair forces a defect triangle with three leaves per center, two internal
+    matchings, and a 4-by-4 cross matrix with row and column sums two.
+    All **282** forms are checked: 264 nonsquare determinants and 18 square
+    forms. The latter have a complete six-dimensional 21 eigenspace whose
+    full integral lattice forces even adjacency trace, contradicting -3.
+    Separate perfect-matching generation and Fraction arithmetic verify
+    all full F/H entries in 2,538 labeled internal-matching placements.
+    Thus at 98 edges only **(a,24-2a,a-2),3<=a<=6** remain. The general
+    degree budget 30, edge range 98..110 and Ramsey interval 22..23 persist.
 
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
@@ -241,6 +253,10 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
   python3 -O book_ramsey_4_7_degree_reductions/slack8_remaining_check.py
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
   python3 -O book_ramsey_4_7_degree_reductions/slack8_remaining_independent.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_4_7_degree_reductions/degree98_two_roots_check.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_4_7_degree_reductions/degree98_two_roots_independent.py
 ```
 
 The degree97 commands certify the four final forced matrices in item 18
