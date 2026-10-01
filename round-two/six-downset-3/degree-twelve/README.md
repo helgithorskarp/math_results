@@ -52,8 +52,8 @@ Their SHA256 is
 00cb6076898dce8f500cc9157547fb83fbcb800727715f7f6a14c33d729a8e83
 ~~~
 
-[SHA256SUMS](SHA256SUMS) includes the new source files and all three imported
-parent files. Floating discovery and rational recovery choices lie outside
+[SHA256SUMS](SHA256SUMS) includes the new source files, both imported parent
+Python files and the parent ignore rules. Floating discovery and rational recovery choices lie outside
 the exact proof boundary. No solver, external catalogue or private corpus
 is required. The primary problem source is
 [Ellis--Filmus--Friedgut, Section 4](https://arxiv.org/html/2609.28404v1#S4),
