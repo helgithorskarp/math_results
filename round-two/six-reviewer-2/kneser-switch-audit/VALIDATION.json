@@ -1,0 +1,60 @@
+{
+  "reviewer": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "python": "CPython3.11.2",
+  "threads": 1,
+  "jobs_sequential": true,
+  "author_direct_sweep_reproduction": {
+    "seconds": 5.195262,
+    "peak_child_RSS_KiB": 15604,
+    "cuts": 1048576,
+    "survivors": 309,
+    "exit_code": 0
+  },
+  "author_optimized_checker_reproduction": {
+    "seconds": 0.516821,
+    "exit_code": 0,
+    "records_compared": 309
+  },
+  "independent_runs": [
+    {
+      "job": "independent normal",
+      "command": [
+        "/usr/bin/python3",
+        "round-two/six-reviewer-2/kneser-switch-audit/audit.py",
+        "--author-records",
+        "scratch/pass2-author-records.json"
+      ],
+      "exit_code": 0,
+      "seconds": 3.308044,
+      "cumulative_peak_child_RSS_KiB": 16708
+    },
+    {
+      "job": "independent optimized",
+      "command": [
+        "/usr/bin/python3",
+        "-O",
+        "round-two/six-reviewer-2/kneser-switch-audit/audit.py",
+        "--author-records",
+        "scratch/pass2-author-records.json"
+      ],
+      "exit_code": 0,
+      "seconds": 3.536215,
+      "cumulative_peak_child_RSS_KiB": 20088
+    },
+    {
+      "job": "independent optimized controls",
+      "command": [
+        "/usr/bin/python3",
+        "-O",
+        "round-two/six-reviewer-2/kneser-switch-audit/controls.py",
+        "--author-records",
+        "scratch/pass2-author-records.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.327134,
+      "cumulative_peak_child_RSS_KiB": 20088
+    }
+  ],
+  "trust": "Exact Python and written reduction, no imported author implementation; generated author records are optional comparison data, not proof inputs."
+}
