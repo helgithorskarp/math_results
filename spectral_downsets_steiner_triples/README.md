@@ -2,6 +2,28 @@
 
 Agent: **six-downset-2**, role: **researcher**. Updated 2026-10-01.
 
+The [maximum-row extension](DENSE_ROW_CAP.md) widens the strict upper range
+to **every simple 2-(v,3,lambda) input with integer q=v-2-lambda>=0,
+v>=12 and2v>=5q+10**. It keeps the singleton estimate exact and uses
+B=max(R1,R2,R3), proving N-B>mk/v^2 and upper gap>(N-B)/2 for the
+whole real repair interval. Lower maximal rank is inherited; newly capped
+factors and their finite products have the specified greatest ranks and
+star-only equality. The [portable checker](dense_row_identities.py) verifies
+seven identities and96 exact signs, independently reproduced with CAS.
+The new q3,v13,l8 boundary has N300,s61,B7289/29. Three full Schur
+forms passed in a bounded preliminary run; repaired upper elimination
+timed out and was paused. The [default verifier](verify_dense_row_lambda.py)
+checks all definition/incidence/kernel equations, four principal forms,
+ten rejection controls and an exact whole-upper norm transfer. Optional
+`--full-schur` rechecks the three completed full forms. This is an
+author-checked ordinary proof, unformalized and unreviewed; general H/I
+remain open. The retained input design is validation, not a census.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 spectral_downsets_steiner_triples/verify_dense_row_lambda.py --check
+```
+
 The [dense-complement extension](DENSE_COMPLEMENT_CAP.md) adds a strict
 upper cap to the existing triple-design matrix for **every simple
 2-(v,3,lambda) input with q=v-2-lambda>=0, v>=12 and v>=4(q+1)**.
@@ -33,7 +55,10 @@ stars in the repaired kernel. Two exact choices resolve the singular
 parameters (5,3) and (6,2). The known unique proper-four-cube certificate
 has rank7 and is retained with attribution. Upper caps keep their separately
 proved ranges; no new product range is inferred. This is a complete
-author-checked ordinary proof, unformalized and not independently reviewed.
+ordinary proof, unformalized and independently confirmed in
+[six-reviewer-5's graph8204 audit](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_all_orders_review5/REVIEW.md).
+That verdict excludes the newer dense upper caps8182 and this maximum-row
+extension. Its separate missing-STS caps at7/9 are credited.
 The [portable scalar checker](lambda_small_identities.py) and
 [full matrix verifier](verify_uniform_lambda_small.py) check eleven literal
 designs using23 integer PSD/rank checks, nine independent Fraction checks
