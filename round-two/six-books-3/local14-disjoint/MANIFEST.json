@@ -1,0 +1,92 @@
+{
+  "agent": "six-books-3",
+  "date": "2026-10-01",
+  "files": {
+    ".gitignore": {
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    "PROOF.md": {
+      "bytes": 11039,
+      "sha256": "aa30605b6cb7272dbd21b20c3910468f2fd4db3e1a5d4eafaa3d160595cdfcf0"
+    },
+    "README.md": {
+      "bytes": 2817,
+      "sha256": "9a7e606c5a3d30d43d5f2662ba39daf5863d79d5b8b6c8afd9759d01aebfc764"
+    },
+    "census.py": {
+      "bytes": 6002,
+      "sha256": "4977bf8509e48222b343488e171a8df942febe2195c74ba0b988b571f7e081a9"
+    },
+    "compare.py": {
+      "bytes": 1258,
+      "sha256": "fb04947fc37b000d47f53d7e24104a40efb10e2c270f169dfcc59cf0fab7d457"
+    },
+    "cores.json": {
+      "bytes": 6429,
+      "sha256": "7d93f64be5a4d0216601372b7cbe072d20c52617d2eb6bc57413ead52994864b"
+    },
+    "primary21.txt": {
+      "bytes": 1056,
+      "sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55"
+    },
+    "verify.py": {
+      "bytes": 8739,
+      "sha256": "e1850e9ad00c3c08a1fda741aaa826dfc5dd3cc0f788fe0185d70ed962980000"
+    }
+  },
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "role": "researcher",
+  "tests": [
+    {
+      "output": {
+        "eligible_labeled_count": 1440,
+        "eligible_masks_sha256": "d1e4f907d8004f6959f3eb17abe95984a36bf7ff27183c1303b3aa4b4ad7ee2b",
+        "eligible_orbit_count": 16,
+        "pair_admissible_labeled_count": 3660,
+        "pair_admissible_masks_sha256": "333d9a27df6e13efcad5be7dee83f339e2a876459d7bacadb8e367a5c1ccaa35",
+        "raw_labeled_count": 3871,
+        "raw_masks_sha256": "4750d29a5ea75782a2c3b195c3de48937bbac1ad05836f2a3402a7c193d30438",
+        "schema": 2,
+        "stabilizer_order": 192,
+        "triangle_free_labeled_count": 672,
+        "triangle_free_masks_sha256": "a79ef5d8047a18c433f415b48bf75f4ceadda24bf9bc622ea7e99c6e71e782f7",
+        "triangle_free_orbit_count": 9
+      },
+      "peak_child_KiB": 19664,
+      "script": "census.py",
+      "seconds": 0.55
+    },
+    {
+      "output": {
+        "baseline_page_maxima": [
+          3,
+          6
+        ],
+        "baseline_red_edges": 93,
+        "classes": 16,
+        "eligible": 1440,
+        "forgery_rejections": 3,
+        "pair_admissible": 3660,
+        "raw": 3871,
+        "triangle_free": 672,
+        "triangle_free_classes": 9,
+        "verified": true
+      },
+      "peak_child_KiB": 19664,
+      "script": "verify.py",
+      "seconds": 1.007
+    },
+    {
+      "output": {
+        "adjacency_entries_compared": 387100,
+        "complete_mask_sets_equal": true,
+        "labeled_graphs": 3871,
+        "pair_matrix_entries_compared": 387100
+      },
+      "peak_child_KiB": 19956,
+      "script": "compare.py",
+      "seconds": 1.178
+    }
+  ]
+}
