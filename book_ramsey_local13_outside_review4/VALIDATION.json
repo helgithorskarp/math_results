@@ -1,0 +1,91 @@
+{
+  "agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "date_utc": "2026-10-01T02:25:19.491312+00:00",
+  "independent_final": [
+    {
+      "name": "final-normal",
+      "exit_code": 0,
+      "seconds": 39.73548615601612,
+      "maxrss_kib": 29992,
+      "stdout_bytes": 17927,
+      "stdout_sha256": "d87616d27e9ab60e52ac19706685490b60b016ba7ae63b39b80b3d63b757bace"
+    },
+    {
+      "name": "final-optimized",
+      "exit_code": 0,
+      "seconds": 30.48717046098318,
+      "maxrss_kib": 32204,
+      "stdout_bytes": 17927,
+      "stdout_sha256": "d87616d27e9ab60e52ac19706685490b60b016ba7ae63b39b80b3d63b757bace"
+    },
+    {
+      "name": "bridge",
+      "exit_code": 0,
+      "seconds": 0.14190751500427723,
+      "maxrss_kib": 32204,
+      "stdout_bytes": 422,
+      "stdout_sha256": "48309af350a4c26c2110503121778074093d10f7a3144a3830a35ce6b1f5f630"
+    },
+    {
+      "name": "bridge-optimized",
+      "exit_code": 0,
+      "seconds": 0.2907631189445965,
+      "maxrss_kib": 32204,
+      "stdout_bytes": 422,
+      "stdout_sha256": "48309af350a4c26c2110503121778074093d10f7a3144a3830a35ce6b1f5f630"
+    },
+    {
+      "name": "forged-positive-vector-pool",
+      "rejected": true,
+      "reason": "direct negative form absent",
+      "seconds": 3.5147653999738395,
+      "exit_code": 1,
+      "file_sha256": "b7ae5a058a19f99884e70adf5d43f2c7e73821a8fba4bc5f4714cae9cfb27236"
+    }
+  ],
+  "credited_native_author": [
+    {
+      "program": "generate.py",
+      "arguments": [],
+      "exit_code": 0,
+      "seconds": 5.444648928998504,
+      "maxrss_kib": 22676,
+      "stdout_sha256": "8775dee08ce913e4fa855e445db9c9bc6bda87254ccd86ef050040d524fc0fa1",
+      "stdout_bytes": 827
+    },
+    {
+      "program": "check.py",
+      "arguments": [],
+      "exit_code": 0,
+      "seconds": 33.579830583010335,
+      "maxrss_kib": 22884,
+      "stdout_sha256": "61c55648b132d4c1442c75b868fbcfb21fe54e542c18e9d850ed4a779c748902",
+      "stdout_bytes": 600
+    },
+    {
+      "program": "check.py",
+      "arguments": [
+        "--compare-generator"
+      ],
+      "exit_code": 0,
+      "seconds": 34.73015127895633,
+      "maxrss_kib": 23760,
+      "stdout_sha256": "589eb3f707d83da7d466a6714e0063a7337ae6a8bcfb477a2a13528c64b9a16a",
+      "stdout_bytes": 605
+    },
+    {
+      "program": "controls.py",
+      "arguments": [],
+      "exit_code": 0,
+      "seconds": 1.4301270950236358,
+      "maxrss_kib": 23760,
+      "stdout_sha256": "684aa46ffad4e6e442762b80b74e824cce8a01c5174a67b6477d7ea293575d3f",
+      "stdout_bytes": 322
+    }
+  ],
+  "all_native_threads_one": true,
+  "CPU_intensive_math_jobs_at_once": 1,
+  "scope_limit_unchanged": "1CPU/2GiB",
+  "proof_scope": "Complete40111-matrix all-cubic census and universal real-slack exclusions of all3/4-low selected rows; no further regular boundary exclusion"
+}
