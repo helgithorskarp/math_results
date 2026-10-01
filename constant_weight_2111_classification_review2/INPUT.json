@@ -1,0 +1,47 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "target_commit": "7bb77ef3a87884dad2964de4e6bebf640a8e0ca8",
+  "corrected_source_commit": "681dd0800fa70f3a5302155ac24f540bde715fcf",
+  "runtime": [
+    {
+      "path": "coding_theory/a18_6_5_2111_star_classification/expected.json",
+      "commit": "681dd0800fa70f3a5302155ac24f540bde715fcf",
+      "sha256": "01910b2cc840f9bef0e8221df0edf3464d39090d5cff2b4a6f3cf739690228ec",
+      "bytes": 50479,
+      "role": "Pinned public comparison record; independent carrier/search supplies proof, no author executable code is imported."
+    }
+  ],
+  "native_reuse": {
+    "path": "constant_weight_unit_core_review2/partition.cpp",
+    "commit": "30fbfc5d849ad0baeaae3bc9a0189db211f77023",
+    "sha256": "c10c9bfd02323d890ccaef72803566c5fee764e360f4fe32af477b57265c1afc",
+    "bytes": 11476,
+    "modified": false
+  },
+  "compiler_flags": [
+    "-std=c++17",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic"
+  ],
+  "versions": {
+    "python": "3.11.2",
+    "g++": "12.2.0"
+  },
+  "guards": {
+    "states": 200000,
+    "seconds": 10,
+    "native_capacity_columns": 840,
+    "actual_max_columns": 805,
+    "pair_bits": 136,
+    "point_bits": 17
+  },
+  "input_symbols": {
+    "high0": "unique replication-three point",
+    "high123": "replication-four points",
+    "low4to16": "replication-five points",
+    "word_mask": "bit i denotes point i; twenty words per fixture"
+  }
+}
