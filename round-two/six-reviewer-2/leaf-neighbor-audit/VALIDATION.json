@@ -1,0 +1,125 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "native_threads": 1,
+  "jobs_serial": true,
+  "guard_seconds": 90,
+  "math_jobs": 10,
+  "own_normal_optimized_full_records_equal": true,
+  "own_controls_equal": true,
+  "author_complete_expected_all_four_runs_equal": true,
+  "author_damages_equal": true,
+  "runs": [
+    {
+      "argv": [
+        "python3",
+        "round-two/six-reviewer-2/leaf-neighbor-audit/audit.py"
+      ],
+      "seconds": 1.9961987800197676,
+      "peak_kib": 16544,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    {
+      "argv": [
+        "python3",
+        "-O",
+        "round-two/six-reviewer-2/leaf-neighbor-audit/audit.py",
+        "--check-file",
+        "round-two/six-reviewer-2/leaf-neighbor-audit/EXPECTED.json"
+      ],
+      "seconds": 1.8837055189651437,
+      "peak_kib": 20184,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    {
+      "argv": [
+        "python3",
+        "round-two/six-reviewer-2/leaf-neighbor-audit/audit.py",
+        "--self-test"
+      ],
+      "seconds": 1.690325286006555,
+      "peak_kib": 16740,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    {
+      "argv": [
+        "python3",
+        "-O",
+        "round-two/six-reviewer-2/leaf-neighbor-audit/audit.py",
+        "--self-test"
+      ],
+      "seconds": 1.8316500469809398,
+      "peak_kib": 20116,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    {
+      "argv": [
+        "python3",
+        "scratch/pass13-original/check.py"
+      ],
+      "seconds": 0.07886967400554568,
+      "peak_kib": 15024,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    {
+      "argv": [
+        "python3",
+        "scratch/pass13-original/verify.py"
+      ],
+      "seconds": 0.12163321697153151,
+      "peak_kib": 16184,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    {
+      "argv": [
+        "python3",
+        "scratch/pass13-original/verify.py",
+        "--self-test"
+      ],
+      "seconds": 0.12557840603403747,
+      "peak_kib": 16276,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    {
+      "argv": [
+        "python3",
+        "-O",
+        "scratch/pass13-original/check.py"
+      ],
+      "seconds": 0.1803172979853116,
+      "peak_kib": 18272,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    {
+      "argv": [
+        "python3",
+        "-O",
+        "scratch/pass13-original/verify.py"
+      ],
+      "seconds": 0.2676404970115982,
+      "peak_kib": 20612,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    {
+      "argv": [
+        "python3",
+        "-O",
+        "scratch/pass13-original/verify.py",
+        "--self-test"
+      ],
+      "seconds": 0.27220048604067415,
+      "peak_kib": 20636,
+      "exit_code": 0,
+      "guard_seconds": 90
+    }
+  ]
+}
