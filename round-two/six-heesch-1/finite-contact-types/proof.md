@@ -269,7 +269,7 @@ and complete input formulas are rebuilt or read by the solver-free reader.
 
 This old seven-cell value is a functional calibration of the new square-phase
 peeling reduction. It is not a new value or record, and it says nothing about
-whether the 17-cell record seed admits five coronas. Its type inventory is
+whether the attributed 17-cell Hc=Hh=3 seed admits five coronas. Its type inventory is
 reported only as an additional geometric diagnostic (704 types, 352 floating).
 
 ## Computational trust boundary

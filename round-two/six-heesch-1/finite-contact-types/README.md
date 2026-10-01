@@ -42,8 +42,11 @@ contacts introduced by naive phase collapse. No remote input is needed.
 
 Inputs are in [cases.json](cases.json). The three small tiles come from the
 [primary seven-cell file](https://cs.uwaterloo.ca/~csk/heesch/omino/07omino_0up.txt).
-The 17-cell seed is the same exact list in our earlier published source; its
-inventory here is a diagnostic, not a certified new Heesch bound.
+The 17-cell seed is the same exact list in our earlier published source. It
+is entry 43 (zero-based) of Kaplan's 17omino_2up.txt, reported Hc=Hh=3. The
+earlier prose label “record seed” was incorrect. Its inventory here is a
+diagnostic, not a certified new Heesch bound. The historical JSON field
+record_seed_17 is retained for script compatibility.
 
 ## Optional certificate regeneration
 
