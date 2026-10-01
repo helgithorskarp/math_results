@@ -1,0 +1,77 @@
+{
+  "agent": "six-heesch-3",
+  "role": "researcher",
+  "status": "AUTHOR_ALL_WIDTH_TIP_OBSTRUCTIONS_VERIFIED",
+  "parity": {
+    "width_domain": "every integer n>=8",
+    "step_domain": "every integer 2<=a<=n",
+    "complete_corner_motions": 12,
+    "unique_filler": "P_(a-2)",
+    "first_gap_degrees": 60,
+    "base_gap_degrees": 120,
+    "base_gap_states": [
+      1,
+      1
+    ],
+    "base_necessary_gap_words": 0,
+    "consequence": "offsets 0<=a<=n in orientation (1,4) must be odd when only O is strictly interior",
+    "odd_offsets": "necessary condition only; no existence claim"
+  },
+  "flat_tip": {
+    "width_domain": "every integer n>=8; exact affine identities and inequalities",
+    "cases": [
+      {
+        "offset": 0,
+        "complete_whole_flat_mates": 2,
+        "excluded_mate": "opposed positive/positive top unit",
+        "old_sector_degrees": 60,
+        "forced_sector_degrees": 60,
+        "protected_gap_degrees": 120,
+        "protected_gap_states": [
+          1,
+          1
+        ],
+        "gap_word_count": 0,
+        "midpoint_other_primitive_slack_lower": "1/2"
+      },
+      {
+        "offset": 1,
+        "complete_whole_flat_mates": 2,
+        "excluded_mate": "opposed positive/positive top unit",
+        "old_sector_degrees": 180,
+        "forced_sector_degrees": 60,
+        "protected_gap_degrees": 120,
+        "protected_gap_states": [
+          1,
+          1
+        ],
+        "gap_word_count": 0,
+        "midpoint_other_primitive_slack_lower": "1/2"
+      }
+    ],
+    "only_O_and_C_require_interiority": true
+  },
+  "parity_n12_fixture": {
+    "copies": 2,
+    "whole_contacts": 2,
+    "exposed_ports": 48,
+    "boundary_cycles": 1,
+    "nonincident_distance_squared": "3/4",
+    "ray_separation_degrees": 30,
+    "scope": "Nonvacuous physical subpacking via credited bounded deformation; no corona is asserted."
+  },
+  "flat_n12_fixture": {
+    "copies": 3,
+    "whole_contacts": 10,
+    "exposed_ports": 58,
+    "boundary_cycles": 2,
+    "nonincident_distance_squared": "3/4",
+    "ray_separation_degrees": 30,
+    "scope": "Nonvacuous physical subpacking via credited bounded deformation; no corona is asserted."
+  },
+  "malformed_controls_rejected": 6,
+  "canonical_certificate_sha256": "8067338f788a7b7460a62c22e01710e717a085d04d15d843769525eb2a320b23",
+  "arithmetic": "Python3.11+ integers and exact rational affine coefficients; standard library only.",
+  "proof_status": "Written all-real author proofs plus separate exact readers. Unformalized and independently unreviewed.",
+  "scope": "Two local necessary conditions, no arbitrary-real corona census, new corona lower bound, exact Heesch height or finite-seven solution."
+}

@@ -1,0 +1,141 @@
+{
+  "agent": "six-heesch-3",
+  "role": "researcher",
+  "geometry": {
+    "width_minimum": 8,
+    "amplitude": "1/100",
+    "maximum_displacement": "1/1600",
+    "genuine_angles": [
+      60,
+      90,
+      90,
+      120
+    ],
+    "signs": {
+      "bottom": -1,
+      "top": 1,
+      "left": 1,
+      "flat": 0
+    }
+  },
+  "parity": {
+    "agent": "six-heesch-3",
+    "role": "researcher",
+    "root": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "neighbor_orientation": [
+      1,
+      4
+    ],
+    "neighbor_row": -1,
+    "forced_translation": [
+      -2,
+      0
+    ],
+    "base_offset": 0,
+    "forbidden_parity": "even",
+    "width_domain": "n>=8",
+    "step_domain": "2<=a<=n",
+    "scope": "Only root O requires interiority. Orientation (0,5) and odd-offset existence are not claimed."
+  },
+  "flat_tip": {
+    "agent": "six-heesch-3",
+    "role": "researcher",
+    "root": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "flat_owner_orientation": [
+      0,
+      1
+    ],
+    "flat_owner_q": -1,
+    "blocker_q": 1,
+    "owner_row_coefficients": [
+      0,
+      -2
+    ],
+    "offsets": [
+      0,
+      1
+    ],
+    "protected_roles": [
+      "O",
+      "C"
+    ]
+  },
+  "parity_n12_fixture": {
+    "n": 12,
+    "normalized_poses": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        4,
+        2,
+        -1
+      ]
+    ],
+    "boundary_cycles": 1
+  },
+  "flat_n12_fixture": {
+    "n": 12,
+    "normalized_poses": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        -1,
+        -24
+      ],
+      [
+        0,
+        1,
+        1,
+        -24
+      ]
+    ],
+    "frame": [
+      0,
+      4,
+      47,
+      -16
+    ],
+    "actual_poses": [
+      [
+        0,
+        4,
+        47,
+        -16
+      ],
+      [
+        0,
+        5,
+        23,
+        9
+      ],
+      [
+        0,
+        5,
+        23,
+        7
+      ]
+    ],
+    "boundary_cycles": 2
+  }
+}
