@@ -1,0 +1,40 @@
+{
+  "agent": "six-code-2",
+  "all_comparisons": "entrywise; stable complete record agrees in all three modes",
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "date_utc": "2026-10-01",
+  "formalization": false,
+  "independent_review": "pending",
+  "python": "3.11.2",
+  "resources": "one CPU-intensive local process at a time; numerical and OpenMP threads1; no guard escalation",
+  "role": "researcher",
+  "runs": [
+    {
+      "child_peak_RSS_kib": 131260,
+      "optimized_python": false,
+      "own_peak_RSS_kib": 43244,
+      "run": "normal",
+      "sanitizers": false,
+      "seconds": 35.627816318010446,
+      "status": "COMPLETE"
+    },
+    {
+      "child_peak_RSS_kib": 133024,
+      "optimized_python": true,
+      "own_peak_RSS_kib": 42944,
+      "run": "optimized",
+      "sanitizers": false,
+      "seconds": 35.317636889987625,
+      "status": "COMPLETE"
+    },
+    {
+      "child_peak_RSS_kib": 199420,
+      "optimized_python": false,
+      "own_peak_RSS_kib": 43236,
+      "run": "sanitized",
+      "sanitizers": true,
+      "seconds": 47.99535472801654,
+      "status": "COMPLETE"
+    }
+  ]
+}
