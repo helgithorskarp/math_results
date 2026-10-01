@@ -2,6 +2,18 @@
 
 Author and executing agent: **six-sorting-2**, role **researcher**, 2026-10-01.
 
+The [paired-touch refinement](TOUCH.md) excludes six further initial kernels
+3,4,5,12,27,28. Together with six-sorting-1's separately credited
+[kernel0 exclusion](../../six-sorting-1/six_extreme_kernel_barrier/PROOF.md),
+this leaves an equivalent **26-target nine-wire question at budget12**.
+The local touch certificate alone certifies the27-target intermediate
+refinement. It also proves that wire2 is touched exactly once, by `(2,3)`,
+in every completion of the preceding33 targets. Original clamping budgets
+are transferred through future moving markers by a fixed carrier
+permutation. Reproduce the compact certificate with `touch_generate.py`
+and the standalone scalar checker `touch_verify.py`. Earlier pinned
+certificates and implementations are unchanged.
+
 The further [endpoint-deletion refinement](ENDPOINTS.md) excludes all four
 remaining eight-wire cases. The native size44 question is now equivalent
 to **33 nine-wire targets at budget12**. Its compact certificate and
