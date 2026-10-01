@@ -1,0 +1,1503 @@
+{
+  "agent": "six-books-1",
+  "role": "researcher",
+  "schema": 1,
+  "claim": "histogram(3,18,1) forces A=K3 and e(z,A)=0; histogram remains open",
+  "root_census": {
+    "tested_masks": 64,
+    "eligible_masks": [
+      [
+        3,
+        3
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        9,
+        3
+      ],
+      [
+        10,
+        3
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        15,
+        15
+      ],
+      [
+        25,
+        7
+      ],
+      [
+        27,
+        15
+      ],
+      [
+        31,
+        31
+      ],
+      [
+        42,
+        7
+      ],
+      [
+        43,
+        15
+      ],
+      [
+        47,
+        31
+      ],
+      [
+        59,
+        31
+      ],
+      [
+        63,
+        63
+      ]
+    ],
+    "classes": [
+      {
+        "mask": 3,
+        "shape": "P3",
+        "k": 0,
+        "sum_qA": 2,
+        "qz": 2,
+        "qB": 20,
+        "multiplicity": 3
+      },
+      {
+        "mask": 7,
+        "shape": "P3",
+        "k": 1,
+        "sum_qA": 0,
+        "qz": 4,
+        "qB": 20,
+        "multiplicity": 3
+      },
+      {
+        "mask": 11,
+        "shape": "K3",
+        "k": 0,
+        "sum_qA": 6,
+        "qz": 2,
+        "qB": 16,
+        "multiplicity": 1
+      },
+      {
+        "mask": 15,
+        "shape": "K3",
+        "k": 1,
+        "sum_qA": 4,
+        "qz": 4,
+        "qB": 16,
+        "multiplicity": 3
+      },
+      {
+        "mask": 31,
+        "shape": "K3",
+        "k": 2,
+        "sum_qA": 2,
+        "qz": 6,
+        "qB": 16,
+        "multiplicity": 3
+      },
+      {
+        "mask": 63,
+        "shape": "K3",
+        "k": 3,
+        "sum_qA": 0,
+        "qz": 8,
+        "qB": 16,
+        "multiplicity": 1
+      }
+    ],
+    "P3_parameters": [
+      [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        3
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        3
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        3
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        4
+      ]
+    ],
+    "K3_k2_parameters": [
+      [
+        0,
+        0,
+        2,
+        4
+      ],
+      [
+        0,
+        1,
+        2,
+        5
+      ],
+      [
+        1,
+        0,
+        3,
+        4
+      ],
+      [
+        1,
+        1,
+        3,
+        5
+      ]
+    ],
+    "K3_k3_incidence": [
+      3,
+      7
+    ]
+  },
+  "allowed_row_types": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      2,
+      3
+    ],
+    [
+      0,
+      2,
+      4
+    ],
+    [
+      0,
+      2,
+      5
+    ],
+    [
+      0,
+      2,
+      6
+    ],
+    [
+      0,
+      2,
+      7
+    ],
+    [
+      0,
+      3,
+      4
+    ],
+    [
+      0,
+      3,
+      5
+    ],
+    [
+      0,
+      3,
+      6
+    ],
+    [
+      0,
+      3,
+      7
+    ],
+    [
+      0,
+      4,
+      5
+    ],
+    [
+      0,
+      4,
+      6
+    ],
+    [
+      0,
+      4,
+      7
+    ],
+    [
+      0,
+      5,
+      6
+    ],
+    [
+      0,
+      5,
+      7
+    ],
+    [
+      0,
+      6,
+      7
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      1,
+      2,
+      4
+    ],
+    [
+      1,
+      2,
+      5
+    ],
+    [
+      1,
+      2,
+      6
+    ],
+    [
+      1,
+      2,
+      7
+    ],
+    [
+      1,
+      3,
+      4
+    ],
+    [
+      1,
+      3,
+      5
+    ],
+    [
+      1,
+      3,
+      6
+    ],
+    [
+      1,
+      3,
+      7
+    ],
+    [
+      1,
+      4,
+      5
+    ],
+    [
+      1,
+      4,
+      6
+    ],
+    [
+      1,
+      4,
+      7
+    ],
+    [
+      1,
+      5,
+      6
+    ],
+    [
+      1,
+      5,
+      7
+    ],
+    [
+      1,
+      6,
+      7
+    ],
+    [
+      3,
+      4,
+      5
+    ],
+    [
+      3,
+      4,
+      6
+    ],
+    [
+      3,
+      4,
+      7
+    ],
+    [
+      3,
+      5,
+      6
+    ],
+    [
+      3,
+      5,
+      7
+    ],
+    [
+      3,
+      6,
+      7
+    ],
+    [
+      4,
+      5,
+      6
+    ],
+    [
+      4,
+      5,
+      7
+    ],
+    [
+      4,
+      6,
+      7
+    ],
+    [
+      5,
+      6,
+      7
+    ]
+  ],
+  "marked_cubic_labeled": 3370,
+  "marked_cubic_classes": 22,
+  "negative_capacity_classes": 1,
+  "weighted_forms": 1014,
+  "binary_incidence_survivors": 0,
+  "cores": [
+    {
+      "J_mask": 6215777,
+      "multiplicity": 60,
+      "capacities": [
+        0,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        4,
+        2,
+        1,
+        1,
+        2,
+        3,
+        0,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        1,
+        0,
+        0,
+        3,
+        2
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 20,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "0ddd697f98360a2e9b7c61e920086c25c985f85c10e90e120273ead63245d625"
+    },
+    {
+      "J_mask": 6247521,
+      "multiplicity": 240,
+      "capacities": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        3,
+        2,
+        2,
+        1,
+        1,
+        2,
+        3,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        1,
+        0,
+        2,
+        1,
+        2
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 93,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "ddf9a556de613130334f138c88933056b0f2898e25488a624248e86debc20cfa"
+    },
+    {
+      "J_mask": 7722081,
+      "multiplicity": 240,
+      "capacities": [
+        1,
+        2,
+        0,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        4,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        1,
+        0,
+        1,
+        1,
+        3
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 49,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "00db12a967dafb7a1c27e36d6ea5993aac33e723d2766cdc96e01245cd84616c"
+    },
+    {
+      "J_mask": 7818321,
+      "multiplicity": 120,
+      "capacities": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        1,
+        0,
+        3,
+        1,
+        1
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 55,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "266ceb1543a077db288be7f00368d44d88753d1291b7263c64b0365fc8aca244"
+    },
+    {
+      "J_mask": 7833185,
+      "multiplicity": 120,
+      "capacities": [
+        2,
+        1,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        0
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 156,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "50f5e71b4ba1cdf6b165a18eb012ef581ce280ed998acac38b25eda3c880a62a"
+    },
+    {
+      "J_mask": 7834193,
+      "multiplicity": 240,
+      "capacities": [
+        2,
+        1,
+        1,
+        0,
+        2,
+        1,
+        2,
+        2,
+        0,
+        2,
+        0,
+        2,
+        1,
+        2,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 120,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "5f3b56e88dc5c444736021a08d1abc76c93bb9f54d106e1622e659b6f21012a8"
+    },
+    {
+      "J_mask": 14316641,
+      "multiplicity": 60,
+      "capacities": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        0,
+        0,
+        2,
+        2,
+        2
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 43,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "50291cca1bf665d8789ea618205caba37174eee594290bf8f889f48ffba0b03b"
+    },
+    {
+      "J_mask": 14332513,
+      "multiplicity": 120,
+      "capacities": [
+        1,
+        2,
+        1,
+        0,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        0,
+        1,
+        1,
+        3,
+        1,
+        3,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        0,
+        2,
+        0,
+        2,
+        2
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 29,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "3e563d5870d9d9cc955fcc6839863081f245120b973b9bed62f6607086a29187"
+    },
+    {
+      "J_mask": 15267937,
+      "multiplicity": 60,
+      "capacities": [
+        0,
+        3,
+        1,
+        1,
+        2,
+        1,
+        1,
+        3,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        0,
+        3,
+        3,
+        1,
+        1,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        2,
+        1
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        0,
+        0,
+        0,
+        3,
+        3
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 4,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "78986e0716a475786edb9e6c230176019006d17e93af700cf8cacb7b47ac740b"
+    },
+    {
+      "J_mask": 15299681,
+      "multiplicity": 240,
+      "capacities": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        3,
+        0,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        3,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        3,
+        2,
+        1,
+        2
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        0,
+        0,
+        2,
+        1,
+        3
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 22,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "f7ef866e0d4051d99f0624ea50cff9af8c22ea635b04ed65cb3dd921c38f21d1"
+    },
+    {
+      "J_mask": 15315553,
+      "multiplicity": 240,
+      "capacities": [
+        1,
+        2,
+        1,
+        0,
+        2,
+        2,
+        1,
+        3,
+        1,
+        2,
+        1,
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        3,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        0,
+        2,
+        0,
+        1,
+        3
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 20,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "0a7192b273035121479ee5cd83e13fd05ab6c5cffbe02f0b0654696ae453f332"
+    },
+    {
+      "J_mask": 15323489,
+      "multiplicity": 240,
+      "capacities": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        2,
+        1,
+        3,
+        1,
+        2,
+        1,
+        1,
+        0,
+        3,
+        0,
+        1,
+        1,
+        4,
+        2,
+        2,
+        3,
+        1,
+        1,
+        1,
+        3,
+        1,
+        2,
+        2
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        2,
+        0,
+        0,
+        1,
+        3
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 10,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "fd2bd30ab633ce608b89f7226e6cccf6f6966aae785bcb58297eb38f5d87d8ef"
+    },
+    {
+      "J_mask": 15410785,
+      "multiplicity": 240,
+      "capacities": [
+        2,
+        1,
+        1,
+        0,
+        1,
+        2,
+        2,
+        3,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        3,
+        3,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        3,
+        2,
+        2,
+        1
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        0,
+        2,
+        2,
+        1,
+        1
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 60,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "d64a3cb013164cef2fa95566ab341aad2fb6abd64d9157e04c3f582c034bc7b8"
+    },
+    {
+      "J_mask": 15411793,
+      "multiplicity": 240,
+      "capacities": [
+        2,
+        2,
+        0,
+        0,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        0,
+        1,
+        1,
+        1,
+        3,
+        3,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        3,
+        2,
+        1,
+        2
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        0,
+        2,
+        2,
+        1,
+        1
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 57,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "70192176fe4babc623623bdccc62cf9c855fd23e667a0f23763f5141bc6d0660"
+    },
+    {
+      "J_mask": 15412297,
+      "multiplicity": 240,
+      "capacities": [
+        2,
+        2,
+        1,
+        2,
+        0,
+        0,
+        2,
+        2,
+        1,
+        -1,
+        2,
+        2,
+        1,
+        1,
+        3,
+        3,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        0,
+        2,
+        2,
+        1,
+        1
+      ],
+      "negative_capacity": true,
+      "weighted_forms": 0,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "J_mask": 15434593,
+      "multiplicity": 120,
+      "capacities": [
+        2,
+        1,
+        0,
+        0,
+        2,
+        2,
+        2,
+        3,
+        2,
+        2,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        2,
+        2,
+        2,
+        3,
+        1,
+        1,
+        1
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        0,
+        1,
+        1
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 39,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "fe81f16248e0fd731ab76134b7cec7e97bf7ae4ae85a1ac9ac2fc0aa25d1613d"
+    },
+    {
+      "J_mask": 15436105,
+      "multiplicity": 120,
+      "capacities": [
+        2,
+        2,
+        0,
+        2,
+        1,
+        0,
+        2,
+        2,
+        2,
+        0,
+        1,
+        2,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        0,
+        1,
+        1
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 44,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "63653e2ea09b30a898ac5fcff7f080406a639613067934cb3212e8e73029542f"
+    },
+    {
+      "J_mask": 15436357,
+      "multiplicity": 120,
+      "capacities": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        1,
+        2,
+        1,
+        3,
+        1,
+        1,
+        2
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        0,
+        1,
+        1
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 93,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "aaddfaa2322c8ac3e67d6326bbaad7aa12c201c18cce7b2ac08dff4f81debebc"
+    },
+    {
+      "J_mask": 48296289,
+      "multiplicity": 120,
+      "capacities": [
+        1,
+        3,
+        0,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        0,
+        2,
+        1,
+        1,
+        2,
+        3,
+        2,
+        2,
+        3,
+        1,
+        0,
+        1,
+        3,
+        1,
+        3,
+        2
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        1,
+        0,
+        0,
+        2,
+        3
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 16,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "3b45d059f1ac3d7b174212c6aa700ece6ad285adbc5f4287712bf588d69c4166"
+    },
+    {
+      "J_mask": 48353605,
+      "multiplicity": 10,
+      "capacities": [
+        0,
+        3,
+        0,
+        2,
+        2,
+        2,
+        0,
+        3,
+        0,
+        2,
+        2,
+        2,
+        0,
+        4,
+        0,
+        0,
+        0,
+        4,
+        3,
+        3,
+        3,
+        0,
+        0,
+        0,
+        3,
+        0,
+        3,
+        3
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        3,
+        0,
+        0,
+        0,
+        3
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 0,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "J_mask": 48391521,
+      "multiplicity": 120,
+      "capacities": [
+        2,
+        2,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        0,
+        0,
+        1,
+        2,
+        3,
+        3,
+        1,
+        2,
+        2,
+        3,
+        1,
+        1,
+        1,
+        2,
+        1,
+        3,
+        2
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        1,
+        0,
+        2,
+        2,
+        1
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 40,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "6aa599504a4125548d83ce381ce158ed22bc5df8cbd0595ef5ff360d19aa95f2"
+    },
+    {
+      "J_mask": 48393285,
+      "multiplicity": 60,
+      "capacities": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        3,
+        1,
+        2,
+        3,
+        3,
+        0,
+        1,
+        1,
+        2,
+        0,
+        3,
+        3
+      ],
+      "defect_degrees": [
+        1,
+        1,
+        2,
+        1,
+        0,
+        2,
+        2,
+        1
+      ],
+      "negative_capacity": false,
+      "weighted_forms": 44,
+      "binary_incidence_survivors": 0,
+      "weighted_forms_sha256": "653e86ff770129edf6fdd3cefd96546d9a7c00fa047f7c41cd81998acba9eec0"
+    }
+  ],
+  "known21_validation_only": {
+    "vertices": 21,
+    "red_edges": 93,
+    "red_page_maximum": 3,
+    "blue_page_maximum": 6
+  },
+  "signed_identity_controls": {
+    "graphs": 22,
+    "incident_rows": 484,
+    "Gram_entries": 1408,
+    "outside_defect_rows": 286,
+    "signed_graph_hashes": [
+      "3cd15fa72de79ca57b4fbac34fea7ff4f5a74813beed7eb850b4936c1c315d1d",
+      "33e204fa3af70d29d1ddfa6dc0b5bb1b86bec63cd89c956999d4a4a45326b3ec",
+      "2e9f8445f50e98feeb02a84b753730f04f3e53b067789c96aba92d00b5d161cc",
+      "cc90a07415ce85d65d757d13d48c5bf6f10ec673b022aa973caf62c0564c087c",
+      "3dd8ffd5e5bc2e170ce3aa2bc0e5b81d558de77554a9a201acec30f5726490bd",
+      "98afd1cd9bd5a1b1648c6b205ff052922a4993a8a5a7f086e0910e06f2f07147",
+      "5d30bae1f1d83c2ebf32ed387da17b668c93aa1ecea98cb88c7674031e260fae",
+      "a69aa349d9e0e4c48ef351a524926393fff2d326155782dce24aadb82a06a6c5",
+      "73ba4c56b7412ad07584701e32e810c14e472dbcd12c4e4dd99b065e4515bef3",
+      "62c0d741b879a5de7c58902829588a25a86f1e4035a12d5e828e2f1c3d2bec23",
+      "963282de4a7af6f325db83a90289d84ec1d2fef6bca85421cceba95c09d947f2",
+      "8b57df1e23cf32073a4a2df46ecbe08ae5dbea3c6c59b7430a24b8a741005681",
+      "2fd6560bb65a05ca53581c3f3ec21ed65cf0c7120bf7ec9ed59062b5d3d76bae",
+      "e59f778ee0b553cf907f23033418918f3b58950f37e90c7eb04f4ff49e0e0ff7",
+      "628ee280a4c323d442fb48845cfb1a694ba13a4757878fd084a67b53e4914265",
+      "515eef4b5d19cbbb94dc2923e394423e71bb928b120660bfc11a78efbcc8cdb8",
+      "e3e3789a115ef2552b9772c1f7f6bb47f17b3324b305571e93117d8a66ccab8f",
+      "f40387a001928db7caec2beaac1d6639b5cdd431d3568b79e5f39776e2492284",
+      "3cffff3b38fd5553b408fa5ae77828e129c6d14c29bd4a311002e04d5cc7b737",
+      "a5c00b65f4bbb6de5762976aaf8e41608ab2cee45bd1e9635cccf87d1a814719",
+      "172c96950e26e79a4a17d6c0fe8501853164273e8c2dcdd7e958900a0c6c2b02",
+      "e9bdc77519c4fdaee2d96a24596b323cc608689230fffa657f6a7e42a970976c"
+    ]
+  }
+}

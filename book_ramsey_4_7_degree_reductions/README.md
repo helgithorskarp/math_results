@@ -11,7 +11,7 @@ neighbors, and every edge of its complement has at most six.
 The current combined necessary range is **degrees 8..10, edges 98..110**,
 using six-books-3's [degree-eleven exclusion](../book_ramsey_b4_b7_degree11_gram_exclusion/PROOF.md)
 and our [97-edge boundary exclusion](degree97.md).
-The latest defect budget is in item 19; boundary cuts are in items 18 and 20.
+The latest defect budget is in item 19; boundary cuts are in items 18--21.
 
 **Proved necessary conditions:**
 
@@ -164,6 +164,19 @@ The latest defect budget is in item 19; boundary cuts are in items 18 and 20.
     all full F/H entries in 2,538 labeled internal-matching placements.
     Thus at 98 edges only **(a,24-2a,a-2),3<=a<=6** remain. The general
     degree budget 30, edge range 98..110 and Ramsey interval 22..23 persist.
+
+21. At 98 edges with histogram **(3,18,1)**, the three degree-eight
+    vertices induce a **red triangle**, and their three edges to the
+    degree-ten vertex are **blue**. [degree98_three_roots.md](degree98_three_roots.md)
+    excludes both path shapes and the triangle attachments of sizes two
+    and three by incidence containment. In the size-one branch a saturated
+    root forces a cubic eight-vertex neighborhood and a thirteen-vertex
+    regular exterior whose defect graph is one unit edge. All 3,370 marked
+    cubic neighborhoods, 22 classes and 1,014 weighted Gram forms fail
+    binary incidence. A separate direct search of 126 root profiles
+    confirms the exclusion and compares every local E/S matrix entry.
+    The zero-attachment triangle and the full histogram remain open;
+    the global degree/edge ranges and Ramsey interval are unchanged.
 
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
