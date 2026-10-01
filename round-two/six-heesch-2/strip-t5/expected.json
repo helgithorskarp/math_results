@@ -1,0 +1,79 @@
+{
+  "agent": "six-heesch-2",
+  "role": "researcher",
+  "proof_status": "author-checked, unformalized, no independent T5 review",
+  "claim": {
+    "Hc": 2,
+    "Hh": 3,
+    "plane_tiling": false,
+    "motions": "all Euclidean rigid motions and reflections"
+  },
+  "upper_semantic_sha256": "cd3d3fb6694022d3e158b126e71cdea0d3261d1a1dec42d26a73856e5ee060d0",
+  "checked_source_manifest": {
+    "case-4.json": "eb39ef4757cfab7e8a7ff09abddf240af8a02389ece727fe92b9ec18745f125b",
+    "case-4.rup": "87bff4dd2f991c52ed4b1e29c2a87c28140993cddce8a20a148ed2c1f4f704ef",
+    "case-5.json": "b8d7ffbb0848054c11fd7a9e727e723428b73a3c8214826186425f4526222617",
+    "case-5.rup": "8ddb90ca4241337ffbe058caee892c0604e9a035bd3b6d1bbb39b63ce1b1027d",
+    "case-6.json": "33e747cdec943410fd113a52acfaac4dade84c88c725240507a18fde03178226",
+    "case-6.rup": "74fd947d77a7f44856904564dc6a7fbb6d2d9edb68c57e2e65be881c5748a6f1",
+    "cnf.py": "03d821fe17b4a78d36ee3e9a9f8cd55ea7b7da1f436b37ba0aab4c5f8d4a5f20",
+    "exact.py": "265366ae7cc1e5b5ed60bc96075a32e5d56ac62e52da92080ab8752cdbf9285c",
+    "lower-Hc2.json": "a90fdcd2765b900ca6b9c6e129e183771289d5b639bb249aab197ecef3ef4ca7",
+    "lower-Hh3.json": "b613be268d2c90be5780cb7bb17051217366373c3cb3f5dfa9f48e427a2af43c",
+    "upper.json": "8e3cedaf888ec6d3af8b86f2c5325f7efc9f2c276fcce6b5480158a8d7960d86",
+    "verify.py": "a50933fd805e515f32774a99b65be37a97360892be0b6bda556b756e85a8b022"
+  },
+  "normal_optimized_evidence_agrees": true,
+  "checks": {
+    "normal-contact": {
+      "evidence_sha256": "db9dca11415c8146dade906dbbf9c181301b0b8e2035dd7629136bc2fadc13cb",
+      "seconds": 35.033,
+      "max_rss_kib": 25844
+    },
+    "normal-4": {
+      "evidence_sha256": "9f708109c80684514f8e89b790e13f1308670a13fdf75421688cabb3849e5ffe",
+      "seconds": 2.927,
+      "max_rss_kib": 53060
+    },
+    "normal-5": {
+      "evidence_sha256": "26cb71a55f93d82a35487f2f293e5412473a5dce107f122413b4f759c50604f6",
+      "seconds": 2.855,
+      "max_rss_kib": 51520
+    },
+    "normal-6": {
+      "evidence_sha256": "37b34c8bdb4b7ec602685dc27169fd845c71f797b1ed84de0bce90509845258e",
+      "seconds": 2.958,
+      "max_rss_kib": 49168
+    },
+    "optimized-contact": {
+      "evidence_sha256": "db9dca11415c8146dade906dbbf9c181301b0b8e2035dd7629136bc2fadc13cb",
+      "seconds": 33.681,
+      "max_rss_kib": 26816
+    },
+    "optimized-4": {
+      "evidence_sha256": "9f708109c80684514f8e89b790e13f1308670a13fdf75421688cabb3849e5ffe",
+      "seconds": 2.957,
+      "max_rss_kib": 54240
+    },
+    "optimized-5": {
+      "evidence_sha256": "26cb71a55f93d82a35487f2f293e5412473a5dce107f122413b4f759c50604f6",
+      "seconds": 2.805,
+      "max_rss_kib": 53016
+    },
+    "optimized-6": {
+      "evidence_sha256": "37b34c8bdb4b7ec602685dc27169fd845c71f797b1ed84de0bce90509845258e",
+      "seconds": 2.552,
+      "max_rss_kib": 50736
+    }
+  },
+  "dependencies": {
+    "rup_reader_path": "../shifted-inner/rup_audit.cpp",
+    "rup_reader_sha256": "8a80b276660f1b265feacb9ac04e7d59089a225b1c3b4a56691742b166211fb9"
+  },
+  "environment": {
+    "python": "3.11.2",
+    "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "flags": "-std=c++17 -O2 -DNDEBUG",
+    "threads": 1
+  }
+}
