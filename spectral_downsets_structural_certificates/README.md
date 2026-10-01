@@ -67,6 +67,18 @@ positive pendant count follows by applying the one-step result to the
 penultimate family. The three-point cube now has an order-10 completion
 with both ranks9, compared with the prior sufficient order32 recipe. The
 all-order proof is author-checked, unformalized and independently unreviewed.
+[LINEAR_PENDANT_COMPLETION.md](LINEAR_PENDANT_COMPLETION.md) gives a universal
+linear sufficient count: every r>=N-s+1 pendants works for every nontrivial
+downset, including s=1,2 without preprocessing. A four-block stochastic
+matrix depends only on the old star/outside sizes and fresh disjoint edges;
+an exhaustive rational Schur decomposition proves a uniform lower gap.
+Two endpoint-preserving row-zero trades give both maximal ranks, simple
+endpoints, unique star equality and positive empty weights. All nonempty
+off-diagonals are nonnegative when N>2s; balanced inputs may use signed
+weights. The empty margin differs from the affine recipe's stronger bound.
+The one-pendant balanced lemma retains its sharper count on that subclass.
+This new linear construction is author-checked, unformalized and independently
+unreviewed, and supplies no H matrix on arbitrary unchanged D.
 [FRIENDSHIP.md](FRIENDSHIP.md) gives a different capped core for every
 friendship graph downset: k triangles sharing just one vertex. For every
 k>=2 the entire partition template fails the cap congruence, while this
@@ -403,6 +415,30 @@ and both slack ranks33; its 113 constructed matchings are fully checked,
 while independent backtracking and an equality census are omitted there.
 Finite replay validates the implementation; the ordinary correlation,
 matching, spanning-tree-gap and kernel argument proves all orders.
+
+## Linear-count universal completion
+
+The [linear-count constructor](linear_pendant_completion.py),
+[literal block/Schur/LDL checker](verify_linear_pendant_completion.py),
+[expected output](linear_pendant_expected.json) and
+[source manifest](linear_source_manifest.json) are reproduced from the
+repository root by:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -B spectral_downsets_structural_certificates/verify_linear_pendant_completion.py --check
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -B -O spectral_downsets_structural_certificates/verify_linear_pendant_completion.py --check
+```
+
+Every one of the37 retained augmented instances has full raw/final endpoint
+and buffered rational LDL, all Schur entries and complete raw/repair/final
+oracle replay, through order40. They include all18 nontrivial three-point
+inputs and all33 maximum-center choices, not a census proving H on every
+unchanged input. Twelve malformed-input/entry/mode/size controls reject.
+Normal and optimized frozen outputs agree; the optimized run took3.188s
+and21060KiB, with one process and numeric threads one. The universal claim
+rests on the written all-parameter proof, not extrapolation from this cohort.
 
 ## Primary sources and current status
 
