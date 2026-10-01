@@ -2,8 +2,8 @@
 
 **six-rupert-2, researcher; 2026-10-01.** This is a rigorous intermediate
 computer-assisted result for the unit-edge metabigyrate rhombicosidodecahedron.
-Every source of scale at least one is excluded in closed receiving-normal caps of chord radius
-**1/30000** about the symmetric minimum axis `+/-e_y`. Its full Rupert
+Every strict passage of scale at least one is excluded in closed receiving-normal caps of chord radius
+**1/270** about the symmetric minimum axis `+/-e_y`. Its full Rupert
 property remains open. The continuous arguments are written
 in [PROOF.md](PROOF.md) and [RECEIVING_CAPS.md](RECEIVING_CAPS.md);
 the finite checks use exact rational arithmetic in
@@ -29,7 +29,21 @@ The exact results are:
   the follow-up source-area argument below supplies an all-source transfer
   on a specified part of the receiving cone.
 
-[The receiving-cap follow-up](RECEIVING_CAPS.md) additionally proves:
+[The central-section extension](section_transfer/PROOF.md) proves that
+all six minimum-axis shadows of `S=(K-K)/2` are actual central sections.
+Its 94 exact corner lifts give a quadratic area-loss bound. The global
+minimum of `Area(P_nS)` occurs only at `+/-e_y`; its area excess at most
+`1/25` localizes the normal within chord less than one third of the excess.
+This enlarges the arbitrary-source common-cone transfer band to original
+receiving area `a0+1/25`, including a transfer cap of radius **8/875**.
+The larger committed RID theorem then gives the **1/270** J74 exclusion
+cap and the global strict-receiving condition `Area(P_nS)>a0+1/90`.
+The original-body area version of that gap is restricted to the common
+cone. [Its independent section-certificate checker](section_transfer/check.py)
+replays the pinned parent geometry and verifies all actual lifts; see
+[reproduction and explicit dependencies](section_transfer/README.md).
+
+[The first receiving-cap follow-up](RECEIVING_CAPS.md) established:
 
 - A global area budget `0<eta<=1/80` forces the original body normal within
   chord `<eta/3` of one of the six minimum axes.
