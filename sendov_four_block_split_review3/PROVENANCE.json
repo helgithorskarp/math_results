@@ -1,0 +1,244 @@
+{
+  "schema": "six-reviewer-3-four-block-split-review-v1",
+  "agent": "six-reviewer-3",
+  "role": "independent mathematical reviewer",
+  "date": "2026-10-01",
+  "target": {
+    "height": "8405",
+    "reference": "bafkreideq2iyeuzase6x7jitqmfay5jo4oinsw5dvk7fjggg6wwni3jpoa",
+    "source_commit": "38e10b3164b770e210dc4f549aa3e6b34e56fbc0",
+    "source_directory": "sendov_degree9_four_block_split_instability",
+    "files": {
+      ".gitignore": {
+        "bytes": 25,
+        "sha256": "2f6f90f5c8c8716ee636633e870c1d61184267644f36b2a83a5198309c67139a"
+      },
+      "LITERATURE.md": {
+        "bytes": 10551,
+        "sha256": "1f661d9001c4d2931044fa0467f2de3939b27f515fa1804795cd554e3b05d0d2"
+      },
+      "PROOF.md": {
+        "bytes": 19652,
+        "sha256": "735ea3e12f4762e84fc6a26681f5e11514c73788cd1737a12562b95e80d2ef06"
+      },
+      "README.md": {
+        "bytes": 4321,
+        "sha256": "d84cb2e793da9c30d45a7b6bf76314a48d388849adc4219ec97f7f722de5753a"
+      },
+      "expected.json": {
+        "bytes": 14481,
+        "sha256": "873490a0042a916a5ba663bd95a37a49bf01eab5552c108e7814ac755cf8ef9f"
+      },
+      "verify.py": {
+        "bytes": 21194,
+        "sha256": "00a06727bd59efeebbcb09a7b5b4a9511e22b961043cf7c764d54dd1af5db488"
+      }
+    },
+    "complete_source_bytes": 70224,
+    "whole_proof_embedded_in_committed_body": true
+  },
+  "known_graph_context": {
+    "8405": {
+      "artifactRef": "bafkreideq2iyeuzase6x7jitqmfay5jo4oinsw5dvk7fjggg6wwni3jpoa",
+      "height": "8405",
+      "kind": "LEMMA",
+      "title": "Degree-nine two-pair stationary branch is a saddle: three negative split modes in every bounded radius window"
+    },
+    "7328": {
+      "artifactRef": "bafkreig6nbpaohth4dglfilv7nt34s5kzo3mmmbl26zfwxr2l4tygao2ly",
+      "height": "7328",
+      "kind": "LEMMA",
+      "title": "Uniform collapsed reciprocal coercivity, sharp energy coefficient and radius cutoff for every n>=4"
+    },
+    "8315": {
+      "artifactRef": "bafkreicbixstsrtujnfe66wj654hnjsroxnca5y6bpfew752p2amliksgu",
+      "height": "8315",
+      "kind": "LEMMA",
+      "title": "Actual degree-nine moving-pair endpoint instability and analytic lower split-stability curve"
+    },
+    "8364": {
+      "artifactRef": "bafkreibcatzzrexhq4xddn4r5bvxwmmlklif4dl25ng2yftmwrnppa6owy",
+      "height": "8364",
+      "kind": "LEMMA",
+      "title": "Degree-nine two-pair bifurcation, complete small-energy family minima and angular stationarity"
+    },
+    "8378": {
+      "artifactRef": "bafkreienlcz2cckxrjae6elgluao6h6a6ygrfgambdhxqiz2zywsmscmzi",
+      "height": "8378",
+      "kind": "REVIEW",
+      "title": "Independent two-pair bifurcation audit and uniform bounded radius windows"
+    },
+    "7129": {
+      "artifactRef": "bafkreidtwmt33ck33g7dsuejzpj565twbdoz4wjhuzhser2hzizzi64qqm",
+      "height": "7129",
+      "kind": "CONJECTURE",
+      "title": "Sendov family: degree-nine first-power Tang-Zhang endpoint"
+    }
+  },
+  "major_claim_graph_refresh_height": 8458,
+  "target_incoming_at_refresh": [
+    {
+      "kind": "CITES",
+      "source": {
+        "artifactRef": "bafkreienrerd5d2662c2jjhj4dzammem67bog46ziodyep4hz5zbnc3cke",
+        "height": "8444",
+        "kind": "LEMMA",
+        "title": "Complete six-level degree-nine displacement maximum,1536 direction stability and sharp complex six-phase basin"
+      }
+    }
+  ],
+  "reviewed_dependencies": [
+    {
+      "height": "7328",
+      "commit": "4cade1368e2880d76fd98c32ec32135e37482083",
+      "path": "sendov_uniform_collapsed_radius_threshold/PROOF.md",
+      "sha256": "592efdae73f8a2e0e5de0363f625db8be68c3aa082454bb89b7dffe2b2e13b72",
+      "bytes": 15852,
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/sendov_uniform_collapsed_radius_threshold/PROOF.md"
+    },
+    {
+      "height": "8315",
+      "commit": "fb6eb7245b071495bd37358a3aedde698d0dd592",
+      "path": "sendov_degree9_moving_pair_split_correction/PROOF.md",
+      "sha256": "333940da2eac8366a580048dbddcbcd1aaeeb46e648e8a5b58805aa467cfd5ea",
+      "bytes": 19421,
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_moving_pair_split_correction/PROOF.md"
+    },
+    {
+      "height": "8364",
+      "commit": "6dbb599ae0f009c38fb7b97c8459f5be9551d545",
+      "path": "sendov_degree9_two_pair_bifurcation/PROOF.md",
+      "sha256": "6b91618d9fe569171fe317be93aa86cc528c00f25389c2adde548586697cae8d",
+      "bytes": 21750,
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_two_pair_bifurcation/PROOF.md"
+    },
+    {
+      "height": "8378",
+      "commit": "03e07acfbef41e9f1d7e590d5cbac94a03c59f5b",
+      "path": "sendov_two_pair_bifurcation_review3/REVIEW.md",
+      "sha256": "a11aca2a00d9b04d9a2acc848d0c685ba5cba590b62a5938945dd0ccaeb8f7c0",
+      "bytes": 22837,
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/sendov_two_pair_bifurcation_review3/REVIEW.md"
+    }
+  ],
+  "independent": {
+    "method": "far-root-first quintic removal and differentiated quartic; normalized pivots3/8; complete rho-zero identity; universal symbolic reducing/compression matrices; rational interval signs",
+    "identities": 384,
+    "whole_own_records": 10,
+    "strict_interval_signs": 7,
+    "damaged_mathematical_controls": 6,
+    "whole_author_records_compared": [
+      "H4_energy_through2",
+      "complete_septic",
+      "existing_pair_product_derivative_through2",
+      "existing_pair_sum_derivative_through2",
+      "far_root_derivative_through2",
+      "far_root_through2",
+      "full_eight_critical_reciprocal",
+      "full_eight_original_reciprocal",
+      "full_external_quintic_derivative",
+      "new_pair_product_derivative",
+      "new_pair_sum_derivative",
+      "rho_cross_coefficient"
+    ],
+    "result_sha256": "daf546144869d50895979ea27da822e3e0c72de73515957a938c87acb397f95a",
+    "verifier_sha256": "fbd228c6d288e8bbe48bc805195a32d6ee0891745fc000e6cc45508089287865",
+    "per_mode_fixture_rejections": 6,
+    "runs": {
+      "normal": {
+        "seconds": 0.3176825739792548,
+        "exit_code": 0,
+        "output": {
+          "canonical_result_sha256": "daf546144869d50895979ea27da822e3e0c72de73515957a938c87acb397f95a",
+          "damaged_math": 6,
+          "identities": 384,
+          "records": 10,
+          "status": "PASS_INDEPENDENT",
+          "whole_author_record_comparisons": 12
+        }
+      },
+      "optimized": {
+        "seconds": 0.45718660298734903,
+        "exit_code": 0,
+        "output": {
+          "canonical_result_sha256": "daf546144869d50895979ea27da822e3e0c72de73515957a938c87acb397f95a",
+          "damaged_math": 6,
+          "identities": 384,
+          "records": 10,
+          "status": "PASS_INDEPENDENT",
+          "whole_author_record_comparisons": 12
+        }
+      }
+    }
+  },
+  "author_baseline_replay": {
+    "verifier_sha256": "00a06727bd59efeebbcb09a7b5b4a9511e22b961043cf7c764d54dd1af5db488",
+    "per_mode_fixture_rejections": 13,
+    "runs": {
+      "normal": {
+        "seconds": 0.3755660079768859,
+        "exit_code": 0,
+        "output": {
+          "agent": "six-sendov-3",
+          "counts": {
+            "angular_compression_entries": 512,
+            "angular_compression_inputs": 8,
+            "damaged_math": 7,
+            "identities": 126,
+            "reducing_basis_inputs": 5,
+            "reducing_full_vectors": 30,
+            "signs": 6
+          },
+          "record_count": 23,
+          "record_sha256": "2d80937f827264cd507849e5d60e5b67f8b87a187afaf7f6893991e762525e20",
+          "role": "researcher",
+          "schema": "sendov-four-block-split-instability-v1",
+          "status": "exact actual-polynomial/coefficient/sign evidence; analytic continuation and angular saddle proof in PROOF.md"
+        }
+      },
+      "optimized": {
+        "seconds": 0.5258031889679842,
+        "exit_code": 0,
+        "output": {
+          "agent": "six-sendov-3",
+          "counts": {
+            "angular_compression_entries": 512,
+            "angular_compression_inputs": 8,
+            "damaged_math": 7,
+            "identities": 126,
+            "reducing_basis_inputs": 5,
+            "reducing_full_vectors": 30,
+            "signs": 6
+          },
+          "record_count": 23,
+          "record_sha256": "2d80937f827264cd507849e5d60e5b67f8b87a187afaf7f6893991e762525e20",
+          "role": "researcher",
+          "schema": "sendov-four-block-split-instability-v1",
+          "status": "exact actual-polynomial/coefficient/sign evidence; analytic continuation and angular saddle proof in PROOF.md"
+        }
+      }
+    }
+  },
+  "proven_refinement": "Compact uniform balanced three-dimensional descending sheets with cost decrease >=(15/32)v_-^4 lambda_- e^2|c| ||h||^2; no uniform radius reaching collapse or c=0.",
+  "downstream_context": {
+    "source_commit": "3d8563f1727706c9cbb5587467621fef99be0c51",
+    "path": "sendov_degree9_three_pair_ratio_minimum/PROOF.md",
+    "sha256": "f9d76e787ed15564e669744655d433c16e8fae68172baa299e99baed0a46fa19",
+    "status": "Statements inspected as context; new proof and executable not reviewed; no premise or transferred verdict."
+  },
+  "environment": {
+    "python": "Python 3.11.2",
+    "dependencies": "standard library only",
+    "threads": 1,
+    "mathematical_cpu_jobs_at_once": 1,
+    "peak_child_rss_KiB": 23220,
+    "resource_limits": "unchanged1CPU2GiB128tasks"
+  },
+  "primary_literature": [
+    "https://arxiv.org/html/2609.19126",
+    "https://arxiv.org/html/2508.10341v3",
+    "https://terrytao.wordpress.com/2026/08/12/a-digestion-of-the-proof-of-sendovs-conjecture/"
+  ],
+  "trust_boundary": "Exact rational evidence plus independently audited ordinary analytic IFT, physical factor interpretation, spectral trace Taylor and compactness bridges; no formal kernel; earlier branch/stationarity remain credited8315/8364/8378 inputs.",
+  "no_new_priority_claim": true
+}
