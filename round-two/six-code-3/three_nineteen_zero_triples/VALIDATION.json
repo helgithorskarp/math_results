@@ -1,0 +1,349 @@
+{
+  "status": "COMPLETE",
+  "python": "3.11.2",
+  "platform": "Linux-6.1.0-53-cloud-amd64-x86_64-with-glibc2.36",
+  "threads": 1,
+  "intensive_jobs": 1,
+  "seconds": 254.965029391984,
+  "peak_child_rss_kib": 23192,
+  "reused_primary_carrier": true,
+  "stages": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "<artifact>/verify.py",
+        "--work",
+        "<work>",
+        "--cases",
+        "0"
+      ],
+      "seconds": 40.731156189984176,
+      "result": {
+        "status": "COMPLETE_ENTRYWISE",
+        "cases": [
+          0
+        ],
+        "counts": {
+          "partitions": 1989,
+          "y_nine": 1057,
+          "y_two": 111,
+          "z_nine": 44
+        },
+        "joint_cores": 44,
+        "summary_sha256": "603b56848bbff55a0defd9e0cba40497af6f9d2e19d594b360e28bce5ea580b6"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "<artifact>/verify.py",
+        "--work",
+        "<work>",
+        "--cases",
+        "1"
+      ],
+      "seconds": 42.35432243201649,
+      "result": {
+        "status": "COMPLETE_ENTRYWISE",
+        "cases": [
+          1
+        ],
+        "counts": {
+          "partitions": 2026,
+          "y_nine": 1031,
+          "y_two": 97,
+          "z_nine": 69
+        },
+        "joint_cores": 69,
+        "summary_sha256": "603b56848bbff55a0defd9e0cba40497af6f9d2e19d594b360e28bce5ea580b6"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "<artifact>/verify.py",
+        "--work",
+        "<work>",
+        "--cases",
+        "2"
+      ],
+      "seconds": 42.83411342400359,
+      "result": {
+        "status": "COMPLETE_ENTRYWISE",
+        "cases": [
+          2
+        ],
+        "counts": {
+          "partitions": 2066,
+          "y_nine": 1177,
+          "y_two": 116,
+          "z_nine": 21
+        },
+        "joint_cores": 21,
+        "summary_sha256": "603b56848bbff55a0defd9e0cba40497af6f9d2e19d594b360e28bce5ea580b6"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "<artifact>/verify.py",
+        "--work",
+        "<work>",
+        "--cases",
+        "3"
+      ],
+      "seconds": 41.38428262399975,
+      "result": {
+        "status": "COMPLETE_ENTRYWISE",
+        "cases": [
+          3
+        ],
+        "counts": {
+          "partitions": 1916,
+          "y_nine": 1090,
+          "y_two": 110,
+          "z_nine": 31
+        },
+        "joint_cores": 31,
+        "summary_sha256": "603b56848bbff55a0defd9e0cba40497af6f9d2e19d594b360e28bce5ea580b6"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "<artifact>/verify.py",
+        "--work",
+        "<work>",
+        "--cases",
+        "4"
+      ],
+      "seconds": 40.71664628200233,
+      "result": {
+        "status": "COMPLETE_ENTRYWISE",
+        "cases": [
+          4
+        ],
+        "counts": {
+          "partitions": 1928,
+          "y_nine": 1121,
+          "y_two": 104,
+          "z_nine": 30
+        },
+        "joint_cores": 30,
+        "summary_sha256": "603b56848bbff55a0defd9e0cba40497af6f9d2e19d594b360e28bce5ea580b6"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "<artifact>/verify.py",
+        "--work",
+        "<work>",
+        "--cases",
+        "5"
+      ],
+      "seconds": 40.63072185002966,
+      "result": {
+        "status": "COMPLETE_ENTRYWISE",
+        "cases": [
+          5
+        ],
+        "counts": {
+          "partitions": 1954,
+          "y_nine": 1106,
+          "y_two": 113,
+          "z_nine": 31
+        },
+        "joint_cores": 31,
+        "summary_sha256": "603b56848bbff55a0defd9e0cba40497af6f9d2e19d594b360e28bce5ea580b6"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "<artifact>/verify_capacity.py",
+        "--work",
+        "<work>"
+      ],
+      "seconds": 2.881286624004133,
+      "result": {
+        "status": "COMPLETE_EXACT",
+        "cores": 226,
+        "candidate_count_range": [
+          51,
+          94
+        ],
+        "additional_bound_census": {
+          "14": 6,
+          "15": 42,
+          "16": 51,
+          "17": 57,
+          "18": 60,
+          "19": 9,
+          "20": 1
+        },
+        "maximum_total_bound": 62,
+        "certificate_sha256": "1ccf38f9ceaec313916c282b0453f0f4e2e050ca029e68416bbadb73b570428e",
+        "record_sha256": "0df72b5f18b49053e551164485ceb1da372c168d1e79898fc1ece10e4e9549e7"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "<artifact>/verify_capacity.py",
+        "--work",
+        "<work>"
+      ],
+      "seconds": 2.844244020001497,
+      "result": {
+        "status": "COMPLETE_EXACT",
+        "cores": 226,
+        "candidate_count_range": [
+          51,
+          94
+        ],
+        "additional_bound_census": {
+          "14": 6,
+          "15": 42,
+          "16": 51,
+          "17": 57,
+          "18": 60,
+          "19": 9,
+          "20": 1
+        },
+        "maximum_total_bound": 62,
+        "certificate_sha256": "1ccf38f9ceaec313916c282b0453f0f4e2e050ca029e68416bbadb73b570428e",
+        "record_sha256": "0df72b5f18b49053e551164485ceb1da372c168d1e79898fc1ece10e4e9549e7"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "<artifact>/controls.py",
+        "--work",
+        "<work>"
+      ],
+      "seconds": 0.584649172029458,
+      "result": {
+        "status": "PASSED",
+        "small_graphs": 1024,
+        "clique_decisions": 5120,
+        "sparse_vertex_labels": [
+          0,
+          3,
+          9,
+          18,
+          32
+        ],
+        "bad_evidence_or_guard_rejections": 13,
+        "positive_core_words": 42
+      }
+    }
+  ],
+  "expected_sha256": "57222be53f77f8c7b75352efc41a44c28792e5a3d803f5180e06494d2366c082",
+  "capacity_sha256": "1ccf38f9ceaec313916c282b0453f0f4e2e050ca029e68416bbadb73b570428e",
+  "final_guard_checks": [
+    {
+      "entry": "verify_capacity.py",
+      "optimized": false,
+      "seconds": 2.7289204669650644,
+      "result": {
+        "status": "COMPLETE_EXACT",
+        "cores": 226,
+        "candidate_count_range": [
+          51,
+          94
+        ],
+        "additional_bound_census": {
+          "14": 6,
+          "15": 42,
+          "16": 51,
+          "17": 57,
+          "18": 60,
+          "19": 9,
+          "20": 1
+        },
+        "maximum_total_bound": 62,
+        "certificate_sha256": "1ccf38f9ceaec313916c282b0453f0f4e2e050ca029e68416bbadb73b570428e",
+        "record_sha256": "0df72b5f18b49053e551164485ceb1da372c168d1e79898fc1ece10e4e9549e7"
+      }
+    },
+    {
+      "entry": "verify_capacity.py",
+      "optimized": true,
+      "seconds": 2.8089847009978257,
+      "result": {
+        "status": "COMPLETE_EXACT",
+        "cores": 226,
+        "candidate_count_range": [
+          51,
+          94
+        ],
+        "additional_bound_census": {
+          "14": 6,
+          "15": 42,
+          "16": 51,
+          "17": 57,
+          "18": 60,
+          "19": 9,
+          "20": 1
+        },
+        "maximum_total_bound": 62,
+        "certificate_sha256": "1ccf38f9ceaec313916c282b0453f0f4e2e050ca029e68416bbadb73b570428e",
+        "record_sha256": "0df72b5f18b49053e551164485ceb1da372c168d1e79898fc1ece10e4e9549e7"
+      }
+    },
+    {
+      "entry": "controls.py",
+      "optimized": true,
+      "seconds": 0.5688472060137428,
+      "result": {
+        "status": "PASSED",
+        "small_graphs": 1024,
+        "clique_decisions": 5120,
+        "sparse_vertex_labels": [
+          0,
+          3,
+          9,
+          18,
+          32
+        ],
+        "bad_evidence_or_guard_rejections": 13,
+        "positive_core_words": 42
+      }
+    }
+  ],
+  "primary_case_seconds": [
+    2.393590122985188,
+    2.256489802035503,
+    2.207959544030018,
+    2.208979290968273,
+    2.1762446089996956,
+    2.2845466730068438
+  ],
+  "proof_status": "Exact author computation; imported census and ordinary completeness/transfer bridges unformalized; independent peer review pending",
+  "source_sha256": {
+    ".gitignore": "5b561aa9ae36ca5ff408c3a22ce239167f80f4d3b6ef53ff095a6136fb824aa8",
+    "PROOF.md": "7349c53ff6ac168a53a171ed08e738be85f5dd5655ab5bebcfc62b5ba8fbc588",
+    "README.md": "6befc90cd66fb060b34c5093e1be844b1fb019cc081764c22dec282ac560cab7",
+    "capacity.json": "1ccf38f9ceaec313916c282b0453f0f4e2e050ca029e68416bbadb73b570428e",
+    "controls.py": "c0a9f8c59234d95bd53bd596c155a51edc08ef3ff141c03be7e862ce6756d85d",
+    "discover_capacity.py": "ffe5754660e08b75295ba284f1aa1b94d65ca3ba13b7d57ec8506f0cd710a93f",
+    "expected.json": "57222be53f77f8c7b75352efc41a44c28792e5a3d803f5180e06494d2366c082",
+    "produce.py": "3e0611eaf25d34bc88d476880c71d548aadff6b02cafd0481ecfafaa19d8b195",
+    "reproduce.py": "554183c4fd79a642c0e01d5fdf1c76732e9dec8a3990f6b962410bf7d9be76c1",
+    "verify.py": "c9f63e88d033595c3be6c4144a689945d2f425773a28f3badfb83a6d5566891e",
+    "verify_capacity.py": "e5f83a5d2bd2d0d495f9bca91735beae5f8c79ff5c32cdb6f3b27c0dec80e10d"
+  }
+}
