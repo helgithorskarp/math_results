@@ -1,0 +1,834 @@
+{
+  "agent": "six-downset-2",
+  "arithmetic": "Python integers/Fraction; Bareiss plus independent rational Schur",
+  "infinite_scope_trust_boundary": "Unformalized ordinary proof in PROOF.md, not finite extrapolation",
+  "literal_cases": [
+    {
+      "N": 11,
+      "endpoint": "1/7",
+      "harmonic_action_columns": 5,
+      "lower_rank": 7,
+      "n": 4,
+      "r": 2,
+      "upper_rank": 10
+    },
+    {
+      "N": 16,
+      "endpoint": "1/27",
+      "harmonic_action_columns": 5,
+      "lower_rank": 11,
+      "n": 5,
+      "r": 2,
+      "upper_rank": 15
+    },
+    {
+      "N": 42,
+      "endpoint": "1/66",
+      "harmonic_action_columns": 9,
+      "lower_rank": 36,
+      "n": 6,
+      "r": 3,
+      "upper_rank": 41
+    }
+  ],
+  "passed": true,
+  "product_cases": [
+    {
+      "N": 121,
+      "eligible_factors": [
+        0,
+        1
+      ],
+      "factors": [
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "lower_rank": 113,
+      "s": 44,
+      "upper_rank": 120
+    },
+    {
+      "N": 176,
+      "eligible_factors": [
+        0
+      ],
+      "factors": [
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "lower_rank": 172,
+      "s": 64,
+      "upper_rank": 175
+    }
+  ],
+  "rejected_controls": [
+    "r_one",
+    "below_stable",
+    "bool_n",
+    "float_r",
+    "negative_t",
+    "float_t",
+    "above_sufficient_interval",
+    "negative_vertex",
+    "vertex_outside_ground",
+    "vertex_above_layer",
+    "bool_vertex",
+    "Bareiss_negative_diagonal",
+    "Schur_negative_diagonal",
+    "Bareiss_zero_diagonal_nonzero_row",
+    "Schur_zero_diagonal_nonzero_row",
+    "Bareiss_negative_schur",
+    "Schur_negative_schur",
+    "Bareiss_asymmetric",
+    "Schur_asymmetric",
+    "Bareiss_floating_matrix",
+    "Schur_floating_matrix",
+    "Bareiss_nonsquare",
+    "Schur_nonsquare",
+    "wrong_seed_moment",
+    "wrong_empty_loop_and_row",
+    "nonzero_hoffman_diagonal"
+  ],
+  "role": "researcher",
+  "schema": "dense-two-moment-check-v1",
+  "sector_cases": [
+    {
+      "N": 11,
+      "gap": "4/7",
+      "harmonic_sectors": 3,
+      "n": 4,
+      "r": 2,
+      "repairs": [
+        {
+          "lower_core_rank": 6,
+          "t": "1/14",
+          "upper_core_rank": 10
+        },
+        {
+          "lower_core_rank": 6,
+          "t": "1/7",
+          "upper_core_rank": 10
+        }
+      ],
+      "s": 4,
+      "strict_moment_difference_ranks": [
+        0,
+        1
+      ]
+    },
+    {
+      "N": 16,
+      "gap": "52/81",
+      "harmonic_sectors": 3,
+      "n": 5,
+      "r": 2,
+      "repairs": [
+        {
+          "lower_core_rank": 10,
+          "t": "1/54",
+          "upper_core_rank": 15
+        },
+        {
+          "lower_core_rank": 10,
+          "t": "1/27",
+          "upper_core_rank": 15
+        }
+      ],
+      "s": 5,
+      "strict_moment_difference_ranks": [
+        0,
+        2
+      ]
+    },
+    {
+      "N": 42,
+      "gap": "65/99",
+      "harmonic_sectors": 4,
+      "n": 6,
+      "r": 3,
+      "repairs": [
+        {
+          "lower_core_rank": 35,
+          "t": "1/132",
+          "upper_core_rank": 41
+        },
+        {
+          "lower_core_rank": 35,
+          "t": "1/66",
+          "upper_core_rank": 41
+        }
+      ],
+      "s": 16,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 64,
+      "gap": "43/65",
+      "harmonic_sectors": 4,
+      "n": 7,
+      "r": 3,
+      "repairs": [
+        {
+          "lower_core_rank": 56,
+          "t": "1/260",
+          "upper_core_rank": 63
+        },
+        {
+          "lower_core_rank": 56,
+          "t": "1/130",
+          "upper_core_rank": 63
+        }
+      ],
+      "s": 22,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 163,
+      "gap": "448/675",
+      "harmonic_sectors": 5,
+      "n": 8,
+      "r": 4,
+      "repairs": [
+        {
+          "lower_core_rank": 154,
+          "t": "1/450",
+          "upper_core_rank": 162
+        },
+        {
+          "lower_core_rank": 154,
+          "t": "1/225",
+          "upper_core_rank": 162
+        }
+      ],
+      "s": 64,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 256,
+      "gap": "712/1071",
+      "harmonic_sectors": 5,
+      "n": 9,
+      "r": 4,
+      "repairs": [
+        {
+          "lower_core_rank": 246,
+          "t": "1/714",
+          "upper_core_rank": 255
+        },
+        {
+          "lower_core_rank": 246,
+          "t": "1/357",
+          "upper_core_rank": 255
+        }
+      ],
+      "s": 93,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 638,
+      "gap": "177/266",
+      "harmonic_sectors": 6,
+      "n": 10,
+      "r": 5,
+      "repairs": [
+        {
+          "lower_core_rank": 627,
+          "t": "1/1064",
+          "upper_core_rank": 637
+        },
+        {
+          "lower_core_rank": 627,
+          "t": "1/532",
+          "upper_core_rank": 637
+        }
+      ],
+      "s": 256,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 1024,
+      "gap": "755/1134",
+      "harmonic_sectors": 6,
+      "n": 11,
+      "r": 5,
+      "repairs": [
+        {
+          "lower_core_rank": 1012,
+          "t": "1/1512",
+          "upper_core_rank": 1023
+        },
+        {
+          "lower_core_rank": 1012,
+          "t": "1/756",
+          "upper_core_rank": 1023
+        }
+      ],
+      "s": 386,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 2510,
+      "gap": "2068/3105",
+      "harmonic_sectors": 7,
+      "n": 12,
+      "r": 6,
+      "repairs": [
+        {
+          "lower_core_rank": 2497,
+          "t": "1/2070",
+          "upper_core_rank": 2509
+        },
+        {
+          "lower_core_rank": 2497,
+          "t": "1/1035",
+          "upper_core_rank": 2509
+        }
+      ],
+      "s": 1024,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 4096,
+      "gap": "916/1375",
+      "harmonic_sectors": 7,
+      "n": 13,
+      "r": 6,
+      "repairs": [
+        {
+          "lower_core_rank": 4082,
+          "t": "1/2750",
+          "upper_core_rank": 4095
+        },
+        {
+          "lower_core_rank": 4082,
+          "t": "1/1375",
+          "upper_core_rank": 4095
+        }
+      ],
+      "s": 1586,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 9908,
+      "gap": "1781/2673",
+      "harmonic_sectors": 8,
+      "n": 14,
+      "r": 7,
+      "repairs": [
+        {
+          "lower_core_rank": 9893,
+          "t": "1/3564",
+          "upper_core_rank": 9907
+        },
+        {
+          "lower_core_rank": 9893,
+          "t": "1/1782",
+          "upper_core_rank": 9907
+        }
+      ],
+      "s": 4096,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 16384,
+      "gap": "2261/3393",
+      "harmonic_sectors": 8,
+      "n": 15,
+      "r": 7,
+      "repairs": [
+        {
+          "lower_core_rank": 16368,
+          "t": "1/4524",
+          "upper_core_rank": 16383
+        },
+        {
+          "lower_core_rank": 16368,
+          "t": "1/2262",
+          "upper_core_rank": 16383
+        }
+      ],
+      "s": 6476,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 39203,
+      "gap": "1880/2821",
+      "harmonic_sectors": 9,
+      "n": 16,
+      "r": 8,
+      "repairs": [
+        {
+          "lower_core_rank": 39186,
+          "t": "1/5642",
+          "upper_core_rank": 39202
+        },
+        {
+          "lower_core_rank": 39186,
+          "t": "1/2821",
+          "upper_core_rank": 39202
+        }
+      ],
+      "s": 16384,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 65536,
+      "gap": "6928/10395",
+      "harmonic_sectors": 9,
+      "n": 17,
+      "r": 8,
+      "repairs": [
+        {
+          "lower_core_rank": 65518,
+          "t": "1/6930",
+          "upper_core_rank": 65535
+        },
+        {
+          "lower_core_rank": 65518,
+          "t": "1/3465",
+          "upper_core_rank": 65535
+        }
+      ],
+      "s": 26333,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 155382,
+      "gap": "4199/6300",
+      "harmonic_sectors": 10,
+      "n": 18,
+      "r": 9,
+      "repairs": [
+        {
+          "lower_core_rank": 155363,
+          "t": "1/8400",
+          "upper_core_rank": 155381
+        },
+        {
+          "lower_core_rank": 155363,
+          "t": "1/4200",
+          "upper_core_rank": 155381
+        }
+      ],
+      "s": 65536,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 262144,
+      "gap": "1677/2516",
+      "harmonic_sectors": 10,
+      "n": 19,
+      "r": 9,
+      "repairs": [
+        {
+          "lower_core_rank": 262124,
+          "t": "1/10064",
+          "upper_core_rank": 262143
+        },
+        {
+          "lower_core_rank": 262124,
+          "t": "1/5032",
+          "upper_core_rank": 262143
+        }
+      ],
+      "s": 106762,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 616666,
+      "gap": "11932/17901",
+      "harmonic_sectors": 11,
+      "n": 20,
+      "r": 10,
+      "repairs": [
+        {
+          "lower_core_rank": 616645,
+          "t": "1/11934",
+          "upper_core_rank": 616665
+        },
+        {
+          "lower_core_rank": 616645,
+          "t": "1/5967",
+          "upper_core_rank": 616665
+        }
+      ],
+      "s": 262144,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 1048576,
+      "gap": "14020/21033",
+      "harmonic_sectors": 11,
+      "n": 21,
+      "r": 10,
+      "repairs": [
+        {
+          "lower_core_rank": 1048554,
+          "t": "1/14022",
+          "upper_core_rank": 1048575
+        },
+        {
+          "lower_core_rank": 1048554,
+          "t": "1/7011",
+          "upper_core_rank": 1048575
+        }
+      ],
+      "s": 431910,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 9740686,
+      "gap": "21712/32571",
+      "harmonic_sectors": 13,
+      "n": 24,
+      "r": 12,
+      "repairs": [
+        {
+          "lower_core_rank": 9740661,
+          "t": "1/21714",
+          "upper_core_rank": 9740685
+        },
+        {
+          "lower_core_rank": 9740661,
+          "t": "1/10857",
+          "upper_core_rank": 9740685
+        }
+      ],
+      "s": 4194304,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 2448023843,
+      "gap": "54808/82215",
+      "harmonic_sectors": 17,
+      "n": 32,
+      "r": 16,
+      "repairs": [
+        {
+          "lower_core_rank": 2448023810,
+          "t": "1/54810",
+          "upper_core_rank": 2448023842
+        },
+        {
+          "lower_core_rank": 2448023810,
+          "t": "1/27405",
+          "upper_core_rank": 2448023842
+        }
+      ],
+      "s": 1073741824,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 618679078298,
+      "gap": "37024/55537",
+      "harmonic_sectors": 21,
+      "n": 40,
+      "r": 20,
+      "repairs": [
+        {
+          "lower_core_rank": 618679078257,
+          "t": "1/111074",
+          "upper_core_rank": 618679078297
+        },
+        {
+          "lower_core_rank": 618679078257,
+          "t": "1/55537",
+          "upper_core_rank": 618679078297
+        }
+      ],
+      "s": 274877906944,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 156861290196878,
+      "gap": "196648/294975",
+      "harmonic_sectors": 25,
+      "n": 48,
+      "r": 24,
+      "repairs": [
+        {
+          "lower_core_rank": 156861290196829,
+          "t": "1/196650",
+          "upper_core_rank": 156861290196877
+        },
+        {
+          "lower_core_rank": 156861290196829,
+          "t": "1/98325",
+          "upper_core_rank": 156861290196877
+        }
+      ],
+      "s": 70368744177664,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 15033173,
+      "gap": "54808/82215",
+      "harmonic_sectors": 9,
+      "n": 32,
+      "r": 8,
+      "repairs": [
+        {
+          "lower_core_rank": 15033140,
+          "t": "1/54810",
+          "upper_core_rank": 15033172
+        },
+        {
+          "lower_core_rank": 15033140,
+          "t": "1/27405",
+          "upper_core_rank": 15033172
+        }
+      ],
+      "s": 3572224,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "N": 1910882868067,
+      "gap": "954952/1432431",
+      "harmonic_sectors": 11,
+      "n": 80,
+      "r": 10,
+      "repairs": [
+        {
+          "lower_core_rank": 1910882867986,
+          "t": "1/954954",
+          "upper_core_rank": 1910882868066
+        },
+        {
+          "lower_core_rank": 1910882867986,
+          "t": "1/477477",
+          "upper_core_rank": 1910882868066
+        }
+      ],
+      "s": 235101135856,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    }
+  ]
+}
