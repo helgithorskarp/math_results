@@ -1,0 +1,54 @@
+{
+  "agent": "six-code-2",
+  "role": "researcher",
+  "dependency_directory": "constant_weight_a18_6_5_steiner_extension_barrier",
+  "files_sha256": {
+    "audit.py": "71c12ef28759de7f409c06d9ee7bfd766c045f99fd33236dba22323e6dd5f70d",
+    "audit_five_gap_projection.py": "75f062441ee333e11c691a26f78f28943d6c0bf3c2cce8a24bb2b68364dc473c",
+    "audit_fixed_word_gap.py": "d71ed9e4c83b627943000f4437651f1712a5e91afdd0a68af89feb1e62f803d1",
+    "audit_four_gap.py": "8374b8aaa4f0263d37fe26a1811f53685634e752f1f5ee52e061c341c66c5535",
+    "audit_three_gap.py": "11e6db056253168d58fba70855531b426e9afe09d22c8dbc7333ba52549d3321",
+    "audit_two_gap.py": "861674577464bd77bad4b88726c9e7435f4d18c1f24ff68c9cca9da42a9e3317",
+    "generate.py": "77baf79ab1b568a7db8ec5069f3e1e5c5f407b15fc638ebb67371ef0364f7383",
+    "generate_five_gap_projection.py": "e501c902d0bbfe801c44b5312bae3a8542c6c8eeffe737649a85f83e25eb3a15",
+    "generate_five_gap_single.py": "e4582a8fc92fc8cb90a35def9779301c9cb509fa5b7c79ce7f99b346d779b920",
+    "generate_fixed_word_gap.py": "86f44f532bf2d50aea7020ef0f5420faae771e0098173f27b594d4d7ffdcd7e3",
+    "generate_four_gap.py": "6242f08598a75ce146d68fcf478aa970e4735c9f50e427397d6d45e983a5319b",
+    "generate_three_gap.py": "b7161e1b90aa58719973c7962ae3bcbed72c2b9cd77138af18a280175b5878dd",
+    "generate_two_gap.py": "5f19eb0120352ea310beaa581ef081aaf1b8cc1bb014ba869836618cea16933d",
+    "geometry.py": "6d999427134b596b515cffcbf0d33e4353ca63769cca4219a8f352b04b4cd26d",
+    "verify.py": "fac401864f7381eb3748a4e30b0917c83efdbab3cb93fd6e2a08b0356fd1b952",
+    "verify_five_gap_projection.py": "ad78a6279aef3dd2f4df996b00ae85470eb6d2d319d153190ea0e5f848a7c027",
+    "verify_fixed_word_gap.py": "6c61ff1b192d5aec854815b708c9232d685f84d2e99d0f43834bbb5ce1df7e0e",
+    "verify_four_gap.py": "bb4107f036be0b884edc0253d597a8389fa44e7a7a51916918821697168fd4af",
+    "verify_three_gap.py": "3b72633369a8f6be7040888943e2ac39353e0c8760d1fe2f3fac0db0b1ea17c9",
+    "verify_two_gap.py": "753c8cfa8f309365a4e457e6e9f033361bcd014d53f497352d31696be86fadf3",
+    "four_gap_expected.json": "471ed11f4438852f17b6ac50ff64d2862870500e5851bf964438c3dd82e3ba1e",
+    "fixed_word_gap_expected.json": "6dd04d6d3eb42d024319d172a6345d7cc1c2da151e4c1dcc3a0e318faabbab2e"
+  },
+  "mathematical_dependencies": [
+    {
+      "source_commit": "5adfdc1fcbe54fd701367c076305af5bd993b616",
+      "graph_reference": "bafkreia46uplm4yyhg6lrjq7yanu2hmfyuhrcdsimbctp3oymu247d3uum",
+      "graph_height": 7560,
+      "scope": "Forced gap union costs for two/three compatible noncontained words"
+    },
+    {
+      "source_commit": "aa775990f13c916b2fb10da55c4ccfd1c1b6797d",
+      "graph_reference": "bafkreiakztl76jwczy5htefbf7ravrc6xpyswhblqamb5iosu7etuhq6re",
+      "graph_height": 7849,
+      "scope": "Complete13 one-word five-gap classes; special case0 s<=4"
+    },
+    {
+      "source_commit": "7ea6b95df212f5fb0a43cce175caad4faa9ad0ea",
+      "graph_reference": "bafkreifdhyio3qerrawomi2u6xb2rflfteshpbsi6jjlt5t6245ixj5vvi",
+      "graph_height": 7902,
+      "scope": "Complete295 one-word six-gap classes and18 two-word seven-gap classes"
+    }
+  ],
+  "algorithm_reuse": {
+    "source_commit": "7aebe7f05395535de0f74a5fdfdaa6b286470324",
+    "graph_reference": "bafkreihhu7or5izkepxsgrei2fssgkj4anwdbwqdvgfvl6cjxbgfyzedke",
+    "scope": "Published integer/mask and literal pair-incidence projection primitives; its numerical envelope is not a theorem dependency"
+  }
+}

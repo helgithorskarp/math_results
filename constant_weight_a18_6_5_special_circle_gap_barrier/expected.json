@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "agent": "six-code-2",
+  "role": "researcher",
+  "normalization": {
+    "fixed_word": 15,
+    "group_order": 16320,
+    "noncontained_words": 2040,
+    "stabilizer_order": 8,
+    "forced_gaps": [
+      6155,
+      9223,
+      16910,
+      33037
+    ],
+    "complement_points": [
+      4,
+      5,
+      6,
+      7,
+      16
+    ],
+    "special_circles": [
+      362,
+      661,
+      1178,
+      2149,
+      4262,
+      8281,
+      16553,
+      32854
+    ],
+    "pointed_pairs": 1953,
+    "orbits": 1763,
+    "labeled_triples": 13944,
+    "orbit_size_histogram": {
+      "4": 40,
+      "8": 1723
+    },
+    "cases_sha256": "059c824c218087110cf493136c2e1a7ee8f8eab824bf863bb7e6ea9fd8b81d31"
+  },
+  "imports": {
+    "five_gap_classes": 1,
+    "five_gap_labeled_choices": 8,
+    "five_gap_s_bound": 4,
+    "six_gap_classes": 62,
+    "six_gap_labeled_pairs": 476,
+    "six_gap_s_bound": 5,
+    "two_word_classes": 18,
+    "two_word_partners": 132,
+    "two_word_s_bound": 5
+  },
+  "fixtures": [
+    {
+      "counts": {
+        "size": 68,
+        "s": 4,
+        "t": 1,
+        "a": 16,
+        "R": 21,
+        "g": 5
+      },
+      "minimum_distance": 6,
+      "words_sha256": "e9533931e3c85c8b3db03d222a7d7dd5e0bf52ccd569681dd7bc4c6ef22e88de"
+    },
+    {
+      "counts": {
+        "size": 68,
+        "s": 5,
+        "t": 1,
+        "a": 15,
+        "R": 21,
+        "g": 6
+      },
+      "minimum_distance": 6,
+      "words_sha256": "e84f6c4c8cbb9581acd65e919726eab4960ed5d206c0d6f02fe686b130bbae14"
+    },
+    {
+      "counts": {
+        "size": 68,
+        "s": 6,
+        "t": 1,
+        "a": 18,
+        "R": 25,
+        "g": 7
+      },
+      "minimum_distance": 6,
+      "words_sha256": "cdac55931ed0538b42411ec0c5843daaab0e0c6b20cd0b952424c244c7f36181"
+    }
+  ],
+  "seven_gap": {
+    "complete_cases": 1763,
+    "labeled_triples": 13944,
+    "records_entrywise": 15463104,
+    "projected_rows_entrywise": 1333309,
+    "manifest_sha256": "58412a26940d0559787cda4ac4ca821f5c7d3ff784aa6890002ece185c09cc27",
+    "cliques_by_size": {
+      "1": 1333309,
+      "2": 3515416,
+      "3": 4722425,
+      "4": 3380163,
+      "5": 1126351,
+      "6": 117758,
+      "7": 0
+    },
+    "clique_number_histogram": {
+      "5": 241,
+      "6": 1522
+    }
+  }
+}
