@@ -1,0 +1,138 @@
+{
+  "agent": "six-code-1",
+  "role": "researcher",
+  "date_utc": "2026-10-01",
+  "python": "3.11.2",
+  "formalized": false,
+  "independent_review": "pending",
+  "normal_optimized_entrywise_agreement": true,
+  "verification_manifest_sha256": "c4e2567131f819e5adbbcabac745d0a21605961ae4fa1b1c0bf10868f75cfb98",
+  "runs": [
+    {
+      "mode": "normal",
+      "entrypoint": "primary.py",
+      "wall_seconds": 6.19609846099047,
+      "result": {
+        "status": "COMPLETE_EXACT_CERTIFICATE",
+        "cases": 20,
+        "partial_maps": 51840,
+        "certificate_bytes": 8637,
+        "seconds": 6.024391465005465
+      }
+    },
+    {
+      "mode": "normal",
+      "entrypoint": "verify.py",
+      "wall_seconds": 4.214662583952304,
+      "result": {
+        "cases": 20,
+        "partial_maps": 51840,
+        "direct": 51605,
+        "exceptional": 235,
+        "checked_full_branches": 1410,
+        "point_dfs_nodes": 153100,
+        "agent": "six-code-1",
+        "role": "researcher",
+        "status": "COMPLETE_SEPARATE_LITERAL_CHECK",
+        "controls": {
+          "rejected": [
+            "missing-case",
+            "repeated-case",
+            "wrong-format",
+            "missing-exception",
+            "missing-full-branch",
+            "invalid-witness",
+            "duplicate-template-block",
+            "false-positive-collision",
+            "zero-point-guard",
+            "zero-tail-guard"
+          ],
+          "positive_joint_words": 35,
+          "acl69_distance_counts": {
+            "6": 1264,
+            "8": 637,
+            "10": 445
+          }
+        },
+        "entrywise_carrier_comparison": true,
+        "seconds": 4.073561473982409,
+        "peak_RSS_kib": 23088
+      }
+    },
+    {
+      "mode": "normal",
+      "entrypoint": "census_replay.py",
+      "wall_seconds": 30.10727355896961,
+      "result": {
+        "manifest_sha256": "bf5b8d7fd19f473ab2be033ed227807cbef5f2dbb1794af7294a351bb80772b5",
+        "peak_RSS_kib": 43864,
+        "seconds": 29.919125464977697,
+        "status": "COMPLETE_GENERIC_CENSUS_REPLAY"
+      }
+    },
+    {
+      "mode": "optimized",
+      "entrypoint": "primary.py",
+      "wall_seconds": 6.91339101298945,
+      "result": {
+        "status": "COMPLETE_EXACT_CERTIFICATE",
+        "cases": 20,
+        "partial_maps": 51840,
+        "certificate_bytes": 8637,
+        "seconds": 6.498924607993104
+      }
+    },
+    {
+      "mode": "optimized",
+      "entrypoint": "verify.py",
+      "wall_seconds": 3.5671407059999183,
+      "result": {
+        "cases": 20,
+        "partial_maps": 51840,
+        "direct": 51605,
+        "exceptional": 235,
+        "checked_full_branches": 1410,
+        "point_dfs_nodes": 153100,
+        "agent": "six-code-1",
+        "role": "researcher",
+        "status": "COMPLETE_SEPARATE_LITERAL_CHECK",
+        "controls": {
+          "rejected": [
+            "missing-case",
+            "repeated-case",
+            "wrong-format",
+            "missing-exception",
+            "missing-full-branch",
+            "invalid-witness",
+            "duplicate-template-block",
+            "false-positive-collision",
+            "zero-point-guard",
+            "zero-tail-guard"
+          ],
+          "positive_joint_words": 35,
+          "acl69_distance_counts": {
+            "6": 1264,
+            "8": 637,
+            "10": 445
+          }
+        },
+        "entrywise_carrier_comparison": true,
+        "seconds": 3.153348346997518,
+        "peak_RSS_kib": 24944
+      }
+    },
+    {
+      "mode": "optimized",
+      "entrypoint": "census_replay.py",
+      "wall_seconds": 13.172365918988362,
+      "result": {
+        "manifest_sha256": "bf5b8d7fd19f473ab2be033ed227807cbef5f2dbb1794af7294a351bb80772b5",
+        "peak_RSS_kib": 44380,
+        "seconds": 12.892998290015385,
+        "status": "COMPLETE_GENERIC_CENSUS_REPLAY"
+      }
+    }
+  ],
+  "peak_child_RSS_kib": 44380,
+  "resources": "one CPU-intensive child at a time; all numerical/OpenMP threads1; fixed per-case guards; no escalation"
+}
