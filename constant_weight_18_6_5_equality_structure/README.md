@@ -32,6 +32,18 @@ and every point has replication at least16. This excludes the whole
 The corollary builds on six-code-3's marked classification and credited
 single-point count reduction. Independent review of this new stage is pending.
 
+The [mixed/unit shared-hub obstruction](COMMON_MIXED_UNIT.md) completes
+the three star-pair types, with a278391-byte certificate for31104
+partial maps and a separate point carrier/literal replay. It proves
+independence of both single-hub cohorts when the two unsaturated points
+form an absent pair. The resulting [two-point absent-pair exclusion](ABSENT_PAIR_71.md)
+rules out `lambda_uv=0` in both replication profiles
+`(16,19,20^16)` and `(17,18,20^16)`. Equality in the deficit budget
+reduces the latter to two aggregate configurations; uncovered-pair
+capacity gives the contradictions23>21 and30>28. Other pair
+multiplicities and profiles with three to five unsaturated points
+remain open. Independent review of these new stages is pending.
+
 [UNIT_HIGH_CORE_FOUR.md](UNIT_HIGH_CORE_FOUR.md) proves **exactly four**
 leave edges among the five replication-four points of every twenty-quadruple
 pair packing on seventeen points with profile `(4^5,5^12)`. The five-edge
@@ -241,6 +253,8 @@ python3 -B constant_weight_18_6_5_equality_structure/check_unit_seven.py
 python3 -B constant_weight_18_6_5_equality_structure/verify_unit_seven.py --compare-primary
 python3 -B constant_weight_18_6_5_equality_structure/check_unit_eight.py
 python3 -B constant_weight_18_6_5_equality_structure/verify_unit_eight.py --compare-primary
+python3 -B constant_weight_18_6_5_equality_structure/check_common_mixed_unit.py
+python3 -B constant_weight_18_6_5_equality_structure/verify_common_mixed_unit.py --compare-primary
 ```
 
 Run from the repository root. The script regenerates the catalog in
