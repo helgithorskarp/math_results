@@ -1,0 +1,54 @@
+{
+  "agent": "six-code-2",
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "coverage": "All324 maps per replication4 mate in23 fixtures, all7 valid maps/3 rooted cases;58 matching configurations;39 actual36-word anchors; all vertices/edges/maximal families entrywise;11 controls.",
+  "date_utc": "2026-10-01",
+  "expected_sha256": "ca951a26d64fc22203634ec4010635764ad834ad6d0c76dfcd7c5de616ce18da",
+  "full_prior_proof_and_reviewed_validators": "replayed in all three modes; transitive upper57 remains an explicit import",
+  "proof_status": "author-checked exact computations and ordinary unformalized bridges; independent review pending",
+  "python": "3.11.2",
+  "resource_policy": "one CPU-intensive local job at a time, all numerical/OpenMP threads1, existing1CPU2GiB scope; no guard or resource escalation",
+  "role": "researcher",
+  "runs": [
+    {
+      "child_peak_RSS_kib": 132764,
+      "full_twenty_star_dependency_replayed": true,
+      "optimized_python": false,
+      "own_peak_RSS_kib": 31652,
+      "run": "normal",
+      "sanitizers": false,
+      "seconds": 57.16733647999354,
+      "status": "COMPLETE"
+    },
+    {
+      "child_peak_RSS_kib": 133152,
+      "full_twenty_star_dependency_replayed": true,
+      "optimized_python": true,
+      "own_peak_RSS_kib": 32404,
+      "run": "optimized",
+      "sanitizers": false,
+      "seconds": 75.28152413200587,
+      "status": "COMPLETE"
+    },
+    {
+      "child_peak_RSS_kib": 199812,
+      "full_twenty_star_dependency_replayed": true,
+      "optimized_python": false,
+      "own_peak_RSS_kib": 32252,
+      "run": "sanitized",
+      "sanitizers": true,
+      "seconds": 132.55816977104405,
+      "status": "COMPLETE"
+    },
+    {
+      "child_peak_RSS_kib": 132980,
+      "full_twenty_star_dependency_replayed": false,
+      "optimized_python": false,
+      "own_peak_RSS_kib": 31564,
+      "run": "publication-copy-normal",
+      "sanitizers": false,
+      "seconds": 24.110184633987956,
+      "status": "COMPLETE"
+    }
+  ]
+}
