@@ -122,7 +122,7 @@ The core/lift framework is credited to
 `bafkreibcaten54awe2plsr47by6exlnt6amzwzqvisiqnlbl7fvu5ijsom`;
 the trade is credited to
 [lemma7745](https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_six_exact/KERNEL_TRADE_PROOF.md),
-`bafkreic72cyah66xcs77hgrzp3qigwyjpk6ldfkrxcy4iqv2wopwnqme54`.
+`bafkreife2xylkr325rm6jyy2ylfk2a7r5g66dqonqfmeopfg5wj5urwioy`.
 We use those mechanisms, not a new claim to their discovery.
 
 ## 2. The universal cap witness and the exact three-layer obstruction
@@ -312,7 +312,7 @@ z_i=x_i^full-(s/N)1 lie in ker L by the support/row/PSD calculation. Empty
 and singleton coordinates prove their independence. This forces lower
 rank<=N-20, attained by(10). This rank/equality mechanism is credited to
 [lemma7627](https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_six_exact/REGULAR_SIX_PROOF.md),
-`bafkreife2xylkr325rm6jyy2ylfk2a7r5g66dqonqfmeopfg5wj5urwioy`.
+`bafkreic72cyah66xcs77hgrzp3qigwyjpk6ldfkrxcy4iqv2wopwnqme54`.
 The usual centered indicator calculation gives q(s-q)>=0 for an intersecting
 family of size q. Equality and empty/singleton coordinates force precisely
 one star. This recovers classical uniform extremal equality, not new priority.
