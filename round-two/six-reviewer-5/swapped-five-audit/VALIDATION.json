@@ -1,0 +1,88 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "date_utc": "2026-10-01",
+  "independent_normal_cold": {
+    "agent": "six-reviewer-5",
+    "role": "independent mathematical reviewer",
+    "status": "PASS_COLD_COMPLETE_REPLAY",
+    "optimized_python": false,
+    "python": "3.12.14",
+    "seconds": 39.708385756995995,
+    "peak_RSS_kib": 29004,
+    "expected_sha256": "078ab5f40a1931abc3e1dd4750ebe97acbad2f4be7dc8f870a099b2b855a0136",
+    "threads": 1,
+    "solver": "independent Python ordinary maximum clique; no author module executes"
+  },
+  "independent_optimized_cold": {
+    "agent": "six-reviewer-5",
+    "role": "independent mathematical reviewer",
+    "status": "PASS_COLD_COMPLETE_REPLAY",
+    "optimized_python": true,
+    "python": "3.12.14",
+    "seconds": 39.48552698997082,
+    "peak_RSS_kib": 29688,
+    "expected_sha256": "078ab5f40a1931abc3e1dd4750ebe97acbad2f4be7dc8f870a099b2b855a0136",
+    "threads": 1,
+    "solver": "independent Python ordinary maximum clique; no author module executes"
+  },
+  "identical_complete_readouts": true,
+  "corroborating_author_normal": {
+    "agent": "six-code-2",
+    "role": "researcher",
+    "status": "COMPLETE",
+    "optimized_python": false,
+    "sanitized_native": false,
+    "seconds": 122.46348999399925,
+    "stages": [
+      {
+        "script": "run_carrier.py",
+        "seconds": 53.69948782102438
+      },
+      {
+        "script": "groups.py",
+        "seconds": 1.9875524920062162
+      },
+      {
+        "script": "quotient.py",
+        "seconds": 4.007699525973294
+      },
+      {
+        "script": "baseline.py",
+        "seconds": 0.25677903601899743
+      },
+      {
+        "script": "pilot.py",
+        "seconds": 29.182526824006345
+      },
+      {
+        "script": "native.py",
+        "seconds": 30.941684927034657
+      },
+      {
+        "script": "steiner_trade.py",
+        "seconds": 0.13079240801744163
+      },
+      {
+        "script": "field_family.py",
+        "seconds": 0.14258640899788588
+      }
+    ],
+    "expected_sha256": "ecd6359d25991132d22d5669add6b05b7a40f7c2d24bebc9440c40002758da8a",
+    "own_peak_RSS_kib": 72312,
+    "child_peak_RSS_kib": 105268,
+    "python": "3.12.14"
+  },
+  "entrywise_comparison": {
+    "status": "PASS_ENTRYWISE_AUTHOR_COMPARISON",
+    "full_raw_map_domains": 302,
+    "full_raw_maps": 489240,
+    "positive_maps": 6334,
+    "literal_roots": 619,
+    "independent_optima": 619,
+    "shared_import": "prior reviewed generic normalizer only; author programs do not execute in independent proof replay"
+  },
+  "initial_replay_rejection": "JSON tuple/list normalization mismatch; saved decoded mathematical records were exactly equal; explicit normalization repaired replay comparison before publication",
+  "resource_policy": "one CPU-intensive job at a time; numerical/OpenMP threads1; unchanged1CPU2GiB scope; no guard fired or escalation; guard failure gives no maximum/absence claim",
+  "trust": "generic completeness8933 conditional8323 imported; ordinary bridges unformalized; new independent upper proof uses Python standard library and only the earlier reviewed normalizer executable input"
+}
