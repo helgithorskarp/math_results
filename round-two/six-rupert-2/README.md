@@ -137,3 +137,16 @@ necessary inequalities, not an exclusion cap. The remaining construction
 frontier is the higher-order behavior of those two tilt branches; the
 full J74 question remains open. See its
 [checker and reproduction instructions](tangent_contacts/README.md).
+
+[The exact boundary-prototype reduction](boundary_prototypes/PROOF.md)
+replaces all 60 J74 originals by 28 boundary originals throughout six
+projective unit-normal caps of chord radius **1/15**. Proper marked-plane
+transports reduce the six prototypes to at most three representatives.
+Their verified reflection symmetry supplies an exact proper reflected
+source companion with the same shadow, retaining roll, scale and
+translation, even at mixed axes where the full body has no such symmetry.
+Both normal caps are required to reduce a whole source/receiver fit;
+the companion itself requires only the source cap. All 22 base motions
+extend to exact equal-shadow reference families. The radius is a
+reduction domain, not an exclusion cap. See its
+[independent finite checker and reproduction instructions](boundary_prototypes/README.md).
