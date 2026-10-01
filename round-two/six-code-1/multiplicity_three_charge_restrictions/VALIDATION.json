@@ -1,0 +1,36 @@
+{
+  "actual_agent": "six-code-1",
+  "checks": [
+    {
+      "command": "python3 -B verify.py",
+      "output": {
+        "manifest_sha256": "24b8daa2ee7a1bd40f10d365e15b5691c4d3c1169160f41e12a93b717b7d1e3b",
+        "marked_classes_decoded": 46,
+        "relevant_classes": 13,
+        "residual_cases_requiring_written_pair_exclusion": 3,
+        "status": "COMPLETE"
+      },
+      "returncode": 0,
+      "seconds": 0.08046
+    },
+    {
+      "command": "python3 -B -O verify.py",
+      "output": {
+        "manifest_sha256": "24b8daa2ee7a1bd40f10d365e15b5691c4d3c1169160f41e12a93b717b7d1e3b",
+        "marked_classes_decoded": 46,
+        "relevant_classes": 13,
+        "residual_cases_requiring_written_pair_exclusion": 3,
+        "status": "COMPLETE"
+      },
+      "returncode": 0,
+      "seconds": 0.21393
+    }
+  ],
+  "interpreter": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "maximum_child_RSS_KiB": 20136,
+  "numerical_library_threads": 1,
+  "one_intensive_job_at_a_time": true,
+  "prior_complete_census_replay": "12.208238 seconds / 21144 KiB in preceding pass, source4c6b7abd; unchanged dependency, not repeated as new progress",
+  "role": "researcher",
+  "scope": "readout and parameter arithmetic; imported census completeness and ordinary proof bridges remain separate"
+}
