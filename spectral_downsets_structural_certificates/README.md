@@ -39,6 +39,21 @@ N_P-d for d eligible factors. The one-triangle cases with at least two
 pendants lie outside the inherited cap construction above. The seed
 hypothesis is essential, and the bare-friendship repair is credited to
 the earlier clique-center result.
+[AFFINE_PENDANT_COMPLETION.md](AFFINE_PENDANT_COMPLETION.md) gives a
+pendant-only completion for every nontrivial finite downset. After a
+specified sufficient number of fresh singleton/spoke additions at a
+maximum coordinate, an explicit rational matrix satisfies H and M<=I,
+with both slacks of maximal rank N-1 and the unique center-star extremizer.
+One preliminary pendant centers a possibly indefinite affine core; an
+exhaustive orthogonal extension history regularizes it, and the credited
+sparse pair trade removes its remaining outside constant kernel. The
+uniform count is quadratic in the original family size. A sharper exact
+block-decay criterion cuts the V fixture from25 total pendants to4 and
+the three-point cube from50 to12, with whole repaired slacks checked at
+orders14 and32. This proves the augmented families, with signed weights
+allowed; it supplies no H matrix for the original downset. Ordinary
+author-checked proof and exact validation are provided without independent
+review or a count-optimality claim.
 [FRIENDSHIP.md](FRIENDSHIP.md) gives a different capped core for every
 friendship graph downset: k triangles sharing just one vertex. For every
 k>=2 the entire partition template fails the cap congruence, while this
@@ -162,6 +177,9 @@ python3 -O verify_bipartite_cones.py --check
 python3 -O verify_two_center_bipartite.py --check
 python3 -O verify_three_center_bipartite.py --check
 python3 -O verify_four_center_bipartite.py --check
+python3 -B verify_affine_pendant_completion.py
+python3 -B verify_affine_boundary.py
+python3 -B verify_affine_decay.py --check
 ```
 
 The first command deterministically regenerates
