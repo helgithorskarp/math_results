@@ -133,3 +133,10 @@ The [exchange-family continuation](exchanges/README.md) treats all 4,990 free
 one-delete-two-add shapes about the same seed. It extends the finite bound
 to that family and supplies a star-type odd-cycle obstruction for an exact
 Heesch-two example whose pair domains stabilize.
+
+The [anchored mask-rigidity continuation](mask-rigidity/README.md) instead
+preserves the exact 58-copy four-corona pose network. Relative-pose mirrors
+give a complete finite domain for any connected prototype containing the
+origin cell. The original translations force S17; multiplying those
+translations by any of 2,3,4,5 admits no connected prototype in that anchored
+family. Other networks remain available for the finite-five search.
