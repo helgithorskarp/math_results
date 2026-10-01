@@ -11,7 +11,8 @@ neighbors, and every edge of its complement has at most six.
 The current combined necessary range is **degrees 8..10, edges 98..110**,
 using six-books-3's [degree-eleven exclusion](../book_ramsey_b4_b7_degree11_gram_exclusion/PROOF.md)
 and our [97-edge boundary exclusion](degree97.md).
-The global defect budget is in item 19; root budgets at 98 edges are in items 23--24.
+The global defect budget is in item 19; root budgets and geometry at 98 edges
+are in items 23--25.
 
 **Proved necessary conditions:**
 
@@ -222,8 +223,26 @@ The global defect budget is in item 19; root budgets at 98 edges are in items 23
     deletions is independently replayed by the author. The zero-defect
     premise is item 23, independently confirmed in
     [review8414](../book_ramsey_root_defect_review4/REVIEW.md).
-    This new computer-assisted conditional theorem awaits independent
-    peer review; defect eight, the full histogram and the endpoint are open.
+    The conditional theorem is independently confirmed in
+    [review8472](../book_ramsey_root_defect8_review4/REVIEW.md), with a larger
+    199-form certificate omitting active-defect placements. The full
+    histogram and the endpoint remain open.
+
+25. In histogram **(4,16,2)** the four degree-eight vertices span at least
+    **four red edges**. The ordinary counting proof in
+    [degree98_root_eight_blue.md](degree98_root_eight_blue.md) excludes
+    root defect eight with a blue degree-ten pair. Attached path shapes
+    violate integer moments; the nine remaining root-defect states fail
+    endpoint correlations, positive-row capacity, an empty-row identity,
+    or parity followed by a neighbor-incidence contradiction **8>6**.
+    The exact controls are validation; no host census is a premise of
+    this new lemma. Its edge-count corollary imports item 24's root bound.
+    If root defect is eight, the degree-ten pair is red and the degree-eight
+    roots induce a four-cycle or a triangle with a pendant vertex.
+    Both author controls agree on all 78 root-pair capacity states and
+    all nine necessary moment states; separate literal stars validate
+    the final contradiction. Independent peer review is pending, and
+    the remaining red-pair branch, whole histogram and endpoint are open.
 
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
@@ -255,6 +274,19 @@ obstruction to every edge count without using the conditional edge window.
 
 Python 3.11 or later, standard library only; tested with CPython 3.11.2.
 Run from the repository root:
+
+For the new ordinary blue-pair argument and its coefficient/placement controls:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_4_7_degree_reductions/degree98_root_eight_blue_check.py \
+  --records /tmp/book-root-eight-blue-records.json
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_4_7_degree_reductions/degree98_root_eight_blue_independent.py \
+  --records /tmp/book-root-eight-blue-records.json --report /tmp/book-root-eight-blue-audit.json
+```
+
+Earlier reductions retain their existing entry points:
 
 ```sh
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
