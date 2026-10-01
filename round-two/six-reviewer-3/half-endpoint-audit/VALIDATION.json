@@ -1,0 +1,226 @@
+{
+  "python": "Python 3.12.14",
+  "threads": 1,
+  "guard_seconds_per_run": 20,
+  "runs": [
+    {
+      "implementation": "independent",
+      "optimized": false,
+      "fixture": "good",
+      "exit": 0,
+      "seconds": 5.118479,
+      "stdout": "PASS 137 exact checks; 13 damages rejected; full-record SHA256 71f9e789fbe8e99a5e11277bf38d7b9a14927e76aa09fe5899b66f5a71e93c0c\n",
+      "stderr_sha256": null
+    },
+    {
+      "implementation": "independent",
+      "optimized": false,
+      "fixture": "missing",
+      "exit": 1,
+      "seconds": 5.351747,
+      "stdout": "",
+      "stderr_sha256": "78c524285e2c614c1a9e4d9f29ba46555ecee6435c211259b52cdab044903a0c"
+    },
+    {
+      "implementation": "independent",
+      "optimized": false,
+      "fixture": "malformed",
+      "exit": 1,
+      "seconds": 5.186878,
+      "stdout": "",
+      "stderr_sha256": "454bac13b48d1455cec4214e70982edb1b8aefde535c9be490956698086f5226"
+    },
+    {
+      "implementation": "independent",
+      "optimized": false,
+      "fixture": "altered",
+      "exit": 1,
+      "seconds": 6.270269,
+      "stdout": "",
+      "stderr_sha256": "429293a6d39bca26dbfb7cbcc4cb02e7fe063bdabe9dbb0bb14f1ecb2a8fa581"
+    },
+    {
+      "implementation": "independent",
+      "optimized": true,
+      "fixture": "good",
+      "exit": 0,
+      "seconds": 5.446015,
+      "stdout": "PASS 137 exact checks; 13 damages rejected; full-record SHA256 71f9e789fbe8e99a5e11277bf38d7b9a14927e76aa09fe5899b66f5a71e93c0c\n",
+      "stderr_sha256": null
+    },
+    {
+      "implementation": "independent",
+      "optimized": true,
+      "fixture": "missing",
+      "exit": 1,
+      "seconds": 5.328771,
+      "stdout": "",
+      "stderr_sha256": "78c524285e2c614c1a9e4d9f29ba46555ecee6435c211259b52cdab044903a0c"
+    },
+    {
+      "implementation": "independent",
+      "optimized": true,
+      "fixture": "malformed",
+      "exit": 1,
+      "seconds": 4.981921,
+      "stdout": "",
+      "stderr_sha256": "454bac13b48d1455cec4214e70982edb1b8aefde535c9be490956698086f5226"
+    },
+    {
+      "implementation": "independent",
+      "optimized": true,
+      "fixture": "altered",
+      "exit": 1,
+      "seconds": 5.147807,
+      "stdout": "",
+      "stderr_sha256": "429293a6d39bca26dbfb7cbcc4cb02e7fe063bdabe9dbb0bb14f1ecb2a8fa581"
+    },
+    {
+      "implementation": "original",
+      "optimized": false,
+      "fixture": "good",
+      "exit": 0,
+      "seconds": 2.080715,
+      "stdout": "PASS 70 exact checks; 8 mathematical damages rejected; full-record SHA256 f91b1d9c36f2475cecfdb7053afd8357381fd1bbbbb47a01208345c9443d4ddd\n",
+      "stderr_sha256": null
+    },
+    {
+      "implementation": "original",
+      "optimized": false,
+      "fixture": "missing",
+      "exit": 1,
+      "seconds": 2.003738,
+      "stdout": "",
+      "stderr_sha256": "426fa77a544c95806050312fb4bcfca11b777e27838053ca952529bbe979c8f7"
+    },
+    {
+      "implementation": "original",
+      "optimized": false,
+      "fixture": "malformed",
+      "exit": 1,
+      "seconds": 2.063495,
+      "stdout": "",
+      "stderr_sha256": "1df4398e841a4210cc52440084e816c45e18e37957b02e1699d2e332943c723c"
+    },
+    {
+      "implementation": "original",
+      "optimized": false,
+      "fixture": "altered",
+      "exit": 1,
+      "seconds": 1.99648,
+      "stdout": "",
+      "stderr_sha256": "9c2eb2f6d7c5e8f3d968976fbf23e40b170db065af1f0b224d489fbb24f589eb"
+    },
+    {
+      "implementation": "original",
+      "optimized": true,
+      "fixture": "good",
+      "exit": 0,
+      "seconds": 2.220083,
+      "stdout": "PASS 70 exact checks; 8 mathematical damages rejected; full-record SHA256 f91b1d9c36f2475cecfdb7053afd8357381fd1bbbbb47a01208345c9443d4ddd\n",
+      "stderr_sha256": null
+    },
+    {
+      "implementation": "original",
+      "optimized": true,
+      "fixture": "missing",
+      "exit": 1,
+      "seconds": 3.46931,
+      "stdout": "",
+      "stderr_sha256": "426fa77a544c95806050312fb4bcfca11b777e27838053ca952529bbe979c8f7"
+    },
+    {
+      "implementation": "original",
+      "optimized": true,
+      "fixture": "malformed",
+      "exit": 1,
+      "seconds": 4.508369,
+      "stdout": "",
+      "stderr_sha256": "1df4398e841a4210cc52440084e816c45e18e37957b02e1699d2e332943c723c"
+    },
+    {
+      "implementation": "original",
+      "optimized": true,
+      "fixture": "altered",
+      "exit": 1,
+      "seconds": 4.493947,
+      "stdout": "",
+      "stderr_sha256": "9c2eb2f6d7c5e8f3d968976fbf23e40b170db065af1f0b224d489fbb24f589eb"
+    }
+  ],
+  "elapsed_seconds": 65.672416,
+  "peak_child_rss_KiB": 21368,
+  "full_source_comparison": {
+    "complete_fields": 9,
+    "rows": [
+      {
+        "field": "objective_eta_delta_jet",
+        "canonical_bytes": 266,
+        "sha256": "15dfbe48ec1eb9ba94d8cce01ee0e5dd67c4e45ad698a3f87dc4f8a936a3d94d",
+        "complete_field_equal": true
+      },
+      {
+        "field": "parameters",
+        "canonical_bytes": 1046,
+        "sha256": "d20812cbe490d16b9b8677351cd2642ab89e9978539182ca5b270eac096668af",
+        "complete_field_equal": true
+      },
+      {
+        "field": "normal_trace",
+        "canonical_bytes": 948,
+        "sha256": "b08d9948d8d42263a1445007b09a4315ed02bd99e6c89317a8cd42b52599f23b",
+        "complete_field_equal": true
+      },
+      {
+        "field": "scaled_normal_determinant",
+        "canonical_bytes": 23,
+        "sha256": "67995a3caa801f34b540379af9e90820b119132663fa6654f96cc52495385186",
+        "complete_field_equal": true
+      },
+      {
+        "field": "ell",
+        "canonical_bytes": 35,
+        "sha256": "1c40e2526814b98fe657de66c35bd4871d6a256ce823bb43232a1e27bfc895c4",
+        "complete_field_equal": true
+      },
+      {
+        "field": "variable_common_leading_cost",
+        "canonical_bytes": 153,
+        "sha256": "18ea31e11066df5b68e6699413b6bcfa5a6cb943a451395e894aa04b045f83fb",
+        "complete_field_equal": true
+      },
+      {
+        "field": "raw_free_distance",
+        "canonical_bytes": 133,
+        "sha256": "e240bd7e546424e891a52376179b8ec8cb6cca3624bf2b4a83df6301dfa8b777",
+        "complete_field_equal": true
+      },
+      {
+        "field": "active_actual_complex_roots",
+        "canonical_bytes": 3169,
+        "sha256": "59bd409803d0caf49884f191048d87f7d92793b78c751f35c078e9aa90a702d8",
+        "complete_field_equal": true
+      },
+      {
+        "field": "inactive_first_half_radials",
+        "canonical_bytes": 85,
+        "sha256": "27e948976f5583c271996b137722f27935b883fed2f8b028840127a7093e0af6",
+        "complete_field_equal": true
+      }
+    ]
+  },
+  "actual_agent": "six-reviewer-3",
+  "role": "independent mathematical reviewer",
+  "author_source_commit": "f6e5848da01148e65c9be0ec8a8b003d14d503d8",
+  "original_frozen_fixture_sha256": "8de0876173240d8eaf670a61e5e2fc0086ca3ec47d1844572393aecd7eda98ad",
+  "independent_method": "Extended polynomial Euclid, flat sparse joint jets, rational unit-circle phase charts, literal centered direction controls; no researcher module imported.",
+  "trust": "Finite exact algebra only; ordinary analytic proof, imported global minimum/coverage and symmetry are in REVIEW.md.",
+  "downloaded_pinned_replay": {
+    "stdout": "independent normal 6.214 seconds: PASS 137 exact checks; 13 damages rejected; full-record SHA256 71f9e789fbe8e99a5e11277bf38d7b9a14927e76aa09fe5899b66f5a71e93c0c\nindependent optimized 5.319 seconds: PASS 137 exact checks; 13 damages rejected; full-record SHA256 71f9e789fbe8e99a5e11277bf38d7b9a14927e76aa09fe5899b66f5a71e93c0c\nauthor normal 2.206 seconds: PASS 70 exact checks; 8 mathematical damages rejected; full-record SHA256 f91b1d9c36f2475cecfdb7053afd8357381fd1bbbbb47a01208345c9443d4ddd\nauthor optimized 2.345 seconds: PASS 70 exact checks; 8 mathematical damages rejected; full-record SHA256 f91b1d9c36f2475cecfdb7053afd8357381fd1bbbbb47a01208345c9443d4ddd\nPASS 15 pinned source hashes; nine complete mathematical fields; sequential threads 1; 18.867 seconds total\n",
+    "complete": true,
+    "input_hashes": 15,
+    "complete_mathematical_fields": 9,
+    "guard_seconds_per_run": 20,
+    "threads": 1
+  }
+}
