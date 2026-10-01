@@ -1,0 +1,130 @@
+{
+  "agent": "six-downset-3",
+  "role": "researcher",
+  "mathematical_scope": "every integer q>=2, and every finite nonempty mixed product",
+  "infinite_signs_sha256": "968ca193867f768aa2b6d9aa6c9f4f25ace57b8bf88eb6c082e71baff8db89f0",
+  "infinite_sign_count": 33,
+  "infinite_coefficient_count": 357,
+  "literal_matrices": [
+    {
+      "q": 2,
+      "N": 23,
+      "s": 10,
+      "rank_L": 19,
+      "rank_upper": 22,
+      "M_denominator": 390,
+      "M_numerators_sha256": "ca62c895402607b177be4b6ba2371bb21f1c35b78318e56ccc57fda7d1473bf9",
+      "C_polynomial_sha256": "12818080253024f830748280410f61319c83b8d23d781c4f24507faa3ccdf518",
+      "U_polynomial_sha256": "2e54dd448020f24ddc0c54dd9dfcdf8286d477f436858368772cd939e5760a91"
+    },
+    {
+      "q": 3,
+      "N": 32,
+      "s": 13,
+      "rank_L": 28,
+      "rank_upper": 31,
+      "M_denominator": 1140,
+      "M_numerators_sha256": "807e602276f48b609c72067ecb6a6e3aff635e478d2a0f140f7f8d8da2641ed5",
+      "C_polynomial_sha256": "940e2ef1e302e533e7bbe17958a2f95b4163cbbeb95689cd00f977f9061a7a51",
+      "U_polynomial_sha256": "26e35d824d3d443aa63fb10f4489b24d0c7d9db5d2a34e3460cdcabf3679d627"
+    },
+    {
+      "q": 4,
+      "N": 42,
+      "s": 16,
+      "rank_L": 38,
+      "rank_upper": 41,
+      "M_denominator": 5304,
+      "M_numerators_sha256": "8d75b8a40816cfe42ef8c8fb447cba9e082b2c2ae62b37d40cf583544acd059a",
+      "C_polynomial_sha256": "be3c7c1aff0de963466206d337e1bb6de213a79af8bbd993dbb6a48335b9ad9a",
+      "U_polynomial_sha256": "04176f120db6771f18e9e3dd38cd143009c03efd50ed8f2397ecb06a8291871e"
+    }
+  ],
+  "literal_sector_action": {
+    "q": 4,
+    "dimension": 41,
+    "literal_basis_rank": 41,
+    "point_edge_incidence_rank": 4,
+    "harmonic_edge_dimension": 2,
+    "sectors": [
+      {
+        "sector": [
+          0,
+          0
+        ],
+        "level_count": 7,
+        "copies": 1,
+        "action_vectors": 7
+      },
+      {
+        "sector": [
+          1,
+          0
+        ],
+        "level_count": 4,
+        "copies": 2,
+        "action_vectors": 8
+      },
+      {
+        "sector": [
+          0,
+          1
+        ],
+        "level_count": 4,
+        "copies": 3,
+        "action_vectors": 12
+      },
+      {
+        "sector": [
+          1,
+          1
+        ],
+        "level_count": 2,
+        "copies": 6,
+        "action_vectors": 12
+      },
+      {
+        "sector": [
+          0,
+          2
+        ],
+        "level_count": 1,
+        "copies": 2,
+        "action_vectors": 2
+      }
+    ]
+  },
+  "controls": {
+    "rejected": [
+      "missing_boundary_value",
+      "duplicated_boundary_orbit",
+      "floating_boundary_value",
+      "wrong_boundary_scope",
+      "q_below_domain",
+      "floating_q",
+      "boolean_q",
+      "floating_formula_parameter",
+      "negative_lower_constant",
+      "negative_lower_coefficient",
+      "zero_rational_denominator",
+      "inexact_polynomial_division",
+      "floating_polynomial_coefficient",
+      "changed_disjoint_weight_kernel",
+      "asymmetric_matrix",
+      "zero_pivot_nonzero_row",
+      "negative_Schur_pivot",
+      "negative_characteristic_root",
+      "floating_matrix_entry",
+      "floating_disjoint_weight",
+      "missing_literal_basis_vector",
+      "duplicated_literal_basis_vector",
+      "changed_literal_matrix_action",
+      "wrong_literal_operator_sign",
+      "changed_infinite_coefficient",
+      "missing_infinite_sign_record"
+    ],
+    "rejection_count": 26,
+    "positive_matrix_controls": 4
+  },
+  "records_sha256": "96e033843bd8c31faf2bd3518d292bec5137a5580bc96f1fea5579f40cdad383"
+}
