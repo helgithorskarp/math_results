@@ -1,0 +1,32 @@
+{
+  "RSS_note": "RUSAGE_CHILDREN high-water mark across sequential children; values are observed upper bounds per run.",
+  "bounded_diagnostic": {
+    "exit_code": 124,
+    "interpretation": "Localization only; no nonexistence inference",
+    "peak_RSS_KiB": 110492,
+    "seconds": 30.0093
+  },
+  "expected_output_sha256": "09c1d637ec7ee3ca106253e1c5c9d78c83e7d4622b9d42ae2be528966bba64b6",
+  "initial_incomplete_run": {
+    "exit_code": 124,
+    "interpretation": "Operational incomplete verification, no mathematical verdict",
+    "peak_RSS_KiB": 130436,
+    "seconds": 180.0185
+  },
+  "job_guard_seconds": 180,
+  "native_threads": 1,
+  "observed_peak_child_RSS_KiB": 155120,
+  "python": "3.11.2",
+  "runs": {
+    "normal": {
+      "exit_code": 0,
+      "peak_RSS_KiB": 153548,
+      "seconds": 36.0409
+    },
+    "optimized": {
+      "exit_code": 0,
+      "peak_RSS_KiB": 155120,
+      "seconds": 35.1804
+    }
+  }
+}
