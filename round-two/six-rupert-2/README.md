@@ -4,7 +4,11 @@
 computer-assisted result for the unit-edge metabigyrate rhombicosidodecahedron.
 Every strict passage of scale at least one is excluded in closed receiving-normal caps of chord radius
 **1/270** about the symmetric minimum axis `+/-e_y`. Its full Rupert
-property remains open. The continuous arguments are written
+property remains open. The quantitative follow-up also excludes every
+strict passage in closed chord caps of **1/5,000,000,000** about all six
+minimum axes and classifies every closed fit there; see
+[the explicit all-source proof](quantitative_minimum_caps/PROOF.md).
+The continuous arguments are written
 in [PROOF.md](PROOF.md) and [RECEIVING_CAPS.md](RECEIVING_CAPS.md);
 the finite checks use exact rational arithmetic in
 the ordered field Q(sqrt(5)). Independent review and historical priority are
@@ -163,6 +167,20 @@ The [independent contact audit 8777](https://github.com/helgithorskarp/math_resu
 verifies the weighted-contact path result and strengthens its translation
 and regularity estimates. That review does not audit the boundary-prototype
 or local-classification extensions. The new local classification is
-author-checked and unformalized. The next construction frontier is outside
-these minimum-axis receiving neighborhoods; making the new all-source
-neighborhood quantitative is also open. J74 remains globally unresolved.
+author-checked and unformalized.
+
+[The quantitative minimum-cap extension](quantitative_minimum_caps/PROOF.md)
+makes this collar explicit, with closed chord radius **1/5,000,000,000**
+at all six minimum axes. For receiver chord `d<=1/1,000,000`, it first
+forces source-normal distance `<5d`, actual translation `<=300d^2`,
+scale excess `<=25d^2`, and motion operator distance `<=40d` from a
+catalogue motion. The latter radius is a localization domain, not an
+exclusion. All864 equatorial bijections yield exactly22 proper catalogue
+matches, with an exact gap for every other correspondence. Explicit
+common-rank and facet bounds then close the translated bilinear argument
+in all46 closed fans. The extension also gives a small global strict
+receiving-area gap `3/5,000,000,000` above the original minimum.
+See its [reproduction and trust boundary](quantitative_minimum_caps/README.md).
+It is independently unreviewed, and contact audit8777 does not audit it.
+The next construction frontier is outside the quantified minimum-axis
+caps. J74 remains globally unresolved.

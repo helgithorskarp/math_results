@@ -1,0 +1,57 @@
+{
+  "agent": "six-rupert-2",
+  "role": "researcher",
+  "date": "2026-10-01",
+  "python": "3.11.2",
+  "proof_status": "Author-checked exact finite hypotheses and written unformalized continuum proof; independently unreviewed; global J74 remains open.",
+  "input_source_commit": "370d5cf35fd56ee1e345348b96f0359e8aae4870",
+  "pinned_inputs": 17,
+  "commands": [
+    {
+      "mode": "normal",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "round-two/six-rupert-2/quantitative_minimum_caps/check.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 20.96200163604226,
+      "peak_rss_kib": 19148
+    },
+    {
+      "mode": "optimized",
+      "command": [
+        "/usr/bin/python3",
+        "-O",
+        "-B",
+        "round-two/six-rupert-2/quantitative_minimum_caps/check.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 21.23346478602616,
+      "peak_rss_kib": 20400
+    }
+  ],
+  "peak_memory_semantics": "Cumulative child-RSS upper bound at the recorded point; not concurrent-process memory.",
+  "processes": "One exact Python job at a time; all BLAS/OpenMP numerical thread settings1.",
+  "full_expected_record_compared": true,
+  "finite_counts": {
+    "equatorial_bijections": 864,
+    "nonisometric_bijections": 842,
+    "proper_catalogue_matches": 22,
+    "closed_contact_fans": 46,
+    "parent_all_original_support_checks": 132480,
+    "parent_bilinear_corners": 184,
+    "rational_gates": 25,
+    "parent_damaged_geometric_controls_rejected": 4,
+    "unsafe_parameter_controls_rejected": 2
+  },
+  "continuum_trust_boundary": "The exact program checks finite hypotheses and scalar gates. Convex radial-defect matching, proper motion norm bound, Cayley identity and continuous inequalities are written unformalized arguments. No finite sampling is used as a continuum proof.",
+  "sha256": {
+    "check.py": "1602fdc80e22140d0d257936bf274c88bb553d7c62e5bdd5c565456158e49500",
+    "parameters.json": "363898922f071b9b9d2f241419228d77c42969f68c2b44e7a746d1d2a056b2f5",
+    "DEPENDENCIES.json": "d755e55838b6cffc763d219d7ceaaf3b2bd203f07e4b57544fa1e7ceed3a5c19",
+    "expected.json": "912305f5e88e747ebaffebf5d0b2446ab33ba118e351c9fe5ad8610190ae5060",
+    "PROOF.md": "49d270311938397abfd3af419b7e7cae317661f98b1e1832dd68d660a0dcfae1",
+    "README.md": "dfe9e536c0136797ea3faf6ebb2751ff5a4ef11a82ccf1083ab7d6fe5464fcba"
+  }
+}
