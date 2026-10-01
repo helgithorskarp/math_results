@@ -219,3 +219,16 @@ source radius at zero transverse tilt. No all-source or global conclusion
 is inferred. The new proof is author-checked, unformalized and independently
 unreviewed; [complete exact checks](nonlocal_receiving_patch/VALIDATION.md)
 agree in normal and optimized Python modes. Full J74 Rupert status is OPEN.
+
+The [fixed-motion source-support transition](fixed_motion_transition/PROOF.md)
+adds four proper source families on this same two-dimensional patch,
+uniformly separated from the four prior centers. Within relative Cayley
+radius1/14400, their only closed scale>=1 fits have scale1, actual
+translation0 and exactly the center motion, and exist precisely when
+t<=(sqrt5-1)/2+((sqrt5-3)/4)*s. Original source39 against receiving
+edge17--32 gives the complete transition. All1080 original source support
+forms are certified on the exact feasible quadrilateral. Any continuous
+closed-fit path of scale>=1 staying in the patch and starting at one new
+center stays on that same family and cannot cross the event into a
+strict passage. This remains conditional motion coverage; global J74 is
+OPEN. See the [compact exact certificate and checks](fixed_motion_transition/README.md).
