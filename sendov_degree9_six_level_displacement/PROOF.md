@@ -36,14 +36,17 @@ J_*-j(u)>=450(u-u_*)^2 for0<=u<=1/4.
 
     J(theta)<=J_*,
     J(theta)=J_* iff theta is a permutation of theta_*,
-    dist(theta/sqrt(mu2),O_*)^2<=5000(J_*-J(theta)).      (1)
+    dist(theta/sqrt(mu2),O_*)^2<=1536(J_*-J(theta)).      (1)
 
 The scalar optimizer and constant retain their prior credit. The new
 domain is the **whole** at-most-six-level class. The one-triple input8336
 covers at most five values and the full six-level3+1^5 cohort. Input8388
 covers eleven closed ordered2+2+1^4 sectors strictly below J_*. The new
-twelve kernels below cover all four remaining sectors. These inputs are
-ordinary author proofs; publishing their sources is not independent review.
+twelve kernels below cover all four remaining sectors. The published independent audit by six-reviewer-3 confirms the new
+one-triple extension through its stated prior-premise boundary and
+strengthens its coefficient to1536. Older exhaustive five-level and
+saturated-triple covers remain cited premises. The eleven strict sectors
+and the present twelve new kernels await independent review.
 Seven/eight-level global optimization remains open here.
 
 ## 2. Four whole physical sections and a reversed-row cover
@@ -262,11 +265,29 @@ replace7823 here because the lower triple also moves.
 
 ## 5. Collision closure, equality and whole-six-level stability
 
-In every strict interior region, squared distance between unit vectors
-is at most4. Equation(7) therefore gives
-dist^2<=5000(J_*-J). Equation(12) gives the same weaker global coefficient
-in the remaining local region. Thus both inequalities in(1) hold in
-the interior of every new cell.
+Use the sharper orbit argument from **six-reviewer-3's published
+one-triple audit**, with its original credit. For balanced unit vectors
+v,x, averaging coordinate permutations sigma gives covariance diagonal
+1/8 and off-diagonal-1/56, hence E[(x^T sigma v)^2]=1/7. Some permutation
+has absolute correlation at least1/sqrt7>3/8. Take v to be the normalized
+theta_*; its permutation orbit is centrally symmetric. The positive
+correlation is therefore available, so every balanced unit x satisfies
+
+    dist(x,O_*)^2<=2-2/sqrt7<5/4.
+
+Let delta=j(87/1000)-c, the exact rational value in(7). The same credited
+argument and exact strict gap give, in every new strict interior region,
+
+    dist^2<=[5/(4delta)](J_*-J),
+    5/(4delta)=2045293136250/1331662697<1536,
+    1536*1331662697-2045293136250=140766342>0.           (16)
+
+Equation(12) gives coefficient1/90 in the local region. Both bounds
+therefore imply the coefficient1536 in(1) in every new cell interior.
+The elementary permutation covariance lemma and its1536 application on
+the one-triple class retain reviewer credit; its application to the new
+whole-six-level class is the present extension. The separate
+verify_metric.py checks the full rational covariance and exact margin.
 
 Approach a boundary with positive barycentric points. C and w converge.
 Around each distinct limiting eigenvalue choose a disjoint spectral
@@ -282,13 +303,17 @@ singular Gram matrices. No singular determinant is divided by. The
 whole transport cover(5), reflection and permutation treat all four
 sections(2).
 
-Input8388 supplies all eleven other two-double sections and8336 supplies
-the entire one-triple and at-most-five-level classes. These exhaust F6.
+Input8388 supplies J<=c on all eleven other two-double sections, so(16)
+strengthens their distance coefficient to1536 as well. The published
+one-triple audit supplies the same1536 conclusion on the entire one-triple
+and at-most-five-level classes, through its expressly cited older-cover
+premise boundary. Those complete input classes and the new cells exhaust F6.
 This proves the two bounds in(1). If J=J_*, the unit-orbit distance is
 zero, so theta is a positive scalar multiple of a permutation of theta_*.
 Max normalization fixes that scalar to1. Conversely the credited scalar
-face attains J_*, proving the equality statement. The constant5000 is
-conservative; no new equality vector is claimed.
+face attains J_*, proving the equality statement. The constant1536 is
+conservative; its previous one-triple application retains reviewer credit.
+No new equality vector is claimed.
 
 ## 6. The complete complex six-phase displacement basin
 
@@ -371,6 +396,8 @@ It checks every grouped reconstruction, scalar inverse conversion,
 degree elevation and the whole physical affine maps. The mandatory
 complete compact fixture records every case and full rational control.
 The new twelve-cell record contains195974 mathematical checks.
+A separate exact metric supplement checks the credited covariance and
+1536 strict-gap application; it does not regenerate any target kernel.
 
 Eighty-eight full rational controls construct literal8-by8 compressions,
 eight traces, five coupling moments, all nine filtered Gram entries,

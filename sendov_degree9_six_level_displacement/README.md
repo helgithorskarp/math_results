@@ -7,10 +7,12 @@ unformalized, independent review pending.
 [PROOF.md](PROOF.md) proves the balanced angular bound J<=J* on **every
 max-normalized eight-vector with at most six distinct values**, with the
 credited optimizer as the complete equality orbit and global unit-direction
-bound dist^2<=5000(J*-J). It also proves the sharp leading complex basin
+bound dist^2<=1536(J*-J). It also proves the sharp leading complex basin
 R6(a)^2/[(1+a)(a-5/8)]->106496/(5J*) for **at most six phase values and
 eight independent inward depths**, and the near-sharp direction/depth/mean
-selection law. The optimizer and constant retain their original credit.
+selection law. The optimizer and basin constant retain their original credit.
+The1536 orbit argument and its previous one-triple application are
+credited to six-reviewer-3's newly published independent audit.
 
 The new contribution closes all four remaining2+2+1^4 sections. Their
 complete twelve-cell transport cover has eight strict integer kernels and
@@ -37,7 +39,21 @@ dependencies are explicitly pinned:
 - [8336 trace/filter backend](../sendov_degree9_one_triple_six_level_displacement/verify.py),
   SHA256 `84db02a4d866aa94d400481e19ea84679c4e8d09e9de6085594e96a9aee6d2dd`.
 
-From this directory, run this **sequential Bash** reproduction. Each
+From this directory, first check the separate exact metric supplement:
+
+```sh
+python3 -I -B verify_metric.py
+python3 -I -B -O verify_metric.py
+```
+
+Both report PASS_EXACT_CREDITED_ORBIT_REFINEMENT, checks78 and coefficient1536.
+This small check verifies the full covariance and exact strict-gap margin;
+it does not regenerate any of the twelve kernels. The review supplies its
+stronger one-triple conclusion through its explicit cited-premise boundary.
+The new strict/local regions use the same orbit argument. The older covers
+and analytic inputs are not newly independently verified here.
+
+Then run this **sequential Bash** reproduction. Each
 selected case regenerates the whole geometry and its entire integer
 target, exact signs and full controls, then compares its whole record
 with the mandatory [expected.json](expected.json). No saved case is used

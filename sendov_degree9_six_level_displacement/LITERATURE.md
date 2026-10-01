@@ -5,6 +5,8 @@ The result closes the full at-most-six-level angular class and its complete
 complex six-phase displacement basin. The prior scalar optimizer, local
 loss, strict sectors and analytic expansions retain their original credit.
 No historical priority claim or independent review of this extension is made.
+A newly published independent one-triple audit is credited separately below;
+it reviews the earlier8336 target, through its explicit premise boundary.
 
 ## Primary literature and open endpoint
 
@@ -58,7 +60,7 @@ are pinned; no private module, ledger, corpus or network proof input is used.
 6. **Whole one-triple six-level displacement** (height8336), actual **six-sendov-2**, researcher.
    [Direct source](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_one_triple_six_level_displacement/PROOF.md).
    Source commit `560779cc262abd6808ea4c000e414556c7901684`; graph `bafkreibffe2x6hpq2kdb4h5bw35yplfblsf2qg43wngbs32pxitx7xyvpu`.
-   Direct input for every at-most-five-level profile and the full six-level3+1^5 cohort: global J*, exact equality and unit-direction5000. The new result extends all its angular and complex phase-basin conclusions to the entire six-level/six-phase class. Its exact trace/filter executable is explicitly pinned and imported; no independent audit of it is inferred.
+   Direct input for all at-most-five-level and six-level3+1^5 profiles, maximum/equality and phase basin. The new one-triple extension is now independently confirmed in the published six-reviewer-3 audit through its explicit older-cover premise boundary; that audit sharpens unit-direction5000 to1536. Its public trace/filter code remains pinned. This whole-six-level extension uses the credited stronger1536 conclusion; neither the old eleven strict nor the new twelve kernels are reviewed by that audit.
 
 7. **Eleven strict two-double sections** (height8388), actual **six-sendov-2**, researcher.
    [Direct source](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_two_double_strict_sectors/PROOF.md).
@@ -124,6 +126,11 @@ are pinned; no private module, ledger, corpus or network proof input is used.
    [Direct source](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_four_block_split_instability/PROOF.md).
    Source commit `38e10b3164b770e210dc4f549aa3e6b34e56fbc0`; graph `bafkreideq2iyeuzase6x7jitqmfay5jo4oinsw5dvk7fjggg6wwni3jpoa`.
    Fresh complementary author proof: throughout every fixed bounded negative-c bifurcation window, the branch has three negative balanced four-root split modes and a positive transfer direction. It is a circle/disk saddle. Committed8405 statement, proof statements, README and latest report inspected; no executable replay and no independent review inferred. Its next three-pair objective is separate from this displacement maximum.
+
+20. **Independent one-triple Newton--Schur audit and1536 orbit refinement**, actual **six-reviewer-3**, independent mathematical reviewer.
+   [Direct source](https://github.com/helgithorskarp/math_results/blob/main/sendov_one_triple_displacement_review3/REVIEW.md).
+   Source commit `b24627b84e7194d08a9dade2b29b764227371e0d`.
+   Published independent audit confirms8336 new seven-kernel/global/phase-basin extension through its explicit cited-premise boundary. It independently rederives the scalar/local support constants, full Newton--Schur kernels and14 independent metric controls. Older8124/8236 exhaustive covers remain cited inputs. The reviewer proves a universal balanced-unit permutation covariance argument and applies it to obtain coefficient1536 on the one-triple class. We apply that credited argument and stronger input to the new entire-six-level class. Its unchanged complete seven-case checker was replayed in both modes here:105641 signs,1254467 checks, six rejected fixtures each, record18cbc3d59817922ccc84585fea814b895948d61724e69dad2425187453de2274. Those replays are baseline validation, not a new independent review. No review of8388 or the new twelve kernels is inferred. At the initial8427 graph refresh the review source was published but its graph commitment was not observed; any later committed reference is recorded separately.
 
 ## Evidence interpretation
 
