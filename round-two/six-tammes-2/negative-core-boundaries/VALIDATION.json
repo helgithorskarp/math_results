@@ -1,0 +1,115 @@
+{
+  "actual_author": "six-tammes-2",
+  "role": "researcher",
+  "status": "AUTHOR_CHECKED_NOT_INDEPENDENTLY_REVIEWED",
+  "python": "3.11.2",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "threads": 1,
+  "four_geometry_resultants_rederived": true,
+  "regenerated_certificate_bytes_equal": true,
+  "normal_optimized_arithmetic_and_sign_outputs_equal": true,
+  "all_four_damaged_controls_rejected": true,
+  "normal_optimized_controls_equal": true,
+  "fresh_main_dependency_hashes_match": true,
+  "source_dependency_commit_verified": "a0707173b61f1e6071ebd737560db38ce9352555",
+  "dependency_source_files": 10,
+  "raw_certificate_sha256": "13ada54b4f3b7c2b848d5aeb5ff53b17c53218f9a65f51084f72e0ab0d552ec0",
+  "canonical_certificate_sha256": "ffb1d90275eea114c6cbd7ca4f3315c11899f80f9f93696f78be64b119dc1be3",
+  "audit": {
+    "critical_boundary_polynomial": [
+      -1,
+      -3,
+      2,
+      6,
+      -1,
+      13
+    ],
+    "distinct_coefficient_poles": 19,
+    "distinct_nonzero_factors": 17,
+    "geometric_tables_rederived": false,
+    "integer_resultant_identities": 4,
+    "lower_boundary_polynomial": [
+      -1,
+      0,
+      3
+    ],
+    "status": "AUDITED"
+  },
+  "controls": {
+    "count": 4,
+    "rejected": [
+      "wrong critical bordered-Gram coefficient",
+      "wrong lower common-neighbor coefficient",
+      "omitted incumbent boundary factor",
+      "wrong lower threshold polynomial"
+    ],
+    "status": "CONTROLS_PASSED"
+  },
+  "complete_records": {
+    "boundaries-geometry": {
+      "job": "boundaries-geometry",
+      "exit_code": 0,
+      "seconds": 4.281,
+      "peak_child_rss_kib": 55852,
+      "completed_at": "2026-10-01T21:11:38.768615+00:00",
+      "threads": 1
+    },
+    "boundaries-regenerate": {
+      "job": "boundaries-regenerate",
+      "exit_code": 0,
+      "seconds": 7.658,
+      "peak_child_rss_kib": 55912,
+      "completed_at": "2026-10-01T21:15:52.692759+00:00",
+      "threads": 1
+    },
+    "boundaries-audit": {
+      "job": "boundaries-audit",
+      "exit_code": 0,
+      "seconds": 0.282,
+      "peak_child_rss_kib": 12296,
+      "completed_at": "2026-10-01T21:13:50.044331+00:00",
+      "threads": 1
+    },
+    "boundaries-check": {
+      "job": "boundaries-check",
+      "exit_code": 0,
+      "seconds": 0.793,
+      "peak_child_rss_kib": 15612,
+      "completed_at": "2026-10-01T21:15:20.226163+00:00",
+      "threads": 1
+    },
+    "boundaries-check-optimized": {
+      "job": "boundaries-check-optimized",
+      "exit_code": 0,
+      "seconds": 0.99,
+      "peak_child_rss_kib": 18300,
+      "completed_at": "2026-10-01T21:15:42.994085+00:00",
+      "threads": 1
+    },
+    "boundaries-controls": {
+      "job": "boundaries-controls",
+      "exit_code": 0,
+      "seconds": 1.605,
+      "peak_child_rss_kib": 12104,
+      "completed_at": "2026-10-01T21:15:22.135884+00:00",
+      "threads": 1
+    },
+    "boundaries-controls-optimized": {
+      "job": "boundaries-controls-optimized",
+      "exit_code": 0,
+      "seconds": 1.5,
+      "peak_child_rss_kib": 14528,
+      "completed_at": "2026-10-01T21:15:44.792955+00:00",
+      "threads": 1
+    }
+  },
+  "two_point_extension_certificate_complete": false,
+  "trust_boundaries": [
+    "written unformalized contact-to-boundary and continuity arguments",
+    "prior8929 unit-model classification, simplicity and absence of chart/rank/pole exceptions",
+    "SymPy exact reconstruction of geometric coefficient tables; independently audited integer resultants and Bernstein signs",
+    "pinned prior80bit dyadic interval kernel for four pointwise sign witnesses",
+    "same author checking, no independent researcher verdict"
+  ]
+}
