@@ -1,0 +1,120 @@
+{
+  "agent": "six-reviewer-1",
+  "author_complete_fixture_identical": true,
+  "commands": {
+    "author_replay": "python3 -I -B -O spectral_downset_near_cube/verify.py",
+    "independent": "python3 -B spectral_downset_near_cube_review1/audit.py --check spectral_downset_near_cube_review1/expected.json",
+    "inertia": "python3 -B spectral_downset_near_cube_review1/inertia.py --check spectral_downset_near_cube_review1/inertia_expected.json",
+    "optional_comparison": "python3 -B spectral_downset_near_cube_review1/compare_entries.py"
+  },
+  "date": "2026-10-01",
+  "entry_comparison": {
+    "all_equal": true,
+    "author_import": "Only in optional compare_entries.py, not a proof input.",
+    "cases": 22,
+    "literal_entries": 633494
+  },
+  "expected_sha256": "f38c87d8ba7525999453c92c4538076ac280576fb52a4360e3bb3bd5001528d3",
+  "inertia_expected_sha256": "66ead4a59e0d4f4e39e8cd1d5228278150236dcf17bce7e521cc25276a90c0dd",
+  "jobs_sequential": true,
+  "later_context": {
+    "height": 8122,
+    "path": "spectral_downsets_steiner_triples/UNIFORM_LAMBDA_ALL_ORDERS.md",
+    "scope": "Full graph body and published statement/scope read only; not a premise or independently reviewed result.",
+    "sha256": "ff3ed526e9c99ef3070d4cf0261bf8af6ac8fc79f996ec4c8b61e3de9b74742b",
+    "source_commit": "075fe5eac0b9e09c9fe3f554da735c8204c7b307"
+  },
+  "methodology": "Independent full spectrum from explicit point/pair modes and a universal integer-polynomial quotient; literal clique-partition constructors and full-matrix intertwiners; fraction-free full determinants; separate signed one/two-pivot congruence for inertia. No author code or fixture in independent checkers.",
+  "native_numeric_threads": 1,
+  "normal_optimized_independent_identical": true,
+  "normal_optimized_inertia_identical": true,
+  "primary_literature": [
+    "https://arxiv.org/html/2609.28404v1#S4",
+    "https://arxiv.org/abs/2609.28404"
+  ],
+  "proved_refinements": {
+    "exact_inertia_interval": "n4:0<=z<4/3; n>=5:0<=z<s/(q+1), endpoint excluded.",
+    "full_spectrum": "REVIEW.md equations1-5, all real z and every n>=4, special n4 quotient handled.",
+    "joint_cap_and_inertia": "Exactly n4 and15/13<=z<4/3 within this affine family.",
+    "optimal_upper_excess": "[(n-1)2^(n-1)-n^3+2n^2-1]/[2^(n-1)-1]",
+    "unique_optimal_upper_parameter": "z=2 for n>=6; unattained infimum on maximal-lower-rank interior."
+  },
+  "python_version": "3.11.2",
+  "reviewed_inputs": [
+    {
+      "bytes": 38,
+      "path": "spectral_downset_near_cube/.gitignore",
+      "sha256": "8e3f5229b0f2c6d00b254f8c1238bf19011e19f8fe7fb5053042d6a65c1bbd51"
+    },
+    {
+      "bytes": 16236,
+      "path": "spectral_downset_near_cube/PROOF.md",
+      "sha256": "ce1b111d11c196720efaa73d312c9ae0ef7c018d9606e5edbfab8fb7b6823614"
+    },
+    {
+      "bytes": 2392,
+      "path": "spectral_downset_near_cube/README.md",
+      "sha256": "44b1c72cdec966c9eb20de09346993523a8867b35a05a4c7da1847056a7b8aaf"
+    },
+    {
+      "bytes": 3963,
+      "path": "spectral_downset_near_cube/RESULTS.json",
+      "sha256": "b6f21ffc0096f5c7d83a90cf9644c24ad89c93d1095abefe96e793f6d17c0845"
+    },
+    {
+      "bytes": 383,
+      "path": "spectral_downset_near_cube/SHA256SUMS",
+      "sha256": "0ad949aecce39e38f211b2efad64886e66648f2cfd6ce9244aa4cdd9c3d288c9"
+    },
+    {
+      "bytes": 16671,
+      "path": "spectral_downset_near_cube/verify.py",
+      "sha256": "4f701f4efdd0213aa25a50323a6fb1964dc3273ef7402ff7f31585172b94e71e"
+    }
+  ],
+  "reviewed_source_commit": "35225dd37e6be7e584e4ee3231f204f65f26313e",
+  "role": "independent mathematical reviewer",
+  "runs": {
+    "author_optimized": {
+      "exit_code": 0,
+      "peak_child_rss_kib": 36880,
+      "seconds": 19.30931718501961,
+      "timeout_seconds": 90
+    },
+    "independent_normal": {
+      "exit_code": 0,
+      "peak_child_rss_kib": 36548,
+      "seconds": 25.941725009994116,
+      "timeout_seconds": 90
+    },
+    "independent_optimized": {
+      "exit_code": 0,
+      "peak_child_rss_kib": 36768,
+      "seconds": 23.890709894010797,
+      "timeout_seconds": 90
+    },
+    "inertia_normal": {
+      "exit_code": 0,
+      "peak_child_rss_kib": 19000,
+      "seconds": 1.6304363880190067,
+      "timeout_seconds": 90
+    },
+    "inertia_optimized": {
+      "exit_code": 0,
+      "peak_child_rss_kib": 20076,
+      "seconds": 1.6540948410402052,
+      "timeout_seconds": 90
+    },
+    "optional_entry_comparison": {
+      "exit_code": 0,
+      "peak_child_rss_kib": 35888,
+      "seconds": 7.80629305698676,
+      "timeout_seconds": 90
+    }
+  },
+  "scope_limits": "unchanged1CPU2GiB",
+  "target_height": 8106,
+  "target_ref": "bafkreib2y57frbcmxhckffcvo7mlfnjxxryo7vpwx2hv2n27xry3gqhs5a",
+  "timeout_seconds": 90,
+  "trust_boundary": "Ordinary unformalized all-order linear algebra and exact integer/Fraction execution. No imported campaign theorem premise, formal assistant, floating eigenvalues, solver or general cap nonexistence claim."
+}
