@@ -1,0 +1,645 @@
+{
+  "actual_agent": "six-code-1",
+  "role": "researcher",
+  "date_utc": "2026-10-01",
+  "python": "3.11.2",
+  "new_proof": "Ordinary counting and two explicit injection arguments in PROOF.md",
+  "proof_assistant_checked": false,
+  "new_finite_exclusion_certificate": false,
+  "validation_scope": "Pinned published dependency files, inherited finite certificate replays and the established69 construction; not machine verification of the new counting bridge",
+  "primary_baseline": {
+    "url": "https://aeb.win.tue.nl/codes/cwc/d6/a18.6.5.69",
+    "sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+    "bytes": 1311,
+    "word_count": 69,
+    "literal_pairs": 2346,
+    "distances": {
+      "6": 1264,
+      "8": 637,
+      "10": 445
+    },
+    "point_degrees": [
+      20,
+      20,
+      20,
+      19,
+      19,
+      20,
+      18,
+      20,
+      20,
+      20,
+      20,
+      18,
+      20,
+      19,
+      20,
+      20,
+      20,
+      12
+    ]
+  },
+  "normal_optimized_semantic_results_agree": true,
+  "thread_variables_set_to_one": [
+    "OMP_NUM_THREADS",
+    "OPENBLAS_NUM_THREADS",
+    "MKL_NUM_THREADS",
+    "NUMEXPR_NUM_THREADS",
+    "VECLIB_MAXIMUM_THREADS"
+  ],
+  "one_cpu_intensive_child_at_a_time": true,
+  "child_timeout_seconds": 45,
+  "inherited_guards": "Original200000-node/map and10-second per-case guards unchanged; zero-guard controls report INCOMPLETE",
+  "replays": [
+    {
+      "optimized_python": false,
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-code-1/multiplicity_one_exclusion/verify_inputs.py"
+      ],
+      "exit_code": 0,
+      "seconds": 14.256546,
+      "maxrss_children_kib": 36624,
+      "source_pins_checked": 25,
+      "child_commands": [
+        {
+          "command": [
+            "constant_weight_upper71_review1/produce.py",
+            "--certificate",
+            "constant_weight_upper71_review1/certificate.json"
+          ],
+          "exit_code": 0,
+          "result": {
+            "certificate_bytes": 36056,
+            "sha256": "2555b641beb988c70160161ffce7dcec9b1b1b9630874851949bc9e03d5fd7dc"
+          },
+          "seconds": 0.11784
+        },
+        {
+          "command": [
+            "constant_weight_upper71_review1/verify.py",
+            "--certificate",
+            "constant_weight_upper71_review1/certificate.json",
+            "--baseline",
+            "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-code-1/round-two/six-code-1/multiplicity_one_exclusion/acl69.txt",
+            "--controls",
+            "--expected",
+            "constant_weight_upper71_review1/expected.json"
+          ],
+          "exit_code": 0,
+          "result": {
+            "certificate_sha256": "2555b641beb988c70160161ffce7dcec9b1b1b9630874851949bc9e03d5fd7dc",
+            "total_nodes": 4672,
+            "models": [
+              {
+                "candidate_count": 95,
+                "column_sha256": "05314127c275181be06b39cbd12fc3a01f6473d34ff81af40a6ff5c71d934549",
+                "cycle_half_lengths": [
+                  5
+                ],
+                "maximum_clique": 9,
+                "proof_nodes": 1466
+              },
+              {
+                "candidate_count": 96,
+                "column_sha256": "198e256bf098931b7e98d8cdad9a158728659c5d093dc487bb1695125b08d195",
+                "cycle_half_lengths": [
+                  2,
+                  3
+                ],
+                "maximum_clique": 9,
+                "proof_nodes": 3206
+              }
+            ],
+            "affine_positive_profiles": [
+              {
+                "positive_deficits": [
+                  5
+                ],
+                "high_leave_edges": 0,
+                "low_leave_edges": 0
+              },
+              {
+                "positive_deficits": [
+                  1,
+                  4
+                ],
+                "high_leave_edges": 1,
+                "low_leave_edges": 0
+              },
+              {
+                "positive_deficits": [
+                  1,
+                  1,
+                  3
+                ],
+                "high_leave_edges": 2,
+                "low_leave_edges": 0
+              },
+              {
+                "positive_deficits": [
+                  1,
+                  1,
+                  1,
+                  2
+                ],
+                "high_leave_edges": 3,
+                "low_leave_edges": 0
+              },
+              {
+                "positive_deficits": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "high_leave_edges": 4,
+                "low_leave_edges": 0
+              },
+              {
+                "positive_deficits": [
+                  2,
+                  3
+                ],
+                "high_leave_edges": 1,
+                "low_leave_edges": 0
+              },
+              {
+                "positive_deficits": [
+                  1,
+                  2,
+                  2
+                ],
+                "high_leave_edges": 2,
+                "low_leave_edges": 0
+              }
+            ],
+            "controls": {
+              "rejected": [
+                "missing entire cycle model",
+                "changed target",
+                "wrong candidate stream",
+                "repeated positive-witness vertex",
+                "missing required branches",
+                "out-of-domain branch vertex",
+                "missing branch without leaf coverage",
+                "false K10 negative",
+                "positive leaf labeled negative",
+                "repeated pair in a packing"
+              ],
+              "valid_small_graph_controls": 2
+            },
+            "baseline69": {
+              "maximum_intersection": 2,
+              "minimum_distance": 6,
+              "sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+              "words": 69
+            },
+            "proved_scope": "Saturated points form a covered-pair clique in every20-quadruple pair packing on17 points; independent A(17,6,4)=20 and A(18,6,5)<=71 proofs use the written bridges."
+          },
+          "seconds": 0.764163
+        },
+        {
+          "command": [
+            "constant_weight_18_6_5_equality_structure/check_common_mixed.py"
+          ],
+          "exit_code": 0,
+          "result": {
+            "cases": 9,
+            "leaf_totals": {
+              "direct_triple": 22680,
+              "hall": 468,
+              "unique_matching_triple": 180
+            },
+            "partial_maps": 23328,
+            "peak_rss_kib": 22816,
+            "represented_full_bijections": 559872,
+            "seconds": 2.529094,
+            "status": "COMPLETE_EXACT_FINITE_CERTIFICATE"
+          },
+          "seconds": 2.58781
+        },
+        {
+          "command": [
+            "constant_weight_18_6_5_equality_structure/verify_common_mixed.py",
+            "--compare-primary"
+          ],
+          "exit_code": 0,
+          "result": {
+            "agent": "six-code-1",
+            "cases": 9,
+            "controls": {
+              "invalid_controls_rejected": 8,
+              "positive_joint_words": 35,
+              "zero_guard_incomplete": true
+            },
+            "entrywise_primary_comparison": true,
+            "partial_maps": 23328,
+            "peak_rss_kib": 23264,
+            "point_dfs_nodes": 68895,
+            "role": "researcher",
+            "seconds": 0.987853,
+            "status": "COMPLETE_SEPARATE_CARRIER_AND_LITERAL_REPLAY"
+          },
+          "seconds": 1.055106
+        },
+        {
+          "command": [
+            "constant_weight_18_6_5_equality_structure/check_common_unit.py",
+            "--source-expected",
+            "coding_theory/a18_6_5_one_unsaturated_at_71/expected.json"
+          ],
+          "exit_code": 0,
+          "result": {
+            "cases": 16,
+            "leaf_totals": {
+              "direct_triple": 40960,
+              "hall": 320,
+              "unique_matching_triple": 192
+            },
+            "partial_maps": 41472,
+            "peak_rss_kib": 24804,
+            "represented_full_bijections": 995328,
+            "seconds": 3.050726,
+            "status": "COMPLETE_EXACT_FINITE_CERTIFICATE"
+          },
+          "seconds": 3.108572
+        },
+        {
+          "command": [
+            "constant_weight_18_6_5_equality_structure/verify_common_unit.py",
+            "--compare-primary"
+          ],
+          "exit_code": 0,
+          "result": {
+            "agent": "six-code-1",
+            "cases": 16,
+            "controls": {
+              "compatible_unique_matching_control": true,
+              "coverage_damage_controls": 3,
+              "invalid_controls_rejected": 12,
+              "positive_joint_words": 35,
+              "zero_guard_incomplete": true
+            },
+            "entrywise_primary_comparison": true,
+            "partial_maps": 41472,
+            "peak_rss_kib": 36624,
+            "point_dfs_nodes": 122480,
+            "role": "researcher",
+            "seconds": 1.561312,
+            "status": "COMPLETE_SEPARATE_CARRIER_AND_LITERAL_REPLAY"
+          },
+          "seconds": 1.632825
+        },
+        {
+          "command": [
+            "constant_weight_18_6_5_equality_structure/check_common_mixed_unit.py",
+            "--source-expected",
+            "coding_theory/a18_6_5_one_unsaturated_at_71/expected.json",
+            "--mixed-source-expected",
+            "coding_theory/a18_6_5_2111_star_classification/expected.json"
+          ],
+          "exit_code": 0,
+          "result": {
+            "cases": 12,
+            "leaf_totals": {
+              "direct_triple": 30336,
+              "hall": 576,
+              "unique_matching_triple": 192
+            },
+            "partial_maps": 31104,
+            "peak_rss_kib": 24068,
+            "represented_full_bijections": 746496,
+            "seconds": 3.38472,
+            "status": "COMPLETE_EXACT_FINITE_CERTIFICATE"
+          },
+          "seconds": 3.444993
+        },
+        {
+          "command": [
+            "constant_weight_18_6_5_equality_structure/verify_common_mixed_unit.py",
+            "--compare-primary"
+          ],
+          "exit_code": 0,
+          "result": {
+            "agent": "six-code-1",
+            "cases": 12,
+            "controls": {
+              "compatible_unique_matching_control": true,
+              "coverage_damage_controls": 3,
+              "invalid_controls_rejected": 12,
+              "positive_joint_words": 35,
+              "zero_guard_incomplete": true
+            },
+            "entrywise_primary_comparison": true,
+            "partial_maps": 31104,
+            "peak_rss_kib": 32724,
+            "point_dfs_nodes": 91860,
+            "role": "researcher",
+            "seconds": 1.403423,
+            "status": "COMPLETE_SEPARATE_CARRIER_AND_LITERAL_REPLAY"
+          },
+          "seconds": 1.471349
+        }
+      ]
+    },
+    {
+      "optimized_python": true,
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-code-1/multiplicity_one_exclusion/verify_inputs.py"
+      ],
+      "exit_code": 0,
+      "seconds": 16.958649,
+      "maxrss_children_kib": 37920,
+      "source_pins_checked": 25,
+      "child_commands": [
+        {
+          "command": [
+            "constant_weight_upper71_review1/produce.py",
+            "--certificate",
+            "constant_weight_upper71_review1/certificate.json"
+          ],
+          "exit_code": 0,
+          "result": {
+            "certificate_bytes": 36056,
+            "sha256": "2555b641beb988c70160161ffce7dcec9b1b1b9630874851949bc9e03d5fd7dc"
+          },
+          "seconds": 0.263688
+        },
+        {
+          "command": [
+            "constant_weight_upper71_review1/verify.py",
+            "--certificate",
+            "constant_weight_upper71_review1/certificate.json",
+            "--baseline",
+            "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-code-1/round-two/six-code-1/multiplicity_one_exclusion/acl69.txt",
+            "--controls",
+            "--expected",
+            "constant_weight_upper71_review1/expected.json"
+          ],
+          "exit_code": 0,
+          "result": {
+            "certificate_sha256": "2555b641beb988c70160161ffce7dcec9b1b1b9630874851949bc9e03d5fd7dc",
+            "total_nodes": 4672,
+            "models": [
+              {
+                "candidate_count": 95,
+                "column_sha256": "05314127c275181be06b39cbd12fc3a01f6473d34ff81af40a6ff5c71d934549",
+                "cycle_half_lengths": [
+                  5
+                ],
+                "maximum_clique": 9,
+                "proof_nodes": 1466
+              },
+              {
+                "candidate_count": 96,
+                "column_sha256": "198e256bf098931b7e98d8cdad9a158728659c5d093dc487bb1695125b08d195",
+                "cycle_half_lengths": [
+                  2,
+                  3
+                ],
+                "maximum_clique": 9,
+                "proof_nodes": 3206
+              }
+            ],
+            "affine_positive_profiles": [
+              {
+                "positive_deficits": [
+                  5
+                ],
+                "high_leave_edges": 0,
+                "low_leave_edges": 0
+              },
+              {
+                "positive_deficits": [
+                  1,
+                  4
+                ],
+                "high_leave_edges": 1,
+                "low_leave_edges": 0
+              },
+              {
+                "positive_deficits": [
+                  1,
+                  1,
+                  3
+                ],
+                "high_leave_edges": 2,
+                "low_leave_edges": 0
+              },
+              {
+                "positive_deficits": [
+                  1,
+                  1,
+                  1,
+                  2
+                ],
+                "high_leave_edges": 3,
+                "low_leave_edges": 0
+              },
+              {
+                "positive_deficits": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "high_leave_edges": 4,
+                "low_leave_edges": 0
+              },
+              {
+                "positive_deficits": [
+                  2,
+                  3
+                ],
+                "high_leave_edges": 1,
+                "low_leave_edges": 0
+              },
+              {
+                "positive_deficits": [
+                  1,
+                  2,
+                  2
+                ],
+                "high_leave_edges": 2,
+                "low_leave_edges": 0
+              }
+            ],
+            "controls": {
+              "rejected": [
+                "missing entire cycle model",
+                "changed target",
+                "wrong candidate stream",
+                "repeated positive-witness vertex",
+                "missing required branches",
+                "out-of-domain branch vertex",
+                "missing branch without leaf coverage",
+                "false K10 negative",
+                "positive leaf labeled negative",
+                "repeated pair in a packing"
+              ],
+              "valid_small_graph_controls": 2
+            },
+            "baseline69": {
+              "maximum_intersection": 2,
+              "minimum_distance": 6,
+              "sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+              "words": 69
+            },
+            "proved_scope": "Saturated points form a covered-pair clique in every20-quadruple pair packing on17 points; independent A(17,6,4)=20 and A(18,6,5)<=71 proofs use the written bridges."
+          },
+          "seconds": 0.988619
+        },
+        {
+          "command": [
+            "constant_weight_18_6_5_equality_structure/check_common_mixed.py"
+          ],
+          "exit_code": 0,
+          "result": {
+            "cases": 9,
+            "leaf_totals": {
+              "direct_triple": 22680,
+              "hall": 468,
+              "unique_matching_triple": 180
+            },
+            "partial_maps": 23328,
+            "peak_rss_kib": 26032,
+            "represented_full_bijections": 559872,
+            "seconds": 2.645523,
+            "status": "COMPLETE_EXACT_FINITE_CERTIFICATE"
+          },
+          "seconds": 2.870399
+        },
+        {
+          "command": [
+            "constant_weight_18_6_5_equality_structure/verify_common_mixed.py",
+            "--compare-primary"
+          ],
+          "exit_code": 0,
+          "result": {
+            "agent": "six-code-1",
+            "cases": 9,
+            "controls": {
+              "invalid_controls_rejected": 8,
+              "positive_joint_words": 35,
+              "zero_guard_incomplete": true
+            },
+            "entrywise_primary_comparison": true,
+            "partial_maps": 23328,
+            "peak_rss_kib": 25964,
+            "point_dfs_nodes": 68895,
+            "role": "researcher",
+            "seconds": 1.049869,
+            "status": "COMPLETE_SEPARATE_CARRIER_AND_LITERAL_REPLAY"
+          },
+          "seconds": 1.373113
+        },
+        {
+          "command": [
+            "constant_weight_18_6_5_equality_structure/check_common_unit.py",
+            "--source-expected",
+            "coding_theory/a18_6_5_one_unsaturated_at_71/expected.json"
+          ],
+          "exit_code": 0,
+          "result": {
+            "cases": 16,
+            "leaf_totals": {
+              "direct_triple": 40960,
+              "hall": 320,
+              "unique_matching_triple": 192
+            },
+            "partial_maps": 41472,
+            "peak_rss_kib": 27728,
+            "represented_full_bijections": 995328,
+            "seconds": 3.006183,
+            "status": "COMPLETE_EXACT_FINITE_CERTIFICATE"
+          },
+          "seconds": 3.262876
+        },
+        {
+          "command": [
+            "constant_weight_18_6_5_equality_structure/verify_common_unit.py",
+            "--compare-primary"
+          ],
+          "exit_code": 0,
+          "result": {
+            "agent": "six-code-1",
+            "cases": 16,
+            "controls": {
+              "compatible_unique_matching_control": true,
+              "coverage_damage_controls": 3,
+              "invalid_controls_rejected": 12,
+              "positive_joint_words": 35,
+              "zero_guard_incomplete": true
+            },
+            "entrywise_primary_comparison": true,
+            "partial_maps": 41472,
+            "peak_rss_kib": 37920,
+            "point_dfs_nodes": 122480,
+            "role": "researcher",
+            "seconds": 1.550438,
+            "status": "COMPLETE_SEPARATE_CARRIER_AND_LITERAL_REPLAY"
+          },
+          "seconds": 1.752711
+        },
+        {
+          "command": [
+            "constant_weight_18_6_5_equality_structure/check_common_mixed_unit.py",
+            "--source-expected",
+            "coding_theory/a18_6_5_one_unsaturated_at_71/expected.json",
+            "--mixed-source-expected",
+            "coding_theory/a18_6_5_2111_star_classification/expected.json"
+          ],
+          "exit_code": 0,
+          "result": {
+            "cases": 12,
+            "leaf_totals": {
+              "direct_triple": 30336,
+              "hall": 576,
+              "unique_matching_triple": 192
+            },
+            "partial_maps": 31104,
+            "peak_rss_kib": 27324,
+            "represented_full_bijections": 746496,
+            "seconds": 4.213666,
+            "status": "COMPLETE_EXACT_FINITE_CERTIFICATE"
+          },
+          "seconds": 4.415857
+        },
+        {
+          "command": [
+            "constant_weight_18_6_5_equality_structure/verify_common_mixed_unit.py",
+            "--compare-primary"
+          ],
+          "exit_code": 0,
+          "result": {
+            "agent": "six-code-1",
+            "cases": 12,
+            "controls": {
+              "compatible_unique_matching_control": true,
+              "coverage_damage_controls": 3,
+              "invalid_controls_rejected": 12,
+              "positive_joint_words": 35,
+              "zero_guard_incomplete": true
+            },
+            "entrywise_primary_comparison": true,
+            "partial_maps": 31104,
+            "peak_rss_kib": 34096,
+            "point_dfs_nodes": 91860,
+            "role": "researcher",
+            "seconds": 1.495968,
+            "status": "COMPLETE_SEPARATE_CARRIER_AND_LITERAL_REPLAY"
+          },
+          "seconds": 1.797466
+        }
+      ]
+    }
+  ],
+  "trust_boundary": "Explicit published classification/local-theorem premises and unformalized counting bridge; author replays do not supply independent review or historical priority"
+}
