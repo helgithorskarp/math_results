@@ -171,8 +171,8 @@ count is the proved210-fold reconstruction.
 
 | Leave, hub index | Covers in first-hub normal form | Full prefix group order | Packing classes | Automorphism orders |
 |---|---:|---:|---:|---|
-| 0,0 | 6912 | 31104 | 2 | 9,9 |
-| 0,4 | 192 | 864 | 2 | 9,9 |
+| 0,0 | 6912 | 31104 | 2 | 18,6 |
+| 0,4 | 192 | 864 | 2 | 6,18 |
 | 1,1 | 960 | 1920 | 1 | 2 |
 | 3,0 | 8640 | 51840 | 1 | 6 |
 | 4,0 | 8640 | 17280 | 1 | 2 |
@@ -195,7 +195,12 @@ complete corpus into packing orbits. A different calculation enumerates
 representative; its orbit set agrees entry by entry with the generator
 walk. Containment, disjointness, complete corpus coverage and orbit-
 stabilizer divisibility are checked. The quotient of group order by orbit
-size gives the displayed full packing automorphism order.
+size gives the displayed full packing automorphism order. A separate
+[direct point-bijection audit](automorphisms.py), using only the literal
+blocks and replication colors, exhaustively checks all eight orders
+without using leave groups or prefix stabilizers. The first four prose
+orders were previously mistyped; [the erratum](ERRATUM.md) records the
+correction to 18,6,6,18. The compact expected record was already correct.
 
 No packing from different leave types or different hub-prefix orbits can
 be isomorphic: point 0 is its unique replication-three point, so every

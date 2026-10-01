@@ -6,7 +6,7 @@ There are exactly **eight point-isomorphism classes** of collections of
 twenty quadruples on seventeen points with pair multiplicity at most one
 and point replication multiset **(3,4,4,4,5^13)**. The eight directly
 checkable representatives are in [expected.json](expected.json).
-Their automorphism orders are **9,9,9,9,2,6,2,6**, in the listed order.
+Their automorphism orders are **18,6,6,18,2,6,2,6**, in the listed order.
 The [proof](PROOF.md) includes the complete normalization and trust boundary.
 
 With the cited minimum-pair, no-(2,2,1)-row and all-unit core lemmas, an
@@ -36,6 +36,7 @@ From this directory, with **Python 3.12.14**, its standard library, and
 python3 -B reproduce.py
 python3 -B verify.py
 python3 -B controls.py
+python3 -B automorphisms.py
 ```
 
 The first command regenerates all mathematical inputs, builds both kernels
@@ -81,3 +82,8 @@ Both implementations and orbit checks are by the same researcher. This
 is a complete exact computer-assisted result with ordinary written
 normalization bridges; those bridges are unformalized, and independent
 peer review is pending. See PROOF.md for primary context and scope.
+
+[ERRATUM.md](ERRATUM.md) corrects the previously mistyped first four
+automorphism orders. `automorphisms.py` independently enumerates all
+point maps from literal block incidence, without the leave/prefix-group
+construction; it agrees with the unchanged compact expected record.
