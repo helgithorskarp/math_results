@@ -11,7 +11,7 @@ collar below is not proved to exclude passage.
 
 Let $s=\sqrt5>0$. Let $K=\operatorname{conv}V$ be the original
 unit-edge, 55-vertex **paragyrate diminished rhombicosidodecahedron**,
-Johnson solid J77, in the [pinned model]$../rupert_j77_projection_diameter/model.py$.
+Johnson solid J77, in the [pinned model](../rupert_j77_projection_diameter/model.py).
 The 50-vertex antipodal core is denoted $V_c$; all five gyrated originals
 are retained. $K$ is asymmetric. All originals have common radius
 
@@ -134,11 +134,11 @@ conditional local small-rotation theorems is intended.
 ## 2. Exact prerequisites and continuous geometric input
 
 The direct mathematical parent is the
-[original physical-area proof]$../rupert_j77_projection_area/PROOF.md$,
+[original physical-area proof](../rupert_j77_projection_area/PROOF.md),
 source **cd0088c8aa1e308657b17d759bc5600c7b8b2b34**, graph
 **bafkreibdvhqnug46ccnk4fwx3czbz4y7moj44qqimnjge6w6idkms5j4au**,
 committed at 7801. The second direct source parent is the
-[proper-frame and full-roll proof]$../rupert_j77_area_axis_roll/PROOF.md$,
+[proper-frame and full-roll proof](../rupert_j77_area_axis_roll/PROOF.md),
 source **86dcf1e10d0eddbc26fc8343b6df4fcc642d47c6**, graph
 **bafkreifknnotrmemmzit7mming6alsh2ddarslrbxdff3qkpoeitbzknmm**,
 committed at 7867. All14 direct files and all 21 distinct direct/transitive
@@ -301,7 +301,7 @@ $|e\cdot R^j e|<81/100$. Thus its signed dot product with $n$ is
 below $81/100+1/200$, whereas $n\cdot e>1-1/(2\cdot200^2)$.
 The nearest signed axis is uniquely $e$, proving the first part of (4).
 In particular the whole closed patch is outside the earlier
-[complete mirror cap]$../rupert_j77_complete_signed_mirror_cap/PROOF.md$,
+[complete mirror cap](../rupert_j77_complete_signed_mirror_cap/PROOF.md),
 source 46410a3250dea5bb32ec5d3acaae4f1ca3bc906d, graph 8206.
 
 Independently reconstruct all 52 original facets and their area vectors.
@@ -372,7 +372,7 @@ $$
 In every closed chord-radius $1/40$ cap at a body/sign image of this
 normal, $f(n)>3/8-(9/4)/40=51/160>9/800$. Thus (18) separates the
 whole new patch from all the
-[old diameter caps]$../rupert_j77_balanced_torque_caps/PROOF.md$.
+[old diameter caps](../rupert_j77_balanced_torque_caps/PROOF.md).
 It also fails the prerequisite $f(n)^2>1/12$ of the old winning-region
 receiving criteria.
 
@@ -383,8 +383,8 @@ $$
  \operatorname{conv}\{D,(0,-17/20,z),(1/20,-17/20,z)\}.                    \tag{19}
 $$
 
-They are the [south triangle]$../rupert_j77_zero_height_supports/PROOF.md$
-and [north triangle]$../rupert_j77_directional_north_triangle/PROOF.md$.
+They are the [south triangle](../rupert_j77_zero_height_supports/PROOF.md)
+and [north triangle](../rupert_j77_directional_north_triangle/PROOF.md).
 For each of their20 $R^j$ and $X R^j$ images, $X=\operatorname{diag}(-1,1,1)$,
 solve the three-column system expressing each new raw corner in the old
 three rays. All determinants are nonzero. For every old cone there is
@@ -597,14 +597,14 @@ ledger, or omitted large corpus certifies a mathematical exclusion.
 The old full diameter-region enumeration is not claimed rerun.
 
 For the family/status context, the current primary sources consulted are
-[the 2026 Rupert-family paper]$https://arxiv.org/html/2604.26531$ and
-[the 2025 table containing the unresolved J77 entry]$https://arxiv.org/html/2509.08190$.
-The assigned other seed, [the Noperthedron paper]$https://arxiv.org/abs/2508.18475$,
+[the 2026 Rupert-family paper](https://arxiv.org/html/2604.26531) and
+[the 2025 table containing the unresolved J77 entry](https://arxiv.org/html/2509.08190).
+The assigned other seed, [the Noperthedron paper](https://arxiv.org/abs/2508.18475),
 concerns a different non-Rupert polyhedron. This source does not transfer
 that result to J77 or treat the rhombicosidodecahedron conjecture as a
 proved non-Rupert result. The general physical-area strategy in
 **six-rupert-1, researcher**'s
-[Cell8 collar proof]$../../geometry/rupert_deltoidal_symmetry/cell8_collar_proof.md$,
+[Cell8 collar proof](../../geometry/rupert_deltoidal_symmetry/cell8_collar_proof.md),
 source 4e2806a83f17c20fe755354a0b9b57f0bfef2e3a, graph 8186, is useful
 context; its centrality and constants do not transfer to this body.
 The subsequent
