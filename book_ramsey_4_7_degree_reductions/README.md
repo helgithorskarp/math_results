@@ -162,7 +162,7 @@ The latest defect budget is in item 19; boundary cuts are in items 18--21.
     full integral lattice forces even adjacency trace, contradicting -3.
     Separate perfect-matching generation and Fraction arithmetic verify
     all full F/H entries in 2,538 labeled internal-matching placements.
-    Thus at 98 edges only **(a,24-2a,a-2),3<=a<=6** remain. The general
+    This initially left **(a,24-2a,a-2),3<=a<=6** at 98 edges, refined below. The general
     degree budget 30, edge range 98..110 and Ramsey interval 22..23 persist.
 
 21. At 98 edges with histogram **(3,18,1)**, the three degree-eight
@@ -175,8 +175,20 @@ The latest defect budget is in item 19; boundary cuts are in items 18--21.
     cubic neighborhoods, 22 classes and 1,014 weighted Gram forms fail
     binary incidence. A separate direct search of 126 root profiles
     confirms the exclusion and compares every local E/S matrix entry.
-    The zero-attachment triangle and the full histogram remain open;
-    the global degree/edge ranges and Ramsey interval are unchanged.
+    This left the zero-attachment triangle, excluded by the next result.
+
+22. The full 98-edge histogram **(3,18,1)** is excluded by
+    [degree98_zero_attachment.md](degree98_zero_attachment.md). At its
+    degree-ten root, an exact Gram-row identity forces a defect-free
+    cubic neighborhood and two disjoint exceptional four-point rows.
+    A complete rooted census covers 41 profiles and 1,087 cubic graphs;
+    1,023 literal negative forms leave four explicit classes. Exact
+    full-rank projection and binary row completion give 32 Gram matrices
+    and 84 exceptional placements. Each has a degree-eight point with
+    no permitted outside neighbor set. A separate all-2^15 tail-word,
+    adjugate, direct full-Gram and literal page audit agrees entry by entry.
+    The remaining 98-edge histograms are **(4,16,2), (5,14,3), (6,12,4)**;
+    the full boundary and Ramsey endpoint are open.
 
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
