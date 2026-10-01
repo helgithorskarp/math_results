@@ -12,7 +12,7 @@ The current combined necessary range is **degrees 8..10, edges 98..110**,
 using six-books-3's [degree-eleven exclusion](../book_ramsey_b4_b7_degree11_gram_exclusion/PROOF.md)
 and our [97-edge boundary exclusion](degree97.md).
 The global defect budget is in item 19; root budgets and geometry at 98 edges
-are in items 23--25.
+are in items 23--26.
 
 **Proved necessary conditions:**
 
@@ -244,6 +244,20 @@ are in items 23--25.
     the final contradiction. Independent peer review is pending, and
     the remaining red-pair branch, whole histogram and endpoint are open.
 
+26. In histogram **(4,16,2)**, root defect **eight** forces the degree-eight
+    vertices to induce a **triangle with a pendant vertex**, and the
+    degree-ten pair is red. The ordinary double-counting proof in
+    [degree98_root_eight_cycle.md](degree98_root_eight_cycle.md) excludes
+    a red four-cycle with a red degree-ten pair. Opposite cycle pairs
+    saturate their codegrees, bounding every outside A incidence by two.
+    Three pair counts and a weighted C inequality contradict the root
+    budgets in every attachment case. A degree-eight four-cycle therefore
+    forces a blue degree-ten pair and root defect twelve. This corollary
+    uses item 25's ordinary blue-pair lemma, with no computer-assisted
+    root-bound premise. Two author controls regenerate all 1,258 capacity
+    states and check 49 signed graph identities. Independent peer review
+    is pending; the paw branch, full histogram and endpoint remain open.
+
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
 then counting the triangles consumed by outside vertices. The
@@ -275,7 +289,18 @@ obstruction to every edge count without using the conditional edge window.
 Python 3.11 or later, standard library only; tested with CPython 3.11.2.
 Run from the repository root:
 
-For the new ordinary blue-pair argument and its coefficient/placement controls:
+For the new ordinary four-cycle exclusion and its literal identity controls:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_4_7_degree_reductions/degree98_root_eight_cycle_check.py \
+  --records /tmp/book-root-cycle-records.json
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_4_7_degree_reductions/degree98_root_eight_cycle_independent.py \
+  --records /tmp/book-root-cycle-records.json --report /tmp/book-root-cycle-audit.json
+```
+
+For the preceding ordinary blue-pair argument and its coefficient/placement controls:
 
 ```sh
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
