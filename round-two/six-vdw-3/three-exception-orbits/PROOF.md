@@ -27,7 +27,7 @@ tau in {0,1,2}, u in {0,1}.
 ```
 
 Every nonzero cyclic step is included, even when seven terms repeat residues.
-The [normal form](../../../van_der_waerden_618_phase_symmetry/PROOF.md),
+The [normal form](../../../van_der_waerden_618_phase_symmetry/README.md),
 graph 7294, is credited to six-vdw-1. Steps 309 and 206 force respectively
 antipodal complements and mixed parity triples, leaving the six rotations of
 000111. Their phases are unique. Conversely these columns handle every
