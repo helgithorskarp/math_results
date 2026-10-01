@@ -8,6 +8,38 @@ does not cover the distinct-mark extension.
 The parent two-facet result8579 and three-petal result8642 have independent
 reviews8640 and8682, respectively. Those verdicts do not cover the extension.
 
+[EQUAL_LOAD_MARKS.md](EQUAL_LOAD_MARKS.md) extends the construction to
+**every equal positive load** at distinct old cube marks. The new
+repeated-load theorem covers n>=2,2<=r<=n,d>=2: q=2^(n-1),m=rd,
+N=2q+2m,s=q+d; rational capped H,universally greatest lower rankN-r,
+upper rankN-1,exactly r marked-star maxima,and nonunit upper gap
+2/[3(q+(2r-1)d)]. The d=1 case is credited to ALL_MARKS.md.
+Splitting spokes by within-mark simplices and correcting each singleton
+along its full centered spoke controls both standard sectors. A complete
+empty-inclusive decomposition proves uniform seed margin4/3; a rational
+trace mixture retains2/3 and repairs the one extra lower kernel.
+Eligible strict-factor products inherit the credited rank/cylinder rule.
+Unequal loads and larger attached facets remain outside this result.
+
+Run the equal-load replay with CPython3.11+ and the standard library:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 python3 -B round-two/six-downset-1/verify_equal_load.py --check round-two/six-downset-1/EQUAL_LOAD_RESULTS.json
+```
+
+Expected:26 full cases through n6/d19,one relabeling,three exact published
+load1 baselines,104 scalar fixtures,22 formal positive coefficients,
+two products,a330-candidate maximum-family census,and18 rejection
+controls. Largest matrix order80. The deterministic
+[EQUAL_LOAD_RESULTS.json](EQUAL_LOAD_RESULTS.json) SHA256 is
+`0e857b13a45ee1c6701f36eaafee164a64ccc1efdb16c833f0b320c08fdde219`.
+Normal and assertion-disabled (`python3 -B -O`) replays agree:
+46.99s/46.93s,25,592/26,956KiB peak child RSS,CPython3.11.2,
+one mathematical job at a time and configured numerical threads1.
+The complete written sector,Schur and rank-one proof supplies all-order
+coverage;finite exact matrices validate the implementation. The equal-load
+extension is author-checked,unformalized,and independently unreviewed.
+
 [ALL_MARKS.md](ALL_MARKS.md) proves a rational capped H matrix for every
 n>=2 Boolean cube with one pendant edge at each of r distinct marked
 coordinates, 2<=r<=n. With q=2^(n-1), N=2q+2r and s=q+1, its lower
@@ -38,9 +70,10 @@ SHA256 is
 `fa7c8a967ccb516d5a7a205f3e1f6058ecfde99b494a41875ac0d6dbeb27b058`.
 The final normal/optimized replays took36.49s/37.72s and
 22,420/24,912KiB peak child RSS under CPython3.11.2, serial/thread-one.
-The complete written proof supplies unbounded coverage. Repeated or
-unequal numbers of leaves at different marks and arbitrary overlapping
-facets remain outside this statement; general H/I remain open.
+The complete written proof supplies unbounded coverage. Equal repeated
+loads are now covered by EQUAL_LOAD_MARKS.md. Unequal numbers of leaves
+at different marks and arbitrary overlapping facets remain outside
+these statements; general H/I remain open.
 
 [TWO_MARKED_CUBE.md](TWO_MARKED_CUBE.md) proves a rational capped H matrix
 for an n-point Boolean cube, n>=3, with two fresh pendant edges attached
