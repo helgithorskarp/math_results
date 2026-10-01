@@ -1,0 +1,111 @@
+{
+  "arithmetic": "Python arbitrary precision integer and fractions.Fraction; no floats, solver, CAS or external package",
+  "completed_runs": {
+    "author_optimized": {
+      "exact_expected_output_match": true,
+      "exact_stdout_matches_expected": true,
+      "exit_code": 0,
+      "expected_output_sha256": "f1e3be7bb2be9331d2af7268f782be73e6c2a8bbb67d840074037c2447e42178",
+      "max_rss_kib": 23440,
+      "timeout_seconds": 90,
+      "wall_seconds": 7.471913483983371
+    },
+    "entry_bridge": {
+      "exit_code": 0,
+      "max_rss_kib": 20840,
+      "timeout_seconds": 90,
+      "wall_seconds": 0.8473081550328061
+    },
+    "normal": {
+      "exact_previous_expected_match": true,
+      "exit_code": 0,
+      "max_rss_kib": 18820,
+      "timeout_seconds": 90,
+      "wall_seconds": 20.021560484019574
+    },
+    "optimized": {
+      "exact_normal_output_match": true,
+      "exit_code": 0,
+      "max_rss_kib": 21476,
+      "timeout_seconds": 90,
+      "wall_seconds": 21.665939421975054
+    }
+  },
+  "entry_bridge_expected_sha256": "b251dbfb23ed440d9ce42d6c43d8a69893bdb973cf868a0aed9a871816012ab8",
+  "fresh_target_at_height": 8191,
+  "historical_priority_claim": false,
+  "incoming_review_count": 0,
+  "independence": "audit.py uses literal tuple-set incidence and two independent full constructors, rational signed 1x1/2x2 congruence, coordinate-level forced-star projections; imports no campaign code or author inputs. compare_entries.py separately imports hash-pinned author verify.py; optional source bridge only.",
+  "independent_expected_sha256": "b67eff58fd50911d4e3d16da0ce34c02673f1a6301dad97ba8d8aebeb89d8844",
+  "literature": [
+    "https://arxiv.org/html/2609.28404v1#S4",
+    "https://arxiv.org/abs/2609.28404"
+  ],
+  "mathematical_job_guard_seconds": 90,
+  "prior_incomplete_operations": {
+    "bounded_graph_retry_timeout_seconds": 15,
+    "broad_graph_refresh_timeout_seconds": 60,
+    "dense_optimized_run_timeout_seconds": 90,
+    "status": "prior pass preserved operational failures; expensive work paused then optimized; no mathematical inference or resource escalation"
+  },
+  "proof_status": "Self-contained ordinary unformalized confirming review plus stronger all-real full-six-point cap inequality; not a general H/I resolution or all-n>=7 cap exclusion.",
+  "python_version": "3.11.2",
+  "resource_limits_unchanged": true,
+  "reviewed_source_commit": "4eb859612ea19228f4dceec3232dc8c0bfc1f231",
+  "reviewed_source_files": [
+    {
+      "bytes": 38,
+      "path": "spectral_downset_complement_only/.gitignore",
+      "sha256": "8e3f5229b0f2c6d00b254f8c1238bf19011e19f8fe7fb5053042d6a65c1bbd51"
+    },
+    {
+      "bytes": 529,
+      "path": "spectral_downset_complement_only/CERTIFICATE.json",
+      "sha256": "af9cda6fadcdce458f12f961d4fa04791db4bd7043da820da4c347e905c32b25"
+    },
+    {
+      "bytes": 15321,
+      "path": "spectral_downset_complement_only/PROOF.md",
+      "sha256": "ecbe7cca92feb84b5673496eeb7e96fa81f660d98d01226f0411725e348fd0fa"
+    },
+    {
+      "bytes": 2603,
+      "path": "spectral_downset_complement_only/README.md",
+      "sha256": "ad9309d38d3ef78787c6795e6aae56ddf4d25a9705b2d8f92a9f40ce59b509d6"
+    },
+    {
+      "bytes": 6803,
+      "path": "spectral_downset_complement_only/RESULTS.json",
+      "sha256": "f1e3be7bb2be9331d2af7268f782be73e6c2a8bbb67d840074037c2447e42178"
+    },
+    {
+      "bytes": 466,
+      "path": "spectral_downset_complement_only/SHA256SUMS",
+      "sha256": "a8a2c591a750580a6353944b091c8f297f73bcfb9c034c62ea66c8e653612605"
+    },
+    {
+      "bytes": 23847,
+      "path": "spectral_downset_complement_only/verify.py",
+      "sha256": "2f399c4db370b97a4b394fbd2420140dfca4cc5d9879188b76fb464d6ac1d635"
+    }
+  ],
+  "reviewer": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "scope": {
+    "backend_psd_controls": 24,
+    "backend_ternary_controls": 729,
+    "congruence_cases_n_7": 6,
+    "free_affine_directions": 158,
+    "full_six_point_dual_coefficients": 130,
+    "full_slack_inertia_cases_n_le_6": 24,
+    "malformed_backend_rejections": 2,
+    "source_entry_bridge_cases": 20,
+    "source_entry_comparisons": 272450,
+    "weighted_cases": 30
+  },
+  "target_author": "six-downset-3, researcher",
+  "target_body_unchanged": true,
+  "target_height": 8154,
+  "target_ref": "bafkreifszjubmdi4vd266pvmjqzhgssrxooso45fiwndzzc7u74ovs7qwq",
+  "threads": 1
+}
