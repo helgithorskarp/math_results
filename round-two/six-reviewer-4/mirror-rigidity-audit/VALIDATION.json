@@ -1,0 +1,111 @@
+{
+  "actual_reviewer": "six-reviewer-4",
+  "arithmetic": "Ordered rational integer-pair Q(sqrt(5)) and independent sparse integer polynomials, standard library only.",
+  "finite_guard_seconds": 60,
+  "max_simultaneous_cpu_jobs": 1,
+  "negative_controls": [
+    "missing cone",
+    "negative weight",
+    "reversed critical ray",
+    "false edge",
+    "omitted edge-interior preimages",
+    "omitted actual translation term",
+    "wrong proper-companion denominator"
+  ],
+  "numeric_threads": 1,
+  "optional_comparison": {
+    "normal": "PASS 398 exact scalar comparisons",
+    "optimized": "PASS 398 exact scalar comparisons"
+  },
+  "producer_replay": {
+    "normal_seconds": 17.723743,
+    "optimized_seconds": 30.301008859009016,
+    "peak_rss_upper_kib": 22076,
+    "returncodes": [
+      0,
+      0
+    ],
+    "status": "Replay only; independent proof does not execute producer modules."
+  },
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "result": {
+    "actual_reviewer": "six-reviewer-4",
+    "all_original_contact_supports": 132480,
+    "bilinear_corner_checks": 184,
+    "boundary_interior_distances": 2304,
+    "boundary_supports": 4320,
+    "catalogue_boundary_matches": 616,
+    "closed_cones": 46,
+    "closed_shadow_reduction_chord_radius": "2/29",
+    "constants": {
+      "A0": 27360,
+      "B0": 109442,
+      "C0": 334391321,
+      "D0": 984999191720,
+      "E0": 16663608,
+      "H": 24624979793,
+      "J0": 8318124,
+      "K0": 1520,
+      "N": 1,
+      "X": 1,
+      "Y": 1,
+      "bilinear_coefficient_lower": "1/40",
+      "kappa_upper": "1/984999191720",
+      "local_input_r_eta_upper": "1/3939996766880",
+      "scope": "Both receiver tangent r and relative Cayley vector w bounded; not an all-source receiving radius."
+    },
+    "enlarged_squared_support_gap": "(2171/6728)+(-969/6728)sqrt5",
+    "negative_controls_rejected": 5,
+    "original_vertices": 60,
+    "prototype_reflections": 168,
+    "role": "independent mathematical reviewer"
+  },
+  "role": "independent mathematical reviewer",
+  "runs": [
+    {
+      "command": "python3 -B audit.py",
+      "process_tree_peak_rss_upper_kib": 18376,
+      "returncode": 0,
+      "seconds": 3.779293,
+      "stderr": "",
+      "stdout": "PASS\n"
+    },
+    {
+      "command": "python3 -B -O audit.py",
+      "process_tree_peak_rss_upper_kib": 22248,
+      "returncode": 0,
+      "seconds": 3.901527,
+      "stderr": "",
+      "stdout": "PASS\n"
+    },
+    {
+      "command": "python3 -B symbolic.py",
+      "process_tree_peak_rss_upper_kib": 22496,
+      "returncode": 0,
+      "seconds": 0.076931,
+      "stderr": "",
+      "stdout": "PASS\n"
+    },
+    {
+      "command": "python3 -B -O symbolic.py",
+      "process_tree_peak_rss_upper_kib": 22496,
+      "returncode": 0,
+      "seconds": 0.226837,
+      "stderr": "",
+      "stdout": "PASS\n"
+    }
+  ],
+  "symbolic": {
+    "actual_reviewer": "six-reviewer-4",
+    "coefficient_record_sha256": "417b3f7d7eaa10033e672d7771c6032f8f3e3e94fc888430bfb9df516f656a95",
+    "domain": "Integer coefficients in17 variables, interpreted in characteristic zero.",
+    "generic_common_row_moment_types": 9,
+    "implementation": "Independent sparse integer polynomial v1, standard library only.",
+    "incorrect_companion_control": true,
+    "role": "independent mathematical reviewer",
+    "translation_omission_control": true,
+    "trust": "Proper covariance and rechecked physical stresses supply the geometric interpretation.",
+    "zero_coefficient_identities": 28
+  },
+  "trust_boundary": "Exact Python plus unformalized finite-reduction, perturbation, covariance and compactness proofs. Complete catalogue and named-body identification credited to 8551/8635. No ineffective compactness step is claimed numerical."
+}
