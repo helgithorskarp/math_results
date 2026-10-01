@@ -10,6 +10,9 @@ All34 complete raw interfaces from9045 are included, including the32
 that its triangle condition rejected. Complete carrier coverage is
 explicitly imported from9045, conditional on reviewed8933/8323; this
 directory rebuilds their residual graphs and checks every color certificate.
+Review9076 independently confirms the earlier triangle-conditioned9045
+and its two seed caps; the present triangle-free bound and all32 additional
+color arrays remain independently unreviewed.
 See [dependencies](DEPENDENCIES.json) for exact source/graph references.
 
 From the publication repository root, run with Python3.11.2 (tested):

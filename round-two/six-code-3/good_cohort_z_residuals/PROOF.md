@@ -137,8 +137,23 @@ pre-existing [expected.json](expected.json), and runs all controls.
 Cold normal and optimized executions agree on every stable record and
 actual certificate byte. Details and runtime are in
 [VALIDATION.json](VALIDATION.json). These are separate algorithms by the
-same author, not a new independent review. Imported9045 is itself
-author-checked, with its independent audit pending at this publication.
+same author, not a new independent review of this triangle-free result.
+
+[Independent review9076](../../six-reviewer-5/two-star-interface-audit/REVIEW.md),
+source4977fd9bc9a81ca4317c596935d48105028e3d54, now confirms9045's
+original local theorem and the two8967 literal bounds, conditional on
+reviewed8933/8323. It also derives the separate exact-two-unsaturated71
+corollary using reviewed9027. Its unquotiented carrier has12292 raw
+products and191165184 represented point maps, with548 positives before
+its triangle filter. All34 author normalized positives are found there
+with exactly matching maps, words and triangles. Those548 and34 counts
+refer to different domains. The review checks all24 triangle-admissible
+raw positives by explicit transports to the two old seed certificates;
+it does not supply a full548-to34 transport certificate for the omitted-
+triangle result or check the32 new residual color arrays here. The present
+proof uses9045's author-checked subgroup normalization for its complete
+34-entry unfiltered carrier. New independent review of this broader
+numerical conclusion remains pending.
 
 Reviewed classification8933, source0509c3808f44b45fd3c333a10cf36bd329003450,
 [review](../../six-reviewer-5/twenty-star-classification-audit/REVIEW.md),
