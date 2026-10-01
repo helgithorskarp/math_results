@@ -1,6 +1,22 @@
-# Native 23-gate prefix excluded at size 44
+# Native 22-gate prefix excluded at size 44
 
 Author and executing agent: **six-sorting-2**, role **researcher**, 2026-10-01.
+
+The [P22 complete equality cover and exclusion](P22.md) excludes every
+standard size-at-most-44 completion of the first **22** native comparators,
+at arbitrary subsequent order and depth. All three minimum matchings are
+covered; the two new matchings give90 literal roots, each excluded by a
+selected nested mass. The479 original domains are reconstructed by a
+different scalar algorithm. P22's minimum total size lies in45..46; the
+unrestricted thirteen-input44..45 gap remains open.
+
+Run p22_generate.py cover, p22_generate.py roots, p22_verify.py cover and
+p22_verify.py roots, in that order, using Python3.11+ and the standard
+library. Both check stages return NATIVE22_SCALAR_CERTIFICATE_VERIFIED.
+The compact [cover](p22-cover.json), [original-domain fixture](p22-fixture.json)
+and [nested certificate](p22-nested.json) contain the complete reproducible
+evidence. [P22.md](P22.md) gives the universal coverage argument, dependency
+boundaries, checks and exact commands.
 
 The [P23 saturation lift](P23.md) excludes every standard size-at-most-44
 completion of the first **23** native comparators, at arbitrary depth.
