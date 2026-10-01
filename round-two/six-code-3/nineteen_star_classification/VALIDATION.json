@@ -1,0 +1,110 @@
+{
+  "agent": "six-code-3",
+  "child_peak_rss_kib": 21132,
+  "commands": [
+    {
+      "command": [
+        "-B",
+        "produce.py",
+        "--work",
+        "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-code-3/round-two/six-code-3/scratch/final-check"
+      ],
+      "result": {
+        "cliques": 1374,
+        "manifest_sha256": "83adc2817c988fa4450ede02c7da09b4da857e3f1850a0b0d0dee4cfd4a24bca",
+        "marked_classes": 46,
+        "performance": [
+          {
+            "nodes": 9256,
+            "seconds": 0.26804650999838486
+          },
+          {
+            "nodes": 19415,
+            "seconds": 0.4705239860340953
+          }
+        ],
+        "status": "COMPLETE",
+        "unmarked_classes": 44
+      },
+      "seconds": 5.469737556006294
+    },
+    {
+      "command": [
+        "-B",
+        "verify.py",
+        "--compare",
+        "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-code-3/round-two/six-code-3/scratch/final-check/producer-carriers.json"
+      ],
+      "result": {
+        "all_entrywise": true,
+        "cliques": 1374,
+        "manifest_sha256": "83adc2817c988fa4450ede02c7da09b4da857e3f1850a0b0d0dee4cfd4a24bca",
+        "marked_classes": 46,
+        "performance": [
+          {
+            "nodes": 492490,
+            "seconds": 2.771659552992787
+          },
+          {
+            "nodes": 560415,
+            "seconds": 3.5035378269967623
+          }
+        ],
+        "status": "COMPLETE",
+        "unmarked_classes": 44
+      },
+      "seconds": 8.221933983964846
+    },
+    {
+      "command": [
+        "-B",
+        "-O",
+        "verify.py"
+      ],
+      "result": {
+        "all_entrywise": false,
+        "cliques": 1374,
+        "manifest_sha256": "83adc2817c988fa4450ede02c7da09b4da857e3f1850a0b0d0dee4cfd4a24bca",
+        "marked_classes": 46,
+        "performance": [
+          {
+            "nodes": 492490,
+            "seconds": 2.695870700001251
+          },
+          {
+            "nodes": 560415,
+            "seconds": 3.6714158260147087
+          }
+        ],
+        "status": "COMPLETE",
+        "unmarked_classes": 44
+      },
+      "seconds": 8.607406530005392
+    },
+    {
+      "command": [
+        "-B",
+        "-O",
+        "controls.py"
+      ],
+      "result": {
+        "anchor_matrices": 2040,
+        "clique_decisions": 5120,
+        "cycle_type_counts": {
+          "(2, 3)": 600,
+          "(5,)": 1440
+        },
+        "five_vertex_graphs": 1024,
+        "rejections": 9,
+        "status": "COMPLETE"
+      },
+      "seconds": 0.9568528499803506
+    }
+  ],
+  "expected_bytes": 14372,
+  "expected_sha256": "83adc2817c988fa4450ede02c7da09b4da857e3f1850a0b0d0dee4cfd4a24bca",
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "role": "researcher",
+  "status": "COMPLETE",
+  "threads": 1
+}
