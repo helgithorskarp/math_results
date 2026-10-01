@@ -1,0 +1,159 @@
+{
+  "actual_agent": "six-code-1",
+  "role": "researcher",
+  "date": "2026-10-01",
+  "python_version": "Python 3.11.2",
+  "new_checks": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "round-two/six-code-1/profile_16_19_exclusion/produce.py",
+        "--out",
+        "round-two/six-code-1/scratch/profile16-19-produce-normal.json"
+      ],
+      "exit_code": 0,
+      "seconds": 3.400903,
+      "peak_child_RSS_kib": 24536
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "round-two/six-code-1/profile_16_19_exclusion/produce.py",
+        "--out",
+        "round-two/six-code-1/scratch/profile16-19-produce-optimized.json"
+      ],
+      "exit_code": 0,
+      "seconds": 2.837959,
+      "peak_child_RSS_kib": 27148
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "round-two/six-code-1/profile_16_19_exclusion/verify.py",
+        "--compare-primary",
+        "--out",
+        "round-two/six-code-1/scratch/profile16-19-verify-normal.json"
+      ],
+      "exit_code": 0,
+      "seconds": 9.451777,
+      "peak_child_RSS_kib": 29084
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "round-two/six-code-1/profile_16_19_exclusion/verify.py",
+        "--compare-primary",
+        "--out",
+        "round-two/six-code-1/scratch/profile16-19-verify-optimized.json"
+      ],
+      "exit_code": 0,
+      "seconds": 9.723611,
+      "peak_child_RSS_kib": 31364
+    }
+  ],
+  "stable_verification_record": {
+    "agent": "six-code-1",
+    "baseline": {
+      "distances": {
+        "6": 1264,
+        "8": 637,
+        "10": 445
+      },
+      "words": 69
+    },
+    "controls": [
+      "missing star block",
+      "duplicate star block",
+      "point outside mask domain",
+      "incorrect low hub marking",
+      "mark outside domain",
+      "missing inventory",
+      "duplicate inventory",
+      "incorrect incidence budget",
+      "false local charge bound",
+      "incomplete coverage count"
+    ],
+    "discharged_inventories": 705,
+    "entrywise_comparison": true,
+    "finite_record_sha256": "64960bf58127dfdb47700d111ff9df5d0381ea1758f318427dcf75cee39325c9",
+    "low_hub_marks": 381,
+    "raw_inventories": 13463,
+    "restricted_inventories": 705,
+    "role": "researcher",
+    "status": "COMPLETE_SEPARATE_CHECK"
+  },
+  "expected_sha256": "64960bf58127dfdb47700d111ff9df5d0381ea1758f318427dcf75cee39325c9",
+  "imported_premise_checks": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "round-two/six-code-1/multiplicity_four_exclusion/primary.py"
+      ],
+      "exit_code": 0,
+      "seconds": 3.104823,
+      "peak_child_RSS_kib": 17780
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "round-two/six-code-1/multiplicity_four_exclusion/verify.py",
+        "--compare-primary",
+        "--out",
+        "round-two/six-code-1/scratch/pass5-local-verification.json"
+      ],
+      "exit_code": 0,
+      "seconds": 2.569392,
+      "peak_child_RSS_kib": 23212
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "round-two/six-code-3/nineteen_twenty_twenty_interfaces/verify_witness.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.096545,
+      "peak_child_RSS_kib": 23212
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "round-two/six-code-3/nineteen_twenty_twenty_interfaces/verify_witness.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.222842,
+      "peak_child_RSS_kib": 23212
+    }
+  ],
+  "imported_local_pair_scope": "Fresh complete primary and point-DFS/literal replay:51840 partial maps,311040 represented full maps,235 exceptional partial maps,1410 literal branches; ten controls and69/35 positive fixtures. Normal replay here; normal/-O completed in prior contribution.",
+  "generic_twenty_census_scope": "Fully reproduced preceding pass:108 cases,352 packings and352 actual positive fixture maps in two algorithms; all ten pinned runtime source hashes unchanged this pass. No repeat census claimed.",
+  "sharp67_scope": "Imported committed theorem8794 and published complete source eadf3680; compact positive67 fixture checked normal/-O here. Full1540398-cover census is not claimed cold-reproduced by this author in this pass.",
+  "baseline_and_inputs": {
+    "status": "EXACT_MATCH",
+    "fresh_acl69_sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+    "generic_runtime_files_unchanged": 10,
+    "nineteen_manifest_sha256": "83adc2817c988fa4450ede02c7da09b4da857e3f1850a0b0d0dee4cfd4a24bca"
+  },
+  "resource_scope": {
+    "all_threads": 1,
+    "cpu_intensive_jobs": "Sequential; at most one at a time",
+    "peak_measured_child_RSS_kib": 31364,
+    "per_stage_subprocess_deadline_seconds": 55,
+    "solver_used": false,
+    "limits_raised": false
+  },
+  "graph_read_scope": "Known committed heights and signed official-wire decoding over bounded recent interval; not a full-history incoming-relation audit. Shared SQLite opened mode=ro. GraphQL read deadlines supplied no mathematical inference.",
+  "ordinary_bridges": "Written proof, not formalized; no independent peer verdict on the new counting transfer or new local/triple premises",
+  "operational_note": "One mistyped imported producer path failed before execution and was replaced by the documented primary.py command; only the successful complete replay is evidence.",
+  "omitted_data": "Private381-mark carrier dump,13463/705 inventory arrays, logs, source/graph receipts and exploratory notes; source regenerates every finite input and checks lists entrywise."
+}
