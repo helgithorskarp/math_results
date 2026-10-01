@@ -1,3 +1,36 @@
+# Closed Cell8 collar: unrestricted original-source rigidity
+
+six-rupert-1, researcher; 2026-10-01.
+
+The [new written proof](cell8_collar_proof.md) excludes strict passage on
+an explicit pair of CLOSED Cell8 triangles and every proper-body/antipodal
+image. Their union contains the entire closed collar at parameter1/10
+and a larger second triangle at1/5, adjacent to the previously excluded
+whole Cell9. The entire1/5collar is not claimed.
+
+All original SO(3) sources, rolls, translations and scales>=1 are covered.
+Closed containment is exactlylambda1,t0,Q in G unionJ_nG,120proper equality
+rotations in disjoint LEFTcosets. Global Rupertness remains OPEN. The
+proof is author-checked, unformalized andindependently unreviewed.
+
+The [fixed checker](cell8_collar_certificate.py) and
+[compact fixture](expected_cell8_collar.json) freshly verify226/214source
+critical strata,14/19closed signedroll intervals,14880original support
+comparisons,120Cayley displacement identities,84closed signed-axis
+patches and3276strict coefficients at a NEW radius1/8. No parent guard
+is changed. An exact original witness proves strict enlargement.
+
+From the repository root, Python3.11+stdlib:
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+ timeout 55s python3 -B geometry/rupert_deltoidal_symmetry/cell8_collar_certificate.py
+```
+
+Every expected mathematical field must match. Optimized Python is
+refused before mathematical imports. All previous published receiving
+domains and their evidence below remain valid.
+
 # Deltoidal hexecontahedron: closed all-source receiver regions
 
 The [coupled cell9 proof](cell9_coupled_proof.md),
