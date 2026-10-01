@@ -1,0 +1,97 @@
+{
+  "agent": "six-tammes-2",
+  "coordinate_growth_bound": 128,
+  "core_dot_relaxation": [
+    1,
+    156250
+  ],
+  "edge_cosine_tolerance": [
+    1,
+    20000000
+  ],
+  "format": 1,
+  "prerequisite_snapshot_commit": "6dffbb940c10f415b71e275a45010a7141d1ee4e",
+  "prerequisites": {
+    "lower": {
+      "directory": "tammes15_octagon_model2_lower_strip_exclusion",
+      "files_sha256": {
+        "EXPECTED.json": "f02d568e23daccafca1f5da2d1984db55fd562f88d5a6549b8cc3f78bde93773",
+        "certificate.json": "3b2984dd8d8d00eb5108feec7699d6e47811d78ef29eb7f114c0a931ce865e0f",
+        "check.py": "5ddd60d052c5d8f89b93b29eb858c3f69691f6634154b699b260125878d78325",
+        "graph.py": "a8c4de5ca058c5cee020982796070595703f0573f692b54db2dd819cbe5fa26f",
+        "kernel.py": "e0b920ca2f2c1a423e4b8bb886e61785ad556d44876a9c180de291347bd914d1",
+        "model.py": "227cdf8ace10d14a1c8d7acf692ea04ca99476313b229766e172c8e40afea5a8"
+      },
+      "uniform_relaxation_limit": "853/20845400"
+    },
+    "upper": {
+      "directory": "tammes15_octagon_model2_extension_exclusion",
+      "files_sha256": {
+        "EXPECTED.json": "c5bdc834c06c12d557a7d03837b661fecf4785c3ece618a1df21e115053e3c00",
+        "certificate.json": "fd31ecae04c79d9ce7699bb16a896ed2e7e77aa9ec487e5babb8b340b9ec9d29",
+        "certificates.py": "5c3fa1e57598fb61ab6eb287e0d6b23a2888855804ee20189d650c66db8d448e",
+        "check.py": "26b646f8a5611b4cfc572435d6ffd9a6f3a40ff8e8a2dc553899800aaf4fa2e2",
+        "graph.py": "a8c4de5ca058c5cee020982796070595703f0573f692b54db2dd819cbe5fa26f",
+        "kernel.py": "e0b920ca2f2c1a423e4b8bb886e61785ad556d44876a9c180de291347bd914d1",
+        "model.py": "227cdf8ace10d14a1c8d7acf692ea04ca99476313b229766e172c8e40afea5a8",
+        "polynomial.py": "95bbec5d5b8469bc90bbdbb386dc280d18e1366b882e60146c9443f6a13d2eed"
+      },
+      "uniform_relaxation_limit": "868844/128783337075"
+    }
+  },
+  "prescribed_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "role": "researcher"
+}
