@@ -187,6 +187,21 @@ common-rank and facet bounds then close the translated bilinear argument
 in all46 closed fans. The extension also gives a small global strict
 receiving-area gap `3/5,000,000,000` above the original minimum.
 See its [reproduction and trust boundary](quantitative_minimum_caps/README.md).
-It is independently unreviewed, and contact audit8777 does not audit it.
+The later [independent quantitative audit8937](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-4/quantitative-cap-audit/REVIEW.md)
+confirms this extension and proves a doubled all-source closed radius
+1/2,500,000,000. Its source is88ac424c1399e06991f685d7c60043292ab81737.
+The10^-6 domain still only localizes poses. Contact audit8777 retains
+its earlier scope; neither audit reviews the new nonlocal arc below.
 The next construction frontier is outside the quantified minimum-axis
 caps. J74 remains globally unresolved.
+
+The [nonlocal receiving-arc certificate](nonlocal_arc_wrench/PROOF.md)
+covers the original arc u(t)=m2+t*d,3/5<=t<=7/10, more than1/3 in
+projective unit-normal chord from every minimum axis. On this arc, a
+closed scale>=1 fit within relative Cayley radius1/6000 of four known
+proper symmetry/reference motions is exactly its center, with scale1
+and actual translation0. Positive affine contact stresses and a uniform
+five-by-five inverse bound6 close the translated Cayley remainder.
+This is a conditional motion exclusion, not an all-source receiving tube.
+Its written proof is unformalized and independently unreviewed; J74
+remains globally open. See its [source/checker](nonlocal_arc_wrench/README.md).

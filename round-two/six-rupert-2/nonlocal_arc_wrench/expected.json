@@ -1,0 +1,118 @@
+{
+  "agent": "six-rupert-2",
+  "role": "researcher",
+  "finite_hypotheses": "PASS; continuum argument in PROOF.md, unformalized",
+  "closed_receiving_parameter_interval": [
+    "3/5",
+    "7/10"
+  ],
+  "minimum_projective_chord_separation": ">1/3",
+  "receiver_corners": 18,
+  "contact_rows": 36,
+  "receiver_all_original_comparisons": 2160,
+  "strict_receiver_corner_comparisons": 576,
+  "reference_source_original_comparisons": 8640,
+  "full_body_symmetry_vertex_matches": 240,
+  "literal_reference_corner_matches": 72,
+  "positive_weight_lower": ">1/50",
+  "actual_minimum_endpoint_weight": [
+    "3757182609703182696675657/2434632798923692420000000",
+    "-6625350593549705331468871/9738531195694769680000000"
+  ],
+  "balanced_polynomial_coefficients": 15,
+  "selected_minor_rows": [
+    28,
+    2,
+    20,
+    6,
+    15
+  ],
+  "determinant_bernstein_coefficients": [
+    [
+      "-843/3200",
+      "-26339/400000"
+    ],
+    [
+      "-36283/128000",
+      "-228219/3200000"
+    ],
+    [
+      "-6077/20000",
+      "-246763/3200000"
+    ],
+    [
+      "-830971/2560000",
+      "-1065909/12800000"
+    ],
+    [
+      "-442497/1280000",
+      "-287497/3200000"
+    ],
+    [
+      "-751939/2048000",
+      "-4959319/51200000"
+    ]
+  ],
+  "absolute_minor_lower": [
+    "843/3200",
+    "26339/400000"
+  ],
+  "inverse_infinity_upper": 6,
+  "relative_cayley_radius": "1/6000",
+  "nonlinear_contraction": "243/640",
+  "four_reference_families": [
+    "I",
+    "diag(-1,-1,1)",
+    "M_u diag(-1,1,1)",
+    "M_u diag(1,-1,1)"
+  ],
+  "minimum_separation_polynomial_bounds": [
+    [
+      "7483/12960",
+      "269/2400"
+    ],
+    [
+      "112583/64800",
+      "-161/480"
+    ],
+    [
+      "7103/6480",
+      "-289/600"
+    ],
+    [
+      "222907/129600",
+      "-6481/14400"
+    ],
+    [
+      "12323/259200",
+      "1939/17280"
+    ],
+    [
+      "1081/3240",
+      "41/600"
+    ]
+  ],
+  "certificate_sha256": "a2427bb6e1fdaece00a960bdaf755b4f6a456935600dfdfd0eecb7d1d99fdbca",
+  "negative_controls": [
+    {
+      "control": "wrong_stress",
+      "rejected": true,
+      "reason": "exact balanced force/torque polynomial"
+    },
+    {
+      "control": "cropped_receiver",
+      "rejected": true,
+      "reason": "all-original receiver support"
+    },
+    {
+      "control": "repeated_minor",
+      "rejected": true,
+      "reason": "five independent selected rows"
+    },
+    {
+      "control": "unsafe_motion_radius",
+      "rejected": true,
+      "reason": "nonlinear Cayley contraction gate"
+    }
+  ]
+}
