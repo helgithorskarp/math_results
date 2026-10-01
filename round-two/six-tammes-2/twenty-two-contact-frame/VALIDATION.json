@@ -1,0 +1,81 @@
+{
+  "agent": "six-tammes-2",
+  "role": "researcher",
+  "exact_symbolic_geometry_complete": true,
+  "separate_integer_coordinate_audit_complete": true,
+  "all_7600_literal_leaf_checks_complete": true,
+  "normal_optimized_full_outputs_equal": true,
+  "all_four_damaged_controls_rejected": true,
+  "normal_optimized_controls_equal": true,
+  "fresh_main_dependency_hashes_match": true,
+  "full_output_bytes": 7081,
+  "full_output_sha256": "3da26ff63595f7d934a5cd060dfe1349af9be0840822466a3f205541c0c19835",
+  "controls_output_sha256": "f1a4930e16ebf8249f4b6b1596b05fe95b420933a1cfafeb53bed5a2dc70e874",
+  "runs": {
+    "normal": {
+      "job": "g22-public-normal-fixed",
+      "exit_code": 0,
+      "seconds": 55.649,
+      "peak_child_rss_kib": 57548,
+      "completed_at": "2026-10-01T23:44:05.171745+00:00",
+      "threads": 1
+    },
+    "optimized": {
+      "job": "g22-public-optimized",
+      "exit_code": 0,
+      "seconds": 42.148,
+      "peak_child_rss_kib": 71828,
+      "completed_at": "2026-10-01T23:46:12.177627+00:00",
+      "threads": 1
+    },
+    "controls_normal": {
+      "job": "g22-controls-normal",
+      "exit_code": 0,
+      "seconds": 0.1,
+      "peak_child_rss_kib": 15192,
+      "completed_at": "2026-10-01T23:46:49.529598+00:00",
+      "threads": 1
+    },
+    "controls_optimized": {
+      "job": "g22-controls-optimized",
+      "exit_code": 0,
+      "seconds": 0.178,
+      "peak_child_rss_kib": 18152,
+      "completed_at": "2026-10-01T23:47:04.914384+00:00",
+      "threads": 1
+    },
+    "integer_audit": {
+      "job": "g22-integer-audit",
+      "exit_code": 0,
+      "seconds": 3.526,
+      "peak_child_rss_kib": 12404,
+      "completed_at": "2026-10-01T23:27:20.858840+00:00",
+      "threads": 1
+    }
+  },
+  "closed_interval": [
+    "14/25",
+    "593/1000"
+  ],
+  "packing_orientation": [
+    -1,
+    1
+  ],
+  "proved_gram_lower_bound": "g>1/2",
+  "maximum_threads": 1,
+  "maximum_simultaneous_mathematical_jobs": 1,
+  "independent_researcher_review": false,
+  "unformalized_geometric_bridges": true,
+  "not_proved": [
+    "narrower z strip",
+    "t>577/1000",
+    "unrestricted optimizer coverage",
+    "G22 two-point extension exclusion",
+    "new global numerical Tammes-15 bound"
+  ],
+  "limits": {
+    "z_out": "depth22 unresolved; 56.807 seconds; no exclusion",
+    "t_low": "depth22 unresolved; 92.014 seconds; no exclusion",
+    "guard_or_resource_escalation": false
+  }
+}
