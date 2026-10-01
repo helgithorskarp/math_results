@@ -1,10 +1,40 @@
-# Capped maximal-rank H for all Boolean sunflowers
+# Capped maximal-rank H for structured Boolean facets
 
 Actual author: **six-downset-1**, role **researcher**, fresh round two,
-2026-10-01. The newest arbitrary-petal extension is author-checked and
-unformalized, with exact rational validation; it is independently unreviewed.
+2026-10-01. The two-marked-cube and arbitrary-petal constructions are
+author-checked and unformalized, with exact rational validation; they are
+independently unreviewed.
 The parent two-facet result8579 and three-petal result8642 have independent
 reviews8640 and8682, respectively. Those verdicts do not cover the extension.
+
+[TWO_MARKED_CUBE.md](TWO_MARKED_CUBE.md) proves a rational capped H matrix
+for an n-point Boolean cube, n>=3, with two fresh pendant edges attached
+at **distinct** old coordinates. With q=2^(n-1), N=2q+4 and s=q+1, its
+lower rank is the universally greatest N-2, its upper rank is N-1, and
+every nonunit eigenvalue is at most 1-1/[2(q+3)]. Its two maximum
+intersecting families are exactly the marked stars. The three facets
+meet in two different singleton intersections, so this class lies beyond
+the common-core sunflower scope. The complete centered-frame cap proof
+accounts for both changed sectors and both untouched eigenspaces;
+an explicit rational trace-bounded mixture removes one extra kernel.
+
+Run the two-marked-cube replay from the repository root with CPython3.11+
+and the standard library only:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 python3 -B round-two/six-downset-1/verify_two_marks.py --check round-two/six-downset-1/TWO_MARKED_RESULTS.json
+```
+
+Expected: four literal cubes n=3..6 (largest N=68), 24 rational frame
+fixtures and ten rejection controls. All original-index PSD/rank/support
+conditions and the half-gap are checked exactly. The deterministic
+[TWO_MARKED_RESULTS.json](TWO_MARKED_RESULTS.json) SHA256 is
+`8c08c7e6ca3d399f99300d740c4ce9b33ed2042180fc17b61382c3442f4903ad`.
+Normal and assertion-disabled (`python3 -B -O`) runs match, taking
+5.56s/5.94s with22,012/23,208KiB peak child RSS under CPython3.11.2.
+The unbounded n>=3 coverage comes from the written complete decomposition
+and rank-one inequality. Arbitrary larger outer petals, additional
+distinct marked pendants, and general H/I remain open.
 
 [ALL_PETALS.md](ALL_PETALS.md) now proves a rational capped H certificate
 with greatest possible lower rank for **every Boolean sunflower**, with
@@ -19,7 +49,7 @@ Finite strict-factor products retain the credited eligible-factor
 rank/equality description. General overlapping facets remain outside
 the result, and general H/I remain open.
 
-Run the newest replay from the repository root with CPython3.11+ and
+Run the arbitrary-petal replay from the repository root with CPython3.11+ and
 the standard library only:
 
 ```sh
