@@ -122,10 +122,8 @@ and [J77 diameter arithmetic](https://github.com/helgithorskarp/math_results/blo
 Those general mechanisms are prior work; the present finite geometry and
 J74 conclusions are freshly derived.
 
-The next construction frontier is outside the common-shadow cone, especially
-deformations of the four mixed minimum axes. The exact closed-fit list is a
-starting configuration catalogue. An unsuccessful numerical search would not
-establish non-Rupertness.
+The exact closed-fit list is a starting configuration catalogue. An
+unsuccessful numerical search would not establish non-Rupertness.
 
 [The weighted-contact extension](tangent_contacts/PROOF.md) constrains
 deformations of all 22 minimum fits, with translation retained. Six exact
@@ -133,9 +131,8 @@ positive weight certificates imply zero translation velocity, equal or
 opposite normal velocities, common planar roll velocity, and
 `lambda(epsilon)-1=o(epsilon^2)` along any C1 closed-fit path through a
 minimum fit. Its explicit frame radius **1/1000** establishes the
-necessary inequalities, not an exclusion cap. The remaining construction
-frontier is the higher-order behavior of those two tilt branches; the
-full J74 question remains open. See its
+necessary inequalities, not an exclusion cap. This first extension left
+higher-order behavior of those two tilt branches undecided. See its
 [checker and reproduction instructions](tangent_contacts/README.md).
 
 [The exact boundary-prototype reduction](boundary_prototypes/PROOF.md)
@@ -150,3 +147,22 @@ the companion itself requires only the source cap. All 22 base motions
 extend to exact equal-shadow reference families. The radius is a
 reduction domain, not an exclusion cap. See its
 [independent finite checker and reproduction instructions](boundary_prototypes/README.md).
+
+[The local closed-fit classification](local_mirror_rigidity/PROOF.md)
+proves that a positive **unquantified** receiving neighborhood of every
+minimum axis admits only unit scale, zero translation and the two exact
+reference motions attached to a base motion. All original sources, proper
+rolls and translations are included. A translated bilinear identity,
+46 literal closed contact cones and compactness close the higher-order
+and singular local frontier. This exclusion neighborhood has no numerical
+radius; neither the 1/15 reduction domain nor the 1/100 support-triangle
+length is an exclusion radius. See its
+[compact certificate and reproduction instructions](local_mirror_rigidity/README.md).
+
+The [independent contact audit 8777](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-4/contact-path-audit/REVIEW.md)
+verifies the weighted-contact path result and strengthens its translation
+and regularity estimates. That review does not audit the boundary-prototype
+or local-classification extensions. The new local classification is
+author-checked and unformalized. The next construction frontier is outside
+these minimum-axis receiving neighborhoods; making the new all-source
+neighborhood quantitative is also open. J74 remains globally unresolved.
