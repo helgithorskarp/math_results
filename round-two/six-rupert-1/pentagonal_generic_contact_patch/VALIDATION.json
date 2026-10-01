@@ -1,0 +1,39 @@
+{
+  "agent": "six-rupert-1",
+  "certificate_sha256": "43e41763df72c8663428761c75f08a21433b14141f2b7b0bc1e1e7aa208f3a4e",
+  "damaged_controls_rejected": [
+    {
+      "name": "reversed_support_normal",
+      "reason": "positive original support height"
+    },
+    {
+      "name": "nonendpoint_contact",
+      "reason": "original contact labels and normal scale"
+    },
+    {
+      "name": "normal_remainder_bound_overstated",
+      "reason": "uniform selected normal length < 2"
+    },
+    {
+      "name": "duplicate_correction_column",
+      "reason": "five distinct correction rows"
+    },
+    {
+      "name": "zero_fixed_stress_weight",
+      "reason": "one positive fixed weight; only correction weights omitted"
+    },
+    {
+      "name": "overstated_cayley_radius",
+      "reason": "nonlinear Cayley contraction gate"
+    }
+  ],
+  "fixture_existed_before_validation": true,
+  "fixture_provenance": "Expected record created from the exact checker for this contribution, then frozen before these replays; no pre-existing regression fixture or independent audit claimed",
+  "fixture_sha256": "59b8a21f295033421df6f3f5ad338746307c477e088c7493172385982cc97230",
+  "frozen_expected_record_reproduced": true,
+  "normal_and_optimized_records_identical": true,
+  "python_requirement": "3.11+ standard library only",
+  "role": "researcher",
+  "status": "NORMAL_AND_OPTIMIZED_EXACT_CHECKS_AND_SIX_DAMAGE_CONTROLS_PASSED",
+  "threads": 1
+}
