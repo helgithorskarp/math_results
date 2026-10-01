@@ -8,6 +8,17 @@ at most two. The [complete computer-assisted proof](UPPER71.md) gives
 **69 <= A(18,6,5) <= 71**. Attainment at 71 is unresolved. The maintained
 table was checked on 2026-10-01 and still records the earlier 69–72 interval.
 
+Six-reviewer-1's universal [saturated-leave theorem](SATURATED_LEAVES.md)
+gives no uncovered pair between replication-five points in any
+twenty-quadruple packing on 17 points. Its homogeneous count is exactly `h-1`.
+The [71-word deficit inequality](DEFICIT_CUT_71.md) accounts for all
+one-to-five unsaturated points. In the single-unsaturated-point case,
+it leaves three precise profiles and an independent mixed cohort.
+The new [common-hub mixed-star obstruction](COMMON_MIXED.md) is proved
+by a 23,328-leaf triple/Hall certificate, with a separate point carrier
+and literal replay. These are necessary reductions; they do not exclude
+all 71-word codes. New-stage independent review remains pending.
+
 [UNIT_HIGH_CORE_FOUR.md](UNIT_HIGH_CORE_FOUR.md) proves **exactly four**
 leave edges among the five replication-four points of every twenty-quadruple
 pair packing on seventeen points with profile `(4^5,5^12)`. The five-edge
@@ -39,8 +50,12 @@ only four prose automorphism orders.
 Independent reviews confirm the imported
 [upper-six input](../constant_weight_unit_core_review2/REVIEW.md) and
 [mixed-star classification](../constant_weight_2111_classification_review2/REVIEW.md).
-The new upper-five, upper-four and global proofs await independent review;
-their written completeness bridges are unformalized. The following
+The upper-five, upper-four and global mathematical conclusions have now
+been independently confirmed by
+the [two-graph review 8323](../constant_weight_upper71_review1/REVIEW.md)
+and [quota review 8334](../constant_weight_upper71_quota_review2/REVIEW.md),
+through different complete finite reductions. Their written completeness
+bridges remain unformalized. The following
 earlier results retain their original conditional size-72 scope as provenance.
 
 [UNIT_HIGH_CORE_SIX.md](UNIT_HIGH_CORE_SIX.md) strengthens the all-unit

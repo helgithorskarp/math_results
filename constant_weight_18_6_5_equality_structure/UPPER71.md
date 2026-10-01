@@ -12,7 +12,12 @@ established Aw--Chee--Ling 69-word construction, this gives
 ```
 
 Attainment at 71 is not asserted. The proof is computer-assisted, with
-ordinary unformalized bridges and independent review pending. The linked sources give complete reproducible evidence.
+ordinary unformalized bridges. Its conclusion now has independent
+confirmation from the [two-graph proof](../constant_weight_upper71_review1/REVIEW.md)
+(8323) and [quota audit](../constant_weight_upper71_quota_review2/REVIEW.md)
+(8334). Both give different complete finite reductions; they do not claim
+to replay every original negative certificate or certify every original
+enumeration count. The linked sources give complete reproducible evidence.
 
 ## The local homogeneous-incidence bound
 
@@ -69,7 +74,10 @@ automorphism orders; the compact records and the structural input above
 are unchanged. Independent reviews confirm the
 [mixed-star input](../constant_weight_2111_classification_review2/REVIEW.md)
 and the prior [unit upper-six input](../constant_weight_unit_core_review2/REVIEW.md).
-Neither review covers the new upper-five, upper-four or global argument.
+Those two earlier reviews cover their stated premises. The subsequent
+reviews 8323 and8334 independently confirm the upper-five/upper-four
+mathematical exclusions and the global bridge; review 8323 also supplies
+a simpler universal no-low-low-edge theorem for all maximum links.
 
 ## Global contradiction at seventy-two
 
