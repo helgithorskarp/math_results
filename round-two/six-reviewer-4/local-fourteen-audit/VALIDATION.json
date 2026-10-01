@@ -1,0 +1,572 @@
+{
+  "actual_author": "six-reviewer-4",
+  "compact_input_sha256": {
+    "audit.py": "4b06636c5c189a1bd7747c43fc3268417655626e6e3ef772cb4f0b2bc4a80f55",
+    "cover-cuts.json": "ab08982f02a83e8aa9ca27c99a658832a7134aed8ce0248efe1e53f60fef2924",
+    "cuts.json": "cd144cd0866acc5b37e0bba6c9626f6c59a6a8fb2612117ab9ca30f5ac0eafb2",
+    "expected.json": "6051b7994d9df39a20c17250f69ee8a7b52c439682054d5d7a6959f4629d8a4f"
+  },
+  "independent_runs": [
+    {
+      "arguments": [
+        "-B",
+        "audit.py",
+        "--author-source",
+        "PINNED_AUTHOR_DIRECTORY"
+      ],
+      "cumulative_peak_child_rss_KiB": 26408,
+      "elapsed_seconds": 24.980961,
+      "exit_code": 0,
+      "expected_rejection": null,
+      "purpose": "complete independent reconstruction and author entrywise comparison",
+      "result": {
+        "aligned_triangle_free_cores": 672,
+        "author_comparison": {
+          "all_core_profiles": 9,
+          "all_incidence_matrices": 130,
+          "incidences_sha256": "7e9c728b3c4e2fb0ad768e43f5a2aaffb543a4036b2e727f3ec14e652cfdb194",
+          "literal_incidence_entries": 14300
+        },
+        "compressed_star_obstructions": {
+          "certificates": 130,
+          "integer_margins": {
+            "1": 124,
+            "2": 6
+          },
+          "subset_sizes": {
+            "2": 128,
+            "3": 2
+          }
+        },
+        "incidence_matrices": 130,
+        "status": "PASS"
+      }
+    },
+    {
+      "arguments": [
+        "-B",
+        "-O",
+        "audit.py",
+        "--author-source",
+        "PINNED_AUTHOR_DIRECTORY"
+      ],
+      "cumulative_peak_child_rss_KiB": 29220,
+      "elapsed_seconds": 21.777903,
+      "exit_code": 0,
+      "expected_rejection": null,
+      "purpose": "complete independent reconstruction and author entrywise comparison",
+      "result": {
+        "aligned_triangle_free_cores": 672,
+        "author_comparison": {
+          "all_core_profiles": 9,
+          "all_incidence_matrices": 130,
+          "incidences_sha256": "7e9c728b3c4e2fb0ad768e43f5a2aaffb543a4036b2e727f3ec14e652cfdb194",
+          "literal_incidence_entries": 14300
+        },
+        "compressed_star_obstructions": {
+          "certificates": 130,
+          "integer_margins": {
+            "1": 124,
+            "2": 6
+          },
+          "subset_sizes": {
+            "2": 128,
+            "3": 2
+          }
+        },
+        "incidence_matrices": 130,
+        "status": "PASS"
+      }
+    },
+    {
+      "arguments": [
+        "-B",
+        "-O"
+      ],
+      "cumulative_peak_child_rss_KiB": 29220,
+      "elapsed_seconds": 10.086056,
+      "exit_code": 1,
+      "expected_rejection": "uncovered triangle-free normalized core",
+      "input_mutation": "remove the final record from cuts.json cuts list",
+      "purpose": "optimized damaged-input rejection",
+      "rejection": "ValueError: uncovered triangle-free normalized core"
+    },
+    {
+      "arguments": [
+        "-B",
+        "-O"
+      ],
+      "cumulative_peak_child_rss_KiB": 29220,
+      "elapsed_seconds": 11.843107,
+      "exit_code": 1,
+      "expected_rejection": "positive, unique integer weighted pair",
+      "input_mutation": "replace the first beta coefficient in the first cuts.json record with -1",
+      "purpose": "optimized damaged-input rejection",
+      "rejection": "ValueError: positive, unique integer weighted pair"
+    },
+    {
+      "arguments": [
+        "-B",
+        "-O"
+      ],
+      "cumulative_peak_child_rss_KiB": 29220,
+      "elapsed_seconds": 11.090334,
+      "exit_code": 1,
+      "expected_rejection": "strict rank-sum contradiction",
+      "input_mutation": "replace cover-cuts.json cuts[0] with [0,3] (demand2, maximum supply6)",
+      "purpose": "optimized damaged-input rejection",
+      "rejection": "ValueError: strict rank-sum contradiction"
+    }
+  ],
+  "native_author_replays": [
+    {
+      "cumulative_peak_child_rss_KiB": 22596,
+      "elapsed_seconds": 2.156551,
+      "exit_code": 0,
+      "optimized": true,
+      "program": "generate.py",
+      "summary": {
+        "extendible_matrices": 0,
+        "incidence_matrices": 130,
+        "incidences_sha256": "7e9c728b3c4e2fb0ad768e43f5a2aaffb543a4036b2e727f3ec14e652cfdb194",
+        "selected_star_tests": 29166
+      }
+    },
+    {
+      "cumulative_peak_child_rss_KiB": 22596,
+      "elapsed_seconds": 5.086417,
+      "exit_code": 0,
+      "optimized": true,
+      "program": "verify.py",
+      "summary": {
+        "baseline_page_maxima": [
+          3,
+          6
+        ],
+        "baseline_red_edges": 93,
+        "incidence_matrices": 130,
+        "incidences_sha256": "7e9c728b3c4e2fb0ad768e43f5a2aaffb543a4036b2e727f3ec14e652cfdb194",
+        "selected_star_tests": 29166,
+        "verified": true
+      }
+    },
+    {
+      "cumulative_peak_child_rss_KiB": 22596,
+      "elapsed_seconds": 4.930065,
+      "exit_code": 0,
+      "optimized": true,
+      "program": "controls.py",
+      "summary": {
+        "damaged_objects_rejected": 6
+      }
+    }
+  ],
+  "one_cpu_job_at_a_time": true,
+  "pinned_author_inputs": [
+    {
+      "bytes": 19,
+      "git_blob_sha1": "7a60b85e148f80966a550e5ab6a762a907c69ca6",
+      "name": ".gitignore",
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "bytes": 1936,
+      "git_blob_sha1": "7ba5c71e010b6e9c6856b427ea10401f55e945de",
+      "name": "MANIFEST.json",
+      "sha256": "7d3aa6c97df59628ca88541d0bcb4f51dc60143b615f63a050e36daf075cd8ba"
+    },
+    {
+      "bytes": 11399,
+      "git_blob_sha1": "439d898643a0b2ad0429d655e61e7bf3a30d322f",
+      "name": "PROOF.md",
+      "sha256": "48e7c1a83802f3e0da53384e357fd8293920f4b8d519f265461672c26f9e5704"
+    },
+    {
+      "bytes": 3581,
+      "git_blob_sha1": "b282eb4eb43ab42254784abbddc7ee29355e0512",
+      "name": "README.md",
+      "sha256": "2d6ef89d8420bd21a5503f6b9fae1f8dc7a4a61c9cf010f84447fe717a3449b6"
+    },
+    {
+      "bytes": 4155,
+      "git_blob_sha1": "97dc38346b0bcfb39793735d0f6d092ec4e4fe0a",
+      "name": "RESULTS.md",
+      "sha256": "3a33d2284aeb8211621ec14b3678a28aab380a627976a73d3d6012f87d3a02cf"
+    },
+    {
+      "bytes": 2044,
+      "git_blob_sha1": "32a9af1651f232728117fc2b43cf64d5cba81ec6",
+      "name": "controls.py",
+      "sha256": "bcd4c8c01db5a2a45dbfbb97aeeeca0831c82f4965338086d5269e2be8fe4fe5"
+    },
+    {
+      "bytes": 7506,
+      "git_blob_sha1": "8d7f5d8f5047694fd118ca7c521719375e224875",
+      "name": "cuts.json",
+      "sha256": "cd144cd0866acc5b37e0bba6c9626f6c59a6a8fb2612117ab9ca30f5ac0eafb2"
+    },
+    {
+      "bytes": 4902,
+      "git_blob_sha1": "75b6bbec9b2022767b611c3709dd68e1afc4d3c4",
+      "name": "discover.py",
+      "sha256": "8faf8c97ff125dd250173eefb10d3bb7c62d146c5af2e84d53c8532bfd191a0b"
+    },
+    {
+      "bytes": 3542,
+      "git_blob_sha1": "de630f070a99b315a16528b342232ecb069488ca",
+      "name": "expected.json",
+      "sha256": "6bd1402047091c395dadd74eda239c622d90d5e42b2a2c3fccba05aad3746a7b"
+    },
+    {
+      "bytes": 10520,
+      "git_blob_sha1": "c639aeb024dfc247045dc8a9581e350ffe17fe40",
+      "name": "generate.py",
+      "sha256": "da69977ad9ac6cba4a49be9af30c143292f2bb921652e7a0a30c33d9a976f2a2"
+    },
+    {
+      "bytes": 26723,
+      "git_blob_sha1": "b81f244bfe01e38c9715abaedeb2d1e9663b1a59",
+      "name": "incidences.json",
+      "sha256": "cf4c9381d29cbf6937ae663e879a00da514118d0377093c1bdecbf5500f79d35"
+    },
+    {
+      "bytes": 1056,
+      "git_blob_sha1": "a312f15975088de30cb4cd78ae66fa0df56112ed",
+      "name": "primary21.txt",
+      "sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55"
+    },
+    {
+      "bytes": 16600,
+      "git_blob_sha1": "88995632376fbe7b5c0e3950f905baefeb54471e",
+      "name": "verify.py",
+      "sha256": "759254621c2a59299ae32a5a795336de5155863350294dadf618b11b74a04591"
+    }
+  ],
+  "python_version": "3.11.2",
+  "result": {
+    "actual_author": "six-reviewer-4",
+    "compressed_star_obstructions": {
+      "certificates": 130,
+      "integer_margins": {
+        "1": 124,
+        "2": 6
+      },
+      "subset_sizes": {
+        "2": 128,
+        "3": 2
+      }
+    },
+    "core_census": {
+      "aligned_words_sha256": "a79ef5d8047a18c433f415b48bf75f4ceadda24bf9bc622ea7e99c6e71e782f7",
+      "class_sizes": [
+        [
+          30083408,
+          96
+        ],
+        [
+          51316320,
+          24
+        ],
+        [
+          51317328,
+          24
+        ],
+        [
+          54986080,
+          96
+        ],
+        [
+          54987088,
+          192
+        ],
+        [
+          55740996,
+          96
+        ],
+        [
+          126126276,
+          48
+        ],
+        [
+          126158020,
+          48
+        ],
+        [
+          126158146,
+          48
+        ]
+      ],
+      "classes": 9,
+      "degree_graphs": 6057,
+      "disjoint_pair_graphs": 1440,
+      "fixed_weight_graph_words": 4273290,
+      "forbidden_pair_free_degree_graphs": 3871,
+      "literal_isomorphism_maps_sha256": "a100aeaf2962e9a29473be0c8fe3a86b40048a558f2fdfd598f5f7362c2ac1de",
+      "nonnegative_joint_capacity_graphs": 3660,
+      "triangle_free_graphs": 672
+    },
+    "core_profiles": [
+      {
+        "F_mask": 30083408,
+        "cut_rhs": -1,
+        "row_sizes": {
+          "4": 79,
+          "5": 76,
+          "6": 39,
+          "7": 6
+        },
+        "rows_sha256": "833d28771d4b1051559410a6a6b1d7f8cacf13486d245fdcb3c4b431773868b4",
+        "zero_row_sizes": {}
+      },
+      {
+        "F_mask": 51316320,
+        "cut_rhs": -1,
+        "row_sizes": {
+          "4": 79,
+          "5": 76,
+          "6": 39,
+          "7": 6
+        },
+        "rows_sha256": "833d28771d4b1051559410a6a6b1d7f8cacf13486d245fdcb3c4b431773868b4",
+        "zero_row_sizes": {}
+      },
+      {
+        "F_mask": 51317328,
+        "cut_rhs": 0,
+        "row_sizes": {
+          "4": 79,
+          "5": 76,
+          "6": 39,
+          "7": 6
+        },
+        "rows_sha256": "833d28771d4b1051559410a6a6b1d7f8cacf13486d245fdcb3c4b431773868b4",
+        "zero_row_sizes": {
+          "4": 19,
+          "5": 36,
+          "6": 31,
+          "7": 6
+        }
+      },
+      {
+        "F_mask": 54986080,
+        "cut_rhs": -1,
+        "row_sizes": {
+          "4": 79,
+          "5": 76,
+          "6": 39,
+          "7": 6
+        },
+        "rows_sha256": "833d28771d4b1051559410a6a6b1d7f8cacf13486d245fdcb3c4b431773868b4",
+        "zero_row_sizes": {}
+      },
+      {
+        "F_mask": 54987088,
+        "cut_rhs": -1,
+        "row_sizes": {
+          "4": 79,
+          "5": 76,
+          "6": 39,
+          "7": 6
+        },
+        "rows_sha256": "833d28771d4b1051559410a6a6b1d7f8cacf13486d245fdcb3c4b431773868b4",
+        "zero_row_sizes": {}
+      },
+      {
+        "F_mask": 55740996,
+        "cut_rhs": -1,
+        "row_sizes": {
+          "4": 79,
+          "5": 76,
+          "6": 39,
+          "7": 6
+        },
+        "rows_sha256": "833d28771d4b1051559410a6a6b1d7f8cacf13486d245fdcb3c4b431773868b4",
+        "zero_row_sizes": {}
+      },
+      {
+        "F_mask": 126126276,
+        "cut_rhs": -5,
+        "row_sizes": {
+          "4": 79,
+          "5": 76,
+          "6": 39,
+          "7": 6
+        },
+        "rows_sha256": "833d28771d4b1051559410a6a6b1d7f8cacf13486d245fdcb3c4b431773868b4",
+        "zero_row_sizes": {}
+      },
+      {
+        "F_mask": 126158020,
+        "cut_rhs": -4,
+        "row_sizes": {
+          "4": 79,
+          "5": 76,
+          "6": 39,
+          "7": 6
+        },
+        "rows_sha256": "833d28771d4b1051559410a6a6b1d7f8cacf13486d245fdcb3c4b431773868b4",
+        "zero_row_sizes": {}
+      },
+      {
+        "F_mask": 126158146,
+        "cut_rhs": -1,
+        "row_sizes": {
+          "4": 79,
+          "5": 76,
+          "6": 39,
+          "7": 6
+        },
+        "rows_sha256": "833d28771d4b1051559410a6a6b1d7f8cacf13486d245fdcb3c4b431773868b4",
+        "zero_row_sizes": {}
+      }
+    ],
+    "incidence_matrices": 130,
+    "incidence_patterns": [
+      [
+        [
+          5,
+          5,
+          5,
+          5
+        ],
+        81
+      ],
+      [
+        [
+          6,
+          5,
+          5
+        ],
+        42
+      ],
+      [
+        [
+          6,
+          6
+        ],
+        3
+      ],
+      [
+        [
+          7,
+          5
+        ],
+        4
+      ]
+    ],
+    "incidences_sha256": "7e9c728b3c4e2fb0ad768e43f5a2aaffb543a4036b2e727f3ec14e652cfdb194",
+    "literal_controls": {
+      "actual_and_fake_stars": 5544,
+      "circulant_roots": 252,
+      "literal_spine_identities": 55440,
+      "rank_sum_control_max_length": 7
+    },
+    "multicover": {
+      "all_surplus_four_patterns": [
+        [
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          6,
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          8
+        ]
+      ],
+      "capped_high_choices": [
+        [
+          [
+            5,
+            5,
+            5,
+            5
+          ],
+          1935
+        ],
+        [
+          [
+            6,
+            5,
+            5
+          ],
+          814
+        ],
+        [
+          [
+            6,
+            6
+          ],
+          27
+        ],
+        [
+          [
+            7,
+            5
+          ],
+          32
+        ]
+      ],
+      "equations": 27,
+      "four_row_types": 19,
+      "raw_high_choices": [
+        [
+          [
+            5,
+            5,
+            5,
+            5
+          ],
+          82251
+        ],
+        [
+          [
+            6,
+            5,
+            5
+          ],
+          20646
+        ],
+        [
+          [
+            6,
+            6
+          ],
+          496
+        ],
+        [
+          [
+            7,
+            5
+          ],
+          216
+        ]
+      ]
+    },
+    "residual_F_mask": 51317328,
+    "role": "independent reviewer",
+    "status": "PASS"
+  },
+  "role": "independent mathematical reviewer",
+  "schema": 1,
+  "target": {
+    "actual_author": "six-books-3",
+    "height": 8638,
+    "reference": "bafkreidkxsdjhx2pheg3xcq5ujblspc2l4gi5fftsj623vb7pmb2g47we4",
+    "source_commit": "0efb5185b1880be9a29f76ae05f206a8baf60368"
+  },
+  "threads": 1,
+  "trust_boundary": "Written graph/page/normalization/completeness arguments plus exact CPython integers; unformalized. Positive-codegree, local-floor and max-degree corollary premises rely on credited existing independent reviews; their older enumerations were not rerun. Native author solver discovery was not replayed or required."
+}
