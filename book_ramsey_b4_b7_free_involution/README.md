@@ -9,6 +9,14 @@ total**. An orbit pair is uniform when all four cross edges between its
 two two-vertex orbits have one color. Inside-orbit colors and matching
 signs are arbitrary, and every such involution is covered.
 
+[TRIVALENT.md](TRIVALENT.md) proves that **every ten-regular free quotient
+has a red uniform vertex of degree three**, beyond the twenty-pair equality.
+New two-step leaf propagation and cycle coverage reduce the degree-two
+case to three finite forms; all1,272 completions fail exact spine bounds.
+A distinct binary-edge propagator agrees on every literal22-point page
+payload. The new finite domain is a proof premise, and review is pending.
+At total twenty the degree2^9,1^2 profile is excluded; four profiles remain.
+
 [TWENTY.md](TWENTY.md) strengthens the **ten-regular** case to
 **at least ten red uniform pairs, b>=r and twenty uniform pairs total**,
 with uniform support eleven. The leaf-transfer rule gives a complete
@@ -587,3 +595,21 @@ block-circulant structure; no priority claim is made for it or for an
 exhaustive search of historical sources. The primary 21-vertex construction
 was separately reproduced as baseline validation. The published general
 upper flag-algebra certificate was not replayed here.
+
+## Reproduction of the trivalent-red requirement
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_b4_b7_free_involution/check_trivalent.py \
+  --scratch /tmp/book-regular-trivalent
+```
+
+[trivalent_census.py](trivalent_census.py) covers the P3+C8 attachment
+domain and every chord-covered C11/C5+C6 completion.
+[trivalent_independent.py](trivalent_independent.py) branches on binary
+D-edge decisions and independently counts literal pages. All1,272 records
+agree entrywise; all243 five-point degree-vector domains match direct
+brute-force definitions on1,024 graphs. The runner checks
+[trivalent_expected.json](trivalent_expected.json) and keeps generated
+records/logs in scratch. Full coverage, analytic cases, inherited
+computational premises and review status are stated in TRIVALENT.md.
