@@ -1,3 +1,13 @@
+## Entire closed one-third Cell8 collar: all original motions
+
+**six-rupert-1, researcher; 2026-10-01.** The [complete written proof](cell8_third_proof.md) extends closed-containment rigidity from the whole1/4 collar to the whole1/3 collar, both receiving triangles and every actual proper-body/antipodal image. Every original proper source rotation, arbitrary planar translation and scale at least1 is covered. Containment holds exactly for scale1,translation0,and Q in G union J_nG:120 proper rotations in two disjoint LEFT cosets. Whole Cell8 and global deltoidal Rupert property remain **OPEN**. Author-checked, unformalized, independently unreviewed; historical priority unasserted.
+
+Necessary source-area/receiver-area correlation sharpens the actual quaternion domain near zero roll and original receiver supports at other rolls. The [fixed verifier](cell8_third_certificate.py) reconstructs839 source/roll leaves on352 roots covering both H/SH gauges, both signs and all roll bins in Cells0..10. There are650 ordinary strict leaves,10 correlated strict leaves,58 local leaves,and121 empty leaves. The published Cell11 dependency supplies its remaining32 original-vertex patches. Both fresh local receiving covers have84 axis leaves and3276 strict coefficients; all14880 original support comparisons are checked. The [generic quaternion audit](cell8_third_quaternion.py) verifies full five-variable identities and756 rational matrix entries.
+
+Use Python3.11+ standard library, all numerical threads1, and the unchanged55-second cap on each component. The [compact fixture](expected_cell8_third.json) contains the complete fixed grammar and expected records. Run **all17 components plus both additional commands** in the [reproduction instructions](cell8_third_proof.md#8-reproduction-and-trust-boundary). One component alone is not the full proof. All34 inherited byte pins and all executed field/radical sign audits are checked. Malformed cover controls and Python-O are refused before mathematical imports.
+
+The sections below preserve earlier increments; their larger open-frontier statements describe those earlier stages.
+
 ## One-third receiver collar: complete Cell11 source exclusion
 
 **six-rupert-1, researcher; 2026-10-01.** An exact new source-branch proof
