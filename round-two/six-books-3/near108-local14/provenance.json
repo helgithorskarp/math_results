@@ -1,0 +1,112 @@
+{
+  "schema": 1,
+  "actual_author": "six-books-3",
+  "role": "researcher",
+  "date": "2026-10-01",
+  "proof_status": "Exact computer-assisted author proof; ordinary bridges unformalized; new independent review pending",
+  "finite_hypotheses": "Valid simple22-point ordinary(B4,B7) red graph,108 red edges, maximum degree10, full-degree root; no lower degree bound",
+  "claim": "No local14 at108; every full-degree root in a valid nonregular maximum-ten host is Petersen using the reproduced ordinary classification and credited109 theorem8761",
+  "degree_deficits": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "source_dependencies": [
+    {
+      "name": "109 local14 exclusion8761",
+      "commit": "6493b6ed6a5be610702b607bdcbe1bef610f1a97",
+      "artifact_ref": "bafkreibau6vmchmwtwosjc3rv34gbe4ptwhwonh7owdteea2fdsysal3fq",
+      "url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-3/near109-local14/PROOF.md",
+      "role": "Imported109 branch of general root refinement; raw coefficient/enumeration mechanisms credited and rechecked for108"
+    },
+    {
+      "name": "Full-root ordinary mechanisms8726",
+      "commit": "5cd8391a80d970034dbd8868a1607941e331e569",
+      "artifact_ref": "bafkreieztrfin22gkvvmkydq45n2xgtx6hkzrkvx6fd2g5ckkgjcc6zjwm",
+      "url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-1/irregular_full_roots/PROOF.md",
+      "role": "Local classification mechanism reproduced without its lower degree premise; outside eight-row bound not imported"
+    },
+    {
+      "name": "Upper-degree theorem8012",
+      "commit": "ce3177a731086284ee89f18a8a3948b672b3c64e",
+      "artifact_ref": "bafkreic57itmbz4klkff2gooq5hyby3ssu4cniwz4mhs76uwsqlblesqdi",
+      "url": "https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_b4_b7_degree11_gram_exclusion/PROOF.md",
+      "role": "Only maximum degree ten imported for arbitrary-valid108 corollary; minimum-degree classification unused"
+    }
+  ],
+  "prior_cut": {
+    "commit": "0efb5185b1880be9a29f76ae05f206a8baf60368",
+    "artifact_ref": "bafkreidkxsdjhx2pheg3xcq5ujblspc2l4gi5fftsj623vb7pmb2g47we4",
+    "role": "Integer coefficient data, not regular-host theorem"
+  },
+  "baseline21": {
+    "source": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "http_status": 200,
+    "byte_for_byte_matches": true,
+    "sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55"
+  },
+  "primary_tables": [
+    {
+      "url": "https://arxiv.org/pdf/2407.07285",
+      "location": "Table1, PDF page3",
+      "status": "22<=R(B4,B7)<=23; reopened2026-10-01"
+    },
+    {
+      "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+      "location": "TableIXa, PDF page36, DS1.18(2026)",
+      "status": "22<=R(B4,B7)<=23; reopened2026-10-01"
+    }
+  ],
+  "contemporaneous_context": {
+    "commit": "8de2a7507e9ffe242e32a64d99b3f98dd4616954",
+    "artifact_ref": "bafkreihd6hmzo2vmkqpsl76bl3agbuf6u4i27fylnt2szpbp4bxiwlfyem",
+    "url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-1/near109_cubic_exclusion/PROOF.md",
+    "role": "Full source read; excludes109 globally with credited premises; context only, not imported here"
+  },
+  "runtime": "CPython3.11.2 standard library; one intensive job at a time; OMP_NUM_THREADS=OPENBLAS_NUM_THREADS=MKL_NUM_THREADS=1",
+  "validation": {
+    "checks": [
+      {
+        "program": "generate.py",
+        "optimized": true,
+        "exit_code": 0,
+        "seconds": 1.6974973480100743
+      },
+      {
+        "program": "solve.py",
+        "optimized": true,
+        "exit_code": 0,
+        "seconds": 0.8686517950263806
+      },
+      {
+        "program": "verify_multicover.py",
+        "optimized": true,
+        "exit_code": 0,
+        "seconds": 1.8963748899986967
+      },
+      {
+        "program": "verify_literal.py",
+        "optimized": true,
+        "exit_code": 0,
+        "seconds": 4.920533735014033
+      },
+      {
+        "program": "controls.py",
+        "optimized": true,
+        "exit_code": 0,
+        "seconds": 13.121905080974102
+      }
+    ],
+    "normal_controls_exit": 0,
+    "maximum_child_rss_kib": 22584
+  },
+  "omitted_generated_data": "All135 incidence matrices,41 tagged cases and star/search records are regenerated in ignored output directories; no generated corpus is published",
+  "limitations": [
+    "Root occurrence not claimed for every108-degree pattern",
+    "No unrestricted108 host exclusion or Ramsey endpoint",
+    "No exhaustive historical-priority claim",
+    "Prior regular reviews do not audit this new proof"
+  ]
+}
