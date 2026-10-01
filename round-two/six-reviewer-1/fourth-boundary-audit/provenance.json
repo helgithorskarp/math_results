@@ -1,0 +1,185 @@
+{
+  "agent": "six-reviewer-1",
+  "author_normal_run": {
+    "elapsed_seconds": 72.22174272395205,
+    "exit_code": 0,
+    "guard_seconds": 150,
+    "rss_kib": 25412,
+    "stderr": "",
+    "stdout": "PASS: 236 exact checks; 9 mutations rejected; all nine root branches.\nComplete record SHA256: 7fce196b3ce4122280aa9c30b9921d40adcce328da72ac9f950a82a3a30a3d90\n"
+  },
+  "author_optimized_run": {
+    "command": [
+      "/scratch/venvs/discovery-team/bin/python",
+      "-B",
+      "-O",
+      "scratch/pass11-author/verify.py"
+    ],
+    "cumulative_child_rss_kib": 28460,
+    "exit": 0,
+    "guard_seconds": 150,
+    "label": "author-optimized",
+    "seconds": 44.801890125032514,
+    "stderr": "",
+    "stdout": "PASS: 236 exact checks; 9 mutations rejected; all nine root branches.\nComplete record SHA256: 7fce196b3ce4122280aa9c30b9921d40adcce328da72ac9f950a82a3a30a3d90\n"
+  },
+  "author_source_files": {
+    ".gitignore": {
+      "bytes": 31,
+      "sha256": "3c939f6e03510a3a4f0540aebefe5d5ea8292c99bf5e4f9f9e4c2a074543d65d"
+    },
+    "LITERATURE.md": {
+      "bytes": 6608,
+      "sha256": "5380714bec4bd6a198e31239862d57e7e97aab3001b94a8450e48fffc3ac83ef"
+    },
+    "PROOF.md": {
+      "bytes": 24519,
+      "sha256": "f9fe1a3cdd6c73b240a8e9e0b9f78934dfff6a8706c6c3b4c476e2ac34cb5bd7"
+    },
+    "README.md": {
+      "bytes": 5855,
+      "sha256": "ed50ef4f81e4e9c409a0f7f169057315fdaaf2feb31c8350b9f9166c5bc2ff17"
+    },
+    "arithmetic.py": {
+      "bytes": 10436,
+      "sha256": "970a0a54caf05fd579f69e1fdabd1877947fb2d458cd6c05e9401936e99ba8b9"
+    },
+    "attaining_family.py": {
+      "bytes": 5688,
+      "sha256": "1a48988ebb979b28ad2dccf5a3496a6f3fbee71057578001b2f45f204b77659b"
+    },
+    "candidate.py": {
+      "bytes": 12215,
+      "sha256": "78785af581e401427a13b2eff097e0c26a22886a0090b7a4368a5c39ab454045"
+    },
+    "expected.json": {
+      "bytes": 95231,
+      "sha256": "7fce196b3ce4122280aa9c30b9921d40adcce328da72ac9f950a82a3a30a3d90"
+    },
+    "generic_eta4.py": {
+      "bytes": 4562,
+      "sha256": "3cb5c583f9aad2bb1b5ffe99373620560feaa65cb64751fcfb78d94e6bd6611a"
+    },
+    "higher_trace.py": {
+      "bytes": 6504,
+      "sha256": "b878ec28a3ad0b9f99db36202c3e19ec9063119c80f23e2058ef406365268cd8"
+    },
+    "stability_family.py": {
+      "bytes": 5283,
+      "sha256": "3d501afae193c73167da80df15ff74d1280245c05f0dcb5b7eb5f247eefff0e7"
+    },
+    "verify.py": {
+      "bytes": 6981,
+      "sha256": "2bd37b71b6ac9942a0d8ab8849eff6dabf6f5a897d10433f6909003fed47c7c6"
+    }
+  },
+  "dependencies": [
+    8841,
+    8751,
+    7190,
+    8619,
+    8668
+  ],
+  "entrywise_cross_comparison": {
+    "all_entrywise_match": true,
+    "full_cost_terms_matching": 49,
+    "m_repair_terms_matching": 7,
+    "orders_per_radial": 5,
+    "root_radial_records_matching": 18,
+    "shared_constants_matching": 12,
+    "theta_repair_terms_matching": 28
+  },
+  "fixture_damage_runs": [
+    {
+      "exit": 1,
+      "label": "wrong-C4",
+      "reason": "complete fresh record versus fixture",
+      "rejected": true,
+      "seconds": 11.141628198034596
+    },
+    {
+      "exit": 1,
+      "label": "incomplete-record",
+      "reason": "complete fresh record versus fixture",
+      "rejected": true,
+      "seconds": 11.756383202038705
+    }
+  ],
+  "independent_checks": 255,
+  "independent_complete_record_sha256": "ae595d268dbc21f867f0af8ed3b1348a0ee235586f40a5bc7f1684f5e2cc713b",
+  "independent_runs": [
+    {
+      "command": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "round-two/six-reviewer-1/fourth-boundary-audit/check.py"
+      ],
+      "cumulative_child_rss_kib": 18968,
+      "exit": 0,
+      "guard_seconds": 180,
+      "label": "independent",
+      "seconds": 11.314294339972548,
+      "stderr": "",
+      "stdout": "PASS: 255 exact checks; 7 damages rejected; 27 root branches; 29 higher trace directions.\nComplete record SHA256: ae595d268dbc21f867f0af8ed3b1348a0ee235586f40a5bc7f1684f5e2cc713b\n"
+    },
+    {
+      "command": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-1/fourth-boundary-audit/check.py"
+      ],
+      "cumulative_child_rss_kib": 23100,
+      "exit": 0,
+      "guard_seconds": 180,
+      "label": "independent-optimized",
+      "seconds": 10.493008507997729,
+      "stderr": "",
+      "stdout": "PASS: 255 exact checks; 7 damages rejected; 27 root branches; 29 higher trace directions.\nComplete record SHA256: ae595d268dbc21f867f0af8ed3b1348a0ee235586f40a5bc7f1684f5e2cc713b\n"
+    }
+  ],
+  "literature": {
+    "candidate_specific_queries": [
+      "\"Sendov\" \"233.920855\"",
+      "\"Sendov\" \"fourth\" \"boundary coefficient\""
+    ],
+    "primary": [
+      "https://arxiv.org/html/2609.19126",
+      "https://arxiv.org/pdf/math/0505424v3"
+    ],
+    "result": "No matching primary fourth coefficient located in bounded search; no proof of priority. Miller repeated-real-critical/quadratic template is prior structure for a different nearest-critical objective."
+  },
+  "major_refresh_index": 8876,
+  "mathematical_damage_controls": 7,
+  "optimized_fixture_damage_controls": 2,
+  "proved_refinements": [
+    "sharp endpoint one-half normalized next-profile coercivity on every fixed fourth-budget class",
+    "explicit all-disk compensated real split giving sharpness even in fourth-budget U=0"
+  ],
+  "resources": {
+    "author_parent_guard_seconds": 150,
+    "cumulative_recorded_child_rss_kib_upper": 28460,
+    "independent_parent_guard_seconds": 180,
+    "limits_unchanged": true,
+    "max_cpu_intensive_jobs": 1,
+    "native_threads": 1
+  },
+  "reviewer_method": "one cyclotomic field; formal Lagrange root inversion; ordinary degree/symmetry completeness followed by complete invariant coefficient reconstruction; full29 higher-direction basis; three full factor-defined families",
+  "role": "independent mathematical reviewer",
+  "selection_index": 8866,
+  "software": {
+    "CAS": null,
+    "dependencies": "standard library only",
+    "formal_kernel": false,
+    "python": "3.12.14",
+    "solver": null
+  },
+  "target": {
+    "height": 8841,
+    "ref": "bafkreihq45pueu7snuxnwky6vq5hk4qy6lrpfayohsqwuxxntlfizqqgdq",
+    "source_commit": "9b8581c53cd6d06feaa7e0c0001791293264ae4e",
+    "source_directory": "round-two/six-sendov-3/fourth-boundary"
+  },
+  "trust_boundary": "Ordinary analytic proof review with inherited concentration/cubic premises. Exact rational finite arithmetic is independently reproduced; no formalization or effective collar. Shared signer does not establish independent authorship.",
+  "utc": "2026-10-01T19:17:28.541674+00:00"
+}
