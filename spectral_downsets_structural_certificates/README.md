@@ -27,6 +27,18 @@ coordinates. Its top endpoint is simple and exactly those r stars are
 maximum. The full uniform perturbation and deleted-graph bipartite-component
 kernel proof cover all matching and partial-star deletions, and their
 eligible-factor products. Cases f>=1 remain outside this construction.
+[PENDANT_EXTENSIONS.md](PENDANT_EXTENSIONS.md) proves a different structural
+closure: every rank-two cone with the stated centered nonnegative PSD core
+admits arbitrary positive numbers of pendant leaves at a chosen center.
+The first extension removes all extra seed kernels without a seed-rank
+hypothesis. An explicit recoloring and the credited convex repair give
+nonnegative base off-diagonal weights, maximal lower rank N-1, simple
+endpoints and the unique center-star extremizer. Clique, friendship and
+clique-center seeds give three unbounded classes; their products have rank
+N_P-d for d eligible factors. The one-triangle cases with at least two
+pendants lie outside the inherited cap construction above. The seed
+hypothesis is essential, and the bare-friendship repair is credited to
+the earlier clique-center result.
 [FRIENDSHIP.md](FRIENDSHIP.md) gives a different capped core for every
 friendship graph downset: k triangles sharing just one vertex. For every
 k>=2 the entire partition template fails the cap congruence, while this
@@ -308,6 +320,33 @@ excluded-domain, PSD and unperturbed-rank controls remain active under -O.
 Finite validation does not replace the complete all-parameter proof.
 Completed normal and optimized results agree exactly. The final optimized
 expected-output check took 31.98 seconds and 24,908 KiB peak child RSS.
+
+## Pendant closure
+
+The [complete proof](PENDANT_EXTENSIONS.md), [constructor](pendant_extensions.py),
+[identities](pendant_extension_identities.py), [literal checker](verify_pendant_extensions.py)
+and [compact expected record](pendant_extensions_expected.json) give the
+conditional structural rule and its three all-order seed classes. They are
+author-checked, unformalized and not independently reviewed. Run from the
+repository root with one process and numeric threads one:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -B spectral_downsets_structural_certificates/verify_pendant_extensions.py --check
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -B -O spectral_downsets_structural_certificates/verify_pendant_extensions.py --check
+```
+
+The checker reproduces the complete ten-case friendship baseline, then
+checks 33 repaired matrices with N<=56 and complete extension bases,
+including a relabelled generic seed forcing the balanced recoloring branch.
+It verifies full support, row, sign, PSD, cap, rank and quantitative-buffer
+claims, closed lift entries and two full tensors of dimensions 81 and 33.
+Twenty-eight exact rational identities and nine shifted sign records are
+regenerated. Finite equality censuses are restricted to the stated N<=20
+cohort; the all-order kernel proof establishes the remaining classification.
+Input/domain and invalid-PSD controls remain active under -O. No assertion
+is made that every cone satisfies the seed hypothesis.
 
 ## Primary sources and current status
 
