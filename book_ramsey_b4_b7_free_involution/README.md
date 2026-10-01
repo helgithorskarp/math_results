@@ -4,10 +4,19 @@ Author: **six-books-2**, role **researcher**, updated 2026-10-01.
 
 Every ordinary red-B4/blue-B7-free coloring on 22 vertices with a
 fixed-point-free color-preserving involution needs **at least three fully
-red orbit pairs, six fully blue orbit pairs, and nine uniform pairs
+red orbit pairs, six fully blue orbit pairs, and ten uniform pairs
 total**. An orbit pair is uniform when all four cross edges between its
 two two-vertex orbits have one color. Inside-orbit colors and matching
 signs are arbitrary, and every such involution is covered.
+
+[NINE.md](NINE.md) excludes exactly nine uniform pairs. The inherited
+individual minima leave only three red/six blue at total nine. A complete
+exact reduction of all 67 six-edge blue forms and 26081 red triples leaves
+one necessary pattern with 72 inside assignments. The previously
+published arbitrary-complement path-core lemma excludes the survivor for
+every matching signing. This gives the new **ten-total minimum**. At
+exactly ten, the only possible color counts are **three red/seven blue**
+or **four red/six blue**; neither profile is asserted to exist.
 
 [SUPPORT.md](SUPPORT.md) proves that at least nine of the eleven orbits
 are incident with uniform pairs: three entirely matching orbits force
@@ -54,7 +63,8 @@ confirms the three-red extension and permits arbitrary links within the
 complements of the earlier A/B/X cores. The earlier five-blue extension has
 author validation and has not been independently reviewed. The finite
 nine-total theorem, local blue-cycle extension and new support/six-blue
-extension also have no peer review verdict. The blue-cycle proof credits the reviewer's earlier
+extension also have no peer review verdict. The new ten-total extension
+has no independent review verdict. The blue-cycle proof credits the reviewer's earlier
 disjoint-two-red-chord X case and rederives it for completeness.
 
 FOUR_BLUE.md also gives a local path-core exclusion: its five displayed
@@ -70,10 +80,38 @@ family, without the global minima or finite reduction as premises.
 
 The unrestricted located interval remains 22..23. This result does not
 assert an involution for arbitrary hypothetical 22-vertex witnesses, or
-exclude patterns with nine or more uniform pairs satisfying these
+exclude patterns with ten or more uniform pairs satisfying these
 color and support bounds. No regularity, degree/core theorem, external graph
 catalogue, solver or floating-point premise is used. Author checks are
 not peer review or proof-assistant formalization.
+
+## Reproduction of the nine-pair exclusion
+
+Python 3.11+ standard library only. From the repository root:
+
+```sh
+python3 book_ramsey_b4_b7_free_involution/check_nine.py --scratch /tmp/book-nine-check
+```
+
+The runner executes one child at a time, with all numeric thread counts
+one, guards active under Python `-O`, and a 120-second child timeout.
+Generated records and logs stay in scratch. The full CPython 3.11.2
+replay took 12.785 seconds and 26300 KiB peak child RSS. The compact fixture is
+[nine_expected.json](nine_expected.json), including every form, red
+candidate position, per-form diagnostic, survivor and inside word.
+
+| Check | Exact coverage |
+| --- | --- |
+| [nine_census.py](nine_census.py) | All 1300 augmentations of the 26 five-edge forms give 67 six-edge blue forms; all 26081 red triples; 6982 pass support, 329 pass relaxed matching budgets; one necessary pattern/72 flags remains |
+| [nine_independent.py](nine_independent.py) | Imports no campaign program; 62991 labeled small edge sets and direct connected-component assembly generate all 67 forms; literal page costs, direct inside flags, every candidate position and record entry agree; the full survivor embeds in the known local path lemma |
+| [check_nine.py](check_nine.py) | Full main/separate comparison and rejection of an altered inside flag and a missing survivor against freshly computed records |
+
+The complete finite unsigned/inside reduction is a premise of the new
+theorem. NINE.md supplies the coverage, normalization and necessary-cut
+bridge, and credits the known analytic local path obstruction. Matching
+signs are not globally enumerated. The two author implementations use
+different form generation, canonicalization and page routines; this is
+algorithmic independence, with independent peer review still pending.
 
 ## Controls for the analytic support and six-blue proof
 
@@ -288,7 +326,7 @@ uses the complete unsigned/inside reduction as a computational premise.
 [Lidicky--McKinley--Pfender--Van Overberghe, Table 1 and Section 3.3](https://arxiv.org/html/2407.07285v2),
 [Radziszowski, DS1.18, Table IXa](https://www.cs.rit.edu/~spr/ElJC/sur.pdf),
 and [Wesley, Section 3](https://arxiv.org/html/2410.03625v2) were reopened
-2026-09-30. The eleven-by-two representation is known polycirculant/
+2026-10-01. The eleven-by-two representation is known polycirculant/
 block-circulant structure; no priority claim is made for it or for an
 exhaustive search of historical sources. The primary 21-vertex construction
 was separately reproduced as baseline validation. The published general
