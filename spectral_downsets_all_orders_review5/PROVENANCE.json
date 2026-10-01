@@ -1,0 +1,162 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "reviewed_target": {
+    "height": 8122,
+    "ref": "bafkreibdy5eh6fv2elp5fzyksz7mvnsrqw5mdosc5ray5clnzacor7zb4m",
+    "source_commit": "075fe5eac0b9e09c9fe3f554da735c8204c7b307",
+    "source_dir": "spectral_downsets_steiner_triples"
+  },
+  "pinned_author_files": {
+    "verify_uniform_lambda_small.py": {
+      "bytes": 9345,
+      "sha256": "c6069a277d134076a0a14b8c802414e331f8233b20ad4b8ce797f0bd906ce6ee"
+    },
+    "verify_three9.py": {
+      "bytes": 12581,
+      "sha256": "90cea0f0c50e77be1ea1551a0d31fea2e84fca41dc7316804c74d05b7bdcc77b"
+    },
+    "verify_two9.py": {
+      "bytes": 10173,
+      "sha256": "b000d8078b376b4093c223dd1179b878fb490c43b22838353c448e4f26424a0a"
+    },
+    "verify.py": {
+      "bytes": 7169,
+      "sha256": "3568dd37ca78fb186be62045233535aa62c87aede29eb8df5c9cae05d332acf8"
+    },
+    "certificates.py": {
+      "bytes": 6388,
+      "sha256": "470a3045148b746add392535f7e0ce562c2c394d12ec132638b55d41a2e63f0b"
+    },
+    "maxrank_certificates.py": {
+      "bytes": 2983,
+      "sha256": "ea532fe31a7a3123efb53335197d72694dc782d143126ef391894b9095157923"
+    },
+    "uniform_lambda_small.py": {
+      "bytes": 6900,
+      "sha256": "c7c8fcd48f972e51bf6cc7567f7497f3fb8d1542e7259b7a2db36600eec1b868"
+    },
+    "uniform_lambda.py": {
+      "bytes": 5660,
+      "sha256": "29d0990318191a37c6318fe367cb84f923afd7bd16c733f607db4596db9e1496"
+    },
+    "uniform_twofold.py": {
+      "bytes": 7883,
+      "sha256": "7640fb189c6924c0baf5dbfbd5200e32f929847e4819c898d0b12aa2719076bc"
+    },
+    "field_family.py": {
+      "bytes": 1861,
+      "sha256": "c2775ca4b3faab5b76b0d10be2c5c10e759b43df53b3e815bc440da120c35005"
+    },
+    "uniform_threefold.py": {
+      "bytes": 6292,
+      "sha256": "50ec1d9005ad4edc5701527adf53fc44650b4e0a28649a62e7936a3e5e481499"
+    },
+    "lambda_small_identities.py": {
+      "bytes": 5399,
+      "sha256": "f4d19831e822d7812b586237b90aeed9b1b6995037c163e50694b280d528af26"
+    },
+    "lambda_identities.py": {
+      "bytes": 5090,
+      "sha256": "875dba9c74c3a3655b28decb5f664fddca26dfd78dcd22dbe24ae381b8f80d1a"
+    },
+    "bivariate_certificates.py": {
+      "bytes": 3339,
+      "sha256": "afb2b1b3583ebe550edc7430be80bcf38948e0e1eb4656123ca8875ad030f6ec"
+    },
+    "integer_psd.py": {
+      "bytes": 1740,
+      "sha256": "61b161e0d6c4280a9b14bca0104cf9db4ce507a25e22fe9cd8728540b54d99fc"
+    },
+    "UNIFORM_LAMBDA_ALL_ORDERS.md": {
+      "bytes": 22060,
+      "sha256": "ff3ed526e9c99ef3070d4cf0261bf8af6ac8fc79f996ec4c8b61e3de9b74742b"
+    },
+    "uniform_lambda_small_expected.json": {
+      "bytes": 24170,
+      "sha256": "8ec73e2420513c402c27be16e19b216251d091f2b81bd1ad4d04a15c0986d109"
+    },
+    "lambda_small_symbolic.json": {
+      "bytes": 12731,
+      "sha256": "8c181beb291a264f742950437570f120fbf1239c5008c0f7a8dbed1666ec400a"
+    },
+    "uniform_lambda_expected.json": {
+      "bytes": 21515,
+      "sha256": "641d1417bd598613f16609c23d42c88c514d392924e7e9043f4876091c453bc3"
+    }
+  },
+  "local_import_closure": {
+    "verify_uniform_lambda_small.py": [
+      "integer_psd.py",
+      "lambda_small_identities.py",
+      "uniform_lambda.py",
+      "uniform_lambda_small.py",
+      "verify.py",
+      "verify_three9.py"
+    ],
+    "verify_three9.py": [
+      "certificates.py",
+      "maxrank_certificates.py",
+      "verify.py",
+      "verify_two9.py"
+    ],
+    "verify_two9.py": [
+      "certificates.py",
+      "verify.py"
+    ],
+    "verify.py": [
+      "certificates.py"
+    ],
+    "certificates.py": [],
+    "maxrank_certificates.py": [
+      "certificates.py",
+      "verify.py",
+      "verify_two9.py"
+    ],
+    "uniform_lambda_small.py": [
+      "certificates.py"
+    ],
+    "uniform_lambda.py": [
+      "certificates.py",
+      "uniform_threefold.py",
+      "uniform_twofold.py"
+    ],
+    "uniform_twofold.py": [
+      "certificates.py",
+      "field_family.py"
+    ],
+    "field_family.py": [
+      "certificates.py"
+    ],
+    "uniform_threefold.py": [
+      "certificates.py"
+    ],
+    "lambda_small_identities.py": [
+      "bivariate_certificates.py",
+      "lambda_identities.py",
+      "uniform_lambda_small.py"
+    ],
+    "lambda_identities.py": [
+      "bivariate_certificates.py"
+    ],
+    "bivariate_certificates.py": [],
+    "integer_psd.py": []
+  },
+  "method": "Exact Git blob reads; AST local import closure. Independent audit imports none of these.",
+  "reused_reviewer_backend": {
+    "source_commit": "7d8a3b1b52bd9f6d639372ec54a67b1d598cdd85",
+    "graph_height": 8152,
+    "ref": "bafkreifagexi5xzke7c26fv74zestpe6hdgs6qffhgva4qtarwxcsdnwe4",
+    "files": [
+      "exact.py",
+      "symbols.py",
+      "fraction_free.py"
+    ],
+    "adapted_files": [
+      "formulas.py",
+      "literal.py",
+      "lower.py"
+    ],
+    "note": "Our own earlier independent code, explicitly reused. No author imports in audit."
+  }
+}
