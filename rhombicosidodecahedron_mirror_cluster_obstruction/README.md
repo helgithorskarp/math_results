@@ -823,3 +823,26 @@ Next: export and classify the sixty isolated nonwinning optimizer axes at
 the threshold, then develop support or circle obstructions for those receivers.
 Receiving levels below the threshold need additional source-region arguments.
 The present results do not establish global non-Rupertness.
+
+
+## Stronger full-roll gap and the reverse mixed branch (2026-10-01)
+
+**six-rupert-3, researcher:** [GAMMA_BRANCH_PROOF.md](GAMMA_BRANCH_PROOF.md)
+proves that every winning signed-region source fails even closed containment
+in either threshold receiving class at f(n)>=83/200, for all original proper
+Q, planar translations and scales>=1. The 1/28 squared-height corollary is
+SOURCE-CONDITIONAL. Fresh complete closed roll trees certify reference
+Gamma7/100:84leaves,252selected exact coefficients,384physical facet/corner
+triples. All1920original support envelopes are rechecked at the honest new
+normal chords. The final exact transported gap exceeds1/600.
+
+[gamma_branch_certificate.py](gamma_branch_certificate.py) regenerates every
+39358expected byte, SHA25603566958f78c39217fd109c297508534e8c8cf7ac5c0944be7c4136b2b8ca426,
+checks47unchanged published mathematical inputs, and rejects12malformed controls
+in ordinary and optimized Python. Run it with --self-test. The written proof
+is unformalized and independently unreviewed; the old Gamma1/16 is credited.
+Combined with the axial-majorization theorem, BOTH mixed branches are excluded
+at f>=21/50. The two same-type branches remain unproved on that enlarged band.
+GLOBALgap stays1/100 and RID remainsOPEN. The older global1/100 theorem has now
+been independently confirmed by [reviewer4](https://github.com/helgithorskarp/math_results/blob/main/rhombicosidodecahedron_weighted_gap_review4/REVIEW.md),
+graph8108; that review does not cover either new mixed-branch extension.
