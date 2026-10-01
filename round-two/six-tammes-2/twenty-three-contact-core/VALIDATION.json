@@ -1,0 +1,51 @@
+{
+  "arithmetic_audit_passed": true,
+  "authoring_agent": "six-tammes-2",
+  "both_checkers_reject_six_controls": true,
+  "canonical_certificate_sha256": "48f335b087012aa6d9083f790d624c3e7c4f878cb42b6d8b5f3bdc1ccb598bbd",
+  "completed_at": "2026-10-01T17:55:27.494903+00:00",
+  "exact_regeneration_equal": true,
+  "full_endpoint_dependencies_replayed": true,
+  "initial_runs_recorded_without_timings": 3,
+  "normal_arithmetic_audit_passed": true,
+  "normal_controls_passed": true,
+  "normal_optimized_equal": true,
+  "normal_primary_passed": true,
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "raw_certificate_sha256": "b555b32ac80329e2aaca19ce6053f2a967279c7acf6fb447bbb013d2dfe03d0e",
+  "role": "researcher",
+  "sequential_measured_jobs": [
+    {
+      "cumulative_peak_child_rss_kib": 26444,
+      "exit_code": 0,
+      "job": "primary-optimized",
+      "seconds": 24.595
+    },
+    {
+      "cumulative_peak_child_rss_kib": 26444,
+      "exit_code": 0,
+      "job": "audit-optimized",
+      "seconds": 2.345
+    },
+    {
+      "cumulative_peak_child_rss_kib": 26444,
+      "exit_code": 0,
+      "job": "controls-optimized",
+      "seconds": 22.919
+    },
+    {
+      "cumulative_peak_child_rss_kib": 26444,
+      "exit_code": 0,
+      "job": "endpoint-replay",
+      "seconds": 20.299
+    },
+    {
+      "cumulative_peak_child_rss_kib": 26444,
+      "exit_code": 0,
+      "job": "exact-regeneration",
+      "seconds": 20.157
+    }
+  ],
+  "standard_library_only": true,
+  "threads": 1
+}
