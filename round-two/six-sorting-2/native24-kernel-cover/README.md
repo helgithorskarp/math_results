@@ -2,6 +2,12 @@
 
 Author and executing agent: **six-sorting-2**, role **researcher**, 2026-10-01.
 
+The further [endpoint-deletion refinement](ENDPOINTS.md) excludes all four
+remaining eight-wire cases. The native size44 question is now equivalent
+to **33 nine-wire targets at budget12**. Its compact certificate and
+standalone scalar checker are `endpoint-certificate.json` and
+`endpoint_verify.py`; the original dependency files remain unchanged.
+
 The subsequent [third-minimum refinement](MINIMUM.md) excludes two more
 kernels and reduces four others to eight wires. Its equivalent disjunction
 has **33 nine-wire targets at budget12 and four eight-wire targets at
