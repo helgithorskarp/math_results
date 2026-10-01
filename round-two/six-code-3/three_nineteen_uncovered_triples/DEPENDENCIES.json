@@ -1,0 +1,77 @@
+{
+  "agent": "six-code-3",
+  "independent_prior_census_audit": {
+    "agent": "six-reviewer-2",
+    "artifact_ref": "bafkreigwxizlsmaqrzaha25uvkdymf2ae6g5iiblyflmx5rpyi4zz5vpoi",
+    "height": 8623,
+    "reader": "../../six-reviewer-2/nineteen-star-audit/REVIEW.md",
+    "scope": "Confirms prior census8537, not this new theorem or the m=2 transfer",
+    "source_commit": "b34cf0e1421ec2035c1788a5ab43af72511ec0a0"
+  },
+  "independent_prior_three_star_audit": {
+    "agent": "six-reviewer-2",
+    "artifact_ref": "bafkreidta67mto3gf6me5qixhxg2v5t3xiz2324pqgiyov4dsorvtfblqe",
+    "height": 8678,
+    "reader": "../../six-reviewer-2/three-star-audit/REVIEW.md",
+    "scope": "Confirms8627 and strengthens m=2 bound to61; does not cover the new m=1 branch",
+    "source_commit": "fdfa0b45683eb553cbe283b076dd89d1c92d8005"
+  },
+  "literature": [
+    {
+      "checked": "2026-10-01",
+      "scope": "External maintained target interval69--72",
+      "url": "https://aeb.win.tue.nl/codes/Andw.html"
+    },
+    {
+      "scope": "Aw--Chee--Ling2003Theorem1 and AppendixA: established69-word construction",
+      "url": "https://ymchee66.github.io/home/PDF/6cwc.pdf"
+    },
+    {
+      "local": "baseline69.txt",
+      "scope": "Exactly reproduced baseline; not a new construction",
+      "sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+      "url": "https://aeb.win.tue.nl/codes/cwc/d6/a18.6.5.69"
+    }
+  ],
+  "mathematical_premises": [
+    {
+      "artifact_ref": "bafkreigcg7dkxtl5ady54clyawxu2bpctj7qqyow5qx2fycla2qm4aiml4",
+      "height": 8537,
+      "manifest": "../nineteen_star_classification/expected.json",
+      "manifest_sha256": "83adc2817c988fa4450ede02c7da09b4da857e3f1850a0b0d0dee4cfd4a24bca",
+      "proof": "../nineteen_star_classification/PROOF.md",
+      "scope": "Complete marked nineteen-star classification; m<=2; forty marked m=1 inputs",
+      "source_commit": "4c6b7abd85932d7c113c50843cbe11e49915e673"
+    },
+    {
+      "artifact_ref": "bafkreicgvyygngy3mrppjg43a7b6dw6k4hkqnfi2j2xvpq5m5ghoxfbeka",
+      "height": 8627,
+      "proof": "../three_nineteen_zero_triples/PROOF.md",
+      "scope": "If any of the three centers has m=2, the same triple hypotheses imply size<=62",
+      "source_commit": "eabc8c23608b65585f6c376d02a2fc27e26440c8",
+      "status": "Independently confirmed and strengthened to61 in subsequent three-star audit fdfa0b45683eb553cbe283b076dd89d1c92d8005; original62 suffices here"
+    },
+    {
+      "artifact_ref": "bafkreibz6cr3e3mjpadu4jjr5n3kzwlji4ijgzbto7mw66xoqtyaa37ohe",
+      "height": 8323,
+      "proof": "../../../constant_weight_upper71_review1/REVIEW.md",
+      "scope": "Degree20 no-low-low theorem, used only in the size71 unit-five-profile corollary",
+      "source_commit": "02c1569568854e575f8b176ea07d552737a7da84"
+    }
+  ],
+  "problem": "A(18,6,5)",
+  "proof_status": "Exact finite author result with independent algorithmic replay; ordinary completeness and transfer bridges unformalized; independent mathematical peer review and historical priority pending",
+  "reused_source_helpers": [
+    {
+      "path": "../three_nineteen_zero_triples/produce.py",
+      "scope": "Producer mask predicates, partition recursion, color-bounded nine-cliques, canonical serialization",
+      "sha256": "3e0611eaf25d34bc88d476880c71d548aadff6b02cafd0481ecfafaa19d8b195"
+    },
+    {
+      "path": "../three_nineteen_zero_triples/verify.py",
+      "scope": "Separate literal point-set predicates and candidate/base graph reconstruction; clique routine is replaced by fresh native code",
+      "sha256": "c9f63e88d033595c3be6c4144a689945d2f425773a28f3badfb83a6d5566891e"
+    }
+  ],
+  "role": "researcher"
+}
