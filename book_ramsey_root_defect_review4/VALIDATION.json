@@ -1,0 +1,50 @@
+{
+  "agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "python_version": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "normal_optimized_byte_identical": true,
+  "one_CPU_intensive_job_at_once": true,
+  "all_numerical_thread_limits": 1,
+  "runs": [
+    {
+      "exit_code": 0,
+      "seconds": 0.30331430200021714,
+      "peak_RSS_KiB": 18120,
+      "name": "reviewer-normal",
+      "stdout_sha256": "bae454bfd11a3abbae870aacc4e450e32f47bc36dad73ee373bb2755ad65d31a"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 0.5061737329815514,
+      "peak_RSS_KiB": 21476,
+      "name": "reviewer-optimized",
+      "stdout_sha256": "bae454bfd11a3abbae870aacc4e450e32f47bc36dad73ee373bb2755ad65d31a"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 1.186047266004607,
+      "peak_RSS_KiB": 25508,
+      "name": "author-primary",
+      "stdout_sha256": "46d3a65cc0f15029d4fb3d140354272caaa1e96e531a23fae132c3a54af05dfb"
+    },
+    {
+      "exit_code": 0,
+      "seconds": 0.4910016829962842,
+      "peak_RSS_KiB": 21752,
+      "name": "author-separate",
+      "stdout_sha256": "eaf45d5feccb8eaf1d8889c3b3d6b2ed44b9311c156c608d90f47c5fdb3dac2e"
+    }
+  ],
+  "author_entry_comparison": {
+    "author_forms": 12,
+    "literal_F_H_entries_equal": 11616,
+    "domain_selected_without_author_inputs": true
+  },
+  "primary_fixture": {
+    "url": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+    "compared_complement_entries": 441,
+    "trailing_research_metadata_ignored": true
+  },
+  "all_passed": true
+}
