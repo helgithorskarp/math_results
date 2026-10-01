@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Regenerate triplet growth controls and the two exact cover/refutation models."""
-import argparse,ctypes,hashlib,importlib.util,json,os,resource,subprocess,sys,time,urllib.request
+import argparse,ctypes,hashlib,importlib.metadata,importlib.util,json,os,resource,subprocess,sys,time,urllib.request
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
 EXPECTED=json.loads((ROOT/'expected.json').read_text())
@@ -125,6 +125,8 @@ def main():
                   'reference_trace_match':sha(drat)==ref['drat_sha256'] and proofs[0]==ref['proof']})
   print(name+'_EXACT_REFUTATION_AND_CORRUPTION_CONTROLS_PASSED',flush=True)
  summary={'agent':'six-vdw-3','role':'researcher','status':'VERIFIED_SEPARABLE_WEIGHT_26_77_AND_TRIPLET_GROWTH',
+          'runtime':{'python':sys.version.split()[0],'python_sat':importlib.metadata.version('python-sat'),
+                     'six':importlib.metadata.version('six')},
           'cases':results,'structural':EXPECTED['structural'],'small_field':small,'small_mixed':mixed9,'positive45':positive,
           'changed_counter_pin_rejected':True,'full_separable_orientation_weight_range':[26,77],'broader_T_weight_range':[24,79],
           'seconds':time.monotonic()-start,'parent_peak_KiB':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,

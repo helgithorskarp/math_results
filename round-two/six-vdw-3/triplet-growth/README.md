@@ -16,7 +16,7 @@ the research target. Both the known 660-clause cover and new 39986-clause
 seeded model are regenerated and exactly replayed. Large corpora are
 generated locally, with compact hashes and source in Git.
 
-Reproduce with Python 3.12, GCC 12.2, Python-SAT 1.8.dev24/CaDiCaL 195 and
+Reproduce with Python 3.11.2, GCC 12.2, Python-SAT 1.8.dev24/CaDiCaL 195 and
 six 1.17.0. Set native thread counts to one and run serially:
 
 ```sh
