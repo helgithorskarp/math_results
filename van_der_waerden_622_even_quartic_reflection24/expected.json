@@ -1,0 +1,77 @@
+{
+  "status": "FRESH_SOURCE_ONLY_REFLECTION24_REPRODUCTION_AND_REDUCTION_AUDITS_VERIFIED",
+  "certificate_sha256": "74c7fc5307762c76b5f11001cdd1d876edb1b68ae47bac6a30ac8f44a83cce88",
+  "certificate_bytes": 179102,
+  "check": {
+    "cases": 625,
+    "pairs_per_case": 12,
+    "APs_per_case": 24,
+    "APs_checked": 15000,
+    "actual_term_colors_checked": 105000,
+    "field_residues_per_case": 168,
+    "largest_canonical_position": 2167
+  },
+  "checker_status": "VERIFIED_REFLECTION_PAIRED_ROOT_FREE_AP_PACKINGS",
+  "controls": [
+    "missing_case",
+    "duplicate_case",
+    "zero_polynomial",
+    "wrong_quadratic_class",
+    "root_term",
+    "bichromatic_AP",
+    "within_pair_overlap",
+    "between_pair_overlap",
+    "wrong_reflection",
+    "missing_pair",
+    "missing_reflection_member",
+    "boolean_index",
+    "boolean_start",
+    "zero_start",
+    "zero_step",
+    "step311",
+    "outside_interval",
+    "extra_root_hypothesis",
+    "unsupported_bound",
+    "wrong_modulus",
+    "wrong_constant",
+    "reversed_coefficients"
+  ],
+  "pilot_indexes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    10,
+    157,
+    313,
+    314,
+    315,
+    469,
+    624
+  ],
+  "parameter_A_chunks": [
+    0,
+    64,
+    128,
+    192,
+    256
+  ],
+  "complete_parameters": 96721,
+  "fresh_methods": {
+    "GREEDY": 519,
+    "CAPPED_SAT_MATCHING_AND_SEPARATE_ACTUAL_TERM_CHECK": 106
+  },
+  "expected_total_jobs": 1044,
+  "python_sat": "1.8.dev24",
+  "source_sha256": {
+    "pack_reflection622_cases.py": "da08daa7683681a4786758efc17f1bf5c8e1e306d15bce10815e4ceb675c1036",
+    "check_reflection622_packings.py": "dcc7eec25058c609461a72edbb4c5cb5c47163bfcf219fb57f38deeb66b93142",
+    "build_reflection622_matching.py": "ae177396c6439e5ec93a69dcc41c44236108a7d2e2fdd4cda23d63157e235654",
+    "solve_reflection622_matching.py": "a1b68933290248510443d010ca30708e9bddc0cc909ec2c7042ec4846e8a9428",
+    "check_reflection622_subset.py": "4b00a165f7cf4bfcfc89931bf7edeb1419447a6010d18c8f10865b5370f45f90",
+    "run_reflection622_hybrid.py": "6a149d05ce28ce1a397feb62caff646eb7363f3107e1651163267f0771f297c4",
+    "audit_reduction.py": "f584ad72bb9ab005adf9b5aa5f7e82370a6ef854b4bb8b3da789b36bf7497283"
+  },
+  "new_W_bound": null
+}
