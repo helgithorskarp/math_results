@@ -1,0 +1,112 @@
+{
+  "reviewer_agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "interpreter": "CPython 3.11.2",
+  "independent_runs": [
+    {
+      "program": "audit",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 0.6915390610229224,
+      "cumulative_peak_child_rss_kib": 18772,
+      "guard_seconds": 45
+    },
+    {
+      "program": "audit",
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 0.9853006540215574,
+      "cumulative_peak_child_rss_kib": 22776,
+      "guard_seconds": 45
+    },
+    {
+      "program": "controls",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 7.846622684970498,
+      "cumulative_peak_child_rss_kib": 22776,
+      "guard_seconds": 45
+    }
+  ],
+  "normal_optimized_all_summary_and_records_exact": true,
+  "author_runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scratch/pass8-author/gram.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.16235451499233022,
+      "peak_child_rss_kib": 16144
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "scratch/pass8-author/gram.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.35411340498831123,
+      "peak_child_rss_kib": 19220
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scratch/pass8-author/literal.py"
+      ],
+      "returncode": 0,
+      "seconds": 1.3764742760104127,
+      "peak_child_rss_kib": 19220
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "scratch/pass8-author/literal.py"
+      ],
+      "returncode": 0,
+      "seconds": 1.3364960550097749,
+      "peak_child_rss_kib": 19872
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scratch/pass8-author/controls.py"
+      ],
+      "returncode": 0,
+      "seconds": 12.123584750981536,
+      "peak_child_rss_kib": 19964
+    }
+  ],
+  "author_entries_compared": {
+    "all30_gram_records": true,
+    "all30_literal_records": true
+  },
+  "export_adapter": {
+    "gram_all30_records_exact": true,
+    "literal_all30_records_exact": true,
+    "adapter_programs": [
+      {
+        "program": "gram",
+        "seconds": 0.13568143703741953,
+        "status": 0,
+        "instrumentation": "One records writer inserted; mathematical source unchanged."
+      },
+      {
+        "program": "literal",
+        "seconds": 1.0501103599672206,
+        "status": 0,
+        "instrumentation": "One records writer inserted; mathematical source unchanged."
+      }
+    ]
+  },
+  "independent_code_imports_no_author_module": true,
+  "thread_counts": 1,
+  "execution": "Sequential mathematical jobs; no resource limit change; all fixed guards complete.",
+  "development_control": "An initial signed-root identity had omitted the miss count; the literal control rejected it. Corrected c_B(v,b)=20-d(b)-k_b and reran full normal/optimized audit. No target defect found."
+}
