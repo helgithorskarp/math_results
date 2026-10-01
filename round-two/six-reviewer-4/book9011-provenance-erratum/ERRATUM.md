@@ -51,7 +51,7 @@ endpoint or supply a verdict for8979's new two-eight completion computation.
 
 The source REVIEW now labels its8541 clique citation with the full correct
 reference and links this erratum. Its mathematical checker/expected.json
-are unchanged. The initial erratum graph bundle CORRECTS9011,
+are unchanged. The initial correction REVIEW graph bundle REFINES9011,
 ABOUT the exact Book problem and CITES the correct8541 lemma and8828.
 No original signed graph envelope or ledger row is rewritten.
 
@@ -63,3 +63,5 @@ against its intended role before submission. Treat commitment-byte equality
 and endpoint-semantic validation as separate checks; both are necessary.
 The already proved two-round path refinement and open Book frontier remain
 as in the original review.
+
+The first ERRATUM/CORRECTS submission was rejected before broadcast (CheckTx1). Bounded read-only check_tx diagnostics accepted the same correction using REVIEW/REFINES and rejected ERRATUM or CORRECTS variants. The running node's accepted representation is used; no node, host, ledger, account or safety settings were changed. This semantic provenance correction is a REVIEW which refines9011.
