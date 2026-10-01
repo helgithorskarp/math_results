@@ -1,6 +1,43 @@
-# Rhombicosidodecahedron: global receiving gap 1/31
+# Rhombicosidodecahedron: global receiving gap 1/28
 
 **six-rupert-3, researcher; updated 2026-10-01.**
+
+The [fresh same-class proof](GLOBAL_BAND_83_PROOF.md), combined with the
+two committed mixed branches below, proves the GLOBAL necessary condition
+**f(n)<83/200** for every strict passage, retaining arbitrary original
+proper rotation, roll, planar translation and scale>=1. Thus
+**f(n)^2<6889/40000<beta-1/28**, and the receiving squared diameter must
+exceed **273111/10000+32phi**. This strengthens the former21/50 cutoff
+and global1/31 gap. Global RID Rupertness remains **OPEN**.
+
+The fresh winning branch classifies closed containment on the enlarged
+winning height band by lambda=1,t=0,Q in G union J_nG:120 proper rotations
+in two disjoint LEFT cosets. All four threshold/threshold proper class
+pairings are excluded for strict passage. No threshold closed-coset
+classification is asserted. Both cutoff boundaries and all original
+source orientations are included; nearness and full spatial angle are
+derived through the actual proper frames and matched-original moments.
+
+The fixed [checker](global_band83_certificate.py),
+[59 prerequisite pins and fixed covers](global_band83_inputs.json), and
+[expected fields](global_band83_expected.json) regenerate198closed leaves,
+9906strict exact coefficient bounds,9480original corner supports,
+158original displacement identities,6144complete antipodal assignments,
+24native C3 interfaces and96weighted moment regressions. The larger
+threshold covers have78/90leaves at fresh Cayley radius1/22; the winning
+cover has30leaves at radius1/15 with full angle1/8 and raw drift33/500.
+Run separately from the repository root, Python3.11+standard library:
+
+    python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/global_band83_certificate.py
+    python3 -B -O rhombicosidodecahedron_mirror_cluster_obstruction/global_band83_certificate.py
+
+Both modes compare every97,277expected byte and reject36malformed controls.
+All59older mathematical inputs and guards remain unchanged. The complete
+written proof is author-checked, unformalized and independently unreviewed;
+the older independent review8108 covers ONLYthe historical global1/100
+result. The receiving complement below83/200 remains unresolved.
+
+## Historical mixed-branch and global1/31 certificates
 
 The [two-point proper-roll proof](MIXED_PAIR_ROLL_PROOF.md) now excludes
 every threshold signed-region ORIGINAL source into a winning receiver
@@ -12,9 +49,9 @@ planar isometry. All336 pair moments and1080original inverse-frame
 transport regressions pass. The different source and target circle radii
 and the directed plane orientations are retained.
 
-This extends the mixed branch from21/50 to83/200. The GLOBAL bound below
-remains **21/50**, with gap **1/31**; the two same-class branches still
-need fresh certificates at83/200 for a GLOBAL1/28 theorem. The new branch
+This extended the mixed branch from21/50 to83/200. At its publication the
+GLOBAL bound was **21/50**, with gap **1/31**. The fresh same-class proof
+at the top now completes the GLOBAL83/200cutoff and1/28gap. The mixed proof
 is unformalized and independently unreviewed. Its [checker](mixed_pair_roll_certificate.py),
 [56input pins](mixed_pair_roll_inputs.json) and [compact expected record](mixed_pair_roll_expected.json)
 are reproduced by:
@@ -920,8 +957,8 @@ is unformalized and independently unreviewed; the old Gamma1/16 is credited.
 At that branch's publication, the two mixed branches were excluded at
 f>=21/50, while the same-type branches remained open there. The subsequent
 winning classification and threshold completion above close that band and
-give the current GLOBALgap1/31. The present common-roll pair theorem further
-extends both mixed branches to83/200, where the same-type branches still
-need fresh proofs. RID remainsOPEN. The older global1/100 theorem has
+gave the GLOBALgap1/31. The common-roll pair theorem extended both mixed
+branches to83/200; the fresh same-class proof at the top now closes that
+common cutoff and gives the current GLOBALgap1/28. RID remainsOPEN. The older global1/100 theorem has
 been independently confirmed by [reviewer4](https://github.com/helgithorskarp/math_results/blob/main/rhombicosidodecahedron_weighted_gap_review4/REVIEW.md),
 graph8108; that review does not cover either new mixed-branch extension.
