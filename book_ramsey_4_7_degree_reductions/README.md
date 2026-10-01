@@ -1,6 +1,6 @@
 # Degree and neighborhood reductions for R(B4,B7)
 
-Author: `six-books-1`, role researcher, 2026-09-30. All team members use
+Author: `six-books-1`, role researcher, updated 2026-10-01. All team members use
 one signing identity; this statement identifies the actual author.
 
 Let G be a simple graph on 22 vertices with no B4 subgraph and with no
@@ -8,9 +8,10 @@ B7 subgraph in its complement. Books are ordinary, not induced,
 subgraphs. Equivalently, every edge of G has at most three common
 neighbors, and every edge of its complement has at most six.
 
-The current combined necessary range is **degrees 8..10, edges 97..110**,
-using six-books-3's [degree-eleven exclusion](../book_ramsey_b4_b7_degree11_gram_exclusion/PROOF.md).
-The latest defect budget is in item 16; the new 97-edge cut is in item 17.
+The current combined necessary range is **degrees 8..10, edges 98..110**,
+using six-books-3's [degree-eleven exclusion](../book_ramsey_b4_b7_degree11_gram_exclusion/PROOF.md)
+and our [97-edge boundary exclusion](degree97.md).
+The latest defect budget is in item 16; the boundary cut is in item 18.
 
 **Proved necessary conditions:**
 
@@ -125,8 +126,18 @@ The latest defect budget is in item 16; the new 97-edge cut is in item 17.
     Two different domain generators and determinant algorithms agree
     on all 559 records and every F/H entry. Together with items 13--16
     and the current degree-eleven exclusion, at 97 edges only
-    **(n8,n9,n10)=(4,18,0)** remains. This is a necessary histogram;
-    the whole boundary and the Ramsey endpoint remain unresolved.
+    **(n8,n9,n10)=(4,18,0)** remained. Item 18 excludes this last case.
+
+18. The whole **97-edge boundary** is excluded by [degree97.md](degree97.md).
+    In its last histogram (4,18,0), the four degree-eight vertices must
+    induce C4, K4-e or K4. The first two contradict saturated pair counts;
+    K4 forces a unit cycle defect and two degree-nine defect centers,
+    leaving four full matrices. All four forced-square determinants are
+    nonsquares, checked by distinct exact algorithms and small modular
+    certificates. The separate checker covers 1,836 labeled defect
+    placements and compares every F/H entry. Thus every valid 22-vertex
+    graph has **98..110 red edges**. Feasibility at those remaining edge
+    counts and the unrestricted Ramsey endpoint remain unresolved.
 
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
@@ -208,9 +219,19 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
   python3 -O book_ramsey_4_7_degree_reductions/slack8_check.py
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
   python3 -O book_ramsey_4_7_degree_reductions/slack8_independent.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_4_7_degree_reductions/degree97_check.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_4_7_degree_reductions/degree97_independent.py
 ```
 
-The last two commands prove the (5,16,1) exclusion in item 17.
+The degree97 commands certify the four final forced matrices in item 18
+and validate the finite components of its written structural proof.
+Full F/H matrices, determinants, modular residues and small local checks
+are in [degree97_expected.json](degree97_expected.json). The separate
+program generates the 1,836 labeled placements without author imports.
+
+The slack8 commands prove the (5,16,1) exclusion in item 17.
 They independently generate all 559 defect forms and compare every
 determinant, orbit size and full-matrix digest; the separate program
 also checks the exceptional eigenspace by rational rank. For a full
