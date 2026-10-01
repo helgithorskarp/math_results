@@ -1,9 +1,12 @@
-# Exact projection geometry of Johnson solid J74
+# Exact projection and receiving-cap geometry of Johnson solid J74
 
 **six-rupert-2, researcher; 2026-10-01.** This is a rigorous intermediate
 computer-assisted result for the unit-edge metabigyrate rhombicosidodecahedron.
-It does not settle its Rupert property. The continuous arguments are written
-in [PROOF.md](PROOF.md); the finite checks use exact rational arithmetic in
+Every source of scale at least one is excluded in closed receiving-normal caps of chord radius
+**1/30000** about the symmetric minimum axis `+/-e_y`. Its full Rupert
+property remains open. The continuous arguments are written
+in [PROOF.md](PROOF.md) and [RECEIVING_CAPS.md](RECEIVING_CAPS.md);
+the finite checks use exact rational arithmetic in
 the ordered field Q(sqrt(5)). Independent review and historical priority are
 not asserted.
 
@@ -23,12 +26,35 @@ The exact results are:
   `|n_x|,|n_z| <= ((sqrt(5)-1)/8)|n_y|`, J74 and the standard unit-edge
   rhombicosidodecahedron have **identical physical shadows**. This gives an
   exact passage transfer when both source and receiver axes lie in that cone;
-  it is not an exclusion of the cone's receiving directions against all sources.
+  the follow-up source-area argument below supplies an all-source transfer
+  on a specified part of the receiving cone.
+
+[The receiving-cap follow-up](RECEIVING_CAPS.md) additionally proves:
+
+- A global area budget `0<eta<=1/80` forces the original body normal within
+  chord `<eta/3` of one of the six minimum axes.
+- Every closed fit of scale at least one into a common-cone receiver with
+  area at most `a0+1/400` forces its source into the same cone. Exact
+  half-difference areas separate the other five source-axis branches,
+  while cancelling arbitrary translation.
+- Existence of proper J74 and RID placements is equivalent on that receiving
+  band, with the actual scale and translation retained. The band includes
+  closed receiving-normal caps of radius **1/1750**, a transfer radius.
+- The committed [RID all-source cap theorem](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-rupert-3/rid_brightness_twofold_caps/PROOF.md)
+  therefore excludes **every** proper J74 source, full roll, translation
+  and scale `lambda>=1` at receiver chord at most **1/30000** from `+/-e_y`.
+  Every strict passage whose receiver lies in the common cone also has
+  receiving area strictly greater than `a0+1/10000`.
+
+Here `a0=(13+7sqrt(5))/2`. The RID input uses edge two and is explicitly
+rescaled to the unit-edge model; normal chord distances are unchanged.
+The all-source equivalence and the exclusion radii are distinct statements.
 
 Use Python 3.11 or later, with the standard library only:
 
 ```sh
 python3 round-two/six-rupert-2/verify.py
+python3 -B round-two/six-rupert-2/caps_verify.py
 ```
 
 The program compares its complete result with [expected.json](expected.json)
@@ -42,6 +68,15 @@ The minimum areas at all six axes and the maximum areas at both axes are also
 checked from independently reconstructed projected polygons. Hand-solvable
 cube and split-generator controls test the complete arrangement reduction.
 The guards remain active under Python `-O`.
+
+The second command compares every field of [caps_expected.json](caps_expected.json)
+and prints `exact receiving-cap hypotheses verified`. It regenerates the
+minimum spectrum and second level, six tangent disks, six original
+half-difference shadows, 5640 separable all-original support evaluations,
+64 tangent endpoint sums, 360 cone gates and the RID coordinate scale.
+The complete [RID input proof](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-rupert-3/rid_brightness_twofold_caps/PROOF.md)
+and its earlier local criterion are written dependencies. Its exact checker
+was replayed locally; no independent-review verdict is asserted.
 
 Author runs on Python 3.11.2 used one process and no numerical-library
 threads: complete normal derivation 87.7 seconds / 18,368 KiB peak RSS;
