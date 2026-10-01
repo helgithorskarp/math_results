@@ -9,6 +9,16 @@ total**. An orbit pair is uniform when all four cross edges between its
 two two-vertex orbits have one color. Inside-orbit colors and matching
 signs are arbitrary, and every such involution is covered.
 
+[ONE_MATCHING.md](ONE_MATCHING.md) proves that **any entirely matching
+orbit forces at least eight blue uniform pairs**. Therefore exactly seven
+blue pairs require **all eleven orbits** to be incident with uniform
+pairs. At exactly ten uniform pairs, only **three red/seven blue with
+full support eleven** remains. A matching-orbit normalization gives a
+cubic graph on the other ten orbits and the necessary tradeoff
+**3b-2r>=15**. A nonnegative triangle identity and written red-star/path
+cases exclude equality with exactly one matching orbit. No finite
+enumeration is a premise of this new extension.
+
 [BLUE_SIX.md](BLUE_SIX.md) proves the new **seven-blue minimum at
 arbitrary red uniform density**. Two entirely matching orbits give a
 two-row sign action; equality at six blue edges forces a forbidden
@@ -16,8 +26,9 @@ shared-leaf shape. A support count then reduces the other six-blue
 possibilities to six written degree sequences and a forbidden blue path.
 Together with the prior three-red theorem, this supplies an analytic
 ten-total proof. At exactly ten, only **three red/seven blue** remains;
-at least **ten orbits** must be incident with uniform pairs. The same
-two-row argument excludes seven blue pairs when two orbits are entirely
+that proof gave support at least ten, now strengthened to eleven by
+ONE_MATCHING.md. The same two-row argument excludes seven blue pairs
+when two orbits are entirely
 matching, giving a conditional **eight-blue minimum**. Attainment is not
 asserted. No finite enumeration is a proof premise of this extension.
 
@@ -80,6 +91,8 @@ extension also have no peer review verdict. The new ten-total extension
 has no independent review verdict. The new analytic seven-blue extension
 also has no independent peer-review verdict. The blue-cycle proof credits the reviewer's earlier
 disjoint-two-red-chord X case and rederives it for completeness.
+The new one-matching-orbit/tradeoff extension likewise has author checks
+and no independent peer-review verdict.
 
 FOUR_BLUE.md also gives a local path-core exclusion: its five displayed
 orbits have four blue and three red uniform pairs, all core-to-outside
@@ -98,6 +111,29 @@ exclude patterns with ten or more uniform pairs satisfying these
 color and support bounds. No regularity, degree/core theorem, external graph
 catalogue, solver or floating-point premise is used. Author checks are
 not peer review or proof-assistant formalization.
+
+## Controls for the one-matching-orbit theorem
+
+Python 3.11+ standard library only. From the repository root:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_b4_b7_free_involution/one_matching_controls.py
+```
+
+[one_matching_controls.py](one_matching_controls.py) imports no campaign
+program and reproduces [one_matching_expected.json](one_matching_expected.json).
+It checks 1488 nonnegative scalar identities across all 16 red counts,
+31 blue counts and three explicit cubic templates, using deterministic
+sampled markings. Both h inside colors give 2976 literal lifts and
+687456 spine checks, with full matching-row normalization. A joint
+aggregate/individual-red-layer equality control has exactly 3R7B and
+support ten, but its isolated red cross spines have four pages; it is
+not a valid host. All 455 three-edge sets on six vertices and the five
+written core-degree patterns also pass. These are controls of an analytic
+proof, with no complete cubic-skeleton or marking census as a premise.
+The final CPython 3.11.2 replay took 3.947 seconds and 16688 KiB peak
+child RSS; all numerical threads are one and guards survive -O.
 
 ## Controls for the analytic seven-blue proof
 
