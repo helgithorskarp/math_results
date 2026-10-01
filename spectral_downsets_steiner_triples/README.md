@@ -2,6 +2,29 @@
 
 Agent: **six-downset-2**, role: **researcher**. Updated 2026-10-01.
 
+The [dense-complement extension](DENSE_COMPLEMENT_CAP.md) adds a strict
+upper cap to the existing triple-design matrix for **every simple
+2-(v,3,lambda) input with q=v-2-lambda>=0, v>=12 and v>=4(q+1)**.
+It proves B=s+v^2/2+(q^2+2q+3/2)v-10<N on the constant complement,
+and an upper gap greater than (N-B)/2 for every real 0<eta<=1/(8v^2).
+The lower slack has maximal rank N-v. These new capped factors and their
+finite products have the specified greatest slack rank and star-only equality.
+The proof uses complementary completion incidence and the complete pair
+Gram; it requires no Steiner decomposition. It is author checked,
+unformalized and not independently reviewed. The [portable checker](dense_lambda_identities.py)
+verifies nine identities and51 exact coefficient certificates.
+The [matrix verifier](verify_dense_lambda.py) checks eight full lower/buffered
+upper PSD forms at q0/q2 and twelve independent principal forms across
+three literal inputs. The q1 input has definition/incidence/kernel checks;
+its full forms are explicitly omitted after a bounded preliminary timeout.
+[Content-normalized exact Schur](content_psd.py) has729 independent small
+matrix controls. General H/I remain open and no design census is claimed.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 spectral_downsets_steiner_triples/verify_dense_lambda.py --check
+```
+
 The [all-orders extension](UNIFORM_LAMBDA_ALL_ORDERS.md) determines H and
 the greatest possible slack rank for **every feasible simple 2-(v,3,lambda)
 design with lambda>=2**. For v>=5 the centered rank is N-v-1 and the

@@ -1,0 +1,778 @@
+{
+  "CAS": "SymPy1.14.0",
+  "agent": "six-downset-2",
+  "boundary_q2v12": {
+    "B": "232",
+    "delta": "23",
+    "gamma": "203/16"
+  },
+  "domain": "integer q>=0, v>=12, v>=4(q+1), l=v-2-q",
+  "identity_names": [
+    "delta_polynomial",
+    "repair_margin_polynomial",
+    "row1_difference",
+    "row2_difference",
+    "row3_difference",
+    "constant_difference",
+    "complement_variance",
+    "completion_Z_bound",
+    "root_square_difference"
+  ],
+  "records": {
+    "q0": {
+      "D_positive": {
+        "coefficient_sha256": "dd304327bd0fc93390352da28e0145c2374f9d66cafda744525b414eb29c2f35",
+        "den": {
+          "constant": "1",
+          "term_count": 1
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "504",
+          "term_count": 4
+        }
+      },
+      "c_lt_4_over_3": {
+        "coefficient_sha256": "cdc392f149640c44f220d9f5e87bd197e7df69b11c61c603bb1e2b1cdef766fa",
+        "den": {
+          "constant": "270",
+          "term_count": 3
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "286",
+          "term_count": 3
+        }
+      },
+      "c_positive": {
+        "coefficient_sha256": "e6c241595b98e777b51c20c1dc5f93733d36f634ce684b485096f46be55c03e6",
+        "den": {
+          "constant": "270",
+          "term_count": 3
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "74",
+          "term_count": 2
+        }
+      },
+      "constant_cap": {
+        "coefficient_sha256": "ba800dbb7e970642783eef6b6c4dc205f7443a2369c299d24a43fe0fd6c7ef8f",
+        "den": {
+          "constant": "1",
+          "term_count": 1
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "343/3",
+          "term_count": 3
+        }
+      },
+      "d_lt_2": {
+        "coefficient_sha256": "1a201dde9075a180af0e8b459c6c23635d005a719b32a038eb3a9b8eecda8bc9",
+        "den": {
+          "constant": "72",
+          "term_count": 3
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "16",
+          "term_count": 3
+        }
+      },
+      "d_minus_w_gt_minus1": {
+        "coefficient_sha256": "b52575d63084b2b54169569827b566c6b31162747af3090b1433d12e92eda68e",
+        "den": {
+          "constant": "2160",
+          "term_count": 4
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "1008",
+          "term_count": 4
+        }
+      },
+      "d_minus_w_lt1": {
+        "coefficient_sha256": "e795889d7f57fbce57f5e94a005a8769c42c205f837d6bf0431e3250b6e15070",
+        "den": {
+          "constant": "2160",
+          "term_count": 4
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "3312",
+          "term_count": 4
+        }
+      },
+      "d_positive": {
+        "coefficient_sha256": "d9aedbedff00531d4eab44adb4ad4cd454a5dca720b61aee7cf59b7e6be08a2c",
+        "den": {
+          "constant": "72",
+          "term_count": 3
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "128",
+          "term_count": 3
+        }
+      },
+      "gap_positive": {
+        "coefficient_sha256": "f9752569bdecff0678aa96fe4c75f5dfa57648b5e52243ba3618ab00622db202",
+        "den": {
+          "constant": "1",
+          "term_count": 1
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "152",
+          "term_count": 4
+        }
+      },
+      "repaired_gap_gt_delta_over_2": {
+        "coefficient_sha256": "8002ebd64107e950d5b64652b547d0f8bf65f798d994686dcf5048d16c4060bd",
+        "den": {
+          "constant": "288",
+          "term_count": 2
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "18918",
+          "term_count": 5
+        }
+      },
+      "root_comparison": {
+        "coefficient_sha256": "267fbc87d5a059468d9422b9fe6ddd4bbfee326107bd68a92219a56bab4cb2b2",
+        "den": {
+          "constant": "1",
+          "term_count": 1
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "28",
+          "term_count": 3
+        }
+      },
+      "row1_comparison": {
+        "coefficient_sha256": "377eea5ac407442cc931aea64773492011bda3a02a78f7d4b95ab05f97e26cfc",
+        "den": {
+          "constant": "1",
+          "term_count": 1
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "54",
+          "term_count": 3
+        }
+      },
+      "row2_comparison": {
+        "coefficient_sha256": "3ddb0bc60237ac7a7f5f1c6bedb83ad56bf5f3a560f5de3e87d97062128aa600",
+        "den": {
+          "constant": "1",
+          "term_count": 1
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "80/3",
+          "term_count": 2
+        }
+      },
+      "t_gt_1": {
+        "coefficient_sha256": "eda09871d00284596afa73f6c760ee419d954f372bc9c073461a7e240c4ef050",
+        "den": {
+          "constant": "504",
+          "term_count": 4
+        },
+        "exact_orientation_sign": -1,
+        "num": {
+          "constant": "420",
+          "term_count": 3
+        }
+      },
+      "t_lt_2": {
+        "coefficient_sha256": "27c140965e604ec8fa6c6f4b5ee09e11cce318ec20ed96cc4d300436cc5fd479",
+        "den": {
+          "constant": "504",
+          "term_count": 4
+        },
+        "exact_orientation_sign": -1,
+        "num": {
+          "constant": "84",
+          "term_count": 4
+        }
+      },
+      "three_t_minus_h_gt_minus2": {
+        "coefficient_sha256": "28221665f2ba061ac5eb5f5a777c836a904b5b0452fa155e15b31fc3d2e9b8df",
+        "den": {
+          "constant": "4536",
+          "term_count": 5
+        },
+        "exact_orientation_sign": -1,
+        "num": {
+          "constant": "2520",
+          "term_count": 5
+        }
+      },
+      "three_t_minus_h_lt2": {
+        "coefficient_sha256": "2e6e418913e0e4d4bfa80245ee2561456adcd48805c788d16df59a3703881a5d",
+        "den": {
+          "constant": "4536",
+          "term_count": 5
+        },
+        "exact_orientation_sign": -1,
+        "num": {
+          "constant": "15624",
+          "term_count": 5
+        }
+      }
+    },
+    "q1": {
+      "D_positive": {
+        "coefficient_sha256": "13602490491d24faf5ed0c23ac0a8ed9df38ce8b37954c70e81d9d531a945ad8",
+        "den": {
+          "constant": "1",
+          "term_count": 1
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "453",
+          "term_count": 4
+        }
+      },
+      "c_lt_4_over_3": {
+        "coefficient_sha256": "f11df76f7afb816fbd29966bbab9b624162614b216294d8511710e8820e8af84",
+        "den": {
+          "constant": "270",
+          "term_count": 3
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "261",
+          "term_count": 3
+        }
+      },
+      "c_positive": {
+        "coefficient_sha256": "f1f2f77f8c2d5f055d559f8331befb7740083d8c0f9f88da2f8622410a36c185",
+        "den": {
+          "constant": "270",
+          "term_count": 3
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "99",
+          "term_count": 2
+        }
+      },
+      "constant_cap": {
+        "coefficient_sha256": "af881055e96a04f9296d861e5c14ef8e87fdad2789039e141187d8199a15dd6a",
+        "den": {
+          "constant": "1",
+          "term_count": 1
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "148",
+          "term_count": 3
+        }
+      },
+      "d_lt_2": {
+        "coefficient_sha256": "1a201dde9075a180af0e8b459c6c23635d005a719b32a038eb3a9b8eecda8bc9",
+        "den": {
+          "constant": "72",
+          "term_count": 3
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "16",
+          "term_count": 3
+        }
+      },
+      "d_minus_w_gt_minus1": {
+        "coefficient_sha256": "5a616a338943d678d1fd1633fa75052b3489424da7bd4b323536206ef1f8d3d2",
+        "den": {
+          "constant": "2160",
+          "term_count": 4
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "1248",
+          "term_count": 4
+        }
+      },
+      "d_minus_w_lt1": {
+        "coefficient_sha256": "29fe24a72deee576e68fab83129fba94a5598163f2551d2d01dd86ca98f0dbf7",
+        "den": {
+          "constant": "2160",
+          "term_count": 4
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "3072",
+          "term_count": 4
+        }
+      },
+      "d_positive": {
+        "coefficient_sha256": "d9aedbedff00531d4eab44adb4ad4cd454a5dca720b61aee7cf59b7e6be08a2c",
+        "den": {
+          "constant": "72",
+          "term_count": 3
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "128",
+          "term_count": 3
+        }
+      },
+      "gap_positive": {
+        "coefficient_sha256": "e79b80003cf538da6b2bfd41ff444f38093648a7f2813eea714b15ec1d6ada64",
+        "den": {
+          "constant": "1",
+          "term_count": 1
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "199/2",
+          "term_count": 4
+        }
+      },
+      "repaired_gap_gt_delta_over_2": {
+        "coefficient_sha256": "53bde7a5abd9571b61041b8e22d82d60f28fa270a71a7fba2d62368fec39143a",
+        "den": {
+          "constant": "288",
+          "term_count": 2
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "11358",
+          "term_count": 5
+        }
+      },
+      "root_comparison": {
+        "coefficient_sha256": "267fbc87d5a059468d9422b9fe6ddd4bbfee326107bd68a92219a56bab4cb2b2",
+        "den": {
+          "constant": "1",
+          "term_count": 1
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "28",
+          "term_count": 3
+        }
+      },
+      "row1_comparison": {
+        "coefficient_sha256": "da11a189ad0255df7fe9cf0fbea03808b5955b056c0cf75d3c1793139e97c05e",
+        "den": {
+          "constant": "1",
+          "term_count": 1
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "60",
+          "term_count": 3
+        }
+      },
+      "row2_comparison": {
+        "coefficient_sha256": "ebdd402621fba335a8d2740c150300c8bd9b9bf9f086d6cb582da76d851cb953",
+        "den": {
+          "constant": "1",
+          "term_count": 1
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "170/3",
+          "term_count": 2
+        }
+      },
+      "t_gt_1": {
+        "coefficient_sha256": "7d8672b069a8a387c6be1b35187e8ff3011a59fc20aa76db2275b955a0941272",
+        "den": {
+          "constant": "453",
+          "term_count": 4
+        },
+        "exact_orientation_sign": -1,
+        "num": {
+          "constant": "372",
+          "term_count": 3
+        }
+      },
+      "t_lt_2": {
+        "coefficient_sha256": "f03bf8c76e575012f70e42a1669d0170e119c8da818b33d28e770ca45ad6d47a",
+        "den": {
+          "constant": "453",
+          "term_count": 4
+        },
+        "exact_orientation_sign": -1,
+        "num": {
+          "constant": "81",
+          "term_count": 4
+        }
+      },
+      "three_t_minus_h_gt_minus2": {
+        "coefficient_sha256": "f57693a6ded654415362fb7db3835a00b3bc5dd4f4cfbb22c6fb48453e3e8a34",
+        "den": {
+          "constant": "4077",
+          "term_count": 5
+        },
+        "exact_orientation_sign": -1,
+        "num": {
+          "constant": "4740",
+          "term_count": 5
+        }
+      },
+      "three_t_minus_h_lt2": {
+        "coefficient_sha256": "c8c3c1155245b8f3eeb21ce402a78726344654dc64e3ff01f6d99a642ae25389",
+        "den": {
+          "constant": "4077",
+          "term_count": 5
+        },
+        "exact_orientation_sign": -1,
+        "num": {
+          "constant": "11568",
+          "term_count": 5
+        }
+      }
+    },
+    "q2plus": {
+      "D_positive": {
+        "coefficient_sha256": "08f33b083618bb9369dbaab534126756e5c332f5c08928da5e1f44137dfa0806",
+        "den": {
+          "constant": "1",
+          "term_count": 1
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "402",
+          "term_count": 10
+        }
+      },
+      "c_lt_4_over_3": {
+        "coefficient_sha256": "1c79f4d9f7a193e4778dae8da80ac0ae3d104a464cf9cdcce03b8687f8adda55",
+        "den": {
+          "constant": "270",
+          "term_count": 6
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "236",
+          "term_count": 6
+        }
+      },
+      "c_positive": {
+        "coefficient_sha256": "f803c1f5a421e0bddfed5d1587211c2f9235976e3cb5fa131a2e99a36fec4fce",
+        "den": {
+          "constant": "270",
+          "term_count": 6
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "124",
+          "term_count": 5
+        }
+      },
+      "constant_cap": {
+        "coefficient_sha256": "217e57faeae68189ec3d9a1c1605d80eb3d52e3e2cfbff04ee85b18aee6ca35a",
+        "den": {
+          "constant": "1",
+          "term_count": 1
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "617/3",
+          "term_count": 8
+        }
+      },
+      "d_lt_2": {
+        "coefficient_sha256": "f23b3b9a9594e6c2e4314fbc4c8c778f9b7d7b6326657a32e5c22a17a8a34020",
+        "den": {
+          "constant": "72",
+          "term_count": 6
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "16",
+          "term_count": 6
+        }
+      },
+      "d_minus_w_gt_minus1": {
+        "coefficient_sha256": "1aebe2b375ae5ca62c4b8aeb4895c36172283a8519206dc1e053960fc5b050d6",
+        "den": {
+          "constant": "2160",
+          "term_count": 10
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "1488",
+          "term_count": 10
+        }
+      },
+      "d_minus_w_lt1": {
+        "coefficient_sha256": "17e64499aea7da78009c301eb2eb942a329617caa9820595af2a6881e2a640f8",
+        "den": {
+          "constant": "2160",
+          "term_count": 10
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "2832",
+          "term_count": 10
+        }
+      },
+      "d_positive": {
+        "coefficient_sha256": "dee1aeb3c2b8674fc2c6efa010e1630074862e652361dbbcb4530f9461a5cb76",
+        "den": {
+          "constant": "72",
+          "term_count": 6
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "128",
+          "term_count": 6
+        }
+      },
+      "gap_positive": {
+        "coefficient_sha256": "e4fa9fc279055c38189caab1911037b7ed65761ccf80c9f2c25bd2320df6771e",
+        "den": {
+          "constant": "1",
+          "term_count": 1
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "23",
+          "term_count": 10
+        }
+      },
+      "repaired_gap_gt_delta_over_2": {
+        "coefficient_sha256": "7c8ac362d68d7566365458819dd46ea7b5a49dc536c446cf05c19325fcb210a3",
+        "den": {
+          "constant": "288",
+          "term_count": 3
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "342",
+          "term_count": 15
+        }
+      },
+      "root_comparison": {
+        "coefficient_sha256": "0be445134a5568bac009a83ee6e7623aca64f789c90b48e4a30175660b33802a",
+        "den": {
+          "constant": "1",
+          "term_count": 1
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "28",
+          "term_count": 6
+        }
+      },
+      "row1_comparison": {
+        "coefficient_sha256": "354ad029ca61756e18272536035e47b6e983fd80f8c063a0a937db921406ba6b",
+        "den": {
+          "constant": "1",
+          "term_count": 1
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "66",
+          "term_count": 6
+        }
+      },
+      "row2_comparison": {
+        "coefficient_sha256": "62d5b98981d194b26222284dcf55d8b769fa6b5329fdf83c2c172f5895eac147",
+        "den": {
+          "constant": "1",
+          "term_count": 1
+        },
+        "exact_orientation_sign": 1,
+        "num": {
+          "constant": "332/3",
+          "term_count": 7
+        }
+      },
+      "t_gt_1": {
+        "coefficient_sha256": "5c63e389faf6200f75c9eb867378689f3fad5345fde9ec80c7c0031df7e9a7f6",
+        "den": {
+          "constant": "402",
+          "term_count": 10
+        },
+        "exact_orientation_sign": -1,
+        "num": {
+          "constant": "324",
+          "term_count": 6
+        }
+      },
+      "t_lt_2": {
+        "coefficient_sha256": "3f0c8a8d3039d528a92d70e05b0da19abb67f76d83176de57c3f1daa30a0ad73",
+        "den": {
+          "constant": "402",
+          "term_count": 10
+        },
+        "exact_orientation_sign": -1,
+        "num": {
+          "constant": "78",
+          "term_count": 10
+        }
+      },
+      "three_t_minus_h_gt_minus2": {
+        "coefficient_sha256": "8fef321c0afbbfd4c0005664de18e1ffeaef8361ae1b18aa01ad4ee5f0466e10",
+        "den": {
+          "constant": "3618",
+          "term_count": 15
+        },
+        "exact_orientation_sign": -1,
+        "num": {
+          "constant": "6366",
+          "term_count": 15
+        }
+      },
+      "three_t_minus_h_lt2": {
+        "coefficient_sha256": "253a1775efe2c5490779454df31cf30e38ff1294eb96bbde6b1c135ad4722fe3",
+        "den": {
+          "constant": "3618",
+          "term_count": 15
+        },
+        "exact_orientation_sign": -1,
+        "num": {
+          "constant": "8106",
+          "term_count": 15
+        }
+      }
+    }
+  },
+  "repaired_H_shifted_coefficients": {
+    "q0": [
+      [
+        0,
+        0,
+        "18918"
+      ],
+      [
+        1,
+        0,
+        "7815"
+      ],
+      [
+        2,
+        0,
+        "1204"
+      ],
+      [
+        3,
+        0,
+        "81"
+      ],
+      [
+        4,
+        0,
+        "2"
+      ]
+    ],
+    "q1": [
+      [
+        0,
+        0,
+        "11358"
+      ],
+      [
+        1,
+        0,
+        "6273"
+      ],
+      [
+        2,
+        0,
+        "1104"
+      ],
+      [
+        3,
+        0,
+        "79"
+      ],
+      [
+        4,
+        0,
+        "2"
+      ]
+    ],
+    "q2plus": [
+      [
+        0,
+        0,
+        "342"
+      ],
+      [
+        0,
+        1,
+        "3876"
+      ],
+      [
+        0,
+        2,
+        "4328"
+      ],
+      [
+        0,
+        3,
+        "1600"
+      ],
+      [
+        0,
+        4,
+        "192"
+      ],
+      [
+        1,
+        0,
+        "4155"
+      ],
+      [
+        1,
+        1,
+        "5434"
+      ],
+      [
+        1,
+        2,
+        "2320"
+      ],
+      [
+        1,
+        3,
+        "320"
+      ],
+      [
+        2,
+        0,
+        "980"
+      ],
+      [
+        2,
+        1,
+        "788"
+      ],
+      [
+        2,
+        2,
+        "156"
+      ],
+      [
+        3,
+        0,
+        "77"
+      ],
+      [
+        3,
+        1,
+        "30"
+      ],
+      [
+        4,
+        0,
+        "2"
+      ]
+    ]
+  },
+  "role": "researcher",
+  "status": "Exact scalar signs; ordinary norm/completeness interpretation in DENSE_COMPLEMENT_CAP.md.",
+  "strict_certificate_count": 51,
+  "zero_identities": 9
+}
