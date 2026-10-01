@@ -1,0 +1,243 @@
+{
+  "agent": "six-downset-2",
+  "cases": [
+    {
+      "affine_rank": 11,
+      "exact_free_weights": [
+        "2/5",
+        "9/10",
+        "574/5",
+        "577/5"
+      ],
+      "free_pairs": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "n": 8,
+      "proposal_elapsed_seconds": 0.07804325799224898,
+      "status_for_proposal_only": "optimal"
+    },
+    {
+      "affine_rank": 11,
+      "exact_free_weights": [
+        "-1/2",
+        "-1",
+        "21/2",
+        "339/2",
+        "11",
+        "351/2"
+      ],
+      "free_pairs": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "n": 9,
+      "proposal_elapsed_seconds": 0.06071708002127707,
+      "status_for_proposal_only": "optimal"
+    },
+    {
+      "affine_rank": 11,
+      "exact_free_weights": [
+        "2",
+        "0",
+        "7/2",
+        "103/2",
+        "0",
+        "33",
+        "391/2",
+        "427/2"
+      ],
+      "free_pairs": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "n": 10,
+      "proposal_elapsed_seconds": 0.08458147797500715,
+      "status_for_proposal_only": "optimal"
+    },
+    {
+      "affine_rank": 11,
+      "exact_free_weights": [
+        "11/7",
+        "-5/7",
+        "51/10",
+        "156/7",
+        "39/10",
+        "7",
+        "679/9",
+        "323/5",
+        "1731/10"
+      ],
+      "free_pairs": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "n": 11,
+      "proposal_elapsed_seconds": 0.10194829304236919,
+      "status_for_proposal_only": "optimal"
+    }
+  ],
+  "claim_scope": "Exact recovered tables at n8,9,10,11; optimizer output is discovery only",
+  "clarabel": "0.11.1",
+  "cvxpy": "1.7.4",
+  "exact_acceptance": "All affine identities, complete-sector seed PSD/ranks, projected lower floor1, upper floor1/4, then repaired midpoint/endpoint and cap1/8; integer Bareiss plus rational Schur",
+  "exact_runtime_python": "3.12.14",
+  "finite_results_are_not_the_infinite_n_ge_12_bridge": true,
+  "full_original_optimized_python_replay_not_performed": true,
+  "full_original_run_performed_once": true,
+  "full_validation": {
+    "completed": true,
+    "exit_code": 0,
+    "guard_seconds": 480,
+    "max_rss_KiB": 53464,
+    "optimized": false,
+    "seconds": 309.35766963200876,
+    "stdout": "",
+    "threads": 1
+  },
+  "normal_optimized_blocks_and_controls_byte_identical": true,
+  "per_proposal_guard_seconds": 30,
+  "per_proposal_max_iter": 200,
+  "proposal_constraints": "Centered/star affine weights; metric-compressed seed lower floor optimized; upper seed floor1/2 imposed numerically",
+  "role": "researcher",
+  "threads": 1,
+  "useful_baseline_replay": {
+    "literal_lift": {
+      "N": 42,
+      "endpoint": "1/66",
+      "harmonic_action_columns": 9,
+      "lower_rank": 36,
+      "n": 6,
+      "r": 3,
+      "upper_rank": 41
+    },
+    "stable_rank_six": {
+      "N": 2510,
+      "gap": "2068/3105",
+      "harmonic_sectors": 7,
+      "n": 12,
+      "r": 6,
+      "repairs": [
+        {
+          "lower_core_rank": 2497,
+          "t": "1/2070",
+          "upper_core_rank": 2509
+        },
+        {
+          "lower_core_rank": 2497,
+          "t": "1/1035",
+          "upper_core_rank": 2509
+        }
+      ],
+      "s": 1024,
+      "strict_moment_difference_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    }
+  }
+}
