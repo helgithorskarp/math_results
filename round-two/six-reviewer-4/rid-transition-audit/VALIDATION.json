@@ -1,0 +1,114 @@
+{
+  "actual_reviewer": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "independent_emission": {
+    "seconds": 3.1087781980168074,
+    "returncode": 0,
+    "stderr": "",
+    "peak_rss_upper_kib": 20616,
+    "guard_seconds": 40,
+    "bytes": 38198,
+    "sha256": "cfeab719f91f8fb52e4fa7e505ef076dde9b28f785ecdb17830d6b618f9990de"
+  },
+  "independent_final_runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scratch/publication/round-two/six-reviewer-4/rid-transition-audit/check.py"
+      ],
+      "seconds": 3.1216056889970787,
+      "guard_seconds": 40,
+      "returncode": 0,
+      "stdout": "PASS\n",
+      "stderr": "",
+      "peak_rss_upper_kib": 20524
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "scratch/publication/round-two/six-reviewer-4/rid-transition-audit/check.py"
+      ],
+      "seconds": 3.3775162320234813,
+      "guard_seconds": 40,
+      "returncode": 0,
+      "stdout": "PASS\n",
+      "stderr": "",
+      "peak_rss_upper_kib": 21424
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scratch/publication/round-two/six-reviewer-4/rid-transition-audit/compare.py",
+        "scratch/pass14-native-normal.json",
+        "--controls"
+      ],
+      "seconds": 0.12419610103825107,
+      "guard_seconds": 40,
+      "returncode": 0,
+      "stdout": "{\n  \"all_tangent_and_equatorial_minor_face_originals_match\": true,\n  \"all_three_physical_piece_coefficients_match\": true,\n  \"both_family_widths_areas_ratios_and_new_bootstrap_match\": true,\n  \"damaged_records_rejected\": [\n    \"missing_area_piece\",\n    \"duplicate_family\",\n    \"wrong_kink\",\n    \"altered_width\",\n    \"boolean_minor_factor\",\n    \"wrong_mirror_cosine\",\n    \"missing_actual_E\",\n    \"altered_actual_face_original\"\n  ],\n  \"entire_example_and_named_cover_fields_match\": true,\n  \"shared_exact_field_values_compared\": 93,\n  \"trust\": \"Partial decoded mathematical-entry comparison only. Independent checker computes its whole record separately; author full record replay is separately reported.\"\n}\n",
+      "stderr": "",
+      "peak_rss_upper_kib": 21424
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "scratch/publication/round-two/six-reviewer-4/rid-transition-audit/compare.py",
+        "scratch/pass14-native-normal.json",
+        "--controls"
+      ],
+      "seconds": 0.2781197680160403,
+      "guard_seconds": 40,
+      "returncode": 0,
+      "stdout": "{\n  \"all_tangent_and_equatorial_minor_face_originals_match\": true,\n  \"all_three_physical_piece_coefficients_match\": true,\n  \"both_family_widths_areas_ratios_and_new_bootstrap_match\": true,\n  \"damaged_records_rejected\": [\n    \"missing_area_piece\",\n    \"duplicate_family\",\n    \"wrong_kink\",\n    \"altered_width\",\n    \"boolean_minor_factor\",\n    \"wrong_mirror_cosine\",\n    \"missing_actual_E\",\n    \"altered_actual_face_original\"\n  ],\n  \"entire_example_and_named_cover_fields_match\": true,\n  \"shared_exact_field_values_compared\": 93,\n  \"trust\": \"Partial decoded mathematical-entry comparison only. Independent checker computes its whole record separately; author full record replay is separately reported.\"\n}\n",
+      "stderr": "",
+      "peak_rss_upper_kib": 21424
+    }
+  ],
+  "native_runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scratch/pass14-native/rid_cauchy_transition_cones/check.py"
+      ],
+      "seconds": 19.72366682998836,
+      "guard_seconds": 40,
+      "returncode": 0,
+      "stderr": "",
+      "peak_rss_upper_kib": 22028,
+      "bytes": 11516,
+      "sha256": "1397503861a7bb8bbeac0fa7bfff19c456e3cb2b28197efafeb18c18eede1f15",
+      "whole_expected_matches": true
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "scratch/pass14-native/rid_cauchy_transition_cones/check.py"
+      ],
+      "seconds": 20.386907552019693,
+      "guard_seconds": 40,
+      "returncode": 0,
+      "stderr": "",
+      "peak_rss_upper_kib": 25304,
+      "bytes": 11516,
+      "sha256": "1397503861a7bb8bbeac0fa7bfff19c456e3cb2b28197efafeb18c18eede1f15",
+      "whole_expected_matches": true
+    }
+  ],
+  "numerical_threads": 1,
+  "cpu_intensive_jobs_at_once": 1,
+  "resource_scope": "oneCPU/2GiB; unchanged",
+  "timeouts": [],
+  "independent_whole_record_bytes": 38198,
+  "independent_whole_record_sha256": "cfeab719f91f8fb52e4fa7e505ef076dde9b28f785ecdb17830d6b618f9990de",
+  "trust": "Ordinary unformalized continuum proof plus exact finite hypotheses. Optional93-field comparison is partial, separately from whole independent and author records."
+}
