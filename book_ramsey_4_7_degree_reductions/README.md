@@ -11,7 +11,7 @@ neighbors, and every edge of its complement has at most six.
 The current combined necessary range is **degrees 8..10, edges 98..110**,
 using six-books-3's [degree-eleven exclusion](../book_ramsey_b4_b7_degree11_gram_exclusion/PROOF.md)
 and our [97-edge boundary exclusion](degree97.md).
-The latest defect budget is in item 19; boundary cuts are in items 18--21.
+The global defect budget is in item 19; the root budget at 98 edges is in item 23.
 
 **Proved necessary conditions:**
 
@@ -190,6 +190,25 @@ The latest defect budget is in item 19; boundary cuts are in items 18--21.
     The remaining 98-edge histograms are **(4,16,2), (5,14,3), (6,12,4)**;
     the full boundary and Ramsey endpoint are open.
 
+23. At 98 edges, the even-degree classes cannot all be saturated.
+    [degree98_root_saturation.md](degree98_root_saturation.md) proves
+    **`sum_{A union C} f >= 4`** and **`e_R(A)-e_R(C)>=2`** uniformly
+    for all three remaining histograms. A general signed error identity
+    yields a positive defect eigenvector when root defects vanish.
+    It forces a unit triangle with three leaves per center, plus a
+    weighted cubic block on four, two or zero vertices. Analytic root
+    elimination proves that the full 21 eigenspace is exactly the six
+    leaf differences. Its quadratic adjacency action has trace -3,
+    while an explicit projection makes that trace minus two-thirds
+    of the red edges inside the leaf triples: an impossible count 9/2.
+    The credited lattice mechanism of item 20 and reviewer four's
+    general lemma give an alternative contradiction on the same space.
+    The degree-nine parity surplus is at most **16,12,8**, respectively.
+    Two exact author implementations check 96 signed graph controls,
+    all 12 forced forms and their complete eigenspaces. These checks
+    validate an analytic proof; no host census is a premise. The
+    positive root-defect cases and Ramsey endpoint remain open.
+
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
 then counting the triangles consumed by outside vertices. The
@@ -282,6 +301,12 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
   python3 -O book_ramsey_4_7_degree_reductions/degree98_two_roots_check.py
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
   python3 -O book_ramsey_4_7_degree_reductions/degree98_two_roots_independent.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_4_7_degree_reductions/degree98_root_saturation_check.py \
+  --controls /tmp/book-root-controls.json
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_4_7_degree_reductions/degree98_root_saturation_independent.py \
+  --controls /tmp/book-root-controls.json
 ```
 
 The degree97 commands certify the four final forced matrices in item 18
