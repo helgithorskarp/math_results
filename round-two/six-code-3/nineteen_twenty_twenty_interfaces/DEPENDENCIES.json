@@ -1,0 +1,88 @@
+{
+  "agent": "six-code-3",
+  "literature": [
+    {
+      "scope": "Maintained external bounds table69--72",
+      "url": "https://aeb.win.tue.nl/codes/Andw.html"
+    },
+    {
+      "scope": "Aw--Chee--Ling2003,Theorem1/AppendixA, known69 construction",
+      "url": "https://ymchee66.github.io/home/PDF/6cwc.pdf"
+    },
+    {
+      "scope": "Baseline69 fixture",
+      "sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+      "url": "https://aeb.win.tue.nl/codes/cwc/d6/a18.6.5.69"
+    }
+  ],
+  "mathematical_premise": {
+    "artifact_ref": "bafkreigcg7dkxtl5ady54clyawxu2bpctj7qqyow5qx2fycla2qm4aiml4",
+    "graph_height": 8537,
+    "manifest": "../nineteen_star_classification/expected.json",
+    "manifest_sha256": "83adc2817c988fa4450ede02c7da09b4da857e3f1850a0b0d0dee4cfd4a24bca",
+    "name": "Complete marked nineteen-star census",
+    "reader": "../nineteen_star_classification/PROOF.md",
+    "scope": "All46 marked types with a positive low-low leave; no cold re-enumeration of1374 prior packings in this contribution.",
+    "source_commit": "4c6b7abd85932d7c113c50843cbe11e49915e673"
+  },
+  "premise_review": {
+    "agent": "six-reviewer-2",
+    "artifact_ref": "bafkreigwxizlsmaqrzaha25uvkdymf2ae6g5iiblyflmx5rpyi4zz5vpoi",
+    "graph_height": 8623,
+    "reader": "../../six-reviewer-2/nineteen-star-audit/REVIEW.md",
+    "scope": "Confirms the imported census; does not review this new result.",
+    "source_commit": "b34cf0e1421ec2035c1788a5ab43af72511ec0a0"
+  },
+  "prior_context": [
+    {
+      "artifact_ref": "bafkreicgvyygngy3mrppjg43a7b6dw6k4hkqnfi2j2xvpq5m5ghoxfbeka",
+      "graph_height": 8627,
+      "reader": "../three_nineteen_zero_triples/PROOF.md",
+      "scope": "Source predicates and generic clique helpers only; its m2 bound is not a mathematical premise.",
+      "source_commit": "eabc8c23608b65585f6c376d02a2fc27e26440c8"
+    },
+    {
+      "artifact_ref": "bafkreif425ygy4oytuwkybf7r2zqrexd6674nlyvcvgz6mageu6hui3qk4",
+      "graph_height": 8696,
+      "reader": "../three_nineteen_uncovered_triples/PROOF.md",
+      "scope": "Native protocol/engine source and adjacent three19-center context; its bound63 is not a premise.",
+      "source_commit": "6f06d3950a4ab093e1bc45c50bad7d876b248eed"
+    },
+    {
+      "artifact_ref": "bafkreibf3a2hbxxnlqvn2grzcpucwd2mwfuuxmxpv2cgkkisy4p4xkp5oe",
+      "graph_height": 8287,
+      "reader": "../../../constant_weight_18_6_5_equality_structure/UPPER71.md",
+      "scope": "Campaign upper71 context only.",
+      "source_commit": "152fd9a715e46a51364a91b1fd67349dced849f0"
+    }
+  ],
+  "problem": "A(18,6,5)",
+  "proof_status": "All46 primary and independent literal/pivot cases completed; all77 exact residual colorings and literal67 witness verified. Ordinary completeness bridges unformalized; new independent mathematical peer review and historical priority pending.",
+  "role": "researcher",
+  "source_helpers": [
+    {
+      "reader": "../three_nineteen_zero_triples/produce.py",
+      "scope": "Integer-mask predicates, base graph, generic colored clique routine and serialization.",
+      "sha256": "3e0611eaf25d34bc88d476880c71d548aadff6b02cafd0481ecfafaa19d8b195",
+      "source_commit": "eabc8c23608b65585f6c376d02a2fc27e26440c8"
+    },
+    {
+      "reader": "../three_nineteen_zero_triples/verify.py",
+      "scope": "Separate literal predicates, injection decoder, private graph reconstruction and serialization.",
+      "sha256": "c9f63e88d033595c3be6c4144a689945d2f425773a28f3badfb83a6d5566891e",
+      "source_commit": "eabc8c23608b65585f6c376d02a2fc27e26440c8"
+    },
+    {
+      "reader": "../three_nineteen_uncovered_triples/native.py",
+      "scope": "Copied bounded native query protocol.",
+      "sha256": "9f466e90c9cdf2381e83689a13ad2fd3bd1cce5f1e36acd7f1fe24bd54d151ff",
+      "source_commit": "6f06d3950a4ab093e1bc45c50bad7d876b248eed"
+    },
+    {
+      "reader": "../three_nineteen_uncovered_triples/clique_server.cpp",
+      "scope": "Copied maximal-clique engine/parser; new descending proper-color negative bound added here.",
+      "sha256": "60cc8d8029b3ba779d05eb7d0647afff400631c2e99550677c023edb191f75e1",
+      "source_commit": "6f06d3950a4ab093e1bc45c50bad7d876b248eed"
+    }
+  ]
+}
