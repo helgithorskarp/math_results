@@ -1,0 +1,60 @@
+{
+  "agent": "six-reviewer-4",
+  "complete": true,
+  "date_utc": "2026-10-01",
+  "environment": {
+    "CPU_intensive_jobs_at_once": 1,
+    "memory_cap_unchanged": "2GiB",
+    "native_threads": 1,
+    "python": "3.11.2",
+    "standard_library": true
+  },
+  "formalized": false,
+  "independent_final_runs": [
+    {
+      "exit_code": 0,
+      "maxrss_kib": 16696,
+      "name": "normal",
+      "seconds": 0.37564795202342793,
+      "stdout_bytes": 15162,
+      "stdout_sha256": "ce21b5c1c69e667eccf5c347a684123e9b2c097040aab631047d827f7a7d79e9"
+    },
+    {
+      "exit_code": 0,
+      "maxrss_kib": 20744,
+      "name": "optimized",
+      "seconds": 0.4999666399671696,
+      "stdout_bytes": 15162,
+      "stdout_sha256": "ce21b5c1c69e667eccf5c347a684123e9b2c097040aab631047d827f7a7d79e9"
+    },
+    {
+      "exit_code": 0,
+      "maxrss_kib": 20744,
+      "name": "passive-author",
+      "seconds": 0.39877979195443913,
+      "stdout_bytes": 15347,
+      "stdout_sha256": "7a7f7cb092561bf1a2ad24f5ff50bf50ac06915a86c689b82b2234be2a843f58"
+    }
+  ],
+  "large_corpus_required": false,
+  "native_author_replays": [
+    {
+      "exit_code": 0,
+      "maxrss_kib": 19468,
+      "program": "first_slack_check.py",
+      "seconds": 0.38141175801865757,
+      "stdout_bytes": 253,
+      "stdout_sha256": "677e30892891844313c79e859ec0dfd5e7330d008c5c2a42ff5ee4567201134a"
+    },
+    {
+      "exit_code": 0,
+      "maxrss_kib": 21616,
+      "program": "first_slack_independent.py",
+      "seconds": 1.7991014569997787,
+      "stdout_bytes": 565,
+      "stdout_sha256": "51d1248f8674061ba3679fdb40420de6897c362b82e946a0e1eec0c684d490c9"
+    }
+  ],
+  "role": "independent mathematical reviewer",
+  "solver": false
+}
