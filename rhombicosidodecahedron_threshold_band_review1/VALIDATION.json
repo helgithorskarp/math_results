@@ -1,0 +1,78 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "python_version": "Python 3.11.2",
+  "independent": {
+    "runs": [
+      {
+        "mode": "normal",
+        "elapsed_seconds": 9.079280887031928,
+        "bytes": 8758,
+        "sha256": "e61385cf28ac6e2527f36d3b64f7869311b3f79917db3b893973e96f129139df"
+      },
+      {
+        "mode": "optimized",
+        "elapsed_seconds": 9.179263081983663,
+        "bytes": 8758,
+        "sha256": "e61385cf28ac6e2527f36d3b64f7869311b3f79917db3b893973e96f129139df"
+      }
+    ],
+    "child_peak_rss_kib": 20160,
+    "outputs_identical": true
+  },
+  "author_replay": {
+    "returncode": 0,
+    "elapsed_seconds": 24.680536556988955,
+    "child_peak_rss_kib": 26796,
+    "stdout_bytes": 465,
+    "stdout_sha256": "1579db69cf1c15ddca45d51d6da8dfd6d1b18cf2414b856d8c51fe087fd18926",
+    "stdout_is_compact_summary": true,
+    "full_expected_comparison": "Checker explicitly compares all97277 bytes internally; summary hash and status verified",
+    "summary": {
+      "GLOBAL_receiving_height": "83/200",
+      "GLOBAL_squared_height_gap": "1/28",
+      "bytes": 97277,
+      "closed_axis_leaves": 198,
+      "complete_pool_assignments": 6144,
+      "global_RID": "OPEN",
+      "malformed_controls_rejected": 36,
+      "original_displacement_identities": 158,
+      "original_supports": 9480,
+      "proper_threshold_class_pairings": 4,
+      "sha256": "e619a294e94e3c191049db309490b000833982e2cb6645890e69fa220afb6aa5",
+      "status": "verified_every_expected_byte",
+      "strict_coefficients": 9906
+    }
+  },
+  "author_source_commit": "6fbe50d0b130848b62786212c29dbfd307383a3a",
+  "fixture_source": "32 endpoint/edge pairs from global_band83_expected.json;168 leaf witnesses from global_band83_inputs.json; all independently validated",
+  "global_verdict": "not audited; outside scope",
+  "resources": "native numerical threads1; one CPU-intensive process at a time; unchanged1CPU2GiB;90s own/55s author guards",
+  "final_isolated_runs": {
+    "runs": [
+      {
+        "mode": "isolated normal",
+        "elapsed_seconds": 9.59943917702185,
+        "summary": {
+          "complete_signed_assignments": 6144,
+          "result": "PASS",
+          "sha256": "e61385cf28ac6e2527f36d3b64f7869311b3f79917db3b893973e96f129139df",
+          "strict_coefficients": 8736,
+          "threshold_leaves": 168
+        }
+      },
+      {
+        "mode": "isolated optimized",
+        "elapsed_seconds": 10.308000338962302,
+        "summary": {
+          "complete_signed_assignments": 6144,
+          "result": "PASS",
+          "sha256": "e61385cf28ac6e2527f36d3b64f7869311b3f79917db3b893973e96f129139df",
+          "strict_coefficients": 8736,
+          "threshold_leaves": 168
+        }
+      }
+    ],
+    "child_peak_rss_kib": 20640
+  }
+}
