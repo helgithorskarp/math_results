@@ -9,6 +9,16 @@ total**. An orbit pair is uniform when all four cross edges between its
 two two-vertex orbits have one color. Inside-orbit colors and matching
 signs are arbitrary, and every such involution is covered.
 
+[REGULAR.md](REGULAR.md) adds a red-triangle budget: **any entirely
+matching orbit forces at most ninety red triangles**, analytically and
+at arbitrary density. The reviewed computer-assisted regular codegree
+theorem forces at least ninety-six triangles in a ten-regular candidate.
+Consequently a **ten-regular** candidate has full uniform support eleven,
+**at least eight red pairs, b>=r and at least sixteen uniform pairs**.
+At total sixteen all inside edges are blue. Its three necessary degree
+profiles have unresolved feasibility. The regular corollary imports the
+explicit reviewed computation; its new counting argument awaits review.
+
 [ELEVEN.md](ELEVEN.md) analytically excludes the last **three red/seven
 blue** equality profile. Full support and a blue-leaf restriction leave
 six blue forms by a written degree argument. Matching-square and uniform
@@ -103,6 +113,9 @@ disjoint-two-red-chord X case and rederives it for completeness.
 The new one-matching-orbit/tradeoff extension likewise has author checks
 and no independent peer-review verdict.
 The new analytic eleven-total extension also awaits independent review.
+The triangle-budget and regular-density extension likewise has no new
+independent review verdict; its positive-codegree premise was confirmed
+by [six-reviewer-4](../book_ramsey_regular110_review4/REVIEW.md).
 
 FOUR_BLUE.md also gives a local path-core exclusion: its five displayed
 orbits have four blue and three red uniform pairs, all core-to-outside
@@ -115,12 +128,43 @@ matching, while all fifteen blocks within the six-orbit outside set
 are arbitrary. Eight analytic chord cases exclude this entire local
 family, without the global minima or finite reduction as premises.
 
-The unrestricted located interval remains 22..23. This result does not
-assert an involution for arbitrary hypothetical 22-vertex witnesses, or
-exclude patterns with eleven or more uniform pairs satisfying these
-color and support bounds. No regularity, degree/core theorem, external graph
-catalogue, solver or floating-point premise is used. Author checks are
+The unrestricted located interval remains 22..23. An involution in every
+hypothetical 22-vertex witness is not asserted. The general-density
+conclusions through ELEVEN.md leave denser uniform patterns open.
+The general-density theorems through ELEVEN.md
+have no regularity or unrestricted degree/core theorem premise.
+REGULAR.md identifies its reviewed computer-assisted regular premise.
+No external graph catalogue, solver or floating-point premise is used
+in the new controls. Author checks are
 not peer review or proof-assistant formalization.
+
+## Controls for the triangle budget and regular corollary
+
+Python3.11+ standard library only. From the repository root:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_b4_b7_free_involution/regular_controls.py
+```
+
+[regular_controls.py](regular_controls.py) imports no campaign or premise
+program, and its output matches [regular_expected.json](regular_expected.json).
+Literal triples and page counts check the triangle identity on2977
+lifted graphs from three cubic templates, both h inside colors and all
+sampled red/blue density counts. They also check89310 same-layer red
+spines and119080 saturated h spines. The sharp ninety-triangle necessary
+control violates other red caps and is not a Ramsey witness.
+
+A further72 arbitrary lifts check1584 actual degrees,792 inside spines,
+1008 enhanced red-neighborhood-union sums and2001 matching-square sums.
+An integer-partition and literal inside-mask domain covers all6144
+words in the low-red-density degree cases;39 pass the attachment bound.
+The written red-leaf count and2016 complete center-neighbor lists exclude
+them. Three equality-degree profiles remain at r=b=8. These controls
+validate written counting and add no finite-computation premise.
+The regular corollary retains the reviewed 46,411-state theorem's trust
+boundary. The triangle-budget lemma is wholly analytic. No full host,
+cubic-skeleton or matching-sign census is claimed.
 
 ## Controls for the analytic eleven-total proof
 
