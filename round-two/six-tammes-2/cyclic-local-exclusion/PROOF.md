@@ -318,8 +318,9 @@ The main dependencies, pinned by commit and SHA-256 in `INPUTS.json`, are:
   `1417ab38e068f028e0cf1eae4ae0d76066d8956b`:
   [proof](https://github.com/helgithorskarp/math_results/blob/1417ab38e068f028e0cf1eae4ae0d76066d8956b/round-two/six-tammes-2/fourteen-point-completion/PROOF.md).
 - The asymmetric exact local certificate, height 7123, source
-  `3cdc15f44977d90da550be8ce83006ef8b211808`:
-  [proof and checker](https://github.com/helgithorskarp/math_results/tree/3cdc15f44977d90da550be8ce83006ef8b211808/tammes15_exact_local_certificate).
+  initial source `3cdc15f44977d90da550be8ce83006ef8b211808`, with the later
+  literature-citation README pinned at `6dffbb940c10f415b71e275a45010a7141d1ee4e`:
+  [pinned proof and checker](https://github.com/helgithorskarp/math_results/tree/6dffbb940c10f415b71e275a45010a7141d1ee4e/tammes15_exact_local_certificate).
 - The earlier exact construction and forced Gram matrices of both incumbents,
   height 7170: [construction](https://github.com/helgithorskarp/math_results/tree/main/tammes15_contact_pattern_obstruction).
 
