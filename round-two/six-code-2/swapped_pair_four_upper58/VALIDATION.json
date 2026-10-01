@@ -1,0 +1,120 @@
+{
+  "agent": "six-code-2",
+  "all23_raw_fixture_files_byte_equal": true,
+  "all8_native_cases_checked_in_both_modes": true,
+  "expected_sha256": "5073496a9f75fa934177f2270e735918bc323e456db4c2759240bd0894fe5748",
+  "max_child_peak_RSS_kib": 206172,
+  "normal": {
+    "agent": "six-code-2",
+    "child_peak_RSS_kib": 104892,
+    "expected_sha256": "5073496a9f75fa934177f2270e735918bc323e456db4c2759240bd0894fe5748",
+    "optimized_python": false,
+    "own_peak_RSS_kib": 24588,
+    "python": "3.11.2",
+    "role": "researcher",
+    "sanitized_native": false,
+    "seconds": 20.558548729051836,
+    "stages": [
+      {
+        "script": "run.py",
+        "seconds": 15.016402437991928
+      },
+      {
+        "script": "replay_groups.py",
+        "seconds": 1.9737425709608942
+      },
+      {
+        "script": "quotient4.py",
+        "seconds": 0.3321936689899303
+      },
+      {
+        "script": "complete4.py",
+        "seconds": 0.8809075349709019
+      },
+      {
+        "script": "native4.py",
+        "seconds": 2.1533679559943266
+      },
+      {
+        "script": "check_coverage.py",
+        "seconds": 0.0814985409961082
+      }
+    ],
+    "status": "COMPLETE"
+  },
+  "optimized_full_sanitizer": {
+    "agent": "six-code-2",
+    "child_peak_RSS_kib": 206172,
+    "expected_sha256": "5073496a9f75fa934177f2270e735918bc323e456db4c2759240bd0894fe5748",
+    "optimized_python": true,
+    "own_peak_RSS_kib": 27928,
+    "python": "3.11.2",
+    "role": "researcher",
+    "sanitized_native": true,
+    "seconds": 24.678714458015747,
+    "stages": [
+      {
+        "script": "run.py",
+        "seconds": 14.049692749977112
+      },
+      {
+        "script": "replay_groups.py",
+        "seconds": 1.9078729079919867
+      },
+      {
+        "script": "quotient4.py",
+        "seconds": 0.4697055710130371
+      },
+      {
+        "script": "complete4.py",
+        "seconds": 0.9578766559716314
+      },
+      {
+        "script": "native4.py",
+        "seconds": 6.94133076799335
+      },
+      {
+        "script": "check_coverage.py",
+        "seconds": 0.2208964189630933
+      }
+    ],
+    "status": "COMPLETE"
+  },
+  "prior_experimental_validation": {
+    "all23_carrier_files_byte_equal_normal_optimized": true,
+    "all8_native_records_equal_normal_optimized_sanitized": true,
+    "all8_native_sanitized_cases": true,
+    "all8_positive_roots_and_weighted_readouts_equal_normal_optimized": true,
+    "damage_controls": [
+      "omitted-zero-valid-fixture",
+      "omitted-positive-map",
+      "omitted-root",
+      "false-transport",
+      "duplicate-witness-word",
+      "wrong-weight",
+      "fixed-centers",
+      "false-degree",
+      "point-node-guard"
+    ],
+    "max_child_peak_RSS_kib": 206152,
+    "native_nodes": 2591,
+    "native_seconds": 1.9515143290045671,
+    "native_small_controls": 6144,
+    "quotient_seconds": 0.2532047449494712,
+    "raw_peak_RSS_kib": 22844,
+    "raw_seconds_normal": 14.413853508012835,
+    "raw_seconds_optimized": 13.907781083020382,
+    "residual_expanded_vertex_range": [
+      75,
+      130
+    ],
+    "sanitized_native_seconds": 6.656259459967259,
+    "weighted_nodes": 826,
+    "weighted_seconds": 0.7858037389814854,
+    "weighted_small_controls": 1099
+  },
+  "role": "researcher",
+  "stable_records_byte_equal": true,
+  "status": "AUTHOR_COMPLETE_COLD_NORMAL_AND_OPTIMIZED_FULL_NATIVE_SANITIZER",
+  "trust": "Author checks; imported classification and ordinary bridges remain; independent review of this new result unclaimed."
+}
