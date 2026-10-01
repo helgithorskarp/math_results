@@ -1,0 +1,117 @@
+{
+  "agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "all_passed": true,
+  "final_runs": [
+    {
+      "name": "native-primary",
+      "exit_code": 0,
+      "seconds": 2.597019277047366,
+      "maxrss_KiB": 42444,
+      "stdout_sha256": "2dea2caeed0aced155ce24ba66f4ef450fd864ed03aa1ee96664b7dd255f5509"
+    },
+    {
+      "name": "native-separate",
+      "exit_code": 0,
+      "seconds": 15.587402221979573,
+      "maxrss_KiB": 56232,
+      "stdout_sha256": "681cda504ae04cd7e9df93e873f7f108b38b813b3919ce5a4e8651fb083c3106"
+    },
+    {
+      "name": "reviewer-normal",
+      "exit_code": 0,
+      "seconds": 7.133848264988046,
+      "maxrss_KiB": 35212,
+      "stdout_sha256": "ca6da5bec54051544bc89d77fcdca6566f05b84f2a8c85a139f4aeb1e43d86be"
+    },
+    {
+      "name": "reviewer-optimized",
+      "exit_code": 0,
+      "seconds": 7.1775198460090905,
+      "maxrss_KiB": 38008,
+      "stdout_sha256": "ca6da5bec54051544bc89d77fcdca6566f05b84f2a8c85a139f4aeb1e43d86be"
+    }
+  ],
+  "normal_optimized_byte_identical": true,
+  "complete_standalone_expected_bytes": 8604,
+  "complete_standalone_expected_sha256": "a5e33379547d45c7f479c57cb7c27c3480a3847f7713dfdf982bfc32bde60037",
+  "optional_native_record_comparison": {
+    "all_passed": true,
+    "full_F_and_H_entries_authenticated": 1075448,
+    "records_compared": 1111,
+    "source_data_selected_independent_domain": false
+  },
+  "optional_literal_matrix_comparison": {
+    "all_passed": true,
+    "literal_entries_compared": 1075448,
+    "records_compared": 1111,
+    "source_data_selected_independent_domain": false
+  },
+  "independent_boundary_controls": {
+    "agent": "six-reviewer-4",
+    "all_passed": true,
+    "canonical_relabelings": 24,
+    "credited_baseline21_edges": 93,
+    "credited_baseline21_max_pages": [
+      3,
+      6
+    ],
+    "incomplete_CRT_rejected": true,
+    "rational33_symmetry_boundary_checked": true,
+    "reducible_quotient_boundary_checked": true,
+    "role": "independent mathematical reviewer",
+    "small_irreducible_field_positive_traces": [
+      -7,
+      -3,
+      3,
+      7
+    ]
+  },
+  "primary_baseline_validation": {
+    "primary_URL": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "primary_original_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+    "matrix_decoding": "Leading21x21JSON matrix; trailing research metadata excluded.",
+    "all441_complemented_entries_equal": true,
+    "baseline21_fixture_sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec"
+  },
+  "native_separate_replay": {
+    "complete": true,
+    "separate_domain": "ordered compositions and unit-edge multisets",
+    "profiles": [
+      51,
+      51
+    ],
+    "forms": [
+      768,
+      343
+    ],
+    "all_ordered_type_cores": [
+      8375,
+      3847
+    ],
+    "positive_nonsquare": 1108,
+    "square_cases": 3,
+    "adjacency_survivors": 0,
+    "full_F_H_entry_comparison": true,
+    "corruptions_rejected": [
+      "missing form",
+      "duplicate form",
+      "wrong center weight",
+      "wrong orbit",
+      "wrong determinant",
+      "wrong floor root",
+      "wrong matrix digest",
+      "wrong histogram",
+      "omitted profile",
+      "missing square",
+      "wrong plane rank",
+      "wrong norm residue",
+      "wrong image rank",
+      "false divisible incidence",
+      "wrong quotient",
+      "wrong rational root",
+      "changed signed mask",
+      "full matrix loop"
+    ]
+  }
+}
