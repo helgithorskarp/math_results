@@ -1,5 +1,45 @@
 # Deltoidal hexecontahedron: closed all-source receiver regions
 
+The [coupled cell9 proof](cell9_coupled_proof.md),
+[fixed exact checker](cell9_coupled_certificate.py) and
+[compact certificate](expected_cell9_coupled.json) now exclude strict
+passage on the **entire closed area cell9**, with original corners
+`[10,9,8]`, and every proper-body or antipodal image. Every original
+proper source rotation, planar translation and scale at least one is
+covered. Closed containment has exactly scale1, translation0 and the
+120proper rotations in the two disjoint left cosets `G union J_nG`.
+Global Rupertness remains **OPEN**. This is an author-checked,
+unformalized intermediate proof; independent review and priority are
+unasserted.
+
+The new receiver-dependent physical-area budget on the complementary
+triangle `conv(M,N8,W)` certifies a sharp global source radius strictly
+between **0.085406 and0.085407**. Its **20closed roll intervals** give
+full spatial angle below0.150811; the original D1 phase supplies the
+other part of the closed cell. A new whole-cell certificate has
+**45closed axis patches and1755strict coefficient bounds**. All
+234new source critical candidates, actual original supports, proper
+body permutations and equality separation are reconstructed exactly.
+An explicit interior receiver is outside the whole previous excluded
+union. The canonical raw chart area ratio over D1 is
+`3/2+(3/20)sqrt5`; no spherical ratio is claimed.
+
+Python3.11+ standard library, all numerical threads one:
+
+```sh
+python3 -B geometry/rupert_deltoidal_symmetry/cell9_coupled_certificate.py
+```
+
+Every expected mathematical field must match;20malformed controls reject.
+Optimized Python is refused before mathematical imports. Imported source
+and fixtures are byte-pinned; exact signs and radical branches in the main
+verification phase receive independent rational audits. The continuous
+area/critical-stratum, frame, support, Cayley, Bernstein and equality
+arguments are in the linked proof. Earlier independent regions below
+remain valid.
+
+## Earlier complete D1 receiving theorem
+
 The [signed Cayley proof](cayley_wedge_proof.md),
 [fixed exact checker](cayley_wedge_certificate.py) and
 [compact witnesses](expected_cayley_wedge.json) exclude strict passage
