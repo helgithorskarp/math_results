@@ -1,0 +1,182 @@
+{
+  "actual_agent": "six-reviewer-3",
+  "role": "independent mathematical reviewer",
+  "python": "3.12.14",
+  "threads": 1,
+  "per_math_job_guard_seconds": 20,
+  "peak_child_rss_KiB": 22140,
+  "independent_runs": [
+    {
+      "optimized": false,
+      "elapsed_seconds": 0.08100061898585409,
+      "exit": 0,
+      "stdout": "PASS 266 exact checks; 8 damages rejected; full-record SHA256 b68fad64d50e7ee5f05a9c5fdb8850c882d5e015526fc0c48c0674085f8bc9b0\n",
+      "full_frozen_record_match": true,
+      "all_ten_complete_source_fields_match": true
+    },
+    {
+      "optimized": true,
+      "elapsed_seconds": 0.2857757470337674,
+      "exit": 0,
+      "stdout": "PASS 266 exact checks; 8 damages rejected; full-record SHA256 b68fad64d50e7ee5f05a9c5fdb8850c882d5e015526fc0c48c0674085f8bc9b0\n",
+      "full_frozen_record_match": true,
+      "all_ten_complete_source_fields_match": true
+    }
+  ],
+  "independent_complete_record_sha256": "b68fad64d50e7ee5f05a9c5fdb8850c882d5e015526fc0c48c0674085f8bc9b0",
+  "independent_exact_checks": 266,
+  "independent_damaged_conditions_rejected": 8,
+  "external_fixture_failures": [
+    {
+      "optimized": false,
+      "external_fixture": "missing",
+      "exit": 1,
+      "rejected": true
+    },
+    {
+      "optimized": false,
+      "external_fixture": "malformed",
+      "exit": 1,
+      "rejected": true
+    },
+    {
+      "optimized": false,
+      "external_fixture": "altered",
+      "exit": 1,
+      "rejected": true
+    },
+    {
+      "optimized": true,
+      "external_fixture": "missing",
+      "exit": 1,
+      "rejected": true
+    },
+    {
+      "optimized": true,
+      "external_fixture": "malformed",
+      "exit": 1,
+      "rejected": true
+    },
+    {
+      "optimized": true,
+      "external_fixture": "altered",
+      "exit": 1,
+      "rejected": true
+    }
+  ],
+  "ten_complete_source_field_receipts": [
+    {
+      "field": "census",
+      "complete_match": true,
+      "canonical_bytes": 33,
+      "sha256": "761d06df03af29b34fe943e2e3cf338a72908dd53d72360cf927317c73b4bf61"
+    },
+    {
+      "field": "whole_fan_T_sets",
+      "complete_match": true,
+      "canonical_bytes": 66,
+      "sha256": "f9da18ac03dae2e7a5191f09c658bf4a782114b121ec2b8273a6f54cc7908b87"
+    },
+    {
+      "field": "all_adjacent_entries",
+      "complete_match": true,
+      "canonical_bytes": 871,
+      "sha256": "4d7ffadb693491c3f04051b5e0cea0020ed6689154bb6988383be1f47d629d97"
+    },
+    {
+      "field": "all_b1",
+      "complete_match": true,
+      "canonical_bytes": 1478,
+      "sha256": "122d713637fa8f8cc30ec1d23af18697e6ecfc91514b9aefdbd7d6376c90ab48"
+    },
+    {
+      "field": "all_shared_Q",
+      "complete_match": true,
+      "canonical_bytes": 623,
+      "sha256": "3950f12eef07e7e33c4b997bbbfa4b7e28428241f43e9b8f5512516831ace987"
+    },
+    {
+      "field": "all_catalogue_deletion",
+      "complete_match": true,
+      "canonical_bytes": 582,
+      "sha256": "3ed7e3dbaa29d3bc6f3e2b17fca4f38218191272efa6fe5b5563a9c67ed09b9c"
+    },
+    {
+      "field": "original_Q_opposite_aliases",
+      "complete_match": true,
+      "canonical_bytes": 497,
+      "sha256": "cce5b9f0e2a90b8d9b92dd1254c776cbfd3dbbd0d46ee97073e7f15f366220d6"
+    },
+    {
+      "field": "opposite_aliases_sha256",
+      "complete_match": true,
+      "canonical_bytes": 66,
+      "sha256": "c0756cf9218920f2df3260a7fa016b3ee458e33ae73dd882d7c381e90522a4c9"
+    },
+    {
+      "field": "ordered_endpoint_normal_forms",
+      "complete_match": true,
+      "canonical_bytes": 129,
+      "sha256": "b4053116aa644e06ad1bdee0956ce74d7bd14ca73e5e947cbb17a7a0b035b1f9"
+    },
+    {
+      "field": "endpoint_forms_sha256",
+      "complete_match": true,
+      "canonical_bytes": 66,
+      "sha256": "95664b95e4dea3cd1ae2ab3f228e9e7b6ccdd8581162265344c161d7bdf5de45"
+    }
+  ],
+  "original_full_stdout_fixture_reproduction": {
+    "python": "Python 3.12.14",
+    "guard_seconds": 20,
+    "threads": 1,
+    "peak_child_rss_KiB": 21364,
+    "runs": [
+      {
+        "script": "check.py",
+        "optimized": false,
+        "elapsed": 1.3080101229716092,
+        "exit": 0,
+        "full_stdout_sha256": "ed497ac2f3a7eb8473352cea420e2576eecf97fa2f6ea208271bb4a3b933e5e7",
+        "full_fixture_equal": true,
+        "fixture_bytes": 12649
+      },
+      {
+        "script": "check.py",
+        "optimized": true,
+        "elapsed": 1.410723961016629,
+        "exit": 0,
+        "full_stdout_sha256": "ed497ac2f3a7eb8473352cea420e2576eecf97fa2f6ea208271bb4a3b933e5e7",
+        "full_fixture_equal": true,
+        "fixture_bytes": 12649
+      },
+      {
+        "script": "audit.py",
+        "optimized": false,
+        "elapsed": 0.17867384402779862,
+        "exit": 0,
+        "full_stdout_sha256": "0d7bda73b5952d7828c49ce0b4e2fb5708e4ace253e05f18b22b335f6dcaaa21",
+        "full_fixture_equal": true,
+        "fixture_bytes": 9870
+      },
+      {
+        "script": "audit.py",
+        "optimized": true,
+        "elapsed": 0.2662706289556809,
+        "exit": 0,
+        "full_stdout_sha256": "0d7bda73b5952d7828c49ce0b4e2fb5708e4ace253e05f18b22b335f6dcaaa21",
+        "full_fixture_equal": true,
+        "fixture_bytes": 9870
+      }
+    ]
+  },
+  "formalized": false,
+  "trust_boundary": "Whole-record comparison and finite original-role/cycle/alias/endpoint certificates are exact; open-interval continuous local core imported sufficiently reviewed7767; ordinary spherical/face/original-point bridge and catalogue derivations are not formalized.",
+  "public_pinned_download_replay": {
+    "exit": 0,
+    "elapsed_seconds": 9.346979169000406,
+    "stdout": "independent normal 0.083 seconds: PASS 266 exact checks; 8 damages rejected; full-record SHA256 b68fad64d50e7ee5f05a9c5fdb8850c882d5e015526fc0c48c0674085f8bc9b0\nauthor check.py normal 1.292 seconds; complete fixture 12649 bytes\nauthor audit.py normal 0.176 seconds; complete fixture 9870 bytes\nindependent optimized 0.266 seconds: PASS 266 exact checks; 8 damages rejected; full-record SHA256 b68fad64d50e7ee5f05a9c5fdb8850c882d5e015526fc0c48c0674085f8bc9b0\nauthor check.py optimized 1.396 seconds; complete fixture 12649 bytes\nauthor audit.py optimized 0.263 seconds; complete fixture 9870 bytes\nPASS 23 pinned input hashes; ten complete source mathematical fields; six external fixture controls; threads 1; sequential; total 9.258 seconds\n",
+    "stderr": "",
+    "peak_child_rss_KiB": 24316
+  }
+}
