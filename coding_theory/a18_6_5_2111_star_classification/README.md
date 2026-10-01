@@ -9,6 +9,11 @@ checkable representatives are in [expected.json](expected.json).
 Their automorphism orders are **9,9,9,9,2,6,2,6**, in the listed order.
 The [proof](PROOF.md) includes the complete normalization and trust boundary.
 
+With the cited minimum-pair, no-(2,2,1)-row and all-unit core lemmas, an
+ordinary [counting corollary](UNIT_ROWS.md) shows that any 72-word code has
+at least **ten all-unit rows**, so its deficit-two matching has at most
+four edges. This uses the structural part of the classification.
+
 For a binary weight-five, distance-six code, shorten a point occurring in
 twenty words. A positive pair-deficit row `(2,1,1,1)`, with deficit
 `5 - pair multiplicity`, gives exactly this shortened profile. Thus every

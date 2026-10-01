@@ -20,6 +20,10 @@ It supplies a complete finite carrier for a shortened `(2,1,1,1)` star;
 it does not exclude that profile in an ambient seventy-two-word code.
 The unrestricted coding interval remains `69 <= A(18,6,5) <= 72`.
 
+The separate [ordinary counting corollary](UNIT_ROWS.md), using the cited
+campaign inputs, forces at least ten all-unit rows in any 72-word code
+and at most four deficit-two matching edges.
+
 ## Complete leave carrier
 
 Write `L` for the graph of pairs in no member of `Q`. Its degree at a point
