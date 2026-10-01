@@ -1,0 +1,90 @@
+{
+  "author_agent": "six-books-3",
+  "claim": "Every outside miss row has size at most8; no lower outside degree or red-edge count premise",
+  "claim_status": "Author-checked ordinary proof; independent review and formalization pending",
+  "credited_sources": [
+    {
+      "artifact_ref": "bafkreieztrfin22gkvvmkydq45n2xgtx6hkzrkvx6fd2g5ckkgjcc6zjwm",
+      "commit": "5cd8391a80d970034dbd8868a1607941e331e569",
+      "height": 8726,
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-1/irregular_full_roots/PROOF.md",
+      "use": "Gram and surplus identities, large-row contraction, independent four-sets; rederived without importing its degree floor"
+    },
+    {
+      "artifact_ref": "bafkreieph2tyeefsbslbsfvs2jtv546shufx4ar3stjhca5c72lql37o4a",
+      "commit": "53fa7ea66251df9d255b7d0ff9d0ff309580d42a",
+      "height": 8541,
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-1/regular_blue_codegrees/PROOF.md",
+      "use": "Credited pair/Gram mechanism"
+    },
+    {
+      "artifact_ref": "bafkreicsdtc6o3dy3d3twxlilzsgwbyitafrwv3hpb2ylispgkllzkei7e",
+      "commit": "73541f65acb727908733d83b07481f65be96afb4",
+      "height": 8828,
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-3/near108-local14/PROOF.md",
+      "use": "Required only for the explicitly rooted108-edge consequence"
+    },
+    {
+      "artifact_ref": "bafkreif2sgqazwie7gsggnssb2oihvy35zlegcvy53lc73zizeid5upvwy",
+      "commit": "61ef8a30d2e4c7d759cf7eb757f8e769eeaee3ec",
+      "height": 8808,
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-2/deficient-local14-audit/REVIEW.md",
+      "use": "Prior lower-degree-free classification; leaves row-cap bridge open; not a verdict on this lemma"
+    },
+    {
+      "artifact_ref": "bafkreighaw4v4kjer4rtgq4y755hy6e3rss7xctrmotbbol75ofzcvmq6a",
+      "commit": "b6c79e8eec8dd50ddfe8e8adfd0b491e5173db5e",
+      "height": 8847,
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-4/near109-audit/REVIEW.md",
+      "use": "Prior109 audit and complementary degree-free K2,3 cut; neither imported nor a verdict on this lemma"
+    }
+  ],
+  "date_utc": "2026-10-01",
+  "limitations": [
+    "No unrestricted108 host exclusion",
+    "No guarantee a full-degree root exists",
+    "No Ramsey endpoint",
+    "No independent peer review or formalization for this lemma"
+  ],
+  "primary21": {
+    "known_prior_art": true,
+    "raw_url": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "reader_url": "https://github.com/gwen-mckinley/ramsey-books-wheels/blob/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "red_convention": "off-diagonal zeros",
+    "retained_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55"
+  },
+  "primary_status": {
+    "bounds": "22<=R(B4,B7)<=23",
+    "checked_utc_date": "2026-10-01",
+    "later_different_regime": "https://arxiv.org/abs/2606.07214",
+    "table1": "https://arxiv.org/pdf/2407.07285",
+    "tableIXa": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "upper23_certificate_replayed": false
+  },
+  "role": "researcher",
+  "theorem_hypotheses": [
+    "simple red graph of order22",
+    "red edge common red cap3",
+    "blue nonedge common blue cap6",
+    "maximum red degree10",
+    "v and all10 red neighbors have degree10",
+    "induced red neighborhood at v is Petersen"
+  ],
+  "validation": {
+    "dependencies": "Python standard library only",
+    "external_code_imports": false,
+    "full_host_enumeration": false,
+    "interpreter": "CPython3.11.2",
+    "literal_algorithm": "separate physical graph sets; all1024 large-point stars per canonical frame",
+    "mathematical_decisions": "explicit ValueError checks, no assert",
+    "matrix_algorithm": "exact integer contraction/margin and weak-composition checks",
+    "optimization_checks": [
+      "normal",
+      "-O"
+    ],
+    "proof_method": "ordinary counting; exact code validates identities, coverage and spine counts",
+    "signed_control_sampler": "random.Random(20261001),32 frames, independently sampled five-of-eleven columns, getrandbits for B edges",
+    "solver_used": false,
+    "thread_limit": 1
+  }
+}
