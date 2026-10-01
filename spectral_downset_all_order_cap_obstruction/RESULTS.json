@@ -1,0 +1,204 @@
+{
+  "agent": "six-downset-3",
+  "role": "researcher",
+  "status": "Written author-checked unformalized proof, not independently reviewed.",
+  "classification": "For integersn>=4, a capped complement-only H certificate exists iff n=4or5.",
+  "polynomial_certificate": {
+    "domain": "Exact QQ[X,n,n^-1] expansion; cleared result in ZZ[X,n].",
+    "coefficient_monomials": 61,
+    "degrees_X_n": [
+      3,
+      18
+    ],
+    "positive_shift": 8,
+    "positive_coefficient_counts": {
+      "c0": 19,
+      "c2": 16,
+      "c3_lower": 13,
+      "c1_lower": 17
+    },
+    "tail_bound": "P(n,2^n)>=8192*n^12*2^n*(4^n-n^5)>0 for every integern>=8",
+    "induction_base": {
+      "4^8": 65536,
+      "8^5": 32768,
+      "4*8^5": 131072,
+      "9^5": 59049
+    }
+  },
+  "finite_moment_controls": {
+    "orders": [
+      4,
+      80
+    ],
+    "cases": 77,
+    "scope": "Finite moment and radical-domain controls; all-order sign uses the polynomial/induction proof.",
+    "selected_rational_constants": [
+      {
+        "n": "6",
+        "a": "17/36",
+        "V": "3366",
+        "H_lower": "119047675/2239488",
+        "Phi_upper": "-790065757071985/1875724631801856",
+        "beta": "790065757071985/116294927171715072"
+      },
+      {
+        "n": "7",
+        "a": "19/49",
+        "V": "19719",
+        "H_lower": "789327281/6588344",
+        "Phi_upper": "-20108118720013409/1940880656473024",
+        "beta": "20108118720013409/244550962715601024"
+      },
+      {
+        "n": "8",
+        "a": "21/64",
+        "V": "103944",
+        "H_lower": "2135968625/8388608",
+        "Phi_upper": "-12961089303723565585/457150546550194176",
+        "beta": "12961089303723565585/116116238823749320704"
+      },
+      {
+        "n": "11",
+        "a": "27/121",
+        "V": "10948619",
+        "H_lower": "667693584373/311794736",
+        "Phi_upper": "-1990259656428947546166481/8796532878209714764544",
+        "beta": "1990259656428947546166481/17997706268817076408257024"
+      },
+      {
+        "n": "14",
+        "a": "33/196",
+        "V": "929603598",
+        "H_lower": "14418570074935/843308032",
+        "Phi_upper": "-20476995650796303599742200569/13491933421765603306242048",
+        "beta": "20476995650796303599742200569/221024853315364113362857230336"
+      },
+      {
+        "n": "16",
+        "a": "37/256",
+        "V": "17119838224",
+        "H_lower": "73081540373841/1073741824",
+        "Phi_upper": "-1685755081361671555820907675777/308403588184998296122556416",
+        "beta": "1685755081361671555820907675777/20210920748115678338095612166144"
+      },
+      {
+        "n": "32",
+        "a": "69/1024",
+        "V": "147573919432528887840",
+        "H_lower": "600730637770632917297/137438953472",
+        "Phi_upper": "-2141575990682666386558436326644706947231573604129/10889033294904372392706425790614218997760",
+        "beta": "2141575990682666386558436326644706947231573604129/46768041864891336284270622914326162766732659261440"
+      },
+      {
+        "n": "80",
+        "a": "33/1280",
+        "V": "29230032746618058363922701819455793209197849477200",
+        "H_lower": "163327107118219170382239285753664097/134217728000",
+        "Phi_upper": "-7456442044859530782105614864191846547885597906371397523657154695925052314155455716242401569/329100911464241208429293785806333092433084153588887578610761728000000",
+        "beta": "7456442044859530782105614864191846547885597906371397523657154695925052314155455716242401569/397858589127829313722249905123539557251296505542381334079609881333126877329328724508672000000"
+      }
+    ]
+  },
+  "small_capped_baselines": {
+    "attribution": "Existing complement-only feasibility8154, independently confirmed8196; positive controls only.",
+    "cases": [
+      {
+        "n": 4,
+        "N": 11,
+        "s": 4,
+        "common_pair_weight": "2",
+        "core_lower_rank": 5,
+        "full_lower_rank": 6,
+        "upper_rank": 10
+      },
+      {
+        "n": 5,
+        "N": 26,
+        "s": 11,
+        "common_pair_weight": "2",
+        "core_lower_rank": 19,
+        "full_lower_rank": 20,
+        "upper_rank": 25
+      }
+    ]
+  },
+  "literal_generic_dual_derivatives": [
+    {
+      "n": 6,
+      "scope": "all free coefficients",
+      "derivatives": 130,
+      "coefficient_sha256": "2cec556ae663b09d0a03e6db50901d0edbb5a2687ec141dc1da784091ccfa8ca"
+    },
+    {
+      "n": 7,
+      "scope": "all free coefficients",
+      "derivatives": 546,
+      "coefficient_sha256": "f3e68e67b12226e08b38814b3975a188950b8e87543f95ef41e48c54e1a9a63a"
+    },
+    {
+      "n": 11,
+      "scope": "all orbit representatives",
+      "derivatives": 20,
+      "coefficient_sha256": "db3799483e8787c837a9d3b30f4c7f75d6cb46a3ec0aa28d66d3cdf54993d2f7"
+    },
+    {
+      "n": 16,
+      "scope": "all orbit representatives",
+      "derivatives": 49,
+      "coefficient_sha256": "5b4d6c051fe7403f6fe61cfac72af97d522ad39c3ab8066dccd943113f682b7d"
+    }
+  ],
+  "complete_pair_count_controls": [
+    {
+      "n": 4,
+      "free_middle_pairs": 3,
+      "orbits": 1
+    },
+    {
+      "n": 5,
+      "free_middle_pairs": 25,
+      "orbits": 2
+    },
+    {
+      "n": 6,
+      "free_middle_pairs": 130,
+      "orbits": 4
+    },
+    {
+      "n": 7,
+      "free_middle_pairs": 546,
+      "orbits": 6
+    },
+    {
+      "n": 8,
+      "free_middle_pairs": 2037,
+      "orbits": 9
+    },
+    {
+      "n": 9,
+      "free_middle_pairs": 7071,
+      "orbits": 12
+    },
+    {
+      "n": 10,
+      "free_middle_pairs": 23436,
+      "orbits": 16
+    },
+    {
+      "n": 11,
+      "free_middle_pairs": 75328,
+      "orbits": 20
+    }
+  ],
+  "negative_controls": [
+    "wrong_shift",
+    "wrong_denominator_constant",
+    "wrong_denominator_power",
+    "changed_symbolic_coefficient",
+    "false_positive_tail_certificate",
+    "float_coefficient",
+    "decimal_coefficient",
+    "indefinite_zero_diagonal",
+    "invalid_order"
+  ]
+}
