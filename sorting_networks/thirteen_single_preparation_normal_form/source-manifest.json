@@ -1,0 +1,121 @@
+{
+  "schema": "research-source-manifest-v1",
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "environment": {
+    "python": "3.11.2; requires3.11+",
+    "dependencies": "standard library only",
+    "arithmetic": "exact integers",
+    "threads": 1,
+    "simultaneous_intensive_jobs": 1
+  },
+  "scope": "Conditional single-preparation normal form and five-tail class13 reduction; no size44 construction or class13 exclusion.",
+  "canonical_certificate_sha256": "ff106bd32073916b576d3c570aa79e6876e820e88356dd1e0ac27fe6b25138c9",
+  "certificate_file_sha256": "549ee24718640e588fc9701d85c63869ec2c7b8e22f40cecac3310f0759c3f9a",
+  "generator_wall_seconds": 1.44959833601024,
+  "checker_wall_seconds": 17.707178957993165,
+  "positive_checker_output": {
+    "status": "INDEPENDENT_SINGLE_PREPARATION_AND_FIVE_TAILS_VERIFIED",
+    "profile_states": 2214,
+    "profile_edges": 22536,
+    "rank_monoid_counts": [
+      1,
+      2,
+      11,
+      261
+    ],
+    "full11_control_function_equalities": 1214464,
+    "B11_original_inputs": 8192,
+    "domain_assignments": 26624,
+    "actual_marked_obstruction_checks": 274432,
+    "class13_effective_words": 5385,
+    "normalized_prefixes": 288,
+    "remaining_row_budget_pairs": [
+      [
+        51,
+        9
+      ],
+      [
+        54,
+        9
+      ],
+      [
+        56,
+        10
+      ],
+      [
+        56,
+        10
+      ],
+      [
+        59,
+        11
+      ]
+    ]
+  },
+  "child_peak_rss_kib_linux": 58484,
+  "negative_controls": [
+    {
+      "name": "omitted_local_function",
+      "rejected": true,
+      "wall_seconds": 8.239634074969217
+    },
+    {
+      "name": "omitted_nine_image_row",
+      "rejected": true,
+      "wall_seconds": 10.791691721009556
+    },
+    {
+      "name": "erased_activity_obstruction",
+      "rejected": true,
+      "wall_seconds": 10.946634371008258
+    },
+    {
+      "name": "inadmissible_refill_control",
+      "rejected": true,
+      "wall_seconds": 10.37294185400242
+    }
+  ],
+  "source_files": [
+    {
+      "path": ".gitignore",
+      "bytes": 31,
+      "sha256": "3c939f6e03510a3a4f0540aebefe5d5ea8292c99bf5e4f9f9e4c2a074543d65d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4699,
+      "sha256": "685f5507ccb884518eaa4ecb802d31844418e89151887eda6cfa1dfeb7b4c6f3"
+    },
+    {
+      "path": "PROOF.md",
+      "bytes": 15055,
+      "sha256": "28917414a2ee7e076fa8223bee68a0fb5ecbd7587f2b21d29c90cbffa643ef06"
+    },
+    {
+      "path": "fixture.json",
+      "bytes": 8909,
+      "sha256": "bf67cd5f265cc91cfd4be7fb39fb4b67df303475437aea575a167320545400ff"
+    },
+    {
+      "path": "certificate.json",
+      "bytes": 73025,
+      "sha256": "549ee24718640e588fc9701d85c63869ec2c7b8e22f40cecac3310f0759c3f9a"
+    },
+    {
+      "path": "generate.py",
+      "bytes": 13027,
+      "sha256": "171ed724987bbccd8e75db2f219337950c22e4e0f9c882a9b1b09688e3648a60"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 17360,
+      "sha256": "64960e8dc6714da9e3dae8fe6c463445a4adbc94bff81948842a8caaca613637"
+    },
+    {
+      "path": "dependencies.json",
+      "bytes": 6273,
+      "sha256": "b2e839476745cfa4584e91f309fef6b218049b134987da6c092da36c6248fe43"
+    }
+  ]
+}
