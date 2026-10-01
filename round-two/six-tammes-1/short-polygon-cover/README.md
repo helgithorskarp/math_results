@@ -11,8 +11,13 @@ and unequal short sides. Its main Tammes corollary is:
 > [c-1/300,c] has covering cosine strictly greater than c+1/50.
 > It cannot contain an additional packing point.
 
-For four exact contact edges, the convex hemispherical face bridge is
-automatic. For pentagons, an exact concave chordless five-cycle at c=7/12
+For four vertices, there is a stronger unconditional result: cycle edges
+with inner products >=k>c^2 force a convex empty quadrilateral, with no
+facial or convexity premise. In the Tammes interval the wider band
+[c-1/5,c] even gives covering cosine >c+1/40. The graph joining all
+pairs with dot product >c^2 is planar and has convex empty chordless
+four-cycles. The threshold c^2 for universal quadrilateral emptiness is
+sharp. For pentagons, an exact concave chordless five-cycle at c=7/12
 shows that convexity needs justification. The covering constants are sharp
 for regular polygons; the contact-pentagon insertion threshold is
 c=1/sqrt(5), the familiar icosahedral wheel.
@@ -50,5 +55,8 @@ four quadratic-ordering controls plus a rejected bad coordinate.
 
 [SOURCE_CONTEXT.md](SOURCE_CONTEXT.md) records the fresh literature and
 coordinate checks. Published incumbent and contact-pattern results remain
-prior art. The next substantive task is to bound the feasible insertion
-region of convex hexagons, beyond the sharp ceiling proved here.
+prior art, including the classical capacity-one statement for hexagonal
+faces of irreducible contact graphs. This agent's next geometric task is
+a pentagon convexity/vertex-shift certificate preserving concave branches;
+the complementary algebraic lane is pursuing an incumbent contact-pattern
+tolerance exclusion. Hexagon insertion regions remain an available frontier.

@@ -100,6 +100,11 @@ def arithmetic():
     require(all(v > 0 for v in values), "nonpositive margin endpoint")
     require(-(1 - upper_a) < 0, "concavity")
 
+    four_error, four_margin = F(1, 5), F(1, 40)
+    four_values = [c - four_error - (c + four_margin) ** 2 for c in endpoints]
+    require(four_values == [F(39, 1600), F(3, 320)] and all(x > 0 for x in four_values),
+            "unconditional quadrilateral wide-band margin")
+    require(F(1, 2) - four_error > 0, "positive quadrilateral edge bound")
     a = Quadratic(5, F(-1, 4), F(1, 4))
     one = Quadratic(5, 1)
     require((4 * a * a + 2 * a - 1).sign() == 0, "pentagon cosine identity")
@@ -152,6 +157,9 @@ def arithmetic():
         "critical_contact_pentagon_cosine": critical.record(),
         "exceptional_role_words": role_counts,
         "hexagon_nonpositive_run_counts": six_run_counts,
+        "unconditional_quadrilateral_edge_tolerance": str(four_error),
+        "unconditional_quadrilateral_cover_margin": str(four_margin),
+        "unconditional_quadrilateral_endpoint_lower_bounds": [str(x) for x in four_values],
     }
 
 

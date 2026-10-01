@@ -34,7 +34,9 @@ of the regular spherical m-gon with boundary inner product k. No equal
 side length, packing inequality on diagonals, complete contact graph,
 irreducibility, degree assumption, or number of points is needed in (1).
 
-The quantitative Tammes corollary is the principal research output here.
+A spherical c-code is a finite set of distinct unit vectors whose pairwise
+inner products are at most c. The quantitative Tammes corollaries are the
+principal research output here.
 Let 1/2 <= c <= 3/5. Suppose three, four, or five points in any spherical
 c-code bound a polygon P satisfying the preceding geometric hypotheses,
 and every boundary edge is a near contact in the sense
@@ -49,6 +51,20 @@ Thus no additional packing point can lie in P. This is a necessary
 geometric exclusion applying to every code with such a convex polygon;
 it does not improve the global fifteen-point separation bound or prove
 that arbitrary contact pentagons are convex.
+
+For four vertices the convexity assumption can be removed entirely.
+If four distinct points of any c-code, 0<c<1, have the four prescribed
+cycle-edge inner products at least k>c^2, then those minor arcs themselves
+bound a simple strictly convex hemispherical quadrilateral. Its covering
+cosine is at least sqrt(k)>c, so it contains no other packing point.
+In particular, throughout 1/2<=c<=3/5, the much wider band
+
+    c-1/5 <= v_i dot v_(i+1) <= c
+
+already forces this convexity and emptiness, with strict covering margin
+greater than 1/40. This is an unconditional four-cycle geometric reduction,
+with no facial, irreducibility, degree, or optimizer assumption. The
+threshold k>c^2 for universal emptiness is sharp.
 
 ## 2. Three elementary geometric facts
 
@@ -106,7 +122,7 @@ Then
 Equation (3) proves (1) for m=3, including the boundary.
 
 For m=4,5,6, suppose (1) fails and minimize F over compact P. By (3),(4)
-the minimizer q is interior, with t>0. In both cases t<sqrt(k): for m=4
+the minimizer q is interior, with t>0. In all three cases t<sqrt(k): for m=4
 this is the asserted failure; for m=5 use T5(k)^2<k, valid because a>0
 and k<1; for m=6 use 2*k-1<k. At least three vertices are active and
 have projection t>0 onto q. There are at most m-3 nonpositive projections.
@@ -223,7 +239,72 @@ This is an explicit obstruction to extending the short-face emptiness
 statement to hexagons. Classifying or bounding the diameter of their
 feasible insertion regions remains a separate task.
 
-## 5. Exact four-cycles really are convex faces
+## 5. Four short edges force a convex empty quadrilateral
+
+Let A,B,C,D be distinct vertices of a c-code, 0<c<1, whose prescribed
+cycle edges have inner products at least k>c^2. Their common hemisphere
+is automatic: u=(B+D)/||B+D|| has positive inner product with all four.
+B,D are not antipodal, and A,C have dot product with B+D at least 2*k.
+
+**Every vertex is extreme.** Suppose A belonged to the geodesic convex
+hull of B,C,D. Project their tangent directions at A. Their projections
+p_B,p_D onto A are positive, since AB,AD>=k; p_C may have either sign.
+All projections are at most c. If p_C>0, an angle at least pi/2 between
+B,C (or C,D) would make the corresponding edge dot product at most c^2,
+contrary to its lower bound k. If p_C<=0, that angle would instead make
+the dot product nonpositive, again impossible. Hence both B and D tangent
+directions are strictly within pi/2 of the C tangent direction. These
+three tangent directions lie in one open semicircle. A positive combination
+of B,C,D proportional to A would have zero tangent projection, impossible
+in that open semicircle. Thus A is not in that hull, even on its boundary.
+The same argument applies to every vertex. Gnomonic projection in the
+common hemisphere therefore puts the four points in strictly convex position.
+
+**The prescribed edges cannot cross.** More generally, suppose two short
+minor arcs AB and CD cross in their interiors, where both endpoint inner
+products are at least k and all four cross-pair inner products are at most c.
+At the intersection there are positive coefficients with
+
+    W=alpha*A+beta*B=gamma*C+delta*D.
+
+Put s=alpha+beta and r=gamma+delta. The two same-side norm estimates give
+
+    ||W||^2 >= (1+k)*s^2/2,
+    ||W||^2 >= (1+k)*r^2/2.
+
+Taking the inner product of the two representations gives
+||W||^2<=c*s*r. Together they require (1+k)/2<=c, impossible because
+k>c^2>=2*c-1. This also proves the general crossing exclusion whenever
+both edge inner products exceed 2*c-1. Strict convex position already
+rules out a vertex on another edge or a collinear overlap. A noncrossing
+four-cycle through four extreme planar points must be their convex boundary
+order, up to reflection. The spherical cycle is therefore exactly the
+convex hemispherical quadrilateral claimed above. Its emptiness follows
+from T4(k)=sqrt(k)>c.
+
+The wide-band margin is exact. For k=c-1/5, the concave polynomial
+k-(c+1/40)^2 has endpoint values 39/1600 and 3/320 on [1/2,3/5], both
+positive. Hence sqrt(c-1/5)>c+1/40, and in particular k>c^2. To see
+sharpness at k=c^2, take a regular spherical square at common height c,
+with horizontal directions separated by pi/2, and add its axis point.
+The four boundary edges have dot product c^2; the axis-to-boundary products
+are c, and opposite square products are 2*c^2-1<c. This is a five-point
+c-code with a packing point inside its quadrilateral.
+
+There is also a graph formulation valid for every c-code, 0<c<1: draw an
+edge between two points whenever their inner product exceeds c^2. All such
+minor arcs are noncrossing by the preceding norm comparison. Every
+chordless four-cycle is a convex empty face of this **short-edge graph**.
+No edge passes through another vertex: its angular length is less than
+acos(c^2)<2*acos(c), while such a passage would require length at least
+2*acos(c). Collinear edge overlaps are excluded by the same separation
+argument.
+The graph contains the complete contact graph when c is the actual maximum
+pairwise inner product. Its larger faces and isolated vertices retain
+their possible branches; no global connectedness or degree assertion is made.
+
+For the exact-contact special case, a direct rhombus model gives an
+additional independent geometric check of convexity:
 
 Let A,B,C,D be distinct vertices of any c-code, 0<c<1, with the four
 cycle edges having inner product exactly c. Set u=(B+D)/||B+D||,
@@ -316,8 +397,17 @@ arguments; those are the written proof above. There is no imported
 enumeration, interval library, numerical optimizer, external dataset,
 solver result, or private certificate in the proof input.
 
-The next frontier is the feasible insertion region of convex hexagons:
-distinguish shapes that can hold a packing point, bound the diameter of
-the insertion region, and preserve the resulting larger-face alternative
-in global Tammes graph reductions. Equation (7) gives a sharp universal
-ceiling; it does not settle the one-point/two-point insertion question.
+[Musin--Tarasov, Proposition 2.6](https://arxiv.org/html/1312.5450)
+also records the classical fact that a hexagonal face of an irreducible
+contact graph cannot contain two isolated vertices, with attribution to Böröczky--Szabó;
+the paper says the argument works for all N. Exact-face capacity one is
+therefore prior art, not a new frontier. Equation (7) provides the sharp
+covering ceiling here. A quantitative diameter/capacity extension for
+unequal or near-contact sides would require a separate proof.
+
+The next geometric frontier for this agent is a usable convexity or
+vertex-shift certificate for near-contact pentagons, retaining the concave
+five-cycle branch demonstrated above. The complementary algebraic agent
+six-tammes-2 is pursuing an incumbent contact-pattern tolerance exclusion.
+No automatic pentagon face bridge or new hexagonal-face capacity claim
+is asserted.

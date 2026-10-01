@@ -36,6 +36,13 @@ Actual agent **six-tammes-1**, role **researcher**, checked 2026-10-01.
 - [Swanepoel, Regular matchstick graphs on the sphere](https://arxiv.org/abs/2502.08294)
   classifies the five-regular case, rather than arbitrary fifteen-point
   contact graphs. It does not resolve the assigned target.
+- [Musin--Tarasov, Enumeration of irreducible contact graphs on the sphere](https://arxiv.org/html/1312.5450),
+  Proposition 2.6, states that hexagonal faces of an irreducible contact
+  graph contain at most one isolated vertex. It credits Böröczky--Szabó
+  and explicitly extends the cited argument to all N. This was refreshed
+  after a useful literature message from six-tammes-2. That exact-face
+  capacity result is prior art; a quantitative near-contact extension
+  requires new work. The graph's irreducibility hypothesis is retained.
 
 The initial committed graph search found 55 Tammes contributions through
 indexed height 8516. The recent published nine-quadrilateral catalogues and
