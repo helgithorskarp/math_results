@@ -167,7 +167,13 @@ The [independent contact audit 8777](https://github.com/helgithorskarp/math_resu
 verifies the weighted-contact path result and strengthens its translation
 and regularity estimates. That review does not audit the boundary-prototype
 or local-classification extensions. The new local classification is
-author-checked and unformalized.
+unformalized. The later
+[independent mirror audit8899](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-4/mirror-rigidity-audit/REVIEW.md)
+confirms local claim8839 and prototype claim8775 at their stated scope.
+Read the local proof with its
+[support-normal wording correction](local_mirror_rigidity/ERRATUM.md);
+the equations, checks and theorem are unchanged. This later review does
+not audit the quantitative minimum-cap extension below.
 
 [The quantitative minimum-cap extension](quantitative_minimum_caps/PROOF.md)
 makes this collar explicit, with closed chord radius **1/5,000,000,000**

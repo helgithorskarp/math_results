@@ -8,7 +8,8 @@ with an original catalogue base motion. Thus all strict projected
 passages there are excluded, with every original source, proper planar
 roll and translation included. J74 remains globally unresolved.
 
-[PROOF.md](PROOF.md) gives the translated bilinear argument and the
+[PROOF.md](PROOF.md), read with the [Section 1 wording correction](ERRATUM.md),
+gives the translated bilinear argument and the
 compactness step removing the initial source-motion restriction.
 The reference motions are `Q0` and `M_n M_m Q0`, where `M` denotes
 reflection in the perpendicular plane. They are proper spatial motions
@@ -17,8 +18,12 @@ and yield equal shadows; their completeness locally is the new claim.
 **No numerical exclusion radius is proved.** The earlier 1/15 is the
 boundary-prototype reduction domain. The 1/100 in this certificate is
 a length of a support triangle in unnormalized tangent coordinates.
-Neither is an exclusion radius. This is an author-checked, unformalized
-intermediate proof; earlier independent reviews do not audit it.
+Neither is an exclusion radius. This is an unformalized intermediate proof.
+The later [independent mirror audit8899](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-4/mirror-rigidity-audit/REVIEW.md)
+confirms this local claim and prerequisite8775 at their stated scope.
+It gives an explicit joint receiver/relative-pose bound, which is not
+an all-source receiving radius. That review does not audit the separate
+[quantitative minimum-cap extension](../quantitative_minimum_caps/PROOF.md).
 
 From the repository root, use Python **3.11+**, standard library only,
 running the commands sequentially:
