@@ -1,0 +1,135 @@
+{
+  "reviewer": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "status": "COMPLETE",
+  "validated_utc": "2026-10-01T18:27:00.641310+00:00",
+  "target": {
+    "graph_height": 8794,
+    "artifact_ref": "bafkreiejim37ej2aound774rmhrfa7uvd2bccuq6t5yiedsvcu2pypkune",
+    "source_commit": "eadf36800f1df02d55838de279948f4cd1872e95"
+  },
+  "mathematical_premise": {
+    "graph_height": 8537,
+    "artifact_ref": "bafkreigcg7dkxtl5ady54clyawxu2bpctj7qqyow5qx2fycla2qm4aiml4",
+    "reviewer2_sufficient_review_height": 8623,
+    "review_ref": "bafkreigwxizlsmaqrzaha25uvkdymf2ae6g5iiblyflmx5rpyi4zz5vpoi",
+    "scope": "Imported complete46 marked-star classification, not re-enumerated here."
+  },
+  "cold": {
+    "exact_sha256": "82c76a8eb6a82476cfd8b53938eecfeb1b9292abe4b613ace2e2715a08880790",
+    "peak_child_RSS_KiB": 175384,
+    "reuse_census": false,
+    "seconds": 229.3961701769731,
+    "completed_cases": 46,
+    "per_case_total_native_seconds": 220.06782999999996,
+    "native_nodes": 346519480,
+    "peak_query_nodes": 3303,
+    "scope": "Fresh native enumeration of every case; all46 complete transcript and joint output hashes match published targets; all77 residual capacities, witness and107 equality codes checked."
+  },
+  "optimized_python": {
+    "exact_sha256": "82c76a8eb6a82476cfd8b53938eecfeb1b9292abe4b613ace2e2715a08880790",
+    "peak_child_RSS_KiB": 21952,
+    "reuse_census": true,
+    "seconds": 7.843729469983373,
+    "scope": "Reuses already completed own46 native case records; reruns all residual, positive, negative and equality stages. Not another cold census. Byte-identical exact output."
+  },
+  "point_quotient": {
+    "exact_sha256": "19dd5acdee88a1cda81b2c7333167154d9d802c3304cd055c0d62fad38c5c232",
+    "normal": {
+      "seconds": 1.0382558449637145
+    },
+    "optimized": {
+      "seconds": 1.014924915973097
+    },
+    "normal_optimized_identical": true,
+    "isomorphism_classes": 60,
+    "trivial_point_groups": 60,
+    "normalized_codes": 107,
+    "query_nodes": 2038,
+    "query_calls": 3206,
+    "maximum_query_nodes": 19,
+    "labelled_family_count": 384142422343680000
+  },
+  "controls": {
+    "arbitrary_full_point_relabelings": 60,
+    "malformed_native_rejections": 11,
+    "status": "COMPLETE",
+    "literal_graph_checks": 5126,
+    "twelve_point_four_tail_partitions": 15400,
+    "damaged_capacity_or_witness_rejections": 9
+  },
+  "sanitizers": {
+    "status": "COMPLETE",
+    "stages": [
+      {
+        "arguments": [
+          "--controls"
+        ],
+        "seconds": 0.19184054504148662,
+        "status": "COMPLETE",
+        "deadline_seconds": 20,
+        "scope": "5126 graph comparisons plus15400 tail partitions",
+        "stderr_bytes": 0
+      },
+      {
+        "arguments": [
+          "10",
+          "round-two/six-reviewer-5/scratch/pass8-final-cold/input-10.txt"
+        ],
+        "seconds": 22.182252902013715,
+        "status": "COMPLETE",
+        "deadline_seconds": 65,
+        "scope": "whole case10, all tails and complete y/z selections, all23 cores",
+        "stderr_bytes": 0
+      }
+    ],
+    "cumulative_child_peak_RSS_KiB": 205300
+  },
+  "initial_measurements": {
+    "unoptimized_pilot_case0_seconds": 38.0961,
+    "optimized_pilot_case0_seconds": 4.21996,
+    "same_exact_solution_and_node_output": true,
+    "initial46_case_native_seconds": 223.07546,
+    "own_wrapper_failure": "Initial residual binding hashed masks instead of point tuples. Complete46-case census already matched; candidate counts matched. Corrected comparison encoding, validated residuals, then completed fresh final cold run. No mathematical contradiction or author defect."
+  },
+  "toolchain": {
+    "python": "3.11.2",
+    "compiler": "g++12.2.0 Debian12.2.0-14+deb12u1",
+    "standard": "C++17",
+    "release_flags": "-O2 -Wall -Wextra -Wpedantic -Wconversion -Wshadow",
+    "sanitizer_flags": "-O1 -g -fno-omit-frame-pointer -fsanitize=address,undefined -Wall -Wextra -Wpedantic -Wconversion -Wshadow",
+    "openssl": "3.0.22 25 Aug2026"
+  },
+  "resources": {
+    "threads": 1,
+    "jobs": "CPU-intensive stages sequential; unchanged1CPU/2GiB process scope",
+    "query_node_guard": 2000000,
+    "query_seconds": 20,
+    "whole_case_seconds": 60,
+    "native_wrapper_seconds": 65,
+    "full_quotient_seconds": 60,
+    "memory_scope": "Measurements are observed cumulative child ru_maxrss; earlier compiler child usage may be included. This is an upper observation, not a native-only memory estimate."
+  },
+  "source_hashes": {
+    "joint.cpp": "75bf161fa108693823be2a106438c781308e82def01072d3abe32e97b9f78490",
+    "check.py": "ac435fbb799fb5912ab0b387eea71885899b8b1a453d665ad466839b1ee174eb",
+    "point_maps.py": "1257abe2799b50b49f420a14a3c6534c75444a691c5239caadc1a7874afe060b",
+    "controls.py": "222f325535a84a8db52c7314ab91995f2104e29e9a2c3a607ccf14fc955265ca",
+    "INPUTS.json": "756493256dd0ea639f72ae986aabcce0d9631e2a82ea7d3c7a12a88b18958f30",
+    "EXPECTED.json": "82c76a8eb6a82476cfd8b53938eecfeb1b9292abe4b613ace2e2715a08880790",
+    "POINT_QUOTIENT.json": "19dd5acdee88a1cda81b2c7333167154d9d802c3304cd055c0d62fad38c5c232"
+  },
+  "literature": [
+    {
+      "url": "https://ymchee66.github.io/home/PDF/6cwc.pdf",
+      "scope": "Known69 construction,Theorem1/AppendixA"
+    },
+    {
+      "url": "https://aeb.win.tue.nl/codes/Andw.html",
+      "scope": "Maintained69..72 outside campaign upper71; live read2026-10-01"
+    }
+  ],
+  "historical_priority": "Unassessed; bounded candidate-specific searches do not certify priority.",
+  "proof_status": "Independent exact computer-assisted confirmation and60-class equality refinement, conditional on credited independently reviewed classification; ordinary bridges unformalized.",
+  "omitted": "Private native case outputs and build products. Original454MiB author carrier never imported/generated as files; complete transcript hashes are computed incrementally."
+}
