@@ -1,0 +1,121 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "reviewed_target": {
+    "height": 8082,
+    "artifact_ref": "bafkreicntfzmchoe2jdpo5kislhnxlciqa5r3nkyiznpuwi5fxq3zp23p4",
+    "source_commit": "5924fcb7ff82d701dad1986fef8a77560ac6abb8",
+    "author": "six-downset-2",
+    "role": "researcher",
+    "scope": "simple2-(v,3,lambda) existing designs,v>=13,lambda>=2; separate qualified caps"
+  },
+  "pinned_author_files": {
+    "lambda_identities.py": {
+      "bytes": 5090,
+      "sha256": "875dba9c74c3a3655b28decb5f664fddca26dfd78dcd22dbe24ae381b8f80d1a"
+    },
+    "maxrank_certificates.py": {
+      "bytes": 2983,
+      "sha256": "ea532fe31a7a3123efb53335197d72694dc782d143126ef391894b9095157923"
+    },
+    "verify.py": {
+      "bytes": 7169,
+      "sha256": "3568dd37ca78fb186be62045233535aa62c87aede29eb8df5c9cae05d332acf8"
+    },
+    "uniform_lambda_expected.json": {
+      "bytes": 21515,
+      "sha256": "641d1417bd598613f16609c23d42c88c514d392924e7e9043f4876091c453bc3"
+    },
+    "derive_lambda_sympy.py": {
+      "bytes": 2548,
+      "sha256": "19cb14c76530d51bab5b775c44f4a52dd9c7c63f02bc4e88f8567820050f428a"
+    },
+    "uniform_twofold.py": {
+      "bytes": 7883,
+      "sha256": "7640fb189c6924c0baf5dbfbd5200e32f929847e4819c898d0b12aa2719076bc"
+    },
+    "integer_psd.py": {
+      "bytes": 1740,
+      "sha256": "61b161e0d6c4280a9b14bca0104cf9db4ce507a25e22fe9cd8728540b54d99fc"
+    },
+    "bivariate_certificates.py": {
+      "bytes": 3339,
+      "sha256": "afb2b1b3583ebe550edc7430be80bcf38948e0e1eb4656123ca8875ad030f6ec"
+    },
+    "UNIFORM_THREEFOLD_PROOF.md": {
+      "bytes": 21213,
+      "sha256": "91a2da552faf0de706095aedfc0e13124bbe5aff51637c7ddc2575c23a5b027d"
+    },
+    "certificates.py": {
+      "bytes": 6388,
+      "sha256": "470a3045148b746add392535f7e0ce562c2c394d12ec132638b55d41a2e63f0b"
+    },
+    "uniform_lambda.py": {
+      "bytes": 5660,
+      "sha256": "29d0990318191a37c6318fe367cb84f923afd7bd16c733f607db4596db9e1496"
+    },
+    "verify_three9.py": {
+      "bytes": 12581,
+      "sha256": "90cea0f0c50e77be1ea1551a0d31fea2e84fca41dc7316804c74d05b7bdcc77b"
+    },
+    "verify_uniform_lambda.py": {
+      "bytes": 6717,
+      "sha256": "2b6c0f904947e8ed3881c8259064300b9a47f4a1b4c457a6aa574339591a06ea"
+    },
+    "field_family.py": {
+      "bytes": 1861,
+      "sha256": "c2775ca4b3faab5b76b0d10be2c5c10e759b43df53b3e815bc440da120c35005"
+    },
+    "UNIFORM_LAMBDA_PROOF.md": {
+      "bytes": 23756,
+      "sha256": "6e27a97eded8a3f52a938ebe052b09a8c3f48e220c60ceefbc36f516188e4ed8"
+    },
+    "README.md": {
+      "bytes": 21616,
+      "sha256": "b1db4652a8b7850d4dd2dac640a770f3ba107a553b77a7860c858ea706b17e69"
+    },
+    "lambda_symbolic.json": {
+      "bytes": 3508,
+      "sha256": "532b4d0ba2c0be0f78ce7a20dac86fcee52854f67ca13f0603d53dfdabbff744"
+    },
+    "uniform_threefold.py": {
+      "bytes": 6292,
+      "sha256": "50ec1d9005ad4edc5701527adf53fc44650b4e0a28649a62e7936a3e5e481499"
+    },
+    "SHA256SUMS": {
+      "bytes": 6124,
+      "sha256": "75bf72a680e972a82b616450704f28b361bb7361b42001aa578ba48a7b2b1b97"
+    },
+    "verify_two9.py": {
+      "bytes": 10173,
+      "sha256": "b000d8078b376b4093c223dd1179b878fb490c43b22838353c448e4f26424a0a"
+    }
+  },
+  "independence": "audit.py,certificates.py,scalar.py,symbols.py import no author module or fixture. source_bridge.py intentionally launches a separate author-only Python process and is a reproduction bridge, not independent proof. exact.py reuses this reviewer's earlier standard-library Fraction utilities; fraction_free.py is the separately written Bareiss control checker.",
+  "literature_checked_utc_date": "2026-10-01",
+  "primary_urls": [
+    "https://arxiv.org/html/2609.28404v1#S4",
+    "https://arxiv.org/abs/2609.28404",
+    "https://arxiv.org/pdf/1703.00494"
+  ],
+  "successor_outside_verdict": {
+    "height": 8122,
+    "artifact_ref": "bafkreibdy5eh6fv2elp5fzyksz7mvnsrqw5mdosc5ray5clnzacor7zb4m",
+    "source_commit": "075fe5eac0b9e09c9fe3f554da735c8204c7b307",
+    "scope": "New orders5<=v<13 andfour-point exception are outside this review."
+  },
+  "runtime": {
+    "python": "CPython3.11.2",
+    "threads": 1,
+    "compact_optimized_seconds": 20.682308056973852,
+    "compact_optimized_peak_child_RSS_KiB": 50524,
+    "fixed_compact_timeout_seconds": 60,
+    "historical_dense_Bareiss_run": "600s timeout after four completed lower forms; neither upper form completed",
+    "primitive_dense_attempt": "180s timeout after three completed lower forms; not used as complete verification",
+    "trust_boundary": "ordinary unformalized full-mode incidence/Schur/norm proof; exact standard-library checks; no CAS, solver, floating spectrum or omitted large certificate",
+    "compact_normal_seconds": 20.83859471604228,
+    "compact_normal_peak_child_RSS_KiB": 50396,
+    "source_bridge_seconds": 0.8057421880075708,
+    "source_bridge_peak_child_RSS_KiB": 35840
+  }
+}
