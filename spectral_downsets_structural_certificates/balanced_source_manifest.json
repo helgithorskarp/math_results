@@ -1,0 +1,35 @@
+{
+  "agent": "six-downset-1",
+  "claim": "One-pendant capped maximal-rank H completion for every balanced downset N=2s,s>=2",
+  "dependency_scope": "All transitive local Python imports of the constructor and checker",
+  "existing_checker_dependencies": {
+    "certificates.py": {
+      "bytes": 11190,
+      "sha256": "ed69971b64c36c23c761db5778a56c48ae65c26a941bbb1346a900fcc9e3a3fa"
+    },
+    "verify.py": {
+      "bytes": 11504,
+      "sha256": "56e702043684e8b9b72e1b11f65613c4ec2e53049ceeba9b54efe6b963f5b778"
+    }
+  },
+  "role": "researcher",
+  "source_and_compact_expected_files": {
+    "BALANCED_PENDANT_COMPLETION.md": {
+      "bytes": 15276,
+      "sha256": "ae976ea7286c2b8def937d5c6a2742d9ff0284fe0ed8b75a92b50e9a81ec6ce2"
+    },
+    "balanced_pendant_completion.py": {
+      "bytes": 5911,
+      "sha256": "2a0c1efab02bd3dc09612363bb85a656aec48a5468219cfa671943efa526a884"
+    },
+    "balanced_pendant_expected.json": {
+      "bytes": 20875,
+      "sha256": "baa6f98b449b49076684dd864eb28cbea29378df5a7ece7d78c005b2436f5b3a"
+    },
+    "verify_balanced_pendant.py": {
+      "bytes": 10774,
+      "sha256": "b80085883d634020a7b50d8f6c3d21b0410f88221d4cfdae75dee9898044ffa0"
+    }
+  },
+  "trust_boundary": "Self-contained ordinary Harris/Hall/connected-support-gap/complement/kernel argument is unformalized and independently unreviewed; finite exact replay validates the implementation. Signed weights allowed; no general original-downset H or inertia-I resolution; no external data or floating arithmetic."
+}

@@ -51,9 +51,22 @@ uniform count is quadratic in the original family size. A sharper exact
 block-decay criterion cuts the V fixture from25 total pendants to4 and
 the three-point cube from50 to12, with whole repaired slacks checked at
 orders14 and32. This proves the augmented families, with signed weights
-allowed; it supplies no H matrix for the original downset. Ordinary
-author-checked proof and exact validation are provided without independent
-review or a count-optimality claim.
+allowed; it supplies no H matrix for the original downset. The
+[independent audit by six-reviewer-2](https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_pendant_completion_review2/REVIEW.md),
+committed at graph8416, confirms this earlier affine completion and proves
+the smaller uniform sufficient count 2(N-1)^2+s+4. Its ordinary proof
+remains unformalized; no count-optimality claim is made.
+[BALANCED_PENDANT_COMPLETION.md](BALANCED_PENDANT_COMPLETION.md) cuts the
+required count to one for every balanced input N=2s, s>=2. A classical
+Harris--Hall disjoint matching is the known H baseline. The new matching
+splices make every allowed cross edge usable after one pendant; averaging
+them gives connected support, and an explicit signed row-zero trade makes
+all empty off-diagonal weights positive while preserving both simple
+endpoints and maximal slack ranks N-1. No seed core is required. Every
+positive pendant count follows by applying the one-step result to the
+penultimate family. The three-point cube now has an order-10 completion
+with both ranks9, compared with the prior sufficient order32 recipe. The
+all-order proof is author-checked, unformalized and independently unreviewed.
 [FRIENDSHIP.md](FRIENDSHIP.md) gives a different capped core for every
 friendship graph downset: k triangles sharing just one vertex. For every
 k>=2 the entire partition template fails the cap congruence, while this
@@ -365,6 +378,31 @@ regenerated. Finite equality censuses are restricted to the stated N<=20
 cohort; the all-order kernel proof establishes the remaining classification.
 Input/domain and invalid-PSD controls remain active under -O. No assertion
 is made that every cone satisfies the seed hypothesis.
+
+## One-pendant balanced completion
+
+The [ordinary proof](BALANCED_PENDANT_COMPLETION.md),
+[rational constructor](balanced_pendant_completion.py),
+[definition-level checker](verify_balanced_pendant.py),
+[compact expected records](balanced_pendant_expected.json) and
+[source manifest](balanced_source_manifest.json) establish the stated
+balanced-family closure. From the repository root:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -B spectral_downsets_structural_certificates/verify_balanced_pendant.py --check
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -B -O spectral_downsets_structural_certificates/verify_balanced_pendant.py --check
+```
+
+The 18 complete labeled three-point E inputs and three additional fixtures
+have full exact final and buffered LDL checks, complete matching and entry
+replay, and all original Hall inequalities. Forced-edge matchings are also
+independently backtracked when |E|<=8. The cube5 case has an order34 matrix
+and both slack ranks33; its 113 constructed matchings are fully checked,
+while independent backtracking and an equality census are omitted there.
+Finite replay validates the implementation; the ordinary correlation,
+matching, spanning-tree-gap and kernel argument proves all orders.
 
 ## Primary sources and current status
 
