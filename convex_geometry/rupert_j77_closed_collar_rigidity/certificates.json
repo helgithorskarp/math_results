@@ -1,0 +1,161 @@
+{
+  "agent": "six-rupert-2",
+  "role": "researcher",
+  "parent": 23,
+  "physical_chord_upper": "1/200",
+  "raw_triangle": [
+    [
+      "1",
+      "-1/450",
+      "1/900"
+    ],
+    [
+      "1",
+      "-1/300",
+      "0"
+    ],
+    [
+      "1",
+      "-1/225",
+      "1/450"
+    ]
+  ],
+  "moving_constants": {
+    "Gamma": "61/10",
+    "half_tangent_ratio": "10/3",
+    "full_angle_ratio": "10",
+    "Cayley_ratio": "501/100"
+  },
+  "contact_constants": {
+    "critical_probe_norm_upper": "49/100",
+    "torque_drift_ratio": "19/10",
+    "probe_drift_ratio": "27/25",
+    "quadratic_error_ratio": "9/8"
+  },
+  "coordinate_duals": [
+    {
+      "coordinate": 0,
+      "basis": [
+        7,
+        15,
+        24,
+        25
+      ],
+      "coefficients": [
+        [
+          "9/2",
+          "3"
+        ],
+        [
+          "8",
+          "7/2"
+        ],
+        [
+          "9/4",
+          "3/4"
+        ],
+        [
+          "11/4",
+          "5/4"
+        ]
+      ],
+      "common_stress_multiplier": 0
+    },
+    {
+      "coordinate": 1,
+      "basis": [
+        7,
+        10,
+        12,
+        17
+      ],
+      "coefficients": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "3",
+          "3/2"
+        ],
+        [
+          "3",
+          "3/2"
+        ]
+      ],
+      "common_stress_multiplier": 0
+    }
+  ],
+  "coordinate_covector_norms": [
+    "9/4",
+    "3"
+  ],
+  "direct_own_row_norms": [
+    "15",
+    "17/4"
+  ],
+  "receiving_corner_interval": [
+    "21/50",
+    "23/50"
+  ],
+  "bootstrap_stages": [
+    {
+      "L": "501/100",
+      "ownC": 99,
+      "pairC": 101,
+      "ownrho": 32,
+      "beta": 35,
+      "W": 21800,
+      "next_motion_sum_ratio": "231/50"
+    },
+    {
+      "L": "231/50",
+      "ownC": 93,
+      "pairC": 95,
+      "ownrho": 30,
+      "beta": 33,
+      "W": 17600,
+      "next_motion_sum_ratio": "33/10"
+    },
+    {
+      "L": "33/10",
+      "ownC": 74,
+      "pairC": 76,
+      "ownrho": 24,
+      "beta": 27,
+      "W": 8400,
+      "next_motion_sum_ratio": "51/25"
+    },
+    {
+      "L": "51/25",
+      "ownC": 56,
+      "pairC": 58,
+      "ownrho": 18,
+      "beta": 21,
+      "W": 3900,
+      "next_motion_sum_ratio": "43/25"
+    },
+    {
+      "L": "43/25",
+      "ownC": 51,
+      "pairC": 53,
+      "ownrho": 17,
+      "beta": 20,
+      "W": 3200,
+      "next_motion_sum_ratio": "42/25"
+    },
+    {
+      "L": "42/25",
+      "ownC": 51,
+      "pairC": 53,
+      "ownrho": 17,
+      "beta": 20,
+      "W": 3200,
+      "next_motion_sum_ratio": "42/25"
+    }
+  ]
+}
