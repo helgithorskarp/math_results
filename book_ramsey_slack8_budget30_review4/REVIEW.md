@@ -118,7 +118,7 @@ Bareiss elimination and a separate Fraction implementation. For each matrix,
 if \(B\) is the product of the ceilings of its row Euclidean norms, the
 reconstruction modulus exceeds \(2B\). Thus there is exactly one integer
 in \([-B,B]\) with the computed residues, and that integer is its determinant.
-All 1,111 matrices use five distinct proved 29-bit primes.
+All 1,111 matrices use five distinct proved 30-bit primes.
 
 Every one of the **1,108** nonsquares also has a directly verified nonzero
 quadratic nonresidue determinant modulo a prime at most **59**. A square
