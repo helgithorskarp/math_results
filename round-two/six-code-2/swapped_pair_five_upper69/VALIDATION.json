@@ -1,0 +1,103 @@
+{
+  "agent": "six-code-2",
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "date_utc": "2026-10-01",
+  "expected_frozen_from_prior_experiments": true,
+  "identical_complete_readouts": true,
+  "normal_cold": {
+    "agent": "six-code-2",
+    "child_peak_RSS_kib": 104736,
+    "expected_sha256": "ecd6359d25991132d22d5669add6b05b7a40f7c2d24bebc9440c40002758da8a",
+    "optimized_python": false,
+    "own_peak_RSS_kib": 72236,
+    "python": "3.11.2",
+    "role": "researcher",
+    "sanitized_native": false,
+    "seconds": 128.3911472230102,
+    "stages": [
+      {
+        "script": "run_carrier.py",
+        "seconds": 54.39740133599844
+      },
+      {
+        "script": "groups.py",
+        "seconds": 1.846471905009821
+      },
+      {
+        "script": "quotient.py",
+        "seconds": 4.121960996999405
+      },
+      {
+        "script": "baseline.py",
+        "seconds": 0.24012133001815528
+      },
+      {
+        "script": "pilot.py",
+        "seconds": 32.94192658900283
+      },
+      {
+        "script": "native.py",
+        "seconds": 32.200189499009866
+      },
+      {
+        "script": "steiner_trade.py",
+        "seconds": 0.14579486002912745
+      },
+      {
+        "script": "field_family.py",
+        "seconds": 0.15362542995717376
+      }
+    ],
+    "status": "COMPLETE"
+  },
+  "optimized_sanitized_cold": {
+    "agent": "six-code-2",
+    "child_peak_RSS_kib": 205892,
+    "expected_sha256": "ecd6359d25991132d22d5669add6b05b7a40f7c2d24bebc9440c40002758da8a",
+    "optimized_python": true,
+    "own_peak_RSS_kib": 74328,
+    "python": "3.11.2",
+    "role": "researcher",
+    "sanitized_native": true,
+    "seconds": 193.7822806900367,
+    "stages": [
+      {
+        "script": "run_carrier.py",
+        "seconds": 55.80741244298406
+      },
+      {
+        "script": "groups.py",
+        "seconds": 1.9004116950090975
+      },
+      {
+        "script": "quotient.py",
+        "seconds": 4.732496234995779
+      },
+      {
+        "script": "baseline.py",
+        "seconds": 0.33557066100183874
+      },
+      {
+        "script": "pilot.py",
+        "seconds": 31.487828510988038
+      },
+      {
+        "script": "native.py",
+        "seconds": 94.01474835403496
+      },
+      {
+        "script": "steiner_trade.py",
+        "seconds": 0.5050054430030286
+      },
+      {
+        "script": "field_family.py",
+        "seconds": 0.5920323650352657
+      }
+    ],
+    "status": "COMPLETE"
+  },
+  "proof_status": "author-checked exact computation and ordinary unformalized bridges; independent review of this result unclaimed",
+  "remote_original_input_checks": "all five original published input byte hashes verified before source publication",
+  "resource_policy": "one CPU-intensive job at a time; numerical/OpenMP threads1; existing1CPU2GiB; per-case guards unchanged",
+  "role": "researcher"
+}
