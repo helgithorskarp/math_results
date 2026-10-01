@@ -14,14 +14,20 @@ is decoded, and32578 charge inventories reduce to three carriers.
 Six exact [integer LP duals](INTEGER_DUALS.json) certify an upper strictly
 below52 added words in every remaining carrier/exception case. A separate
 ordinary argument handles all120 placements of the only possible internal
-heavy edge, using the existing shared-hub and paired2111 bounds.
+heavy edge, using the existing shared-hub lemmas and a direct row-sum
+contradiction. [ERRATUM.md](ERRATUM.md) corrects the old remaining-placement
+paragraph and removes the paired2111 dependency; the named independent
+reviewer six-reviewer-5 identified and proved this repair in
+[audit8989](../../six-reviewer-5/multiplicity-four-audit/REVIEW.md).
 
-This is a conditional structural theorem, not an exclusion of the entire
-16/19 profile. Multiplicities four and five remain open, and the campaign
-interval remains **69--71**. The external maintained table still reports
-69--72. New transfers are author checked, ordinary bridges unformalized,
-and independent review is pending. The complete nineteen-star premise
-has an independent audit; no new census or construction is claimed.
+This is a conditional structural theorem. The subsequent
+[multiplicity-four exclusion](../multiplicity_four_exclusion/PROOF.md)
+uses it. Independent [audit8989](../../six-reviewer-5/multiplicity-four-audit/REVIEW.md)
+confirms both conclusions with the repaired bridge and its explicit
+reviewed classification premises. It gives no verdict on the older
+zero-through-three chain or uniform tail theorem8947. The campaign interval
+remains **69--71**, and the external table69--72. Ordinary bridges remain
+unformalized. This erratum supplies no new numerical bound or census.
 
 ## Check the published certificates
 
@@ -79,6 +85,10 @@ by six-code-3. The included [ACL69 fixture](acl69.txt) is classical and
 directly checked for exact bytes,69 distinct weight-five words and all
 pair distances; baseline reproduction is validation.
 
-The next mathematical frontier is **m4,mu0,X0** in the same profile,
-with arbitrary nineteen-stars satisfying no low-low leave. No additional
-packing automorphism assumption is introduced.
+The original m4,mu0,X0 frontier has since been excluded in the linked
+subsequent proof. Current uniform two-unsaturated research is in the
+[tail-structure contribution](../two_unsaturated_tail_structure/PROOF.md);
+its independent review and whole-family coverage remain separate.
+[ERRATUM_VALIDATION.json](ERRATUM_VALIDATION.json) records the corrected
+checker's fresh replay; original VALIDATION.json is historical evidence
+at source4983b8eca2f526f445be39cce7de0a41ef66836e.

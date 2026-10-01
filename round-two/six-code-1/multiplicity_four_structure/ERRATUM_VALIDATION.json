@@ -1,0 +1,268 @@
+{
+  "actual_agent": "six-code-1",
+  "change_validation": {
+    "checker_AST_identical_outside_no_excess_bridge": true,
+    "expected_identical_outside_no_excess_bridge": true,
+    "heavy_edge_positions": {
+      "row_sum_contradiction": 1,
+      "unaffected_shared_hub": 119
+    },
+    "heavy_partner_distinct_deficient_neighbors": 5,
+    "heavy_partner_minimum_deficit": 6,
+    "unchanged_literal_inputs": true
+  },
+  "changed_source_files": {
+    "DEPENDENCIES.json": {
+      "bytes": 8654,
+      "sha256": "f98d808189eca88c7fad92d4f8430468cda880601475a6d473bb69fe87632c92"
+    },
+    "ERRATUM.md": {
+      "bytes": 4108,
+      "sha256": "1bba19b9daec6472e390814ae8eb76bffe2070dba2c556acdee99632b4a44a79"
+    },
+    "PROOF.md": {
+      "bytes": 18730,
+      "sha256": "342aa47ac75a16347f8965d9262a887b5762794f923e80bb0fd955891e94fef4"
+    },
+    "README.md": {
+      "bytes": 5059,
+      "sha256": "be7ed97b69183512a4cb0cd66bd5c27fd7373807b9cc815cb4a0f39a065ac913"
+    },
+    "expected.json": {
+      "bytes": 4165,
+      "sha256": "f82cba54deb61e06c94c12fb62864218d4fcafcbd06cf6d3b958e2b3b0ae3b22"
+    },
+    "verify.py": {
+      "bytes": 16406,
+      "sha256": "8022551953e981107d5ada70e1088fd889accf42f09b1f845b17ddf32be6aad4"
+    }
+  },
+  "date": "2026-10-01",
+  "expected_sha256": "f82cba54deb61e06c94c12fb62864218d4fcafcbd06cf6d3b958e2b3b0ae3b22",
+  "limits": {
+    "CPU_intensive_jobs_at_once": 1,
+    "checker_wall_guard_seconds": 60,
+    "hard_memory_GiB": 2,
+    "numeric_threads": 1
+  },
+  "original_source_commit": "4983b8eca2f526f445be39cce7de0a41ef66836e",
+  "python": "Python 3.11.2",
+  "review_credit": {
+    "actual_reviewer": "six-reviewer-5",
+    "graph_ref": "bafkreigev5jeh2tuevfwh53zt4o4dasxgffkgfeof737y4yb3io6a2enp4",
+    "height": 8989,
+    "review_source_sha256": "5c4f2a9b3f491e1f4473b4332dd2b16fa2d8285769dbf3a065e0f0bd38d65e32",
+    "role": "independent reviewer",
+    "scope": "Complete8716/8783 multiplicity-four conclusions with repaired bridge; no8637/8947 verdict.",
+    "source_commit": "04f1058f5a7d3c7cf3815e49ad9528fe3bc3b817"
+  },
+  "role": "researcher",
+  "runs": [
+    {
+      "maxrss_kib": 25372,
+      "mode": "normal",
+      "readout": {
+        "carrier_marks": 388,
+        "controls": 12,
+        "duals": [
+          {
+            "candidate_count": 1219,
+            "case": [
+              0,
+              17,
+              14,
+              15
+            ],
+            "integer_bound": 5193506,
+            "min_column": 100002,
+            "scale": 100000,
+            "weighted_rows": 437
+          },
+          {
+            "candidate_count": 1219,
+            "case": [
+              0,
+              17,
+              14,
+              16
+            ],
+            "integer_bound": 5194350,
+            "min_column": 100002,
+            "scale": 100000,
+            "weighted_rows": 435
+          },
+          {
+            "candidate_count": 1219,
+            "case": [
+              0,
+              19,
+              1,
+              15
+            ],
+            "integer_bound": 5160000,
+            "min_column": 100000,
+            "scale": 100000,
+            "weighted_rows": 186
+          },
+          {
+            "candidate_count": 1219,
+            "case": [
+              0,
+              19,
+              1,
+              16
+            ],
+            "integer_bound": 5160000,
+            "min_column": 100000,
+            "scale": 100000,
+            "weighted_rows": 186
+          },
+          {
+            "candidate_count": 1219,
+            "case": [
+              1,
+              11,
+              7,
+              15
+            ],
+            "integer_bound": 5185551,
+            "min_column": 100003,
+            "scale": 100000,
+            "weighted_rows": 424
+          },
+          {
+            "candidate_count": 1219,
+            "case": [
+              1,
+              11,
+              7,
+              16
+            ],
+            "integer_bound": 5189281,
+            "min_column": 100000,
+            "scale": 100000,
+            "weighted_rows": 428
+          }
+        ],
+        "manifest_sha256": "f82cba54deb61e06c94c12fb62864218d4fcafcbd06cf6d3b958e2b3b0ae3b22",
+        "status": "COMPLETE exact arithmetic and integer duals"
+      },
+      "seconds": 6.569797714997549
+    },
+    {
+      "maxrss_kib": 28112,
+      "mode": "optimized",
+      "readout": {
+        "carrier_marks": 388,
+        "controls": 12,
+        "duals": [
+          {
+            "candidate_count": 1219,
+            "case": [
+              0,
+              17,
+              14,
+              15
+            ],
+            "integer_bound": 5193506,
+            "min_column": 100002,
+            "scale": 100000,
+            "weighted_rows": 437
+          },
+          {
+            "candidate_count": 1219,
+            "case": [
+              0,
+              17,
+              14,
+              16
+            ],
+            "integer_bound": 5194350,
+            "min_column": 100002,
+            "scale": 100000,
+            "weighted_rows": 435
+          },
+          {
+            "candidate_count": 1219,
+            "case": [
+              0,
+              19,
+              1,
+              15
+            ],
+            "integer_bound": 5160000,
+            "min_column": 100000,
+            "scale": 100000,
+            "weighted_rows": 186
+          },
+          {
+            "candidate_count": 1219,
+            "case": [
+              0,
+              19,
+              1,
+              16
+            ],
+            "integer_bound": 5160000,
+            "min_column": 100000,
+            "scale": 100000,
+            "weighted_rows": 186
+          },
+          {
+            "candidate_count": 1219,
+            "case": [
+              1,
+              11,
+              7,
+              15
+            ],
+            "integer_bound": 5185551,
+            "min_column": 100003,
+            "scale": 100000,
+            "weighted_rows": 424
+          },
+          {
+            "candidate_count": 1219,
+            "case": [
+              1,
+              11,
+              7,
+              16
+            ],
+            "integer_bound": 5189281,
+            "min_column": 100000,
+            "scale": 100000,
+            "weighted_rows": 428
+          }
+        ],
+        "manifest_sha256": "f82cba54deb61e06c94c12fb62864218d4fcafcbd06cf6d3b958e2b3b0ae3b22",
+        "status": "COMPLETE exact arithmetic and integer duals"
+      },
+      "seconds": 6.064719049958512
+    }
+  ],
+  "status": "COMPLETE scoped source correction and full changed-checker replay",
+  "trust_boundary": "Exact CPython integer/set semantics; unchanged classifications/local premises; ordinary transfer unformalized. Erratum, not a new independent proof or numerical bound. Historical paired2111 replay unused and not repeated.",
+  "unchanged_inputs": {
+    "INTEGER_DUALS.json": {
+      "bytes": 53682,
+      "sha256": "f6e7dc41938a9266a342591dba8a73882f8bef8c00f84d7a6f38c9a06f59c603"
+    },
+    "NINETEEN_STARS.json": {
+      "bytes": 14372,
+      "sha256": "83adc2817c988fa4450ede02c7da09b4da857e3f1850a0b0d0dee4cfd4a24bca"
+    },
+    "VALIDATION.json": {
+      "bytes": 2853,
+      "sha256": "13ae80ff6d9c45358536fde3cbaa2ab48972eb759da04486ec78705867418d01"
+    },
+    "acl69.txt": {
+      "bytes": 1311,
+      "sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d"
+    },
+    "produce.py": {
+      "bytes": 9122,
+      "sha256": "4bdd026eaeacfc84486245b16d5c379bcf2ec36cb845e1874690797a1f89de7c"
+    }
+  }
+}

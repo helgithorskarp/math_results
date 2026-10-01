@@ -233,13 +233,25 @@ def no_excess_bridge():
     # Abstract names: two T_C centers0,1 and their four distinct low friends2..5.
     outcomes=Counter()
     for edge in combinations(range(16),2):
-        if edge==(0,1):outcomes['paired_2111']+=1;continue
+        if edge==(0,1):
+            # Hubs16/17 lie outside the sixteen abstract saturated labels.
+            # The partner is additional to the two actual low friends.
+            for t in (0,1):
+                friends=(2,3) if t==0 else (4,5)
+                neighbors=(16,17,1-t,*friends)
+                deficits=(1,1,2,1,1)
+                check(len(neighbors)==len(set(neighbors))==5,
+                      'heavy partner and actual friends must be distinct')
+                check(sum(deficits)==6>5,'heavy-partner row-sum contradiction')
+            outcomes['row_sum_contradiction']+=1
+            continue
         usable=[t for t in (0,1) if t not in edge and
                 any(a not in edge for a in ((2,3) if t==0 else (4,5)))]
         check(usable,'no unaffected shared-isolated-hub pair')
         outcomes['unaffected_shared_hub']+=1
-    check(outcomes=={'paired_2111':1,'unaffected_shared_hub':119},'heavy-edge coverage')
-    return {'arithmetic_survivor':arithmetic,'heavy_edge_positions':dict(outcomes)}
+    check(outcomes=={'row_sum_contradiction':1,'unaffected_shared_hub':119},'heavy-edge coverage')
+    return {'arithmetic_survivor':arithmetic,'heavy_edge_positions':dict(outcomes),
+            'heavy_partner_distinct_deficient_neighbors':5,'heavy_partner_minimum_deficit':6}
 
 
 def baseline():

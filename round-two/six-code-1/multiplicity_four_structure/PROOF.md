@@ -12,13 +12,18 @@ replication16 and19 points u,v satisfy `lambda_uv=4`. Then:
 2. Every pair of the sixteen replication20 points has multiplicity
    **four or five**.
 
-These are necessary restrictions. Multiplicities four and five for uv,
-and the entire16/19 profile, remain open. The campaign interval69--71
-is unchanged. The preceding
+These are necessary restrictions. The campaign interval69--71 remains
+unchanged. The preceding
 [at-least-four theorem](../multiplicity_three_charge_restrictions/PROOF.md)
-excludes uv multiplicities zero through three; it is context rather than
-a premise of this conditional theorem. Independent review of the new
-transfer is pending. Its ordinary bridges are not formalized.
+is context rather than a premise of this conditional theorem. The later
+[multiplicity-four exclusion](../multiplicity_four_exclusion/PROOF.md)
+uses this structure. Independent
+[review8989](../../six-reviewer-5/multiplicity-four-audit/REVIEW.md)
+confirms the complete present structure conclusion and that exclusion,
+with the corrected heavy-edge paragraph below and explicit reviewed
+classification premises. It does not review the earlier zero-through-
+three chain or the new uniform tail theorem8947. Ordinary bridges remain
+unformalized; this correction supplies no new unrestricted numerical bound.
 
 The new finite exclusion uses six **integer LP dual certificates**.
 Every one of their1219 candidate columns is checked directly; no solver
@@ -337,14 +342,20 @@ The unaffected friend a is a nonzero-degree good A point. Their unit
 deficit edge contradicts the shared-isolated-u lemmas.
 
 In the one remaining placement, the heavy edge joins both T_C centers.
-At each center the v and u deficits are at least one and its two forced
-S neighbors include the deficit-two partner. Row sum five forces the
-positive row **(2,1,1,1)**. Both centers have replication20 and their
-mutual multiplicity is three. The published
-[mutually paired2111 bound8232](../../../coding_theory/a18_6_5_no_2111_at_72/PROOF.md)
-gives at most66 words, contradicting71. This restricted bound imposes
-no replication condition at any other point and is exactly the scope
-needed here; its global72 corollary is not used.
+The two actual low friends of either center belong to A, whereas its
+heavy partner is the other T_C center in W. Thus the partner is
+additional to those two distinct friends. Its deficient neighbors u, v,
+that partner, and the two friends are all distinct, with deficits at
+least1,1,2,1,1. Their sum is at least6, contradicting the saturated
+row sum5. This directly excludes the remaining placement.
+
+This corrects the original paragraph, which incorrectly counted the
+heavy partner as a low friend. The correction was independently found
+and proved in six-reviewer-5's
+[multiplicity-four audit8989](../../six-reviewer-5/multiplicity-four-audit/REVIEW.md).
+The earlier paired2111 completion premise8232 is unnecessary here.
+[ERRATUM.md](ERRATUM.md) states the exact original source, correction,
+credit and dependency boundary.
 
 All placements in (11) are therefore excluded, proving **X=0**.
 Every internal S pair consequently has multiplicity four or five,
@@ -363,9 +374,13 @@ claim a new proof of census completeness. Likewise the existing twenty
 star and shared-hub lemmas are mathematical premises, explicitly listed
 in [DEPENDENCIES.json](DEPENDENCIES.json).
 
-The newly used paired2111 premise was completely replayed here:
-4404 mapping fibers,128 joint classes and128 literal coloring certificates,
-with both mapping algorithms agreeing entrywise and certified upper66.
+At the original publication, the now unnecessary paired2111 premise
+was replayed:4404 mapping fibers,128 joint classes and128 literal coloring
+certificates. That historical validation is retained in VALIDATION.json;
+it is not a mathematical premise of the corrected proof or a fresh replay.
+The corrected checker instead records119 unaffected shared-hub placements
+and one direct row-sum contradiction. ERRATUM_VALIDATION.json documents
+its fresh normal/optimized full replay and unchanged certificate inputs.
 No search guard or resource setting was raised. The direct new checks
 use small exact domains. Solver/BLAS/OpenMP threads are one and CPU-intensive
 jobs run sequentially. Large exploratory libraries, matrices, logs and
