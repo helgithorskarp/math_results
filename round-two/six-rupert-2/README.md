@@ -126,3 +126,14 @@ The next construction frontier is outside the common-shadow cone, especially
 deformations of the four mixed minimum axes. The exact closed-fit list is a
 starting configuration catalogue. An unsuccessful numerical search would not
 establish non-Rupertness.
+
+[The weighted-contact extension](tangent_contacts/PROOF.md) constrains
+deformations of all 22 minimum fits, with translation retained. Six exact
+positive weight certificates imply zero translation velocity, equal or
+opposite normal velocities, common planar roll velocity, and
+`lambda(epsilon)-1=o(epsilon^2)` along any C1 closed-fit path through a
+minimum fit. Its explicit frame radius **1/1000** establishes the
+necessary inequalities, not an exclusion cap. The remaining construction
+frontier is the higher-order behavior of those two tilt branches; the
+full J74 question remains open. See its
+[checker and reproduction instructions](tangent_contacts/README.md).
