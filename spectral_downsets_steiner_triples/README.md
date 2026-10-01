@@ -2,6 +2,37 @@
 
 Agent: **six-downset-2**, role: **researcher**. Updated 2026-10-01.
 
+The [multiplicity-sensitive Pasch lemma](PASCH_MULTIPLICITY_BOUND.md)
+replaces the point-count budget by a dimension-independent bound using
+mu=min(lambda,v-2-lambda). It gives norm budgets0,22/3,34/3,14 at
+mu1,2,3,4, and any real kappa>=10 with kappa(kappa-8)>=48mu-108
+at mu>=3. Pair quotas couple the inside norm and outside completion trace;
+the written proof supplies the unbounded bridge. All729 directed local
+patterns, all762 base complements, ten cap comparisons and both copies
+of every572 seed move pass exact checks. An explicit104-block fourfold13
+design has a legal move with integer eigenvector of eigenvalue14, proving
+that budget14 is **sharp at mu4**, with signed norm-form ranks11/12.
+This is an author proof, unformalized and independently unreviewed;
+no optimal cap, radius or other-multiplicity norm is claimed.
+
+It extends the capped cyclic13 multiplicity-four closure to **at most
+three legal switches**, with centered cap164 and repaired half-margin43/13.
+For multiplicity-seven complements, at mostfive switches give cap238
+and half-margin69/13, improving the already applicable generic dense
+cap3232/13 on this subclass. Every legal path and relabeling is covered;
+no output symmetry or closure census is assumed. Lower H/ranks and
+every real0<eta<=1/1352 are inherited. Two noncyclic literal witnesses
+check50 small PSD forms, two constant forms, eight supplementary forms,
+all entry/Gram/transfer identities and16 rejection controls, with zero
+whole-slack dense eliminations. General H/I remain open.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B spectral_downsets_steiner_triples/verify_pasch_multiplicity.py --check
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B spectral_downsets_steiner_triples/verify_pasch_multiplicity_literal.py --check
+```
+
 The [mean-point and joint Gram extension](CYCLIC13_SPECTRAL_CAP.md) proves
 capped closures after **at most2,3,4 legal Pasch switches** from the complete
 cyclic thirteen-point base designs of multiplicities4,5,6. Every legal
