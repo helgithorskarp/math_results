@@ -11,7 +11,7 @@ neighbors, and every edge of its complement has at most six.
 The current combined necessary range is **degrees 8..10, edges 98..110**,
 using six-books-3's [degree-eleven exclusion](../book_ramsey_b4_b7_degree11_gram_exclusion/PROOF.md)
 and our [97-edge boundary exclusion](degree97.md).
-The latest defect budget is in item 16; the boundary cut is in item 18.
+The latest defect budget is in item 19; the boundary cut is in item 18.
 
 **Proved necessary conditions:**
 
@@ -104,7 +104,7 @@ The latest defect budget is in item 16; the boundary cut is in item 18.
     **2T>=n9+n11+4**, where T is total unused spine capacity.
     At most ten vertices have degree eight and full saturation is
     impossible. This cut left (a,22-2a,a), 0<=a<=10 at 99 edges.
-    Item 16 supplies the latest refinement.
+    Items 16 and 19 further strengthen the budget.
 
 16. The first positive parity-slack histograms **(6,14,2), (8,8,6),
     (10,2,10)** are excluded by [first_slack.md](first_slack.md).
@@ -115,7 +115,7 @@ The latest defect budget is in item 16; the boundary cut is in item 18.
     **2T>=n9+8**. At 97 edges only **(4,18,0),(5,16,1)** remain;
     at 98 only **(a,24-2a,a-2),2<=a<=7**; at 99 only
     **(a,22-2a,a),0<=a<=9**. These are necessary possibilities.
-    No whole low-edge boundary or unrestricted Ramsey endpoint is decided.
+    Items 18 and 19 give the subsequent boundary and histogram refinements.
 
 17. The 97-edge histogram **(5,16,1)** is excluded by [slack8.md](slack8.md).
     The complete **559** weighted-defect normal forms have no rational
@@ -138,6 +138,20 @@ The latest defect budget is in item 16; the boundary cut is in item 18.
     placements and compares every F/H entry. Thus every valid 22-vertex
     graph has **98..110 red edges**. Feasibility at those remaining edge
     counts and the unrestricted Ramsey endpoint remain unresolved.
+
+19. The remaining parity-surplus-eight histograms **(7,10,5), (9,4,9)**
+    are excluded by [slack8_remaining.md](slack8_remaining.md). Their complete
+    **1,111** weighted-defect forms have 1,108 positive nonsquare determinants.
+    Two square cases have rational 33-plane norm obstructions. The last
+    square case forces an equitable red degree partition with an impossible
+    incidence count; its forced matrix has a verified rational symmetric
+    square root, so the adjacency condition is used in that branch.
+    Separate domain and exact rational algorithms agree on all forms and
+    every full F/H entry. Together with the earlier surplus-eight exclusion,
+    every valid 22-vertex graph has **3n8+n9<=30** and **2T>=n9+12**.
+    At 98 edges only **(a,24-2a,a-2),2<=a<=6** remain; at 99 only
+    **(a,22-2a,a),0<=a<=8** remain. The 98..110 edge range and
+    unrestricted Ramsey gap 22..23 persist.
 
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
@@ -223,6 +237,10 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
   python3 -O book_ramsey_4_7_degree_reductions/degree97_check.py
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
   python3 -O book_ramsey_4_7_degree_reductions/degree97_independent.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_4_7_degree_reductions/slack8_remaining_check.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_4_7_degree_reductions/slack8_remaining_independent.py
 ```
 
 The degree97 commands certify the four final forced matrices in item 18
@@ -372,7 +390,8 @@ The written spectral bridge remains separate from this finite computation.
   [saturation.md](saturation.md). The exact statement was checked
   in the primary publisher abstract; its full proof is not replayed.
 
-Sources were refreshed on 2026-09-30. The published upper bound is
+The Ramsey tables and primary construction were refreshed on 2026-10-01.
+The published upper bound is
 used as literature context; its flag-algebra certificate is not
 independently reproduced here. No large artifact or external solver
 input is required by this contribution.
