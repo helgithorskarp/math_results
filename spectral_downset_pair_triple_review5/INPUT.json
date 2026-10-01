@@ -1,0 +1,142 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "target_height": 8407,
+  "target_ref": "bafkreigrwz73fnf7p5olollg3n45bwoespszytqmblkh5zasogvzy2cede",
+  "reviewed_source": {
+    "commit": "72f9f68625b6f5d2da02662222dcb50f316a8fdf",
+    "directory": "spectral_downset_pair_triple_caps",
+    "files": [
+      {
+        "path": "spectral_downset_pair_triple_caps/.gitignore",
+        "bytes": 23,
+        "sha256": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b"
+      },
+      {
+        "path": "spectral_downset_pair_triple_caps/BASIS_CHECK.json",
+        "bytes": 5404,
+        "sha256": "d00d3a46238e2c2cf0cc726a7873aa0b2f972382c6582e8df3f5309863fe35af"
+      },
+      {
+        "path": "spectral_downset_pair_triple_caps/PROOF.md",
+        "bytes": 22976,
+        "sha256": "3061882cac15ee989211f35502fec9f8c50353acd918a68d75814d169376a6f9"
+      },
+      {
+        "path": "spectral_downset_pair_triple_caps/README.md",
+        "bytes": 3393,
+        "sha256": "65f2c9ca21fbc65bb70db579bea45176854044322aea7c34fd9d65faef1672f7"
+      },
+      {
+        "path": "spectral_downset_pair_triple_caps/RESULTS.json",
+        "bytes": 4295,
+        "sha256": "f6c9f8c5f2d2a56e034f82cd1645ca55468e03ca6ad9c70b1c5b98e6e6d4e689"
+      },
+      {
+        "path": "spectral_downset_pair_triple_caps/SHA256SUMS",
+        "bytes": 782,
+        "sha256": "5a7799863e82fe8b956970ce4cb95e28acaa1991685aa4dd687e7742cc008d15"
+      },
+      {
+        "path": "spectral_downset_pair_triple_caps/arithmetic.py",
+        "bytes": 1941,
+        "sha256": "42e137f57d3dc0ba1a56d8afcfa59157a5932d8e4c882e989919615b2f89a071"
+      },
+      {
+        "path": "spectral_downset_pair_triple_caps/blocks.py",
+        "bytes": 3189,
+        "sha256": "97884eaa4f5a8d2246960f5247a1fe4b2c8902dfdae390f7e4491091576d2589"
+      },
+      {
+        "path": "spectral_downset_pair_triple_caps/matrices.py",
+        "bytes": 3310,
+        "sha256": "428e3fe2eac94e9a353eb32668d8e0c8c14a5baed6c0d919e80e3edf5f243d2b"
+      },
+      {
+        "path": "spectral_downset_pair_triple_caps/verify.py",
+        "bytes": 13708,
+        "sha256": "fe432dc5c5351d8107893639bab6816d211fa4af6e66295e6a85bb892625193b"
+      },
+      {
+        "path": "spectral_downset_pair_triple_caps/verify_basis.py",
+        "bytes": 11897,
+        "sha256": "cab40201b37f6a11c888b4da538ff01318dfc49385852ce7aa513ed2c1a09015"
+      }
+    ]
+  },
+  "target_fixture": {
+    "L_sha256": "7ba38f9c723f581eb985b404f303b70f648909a838b703d1bf3db81145c1c9b2",
+    "blocks_sha256": {
+      "C2": "d346e1e1ce7e2272bc3bfb8e4503f62ef6c694dc2fa0a94ce86223b0f88075d0",
+      "Q0": "97f7321fa6a5ea822c12e0a0c7f33cf0e73cab09a09c8df4067f3f52b6a2260f",
+      "Q1": "a0596e3a70efb63ace79c5fb71923f4a4da766d9c344901b1a53a47f1e13187e",
+      "U0": "83e94cac941d078c2f8aee106985166fa2285ab5cdcdf0536f445bac1f3bad9f",
+      "U1": "0b2e4c2f884b238c98c1c1b057b960142a9a03395fa3d47ee092b556a5c3b139",
+      "U2": "94bc895e2a44e64de336b8589a1c9ad92e2f0829914f780d5cbefd04894c9226"
+    },
+    "Schur_polynomials": {
+      "C2": {
+        "coefficients_ascending": [
+          99607366257,
+          0,
+          -7809152000
+        ],
+        "positive_scale": "1/8233296448",
+        "remainder_rank": 3,
+        "value_at_delta": "493389409701/5"
+      },
+      "Q0": {
+        "coefficients_ascending": [
+          -41837841773,
+          245273145600,
+          -359315840000
+        ],
+        "positive_scale": "189/370900784",
+        "remainder_rank": 5,
+        "value_at_delta": "13825603"
+      },
+      "Q1": {
+        "coefficients_ascending": [
+          33202455419,
+          0,
+          -39045760000
+        ],
+        "positive_scale": "21/8233296448",
+        "remainder_rank": 5,
+        "value_at_delta": "28555033835"
+      },
+      "U0": {
+        "coefficients_ascending": [
+          1068589177962136647,
+          -99799924873429760,
+          -7670571153660800000
+        ],
+        "positive_scale": "45/48646490780467696",
+        "remainder_rank": 5,
+        "value_at_delta": "605842361581633299/5"
+      },
+      "U1": {
+        "coefficients_ascending": [
+          32852044230933,
+          45099493496960,
+          -21974020480000
+        ],
+        "positive_scale": "35/13549404807104",
+        "remainder_rank": 5,
+        "value_at_delta": "228979558498761/5"
+      },
+      "U2": {
+        "coefficients_ascending": [
+          105952885289,
+          0,
+          -924800000
+        ],
+        "positive_scale": "1/3857378880",
+        "remainder_rank": 3,
+        "value_at_delta": "105842810969"
+      }
+    }
+  },
+  "canonical_fixture_sha256": "0852a5de6156f9d0cc4504b7f9294ef655e8bb6bf5e0a0211054af41d4f30b8b",
+  "author_executable_imported": false
+}
