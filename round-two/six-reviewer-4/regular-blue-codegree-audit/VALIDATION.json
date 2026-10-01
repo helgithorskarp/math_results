@@ -1,0 +1,166 @@
+{
+  "actual_author": "six-reviewer-4",
+  "author_inputs": [
+    {
+      "bytes": 19,
+      "git_blob_sha1": "7a60b85e148f80966a550e5ab6a762a907c69ca6",
+      "name": ".gitignore",
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "bytes": 10967,
+      "git_blob_sha1": "1dbbdf55dad4857c82446eeaffeeabb2a1feecba",
+      "name": "PROOF.md",
+      "sha256": "81e9d137ad216313a8be1e181e9c0d33d5509da0f11a1306d5e909ceee4528b8"
+    },
+    {
+      "bytes": 2902,
+      "git_blob_sha1": "2fab8fed13e9c118e7260f436b89fe36dfbbdcf1",
+      "name": "README.md",
+      "sha256": "35422bc83bd640a5f751c9c84477172544d2a0c49ff13b10b9d9535972550179"
+    },
+    {
+      "bytes": 462,
+      "git_blob_sha1": "31c192670d1521ff3aad4e8ce210f29ba808aa0a",
+      "name": "baseline21.rows",
+      "sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec"
+    },
+    {
+      "bytes": 9388,
+      "git_blob_sha1": "3de6563919e82dac83eb5c096664f22687eda377",
+      "name": "check.py",
+      "sha256": "89a82064eb5e2cbe8468b6581e47c483f590f9edfa8cfb050ad405b5da1b5b6a"
+    },
+    {
+      "bytes": 10464,
+      "git_blob_sha1": "520fb930fb69ce98c64ee0104a6699915468e7d8",
+      "name": "expected.json",
+      "sha256": "8c7676efbcf6d6347b29b51d20da837108a2a716c02d15efdc72c75757124278"
+    },
+    {
+      "bytes": 2125,
+      "git_blob_sha1": "89369ebf35ae42c200991911b54ad1bf72e21f51",
+      "name": "provenance.json",
+      "sha256": "3fc54d0c1d1db271dece44b7aa59326e91092b0cf6e538438c429430f27a0677"
+    },
+    {
+      "bytes": 11323,
+      "git_blob_sha1": "165da490a5dceb34703a07cbd997133e14510a88",
+      "name": "verify.py",
+      "sha256": "15307aeab93bdd7e8a46bc8d868ed7df9607fbc14e08810b10d76f0a9ea953b8"
+    }
+  ],
+  "author_replays": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scratch/pass2-target-source/check.py"
+      ],
+      "elapsed_seconds": 0.084976,
+      "exit_code": 0,
+      "peak_child_rss_KiB": 16224,
+      "stderr": "",
+      "stdout": {
+        "baseline_edges": 93,
+        "expected_sha256": "8c7676efbcf6d6347b29b51d20da837108a2a716c02d15efdc72c75757124278",
+        "independent_four_sets": 5,
+        "negative_forms": 2,
+        "rooted_controls": 2,
+        "status": "PASS"
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "scratch/pass2-target-source/verify.py"
+      ],
+      "elapsed_seconds": 0.260724,
+      "exit_code": 0,
+      "peak_child_rss_KiB": 18760,
+      "stderr": "",
+      "stdout": {
+        "control_pair_checks": 462,
+        "expected_sha256": "8c7676efbcf6d6347b29b51d20da837108a2a716c02d15efdc72c75757124278",
+        "explicit_petersen_isomorphism": [
+          0,
+          7,
+          3,
+          4,
+          9,
+          8,
+          6,
+          5,
+          2,
+          1
+        ],
+        "independent_four_sets": 5,
+        "rejected_forged_records": 7,
+        "signed_clique_identities": 45,
+        "signed_triangle_identities": 319,
+        "status": "PASS"
+      }
+    }
+  ],
+  "author_source_commit": "53fa7ea66251df9d255b7d0ff9d0ff309580d42a",
+  "corrupted_expectation_check": {
+    "command": [
+      "python3",
+      "-B",
+      "-O",
+      "round-two/six-reviewer-4/regular-blue-codegree-audit/audit.py",
+      "--expected",
+      "scratch/pass2-corrupt-expectation.json"
+    ],
+    "exit_code": 1,
+    "rejection_reason": "ValueError: expected record mismatch"
+  },
+  "date_utc": "2026-10-01",
+  "dependencies": "standard library only",
+  "independent_expected_sha256": "0ccb7fd480c1dd7ceb214a3724ca8cc229b101a92a43b0c2cceb72fe7f6bbfd2",
+  "independent_runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-reviewer-4/regular-blue-codegree-audit/audit.py"
+      ],
+      "elapsed_seconds": 0.277418,
+      "exit_code": 0,
+      "peak_child_rss_KiB": 16680,
+      "stderr": "",
+      "stdout": {
+        "binary_multiplicity_vectors_tested": 1001,
+        "expected_sha256": "0ccb7fd480c1dd7ceb214a3724ca8cc229b101a92a43b0c2cceb72fe7f6bbfd2",
+        "minimum_size_nine_adjacent_duplicate_pairs": 3,
+        "status": "PASS",
+        "valid_star_configurations": 1260
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-4/regular-blue-codegree-audit/audit.py"
+      ],
+      "elapsed_seconds": 0.418178,
+      "exit_code": 0,
+      "peak_child_rss_KiB": 20008,
+      "stderr": "",
+      "stdout": {
+        "binary_multiplicity_vectors_tested": 1001,
+        "expected_sha256": "0ccb7fd480c1dd7ceb214a3724ca8cc229b101a92a43b0c2cceb72fe7f6bbfd2",
+        "minimum_size_nine_adjacent_duplicate_pairs": 3,
+        "status": "PASS",
+        "valid_star_configurations": 1260
+      }
+    }
+  ],
+  "python_version": "Python 3.11.2",
+  "role": "independent reviewer",
+  "thread_limit": 1,
+  "trust_boundary": "Ordinary written proof; no host census, exhaustive cubic-graph catalogue, floating spectrum, solver or proof assistant. Independent finite controls and author-program replays reported separately."
+}
