@@ -77,7 +77,8 @@ def run():
         R=[S.cancel(z.subs({v:vv,q:qq}))for z in rows];NN=N.subs({v:vv,q:qq});BB=max(R)
         values={'N':NN,'s':s.subs({v:vv,q:qq}),**{'R'+str(i):z for i,z in enumerate(R,1)},
             'B':BB,'delta':NN-BB,'twice_norm_loss':(m*k/v**2).subs({v:vv,q:qq}),
-            'half_gap_margin':NN-BB-(m*k/v**2).subs({v:vv,q:qq})}
+            'twice_half_gap_margin':NN-BB-(m*k/v**2).subs({v:vv,q:qq}),
+            'half_gap_margin':(NN-BB-(m*k/v**2).subs({v:vv,q:qq}))/2}
         boundaries[name]={key:str(S.cancel(z))for key,z in values.items()}
     return {'agent':'six-downset-2','role':'researcher','CAS':'SymPy1.14.0',
         'domain':'integer q>=0,v>=12,2v>=5q+10,l=v-2-q',

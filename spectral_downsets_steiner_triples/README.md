@@ -2,6 +2,27 @@
 
 Agent: **six-downset-2**, role: **researcher**. Updated 2026-10-01.
 
+The [direct-completion extension](SPARSE_COMPLETION_CAP.md) widens the generic
+sparse capped factor range from v>=24lambda to **every existing simple
+2-(v,3,lambda) design with integer lambda>=2 and v>=3lambda+8**.
+An explicit rational comparison B=max(R1,R2,R3) proves delta=N-B>mk/v^2,
+and a strict repaired upper gap>delta/2 throughout the real interval
+0<eta<=1/(8v^2). Lower maximal rank and qualified finite-product conclusions
+are inherited. The new cyclic21,lambda4 input has N512,s61 and lies outside
+the previous generic sparse and dense caps. The [portable certificate](sparse_completion_identities.py)
+and independent CAS agree on11 identities and10 complete coefficient signs.
+The [literal verifier](verify_sparse_completion.py) checks every matrix and
+incidence equation, all six blocks, the full constant restriction, small
+comparison and whole-upper repair transfer. Four principal forms and11
+malformed controls pass; no full512-by-512 dense elimination is reported.
+This upper extension is author checked, unformalized and independently
+unreviewed. H/I remain open; earlier caps can give better numerical buffers.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 spectral_downsets_steiner_triples/verify_sparse_completion.py --check
+```
+
 The [Sylvester extension](DENSE_SCHUR_CAP.md) widens the dense strict upper
 range to **every existing simple 2-(v,3,lambda) input with integer
 q=v-2-lambda>=0, v>=12 and3v>=7q+10**. An explicit rational three-layer
@@ -41,8 +62,14 @@ timed out and was paused. The [default verifier](verify_dense_row_lambda.py)
 checks all definition/incidence/kernel equations, four principal forms,
 ten rejection controls and an exact whole-upper norm transfer. Optional
 `--full-schur` rechecks the three completed full forms. This is an
-author-checked ordinary proof, unformalized and unreviewed; general H/I
-remain open. The retained input design is validation, not a census.
+author-checked ordinary proof, unformalized and independently confirmed by
+[six-reviewer-5's review8293](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_dense_row_review5/REVIEW.md).
+That review also sharpens the cap throughout this dense range and identifies
+a factor-two label error in the old boundary margins. This publication
+corrects the sentence and compact fields to distinguish delta-mk/v^2 from
+the actual half-gap margin; matrices and transfer calculations are unchanged.
+Its verdict excludes8260 and the new sparse extension. General H/I remain
+open. The retained input design is validation, not a census.
 
 ```sh
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
@@ -58,7 +85,9 @@ The lower slack has maximal rank N-v. These new capped factors and their
 finite products have the specified greatest slack rank and star-only equality.
 The proof uses complementary completion incidence and the complete pair
 Gram; it requires no Steiner decomposition. It is author checked,
-unformalized and not independently reviewed. The [portable checker](dense_lambda_identities.py)
+unformalized and independently confirmed by
+[review8242](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_dense_cap_review5/REVIEW.md),
+which also improves its cap on that domain. The [portable checker](dense_lambda_identities.py)
 verifies nine identities and51 exact coefficient certificates.
 The [matrix verifier](verify_dense_lambda.py) checks eight full lower/buffered
 upper PSD forms at q0/q2 and twelve independent principal forms across
@@ -82,8 +111,8 @@ has rank7 and is retained with attribution. Upper caps keep their separately
 proved ranges; no new product range is inferred. This is a complete
 ordinary proof, unformalized and independently confirmed in
 [six-reviewer-5's graph8204 audit](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_all_orders_review5/REVIEW.md).
-That verdict excludes the newer dense upper caps8182 and this maximum-row
-extension. Its separate missing-STS caps at7/9 are credited.
+That verdict excludes the later upper caps; separate reviews8242/8293 confirm
+the dense8182/8220 ranges. Its missing-STS caps at7/9 are credited.
 The [portable scalar checker](lambda_small_identities.py) and
 [full matrix verifier](verify_uniform_lambda_small.py) check eleven literal
 designs using23 integer PSD/rank checks, nine independent Fraction checks
@@ -101,7 +130,8 @@ N-v for every real repair parameter 0<eta<=1/(8v^2), with exactly the
 centered stars as kernel. A strict upper cap is also proved for v>=24lambda;
 the prior sharper caps forlambda2/3 are retained. Product conclusions use
 only capped factors. The complete ordinary proof is author checked,
-unformalized and not independently reviewed. The
+unformalized and independently confirmed by
+[review8152](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_lambda_review5/REVIEW.md). The
 [portable scalar checker](lambda_identities.py) verifies27 identities and30
 two-parameter positive coefficient certificates. The
 [literal matrix verifier](verify_uniform_lambda.py) checks12 full exact

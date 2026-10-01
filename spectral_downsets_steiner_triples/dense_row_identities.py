@@ -85,9 +85,11 @@ def run():
         'strict_certificate_count':sum(len(z)for z in records.values()),
         'strict_certificates':records,'repair_margin_shifted_polynomials':tables,
         'boundary_q3v13':{'N':'300','s':'61','R1':'7289/29','R2':'434/3','R3':'233',
-            'B':'7289/29','delta':'1411/29','twice_norm_loss':'330/13','half_gap_margin':'8773/377'},
+            'B':'7289/29','delta':'1411/29','twice_norm_loss':'330/13',
+            'twice_half_gap_margin':'8773/377','half_gap_margin':'8773/754'},
         'boundary_q4v15':{'N':'436','s':'78','R1':'7589/19','R2':'1181/6','R3':'323',
-            'B':'7589/19','delta':'695/19','twice_norm_loss':'182/5','half_gap_margin':'17/95'}}
+            'B':'7589/19','delta':'695/19','twice_norm_loss':'182/5',
+            'twice_half_gap_margin':'17/95','half_gap_margin':'17/190'}}
 
 
 if __name__=='__main__':print(json.dumps(run(),indent=2,sort_keys=True))

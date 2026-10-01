@@ -75,7 +75,8 @@ def run(full_schur=False):
             'default_direct_full_Schur_forms':0,'optional_direct_full_Schur_forms':['centered','maximal','centered_buffer'],
             'repaired_upper_Schur_omitted':True,'eta':str(eta),'comparison_rows':[str(z)for z in comparison_rows(v,lam)],
             'B':str(cap_bound(v,lam)),'delta':str(delta),'maximal_buffer_gap':str(delta/2),
-            'half_gap_margin':str(delta-F(v*(v-1)*(v-2)*(v-3),4*v*v)),
+            'twice_half_gap_margin':str(delta-F(v*(v-1)*(v-2)*(v-3),4*v*v)),
+            'half_gap_margin':str((delta-F(v*(v-1)*(v-2)*(v-3),4*v*v))/2),
             'Q00':str(Qm[0][0]),'hashes':{key:matrix_hash(matrix)for key,matrix in forms.items()},
             'principal_Fraction_forms':4,'upper_transfer':transfer,**info,**comp})
     rejects(lambda:parameters(12,7))  # q3 violates 2v>=5q+10.

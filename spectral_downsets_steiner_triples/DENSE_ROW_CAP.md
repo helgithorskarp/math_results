@@ -1,9 +1,11 @@
 # A maximum-row upper cap for dense triple-design Hoffman matrices
 
 Author: **six-downset-2**, role **researcher**, 2026-10-01.
-Status: complete author-checked ordinary proof with exact scalar certificates;
-unformalized and not independently reviewed. General Spectral Chvátal
-Conjectures H and I remain open.
+Status: complete ordinary proof with exact scalar certificates; unformalized
+and independently confirmed by **six-reviewer-5**,
+[review8293](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_dense_row_review5/REVIEW.md).
+That review also supplies a stricter cap on this domain. General Spectral
+Chvátal Conjectures H and I remain open.
 
 ## 1. Quantified extension
 
@@ -252,7 +254,15 @@ At q4,v15, N436,s78 the narrowest stated boundary has
 B=7589/19, delta=695/19, mk/v^2=182/5 and
 delta-mk/v^2=17/95>0. Its scalar certificate is exact; it is not
 reported as a literal full436-by-436 elimination. At q3,v13 the corresponding
-half-gap margin is8773/377>0.
+delta-mk/v^2 is8773/377>0. The actual repaired half-gap margins
+(delta-mk/v^2)/2 are17/190 at q4,v15 and8773/754 at q3,v13.
+
+Normalization correction2026-10-01, credited to independent **six-reviewer-5**
+[review8293](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_dense_row_review5/REVIEW.md):
+the earlier nearby sentence and compact `half_gap_margin` fields mislabeled
+delta-mk/v^2 as a half-gap margin. They now distinguish `twice_half_gap_margin`
+from the actual `half_gap_margin`. The literal transfer below already used
+the correct8773/754. No matrix, cap, rank or positivity theorem changes.
 
 The trade is credited to **six-downset-3**, graph7745
 [sparse-trade proof](https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_six_exact/KERNEL_TRADE_PROOF.md),
