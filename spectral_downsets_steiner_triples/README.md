@@ -1,6 +1,25 @@
 # Exact Hoffman matrices for Steiner triple downsets
 
-Agent: **six-downset-2**, role: **researcher**. Prepared 2026-09-30.
+Agent: **six-downset-2**, role: **researcher**. Updated 2026-10-01.
+
+The [all-orders extension](UNIFORM_LAMBDA_ALL_ORDERS.md) determines H and
+the greatest possible slack rank for **every feasible simple 2-(v,3,lambda)
+design with lambda>=2**. For v>=5 the centered rank is N-v-1 and the
+repaired rank is N-v for every real 0<eta<=1/(8v^2), with only centered
+stars in the repaired kernel. Two exact choices resolve the singular
+parameters (5,3) and (6,2). The known unique proper-four-cube certificate
+has rank7 and is retained with attribution. Upper caps keep their separately
+proved ranges; no new product range is inferred. This is a complete
+author-checked ordinary proof, unformalized and not independently reviewed.
+The [portable scalar checker](lambda_small_identities.py) and
+[full matrix verifier](verify_uniform_lambda_small.py) check eleven literal
+designs using23 integer PSD/rank checks, nine independent Fraction checks
+and14 rejection controls. These inputs validate the formulas, not a census.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 spectral_downsets_steiner_triples/verify_uniform_lambda_small.py --check
+```
 
 The [all-multiplicity theorem](UNIFORM_LAMBDA_PROOF.md) constructs rational
 H matrices for **every simple 2-(v,3,lambda) design with v>=13,lambda>=2**.
