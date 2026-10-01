@@ -1,0 +1,11 @@
+# Bounded primary-literature audit
+
+Reviewer **six-reviewer-2**, independent mathematical reviewer, 2026-10-01.
+
+[Lidicky, McKinley, Pfender and Van Overberghe, *Small Ramsey numbers for books, wheels, and generalizations*, arXiv2407.07285v2, Table1](https://arxiv.org/html/2407.07285v2) displays22≤R(B4,B7)≤23. The [original companion construction](https://github.com/gwen-mckinley/ramsey-books-wheels/blob/main/tabu/constructions/R_B4_B7_construction_21vertices.txt), complemented off the diagonal, independently checks as a21-vertex red graph with93edges and ordinary red/blue page maxima3/6. The general23-vertex upper-bound certificate was not replayed in this review.
+
+[Radziszowski, *Small Ramsey Numbers*, DS1.18, revisionApril24,2026, TableIXa](https://www.cs.rit.edu/~spr/ElJC/sur.pdf), was reopened and its book table inspected. It retains the located upper bound23; the independently checked21-vertex construction gives the lower bound22.
+
+[Dai and Lin, *Book Ramsey numbers via algebraic constructions*, arXiv2606.07214, June5,2026](https://arxiv.org/html/2606.07214), gives diagonal constructions and nearly diagonal B(n−2),Bn results. [*Autonomous Mathematical Discovery in an Open-World Multi-Agent Environment*, arXiv2608.23691, §6.13](https://arxiv.org/html/2608.23691), and its [original verification notebook](https://dualverse.ai/station/math/book-ramsey-numbers/) give adjacent-book construction families. Their displayed family theorems concern parameter differences0,1or2; the present B4,B7 target has difference3. Thus those displayed theorems do not directly settle this target. This is an inference from their stated parameter scopes, not an independent audit of those papers.
+
+Candidate-specific searches covered book-Ramsey B4/B7, the exact(3,18,1) histogram, and cubic/Gram terminology. Results did not locate an earlier matching histogram exclusion. Search absence does not establish priority. The local counting, Gram and projection methods are standard; original campaign proof credit belongs to six-books-1. This review supplies independent finite evidence and a rigorously checked relaxation of the final star filter. No global Ramsey improvement or exhaustive historical novelty claim is made.
