@@ -1,4 +1,4 @@
-# Capped unions and maximal-rank two-facet certificates
+# Capped unions, facet repairs, and sunflower packet assembly
 
 Actual author: **six-downset-1**, role **researcher**, fresh round two,
 2026-10-01. Author-checked ordinary proofs with exact finite validation;
@@ -19,6 +19,17 @@ lower kernel. Consequently **every downset with exactly two maximal
 members**, of any sizes or overlap, has a rational capped H matrix with
 universally maximal lower rank. This is an explicit rank construction;
 no priority claim for ordinary two-facet H is made.
+
+[MULTI_FACETS.md](MULTI_FACETS.md) extends the repair to **every three-petal
+Boolean sunflower**, allowing unequal petal orders. On disjoint petals,
+let r be their number, t the largest cube star and k the number attaining
+t. The same construction and the credited equal-star union also cover
+every r<=3k: lower rank N-kt is universally maximal and the upper rank
+is N-1. A nonempty common c-point core gives lower and upper rank
+N-2^(c-1). The new mechanism is a small fixed-diagonal Gram LMI;
+three explicit Gram choices and an exact polynomial sign certificate
+cover every dyadic ordering. General overlapping three-facet families
+and unrestricted unequal-star cap closure remain outside the claim.
 
 For r>=2 equal n-point Boolean cubes, n>=2, put s=2^(n-1),
 N=r(2s-1)+1 and b=N-s. The complete output spectrum is
@@ -63,6 +74,28 @@ rejection controls.
 The deterministic [RESULTS.json](RESULTS.json) SHA256 is
 `bb547adc6e4e7be1316a1971d7931f9ebfbd075569d34c5a10c095c318484c21`.
 
+Reproduce the new multi-facet result with Python3.11+, standard library
+and the local parent verify.py only:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 python3 -B round-two/six-downset-1/verify_multi.py --check round-two/six-downset-1/MULTI_RESULTS.json --coefficients round-two/six-downset-1/MARGIN_COEFFICIENTS.json
+```
+
+Expected: `ok:true`, all20 sorted order1..4 triples plus four further
+triples, five packet assemblies, four products, four common-core
+sunflowers, largest matrix order74, and16 rejection controls. Every
+coefficient of three margin polynomials is reconstructed and checked:
+34,219,10 positive integer coefficients, respectively. The infinite
+wide-gap step uses this263-coefficient exact certificate rather than
+finite matrix sampling. Normal and optimized replays agree.
+[MULTI_RESULTS.json](MULTI_RESULTS.json) SHA256 is
+`e2bffb13274445cded7b3b808cd0e9ec6389613d4de88d71664bdfc4dc808d0d`;
+[MARGIN_COEFFICIENTS.json](MARGIN_COEFFICIENTS.json) SHA256 is
+`892ff3f9611aa4632fd67936d630eff35c52960098016c404323c9446dc5ddbb`.
+A normal new replay took12.64seconds and25,128KiB peak child RSS with
+CPython3.11.2. The finite literal constructor refuses matrix order>80;
+this resource guard does not restrict the mathematical theorem.
+
 [verify.py](verify.py) compares every union entry from the full factor
 formula against a separate core lift. It checks support, symmetry,
 row sums, actual downsets and largest stars, both complete rational PSD
@@ -87,6 +120,7 @@ lexicographic factor-index tuples.
 The trust boundary is ordinary written mathematics and Python integer/
 Fraction semantics. No external solver, floating tolerance, CAS,
 classification corpus, private input or large omitted certificate is used.
-Finite checks validate the implementation; the written proof supplies
-the unbounded statements. The current primary problem remains
+Finite matrix checks validate the implementation; the written proof and,
+for the wide-gap multi-facet step, its exact coefficient certificate
+supply the unbounded statements. The current primary problem remains
 [Ellis--Filmus--Friedgut, Section4](https://arxiv.org/html/2609.28404v1#S4).
