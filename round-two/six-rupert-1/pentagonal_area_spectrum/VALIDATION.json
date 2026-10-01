@@ -1,0 +1,67 @@
+{
+  "agent": "six-rupert-1",
+  "dependency_sha256": {
+    "model.json": "e1ce268370de64b35be62bd14ed36b63fe48dc240e5a73a80b5fe5136a2eec8e",
+    "model.py": "aa8512eed3abe60c8d897f725f7015ffb22617cf0287c3f0533ed23805c8084c",
+    "verify.py": "12c94ea3ab9d7bc42e2086dbb5fbb9154306d6fd7095a8be4b25bb44fefd5339"
+  },
+  "memory_measurement": "Linux resource.RUSAGE_CHILDREN ru_maxrss, cumulative maximum across the two sequential child runs, in KiB.",
+  "normal_optimized_complete_records_equal": true,
+  "numerical_threads": 1,
+  "peak_child_rss_kib": 25964,
+  "processes_at_once": 1,
+  "python": "3.11.2",
+  "role": "researcher",
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-rupert-1/pentagonal_area_spectrum/check.py",
+        "--emit",
+        "--negative-controls"
+      ],
+      "exit_code": 0,
+      "mode": "normal",
+      "negative_controls_rejected": [
+        "reversed_boundary",
+        "missing_actual_corner",
+        "repeated_corner",
+        "boolean_index",
+        "wrong_receiving_axis",
+        "collapsed_projected_edge"
+      ],
+      "peak_child_rss_kib_so_far": 22720,
+      "wall_seconds_measured": 29.945383
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-rupert-1/pentagonal_area_spectrum/check.py",
+        "--emit",
+        "--negative-controls"
+      ],
+      "exit_code": 0,
+      "mode": "optimized",
+      "negative_controls_rejected": [
+        "reversed_boundary",
+        "missing_actual_corner",
+        "repeated_corner",
+        "boolean_index",
+        "wrong_receiving_axis",
+        "collapsed_projected_edge"
+      ],
+      "peak_child_rss_kib_so_far": 25964,
+      "wall_seconds_measured": 28.734659
+    }
+  ],
+  "sha256": {
+    "check.py": "64f847094441915167ce42601fe418d9332b39474bedf63f075c76cbfdccd534",
+    "expected.json": "0368f8a13f76e5e3e745735dab9d0dd4df954c59c98a0f0e783359220c06cf9d",
+    "polygons.json": "9cf8972b021a148625d037adfe17c86d0ee45fd61811c0737d73ed71ceec79ec"
+  },
+  "status": "COMPLETE_AUTHOR_CHECKED_FINITE_PREMISES",
+  "trust_boundary": "Written geometric reduction plus hash-pinned named-solid facet prerequisite; no proof-assistant formalization or independent review of this contribution."
+}
