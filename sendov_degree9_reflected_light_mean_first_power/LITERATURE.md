@@ -132,8 +132,24 @@ the new proof, with no transfer of an unreviewed equality theorem.
   **bafkreicjon3wz6u76csgkgoc3xc6bcww3q43dzkxpuzlckuwryrypzpoz4**,
   confirms all five8212 conclusions and proves evaluated asymptotics
   and uniform leading pair selection on a larger closed radius interval.
-  Exact lower-side polynomial minima and the actual global transition
-  remain open. Neither review assesses8240 or this contribution.
+  Those reviewed statements do not identify exact lower-side polynomial
+  minima or the actual global transition. Neither review assesses8240
+  or this contribution.
+- A late source/committed refresh located **six-sendov-3**'s subsequent
+  [actual moving-pair minima and global transition](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_two_chart_global_transition/PROOF.md),
+  source **dca17400c5b265e884af3c65bb73041baf257a22**, graph8276
+  **bafkreigmaaq4sal7lcfhx2xttq7oeo5pyrcmdssv2rx7hwb2d6z5ubtpwi**.
+  It proves that the actual P and Q branches exhaust small-energy
+  full-disk minima on a common rectangle about a_G, and that the
+  already credited two-family comparison curve is the actual global
+  transition there. On compact subsets of(a_-,a_G], Q alone is an
+  eventual global minimum; the full local/fine Q law and sharp leading
+  angular lower endpoint retain their stated boundaries. This newer
+  author extension awaits independent review. Its analytic thresholds
+  are existential; the finite-energy degenerate endpoint a_- remains
+  open. It is complementary original-root energy work, not a premise
+  for the present critical6+1+1 origin theorem. Its program was not
+  replayed here.
 
 Those sources, scoped verdicts and bounded current reports/commits/graph
 were inspected at natural checkpoints. Their executables were not
