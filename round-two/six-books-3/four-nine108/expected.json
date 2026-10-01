@@ -1,0 +1,496 @@
+{
+  "integrity_controls": {
+    "damage_names": [
+      "missing_orbit",
+      "duplicate_orbit",
+      "unordered_orbits",
+      "same_total_wrong_tags",
+      "boolean_deficit",
+      "false_coverage_count",
+      "wrong_red_cap",
+      "boolean_schema",
+      "wrong_local_graph",
+      "boolean_row_word",
+      "changed_one_tag_word",
+      "reversed_equal_one_tags",
+      "changed_multiplicity",
+      "false_orbit_size",
+      "false_domain_hash",
+      "false_domain_size",
+      "false_empty_star",
+      "supported_star_claimed_unsupported",
+      "duplicate_unsupported_star",
+      "incomplete_static_cover",
+      "overlapping_static_cover",
+      "wrong_static_target",
+      "omitted_target_star",
+      "boolean_support_point",
+      "propagation_in_static_schema",
+      "unknown_certificate_field",
+      "null_exclusion"
+    ],
+    "damaged_certificate_rejections": 27,
+    "good_incidence_records": 55080
+  },
+  "producer": {
+    "census": {
+      "high_multiplicities": 22575,
+      "matched_pair_column_splits": 2293995,
+      "ordered_exact_column_joins": 8315072,
+      "red_capped_joins": 279330,
+      "residual_vectors": 15895,
+      "valid_pair_column_splits": 7310635
+    },
+    "certificate_sha256": "5bdeb920b929a0104cddca836292358ee3fcee3088c666566cbc6fe5ef7b4e77",
+    "complete": true,
+    "deficits": [
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "exclusion_types": {
+      "empty_star": 448,
+      "star_pair_cover": 30
+    },
+    "incidence_records": 55080,
+    "incidence_sha256": "7e6367f5996a84527e2fcd43927def7806a136c1cb7c22185a1f17fdee377569",
+    "orbit_size_histogram": {
+      "120": 442,
+      "20": 1,
+      "30": 2,
+      "40": 1,
+      "60": 32
+    },
+    "orbits": 478,
+    "patterns": [
+      {
+        "high_sizes": [
+          5,
+          5
+        ],
+        "low_sizes": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "records": 23460
+      },
+      {
+        "high_sizes": [
+          6
+        ],
+        "low_sizes": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "records": 6120
+      },
+      {
+        "high_sizes": [
+          5
+        ],
+        "low_sizes": [
+          5,
+          5,
+          5,
+          6
+        ],
+        "records": 20400
+      },
+      {
+        "high_sizes": [],
+        "low_sizes": [
+          5,
+          5,
+          5,
+          7
+        ],
+        "records": 1620
+      },
+      {
+        "high_sizes": [],
+        "low_sizes": [
+          5,
+          5,
+          6,
+          6
+        ],
+        "records": 3480
+      }
+    ],
+    "setup": {
+      "full_large_sizes": {
+        "5": 30,
+        "6": 80
+      },
+      "high_choices": 456,
+      "low_pairs_red_capped": 39666,
+      "low_pairs_within_budget": 137193,
+      "low_size_counts": {
+        "5": 252,
+        "6": 210,
+        "7": 120
+      },
+      "mu_counts": {
+        "5": 51,
+        "6": 45,
+        "7": 30
+      },
+      "pair_column_vectors": 3351
+    },
+    "star_pair_covers": 50,
+    "unsupported_stars": 216,
+    "weighted_exclusion_types": {
+      "empty_star": 51710,
+      "star_pair_cover": 3370
+    }
+  },
+  "summary_control": {
+    "forged_narrowed_domain_summary_rejections": 1
+  },
+  "verifier": {
+    "census": {
+      "first_low_pairs": 64616,
+      "integral_recoveries": 25456,
+      "ordered_quotient_joins": 486487,
+      "red_capped_joins": 26518
+    },
+    "certificate_sha256": "5bdeb920b929a0104cddca836292358ee3fcee3088c666566cbc6fe5ef7b4e77",
+    "cohort_counts": [
+      {
+        "canonical_highs": [],
+        "canonical_keys": 5100,
+        "cohort": 0,
+        "expanded_keys": 5100,
+        "high_orbit": 1
+      },
+      {
+        "canonical_highs": [
+          31
+        ],
+        "canonical_keys": 680,
+        "cohort": 1,
+        "expanded_keys": 20400,
+        "high_orbit": 30
+      },
+      {
+        "canonical_highs": [
+          31,
+          47
+        ],
+        "canonical_keys": 60,
+        "cohort": 2,
+        "expanded_keys": 3600,
+        "high_orbit": 60
+      },
+      {
+        "canonical_highs": [
+          31,
+          115
+        ],
+        "canonical_keys": 34,
+        "cohort": 3,
+        "expanded_keys": 1020,
+        "high_orbit": 30
+      },
+      {
+        "canonical_highs": [
+          31,
+          241
+        ],
+        "canonical_keys": 84,
+        "cohort": 4,
+        "expanded_keys": 10080,
+        "high_orbit": 120
+      },
+      {
+        "canonical_highs": [
+          31,
+          527
+        ],
+        "canonical_keys": 8,
+        "cohort": 5,
+        "expanded_keys": 120,
+        "high_orbit": 15
+      },
+      {
+        "canonical_highs": [
+          31,
+          625
+        ],
+        "canonical_keys": 106,
+        "cohort": 6,
+        "expanded_keys": 6360,
+        "high_orbit": 60
+      },
+      {
+        "canonical_highs": [
+          31,
+          740
+        ],
+        "canonical_keys": 38,
+        "cohort": 7,
+        "expanded_keys": 2280,
+        "high_orbit": 60
+      },
+      {
+        "canonical_highs": [
+          63
+        ],
+        "canonical_keys": 86,
+        "cohort": 8,
+        "expanded_keys": 5160,
+        "high_orbit": 60
+      },
+      {
+        "canonical_highs": [
+          183
+        ],
+        "canonical_keys": 156,
+        "cohort": 9,
+        "expanded_keys": 780,
+        "high_orbit": 5
+      },
+      {
+        "canonical_highs": [
+          207
+        ],
+        "canonical_keys": 12,
+        "cohort": 10,
+        "expanded_keys": 180,
+        "high_orbit": 15
+      }
+    ],
+    "controls": {
+      "geometry": {
+        "complete_low_size_patterns": [
+          [
+            5,
+            5,
+            5,
+            5
+          ],
+          [
+            5,
+            5,
+            5,
+            6
+          ],
+          [
+            5,
+            5,
+            5,
+            7
+          ],
+          [
+            5,
+            5,
+            6,
+            6
+          ]
+        ],
+        "fixed_tags": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "independent_four_sets": 5
+      },
+      "primary21": {
+        "actual_completion_accepted": 1,
+        "actual_stars_accepted": 10,
+        "asymmetric_degree_preserving_damages_rejected": 196,
+        "blue_edges": 117,
+        "max_blue_pages": 6,
+        "max_red_pages": 3,
+        "order": 21,
+        "red_edges": 93
+      },
+      "signed_cut": {
+        "blue_intersection_identity_checks": 137,
+        "frames": 32,
+        "negative_blue_slack_cases": 18
+      }
+    },
+    "covered_records_sha256": "7e6367f5996a84527e2fcd43927def7806a136c1cb7c22185a1f17fdee377569",
+    "exclusion_types": {
+      "empty_star": 448,
+      "star_pair_cover": 30
+    },
+    "incidence_records": 55080,
+    "incidence_sha256": "7e6367f5996a84527e2fcd43927def7806a136c1cb7c22185a1f17fdee377569",
+    "orbit_size_histogram": {
+      "120": 442,
+      "20": 1,
+      "30": 2,
+      "40": 1,
+      "60": 32
+    },
+    "orbits": 478,
+    "patterns": [
+      {
+        "high_sizes": [
+          5,
+          5
+        ],
+        "low_sizes": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "records": 23460
+      },
+      {
+        "high_sizes": [
+          6
+        ],
+        "low_sizes": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "records": 6120
+      },
+      {
+        "high_sizes": [
+          5
+        ],
+        "low_sizes": [
+          5,
+          5,
+          5,
+          6
+        ],
+        "records": 20400
+      },
+      {
+        "high_sizes": [],
+        "low_sizes": [
+          5,
+          5,
+          5,
+          7
+        ],
+        "records": 1620
+      },
+      {
+        "high_sizes": [],
+        "low_sizes": [
+          5,
+          5,
+          6,
+          6
+        ],
+        "records": 3480
+      }
+    ],
+    "setup": {
+      "all_full_large_choices": 456,
+      "full_large_cohorts": [
+        [
+          [],
+          1
+        ],
+        [
+          [
+            31
+          ],
+          30
+        ],
+        [
+          [
+            31,
+            47
+          ],
+          60
+        ],
+        [
+          [
+            31,
+            115
+          ],
+          30
+        ],
+        [
+          [
+            31,
+            241
+          ],
+          120
+        ],
+        [
+          [
+            31,
+            527
+          ],
+          15
+        ],
+        [
+          [
+            31,
+            625
+          ],
+          60
+        ],
+        [
+          [
+            31,
+            740
+          ],
+          60
+        ],
+        [
+          [
+            63
+          ],
+          60
+        ],
+        [
+          [
+            183
+          ],
+          5
+        ],
+        [
+          [
+            207
+          ],
+          15
+        ]
+      ],
+      "full_large_sizes": {
+        "5": 30,
+        "6": 80
+      },
+      "low_pair_table": {
+        "low_pairs_red_capped": 39666,
+        "low_pairs_within_budget": 137193
+      },
+      "low_size_counts": {
+        "5": 252,
+        "6": 210,
+        "7": 120
+      }
+    },
+    "star_pair_covers": 50,
+    "unsupported_stars": 216,
+    "weighted_exclusion_types": {
+      "empty_star": 51710,
+      "star_pair_cover": 3370
+    }
+  }
+}
