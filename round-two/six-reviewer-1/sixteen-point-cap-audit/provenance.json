@@ -1,0 +1,94 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "date": "2026-10-01",
+  "target": {
+    "artifactRef": "bafkreidcn5kokpu7vix3bkydnikavutpqpsd6xnlnlzytqpcszcjbgfeeq",
+    "height": "9017",
+    "kind": "LEMMA",
+    "title": "A sixteen-point centered cap separation and an exact maximal-rank capped near-cube witness"
+  },
+  "borrowed_exact_inputs": {
+    "author": "six-downset-2",
+    "role": "researcher",
+    "source_commit": "428da8d6789562e364812a871c76b97177ffe928",
+    "source_directory": "round-two/six-downset-2/near_full_pair_separation",
+    "files": {
+      "seed.json": "401068b8e2d435f9be2837c003e0f3e97849d327494f2d519e122adc646b5144",
+      "dual.json": "e1fd40f386c7c463ceb1474d74ab93e784e8366930c7858c62527d5cb52d79aa"
+    },
+    "unchanged": true,
+    "all_mathematical_conditions_rechecked": true
+  },
+  "independent_method": "Original-equation direct affine completion, rational characteristic-polynomial signs/nullity; literal paired-point harmonic norms/actions. No author program imports.",
+  "related_new_generalization": {
+    "height": 9091,
+    "artifactRef": "bafkreigwroakbrnv2mmih6mhyy7hyrogtfsk3oc6suiro2godxl3gyjy3a",
+    "title": "Uniform centered cap separation on every near cube with n at least sixteen",
+    "independent_verdict": false,
+    "scope": "Generalizes negative clause only, not positive seed/repair."
+  },
+  "primary_literature": [
+    "https://arxiv.org/html/2609.28404v1#S4",
+    "https://arxiv.org/abs/2609.28404",
+    "https://arxiv.org/abs/1507.02713"
+  ],
+  "live_literature_date": "2026-10-01",
+  "primary_version": "2609.28404 v1 September23; H/I open in Section4",
+  "historical_priority_claim": false,
+  "environment": {
+    "python": "CPython3.12.14",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "native_threads": 1,
+    "mathematical_jobs": "serial",
+    "checker_guard_seconds": 90,
+    "outer_guard_seconds": 110
+  },
+  "formalization": false,
+  "record_sha256": "cd2514fd4bde2537c89f123fc553c22f9ad7fb179888a5bd1d8d9688584199bc",
+  "expected_file_sha256": "b8fad50ab81a761182461bdb9af8e27c8ad2a00df4ec1945e2629ff5a86631cd",
+  "resource_escalation": false,
+  "no_large_full_matrix": true,
+  "source_first_graph_publication": true,
+  "validation": {
+    "normal_optimized_whole_records_equal": true,
+    "normal_summary": {
+      "status": "PASS",
+      "record_sha256": "cd2514fd4bde2537c89f123fc553c22f9ad7fb179888a5bd1d8d9688584199bc",
+      "complete_sectors": 27,
+      "characteristic_certificates": 65,
+      "literal_action_rows": 202,
+      "mathematical_damage_rejections": 11,
+      "fixture_damage_rejections": [
+        "fixture-omitted-sector",
+        "fixture-wrong-coupling-coefficient",
+        "fixture-false-lower-floor"
+      ],
+      "whole_author_comparisons": 35,
+      "endpoint_lower_floor": "1/16384",
+      "seconds": 1.9344145939685404,
+      "rss_kib": 65400
+    },
+    "optimized_summary": {
+      "status": "PASS",
+      "record_sha256": "cd2514fd4bde2537c89f123fc553c22f9ad7fb179888a5bd1d8d9688584199bc",
+      "complete_sectors": 27,
+      "characteristic_certificates": 65,
+      "literal_action_rows": 202,
+      "mathematical_damage_rejections": 11,
+      "fixture_damage_rejections": [
+        "fixture-omitted-sector",
+        "fixture-wrong-coupling-coefficient",
+        "fixture-false-lower-floor"
+      ],
+      "whole_author_comparisons": 35,
+      "endpoint_lower_floor": "1/16384",
+      "seconds": 1.926209305995144,
+      "rss_kib": 70200
+    },
+    "external_damaged_runs": 10,
+    "all_external_damages_reject": true,
+    "author_frozen_normal_optimized_equal": true
+  }
+}
