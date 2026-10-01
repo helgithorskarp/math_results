@@ -1,0 +1,110 @@
+{
+  "agent": "six-reviewer-1",
+  "author_runs": [
+    {
+      "mode": "normal",
+      "peak_child_rss_kib": 32132,
+      "returncode": 0,
+      "seconds": 5.535385294992011,
+      "stderr": "",
+      "stdout": "PASS: 54 exact checks; 4 mutations rejected.\nComplete record SHA256: 5ff07bc8b7780b772ab2ee4133cdf8c2e05037d69eaad42c401ef9a64e2d4c62\n"
+    },
+    {
+      "mode": "optimized",
+      "peak_child_rss_kib": 33892,
+      "returncode": 0,
+      "seconds": 5.438873351027723,
+      "stderr": "",
+      "stdout": "PASS: 54 exact checks; 4 mutations rejected.\nComplete record SHA256: 5ff07bc8b7780b772ab2ee4133cdf8c2e05037d69eaad42c401ef9a64e2d4c62\n"
+    }
+  ],
+  "date": "2026-10-01",
+  "external_fixture_controls": [
+    {
+      "damage": "missing",
+      "mode": "normal",
+      "rejected": true,
+      "returncode": 1
+    },
+    {
+      "damage": "malformed",
+      "mode": "normal",
+      "rejected": true,
+      "returncode": 1
+    },
+    {
+      "damage": "altered",
+      "mode": "normal",
+      "rejected": true,
+      "returncode": 1
+    },
+    {
+      "damage": "missing",
+      "mode": "optimized",
+      "rejected": true,
+      "returncode": 1
+    },
+    {
+      "damage": "malformed",
+      "mode": "optimized",
+      "rejected": true,
+      "returncode": 1
+    },
+    {
+      "damage": "altered",
+      "mode": "optimized",
+      "rejected": true,
+      "returncode": 1
+    }
+  ],
+  "independent_record_sha256": "ce99c4b0be24aeacd2b4d89d8aa043cc78ecec4f8e9686dd7c9fd3f6aff71afe",
+  "independent_runs": [
+    {
+      "mode": "normal",
+      "peak_child_rss_kib": 21660,
+      "returncode": 0,
+      "seconds": 0.9594668299541809,
+      "stderr": "",
+      "stdout": "PASS: 72 independent exact checks; four damaged inputs rejected.\nRecord SHA256 ce99c4b0be24aeacd2b4d89d8aa043cc78ecec4f8e9686dd7c9fd3f6aff71afe\nFull all-s two-pair identities; numerical original-polynomial penalty1/256 and every fixed kappa<1/128.\n"
+    },
+    {
+      "mode": "optimized",
+      "peak_child_rss_kib": 22288,
+      "returncode": 0,
+      "seconds": 1.384163427981548,
+      "stderr": "",
+      "stdout": "PASS: 72 independent exact checks; four damaged inputs rejected.\nRecord SHA256 ce99c4b0be24aeacd2b4d89d8aa043cc78ecec4f8e9686dd7c9fd3f6aff71afe\nFull all-s two-pair identities; numerical original-polynomial penalty1/256 and every fixed kappa<1/128.\n"
+    }
+  ],
+  "proof_boundary": "finite exact algebra; ordinary analytic proofs for uniformity, projected-constraint absorption, original-root disk coverage and numerical penalty transfer; concentration/bootstrap inherited",
+  "published_reviewer_dependency": {
+    "field_kernel_path": "round-two/six-reviewer-1/quartic-boundary-audit/check.py",
+    "field_kernel_sha256": "2386fae932fcbc1c2ac04ad05c21729f490f044f525ca36ad5659adf891823b3",
+    "height": 8684,
+    "ref": "bafkreib53wtjf5wvfzzpcuvssztl776tvxzukaexx55f7vwgilg46w645a",
+    "scope": "published exact field arithmetic reused; new moment/chart/family engines independent of target",
+    "source_commit": "691ea3f4eaa4b06b46ab0aded63903d81d95c668"
+  },
+  "role": "independent mathematical reviewer",
+  "runtime": {
+    "implementation": "CPython",
+    "jobs_concurrent": 1,
+    "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+    "solver": null,
+    "standard_library_only": true,
+    "threads": 1
+  },
+  "target": {
+    "height": 8668,
+    "ref": "bafkreif5f6ahrnzovf43wsut4mtjz5kdbyzsh2ouxqxcxm22nhkaylynzy",
+    "source_commit": "3f74956df840a6763e34087e87323ded361cd1d0",
+    "source_sha256": {
+      ".gitignore": "2f6f90f5c8c8716ee636633e870c1d61184267644f36b2a83a5198309c67139a",
+      "LITERATURE.md": "dff851875f94d41b1b13de5f67230e8cdc1bb17c3c51fa250440815a05b0e921",
+      "PROOF.md": "61ef064cdd8c8f99533aa0fbd25d39d7eac32a880fffe2f9e663bf07262c8883",
+      "README.md": "7377d5c02137e3e4549c915fe47d4dff5b0a562f9e5ad2f537913b48ae1605ed",
+      "expected.json": "5ff07bc8b7780b772ab2ee4133cdf8c2e05037d69eaad42c401ef9a64e2d4c62",
+      "verify.py": "1d7a5845a4b460da91d490fbfeb3aa7972a49eb34e960ca7ce7664ac2c8f3d61"
+    }
+  }
+}
