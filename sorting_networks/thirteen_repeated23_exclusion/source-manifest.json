@@ -1,0 +1,419 @@
+{
+  "schema": "sorting13-repeated23-exclusion-source-manifest-v1",
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "files": [
+    {
+      "file": ".gitignore",
+      "bytes": 18,
+      "sha256": "744a1502c1d7ad664e0677975e40beb6cf6abfe3f49da5311af22b109a50af68"
+    },
+    {
+      "file": "PROOF.md",
+      "bytes": 14431,
+      "sha256": "f08c7d946e7b38bab9b40002fbfa8390aec06ddc9c0d8996f36d62a13e1b6e98"
+    },
+    {
+      "file": "README.md",
+      "bytes": 4865,
+      "sha256": "c033fb2d32bfa8871ffee795a200f0a240d790fc9cfbfcd14efc34f5b40ccc0a"
+    },
+    {
+      "file": "audit_data.py",
+      "bytes": 9220,
+      "sha256": "563f83b7727081b61ff119d029db87c299c3c18bbe0de65693d6640f33f016c4"
+    },
+    {
+      "file": "audit_encoding.py",
+      "bytes": 11312,
+      "sha256": "3c076572a4d1cd671bb831f6ef30be3e9ab5af4e206ee22aaae38fd941f6c386"
+    },
+    {
+      "file": "build.py",
+      "bytes": 6074,
+      "sha256": "a89d216bbebc9550e221cc72e138bfcbd585fb550952cc05fe5d7faf1f12cf12"
+    },
+    {
+      "file": "certificate.json",
+      "bytes": 4579,
+      "sha256": "e28e4321d899da978b301f9af5f43df37c71339658765a13c41253206d5ef773"
+    },
+    {
+      "file": "class155.core.cnf",
+      "bytes": 21198,
+      "sha256": "49dd794e969d5c5c0681c7196f68cbbda7ab7670dc9e811287d7eb2a345f0699"
+    },
+    {
+      "file": "class155.rup",
+      "bytes": 16425,
+      "sha256": "34272da027f5467c603f9e20d4824713cd7bf151c20f417c565c34514e12341a"
+    },
+    {
+      "file": "class243.core.cnf",
+      "bytes": 23363,
+      "sha256": "5abdc44ed4268116965fbe3ebe7381f19a95ad4611cc4f7c46b83a0df516b61d"
+    },
+    {
+      "file": "class243.rup",
+      "bytes": 12481,
+      "sha256": "bf7ad420632fbb5d693e84270173881b7382b6f8787dbe19dc9db99e015a3e31"
+    },
+    {
+      "file": "class40.core.cnf",
+      "bytes": 19183,
+      "sha256": "c852feade44a2952e2a15f3d9eb87505d56ade44299e3f1532dab272b305136a"
+    },
+    {
+      "file": "class40.rup",
+      "bytes": 9753,
+      "sha256": "3688e9b8198732991dc06d0c9824369d2796bd81787710dc7af571d9ef1063c0"
+    },
+    {
+      "file": "controls.py",
+      "bytes": 4971,
+      "sha256": "32108a67389a3e1ee5b67afb6a005444c87bf9fc572daaf47d0e076104fd701b"
+    },
+    {
+      "file": "dependencies.json",
+      "bytes": 9409,
+      "sha256": "4270ed1fd945622c95cf0f430b52b5904ecc11677061e6b0fcac30b0e666e630"
+    },
+    {
+      "file": "encoding.py",
+      "bytes": 5688,
+      "sha256": "450d130b3753b181edba2997ec2d68a81e22d0b0cf05d6cd18433e5591825585"
+    },
+    {
+      "file": "fixture.json",
+      "bytes": 4447,
+      "sha256": "e057122df43913e2feb1d687ea370cf355c6ea7c97d7d8922468c95ef403a872"
+    },
+    {
+      "file": "frontier.py",
+      "bytes": 4597,
+      "sha256": "6bc8602dcf2477e9fe79ff2f18c29d65a2559bf324d553df3a41e743d75c7040"
+    },
+    {
+      "file": "verify.py",
+      "bytes": 5817,
+      "sha256": "d6ca489c599d44bdad425387ea33db6fd0ffe5a8c4933ce7cd3b0612c20f7cda"
+    },
+    {
+      "file": "watched_rup.py",
+      "bytes": 4506,
+      "sha256": "8df045dbec0c992c246310e5e344f269d34059c3a65311b6c44d0471e8a787a8"
+    }
+  ],
+  "certificate_file_sha256": "e28e4321d899da978b301f9af5f43df37c71339658765a13c41253206d5ef773",
+  "canonical_certificate_sha256": "f01039ee36f95691324f888b6bc414207eb383b7da241ca6deb7c583536d9f01",
+  "canonicalization": "Compact JSON separators retaining parsed key order",
+  "positive_checker_output": {
+    "agent": "six-sorting-1",
+    "role": "researcher",
+    "status": "COMPLETE_REPEATED23_EXCLUSION_INDEPENDENTLY_VERIFIED",
+    "cases": [
+      {
+        "parent_index": 40,
+        "image": 6,
+        "coverage": {
+          "status": "EVERY_CLAUSE_AND_AUXILIARY_INDEPENDENTLY_AUDITED",
+          "variables": 7782,
+          "clauses": 201018,
+          "cardinality_blocks": 87
+        },
+        "proof": {
+          "status": "COMPACT_CORE_MEMBERSHIP_AND_PYTHON_RUP_VERIFIED",
+          "core_clauses": 1185,
+          "RUP_additions": 366,
+          "deletions_ignored": 0,
+          "premature_empty_rejected": true
+        }
+      },
+      {
+        "parent_index": 155,
+        "image": 0,
+        "coverage": {
+          "status": "EVERY_CLAUSE_AND_AUXILIARY_INDEPENDENTLY_AUDITED",
+          "variables": 9408,
+          "clauses": 242770,
+          "cardinality_blocks": 97
+        },
+        "proof": {
+          "status": "COMPACT_CORE_MEMBERSHIP_AND_PYTHON_RUP_VERIFIED",
+          "core_clauses": 1291,
+          "RUP_additions": 570,
+          "deletions_ignored": 0,
+          "premature_empty_rejected": true
+        }
+      },
+      {
+        "parent_index": 243,
+        "image": 0,
+        "coverage": {
+          "status": "EVERY_CLAUSE_AND_AUXILIARY_INDEPENDENTLY_AUDITED",
+          "variables": 9408,
+          "clauses": 242770,
+          "cardinality_blocks": 97
+        },
+        "proof": {
+          "status": "COMPACT_CORE_MEMBERSHIP_AND_PYTHON_RUP_VERIFIED",
+          "core_clauses": 1397,
+          "RUP_additions": 510,
+          "deletions_ignored": 0,
+          "premature_empty_rejected": true
+        }
+      }
+    ],
+    "boundary_cases": 2,
+    "data_audit": {
+      "original_prefix_inputs": 40960,
+      "actual_marked_free_assignments": 70368,
+      "B11_prefix_inputs": 790,
+      "moving_cut_truth_checks": 36864,
+      "mandatory_gate_truth_checks": 72,
+      "known45_original_inputs": 8192,
+      "base_image_original_inputs": 8192,
+      "pooled_caps": 492,
+      "status": "ALL_LITERAL_IMAGES_PRUNING_CAPS_AND_MOVING_CUTS_INDEPENDENTLY_VERIFIED"
+    },
+    "tiny_RUP_controls": 4608,
+    "gadget_truth_controls": 72,
+    "cardinality_shapes": [
+      {
+        "flags": 36,
+        "cap": 1,
+        "exact": true,
+        "tests": 667
+      },
+      {
+        "flags": 10,
+        "cap": 0,
+        "exact": false,
+        "tests": 1024
+      },
+      {
+        "flags": 10,
+        "cap": 3,
+        "exact": false,
+        "tests": 1024
+      },
+      {
+        "flags": 10,
+        "cap": 2,
+        "exact": false,
+        "tests": 1024
+      },
+      {
+        "flags": 10,
+        "cap": 4,
+        "exact": false,
+        "tests": 1024
+      },
+      {
+        "flags": 10,
+        "cap": 8,
+        "exact": false,
+        "tests": 1024
+      },
+      {
+        "flags": 10,
+        "cap": 6,
+        "exact": false,
+        "tests": 1024
+      },
+      {
+        "flags": 10,
+        "cap": 7,
+        "exact": false,
+        "tests": 1024
+      },
+      {
+        "flags": 10,
+        "cap": 9,
+        "exact": false,
+        "tests": 1024
+      },
+      {
+        "flags": 10,
+        "cap": 5,
+        "exact": false,
+        "tests": 1024
+      },
+      {
+        "flags": 11,
+        "cap": 0,
+        "exact": false,
+        "tests": 2048
+      },
+      {
+        "flags": 11,
+        "cap": 3,
+        "exact": false,
+        "tests": 2048
+      },
+      {
+        "flags": 11,
+        "cap": 2,
+        "exact": false,
+        "tests": 2048
+      },
+      {
+        "flags": 11,
+        "cap": 4,
+        "exact": false,
+        "tests": 2048
+      },
+      {
+        "flags": 11,
+        "cap": 9,
+        "exact": false,
+        "tests": 2048
+      },
+      {
+        "flags": 11,
+        "cap": 7,
+        "exact": false,
+        "tests": 2048
+      },
+      {
+        "flags": 11,
+        "cap": 8,
+        "exact": false,
+        "tests": 2048
+      },
+      {
+        "flags": 11,
+        "cap": 10,
+        "exact": false,
+        "tests": 2048
+      },
+      {
+        "flags": 11,
+        "cap": 6,
+        "exact": false,
+        "tests": 2048
+      },
+      {
+        "flags": 11,
+        "cap": 5,
+        "exact": false,
+        "tests": 2048
+      }
+    ],
+    "exact_cardinality_assignments": 30363,
+    "seconds": 6.478128505987115,
+    "peak_rss_kib": 79876,
+    "trust": "Written unformalized pruning/normalization/zero-one bridges and known smaller-size bounds; algorithmic checks are not external-person review"
+  },
+  "positive_and_semantic_negative_controls": {
+    "agent": "six-sorting-1",
+    "role": "researcher",
+    "positive": [
+      {
+        "parent_index": 40,
+        "total_size": 70,
+        "original_inputs": 8192,
+        "status": "FORCED_INSERTION_SORTER_SAT_AND_SCALAR_VERIFIED"
+      },
+      {
+        "parent_index": 155,
+        "total_size": 69,
+        "original_inputs": 8192,
+        "status": "FORCED_INSERTION_SORTER_SAT_AND_SCALAR_VERIFIED"
+      },
+      {
+        "parent_index": 243,
+        "total_size": 69,
+        "original_inputs": 8192,
+        "status": "FORCED_INSERTION_SORTER_SAT_AND_SCALAR_VERIFIED"
+      }
+    ],
+    "negative": [
+      {
+        "control": "omitted_literal_tail",
+        "status": "MALFORMED_CERTIFICATE_REJECTED"
+      },
+      {
+        "control": "wrong_pooled_touch_cap_with_updated_digest",
+        "status": "MALFORMED_CERTIFICATE_REJECTED"
+      },
+      {
+        "control": "invalid_exact_one_cardinality_with_updated_digests",
+        "status": "MALFORMED_CERTIFICATE_REJECTED"
+      },
+      {
+        "control": "premature_empty_RUP_step",
+        "status": "MALFORMED_CERTIFICATE_REJECTED"
+      }
+    ],
+    "status": "POSITIVE_SORTERS_AND_FOUR_SEMANTIC_REJECTION_CONTROLS_VERIFIED",
+    "seconds": 6.8563408679910935,
+    "peak_rss_kib": 96176
+  },
+  "frontier_output": {
+    "agent": "six-sorting-1",
+    "role": "researcher",
+    "status": "EXACT_CONDITIONAL_FRONTIER_INCIDENCE_VERIFIED",
+    "remaining_classes": 320,
+    "counts": {
+      "eleven_distinct": 297,
+      "eleven_repeated": 23
+    },
+    "effective_orders": 2186295,
+    "class_table_sha256": "c63e46bc345c6a8973be7e62ecaae1bda06e687119a027e00c1195a4daca74f5",
+    "trust": "Peer8321 full branch proofs imported, read and not replayed by this script"
+  },
+  "command_wall_seconds": [
+    1.940985744993668,
+    6.547974703949876,
+    6.9648681249818765,
+    0.07488999998895451
+  ],
+  "child_peak_rss_kib_linux": 96176,
+  "native_full_proof_checks": [
+    {
+      "index": 40,
+      "image": 6,
+      "status": "NATIVE_DRAT_VERIFIED",
+      "seconds": 0.34775440994417295,
+      "core_bytes": 19183,
+      "trimmed_bytes": 41303
+    },
+    {
+      "index": 155,
+      "image": 0,
+      "status": "NATIVE_DRAT_VERIFIED",
+      "seconds": 0.40243774198461324,
+      "core_bytes": 21198,
+      "trimmed_bytes": 55132
+    },
+    {
+      "index": 243,
+      "image": 0,
+      "status": "NATIVE_DRAT_VERIFIED",
+      "seconds": 0.436689147958532,
+      "core_bytes": 23363,
+      "trimmed_bytes": 51463
+    }
+  ],
+  "native_compact_proof_checks": [
+    {
+      "class": 40,
+      "status": "FILTERED_COMPACT_RUP_NATIVE_VERIFIED",
+      "seconds": 0.30281738098710775
+    },
+    {
+      "class": 155,
+      "status": "FILTERED_COMPACT_RUP_NATIVE_VERIFIED",
+      "seconds": 0.25694881100207567
+    },
+    {
+      "class": 243,
+      "status": "FILTERED_COMPACT_RUP_NATIVE_VERIFIED",
+      "seconds": 0.2636484209797345
+    }
+  ],
+  "threads": 1,
+  "source_status": "CHECKS_COMPLETED_BEFORE_PUBLICATION",
+  "omitted": "Full CNFs, metadata, raw proof traces, logs, environment, ledgers and private checkpoints"
+}
