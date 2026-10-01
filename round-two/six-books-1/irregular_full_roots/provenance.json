@@ -1,0 +1,80 @@
+{
+  "agent": "six-books-1",
+  "claim": "Irregular valid22 graphs with degrees8..10 and a root whose root and all10red neighbors have degree10 have107..109edges and local Petersen or Petersen-minus-edge; every109host has such roots. Miss rows<=8/7 respectively.",
+  "credited_analytic_mechanisms": [
+    {
+      "height": 8541,
+      "ref": "bafkreieph2tyeefsbslbsfvs2jtv546shufx4ar3stjhca5c72lql37o4a",
+      "source": "round-two/six-books-1/regular_blue_codegrees/PROOF.md"
+    },
+    {
+      "height": 8559,
+      "ref": "bafkreihrw6fz7nozp5m5g2s5hnmeqkyte6taxfejvjk6gowwkepulvc4z4",
+      "source": "round-two/six-books-3/local14-disjoint/PROOF.md"
+    },
+    {
+      "height": 8621,
+      "ref": "bafkreiahiz6epzvowfeqssgvekewr2bjre4ld5gt2caexsjecyu4rok4ju",
+      "source": "round-two/six-books-1/regular_eight_miss_rows/PROOF.md"
+    },
+    {
+      "height": 8692,
+      "ref": "bafkreihb6tdhducvwx2wkxazbv76lb5k4qgorz2wdzhye4j6hgs6qqv7bi",
+      "scope": "Four-column mechanism credited; regular-host Hall conclusion not a premise.",
+      "source": "round-two/six-books-3/regular110-exclusion/PROOF.md",
+      "source_commit": "8f1d8fad8a130c3b01fced51959147dc79e6b28c"
+    }
+  ],
+  "date_utc": "2026-10-01T15:50:02.232861+00:00",
+  "degree_bound_application": {
+    "artifactRef": "bafkreic57itmbz4klkff2gooq5hyby3ssu4cniwz4mhs76uwsqlblesqdi",
+    "height": 8012,
+    "scope": "Unconditional109-edge application only; general theorem assumes degrees8..10 explicitly.",
+    "source": "book_ramsey_b4_b7_degree11_gram_exclusion/PROOF.md"
+  },
+  "finite_controls_are_not_valid_host_enumeration": true,
+  "fresh_primary_decoding": "441entries exactly equal off-diagonal red complement;93red edges and3/6pages. Existing baseline, no novelty.",
+  "fresh_primary_fixture_entries": 441,
+  "hall_classification_imported": false,
+  "primary_interval": [
+    22,
+    23
+  ],
+  "primary_literature": [
+    "https://arxiv.org/pdf/2407.07285",
+    "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+  ],
+  "primary_raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+  "proof_status": "Ordinary unformalized counting; author exact controls, no independent review or valid-host enumeration.",
+  "python_version": "Python 3.11.2",
+  "regular_finite_certificates_imported": false,
+  "resources": "One1CPU/2GiB job at a time; all BLAS/OpenMP variables1; standard-library CPython only.",
+  "role": "researcher",
+  "runs": [
+    {
+      "child_peak_RSS_KiB": 15900,
+      "command": "python3 -B round-two/six-books-1/irregular_full_roots/check.py",
+      "elapsed_seconds": 0.091875,
+      "stdout": {
+        "controls": 3,
+        "expected_sha256": "094ea267cecb71b341eb3914d73bb8e50af005edf56f3554a0bd059f648fc50c",
+        "status": "PASS"
+      }
+    },
+    {
+      "child_peak_RSS_KiB": 19284,
+      "command": "python3 -B -O round-two/six-books-1/irregular_full_roots/verify.py",
+      "elapsed_seconds": 0.347025,
+      "stdout": {
+        "expected_sha256": "094ea267cecb71b341eb3914d73bb8e50af005edf56f3554a0bd059f648fc50c",
+        "literal_local_entries": 300,
+        "literal_whole_entries": 1452,
+        "rejected_forged_controls": 6,
+        "status": "PASS"
+      }
+    }
+  ],
+  "solver_or_floating_point_premise": false,
+  "source_programs_import_one_another": false,
+  "spectral_classification_imported": false
+}
