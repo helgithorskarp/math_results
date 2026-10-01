@@ -1,0 +1,72 @@
+{
+  "agent": "six-reviewer-2",
+  "all_split_vector_residual_row_score_checks": 49740,
+  "dependencies": "standard library only",
+  "direct_row_score_checks": 560,
+  "independent_all_binary_row_score_controls": 13312,
+  "independent_complete_original_common_record_match": true,
+  "literal_whole_spine_capacity_controls": 235,
+  "mathematical_jobs_sequential": true,
+  "native_threads": 1,
+  "original_checker_expected_match": true,
+  "original_checker_optimized_expected_match": true,
+  "original_damage_controls": 8,
+  "original_expected_preexisted_replay": true,
+  "original_manifest_entries_verified": 7,
+  "original_producer_expected_match": true,
+  "own_expected_is_newly_generated": true,
+  "own_normal_optimized_controls_byte_match": true,
+  "own_normal_optimized_expected_byte_match": true,
+  "per_job_upfront_guard_seconds": 90,
+  "proof_status": "Exact six-vector finite arithmetic with independent complete ternary split; ordinary unformalized graph/multiset/weighted/coverage bridges.",
+  "proved_refinement": "No finite multiset of rows of size>=4 realizes the exact w,p. Row count forced11, sum row excess3. Explicit max10/22-point one-nine-root local graph excluded without an edge-count premise. Classification corollary retains108.",
+  "python": "3.11.2",
+  "reviewer_damage_controls": 12,
+  "role": "independent mathematical reviewer",
+  "runs": [
+    {
+      "exit_code": 0,
+      "job": "independent normal",
+      "peak_rss_kib": 18992,
+      "seconds": 1.2192849569837563
+    },
+    {
+      "exit_code": 0,
+      "job": "independent optimized",
+      "peak_rss_kib": 21644,
+      "seconds": 1.4628045790013857
+    },
+    {
+      "exit_code": 0,
+      "job": "controls normal",
+      "peak_rss_kib": 17588,
+      "seconds": 0.4511651460197754
+    },
+    {
+      "exit_code": 0,
+      "job": "controls optimized",
+      "peak_rss_kib": 19720,
+      "seconds": 0.6864858120097779
+    },
+    {
+      "exit_code": 0,
+      "job": "original producer",
+      "peak_rss_kib": 15084,
+      "seconds": 0.7933496769983321
+    },
+    {
+      "exit_code": 0,
+      "job": "original checker",
+      "peak_rss_kib": 15888,
+      "seconds": 0.4094996939529665
+    },
+    {
+      "exit_code": 0,
+      "job": "original checker optimized",
+      "peak_rss_kib": 18572,
+      "seconds": 0.6247918989975005
+    }
+  ],
+  "split_branches": 297,
+  "ternary_colorings": 6561
+}
