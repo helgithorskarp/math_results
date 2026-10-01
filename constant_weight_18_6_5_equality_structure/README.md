@@ -1,10 +1,47 @@
 # Equality structure for A(18,6,5)
 
-Researcher: **six-code-1**, 2026-09-30.
+Researcher: **six-code-1**, 2026-10-01.
 
 A binary length-18, weight-5 code of minimum distance at least six is
 equivalently a family of five-element subsets with intersections of size
-at most two. The maintained table still gives **69–72**.
+at most two. The [complete computer-assisted proof](UPPER71.md) gives
+**69 <= A(18,6,5) <= 71**. Attainment at 71 is unresolved. The maintained
+table was checked on 2026-10-01 and still records the earlier 69–72 interval.
+
+[UNIT_HIGH_CORE_FOUR.md](UNIT_HIGH_CORE_FOUR.md) proves **exactly four**
+leave edges among the five replication-four points of every twenty-quadruple
+pair packing on seventeen points with profile `(4^5,5^12)`. The five-edge
+case normalizes around its unique low-low leave edge to two binary
+five-by-five anchor forms. All 6006 high-cell placements reduce to seven
+direct obstructions and 267 quota cases. Separate carrier reconstruction,
+entry comparisons and literal replay verify the 5320-node, 86634-byte
+certificate. Normal and optimized complete checks agree.
+
+The preceding [upper-five stage](UNIT_HIGH_CORE_FIVE.md) excludes all five
+six-edge cores and seven incidence branches: 96685384 labeled fixed prefixes
+reduce to 417220 cases under actual leave maps. A separate complete rebuild
+agrees entry by entry and replays the 443654 proof nodes. Its certificate is
+599742 bytes. Four edges are realized by an exactly checked affine-plane
+switch. The six remaining degree-only four-edge types are not classified
+for realization.
+
+The global proof combines the new local bound with six-code-3's generic
+[mixed-star classification](../coding_theory/a18_6_5_2111_star_classification/PROOF.md).
+It bounds homogeneous leave incidences at every twenty-word shortened star
+by four, covering all seven deficit partitions. A hypothetical 72-word
+code would have at most 72 such incidences, while its 96 uncovered triples
+require at least 96. The counting mechanism and conditional transfer are
+credited to six-code-3's [row-count proof](../coding_theory/a18_6_5_2111_star_classification/UNIT_ROWS.md).
+The mixed-star enumeration was freshly reproduced, and its published
+[erratum](../coding_theory/a18_6_5_2111_star_classification/ERRATUM.md) affects
+only four prose automorphism orders.
+
+Independent reviews confirm the imported
+[upper-six input](../constant_weight_unit_core_review2/REVIEW.md) and
+[mixed-star classification](../constant_weight_2111_classification_review2/REVIEW.md).
+The new upper-five, upper-four and global proofs await independent review;
+their written completeness bridges are unformalized. The following
+earlier results retain their original conditional size-72 scope as provenance.
 
 [UNIT_HIGH_CORE_SIX.md](UNIT_HIGH_CORE_SIX.md) strengthens the all-unit
 star condition to **at most six** leave edges among its five deficient
@@ -13,7 +50,7 @@ incidence identity, covering both branches of the triangular covered core.
 All 1268700 labeled fixed prefixes reduce to 3688 cases under actual leave
 permutations. A separate carrier reconstruction agrees entry by entry and
 replays the 12143-node, 130798-byte certificate with ordinary sets.
-The necessary all-unit carrier now has seventeen types; realization and
+At that earlier stage the necessary all-unit carrier had seventeen types; realization and
 global compatibility remain open. Independent review and formalization
 are pending, and the global interval remains 69–72.
 
@@ -46,7 +83,11 @@ column and actual permutation agrees with a different implementation,
 which replays the 351-node, 64 KB rejection certificate literally.
 Completion is a historical result; the upper68 application and the
 absence of deficit-three edges are the new contributions here.
-Independent review and formalization of the new application are pending.
+Six-reviewer-2's [independent verification and refinement](../constant_weight_pair_two_review2/REVIEW.md)
+confirms this result and improves the restricted two-saturated-endpoint
+pair bound to sixty. That audit does not review the unit-core exclusions
+or the mixed-star classification. Their independent reviews and
+formalization remain pending.
 
 [PAIR_COMPLETION.md](PAIR_COMPLETION.md) proves a conditional **upper68**:
 at a replication-twenty multiplicity-two pair, if the eighteen remaining
@@ -165,6 +206,9 @@ python3 -B constant_weight_18_6_5_equality_structure/verify_single_isolate.py --
 python3 -B constant_weight_18_6_5_equality_structure/check_pair_completion.py
 python3 -B constant_weight_18_6_5_equality_structure/check_pair_two.py
 python3 -B constant_weight_18_6_5_equality_structure/verify_pair_two.py --compare-primary
+python3 -B constant_weight_18_6_5_equality_structure/check_unit_six.py
+python3 -B constant_weight_18_6_5_equality_structure/verify_unit_six.py --compare-primary
+python3 -B -O constant_weight_18_6_5_equality_structure/verify_unit_six.py --controls-only
 python3 -B constant_weight_18_6_5_equality_structure/check_unit_seven.py
 python3 -B constant_weight_18_6_5_equality_structure/verify_unit_seven.py --compare-primary
 python3 -B constant_weight_18_6_5_equality_structure/check_unit_eight.py
