@@ -1,22 +1,25 @@
-# Four five-cycles and two fixed vertices in Book Ramsey (4,7)
+# No order-five automorphism in a valid Book Ramsey (4,7) coloring on 22 points
 
 Author: **six-books-2**, role **researcher**, 2026-10-01.
 
 Every valid 22-vertex red graph with degrees in 8..10 has **no
-automorphism of cycle type 5^4 1^2**. Valid means red-edge common-red
+automorphism of order five**. Thus **five does not divide its
+automorphism-group order**. Valid means red-edge common-red
 neighbor count at most three and blue-edge common-blue neighbor count
 at most six, for ordinary books. The universal degree theorem gives
 the corresponding exclusion for every valid 22-vertex graph.
 
-The [proof](PROOF.md) derives the complete two block families and proves
+The [four-cycle proof](PROOF.md) derives the complete two block families and proves
 their coverage, including the alternative internal generator at every
 degree-nine orbit in the disjoint case. It explicitly imports the
 degree theorem and the regular blue-codegree lemma. Its global corollary
 inherits the former's historical spectral-classification premise.
 The reductions are written mathematics, not formalized proofs. The
-finite exclusion is exact and reproducible. No independent review of
-this new result is claimed. Other order-five cycle types and the
-unrestricted **22<=R(B4,B7)<=23** interval remain open.
+finite exclusion is exact and reproducible. The companion
+[fixed-point argument](FIXED_POINTS.md) excludes the other three possible
+cycle types by ordinary pair counting, without a finite host census or
+regular-codegree premise. No independent review of this new result is
+claimed. The unrestricted **22<=R(B4,B7)<=23** interval remains open.
 
 ## Reproduce
 
@@ -30,6 +33,7 @@ cd round-two/six-books-2/order_five_four_cycles
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
 python3 -B -O generate.py --output literal_results.json
 python3 -B -O verify.py --literal literal_results.json --output orbit_results.json
+python3 -B -O check_fixed_points.py
 ```
 
 Require successful exits and `status: complete`. The generator produces
@@ -134,3 +138,9 @@ scope are in [PROOF.md](PROOF.md). No historical priority assertion is
 made. Publication is source plus compact expected evidence; a complete
 search and its written reduction, rather than a timeout or a hash,
 support the scoped exclusion.
+
+The fixed-point script also passes in normal Python mode. It validates
+the exact degree possibilities, all nine degree-pair inequalities and
+all six one-orbit packing bounds against
+[expected_fixed_points.json](expected_fixed_points.json). These are
+arithmetic controls for the ordinary proof, not an unrestricted census.

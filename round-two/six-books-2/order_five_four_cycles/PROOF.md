@@ -34,7 +34,11 @@ finite exclusion with literal forbidden-book witnesses. A separate
 program also checks all unnormalized phases through exact correlations.
 The reduction is not proof-assistant checked, and no independent review
 of this new theorem is claimed. The unrestricted interval remains
-**22<=R(B4,B7)<=23**. Other order-five cycle types are not excluded here.
+**22<=R(B4,B7)<=23**. The companion [fixed-point proof](FIXED_POINTS.md)
+excludes the other three possible order-five cycle types by ordinary
+counting. Together they exclude every order-five automorphism and show
+that five does not divide a valid 22-vertex graph's automorphism-group
+order. This file supplies the four-cycle part of that conclusion.
 
 ## Cyclic coordinates and correlations
 
@@ -288,5 +292,6 @@ no historical priority is asserted.
 This is a scoped computer-assisted theorem with explicitly imported
 mathematical prerequisites. The preceding irregular-seed switching
 exclusion and Kneser switching classification are not proof dependencies.
-There is no claim about all order-five actions, arbitrary 22-vertex
-graphs, unrestricted Ramsey nonexistence, or a new global Ramsey bound.
+The companion ordinary argument extends this four-cycle exclusion to
+all order-five actions. Neither result excludes arbitrary 22-vertex
+graphs or establishes a new global Ramsey bound.
