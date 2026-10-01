@@ -440,6 +440,40 @@ Normal and optimized frozen outputs agree; the optimized run took3.188s
 and21060KiB, with one process and numeric threads one. The universal claim
 rests on the written all-parameter proof, not extrapolation from this cohort.
 
+## Singular-boundary count and rank lift
+
+The [boundary proof](BOUNDARY_PENDANT_COMPLETION.md) lowers the sufficient
+count to **r=N-s** when N>2s. A restricted repair lifts the extra raw lower
+kernel, preserves both endpoint constants, keeps every off-diagonal
+nonnegative, and makes every empty edge positive. Both slack ranks are
+maximal; the c-star is the unique maximum intersecting family. Above the
+boundary the constructor calls the existing linear recipe. Combined with
+balanced8424, every nontrivial D has a signed capped maximal-rank completion
+for every r>=max(2,N-s). The balanced result still has its sharper count one
+for s>=2. These are augmented-family conclusions, author-checked and
+unformalized; the new boundary result has no independent review claimed.
+
+The [constructor](boundary_pendant_completion.py),
+[independent literal Schur/kernel/LDL checker](verify_boundary_pendant_completion.py),
+[expected evidence](boundary_pendant_expected.json) and
+[source manifest](boundary_source_manifest.json) are reproduced from the root:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -B spectral_downsets_structural_certificates/verify_boundary_pendant_completion.py --check
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -B -O spectral_downsets_structural_certificates/verify_boundary_pendant_completion.py --check
+```
+
+All eight strictly unbalanced three-point inputs at all18 maximum centers,
+four larger boundary fixtures through order38 and two above-boundary fixtures
+receive complete entry replay and full rational PSD/rank/buffer checks.
+Fourteen invalid controls reject. The ordinary proof supplies the all-order
+quantifiers and universal count corollary; finite replay checks24 instances.
+[Independent balanced review8470](https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_balanced_pendant_review2/REVIEW.md)
+confirms8424 and strengthens its gap and minimum negative support. It does
+not review the linear or new boundary lemma.
+
 ## Primary sources and current status
 
 - Ellis, Filmus, Friedgut, [*Chvátal's conjecture: a proof from The Book*,

@@ -1,0 +1,60 @@
+{
+  "agent": "six-downset-1",
+  "role": "researcher",
+  "source_and_compact_expected_files": {
+    "BOUNDARY_PENDANT_COMPLETION.md": {
+      "sha256": "e3381b20a049b4c4a0b531f95a64ad3d4d0fdcf03653c3554655a1e95b6f358c",
+      "bytes": 14167
+    },
+    "boundary_pendant_completion.py": {
+      "sha256": "0f8b542d8b45f2a9e12eac7e05ded71fc87e16706a4a8e65920af03f200abe4c",
+      "bytes": 4014
+    },
+    "verify_boundary_pendant_completion.py": {
+      "sha256": "eb516f10ab9216dacc162460f01bce597565d92835ff86ca235b84488f80ed98",
+      "bytes": 10817
+    },
+    "boundary_pendant_expected.json": {
+      "sha256": "3e10f22c7c67d0e30e6fba86c77494cbab0484c86aa788484ded59f5d911b4e3",
+      "bytes": 21561
+    }
+  },
+  "existing_checker_dependencies": {
+    "linear_pendant_completion.py": {
+      "sha256": "65952d232daf000314c74273a7d427613c8ac2e470c8f0c274c87a3e62af602d",
+      "bytes": 4306
+    },
+    "verify_linear_pendant_completion.py": {
+      "sha256": "6df68174e461d20d6c765cede24db860a611ca6dd9606bd6e5da3a436ed00d2b",
+      "bytes": 10218
+    },
+    "affine_pendant_completion.py": {
+      "sha256": "21c15d974fd1dae0bf29802d38681805643b33ea884f8b3daa373b4762363a58",
+      "bytes": 11971
+    },
+    "verify.py": {
+      "sha256": "56e702043684e8b9b72e1b11f65613c4ec2e53049ceeba9b54efe6b963f5b778",
+      "bytes": 11504
+    },
+    "certificates.py": {
+      "sha256": "ed69971b64c36c23c761db5778a56c48ae65c26a941bbb1346a900fcc9e3a3fa",
+      "bytes": 11190
+    }
+  },
+  "existing_mathematical_dependencies": {
+    "LINEAR_PENDANT_COMPLETION.md": {
+      "sha256": "b98b724a06f4a015009470cae6227475186dd36453916465d99c609555421b92",
+      "bytes": 13450
+    },
+    "BALANCED_PENDANT_COMPLETION.md": {
+      "sha256": "ae976ea7286c2b8def937d5c6a2742d9ff0284fe0ed8b75a92b50e9a81ec6ce2",
+      "bytes": 15276
+    }
+  },
+  "claim_status": "complete ordinary author-checked boundary lemma; unformalized, independently unreviewed; finite replay validates implementation only",
+  "runtime": "CPython3.11.2; standard library; numeric threads1",
+  "commands": [
+    "python3 -B verify_boundary_pendant_completion.py --check",
+    "python3 -B -O verify_boundary_pendant_completion.py --check"
+  ]
+}
