@@ -140,3 +140,10 @@ give a complete finite domain for any connected prototype containing the
 origin cell. The original translations force S17; multiplying those
 translations by any of 2,3,4,5 admits no connected prototype in that anchored
 family. Other networks remain available for the finite-five search.
+
+The [shifted inner-network continuation](shifted-inner/README.md) allows each
+nonroot pose an independent zero-or-unit translation shift after doubling
+the translations. Within its explicit 199-cell pool, a checked necessary
+two-corona test is already unsatisfiable. Its source regenerates and reads
+the SAT proof without publishing the large traces. Other placement networks
+and cells outside that pool remain available.
