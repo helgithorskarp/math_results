@@ -1,0 +1,74 @@
+{
+  "agent": "six-heesch-3",
+  "role": "researcher",
+  "status": "AUTHOR_ALL_WIDTH_OPPOSED_FLAT_PAIR_VERIFIED",
+  "uniform_pair": {
+    "widths": "every integer n>=8",
+    "offsets": "every integer 1<=l<=n-2",
+    "protected_roles": [
+      "O",
+      "B"
+    ],
+    "complete_whole_flat_mates": 2,
+    "proper_gap_word_count": 0,
+    "mirror_rejection": "overlap with a whole mate of protected O"
+  },
+  "unit_overlap_margin": {
+    "complete_unit_cases": [
+      {
+        "unit_type": "bottom",
+        "other_carrier_distance_squared_bounds": [
+          "1/4",
+          "3",
+          "3/16"
+        ]
+      },
+      {
+        "unit_type": "top",
+        "other_carrier_distance_squared_bounds": [
+          "3",
+          "1/4",
+          "3/16"
+        ]
+      },
+      {
+        "unit_type": "left_lower",
+        "other_carrier_distance_squared_bounds": [
+          "3/16",
+          "961/16",
+          "27/16"
+        ]
+      },
+      {
+        "unit_type": "left_upper",
+        "other_carrier_distance_squared_bounds": [
+          "27/16",
+          "841/16",
+          "3/16"
+        ]
+      }
+    ],
+    "minimum_other_carrier_distance_squared": "3/16",
+    "shared_carrier_distance_squared_at_overlap_point": "3/1024",
+    "maximum_arc_displacement": "1/1600",
+    "overlap_point_axial": [
+      "17/32",
+      "-17/16"
+    ],
+    "scope": "Exact carrier inequalities plus the written homotopy argument put this point inside both the negative mirror mate and any positive mate of the protected negative unit."
+  },
+  "n12_positive_pair": {
+    "copies": 2,
+    "whole_contacts": 7,
+    "exposed_ports": 38,
+    "boundary_cycles": 1,
+    "nonincident_distance_squared": "3/4",
+    "ray_separation_degrees": 30,
+    "scope": "Nonvacuous physical subpacking via credited bounded deformation; no corona is asserted."
+  },
+  "malformed_controls_rejected": 8,
+  "canonical_certificate_sha256": "0cb164eef191e540eb5b11c32168e46159f94da426ae6b73ff96d6758c22407c",
+  "arithmetic": "Python3.11+ exact rational affine coefficients, standard library only.",
+  "proof_status": "Written all-real author proof and exact identities/inequalities. Unformalized and independently unreviewed.",
+  "scope": "A two-copy local obstruction to one strict surround of both named old copies. No global height, new corona lower bound, inventory census or finite-seven solution."
+}
