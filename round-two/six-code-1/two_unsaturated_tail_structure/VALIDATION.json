@@ -1,0 +1,278 @@
+{
+  "actual_agent": "six-code-1",
+  "role": "researcher",
+  "date_utc": "2026-10-01",
+  "python": "3.11.2",
+  "new_result_scope": "Uniform two-unsaturated71-word tail structure and upper hub multiplicity4; no global upper70.",
+  "new_proof": "Exact new M/S local certificates plus ordinary assignment, equality, transfer and cross-deficit proofs in PROOF.md.",
+  "proof_assistant_checked": false,
+  "new_result_independent_review": false,
+  "local_certificates": {
+    "by_kind": {
+      "M": {
+        "marked_products": 4,
+        "partial_maps": 10368,
+        "represented_full_maps": 62208,
+        "exceptional_partials": 74,
+        "literal_branch_witnesses": 444
+      },
+      "S": {
+        "marked_products": 88,
+        "partial_maps": 228096,
+        "represented_full_maps": 1368576,
+        "exceptional_partials": 629,
+        "literal_branch_witnesses": 3774
+      }
+    },
+    "certificate_sha256": "7a39677fc6c29b220bf0f343335696759f7e9df602b6c6b8e98c94f27eff350d",
+    "certificate_bytes": 31024,
+    "partial_input_sha256": "339ac50a5099740c212ca57aa4e2d90b54a2f1260b10cdc981966cd58abbd107",
+    "normal_optimized_semantic_records_agree": true,
+    "stable_verifier_record_sha256": "8d09b96f97fe0c718b57056794a191d803edfd5dad41f627124d559307c23685",
+    "literal_checker_complete_record": {
+      "actual_agent": "six-code-1",
+      "cases": 92,
+      "checked_full_branches": 4218,
+      "controls": {
+        "acl69_distance_counts": {
+          "10": 445,
+          "6": 1264,
+          "8": 637
+        },
+        "positive_joint_words": 36,
+        "rejected": [
+          "missing-case",
+          "repeated-case",
+          "wrong-format",
+          "missing-exception",
+          "missing-full-branch",
+          "invalid-witness",
+          "duplicate-template-block",
+          "invalid-group-map",
+          "zero-point-guard",
+          "out-of-policy-point-guard",
+          "zero-tail-guard",
+          "out-of-policy-tail-guard",
+          "false-collision-on-genuine-positive"
+        ]
+      },
+      "direct": 237761,
+      "entrywise_carrier_comparison": true,
+      "exceptional": 703,
+      "partial_maps": 238464,
+      "point_dfs_nodes": 704260,
+      "represented_full_maps": 1430784,
+      "role": "researcher",
+      "status": "COMPLETE_SEPARATE_LITERAL_CHECK"
+    }
+  },
+  "observed_new_runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "primary.py",
+        "--write"
+      ],
+      "seconds": 11.179312145046424,
+      "exit_code": 0,
+      "memory_measured": false
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "verify.py",
+        "--compare-primary"
+      ],
+      "seconds": 6.751994175021537,
+      "peak_RSS_kib": 28660,
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "primary.py"
+      ],
+      "seconds": 12.130557188007515,
+      "exit_code": 0,
+      "memory_measured": false
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "verify.py",
+        "--compare-primary"
+      ],
+      "seconds": 6.916208454000298,
+      "peak_RSS_kib": 31496,
+      "exit_code": 0
+    }
+  ],
+  "primary_baseline": {
+    "url": "https://aeb.win.tue.nl/codes/cwc/d6/a18.6.5.69",
+    "sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+    "bytes": 1311,
+    "word_count": 69,
+    "literal_pairs": 2346,
+    "distances": {
+      "6": 1264,
+      "8": 637,
+      "10": 445
+    },
+    "point_degrees": [
+      20,
+      20,
+      20,
+      19,
+      19,
+      20,
+      18,
+      20,
+      20,
+      20,
+      20,
+      18,
+      20,
+      19,
+      20,
+      20,
+      20,
+      12
+    ],
+    "freshly_fetched_this_pass": true
+  },
+  "fresh_generic_census_replay": {
+    "status": "COMPLETE_GENERIC_CENSUS_REPLAY",
+    "seconds": 14.300829664978664,
+    "peak_RSS_kib": 43756,
+    "manifest_sha256": "bf5b8d7fd19f473ab2be033ed227807cbef5f2dbb1794af7294a351bb80772b5",
+    "complete_readout_scope": "Both108-case covers compared entrywise on all352 packings, and every actual positive fixture map verified. Unchanged credited code; no new census or independent reviewer verdict."
+  },
+  "fresh_older_local_replay": {
+    "status": "COMPLETE_PINNED_INPUT_AND_LOCAL_REPLAY",
+    "source_pins_checked": 34,
+    "seconds": 4.927694123995025,
+    "maxrss_children_kib": 23108,
+    "commands": [
+      {
+        "command": [
+          "round-two/six-code-1/multiplicity_four_exclusion/primary.py"
+        ],
+        "exit_code": 0,
+        "result": {
+          "cases": 20,
+          "certificate_bytes": 8637,
+          "partial_maps": 51840,
+          "seconds": 2.7205582809983753,
+          "status": "COMPLETE_EXACT_CERTIFICATE"
+        },
+        "seconds": 2.7860937020159326
+      },
+      {
+        "command": [
+          "round-two/six-code-1/multiplicity_four_exclusion/verify.py",
+          "--compare-primary"
+        ],
+        "exit_code": 0,
+        "result": {
+          "agent": "six-code-1",
+          "cases": 20,
+          "checked_full_branches": 1410,
+          "controls": {
+            "acl69_distance_counts": {
+              "10": 445,
+              "6": 1264,
+              "8": 637
+            },
+            "positive_joint_words": 35,
+            "rejected": [
+              "missing-case",
+              "repeated-case",
+              "wrong-format",
+              "missing-exception",
+              "missing-full-branch",
+              "invalid-witness",
+              "duplicate-template-block",
+              "false-positive-collision",
+              "zero-point-guard",
+              "zero-tail-guard"
+            ]
+          },
+          "direct": 51605,
+          "entrywise_carrier_comparison": true,
+          "exceptional": 235,
+          "partial_maps": 51840,
+          "peak_RSS_kib": 23108,
+          "point_dfs_nodes": 153100,
+          "role": "researcher",
+          "seconds": 1.8057993429829367,
+          "status": "COMPLETE_SEPARATE_LITERAL_CHECK"
+        },
+        "seconds": 1.872052300022915
+      }
+    ],
+    "scope": "Only the local one-incidence theorem of8783 is needed, not its global profile chain."
+  },
+  "inherited_unchanged_shared_validation": {
+    "source_commit": "6693b35a653b8f78cb078b749159d7ada8e37b58",
+    "reader_url": "https://github.com/helgithorskarp/math_results/blob/6693b35a653b8f78cb078b749159d7ada8e37b58/round-two/six-code-1/multiplicity_one_exclusion/VALIDATION.json",
+    "performed_in_preceding_pass": true,
+    "fresh_repetition_claimed": false,
+    "all_required_source_bytes_match_current_pins": true,
+    "normal_optimized_semantic_records_agree": true,
+    "records": [
+      {
+        "optimized_python": false,
+        "seconds": 14.256546,
+        "maxrss_children_kib": 36624,
+        "source_pins_checked": 25,
+        "sequential_entry_points": 8
+      },
+      {
+        "optimized_python": true,
+        "seconds": 16.958649,
+        "maxrss_children_kib": 37920,
+        "source_pins_checked": 25,
+        "sequential_entry_points": 8
+      }
+    ]
+  },
+  "resource_scope": {
+    "one_cpu_intensive_process_at_a_time": true,
+    "hard_scope_cpu": 1,
+    "hard_scope_memory_GiB": 2,
+    "numerical_solver_libraries_used": false,
+    "direct_new_runs_env": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "replay_helper_thread_env": {
+      "BLIS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "fixed_per_case_nodes": 200000,
+    "fixed_per_case_seconds": 10,
+    "replay_child_deadline_seconds": 45,
+    "guard_incomplete_is_failure_not_nonexistence": true
+  },
+  "review_scope": {
+    "generic_fixture_coverage": "Independently confirmed by8933 conditional on reviewed8323. That verdict does not review this new uniform transfer or M/S certificates.",
+    "older_matched_local_zero_one_incidence": "Independently scoped review8885 conditional on generic fixture coverage; its generic premise is now independently confirmed by8933.",
+    "new_result": "Same-author paired implementations and ordinary proof, new independent review pending."
+  },
+  "trust_boundaries": [
+    "Explicit imported mathematical premises; CPython exact integer/set semantics; unformalized normalization, complete-carrier, injective assignments and local-to-global transfer.",
+    "Recorded times and hashes authenticate runs, not mathematical completeness.",
+    "No heuristic, solver output, resource failure or interrupted enumeration supplies a proof."
+  ]
+}
