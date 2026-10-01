@@ -1,0 +1,63 @@
+{
+  "agent": "six-rupert-1",
+  "memory_measurement": "Linux resource.RUSAGE_CHILDREN ru_maxrss, cumulative maximum across two sequential child runs, in KiB.",
+  "normal_optimized_complete_records_equal": true,
+  "numerical_threads": 1,
+  "parent_sha256": {
+    "check.py": "64f847094441915167ce42601fe418d9332b39474bedf63f075c76cbfdccd534",
+    "expected.json": "0368f8a13f76e5e3e745735dab9d0dd4df954c59c98a0f0e783359220c06cf9d",
+    "polygons.json": "9cf8972b021a148625d037adfe17c86d0ee45fd61811c0737d73ed71ceec79ec"
+  },
+  "peak_child_rss_kib": 25832,
+  "processes_at_once": 1,
+  "python": "3.11.2",
+  "role": "researcher",
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-rupert-1/pentagonal_extremal_fit_gap/check.py",
+        "--emit",
+        "--negative-controls"
+      ],
+      "exit_code": 0,
+      "mode": "normal",
+      "negative_controls_rejected": [
+        "unbalanced_translation_pair",
+        "boolean_source_index",
+        "reversed_dual_boundary",
+        "missing_essential_dual_point"
+      ],
+      "peak_child_rss_kib_so_far": 22576,
+      "wall_seconds_measured": 27.422485
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-rupert-1/pentagonal_extremal_fit_gap/check.py",
+        "--emit",
+        "--negative-controls"
+      ],
+      "exit_code": 0,
+      "mode": "optimized",
+      "negative_controls_rejected": [
+        "unbalanced_translation_pair",
+        "boolean_source_index",
+        "reversed_dual_boundary",
+        "missing_essential_dual_point"
+      ],
+      "peak_child_rss_kib_so_far": 25832,
+      "wall_seconds_measured": 27.973793
+    }
+  ],
+  "sha256": {
+    "certificate.json": "9bc1a215264feb8d136bd0664d62591259c9291ccf6627cc5b11485463b8cdfc",
+    "check.py": "9e81d68be9a4acfc219c006fe84b99c0667d9f1728dd37638a4e85b9b17147d4",
+    "expected.json": "1d301ed047561a78464252e5290a65c7ebf58f38ff38ce152abe994f955c95a9"
+  },
+  "status": "COMPLETE_AUTHOR_CHECKED_FINITE_PREMISES",
+  "trust_boundary": "Exact Python plus written balanced-support, proper-rotation transport, global facet/vertex localizers and compactness bridges; prerequisite named-model and area-spectrum proofs. Not formalized or independently reviewed."
+}
