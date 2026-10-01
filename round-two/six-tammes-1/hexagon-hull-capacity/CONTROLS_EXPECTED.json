@@ -1,0 +1,35 @@
+{
+  "status": "six_adverse_certificate_controls_rejected",
+  "controls": [
+    {
+      "control": "larger_displacement_requires_a_new_certificate",
+      "result": "rejected",
+      "reason": "a feasible vertex violates the strict norm bound"
+    },
+    {
+      "control": "false_smaller_vertex_norm_bound",
+      "result": "rejected",
+      "reason": "a feasible vertex violates the strict norm bound"
+    },
+    {
+      "control": "invalid_cap_normalization_bridge",
+      "result": "rejected",
+      "reason": "projection-to-unit-cap scalar bridge fails"
+    },
+    {
+      "control": "invalid_pair_separation_bridge",
+      "result": "rejected",
+      "reason": "two-point separation bridge fails"
+    },
+    {
+      "control": "non_supporting_diagonal",
+      "result": "rejected",
+      "reason": "pair does not support the template ray hull"
+    },
+    {
+      "control": "corrupted_coordinate_input",
+      "result": "rejected",
+      "reason": "coordinate input hash mismatch"
+    }
+  ]
+}
