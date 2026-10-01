@@ -135,7 +135,7 @@ Exact universal polynomial identities are
  D=\Delta/16,\quad \mu_2=3M/2,\quad
           \boxed{C=\mathrm{Num}/\mathrm{Den}.}             \tag{7}
 \]
-Num is a degree-five polynomial with integer coefficients. Its21
+Num is a degree-five polynomial with integer coefficients. Its20 nonzero monomial
 coefficients are explicitly listed in `NUM_TERMS` in the checker;
 equation (6) also defines it independently by a3x3 determinant.
 The checker expands the actual pair moments, verifies (5), derives
