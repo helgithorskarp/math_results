@@ -9,13 +9,26 @@ total**. An orbit pair is uniform when all four cross edges between its
 two two-vertex orbits have one color. Inside-orbit colors and matching
 signs are arbitrary, and every such involution is covered.
 
-[EIGHTEEN.md](EIGHTEEN.md) strengthens the **ten-regular** case to
+[TWENTY.md](TWENTY.md) strengthens the **ten-regular** case to
+**at least ten red uniform pairs, b>=r and twenty uniform pairs total**,
+with uniform support eleven. The leaf-transfer rule gives a complete
+finite reduction of every nine-red-pair case, all inside colors and
+every blue count. Two differently generated domains agree entrywise:
+all169939 degree-complete D quotients violate a red-uniform or matching
+page bound. This new exhaustive computation is a theorem premise, with
+ordinary written normalization/sign-coverage bridges. The proof retains
+the reviewed regular codegree premise and awaits independent review.
+At total twenty five necessary degree profiles remain; no attainment
+is asserted.
+
+[EIGHTEEN.md](EIGHTEEN.md) gave the preceding **ten-regular** bound
 **at least nine red uniform pairs, b>=r and eighteen uniform pairs total**,
 with full uniform support eleven. Its analytic red-leaf transfer rule says
 that every blue neighbor of a red-uniform leaf is another red neighbor
 of its parent. This excludes every eight-red-pair case, including red
-inside edges. At total eighteen all inside edges are blue; four necessary
-degree profiles remain, with no asserted attainment. The regular theorem
+inside edges. Its four necessary degree profiles at total eighteen,
+and every r=9 case with red inside edges, are now excluded by TWENTY.md.
+The preceding regular theorem
 imports the reviewed positive-codegree computation through REGULAR.md;
 its new counting argument and REGULAR.md's composition await review.
 
@@ -130,6 +143,8 @@ by [six-reviewer-4](../book_ramsey_regular110_review4/REVIEW.md).
 The red-leaf transfer and eighteen-pair extension also await independent
 review, with the same explicit imported computational premise for the
 regular conclusion. The local leaf lemma itself has no such premise.
+The new all-r9/twenty-pair extension likewise awaits review, and its new
+complete finite reduction is explicitly a proof premise.
 
 FOUR_BLUE.md also gives a local path-core exclusion: its five displayed
 orbits have four blue and three red uniform pairs, all core-to-outside
@@ -152,7 +167,38 @@ No external graph catalogue, solver or floating-point premise is used
 in the new controls. Author checks are
 not peer review or proof-assistant formalization.
 
-## Controls for red-leaf transfer and the eighteen-pair regular theorem
+## Reproduction of the all-r9 exclusion and twenty-pair regular theorem
+
+Python3.11+ standard library only. From the repository root:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_b4_b7_free_involution/check_twenty.py \
+  --scratch /tmp/book-regular-twenty
+```
+
+[twenty_census.py](twenty_census.py) generates7090 complete nonleaf R-core
+words,8812 eligible inside words and169939 degree-complete D quotients,
+using the proved leaf-transfer/sibling conditions and whole remaining
+degree stars. [twenty_independent.py](twenty_independent.py) imports no
+generator: binary cores and individual leaf-neighborhood choices rebuild
+the whole domain, including all14520320 literal inside-mask words. It
+decodes169939 actual ten-regular lifted graphs, counts pages by literal
+bitset intersections, and compares every mask/flag/obstruction payload.
+All129220 red-uniform failures and40719 matching failures agree.
+
+[check_twenty.py](check_twenty.py) runs one child at a time, with explicit
+guards under -O and120-second child timeouts; all generated records/logs
+stay in scratch. Outputs match [twenty_expected.json](twenty_expected.json),
+fixture SHA256 `5a4c1b1c2ea979fa777f4768c0e2a54faaf88e1af6882bbb204dd4fccd982629`.
+The final CPython3.11.2 run took **56.088s/79320KiB**, threads one.
+The canonical full record SHA256 is
+`95b5c82b28aa314bfefc9591445dd0a41cbb6fcd668b3160b697063c00e04136`;
+record equality is also checked entrywise. Altered-fixture validation and
+empty-record rejection controls pass under -O. The new finite computation
+is a proof premise; author algorithmic independence is not peer review.
+
+## Controls for the preceding red-leaf transfer and eighteen-pair theorem
 
 Python3.11+ standard library only. From the repository root:
 
