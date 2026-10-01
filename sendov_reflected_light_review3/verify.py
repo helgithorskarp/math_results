@@ -229,12 +229,31 @@ def gaussian_value(coefficients,z):
 def gaussian_integral(factors):
     coefficients=gaussian_product(factors)
     return sum((c/F(j+1) for j,c in enumerate(coefficients)),G())
+def check_light_center(units,proposed):
+    demand(all(z.norm()==1 for z in units) and proposed.norm()==1,'unit center phases')
+    total=sum(units,G());demand(total.norm()>0,'nonzero actual light unit sum')
+    quotient=total/proposed
+    demand(quotient.im==0 and quotient.re>0,'actual center direction is positive')
+    return total
+def invalid_centers():
+    alpha=G(F(99,101),F(20,101));rejected=0
+    for phases,q in [([alpha*G(0,1),alpha*G(0,-1)],alpha),
+                     ([alpha*G(F(3,5),F(4,5)),alpha*G(F(3,5),F(-4,5))],alpha*G(0,1))]:
+        try:check_light_center(phases,q)
+        except ValueError:rejected+=1
+        else:raise ValueError('invalid actual center accepted')
+    demand(rejected==2,'zero-sum and wrong-direction controls rejected')
+    return rejected
 def actual_examples():
     records=[]
     for k in (F(0),F(1,1000000)):
         a=F(1,2);alpha=G((1-k*k)/(1+k*k),2*k/(1+k*k))
-        offsets=[G(0,F(1,100))]*6+[G(0,F(1,50))*alpha.conjugate(),G(0,F(-1,50))*alpha.conjugate()]
+        vv=alpha*G(F(3,5),F(4,5));ww=alpha*G(F(3,5),F(-4,5))
+        offsets=[G(0,F(1,100))]*6+[-vv.conjugate()/50,-ww.conjugate()/50]
         points=[a+z for z in offsets]
+        actual_units=[G(F(1,50))/(a-z) for z in points[-2:]]
+        total=check_light_center(actual_units,alpha)
+        demand(actual_units==[vv,ww] and total==F(6,5)*alpha,'actual center reconstructed from critical points')
         derivative=[9*c for c in gaussian_product([(-z,G(1)) for z in offsets])]
         centered=[G()]+[c/F(j+1) for j,c in enumerate(derivative)]
         global_p=[G() for _ in range(10)]
@@ -268,14 +287,16 @@ def actual_examples():
             ratios.append([*map(str,(m,bb,normalized)),*polar.strings()])
         records.append({'a':str(a),'H':points[0].strings(),'L1':points[-2].strings(),'L2':points[-1].strings(),
                         'heavy_unit_real':'0','old_cone_required_real':'11/20','center_halfangle':str(k),
-                        'center_chord_squared':str((alpha-1).norm()),'centered_rouche_radius':'1/4',
+                        'center_chord_squared':str((alpha-1).norm()),'light_opening_cosine':'3/5',
+                        'actual_unit_sum_norm_squared':str(total.norm()),'centered_rouche_radius':'1/4',
                         'centered_rouche_tail':str(tail),'centered_rouche_leading_bound':'1/262144',
                         'original_coefficients_sha256':digest([c.strings() for c in global_p]),
                         'communication_scalings':len(ratios),'communication_sha256':digest(ratios)})
     return records
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--check',type=Path);parser.add_argument('--write',type=Path)
-    parser.add_argument('--original',type=Path);parser.add_argument('--original-tensors',type=Path);args=parser.parse_args()
+    parser.add_argument('--original',type=Path);parser.add_argument('--original-tensors',type=Path)
+    parser.add_argument('--corrected-original',type=Path);args=parser.parse_args()
     expected_check=json.loads(args.check.read_text()) if args.check else None
     original_tensors=json.loads(args.original_tensors.read_text()) if args.original_tensors else None
     raw,loss=raw_integral();charts=[]
@@ -285,11 +306,15 @@ def main():
             'raw_terms':292,'phase_terms':929,'loss_terms':1453,'raw_sha256':digest(raw.canonical()),
             'loss_sha256':digest(loss.canonical()),'charts':charts,'complete_tensor_signs':30294,
             'full_tensor_inverse_identities':2,'refinements':refinements(),'quadratic_controls':quadratic_controls(raw,loss),
-            'damaged_positive_coefficients_rejected':2,'example_and_communication':actual_examples()}
+            'damaged_positive_coefficients_rejected':2,'invalid_actual_centers_rejected':invalid_centers(),
+            'example_and_communication':actual_examples()}
     if args.original:
         original=json.loads(args.original.read_text())
-        for key in ('raw_terms','phase_terms','loss_terms','raw_sha256','loss_sha256','charts','example_and_communication'):
+        for key in ('raw_terms','phase_terms','loss_terms','raw_sha256','loss_sha256','charts'):
             demand(result[key]==original[key],'complete original record comparison '+key)
+    if args.corrected_original:
+        corrected=json.loads(args.corrected_original.read_text())
+        demand(result['example_and_communication']==corrected['example_and_communication'],'complete corrected original examples')
     if args.check:demand(result==expected_check,'complete mandatory independent fixture')
     if args.write:args.write.write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps({'verified':True,'complete_tensor_signs':30294,'full_inverse_identities':2,

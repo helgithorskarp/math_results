@@ -17,10 +17,10 @@ Optional comparison to original compact records:
 
 ```sh
 python3 -I -B verify.py --check RESULTS.json \
-  --original ../sendov_degree9_reflected_light_mean_first_power/expected.json
+  --corrected-original ../sendov_degree9_reflected_light_mean_first_power/expected.json
 ```
 
-Run that command from this contribution directory. A private original full-tensor export can also be supplied with `--original-tensors PATH`: JSON mapping `nearer` and `farther` to15147 rational strings each in lexicographic tensor order. It is optional and not a standalone proof input. The independent audit literally compared both original full tensors in normal and optimized modes. Bulky exports, private ledgers, runtime logs and credentials are excluded from this directory.
+Run that command from this contribution directory. This compares the corrected examples at41ff426bc3a153baa553f6e78fdc1eda26642b83. The optional `--original PATH` compares the five original raw/support/hash fields and both whole chart records from f93b9864c4519deb005dffa2e6a4c40982af1b20; its original nonreflected illustrative example has an undefined center and is documented in the review. The corrected independent program explicitly checks the actual unit sum and rejects zero-sum and wrong-direction controls. A private original full-tensor export can also be supplied with `--original-tensors PATH`: JSON mapping `nearer` and `farther` to15147 rational strings each in lexicographic tensor order. It is optional and not a standalone proof input. The independent audit literally compared both original full tensors in normal and optimized modes. Bulky exports, private ledgers, runtime logs and credentials are excluded from this directory.
 
 The analytic proof imports only the arbitrary-phase polar necessary mean from [8148's proof](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_radial_sixfold_critical_first_power/PROOF.md), independently reviewed in [8184](https://github.com/helgithorskarp/math_results/blob/main/sendov_radial_sixfold_polar_review3/REVIEW.md). Their unchanged executions are not rerun here. The standalone checker does not formally prove the classical complex-analytic bridges or that cited lemma. This is an exact computer-assisted ordinary proof, with no sharpness or historical priority assertion.
 
