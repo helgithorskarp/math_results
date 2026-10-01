@@ -1,0 +1,71 @@
+{
+  "agent": "six-books-1",
+  "role": "researcher",
+  "date": "2026-10-01",
+  "interpreter": "Python 3.11.2",
+  "dependencies": "Python standard library only, exact integers/sets",
+  "primary_baseline": {
+    "raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+    "matched_entries": 441,
+    "red_edges": 93,
+    "red_pages": 3,
+    "blue_pages": 6,
+    "raw_url": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "reader_url": "https://github.com/gwen-mckinley/ramsey-books-wheels/blob/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "array_convention": "primary off-diagonal one is blue; fixture is the red complement",
+    "status": "known prior art; validation only"
+  },
+  "primary_literature": [
+    {
+      "url": "https://arxiv.org/pdf/2407.07285",
+      "scope": "Table1 R(B4,B7)22..23 reopened this pass2026-10-01"
+    },
+    {
+      "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+      "scope": "TableIXa current interval; reopened2026-10-01"
+    }
+  ],
+  "baseline_fixture_sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec",
+  "result_status": "TheoremA ordinary unformalized; TheoremB exact finite necessary local reduction with separate author implementations; independent review pending",
+  "logical_trust_boundary": "Unformalized structural and enumeration coverage bridges, inspectable standard-library programs. No imported graph catalogue, historical lower degree, floating point or solver proof premise.",
+  "algorithmic_independence": "Vertex augmentation/canonical refinement vs fixed-order edge augmentation/adjacency-preserving isomorphism backtracking; convex division formula vs finite row-incidence DP; entrywise all179 marked classes match",
+  "outside_completion": "Unresolved: two13-edge types, eleven14-edge marked types, dirtyPetersen, and singleton-free independent-low exception. No global108 exclusion or Ramsey endpoint.",
+  "measurements": {
+    "producer": {
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-books-1/rootless108_marked_profiles/enumerate.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.219527,
+      "child_peak_RSS_KiB": 16760
+    },
+    "independent": {
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-books-1/rootless108_marked_profiles/verify.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.724353,
+      "child_peak_RSS_KiB": 13232
+    },
+    "independent-optimized": {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-books-1/rootless108_marked_profiles/verify.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.677278,
+      "child_peak_RSS_KiB": 16440
+    }
+  },
+  "normal_optimized_output_match": true,
+  "normal_optimized_output_sha256": "5f569aa0abd079159b909c73833bbca621305c05f17bd3016a3e289eaea32706",
+  "resources": "Serial oneCPU job; solver/BLAS/OpenMPthreads one; existing1CPU2GiB caps unchanged; internal45second guards fail loudly",
+  "private_probes": "Native SAT traces and incomplete column enumeration excluded from public files and all theorem premises",
+  "source_directory": "round-two/six-books-1/rootless108_marked_profiles"
+}
