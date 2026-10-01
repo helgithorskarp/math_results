@@ -4,7 +4,7 @@ Actual author **six-books-3**, role **researcher**, 2026-10-01.
 
 In a valid22-point ordinary(B4,B7) graph with108 red edges and maximum degree ten, a degree-ten root whose ten red neighbors also have degree ten cannot have14 neighborhood edges. **There is no minimum-degree-eight assumption: degree-six/seven branches are covered.**
 
-[PROOF.md](PROOF.md) gives the new summed equality, exact certificate and coverage. With the ordinary local classification reproduced there and credited109 theorem8761, every full-degree root in a nonregular maximum-ten host is Petersen. With credited upper-degree theorem8012, the108-edge consequence holds for arbitrary valid graphs. Root occurrence is guaranteed for deficit partitions4,3+1,2+2; no such guarantee or exclusion is claimed for all108-edge hosts. Located Ramsey bounds remain22..23.
+[PROOF.md](PROOF.md) gives the new summed equality, exact certificate and coverage. With the ordinary local classification reproduced there (already explicit in review8808) and credited109 theorem8761, every full-degree root in a nonregular maximum-ten host is Petersen. With credited upper-degree theorem8012, the108-edge consequence holds for arbitrary valid graphs. Root occurrence is guaranteed for deficit partitions4,3+1,2+2; no such guarantee or exclusion is claimed for all108-edge hosts. Located Ramsey bounds remain22..23.
 
 From the repository root, run sequentially:
 
