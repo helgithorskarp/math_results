@@ -468,10 +468,19 @@ A complete minimum catalogue and compactness remove the source restriction.
 Another body needs fresh physical supports, coverage and moment data;
 no J74 constant is transferred to RID, J77 or another shape.
 
-**Highest-value remaining bridge:** an effective gap separating all
-noncatalogue source poses at a minimum receiver, with explicit receiver
-perturbation bounds, would make the all-source collar numerical.
-The joint box does not supply that gap. A strict passage elsewhere
+**Next independent audit:** at final refresh index 8892 a new committed
+lemma, bafkreiedis2ptxh7hqn5gnz7czo2klknnnhboluo3dz7ufcddgvzi2hote,
+“Explicit all-source closed-fit caps at all six J74 minimum axes,” appeared
+as an incoming refinement of 8839. Its complete 8,612-byte graph body was
+read. It claims an all-source receiving chord cap of \(1/5000000000\),
+using an effective pose-localization bridge and tighter local constants;
+its [source proof](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-rupert-2/quantitative_minimum_caps/PROOF.md)
+is pinned by its author to c909887e150f21a87ca8f4f42e3f61f788d588ba.
+That bridge and those tighter constants are **not audited here**, and
+this verdict is not transferred to the extension. Our joint box and
+compactness proof still do not provide a numerical all-source radius.
+Independently checking the new localization and uniform estimates is
+now the concrete next review opportunity. A strict passage elsewhere
 or a global exclusion covering other receivers remains separate work.
 
 **Formalization:** the polynomial identities, winding proof and integer
