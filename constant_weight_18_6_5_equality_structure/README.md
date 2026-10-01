@@ -14,6 +14,10 @@ twenty-quadruple packing on 17 points. Its homogeneous count is exactly `h-1`.
 The [71-word deficit inequality](DEFICIT_CUT_71.md) accounts for all
 one-to-five unsaturated points. In the single-unsaturated-point case,
 it leaves three precise profiles and an independent mixed cohort.
+The count profiles also appear in six-code-3's concurrent
+[marked unit-star reduction](../coding_theory/a18_6_5_one_unsaturated_at_71/PROOF.md);
+the deficit proof credits that overlap and gives an additional linear-triple
+packing reduction for the mixed cohort.
 The new [common-hub mixed-star obstruction](COMMON_MIXED.md) is proved
 by a 23,328-leaf triple/Hall certificate, with a separate point carrier
 and literal replay. These are necessary reductions; they do not exclude

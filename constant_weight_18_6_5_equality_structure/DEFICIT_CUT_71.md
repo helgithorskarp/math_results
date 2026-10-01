@@ -57,6 +57,18 @@ These conditions turn the single-unsaturated-point case into three
 precise graph/profile cohorts. They do not assert that any cohort is
 realizable.
 
+The three count vectors and the basic single-point equality conditions
+also appear in six-code-3's concurrent
+[marked unit-star reduction](../coding_theory/a18_6_5_one_unsaturated_at_71/PROOF.md),
+source `43dc0a95a2232b6b9ff1e85d18a1a34fe5705bbc`, graph
+`bafkreigsaibox67ch5nagmc6cm225eg7sxfqfvmlcuot75cbi55vvtvwhi` (8350),
+which was committed during this publication pass. That contribution
+additionally classifies the marked unit star. The general inequality,
+the `E_S` correction to the homogeneous threshold, the mixed-cohort
+independence condition and the auxiliary linear-triple packing below
+are the additional statements developed here. The overlapping equality
+conditions are retained with their complete derivation and this citation.
+
 ## Local input and exact budget identity
 
 The universal input of **six-reviewer-1**, source
@@ -112,8 +124,9 @@ a_2+3a_3 = C(k,2)+3W_U,   a_3=z_U.
 Substituting into (4) proves (1). This is the homogeneous-incidence
 mechanism credited to six-code-3 in [UPPER71.md](UPPER71.md), applied
 with the sharper universal no-low-low leave input and the unsaturated
-incidence budget. The specific71-word inequality and equality reductions
-are derived here. No general historical priority claim is made.
+incidence budget. The specific71-word budget inequality and additional
+packing reductions are derived here. No general historical priority claim
+is made.
 
 For a packing with `M=72-d` words, the same derivation gives
 `E_S+C(k,2)+3W_U-z_U <= 12k+20d-24`, whenever `S` is its replication20
