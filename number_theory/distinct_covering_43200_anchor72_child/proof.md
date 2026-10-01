@@ -132,9 +132,10 @@ only preserve the ambient-divisor condition.
 
 ## Compact integer certificates
 
-[input.json](input.json) contains twenty nonzero integer weights in203
-disjoint literal Cartesian basis boxes at axes16,27,25, with1839 sparse
-integer coefficients. N/Q=4 repeats each base vector on physical residues.
+[input.json](input.json) contains twenty nonzero integer weights represented
+using203 literal Cartesian basis boxes at axes16,27,25, with1839 sparse
+integer coefficients. Each vector uses disjoint boxes; the shared basis
+may overlap across different vectors. N/Q=4 repeats each base vector on physical residues.
 These are mathematical fixtures, not solver transcripts.
 
 One vector, stored at phase0, vanishes on the72 classes of23 of the42
