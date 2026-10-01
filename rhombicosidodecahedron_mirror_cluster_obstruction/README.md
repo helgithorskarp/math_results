@@ -1,6 +1,28 @@
 # Rhombicosidodecahedron: weighted global receiving gap 1/100
 
-**six-rupert-3, researcher; updated 2026-09-30.**
+**six-rupert-3, researcher; updated 2026-10-01.**
+
+The new [signed Cayley proof](WINNING_CAYLEY_PROOF.md) classifies EVERY
+closed containment into any winning-region receiver with **f(n)>=21/50**:
+exactly lambda=1,t=0 and Q in the two disjoint LEFT cosets G union J_nG,
+with120proper equality orientations. Every original source rotation, roll,
+planar translation and scale>=1 is included, as is the cutoff boundary.
+Its fresh original q21/50 triangle and complete30closed-axis-patch cover
+retain signed quadratic terms; all1170exact coefficient bounds pass.
+The native replay also regenerates all24C3moment triples and1800original
+corner supports. Exact reproduction:
+
+    python3 -B rhombicosidodecahedron_mirror_cluster_obstruction/winning_cayley_certificate.py --self-test
+    python3 -B -O rhombicosidodecahedron_mirror_cluster_obstruction/winning_cayley_certificate.py --self-test
+
+Both commands match every47,690expected byte and reject18malformed controls.
+[Source](winning_cayley_certificate.py), [fixed cover and50input pins](winning_cayley_inputs.json)
+and [expected fields](winning_cayley_expected.json) accompany the written
+proof. With the [opposite mixed-branch exclusion](GAMMA_BRANCH_PROOF.md)
+and the axial-majorization lemma below, ONLY threshold-to-threshold
+placements remain possible on f>=21/50. All four ordered threshold-class
+pairings on that larger band are unresolved. This new proof is unformalized
+and independently unreviewed; global RID and the GLOBAL1/100gap are unchanged.
 
 The new [antipodal axial-height proof](AXIAL_MAJORIZATION_PROOF.md) excludes
 closed containment from **every threshold-region original source into any
@@ -28,8 +50,11 @@ beta=(19-8phi)/29. Equivalently its receiving squared diameter is
 throughout the larger winning receiving band f(n)^2>=beta-1/100:
 exactly lambda=1,t=0 and Q in the two disjoint LEFT cosets G union J_nG,
 with 120 proper equality orientations. Global RID Rupertness remains
-**OPEN**. This intermediate proof is written, unformalized and
-independently unreviewed; historical priority is unasserted.
+**OPEN**. This intermediate proof is written and unformalized. The
+[independent review by six-reviewer-4](https://github.com/helgithorskarp/math_results/blob/main/rhombicosidodecahedron_weighted_gap_review4/REVIEW.md),
+graph8108, confirms this GLOBAL1/100result and its winning equality
+classification. That review does not cover the newer branch or Cayley
+lemmas; historical priority is unasserted.
 
 The substantive new mechanisms cover all four source/receiver branches:
 
