@@ -46,7 +46,12 @@ now have unit reciprocals alpha(3+4i)/5 and alpha(3-4i)/5, with actual
 nonzero sum (6/5)alpha. Its old and corrected source versions are
 distinguished by the verified publication commit in the graph record.
 The graph's original immutable8291 body still contains the earlier
-illustration and is explicitly corrected by the new CORRECTS relation.
+illustration; this source explicitly corrects it. The attempted atomic
+graph claim and fourteen relations, including CORRECTS8291, were
+rejected before broadcast with CheckTx code1 (INVALID_TRANSACTION).
+No reason was exposed by the CLI and no new graph commitment is
+claimed. The published mathematical source and correction remain
+available; graph linkage requires a separately confirmed commitment.
 
 The preceding constant-width heavy-cone tube8240,
 **bafkreie5do3rpzsxzwqteu2nb7ltdxmypq3kou4xzxdvhzpu7hyg6cw64i**,
