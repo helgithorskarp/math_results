@@ -1,0 +1,463 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "sympy": "1.14.0",
+  "signs": {
+    "domain": "QQ[Q,T,B]",
+    "substitution": "q=Q+2,t=T+1,D=t+B+1; Q,T,B>=0",
+    "functions": [
+      {
+        "name": "zeta_heavy",
+        "numerator_terms": 440,
+        "denominator_terms": 335,
+        "numerator_degree": 13,
+        "denominator_degree": 12,
+        "numerator_constant": "6705/8",
+        "denominator_constant": "441/2",
+        "numerator_sha256": "cffcf2f1a007bcb9b6f22ca20335eaf0eb4b3ceda29aa6506180c41c2d4a3ae9",
+        "denominator_sha256": "32751013b452dc6da0d97865e80c02a1cf07192582ca6ac896db57b477e911f3",
+        "primitive_denominator_numerator_sha256": "30b01b395b4545e34db6a8843c0d02b2cd5fe38447c945c1ad3ebf9e8a2617c7",
+        "primitive_denominator_sha256": "3f8199a5e96d1c80d471556a774aac622dadc93eaea4a839c99759f8bc7351ce",
+        "positive_constants_and_nonnegative_coefficients": true
+      },
+      {
+        "name": "zeta_light",
+        "numerator_terms": 440,
+        "denominator_terms": 335,
+        "numerator_degree": 13,
+        "denominator_degree": 12,
+        "numerator_constant": "6813/8",
+        "denominator_constant": "441/2",
+        "numerator_sha256": "fdf19b439a2ff5b805b74f938225f33a09fd14ad92ba5158578f1c46857ddf7c",
+        "denominator_sha256": "32751013b452dc6da0d97865e80c02a1cf07192582ca6ac896db57b477e911f3",
+        "primitive_denominator_numerator_sha256": "0fe44f0f0a59728c333d4ad00c097c17b7b6a3f51186587f95e097289f835e6a",
+        "primitive_denominator_sha256": "3f8199a5e96d1c80d471556a774aac622dadc93eaea4a839c99759f8bc7351ce",
+        "positive_constants_and_nonnegative_coefficients": true
+      },
+      {
+        "name": "heavy_within_slack",
+        "numerator_terms": 560,
+        "denominator_terms": 560,
+        "numerator_degree": 14,
+        "denominator_degree": 14,
+        "numerator_constant": "19647/8",
+        "denominator_constant": "19845/4",
+        "numerator_sha256": "dbf7cee0f867d7c4aee518b18a0c79c6158f4ec953eeaa0a91098bc0d985fd82",
+        "denominator_sha256": "9ee3c7a17a11f8ed3c641b5a77babab2ce0005034b087cc1cc13f8c94da843ab",
+        "primitive_denominator_numerator_sha256": "7d6f4c183493b520f72d178e9ad71d0b88510e061a942cc538f1ca07ac7794ec",
+        "primitive_denominator_sha256": "851f979f02b8b4e49ac793e561456a573098759953fa85ea41eafd4f052049b1",
+        "positive_constants_and_nonnegative_coefficients": true
+      },
+      {
+        "name": "light_within_slack",
+        "numerator_terms": 560,
+        "denominator_terms": 560,
+        "numerator_degree": 14,
+        "denominator_degree": 14,
+        "numerator_constant": "20673/8",
+        "denominator_constant": "19845/4",
+        "numerator_sha256": "89129b6f7ff106de08960f18462aa82fc7e555e5ec936332e4f33c7038adb0ba",
+        "denominator_sha256": "9ee3c7a17a11f8ed3c641b5a77babab2ce0005034b087cc1cc13f8c94da843ab",
+        "primitive_denominator_numerator_sha256": "8e188dc06068caa94fde8d0128114cd9c81606133104a5f713daa073594d4aa3",
+        "primitive_denominator_sha256": "851f979f02b8b4e49ac793e561456a573098759953fa85ea41eafd4f052049b1",
+        "positive_constants_and_nonnegative_coefficients": true
+      },
+      {
+        "name": "symmetric_minor_1",
+        "numerator_terms": 33,
+        "denominator_terms": 19,
+        "numerator_degree": 4,
+        "denominator_degree": 3,
+        "numerator_constant": "65",
+        "denominator_constant": "50",
+        "numerator_sha256": "9abddf12140cba22544b4d8037d7ac9d9a251199673933d83742f3dcf6cd7380",
+        "denominator_sha256": "c0890e95e1a5ed34fceaa9deb55d480317baa4a1cd242184a33dac65653e9d92",
+        "primitive_denominator_numerator_sha256": "f475971b1e7ae58c76ff1179f0159a4cb9bae048b17791383e55152b78015a36",
+        "primitive_denominator_sha256": "5c3147c4784bd86688a9bbfe89ca09367d11a261074d30fe0c6af97c668a36f8",
+        "positive_constants_and_nonnegative_coefficients": true
+      },
+      {
+        "name": "symmetric_minor_2",
+        "numerator_terms": 79,
+        "denominator_terms": 70,
+        "numerator_degree": 6,
+        "denominator_degree": 6,
+        "numerator_constant": "3515/8",
+        "denominator_constant": "1125/2",
+        "numerator_sha256": "2f200a090d2897db78e0fa95cadd364ea2a5ff16ddff77cad918c3d31e6077ad",
+        "denominator_sha256": "6711eeecc2fe82d0204094080ddb8e945405773a825445ee2d74e5806c80d008",
+        "primitive_denominator_numerator_sha256": "552139b216ec1c59ec97b93d6648c0506a4691ee87a27be27637d61bffd66c71",
+        "primitive_denominator_sha256": "6c7bf218651197eade9a25870d2212132538e6939701eccd23fb221362d8e441",
+        "positive_constants_and_nonnegative_coefficients": true
+      },
+      {
+        "name": "symmetric_minor_3",
+        "numerator_terms": 103,
+        "denominator_terms": 70,
+        "numerator_degree": 7,
+        "denominator_degree": 6,
+        "numerator_constant": "5595/4",
+        "denominator_constant": "1125/2",
+        "numerator_sha256": "ebde7d2f4d2f7a9cf0514483c273f0489bede0a261839379a921c8f2eccb2ce3",
+        "denominator_sha256": "6711eeecc2fe82d0204094080ddb8e945405773a825445ee2d74e5806c80d008",
+        "primitive_denominator_numerator_sha256": "ad5582ced4fc43c2ec5cac1872493655fb6e98431a0ba0a67c7016a58cf45f9d",
+        "primitive_denominator_sha256": "6c7bf218651197eade9a25870d2212132538e6939701eccd23fb221362d8e441",
+        "positive_constants_and_nonnegative_coefficients": true
+      },
+      {
+        "name": "symmetric_minor_4",
+        "numerator_terms": 1308,
+        "denominator_terms": 1371,
+        "numerator_degree": 19,
+        "denominator_degree": 19,
+        "numerator_constant": "184709835/1024",
+        "denominator_constant": "13395375/16",
+        "numerator_sha256": "9742eabb142da2b4c04263ff6a307f531485582fc39e579590d54c21c1c0f4c3",
+        "denominator_sha256": "eba901918e77a064c8db77ac2bac60ff1f40a22a3ef00ee70ccb437cefb25258",
+        "primitive_denominator_numerator_sha256": "fdaa9b89b7ffe924c8497858583a262ca2188b29348d9c1ba9a549ed55a38a3e",
+        "primitive_denominator_sha256": "f313409f93e644bdf53aef1a0f2c07413cdddab217bc170aacfa15fbb4084215",
+        "positive_constants_and_nonnegative_coefficients": true
+      }
+    ],
+    "positive_rational_functions": 8,
+    "coefficient_terms": 6843,
+    "automatically_factored_denominator_atoms": 12,
+    "exact_gram_to_correction_derivation": true,
+    "two_plane_resolvent_independently_inverted": true,
+    "damage_controls": 2
+  },
+  "literal": {
+    "records": [
+      {
+        "n": 2,
+        "D": 2,
+        "t": 1,
+        "marks": [
+          1,
+          0
+        ],
+        "N": 10,
+        "s": 4,
+        "frame": {
+          "changed_dimension": 7,
+          "untouched_high": 0,
+          "untouched_low": 0,
+          "frame_dimension": 7,
+          "checked_changed_frame_entries": 64
+        },
+        "seed": {
+          "lower_rank": 8,
+          "upper_rank": 9,
+          "scaled_gap": "1",
+          "matrix_sha256": "b1adea4f0436b1efb59ac1391fef4314f1d3c850e56ae6f99aab16306b19f99d"
+        },
+        "raw": {
+          "lower_rank": 9,
+          "upper_rank": null,
+          "scaled_gap": "None",
+          "matrix_sha256": "bece70a7228f4e6fd01c1c59b11ee58576894c9e1de0771a620337272f37e00e"
+        },
+        "published_mixture": {
+          "lower_rank": 9,
+          "upper_rank": 9,
+          "scaled_gap": "433/686",
+          "matrix_sha256": "72895cad1d7ebabae3bad655a784fabb14545151aba41551410cb7bd8af889e8"
+        },
+        "improved_mixture": {
+          "lower_rank": 9,
+          "upper_rank": 9,
+          "scaled_gap": "1/2",
+          "matrix_sha256": "f59edd615fc02928f397d517df29f081e551f0ae14c1389e7dd997e970b7bbd0"
+        },
+        "raw_trace": "334/9",
+        "epsilon": "9/686",
+        "epsilon_improved": "9/506",
+        "published_gap_beta": "433/686",
+        "author_order_seed_sha256": "05ab67b5908c0e94a49e032a23dfe0cd5a0ade822ced5625abe42186de4a928d",
+        "author_order_mixed_sha256": "a69d1617f8424caf557e0c2bd68190a7193c174b9301c4010482660cdedbea2b"
+      },
+      {
+        "n": 2,
+        "D": 8,
+        "t": 7,
+        "marks": [
+          0,
+          1
+        ],
+        "N": 34,
+        "s": 10,
+        "frame": {
+          "changed_dimension": 31,
+          "untouched_high": 0,
+          "untouched_low": 0,
+          "frame_dimension": 31,
+          "checked_changed_frame_entries": 1024
+        },
+        "seed": {
+          "lower_rank": 32,
+          "upper_rank": 33,
+          "scaled_gap": "1",
+          "matrix_sha256": "e803d3b8b2995d360d395dd86c1664fdb35c05c1e65e0721b0139d270fbd52bd"
+        },
+        "raw": {
+          "lower_rank": 33,
+          "upper_rank": null,
+          "scaled_gap": "None",
+          "matrix_sha256": "9d403ab2148137e89c318db58531239deb649e42cf0271f052aef4d774f79f3f"
+        },
+        "published_mixture": {
+          "lower_rank": 33,
+          "upper_rank": 33,
+          "scaled_gap": "38629/71750",
+          "matrix_sha256": "fe17b2a14ba7b6e6d621b4b90e28f39981560b068e2382038f540ddd98cee892"
+        },
+        "improved_mixture": {
+          "lower_rank": 33,
+          "upper_rank": 33,
+          "scaled_gap": "1/2",
+          "matrix_sha256": "dcf307c23f8b4db21621f399e474ab65263aee4f38f1210cfc6ef409a7e05c3b"
+        },
+        "raw_trace": "35794/81",
+        "epsilon": "81/71750",
+        "epsilon_improved": "81/66242",
+        "published_gap_beta": "38629/71750",
+        "author_order_seed_sha256": "d394d9016748c4b020051b668527192ecb28550a3753e0356d66caa3486b2b02",
+        "author_order_mixed_sha256": "df8fbf7313beb61fc4d3e6fcd3b6802126f98edde2cea964a75e12d2b3a69243"
+      },
+      {
+        "n": 3,
+        "D": 3,
+        "t": 2,
+        "marks": [
+          2,
+          0
+        ],
+        "N": 18,
+        "s": 7,
+        "frame": {
+          "changed_dimension": 12,
+          "untouched_high": 2,
+          "untouched_low": 1,
+          "frame_dimension": 15,
+          "checked_changed_frame_entries": 144
+        },
+        "seed": {
+          "lower_rank": 16,
+          "upper_rank": 17,
+          "scaled_gap": "1",
+          "matrix_sha256": "cbbc69dc36b4e977f98f5e6b7ebd9e8ded854e69568a003d0242e2f4cd7915fb"
+        },
+        "raw": {
+          "lower_rank": 17,
+          "upper_rank": null,
+          "scaled_gap": "None",
+          "matrix_sha256": "cf06971b780444eab2a2978165744e8e0ce23c8662a1a23827e324775cf7dcbd"
+        },
+        "published_mixture": {
+          "lower_rank": 17,
+          "upper_rank": 17,
+          "scaled_gap": "367/653",
+          "matrix_sha256": "529d3e68fb92e942190576fb9c7715036c127e91a8bc7cc7010b228c72ce2c6d"
+        },
+        "improved_mixture": {
+          "lower_rank": 17,
+          "upper_rank": 17,
+          "scaled_gap": "1/2",
+          "matrix_sha256": "5e39dbefeb7b46a4d53aef248a5393c4bd28638fe6e0fdb752dd41e4f343013c"
+        },
+        "raw_trace": "1297/9",
+        "epsilon": "9/2612",
+        "epsilon_improved": "9/2288",
+        "published_gap_beta": "367/653",
+        "author_order_seed_sha256": "a7d9c8655897755bd29dcf8e43c56299eec5eaefffdba49a2b220086266bd228",
+        "author_order_mixed_sha256": "2ed4d8318de35c2349f7db5db547f18fc6dd3d648558b77989e11b5eb15083fd"
+      },
+      {
+        "n": 3,
+        "D": 8,
+        "t": 7,
+        "marks": [
+          1,
+          2
+        ],
+        "N": 38,
+        "s": 12,
+        "frame": {
+          "changed_dimension": 32,
+          "untouched_high": 2,
+          "untouched_low": 1,
+          "frame_dimension": 35,
+          "checked_changed_frame_entries": 1024
+        },
+        "seed": {
+          "lower_rank": 36,
+          "upper_rank": 37,
+          "scaled_gap": "1",
+          "matrix_sha256": "7efdeb7e0803758a1c779abf25a3cd695124ac71783f8b86509ea10d2684d7c6"
+        },
+        "raw": {
+          "lower_rank": 37,
+          "upper_rank": null,
+          "scaled_gap": "None",
+          "matrix_sha256": "b00869b2b25870f62c4f0215f19ce430c430318d50e83e2fec3c2cd2b8cfcfd8"
+        },
+        "published_mixture": {
+          "lower_rank": 37,
+          "upper_rank": 37,
+          "scaled_gap": "78497/147798",
+          "matrix_sha256": "cbf63bce2322ddb578fee94198dd43002bdda2ffbae51c9ffa9f82d6890e9b24"
+        },
+        "improved_mixture": {
+          "lower_rank": 37,
+          "upper_rank": 37,
+          "scaled_gap": "1/2",
+          "matrix_sha256": "e760ef91803110be6e9997c2d88b727de20df463551ad69aceb2d5ff106960f0"
+        },
+        "raw_trace": "73778/121",
+        "epsilon": "121/147798",
+        "epsilon_improved": "121/138602",
+        "published_gap_beta": "78497/147798",
+        "author_order_seed_sha256": "265bbb152f87ebabf9eb3b8b07a07024047e6aa2f06696d38c66b372b433bf34",
+        "author_order_mixed_sha256": "969a54047afeeb445b7407a5bf3c3537a7d9eeb0d3cc15f89f55392e5230f483"
+      },
+      {
+        "n": 4,
+        "D": 5,
+        "t": 1,
+        "marks": [
+          3,
+          1
+        ],
+        "N": 28,
+        "s": 13,
+        "frame": {
+          "changed_dimension": 14,
+          "untouched_high": 6,
+          "untouched_low": 5,
+          "frame_dimension": 25,
+          "checked_changed_frame_entries": 196
+        },
+        "seed": {
+          "lower_rank": 26,
+          "upper_rank": 27,
+          "scaled_gap": "1",
+          "matrix_sha256": "f08d1c101dc533c4698e11c8595cdf2f3776d5c8453cf97b253cca26ad2314db"
+        },
+        "raw": {
+          "lower_rank": 27,
+          "upper_rank": null,
+          "scaled_gap": "None",
+          "matrix_sha256": "498133759cff1625ac10d47c99d9f2cc06aff5e3a69124cb4a346e667c7494aa"
+        },
+        "published_mixture": {
+          "lower_rank": 27,
+          "upper_rank": 27,
+          "scaled_gap": "2413/4538",
+          "matrix_sha256": "70dc8a183e25cf48c26234ebe3c796c8d567994d8aef9b9476656c0ed28ee306"
+        },
+        "improved_mixture": {
+          "lower_rank": 27,
+          "upper_rank": 27,
+          "scaled_gap": "1/2",
+          "matrix_sha256": "32568cd8e852232a830f7fc63ed9f526b38e4f3e6e58ae5d902bce5f3c9f89bb"
+        },
+        "raw_trace": "15847/36",
+        "epsilon": "18/15883",
+        "epsilon_improved": "18/14875",
+        "published_gap_beta": "2413/4538",
+        "author_order_seed_sha256": "6d73f5110276f203a951c1ba5e2430e99ec424af7ed2883624d943d3a741e44d",
+        "author_order_mixed_sha256": "812a086f49db2ffa9d08daa048455c140e1a5f76e4c747e5c3100419624df783"
+      },
+      {
+        "n": 6,
+        "D": 2,
+        "t": 1,
+        "marks": [
+          5,
+          0
+        ],
+        "N": 70,
+        "s": 34,
+        "frame": {
+          "changed_dimension": 8,
+          "untouched_high": 30,
+          "untouched_low": 29,
+          "frame_dimension": 67,
+          "checked_changed_frame_entries": 64
+        },
+        "seed": {
+          "lower_rank": 68,
+          "upper_rank": 69,
+          "scaled_gap": "1",
+          "matrix_sha256": "74f7a7c3df33f67e6711aa6f2bb7803c954978abf1c408c47727c2f3fe9b789d"
+        },
+        "raw": {
+          "lower_rank": 69,
+          "upper_rank": null,
+          "scaled_gap": "None",
+          "matrix_sha256": "faa50902dfeceafb76547e074ca506e03f5b4acf4f0b178a453eb7203f329e51"
+        },
+        "published_mixture": {
+          "lower_rank": 69,
+          "upper_rank": 69,
+          "scaled_gap": "2793613/5434766",
+          "matrix_sha256": "0129dcbf98c5d53e2b0057c4a241b5f0e108d38665a0f4a7ccf2bf7147e64feb"
+        },
+        "improved_mixture": {
+          "lower_rank": 69,
+          "upper_rank": 69,
+          "scaled_gap": "1/2",
+          "matrix_sha256": "d9740a8ec54dabdd5e1afc6cb896ec6402f8f814491e24fbbf776d17c70609c3"
+        },
+        "raw_trace": "2716294/1089",
+        "epsilon": "1089/5434766",
+        "epsilon_improved": "1089/5282306",
+        "published_gap_beta": "2793613/5434766",
+        "author_order_seed_sha256": "1b90a74c116acbdffe95df4d3aba2abde087bd0b16f1fa1e11e259816fba4d74",
+        "author_order_mixed_sha256": "62b37b18ed562a445e34e0173b3a0eba52a344c6d473dd9097084fb77ef68937"
+      }
+    ],
+    "exact_checks": 602146,
+    "literal_instances": 6,
+    "full_frame_entries": 2516,
+    "damage_controls": 19,
+    "invalid_domain_controls": 5
+  },
+  "products": {
+    "records": [
+      {
+        "loads": [
+          2,
+          2
+        ],
+        "N": 100,
+        "s": "40",
+        "eligible": [
+          0,
+          1
+        ],
+        "lower_rank": 98,
+        "upper_rank": 99,
+        "scaled_gap": "2165/343",
+        "matrix_sha256": "f9fe9d4f21f46bfa9378fec25745fdb39063d2f0e191b577a78f3c3fcf3ec555"
+      },
+      {
+        "loads": [
+          2,
+          3
+        ],
+        "N": 120,
+        "s": "50",
+        "eligible": [
+          1
+        ],
+        "lower_rank": 119,
+        "upper_rank": 119,
+        "scaled_gap": "3025/509",
+        "matrix_sha256": "672266c4ff185d33cbd24c892f744941c16edd7e8d28ce0fd7a7198f90103a02"
+      }
+    ],
+    "exact_checks": 909850,
+    "scope": "two finite tensor controls; generic spectral argument remains ordinary mathematics"
+  }
+}

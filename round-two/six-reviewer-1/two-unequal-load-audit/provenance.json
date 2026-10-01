@@ -1,0 +1,302 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "target_height": 9005,
+  "target_ref": "bafkreibdmakqwzmk7xvfp4muff23q4jnb6wsfyisrvwe4s7t7xmdlfytsq",
+  "target_source_commit": "001f4ec642e1280a9a0972f5a89f0b49b1d331fe",
+  "pinned_public_inputs": [
+    {
+      "path": "round-two/six-downset-1/two-unequal-loads/PROOF.md",
+      "bytes": 20311,
+      "sha256": "7cb3309e79d8b68aacc4884108404449de8f906995887328d95139b91066fe7a"
+    },
+    {
+      "path": "round-two/six-downset-1/two-unequal-loads/README.md",
+      "bytes": 2411,
+      "sha256": "19fec8d955772aa9e41082a25a3ddb438237e9c08b19a805cc53726182143923"
+    },
+    {
+      "path": "round-two/six-downset-1/two-unequal-loads/RESULTS.json",
+      "bytes": 11301,
+      "sha256": "71a228a3dc294f157605197f506d08b9b03ecad1c2893ee78bbc19e5e4906a25"
+    },
+    {
+      "path": "round-two/six-downset-1/two-unequal-loads/SHA256SUMS",
+      "bytes": 561,
+      "sha256": "4fd265d2bf6c5e6605f4e350dfb27504b15966e8e3f5e1516783ee5259e16c2e"
+    },
+    {
+      "path": "round-two/six-downset-1/two-unequal-loads/verify_full.py",
+      "bytes": 13679,
+      "sha256": "baa80c8e644e200ab6fb9a457142d1e73dfac09cfa9485576402fd25443241a1"
+    },
+    {
+      "path": "round-two/six-downset-1/two-unequal-loads/verify_signs.py",
+      "bytes": 14405,
+      "sha256": "358e243eeae9a29fb02fdf814c0bc0423c25a915b7b47fd2980b96c32d0f427a"
+    },
+    {
+      "path": "round-two/six-downset-1/verify.py",
+      "bytes": 22794,
+      "sha256": "243243cac7260d54cacb6a727b23b02ee98132bf88839578d9fbb3626c6105ea"
+    },
+    {
+      "path": "round-two/six-downset-1/verify_two_marks.py",
+      "bytes": 10188,
+      "sha256": "ebc9c87d00bccba7c430da26c0cc565b91a06eedfb7ab64c2090e482e03e7aa6"
+    }
+  ],
+  "prior_reviewer_PSD_source_commit": "b67aa44a98dd13cfa45310fe6dfe473e648c1f23",
+  "prior_reviewer_PSD_source": "round-two/six-reviewer-1/distinct-mark-audit/check.py",
+  "independent_record_sha256": "ebd475ef9327c13e1768dd69573f99898463b40cfb3ee607340ef36a92562eb0",
+  "independent_fixture_sha256": "64f29a68d37b3b29ff4c16fd777c3e8f9d4891b269e274c0475f8acddeb17bf4",
+  "independent_checks": {
+    "universal_functions": 8,
+    "polynomial_coefficient_terms": 6843,
+    "literal_matrix_instances": 6,
+    "changed_full_frame_entries": 2516,
+    "tensor_instances": 2,
+    "literal_and_tensor_exact_congruence_checks": 1511996,
+    "mathematical_damage_controls": 21,
+    "invalid_domain_controls": 5
+  },
+  "source_crosscomparison": {
+    "coefficient_comparisons": [
+      {
+        "name": "zeta_heavy",
+        "all_numerator_coefficients_match": true,
+        "all_denominator_coefficients_match": true,
+        "compared_terms": 775
+      },
+      {
+        "name": "zeta_light",
+        "all_numerator_coefficients_match": true,
+        "all_denominator_coefficients_match": true,
+        "compared_terms": 775
+      },
+      {
+        "name": "heavy_within_slack",
+        "all_numerator_coefficients_match": true,
+        "all_denominator_coefficients_match": true,
+        "compared_terms": 1120
+      },
+      {
+        "name": "light_within_slack",
+        "all_numerator_coefficients_match": true,
+        "all_denominator_coefficients_match": true,
+        "compared_terms": 1120
+      },
+      {
+        "name": "symmetric_minor_1",
+        "all_numerator_coefficients_match": true,
+        "all_denominator_coefficients_match": true,
+        "compared_terms": 52
+      },
+      {
+        "name": "symmetric_minor_2",
+        "all_numerator_coefficients_match": true,
+        "all_denominator_coefficients_match": true,
+        "compared_terms": 149
+      },
+      {
+        "name": "symmetric_minor_3",
+        "all_numerator_coefficients_match": true,
+        "all_denominator_coefficients_match": true,
+        "compared_terms": 173
+      },
+      {
+        "name": "symmetric_minor_4",
+        "all_numerator_coefficients_match": true,
+        "all_denominator_coefficients_match": true,
+        "compared_terms": 2679
+      }
+    ],
+    "all_6843_terms_match": true,
+    "coefficient_hash_comparisons": 16,
+    "matrix_comparisons": [
+      {
+        "n": 3,
+        "D": 3,
+        "t": 2,
+        "N": 18,
+        "seed_and_mixed_full_original_entries_match": true,
+        "relocated_marks": [
+          2,
+          0
+        ]
+      },
+      {
+        "n": 2,
+        "D": 8,
+        "t": 7,
+        "N": 34,
+        "seed_and_mixed_full_original_entries_match": true,
+        "relocated_marks": [
+          0,
+          1
+        ]
+      },
+      {
+        "n": 3,
+        "D": 8,
+        "t": 7,
+        "N": 38,
+        "seed_and_mixed_full_original_entries_match": true,
+        "relocated_marks": [
+          1,
+          2
+        ]
+      },
+      {
+        "n": 4,
+        "D": 5,
+        "t": 1,
+        "N": 28,
+        "seed_and_mixed_full_original_entries_match": true,
+        "relocated_marks": [
+          3,
+          1
+        ]
+      },
+      {
+        "n": 6,
+        "D": 2,
+        "t": 1,
+        "N": 70,
+        "seed_and_mixed_full_original_entries_match": true,
+        "relocated_marks": [
+          5,
+          0
+        ]
+      }
+    ],
+    "full_matrix_hash_comparisons": 10,
+    "method": "Independent Gram-derived QQ polynomial signs normalized by positive primitive denominator; independent relocated original-set matrices transported to author order. No author module imports."
+  },
+  "independent_replay": [
+    {
+      "mode": "independent-all-normal",
+      "exit": 0,
+      "wall_seconds": 42.92723043402657,
+      "result": {
+        "coefficient_terms": 6843,
+        "literal_instances": 6,
+        "exact_checks": 602146,
+        "record_sha256": "ebd475ef9327c13e1768dd69573f99898463b40cfb3ee607340ef36a92562eb0",
+        "seconds": 42.350995360990055,
+        "rss_kib": 63088
+      },
+      "reported_peak_RSS_KiB": 63088
+    },
+    {
+      "mode": "independent-all-optimized",
+      "exit": 0,
+      "wall_seconds": 44.75558950501727,
+      "result": {
+        "coefficient_terms": 6843,
+        "literal_instances": 6,
+        "exact_checks": 602146,
+        "record_sha256": "ebd475ef9327c13e1768dd69573f99898463b40cfb3ee607340ef36a92562eb0",
+        "seconds": 41.54717198503204,
+        "rss_kib": 66776
+      },
+      "reported_peak_RSS_KiB": 66776
+    }
+  ],
+  "author_replay": [
+    {
+      "mode": "author-signs-normal",
+      "exit": 0,
+      "wall_seconds": 16.53490912000416,
+      "result": {
+        "agent": "six-downset-1",
+        "role": "researcher",
+        "domain": "QQ[Q,T,B] and its fraction field",
+        "substitution": "q=Q+2,t=T+1,D=t+B+1; Q,T,B>=0",
+        "positive_rational_functions": 8,
+        "determinant_permutations": [
+          1,
+          2,
+          6,
+          24
+        ],
+        "multiplication_controls": 18,
+        "changed_coefficient_rejected": true,
+        "negative_coefficient_rejected": true,
+        "CAS_imports": false
+      },
+      "reported_peak_RSS_KiB": 23200
+    },
+    {
+      "mode": "author-signs-optimized",
+      "exit": 0,
+      "wall_seconds": 15.907493475999217,
+      "result": {
+        "agent": "six-downset-1",
+        "role": "researcher",
+        "domain": "QQ[Q,T,B] and its fraction field",
+        "substitution": "q=Q+2,t=T+1,D=t+B+1; Q,T,B>=0",
+        "positive_rational_functions": 8,
+        "determinant_permutations": [
+          1,
+          2,
+          6,
+          24
+        ],
+        "multiplication_controls": 18,
+        "changed_coefficient_rejected": true,
+        "negative_coefficient_rejected": true,
+        "CAS_imports": false
+      },
+      "reported_peak_RSS_KiB": 25620
+    },
+    {
+      "mode": "author-full-normal",
+      "exit": 0,
+      "wall_seconds": 26.73962427402148,
+      "result": {
+        "agent": "six-downset-1",
+        "role": "researcher",
+        "status": "finite original-index checks; uniform coverage is PROOF.md plus verify_signs.py"
+      },
+      "reported_peak_RSS_KiB": 21708
+    },
+    {
+      "mode": "author-full-optimized",
+      "exit": 0,
+      "wall_seconds": 13.347856786043849,
+      "result": {
+        "agent": "six-downset-1",
+        "role": "researcher",
+        "status": "finite original-index checks; uniform coverage is PROOF.md plus verify_signs.py"
+      },
+      "reported_peak_RSS_KiB": 24584
+    }
+  ],
+  "author_complete_normal_optimized_records_equal": true,
+  "altered_external_fixtures": [
+    {
+      "mode": "bad-signs-optimized",
+      "precise_frozen_fixture_rejection": true,
+      "wall_seconds": 25.516816745046526
+    },
+    {
+      "mode": "bad-literal-optimized",
+      "precise_frozen_fixture_rejection": true,
+      "wall_seconds": 29.695622583967634
+    }
+  ],
+  "selection_index": 9008,
+  "context_refresh_index": 9020,
+  "major_refresh_index": 9038,
+  "proof_status": "Confirmed complete ordinary unformalized theorem with independently reconstructed universal exact signs; finite controls validate source behavior. Trace repair and product corollaries proved in REVIEW.md. No general H/I or three unequal marks.",
+  "resources": {
+    "numerical_threads": 1,
+    "mathematical_jobs_at_once": 1,
+    "reviewer_guard_seconds": 90,
+    "author_per_stage_guard_seconds": 60,
+    "no_memory_timeout_or_unknown_incident": true,
+    "no_resource_escalation": true
+  },
+  "library_trust": "CPython3.12.14/SymPy1.14.0 sparse QQ polynomial arithmetic versus author packed-int arithmetic; Fraction/int congruence; ordinary proof bridges outside a proof-assistant kernel."
+}
