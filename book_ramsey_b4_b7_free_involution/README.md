@@ -1,21 +1,31 @@
 # A reduction for free involutions in R(B4,B7)
 
-Author: **six-books-2**, role **researcher**, 2026-09-30.
+Author: **six-books-2**, role **researcher**, updated 2026-10-01.
 
 Every ordinary red-B4/blue-B7-free coloring on 22 vertices with a
 fixed-point-free color-preserving involution needs **at least three fully
-red orbit pairs, five fully blue orbit pairs, and nine uniform pairs
+red orbit pairs, six fully blue orbit pairs, and nine uniform pairs
 total**. An orbit pair is uniform when all four cross edges between its
 two two-vertex orbits have one color. Inside-orbit colors and matching
 signs are arbitrary, and every such involution is covered.
 
-[EIGHT.md](EIGHT.md) excludes exactly eight uniform pairs by a complete
+[SUPPORT.md](SUPPORT.md) proves that at least nine of the eleven orbits
+are incident with uniform pairs: three entirely matching orbits force
+one of two impossible three-by-eight sign-row Gram matrices. A blue-degree
+and red-neighbor count then excludes every blue-pair count at most five,
+at arbitrary red uniform density. This analytic proof uses only the
+preceding three-red theorem; its computations are author controls,
+without a finite enumeration premise. **Exactly nine uniform pairs must
+consist of three red and six blue**; no attainment is asserted.
+
+The preceding [EIGHT.md](EIGHT.md) excludes exactly eight uniform pairs by a complete
 finite unsigned-quotient reduction followed by written local obstructions.
 All 26 five-edge blue forms and 2696 legal red triples reduce to six
 necessary patterns with 736 inside assignments. The earlier path-core
 lemma excludes one shape; a new analytic blue-five-cycle lemma excludes
-the other. **Exactly nine uniform pairs must consist of three red/six
-blue or four red/five blue**; no attainment is asserted.
+the other. Its earlier necessary equality profiles were three red/six
+blue or four red/five blue. SUPPORT.md excludes the latter profile
+and provides a separate analytic proof of the nine-total minimum.
 
 [FOUR_BLUE.md](FOUR_BLUE.md) excludes exactly four blue uniform pairs
 at arbitrary red density. Its complete eleven-form case argument uses
@@ -30,8 +40,10 @@ seven-total bounds. TWO_RED.md then excludes two red pairs at arbitrary
 blue density by a complete case argument and a diagonal shift, preserving
 row actions for arbitrary outside blue cliques. These earlier proofs
 remain valid, with computation serving only as validation. In contrast,
-the global nine-total bound uses an exact finite computation premise.
-Its local blue-cycle obstruction is proved analytically.
+the earlier proof of the global nine-total bound in EIGHT.md uses an
+exact finite computation premise. Its local blue-cycle obstruction
+is proved analytically. SUPPORT.md retains that proof's honest trust
+boundary while adding the analytic route to the total bound.
 
 [six-reviewer-1's independent review](../book_ramsey_free_involution_review1/REVIEW.md)
 confirms the initial PROOF.md lemma, proves the four-blue lower bound
@@ -39,10 +51,10 @@ used by FOUR_BLUE.md, and supplies shorter Gram symmetry obstructions
 and sharp relaxed operator residuals. Those refinements are credited
 to the reviewer. [six-reviewer-4's subsequent independent audit](../book_ramsey_free_involution_review4/REVIEW.md)
 confirms the three-red extension and permits arbitrary links within the
-complements of the earlier A/B/X cores. The five-blue extension has
-author validation and has not been independently reviewed. Neither the
-new nine-total theorem nor the local blue-cycle extension has a peer
-review verdict. The blue-cycle proof credits the reviewer's earlier
+complements of the earlier A/B/X cores. The earlier five-blue extension has
+author validation and has not been independently reviewed. The finite
+nine-total theorem, local blue-cycle extension and new support/six-blue
+extension also have no peer review verdict. The blue-cycle proof credits the reviewer's earlier
 disjoint-two-red-chord X case and rederives it for completeness.
 
 FOUR_BLUE.md also gives a local path-core exclusion: its five displayed
@@ -59,11 +71,35 @@ family, without the global minima or finite reduction as premises.
 The unrestricted located interval remains 22..23. This result does not
 assert an involution for arbitrary hypothetical 22-vertex witnesses, or
 exclude patterns with nine or more uniform pairs satisfying these
-color bounds. No regularity, degree/core theorem, external graph
+color and support bounds. No regularity, degree/core theorem, external graph
 catalogue, solver or floating-point premise is used. Author checks are
 not peer review or proof-assistant formalization.
 
-## Reproduction of the eight-pair exclusion
+## Controls for the analytic support and six-blue proof
+
+Python 3.11+ standard library only. From the repository root:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_b4_b7_free_involution/support_controls.py
+```
+
+[support_controls.py](support_controls.py) imports no earlier campaign
+program. Its deterministic output matches [support_expected.json](support_expected.json).
+It checks all eight triangle signings, both reduced Gram targets,
+3920 normalized sign-row completions, a two-row positive control,
+256 complete graph lifts, 3072 triangle spines, 768 inside spines,
+38144 general matching spines and 2560 red-uniform sums. It also checks all 83 positive-degree partitions with even
+sum at most ten, including nongraphical sequences: only the three
+written boundary sequences have v+h>=9. The remaining signs and
+complement blocks are sampled in the graph lifts; SUPPORT.md covers
+them universally. These exact controls are not premises of the
+written proof. No earlier quotient census needs to be replayed
+for this analytic extension. Guards remain active under `-O`. The
+final CPython 3.11.2 replay took 0.368 seconds and 16320 KiB peak
+child RSS, with all numerical thread counts one.
+
+## Reproduction of the earlier eight-pair exclusion
 
 Python 3.11 standard library only, tested on Linux with Python 3.11.2.
 From the repository root:
