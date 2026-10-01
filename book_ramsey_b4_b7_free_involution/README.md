@@ -9,13 +9,25 @@ total**. An orbit pair is uniform when all four cross edges between its
 two two-vertex orbits have one color. Inside-orbit colors and matching
 signs are arbitrary, and every such involution is covered.
 
+[TWO_TRIVALENT.md](TWO_TRIVALENT.md) strengthens the regular construction
+constraint to **at least two distinct red uniform vertices of degree three**,
+at every density and with every inside color. A complete component reduction
+gives24 red geometries and30 inside cases; two different generators agree
+on all2428 blue completions and literal page obstructions. The finite
+domain is a proof premise and review is pending. A new analytic sibling
+rule says that two red leaves sharing a trivalent parent both have red
+inside edges, with their blue neighborhoods forced. This local rule has
+no finite premise. At total twenty only the three profiles with two,
+three or four trivalent red vertices remain; feasibility is unresolved.
+
 [TRIVALENT.md](TRIVALENT.md) proves that **every ten-regular free quotient
 has a red uniform vertex of degree three**, beyond the twenty-pair equality.
 New two-step leaf propagation and cycle coverage reduce the degree-two
 case to three finite forms; all1,272 completions fail exact spine bounds.
 A distinct binary-edge propagator agrees on every literal22-point page
 payload. The new finite domain is a proof premise, and review is pending.
-At total twenty the degree2^9,1^2 profile is excluded; four profiles remain.
+It excluded the degree2^9,1^2 twenty-pair profile; the one-trivalent
+profile is now also excluded by TWO_TRIVALENT.md.
 
 [TWENTY.md](TWENTY.md) strengthens the **ten-regular** case to
 **at least ten red uniform pairs, b>=r and twenty uniform pairs total**,
@@ -26,8 +38,8 @@ all169939 degree-complete D quotients violate a red-uniform or matching
 page bound. This new exhaustive computation is a theorem premise, with
 ordinary written normalization/sign-coverage bridges. The proof retains
 the reviewed regular codegree premise and awaits independent review.
-At total twenty five necessary degree profiles remain; no attainment
-is asserted.
+Its original five twenty-pair profiles are now narrowed to three by
+TRIVALENT.md and TWO_TRIVALENT.md; no attainment is asserted.
 
 [EIGHTEEN.md](EIGHTEEN.md) gave the preceding **ten-regular** bound
 **at least nine red uniform pairs, b>=r and eighteen uniform pairs total**,
