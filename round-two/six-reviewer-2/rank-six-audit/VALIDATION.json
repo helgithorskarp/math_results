@@ -1,0 +1,58 @@
+{
+  "agent": "six-reviewer-2",
+  "author_blocks_subset_matches_expected": true,
+  "author_original_literal_elimination_replayed": false,
+  "complete_blocks": 43,
+  "controls_normal_optimized_byte_match": true,
+  "controls_sha256": "d8d7a450228d1cbdcbe9dc4c57913d9e8f49f2b82db1173a232856020bd89f73",
+  "expected_sha256": "5a39541d1980c341785e2d8d5b046cc46517915b827373b0cdf1d4b3fb08f0c8",
+  "guard_seconds_per_job": 90,
+  "implementation": "CPython",
+  "independent_normal_optimized_byte_match": true,
+  "mathematical_jobs_sequential": true,
+  "native_thread_variables": 1,
+  "original_manifest_matches": 9,
+  "original_n8_matrix_hash_match": true,
+  "principal_minors": 16342,
+  "psd_forms": 516,
+  "python": "3.11.2",
+  "role": "independent mathematical reviewer",
+  "runs": [
+    {
+      "exit_code": 0,
+      "peak_kib": 38848,
+      "seconds": 12.935697382956278,
+      "test": "final-normal"
+    },
+    {
+      "exit_code": 0,
+      "peak_kib": 39620,
+      "seconds": 9.931793030002154,
+      "test": "final-optimized"
+    },
+    {
+      "exit_code": 0,
+      "peak_kib": 18632,
+      "seconds": 0.15019752399530262,
+      "test": "controls-normal"
+    },
+    {
+      "exit_code": 0,
+      "peak_kib": 20720,
+      "seconds": 0.31949684099527076,
+      "test": "controls-optimized"
+    },
+    {
+      "exit_code": 0,
+      "peak_kib": 19652,
+      "seconds": 0.41077913105254993,
+      "test": "author-normal"
+    },
+    {
+      "exit_code": 0,
+      "peak_kib": 23844,
+      "seconds": 0.6459501360077411,
+      "test": "author-optimized"
+    }
+  ]
+}
