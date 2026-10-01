@@ -9,6 +9,16 @@ total**. An orbit pair is uniform when all four cross edges between its
 two two-vertex orbits have one color. Inside-orbit colors and matching
 signs are arbitrary, and every such involution is covered.
 
+[EIGHTEEN.md](EIGHTEEN.md) strengthens the **ten-regular** case to
+**at least nine red uniform pairs, b>=r and eighteen uniform pairs total**,
+with full uniform support eleven. Its analytic red-leaf transfer rule says
+that every blue neighbor of a red-uniform leaf is another red neighbor
+of its parent. This excludes every eight-red-pair case, including red
+inside edges. At total eighteen all inside edges are blue; four necessary
+degree profiles remain, with no asserted attainment. The regular theorem
+imports the reviewed positive-codegree computation through REGULAR.md;
+its new counting argument and REGULAR.md's composition await review.
+
 [REGULAR.md](REGULAR.md) adds a red-triangle budget: **any entirely
 matching orbit forces at most ninety red triangles**, analytically and
 at arbitrary density. The reviewed computer-assisted regular codegree
@@ -16,7 +26,8 @@ theorem forces at least ninety-six triangles in a ten-regular candidate.
 Consequently a **ten-regular** candidate has full uniform support eleven,
 **at least eight red pairs, b>=r and at least sixteen uniform pairs**.
 At total sixteen all inside edges are blue. Its three necessary degree
-profiles have unresolved feasibility. The regular corollary imports the
+profiles are now excluded by EIGHTEEN.md, which also excludes b>r at r=8.
+The preceding regular corollary imports the
 explicit reviewed computation; its new counting argument awaits review.
 
 [ELEVEN.md](ELEVEN.md) analytically excludes the last **three red/seven
@@ -116,6 +127,9 @@ The new analytic eleven-total extension also awaits independent review.
 The triangle-budget and regular-density extension likewise has no new
 independent review verdict; its positive-codegree premise was confirmed
 by [six-reviewer-4](../book_ramsey_regular110_review4/REVIEW.md).
+The red-leaf transfer and eighteen-pair extension also await independent
+review, with the same explicit imported computational premise for the
+regular conclusion. The local leaf lemma itself has no such premise.
 
 FOUR_BLUE.md also gives a local path-core exclusion: its five displayed
 orbits have four blue and three red uniform pairs, all core-to-outside
@@ -138,7 +152,36 @@ No external graph catalogue, solver or floating-point premise is used
 in the new controls. Author checks are
 not peer review or proof-assistant formalization.
 
-## Controls for the triangle budget and regular corollary
+## Controls for red-leaf transfer and the eighteen-pair regular theorem
+
+Python3.11+ standard library only. From the repository root:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+  python3 -O book_ramsey_b4_b7_free_involution/eighteen_controls.py
+```
+
+[eighteen_controls.py](eighteen_controls.py) imports no campaign program,
+and its explicit guards compare output with
+[eighteen_expected.json](eighteen_expected.json) under -O. Integer
+partitions and52 nonleaf-core words reproduce the five written R forms.
+All106496 inside masks leave95 eligible masks; the transfer and sibling
+constraints leave156 degree-complete D quotients. Every one has a
+literal matching-pair page obstruction, checked on1248 regular lifts.
+An independent private leaf-neighborhood/core-bit domain agrees on the
+entire quotient and literal obstruction record.
+
+A separate partial-matching/core-bit domain generates all32 and550 D
+graphs on the two fixed path forms with blue inside edges and known
+shared-parent D edges. All582 fail necessary page or leaf bounds. A
+separate degree-star domain agrees on every mask and literal obstruction.
+Another72 lifts audit1147 uniform red sums,1166 uniform blue sums,1647
+matching-page identities,1584 actual degrees and792 inside spines.
+The local transfer inequality covers all24 term/inside words. These are
+author controls of the written proof; no new finite enumeration is a
+premise, and author algorithmic independence is not peer review.
+
+## Controls for the preceding triangle budget and regular corollary
 
 Python3.11+ standard library only. From the repository root:
 
