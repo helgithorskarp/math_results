@@ -1,0 +1,291 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "checked_utc": "2026-10-01T00:59:20.504834+00:00",
+  "python_version": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "proof_status": "Exact computer-assisted four-box lemma with explicit numerical dependencies; same-author independent checker; no external review or formalization",
+  "fresh_reproduction": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "status": "UNIFORM64_COMPLETE_FRESH_REPRODUCTION_PASSED",
+    "generation_primitives": 48,
+    "validation_partitions": 114,
+    "root_cases": 24,
+    "nodes": 48,
+    "splits": 4,
+    "closed_leaves": 44,
+    "controls_per_mode": 280,
+    "full_parent_state_regressions": 24,
+    "certificate_bytes": 25193531,
+    "all_certificate_bytes_match": true,
+    "all_mode_partition_bytes_identical": true,
+    "class_bounds_both_endpoints": [
+      30,
+      1818
+    ],
+    "total_bounds_both_endpoints": [
+      64,
+      3632
+    ],
+    "arithmetic": {
+      "class_floor30_dependency": "bafkreibznuuclypj37y3zawaphzeh5dgnvduhwqlt5runpxa7dl55b6izy",
+      "endpoint1_lower64_combination_dependency": "bafkreigdqnclint5ctzsmjpvq56oizpeh67mt35nexvgbrjbi4afaxgyw4",
+      "old_numeric_proof_corpora_replayed": false,
+      "pinned_numeric_source_hashes_checked": true,
+      "new_endpoint0_total_lower_bound": 64,
+      "new_endpoint1_total_upper_bound": 3632,
+      "combined_total_bounds_both_endpoints": [
+        64,
+        3632
+      ],
+      "combined_class_bounds_both_endpoints": [
+        30,
+        1818
+      ],
+      "low_total_pairs": [
+        {
+          "pair": [
+            30,
+            30
+          ],
+          "excluded_by_original_box": [
+            30,
+            33
+          ]
+        },
+        {
+          "pair": [
+            30,
+            31
+          ],
+          "excluded_by_original_box": [
+            30,
+            33
+          ]
+        },
+        {
+          "pair": [
+            30,
+            32
+          ],
+          "excluded_by_original_box": [
+            30,
+            33
+          ]
+        },
+        {
+          "pair": [
+            30,
+            33
+          ],
+          "excluded_by_original_box": [
+            30,
+            33
+          ]
+        },
+        {
+          "pair": [
+            31,
+            30
+          ],
+          "excluded_by_original_box": [
+            31,
+            32
+          ]
+        },
+        {
+          "pair": [
+            31,
+            31
+          ],
+          "excluded_by_original_box": [
+            31,
+            32
+          ]
+        },
+        {
+          "pair": [
+            31,
+            32
+          ],
+          "excluded_by_original_box": [
+            31,
+            32
+          ]
+        },
+        {
+          "pair": [
+            32,
+            30
+          ],
+          "excluded_by_original_box": [
+            32,
+            31
+          ]
+        },
+        {
+          "pair": [
+            32,
+            31
+          ],
+          "excluded_by_original_box": [
+            32,
+            31
+          ]
+        },
+        {
+          "pair": [
+            33,
+            30
+          ],
+          "excluded_by_original_box": [
+            33,
+            30
+          ]
+        }
+      ],
+      "omitted_box_controls": [
+        {
+          "omitted_box": [
+            30,
+            33
+          ],
+          "uncovered_total63_pair": [
+            30,
+            33
+          ]
+        },
+        {
+          "omitted_box": [
+            31,
+            32
+          ],
+          "uncovered_total63_pair": [
+            31,
+            32
+          ]
+        },
+        {
+          "omitted_box": [
+            32,
+            31
+          ],
+          "uncovered_total63_pair": [
+            32,
+            31
+          ]
+        },
+        {
+          "omitted_box": [
+            33,
+            30
+          ],
+          "uncovered_total63_pair": [
+            33,
+            30
+          ]
+        }
+      ],
+      "complement_map": "(e,a,b)->(1-e,1848-a,1848-b)",
+      "remaining_total64_pairs_both_endpoints": [
+        [
+          30,
+          34
+        ],
+        [
+          31,
+          33
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          33,
+          31
+        ],
+        [
+          34,
+          30
+        ]
+      ],
+      "remaining_total3632_pairs_both_endpoints": [
+        [
+          1814,
+          1818
+        ],
+        [
+          1815,
+          1817
+        ],
+        [
+          1816,
+          1816
+        ],
+        [
+          1817,
+          1815
+        ],
+        [
+          1818,
+          1814
+        ]
+      ],
+      "boundary_feasibility_asserted": false
+    },
+    "threads": 1,
+    "primitive_and_validation_caps_seconds": 90,
+    "seconds": 1205.247,
+    "peak_child_rss_kib": 246000,
+    "length3704_witness_or_new_W_bound_asserted": false
+  },
+  "successful_bounded_jobs": 162,
+  "sum_primitive_seconds": 1204.963,
+  "longest_primitive_seconds": 27.807,
+  "limits_or_failed_mathematical_jobs": [],
+  "source_pins": {
+    "generate.py": "0a382a605bb7cb6d8d729fa7f2d12b3c19447d4b7731d26404fbb3ab5da9a52e",
+    "reproduce.py": "bff5e2ff2a65a48b1a929057577c458155a1af93a7b3105cf930a773f5ad7bd1",
+    "verify.py": "1856c521ed43fb1b69bb2c30d5e06e493e9cbb90a930d2b1ab6d1aca7b9e1919",
+    "expected.json": "980960fcf27b11a37f4cd79d79696c9d3cfe2762e08873119490d4e07777be09",
+    "provenance.json": "254b2b4b9f371fd860707ee3146f726d0e5eead1fedbfc6435c3ecb03e20d5e2"
+  },
+  "cached_complete_resume_mathematical_output_identical": true,
+  "cached_resume_generated_new_primitives": false,
+  "controlled_resume_guard_rejections": [
+    {
+      "name": "started",
+      "rejected_before_generation": true
+    },
+    {
+      "name": "failed",
+      "rejected_before_generation": true
+    },
+    {
+      "name": "timed-out",
+      "rejected_before_generation": true
+    },
+    {
+      "name": "changed-source-pins",
+      "rejected_before_generation": true
+    },
+    {
+      "name": "previous-parent-attempt",
+      "rejected_before_generation": true
+    }
+  ],
+  "guard_rejections_are_not_mathematical_exclusions": true,
+  "development_wrapper_repair": {
+    "description": "The public filename helper was changed to its local filename_for function before any audit partition. The generic checker had no filename export. Generation never calls that helper; generator and imported mathematical checker bytes were unchanged. No mathematical computation was repeated.",
+    "recorded_generation_jobs_before_fix": 6,
+    "completed_audit_jobs_before_fix": 0,
+    "old_wrapper_sha256": "10a6b482e2775bbffcaaca1537943a20484a2300fd0d3deb1b68bb6cbe674b72",
+    "final_wrapper_sha256": "1856c521ed43fb1b69bb2c30d5e06e493e9cbb90a930d2b1ab6d1aca7b9e1919",
+    "all_audit_partitions_used_final_wrapper": true
+  },
+  "old_numeric_proof_corpora_replayed": false,
+  "fresh_forests_equal_previously_checked_canonical_bytes": true,
+  "generated_certificate_data_omitted_from_git": true,
+  "resource_caps_changed": false,
+  "boundary_feasibility_or_new_W_bound_asserted": false
+}
