@@ -1,0 +1,45 @@
+{
+  "agent": "six-vdw-1",
+  "role": "researcher",
+  "status": "ALL_ATMOST_THREE_INTERVAL_INVERSIONS_EXCLUDED_BY_CHECKED_CANONICAL_RUP_AND_IMPORTED_TWO_RUN_BARRIER",
+  "length": 3704,
+  "colors": 2,
+  "term_count": 7,
+  "APs": 2253,
+  "first_edit_bit": 0,
+  "CNF_variables": 18517,
+  "CNF_clauses": 41536,
+  "CNF_sha256": "bf6123e2aacd2b07ade819e1f6e17139fc86d107d6f54cdb80e768c6e5923733",
+  "reference_DRAT_sha256": "40e1b51b3a46143a7afddc46651faf5dc448647138e0ef55d694c9b2d09cae17",
+  "reference_LRAT_sha256": "9d0dbbd57e90ad0c05711b1a7f7af03a47ea25e0f224f384b6c07d8b8ca3e3c1",
+  "reference_RUP_clauses": 34289,
+  "reference_hint_clause_reads": 4305587,
+  "reference_proof_obligation_cases": 151143,
+  "canonical_atmost_three_run_masks": 3572191234708551043,
+  "canonical_three_run_masks": 3572183404572137460,
+  "three_run_masks": 3577977700443300700,
+  "atmost_three_run_masks": 3577985539042435691,
+  "minimum_disagreement_runs_if_AP_free": 4,
+  "minimum_agreement_runs_if_AP_free": 4,
+  "minimum_match_edit_transitions_if_AP_free": 7,
+  "new_W_bound": null,
+  "input_sha256": {
+    "base3704.bits": "42e6cbef0710d38089475954306b3bd2c0367d5a28aed5ccc74b2698f27fed87",
+    "AP-pool.json": "740618fe1bff99653b9597e60ed8c5f90aeda4565b33d4f2929dc68cd3bf7c94",
+    "drat-trim.c": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee"
+  },
+  "python_sat": "1.8.dev24",
+  "native_solver": "cadical195",
+  "imported_normalization_lemma": {
+    "source_commit": "a761f917916a32b878e544fbc812a375a7beafdc",
+    "source_url": "https://github.com/helgithorskarp/math_results/tree/main/van_der_waerden_27_two_interval_inversions",
+    "graph_ref": "bafkreigmudrxlrhdoniv7je42fwuvzj57ex4bxqlpcrakj5tn7y2uidf3e",
+    "scope": "Same literal base: every AP-free candidate has at least3 edit runs and3 agreement runs.",
+    "rerun_or_reproved_here": false
+  },
+  "upstream_proof_tool": {
+    "repository": "https://github.com/marijnheule/drat-trim",
+    "commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+  },
+  "large_proof_files_in_repository": false
+}
