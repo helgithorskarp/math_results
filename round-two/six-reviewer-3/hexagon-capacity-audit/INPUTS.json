@@ -1,0 +1,96 @@
+{
+  "actual_reviewer": "six-reviewer-3",
+  "commit": "90b9d1f738b15ab7be9dbfe897456525ef7906e5",
+  "files": [
+    {
+      "bytes": 1982,
+      "path": "round-two/six-tammes-1/stadium-hexagon-capacity/AUDIT_EXPECTED.json",
+      "sha256": "02472c068b465123fb060da24f9ad5e94a057fc8e0d88f34c0986ac95ed442c5"
+    },
+    {
+      "bytes": 1951,
+      "path": "round-two/six-tammes-1/stadium-hexagon-capacity/EXPECTED.json",
+      "sha256": "388e72f7d5b8a1298f7f1367c707972e7893b1c8373b55090aa096af4c7087b5"
+    },
+    {
+      "bytes": 4108,
+      "path": "round-two/six-tammes-1/stadium-hexagon-capacity/NUMERICS.md",
+      "sha256": "6f2fabe93607fb506c8eec654a1ddc8e7702f4593cc72b1bb459fb1efff333cc"
+    },
+    {
+      "bytes": 13069,
+      "path": "round-two/six-tammes-1/stadium-hexagon-capacity/PROOF.md",
+      "sha256": "68874c8e10d186871ee1136d794ccb1450ade7beb29818594c3e2c12cbf0097c"
+    },
+    {
+      "bytes": 2877,
+      "path": "round-two/six-tammes-1/stadium-hexagon-capacity/README.md",
+      "sha256": "7c61f8f41399a1c07254eb4c350710390e5169e84e46aaa9570aaff41388eb7a"
+    },
+    {
+      "bytes": 629,
+      "path": "round-two/six-tammes-1/stadium-hexagon-capacity/SHA256SUMS",
+      "sha256": "a5909669a9a044ebaf7d18dcd2f367afe628bfee2cc173fa5959e10805afe5a7"
+    },
+    {
+      "bytes": 4469,
+      "path": "round-two/six-tammes-1/stadium-hexagon-capacity/SOURCE_CONTEXT.md",
+      "sha256": "49b2b1e98eaec554272c306d3979fd5bde4a263679666012549ea034f6a33149"
+    },
+    {
+      "bytes": 4062,
+      "path": "round-two/six-tammes-1/stadium-hexagon-capacity/audit.py",
+      "sha256": "d5c43d94d03e729fc74376e289a3826579cac60387a925c661fcd174d1654b85"
+    },
+    {
+      "bytes": 4517,
+      "path": "round-two/six-tammes-1/stadium-hexagon-capacity/check.py",
+      "sha256": "710f45023ccf5d26199f7386ffdb38bd2c7aea9f48504d434c93eadac27d9e01"
+    }
+  ],
+  "inherited_combination": {
+    "artifact_ref": "bafkreigqac6v5l7cobm7gv64jqbgsrlk5qrqozb5bivw5dyzzupnbwxele",
+    "depends_on_height": 8650,
+    "review_ref": "bafkreihokoo4exncgjz2e3r2yzpgxfbh7c3jrwov3slvzjiafptn4j4zgq",
+    "scope": "only the combined empty3..5-cycle consequence; no new audit of these earlier results",
+    "sufficient_prior_review_height": 8706
+  },
+  "principal_capacity_dependency": "self-contained written geometry and quadrature; no graph theorem imported",
+  "purpose": "provenance only; audit.py and replay.py read no author input",
+  "role": "independent mathematical reviewer",
+  "separate_author_validation": {
+    "all_eight_author_manifest_hashes_match": true,
+    "all_five_complete_seven_field_rows_match_independent_implementation": true,
+    "author_replays": [
+      {
+        "complete_author_output_matches": true,
+        "file": "check.py",
+        "optimized": false,
+        "seconds": 0.1433520860155113
+      },
+      {
+        "complete_author_output_matches": true,
+        "file": "check.py",
+        "optimized": true,
+        "seconds": 0.21394385397434235
+      },
+      {
+        "complete_author_output_matches": true,
+        "file": "audit.py",
+        "optimized": false,
+        "seconds": 0.4528182600042783
+      },
+      {
+        "complete_author_output_matches": true,
+        "file": "audit.py",
+        "optimized": true,
+        "seconds": 0.5569621960166842
+      }
+    ],
+    "both_wider_band_endpoint_intervals_match": true
+  },
+  "target_graph": {
+    "artifact_ref": "bafkreihad4wl6cvlzguacxxin3typ2zkbubrrirflz5vop3y4ja4cghtdi",
+    "height": 8804
+  }
+}
