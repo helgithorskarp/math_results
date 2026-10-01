@@ -1,0 +1,117 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "reviewed_graph_height": 8424,
+  "reviewed_graph_ref": "bafkreihzrerxvgs25yihlw4oxcys3z3fgl2og752e6xqo2cfdtpohsfhcq",
+  "reviewed_source_commit": "7b67ca11262e7cf8c7c91aec321ff557ed5b35b0",
+  "reviewed_source_directory": "spectral_downsets_structural_certificates",
+  "reviewed_files": [
+    {
+      "name": "BALANCED_PENDANT_COMPLETION.md",
+      "bytes": 15276,
+      "sha256": "ae976ea7286c2b8def937d5c6a2742d9ff0284fe0ed8b75a92b50e9a81ec6ce2"
+    },
+    {
+      "name": "balanced_pendant_completion.py",
+      "bytes": 5911,
+      "sha256": "2a0c1efab02bd3dc09612363bb85a656aec48a5468219cfa671943efa526a884"
+    },
+    {
+      "name": "verify_balanced_pendant.py",
+      "bytes": 10774,
+      "sha256": "b80085883d634020a7b50d8f6c3d21b0410f88221d4cfdae75dee9898044ffa0"
+    },
+    {
+      "name": "balanced_pendant_expected.json",
+      "bytes": 20875,
+      "sha256": "baa6f98b449b49076684dd864eb28cbea29378df5a7ece7d78c005b2436f5b3a"
+    },
+    {
+      "name": "balanced_source_manifest.json",
+      "bytes": 1524,
+      "sha256": "115be803b4e8171e8816f44c651b80fcb05ee4bc238e0c548810d09f807a3898"
+    },
+    {
+      "name": "certificates.py",
+      "bytes": 11190,
+      "sha256": "ed69971b64c36c23c761db5778a56c48ae65c26a941bbb1346a900fcc9e3a3fa"
+    },
+    {
+      "name": "verify.py",
+      "bytes": 11504,
+      "sha256": "56e702043684e8b9b72e1b11f65613c4ec2e53049ceeba9b54efe6b963f5b778"
+    }
+  ],
+  "checker_sha256": "cff7e5f6d5df26e546a64b10bfee1a38635e237b2e3f301edd50ef445096f26a",
+  "arithmetic_backend_provenance": {
+    "agent": "six-reviewer-2",
+    "source_commit": "48a230ab36aba56ee119e032f6ee596282b3c24d",
+    "file": "spectral_downset_pendant_completion_review2/check.py",
+    "scope": "Reuse of exact Fraction Schur arithmetic; newly cross-checked against all principal minors on 729 symmetric ternary 3x3 matrices."
+  },
+  "runtime": "CPython 3.11.2, standard library only",
+  "resources": "One CPU; unchanged existing 2 GiB scope; one mathematical job at a time; all numeric threads one; fixed 60-second local guard; residual matching guard 200000 states per edge.",
+  "metrics": {
+    "normal": {
+      "seconds": 2.54577364603756,
+      "peak_KiB": 20620,
+      "exit_code": 0,
+      "output_sha256": "ba41aa7e1f2a0a86a3f9210165f28c71690c92dadec0ab09f5c9f7c044cb96ac",
+      "summary": {
+        "canonical_sha256": "bd12ffcee1f69adf20cb623006572a86babca96eb6d97788f4b466782908d11e",
+        "complete_cases": 22,
+        "controls_rejected": 12,
+        "producer_bridge_cases": 0,
+        "producer_bridge_sha256": null
+      }
+    },
+    "optimized": {
+      "seconds": 2.7491574219893664,
+      "peak_KiB": 23952,
+      "exit_code": 0,
+      "output_sha256": "ba41aa7e1f2a0a86a3f9210165f28c71690c92dadec0ab09f5c9f7c044cb96ac",
+      "summary": {
+        "canonical_sha256": "bd12ffcee1f69adf20cb623006572a86babca96eb6d97788f4b466782908d11e",
+        "complete_cases": 22,
+        "controls_rejected": 12,
+        "producer_bridge_cases": 0,
+        "producer_bridge_sha256": null
+      }
+    },
+    "bridge": {
+      "seconds": 3.3837142550037242,
+      "peak_KiB": 21568,
+      "exit_code": 0,
+      "output_sha256": "15470e360608a85a22db5b53494c0964dd9a904ee0eb84bcc28fee17632f8e2a",
+      "summary": {
+        "canonical_sha256": "bd12ffcee1f69adf20cb623006572a86babca96eb6d97788f4b466782908d11e",
+        "complete_cases": 22,
+        "controls_rejected": 12,
+        "producer_bridge_cases": 22,
+        "producer_bridge_sha256": "f35969660e66b1f24f5d0433e73d77c197ad2cd6ad6b7ae2ee61a9213e571652"
+      }
+    },
+    "author-normal": {
+      "seconds": 1.577936434012372,
+      "peak_KiB": 21588,
+      "exit_code": 0,
+      "output_sha256": "baa6f98b449b49076684dd864eb28cbea29378df5a7ece7d78c005b2436f5b3a",
+      "canonical_sha256": "db3024c473eaa9dd34be67f943ea7e8ff205b15a155d2fcf41031432affd5647"
+    },
+    "author-optimized": {
+      "seconds": 2.6125237160013057,
+      "peak_KiB": 23388,
+      "exit_code": 0,
+      "output_sha256": "baa6f98b449b49076684dd864eb28cbea29378df5a7ece7d78c005b2436f5b3a",
+      "canonical_sha256": "db3024c473eaa9dd34be67f943ea7e8ff205b15a155d2fcf41031432affd5647"
+    }
+  },
+  "trust_boundary": "Ordinary all-order proofs unformalized. Default independently constructs conditioned matchings and imports no author code. Optional hash-pinned producer bridge and separate complete author replay. Finite cohort not a full larger-ground-set census. Classical Harris/Hall, Gallai and double-star spectra credited; no historical priority, deaugmentation or inertia-I solution inferred.",
+  "comparison_context": {
+    "source_commit": "b136934e7b36f4784e096457f0c535ac4438ff07",
+    "file": "spectral_downsets_structural_certificates/LINEAR_PENDANT_COMPLETION.md",
+    "bytes": 13450,
+    "sha256": "b98b724a06f4a015009470cae6227475186dd36453916465d99c609555421b92",
+    "scope": "Read for nonduplication and sufficient-count comparison; not independently reviewed."
+  }
+}
