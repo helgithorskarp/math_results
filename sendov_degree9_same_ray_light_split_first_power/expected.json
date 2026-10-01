@@ -1,0 +1,124 @@
+{
+  "agent": "six-sendov-1",
+  "clear_D_power": 16,
+  "complete_cells": [
+    {
+      "b": [
+        "0",
+        "1/2"
+      ],
+      "coefficients": 3927,
+      "degrees": [
+        32,
+        16,
+        6,
+        0
+      ],
+      "minimum": "10367/128",
+      "sha256": "67e00a95c7b516dae491d9a0eeedcc0903a7c5302304f6ad822cde0cc64eda09",
+      "y": [
+        "0",
+        "1"
+      ],
+      "z": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "b": [
+        "1/2",
+        "1"
+      ],
+      "coefficients": 3927,
+      "degrees": [
+        32,
+        16,
+        6,
+        0
+      ],
+      "minimum": "2328028285103155737/3843076338483200",
+      "sha256": "15e9ab65bf2773770b9cba2257293f8a3c3a002e5f6d5f2a25f55884069aef10",
+      "y": [
+        "0",
+        "1"
+      ],
+      "z": [
+        "0",
+        "1"
+      ]
+    }
+  ],
+  "complete_fraction_affine_references": 2,
+  "dominance_lower_bound": "1/128",
+  "exact_examples": {
+    "nonreal_example": {
+      "a": "19/20",
+      "full_scaling_controls": 3,
+      "heavy": [
+        "1/100",
+        "1/1000"
+      ],
+      "heavy_distance_squared": "883601/1000000",
+      "light_criterion_rhs": "921515669217/1000000000000",
+      "lights": [
+        [
+          "-49/2500",
+          "101/10000"
+        ],
+        [
+          "-1/2500",
+          "99/10000"
+        ]
+      ],
+      "polynomial_sha256": "90e7f34dee6a9e8b21d2262652ad907c7ead83823c3dc42991f595c49b00fd16",
+      "rouche_l1_bound": "9726735450462456223462166809/14000000000000000000000000000",
+      "scaling_sha256": "311fda606674ddcd0e8e9679eff2f2597a11db70b2b8292eb6611ce2dea1b67f"
+    },
+    "split_barrier": {
+      "b": "1",
+      "cross": "-3798117/6422528",
+      "merged_ratio": "3713329/30625",
+      "original_ratio": "1",
+      "r": "1/2",
+      "s": "1/2",
+      "t": "9/2"
+    }
+  },
+  "kernel_sha256": "a0bbfcd4e5ec750e61f92d89eff5f2bde63eeb6ffdd957e7555deb0af6f863c7",
+  "kernel_terms": 168,
+  "mapped_margin_terms": 1480,
+  "margin_sha256": "e6f7c361be8fb3a794b772df0f7901d3bd99ffd1c2a65085b5b7921b3cb91901",
+  "moment_norm_sha256": [
+    "a011a0f9cef8caa1411be35a4d0a1905122c41eb1db7a0f59520e0cd78ed8449",
+    "a0afc0a80bb72f806c531792beb5d12aac4dc7060852a725139eb21ba7fc21e8",
+    "431cfdaaebe9b79e23032a74938ba016c0e207bb4cfa9a8b4deebec7fd7b1f66"
+  ],
+  "new_certified_sign_coefficients": 7854,
+  "origin_controls": {
+    "degenerate_b_face_controls": 450,
+    "nonreal_heavy_controls": 1170,
+    "original_controls": 1431,
+    "sha256": "49085bf053a1a888a6e9d3a9862887d92a8a8139987a71459ceef77ade6d57e5",
+    "unequal_light_controls": 448
+  },
+  "prior_logical_premises_reproved_by_this_checker": false,
+  "rejected_corruptions": 10,
+  "result": "PASS",
+  "robust_gain_constant": "1/21504",
+  "robust_phase_chord_denominator": 645120,
+  "robust_sector": {
+    "exact_signed_origin_controls": 160,
+    "perturbed_noncollinear_example": {
+      "chord_squared": "4/1000000000000000000000001",
+      "original_light_radius_gap_squared": "400000000/921515669217",
+      "phase_parameter": "1/1000000000000",
+      "polynomial_sha256": "13084f4ffde8d4cb93dbbc99090dc5868f1db4f99edf56a67728ee45d2288076",
+      "rouche_l1_bound": "9726735450412972570993352192253788518808550217273691/14000000000000000000000014000000000000000000000000000",
+      "strict_angular_predicates_checked_by_positive_squares": true
+    },
+    "sha256": "4b1da9aac14e20ae97cb297529e92d0381a526525466a70338701b65c11396ef"
+  },
+  "role": "researcher",
+  "splitting_gain_constant": "1/7168"
+}
