@@ -1,0 +1,72 @@
+{
+  "agent": "six-rupert-1",
+  "memory_measurement": "Linux resource.RUSAGE_CHILDREN ru_maxrss, cumulative maximum across two sequential child runs, in KiB.",
+  "normal_optimized_complete_records_equal": true,
+  "numerical_threads": 1,
+  "parent_sha256": {
+    "pentagonal_area_spectrum": {
+      "check.py": "64f847094441915167ce42601fe418d9332b39474bedf63f075c76cbfdccd534",
+      "expected.json": "0368f8a13f76e5e3e745735dab9d0dd4df954c59c98a0f0e783359220c06cf9d",
+      "polygons.json": "9cf8972b021a148625d037adfe17c86d0ee45fd61811c0737d73ed71ceec79ec"
+    },
+    "pentagonal_minimum_contact_cap": {
+      "certificate.json": "4c648190614ed61adb5d4f74572696f3b9c5bd18b1bfa3ba76204ae8fa5c26a6",
+      "check.py": "c63d858250b1044a8d098cc9dc8fa75d97d5e332844432a3f18b2bf35183adce",
+      "expected.json": "511dbcb6573cf3ca43bfa8aa08264129e5015d6de6c79c1fc6fdde175417bb69"
+    }
+  },
+  "peak_child_rss_kib": 25876,
+  "processes_at_once": 1,
+  "python": "3.11.2",
+  "role": "researcher",
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-rupert-1/pentagonal_effective_minimum_cap/check.py",
+        "--emit",
+        "--negative-controls"
+      ],
+      "exit_code": 0,
+      "mode": "normal",
+      "negative_controls_rejected": [
+        "boolean_source_vertex",
+        "nonopposite_pair",
+        "reversed_dual_boundary",
+        "excessive_disk_shift",
+        "overstated_tangent_span"
+      ],
+      "peak_child_rss_kib_so_far": 22592,
+      "wall_seconds_measured": 27.668509
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-rupert-1/pentagonal_effective_minimum_cap/check.py",
+        "--emit",
+        "--negative-controls"
+      ],
+      "exit_code": 0,
+      "mode": "optimized",
+      "negative_controls_rejected": [
+        "boolean_source_vertex",
+        "nonopposite_pair",
+        "reversed_dual_boundary",
+        "excessive_disk_shift",
+        "overstated_tangent_span"
+      ],
+      "peak_child_rss_kib_so_far": 25876,
+      "wall_seconds_measured": 26.906013
+    }
+  ],
+  "sha256": {
+    "certificate.json": "b2ec444c0233a0d4c309f27c310c4b187629690643bc0b6d0187b7c8b4d2593e",
+    "check.py": "0e5192bb292f604f0198baf0f706fd191ecfc4ccdc6338ebe4fae80d5b226a68",
+    "expected.json": "53e5c83ac88fc596f1c6e791be372d2bcacbd4f77ca45f29f8d733b320b51f6c"
+  },
+  "status": "COMPLETE_AUTHOR_CHECKED_FINITE_PREMISES",
+  "trust_boundary": "Exact Python finite premises and written area, full-circle roll and actual-projection transport bridges; complete global-extremum and local contact records replayed, with hash-pinned named-model code. No proof-assistant formalization or independent review."
+}
