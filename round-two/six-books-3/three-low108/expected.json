@@ -1,0 +1,381 @@
+{
+  "integrity_controls": {
+    "damage_names": [
+      "missing_orbit",
+      "duplicate_orbit",
+      "unordered_orbits",
+      "same_total_wrong_tags",
+      "boolean_deficit",
+      "false_coverage_count",
+      "wrong_red_cap",
+      "boolean_schema",
+      "wrong_local_graph",
+      "boolean_row_word",
+      "changed_degree_eight_word",
+      "reversed_equal_one_tags",
+      "changed_multiplicity",
+      "false_orbit_size",
+      "false_domain_hash",
+      "false_domain_size",
+      "false_empty_star",
+      "supported_star_claimed_unsupported",
+      "duplicate_unsupported_star",
+      "incomplete_static_cover",
+      "overlapping_static_cover",
+      "wrong_static_target",
+      "supported_star_deleted",
+      "incomplete_deletion_trace",
+      "deletion_after_emptiness",
+      "false_final_empty_point",
+      "duplicate_deletion_star",
+      "unknown_certificate_field",
+      "null_exclusion"
+    ],
+    "damaged_certificate_rejections": 29,
+    "good_incidence_records": 51240
+  },
+  "producer": {
+    "arc_removed_stars": 44,
+    "arc_steps": 7,
+    "census": {
+      "exact_column_joins": 1670070,
+      "high_large_multisets": 456,
+      "high_multiplicity_choices": 18840,
+      "low8_residual_assignments": 1036750,
+      "low9_pair_column_vectors": 3351,
+      "low9_pairs_red_capped": 39666,
+      "low9_pairs_within_budget": 137193,
+      "residual_vectors": 9215
+    },
+    "certificate_sha256": "e9bc3b9b1373aa5df9ff0a70f89caddeb2e63db56fd77068451e0f44fcab1039",
+    "complete": true,
+    "deficits": [
+      2,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "exclusion_types": {
+      "arc_deletion": 1,
+      "empty_star": 423,
+      "star_pair_cover": 38
+    },
+    "full_large_sizes": {
+      "5": 30,
+      "6": 80
+    },
+    "incidence_records": 51240,
+    "incidence_sha256": "49dbd338b5c8911c85e34c4176d23061e3c3cdffe4c69a7f2d0ef8771b3e52e3",
+    "low8_word_sizes": {
+      "6": 210,
+      "7": 120,
+      "8": 45
+    },
+    "low9_word_sizes": {
+      "5": 252,
+      "6": 210,
+      "7": 120
+    },
+    "orbit_size_histogram": {
+      "120": 394,
+      "15": 2,
+      "30": 1,
+      "60": 65
+    },
+    "orbits": 462,
+    "patterns": [
+      {
+        "records": 24180,
+        "sizes": [
+          6,
+          5,
+          5,
+          [
+            5,
+            5
+          ]
+        ]
+      },
+      {
+        "records": 6360,
+        "sizes": [
+          6,
+          5,
+          5,
+          [
+            6
+          ]
+        ]
+      },
+      {
+        "records": 12720,
+        "sizes": [
+          6,
+          5,
+          6,
+          [
+            5
+          ]
+        ]
+      },
+      {
+        "records": 1140,
+        "sizes": [
+          6,
+          5,
+          7,
+          []
+        ]
+      },
+      {
+        "records": 765,
+        "sizes": [
+          6,
+          6,
+          6,
+          []
+        ]
+      },
+      {
+        "records": 4620,
+        "sizes": [
+          7,
+          5,
+          5,
+          [
+            5
+          ]
+        ]
+      },
+      {
+        "records": 1140,
+        "sizes": [
+          7,
+          5,
+          6,
+          []
+        ]
+      },
+      {
+        "records": 315,
+        "sizes": [
+          8,
+          5,
+          5,
+          []
+        ]
+      }
+    ],
+    "star_pair_covers": 47,
+    "unsupported_stars": 87
+  },
+  "summary_control": {
+    "forged_narrowed_domain_summary_rejections": 1
+  },
+  "verifier": {
+    "arc_removed_stars": 44,
+    "arc_steps": 7,
+    "census": {
+      "budget_low8_large_pairs": 99525,
+      "integral_column_recoveries": 149100,
+      "low9_pairs_red_capped": 39666,
+      "low9_pairs_within_budget": 137193,
+      "quotient_joins": 1842530,
+      "red_capped_joins": 158400
+    },
+    "certificate_sha256": "e9bc3b9b1373aa5df9ff0a70f89caddeb2e63db56fd77068451e0f44fcab1039",
+    "controls": {
+      "geometry": {
+        "complete_low_size_patterns": [
+          [
+            6,
+            5,
+            5
+          ],
+          [
+            6,
+            5,
+            6
+          ],
+          [
+            6,
+            5,
+            7
+          ],
+          [
+            6,
+            6,
+            6
+          ],
+          [
+            7,
+            5,
+            5
+          ],
+          [
+            7,
+            5,
+            6
+          ],
+          [
+            8,
+            5,
+            5
+          ]
+        ],
+        "fixed_tags": [
+          2,
+          1,
+          1
+        ],
+        "independent_four_sets": 5
+      },
+      "primary21": {
+        "actual_completion_accepted": 1,
+        "actual_stars_accepted": 10,
+        "asymmetric_degree_preserving_damages_rejected": 196,
+        "blue_edges": 117,
+        "max_blue_pages": 6,
+        "max_red_pages": 3,
+        "order": 21,
+        "red_edges": 93
+      },
+      "signed_cut": {
+        "blue_intersection_identity_checks": 137,
+        "frames": 32,
+        "negative_blue_slack_cases": 18
+      }
+    },
+    "covered_records_sha256": "49dbd338b5c8911c85e34c4176d23061e3c3cdffe4c69a7f2d0ef8771b3e52e3",
+    "exclusion_types": {
+      "arc_deletion": 1,
+      "empty_star": 423,
+      "star_pair_cover": 38
+    },
+    "full_large_sizes": {
+      "5": 30,
+      "6": 80
+    },
+    "high_multiset_counts_by_surplus": [
+      1,
+      30,
+      425
+    ],
+    "incidence_records": 51240,
+    "incidence_sha256": "49dbd338b5c8911c85e34c4176d23061e3c3cdffe4c69a7f2d0ef8771b3e52e3",
+    "low8_word_sizes": {
+      "6": 210,
+      "7": 120,
+      "8": 45
+    },
+    "low9_word_sizes": {
+      "5": 252,
+      "6": 210,
+      "7": 120
+    },
+    "orbit_size_histogram": {
+      "120": 394,
+      "15": 2,
+      "30": 1,
+      "60": 65
+    },
+    "orbits": 462,
+    "patterns": [
+      {
+        "records": 24180,
+        "sizes": [
+          6,
+          5,
+          5,
+          [
+            5,
+            5
+          ]
+        ]
+      },
+      {
+        "records": 6360,
+        "sizes": [
+          6,
+          5,
+          5,
+          [
+            6
+          ]
+        ]
+      },
+      {
+        "records": 12720,
+        "sizes": [
+          6,
+          5,
+          6,
+          [
+            5
+          ]
+        ]
+      },
+      {
+        "records": 1140,
+        "sizes": [
+          6,
+          5,
+          7,
+          []
+        ]
+      },
+      {
+        "records": 765,
+        "sizes": [
+          6,
+          6,
+          6,
+          []
+        ]
+      },
+      {
+        "records": 4620,
+        "sizes": [
+          7,
+          5,
+          5,
+          [
+            5
+          ]
+        ]
+      },
+      {
+        "records": 1140,
+        "sizes": [
+          7,
+          5,
+          6,
+          []
+        ]
+      },
+      {
+        "records": 315,
+        "sizes": [
+          8,
+          5,
+          5,
+          []
+        ]
+      }
+    ],
+    "star_pair_covers": 47,
+    "unsupported_stars": 87,
+    "weighted_exclusion_types": {
+      "arc_deletion": 60,
+      "empty_star": 46740,
+      "star_pair_cover": 4440
+    }
+  }
+}
