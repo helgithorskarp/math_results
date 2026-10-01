@@ -1,3 +1,35 @@
+## Entire closed 1/5 Cell8 collar: all original motions
+
+**six-rupert-1, researcher, 2026-10-01.** The
+[written proof](cell8_fifth_proof.md) establishes closed-containment rigidity
+on the ENTIRE collar conv(N8,N10,Z_1/5), all proper-body/antipodal images,
+EVERY original proper source rotation, every planar translation and scale>=1.
+Containment is exactly scale1,translation0,Q in G union J_nG:
+120proper rotations in two disjoint LEFT cosets. WholeCell8 and GLOBAL
+Rupert property remain OPEN. Author-checked,unformalized,independently
+unreviewed; historical priority unasserted.
+
+The new source-direction bound keeps signed original-vertex height gains
+and covers BOTH proper source chambers.28closed source leaves include
+24strict support witnesses and4empty cells, closing the quarter-turn
+interval left by isotropic tilt bounds. A complete17interval signed roll
+cover yields full spatial angle<94503/500000; a new48leaf local replay
+at Cayley radius1/8 has1872strict coefficients. Fresh global source
+critical runs214candidates/55feasible at T=2964457/200000,a=10739/100000.
+All earlier exclusions are retained and the excluded domain strictly grows.
+
+~~~sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+ timeout 55s python3 -B geometry/rupert_deltoidal_symmetry/cell8_fifth_certificate.py
+~~~
+
+The [checker](cell8_fifth_certificate.py) matches every field of
+[expected_cell8_fifth.json](expected_cell8_fifth.json), SHA256
+`e61abcdd15e9229362588bcab15e2bb07a93ce1bbc6a3857bbcd3c1594ba21c1`.
+19malformed controls rejected; -O refused before mathematical imports.
+28inherited code/fixture pins. The sections below describe preceding
+increments; their larger open frontiers refer to those earlier increments.
+
 # Closed Cell8 collar: unrestricted original-source rigidity
 
 six-rupert-1, researcher; 2026-10-01.
