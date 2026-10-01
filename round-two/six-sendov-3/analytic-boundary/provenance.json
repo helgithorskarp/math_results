@@ -1,0 +1,140 @@
+{
+  "actual_agent": "six-sendov-3",
+  "arithmetic_kernel_source_commit": "9b8581c53cd6d06feaa7e0c0001791293264ae4e",
+  "arithmetic_kernel_source_path": "round-two/six-sendov-3/fourth-boundary/arithmetic.py",
+  "core_mathematical_premises": {
+    "7190": "d16c8df095d88b344063fd9c87f39be57e408cd7",
+    "8619": "f8df996dba7bfec1d05eb6731b3b8e667ca8f860",
+    "8684": "691ea3f4eaa4b06b46ab0aded63903d81d95c668"
+  },
+  "credited_baseline_reproductions": [
+    {
+      "directory": "quartic-boundary-audit",
+      "exact_checks": 380,
+      "fixture_sha256": "905cad4a6cf7a71da976fbd9eebadc49a398051e987d957d162f2c480f42dec1",
+      "normal_replay_this_pass": "Passed unchanged before own validation; full hash and count retained.",
+      "source_hashes": {
+        "REVIEW.md": "d7ef700d1995ce5141fe2db39b2c93f5e1800690e26d7d8dbffa135b5582a9b8",
+        "check.py": "2386fae932fcbc1c2ac04ad05c21729f490f044f525ca36ad5659adf891823b3",
+        "expected.json": "905cad4a6cf7a71da976fbd9eebadc49a398051e987d957d162f2c480f42dec1"
+      }
+    },
+    {
+      "directory": "cubic-boundary-audit",
+      "exact_checks": 171,
+      "fixture_sha256": "0a5f2e8799e431e182e2f04a7f3d564bb5c11b013b341679835f150634f9d8d2",
+      "normal_replay_this_pass": "Passed unchanged before own validation; full hash and count retained.",
+      "source_hashes": {
+        "REVIEW.md": "2f6d586cf390e82d4779ff14b32b0349864277c983513e04c3046470d71d531f",
+        "check.py": "230e236386a142885a1170a7b37bc9ffe9846be6f60e8b55801a4e250f1c2e59",
+        "expected.json": "0a5f2e8799e431e182e2f04a7f3d564bb5c11b013b341679835f150634f9d8d2"
+      }
+    }
+  ],
+  "exact_checks": 61,
+  "fixture_sha256": "f9bf58e64dd926dd006ed6b8ce59453c0df202751f90ef1c2f78c5126421a6e0",
+  "fourth_review_context_not_structural_premise": {
+    "8883": "7bf51b77755026292db72084d8338698e2f43925"
+  },
+  "mathematical_damages_rejected": 8,
+  "max_concurrent_mathematical_jobs": 1,
+  "missing_malformed_mathematically_altered_fixture_controls_both_modes": true,
+  "native_threads": 1,
+  "new_small_imaginary_sharpness": "For each fixed q>=3,A>0, a full boundary-stratum implicit family has small imaginary coordinate lambda*eta^((q-1)/2), and excess Dh*lambda^2*eta^q+o(eta^q); q5 remainderO(eta6).",
+  "normal_and_optimized_match_complete_fixture": true,
+  "open_scope": [
+    "Effective collar width",
+    "Independent review of this new extension",
+    "Global interior first-power endpoint",
+    "Fifth objective coefficient and exact branch continuation"
+  ],
+  "ordinary_unformalized_bridges": [
+    "Analytic root maps and even/odd divisibility",
+    "Uniform analytic implicit inversions",
+    "Individual radial slack derivatives and integration",
+    "Finite coercivity to positive Hessian and analytic minimizer",
+    "Uniform all-complex competitor coverage from reviewed second-order theorem",
+    "Permutation/conjugation symmetry and equality classification",
+    "Implicit exact feasible splitting family and arbitrary fixedq stability"
+  ],
+  "proof_status": "Complete ordinary author proof; independent review of this extension pending.",
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "role": "researcher",
+  "separate_prior_third_taylor_coefficient": {
+    "8751": "52a408f210846d246b5c8dfd890cc142d480d2c4",
+    "8781": "94cbfb364599e5cfa0cf866723c5f9717f38bc39"
+  },
+  "small_imaginary_split_coefficient": [
+    "11431/648",
+    "-5719/162",
+    "5887/162"
+  ],
+  "source_sha256": {
+    "LITERATURE.md": "051bf5928b82eddb652e95dc4f5d52c18fad0afc214016e1dd71e494e3f9d0af",
+    "PROOF.md": "dd73481149bea2d36266ef172b5d21a0b3b461fe15abc43a101dc5833ee6b240",
+    "README.md": "1f17865c150a13098fbae14358f586047b44f3d8bad2a639f4cfacb05b2a965d",
+    "algebra.py": "ea5da1842affb7a5abe01134e5be7f7a86b219c586e23c3203350a7367ffbe2c",
+    "expected.json": "f9bf58e64dd926dd006ed6b8ce59453c0df202751f90ef1c2f78c5126421a6e0",
+    "verify.py": "ff8c44ae057895fcb13f6fb8d0f218a4c9150949275fbf29944ccb85efbef630"
+  },
+  "standard_library_only": true,
+  "utc": "2026-10-01T19:41:09.622874+00:00",
+  "validation_runs": [
+    {
+      "cumulative_peak_child_rss_kib": 20008,
+      "elapsed_seconds": 8.984897757007275,
+      "exit_code": 0,
+      "label": "normal"
+    },
+    {
+      "cumulative_peak_child_rss_kib": 22152,
+      "elapsed_seconds": 6.761582945007831,
+      "exit_code": 0,
+      "label": "optimized"
+    },
+    {
+      "cumulative_peak_child_rss_kib": 22152,
+      "elapsed_seconds": 6.7895504529587924,
+      "exit_code": 1,
+      "label": "missing-normal"
+    },
+    {
+      "cumulative_peak_child_rss_kib": 22152,
+      "elapsed_seconds": 6.370720769977197,
+      "exit_code": 1,
+      "label": "malformed-normal"
+    },
+    {
+      "cumulative_peak_child_rss_kib": 22152,
+      "elapsed_seconds": 6.278806315967813,
+      "exit_code": 1,
+      "label": "mathematically-altered-normal"
+    },
+    {
+      "cumulative_peak_child_rss_kib": 22200,
+      "elapsed_seconds": 6.672514095029328,
+      "exit_code": 1,
+      "label": "missing-O"
+    },
+    {
+      "cumulative_peak_child_rss_kib": 22200,
+      "elapsed_seconds": 6.467380663030781,
+      "exit_code": 1,
+      "label": "malformed-O"
+    },
+    {
+      "cumulative_peak_child_rss_kib": 22468,
+      "elapsed_seconds": 6.533842584001832,
+      "exit_code": 1,
+      "label": "mathematically-altered-O"
+    }
+  ],
+  "verified_by_code": [
+    "Generic Newton integration through epsilon4",
+    "Normal root/slack Jacobian and nonzero signs",
+    "All nine leading root radials",
+    "Active root curvature and cost dual identity",
+    "Complete twelve-variable finite tangent Hessian and positivity",
+    "Positive small-imaginary splitting cost"
+  ]
+}
