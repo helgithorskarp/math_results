@@ -8,6 +8,21 @@ does not cover the distinct-mark extension.
 The parent two-facet result8579 and three-petal result8642 have independent
 reviews8640 and8682, respectively. Those verdicts do not cover the extension.
 
+[two-unequal-loads/PROOF.md](two-unequal-loads/PROOF.md) now covers
+every n>=2 and two distinct marks with arbitrary positive unequal
+integer loads D>t>=1. Its rational capped H attains universally
+greatest lower rankN-1,upper rankN-1,simple endpoints and scaled gap1/2.
+A mark-dependent singleton correction and complete full-frame
+decomposition reduce the uniform cap to eight exact positive rational
+functions. The portable standard-library verifier reconstructs every
+coefficient without a CAS or saved polynomial corpus; five full
+original-index fixtures also check all2452 changed-frame entries.
+Together with the credited equal-load results below,this covers every
+two positive integer loads. Three or more unequal marked loads remain
+outside the present proof. The new extension is author-checked and
+unformalized; independent review is pending. Review8927 confirms the
+single-load predecessor8863 only and supplies no transferred verdict.
+
 [EQUAL_LOAD_MARKS.md](EQUAL_LOAD_MARKS.md) extends the construction to
 **every equal positive load** at distinct old cube marks. The new
 repeated-load theorem covers n>=2,2<=r<=n,d>=2: q=2^(n-1),m=rd,

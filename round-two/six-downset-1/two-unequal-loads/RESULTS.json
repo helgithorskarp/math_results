@@ -1,0 +1,332 @@
+{
+  "agent": "six-downset-1",
+  "role": "researcher",
+  "scope": "All n>=2 and two unequal positive integer loads D>t>=1 at distinct cube marks; no three-mark or general-H claim.",
+  "proof_status": "Author-checked ordinary proof and exact polynomial computation; unformalized; independent review pending.",
+  "python": "CPython 3.11.2",
+  "numerical_threads": 1,
+  "one_mathematical_job_at_a_time": true,
+  "signs": {
+    "agent": "six-downset-1",
+    "role": "researcher",
+    "domain": "QQ[Q,T,B] and its fraction field",
+    "substitution": "q=Q+2,t=T+1,D=t+B+1; Q,T,B>=0",
+    "positive_functions": [
+      {
+        "name": "zeta_heavy",
+        "numerator_terms": 440,
+        "denominator_terms": 335,
+        "numerator_degree": 13,
+        "denominator_degree": 12,
+        "numerator_constant": "214560",
+        "denominator_constant": "56448",
+        "numerator_sha256": "30b01b395b4545e34db6a8843c0d02b2cd5fe38447c945c1ad3ebf9e8a2617c7",
+        "denominator_sha256": "3f8199a5e96d1c80d471556a774aac622dadc93eaea4a839c99759f8bc7351ce",
+        "positive_constants_and_nonnegative_coefficients": true
+      },
+      {
+        "name": "zeta_light",
+        "numerator_terms": 440,
+        "denominator_terms": 335,
+        "numerator_degree": 13,
+        "denominator_degree": 12,
+        "numerator_constant": "218016",
+        "denominator_constant": "56448",
+        "numerator_sha256": "0fe44f0f0a59728c333d4ad00c097c17b7b6a3f51186587f95e097289f835e6a",
+        "denominator_sha256": "3f8199a5e96d1c80d471556a774aac622dadc93eaea4a839c99759f8bc7351ce",
+        "positive_constants_and_nonnegative_coefficients": true
+      },
+      {
+        "name": "heavy_within_slack",
+        "numerator_terms": 560,
+        "denominator_terms": 560,
+        "numerator_degree": 14,
+        "denominator_degree": 14,
+        "numerator_constant": "1257408",
+        "denominator_constant": "2540160",
+        "numerator_sha256": "7d6f4c183493b520f72d178e9ad71d0b88510e061a942cc538f1ca07ac7794ec",
+        "denominator_sha256": "851f979f02b8b4e49ac793e561456a573098759953fa85ea41eafd4f052049b1",
+        "positive_constants_and_nonnegative_coefficients": true
+      },
+      {
+        "name": "light_within_slack",
+        "numerator_terms": 560,
+        "denominator_terms": 560,
+        "numerator_degree": 14,
+        "denominator_degree": 14,
+        "numerator_constant": "1323072",
+        "denominator_constant": "2540160",
+        "numerator_sha256": "8e188dc06068caa94fde8d0128114cd9c81606133104a5f713daa073594d4aa3",
+        "denominator_sha256": "851f979f02b8b4e49ac793e561456a573098759953fa85ea41eafd4f052049b1",
+        "positive_constants_and_nonnegative_coefficients": true
+      },
+      {
+        "name": "symmetric_minor_1",
+        "numerator_terms": 33,
+        "denominator_terms": 19,
+        "numerator_degree": 4,
+        "denominator_degree": 3,
+        "numerator_constant": "260",
+        "denominator_constant": "200",
+        "numerator_sha256": "f475971b1e7ae58c76ff1179f0159a4cb9bae048b17791383e55152b78015a36",
+        "denominator_sha256": "5c3147c4784bd86688a9bbfe89ca09367d11a261074d30fe0c6af97c668a36f8",
+        "positive_constants_and_nonnegative_coefficients": true
+      },
+      {
+        "name": "symmetric_minor_2",
+        "numerator_terms": 79,
+        "denominator_terms": 70,
+        "numerator_degree": 6,
+        "denominator_degree": 6,
+        "numerator_constant": "7030",
+        "denominator_constant": "9000",
+        "numerator_sha256": "552139b216ec1c59ec97b93d6648c0506a4691ee87a27be27637d61bffd66c71",
+        "denominator_sha256": "6c7bf218651197eade9a25870d2212132538e6939701eccd23fb221362d8e441",
+        "positive_constants_and_nonnegative_coefficients": true
+      },
+      {
+        "name": "symmetric_minor_3",
+        "numerator_terms": 103,
+        "denominator_terms": 70,
+        "numerator_degree": 7,
+        "denominator_degree": 6,
+        "numerator_constant": "22380",
+        "denominator_constant": "9000",
+        "numerator_sha256": "ad5582ced4fc43c2ec5cac1872493655fb6e98431a0ba0a67c7016a58cf45f9d",
+        "denominator_sha256": "6c7bf218651197eade9a25870d2212132538e6939701eccd23fb221362d8e441",
+        "positive_constants_and_nonnegative_coefficients": true
+      },
+      {
+        "name": "symmetric_minor_4",
+        "numerator_terms": 1308,
+        "denominator_terms": 1371,
+        "numerator_degree": 19,
+        "denominator_degree": 19,
+        "numerator_constant": "2955357360",
+        "denominator_constant": "13716864000",
+        "numerator_sha256": "fdaa9b89b7ffe924c8497858583a262ca2188b29348d9c1ba9a549ed55a38a3e",
+        "denominator_sha256": "f313409f93e644bdf53aef1a0f2c07413cdddab217bc170aacfa15fbb4084215",
+        "positive_constants_and_nonnegative_coefficients": true
+      }
+    ],
+    "positive_rational_functions": 8,
+    "determinant_permutations": [
+      1,
+      2,
+      6,
+      24
+    ],
+    "multiplication_controls": 18,
+    "changed_coefficient_rejected": true,
+    "negative_coefficient_rejected": true,
+    "CAS_imports": false,
+    "elapsed_seconds": 8.475712409010157,
+    "peak_RSS_KiB": 21416
+  },
+  "full": {
+    "agent": "six-downset-1",
+    "role": "researcher",
+    "status": "finite original-index checks; uniform coverage is PROOF.md plus verify_signs.py",
+    "records": [
+      {
+        "n": 3,
+        "q": 4,
+        "loads": [
+          3,
+          2
+        ],
+        "N": 18,
+        "changed_dimension": 12,
+        "untouched_high": 2,
+        "untouched_low": 1,
+        "full_frame_dimension": 15,
+        "changed_generator_count": 12,
+        "all_full_frame_action_scalars": 144,
+        "all_literal_actions_and_empty_frame_matched": true,
+        "seed": {
+          "N": 18,
+          "s": 7,
+          "lower_rank": 16,
+          "upper_rank": 17,
+          "matrix_sha256": "a7d9c8655897755bd29dcf8e43c56299eec5eaefffdba49a2b220086266bd228"
+        },
+        "raw_core_rank": 16,
+        "raw_empty_energy": "379/9",
+        "raw_full_trace": "1297/9",
+        "epsilon": "9/2612",
+        "mixed": {
+          "N": 18,
+          "s": 7,
+          "lower_rank": 17,
+          "upper_rank": 17,
+          "matrix_sha256": "2ed4d8318de35c2349f7db5db547f18fc6dd3d648558b77989e11b5eb15083fd"
+        },
+        "seed_unit_gap": true,
+        "mixed_half_unit_gap": true,
+        "intersecting_entry_corruption_rejected": true,
+        "empty_loop_corruption_rejected": true
+      },
+      {
+        "n": 2,
+        "q": 2,
+        "loads": [
+          8,
+          7
+        ],
+        "N": 34,
+        "changed_dimension": 31,
+        "untouched_high": 0,
+        "untouched_low": 0,
+        "full_frame_dimension": 31,
+        "changed_generator_count": 32,
+        "all_full_frame_action_scalars": 1024,
+        "all_literal_actions_and_empty_frame_matched": true,
+        "seed": {
+          "N": 34,
+          "s": 10,
+          "lower_rank": 32,
+          "upper_rank": 33,
+          "matrix_sha256": "d394d9016748c4b020051b668527192ecb28550a3753e0356d66caa3486b2b02"
+        },
+        "raw_core_rank": 32,
+        "raw_empty_energy": "11737/81",
+        "raw_full_trace": "35794/81",
+        "epsilon": "81/71750",
+        "mixed": {
+          "N": 34,
+          "s": 10,
+          "lower_rank": 33,
+          "upper_rank": 33,
+          "matrix_sha256": "df8fbf7313beb61fc4d3e6fcd3b6802126f98edde2cea964a75e12d2b3a69243"
+        },
+        "seed_unit_gap": true,
+        "mixed_half_unit_gap": true,
+        "intersecting_entry_corruption_rejected": true,
+        "empty_loop_corruption_rejected": true
+      },
+      {
+        "n": 3,
+        "q": 4,
+        "loads": [
+          8,
+          7
+        ],
+        "N": 38,
+        "changed_dimension": 32,
+        "untouched_high": 2,
+        "untouched_low": 1,
+        "full_frame_dimension": 35,
+        "changed_generator_count": 32,
+        "all_full_frame_action_scalars": 1024,
+        "all_literal_actions_and_empty_frame_matched": true,
+        "seed": {
+          "N": 38,
+          "s": 12,
+          "lower_rank": 36,
+          "upper_rank": 37,
+          "matrix_sha256": "265bbb152f87ebabf9eb3b8b07a07024047e6aa2f06696d38c66b372b433bf34"
+        },
+        "raw_core_rank": 36,
+        "raw_empty_energy": "24531/121",
+        "raw_full_trace": "73778/121",
+        "epsilon": "121/147798",
+        "mixed": {
+          "N": 38,
+          "s": 12,
+          "lower_rank": 37,
+          "upper_rank": 37,
+          "matrix_sha256": "969a54047afeeb445b7407a5bf3c3537a7d9eeb0d3cc15f89f55392e5230f483"
+        },
+        "seed_unit_gap": true,
+        "mixed_half_unit_gap": true,
+        "intersecting_entry_corruption_rejected": true,
+        "empty_loop_corruption_rejected": true
+      },
+      {
+        "n": 4,
+        "q": 8,
+        "loads": [
+          5,
+          1
+        ],
+        "N": 28,
+        "changed_dimension": 14,
+        "untouched_high": 6,
+        "untouched_low": 5,
+        "full_frame_dimension": 25,
+        "changed_generator_count": 14,
+        "all_full_frame_action_scalars": 196,
+        "all_literal_actions_and_empty_frame_matched": true,
+        "seed": {
+          "N": 28,
+          "s": 13,
+          "lower_rank": 26,
+          "upper_rank": 27,
+          "matrix_sha256": "6d73f5110276f203a951c1ba5e2430e99ec424af7ed2883624d943d3a741e44d"
+        },
+        "raw_core_rank": 26,
+        "raw_empty_energy": "4183/36",
+        "raw_full_trace": "15847/36",
+        "epsilon": "18/15883",
+        "mixed": {
+          "N": 28,
+          "s": 13,
+          "lower_rank": 27,
+          "upper_rank": 27,
+          "matrix_sha256": "812a086f49db2ffa9d08daa048455c140e1a5f76e4c747e5c3100419624df783"
+        },
+        "seed_unit_gap": true,
+        "mixed_half_unit_gap": true,
+        "intersecting_entry_corruption_rejected": true,
+        "empty_loop_corruption_rejected": true
+      },
+      {
+        "n": 6,
+        "q": 32,
+        "loads": [
+          2,
+          1
+        ],
+        "N": 70,
+        "changed_dimension": 8,
+        "untouched_high": 30,
+        "untouched_low": 29,
+        "full_frame_dimension": 67,
+        "changed_generator_count": 8,
+        "all_full_frame_action_scalars": 64,
+        "all_literal_actions_and_empty_frame_matched": true,
+        "seed": {
+          "N": 70,
+          "s": 34,
+          "lower_rank": 68,
+          "upper_rank": 69,
+          "matrix_sha256": "1b90a74c116acbdffe95df4d3aba2abde087bd0b16f1fa1e11e259816fba4d74"
+        },
+        "raw_core_rank": 68,
+        "raw_empty_energy": "236641/1089",
+        "raw_full_trace": "2716294/1089",
+        "epsilon": "1089/5434766",
+        "mixed": {
+          "N": 70,
+          "s": 34,
+          "lower_rank": 69,
+          "upper_rank": 69,
+          "matrix_sha256": "62b37b18ed562a445e34e0173b3a0eba52a344c6d473dd9097084fb77ef68937"
+        },
+        "seed_unit_gap": true,
+        "mixed_half_unit_gap": true,
+        "intersecting_entry_corruption_rejected": true,
+        "empty_loop_corruption_rejected": true
+      }
+    ],
+    "elapsed_seconds": 41.89947373198811,
+    "peak_RSS_KiB": 23236
+  },
+  "normal_optimized_entrywise_equal": true,
+  "optimized_replay": {
+    "signs_seconds": 9.149496811965946,
+    "signs_peak_RSS_KiB": 23872,
+    "full_seconds": 36.65386626898544,
+    "full_peak_RSS_KiB": 24548
+  }
+}
