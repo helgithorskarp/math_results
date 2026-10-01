@@ -1,0 +1,97 @@
+{
+  "agent": "six-reviewer-4",
+  "completed": true,
+  "environment": {
+    "CPU_intensive_jobs_at_once": 1,
+    "Python": "3.11.2",
+    "memory_cap_unchanged": "2GiB",
+    "native_threads": 1,
+    "standard_library": true
+  },
+  "final_runs": [
+    {
+      "exit_code": 0,
+      "maxrss_kib": 18788,
+      "name": "final-normal",
+      "seconds": 8.582814199035056,
+      "stdout_bytes": 3807,
+      "stdout_sha256": "67760372077bdf5ac08e5cabd6a0a2fc5dab43401d4d9ff33f827624267dbb3d"
+    },
+    {
+      "exit_code": 0,
+      "maxrss_kib": 22004,
+      "name": "final-optimized",
+      "seconds": 9.794064023997635,
+      "stdout_bytes": 3807,
+      "stdout_sha256": "67760372077bdf5ac08e5cabd6a0a2fc5dab43401d4d9ff33f827624267dbb3d"
+    },
+    {
+      "exit_code": 0,
+      "maxrss_kib": 22004,
+      "name": "passive-comparison",
+      "seconds": 9.493933540012222,
+      "stdout_bytes": 3938,
+      "stdout_sha256": "5e06d704d2fc2725fb8f305b1d1f26cff428f7165b2c69e79718084ebad44aa0"
+    },
+    {
+      "exit_code": 0,
+      "maxrss_kib": 22004,
+      "name": "bridge",
+      "seconds": 0.22094810695853084,
+      "stdout_bytes": 493,
+      "stdout_sha256": "bd15716cc7b3e63e376535be701e3666db85359781ac076e580393ce41634caa"
+    },
+    {
+      "exit_code": 1,
+      "file_sha256": "96ef50a9531a36f2caaf9cfd75d7ff75ce7ba87379993eec320d32b29ae4501d",
+      "name": "forged-positive-vector-pool",
+      "reason": "direct negative form absent",
+      "rejected": true,
+      "seconds": 1.4873489000019617
+    }
+  ],
+  "formalized": false,
+  "large_artifacts_required": false,
+  "native_author_replays": [
+    {
+      "arguments": [],
+      "exit_code": 0,
+      "maxrss_kib": 21028,
+      "program": "generate.py",
+      "seconds": 4.453572158003226,
+      "stdout_bytes": 2087,
+      "stdout_sha256": "ac82ce96c2a3ad23c38288a58f6768d0e7b04e93cb009faa02f4947adda3fe1d"
+    },
+    {
+      "arguments": [],
+      "exit_code": 0,
+      "maxrss_kib": 21028,
+      "program": "verify.py",
+      "seconds": 7.934789524995722,
+      "stdout_bytes": 2087,
+      "stdout_sha256": "ac82ce96c2a3ad23c38288a58f6768d0e7b04e93cb009faa02f4947adda3fe1d"
+    },
+    {
+      "arguments": [
+        "--compare"
+      ],
+      "exit_code": 0,
+      "maxrss_kib": 21060,
+      "program": "verify.py",
+      "seconds": 12.35582204500679,
+      "stdout_bytes": 2087,
+      "stdout_sha256": "ac82ce96c2a3ad23c38288a58f6768d0e7b04e93cb009faa02f4947adda3fe1d"
+    },
+    {
+      "arguments": [],
+      "exit_code": 0,
+      "maxrss_kib": 21060,
+      "program": "checks.py",
+      "seconds": 15.133778847986832,
+      "stdout_bytes": 312,
+      "stdout_sha256": "402f243453aef439137267d922caeaa492c802f11fb8cd1421149a7f4ba4eb09"
+    }
+  ],
+  "role": "independent mathematical reviewer",
+  "solver_used": false
+}
