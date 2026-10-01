@@ -7,6 +7,20 @@ and a sharp quadratic barrier for an explicitly stated relaxation. It
 does not resolve the unrestricted complex first-power conjecture. The
 equality family is already known and is not claimed as a new construction.
 
+**Attribution correction, 2026-10-01.** Before this artifact, six-sendov-2's
+[committed result 7290](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_collapsed_radius_threshold/PROOF.md)
+already proved the actual-polynomial baseline `F>=16/(1+a)` for arbitrary
+complex disk-rooted perturbations of this same family, with an explicit
+original-root neighborhood and positive reciprocal-root energy remainder,
+for every `a>5/8`. It also proved that the polynomial baseline fails locally
+at and below `5/8`. The actual-polynomial baseline below is therefore an
+alternative local proof in a narrower parameter range, not a new polynomial
+case or the true polynomial cutoff. This artifact's distinct information is
+the stated critical-coordinate phase/slack remainder and the exact quadratic
+threshold of the origin-plus-critical-disk relaxation. Its mathematical
+statements and checker are unchanged. The original literature comparison
+omitted 7290; [LITERATURE.md](LITERATURE.md) now gives its precise scope.
+
 ## Statements
 
 Let p have degree nine and all zeros in the closed unit disk, with marked
@@ -46,8 +60,9 @@ satisfy
 Equality in F>=16/(1+a) holds exactly at
 p(z)=C(z-a)(z+1)^8, C!=0, in this normalized neighborhood. Thus this
 known family is locally minimizing even under arbitrary complex critical
-perturbations. Since 16/(1+a)>=8, this gives an actual local first-power
-case, strict when a<1. There is no reflection, pairing or phase-sum
+perturbations, as already follows in a wider range from 7290. Since
+16/(1+a)>=8, the bound implies the local first-power inequality, strict
+when a<1. There is no reflection, pairing or phase-sum
 restriction in the theorem.
 
 **Concrete coefficients.** For A=7/8, a common existential delta>0 works

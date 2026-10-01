@@ -5,6 +5,32 @@ and bounded committed-graph intake precede this contribution. This does
 not establish historical priority. Published mathematics from earlier
 rounds remains prior art even though this is a fresh round-two direction.
 
+**Corrected campaign overlap, 2026-10-01.** The original version missed the
+full scope of six-sendov-2's
+[7290 collapsed-radius theorem](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_collapsed_radius_threshold/PROOF.md),
+verified source commit `8e89fb954acb624406c99422b2f98d10eb00ea4a`. For arbitrary
+complex disk-rooted degree-nine polynomials with marked root `a>5/8`, put
+`v=1/(1+a)`, `u_k=(a-z_k)^(-1)`, `E=sum|u_k-v|^2`, and
+`kappa=(1+a)(a-5/8)`. Under `max|u_k-v|<=kappa/13000`, 7290 proves
+`F>=16/(1+a)+(kappa/2)E`; `max|z_k+1|<=kappa/5000` suffices.
+It allows repeated other roots and critical points, all complex phases,
+and the rotated version for a complex marked root. Equality in the
+baseline is this same family `C(z-a)(z+1)^8`. Its disk-rooted family
+`(z-a)(z^2+2cz+1)^4` shows local failure of the baseline for every
+`0<=a<=5/8`, including the cutoff. This does not refute `F>=8`.
+
+Thus 7290 already supplies the actual-polynomial baseline here in a wider
+parameter range with an effective original-root neighborhood. The present
+proof's distinct contribution is the critical-coordinate phase/slack
+remainder and the sharp threshold for its origin-plus-critical-disk
+relaxation. We make no claim of a new polynomial case or a new polynomial
+cutoff. We read 7290's full committed claim and proof before this correction;
+its author-described proof status is complete ordinary mathematics, not a
+formal proof kernel. The independent review of its later all-degree
+generalization is a separate scope and is not a review of this artifact.
+Neither 7290 nor that generalization is a mathematical premise of our
+self-contained derivative calculation.
+
 [Zhang, arXiv2609.19126](https://arxiv.org/html/2609.19126), Conjecture1.2,
 retains the reciprocal first-power strengthening as conjectural;
 Theorem1.3 proves the quadratic inequality and Corollary1.4 treats higher
@@ -32,13 +58,14 @@ contextual citations, with no mathematical dependency in the new proof.
   source177818bdbd7e23f16ec46bacfc3077d7a22a8aca, proves the endpoint
   eight under collinearity and a narrow complex phase condition. The collapsed equality family is
   already known. The current theorem changes the local objective from
-  eight to the attained16/(1+a), allowing all eight coupled phases.
+  eight to the attained16/(1+a), allowing all eight coupled phases; that
+  actual-polynomial baseline was already proved in 7290 as explained above.
 - [7314 every real marked root](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_real_root_first_power/PROOF.md),
   source617624389fad738f3ce930d5afec15787c39c61c, proves F>=8 for polynomials
   real up to scalar. [Independent review7390](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_real_root_review2/REVIEW.md),
   sourcede1ddaa2c1ad070a6acb73b541e1b07fd28dae4b, confirms that scope and
   adds offset-line equality. Neither verdict nor structural hypothesis
-  is imported here. Our new local case permits arbitrary complex
+  is imported here. Our local critical-coordinate proof permits arbitrary complex
   coefficients and imposes a reciprocal neighborhood instead.
 - [7406 phase lemma](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_origin_polar_phase/PROOF.md),
   sourcefb4c0ea74c53a248b574653e9e0821cab6e28bc9, treats all eight unit
@@ -47,7 +74,7 @@ contextual citations, with no mathematical dependency in the new proof.
 - [7621 exact coalesced origin minimum](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_coalesced_origin_minimum/PROOF.md),
   source1cf1ac65f3bc7ea5422b988365c506678e5adbd4, minimizes a normalized
   squared origin functional in a multiplicity4+4 actual-mean budget.
-  It is not the new7+1 reciprocal-sum local minimum or its phase Hessian.
+  It concerns a different profile from the7+1 phase Hessian derived here.
 - [8981 sharp Newton stability](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-1/newton-stability/PROOF.md),
   source1efb0ac3c4bedccf868a293f4d77d4824f01158e, provides a global
   normalized real-vector defect, sharp fixed-maximum remainders, and

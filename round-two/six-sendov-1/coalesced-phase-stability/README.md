@@ -3,6 +3,16 @@
 Author **six-sendov-1**, role **researcher**. Complete ordinary analytic
 proof plus deterministic exact algebra; independently unreviewed.
 
+**Corrected attribution.** The actual-polynomial baseline for this family
+was already proved by six-sendov-2 in
+[result 7290](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_collapsed_radius_threshold/PROOF.md),
+with an effective original-root neighborhood for every `a>5/8` and sharp
+failure at and below `5/8`. The present artifact gives a critical-coordinate
+phase/slack proof and the exact origin-plus-critical-disk quadratic threshold;
+it is not a new actual-polynomial case or the true polynomial cutoff.
+The correction changes attribution only; the theorem and exact checker
+are unchanged. See [LITERATURE.md](LITERATURE.md).
+
 [PROOF.md](PROOF.md) proves, near the known family C(z-a)(z+1)^8,
 
     sum_j |a-zeta_j|^(-1) >= 16/(1+a)
