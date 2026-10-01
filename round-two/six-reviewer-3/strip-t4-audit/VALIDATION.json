@@ -1,0 +1,157 @@
+{
+  "complete_evidence_sha256": "56a7da073389f5d9ad99683ac09dbbe87f51e0e172d9d5ca8d32b6bba89c6359",
+  "complete_frozen_evidence_agreement": true,
+  "complete_normal_optimized_agreement": true,
+  "fixed_per_child_guard_seconds": 60,
+  "initial_fixture_generation": {
+    "complete_evidence_sha256": "56a7da073389f5d9ad99683ac09dbbe87f51e0e172d9d5ca8d32b6bba89c6359",
+    "complete_frozen_evidence_agreement": false,
+    "complete_normal_optimized_agreement": true,
+    "fixed_per_child_guard_seconds": 60,
+    "frozen_fixture_created_from_matching_runs": true,
+    "jobs": [
+      {
+        "child_peak_RSS_upper_KiB": 25296,
+        "elapsed_seconds": 9.220751204004046,
+        "optimized": false,
+        "returncode": 0
+      },
+      {
+        "child_peak_RSS_upper_KiB": 29576,
+        "elapsed_seconds": 9.681200458027888,
+        "optimized": true,
+        "returncode": 0
+      }
+    ],
+    "native_threads": 1,
+    "parallel_mathematical_jobs": 1,
+    "python": "3.11.2",
+    "status": "VERIFIED"
+  },
+  "jobs": [
+    {
+      "child_peak_RSS_upper_KiB": 25304,
+      "elapsed_seconds": 8.82419757702155,
+      "optimized": false,
+      "returncode": 0
+    },
+    {
+      "child_peak_RSS_upper_KiB": 29544,
+      "elapsed_seconds": 9.339870232972316,
+      "optimized": true,
+      "returncode": 0
+    }
+  ],
+  "native_threads": 1,
+  "parallel_mathematical_jobs": 1,
+  "primary_control_crosscheck": {
+    "bytes": 27521,
+    "fresh_pdf_hash_verification": "not performed; original PDF hash is provenance only",
+    "literal_coordinate_match": true,
+    "one_based_row": 316,
+    "raw_sha256": "2e2975a9aa8130aabb44155cb8214b9df34d83189a8421855d49c131b8cc7f1f",
+    "reported_primary_label": "Hc=Hh=4",
+    "translation_to_supplied_control": [
+      7,
+      -3
+    ],
+    "url": "https://cs.uwaterloo.ca/~csk/heesch/hex/15hex_3up.txt",
+    "zero_based_row": 315
+  },
+  "public_input_fetch": {
+    "all_frozen_byte_hashes_matched": true,
+    "bytes": 89109,
+    "commit": "dc503e7c728a11e64d7e3cd715134718fa3373cd",
+    "files": 4
+  },
+  "python": "3.11.2",
+  "separate_original_reader_baseline": {
+    "complete_original_mathematical_record_matches": true,
+    "elapsed_seconds": 22.54988027800573,
+    "original_result": {
+      "agent": "six-heesch-2",
+      "claim": "Hc(T4)=Hh(T4)=3, with all Euclidean motions and reflections.",
+      "complete": true,
+      "domain_sizes": [
+        568,
+        190,
+        43,
+        29
+      ],
+      "false_malformed_controls": 4,
+      "fixed_point_pair_witnesses": 29,
+      "independent_inventory_nodes": 152,
+      "known_T3_four_coronas": [
+        {
+          "copies": 1,
+          "cumulative_cells": 15,
+          "hole_cells": 0,
+          "level": 0
+        },
+        {
+          "copies": 6,
+          "cumulative_cells": 105,
+          "hole_cells": 0,
+          "level": 1
+        },
+        {
+          "copies": 13,
+          "cumulative_cells": 300,
+          "hole_cells": 0,
+          "level": 2
+        },
+        {
+          "copies": 21,
+          "cumulative_cells": 615,
+          "hole_cells": 0,
+          "level": 3
+        },
+        {
+          "copies": 35,
+          "cumulative_cells": 1140,
+          "hole_cells": 0,
+          "level": 4
+        }
+      ],
+      "lazy_DAG_nodes": 387,
+      "lazy_negative_certificates": 178,
+      "lifted_rejections": 17,
+      "lower_coronas": [
+        {
+          "copies": 1,
+          "cumulative_cells": 19,
+          "hole_cells": 0,
+          "level": 0
+        },
+        {
+          "copies": 5,
+          "cumulative_cells": 114,
+          "hole_cells": 0,
+          "level": 1
+        },
+        {
+          "copies": 12,
+          "cumulative_cells": 342,
+          "hole_cells": 0,
+          "level": 2
+        },
+        {
+          "copies": 21,
+          "cumulative_cells": 741,
+          "hole_cells": 0,
+          "level": 3
+        }
+      ],
+      "max_rss_kib": 49088,
+      "regenerated_first_exclusions": 243,
+      "regenerated_pair_exclusions": 50,
+      "role": "researcher",
+      "root_stars": 17,
+      "search_nodes": 33925,
+      "seconds": 22.477,
+      "upper_sha256": "d9b2ecdfb35cd3d5eadcb57fd5b53695dffbc3e6c3c38876aa1e75ccca1ec3b8"
+    },
+    "source_requires_assertions": "normal only; source explicitly rejects -O"
+  },
+  "status": "VERIFIED"
+}
