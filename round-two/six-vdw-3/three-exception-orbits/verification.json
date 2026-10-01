@@ -1,0 +1,163 @@
+{
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "status": "AUTHOR_CHECKED_COMPLETE_THREE_EXCEPTION_EXCLUSION",
+  "independent_peer_review_claimed": false,
+  "formalization_claimed": false,
+  "frozen_expected_sha256": "668a810a00663d30cacfd2ed8083c3b85101be124ea995d0423c337c79d9da3e",
+  "frozen_expected_created_after_original_checks_before_public_validation": true,
+  "original_discovery": {
+    "fresh_native_proposals": 69,
+    "all_cases_checked_normal_and_optimized": true,
+    "native_seconds_sum": 238.3223751495825,
+    "native_conflicts_maximum": 31483,
+    "checked_additions_per_python_mode": 1197507,
+    "propagation_hints_per_python_mode": 15704352,
+    "case_total_timing_and_peak_missing_for_first_pilot": "same-2",
+    "private_corpus_omitted_from_git": true
+  },
+  "fresh_selected_native_pipeline": {
+    "agent": "six-vdw-3",
+    "role": "researcher",
+    "status": "VERIFIED_SELECTED_PIPELINE_SMOKE_ONLY",
+    "full_family_excluded": false,
+    "expected_sha256": "668a810a00663d30cacfd2ed8083c3b85101be124ea995d0423c337c79d9da3e",
+    "frozen_expected_existed_before_validation": true,
+    "one_conflict_UNKNOWN_control": true,
+    "changed_checker_pin_rejected": true,
+    "seconds": 17.40201469603926,
+    "production_damaged_proofs_rejected_normal_and_optimized": 4,
+    "parent_peak_KiB": 26704,
+    "child_peak_KiB": 77968,
+    "runtime": {
+      "python": "3.11.2",
+      "python_sat": "1.8.dev24",
+      "six": "1.17.0"
+    },
+    "cases_checked": 1,
+    "checked_additions_per_python_mode": 10943,
+    "propagation_hints_per_python_mode": 135693,
+    "case": "same-2",
+    "native_proposal": {
+      "status": "UNSAT_PENDING_CHECK",
+      "conflict_budget": 100000,
+      "stats": {
+        "restarts": 224,
+        "conflicts": 11688,
+        "decisions": 12599,
+        "propagations": 112323
+      },
+      "seconds": 1.2986527280299924,
+      "mathematical_exclusion": false
+    },
+    "fresh_native_discovery": true,
+    "frozen_model_DRAT_and_LRAT_bytes_matched": true,
+    "establishes_full_family_exclusion_by_itself": false
+  },
+  "full_standalone_restart": {
+    "agent": "six-vdw-3",
+    "role": "researcher",
+    "status": "VERIFIED_ALL_THREE_EXCEPTION_CUTS",
+    "full_family_excluded": true,
+    "expected_sha256": "668a810a00663d30cacfd2ed8083c3b85101be124ea995d0423c337c79d9da3e",
+    "frozen_expected_existed_before_validation": true,
+    "one_conflict_UNKNOWN_control": true,
+    "changed_checker_pin_rejected": true,
+    "seconds": 742.8498202569899,
+    "production_damaged_proofs_rejected_normal_and_optimized": 8,
+    "parent_peak_KiB": 32088,
+    "child_peak_KiB": 77228,
+    "runtime": {
+      "python": "3.11.2",
+      "python_sat": "1.8.dev24",
+      "six": "1.17.0"
+    },
+    "cases_checked": 69,
+    "checked_additions_per_python_mode": 1197507,
+    "propagation_hints_per_python_mode": 15704352,
+    "fresh_native_discovery": false,
+    "cached_DRAT_and_LRAT_reused_only_as_untrusted_proposals": true,
+    "all_models_regenerated_and_literal_audited": true,
+    "complete_raw_orbit_audit_repeated": true,
+    "all_small_controls_repeated": true,
+    "all_69_proofs_replayed_normal_and_optimized": true
+  },
+  "coverage": {
+    "three_exception_raw_skeletons": 4244424,
+    "free_normalized_bits_per_case": 102,
+    "orientations_per_raw_skeleton": 10141204801825835211973625643008,
+    "raw_three_exception_colored_words_excluded": 43043573049784818793745944046198587392,
+    "zero_to_three_raw_skeletons": 4308081,
+    "zero_to_three_colored_words_excluded_using_prior_cuts": 43689131723854645985834549133755547648,
+    "small_orbit_raw_skeletons": 11664,
+    "small_normalized_orientation_inputs": 44352
+  },
+  "production": {
+    "representatives": 69,
+    "same_label_classes": 18,
+    "mixed_label_classes": 51,
+    "variables_each": 103,
+    "free_bits_each_after_global_color_exchange": 102,
+    "clause_count_range": [
+      96265,
+      96477
+    ],
+    "actual_cyclic_start_step_pairs_per_model": 381306,
+    "orientation_invariance_imposed": false,
+    "counter_variables": 0,
+    "weight_cap": null
+  },
+  "controls_in_both_python_modes": {
+    "small_primes": [
+      7,
+      11,
+      13
+    ],
+    "raw_orbit_skeletons": 11664,
+    "normalized_orientation_inputs": 44352,
+    "valid_orientation_fixtures": 30,
+    "damaged_orbit_inputs_rejected": 6,
+    "damaged_models_rejected": 4,
+    "generic_damaged_proofs_rejected": 8,
+    "source_pin_changes_rejected": true,
+    "one_conflict_UNKNOWN_remains_incomplete": true
+  },
+  "resource_limits": {
+    "python_sat": "1.8.dev24",
+    "solver": "CaDiCaL195",
+    "conflict_budget": 100000,
+    "external_seconds": 35,
+    "converter_internal_seconds": 25,
+    "converter_external_seconds": 30,
+    "replay_external_seconds": 50,
+    "threads": 1,
+    "max_cpu_intensive_jobs": 1,
+    "scope_memory_GiB": 2
+  },
+  "mathematical_inputs_not_recomputed": [
+    {
+      "height": 7294,
+      "ref": "bafkreifqxeobdid7w5k2fkv4zg67yzcx534zi6c33uenbwzoqhq2jgpbfm",
+      "role": "Credited complete six-state normal form."
+    },
+    {
+      "height": 8985,
+      "ref": "bafkreigpyvdzpke2nyx5dwabz6twmxpx4kpcrrfudup75wvpy7lmtycalm",
+      "role": "Constant skeleton exclusion, needed only for combined largest-class bound."
+    },
+    {
+      "height": 8644,
+      "ref": "bafkreidmpptm7jtlfdvngx7pm7ybx57xgfalcxrw76g2oqezzzydrvyfhm",
+      "role": "One-exception exclusion, needed only for combined largest-class bound."
+    },
+    {
+      "height": 7460,
+      "ref": "bafkreie2uhz4gy5ioiotj6tvskquhra6yh3pzgcuwncqqe47m7o7x5uhnm",
+      "role": "Two-exception exclusion, needed only for combined largest-class bound; finite pair density counts credited and rechecked locally."
+    }
+  ],
+  "trust_boundary": "Written normal-form, CRT and affine-orbit bridges are unformalized. Complete model/orbit audits and strict exact positive-RUP checking are the same author's separate algorithms; solver/converter verdicts are not premises. Prior zero/one/two cuts are explicit inputs only to the combined bound.",
+  "new_W_bound": false,
+  "whole_period_618_excluded": false,
+  "target_3704_witness_found": false
+}
