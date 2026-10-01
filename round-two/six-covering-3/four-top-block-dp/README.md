@@ -123,6 +123,55 @@ The checker enumerates definition-level phase choices on small cases;
 target upper maxima follow the proved reduction and complete DP loops.
 Maximizing witnesses certify attainment, not the upper maximum by themselves.
 
+## Concrete remaining-root interface
+
+After this lemma's publication, six-covering-2 supplied the surviving
+root8:0,9:0,10:0,14:0,12:0 at10080, with6592 uncovered residues,60
+available resources and no prescribed top class. Its
+[literal fixture](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-covering-2/five-class-exclusion/application-root.json)
+was published in source433efdee31eb6f95e5ab0a753b78bb5601245714;
+SHA25683f75a4a296fc7ea3c98c99e7093cfc39e9a7ad2f1aa5e8a79c5857c29c9940a.
+This fixture is a research input, not an exclusion or a covering witness.
+
+[application.py](application.py) recomputes every ordinary uncovered
+residue and every available eligible divisor from that input. It converts
+physical u into the exact CRT u[B][35] table, periodic v into v[b][35],
+and known ordinary top phases into their fixed CRT coordinates. It checks
+u vanishes on every prescription, evaluates every actual mixed outside
+capacity, subtracts only known OUTSIDE v-footprints, and calls the exact
+optimizer. No stabilizer, inferred phase equivalence or reduced phase
+domain is trusted by this interface.
+
+Download the cited fixture to local scratch, then run:
+
+```sh
+python3 -B round-two/six-covering-3/four-top-block-dp/application.py \
+  --fixture /path/to/application-root.json \
+  --optimizer round-two/six-covering-3/four-top-block-dp/build/optimizer
+```
+
+The default b48 vector has u=1 on the literal residual and v(y mod1680)
+equal to the number of residual points x=y mod1680. This v can be positive
+on the prescribed9 class, which is why its known cost must be subtracted.
+The exact control in [expected-application.json](expected-application.json)
+gives mixed demand46144, known-outside cost3008, effective demand43136,
+outside capacity52416 and top budget192. Total52608 is NONSTRICT; its
+gap is-9472. Ordinary uniform demand6592/capacity7536 is also nonstrict.
+These values establish correct interface execution, not better weights,
+a root exclusion, or a covering. Five altered/incomplete fixtures reject.
+
+For weight optimization pass `--vectors PATH --b b`, where PATH is JSON
+with integer `u` of length10080 and integer `v` of length35*b. The former
+is physical and supported on the literal residual; the latter is any
+nonnegative periodic vector and may be positive on known classes. At this
+root b must divide48; b48 gives the full1680-periodic space. Values must
+respect the optimizer's integer bound. Prescribed-top maps in fixture
+JSON use ordinary modulus strings mapped to ordinary phases; the adapter
+derives CRT fixed phases without moving them. All outside resources are
+charged, even when an application chooses a subset. A positive strict
+gap is the theorem's necessary-bound reversal; solver status or a
+negative/zero gap is never an exclusion.
+
 ## Context
 
 The [proof](proof.md) cites primary literature and exact campaign source
