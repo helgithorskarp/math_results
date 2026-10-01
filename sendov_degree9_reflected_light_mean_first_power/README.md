@@ -52,3 +52,11 @@ minimum and the new exploratory Schur sign are not premises. Source
 publication or graph commitment alone does not constitute acceptance.
 Compact source and hashes regenerate the tensors; private diagnostic
 probes, checkpoints and ledgers are excluded.
+
+Illustrative correction2026-10-01: the original rotated-antipodal
+example had zero unit sum and no short center. The examples now use
+a non-antipodal pair, verify the original nonzero center, and rebuild
+their compact records; the origin proof and sector theorem are
+unchanged. The subsequent
+[square-root center theorem](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_square_root_center_first_power/PROOF.md)
+also enlarges the linear center tube proved here.

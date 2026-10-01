@@ -182,13 +182,21 @@ def one_example(k):
     half_angle=k
     a=F(1,2);delta=F(1,100);eta=F(1,50)
     H=(a,delta);alpha=unit(k)
-    L=ga((a,F(0)),gm((F(0),eta),gc(alpha)))
-    LL=ga((a,F(0)),gm((F(0),-eta),gc(alpha)))
+    v=gm(alpha,(F(3,5),F(4,5)))
+    w=gm(alpha,(F(3,5),F(-4,5)))
+    L=ga((a,F(0)),gs(gc(v),-eta))
+    LL=ga((a,F(0)),gs(gc(w),-eta))
     points=[H]*6+[L,LL];p,dp=anchored(points,a)
     require(value(p,(a,F(0)))==(0,0) and [gs(p[j+1],j+1) for j in range(9)]==dp,'Example marked root/derivative fails')
     require(any(q[1] for q in p) and gn(ga((a,0),gs(H,-1)))<gn(ga((a,0),gs(L,-1))), 'Nonreal/example distance predicates fail')
     require(gn(ga(L,(F(-1,2),F(0))))==gn(ga(LL,(F(-1,2),F(0))))==eta*eta,'Example equal light distances fail')
     chord2=gn(ga(alpha,(F(-1),F(0))))
+    actual_v=gs(gi(ga((a,0),gs(L,-1))),eta)
+    actual_w=gs(gi(ga((a,0),gs(LL,-1))),eta)
+    require(actual_v==v and actual_w==w and gn(v)==gn(w)==1,
+            'Example original unit reciprocals fail')
+    require(ga(actual_v,actual_w)==gs(alpha,F(6,5)) and gn(ga(actual_v,actual_w))>0,
+            'Example actual nonzero short center fails')
     require(chord2<=((1-a)/80000)**2 and (not k or LL!=gc(L)),'Example nonreflected center sector fails')
     centered_points=[(F(0),delta)]*6+[ga(L,(F(-1,2),F(0))),ga(LL,(F(-1,2),F(0)))]
     q,qdp=anchored(centered_points,F(0))
@@ -225,12 +233,17 @@ def one_example(k):
     return {'a':str(a),'H':list(map(str,H)),'L1':list(map(str,L)),'L2':list(map(str,LL)),
             'heavy_unit_real':'0','old_cone_required_real':str(a*(4+3*a)/(3+4*a)),
             'center_halfangle':str(half_angle),'center_chord_squared':str(chord2),
+            'light_opening_cosine':'3/5','actual_unit_sum_norm_squared':'36/25',
             'centered_rouche_radius':str(radius),'centered_rouche_tail':str(tail),
             'centered_rouche_leading_bound':str(radius**9),
             'original_coefficients_sha256':digest([[str(x),str(y)] for x,y in p]),
             'communication_scalings':len(ratios),'communication_sha256':digest(ratios)}
 
 def examples_and_communication():
+    # The original antipodal illustration had no short center; reject it.
+    alpha=unit(F(1,1000000));v=gm(alpha,(F(0),F(1)));w=gs(v,-1)
+    require(gn(ga(v,w))==0 and ga(v,w)!=gs(alpha,F(6,5)),
+            'Antipodal invalid-center control unexpectedly passes')
     return [one_example(k) for k in [F(0),F(1,1000000)]]
 
 def compute():

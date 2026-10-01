@@ -305,7 +305,7 @@ Then \(|p'(0)|=\prod|z_j|\le1\) and
 
 ## 6. Examples beyond the preceding heavy cone
 
-Set a=1/2, H=a+i/100, L1=a+i/50, L2=a-i/50 and define the monic
+Set a=1/2, H=a+i/100, L1=a-(3-4i)/250, L2=a-(3+4i)/250 and define the monic
 polynomial by p(a)=0 and p'=9(z-H)^6(z-L1)(z-L2). The heavy unit
 reciprocal is i, whose real part0 fails the preceding cone's required
 11/20. These light points reflect and the heavy distance is smaller.
@@ -315,7 +315,7 @@ the sum of the lower coefficient bounds is exactly
 
 \[
  \sum_{j<9}(|\Re P_j|+|\Im P_j|)(1/4)^j
- =\frac{1252846720983}{1120000000000000000}
+ =\frac{1856581828293}{1120000000000000000}
  <(1/4)^9=1/262144.
 \]
 
@@ -326,8 +326,10 @@ critical multiset and the monic polynomial is nonreal.
 For a nonreflected example, rotate both light reciprocals by
 \(\alpha=(1-k^2+2ik)/(1+k^2)\), k=1/1000000, keeping the heavy
 point and a fixed. Thus
-\(L_\pm=a\pm(i/50)\overline\alpha\).
-The equal light distances persist, their short center is alpha and
+\(v=\alpha(3+4i)/5\), \(w=\alpha(3-4i)/5\), and
+\(L_1=a-\overline v/50\), \(L_2=a-\overline w/50\).
+The equal light distances persist. Their actual unit reciprocal sum
+is \((6/5)\alpha\ne0\), so their short center is alpha and
 \(|\alpha-1|^2=4/1000000000001\le(1/160000)^2\).
 The two lights are not mutual conjugates. The regenerated exact
 centered coefficient bound still lies below1/262144, so all roots
@@ -335,6 +337,17 @@ remain in the disk. This example also fails the preceding heavy cone.
 The compact fixture records both polynomial hashes and exact bounds.
 These examples illustrate the enlarged hypotheses; no optimized
 first-power excess is claimed for them.
+
+**Illustrative correction, 2026-10-01.** The original Section6 rotated
+an antipodal light pair and called alpha its short center. That pair's
+unit reciprocal sum was zero; its nonreflected example did not meet
+the short-center hypothesis. The preceding reflected-origin lemma,
+sign tensors and sector theorems were unaffected. The examples and
+their full compact records above now use the non-antipodal pair and
+verify the center from the original critical points. An explicit
+antipodal invalid-center control is checked. The larger square-root
+tube and this correction are documented in the
+[subsequent proof](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_square_root_center_first_power/PROOF.md).
 
 ## 7. Evidence and remaining frontier
 

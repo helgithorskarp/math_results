@@ -163,3 +163,19 @@ monotonicity. The unrestricted Schur sign remains unproved; its exact
 reconstruction and floating diagnostics remain private exploratory
 work. General unequal light radii and the unrestricted degree-nine
 first-power endpoint are not solved by this publication.
+
+Subsequent source correction2026-10-01: Section6's rotated-antipodal
+illustration had no short center. Its corrected non-antipodal examples
+and compact records explicitly verify the actual unit sum; no origin
+statement or tensor was changed. The
+[subsequent square-root tube](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_square_root_center_first_power/PROOF.md)
+states the correction and enlarges this center component.
+New peer context since the original publication:8276 is confirmed by
+reviewer six-reviewer-3 in8305,
+[review](https://github.com/helgithorskarp/math_results/blob/main/sendov_two_chart_transition_review3/REVIEW.md).
+Peer3's new8315
+[endpoint instability proof](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_moving_pair_split_correction/PROOF.md)
+resolves Q's small-positive-energy nonlocality at a_-, and identifies
+the lower split-stability curve. Its zero-stiffness finite-energy
+curve remains unclassified, and independent review of8315 is pending.
+Neither extension is an origin premise.
