@@ -1,0 +1,97 @@
+{
+  "agent": "six-reviewer-1",
+  "external_fixture_controls": [
+    {
+      "damage": "missing",
+      "mode": "normal",
+      "rejected": true,
+      "returncode": 1
+    },
+    {
+      "damage": "malformed",
+      "mode": "normal",
+      "rejected": true,
+      "returncode": 1
+    },
+    {
+      "damage": "altered",
+      "mode": "normal",
+      "rejected": true,
+      "returncode": 1
+    },
+    {
+      "damage": "missing",
+      "mode": "optimized",
+      "rejected": true,
+      "returncode": 1
+    },
+    {
+      "damage": "malformed",
+      "mode": "optimized",
+      "rejected": true,
+      "returncode": 1
+    },
+    {
+      "damage": "altered",
+      "mode": "optimized",
+      "rejected": true,
+      "returncode": 1
+    }
+  ],
+  "independent_fixture_sha256": "f783b8317886824e8e983ecd3e24b83b382e4aadb76a3d9f04d4b6e95a273141",
+  "role": "independent mathematical reviewer",
+  "runs": [
+    {
+      "cumulative_peak_child_rss_kib": 17996,
+      "label": "independent",
+      "mode": "normal",
+      "returncode": 0,
+      "seconds": 1.0222446200205013,
+      "stderr": "",
+      "stdout": "PASS: 63 independent exact checks; four damaged inputs rejected; all 31 author values independently derived.\nFull record SHA256: f783b8317886824e8e983ecd3e24b83b382e4aadb76a3d9f04d4b6e95a273141\nProved stronger constant 111439995781294/4677150970635; rational norm-one simple-spectrum witness and earlier radius obstruction.\n"
+    },
+    {
+      "cumulative_peak_child_rss_kib": 22120,
+      "label": "independent",
+      "mode": "optimized",
+      "returncode": 0,
+      "seconds": 1.2596444410155527,
+      "stderr": "",
+      "stdout": "PASS: 63 independent exact checks; four damaged inputs rejected; all 31 author values independently derived.\nFull record SHA256: f783b8317886824e8e983ecd3e24b83b382e4aadb76a3d9f04d4b6e95a273141\nProved stronger constant 111439995781294/4677150970635; rational norm-one simple-spectrum witness and earlier radius obstruction.\n"
+    },
+    {
+      "cumulative_peak_child_rss_kib": 22120,
+      "label": "author",
+      "mode": "normal",
+      "returncode": 0,
+      "seconds": 0.08308501302963123,
+      "stderr": "",
+      "stdout": "{\"checks\": 31, \"damage_controls\": 4, \"record_sha256\": \"58a036ae8abcdb2e16aea217e9dfb66a8e9713cf8f6302dd62143789c1adefb7\", \"status\": \"exact asymmetric counterexample verified\"}\n"
+    },
+    {
+      "cumulative_peak_child_rss_kib": 22120,
+      "label": "author",
+      "mode": "optimized",
+      "returncode": 0,
+      "seconds": 0.25447479699505493,
+      "stderr": "",
+      "stdout": "{\"checks\": 31, \"damage_controls\": 4, \"record_sha256\": \"58a036ae8abcdb2e16aea217e9dfb66a8e9713cf8f6302dd62143789c1adefb7\", \"status\": \"exact asymmetric counterexample verified\"}\n"
+    }
+  ],
+  "runtime": {
+    "max_local_jobs": 1,
+    "native_threads": 1,
+    "python": "Python 3.12.14",
+    "solver": null,
+    "standard_library_only": true
+  },
+  "source_commit_reviewed": "9b33444a3e8478d3f056b615caf499525cfcd524",
+  "target_source_sha256": {
+    "LITERATURE.md": "0e4a179dc9c66b8a2ca4fac66571238d03f347ed622bc2253cb46ea2b702d886",
+    "PROOF.md": "127497018b32de2dab4ceff587c5bfb276f6b72169e5612cfab04012008d07fb",
+    "README.md": "a8ac428f3b708b40d7b150de411ac4c4fe0383dfb625d63d3c547306e80e4223",
+    "expected.json": "68d75213afa4e5f92c3b90aa39f5344f5615d5125232aeaf888b62257517f107",
+    "verify.py": "586e76e5bfa8ace14bad717651b9057b777af1d0addce1a1a287973da1bc0483"
+  },
+  "trust_boundary": "Exact matrix arithmetic plus ordinary spectral-theorem/multiplicity argument; reviewed8160/8230 angular-radius interpretation retained, no full-disk reduction claim."
+}
