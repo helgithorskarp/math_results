@@ -116,6 +116,46 @@ then forces L=0 or L=7/2, giving respectively the spike or midpoint.
 Since E=d^2 in this region, the two regions prove (1), its full equality
 set, and the sharpness witness. No ordinary convexity of g is used.
 
+### Independent direct proof and sharp maximum-conditioned remainder
+
+There is a second analytic route that needs no fourteen-profile reduction.
+On the same normalized domain one has the exact identity
+
+    3(D-U)=sum_j(4-y_j)(y_j-1)^2.                           (7a)
+
+If M<=4, every summand is nonnegative. Equality forces every coordinate
+to be1 or4; a4 together with seven coordinates at least1 would have
+sum at least11, so equality is precisely uniform. This also gives
+
+    D-U>=(4-M)U/3                           (M<=4).         (7b)
+
+If M>4, the maximal coordinate is unique and the other seven have sum
+L=8-M<4. Their pair sums are strictly below4, so the same compact
+strict-averaging argument used above gives the unique g-minimizer with
+all seven coordinates equal L/7. The following exact identity is useful
+on the part4<M<=9/2, where U is the nearer squared distance:
+
+    g(M)+7g((8-M)/7)-40
+         =(48/49)(M-1)^2(9/2-M).                           (7c)
+
+Combining it with (7) on the other part proves the refined bound
+
+    D-d^2 >= R(M),                                          (7d)
+
+where
+
+    R(M)=(16/49)(M-1)^2(9/2-M),          4<M<=9/2,
+    R(M)=(16/49)(8-M)(M-9/2)(M+6),       9/2<=M<=8.
+
+These two maximum-conditioned remainder bounds are sharp at *each*
+allowed M: the vector(M,((8-M)/7)^7) attains them. Equality in either
+bound has exactly this tail-equal shape, by strict averaging. R is
+positive except at M9/2 and8. Equations(7a)-(7d) independently prove
+(1) and its entire equality set. The stronger statement(7d), not just
+a new proof of the same inequality, can pay explicitly for phase loss
+away from those two maxima. No sharpness of the separate estimate(7b)
+is asserted. Weighted versions follow from the exact scaling in(9).
+
 ## 4. Homogeneous and unsaturated-budget forms
 
 For arbitrary y>=0 with mass sigma=sum y>0, define the finite set
@@ -153,6 +193,18 @@ or at mass8a on any of the three orbits. Indeed e_3(w) is positive on
 uniform and midpoint and vanishes on spikes. This also describes the
 zero set of D_a: spikes of any allowed mass and uniform at mass8a.
 
+For a direct quantitative use of the remainders, define Xi(w) on the
+normalized domain by (4-M)U(w)/3 when M<=4, and R(M) when M>4.
+Equations(7a)-(7d) prove D(w)>=d(w)^2+Xi(w), with Xi>=0. Thus (9)
+also gives the stronger weighted estimate
+
+    D_a(y)>=a d_sigma(y)^2+((8a-sigma)/sigma)e_3(y)
+                                      +a^3 t^2 Xi(w).       (10a)
+
+At sigma=0 define the extra term as zero. For each fixed normalized
+maximum M>4 and positive allowed mass this full bound is sharp exactly
+at the scaled tail-equal vector, by the strict-averaging equality in(7d).
+
 ## 5. Labeled application: global real origin stability
 
 This section inherits only the radial part of published author lemma8656,
@@ -187,6 +239,16 @@ proves throughout the full unsaturated real budget domain
 All terms in B_a are nonnegative; the first is positive for a<1.
 Since product r<= (rho/8)^8<=1 and all radii are positive, the same
 right-hand side is a lower bound for O_a(r)/product r-1.
+
+The sharp maximum-conditioned remainder gives an explicit further
+improvement: when sigma>0, take t=sigma/(8a), w=y/(at), and put
+
+    B_a^+(r)=B_a(r)+5a^3 t^2 Xi(w).                         (13a)
+
+At sigma=0 take B_a^+=B_a. By(10a)-(11), B_a^+ can replace B_a
+in(13) and in the phase criterion(18) below. This pays additionally for
+phase loss away from the midpoint and spike maxima when M(w)>4.
+It remains bounded by the original defect-based allowance of8656.
 
 For the important normalized plane rho=8, sigma=8a and the correction
 term vanishes. With

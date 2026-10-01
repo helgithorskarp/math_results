@@ -152,6 +152,9 @@ def regenerate(damage=None):
              scale(add(scale(p2, 9), scale(p3, -1), c(newton_constant, 7)), F(1, 3)))
     identity("uniform_distance", add(*(pw(add(v, c(-1, 7)), 2) for v in variables)),
              add(p2, c(-8, 7)))
+    identity("direct_pointwise_gap", add(*(mul(add(c(4, 7), scale(v, -1)),
+                                                pw(add(v, c(-1, 7)), 2)) for v in variables)),
+             add(scale(p2, 6), scale(p3, -1), c(-40, 7)))
     identity("spike_distance", add(*(pw(add(v, c(-8 if i == 0 else 0, 7)), 2)
                                       for i, v in enumerate(variables))),
              add(p2, c(64, 7), scale(variables[0], -16)))
@@ -175,6 +178,12 @@ def regenerate(damage=None):
     weighted_rhs = add(mul(pw(a, 3), pw(t, 2), add(scale(e2w, 2), scale(e3w, -1))),
                        mul(pw(a, 3), pw(t, 2), add(c(1, 4), scale(t, -1)), e3w))
     identity("weighted_mass", weighted_lhs, weighted_rhs)
+
+    maximum = var(0, 1)
+    tail = scale(add(c(8, 1), scale(maximum, -1)), F(1, 7))
+    identity("sharp_lower_maximum_gap", add(g(maximum), scale(g(tail), 7), c(-40, 1)),
+             scale(mul(pw(add(maximum, c(-1, 1)), 2),
+                       add(c(F(9, 2), 1), scale(maximum, -1))), F(48, 49)))
 
     # Independent count enumeration of every floor/ceiling/free-count candidate.
     profiles, candidates, endpoint_feasible = [], 0, 0
@@ -240,10 +249,31 @@ def regenerate(damage=None):
                 mass_controls.append({"shape": name, "a": str(a), "t": str(t),
                                       "sigma": str(sigma), "D_a": str(da), "correction": str(correction)})
     require(F(570801247, 1647086) < 350, "inherited phase constant comparison")
+    maximum_controls = []
+    for maximum in [F(17, 4), F(9, 2), F(5), F(7), F(8)]:
+        values = [maximum] + [(8 - maximum) / 7] * 7
+        defect, distance, _, _ = moments(values)
+        if maximum <= F(9, 2):
+            remainder = F(16, 49) * (maximum - 1) ** 2 * (F(9, 2) - maximum)
+        else:
+            remainder = F(16, 49) * (8 - maximum) * (maximum - F(9, 2)) * (maximum + 6)
+        require(defect - distance == remainder, "sharp maximum-conditioned remainder")
+        # Independently scaled exact control for (10a); not a continuum proof.
+        a, t = F(1, 2), F(1, 3)
+        scaled_values = [a * t * x for x in values]
+        sigma = sum(scaled_values)
+        scaled_defect = 2 * a * elementary(scaled_values, 2) - elementary(scaled_values, 3)
+        correction = (8 * a - sigma) * elementary(scaled_values, 3) / sigma
+        weighted_bound = a * (a * t) ** 2 * distance + correction + a ** 3 * t ** 2 * remainder
+        require(scaled_defect == weighted_bound, "scaled sharp maximum-conditioned remainder")
+        maximum_controls.append({"M": str(maximum), "D": str(defect),
+                                 "distance_squared": str(distance), "sharp_remainder": str(remainder),
+                                 "weighted_D_a": str(scaled_defect), "weighted_bound": str(weighted_bound)})
     return {"format_version": 1, "polynomial_identities": identities,
             "candidate_counts": {"total": candidates, "feasible": len(profiles), "endpoint_feasible": endpoint_feasible},
             "profiles": profiles, "equality_controls": controls, "radial_rational_controls": radial_controls,
             "weighted_mass_controls": mass_controls,
+            "maximum_remainder_controls": maximum_controls,
             "scope": "Exact algebra evidence; written analytic bridges and cited radial/phase theorems remain outside this checker."}
 
 
@@ -301,6 +331,7 @@ def main():
                           "newton_monomials": len(record["polynomial_identities"]["newton_full"]),
                           "finite_profiles": len(record["profiles"]), "radial_controls": len(record["radial_rational_controls"]),
                           "mass_controls": len(record["weighted_mass_controls"]), "mathematical_damages_rejected": mathematical,
+                          "maximum_controls": len(record["maximum_remainder_controls"]),
                           "fixture_damages_rejected": fixtures, "record_sha256": hashlib.sha256(canonical(record)).hexdigest()}, sort_keys=True))
     except (CheckError, OSError, ValueError) as exc:
         print("FAIL: " + str(exc), file=sys.stderr)

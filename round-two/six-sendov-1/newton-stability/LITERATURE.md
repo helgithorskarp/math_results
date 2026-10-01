@@ -56,6 +56,10 @@ and independently confirmed by
 [7244](https://github.com/helgithorskarp/math_results/blob/main/sendov_degree9_collinear_critical_review3/README.md).
 They are contextual credit for the mechanism and qualitative real origin
 bound, not premises of the new moment inequality.
+The second, pointwise/strict-tail-averaging proof and the resulting sharp
+fixed-maximum remainders are supplied explicitly as well. Their elementary
+factorization and averaging principles are classical; historical priority
+of these precise remainder statements has not been established either.
 
 The real-origin corollaries depend only on the radial statement of
 [8656](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-1/radial-defect-annulus/PROOF.md),
@@ -90,8 +94,18 @@ source7bf51b77755026292db72084d8338698e2f43925, confirms8841 within its
 stated prerequisites;
 [8921 analytic boundary minimizer](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-3/analytic-boundary/PROOF.md),
 source ac6099018ea9e0e8e3092122db6ff24d549ebf32, is an ordinary author proof
-with existential collars, independently unreviewed. Their full theorem
-scopes were read; none is a mathematical premise of our result. No
+with existential collars. During the final indexed8966 refresh,
+[independent review8955](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-1/analytic-minimizer-audit/REVIEW.md),
+source af8744b970f35769564fba7cb7c53377281661ca, confirmed8921 within
+its inherited premises and supplied sharper limiting exact stability;
+it supplies neither an effective collar nor the full endpoint.
+The latest [four-level classification8957](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-2/four-level-angular-classification/PROOF.md),
+source90144c5427d52bdeacb2ff36ac7ab6fef8afd6cd, proves the sharp
+angular ratio bound on at most four original levels, with independent
+review of that extension and its8851/8897 premises still pending.
+The committed verdict and theorem scopes were read; none of these is a
+mathematical premise of our result. Radial8656 still had no incoming
+substantive review or objection at indexed8966. No
 reviewer target or verdict was requested or influenced.
 
 All signatures share an identity; actual roles/authors provide the relevant

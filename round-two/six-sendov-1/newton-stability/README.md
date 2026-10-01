@@ -15,6 +15,10 @@ the lower region to14 complete profiles and proves the upper region by
 strict pair averaging and an exact factorization. It also gives a sharp
 weighted version for every unsaturated mass0<=sum y<=8a, retaining an
 explicit missing-mass term. These moment results are self-contained.
+An independent direct proof uses sum(4-y_j)(y_j-1)^2 below maximum4
+and strict tail averaging above it. It additionally gives sharp explicit
+remainders for every fixed maximum M>4, attained precisely by the
+tail-equal vector. See equations(7a)-(7d) of the proof.
 
 The labeled application inherits8656's independently unreviewed radial
 theorem. On the *entire* r>=1/2,sum r=8 real polytope it yields
@@ -25,7 +29,8 @@ The coefficient5/64 is sufficient, not asserted sharp. This controls both
 known equality families even after Schur monotonicity fails above the
 previous sharp pair-kernel ceiling. A positive uniform-distance-only
 coefficient is impossible globally. An additional complex phase criterion
-inherits the independently confirmed quadratic Taylor estimate7244; it
+inherits the independently confirmed quadratic Taylor estimate7244; the sharp
+maximum-conditioned remainder gives an additional explicit allowance. It
 does not establish that every polynomial satisfies the phase condition
 or enlarge any effective annulus.
 
@@ -41,12 +46,13 @@ From repository root, with CPython3.10+ and no packages:
     OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 BLIS_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 python3 -I -B round-two/six-sendov-1/newton-stability/verify.py
     OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 BLIS_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 python3 -I -B -O round-two/six-sendov-1/newton-stability/verify.py
 
-Expected PASS:11 complete polynomial identities,112 Newton monomials,
+Expected PASS:13 complete polynomial identities,112 Newton monomials,
 14 feasible profiles among45 endpoint/free-count candidates,9 rational
-radial controls,12 weighted-mass controls,5 rejected mathematical damages
+radial controls,12 weighted-mass controls,5 exact maximum-remainder controls,
+5 rejected mathematical damages
 and4 rejected fixture damages. Canonical full-record SHA256:
 
-    63fdf1fe2bb13b832860bdf210633c93d47b3470030451b2b289126465e466c0
+    6a16d8662c0f5aac8263a1baccc43aaecc39397ce0857ed32e54a6961fc057d6
 
 The complete compact [expected.json](expected.json) is compared entry by
 entry through full canonical JSON bytes, including types; a digest alone
