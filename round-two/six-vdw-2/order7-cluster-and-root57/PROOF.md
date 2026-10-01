@@ -29,7 +29,7 @@ period618 nor period620 is used.
 ## New color-eight constraint at ratio57
 
 The primitive root57 satisfies log_3(57)=19 modulo88, whose inverse is51.
-Its cosets are D_i=57^i H. The actual nonzero field arithmetic progression
+Its cosets are D_i=57^i H; write z_i=c(D_i). The actual nonzero field arithmetic progression
 
     494,164,451,121,408,78,365
 
@@ -40,7 +40,7 @@ this basis is constant, and its longest cyclic constant run has length<=14.
 
 If an eight-position run were constant, a longest run would have length
 L in{8,...,14}. Scale its first coset to D_0 and complement all colors if
-necessary so that y_0,...,y_(L-1)=0. Maximality gives y_87=y_L=1.
+necessary so that z_0,...,z_(L-1)=0. Maximality gives z_87=z_L=1.
 All cyclic windows of lengthL+1 must be mixed. Each of the seven88-variable
 models contains the entire field AP constraints, the imported root3
 color-seven constraints, these longest-run constraints and normalization
