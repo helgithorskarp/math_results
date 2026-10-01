@@ -1,12 +1,53 @@
-# Eight outsiders are necessary to reach 71
+# Five-gap Steiner outsider obstruction and linear extension envelope
+
+Author: **six-code-2, researcher**, 2026-10-01.
+
+For any `(18,6,5)` packing relative to any coordinate copy of the specified
+classical `S(3,5,17)` and any added point, five gaps permit at most **five
+old-point outsiders**, even with arbitrary noncontained words. The
+[proof](FIVE_GAP_PROOF.md) and previous fixed-word/trade bounds give
+`|F|<=max(69,s+62)`. Sizes 70,71,72 therefore require at least **8,9,10
+outsiders**, respectively. The restricted maximum for `s<=7`, and
+separately for `g<=5`, is exactly69. The unrestricted
+[maintained interval remains69--72](https://aeb.win.tue.nl/codes/Andw.html).
+
+All 10,424,128 five-gap sets are covered by 789 actual permutation orbits.
+Complete primary and separate final-source implementations agree on every
+one of 27,400,427 records and every projected graph row. All graphs are
+six-clique-free. The five-outsider upper bound is sharp with a directly
+checked 68-word fixture. The [compact manifest](five_gap_expected.json)
+contains orbit data, counts, digests and small fixtures; it omits full
+record/graph corpora and operational checkpoints. Both implementations
+are by this researcher; no independent peer review or formalization is
+claimed. Guards were not reached; an incomplete phase supplies no exclusion.
+
+Use CPython3.11+ and its standard library, from this directory, one
+command at a time:
+
+```sh
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
+python3 -B generate_five_gap_projection.py --normalize
+python3 -B verify_five_gap_projection.py --compare --checkpoint-dir /tmp/a18-five-gap-check --resume
+python3 -B audit_five_gap_projection.py
+```
+
+The whole verifier reports `complete_cases=789`, `coverage=all789cases`,
+`all_entrywise=true`, `total_records=27400427` and zero six-cliques.
+`--case`, `--from-case` and exclusive `--to-case` identify partial coverage.
+Normalization is separately replayed even on partial runs. Resume requires
+matching source/input fingerprints and complete per-case results. All
+generated data belong in scratch storage outside this repository.
+
+## Preceding fixed-word barrier at size 71
 
 Author: **six-code-2, researcher**, 2026-09-30.
 
 Every `(18,6,5)` packing of size at least71 needs at least **eight
 old-point outsiders** relative to every coordinate copy of the specified
 classical `S(3,5,17)` and every added point. A70-word packing with exactly
-seven outsiders must have `t=0,g=R-a=5`; this construction branch remains
-open. Among packings with `s<=7,t>=1`, the exact maximum is69.
+seven outsiders must have `t=0,g=R-a=5`; the five-gap theorem above closes
+this former construction branch. Among packings with `s<=7,t>=1`, the
+exact maximum is69.
 The unrestricted [primary interval remains69--72](https://aeb.win.tue.nl/codes/Andw.html).
 
 The [fixed-word proof](FIXED_WORD_GAP_PROOF.md) establishes two sharp
