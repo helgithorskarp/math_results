@@ -1,0 +1,240 @@
+{
+  "agent": "six-covering-1",
+  "role": "researcher",
+  "utc": "2026-10-01T23:13:24.439894+00:00",
+  "scope": "No subset of the24 original labels m|720,m>=8 confines every hole to a single18-coset plus6-coset. This construction-route exclusion changes no global exactly-eight LCM bound.",
+  "proof_status": "Complete integer count envelopes and phase split with written unformalized induction. Separate same-author physical-set audit; no independent reviewer verdict or historical-priority claim.",
+  "python_version": "3.11.2",
+  "external_packages": [],
+  "solver_used": false,
+  "threads_one": true,
+  "maximum_concurrent_cpu_intensive_jobs": 1,
+  "public_runs": [
+    {
+      "command": [
+        "python3",
+        "check.py"
+      ],
+      "utc": "2026-10-01T23:02:07.938707+00:00",
+      "seconds": 17.854300377017353,
+      "deadline_seconds": 45,
+      "max_rss_kib": 87532,
+      "source_script_sha256": "2bdc918e38fdf0692bf1984ecc786786eae004cc01087922ccecd733056599a6",
+      "summary": {
+        "affine_original_phase_checks": 2397,
+        "agent": "six-covering-1",
+        "anchor_translation_checks": 72,
+        "complete_original_pair_phase_combinations": 11724888,
+        "computed_prefixes": 168,
+        "first_cases": 72,
+        "first_strict": 66,
+        "global_numerical_bound_changed": false,
+        "minimum_integer_gap": 2,
+        "remaining_target_shapes": 0,
+        "role": "researcher",
+        "second_cases": 96,
+        "second_strict": 96,
+        "status": "CHECKED",
+        "strict_leaves": 162,
+        "unreachable_count_thresholds": 0
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "check.py"
+      ],
+      "utc": "2026-10-01T23:05:52.511608+00:00",
+      "seconds": 18.15015147603117,
+      "deadline_seconds": 45,
+      "max_rss_kib": 94940,
+      "source_script_sha256": "2bdc918e38fdf0692bf1984ecc786786eae004cc01087922ccecd733056599a6",
+      "summary": {
+        "affine_original_phase_checks": 2397,
+        "agent": "six-covering-1",
+        "anchor_translation_checks": 72,
+        "complete_original_pair_phase_combinations": 11724888,
+        "computed_prefixes": 168,
+        "first_cases": 72,
+        "first_strict": 66,
+        "global_numerical_bound_changed": false,
+        "minimum_integer_gap": 2,
+        "remaining_target_shapes": 0,
+        "role": "researcher",
+        "second_cases": 96,
+        "second_strict": 96,
+        "status": "CHECKED",
+        "strict_leaves": 162,
+        "unreachable_count_thresholds": 0
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "audit.py"
+      ],
+      "utc": "2026-10-01T23:06:43.373022+00:00",
+      "seconds": 25.71643932297593,
+      "deadline_seconds": 45,
+      "max_rss_kib": 27476,
+      "source_script_sha256": "426b4c14e462cf574b075f4454b06f0027af86011ca2bf9c8f98236421b6484a",
+      "summary": {
+        "affine_original_phase_checks": 2397,
+        "agent": "six-covering-1",
+        "anchor_translation_checks": 72,
+        "complete_original_pair_phase_combinations": 11724888,
+        "computed_prefixes": 168,
+        "first_cases": 72,
+        "first_strict": 66,
+        "global_numerical_bound_changed": false,
+        "minimum_integer_gap": 2,
+        "production_imported": false,
+        "remaining_target_shapes": 0,
+        "role": "researcher",
+        "same_author": true,
+        "second_cases": 96,
+        "second_strict": 96,
+        "status": "AUDITED",
+        "strict_leaves": 162,
+        "unreachable_count_thresholds": 0
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "audit.py"
+      ],
+      "utc": "2026-10-01T23:10:18.260595+00:00",
+      "seconds": 25.913604200002737,
+      "deadline_seconds": 45,
+      "max_rss_kib": 29660,
+      "source_script_sha256": "426b4c14e462cf574b075f4454b06f0027af86011ca2bf9c8f98236421b6484a",
+      "summary": {
+        "affine_original_phase_checks": 2397,
+        "agent": "six-covering-1",
+        "anchor_translation_checks": 72,
+        "complete_original_pair_phase_combinations": 11724888,
+        "computed_prefixes": 168,
+        "first_cases": 72,
+        "first_strict": 66,
+        "global_numerical_bound_changed": false,
+        "minimum_integer_gap": 2,
+        "production_imported": false,
+        "remaining_target_shapes": 0,
+        "role": "researcher",
+        "same_author": true,
+        "second_cases": 96,
+        "second_strict": 96,
+        "status": "AUDITED",
+        "strict_leaves": 162,
+        "unreachable_count_thresholds": 0
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "controls.py"
+      ],
+      "utc": "2026-10-01T23:10:59.260780+00:00",
+      "seconds": 18.003685025963932,
+      "deadline_seconds": 45,
+      "max_rss_kib": 94792,
+      "source_script_sha256": "9285bd4ab88b16e3cc44af6a1f1afe256080907f67d1c4edb0dbfb7524edbc5d",
+      "summary": {
+        "agent": "six-covering-1",
+        "damages": [
+          "retain_consumed_original12",
+          "retain_consumed_original16",
+          "omit_original720",
+          "omit_twelve_phase",
+          "repeat_twelve_phase",
+          "omit_sixteen_phase",
+          "alter_actual_odd_demand",
+          "alter_even_upper",
+          "change_target_divisor",
+          "change_dependency_pin",
+          "use_nonunit_affine_map",
+          "remove_one_child_parent"
+        ],
+        "role": "researcher",
+        "semantic_damages_rejected": 12,
+        "status": "CONTROLS_PASSED"
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "controls.py"
+      ],
+      "utc": "2026-10-01T23:11:53.346789+00:00",
+      "seconds": 18.197824827977456,
+      "deadline_seconds": 45,
+      "max_rss_kib": 96144,
+      "source_script_sha256": "9285bd4ab88b16e3cc44af6a1f1afe256080907f67d1c4edb0dbfb7524edbc5d",
+      "summary": {
+        "agent": "six-covering-1",
+        "damages": [
+          "retain_consumed_original12",
+          "retain_consumed_original16",
+          "omit_original720",
+          "omit_twelve_phase",
+          "repeat_twelve_phase",
+          "omit_sixteen_phase",
+          "alter_actual_odd_demand",
+          "alter_even_upper",
+          "change_target_divisor",
+          "change_dependency_pin",
+          "use_nonunit_affine_map",
+          "remove_one_child_parent"
+        ],
+        "role": "researcher",
+        "semantic_damages_rejected": 12,
+        "status": "CONTROLS_PASSED"
+      }
+    }
+  ],
+  "all_public_checks_passed": true,
+  "expected_frozen_before_public_comparison_runs": true,
+  "expected_sha256": "c3adfa4262b958d72371cab70a24a3e34171c48fff143c6e04d797ddac12baa5",
+  "complete_summary": {
+    "computed_prefixes": 168,
+    "first_cases": 72,
+    "first_strict": 66,
+    "second_cases": 96,
+    "second_strict": 96,
+    "strict_leaves": 162,
+    "minimum_integer_gap": 2,
+    "unreachable_count_thresholds": 0,
+    "complete_original_pair_phase_combinations": 11724888,
+    "affine_original_phase_checks": 2397,
+    "anchor_translation_checks": 72,
+    "remaining_target_shapes": 0,
+    "global_numerical_bound_changed": false
+  },
+  "dependency": {
+    "source_commit": "c87f46d672552ca570cd7bc0293969a4e3688c17",
+    "graph_reference": "bafkreibhwbabvc6mqjab3riotqp33y52r73wffazskkh7rcpbhwadaz76m",
+    "certificate_sha256": "99c433aad2c1f5a6d7246fb619efef9b387de021ddeccac8fe4d4bd59d96cbf2"
+  },
+  "dependency_scope": "The earlier9049 twelve-shape theorem imports its96 target exclusions. These are not rederived by the new count-envelope checker. The exact prior certificate bytes and all twelve remaining target phases are checked.",
+  "primary_literature_checked_utc_date": "2026-10-01",
+  "primary_literature": [
+    "https://arxiv.org/html/2607.19029",
+    "https://arxiv.org/html/2605.18644"
+  ],
+  "resource_policy": "Each actual program had a45-second voluntary deadline; all completed. UNKNOWN, timeout, memory kill or interrupted enumeration is not mathematical nonexistence.",
+  "source_sha256": {
+    ".gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+    "README.md": "8d4f7b955c3a9f70739a72b66d18a7d070e9dbb583cead2ffa4393c490d79f99",
+    "audit.py": "426b4c14e462cf574b075f4454b06f0027af86011ca2bf9c8f98236421b6484a",
+    "certificate.json": "5933f9548f06186d3d1c850c17ee52365419ec455388cec3d14bf994e96e1366",
+    "check.py": "2bdc918e38fdf0692bf1984ecc786786eae004cc01087922ccecd733056599a6",
+    "controls.py": "9285bd4ab88b16e3cc44af6a1f1afe256080907f67d1c4edb0dbfb7524edbc5d",
+    "envelope.py": "ff3fd09e223a623bc22a112c316d82e53096effe1324ed35977dd49979814fda",
+    "expected.json": "c3adfa4262b958d72371cab70a24a3e34171c48fff143c6e04d797ddac12baa5",
+    "proof.md": "4a069640177b829000fdcebc83027f33284684a20a567f0dcf3f28c13c8612b9"
+  }
+}
