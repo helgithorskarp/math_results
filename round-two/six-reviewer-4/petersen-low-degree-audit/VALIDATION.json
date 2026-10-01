@@ -1,0 +1,182 @@
+{
+  "actual_reviewer": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "threads": 1,
+  "max_simultaneous_cpu_jobs": 1,
+  "guard_seconds": 60,
+  "independent_runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "check.py",
+        "--emit"
+      ],
+      "seconds": 4.6591924439999275,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "stderr": "",
+      "peak_rss_upper_kib": 24628
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "check.py"
+      ],
+      "seconds": 3.4059016730170697,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "stderr": "",
+      "peak_rss_upper_kib": 24628,
+      "stdout": "PASS\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "check.py"
+      ],
+      "seconds": 3.894789739046246,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "stderr": "",
+      "peak_rss_upper_kib": 26404,
+      "stdout": "PASS\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "compare.py",
+        "certificate.json",
+        "--controls"
+      ],
+      "seconds": 4.424815145961475,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "stderr": "",
+      "peak_rss_upper_kib": 26404,
+      "stdout": "{\n  \"canonical_certificate_sha256\": \"8c3aa46642e4017943685de3c880a528bca559b442d5f095df07a7256bcf2997\",\n  \"complete_domain_hashes_sha256\": \"af4e602e35cfdf53ff9db85e8fb4d2a696dfc345d49ba40f520c78d2def889f1\",\n  \"complete_incidence_sha256\": \"9cb45ee034905d375799e87cee7c17f7ecfb249fa51e2182657b8a32f82cffe6\",\n  \"damaged_controls_rejected\": [\n    \"missing_orbit\",\n    \"duplicate_orbit\",\n    \"swapped_deficiency_tags\",\n    \"wrong_domain_size\",\n    \"supported_star_removed\",\n    \"incomplete_deletion_trace\",\n    \"step_after_empty\",\n    \"boolean_deficiency\"\n  ],\n  \"original_entries\": 51,\n  \"original_removals\": 394,\n  \"original_steps\": 73\n}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "compare.py",
+        "certificate.json",
+        "--controls"
+      ],
+      "seconds": 4.322870675998274,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "stderr": "",
+      "peak_rss_upper_kib": 26404,
+      "stdout": "{\n  \"canonical_certificate_sha256\": \"8c3aa46642e4017943685de3c880a528bca559b442d5f095df07a7256bcf2997\",\n  \"complete_domain_hashes_sha256\": \"af4e602e35cfdf53ff9db85e8fb4d2a696dfc345d49ba40f520c78d2def889f1\",\n  \"complete_incidence_sha256\": \"9cb45ee034905d375799e87cee7c17f7ecfb249fa51e2182657b8a32f82cffe6\",\n  \"damaged_controls_rejected\": [\n    \"missing_orbit\",\n    \"duplicate_orbit\",\n    \"swapped_deficiency_tags\",\n    \"wrong_domain_size\",\n    \"supported_star_removed\",\n    \"incomplete_deletion_trace\",\n    \"step_after_empty\",\n    \"boolean_deficiency\"\n  ],\n  \"original_entries\": 51,\n  \"original_removals\": 394,\n  \"original_steps\": 73\n}\n"
+    }
+  ],
+  "pinned_native_runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "produce.py"
+      ],
+      "seconds": 2.5599028810393065,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "stderr": "",
+      "peak_rss_upper_kib": 27440
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "verify.py"
+      ],
+      "seconds": 3.6551914180163294,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "stderr": "",
+      "peak_rss_upper_kib": 30044
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "controls.py"
+      ],
+      "seconds": 12.929176562989596,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "stderr": "",
+      "peak_rss_upper_kib": 35760
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "produce.py"
+      ],
+      "seconds": 2.3720048280083574,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "stderr": "",
+      "peak_rss_upper_kib": 35760
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "verify.py"
+      ],
+      "seconds": 3.7984463289612904,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "stderr": "",
+      "peak_rss_upper_kib": 35760
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "controls.py"
+      ],
+      "seconds": 14.865397616988048,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "stderr": "",
+      "peak_rss_upper_kib": 36964
+    }
+  ],
+  "normal_optimized_independent_match": true,
+  "normal_optimized_native_match": true,
+  "maximum_completed_run_rss_upper_kib": 36964,
+  "independent_original_replay": {
+    "canonical_certificate_sha256": "8c3aa46642e4017943685de3c880a528bca559b442d5f095df07a7256bcf2997",
+    "complete_domain_hashes_sha256": "af4e602e35cfdf53ff9db85e8fb4d2a696dfc345d49ba40f520c78d2def889f1",
+    "complete_incidence_sha256": "9cb45ee034905d375799e87cee7c17f7ecfb249fa51e2182657b8a32f82cffe6",
+    "damaged_controls_rejected": [
+      "missing_orbit",
+      "duplicate_orbit",
+      "swapped_deficiency_tags",
+      "wrong_domain_size",
+      "supported_star_removed",
+      "incomplete_deletion_trace",
+      "step_after_empty",
+      "boolean_deficiency"
+    ],
+    "original_entries": 51,
+    "original_removals": 394,
+    "original_steps": 73
+  },
+  "expected_sha256": "ff57fefb5533b731ab5b31876f6daf793303a190d7c15fa232f19f9fd95122ef",
+  "timeout_UNKNOWN_or_incomplete_used": false,
+  "trust": "Exact CPython plus unformalized ordinary reductions, complete joins, generated orbits and first-deletion preservation. Source publication and matching hashes alone do not prove completeness."
+}
