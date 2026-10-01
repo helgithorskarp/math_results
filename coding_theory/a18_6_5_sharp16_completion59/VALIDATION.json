@@ -1,0 +1,87 @@
+{
+  "agent": "six-code-3",
+  "all_threads_one": true,
+  "certificate_sha256": "dbbf91f55aa1b500665d5d81b048820a5de0b9b1422eb9a14a15e6145bda7e78",
+  "children": [
+    {
+      "maxrss_kib": 18384,
+      "seconds": 4.867316376999952,
+      "stage": "producer"
+    },
+    {
+      "maxrss_kib": 207136,
+      "seconds": 23.064449043013155,
+      "stage": "verifier"
+    },
+    {
+      "maxrss_kib": 208172,
+      "seconds": 23.683762663975358,
+      "stage": "optimized_verifier"
+    },
+    {
+      "maxrss_kib": 21776,
+      "seconds": 0.539173059980385,
+      "stage": "optimized_controls"
+    }
+  ],
+  "guard_control_file_is_not_a_mathematical_exclusion": true,
+  "one_intensive_child_at_a_time": true,
+  "parent_maxrss_kib": 15660,
+  "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+  "role": "researcher",
+  "seconds": 52.15516757895239,
+  "status": "COMPLETE cold reproduction",
+  "fresh_source_directory": true,
+  "fresh_generated_directory": true,
+  "completed_at_utc": "2026-10-01T08:24:06.193301+00:00",
+  "fixed_case_guards": {
+    "states": 200000,
+    "seconds": 10
+  },
+  "scope": "1CPU2GiB128tasks",
+  "resource_limits_unchanged": true,
+  "files_checked": {
+    ".gitignore": "3cba886152bff7a7f8618aaa079dbb9aeee4b0214d890efa7154838f2cf42ebb",
+    "README.md": "8680116599866aabe1f706c158cfe8ec482428243ec2fd7ea043220709460854",
+    "PROOF.md": "887626d5d8b8f607c55cd3e0dda7ccf3e3a724cf4578a9bf01accc8e79027aa5",
+    "common.py": "b9f3f3e2ab71cdd782eaf91a12caa8748d343c6dfebe43f45817181d7617cc36",
+    "produce.py": "0238dba37f02a7ee7c26c30141865a45507afa37f010f5d17b2e0033ffd5046a",
+    "verify.py": "cf152e8aa2c7f8e7cf4c009e47ec4db408d8e6b466bacde3abc2376be29184b8",
+    "controls.py": "b1bb8ac10d92d736909e98ceaef601597817e30a5de4cc513719791cd4eaf747",
+    "reproduce.py": "ca6a2ccd007eabcc2cbf858ea1fe2286ff3ad6a5569a90a53d539ae9d4f44025",
+    "input.json": "f2a577cc13f865e8400fea7d0a09e9099edf187743d9cf109110f04400b35fe6",
+    "certificate.json": "dbbf91f55aa1b500665d5d81b048820a5de0b9b1422eb9a14a15e6145bda7e78",
+    "witness.json": "72576f353a5cfc2eaa33778012f12aa0e6dba966b690226fe79c193495c86286",
+    "summary.json": "b472a55467ac1d2c809135b67935814dc532b782a56b5cc615eb0492db0a9e4f"
+  },
+  "sharp_prefix_counts": [
+    20,
+    19,
+    20,
+    32,
+    32,
+    19
+  ],
+  "binary_states": [
+    63557,
+    69251,
+    57161,
+    69805,
+    67181,
+    74483
+  ],
+  "a_covers": 6,
+  "all_actual_arrays_and_solution_keys_equal": true,
+  "verified_residual_conflict_partitions": 142,
+  "residual_candidate_range": [
+    6,
+    19
+  ],
+  "upper_family_size": 59,
+  "witness_words": 59,
+  "rejected_control_count": 35,
+  "genuine_incomplete_control_count": 5,
+  "complete_small_censuses": 5,
+  "new_global_bound": false,
+  "proof_status": "Complete author computer-assisted local proof; independent peer review and formalization pending"
+}
