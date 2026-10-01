@@ -1,0 +1,397 @@
+{
+  "actual_author": "six-reviewer-4",
+  "compact_input_sha256": {
+    "audit.py": "2ec76149e7da1ee6ad12e6596a17a7d686da47836f72d52738897b45c08679d1",
+    "certificates.json": "cb5ab7f73121fa1f250148ce0b2d023d9b87afaa7fc3345dd7e89f7cdd6b271d",
+    "expected.json": "b87fad8524692bc74958291ebb28359770be8885aa872758e5976303766a4fc9"
+  },
+  "damaged_inputs": [
+    {
+      "mutation": "remove last certificate record",
+      "required_rejection": "complete 21-case certificate coverage"
+    },
+    {
+      "literal_demand": 4,
+      "literal_supply": 8,
+      "mutation": "replace case1 pair with [0,1]",
+      "required_rejection": "strict pair rank-sum contradiction"
+    },
+    {
+      "mutation": "in the full-miss record choose a four-row as its distinguished row",
+      "required_rejection": "full-miss structural case"
+    }
+  ],
+  "independent_runs": [
+    {
+      "cumulative_peak_child_rss_KiB": 16536,
+      "elapsed_seconds": 0.255717,
+      "expected_rejection": null,
+      "optimized": false,
+      "result": {
+        "incidence_matrices": 21,
+        "literal_stars": {
+          "literal_spine_identities": 17250,
+          "outside_stars": 1725
+        },
+        "obstructions": {
+          "kinds": {
+            "FULL_MISS_RED_PAIR": 1,
+            "PAIR_RANK_SUM": 20
+          },
+          "pair_cut_margins": {
+            "1": 5,
+            "3": 15
+          }
+        },
+        "status": "PASS"
+      },
+      "returncode": 0
+    },
+    {
+      "cumulative_peak_child_rss_KiB": 20088,
+      "elapsed_seconds": 0.378762,
+      "expected_rejection": null,
+      "optimized": true,
+      "result": {
+        "incidence_matrices": 21,
+        "literal_stars": {
+          "literal_spine_identities": 17250,
+          "outside_stars": 1725
+        },
+        "obstructions": {
+          "kinds": {
+            "FULL_MISS_RED_PAIR": 1,
+            "PAIR_RANK_SUM": 20
+          },
+          "pair_cut_margins": {
+            "1": 5,
+            "3": 15
+          }
+        },
+        "status": "PASS"
+      },
+      "returncode": 0
+    },
+    {
+      "cumulative_peak_child_rss_KiB": 20108,
+      "elapsed_seconds": 0.225641,
+      "expected_rejection": "complete 21-case certificate coverage",
+      "optimized": true,
+      "rejection": "ValueError: complete 21-case certificate coverage",
+      "returncode": 1
+    },
+    {
+      "cumulative_peak_child_rss_KiB": 20172,
+      "elapsed_seconds": 0.25724,
+      "expected_rejection": "strict pair rank-sum contradiction",
+      "optimized": true,
+      "rejection": "ValueError: strict pair rank-sum contradiction",
+      "returncode": 1
+    },
+    {
+      "cumulative_peak_child_rss_KiB": 20172,
+      "elapsed_seconds": 0.324258,
+      "expected_rejection": "full-miss structural case",
+      "optimized": true,
+      "rejection": "ValueError: full-miss structural case",
+      "returncode": 1
+    }
+  ],
+  "maximum_cpu_intensive_jobs": 1,
+  "native_author_replays": [
+    {
+      "cumulative_peak_child_rss_KiB": 19496,
+      "elapsed_seconds": 0.920064,
+      "optimized": true,
+      "program": "check.py",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": {
+        "agent": "six-books-3",
+        "excluded_non_Petersen_types": 5,
+        "known21": {
+          "blue": {
+            "edges": 117,
+            "max_pages": 6
+          },
+          "red": {
+            "edges": 93,
+            "max_pages": 3
+          }
+        },
+        "known_cubic_classes": 6,
+        "packing_minimum": 9,
+        "role": "researcher",
+        "rooted_classes": 11,
+        "status": "PASS"
+      }
+    },
+    {
+      "cumulative_peak_child_rss_KiB": 25452,
+      "elapsed_seconds": 4.028615,
+      "optimized": true,
+      "program": "verify.py",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": {
+        "Petersen_confirmed": true,
+        "agent": "six-books-3",
+        "class_sizes": [
+          900,
+          2160,
+          2160,
+          10800,
+          5400,
+          360
+        ],
+        "four_cycle_counts": [
+          6,
+          5,
+          5,
+          3,
+          2,
+          0
+        ],
+        "known21": {
+          "blue_edges": 117,
+          "blue_max_pages": 6,
+          "red_edges": 93,
+          "red_max_pages": 3
+        },
+        "normalized_graphs": 21780,
+        "normalized_sha256": "89062482c76071a010005eec73dddbd6bf7abcb7ba6b849b3f492bacaaf24c81",
+        "packing_minimum": 9,
+        "primary_data_core_ids": [
+          5,
+          4,
+          2,
+          6,
+          1,
+          3
+        ],
+        "recursion_calls": 132520,
+        "role": "researcher",
+        "status": "PASS"
+      }
+    },
+    {
+      "cumulative_peak_child_rss_KiB": 25452,
+      "elapsed_seconds": 0.173917,
+      "optimized": true,
+      "program": "controls.py",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": {
+        "integer_domain_required": true,
+        "packing_occurrence_boundary": [
+          19,
+          8,
+          20,
+          9
+        ],
+        "rejected_inputs": [
+          "wrong-graph-order",
+          "nonzero-graph-padding",
+          "repeated-cycle-vertex",
+          "false-cycle-witness",
+          "missing-core-edge"
+        ],
+        "status": "PASS"
+      }
+    }
+  ],
+  "numerical_threads": 1,
+  "pinned_author_inputs": [
+    {
+      "bytes": 33,
+      "git_blob_sha1": "4da1fa42a73f689050a26a004a8a4699d3ee621c",
+      "name": ".gitignore",
+      "sha256": "d5951dd6f95a028e8731d659779c4d4540babe5424eaafd8d8511514b43924e1"
+    },
+    {
+      "bytes": 1692,
+      "git_blob_sha1": "404279903993e71ce0e8a9fb553d9a1128390520",
+      "name": "MANIFEST.json",
+      "sha256": "04cb78ebde61d4b26f28f9f91f2d0a746d2b29c32c978b80e159630bac0c2e70"
+    },
+    {
+      "bytes": 8527,
+      "git_blob_sha1": "2f578341caeb80dc2099bc1bffddd4d0adeb4ef6",
+      "name": "PROOF.md",
+      "sha256": "27c133981b6efb433c29a8a4112099290408bed28e74bd63279da118dcf10a87"
+    },
+    {
+      "bytes": 2519,
+      "git_blob_sha1": "2fcf75578cc5fedc0f855a8aac963558c616d135",
+      "name": "README.md",
+      "sha256": "993773bdc33639162412fe80bbb830477a0a6a0c2af1ac4688fc7ec53a5d3ec9"
+    },
+    {
+      "bytes": 3997,
+      "git_blob_sha1": "866fea24b1c6600a8ccb74b4e49f4641bfee5837",
+      "name": "census.py",
+      "sha256": "35bff2462d1590b04c36867141b9eb509aebcf638d134e742d3cc13f1ce00ab6"
+    },
+    {
+      "bytes": 5429,
+      "git_blob_sha1": "eaac7f7f08a13266964f499ea0f5187df3820f40",
+      "name": "check.py",
+      "sha256": "d8963bff39f0c05c2f82fcc039f1b03ea13519b67c397b5d4ff2ee5ac8f23692"
+    },
+    {
+      "bytes": 1632,
+      "git_blob_sha1": "481e46f1568c7167cd4430770b66441c0210b245",
+      "name": "controls.py",
+      "sha256": "aab8a6220b16c6d80127b143602f2402b68e549a190e8a95f359ba4c553e4678"
+    },
+    {
+      "bytes": 5871,
+      "git_blob_sha1": "801ed34678283254ffd25b596f8bba2da3d83101",
+      "name": "expected.json",
+      "sha256": "f2d02d178aaa7818e31fe89a9682d38022e6960a284102cffc719e24b007af6f"
+    },
+    {
+      "bytes": 1056,
+      "git_blob_sha1": "a312f15975088de30cb4cd78ae66fa0df56112ed",
+      "name": "primary21.txt",
+      "sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55"
+    },
+    {
+      "bytes": 60,
+      "git_blob_sha1": "443f92a3d82c5a07e2d8f420fef19c354b6b7b3b",
+      "name": "primary_cubic10_g4.g6",
+      "sha256": "01324766dc1dfd3b64a9ab130f4162684e9df86f7fee664e6c904e0471eff285"
+    },
+    {
+      "bytes": 5956,
+      "git_blob_sha1": "0373e0efead3a2cc57826b8b1b4d4670c0609f07",
+      "name": "provenance.json",
+      "sha256": "83c89f0ee299b1cee0d36db4445b56f977096dc3041c6acbbca90ab97615e9ef"
+    },
+    {
+      "bytes": 8420,
+      "git_blob_sha1": "03c52a6e72125ac08bb654426b0bf0098d7ec485",
+      "name": "verify.py",
+      "sha256": "3daf24a44318e3c2cc5d8003c69b290d77f076c428a5c71082cdb46ea36df742"
+    }
+  ],
+  "python_version": "Python 3.11.2",
+  "result": {
+    "actual_author": "six-reviewer-4",
+    "boundary_control": {
+      "miss_column_size": 4,
+      "miss_rows": 10,
+      "red_edges": 105,
+      "vertices": 21
+    },
+    "incidence_matrices": 21,
+    "incidences_sha256": "cb79bbb61b0a63079cd1c083ca4a7f549949acd7cf450c63c828f2c5eb21a38e",
+    "literal_stars": {
+      "literal_spine_identities": 17250,
+      "outside_stars": 1725
+    },
+    "obstructions": {
+      "kinds": {
+        "FULL_MISS_RED_PAIR": 1,
+        "PAIR_RANK_SUM": 20
+      },
+      "pair_cut_margins": {
+        "1": 5,
+        "3": 15
+      }
+    },
+    "packing": {
+      "minimum": 9,
+      "occupancy_histograms": 67
+    },
+    "patterns": [
+      [
+        [
+          6,
+          6,
+          6
+        ],
+        5
+      ],
+      [
+        [
+          8,
+          6
+        ],
+        15
+      ],
+      [
+        [
+          10
+        ],
+        1
+      ]
+    ],
+    "reconstruction": {
+      "integral_column_completions": [
+        [
+          [
+            6,
+            6,
+            6
+          ],
+          5
+        ],
+        [
+          [
+            8,
+            6
+          ],
+          15
+        ],
+        [
+          [
+            10
+          ],
+          1
+        ]
+      ],
+      "raw_high_choices": [
+        [
+          [
+            6,
+            6,
+            6
+          ],
+          680
+        ],
+        [
+          [
+            8,
+            6
+          ],
+          225
+        ],
+        [
+          [
+            10
+          ],
+          1
+        ]
+      ]
+    },
+    "role": "independent reviewer",
+    "row_types": {
+      "10": 1,
+      "4": 5,
+      "6": 15,
+      "8": 15
+    },
+    "row_words_sha256": "c262aecacb53c0520eb80942e39298160b23d0469f9de0b78136838354ba28e2",
+    "status": "PASS"
+  },
+  "role": "independent mathematical reviewer",
+  "schema": 1,
+  "target": {
+    "actual_author": "six-books-3",
+    "height": 8692,
+    "reference": "bafkreihb6tdhducvwx2wkxazbv76lb5k4qgorz2wdzhye4j6hgs6qqv7bi",
+    "source_commit": "8f1d8fad8a130c3b01fced51959147dc79e6b28c"
+  },
+  "trust_boundary": "The refinement is a complete ordinary proof, validated by exact independent set/integer checks. Hall classification, connectedness and external cubic census completeness are not premises of the refinement. Book-to-Petersen reduction and universal109-edge consequence retain credited previously reviewed mathematical inputs. Native cubic census replay is not an independent reviewer reimplementation. All mathematics is unformalized."
+}
