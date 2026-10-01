@@ -1,0 +1,83 @@
+{
+  "audits": {
+    "lower": {
+      "strip": "lower",
+      "status": "INTERPOLATION_AND_DE_CASTELJAU_TRANSFERS_VERIFIED",
+      "bernstein_records": 315,
+      "dual_records": 0,
+      "old_bernstein_hash": "0bf20cd643dd56f5e08ade7d2a8c0963ef27200cf77dcfdea1aac9add57a1a46",
+      "old_dual_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "new_bernstein_hash": "9b4e8f823f77c4ca0215e78527b2aaa519dba9a7c4da07f37811150376d6b60e",
+      "new_dual_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "minimum_new_Bernstein_margin": "2254235446315117/3200000000000000000",
+      "maximum_new_dual_rhs": null,
+      "relaxation_limit": "853/20845400",
+      "off_grid_checks": 16,
+      "inherited_cover_cells": 550,
+      "inherited_clique_search_states": 17649,
+      "stability": {
+        "growth": "2837/32",
+        "epsilon": "3/40000000",
+        "delta": "8511/1280000000",
+        "errors": {
+          "0": "941/16",
+          "1": "139/4",
+          "2": "0",
+          "3": "77/2",
+          "4": "2837/32",
+          "5": "403/8",
+          "6": "2",
+          "7": "17"
+        }
+      },
+      "agent": "six-reviewer-5",
+      "role": "independent reviewer",
+      "trust_boundary": "Original cover/capacity/graph and old affine cancellation proofs are pinned dependencies; all changed margins are independently reconstructed."
+    },
+    "upper": {
+      "strip": "upper",
+      "status": "INTERPOLATION_AND_DE_CASTELJAU_TRANSFERS_VERIFIED",
+      "bernstein_records": 562,
+      "dual_records": 30,
+      "old_bernstein_hash": "be73a7bb41790321affc22b1f4c27a70ce18da18dae78182b98bd224c5bac498",
+      "old_dual_hash": "e4393e43e0351d3c0d8ab77165495e2c2f01bb7cb27bf23449afc67327aa9664",
+      "new_bernstein_hash": "feb053554f208887ade1f9afd52658560631e161aad170b39673aaa636ce0687",
+      "new_dual_hash": "462b7685e8b29addbda34a32f602420a9536589a9827bb6fa3ada991891a03fc",
+      "minimum_new_Bernstein_margin": "1628697452914914363/819200000000000000000000",
+      "maximum_new_dual_rhs": "-760486380871754439361664436121384733/1538687356355863934053017139001022800000",
+      "relaxation_limit": "868844/128783337075",
+      "off_grid_checks": 16,
+      "inherited_cover_cells": 1210,
+      "inherited_clique_search_states": 43133,
+      "stability": {
+        "growth": "2837/32",
+        "epsilon": "3/40000000",
+        "delta": "8511/1280000000",
+        "errors": {
+          "0": "941/16",
+          "1": "139/4",
+          "2": "0",
+          "3": "77/2",
+          "4": "2837/32",
+          "5": "403/8",
+          "6": "2",
+          "7": "17"
+        }
+      },
+      "agent": "six-reviewer-5",
+      "role": "independent reviewer",
+      "trust_boundary": "Original cover/capacity/graph and old affine cancellation proofs are pinned dependencies; all changed margins are independently reconstructed."
+    }
+  },
+  "controls": {
+    "agent": "six-reviewer-5",
+    "role": "independent reviewer",
+    "status": "ALL_GEOMETRY_AND_CORRUPTION_CONTROLS_PASS",
+    "unit_identity_checks": 64,
+    "contact_identity_checks": 104,
+    "chart_identity_grid_checks": 150,
+    "subcell_evaluation_checks": 12,
+    "substantive_corruptions_rejected": 6,
+    "limiting_certificate_failure_is_not_nonexistence": true
+  }
+}
