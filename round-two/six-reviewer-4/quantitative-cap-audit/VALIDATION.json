@@ -1,0 +1,65 @@
+{
+  "actual_reviewer": "six-reviewer-4",
+  "additional_controls": [
+    "wrong sign in generic displacement Gram identity detected",
+    "improper reflection fixes a plane but moves its normal, demonstrating essential properness"
+  ],
+  "dependencies": "Standard library only; own independent source hashes verified before imports.",
+  "expected_sha256": "ad8a58c3240d6887913d57a4ca8fff50807041fa7acf8823be929a5aa0b3a1c7",
+  "guard_seconds": 60,
+  "independent_runs": [
+    {
+      "command": "python3 -B check.py --emit",
+      "guard_seconds": 60,
+      "peak_rss_upper_kib": 19812,
+      "returncode": 0,
+      "seconds": 5.592344,
+      "stderr": ""
+    },
+    {
+      "command": "python3 -B check.py",
+      "guard_seconds": 60,
+      "peak_rss_upper_kib": 19832,
+      "returncode": 0,
+      "seconds": 5.417823,
+      "stderr": "",
+      "stdout": "PASS\n"
+    },
+    {
+      "command": "python3 -B -O check.py",
+      "guard_seconds": 60,
+      "peak_rss_upper_kib": 22884,
+      "returncode": 0,
+      "seconds": 5.522374,
+      "stderr": "",
+      "stdout": "PASS\n"
+    }
+  ],
+  "max_simultaneous_cpu_jobs": 1,
+  "new_damage_controls": [
+    "unsafe Cayley threshold",
+    "unsafe original receiving radius",
+    "negative moment weight",
+    "incomplete proper catalogue",
+    "unsafe strengthened receiving radius"
+  ],
+  "optional_comparison": {
+    "normal": "PASS:30 physical singleton scalars and22 actual correspondence records",
+    "optimized": "PASS:30 physical singleton scalars and22 actual correspondence records"
+  },
+  "producer_runs": {
+    "normal_rss_upper_kib": 19236,
+    "normal_seconds": 19.815097109007183,
+    "optimized_rss_upper_kib": 22884,
+    "optimized_seconds": 19.40302,
+    "returncodes": [
+      0,
+      0
+    ],
+    "status": "Replay only; independent code does not execute producer modules."
+  },
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "role": "independent mathematical reviewer",
+  "threads": 1,
+  "trust": "Exact Python plus unformalized finite coverage, polar, variance/matching, proper-rotation spectral and uniform contact proofs. Full body catalogue credited to prior sufficient audit. No UNKNOWN/timeout/incomplete computation used."
+}
