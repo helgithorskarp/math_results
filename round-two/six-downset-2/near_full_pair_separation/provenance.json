@@ -1,0 +1,183 @@
+{
+  "agent": "six-downset-2",
+  "role": "researcher",
+  "date_utc": "2026-10-01",
+  "status": "Exact finite author proof; ordinary bridges unformalized; independent review unclaimed",
+  "scope": {
+    "n": 16,
+    "r": 14,
+    "N": 65519,
+    "s": 32752,
+    "negative_hypotheses": "Real symmetric H, capped M<=I, centered C1=0; all disjoint M_AB with |A|,|B|>=3 and |A|+|B|<16 are zero",
+    "negative_conclusion": "No such matrix; no noninvariance or irrationality exception",
+    "positive_seed": "Centered capped rational H, lower rank65502, core projected lower floor1 and upper floor1/4",
+    "repair": "Every real0<t<=1/22568, rational for rationalt; cap, greatest lower rank65503, upper rank65518, full nonzero gap1/8; centering not imposed",
+    "not_claimed": [
+      "General H/I",
+      "Unbounded near-full separation",
+      "First failing order",
+      "Optimal repair interval",
+      "Historical priority",
+      "Independent review"
+    ]
+  },
+  "trusted_inputs": [
+    "The exact rational seed.json and dual.json",
+    "Ordinary lift/star equality, complete Boolean harmonic decomposition and convexity as proved in PROOF.md",
+    "CPython exact integer and fractions.Fraction arithmetic"
+  ],
+  "excluded_from_proof": [
+    "Floating SDP discovery",
+    "Solver statuses or failures",
+    "Private graph or source corpus",
+    "Literal allocation of the order65519 matrix",
+    "Finite-order extrapolation"
+  ],
+  "arithmetic_algorithms": [
+    "Integer Bareiss symmetric elimination with divisibility and null residual checks",
+    "Separate fractions.Fraction Schur elimination"
+  ],
+  "secondary_checks": [
+    "Direct two-row affine decoder vs RREF",
+    "Direct constant and point upper forms",
+    "Literal published D6,4 baseline at two parameters",
+    "Each algorithm separately tested on729 symmetric ternary3x3 matrices",
+    "Eight damage/guard controls in normal and optimized modes"
+  ],
+  "complete_sector_orders": [
+    14,
+    14,
+    13,
+    11,
+    9,
+    7,
+    5,
+    3,
+    1
+  ],
+  "complete_sector_multiplicities": [
+    1,
+    15,
+    104,
+    440,
+    1260,
+    2548,
+    3640,
+    3432,
+    1430
+  ],
+  "python": "3.12.14",
+  "dependencies": "Python standard library only",
+  "threads": 1,
+  "run_records": [
+    {
+      "mode": "normal",
+      "seconds": 5.7336797649622895,
+      "max_rss_KiB": 19644,
+      "returncode": 0,
+      "frozen_expected_compared": true,
+      "guard_seconds": 90
+    },
+    {
+      "mode": "optimized",
+      "seconds": 6.196128328971099,
+      "max_rss_KiB": 22300,
+      "returncode": 0,
+      "frozen_expected_compared": true,
+      "guard_seconds": 90
+    }
+  ],
+  "normal_optimized_full_evidence_byte_identical": true,
+  "fixture_hashes": {
+    "seed.json": "401068b8e2d435f9be2837c003e0f3e97849d327494f2d519e122adc646b5144",
+    "dual.json": "e1fd40f386c7c463ceb1474d74ab93e784e8366930c7858c62527d5cb52d79aa",
+    "expected.json": "400396a7fec325eefe383cdc0f0462d85db2628297124ec49ea221010b4daf5d"
+  },
+  "prior_sources": [
+    {
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-1/root-layer-cap-audit/REVIEW.md",
+      "source_commit": "f8eb657683fcd47c86ef5ad4697a4529720cb48d",
+      "path": "round-two/six-reviewer-1/root-layer-cap-audit/REVIEW.md",
+      "bytes": 16139,
+      "sha256": "6529313251b2d8185be5f839f099444832e3b64c97f0c6fe44045781b7ec110b"
+    },
+    {
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_all_order_cap_obstruction/PROOF.md",
+      "source_commit": "6dffbb940c10f415b71e275a45010a7141d1ee4e",
+      "path": "spectral_downset_all_order_cap_obstruction/PROOF.md",
+      "bytes": 14757,
+      "sha256": "fe729a9c4da11c633f7ae6e8d32194f77662504786fa97217f3555e4ed964aa1"
+    },
+    {
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_complement_only/PROOF.md",
+      "source_commit": "6dffbb940c10f415b71e275a45010a7141d1ee4e",
+      "path": "spectral_downset_complement_only/PROOF.md",
+      "bytes": 15321,
+      "sha256": "ecbe7cca92feb84b5673496eeb7e96fa81f660d98d01226f0411725e348fd0fa"
+    },
+    {
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_multiple_pair_caps/PROOF.md",
+      "source_commit": "6dffbb940c10f415b71e275a45010a7141d1ee4e",
+      "path": "spectral_downset_multiple_pair_caps/PROOF.md",
+      "bytes": 20614,
+      "sha256": "1e84d2feda99df583b2fa9a2806201cf38e336950d0f62f62056e5a7585dffe1"
+    },
+    {
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_near_cube/PROOF.md",
+      "source_commit": "6dffbb940c10f415b71e275a45010a7141d1ee4e",
+      "path": "spectral_downset_near_cube/PROOF.md",
+      "bytes": 16236,
+      "sha256": "ce1b111d11c196720efaa73d312c9ae0ef7c018d9606e5edbfab8fb7b6823614"
+    },
+    {
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_near_cube_review1/REVIEW.md",
+      "source_commit": "6dffbb940c10f415b71e275a45010a7141d1ee4e",
+      "path": "spectral_downset_near_cube_review1/REVIEW.md",
+      "bytes": 20570,
+      "sha256": "6a74064dd7be0869a175caf65ed76c10f10ac18d7b087b4d2faa69cee3e804c1"
+    },
+    {
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_six_exact/KERNEL_TRADE_PROOF.md",
+      "source_commit": "6dffbb940c10f415b71e275a45010a7141d1ee4e",
+      "path": "spectral_downset_six_exact/KERNEL_TRADE_PROOF.md",
+      "bytes": 34836,
+      "sha256": "429571743e68d4d4aa94a49367a14fb49e6d44e9f949d18b2658bb8a781e3323"
+    },
+    {
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_six_exact/REGULAR_SIX_PROOF.md",
+      "source_commit": "6dffbb940c10f415b71e275a45010a7141d1ee4e",
+      "path": "spectral_downset_six_exact/REGULAR_SIX_PROOF.md",
+      "bytes": 15427,
+      "sha256": "cb6d624943d4ac28fa9f46476c12586b1e883964129d2a9ab9d58f42eb5eea5e"
+    },
+    {
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/spectral_downset_uniform_four/PROOF.md",
+      "source_commit": "6dffbb940c10f415b71e275a45010a7141d1ee4e",
+      "path": "spectral_downset_uniform_four/PROOF.md",
+      "bytes": 25783,
+      "sha256": "45b77ca08196fce3a91117c88c630dbc6cbd06962623f13056fa0d297f646bb6"
+    },
+    {
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/spectral_downsets_structural_certificates/PROOF.md",
+      "source_commit": "6dffbb940c10f415b71e275a45010a7141d1ee4e",
+      "path": "spectral_downsets_structural_certificates/PROOF.md",
+      "bytes": 18909,
+      "sha256": "51e97f0824af3facfe7a80ecda6d0c567d2fa6fcb42d417ca3629fafd3bb8375"
+    }
+  ],
+  "primary_literature": [
+    {
+      "url": "https://arxiv.org/abs/2609.28404",
+      "checked_live_utc": "2026-10-01",
+      "status": "v1 September23; general H and I unresolved in Section4"
+    },
+    {
+      "url": "https://arxiv.org/html/2609.28404v1#S4",
+      "checked_live_utc": "2026-10-01"
+    },
+    {
+      "url": "https://arxiv.org/abs/1507.02713",
+      "purpose": "Boolean harmonic background"
+    }
+  ]
+}
