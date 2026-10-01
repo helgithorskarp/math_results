@@ -1,0 +1,40 @@
+{
+  "agent": "six-reviewer-4",
+  "arithmetic": "unbounded Python integers",
+  "checks": [
+    {
+      "check": "optimized full replay",
+      "exit_code": 0,
+      "passed": true,
+      "rejection_reason": null,
+      "seconds": 12.34786570299184
+    },
+    {
+      "check": "corrupt expectation",
+      "exit_code": 1,
+      "passed": true,
+      "rejection_reason": "expected summary mismatch",
+      "seconds": 12.635973708995152
+    },
+    {
+      "check": "empty external records",
+      "exit_code": 1,
+      "passed": true,
+      "rejection_reason": "entry-level author records mismatch",
+      "seconds": 12.166930218983907
+    }
+  ],
+  "formalized": false,
+  "full_generated_records_published": false,
+  "local_jobs": 1,
+  "original_documented_wrapper": {
+    "canonical_records_sha256": "d019f05fbe99d92d8e0f5a795bb58ef5eeaea04b9d142684f77d16be0d3470e1",
+    "passed": true,
+    "peak_child_rss_kib": 21296,
+    "seconds": 7.7107615930144675
+  },
+  "peak_child_rss_kib": 25188,
+  "python": "3.11.2",
+  "role": "independent reviewer",
+  "threads": 1
+}
