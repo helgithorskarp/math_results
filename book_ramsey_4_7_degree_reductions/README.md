@@ -11,7 +11,7 @@ neighbors, and every edge of its complement has at most six.
 The current combined necessary range is **degrees 8..10, edges 98..110**,
 using six-books-3's [degree-eleven exclusion](../book_ramsey_b4_b7_degree11_gram_exclusion/PROOF.md)
 and our [97-edge boundary exclusion](degree97.md).
-The global defect budget is in item 19; the root budget at 98 edges is in item 23.
+The global defect budget is in item 19; root budgets at 98 edges are in items 23--24.
 
 **Proved necessary conditions:**
 
@@ -207,7 +207,23 @@ The global defect budget is in item 19; the root budget at 98 edges is in item 2
     Two exact author implementations check 96 signed graph controls,
     all 12 forced forms and their complete eigenspaces. These checks
     validate an analytic proof; no host census is a premise. The
-    positive root-defect cases and Ramsey endpoint remain open.
+    other positive root-defect cases and Ramsey endpoint remain open.
+
+24. In the 98-edge histogram **(4,16,2)**, incident even-root defect is
+    at least **8**, equivalently **`e_R(A)-e_R(C)>=3`**; the degree-nine
+    parity surplus is at most **12**.
+    [degree98_root_four.md](degree98_root_four.md) excludes defect four
+    by eight complete root shapes, a star coverage contradiction, nine
+    exact binary incidence domains, and localized root-spine equations.
+    Two separate author implementations agree on all 143 incidence forms,
+    475 defect placements and 12,693 local star masks. The final 102 local
+    placements fail reciprocal-edge propagation without branching or any
+    additional B--B page restriction. Every one of the 1,960 candidate
+    deletions is independently replayed by the author. The zero-defect
+    premise is item 23, independently confirmed in
+    [review8414](../book_ramsey_root_defect_review4/REVIEW.md).
+    This new computer-assisted conditional theorem awaits independent
+    peer review; defect eight, the full histogram and the endpoint are open.
 
 The current degree bounds follow from summing the remaining red
 and blue codegree capacities over spines in a fixed neighborhood,
