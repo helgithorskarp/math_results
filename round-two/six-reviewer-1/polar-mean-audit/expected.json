@@ -1,0 +1,127 @@
+{
+  "reviewer": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "target_ref": "bafkreidm3pbjbv5tzj34fehpdi2njyutz7xgczubba2yn4twlg54xb7mhq",
+  "scalar_certificate": {
+    "closed_integral_interpolation_points": 17,
+    "quotient_interpolation_points": 16,
+    "full_defect_identity": true,
+    "power_sha256": {
+      "H": "3c5518e25bdac77b4c316243483dfc2d5f3b4c7b2dfd32fdb748b8ac9bfe232e",
+      "T": "83e339772196354d21f7dc33b77af8e50089f4682351fae6ffb857e6438564b1",
+      "P": "b1c49eb40bbb3f49f56740b30ff1530f53552408a48c4ae1b536176f9bed6ee8",
+      "R": "71fd21f8813a90e2000bda85d1f4728e71b9812582a72ae483d8b66f43a8af79",
+      "W": "d430daf76c101781b93efc62d88d31a50b4a24ce9cdc0aa2af8d9a16b7f51e29"
+    },
+    "original_bernstein": {
+      "R": [
+        "0",
+        "37/135",
+        "3358/6615",
+        "9/13",
+        "71062/85995",
+        "173548/189189",
+        "309476/315315",
+        "84146/81081",
+        "89000/81081",
+        "11051/9555",
+        "6868/5733",
+        "382/315",
+        "4988/4095",
+        "398/315",
+        "64/45",
+        "16/9"
+      ],
+      "W": [
+        "142/45",
+        "14501/4725",
+        "19108/6615",
+        "373787/143325",
+        "962138/429975",
+        "34928/19305",
+        "15136/11025",
+        "1996334/2027025",
+        "279148/405405",
+        "784747/1576575",
+        "124952/315315",
+        "7346/20475",
+        "2564/6825",
+        "734/1575",
+        "152/225",
+        "16/15"
+      ]
+    },
+    "original_sign_coefficients": 32,
+    "original_W_minimum": "7346/20475",
+    "refined_coefficient": "47/100",
+    "refined_intervals": [
+      "[0,1/2]",
+      "[1/2,1]"
+    ],
+    "refined_sign_coefficients": 32,
+    "refined_bernstein": [
+      [
+        "2777/900",
+        "285983/94500",
+        "1297069/441000",
+        "16221967/5733000",
+        "370373531/137592000",
+        "1041817/411840",
+        "59182117/25225200",
+        "126518923/58968000",
+        "955353431/494208000",
+        "1537833181/896896000",
+        "1610201891/1076275200",
+        "62777317/48921600",
+        "4231111421/3913728000",
+        "161465203/180633600",
+        "10390151/14336000",
+        "471797/819200"
+      ],
+      [
+        "471797/819200",
+        "765343/1792000",
+        "269632733/903168000",
+        "753311633/3913728000",
+        "53875387/489216000",
+        "20889331/403603200",
+        "22699631/1345344000",
+        "7799537/1729728000",
+        "17730343/1297296000",
+        "22099409/504504000",
+        "64115/672672",
+        "556627/3276000",
+        "36971/136500",
+        "4231/10500",
+        "644/1125",
+        "59/75"
+      ]
+    ],
+    "refined_minimum": "7799537/1729728000",
+    "interval_composition_matches_de_Casteljau": true
+  },
+  "variational_controls": {
+    "complete_extremum_polynomial_identities": 4,
+    "two_loss_controls": 2
+  },
+  "physical_controls": {
+    "pointwise_saturation_controls": 256,
+    "exact_Gaussian_integral_controls": 64,
+    "nonvacuous_refined_mean_controls": 2,
+    "zero_abstract_inputs_included": true
+  },
+  "communication_controls": {
+    "exact_disk_polynomial_communication_controls": 3,
+    "critical_roots_not_numerically_solved": true
+  },
+  "sharp_low_mean_defect_family": {
+    "abstract_family": "q_j=exp(pi*i*j/4), j=0,...,7",
+    "exact_product_identity": "product(a+h*q_j)=a^8-h^8",
+    "exact_integral": "C(a)=a^8-(1-a^2)^8/9",
+    "limit_as_a_decreases_to_zero": "-1/9",
+    "sharp_uniform_low_mean_defect": "8/9",
+    "actual_disk_polynomial_realization_claimed": false
+  },
+  "first_power_endpoint_proved": false,
+  "trust_boundary": "Written uniform extremum/calculus/communication proof plus exact finite polynomial identities; controls do not prove a general inequality by sampling."
+}

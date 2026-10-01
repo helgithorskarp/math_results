@@ -1,0 +1,74 @@
+{
+  "reviewer": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "target_ref": "bafkreidm3pbjbv5tzj34fehpdi2njyutz7xgczubba2yn4twlg54xb7mhq",
+  "target_height": 8533,
+  "selection_index": 8572,
+  "complete_target_index": 8576,
+  "reviewed_source_commit": "935ec2f52affd0968be4649b89abbd42f691e633",
+  "python": "CPython 3.11.2",
+  "dependencies": "Python standard library only",
+  "independent_methods": [
+    "Closed antiderivative evaluation at17 rational points and exact Newton interpolation with degree bounds",
+    "Independent quotient interpolation at16 points, then full double-zero multiplication identity",
+    "Triangular elimination against literal Bernstein basis and complete inverse",
+    "Horner interval composition versus independent de Casteljau restriction for all32 improved coefficients",
+    "Written global one-loss variational proof, calculus/concavity, physical envelope saturation",
+    "Exact eighth-root-of-unity product in Q[w]/(w^4+1) for sharp abstract low-mean defect",
+    "Exact Gaussian disk-polynomial communication checks without numerical critical roots"
+  ],
+  "independent_runs": [
+    {
+      "optimized": false,
+      "seconds": 0.316,
+      "maxrss_KiB": 17456,
+      "full_output_matches": true
+    },
+    {
+      "optimized": true,
+      "seconds": 0.416,
+      "maxrss_KiB": 20856,
+      "full_output_matches": true
+    }
+  ],
+  "independent_output_sha256": "500494ed428220f28f85f941e4a90c74f8b785ad0a44a0826d2b0ee1a77dcef6",
+  "author_replays": [
+    {
+      "optimized": false,
+      "seconds": 0.667,
+      "maxrss_KiB": 20856,
+      "complete_fixture_matches": true,
+      "rejected_corruptions": 7
+    },
+    {
+      "optimized": true,
+      "seconds": 0.817,
+      "maxrss_KiB": 20856,
+      "complete_fixture_matches": true,
+      "rejected_corruptions": 7
+    }
+  ],
+  "author_files": {
+    ".gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+    "LITERATURE.md": "db670f9ec348eee38e6a09a3b1c2cda71aa1e549bb9cd11c0c0bba4910357cac",
+    "PROOF.md": "179088e975d352f07f826c958a636d53323c96a8a32711d7b97cbfa4c0140d53",
+    "README.md": "d6ecf987cfb9b6c7025df8d803397949d9696d3d0ddd1c61c97148e4a63957b1",
+    "expected.json": "6c0cd4bdd374642a9a5f962f021c9b4ea51f509d8f91eee92b46a72fd3c5bd94",
+    "verify.py": "163c8c3d484ee663d08c3f1d9c4ca95dc278f797d982a37068bff1038c48c158"
+  },
+  "limits": {
+    "local_cpu_jobs_at_once": 1,
+    "native_threads": 1,
+    "subprocess_deadline_seconds": 60,
+    "scope": "existing1CPU/2GiB",
+    "resource_escalation": false
+  },
+  "rss_note": "Child maxima are high-water upper bounds within each sequential wrapper. All checks used at most20856KiB.",
+  "primary_literature": [
+    "https://arxiv.org/html/2609.19126",
+    "https://arxiv.org/abs/2609.19126",
+    "https://arxiv.org/html/2508.10341v3",
+    "https://terrytao.wordpress.com/2026/08/12/a-digestion-of-the-proof-of-sendovs-conjecture/"
+  ],
+  "trust_boundary": "Written unformalized uniform variational/calculus/communication proof and CPython exact arithmetic. Independent code imports no author executable or data unless optional comparison flag is used. Finite physical examples supplement, not establish, the universal proof."
+}
