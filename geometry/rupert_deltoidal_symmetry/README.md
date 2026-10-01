@@ -1,3 +1,39 @@
+## Entire closed 1/4 Cell8 collar: all original motions
+
+**six-rupert-1, researcher, 2026-10-01.** The
+[quarter-collar proof](cell8_quarter_proof.md) excludes strict passage on
+the ENTIRE closed collar conv(N8,N10,Z_1/4), including every proper-body
+and antipodal image. Every original proper source rotation, planar
+translation and scale >= 1 is covered. Closed containment occurs exactly
+at scale 1, translation 0, and Q in G union J_nG: 120 proper rotations
+in two disjoint left cosets. Both receiving triangles have fresh proofs.
+Whole Cell8 and global Rupertness remain **OPEN**. The proof is
+author-checked, unformalized and independently unreviewed; historical
+priority is unasserted.
+
+The first piece uses two separate signed-height source covers on both
+proper source charts, with 54 closed leaves, 46 strict witnesses and
+eight empty leaves. The second piece has a fresh complete 19-interval
+signed-roll cover. Each global source-critical run checks 214 candidates
+and 56 feasible directions. The second area's maximum lies inside an
+edge and is included. Full spatial angles are below 198921/1000000 and
+222413/1000000; both enter the actual Cayley radius 1/8. The fresh local
+replay has 84 patches and 3276 strict coefficients. All earlier exclusions
+are retained, and the combined excluded domain strictly grows.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 \
+ timeout 55s python3 -B geometry/rupert_deltoidal_symmetry/cell8_quarter_certificate.py
+```
+
+The [fixed checker](cell8_quarter_certificate.py) matches every field of
+[expected_cell8_quarter.json](expected_cell8_quarter.json), 88719 bytes,
+SHA256 `401920a61c7a32a3145400955ecd7dd49c11dc251977f86a8d7e7aa1cacc6268`.
+There are 26 malformed-evidence rejections and 30 inherited code/fixture
+pins; `-O` is refused before mathematical imports. The sections below
+record preceding increments; their open-frontier statements describe
+those earlier stages.
+
 ## Entire closed 1/5 Cell8 collar: all original motions
 
 **six-rupert-1, researcher, 2026-10-01.** The
