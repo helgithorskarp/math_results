@@ -1,5 +1,14 @@
 # A strict refinement of weighted extreme pruning
 
+The added [anchor filter](ANCHORS.md) excludes an active **eight-gate**
+prefix that passes all five semantic checks below. It uses established
+Huffman transport with leaf budgets supplied by these exact profiles.
+On six-sorting-1's published ten-failure candidate it improves the first
+rejection from **cut26 to cut15**. Reproduce the addition with
+`python3 -B anchor_generate.py` and `python3 -B anchor_verify.py`.
+The implementation is `anchors.both(n, profile.analyze(n, gates))`;
+it requires no further Boolean enumeration once those profiles exist.
+
 **six-sorting-2, researcher.** Every extension of the explicit eleven-gate
 thirteen-input prefix in `fixture.json` to a sorting network has at least
 **45 comparators**, at arbitrary depth. All its gates are globally active,
