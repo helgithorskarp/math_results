@@ -1,0 +1,91 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "target_height": 8178,
+  "target_ref": "bafkreicfb27pbxwhctew6s6wkni4yf4pqfsevksh5yh3wtgunz6nqbediq",
+  "reviewed_source_commit": "7a9687b2e2bcd0214be30090421382c97f947ee7",
+  "inputs": [
+    {
+      "path": "heesch_polyomino_cell_template_tiling/.gitignore",
+      "bytes": 13,
+      "sha256": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+    },
+    {
+      "path": "heesch_polyomino_cell_template_tiling/README.md",
+      "bytes": 1791,
+      "sha256": "2c342095aea0fbdbc2a70406efed93efe05dcbbe0506b1af9fa6374d1cdefe22"
+    },
+    {
+      "path": "heesch_polyomino_cell_template_tiling/certificate.json",
+      "bytes": 101215,
+      "sha256": "e42622028ac53dc6f39de632d7dcbb958d628788a7a2178cdca039ff00dfd6ba"
+    },
+    {
+      "path": "heesch_polyomino_cell_template_tiling/check.py",
+      "bytes": 10995,
+      "sha256": "d0230fc42e174cbbf71f36b61e529ce99df694fdaba211db2db0c140c619bf90"
+    },
+    {
+      "path": "heesch_polyomino_cell_template_tiling/expected.json",
+      "bytes": 986,
+      "sha256": "926b185b001d50a112762d20e49d44b0daf8de3b5bcde6c27b991987c21f68fa"
+    },
+    {
+      "path": "heesch_polyomino_cell_template_tiling/proof.md",
+      "bytes": 7618,
+      "sha256": "d0d315417cf3601c1cbd34597e4217a46366f8e956de610121551f201e547886"
+    },
+    {
+      "path": "heesch_polyomino_cell_template_tiling/two_coronas.svg",
+      "bytes": 3964,
+      "sha256": "4cfb016ee6d1e58ec953bb6794908f65331d309499255b9f34cbe596a8c60e2d"
+    }
+  ],
+  "input_trust": "The pinned certificate is explicit untrusted mathematical data; all geometry, gate meanings and RUP steps are independently reconstructed. No author code or solver is imported.",
+  "selection_graph_index": 8239,
+  "primary_sources": [
+    "https://arxiv.org/abs/2105.09438",
+    "https://cs.uwaterloo.ca/~csk/heesch/",
+    "https://github.com/isohedral/heesch-sat",
+    "https://www.cs.utexas.edu/~marijn/drup/",
+    "https://www.cs.utexas.edu/~marijn/publications/trim.pdf"
+  ],
+  "validation": [
+    {
+      "task": "independent normal",
+      "seconds": 7.394971932983026,
+      "sha256": "87e1df51df74266d7742d79185bd2ce31088d18ae1840893dedaa3f3e14f0906"
+    },
+    {
+      "task": "independent optimized",
+      "seconds": 6.52794277103385,
+      "sha256": "87e1df51df74266d7742d79185bd2ce31088d18ae1840893dedaa3f3e14f0906"
+    },
+    {
+      "task": "author normal",
+      "seconds": 1.3791811550036073,
+      "sha256": "926b185b001d50a112762d20e49d44b0daf8de3b5bcde6c27b991987c21f68fa"
+    },
+    {
+      "task": "author optimized",
+      "seconds": 1.6046283470350318,
+      "sha256": "926b185b001d50a112762d20e49d44b0daf8de3b5bcde6c27b991987c21f68fa"
+    }
+  ],
+  "proved_refinement": "For every nonempty S subset104-cell U, the specified whole19-copy packing/two-surround premises force all25 core cells, then the four-copy period tiles.128-step RUP prefix from geometric premises only;1794-clause strengthened formula and330-step refutation.",
+  "strengthening_canonical_sha256": "90e91caa0e0d88512aa9c62ac7b262b87fd7bab01d15b53fba6bc22e7d13c6aa",
+  "final_independent_runs": [
+    {
+      "optimized": false,
+      "seconds": 3.2377259570057504,
+      "sha256": "87e1df51df74266d7742d79185bd2ce31088d18ae1840893dedaa3f3e14f0906",
+      "child_peak_rss_kib": 22292
+    },
+    {
+      "optimized": true,
+      "seconds": 3.8050676729762927,
+      "sha256": "87e1df51df74266d7742d79185bd2ce31088d18ae1840893dedaa3f3e14f0906",
+      "child_peak_rss_kib": 24708
+    }
+  ]
+}

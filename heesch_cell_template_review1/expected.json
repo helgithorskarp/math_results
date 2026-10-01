@@ -1,0 +1,1562 @@
+{
+  "agent": "six-reviewer-1",
+  "baseline_disc_census": [
+    {
+      "boundary_cycles": 1,
+      "boundary_edges": 40,
+      "cells": 60,
+      "edges": 140,
+      "euler": 1,
+      "vertices": 81
+    },
+    {
+      "boundary_cycles": 1,
+      "boundary_edges": 120,
+      "cells": 420,
+      "edges": 900,
+      "euler": 1,
+      "vertices": 481
+    },
+    {
+      "boundary_cycles": 1,
+      "boundary_edges": 222,
+      "cells": 1140,
+      "edges": 2391,
+      "euler": 1,
+      "vertices": 1252
+    }
+  ],
+  "baseline_prefix_cells": [
+    60,
+    420,
+    1140
+  ],
+  "classified_clauses": {
+    "failure": 1,
+    "gate": 815,
+    "geometric": 1002
+  },
+  "clauses": 1818,
+  "collision_gates": 53,
+  "controls": {
+    "empty_prototype_control": "nonemptiness is necessary; checked separately in core-removal prefix",
+    "malformed_controls_rejected": [
+      "changed eroded core",
+      "shifted root frame",
+      "wrong period lattice",
+      "unjustified negative core premise",
+      "missing gate biconditional row",
+      "missing final contradiction",
+      "out-of-domain proof literal",
+      "vertex pinch",
+      "unit-cell hole"
+    ],
+    "period_translation_controls": 2
+  },
+  "copy_frames": 19,
+  "core_cells": 25,
+  "core_free_geometric_clauses": 977,
+  "core_removal": {
+    "anchor": [
+      1,
+      3
+    ],
+    "anchor_variable": 15,
+    "canonical_certificate_sha256": "90e91caa0e0d88512aa9c62ac7b262b87fd7bab01d15b53fba6bc22e7d13c6aa",
+    "combined_rup_additions": 330,
+    "core_free_formula_clauses": 1794,
+    "exception_guard_clauses": [
+      [
+        -26,
+        34,
+        102
+      ],
+      [
+        -100,
+        34,
+        102
+      ]
+    ],
+    "exceptions": [
+      [
+        2,
+        6
+      ],
+      [
+        10,
+        8
+      ]
+    ],
+    "geometric_prefix_additions": 128,
+    "nonemptiness_essential_control": true
+  },
+  "gap_gates": 240,
+  "gate_truth_table_cases": 2232,
+  "geometric_packing_clauses": 80,
+  "geometric_surround_clauses": 897,
+  "nonconflicting_seeds_force_core": 98,
+  "nonconflicting_seeds_force_prototype": 0,
+  "period_index": 240,
+  "pool_cells": 104,
+  "prototype_cells": 60,
+  "role": "independent mathematical reviewer",
+  "rup_additions": 202,
+  "rup_epochs": [
+    1,
+    3,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    3,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    5,
+    3,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    7,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    7,
+    3,
+    1,
+    1,
+    1,
+    1,
+    8,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    3,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    4,
+    1,
+    1,
+    1,
+    2,
+    3,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    3,
+    1,
+    1
+  ],
+  "seed_audit": [
+    {
+      "cell": [
+        -1,
+        1
+      ],
+      "conflict": true,
+      "core_forced": false,
+      "epochs": 3,
+      "negative": "11428663349819933439391738890244",
+      "positive": "592314410080487440897",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        -1,
+        2
+      ],
+      "conflict": true,
+      "core_forced": false,
+      "epochs": 2,
+      "negative": "11409476488727413700494834533376",
+      "positive": "288230382606925826",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        -1,
+        3
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "10141204802416131022332331295233",
+      "positive": "19923154184586396285412622340",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        -1,
+        4
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "1180591620717411303680",
+      "positive": "425598565841656955751415816",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        -1,
+        5
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "2361183276619194695808",
+      "positive": "116264671747763715673473040",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        -1,
+        6
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "5070602405635284159225218990144",
+      "positive": "116415861262191839158517792",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        0,
+        1
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "302231454974026037854240",
+      "positive": "116113556020311887026634816",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        0,
+        2
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "604462909842498959441936",
+      "positive": "116113556020311887026634880",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        0,
+        3
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "1208925819614629174706184",
+      "positive": "116113556020311887026635008",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        0,
+        4
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 9,
+      "negative": "2417851639229258349412356",
+      "positive": "270856060930984421389025792",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        0,
+        5
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 9,
+      "negative": "4835703350516110736752642",
+      "positive": "116189113884037801350054912",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        0,
+        6
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "10141214473232536244195099213825",
+      "positive": "116113740487752624122152960",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        1,
+        1
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "137438953472",
+      "positive": "116113556020311887026638848",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        1,
+        2
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "68719476736",
+      "positive": "116113556020311887026642944",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        1,
+        3
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        1,
+        4
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        1,
+        5
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "10141204801973409164563302055936",
+      "positive": "116113556020311887026700288",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        1,
+        6
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "1268269570543019996813505594370",
+      "positive": "116113574539113554774245376",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        2,
+        -1
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "79228162514264337594617692160",
+      "positive": "116113556024815486654267392",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        2,
+        0
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "536870912",
+      "positive": "116113556020311887027159040",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        2,
+        1
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "268435456",
+      "positive": "116113556020311887027683328",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        2,
+        2
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "134217728",
+      "positive": "116113556020311887028731904",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        2,
+        3
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        2,
+        4
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        2,
+        5
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "5070602703144372509644106498048",
+      "positive": "116113556020311887043411968",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        2,
+        6
+      ],
+      "conflict": false,
+      "core_forced": false,
+      "epochs": 1,
+      "negative": "673439985834156676859710930944",
+      "positive": "33554432",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        2,
+        7
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "89135916134951367250318196737",
+      "positive": "20387381699322917488194273280",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        3,
+        -1
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "158456325028528675187089997824",
+      "positive": "116113556020320683253874688",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        3,
+        0
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "1048576",
+      "positive": "116113556020311887295070208",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        3,
+        1
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "524288",
+      "positive": "116113556020311887563505664",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        3,
+        2
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "262144",
+      "positive": "116113556020311888100376576",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        3,
+        3
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        3,
+        4
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        3,
+        5
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "2535301200456458802993406410752",
+      "positive": "116113556020311895616569344",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        3,
+        6
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "316912650057057350374175801344",
+      "positive": "116113556020311904206503936",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        3,
+        7
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "4955991397510172301707968512",
+      "positive": "270856060930984455748763648",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        4,
+        -1
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "316912650057057350374175809536",
+      "positive": "116113556020311972925980672",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        4,
+        0
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "2535301200456458802993406414848",
+      "positive": "116113556020312033055522816",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        4,
+        1
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        4,
+        2
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        4,
+        3
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 4,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        4,
+        4
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 4,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        4,
+        5
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 4,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        4,
+        6
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "158456325028528675187087900672",
+      "positive": "116113556020320683119656960",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        4,
+        7
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "2475880078570760549798248448",
+      "positive": "116113556020329479212679168",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        5,
+        -1
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "633825904577024508062938955920",
+      "positive": "116113556020347071398723584",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        5,
+        0
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "5070602703144372509644106498144",
+      "positive": "116113556020382255787589632",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        5,
+        1
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        5,
+        2
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        5,
+        3
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 4,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        5,
+        4
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 4,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        5,
+        5
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 4,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        5,
+        6
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "79228162514264337593543950336",
+      "positive": "116113556024815486654005248",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        5,
+        7
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "1237940039285380274899124224",
+      "positive": "116113556029319086281375744",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        5,
+        8
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "19342813113834066795298816",
+      "positive": "116113556038326285536116736",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        5,
+        9
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "39614090701865134536062402560",
+      "positive": "116113565279712720900374528",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        6,
+        -1
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "1268269570543019996813505594370",
+      "positive": "116113574539113554774245376",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        6,
+        0
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "10141204801973409164563302057985",
+      "positive": "116113556164427075102556160",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        6,
+        1
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        6,
+        2
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        6,
+        3
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        6,
+        4
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        6,
+        5
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        6,
+        6
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "39614081257132168796771975168",
+      "positive": "116113565243683923881410560",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        6,
+        7
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "618970019642690137449562112",
+      "positive": "116113574467055960736186368",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        6,
+        8
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "9671406556917033397649408",
+      "positive": "116113592913800034445737984",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        6,
+        9
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "4722366482869645213696",
+      "positive": "116113629807288181864841216",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        7,
+        -1
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "10141214473232536244195099213825",
+      "positive": "116113740487752624122152960",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        7,
+        0
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "1267655435931579917607440089090",
+      "positive": "116189409031942980702880768",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        7,
+        1
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 9,
+      "negative": "19809458480205313656735399940",
+      "positive": "270856651226794780094677504",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        7,
+        2
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 10,
+      "negative": "310693935640959697966596104",
+      "positive": "10019635050894974803630932224",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        7,
+        3
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "151115727451828646838288",
+      "positive": "116115917203553321849241600",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        7,
+        4
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "73786976294838206496",
+      "positive": "116118278386794756671848448",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        7,
+        5
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "36028797018963968",
+      "positive": "116123000753277626317062144",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        7,
+        6
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        7,
+        7
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        7,
+        8
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "4835703278458516698824704",
+      "positive": "116189113884037801350053888",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        7,
+        9
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "2361183241434822606848",
+      "positive": "116264671747763715673473024",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        8,
+        -1
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "5070602405635284159225218990144",
+      "positive": "116415861262191839158517792",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        8,
+        0
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 12,
+      "negative": "633825302475297977401939591296",
+      "positive": "5068629291799092129857323024",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        8,
+        1
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 11,
+      "negative": "9903521494874662951031144704",
+      "positive": "5378567648802792684522618888",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        8,
+        2
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 11,
+      "negative": "10141359544921041694901053424129",
+      "positive": "24877332193367146643358531588",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        8,
+        3
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "75557863725914323420160",
+      "positive": "120949259298770403725459456",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        8,
+        4
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "36893488147419105280",
+      "positive": "125784962577228920424284160",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        8,
+        5
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "18014398509481984",
+      "positive": "135456369134145953821933568",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        8,
+        6
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        8,
+        7
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "0",
+      "positive": "116113556020311887026634752",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        8,
+        8
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "2417851639229258349412352",
+      "positive": "270856060930984421389025280",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        8,
+        9
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "1180591620717411303424",
+      "positive": "425598565841656955751415808",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        9,
+        4
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 7,
+      "negative": "18446744073709682688",
+      "positive": "735083575663002024476196864",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        9,
+        5
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "9007199254740992",
+      "positive": "1354053595305692161925758976",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        9,
+        6
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "17592186044416",
+      "positive": "2591993634591072436824883200",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        9,
+        7
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "34359738368",
+      "positive": "5067873713161832986623131648",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        9,
+        8
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 8,
+      "negative": "1208925819614629241815040",
+      "positive": "10019633870303354086219628544",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        9,
+        9
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "590295810358705651713",
+      "positive": "19923154184586396285412622336",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        10,
+        4
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "9259400833907294208",
+      "positive": "39730204257885446423089037312",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        10,
+        5
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "4503599694741504",
+      "positive": "79344276070284649481644326912",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        10,
+        6
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "8796227239936",
+      "positive": "158572438584548987074116632576",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        10,
+        7
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "85899345920",
+      "positive": "317028763613077662261202444288",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        10,
+        8
+      ],
+      "conflict": false,
+      "core_forced": false,
+      "epochs": 1,
+      "negative": "604462909842498992996352",
+      "positive": "633825300114114700748351602688",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        10,
+        9
+      ],
+      "conflict": true,
+      "core_forced": false,
+      "epochs": 3,
+      "negative": "4836146216594620958244867",
+      "positive": "1267650600230248001216329057280",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        11,
+        7
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 5,
+      "negative": "146028888064",
+      "positive": "2535417314012479114880433049600",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        11,
+        8
+      ],
+      "conflict": false,
+      "core_forced": true,
+      "epochs": 6,
+      "negative": "302231454974026054631456",
+      "positive": "5070718514468937917873839456320",
+      "prototype_forced": false
+    },
+    {
+      "cell": [
+        11,
+        9
+      ],
+      "conflict": true,
+      "core_forced": false,
+      "epochs": 2,
+      "negative": "12090291718463868352135175",
+      "positive": "10141204801826123591340058003968",
+      "prototype_forced": false
+    }
+  ],
+  "seed_conflicts": 4,
+  "self_collision_variables": [],
+  "status": "EXACT_INDEPENDENT_TEMPLATE_AUDIT",
+  "variables": 397
+}
