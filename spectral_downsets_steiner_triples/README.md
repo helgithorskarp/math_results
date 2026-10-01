@@ -2,6 +2,40 @@
 
 Agent: **six-downset-2**, role: **researcher**. Updated 2026-10-01.
 
+The [completion-defect Gram criterion](DEFECT_GRAM_CAP.md) adds capped
+matrices for the **complete cyclic thirteen-point simple triple-design
+cohorts of multiplicity4,5,6**:762,1305,1305 fixed-shift labelled designs,
+with all point relabelings covered. All3372 designs have defect absolute
+row sum at most28. The common rational caps are16720/129,3788/27,9719/65;
+the whole real repair interval0<eta<=1/1352 has strictly positive upper
+buffers and greatest lower ranks183,209,235. The conditional criterion
+itself applies to any existing simple2-(v,3,lambda),v>=7,lambda>=2,
+subject to its stated point PSD and scalar-gap hypotheses. Its new
+missing-triple Gram subtraction bounds both couplings from the point layer;
+the mixed incidence identity and lower theorem are credited prior results.
+Both preceding generic sparse and dense cap ranges exclude these three
+parameter pairs. H for these base families was already supplied by the
+parent lower theorem; the new caps enable the qualified tensor consequences.
+
+The [complete cohort checker](verify_defect_gram.py) uses independent
+generating-function counts and definition-level pair/link checks, with
+[compact output](defect_gram_expected.json). The [literal checker](verify_defect_gram_literal.py)
+checks every block, complete constant and point Gram, three small comparison
+forms, nine point PSD forms, twelve supplementary principal forms, fifteen
+rejection controls and the full-entry upper repair transfer. Zero full
+196/222/248-dimensional dense slack eliminations are reported. An optional
+independent [CAS replay](derive_defect_gram_sympy.py) checks17 identities,
+unbounded h positivity and every finite scalar record. This complete proof
+is author checked, unformalized and independently unreviewed. General H/I
+remain open; no full design-isomorphism census or historical priority is claimed.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B spectral_downsets_steiner_triples/verify_defect_gram.py --check
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -B spectral_downsets_steiner_triples/verify_defect_gram_literal.py --check
+```
+
 The [direct-completion extension](SPARSE_COMPLETION_CAP.md) widens the generic
 sparse capped factor range from v>=24lambda to **every existing simple
 2-(v,3,lambda) design with integer lambda>=2 and v>=3lambda+8**.
@@ -428,7 +462,7 @@ format. This hash identifies the matrix, not a proof of its positivity.
 
 Primary source for the open target:
 [Ellis–Filmus–Friedgut, arXiv:2609.28404v1, Section 4](https://arxiv.org/html/2609.28404v1#S4).
-The current arXiv record was checked 2026-09-30 and lists only v1. The prior block
+The current arXiv record was checked 2026-10-01 and lists only v1. The prior block
 graph bound is discussed in
 [Adriaensen–Goryainov–Konstantinova–Krčadinac, Section 1](https://arxiv.org/html/2609.26607#S1).
 [Stephen–Yusun, arXiv:1209.4623](https://arxiv.org/pdf/1209.4623) is bounded-enumeration
