@@ -1,0 +1,194 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "python": "CPython3.11.2",
+  "independent_runs": [
+    {
+      "mode": "normal",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "scratch/pass6_audit.py",
+        "--certificate",
+        "scratch/pass6-author-books/certificate.json",
+        "--primary",
+        "scratch/pass6-author-books/primary21.txt",
+        "--output-dir",
+        "scratch/pass6-independent-normal",
+        "--compare-author",
+        "scratch/pass6-author-normal/transfer14_records.json"
+      ],
+      "exit_code": 0,
+      "seconds": 7.726335676037706,
+      "cumulative_child_peak_rss_kib": 20536,
+      "timeout_seconds": 120
+    },
+    {
+      "mode": "optimized",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "scratch/pass6_audit.py",
+        "--certificate",
+        "scratch/pass6-author-books/certificate.json",
+        "--primary",
+        "scratch/pass6-author-books/primary21.txt",
+        "--output-dir",
+        "scratch/pass6-independent-optimized",
+        "--compare-author",
+        "scratch/pass6-author-normal/transfer14_records.json",
+        "--expected",
+        "scratch/pass6-independent-normal/RESULT.json"
+      ],
+      "exit_code": 0,
+      "seconds": 4.83552367700031,
+      "cumulative_child_peak_rss_kib": 23340,
+      "timeout_seconds": 120
+    }
+  ],
+  "author_replays": [
+    {
+      "mode": "normal",
+      "program": "generate.py",
+      "exit_code": 0,
+      "seconds": 1.5198494979995303,
+      "cumulative_child_peak_rss_kib": 16620,
+      "timeout_seconds": 45
+    },
+    {
+      "mode": "normal",
+      "program": "solve.py",
+      "exit_code": 0,
+      "seconds": 0.516821839963086,
+      "cumulative_child_peak_rss_kib": 17584,
+      "timeout_seconds": 45
+    },
+    {
+      "mode": "normal",
+      "program": "verify_multicover.py",
+      "exit_code": 0,
+      "seconds": 1.6701133949682117,
+      "cumulative_child_peak_rss_kib": 17584,
+      "timeout_seconds": 45
+    },
+    {
+      "mode": "normal",
+      "program": "verify_literal.py",
+      "exit_code": 0,
+      "seconds": 4.429974292987026,
+      "cumulative_child_peak_rss_kib": 17584,
+      "timeout_seconds": 45
+    },
+    {
+      "mode": "normal",
+      "program": "controls.py",
+      "exit_code": 0,
+      "seconds": 7.4399588070227765,
+      "cumulative_child_peak_rss_kib": 21016,
+      "timeout_seconds": 45
+    },
+    {
+      "mode": "optimized",
+      "program": "generate.py",
+      "exit_code": 0,
+      "seconds": 1.6201021070010029,
+      "cumulative_child_peak_rss_kib": 21016,
+      "timeout_seconds": 45
+    },
+    {
+      "mode": "optimized",
+      "program": "solve.py",
+      "exit_code": 0,
+      "seconds": 0.6668249359936453,
+      "cumulative_child_peak_rss_kib": 21016,
+      "timeout_seconds": 45
+    },
+    {
+      "mode": "optimized",
+      "program": "verify_multicover.py",
+      "exit_code": 0,
+      "seconds": 1.8207804270205088,
+      "cumulative_child_peak_rss_kib": 21016,
+      "timeout_seconds": 45
+    },
+    {
+      "mode": "optimized",
+      "program": "verify_literal.py",
+      "exit_code": 0,
+      "seconds": 4.730618244968355,
+      "cumulative_child_peak_rss_kib": 21016,
+      "timeout_seconds": 45
+    },
+    {
+      "mode": "optimized",
+      "program": "controls.py",
+      "exit_code": 0,
+      "seconds": 7.691388898005243,
+      "cumulative_child_peak_rss_kib": 21016,
+      "timeout_seconds": 45
+    }
+  ],
+  "entrywise_comparisons": {
+    "all_135_incidence_records_entrywise": true,
+    "all_4455_star_counts_entrywise": true,
+    "all_35_case_domain_headers_entrywise": true,
+    "extra_zero_words": [
+      988,
+      1004,
+      1012,
+      1016,
+      1020
+    ],
+    "extra_word_sizes": [
+      7,
+      7,
+      7,
+      7,
+      8
+    ],
+    "legacy_domain_matrices": 130,
+    "patterns": [
+      [
+        [
+          5,
+          5,
+          5,
+          5
+        ],
+        81
+      ],
+      [
+        [
+          6,
+          5,
+          5
+        ],
+        42
+      ],
+      [
+        [
+          6,
+          6
+        ],
+        3
+      ],
+      [
+        [
+          7,
+          5
+        ],
+        8
+      ],
+      [
+        [
+          8
+        ],
+        1
+      ]
+    ]
+  },
+  "all_critical_checks_unconditional_under_O": true,
+  "threads": 1,
+  "guard_hit": false
+}

@@ -1,0 +1,111 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "complete": true,
+  "core_construction": "KG(5,2) minus edge 0--7",
+  "source_to_geometry": [
+    0,
+    7,
+    8,
+    9,
+    3,
+    6,
+    1,
+    2,
+    4,
+    5
+  ],
+  "admissible_rows_by_deficit": [
+    200,
+    126,
+    50
+  ],
+  "zero_rows_by_deficit": [
+    92,
+    78,
+    42
+  ],
+  "score_histograms": [
+    {
+      "0": 92,
+      "1": 72,
+      "2": 28,
+      "3": 8
+    },
+    {
+      "0": 78,
+      "1": 40,
+      "2": 8
+    },
+    {
+      "0": 42,
+      "1": 8
+    }
+  ],
+  "union_zero_rows": 97,
+  "saturated_pair_count": 16,
+  "partition_stats": {
+    "partition_states": 776,
+    "bounds_rejections": 210
+  },
+  "matrices": 135,
+  "matrix_sha256": "95b5e500fb3c9f05257b7083ecfa3da25974031ac5ae8cfa94cb91aba98b75ce",
+  "candidate_matrices": 27,
+  "deficit_cases": 35,
+  "assignment_types": {
+    "1,1": 21,
+    "2": 14
+  },
+  "case_domain_sha256": "b27539df1ba12514305e41ed3d1bead2af5fda4597e68a88765399034555e183",
+  "edge_stats": {
+    "edge_nodes": 257,
+    "empty_domains": 88,
+    "page_rejections": 58
+  },
+  "solutions": 0,
+  "literal_small_controls": 164,
+  "normalization_controls": {
+    "perfect_matchings": 15,
+    "path_survivors": 1,
+    "cycle_survivors": 1,
+    "profiles": [
+      {
+        "isolated": 0,
+        "degree_two": 0,
+        "edges": 15
+      },
+      {
+        "isolated": 0,
+        "degree_two": 2,
+        "edges": 14
+      },
+      {
+        "isolated": 0,
+        "degree_two": 4,
+        "edges": 13
+      },
+      {
+        "isolated": 1,
+        "degree_two": 1,
+        "edges": 13
+      }
+    ]
+  },
+  "primary21": {
+    "red_edges": 93,
+    "blue_edges": 117,
+    "max_red_pages": 3,
+    "max_blue_pages": 6,
+    "sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55"
+  },
+  "damaged_control_rejections": [
+    "wrong_bound",
+    "noninteger_beta",
+    "wrong_core_binding",
+    "duplicate_beta",
+    "missing_matrix",
+    "duplicate_matrix",
+    "wrong_domain_size",
+    "wrong_deficiency"
+  ]
+}
