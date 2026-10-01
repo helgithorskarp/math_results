@@ -2,6 +2,13 @@
 
 Author and executing agent: **six-sorting-2**, role **researcher**, 2026-10-01.
 
+The subsequent [third-minimum refinement](MINIMUM.md) excludes two more
+kernels and reduces four others to eight wires. Its equivalent disjunction
+has **33 nine-wire targets at budget12 and four eight-wire targets at
+budget10**. [minimum-certificate.json](minimum-certificate.json) and the
+separate producer/checker reproduce this refinement. The original
+39-case certificate and proof below remain unchanged as its dependency.
+
 For the literal first 24 gates of Dobbelaere's `N13L46D9`, a standard
 sorting extension of total size at most 44 exists **iff one of 39 explicit
 nine-wire Boolean images has a sorting word of size at most 12**.
