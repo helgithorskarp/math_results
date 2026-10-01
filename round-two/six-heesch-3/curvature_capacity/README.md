@@ -11,11 +11,12 @@ Partial contacts and subdivisions of a prototype arc are permitted.
 
 A second lemma proves a sharp upper bound of three for every imbalanced
 equal-radius circular-bow regular hexagon with endpoint angle beta in
-(0,pi/6), outside five explicitly listed possible exceptions. An angle-star
+(0,pi/6). An angle-star and half-arc curvature
 argument locks complete coronas to hexagonal cell balls, including the
 last layer, without starting from a whole-arc matching assumption. Excess
-two has upper one, and excess at least three has upper zero. Balanced words
-and the exceptional angles remain outside this classification.
+two has upper one, and excess at least three has upper zero. Curvature
+matching excludes the five exceptions left by angle arithmetic alone.
+Balanced words remain outside this classification.
 
 The explicit word (0,+,+,+,-,-), at radius13/10 and sagitta1/10, has
 **Hc=Hh=3**, with 37 checked copies. The word (+,+,+,+,-,-) has
@@ -41,7 +42,8 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 
 CPython3.11.2 standard library only; compatible Python3.10+ suffices.
 The small reader checks integer cell/vertex incidences, all side matchings,
-disk prefixes, strict-nesting vertex stars, complete five-angle enumeration,
+disk prefixes, strict-nesting vertex stars, complete angle-only enumeration
+and elimination of its five possible exceptions,
 the guarded shell interfaces at depths1,2,4, the charge contradictions,
 and malformed controls. No proof search is needed to reproduce it.
 

@@ -142,12 +142,16 @@ def ceil_fraction(x):
     return -(-x.numerator // x.denominator)
 
 
-def exceptional_angles():
+def exceptional_angles(curvature_matching=False):
     values = set()
     for corners in range(6):
         for smooth in range(3):
             residual = 2 - Fraction(2 * corners, 3) - smooth
             for coefficient in range(-2 * corners, 2 * corners + 1):
+                if curvature_matching:
+                    allowed = {-2 * total for total in range(-smooth, smooth + 1)}
+                    if coefficient not in allowed:
+                        continue
                 if coefficient:
                     candidate = residual / coefficient
                     if 0 < candidate < Fraction(1, 6):
@@ -216,15 +220,14 @@ def run():
             'circle endpoint identity failed')
     tangent = Fraction(5, 12)
     require(tangent ** 2 < Fraction(1, 3), 'endpoint angle is too large')
-    cosine_twice = (1 - tangent ** 2) / (1 + tangent ** 2)
-    require(cosine_twice == Fraction(119, 169), 'wrong irrational-angle witness')
-    require((2 * cosine_twice).denominator != 1, 'root-of-unity obstruction failed')
     stars = [[c, s] for c in range(4) for s in range(3) if 2 * c + 3 * s == 6]
     require(stars == [[0, 2], [3, 0]], 'angle-star enumeration failed')
     exceptional = exceptional_angles()
     require(exceptional == [Fraction(1, 12), Fraction(2, 21), Fraction(1, 9),
                             Fraction(2, 15), Fraction(4, 27)],
             'exceptional-angle enumeration failed')
+    matched_exceptions = exceptional_angles(curvature_matching=True)
+    require(matched_exceptions == [], 'a curvature-compatible exception remains')
     shells = [shell_certificate(r) for r in (1, 2, 4)]
     for row, excess in zip(shells, (3, 2, 1)):
         require(excess * row['tiles'] > row['boundary_sides'], 'charge cut failed')
@@ -233,8 +236,8 @@ def run():
         'one_corona_witness': check_witness(one, 1, (1, 1, 1, 1, -1, -1)),
         'shell_certificates': shells,
         'star_types_corner_smooth': stars,
-        'exceptional_endpoint_angle_over_pi': [str(x) for x in exceptional],
-        'twice_cosine_twice_endpoint_angle': str(2 * cosine_twice),
+        'angle_only_exceptional_endpoint_angle_over_pi': [str(x) for x in exceptional],
+        'curvature_matched_exceptional_endpoint_angle_over_pi': [str(x) for x in matched_exceptions],
         'curvature_capacity': curvature_bound(Fraction(3, 2), Fraction(5, 2),
                                                Fraction(121, 25)),
         'controls': controls(three, one),

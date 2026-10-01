@@ -47,9 +47,7 @@ condition.
 
 The second result is a more restrictive sharp obstruction:
 
-**Circular-hex lemma.** Let 0<beta<pi/6, with
-
-    beta/pi not in {1/12, 2/21, 1/9, 2/15, 4/27}.
+**Circular-hex lemma.** Let 0<beta<pi/6.
 
 Start with a regular hexagon of side one. Assign each of its six sides a
 sign sigma in {-1,0,+1}. Leave zero sides flat. Replace a nonzero side by
@@ -63,10 +61,10 @@ counts. Then
 
 The first two bounds are sharp, uniformly over all beta in this parameter
 range: the words (0,+,+,+,-,-) and (+,+,+,+,-,-), respectively, have checked
-three-corona and one-corona patches. The exceptional angles are an
-overapproximation of stars that could invalidate the proof; existence of
-another admissible star or a large Heesch number there is not asserted.
-Balanced sign counts are not classified.
+three-corona and one-corona patches. Balanced sign counts are not classified.
+Angle sums alone leave five possible exceptional parameters, but local
+curvature matching at a filled junction excludes all of them. There are
+no angle exceptions in the stated open interval.
 
 ## 1. Regular interfaces, including partial contacts
 
@@ -192,7 +190,7 @@ corner is genuine, with angle strictly between pi/3 and pi. All other
 boundary points have interior angle pi. These are intrinsic angles and
 hold for reflected copies as well.
 
-## 4. Five possible exceptional angles
+## 4. Angle-only exceptions disappear under curvature matching
 
 At a point strictly inside a patch, the incident tile sectors fill the
 whole angular circle with disjoint interiors. Let c count true corners
@@ -210,17 +208,44 @@ positive values (2-2c/3-s)/M below 1/6 are exactly
 
     1/12, 2/21, 1/9, 2/15, 4/27.
 
-The standalone checker enumerates these rationals exactly. Thus outside
-this finite set the only interior stars are three true corners, with total
-coefficient M=0, or two smooth boundaries. The bound is intentionally
-uniform over all sign words, without using their particular corner inventory.
+The standalone checker enumerates these rationals exactly. They are
+possible exceptions for angle arithmetic alone. To remove them, use the
+following local geometric condition, which is stronger than (1).
+
+At a filled junction every sector has a positive angle. Adjacent sectors'
+bounding half-arcs must coincide on an initial interval. Otherwise their
+local graphs produce either an overlap or a gap. All incident tiles are
+finite in number, and nonincident tiles can be excluded from a sufficiently
+small neighborhood, so neither is admissible. This remains valid when
+one sector is a smooth halfplane. Each coincident half-arc pair has opposite
+signed curvature; in this family that means opposite side signs, with flat
+matching flat. Therefore all branch signs cancel in pairs around the junction.
+
+Each true corner contributes its two adjacent signs to M. A smooth point
+of a tile contributes twice the sign tau of its one prototype side.
+Writing S for the sum of these smooth-side signs, pair cancellation gives
+
+    M + 2S = 0.                                (3)
+
+If s=0, (3) gives M=0, and (1) forces c=3. If s=2, positivity of every
+corner angle forces c=0; these are the two-smooth interfaces. Three smooth
+halfplanes are impossible. If s=1, then S=tau in {-1,0,1}, and (1),(3)
+give
+
+    (2c/3-1)*pi = 2*tau*beta.
+
+For integer c the left side has absolute value at least pi/3. The right
+side has absolute value strictly less than pi/3 because beta<pi/6. This
+is impossible. Thus throughout the entire stated interval the only filled
+stars are three true corners with M=0, or two smooth boundaries. The
+argument is uniform over all sign words. The reader also checks that
+adding (3) to the finite angle enumeration leaves no exceptional ratios.
+This checks the symbolic bookkeeping; the local half-arc argument remains
+a written geometric proof.
 
 For the concrete certificates take R=13/10 and d=6/5. Then h=1/10 and
-tan(beta)=5/12. The parameter lies below pi/6 since 25/144<1/3. It avoids
-the five exceptions because beta/pi is irrational: cos(2beta)=119/169.
-If beta/pi were rational, z=exp(2*i*beta) would be a root of unity, and
-z+z^-1=238/169 would be a rational algebraic integer, hence an integer,
-which it is not. This elementary argument does not use an approximate angle.
+tan(beta)=5/12. The parameter lies below pi/6 since 25/144<1/3. No
+irrational-angle assumption or approximate trigonometric value is needed.
 
 ## 5. Whole-side and lattice locking from angles
 
