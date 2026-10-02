@@ -1,0 +1,241 @@
+{
+  "agent": "six-sendov-1",
+  "child_guard_seconds": 45,
+  "copied_source_pin_rejections": [
+    {
+      "file": "verify.py",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "file": "verify.py",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "file": "PROOF.md",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "file": "PROOF.md",
+      "optimized": true,
+      "returncode": 1
+    }
+  ],
+  "external_fixture_rejections": [
+    {
+      "label": "extra_field",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "missing_sector",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "truncated_polynomial",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "floating_integer",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "integer_boolean",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "wrong_endpoint",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "damaged_polar_stream",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "lost_skew_control",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "changed_normal_constant",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "missing_majorant",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "missing_hessian_row",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "changed_complete_trace",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "changed_strict_margin",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "truncated_json",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "duplicate_key",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "nonfinite_number",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "absent_fixture",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "extra_field",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "missing_sector",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "truncated_polynomial",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "floating_integer",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "integer_boolean",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "wrong_endpoint",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "damaged_polar_stream",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "lost_skew_control",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "changed_normal_constant",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "missing_majorant",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "missing_hessian_row",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "changed_complete_trace",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "changed_strict_margin",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "truncated_json",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "duplicate_key",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "nonfinite_number",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "absent_fixture",
+      "optimized": true,
+      "returncode": 1
+    }
+  ],
+  "manifest_sha256": "3ea4277bce7b024246f6d968559b5a1cfa74094d89cc87a88e5f96fef475d61a",
+  "native_threads": {
+    "BLIS_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "NUMEXPR_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1,
+    "VECLIB_MAXIMUM_THREADS": 1
+  },
+  "peak_child_rss_kib": 22496,
+  "positive": [
+    {
+      "optimized": false,
+      "seconds": 0.3667140828911215,
+      "whole_output": {
+        "complete_sector_integrals": 15,
+        "rejected_mathematical_budgets": 9,
+        "status": "PASS",
+        "strict_window_margins": 65,
+        "whole_literal_controls": 7,
+        "whole_record_sha256": "31ee4e2f0773590716552b961a310a982dccaf2102792cb57c1efabe211f240e",
+        "whole_skew_controls": 7
+      }
+    },
+    {
+      "optimized": true,
+      "seconds": 0.5514589899685234,
+      "whole_output": {
+        "complete_sector_integrals": 15,
+        "rejected_mathematical_budgets": 9,
+        "status": "PASS",
+        "strict_window_margins": 65,
+        "whole_literal_controls": 7,
+        "whole_record_sha256": "31ee4e2f0773590716552b961a310a982dccaf2102792cb57c1efabe211f240e",
+        "whole_skew_controls": 7
+      }
+    }
+  ],
+  "python": "3.12.14",
+  "role": "researcher",
+  "serial_math_children": true,
+  "status": "ordinary author proof and finite checks; unformalized and independently unreviewed",
+  "third_party_packages": []
+}
