@@ -1,0 +1,295 @@
+{
+  "format": "fixed-twelve-three-completion-validation-v1",
+  "actual_agent": "six-tammes-2",
+  "role": "researcher",
+  "validated_utc": "2026-10-02T22:58:19.638503+00:00",
+  "status": "COMPLETE_EXACT_PREDICATE_COVERAGE_AND_AUXILIARIES",
+  "independent_researcher_review": "pending",
+  "ordinary_geometry_proof_formalized": false,
+  "new_global_bound": false,
+  "final_source_sha256": {
+    "INPUT.json": "51a651ef4ab8a83d306da8112f77d82be51e80191272ae609e1ebd53ab48fba7",
+    "PLAN.json": "40d87eeb2e2c18c9c8beaed0649c0eaa4b81e33b89786452150ebb5b1fb0e666",
+    "field.py": "fed3f04c1f55c44741518be7ba5f61fa20becf94c272f2fb0cf50125097b9e9f",
+    "check.py": "f5209ee16ea875a4033498812570aef5ad5a9212e45cacbc41f1e6185256b5a7"
+  },
+  "actual_main_run": {
+    "checked_range": [
+      0,
+      1014
+    ],
+    "actual_predicates_executed": 1014,
+    "total_predicates": 1014,
+    "all_requested_predicates_executed": true,
+    "full_certificate_executed_this_invocation": true,
+    "kind_counts": {
+      "infeasible": 927,
+      "short": 63,
+      "singular": 17,
+      "unit": 7
+    },
+    "case_counts": {
+      "cut": 286,
+      "original-fourteen": 364,
+      "other-fourteen": 364
+    },
+    "geometry_and_boundedness_checked": true,
+    "cap_capacity_checked": true,
+    "wall_seconds": 13.819873149041086,
+    "cpu_seconds": 13.760551,
+    "max_rss_kib": 18224,
+    "threads": 1
+  },
+  "case_kind_counts": [
+    {
+      "infeasible": 259,
+      "short": 19,
+      "singular": 5,
+      "unit": 3
+    },
+    {
+      "infeasible": 334,
+      "short": 22,
+      "singular": 6,
+      "unit": 2
+    },
+    {
+      "infeasible": 334,
+      "short": 22,
+      "singular": 6,
+      "unit": 2
+    }
+  ],
+  "all_ordinals_0_through_1013_present_once": true,
+  "exact_receipt_sha256": "2e200c682c4ebc0edfc547e61a1abbaa75d7d8a969cf143ddaef8b6efe2cdad7",
+  "auxiliary_gram_and_stability": {
+    "all_unit_squared_distances_greater_than": "1/25",
+    "cut_unit_distance_constant": 2002,
+    "four_labeled_completions": [
+      {
+        "case": [
+          "p13",
+          "p14"
+        ],
+        "permutation": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "reference": "asymmetric"
+      },
+      {
+        "case": [
+          "p13",
+          "c14"
+        ],
+        "permutation": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "reference": "cyclic"
+      },
+      {
+        "case": [
+          "q",
+          "p14"
+        ],
+        "permutation": [
+          1,
+          0,
+          11,
+          7,
+          5,
+          4,
+          10,
+          3,
+          9,
+          8,
+          6,
+          2,
+          14,
+          13,
+          12
+        ],
+        "reference": "asymmetric"
+      },
+      {
+        "case": [
+          "q",
+          "c14"
+        ],
+        "permutation": [
+          5,
+          2,
+          4,
+          10,
+          1,
+          11,
+          7,
+          9,
+          3,
+          6,
+          8,
+          0,
+          13,
+          14,
+          12
+        ],
+        "reference": "asymmetric"
+      }
+    ],
+    "incompatible_pair_product_greater_than": "97/100",
+    "known_cyclic_gram_checked": true,
+    "literal_full_gram_equalities_checked": 1125,
+    "pair_bounds_checked": 420,
+    "relaxation_max": "1/10000000",
+    "source_sha256": {
+      "INPUT.json": "51a651ef4ab8a83d306da8112f77d82be51e80191272ae609e1ebd53ab48fba7",
+      "PLAN.json": "40d87eeb2e2c18c9c8beaed0649c0eaa4b81e33b89786452150ebb5b1fb0e666",
+      "check.py": "f5209ee16ea875a4033498812570aef5ad5a9212e45cacbc41f1e6185256b5a7",
+      "field.py": "fed3f04c1f55c44741518be7ba5f61fa20becf94c272f2fb0cf50125097b9e9f"
+    },
+    "status": "CHECKED_EXACT_GRAM_AND_STABILITY",
+    "whole_added_triple_distance_constant": 2100000
+  },
+  "damage_controls": {
+    "active_plane_ranges_not_repeated": true,
+    "damages_count": 20,
+    "frozen_source_not_mutated": true,
+    "harmless_alterations_accepted": [
+      "real_reversed_json_field_order",
+      "harmless_metadata"
+    ],
+    "semantic_damages_rejected": [
+      "actual_point13_in_fixed_core",
+      "missing_fixed_label",
+      "wrong_distinguished_root",
+      "wrong_cap_bound",
+      "wrong_cap_pair_parameter",
+      "lost_strict_short_norm_cut",
+      "lost_strict_short_norm_fourteen",
+      "wrong_q_contact_planes",
+      "wrong_last_contact_planes",
+      "missing_one_complete_target",
+      "swapped_target_order",
+      "unjustified_parameter_target",
+      "lost_cut_plane",
+      "missing_one_active_triple",
+      "unknown_plane_literal",
+      "unit_from_another_target",
+      "nonsingular_vertex_marked_singular",
+      "unit_vertex_marked_strictly_short",
+      "unit_vertex_identified_as_another_point",
+      "active_plane_claimed_strictly_violated"
+    ],
+    "status": "CHECKED_DAMAGE_CONTROLS"
+  },
+  "actual_public_source_executions": [
+    {
+      "command": [
+        "python3",
+        "check.py",
+        "--start",
+        "0",
+        "--count",
+        "2500",
+        "--output",
+        "pass30-final-exact.json"
+      ],
+      "stdout_sha256": "b705aa66ffe4a726e89d888bf8cc89a3ea466cf4db85fe5948865ae04c08d1a6",
+      "exit_code": 0,
+      "wall_seconds": 13.894224048941396,
+      "child_cpu_seconds": 13.781412,
+      "cumulative_child_max_rss_kib": 19456,
+      "threads": 1,
+      "subprocess_guard_seconds": 55
+    },
+    {
+      "command": [
+        "python3",
+        "audit.py"
+      ],
+      "stdout_sha256": "0673c58d254d888dbc50078147bb4904b7fb64d1174993fac934982ab7f9ad2e",
+      "exit_code": 0,
+      "wall_seconds": 1.1096519948914647,
+      "child_cpu_seconds": 1.095598,
+      "cumulative_child_max_rss_kib": 19456,
+      "threads": 1,
+      "subprocess_guard_seconds": 55,
+      "normal_optimized_full_output_equal": true
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "audit.py"
+      ],
+      "stdout_sha256": "0673c58d254d888dbc50078147bb4904b7fb64d1174993fac934982ab7f9ad2e",
+      "exit_code": 0,
+      "wall_seconds": 1.229028493980877,
+      "child_cpu_seconds": 1.211334,
+      "cumulative_child_max_rss_kib": 20564,
+      "threads": 1,
+      "subprocess_guard_seconds": 55,
+      "normal_optimized_full_output_equal": true
+    },
+    {
+      "command": [
+        "python3",
+        "controls.py"
+      ],
+      "stdout_sha256": "e302c636e70a8913277ae739d6d8e824bf4aa750ae3512115c89fa2ebbc18860",
+      "exit_code": 0,
+      "wall_seconds": 0.4150034129852429,
+      "child_cpu_seconds": 0.4097670000000005,
+      "cumulative_child_max_rss_kib": 20564,
+      "threads": 1,
+      "subprocess_guard_seconds": 55,
+      "normal_optimized_full_output_equal": true
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "controls.py"
+      ],
+      "stdout_sha256": "e302c636e70a8913277ae739d6d8e824bf4aa750ae3512115c89fa2ebbc18860",
+      "exit_code": 0,
+      "wall_seconds": 0.5633034779457375,
+      "child_cpu_seconds": 0.5576399999999972,
+      "cumulative_child_max_rss_kib": 20564,
+      "threads": 1,
+      "subprocess_guard_seconds": 55,
+      "normal_optimized_full_output_equal": true
+    }
+  ],
+  "guard_reached": false,
+  "resource_scope": "one CPU-intensive child at a time; all solver/BLAS/OpenMP threads one;50-second internal guards,55-second subprocess guard; no timeout or memory failure",
+  "earlier_discovery_and_execution_boundary": "Earlier NumPy discovery proposed literals and full-Gram permutations only. An earlier actual two-slice run checked all1014 predicates. The final full run above was necessary because only the public main campaign-path block was removed, changing check.py SHA256. All final executed pins match the published source.",
+  "no_private_records_or_large_corpus_required_for_reproduction": true
+}
