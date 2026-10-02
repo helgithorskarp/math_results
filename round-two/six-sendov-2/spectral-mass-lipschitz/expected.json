@@ -1,0 +1,339 @@
+{
+  "author": "six-sendov-2",
+  "collision_and_projection_controls": {
+    "collisions": [
+      {
+        "eta": "18",
+        "ordered_critical_nodes": [
+          "-1",
+          "-1",
+          "-1/2",
+          "0",
+          "1/2",
+          "1",
+          "1"
+        ],
+        "ordered_masses": [
+          "0",
+          "0",
+          "3",
+          "0",
+          "3",
+          "0",
+          "0"
+        ],
+        "originals": [
+          -1,
+          -1,
+          -1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "eta": "64",
+        "ordered_critical_nodes": [
+          "-1",
+          "-1",
+          "-1",
+          "0",
+          "1",
+          "1",
+          "1"
+        ],
+        "ordered_masses": [
+          "0",
+          "0",
+          "0",
+          "8",
+          "0",
+          "0",
+          "0"
+        ],
+        "originals": [
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "pairing": {
+      "asymmetry": "1/2",
+      "originals": [
+        "-7",
+        "-5",
+        "-3",
+        "-1",
+        "2",
+        "3",
+        "4",
+        "7"
+      ],
+      "projection": [
+        "-7",
+        "-9/2",
+        "-3",
+        "-3/2",
+        "3/2",
+        "3",
+        "9/2",
+        "7"
+      ]
+    }
+  },
+  "eight_root_G24_Lipschitz": "(96+48*sqrt(2))*R^3 <164*R^3",
+  "eight_root_G47over2_Lipschitz": "(94+95*sqrt(2)/2)*R^3 <162*R^3",
+  "exact_differential_controls": [
+    {
+      "G24_dot": "2786988107818358976/513846795926125",
+      "N": "60",
+      "eta": "241528608408/324559075",
+      "eta_dot": "-1011133581097670976/513846795926125",
+      "originals": [
+        "-4",
+        "-3",
+        "-2",
+        "-1",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "velocities": [
+        "1",
+        "0",
+        "-1",
+        "2",
+        "-2",
+        "1",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "G24_dot": "7575342068314486302620111835483905324959004443/222483997117914821815480186707203378827024",
+      "N": "162",
+      "eta": "4704596367105807132401697/943364186553453643064",
+      "eta_dot": "-2534744629611008099568592725445505574253948699/222483997117914821815480186707203378827024",
+      "originals": [
+        "-7",
+        "-5",
+        "-3",
+        "-1",
+        "2",
+        "3",
+        "4",
+        "7"
+      ],
+      "velocities": [
+        "1",
+        "2",
+        "-3",
+        "4",
+        "-4",
+        "3",
+        "-2",
+        "-1"
+      ]
+    },
+    {
+      "G24_dot": "-2112606916240478619627622980677192649764/199502867916812218829615775750791569",
+      "N": "92",
+      "eta": "815124957319350450776/446657439115047337",
+      "eta_dot": "369749862119207075932099563718277502980/199502867916812218829615775750791569",
+      "originals": [
+        "-5",
+        "-3",
+        "-2",
+        "-1",
+        "0",
+        "1",
+        "4",
+        "6"
+      ],
+      "velocities": [
+        "-2",
+        "1",
+        "3",
+        "-1",
+        "2",
+        "-3",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "G24_dot": "-22448463692872/8646925037",
+      "N": "46",
+      "eta": "421424882/676969",
+      "eta_dot": "-12969341258680/8646925037",
+      "originals": [
+        "-3",
+        "-3",
+        "-1",
+        "1",
+        "3",
+        "3",
+        "-2",
+        "2"
+      ],
+      "velocities": [
+        "0",
+        "0",
+        "1",
+        "-1",
+        "0",
+        "0",
+        "2",
+        "-2"
+      ]
+    },
+    {
+      "G24_dot": "-101193407461127147206282204/2005263239800887707760025",
+      "N": "151/25",
+      "eta": "5878692855494401/354018294001250",
+      "eta_dot": "-265337415251377711881404996/10026316199004438538800125",
+      "originals": [
+        "-11/10",
+        "-1",
+        "-9/10",
+        "0",
+        "0",
+        "9/10",
+        "1",
+        "11/10"
+      ],
+      "velocities": [
+        "-1",
+        "0",
+        "1",
+        "0",
+        "0",
+        "-1",
+        "0",
+        "1"
+      ]
+    }
+  ],
+  "general_n_eta_Lipschitz": "2*sqrt(2)*n*R^3",
+  "general_n_sharp_sqrt_mass_Lipschitz": "n/sqrt(2)",
+  "rejected_mathematical_damages": [
+    {
+      "damage": "covariance_sign",
+      "rejection": "universal covariance identity"
+    },
+    {
+      "damage": "sharp_quadratic",
+      "rejection": "universal sharp-family critical quadratic"
+    },
+    {
+      "damage": "freeze_nodes",
+      "rejection": "independent full moving-node derivative"
+    },
+    {
+      "damage": "mass_scale",
+      "rejection": "independent mass-square trace value"
+    },
+    {
+      "damage": "large_variance",
+      "rejection": "complete large-variance case"
+    },
+    {
+      "damage": "gap_constant",
+      "rejection": "rational gap Lipschitz constant"
+    },
+    {
+      "damage": "review_gap_constant",
+      "rejection": "review-based rational gap Lipschitz constant"
+    },
+    {
+      "damage": "range_constant",
+      "rejection": "two-pole sharp variance control"
+    },
+    {
+      "damage": "collision_gap",
+      "rejection": "two-root collision gap bound"
+    },
+    {
+      "damage": "collision_weight",
+      "rejection": "exact collapsed gap has zero whole-projection mass"
+    },
+    {
+      "damage": "pairing",
+      "rejection": "closest symmetric bottleneck metric"
+    }
+  ],
+  "review47over2_is_explicit_prior_premise": true,
+  "role": "researcher",
+  "root_mass_polynomial_identities": {
+    "covariance": {
+      "sha256": "f420dc60d66c7405762718b9547b19865b78b98b03ed6f6d4104a3ae75de0efc",
+      "terms": 112
+    },
+    "mass_derivative_numerator": {
+      "sha256": "cf0d4ccf4ac8674c42993c14c5b52b18966b5834e526ff49a669b20d8295b35b",
+      "terms": 112
+    },
+    "reciprocal_variance": {
+      "sha256": "fb7e473e643013267f05f4aa29e4e6ff6031c0dc4332d8332dc4cc2772ed3a40",
+      "terms": 84
+    },
+    "sharp_family_quadratic": {
+      "sha256": "c6a0d9d6669f6a07478f4d7c28141b38b59b573ba86eebfe95f4ae179794b5f4",
+      "terms": 4
+    },
+    "velocity_variance": {
+      "sha256": "ef0f60cb4e4fe0a5fb21bb392c2782e99226b8d02071fa80b0a6af037baaa8a4",
+      "terms": 84
+    }
+  },
+  "scalar_certificate": {
+    "Delta": "69/5000",
+    "gap_Lipschitz_rational": 164,
+    "irrational_square_margin": "16",
+    "large_variance_margin": "1307/140000",
+    "review_gap_Lipschitz_rational": 162,
+    "review_irrational_square_margin": "223/2",
+    "rho_T24531": "4293899699/614072813536000",
+    "rho_comparison_margin": "53109289/1105331064364800",
+    "rho_review_T24531": "75034077791/5459257086192000",
+    "rho_review_comparison_margin": "18230592551/398525767292016000",
+    "sign_count_margin": "1/35344",
+    "thresholds": [
+      {
+        "T": "49/2",
+        "asymmetry_lower_original24": "289/44101568",
+        "asymmetry_lower_review47over2": "289/21781872",
+        "variance_lower": "289/134456"
+      },
+      {
+        "T": "24531/1000",
+        "asymmetry_lower_original24": "4293899699/614072813536000",
+        "asymmetry_lower_review47over2": "75034077791/5459257086192000",
+        "variance_lower": "72777961/33699117816"
+      },
+      {
+        "T": "25",
+        "asymmetry_lower_original24": "81/5740000",
+        "asymmetry_lower_review47over2": "3/140000",
+        "variance_lower": "81/35000"
+      },
+      {
+        "T": "32",
+        "asymmetry_lower_original24": "1/4592",
+        "asymmetry_lower_review47over2": "17/72576",
+        "variance_lower": "1/224"
+      }
+    ]
+  },
+  "scope": "all real balanced profiles, collisions included; sharp ordered square-root mass map",
+  "stationarity_assumption": false
+}
