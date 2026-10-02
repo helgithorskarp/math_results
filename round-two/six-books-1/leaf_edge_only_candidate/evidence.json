@@ -1,0 +1,68 @@
+{
+  "schema": "specified-leaf-edge-only-evidence-v1",
+  "agent": "six-books-1",
+  "role": "researcher",
+  "utc": "2026-10-02T18:19:45.629192+00:00",
+  "python": "CPython3.12.14; standard library",
+  "arithmetic": "exact unbounded integers, bits and sets; no solver/floating decisions",
+  "whole_record_bytes": 4990,
+  "whole_record_sha256": "1ddf574c54a1b77aa343747cc54fbcbf3ffa79fa70dcf6c9364f228cd0c8c54d",
+  "freeze": {
+    "utc": "2026-10-02T17:16:32.545759+00:00",
+    "whole_record_sha256": "1ddf574c54a1b77aa343747cc54fbcbf3ffa79fa70dcf6c9364f228cd0c8c54d",
+    "record_bytes": 4990,
+    "freeze_before_final_cold_modes": true,
+    "prior_failure": "all mathematical enumeration children completed; first validation wrapper rejected JSON object key order; corrected comparison and preserved original child14.stderr/source seal"
+  },
+  "final_cold_modes": {
+    "normal": {
+      "children": 15,
+      "all_complete": true,
+      "total_child_wall_seconds": 105.68704947119113,
+      "maximum_child_wall_seconds": 32.1769653710071,
+      "peak_reported_cumulative_child_RSS_KiB": 35276,
+      "whole_record_byte_match": true,
+      "damaged_inputs_rejected": 16
+    },
+    "optimized": {
+      "children": 15,
+      "all_complete": true,
+      "total_child_wall_seconds": 107.32676959817763,
+      "maximum_child_wall_seconds": 31.942544099059887,
+      "peak_reported_cumulative_child_RSS_KiB": 37620,
+      "whole_record_byte_match": true,
+      "damaged_inputs_rejected": 16
+    }
+  },
+  "limits": {
+    "CPUs": 1,
+    "scope_memory_GiB": 2,
+    "numerical_threads": 1,
+    "phase_guard_seconds": 30,
+    "child_guard_seconds": 90,
+    "CPU_children_serial": true,
+    "limits_raised": false
+  },
+  "known_incomplete_or_failed_runs": [
+    "initial uncached pass15 X16 phase reached unchanged30s guard; no exclusion evidence",
+    "initial pass16 cold mathematics completed, but final wrapper rejected JSON object key order; corrected comparison, failure preserved privately",
+    "first final-normal attempt interrupted after X14; no complete result and no exclusion evidence; fresh empty-directory rerun used",
+    "pass16 fresh final-normal2 core1 independent X16 hit unchanged30s guard; incomplete/no exclusion evidence; later final cold runs recorded separately"
+  ],
+  "trust": [
+    "ordinary reduction and finite-completeness/code bridges unformalized",
+    "different author algorithms are not independent peer review",
+    "X repeated proof imported precisely from9414, not regenerated",
+    "new independent peer review pending"
+  ],
+  "prior_baseline": {
+    "source": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+    "n": 21,
+    "red_edges": 93,
+    "blue_edges": 117,
+    "max_red_pages": 3,
+    "max_blue_pages": 6
+  },
+  "literature": "primary2407.07285 Table1 reopened live2026-10-02:22<=R(B4,B7)<=23; upper23 flag certificate not replayed; no exclusive priority claim"
+}
