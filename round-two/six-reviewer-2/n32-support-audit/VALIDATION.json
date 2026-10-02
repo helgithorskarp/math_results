@@ -1,0 +1,246 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "date_utc": "2026-10-02T18:55:31.317096+00:00",
+  "all9_sealed_primary_files_unchanged": true,
+  "whole_normal_optimized_EXPECTED_equal": true,
+  "first_target_access_utc": "2026-10-02T18:49:29.263065+00:00",
+  "independent_cold_records": [
+    {
+      "agent": "six-reviewer-2",
+      "all_threads_one": true,
+      "optimize": 0,
+      "peak_child_KiB": 21252,
+      "phases": [
+        {
+          "phase": "core",
+          "seconds": 1.6265274540055543
+        },
+        {
+          "phase": "literal",
+          "seconds": 4.674818543018773
+        },
+        {
+          "phase": "controls",
+          "seconds": 0.45994093699846417
+        }
+      ],
+      "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+      "rejections": 23,
+      "role": "independent mathematical reviewer",
+      "seconds": 6.762833587010391,
+      "whole_expected_equal": true,
+      "whole_record_bytes": 39488,
+      "whole_record_sha256": "c5195b8245b5418fb1b4bc573a65b9170ab729cdfb85ab434f418ee2b7258423"
+    },
+    {
+      "agent": "six-reviewer-2",
+      "all_threads_one": true,
+      "optimize": 1,
+      "peak_child_KiB": 23256,
+      "phases": [
+        {
+          "phase": "core",
+          "seconds": 1.6874120050342754
+        },
+        {
+          "phase": "literal",
+          "seconds": 4.9244364079786465
+        },
+        {
+          "phase": "controls",
+          "seconds": 0.6263358510332182
+        }
+      ],
+      "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+      "rejections": 23,
+      "role": "independent mathematical reviewer",
+      "seconds": 7.239969009999186,
+      "whole_expected_equal": true,
+      "whole_record_bytes": 39488,
+      "whole_record_sha256": "c5195b8245b5418fb1b4bc573a65b9170ab729cdfb85ab434f418ee2b7258423"
+    }
+  ],
+  "native_replay": {
+    "records": [
+      {
+        "optimized": false,
+        "seconds": 10.16645304101985,
+        "peak_child_KiB": 20188,
+        "whole_record_bytes": 21587,
+        "whole_native_record_sha256": "ce889728764f880dc3e12952f9b6bb4a0bc7a6a6dd849d674757592dbc5207c9",
+        "stdout_summary": {
+          "ok": true,
+          "record_sha256": "ce889728764f880dc3e12952f9b6bb4a0bc7a6a6dd849d674757592dbc5207c9",
+          "complete_sectors": 34,
+          "least_support_cutoff": 8,
+          "literal_action_columns": 112,
+          "controls": 12
+        },
+        "entire_native_expected_equal": true
+      },
+      {
+        "optimized": true,
+        "seconds": 10.720529068028554,
+        "peak_child_KiB": 23328,
+        "whole_record_bytes": 21587,
+        "whole_native_record_sha256": "ce889728764f880dc3e12952f9b6bb4a0bc7a6a6dd849d674757592dbc5207c9",
+        "stdout_summary": {
+          "ok": true,
+          "record_sha256": "ce889728764f880dc3e12952f9b6bb4a0bc7a6a6dd849d674757592dbc5207c9",
+          "complete_sectors": 34,
+          "least_support_cutoff": 8,
+          "literal_action_columns": 112,
+          "controls": 12
+        },
+        "entire_native_expected_equal": true
+      }
+    ],
+    "entire_native_normal_optimized_expected_equal": true,
+    "all9_primary_files_unchanged": true,
+    "all13_native_files_unchanged": true,
+    "scope": "Whole native expected is bytes, NOT its stdout summary; native corroboration only."
+  },
+  "late_adapter": {
+    "native_entire_fields_exports": [
+      {
+        "bytes": 608401,
+        "sha256": "413a68b41de41315b860d60cc22fd2167c822e92ddafa779b59cfe48cdfa5376",
+        "sectors": 34,
+        "role": "postseal original native field instrumentation, not independent derivation",
+        "outer_seconds": 0.3895721639273688,
+        "peak_child_KiB": 25684,
+        "optimized": false
+      },
+      {
+        "bytes": 608401,
+        "sha256": "413a68b41de41315b860d60cc22fd2167c822e92ddafa779b59cfe48cdfa5376",
+        "sectors": 34,
+        "role": "postseal original native field instrumentation, not independent derivation",
+        "outer_seconds": 0.5558232350740582,
+        "peak_child_KiB": 27860,
+        "optimized": true
+      }
+    ],
+    "late_adapter_cold_records": [
+      {
+        "whole_comparison_sha256": "545e1ac4e45fa6a6eca3b5f2594c54061bc8aaa49f347acf517c8d9c77f8a818",
+        "bytes": 13962,
+        "seconds": 0.5799806050490588,
+        "optimize": 0,
+        "entire_COMPARISON_equal": true,
+        "all_original_positions": 50360,
+        "outer_seconds": 0.6449361930135638,
+        "peak_child_KiB": 27860
+      },
+      {
+        "whole_comparison_sha256": "545e1ac4e45fa6a6eca3b5f2594c54061bc8aaa49f347acf517c8d9c77f8a818",
+        "bytes": 13962,
+        "seconds": 0.5990681180264801,
+        "optimize": 1,
+        "entire_COMPARISON_equal": true,
+        "all_original_positions": 50360,
+        "outer_seconds": 0.8474229039857164,
+        "peak_child_KiB": 27860
+      }
+    ],
+    "late_freeze": {
+      "whole_comparison_sha256": "545e1ac4e45fa6a6eca3b5f2594c54061bc8aaa49f347acf517c8d9c77f8a818",
+      "bytes": 13962,
+      "seconds": 0.6299073179252446,
+      "optimize": 0,
+      "entire_COMPARISON_equal": false,
+      "all_original_positions": 50360,
+      "outer_seconds": 0.7010817070258781,
+      "peak_child_KiB": 27860
+    },
+    "all9_primary_seals_unchanged": true
+  },
+  "portable_complete_corroboration": {
+    "agent": "six-reviewer-2",
+    "all13_original_pinned_inputs_unchanged": true,
+    "all9_primary_seals_unchanged": true,
+    "all_fields_and_entire_common_export_equal": true,
+    "all_native_full_records_equal": true,
+    "records": [
+      {
+        "comparison_seconds": 0.7296802260680124,
+        "entire_native_expected_equal": true,
+        "fields_seconds": 0.5108014399884269,
+        "native_seconds": 9.762110140989535,
+        "native_stdout_summary": {
+          "complete_sectors": 34,
+          "controls": 12,
+          "least_support_cutoff": 8,
+          "literal_action_columns": 112,
+          "ok": true,
+          "record_sha256": "ce889728764f880dc3e12952f9b6bb4a0bc7a6a6dd849d674757592dbc5207c9"
+        },
+        "optimized": false,
+        "peak_child_KiB": 25804,
+        "whole_common_comparison": {
+          "all_original_positions": 50360,
+          "bytes": 13962,
+          "entire_COMPARISON_equal": true,
+          "optimize": 0,
+          "seconds": 0.6076191780157387,
+          "whole_comparison_sha256": "545e1ac4e45fa6a6eca3b5f2594c54061bc8aaa49f347acf517c8d9c77f8a818"
+        },
+        "whole_native_fields_export": {
+          "bytes": 608401,
+          "role": "postseal original native field instrumentation, not independent derivation",
+          "sectors": 34,
+          "sha256": "413a68b41de41315b860d60cc22fd2167c822e92ddafa779b59cfe48cdfa5376"
+        },
+        "whole_native_record_bytes": 21587,
+        "whole_native_record_sha256": "ce889728764f880dc3e12952f9b6bb4a0bc7a6a6dd849d674757592dbc5207c9"
+      },
+      {
+        "comparison_seconds": 0.8468281410168856,
+        "entire_native_expected_equal": true,
+        "fields_seconds": 0.5918935500085354,
+        "native_seconds": 10.16144333500415,
+        "native_stdout_summary": {
+          "complete_sectors": 34,
+          "controls": 12,
+          "least_support_cutoff": 8,
+          "literal_action_columns": 112,
+          "ok": true,
+          "record_sha256": "ce889728764f880dc3e12952f9b6bb4a0bc7a6a6dd849d674757592dbc5207c9"
+        },
+        "optimized": true,
+        "peak_child_KiB": 27296,
+        "whole_common_comparison": {
+          "all_original_positions": 50360,
+          "bytes": 13962,
+          "entire_COMPARISON_equal": true,
+          "optimize": 1,
+          "seconds": 0.5892422019969672,
+          "whole_comparison_sha256": "545e1ac4e45fa6a6eca3b5f2594c54061bc8aaa49f347acf517c8d9c77f8a818"
+        },
+        "whole_native_fields_export": {
+          "bytes": 608401,
+          "role": "postseal original native field instrumentation, not independent derivation",
+          "sectors": 34,
+          "sha256": "413a68b41de41315b860d60cc22fd2167c822e92ddafa779b59cfe48cdfa5376"
+        },
+        "whole_native_record_bytes": 21587,
+        "whole_native_record_sha256": "ce889728764f880dc3e12952f9b6bb4a0bc7a6a6dd849d674757592dbc5207c9"
+      }
+    ],
+    "role": "independent mathematical reviewer",
+    "scope": "Postseal corroboration only. Complete primary verify.py remains own-only; exact seed is credited mathematical author input. Native729-arithmetic/baseline and12adverse cases reproduced, no fresh historical baseline verdict.",
+    "temporary_dense_exports_published": false
+  },
+  "resources": {
+    "native_threads": 1,
+    "max_cpu_jobs": 1,
+    "limits": "unchanged1CPU2GiB",
+    "own_internal_seconds": 45,
+    "outer_child_seconds": 55,
+    "literal_original_allocations": "new own only n6; n32 forbidden before allocation",
+    "no_resource_needs": true
+  },
+  "trust": "Complete ordinary original-space harmonic, star rank and lift arguments UNFORMALIZED. Public225 rational seed explicit author input. Complete9471/9513 application is an explicit reused premise, not fresh parent execution verdict. Late unchanged native self-contained13 files corroboration, not primary independence. All1/512 form certificates own-only; no floor optimum or allncap theorem.",
+  "draft_or_postseal_errors": "Draft ordinary-reference replay and peer reader path fixed BEFORE seal; no postseal primary edits or late adapter/math corrections."
+}

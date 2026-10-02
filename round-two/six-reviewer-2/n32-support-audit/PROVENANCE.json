@@ -1,0 +1,86 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "seal_utc": "2026-10-02T18:49:08.412510+00:00",
+  "sealed_files": {
+    ".gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+    "EXPECTED.json": "1cc9898cd07685892002c4016e22a3a54bd6a5913e3a670f079f9cbf1d811303",
+    "PROOF.md": "89a9d27c25a05ee6a45a8e89e05ff1dd1fe3fb43f7246b4524e04f7b6b1589fd",
+    "controls.py": "849d8c7819f3ec1886e7156c49b4640de23a8afb62fac98f2ab5bd306c201073",
+    "core.py": "3d6f6962be1b684bdd821f953669f32c205e714c4654ed78ec9305585d8d2109",
+    "linear.py": "94872f866836b3c2b5971aa96e5e7814eeaf81270b127c0e1fb491b3dfc5224c",
+    "literal.py": "6e4cc671505ddc56a460442a874a9581479fdb9f05ffa00e27757a63f3e0747a",
+    "seed.json": "c0793a1955dc59f41da3c521bbb070efe125a445fc159e328bd616968a8ee40e",
+    "verify.py": "ece276372764051ae0e6b8333e0a7f41b79031353d9c02be3799507ec3f53721"
+  },
+  "primary_files": 9,
+  "entire_expected_bytes": 39489,
+  "whole_record_sha256": "c5195b8245b5418fb1b4bc573a65b9170ab729cdfb85ab434f418ee2b7258423",
+  "independent_cold_records": [
+    {
+      "agent": "six-reviewer-2",
+      "all_threads_one": true,
+      "optimize": 0,
+      "peak_child_KiB": 21252,
+      "phases": [
+        {
+          "phase": "core",
+          "seconds": 1.6265274540055543
+        },
+        {
+          "phase": "literal",
+          "seconds": 4.674818543018773
+        },
+        {
+          "phase": "controls",
+          "seconds": 0.45994093699846417
+        }
+      ],
+      "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+      "rejections": 23,
+      "role": "independent mathematical reviewer",
+      "seconds": 6.762833587010391,
+      "whole_expected_equal": true,
+      "whole_record_bytes": 39488,
+      "whole_record_sha256": "c5195b8245b5418fb1b4bc573a65b9170ab729cdfb85ab434f418ee2b7258423"
+    },
+    {
+      "agent": "six-reviewer-2",
+      "all_threads_one": true,
+      "optimize": 1,
+      "peak_child_KiB": 23256,
+      "phases": [
+        {
+          "phase": "core",
+          "seconds": 1.6874120050342754
+        },
+        {
+          "phase": "literal",
+          "seconds": 4.9244364079786465
+        },
+        {
+          "phase": "controls",
+          "seconds": 0.6263358510332182
+        }
+      ],
+      "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+      "rejections": 23,
+      "role": "independent mathematical reviewer",
+      "seconds": 7.239969009999186,
+      "whole_expected_equal": true,
+      "whole_record_bytes": 39488,
+      "whole_record_sha256": "c5195b8245b5418fb1b4bc573a65b9170ab729cdfb85ab434f418ee2b7258423"
+    }
+  ],
+  "mathematical_inputs_read_before_seal": [
+    "entire signed9592 claim and relation neighborhood",
+    "public225-coordinate mathematicalseed and definingPROOF",
+    "explicit9471 necessity proof and9513 scoped sufficient review",
+    "owned linear primitives, reused unchanged"
+  ],
+  "target_executable_expected_provenance_READ_before_seal": false,
+  "independence": "Mathematicalseed explicitly creditedauthorinput; notblind/no blank-slate claim. No9592 researchercode imported during independent derivation. All own fields frozen before late target access.",
+  "source_helper": "053a9eb69737346ff1858a0f441ceeb6942b1b0c:round-two/six-reviewer-2/finite-deletion-cutoff-audit/linear.py",
+  "ultimate_helper": "77e859b56ee1808932766c83bb6e428cb6ac0415 / own REVIEW9303",
+  "draft_changes": "Unused uncapped-reference decode made explicit full17lower/16nonmean cap replay before freeze; prior candidate proof/readers links corrected before seal. No target defect or postseal primary change inferred."
+}
