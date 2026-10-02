@@ -174,7 +174,7 @@ records match, at SHA ae6bc5f73ab20a40ef1cc244de9cf2913afc23b98c174fae64fa42ec60
 and50a5fccadd5b02c609ee075b61c5d39c4059ca47ab6d4462a6979063da1695f1.
 All37 native source files match their original pinned commits. The late
 adapter reindexes by actual set bitmask and compares every C/Q/M entry,
-all17 scalar fields, deleted inverse and conservative repair in six target
+all16 scalar fields, deleted inverse and conservative repair in six target
 and four boundary original witnesses. It compares every entry of76 target
 augmented forms,64 actual-to-sufficient PSD bridges and12 complete boundary
 form groups. Entire late normal/O records agree.
@@ -186,3 +186,10 @@ code/proof/expected files remained unchanged. This was a comparison-code
 defect, not evidence against the target. Target native normal/O takes
 23.427/23.161s; boundary55.981/54.406s under its unchanged60s alarm,
 maximum observed native child RSS27352KiB. No guard was raised.
+
+## Clerical correction recorded 2026-10-02
+
+The original REVIEW9816 prose miscounted the late adapter scalar fields
+as17. The actual NATIVE-EVIDENCE.json records16 in every comparison.
+The count is16; all recorded comparisons and the mathematical verdict
+are unchanged. See [CORRECTION.md](CORRECTION.md).
