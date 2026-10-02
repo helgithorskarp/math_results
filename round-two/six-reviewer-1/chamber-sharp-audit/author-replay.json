@@ -1,0 +1,106 @@
+{
+  "agent": "six-reviewer-1",
+  "author_external_fixture_rejections": "18 reported in source VALIDATION.json; not rerun by this reviewer. Independent four external damaged fixtures are separately sealed.",
+  "author_runs": [
+    {
+      "mode": "normal",
+      "stdout": {
+        "analytic_bridges_formalized": false,
+        "complete_identity_records": 20,
+        "mathematical_damage_rejections": 11,
+        "status": "PASS",
+        "strict_margins": 28,
+        "whole_record_sha256": "05732eacfe94a3e6583118d70cc8e315e936ec0890d067d518be9d4913500f7f"
+      },
+      "wall_seconds": 0.1109
+    },
+    {
+      "mode": "optimized",
+      "stdout": {
+        "analytic_bridges_formalized": false,
+        "complete_identity_records": 20,
+        "mathematical_damage_rejections": 11,
+        "status": "PASS",
+        "strict_margins": 28,
+        "whole_record_sha256": "05732eacfe94a3e6583118d70cc8e315e936ec0890d067d518be9d4913500f7f"
+      },
+      "wall_seconds": 0.280308
+    }
+  ],
+  "author_source_commit": "ceb9b1c6714c5fd1e6a841406bd90ea7a419ce21",
+  "author_source_files": {
+    ".gitignore": {
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    "EXPECTED.json": {
+      "bytes": 19709,
+      "sha256": "37e411f1fb43d6d48504a3f6d539949371ac59a0e05444e3e220f6cc39dec0bf"
+    },
+    "LITERATURE.md": {
+      "bytes": 4798,
+      "sha256": "bea7303fb8fb7ca724db3154833742df3188c3928e34608dadddcc0eaa348fd7"
+    },
+    "PROOF.md": {
+      "bytes": 11443,
+      "sha256": "b7f79009973baa13434a50a2a44ba48c71dc6cb54a0b584c11b5ceadd1323052"
+    },
+    "README.md": {
+      "bytes": 2565,
+      "sha256": "06bd6ab12f636c7ffb477b50ae049f32f294c565f42fd2246faf6d231c50ac26"
+    },
+    "SHA256SUMS": {
+      "bytes": 630,
+      "sha256": "3b72c7ce82c6bbeb27892dd4ff14a6645e2c0a154fc81acd7eeb83738e0457d1"
+    },
+    "VALIDATION.json": {
+      "bytes": 5602,
+      "sha256": "3ffdb699a036a26be02aae7e8008d0da6ae630c96b0b49df7ad6ca272a882a42"
+    },
+    "dependencies.json": {
+      "bytes": 1334,
+      "sha256": "ef8c0360a8037bc7280f06b65fe267f388ad24fed74ef3b10b7d691dd02ac4d6"
+    },
+    "verify.py": {
+      "bytes": 16374,
+      "sha256": "bfa416ffce37c32d5debad391023a0d8363b7997e2b923a50d1bbc7be1954a67"
+    }
+  },
+  "child_guard_seconds": 45,
+  "child_peak_rss_KiB": 21112,
+  "first_author_source_materialization_utc": "2026-10-02T15:41:03.525790+00:00",
+  "independent_seal_utc": "2026-10-02T15:40:33.483057+00:00",
+  "independent_whole_record_agreements": [
+    "complete anchored bivariate original polynomial, every coefficient",
+    "complete derivative with critical multiplicities",
+    "all six exact low-coefficient majorants on the whole complex disk",
+    "all nine cyclic original-root first-jet coefficients",
+    "all nine companion half-normal first-jet coefficients",
+    "complete pinned author SHA256 manifest"
+  ],
+  "narrow_written_dependencies_byte_pinned": [
+    {
+      "bytes": 16853,
+      "executable_imported": false,
+      "height": 9428,
+      "path": "round-two/six-sendov-1/cyclotomic-exclusion/PROOF.md",
+      "scope": "coarse F>8+H/6-193eta and whole critical localization only",
+      "sha256": "0ad4fabc566bd4ed18f44bf0b6bf1d57ef27ca49a44fd1a470af51cb864044a9",
+      "source_commit": "ed752aee1270d43b9bdbbc521a2c3f1cff2261f8"
+    },
+    {
+      "bytes": 18541,
+      "executable_imported": false,
+      "height": 9113,
+      "path": "round-two/six-sendov-3/validated-boundary-branch/PROOF.md",
+      "scope": "actual legal M(eta)<8+3eta comparison only, no global attainment",
+      "sha256": "0033305ea05105a655eef44a4b9a5493de1c45a538609bf5be6961eecb4583a8",
+      "source_commit": "7bb2d1b6cf6cb3b370ad10023bee018128a1b81f"
+    }
+  ],
+  "no_resource_escalation": true,
+  "post_independent_seal_utc": "2026-10-02T15:42:21.862921+00:00",
+  "role": "independent mathematical reviewer",
+  "serial_native_threads_one": true,
+  "signed_defining_proof_matches_pinned_source": true
+}

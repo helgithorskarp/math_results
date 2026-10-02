@@ -1,0 +1,74 @@
+{
+  "agent": "six-reviewer-1",
+  "child_guard_seconds": 50,
+  "child_peak_rss_KiB": 20060,
+  "defining_ordinary_proof_visible_before_seal": true,
+  "fixture_damage_rejections": [
+    {
+      "damage": "changed-original-polynomial",
+      "rejected": true
+    },
+    {
+      "damage": "missing-literal-case",
+      "rejected": true
+    },
+    {
+      "damage": "extra-field",
+      "rejected": true
+    },
+    {
+      "damage": "changed-type",
+      "rejected": true
+    }
+  ],
+  "frozen_source_sha256": {
+    "algebra.py": "033f6a43eac8a109fb2542f94123564d4bafaf0742dc8e12124004a684e09d92",
+    "check.py": "376c936f5ab74e5c04d7bfafb34df4531b0fd40e84896f99d908790a3d6f9bbc",
+    "core.py": "ba72fbe7e390f69bb97b7911ac7b39373b4338b28e36702cb575e79a53915d8c",
+    "expected.json": "3503119bfb3b6e58669df34b741ea188217d5deb8ee3f668ef7d91e20b565dca"
+  },
+  "internal_guard_seconds": 45,
+  "method": "Whole anchored original polynomial and two-trace signed slack over free variables; fresh Q[C9] simultaneous original-root sections through order6; five literal complex multiplicity/chamber/anchor controls; original and improved whole-window budgets. No target imports or fixtures. Formal finite series do not replace written all-parameter Rouche/Cauchy proof.",
+  "native_threads": {
+    "BLIS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "new_author_code_or_fixture_read_before_seal": false,
+  "prior_reused_source": "Own exact rational sparse-polynomial kernel, source448db1d41bc84a0e5bf2c6f6ce00a043b9a337dd, REVIEW9455; no prior target verdict transfer.",
+  "resources": "unchanged1CPU2GiB;serialchildren; no escalation or limit hit",
+  "role": "independent mathematical reviewer",
+  "runs": [
+    {
+      "mode": "normal",
+      "stdout": {
+        "literal_controls": 5,
+        "math_damages": 10,
+        "original_section_order": 6,
+        "record_sha256": "a4a697c3fed5dc8a4b0c90697381df52e30aad777b4586399a5a61a9b43112f8",
+        "status": "PASS",
+        "whole_window_margins": 39
+      },
+      "wall_seconds": 0.490679
+    },
+    {
+      "mode": "optimized",
+      "stdout": {
+        "literal_controls": 5,
+        "math_damages": 10,
+        "original_section_order": 6,
+        "record_sha256": "a4a697c3fed5dc8a4b0c90697381df52e30aad777b4586399a5a61a9b43112f8",
+        "status": "PASS",
+        "whole_window_margins": 39
+      },
+      "wall_seconds": 0.636079
+    }
+  ],
+  "target_height": 9492,
+  "target_source_commit": "ceb9b1c6714c5fd1e6a841406bd90ea7a419ce21",
+  "utc_sealed_before_author_executable_or_fixture": "2026-10-02T15:40:33.483057+00:00",
+  "whole_record_bytes": 17361
+}
