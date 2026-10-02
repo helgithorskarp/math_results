@@ -1,0 +1,134 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "seal_utc": "2026-10-02T18:07:43.716202+00:00",
+  "target": {
+    "height": 9582,
+    "ref": "bafkreibjrrhsevzhmrv7a4lc3czo2pkfkucbmywmnydiy4lsukzri62g24",
+    "source_commit": "cf8b5d93925629be15d584c5e116370047be8a7d"
+  },
+  "sealed_files": {
+    "EXPECTED.json": "18334a845e7c6e5c4806d17b5d8f148a736dc7a47d665c3715799f6e1b1fd17c",
+    "PROOF.md": "74d9e357bb44f86a987fd8cb407a5c11997d04decce31f098e3640df86e773e9",
+    "affine.py": "3edd90ce196759e15a8d011d60cbdde60226f36ee956ca1d45d33ff701a22756",
+    "baselines.py": "ed7f00ac0fba50ef64ed876ec3e89dcbdba6546537ee4a56062788ae43e8f11a",
+    "boundary.py": "7dfe48a8f206b2ff293b8e515dd66abcf31fc5e33cf4d71d2c3e4b980396f2fd",
+    "coefficient.py": "4044cb660a6ab0ce4440a7d0431f89608671f4bb72552ab2857c936bfa1e3616",
+    "controls.py": "0370afb4731159ddd860711e521733acf6f1409814fc6ed6e0789b4b420119f1",
+    "dual.py": "764c798beb096cdca5fbe87c194d1a1fa4ddfb8cb88029bdf3b7b91c146fe427",
+    "linear.py": "94872f866836b3c2b5971aa96e5e7814eeaf81270b127c0e1fb491b3dfc5224c",
+    "literal.py": "97315a4ec676de17aa048b8159d79f67bdad0f207e12e6a66291150310d26bcd",
+    "orbits.py": "048ca1115365be46faae7aa0ae500d914b59c9c78154dd65fa2a49a4a2bca9af",
+    "physical.py": "de409fe5253dff24ae1577bbc4b963152c691aacc977dcee2f4adf55aafc1a76",
+    "sparse.py": "f17c48e668953b234bd04fa120f2496937bdc098093ebdb1a79661d4abd1ed68",
+    "variance.py": "8b87277fbaf0f4b4542efa9e6fe655927afa218ba21db58c0b5c6e8df705e34f",
+    "verify.py": "9f42649a7cf843eb9e7f5bfd2f55bc844fc692223105ad5cf9c3de5450d97f06"
+  },
+  "independent_cold_records": [
+    {
+      "agent": "six-reviewer-2",
+      "mode": "normal",
+      "peak_child_KiB": 18488,
+      "phases": 5,
+      "role": "independent mathematical reviewer",
+      "seconds": 8.281670536031015,
+      "status": "PASS",
+      "timings": [
+        {
+          "phase": "coefficient.py",
+          "seconds": 0.15817825694102794
+        },
+        {
+          "phase": "boundary.py",
+          "seconds": 2.3571962140267715
+        },
+        {
+          "phase": "literal.py",
+          "seconds": 1.0934720720397308
+        },
+        {
+          "phase": "baselines.py",
+          "seconds": 4.060391729930416
+        },
+        {
+          "phase": "controls.py",
+          "seconds": 0.6085742970462888
+        }
+      ],
+      "whole_expected_equal": true,
+      "whole_record_sha256": "18334a845e7c6e5c4806d17b5d8f148a736dc7a47d665c3715799f6e1b1fd17c"
+    },
+    {
+      "agent": "six-reviewer-2",
+      "mode": "optimized",
+      "peak_child_KiB": 21008,
+      "phases": 5,
+      "role": "independent mathematical reviewer",
+      "seconds": 9.100859537022188,
+      "status": "PASS",
+      "timings": [
+        {
+          "phase": "coefficient.py",
+          "seconds": 0.2573386928997934
+        },
+        {
+          "phase": "boundary.py",
+          "seconds": 2.3312397800618783
+        },
+        {
+          "phase": "literal.py",
+          "seconds": 1.147641702904366
+        },
+        {
+          "phase": "baselines.py",
+          "seconds": 4.600355677073821
+        },
+        {
+          "phase": "controls.py",
+          "seconds": 0.76066680601798
+        }
+      ],
+      "whole_expected_equal": true,
+      "whole_record_sha256": "18334a845e7c6e5c4806d17b5d8f148a736dc7a47d665c3715799f6e1b1fd17c"
+    }
+  ],
+  "independence": "Full defining proof/counts visible from prior pass; no new target executable/EXPECTED/RESULTS read or materialized before seal. New actual counted forms/3space/ALL20 decisions/complete341 coefficient records/original tuple exception/full baselines and20 semantic controls, no author function imports. Own previous helper reuse explicitly credited, not blank-slate or blind.",
+  "unchanged_helper_source_commit": "ae318e114b454924ed4eb7af417882cccf5ebf5a",
+  "unchanged_owned_helpers": [
+    "affine.py",
+    "linear.py",
+    "sparse.py",
+    "variance.py",
+    "physical.py"
+  ],
+  "ultimate_helpers": "linear/affine credited9145 and own9303 source77e859b56ee1808932766c83bb6e428cb6ac0415; sparse owned9508; all five copied unchanged from owned9586",
+  "refinements": "Every original integerq>=4,1<=k<=q valid3space/positive denominators/derivative using12 entire208positive-coefficient certificates; ANY whole positiveU0floor gives same3mu/4cap on largeropenlowerenergyinterval, newendpointratio6k/(2k+1), allnine boundary casesincludingfailedvariance.",
+  "preseal_corrections": [
+    "Reviewer control used positiveq19/k5 as negativefixture; corrected to actualnegativeq18/k5 beforeseal. Not an author defect or premise."
+  ],
+  "resources": {
+    "native_threads": 1,
+    "max_cpu_jobs": 1,
+    "limits": "unchanged1CPU2GiB",
+    "phase_internal_seconds": 60,
+    "phase_outer_seconds": 90,
+    "symbolic_terms": 512,
+    "old_allocation_guards": "unchangedaffine4<=q<=23 and physicalq19/q24",
+    "new_tuple_guard": "ONLYpublished(q,k)=(74,15)"
+  },
+  "literature_live_checked": "2026-10-02",
+  "primary_literature": [
+    "https://arxiv.org/html/2609.28404v1#S4",
+    "https://arxiv.org/abs/1703.00494"
+  ],
+  "priority": "Exact-phrase searches inconclusive; no historicalpriority claim for classical methods. GeneralH/Iopen.",
+  "postseal_proof_disclosure_correction": {
+    "utc": "2026-10-02T18:09:30.235508+00:00",
+    "path": "PROOF.md",
+    "original_sha256": "74d9e357bb44f86a987fd8cb407a5c11997d04decce31f098e3640df86e773e9",
+    "final_sha256": "8811e9db6e3fb6555ca85fa350dd1bfe4159e5036ffa264913ee60d687fdcacc",
+    "old_text": "[boundary.py](boundary.py) freezes every pivot,\npermutation and all20 decisions.",
+    "new_text": "[boundary.py](boundary.py) freezes all20 decisions and the checksum of each\ncomplete pivot/physical-label record. Every pivot and chosen label is computed\nand checked; the compact record stores its digest, while the runner recomputes\nthe full sequence.",
+    "scope": "Only this exact evidence-storage wording replaced after target access/native replay. All13 mathematical programs and entire EXPECTED unchanged; no equation, proof inference, original count, bound, quantifier or mathematical conclusion changed. Original full proof retained privately; all remaining14 sealed files unchanged. Do not claim all15 files unchanged."
+  }
+}

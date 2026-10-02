@@ -1,0 +1,170 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "seal_utc": "2026-10-02T18:07:43.716202+00:00",
+  "first_target_access_utc": "2026-10-02T18:07:43.716832+00:00",
+  "initial_primary_files": 15,
+  "sealed_programs_and_entire_EXPECTED_unchanged": true,
+  "unchanged_primary_files": [
+    "EXPECTED.json",
+    "affine.py",
+    "baselines.py",
+    "boundary.py",
+    "coefficient.py",
+    "controls.py",
+    "dual.py",
+    "linear.py",
+    "literal.py",
+    "orbits.py",
+    "physical.py",
+    "sparse.py",
+    "variance.py",
+    "verify.py"
+  ],
+  "proof_postseal_disclosure_correction_only": {
+    "utc": "2026-10-02T18:09:30.235508+00:00",
+    "path": "PROOF.md",
+    "original_sha256": "74d9e357bb44f86a987fd8cb407a5c11997d04decce31f098e3640df86e773e9",
+    "final_sha256": "8811e9db6e3fb6555ca85fa350dd1bfe4159e5036ffa264913ee60d687fdcacc",
+    "old_text": "[boundary.py](boundary.py) freezes every pivot,\npermutation and all20 decisions.",
+    "new_text": "[boundary.py](boundary.py) freezes all20 decisions and the checksum of each\ncomplete pivot/physical-label record. Every pivot and chosen label is computed\nand checked; the compact record stores its digest, while the runner recomputes\nthe full sequence.",
+    "scope": "Only this exact evidence-storage wording replaced after target access/native replay. All13 mathematical programs and entire EXPECTED unchanged; no equation, proof inference, original count, bound, quantifier or mathematical conclusion changed. Original full proof retained privately; all remaining14 sealed files unchanged. Do not claim all15 files unchanged."
+  },
+  "whole_normal_optimized_EXPECTED_equal": true,
+  "independent_cold_records": [
+    {
+      "agent": "six-reviewer-2",
+      "mode": "normal",
+      "peak_child_KiB": 18488,
+      "phases": 5,
+      "role": "independent mathematical reviewer",
+      "seconds": 8.281670536031015,
+      "status": "PASS",
+      "timings": [
+        {
+          "phase": "coefficient.py",
+          "seconds": 0.15817825694102794
+        },
+        {
+          "phase": "boundary.py",
+          "seconds": 2.3571962140267715
+        },
+        {
+          "phase": "literal.py",
+          "seconds": 1.0934720720397308
+        },
+        {
+          "phase": "baselines.py",
+          "seconds": 4.060391729930416
+        },
+        {
+          "phase": "controls.py",
+          "seconds": 0.6085742970462888
+        }
+      ],
+      "whole_expected_equal": true,
+      "whole_record_sha256": "18334a845e7c6e5c4806d17b5d8f148a736dc7a47d665c3715799f6e1b1fd17c"
+    },
+    {
+      "agent": "six-reviewer-2",
+      "mode": "optimized",
+      "peak_child_KiB": 21008,
+      "phases": 5,
+      "role": "independent mathematical reviewer",
+      "seconds": 9.100859537022188,
+      "status": "PASS",
+      "timings": [
+        {
+          "phase": "coefficient.py",
+          "seconds": 0.2573386928997934
+        },
+        {
+          "phase": "boundary.py",
+          "seconds": 2.3312397800618783
+        },
+        {
+          "phase": "literal.py",
+          "seconds": 1.147641702904366
+        },
+        {
+          "phase": "baselines.py",
+          "seconds": 4.600355677073821
+        },
+        {
+          "phase": "controls.py",
+          "seconds": 0.76066680601798
+        }
+      ],
+      "whole_expected_equal": true,
+      "whole_record_sha256": "18334a845e7c6e5c4806d17b5d8f148a736dc7a47d665c3715799f6e1b1fd17c"
+    }
+  ],
+  "native_replay": {
+    "agent": "six-reviewer-2",
+    "role": "independent mathematical reviewer",
+    "records": [
+      {
+        "mode": "normal",
+        "seconds": 8.401679854025133,
+        "peak_child_KiB": 18648,
+        "entire_native_expected_equal": true,
+        "stable_record_sha256": "e21cefee85249a02ab731ba74b42e436c4b1c46768002bc55db5a04b2ce71715",
+        "whole_record_sha256": "78458d6f1d8c0d20eefa33ffa0ec95d639096bc17c125c7e3f24683b90819051",
+        "stdout_is_timed_summary_not_whole_record": true
+      },
+      {
+        "mode": "optimized",
+        "seconds": 8.684726772014983,
+        "peak_child_KiB": 21432,
+        "entire_native_expected_equal": true,
+        "stable_record_sha256": "e21cefee85249a02ab731ba74b42e436c4b1c46768002bc55db5a04b2ce71715",
+        "whole_record_sha256": "78458d6f1d8c0d20eefa33ffa0ec95d639096bc17c125c7e3f24683b90819051",
+        "stdout_is_timed_summary_not_whole_record": true
+      }
+    ],
+    "entire_native_normal_optimized_expected_equal": true,
+    "guard": "unchanged60s whole original verifier wrapper; original declared60s retained, no program mutation; serial native1/unchanged1CPU2GiB",
+    "primary_seal_unchanged": true,
+    "native_controls": 11,
+    "author_input_count": 20
+  },
+  "late_adapter_cold_records": [
+    {
+      "entire_COMPARISON_equal": true,
+      "finite_common_field_positions": 252,
+      "status": "PASS",
+      "whole_common_records": 33,
+      "whole_record_sha256": "655e26c3b7d14cf092de20c3f7a7cd1fdeb1ad8c869a5659260c4ded6aff6c85",
+      "mode": "normal",
+      "seconds": 1.16582847898826,
+      "peak_child_KiB": 18000
+    },
+    {
+      "entire_COMPARISON_equal": true,
+      "finite_common_field_positions": 252,
+      "status": "PASS",
+      "whole_common_records": 33,
+      "whole_record_sha256": "655e26c3b7d14cf092de20c3f7a7cd1fdeb1ad8c869a5659260c4ded6aff6c85",
+      "mode": "optimized",
+      "seconds": 1.355414366000332,
+      "peak_child_KiB": 21416
+    }
+  ],
+  "late_adapter_notes": [
+    "Author serializes integral scalarGram values as strings; own counted data preservesints forT/V. Initial postseal adapter rejected numeric-type difference; canonical output strings corrected without anyprimary change or mathematical mismatch.",
+    "Originalcoefficientaxes explicitly swapped(k-2,q-3k) vsauthor(q-3k,k-2). All133positions compared.",
+    "No label-dependent original amplitude streams equated; last15 vsfirst15 deletion labels differ by outside permutation. Native characteristic fingerprints not independently regenerated."
+  ],
+  "resource_guards": {
+    "native_threads": 1,
+    "max_cpu_jobs": 1,
+    "limits": "unchanged1CPU2GiB",
+    "phase_internal_seconds": 60,
+    "phase_outer_seconds": 90,
+    "symbolic_terms": 512,
+    "old_allocation_guards": "unchangedaffine4<=q<=23 and physicalq19/q24",
+    "new_tuple_guard": "ONLYpublished(q,k)=(74,15)"
+  },
+  "proof_trust": "Unformalized original setcount/whole endpointcomplement/real PSDlowerenergy/lift/infinite coefficient bridges, explicitowned9488/9508/9552/9586+8757/9145 premises. CPython3.12.14 exact standard library, no solver/CAS/float.",
+  "source_first_graph_status": "No graph submission yet; source, exactremote, directreaderlinks and fresh nondedup inspection required."
+}
