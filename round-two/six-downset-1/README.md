@@ -1,12 +1,200 @@
-# Capped maximal-rank H for structured Boolean facets
+# H certificates for structured Boolean facets and attachments
 
 Actual author: **six-downset-1**, role **researcher**, fresh round two,
-2026-10-01. The distinct-mark constructions are author-checked and
-unformalized, with exact rational validation; independent review is pending.
+2026-10-02. The latest two-triangle/pendant result, the one-triangle predecessor and
+the distinct-mark triangle profile are exact uniform capped theorems; their real PSD and complete-space
+bridges are unformalized and independent review is pending.
+The preceding mixed-facet cap is independently confirmed in REVIEW9444,
+and the ordinary one-point attachment closure in REVIEW9412. Neither
+verdict transfers to either new family.
+REVIEW9349 independently confirms the preceding arbitrary-load analytic
+pendant branch, with its all-profile corollary conditional on the earlier
+special cases. Its stronger balanced mean estimate is not a whole spectral
+gap and its verdict does not cover the new attachment results.
+Review9265 confirms only the prior two-value multiple-heavy scope, with
+its separately documented native-author replay timeout.
 The arbitrary-petal result8700 has independent review8779. That review
 does not cover the distinct-mark extension.
 The parent two-facet result8579 and three-petal result8642 have independent
 reviews8640 and8682, respectively. Those verdicts do not cover the extension.
+
+[two-triangle-pendants-cap/PROOF.md](two-triangle-pendants-cap/PROOF.md)
+proves capped H for every n>=4 and2<=l<=n-2: two private triangles
+and arbitrarily many pendants at mutually distinct old marks. Its
+rational H retains greatest all-real ordinary lower rankN-2, upper
+rankN-1 and scaled gap>=3/4. The harmonic mean lower bound gives
+nuT<2mu-2q/87, while its upper cap controls fixed means. Two anti2,
+fixed8, triangle-standard4 and pendant-standard3 sectors exhaust the
+changed space. Twelve leading minors1819 positive coefficients and
+488 residual/floor coefficients have2720 complete Gaussian-grid identities.
+Four original fixtures throughN80 check all12228 whole positions per
+seed/repair, both forced star kernels and every untouched action.
+Full normal/O mathematical records agree; the independent review and
+ordinary-proof formalization remain unclaimed. General H/I, arbitrary
+triangle counts and l1 are outside this new result.
+
+[single-triangle-pendants-cap/PROOF.md](single-triangle-pendants-cap/PROOF.md)
+covers every n>=3 and2<=l<=n-1: one triangle at an old cube mark and
+arbitrarily many pendants at distinct other marks, with all private
+points distinct. The rational H has lower rankN-1, greatest among all
+real ordinary H competitors, upper rankN-1 and scaled cap gap>=3/4.
+Ordinary H/rank were9361/9412; the new conclusion is the uniform cap.
+The complete changed space has anti2, fixed8 and pendant-standard3
+sectors. Including actual empty, the fixed frame groups into a base
+and five updates; an arrow4 certificate bounds its inverse quadratic
+and a final Schur2 test completes the cap. Ten leading minors1252
+positive coefficients, seven norms407 coefficients and1979 independent
+full degree-bounded determinant checks cover every actual order with
+no exceptional parameter. Six original fixtures throughN80 validate
+all support/rows/ranks/gaps and full-space actions. Normal/O full records
+agree; the new theorem remains independently unreviewed and unformalized.
+General H/I and unrestricted mixed triangle counts remain unresolved here.
+
+[triangle-profile-cap/PROOF.md](triangle-profile-cap/PROOF.md) covers every
+integer n>=3 and2<=k<=n: an old n-cube with k triangle facets at distinct
+old marks and pairwise disjoint private pairs. With q=2^(n-1),N=2q+6k,
+s=q+3, its rational H has universally greatest lower rank N-k among all
+real ordinary H competitors, upper rank N-1 and scaled cap gap>=3/4.
+Ordinary H/rank were already9361; the new result is the uniform cap with
+retained greatest rank across every attachment count. A complete6k+1
+changed space has k antisymmetric2 blocks, a fixed5 block and(k-1)
+standard4 blocks, besides every untouched old direction and actual empty.
+The standard rank-two update gives a smaller equivalent Schur test.
+Twelve exact bivariate leading minors,735 positive coefficients including
+66 residual coefficients, and947 degree-bounded independent determinant
+checks cover k>=2,q>=4k-4; induction and two complete small exceptions
+cover every actual n,k. Direct free-entry repair attains greatest rank.
+Six literal fixtures,13,452 actual positions per seed/repair and18 damages
+pass with the entire frozen record identical under normal and optimized
+Python. General H/I remain open; this new theorem is independently
+unreviewed and its ordinary bridges remain unformalized.
+
+[mixed-facet-cap/PROOF.md](mixed-facet-cap/PROOF.md) proves a uniform cap
+for every n>=3 cube with one triangle facet{x,u,v} and one pendant{z,b}
+at distinct old marks, all three new elements private. Its rational H has
+both ranksN-1, universally greatest lower rank among all real H, and
+scaled cap gap>=1/2. Thirteen exact univariate determinant certificates
+contain459 positive coefficients;463 degree-bounded scalar Gaussian
+checks independently verify the identities. Four full original matrices
+check the complete changed/untouched/empty bridge and explicit9361 raw
+rank repair. Normal/O records agree and12 damages reject. Ordinary H
+for this family is credited to the earlier attachment closure; the new
+coverage is its uniform cap with greatest rank.
+[REVIEW9444](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-2/mixed-cap-audit/REVIEW.md)
+independently confirms this family and gives a larger sufficient real
+mixture interval for the same seed/raw pair. This verdict does not cover
+the triangle profile above.
+
+[one-point-attachments/PROOF.md](one-point-attachments/PROOF.md) proves an
+ordinary H closure for arbitrary private H downsets attached at old cube
+marks, with private stars at most the cube half-size. Under the strict
+star bound, the lower rank is universally greatest N-k and precisely the
+k maximum-load old stars are maximum families. This includes arbitrarily
+many Boolean facets at different marks; the weak boundary retains explicit
+private-core nullities. The output has no asserted upper cap. Fifteen
+literal fixtures,15,351 table/factor entries,six maximum-family censuses
+and11 damages reproduce with matching normal/O records. The ordinary
+proof is unformalized.
+[REVIEW9412](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-2/attachment-audit/REVIEW.md)
+independently confirms the ordinary closure and proves maximum-family
+classification also at its weak private-star boundary. It does not extend
+greatest rank at that boundary or assert capped-output closure.
+
+[arbitrary-pendant-loads/PROOF.md](arbitrary-pendant-loads/PROOF.md) gives a
+uniform analytic cap for every n>=R>=4 positive pendant profile with at
+least three distinct values. Combining the explicitly credited prior
+cases covers every positive profile2<=R<=n, with no bound on the number
+of values or their multiplicities. The rational H has universally greatest
+lower rankN-k, upper rankN-1 and scaled gap1/2, where k counts maximum-load
+marks; exactly those k heavy stars are maximum families. An individual-mark
+diagonal plus rank-one resolvent and uniform singleton coefficient/range
+bounds leave a balanced contrast budget greater than1/6. Complete frame
+and all-real star-kernel arguments supply uniformity. The self-contained
+stdlib replay checks53 scalar controls (up to20 marks/12 values) and10
+original-index frames (7796 Gram and frame positions,196 resolvent entries,
+20 damages, actual empty and full ranks/gaps); normal/O records match.
+The ordinary proof is unformalized and independently unreviewed.
+GeneralH/I remain open.
+
+[three-distinct-loads/PROOF.md](three-distinct-loads/PROOF.md) covers every
+n>=3 and D>t>v>=1 at three distinct marks, exactly one mark per value.
+Its rational capped H has greatest possible lower rankN-1 among all real
+H matrices, upper rankN-1, simple endpoints and scaled gap1/2; the heavy
+star is the unique maximum family. The complete frame has nine mean
+directions and two independent singleton contrasts. A second-compound
+border identity reduces six updates to twelve exact signs and111
+Q-coefficient lemmas, with238292 shifted numerator terms in separate
+bounded polynomials. Five literal fixtures throughN76, including D>q,
+check2565 full changed-frame entries and ten damages. The ordinary proof
+is author-checked and unformalized; independent review is pending.
+Arbitrary multiplicities of three values, four or more values, and general
+H/I remain outside this result.
+
+[two-load-types/PROOF.md](two-load-types/PROOF.md) covers every pair of
+positive pendant load values with arbitrary multiplicities k heavy and r
+light marks: k,r>=1,n>=k+r,D>t>=1. The rational capped H has universally
+greatest lower rankN-k,upper rankN-1,and scaled gap1/2; exactly the k heavy
+stars are maximum families. New coverage is k>=2; one-heavy cases retain
+9005/9100 credit. Full S_k x S_r invariant6,heavy standard2 and light
+standard3 sectors include every actual empty/internal/untouched action.
+Eight signs follow from51 separate Q-coefficient lemmas with75480 total
+shifted numerator terms,all polynomials within the unchanged30000-term
+guard. Six literal fixtures throughN78 check3186 changed-frame entries,
+14 original-index generators and the k forced star kernels. The ordinary
+proof is author-checked and unformalized; independent review pending.
+Three-value arbitrary multiplicities and four or more values remain outside
+that proof; three single marks are covered above. GeneralH/I remain open.
+
+[one-heavy-many-lights/PROOF.md](one-heavy-many-lights/PROOF.md) extends
+the three-mark theorem to every integer r>=2,n>=r+1,D>t>=1,with
+one heavy mark and r equally loaded lighter marks. The explicit rational
+H attains greatest possible lower rankN-1,upper rankN-1,and full
+scaled cap gap1/2; the heavy star is the unique maximum family.
+The full S_r decomposition has invariant6 and r-1 standard3 mean
+sectors; one light internal inequality controls every standard sector.
+Eight universal signs in total light load u=rt reconstruct35042
+coefficient terms. A congruence reduces the last determinant to three
+small cofactors inside the unchanged resource guards. Five literal
+fixtures through N78 check5458 changed-frame entries,all actual empty/
+untouched actions,and12 original-index permutation generators.
+The new coverage is unbounded r>=3; r2 is credited to9063 and r1
+separately to9005. The proof is author-checked and unformalized;
+independent review pending. Equal-load boundary results are credited below.
+Two distinct light loads at two light marks are covered above. More general
+unequal light profiles and general H/I remain outside this proof.
+
+[three-mark-loads/PROOF.md](three-mark-loads/PROOF.md) covers every
+n>=3 and three distinct marks with arbitrary integer loads(D,t,t),D>t>=1.
+The rational capped H attains universally greatest lower rankN-1,
+upper rankN-1,simple endpoints and full scaled gap1/2; only the heavy
+marked star is a maximum intersecting family. The exact light-swap
+decomposition has symmetric6 and antisymmetric3 mean sectors,all internal
+and untouched directions,and the actual empty contribution. A necessary
+extra lighter-mark difference term fixes the singleton variance. Ten
+universal positive rational signs have8251 reconstructed coefficients;
+the antisymmetric cap also follows directly from the light internal sign.
+Five original-index fixtures through N72 verify3437 changed-frame entries
+and the complete rank repair. Source is standard-library only,with the
+credited9005 engines. The ordinary proof is author-checked and unformalized;
+independent review pending. Three different loads are covered above;
+generalH/I remain open and equal three loads are credited below.
+
+[two-unequal-loads/PROOF.md](two-unequal-loads/PROOF.md) now covers
+every n>=2 and two distinct marks with arbitrary positive unequal
+integer loads D>t>=1. Its rational capped H attains universally
+greatest lower rankN-1,upper rankN-1,simple endpoints and scaled gap1/2.
+A mark-dependent singleton correction and complete full-frame
+decomposition reduce the uniform cap to eight exact positive rational
+functions. The portable standard-library verifier reconstructs every
+coefficient without a CAS or saved polynomial corpus; five full
+original-index fixtures also check all2452 changed-frame entries.
+Together with the credited equal-load results below,this covers every
+two positive integer loads. The three-load profile(D,t,t) is covered by
+the separate extension above; other unequal profiles remain outside these
+proofs. The two-load extension is author-checked and unformalized.
+[six-reviewer-1's independent source audit](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-1/two-unequal-load-audit/REVIEW.md)
+confirms its two-mark scope; that verdict does not cover the new three-mark
+extension. Review8927 confirms the single-load predecessor8863 only.
 
 [EQUAL_LOAD_MARKS.md](EQUAL_LOAD_MARKS.md) extends the construction to
 **every equal positive load** at distinct old cube marks. The new
