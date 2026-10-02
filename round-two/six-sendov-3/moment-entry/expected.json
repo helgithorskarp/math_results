@@ -72,7 +72,35 @@
     "doubly removable original-root displacement majorant",
     "all eight original-root energy upper bound",
     "original trace energy lower bound",
-    "explicit original coefficient displacement scale"
+    "explicit original coefficient displacement scale",
+    "sixfold whole complex real-center majorant",
+    "sixfold complete anchored eta-nu polynomial majorant",
+    "sixfold all nine unique original-root sections",
+    "actual branch original derivative lower bound four",
+    "constant-impulse actual radial derivative below five",
+    "sixfold all four active originals move inward",
+    "sixfold full first and second divided-normal derivatives",
+    "sixfold real path fits the whole inward Cauchy region",
+    "sixfold inactive originals retain strict half-slack",
+    "sixfold active radial Taylor remainder",
+    "sixfold small critical circle defeats the constant impulse",
+    "sixfold critical circles lie below modulus one sixteenth",
+    "sixfold circle critical factors below one eighth",
+    "sixfold whole critical perturbation below twice eta-nu",
+    "sixfold heavy critical circles defeat the impulse",
+    "sixfold critical clusters remain separated",
+    "sixfold own critical matching beats wrong clusters",
+    "sixfold real-root test center bound",
+    "sixfold real-root test opening bound",
+    "sixfold real critical lies between eta-u over two and twice eta-u",
+    "sixfold real critical leaves the displayed free Euclidean ball",
+    "sixfold doubly removable original displacement bound",
+    "sixfold complete original energy upper bound",
+    "sixfold coefficient trace and original energy lower bounds",
+    "sixfold all-coefficient eta7 upper bound",
+    "sixfold sharp original energy exponent",
+    "sixfold coefficient power seven",
+    "sixfold critical energy upper constant"
   ],
   "coefficient_entry_radius": {
     "coefficient": "1/57406534763712726211641660058884099201115885104434760023882136841288313069618515692832974315825313495922298231949373138672355948043152766571296567808332659269564994572656140000344389574120022435714463495031743122390807731823194181973658513020233176985452498279081199404472314802811655824768082110985166340672084454492229252801189742403957029450467388250214501358353312915261004066118140645880633941658603299497698209063510889929202021079926591625770444716951045960277478891794836019580040978608315291377690212791863007764174393209716027254457637891941312587717764400411421385408982726881092425574514688",
@@ -144,7 +172,11 @@
     "radial-y-floor",
     "inward-y-weight",
     "imbalance-box",
-    "family-energy"
+    "family-energy",
+    "sixfold-cauchy",
+    "sixfold-circle",
+    "sixfold-free-box",
+    "original-energy-power"
   ],
   "original_energy_entry": "Eoriginal<=coefficient_entry_radius^2/40000",
   "proof_trust_boundary": "ordinary root-section/max-modulus/divisibility/Cauchy/Taylor/Rouche/multiset arguments unformalized",
@@ -164,13 +196,46 @@
     "eta_power": "14"
   },
   "role": "researcher",
-  "schema": "six-sendov-3-moment-entry-v1",
+  "schema": "six-sendov-3-moment-entry-v2",
   "second_Newton_sum": "64*c8^2/81-14*c7/9",
-  "sharp_scope": "critical energy exponent3 for uniform entry into fixed displayed normalized collar; constants not optimal",
+  "sharp_scope": "coefficient power7, original matching energy power14, critical matching energy power3, separately balanced critical energy power2 for uniform entry into fixed displayed collar; constants not optimal",
+  "sixfold_real_family": {
+    "anchored_polynomial_div_eta_majorant": "1480815316924129976707486717820379/35494216806390423241907689750528",
+    "coefficient_distance_bounds": [
+      "72*eta^7*u^6",
+      "2^28*eta^7*u^6"
+    ],
+    "critical_energy_bounds": [
+      "eta^2*u^2/4",
+      "32*eta^2*u^2"
+    ],
+    "divided_normal_first_bound": "8388608",
+    "divided_normal_second_bound": "68719476736",
+    "elementary_div_eta_majorants": {
+      "1": "37/4",
+      "2": "104795/65536",
+      "3": "696735/67108864",
+      "4": "124927515/4398046511104",
+      "5": "748386297/18014398509481984",
+      "6": "10095154821/295147905179352825856",
+      "7": "9081440955/604462909807314587353088",
+      "8": "2417851639229271967587977/4951760157141521099596496896"
+    },
+    "eta_complex_radius": "1/1024",
+    "free_metric": "D>=u^2/4>R^2",
+    "nu_complex_radius": "1/2048",
+    "nu_max": "1/6526367401842517916934600641398458174207449372310607034692354414038199259905299606183800087345083908976709862139315775797553663783577663545122114534061968159854245024309436757942465825876754756304133422308011986659813343501718257127056234937780706898758182692186119243669090201684827641744059532241540903291034334698932667925099592867349773479243980119714990605456627340033833668953564102353156379383404248471572169485570030920962610830420839150266424976160925093640512260639620310437299051342087669965814053829474574713932997066162446032473967294656780789832483196779710554597952833191936",
+    "original_energy_bounds": [
+      "648*eta^14*u^12",
+      "2^39*eta^14*u^12"
+    ],
+    "trace": "Im(sum critical)=0",
+    "u": "1/2085924839766513752338888384931203236916703635113918720651407820138886450957656787131798913024"
+  },
   "unchanged_raw_radius": {
     "coefficient": "1/8543948143683640329580086824678208458410818089426611079788166431288878903122562200091848347746304",
     "delta_power": 1,
     "eta_power": "0"
   },
-  "unproved": "global concentration/minimum; optimal original energy exponent; unrestricted first-power conjecture"
+  "unproved": "global concentration/minimum; optimal entry constants or larger domains; unrestricted first-power conjecture"
 }

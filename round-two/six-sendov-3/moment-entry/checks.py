@@ -21,6 +21,65 @@ def require(test, label):
     if not test:
         raise RuntimeError(label)
 
+def sixfold_family(damage=None):
+    checks=[]
+    def check(value,label):
+        require(value,label);checks.append(label)
+    u=F(1,2**310);eta_circle=F(1,1024);nu_circle=F(1,2048)
+    root_circle=F(1,16);X=F(9,8);Y=F(5,4);T=F(25,16)
+    weight=32;nu_max=E**6*u**6
+    check(F(9,8)+weight*nu_circle<=Y,'sixfold whole complex real-center majorant')
+    major={}
+    for k in range(1,9):
+        value=F(0)
+        if k<=6:value+=comb(6,k)*X**k*eta_circle**(k-1)
+        if 0<=k-1<=6:value+=comb(6,k-1)*X**(k-1)*2*Y*eta_circle**(k-1)
+        if 0<=k-2<=6:value+=comb(6,k-2)*X**(k-2)*(T*eta_circle**(k-2)+Y**2*eta_circle**(k-1))
+        if k==8:value+=nu_circle
+        major[str(k)]=str(value)
+    zz=1+root_circle;az=1+eta_circle
+    P=9*az**8+sum((F(9,9-k)*F(major[str(k)])*(zz**(9-k)+az**(9-k)) for k in range(1,9)),F(0))
+    check(P<64,'sixfold complete anchored eta-nu polynomial majorant')
+    check(64*eta_circle<F(1,4),'sixfold all nine unique original-root sections')
+    check(9*F(29,32)**8>4,'actual branch original derivative lower bound four')
+    check(F(18,4)<5,'constant-impulse actual radial derivative below five')
+    check(-F(weight,3)+5<-4,'sixfold all four active originals move inward')
+    first=2**11/(nu_circle/2);second=factorial(2)*2**11/(nu_circle/2)**2
+    if damage=='sixfold-cauchy':second=2**35
+    check(first==2**23 and second==2**36,'sixfold full first and second divided-normal derivatives')
+    check(nu_max<nu_circle/2 and nu_max<F(1,2**36),'sixfold real path fits the whole inward Cauchy region')
+    check(first*nu_max<F(1,8),'sixfold inactive originals retain strict half-slack')
+    check(F(2**35)*nu_max<1,'sixfold active radial Taylor remainder')
+    lam_factor=2 if damage!='sixfold-circle' else 1
+    check(lam_factor**6/4>2,'sixfold small critical circle defeats the constant impulse')
+    check(2*E*u<F(1,32),'sixfold critical circles lie below modulus one sixteenth')
+    check(E*X<F(1,32) and E*Y<F(1,32),'sixfold circle critical factors below one eighth')
+    check(1+F(64,8**7)+F(1024,8**6)*E*nu_max<2,'sixfold whole critical perturbation below twice eta-nu')
+    check(64*F(1,256)**5*u**5<1,'sixfold heavy critical circles defeat the impulse')
+    check(2*F(1,256)*u<F(1,4),'sixfold critical clusters remain separated')
+    check(32*E*u*u<F(1,16),'sixfold own critical matching beats wrong clusters')
+    check(X+Y+u/2<3,'sixfold real-root test center bound')
+    check(T+9*E<2,'sixfold real-root test opening bound')
+    check(F(2,64)<1 and 64>1,'sixfold real critical lies between eta-u over two and twice eta-u')
+    radius=F(1,2**321) if damage!='sixfold-free-box' else u
+    check(u/2>radius,'sixfold real critical leaves the displayed free Euclidean ball')
+    root_bound=2*root_circle/(eta_circle*nu_circle)
+    check(root_bound==2**18,'sixfold doubly removable original displacement bound')
+    check(8*root_bound**2==2**39,'sixfold complete original energy upper bound')
+    check(F(9,8)*2*weight==72 and F(72**2,8)==648,'sixfold coefficient trace and original energy lower bounds')
+    check(200**2*2**39<2**56,'sixfold all-coefficient eta7 upper bound')
+    original_power=14 if damage!='original-energy-power' else 13
+    check(2*(1+6)==original_power,'sixfold sharp original energy exponent')
+    check(2*(1+6)==2*7,'sixfold coefficient power seven')
+    check(8*2**2==32,'sixfold critical energy upper constant')
+    return dict(checks=checks,u=str(u),nu_max=str(nu_max),eta_complex_radius=str(eta_circle),nu_complex_radius=str(nu_circle),
+        elementary_div_eta_majorants=major,anchored_polynomial_div_eta_majorant=str(P),
+        divided_normal_first_bound=str(first),divided_normal_second_bound=str(second),
+        critical_energy_bounds=['eta^2*u^2/4','32*eta^2*u^2'],
+        original_energy_bounds=['648*eta^14*u^12','2^39*eta^14*u^12'],
+        coefficient_distance_bounds=['72*eta^7*u^6','2^28*eta^7*u^6'],
+        trace='Im(sum critical)=0',free_metric='D>=u^2/4>R^2')
+
 def budgets(inputs, damage=None):
     radial, box, limit, c = inputs
     checks = []
@@ -147,8 +206,10 @@ def budgets(inputs, damage=None):
     scalar(F(9,8)**2*257/8 == F(20817,512), 'original trace energy lower bound')
     scalar(F(9,8)*16 == 18, 'explicit original coefficient displacement scale')
 
+    second_family=sixfold_family(damage)
+    checks.extend(second_family.pop('checks'))
     return {
-        'schema':'six-sendov-3-moment-entry-v1','actual_agent':'six-sendov-3','role':'researcher',
+        'schema':'six-sendov-3-moment-entry-v2','actual_agent':'six-sendov-3','role':'researcher',
         'eta_interval':['0 exclusive',str(E)],'kappa_range':'0<=k<1/2-33eta/16',
         'delta_definition':'1/2-33eta/16-k','unchanged_raw_radius':t.record(),
         'critical_rouche_radius':lam.record(),'coefficient_entry_radius':coef.record(),
@@ -172,14 +233,16 @@ def budgets(inputs, damage=None):
         'family_gamma_lower_bound':'max(abs(gamma3),abs(gamma4))>v/2048=2b',
         'family_critical_energy_bounds':['(257/2)*eta^3*v^2','129*eta^3*v^2'],
         'family_original_energy_bounds':['(20817/512)*eta^3*v^2','2^29*eta^3*v^2'],
-        'sharp_scope':'critical energy exponent3 for uniform entry into fixed displayed normalized collar; constants not optimal',
-        'unproved':'global concentration/minimum; optimal original energy exponent; unrestricted first-power conjecture',
+        'sixfold_real_family':second_family,
+        'sharp_scope':'coefficient power7, original matching energy power14, critical matching energy power3, separately balanced critical energy power2 for uniform entry into fixed displayed collar; constants not optimal',
+        'unproved':'global concentration/minimum; optimal entry constants or larger domains; unrestricted first-power conjecture',
         'checks':checks,
         'proof_trust_boundary':'ordinary root-section/max-modulus/divisibility/Cauchy/Taylor/Rouche/multiset arguments unformalized'
     }
 
 DAMAGES = ('rouche-count','coefficient-exponent','newton-factor','energy-without-trace',
-           'family-cauchy','radial-y-floor','inward-y-weight','imbalance-box','family-energy')
+           'family-cauchy','radial-y-floor','inward-y-weight','imbalance-box','family-energy',
+           'sixfold-cauchy','sixfold-circle','sixfold-free-box','original-energy-power')
 
 def build():
     baseline = prior.build()

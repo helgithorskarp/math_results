@@ -52,7 +52,8 @@ def main():
         'mathematical_damage_rejections':len(result['mathematical_damage_rejections']),
         'input_files':72,'coefficient_radius':'delta^6*2^-1999*eta^7',
         'critical_energy_radius':'delta^2*2^-664*eta^3',
-        'sharp_critical_energy_exponent':3,'ordinary_analytic_bridges':'unformalized; independently unreviewed'},sort_keys=True))
+        'sharp_entry_powers':{'coefficient':7,'original_squared_energy':14,'critical_squared_energy':3,'trace_balanced_critical_squared_energy':2},
+        'ordinary_analytic_bridges':'unformalized; independently unreviewed'},sort_keys=True))
 
 if __name__ == '__main__':
     try:

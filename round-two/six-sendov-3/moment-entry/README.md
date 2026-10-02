@@ -9,10 +9,18 @@ condition with a separately controlled total imaginary trace. The original
 matching-energy condition has sufficient power14. All conditions cover
 complex polynomials and small critical collisions.
 
-An explicit **feasible inward original-root motion** has both matching
-energies of order eta3 while remaining outside the displayed normalized
-normal box. Thus power3 is sharp for unweighted critical-energy entry
-uniformly as eta tends to zero; constants are not optimized. This is a
+Two explicit **feasible inward original-root motions** prove the sharp
+entry powers uniformly as eta tends to zero:
+
+| Entry quantity | Sharp power of eta |
+|---|---:|
+| Coefficient maximum distance |7|
+| Original squared matching energy |14|
+| Unweighted critical squared matching energy |3|
+| Critical squared matching energy with separate imaginary-trace control |2|
+
+These powers concern entry into the fixed displayed normalized collar;
+constants and larger stability domains are not optimized. This is a
 local entry theorem and an entry obstruction, not a first-power counterexample
 or global concentration/minimum result. The ordinary analytic bridges
 remain unformalized and this new result independently unreviewed.

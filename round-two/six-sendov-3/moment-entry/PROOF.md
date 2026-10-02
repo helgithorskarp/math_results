@@ -7,12 +7,13 @@ unformalized and independently unreviewed at publication.
 The uniform normalized collar is the credited result
 [9373](../normalized-neighborhood/PROOF.md). We prove stronger physical entry
 conditions by recovering total critical moments before estimating individual
-roots. The coefficient-radius exponent improves from eta13 to eta7. More
-substantively, an explicit disk-rooted inward-motion family proves that
-eta3 is the sharp power for **unweighted critical energy to force entry into
-this fixed displayed normalized collar**, uniformly as eta tends to zero.
-It gives the same necessary power for original energy; the sufficient
-original-energy power here is14, so that optimal power remains open.
+roots. The coefficient-radius exponent improves from eta13 to eta7. Two
+explicit disk-rooted inward-motion families prove the sharp powers for
+**entry into this fixed displayed normalized collar**, uniformly as eta
+tends to zero: coefficient distance7, original squared matching energy14,
+unrestricted critical squared matching energy3, and separately
+trace-balanced critical squared matching energy2. These are entry powers,
+not optimal constants or maximal domains for the stability inequality.
 No statement about global concentration or a global branch minimum follows.
 The fresh independent [9388 review](../../six-reviewer-3/numerical-neighborhood-audit/REVIEW.md)
 confirms the older9315 numerical theorem and gives its own conservative
@@ -104,7 +105,17 @@ Consequently, for either unweighted matching energy, no fixed constant
 `A>0` and exponent `q<3` can make `E<=A eta^q` universally imply entry
 into9373's displayed normalized normal box for every sufficiently small
 positive eta. Together with(3),(6), this identifies the critical-energy
-power3; the constants are not claimed optimal. The family violates an
+power3. A second feasible family, constructed in section8, has
+
+    Im(sum critical)=0, D>R^2,
+    eta^2 ell^2/4<=Ecrit<=32eta^2 ell^2,
+    648eta^14 ell^12<=Eorig<=2^39 eta^14 ell^12,
+    72eta^7 ell^6<=C<=2^28 eta^7 ell^6, ell=2^-310.             (7b)
+
+It proves the remaining coefficient7, original-energy14 and balanced
+critical-energy2 powers sharp for uniform displayed-collar entry. This
+sharpness is already witnessed by real-coefficient polynomials. Constants
+and larger possible stability domains are not claimed optimal. Each family violates an
 entry criterion, not the first-power conjecture or a stability inequality.
 
 ## 2. Exact total moments remove the balance loss
@@ -350,14 +361,118 @@ For any A>0 and q<3, choose positive eta sufficiently small so that
 Equations(21)-(23) prove the obstruction claimed after(7).
 No timeout, finite eta grid or numerical minimizer is used.
 
-## 8. Reproducibility and limits
+## 8. A feasible sixth-root impulse gives the other sharp powers
+
+Set the scalar `ell=2^-310` and `nu=eta^6 ell^6`. This scalar is distinct
+from the eight individual normalized real coordinates u_j. Define an
+anchored monic real polynomial p_s by
+
+    Q_s(z)=p_s'(z)/9
+          =(z-r)^6[(z-eta(y0+32nu))^2+eta T0]-eta nu,
+    p_s(a)=0.                                              (24)
+
+We prove original-root feasibility before using its energy. As in section5,
+freeze the actual real x0,y0,T0 and allow eta,nu independently complex on
+
+    |eta|<1/1024, |nu|<1/2048, |y0+32nu|<5/4.                (25)
+
+The majorants(17) apply with B1=2Y, B0=Y^2 and the additional term
+`nu_circle=1/2048` in `|E_8|/|eta|`, from the full constant impulse
+`-eta nu` in Q_s. The regenerated complete anchored majorant remains
+less than64. Thus exactly the same nine simple original-root disks,
+holomorphic companion half-normals and removable alpha/eta bound2^11
+hold on the entire product(25). On its inner nu disk the full first
+and second divided-normal derivatives are bounded by2^23 and2^36.
+
+At an actual branch original Z, the1/16 fixed ninth-root disk and the
+1/32 branch critical bound imply
+
+    |p0'(Z)|>9(29/32)^8>4.
+
+The constant impulse in Q_s adds `-9eta nu(z-a)` to p. Its contribution
+to the actual original derivative is `9eta(Z-a)/p0'(Z)`, and thus its
+half-normal derivative divided by eta has absolute value below
+`18/4<5`, since |Z|<=1 and |Z-a|<=2. The y motion contributes32J_y.
+For each of the four active originals the full chain rule therefore gives
+
+    (d alpha/d nu)/eta at0 < -32/3+5<-4.                    (26)
+
+For the physical `0<nu<=e^6 ell^6<2^-36`, the full second-derivative
+remainder makes each active half-normal less than `-3eta nu`. Each
+inactive unmarked half-normal varies by less than `eta2^23nu<eta/8`.
+The marked a is fixed and interior. All nine originals of p_s are therefore
+strictly inside the unit disk, on the entire stated positive eta interval.
+No analogy between small critical energy and feasible originals is used.
+
+Next draw three critical circles of radius `lambda_s=2eta ell` about
+the reference branch critical centers. They are disjoint and lie in
+|z|<1/16. On them both |z-r| and |z-eta y0| are below1/8. The full
+critical perturbation is exactly
+
+    Q_s-Q0=(z-r)^6[-64eta nu(z-eta y0)+1024eta^2 nu^2]-eta nu,
+    |Q_s-Q0|<eta nu[1+64/8^7+1024e nu_max/8^6]<2eta nu.       (27)
+
+On the small circle `|Q0|>eta lambda_s^6/4=16eta nu`.
+On either heavy circle `|Q0|>eta^(7/2)lambda_s/64>2eta nu`, the
+last strict inequality following from `64eta^(5/2)ell^5<1`.
+Rouche gives six small and one in each heavy disk, with multiplicity.
+The corresponding matching costs less than
+
+    8lambda_s^2=32eta^2 ell^2<eta/16.                       (28)
+
+Any cross-cluster assignment alone costs more than9eta/16, since each
+displacement is less than sqrt(eta)/4. Thus minimizing matchings retain
+the two heavy signs and the six small-to-r assignments.
+
+There is a real small critical whose displacement exceeds eta ell/2.
+Indeed Q_s is real on the real line, and at z=r+eta ell/2 it equals
+
+    eta^7 ell^6 [ (T0+eta(x0-y0-32nu+ell/2)^2)/64-1 ]<0,
+
+because the parenthesis before division is less than2. At z=r+2eta ell
+it is positive because T0>1. The intermediate value theorem gives
+a real zero strictly between these two points. It belongs to the small
+cluster just counted. Therefore
+
+    D>ell^2/4>R^2,
+    eta^2 ell^2/4<Ecrit<32eta^2 ell^2.                       (29)
+
+For the first inequality use `R=delta2^-320<2^-321<ell/2` for every
+permitted gap. The polynomial has real coefficients, so its total
+imaginary critical trace and both gamma normals are exactly zero.
+It violates the displayed collar's free-radius condition.
+
+For its original sections, the holomorphic difference from nu0 vanishes
+when eta0 or nu0 and has modulus below1/8 on(25). Doubly removable
+division now gives `|Delta Z|<=2^18 |eta nu|`. Hence
+
+    Eorig<=8(2^18)^2 eta^2 nu^2=2^39 eta^14 ell^12.           (30)
+
+The critical total trace changes by64eta nu and its constant impulse
+does not change that trace. Consequently the original coefficient c8
+changes by exactly -72eta nu, and the original sum changes by72eta nu.
+Cauchy for any original matching and(13) give
+
+    Eorig>=72^2 eta^2 nu^2/8=648eta^14 ell^12,
+    72eta^7 ell^6<=C<=200sqrt(Eorig)<2^28 eta^7 ell^6.        (31)
+
+For every A>0 and exponent q<7, sufficiently small eta makes
+`C<=Aeta^q` while(29) prevents collar entry. For q<14 the same holds
+with Eorig; for q<2 it holds with Ecrit even with the EXACT zero trace.
+Together with the corresponding sufficient bounds(2),(4),(6), this
+proves all three remaining sharp entry powers. Section7 gives the
+different complex-family obstruction with critical power3. This is a
+classification of powers for the fixed displayed collar; it does not
+prove sharp constants, larger-domain impossibility or failure of(1).
+
+## 9. Reproducibility and limits
 
 [verify.py](verify.py) hash-checks72 unchanged public input files, exactly
 reproduces the full80-predicate9373 mathematical record, and regenerates
 every new budget field in [expected.json](expected.json). It checks the
 uniform positive monomials, first two Newton factors, complete anchored
 family majorant, inward signs, full Cauchy/Taylor remainders, true matching
-separation, and entry constants. Nine semantic damages must reject.
+separation, and entry constants. Thirteen semantic damages must reject.
 [VALIDATION.json](VALIDATION.json) records serial native-thread1 execution,
 normal/optimized agreement and external fixture rejection controls.
 These are reproducibility checks, not independent review or a formal kernel.
@@ -367,9 +482,9 @@ all permitted positive k-gaps, all complex disk-rooted competitors in the
 entry sets, and small critical collisions. Standard Newton sums,
 Rouche/matching/telescoping mechanisms,9373's uniform collar and9267's
 radial blocks receive explicit credit. The new contributions are their
-moment-aware quantified entry and a feasible inward-motion obstruction
-establishing the uniform critical-energy power3. A larger physical original
-entry criterion still needs additional information. Neither the coefficient
+moment-aware quantified entry and two feasible inward-motion obstructions
+establishing all four sharp uniform entry powers for the displayed collar.
+Larger domains and global concentration still need additional information. Neither the coefficient
 ball nor energy conditions route every low-F competitor. No positive
 physical eta0 ball, unrestricted first-power theorem, global minimum or
 optimal stability endpoint is asserted.

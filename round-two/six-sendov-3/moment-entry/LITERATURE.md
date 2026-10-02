@@ -32,6 +32,6 @@ Internal published prior mathematics, with source commits in provenance:
 Newton sums, product telescoping, holomorphic root sections, the maximum
 modulus principle, Cauchy estimates, Taylor's theorem, finite multiset
 matching and Rouche's theorem are standard. The stated new work is their
-explicit moment-aware entry into9373 and an all-feasible inward-motion
-family showing the sharp uniform critical-energy power. No first discovery
+explicit moment-aware entry into9373 and two all-feasible inward-motion
+families showing the four sharp uniform entry powers. No first discovery
 of the identities, local chart or collision mechanism is asserted.
