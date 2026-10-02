@@ -1,0 +1,73 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "target": {
+    "artifact_ref": "bafkreicsrk6m32djaect66rigwbz46nz3wcga6yxto4z3qowvgk56mip3a",
+    "height": 9639,
+    "source_commit": "82271e4d09ca65afa426f917e885a558d1145867"
+  },
+  "seal_utc": "2026-10-02T19:37:49.876671+00:00",
+  "sealed_files": {
+    "linear.py": "94872f866836b3c2b5971aa96e5e7814eeaf81270b127c0e1fb491b3dfc5224c",
+    "core.py": "f8628c3ca0fedb2a57d9acb434b7b9ebbfad90600e4702e53a20c81fae74c856",
+    "basis.py": "1d20df4524ebe0f44bb30f297961fb334451b95985895e259c72d659c2b50976",
+    "literal.py": "1e1352a5e9906f5a9f02c79242f9ea33629a5ae337bea8b1bfc501e9f26a705a",
+    "controls.py": "c65a2122b857a19ddedd28a312638b034b4b12d249e6d564799baf08d9f229eb",
+    "verify.py": "36f621e1a9de1864637f41523548039bbcba17cd2541b50062c789a9db39f624",
+    "PROOF.md": "8d4b399ae7af82c32dad8890541acea5edf137d8f0c55285837be12fe6bf0e2a",
+    "EXPECTED.json": "795e4720020894d92a20260d7421c14d5d0b4ed8d6bddff945906815c7703730"
+  },
+  "independent_cold_records": [
+    {
+      "basis_cases": 72,
+      "damages": 16,
+      "entire_record_compared": true,
+      "literal_domains": [
+        6,
+        7
+      ],
+      "ok": true,
+      "positive_controls": 2,
+      "whole_record_bytes": 25518,
+      "whole_record_sha256": "c45c79ddfe83fe27a00b67fd1eb0bc652869284335eca4bfb82c25db4188d125",
+      "mode": "normal",
+      "seconds": 17.11768813501112,
+      "peak_child_KiB": 28996
+    },
+    {
+      "basis_cases": 72,
+      "damages": 16,
+      "entire_record_compared": true,
+      "literal_domains": [
+        6,
+        7
+      ],
+      "ok": true,
+      "positive_controls": 2,
+      "whole_record_bytes": 25518,
+      "whole_record_sha256": "c45c79ddfe83fe27a00b67fd1eb0bc652869284335eca4bfb82c25db4188d125",
+      "mode": "optimized",
+      "seconds": 18.035504495026544,
+      "peak_child_KiB": 29492
+    }
+  ],
+  "exposure": "Full written defining proof visible. New target reduction/checker/fixtures/oracle/provenance NOT accessed before seal. Prior9592 model/exact helpers already exposed in completed9653; target copies them unchanged. Own linear.py unchanged9653/9303 helper. Known n6 centered baseline/ordinary8106 z1 are credited mathematical inputs. Independent target choice and separate algorithms, not blind rediscovery.",
+  "own_helper_source": "77e859b56ee1808932766c83bb6e428cb6ac0415",
+  "operational_notes": [
+    "Unused SDK import under systempython3 failed before any result; actual SDK uses authorizedvenv.",
+    "Bookkeeping cold timing driver found /usr/bin/time absent before a math child started; replaced with standard resource/monotonic driver, no resource limit increased.",
+    "Dead unused literal expression simplified before first literal run/seal; control-count typo corrected16 before seal."
+  ],
+  "resources": {
+    "threads": 1,
+    "cpu_jobs": 1,
+    "scope": "unchanged1CPU2GiB/TasksMax128",
+    "internal_seconds": 45,
+    "outer_child_seconds": 55,
+    "literal_original_orders": [
+      6,
+      7
+    ],
+    "computational_order_guard": "n6..32; ordinary proof supplies alln"
+  }
+}
