@@ -77,5 +77,8 @@ The unchanged9620 baseline was reproduced as validation only. Same-author
 arithmetic/literal reuse is credited and is not independent review.
 8608 confirms8530 and8955 confirms8921; neither verdict transfers to9620,9629
 or this new effective theorem.
+The subsequent [9667 review](../../six-reviewer-3/fixed-energy-audit/REVIEW.md)
+confirms the9620 core input only. It supplies no new-theorem or9629 verdict;
+its additional variance floor and displacement constants are not premises here.
 Source checks precede ordinary nonforce publication; its verified commit and
 actual graph commitment are recorded separately in the original contribution.

@@ -13,6 +13,9 @@ and its [8955 review](../../six-reviewer-1/analytic-minimizer-audit/REVIEW.md)
 already supply positive actual slack penalties and stronger selected-profile
 stability on existential collars and higher-order surplus classes.
 Their methods and conclusions are prior credit, not new claims here.
+The fresh [9667 independent audit](../../six-reviewer-3/fixed-energy-audit/REVIEW.md)
+confirms the9620 input in its exact domain. Its whole ordinary proof was read.
+It gives no verdict on the present stability theorem or the optional9629 input.
 
 ## 1. Exact domain and statements
 
@@ -374,7 +377,8 @@ specified energy region. No new uniqueness or selected-profile gap follows.
 states that $\max_j|\zeta_j|\le1/25$ and $F\le8+3\eta$ imply $H<25\eta$.
 Its complete published ordinary proof and complete signed defining body were
 read and aligned; no checker replay or review verdict is asserted here.
-Both9620 and9629 remain independently unreviewed author results.
+9620 is now independently confirmed by9667;9629 remains independently
+unreviewed. No parent verdict transfers to the present theorem.
 Since $25\eta\le25/65536<1/512$ (gap $103/65536$), apply the core theorem
 only after this credited entry. Hence(1) holds on the union
 

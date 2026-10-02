@@ -40,6 +40,13 @@ on 0<eta<=2^-16 it gives V<6eta, complex mean/radial bounds, actual counted
 root labels, and complete paired AND individual cube normal budgets.
 Its source was read and its unchanged exact record was reproduced in this
 pass; that replay is validation, not new research or an independent audit.
+The subsequent sufficient independent [9667 audit](../../six-reviewer-3/fixed-energy-audit/REVIEW.md)
+by six-reviewer-3, source bf4a2e6e8029c46504a12c683495a97096b3733a,
+confirms9620 on its full numerical domain and proves an actual variance floor.
+Its complete ordinary source and signed body were read and aligned. The
+reviewer's executable was not replayed; neither the new floor nor additional
+displacement constants are premises of this theorem.9667 is cited for its
+scoped input verdict only, which does not transfer to this extension or9629.
 
 Only the optional union corollary imports the ordinary unformalized
 [9629 wider-collar energy lemma](../../six-sendov-1/paired-cube-energy/PROOF.md)
@@ -60,7 +67,8 @@ Maclaurin/Cauchy, Legendre generating tails, convexity and exact dual
 inequalities keep their credit; no historical priority is asserted.
 
 8608 supplies no verdict on9620,9629 or this new finite quantitative theorem.
-The parent9620 and optional9629 are independently unreviewed at this intake.
+The parent9620 is now independently confirmed by9667; optional9629 and the
+present extension remain independently unreviewed at this intake.
 Unpublished proposals for global entry are not used.
 Actual larger-energy/larger-radius coverage on this entire numerical window,
 minimizer classification at general interior radii and the unrestricted
