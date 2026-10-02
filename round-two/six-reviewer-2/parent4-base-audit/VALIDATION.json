@@ -1,0 +1,268 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "all_six_primary_seals_unchanged": true,
+  "entire_24362_byte_primary_normal_optimized_and_cold_equal": true,
+  "entire_primary_sha256": "579453b2b1f09b30433782347e3c291e68b3ce5d340baa9f531583570955b572",
+  "cold_normal": {
+    "seconds": 31.536643874947913,
+    "peak_KiB": 19352,
+    "returncode": 0,
+    "stdout": "{\"BASE_holes_outside_parent4_at_least\": 2, \"complete\": true, \"entire_record_sha256\": \"579453b2b1f09b30433782347e3c291e68b3ce5d340baa9f531583570955b572\", \"original_resource_marginals\": 693876, \"phase_intersections\": 199406964, \"productive_TAIL_classes_at_least\": 2, \"raw_branch_records\": 21702, \"sharpness_claimed\": false}\n",
+    "stderr": ""
+  },
+  "independent_initial_phases": [
+    {
+      "seconds": 0.4512669959804043,
+      "peak_KiB": 17188,
+      "returncode": 0,
+      "stdout": {
+        "stage": 1,
+        "threshold": 1117,
+        "raw_input_count": 270,
+        "raw_retained_count": 153,
+        "raw_original_retained_count": 153,
+        "min_bound": 1046,
+        "max_bound": 1177,
+        "max_witness": {
+          "phases": [
+            4,
+            6
+          ],
+          "gain": 142,
+          "remaining_sum": 1035
+        },
+        "marginal_entries": 9180,
+        "phase_intersections": 2496420
+      }
+    },
+    {
+      "seconds": 10.18020990199875,
+      "peak_KiB": 17336,
+      "returncode": 0,
+      "stdout": {
+        "stage": 2,
+        "threshold": 1117,
+        "raw_input_count": 3672,
+        "raw_retained_count": 360,
+        "raw_original_retained_count": 336,
+        "min_bound": 1023,
+        "max_bound": 1147,
+        "max_witness": {
+          "phases": [
+            2,
+            6,
+            2
+          ],
+          "gain": 268,
+          "remaining_sum": 879
+        },
+        "marginal_entries": 121176,
+        "phase_intersections": 33863184
+      }
+    },
+    {
+      "seconds": 17.580667091999203,
+      "peak_KiB": 19380,
+      "returncode": 0,
+      "stdout": {
+        "stage": 3,
+        "threshold": 1117,
+        "raw_input_count": 12960,
+        "raw_retained_count": 240,
+        "raw_original_retained_count": 240,
+        "min_bound": 1040,
+        "max_bound": 1132,
+        "max_witness": {
+          "phases": [
+            2,
+            3,
+            2,
+            30
+          ],
+          "gain": 364,
+          "remaining_sum": 768
+        },
+        "marginal_entries": 414720,
+        "phase_intersections": 119050560
+      }
+    },
+    {
+      "seconds": 6.671166473068297,
+      "peak_KiB": 18112,
+      "returncode": 0,
+      "stdout": {
+        "stage": 4,
+        "threshold": 1117,
+        "raw_input_count": 4800,
+        "raw_retained_count": 0,
+        "raw_original_retained_count": 0,
+        "min_bound": 1022,
+        "max_bound": 1116,
+        "max_witness": {
+          "phases": [
+            2,
+            3,
+            2,
+            30,
+            3
+          ],
+          "gain": 448,
+          "remaining_sum": 668
+        },
+        "marginal_entries": 148800,
+        "phase_intersections": 43996800
+      }
+    }
+  ],
+  "original_270_pair_domain_exhaustive": true,
+  "all_native_12_inputs_unchanged": true,
+  "native_unmodified_public_reproduction": {
+    "all_stages_complete": true,
+    "children": [
+      {
+        "program": "check_affine.py",
+        "flags": [],
+        "stage": null,
+        "seconds": 2.415024349000305,
+        "exit_code": 0
+      },
+      {
+        "program": "check_affine.py",
+        "flags": [
+          "-O"
+        ],
+        "stage": null,
+        "seconds": 2.3181159949162975,
+        "exit_code": 0
+      },
+      {
+        "program": "generate.py",
+        "flags": [],
+        "stage": 1,
+        "seconds": 0.21998379204887897,
+        "exit_code": 0
+      },
+      {
+        "program": "generate.py",
+        "flags": [],
+        "stage": 2,
+        "seconds": 1.7558657580520958,
+        "exit_code": 0
+      },
+      {
+        "program": "generate.py",
+        "flags": [],
+        "stage": 3,
+        "seconds": 7.247929239063524,
+        "exit_code": 0
+      },
+      {
+        "program": "generate.py",
+        "flags": [],
+        "stage": 4,
+        "seconds": 3.3703142559388652,
+        "exit_code": 0
+      },
+      {
+        "program": "check_stage.py",
+        "flags": [],
+        "stage": 1,
+        "seconds": 0.23640228807926178,
+        "exit_code": 0
+      },
+      {
+        "program": "check_stage.py",
+        "flags": [],
+        "stage": 2,
+        "seconds": 1.3696877239271998,
+        "exit_code": 0
+      },
+      {
+        "program": "check_stage.py",
+        "flags": [],
+        "stage": 3,
+        "seconds": 5.2367463409900665,
+        "exit_code": 0
+      },
+      {
+        "program": "check_stage.py",
+        "flags": [],
+        "stage": 4,
+        "seconds": 2.6300681210123003,
+        "exit_code": 0
+      },
+      {
+        "program": "check_stage.py",
+        "flags": [
+          "-O"
+        ],
+        "stage": 1,
+        "seconds": 0.4023263400886208,
+        "exit_code": 0
+      },
+      {
+        "program": "check_stage.py",
+        "flags": [
+          "-O"
+        ],
+        "stage": 2,
+        "seconds": 1.809067005990073,
+        "exit_code": 0
+      },
+      {
+        "program": "check_stage.py",
+        "flags": [
+          "-O"
+        ],
+        "stage": 3,
+        "seconds": 5.818207919946872,
+        "exit_code": 0
+      },
+      {
+        "program": "check_stage.py",
+        "flags": [
+          "-O"
+        ],
+        "stage": 4,
+        "seconds": 2.5609376759966835,
+        "exit_code": 0
+      },
+      {
+        "program": "controls.py",
+        "flags": [],
+        "stage": null,
+        "seconds": 0.6876867898972705,
+        "exit_code": 0
+      },
+      {
+        "program": "controls.py",
+        "flags": [
+          "-O"
+        ],
+        "stage": null,
+        "seconds": 0.8563647159608081,
+        "exit_code": 0
+      }
+    ],
+    "maximum_child_seconds": 7.247929239063524,
+    "maximum_child_RSS_KiB": 21964,
+    "child_guard_seconds": 20,
+    "retained_frontier_limit": 300,
+    "controls_each_mode": 23,
+    "complete_mathematical_receipt_sha256": "7d89faa2194a78f54786eaac342437556103cbdcb39051fe58d84f891d4ca67c"
+  },
+  "entire_late_comparison_sha256": "cf1f860f7d1ab1d3d5d92863d1ece497c4c01641d6037cc0794f014215325480",
+  "native_field_by_field_comparisons_per_mode": 176472,
+  "original_rows_per_mode": 4644,
+  "all_eight_complete_native_generated_certificates_equal": true,
+  "fixed_native_threads": 1,
+  "serial_CPU_math_jobs": true,
+  "unchanged_scope": "1 CPU / 2 GiB",
+  "ordinary_bridges_unformalized": true,
+  "sharpness_historical_priority_global_endpoint_claimed": false,
+  "operations_notes": [
+    "Initial /usr/bin/time unavailable; invocation launched no mathematical program. Timed bounded Python wrapper used.",
+    "Intermediate context read attempted before its asynchronous retrieval finished; subsequently all seven full endpoints read. Neither event is mathematical nonexistence."
+  ]
+}
