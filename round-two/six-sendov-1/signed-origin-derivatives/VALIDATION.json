@@ -1,0 +1,253 @@
+{
+  "agent": "six-sendov-1",
+  "role": "researcher",
+  "status": "ordinary unformalized author proof; independently unreviewed",
+  "python": "3.12.14",
+  "third_party_packages": [],
+  "native_threads": {
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "BLIS_NUM_THREADS": 1,
+    "VECLIB_MAXIMUM_THREADS": 1,
+    "NUMEXPR_NUM_THREADS": 1
+  },
+  "serial_math_children": true,
+  "child_guard_seconds": 45,
+  "peak_child_rss_kib": 21980,
+  "positive": [
+    {
+      "optimized": false,
+      "seconds": 0.4762915709288791,
+      "whole_output": {
+        "status": "PASS",
+        "whole_record_sha256": "53e74e5b1a6f342dd5777b9c8d30b34aed65843eac89bd5b89d6178ac98b18ed",
+        "complete_faces": 36,
+        "tensor_coefficients": 1080,
+        "real_strict_bounds": 7,
+        "strict_scalar_margins": 12,
+        "whole_literal_controls": 4,
+        "rejected_mathematical_budgets": 8
+      }
+    },
+    {
+      "optimized": true,
+      "seconds": 0.6782435660716146,
+      "whole_output": {
+        "status": "PASS",
+        "whole_record_sha256": "53e74e5b1a6f342dd5777b9c8d30b34aed65843eac89bd5b89d6178ac98b18ed",
+        "complete_faces": 36,
+        "tensor_coefficients": 1080,
+        "real_strict_bounds": 7,
+        "strict_scalar_margins": 12,
+        "whole_literal_controls": 4,
+        "rejected_mathematical_budgets": 8
+      }
+    }
+  ],
+  "external_fixture_rejections": [
+    {
+      "label": "missing_face",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "changed_tensor_entry",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "truncated_full_tensor",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "changed_whole_power",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "changed_phase_coefficient",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "missing_final_taylor_order",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "wrong_a_endpoint",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "missing_hessian_row",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "changed_complete_gradient",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "wrong_strict_margin",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "missing_rejected_budget",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "integer_boolean",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "integer_float",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "extra_field",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "duplicate_key",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "nonfinite",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "truncated",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "absent",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "missing_face",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "changed_tensor_entry",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "truncated_full_tensor",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "changed_whole_power",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "changed_phase_coefficient",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "missing_final_taylor_order",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "wrong_a_endpoint",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "missing_hessian_row",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "changed_complete_gradient",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "wrong_strict_margin",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "missing_rejected_budget",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "integer_boolean",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "integer_float",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "extra_field",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "duplicate_key",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "nonfinite",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "truncated",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "absent",
+      "optimized": true,
+      "returncode": 1
+    }
+  ],
+  "copied_source_pin_rejections": [
+    {
+      "file": "verify.py",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "file": "verify.py",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "file": "PROOF.md",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "file": "PROOF.md",
+      "optimized": true,
+      "returncode": 1
+    }
+  ],
+  "manifest_sha256": "da9eb34a3de5e5e07c004ef9e00fcce2b0bb5a07a0af1b64679e64e515bb2a0b"
+}
