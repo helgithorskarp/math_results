@@ -1,0 +1,194 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "target_height": 9398,
+  "target_ref": "bafkreigdpv5nwyjnlagzfkl2yivqj3f5rzi2p5rco233jzznzkh7fhx66q",
+  "verdict": "confirms and proves C<47/2 on the whole same real symmetric domain",
+  "version": "CPython3.12.14 stdlib only",
+  "first_seal": {
+    "utc": "2026-10-02T12:58:31.715339+00:00",
+    "agent": "six-reviewer-1",
+    "role": "independent mathematical reviewer",
+    "author_executable_read": false,
+    "author_fixture_read": false,
+    "defining_original_proof_read": true,
+    "record_bytes": 31580,
+    "record_sha256": "57cefe6484c8fa7c93cdd4087de4754f243d4c35ca8e50ba7b80dccedd0f3074",
+    "source_hashes": {
+      "algebra.py": "adcaebf01d0ba85acfb8bf00f0c65cdec92547b0feea7bf1a85a005247c57dc4",
+      "check.py": "69ff85bd08a33e4fd58c7c601c3aed2dd6edd2f080b73192f8ea21d3d0143524"
+    }
+  },
+  "later_additions": "typed fixture checks, optional cross-format comparison, literal physical projectors and certificate controls after author program/fixture inspection; core mathematics unchanged",
+  "normal_optimized_whole_record_equal": true,
+  "core_record_sha256": "57cefe6484c8fa7c93cdd4087de4754f243d4c35ca8e50ba7b80dccedd0f3074",
+  "core_record_bytes": 31580,
+  "control_record_sha256": "a4c16555aac87af6736557314450cb3064c99aebcd5e81b3f5d41856e369ca74",
+  "runs": [
+    {
+      "name": "own",
+      "optimized": false,
+      "exit_code": 0,
+      "seconds": 1.2116787120467052,
+      "maxrss_child_kib": 17888
+    },
+    {
+      "name": "own",
+      "optimized": true,
+      "exit_code": 0,
+      "seconds": 1.2979688859777525,
+      "maxrss_child_kib": 20052
+    },
+    {
+      "name": "controls",
+      "optimized": false,
+      "exit_code": 0,
+      "seconds": 2.4413720639422536,
+      "maxrss_child_kib": 20092
+    },
+    {
+      "name": "controls",
+      "optimized": true,
+      "exit_code": 0,
+      "seconds": 2.7190389239694923,
+      "maxrss_child_kib": 21856
+    },
+    {
+      "name": "adapter",
+      "optimized": false,
+      "exit_code": 0,
+      "seconds": 1.1645693300524727,
+      "maxrss_child_kib": 21856
+    },
+    {
+      "name": "original",
+      "optimized": false,
+      "exit_code": 0,
+      "seconds": 0.404320860048756,
+      "maxrss_child_kib": 21856
+    },
+    {
+      "name": "original",
+      "optimized": true,
+      "exit_code": 0,
+      "seconds": 0.6026514379773289,
+      "maxrss_child_kib": 22120
+    },
+    {
+      "name": "final_controls",
+      "optimized": false,
+      "exit_code": 0,
+      "seconds": 2.55345455405768,
+      "maxrss_child_kib": 20036
+    },
+    {
+      "name": "final_controls",
+      "optimized": true,
+      "exit_code": 0,
+      "seconds": 2.903327899053693,
+      "maxrss_child_kib": 22468
+    }
+  ],
+  "external_fixture_rejections": [
+    {
+      "damage": "bool",
+      "optimized": false,
+      "exit_code": 1,
+      "error": "ValueError: fixture type root.cubic.identity_terms"
+    },
+    {
+      "damage": "bool",
+      "optimized": true,
+      "exit_code": 1,
+      "error": "ValueError: fixture type root.cubic.identity_terms"
+    },
+    {
+      "damage": "missing",
+      "optimized": false,
+      "exit_code": 1,
+      "error": "ValueError: fixture fields root"
+    },
+    {
+      "damage": "missing",
+      "optimized": true,
+      "exit_code": 1,
+      "error": "ValueError: fixture fields root"
+    },
+    {
+      "damage": "extra",
+      "optimized": false,
+      "exit_code": 1,
+      "error": "ValueError: fixture fields root"
+    },
+    {
+      "damage": "extra",
+      "optimized": true,
+      "exit_code": 1,
+      "error": "ValueError: fixture fields root"
+    },
+    {
+      "damage": "bernstein",
+      "optimized": false,
+      "exit_code": 1,
+      "error": "ValueError: fixture value root.collision_boundary.rectangles.0.coefficients.0.1"
+    },
+    {
+      "damage": "bernstein",
+      "optimized": true,
+      "exit_code": 1,
+      "error": "ValueError: fixture value root.collision_boundary.rectangles.0.coefficients.0.1"
+    },
+    {
+      "damage": "delta",
+      "optimized": false,
+      "exit_code": 1,
+      "error": "ValueError: fixture value root.collision_boundary.quantitative_refinements.3.delta"
+    },
+    {
+      "damage": "delta",
+      "optimized": true,
+      "exit_code": 1,
+      "error": "ValueError: fixture value root.collision_boundary.quantitative_refinements.3.delta"
+    }
+  ],
+  "resources": {
+    "native_threads": 1,
+    "max_cpu_intensive_local_jobs": 1,
+    "scope_cpu": 1,
+    "scope_memory_gib": 2,
+    "internal_guard_seconds": 45,
+    "outer_guard_seconds": 50,
+    "limit_hits": 0
+  },
+  "trust": "ordinary spectral/interlacing/chart/compactness bridges unformalized; explicit8753/8806 uniform extension, benchmark only for comparison; no author program imported by independent engines",
+  "frozen_source_runs": [
+    {
+      "script": "check.py",
+      "optimized": false,
+      "exit_code": 0,
+      "seconds": 2.3103858180111274,
+      "maxrss_child_kib": 17832
+    },
+    {
+      "script": "check.py",
+      "optimized": true,
+      "exit_code": 0,
+      "seconds": 2.354113840032369,
+      "maxrss_child_kib": 20092
+    },
+    {
+      "script": "controls.py",
+      "optimized": false,
+      "exit_code": 0,
+      "seconds": 4.4093058770522475,
+      "maxrss_child_kib": 20092
+    },
+    {
+      "script": "controls.py",
+      "optimized": true,
+      "exit_code": 0,
+      "seconds": 4.657239696010947,
+      "maxrss_child_kib": 22488
+    }
+  ]
+}
