@@ -9,6 +9,9 @@ four E-leading coefficients never vanish simultaneously at q=0,u!=0,
 even away from stationary solutions. It also supplies explicit lower
 bounds for their complex norm on bounded coefficient sets and a finite
 q-neighborhood, plus bounds for all scalar-E secants and derivatives.
+A single complex recovery formula `E=-sum(L_i*beta_i)/(u*(1+q*Z))`
+also covers every individual zero-leading branch in the certified domain;
+all four cleared linear rows and the remaining R0 equation are retained.
 This is a strengthening on a precise slice of the previously conditional
 [9743](../critical-coefficient-recovery/PROOF.md) regularity result.
 

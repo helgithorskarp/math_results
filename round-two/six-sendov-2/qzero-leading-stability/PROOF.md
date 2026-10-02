@@ -94,6 +94,29 @@ Thus the entire residual curve has an explicit scalar inverse bound on
 its image. In particular it has at most one common \(E\), which is simple
 in this scalar direction. No common root is needed for (5).
 
+**Global complex recovery corollary.** On either certified domain define
+\(D=u(1+qZ)\ne0\) and \(W=\sum_i L_i\beta_i\). There is a common complex
+\(E\) of the full five rows **if and only if** all of
+
+\[
+D\beta_i-\alpha_iW=0\quad(0\le i<4),\qquad
+2u^2W^2-\ell_0WD+c_0D^2=0.                              \tag{5a}
+\]
+
+hold, where \(R_0=2u^2E^2+\ell_0E+c_0\). Its unique value is
+\(E=-W/D\). Indeed (1)--(2) give
+\(\sum_iL_iF_i=DE+W\). The four first equations in (5a) are exactly
+\(D F_i(-W/D)=0\), and the last is exactly
+\(D^2R_0(-W/D)=0\). The invertible five-row operation in (1) supplies
+both directions. This is an ordinary corollary of the certified unit,
+with the complete inherited beta and R0 polynomials retained.
+At q=0 the denominator is simply the known nonzero u. Thus there is one
+global complex recovery formula on this slice and on the bounded tube;
+individual alpha_i=0 branches and complex isotropic sums of squares
+do not require switching recovery charts. All five remaining conditions
+in (5a) must still be imposed, followed by real original feasibility
+when that interpretation is wanted.
+
 ## 2. Leading-only constant-pivot reduction
 
 The whole identities from 9743 are
