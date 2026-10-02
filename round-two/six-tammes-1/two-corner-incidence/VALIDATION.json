@@ -1,0 +1,342 @@
+{
+  "actual_agent": "six-tammes-1",
+  "role": "researcher",
+  "checked_UTC": "2026-10-02T19:38:07.252279+00:00",
+  "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+  "arithmetic": "Python arbitrary-precision integers and fractions.Fraction; standard library only",
+  "max_CPU_intensive_children_at_once": 1,
+  "native_thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "per_child_wall_guard_seconds": 55,
+  "process_scope": "existing 1 CPU / 2 GiB, unchanged",
+  "measurement": "one child executes the source entrypoint through runpy, inheriting normal/-O flags; resource.RUSAGE_SELF max RSS in KiB on Linux",
+  "certificate_bytes": 15102,
+  "certificate_sha256": "ec0a569a9e4c50fd4493ae71c860f86d25867a8ae87095cd6e27ff6707f259e6",
+  "full_normal_optimized_outputs_equal": true,
+  "full_generated_normal_optimized_and_included_certificate_bytes_equal": true,
+  "status": "complete",
+  "trust_boundary": "author-written geometric bridge; two exact algorithms, not independent researcher review or formal verification",
+  "jobs": [
+    {
+      "label": "check-normal",
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-tammes-1/two-corner-incidence/check.py",
+        "--emit",
+        "<private-output>/generated-normal.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.09685935499146581,
+      "max_RSS_KiB": 16836,
+      "stdout_sha256": "ed800c5b0289136d0d2a0ff7dd81f4c9c7e9c9541675d45751727bbe60898cd7",
+      "output": {
+        "certificate_sha256": "ec0a569a9e4c50fd4493ae71c860f86d25867a8ae87095cd6e27ff6707f259e6",
+        "closing_contact_cases": 12,
+        "oriented_ring_cases": 27,
+        "ring_boundaries_each_with_three_mixed_corners": 54,
+        "strict_full_band_exclusions": 12
+      }
+    },
+    {
+      "label": "audit-normal",
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-tammes-1/two-corner-incidence/audit.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.10111759195569903,
+      "max_RSS_KiB": 16532,
+      "stdout_sha256": "502bd2256149373ed02562219e0f3ece12447a6cbee5314b51b05cea4ba8a35a",
+      "output": {
+        "boundary_cycles": 54,
+        "certificate_sha256": "ec0a569a9e4c50fd4493ae71c860f86d25867a8ae87095cd6e27ff6707f259e6",
+        "closing_contact_cases": 12,
+        "closure_coordinate_coefficient_positions": 264,
+        "each_boundary_has_three_mixed_corners": true,
+        "full_band_exclusions": 12,
+        "oriented_ring_cases": 27,
+        "ring_counts": [
+          {
+            "cases": 1,
+            "lengths": [
+              3,
+              3
+            ],
+            "pentagons": 0
+          },
+          {
+            "cases": 6,
+            "lengths": [
+              3,
+              4
+            ],
+            "pentagons": 1
+          },
+          {
+            "cases": 6,
+            "lengths": [
+              3,
+              5
+            ],
+            "pentagons": 2
+          },
+          {
+            "cases": 6,
+            "lengths": [
+              4,
+              4
+            ],
+            "pentagons": 2
+          },
+          {
+            "cases": 2,
+            "lengths": [
+              3,
+              6
+            ],
+            "pentagons": 3
+          },
+          {
+            "cases": 6,
+            "lengths": [
+              4,
+              5
+            ],
+            "pentagons": 3
+          }
+        ]
+      }
+    },
+    {
+      "label": "bridge-normal",
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-tammes-1/two-corner-incidence/bridge.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.20025331899523735,
+      "max_RSS_KiB": 17196,
+      "stdout_sha256": "e6feb26e781c4c3a6ce5c472a2302b5117c6f303f01754d897d6a289fce406f3",
+      "output": {
+        "Gram_positions": 144,
+        "actual_corner_updates": 5,
+        "contacts": 24,
+        "core_points": 12,
+        "exception": 1,
+        "final_corner_fields_read": false,
+        "partial_hexagon_exclusions": 31,
+        "partial_hexagon_words": 32,
+        "strict_pair_gaps": 42,
+        "total_point_bound": 14
+      }
+    },
+    {
+      "label": "controls-normal",
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-tammes-1/two-corner-incidence/controls.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.9728983730310574,
+      "max_RSS_KiB": 17212,
+      "stdout_sha256": "bd435c3380435f7fa27e9e64dbcfb59b04cebadd8682772579b01953847c5a1b",
+      "output": {
+        "new_certificate_damages_rejected": [
+          "missing-closing-word",
+          "duplicate-closing-word",
+          "changed-final-vector",
+          "changed-contact-obstruction",
+          "changed-Bernstein-coefficient",
+          "zero-contact-obstruction",
+          "changed-closed-domain",
+          "missing-port-case",
+          "duplicate-port-case",
+          "adjacent-port-endpoints",
+          "changed-quotient-class",
+          "changed-boundary-arc",
+          "changed-boundary-cycle",
+          "false-mixed-corner-count",
+          "false-region-vertex-count"
+        ],
+        "original_parent_source_binding_still_required_by_load": true,
+        "parent_partial_bridge_damages_rejected": [
+          "missing-partial-hexagon-word",
+          "damaged-partial-Bezout",
+          "changed-partial-core-vector",
+          "false-partial-capacity"
+        ],
+        "unused_parent_final_corner_fields_and_q4_q5_records_omitted_accepted": true,
+        "valid_record_reordering_and_cycle_rotation_reversal_accepted": true
+      }
+    },
+    {
+      "label": "check-optimized",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-tammes-1/two-corner-incidence/check.py",
+        "--emit",
+        "<private-output>/generated-optimized.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.3276242020074278,
+      "max_RSS_KiB": 22196,
+      "stdout_sha256": "ed800c5b0289136d0d2a0ff7dd81f4c9c7e9c9541675d45751727bbe60898cd7",
+      "output": {
+        "certificate_sha256": "ec0a569a9e4c50fd4493ae71c860f86d25867a8ae87095cd6e27ff6707f259e6",
+        "closing_contact_cases": 12,
+        "oriented_ring_cases": 27,
+        "ring_boundaries_each_with_three_mixed_corners": 54,
+        "strict_full_band_exclusions": 12
+      }
+    },
+    {
+      "label": "audit-optimized",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-tammes-1/two-corner-incidence/audit.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.3441995589528233,
+      "max_RSS_KiB": 20440,
+      "stdout_sha256": "502bd2256149373ed02562219e0f3ece12447a6cbee5314b51b05cea4ba8a35a",
+      "output": {
+        "boundary_cycles": 54,
+        "certificate_sha256": "ec0a569a9e4c50fd4493ae71c860f86d25867a8ae87095cd6e27ff6707f259e6",
+        "closing_contact_cases": 12,
+        "closure_coordinate_coefficient_positions": 264,
+        "each_boundary_has_three_mixed_corners": true,
+        "full_band_exclusions": 12,
+        "oriented_ring_cases": 27,
+        "ring_counts": [
+          {
+            "cases": 1,
+            "lengths": [
+              3,
+              3
+            ],
+            "pentagons": 0
+          },
+          {
+            "cases": 6,
+            "lengths": [
+              3,
+              4
+            ],
+            "pentagons": 1
+          },
+          {
+            "cases": 6,
+            "lengths": [
+              3,
+              5
+            ],
+            "pentagons": 2
+          },
+          {
+            "cases": 6,
+            "lengths": [
+              4,
+              4
+            ],
+            "pentagons": 2
+          },
+          {
+            "cases": 2,
+            "lengths": [
+              3,
+              6
+            ],
+            "pentagons": 3
+          },
+          {
+            "cases": 6,
+            "lengths": [
+              4,
+              5
+            ],
+            "pentagons": 3
+          }
+        ]
+      }
+    },
+    {
+      "label": "bridge-optimized",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-tammes-1/two-corner-incidence/bridge.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.3912825760198757,
+      "max_RSS_KiB": 20412,
+      "stdout_sha256": "e6feb26e781c4c3a6ce5c472a2302b5117c6f303f01754d897d6a289fce406f3",
+      "output": {
+        "Gram_positions": 144,
+        "actual_corner_updates": 5,
+        "contacts": 24,
+        "core_points": 12,
+        "exception": 1,
+        "final_corner_fields_read": false,
+        "partial_hexagon_exclusions": 31,
+        "partial_hexagon_words": 32,
+        "strict_pair_gaps": 42,
+        "total_point_bound": 14
+      }
+    },
+    {
+      "label": "controls-optimized",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-tammes-1/two-corner-incidence/controls.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.1011809310875833,
+      "max_RSS_KiB": 20416,
+      "stdout_sha256": "bd435c3380435f7fa27e9e64dbcfb59b04cebadd8682772579b01953847c5a1b",
+      "output": {
+        "new_certificate_damages_rejected": [
+          "missing-closing-word",
+          "duplicate-closing-word",
+          "changed-final-vector",
+          "changed-contact-obstruction",
+          "changed-Bernstein-coefficient",
+          "zero-contact-obstruction",
+          "changed-closed-domain",
+          "missing-port-case",
+          "duplicate-port-case",
+          "adjacent-port-endpoints",
+          "changed-quotient-class",
+          "changed-boundary-arc",
+          "changed-boundary-cycle",
+          "false-mixed-corner-count",
+          "false-region-vertex-count"
+        ],
+        "original_parent_source_binding_still_required_by_load": true,
+        "parent_partial_bridge_damages_rejected": [
+          "missing-partial-hexagon-word",
+          "damaged-partial-Bezout",
+          "changed-partial-core-vector",
+          "false-partial-capacity"
+        ],
+        "unused_parent_final_corner_fields_and_q4_q5_records_omitted_accepted": true,
+        "valid_record_reordering_and_cycle_rotation_reversal_accepted": true
+      }
+    }
+  ]
+}
