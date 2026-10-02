@@ -1,0 +1,35 @@
+{
+  "actual_agent": "six-reviewer-3",
+  "role": "independent mathematical reviewer",
+  "created_utc": "2026-10-02T21:30:18.282665+00:00",
+  "python": "Python 3.12.14",
+  "native_threads": 1,
+  "math_children": "serial",
+  "guard_seconds": 45,
+  "runs": [
+    {
+      "mode": "normal",
+      "exit": 0,
+      "seconds": 2.033254591980949,
+      "stdout": "{\"direct_H\": \"60\", \"full_sectors\": 15, \"native_threads\": \"1 (runner enforced)\", \"owned_radial_faces\": 8, \"record_bytes\": 73067, \"strict_margins\": 40, \"whole_controls\": 6, \"whole_record_sha256\": \"bfbc64512663a1bbfe4a8a8eaad17c02553826591d9c4e9dd87061031b24f95d\"}\n",
+      "stderr": "",
+      "peak_child_rss_kib": 17780
+    },
+    {
+      "mode": "optimized",
+      "exit": 0,
+      "seconds": 2.0825599030358717,
+      "stdout": "{\"direct_H\": \"60\", \"full_sectors\": 15, \"native_threads\": \"1 (runner enforced)\", \"owned_radial_faces\": 8, \"record_bytes\": 73067, \"strict_margins\": 40, \"whole_controls\": 6, \"whole_record_sha256\": \"bfbc64512663a1bbfe4a8a8eaad17c02553826591d9c4e9dd87061031b24f95d\"}\n",
+      "stderr": "",
+      "peak_child_rss_kib": 20168
+    },
+    {
+      "mode": "validation",
+      "exit": 0,
+      "seconds": 10.423130303970538,
+      "stdout": "{\"external_typed_damages\": {\"Gaussian_hessian\": \"rejected\", \"actual_feasibility_relabel\": \"rejected\", \"bootstrap_third\": \"rejected\", \"direct_H59_relabel\": \"rejected\", \"empty\": \"rejected\", \"false_inverse_disk_transfer\": \"rejected\", \"false_variance_division\": \"rejected\", \"fourth_Newton_term\": \"rejected\", \"hessian_budget\": \"rejected\", \"last_Newton_term\": \"rejected\", \"list\": \"rejected\", \"null\": \"rejected\", \"quadrature_weight\": \"rejected\", \"radial_face_8\": \"rejected\", \"schema_bool_int\": \"rejected\", \"sector_last_omitted\": \"rejected\", \"whole_sector_coefficient\": \"rejected\"}, \"mathematical_budget_failures\": {\"local_gradient_1_over_6\": {\"margin\": \"-14929/1119744\", \"reason\": \"insufficient displayed budget; not physical nonexistence\"}, \"new_H59_from_rounding\": {\"margin\": \"-74536825/99680256\", \"reason\": \"insufficient displayed budget; not physical nonexistence\"}, \"one_step_local_bootstrap\": {\"margin\": \"-643/320\", \"reason\": \"insufficient displayed budget; not physical nonexistence\"}, \"phase_allowance_double_window\": {\"margin\": \"-15991159/6710886400\", \"reason\": \"insufficient displayed budget; not physical nonexistence\"}, \"two_step_local_bootstrap\": {\"margin\": \"-169/7360\", \"reason\": \"insufficient displayed budget; not physical nonexistence\"}}, \"meaningful_source_damages\": {\"audit.py normal\": \"rejected\", \"audit.py optimized\": \"rejected\", \"polys.py normal\": \"rejected\", \"polys.py optimized\": \"rejected\", \"radial.py normal\": \"rejected\", \"radial.py optimized\": \"rejected\"}, \"whole_record_sha256\": \"bfbc64512663a1bbfe4a8a8eaad17c02553826591d9c4e9dd87061031b24f95d\"}\n",
+      "stderr": "",
+      "peak_child_rss_kib": 20652
+    }
+  ]
+}
