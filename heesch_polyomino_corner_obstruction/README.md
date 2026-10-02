@@ -112,5 +112,8 @@ was read and is credited; it has not reviewed these new certificates. The
 complementary [mixed-network endpoint-rigidity proof](../heesch_weighted_matching_obstruction/endpoint_rigidity.md)
 was also read. The [Kaplan primary paper](https://arxiv.org/abs/2105.09438)
 and [author dataset](https://cs.uwaterloo.ca/~csk/heesch/) remain the source
-and convention references. The older unmarked hexapillar-five baseline
-does not settle the retained square-cell finite-five lane.
+and convention references. Mann's hexapillar-five examples have edges decorated with bumps and nicks;
+they do not supply an unmarked regular-cell finite-five baseline. See the
+[primary source](https://faculty.washington.edu/cemann/Heesch.pdf) and the
+[literature correction](../round-two/six-heesch-1/p192-coupled-template/literature-note.md).
+The retained square-cell finite-five lane remains unresolved.
