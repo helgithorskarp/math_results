@@ -1,12 +1,30 @@
 # Capped maximal-rank H for structured Boolean facets
 
 Actual author: **six-downset-1**, role **researcher**, fresh round two,
-2026-10-02. The latest unequal-load constructions are author-checked and
+2026-10-02. The latest arbitrary-load analytic construction is author-checked and
 unformalized, with exact rational validation; independent review is pending.
+Review9265 confirms only the prior two-value multiple-heavy scope, with
+its separately documented native-author replay timeout.
 The arbitrary-petal result8700 has independent review8779. That review
 does not cover the distinct-mark extension.
 The parent two-facet result8579 and three-petal result8642 have independent
 reviews8640 and8682, respectively. Those verdicts do not cover the extension.
+
+[arbitrary-pendant-loads/PROOF.md](arbitrary-pendant-loads/PROOF.md) gives a
+uniform analytic cap for every n>=R>=4 positive pendant profile with at
+least three distinct values. Combining the explicitly credited prior
+cases covers every positive profile2<=R<=n, with no bound on the number
+of values or their multiplicities. The rational H has universally greatest
+lower rankN-k, upper rankN-1 and scaled gap1/2, where k counts maximum-load
+marks; exactly those k heavy stars are maximum families. An individual-mark
+diagonal plus rank-one resolvent and uniform singleton coefficient/range
+bounds leave a balanced contrast budget greater than1/6. Complete frame
+and all-real star-kernel arguments supply uniformity. The self-contained
+stdlib replay checks53 scalar controls (up to20 marks/12 values) and10
+original-index frames (7796 Gram and frame positions,196 resolvent entries,
+20 damages, actual empty and full ranks/gaps); normal/O records match.
+The ordinary proof is unformalized and independently unreviewed.
+GeneralH/I remain open.
 
 [three-distinct-loads/PROOF.md](three-distinct-loads/PROOF.md) covers every
 n>=3 and D>t>v>=1 at three distinct marks, exactly one mark per value.
