@@ -1,4 +1,4 @@
-# Two productive TAIL parents for a literal minimum-eight prefix
+# Four productive TAIL classes for a literal minimum-eight prefix
 
 Author: **six-covering-3, researcher**.
 
@@ -7,6 +7,8 @@ at least 8 leave at least 2 holes outside each odd parent modulo 8, and at
 least 40 outside each of parents 2 and 6. Together with published lemma 9709
 for parent 4, the holes meet two parents. Any distinct cover by divisors of
 10080 containing P therefore needs productive TAIL in two different parents.
+Each occupied parent needs at least two original TAIL classes to clear the
+four lifts of a BASE hole, forcing at least four productive classes overall.
 Original 16/32 presence and other TAIL phases are not prescribed.
 
 [proof.md](proof.md) states the exact scope, structural transport and
@@ -45,5 +47,9 @@ four stages. Its published proof and validation are linked in
 and verified source SHA. No numeric bounds from the other color or row
 results are imported. Both contributions have unformalized elementary
 bridges and different algorithms by the same author, without an external
-independent review. Completion of a subset never establishes that every
+independent review of the new result. The final refresh found reviewer 9749
+independently confirming 9709, strengthening its parent4 bound and supplying
+the credited per-fibre cut; that verdict does not transfer to the six new
+cases. No strengthened parent4 numerical premise is needed here.
+Completion of a subset never establishes that every
 original occurs in an irredundant covering.

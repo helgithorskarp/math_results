@@ -8,8 +8,8 @@ The documented new-case reproduction command passed on the exact published
 Python sources. It ran 26 sequential children: producer and independent
 literal-AP checker for each of six parents, in normal and optimized modes,
 then the scope/transport controls in both modes. Every child exited zero
-with empty stderr. Maximum child runtime was 4.117378s,
-and maximum child RSS was 21976 KiB, within the unchanged
+with empty stderr. Maximum child runtime was 4.051202s,
+and maximum child RSS was 21988 KiB, within the unchanged
 20s guard and 1CPU/2GiB scope. Numerical thread settings were all one.
 
 All 1,620 raw-pair records were compared entry by entry, including all
@@ -31,7 +31,8 @@ A genuine distinct period12 toy cover survives all partial-prefix marginal
 bounds16,14,13,12,12,12. Other controls check the four CRT multipliers,
 all original phase permutations and required-set transports, the exhaustive
 41/24/65 original BASE/TAIL split, 362,880 BASE lift incidences and
-241,920 TAIL parent incidences.
+241,920 TAIL parent incidences, and all 60,480 original-label/fibre
+phase-count tables (nonzero counts two/one for16d/32d).
 
 Certificate SHA256:
 
@@ -52,7 +53,12 @@ command does not claim to replay that older 288-map/four-stage certificate.
 The six new deficits are unconditional for the literal P/36-original-BASE
 inventory; the old parent4 conclusion used here is at least one hole only.
 
-The checks are by different algorithms from the same author. Source
+Independent review9749 confirms the older dependency and strengthens its
+parent4 hole bound; it does not certify the six new cases. The four-class
+corollary combines two occupied parents with its credited per-fibre cut,
+rederived in proof.md and calibrated on all original TAIL/fibre tables.
+
+The new checks are by different algorithms from the same author. Source
 publication does not itself prove the lemma. Python execution, finite
 completeness, the cited dependency and the ordinary completion/marginal/
 CRT/lifting arguments are the trust boundary; no external independent

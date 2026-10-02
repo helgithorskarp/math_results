@@ -73,7 +73,9 @@ def main():
                 'all270_records_entrywise_equal', 'independent_literal_AP_audit',
                 'controls', 'definition_level_maximum_rows', 'toy_prefix_upper_bounds',
                 'original_BASE_TAIL_partition', 'all_original_BASE_AP_lift_points',
-                'all_original_TAIL_AP_parent_points', 'CRT_multipliers', 'parent_orbits')
+                'all_original_TAIL_AP_parent_points', 'CRT_multipliers', 'parent_orbits',
+                'all_original_TAIL_lift_fibres', 'nonzero_lift_intersections_16d_32d',
+                'abstract_fibre_two_original_labels')
         row['compact_result'] = {k: r[k] for k in keys if k in r}
     receipt = dict(agent='six-covering-3', role='researcher', utc=datetime.now(timezone.utc).isoformat(),
                    python=platform.python_version(), dependencies='standard library only',

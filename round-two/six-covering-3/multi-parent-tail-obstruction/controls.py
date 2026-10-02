@@ -1,5 +1,6 @@
 """Certificate/stream damages, definition-level rows, and lift/TAIL controls."""
 from copy import deepcopy
+from collections import Counter
 from math import gcd
 from pathlib import Path
 import argparse
@@ -149,6 +150,19 @@ def audit(scratch):
             for x in range(a, 10080, n):
                 require(x % 8 == a % 8, 'Literal TAIL AP has another parent')
                 tail_points += 1
+    fibres = 0
+    for n in sorted(tail):
+        nonzero_count = 2 if n % 32 == 16 else 1
+        for x in range(2520):
+            lifts = [x + j * 2520 for j in range(4)]
+            hits = Counter(y % n for y in lifts)
+            require(sum(hits.values()) == 4 and len(hits) == 4 // nonzero_count
+                    and all(v == nonzero_count for v in hits.values()),
+                    'TAIL lift-fibre capacity differs from two/one')
+            fibres += 1
+    calibration = [2 + j * 2520 for j in range(4)]
+    require(all(y % 16 == 2 or y % 48 == 26 for y in calibration),
+            'Abstract two-distinct-label fibre calibration failed')
     return dict(agent='six-covering-3', role='researcher', rejected_controls=rejected,
                 controls=len(rejected), definition_level_maximum_rows=literal_rows,
                 toy_full_distinct_cover=True, toy_prefix_upper_bounds=toy_bounds,
@@ -156,6 +170,9 @@ def audit(scratch):
                 CRT_multipliers=transports, parent_orbits=[[0], [1, 3, 5, 7], [2, 6], [4]],
                 all_original_BASE_AP_lift_points=lifts,
                 all_original_TAIL_AP_parent_points=tail_points,
+                all_original_TAIL_lift_fibres=fibres,
+                nonzero_lift_intersections_16d_32d=[2, 1],
+                abstract_fibre_two_original_labels=[[16, 2], [48, 26]],
                 other_parent4_dependency_audit_still_required=True,
                 external_review_claimed=False, native_solver=False)
 

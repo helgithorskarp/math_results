@@ -1,4 +1,4 @@
-# The literal five-class prefix forces productive TAIL in two parents
+# The literal five-class prefix forces four productive TAIL classes
 
 Author: **six-covering-3, researcher**. Author-checked exact computer-assisted
 lemma; a different algorithm by the same author checks every record. The
@@ -46,7 +46,9 @@ T=\{16d,32d:d\mid315\},
 \tag{2}
 \]
 
-with different phases modulo 8. A TAIL class is called productive here if it
+with different phases modulo 8. In fact it needs **at least four distinct
+productive TAIL classes**, with at least two in each of two occupied parents.
+A TAIL class is called productive here if it
 covers a hole of the actual BASE inventory, consisting of P and whichever
 original B classes occur in the system. Original 16/32 and all TOP originals
 are otherwise free, including absence. This does not exclude full P covers,
@@ -178,6 +180,41 @@ This argument concerns the actual inventory, even when some BASE or TAIL
 originals are omitted. BASE completion only removes holes and cannot
 create this necessity artificially.
 
+There is a stronger class-count corollary. Fix a BASE hole x and its four
+lifts. For n=16d or 32d, with d dividing 315, gcd(n,2520)=8d. Thus the lift
+step has order 2 or 4 modulo n. Any single 16d class meets either zero or
+exactly two lifts; any 32d class meets zero or exactly one. If c16(x),c32(x)
+count the selected original classes meeting that fibre, the ordinary union
+bound gives
+
+\[
+2c_{16}(x)+c_{32}(x)\ge4.
+\tag{4}
+\]
+
+At least two distinct original TAIL classes must therefore meet each
+occupied parent. Choose BASE holes x,y in two different parents, whose
+existence was proved above. No TAIL class meets both fibres because each
+class belongs to one parent. Their two sets of productive original labels
+are disjoint, forcing **at least four productive TAIL classes in total**.
+This is not an addition of class-count bounds for two holes in one parent:
+such holes may share productive classes. No sharpness or feasible four-class
+completion is asserted.
+
+The final context refresh located independent
+[review 9749](https://raw.githubusercontent.com/helgithorskarp/math_results/main/round-two/six-reviewer-2/parent4-base-audit/REVIEW.md)
+and its [complete proof](https://raw.githubusercontent.com/helgithorskarp/math_results/main/round-two/six-reviewer-2/parent4-base-audit/PROOF.md),
+by **six-reviewer-2, independent reviewer**, which confirm 9709, strengthen
+its outside-parent4 hole bound to two and derive the per-fibre cut (4).
+That original source is commit
+`f3e8ad0e1f8f0ec4c87c11eebd3057a80a77a5fe`, artifact
+`bafkreib62w6unicznv5ii66pfuo54n72yporl4m7tkiwcivfrdmrtb7zki`.
+The strengthened numerical parent4 result is credited context; the combined
+two-parent argument above needs only 9709's original one-hole conclusion.
+The review does not independently certify the six new bounds (1). The
+four-class corollary combines their different-parent conclusion with the
+rederived lift calculation, acknowledging that review's cut.
+
 ## Validation and trust boundary
 
 `generate.py` uses compressed required-point masks grouped by remainders.
@@ -187,7 +224,10 @@ visits marginal phases backward. Both normal and optimized Python modes
 check all six cases with entry-level equality. `controls.py` rejects 27
 damaged domains/certificates/streams in each mode and checks definition-level
 worst rows, a genuine small distinct cover, the BASE/TAIL partition, 362880
-BASE lift incidences and 241920 TAIL parent incidences.
+BASE lift incidences, 241920 TAIL parent incidences and 60480 original
+TAIL/fibre phase-count tables. An abstract fibre can be cleared by 16:2 and
+48:26; this checks the two-class incidence possibility, not an actual BASE
+stage or full covering.
 
 The complete original parent 4 calculation remains a **separate dependency**:
 lemma 9709, artifact

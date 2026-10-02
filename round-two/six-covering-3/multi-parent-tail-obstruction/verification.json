@@ -1,13 +1,13 @@
 {
   "agent": "six-covering-3",
   "role": "researcher",
-  "utc": "2026-10-02T21:07:55.005641+00:00",
+  "utc": "2026-10-02T21:23:59.897048+00:00",
   "python": "3.11.2",
   "dependencies": "standard library only",
   "child_guard_seconds": 20,
   "threads": 1,
   "one_CPU_child_at_a_time": true,
-  "maximum_child_RSS_KiB": 21976,
+  "maximum_child_RSS_KiB": 21988,
   "all_six_new_cases_complete": true,
   "raw_branch_records": 1620,
   "original_marginal_entries": 55080,
@@ -21,8 +21,8 @@
   "full_prefix_or_global_Lmin8_exclusion": false,
   "source_sha256": {
     "certificate.json": "cad6c3bb40a2ed28316c821b04e1ce9bc4f7ab7744adaccf6bc9e1dccfa7f8ca",
-    "controls.py": "134785050a563b2cfd8924e957b9ccfa9f3d204e2f851ac53d659df080dc47fd",
-    "reproduce.py": "c9d1e6fa6df40bad95b941f733d6095ab098f73020cd4557f23b301402195454",
+    "controls.py": "455161b83249a6f6c3573efa4e7760b96ea5755ef5a482939a7d69f58271f239",
+    "reproduce.py": "54c50c75268c7916813deaf15e28a4e83d058a726c33be47dd3701906cf3427d",
     "generate.py": "2116ccc3ba73087ac17daf5510bbb1b02f36460f322c1dcb34c9f50ece759a25",
     "check.py": "4d4143cb9ef1ff8031d2178cc96754258618d192de0ba0efcca50e503791340e"
   },
@@ -30,7 +30,7 @@
     {
       "program": "generate.py",
       "mode": "normal",
-      "seconds": 0.9620452590752393,
+      "seconds": 0.9137262909207493,
       "parent": 1,
       "exit_code": 0,
       "stderr_empty": true,
@@ -50,7 +50,7 @@
     {
       "program": "check.py",
       "mode": "normal",
-      "seconds": 1.1226276379311457,
+      "seconds": 0.9036528230644763,
       "parent": 1,
       "exit_code": 0,
       "stderr_empty": true,
@@ -72,7 +72,7 @@
     {
       "program": "generate.py",
       "mode": "normal",
-      "seconds": 0.9730098840082064,
+      "seconds": 0.8714608950540423,
       "parent": 2,
       "exit_code": 0,
       "stderr_empty": true,
@@ -92,7 +92,7 @@
     {
       "program": "check.py",
       "mode": "normal",
-      "seconds": 0.9049206720665097,
+      "seconds": 0.8617986160097644,
       "parent": 2,
       "exit_code": 0,
       "stderr_empty": true,
@@ -114,7 +114,7 @@
     {
       "program": "generate.py",
       "mode": "normal",
-      "seconds": 0.8847341949585825,
+      "seconds": 0.8796829170314595,
       "parent": 3,
       "exit_code": 0,
       "stderr_empty": true,
@@ -134,7 +134,7 @@
     {
       "program": "check.py",
       "mode": "normal",
-      "seconds": 0.8619683070573956,
+      "seconds": 0.8533063170034438,
       "parent": 3,
       "exit_code": 0,
       "stderr_empty": true,
@@ -156,7 +156,7 @@
     {
       "program": "generate.py",
       "mode": "normal",
-      "seconds": 0.8506525970296934,
+      "seconds": 0.8785232750233263,
       "parent": 5,
       "exit_code": 0,
       "stderr_empty": true,
@@ -176,7 +176,7 @@
     {
       "program": "check.py",
       "mode": "normal",
-      "seconds": 0.8618218569317833,
+      "seconds": 0.8726475220173597,
       "parent": 5,
       "exit_code": 0,
       "stderr_empty": true,
@@ -198,7 +198,7 @@
     {
       "program": "generate.py",
       "mode": "normal",
-      "seconds": 0.9205882999813184,
+      "seconds": 0.8811643070075661,
       "parent": 6,
       "exit_code": 0,
       "stderr_empty": true,
@@ -218,7 +218,7 @@
     {
       "program": "check.py",
       "mode": "normal",
-      "seconds": 0.861592001048848,
+      "seconds": 0.8727419179631397,
       "parent": 6,
       "exit_code": 0,
       "stderr_empty": true,
@@ -240,7 +240,7 @@
     {
       "program": "generate.py",
       "mode": "normal",
-      "seconds": 0.8431509929941967,
+      "seconds": 0.8833527599927038,
       "parent": 7,
       "exit_code": 0,
       "stderr_empty": true,
@@ -260,7 +260,7 @@
     {
       "program": "check.py",
       "mode": "normal",
-      "seconds": 0.8517335490323603,
+      "seconds": 0.8771459480049089,
       "parent": 7,
       "exit_code": 0,
       "stderr_empty": true,
@@ -282,7 +282,7 @@
     {
       "program": "generate.py",
       "mode": "optimized",
-      "seconds": 1.0345504090655595,
+      "seconds": 1.0188357009319589,
       "parent": 1,
       "exit_code": 0,
       "stderr_empty": true,
@@ -302,7 +302,7 @@
     {
       "program": "check.py",
       "mode": "optimized",
-      "seconds": 1.019875488942489,
+      "seconds": 1.0053602360421792,
       "parent": 1,
       "exit_code": 0,
       "stderr_empty": true,
@@ -324,7 +324,7 @@
     {
       "program": "generate.py",
       "mode": "optimized",
-      "seconds": 1.0128996149869636,
+      "seconds": 1.0330250549595803,
       "parent": 2,
       "exit_code": 0,
       "stderr_empty": true,
@@ -344,7 +344,7 @@
     {
       "program": "check.py",
       "mode": "optimized",
-      "seconds": 0.9986439449712634,
+      "seconds": 0.9894210490165278,
       "parent": 2,
       "exit_code": 0,
       "stderr_empty": true,
@@ -366,7 +366,7 @@
     {
       "program": "generate.py",
       "mode": "optimized",
-      "seconds": 0.994635219918564,
+      "seconds": 1.0436060840729624,
       "parent": 3,
       "exit_code": 0,
       "stderr_empty": true,
@@ -386,7 +386,7 @@
     {
       "program": "check.py",
       "mode": "optimized",
-      "seconds": 0.9856572940479964,
+      "seconds": 0.9992716299602762,
       "parent": 3,
       "exit_code": 0,
       "stderr_empty": true,
@@ -408,7 +408,7 @@
     {
       "program": "generate.py",
       "mode": "optimized",
-      "seconds": 1.056368088000454,
+      "seconds": 0.989080105908215,
       "parent": 5,
       "exit_code": 0,
       "stderr_empty": true,
@@ -428,7 +428,7 @@
     {
       "program": "check.py",
       "mode": "optimized",
-      "seconds": 1.0404353509657085,
+      "seconds": 0.9774134870385751,
       "parent": 5,
       "exit_code": 0,
       "stderr_empty": true,
@@ -450,7 +450,7 @@
     {
       "program": "generate.py",
       "mode": "optimized",
-      "seconds": 1.0728713349672034,
+      "seconds": 1.0452281539328396,
       "parent": 6,
       "exit_code": 0,
       "stderr_empty": true,
@@ -470,7 +470,7 @@
     {
       "program": "check.py",
       "mode": "optimized",
-      "seconds": 1.2514652470126748,
+      "seconds": 0.9815007949946448,
       "parent": 6,
       "exit_code": 0,
       "stderr_empty": true,
@@ -492,7 +492,7 @@
     {
       "program": "generate.py",
       "mode": "optimized",
-      "seconds": 1.0597675299504772,
+      "seconds": 0.9870226989733055,
       "parent": 7,
       "exit_code": 0,
       "stderr_empty": true,
@@ -512,7 +512,7 @@
     {
       "program": "check.py",
       "mode": "optimized",
-      "seconds": 1.0507888870779425,
+      "seconds": 0.99478366994299,
       "parent": 7,
       "exit_code": 0,
       "stderr_empty": true,
@@ -534,7 +534,7 @@
     {
       "program": "controls.py",
       "mode": "normal",
-      "seconds": 4.117378313909285,
+      "seconds": 3.915195390000008,
       "parent": null,
       "exit_code": 0,
       "stderr_empty": true,
@@ -569,7 +569,12 @@
           24,
           65
         ],
-        "all_original_BASE_AP_lift_points": 362880,
+        "all_original_BASE_AP_lift_points": [
+          2519,
+          5039,
+          7559,
+          10079
+        ],
         "all_original_TAIL_AP_parent_points": 241920,
         "CRT_multipliers": [
           [
@@ -605,6 +610,21 @@
           ],
           [
             4
+          ]
+        ],
+        "all_original_TAIL_lift_fibres": 60480,
+        "nonzero_lift_intersections_16d_32d": [
+          2,
+          1
+        ],
+        "abstract_fibre_two_original_labels": [
+          [
+            16,
+            2
+          ],
+          [
+            48,
+            26
           ]
         ]
       }
@@ -612,7 +632,7 @@
     {
       "program": "controls.py",
       "mode": "optimized",
-      "seconds": 3.8095904249930754,
+      "seconds": 4.051201827940531,
       "parent": null,
       "exit_code": 0,
       "stderr_empty": true,
@@ -647,7 +667,12 @@
           24,
           65
         ],
-        "all_original_BASE_AP_lift_points": 362880,
+        "all_original_BASE_AP_lift_points": [
+          2519,
+          5039,
+          7559,
+          10079
+        ],
         "all_original_TAIL_AP_parent_points": 241920,
         "CRT_multipliers": [
           [
@@ -683,6 +708,21 @@
           ],
           [
             4
+          ]
+        ],
+        "all_original_TAIL_lift_fibres": 60480,
+        "nonzero_lift_intersections_16d_32d": [
+          2,
+          1
+        ],
+        "abstract_fibre_two_original_labels": [
+          [
+            16,
+            2
+          ],
+          [
+            48,
+            26
           ]
         ]
       }
