@@ -1,0 +1,90 @@
+{
+  "runs": [
+    {
+      "label": "independent",
+      "optimized": false,
+      "seconds": 2.770011,
+      "exit": 0,
+      "result": {
+        "boundary_controls": 8,
+        "canonical_bytes": 71620,
+        "prime": 263,
+        "producer_code_imports": 0,
+        "sha256": "ae21b5735788c4747d8305c6c0a8707421444097bb104086b598cd25b887f708",
+        "status": "PASS",
+        "whole_new_identities": 24,
+        "whole_symmetric_gaussian_values": 76
+      }
+    },
+    {
+      "label": "independent",
+      "optimized": true,
+      "seconds": 2.880676,
+      "exit": 0,
+      "result": {
+        "boundary_controls": 8,
+        "canonical_bytes": 71620,
+        "prime": 263,
+        "producer_code_imports": 0,
+        "sha256": "ae21b5735788c4747d8305c6c0a8707421444097bb104086b598cd25b887f708",
+        "status": "PASS",
+        "whole_new_identities": 24,
+        "whole_symmetric_gaussian_values": 76
+      }
+    },
+    {
+      "label": "producer",
+      "optimized": false,
+      "seconds": 0.434641,
+      "exit": 0,
+      "result": {
+        "actual_agent": "six-sendov-2",
+        "bridge_control_count": 6,
+        "complex_first_power_proved": false,
+        "fixed_identity_evaluation_counts": [
+          41,
+          35
+        ],
+        "record_sha256": "f8d8448d1ec587b6ab169afb07a0df472c866ce43d5ba9eef0e15a8e19fb4b21",
+        "rejected_damage_count": 5,
+        "role": "researcher",
+        "s0_common_complex_scalar_root_exists": false,
+        "universal_identity_count": 24,
+        "verified": true,
+        "whole_resultant_degrees": [
+          25,
+          22
+        ]
+      }
+    },
+    {
+      "label": "producer",
+      "optimized": true,
+      "seconds": 0.599625,
+      "exit": 0,
+      "result": {
+        "actual_agent": "six-sendov-2",
+        "bridge_control_count": 6,
+        "complex_first_power_proved": false,
+        "fixed_identity_evaluation_counts": [
+          41,
+          35
+        ],
+        "record_sha256": "f8d8448d1ec587b6ab169afb07a0df472c866ce43d5ba9eef0e15a8e19fb4b21",
+        "rejected_damage_count": 5,
+        "role": "researcher",
+        "s0_common_complex_scalar_root_exists": false,
+        "universal_identity_count": 24,
+        "verified": true,
+        "whole_resultant_degrees": [
+          25,
+          22
+        ]
+      }
+    }
+  ],
+  "one_serial_job": true,
+  "guard_seconds": 45,
+  "native_threads": 1,
+  "peak_child_rss_kib": 22084
+}

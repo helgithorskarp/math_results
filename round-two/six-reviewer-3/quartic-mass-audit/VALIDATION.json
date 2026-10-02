@@ -1,0 +1,114 @@
+{
+  "actual_agent": "six-reviewer-3",
+  "role": "independent mathematical reviewer",
+  "runs": [
+    {
+      "label": "full independent record",
+      "optimized": false,
+      "seconds": 2.646064,
+      "result": {
+        "boundary_controls": 8,
+        "canonical_bytes": 71620,
+        "prime": 263,
+        "producer_code_imports": 0,
+        "sha256": "ae21b5735788c4747d8305c6c0a8707421444097bb104086b598cd25b887f708",
+        "status": "PASS",
+        "whole_new_identities": 24,
+        "whole_symmetric_gaussian_values": 76
+      }
+    },
+    {
+      "label": "full independent record",
+      "optimized": true,
+      "seconds": 2.761196,
+      "result": {
+        "boundary_controls": 8,
+        "canonical_bytes": 71620,
+        "prime": 263,
+        "producer_code_imports": 0,
+        "sha256": "ae21b5735788c4747d8305c6c0a8707421444097bb104086b598cd25b887f708",
+        "status": "PASS",
+        "whole_new_identities": 24,
+        "whole_symmetric_gaussian_values": 76
+      }
+    },
+    {
+      "label": "matrix coefficient",
+      "optimized": false,
+      "seconds": 2.61148,
+      "result": "REJECTED"
+    },
+    {
+      "label": "matrix coefficient",
+      "optimized": true,
+      "seconds": 2.822452,
+      "result": "REJECTED"
+    },
+    {
+      "label": "last determinant value",
+      "optimized": false,
+      "seconds": 2.565345,
+      "result": "REJECTED"
+    },
+    {
+      "label": "last determinant value",
+      "optimized": true,
+      "seconds": 2.864661,
+      "result": "REJECTED"
+    },
+    {
+      "label": "omitted eliminant tail",
+      "optimized": false,
+      "seconds": 2.616261,
+      "result": "REJECTED"
+    },
+    {
+      "label": "omitted eliminant tail",
+      "optimized": true,
+      "seconds": 2.880068,
+      "result": "REJECTED"
+    },
+    {
+      "label": "typed prime coefficient",
+      "optimized": false,
+      "seconds": 2.629696,
+      "result": "REJECTED"
+    },
+    {
+      "label": "typed prime coefficient",
+      "optimized": true,
+      "seconds": 3.485847,
+      "result": "REJECTED"
+    },
+    {
+      "label": "unit coefficient",
+      "optimized": false,
+      "seconds": 2.676318,
+      "result": "REJECTED"
+    },
+    {
+      "label": "unit coefficient",
+      "optimized": true,
+      "seconds": 2.945282,
+      "result": "REJECTED"
+    },
+    {
+      "label": "duplicate key",
+      "optimized": false,
+      "seconds": 2.691664,
+      "result": "REJECTED"
+    },
+    {
+      "label": "duplicate key",
+      "optimized": true,
+      "seconds": 2.850073,
+      "result": "REJECTED"
+    }
+  ],
+  "external_damages_rejected": 12,
+  "normal_optimized_whole_match": true,
+  "native_threads": 1,
+  "max_simultaneous_math_children": 1,
+  "per_child_guard_seconds": 45,
+  "peak_child_rss_kib": 22244
+}
