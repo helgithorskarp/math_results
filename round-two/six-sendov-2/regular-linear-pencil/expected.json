@@ -1,0 +1,801 @@
+{
+  "Gram_controls": [
+    {
+      "a": [
+        "1",
+        "2",
+        "0",
+        "0",
+        "0"
+      ],
+      "alpha": "0",
+      "b": [
+        "-2",
+        "-4",
+        "0",
+        "0",
+        "0"
+      ],
+      "beta": "-1/2",
+      "name": "unique_positive",
+      "result": {
+        "S": "5",
+        "T": "-10",
+        "U": "20",
+        "branch": "rank2_or_no_root",
+        "positive_root": true,
+        "root": "2"
+      }
+    },
+    {
+      "a": [
+        "1",
+        "2",
+        "0",
+        "0",
+        "0"
+      ],
+      "alpha": "0",
+      "b": [
+        "2",
+        "4",
+        "0",
+        "0",
+        "0"
+      ],
+      "beta": "1/2",
+      "name": "negative_root",
+      "result": {
+        "S": "5",
+        "T": "10",
+        "U": "20",
+        "branch": "rank2_or_no_root",
+        "positive_root": false
+      }
+    },
+    {
+      "a": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "alpha": "0",
+      "b": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "beta": "0",
+      "name": "zero_root",
+      "result": {
+        "S": "1",
+        "T": "0",
+        "U": "0",
+        "branch": "rank2_or_no_root",
+        "positive_root": false
+      }
+    },
+    {
+      "a": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "alpha": "0",
+      "b": [
+        "-2",
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      "beta": "-1/2",
+      "name": "nonproportional",
+      "result": {
+        "S": "1",
+        "T": "-2",
+        "U": "5",
+        "branch": "rank2_or_no_root",
+        "positive_root": false
+      }
+    },
+    {
+      "a": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "alpha": "0",
+      "b": [
+        "-2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "beta": "1",
+      "name": "wrong_scalar",
+      "result": {
+        "S": "1",
+        "T": "-2",
+        "U": "4",
+        "branch": "rank2_or_no_root",
+        "positive_root": false
+      }
+    },
+    {
+      "a": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "alpha": "-1",
+      "b": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "beta": "0",
+      "name": "constant_linear_vector",
+      "result": {
+        "branch": "no_finite_root",
+        "positive_root": false
+      }
+    },
+    {
+      "a": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "alpha": "-1",
+      "b": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "beta": "3",
+      "name": "scalar_negative_leading",
+      "result": {
+        "branch": "rank1_scalar",
+        "positive_root": true
+      }
+    },
+    {
+      "a": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "alpha": "2",
+      "b": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "beta": "-3",
+      "name": "scalar_two_positive",
+      "result": {
+        "branch": "rank1_scalar",
+        "positive_root": true
+      }
+    },
+    {
+      "a": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "alpha": "1",
+      "b": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "beta": "-2",
+      "name": "scalar_double_positive",
+      "result": {
+        "branch": "rank1_scalar",
+        "positive_root": true
+      }
+    },
+    {
+      "a": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "alpha": "1",
+      "b": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "beta": "-3",
+      "name": "scalar_irrational_positive",
+      "result": {
+        "branch": "rank1_scalar",
+        "positive_root": true
+      }
+    },
+    {
+      "a": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "alpha": "1",
+      "b": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "beta": "3",
+      "name": "scalar_negative_only",
+      "result": {
+        "branch": "rank1_scalar",
+        "positive_root": false
+      }
+    },
+    {
+      "a": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "alpha": "1",
+      "b": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "beta": "0",
+      "name": "scalar_nonreal",
+      "result": {
+        "branch": "rank1_scalar",
+        "positive_root": false
+      }
+    },
+    {
+      "a": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "alpha": "0",
+      "b": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "beta": "-1",
+      "name": "scalar_linear_positive",
+      "result": {
+        "branch": "rank1_scalar",
+        "positive_root": true
+      }
+    },
+    {
+      "a": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "alpha": "0",
+      "b": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "beta": "1",
+      "name": "scalar_linear_negative",
+      "result": {
+        "branch": "rank1_scalar",
+        "positive_root": false
+      }
+    },
+    {
+      "a": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "alpha": "0",
+      "b": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "beta": "0",
+      "name": "scalar_nonzero_constant",
+      "result": {
+        "branch": "rank1_scalar",
+        "positive_root": false
+      }
+    }
+  ],
+  "actual_agent": "six-sendov-2",
+  "all_stationary_profiles_classified": false,
+  "alpha": {
+    "coefficient_terms": [
+      31
+    ],
+    "degree": 0,
+    "sha256": "13d2ce35a61634c991d947957a7df26f595984e60c5b0c555f3be544eaaed49d"
+  },
+  "beta": {
+    "coefficient_terms": [
+      10
+    ],
+    "degree": 0,
+    "sha256": "009166538f7e27d042bedd5cb9851a8e4099fe89ec5d1dd12fb15af73c70a687"
+  },
+  "complex_first_power_proved": false,
+  "feasibility_required": [
+    "t>0",
+    "ALL reduced equations",
+    "seven SIMPLE REAL criticals",
+    "STRICT p(lambda)>0"
+  ],
+  "finite_slice_units": {
+    "Bnonzero": {
+      "both_leading_coefficients_nonzero": true,
+      "identity": [
+        1
+      ],
+      "left": [
+        10,
+        7,
+        4
+      ],
+      "left_multiplier": [
+        6,
+        9
+      ],
+      "prime": 13,
+      "right": [
+        3,
+        0,
+        2
+      ],
+      "right_multiplier": [
+        2,
+        8
+      ]
+    },
+    "Bzero": {
+      "both_leading_coefficients_nonzero": true,
+      "identity": [
+        1
+      ],
+      "left": [
+        0,
+        1,
+        8,
+        5
+      ],
+      "left_multiplier": [
+        12,
+        12,
+        4,
+        11,
+        1
+      ],
+      "prime": 13,
+      "right": [
+        4,
+        9,
+        11,
+        8,
+        11,
+        9
+      ],
+      "right_multiplier": [
+        10,
+        7,
+        11
+      ]
+    }
+  },
+  "input9550": {
+    "entire_parent_fixture_checked": true,
+    "file_sha256": {
+      "expected.json": "37efc29f52d2ddb4efb91fcd3f5c9e69a2f4d96a4e12adf797e6bbb74a760f96",
+      "verify.py": "793731739751b6aa21213932a371d3985a5b69f010604017d1a1695fce478deb"
+    },
+    "same_author_code_reuse_not_independent_review": true,
+    "source_commit": "cb4cf7d9d83f3d376d3763b65cbe2fddd50637f4",
+    "whole_record_sha256": "c808d09b1f60281d10a76384306b974d8bf94d3647fa037fcf01dd23a76c023c"
+  },
+  "linear_a": [
+    {
+      "coefficient_terms": [
+        52
+      ],
+      "degree": 0,
+      "sha256": "20211a54ca7ea73275f948838c7f85c5d7a32ea96e2ddd559d411af694363a93"
+    },
+    {
+      "coefficient_terms": [
+        65
+      ],
+      "degree": 0,
+      "sha256": "920843911be7cc38415b5d4497818fcf15843bc3f3aa52773adfba291b607867"
+    },
+    {
+      "coefficient_terms": [
+        85
+      ],
+      "degree": 0,
+      "sha256": "a6721524b29e813bd4bf908e995c23bc2a5536e089864ec8561db3b944cb6572"
+    },
+    {
+      "coefficient_terms": [
+        35
+      ],
+      "degree": 0,
+      "sha256": "9a0a4964030350b0332938e28c18d2f0e997c980c7971dee21026e36bfe5d850"
+    },
+    {
+      "coefficient_terms": [
+        52
+      ],
+      "degree": 0,
+      "sha256": "5b6c9e24e8c73aeea9ad52dc6ddbcc6ac55d4312d867783805b23b780be120d9"
+    }
+  ],
+  "linear_b": [
+    {
+      "coefficient_terms": [
+        19
+      ],
+      "degree": 0,
+      "sha256": "7b996be22d222fc8456620f9dce1f56804936e44875d8963698ffbf80247651e"
+    },
+    {
+      "coefficient_terms": [
+        29
+      ],
+      "degree": 0,
+      "sha256": "a8c485e902b9ba15a452bef009279c05ab575bffea4153b5b2cba95aedadd4d7"
+    },
+    {
+      "coefficient_terms": [
+        36
+      ],
+      "degree": 0,
+      "sha256": "1c055f99cf012d4ca70ebbabee207927d6c789583702fb55446c0037f0cd3fa5"
+    },
+    {
+      "coefficient_terms": [
+        14
+      ],
+      "degree": 0,
+      "sha256": "29627b99ba4aac6b1a99541fc3153b88c752caa49ba6e6573f5351e2126c16ad"
+    },
+    {
+      "coefficient_terms": [
+        19
+      ],
+      "degree": 0,
+      "sha256": "5fd1c74d139761223f8b752c087c06a11de6450e789e4e81b34353acf3de7340"
+    }
+  ],
+  "ordinary_bridges": "9550 feasible theorem, unit-column rowspace splitting, t-positive cancellation, real sum-of-squares equality, positive quadratic-root branches, exact univariate Bezout incompatibility; unformalized",
+  "rank0_excluded_over_complex": true,
+  "rank1_E_numerator": [
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "22860"
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "403500"
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        4,
+        0
+      ],
+      "-1694385"
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        6,
+        0
+      ],
+      "1286250"
+    ],
+    [
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "146880"
+    ],
+    [
+      [
+        0,
+        0,
+        1,
+        2,
+        0
+      ],
+      "2603440"
+    ],
+    [
+      [
+        0,
+        0,
+        1,
+        4,
+        0
+      ],
+      "-4602080"
+    ],
+    [
+      [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "219520"
+    ],
+    [
+      [
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      "3849440"
+    ],
+    [
+      [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "302976"
+    ],
+    [
+      [
+        1,
+        0,
+        0,
+        3,
+        0
+      ],
+      "-848736"
+    ],
+    [
+      [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "924672"
+    ]
+  ],
+  "rank1_snonzero_classified": false,
+  "rational_slice_units": {
+    "Bnonzero": {
+      "identity": [
+        "1"
+      ],
+      "left": [
+        "2727",
+        "16296",
+        "24080"
+      ],
+      "left_multiplier": [
+        "-18314821/316112508",
+        "-4696013/79028127"
+      ],
+      "right": [
+        "1875",
+        "7280",
+        "5488"
+      ],
+      "right_multiplier": [
+        "8935223/105370836",
+        "20604955/79028127"
+      ]
+    },
+    "Bzero": {
+      "identity": [
+        "1"
+      ],
+      "left": [
+        "157599",
+        "1459368",
+        "4606896",
+        "4934272"
+      ],
+      "left_multiplier": [
+        "-67821852129571118172349/379676998096424334135819",
+        "-10198749723598018834344871/4556123977157092009629828",
+        "-702466762471870287572549963/68341859657356380144447420",
+        "-1058535158574432023785882316/51256394743017285108335565",
+        "-52632875518904644228133708/3417092982867819007222371"
+      ],
+      "right": [
+        "57863160",
+        "900559539",
+        "5524855776",
+        "16747763040",
+        "25150852608",
+        "15003349760"
+      ],
+      "right_multiplier": [
+        "6650263950803749791377/13668371931471276028889484",
+        "56469116111523876998279/18638688997460830948485660",
+        "86548980096700970558738/17085464914339095036111855"
+      ]
+    }
+  },
+  "rejected_mathematical_damages": [
+    "wrong_normalizer_sign",
+    "wrong_real_reference",
+    "wrong_E_pivot",
+    "wrong_slice_Q",
+    "wrong_unit_multiplier",
+    "ignore_zero_slope",
+    "drop_gram",
+    "drop_positive",
+    "drop_quadratic"
+  ],
+  "ring": "QQ[B,E,r,s], real Gram statements require real parameters; complex s0 rank exclusion",
+  "role": "researcher",
+  "s0_B0_a0_scale": "7/60217344",
+  "s0_B0_quintic": [
+    57863160,
+    900559539,
+    5524855776,
+    16747763040,
+    25150852608,
+    15003349760
+  ],
+  "s0_rank_at_least2_over_complex": true,
+  "universal_identities": [
+    "constant_column0",
+    "constant_column1",
+    "constant_column2",
+    "constant_column3",
+    "constant_column4",
+    "entire_generic_scalar_least_squares_identity",
+    "entire_linearization_row0",
+    "entire_linearization_row1",
+    "entire_linearization_row2",
+    "entire_linearization_row3",
+    "entire_linearization_row4",
+    "entire_rank1_E_equation",
+    "polynomial_constant_column_unit",
+    "rank1_E_pivot",
+    "s0_B0_a0_quintic",
+    "s0_B0_b1_cubic",
+    "s0_a3_BH",
+    "s0_b0_BQ",
+    "s0_rank1_E_equation",
+    "strict_real_reference_constant",
+    "universal_Gram_sum_of_ten_squares",
+    "weighted_linear_constant",
+    "weighted_linear_slope"
+  ],
+  "w": [
+    [
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "-1/192"
+      ]
+    ],
+    [],
+    [],
+    [
+      [
+        [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "7/384"
+      ]
+    ],
+    [
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "7/96"
+      ]
+    ]
+  ]
+}
