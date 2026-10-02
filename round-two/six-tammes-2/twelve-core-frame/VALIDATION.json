@@ -1,0 +1,407 @@
+{
+  "actual_agent": "six-tammes-2",
+  "role": "researcher",
+  "claim_status": "ordinary geometric reduction plus complete author-checked exact finite interval certificate",
+  "independent_researcher_review": "pending",
+  "formalization": false,
+  "python": "3.11.2",
+  "arithmetic": "80-bit outward dyadic integer intervals; exact rational functions over Q for cluster identities",
+  "runtime_pins": {
+    "PLAN.json": "cfbd89375154380d281174ad8f37ea42cf9ab7f8d284fc50965c31f8a3536506",
+    "LITERALS.json": "19fdb2fdcafd224b9897dbffdfd0acc395d3ed295830a94ad3703709bf385f7b",
+    "model.py": "c096da3ba720d08543c735ce8d4f428c2420cb5f92ea8b649f660b7dd7609280",
+    "replay.py": "f57595395ab21850b3a518c19a645f03c011069f44078067e6b05bb41a67b6d9"
+  },
+  "literal_leaves": 12091,
+  "prefix_nodes": 24178,
+  "actual_cover": [
+    0,
+    12091
+  ],
+  "every_literal_actually_executed": true,
+  "actual_range_runs": [
+    {
+      "checked_range": [
+        0,
+        2500
+      ],
+      "checked_literals_this_invocation": 2500,
+      "guard": "2500-literal range budget",
+      "seconds": 4.121775,
+      "witness_kinds": {
+        "W-pair": 67,
+        "empty-necessary-intersection": 2,
+        "no-real-V": 1,
+        "pair": 2430
+      },
+      "all_requested_literal_predicates_executed": true,
+      "actual_receipt_sha256": "8eaf59d324f35925ef8b448399e6b72960b8ec1da4ac5c4b4c337b2bbfd3d143"
+    },
+    {
+      "checked_range": [
+        2500,
+        5000
+      ],
+      "checked_literals_this_invocation": 2500,
+      "guard": "2500-literal range budget",
+      "seconds": 4.271076,
+      "witness_kinds": {
+        "pair": 2500
+      },
+      "all_requested_literal_predicates_executed": true,
+      "actual_receipt_sha256": "f312d535f339d64b148f6fefaea9eb5cb2a5190e42d043387ed1f2091a5106c9"
+    },
+    {
+      "checked_range": [
+        5000,
+        7500
+      ],
+      "checked_literals_this_invocation": 2500,
+      "guard": "2500-literal range budget",
+      "seconds": 4.207306,
+      "witness_kinds": {
+        "chart": 4,
+        "pair": 2496
+      },
+      "all_requested_literal_predicates_executed": true,
+      "actual_receipt_sha256": "1f881f82acec5f6c3257d639e13d791f6dd6151350198154b3f0dfb7274b919e"
+    },
+    {
+      "checked_range": [
+        7500,
+        10000
+      ],
+      "checked_literals_this_invocation": 2500,
+      "guard": "2500-literal range budget",
+      "seconds": 4.243441,
+      "witness_kinds": {
+        "W-pair": 134,
+        "chart": 26,
+        "empty-necessary-intersection": 4,
+        "no-real-V": 2,
+        "pair": 2334
+      },
+      "all_requested_literal_predicates_executed": true,
+      "actual_receipt_sha256": "ff1cd07f2f3d6d29b9ed542ae1467b15f900c029dd41e540199c06075876d42f"
+    },
+    {
+      "checked_range": [
+        10000,
+        12091
+      ],
+      "checked_literals_this_invocation": 2091,
+      "guard": null,
+      "seconds": 3.362086,
+      "witness_kinds": {
+        "W-pair": 67,
+        "chart": 14,
+        "empty-necessary-intersection": 2,
+        "no-real-V": 1,
+        "outside-target-g-half": 166,
+        "pair": 1841
+      },
+      "all_requested_literal_predicates_executed": true,
+      "actual_receipt_sha256": "9ae5a5c625baf43aaeee42d565d8972c46e42f935a861a88dc70897454115fff"
+    }
+  ],
+  "range_guards": {
+    "literal_budget": 2500,
+    "hard_seconds": 55,
+    "logical_seconds": 50,
+    "depth": 22,
+    "nodes_per_tree": 20000
+  },
+  "full_normal_optimized_auxiliary_outputs_equal": true,
+  "auxiliary_checks": [
+    {
+      "label": "identities-normal",
+      "exit_code": 0,
+      "wall_seconds": 0.612696,
+      "peak_child_rss_kib": 11460,
+      "output": {
+        "actual_agent": "six-tammes-2",
+        "role": "researcher",
+        "exact_rational_identities": 63,
+        "cluster_unit_identities": 12,
+        "internal_contact_identities": 18,
+        "internal_noncontact_identities": 12,
+        "noncontact_products": {
+          "h": 6,
+          "k": 5,
+          "ell": 1
+        },
+        "k_closed_endpoint_values": [
+          "-11354/38025",
+          "-605547287/2537649000"
+        ],
+        "forbidden_s_maxima": [
+          "-33/12500",
+          "-1/2500"
+        ],
+        "arithmetic": "exact univariate rational functions over Q",
+        "point13_used": false,
+        "independent_researcher_review": "pending"
+      }
+    },
+    {
+      "label": "identities-optimized",
+      "exit_code": 0,
+      "wall_seconds": 0.710836,
+      "peak_child_rss_kib": 14968,
+      "output": {
+        "actual_agent": "six-tammes-2",
+        "role": "researcher",
+        "exact_rational_identities": 63,
+        "cluster_unit_identities": 12,
+        "internal_contact_identities": 18,
+        "internal_noncontact_identities": 12,
+        "noncontact_products": {
+          "h": 6,
+          "k": 5,
+          "ell": 1
+        },
+        "k_closed_endpoint_values": [
+          "-11354/38025",
+          "-605547287/2537649000"
+        ],
+        "forbidden_s_maxima": [
+          "-33/12500",
+          "-1/2500"
+        ],
+        "arithmetic": "exact univariate rational functions over Q",
+        "point13_used": false,
+        "independent_researcher_review": "pending"
+      }
+    },
+    {
+      "label": "controls-normal",
+      "exit_code": 0,
+      "wall_seconds": 0.442477,
+      "peak_child_rss_kib": 27556,
+      "output": {
+        "actual_agent": "six-tammes-2",
+        "role": "researcher",
+        "damages_rejected": 20,
+        "damage_reasons": [
+          {
+            "case": "wrong format",
+            "reason": "fixed format and outward precision"
+          },
+          {
+            "case": "wrong outward precision",
+            "reason": "fixed format and outward precision"
+          },
+          {
+            "case": "weaken rectangle endpoint",
+            "reason": "entire fixed closed rectangle"
+          },
+          {
+            "case": "reintroduce point13",
+            "reason": "exact core binding"
+          },
+          {
+            "case": "drop actual contact",
+            "reason": "exact core binding"
+          },
+          {
+            "case": "reintroduce contact2-13",
+            "reason": "exact core binding"
+          },
+          {
+            "case": "omit orientation",
+            "reason": "all four targets in fixed order"
+          },
+          {
+            "case": "duplicate orientation",
+            "reason": "all four targets in fixed order"
+          },
+          {
+            "case": "change g-half target mode",
+            "reason": "all four targets in fixed order"
+          },
+          {
+            "case": "truncate prefix",
+            "reason": "truncated prefix tree"
+          },
+          {
+            "case": "unused prefix token",
+            "reason": "no unused prefix tokens"
+          },
+          {
+            "case": "unknown literal",
+            "reason": "known surviving-point predicate"
+          },
+          {
+            "case": "g-half witness in bad tree",
+            "reason": "target-specific g-half predicate"
+          },
+          {
+            "case": "depth budget exceeded",
+            "reason": "permitted subdivision depth"
+          },
+          {
+            "case": "node budget exceeded",
+            "reason": "fixed tree node guard"
+          },
+          {
+            "case": "fixed compact-size budget exceeded",
+            "reason": "compact fixed certificate size"
+          },
+          {
+            "case": "remove typed literal",
+            "reason": "fixed typed literal table"
+          },
+          {
+            "case": "restore removed-point predicate",
+            "reason": "fixed typed literal table"
+          },
+          {
+            "case": "unknown W comparison",
+            "reason": "fixed typed literal table"
+          },
+          {
+            "case": "change literal code binding",
+            "reason": "fixed typed literal table"
+          }
+        ],
+        "valid_controls_accepted": [
+          "JSON field order",
+          "unused descriptive metadata"
+        ],
+        "arithmetic_boundary_controls": [
+          "point 0",
+          "point 1",
+          "point 2",
+          "point 3",
+          "square-root zero retained",
+          "zero-spanning square",
+          "zero denominator rejected",
+          "negative root rejected",
+          "empty intersection rejected"
+        ],
+        "assert_free_guards_checked": 4,
+        "runtime_inputs_unchanged": true,
+        "new_interval_predicate_evaluations": false,
+        "independent_researcher_review": "pending"
+      }
+    },
+    {
+      "label": "controls-optimized",
+      "exit_code": 0,
+      "wall_seconds": 0.632907,
+      "peak_child_rss_kib": 30244,
+      "output": {
+        "actual_agent": "six-tammes-2",
+        "role": "researcher",
+        "damages_rejected": 20,
+        "damage_reasons": [
+          {
+            "case": "wrong format",
+            "reason": "fixed format and outward precision"
+          },
+          {
+            "case": "wrong outward precision",
+            "reason": "fixed format and outward precision"
+          },
+          {
+            "case": "weaken rectangle endpoint",
+            "reason": "entire fixed closed rectangle"
+          },
+          {
+            "case": "reintroduce point13",
+            "reason": "exact core binding"
+          },
+          {
+            "case": "drop actual contact",
+            "reason": "exact core binding"
+          },
+          {
+            "case": "reintroduce contact2-13",
+            "reason": "exact core binding"
+          },
+          {
+            "case": "omit orientation",
+            "reason": "all four targets in fixed order"
+          },
+          {
+            "case": "duplicate orientation",
+            "reason": "all four targets in fixed order"
+          },
+          {
+            "case": "change g-half target mode",
+            "reason": "all four targets in fixed order"
+          },
+          {
+            "case": "truncate prefix",
+            "reason": "truncated prefix tree"
+          },
+          {
+            "case": "unused prefix token",
+            "reason": "no unused prefix tokens"
+          },
+          {
+            "case": "unknown literal",
+            "reason": "known surviving-point predicate"
+          },
+          {
+            "case": "g-half witness in bad tree",
+            "reason": "target-specific g-half predicate"
+          },
+          {
+            "case": "depth budget exceeded",
+            "reason": "permitted subdivision depth"
+          },
+          {
+            "case": "node budget exceeded",
+            "reason": "fixed tree node guard"
+          },
+          {
+            "case": "fixed compact-size budget exceeded",
+            "reason": "compact fixed certificate size"
+          },
+          {
+            "case": "remove typed literal",
+            "reason": "fixed typed literal table"
+          },
+          {
+            "case": "restore removed-point predicate",
+            "reason": "fixed typed literal table"
+          },
+          {
+            "case": "unknown W comparison",
+            "reason": "fixed typed literal table"
+          },
+          {
+            "case": "change literal code binding",
+            "reason": "fixed typed literal table"
+          }
+        ],
+        "valid_controls_accepted": [
+          "JSON field order",
+          "unused descriptive metadata"
+        ],
+        "arithmetic_boundary_controls": [
+          "point 0",
+          "point 1",
+          "point 2",
+          "point 3",
+          "square-root zero retained",
+          "zero-spanning square",
+          "zero denominator rejected",
+          "negative root rejected",
+          "empty intersection rejected"
+        ],
+        "assert_free_guards_checked": 4,
+        "runtime_inputs_unchanged": true,
+        "new_interval_predicate_evaluations": false,
+        "independent_researcher_review": "pending"
+      }
+    }
+  ],
+  "native_threads": 1,
+  "max_cpu_intensive_jobs_at_once": 1,
+  "process_scope": "unchanged 1CPU/2GiB",
+  "private_repair_history_published": false,
+  "new_global_N15_bound": false,
+  "trust_boundary": "ordinary common-neighbor/chart/metric/feasible-subset/clipping/coverage bridges and Python semantics are unformalized; new independent review pending"
+}
