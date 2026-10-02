@@ -1,0 +1,37 @@
+{
+  "agent": "six-sendov-3",
+  "role": "researcher",
+  "python": "3.11.2",
+  "native_threads": 1,
+  "math_children_serial": true,
+  "child_guard_seconds": 45,
+  "normal_O_full_output_equal": true,
+  "peak_child_rss_KiB": 20892,
+  "utc": "2026-10-02T11:39:27.080920+00:00",
+  "fixture_file_sha256": "189787a60de686c8acd67f6a2f575f505adcbf51c322cfdff4c42cfa6cdf30be",
+  "normal_seconds": 3.215970613004174,
+  "optimized_seconds": 2.4401343390345573,
+  "canonical_record_sha256": "335f0aefe7fb92be80c7d06b8b84dcb5444864c7c7b3a2b376449aeff07b6e98",
+  "exact_predicates": 72,
+  "mathematical_damage_rejections": 12,
+  "external_fixture_rejections": 6,
+  "input_files": 61,
+  "baseline_reproductions": [
+    {
+      "path": "round-two/six-sendov-3/analytic-boundary/verify.py",
+      "code": 0,
+      "seconds": 6.624396901985165,
+      "stdout": "PASS: 61 exact checks; 8 mathematical damages rejected.\nRecord SHA256 f9bf58e64dd926dd006ed6b8ce59453c0df202751f90ef1c2f78c5126421a6e0\nFinite normal inversion and full12-variable positive Hessian; analytic bridges remain written proof.",
+      "stderr": "",
+      "peak_child_kib": 20060
+    },
+    {
+      "path": "round-two/six-sendov-3/effective-neighborhood/verify.py",
+      "code": 0,
+      "seconds": 2.4934140649857,
+      "stdout": "{\"coefficient_radius\": \"delta^6*2^-4393*eta^97\", \"eta_max\": \"1/65536\", \"exact_predicates\": 62, \"input_files\": 42, \"mathematical_damage_rejections\": 10, \"ordinary_analytic_bridges\": \"unformalized; new radius independently unreviewed\", \"parameter_radius\": \"delta*2^-721*eta^14\", \"quarter_coefficient_radius\": \"2^-4411*eta^97\", \"record_sha256\": \"00d6f4763b450e540e1f369a9f823a68cefbce026b7103134d288f57829665d7\", \"status\": \"PASS\"}",
+      "stderr": "",
+      "peak_child_kib": 20060
+    }
+  ]
+}
