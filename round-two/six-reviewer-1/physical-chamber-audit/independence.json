@@ -1,0 +1,74 @@
+{
+  "agent": "six-reviewer-1",
+  "child_guard_seconds": 50,
+  "child_peak_rss_KiB": 20080,
+  "defining_ordinary_proof_visible_before_seal": true,
+  "fixture_damage_rejections": [
+    {
+      "damage": "changed-original-polynomial",
+      "rejected": true
+    },
+    {
+      "damage": "missing-literal-case",
+      "rejected": true
+    },
+    {
+      "damage": "extra-field",
+      "rejected": true
+    },
+    {
+      "damage": "changed-type",
+      "rejected": true
+    }
+  ],
+  "frozen_source_sha256": {
+    "algebra.py": "033f6a43eac8a109fb2542f94123564d4bafaf0742dc8e12124004a684e09d92",
+    "check.py": "9e9061d55e6d98dab3b9f4bcf7084f5a2f12158a1d22ad9c268cc83d4de300d6",
+    "core.py": "e92f8046316b9a19ee4e7c22267598c033471559a7427726b717ff3ea0e474c0",
+    "expected.json": "5b69c13939006e3e112f6e546ae3ef730fe97ba0e55e8d5b2399abc32b18ba7d"
+  },
+  "internal_guard_seconds": 45,
+  "method": "Whole free anchored polynomial/logderivative/Newton and paired actual complex original-normal identity; fresh Q[i,w] two-label field and five physical nonconjugate affine-original controls; eleven whole reciprocal/Laplace coefficients; revised Young/bootstrap and new actual low-sublevel family complete polynomial and window budgets. Optional old covered-branch box only imported as stated. No target imports or fixtures; finite series never prove all-orders/all-parameter coverage.",
+  "native_threads": {
+    "BLIS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "new_author_code_or_fixture_read_before_seal": false,
+  "prior_reused_source": "Own exact rational sparse-polynomial kernel, source448db1d41bc84a0e5bf2c6f6ce00a043b9a337dd, REVIEW9455; no prior target verdict transfer.",
+  "resources": "unchanged1CPU2GiB;serialchildren; no escalation or limit hit",
+  "role": "independent mathematical reviewer",
+  "runs": [
+    {
+      "mode": "normal",
+      "stdout": {
+        "literal_actual_controls": 5,
+        "math_damages": 12,
+        "reciprocal_coefficients": 11,
+        "record_sha256": "45e1adf7f42052919d9dbbe818998b54278ea50d33db8b4e6ec2e42be0cf30ff",
+        "status": "PASS",
+        "whole_window_margins": 63
+      },
+      "wall_seconds": 0.225561
+    },
+    {
+      "mode": "optimized",
+      "stdout": {
+        "literal_actual_controls": 5,
+        "math_damages": 12,
+        "reciprocal_coefficients": 11,
+        "record_sha256": "45e1adf7f42052919d9dbbe818998b54278ea50d33db8b4e6ec2e42be0cf30ff",
+        "status": "PASS",
+        "whole_window_margins": 63
+      },
+      "wall_seconds": 0.391654
+    }
+  ],
+  "target_height": 9533,
+  "target_source_commit": "38e2ad4bbdb3abf015805b49022a1c075435c947",
+  "utc_sealed_before_author_executable_or_fixture": "2026-10-02T16:15:15.676069+00:00",
+  "whole_record_bytes": 27931
+}

@@ -1,0 +1,109 @@
+{
+  "agent": "six-reviewer-1",
+  "author_external_fixture_rejections": "16 reported in source VALIDATION.json, not rerun here; independent four external damaged fixtures separately sealed.",
+  "author_runs": [
+    {
+      "mode": "normal",
+      "stdout": {
+        "canonical_sha256": "e873cdfa8e4cef69b183209b8ee6a5653c538961e32c620638a83c04daec23a7",
+        "identity_records": 11,
+        "mathematical_damages_rejected": 12,
+        "status": "PASS",
+        "whole_domain_margins": 45
+      },
+      "wall_seconds": 0.267301
+    },
+    {
+      "mode": "optimized",
+      "stdout": {
+        "canonical_sha256": "e873cdfa8e4cef69b183209b8ee6a5653c538961e32c620638a83c04daec23a7",
+        "identity_records": 11,
+        "mathematical_damages_rejected": 12,
+        "status": "PASS",
+        "whole_domain_margins": 45
+      },
+      "wall_seconds": 0.446054
+    }
+  ],
+  "author_source_commit": "38e2ad4bbdb3abf015805b49022a1c075435c947",
+  "author_source_files": {
+    ".gitignore": {
+      "bytes": 29,
+      "sha256": "536e4dfab1c00ff06bd7a9ffe58ff176cc1f76178201a3941c0fc2b51cbae234"
+    },
+    "LITERATURE.md": {
+      "bytes": 4612,
+      "sha256": "05d7689a34369dc6180500bdbb947ad9df9da7c6ca4e375612e3700b0a282842"
+    },
+    "PROOF.md": {
+      "bytes": 14818,
+      "sha256": "ff73ccc18bef3ba13c26d054017c9d586dcaf6e2ab403c43c1803d394efd4428"
+    },
+    "README.md": {
+      "bytes": 3871,
+      "sha256": "1034b6e2a2da39b7a1ce6f541d2dd931cf1a1fd0a77aceacb3ea14534849bcbd"
+    },
+    "SHA256SUMS": {
+      "bytes": 788,
+      "sha256": "c4504af1d5fb3777544ecd1fd232b54da8cbd8c9f2291b42b1541fbde77ff315"
+    },
+    "VALIDATION.json": {
+      "bytes": 933,
+      "sha256": "88c6abef6b09bf36f35b47d6be92f5232a148cc5be35b717cffd60ca3dc2826b"
+    },
+    "checks.py": {
+      "bytes": 15513,
+      "sha256": "e567e0a9eb839b45fb09dc5e16d4d79c001c803114c5e27f1e0b90fe9cc5b986"
+    },
+    "dependencies.json": {
+      "bytes": 5297,
+      "sha256": "0b7b7de0749c30f263a9dda3c20a1d2f4adad047760c42e1d42c8e57ff9c7793"
+    },
+    "expected.json": {
+      "bytes": 15658,
+      "sha256": "3470973f23134eca17f7d5f13affb3e10b3467f5d5307ae19cd756c44a348007"
+    },
+    "provenance.json": {
+      "bytes": 2429,
+      "sha256": "f615b76e7674bab7d1e8ca395eb2bae1aa63dd46bcd1f06b7335d21e80692a14"
+    },
+    "verify.py": {
+      "bytes": 1802,
+      "sha256": "54c6d6b9af29096d287d840143cd6ae9bb0b1c4b692740a17b3264d93e187017"
+    }
+  },
+  "child_guard_seconds": 45,
+  "child_peak_rss_KiB": 20436,
+  "first_author_source_materialization_utc": "2026-10-02T16:15:45.639956+00:00",
+  "independent_seal_utc": "2026-10-02T16:15:15.676069+00:00",
+  "independent_whole_record_agreements": [
+    "complete256-coefficient generic derivative map, every coefficient, exact explicit9-to12-coordinate alignment",
+    "all eight complete cube-phase/real-projection rows",
+    "all seven exact optional covered-branch coefficient majorants"
+  ],
+  "no_resource_escalation": true,
+  "optional_written_dependencies_byte_pinned": [
+    {
+      "bytes": 18541,
+      "executable_imported": false,
+      "height": 9113,
+      "path": "round-two/six-sendov-3/validated-boundary-branch/PROOF.md",
+      "scope": "optional branch coverage premise only",
+      "sha256": "0033305ea05105a655eef44a4b9a5493de1c45a538609bf5be6961eecb4583a8",
+      "source_commit": "7bb2d1b6cf6cb3b370ad10023bee018128a1b81f"
+    },
+    {
+      "bytes": 26100,
+      "executable_imported": false,
+      "height": 9174,
+      "path": "round-two/six-reviewer-3/certified-branch-audit/REVIEW.md",
+      "scope": "optional covered branch review only",
+      "sha256": "c8f9290b11dd47e13ab8926e1dad78a8bbdc24cb5510392ae6b2ceaea9df5209",
+      "source_commit": "737a94a084ef91129443179fdc892fbb12d65b0f"
+    }
+  ],
+  "post_independent_seal_utc": "2026-10-02T16:18:18.780493+00:00",
+  "role": "independent mathematical reviewer",
+  "serial_native_threads_one": true,
+  "signed_defining_proof_matches_complete_pinned_source_after_reader_expansions": true
+}
