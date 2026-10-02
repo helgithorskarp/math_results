@@ -1,0 +1,103 @@
+{
+  "agent": "six-covering-1",
+  "role": "researcher",
+  "utc": "2026-10-02T01:17:57.413933+00:00",
+  "theorem": "If the29 ORIGINAL7d classes (d|720,d>=2) cover all seven copies of K subset{0mod4,not6mod9}, then|K|<=115.",
+  "application": "The owned period720 18:3/four:0 stage must have74..115 actual tail holes; g(K)=4. Both stage and tail remain open.",
+  "proof_status": "Written, unformalized, author-checked; no independent reviewer verdict or priority claim.",
+  "external_numerical_premises_for_upper115": [],
+  "application_dependency": {
+    "graph_reference": "bafkreif53p4y5yi7j3k2p5jstum22fxvcinfndsfo6x5vlz4ipixzdzwcq",
+    "height": 9158,
+    "source_commit": "1aeab40e1251ee6a6be4f839149743d849f70b38"
+  },
+  "expected_sha256": "2dd67805ccb5144c921461fde395f2491181708631c1ecad8696f63d73ff4fa4",
+  "expected_frozen_before_independent_audit": true,
+  "expected_file_mtime_utc": "2026-10-02T01:09:16.285275+00:00",
+  "complete_phase_partition_cases": 598500,
+  "complete_histograms": 1616,
+  "independent_original7d_phase_controls": 16877,
+  "independent_effective_phase_controls": 699,
+  "certificate_damages_per_engine_per_mode": 7,
+  "normal_optimized_outputs_agree": true,
+  "checks": [
+    {
+      "utc": "2026-10-02T01:09:19.897043+00:00",
+      "status": "RETURNED",
+      "exit_code": 0,
+      "seconds": 3.3759677239577286,
+      "deadline_seconds": 45,
+      "max_rss_kib": 16132,
+      "script_sha256": "5cb939c5bb89cb7d6e0f422f61c4096435f9fac801ac0988b0393a7a3cb3bee7"
+    },
+    {
+      "utc": "2026-10-02T01:14:29.824887+00:00",
+      "status": "RETURNED",
+      "exit_code": 0,
+      "seconds": 3.4929279829957522,
+      "deadline_seconds": 45,
+      "max_rss_kib": 16936,
+      "script_sha256": "5cb939c5bb89cb7d6e0f422f61c4096435f9fac801ac0988b0393a7a3cb3bee7"
+    },
+    {
+      "utc": "2026-10-02T01:15:50.878969+00:00",
+      "status": "RETURNED",
+      "exit_code": 0,
+      "seconds": 0.12847390800016,
+      "deadline_seconds": 45,
+      "max_rss_kib": 16132,
+      "script_sha256": "23d6e27e3e91ebc0a95757dde992011eb343d8b01771782d3a277c0a83bb4034"
+    },
+    {
+      "utc": "2026-10-02T01:16:21.398072+00:00",
+      "status": "RETURNED",
+      "exit_code": 0,
+      "seconds": 0.2645635299850255,
+      "deadline_seconds": 45,
+      "max_rss_kib": 16128,
+      "script_sha256": "23d6e27e3e91ebc0a95757dde992011eb343d8b01771782d3a277c0a83bb4034"
+    },
+    {
+      "utc": "2026-10-02T01:16:25.052647+00:00",
+      "status": "RETURNED",
+      "exit_code": 0,
+      "seconds": 3.5040197129710577,
+      "deadline_seconds": 45,
+      "max_rss_kib": 16212,
+      "script_sha256": "f1d5fc46190821f8bd1308499b9b25ce2845b7354fe3e5577d26a1e8497ddf43"
+    },
+    {
+      "utc": "2026-10-02T01:16:28.748360+00:00",
+      "status": "RETURNED",
+      "exit_code": 0,
+      "seconds": 3.468385687971022,
+      "deadline_seconds": 45,
+      "max_rss_kib": 16860,
+      "script_sha256": "f1d5fc46190821f8bd1308499b9b25ce2845b7354fe3e5577d26a1e8497ddf43"
+    }
+  ],
+  "checked_source_sha256": {
+    "proof.md": "e4171b3c2f43a03fa73a72357f20587b639f7323d54249a781ac8e9a61af6be5",
+    "certificate.json": "29303fb95d112cb8a7e1e5817e1d2f52fd0dda56a9e66f4f5d8a655dbddb4903",
+    "controls.py": "f1d5fc46190821f8bd1308499b9b25ce2845b7354fe3e5577d26a1e8497ddf43",
+    ".gitignore": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b",
+    "expected.json": "2dd67805ccb5144c921461fde395f2491181708631c1ecad8696f63d73ff4fa4",
+    "README.md": "5e5acf70626bc4bd4b002cdbba61335c5f08272452ee9cfa1b18c17bd67eba6a",
+    "audit.py": "23d6e27e3e91ebc0a95757dde992011eb343d8b01771782d3a277c0a83bb4034",
+    "check.py": "5cb939c5bb89cb7d6e0f422f61c4096435f9fac801ac0988b0393a7a3cb3bee7"
+  },
+  "reproduction": {
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "libraries": "standard library only",
+    "threads": 1,
+    "processes": 1,
+    "per_job_deadline_seconds": 45
+  },
+  "primary_literature": [
+    "https://arxiv.org/html/2607.19029",
+    "https://arxiv.org/html/2605.18644"
+  ],
+  "literature_rechecked_live_date": "2026-10-02",
+  "global_L_min_8_bound_changed": false,
+  "whole_tail_completion_or_stage_witness_asserted": false
+}
