@@ -1,0 +1,92 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "first_seal": {
+    "agent": "six-reviewer-2",
+    "role": "independent mathematical reviewer",
+    "sealed_utc": "2026-10-02T12:59:16.908131+00:00",
+    "statement_proof_visible": "Full9361 and7578 bodies; earlier reviewer-owned linear algebra and credited baseline formulas. Target executables/EXPECTED not inspected.",
+    "files": {
+      "EXPECTED.json": "10c9b48cec5399b205303a0051a86784eea6096c81c5f7a300362fd4abfe05d8",
+      "PROOF.md": "402b4db1d8336bb819f6037f4a57f3120b0c30f72fe107c8c693d42173145d26",
+      "audit.py": "f394cc322f7a7b35fe1561bc1e40ae6686ad8093f760003868512ae2bdb813f1",
+      "linear.py": "94872f866836b3c2b5971aa96e5e7814eeaf81270b127c0e1fb491b3dfc5224c"
+    },
+    "record_stdout_sha256": "10c9b48cec5399b205303a0051a86784eea6096c81c5f7a300362fd4abfe05d8",
+    "normal_optimized_stdout_equal": true,
+    "metrics": [
+      {
+        "seconds": 1.7301949060056359,
+        "peak_kib": 19892,
+        "exit_code": 0,
+        "guard_seconds": 90
+      },
+      {
+        "seconds": 1.8140498889843002,
+        "peak_kib": 23036,
+        "exit_code": 0,
+        "guard_seconds": 90
+      }
+    ],
+    "proof_status": "Uniform closure/rank verified by ordinary independent reasoning; proved explicit weak-bound full kernel and maximum-family classification. Boundary greatest rank remains outside claim."
+  },
+  "sealed_math_and_proof_unchanged_after_target_program_inspection": true,
+  "independent": [
+    {
+      "phase": "independent",
+      "full_stdout_equal": true,
+      "whole_record_sha256": "10c9b48cec5399b205303a0051a86784eea6096c81c5f7a300362fd4abfe05d8",
+      "normal": {
+        "seconds": 1.7301949060056359,
+        "peak_kib": 19892,
+        "exit_code": 0,
+        "guard_seconds": 90
+      },
+      "optimized": {
+        "seconds": 1.8140498889843002,
+        "peak_kib": 23036,
+        "exit_code": 0,
+        "guard_seconds": 90
+      }
+    },
+    {
+      "phase": "late_adapter",
+      "full_stdout_equal": true,
+      "whole_record_sha256": "7d6e0123f02a3dfc3350eeeb2598eeaabfd2abc6d45ee41da4104c03618a893c",
+      "normal": {
+        "seconds": 2.1973341300617903,
+        "peak_kib": 21056,
+        "exit_code": 0,
+        "guard_seconds": 90
+      },
+      "optimized": {
+        "seconds": 2.1678602260071784,
+        "peak_kib": 22204,
+        "exit_code": 0,
+        "guard_seconds": 90
+      }
+    }
+  ],
+  "late_original": {
+    "normal_optimized_original_complete_stable_records_equal": true,
+    "whole_record_sha256": "c66f73d869f5b960276b4c28db1c744ec8a40795502df0a0aa809d503789d8f9",
+    "original_fixtures": 15,
+    "original_censuses": 6,
+    "original_rejections": 11,
+    "metrics": [
+      {
+        "seconds": 2.275401318911463,
+        "peak_kib": 19640,
+        "exit_code": 0,
+        "guard_seconds": 90
+      },
+      {
+        "seconds": 2.321484883897938,
+        "peak_kib": 22236,
+        "exit_code": 0,
+        "guard_seconds": 90
+      }
+    ]
+  },
+  "trust_boundary": "No target Python import in independent engine or late adapter. Native target execution after first seal is later corroboration. Adapter compares full physical core/whole encoded SHA256 inventories and all mathematical fields, not supplied private input trust. Infinite bridges ordinary and unformalized."
+}
