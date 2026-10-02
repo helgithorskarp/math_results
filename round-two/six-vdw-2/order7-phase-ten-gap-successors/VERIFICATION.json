@@ -1,0 +1,125 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "date": "2026-10-02",
+  "status": "EXACT_H7_PHASE10_GAP_SUCCESSOR_LEMMA",
+  "field_scope": "H7-invariant F617 punctured-field two-color/seven-AP templates",
+  "selected_phase_count": 10,
+  "assumed_no_selected_adjacency": true,
+  "allowed_gap_two_successors": [
+    2,
+    3
+  ],
+  "proof_cases": 10,
+  "per_mode_checked_additions": 174147,
+  "per_mode_hints": 2968781,
+  "fixture_sha256": "35b955e440a209c1f6337e702f489ff31ea8e5f368f2c415969d70a9c5406867",
+  "all_CNF_and_LRAT_bytes_reproduced": true,
+  "source_check_mode": "fresh canonical generation and whole-clause normal/-O audits; untrusted cached proof candidates independently replayed normal/-O",
+  "compact_source_check_seconds": 47.03979257598985,
+  "compact_source_check_child_maxrss_kib": 71756,
+  "damage_controls_rejected": 16,
+  "damage_positive_controls": [
+    "normal-toy-positive-RUP",
+    "optimized-toy-positive-RUP"
+  ],
+  "damage_seconds": 13.521960462036077,
+  "damage_child_maxrss_kib": 58616,
+  "damage_tests": [
+    "normal-missing-next-2-10-b-1",
+    "normal-missing-next-2-6-b-1",
+    "normal-wrong-unit-next-2-10-b-0",
+    "normal-removed-semantic-input",
+    "normal-wrong-selected-count",
+    "normal-changed-helper-before-import",
+    "normal-empty-without-hints",
+    "normal-missing-live-hint",
+    "optimized-missing-next-2-10-b-1",
+    "optimized-missing-next-2-6-b-1",
+    "optimized-wrong-unit-next-2-10-b-0",
+    "optimized-removed-semantic-input",
+    "optimized-wrong-selected-count",
+    "optimized-changed-helper-before-import",
+    "optimized-empty-without-hints",
+    "optimized-missing-live-hint"
+  ],
+  "initial_fourteen_model_definition_audit_seconds": 31.26675394299673,
+  "initial_fourteen_model_definition_audit_child_maxrss_kib": 72032,
+  "initial_native_sequence_seconds": 76.10125099599827,
+  "initial_native_sequence_child_maxrss_kib": 69596,
+  "maximum_completed_native_conflicts": 34263,
+  "unresolved_case": {
+    "stem": "next-2-5-b-0",
+    "status": "UNKNOWN",
+    "conflicts": 50000,
+    "variables": 376,
+    "clauses": 53674,
+    "cnf_sha256": "3cca014c2195a140ce8d8f92f48c9bdd565180a471ebd77064bc32ee3e74bf84",
+    "identical_retry_attempted": false,
+    "resource_caps_increased": false
+  },
+  "remaining_unproposed_cases": 3,
+  "phase_input_counts": {
+    "status": "EXACT_PHASE10_GAP_SUCCESSOR_COVER",
+    "forbidden_case_count": 10,
+    "forbidden_next_indices": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "allowed_next_indices": [
+      4,
+      5
+    ],
+    "all_gap_two_successors": [
+      2,
+      3
+    ],
+    "rooted_phase_profiles_before_per_background": 2345553,
+    "rooted_phase_profiles_after_per_background": 178983,
+    "eliminated_rooted_phase_profiles_per_background": 2166570,
+    "count_controls": 60,
+    "literal_tiny_words": 984,
+    "first_next_binary_controls": 152,
+    "counts_are_field_colorings": false,
+    "counts_are_rotation_orbits": false,
+    "global_W_bound": false
+  },
+  "definition_audit_modes": [
+    "normal",
+    "optimized"
+  ],
+  "strict_replay_modes": [
+    "normal",
+    "optimized"
+  ],
+  "solver_environment": {
+    "Python": "3.11.2",
+    "python-sat": "1.8.dev24",
+    "six": "1.17.0",
+    "threads": 1
+  },
+  "tested_source_manifest_sha256": "322b58c4a1fe363568400b0a5ed409a85dc48d8535b959099322aeaef93de692",
+  "tested_source_files": {
+    ".gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+    "EXPECTED.csv": "35b955e440a209c1f6337e702f489ff31ea8e5f368f2c415969d70a9c5406867",
+    "PROOF.md": "00bc456a0e11aa5f9a7f058e878c4b2db2ae8e53745adb375b20754f296c45d9",
+    "README.md": "1de4238cdc86bb06389fa385e598f3f411d6522eabc7df8a56a85514dac14bfb",
+    "SOURCE_PINS.json": "374ece06fea67c113d9f977a2c8f7f3553eaeedb9405e43c461a34494b1a094e",
+    "common.py": "49894fdfd786a336417879cbf4bae70964eec23965b1aeae6cf8a4da02d02085",
+    "coverage.py": "8aed7d9e2a70e087196cc90976d811dfaf575245429a6069074b66d536998809",
+    "guards.py": "24052f85fc77a1dcb7cc7aeedb041416dc679d416e46ca467a73a86cea06c7c9",
+    "head_audit.py": "74243bf52be0e377efd9d570e492e03c902ebc76f7dc1793f6b8828cb691436a",
+    "head_generate.py": "7d9de6b247ae8fb729739375c977e22509dd639e3e74c2b18d21ef7b9ea3bd90",
+    "reproduce.py": "072d079259dc1c4fbd77effc55b958ccd51410c39d210264313ca43ea8a656a3"
+  },
+  "mathematical_source_changed_after_source_check": false,
+  "new_global_W_bound": false,
+  "interval3704_witness": false,
+  "whole_H7_exclusion": false,
+  "phase_endpoint_exclusion": false,
+  "external_review_claimed": false,
+  "formalization_claimed": false
+}
