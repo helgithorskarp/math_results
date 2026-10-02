@@ -1,0 +1,310 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "utc": "2026-10-02T13:49:16.718179+00:00",
+  "interpreter": "Python 3.12.14",
+  "resource_scope": "1CPU2GiB; one serial mathematical process; six native thread vars1;45s child/50s outer guards; no limit hit",
+  "first_independent_freeze": {
+    "utc": "2026-10-02T13:38:46.335270+00:00",
+    "agent": "six-reviewer-1",
+    "role": "independent mathematical reviewer",
+    "author_executable_read": false,
+    "author_fixture_read": false,
+    "defining_ordinary_proof_read": true,
+    "runs": [
+      {
+        "optimized": false,
+        "exit_code": 0,
+        "seconds": 2.4932027189061046,
+        "bytes": 7154,
+        "sha256": "12f68012099b4dc2d22e5fc139fdde71afcadcb3ae939dd04d685c40f88b9f20",
+        "stderr": "",
+        "maxrss_kib": 30388
+      },
+      {
+        "optimized": true,
+        "exit_code": 0,
+        "seconds": 2.753585166996345,
+        "bytes": 7154,
+        "sha256": "12f68012099b4dc2d22e5fc139fdde71afcadcb3ae939dd04d685c40f88b9f20",
+        "stderr": "",
+        "maxrss_kib": 31408
+      }
+    ],
+    "source_hashes": {
+      "algebra.py": "033f6a43eac8a109fb2542f94123564d4bafaf0742dc8e12124004a684e09d92",
+      "check.py": "02f2d9aa4c1b39c00624ae7675efb2ecd586ace4ae474b340316359138ea78e9"
+    }
+  },
+  "positive_whole_fixture_replays": [
+    {
+      "program": "check.py",
+      "optimized": false,
+      "exit_code": 0,
+      "seconds": 3.521022340049967,
+      "bytes": 7154,
+      "sha256": "12f68012099b4dc2d22e5fc139fdde71afcadcb3ae939dd04d685c40f88b9f20",
+      "maxrss_child_kib": 30432,
+      "stderr": ""
+    },
+    {
+      "program": "check.py",
+      "optimized": true,
+      "exit_code": 0,
+      "seconds": 2.6457357730250806,
+      "bytes": 7154,
+      "sha256": "12f68012099b4dc2d22e5fc139fdde71afcadcb3ae939dd04d685c40f88b9f20",
+      "maxrss_child_kib": 31492,
+      "stderr": ""
+    },
+    {
+      "program": "controls.py",
+      "optimized": false,
+      "exit_code": 0,
+      "seconds": 0.16944560501724482,
+      "bytes": 834,
+      "sha256": "71e73ef8c98c6406525ec1966b2d0c4b88a50f712d66cfc770b6296f18114b3f",
+      "maxrss_child_kib": 31492,
+      "stderr": ""
+    },
+    {
+      "program": "controls.py",
+      "optimized": true,
+      "exit_code": 0,
+      "seconds": 0.34850818605627865,
+      "bytes": 834,
+      "sha256": "71e73ef8c98c6406525ec1966b2d0c4b88a50f712d66cfc770b6296f18114b3f",
+      "maxrss_child_kib": 31492,
+      "stderr": ""
+    }
+  ],
+  "external_typed_fixture_controls": [
+    {
+      "label": "extra-field",
+      "optimized": false,
+      "exit_code": 1,
+      "rejected": true,
+      "seconds": 2.6689128540456295
+    },
+    {
+      "label": "extra-field",
+      "optimized": true,
+      "exit_code": 1,
+      "rejected": true,
+      "seconds": 2.5969888030085713
+    },
+    {
+      "label": "missing-symbolic-record",
+      "optimized": false,
+      "exit_code": 1,
+      "rejected": true,
+      "seconds": 2.4769630099181086
+    },
+    {
+      "label": "missing-symbolic-record",
+      "optimized": true,
+      "exit_code": 1,
+      "rejected": true,
+      "seconds": 2.6178914689226076
+    },
+    {
+      "label": "bool-for-integer",
+      "optimized": false,
+      "exit_code": 1,
+      "rejected": true,
+      "seconds": 2.5617293789982796
+    },
+    {
+      "label": "bool-for-integer",
+      "optimized": true,
+      "exit_code": 1,
+      "rejected": true,
+      "seconds": 2.624784113955684
+    },
+    {
+      "label": "damaged-exact-mass",
+      "optimized": false,
+      "exit_code": 1,
+      "rejected": true,
+      "seconds": 2.402813015971333
+    },
+    {
+      "label": "damaged-exact-mass",
+      "optimized": true,
+      "exit_code": 1,
+      "rejected": true,
+      "seconds": 2.5961841760436073
+    },
+    {
+      "label": "wrong-original-multiplicity",
+      "optimized": false,
+      "exit_code": 1,
+      "rejected": true,
+      "seconds": 2.4057059369515628
+    },
+    {
+      "label": "wrong-original-multiplicity",
+      "optimized": true,
+      "exit_code": 1,
+      "rejected": true,
+      "seconds": 2.605399998021312
+    }
+  ],
+  "later_author_whole_replays": [
+    {
+      "optimized": false,
+      "exit_code": 0,
+      "seconds": 4.219064172008075,
+      "bytes": 6237,
+      "sha256": "6e721df2e0392055840435402e470d5550dc3085c30a252db0c45d52a93f62c9",
+      "entire_fixture_match": true,
+      "stderr": "",
+      "maxrss_child_kib": 27112
+    },
+    {
+      "optimized": true,
+      "exit_code": 0,
+      "seconds": 4.162751117954031,
+      "bytes": 6237,
+      "sha256": "6e721df2e0392055840435402e470d5550dc3085c30a252db0c45d52a93f62c9",
+      "entire_fixture_match": true,
+      "stderr": "",
+      "maxrss_child_kib": 29104
+    }
+  ],
+  "later_shared_scalar_comparison": {
+    "author_source": "b3cbb040e74838da69bc52f0b989895d9fe9b18d",
+    "first_seal": "scratch/pass26-independent-freeze.json",
+    "all_shared_fields": [
+      {
+        "n": 6,
+        "field": "S",
+        "equal": true
+      },
+      {
+        "n": 6,
+        "field": "eta",
+        "equal": true
+      },
+      {
+        "n": 6,
+        "field": "weighted_floor",
+        "equal": true
+      },
+      {
+        "n": 8,
+        "field": "S",
+        "equal": true
+      },
+      {
+        "n": 8,
+        "field": "eta",
+        "equal": true
+      },
+      {
+        "n": 8,
+        "field": "weighted_floor",
+        "equal": true
+      },
+      {
+        "n": 10,
+        "field": "S",
+        "equal": true
+      },
+      {
+        "n": 10,
+        "field": "eta",
+        "equal": true
+      },
+      {
+        "n": 10,
+        "field": "weighted_floor",
+        "equal": true
+      },
+      {
+        "n": 11,
+        "field": "S",
+        "equal": true
+      },
+      {
+        "n": 11,
+        "field": "eta",
+        "equal": true
+      },
+      {
+        "n": 11,
+        "field": "weighted_floor",
+        "equal": true
+      },
+      {
+        "n": 11,
+        "field": "largest_original_weight",
+        "equal": true
+      },
+      {
+        "n": 12,
+        "field": "S",
+        "equal": true
+      },
+      {
+        "n": 12,
+        "field": "eta",
+        "equal": true
+      },
+      {
+        "n": 12,
+        "field": "weighted_floor",
+        "equal": true
+      },
+      {
+        "n": 12,
+        "field": "largest_original_weight",
+        "equal": true
+      },
+      {
+        "n": 16,
+        "field": "S",
+        "equal": true
+      },
+      {
+        "n": 16,
+        "field": "eta",
+        "equal": true
+      },
+      {
+        "n": 16,
+        "field": "weighted_floor",
+        "equal": true
+      },
+      {
+        "n": 16,
+        "field": "largest_original_weight",
+        "equal": true
+      },
+      {
+        "n": 20,
+        "field": "S",
+        "equal": true
+      },
+      {
+        "n": 20,
+        "field": "eta",
+        "equal": true
+      },
+      {
+        "n": 20,
+        "field": "weighted_floor",
+        "equal": true
+      },
+      {
+        "n": 20,
+        "field": "largest_original_weight",
+        "equal": true
+      }
+    ],
+    "all_match": true
+  },
+  "original_graph_source_proof_agreement": "Whole proof exact after expanding five relative file readers; no mathematical difference",
+  "peer_overlap": "Reviewer5 independently selected9424. First source/record sealed before fetching1846. c9/8 new endpoint included in first record. No peer spectral-gap proof imported.",
+  "trust_boundary": "Ordinary real PSD/kernel/entry coverage/binomial moments/induction unformalized; exact stdlib rational arithmetic.8499 n10 existence is only an external premise of the maximum-order corollary."
+}
