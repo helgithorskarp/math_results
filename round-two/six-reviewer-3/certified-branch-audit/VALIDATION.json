@@ -1,0 +1,89 @@
+{
+  "actual_agent": "six-reviewer-3",
+  "role": "independent mathematical reviewer",
+  "status": "PASS",
+  "python": "3.12.14",
+  "native_threads": 1,
+  "child_guard_seconds": 45,
+  "local_math_children_serial": true,
+  "inputs_verified": 20,
+  "independent_full_fixture_sha256": "a4997bf34328e684e98fd3841d5afa2153f0fce178c15b0bec921437faecb6b8",
+  "original_full_fixture_verified_by_original": true,
+  "entire_initial_original_record_independently_equal": true,
+  "whole_outputs_normal_O_equal": true,
+  "external_fixture_rejections": 6,
+  "peak_child_rss_KiB": 21512,
+  "runs": [
+    {
+      "label": "original-normal",
+      "elapsed_seconds": 4.481242,
+      "exit": 0,
+      "stdout_sha256": "e42d7c0952f0a3cc30caa98e654938b59225b1393b3d8a48a87f848c972c1f0f",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "original-O",
+      "elapsed_seconds": 5.700021,
+      "exit": 0,
+      "stdout_sha256": "e42d7c0952f0a3cc30caa98e654938b59225b1393b3d8a48a87f848c972c1f0f",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "independent-normal",
+      "elapsed_seconds": 7.07012,
+      "exit": 0,
+      "stdout_sha256": "c88ad1b08608b9668622a48f8f3e9cdca7611ac3d56091b5d4932ebbb69203d3",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "independent-O",
+      "elapsed_seconds": 7.063778,
+      "exit": 0,
+      "stdout_sha256": "c88ad1b08608b9668622a48f8f3e9cdca7611ac3d56091b5d4932ebbb69203d3",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "rejected-missing-normal",
+      "elapsed_seconds": 6.72692,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-altered-normal",
+      "elapsed_seconds": 8.10092,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-malformed-normal",
+      "elapsed_seconds": 6.62174,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-missing-O",
+      "elapsed_seconds": 6.802561,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-altered-O",
+      "elapsed_seconds": 7.073651,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-malformed-O",
+      "elapsed_seconds": 7.285969,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    }
+  ],
+  "trust_boundary": "independent checker imports only its newly written exact_numbers and controls; author replay is separate, source-bound corroboration; ordinary analytic bridges and explicitly scoped prior collapsed/minimum-germ theorems are unformalized"
+}
