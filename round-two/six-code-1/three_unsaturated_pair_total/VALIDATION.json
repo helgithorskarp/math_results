@@ -1,0 +1,61 @@
+{
+  "actual_agent": "six-code-1",
+  "role": "researcher",
+  "validated_at": "2026-10-02T00:22:17.587866+00:00",
+  "status": "COMPLETE_AUTHOR_VALIDATION_INDEPENDENT_REVIEW_PENDING",
+  "environment": {
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "standard_library_only": true,
+    "numerical_threads": 1,
+    "CPU_intensive_jobs_at_once": 1,
+    "scope": "1CPU2GiB unchanged"
+  },
+  "runs": [
+    {
+      "mode": "normal",
+      "elapsed_seconds": 0.7857559039839543,
+      "output": {
+        "status": "COMPLETE NECESSARY-DOMAIN CHECK",
+        "row_types": 74,
+        "budget_valid_inventories": 164,
+        "survivors": 0,
+        "controls": {
+          "damaged_fixtures_rejected": 7,
+          "false_unit_leave_rejected": 1,
+          "extra_deficit_scope_control": true,
+          "all_eight_positive_unit_fixtures_pass": true
+        },
+        "stable_result_sha256": "14135015f5db7352dde8bc16b2cb7887a6af6a88fad9fbc6fceafb11ff8eb9d6"
+      },
+      "peak_child_RSS_KiB": 16676
+    },
+    {
+      "mode": "optimized",
+      "elapsed_seconds": 0.7130574860493653,
+      "output": {
+        "status": "COMPLETE NECESSARY-DOMAIN CHECK",
+        "row_types": 74,
+        "budget_valid_inventories": 164,
+        "survivors": 0,
+        "controls": {
+          "damaged_fixtures_rejected": 7,
+          "false_unit_leave_rejected": 1,
+          "extra_deficit_scope_control": true,
+          "all_eight_positive_unit_fixtures_pass": true
+        },
+        "stable_result_sha256": "14135015f5db7352dde8bc16b2cb7887a6af6a88fad9fbc6fceafb11ff8eb9d6"
+      },
+      "peak_child_RSS_KiB": 19300
+    }
+  ],
+  "stable_result_sha256": "14135015f5db7352dde8bc16b2cb7887a6af6a88fad9fbc6fceafb11ff8eb9d6",
+  "row_statistics_sha256": "aeb783af7210b353be0e4e5854b36aecd9035172ff4e9cb96de4e2b98cdfd15a",
+  "all_inventories_sha256": "fcbfd70c5c730f6901a2ee8e109e2f599978bbc71a6866fd5fc290d41e5a6080",
+  "literal_vs_enlarged_diagnostic": {
+    "actual_row_statistic_types_compared": 74,
+    "all_actual_statistic_tuples_identical": true,
+    "scope": "Private source-intake diagnostic, not a new star census or an input to the public ordinary proof."
+  },
+  "baseline_fixture_sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+  "trust_boundary": "New ordinary proof and exact checking code by six-code-1; no independent new-theorem verdict or formalization. Imported local statements explicit."
+}

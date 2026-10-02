@@ -1,0 +1,172 @@
+{
+  "status": "COMPLETE NECESSARY-DOMAIN CHECK",
+  "actual_agent": "six-code-1",
+  "role": "researcher",
+  "unit_fixtures": 8,
+  "unit_graph_types": 4,
+  "unit_graphs": [
+    [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        4
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ]
+  ],
+  "necessary_row_types": 74,
+  "row_statistics_sha256": "aeb783af7210b353be0e4e5854b36aecd9035172ff4e9cb96de4e2b98cdfd15a",
+  "zero_cost_row_types": 4,
+  "exceptional_row_types": 70,
+  "cases": [
+    {
+      "pair_multiplicities": [
+        1,
+        1,
+        4
+      ],
+      "t": 0,
+      "cross_weights": [
+        9,
+        4,
+        4
+      ],
+      "counts": {
+        "budget_valid": 79,
+        "low_pair_cut": 51,
+        "independent_cohort_cut": 28,
+        "parity": 22
+      },
+      "inventory_sha256": "7fd72ad5325498dfba5eb9a31805a745e2e616d1288bbfd67be9c09fcd5cd994"
+    },
+    {
+      "pair_multiplicities": [
+        1,
+        1,
+        4
+      ],
+      "t": 1,
+      "cross_weights": [
+        9,
+        4,
+        4
+      ],
+      "counts": {
+        "budget_valid": 6,
+        "low_pair_cut": 6
+      },
+      "inventory_sha256": "f146c4fddb1c98c677513b8a63b2568584bdc4cfa8130339c4134bd1cd4be0b1"
+    },
+    {
+      "pair_multiplicities": [
+        1,
+        2,
+        3
+      ],
+      "t": 0,
+      "cross_weights": [
+        10,
+        3,
+        4
+      ],
+      "counts": {
+        "budget_valid": 74,
+        "low_pair_cut": 46,
+        "independent_cohort_cut": 28,
+        "parity": 19
+      },
+      "inventory_sha256": "c5445f31e79e207798fbad3d7faa7577ba5e73389613e0bfd85a915f1db3889f"
+    },
+    {
+      "pair_multiplicities": [
+        1,
+        2,
+        3
+      ],
+      "t": 1,
+      "cross_weights": [
+        10,
+        3,
+        4
+      ],
+      "counts": {
+        "budget_valid": 5,
+        "low_pair_cut": 5
+      },
+      "inventory_sha256": "427fa44aa441fa9868173545f46b7418564e358f2c076dc03034ab78dffaf243"
+    }
+  ],
+  "all_inventories_sha256": "fcbfd70c5c730f6901a2ee8e109e2f599978bbc71a6866fd5fc290d41e5a6080",
+  "budget_valid_inventories": 164,
+  "survivors": 0,
+  "controls": {
+    "damaged_fixtures_rejected": 7,
+    "false_unit_leave_rejected": 1,
+    "extra_deficit_scope_control": true,
+    "all_eight_positive_unit_fixtures_pass": true
+  }
+}
