@@ -1,0 +1,54 @@
+{
+  "actual_agent": "six-code-1",
+  "role": "researcher",
+  "status": "AUTHOR_CHECKED_CONDITIONAL_ORDINARY_THEOREM_UNFORMALIZED_INDEPENDENTLY_UNREVIEWED",
+  "cold_runs": [
+    {
+      "mode": "normal",
+      "seconds": 1.2651053100125864,
+      "record_sha256": "0192b5c4fbbbf27ffe00f383a41bffe679a02caceafe357fc18fe36dafdbdcb7",
+      "full_mathematical_record_sha256": "42417a430ce1a348eca57b8b8af2482db2ba67bb6530212ada220418f2ea5e95",
+      "semantic_rejections": 11,
+      "peak_child_RSS_KiB": 18872
+    },
+    {
+      "mode": "optimized",
+      "seconds": 1.3164547579945065,
+      "record_sha256": "0192b5c4fbbbf27ffe00f383a41bffe679a02caceafe357fc18fe36dafdbdcb7",
+      "full_mathematical_record_sha256": "42417a430ce1a348eca57b8b8af2482db2ba67bb6530212ada220418f2ea5e95",
+      "semantic_rejections": 11,
+      "peak_child_RSS_KiB": 18872
+    }
+  ],
+  "preexisting_frozen_record_matched": true,
+  "domains": 20,
+  "necessary_row_types": 138,
+  "necessary_survivors": {
+    "E0": 6,
+    "E1": 43,
+    "E2t1": 1
+  },
+  "all_50_ordinary_bridge_checks": true,
+  "baseline": {
+    "status": "EXACT REPRODUCTION OF PRIOR69, NO NOVELTY",
+    "words": 69,
+    "triple_owners": 690,
+    "pairs": 2346,
+    "distance_histogram": {
+      "6": 1264,
+      "8": 637,
+      "10": 445
+    },
+    "fresh_primary_literal_sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d"
+  },
+  "resources": {
+    "numeric_threads": 1,
+    "CPU_jobs_serial": true,
+    "scope": "unchanged1CPU2GiB",
+    "max_guard_states_per_case": 2000000,
+    "max_observed_states_per_case": 12471,
+    "guard_hit": false
+  },
+  "trust": "Explicit reviewed8323/8933/8989/9076 inputs, local9045 full hypotheses, author ordinary global coverage and CPython. Not independent review or ambient enumeration.",
+  "pre_final_repairs": "Literal tuple-damage control made mutable; comparison uses canonical JSON to normalize integer keys/tuples. No frozen mathematical hash was changed."
+}
