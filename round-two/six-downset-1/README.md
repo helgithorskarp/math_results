@@ -1,10 +1,12 @@
 # H certificates for structured Boolean facets and attachments
 
 Actual author: **six-downset-1**, role **researcher**, fresh round two,
-2026-10-02. The latest mixed-facet cap is an exact computer-assisted uniform theorem;
-its real PSD and full-space bridges are unformalized and independent
-review is pending. The preceding one-point closure remains author-checked
-and independently unreviewed.
+2026-10-02. The latest distinct-mark triangle profile is an exact
+computer-assisted uniform capped theorem; its real PSD and complete-space
+bridges are unformalized and independent review is pending.
+The preceding mixed-facet cap is independently confirmed in REVIEW9444,
+and the ordinary one-point attachment closure in REVIEW9412. Neither
+verdict transfers to the new triangle profile.
 REVIEW9349 independently confirms the preceding arbitrary-load analytic
 pendant branch, with its all-profile corollary conditional on the earlier
 special cases. Its stronger balanced mean estimate is not a whole spectral
@@ -16,6 +18,25 @@ does not cover the distinct-mark extension.
 The parent two-facet result8579 and three-petal result8642 have independent
 reviews8640 and8682, respectively. Those verdicts do not cover the extension.
 
+[triangle-profile-cap/PROOF.md](triangle-profile-cap/PROOF.md) covers every
+integer n>=3 and2<=k<=n: an old n-cube with k triangle facets at distinct
+old marks and pairwise disjoint private pairs. With q=2^(n-1),N=2q+6k,
+s=q+3, its rational H has universally greatest lower rank N-k among all
+real ordinary H competitors, upper rank N-1 and scaled cap gap>=3/4.
+Ordinary H/rank were already9361; the new result is the uniform cap with
+retained greatest rank across every attachment count. A complete6k+1
+changed space has k antisymmetric2 blocks, a fixed5 block and(k-1)
+standard4 blocks, besides every untouched old direction and actual empty.
+The standard rank-two update gives a smaller equivalent Schur test.
+Twelve exact bivariate leading minors,735 positive coefficients including
+66 residual coefficients, and947 degree-bounded independent determinant
+checks cover k>=2,q>=4k-4; induction and two complete small exceptions
+cover every actual n,k. Direct free-entry repair attains greatest rank.
+Six literal fixtures,13,452 actual positions per seed/repair and18 damages
+pass with the entire frozen record identical under normal and optimized
+Python. General H/I remain open; this new theorem is independently
+unreviewed and its ordinary bridges remain unformalized.
+
 [mixed-facet-cap/PROOF.md](mixed-facet-cap/PROOF.md) proves a uniform cap
 for every n>=3 cube with one triangle facet{x,u,v} and one pendant{z,b}
 at distinct old marks, all three new elements private. Its rational H has
@@ -26,7 +47,11 @@ checks independently verify the identities. Four full original matrices
 check the complete changed/untouched/empty bridge and explicit9361 raw
 rank repair. Normal/O records agree and12 damages reject. Ordinary H
 for this family is credited to the earlier attachment closure; the new
-coverage is its uniform cap with greatest rank. Independent review pending.
+coverage is its uniform cap with greatest rank.
+[REVIEW9444](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-2/mixed-cap-audit/REVIEW.md)
+independently confirms this family and gives a larger sufficient real
+mixture interval for the same seed/raw pair. This verdict does not cover
+the triangle profile above.
 
 [one-point-attachments/PROOF.md](one-point-attachments/PROOF.md) proves an
 ordinary H closure for arbitrary private H downsets attached at old cube
@@ -37,7 +62,11 @@ many Boolean facets at different marks; the weak boundary retains explicit
 private-core nullities. The output has no asserted upper cap. Fifteen
 literal fixtures,15,351 table/factor entries,six maximum-family censuses
 and11 damages reproduce with matching normal/O records. The ordinary
-proof is unformalized and independently unreviewed.
+proof is unformalized.
+[REVIEW9412](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-2/attachment-audit/REVIEW.md)
+independently confirms the ordinary closure and proves maximum-family
+classification also at its weak private-star boundary. It does not extend
+greatest rank at that boundary or assert capped-output closure.
 
 [arbitrary-pendant-loads/PROOF.md](arbitrary-pendant-loads/PROOF.md) gives a
 uniform analytic cap for every n>=R>=4 positive pendant profile with at
