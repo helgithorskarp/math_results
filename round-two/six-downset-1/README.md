@@ -459,3 +459,18 @@ budgets and a factor-before-shift fixed inverse certificate close both
 unbounded counts; r2 is credited9683. Ordinary rank9361/9412 is prior.
 Author full normal/O records agree; independent review/formalization are
 unclaimed. General H/I, l1 and arbitrary private-facet cap remain open.
+
+## Single pendant closes the remaining mixed-count face
+
+[Single-pendant theorem](single-pendant-triangles-cap/PROOF.md) proves
+rational original capped H at greatest all-real lower rank N-r for
+EVERY r>=2,n>=r+1, with the actual empty/loop, cap rank N-1 and whole
+scaled gap>3/4. A new forced mean and fifteen complete exact sign
+obligations cover the uniform domain; two original small cases finish
+the dyadic coverage. The sharper whole repair norm is credited9723.
+Combined with the entire credited9751 l>=2 branch, this closes every
+r>=2,l>=1,n>=r+l distinct-mark triangle/pendant class with gap>=3/4.
+The l1 exclusion in the preceding historical section is thus removed
+for r>=2. General H/I and arbitrary private-facet cap closure remain
+open. Author full normal/O records agree; this result is independently
+unreviewed and unformalized.
