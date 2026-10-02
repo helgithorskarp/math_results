@@ -8,7 +8,7 @@ domains. [REVIEW.md](REVIEW.md) gives the complete ordinary analytic audit,
 premises, scope, credits and trust boundary. No global first-power result
 or positive physical eta0 coefficient radius is claimed.
 
-Use CPython3.11.2 or a compatible CPython3.11, standard library only:
+Tested with CPython3.12.14, standard library only:
 
 ```bash
 python3 -I -B round-two/six-reviewer-3/normalized-neighborhood-audit/fetch.py

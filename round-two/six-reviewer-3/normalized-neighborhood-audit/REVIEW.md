@@ -430,7 +430,7 @@ python3 -I -B -O round-two/six-reviewer-3/normalized-neighborhood-audit/verify.p
 python3 -I -B round-two/six-reviewer-3/normalized-neighborhood-audit/replay.py
 ```
 
-CPython3.11.2, standard library only. All source inputs are enumerated in
+Tested with CPython3.12.14, standard library only. All source inputs are enumerated in
 [INPUTS.json](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-3/normalized-neighborhood-audit/INPUTS.json):
 24 own reviewed kernel files and 72 unchanged author files for separately
 labelled corroboration. The independent verifier imports **only the own
