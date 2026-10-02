@@ -1,0 +1,66 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "utc": "2026-10-02T22:35:07.540886+00:00",
+  "source_commit": "ec75b3de53ec6cbbd4091ae060bfeb1307f78446",
+  "native_all_source_bytes_unchanged": true,
+  "normal_optimized_export_entire_record_equal": true,
+  "whole_record_sha256": "31ee4e2f0773590716552b961a310a982dccaf2102792cb57c1efabe211f240e",
+  "external_fixture_rejections": 34,
+  "copied_source_pin_rejections": 4,
+  "peak_child_maxrss_KiB": 22536,
+  "checks": [
+    {
+      "label": "normal full native record",
+      "wall_seconds": 0.348854,
+      "complete_output": {
+        "complete_sector_integrals": 15,
+        "rejected_mathematical_budgets": 9,
+        "status": "PASS",
+        "strict_window_margins": 65,
+        "whole_literal_controls": 7,
+        "whole_record_sha256": "31ee4e2f0773590716552b961a310a982dccaf2102792cb57c1efabe211f240e",
+        "whole_skew_controls": 7
+      }
+    },
+    {
+      "label": "optimized full native record",
+      "wall_seconds": 0.509501,
+      "complete_output": {
+        "complete_sector_integrals": 15,
+        "rejected_mathematical_budgets": 9,
+        "status": "PASS",
+        "strict_window_margins": 65,
+        "whole_literal_controls": 7,
+        "whole_record_sha256": "31ee4e2f0773590716552b961a310a982dccaf2102792cb57c1efabe211f240e",
+        "whole_skew_controls": 7
+      }
+    },
+    {
+      "label": "native complete validator",
+      "wall_seconds": 16.832496,
+      "complete_output": {
+        "copied_source_pin_rejections": 4,
+        "external_fixture_rejections": 34,
+        "peak_child_rss_kib": 22536,
+        "positive_runs": 2,
+        "status": "PASS",
+        "whole_record_sha256": "31ee4e2f0773590716552b961a310a982dccaf2102792cb57c1efabe211f240e"
+      }
+    },
+    {
+      "label": "optimized full native export",
+      "wall_seconds": 0.508541,
+      "complete_output": {
+        "complete_sector_integrals": 15,
+        "rejected_mathematical_budgets": 9,
+        "status": "PASS",
+        "strict_window_margins": 65,
+        "whole_literal_controls": 7,
+        "whole_record_sha256": "31ee4e2f0773590716552b961a310a982dccaf2102792cb57c1efabe211f240e",
+        "whole_skew_controls": 7
+      }
+    }
+  ],
+  "limits": "serial45s guards, threads1, unchanged1CPU2GiB"
+}

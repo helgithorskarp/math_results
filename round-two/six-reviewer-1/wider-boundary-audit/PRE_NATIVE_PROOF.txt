@@ -1,0 +1,367 @@
+# Independent audit derivation and a retained-coefficient energy refinement
+
+Actual author **six-reviewer-1**, role **independent mathematical reviewer**.
+The target is committed LEMMA9776/0,
+`bafkreigazkbjnveidcfzmutq2b6i6tah5fdm6mymrjuwojnk4pn72w3xdy`,
+researcher six-sendov-1, source ec75b3de53ec6cbbd4091ae060bfeb1307f78446.
+This is an ordinary, unformalized analytic derivation with exact finite
+corroboration. It was written and sealed before first access to the target's
+executable or fixture. The written target body and proof were visible.
+My own prior9620/9669 and9756 mechanisms are disclosed inputs, not blind
+new findings. Shared signing identity does not establish independent authorship.
+
+Let (p) be any complex monic degree-nine polynomial with every original
+zero in the closed unit disk. Rotate the marked zero to (a=1-eta), with
+(0<etale e=1/25000). Count all eight critical points (zeta_j) with
+algebraic multiplicity and set
+[
+ F=sum_j|a-zeta_j|^{-1},qquad H=sum_j|zeta_j|^2.
+]
+A zero reciprocal denominator means infinity. The target conclusions are
+[
+ Fle8+3eta Longrightarrow H<42eta<1/512,qquad
+ F>8+rac83eta-rac43eta^2
+ ge8+rac{49999}{18750}eta>8+rac{13}{5}eta.
+]
+The independently proved refinement below is (H<41eta) under the same
+low-sublevel and parameter hypotheses. No energy, individual critical
+radius, coefficient, conjugation, separation, selected extremum or smooth
+family assumption is imposed initially. We make no larger-window claim
+for the sharp coefficient or quantitative stability.
+
+## Communication, full polar seeds and normalization
+
+On the finite low sublevel the marked root is simple. Other multiplicities
+are retained. Set (q_j=(a-zeta_j)^{-1}), (r_j=|q_j|),
+(mu=F/8), (V_r=sum(r_j-mu)^2), and
+(Delta=F-Resum q_j). Gauss--Lucas gives (r_jge(1+a)^{-1}>1/2).
+The classical communication identities, credited to Tao's Lemma6 and
+Zhang's Lemma3.1, give
+[
+ |O_a(q)|le P(r),quad |C_a(q)|ge1,quad
+ O_a(q)=9int_0^1prod_j(1-atq_j),dt,quad
+ C_a(q)=int_0^1prod_j(a+(1-a^2)tq_j),dt,quad P(r)=prod r_j.
+]
+The first inequality follows from the anchored derivative integral and
+product of the other originals. For the second, the exact polar expression
+is (prod_i(1-az_i)/(a-z_i)) over those originals, and
+(|1-az_i|^2-|a-z_i|^2=(1-a^2)(1-|z_i|^2)ge0).
+No assumed feasibility of an arbitrary reciprocal tuple enters these steps.
+
+Write (b=1-a^2), (L=8+3eta), (d=a^7b/2), and retain the entire tail
+[
+ T=sum_{k=2}^8rac{inom8k}{k+1}a^{8-k}b^k(L/8)^k,quad
+ B=a^8+dL+T.
+]
+The exact complex square has real linear term (a^{15}bResum q_j).
+Bounding its remaining terms only after taking that square gives
+[
+ 1le a^{16}+a^{15}bResum q_j+d^2L^2+2(a^8+dL)T+T^2.
+]
+The independent checker constructs all coefficients of the target's mean,
+balanced-product and variance polynomials, of degrees48,24,24. Their
+constant and linear terms vanish. Their respective quadratic coefficients
+are (4/3,2/3,2). The complete absolute-coefficient endpoint budgets exceed
+(1,1/2,1), respectively; no truncation or sample grid is used.
+Consequently
+[
+ Resum q_j>8-6eta,quad 0leDelta<9eta,quad
+ |mu-1|<3eta/4,quad V_r<13.
+]
+For the variance step keep (e_2(r)=7F^2/16-V_r/2) exactly, and apply
+Maclaurin only to degrees3 through8. This gives
+(1le |C_a(q)|le B-a^6b^2V_r/6).
+
+Preserve every phase while making (sum r'_j=8). If (Fle8), put
+(r'_j=r_j+1-mu). Otherwise put
+[
+ r'_j=ell+lambda(r_j-ell),quad ell=(1+a)^{-1},quad
+ lambda=8a/((1+a)F-8),quad q'_j=(r'_j/r_j)q_j.
+]
+In the second case (a<lambdale1). Both preserve the floor. The exact
+radial variance transforms and weighted Cauchy give
+[
+ v:=sum(r'_j-1)^2le V_r<13,quad V_rle(65/64)v,quad
+ sum|r'-r|=|8-F|<6eta,quad Delta'<10eta,quad
+ (sum|q'-r'|)^2<160eta.
+]
+The (65/64) bound uses (a^{-2}<65/64); the angular transfer uses
+(9(1+3e/2)<10). The normalized tuple is only an algebraic envelope.
+It need not come from an actual polynomial with disk roots. At zero
+variance these exact relations remain valid without division by (v).
+
+## Full sectors and initial variance entry
+
+For any embedded eight radii with floor1/2 and total at most (8+3e), put
+(A=4+3e), (R_k=1/2+A/k) and
+[
+ G_m(t)=(1-t/2)^m+sum_{k=1}^m(1-t/2)^{m-k}(R_kt-1)_+^k.
+]
+Partition any (m)-subset by the number (k) of its negative real factors.
+All other eight-slot floors bound the negative radii's sum by (A+k/2).
+AM--GM bounds their absolute product by ((R_kt-1)^k); each positive
+factor is at most (1-t/2). Summing the possible sectors therefore bounds
+every whole subset product. All proper remaining products are below4:
+check (k=1), (k=2), and (kge3) separately using (A<9/2), retaining
+the empty product.
+
+For (z_i=r_i+w_i), (sum|w_i|leepsilon=1/12), the entire product
+expansion is bounded by (G_m(t)+4sum_{k=1}^m(tepsilon)^k/k!).
+On the normalization and phase paths the squared phase norm is below
+((160+60e)eta<161e<1/144). Both the entire first and mixed second
+origin derivatives are thus covered. All15 positive-part sector integrals
+are reconstructed by a full antiderivative and, independently, by the
+substitution (t=1/R_k+(1-1/R_k)x) and positive beta integrals.
+For (k=0) use (1-t/2=(1+(1-t))/2).
+The resulting whole gradient and mixed-Hessian bounds are (5/2,9/4);
+substitution (u=at) correctly supplies the prefactor (1/a).
+The full product gradient is below2.
+
+Normalization costs below (27eta). At a real phase base,
+(Re(q'_j-r'_j)=-|q'_j-r'_j|^2/(2r'_j)).
+The pure second derivatives vanish. The whole mixed Taylor remainder and
+first term cost at most ((5/2)(sum|q'-r'|)^2<400eta).
+Thus (O_a(r')-P(r')<427eta).
+
+We independently reground the only imported part of8656: its full-domain
+penalty-five real gap. For floor ((1+a)^{-1}) and total at most8,
+(y_j=(1+a)r'_j-1ge0), (D=2ae_2(y)-e_3(y)ge0), and
+[
+ (1+a)^8[O_a(r')-P(r')]ge8(1-a^9)+5D.
+]
+The cleared function minus (5D) is symmetric and multiaffine. Choose a
+minimum with as few above-floor coordinates as possible. If two free
+coordinates differ, a fixed-sum two-coordinate variation has form
+(Axy+B(x+y)+C); stationarity forces (A=0), making the whole segment
+flat. Moving to a floor contradicts minimality of the number of free
+coordinates. This covers both slack and active total constraints. Hence
+all (m=8-k) free coordinates are equal, parametrized by (uin[0,1]),
+including the floor point and (a=0). The exact profile is
+[
+ P_k=9int_0^1(1+a-at)^k[1+a-at-(8/m)a^2ut]^m,dt
+       -[1+(8/m)au]^m,quad
+ D_k=rac{64(m-1)}m a^3u^2-rac{256(m-1)(m-2)}{3m^2}a^3u^3.
+]
+Fresh full polynomial integration, tensor Bernstein conversion and full
+inverse reconstruction give all636 nonnegative coefficients of
+(P_k-8(1-a^9)-5D_k), bidegrees ((16-k,8-k)). There are590 positive
+and46 zero entries. The nonnegative Bernstein partition of unity proves
+the whole parameter domain. We import none of8656's mean-tube or annulus
+claims and do not treat an older review's verdict as this certificate.
+
+At total8, (E_2=e_2(y)=28a^2-(1+a)^2v/2). Maclaurin and
+(1-sqrt tge(1-t)/2) imply, including (E_2=0) and (v=0),
+[
+ Dge E_2(1+a)^2v/(56a)ge E_2v/14,quad
+ D<d_0eta,quad d_0=256cdot427/5.
+]
+Starting at (v<13) gives (E_2>7/4), then successively
+[
+ v<8d_0eta<7, E_2>13;quad
+ v<(14/13)d_0eta<1, E_2>25;quad
+ v<(14/25)d_0eta<1/2, E_2>26;quad
+ v<(14/26)d_0eta<12/25, E_2>27;quad
+ v<(14/27)d_0eta<23/50.
+]
+Each next lower bound is (E_2>28(1-e)^2-2b), for the preceding variance
+bound (b). These are newly verified strict endpoint inequalities, not
+assumed small variance.
+
+## Two complete local reductions
+
+For (v<23/50), every radial normalization segment satisfies squared
+norm about1 below15/32 and individual deviations below2/3. The latter
+uses the zero-sum estimate (|r_j-mu|^2le7V_r/8).
+Every radial, phase and scaling path through (az) then has norm about1
+below (11/16+3/80+3e), whose square is below3/5.
+For any remaining six or seven slots, Cauchy and Maclaurin bound
+(|e_k(z_S-1)|leinom{|S|}k(8/25)^k).
+Full beta integration gives whole derivative bounds (2/7,3/25), retaining
+all seven/six terms. The real gradient has constant coefficient (-1/8)
+and linear coefficient (1/28). Its complete higher tail is bounded by
+(1/[8(1-8/25)^2]-1/8-(8/25)/4), and
+(|sum_{i
+e j}(ar_i-1)|<2/3+15e).
+The resulting real gradient is below (-7a/200).
+The complex change is below ((3/25)/12=1/100), while
+(cos	heta_j>1-20eta) and
+((7/200)(1-e)(1-20e)>1/100).
+Thus the derivative of (O_a(q_s)) in each radial phase direction is
+strictly negative. Subtracting the positive derivative of (P(r_s))
+preserves the sign.
+
+If (Fle8), normalization increases radii and is favorable. Otherwise
+its cost is at most ((2/7+2)(F-8)le48eta/7).
+The phase first term is nonnegative because the real gradient is negative;
+only the complete mixed remainder costs (48eta/5). Scaling contributes
+(16eta/7). Hence (O_1(r')-P(r')<656eta/35).
+
+Put (x=r'-1), so (sum x=0), and (p_s=sum x_j^s). The classical
+bound (|p_3|le3v^{3/2}/sqrt{14}) follows by maximizing on the compact
+zero-sum sphere. At (v>0), independent constraint gradients and Lagrange
+multipliers give at most two values. For (k=1,ldots,7), the squared
+ratio is ((8-2k)^2/[8k(8-k)]le9/14); negate (x) for the other sign.
+At (v=0) the assertion is exactly zero. Also
+(v^2/8le p_4le7v^2/8) by Cauchy and
+(x_j^2le7v/8). The complete Newton identity
+(e_4=v^2/8-p_4/4) gives (|e_4|le3v^2/32).
+These are classical facts, with no historical priority claim.
+
+The whole radial identity is
+[
+ O_1(r')-P(r')=sum_{k=2}^8[(-1)^k/inom8k-1]e_k(x).
+]
+Its quadratic term is (27v/56); its degree-eight term cancels exactly.
+With (
+ho_1=2/3), use (B_0=1,B_1=0,B_2=v/2,B_3=2v/11,
+B_4=3v^2/32), and the full degree5--7 Newton recurrence
+[
+ B_k=[vB_{k-2}+(6/11)vB_{k-3}
+ +(7/8)v^2sum_{s=4}^k
+ho_1^{s-4}B_{k-s}]/k.
+]
+Every coefficient is nonnegative. The entire higher-term budget at
+(v=23/50) is
+[
+ c_1=rac{487362179}{8131200000}>rac1{20}.
+]
+Therefore (v<(2624/7)eta<375eta), entering (v<1/64) at the
+whole new endpoint. At zero variance use the whole identity directly.
+
+In the second region, squared radial norm is below ((17/128)^2),
+individual deviations are below1/8, and phase squared norm is below
+((45/2)eta). The whole path norm is below (21/128+3e), whose square
+is below1/36. Full derivative sums now use (1/14) and give (3/20,1/22).
+The full product gradient is below
+((57/56+3e/7)^7<23/20). The already proved favorable sign persists.
+The normalization, phase and scaling costs are respectively
+(39eta/10,40eta/11,6eta/5), totaling (961eta/110).
+Use (B_0=1,B_1=0,B_2=v/2,B_3=v/24,B_4=v^2/8), and, for (k=5,6,7),
+[
+ B_k=(v/k)sum_{s=2}^k(1/8)^{s-2}B_{k-s}.
+]
+The complete second coefficient is
+[
+ c_2=rac{32075187}{73400320}>rac37.
+]
+It proves (v<(6727/330)eta), hence (V_r<(83/4)eta), and
+(sum|q-1|^2=V_r+8(mu-1)^2+2Delta<39eta).
+The individual radii exceed97/100 throughout the window, since
+((3/100-3e/4)^2>(581/32)e).
+The exact identity (zeta=-eta+(q-1)/q), Minkowski, and
+(sqrt{39}<25/4,sqrt{8e}<9/500) now give
+(H<(625/97+9/500)^2eta<42eta<1/512).
+This supplies actual energy entry before any fixed-energy theorem is used.
+
+## Proved retained-coefficient refinement
+
+Instead of rounding (c_2) down to (3/7), retain it in the last step:
+[
+ v<A_veta,quad A_v=rac{961}{110c_2}=rac{7053770752}{352827057},quad
+ V_r<rac{65}{64}A_veta.
+]
+Thus
+[
+ sum|q-1|^2<left[rac{65}{64}A_v+18+rac92e
+ight]eta
+       <(619/100)^2eta.
+]
+Keep the already proved97/100 radius bound and (sqrt{8e}<9/500).
+The strict rational final margin is
+[
+ 41-(619/97+9/500)^2=rac{110850871}{2352250000}>0,qquad H<41eta.
+]
+All parameter, low-sublevel, actual-disk and multiplicity hypotheses are
+unchanged. This is a sufficient energy constant, with no optimality claim.
+
+## Widened basic first-power implication
+
+Credit researcher six-sendov-3's universal9620 centered-root and actual
+normal mechanism, and my own9669 universal Laurent/cube-field audit. Only
+the algebraic identities are reused; every necessary endpoint scalar is
+freshly checked with (e=1/25000), (h=1/512), (
+ho=1/64),
+(r_-=1-e-
+ho,r_+=1+
+ho,s=r_++h/2,	au=17/384).
+For (m=sumzeta/8,
+u_j=zeta_j-m,W=sum|
+u_j|^2,u=a-m,r=|u|),
+(H=W+8|m|^2) gives (|m|le
+ho,Wle h,max|
+u|<	au<r_-).
+Derivative integration and anchoring give exactly
+[
+ p(m+w)=w^9-u^9+sum_{j=1}^7d_j(w^j-u^j),quad d_7=-9sum
+ 
+u_j^2/14,quad |d_j|le A_jW,quad
+ A_7=9/14,quad A_j=rac9{8j}inom8{9-j}
+ho^{7-j} (jle6).
+]
+The whole coefficients, not a truncated polynomial, are used. The new
+Rouché inequality
+(9r_-^8/2-9s^7h>sum A_j(s^j+r_+^j)), disjointness (h<4r_-/9),
+and all positive derivative/motion divisors pass. At (W>0) nine disjoint
+circles of radius (W/2) each contain one actual simple original, counted
+by Rouché. For the two nonreal cube phases, the whole linear displacement
+and true displacement are below (W/6). At (W=0), use the exact
+(w^9-u^9) polynomial and no (W) division.
+
+Put (C_d=sum jA_js^{j-1}), (B_d=9r_-^8-18s^7h-C_dh),
+(N_c=(7/4)sum_{jin{1,2,4,5,7}}A_jr_+^j).
+The independent whole budgets verify (B_d>6N_c) and (9r_-^8>6N_c).
+The nonlinear displacement bound is
+(B_eW^2=(s^7/9+C_d/54)W^2/r_-^8).
+Retain every lower coefficient: (B_5=63/32,B_4=(63/32)
+ho,
+B_2=(9/128)
+ho h,B_1=(9/4096)h^2).
+Both the paired and individual full actual-normal errors satisfy
+((1+2
+ho)B_e+1/72+csum B_jr_-^{j-7}<1), for (c=1/6,1/5).
+The cube-field identities cancel degrees3 and6, retaining degree7's
+paired contribution (-3Q/28), with (Q=Re[(sum
+
+u_j^2)ar u/u]) and (|Q|le W). Actual original disk feasibility gives
+[
+ r^2le1-rac23eta+rac13eta^2-|m|^2+rac17Q+rac43E_c,quad
+ E_c=|m|W/6+W^2.
+]
+This is an actual-root inequality, never a feasibility claim for our finite
+Gaussian controls. Its full complex mean terms are retained.
+
+The complete convergent Legendre expansion gives
+[
+ Fge8/r+(W+3Q)/(4r^3)-rac{	au W}{(r-	au)r^3}.
+]
+The Laplace integral bounds (|P_k|le1); absolute convergence follows
+from (max|
+u|/r<1). The whole geometric tail starts at degree3.
+The new initial tail budget gives (Fge8/r-3W/5), hence
+(rge1-(3eta+3W/5)/8>4999/5000=:r_0).
+The prior6399/6400 budget is strictly negative here and is not used.
+
+The coefficient (3/(4r^3)-4/7) is positive on this whole interval.
+Convexity of (8t^{-1/2}), the actual pair inequality and (Qge-W)
+give
+[
+ F-8gerac83eta-rac43eta^2+4|m|^2+kappa W,quad
+ kappa=rac47-rac1{2r_0^3}-rac{	au}{(r_0-	au)r_0^3}
+         -rac{16}{3}(
+ho/6+h)
+ =rac{3827263269609617}{8250819527426593824}>rac1{2500}.
+]
+All denominators are positive before use. If (W+|m|^2>0), the surplus
+is positive. If both vanish, (p=z^9-a^9) and (F=8/a) is strictly above
+the stated bound. This proves the basic first-power implication on the
+larger band. For (F>8+3eta), including infinity, that conclusion is
+immediate. The lower band endpoints are open only at (eta=0), and the
+upper endpoint is covered by all strict rational margins.
+
+On (0<etale2^{-16}) only, energy entry allows my CREDITED9756 sharp
+remainder14 and slope89/32 application. It retains the low-sublevel cut
+and, for each stability statement, the arbitrary nonnegative near-slope
+upper cut. Its fourth remainder remains (9Delta_{14}/100), not
+(Delta_{14}/12). Neither that window nor later9620 routing constants are
+extended here. The full complex first-power conjecture and interior
+(eta>1/25000) remain outside this audit.
