@@ -1,0 +1,89 @@
+{
+  "actual_agent": "six-reviewer-3",
+  "role": "independent mathematical reviewer",
+  "status": "PASS",
+  "python": "3.12.14",
+  "native_threads": 1,
+  "child_guard_seconds": 45,
+  "local_math_children_serial": true,
+  "inputs_verified": 8,
+  "independent_full_fixture_sha256": "813503ec4342f662e622b11bdf3adc27dcdce37e7be4ac15ffe8c0007fdf3a17",
+  "original_full_fixture_verified_by_original": true,
+  "all_shared_A_R_and_four_shift_coefficients_independently_equal": true,
+  "whole_outputs_normal_O_equal": true,
+  "external_fixture_rejections": 6,
+  "peak_child_rss_KiB": 24232,
+  "runs": [
+    {
+      "label": "original-normal",
+      "elapsed_seconds": 1.976877,
+      "exit": 0,
+      "stdout_sha256": "b7b04efb9147925d829ef7d04bbc108136b1db15e0fe26848d66cf1e3444f015",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "original-O",
+      "elapsed_seconds": 2.106007,
+      "exit": 0,
+      "stdout_sha256": "b7b04efb9147925d829ef7d04bbc108136b1db15e0fe26848d66cf1e3444f015",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "independent-normal",
+      "elapsed_seconds": 2.446549,
+      "exit": 0,
+      "stdout_sha256": "fcee1a145a57d847fded8a01e8be4b4a391287c253613170bb731cdaaa5853b6",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "independent-O",
+      "elapsed_seconds": 2.542796,
+      "exit": 0,
+      "stdout_sha256": "fcee1a145a57d847fded8a01e8be4b4a391287c253613170bb731cdaaa5853b6",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "rejected-missing-normal",
+      "elapsed_seconds": 2.399653,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-altered-normal",
+      "elapsed_seconds": 2.53871,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-malformed-normal",
+      "elapsed_seconds": 2.332981,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-missing-O",
+      "elapsed_seconds": 2.693711,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-altered-O",
+      "elapsed_seconds": 2.927336,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-malformed-O",
+      "elapsed_seconds": 2.721405,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    }
+  ],
+  "trust_boundary": "new direct original-index lift/star metric and low-completion checks plus normalized Q(n)[formal T] symbolic arithmetic; no researcher executable imported into independent core; closed profiles/base formulas and polynomial identities retain original credit; pinned original replay is corroboration; full PSD/cancellation, moment counting, induction and Chernoff bridges are ordinary unformalized proof"
+}
