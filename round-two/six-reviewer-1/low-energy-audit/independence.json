@@ -1,0 +1,138 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "sealed_utc": "2026-10-02T18:11:46.015842+00:00",
+  "target": 9588,
+  "target_source_commit": "6d1322d6e781746c45264966ecc257fa0dfcc067",
+  "defining_written_proof_visible": true,
+  "target_executable_fixture_validation_provenance_unread_unmaterialized_at_seal": true,
+  "allowed_input": "Complete defining written proof; no target mathematical data file is needed. Fresh sparse-polynomial and Gaussian-rational code uses only Python standard library. Prior owned9544/9572 mathematical proofs are credited scoped inputs for analytic context/corollaries, not executable imports.",
+  "frozen_source_sha256": {
+    "check.py": "f7fe42564ddc55e0574261ad87628f863020283c7164b000f6a8543a283094b6",
+    "core.py": "d26b801728622d7eb7a4d048bb03b9543b4115c215e3a529b094c5a761576bd0",
+    "expected.json": "4b62f976061554e32df8b5ccb4f8f16d62fc35d1718318111c4c0809a3603053"
+  },
+  "record_sha256": "08eb89594e88a723ee0ffc01f76d158733162814653897a7362de18103bf0906",
+  "runs": [
+    {
+      "mode": "normal",
+      "wall_seconds": 0.099925,
+      "stdout": {
+        "status": "PASS",
+        "record_sha256": "08eb89594e88a723ee0ffc01f76d158733162814653897a7362de18103bf0906",
+        "cyclic_rows": 9,
+        "literal_weight_controls": 24,
+        "energy_thresholds": [
+          30,
+          32
+        ]
+      }
+    },
+    {
+      "mode": "optimized",
+      "wall_seconds": 0.230826,
+      "stdout": {
+        "status": "PASS",
+        "record_sha256": "08eb89594e88a723ee0ffc01f76d158733162814653897a7362de18103bf0906",
+        "cyclic_rows": 9,
+        "literal_weight_controls": 24,
+        "energy_thresholds": [
+          30,
+          32
+        ]
+      }
+    }
+  ],
+  "optimized_external_fixture_damages": [
+    {
+      "name": "changed-energy-threshold",
+      "mode": "optimized",
+      "rejected": true,
+      "reason": "ValueError: entire fixture value"
+    },
+    {
+      "name": "missing-cyclic-row",
+      "mode": "optimized",
+      "rejected": true,
+      "reason": "ValueError: fixture list length"
+    },
+    {
+      "name": "extra-field",
+      "mode": "optimized",
+      "rejected": true,
+      "reason": "ValueError: fixture key set"
+    },
+    {
+      "name": "integer-to-float",
+      "mode": "optimized",
+      "rejected": true,
+      "reason": "ValueError: typed fixture mismatch"
+    }
+  ],
+  "child_peak_rss_KiB": 19236,
+  "native_threads_one": true,
+  "serial": true,
+  "fixed_internal_guard_seconds": 45,
+  "fixed_child_guard_seconds": 50,
+  "ordinary_trust_boundary": "all-index analytic tails, disk-root identity proof, triangle/Maclaurin/monotonicity and actual-root quantifiers; finite controls are corroboration, not infinite proof",
+  "later_extension": {
+    "utc": "2026-10-02T18:20:56.748214+00:00",
+    "developed_after_author_replay": true,
+    "basis": "Own pre-author-code sealed formal-complex Fourier/whole norm polynomials, with separately rederived changed-radius coefficients and scalar majorants; no author executable import in later layer.",
+    "record_sha256": "f9f43a66b3521eaf490fd6167626d29235572f67d800fe51952a96d3864b71bc",
+    "frozen_later_source_sha256": {
+      "refine.py": "065470541bd7a92dd562b77e38ad039aed18570ebb77f731549bfe8eb61e8812",
+      "extension.json": "80df67d055fb618381c5481050bd52de55a2e806c49c6f131c177dd1c5dd7765"
+    },
+    "runs": [
+      {
+        "mode": "normal",
+        "wall_seconds": 0.099788,
+        "stdout": {
+          "status": "PASS",
+          "extension_sha256": "f9f43a66b3521eaf490fd6167626d29235572f67d800fe51952a96d3864b71bc",
+          "energy_thresholds": [
+            36,
+            40
+          ]
+        }
+      },
+      {
+        "mode": "optimized",
+        "wall_seconds": 0.230548,
+        "stdout": {
+          "status": "PASS",
+          "extension_sha256": "f9f43a66b3521eaf490fd6167626d29235572f67d800fe51952a96d3864b71bc",
+          "energy_thresholds": [
+            36,
+            40
+          ]
+        }
+      }
+    ],
+    "optimized_external_fixture_damages": [
+      {
+        "name": "changed-energy40",
+        "rejected": true,
+        "reason": "ValueError: entire fixture value"
+      },
+      {
+        "name": "missing-full-row",
+        "rejected": true,
+        "reason": "ValueError: fixture list length"
+      },
+      {
+        "name": "extra-global-conclusion",
+        "rejected": true,
+        "reason": "ValueError: fixture key set"
+      },
+      {
+        "name": "integer-to-float",
+        "rejected": true,
+        "reason": "ValueError: typed fixture mismatch"
+      }
+    ],
+    "child_peak_rss_KiB": 19820,
+    "all_original_sealed_bytes_unchanged": true
+  }
+}
