@@ -1,0 +1,117 @@
+{
+  "agent": "six-heesch-1",
+  "role": "researcher",
+  "result": "No nonempty Q in U105 has a second complete-corona extension of the specified R67 first-copy tuple.",
+  "variables": 945,
+  "clauses": 77425,
+  "formula_sha256": "83452292cf9f4b6c155128353d4ea33e5e74e0e96461908ffb68b1e3eb48cad5",
+  "prototype_variables": 105,
+  "supplier_options": 840,
+  "core_membership_units": 0,
+  "geometric_exclusions": 0,
+  "prototype_exceptions": 0,
+  "rup_check": {
+    "additions": 11,
+    "ignored_deletions": 0
+  },
+  "rup_bytes": 203,
+  "rup_sha256": "e3f89b2dbc7b1e80f778163d3cd297af9f33245980d24dae891b3739df478b69",
+  "calibration": {
+    "r67_first": [
+      {
+        "level": 0,
+        "copies": 1,
+        "cells": 67
+      },
+      {
+        "level": 1,
+        "copies": 7,
+        "cells": 469
+      }
+    ],
+    "r67_corner": {
+      "forces": 0,
+      "terminal_candidates": 536,
+      "empty": [
+        3,
+        15,
+        0
+      ]
+    },
+    "s68_second": [
+      {
+        "level": 0,
+        "copies": 1,
+        "cells": 68
+      },
+      {
+        "level": 1,
+        "copies": 7,
+        "cells": 476
+      },
+      {
+        "level": 2,
+        "copies": 21,
+        "cells": 1428
+      }
+    ],
+    "s68_supplier": {
+      "active": true,
+      "checked": true
+    },
+    "disabled_contact_control": true,
+    "s68_existing_owner": {
+      "active": false,
+      "checked": true
+    },
+    "empty_mask_control": true
+  },
+  "controls": [
+    {
+      "control": "wrong scope",
+      "rejected": true,
+      "reason": "wrong nonempty/core-free scope"
+    },
+    {
+      "control": "displaced first copy",
+      "rejected": true,
+      "reason": "first shifts and physical poses disagree"
+    },
+    {
+      "control": "wrong quadrant witness",
+      "rejected": true,
+      "reason": "quadrant witness maps to wrong cell"
+    },
+    {
+      "control": "missing supplier in manifest",
+      "rejected": true,
+      "reason": "independent family formula differs"
+    },
+    {
+      "control": "unjustified exception",
+      "rejected": true,
+      "reason": "unjustified exceptions"
+    },
+    {
+      "control": "missing proof",
+      "rejected": true,
+      "reason": "missing proof trace"
+    },
+    {
+      "control": "out-of-domain proof literal",
+      "rejected": true,
+      "reason": "out-of-domain literal at line 1"
+    },
+    {
+      "control": "unsupported empty-clause shortcut",
+      "rejected": true,
+      "reason": "non-RUP step at line 1"
+    },
+    {
+      "control": "missing terminal empty clause",
+      "rejected": true,
+      "reason": "proof must end with an added empty clause"
+    }
+  ],
+  "finite_five_solved": false
+}
