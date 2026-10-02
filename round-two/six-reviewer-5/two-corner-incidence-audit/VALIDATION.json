@@ -1,0 +1,380 @@
+{
+  "actual_agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "own_runs": [
+    {
+      "program": "compare_author.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.1334475709591061,
+      "maxrss_kib": 16008,
+      "stdout": "{\"all_directed_arcs\": 216, \"all_directed_cycles\": 54, \"all_quotient_classes\": 216, \"author_executable_imported\": false, \"complete_closure_cases\": 12, \"complete_port_cases\": 27, \"full_Bernstein_positions\": 104, \"full_vector_coefficient_positions\": 264, \"whole_target_certificate_compared\": true}\n",
+      "stderr": ""
+    },
+    {
+      "program": "controls.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.12732469895854592,
+      "maxrss_kib": 15244,
+      "stdout": "{\"author_inputs_used\": false, \"calibration_checks\": 392, \"closed_endpoint_rejections\": 2, \"rooted_polygon_vs_diagonal_sets\": \"complete3..8\"}\n",
+      "stderr": ""
+    },
+    {
+      "program": "controls.py",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.2582114989636466,
+      "maxrss_kib": 19696,
+      "stdout": "{\"author_inputs_used\": false, \"calibration_checks\": 392, \"closed_endpoint_rejections\": 2, \"rooted_polygon_vs_diagonal_sets\": \"complete3..8\"}\n",
+      "stderr": ""
+    },
+    {
+      "program": "independent.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.1402255049906671,
+      "maxrss_kib": 16836,
+      "stdout": "{\"bytes\": 58345, \"caps\": 54, \"extended_roots\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \"ports\": 27, \"residual_labelled_records\": 88, \"sha256\": \"3f88fafead017a235421010746f5bedb0a494fe2e3377f3f45111c9ae16295ee\", \"upper_countercontrol\": \"343: one necessary root between19/25 and16/21\", \"words\": 12}\n",
+      "stderr": ""
+    },
+    {
+      "program": "independent.py",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.27269849891308695,
+      "maxrss_kib": 19696,
+      "stdout": "{\"bytes\": 58345, \"caps\": 54, \"extended_roots\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \"ports\": 27, \"residual_labelled_records\": 88, \"sha256\": \"3f88fafead017a235421010746f5bedb0a494fe2e3377f3f45111c9ae16295ee\", \"upper_countercontrol\": \"343: one necessary root between19/25 and16/21\", \"words\": 12}\n",
+      "stderr": ""
+    },
+    {
+      "program": "verify.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 2.430709599982947,
+      "maxrss_kib": 21780,
+      "stdout": "{\"cap_boundaries\": 54, \"ports\": 27, \"rejected\": [\"omit closure word\", \"alter literal closing coefficient\", \"lose closed endpoint\", \"invent root-free larger band\", \"alter final vector\", \"omit oriented port\", \"alter reversed seam identification\", \"alter boundary dart successor\", \"invent four-cap\", \"alter middle annulus triangle count\"], \"sha256\": \"3f88fafead017a235421010746f5bedb0a494fe2e3377f3f45111c9ae16295ee\", \"verified\": true, \"whole_comparison\": true, \"words\": 12}\n",
+      "stderr": ""
+    },
+    {
+      "program": "verify.py",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 2.303066967986524,
+      "maxrss_kib": 24544,
+      "stdout": "{\"cap_boundaries\": 54, \"ports\": 27, \"rejected\": [\"omit closure word\", \"alter literal closing coefficient\", \"lose closed endpoint\", \"invent root-free larger band\", \"alter final vector\", \"omit oriented port\", \"alter reversed seam identification\", \"alter boundary dart successor\", \"invent four-cap\", \"alter middle annulus triangle count\"], \"sha256\": \"3f88fafead017a235421010746f5bedb0a494fe2e3377f3f45111c9ae16295ee\", \"verified\": true, \"whole_comparison\": true, \"words\": 12}\n",
+      "stderr": ""
+    }
+  ],
+  "native": {
+    "agent": "six-reviewer-5",
+    "role": "independent mathematical reviewer",
+    "strictly_serial_final_replay": true,
+    "initial_orchestration_incident": null,
+    "rows": [
+      {
+        "program": "check.py",
+        "mode": "normal",
+        "seconds": 0.14458720304537565,
+        "maxrss_kib": 16788,
+        "guard_seconds": 45,
+        "result": {
+          "certificate_sha256": "ec0a569a9e4c50fd4493ae71c860f86d25867a8ae87095cd6e27ff6707f259e6",
+          "closing_contact_cases": 12,
+          "oriented_ring_cases": 27,
+          "ring_boundaries_each_with_three_mixed_corners": 54,
+          "strict_full_band_exclusions": 12
+        }
+      },
+      {
+        "program": "audit.py",
+        "mode": "normal",
+        "seconds": 0.12300211598630995,
+        "maxrss_kib": 16788,
+        "guard_seconds": 45,
+        "result": {
+          "boundary_cycles": 54,
+          "certificate_sha256": "ec0a569a9e4c50fd4493ae71c860f86d25867a8ae87095cd6e27ff6707f259e6",
+          "closing_contact_cases": 12,
+          "closure_coordinate_coefficient_positions": 264,
+          "each_boundary_has_three_mixed_corners": true,
+          "full_band_exclusions": 12,
+          "oriented_ring_cases": 27,
+          "ring_counts": [
+            {
+              "cases": 1,
+              "lengths": [
+                3,
+                3
+              ],
+              "pentagons": 0
+            },
+            {
+              "cases": 6,
+              "lengths": [
+                3,
+                4
+              ],
+              "pentagons": 1
+            },
+            {
+              "cases": 6,
+              "lengths": [
+                3,
+                5
+              ],
+              "pentagons": 2
+            },
+            {
+              "cases": 6,
+              "lengths": [
+                4,
+                4
+              ],
+              "pentagons": 2
+            },
+            {
+              "cases": 2,
+              "lengths": [
+                3,
+                6
+              ],
+              "pentagons": 3
+            },
+            {
+              "cases": 6,
+              "lengths": [
+                4,
+                5
+              ],
+              "pentagons": 3
+            }
+          ]
+        }
+      },
+      {
+        "program": "bridge.py",
+        "mode": "normal",
+        "seconds": 0.3053426149999723,
+        "maxrss_kib": 17196,
+        "guard_seconds": 45,
+        "result": {
+          "Gram_positions": 144,
+          "actual_corner_updates": 5,
+          "contacts": 24,
+          "core_points": 12,
+          "exception": 1,
+          "final_corner_fields_read": false,
+          "partial_hexagon_exclusions": 31,
+          "partial_hexagon_words": 32,
+          "strict_pair_gaps": 42,
+          "total_point_bound": 14
+        }
+      },
+      {
+        "program": "controls.py",
+        "mode": "normal",
+        "seconds": 1.6811614190228283,
+        "maxrss_kib": 17364,
+        "guard_seconds": 45,
+        "result": {
+          "new_certificate_damages_rejected": [
+            "missing-closing-word",
+            "duplicate-closing-word",
+            "changed-final-vector",
+            "changed-contact-obstruction",
+            "changed-Bernstein-coefficient",
+            "zero-contact-obstruction",
+            "changed-closed-domain",
+            "missing-port-case",
+            "duplicate-port-case",
+            "adjacent-port-endpoints",
+            "changed-quotient-class",
+            "changed-boundary-arc",
+            "changed-boundary-cycle",
+            "false-mixed-corner-count",
+            "false-region-vertex-count"
+          ],
+          "original_parent_source_binding_still_required_by_load": true,
+          "parent_partial_bridge_damages_rejected": [
+            "missing-partial-hexagon-word",
+            "damaged-partial-Bezout",
+            "changed-partial-core-vector",
+            "false-partial-capacity"
+          ],
+          "unused_parent_final_corner_fields_and_q4_q5_records_omitted_accepted": true,
+          "valid_record_reordering_and_cycle_rotation_reversal_accepted": true
+        }
+      },
+      {
+        "program": "check.py",
+        "mode": "optimized",
+        "seconds": 0.4391131059965119,
+        "maxrss_kib": 20944,
+        "guard_seconds": 45,
+        "result": {
+          "certificate_sha256": "ec0a569a9e4c50fd4493ae71c860f86d25867a8ae87095cd6e27ff6707f259e6",
+          "closing_contact_cases": 12,
+          "oriented_ring_cases": 27,
+          "ring_boundaries_each_with_three_mixed_corners": 54,
+          "strict_full_band_exclusions": 12
+        }
+      },
+      {
+        "program": "audit.py",
+        "mode": "optimized",
+        "seconds": 0.3632715670391917,
+        "maxrss_kib": 20944,
+        "guard_seconds": 45,
+        "result": {
+          "boundary_cycles": 54,
+          "certificate_sha256": "ec0a569a9e4c50fd4493ae71c860f86d25867a8ae87095cd6e27ff6707f259e6",
+          "closing_contact_cases": 12,
+          "closure_coordinate_coefficient_positions": 264,
+          "each_boundary_has_three_mixed_corners": true,
+          "full_band_exclusions": 12,
+          "oriented_ring_cases": 27,
+          "ring_counts": [
+            {
+              "cases": 1,
+              "lengths": [
+                3,
+                3
+              ],
+              "pentagons": 0
+            },
+            {
+              "cases": 6,
+              "lengths": [
+                3,
+                4
+              ],
+              "pentagons": 1
+            },
+            {
+              "cases": 6,
+              "lengths": [
+                3,
+                5
+              ],
+              "pentagons": 2
+            },
+            {
+              "cases": 6,
+              "lengths": [
+                4,
+                4
+              ],
+              "pentagons": 2
+            },
+            {
+              "cases": 2,
+              "lengths": [
+                3,
+                6
+              ],
+              "pentagons": 3
+            },
+            {
+              "cases": 6,
+              "lengths": [
+                4,
+                5
+              ],
+              "pentagons": 3
+            }
+          ]
+        }
+      },
+      {
+        "program": "bridge.py",
+        "mode": "optimized",
+        "seconds": 0.6009325380437076,
+        "maxrss_kib": 20944,
+        "guard_seconds": 45,
+        "result": {
+          "Gram_positions": 144,
+          "actual_corner_updates": 5,
+          "contacts": 24,
+          "core_points": 12,
+          "exception": 1,
+          "final_corner_fields_read": false,
+          "partial_hexagon_exclusions": 31,
+          "partial_hexagon_words": 32,
+          "strict_pair_gaps": 42,
+          "total_point_bound": 14
+        }
+      },
+      {
+        "program": "controls.py",
+        "mode": "optimized",
+        "seconds": 1.757714223000221,
+        "maxrss_kib": 20944,
+        "guard_seconds": 45,
+        "result": {
+          "new_certificate_damages_rejected": [
+            "missing-closing-word",
+            "duplicate-closing-word",
+            "changed-final-vector",
+            "changed-contact-obstruction",
+            "changed-Bernstein-coefficient",
+            "zero-contact-obstruction",
+            "changed-closed-domain",
+            "missing-port-case",
+            "duplicate-port-case",
+            "adjacent-port-endpoints",
+            "changed-quotient-class",
+            "changed-boundary-arc",
+            "changed-boundary-cycle",
+            "false-mixed-corner-count",
+            "false-region-vertex-count"
+          ],
+          "original_parent_source_binding_still_required_by_load": true,
+          "parent_partial_bridge_damages_rejected": [
+            "missing-partial-hexagon-word",
+            "damaged-partial-Bezout",
+            "changed-partial-core-vector",
+            "false-partial-capacity"
+          ],
+          "unused_parent_final_corner_fields_and_q4_q5_records_omitted_accepted": true,
+          "valid_record_reordering_and_cycle_rotation_reversal_accepted": true
+        }
+      }
+    ],
+    "native_source_bytes_unchanged": true,
+    "optional_parent_bridge_only": true
+  },
+  "comparison": {
+    "complete_closure_cases": 12,
+    "complete_port_cases": 27,
+    "full_vector_coefficient_positions": 264,
+    "full_Bernstein_positions": 104,
+    "all_quotient_classes": 216,
+    "all_directed_arcs": 216,
+    "all_directed_cycles": 54,
+    "whole_target_certificate_compared": true,
+    "author_executable_imported": false
+  },
+  "operational_limit": {
+    "graphql_query": "complete target body / incoming / outgoing",
+    "status": "45-second timeout, killed/reaped by subprocess",
+    "mathematical_job_timed_out": false,
+    "no_resource_escalation": true,
+    "fallback": "bounded read-only canonical signed SDK endpoint/relations snapshot",
+    "fallback_committed_height": 9712,
+    "target_full_bytes": 24306,
+    "incoming": [],
+    "outgoing_count": 4
+  },
+  "all_sealed_core_bytes_unchanged": true,
+  "initial_scope_calibration": "Two equal rationals mistakenly compared strictly; fixed before seal, squared-radical strict check retained. No target inputs used.",
+  "initial_wrapper_invocation": "Arguments reversed; no mathematical program launched. Corrected immediately.",
+  "exploratory_endpoint": "5/8 rejected by necessary343 closing root; never theorem evidence."
+}
