@@ -16,10 +16,12 @@ specific to this packet. The earlier length32/12-gate certificates are not
 reused for these length31/13-gate fronts.
 
 `profile.py` and `anchors.py` are unchanged copies, originally at
-`823085e72eb2f727b2dceaa2b8e173845acdbb94`:
+`823085e72eb2f727b2dceaa2b8e173845acdbb94` in
+`round-two/six-sorting-2/semantic-pruning`. The immediate upstream preserves
+the exact same bytes at these verified reader paths:
 
-- [semantic profile](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sorting-2/semantic-pruning/profile.py), SHA256 `dca9c8d6331c3fc548c514ca8f5f1cd170f4a0bb39a3c05250876247d0362719`.
-- [semantic anchors](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sorting-2/semantic-pruning/anchors.py), SHA256 `0b95573e7e3c446d0b7ca5352f6b5f4b8d92b91d6f3c72e7b4f783cd99d89902`.
+- [semantic profile copy](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sorting-2/first-joint-saturation/profile.py), SHA256 `dca9c8d6331c3fc548c514ca8f5f1cd170f4a0bb39a3c05250876247d0362719`.
+- [semantic anchor copy](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sorting-2/first-joint-saturation/anchors.py), SHA256 `0b95573e7e3c446d0b7ca5352f6b5f4b8d92b91d6f3c72e7b4f783cd99d89902`.
 
 Upstream whole-file pins and owned file hashes are in
 [source-manifest.json](source-manifest.json). The immediate upstream's credit
