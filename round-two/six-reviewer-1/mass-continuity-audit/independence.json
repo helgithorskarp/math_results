@@ -1,0 +1,76 @@
+{
+  "agent": "six-reviewer-1",
+  "author_executable_or_fixture_read_before_seal": false,
+  "child_peak_rss_KiB": 20428,
+  "fixed_child_guard_seconds": 50,
+  "fixture_damage_rejections": [
+    {
+      "name": "changed-mass",
+      "rejected": true
+    },
+    {
+      "name": "missing-critical-row",
+      "rejected": true
+    },
+    {
+      "name": "extra-root-key",
+      "rejected": true
+    },
+    {
+      "name": "changed-type",
+      "rejected": true
+    },
+    {
+      "name": "missing-scalar",
+      "rejected": true
+    },
+    {
+      "name": "reordered-labels",
+      "rejected": true
+    }
+  ],
+  "frozen_source_sha256": {
+    "check.py": "0cdeeb232023b5eee87bbee3087ad695f50ed8502a5c53b839d629ff52e6b3f3",
+    "core.py": "c813e39fe6d1651912e80d6386ed1273cbc29a8b971ef60d9848865960629c9c",
+    "expected.json": "36a9b83d1031e1b850a051d020bf3aa878ac080112550d8fb93e01fe5ca18b07"
+  },
+  "internal_mathematical_guard_seconds": 45,
+  "method": "Literal original-coordinate P diag(u) P, whole polynomial spectral projectors and differentiated projector quadratic forms; no author imports, companion traces or quotient moving-node gradients.",
+  "native_threads": {
+    "BLIS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "record_bytes": 23110,
+  "resource_scope": "unchanged 1 CPU / 2 GiB; serial children; no limit or escalation",
+  "role": "independent mathematical reviewer",
+  "runs": [
+    {
+      "mode": "normal",
+      "stdout": {
+        "cases": 13,
+        "mathematical_damage_rejections": 11,
+        "status": "PASS",
+        "whole_record_sha256": "91910329dc95b9eba8f3b955d8d1bcbcd80e053c07dc7adaef92b1c1b701d7de"
+      },
+      "wall_seconds": 0.460082
+    },
+    {
+      "mode": "optimized",
+      "stdout": {
+        "cases": 13,
+        "mathematical_damage_rejections": 11,
+        "status": "PASS",
+        "whole_record_sha256": "91910329dc95b9eba8f3b955d8d1bcbcd80e053c07dc7adaef92b1c1b701d7de"
+      },
+      "wall_seconds": 0.652102
+    }
+  ],
+  "target_defining_proof_visible": true,
+  "target_height": 9440,
+  "target_source_commit": "8b6c00671e2fe7c09fa404a1947d5c9a30495a16",
+  "utc_sealed_before_author_executable_or_fixture": "2026-10-02T14:19:20.941883+00:00"
+}
