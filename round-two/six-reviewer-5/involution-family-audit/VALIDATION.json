@@ -1,0 +1,91 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "date_utc": "2026-10-02",
+  "python": "CPython3.12.14",
+  "third_party_libraries": [],
+  "compiler_or_solver_used": false,
+  "ordinary_unformalized": true,
+  "thread_count": 1,
+  "heavy_jobs_serial": true,
+  "hard_scope": "1CPU2GiB unchanged",
+  "fresh_normal": {
+    "status": "PASS_COLD_FULL_INVOLUTION_REVIEW",
+    "expected_sha256": "838bb3a3ec0ad6c8e699ae277140ecde89714ba2cceab509f0bbae34d70819f1",
+    "maximum_code_size": 69,
+    "multiplicity3_maximum": 56,
+    "multiplicity4_maximum": 58,
+    "cycle_power_types": 14,
+    "cyclic_type_10_6_1_1_maximum": 4,
+    "carrier_seconds": 9.238699012028519,
+    "seconds": 13.21250655001495,
+    "peak_rss_kib": 25568
+  },
+  "fresh_python_optimized": {
+    "status": "PASS_COLD_FULL_INVOLUTION_REVIEW",
+    "expected_sha256": "838bb3a3ec0ad6c8e699ae277140ecde89714ba2cceab509f0bbae34d70819f1",
+    "maximum_code_size": 69,
+    "multiplicity3_maximum": 56,
+    "multiplicity4_maximum": 58,
+    "cycle_power_types": 14,
+    "cyclic_type_10_6_1_1_maximum": 4,
+    "carrier_seconds": 8.369693060987629,
+    "seconds": 11.84414945304161,
+    "peak_rss_kib": 26844
+  },
+  "whole_cold_result_bytes_equal": true,
+  "whole_result_bytes": 23874,
+  "prior_input_remote_byte_matches": 10,
+  "guards": {
+    "maximum_nodes": 3000000,
+    "maximum_seconds": 30,
+    "per_raw_mate_seconds": 30,
+    "whole_star_audit_seconds": 240,
+    "no_accepted_guard_raised": true
+  },
+  "controls": {
+    "damage_rejections": [
+      "incomplete-node-guard",
+      "asymmetric-graph",
+      "wrong-twin-weight",
+      "duplicate-word",
+      "wrong-weight",
+      "fixed-instead-of-exchanged",
+      "wrong-center-pair",
+      "false-degree",
+      "changed-pin-AUTHOR_FOUR.json",
+      "changed-pin-AUTHOR_THREE.json",
+      "changed-pin-GROUP_DIGESTS.json",
+      "changed-pin-WITNESS56.json",
+      "changed-pin-WITNESS58.json",
+      "changed-pin-WITNESS69.json",
+      "changed-pin-clique.py",
+      "changed-pin-core.py",
+      "changed-pin-inputs/fixtures.json",
+      "changed-pin-inputs/generic_star_audit.py"
+    ],
+    "literal_small_involutions": 352,
+    "ordinary_graphs": 1100,
+    "status": "PASS_EXHAUSTIVE_AND_SEMANTIC_CONTROLS",
+    "weighted_graphs": 1099
+  },
+  "initial_comparison_error": "Stopped first private run comparing differently ordered weighted graph hashes. Added explicit author weight/degree vertex bijection to comparison only; graph and independent search unchanged. Corrected final complete normal/O checks match both full physical graph representations. No failed run supplies exclusion.",
+  "unreplayed_mathematical_imports": [
+    "Classical A(17,6,4)=20",
+    "Generic23-star classification8933 conditional8323",
+    "Arbitrary absent-pair upper56 reviewed7747",
+    "Arbitrary20/19 single-pair upper57 reviewed8026/7825",
+    "Arbitrary saturated multiplicity-two upper60 reviewed8080",
+    "Exchanged multiplicity-five upper69 independently reviewed9115/9047"
+  ],
+  "independent_new_scopes": [
+    "multiplicity-three sharp56",
+    "multiplicity-four sharp58",
+    "ordinary whole-family69 bridge",
+    "necessary69 equality restrictions",
+    "all385 cycle partitions and fourteen power types",
+    "all8568 words for each power type",
+    "ordinary exact4 for10/6/two-fixed-point type"
+  ],
+  "generated_proof_files_published": false
+}
