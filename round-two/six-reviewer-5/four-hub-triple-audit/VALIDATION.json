@@ -1,0 +1,100 @@
+{
+  "actual_author": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "python": "CPython3.12.14 standard library",
+  "serial_one_math_job": true,
+  "native_threads": 1,
+  "scope": "unchanged1CPU2GiB",
+  "no_guard_hit_or_escalation": true,
+  "runs": [
+    {
+      "program": "core/audit.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 1.5124757280573249,
+      "maxrss_kib": 22444,
+      "stdout": "{\n  \"types\": 60,\n  \"accepted_types\": 46,\n  \"marks\": 218960,\n  \"accepted\": 123877,\n  \"branches\": 30,\n  \"vectors\": 283,\n  \"stages\": {\n    \"prior\": 275,\n    \"support\": 2,\n    \"new_disjoint_radius\": 3,\n    \"unit_capacity\": 2,\n    \"closed_unit_parity\": 1\n  },\n  \"support\": [\n    {\n      \"B\": 0,\n      \"C\": 12,\n      \"J\": 0,\n      \"compositions\": 455,\n      \"before_support\": 44,\n      \"feasible\": 0,\n      \"weak_C4\": 0\n    },\n    {\n      \"B\": 4,\n      \"C\": 10,\n      \"J\": 0,\n      \"compositions\": 10010,\n      \"before_support\": 1845,\n      \"feasible\": 0,\n      \"weak_C4\": 21\n    },\n    {\n      \"B\": 0,\n      \"C\": 11,\n      \"J\": 1,\n      \"compositions\": 1456,\n      \"before_support\": 176,\n      \"feasible\": 0,\n      \"weak_C4\": 0\n    },\n    {\n      \"B\": 4,\n      \"C\": 9,\n      \"J\": 1,\n      \"compositions\": 30800,\n      \"before_support\": 6696,\n      \"feasible\": 0,\n      \"weak_C4\": 60\n    }\n  ],\n  \"sha256\": \"d8301f42a222e1d79dfb78c7ff03d07fa1061c5e59b2c359319f1e96b9f827ea\",\n  \"support_sha256\": \"fd77de5ae5ea6282c9d66352614fcc4fe3fc34ff00e9bd986ddc9baa74164852\",\n  \"physical_sha256\": \"3309533a8ef934eb6dbc1d23faecbe076d4c56b5886a86c8306443d98883b47a\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "program": "core/audit.py",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 1.6211651829071343,
+      "maxrss_kib": 25184,
+      "stdout": "{\n  \"types\": 60,\n  \"accepted_types\": 46,\n  \"marks\": 218960,\n  \"accepted\": 123877,\n  \"branches\": 30,\n  \"vectors\": 283,\n  \"stages\": {\n    \"prior\": 275,\n    \"support\": 2,\n    \"new_disjoint_radius\": 3,\n    \"unit_capacity\": 2,\n    \"closed_unit_parity\": 1\n  },\n  \"support\": [\n    {\n      \"B\": 0,\n      \"C\": 12,\n      \"J\": 0,\n      \"compositions\": 455,\n      \"before_support\": 44,\n      \"feasible\": 0,\n      \"weak_C4\": 0\n    },\n    {\n      \"B\": 4,\n      \"C\": 10,\n      \"J\": 0,\n      \"compositions\": 10010,\n      \"before_support\": 1845,\n      \"feasible\": 0,\n      \"weak_C4\": 21\n    },\n    {\n      \"B\": 0,\n      \"C\": 11,\n      \"J\": 1,\n      \"compositions\": 1456,\n      \"before_support\": 176,\n      \"feasible\": 0,\n      \"weak_C4\": 0\n    },\n    {\n      \"B\": 4,\n      \"C\": 9,\n      \"J\": 1,\n      \"compositions\": 30800,\n      \"before_support\": 6696,\n      \"feasible\": 0,\n      \"weak_C4\": 60\n    }\n  ],\n  \"sha256\": \"d8301f42a222e1d79dfb78c7ff03d07fa1061c5e59b2c359319f1e96b9f827ea\",\n  \"support_sha256\": \"fd77de5ae5ea6282c9d66352614fcc4fe3fc34ff00e9bd986ddc9baa74164852\",\n  \"physical_sha256\": \"3309533a8ef934eb6dbc1d23faecbe076d4c56b5886a86c8306443d98883b47a\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "program": "core/controls.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.26473442802671343,
+      "maxrss_kib": 14984,
+      "stdout": "{\"actual_author\": \"six-reviewer-5\", \"role\": \"independent mathematical reviewer\", \"original_passes\": true, \"rejected\": [\"missing branch\", \"incorrect K\", \"altered histogram\", \"missing vector\", \"incorrect vector charge\", \"dropped return contribution in radius support\", \"false unit capacity\", \"forged closed degree list\"], \"controls_added_after_primary_seal\": true, \"completeness_proof\": \"separately stated count DAG and full late comparison, not inferred from this semantic checker\"}\n",
+      "stderr": ""
+    },
+    {
+      "program": "core/controls.py",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.41380658000707626,
+      "maxrss_kib": 18452,
+      "stdout": "{\"actual_author\": \"six-reviewer-5\", \"role\": \"independent mathematical reviewer\", \"original_passes\": true, \"rejected\": [\"missing branch\", \"incorrect K\", \"altered histogram\", \"missing vector\", \"incorrect vector charge\", \"dropped return contribution in radius support\", \"false unit capacity\", \"forged closed degree list\"], \"controls_added_after_primary_seal\": true, \"completeness_proof\": \"separately stated count DAG and full late comparison, not inferred from this semantic checker\"}\n",
+      "stderr": ""
+    },
+    {
+      "program": "native.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 5.547816267004237,
+      "maxrss_kib": 20344,
+      "stdout": "{\"stage\": \"pass16-first-engine-low-friends\", \"status\": \"PASS\"}\n{\"stage\": \"pass16-check-low-friends\", \"status\": \"PASS\"}\n{\"stage\": \"pass19-high-T-polynomial\", \"status\": \"PASS\"}\n{\"stage\": \"pass19-high-T-produce\", \"status\": \"PASS\"}\n{\"stage\": \"pass19-high-T-cut-produce\", \"status\": \"PASS\"}\n{\"stage\": \"pass19-check-high-T-cuts\", \"status\": \"PASS\"}\n{\"stage\": \"pass19-check-certificate-damages\", \"status\": \"PASS\"}\n{\"agent\": \"six-code-3\", \"complete_mathematical_sha256\": \"e7cbf5d8039991422dee0b7239e9b677a295902036d36da8d1f85891e31a6ea4\", \"elapsed_seconds\": 5.430872619966976, \"independent_peer_review\": false, \"mode\": \"normal\", \"native_threads\": 1, \"ordinary_bridges_formalized\": false, \"peak_RUSAGE_CHILDREN_KiB\": 18744, \"role\": \"researcher\", \"serial_children\": true, \"stage_timeout_seconds\": 60, \"status\": \"PUBLIC_SOURCE_COMPLETE_REPLAY_PASS\", \"whole_records_matched\": 7}\n",
+      "stderr": ""
+    },
+    {
+      "program": "native.py",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 7.898816484957933,
+      "maxrss_kib": 23784,
+      "stdout": "{\"stage\": \"pass16-first-engine-low-friends\", \"status\": \"PASS\"}\n{\"stage\": \"pass16-check-low-friends\", \"status\": \"PASS\"}\n{\"stage\": \"pass19-high-T-polynomial\", \"status\": \"PASS\"}\n{\"stage\": \"pass19-high-T-produce\", \"status\": \"PASS\"}\n{\"stage\": \"pass19-high-T-cut-produce\", \"status\": \"PASS\"}\n{\"stage\": \"pass19-check-high-T-cuts\", \"status\": \"PASS\"}\n{\"stage\": \"pass19-check-certificate-damages\", \"status\": \"PASS\"}\n{\"agent\": \"six-code-3\", \"complete_mathematical_sha256\": \"e7cbf5d8039991422dee0b7239e9b677a295902036d36da8d1f85891e31a6ea4\", \"elapsed_seconds\": 7.4232642179122195, \"independent_peer_review\": false, \"mode\": \"optimized\", \"native_threads\": 1, \"ordinary_bridges_formalized\": false, \"peak_RUSAGE_CHILDREN_KiB\": 21388, \"role\": \"researcher\", \"serial_children\": true, \"stage_timeout_seconds\": 60, \"status\": \"PUBLIC_SOURCE_COMPLETE_REPLAY_PASS\", \"whole_records_matched\": 7}\n",
+      "stderr": ""
+    }
+  ],
+  "comparison": {
+    "actual_reviewer": "six-reviewer-5",
+    "role": "independent mathematical reviewer",
+    "primary_files_unchanged": true,
+    "literal_star_positions_equal": true,
+    "owned_fixture_sha256": "9e78f7ca5b85707e18dd9e54325a3decf0d2a4e10d7a8b26d9e2f3ebf9157828",
+    "native_fixture_sha256": "c188200792c201bdb44ea1667a8a70255c4e40f04fee6c334c98ecfa650113e7",
+    "raw_rows": 426,
+    "type_records": 60,
+    "physical_membership_bits": 218960,
+    "ordered_vectors": 283,
+    "all_survival_decisions_equal": true,
+    "failure_list_differences": [],
+    "complete_original_certificates": 8,
+    "ordered_support_target_rows": 1956,
+    "complete_weakened_support_witnesses": 81,
+    "entire_native_normal_optimized_equal": true,
+    "whole_native_sha256": "e7cbf5d8039991422dee0b7239e9b677a295902036d36da8d1f85891e31a6ea4",
+    "independent_sha256": "d8301f42a222e1d79dfb78c7ff03d07fa1061c5e59b2c359319f1e96b9f827ea",
+    "independent_core_sealed_at": "2026-10-02T20:58:04.429988+00:00",
+    "late_target_files_materialized_at": "2026-10-02T20:58:46.602451+00:00"
+  },
+  "first_seal": "2026-10-02T20:58:04.429988+00:00",
+  "native_materialized": "2026-10-02T20:58:46.602451+00:00",
+  "primary10_files_unchanged": true,
+  "post_seal_additions": "Semantic controls, optional native replay and full-record comparison adapter were added after target access; they are not claimed pre-target primary files.",
+  "pre_seal_correction": "Closed unit parity dispatch initially also required no eligible nonunit outside U. Corrected before primary seal; all283 vectors were already obtained. Initial python shell alias was missing; no math launched. First recursive download allowed only baseline; metadata revealed source directory, and allowlist was corrected before content fetch.",
+  "large_record": "645976-byte support record regenerated locally and checked by full SHA; omitted from publication, not split/compressed/uploaded elsewhere",
+  "trust": "Four precisely stated imports and ordinary unformalized bridges; counts/hashes/semantic controls do not independently prove census completeness"
+}
