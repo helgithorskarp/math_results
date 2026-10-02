@@ -1,0 +1,569 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "python": "3.12.14",
+  "own": {
+    "seconds": 4.827948136953637,
+    "max_cumulative_child_rss_kib": 18948,
+    "records": [
+      {
+        "core_sha256": "c2ad15c84ee2a03b2f1afc4ca21f9592b27f2392bc0208368ecca826d4967e17",
+        "mode": "normal",
+        "record_sha256": "b8474cb24e4fefcc97cd6798b720b6b5af4c66259dcbbba4c107e9af9b432d71",
+        "status": "COMPLETE_CONDITIONAL_CROSS_CORE_AUDIT",
+        "summary": {
+          "blue_relaxed_column_counts": [
+            43,
+            43,
+            43,
+            43
+          ],
+          "column_counts": [
+            43,
+            43,
+            43,
+            43
+          ],
+          "endpoint_counts": {
+            "U": 180,
+            "V": 360
+          },
+          "missing_tuple_counts": {
+            "U": 512,
+            "V": 384
+          },
+          "relaxed_sizes": {
+            "U": [
+              18,
+              2,
+              5,
+              5,
+              2,
+              2
+            ],
+            "V": [
+              10,
+              1,
+              13,
+              13,
+              18,
+              13
+            ]
+          },
+          "role_counts": {
+            "A0": 6,
+            "A1U": 2,
+            "A1V": 1,
+            "B": 7,
+            "C": 4,
+            "D": 3
+          },
+          "separators": {
+            "U": {
+              "gap": 1,
+              "maxima": [
+                2,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "roles": [
+                "A0",
+                "A1U",
+                "B",
+                "B",
+                "C",
+                "C"
+              ],
+              "target": 4,
+              "upper": 3,
+              "weights": [
+                0,
+                0,
+                1,
+                1,
+                -1,
+                1
+              ]
+            },
+            "V": {
+              "gap": 1,
+              "maxima": [
+                1,
+                0,
+                1,
+                1,
+                2,
+                1
+              ],
+              "roles": [
+                "A0",
+                "A1V",
+                "B",
+                "B",
+                "C",
+                "D"
+              ],
+              "target": 7,
+              "upper": 6,
+              "weights": [
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+              ]
+            }
+          }
+        }
+      },
+      {
+        "core_sha256": "c2ad15c84ee2a03b2f1afc4ca21f9592b27f2392bc0208368ecca826d4967e17",
+        "mode": "optimized",
+        "record_sha256": "b8474cb24e4fefcc97cd6798b720b6b5af4c66259dcbbba4c107e9af9b432d71",
+        "status": "COMPLETE_CONDITIONAL_CROSS_CORE_AUDIT",
+        "summary": {
+          "blue_relaxed_column_counts": [
+            43,
+            43,
+            43,
+            43
+          ],
+          "column_counts": [
+            43,
+            43,
+            43,
+            43
+          ],
+          "endpoint_counts": {
+            "U": 180,
+            "V": 360
+          },
+          "missing_tuple_counts": {
+            "U": 512,
+            "V": 384
+          },
+          "relaxed_sizes": {
+            "U": [
+              18,
+              2,
+              5,
+              5,
+              2,
+              2
+            ],
+            "V": [
+              10,
+              1,
+              13,
+              13,
+              18,
+              13
+            ]
+          },
+          "role_counts": {
+            "A0": 6,
+            "A1U": 2,
+            "A1V": 1,
+            "B": 7,
+            "C": 4,
+            "D": 3
+          },
+          "separators": {
+            "U": {
+              "gap": 1,
+              "maxima": [
+                2,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "roles": [
+                "A0",
+                "A1U",
+                "B",
+                "B",
+                "C",
+                "C"
+              ],
+              "target": 4,
+              "upper": 3,
+              "weights": [
+                0,
+                0,
+                1,
+                1,
+                -1,
+                1
+              ]
+            },
+            "V": {
+              "gap": 1,
+              "maxima": [
+                1,
+                0,
+                1,
+                1,
+                2,
+                1
+              ],
+              "roles": [
+                "A0",
+                "A1V",
+                "B",
+                "B",
+                "C",
+                "D"
+              ],
+              "target": 7,
+              "upper": 6,
+              "weights": [
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  "native": [
+    {
+      "complete": true,
+      "mathematical_bytes": 26351,
+      "mathematical_sha256": "539d27fa67a54a32db73acf6861fa83659affe914ece10a10f7a0d9628c2c486",
+      "optimized": false,
+      "python": "3.12.14",
+      "reported_maxrss_KiB_linux": 17348,
+      "thread_variables": {
+        "BLIS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      },
+      "wall_seconds": 0.21516069502104074
+    },
+    {
+      "complete": true,
+      "mathematical_bytes": 26351,
+      "mathematical_sha256": "539d27fa67a54a32db73acf6861fa83659affe914ece10a10f7a0d9628c2c486",
+      "optimized": true,
+      "python": "3.12.14",
+      "reported_maxrss_KiB_linux": 21260,
+      "thread_variables": {
+        "BLIS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      },
+      "wall_seconds": 0.20285139803308994
+    }
+  ],
+  "late_comparison": {
+    "actual_agent": "six-reviewer-4",
+    "compared_columns": 172,
+    "compared_fixed_spines": 15,
+    "compared_missing_tuples": 896,
+    "compared_role_records": 23,
+    "complete_entry_comparison_sha256": "1887d37b1854a1f2257781f14b49ac0c8cf25fc1a180202920ab4d5b4ad5baeb",
+    "damages_rejected": [
+      "omit-column",
+      "duplicate-column",
+      "wrong-outside-degree",
+      "wrong-Q-rank",
+      "omit-tight-rule",
+      "omit-role",
+      "wrong-known-page",
+      "omit-integer-tuple"
+    ],
+    "native_record_sha256": "539d27fa67a54a32db73acf6861fa83659affe914ece10a10f7a0d9628c2c486",
+    "role": "independent mathematical reviewer"
+  },
+  "serial_children": true,
+  "native_threads": 1,
+  "scope": "unchanged one CPU/2GiB",
+  "per_child_timeout_seconds": 30,
+  "native_outer_timeout_seconds": 35,
+  "own_serial_wrapper_timeout_seconds": 70,
+  "guard_hits": 0,
+  "sealed_seven_files_unchanged": true,
+  "entire_source_proof_in_committed_body": false,
+  "entire_source_proof_correspondence": "Fully diff inspected: mathematical proof is unchanged; signed graph replaces source context phrase preceding full cross lemma9631 with cross component of the full specified-leaf lemma9631, plus trailing blank lines. Exact whole source proof is therefore not a literal graph substring. No mathematical discrepancy.",
+  "cold_and_comparison_optimized": [
+    {
+      "label": "cold_verify",
+      "seconds": 3.828965784981847,
+      "max_cumulative_child_rss_kib": 19520,
+      "records": [
+        {
+          "core_sha256": "c2ad15c84ee2a03b2f1afc4ca21f9592b27f2392bc0208368ecca826d4967e17",
+          "mode": "normal",
+          "record_sha256": "b8474cb24e4fefcc97cd6798b720b6b5af4c66259dcbbba4c107e9af9b432d71",
+          "status": "COMPLETE_CONDITIONAL_CROSS_CORE_AUDIT",
+          "summary": {
+            "blue_relaxed_column_counts": [
+              43,
+              43,
+              43,
+              43
+            ],
+            "column_counts": [
+              43,
+              43,
+              43,
+              43
+            ],
+            "endpoint_counts": {
+              "U": 180,
+              "V": 360
+            },
+            "missing_tuple_counts": {
+              "U": 512,
+              "V": 384
+            },
+            "relaxed_sizes": {
+              "U": [
+                18,
+                2,
+                5,
+                5,
+                2,
+                2
+              ],
+              "V": [
+                10,
+                1,
+                13,
+                13,
+                18,
+                13
+              ]
+            },
+            "role_counts": {
+              "A0": 6,
+              "A1U": 2,
+              "A1V": 1,
+              "B": 7,
+              "C": 4,
+              "D": 3
+            },
+            "separators": {
+              "U": {
+                "gap": 1,
+                "maxima": [
+                  2,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "roles": [
+                  "A0",
+                  "A1U",
+                  "B",
+                  "B",
+                  "C",
+                  "C"
+                ],
+                "target": 4,
+                "upper": 3,
+                "weights": [
+                  0,
+                  0,
+                  1,
+                  1,
+                  -1,
+                  1
+                ]
+              },
+              "V": {
+                "gap": 1,
+                "maxima": [
+                  1,
+                  0,
+                  1,
+                  1,
+                  2,
+                  1
+                ],
+                "roles": [
+                  "A0",
+                  "A1V",
+                  "B",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "target": 7,
+                "upper": 6,
+                "weights": [
+                  0,
+                  1,
+                  1,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            }
+          }
+        },
+        {
+          "core_sha256": "c2ad15c84ee2a03b2f1afc4ca21f9592b27f2392bc0208368ecca826d4967e17",
+          "mode": "optimized",
+          "record_sha256": "b8474cb24e4fefcc97cd6798b720b6b5af4c66259dcbbba4c107e9af9b432d71",
+          "status": "COMPLETE_CONDITIONAL_CROSS_CORE_AUDIT",
+          "summary": {
+            "blue_relaxed_column_counts": [
+              43,
+              43,
+              43,
+              43
+            ],
+            "column_counts": [
+              43,
+              43,
+              43,
+              43
+            ],
+            "endpoint_counts": {
+              "U": 180,
+              "V": 360
+            },
+            "missing_tuple_counts": {
+              "U": 512,
+              "V": 384
+            },
+            "relaxed_sizes": {
+              "U": [
+                18,
+                2,
+                5,
+                5,
+                2,
+                2
+              ],
+              "V": [
+                10,
+                1,
+                13,
+                13,
+                18,
+                13
+              ]
+            },
+            "role_counts": {
+              "A0": 6,
+              "A1U": 2,
+              "A1V": 1,
+              "B": 7,
+              "C": 4,
+              "D": 3
+            },
+            "separators": {
+              "U": {
+                "gap": 1,
+                "maxima": [
+                  2,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "roles": [
+                  "A0",
+                  "A1U",
+                  "B",
+                  "B",
+                  "C",
+                  "C"
+                ],
+                "target": 4,
+                "upper": 3,
+                "weights": [
+                  0,
+                  0,
+                  1,
+                  1,
+                  -1,
+                  1
+                ]
+              },
+              "V": {
+                "gap": 1,
+                "maxima": [
+                  1,
+                  0,
+                  1,
+                  1,
+                  2,
+                  1
+                ],
+                "roles": [
+                  "A0",
+                  "A1V",
+                  "B",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "target": 7,
+                "upper": 6,
+                "weights": [
+                  0,
+                  1,
+                  1,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "label": "comparison_optimized",
+      "seconds": 1.9488135410938412,
+      "max_cumulative_child_rss_kib": 20716,
+      "records": [
+        {
+          "actual_agent": "six-reviewer-4",
+          "compared_columns": 172,
+          "compared_fixed_spines": 15,
+          "compared_missing_tuples": 896,
+          "compared_role_records": 23,
+          "complete_entry_comparison_sha256": "1887d37b1854a1f2257781f14b49ac0c8cf25fc1a180202920ab4d5b4ad5baeb",
+          "damages_rejected": [
+            "omit-column",
+            "duplicate-column",
+            "wrong-outside-degree",
+            "wrong-Q-rank",
+            "omit-tight-rule",
+            "omit-role",
+            "wrong-known-page",
+            "omit-integer-tuple"
+          ],
+          "native_record_sha256": "539d27fa67a54a32db73acf6861fa83659affe914ece10a10f7a0d9628c2c486",
+          "role": "independent mathematical reviewer"
+        }
+      ]
+    }
+  ]
+}

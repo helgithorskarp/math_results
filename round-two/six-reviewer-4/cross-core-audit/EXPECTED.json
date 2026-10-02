@@ -1,0 +1,257 @@
+{
+  "record": {
+    "core_sha256": "c2ad15c84ee2a03b2f1afc4ca21f9592b27f2392bc0208368ecca826d4967e17",
+    "summary": {
+      "blue_relaxed_column_counts": [
+        43,
+        43,
+        43,
+        43
+      ],
+      "column_counts": [
+        43,
+        43,
+        43,
+        43
+      ],
+      "endpoint_counts": {
+        "U": 180,
+        "V": 360
+      },
+      "missing_tuple_counts": {
+        "U": 512,
+        "V": 384
+      },
+      "relaxed_sizes": {
+        "U": [
+          18,
+          2,
+          5,
+          5,
+          2,
+          2
+        ],
+        "V": [
+          10,
+          1,
+          13,
+          13,
+          18,
+          13
+        ]
+      },
+      "role_counts": {
+        "A0": 6,
+        "A1U": 2,
+        "A1V": 1,
+        "B": 7,
+        "C": 4,
+        "D": 3
+      },
+      "separators": {
+        "U": {
+          "gap": 1,
+          "maxima": [
+            2,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "roles": [
+            "A0",
+            "A1U",
+            "B",
+            "B",
+            "C",
+            "C"
+          ],
+          "target": 4,
+          "upper": 3,
+          "weights": [
+            0,
+            0,
+            1,
+            1,
+            -1,
+            1
+          ]
+        },
+        "V": {
+          "gap": 1,
+          "maxima": [
+            1,
+            0,
+            1,
+            1,
+            2,
+            1
+          ],
+          "roles": [
+            "A0",
+            "A1V",
+            "B",
+            "B",
+            "C",
+            "D"
+          ],
+          "target": 7,
+          "upper": 6,
+          "weights": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            1
+          ]
+        }
+      }
+    },
+    "controls": {
+      "C_P_degree_nine_boundary": true,
+      "D_internal_Q_boundary": true,
+      "U_C_P_relaxation_example": [
+        [
+          3,
+          5
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "U_C_P_relaxation_hit_count": 4,
+      "actual_Q_subset_minima": 72,
+      "corrupted_separators": [
+        {
+          "case": "U",
+          "gap": -1,
+          "weights": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "case": "V",
+          "gap": 0,
+          "weights": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "nearby_positive_allocations": {
+        "U": {
+          "distance": 1,
+          "sets": [
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              1,
+              4,
+              5
+            ],
+            [
+              1,
+              4,
+              5
+            ]
+          ],
+          "totals": [
+            3,
+            3,
+            2,
+            2,
+            3,
+            2
+          ]
+        },
+        "V": {
+          "distance": 1,
+          "sets": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              1,
+              4,
+              5
+            ],
+            [
+              0,
+              2,
+              3
+            ]
+          ],
+          "totals": [
+            3,
+            3,
+            2,
+            2,
+            2,
+            1
+          ]
+        }
+      },
+      "old_label_negative": true,
+      "physical_22_vertex_spines": 924
+    }
+  },
+  "record_sha256": "b8474cb24e4fefcc97cd6798b720b6b5af4c66259dcbbba4c107e9af9b432d71",
+  "private_complete_core_bytes": 137768
+}
