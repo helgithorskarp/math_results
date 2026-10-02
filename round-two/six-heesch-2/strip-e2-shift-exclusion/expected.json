@@ -1,0 +1,47 @@
+{
+  "dependency_hashes": {
+    "../strip-contact-domains/strip_contact_reader.py": "d0429c7057e9dd876a5a3f9ae8f5881bda6fef172d54a0161e797b46ef14f3f6",
+    "../strip-contact-domains/strip_local_pair_certificate.py": "7c049fe993cbe0e9ef3d05751a7106547b1d32eddfaa2ba842336ac944f1ca91",
+    "../strip-contact-domains/strip_point_suppliers.py": "594b455753fd469d600a762dd390d650f68dcc635cb8226d3a8fcf449424229a",
+    "../strip-contact-domains/strip_notch_intervals.py": "a9acc497dd8478f77af7c6aa3ee183b1fffe09c761f5ab1844a2dcadb881787a",
+    "../parametric-strip-obstruction/strip_columns.py": "0fef434ed1813ca0cfe0ce71205dd95136544eff3a543005ae834924d6d87aa0",
+    "../parametric-strip-obstruction/strip_parametric_geometry.py": "87157118eefe2912bbb8b04edb18b507f6938e068a053d961e8182b48b4bf7fc",
+    "../strip-t5/exact.py": "265366ae7cc1e5b5ed60bc96075a32e5d56ac62e52da92080ab8752cdbf9285c",
+    "../strip-e2-branches/reader.py": "b1620c6f9820a0142139e0e862df24b56a8fe32e3144bb0e05458d8f77d2e8b7",
+    "../strip-e2-branches/inputs.json": "f79073f4558eead96ccb47580aa35fb8d6537e1c0088e5db01692ba908d21fb6",
+    "../strip-e2-forced-p/inputs.json": "704b616704119fb7ba435a42c2f10b7c8fbf9027c44313e94e9598ee2e8328f7"
+  },
+  "input_sha256": "1bbbef6d6ecd65d2dbbbe9b86e0091afd145afa96ee77f736d36b2df05e434ce",
+  "dependency_source_commits": {
+    "strip-contact-domains": "f4e3acc9c69137eb3d05bed98374dbfa0116eac0",
+    "parametric-strip-obstruction": "41bf6af8891df8c07f5a71db1c81a40b52c7b4ca",
+    "strip-t5": "a5052d63996131ca4eaceb22c1293a6fd4f9a056",
+    "strip-e2-branches": "722795d7875f2402a6a1e800343b37eafe9d468d",
+    "strip-e2-forced-p": "b5166474ef680232ea99fcb845082e72b0268521"
+  },
+  "mathematics_sha256": {
+    "generator": "1ba56b9c6b2534bced3b2b0ab42c999ae467556f522a2aba1521f90d766224ea",
+    "reader": "b9b118a1e15a4e6fd920277fc176b6f340e55e4872f8b5eaf83ef5f1eda2d0d2"
+  },
+  "expected_scope": {
+    "new_E1_exclusions": 6,
+    "finite_E1_DAG_nodes": 6,
+    "cap_tree_nodes": 8,
+    "original_demands": 2,
+    "complete_suppliers_per_point": [
+      12,
+      13
+    ],
+    "union_atlas": 19,
+    "main_DAG_nodes": 2,
+    "main_cuts": [
+      6
+    ],
+    "damaged_controls_per_reader": 17,
+    "eligible_suppliers_per_demand": [
+      6,
+      4
+    ],
+    "physical_cross_clashes": 24
+  }
+}
