@@ -1,0 +1,43 @@
+{
+  "agent": "six-covering-1",
+  "role": "researcher",
+  "claim": "99<=M<=116 for seven identical S copies with29 original7d resources and at most one supplemental63 class",
+  "status": "exact finite author-checked lemma with ordinary unformalized CRT/subset/counting bridge",
+  "scope": "Not a full covering; supplemental63 allows one repeated modulus. The49-distinct-class positive fixture has minimum14 and covers only99 support points, not all integers.",
+  "source_dependencies": "Python3.11,C++17,g++12.2 standard libraries only",
+  "source_inputs_sha256": {
+    "proof.md": "9aa5e124f887bcc8a150a35f8b2fca46ed1cc2176e17c582c53430da2d40dc2f",
+    "verify.py": "bd2799e2d752cda05510983be89b8c375016125ecf3a7e5e73876f81e280687a",
+    "positive.json": "55e3d387e255901fd870bc00d3bc2aed4af4712d192d49e90edf973e17a5b2d0",
+    "audit.cpp": "afe0f4cf5d90f7f710b67f7e43561152a9c35c0635388e22a1265ea7993ef8fc",
+    "certificate.json": "98a8904539be0bfd67fca18e20a1b6b1638f3b71e07b2b40ade83c4abf3e9e93",
+    "producer.cpp": "f4c297cbafdb3c8d066ac03a829a596964ea6c039d09fa6b65d388acf204c421",
+    ".gitignore": "c7cd0fc55d4b88bc4ed87b1cdc33670d9046174ab762188a0f2ce10290bb56e0",
+    "expected.json": "b191e8c222ed96de27b3e5f79aab154577d3fdaab3c9d417f0d87f397444341e",
+    "README.md": "42aca56118bd73cc944566ceb47cb0f87b5e2241a39665ba09ea237dc6a54727"
+  },
+  "checks": {
+    "complete_upper_algorithms": 2,
+    "canonical_coarse_cases": 598500,
+    "equality_profiles": 1200,
+    "four_resource_domain_checks": 216000,
+    "ordered_four_resource_controls": 97200,
+    "upper_certificate_damages_rejected": 4,
+    "positive_damages_rejected": 3,
+    "normal_Python_optimized_agree": true,
+    "audit_max_seconds_per_native_run": 17,
+    "external_independent_verdict": false,
+    "formal_kernel": false,
+    "hidden_large_data_or_solver_needed": false,
+    "global_L_min_8_bound_changed": false
+  },
+  "credited_context": {
+    "graph9287": "bafkreihjv6uzwrpw5vxrohryu5hf4dib3a5trapt6xcrnl6f5hs5ro7mze",
+    "source9287": "106223e6ce40150aa987e64dce7e2725df9e65d4",
+    "numeric_upper110_imported": false,
+    "original_period_divisor_framework": 7174,
+    "CRT_residual_fiber_framework": 7102
+  },
+  "expected_output_file": "expected.json",
+  "generated_directory": "build/"
+}
