@@ -1,0 +1,94 @@
+{
+  "runs": [
+    {
+      "script": "export_target.py",
+      "flags": [
+        "-O"
+      ],
+      "seconds": 2.4605428050272167,
+      "result": {
+        "scalar_maps": 40,
+        "physical_maps": 1,
+        "native_record_sha256": "d488722978826d78972641f1287bb90af1334c167f49776dfca326efb4b4b726",
+        "comparison_only_after_seal": true
+      }
+    },
+    {
+      "script": "compare_target.py",
+      "flags": [
+        "-O"
+      ],
+      "seconds": 18.598141993046738,
+      "result": {
+        "all_complete_native_critical_controls": 5,
+        "all_field_duals": 5,
+        "all_named_native_rational_margins": 27,
+        "all_native_phase_rows": 4,
+        "all_physical_field_polynomial_maps_both_sides": 24,
+        "all_scalar_identity_maps": 40,
+        "comparison_reconstruction_is_explicitly_postseal": true,
+        "native_whole_record_sha256": "d488722978826d78972641f1287bb90af1334c167f49776dfca326efb4b4b726",
+        "own_proof_has_no_producer_imports": true,
+        "whole_scalar_monomial_entries_both_sides": 8888
+      }
+    },
+    {
+      "script": "replay_target.py",
+      "flags": [],
+      "seconds": 47.732230004970916,
+      "result": {
+        "administrative_orchestration_guard_seconds": 100,
+        "all_native_external_fixture_rejections": 18,
+        "native_child_guard_seconds": 45,
+        "native_summary": {
+          "complete_Legendre_comparisons": 30,
+          "complete_arbitrary_critical_controls": 5,
+          "rejected_mathematical_damages": 8,
+          "status": "PASS",
+          "strict_rational_margins": 27,
+          "whole_identity_records": 17,
+          "whole_record_sha256": "d488722978826d78972641f1287bb90af1334c167f49776dfca326efb4b4b726"
+        },
+        "native_threads": 1,
+        "peak_child_rss_kib": 35252,
+        "scope": "unchanged1CPU2GiB",
+        "serial_math_children": true,
+        "source_bytes_checked_before_any_execution": true,
+        "whole_replay_seconds": 47.6733145469334
+      }
+    }
+  ],
+  "whole_normal_optimized_exports_byte_equal": true,
+  "whole_normal_optimized_comparison_equal": true,
+  "preimport_source_damage_runs": [
+    {
+      "adapter": "export_target.py",
+      "flags": [],
+      "rejected_before_import": true
+    },
+    {
+      "adapter": "export_target.py",
+      "flags": [
+        "-O"
+      ],
+      "rejected_before_import": true
+    },
+    {
+      "adapter": "replay_target.py",
+      "flags": [],
+      "rejected_before_import": true
+    },
+    {
+      "adapter": "replay_target.py",
+      "flags": [
+        "-O"
+      ],
+      "rejected_before_import": true
+    }
+  ],
+  "peak_child_rss_kib": 35252,
+  "native_threads": 1,
+  "serial_math_children": true,
+  "math_child_guard_seconds": 45,
+  "scope": "unchanged1CPU2GiB"
+}

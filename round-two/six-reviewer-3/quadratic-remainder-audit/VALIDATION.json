@@ -1,0 +1,182 @@
+{
+  "guard_seconds": 45,
+  "native_threads": 1,
+  "peak_child_rss_kib": 117372,
+  "runs": [
+    {
+      "exit_code": 0,
+      "flags": [],
+      "label": "audit.py",
+      "seconds": 23.425108389928937,
+      "summary": {
+        "Legendre_degrees": 17,
+        "original_labels": 9,
+        "record_bytes": 13448,
+        "record_sha256": "7b26ad13a00064c086d0e268fd0bd6e2f0087b3efe04a4bd65bce7f2aedffb1a",
+        "refinements": {
+          "actual_original_error": "10*Delta+4*sqrt(eta*Delta)",
+          "centered_fourth_factor": "7/8",
+          "imported_actual_entry_and_counted_roots": true,
+          "objective_quadratic": 327,
+          "ordinary_unformalized": true,
+          "physical_quadratic": 370,
+          "stability_Delta": "epsilon*eta+370*eta^2",
+          "uniform_slope": "17/6"
+        },
+        "strict_rational_budgets": 46,
+        "whole_polynomial_identities": 22
+      }
+    },
+    {
+      "exit_code": 0,
+      "flags": [
+        "-O"
+      ],
+      "label": "audit.py",
+      "seconds": 22.53023703803774,
+      "summary": {
+        "Legendre_degrees": 17,
+        "original_labels": 9,
+        "record_bytes": 13448,
+        "record_sha256": "7b26ad13a00064c086d0e268fd0bd6e2f0087b3efe04a4bd65bce7f2aedffb1a",
+        "refinements": {
+          "actual_original_error": "10*Delta+4*sqrt(eta*Delta)",
+          "centered_fourth_factor": "7/8",
+          "imported_actual_entry_and_counted_roots": true,
+          "objective_quadratic": 327,
+          "ordinary_unformalized": true,
+          "physical_quadratic": 370,
+          "stability_Delta": "epsilon*eta+370*eta^2",
+          "uniform_slope": "17/6"
+        },
+        "strict_rational_budgets": 46,
+        "whole_polynomial_identities": 22
+      }
+    },
+    {
+      "exit_code": 0,
+      "flags": [],
+      "label": "gaussian.py",
+      "seconds": 0.07941347500309348,
+      "summary": {
+        "actual_high_arm_controls": 2,
+        "centered_failure_controls": 1,
+        "literal_controls": 5,
+        "whole_controls_sha256": "188d5563c0c294b5a3da383a02864a7b4d1ec5c5656da9697478550cae681390"
+      }
+    },
+    {
+      "exit_code": 0,
+      "flags": [
+        "-O"
+      ],
+      "label": "gaussian.py",
+      "seconds": 0.20508642902132124,
+      "summary": {
+        "actual_high_arm_controls": 2,
+        "centered_failure_controls": 1,
+        "literal_controls": 5,
+        "whole_controls_sha256": "188d5563c0c294b5a3da383a02864a7b4d1ec5c5656da9697478550cae681390"
+      }
+    },
+    {
+      "exit_code": 1,
+      "flags": [],
+      "label": "fresh_fixture_semantic",
+      "reason": "ValueError: entire typed independent mathematical record",
+      "seconds": 21.09085561800748
+    },
+    {
+      "exit_code": 1,
+      "flags": [
+        "-O"
+      ],
+      "label": "fresh_fixture_semantic",
+      "reason": "ValueError: entire typed independent mathematical record",
+      "seconds": 22.21554111398291
+    },
+    {
+      "exit_code": 1,
+      "flags": [],
+      "label": "fresh_fixture_duplicate",
+      "reason": "ValueError: duplicate JSON key",
+      "seconds": 0.07117797003593296
+    },
+    {
+      "exit_code": 1,
+      "flags": [
+        "-O"
+      ],
+      "label": "fresh_fixture_duplicate",
+      "reason": "ValueError: duplicate JSON key",
+      "seconds": 0.18475943605881184
+    },
+    {
+      "exit_code": 1,
+      "flags": [],
+      "label": "fresh_fixture_malformed",
+      "reason": "json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+      "seconds": 0.06422136805485934
+    },
+    {
+      "exit_code": 1,
+      "flags": [
+        "-O"
+      ],
+      "label": "fresh_fixture_malformed",
+      "reason": "json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+      "seconds": 0.18473260395694524
+    },
+    {
+      "exit_code": 1,
+      "flags": [],
+      "label": "wrong_centered_quartic",
+      "reason": "ValueError: whole polynomial identity: full_centered_quartic_SOS",
+      "seconds": 21.21378175204154
+    },
+    {
+      "exit_code": 1,
+      "flags": [
+        "-O"
+      ],
+      "label": "wrong_centered_quartic",
+      "reason": "ValueError: whole polynomial identity: full_centered_quartic_SOS",
+      "seconds": 21.127877931925468
+    },
+    {
+      "exit_code": 1,
+      "flags": [],
+      "label": "wrong_signed_fourth_phase",
+      "reason": "ValueError: actual fourth cubic retained",
+      "seconds": 22.153373414999805
+    },
+    {
+      "exit_code": 1,
+      "flags": [
+        "-O"
+      ],
+      "label": "wrong_signed_fourth_phase",
+      "reason": "ValueError: actual fourth cubic retained",
+      "seconds": 22.12039234302938
+    },
+    {
+      "exit_code": 1,
+      "flags": [],
+      "label": "invalid_smaller_physical_budget",
+      "reason": "ValueError: strict rational budget: 320_sqrt_budget",
+      "seconds": 21.509267142042518
+    },
+    {
+      "exit_code": 1,
+      "flags": [
+        "-O"
+      ],
+      "label": "invalid_smaller_physical_budget",
+      "reason": "ValueError: strict rational budget: 320_sqrt_budget",
+      "seconds": 22.970056875026785
+    }
+  ],
+  "scope": "unchanged1CPU2GiB",
+  "serial_math_children": true,
+  "whole_validation": true
+}
