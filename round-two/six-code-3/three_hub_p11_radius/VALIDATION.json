@@ -1,0 +1,90 @@
+{
+  "agent": "six-code-3",
+  "commands": [
+    "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 python3 round-two/six-code-3/three_hub_p11_radius/reproduce.py --work scratch/three-hub-p11-normal",
+    "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 python3 -O round-two/six-code-3/three_hub_p11_radius/reproduce.py --work scratch/three-hub-p11-optimized"
+  ],
+  "exact_result": {
+    "agent": "six-code-3",
+    "all426_physical_row_records_sha256": "783bb3191fe37ee1e830b69062d2b465b3a9c4684c17a6359bc01ddbef64530f",
+    "conclusion": {
+      "branches": 20,
+      "forced_uncovered_unit_triangles": 5,
+      "independent_mathematical_review": false,
+      "necessary_survivors_before_K5": 1,
+      "ordinary_bridges_formalized": false,
+      "raw_templates": 118,
+      "required_tau": 0,
+      "saturated_high_high_leave_edges_per_unit": 3,
+      "status": "AUTHOR_CHECKED_CONDITIONAL_EXACT_CERTIFICATE",
+      "three_hub_pair_total_lower_bound": 11,
+      "unit_component_degree": 4,
+      "unit_component_vertices": 5
+    },
+    "controls": {
+      "checks": [
+        "physical_missing_quadruple",
+        "physical_repeated_quadruple",
+        "physical_repeated_pair",
+        "physical_out_of_domain",
+        "two_actual_point_bijections_on_all23_stars_and426_marks",
+        "retain_actual_e4_rows",
+        "retain_all_eight_actual_k5_failures",
+        "final_bridge_omit_last_template",
+        "final_bridge_omit_branch",
+        "final_bridge_alter_eligibility",
+        "final_bridge_alter_weight",
+        "final_bridge_alter_tau",
+        "degree_and_girth_alone_do_not_imply_global_star_coverage",
+        "one_endpoint_cannot_be_repeated_as_four_neighbours"
+      ],
+      "checks_count": 14,
+      "graph_only_countermodel_vertices": 15,
+      "graph_only_radius_covered": 13,
+      "status": "PASS",
+      "transported_physical_row_records": 852
+    },
+    "fixture_sha256": "c188200792c201bdb44ea1667a8a70255c4e40f04fee6c334c98ecfa650113e7",
+    "role": "researcher",
+    "whole_inventory_sha256": "4105dcb1d6cf1f7987e8d576877392d9ea8fc309203143ee224046ca1738ec88"
+  },
+  "independent_mathematical_review": false,
+  "initial_harness_repair": "Tuple/list representation comparison corrected before the final source freeze. Failed initial run preserved privately; both final whole inventories and controls pass.",
+  "mathematical_source_hashes": {
+    "certificate.json": "9de0ed3c75a38cbc08d5e07c2d9d035c4a834fd94d645de8b31e5de8f2a7d1ae",
+    "conclude.py": "8e8856f25c87555c97dce5b7ab1241ea9615cf43d0acfc04811c10a8bc7c98a8",
+    "controls.py": "3d0175cc7c7a3656291c3ce73fd5aec8d53e1979e160c8d87097bf6c1ee50b84",
+    "expected.json": "63ec65f1bcf8a7d83251296ba4d317cdc5e9d572c7acf376bcafb93a6cc8b163",
+    "fixtures.json": "c188200792c201bdb44ea1667a8a70255c4e40f04fee6c334c98ecfa650113e7",
+    "produce.py": "ad209b91397e59fd48566296d268011c2c7aaf126103251d4e961725d10b9be3",
+    "reproduce.py": "b9b027c5f8f39096c7110ec3670f1ec671706dfc9b448e9f8d89da263aba4712",
+    "verify.py": "9b325094f41ec1089be08fa4043c42073edf56090d917e33bf2d145170f80c83"
+  },
+  "normal": {
+    "elapsed_seconds": 0.47078374098055065,
+    "exit_code": 0,
+    "mode": "normal",
+    "peak_RUSAGE_CHILDREN_KiB": 19732
+  },
+  "optimized": {
+    "elapsed_seconds": 1.079974027001299,
+    "exit_code": 0,
+    "mode": "optimized",
+    "peak_RUSAGE_CHILDREN_KiB": 22580
+  },
+  "ordinary_bridges_formalized": false,
+  "primary69": {
+    "minimum_distance": 6,
+    "owned_unique_triples": 690,
+    "raw_sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+    "source": "https://aeb.win.tue.nl/codes/cwc/d6/a18.6.5.69",
+    "status": "EXACT_REVALIDATION_ONLY_NOT_NEW_RESEARCH",
+    "words": 69
+  },
+  "python_version": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+  "role": "researcher",
+  "validated_at": "2026-10-02T12:14:49.160420+00:00",
+  "whole_normal_and_optimized_bytes_equal": true,
+  "whole_producer_and_independent_bytes_equal": true,
+  "whole_result_sha256": "96b21e91ae18caf2d029fdd5a893f4136cb6ca0bffda726b7c3c16662199859d"
+}
