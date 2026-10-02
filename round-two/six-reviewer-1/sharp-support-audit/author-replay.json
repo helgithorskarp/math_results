@@ -1,0 +1,97 @@
+{
+  "agent": "six-reviewer-1",
+  "all_target_source_manifest_hashes_verified": true,
+  "author12_semantic_damage_controls": "executed by unchanged full verify.py in both normal and optimized modes",
+  "author_runs": [
+    {
+      "mode": "normal",
+      "stdout": {
+        "complete_sectors": 26,
+        "controls": 12,
+        "least_support_cutoff": 6,
+        "literal_action_columns": 112,
+        "ok": true,
+        "record_sha256": "f6c98265e472a735b7dfdcdcfe60b84654689131b4b57a77e97307143cf2b5d3"
+      },
+      "wall_seconds": 3.887722
+    },
+    {
+      "mode": "optimized",
+      "stdout": {
+        "complete_sectors": 26,
+        "controls": 12,
+        "least_support_cutoff": 6,
+        "literal_action_columns": 112,
+        "ok": true,
+        "record_sha256": "f6c98265e472a735b7dfdcdcfe60b84654689131b4b57a77e97307143cf2b5d3"
+      },
+      "wall_seconds": 4.112952
+    }
+  ],
+  "author_source_commit": "b0899891b28d5b4e0ec9aa150e8c3d2a97ad4624",
+  "author_source_files": {
+    ".gitignore": {
+      "bytes": 32,
+      "sha256": "a6c8e4cb547705cf4b7683307e484037d206456ac6ffafd86c27efd8778c1082"
+    },
+    "PROOF.md": {
+      "bytes": 12896,
+      "sha256": "e64e7ec0696a9147c153454d505f63c0afb89ce1b19c258ef574f4d294585720"
+    },
+    "README.md": {
+      "bytes": 2416,
+      "sha256": "6c4a1d04ad7b101045339a045b30f2a5bfe0a04139d7271ddad0115532b33d98"
+    },
+    "SHA256SUMS": {
+      "bytes": 846,
+      "sha256": "0b45f627067abe153c075b84cc1386dd5a6508f3f1413aec6d4d9df9cf4328e3"
+    },
+    "affine.py": {
+      "bytes": 3803,
+      "sha256": "9cdcaa2f616d2e6b63f76cdd5dda4d9d633845da34f8d4ee2646d822deea59b8"
+    },
+    "baseline.py": {
+      "bytes": 9437,
+      "sha256": "2379cee3071acd67e9a81adfce2b0a44b3836fe5d7486423384ce68cf7672031"
+    },
+    "exact.py": {
+      "bytes": 2516,
+      "sha256": "a22f9a4c4a569aed0321c7934a66883d2575ef146bbdba43708023bfd09b17d2"
+    },
+    "expected.json": {
+      "bytes": 11321,
+      "sha256": "f6c98265e472a735b7dfdcdcfe60b84654689131b4b57a77e97307143cf2b5d3"
+    },
+    "model.py": {
+      "bytes": 4695,
+      "sha256": "9189b8b427be0a51bf46f7c6d338159b266d47ce4242dea03c2ee54888c63b10"
+    },
+    "provenance.json": {
+      "bytes": 2095,
+      "sha256": "89188324558b22ec3c3bfa285a35881c757986c10d093357bf1f47d3f51a040c"
+    },
+    "seed.json": {
+      "bytes": 6617,
+      "sha256": "4aaf0182bdeccc7b116630adf1a83038c62ce70152b4edb21fb3c2407f3fd3a6"
+    },
+    "verify.py": {
+      "bytes": 6915,
+      "sha256": "b62b0f541cd7fa6e394a00f413cda3658c727db1fd5d79ed343c5a6a26a6ec51"
+    }
+  },
+  "child_peak_rss_KiB": 21428,
+  "credited9521_model_and_exact_bytes_unchanged": true,
+  "entire_shared_mathematical_record_agreements": [
+    "all143 rational table entries",
+    "every layer/metric/lower/upper coefficient in all13 complete sectors",
+    "all22 core row sums, actual empty scaled diagonal, all7 original positive classes and total mass"
+  ],
+  "first_author_executable_fixture_materialization_utc": "2026-10-02T16:58:13.934238+00:00",
+  "full_signed_proof_matches_pinned_source_after_reader_expansions": true,
+  "independent_seal_utc": "2026-10-02T16:56:55.567621+00:00",
+  "literal_method_boundary": "own two new full affine literal controls are not PSD/cap feasibility witnesses; author older literal PSD endpoints are only later replayed corroboration",
+  "no_resource_escalation": true,
+  "post_independent_seal_utc": "2026-10-02T16:59:49.105637+00:00",
+  "role": "independent mathematical reviewer",
+  "serial_native_threads_one": true
+}

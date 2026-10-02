@@ -1,0 +1,82 @@
+{
+  "agent": "six-reviewer-1",
+  "allowed_mathematical_input": {
+    "agent": "six-reviewer-1",
+    "allowed_input": "Published rational mathematical seed only, plus visible defining ordinary proof. No target executable/expected/validation/provenance materialized or read.",
+    "bytes": 6617,
+    "path": "round-two/six-downset-2/near_full_n24_sharp_support/seed.json",
+    "role": "independent mathematical reviewer",
+    "sha256": "4aaf0182bdeccc7b116630adf1a83038c62ce70152b4edb21fb3c2407f3fd3a6",
+    "source_commit": "b0899891b28d5b4e0ec9aa150e8c3d2a97ad4624",
+    "utc": "2026-10-02T16:46:32.171228+00:00"
+  },
+  "checker_internal_guard_seconds": 45,
+  "child_guard_seconds": 50,
+  "child_peak_rss_KiB": 21216,
+  "defining_proof_visible": true,
+  "frozen_source_sha256": {
+    "check.py": "dff2e0ec6ec7b0f786e283e728ff72246ddbfe77de966bcbb4329f92a29f492b",
+    "core.py": "46b51ac0c487e3be7310a8348c9856545b12d2920ed4812b4841af44cebeb36a",
+    "expected.json": "01bac6c27c65d34ea0c7f7c8e6cb6d0e0aea34e76395a79529fd4ef3f38f226d",
+    "seed.json": "4aaf0182bdeccc7b116630adf1a83038c62ce70152b4edb21fb3c2407f3fd3a6"
+  },
+  "full_ordinary_harmonic_and_real_congruence_bridges": "written unformalized mathematics, not implied by literal affine controls or finite seed arithmetic",
+  "independent_program_imports": "Python standard library and fresh own core only, no target or previous author executable.",
+  "no_resource_escalation": true,
+  "optimized_external_fixture_damages": [
+    {
+      "mode": "optimized",
+      "name": "changed-beta66",
+      "rejected": true,
+      "wall_seconds": 5.936109
+    },
+    {
+      "mode": "optimized",
+      "name": "missing-degree12",
+      "rejected": true,
+      "wall_seconds": 6.069388
+    },
+    {
+      "mode": "optimized",
+      "name": "extra-field",
+      "rejected": true,
+      "wall_seconds": 5.545291
+    },
+    {
+      "mode": "optimized",
+      "name": "integer-to-float",
+      "rejected": true,
+      "wall_seconds": 5.613476
+    }
+  ],
+  "role": "independent mathematical reviewer",
+  "runs": [
+    {
+      "mode": "normal",
+      "stdout": {
+        "full_upper_gap1_32": true,
+        "harmonic_degrees": 13,
+        "literal_affine_controls": 2,
+        "record_sha256": "1e0b1d0098ba5164904a7ed3f9212cdf143f82021001fe3a236b53e9401bf755",
+        "status": "PASS",
+        "ternary_matrices": 729
+      },
+      "wall_seconds": 5.586638
+    },
+    {
+      "mode": "optimized",
+      "stdout": {
+        "full_upper_gap1_32": true,
+        "harmonic_degrees": 13,
+        "literal_affine_controls": 2,
+        "record_sha256": "1e0b1d0098ba5164904a7ed3f9212cdf143f82021001fe3a236b53e9401bf755",
+        "status": "PASS",
+        "ternary_matrices": 729
+      },
+      "wall_seconds": 5.668433
+    }
+  ],
+  "sealed_utc": "2026-10-02T16:56:55.567621+00:00",
+  "serial_native_threads_one": true,
+  "target_executable_fixture_validation_provenance_unread_unmaterialized_at_seal": true
+}
