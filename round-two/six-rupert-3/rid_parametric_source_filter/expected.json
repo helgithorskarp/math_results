@@ -1,0 +1,526 @@
+{
+  "agent": "six-rupert-3",
+  "arithmetic": "exact ordered Q(phi) and rational squared root gates",
+  "conclusion": "some directed twofold axis m has transverse<=r0(T), chord squared<=2*(1-zeta0(T)); full-range transverse<2/15,chord<7/50",
+  "contact_loop_sha256": "075daffc596d69e6db4efd57e376e748267b188e36d7059bbfd497fbfd372ba6",
+  "damaged_controls": [
+    {
+      "control": "missing contact",
+      "reason": "contact loop is not ten distinct complete actual originals",
+      "rejected": true
+    },
+    {
+      "control": "duplicate contact",
+      "reason": "contact loop is not ten distinct complete actual originals",
+      "rejected": true
+    },
+    {
+      "control": "reversed projected orientation",
+      "reason": "contact loop has nonpositive orientation",
+      "rejected": true
+    },
+    {
+      "control": "false first coercivity9",
+      "reason": "first fivefold coercivity fails",
+      "rejected": true
+    },
+    {
+      "control": "false second coercivity11",
+      "reason": "second fivefold coercivity fails",
+      "rejected": true
+    },
+    {
+      "control": "false whole-range transverse13/100",
+      "reason": "false positive-root transverse cutoff:damaged",
+      "rejected": true
+    },
+    {
+      "control": "false old-range transverse1/10",
+      "reason": "false positive-root transverse cutoff:damaged",
+      "rejected": true
+    },
+    {
+      "control": "wrong physical width direction",
+      "reason": "whole affine width support endpoint differs",
+      "rejected": true
+    }
+  ],
+  "dependency_replay": {
+    "filter_whole_expected_bytes": 3109,
+    "filter_whole_expected_sha256": "62c99b8c370ccaba258951e6f14081aef91e0f4932c068c227f64672af9e1a16",
+    "graph": "bafkreig3ksndxbobnpq2brpxglwkozqo54hz4ykibzp6lpw4cxcn32xwsi",
+    "source_commit": "2965d5f69373933b5a186976d11867a779b7cf89",
+    "transitive_replay": "complete filter, fivefold and original brightness records"
+  },
+  "global_RID_Rupert_status": "unresolved",
+  "inverse_functions": "A_5=A_1; j=0,5; S_j=A_j^2+rho_j^2; zeta_j=(A_j*T+rho_j*sqrt(S_j-T^2))/S_j; r_j=(rho_j*T-A_j*sqrt(S_j-T^2))/S_j",
+  "larger_fivefold_contact_cap": {
+    "contact_order_chord": "1/20",
+    "contact_width_squared_lower": "(20+32phi)*(1-(10/9)*d^2)",
+    "edge_halfdifference_squared_length": "2",
+    "edge_midpoint_squared_radius": [
+      "5",
+      "8"
+    ],
+    "edge_tangent_squared_radius": [
+      "3/5",
+      "4/5"
+    ],
+    "minimum_normalized_boundary_dot_squared": [
+      "1/5",
+      "4/15"
+    ],
+    "original_antipodal_contacts": 10,
+    "original_contact_edges": 10,
+    "physical_edge_distance_identity_checks": 40,
+    "projected_edge_squared_length_lower": "9/5",
+    "robust_convexity_comparisons": 80
+  },
+  "old_annular_example_retained": "full original8732 expected record replayed; (1,0,12)/sqrt145 retains source chord strictly between1/17 and1/8",
+  "original_geometry": {
+    "Cauchy_generators": 31,
+    "fresh_facet_enumeration": {
+      "integer_side_comparisons": 360088,
+      "supporting_triples": 260,
+      "through_origin_triples": 1740,
+      "vertex_triples": 34220
+    },
+    "physical_facets": 62,
+    "proper_group": 60,
+    "vertices": 60
+  },
+  "parametric_filter": "A1<T<A2; A(receiver)<=T; mu(receiver)^2<=(20+32phi)*(1-(20/9)*(1-zeta5(T)))",
+  "proof_status": "complete written global source-localization theorem; author-checked, unformalized, independently unreviewed",
+  "role": "researcher",
+  "source_scope": "every orthonormal source frame, arbitrary proper planar roll, actual physical translation and lambda>=1",
+  "uniform_corollaries": [
+    {
+      "budget_squared": [
+        "137147521/40000",
+        "0"
+      ],
+      "eta_upper": "1/4",
+      "label": "eta<=1/4",
+      "positive_cross": [
+        "502644357/200000",
+        "-4488656/3125"
+      ],
+      "positive_root_margin": [
+        "-66949896687107333/8000000000",
+        "20210916190301/3906250"
+      ],
+      "rational_area_upper": "11711/200",
+      "simple_receiving_width_threshold": "(20+32phi)*(1-10*eta^2/729)",
+      "source_normal_chord_strict_upper": "1/8",
+      "source_transverse_strict_upper": "3/25"
+    },
+    {
+      "budget_squared": [
+        "2152089/625",
+        "0"
+      ],
+      "eta_upper": "3/8",
+      "label": "eta<=3/8",
+      "positive_cross": [
+        "7906413/3125",
+        "-4478006/3125"
+      ],
+      "positive_root_margin": [
+        "-16488304533173/1953125",
+        "10191080453788/1953125"
+      ],
+      "rational_area_upper": "1467/25",
+      "simple_receiving_width_threshold": "(20+32phi)*(1-10*eta^2/729)",
+      "source_normal_chord_strict_upper": "2/15",
+      "source_transverse_strict_upper": "13/100"
+    },
+    {
+      "budget_squared": [
+        "960",
+        "1536"
+      ],
+      "label": "whole A1<T<A2",
+      "positive_cross": [
+        "53408/1125",
+        "39088/375"
+      ],
+      "positive_root_margin": [
+        "13258496/253125",
+        "27775744/50625"
+      ],
+      "source_normal_chord_strict_upper": "7/50",
+      "source_transverse_strict_upper": "2/15"
+    }
+  ],
+  "whole_larger_receiving_band_application": {
+    "affine_raw_envelope_coefficients": [
+      [
+        "12",
+        "28"
+      ],
+      [
+        "6",
+        "6"
+      ],
+      [
+        "4",
+        "2"
+      ]
+    ],
+    "closed_raw_receiving_band": "r=(u,(k+rho)u,1),0<=u<=7/100,|rho|<=3/10",
+    "complete_original_support_endpoints": [
+      {
+        "actual_support": [
+          "3",
+          "3"
+        ],
+        "direction": [
+          [
+            "0",
+            "1"
+          ],
+          [
+            "-1",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "m": [
+          "0",
+          "0"
+        ],
+        "support_attainer": [
+          [
+            "0",
+            "2"
+          ],
+          [
+            "-1",
+            "-1"
+          ],
+          [
+            "0",
+            "-1"
+          ]
+        ]
+      },
+      {
+        "actual_support": [
+          "382/125",
+          "3049/1000"
+        ],
+        "direction": [
+          [
+            "0",
+            "1"
+          ],
+          [
+            "-1",
+            "0"
+          ],
+          [
+            "7/1000",
+            "-7/125"
+          ]
+        ],
+        "m": [
+          "-7/1000",
+          "7/125"
+        ],
+        "support_attainer": [
+          [
+            "0",
+            "2"
+          ],
+          [
+            "-1",
+            "-1"
+          ],
+          [
+            "0",
+            "-1"
+          ]
+        ]
+      }
+    ],
+    "corner_independent_complete_hulls": [
+      {
+        "direct_raw_shadow_area": [
+          "12",
+          "28"
+        ],
+        "envelope": [
+          "12",
+          "28"
+        ],
+        "hull_vertices": 12,
+        "raw_Cauchy_area": [
+          "12",
+          "28"
+        ],
+        "raw_corner": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "1",
+            "0"
+          ]
+        ]
+      },
+      {
+        "direct_raw_shadow_area": [
+          "3119/250",
+          "14259/500"
+        ],
+        "envelope": [
+          "3119/250",
+          "14259/500"
+        ],
+        "hull_vertices": 16,
+        "raw_Cauchy_area": [
+          "3119/250",
+          "14259/500"
+        ],
+        "raw_corner": [
+          [
+            "7/100",
+            "0"
+          ],
+          [
+            "7/1000",
+            "7/500"
+          ],
+          [
+            "1",
+            "0"
+          ]
+        ]
+      },
+      {
+        "direct_raw_shadow_area": [
+          "3161/250",
+          "14301/500"
+        ],
+        "envelope": [
+          "3161/250",
+          "14301/500"
+        ],
+        "hull_vertices": 16,
+        "raw_Cauchy_area": [
+          "3161/250",
+          "14301/500"
+        ],
+        "raw_corner": [
+          [
+            "7/100",
+            "0"
+          ],
+          [
+            "49/1000",
+            "7/500"
+          ],
+          [
+            "1",
+            "0"
+          ]
+        ]
+      }
+    ],
+    "directional_width_squared_upper": [
+      "112048844661764/5015937103441",
+      "149093493133764/5015937103441"
+    ],
+    "fit_status": "necessary all-source localization only; identity closed fits remain; rigidity and strict passage unresolved here",
+    "maximum_width_parameter": [
+      "-7/1000",
+      "7/125"
+    ],
+    "normalized_envelope_u_derivative_lower": [
+      "12219/2500",
+      "8763/2500"
+    ],
+    "old_filter_failure_examples": [
+      {
+        "area_squared": [
+          "496816683460/513882281",
+          "782820034340/513882281"
+        ],
+        "complete_shadow_vertices": 16,
+        "direct_raw_area": [
+          "946/75",
+          "2143/75"
+        ],
+        "identity_fit_inside_new_source_cap": true,
+        "old_filter_area_excess_squared_margin": [
+          "-2228824393213/900000000",
+          "43097877479/28125000"
+        ],
+        "raw_major_u": "1/15",
+        "raw_receiver": [
+          [
+            "1/15",
+            "0"
+          ],
+          [
+            "7/150",
+            "1/75"
+          ],
+          [
+            "1",
+            "0"
+          ]
+        ],
+        "slope_offset": "3/10"
+      },
+      {
+        "area_squared": [
+          "984393357423060/1016627501681",
+          "1551383951285140/1016627501681"
+        ],
+        "complete_shadow_vertices": 16,
+        "direct_raw_area": [
+          "3161/250",
+          "14301/500"
+        ],
+        "identity_fit_inside_new_source_cap": true,
+        "old_filter_area_excess_squared_margin": [
+          "-99057910364937/40000000000",
+          "1919981996471/1250000000"
+        ],
+        "raw_major_u": "7/100",
+        "raw_receiver": [
+          [
+            "7/100",
+            "0"
+          ],
+          [
+            "49/1000",
+            "7/500"
+          ],
+          [
+            "1",
+            "0"
+          ]
+        ],
+        "slope_offset": "3/10"
+      }
+    ],
+    "outer_slope_derivative_lower": [
+      "150657/50000",
+      "2273/50000"
+    ],
+    "physical_area_squared_margin": [
+      "3984993318273/1600000000",
+      "-76798176959/50000000"
+    ],
+    "physical_area_strict_rational_upper": "2347/40",
+    "simple_width_threshold": [
+      "12935/648",
+      "2587/81"
+    ],
+    "width_squared_margin": [
+      "-7726504907813737/3250327243029768",
+      "899656342766983/406290905378721"
+    ]
+  },
+  "whole_subthird_scalar_gates": {
+    "A0": [
+      "12",
+      "28"
+    ],
+    "A1_positive_root_bracket": [
+      "583/10",
+      "11661/200"
+    ],
+    "A1_squared": [
+      "940",
+      "1520"
+    ],
+    "A2_squared": [
+      "960",
+      "1536"
+    ],
+    "first_coercivity_lower": "8",
+    "first_coercivity_rational": "2109/250",
+    "fivefold_initial_chord_upper": "3/25",
+    "fivefold_inverse_chord_strict_upper": "(T-A1)/9<2/45<1/20",
+    "fivefold_parametric_width_threshold": "(20+32phi)*(1-(20/9)*(1-zeta5(T)))",
+    "gap_positive_cross": [
+      "496/25",
+      "16"
+    ],
+    "gap_positive_root_margin": [
+      "-30016/625",
+      "2048/25"
+    ],
+    "inverse_branches": [
+      {
+        "S": [
+          "4928/5",
+          "7744/5"
+        ],
+        "axis_area_squared": [
+          "928",
+          "1456"
+        ],
+        "increasing_interval_squared_limit": [
+          "1/44",
+          "1/44"
+        ],
+        "orbit": "twofold",
+        "polar_transverse_squared_upper": [
+          "-7/6",
+          "3/4"
+        ],
+        "strict_subthird_radicand_lower": [
+          "128/5",
+          "64/5"
+        ],
+        "tangent_inradius_squared": [
+          "288/5",
+          "464/5"
+        ]
+      },
+      {
+        "S": [
+          "988",
+          "1584"
+        ],
+        "axis_area_squared": [
+          "940",
+          "1520"
+        ],
+        "increasing_interval_squared_limit": [
+          "276/401",
+          "-160/401"
+        ],
+        "orbit": "fivefold",
+        "polar_transverse_squared_upper": [
+          "11/16",
+          "-5/12"
+        ],
+        "strict_subthird_radicand_lower": [
+          "28",
+          "48"
+        ],
+        "tangent_inradius_squared": [
+          "48",
+          "64"
+        ]
+      }
+    ],
+    "second_chord_upper": "1/20",
+    "second_coercivity_lower": "9",
+    "second_coercivity_rational": "10513/1000",
+    "strict_A2_minus_A1_upper": "2/5"
+  }
+}
