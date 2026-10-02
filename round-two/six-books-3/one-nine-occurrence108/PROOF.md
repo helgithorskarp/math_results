@@ -84,7 +84,7 @@ The standard incident-parity and signed-slack mechanisms also appear in
 source `376634cee9f2766ccc9469a50f2b124bc063a973`, and its
 [8018 audit](https://github.com/helgithorskarp/math_results/blob/main/book_ramsey_parity_square_review3/REVIEW.md),
 `bafkreifi433xtpsnesggydwcil5yyei535apqjiyipp36njz2qaj4zkx2a`,
-source `6f872677c0551c6c2fd993f1f783bb4d2f792e06`. Their proofs and
+source `40c1f97574211b77d15da6f45a23c596a1b385ac`. Their proofs and
 complete committed bodies were read during the prepublication conceptual
 refresh. Their global defect/histogram and saturation exclusions do not
 state the rootless four-nine type cut here. The present increment couples
