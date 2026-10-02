@@ -1,0 +1,101 @@
+{
+  "actual_agent": "six-code-1",
+  "role": "researcher",
+  "proof_status": "New ordinary transfer author checked/unformalized/independently unreviewed. Arithmetic validation and replaying author programs are not independent review.",
+  "python_version": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "numeric_threads": 1,
+  "scope_limits": "Unchanged1CPU2GiB, one mathematical job at a time; no guard escalation.",
+  "own_checks": [
+    {
+      "mode": "normal",
+      "command": [
+        "/usr/bin/python3",
+        "round-two/six-code-1/selection_deficit_cut/verify.py"
+      ],
+      "seconds": 0.4984206330263987,
+      "exit_code": 0,
+      "mathematical_sha256": "332b643b3b29175dc24fcbf346e2fa27ec0f2cfa7ee53ccfc24d6cfb065d83c6"
+    },
+    {
+      "mode": "optimized",
+      "command": [
+        "/usr/bin/python3",
+        "-O",
+        "round-two/six-code-1/selection_deficit_cut/verify.py"
+      ],
+      "seconds": 0.6161428730119951,
+      "exit_code": 0,
+      "mathematical_sha256": "332b643b3b29175dc24fcbf346e2fa27ec0f2cfa7ee53ccfc24d6cfb065d83c6"
+    }
+  ],
+  "own_math_source_sha256": {
+    "verify.py": "33c378b5f17716ced8d8a5e5ca284e872be7ef720eb6fe4372475cf943db8a8d",
+    "BASELINE69.txt": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+    "EXPECTED.json": "332b643b3b29175dc24fcbf346e2fa27ec0f2cfa7ee53ccfc24d6cfb065d83c6"
+  },
+  "own_peak_child_rss_kib": 24468,
+  "own_coverage": {
+    "enlarged_high_graph_hub_placements": 7070,
+    "ordered_deficit_hub_placements": 162,
+    "primary69_hub_partitions": 12615,
+    "damaged_primary_inputs_rejected": 4,
+    "enlarged_two_hub_q1_control": true
+  },
+  "imported9249_replay": {
+    "source_commit": "f75822147714015beb30b690d4fbfbd52b6f01d0",
+    "graph_ref": "bafkreibbbtgqmcd56rs55op2fl6gbo4oklwr5byq4eqkl5xkhswyn5iag4",
+    "graph_height": 9249,
+    "executed_by": "six-code-1, researcher",
+    "source_author": "six-code-3, researcher",
+    "runs": [
+      {
+        "mode": "normal",
+        "seconds": 49.46395044703968,
+        "peak_child_rss_kib": 23656,
+        "completed_stages": 27,
+        "source_hashes_match_published_input": true,
+        "result_sha256": "dd86b279d5091a4aac99ce21cfa6e07e6a64a6c1cb0c8e9b2d62b5b990014e78"
+      },
+      {
+        "mode": "optimized",
+        "seconds": 54.62822350603528,
+        "peak_child_rss_kib": 25500,
+        "completed_stages": 27,
+        "source_hashes_match_published_input": true,
+        "result_sha256": "dd86b279d5091a4aac99ce21cfa6e07e6a64a6c1cb0c8e9b2d62b5b990014e78"
+      }
+    ],
+    "whole_normal_optimized_mathematical_bytes_equal": true,
+    "coverage": {
+      "dfs_states": 4568356,
+      "distinct_word_unions": 3,
+      "explicit_full_maps": 12972,
+      "maximum_states": 15454,
+      "positive_maps": 3,
+      "positive_products": 3,
+      "positive_source_uv_uncovered": 0,
+      "products": 356,
+      "represented_full_maps": 5536512
+    },
+    "new_branch_upper62": 62,
+    "semantic_damages_or_gaps_rejected": 44,
+    "actual_transported_interfaces": 9,
+    "automatic_v_eligible_pairs": 9,
+    "old9209_branch": "Explicit imported premise, not rerun by this cut checker.",
+    "independent_review_claimed": false
+  },
+  "independent_prior_context": {
+    "graph_height": 9279,
+    "graph_ref": "bafkreifbz52wxa4fa54i5vyd6tl53mrvm2sumjektdsk3ba2wzsk7ftity",
+    "source_commit": "6274fca41be5b36f80787ce71bbe53bff13e0bae",
+    "source_sha256": "06b58fad21e84021c9e22fd7fdc2954655939686c133e588fdff299c36a11ac4",
+    "scope": "Independent full verdict on9215 and new five-role61 refinement; no verdict on9249/9209 or this new selection cut. No reviewer programs rerun byCode1."
+  },
+  "independent_local_input_context": {
+    "graph_height": 9293,
+    "graph_ref": "bafkreiau3g5ves3tqvocv3r7th4xld3wkmr3cdcxppws4jaavngi4e3yi4",
+    "source_commit": "ca165f5c7d627ee2003cce06295f89761690da4c",
+    "source_sha256": "f10f6f657cad0622ee916a084723b66eec315bf85de83a04eb6a7c9628739864",
+    "scope": "Independent combined9249 upper67/newbranch62 and all stated structural conclusions, conditional8933/8323, with enlarged1652-product carrier replacing inherited numerical premises. No verdict on this new ambient cut or separate blanket9209 verdict. No reviewer programs rerun byCode1."
+  }
+}
