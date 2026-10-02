@@ -1,0 +1,952 @@
+{
+  "controls.py": {
+    "all_four_root_controls": 128,
+    "exact_endpoint_controls": 284,
+    "precision_bits": 96,
+    "zero_and_tangent_retained": true
+  },
+  "damages.py": {
+    "false_chart_rejected": true,
+    "false_empty_rejected": true,
+    "structural_damages": [
+      "drop branch",
+      "change branch sign",
+      "g-half witness used for a whole branch",
+      "truncate closed partition",
+      "unused partition suffix",
+      "unrecognized witness",
+      "wrong full interval",
+      "restore removed point",
+      "drop a required contact",
+      "substitute removed-point comparison",
+      "wrong precision metadata",
+      "permute literal codes",
+      "unknown W contact",
+      "replace all leaves by false chart tests",
+      "depth guard",
+      "arithmetic g-half target leak"
+    ],
+    "valid_representations": [
+      "harmless metadata",
+      "dictionary field order"
+    ]
+  },
+  "identities.py": {
+    "A_noncontacts": [
+      [
+        0,
+        9,
+        "(4*t**2 - t - 1)/(t + 1)"
+      ],
+      [
+        5,
+        6,
+        "(4*t**2 - t - 1)/(t + 1)"
+      ],
+      [
+        6,
+        7,
+        "(9*t**3 - 2*t**2 - 3*t)/(t**2 + 2*t + 1)"
+      ],
+      [
+        6,
+        9,
+        "(9*t**3 - 2*t**2 - 3*t)/(t**2 + 2*t + 1)"
+      ],
+      [
+        7,
+        9,
+        "(9*t**3 - 2*t**2 - 3*t)/(t**2 + 2*t + 1)"
+      ],
+      [
+        7,
+        11,
+        "(4*t**2 - t - 1)/(t + 1)"
+      ]
+    ],
+    "checks": [
+      "B unit 1",
+      "B unit 2",
+      "B unit 4",
+      "B unit 8",
+      "B unit 10",
+      "B unit 12",
+      "B pair (1, 2)",
+      "B pair (1, 4)",
+      "B pair (1, 8)",
+      "B pair (1, 10)",
+      "B pair (1, 12)",
+      "B pair (2, 4)",
+      "B pair (2, 8)",
+      "B pair (2, 10)",
+      "B pair (2, 12)",
+      "B pair (4, 8)",
+      "B pair (4, 10)",
+      "B pair (4, 12)",
+      "B pair (8, 10)",
+      "B pair (8, 12)",
+      "B pair (10, 12)",
+      "A unit 0",
+      "A unit 5",
+      "A unit 6",
+      "A unit 7",
+      "A unit 9",
+      "A unit 11",
+      "A pair (0, 5)",
+      "A pair (0, 6)",
+      "A pair (0, 7)",
+      "A pair (0, 9)",
+      "A pair (0, 11)",
+      "A pair (5, 6)",
+      "A pair (5, 7)",
+      "A pair (5, 9)",
+      "A pair (5, 11)",
+      "A pair (6, 7)",
+      "A pair (6, 9)",
+      "A pair (6, 11)",
+      "A pair (7, 9)",
+      "A pair (7, 11)",
+      "A pair (9, 11)",
+      "monotone k",
+      "k<t factor",
+      "h<t factor",
+      "mu square",
+      "k Gram positivity",
+      "U denominator",
+      "circle normal length",
+      "circle transverse orthogonality",
+      "circle radial length",
+      "normal contact orthogonality",
+      "W circle unit",
+      "W circle contact",
+      "chart packing gap",
+      "homogeneous s",
+      "V projection first contact",
+      "V projection second contact",
+      "both V roots unit",
+      "both U roots unit",
+      "strong denominator identity",
+      "negative s endpoint",
+      "positive s endpoint"
+    ],
+    "contacts": [
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        11
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        6,
+        11
+      ],
+      [
+        7,
+        12
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        10,
+        12
+      ]
+    ],
+    "identities": 63,
+    "k_endpoints": {
+      "14/25": "-11354/38025",
+      "593/1000": "-605547287/2537649000"
+    },
+    "labels": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "strengthened_denominator": "g>1/2 implies 1-s^2>625/858, and |s|<sqrt(233/858)<523/1000",
+    "tests": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        10
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        5,
+        12
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        6,
+        4
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        6,
+        12
+      ],
+      [
+        7,
+        2
+      ],
+      [
+        7,
+        4
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        9,
+        1
+      ],
+      [
+        9,
+        2
+      ],
+      [
+        9,
+        4
+      ],
+      [
+        9,
+        8
+      ],
+      [
+        9,
+        12
+      ],
+      [
+        11,
+        1
+      ],
+      [
+        11,
+        2
+      ],
+      [
+        11,
+        4
+      ],
+      [
+        11,
+        8
+      ],
+      [
+        11,
+        10
+      ],
+      [
+        11,
+        12
+      ]
+    ]
+  },
+  "positive.py": {
+    "actual_packing_bridge": "Sealed symbolic identities give all twelve unit norms, twenty prescribed contacts and twelve strict internal noncontacts. These33 negative gaps plus the negative chart give every other packing comparison. Exactly20 contacts throughout; no extra point.",
+    "branch": [
+      -1,
+      1
+    ],
+    "chart_upper": "-33691804953363581084823520767/39614081257132168796771975168",
+    "g_lower": "23355228330962926924499123191/39614081257132168796771975168",
+    "parameter_rectangle": [
+      "592999/1000000",
+      "593/1000",
+      "949999/1000000",
+      "950001/1000000"
+    ],
+    "strict_intercluster_gaps": [
+      {
+        "pair": [
+          0,
+          1
+        ],
+        "upper_gap": "-107459454193978332646532052991/79228162514264337593543950336"
+      },
+      {
+        "pair": [
+          0,
+          2
+        ],
+        "upper_gap": "-60861102786650169534752000529/39614081257132168796771975168"
+      },
+      {
+        "pair": [
+          0,
+          4
+        ],
+        "upper_gap": "-84733586996513390426880027923/79228162514264337593543950336"
+      },
+      {
+        "pair": [
+          0,
+          8
+        ],
+        "upper_gap": "-70243154983682580232364289673/79228162514264337593543950336"
+      },
+      {
+        "pair": [
+          0,
+          10
+        ],
+        "upper_gap": "-109887095847429020992929532395/79228162514264337593543950336"
+      },
+      {
+        "pair": [
+          0,
+          12
+        ],
+        "upper_gap": "-64096533630052570760993588197/79228162514264337593543950336"
+      },
+      {
+        "pair": [
+          5,
+          1
+        ],
+        "upper_gap": "-42121784575306636967935119757/39614081257132168796771975168"
+      },
+      {
+        "pair": [
+          5,
+          2
+        ],
+        "upper_gap": "-13470639135378971504052366749/9903520314283042199192993792"
+      },
+      {
+        "pair": [
+          5,
+          4
+        ],
+        "upper_gap": "-121420512695256070638246063231/79228162514264337593543950336"
+      },
+      {
+        "pair": [
+          5,
+          8
+        ],
+        "upper_gap": "-13798397419887652469605193959/9903520314283042199192993792"
+      },
+      {
+        "pair": [
+          5,
+          10
+        ],
+        "upper_gap": "-22765544548183352416029711301/39614081257132168796771975168"
+      },
+      {
+        "pair": [
+          5,
+          12
+        ],
+        "upper_gap": "-12857478936470316595754740375/79228162514264337593543950336"
+      },
+      {
+        "pair": [
+          6,
+          1
+        ],
+        "upper_gap": "-27565460916057895654090339961/19807040628566084398385987584"
+      },
+      {
+        "pair": [
+          6,
+          2
+        ],
+        "upper_gap": "-70275115533655248115582383991/79228162514264337593543950336"
+      },
+      {
+        "pair": [
+          6,
+          4
+        ],
+        "upper_gap": "-23070397318516523414903259827/39614081257132168796771975168"
+      },
+      {
+        "pair": [
+          6,
+          8
+        ],
+        "upper_gap": "-202565465386703046689060483/39614081257132168796771975168"
+      },
+      {
+        "pair": [
+          6,
+          10
+        ],
+        "upper_gap": "-3508226990152197855936289565/2475880078570760549798248448"
+      },
+      {
+        "pair": [
+          6,
+          12
+        ],
+        "upper_gap": "-29849835419398490545929406819/19807040628566084398385987584"
+      },
+      {
+        "pair": [
+          7,
+          2
+        ],
+        "upper_gap": "-13711581198755963317012088257/9903520314283042199192993792"
+      },
+      {
+        "pair": [
+          7,
+          4
+        ],
+        "upper_gap": "-8675883723440045587796465343/9903520314283042199192993792"
+      },
+      {
+        "pair": [
+          7,
+          8
+        ],
+        "upper_gap": "-28041069708349900280152641775/19807040628566084398385987584"
+      },
+      {
+        "pair": [
+          7,
+          10
+        ],
+        "upper_gap": "-8738241662482920302536675805/9903520314283042199192993792"
+      },
+      {
+        "pair": [
+          9,
+          1
+        ],
+        "upper_gap": "-545012438731513037154953537/618970019642690137449562112"
+      },
+      {
+        "pair": [
+          9,
+          2
+        ],
+        "upper_gap": "-22963361383303995962308075125/39614081257132168796771975168"
+      },
+      {
+        "pair": [
+          9,
+          4
+        ],
+        "upper_gap": "-6883846418099761618952207267/4951760157141521099596496896"
+      },
+      {
+        "pair": [
+          9,
+          8
+        ],
+        "upper_gap": "-35218384666207372810925211089/39614081257132168796771975168"
+      },
+      {
+        "pair": [
+          9,
+          12
+        ],
+        "upper_gap": "-15006310521845363047448669489/39614081257132168796771975168"
+      },
+      {
+        "pair": [
+          11,
+          1
+        ],
+        "upper_gap": "-121548207731860210261278369537/79228162514264337593543950336"
+      },
+      {
+        "pair": [
+          11,
+          2
+        ],
+        "upper_gap": "-85169885547109862715449914257/79228162514264337593543950336"
+      },
+      {
+        "pair": [
+          11,
+          4
+        ],
+        "upper_gap": "-108083728174973842971738860233/79228162514264337593543950336"
+      },
+      {
+        "pair": [
+          11,
+          8
+        ],
+        "upper_gap": "-46323734718493094183919938645/79228162514264337593543950336"
+      },
+      {
+        "pair": [
+          11,
+          10
+        ],
+        "upper_gap": "-69811548123851940145344268967/79228162514264337593543950336"
+      },
+      {
+        "pair": [
+          11,
+          12
+        ],
+        "upper_gap": "-81301038816236110744002094305/79228162514264337593543950336"
+      }
+    ]
+  },
+  "ranges": [
+    {
+      "complete": true,
+      "counts": {
+        "W-pair": 67,
+        "independent-necessary-empty": 2,
+        "no-real-V": 1,
+        "pair": 2430
+      },
+      "coverage": [
+        {
+          "branch": [
+            "bad",
+            -1,
+            -1
+          ],
+          "leaves": 7861,
+          "maxdepth": 16,
+          "nodes": 15721,
+          "normalized_area": "1"
+        },
+        {
+          "branch": [
+            "bad",
+            1,
+            -1
+          ],
+          "leaves": 1675,
+          "maxdepth": 13,
+          "nodes": 3349,
+          "normalized_area": "1"
+        },
+        {
+          "branch": [
+            "bad",
+            1,
+            1
+          ],
+          "leaves": 1675,
+          "maxdepth": 13,
+          "nodes": 3349,
+          "normalized_area": "1"
+        },
+        {
+          "branch": [
+            "g-half",
+            -1,
+            1
+          ],
+          "leaves": 880,
+          "maxdepth": 14,
+          "nodes": 1759,
+          "normalized_area": "1"
+        }
+      ],
+      "executed": 2500,
+      "failed": 0,
+      "margins": {
+        "W-pair": "2107280532027122799904845/19807040628566084398385987584",
+        "no-real-V": "1344679123034195021370189941/79228162514264337593543950336",
+        "pair": "113308371692071786723048151/39614081257132168796771975168"
+      },
+      "range": [
+        0,
+        2500
+      ],
+      "records_sha256": "9d8e1a68dac543d59ae81b01b6960fb8653dabc0456ef131983f73bb92964039"
+    },
+    {
+      "complete": true,
+      "counts": {
+        "pair": 2500
+      },
+      "coverage": [
+        {
+          "branch": [
+            "bad",
+            -1,
+            -1
+          ],
+          "leaves": 7861,
+          "maxdepth": 16,
+          "nodes": 15721,
+          "normalized_area": "1"
+        },
+        {
+          "branch": [
+            "bad",
+            1,
+            -1
+          ],
+          "leaves": 1675,
+          "maxdepth": 13,
+          "nodes": 3349,
+          "normalized_area": "1"
+        },
+        {
+          "branch": [
+            "bad",
+            1,
+            1
+          ],
+          "leaves": 1675,
+          "maxdepth": 13,
+          "nodes": 3349,
+          "normalized_area": "1"
+        },
+        {
+          "branch": [
+            "g-half",
+            -1,
+            1
+          ],
+          "leaves": 880,
+          "maxdepth": 14,
+          "nodes": 1759,
+          "normalized_area": "1"
+        }
+      ],
+      "executed": 2500,
+      "failed": 0,
+      "margins": {
+        "pair": "328868362901074148704643739/79228162514264337593543950336"
+      },
+      "range": [
+        2500,
+        5000
+      ],
+      "records_sha256": "91b483961d80fae60566a374eb31f434a6335c34ea18edf15b5c78164a219321"
+    },
+    {
+      "complete": true,
+      "counts": {
+        "chart": 4,
+        "pair": 2496
+      },
+      "coverage": [
+        {
+          "branch": [
+            "bad",
+            -1,
+            -1
+          ],
+          "leaves": 7861,
+          "maxdepth": 16,
+          "nodes": 15721,
+          "normalized_area": "1"
+        },
+        {
+          "branch": [
+            "bad",
+            1,
+            -1
+          ],
+          "leaves": 1675,
+          "maxdepth": 13,
+          "nodes": 3349,
+          "normalized_area": "1"
+        },
+        {
+          "branch": [
+            "bad",
+            1,
+            1
+          ],
+          "leaves": 1675,
+          "maxdepth": 13,
+          "nodes": 3349,
+          "normalized_area": "1"
+        },
+        {
+          "branch": [
+            "g-half",
+            -1,
+            1
+          ],
+          "leaves": 880,
+          "maxdepth": 14,
+          "nodes": 1759,
+          "normalized_area": "1"
+        }
+      ],
+      "executed": 2500,
+      "failed": 0,
+      "margins": {
+        "chart": "345645377135610125679109071/79228162514264337593543950336",
+        "pair": "495556318506256861050386721/79228162514264337593543950336"
+      },
+      "range": [
+        5000,
+        7500
+      ],
+      "records_sha256": "e4adfa9519b0ad09cc77e8f4e587851e5b72483a7fdb5d2c51d64e275219ffbe"
+    },
+    {
+      "complete": true,
+      "counts": {
+        "W-pair": 134,
+        "chart": 26,
+        "independent-necessary-empty": 4,
+        "no-real-V": 2,
+        "pair": 2334
+      },
+      "coverage": [
+        {
+          "branch": [
+            "bad",
+            -1,
+            -1
+          ],
+          "leaves": 7861,
+          "maxdepth": 16,
+          "nodes": 15721,
+          "normalized_area": "1"
+        },
+        {
+          "branch": [
+            "bad",
+            1,
+            -1
+          ],
+          "leaves": 1675,
+          "maxdepth": 13,
+          "nodes": 3349,
+          "normalized_area": "1"
+        },
+        {
+          "branch": [
+            "bad",
+            1,
+            1
+          ],
+          "leaves": 1675,
+          "maxdepth": 13,
+          "nodes": 3349,
+          "normalized_area": "1"
+        },
+        {
+          "branch": [
+            "g-half",
+            -1,
+            1
+          ],
+          "leaves": 880,
+          "maxdepth": 14,
+          "nodes": 1759,
+          "normalized_area": "1"
+        }
+      ],
+      "executed": 2500,
+      "failed": 0,
+      "margins": {
+        "W-pair": "2107280532027122799904845/19807040628566084398385987584",
+        "chart": "109131020109242509292082711/79228162514264337593543950336",
+        "no-real-V": "1344679123034195021370189941/79228162514264337593543950336",
+        "pair": "76260728086394055782721091/39614081257132168796771975168"
+      },
+      "range": [
+        7500,
+        10000
+      ],
+      "records_sha256": "da7347bae86b9b51f38e340d101fede5a7d664666073a2d386bf932d45982ec0"
+    },
+    {
+      "complete": true,
+      "counts": {
+        "W-pair": 67,
+        "chart": 14,
+        "independent-necessary-empty": 2,
+        "no-real-V": 1,
+        "outside-target-g-half": 166,
+        "pair": 1841
+      },
+      "coverage": [
+        {
+          "branch": [
+            "bad",
+            -1,
+            -1
+          ],
+          "leaves": 7861,
+          "maxdepth": 16,
+          "nodes": 15721,
+          "normalized_area": "1"
+        },
+        {
+          "branch": [
+            "bad",
+            1,
+            -1
+          ],
+          "leaves": 1675,
+          "maxdepth": 13,
+          "nodes": 3349,
+          "normalized_area": "1"
+        },
+        {
+          "branch": [
+            "bad",
+            1,
+            1
+          ],
+          "leaves": 1675,
+          "maxdepth": 13,
+          "nodes": 3349,
+          "normalized_area": "1"
+        },
+        {
+          "branch": [
+            "g-half",
+            -1,
+            1
+          ],
+          "leaves": 880,
+          "maxdepth": 14,
+          "nodes": 1759,
+          "normalized_area": "1"
+        }
+      ],
+      "executed": 2091,
+      "failed": 0,
+      "margins": {
+        "W-pair": "2107280532027122799904845/19807040628566084398385987584",
+        "chart": "109131020109242509292082711/79228162514264337593543950336",
+        "no-real-V": "1344679123034195021370189941/79228162514264337593543950336",
+        "outside-target-g-half": "227790521137357474267447/79228162514264337593543950336",
+        "pair": "113308371692071786723048151/39614081257132168796771975168"
+      },
+      "range": [
+        10000,
+        12091
+      ],
+      "records_sha256": "5ef67b109081a659014ba564be9c1998e1b19309663eae9b0f033a97f435177d"
+    }
+  ]
+}
