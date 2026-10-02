@@ -97,7 +97,7 @@ requires the low sublevel only.
 ## 2. Credited actual entry before local estimates
 
 The complete ordinary proof of six-sendov-1's
-[9731 whole-origin entry](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-1/weighted-origin-routing/PROOF.md),
+[9731 whole-origin entry](https://raw.githubusercontent.com/helgithorskarp/math_results/main/round-two/six-sendov-1/weighted-origin-routing/PROOF.md),
 source45ce3d1c8eafadc7cfc4f0f3a207b25a456c744d, was read with its actual
 9687/8656 inputs and its unchanged exact baseline reproduced. It states,
 with EXACTLY the actual domain and low sublevel of Section1,
@@ -108,7 +108,7 @@ with EXACTLY the actual domain and low sublevel of Section1,
 
 Its canonical signed committed statement and complete defining-proof bytes
 were checked. Fresh
-[REVIEW9764](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-3/whole-origin-entry-audit/REVIEW.md),
+[REVIEW9764](https://raw.githubusercontent.com/helgithorskarp/math_results/main/round-two/six-reviewer-3/whole-origin-entry-audit/REVIEW.md),
 source746b284c87d7ec736873e8d46c4ed9ae45653d05, independently CONFIRMS
 its full actual H64 entry domain. Its whole review, independent core proof
 and late transport were read and aligned with the complete signed body;
@@ -119,10 +119,10 @@ estimates before entry. The earlier9687 global carrier and the alternate
 H<=1/16 reflection entry are not premises here.
 
 Only AFTER (6), apply the imported
-[9620 fixed-energy proof](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-3/critical-radius-routing/PROOF.md),
+[9620 fixed-energy proof](https://raw.githubusercontent.com/helgithorskarp/math_results/main/round-two/six-sendov-3/critical-radius-routing/PROOF.md),
 sourcecd6be6d4272505f394bbea6e13ff69a9f73ee5bf, and the complete all-phase
 normal/motion proof of
-[9671](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-3/effective-profile-stability/PROOF.md),
+[9671](https://raw.githubusercontent.com/helgithorskarp/math_results/main/round-two/six-sendov-3/effective-profile-stability/PROOF.md),
 source48241d95ef16ffb51e183c89101762a321152dc0. Their scoped consequences are
 
 \[
@@ -174,7 +174,7 @@ The two actual unaveraged cube normals additionally give the imported bound
 
 Independent audits9667/9669 assess9620, not9671/9731 or this new theorem.
 The complete pinned
-[REVIEW9756](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-1/effective-stability-audit/REVIEW.md),
+[REVIEW9756](https://raw.githubusercontent.com/helgithorskarp/math_results/main/round-two/six-reviewer-1/effective-stability-audit/REVIEW.md),
 source345e13e266c576620644bbbc47812b3707623dda, independently CONFIRMS9671
 in its exact domain and proves a14eta^(3/2) refinement using the stronger
 credited9669 constants. Its whole ordinary proof was read and its complete
@@ -377,7 +377,7 @@ J^2<96eta Delta, with sqrt96<10, give
 
 Also |m+xeta|<13Delta/5+sqrt(eta Delta)+44eta^2 by (3)-(4).
 Use x+y=2/3 and compare
-m+(a-m)omega_k+[T/(14u)](omega_k^-1-omega_k)
+m+(a-m)omega_k+{T/(14u)}(omega_k^-1-omega_k)
 with the target in (5). Each of its two phase-difference factors has
 modulus at most2. The imported full remainder (8) has
 
