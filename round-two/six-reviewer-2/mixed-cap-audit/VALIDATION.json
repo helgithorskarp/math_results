@@ -1,0 +1,58 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "independent": [
+    {
+      "phase": "symbolic",
+      "full_stdout_equal": true,
+      "stdout_sha256": "88b04a2f267de71cb08d55567dc20c7afa762cb1c6d104dba21c67266fe5e953",
+      "normal_seconds": 1.7877930019749328,
+      "optimized_seconds": 1.906233062967658,
+      "normal_peak_kib": 17892,
+      "optimized_peak_kib": 20496
+    },
+    {
+      "phase": "physical",
+      "full_stdout_equal": true,
+      "stdout_sha256": "315a8262f8aaacf0d1e15c585c5833ec48f031a01e9e4d2d8b6d8c760be99e68",
+      "normal_seconds": 6.592792053008452,
+      "optimized_seconds": 7.096641948912293,
+      "normal_peak_kib": 23124,
+      "optimized_peak_kib": 26152
+    }
+  ],
+  "late_comparison": {
+    "phase": "late independent fixture adapter",
+    "full_stdout_equal": true,
+    "stdout_sha256": "12e270caab46cdff1a892ac4af966ee23d9cdb99f72a1d8db5a74c1bb58464d3",
+    "normal_seconds": 9.601450645015575,
+    "optimized_seconds": 9.459107956965454,
+    "normal_peak_kib": 23552,
+    "optimized_peak_kib": 26000
+  },
+  "native_replay": {
+    "full_stable_math_record_equal": true,
+    "stable_record_sha256": "9c4803c6333dd9174d54511227a298cb84553c77d09b118319b2e3c981af4b4b",
+    "runs": [
+      {
+        "mode": "normal",
+        "elapsed_seconds": 8.225619134958833,
+        "peak_kib": 22020
+      },
+      {
+        "mode": "optimized",
+        "elapsed_seconds": 8.623722549993545,
+        "peak_kib": 24336
+      }
+    ],
+    "timing_stdout_not_compared": true
+  },
+  "sealed_math_and_proof_unchanged_after_target_program_inspection": true,
+  "internal_guard_seconds": 60,
+  "outer_guard_seconds": 90,
+  "solver_and_native_threads": 1,
+  "scope": "unchanged1CPU2GiB",
+  "python": "CPython3.12.14 stdlib integer/Fraction; POSIX SIGALRM",
+  "other_dependencies": [],
+  "publication": "Only compact engines/proof/whole expected records/provenance/validation; no author code duplicated."
+}

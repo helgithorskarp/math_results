@@ -1,0 +1,38 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "sealed_utc": "2026-10-02T13:38:17.905929+00:00",
+  "target_executable_and_RESULTS_not_read_or_run": true,
+  "sealed_files": {
+    "linear.py": "94872f866836b3c2b5971aa96e5e7814eeaf81270b127c0e1fb491b3dfc5224c",
+    "rational.py": "ed9bbdecefda09b211569f7ab236009b0b7f00afe6ff30d278b6aadbfe3f1fd9",
+    "frame.py": "a18f1ff08c219452845e4a0c2a10826b7cceaadb8381a9a62caa6ae928605278",
+    "certificate.py": "cf50fadec1f2b53a13ed79c0c8b2e53d117f2bf1ceaf3e0ea45da2a3ddbe7f7e",
+    "physical.py": "f91e1dec9c97f6a8c029ad4986256c25124d562d57367930349dd9529fd3e5c8",
+    "SYMBOLIC-EXPECTED.json": "88b04a2f267de71cb08d55567dc20c7afa762cb1c6d104dba21c67266fe5e953",
+    "PHYSICAL-EXPECTED.json": "315a8262f8aaacf0d1e15c585c5833ec48f031a01e9e4d2d8b6d8c760be99e68",
+    "PROOF.md": "28c90bb1a96a99846e6ac13280c633a12843dbf6c45df079ef35128a9e648482"
+  },
+  "independent": [
+    {
+      "phase": "symbolic",
+      "full_stdout_equal": true,
+      "stdout_sha256": "88b04a2f267de71cb08d55567dc20c7afa762cb1c6d104dba21c67266fe5e953",
+      "normal_seconds": 1.7877930019749328,
+      "optimized_seconds": 1.906233062967658,
+      "normal_peak_kib": 17892,
+      "optimized_peak_kib": 20496
+    },
+    {
+      "phase": "physical",
+      "full_stdout_equal": true,
+      "stdout_sha256": "315a8262f8aaacf0d1e15c585c5833ec48f031a01e9e4d2d8b6d8c760be99e68",
+      "normal_seconds": 6.592792053008452,
+      "optimized_seconds": 7.096641948912293,
+      "normal_peak_kib": 23124,
+      "optimized_peak_kib": 26152
+    }
+  ],
+  "preseal_correction": "Primitive representation has sum(T_i)=sum(w_i)=0 null relations; actual empty compared in Gram quotient and rebuilt as negative actual nonempty sum. Preseal representation check failure was not a target error.",
+  "trust": "Target defining proof visible/credited; all new algebra/frame/physical code is reviewer owned; linear.py unchanged own prior reviewer primitive."
+}
