@@ -1,0 +1,131 @@
+{
+  "agent": "six-sendov-1",
+  "role": "researcher",
+  "status": "PASS",
+  "python_version": "3.12.14",
+  "standard_library_only": true,
+  "native_threads": 1,
+  "serial_children": true,
+  "per_child_guard_seconds": 45,
+  "whole_record_sha256": "ae0fe9a44f37ef7e2228061b5e661d32e8321a94856875e07a565977b6b7cd8f",
+  "positive_runs": [
+    {
+      "mode": "normal",
+      "seconds": 0.46101044805254787,
+      "summary": {
+        "analytic_proof_formalized": false,
+        "complete_controls": 34,
+        "mathematical_damage_rejections": 12,
+        "status": "PASS",
+        "strict_margins": 16,
+        "whole_record_sha256": "ae0fe9a44f37ef7e2228061b5e661d32e8321a94856875e07a565977b6b7cd8f"
+      }
+    },
+    {
+      "mode": "optimized",
+      "seconds": 0.7273331780452281,
+      "summary": {
+        "analytic_proof_formalized": false,
+        "complete_controls": 34,
+        "mathematical_damage_rejections": 12,
+        "status": "PASS",
+        "strict_margins": 16,
+        "whole_record_sha256": "ae0fe9a44f37ef7e2228061b5e661d32e8321a94856875e07a565977b6b7cd8f"
+      }
+    }
+  ],
+  "external_fixture_rejections": [
+    {
+      "name": "actual anchored original coefficient changed",
+      "mode": "normal",
+      "reason": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "actual anchored original coefficient changed",
+      "mode": "optimized",
+      "reason": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "wrapped first Fourier row missing",
+      "mode": "normal",
+      "reason": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "wrapped first Fourier row missing",
+      "mode": "optimized",
+      "reason": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "strict endpoint margin changed",
+      "mode": "normal",
+      "reason": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "strict endpoint margin changed",
+      "mode": "optimized",
+      "reason": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "integer schema replaced by bool",
+      "mode": "normal",
+      "reason": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "integer schema replaced by bool",
+      "mode": "optimized",
+      "reason": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "extra unproved global concentration field",
+      "mode": "normal",
+      "reason": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "extra unproved global concentration field",
+      "mode": "optimized",
+      "reason": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "integer schema replaced by float",
+      "mode": "normal",
+      "reason": "FAIL: noninteger fixture number: 1.0"
+    },
+    {
+      "name": "integer schema replaced by float",
+      "mode": "optimized",
+      "reason": "FAIL: noninteger fixture number: 1.0"
+    },
+    {
+      "name": "duplicate schema field",
+      "mode": "normal",
+      "reason": "FAIL: duplicate fixture field"
+    },
+    {
+      "name": "duplicate schema field",
+      "mode": "optimized",
+      "reason": "FAIL: duplicate fixture field"
+    },
+    {
+      "name": "nonfinite NaN field",
+      "mode": "normal",
+      "reason": "FAIL: noninteger fixture number: NaN"
+    },
+    {
+      "name": "nonfinite NaN field",
+      "mode": "optimized",
+      "reason": "FAIL: noninteger fixture number: NaN"
+    },
+    {
+      "name": "nonfinite Infinity field",
+      "mode": "normal",
+      "reason": "FAIL: noninteger fixture number: Infinity"
+    },
+    {
+      "name": "nonfinite Infinity field",
+      "mode": "optimized",
+      "reason": "FAIL: noninteger fixture number: Infinity"
+    }
+  ],
+  "peak_child_rss_kib": 23096,
+  "trust_boundary": "ordinary analytic/norm/disk-root inequalities and imported9533/9572 remain written, unformalized; finite records do not prove those steps"
+}
