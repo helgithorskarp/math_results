@@ -1,0 +1,268 @@
+{
+  "agent": "six-reviewer-2",
+  "canonical_full_record_sha256": "81714081a18e2b1191e75b5f1da68f34fce6dd6b3236f6ebcf57fb90b1b0bb5f",
+  "credit": {
+    "old_leaf_equality_audit": "six-reviewer-2 /9105 / bafkreidoqp2j7xs4otszqbipiilrlxcw6oxptzw7bgpifuolplvexg2nny",
+    "old_leaf_theorem": "9071 / bafkreiho6lqqnl7sfo7ttqewug4ffhpqynybcniatdser7vzrt4uialzzq",
+    "original_pair_theorem": "six-books-1 /9131"
+  },
+  "date_utc": "2026-10-02",
+  "expected_file_sha256": "ce52b154a439e88dccee927cb1892039fa6e29df5d8da8251408a8c3ea848441",
+  "final_normal_O_stdout_byte_equal": true,
+  "frontier": {
+    "complete_target_neighborhood_index": 9155,
+    "incoming_feedback": [],
+    "initial_delta_index": 9152,
+    "prepublication_delta_index": 9169,
+    "selection_chat_id": 1371
+  },
+  "frozen_record_type_and_value_equality": true,
+  "independent_method": "Independent raw-edge-subset, literal page and unmarked-isomorphism checker implemented and first run before either researcher executable was read. Later suppression/root-edge fields added explicitly. No author code or fixture imported by independent checker.",
+  "input_files": [
+    {
+      "bytes": 1224,
+      "path": "round-two/six-books-1/single_page_pairs/EXPECTED.json",
+      "sha256": "0e4eb1ec7c7212696016f01c714af8aa8236a6b37983fadf393cecdad0905cfa"
+    },
+    {
+      "bytes": 12335,
+      "path": "round-two/six-books-1/single_page_pairs/PROOF.md",
+      "sha256": "a33edd3611b63a12441130a3fdaa94183dfc265d61e55453116e909175917efe"
+    },
+    {
+      "bytes": 2405,
+      "path": "round-two/six-books-1/single_page_pairs/README.md",
+      "sha256": "b16b9c0841a1616ab3c6dd68faec07959a46908470cf60faf6abb49d3ddd0d8c"
+    },
+    {
+      "bytes": 465,
+      "path": "round-two/six-books-1/single_page_pairs/SHA256SUMS",
+      "sha256": "8d3bece95d8ca13444b70cf48f7fd44844c64f4c122c0ec7f05e3cef66b4deb9"
+    },
+    {
+      "bytes": 2482,
+      "path": "round-two/six-books-1/single_page_pairs/derive.py",
+      "sha256": "2e4d386453e7a71c00048f010a2c94271d330b641b460993662ebb76955ce1ea"
+    },
+    {
+      "bytes": 4077,
+      "path": "round-two/six-books-1/single_page_pairs/provenance.json",
+      "sha256": "5579749e4574c4b97392fb26bbd48b471b1fb080f8201b465a2f4dfed877c72d"
+    },
+    {
+      "bytes": 7961,
+      "path": "round-two/six-books-1/single_page_pairs/verify.py",
+      "sha256": "eec15836a6bbfcb2ddf46f132e1682b0b2a599cb52853d8a69fb59d8b07eb11c"
+    }
+  ],
+  "novelty": "Independent scoped validation and intrinsic root-edge/stabilizer evidence are new review evidence; pair theorem credited to author. Elementary local parameterization carries no exclusive historical priority. General full-host version is eventuallyvacuous by known literature.",
+  "primary_literature": [
+    {
+      "checked": "2026-10-02 live Table1",
+      "scope": "Located22..23 interval, no bound improvement claimed.",
+      "url": "https://arxiv.org/pdf/2407.07285"
+    },
+    {
+      "checked": "2026-10-02 live TableIXa",
+      "scope": "Current survey retains22..23.",
+      "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+    },
+    {
+      "checked": "2026-10-02 live Theorem4",
+      "scope": "Known eventual R(B4,B(q+1))=2q+5 makes full-host parameterization eventuallyvacuous; local selected-spine version stillnonvacuousq>=2.",
+      "url": "https://arxiv.org/pdf/math/0405141"
+    }
+  ],
+  "proved_refinements": [
+    "Unique intrinsic root edge; each degree-nine mark can be sole page of at most one unordered global degree-ten red edge in a valid22 graph.",
+    "Complete unmarked automorphism orders4 and2.",
+    "All-integer q local selected-spine theorem on2q+10 vertices with root degreesq+4 and blue opposite-root-special capq; equalityimpossibleq0/1."
+  ],
+  "rejected_damages": 12,
+  "remaining_bridge": "Complete outside incidences and deficient tags, with rigorous host coverage and all mixed-spine constraints; neither existence nor exclusion is supplied.",
+  "resources": {
+    "dependencies": "CPython standard library only",
+    "fixed_guard_seconds": 90,
+    "math_jobs": "Serial, at most one CPU-intensive job at a time",
+    "max_observed_peak_KiB": 20436,
+    "max_observed_seconds": 0.3844970309874043,
+    "measured_runs": {
+      "pass15-author-derive-O-run": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "-O",
+          "scratch/pass15-author/derive.py"
+        ],
+        "exit_code": 0,
+        "guard_seconds": 90,
+        "peak_kib": 16956,
+        "seconds": 0.12156143004540354
+      },
+      "pass15-author-derive-normal-run": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "scratch/pass15-author/derive.py"
+        ],
+        "exit_code": 0,
+        "guard_seconds": 90,
+        "peak_kib": 13604,
+        "seconds": 0.03710613900329918
+      },
+      "pass15-author-selftest-O-run": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "-O",
+          "scratch/pass15-author/verify.py",
+          "--self-test"
+        ],
+        "exit_code": 0,
+        "guard_seconds": 90,
+        "peak_kib": 19888,
+        "seconds": 0.3076411969959736
+      },
+      "pass15-author-selftest-normal-run": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "scratch/pass15-author/verify.py",
+          "--self-test"
+        ],
+        "exit_code": 0,
+        "guard_seconds": 90,
+        "peak_kib": 14952,
+        "seconds": 0.11502493504667655
+      },
+      "pass15-author-verify-O-run": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "-O",
+          "scratch/pass15-author/verify.py"
+        ],
+        "exit_code": 0,
+        "guard_seconds": 90,
+        "peak_kib": 19888,
+        "seconds": 0.28824668301967904
+      },
+      "pass15-author-verify-normal-run": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "scratch/pass15-author/verify.py"
+        ],
+        "exit_code": 0,
+        "guard_seconds": 90,
+        "peak_kib": 15084,
+        "seconds": 0.11030599899822846
+      },
+      "pass15-own-O-final-run": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "-O",
+          "round-two/six-reviewer-2/sole-page-pair-audit/check.py"
+        ],
+        "exit_code": 0,
+        "guard_seconds": 90,
+        "peak_kib": 20416,
+        "seconds": 0.3844970309874043
+      },
+      "pass15-own-O-run": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "-O",
+          "round-two/six-reviewer-2/sole-page-pair-audit/check.py"
+        ],
+        "exit_code": 0,
+        "guard_seconds": 90,
+        "peak_kib": 20436,
+        "seconds": 0.3604370040120557
+      },
+      "pass15-own-normal-final-run": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "round-two/six-reviewer-2/sole-page-pair-audit/check.py"
+        ],
+        "exit_code": 0,
+        "guard_seconds": 90,
+        "peak_kib": 16780,
+        "seconds": 0.24528437096159905
+      },
+      "pass15-own-normal-run": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "round-two/six-reviewer-2/sole-page-pair-audit/check.py"
+        ],
+        "exit_code": 0,
+        "guard_seconds": 90,
+        "peak_kib": 16736,
+        "seconds": 0.24335012602386996
+      },
+      "pass15-own-record-final-run": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "round-two/six-reviewer-2/sole-page-pair-audit/check.py",
+          "--record"
+        ],
+        "exit_code": 0,
+        "guard_seconds": 90,
+        "peak_kib": 16728,
+        "seconds": 0.252810322039295
+      },
+      "pass15-own-record-run": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "round-two/six-reviewer-2/sole-page-pair-audit/check.py",
+          "--record"
+        ],
+        "exit_code": 0,
+        "guard_seconds": 90,
+        "peak_kib": 16392,
+        "seconds": 0.24607188097434118
+      },
+      "pass15-own-record-sealed-run": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "round-two/six-reviewer-2/sole-page-pair-audit/check.py",
+          "--record"
+        ],
+        "exit_code": 0,
+        "guard_seconds": 90,
+        "peak_kib": 16852,
+        "seconds": 0.26885651401244104
+      }
+    },
+    "process_scope": "Unchanged1CPU/2GiB",
+    "python": "3.12.14",
+    "thread_variables": {
+      "BLIS_NUM_THREADS": 1,
+      "MKL_NUM_THREADS": 1,
+      "NUMEXPR_NUM_THREADS": 1,
+      "OMP_NUM_THREADS": 1,
+      "OPENBLAS_NUM_THREADS": 1,
+      "VECLIB_MAXIMUM_THREADS": 1
+    },
+    "timeouts_or_unknowns": []
+  },
+  "role": "independent mathematical reviewer",
+  "target": {
+    "author": "six-books-1",
+    "body_bytes": 19024,
+    "height": 9131,
+    "original_directed_relations": 4,
+    "ref": "bafkreiesfsfe44lvytykz4oczwidosjpdxf4g3imjfnw7pxdllkmqsfqwu",
+    "source_commit": "6285ab7b447b77e323e2ff4dd24bc7f57e329201",
+    "title": "R(B4,B7): degree-ten pairs with a sole degree-nine page force 36 patterns"
+  },
+  "trust_boundary": "Ordinary combinatorial proof and inspected exact Python enumeration, graph bijections and selected-spine controls. Whole finite domains covered as specified; no formal proof assistant. Literal controls are not valid full hosts. No solver/graph catalogue, imported author code, external generated corpus or all-host enumeration.",
+  "verdict": "Confirmed exact pair theorem and optional explicitly scoped leaf corollary. No host occurrence or global Ramsey endpoint claimed."
+}

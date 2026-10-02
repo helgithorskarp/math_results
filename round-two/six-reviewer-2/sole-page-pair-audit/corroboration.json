@@ -1,0 +1,168 @@
+{
+  "agent": "six-reviewer-2",
+  "all_mathematical_fields_equal": true,
+  "all_original_mathematical_fields": {
+    "by_T_edges": {
+      "0": {
+        "candidates": 81,
+        "survivors": 36
+      },
+      "1": {
+        "candidates": 243,
+        "survivors": 0
+      },
+      "2": {
+        "candidates": 243,
+        "survivors": 0
+      },
+      "3": {
+        "candidates": 81,
+        "survivors": 0
+      }
+    },
+    "core_words": [
+      1774,
+      1781,
+      1886,
+      1902,
+      1907,
+      1909,
+      1910,
+      1949,
+      1963,
+      1965,
+      1966,
+      1973,
+      2782,
+      2798,
+      2803,
+      2805,
+      2806,
+      2910,
+      2931,
+      2971,
+      2973,
+      2974,
+      2987,
+      2995,
+      3293,
+      3307,
+      3309,
+      3310,
+      3317,
+      3419,
+      3421,
+      3422,
+      3435,
+      3443,
+      3485,
+      3499
+    ],
+    "domain_size": 648,
+    "labeled_orbits": {
+      "cross_block": 24,
+      "same_block": 12
+    },
+    "neighborhood_degrees": [
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "neighborhood_edges": 13,
+    "neighborhood_triangles": 0,
+    "suppressed_cubic_triangles": {
+      "cross_block": 0,
+      "same_block": 1
+    },
+    "survivors": 36
+  },
+  "author": "six-books-1",
+  "author_commit": "6285ab7b447b77e323e2ff4dd24bc7f57e329201",
+  "author_normal_O_checker_whole_fields_equal": true,
+  "author_normal_O_producer_bytes_equal_original": true,
+  "author_role": "researcher",
+  "author_selftest_damages": 6,
+  "independence": "Independent raw-edge-subset, literal page and unmarked-isomorphism checker implemented and first run before either researcher executable was read. Later suppression/root-edge fields added explicitly. No author code or fixture imported by independent checker.",
+  "original_source_manifest_matches": true,
+  "role": "independent mathematical reviewer",
+  "separate_author_replay_runs": {
+    "pass15-author-derive-O-run": {
+      "argv": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "-O",
+        "scratch/pass15-author/derive.py"
+      ],
+      "exit_code": 0,
+      "guard_seconds": 90,
+      "peak_kib": 16956,
+      "seconds": 0.12156143004540354
+    },
+    "pass15-author-derive-normal-run": {
+      "argv": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "scratch/pass15-author/derive.py"
+      ],
+      "exit_code": 0,
+      "guard_seconds": 90,
+      "peak_kib": 13604,
+      "seconds": 0.03710613900329918
+    },
+    "pass15-author-selftest-O-run": {
+      "argv": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "-O",
+        "scratch/pass15-author/verify.py",
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "guard_seconds": 90,
+      "peak_kib": 19888,
+      "seconds": 0.3076411969959736
+    },
+    "pass15-author-selftest-normal-run": {
+      "argv": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "scratch/pass15-author/verify.py",
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "guard_seconds": 90,
+      "peak_kib": 14952,
+      "seconds": 0.11502493504667655
+    },
+    "pass15-author-verify-O-run": {
+      "argv": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "-O",
+        "scratch/pass15-author/verify.py"
+      ],
+      "exit_code": 0,
+      "guard_seconds": 90,
+      "peak_kib": 19888,
+      "seconds": 0.28824668301967904
+    },
+    "pass15-author-verify-normal-run": {
+      "argv": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "scratch/pass15-author/verify.py"
+      ],
+      "exit_code": 0,
+      "guard_seconds": 90,
+      "peak_kib": 15084,
+      "seconds": 0.11030599899822846
+    }
+  },
+  "target_ref": "bafkreiesfsfe44lvytykz4oczwidosjpdxf4g3imjfnw7pxdllkmqsfqwu"
+}
