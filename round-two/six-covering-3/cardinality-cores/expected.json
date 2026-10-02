@@ -1,0 +1,152 @@
+{
+  "audit": {
+    "B13_formula": {
+      "checked_point_clauses": 1398,
+      "clause_body_sha256": "a9b8ce10608a23f551a6fe7e0e9f3023a3e5e979f27f184608d53143dc14d1ad",
+      "clauses": 30744,
+      "variables": 19327
+    },
+    "B13_qualifying_fibers": [
+      1,
+      2,
+      5
+    ],
+    "agent": "six-covering-3",
+    "base_sizes": [
+      20,
+      13,
+      92,
+      88,
+      16,
+      86,
+      54
+    ],
+    "full_formula": {
+      "checked_point_clauses": 20970,
+      "clause_body_sha256": "4cbef87311f79b71d1aad3282026b7c79288ddf21cff237aa6ecc025a99f7f33",
+      "clauses": 103984,
+      "variables": 46333
+    },
+    "original_physical_residues_checked": 10080,
+    "original_predicates_checked": 638,
+    "physical_holes": 1476,
+    "role": "researcher",
+    "scope": "Literal feasible single necessary core; seven compressed cuts reject this same assignment. No tail completion or root exclusion.",
+    "status": "LITERAL CORE AND CNF AUDIT PASSED",
+    "violated_frontier_predicates": 7,
+    "violated_original_predicates": 135
+  },
+  "check": {
+    "B13_reduced_phase_pairs": 365,
+    "agent": "six-covering-3",
+    "certificate_sha256": "e34ff8d076f353f1fab893ea003d5484bb8fafd85fa0fc72d4514c9cf8aed074",
+    "checked_implication_pairs": 2950,
+    "covered_original_resource_pairs": 363,
+    "distinct_pair_families": 155,
+    "empty_padding_cases": 468,
+    "fixtures": [
+      {
+        "name": "shape-obstruction",
+        "passed": false,
+        "violated_frontier": 1,
+        "violated_originals": 1
+      },
+      {
+        "name": "same-signature-control",
+        "passed": true,
+        "violated_frontier": 0,
+        "violated_originals": 0
+      },
+      {
+        "name": "all-empty",
+        "passed": true,
+        "violated_frontier": 0,
+        "violated_originals": 0
+      },
+      {
+        "name": "seven-singletons",
+        "passed": true,
+        "violated_frontier": 0,
+        "violated_originals": 0
+      },
+      {
+        "name": "two-nonempty",
+        "passed": true,
+        "violated_frontier": 0,
+        "violated_originals": 0
+      },
+      {
+        "name": "seven-gcd-one-doubletons",
+        "passed": true,
+        "violated_frontier": 0,
+        "violated_originals": 0
+      }
+    ],
+    "frontier_pairs": 55,
+    "frontier_predicates": 15,
+    "gcd_one_doubletons_prior_q2_cover": {
+      "excluded": true,
+      "threshold": 20,
+      "value": 3
+    },
+    "literal_B13_phase_union_containments": 133055,
+    "literal_divisor_phase_containments": 5610,
+    "original_predicates": 638,
+    "role": "researcher",
+    "scope": "Equivalent necessary cut family; no claim of logical irredundancy, tail sufficiency or root exclusion.",
+    "status": "EXACT IMPLICATION AUDIT PASSED",
+    "threshold_counts": {
+      "1": 6,
+      "2": 6,
+      "3": 3
+    }
+  },
+  "controls": {
+    "CNF_model_damages": [
+      "duplicate original15 phase",
+      "missing original15 phase",
+      "duplicate witness5 phase",
+      "three distinct witness resources",
+      "wrong literal cofactor phase",
+      "lost third selected fiber"
+    ],
+    "agent": "six-covering-3",
+    "certificate_damages": [
+      "wrong pool label",
+      "missing original predicate",
+      "duplicate target predicate",
+      "boolean target mask",
+      "boolean witness index",
+      "negative witness index",
+      "cloned original support resource",
+      "missing minimal support pair",
+      "reversed implication",
+      "wrong threshold",
+      "wrong prefix domain",
+      "missing shared base resource"
+    ],
+    "fiber_cardinality_truth_cases": 1920,
+    "malformed_base_inputs": 6,
+    "role": "researcher",
+    "sequential_counter_truth_cases": 255,
+    "status": "CONTROLS PASSED"
+  },
+  "encode-B13": {
+    "agent": "six-covering-3",
+    "clause_body_sha256": "a9b8ce10608a23f551a6fe7e0e9f3023a3e5e979f27f184608d53143dc14d1ad",
+    "clauses": 30744,
+    "literal_occurrences": 127112,
+    "role": "researcher",
+    "scope": "Necessary shared-base predicates only. SAT supplies no full covering; UNKNOWN is not exclusion.",
+    "variables": 19327
+  },
+  "encode-full": {
+    "agent": "six-covering-3",
+    "clause_body_sha256": "4cbef87311f79b71d1aad3282026b7c79288ddf21cff237aa6ecc025a99f7f33",
+    "clauses": 103984,
+    "literal_occurrences": 1056452,
+    "role": "researcher",
+    "scope": "Necessary shared-base predicates only. SAT supplies no full covering; UNKNOWN is not exclusion.",
+    "variables": 46333
+  }
+}
