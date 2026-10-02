@@ -1,0 +1,176 @@
+{
+  "agent": "six-downset-2",
+  "checks": {
+    "all_full_lower_and_upper_forms": 42,
+    "all_star_rows": 38,
+    "all_supported_coordinates": 399,
+    "arithmetic_symmetric_ternary3x3": 729,
+    "damage_controls": 13,
+    "entire_mean_upper0_retained": true,
+    "excluded_S11_coordinates": 72,
+    "free_coordinates": 361,
+    "literal_harmonic_action_columns": 112,
+    "literal_harmonic_positions": 6272,
+    "star_decoders": 2,
+    "wrong_core_I_same_gap_rejected": true
+  },
+  "copied_helpers": {
+    "older_chain": [
+      7578,
+      7627,
+      8106,
+      9017,
+      9123,
+      9365,
+      9521,
+      9556
+    ],
+    "source_commit": "fca248f4d3e8d6f377c6e6e165c191593b62660b",
+    "source_prefix": "round-two/six-downset-2/near_full_n32_sharp_support",
+    "unchanged_files": [
+      {
+        "name": ".gitignore",
+        "sha256": "a6c8e4cb547705cf4b7683307e484037d206456ac6ffafd86c27efd8778c1082"
+      },
+      {
+        "name": "affine.py",
+        "sha256": "9cdcaa2f616d2e6b63f76cdd5dda4d9d633845da34f8d4ee2646d822deea59b8"
+      },
+      {
+        "name": "baseline.py",
+        "sha256": "2379cee3071acd67e9a81adfce2b0a44b3836fe5d7486423384ce68cf7672031"
+      },
+      {
+        "name": "exact.py",
+        "sha256": "a22f9a4c4a569aed0321c7934a66883d2575ef146bbdba43708023bfd09b17d2"
+      },
+      {
+        "name": "model.py",
+        "sha256": "9189b8b427be0a51bf46f7c6d338159b266d47ce4242dea03c2ee54888c63b10"
+      }
+    ]
+  },
+  "credited_all_real_obstruction": {
+    "artifact_ref": "bafkreie5bbft5yrw72p4cxr46lgvyc3t5h4abxjcdtbvtmryjpkrvaevsm",
+    "eta": "-9431218658090337964074823/1570730896820",
+    "height": 9471,
+    "review9513_is_parent_only": true,
+    "scope": "GENERAL eta40,10; the simpler sufficient6B criterion fails",
+    "source_commit": "46a940a1d76d4dcd6f611a98fdedf39c26334d26"
+  },
+  "credited_reviews": {
+    "9513": "all-real parent obstruction",
+    "9606": "n24 sharp support and gap",
+    "9653": "n32 sharp support and gap",
+    "9689": "all-order reduction, exact whole-gap metric and conditional rational density; no n40 verdict"
+  },
+  "date": "2026-10-02",
+  "discovery_only": {
+    "after_rounding_every42_FULL_form_exactly_checked": true,
+    "clarabel": "0.11.1",
+    "cvxpy": "1.7.4",
+    "free_coordinate_common_denominator": 1000000000000000000000000,
+    "iterations": 25,
+    "numpy": "1.26.4",
+    "proposal_preserved": true,
+    "proposal_sha256": "7174537ce328f71a6ebdd3fa03f8560c1a02805b23a0cf811f8b5b88e6dcdfde",
+    "python": "3.11.2",
+    "solver_output_is_proof_input": false,
+    "status": "NumericalError"
+  },
+  "domain": {
+    "N": 1099511627735,
+    "actual_empty_vertex_and_loop": true,
+    "h": 549755813887,
+    "m": 1099511627734,
+    "n": 40,
+    "r": 38,
+    "s": 549755813848
+  },
+  "exact_recovery": {
+    "guard_seconds": 45,
+    "native_threads": 1,
+    "seconds": 21.537682479945943
+  },
+  "limits": {
+    "native_threads": 1,
+    "no_original_n40_allocation": true,
+    "one_serial_CPU_intensive_job": true,
+    "scope_CPU": 1,
+    "scope_memory_GiB": 2,
+    "unchanged_child_guard_seconds": 45,
+    "unchanged_general_star_RREF_n_guard": 24,
+    "unchanged_literal_N_guard": 247
+  },
+  "new_result": {
+    "all_full_physical_forms": 42,
+    "cap_rank": 1099511627734,
+    "least_original_all_real_capped_support_cutoff": 11,
+    "lower_rank": 1099511627695,
+    "positive_seed_invariant_rational": true,
+    "whole_projected_cap_floor": "1/4096"
+  },
+  "not_claimed": [
+    "all-order positive capped construction",
+    "optimum gap or mass",
+    "general H or I resolution",
+    "new n40 independent review",
+    "formalized completeness or original lift",
+    "nonexistence from numerical failure"
+  ],
+  "original_gap_semantics": "ORIGINAL full projected gap; Q0=I-J/N, all other Qj=I",
+  "primary_literature": {
+    "general_spectral_H_and_I_open": true,
+    "listed_versions": [
+      "v1 2026-09-23"
+    ],
+    "live_checked": "2026-10-02",
+    "section4": "https://arxiv.org/html/2609.28404v1#S4",
+    "version_record": "https://arxiv.org/abs/2609.28404"
+  },
+  "proof_status": "Exact author rational certificate; ordinary real bridges unformalized; new n40 independently unreviewed",
+  "public_reproduction": {
+    "arithmetic": "standard library integers and fractions.Fraction",
+    "modes": [
+      {
+        "exit_code": 0,
+        "frozen_check": false,
+        "guard_seconds": 45,
+        "mode": "freeze",
+        "native_threads": 1,
+        "peak_rss_kib": 22416,
+        "seconds": 28.99602918198798
+      },
+      {
+        "exit_code": 0,
+        "frozen_check": true,
+        "guard_seconds": 45,
+        "mode": "normal",
+        "native_threads": 1,
+        "peak_rss_kib": 22364,
+        "seconds": 28.440599913941696
+      },
+      {
+        "exit_code": 0,
+        "frozen_check": true,
+        "guard_seconds": 45,
+        "mode": "optimized",
+        "native_threads": 1,
+        "peak_rss_kib": 24128,
+        "seconds": 30.263854756951332
+      }
+    ],
+    "python": "3.12.14",
+    "seed_sha256": "52a5646a169395319fe2879c5ee2f0f35587f4305cd97104f0186bff267967d8",
+    "whole_expected_bytes": 29356,
+    "whole_expected_sha256": "f81a413ccdbb7b9b5e3201b985a98dbd8928367e231ad303cf2aa7a7ea1e02b7"
+  },
+  "role": "researcher",
+  "useful_baseline": {
+    "height": 9592,
+    "reproduction_is_validation": true,
+    "seconds": 9.966305886977352,
+    "whole_native_record_replayed_this_pass": true,
+    "whole_record_sha256": "ce889728764f880dc3e12952f9b6bb4a0bc7a6a6dd849d674757592dbc5207c9"
+  }
+}
