@@ -1,0 +1,186 @@
+{
+  "first_seal": {
+    "first_frozen_utc": "2026-10-02T16:46:26.630583+00:00",
+    "actual_agent": "six-reviewer-3",
+    "role": "independent mathematical reviewer",
+    "target_executable_fixture_inspected": false,
+    "canonical_bytes": 58296,
+    "canonical_sha256": "be915a72b1d28419b2b62068ad3d3454d64f09bbc9180152465a792c67cbafa6",
+    "whole_normal_optimized_equal": true,
+    "whole_identities": 38,
+    "rank_controls": 19,
+    "math_damage_rejections": 8,
+    "residual_terms": [
+      43,
+      54,
+      71,
+      29,
+      44
+    ],
+    "integer_resultant": "6639184819238759519120439603589467782389746892800000",
+    "native_threads": 1,
+    "mathematical_children_serial": true,
+    "child_guard_seconds": 45,
+    "scope": "unchanged1CPU2GiB",
+    "max_child_RSS_KiB": 20576,
+    "runs": [
+      {
+        "optimized": false,
+        "seconds": 2.2796865780837834,
+        "returncode": 0,
+        "stdout_sha256": "14c77e5fada4fc50282bd14a19a6ea441847cb102ae70e04d7b9f36b30c2fd3c"
+      },
+      {
+        "optimized": true,
+        "seconds": 2.4595707439584658,
+        "returncode": 0,
+        "stdout_sha256": "14c77e5fada4fc50282bd14a19a6ea441847cb102ae70e04d7b9f36b30c2fd3c"
+      }
+    ],
+    "frozen_source": [
+      {
+        "file": "EXPECTED.json",
+        "bytes": 58297,
+        "sha256": "14c77e5fada4fc50282bd14a19a6ea441847cb102ae70e04d7b9f36b30c2fd3c"
+      },
+      {
+        "file": "algebra.py",
+        "bytes": 2769,
+        "sha256": "b4421364b511f2a00905bbd0c1649c15b173446ca4196f59324b241b62776df5"
+      },
+      {
+        "file": "build.py",
+        "bytes": 7124,
+        "sha256": "3eaa5b035bb30217bdd8c622d244863cd2abb0587c9669d5f01ff86907590911"
+      },
+      {
+        "file": "certificates.py",
+        "bytes": 6791,
+        "sha256": "753c7f7d26af82050f2ba47c9ed65b8b3e29921362adae91ddece562896039b2"
+      },
+      {
+        "file": "polys.py",
+        "bytes": 4474,
+        "sha256": "7280a3167564ab1158aa1aad22833885b3cfbd4a499675d88be61e7779532aab"
+      },
+      {
+        "file": "verify.py",
+        "bytes": 2090,
+        "sha256": "3aa3f5f212e5a184ac9465d25ecca8307da610aff3355041ccad5bd84941f92b"
+      }
+    ]
+  },
+  "native_corroboration_only": {
+    "utc": "2026-10-02T16:49:13.963896+00:00",
+    "entire_typed_native_normal_optimized_pinned_fixture_equal": true,
+    "entire_exports_normal_optimized_equal": true,
+    "native_record_bytes": 6659,
+    "native_record_sha256": "c808d09b1f60281d10a76384306b974d8bf94d3647fa037fcf01dd23a76c023c",
+    "runs": [
+      {
+        "optimized": false,
+        "seconds": 0.3439669170184061,
+        "returncode": 0,
+        "output": {
+          "status": "PASS",
+          "record_sha256": "c808d09b1f60281d10a76384306b974d8bf94d3647fa037fcf01dd23a76c023c",
+          "universal_identities": 32,
+          "quadratic_rows": 5,
+          "rank_conic_controls": 15,
+          "mathematical_damages": 9
+        }
+      },
+      {
+        "optimized": true,
+        "seconds": 0.45758723793551326,
+        "returncode": 0,
+        "output": {
+          "status": "PASS",
+          "record_sha256": "c808d09b1f60281d10a76384306b974d8bf94d3647fa037fcf01dd23a76c023c",
+          "universal_identities": 32,
+          "quadratic_rows": 5,
+          "rank_conic_controls": 15,
+          "mathematical_damages": 9
+        }
+      }
+    ],
+    "corroboration_only_after_first_seal": true
+  },
+  "late_whole_comparison": {
+    "status": "PASS",
+    "entire_exported_scalar_polynomials_compared": 35,
+    "entire_native_polynomial_digests_compared": 17,
+    "native_code_imported": false,
+    "post_seal_corroboration_only": true
+  },
+  "cold_public_validation": {
+    "status": "PASS",
+    "whole_normal_optimized_equal": true,
+    "entire_fixture_rejections": [
+      {
+        "case": "coefficient",
+        "optimized": false,
+        "rejected": true
+      },
+      {
+        "case": "coefficient",
+        "optimized": true,
+        "rejected": true
+      },
+      {
+        "case": "missing",
+        "optimized": false,
+        "rejected": true
+      },
+      {
+        "case": "missing",
+        "optimized": true,
+        "rejected": true
+      },
+      {
+        "case": "extra",
+        "optimized": false,
+        "rejected": true
+      },
+      {
+        "case": "extra",
+        "optimized": true,
+        "rejected": true
+      },
+      {
+        "case": "type_alias",
+        "optimized": false,
+        "rejected": true
+      },
+      {
+        "case": "type_alias",
+        "optimized": true,
+        "rejected": true
+      },
+      {
+        "case": "duplicate",
+        "optimized": false,
+        "rejected": true
+      },
+      {
+        "case": "duplicate",
+        "optimized": true,
+        "rejected": true
+      },
+      {
+        "case": "nonfinite",
+        "optimized": false,
+        "rejected": true
+      },
+      {
+        "case": "nonfinite",
+        "optimized": true,
+        "rejected": true
+      }
+    ],
+    "serial_children": true,
+    "native_threads": 1,
+    "guard_seconds_per_child": 45
+  },
+  "ordinary_bridges": "9496/9566 feasible theorem, legal elimination, rank/conic/positive-root cases, actual converse, determinant evaluation vector and actual mass-variance corridor; unformalized"
+}
