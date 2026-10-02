@@ -1,0 +1,842 @@
+{
+  "actual_agent": "six-sendov-2",
+  "complex_first_power_proved": false,
+  "degree_five_stationary_solutions_classified": false,
+  "domain": "QQ[B,E,r,s,t,t^-1],N1,t>0",
+  "entire_residual_polynomials": {
+    "K0plus4": {
+      "coefficient_terms": [
+        44
+      ],
+      "degree": 0,
+      "sha256": "e5ef1f9f30199906332419f803ce9e81f27897735fb61a732b95757c4c98a97c"
+    },
+    "K1": {
+      "coefficient_terms": [
+        29
+      ],
+      "degree": 0,
+      "sha256": "42edf9c530df46b245c50170cddc3f37592402dfd2dd6babb01c28c6a7b1193e"
+    },
+    "tODE0": {
+      "coefficient_terms": [
+        71
+      ],
+      "degree": 0,
+      "sha256": "d9185b5af0398160e9f72b2bd3613e44119c8e1536806ca4ab99e4c40f328606"
+    },
+    "tODE1": {
+      "coefficient_terms": [
+        54
+      ],
+      "degree": 0,
+      "sha256": "68bb120d2a8beb71ee43b79eb001b366b4ca44f95ad81b487140a7e9e46f5f57"
+    },
+    "tODE2": {
+      "coefficient_terms": [
+        43
+      ],
+      "degree": 0,
+      "sha256": "affb508a977054a5f6cb1b7e89bd3c210326cc6bc6e9b73d47c7d8aa05ccdad6"
+    }
+  },
+  "feasibility_required": [
+    "seven SIMPLE REAL criticals",
+    "STRICT p(lambda)>0",
+    "ALL FIVE residuals",
+    "t>0"
+  ],
+  "global_Cstar_c3_proved": false,
+  "ordinary_bridges": "9496 feasible stationarity, linear pivot elimination, rank/conic linear algebra and Bezout incompatibility; unformalized",
+  "rank_conic_controls": [
+    {
+      "matrix": [
+        [
+          0,
+          1,
+          -2
+        ],
+        [
+          1,
+          -1,
+          -2
+        ],
+        [
+          1,
+          0,
+          -4
+        ],
+        [
+          2,
+          -1,
+          -6
+        ],
+        [
+          0,
+          3,
+          -6
+        ]
+      ],
+      "name": "rank2_positive",
+      "result": {
+        "kernel": [
+          "-4",
+          "-2",
+          "-1"
+        ],
+        "positive_common_root": true,
+        "rank": 2,
+        "root": "2"
+      }
+    },
+    {
+      "matrix": [
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          0,
+          1,
+          -2
+        ],
+        [
+          1,
+          1,
+          -3
+        ],
+        [
+          2,
+          0,
+          -2
+        ],
+        [
+          0,
+          2,
+          -4
+        ]
+      ],
+      "name": "rank2_nonconic",
+      "result": {
+        "kernel": [
+          "1",
+          "2",
+          "1"
+        ],
+        "positive_common_root": false,
+        "rank": 2,
+        "root": null
+      }
+    },
+    {
+      "matrix": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          -2
+        ],
+        [
+          1,
+          0,
+          -4
+        ],
+        [
+          2,
+          1,
+          -6
+        ],
+        [
+          0,
+          3,
+          6
+        ]
+      ],
+      "name": "rank2_negative",
+      "result": {
+        "kernel": [
+          "-4",
+          "2",
+          "-1"
+        ],
+        "positive_common_root": false,
+        "rank": 2,
+        "root": null
+      }
+    },
+    {
+      "matrix": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          -1,
+          4
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "name": "rank2_infinity",
+      "result": {
+        "kernel": [
+          "1",
+          "0",
+          "0"
+        ],
+        "positive_common_root": false,
+        "rank": 2
+      }
+    },
+    {
+      "matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "name": "rank3",
+      "result": {
+        "positive_common_root": false,
+        "rank": 3
+      }
+    },
+    {
+      "matrix": [
+        [
+          1,
+          -3,
+          2
+        ],
+        [
+          2,
+          -6,
+          4
+        ],
+        [
+          -1,
+          3,
+          -2
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          -9,
+          6
+        ]
+      ],
+      "name": "rank1_two_positive",
+      "result": {
+        "positive_common_root": true,
+        "rank": 1,
+        "single_quadratic": [
+          "1",
+          "-3",
+          "2"
+        ]
+      }
+    },
+    {
+      "matrix": [
+        [
+          1,
+          -3,
+          1
+        ],
+        [
+          2,
+          -6,
+          2
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          -1,
+          3,
+          -1
+        ]
+      ],
+      "name": "rank1_irrational_positive",
+      "result": {
+        "positive_common_root": true,
+        "rank": 1,
+        "single_quadratic": [
+          "1",
+          "-3",
+          "1"
+        ]
+      }
+    },
+    {
+      "matrix": [
+        [
+          1,
+          -2,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "name": "rank1_double_positive",
+      "result": {
+        "positive_common_root": true,
+        "rank": 1,
+        "single_quadratic": [
+          "1",
+          "-2",
+          "1"
+        ]
+      }
+    },
+    {
+      "matrix": [
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "name": "rank1_nonreal",
+      "result": {
+        "positive_common_root": false,
+        "rank": 1,
+        "single_quadratic": [
+          "1",
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "matrix": [
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "name": "rank1_negative",
+      "result": {
+        "positive_common_root": false,
+        "rank": 1,
+        "single_quadratic": [
+          "1",
+          "3",
+          "2"
+        ]
+      }
+    },
+    {
+      "matrix": [
+        [
+          1,
+          -2,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "name": "rank1_zero_and_positive",
+      "result": {
+        "positive_common_root": true,
+        "rank": 1,
+        "single_quadratic": [
+          "1",
+          "-2",
+          "0"
+        ]
+      }
+    },
+    {
+      "matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "name": "rank1_zero_only",
+      "result": {
+        "positive_common_root": false,
+        "rank": 1,
+        "single_quadratic": [
+          "1",
+          "0",
+          "0"
+        ]
+      }
+    },
+    {
+      "matrix": [
+        [
+          0,
+          2,
+          -4
+        ],
+        [
+          0,
+          1,
+          -2
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "name": "rank1_linear",
+      "result": {
+        "positive_common_root": true,
+        "rank": 1,
+        "single_quadratic": [
+          "0",
+          "2",
+          "-4"
+        ]
+      }
+    },
+    {
+      "matrix": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "name": "rank1_constant",
+      "result": {
+        "positive_common_root": false,
+        "rank": 1,
+        "single_quadratic": [
+          "0",
+          "0",
+          "2"
+        ]
+      }
+    },
+    {
+      "matrix": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "name": "rank0",
+      "result": {
+        "positive_common_root": true,
+        "rank": 0,
+        "root": "any t>0"
+      }
+    }
+  ],
+  "rejected_mathematical_damages": [
+    "wrong_ODE4_pivot",
+    "wrong_G_pivot",
+    "wrong_F_sign",
+    "wrong_J_sign",
+    "wrong_Bezout",
+    "drop_conic",
+    "drop_positive",
+    "infinity_as_root"
+  ],
+  "role": "researcher",
+  "slice_Bezout": {
+    "cubic_multiplier": [
+      "-69026483494705138123961/30346432914867619987800",
+      "-2620630681805686818248797/91039298744602859963400",
+      "-197958809884871733920791/1379383314312164544900",
+      "-36030698010508439924204554/102419211087678217458825",
+      "-129979303179653775440527844/307257633263034652376475",
+      "-12224377291153953761334016/61451526652606930475295"
+    ],
+    "eliminant_multiplier": [
+      "4447066898826212747557/273117896233808579890200",
+      "3817122045703138810001/37243349486428442712300",
+      "52873703866731821908982/307257633263034652376475"
+    ],
+    "gcd": [
+      "1"
+    ]
+  },
+  "slice_cubic": [
+    "157599",
+    "1459368",
+    "4606896",
+    "4934272"
+  ],
+  "slice_degree_six": [
+    "22016043",
+    "343903887",
+    "2215220832",
+    "7523113824",
+    "14186807040",
+    "14058198784",
+    "5704007680"
+  ],
+  "slice_modular_unit": {
+    "P": [
+      0,
+      1,
+      8,
+      5
+    ],
+    "P_multiplier": [
+      5,
+      8,
+      12,
+      7,
+      0,
+      8
+    ],
+    "R": [
+      10,
+      2,
+      6,
+      5,
+      3,
+      6,
+      7
+    ],
+    "R_multiplier": [
+      4,
+      0,
+      11
+    ],
+    "both_leading_coefficients_nonzero": true,
+    "identity": [
+      "1"
+    ],
+    "prime": 13
+  },
+  "solved_polynomials": {
+    "C": {
+      "coefficient_terms": [
+        21
+      ],
+      "degree": 0,
+      "sha256": "cb071e7eba369b11af1614440a8598559bd54ab81e1a8cc3dba8a4094fa7e005"
+    },
+    "F": {
+      "coefficient_terms": [
+        12
+      ],
+      "degree": 0,
+      "sha256": "b101ac691a3d045492ab30facd86437da184a9b5c71020cb500b67081873cf1c"
+    },
+    "G": {
+      "coefficient_terms": [
+        19
+      ],
+      "degree": 0,
+      "sha256": "a94efaceb2e9296ec11b1766e42f0129b8360dfe5c0e40e6705090ce87e51182"
+    },
+    "J": {
+      "coefficient_terms": [
+        28
+      ],
+      "degree": 0,
+      "sha256": "2313211ae39dc37a10903c6d04d1d0456886031602e8785dc514dbec861abdfc"
+    },
+    "p0": {
+      "coefficient_terms": [
+        12
+      ],
+      "degree": 0,
+      "sha256": "fce2418ad6b91626ebbe6fd43422645929464505bf27e421f19126737ec929a3"
+    },
+    "p1": {
+      "coefficient_terms": [
+        8
+      ],
+      "degree": 0,
+      "sha256": "daa63d2797d54c1520b4d5d5dc7bd439a22017f8d3004622628855ecbda2e791"
+    },
+    "p2": {
+      "coefficient_terms": [
+        4
+      ],
+      "degree": 0,
+      "sha256": "5537026d3ae0991a3c109720720638ce53a6e1e9ebff86a2c43d2fedcc6ace6b"
+    }
+  },
+  "universal_identities": [
+    "C_constant_coefficient",
+    "F_pivot_after_G",
+    "F_solution_no_J",
+    "G_pivot",
+    "G_solution_no_J",
+    "J_pivot_after_GF",
+    "ODE4_p1_pivot",
+    "ODE5_p0_pivot",
+    "explicit_p0",
+    "explicit_p1",
+    "final_K3",
+    "final_K4",
+    "final_K5",
+    "final_ODE3",
+    "final_ODE4",
+    "final_ODE5",
+    "first_K5",
+    "first_ODE4",
+    "first_ODE5",
+    "full_primitive_bridge",
+    "p0_no_p1",
+    "p1_no_p0",
+    "slice_K1_E_pivot",
+    "slice_K1_at_E",
+    "slice_ODE0_even_t",
+    "slice_ODE2_even_t",
+    "whole_matrix_row0",
+    "whole_matrix_row1",
+    "whole_matrix_row2",
+    "whole_matrix_row3",
+    "whole_matrix_row4"
+  ],
+  "whole_matrix_rows": [
+    {
+      "coefficient_terms": [
+        30,
+        10,
+        3
+      ],
+      "degree": 2,
+      "sha256": "7ef81b7a0c45f0e8942d34c9b12ee397980358a724530d68232f80768ac047a4"
+    },
+    {
+      "coefficient_terms": [
+        34,
+        16,
+        4
+      ],
+      "degree": 2,
+      "sha256": "ef1d91668f293532eb69b2bae84c626fc67a5f76164cc6a24a4cfed95b4aa570"
+    },
+    {
+      "coefficient_terms": [
+        45,
+        19,
+        7
+      ],
+      "degree": 2,
+      "sha256": "5a633ccb93ce3fcd5a1993b9ce1d91af4617f44b447231e9474c92d29115be1e"
+    },
+    {
+      "coefficient_terms": [
+        20,
+        8,
+        1
+      ],
+      "degree": 2,
+      "sha256": "1b720a86528d4f2aa3a7d58d18de45efccef1233ace91391e6520a61419b0609"
+    },
+    {
+      "coefficient_terms": [
+        31,
+        10,
+        3
+      ],
+      "degree": 2,
+      "sha256": "f2a1e440d33988d51fc399d93c64b489ee1b0bc4973e8abf5a9072a2ed47b156"
+    }
+  ]
+}
