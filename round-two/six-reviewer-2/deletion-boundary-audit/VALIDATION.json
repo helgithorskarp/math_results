@@ -1,0 +1,202 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "date": "2026-10-02",
+  "independent": {
+    "first_source_unchanged": true,
+    "entire_normal_optimized_stdout_equal": true,
+    "cases": [
+      {
+        "case": "continue10",
+        "seconds": 29.633485267986543,
+        "peak_kib": 29664,
+        "guard_seconds": 90,
+        "optimized_seconds": 29.72438660595799,
+        "optimized_peak_kib": 30760
+      },
+      {
+        "case": "continue11",
+        "seconds": 75.9148934900295,
+        "peak_kib": 35052,
+        "guard_seconds": 90,
+        "optimized_seconds": 57.496582819963805,
+        "optimized_peak_kib": 35768
+      },
+      {
+        "case": "continue4",
+        "seconds": 0.5487945579807274,
+        "peak_kib": 22664,
+        "guard_seconds": 90,
+        "optimized_seconds": 0.664537166012451,
+        "optimized_peak_kib": 24004
+      },
+      {
+        "case": "continue5",
+        "seconds": 1.22281331702834,
+        "peak_kib": 22664,
+        "guard_seconds": 90,
+        "optimized_seconds": 1.339055139978882,
+        "optimized_peak_kib": 24004
+      },
+      {
+        "case": "continue6",
+        "seconds": 2.4118737670360133,
+        "peak_kib": 22664,
+        "guard_seconds": 90,
+        "optimized_seconds": 2.517541068024002,
+        "optimized_peak_kib": 24004
+      },
+      {
+        "case": "continue9",
+        "seconds": 17.208969874016475,
+        "peak_kib": 26084,
+        "guard_seconds": 90,
+        "optimized_seconds": 17.365350861044135,
+        "optimized_peak_kib": 27104
+      },
+      {
+        "case": "conventions",
+        "seconds": 0.14478437701473013,
+        "peak_kib": 17004,
+        "guard_seconds": 90,
+        "optimized_seconds": 0.2625779510126449,
+        "optimized_peak_kib": 19752
+      },
+      {
+        "case": "corner0a",
+        "seconds": 2.0448781970189884,
+        "peak_kib": 20872,
+        "guard_seconds": 90,
+        "optimized_seconds": 2.242579377023503,
+        "optimized_peak_kib": 22348
+      },
+      {
+        "case": "corner0b",
+        "seconds": 2.1275672749616206,
+        "peak_kib": 20872,
+        "guard_seconds": 90,
+        "optimized_seconds": 2.254956709977705,
+        "optimized_peak_kib": 22348
+      },
+      {
+        "case": "corner1a",
+        "seconds": 7.410470115952194,
+        "peak_kib": 22572,
+        "guard_seconds": 90,
+        "optimized_seconds": 8.465480151004158,
+        "optimized_peak_kib": 24004
+      },
+      {
+        "case": "corner1b",
+        "seconds": 7.394900218991097,
+        "peak_kib": 22664,
+        "guard_seconds": 90,
+        "optimized_seconds": 8.89715289697051,
+        "optimized_peak_kib": 24004
+      },
+      {
+        "case": "neg4",
+        "seconds": 0.157786293013487,
+        "peak_kib": 17464,
+        "guard_seconds": 90,
+        "optimized_seconds": 0.2703293379745446,
+        "optimized_peak_kib": 19752
+      },
+      {
+        "case": "neg5",
+        "seconds": 0.23282017599558458,
+        "peak_kib": 17980,
+        "guard_seconds": 90,
+        "optimized_seconds": 0.3524974369793199,
+        "optimized_peak_kib": 20232
+      },
+      {
+        "case": "neg6",
+        "seconds": 0.3255522769759409,
+        "peak_kib": 18764,
+        "guard_seconds": 90,
+        "optimized_seconds": 0.4711613720282912,
+        "optimized_peak_kib": 21000
+      },
+      {
+        "case": "neg7",
+        "seconds": 0.463910841033794,
+        "peak_kib": 19428,
+        "guard_seconds": 90,
+        "optimized_seconds": 0.5748640540405177,
+        "optimized_peak_kib": 21424
+      }
+    ],
+    "q8_cut": {
+      "normal_seconds": 0.6888500310014933,
+      "optimized_seconds": 2.1194506779429503
+    },
+    "record_sha256": "6433af7560fe5e0ace227da26bf3044a3d9883b7148ff49f289b958ac3672810"
+  },
+  "independent_complete_record_sha256": "d285e2de02a1bbae57ed52513230c7530f186bda260e3f57d97836544ca3ec0f",
+  "first_freeze": {
+    "stage": "All independent normal cases frozen BEFORE target proof engine inspection",
+    "files": {
+      "EXPECTED.json": "6433af7560fe5e0ace227da26bf3044a3d9883b7148ff49f289b958ac3672810",
+      "INPUT-DUALS.json": "a8742ba6d997e8b2dfe4ebdefae99e6e3609bdd35a039181e3eae89c4c73ce91",
+      "cases.py": "9ba9e865eb92b954308abe0093346c89c0b7465fbb68f8c559758214cabcca41",
+      "core.py": "061cbad05fa2a1946a905c1d2b6680ed70166a22f37338aa50fec39dd7a1cdcf",
+      "q8_cut.py": "d02f52770e94d9d77c2c3c1d2d959ec7bbe4fd0cb530b92d39c51f9114b1a07c"
+    },
+    "cases": [
+      "continue10",
+      "continue11",
+      "continue4",
+      "continue5",
+      "continue6",
+      "continue9",
+      "conventions",
+      "corner0a",
+      "corner0b",
+      "corner1a",
+      "corner1b",
+      "neg4",
+      "neg5",
+      "neg6",
+      "neg7",
+      "q8_cut"
+    ]
+  },
+  "native_author": {
+    "full_normal_optimized_stdout_and_pinned_EXPECTED_agreement": true,
+    "record_sha256": "bcc69b27777ca517a22f694ba2dd6e81ba176c9345da5463dae33c8b863bdd78",
+    "normal_seconds": 82.81780061003519,
+    "optimized_seconds": 58.13653646805324,
+    "normal_peak_kib": 29028,
+    "optimized_peak_kib": 29784,
+    "unchanged_internal_guard_seconds": 60,
+    "fixed_outer_guard_seconds": 90,
+    "damage_rejections": 26
+  },
+  "shared_adapter": {
+    "complete_record": {
+      "entire_duals": true,
+      "entire_scalar_records": true,
+      "finite_records": 28,
+      "ok": true,
+      "record_sha256": "11848ee5ec46feace7042f985286c6a75cd7cb31f6e8dac3714b149fea29e3db",
+      "scope": "Shared finite,dual,scalar fields; author26 damage names and author record self-digest are native corroboration only."
+    },
+    "whole_normal_optimized_stdout_equal": true,
+    "normal_seconds": 4.247240267985035,
+    "optimized_seconds": 2.9499125169822946
+  },
+  "driver_controls": {
+    "mode_records_reassembled": true,
+    "whole_driver_record_equal": true,
+    "rejected": [
+      "duplicate",
+      "NaN"
+    ],
+    "driver_check": "Frozen successful child receipts substituted; this is orchestration integration, not another mathematical run."
+  },
+  "resources": "Serial mathematical children, native threads1, unchanged1CPU2GiB. Fixed90s per independent case; no solver/float/parallel math/limits increase.",
+  "finite_claims": "k3 negative q4..7 ALL real kappa,t; q8 real rectangle; k2 q4..6/k3 q9..11 entire real intervals; N<=137. Infinite tails retained9145/9195, not finite extrapolation.",
+  "novelty_credit": "q8 halfplane independently reconstructed after private researcher report1559; identical pairings, no exclusive priority. delta2^-40 finite floors and convexity bridge proved for this table only.",
+  "operational_note": "Fresh full GraphQL request exceeded60s. No index/settings change or guard increase; complete saved9268 neighborhood plus every verified signed committed delta supplies bounded fresh context."
+}
