@@ -1,0 +1,130 @@
+{
+  "agent": "six-heesch-2",
+  "role": "researcher",
+  "scope": "Registered contact-domain lemmas; full E2 inclusion and finite-five target remain unresolved",
+  "evidence": {
+    "raw_cardinality": [
+      184,
+      96,
+      0
+    ],
+    "raw_samples": [
+      {
+        "k": 6,
+        "raw_contacts": 760
+      },
+      {
+        "k": 7,
+        "raw_contacts": 856
+      },
+      {
+        "k": 8,
+        "raw_contacts": 952
+      },
+      {
+        "k": 9,
+        "raw_contacts": 1048
+      },
+      {
+        "k": 12,
+        "raw_contacts": 1336
+      }
+    ],
+    "notch_suppliers": 9,
+    "material_notch": [
+      {
+        "k": 6,
+        "notch_suppliers": 9,
+        "side_shifts": [
+          -3,
+          -2
+        ]
+      },
+      {
+        "k": 7,
+        "notch_suppliers": 9,
+        "side_shifts": [
+          -4,
+          -3
+        ]
+      },
+      {
+        "k": 8,
+        "notch_suppliers": 9,
+        "side_shifts": [
+          -5,
+          -4
+        ]
+      },
+      {
+        "k": 9,
+        "notch_suppliers": 9,
+        "side_shifts": [
+          -6,
+          -5
+        ]
+      },
+      {
+        "k": 12,
+        "notch_suppliers": 9,
+        "side_shifts": [
+          -9,
+          -8
+        ]
+      }
+    ],
+    "E1_identity_side6_shifts": [
+      "3-k",
+      "4-k"
+    ],
+    "angle_exclusion": {
+      "suppliers": 46,
+      "points": 6,
+      "cuts": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "DAG_nodes": 16,
+      "atlas_sha256": "9b73903b17d1f9cd5ce84fdac232644ee174470a6be04f162846bf4e715bca81"
+    },
+    "E2_identity_side4_minus_k_forced_pose": [
+      [
+        -1,
+        0,
+        0,
+        -1
+      ],
+      5,
+      3
+    ],
+    "damaged_controls": 6,
+    "trust_boundary": "Shared affine/height kernels; separate event sweeps, cuts and materialized audits; unformalized ordinary reduction; no independent review"
+  },
+  "evidence_sha256": "56582da9546aed7a236b7596e8734bb0075f969ad595d1c402f6ac363a13e36b",
+  "source_hashes": {
+    ".gitignore": "0ee5b93389b8b94ca2fe2894330af4dca5d259c6b042bf4a981226e17bd129c4",
+    "README.md": "af306a0178791097c07cf7e675d81d1e91e900b6d3b362fdbf0d3e970c434fb6",
+    "deps.py": "ce88daecc364bab6c122ceaa83e7142134af7b55641369aa7c87cc91a9e3ea7d",
+    "proof.md": "23da0832df232c82f1f7e8799261fda0a087726ea471ffb4698420582ad036c3",
+    "strip_contact_reader.py": "d0429c7057e9dd876a5a3f9ae8f5881bda6fef172d54a0161e797b46ef14f3f6",
+    "strip_contact_rectangles.py": "4434d9ba0db18f2052b87e0ac64452105d88d6414653344fc036342d89ea7943",
+    "strip_local_pair_certificate.py": "7c049fe993cbe0e9ef3d05751a7106547b1d32eddfaa2ba842336ac944f1ca91",
+    "strip_notch_intervals.py": "a9acc497dd8478f77af7c6aa3ee183b1fffe09c761f5ab1844a2dcadb881787a",
+    "strip_point_suppliers.py": "594b455753fd469d600a762dd390d650f68dcc635cb8226d3a8fcf449424229a",
+    "verify.py": "f549710717c0ed2b3c81d869a3d4b151c82f3ef60666b5697b7b1f1734dbebc3"
+  },
+  "dependency_hashes": {
+    "../parametric-strip-obstruction/strip_columns.py": "0fef434ed1813ca0cfe0ce71205dd95136544eff3a543005ae834924d6d87aa0",
+    "../parametric-strip-obstruction/strip_parametric_geometry.py": "87157118eefe2912bbb8b04edb18b507f6938e068a053d961e8182b48b4bf7fc",
+    "../strip-t5/exact.py": "265366ae7cc1e5b5ed60bc96075a32e5d56ac62e52da92080ab8752cdbf9285c"
+  },
+  "dependency_source_commits": {
+    "parametric-strip-obstruction": "41bf6af8891df8c07f5a71db1c81a40b52c7b4ca",
+    "strip-t5": "a5052d63996131ca4eaceb22c1293a6fd4f9a056"
+  }
+}
