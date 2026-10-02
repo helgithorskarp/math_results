@@ -1,0 +1,176 @@
+{
+  "agent": "six-downset-3",
+  "cutoffs_first_twelve": [
+    4,
+    7,
+    12,
+    18,
+    24,
+    29,
+    35,
+    41,
+    46,
+    52,
+    57,
+    63
+  ],
+  "damages": {
+    "positive_checker_controls": 2,
+    "rejected": [
+      "parameters (True, 1)",
+      "parameters (4.0, 1)",
+      "parameters (3, 1)",
+      "parameters (7, 0)",
+      "parameters (7, 8)",
+      "parameters (4, 2)",
+      "parameters (6, 2)",
+      "parameters (11, 3)",
+      "literal q beyond bound",
+      "literal N beyond bound",
+      "t 0",
+      "t -1",
+      "t 0.001",
+      "t 1",
+      "invalid member True",
+      "invalid member -1",
+      "invalid member 128",
+      "invalid member 14",
+      "invalid member 56",
+      "negative sign constant",
+      "zero sign constant",
+      "dependency changed",
+      "missing actual empty",
+      "inexact empty loop",
+      "asymmetric entry",
+      "wrong whole row sum",
+      "row-balanced support damage",
+      "missing repair balance edge",
+      "indefinite smaller-singleton substitute",
+      "negative exact PSD pivot",
+      "singular PSD zero-row inconsistency"
+    ],
+    "rejection_count": 31
+  },
+  "expected_file_sha256": "b84aa985ccf1fce2ff58a0f0060fc65a3e223ddef96fead14e66b30e58671865",
+  "fixtures": [
+    {
+      "N": 41,
+      "actual_empty_M_loop": "183/3400",
+      "core_sha256": "a59ca7b1d67f7ac0c686f011230c92729b721d97982ec560e89c3df982bce67e",
+      "gamma": "10564185/140777969",
+      "k": 1,
+      "kappa": "1/8",
+      "projected_gap_slack_rank": 40,
+      "q": 4,
+      "s": 16,
+      "seed_rank": 37,
+      "tau": "1/192",
+      "whole_lower_rank": 40,
+      "whole_sha256": "85a1d38cb3839abef5c8aad65d851db3f4006114b179ea0dfbcc60b75e872d98",
+      "whole_upper_rank": 40
+    },
+    {
+      "N": 76,
+      "actual_empty_M_loop": "74756/156825",
+      "core_sha256": "2da9267eeb398ebed246205b216af6f00cfb6027351604760fc4f0d610804ac3",
+      "gamma": "1476633314/140553413539",
+      "k": 2,
+      "kappa": "247/3075",
+      "projected_gap_slack_rank": 75,
+      "q": 7,
+      "s": 25,
+      "seed_rank": 72,
+      "tau": "738316657/281106827078",
+      "whole_lower_rank": 75,
+      "whole_sha256": "af5247036dd145380d202118fd739c44506369f5a5cf3f3bef115d037c1150b4",
+      "whole_upper_rank": 75
+    },
+    {
+      "N": 155,
+      "actual_empty_M_loop": "52654149/83300480",
+      "core_sha256": "6a6722cc5added9d42d87f32a30cdbe8009829301fc6eebb03a94f959db0d389",
+      "gamma": "9109644365/4216442006091",
+      "k": 3,
+      "kappa": "6355/724352",
+      "projected_gap_slack_rank": 154,
+      "q": 12,
+      "s": 40,
+      "seed_rank": 151,
+      "tau": "6355/17384448",
+      "whole_lower_rank": 154,
+      "whole_sha256": "a0e44475e26e3386cca90a725ceb74a1b6bdfd0f790967252a3355cfacb74733",
+      "whole_upper_rank": 154
+    }
+  ],
+  "general_H_I": "open",
+  "record_sha256": "33f4947bd0c5a319edd28635563bc69744903e2d1d59e0a4d6c959847d903e73",
+  "replay": {
+    "entire_records_agree": true,
+    "normal_seconds": 121.56,
+    "observed_peak_child_rss_KiB": 41280,
+    "one_CPU_intensive_child": true,
+    "optimized_seconds": 123.859,
+    "per_task_guard_seconds": 60
+  },
+  "role": "researcher",
+  "scope": "q>=4,1<=k<=q,B0>0,every choice of k deleted bcx triples",
+  "status": "author-checked ordinary proof; unformalized and independently unreviewed",
+  "total_whole_entry_comparisons": 31482,
+  "zero_endpoint_lower_signs": 14,
+  "zero_endpoint_upper_margins": 18,
+  "zero_original_q4": {
+    "core_sha256": "b6335a216ecedfa6a55eae4cae00b4319e75f09adaadda5aebca27bb23d68bbe",
+    "credited_fixed_kappa_half_table_exact": true,
+    "full_N": 42,
+    "nonempty_rank": 36,
+    "nullity": 5,
+    "q": 4,
+    "secondary_zero_quotients": [
+      {
+        "coefficient_sha256": "bbdc227b08dea721505c6b48906ce917cdbc3641e85192ef8c5cf91409160daf",
+        "degree": [
+          0,
+          0
+        ],
+        "denominator": 1,
+        "rank": 4
+      },
+      {
+        "coefficient_sha256": "0d78748ca959a6180b9c29c058b472a8a5399b677705a2fd93000612bd1a9779",
+        "degree": [
+          1,
+          0
+        ],
+        "denominator": 1,
+        "rank": 3
+      },
+      {
+        "coefficient_sha256": "e93009e6a7b286366922ec9bf50e490b4764b39650e13fbf956c187e534fe55c",
+        "degree": [
+          0,
+          1
+        ],
+        "denominator": 12,
+        "rank": 4
+      },
+      {
+        "coefficient_sha256": "e5adcaeca43af1ca24e664687f423e49764b11b1c5900095d136a461603d2108",
+        "degree": [
+          1,
+          1
+        ],
+        "denominator": 6,
+        "rank": 2
+      },
+      {
+        "coefficient_sha256": "3ae59a3dedd4102174642568eddecbda4b0f070386a9785b95e61f50264236d8",
+        "degree": [
+          0,
+          2
+        ],
+        "denominator": 6,
+        "rank": 1
+      }
+    ]
+  }
+}
