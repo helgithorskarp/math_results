@@ -1,0 +1,284 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "whole_normal_optimized_equal": true,
+  "independent_normal": {
+    "agent": "six-reviewer-5",
+    "role": "independent mathematical reviewer",
+    "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+    "mode": "normal",
+    "mathematical_sha256": "a3cb48186da34817ab4f909d272df91d89b136ee8a14e449f1145c15465f33d9",
+    "elapsed_seconds": 44.910457674995996,
+    "peak_child_RSS_KiB": 56688,
+    "native_threads": 1,
+    "serial": true,
+    "subprocess_guard_seconds": 60,
+    "stages": [
+      {
+        "stage": "independent.py",
+        "seconds": 1.100991994026117
+      },
+      {
+        "stage": "physical.py",
+        "seconds": 13.192298198933713
+      },
+      {
+        "stage": "independent.py",
+        "seconds": 1.191169881960377
+      },
+      {
+        "stage": "unit_flow.py",
+        "seconds": 2.17868384195026
+      },
+      {
+        "stage": "support.py",
+        "seconds": 26.296356825972907
+      },
+      {
+        "stage": "controls.py",
+        "seconds": 0.53476293804124
+      },
+      {
+        "stage": "boundary20.py",
+        "seconds": 0.35370245098602027
+      }
+    ],
+    "ordinary_bridges_formalized": false
+  },
+  "independent_optimized": {
+    "agent": "six-reviewer-5",
+    "role": "independent mathematical reviewer",
+    "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+    "mode": "optimized",
+    "mathematical_sha256": "a3cb48186da34817ab4f909d272df91d89b136ee8a14e449f1145c15465f33d9",
+    "elapsed_seconds": 45.20630842004903,
+    "peak_child_RSS_KiB": 59040,
+    "native_threads": 1,
+    "serial": true,
+    "subprocess_guard_seconds": 60,
+    "stages": [
+      {
+        "stage": "independent.py",
+        "seconds": 1.2196238270262256
+      },
+      {
+        "stage": "physical.py",
+        "seconds": 13.299593319999985
+      },
+      {
+        "stage": "independent.py",
+        "seconds": 1.2643916229717433
+      },
+      {
+        "stage": "unit_flow.py",
+        "seconds": 2.3535146209178492
+      },
+      {
+        "stage": "support.py",
+        "seconds": 25.920556387049146
+      },
+      {
+        "stage": "controls.py",
+        "seconds": 0.6593608780531213
+      },
+      {
+        "stage": "boundary20.py",
+        "seconds": 0.4257088160375133
+      }
+    ],
+    "ordinary_bridges_formalized": false
+  },
+  "original_native_normal": {
+    "agent": "six-code-3",
+    "complete_mathematical_sha256": "aaf8bd4b4444c05953998592e86caad8481b21eba00f786fd3e89ed10830aab9",
+    "elapsed_seconds": 25.588573882938363,
+    "independent_peer_review": false,
+    "mode": "normal",
+    "native_threads": 1,
+    "ordinary_bridges_formalized": false,
+    "peak_RUSAGE_CHILDREN_KiB": 20332,
+    "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+    "role": "researcher",
+    "serial_children": true,
+    "source_seal": {
+      "EXPECTED.json": "c7b621b85d186d86279a73964cafafd1706f7f96737fe58c31361b14cf65a752",
+      "baseline/cuts.py": "a229e65d12a69452ac2c6768830854ee42df434672aca0f0971bb1e8c7d181dc",
+      "baseline/expected.json": "326f8f41a0cf8f9f47c7a93351dab1f96d44fbb90904d0312e0e8f9ebfd16bc9",
+      "baseline/fixtures.json": "c188200792c201bdb44ea1667a8a70255c4e40f04fee6c334c98ecfa650113e7",
+      "baseline/produce.py": "b439d2ad4f12f762d2fb215588b0332bd94396340b0909c856d3c5f8094d6f01",
+      "source/pass16-check-cuts.py": "542b50783968705b9d689119c9d5b172bfc01746881f62e61d7649cc0b9146df",
+      "source/pass16-check-low-friends.py": "ce90f77132ee619be227555e96f0b31e161dffa698cab3325e7d44428eaed33d",
+      "source/pass16-check-role-catalogue.py": "0aed19f3abd60ba2dad58b127036fc87d6ca4c17f629ce2187ca5fa4ccbbf29c",
+      "source/pass16-first-engine-low-friends.py": "e38dee21748d0c124e4e810d13aa7921bcb6947f77377fc0ec444842776c44d6",
+      "source/pass16-hub-role-catalogue.py": "430e1d9050e2ddfaf57e5faae33191aa65ca996f9af5c14f7ea5e148743785ca",
+      "source/pass16-p21-cuts.py": "86907d35cb594801b8912e1e39700944516c0fdbb5614ef0944b27687503a310",
+      "source/pass16-p21-forced.py": "132b6c0fbf4eeca23c08535c5888bd177129ed00d02a2166ad2e91cbbf5e2cf1",
+      "source/pass16-p21-produce.py": "45032ffa9e41785be85333798dbc529fa4ca43d3ea30a5805c21f933ee3b8fc6",
+      "source/pass16-p21-unit-graphs.py": "9d86d54a9d1409276ff9362951f5348d20e5cdfad29d0211dc696ba70ac60cbe",
+      "source/pass16-p21-verify.py": "26324fec17256d725874380af9390ae3191320d1fa0a36e4036d5bc5c2ff7cc2",
+      "source/pass16-role-controls.py": "980be8b41a8d83fdaa142d52fa3f2c0b88153584c6446f0c2c1630757f4d60d7",
+      "source/pass17-check-support-census.py": "5c0045ed352a1a8f0b8b437352564041743d7d426a2f4a4773862e64d047b181",
+      "source/pass17-support-census-exact.py": "90d308130e9a317edf53b0c687bd543d22ed3f16c926dc7da5382b5d171c88d6",
+      "source/pass17-support-controls.py": "0a2c215ec5301d341c691177dbc266199014509c8ee7b8a213e64dfb73fba92f"
+    },
+    "stage_timeout_seconds": 60,
+    "stages": [
+      {
+        "elapsed_seconds": 0.6332305469550192,
+        "stage": "pass16-first-engine-low-friends"
+      },
+      {
+        "elapsed_seconds": 1.600419476046227,
+        "stage": "pass16-check-low-friends"
+      },
+      {
+        "elapsed_seconds": 0.5882959029404446,
+        "stage": "pass16-p21-produce"
+      },
+      {
+        "elapsed_seconds": 0.8878611359978095,
+        "stage": "pass16-p21-verify"
+      },
+      {
+        "elapsed_seconds": 0.28563728905282915,
+        "stage": "pass16-p21-cuts"
+      },
+      {
+        "elapsed_seconds": 0.11260695301461965,
+        "stage": "pass16-p21-forced"
+      },
+      {
+        "elapsed_seconds": 0.8563811980420724,
+        "stage": "pass16-p21-unit-graphs"
+      },
+      {
+        "elapsed_seconds": 1.04397274996154,
+        "stage": "pass16-check-cuts"
+      },
+      {
+        "elapsed_seconds": 10.477104297024198,
+        "stage": "pass16-hub-role-catalogue"
+      },
+      {
+        "elapsed_seconds": 3.7880253930343315,
+        "stage": "pass16-check-role-catalogue"
+      },
+      {
+        "elapsed_seconds": 1.0388886269647628,
+        "stage": "pass16-role-controls"
+      },
+      {
+        "elapsed_seconds": 2.1577132269740105,
+        "stage": "pass17-support-census-exact"
+      },
+      {
+        "elapsed_seconds": 1.9371048080502078,
+        "stage": "pass17-check-support-census"
+      },
+      {
+        "elapsed_seconds": 0.0628444729372859,
+        "stage": "pass17-support-controls"
+      }
+    ],
+    "status": "PUBLIC_SOURCE_COMPLETE_REPLAY_PASS",
+    "whole_records_matched": 14
+  },
+  "original_native_optimized": {
+    "agent": "six-code-3",
+    "complete_mathematical_sha256": "aaf8bd4b4444c05953998592e86caad8481b21eba00f786fd3e89ed10830aab9",
+    "elapsed_seconds": 26.699812174076214,
+    "independent_peer_review": false,
+    "mode": "optimized",
+    "native_threads": 1,
+    "ordinary_bridges_formalized": false,
+    "peak_RUSAGE_CHILDREN_KiB": 22772,
+    "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+    "role": "researcher",
+    "serial_children": true,
+    "source_seal": {
+      "EXPECTED.json": "c7b621b85d186d86279a73964cafafd1706f7f96737fe58c31361b14cf65a752",
+      "baseline/cuts.py": "a229e65d12a69452ac2c6768830854ee42df434672aca0f0971bb1e8c7d181dc",
+      "baseline/expected.json": "326f8f41a0cf8f9f47c7a93351dab1f96d44fbb90904d0312e0e8f9ebfd16bc9",
+      "baseline/fixtures.json": "c188200792c201bdb44ea1667a8a70255c4e40f04fee6c334c98ecfa650113e7",
+      "baseline/produce.py": "b439d2ad4f12f762d2fb215588b0332bd94396340b0909c856d3c5f8094d6f01",
+      "source/pass16-check-cuts.py": "542b50783968705b9d689119c9d5b172bfc01746881f62e61d7649cc0b9146df",
+      "source/pass16-check-low-friends.py": "ce90f77132ee619be227555e96f0b31e161dffa698cab3325e7d44428eaed33d",
+      "source/pass16-check-role-catalogue.py": "0aed19f3abd60ba2dad58b127036fc87d6ca4c17f629ce2187ca5fa4ccbbf29c",
+      "source/pass16-first-engine-low-friends.py": "e38dee21748d0c124e4e810d13aa7921bcb6947f77377fc0ec444842776c44d6",
+      "source/pass16-hub-role-catalogue.py": "430e1d9050e2ddfaf57e5faae33191aa65ca996f9af5c14f7ea5e148743785ca",
+      "source/pass16-p21-cuts.py": "86907d35cb594801b8912e1e39700944516c0fdbb5614ef0944b27687503a310",
+      "source/pass16-p21-forced.py": "132b6c0fbf4eeca23c08535c5888bd177129ed00d02a2166ad2e91cbbf5e2cf1",
+      "source/pass16-p21-produce.py": "45032ffa9e41785be85333798dbc529fa4ca43d3ea30a5805c21f933ee3b8fc6",
+      "source/pass16-p21-unit-graphs.py": "9d86d54a9d1409276ff9362951f5348d20e5cdfad29d0211dc696ba70ac60cbe",
+      "source/pass16-p21-verify.py": "26324fec17256d725874380af9390ae3191320d1fa0a36e4036d5bc5c2ff7cc2",
+      "source/pass16-role-controls.py": "980be8b41a8d83fdaa142d52fa3f2c0b88153584c6446f0c2c1630757f4d60d7",
+      "source/pass17-check-support-census.py": "5c0045ed352a1a8f0b8b437352564041743d7d426a2f4a4773862e64d047b181",
+      "source/pass17-support-census-exact.py": "90d308130e9a317edf53b0c687bd543d22ed3f16c926dc7da5382b5d171c88d6",
+      "source/pass17-support-controls.py": "0a2c215ec5301d341c691177dbc266199014509c8ee7b8a213e64dfb73fba92f"
+    },
+    "stage_timeout_seconds": 60,
+    "stages": [
+      {
+        "elapsed_seconds": 0.7781513159861788,
+        "stage": "pass16-first-engine-low-friends"
+      },
+      {
+        "elapsed_seconds": 1.6330395410768688,
+        "stage": "pass16-check-low-friends"
+      },
+      {
+        "elapsed_seconds": 0.7118783150799572,
+        "stage": "pass16-p21-produce"
+      },
+      {
+        "elapsed_seconds": 1.0074452590197325,
+        "stage": "pass16-p21-verify"
+      },
+      {
+        "elapsed_seconds": 0.40191285498440266,
+        "stage": "pass16-p21-cuts"
+      },
+      {
+        "elapsed_seconds": 0.22491393191739917,
+        "stage": "pass16-p21-forced"
+      },
+      {
+        "elapsed_seconds": 0.9662900529801846,
+        "stage": "pass16-p21-unit-graphs"
+      },
+      {
+        "elapsed_seconds": 1.148509711958468,
+        "stage": "pass16-check-cuts"
+      },
+      {
+        "elapsed_seconds": 10.567600167007186,
+        "stage": "pass16-hub-role-catalogue"
+      },
+      {
+        "elapsed_seconds": 3.9323602450313047,
+        "stage": "pass16-check-role-catalogue"
+      },
+      {
+        "elapsed_seconds": 1.1452527459478006,
+        "stage": "pass16-role-controls"
+      },
+      {
+        "elapsed_seconds": 2.238665341050364,
+        "stage": "pass17-support-census-exact"
+      },
+      {
+        "elapsed_seconds": 1.6320102089084685,
+        "stage": "pass17-check-support-census"
+      },
+      {
+        "elapsed_seconds": 0.1914209999376908,
+        "stage": "pass17-support-controls"
+      }
+    ],
+    "status": "PUBLIC_SOURCE_COMPLETE_REPLAY_PASS",
+    "whole_records_matched": 14
+  },
+  "core_sources_unchanged_from_seals": true,
+  "initial_unfactored_census_incomplete_not_a_premise": true,
+  "optional_broad_diagnostic_annotation_normalized_only": true
+}
