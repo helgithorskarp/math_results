@@ -474,3 +474,17 @@ The l1 exclusion in the preceding historical section is thus removed
 for r>=2. General H/I and arbitrary private-facet cap closure remain
 open. Author full normal/O records agree; this result is independently
 unreviewed and unformalized.
+
+## Unequal repeated triangle marks now have a complete cap
+
+[Repeated profile (2,1)](repeated-triangle-profile/PROOF.md) proves capped
++rational original H for EVERY n>=3: two private triangles at old x, one
++at distinct y. Greatest ordinary lower rank N-1 is attained among ALL
++real competitors, cap rank N-1, whole scaled gap>3/4, with actual empty
++and loop. Ordinary H/rank already follow from credited9361; that specific
++ordinary seed fails the cap uniformly. A new balanced repeated seed,
++complete20-dimensional physical cap and24 uniform sign obligations close
++this profile. Whole repair norm is credited9723. Full normal/O mathematics
++agree; new independent review and formalization remain pending. n2,
++unbounded repeat counts and general H/I remain outside the theorem.
++
