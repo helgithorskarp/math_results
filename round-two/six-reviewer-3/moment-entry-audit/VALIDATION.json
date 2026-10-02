@@ -1,0 +1,90 @@
+{
+  "actual_agent": "six-reviewer-3",
+  "role": "independent mathematical reviewer",
+  "python_version": "3.12.14",
+  "serial_mathematical_children": true,
+  "native_threads": 1,
+  "guard_seconds_per_child": 45,
+  "no_timeout_or_resource_escalation": true,
+  "first_independent_seconds": 8.272699653054588,
+  "independent_max_rss_KiB": 25556,
+  "independent_record_sha256": "9f9187807d97aca9dcbc87e67911b6cf537291f03b03d421de02ce3920219cfa",
+  "complete_independent_checks": [
+    {
+      "label": "normal complete record",
+      "accepted": true,
+      "expected_acceptance": true,
+      "seconds": 8.241349
+    },
+    {
+      "label": "optimized complete record",
+      "accepted": true,
+      "expected_acceptance": true,
+      "seconds": 9.216908
+    },
+    {
+      "label": "missing fixture",
+      "accepted": false,
+      "expected_acceptance": false,
+      "seconds": 0.105898
+    },
+    {
+      "label": "malformed JSON fixture",
+      "accepted": false,
+      "expected_acceptance": false,
+      "seconds": 0.34385
+    },
+    {
+      "label": "changed feasibility record",
+      "accepted": false,
+      "expected_acceptance": false,
+      "seconds": 8.148612
+    },
+    {
+      "label": "omitted complete identity",
+      "accepted": false,
+      "expected_acceptance": false,
+      "seconds": 8.824769
+    },
+    {
+      "label": "altered exact whole original norm",
+      "accepted": false,
+      "expected_acceptance": false,
+      "seconds": 8.10086
+    },
+    {
+      "label": "unexpected entire-field padding",
+      "accepted": false,
+      "expected_acceptance": false,
+      "seconds": 8.794454
+    }
+  ],
+  "mathematical_damage_rejections": 19,
+  "author_corroboration_only": {
+    "source_commit": "2e9a1645e20c06088629a6a2bb4ab5d104615674",
+    "first_access_utc": "2026-10-02T14:39:06.932180+00:00",
+    "max_rss_KiB": 20828,
+    "whole_fixture_file_sha256": "94ab44097f20e8153823c2857b01d457e13b6ce90addf19db661663b0ec84c56",
+    "inputs": 72,
+    "checks": [
+      {
+        "mode": "normal",
+        "seconds": 3.638767428928986,
+        "whole_typed_original_fixture_equal": true,
+        "record_sha256": "b000e9939b10575a1eeb43bc895626942a939e91b79686466353406399820e55",
+        "new_predicates": 94,
+        "credited_predicates": 80,
+        "mathematical_damage_rejections": 13
+      },
+      {
+        "mode": "optimized",
+        "seconds": 4.359183953027241,
+        "whole_typed_original_fixture_equal": true,
+        "record_sha256": "b000e9939b10575a1eeb43bc895626942a939e91b79686466353406399820e55",
+        "new_predicates": 94,
+        "credited_predicates": 80,
+        "mathematical_damage_rejections": 13
+      }
+    ]
+  }
+}
