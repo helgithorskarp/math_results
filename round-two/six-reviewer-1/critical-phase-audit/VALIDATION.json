@@ -1,0 +1,161 @@
+{
+  "agent": "six-reviewer-1",
+  "all_runs": {
+    "author-normal": {
+      "exit": 0,
+      "guard_seconds": 45,
+      "peak_KiB": 18388,
+      "result": {
+        "analytic_bridges_formalized": false,
+        "complete_matrix_identities": 6,
+        "mathematical_damage_rejections": 8,
+        "principal_minors": 256,
+        "record_sha256": "79758e6389f90359f90f1b03de200746dc29b4cfeda8cfb54fb53f6e4b51c384",
+        "status": "pass",
+        "strict_rational_margins": 17,
+        "whole_polynomial_identities": 8
+      },
+      "seconds": 2.2818416880327277,
+      "six_native_threads": 1
+    },
+    "author-optimized": {
+      "exit": 0,
+      "guard_seconds": 45,
+      "peak_KiB": 21312,
+      "result": {
+        "analytic_bridges_formalized": false,
+        "complete_matrix_identities": 6,
+        "mathematical_damage_rejections": 8,
+        "principal_minors": 256,
+        "record_sha256": "79758e6389f90359f90f1b03de200746dc29b4cfeda8cfb54fb53f6e4b51c384",
+        "status": "pass",
+        "strict_rational_margins": 17,
+        "whole_polynomial_identities": 8
+      },
+      "seconds": 2.546480960038025,
+      "six_native_threads": 1
+    },
+    "external-fixture-controls": {
+      "exit": 0,
+      "guard_seconds": 110,
+      "peak_KiB": 21852,
+      "result": {
+        "count": 4,
+        "external_rejections": [
+          {
+            "diagnostic": "FAIL: expected fixture unreadable",
+            "exit": 1,
+            "mode": "missing",
+            "optimized": false
+          },
+          {
+            "diagnostic": "FAIL: entire regenerated fixture comparison",
+            "exit": 1,
+            "mode": "altered",
+            "optimized": false
+          },
+          {
+            "diagnostic": "FAIL: expected fixture unreadable",
+            "exit": 1,
+            "mode": "missing",
+            "optimized": true
+          },
+          {
+            "diagnostic": "FAIL: entire regenerated fixture comparison",
+            "exit": 1,
+            "mode": "altered",
+            "optimized": true
+          }
+        ],
+        "signal_or_timeout_is_not_rejection": true,
+        "status": "PASS"
+      },
+      "seconds": 44.111469456984196,
+      "six_native_threads": 1
+    },
+    "independent-comparison-fixed": {
+      "exit": 0,
+      "guard_seconds": 110,
+      "peak_KiB": 18884,
+      "result": {
+        "author_fixture_file_sha256": "433a4f45961fbc09678c245b3a147dbf665e8b0554b3faa71b351a69ed7ea8b7",
+        "complete_witness": true,
+        "matrices": 6,
+        "principal_minors": 256,
+        "shared_fields": [
+          "complete_rational_matrices",
+          "whole_polynomial_identities",
+          "all256_principal_minors",
+          "strict_sufficient_margins",
+          "actual_witness"
+        ],
+        "shared_record_sha256": "33d94c23d4abc0061318c6373a6338e9fd0797929c6bbe1a9ab62d71ee57ae8c",
+        "status": "PASS",
+        "strict_margins": 17,
+        "whole_polynomials": 8
+      },
+      "seconds": 5.783774940005969,
+      "six_native_threads": 1
+    },
+    "independent-complete-normal": {
+      "exit": 0,
+      "guard_seconds": 110,
+      "peak_KiB": 18336,
+      "result": {
+        "exact_predicates_including_controls": 761,
+        "expected_bytes": 60956,
+        "fivefold_light_collision_nonnormal": true,
+        "literal_polynomial_controls": 6,
+        "principal_minors": 256,
+        "quadratic_forms": 3,
+        "schema": "six-reviewer-1-critical-phase-audit-v1",
+        "semantic_damages": 8,
+        "sha256": "75ef7f66c6edbddc446e1b13c81d551f714ebe033bdb7bb36a9903206f401cd8",
+        "status": "PASS",
+        "strict_margins": 19
+      },
+      "seconds": 11.272283919039182,
+      "six_native_threads": 1
+    },
+    "independent-complete-optimized": {
+      "exit": 0,
+      "guard_seconds": 110,
+      "peak_KiB": 22360,
+      "result": {
+        "exact_predicates_including_controls": 761,
+        "expected_bytes": 60956,
+        "fivefold_light_collision_nonnormal": true,
+        "literal_polynomial_controls": 6,
+        "principal_minors": 256,
+        "quadratic_forms": 3,
+        "schema": "six-reviewer-1-critical-phase-audit-v1",
+        "semantic_damages": 8,
+        "sha256": "75ef7f66c6edbddc446e1b13c81d551f714ebe033bdb7bb36a9903206f401cd8",
+        "status": "PASS",
+        "strict_margins": 19
+      },
+      "seconds": 10.805707805033308,
+      "six_native_threads": 1
+    }
+  },
+  "author_source_commit": "6b6a8c755c6e565fee9df0cb15899a29563069f1",
+  "author_whole_normal_optimized_equal": true,
+  "expected_file_bytes": 60956,
+  "expected_file_sha256": "75ef7f66c6edbddc446e1b13c81d551f714ebe033bdb7bb36a9903206f401cd8",
+  "first_independent_record_before_author_engine_read": {
+    "author_executable_or_expected_fixture_read": false,
+    "author_proof_and_original_claim_read": true,
+    "bytes": 51049,
+    "record_sha256": "db5532dd3f70d859f13387b6ad0fcd5fa2f1cd7eedb183685780c68d5641f2b2",
+    "source_checker_sha256": "d9be643178953ebf5fd77a5cb6ce974b4444c120aed5f56030d30a805c7a49e6",
+    "utc": "2026-10-02T03:19:35.643140+00:00"
+  },
+  "independent_whole_normal_optimized_equal": true,
+  "python": "3.12.14",
+  "resource_policy": "Unchanged1CPU2GiB, one serial mathematical job, native1, independent90s internal/110s outer; author45s outer. No operational limit hit in successful final verification.",
+  "role": "independent mathematical reviewer",
+  "scope": "Independent unbounded ordinary analytic proof, finite exact controls, no author code imports. Stability surplus depends on explicitly scoped9189 premise, not independently audited. Native original replays exclude separately repeating its reported eight external fixture calls; four own external controls cover normal/O.",
+  "thread_variables_all_one": true,
+  "trust": "stdlib Fraction/own Gaussian matrix code and ordinary classical analytic/spectral bridges; not proof-assistant formalization or exhaustive complex enumeration.",
+  "utc": "2026-10-02T03:35:29.748515+00:00"
+}
