@@ -343,8 +343,9 @@ Subtracting proves (14). No attainment or identification of that branch
 with M is required. This excludes this explicit critical-coordinate domain
 from competitors within eta of the infimum; it asserts no inclusion
 comparison with9113's original-root basin. Dependency on9113 is limited
-to this labeled comparison. Its branch certificate remains independently
-unreviewed as of intake. The core tuple theorem (2) does not use9113,
+to this labeled comparison. Independent review9174 now confirms its core construction; its full
+committed statement and proof were read during finalization. That verdict
+is not a review of(14) or the new tuple theorem. The core tuple theorem (2) does not use9113,
 global concentration or any minimizer construction.
 
 The standalone certificate checks30 exact rational function caps,631

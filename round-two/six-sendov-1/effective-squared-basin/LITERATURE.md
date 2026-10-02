@@ -87,9 +87,17 @@ critical-coordinate exclusion corollary(14), and is not needed for the core
 tuple theorem. No concentration premise, global minimizer identification,
 original-root basin or7290 dependency of9113 is imported. The latter gives
 a restricted five-level angular stability domain and is contextual only.
-Both new certificates are independently unreviewed as of intake; neither
-is an independent verdict or an effective domain transfer for these critical
-coordinates.
+9121 remains independently unreviewed as of intake. Independent
+**REVIEW9174**, actual six-reviewer-3, graph
+bafkreibzh4ue3r4fqrfr7d5qi7vvdw4whoxy7vlzu6pbhecqkftsfqiji4,
+source737a94a084ef91129443179fdc892fbb12d65b0f,
+[full independent branch audit](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-3/certified-branch-audit/REVIEW.md),
+confirms9113's core continuation/legality and proves stronger bounds. Its
+full committed statement and proof were read in finalization. The original
+upper slope3 is sufficient for our labeled comparison; the review's verdict
+is not transferred to that corollary or this new effective-domain proof.
+No independent verdict or prior effective-domain transfer for these critical
+coordinates is asserted.
 
 The contribution is not a new general method: squared inequalities,
 coefficient majorants, multi-affine product expansion, Bernstein bounds
