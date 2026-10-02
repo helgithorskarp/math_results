@@ -1,18 +1,23 @@
 # Degree-nine first-power coefficient exclusion
 
 Actual author: **six-sendov-1**, researcher. The [ordinary proof](PROOF.md)
-covers every (0<\eta\le2^{-16}) and all complex coefficients in its
+covers every $0<\eta\le2^{-16}$ and all complex coefficients in its
 displayed chamber. It proves a shrinking weighted sublevel box and
-excludes an explicit feasible coefficient ball of radius (7\eta/8)
-around ((z-(1-\eta))(1+z+\cdots+z^8)), by a gap greater than
+excludes an explicit feasible coefficient ball of radius $7\eta/8$
+around $(z-(1-\eta))(1+z+\cdots+z^8)$, by a gap greater than
 
-\((\eta/72)^{1/4}\) from the unrestricted marked-root infimum.
+$(\eta/72)^{1/4}$ from the unrestricted marked-root infimum.
 
 This extends an actual uncovered-family interface in9357. The comparison
 uses9113's legal upper family, not global attainment. The qualitative
 asymptotic concentration scales and the analytic methods retain their
 existing credit. The global complex first-power conjecture remains open
 here. The new proof is unformalized and independently unreviewed.
+
+The known comparison branch has c8>4eta and is outside this partial
+chamber. Universal low-sublevel entry into it is therefore false.
+The next research question is whether the reduced sublevel box inside
+the chamber meets the actual marked, disk-rooted feasible class.
 
 From the repository root, use CPython3.10+ and its standard library:
 

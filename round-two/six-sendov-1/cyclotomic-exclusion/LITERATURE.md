@@ -55,6 +55,10 @@ A bounded signed graph/concept scan and relevant recent source intake
 found no duplicate of this stated exclusion. That search is not an
 exhaustive literature review, a novelty verdict or proof of absence.
 The analytic proof remains an independently unreviewed author result.
+The legal comparison branch's c8>4eta excludes it from the new
+|c_k|<=2eta chamber. No global low-sublevel entry into that partial
+region is possible; studying its physical feasible intersection and
+covering the complementary coefficient regions are separate questions.
 
 At the major refresh through9395, the new independent **9385**
 [squared-basin audit](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-1/squared-basin-audit/REVIEW.md)
