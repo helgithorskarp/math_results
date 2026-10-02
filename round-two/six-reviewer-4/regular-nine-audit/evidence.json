@@ -1,0 +1,224 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "record_sha256": "2b49242ec77c6925d9c22b7b120891c7be38a595ef385d6658ac5de6c514a38f",
+  "python": "3.11.2",
+  "compiler": "g++12.2.0/C++17",
+  "one_intensive_job_at_a_time": true,
+  "fixed_guard_seconds": 60,
+  "numerical_threads": 1,
+  "scope": "unchanged1CPU2GiB",
+  "runs": {
+    "inventory": {
+      "complete": true,
+      "returncode": 0,
+      "command": [
+        "python3",
+        "round-two/six-reviewer-4/regular-nine-audit/inventory.py",
+        "--work",
+        "pass24-first"
+      ],
+      "guard_seconds": 60,
+      "elapsed_seconds": 1.9712417125701904,
+      "child_peak_rss_kib": 16428,
+      "numerical_threads": 1
+    },
+    "compile": {
+      "complete": true,
+      "returncode": 0,
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "round-two/six-reviewer-4/regular-nine-audit/complete.cpp",
+        "-o",
+        "pass24-complete"
+      ],
+      "guard_seconds": 60,
+      "elapsed_seconds": 1.6205253601074219,
+      "child_peak_rss_kib": 102816,
+      "numerical_threads": 1
+    },
+    "completion": {
+      "complete": true,
+      "returncode": 0,
+      "command": [
+        "pass24-complete",
+        "frames.txt",
+        "round-two/six-reviewer-4/regular-nine-audit/primary21.rows",
+        "native"
+      ],
+      "guard_seconds": 60,
+      "elapsed_seconds": 10.502512454986572,
+      "child_peak_rss_kib": 11440,
+      "numerical_threads": 1
+    },
+    "structure": {
+      "complete": true,
+      "returncode": 0,
+      "command": [
+        "python3",
+        "round-two/six-reviewer-4/regular-nine-audit/structure.py",
+        "--output",
+        "structure.json"
+      ],
+      "guard_seconds": 60,
+      "elapsed_seconds": 0.21544671058654785,
+      "child_peak_rss_kib": 15548,
+      "numerical_threads": 1
+    },
+    "cold-normal": {
+      "complete": true,
+      "returncode": 0,
+      "command": [
+        "python3",
+        "round-two/six-reviewer-4/regular-nine-audit/reproduce.py",
+        "--work",
+        "pass24-cold-normal"
+      ],
+      "guard_seconds": 60,
+      "elapsed_seconds": 14.145068168640137,
+      "child_peak_rss_kib": 103632,
+      "numerical_threads": 1
+    },
+    "cold-optimized": {
+      "complete": true,
+      "returncode": 0,
+      "command": [
+        "python3",
+        "-O",
+        "round-two/six-reviewer-4/regular-nine-audit/reproduce.py",
+        "--work",
+        "pass24-cold-optimized",
+        "--optimized"
+      ],
+      "guard_seconds": 60,
+      "elapsed_seconds": 15.350010633468628,
+      "child_peak_rss_kib": 103680,
+      "numerical_threads": 1
+    },
+    "author-replay": {
+      "complete": true,
+      "returncode": 0,
+      "command": [
+        "python3",
+        "reproduce.py",
+        "--work",
+        "pass24-author-replay"
+      ],
+      "guard_seconds": 60,
+      "elapsed_seconds": 7.501157522201538,
+      "child_peak_rss_kib": 119788,
+      "numerical_threads": 1
+    },
+    "sanitizer": {
+      "complete": false,
+      "reason": "fixed60-second guard",
+      "command": [
+        "python3",
+        "round-two/six-reviewer-4/regular-nine-audit/reproduce.py",
+        "--work",
+        "pass24-sanitizer",
+        "--sanitize"
+      ],
+      "guard_seconds": 60,
+      "elapsed_seconds": 60.0025954246521,
+      "child_peak_rss_kib": 194348,
+      "numerical_threads": 1
+    },
+    "transport-validation": {
+      "complete": true,
+      "returncode": 0,
+      "command": [
+        "python3",
+        "round-two/six-reviewer-4/regular-nine-audit/validate.py",
+        "--replay",
+        "pass24-cold-normal",
+        "--work",
+        "pass24-transport-validation"
+      ],
+      "guard_seconds": 60,
+      "elapsed_seconds": 0.5669617652893066,
+      "child_peak_rss_kib": 16652,
+      "numerical_threads": 1
+    }
+  },
+  "sanitizer_status": "INCOMPLETE: fixed60-second outer guard; no exclusion/correctness evidence; expensive sanitizer work stopped without limit escalation",
+  "original_source": {
+    "first_author_source_read_at_utc": "2026-10-02T14:26:41.087150+00:00",
+    "source_commit": "86ab673e6bda70f9bf7d84241c7459e7e6542898",
+    "files": [
+      {
+        "path": "round-two/six-books-2/c3_regular_nine_99/.gitignore",
+        "bytes": 19,
+        "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+      },
+      {
+        "path": "round-two/six-books-2/c3_regular_nine_99/EXPECTED.json",
+        "bytes": 20261,
+        "sha256": "f79fab2dec8d86ed6731e7177aaa73475595a0781787f10e27238fa9cfccb32d"
+      },
+      {
+        "path": "round-two/six-books-2/c3_regular_nine_99/PROOF.md",
+        "bytes": 12625,
+        "sha256": "312023fadcbe88320b1dac0a2953ebcecd7a1caf0d68e7bef0d3d1276a166359"
+      },
+      {
+        "path": "round-two/six-books-2/c3_regular_nine_99/README.md",
+        "bytes": 2615,
+        "sha256": "d5bef06570f08d3aee9de1ac31ca8c3947e16b4e6072c8945c04b7ab211696be"
+      },
+      {
+        "path": "round-two/six-books-2/c3_regular_nine_99/audit.py",
+        "bytes": 9074,
+        "sha256": "843cb751d03b12fa5f9a24614e44b66d781ae034955b6472777b67afbb0386b4"
+      },
+      {
+        "path": "round-two/six-books-2/c3_regular_nine_99/block.py",
+        "bytes": 4612,
+        "sha256": "c0f730d394c5b2cb8d63626a344826b10d32033646cbbf82767cb7678d59bd5f"
+      },
+      {
+        "path": "round-two/six-books-2/c3_regular_nine_99/direct.cpp",
+        "bytes": 8689,
+        "sha256": "92967d1e9e1ad8e1142b39455d67477a96908b60751c6881f281370b175d8af1"
+      },
+      {
+        "path": "round-two/six-books-2/c3_regular_nine_99/evidence.json",
+        "bytes": 4122,
+        "sha256": "98c2d5eef5d5bbcb9bd7fff48d955f6a7e1a24bb66b3cb3b8b79a49a65ca441f"
+      },
+      {
+        "path": "round-two/six-books-2/c3_regular_nine_99/incidences.py",
+        "bytes": 4009,
+        "sha256": "c786013273453a402c9e774d2183d82f58d939c52d7f8324185c590c7f24c5c2"
+      },
+      {
+        "path": "round-two/six-books-2/c3_regular_nine_99/primary21.rows",
+        "bytes": 462,
+        "sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec"
+      },
+      {
+        "path": "round-two/six-books-2/c3_regular_nine_99/projection.py",
+        "bytes": 4358,
+        "sha256": "4f6a5954e51c610bfc0de3cd7f26562f06873af91bc74293e2c7ffe934ad4dc8"
+      },
+      {
+        "path": "round-two/six-books-2/c3_regular_nine_99/reproduce.py",
+        "bytes": 6697,
+        "sha256": "85e22748e210bdfaa8e5a4a537792c601aa924534ce37b63c3290ca2585def39"
+      },
+      {
+        "path": "round-two/six-books-2/c3_regular_nine_99/validate.py",
+        "bytes": 8981,
+        "sha256": "6c619082ee622eff9698a1696ce9e5c7dda97908cc0ce825c7e0e24722771eb3"
+      }
+    ]
+  },
+  "independent_source_unchanged_since_seal": true,
+  "later_original_record_sha256": "f79fab2dec8d86ed6731e7177aaa73475595a0781787f10e27238fa9cfccb32d",
+  "generated_corpora_excluded": true
+}
