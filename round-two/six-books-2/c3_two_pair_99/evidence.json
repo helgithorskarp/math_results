@@ -1,0 +1,292 @@
+{
+  "agent": "six-books-2",
+  "cold": {
+    "child_guard_seconds": 30,
+    "completion_choices": 431460,
+    "mathematical_summary_sha256": "77974e5fcb0d22acdc88f6a01b9ded1c5d3ee88799dc5ba65b1e7a16d4ead7c5",
+    "optimized_python": false,
+    "peak_child_rss_kib": 129312,
+    "primary21": {
+      "edges": 93,
+      "max_blue_pages": 6,
+      "max_red_pages": 3,
+      "sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec"
+    },
+    "python": "3.11.2",
+    "seconds": 9.964090269058943,
+    "soft_phase_seconds": 25,
+    "status": "COMPLETE_COLD_TWO_PAIR_C3_REPLAY",
+    "threads": 1,
+    "trust": "Same-author distinct set/load-DP/orbit-expansion, direct inequality/twelve-target keyed join, weighted-mask/native-word and component/literal methods. Ordinary completeness/relabeling/code bridges unformalized; independent peer review pending.",
+    "valid_choices": 0
+  },
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "frozen_core": {
+    "files": {
+      "EXPECTED.json": {
+        "bytes": 52015,
+        "sha256": "77974e5fcb0d22acdc88f6a01b9ded1c5d3ee88799dc5ba65b1e7a16d4ead7c5"
+      },
+      "analytic.py": {
+        "bytes": 5840,
+        "sha256": "1d2f9445bed46767be502748c51d4d4a1a809587ea41a6b4f67f04c21d4bcbb1"
+      },
+      "block.py": {
+        "bytes": 4860,
+        "sha256": "9bf1e51a71161552083323e04454c22208dd2c332753811e847ac295183f8b42"
+      },
+      "direct.cpp": {
+        "bytes": 9399,
+        "sha256": "26a5621cd7f96351c9c736e04afe885e6a9ec1abf43249e18e29b8885cd3965f"
+      },
+      "incidence_audit.py": {
+        "bytes": 5905,
+        "sha256": "fd8eaf905d671db6b52b3f640da85605e33f771aea78ea98ad71feee2d04b250"
+      },
+      "incidences.py": {
+        "bytes": 5216,
+        "sha256": "47aedc69c960ccce2421a83c4724c937fda45ae0a1152c67d549e7250bf8da70"
+      },
+      "primary21.rows": {
+        "bytes": 462,
+        "sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec"
+      },
+      "projection.py": {
+        "bytes": 4608,
+        "sha256": "b9aee54e651b2d44fe6df2b56fbb6438ad4cd8a219021065e4ed75951d39e2fb"
+      },
+      "projection_audit.py": {
+        "bytes": 5940,
+        "sha256": "65726610391a30e620c2d79d731441309a64ed452e802801b75a2e504872f7c0"
+      },
+      "reproduce.py": {
+        "bytes": 10195,
+        "sha256": "0ebe1e2cf3cd651d3569304598fa2adc7d5ec9434878916950367cf30f5ad2f9"
+      },
+      "validate.py": {
+        "bytes": 11672,
+        "sha256": "54963cc97519bea48def710ca59edc4bf6a62b3ae628da898941502818ea93c8"
+      }
+    },
+    "status": "FROZEN_BEFORE_COLD_REPLAYS"
+  },
+  "optimized": {
+    "child_guard_seconds": 30,
+    "completion_choices": 431460,
+    "mathematical_summary_sha256": "77974e5fcb0d22acdc88f6a01b9ded1c5d3ee88799dc5ba65b1e7a16d4ead7c5",
+    "optimized_python": true,
+    "peak_child_rss_kib": 129760,
+    "primary21": {
+      "edges": 93,
+      "max_blue_pages": 6,
+      "max_red_pages": 3,
+      "sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec"
+    },
+    "python": "3.11.2",
+    "seconds": 11.684133402071893,
+    "soft_phase_seconds": 25,
+    "status": "COMPLETE_COLD_TWO_PAIR_C3_REPLAY",
+    "threads": 1,
+    "trust": "Same-author distinct set/load-DP/orbit-expansion, direct inequality/twelve-target keyed join, weighted-mask/native-word and component/literal methods. Ordinary completeness/relabeling/code bridges unformalized; independent peer review pending.",
+    "valid_choices": 0
+  },
+  "primary": {
+    "date": "2026-10-02",
+    "paper": "https://arxiv.org/pdf/2407.07285",
+    "table": "Table1 page3 rowR(B4,B7),22..23",
+    "witness": {
+      "HTTP_status": 200,
+      "blue1_off_diagonal_complement": true,
+      "metadata_suffix_exactly_checked": true,
+      "normalized_bytes": 462,
+      "normalized_sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec",
+      "raw_bytes": 1056,
+      "raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+      "status": "FRESH_PRIMARY21_WHOLE_BYTES_REPRODUCED",
+      "url": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt"
+    }
+  },
+  "proof_status": "Exact computer-assisted author-checked main cohort plus ordinary counting arguments, unformalized completeness/code bridges; new independent review pending.",
+  "provenance": {
+    "code_continues": "c3_near_regular_99,5c25d36d38031df2daadcdc61990d640445706a0,9510",
+    "imported_theorem_premises": [],
+    "new_math": "Two-pair wholecohort, twelve-orbit slack join, L12 equality obstruction and enlarged ordinary r3..9 lemma; existing M A projection and B K5 pool regenerated as validation.",
+    "prior_all9": "9453 independently reviewed9490; verdict and regular spectral premises do not transfer"
+  },
+  "resources": {
+    "campaign_CPU": 1,
+    "campaign_memory_GiB": 2,
+    "child_deadline_seconds": 30,
+    "intensive_jobs": 1,
+    "no_incomplete_run_used_as_exclusion": true,
+    "no_limit_escalation": true,
+    "soft_program_guard_seconds": 25,
+    "threads": 1
+  },
+  "role": "researcher",
+  "schema": 1,
+  "scope": "Ordinary valid22/C3 type3^7 1 explicit red degree8^6,9^10,10^6 exclusion; ordinary E<=99 root9 neighbor8^r,9^(9-r) obstruction for3<=r<=9. No full99/C3 or Ramsey endpoint.",
+  "validation": {
+    "K_words_checked": 4194304,
+    "audit_damage_rejections": [
+      {
+        "mode": "M",
+        "name": "missing-local-word"
+      },
+      {
+        "mode": "M",
+        "name": "missing-transport-image"
+      },
+      {
+        "mode": "M",
+        "name": "forged-row-margin"
+      },
+      {
+        "mode": "M",
+        "name": "missing-incidence"
+      },
+      {
+        "mode": "M",
+        "name": "forged-X-row"
+      },
+      {
+        "mode": "M",
+        "name": "forged-column-phase"
+      },
+      {
+        "mode": "M",
+        "name": "unknown-column-field"
+      },
+      {
+        "mode": "L12",
+        "name": "forged-L12-survivor"
+      },
+      {
+        "mode": "L12",
+        "name": "forged-L12-group"
+      }
+    ],
+    "completion_choices": 431460,
+    "entire_native_streams_byte_equal": true,
+    "every_native_semantic_field_equal": true,
+    "frozen_damage_rejections": [
+      "omitted-frame",
+      "Boolean-valid",
+      "unknown-field",
+      "wrong-scope",
+      "forged-analytic-gap",
+      "duplicate-JSON-key"
+    ],
+    "literal_controls": {
+      "all_colored_spines": 14784,
+      "primary21_positive": true,
+      "varied_graphs": 64
+    },
+    "native_damage_rejections": [
+      {
+        "mode": "M",
+        "name": "omission",
+        "reason": "complete marked frame prerequisite"
+      },
+      {
+        "mode": "M",
+        "name": "duplicate",
+        "reason": "duplicate frame"
+      },
+      {
+        "mode": "M",
+        "name": "extra-field",
+        "reason": "extra incidence field"
+      },
+      {
+        "mode": "M",
+        "name": "truncation",
+        "reason": "incidence row domain"
+      },
+      {
+        "mode": "M",
+        "name": "noninteger",
+        "reason": "incidence row domain"
+      },
+      {
+        "mode": "M",
+        "name": "degree-corruption",
+        "reason": "marked A global degree"
+      },
+      {
+        "mode": "M",
+        "name": "out-of-domain",
+        "reason": "local word domain"
+      },
+      {
+        "mode": "M",
+        "name": "wrong-cohort",
+        "reason": "mode domain"
+      }
+    ],
+    "peak_child_rss_kib": 245636,
+    "sanitized_by_mode": {
+      "M": {
+        "K_degree_words": 16536,
+        "K_local_cap_words": 12690,
+        "K_words_checked": 4194304,
+        "blue_rejected": 420274,
+        "completion_choices": 431460,
+        "frames": 34,
+        "per_frame_valid": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "red_rejected": 11186,
+        "seconds": 1.2976299,
+        "status": "COMPLETE_LITERAL_TWO_PAIR_C3_CENSUS",
+        "valid": 0
+      }
+    },
+    "sanitizer_flags": [
+      "-O1",
+      "-g",
+      "-fno-omit-frame-pointer",
+      "-fno-pie",
+      "-no-pie",
+      "-fsanitize=address,undefined"
+    ],
+    "seconds": 9.952049874002114,
+    "status": "WHOLE_TWO_PAIR_NATIVE_SANITIZERS_AND_DAMAGES_PASS",
+    "threads": 1,
+    "trust": "Whole finite native censuses, not sampling; same author, ordinary proof/code bridges unformalized."
+  },
+  "whole_normal_O_typed_records_byte_equal": true
+}
