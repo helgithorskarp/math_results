@@ -1,0 +1,138 @@
+{
+  "whole_canonical_record_sha256": "208ae1e3f7794320dfad75e591e393919aff92fc45dd2af146eaea6cbc6bf276",
+  "whole_canonical_record_bytes": 33143,
+  "whole_independent_normal_optimized_equal": true,
+  "run_receipts": [
+    {
+      "label": "independent-normal",
+      "returncode": 0,
+      "seconds": 0.7428196220425889,
+      "stdout_sha256": "92311789caf8c30b012666c3d42c88531e5266083b1ae28015c644be4587195d"
+    },
+    {
+      "label": "independent-optimized",
+      "returncode": 0,
+      "seconds": 0.9252791930921376,
+      "stdout_sha256": "92311789caf8c30b012666c3d42c88531e5266083b1ae28015c644be4587195d"
+    },
+    {
+      "label": "author-normal",
+      "returncode": 0,
+      "seconds": 4.869934863061644,
+      "stdout_sha256": "54f42a110fd8c1250c106cbe3fe6a205b6a4ea021d1e17bc5d6e5315bc139c5e"
+    },
+    {
+      "label": "author-optimized",
+      "returncode": 0,
+      "seconds": 5.020998419029638,
+      "stdout_sha256": "54f42a110fd8c1250c106cbe3fe6a205b6a4ea021d1e17bc5d6e5315bc139c5e"
+    }
+  ],
+  "original_corroboration_only": {
+    "source_commit": "db3856d13ec37e069fdf19f1ecb5486ab5b458c4",
+    "whole_typed_record_sha256": "3e5d23a54fe52943b9b675ec564a5d1078b2d62bdca6142856d12802474aed0f",
+    "whole_typed_record_bytes": 9755,
+    "native_universal_pairs": 49,
+    "further_universal_identities": 22,
+    "native_derivatives": 35,
+    "native_damages": 8,
+    "nine_entire_universal_polynomials_match": true
+  },
+  "external_fixture_controls": {
+    "independent_six_fixtures_rejected_in_both_modes": [
+      {
+        "case": "coefficient_sign",
+        "optimized": false,
+        "returncode": 1,
+        "seconds": 0.7442709510214627
+      },
+      {
+        "case": "coefficient_sign",
+        "optimized": true,
+        "returncode": 1,
+        "seconds": 0.9111044839955866
+      },
+      {
+        "case": "missing_identity",
+        "optimized": false,
+        "returncode": 1,
+        "seconds": 0.7297225029906258
+      },
+      {
+        "case": "missing_identity",
+        "optimized": true,
+        "returncode": 1,
+        "seconds": 0.9066092349821702
+      },
+      {
+        "case": "extra_field",
+        "optimized": false,
+        "returncode": 1,
+        "seconds": 0.7263854669872671
+      },
+      {
+        "case": "extra_field",
+        "optimized": true,
+        "returncode": 1,
+        "seconds": 0.8777108959620818
+      },
+      {
+        "case": "numeric_type",
+        "optimized": false,
+        "returncode": 1,
+        "seconds": 0.7307402800070122
+      },
+      {
+        "case": "numeric_type",
+        "optimized": true,
+        "returncode": 1,
+        "seconds": 0.8996768700890243
+      },
+      {
+        "case": "duplicate_key",
+        "optimized": false,
+        "returncode": 1,
+        "seconds": 0.7476061499910429
+      },
+      {
+        "case": "duplicate_key",
+        "optimized": true,
+        "returncode": 1,
+        "seconds": 0.877316119032912
+      },
+      {
+        "case": "nonfinite",
+        "optimized": false,
+        "returncode": 1,
+        "seconds": 0.7125695450231433
+      },
+      {
+        "case": "nonfinite",
+        "optimized": true,
+        "returncode": 1,
+        "seconds": 0.8756742590339854
+      }
+    ],
+    "native_boolean_true_to_integer_one_accepted": [
+      {
+        "optimized": false,
+        "returncode": 0,
+        "seconds": 4.426410092972219,
+        "native_output": "{\"status\": \"PASS\", \"record_sha256\": \"3e5d23a54fe52943b9b675ec564a5d1078b2d62bdca6142856d12802474aed0f\", \"universal_residue_adjoint_pairs\": 49, \"universal_degree_and_ODE_identities\": 22, \"independent_dual_differentials\": 35, \"mathematical_damages\": 8}"
+      },
+      {
+        "optimized": true,
+        "returncode": 0,
+        "seconds": 4.627596514998004,
+        "native_output": "{\"status\": \"PASS\", \"record_sha256\": \"3e5d23a54fe52943b9b675ec564a5d1078b2d62bdca6142856d12802474aed0f\", \"universal_residue_adjoint_pairs\": 49, \"universal_degree_and_ODE_identities\": 22, \"independent_dual_differentials\": 35, \"mathematical_damages\": 8}"
+      }
+    ],
+    "mathematical_verdict_affected": false
+  },
+  "native_threads": 1,
+  "serial_mathematical_children": true,
+  "guard_seconds": 45,
+  "scope_unchanged": "1CPU/2GiB",
+  "no_mathematical_guard_hit": true,
+  "ordinary_bridges": "unformalized; no proof-assistant rebuild or exhaustive stationary classification"
+}
