@@ -1,0 +1,96 @@
+{
+  "agent": "six-covering-3",
+  "command": "python3 -B verify.py --scratch /tmp/few-class-erasers-replay",
+  "dependencies": "Python standard library only",
+  "interpreter": "CPython3.11.2 / compatible Python>=3.10",
+  "proof_status": "Complete ordinary unformalized proof; same-author independent exact computation, no independent reviewer verdict",
+  "role": "researcher",
+  "schema": "few-class-erasers-source-v1",
+  "scope": "General erasure-support resource count and conditional22-point pattern; no global bound, root exclusion or witness for the passing cut.",
+  "source_files": [
+    {
+      "bytes": 28,
+      "path": ".gitignore",
+      "sha256": "dca72ad33bb8d76573c08cd167d1067ea67f2a0754b60730adccbe14063fbe0c"
+    },
+    {
+      "bytes": 2727,
+      "path": "README.md",
+      "sha256": "448923966e4a99abced775522ec315817c9afa1a41d4d0f281c774502a5dbb76"
+    },
+    {
+      "bytes": 2729,
+      "path": "audit_stage.py",
+      "sha256": "370453aafc6b5ea9e9f39f825094ac0ceab9545a818b1d595c7f301326d8c37b"
+    },
+    {
+      "bytes": 18250,
+      "path": "certificate.json",
+      "sha256": "0485e01afc998e9e40a0ac55edf6641b953da86e3150ebddcf31af341f690a53"
+    },
+    {
+      "bytes": 10038,
+      "path": "check.py",
+      "sha256": "ce39a059ec93b1eb821d1c1251bb8e14cd787b7d2300cf485bf40ee349af253e"
+    },
+    {
+      "bytes": 3910,
+      "path": "controls.py",
+      "sha256": "06d6d6f9c3b24f6d4e8ee42e4403f592cfbe8de53aa4cbf0062253b42fb2379d"
+    },
+    {
+      "bytes": 2731,
+      "path": "dependencies.json",
+      "sha256": "e367da83d860d43acbf22600e97270166266f8e2954e8db85538cf97d1c035c3"
+    },
+    {
+      "bytes": 4496,
+      "path": "expected-controls.json",
+      "sha256": "1ccc5cce439438b6d39401db35dc6a4dabbff2f75ef295f32f10720650b82589"
+    },
+    {
+      "bytes": 1974,
+      "path": "expected.json",
+      "sha256": "70832e3f4f4ff82a6be5597a3d14cacef700ecd4d3a281126b45f457d1908020"
+    },
+    {
+      "bytes": 3254,
+      "path": "model.py",
+      "sha256": "163a049d3e91101285edf68b73a01bb414e4fdb57ab9e493c45d48c84bf14ad7"
+    },
+    {
+      "bytes": 2906,
+      "path": "produce.py",
+      "sha256": "959d3cbfb0ccce7b6995c74cba2885379e00b3850b383f1c605e51104eec5927"
+    },
+    {
+      "bytes": 10831,
+      "path": "proof.md",
+      "sha256": "f1b49714e56f2c2f77558e13a952b75c582d8bddbd665ee507a3ce9a735c5e99"
+    },
+    {
+      "bytes": 6877,
+      "path": "small_models.py",
+      "sha256": "0f011c63da876cb88a7d1b4ac829061ab93f842e740608ab853339e56f12fe4d"
+    },
+    {
+      "bytes": 1769,
+      "path": "stage.py",
+      "sha256": "b0e17fe491a58d2523fc65f74abe500812920a00d40707286860d0dd2adbcc28"
+    },
+    {
+      "bytes": 3524,
+      "path": "verify.py",
+      "sha256": "6dbbd24ab8024bdf13f2b2b8d865d6a0ed29cfbd7ed7955ea1b207b249ec8044"
+    }
+  ],
+  "validation": {
+    "certificate_sha256": "0485e01afc998e9e40a0ac55edf6641b953da86e3150ebddcf31af341f690a53",
+    "completed_children": 10,
+    "guard_seconds_per_child": 20,
+    "max_child_RSS_KiB": 19376,
+    "normal_optimized_equal": true,
+    "small_model_record_sha256": "d13fea4154d34fddef38640b161e453cfcfc6f4cd552ead6e2c17560b47a2ac7",
+    "source_replay_seconds": 14.799395
+  }
+}

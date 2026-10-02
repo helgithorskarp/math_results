@@ -1,0 +1,234 @@
+{
+  "audit_stage": {
+    "agent": "six-covering-3",
+    "assignments": [
+      {
+        "base_phases": 36,
+        "cofactor_holes": [
+          168,
+          150,
+          168,
+          192,
+          168,
+          150,
+          168
+        ],
+        "cost_thresholds": [
+          [
+            2,
+            3,
+            20
+          ],
+          [
+            3,
+            10,
+            72
+          ]
+        ],
+        "literal_pair_phase_combinations": 948766,
+        "literal_single_phases": 4368,
+        "name": "zero",
+        "physical_holes": 4656,
+        "physical_holes_sha256": "94f127600e67e7d6a35bf0b0f69241bc5abe8ee220966c1c17f7c3da47da6fad",
+        "prefixes": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "base_phases": 36,
+        "cofactor_holes": [
+          120,
+          170,
+          168,
+          242,
+          168,
+          170,
+          168
+        ],
+        "cost_thresholds": [
+          [
+            2,
+            3,
+            20
+          ],
+          [
+            3,
+            10,
+            72
+          ]
+        ],
+        "literal_pair_phase_combinations": 948766,
+        "literal_single_phases": 4368,
+        "name": "one",
+        "physical_holes": 4824,
+        "physical_holes_sha256": "1c31b7ef15b978844dfda1e253a6223587b9f3f5f0bc0c827bc1e8300a818af5",
+        "prefixes": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "base_phases": 36,
+        "cofactor_holes": [
+          51,
+          124,
+          63,
+          221,
+          93,
+          97,
+          78
+        ],
+        "cost_thresholds": [
+          [
+            2,
+            3,
+            20
+          ],
+          [
+            3,
+            20,
+            72
+          ]
+        ],
+        "literal_pair_phase_combinations": 948766,
+        "literal_single_phases": 4368,
+        "name": "varying",
+        "physical_holes": 2908,
+        "physical_holes_sha256": "296e12e4d22dd58fb0b8fb42e8f5ecf12cb27d7379e799148483526a6e0b2590",
+        "prefixes": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      }
+    ],
+    "role": "researcher",
+    "scope": "Only three explicit all36-base-phase choices, not a complete base-phase search.",
+    "status": "LITERAL STAGE AUDIT PASSED"
+  },
+  "controls": {
+    "agent": "six-covering-3",
+    "damaged_certificates_rejected": 12,
+    "malformed_base_inputs_rejected": 5,
+    "positive_tail": {
+      "original_phases": [
+        [
+          16,
+          1
+        ],
+        [
+          48,
+          41
+        ],
+        [
+          80,
+          2
+        ],
+        [
+          112,
+          58
+        ],
+        [
+          144,
+          83
+        ],
+        [
+          240,
+          107
+        ],
+        [
+          336,
+          212
+        ],
+        [
+          560,
+          492
+        ],
+        [
+          720,
+          677
+        ],
+        [
+          1008,
+          317
+        ],
+        [
+          1680,
+          422
+        ],
+        [
+          5040,
+          1262
+        ],
+        [
+          32,
+          7
+        ],
+        [
+          96,
+          23
+        ],
+        [
+          160,
+          47
+        ],
+        [
+          224,
+          191
+        ]
+      ],
+      "physical_demands": 28
+    },
+    "role": "researcher",
+    "scope": "Semantic guards and one literal conditional positive tail; no base-stage witness.",
+    "status": "CONTROLS PASSED"
+  },
+  "small_models": {
+    "agent": "six-covering-3",
+    "cofactor_and_replication": [
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "counts": {
+      "complete_with_changed_survivor": 96,
+      "complete_with_omitted_resource": 141,
+      "completing_first_assignments": 894,
+      "feasible_cover_inequalities": 6693,
+      "feasible_models": 327,
+      "first_accounting_checks": 18684,
+      "first_phase_assignments": 7700,
+      "legal_hypergraph_covers": 21852,
+      "models": 1088
+    },
+    "cutoffs": [
+      2,
+      3,
+      4
+    ],
+    "records_sha256": "d13fea4154d34fddef38640b161e453cfcfc6f4cd552ead6e2c17560b47a2ac7",
+    "role": "researcher",
+    "scope": "Complete stated finite models validate the counting argument; the general theorem is proved in prose.",
+    "status": "COMPLETE SMALL MODELS PASSED"
+  }
+}
