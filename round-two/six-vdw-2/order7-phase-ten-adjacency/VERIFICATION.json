@@ -1,0 +1,261 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "status": "EXACT_H7_PHASE10_SELECTED_ADJACENCY_LEMMA",
+  "claim": "Every phase value occurring exactly ten times in an admissible H7/F617 coloring has adjacent cyclic occurrences.",
+  "phase_weights_covered": [
+    10,
+    34
+  ],
+  "phase_band_strengthened": false,
+  "phase_endpoint_weights_excluded": false,
+  "no_adjacency_subclass_excluded": true,
+  "global_W_bound": false,
+  "interval3704_witness": false,
+  "normalized_cases": 14,
+  "selected_phase_values": [
+    0,
+    1
+  ],
+  "fourth_selected_indices": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "variables_min": 275,
+  "variables_max": 329,
+  "clauses_min": 51072,
+  "clauses_max": 53239,
+  "strict_additions_per_mode": 141044,
+  "strict_deletions_per_mode": 875427,
+  "strict_hints_per_mode": 2260110,
+  "all_CNF_and_LRAT_hashes_reproduced": true,
+  "EXPECTED_csv_sha256": "ab31aa4c40f0a151c52ae22e17d4d704c6545ad4958f7f341b0ce9b53513d97a",
+  "definition_audits": [
+    {
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "status": "EXACT_K10_D2_GAP23_THIRD14_AUDIT",
+      "literal_APs": 375760,
+      "removed_zero_APs": 4312,
+      "signed_supports": 26488,
+      "tiny_threshold_cells": 172540,
+      "tiny_exact_counts": 4092,
+      "tiny_fourteen_case_cover_inputs": 1254,
+      "tiny_branches": [
+        [
+          7,
+          0
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          12,
+          0
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "successor_local_truth_rows": 32,
+      "seconds": 10.817040244000964,
+      "maxrss_kib": 66600
+    },
+    {
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "status": "EXACT_K10_D2_GAP23_THIRD14_AUDIT",
+      "literal_APs": 375760,
+      "removed_zero_APs": 4312,
+      "signed_supports": 26488,
+      "tiny_threshold_cells": 172540,
+      "tiny_exact_counts": 4092,
+      "tiny_fourteen_case_cover_inputs": 1254,
+      "tiny_branches": [
+        [
+          7,
+          0
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          12,
+          0
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "successor_local_truth_rows": 32,
+      "seconds": 10.304580659023486,
+      "maxrss_kib": 72144
+    }
+  ],
+  "private_pilot": {
+    "seconds": 59.913023416069336,
+    "maxrss_parent_kib": 22204,
+    "maxrss_child_kib": 69540,
+    "maximum_native_conflicts": 19007,
+    "all_cases_fresh_native": true
+  },
+  "public_source_reconstruction": {
+    "seconds": 50.76907684607431,
+    "maxrss_parent_kib": 22508,
+    "maxrss_child_kib": 72144,
+    "proposal_source": "cached candidates matched then strictly replayed normally and under Python -O; no cached native answer trusted",
+    "all_expected_counts_reproduced": true,
+    "branch_fixture_extra_columns_checked": true
+  },
+  "damage_controls": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "status": "ALL_CORRUPTION_CONTROLS_REJECTED",
+    "tests": [
+      "normal-missing-gap-2-3-next-7-b-1",
+      "normal-missing-gap-2-3-next-13-b-1",
+      "normal-wrong-unit-gap-2-3-next-13-b-0",
+      "normal-removed-semantic-input",
+      "normal-wrong-selected-count",
+      "normal-changed-helper-before-import",
+      "normal-empty-without-hints",
+      "normal-missing-live-hint",
+      "optimized-missing-gap-2-3-next-7-b-1",
+      "optimized-missing-gap-2-3-next-13-b-1",
+      "optimized-wrong-unit-gap-2-3-next-13-b-0",
+      "optimized-removed-semantic-input",
+      "optimized-wrong-selected-count",
+      "optimized-changed-helper-before-import",
+      "optimized-empty-without-hints",
+      "optimized-missing-live-hint"
+    ],
+    "rejected": 16,
+    "positive_controls": [
+      "normal-toy-positive-RUP",
+      "optimized-toy-positive-RUP"
+    ],
+    "seconds": 13.060666818986647,
+    "maxrss_parent_kib": 30128,
+    "maxrss_child_kib": 59328
+  },
+  "generated_omitted_bytes": {
+    "cnf": 17757285,
+    "drat": 15940349,
+    "lrat": 23512329
+  },
+  "resource_caps": {
+    "threads": 1,
+    "CPU_intensive_jobs_at_once": 1,
+    "scope_CPU": 1,
+    "scope_memory_GiB": 2,
+    "native_conflicts": 50000,
+    "native_seconds": 30,
+    "converter_internal_seconds": 25,
+    "converter_external_seconds": 30,
+    "strict_replay_seconds_per_mode": 30,
+    "definitions_seconds_per_stage": 55
+  },
+  "runtime": {
+    "Python": "3.11.2",
+    "python_sat": "1.8.dev24",
+    "six": "1.17.0",
+    "native_solver": "CaDiCaL195"
+  },
+  "external_independent_review_claimed": false,
+  "formalization_claimed": false,
+  "trust_boundaries": [
+    "written scalar rotation, complete cover and cardinality bridges",
+    "cited mathematical premises",
+    "pinned field auditor and positive-only RUP checker",
+    "Python and runtime execution"
+  ]
+}
