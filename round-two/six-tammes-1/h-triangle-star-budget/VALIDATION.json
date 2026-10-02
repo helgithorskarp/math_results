@@ -1,0 +1,115 @@
+{
+  "CPU_intensive_children_at_once": 1,
+  "Q_turns": 12,
+  "actual_author": "six-tammes-1",
+  "alias_accepted_counts": [
+    1,
+    1,
+    2,
+    6
+  ],
+  "alias_raw_candidate_counts": [
+    1,
+    8,
+    81,
+    1000
+  ],
+  "all_entry_bytes_equal": true,
+  "all_native_thread_environment_values": {
+    "BLIS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "all_off_diagonal_pairs": 45,
+  "canonical_certificate_sha256_without_digest_field": "c9858073f1e06667e60b073d3574c31c2752d4c300ebf605ab5447af02591b68",
+  "center_cycle_counts": {
+    "3": 2,
+    "4": 0,
+    "5": 0
+  },
+  "checked_UTC": "2026-10-02T14:21:58.697676+00:00",
+  "complete_entries_in_expected": true,
+  "construction_subsets": 8,
+  "controls": {
+    "common_cap_relaxation_admits_seven_points": true,
+    "correct_unit_and_contacts": true,
+    "diagonal_as_fourth_contact_rejected": true,
+    "lower_bracket_c119over200_not_H_triangle": "385172741/5000000000",
+    "norm_changed_reflector_rejected": true,
+    "repeated_fourth_contact_rejected": true,
+    "three_common_contacts_reject_center_alias": true,
+    "upper_strip_c599_over1000": "-404521352593/31250000000000"
+  },
+  "corner_link_choices": 19,
+  "expected_json_bytes": 31713,
+  "expected_json_sha256": "e74608c01713404f664ccde9ff22ffb64f14545247292c6b4c5be0fc5cfc6480",
+  "external_runtime_inputs": [],
+  "global_N15_optimality_or_occurrence_proved": false,
+  "memory_measurement": "getrusage(RUSAGE_CHILDREN).ru_maxrss is a cumulative child maximum in KiB, not a separate per-child peak",
+  "norms": 10,
+  "python": "3.12.14",
+  "python_implementation": "CPython",
+  "role": "researcher",
+  "runs": [
+    {
+      "command": "python3 -B check.py",
+      "complete": true,
+      "cumulative_children_maxrss_KiB": 18608,
+      "optimized": false,
+      "program": "check.py",
+      "return_code": 0,
+      "stderr_bytes": 0,
+      "stdout_bytes": 31713,
+      "stdout_sha256": "e74608c01713404f664ccde9ff22ffb64f14545247292c6b4c5be0fc5cfc6480",
+      "wall_seconds": 0.106353
+    },
+    {
+      "command": "python3 -B -O check.py",
+      "complete": true,
+      "cumulative_children_maxrss_KiB": 19392,
+      "optimized": true,
+      "program": "check.py",
+      "return_code": 0,
+      "stderr_bytes": 0,
+      "stdout_bytes": 31713,
+      "stdout_sha256": "e74608c01713404f664ccde9ff22ffb64f14545247292c6b4c5be0fc5cfc6480",
+      "wall_seconds": 0.200792
+    },
+    {
+      "command": "python3 -B audit.py",
+      "complete": true,
+      "cumulative_children_maxrss_KiB": 19392,
+      "optimized": false,
+      "program": "audit.py",
+      "return_code": 0,
+      "stderr_bytes": 0,
+      "stdout_bytes": 31713,
+      "stdout_sha256": "e74608c01713404f664ccde9ff22ffb64f14545247292c6b4c5be0fc5cfc6480",
+      "wall_seconds": 0.091107
+    },
+    {
+      "command": "python3 -B -O audit.py",
+      "complete": true,
+      "cumulative_children_maxrss_KiB": 19628,
+      "optimized": true,
+      "program": "audit.py",
+      "return_code": 0,
+      "stderr_bytes": 0,
+      "stdout_bytes": 31713,
+      "stdout_sha256": "e74608c01713404f664ccde9ff22ffb64f14545247292c6b4c5be0fc5cfc6480",
+      "wall_seconds": 0.214659
+    }
+  ],
+  "runtime_packages": "standard library only",
+  "source_sha256": {
+    "audit.py": "679c860ae2e4daef2acc214dfd98033c486bf001d57d06ea271901c83b177f89",
+    "check.py": "047692bb61e859f2553d9b542956c99ef6264e84f2f2b341130cef5cab2b4c7d"
+  },
+  "status": "four complete same-author exact auxiliary runs; ordinary geometric proof; independent review pending",
+  "strict_gap_classes": 9,
+  "trust_boundary": "Written contact-arc embedding, actual face interpretation, plane/sphere bound, endpoint angle budgets, center correspondence and faceness are ordinary author geometry. Code checks exact algebra and finite encodings. Same author with distinct algorithms is not independent researcher review.",
+  "unchanged_per_command_guard_seconds": 55
+}
