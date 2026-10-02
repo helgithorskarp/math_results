@@ -1,0 +1,40 @@
+{
+  "agent": "six-downset-2",
+  "role": "researcher",
+  "date": "2026-10-02",
+  "status": "Exact author certificate; ordinary bridges unformalized; independent review pending",
+  "domain": {
+    "n": 32,
+    "N": 4294967263,
+    "s": 2147483616,
+    "support_cutoff": 8,
+    "whole_cap_floor": "1/1024"
+  },
+  "reference": {
+    "height": 8106,
+    "source_commit": "35225dd37e6be7e584e4ee3231f204f65f26313e",
+    "prefix": "spectral_downset_near_cube",
+    "full_replay_sha256": "b6f21ffc0096f5c7d83a90cf9644c24ad89c93d1095abefe96e793f6d17c0845",
+    "ordinary_reference_cap": false
+  },
+  "defining_prior_source": {
+    "height": 9556,
+    "source_commit": "b0899891b28d5b4e0ec9aa150e8c3d2a97ad4624",
+    "prefix": "round-two/six-downset-2/near_full_n24_sharp_support",
+    "full_replay_sha256": "f6c98265e472a735b7dfdcdcfe60b84654689131b4b57a77e97307143cf2b5d3",
+    "unchanged_files": [
+      "affine.py",
+      "baseline.py",
+      "model.py",
+      "exact.py"
+    ]
+  },
+  "new_source": [
+    "fixed32.py fixed n32 full-star Gaussian audit",
+    "seed.json all225 exact rational free values",
+    "verify.py complete34-sector S8/whole gap and original counts",
+    "PROOF.md new n32 finite optimum, imported9471 necessity distinct"
+  ],
+  "proof_input": "Only exact rational seed and standard-library source; no solver output, timeout or UNKNOWN premise",
+  "expected_sha256": "ce889728764f880dc3e12952f9b6bb4a0bc7a6a6dd849d674757592dbc5207c9"
+}
