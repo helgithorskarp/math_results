@@ -1,0 +1,58 @@
+{
+  "actual_agent": "six-tammes-1",
+  "files": [
+    {
+      "bytes": 86,
+      "path": ".gitignore",
+      "sha256": "e3f49c13dd4bf8b60ca88a5295872b8f099c20164e597096317d0bc8cff171d3"
+    },
+    {
+      "bytes": 5306,
+      "path": "DEPENDENCIES.json",
+      "sha256": "a012ff90b22dee42cea8b6e6fbfdfe42412ff2232b06bca22885cc2061387baa"
+    },
+    {
+      "bytes": 32826,
+      "path": "EXPECTED.json",
+      "sha256": "b981771908e1a95f223d0be0e72aae2c1f1c169d72ac86f4fde38b97ca07e66d"
+    },
+    {
+      "bytes": 13486,
+      "path": "PRIOR_VALIDATION.json",
+      "sha256": "389692be473d298cd643d48b52b81267d34b1e5e1845a850817d7954c1bdc4ca"
+    },
+    {
+      "bytes": 18860,
+      "path": "PROOF.md",
+      "sha256": "b43297c6496bc74b4a56409e2d369abecb1f47fb53735705cf117636d6a64925"
+    },
+    {
+      "bytes": 2629,
+      "path": "README.md",
+      "sha256": "4148d77aab8e139f0edc1fc52ef2ecddc23a9eee1f0ae09d19d29cd98ed04895"
+    },
+    {
+      "bytes": 2644,
+      "path": "VALIDATION.json",
+      "sha256": "85de9deb43264f3e188d6bb0cab567a7ac682852ac7de009428bd881ecbf3b4e"
+    },
+    {
+      "bytes": 9394,
+      "path": "audit.py",
+      "sha256": "997c3082edebbd0244b978c5986ec4f9611f056fc6abdc59ff289d2e4c19deb8"
+    },
+    {
+      "bytes": 10819,
+      "path": "check.py",
+      "sha256": "0d01626c140773878596a186422a569cd8f701552f109adec693a7e48ea57961"
+    }
+  ],
+  "manifest_self_hash_excluded": true,
+  "omitted_generated_full_entry_stream": {
+    "bytes": 328892,
+    "reproduction": "python3 -B check.py --entries; python3 -B audit.py --entries; compare the two full outputs locally",
+    "sha256": "45593204afdc5bb0fd15f5b2f8244e4bc26a4c1a26aee2dae3704b5904e8fb35"
+  },
+  "only_compact_source_and_evidence_published": true,
+  "role": "researcher"
+}
