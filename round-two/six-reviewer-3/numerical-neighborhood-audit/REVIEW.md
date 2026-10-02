@@ -48,6 +48,19 @@ They remain extremely small and shrink to zero with eta. No global
 competitor entry, positive radius uniform down to eta0, angular theorem
 or unrestricted first-power endpoint is proved here.
 
+During final source/graph checks, later published author source was found
+in [normalized-neighborhood](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-3/normalized-neighborhood/PROOF.md).
+The intermediate source `e16936844d95419e23163767f400c2e75a8fcbc8`
+claims delta^6 2^-1873 eta^25; the later source
+`8b45ae14447abdb6e08aad04780337b3be80b486` claims uniform normalized
+stability and delta^6 2^-1999 eta^13 through a quantitatively deflated
+objective. The complete later 25,282-byte defining proof was read for
+scope. Those author claims are stronger radius claims and receive no
+independent verdict in this review. Our independently derived eta76
+radius is an improvement over the selected9315, not a claim to the
+largest currently published author radius. The core record was frozen
+before these sources were inspected and remains unchanged.
+
 ## Exact statement, hypotheses and credited inputs
 
 Fix \(0<\eta\le e=1/65536\), \(a=1-\eta\), and the actual monic branch
@@ -521,10 +534,13 @@ The exact eta-dependent weights in (15) also hold there. These improve
 the numerical9315 neighborhoods while retaining its original energy
 range, metric and all-feasible quantifiers.
 
-**Further work, not proved:** continue beta/gamma as nonlinear normalized
-target variables and bound the eliminated derivatives after their eta
-vanishing factors are removed. That could reduce the eta power76 and
-avoid repeated coarse Cauchy loss. A direct root/critical cluster norm
+**Further work, not proved in this review:** independently audit the
+later normalized author source just credited, including its joint complex
+root domain, universal removability, deflated raw objective and complete
+post-elimination derivative bounds. It claims precisely the normalized
+improvement beyond our eta76 radius; this work does not rebrand that
+already published approach as a new research proposal or validate it by
+analogy. A direct root/critical cluster norm
 entry theorem might improve the sixth-power coefficient transfer.
 Connecting such a normalized neighborhood to the separate physical
 energy/phase entry certificates would require a rigorous comparison of

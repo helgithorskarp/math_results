@@ -6,6 +6,10 @@ in committed Lemma9315 and proves a larger coefficient ball
 `delta^6*2^-2557*eta^76`, with individual original-root pair weights
 `9/4,75/256`. For k=1/4 the sufficient radius is `2^-2575*eta^76`.
 No global entry, uniform eta0 radius or first-power endpoint is claimed.
+The later author normalized-neighborhood source claims larger eta25/eta13
+radii; its full defining proof was read for prior-art scope and is credited
+in the review, without an independent verdict. The eta76 result improves
+the selected9315 and does not claim the largest current author radius.
 
 CPython3.12.14 was used; Python3.10+ and its standard library suffice.
 From a checkout of the publication repository:
