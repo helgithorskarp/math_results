@@ -1,0 +1,75 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "target": 9620,
+  "source_commit": "cd6be6d4272505f394bbea6e13ff69a9f73ee5bf",
+  "sealed_utc": "2026-10-02T19:01:47.403790+00:00",
+  "defining_written_proof_visible": true,
+  "author_executable_fixture_validation_provenance_unread_unmaterialized": true,
+  "fresh_implementation": "Fraction Laurent monomials over Q[omega]/(omega^2+omega+1), explicit independent conjugate tokens, full eight-critical product and Gaussian-rational polynomial translation. No executable reuse/import. Own earlier9631 disk-weight identity is credited analytic context for the nondisk control, not imported executable.",
+  "frozen_source_sha256": {
+    "audit.py": "12c1b6eeab2aa4b384f101e78b1828fdb8f7997ece0c3e2419bf356707def1c9",
+    "EXPECTED.json": "8f27f3bb8bf34e7bf2d6aaa8ca5232911686aa9de4f1ade53ade8d17beb18972"
+  },
+  "runs": [
+    {
+      "mode": "normal",
+      "wall_seconds": 0.134788,
+      "stdout": {
+        "literal_controls": 6,
+        "record_sha256": "b283f4ca33e6760c77a3f5ee5f9645fdbd3f3b688433e82f00d64bd4cc43694a",
+        "status": "PASS",
+        "strict_margins": 55,
+        "whole_identities": 20
+      }
+    },
+    {
+      "mode": "optimized",
+      "wall_seconds": 0.252238,
+      "stdout": {
+        "literal_controls": 6,
+        "record_sha256": "b283f4ca33e6760c77a3f5ee5f9645fdbd3f3b688433e82f00d64bd4cc43694a",
+        "status": "PASS",
+        "strict_margins": 55,
+        "whole_identities": 20
+      }
+    }
+  ],
+  "optimized_external_fixture_rejections": [
+    {
+      "name": "wrong-H",
+      "rejected": true,
+      "reason": "ValueError: fixture value"
+    },
+    {
+      "name": "missing-whole-polynomial",
+      "rejected": true,
+      "reason": "ValueError: fixture key set"
+    },
+    {
+      "name": "extra-global-conclusion",
+      "rejected": true,
+      "reason": "ValueError: fixture key set"
+    },
+    {
+      "name": "integer-to-float",
+      "rejected": true,
+      "reason": "ValueError: fixture type"
+    },
+    {
+      "name": "duplicate-key",
+      "rejected": true,
+      "reason": "ValueError: duplicate fixture key"
+    },
+    {
+      "name": "nonfinite",
+      "rejected": true,
+      "reason": "ValueError: nonfinite fixture token"
+    }
+  ],
+  "child_peak_rss_KiB": 21620,
+  "native_threads_one": true,
+  "serial": true,
+  "fixed_math_child_guard_seconds": 45,
+  "trust_boundary": "Ordinary unformalized all-index Legendre convergence/tail, Maclaurin/Cauchy, Rouche/root labeling, actual disk half normals, convexity and monotone substitutions. Gaussian controls do not assert original-disk feasibility; nondisk control explicitly disproves it."
+}

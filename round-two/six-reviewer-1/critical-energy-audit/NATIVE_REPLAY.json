@@ -1,0 +1,460 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "utc": "2026-10-02T19:06:13.303692+00:00",
+  "author_source_commit": "cd6be6d4272505f394bbea6e13ff69a9f73ee5bf",
+  "author_first_access_interval_utc": [
+    "2026-10-02T19:02:59.606542+00:00",
+    "2026-10-02T19:03:24.842847+00:00"
+  ],
+  "independent_initial_seal_utc": "2026-10-02T19:01:47.403790+00:00",
+  "all_original_sealed_bytes_unchanged": true,
+  "full_pinned_source_manifest_verified": true,
+  "full_defining_proof_matches_signed_body_after_reader_expansion": true,
+  "native_runs": [
+    {
+      "mode": "normal",
+      "wall_seconds": 1.65533,
+      "stdout": {
+        "canonical_sha256": "b04129905ab1b4992352c925338a6ee29d3540e655563410905f66c7a6442022",
+        "identity_records": 20,
+        "literal_controls": 6,
+        "mathematical_damages_rejected": 17,
+        "status": "PASS",
+        "whole_domain_margins": 46
+      }
+    },
+    {
+      "mode": "optimized",
+      "wall_seconds": 1.808004,
+      "stdout": {
+        "canonical_sha256": "b04129905ab1b4992352c925338a6ee29d3540e655563410905f66c7a6442022",
+        "identity_records": 20,
+        "literal_controls": 6,
+        "mathematical_damages_rejected": 17,
+        "status": "PASS",
+        "whole_domain_margins": 46
+      }
+    }
+  ],
+  "all_46_scalar_budget_values": [
+    {
+      "author": "nine counted original circles",
+      "own": "Rouche-whole",
+      "value": "10192689511851059024044617343302955425855/4763953136893138488487244504044754960384",
+      "matches": true
+    },
+    {
+      "author": "disjoint original circles",
+      "own": "Rouche-disjoint",
+      "value": "64223/147456",
+      "matches": true
+    },
+    {
+      "author": "positive root motion divisor",
+      "own": "motion-positive-divisor",
+      "value": "2682232589018512797744805453419303739401/340282366920938463463374607431768211456",
+      "matches": true
+    },
+    {
+      "author": "cube displacement below V/6",
+      "own": "motion-linear-norm-V/6",
+      "value": "35646744328893852724381810030721654787/680564733841876926926749214863536422912",
+      "matches": true
+    },
+    {
+      "author": "cube linear displacement below V/6",
+      "own": "motion-leading-norm-V/6",
+      "value": "41463403006162007923546273247025192963/680564733841876926926749214863536422912",
+      "matches": true
+    },
+    {
+      "author": "full pair remainder E<=|mean|V/6+V^2",
+      "own": "paired-whole-halfnormal-error",
+      "value": "7883515118996843494173093862927038996551/21597460520402538106738390744545714831432",
+      "matches": true
+    },
+    {
+      "author": "full individual remainder E<=|mean|V/6+V^2",
+      "own": "individual-whole-halfnormal-error",
+      "value": "31987823161789685242905743450857706643811/107987302602012690533691953722728574157160",
+      "matches": true
+    },
+    {
+      "author": "sqrt3/9<1/5",
+      "own": "individual-phase-1/5",
+      "value": "2/675",
+      "matches": true
+    },
+    {
+      "author": "whole centered critical radius from fixed energy",
+      "own": "centered-radius17/384",
+      "value": "1/147456",
+      "matches": true
+    },
+    {
+      "author": "marked reciprocal denominators finite from fixed energy",
+      "own": "all-criticals-below-anchor",
+      "value": "4286447617/4294967296",
+      "matches": true
+    },
+    {
+      "author": "initial lower objective >=8/r-3V/5",
+      "own": "initial-reciprocal-3/5",
+      "value": "6553393313389803017/248108384126620244495",
+      "matches": true
+    },
+    {
+      "author": "low F gives r>6399/6400",
+      "own": "objective-radius6399/6400",
+      "value": "53/13107200",
+      "matches": true
+    },
+    {
+      "author": "positive signed variance coefficient",
+      "own": "Q-coefficient-positive",
+      "value": "277756/1922375",
+      "matches": true
+    },
+    {
+      "author": "first bootstrap positive divisor",
+      "own": "initial-variance-divisor",
+      "value": "82723116684293/153833658908289696",
+      "matches": true
+    },
+    {
+      "author": "first bootstrap gives V<700eta",
+      "own": "initial-variance-conclusion",
+      "value": "484583542669839295/11251833337292046336",
+      "matches": true
+    },
+    {
+      "author": "retained mean square below eta/11",
+      "own": "mean-square-eta/11",
+      "value": "16373/2162688",
+      "matches": true
+    },
+    {
+      "author": "mean modulus below1/800",
+      "own": "mean1/800",
+      "value": "79/450560000",
+      "matches": true
+    },
+    {
+      "author": "V<26eta permits max centered radius1/50",
+      "own": "third-centered-radius",
+      "value": "67/20480000",
+      "matches": true
+    },
+    {
+      "author": "second bootstrap positive divisor",
+      "own": "second-variance-divisor",
+      "value": "51209385623922089/3845841472707242400",
+      "matches": true
+    },
+    {
+      "author": "second bootstrap gives V<26eta",
+      "own": "second-variance-conclusion",
+      "value": "25302335901607445393/1969070834026108108800",
+      "matches": true
+    },
+    {
+      "author": "V<8eta permits max centered radius1/90",
+      "own": "fourth-centered-radius",
+      "value": "23/16588800",
+      "matches": true
+    },
+    {
+      "author": "third bootstrap positive divisor",
+      "own": "third-variance-divisor",
+      "value": "27999893552163579871/588899427707827353600",
+      "matches": true
+    },
+    {
+      "author": "third bootstrap gives V<8eta",
+      "own": "third-variance-conclusion",
+      "value": "221498863934701014619/4711195421662618828800",
+      "matches": true
+    },
+    {
+      "author": "fourth bootstrap positive divisor",
+      "own": "fourth-variance-divisor",
+      "value": "77801212805828024819/1337043984507593510400",
+      "matches": true
+    },
+    {
+      "author": "fourth bootstrap gives V<6eta",
+      "own": "fourth-variance-conclusion",
+      "value": "225053295320189841041/14261802501414330777600",
+      "matches": true
+    },
+    {
+      "author": "final V<6eta permits max centered radius1/96",
+      "own": "final-centered-radius",
+      "value": "5/294912",
+      "matches": true
+    },
+    {
+      "author": "mean real part strictly negative",
+      "own": "negative-real-mean",
+      "value": "337741625701169/6192354998353920",
+      "matches": true
+    },
+    {
+      "author": "V<6eta yields r<1+eta",
+      "own": "radius-upper",
+      "value": "2452441/2150400",
+      "matches": true
+    },
+    {
+      "author": "V<6eta yields r>1-eta",
+      "own": "postseal trivial literal margin",
+      "value": "7/40",
+      "matches": true
+    },
+    {
+      "author": "whole |r^-3-1|<=4eta",
+      "own": "radius-derivative4",
+      "value": "6147413525720115884/6148539399857416875",
+      "matches": true
+    },
+    {
+      "author": "joint constraint 7V+5Q<12eta",
+      "own": "ellipse12",
+      "value": "46251577283347410308057/74766227093216930304000",
+      "matches": true
+    },
+    {
+      "author": "cube pair slack below eta/12",
+      "own": "whole-slack1/12",
+      "value": "44839694225971031369479/6380051378621178052608000",
+      "matches": true
+    },
+    {
+      "author": "2/sqrt3<7/6",
+      "own": "two-over-sqrt3",
+      "value": "1/36",
+      "matches": true
+    },
+    {
+      "author": "sqrt6<5/2",
+      "own": "J-five-halves",
+      "value": "1/4",
+      "matches": true
+    },
+    {
+      "author": "real mean above -4eta/5",
+      "own": "real-mean4/5",
+      "value": "696076/11468625",
+      "matches": true
+    },
+    {
+      "author": "imaginary mean modulus below eta/3",
+      "own": "imag-mean1/3",
+      "value": "237547/4128705",
+      "matches": true
+    },
+    {
+      "author": "mean modulus13eta/15 routes c8 below8eta",
+      "own": "postseal trivial literal margin",
+      "value": "1/5",
+      "matches": true
+    },
+    {
+      "author": "c7 below4eta",
+      "own": "original-c7-four",
+      "value": "408417/2867200",
+      "matches": true
+    },
+    {
+      "author": "critical energy H below7eta",
+      "own": "original-H-seven",
+      "value": "1843031/1843200",
+      "matches": true
+    },
+    {
+      "author": "direct uniform first-power slope exceeds13/5",
+      "own": "strict-F13/5",
+      "value": "16379/245760",
+      "matches": true
+    },
+    {
+      "author": "Maclaurin c1 below8eta",
+      "own": "original-c1-eight-squared",
+      "value": "85070591730234615865843651857475103983/1329227995784915872903807060280344576",
+      "matches": true
+    },
+    {
+      "author": "Maclaurin c2 below8eta",
+      "own": "original-c2-eight-squared",
+      "value": "10141204801825835211973558936025/158456325028528675187087900672",
+      "matches": true
+    },
+    {
+      "author": "Maclaurin c3 below8eta",
+      "own": "original-c3-eight-squared",
+      "value": "19342813113834066743415607/302231454903657293676544",
+      "matches": true
+    },
+    {
+      "author": "Maclaurin c4 below8eta",
+      "own": "original-c4-eight-squared",
+      "value": "147573952589609705945/2305843009213693952",
+      "matches": true
+    },
+    {
+      "author": "Maclaurin c5 below8eta",
+      "own": "original-c5-eight-squared",
+      "value": "281474967181087/4398046511104",
+      "matches": true
+    },
+    {
+      "author": "Maclaurin c6 below8eta",
+      "own": "original-c6-eight-squared",
+      "value": "134066465/2097152",
+      "matches": true
+    }
+  ],
+  "scalar_match_boundary": "44 values come from the pre-author sealed independent record; two trivial fixed margins (1-33/40 and 8-9*13/15) are evaluated at this explicitly later stage. Displacement margins normalized by6. Native identity maps themselves are NOT claimed whole-map cross-compared to the different own20 identities.",
+  "all_six_full_author_literal_controls": [
+    {
+      "name": "total zero collision",
+      "all_fields_match": true,
+      "complete_record_sha256": "f053efa910e71d6c116811b894afa52b6a7cea5a6bcda8ee97dd8dd6fd707b04",
+      "disk_feasibility_asserted": false
+    },
+    {
+      "name": "complex total collision",
+      "all_fields_match": true,
+      "complete_record_sha256": "1f58f082e50d2c234c763d8e294a175eba7863cda1087c8774d4ccf41b2cc673",
+      "disk_feasibility_asserted": false
+    },
+    {
+      "name": "repeated conjugate critical pairs",
+      "all_fields_match": true,
+      "complete_record_sha256": "0eb6e1153b4e550aa18ddaaeb09ea24593a501ac050642c6746b3326362e2e47",
+      "disk_feasibility_asserted": false
+    },
+    {
+      "name": "genuinely nonconjugate criticals",
+      "all_fields_match": true,
+      "complete_record_sha256": "bb2657f3b3df518eca613efec7dae89d733fbb09da86088557c66dd93657e69d",
+      "disk_feasibility_asserted": false
+    },
+    {
+      "name": "unequal imaginary amplitudes",
+      "all_fields_match": true,
+      "complete_record_sha256": "e246ea7aa4ded60225d083c4fa55627aab72d4e4fc8962dcec348fc0b67cb24b",
+      "disk_feasibility_asserted": false
+    },
+    {
+      "name": "fixed energy allows a critical outside1/64",
+      "all_fields_match": true,
+      "complete_record_sha256": "a53f08727d14c44267bdabfe9b07c21288a2517b526367fe474871fdb48df5b7",
+      "disk_feasibility_asserted": false
+    }
+  ],
+  "native_external_fixture_rejections": [
+    {
+      "name": "malformed",
+      "mode": "normal",
+      "rejected": true,
+      "reason": "FAIL: Expecting value: line 1 column 2 (char 1)"
+    },
+    {
+      "name": "malformed",
+      "mode": "optimized",
+      "rejected": true,
+      "reason": "FAIL: Expecting value: line 1 column 2 (char 1)"
+    },
+    {
+      "name": "missing",
+      "mode": "normal",
+      "rejected": true,
+      "reason": "FAIL: complete typed canonical fixture mismatch"
+    },
+    {
+      "name": "missing",
+      "mode": "optimized",
+      "rejected": true,
+      "reason": "FAIL: complete typed canonical fixture mismatch"
+    },
+    {
+      "name": "wrong-endpoint",
+      "mode": "normal",
+      "rejected": true,
+      "reason": "FAIL: complete typed canonical fixture mismatch"
+    },
+    {
+      "name": "wrong-endpoint",
+      "mode": "optimized",
+      "rejected": true,
+      "reason": "FAIL: complete typed canonical fixture mismatch"
+    },
+    {
+      "name": "whole-map",
+      "mode": "normal",
+      "rejected": true,
+      "reason": "FAIL: complete typed canonical fixture mismatch"
+    },
+    {
+      "name": "whole-map",
+      "mode": "optimized",
+      "rejected": true,
+      "reason": "FAIL: complete typed canonical fixture mismatch"
+    },
+    {
+      "name": "missing-final-margin",
+      "mode": "normal",
+      "rejected": true,
+      "reason": "FAIL: complete typed canonical fixture mismatch"
+    },
+    {
+      "name": "missing-final-margin",
+      "mode": "optimized",
+      "rejected": true,
+      "reason": "FAIL: complete typed canonical fixture mismatch"
+    },
+    {
+      "name": "bool-int-alias",
+      "mode": "normal",
+      "rejected": true,
+      "reason": "FAIL: complete typed canonical fixture mismatch"
+    },
+    {
+      "name": "bool-int-alias",
+      "mode": "optimized",
+      "rejected": true,
+      "reason": "FAIL: complete typed canonical fixture mismatch"
+    },
+    {
+      "name": "duplicate-key",
+      "mode": "normal",
+      "rejected": true,
+      "reason": "FAIL: duplicate fixture key: critical_energy_endpoint"
+    },
+    {
+      "name": "duplicate-key",
+      "mode": "optimized",
+      "rejected": true,
+      "reason": "FAIL: duplicate fixture key: critical_energy_endpoint"
+    },
+    {
+      "name": "nonfinite",
+      "mode": "normal",
+      "rejected": true,
+      "reason": "FAIL: nonfinite fixture token: NaN"
+    },
+    {
+      "name": "nonfinite",
+      "mode": "optimized",
+      "rejected": true,
+      "reason": "FAIL: nonfinite fixture token: NaN"
+    }
+  ],
+  "whole_seconds": 21.967257,
+  "peak_child_rss_KiB": 21404,
+  "native_threads_one": true,
+  "serial": true,
+  "per_child_timeout_seconds": 45
+}
