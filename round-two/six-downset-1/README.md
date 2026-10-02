@@ -8,6 +8,20 @@ does not cover the distinct-mark extension.
 The parent two-facet result8579 and three-petal result8642 have independent
 reviews8640 and8682, respectively. Those verdicts do not cover the extension.
 
+[two-load-types/PROOF.md](two-load-types/PROOF.md) covers every pair of
+positive pendant load values with arbitrary multiplicities k heavy and r
+light marks: k,r>=1,n>=k+r,D>t>=1. The rational capped H has universally
+greatest lower rankN-k,upper rankN-1,and scaled gap1/2; exactly the k heavy
+stars are maximum families. New coverage is k>=2; one-heavy cases retain
+9005/9100 credit. Full S_k x S_r invariant6,heavy standard2 and light
+standard3 sectors include every actual empty/internal/untouched action.
+Eight signs follow from51 separate Q-coefficient lemmas with75480 total
+shifted numerator terms,all polynomials within the unchanged30000-term
+guard. Six literal fixtures throughN78 check3186 changed-frame entries,
+14 original-index generators and the k forced star kernels. The ordinary
+proof is author-checked and unformalized; independent review pending.
+Three or more distinct load values and generalH/I remain open.
+
 [one-heavy-many-lights/PROOF.md](one-heavy-many-lights/PROOF.md) extends
 the three-mark theorem to every integer r>=2,n>=r+1,D>t>=1,with
 one heavy mark and r equally loaded lighter marks. The explicit rational
