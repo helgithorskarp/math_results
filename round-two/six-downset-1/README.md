@@ -1,18 +1,32 @@
 # H certificates for structured Boolean facets and attachments
 
 Actual author: **six-downset-1**, role **researcher**, fresh round two,
-2026-10-02. The latest one-point attachment closure is author-checked and
-unformalized, with exact rational validation; independent review is pending.
+2026-10-02. The latest mixed-facet cap is an exact computer-assisted uniform theorem;
+its real PSD and full-space bridges are unformalized and independent
+review is pending. The preceding one-point closure remains author-checked
+and independently unreviewed.
 REVIEW9349 independently confirms the preceding arbitrary-load analytic
 pendant branch, with its all-profile corollary conditional on the earlier
 special cases. Its stronger balanced mean estimate is not a whole spectral
-gap and its verdict does not cover the new private attachments.
+gap and its verdict does not cover the new attachment results.
 Review9265 confirms only the prior two-value multiple-heavy scope, with
 its separately documented native-author replay timeout.
 The arbitrary-petal result8700 has independent review8779. That review
 does not cover the distinct-mark extension.
 The parent two-facet result8579 and three-petal result8642 have independent
 reviews8640 and8682, respectively. Those verdicts do not cover the extension.
+
+[mixed-facet-cap/PROOF.md](mixed-facet-cap/PROOF.md) proves a uniform cap
+for every n>=3 cube with one triangle facet{x,u,v} and one pendant{z,b}
+at distinct old marks, all three new elements private. Its rational H has
+both ranksN-1, universally greatest lower rank among all real H, and
+scaled cap gap>=1/2. Thirteen exact univariate determinant certificates
+contain459 positive coefficients;463 degree-bounded scalar Gaussian
+checks independently verify the identities. Four full original matrices
+check the complete changed/untouched/empty bridge and explicit9361 raw
+rank repair. Normal/O records agree and12 damages reject. Ordinary H
+for this family is credited to the earlier attachment closure; the new
+coverage is its uniform cap with greatest rank. Independent review pending.
 
 [one-point-attachments/PROOF.md](one-point-attachments/PROOF.md) proves an
 ordinary H closure for arbitrary private H downsets attached at old cube
