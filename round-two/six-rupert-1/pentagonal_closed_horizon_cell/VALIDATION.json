@@ -1,0 +1,148 @@
+{
+  "actual_author": "six-rupert-1",
+  "control_runs": [
+    {
+      "actual_agent": "six-rupert-1",
+      "bytes": 387,
+      "elapsed_seconds": 0.06117419298971072,
+      "peak_rss_kib": 18908,
+      "role": "researcher",
+      "sha256": "51f5eaf30834290ca4c5e48de8a6b11e4216eba156b4541bc47f9bea155ff330",
+      "status": "EXACT_ALGEBRA_AND_CLOSURE_CONTROLS_PASSED",
+      "threads": 1
+    },
+    {
+      "actual_agent": "six-rupert-1",
+      "bytes": 387,
+      "elapsed_seconds": 0.0567027049837634,
+      "peak_rss_kib": 24600,
+      "role": "researcher",
+      "sha256": "51f5eaf30834290ca4c5e48de8a6b11e4216eba156b4541bc47f9bea155ff330",
+      "status": "EXACT_ALGEBRA_AND_CLOSURE_CONTROLS_PASSED",
+      "threads": 1
+    },
+    {
+      "actual_agent": "six-rupert-1",
+      "bytes": 585,
+      "elapsed_seconds": 37.07675759604899,
+      "peak_rss_kib": 33648,
+      "role": "researcher",
+      "sha256": "198f828097209262ee90ca7d1026101e32cdfc1bcae6a6766a86016f9d4521a1",
+      "status": "EXACT_FRESH_GEOMETRY_BOUNDARY_AND_DAMAGE_CONTROLS_PASSED",
+      "threads": 1
+    },
+    {
+      "actual_agent": "six-rupert-1",
+      "bytes": 585,
+      "elapsed_seconds": 36.82829789398238,
+      "peak_rss_kib": 38520,
+      "role": "researcher",
+      "sha256": "198f828097209262ee90ca7d1026101e32cdfc1bcae6a6766a86016f9d4521a1",
+      "status": "EXACT_FRESH_GEOMETRY_BOUNDARY_AND_DAMAGE_CONTROLS_PASSED",
+      "threads": 1
+    },
+    {
+      "actual_agent": "six-rupert-1",
+      "bytes": 300,
+      "elapsed_seconds": 40.00365091703134,
+      "peak_rss_kib": 33532,
+      "role": "researcher",
+      "sha256": "94189d56d8402608fc887efde9a1b43fd1dd3306fc9813f2c9a4e465f6be57da",
+      "status": "EXACT_FRESH_PHYSICAL_SUPPORT_AND_TRANSLATION_CONTROLS_PASSED",
+      "threads": 1
+    },
+    {
+      "actual_agent": "six-rupert-1",
+      "bytes": 300,
+      "elapsed_seconds": 37.58363331097644,
+      "peak_rss_kib": 38432,
+      "role": "researcher",
+      "sha256": "94189d56d8402608fc887efde9a1b43fd1dd3306fc9813f2c9a4e465f6be57da",
+      "status": "EXACT_FRESH_PHYSICAL_SUPPORT_AND_TRANSLATION_CONTROLS_PASSED",
+      "threads": 1
+    }
+  ],
+  "controls": {
+    "algebra": {
+      "exact_bernstein_power_reexpansions": 56,
+      "independent_determinant_coefficients_checked": 18,
+      "outward_rational_operation_controls": 108,
+      "rejected_semantic_damages": [
+        "unsupported dual mass26",
+        "motion radius at unclosed factor1",
+        "unsupported physical coefficient",
+        "reversed outward enclosure"
+      ],
+      "status": "EXACT_ALGEBRA_AND_CLOSURE_CONTROLS_PASSED"
+    },
+    "geometry": {
+      "closed_cell_geometry_record_matches": true,
+      "exact_offendpoint_grazing_tie_checked": true,
+      "full_named_geometry_rebuilt": true,
+      "rejected_semantic_damages": [
+        "wrong facet phase",
+        "missing defining wall",
+        "star ordering of convex vertices",
+        "reversed support orientation",
+        "nonendpoint source label",
+        "unsupported quadratic constant",
+        "missing dual row",
+        "wrong Cramer target sign",
+        "removed actual translation coordinates",
+        "discarded closed horizon tie"
+      ],
+      "status": "EXACT_FRESH_GEOMETRY_BOUNDARY_AND_DAMAGE_CONTROLS_PASSED"
+    },
+    "physical": {
+      "actual_cayley_translation_identities": 168,
+      "closed_cell_geometry_record_matches": true,
+      "full_named_geometry_rebuilt": true,
+      "identical_zero_motion_fit_controls": 2,
+      "nonzero_actual_physical_gap_controls": 6,
+      "status": "EXACT_FRESH_PHYSICAL_SUPPORT_AND_TRANSLATION_CONTROLS_PASSED"
+    }
+  },
+  "entire_expected_bytes": 32183,
+  "entire_expected_sha256": "1e09d73c2b2dbe0f4842b47ef452da1c9dc3546f169a47de294e0edfd006c044",
+  "final_source_optimized_replay": {
+    "actual_agent": "six-rupert-1",
+    "bytes": 32183,
+    "elapsed_seconds": 36.3931029230007,
+    "peak_rss_kib": 38060,
+    "role": "researcher",
+    "sha256": "1e09d73c2b2dbe0f4842b47ef452da1c9dc3546f169a47de294e0edfd006c044",
+    "status": "EXACT_WHOLE_CLOSED_HORIZON_CELL_DUALS_LOCAL_RIGIDITY_AND_PHYSICAL_GAP_PASSED",
+    "threads": 1
+  },
+  "final_source_publication_clone_native_replay": {
+    "actual_agent": "six-rupert-1",
+    "bytes": 32183,
+    "elapsed_seconds": 38.987263944989536,
+    "peak_rss_kib": 34656,
+    "role": "researcher",
+    "sha256": "1e09d73c2b2dbe0f4842b47ef452da1c9dc3546f169a47de294e0edfd006c044",
+    "status": "EXACT_WHOLE_CLOSED_HORIZON_CELL_DUALS_LOCAL_RIGIDITY_AND_PHYSICAL_GAP_PASSED",
+    "threads": 1
+  },
+  "guard_checks": "Deadline predicates between finite batches; no resource setting increased.",
+  "inherited_named_model_source": "86ab225fb8becbe66601a5da0b5b017e872e1833",
+  "mathematical_status": "Author-checked ordinary proof, unformalized and independently unreviewed; global Rupert property open.",
+  "one_cpu_intensive_job_at_a_time": true,
+  "role": "researcher",
+  "runtime": "CPython 3.11.2, standard library only",
+  "seconds_guard_per_job": 45,
+  "source_sha256": {
+    ".gitignore": "165355728a6622f1bc5a69228a14291bf7b91c5620a94bbec52413d3a09f763d",
+    "PROOF.md": "d4368d43c82b9ad4af75485ac6adccc856cace05255848749b693f0422958923",
+    "README.md": "a585d4644bcf62deb54ff7ba2fa3a83de4c6ff2e69589d723713681c54616e59",
+    "certificate.json": "990791c04948bfd57145b3b2b3af30d8c95644bb307a61a8bab767ac012065ee",
+    "check.py": "60119b60af818dd3a56300409ab431b9c697ae00145c3f436022ae19a6d06c9c",
+    "expected.json": "1e09d73c2b2dbe0f4842b47ef452da1c9dc3546f169a47de294e0edfd006c044",
+    "geometry.py": "20ae6b80440bb24b11cc01d6467e923c9d83d0d1221703ac615e6a64ce3ea76e",
+    "polynomial.py": "7180768c614a591075d361aa287a948eca3ff6a77c8366331511caa29080f714",
+    "validate.py": "92ed70e06d4fd0a17304e01dbec874e7a74f696ca4f8926891765abd30a2d214"
+  },
+  "status": "FINAL_STANDALONE_SOURCE_AND_EXACT_CONTROLS_PASSED",
+  "threads": 1,
+  "trust": "Complete actual-model replay and rigorously enclosed polynomial coefficients. Finite-to-continuum geometry and determinant/Cayley proofs are ordinary mathematics; neither independent mathematical review nor formalization is claimed."
+}
