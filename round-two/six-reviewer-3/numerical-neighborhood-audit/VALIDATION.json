@@ -1,0 +1,125 @@
+{
+  "actual_agent": "six-reviewer-3",
+  "role": "independent mathematical reviewer",
+  "independent_record_sha256": "47cecc585621e301dcd117266e8b69c432aaa5a68a67b87534424a7e3637a271",
+  "original_record_sha256": "00d6f4763b450e540e1f369a9f823a68cefbce026b7103134d288f57829665d7",
+  "full_original_fixture_comparison": true,
+  "input_files_hash_verified": 77,
+  "guard_seconds_per_child": 45,
+  "native_threads": 1,
+  "serial_children": true,
+  "peak_child_rss_KiB": 24088,
+  "trust_boundary": "Original code is corroboration only and supplies no calculation inputs to verify.py; core frozen before original executable/expected inspection.",
+  "independent_freeze": {
+    "actual_agent": "six-reviewer-3",
+    "role": "independent mathematical reviewer",
+    "exit": 0,
+    "elapsed_seconds": 2.6719996059546247,
+    "peak_child_rss_KiB": 20672,
+    "guard_seconds": 45,
+    "native_threads": 1,
+    "freeze_before_author_inspection_utc": "2026-10-02T11:45:33.693990+00:00",
+    "independent_first_output": "PASS independent numerical-neighborhood audit 47cecc585621e301dcd117266e8b69c432aaa5a68a67b87534424a7e3637a271\n{\"all_nonlinear_radii\": \"explicit, eta/k-dependent; no uniform positive eta0 or global competitor entry\", \"coefficient_max_radius\": \"delta^6*2^-2557*eta^76\", \"common_slack_weight\": \"75/256\", \"enlargement_over_both_original_radii\": \"2^1836*eta^-21\", \"fixed_individual_pair_weights\": [\"9/4\", \"75/256\"], \"k1quarter_coefficient_radius\": \"2^-2575*eta^76\", \"strict_minimum_at_k1quarter\": true}\n",
+    "prior_independent_v1_record": "ad86f6962469c5c6f81eb127d8e4a80aaa7db277b09b63432627f53108e52e71",
+    "refinement_before_any_target_engine_inspection": "Weighted7sqrteta critical motion and9/8 root-disk integration bounds enlarge raw rho to2^-27."
+  },
+  "comparisons_original": 48,
+  "comparisons_refined": 51,
+  "full_symbolic_identities": 9,
+  "mathematical_damage_rejections": 12,
+  "invalid_domain_rejections": 4,
+  "external_fixture_rejections": 6,
+  "whole_parent_sha256": "4c0273812689454bb1875c252c3ad48a8d165a54639396c88e5b2b228bf029b2",
+  "checks": [
+    {
+      "label": "complete independent regenerated record",
+      "mode": "normal",
+      "exit": 0,
+      "elapsed_seconds": 2.701403,
+      "stdout": "PASS independent numerical-neighborhood audit 47cecc585621e301dcd117266e8b69c432aaa5a68a67b87534424a7e3637a271\n{\"all_nonlinear_radii\": \"explicit, eta/k-dependent; no uniform positive eta0 or global competitor entry\", \"coefficient_max_radius\": \"delta^6*2^-2557*eta^76\", \"common_slack_weight\": \"75/256\", \"enlargement_over_both_original_radii\": \"2^1836*eta^-21\", \"fixed_individual_pair_weights\": [\"9/4\", \"75/256\"], \"k1quarter_coefficient_radius\": \"2^-2575*eta^76\", \"strict_minimum_at_k1quarter\": true}\n"
+    },
+    {
+      "label": "independent external fixture rejects missing",
+      "mode": "normal",
+      "exit": 1,
+      "elapsed_seconds": 0.088317,
+      "stdout": "",
+      "rejection_stderr_sha256": "314e319bdb8e9b26aa249a1be11870f0a48be481429d23866677401dd8a90d58"
+    },
+    {
+      "label": "independent external fixture rejects malformed",
+      "mode": "normal",
+      "exit": 1,
+      "elapsed_seconds": 0.084486,
+      "stdout": "",
+      "rejection_stderr_sha256": "dc5e093b0c0f03aa5767e91adb9b477761529f4b3f5d9fc2f5a35d61c0d42a29"
+    },
+    {
+      "label": "independent external fixture rejects changed",
+      "mode": "normal",
+      "exit": 1,
+      "elapsed_seconds": 2.632967,
+      "stdout": "",
+      "rejection_stderr_sha256": "fb75901566d9968762c706511d942802481d545145a86c1165b9fbfe8e595ae2"
+    },
+    {
+      "label": "unchanged original checker, all original predicates and controls",
+      "mode": "normal",
+      "exit": 0,
+      "elapsed_seconds": 1.850071,
+      "stdout": "{\"coefficient_radius\": \"delta^6*2^-4393*eta^97\", \"eta_max\": \"1/65536\", \"exact_predicates\": 62, \"input_files\": 42, \"mathematical_damage_rejections\": 10, \"ordinary_analytic_bridges\": \"unformalized; new radius independently unreviewed\", \"parameter_radius\": \"delta*2^-721*eta^14\", \"quarter_coefficient_radius\": \"2^-4411*eta^97\", \"record_sha256\": \"00d6f4763b450e540e1f369a9f823a68cefbce026b7103134d288f57829665d7\", \"status\": \"PASS\"}\n"
+    },
+    {
+      "label": "separate whole original record regeneration",
+      "mode": "normal",
+      "exit": 0,
+      "elapsed_seconds": 1.825322,
+      "stdout": "{\"coefficient_radius\": \"delta^6*2^-4393*eta^97\", \"eta_max\": \"1/65536\", \"exact_predicates\": 62, \"input_files\": 42, \"mathematical_damage_rejections\": 10, \"ordinary_analytic_bridges\": \"unformalized; new radius independently unreviewed\", \"parameter_radius\": \"delta*2^-721*eta^14\", \"quarter_coefficient_radius\": \"2^-4411*eta^97\", \"record_sha256\": \"00d6f4763b450e540e1f369a9f823a68cefbce026b7103134d288f57829665d7\", \"status\": \"PASS\"}\n"
+    },
+    {
+      "label": "complete independent regenerated record",
+      "mode": "optimized",
+      "exit": 0,
+      "elapsed_seconds": 3.045602,
+      "stdout": "PASS independent numerical-neighborhood audit 47cecc585621e301dcd117266e8b69c432aaa5a68a67b87534424a7e3637a271\n{\"all_nonlinear_radii\": \"explicit, eta/k-dependent; no uniform positive eta0 or global competitor entry\", \"coefficient_max_radius\": \"delta^6*2^-2557*eta^76\", \"common_slack_weight\": \"75/256\", \"enlargement_over_both_original_radii\": \"2^1836*eta^-21\", \"fixed_individual_pair_weights\": [\"9/4\", \"75/256\"], \"k1quarter_coefficient_radius\": \"2^-2575*eta^76\", \"strict_minimum_at_k1quarter\": true}\n"
+    },
+    {
+      "label": "independent external fixture rejects missing",
+      "mode": "optimized",
+      "exit": 1,
+      "elapsed_seconds": 0.336805,
+      "stdout": "",
+      "rejection_stderr_sha256": "314e319bdb8e9b26aa249a1be11870f0a48be481429d23866677401dd8a90d58"
+    },
+    {
+      "label": "independent external fixture rejects malformed",
+      "mode": "optimized",
+      "exit": 1,
+      "elapsed_seconds": 0.339924,
+      "stdout": "",
+      "rejection_stderr_sha256": "dc5e093b0c0f03aa5767e91adb9b477761529f4b3f5d9fc2f5a35d61c0d42a29"
+    },
+    {
+      "label": "independent external fixture rejects changed",
+      "mode": "optimized",
+      "exit": 1,
+      "elapsed_seconds": 3.001983,
+      "stdout": "",
+      "rejection_stderr_sha256": "fb75901566d9968762c706511d942802481d545145a86c1165b9fbfe8e595ae2"
+    },
+    {
+      "label": "unchanged original checker, all original predicates and controls",
+      "mode": "optimized",
+      "exit": 0,
+      "elapsed_seconds": 1.97126,
+      "stdout": "{\"coefficient_radius\": \"delta^6*2^-4393*eta^97\", \"eta_max\": \"1/65536\", \"exact_predicates\": 62, \"input_files\": 42, \"mathematical_damage_rejections\": 10, \"ordinary_analytic_bridges\": \"unformalized; new radius independently unreviewed\", \"parameter_radius\": \"delta*2^-721*eta^14\", \"quarter_coefficient_radius\": \"2^-4411*eta^97\", \"record_sha256\": \"00d6f4763b450e540e1f369a9f823a68cefbce026b7103134d288f57829665d7\", \"status\": \"PASS\"}\n"
+    },
+    {
+      "label": "separate whole original record regeneration",
+      "mode": "optimized",
+      "exit": 0,
+      "elapsed_seconds": 2.013732,
+      "stdout": "{\"coefficient_radius\": \"delta^6*2^-4393*eta^97\", \"eta_max\": \"1/65536\", \"exact_predicates\": 62, \"input_files\": 42, \"mathematical_damage_rejections\": 10, \"ordinary_analytic_bridges\": \"unformalized; new radius independently unreviewed\", \"parameter_radius\": \"delta*2^-721*eta^14\", \"quarter_coefficient_radius\": \"2^-4411*eta^97\", \"record_sha256\": \"00d6f4763b450e540e1f369a9f823a68cefbce026b7103134d288f57829665d7\", \"status\": \"PASS\"}\n"
+    }
+  ]
+}
