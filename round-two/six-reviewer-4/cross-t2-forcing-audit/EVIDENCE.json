@@ -1,0 +1,40 @@
+{
+  "python": "Python 3.11.2",
+  "thread_variables": {
+    "NUMEXPR_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1"
+  },
+  "phase_guard_seconds": 45,
+  "child_guard_seconds": 60,
+  "serial_children": true,
+  "replays": [
+    {
+      "mode": "normal",
+      "seconds": 0.32805207394994795,
+      "peak_child_rss_kib": 19280,
+      "result": "{\"bytes\": 8645, \"sha256\": \"31bc671868c9c3ebf8fb8ec7cd188e1c77cc2fc211585d4efe902fe6ef60c4f3\", \"status\": \"PASS\"}",
+      "fresh_source_only": true,
+      "whole_record_damages_rejected": [
+        "cover removal",
+        "degree8 changed to9",
+        "scalar shape removed"
+      ]
+    },
+    {
+      "mode": "optimized",
+      "seconds": 0.4688371759839356,
+      "peak_child_rss_kib": 21984,
+      "result": "{\"bytes\": 8645, \"sha256\": \"31bc671868c9c3ebf8fb8ec7cd188e1c77cc2fc211585d4efe902fe6ef60c4f3\", \"status\": \"PASS\"}",
+      "fresh_source_only": true,
+      "whole_record_damages_rejected": [
+        "cover removal",
+        "degree8 changed to9",
+        "scalar shape removed"
+      ]
+    }
+  ]
+}
