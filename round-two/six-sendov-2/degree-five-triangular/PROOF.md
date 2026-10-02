@@ -252,8 +252,10 @@ are in [the expected record](expected.json), and the checker multiplies
 both entire polynomials to verify the unit identity.
 This contradicts P(r)=S(r)=0 and excludes B=s=0.
 
-For actual originals, Newton's identity gives sum u_i^3=-4B, since
-[z^5]f=4B/3. Also p4=st and t>0. Thus the exclusion is precisely the
+For actual originals, h=f'/8 gives [z^5]f=8B/5. Since [z^7]f=0,
+Newton's identity gives sum u_i^3=-3[z^5]f=-24B/5. This normalization
+identity is checked universally in the source. Also p4=st and t>0.
+Thus the exclusion is precisely the
 simultaneous condition sum u_i^3=0 and p4=0. It does not show that a
 stationary profile must have nonzero third moment alone, or nonzero
 quartic mass coefficient alone, or a uniform distance from either zero.
@@ -261,14 +263,14 @@ quartic mass coefficient alone, or a uniform distance from either zero.
 ## 6. Reproduction, proof status and remaining frontier
 
 The [standard-library Fraction checker](verify.py) uses a sparse Laurent
-ring with the sole inverse t. It verifies31 complete universal identities,
+ring with the sole inverse t. It verifies32 complete universal identities,
 all coefficient-degree/localization bounds, the entire five matrix rows,
 all eliminated equations, full reconstruction/ODE relation,
 slice cubic and degree-six eliminant, rational Bezout and the small
 mod13 unit certificate. The equations contain no unresolved placeholder
 coefficients. Fifteen exact rank/conic controls include every rank,
 nonconic and infinite/negative kernel vectors, irrational/double positive
-roots, zero-only roots and constant rows. Eight mathematical damages
+roots, zero-only roots and constant rows. Nine mathematical damages
 reject. All checks use explicit exceptions and survive optimization.
 The entire external fixture is compared, including missing and extra data.
 

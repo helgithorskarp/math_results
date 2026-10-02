@@ -380,6 +380,9 @@ def make_certificate(export=None):
     require(bridge==us(F(-1,8),final['ODE']),'entire inverse primitive derivative/ODE identity')
     checks['full_primitive_bridge']=True
     require(nth(f,8)==1 and nth(f,7)==0 and nth(f,6)==F(-1,2),'reconstructed monic balance/norm')
+    # Balanced degree-eight Newton sum: third original moment = -3 f5.
+    original_moment3=-3*nth(f,5)
+    eq('original_third_moment_normalization',original_moment3,F(-24,5)*B)
     # Exact eliminated slice: B=s=0; K1 determines E since t>0.
     sliceR=[sub(sub(a,0,0),3,0)for a in residuals]
     e0=F(-1,2112)*(10976*r*r+7344*r+1143)
@@ -412,6 +415,7 @@ def make_certificate(export=None):
     require(modular is not None,'small modular certificate found')
     damage_receipts=[]
     probes={
+      'wrong_original_third_moment':lambda:eq('damaged_original_moment3',original_moment3,-4*B),
       'wrong_ODE4_pivot':lambda:eq('damaged_ODE4',F(35)*x1+sub(nth(aa['ODE'],4),9,0)),
       'wrong_G_pivot':lambda:eq('damaged_G',24*t*t*(-gF)+sub(nth(K,4),6,0)),
       'wrong_F_sign':lambda:eq('damaged_F',F(-15,14)*t*t*(-fstar)+sub(k3,5,0)),
@@ -429,6 +433,7 @@ def make_certificate(export=None):
         [('F',fstar),('G',gstar),('J',jstar),('p0',P0),('p1',P1),('p2',p2),('C',gamma)]},
       'entire_residual_polynomials':{n:polydigest([a])for n,a in zip(['tODE2','tODE1','tODE0','K1','K0plus4'],residuals)},
       'whole_matrix_rows':[polydigest(row)for row in matrix],
+      'original_third_moment':P(original_moment3).encoded(),
       'slice_cubic':[str(x)for x in cubic],'slice_degree_six':[str(x)for x in elim],
       'slice_modular_unit':modular,
       'slice_Bezout':{'cubic_multiplier':[str(v)for v in x],'eliminant_multiplier':[str(v)for v in y],'gcd':['1']},

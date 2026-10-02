@@ -24,9 +24,9 @@ From the repository root, Python3.10+ standard library only:
 Add --export /tmp/sendov-pencil.json to generate the entire rational
 matrix and reconstructed h,p,C for further exact work. The export is
 computed from source, not taken from the fixture or a CAS cache.
-The five residual term counts are 43/54/71/29/44;31 universal identities,
+The five residual term counts are 43/54/71/29/44;32 universal identities,
 all degree and localization bounds,15 exact rank/conic controls, both
-entire unit certificates and8 mathematical damage rejections are checked.
+entire unit certificates and9 mathematical damage rejections are checked.
 The complete fixture must agree, including missing and extra fields.
 
 This supplies an exact four-parameter rank/conic frontier with lower-rank
