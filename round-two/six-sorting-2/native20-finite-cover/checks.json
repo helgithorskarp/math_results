@@ -1,0 +1,390 @@
+{
+  "agent": "six-sorting-2",
+  "damage_audit": {
+    "agent": "six-sorting-2",
+    "boundary": "Guard audit only; complete positive checks establish the mathematical cover.",
+    "cases": 9,
+    "role": "researcher",
+    "status": "ALL_NINE_DAMAGES_REJECTED_IN_BOTH_MODES"
+  },
+  "damage_rejections": [
+    {
+      "args": [],
+      "case": "pre6_missing_history",
+      "checker": "phase_verify",
+      "damaged_sha256": "22ff9f02c95509d26df9cde3b3df664b29cf5803695d4f79685ac73d228067f2",
+      "file": "pre6-cover.json",
+      "mode": "normal",
+      "reason": "full event history cover differs",
+      "returncode": 1
+    },
+    {
+      "args": [],
+      "case": "pre6_missing_history",
+      "checker": "phase_verify",
+      "damaged_sha256": "22ff9f02c95509d26df9cde3b3df664b29cf5803695d4f79685ac73d228067f2",
+      "file": "pre6-cover.json",
+      "mode": "optimized",
+      "reason": "full event history cover differs",
+      "returncode": 1
+    },
+    {
+      "args": [],
+      "case": "preparation_missing_function",
+      "checker": "phase_verify",
+      "damaged_sha256": "f5b1f9fd9772badab8e13ff2489075238856a8920790efe7dc9628cf2a83d269",
+      "file": "preparation-functions.json",
+      "mode": "normal",
+      "reason": "preparation function set not closed",
+      "returncode": 1
+    },
+    {
+      "args": [],
+      "case": "preparation_missing_function",
+      "checker": "phase_verify",
+      "damaged_sha256": "f5b1f9fd9772badab8e13ff2489075238856a8920790efe7dc9628cf2a83d269",
+      "file": "preparation-functions.json",
+      "mode": "optimized",
+      "reason": "preparation function set not closed",
+      "returncode": 1
+    },
+    {
+      "args": [],
+      "case": "tf_missing_composition",
+      "checker": "phase_verify",
+      "damaged_sha256": "cd3be1a3e7e5f7cc254a91f1e956039c607d1def011f21cd342dbaafb3e791d2",
+      "file": "tf-cover.json",
+      "mode": "normal",
+      "reason": "preparation function composition omitted",
+      "returncode": 1
+    },
+    {
+      "args": [],
+      "case": "tf_missing_composition",
+      "checker": "phase_verify",
+      "damaged_sha256": "cd3be1a3e7e5f7cc254a91f1e956039c607d1def011f21cd342dbaafb3e791d2",
+      "file": "tf-cover.json",
+      "mode": "optimized",
+      "reason": "preparation function composition omitted",
+      "returncode": 1
+    },
+    {
+      "args": [
+        "joint"
+      ],
+      "case": "joint_wrong_length",
+      "checker": "images_verify",
+      "damaged_sha256": "17638c2f5bedfc3b5af6e9aa3c659110b6647a65c8e03c84ef67533a7cc30112",
+      "file": "joint-cover.json",
+      "mode": "normal",
+      "reason": "joint prefix length differs",
+      "returncode": 1
+    },
+    {
+      "args": [
+        "joint"
+      ],
+      "case": "joint_wrong_length",
+      "checker": "images_verify",
+      "damaged_sha256": "17638c2f5bedfc3b5af6e9aa3c659110b6647a65c8e03c84ef67533a7cc30112",
+      "file": "joint-cover.json",
+      "mode": "optimized",
+      "reason": "joint prefix length differs",
+      "returncode": 1
+    },
+    {
+      "args": [
+        "post"
+      ],
+      "case": "post_wrong_budget",
+      "checker": "images_verify",
+      "damaged_sha256": "96cf4143975482f230009fc494e8c4677129ed4c4331a090e884df936f612e95",
+      "file": "postjoint-cover.json",
+      "mode": "normal",
+      "reason": "nine-root budget differs",
+      "returncode": 1
+    },
+    {
+      "args": [
+        "post"
+      ],
+      "case": "post_wrong_budget",
+      "checker": "images_verify",
+      "damaged_sha256": "96cf4143975482f230009fc494e8c4677129ed4c4331a090e884df936f612e95",
+      "file": "postjoint-cover.json",
+      "mode": "optimized",
+      "reason": "nine-root budget differs",
+      "returncode": 1
+    },
+    {
+      "args": [],
+      "case": "constant_wrong_R",
+      "checker": "constants_verify",
+      "damaged_sha256": "2ae83d1167852fecfad14a16db5cb2927778641e7bafe39cfaa894195c1ba177",
+      "file": "constant-screen-0-135.json",
+      "mode": "normal",
+      "reason": "numeric semantic record differs",
+      "returncode": 1
+    },
+    {
+      "args": [],
+      "case": "constant_wrong_R",
+      "checker": "constants_verify",
+      "damaged_sha256": "2ae83d1167852fecfad14a16db5cb2927778641e7bafe39cfaa894195c1ba177",
+      "file": "constant-screen-0-135.json",
+      "mode": "optimized",
+      "reason": "numeric semantic record differs",
+      "returncode": 1
+    },
+    {
+      "args": [
+        "0",
+        "20"
+      ],
+      "case": "nested_wrong_root_cover",
+      "checker": "nested_verify",
+      "damaged_sha256": "60aa3084e331e0d924d66fc481c36374e7b58078eaf9564af6f5ce209da4eb86",
+      "file": "nested-screen-0-20.json",
+      "mode": "normal",
+      "reason": "nested root cover differs from exact constant-stage remainder",
+      "returncode": 1
+    },
+    {
+      "args": [
+        "0",
+        "20"
+      ],
+      "case": "nested_wrong_root_cover",
+      "checker": "nested_verify",
+      "damaged_sha256": "60aa3084e331e0d924d66fc481c36374e7b58078eaf9564af6f5ce209da4eb86",
+      "file": "nested-screen-0-20.json",
+      "mode": "optimized",
+      "reason": "nested root cover differs from exact constant-stage remainder",
+      "returncode": 1
+    },
+    {
+      "args": [
+        "0",
+        "20"
+      ],
+      "case": "nested_wrong_inner_bound",
+      "checker": "nested_verify",
+      "damaged_sha256": "505eaf40f8b9465fffb35e0b8a7900e0d7fdfea77aea30c46dfbe1bffe3f1d37",
+      "file": "nested-screen-0-20.json",
+      "mode": "normal",
+      "reason": "inner exact records/leaves/bounds differ",
+      "returncode": 1
+    },
+    {
+      "args": [
+        "0",
+        "20"
+      ],
+      "case": "nested_wrong_inner_bound",
+      "checker": "nested_verify",
+      "damaged_sha256": "505eaf40f8b9465fffb35e0b8a7900e0d7fdfea77aea30c46dfbe1bffe3f1d37",
+      "file": "nested-screen-0-20.json",
+      "mode": "optimized",
+      "reason": "inner exact records/leaves/bounds differ",
+      "returncode": 1
+    },
+    {
+      "args": [
+        "0",
+        "20"
+      ],
+      "case": "nested_wrong_pruning_function",
+      "checker": "nested_verify",
+      "damaged_sha256": "ad79f963d0821017d5aa97c9811cee146cab4c9219f906a479956449b26eb45b",
+      "file": "nested-screen-0-20.json",
+      "mode": "normal",
+      "reason": "complete carrier/pruning fields differ",
+      "returncode": 1
+    },
+    {
+      "args": [
+        "0",
+        "20"
+      ],
+      "case": "nested_wrong_pruning_function",
+      "checker": "nested_verify",
+      "damaged_sha256": "ad79f963d0821017d5aa97c9811cee146cab4c9219f906a479956449b26eb45b",
+      "file": "nested-screen-0-20.json",
+      "mode": "optimized",
+      "reason": "complete carrier/pruning fields differ",
+      "returncode": 1
+    }
+  ],
+  "date_utc": "2026-10-02",
+  "final": {
+    "agent": "six-sorting-2",
+    "native_prefix_suffix_interval": [
+      25,
+      26
+    ],
+    "native_prefix_total_interval": [
+      45,
+      46
+    ],
+    "nested_exclusions": 765,
+    "nine_core_images": 23006,
+    "normalized22_target_suffix_interval": [
+      23,
+      24
+    ],
+    "remaining_roots": 0,
+    "role": "researcher",
+    "root_image_budget_sha256": "1f4a83e1057bf83d4d56211f42c117b8ac81352fcd2028d189c1134309dc96ca",
+    "semantic_exclusions": 22241,
+    "status": "NATIVE20_COMPLETE_SIZE44_EXCLUSION_VERIFIED",
+    "total_lower_bound": 45,
+    "trust_boundary": "Imported published9207/8539/8604/9007, smaller-size lower bounds and unformalized normalization/pruning/zero-one/category-collapse bridges. Same-author distinct exact algorithms; no external-review verdict."
+  },
+  "finite_summary_sha256": "4f6037a198d5a28bca0640a42229673d8b3aab47ce5598fa5082513df7ff873d",
+  "normal_optimized_finite_fields_equal": true,
+  "positive_independent_summaries": [
+    {
+      "TF_full_functions": 32064,
+      "T_full_functions": 324,
+      "agent": "six-sorting-2",
+      "all_event_words": 2034,
+      "all_preparation_compositions": 36679,
+      "boundary": "Numeric marker vectors differ from producer masks; scalar T/full-F truth tables are composed by complete disjoint truth cells, rather than producer comparator-column composition. Imported P20 intake and zero-one/commutation proofs remain explicit. No suffix exclusion.",
+      "first6_gate_controls": 2448,
+      "phase_gate_controls": 13464,
+      "phase_states": 204,
+      "preparation_complete_closure_controls": 1601,
+      "role": "researcher",
+      "status": "NUMERIC_PHASE_AND_DNF_FUNCTION_COVER_VERIFIED"
+    },
+    {
+      "agent": "six-sorting-2",
+      "all_joint_cases": 159648,
+      "boundary": "Exact phase/full-function checks imported from this standalone checker. Bulk truth columns independently replay every conditional Boolean row; no producer function imported. No suffix exclusion.",
+      "complete_h22_inputs": 8192,
+      "distinct_profile_images": 37147,
+      "h22_full_image": 209,
+      "role": "researcher",
+      "status": "BULK_COLUMN_ALL_JOINT_IMAGES_AND_MINIMUM_LENGTHS_VERIFIED"
+    },
+    {
+      "agent": "six-sorting-2",
+      "all_postjoint_compositions": 47251,
+      "boundary": "Balanced equal-weight subset trees differ from producer stepwise merge recursion. Numeric truth signatures check complete canonical event function sets; bulk columns check every literal conditional image, held outer output and minimum covered prefix length. Unformalized normalization bridges and imported S11>=35 remain explicit. Residual suffixes are not excluded.",
+      "distinct_nine_core_images": 23006,
+      "family_profiles": 149,
+      "joint_roots": 37147,
+      "role": "researcher",
+      "root_image_budget_sha256": "1f4a83e1057bf83d4d56211f42c117b8ac81352fcd2028d189c1134309dc96ca",
+      "status": "BALANCED_SUBSET_TREE_AND_ALL_NINE_CORE_IMAGES_VERIFIED"
+    },
+    {
+      "agent": "six-sorting-2",
+      "boundary": "Selected immutable original full seven-free-input domains are retained. Numeric full-cube base rows and scalar min/max over exact conditional image sets differ from producer packed columns. Category collapse of only marked ranks preserves free Boolean values/marker masks/D/R and is an unformalized bridge. ImportedS7>=16 and semantic transport8539 are explicit. Failed bounds are not feasibility;765 targets require the separately checked nested stage.",
+      "distinct_original_clampings": 66,
+      "metrics": {
+        "numeric_conditional_row_controls": 9487088,
+        "original_full_cube_assignments": 8448,
+        "original_numeric_gate_controls": 185856,
+        "shared_literal_prefix_states": 1527373
+      },
+      "not_excluded_roots": 765,
+      "numeric_transition_states": 373042,
+      "role": "researcher",
+      "selected_domain_occurrences": 215475,
+      "status": "ALL_SELECTED_CONSTANT_ROOT_CERTIFICATES_NUMERIC_IMAGE_SET_VERIFIED",
+      "total_roots": 23006,
+      "verified_exclusions": 22241
+    },
+    {
+      "agent": "six-sorting-2",
+      "boundary": "Standalone stdlib numeric checker primitives are copied with attribution from own public p22_verify.py; no producer/sibling checker imports. Original full cubes, carriers, complete pruning functions and all five inner clamping families are replayed. The imported universal nested bound9007, S5/S6/S7 and unformalized bridges remain explicit.",
+      "distinct_inner_prefixes": 26,
+      "metrics": {
+        "inner_free_assignments": 93184,
+        "inner_gate_evaluations": 652288,
+        "outer_free_assignments": 29696,
+        "outer_gate_evaluations": 950272,
+        "pruning_function_assignments": 3712
+      },
+      "remaining_position_range": [
+        0,
+        20
+      ],
+      "role": "researcher",
+      "selected_domain_occurrences": 232,
+      "status": "SELECTED_NESTED_PARTITION_ALL_NUMERIC_FIELDS_AND_PRUNING_FUNCTIONS_VERIFIED",
+      "upgraded_occurrences": 29,
+      "verified_exclusions": 20
+    },
+    {
+      "agent": "six-sorting-2",
+      "boundary": "Standalone stdlib numeric checker primitives are copied with attribution from own public p22_verify.py; no producer/sibling checker imports. Original full cubes, carriers, complete pruning functions and all five inner clamping families are replayed. The imported universal nested bound9007, S5/S6/S7 and unformalized bridges remain explicit.",
+      "distinct_inner_prefixes": 344,
+      "metrics": {
+        "inner_free_assignments": 1232896,
+        "inner_gate_evaluations": 9099776,
+        "outer_free_assignments": 537984,
+        "outer_gate_evaluations": 17630592,
+        "pruning_function_assignments": 61056
+      },
+      "remaining_position_range": [
+        20,
+        400
+      ],
+      "role": "researcher",
+      "selected_domain_occurrences": 4203,
+      "status": "SELECTED_NESTED_PARTITION_ALL_NUMERIC_FIELDS_AND_PRUNING_FUNCTIONS_VERIFIED",
+      "upgraded_occurrences": 477,
+      "verified_exclusions": 380
+    },
+    {
+      "agent": "six-sorting-2",
+      "boundary": "Standalone stdlib numeric checker primitives are copied with attribution from own public p22_verify.py; no producer/sibling checker imports. Original full cubes, carriers, complete pruning functions and all five inner clamping families are replayed. The imported universal nested bound9007, S5/S6/S7 and unformalized bridges remain explicit.",
+      "distinct_inner_prefixes": 293,
+      "metrics": {
+        "inner_free_assignments": 1050112,
+        "inner_gate_evaluations": 8529920,
+        "outer_free_assignments": 485632,
+        "outer_gate_evaluations": 16509568,
+        "pruning_function_assignments": 49408
+      },
+      "remaining_position_range": [
+        400,
+        765
+      ],
+      "role": "researcher",
+      "selected_domain_occurrences": 3794,
+      "status": "SELECTED_NESTED_PARTITION_ALL_NUMERIC_FIELDS_AND_PRUNING_FUNCTIONS_VERIFIED",
+      "upgraded_occurrences": 386,
+      "verified_exclusions": 365
+    }
+  ],
+  "proof_status": "Complete author proof; same-author algorithmic independence, unformalized, no external review verdict",
+  "resources": {
+    "controls_changed": false,
+    "python": "3.11.2",
+    "runs": [
+      {
+        "final_status": "NATIVE20_COMPLETE_SIZE44_EXCLUSION_VERIFIED",
+        "maximum_child_reported_seconds": 31.410502544953488,
+        "maximum_child_rss_kib": 710868,
+        "mode": "normal"
+      },
+      {
+        "final_status": "NATIVE20_COMPLETE_SIZE44_EXCLUSION_VERIFIED",
+        "maximum_child_reported_seconds": 25.49588397302432,
+        "maximum_child_rss_kib": 711372,
+        "mode": "optimized"
+      }
+    ],
+    "scope_cpu": 1,
+    "scope_memory_gib": 2,
+    "simultaneous_cpu_intensive_jobs": 1,
+    "solver_used": false,
+    "stage_guard_seconds": 55,
+    "threads": 1
+  },
+  "role": "researcher",
+  "source_check_history": "All 17 stage computations passed in normal and optimized modes. The nested root-ID link, outer-domain size and root-length guards were then added, and all three nested partitions were replayed in both modes with the exact final runner validation. An earlier path-adapter syntax failure was corrected before successful checks; no mathematical absence was inferred from it. Final source/dependency hashes and Python syntax were checked separately."
+}
