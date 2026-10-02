@@ -1,0 +1,225 @@
+{
+  "agent": "six-downset-3",
+  "algebra": {
+    "coverage": "Written universal argument; finite algebra is not an all-k sweep",
+    "k3_b": 11,
+    "k3_q4_e": "-1",
+    "k4_margin": "7/775",
+    "positive_cubic_coefficients": [
+      175,
+      269,
+      20,
+      12
+    ],
+    "root_substitution_coefficients": [
+      8,
+      -12,
+      2,
+      7,
+      -6,
+      1
+    ],
+    "root_upper_coefficients": [
+      32,
+      120,
+      8
+    ],
+    "sqrt_difference_coefficients": [
+      13,
+      -16,
+      3
+    ],
+    "strict_square_endpoint": {
+      "B0": "0",
+      "k": 8,
+      "q": 40
+    }
+  },
+  "controls": {
+    "damage_rejections": 12,
+    "rejected": [
+      "k below theorem domain",
+      "boolean k",
+      "q below ground domain",
+      "more deletions than outside vertices",
+      "changed positive-cubic constant",
+      "ceil instead of floor in strict tail",
+      "zero numerator treated as sufficient",
+      "a necessary-test pass asserted sufficient",
+      "changed pinned original table",
+      "constant dual substituted for negative original dual",
+      "reversed lower derivative orientation",
+      "one repair sign reversed"
+    ],
+    "status": "Same-author semantic controls, not external review"
+  },
+  "domain": "Every integer k>=3,q>=max(4,k), every size-k deletion set Z",
+  "endpoint_calibrations_only": [
+    {
+      "b": 11,
+      "corridor": [
+        6,
+        11
+      ],
+      "k": 3,
+      "tail_begins": 12
+    },
+    {
+      "b": 17,
+      "corridor": [
+        12,
+        17
+      ],
+      "k": 4,
+      "tail_begins": 18
+    },
+    {
+      "b": 23,
+      "corridor": [
+        18,
+        23
+      ],
+      "k": 5,
+      "tail_begins": 24
+    },
+    {
+      "b": 28,
+      "corridor": [
+        23,
+        28
+      ],
+      "k": 6,
+      "tail_begins": 29
+    },
+    {
+      "b": 40,
+      "corridor": [
+        35,
+        40
+      ],
+      "k": 8,
+      "tail_begins": 41
+    },
+    {
+      "b": 62,
+      "corridor": [
+        57,
+        62
+      ],
+      "k": 12,
+      "tail_begins": 63
+    },
+    {
+      "b": 356,
+      "corridor": [
+        351,
+        356
+      ],
+      "k": 64,
+      "tail_begins": 357
+    }
+  ],
+  "maximum_threshold_corridor_width": 6,
+  "original_baseline": {
+    "C_gram": [
+      [
+        "48",
+        "-72/5",
+        "-87/5",
+        "60"
+      ],
+      [
+        "-72/5",
+        "48",
+        "-6",
+        "-60"
+      ],
+      [
+        "-87/5",
+        "-6",
+        "34",
+        "-40"
+      ],
+      [
+        "60",
+        "-60",
+        "-40",
+        "292"
+      ]
+    ],
+    "Delta_gram": [
+      [
+        "78/5",
+        "3/20",
+        "1/10",
+        "1"
+      ],
+      [
+        "3/20",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1/10",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "N": 50,
+    "U_gram": [
+      [
+        "1",
+        "87/5",
+        "97/5",
+        "-40"
+      ],
+      [
+        "87/5",
+        "93",
+        "0",
+        "0"
+      ],
+      [
+        "97/5",
+        "0",
+        "62",
+        "0"
+      ],
+      [
+        "-40",
+        "0",
+        "0",
+        "308"
+      ]
+    ],
+    "actual_matrix_digest": "031fdf74d34c71be729b4e9f09a6c6294f5085e4f4181d1fb384f0bd97707590",
+    "all_actual_gram_entries_match": true,
+    "complete_original_family_match": true,
+    "k": 3,
+    "lower_Delta": "159/10",
+    "nonempty_order": 49,
+    "original_input_positions": 9604,
+    "q": 5,
+    "s": 19,
+    "status": "Credited original baseline, not a new finite classification",
+    "upper_Delta": "939346/59675",
+    "upper_R": "0",
+    "upper_U0": "-322737/23870"
+  },
+  "parameter_coverage": "All real kappa,t for the specified ansatz obstruction",
+  "pin_source_commit": "41a580c695e0b0d38858af543a8fabcf880631ae",
+  "pins": {
+    "small-deletion-boundary/literal.py": "46218af58a0654279231ade1bc40106d9eb390b6c0b2ceee5f3c4c5b7bedbf39"
+  },
+  "proof_boundary": "Written ordinary universal inequality;9434 necessity and9195 tail imported; no formalization or review transfer",
+  "record_sha256": "61c34ae3b240efa9e1d52bcd3d2e5a4beeae92ccc912e1aff73648e14ebf8371",
+  "role": "researcher"
+}
