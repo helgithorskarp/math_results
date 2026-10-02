@@ -1,0 +1,240 @@
+{
+  "agent": "six-code-2",
+  "evidence_files": {
+    "construct/CONSTRUCTIONS.json": {
+      "bytes": 4155,
+      "sha256": "f20b8c4649fef4854d48d723d204b85c483627d486586b29ff377a2449864445"
+    },
+    "cover/COVER.json": {
+      "bytes": 16161,
+      "sha256": "51dc81afc8f7ae5719350458131af6b3f309807227ed59677cc34c1d9af63e4d"
+    },
+    "equality/COMPLETIONS68.json": {
+      "bytes": 18446,
+      "sha256": "f09ab995cfb392173e742b0b9f7cf6bb36693c650c419d2a7a0cf3c2f1654fdf"
+    },
+    "equality/COUNT_CERTIFICATE.json": {
+      "bytes": 47696,
+      "sha256": "c30ced978ba85aaf5bac74b0e0b626613ea314eb38ddaa8a7d0d877cc90c5f68"
+    },
+    "equality/GRAPH.json": {
+      "bytes": 11217,
+      "sha256": "cb5a6e63b6dcf71f91f869a9cd7c91d2067d471fb5cfb640ee9ae46099f3e148"
+    },
+    "model/BASELINE68.json": {
+      "bytes": 441,
+      "sha256": "8046c3c545478d15d2ab064f09d1269d6434f127033d609088b4c7672ea6f10c"
+    },
+    "model/ORBIT_MODEL.json": {
+      "bytes": 104795,
+      "sha256": "69001d299854fb599b7a6446dd4410e8fd7355bdf498e2ed894fcdd911404500"
+    },
+    "root-audit/ACTUAL_ROOTS.json": {
+      "bytes": 11648,
+      "sha256": "b45f3a522822b298f37cb2feb110398257a5843860b7e74eb010bab8c5e6f8cc"
+    },
+    "roots/ROOTS.json": {
+      "bytes": 20778,
+      "sha256": "7185db69b486044485aa101f60367e77e7bda446d6afd229d85e27e93bb0c872"
+    },
+    "roots/ROOT_ORBITS.json": {
+      "bytes": 20966,
+      "sha256": "5b5b067416597010bcf1e7e77bff2ce3fd467b9ee745d77e94bda0affad32a16"
+    },
+    "saturation/ALL_CODES.json": {
+      "bytes": 2396314,
+      "sha256": "48468604ed3b62c48bd80bde4a3b28cb168156d99b1a9d3e82c9d79e76271b49"
+    },
+    "saturation/CLASSIFICATION.json": {
+      "bytes": 5086,
+      "sha256": "48b15d19ba6bed8187b402218a9c8b4b0472c35d85516b29519dcc76c3ab752d"
+    }
+  },
+  "exact_result_sha256": "17c7bc785e77b32adbfc2e6a3e80e92ff2cec7039814a2a51a1c9eb2ddfe88f4",
+  "expected_exact_result": {
+    "agent": "six-code-2",
+    "all_labelled_saturated_fixed_point_codes": 5850,
+    "all_rooted20_stars": 100,
+    "centralizer_class_sizes": [
+      900,
+      900,
+      900,
+      900,
+      150,
+      900,
+      300,
+      900
+    ],
+    "centralizer_classes": 8,
+    "counting_certificate_nodes": 255,
+    "degree_profile_histogram": [
+      [
+        [
+          0,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        150
+      ],
+      [
+        [
+          5,
+          15,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        1200
+      ],
+      [
+        [
+          5,
+          19,
+          19,
+          19,
+          19,
+          19,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        3600
+      ],
+      [
+        [
+          10,
+          10,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        900
+      ]
+    ],
+    "normalized68_completions": 32,
+    "role": "researcher",
+    "root_zero_labelled_codes": 3200,
+    "saturated_fixed_point_histogram": [
+      [
+        1,
+        2100
+      ],
+      [
+        2,
+        3750
+      ]
+    ],
+    "scope": "Exact68 codes invariant under the specified C5 action and with at least one fixed point of degree20. Centralizer classes only; no unsaturated-fixed-point or arbitrary point-isomorphism classification.",
+    "semantic_damage_counts": [
+      5,
+      10,
+      6
+    ],
+    "solver_used_or_trusted": false,
+    "status": "COMPLETE_EXACT_COLD_REPRODUCTION_AND_AUDIT"
+  },
+  "generated_full_inventory_policy": "ALL_CODES.json is generated locally and excluded from publication.",
+  "proof_status": "Author-complete exact finite certificate and separately written auditors; ordinary coverage/counting/group/replacement arguments unformalized; independent review pending.",
+  "role": "researcher",
+  "source_files": {
+    "INSTANCE.json": {
+      "bytes": 662,
+      "sha256": "6f6cbf049c6c53d92dd29fae720b090b937836d531c8dbfa862ba7b37c2bcbcc"
+    },
+    "construct.py": {
+      "bytes": 4087,
+      "sha256": "9786e2c56c5520d2b7567118724bc0f7555d7a9ae1e14c0a17c0c54ce93d6482"
+    },
+    "cover.py": {
+      "bytes": 4188,
+      "sha256": "9d8e597515e85ee695b27b61d02f7d26fd82fdb8df130e967ac54d1a48438925"
+    },
+    "equality.py": {
+      "bytes": 7242,
+      "sha256": "45e83e6a7ec8a59a29b26a1d3854cfe173fe1c149b45b7d9c6b153c8bc92ca49"
+    },
+    "equality_audit.py": {
+      "bytes": 10750,
+      "sha256": "48c36adedf9644cd0a57b5f80becd4933d79c805a3b27fd80e1780b312d85460"
+    },
+    "generate.py": {
+      "bytes": 5436,
+      "sha256": "402758344eb9d36ad7d3b4115d01c75cce1ac3b1afae5ea6ed2db997509d93ac"
+    },
+    "physical.py": {
+      "bytes": 2554,
+      "sha256": "75896e6fa1b74bc18f3280783e2ce61bd2dfba626c6385d386cb182804d33de5"
+    },
+    "reproduce.py": {
+      "bytes": 6016,
+      "sha256": "6d86cc7b225b760f92ab8f81e8b45e1a46d9e9bfde91be7e9ad48d6da609e354"
+    },
+    "root_audit.py": {
+      "bytes": 7067,
+      "sha256": "a42648f7eee001f735cb7cbfdcbddd4ab8c8272a4521da62583a082f4a147f27"
+    },
+    "roots.py": {
+      "bytes": 7034,
+      "sha256": "42b38faae4542e7ebe49c69be2ced8f62c12fa4f395eb2e3f4c5a20d6c998b98"
+    },
+    "saturation.py": {
+      "bytes": 6285,
+      "sha256": "c9e0340f8c6516fcb3054aabbde967b87034de95d9df57358ba2a6e9790ef037"
+    },
+    "saturation_audit.py": {
+      "bytes": 9457,
+      "sha256": "0221aee69b3dfa6eedf14fc630a617fadade0267e9c967aa84019e12627d1b36"
+    }
+  },
+  "status": "FROZEN_BEFORE_COLD_REPRODUCTION"
+}
