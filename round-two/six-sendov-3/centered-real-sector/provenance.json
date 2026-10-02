@@ -1,0 +1,76 @@
+{
+  "agent": "six-sendov-3",
+  "branch_premise": {
+    "artifact_ref": "bafkreie2x4vb54jbygq7gdf7vxntw3gpkvkcugilrw5yvumrdpnq32jrx4",
+    "height": 9113,
+    "source_commit": "7bb2d1b6cf6cb3b370ad10023bee018128a1b81f",
+    "status": "author-checked; independently unreviewed at current intake"
+  },
+  "canonical_record_sha256": "52c030292234fb15f1eea3c224e073942237bcffe06f00961e8d60e3dfaed9d2",
+  "coordinate_map": "p_prime=9 product(z-eta*u_j)[(z-eta*y)^2+eta*T]; five active phase/radial/distance equations solve y,T,xi3,xi4,omega",
+  "cube_radius": "1/1024",
+  "eta_max": "1/65536",
+  "family": "stronger degree-nine first-power and stability",
+  "fixture_file_sha256": "27a257ee267ae162f9ce1c4f6382dd44c03aa85e7c3d2b698c754cabca3631b6",
+  "input_helpers": {
+    "arithmetic.py": {
+      "sha256": "c7c0f69af1fb50e16322f7a40df00b2897a8b6511ee79da05780922d29d23322",
+      "source_commit": "7bb2d1b6cf6cb3b370ad10023bee018128a1b81f",
+      "usage": "unchanged copied exact helper"
+    },
+    "audit.py": {
+      "sha256": "7f37160b90e146edfb6b7f74bb4bb6f397534f53ded204b4e1c1ff400a4054ad",
+      "source_commit": "7bb2d1b6cf6cb3b370ad10023bee018128a1b81f",
+      "usage": "copied helper extended as described in PROOF.md"
+    },
+    "initial.py": {
+      "sha256": "7b335002c85dc3f357f40e9a3661b591ea86df826ee968bb06c2c63f2a57e2bc",
+      "source_commit": "7bb2d1b6cf6cb3b370ad10023bee018128a1b81f",
+      "usage": "unchanged copied exact helper"
+    },
+    "interval.py": {
+      "sha256": "27d2586c735e569784812ff12fdd0d23a75a7e4f621e6ee11ad5eec3e3ffe7c4",
+      "source_commit": "7bb2d1b6cf6cb3b370ad10023bee018128a1b81f",
+      "usage": "copied helper extended as described in PROOF.md"
+    },
+    "reference.py": {
+      "sha256": "161e591da45c2c9aea8b2c4c1602192ee4285c9113f89d372601bee640122727",
+      "source_commit": "7bb2d1b6cf6cb3b370ad10023bee018128a1b81f",
+      "usage": "copied helper extended as described in PROOF.md"
+    },
+    "series.py": {
+      "sha256": "bd77a493ab67b83f4db2ec6a87213e1b54adf881dfb0eedb59eb48c07c600c86",
+      "source_commit": "7bb2d1b6cf6cb3b370ad10023bee018128a1b81f",
+      "usage": "unchanged copied exact helper"
+    },
+    "system.py": {
+      "sha256": "f52de2560f82a39bf33525450985f2aea99bfdbb19bf2ed8019bf69c40a7af50",
+      "source_commit": "7bb2d1b6cf6cb3b370ad10023bee018128a1b81f",
+      "usage": "unchanged copied exact helper"
+    }
+  },
+  "metric": "literal Euclidean norm squared sum_j(u_j-x)^2 on six labelled real parameters",
+  "precision_bits": 192,
+  "primary_source": "https://arxiv.org/html/2609.19126",
+  "prior_curvature": {
+    "height": 9033,
+    "review_height": 9080,
+    "review_source_commit": "215d6ae7843624382f0784e3e4b836339885e4a3",
+    "scope": "exact ell and asymptotic centered-real sector retain prior credit; review does not apply to this finite interval",
+    "source_commit": "f6e5848da01148e65c9be0ec8a8b003d14d503d8"
+  },
+  "proof_status": "ordinary analytic proof with exact interval certificate; unformalized and independently unreviewed",
+  "role": "researcher",
+  "runtime": {
+    "concurrent_mathematical_jobs": 1,
+    "external_fixture_rejections": 6,
+    "native_threads": 1,
+    "normal_seconds": 5.682184019999113,
+    "optimized_seconds": 5.7213419820182025,
+    "peak_child_rss_kib": 21464,
+    "per_job_guard_seconds": 45,
+    "python": "3.11.2"
+  },
+  "scope": "six real normalized small critical positions; pointwise Hessian and local Euclidean stability supremum on eta(0,1/65536]; displacement radius existential",
+  "subdivision": "one whole rectangle, no subdivision"
+}
