@@ -1,0 +1,146 @@
+{
+  "CPU_intensive_jobs_at_once": 1,
+  "CPU_scope": 1,
+  "actual_agent": "six-tammes-1",
+  "all14_runs_completed": true,
+  "initial_audit_diagnostic": "Admission totals matched but selector digest differed; same-vertex pairs were removed from cycle-neighbor mask choices and guarded against in bit(); all final admission/selector digests now agree. Primary decisions unchanged.",
+  "max_RSS_KiB": 22300,
+  "max_seconds": 18.658502922975458,
+  "memory_scope_GiB": 2,
+  "native_threads": 1,
+  "partitions": "three disjoint exact cases, all required; sequential children",
+  "per_child_timeout_seconds": 55,
+  "python": "3.12.14",
+  "role": "researcher",
+  "runs": [
+    {
+      "command": "python check.py --part noncontact",
+      "exit_code": 0,
+      "optimize": 0,
+      "output_bytes": 2350,
+      "output_sha256": "8f275eddb88b1f7afdcec05f382cb47a482b727fde899639a13967032602b95b",
+      "peak_RSS_KiB": 17776,
+      "seconds": 14.28332795202732
+    },
+    {
+      "command": "python check.py --part contact-separated",
+      "exit_code": 0,
+      "optimize": 0,
+      "output_bytes": 1884,
+      "output_sha256": "150b4218177de02e97829583feeadc995749478f380e2fed7d020922d9c71627",
+      "peak_RSS_KiB": 17240,
+      "seconds": 16.283967824012507
+    },
+    {
+      "command": "python check.py --part contact-adjacent",
+      "exit_code": 0,
+      "optimize": 0,
+      "output_bytes": 2168,
+      "output_sha256": "1b8369ddca41a8598d8d5fcaf50baf9a484b68eab47e3a4e6641b991b2aa3a26",
+      "peak_RSS_KiB": 17620,
+      "seconds": 9.958970690029673
+    },
+    {
+      "command": "python audit.py --part noncontact",
+      "exit_code": 0,
+      "optimize": 0,
+      "output_bytes": 2350,
+      "output_sha256": "8f275eddb88b1f7afdcec05f382cb47a482b727fde899639a13967032602b95b",
+      "peak_RSS_KiB": 18380,
+      "seconds": 12.386973943037447
+    },
+    {
+      "command": "python audit.py --part contact-separated",
+      "exit_code": 0,
+      "optimize": 0,
+      "output_bytes": 1884,
+      "output_sha256": "150b4218177de02e97829583feeadc995749478f380e2fed7d020922d9c71627",
+      "peak_RSS_KiB": 17980,
+      "seconds": 18.36998035601573
+    },
+    {
+      "command": "python audit.py --part contact-adjacent",
+      "exit_code": 0,
+      "optimize": 0,
+      "output_bytes": 2168,
+      "output_sha256": "1b8369ddca41a8598d8d5fcaf50baf9a484b68eab47e3a4e6641b991b2aa3a26",
+      "peak_RSS_KiB": 17916,
+      "seconds": 10.932835152023472
+    },
+    {
+      "command": "python controls.py",
+      "exit_code": 0,
+      "optimize": 0,
+      "output_bytes": 1392,
+      "output_sha256": "8edbc1c56e75abe9479330912d0db6c362031da2684802698285583ee5c80e22",
+      "peak_RSS_KiB": 15860,
+      "seconds": 0.09024993801722303
+    },
+    {
+      "command": "python -O check.py --part noncontact",
+      "exit_code": 0,
+      "optimize": 1,
+      "output_bytes": 2350,
+      "output_sha256": "8f275eddb88b1f7afdcec05f382cb47a482b727fde899639a13967032602b95b",
+      "peak_RSS_KiB": 22300,
+      "seconds": 16.091362148988992
+    },
+    {
+      "command": "python -O check.py --part contact-separated",
+      "exit_code": 0,
+      "optimize": 1,
+      "output_bytes": 1884,
+      "output_sha256": "150b4218177de02e97829583feeadc995749478f380e2fed7d020922d9c71627",
+      "peak_RSS_KiB": 21976,
+      "seconds": 16.639266289013904
+    },
+    {
+      "command": "python -O check.py --part contact-adjacent",
+      "exit_code": 0,
+      "optimize": 1,
+      "output_bytes": 2168,
+      "output_sha256": "1b8369ddca41a8598d8d5fcaf50baf9a484b68eab47e3a4e6641b991b2aa3a26",
+      "peak_RSS_KiB": 21988,
+      "seconds": 10.148300444998313
+    },
+    {
+      "command": "python -O audit.py --part noncontact",
+      "exit_code": 0,
+      "optimize": 1,
+      "output_bytes": 2350,
+      "output_sha256": "8f275eddb88b1f7afdcec05f382cb47a482b727fde899639a13967032602b95b",
+      "peak_RSS_KiB": 22260,
+      "seconds": 11.11052716197446
+    },
+    {
+      "command": "python -O audit.py --part contact-separated",
+      "exit_code": 0,
+      "optimize": 1,
+      "output_bytes": 1884,
+      "output_sha256": "150b4218177de02e97829583feeadc995749478f380e2fed7d020922d9c71627",
+      "peak_RSS_KiB": 22268,
+      "seconds": 18.658502922975458
+    },
+    {
+      "command": "python -O audit.py --part contact-adjacent",
+      "exit_code": 0,
+      "optimize": 1,
+      "output_bytes": 2168,
+      "output_sha256": "1b8369ddca41a8598d8d5fcaf50baf9a484b68eab47e3a4e6641b991b2aa3a26",
+      "peak_RSS_KiB": 22252,
+      "seconds": 11.015154020977207
+    },
+    {
+      "command": "python -O controls.py",
+      "exit_code": 0,
+      "optimize": 1,
+      "output_bytes": 1392,
+      "output_sha256": "8edbc1c56e75abe9479330912d0db6c362031da2684802698285583ee5c80e22",
+      "peak_RSS_KiB": 21048,
+      "seconds": 0.30226460797712207
+    }
+  ],
+  "same_author_audit_not_independent_researcher_review": true,
+  "stdlib_only": true,
+  "trust_boundary": "written geometric premises and complete original-role/case cover, CPython implementation, cryptographic comparison; no formalization or independent new-row review"
+}
