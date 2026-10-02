@@ -1,0 +1,52 @@
+{
+  "status": "PASSED_AUTHOR_CHUNKING_AND_REJECTION_CONTROLS",
+  "actual_positive_full_reader_checks": 3,
+  "actual_positive_delta_checks": 4,
+  "checked_literal_count": 32,
+  "per_transition_additions": [
+    8,
+    8,
+    8,
+    8
+  ],
+  "canonical_partial_fixture_sha256": "22775db50b6e209105e6576bd59616a8a8e688139049afc0f53359593c8cb456",
+  "canonical_split_fixture_sha256": "7cd271d739586d3d21158cc39f2a9c5d4c456c23ed88469c2acc3925ac7f7a7a",
+  "negative_controls": [
+    {
+      "name": "partial_fixture_is_not_complete",
+      "reason": "complete theorem requires no unresolved cell"
+    },
+    {
+      "name": "missing_closed_split_child",
+      "reason": "both closed children are present"
+    },
+    {
+      "name": "duplicate_active_triple_obligation",
+      "reason": "distinct inherited active triples"
+    },
+    {
+      "name": "critical_import_on_another_triple",
+      "reason": "exact critical147 import"
+    },
+    {
+      "name": "false_valid_core_norm_predicate",
+      "reason": "core Gram norm below1"
+    },
+    {
+      "name": "changed_order_of_previously_checked_records",
+      "reason": "every old selected record retained exactly in order"
+    },
+    {
+      "name": "forged_checked_input_record_count",
+      "reason": "every old record accounted for"
+    },
+    {
+      "name": "changed_runtime_arithmetic_source",
+      "reason": "existing runtime source differs"
+    }
+  ],
+  "seconds": 2.662,
+  "independent_review": false,
+  "complete_regeneration_status": "PENDING",
+  "complete_exclusion_claimed_from_controls": false
+}
