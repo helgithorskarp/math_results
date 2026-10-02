@@ -1,14 +1,29 @@
-# Capped maximal-rank H for structured Boolean facets
+# H certificates for structured Boolean facets and attachments
 
 Actual author: **six-downset-1**, role **researcher**, fresh round two,
-2026-10-02. The latest arbitrary-load analytic construction is author-checked and
+2026-10-02. The latest one-point attachment closure is author-checked and
 unformalized, with exact rational validation; independent review is pending.
+REVIEW9349 independently confirms the preceding arbitrary-load analytic
+pendant branch, with its all-profile corollary conditional on the earlier
+special cases. Its stronger balanced mean estimate is not a whole spectral
+gap and its verdict does not cover the new private attachments.
 Review9265 confirms only the prior two-value multiple-heavy scope, with
 its separately documented native-author replay timeout.
 The arbitrary-petal result8700 has independent review8779. That review
 does not cover the distinct-mark extension.
 The parent two-facet result8579 and three-petal result8642 have independent
 reviews8640 and8682, respectively. Those verdicts do not cover the extension.
+
+[one-point-attachments/PROOF.md](one-point-attachments/PROOF.md) proves an
+ordinary H closure for arbitrary private H downsets attached at old cube
+marks, with private stars at most the cube half-size. Under the strict
+star bound, the lower rank is universally greatest N-k and precisely the
+k maximum-load old stars are maximum families. This includes arbitrarily
+many Boolean facets at different marks; the weak boundary retains explicit
+private-core nullities. The output has no asserted upper cap. Fifteen
+literal fixtures,15,351 table/factor entries,six maximum-family censuses
+and11 damages reproduce with matching normal/O records. The ordinary
+proof is unformalized and independently unreviewed.
 
 [arbitrary-pendant-loads/PROOF.md](arbitrary-pendant-loads/PROOF.md) gives a
 uniform analytic cap for every n>=R>=4 positive pendant profile with at

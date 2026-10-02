@@ -1,0 +1,777 @@
+{
+  "agent": "six-downset-1",
+  "role": "researcher",
+  "status": "finite exact validation of ordinary closure; uniformity rests on the written proof",
+  "fixtures": [
+    {
+      "N": 8,
+      "s": 3,
+      "lower_rank": 6,
+      "matrix_sha256": "3f35c02a6fb942b820c37893d22d31e078f4776228286e3afad586931edfb4cb",
+      "actual_empty_loop": "2/5",
+      "n": 2,
+      "q": 2,
+      "loads": [
+        1,
+        1
+      ],
+      "k": 2,
+      "strict": true,
+      "equality_input_nullity": 0,
+      "core_rank": 5,
+      "inputs": [
+        {
+          "mark": 0,
+          "kind": "cube",
+          "parameter": 1,
+          "N": 2,
+          "s": 1,
+          "core_rank": 0,
+          "core_sha256": "aa6885079e7ed8ca6ff962f5c1f6d44f5dd0ba9e476e9158ae65d99a02203c3b"
+        },
+        {
+          "mark": 1,
+          "kind": "cube",
+          "parameter": 1,
+          "N": 2,
+          "s": 1,
+          "core_rank": 0,
+          "core_sha256": "aa6885079e7ed8ca6ff962f5c1f6d44f5dd0ba9e476e9158ae65d99a02203c3b"
+        }
+      ],
+      "core_sha256": "b99bc55dbc5fe78ce39eda72e340e1796b4ea19749a1983d2900aaf3650dd3f3",
+      "ordered_core_positions": 49,
+      "actual_empty_energy": "4",
+      "label": "rank-two baseline",
+      "elapsed_seconds": 0.0036031230119988322
+    },
+    {
+      "N": 20,
+      "s": 9,
+      "lower_rank": 19,
+      "matrix_sha256": "456be50177ce381b9b7f53b0c2fb7b8e6fab63dc5ec4df95f2becb934171f198",
+      "actual_empty_loop": "173/11",
+      "n": 2,
+      "q": 2,
+      "loads": [
+        7,
+        1
+      ],
+      "k": 1,
+      "strict": true,
+      "equality_input_nullity": 0,
+      "core_rank": 18,
+      "inputs": [
+        {
+          "mark": 0,
+          "kind": "singletons",
+          "parameter": 7,
+          "N": 8,
+          "s": 1,
+          "core_rank": 0,
+          "core_sha256": "88303f4eb2c5c44f685b9bb97f7166aeb4912039537261728e3a59b8d435a900"
+        },
+        {
+          "mark": 1,
+          "kind": "cube",
+          "parameter": 1,
+          "N": 2,
+          "s": 1,
+          "core_rank": 0,
+          "core_sha256": "aa6885079e7ed8ca6ff962f5c1f6d44f5dd0ba9e476e9158ae65d99a02203c3b"
+        }
+      ],
+      "core_sha256": "30aea237d6591b2c1b1a2fefaebd46aaff060cf1ae1151c2ace9b717e9ed917c",
+      "ordered_core_positions": 361,
+      "actual_empty_energy": "181",
+      "label": "private size exceeds q, star strict",
+      "elapsed_seconds": 0.02574859099695459
+    },
+    {
+      "N": 16,
+      "s": 7,
+      "lower_rank": 15,
+      "matrix_sha256": "e174b8aec2a43f7a7051ce88e574a2b6b63c738d4491a739547acc9bf3329bd0",
+      "actual_empty_loop": "7/3",
+      "n": 3,
+      "q": 4,
+      "loads": [
+        3,
+        1,
+        0
+      ],
+      "k": 1,
+      "strict": true,
+      "equality_input_nullity": 0,
+      "core_rank": 14,
+      "inputs": [
+        {
+          "mark": 0,
+          "kind": "cube",
+          "parameter": 2,
+          "N": 4,
+          "s": 2,
+          "core_rank": 1,
+          "core_sha256": "0d63cfdf7f829b0af95efb2f234e2480706677b6324cb1a620afa29b03db9ca3"
+        },
+        {
+          "mark": 1,
+          "kind": "cube",
+          "parameter": 1,
+          "N": 2,
+          "s": 1,
+          "core_rank": 0,
+          "core_sha256": "aa6885079e7ed8ca6ff962f5c1f6d44f5dd0ba9e476e9158ae65d99a02203c3b"
+        }
+      ],
+      "core_sha256": "10a153af53221ec5f96863171c802ba33fd3fc5b5b3621caa90fb4a01ccaa450",
+      "ordered_core_positions": 225,
+      "actual_empty_energy": "27",
+      "label": "mixed triangle and other-mark pendant",
+      "relabeling_positions": 256,
+      "elapsed_seconds": 0.03505739400861785
+    },
+    {
+      "N": 20,
+      "s": 7,
+      "lower_rank": 18,
+      "matrix_sha256": "0cd5900f4fa3cfe24f8182efba8ee9f3764683e94537aa4c4e10094b2d77a2cd",
+      "actual_empty_loop": "23/13",
+      "n": 3,
+      "q": 4,
+      "loads": [
+        3,
+        3,
+        0
+      ],
+      "k": 2,
+      "strict": true,
+      "equality_input_nullity": 0,
+      "core_rank": 17,
+      "inputs": [
+        {
+          "mark": 0,
+          "kind": "cube",
+          "parameter": 2,
+          "N": 4,
+          "s": 2,
+          "core_rank": 1,
+          "core_sha256": "0d63cfdf7f829b0af95efb2f234e2480706677b6324cb1a620afa29b03db9ca3"
+        },
+        {
+          "mark": 1,
+          "kind": "cube",
+          "parameter": 2,
+          "N": 4,
+          "s": 2,
+          "core_rank": 1,
+          "core_sha256": "0d63cfdf7f829b0af95efb2f234e2480706677b6324cb1a620afa29b03db9ca3"
+        }
+      ],
+      "core_sha256": "591fd0e61ee828094b81c0eec6aa59e21bdf66b7f2022b472571e17fdeaec0fa",
+      "ordered_core_positions": 361,
+      "actual_empty_energy": "29",
+      "label": "two distinct triangle facets",
+      "elapsed_seconds": 0.028660840005613863
+    },
+    {
+      "N": 22,
+      "s": 10,
+      "lower_rank": 21,
+      "matrix_sha256": "8c0b492f1a9632c7a58582c22cb285dccacf8d6a15fac3d66b98606999ab07cc",
+      "actual_empty_loop": "16/3",
+      "n": 3,
+      "q": 4,
+      "loads": [
+        6,
+        0,
+        1
+      ],
+      "k": 1,
+      "strict": true,
+      "equality_input_nullity": 0,
+      "core_rank": 20,
+      "inputs": [
+        {
+          "mark": 0,
+          "kind": "cube",
+          "parameter": 2,
+          "N": 4,
+          "s": 2,
+          "core_rank": 1,
+          "core_sha256": "0d63cfdf7f829b0af95efb2f234e2480706677b6324cb1a620afa29b03db9ca3"
+        },
+        {
+          "mark": 0,
+          "kind": "cube",
+          "parameter": 2,
+          "N": 4,
+          "s": 2,
+          "core_rank": 1,
+          "core_sha256": "0d63cfdf7f829b0af95efb2f234e2480706677b6324cb1a620afa29b03db9ca3"
+        },
+        {
+          "mark": 2,
+          "kind": "cube",
+          "parameter": 1,
+          "N": 2,
+          "s": 1,
+          "core_rank": 0,
+          "core_sha256": "aa6885079e7ed8ca6ff962f5c1f6d44f5dd0ba9e476e9158ae65d99a02203c3b"
+        }
+      ],
+      "core_sha256": "2a20991fe36d3b79b5e88b64d6a84368a7a4aa78d12f1016d322f8a8e5ecfc23",
+      "ordered_core_positions": 441,
+      "actual_empty_energy": "73",
+      "label": "same-mark repeated facets and other mark",
+      "elapsed_seconds": 0.03764250397216529
+    },
+    {
+      "N": 28,
+      "s": 10,
+      "lower_rank": 27,
+      "matrix_sha256": "76a125b8b442268173f23c90a8ff9862c353b1f9cf866e091655587571af4b45",
+      "actual_empty_loop": "9/2",
+      "n": 3,
+      "q": 4,
+      "loads": [
+        6,
+        3,
+        1
+      ],
+      "k": 1,
+      "strict": true,
+      "equality_input_nullity": 0,
+      "core_rank": 26,
+      "inputs": [
+        {
+          "mark": 0,
+          "kind": "uniform_rank_two",
+          "parameter": 3,
+          "N": 7,
+          "s": 3,
+          "core_rank": 2,
+          "core_sha256": "c177b0becf56c98b0c5e34ff77914328b49b671e49b94c54a7949a51a41cefb3"
+        },
+        {
+          "mark": 1,
+          "kind": "cube",
+          "parameter": 2,
+          "N": 4,
+          "s": 2,
+          "core_rank": 1,
+          "core_sha256": "0d63cfdf7f829b0af95efb2f234e2480706677b6324cb1a620afa29b03db9ca3"
+        },
+        {
+          "mark": 2,
+          "kind": "cube",
+          "parameter": 1,
+          "N": 2,
+          "s": 1,
+          "core_rank": 0,
+          "core_sha256": "aa6885079e7ed8ca6ff962f5c1f6d44f5dd0ba9e476e9158ae65d99a02203c3b"
+        }
+      ],
+      "core_sha256": "6aa75ad74515db1894d8bb3ce39c1524db109ccc486e20e83141fa2b7ca11f0f",
+      "ordered_core_positions": 729,
+      "actual_empty_energy": "90",
+      "label": "private uniform rank-two input",
+      "elapsed_seconds": 0.06690917699597776
+    },
+    {
+      "N": 22,
+      "s": 7,
+      "lower_rank": 20,
+      "matrix_sha256": "1173601a81f1a38486c03d157fa57ae87f841b4c1b3eb71d66965dc57c04dca8",
+      "actual_empty_loop": "13/6",
+      "n": 3,
+      "q": 4,
+      "loads": [
+        3,
+        3,
+        1
+      ],
+      "k": 2,
+      "strict": true,
+      "equality_input_nullity": 0,
+      "core_rank": 19,
+      "inputs": [
+        {
+          "mark": 0,
+          "kind": "cube",
+          "parameter": 2,
+          "N": 4,
+          "s": 2,
+          "core_rank": 1,
+          "core_sha256": "0d63cfdf7f829b0af95efb2f234e2480706677b6324cb1a620afa29b03db9ca3"
+        },
+        {
+          "mark": 1,
+          "kind": "cube",
+          "parameter": 2,
+          "N": 4,
+          "s": 2,
+          "core_rank": 1,
+          "core_sha256": "0d63cfdf7f829b0af95efb2f234e2480706677b6324cb1a620afa29b03db9ca3"
+        },
+        {
+          "mark": 2,
+          "kind": "cube",
+          "parameter": 1,
+          "N": 2,
+          "s": 1,
+          "core_rank": 0,
+          "core_sha256": "aa6885079e7ed8ca6ff962f5c1f6d44f5dd0ba9e476e9158ae65d99a02203c3b"
+        }
+      ],
+      "core_sha256": "114fa7cbebffada22e984251d43d5d253c2b2bb96eeab8a5a2f9e69acf3acf16",
+      "ordered_core_positions": 441,
+      "actual_empty_energy": "77/2",
+      "label": "two maximum-load marks with private edges",
+      "elapsed_seconds": 0.03810837701894343
+    },
+    {
+      "N": 50,
+      "s": 18,
+      "lower_rank": 49,
+      "matrix_sha256": "df98ee8ac2e48dd10473e30f1c88073276d75ddcc41e948020117afa64190824",
+      "actual_empty_loop": "427/64",
+      "n": 4,
+      "q": 8,
+      "loads": [
+        10,
+        0,
+        0,
+        7
+      ],
+      "k": 1,
+      "strict": true,
+      "equality_input_nullity": 0,
+      "core_rank": 48,
+      "inputs": [
+        {
+          "mark": 0,
+          "kind": "uniform_rank_two",
+          "parameter": 4,
+          "N": 11,
+          "s": 4,
+          "core_rank": 5,
+          "core_sha256": "32896bc65e580cbe7cad906de59bcb55f59225c1a0c0ccd6361e5b9e23992518"
+        },
+        {
+          "mark": 3,
+          "kind": "cube",
+          "parameter": 3,
+          "N": 8,
+          "s": 4,
+          "core_rank": 3,
+          "core_sha256": "e4cc4b518761d8e57be655c30949ed7d56c5a55901f6633656f2c695c4e743ec"
+        }
+      ],
+      "core_sha256": "d55fbde5108bf796f8d0af8655a892b8828ef6399222615c0ad3f4055eea0e4a",
+      "ordered_core_positions": 2401,
+      "actual_empty_energy": "461/2",
+      "label": "large private star below q",
+      "elapsed_seconds": 0.34755571302957833
+    },
+    {
+      "N": 32,
+      "s": 11,
+      "lower_rank": 30,
+      "matrix_sha256": "cd5bb4d21404424c9841be2c1508a37aedb33c2db3fe915b35b22fd3c83afd6d",
+      "actual_empty_loop": "97/21",
+      "n": 4,
+      "q": 8,
+      "loads": [
+        3,
+        3,
+        1,
+        1
+      ],
+      "k": 2,
+      "strict": true,
+      "equality_input_nullity": 0,
+      "core_rank": 29,
+      "inputs": [
+        {
+          "mark": 0,
+          "kind": "cube",
+          "parameter": 2,
+          "N": 4,
+          "s": 2,
+          "core_rank": 1,
+          "core_sha256": "0d63cfdf7f829b0af95efb2f234e2480706677b6324cb1a620afa29b03db9ca3"
+        },
+        {
+          "mark": 1,
+          "kind": "cube",
+          "parameter": 2,
+          "N": 4,
+          "s": 2,
+          "core_rank": 1,
+          "core_sha256": "0d63cfdf7f829b0af95efb2f234e2480706677b6324cb1a620afa29b03db9ca3"
+        },
+        {
+          "mark": 2,
+          "kind": "cube",
+          "parameter": 1,
+          "N": 2,
+          "s": 1,
+          "core_rank": 0,
+          "core_sha256": "aa6885079e7ed8ca6ff962f5c1f6d44f5dd0ba9e476e9158ae65d99a02203c3b"
+        },
+        {
+          "mark": 3,
+          "kind": "cube",
+          "parameter": 1,
+          "N": 2,
+          "s": 1,
+          "core_rank": 0,
+          "core_sha256": "aa6885079e7ed8ca6ff962f5c1f6d44f5dd0ba9e476e9158ae65d99a02203c3b"
+        }
+      ],
+      "core_sha256": "4809482561ae352cc0ac1d769cdf7519fbffd485a02933b6ba420a9c93f5cb11",
+      "ordered_core_positions": 961,
+      "actual_empty_energy": "107",
+      "label": "four marks and repeated maximum",
+      "elapsed_seconds": 0.11485060903942212
+    },
+    {
+      "N": 46,
+      "s": 19,
+      "lower_rank": 45,
+      "matrix_sha256": "6b016d4f4fbc7abcdd5513e3189fb477206ddb885708990a2c64559798b7467f",
+      "actual_empty_loop": "553/72",
+      "n": 5,
+      "q": 16,
+      "loads": [
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "k": 1,
+      "strict": true,
+      "equality_input_nullity": 0,
+      "core_rank": 44,
+      "inputs": [
+        {
+          "mark": 0,
+          "kind": "cube",
+          "parameter": 2,
+          "N": 4,
+          "s": 2,
+          "core_rank": 1,
+          "core_sha256": "0d63cfdf7f829b0af95efb2f234e2480706677b6324cb1a620afa29b03db9ca3"
+        },
+        {
+          "mark": 1,
+          "kind": "cube",
+          "parameter": 1,
+          "N": 2,
+          "s": 1,
+          "core_rank": 0,
+          "core_sha256": "aa6885079e7ed8ca6ff962f5c1f6d44f5dd0ba9e476e9158ae65d99a02203c3b"
+        },
+        {
+          "mark": 2,
+          "kind": "cube",
+          "parameter": 1,
+          "N": 2,
+          "s": 1,
+          "core_rank": 0,
+          "core_sha256": "aa6885079e7ed8ca6ff962f5c1f6d44f5dd0ba9e476e9158ae65d99a02203c3b"
+        },
+        {
+          "mark": 3,
+          "kind": "cube",
+          "parameter": 1,
+          "N": 2,
+          "s": 1,
+          "core_rank": 0,
+          "core_sha256": "aa6885079e7ed8ca6ff962f5c1f6d44f5dd0ba9e476e9158ae65d99a02203c3b"
+        },
+        {
+          "mark": 4,
+          "kind": "cube",
+          "parameter": 1,
+          "N": 2,
+          "s": 1,
+          "core_rank": 0,
+          "core_sha256": "aa6885079e7ed8ca6ff962f5c1f6d44f5dd0ba9e476e9158ae65d99a02203c3b"
+        }
+      ],
+      "core_sha256": "3a301f1cb53140edde815b3e2a1ecb5f79d026d46f5c32b547baf9d042320c15",
+      "ordered_core_positions": 2025,
+      "actual_empty_energy": "1803/8",
+      "label": "five marks mixed private families",
+      "elapsed_seconds": 0.4082762800389901
+    },
+    {
+      "N": 72,
+      "s": 35,
+      "lower_rank": 71,
+      "matrix_sha256": "4bc5990e97942ded8d1cccd3491297814815c945daeb2f2d678249a0c7216881",
+      "actual_empty_loop": "1897/296",
+      "n": 6,
+      "q": 32,
+      "loads": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "k": 1,
+      "strict": true,
+      "equality_input_nullity": 0,
+      "core_rank": 70,
+      "inputs": [
+        {
+          "mark": 0,
+          "kind": "cube",
+          "parameter": 2,
+          "N": 4,
+          "s": 2,
+          "core_rank": 1,
+          "core_sha256": "0d63cfdf7f829b0af95efb2f234e2480706677b6324cb1a620afa29b03db9ca3"
+        },
+        {
+          "mark": 5,
+          "kind": "cube",
+          "parameter": 1,
+          "N": 2,
+          "s": 1,
+          "core_rank": 0,
+          "core_sha256": "aa6885079e7ed8ca6ff962f5c1f6d44f5dd0ba9e476e9158ae65d99a02203c3b"
+        }
+      ],
+      "core_sha256": "d85ee0a29fd6c341b1cbcd2dbbee3020840d5ea7b1ccdbe9158434c26c89d351",
+      "ordered_core_positions": 5041,
+      "actual_empty_energy": "2169/8",
+      "label": "literal n6 boundary",
+      "elapsed_seconds": 1.9699918969999999
+    },
+    {
+      "N": 22,
+      "s": 11,
+      "lower_rank": 17,
+      "matrix_sha256": "73dff00e39bd0c2b29cdf4faf188a4688145fa7705effda40e2ac935524a772c",
+      "actual_empty_loop": "69/22",
+      "n": 3,
+      "q": 4,
+      "loads": [
+        7,
+        0,
+        0
+      ],
+      "k": 1,
+      "strict": false,
+      "equality_input_nullity": 4,
+      "core_rank": 16,
+      "inputs": [
+        {
+          "mark": 0,
+          "kind": "cube",
+          "parameter": 3,
+          "N": 8,
+          "s": 4,
+          "core_rank": 3,
+          "core_sha256": "e4cc4b518761d8e57be655c30949ed7d56c5a55901f6633656f2c695c4e743ec"
+        }
+      ],
+      "core_sha256": "52b424b6bb93a58a05bc54109995f506d240b5bbd00d59b02cc52d7bd9296fc9",
+      "ordered_core_positions": 441,
+      "actual_empty_energy": "89/2",
+      "label": "weak equality one facet",
+      "elapsed_seconds": 0.03515890100970864
+    },
+    {
+      "N": 24,
+      "s": 11,
+      "lower_rank": 19,
+      "matrix_sha256": "555e4dee98685270f9ac511c7787659dd39e4de72a60010369622213a3020e58",
+      "actual_empty_loop": "54/13",
+      "n": 3,
+      "q": 4,
+      "loads": [
+        7,
+        1,
+        0
+      ],
+      "k": 1,
+      "strict": false,
+      "equality_input_nullity": 4,
+      "core_rank": 18,
+      "inputs": [
+        {
+          "mark": 0,
+          "kind": "cube",
+          "parameter": 3,
+          "N": 8,
+          "s": 4,
+          "core_rank": 3,
+          "core_sha256": "e4cc4b518761d8e57be655c30949ed7d56c5a55901f6633656f2c695c4e743ec"
+        },
+        {
+          "mark": 1,
+          "kind": "cube",
+          "parameter": 1,
+          "N": 2,
+          "s": 1,
+          "core_rank": 0,
+          "core_sha256": "aa6885079e7ed8ca6ff962f5c1f6d44f5dd0ba9e476e9158ae65d99a02203c3b"
+        }
+      ],
+      "core_sha256": "077c2c139f560fccce7abe9ba19966e346664ee4bccab054db567be8c245bb49",
+      "ordered_core_positions": 529,
+      "actual_empty_energy": "64",
+      "label": "weak equality plus other mark",
+      "elapsed_seconds": 0.044530466955620795
+    },
+    {
+      "N": 36,
+      "s": 11,
+      "lower_rank": 26,
+      "matrix_sha256": "ee45f697f8f41e71c1f230910a658f97d6efc8ff32ad781641f1accbdcc41668",
+      "actual_empty_loop": "69/25",
+      "n": 3,
+      "q": 4,
+      "loads": [
+        7,
+        7,
+        0
+      ],
+      "k": 2,
+      "strict": false,
+      "equality_input_nullity": 8,
+      "core_rank": 25,
+      "inputs": [
+        {
+          "mark": 0,
+          "kind": "cube",
+          "parameter": 3,
+          "N": 8,
+          "s": 4,
+          "core_rank": 3,
+          "core_sha256": "e4cc4b518761d8e57be655c30949ed7d56c5a55901f6633656f2c695c4e743ec"
+        },
+        {
+          "mark": 1,
+          "kind": "cube",
+          "parameter": 3,
+          "N": 8,
+          "s": 4,
+          "core_rank": 3,
+          "core_sha256": "e4cc4b518761d8e57be655c30949ed7d56c5a55901f6633656f2c695c4e743ec"
+        }
+      ],
+      "core_sha256": "79f08c5da5dc240c7a1c37ededd39d22a720522b2483428e0aecce1560966f70",
+      "ordered_core_positions": 1225,
+      "actual_empty_energy": "79",
+      "label": "weak equality repeated heavy mark",
+      "elapsed_seconds": 0.11514717998215929
+    },
+    {
+      "N": 12,
+      "s": 5,
+      "lower_rank": 9,
+      "matrix_sha256": "607008942ad63ee4f2f6f78e9a992a0701a96734c78eda334f8b400467a1456f",
+      "actual_empty_loop": "2",
+      "n": 2,
+      "q": 2,
+      "loads": [
+        3,
+        1
+      ],
+      "k": 1,
+      "strict": false,
+      "equality_input_nullity": 2,
+      "core_rank": 8,
+      "inputs": [
+        {
+          "mark": 0,
+          "kind": "cube",
+          "parameter": 2,
+          "N": 4,
+          "s": 2,
+          "core_rank": 1,
+          "core_sha256": "0d63cfdf7f829b0af95efb2f234e2480706677b6324cb1a620afa29b03db9ca3"
+        },
+        {
+          "mark": 1,
+          "kind": "cube",
+          "parameter": 1,
+          "N": 2,
+          "s": 1,
+          "core_rank": 0,
+          "core_sha256": "aa6885079e7ed8ca6ff962f5c1f6d44f5dd0ba9e476e9158ae65d99a02203c3b"
+        }
+      ],
+      "core_sha256": "f259741a4957916a6ad8bd69933a0888874bbb37761c06f61bba7712a69e3b2e",
+      "ordered_core_positions": 121,
+      "actual_empty_energy": "18",
+      "label": "weak equality rank-two input",
+      "elapsed_seconds": 0.0069329250254668295
+    }
+  ],
+  "maximum_family_censuses": [
+    {
+      "label": "rank-two baseline",
+      "N": 8,
+      "all_maximum_families": 2,
+      "nodes": 16
+    },
+    {
+      "label": "private size exceeds q, star strict",
+      "N": 20,
+      "all_maximum_families": 1,
+      "nodes": 64
+    },
+    {
+      "label": "mixed triangle and other-mark pendant",
+      "N": 16,
+      "all_maximum_families": 1,
+      "nodes": 49
+    },
+    {
+      "label": "two distinct triangle facets",
+      "N": 20,
+      "all_maximum_families": 2,
+      "nodes": 88
+    },
+    {
+      "label": "same-mark repeated facets and other mark",
+      "N": 22,
+      "all_maximum_families": 1,
+      "nodes": 93
+    },
+    {
+      "label": "two maximum-load marks with private edges",
+      "N": 22,
+      "all_maximum_families": 2,
+      "nodes": 97
+    }
+  ],
+  "corruption_rejections": [
+    "private indefinite disjoint entry",
+    "private intersection entry",
+    "private missing subset",
+    "private incorrect star",
+    "private star above q",
+    "old mark out of range",
+    "trivial old cube guard",
+    "no attachment guard",
+    "actual empty loop",
+    "whole original intersection",
+    "singular PSD range"
+  ],
+  "per_fixture_guard_seconds": 60,
+  "literal_n_guard": 6,
+  "literal_N_guard": 80,
+  "native_threads": 1,
+  "elapsed_seconds": 3.280122908996418,
+  "peak_RSS_KiB": 19608
+}
