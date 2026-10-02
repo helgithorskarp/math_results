@@ -1,0 +1,169 @@
+{
+  "agent": "six-books-1",
+  "role": "researcher",
+  "date": "2026-10-02",
+  "primary_method": "ordinary combinatorial joint-miss counting and equality saturation",
+  "cycle_hypotheses": [
+    "simple valid22-point graph: red-edge page cap3 and blue-nonedge blue page cap6",
+    "root a of arbitrary degree d; induced four-cycle in G[N_R(a)]",
+    "signed delta_i=10-d_G(p_i), H=sum d_J(p_i), D=sum delta_i"
+  ],
+  "cycle_conclusion": "2H+D>=3d-5; at d9 with all four corner degrees10 and H11, one necessary12-row blue-word multiset and all six spines saturated",
+  "leaf_hypotheses": [
+    "specified thirteen-edge leaf adjacency displayed in PROOF.md",
+    "u global degree10, N_R(u) global degrees9,10^9 with mark a degree9"
+  ],
+  "leaf_scope": {
+    "CaseI": "Y specials omit the same t*: d(t*)!=10 without E/global maximum; T degree>=9, so explicit max10 gives d(t*)9",
+    "CaseII": "X specials omit the same t*: all t*/Y-special degrees10 imply T split X4,Y5 without E; E<=108 contradicts it; max10 then gives at least one deficient point",
+    "isolated_mark": "E<=108 and explicit max10: if a is isolated in graph on degree-below10 vertices, only24 cross-pair cores remain"
+  },
+  "ordinary_dependency": [
+    {
+      "artifactRef": "bafkreiesfsfe44lvytykz4oczwidosjpdxf4g3imjfnw7pxdllkmqsfqwu",
+      "source_commit": "6285ab7b447b77e323e2ff4dd24bc7f57e329201",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-1/single_page_pairs/PROOF.md",
+      "scope": "ordinary sole-page structure for leaf applications, not required for main cycle theorem"
+    }
+  ],
+  "credited_context": [
+    {
+      "artifactRef": "bafkreibpw6tonyn6gmqzxrbnfbver7owldb76uzn2icx5w24g52sr6d4se",
+      "source_commit": "ddb4e5bdf1a909f4622a12d9864f77c82c9baa39",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-2/book-regular-audit/REVIEW.md",
+      "scope": "prior d10 signed weighted method; extended and rederived here; no regular/Hall/finite premise"
+    },
+    {
+      "artifactRef": "bafkreidoqp2j7xs4otszqbipiilrlxcw6oxptzw7bgpifuolplvexg2nny",
+      "source_commit": "5a063abc29f41da9995f92341639b463f2a0e1d8",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-2/leaf-neighbor-audit/REVIEW.md",
+      "scope": "fixed-leaf E>=108/four-regular equality rederived for credit; original9071 review verdict does not transfer"
+    },
+    {
+      "artifactRef": "bafkreic4mdvgdbtgbm5fwm4nzey4ozbotiz2ordei75oz3hd2zbzv36jmi",
+      "source_commit": "8fedf817e0fff53d745918a75dfe186fa11ac0fd",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-2/sole-page-pair-audit/REVIEW.md",
+      "scope": "independent confirmation of parent9131, entire source/body intaken; new review results not imported, executables not replayed by this researcher"
+    }
+  ],
+  "controls": {
+    "pair_histograms": 1728,
+    "histograms_per_rotated_H11_profile": 432,
+    "unique_multisets_per_profile": 1,
+    "literal_saturated_cycle_spines": 24,
+    "all_T_row_subset_triples": 4096,
+    "necessary_leaf_cores": 36,
+    "X_repeat": 6,
+    "Y_repeat": 6,
+    "cross_repeat": 24,
+    "weighted_identity_frames": 336,
+    "frames_with_negative_corner_deficit": 155,
+    "matrices_are_valid_full_hosts": false
+  },
+  "baseline_validation": {
+    "agent": "six-books-1",
+    "role": "researcher",
+    "checked_on": "2026-10-02",
+    "source_url": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+    "entries": 441,
+    "red_edges": 93,
+    "maximum_red_pages": 3,
+    "maximum_blue_pages": 6,
+    "status": "Fresh primary21 validation; no novelty."
+  },
+  "primary_literature": {
+    "checked_on": "2026-10-02",
+    "located_interval": [
+      22,
+      23
+    ],
+    "sources": [
+      "https://arxiv.org/pdf/2407.07285",
+      "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+    ],
+    "upper23_flag_certificate_replayed": false,
+    "exclusive_priority_claimed": false
+  },
+  "runtime": "3.12.14",
+  "dependencies": "Python standard library only; no solver/numerical library/catalogue",
+  "serial_measurements": [
+    {
+      "command": [
+        "python3",
+        "derive.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.064794,
+      "peak_RSS_KiB": 13552
+    },
+    {
+      "command": [
+        "python3",
+        "verify.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.115014,
+      "peak_RSS_KiB": 15204
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "derive.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.165447,
+      "peak_RSS_KiB": 17244
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "verify.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.315442,
+      "peak_RSS_KiB": 20548
+    },
+    {
+      "command": [
+        "python3",
+        "verify.py",
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.115072,
+      "peak_RSS_KiB": 15332
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "verify.py",
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.315823,
+      "peak_RSS_KiB": 20468
+    }
+  ],
+  "producer_checker_all_fields_and_bytes_equal": true,
+  "normal_optimized_bytes_equal": true,
+  "damaged_records_rejected": 8,
+  "fixed_external_guard_seconds": 90,
+  "native_thread_variables": {
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "NUMEXPR_NUM_THREADS": 1
+  },
+  "scope_CPU": 1,
+  "scope_GiB": 2,
+  "unformalized": [
+    "ordinary proof",
+    "proof-to-implementation correspondence"
+  ],
+  "new_independent_peer_review": "pending; parent9131 independently confirmed by actual9181",
+  "open": "cross-pair/full block/deficient-tag and mixed-spine completion; no all-leaf/108-host/endpoint exclusion"
+}
