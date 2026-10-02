@@ -1,0 +1,169 @@
+{
+  "schema": 1,
+  "agent": "six-sendov-1",
+  "role": "researcher",
+  "checked_at": "2026-10-02T12:27:45.160219+00:00",
+  "python": "3.12.14",
+  "stdlib_only": true,
+  "guard_seconds": 45,
+  "native_threads": 1,
+  "math_jobs_serial": true,
+  "normal_and_optimized": [
+    {
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 0.21100070199463516,
+      "peak_child_kib": 17848,
+      "stdout": {
+        "identities": 28,
+        "mathematical_damage_rejections": 15,
+        "status": "PASS",
+        "whole_domain_margins": 20,
+        "whole_record_sha256": "1b2e55cd52d7bac0db2269dec7121b9863e44ef9ddd089583c3429c759d4b6c4"
+      },
+      "whole_record_matched": true
+    },
+    {
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 0.3946911549428478,
+      "peak_child_kib": 20856,
+      "stdout": {
+        "identities": 28,
+        "mathematical_damage_rejections": 15,
+        "status": "PASS",
+        "whole_domain_margins": 20,
+        "whole_record_sha256": "1b2e55cd52d7bac0db2269dec7121b9863e44ef9ddd089583c3429c759d4b6c4"
+      },
+      "whole_record_matched": true
+    }
+  ],
+  "external_fixture_rejections": [
+    {
+      "name": "missing",
+      "optimized": false,
+      "returncode": 1,
+      "failure": "FAIL: missing external fixture (OSError); full private command/error retained locally",
+      "seconds": 0.2061121129663661
+    },
+    {
+      "name": "malformed",
+      "optimized": false,
+      "returncode": 1,
+      "failure": "FAIL: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+      "seconds": 0.20662676496431231
+    },
+    {
+      "name": "altered_margin",
+      "optimized": false,
+      "returncode": 1,
+      "failure": "FAIL: whole regenerated record differs from fixture",
+      "seconds": 0.2018493909854442
+    },
+    {
+      "name": "omitted_identity",
+      "optimized": false,
+      "returncode": 1,
+      "failure": "FAIL: whole regenerated record differs from fixture",
+      "seconds": 0.20054679899476469
+    },
+    {
+      "name": "altered_whole_coefficient",
+      "optimized": false,
+      "returncode": 1,
+      "failure": "FAIL: whole regenerated record differs from fixture",
+      "seconds": 0.23749990900978446
+    },
+    {
+      "name": "uncovered_field",
+      "optimized": false,
+      "returncode": 1,
+      "failure": "FAIL: whole regenerated record differs from fixture",
+      "seconds": 0.21090195106808096
+    },
+    {
+      "name": "duplicate_key",
+      "optimized": false,
+      "returncode": 1,
+      "failure": "FAIL: duplicate fixture key: schema",
+      "seconds": 0.19245939201209694
+    },
+    {
+      "name": "float_number",
+      "optimized": false,
+      "returncode": 1,
+      "failure": "FAIL: nonintegral/nonfinite fixture number: 1.0",
+      "seconds": 0.20309794601053
+    },
+    {
+      "name": "missing",
+      "optimized": true,
+      "returncode": 1,
+      "failure": "FAIL: missing external fixture (OSError); full private command/error retained locally",
+      "seconds": 0.3765855170786381
+    },
+    {
+      "name": "malformed",
+      "optimized": true,
+      "returncode": 1,
+      "failure": "FAIL: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+      "seconds": 0.3663127300096676
+    },
+    {
+      "name": "altered_margin",
+      "optimized": true,
+      "returncode": 1,
+      "failure": "FAIL: whole regenerated record differs from fixture",
+      "seconds": 0.3764420460211113
+    },
+    {
+      "name": "omitted_identity",
+      "optimized": true,
+      "returncode": 1,
+      "failure": "FAIL: whole regenerated record differs from fixture",
+      "seconds": 0.37887047801632434
+    },
+    {
+      "name": "altered_whole_coefficient",
+      "optimized": true,
+      "returncode": 1,
+      "failure": "FAIL: whole regenerated record differs from fixture",
+      "seconds": 0.37822152802255005
+    },
+    {
+      "name": "uncovered_field",
+      "optimized": true,
+      "returncode": 1,
+      "failure": "FAIL: whole regenerated record differs from fixture",
+      "seconds": 0.37698406004346907
+    },
+    {
+      "name": "duplicate_key",
+      "optimized": true,
+      "returncode": 1,
+      "failure": "FAIL: duplicate fixture key: schema",
+      "seconds": 0.38237658701837063
+    },
+    {
+      "name": "float_number",
+      "optimized": true,
+      "returncode": 1,
+      "failure": "FAIL: nonintegral/nonfinite fixture number: 1.0",
+      "seconds": 0.3774615549482405
+    }
+  ],
+  "whole_record_sha256": "1b2e55cd52d7bac0db2269dec7121b9863e44ef9ddd089583c3429c759d4b6c4",
+  "proof_status": "ordinary analytic author proof, unformalized and independently unreviewed",
+  "analytic_trust_boundary": [
+    "Rouche with multiplicity",
+    "analytic square root",
+    "argument principle",
+    "annular convergent logarithm",
+    "contour integration by parts",
+    "Cauchy-Schwarz and Maclaurin",
+    "AM-GM",
+    "imported legal comparison9113",
+    "simple-root openness"
+  ],
+  "no_resource_change": true
+}
