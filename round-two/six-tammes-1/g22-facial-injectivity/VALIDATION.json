@@ -1,0 +1,336 @@
+{
+  "CPU_intensive_children_at_once": 1,
+  "actual_agent": "six-tammes-1",
+  "actual_jobs": [
+    {
+      "cumulative_children_maxrss_KiB": 26272,
+      "exit_code": 0,
+      "job": "producer-normal",
+      "output": {
+        "certificate_sha256": "91185db9fe98209eeafce6cd5cb59d3f4169c939f38ee096b4cfe9cb3ef5d892",
+        "excluded_single_aliases": [
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            13
+          ]
+        ],
+        "local_survivors": [
+          {
+            "6": 4
+          },
+          {},
+          {
+            "6": 8
+          },
+          {
+            "11": 13,
+            "6": 8
+          },
+          {
+            "6": 13
+          }
+        ],
+        "raw_maps": 37633,
+        "status": "CHECKED_EXACT_AUTHOR_FACIAL_INJECTIVITY"
+      },
+      "wall_seconds": 1.3480597169836983
+    },
+    {
+      "cumulative_children_maxrss_KiB": 29796,
+      "exit_code": 0,
+      "job": "producer-optimized",
+      "output": {
+        "certificate_sha256": "91185db9fe98209eeafce6cd5cb59d3f4169c939f38ee096b4cfe9cb3ef5d892",
+        "excluded_single_aliases": [
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            13
+          ]
+        ],
+        "local_survivors": [
+          {
+            "6": 4
+          },
+          {},
+          {
+            "6": 8
+          },
+          {
+            "11": 13,
+            "6": 8
+          },
+          {
+            "6": 13
+          }
+        ],
+        "raw_maps": 37633,
+        "status": "CHECKED_EXACT_AUTHOR_FACIAL_INJECTIVITY"
+      },
+      "wall_seconds": 1.3939201179891825
+    },
+    {
+      "cumulative_children_maxrss_KiB": 29796,
+      "exit_code": 0,
+      "job": "auditor-normal",
+      "output": {
+        "all_map_decision_sha256": "2787e6a3d4a31dc7c2f79793eee330a7a8501f0ffe6f22e0eb21a9c27acaf4d0",
+        "all_maps": 37633,
+        "certificate_sha256": "91185db9fe98209eeafce6cd5cb59d3f4169c939f38ee096b4cfe9cb3ef5d892",
+        "closure_degrees": [
+          34,
+          44,
+          52
+        ],
+        "independent_person_review": false,
+        "local_survivors": [
+          {
+            "6": 4
+          },
+          {},
+          {
+            "6": 8
+          },
+          {
+            "11": 13,
+            "6": 8
+          },
+          {
+            "6": 13
+          }
+        ],
+        "planar_controls": {
+          "altered_cross_dot_rejected": 625,
+          "consistent": 625,
+          "degenerate": 225
+        },
+        "producer_imported": false,
+        "status": "AUDITED_EXACT_AUTHOR_FACIAL_INJECTIVITY"
+      },
+      "wall_seconds": 1.742347429972142
+    },
+    {
+      "cumulative_children_maxrss_KiB": 29796,
+      "exit_code": 0,
+      "job": "auditor-optimized",
+      "output": {
+        "all_map_decision_sha256": "2787e6a3d4a31dc7c2f79793eee330a7a8501f0ffe6f22e0eb21a9c27acaf4d0",
+        "all_maps": 37633,
+        "certificate_sha256": "91185db9fe98209eeafce6cd5cb59d3f4169c939f38ee096b4cfe9cb3ef5d892",
+        "closure_degrees": [
+          34,
+          44,
+          52
+        ],
+        "independent_person_review": false,
+        "local_survivors": [
+          {
+            "6": 4
+          },
+          {},
+          {
+            "6": 8
+          },
+          {
+            "11": 13,
+            "6": 8
+          },
+          {
+            "6": 13
+          }
+        ],
+        "planar_controls": {
+          "altered_cross_dot_rejected": 625,
+          "consistent": 625,
+          "degenerate": 225
+        },
+        "producer_imported": false,
+        "status": "AUDITED_EXACT_AUTHOR_FACIAL_INJECTIVITY"
+      },
+      "wall_seconds": 1.8889870549319312
+    },
+    {
+      "cumulative_children_maxrss_KiB": 29796,
+      "exit_code": 0,
+      "job": "controls-normal",
+      "output": {
+        "byte_hash_is_not_acceptance_predicate": true,
+        "damage_results": [
+          {
+            "damage": "omitted_local_survivor",
+            "reason": "entry-level accepted-map list",
+            "rejected": true
+          },
+          {
+            "damage": "added_false_local_survivor",
+            "reason": "entry-level accepted-map list",
+            "rejected": true
+          },
+          {
+            "damage": "altered_one_map_digest",
+            "reason": "all 37,633 individual decisions",
+            "rejected": true
+          },
+          {
+            "damage": "altered_intrinsic_Gram_polynomial",
+            "reason": "contact numerator=r",
+            "rejected": true
+          },
+          {
+            "damage": "nonpositive_intrinsic_gap",
+            "reason": "strict closed-band Bernstein signs",
+            "rejected": true
+          },
+          {
+            "damage": "altered_reduced_polynomial",
+            "reason": "Bernstein representation identity",
+            "rejected": true
+          },
+          {
+            "damage": "altered_still_negative_Bernstein_coefficient",
+            "reason": "Bernstein representation identity",
+            "rejected": true
+          },
+          {
+            "damage": "altered_factor_content",
+            "reason": "61-point Sylvester/factor interpolation identity",
+            "rejected": true
+          },
+          {
+            "damage": "omitted_Gram_case",
+            "reason": "all three closure cases, in order",
+            "rejected": true
+          },
+          {
+            "damage": "altered_actual_face_pattern",
+            "reason": "literal facial pattern",
+            "rejected": true
+          },
+          {
+            "damage": "altered_closed_domain",
+            "reason": "closed c band",
+            "rejected": true
+          },
+          {
+            "damage": "altered_factor_with_repaired_degree",
+            "reason": "61-point Sylvester/factor interpolation identity",
+            "rejected": true
+          }
+        ],
+        "damaged_certificates_rejected": 12,
+        "independent_person_review": false,
+        "status": "CHECKED_FACIAL_CERTIFICATE_CONTROLS",
+        "valid_alternate_normalization_accepted": true,
+        "valid_original_accepted": true
+      },
+      "wall_seconds": 12.980282753007486
+    }
+  ],
+  "all37633_map_decisions_match": true,
+  "all_jobs_completed_normally": true,
+  "auditor_normal_optimized_stdout_bytes_equal": true,
+  "certificate_bytes": 19912,
+  "certificate_canonical_sha256": "91185db9fe98209eeafce6cd5cb59d3f4169c939f38ee096b4cfe9cb3ef5d892",
+  "certificate_file_sha256": "476c11f6e40b1bfe6deb60f9507052a4f261fe071fcb709d816f9a673ac06e55",
+  "checked_UTC": "2026-10-02T16:03:55.862228+00:00",
+  "complete_survivor_lists_match": true,
+  "controls": {
+    "byte_hash_is_not_acceptance_predicate": true,
+    "damage_results": [
+      {
+        "damage": "omitted_local_survivor",
+        "reason": "entry-level accepted-map list",
+        "rejected": true
+      },
+      {
+        "damage": "added_false_local_survivor",
+        "reason": "entry-level accepted-map list",
+        "rejected": true
+      },
+      {
+        "damage": "altered_one_map_digest",
+        "reason": "all 37,633 individual decisions",
+        "rejected": true
+      },
+      {
+        "damage": "altered_intrinsic_Gram_polynomial",
+        "reason": "contact numerator=r",
+        "rejected": true
+      },
+      {
+        "damage": "nonpositive_intrinsic_gap",
+        "reason": "strict closed-band Bernstein signs",
+        "rejected": true
+      },
+      {
+        "damage": "altered_reduced_polynomial",
+        "reason": "Bernstein representation identity",
+        "rejected": true
+      },
+      {
+        "damage": "altered_still_negative_Bernstein_coefficient",
+        "reason": "Bernstein representation identity",
+        "rejected": true
+      },
+      {
+        "damage": "altered_factor_content",
+        "reason": "61-point Sylvester/factor interpolation identity",
+        "rejected": true
+      },
+      {
+        "damage": "omitted_Gram_case",
+        "reason": "all three closure cases, in order",
+        "rejected": true
+      },
+      {
+        "damage": "altered_actual_face_pattern",
+        "reason": "literal facial pattern",
+        "rejected": true
+      },
+      {
+        "damage": "altered_closed_domain",
+        "reason": "closed c band",
+        "rejected": true
+      },
+      {
+        "damage": "altered_factor_with_repaired_degree",
+        "reason": "61-point Sylvester/factor interpolation identity",
+        "rejected": true
+      }
+    ],
+    "damaged_certificates_rejected": 12,
+    "independent_person_review": false,
+    "status": "CHECKED_FACIAL_CERTIFICATE_CONTROLS",
+    "valid_alternate_normalization_accepted": true,
+    "valid_original_accepted": true
+  },
+  "dependencies": "Python standard library only",
+  "formalization": false,
+  "global_Tammes15_optimality_proved": false,
+  "global_optimizer_occurrence_proved": false,
+  "guard_hit": false,
+  "independent_person_review": false,
+  "interpreter": "CPython3.12.14; Clang22.1.3",
+  "memory_measurement": "RUSAGE_CHILDREN.ru_maxrss cumulative maximum in KiB, not isolated per-child RSS.",
+  "native_threads": 1,
+  "peer9515_full_regeneration_executed_here": false,
+  "per_job_seconds_guard": 55,
+  "producer_normal_optimized_and_included_certificate_bytes_equal": true,
+  "role": "researcher",
+  "status": "COMPLETE_EXACT_AUTHOR_CHECK_AND_ALGORITHMIC_AUDIT"
+}
