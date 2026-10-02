@@ -2,11 +2,15 @@
 
 The [P21 six-history theorem](P21.md) excludes every standard completion
 of the first **21** ordered native comparators at total size at most44,
-with arbitrary suffix order and depth. Three fixed two-high histories fill
-the entire ordinary budget after every possible singleton maximum chain;
+with arbitrary suffix order and depth. A reusable maximum-only lemma
+forces(9,11),(11,12) to the front without minimum normalization.
+Three fixed two-high histories fill the entire ordinary budget after
+every possible singleton maximum chain;
 three further histories contradict that budget for every intervening
 preparation word. The alternate direct-merge branch imports P22 below.
 P21's minimum total size lies in45..46 and its suffix size in24..25.
+The stronger lemma also permits any three distinct shadow ports within5..8
+of ordinary cost at least5, under its stated route and baseline hypotheses.
 The unrestricted thirteen-input44..45 gap remains open.
 
 Author and executing agent: **six-sorting-2**, role **researcher**,

@@ -203,46 +203,55 @@ def minimum_cover():
 def high_cover():
     # Route12 has only its final merge available. With three routes the
     # other two require two merges each; with two routes every path needs one.
-    # This is a necessary analytic merge-tree rule, independent of preparation length.
+    # This necessary merge-tree rule imposes no preparation-length bound.
     budgets = (3, 2, 1)
-    seen, words = set(), []
 
-    def feasible(positions, used):
-        groups = len(set(positions))
-        additional = [0 if groups == 1 else 2 if groups == 3 and p != 12 else 1
-                      for p in positions]
-        return all(d + r <= b for d, r, b in zip(used, additional, budgets))
+    def enumerate_words(frozen_ports, label):
+        seen, words = set(), []
 
-    def visit(positions, used, word):
-        state = positions, used
-        fresh = state not in seen
-        seen.add(state)
-        if positions == (12, 12, 12):
-            words.append(tuple(word))
-        for gate in combinations(range(13), 2):
-            frozen = bool(set(gate) & {0, 1})
-            hit = [p in gate for p in positions]
-            preparation = not any(hit)
-            next_positions = tuple(gate[1] if h else p for p, h in zip(positions, hit))
-            next_used = tuple(d + h for d, h in zip(used, hit))
-            event = not frozen and any(hit) and feasible(next_positions, next_used)
-            if fresh:
-                count("high_standard_state_transitions")
-            if event:
-                need(sum(next_used) > sum(used), "route event did not charge")
-                visit(next_positions, next_used, word + [gate])
-            if not frozen and preparation:
-                need(next_positions == positions and next_used == used,
-                     "preparation changed a unary route")
-    visit((9, 11, 12), (0, 0, 0), [])
-    count("high_route_states", len(seen))
+        def feasible(positions, used):
+            groups = len(set(positions))
+            additional = [0 if groups == 1 else 2 if groups == 3 and p != 12 else 1
+                          for p in positions]
+            return all(d + r <= b for d, r, b in zip(used, additional, budgets))
+
+        def visit(positions, used, word):
+            state = positions, used
+            fresh = state not in seen
+            seen.add(state)
+            if positions == (12, 12, 12):
+                words.append(tuple(word))
+            for gate in combinations(range(13), 2):
+                frozen = bool(set(gate) & frozen_ports)
+                hit = [p in gate for p in positions]
+                preparation = not any(hit)
+                next_positions = tuple(gate[1] if h else p for p, h in zip(positions, hit))
+                next_used = tuple(d + h for d, h in zip(used, hit))
+                event = not frozen and any(hit) and feasible(next_positions, next_used)
+                if fresh:
+                    count(label + "_high_standard_state_transitions")
+                if event:
+                    need(sum(next_used) > sum(used), "route event did not charge")
+                    visit(next_positions, next_used, word + [gate])
+                if not frozen and preparation:
+                    need(next_positions == positions and next_used == used,
+                         "preparation changed a unary route")
+        visit((9, 11, 12), (0, 0, 0), [])
+        count(label + "_high_route_states", len(seen))
+        return [list(map(list, word)) for word in sorted(words)]
+
+    actual = enumerate_words(set(), "initial")
+    normalized = enumerate_words({0, 1}, "normalized")
     expected = [[[9, 11], [11, 12]]] + [
         [[min(r, 9), max(r, 9)], [max(r, 9), 11], [11, 12]]
-        for r in [2, 3, 4, 5, 6, 7, 8, 10]]
-    actual = [list(map(list, word)) for word in sorted(words)]
-    need(actual == sorted(expected), "complete high event cover differs")
+        for r in [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]]
+    need(actual == sorted(expected), "complete initial high event cover differs")
+    need(normalized == [word for word in sorted(expected)
+                        if not any(set(gate) & {0, 1} for gate in word)],
+         "post-minimum high event cover differs")
     return {"route_ports": [9, 11, 12], "touch_budgets": list(budgets),
-            "event_words": actual, "direct_branch_uses_native_P22": True}
+            "event_words": actual, "after_minimum_event_words": normalized,
+            "direct_branch_uses_native_P22": True}
 
 
 def transport_controls():
@@ -275,7 +284,7 @@ def transport_controls():
 def finite_controls():
     baseline = [[0, 1536, 4], [0, 2560, 4], [0, 4608, 5]]
     terminals, overflows, shadows = [], [], []
-    for r in [2, 3, 4, 5, 6, 7, 8, 10]:
+    for r in [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]:
         word = [[min(r, 9), max(r, 9)], [max(r, 9), 11], [11, 12]]
         out = baseline
         for gate in word:
@@ -284,7 +293,7 @@ def finite_controls():
              "baseline terminal classes/costs differ")
         terminals.append({"r": r, "envelope": out, "mass": 512})
         count("baseline_terminal_controls")
-        for a in range(2, 9):
+        for a in range(9):
             out = ordinary_transition(baseline, [a, 10])
             need(out == [[0, 1536, 5], [0, 2560, 4], [0, 4608, 5]],
                  "preparation10 is not a charged stationary touch")
@@ -304,11 +313,11 @@ def finite_controls():
             shadows.append({"r": r, "q": q, "envelope": out})
             count("shadow_suffix_controls")
     for q in range(5, 9):
-        for gate in combinations(range(2, 9), 2):
+        for gate in combinations(range(9), 2):
             out = ordinary_transition([[0, 2 ** q + 4096, 0]], gate)
             need(out[0][1] in {2 ** j + 4096 for j in range(5, 9)},
-                 "seven-port shadow range not closed")
-            count("seven_port_shadow_closure_controls")
+                 "nine-port shadow range not closed")
+            count("nine_port_shadow_closure_controls")
     need(3 * 2 ** 5 == 96 and ceil_log(96) == 7 and 7 + 3 == 10 and 2 ** 10 > 512,
          "final shadow contradiction differs")
     return {"baseline_terminals": terminals, "preparation10_overflows": overflows,
@@ -353,15 +362,13 @@ def build():
         need(anchors == [[9, 64], [11, 80], [12, 192]], "ordinary route anchor masses differ")
         need([max(t for t in range(10) if 2 ** t * mass <= 512) for p, mass in anchors]
              == [3, 2, 1], "route budgets differ")
-        selected = []
-        if name != "initial":
-            rows = {row[1]: row for row in families["two_maxima"]["records"]}
-            selected = [rows[mask] for mask in fixture["selected_original_high_masks"]]
-            need([row[2:5] for row in selected] == [[0, 1536, 4], [0, 2560, 4],
-                                                  [0, 4608, 5], [0, 4128, 5],
-                                                  [0, 4224, 5], [0, 4352, 5]],
-                 "six selected original histories differ")
-            count("selected_original_histories", len(selected))
+        rows = {row[1]: row for row in families["two_maxima"]["records"]}
+        selected = [rows[mask] for mask in fixture["selected_original_high_masks"]]
+        need([row[2:5] for row in selected] == [[0, 1536, 4], [0, 2560, 4],
+                                              [0, 4608, 5], [0, 4128, 5],
+                                              [0, 4224, 5], [0, 4352, 5]],
+             "six selected original histories differ")
+        count("selected_original_histories", len(selected))
         cases.append({"name": name, "prefix_length": len(gates),
                       "prefix_sha256": digest(gates), "minimum_stem": stem,
                       "families": families, "unary_high_routes": unary,

@@ -91,21 +91,24 @@ def minimum_cover(stems):
 
 def high_cover():
     words = [[[9, 11], [11, 12]]]
-    for r in [2, 3, 4, 5, 6, 7, 8, 10]:
+    for r in [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]:
         words.append([[min(r, 9), max(r, 9)], [max(r, 9), 11], [11, 12]])
     return {"route_ports": [9, 11, 12], "touch_budgets": [3, 2, 1],
-            "event_words": sorted(words), "direct_branch_uses_native_P22": True}
+            "event_words": sorted(words),
+            "after_minimum_event_words": [word for word in sorted(words)
+                                          if not any(set(gate) & {0, 1} for gate in word)],
+            "direct_branch_uses_native_P22": True}
 
 
 def finite_controls():
     baseline = [[0, 1536, 4], [0, 2560, 4], [0, 4608, 5]]
     terminals, overflows, shadows = [], [], []
-    for r in [2, 3, 4, 5, 6, 7, 8, 10]:
+    for r in [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]:
         word = [[min(r, 9), max(r, 9)], [max(r, 9), 11], [11, 12]]
         terminal = through(baseline, word)
         terminals.append({"r": r, "envelope": terminal,
                           "mass": sum(2 ** row[2] for row in terminal)})
-        for a in range(2, 9):
+        for a in range(9):
             out = through(step(baseline, [a, 10]), word)
             overflows.append({"r": r, "preparation": [a, 10], "envelope": out,
                               "mass": sum(2 ** row[2] for row in out)})
@@ -143,10 +146,8 @@ def build():
         high = families["two_maxima"]["ordinary"]["envelope"]
         anchors = [[p, sum(2 ** d for lo, hi, d in high if hi >> p & 1)]
                    for p in sorted({row[1] for row in unary})]
-        selected = []
-        if name != "initial":
-            rows = {row[1]: row for row in families["two_maxima"]["records"]}
-            selected = [rows[mask] for mask in fixture["selected_original_high_masks"]]
+        rows = {row[1]: row for row in families["two_maxima"]["records"]}
+        selected = [rows[mask] for mask in fixture["selected_original_high_masks"]]
         cases.append({"name": name, "prefix_length": len(gates),
                       "prefix_sha256": digest(gates), "minimum_stem": stem,
                       "families": families, "unary_high_routes": unary,
