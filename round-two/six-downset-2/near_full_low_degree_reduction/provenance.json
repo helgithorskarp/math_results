@@ -1,0 +1,104 @@
+{
+  "agent": "six-downset-2",
+  "role": "researcher",
+  "problem": "Spectral Chvatal Conjecture H",
+  "date": "2026-10-02",
+  "proof_status": "Ordinary all-n real reduction, unformalized, independently unreviewed; finite exact controls are validation",
+  "primary": "https://arxiv.org/html/2609.28404v1#S4",
+  "primary_record": "https://arxiv.org/abs/2609.28404",
+  "primary_live_checked": "2026-10-02, latest v1 September23",
+  "new_scope": "Original n>=6, integer1<=k<=n-2, all-real original feasibility by averaging; odd/even principal embeddings; automatic high upper floor; rank existence",
+  "expected_canonical_sha256": "c13d1da6dc0e39b3b24ab64ac2549caf4c3338a03c7561a00416fedf234e69a1",
+  "expected_file_sha256": "11c74214a8184ae08243b987c7e6a83289e3b097ebd78e78858ba61c9f6e51af",
+  "interpreter": "CPython3.12.14 standard library only",
+  "threads": 1,
+  "guard_seconds": 45,
+  "checks": {
+    "normal": {
+      "exit_code": 0,
+      "stdout": "{\"ok\": true, \"record_sha256\": \"c13d1da6dc0e39b3b24ab64ac2549caf4c3338a03c7561a00416fedf234e69a1\", \"basis_cases\": 43, \"full_prior_forms\": 60, \"controls\": 14}\n",
+      "stderr": "",
+      "agent": "six-downset-2",
+      "role": "researcher",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "native_threads": 1,
+      "seconds": 8.340841647004709,
+      "peak_rss_kib": 18904
+    },
+    "optimized": {
+      "exit_code": 0,
+      "stdout": "{\"ok\": true, \"record_sha256\": \"c13d1da6dc0e39b3b24ab64ac2549caf4c3338a03c7561a00416fedf234e69a1\", \"basis_cases\": 43, \"full_prior_forms\": 60, \"controls\": 14}\n",
+      "stderr": "",
+      "agent": "six-downset-2",
+      "role": "researcher",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "native_threads": 1,
+      "seconds": 8.190486384904943,
+      "peak_rss_kib": 21244
+    }
+  },
+  "prior9592_complete_replay": {
+    "exit_code": 0,
+    "stdout": "{\"ok\": true, \"record_sha256\": \"ce889728764f880dc3e12952f9b6bb4a0bc7a6a6dd849d674757592dbc5207c9\", \"complete_sectors\": 34, \"least_support_cutoff\": 8, \"literal_action_columns\": 112, \"controls\": 12}\n",
+    "stderr": "",
+    "agent": "six-downset-2",
+    "role": "researcher",
+    "command": [
+      "/scratch/venvs/discovery-team/bin/python",
+      "-B",
+      "verify.py",
+      "--check",
+      "expected.json"
+    ],
+    "frozen_check": true,
+    "mode": "normal",
+    "baseline": "Published9592 complete original n32 S8 packet",
+    "validation_only": true,
+    "guard_seconds": 45,
+    "native_threads": 1,
+    "seconds": 9.821585209108889,
+    "peak_rss_kib": 19516
+  },
+  "credits": {
+    "unchanged_model_exact": "9592 fca248f4d3e8d6f377c6e6e165c191593b62660b, already unchanged9556/9521/9017",
+    "star_completion": "9365 direct decoder, here an explicit reimplementation; same singleton identities",
+    "fixtures": [
+      {
+        "claim": 9556,
+        "commit": "b0899891b28d5b4e0ec9aa150e8c3d2a97ad4624",
+        "n": 24,
+        "k": 6,
+        "floor": "1/64"
+      },
+      {
+        "claim": 9592,
+        "commit": "fca248f4d3e8d6f377c6e6e165c191593b62660b",
+        "n": 32,
+        "k": 8,
+        "floor": "1/1024"
+      }
+    ],
+    "ordinary_odd_control": "8106 original all-n z1 reference at n11; capfails",
+    "independent_prior_review": "9606 confirms9556 and gap1/32 only; whole defining proof/current+pinned bytes read, no native reviewer replay here and no new-verdict transfer"
+  },
+  "finite_control_coverage": {
+    "basis_cases": 43,
+    "supported_active_basis_vectors": 903,
+    "transfer_positions": 42460,
+    "complete_reference_positions": 22456,
+    "full_prior_forms": 60,
+    "damage_controls": 14
+  },
+  "not_claimed": [
+    "all-n positive capped family",
+    "n40 feasibility or nonexistence",
+    "optimal support cutoff",
+    "general H or I",
+    "rational feasibility from real feasibility",
+    "same-size whole cap-floor necessity",
+    "independent-person review",
+    "formalization"
+  ]
+}
