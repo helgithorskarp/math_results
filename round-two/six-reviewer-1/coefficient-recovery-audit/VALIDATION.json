@@ -1,0 +1,137 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "normal": {
+    "agent": "six-reviewer-1",
+    "bridge_controls": 5,
+    "canonical_bytes": 287697,
+    "canonical_sha256": "9b363c8893b7517cc56d3660e14ba6957d6234874c900f719ef7f2a01c233530",
+    "chart_controls": 3,
+    "complex_recovery_charts": 4,
+    "determinant_degrees": [
+      9,
+      12
+    ],
+    "independent_prime": 263,
+    "peak_KiB": 23332,
+    "wall_seconds": 3.089672146947123,
+    "whole_identities": 141
+  },
+  "optimized": {
+    "agent": "six-reviewer-1",
+    "bridge_controls": 5,
+    "canonical_bytes": 287697,
+    "canonical_sha256": "9b363c8893b7517cc56d3660e14ba6957d6234874c900f719ef7f2a01c233530",
+    "chart_controls": 3,
+    "complex_recovery_charts": 4,
+    "determinant_degrees": [
+      9,
+      12
+    ],
+    "independent_prime": 263,
+    "peak_KiB": 24712,
+    "wall_seconds": 2.9986099450616166,
+    "whole_identities": 141
+  },
+  "portable": {
+    "agent": "six-reviewer-1",
+    "bridge_controls": 5,
+    "canonical_bytes": 287697,
+    "canonical_sha256": "9b363c8893b7517cc56d3660e14ba6957d6234874c900f719ef7f2a01c233530",
+    "chart_controls": 3,
+    "complex_recovery_charts": 4,
+    "determinant_degrees": [
+      9,
+      12
+    ],
+    "independent_prime": 263,
+    "peak_KiB": 24636,
+    "wall_seconds": 3.021922511048615,
+    "whole_identities": 141
+  },
+  "damage_rejections": [
+    {
+      "source_damage": "scaled row",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "ValueError: chart parity/nonnegative power"
+    },
+    {
+      "source_damage": "quadratic coefficient",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "ValueError: coefficient identity: whole-E-quadratic-1"
+    },
+    {
+      "source_damage": "lower equation sign",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "ValueError: cross contents"
+    },
+    {
+      "source_damage": "constant pivot",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "ValueError: coefficient identity: entire-A2"
+    },
+    {
+      "source_damage": "nonprime",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "ValueError: prime check"
+    },
+    {
+      "source_damage": "missing sign",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "ValueError: coefficient identity: universal-signed-determinant-control"
+    },
+    {
+      "source_damage": "adjoint leading",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "ValueError: coefficient identity: fixed-K5"
+    },
+    {
+      "fixture_damage": "coefficient",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "ValueError: value mismatch: record.original_residual[0][0][1]"
+    },
+    {
+      "fixture_damage": "omitted determinant tail",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "ValueError: list length mismatch: record.primitive_determinants[1]"
+    },
+    {
+      "fixture_damage": "boolean alias",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "ValueError: type mismatch: record.prime"
+    },
+    {
+      "fixture_damage": "unit coefficient",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "ValueError: value mismatch: record.unit_U[0]"
+    },
+    {
+      "fixture_damage": "duplicate key",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "ValueError: duplicate fixture key: schema"
+    },
+    {
+      "fixture_damage": "nonfinite",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "ValueError: nonfinite fixture value: NaN"
+    }
+  ],
+  "serial_math_children": true,
+  "native_threads": 1,
+  "per_child_guard_seconds": 45,
+  "unchanged_scope": "1CPU2GiB",
+  "total_seconds": 34.47565704607405
+}
