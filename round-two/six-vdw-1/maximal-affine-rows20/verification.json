@@ -1,0 +1,127 @@
+{
+  "author": "six-vdw-1",
+  "catalogue": {
+    "admissible_antiperiodic_rows": 580,
+    "author": "six-vdw-1",
+    "bad_coset_actual_AP_witnesses": 60,
+    "cosets": 64,
+    "damaged_catalogue_rejections": 9,
+    "positive_rows_checked_in_complete_extensions": 112,
+    "proper_extension_candidates": 63,
+    "proper_locally_admissible_extensions": [
+      153,
+      277,
+      396
+    ],
+    "raw_differences_covered": 1024,
+    "role": "researcher",
+    "scope": "Local extension classification only; no global field/interval consequence asserted.",
+    "status": "COMPLETE_LOCAL_AFFINE_EXTENSION_CATALOGUE_CHECK",
+    "valid_rows_per_coset_histogram": {
+      "0": 2,
+      "10": 16,
+      "12": 14,
+      "16": 4,
+      "4": 8,
+      "6": 2,
+      "8": 18
+    }
+  },
+  "catalogue_sha256": "5d7d345794d7b02dba66c6de65ce1b19e757e48335f350130785433a2512e18e",
+  "child_peak_kib": 19268,
+  "elapsed_seconds": 1.4982205340638757,
+  "full_field_or_interval_witness": false,
+  "generated_catalogue_bytes_identical": true,
+  "maximal": {
+    "actual_local_row_pairs": 24320,
+    "admissible_directions": 64,
+    "author": "six-vdw-1",
+    "bad_coset_actual_AP_witnesses": 60,
+    "base_mask": 72,
+    "basis": [
+      1023,
+      62,
+      124,
+      60,
+      153,
+      277
+    ],
+    "damaged_maximality_certificate_rejections": 7,
+    "field31_encoding": {
+      "column_parity_equations": 120,
+      "four_literal_membership_clauses": 960,
+      "full_field_model_or_witness_computed": false,
+      "independent_coefficient_bits_after_global_palette": 179,
+      "point_variables": 300
+    },
+    "maximal_containing_cube_dimension": 6,
+    "original_cube_dimension": 4,
+    "original_point_identities": 1280,
+    "phase_parity_equations_zero_based": [
+      [
+        0,
+        7,
+        8,
+        9
+      ],
+      [
+        2,
+        5,
+        8,
+        9
+      ],
+      [
+        3,
+        5,
+        7,
+        9
+      ],
+      [
+        4,
+        5,
+        7,
+        8
+      ]
+    ],
+    "raw_differences_covered": 1024,
+    "rejected_directions": 960,
+    "role": "researcher",
+    "row_count": 64,
+    "row_membership_truth_inputs": 1024,
+    "scope": "Unique maximal locally admissible affine extension CONTAINING this chosen16-row cube. Other affine families, nonaffine families and the full field/interval problem remain open.",
+    "status": "COMPLETE_UNIQUE_MAXIMAL_AFFINE64_ROW_CHECK"
+  },
+  "normal_optimized_full_objects_identical": true,
+  "python": "3.12.14",
+  "role": "researcher",
+  "serial_child_receipts": [
+    {
+      "seconds": 0.3053579960251227,
+      "stage": "generate",
+      "stdout_sha256": "f997b2088167a0097c8bce5e7585aae2d135b2c6f8123febe9f3e5f036952e55"
+    },
+    {
+      "seconds": 0.3408761420287192,
+      "stage": "catalogue-normal",
+      "stdout_sha256": "79e5a64089507044d9993f13a7800f62f59ec9689e164b1ca8f000f1c8bc2806"
+    },
+    {
+      "seconds": 0.5052480179583654,
+      "stage": "catalogue-optimized",
+      "stdout_sha256": "79e5a64089507044d9993f13a7800f62f59ec9689e164b1ca8f000f1c8bc2806"
+    },
+    {
+      "seconds": 0.08576729998458177,
+      "stage": "maximal-normal",
+      "stdout_sha256": "de0abc57d0ac7b0e83e7aaee1a7e7b9fdb6f4c054e1f62d4d6a4c6ec1f295e36"
+    },
+    {
+      "seconds": 0.2598315029172227,
+      "stage": "maximal-optimized",
+      "stdout_sha256": "de0abc57d0ac7b0e83e7aaee1a7e7b9fdb6f4c054e1f62d4d6a4c6ec1f295e36"
+    }
+  ],
+  "source_pins_sha256": "96d5ec7a1aa9bc08142fa4dee6f21cf2cd28decd0d7bf042c20f9ccddf2483aa",
+  "status": "COMPLETE_STANDALONE_LOCAL64_SOURCE_REPLAY",
+  "trust": "Same-author separate exact mechanisms and ordinary affine argument; no external review/formalization."
+}
