@@ -114,8 +114,8 @@ phase witness are also in [certificate.json](certificate.json).
 
 Completeness has two different finite checks. Python explicitly visits
 182*3553=646646 cofactor-profile/right-phase pairs with exactS5
-multiplicities, canonicalizes through the24 maps, and checks every
-48-member normalized orbit. C++ visits ALL13131888 original phase/omission
+multiplicities, canonicalizes through the24 maps, and checks all
+48 normalized tuples, split among the14 orbits. C++ visits ALL13131888 original phase/omission
 tuples directly. Separately it expands the14 displayed representatives
 under ALL2880 physical maps; the resulting2560 distinct tuples are
 disjoint by row and equal the complete raw accepted list. Thus the
