@@ -1,0 +1,76 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "date": "2026-10-02",
+  "target_height": 9381,
+  "target_reference": "bafkreicvlta625jrmjtvzxciridxtpw6snsk5ic45icepkprjp5b6h5x3m",
+  "target_source_commit": "9448a2e44321ca515064436826babc878d465a71",
+  "target_source_directory": "round-two/six-books-1/caseII_tagged_leaf",
+  "original_files": [
+    {
+      "name": "EXPECTED.json",
+      "sha256": "6272bd2638d39457faf9e685c2f4d5c94f2c3da7eaacd9b224d6d5542a313612",
+      "bytes": 14173,
+      "url": "https://raw.githubusercontent.com/helgithorskarp/math_results/9448a2e44321ca515064436826babc878d465a71/round-two/six-books-1/caseII_tagged_leaf/EXPECTED.json"
+    },
+    {
+      "name": "derive.py",
+      "sha256": "c39a7eedc0248b6a09860869b136e2b40982540015c33618ab3951427c1827f5",
+      "bytes": 6600,
+      "url": "https://raw.githubusercontent.com/helgithorskarp/math_results/9448a2e44321ca515064436826babc878d465a71/round-two/six-books-1/caseII_tagged_leaf/derive.py"
+    },
+    {
+      "name": "verify.py",
+      "sha256": "ee2c45a7ccba77c75b8e66457425a38d4212ac2ad45e7b4e81cb77b8d333e2bc",
+      "bytes": 11426,
+      "url": "https://raw.githubusercontent.com/helgithorskarp/math_results/9448a2e44321ca515064436826babc878d465a71/round-two/six-books-1/caseII_tagged_leaf/verify.py"
+    }
+  ],
+  "first_independent_seal": {
+    "sealed_at_utc": "2026-10-02T12:28:54.785010+00:00",
+    "source_sha256": "9d1b6b4ed652685eaf27803972b0a7ed9714ccf065772dbd0bc91c8411221a6b",
+    "whole_record_sha256": "614e8b9df7940cd35fc86d8f1ed1867f5b2da6ddfb8d64344ef0c889397d9e56",
+    "whole_record_bytes": 1031400,
+    "projection_rows": 3578,
+    "actual_endpoint_survivors": 0,
+    "tested_row_triples": 262144,
+    "target_executable_and_EXPECTED_read": false
+  },
+  "earlier_seal": {
+    "sealed_at_utc": "2026-10-02T12:23:49.268158+00:00",
+    "author_executable_or_frozen_record_seen": false,
+    "source_sha256": "de42c26caaac619d7d57f240b7fb34264c3dac753134bc7209c2e9e47dffe9f6",
+    "record_sha256": "06eb1c8410bbb1513a8b6214a8f3b42e5b48a3d8b184f9b7159a0681a7038d8a",
+    "summary": {
+      "SX_frames": 20520,
+      "T_low_histogram": {
+        "000": 96,
+        "001": 6,
+        "010": 6,
+        "100": 108,
+        "101": 6,
+        "110": 6
+      },
+      "compatible_T_row_pairs": 23040,
+      "endpoint_survivors": 0,
+      "method": "independent14-point physical-page projection; all8 omitted Y points free",
+      "projection_rows": 228,
+      "tested_T_rows": 25725
+    }
+  },
+  "independence": "Complete physical-row engine and result frozen before target executable/EXPECTED inspection. The set engine was written before that inspection and matched every mathematical row before its initial primary-baseline color guard failed. The primary fixture uses off-diagonal zero as red; fixing that baseline convention left the new mathematical engine unchanged. The late208-interface adapter was written afterward, imports no author executable, and matches every original entry.",
+  "public_result_sha256": "51ac34a0eb99fe5127309b60871f86f0be5a9602171072fdf38ea7d91238c1db",
+  "generated_corpus_policy": "1031400-byte complete record stays in scratch; compact digest and independently regenerating source suffice.",
+  "resource_limits": "unchanged1CPU2GiB; native threads1; serial60-second stage guards; original internal30-second guard unchanged",
+  "primary_literature": {
+    "paper": "https://arxiv.org/pdf/2407.07285",
+    "journal": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v32i4p64",
+    "baseline": "https://github.com/gwen-mckinley/ramsey-books-wheels/blob/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "status_checked": "2026-10-02",
+    "interval": [
+      22,
+      23
+    ],
+    "historical_priority": "not asserted"
+  }
+}

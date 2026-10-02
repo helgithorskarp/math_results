@@ -1,0 +1,78 @@
+{
+  "guard_seconds_per_stage": 60,
+  "numerical_threads": 1,
+  "python": "3.11.2",
+  "runs": [
+    {
+      "optimized": false,
+      "output_bytes": 1169,
+      "peak_child_rss_kib": 30100,
+      "seconds": 25.217114,
+      "sha256": "51ac34a0eb99fe5127309b60871f86f0be5a9602171072fdf38ea7d91238c1db",
+      "stage": "independent"
+    },
+    {
+      "optimized": false,
+      "output_bytes": 14173,
+      "peak_child_rss_kib": 30100,
+      "seconds": 6.868786,
+      "sha256": "6272bd2638d39457faf9e685c2f4d5c94f2c3da7eaacd9b224d6d5542a313612",
+      "stage": "original-producer"
+    },
+    {
+      "optimized": false,
+      "output_bytes": 14173,
+      "peak_child_rss_kib": 30100,
+      "seconds": 11.224575,
+      "sha256": "6272bd2638d39457faf9e685c2f4d5c94f2c3da7eaacd9b224d6d5542a313612",
+      "stage": "original-checker"
+    },
+    {
+      "optimized": false,
+      "output_bytes": 54,
+      "peak_child_rss_kib": 30100,
+      "seconds": 11.544951,
+      "sha256": "afed9e6b3eb874df5d81dd870b8b9b2be419d7b013cca758561850a95850887e",
+      "stage": "original-controls"
+    },
+    {
+      "optimized": true,
+      "output_bytes": 1169,
+      "peak_child_rss_kib": 32524,
+      "seconds": 25.606136,
+      "sha256": "51ac34a0eb99fe5127309b60871f86f0be5a9602171072fdf38ea7d91238c1db",
+      "stage": "independent"
+    },
+    {
+      "optimized": true,
+      "output_bytes": 14173,
+      "peak_child_rss_kib": 32524,
+      "seconds": 6.763946,
+      "sha256": "6272bd2638d39457faf9e685c2f4d5c94f2c3da7eaacd9b224d6d5542a313612",
+      "stage": "original-producer"
+    },
+    {
+      "optimized": true,
+      "output_bytes": 14173,
+      "peak_child_rss_kib": 32524,
+      "seconds": 11.455078,
+      "sha256": "6272bd2638d39457faf9e685c2f4d5c94f2c3da7eaacd9b224d6d5542a313612",
+      "stage": "original-checker"
+    },
+    {
+      "optimized": true,
+      "output_bytes": 54,
+      "peak_child_rss_kib": 32524,
+      "seconds": 12.911372,
+      "sha256": "afed9e6b3eb874df5d81dd870b8b9b2be419d7b013cca758561850a95850887e",
+      "stage": "original-controls"
+    }
+  ],
+  "scope": "unchanged1CPU2GiB",
+  "serial_math_children": 1,
+  "verified": true,
+  "prepublication_corrections": [
+    "Primary fixture zero=red convention corrected in separate baseline; new theorem engine unchanged.",
+    "Frozen compact output compared as complete canonical bytes to preserve integer-key JSON normalization."
+  ]
+}
