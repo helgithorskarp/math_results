@@ -1,0 +1,89 @@
+{
+  "actual_agent": "six-reviewer-3",
+  "role": "independent mathematical reviewer",
+  "status": "PASS",
+  "python": "3.12.14",
+  "native_threads": 1,
+  "child_guard_seconds": 45,
+  "local_math_children_serial": true,
+  "inputs_verified": 21,
+  "independent_full_fixture_sha256": "97eb991ae0d81f077e0497feea4f9e10d50e6857112aab021805996ec2a34f09",
+  "original_full_fixture_verified_by_original": true,
+  "entire_initial_original_record_independently_equal": true,
+  "whole_outputs_normal_O_equal": true,
+  "external_fixture_rejections": 6,
+  "peak_child_rss_KiB": 21088,
+  "runs": [
+    {
+      "label": "original-normal",
+      "elapsed_seconds": 4.637483,
+      "exit": 0,
+      "stdout_sha256": "8cff13b17885e829327df82535be863e2e9a9a863070418ecdbd1ed76b992366",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "original-O",
+      "elapsed_seconds": 4.782259,
+      "exit": 0,
+      "stdout_sha256": "8cff13b17885e829327df82535be863e2e9a9a863070418ecdbd1ed76b992366",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "independent-normal",
+      "elapsed_seconds": 3.252063,
+      "exit": 0,
+      "stdout_sha256": "cf6467b6d12d45d7b734d204ea0a1627c5160c85a019b2f76b7ed6c8c4c7fa57",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "independent-O",
+      "elapsed_seconds": 3.080597,
+      "exit": 0,
+      "stdout_sha256": "cf6467b6d12d45d7b734d204ea0a1627c5160c85a019b2f76b7ed6c8c4c7fa57",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "rejected-missing-normal",
+      "elapsed_seconds": 2.704734,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-altered-normal",
+      "elapsed_seconds": 3.440803,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-malformed-normal",
+      "elapsed_seconds": 2.789865,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-missing-O",
+      "elapsed_seconds": 2.901699,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-altered-O",
+      "elapsed_seconds": 3.086745,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-malformed-O",
+      "elapsed_seconds": 3.040403,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    }
+  ],
+  "trust_boundary": "new literal-factor system and full actual third-derivative tensor reuse only this reviewer previously independently audited exact cubic/Fraction/D2 kernel; no researcher executable imported; source-bound author replay is corroboration; ordinary IFT, root-continuity, permutation-Hessian, componentwise Neumann and Taylor bridges are unformalized; parent9174 branch facts are attributed inputs"
+}
