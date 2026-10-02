@@ -1,0 +1,70 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+  "platform": "Linux-6.1.0-53-cloud-amd64-x86_64-with-glibc2.36",
+  "normal": {
+    "status": "PASS_COLD_THREE_HUB_REVIEW",
+    "expected_sha256": "a2abb1ebd8c8b6c631c37f8f8db356df2f94b6a82989d28a3203c6f99ff0264f",
+    "main_survivors": 0,
+    "coarse_rows": 59,
+    "refined_rows": 74,
+    "author_budget_valid": 164,
+    "seconds": 1.4307788150035776,
+    "peak_rss_kib": 17964
+  },
+  "optimized": {
+    "status": "PASS_COLD_THREE_HUB_REVIEW",
+    "expected_sha256": "a2abb1ebd8c8b6c631c37f8f8db356df2f94b6a82989d28a3203c6f99ff0264f",
+    "main_survivors": 0,
+    "coarse_rows": 59,
+    "refined_rows": 74,
+    "author_budget_valid": 164,
+    "seconds": 1.5712234419770539,
+    "peak_rss_kib": 19980
+  },
+  "complete_result_bytes_equal": true,
+  "complete_result_equal_to_preceding_frozen_record": true,
+  "canonical_result_sha256": "a2abb1ebd8c8b6c631c37f8f8db356df2f94b6a82989d28a3203c6f99ff0264f",
+  "record_byte_file_sha256": "351b5e494624b344d6e88e83135c2dc1939f1c90bcd6ee6943a75515f03ab3e7",
+  "ordered_cases": 92,
+  "coarse_budget_valid_inventories": 1023,
+  "main_survivors": 0,
+  "original_refined_inventories": 164,
+  "original_mathematical_readout_equal": true,
+  "whole_refined_inventory_sha256": "fcbfd70c5c730f6901a2ee8e109e2f599978bbc71a6866fd5fc290d41e5a6080",
+  "semantic_control_record": {
+    "aggregate_survivors_are_not_codes": true,
+    "damage_rejections": [
+      "missing-fixture",
+      "duplicate-fixture",
+      "missing-quadruple",
+      "out-of-domain-point",
+      "repeated-point",
+      "repeated-pair",
+      "false-unit-two-hub-charge",
+      "out-of-contract-inventory",
+      "duplicate-positive-word"
+    ],
+    "flat_complete_inventory_counts": [
+      52,
+      6,
+      47,
+      5
+    ],
+    "isolated_hub_scope_controls": 3,
+    "relaxed_unit_catalog_aggregate_survivors": [
+      12,
+      0,
+      7,
+      0
+    ],
+    "status": "PASS_SEMANTIC_AND_DOMAIN_CONTROLS",
+    "whole74_to59_row_projection": true
+  },
+  "P7_proof_status": "Ordinary unformalized selector importing reviewed9141 local63; finite sector arithmetic checked, not a new finite carrier replay.",
+  "resource_scope": "One CPU,2GiB, all numerical threads1, serial heavy jobs",
+  "inventory_guard_seconds": 20,
+  "guard_hit": false,
+  "resource_escalation": false
+}

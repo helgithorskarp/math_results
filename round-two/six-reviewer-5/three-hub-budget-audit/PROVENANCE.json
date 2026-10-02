@@ -1,0 +1,261 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "date_utc": "2026-10-02",
+  "target_ref": "bafkreigbac7xahnbctmqat4fnu7kznubin4ud2ibq2sreddsg4l7lehfya",
+  "target_source_commit": "6089c57659f6be672b466aaf77ddf25e0467a685",
+  "initial_graph_index": 9184,
+  "signed_refresh_index": 9212,
+  "initial_target_body_bytes": 16052,
+  "initial_checker_chronology_seal": {
+    "prototype_sha256": "15ae8bd65df3fe6766372b0d61584e594592367023fcbd5bb321cccb740eea81",
+    "result_sha256": "99c8b229f67a6afd9e50c8ecdd61bfe2a62a19bcddcfb36d792e4367d3e1b31a",
+    "first_independent_all_profileA_boundary_survivors": 0,
+    "researcher_executable_read_before_this_seal": false
+  },
+  "chronology_trust": "Reviewer-recorded, not external timestamp certification. First checker completed before researcher executable source inspection. Refined flags subsequently added only for full comparison; no researcher executable run/imported.",
+  "generic_catalog_imported_not_recomputed": true,
+  "unit_data_credit": {
+    "author": "six-code-2",
+    "graph_height": 8720,
+    "source_commit": "69f2312bb468eb59b8ab3d8978fe19b3d86cf58a",
+    "source_path": "round-two/six-code-2/free_involution_upper68/fixtures.json",
+    "symmetry_specific_bound_imported": false
+  },
+  "positive_witness_credit": {
+    "author": "six-code-2",
+    "graph_height": 9047,
+    "source_commit": "0d6357edb0dc8bf703d380362830cccf6169e98c",
+    "source_path": "round-two/six-code-2/swapped_pair_five_upper69/WITNESS69.json",
+    "upper_bound_premise": false
+  },
+  "original_expected_credit": {
+    "author": "six-code-1",
+    "source_commit": "6089c57659f6be672b466aaf77ddf25e0467a685",
+    "source_path": "round-two/six-code-1/three_unsaturated_pair_total/EXPECTED.json",
+    "used_only_for_comparison": true
+  },
+  "inputs": [
+    {
+      "path": "fixtures.json",
+      "bytes": 18762,
+      "sha256": "c188200792c201bdb44ea1667a8a70255c4e40f04fee6c334c98ecfa650113e7"
+    },
+    {
+      "path": "WITNESS69.json",
+      "bytes": 815,
+      "sha256": "f5b8ed6bd61a3767085248ee84e87f48f8e602626755288d2d588a345d237bb2"
+    },
+    {
+      "path": "AUTHOR_EXPECTED.json",
+      "bytes": 2843,
+      "sha256": "4128b9d8122f2f7848ce5dcf0234e9fe35be610440d9bdfb30faaa864a74df5b"
+    }
+  ],
+  "dependencies_and_context": [
+    {
+      "relation": "about",
+      "ref": "bafkreig3dlkcqiumpd67ecdgjxtbm6run7lhl2qdna4trqqeif2kyqoque",
+      "height": 7520,
+      "kind": "problem_statement",
+      "title": "Determine the constant-weight packing number A(18,6,5)",
+      "source_commit_mentions": [
+        "c7c8b5c8cce7ccf723e00ad439f62f7747eba5d9"
+      ]
+    },
+    {
+      "relation": "about",
+      "ref": "bafkreicupjfiifk3hxyae6kujktisqz2hab53ulyevx3jltlbtyeqbvmnu",
+      "height": 7520,
+      "kind": "problem_statement",
+      "title": "Determine A(18,6,5): 5-subset packing on 18 points",
+      "source_commit_mentions": []
+    },
+    {
+      "relation": "about",
+      "ref": "bafkreigfiqqq7dtlqhrdgi2s7vxhyd2zabi3hesza2q5sckh4azomebmq4",
+      "height": 7520,
+      "kind": "problem_statement",
+      "title": "Constant-weight code A(18,6,5): determine the 69--72 gap",
+      "source_commit_mentions": [
+        "7b4ddf424ca0a1edbc8803e9e1b21ea321bfa1bc"
+      ]
+    },
+    {
+      "relation": "verifies",
+      "ref": "bafkreigbac7xahnbctmqat4fnu7kznubin4ud2ibq2sreddsg4l7lehfya",
+      "height": 9180,
+      "kind": "lemma",
+      "title": "A(18,6,5): replication profile17/19/19 at71 forces total hub-pair multiplicity at least7",
+      "source_commit_mentions": [
+        "6089c57659f6be672b466aaf77ddf25e0467a685",
+        "7351f4bf96ce74aa6e2074413215669d5ae3240c",
+        "9ece64b2e910e80df829be899217e2a43bda0b5c"
+      ]
+    },
+    {
+      "relation": "refines",
+      "ref": "bafkreigbac7xahnbctmqat4fnu7kznubin4ud2ibq2sreddsg4l7lehfya",
+      "height": 9180,
+      "kind": "lemma",
+      "title": "A(18,6,5): replication profile17/19/19 at71 forces total hub-pair multiplicity at least7",
+      "source_commit_mentions": [
+        "6089c57659f6be672b466aaf77ddf25e0467a685",
+        "7351f4bf96ce74aa6e2074413215669d5ae3240c",
+        "9ece64b2e910e80df829be899217e2a43bda0b5c"
+      ]
+    },
+    {
+      "relation": "depends_on",
+      "ref": "bafkreibz6cr3e3mjpadu4jjr5n3kzwlji4ijgzbto7mw66xoqtyaa37ohe",
+      "height": 8323,
+      "kind": "review",
+      "title": "Independent upper71 proof and sharp saturated-point bound from two clique certificates",
+      "source_commit_mentions": [
+        "02c1569568854e575f8b176ea07d552737a7da84",
+        "152fd9a715e46a51364a91b1fd67349dced849f0"
+      ]
+    },
+    {
+      "relation": "depends_on",
+      "ref": "bafkreic2wb2z6reycvrsrywbgjxdtjl5f7eqkbe2yk2xtco2su6tgn43aq",
+      "height": 8933,
+      "kind": "review",
+      "title": "Independent generic twenty-star census confirms 23 classes and full automorphism groups",
+      "source_commit_mentions": [
+        "69f2312bb468eb59b8ab3d8978fe19b3d86cf58a",
+        "0509c3808f44b45fd3c333a10cf36bd329003450",
+        "b30522518eb6ecec2facd98716fec2403b1391b3"
+      ]
+    },
+    {
+      "relation": "depends_on",
+      "ref": "bafkreigev5jeh2tuevfwh53zt4o4dasxgffkgfeof737y4yb3io6a2enp4",
+      "height": 8989,
+      "kind": "review",
+      "title": "Independent multiplicity-four audit repairs the structure bridge and removes scalar enumeration",
+      "source_commit_mentions": [
+        "4161c69604a7fe30d3598cae9e9ca1bf33554748",
+        "4983b8eca2f526f445be39cce7de0a41ef66836e",
+        "efc8f0792caf5d05d745165c55d42d45c9945058",
+        "053622a2c8a24c2e83a6702e0d0648ede8031270",
+        "3ab925702e52e327e647d57254bfd72f6608b0e3",
+        "69f2312bb468eb59b8ab3d8978fe19b3d86cf58a",
+        "e5f6f9cc00a7bd3b590d0469b392219fae05cfc0",
+        "7b27b9c58b3e218172eaf9b1c0986d48e706e29b"
+      ]
+    },
+    {
+      "relation": "depends_on",
+      "ref": "bafkreiftuehz5sjq2xfcnptcxe3kgnlebt2uxwtnuocnif7cvej6d7744e",
+      "height": 8356,
+      "kind": "lemma",
+      "title": "A(18,6,5): two saturated mixed stars sharing an isolated deficit-two hub cannot meet at multiplicity four",
+      "source_commit_mentions": [
+        "efc8f0792caf5d05d745165c55d42d45c9945058",
+        "63cf96f79751e40ce49aa61d8b4c00fd334a1387"
+      ]
+    },
+    {
+      "relation": "depends_on",
+      "ref": "bafkreig3ciisnimaakp3xtfhbdjw74mhnyofioqpb7fuvupex4kx3feyky",
+      "height": 8397,
+      "kind": "lemma",
+      "title": "A(18,6,5): two unit saturated stars with a common isolated deficient hub cannot meet at multiplicity four",
+      "source_commit_mentions": [
+        "053622a2c8a24c2e83a6702e0d0648ede8031270",
+        "43dc0a95a2232b6b9ff1e85d18a1a34fe5705bbc"
+      ]
+    },
+    {
+      "relation": "depends_on",
+      "ref": "bafkreidxvrcfr7vmvsldakldkluxqblqtzwnqrxdvu56m5sufdm62fjgly",
+      "height": 8438,
+      "kind": "lemma",
+      "title": "A(18,6,5): common isolated-hub mixed and unit stars cannot join at multiplicity four",
+      "source_commit_mentions": [
+        "3ab925702e52e327e647d57254bfd72f6608b0e3"
+      ]
+    },
+    {
+      "relation": "depends_on",
+      "ref": "bafkreiewiqmpeig4hs4vmz2qgdt3lsim6lk7y7ph5tlvbzovbtmrykc3lm",
+      "height": 9141,
+      "kind": "review",
+      "title": "Independent complete two-star audit: sharp local bounds66,63 and58",
+      "source_commit_mentions": [
+        "bde7ea936c220c567874957906688597da8387d7",
+        "889e97cfb0062c4af143608b9922e4acbce28784",
+        "0509c3808f44b45fd3c333a10cf36bd329003450",
+        "02c1569568854e575f8b176ea07d552737a7da84",
+        "69f2312bb468eb59b8ab3d8978fe19b3d86cf58a",
+        "e2f9cc128036b909d4d45a88ba2c5b72f1db8e2d",
+        "e26ac0cd59844e9aee9eb8f48e513ffd20910925",
+        "4977fd9bc9a81ca4317c596935d48105028e3d54"
+      ]
+    },
+    {
+      "relation": "cites",
+      "ref": "bafkreift3ug4q22frmiizlidbayv4gu6wor4ggs3g36cvqkbh46eblyp44",
+      "height": 8368,
+      "kind": "lemma",
+      "title": "A(18,6,5): a 71-word deficit inequality and linear-triple reductions for one unsaturated point",
+      "source_commit_mentions": [
+        "3fadb08944a352c8a65b92d31413100553d3dd2f",
+        "4f3898f618e42297a8bc0e144ac3a57b392ecd15",
+        "43dc0a95a2232b6b9ff1e85d18a1a34fe5705bbc",
+        "02c1569568854e575f8b176ea07d552737a7da84"
+      ]
+    },
+    {
+      "relation": "cites",
+      "ref": "bafkreicxclg3upt7ppxmw2udcefdn2cqfxox7jr5ud7rjcyyxf3dcb234e",
+      "height": 8720,
+      "kind": "lemma",
+      "title": "A(18,6,5): free involutions force upper68 and sharp saturated-point upper62",
+      "source_commit_mentions": [
+        "69f2312bb468eb59b8ab3d8978fe19b3d86cf58a"
+      ]
+    },
+    {
+      "relation": "cites",
+      "ref": "bafkreiamaimccyy3qiuuhg7uvt52egmcbwemlzbc7glc57okl5rf3eqdvq",
+      "height": 9176,
+      "kind": "lemma",
+      "title": "A(18,6,5): an isolated deficient hub and unit saturated partner force upper67",
+      "source_commit_mentions": [
+        "9ece64b2e910e80df829be899217e2a43bda0b5c"
+      ]
+    },
+    {
+      "relation": "cites",
+      "ref": "bafkreidgygekvhfqfqqkrthgzuvqdxqakmqd27gs6lhz6j2k3hkwny5e7q",
+      "height": 9047,
+      "kind": "lemma",
+      "title": "A(18,6,5): sharp69 for an exchanged saturated multiplicity-five pair, with an order-four Steiner trade",
+      "source_commit_mentions": [
+        "0d6357edb0dc8bf703d380362830cccf6169e98c",
+        "69f2312bb468eb59b8ab3d8978fe19b3d86cf58a",
+        "0509c3808f44b45fd3c333a10cf36bd329003450"
+      ]
+    }
+  ],
+  "new_context9209": {
+    "ref": "bafkreifycuaftnqglvhqtwl47wolczpr3ugnll2j6fxx6dvqnwy2ljto5m",
+    "source_commit": "223ff72bacf7d13c0ad76588304d11e02a46dd79",
+    "full_body_read": true,
+    "numerical_bound_imported": false,
+    "independently_reviewed_here": false
+  },
+  "P7_contemporaneous_candidate_credit": {
+    "agent": "six-code-1",
+    "role": "researcher",
+    "campaign_chat_message": 1430,
+    "reported_private_candidate": "P7 E0 selector, same7/3/3 pattern with earlier triangle-filtered9045/9076 local interface",
+    "private_file_reproduced": false,
+    "private_result_is_a_premise": false,
+    "reviewer_method": "Independently checked ordinary selector importing complete unfiltered9141 lambda_xu4 bound63; no triangle bridge needed.",
+    "historical_first_claim": false
+  },
+  "omitted_large_data": "Whole regenerated inventories and private run logs; public source regenerates all cases and compact summaries."
+}
