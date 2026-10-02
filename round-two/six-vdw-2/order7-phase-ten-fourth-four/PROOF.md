@@ -16,7 +16,7 @@ The exact-ten selected phase has **at most ONE nonsingleton run**. If it has
 one, its length is3,4,5 or6; every other selected run is a singleton.
 A length-three run has exactly one background position after it. A length-six
 run has precisely five background runs, one of length6 and four of length7.
-All singleton phases remain possible under these necessary restrictions.
+The class with ten singleton selected runs remains open.
 
 This strengthens [the actual TWO lemma](../order7-phase-ten-third-two/PROOF.md),
 source888fd703e24e2877398fa49983374a03f9828d60, actual LEMMA9675/0,
