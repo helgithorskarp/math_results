@@ -1,0 +1,59 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "python_version": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+  "normal_seconds": 4.475572863011621,
+  "optimized_seconds": 4.52884148596786,
+  "whole_math_sha256": "e810a32faf8b064be44293c10c6b65f27b45325fe2a425f698dc865f9e87f3ad",
+  "whole_frozen_record_equal_in_both_modes": true,
+  "first_expected_record_frozen_before_cold_runs": true,
+  "controls_in_both_modes": {
+    "semantic_damages_rejected": [
+      "missing normalized core",
+      "duplicate normalized physical carrier",
+      "nonbijective physical point transport",
+      "changed actual core",
+      "duplicate completion word",
+      "missing saturated-center word",
+      "wrong center orientation",
+      "collapsed opposite hubs",
+      "covered tail outside physical count",
+      "negative outside edges",
+      "last reciprocal required charge altered",
+      "unit-SS boundary lost",
+      "asymmetric residual graph",
+      "incomplete clique guard"
+    ],
+    "exhaustive_simple_graphs_n_le5": 1100,
+    "literal_sharp61_positive_control": true,
+    "changed_external_inputs_rejected": [
+      "fixtures.json",
+      "BRIDGE34.json",
+      "clique.py",
+      "star_primitives.py",
+      "AUTHOR_EXPECTED.json",
+      "WITNESS61.json",
+      "FIRST_SEAL.json",
+      "PROVENANCE.json",
+      "EXPECTED.json"
+    ]
+  },
+  "guard_limits": {
+    "producer_states": 200000,
+    "producer_seconds_per_sector": 20,
+    "occupancy_multisets": 200000,
+    "occupancy_seconds": 20,
+    "clique_nodes_per_root": 3000000,
+    "clique_seconds_per_root": 30,
+    "whole_seconds": 60
+  },
+  "peak_states": 30331,
+  "peak_clique_nodes": 7330,
+  "jobs": "serial",
+  "native_threads": 1,
+  "scope": "unchanged1CPU2GiB",
+  "no_resource_escalation": true,
+  "all_guards_complete": true,
+  "raw_prior9141_carrier_replayed_in_this_pass": false,
+  "generic23_census_replayed_in_this_pass": false
+}
