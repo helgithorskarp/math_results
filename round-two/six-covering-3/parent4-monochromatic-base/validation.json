@@ -1,0 +1,140 @@
+{
+  "agent": "six-covering-3",
+  "role": "researcher",
+  "utc": "2026-10-02T18:53:40.558653+00:00",
+  "python": "3.11.2",
+  "dependencies": "standard library only",
+  "one_CPU_child_at_a_time": true,
+  "threads": 1,
+  "child_guard_seconds": 20,
+  "maximum_child_RSS_KiB": 26492,
+  "children": [
+    {
+      "program": "compute.py",
+      "flags": [
+        "-B"
+      ],
+      "seconds": 3.7211818899959326,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "record": {
+        "full_expected_record_matches": true,
+        "all_core_vectors": 1866240,
+        "all_joint_vectors": 2419200,
+        "all_marginal_vectors": 864,
+        "full_records_sha256": "3184eca8d3512c86ead0d677b0e96299514c12010edffd2fe7a1f6ee55fc8d0f"
+      }
+    },
+    {
+      "program": "audit.py",
+      "flags": [
+        "-B"
+      ],
+      "seconds": 6.815434535034001,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "record": {
+        "agent": "six-covering-3",
+        "all_conditional_seven_vectors": 2419200,
+        "all_original_core_vectors": 1866240,
+        "all_original_individual_phase_capacities_remainder_checked": true,
+        "all_streaming_marginal_rows_sha256": "948145b596117c539249db3034b5d8a115c07e36cb44890c85075ce812ec1448",
+        "all_streaming_marginal_vectors": 864,
+        "certificate_damage_controls": [
+          "wrong_prefix_phase",
+          "missing_original_base",
+          "duplicate_original_base",
+          "wrong_original_core",
+          "wrong_original_extra",
+          "missing_color_case",
+          "wrong_required_set_size",
+          "wrong_four_resource_threshold",
+          "wrong_seven_resource_threshold",
+          "dropped_core_vector",
+          "dropped_seven_vector",
+          "dropped_marginal_vector",
+          "incomplete_stream",
+          "wrong_conditional_maximum",
+          "wrong_original_worst_phase",
+          "wrong_worst_marginal",
+          "wrong_all_core_digest",
+          "wrong_all_joint_digest",
+          "wrong_all_marginal_digest",
+          "unconditional103_field"
+        ],
+        "color1_marginal_frontier_complete": true,
+        "color1_one_parent_BASE_slice_excluded": true,
+        "color2_one_parent_BASE_slice_excluded": true,
+        "complete_individual_core_and_joint_screens": true,
+        "conditional_marginal_deficit": 103,
+        "conditional_marginal_max_total": 1190,
+        "formalization": false,
+        "full_records_sha256": "3184eca8d3512c86ead0d677b0e96299514c12010edffd2fe7a1f6ee55fc8d0f",
+        "independent_external_review": false,
+        "role": "researcher",
+        "same_author_independent_algorithm": true,
+        "unconditional103_hole_bound_claimed": false
+      }
+    },
+    {
+      "program": "audit.py",
+      "flags": [
+        "-O",
+        "-B"
+      ],
+      "seconds": 6.853885144926608,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "record": {
+        "agent": "six-covering-3",
+        "all_conditional_seven_vectors": 2419200,
+        "all_original_core_vectors": 1866240,
+        "all_original_individual_phase_capacities_remainder_checked": true,
+        "all_streaming_marginal_rows_sha256": "948145b596117c539249db3034b5d8a115c07e36cb44890c85075ce812ec1448",
+        "all_streaming_marginal_vectors": 864,
+        "certificate_damage_controls": [
+          "wrong_prefix_phase",
+          "missing_original_base",
+          "duplicate_original_base",
+          "wrong_original_core",
+          "wrong_original_extra",
+          "missing_color_case",
+          "wrong_required_set_size",
+          "wrong_four_resource_threshold",
+          "wrong_seven_resource_threshold",
+          "dropped_core_vector",
+          "dropped_seven_vector",
+          "dropped_marginal_vector",
+          "incomplete_stream",
+          "wrong_conditional_maximum",
+          "wrong_original_worst_phase",
+          "wrong_worst_marginal",
+          "wrong_all_core_digest",
+          "wrong_all_joint_digest",
+          "wrong_all_marginal_digest",
+          "unconditional103_field"
+        ],
+        "color1_marginal_frontier_complete": true,
+        "color1_one_parent_BASE_slice_excluded": true,
+        "color2_one_parent_BASE_slice_excluded": true,
+        "complete_individual_core_and_joint_screens": true,
+        "conditional_marginal_deficit": 103,
+        "conditional_marginal_max_total": 1190,
+        "formalization": false,
+        "full_records_sha256": "3184eca8d3512c86ead0d677b0e96299514c12010edffd2fe7a1f6ee55fc8d0f",
+        "independent_external_review": false,
+        "role": "researcher",
+        "same_author_independent_algorithm": true,
+        "unconditional103_hole_bound_claimed": false
+      }
+    }
+  ],
+  "source_sha256": {
+    "compute.py": "684488171adf56ef4dca6fa87cb824449a7dfde95a8289a84d36287d78de6cf6",
+    "audit.py": "9d6270b6231b1e6af3a1de1fbeb25d5d37c53690af8ff00fb36ef733e6681113",
+    "expected.json": "4ad69b3ff1f5ab813b34f0cf6a9f3cd6d1f00a9f35f19b91c2451173b330cb50"
+  },
+  "ordinary_bridge_unformalized": true,
+  "external_independent_review": false,
+  "full_cover_or_global_Lmin8_improvement": false
+}
