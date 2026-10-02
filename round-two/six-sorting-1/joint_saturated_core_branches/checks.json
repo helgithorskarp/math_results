@@ -1,0 +1,119 @@
+{
+  "agent": "six-sorting-1",
+  "default_repository_producer_boundary_checked": true,
+  "expected_finite_verifier_output": {
+    "agent": "six-sorting-1",
+    "ceiling": 17592186044416,
+    "certificate_sha256": "2475791f4357ed4fdf6ffee2b22bcc358b0346af045dceb6561ba709c7b09a2f",
+    "control_metrics": {
+      "control_free_assignments": 7680,
+      "control_gate_evaluations": 15360,
+      "outer_free_assignments": 896,
+      "outer_gate_evaluations": 28672,
+      "positive7_inputs": 128,
+      "positive_inner_free_assignments": 10752,
+      "positive_inner_gate_evaluations": 207872,
+      "positive_outer_free_assignments": 256,
+      "positive_outer_gate_evaluations": 19968,
+      "pruned_positive_inputs": 256,
+      "pruning_function_assignments": 768,
+      "wire_permutation_controls": 24
+    },
+    "damages_rejected": 8,
+    "external_review_claimed": false,
+    "first_slack_controls": {
+      "pre_slack_gate_controls": 11220,
+      "pre_slack_high_states": 51,
+      "pre_slack_low_states": 4,
+      "simultaneous_first_slack_controls": 380
+    },
+    "forest_audit": [
+      {
+        "equal_cost_controls": 115,
+        "h": 5,
+        "high_forests": 65,
+        "live_gate_controls": 4290,
+        "low_forests": 13
+      },
+      {
+        "equal_cost_controls": 115,
+        "h": 6,
+        "high_forests": 65,
+        "live_gate_controls": 4290,
+        "low_forests": 13
+      },
+      {
+        "equal_cost_controls": 115,
+        "h": 7,
+        "high_forests": 65,
+        "live_gate_controls": 4290,
+        "low_forests": 13
+      },
+      {
+        "equal_cost_controls": 115,
+        "h": 9,
+        "high_forests": 65,
+        "live_gate_controls": 4290,
+        "low_forests": 13
+      },
+      {
+        "equal_cost_controls": 115,
+        "h": 10,
+        "high_forests": 65,
+        "live_gate_controls": 4290,
+        "low_forests": 13
+      }
+    ],
+    "joint_gates": 5,
+    "literal_roots": 135,
+    "minimum_selected_mass": 19791209299968,
+    "proof_metrics": {
+      "base_boolean_inputs": 8192,
+      "base_pair_free_assignments": 319488,
+      "base_pair_gate_evaluations": 7348224,
+      "inner_free_assignments": 964096,
+      "inner_gate_evaluations": 7160832,
+      "outer_free_assignments": 62464,
+      "outer_gate_evaluations": 1998848,
+      "pruning_function_assignments": 62464
+    },
+    "replay_records_sha256": "a0019f38fb3135d10b792d7139ff19addd0b00a040b14dcaa9282b68fbe793f3",
+    "role": "researcher",
+    "same_author_algorithmic_independence": true,
+    "selected_original_domains": 488,
+    "status": "COMPLETE_JOINT_SATURATION_CERTIFICATE_VERIFIED",
+    "unique_proof_inner_words": 269
+  },
+  "guard_seconds_per_stage": 55,
+  "normal_optimized_certificate_bytes_match": true,
+  "normal_optimized_finite_fields_match": true,
+  "normal_resources": {
+    "maximum_rss_kib": 23652,
+    "seconds": 10.579358990013134
+  },
+  "optimized_producer_resources": {
+    "maximum_rss_kib": 32720,
+    "seconds": 1.5688533280044794
+  },
+  "optimized_resources": {
+    "maximum_rss_kib": 26608,
+    "seconds": 10.865562151011545
+  },
+  "producer_receipt": {
+    "agent": "six-sorting-1",
+    "certificate_bytes": 52544,
+    "certificate_sha256": "2475791f4357ed4fdf6ffee2b22bcc358b0346af045dceb6561ba709c7b09a2f",
+    "distinct_inner_words": 269,
+    "maximum_rss_kib": 30444,
+    "minimum_selected_mass": 19791209299968,
+    "replay_records_sha256": "a0019f38fb3135d10b792d7139ff19addd0b00a040b14dcaa9282b68fbe793f3",
+    "role": "researcher",
+    "roots": 135,
+    "seconds": 1.722763036028482,
+    "selected_domains": 488,
+    "status": "JOINT_SATURATION_CERTIFICATE_REGENERATED"
+  },
+  "python": "3.11.2",
+  "role": "researcher",
+  "threads": 1
+}
