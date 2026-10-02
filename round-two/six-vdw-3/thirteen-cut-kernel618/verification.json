@@ -1,0 +1,142 @@
+{
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "updated_at_utc": "2026-10-02T02:03:16.557766+00:00",
+  "status": "AUTHOR_CHECKED_COMPLETE_FOUR_CORE_REDUCTION_AND_FIELD_IRREDUNDANCY",
+  "python_version": "3.11.2",
+  "source_expectation_fixed_before_standalone_restart": true,
+  "frozen_expected_sha256": "82568d59d85b3394a33908c8b21cb89298355e5756b7b52a026eaf882dc7715d",
+  "complete_source_restart": {
+    "status": "COMPLETE_18_CASE_CENSUS_EXTENSIONS_AND_IRREDUNDANCY_CHECKED",
+    "selected_cases": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      15,
+      16,
+      19,
+      20,
+      21,
+      25,
+      47
+    ],
+    "uniform_18_case_coverage_verified": true,
+    "pipeline_seconds": 184.9568382560392,
+    "child_peak_KiB": 56700,
+    "summary": {
+      "compressed_clauses": 502052,
+      "full_clauses": 583365,
+      "checked_additions": 321019,
+      "propagation_hints_checked": 960153,
+      "all_actual_cyclic_pairs": 6863508,
+      "derived_local_cuts_required": 81313,
+      "retained_kernel_cuts": 4
+    },
+    "controls": {
+      "generic": {
+        "complete_six_parity_inputs": 64,
+        "consistent_rooted_inputs": 8,
+        "explicit_triangle_additions_checked": 3,
+        "generic_proof_damages_rejected": 4
+      },
+      "census": {
+        "repaired_census_damages_rejected": 2
+      },
+      "witness": {
+        "distinct_constructive_targets_covered": 4,
+        "witness_damages_rejected": 3
+      },
+      "extension": {
+        "production_extension_damages_rejected": 3
+      }
+    },
+    "native_solver_invoked": false,
+    "child_stage_seconds_guard": 35
+  },
+  "fresh_selected_restart": {
+    "status": "SELECTED_EXTENSIONS_AND_COMPLETE_CENSUS_IRREDUNDANCY_CHECKED",
+    "selected_cases": [
+      2
+    ],
+    "uniform_18_case_coverage_verified": false,
+    "pipeline_seconds": 51.96600736200344,
+    "child_peak_KiB": 56704,
+    "summary": {
+      "compressed_clauses": 27878,
+      "full_clauses": 32390,
+      "checked_additions": 17925,
+      "propagation_hints_checked": 53591,
+      "all_actual_cyclic_pairs": 381306,
+      "derived_local_cuts_required": 4512,
+      "retained_kernel_cuts": 2
+    },
+    "controls": {
+      "generic": {
+        "complete_six_parity_inputs": 64,
+        "consistent_rooted_inputs": 8,
+        "explicit_triangle_additions_checked": 3,
+        "generic_proof_damages_rejected": 4,
+        "changed_checker_pin_rejected": 1
+      },
+      "census": {
+        "repaired_census_damages_rejected": 2
+      },
+      "witness": {
+        "distinct_constructive_targets_covered": 4,
+        "witness_damages_rejected": 3
+      },
+      "extension": {
+        "production_extension_damages_rejected": 3
+      }
+    },
+    "native_solver_invoked": false,
+    "child_stage_seconds_guard": 35
+  },
+  "fresh_selected_parent_optimized": true,
+  "fresh_selected_downloaded_byte_pinned_checker": true,
+  "field_certificate_proposals": {
+    "solver": "CaDiCaL195",
+    "python_sat": "1.8.dev24",
+    "conflict_budget": 100000,
+    "external_seconds": 35,
+    "max_conflicts": 1757,
+    "total_native_seconds": 0.20537240809062496,
+    "complete_independent_witnesses": 4,
+    "mathematical_exclusion_claimed": false
+  },
+  "prior_unrestricted_harmonic_proposal": {
+    "status": "UNKNOWN",
+    "conflict_budget": 100000,
+    "stats": {
+      "restarts": 3589,
+      "conflicts": 100000,
+      "decisions": 179477,
+      "propagations": 43889350
+    },
+    "seconds": 14.783275458961725,
+    "mathematical_exclusion": false
+  },
+  "prior_unrestricted_harmonic_model_sha256": "a9a9cd3c113c6e9641b43db090cca3f7f8abe6bba58148d60270f01ede0e7dbe",
+  "prior_UNKNOWN_not_retried_or_escalated": true,
+  "model_no_five_no_six_or_weight_hypotheses": true,
+  "production_extensions_have_no_empty_clause": true,
+  "all_model_proofs_explicitly_constructed_without_native_solving": true,
+  "all_threads": 1,
+  "max_cpu_intensive_jobs": 1,
+  "existing_scope": "1CPU/2GiB",
+  "external_review_claimed": false,
+  "formalization_claimed": false,
+  "full_cyclic_exclusion_claimed": false,
+  "length3704_coloring_found": false,
+  "W_bound_improved": false,
+  "bounded_context_refresh_height": 9250,
+  "primary_literature_checked_utc_date": "2026-10-02"
+}
