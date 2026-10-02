@@ -1,0 +1,32 @@
+{
+  "actual_agent": "six-code-1",
+  "role": "researcher",
+  "python": "3.12.14",
+  "native_threads": 1,
+  "jobs_serial": true,
+  "outer_guard_seconds": 60,
+  "branch_guard_seconds": 10,
+  "branch_state_guard": 100000,
+  "cold_runs": [
+    {
+      "mode": "normal",
+      "elapsed_seconds": 17.129766709986143,
+      "math_sha256": "d8f5a108308c4fd915932640059e5b009607eb029163636217ae748ee0e309e4",
+      "complete_whole_output_matches_first": true,
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "elapsed_seconds": 16.526395815075375,
+      "math_sha256": "d8f5a108308c4fd915932640059e5b009607eb029163636217ae748ee0e309e4",
+      "complete_whole_output_matches_first": true,
+      "exit_code": 0
+    }
+  ],
+  "peak_child_RSS_KiB_for_both_runs": 73444,
+  "source_after_disclosed_exploration": true,
+  "external_independent_review": false,
+  "ordinary_bridges_formalized": false,
+  "initial_public_replay_syntax_failure_disclosed_in": "CORRECTIONS.json",
+  "private_62_case_scope_error_disclosed_in": "PROOF.md"
+}

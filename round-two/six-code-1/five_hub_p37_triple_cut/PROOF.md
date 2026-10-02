@@ -167,10 +167,14 @@ count uncovered SAT triples having three positive pairs. Premises9367
 and9538 give at P37
 
     E=17-T-2tau-Q, K=19-E+2X, sum sigma=2X,
-    T+2tau+3N5<=4,
+    T+2tau+3N5<=4 WHEN N5>0,
     K<=E+Q+N5.
 
-For T>=3 the surcharge forces N5=0. Consequently
+The surcharge is conditional on N5>0, exactly as stated in9538.
+[ERRATUM.md](ERRATUM.md) records the omitted guard in the original
+display and immutable graph body. The complete92-case enumeration
+already uses the broader N5=0 capacity bound and is unchanged.
+For T>=3 the conditional surcharge forces N5=0. Consequently
 
     2T+2X+4tau+Q<=15,
     sum mu<=3(E+Q-K)=3(15-2T-2X-4tau-Q), T<=7.
