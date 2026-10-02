@@ -1,0 +1,151 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "seal_utc": "2026-10-02T15:02:02.320634+00:00",
+  "first_target_access_utc": "2026-10-02T15:02:28.021665+00:00",
+  "sealed_math_and_proof_unchanged_after_target_program_inspection": true,
+  "independent_cold_records": [
+    {
+      "mode": "normal",
+      "whole_expected_equal": true,
+      "outer_seconds": 0.6717639069538563,
+      "Pell_calibration_orders": 42,
+      "agent": "six-reviewer-2",
+      "algebra_records": 13,
+      "all_labeled_deletions": 10,
+      "original_matrix_positions": 9604,
+      "peak_child_KiB": 18008,
+      "role": "independent mathematical reviewer",
+      "seconds": 0.614,
+      "semantic_rejections": 12,
+      "status": "PASS",
+      "transported_original_entries": 96040,
+      "whole_record_sha256": "9548640ca248694b597057cc271c68b7e3ded2282a82b8a9c5bc1c68ca9c7c4d"
+    },
+    {
+      "mode": "optimized",
+      "whole_expected_equal": true,
+      "outer_seconds": 0.9425178809324279,
+      "Pell_calibration_orders": 42,
+      "agent": "six-reviewer-2",
+      "algebra_records": 13,
+      "all_labeled_deletions": 10,
+      "original_matrix_positions": 9604,
+      "peak_child_KiB": 20400,
+      "role": "independent mathematical reviewer",
+      "seconds": 0.697,
+      "semantic_rejections": 12,
+      "status": "PASS",
+      "transported_original_entries": 96040,
+      "whole_record_sha256": "9548640ca248694b597057cc271c68b7e3ded2282a82b8a9c5bc1c68ca9c7c4d"
+    }
+  ],
+  "native_replay": {
+    "records": [
+      {
+        "mode": "normal",
+        "seconds": 0.212451979983598,
+        "peak_child_KiB": 17808,
+        "native_expected_whole_record_equal": true,
+        "raw_stdout_sha256": "1c10fccee9cf99227312ea4bbb91b9081fc9c002b5aef7db3b4d42948be0dabc",
+        "native_stable_record_sha256": "61c34ae3b240efa9e1d52bcd3d2e5a4beeae92ccc912e1aff73648e14ebf8371"
+      },
+      {
+        "mode": "optimized",
+        "seconds": 0.3770015549380332,
+        "peak_child_KiB": 19896,
+        "native_expected_whole_record_equal": true,
+        "raw_stdout_sha256": "1c10fccee9cf99227312ea4bbb91b9081fc9c002b5aef7db3b4d42948be0dabc",
+        "native_stable_record_sha256": "61c34ae3b240efa9e1d52bcd3d2e5a4beeae92ccc912e1aff73648e14ebf8371"
+      }
+    ],
+    "normal_optimized_whole_stdout_equal": true,
+    "native_expected_whole_record_equal": true,
+    "author_damages": 12,
+    "scope": "Late corroboration only. Native code unchanged;45s guards/native threads1/serial."
+  },
+  "late_shared_comparison": {
+    "C_gram": {
+      "whole_equal": true,
+      "entries": 16
+    },
+    "Delta_gram": {
+      "whole_equal": true,
+      "entries": 16
+    },
+    "U_gram": {
+      "whole_equal": true,
+      "entries": 16
+    },
+    "N": {
+      "whole_equal": true,
+      "native": 50
+    },
+    "nonempty_order": {
+      "whole_equal": true,
+      "native": 49
+    },
+    "original_input_positions": {
+      "whole_equal": true,
+      "native": 9604
+    },
+    "actual_matrix_digest": {
+      "whole_equal": true,
+      "native": "031fdf74d34c71be729b4e9f09a6c6294f5085e4f4181d1fb384f0bd97707590"
+    },
+    "lower_Delta": {
+      "whole_equal": true,
+      "native": "159/10"
+    },
+    "upper_U0": {
+      "whole_equal": true,
+      "native": "-322737/23870"
+    },
+    "upper_Delta": {
+      "whole_equal": true,
+      "native": "939346/59675"
+    },
+    "upper_R": {
+      "whole_equal": true,
+      "native": "0"
+    }
+  },
+  "author_endpoint_calibrations_compared": 7,
+  "comparison_scope": "Complete literal q5/k3 matrix hash and whole C0/Delta/U0 Grams, all scalar dual pairings; target algebra/endpoint outputs checked against own coefficients/criteria. No author code import into independent checker. No imported9195 certificate replay.",
+  "preseal_reviewer_correction": "Initial independently typed Delta Gram cross signs were reversed. Literal original matrix check rejected them; corrected to positive count*h before sealing. No author error or negative verdict inferred.",
+  "late_whole_algebra_comparison": {
+    "positive_cubic_coefficients": [
+      175,
+      269,
+      20,
+      12
+    ],
+    "root_upper_coefficients": [
+      32,
+      120,
+      8
+    ],
+    "sqrt_difference_coefficients": [
+      13,
+      -16,
+      3
+    ],
+    "root_substitution_coefficients": [
+      8,
+      -12,
+      2,
+      7,
+      -6,
+      1
+    ],
+    "k4_margin": "7/775",
+    "k3_b": 11,
+    "k3_q4_e": "-1",
+    "strict_square_endpoint": {
+      "B0": "0",
+      "k": 8,
+      "q": 40
+    }
+  },
+  "late_whole_algebra_fields": 8
+}
