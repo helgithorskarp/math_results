@@ -1,0 +1,93 @@
+{
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "schema": "one-sided-low-binary-source-v1",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 32,
+      "sha256": "12bd0e82cbf86c0bce1905d9a83022e400ad1eee408424c7c8bab675ea95775f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2508,
+      "sha256": "b1d7f766a87889e3c3447789b11b2b7af1b4ad302612bd6ee0323f16850f7074"
+    },
+    {
+      "path": "PROOF.md",
+      "bytes": 10051,
+      "sha256": "66c29f257ace941c540d77f37b44cc29d98abb5b3320806d1ef645b727e0a47d"
+    },
+    {
+      "path": "fixture.json",
+      "bytes": 3734,
+      "sha256": "c75eb6b8d98d94f824def44c6ce13a7d09700e04d7422fea6c70522c99c3b43f"
+    },
+    {
+      "path": "certificate.json",
+      "bytes": 16848,
+      "sha256": "09ff0b9c4d79d6d0fa79224fd1ffad8c380ad5791ffc4eaff18447d15b06448e"
+    },
+    {
+      "path": "generate.py",
+      "bytes": 8679,
+      "sha256": "bc011152031bfb1410c49f275cfce0b6e8a68660d3015e10f6e5ce8d5a62be76"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 16660,
+      "sha256": "c266c3f2d4d27886ef1d13331f044c6cb3185fdaf57a7b251f15fc652ce09025"
+    },
+    {
+      "path": "checks.json",
+      "bytes": 5610,
+      "sha256": "156bad143c0c91e90901b13f550a327f4b06419b0733e65652403349793e5564"
+    }
+  ],
+  "manifest_self_hash_omitted": true,
+  "production_dependencies": [
+    {
+      "path": "round-two/six-sorting-2/semantic-pruning/profile.py",
+      "bytes": 5656,
+      "sha256": "dca9c8d6331c3fc548c514ca8f5f1cd170f4a0bb39a3c05250876247d0362719"
+    }
+  ],
+  "copied_code_credits": [
+    {
+      "agent": "six-sorting-1",
+      "role": "researcher",
+      "source_commit": "2b8d0d2b5766ecb8775c72db231fa5eb06ee512a",
+      "source": "round-two/six-sorting-1/joint_saturated_core_branches/generate.py",
+      "use": "Copied/adapted packed free-carrier pruning primitive.",
+      "original_source_commit": "df4e3aa03d6bf96c21e7bdab1330b98db7e0fad2",
+      "original_source": "round-two/six-sorting-1/three_touch_prefix_barrier/generate.py"
+    },
+    {
+      "agent": "six-sorting-1",
+      "role": "researcher",
+      "source_commit": "2b8d0d2b5766ecb8775c72db231fa5eb06ee512a",
+      "source": "round-two/six-sorting-1/joint_saturated_core_branches/verify.py",
+      "use": "Copied/adapted scalar numeric marker and free-carrier pruning/checking primitives.",
+      "original_agent": "six-sorting-2",
+      "original_role": "researcher",
+      "original_source_commit": "7f0c4f85a073c697803d580d3d04d4cba2aed07e",
+      "original_source": "round-two/six-sorting-2/changed-b28-barrier/verify.py"
+    }
+  ],
+  "proof_dependencies": [
+    {
+      "source": "round-two/six-sorting-2/semantic-pruning/PROOF.md",
+      "role": "General ordinary/semantic pruning and weighted transport."
+    },
+    {
+      "source": "round-two/six-sorting-1/changed_b21_core11/PROOF.md",
+      "role": "Changed-prefix context; present literal routes/images independently replayed."
+    },
+    {
+      "url": "https://arxiv.org/abs/2012.04400",
+      "role": "Established S11>=35 and generalized comparator standardization; large corpus not replayed."
+    }
+  ],
+  "primary_status_and_positive_controls": "https://bertdobbelaere.github.io/sorting_networks.html",
+  "scope": "First LOW strict binary event at physical(2,3) excluded; other LOW binary partners and singletons remain open."
+}
