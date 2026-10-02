@@ -1,0 +1,152 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "complete_independent_and_native_normal_O_agreement": true,
+  "first_sealed_sources_unchanged": true,
+  "result_sha256": "348012b45ee56f9d6ba202a8e36b0a6b91c8b052ccbabde87c22a7b37c5f6c24",
+  "independent_record_sha256": "7615196811231300c1839047ce004e95107378b1e5a5c800a56aee4c9def7398",
+  "native_full_RESULT_sha256": "96b21e91ae18caf2d029fdd5a893f4136cb6ca0bffda726b7c3c16662199859d",
+  "cold_runs": [
+    {
+      "actual_agent": "six-reviewer-4",
+      "role": "independent mathematical reviewer",
+      "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+      "optimized": false,
+      "seconds": 2.361000712029636,
+      "peak_child_rss_kib": 22804,
+      "receipts": [
+        {
+          "stage": "population",
+          "seconds": 0.335267,
+          "returncode": 0,
+          "guard_seconds": 60
+        },
+        {
+          "stage": "radius",
+          "seconds": 1.253083,
+          "returncode": 0,
+          "guard_seconds": 60
+        },
+        {
+          "stage": "controls",
+          "seconds": 0.222487,
+          "returncode": 0,
+          "guard_seconds": 60
+        },
+        {
+          "stage": "original-producer",
+          "seconds": 0.099726,
+          "returncode": 0,
+          "guard_seconds": 60
+        },
+        {
+          "stage": "original-verifier",
+          "seconds": 0.13315,
+          "returncode": 0,
+          "guard_seconds": 60
+        },
+        {
+          "stage": "original-controls",
+          "seconds": 0.210072,
+          "returncode": 0,
+          "guard_seconds": 60
+        },
+        {
+          "stage": "corroboration",
+          "seconds": 0.094332,
+          "returncode": 0,
+          "guard_seconds": 60
+        }
+      ],
+      "threads": 1,
+      "serial_mathematical_children": 1,
+      "result_sha256": "348012b45ee56f9d6ba202a8e36b0a6b91c8b052ccbabde87c22a7b37c5f6c24",
+      "unchanged_scope": "1CPU2GiB",
+      "prefix_guard_updates": 500000,
+      "prefix_guard_seconds_per_branch": 20
+    },
+    {
+      "actual_agent": "six-reviewer-4",
+      "role": "independent mathematical reviewer",
+      "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+      "optimized": true,
+      "seconds": 3.467121627065353,
+      "peak_child_rss_kib": 25396,
+      "receipts": [
+        {
+          "stage": "population",
+          "seconds": 0.482182,
+          "returncode": 0,
+          "guard_seconds": 60
+        },
+        {
+          "stage": "radius",
+          "seconds": 1.37397,
+          "returncode": 0,
+          "guard_seconds": 60
+        },
+        {
+          "stage": "controls",
+          "seconds": 0.443275,
+          "returncode": 0,
+          "guard_seconds": 60
+        },
+        {
+          "stage": "original-producer",
+          "seconds": 0.279122,
+          "returncode": 0,
+          "guard_seconds": 60
+        },
+        {
+          "stage": "original-verifier",
+          "seconds": 0.290058,
+          "returncode": 0,
+          "guard_seconds": 60
+        },
+        {
+          "stage": "original-controls",
+          "seconds": 0.343635,
+          "returncode": 0,
+          "guard_seconds": 60
+        },
+        {
+          "stage": "corroboration",
+          "seconds": 0.242708,
+          "returncode": 0,
+          "guard_seconds": 60
+        }
+      ],
+      "threads": 1,
+      "serial_mathematical_children": 1,
+      "result_sha256": "348012b45ee56f9d6ba202a8e36b0a6b91c8b052ccbabde87c22a7b37c5f6c24",
+      "unchanged_scope": "1CPU2GiB",
+      "prefix_guard_updates": 500000,
+      "prefix_guard_seconds_per_branch": 20
+    }
+  ],
+  "first_run": {
+    "name": "independent",
+    "command": [
+      "python3",
+      "round-two/six-reviewer-4/three-hub-radius-audit/populations.py",
+      "--input",
+      "round-two/six-reviewer-4/three-hub-radius-audit/fixtures.json",
+      "--out",
+      "scratch/pass23-independent-record.json"
+    ],
+    "seconds": 0.3800976169295609,
+    "guard_seconds": 60,
+    "returncode": 0,
+    "peak_rss_upper_kib": 22796,
+    "output_bytes": 537,
+    "sha256": "a5c6163b2830dc07f94095f0c79a845eeacfb385f444bf4d3498f8baaf578879",
+    "stderr": ""
+  },
+  "failed_control": "initial distinct-endpoint artificial control had odd color total and was preempted; fixed by one forbidden eligible vertex to make parity even, leaving one permitted endpoint. No sealed engine or first record changed.",
+  "guards": "60 seconds per serial stage,500000 prefix updates/20seconds per branch; unchanged1CPU2GiB",
+  "maximum_prefix_updates": 7936,
+  "maximum_prefix_states": 3606,
+  "solver": null,
+  "ordinary_bridges_formalized": false
+}
