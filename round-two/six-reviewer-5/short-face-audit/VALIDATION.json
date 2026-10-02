@@ -1,0 +1,276 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "python": "3.12.14",
+  "single_native_threads": true,
+  "own_checks": [
+    {
+      "program": "independent.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.4255911950021982,
+      "maxrss_kib": 16900,
+      "stdout": "{\"bytes\": 21896, \"core_maximum\": 14, \"exception\": \"33333\", \"excluded\": 55, \"face_maximum\": 13, \"gram_positions\": 144, \"sha256\": \"8a240961146b19f6396fca943a7a96b1f6638aad2b6206cb2fc91896c017a204\", \"words\": 56}\n",
+      "stderr": ""
+    },
+    {
+      "program": "independent.py",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.5689878590637818,
+      "maxrss_kib": 20152,
+      "stdout": "{\"bytes\": 21896, \"core_maximum\": 14, \"exception\": \"33333\", \"excluded\": 55, \"face_maximum\": 13, \"gram_positions\": 144, \"sha256\": \"8a240961146b19f6396fca943a7a96b1f6638aad2b6206cb2fc91896c017a204\", \"words\": 56}\n",
+      "stderr": ""
+    },
+    {
+      "program": "controls.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.11644090805202723,
+      "maxrss_kib": 15536,
+      "stdout": "{\"author_inputs_used\": false, \"calibration_checks\": 397, \"closed_endpoint_rejections\": 2}\n",
+      "stderr": ""
+    },
+    {
+      "program": "controls.py",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.24325817299541086,
+      "maxrss_kib": 19496,
+      "stdout": "{\"author_inputs_used\": false, \"calibration_checks\": 397, \"closed_endpoint_rejections\": 2}\n",
+      "stderr": ""
+    },
+    {
+      "program": "compare_author.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 6.105997040052898,
+      "maxrss_kib": 19284,
+      "stdout": "{\"certificate_sha256\": \"d52ac93547ec986d51b653b88bce1776264753fe15b3948a9f3aabac2ecc3a49\", \"controls\": {\"rejected_damages\": [\"missing word\", \"duplicate word\", \"gap coefficient\", \"Bezout multiplier\", \"Bernstein coefficient\", \"exception flag\", \"root band\", \"core vector\", \"off-diagonal Gram entry\", \"final state\", \"cap arithmetic\", \"core capacity\"], \"valid_witness_rescaling_accepted\": true}, \"verification\": {\"all_native_entries_match\": true, \"bernstein_evaluation_positions\": 158, \"cap_rationals\": 9, \"closure_coefficient_positions\": 1972, \"gram_positions\": 144, \"words\": 56}}\n",
+      "stderr": ""
+    },
+    {
+      "program": "compare_author.py",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 6.3713695199694484,
+      "maxrss_kib": 22748,
+      "stdout": "{\"certificate_sha256\": \"d52ac93547ec986d51b653b88bce1776264753fe15b3948a9f3aabac2ecc3a49\", \"controls\": {\"rejected_damages\": [\"missing word\", \"duplicate word\", \"gap coefficient\", \"Bezout multiplier\", \"Bernstein coefficient\", \"exception flag\", \"root band\", \"core vector\", \"off-diagonal Gram entry\", \"final state\", \"cap arithmetic\", \"core capacity\"], \"valid_witness_rescaling_accepted\": true}, \"verification\": {\"all_native_entries_match\": true, \"bernstein_evaluation_positions\": 158, \"cap_rationals\": 9, \"closure_coefficient_positions\": 1972, \"gram_positions\": 144, \"words\": 56}}\n",
+      "stderr": ""
+    },
+    {
+      "program": "verify.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.4957661770749837,
+      "maxrss_kib": 16692,
+      "stdout": "{\"author_inputs_used\": false, \"calibration_checks\": 397, \"closed_endpoint_rejections\": 2}\n{\"actual_face_capacity\": 13, \"complete_independent_evidence\": true, \"core_capacity\": 14, \"evidence_sha256\": \"8a240961146b19f6396fca943a7a96b1f6638aad2b6206cb2fc91896c017a204\", \"exceptional_core_points\": 12, \"excluded\": 55, \"gram_positions\": 144, \"seal_files\": 4, \"words\": 56}\n",
+      "stderr": ""
+    },
+    {
+      "program": "verify.py",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.6252518310211599,
+      "maxrss_kib": 19420,
+      "stdout": "{\"author_inputs_used\": false, \"calibration_checks\": 397, \"closed_endpoint_rejections\": 2}\n{\"actual_face_capacity\": 13, \"complete_independent_evidence\": true, \"core_capacity\": 14, \"evidence_sha256\": \"8a240961146b19f6396fca943a7a96b1f6638aad2b6206cb2fc91896c017a204\", \"exceptional_core_points\": 12, \"excluded\": 55, \"gram_positions\": 144, \"seal_files\": 4, \"words\": 56}\n",
+      "stderr": ""
+    }
+  ],
+  "final_native": {
+    "agent": "six-reviewer-5",
+    "role": "independent mathematical reviewer",
+    "strictly_serial_final_replay": true,
+    "initial_orchestration_incident": "One early native-controls command yielded and briefly overlapped the following native-check child. It completed; no limits changed. This final replay is synchronous and strictly serial.",
+    "rows": [
+      {
+        "program": "check.py",
+        "mode": "normal",
+        "seconds": 0.3195149749517441,
+        "maxrss_kib": 16856,
+        "guard_seconds": 45,
+        "result": {
+          "cases": 56,
+          "certificate_sha256": "d52ac93547ec986d51b653b88bce1776264753fe15b3948a9f3aabac2ecc3a49",
+          "hexagonal_exception": 1,
+          "reference_unit_points": 12,
+          "strict_full_band_exclusions": 55,
+          "total_point_bound": 14
+        }
+      },
+      {
+        "program": "audit.py",
+        "mode": "normal",
+        "seconds": 0.242053771042265,
+        "maxrss_kib": 16856,
+        "guard_seconds": 45,
+        "result": {
+          "cases": 56,
+          "certificate_sha256": "d52ac93547ec986d51b653b88bce1776264753fe15b3948a9f3aabac2ecc3a49",
+          "closure_coefficient_positions": 1972,
+          "exclusions": 55,
+          "hexagon_Gram_positions": 144,
+          "hexagon_contacts": 24,
+          "hexagon_strict_pair_gaps": 42,
+          "hexagonal_exception": 1,
+          "point_bound": 14
+        }
+      },
+      {
+        "program": "controls.py",
+        "mode": "normal",
+        "seconds": 2.366694444906898,
+        "maxrss_kib": 17764,
+        "guard_seconds": 45,
+        "result": {
+          "known_exact_antiprism_calibrations": [
+            {
+              "all_closure_coordinates_zero_mod_quadratic": true,
+              "entire_state_returns": true,
+              "quadratic": [
+                -1,
+                2,
+                1
+              ],
+              "sides": 4
+            },
+            {
+              "all_closure_coordinates_zero_mod_quadratic": true,
+              "entire_state_returns": true,
+              "quadratic": [
+                -1,
+                1,
+                1
+              ],
+              "sides": 5
+            },
+            {
+              "all_closure_coordinates_zero_mod_quadratic": true,
+              "entire_state_returns": true,
+              "quadratic": [
+                -2,
+                2,
+                1
+              ],
+              "sides": 6
+            }
+          ],
+          "rejected": [
+            "missing-closure-word",
+            "duplicate-closure-word",
+            "damaged-transfer-coordinate",
+            "damaged-Bezout-multiplier",
+            "opposite-Bernstein-sign",
+            "zero-obstruction",
+            "unjustified-exception",
+            "wrong-hexagonal-root",
+            "changed-reference-point",
+            "changed-cross-Gram-contact",
+            "changed-cap-radius",
+            "false-capacity-conclusion"
+          ],
+          "valid_rescaled_Bezout_and_sign_witness_accepted": true
+        }
+      },
+      {
+        "program": "check.py",
+        "mode": "optimized",
+        "seconds": 0.5869346779072657,
+        "maxrss_kib": 21188,
+        "guard_seconds": 45,
+        "result": {
+          "cases": 56,
+          "certificate_sha256": "d52ac93547ec986d51b653b88bce1776264753fe15b3948a9f3aabac2ecc3a49",
+          "hexagonal_exception": 1,
+          "reference_unit_points": 12,
+          "strict_full_band_exclusions": 55,
+          "total_point_bound": 14
+        }
+      },
+      {
+        "program": "audit.py",
+        "mode": "optimized",
+        "seconds": 0.36030592198949307,
+        "maxrss_kib": 21188,
+        "guard_seconds": 45,
+        "result": {
+          "cases": 56,
+          "certificate_sha256": "d52ac93547ec986d51b653b88bce1776264753fe15b3948a9f3aabac2ecc3a49",
+          "closure_coefficient_positions": 1972,
+          "exclusions": 55,
+          "hexagon_Gram_positions": 144,
+          "hexagon_contacts": 24,
+          "hexagon_strict_pair_gaps": 42,
+          "hexagonal_exception": 1,
+          "point_bound": 14
+        }
+      },
+      {
+        "program": "controls.py",
+        "mode": "optimized",
+        "seconds": 1.6931065920507535,
+        "maxrss_kib": 21648,
+        "guard_seconds": 45,
+        "result": {
+          "known_exact_antiprism_calibrations": [
+            {
+              "all_closure_coordinates_zero_mod_quadratic": true,
+              "entire_state_returns": true,
+              "quadratic": [
+                -1,
+                2,
+                1
+              ],
+              "sides": 4
+            },
+            {
+              "all_closure_coordinates_zero_mod_quadratic": true,
+              "entire_state_returns": true,
+              "quadratic": [
+                -1,
+                1,
+                1
+              ],
+              "sides": 5
+            },
+            {
+              "all_closure_coordinates_zero_mod_quadratic": true,
+              "entire_state_returns": true,
+              "quadratic": [
+                -2,
+                2,
+                1
+              ],
+              "sides": 6
+            }
+          ],
+          "rejected": [
+            "missing-closure-word",
+            "duplicate-closure-word",
+            "damaged-transfer-coordinate",
+            "damaged-Bezout-multiplier",
+            "opposite-Bernstein-sign",
+            "zero-obstruction",
+            "unjustified-exception",
+            "wrong-hexagonal-root",
+            "changed-reference-point",
+            "changed-cross-Gram-contact",
+            "changed-cap-radius",
+            "false-capacity-conclusion"
+          ],
+          "valid_rescaled_Bezout_and_sign_witness_accepted": true
+        }
+      }
+    ],
+    "native_source_bytes_unchanged": true
+  },
+  "ordinary_geometric_refinements_unformalized": true
+}
