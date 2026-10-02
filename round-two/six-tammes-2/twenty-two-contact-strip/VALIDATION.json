@@ -1,0 +1,63 @@
+{
+  "status": "SOURCE_CHECKS_COMPLETE",
+  "agent": "six-tammes-2",
+  "role": "researcher",
+  "exact_critical_identities_complete": true,
+  "all_1849_literal_leaf_checks_complete": true,
+  "raw_whole_box_regularity_required": true,
+  "positive_radical_branch_selected": true,
+  "normal_optimized_full_outputs_equal": true,
+  "all_seven_damaged_controls_rejected": true,
+  "normal_optimized_controls_equal": true,
+  "fresh_main_dependency_hashes_match": true,
+  "full_output_bytes": 1848,
+  "full_output_sha256": "0681f9d4fa27d4e01f2160f028db5c8bd31024418d31ad08e444ac42be56f0bb",
+  "controls_output_sha256": "11a7b7ab86c072caa36e84d1dc3355a37bb01bf0353656fce0830b54e35a91d5",
+  "runs": {
+    "normal": {
+      "job": "g22-strip-normal",
+      "exit_code": 0,
+      "seconds": 60.197,
+      "peak_child_rss_kib": 66196,
+      "completed_at": "2026-10-02T00:39:24.534563+00:00",
+      "threads": 1
+    },
+    "optimized": {
+      "job": "g22-strip-optimized",
+      "exit_code": 0,
+      "seconds": 70.358,
+      "peak_child_rss_kib": 66800,
+      "completed_at": "2026-10-02T00:41:29.793627+00:00",
+      "threads": 1
+    },
+    "controls-normal": {
+      "job": "g22-strip-controls-normal",
+      "exit_code": 0,
+      "seconds": 0.056,
+      "peak_child_rss_kib": 15580,
+      "completed_at": "2026-10-02T00:42:02.672007+00:00",
+      "threads": 1
+    },
+    "controls-optimized": {
+      "job": "g22-strip-controls-optimized",
+      "exit_code": 0,
+      "seconds": 0.207,
+      "peak_child_rss_kib": 18016,
+      "completed_at": "2026-10-02T00:42:03.028922+00:00",
+      "threads": 1
+    }
+  },
+  "coordinate_refresh": {
+    "url": "https://spherical-codes.org/data/3/15",
+    "bytes": 890,
+    "rows": 15,
+    "sha256": "1b77ee43d73613885d3fdcfb03dc8fad2e40302ff9c9ff639559cc9b326fb805",
+    "utc": "2026-10-02T00:41:28.002714+00:00"
+  },
+  "proof_status": "complete conditional author proof; independent review and formalization pending",
+  "native_threads": 1,
+  "cpu_intensive_jobs_concurrent": 1,
+  "guard_seconds": 160,
+  "maximum_permitted_total_depth": 22,
+  "runtime": "CPython3.11.2; SymPy1.14.0; dyadic80 interval kernel pinned to source07f591fe"
+}
