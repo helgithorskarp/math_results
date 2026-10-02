@@ -1,0 +1,302 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+  "independent_first_freeze": {
+    "author_math_visible": "target defining statement/proof, prior7679 whole review, literal INSTANCE fixture; no target executable or certificates/results/representatives/constructions read",
+    "files": {
+      "carrier.py": "0a81543fd9afb31d583bb5db4a72a58f744721d18a917e12928b3cd607bad07f",
+      "census.py": "57026db6468a3ce19556a9ac9d3fdeadce837172fddb155d047ec2323d53470d",
+      "EXPECTED.json": "dd558e22b22f01aadb4a88020da7b64a968ac43b84692047e75c5121fcfe97fa",
+      "INSTANCE.json": "6f6cbf049c6c53d92dd29fae720b090b937836d531c8dbfa862ba7b37c2bcbcc"
+    },
+    "record_sha256": "dd558e22b22f01aadb4a88020da7b64a968ac43b84692047e75c5121fcfe97fa"
+  },
+  "independent_before_author_inspection_seal": {
+    "source": {
+      "isomorphism.py": "c5523a8604f3f2e4cc5fa05f5f0464f3b9968b58ca98b68377b763cee855b815",
+      "carrier.py": "0a81543fd9afb31d583bb5db4a72a58f744721d18a917e12928b3cd607bad07f",
+      "census.py": "1334f2928514f7c190e0fc38c460baea5558a089c83c428913782f49b19ab9d9",
+      "controls.py": "2b4c8426934bdb7c604709da462443bdc5c91c03b2e6c2d4d41070a6bf6cd1c2",
+      "EXPECTED.json": "dd558e22b22f01aadb4a88020da7b64a968ac43b84692047e75c5121fcfe97fa",
+      "EXPECTED-isomorphism.json": "cedb75c5c11862cbe8d039ee135035b01795ad0b11138664f02bb2a0e5fac099",
+      "INSTANCE.json": "6f6cbf049c6c53d92dd29fae720b090b937836d531c8dbfa862ba7b37c2bcbcc"
+    },
+    "result": "dd558e22b22f01aadb4a88020da7b64a968ac43b84692047e75c5121fcfe97fa",
+    "isomorphism": "cedb75c5c11862cbe8d039ee135035b01795ad0b11138664f02bb2a0e5fac099",
+    "boundary": "All independent mathematical census/group/full-isomorphism engines and records frozen before original target executable, count certificate, EXPECTED, representatives or construction catalogue inspection. JSON footer normalization changed only after first complete normal/O records already byteequal; all first seven inventories unchanged."
+  },
+  "four_sealed_math_engines_unchanged_after_author_inspection": true,
+  "independent": [
+    {
+      "phase": "own-final",
+      "normal": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "round-two/six-reviewer-2/c5-equality-audit/census.py",
+          "--instance",
+          "round-two/six-reviewer-2/c5-equality-audit/INSTANCE.json",
+          "--work",
+          "scratch/pass20-own-normal",
+          "--expect",
+          "round-two/six-reviewer-2/c5-equality-audit/EXPECTED.json"
+        ],
+        "seconds": 13.705350660951808,
+        "peak_kib": 75708,
+        "exit_code": 0,
+        "guard_seconds": 90
+      },
+      "optimized": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "-O",
+          "round-two/six-reviewer-2/c5-equality-audit/census.py",
+          "--instance",
+          "round-two/six-reviewer-2/c5-equality-audit/INSTANCE.json",
+          "--work",
+          "scratch/pass20-own-optimized",
+          "--expect",
+          "round-two/six-reviewer-2/c5-equality-audit/EXPECTED.json"
+        ],
+        "seconds": 13.879263967974111,
+        "peak_kib": 76396,
+        "exit_code": 0,
+        "guard_seconds": 90
+      },
+      "whole_record_sha256": "41c76864c18be9ded847350446f0fe517e0d39f7e2c7f360884b176795675d8c",
+      "full_record_and_stdout_equal": true
+    },
+    {
+      "phase": "isomorphism",
+      "normal": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "round-two/six-reviewer-2/c5-equality-audit/isomorphism.py",
+          "--work",
+          "scratch/pass20-own-normal"
+        ],
+        "seconds": 2.9529192539630458,
+        "peak_kib": 51088,
+        "exit_code": 0,
+        "guard_seconds": 90
+      },
+      "optimized": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "-O",
+          "round-two/six-reviewer-2/c5-equality-audit/isomorphism.py",
+          "--work",
+          "scratch/pass20-own-optimized",
+          "--expect",
+          "round-two/six-reviewer-2/c5-equality-audit/EXPECTED-isomorphism.json"
+        ],
+        "seconds": 4.257450653007254,
+        "peak_kib": 51632,
+        "exit_code": 0,
+        "guard_seconds": 90
+      },
+      "whole_record_sha256": "99c36ac3a9fc37f44a2d43e18953c22b9748ba10766155a0cd93b66a5df411b9",
+      "full_record_and_stdout_equal": true
+    },
+    {
+      "phase": "controls",
+      "normal": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "round-two/six-reviewer-2/c5-equality-audit/controls.py",
+          "--work",
+          "scratch/pass20-own-normal"
+        ],
+        "seconds": 3.80895896803122,
+        "peak_kib": 53496,
+        "exit_code": 0,
+        "guard_seconds": 90
+      },
+      "optimized": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "-O",
+          "round-two/six-reviewer-2/c5-equality-audit/controls.py",
+          "--work",
+          "scratch/pass20-own-optimized",
+          "--expect",
+          "round-two/six-reviewer-2/c5-equality-audit/EXPECTED-controls.json"
+        ],
+        "seconds": 3.5425959900021553,
+        "peak_kib": 53860,
+        "exit_code": 0,
+        "guard_seconds": 90
+      },
+      "whole_record_sha256": "d4c6e79ad38d2010e52da259bab5cfff1a5910f0b317215ecdd45689ce9b7ae8",
+      "full_record_and_stdout_equal": true
+    },
+    {
+      "phase": "comparison",
+      "normal": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "round-two/six-reviewer-2/c5-equality-audit/corroborate.py",
+          "--own",
+          "scratch/pass20-own-normal",
+          "--native",
+          "scratch/pass20-native-normal",
+          "--author",
+          "scratch/pass20-author"
+        ],
+        "seconds": 0.4122546568978578,
+        "peak_kib": 71064,
+        "exit_code": 0,
+        "guard_seconds": 90
+      },
+      "optimized": {
+        "argv": [
+          "/scratch/venvs/discovery-team/bin/python",
+          "-B",
+          "-O",
+          "round-two/six-reviewer-2/c5-equality-audit/corroborate.py",
+          "--own",
+          "scratch/pass20-own-optimized",
+          "--native",
+          "scratch/pass20-native-optimized",
+          "--author",
+          "scratch/pass20-author",
+          "--expect",
+          "round-two/six-reviewer-2/c5-equality-audit/EXPECTED-comparison.json"
+        ],
+        "seconds": 0.6351477010175586,
+        "peak_kib": 71476,
+        "exit_code": 0,
+        "guard_seconds": 90
+      },
+      "whole_record_sha256": "4fb4c65552be0d784e446230ca237f8642899cb06514e91efe8ef8a933cfe773",
+      "full_record_and_stdout_equal": true
+    }
+  ],
+  "whole_independent_generated_files": {
+    "ISOMORPHISM.json": {
+      "bytes": 7437,
+      "sha256": "cedb75c5c11862cbe8d039ee135035b01795ad0b11138664f02bb2a0e5fac099"
+    },
+    "RESULT.json": {
+      "bytes": 14596,
+      "sha256": "dd558e22b22f01aadb4a88020da7b64a968ac43b84692047e75c5121fcfe97fa"
+    },
+    "centralizer_classes.json": {
+      "bytes": 2396330,
+      "sha256": "e4ffcf4001f79739c87358bf6fdb92a55615d7685263dc2c36e1ab1d24f3e2a5"
+    },
+    "completions.json": {
+      "bytes": 12822,
+      "sha256": "85f4ee989bec15c35f28e2f6d36698ed2fa59f16640fdb32b43aaa9070eeccdc"
+    },
+    "labelled.json": {
+      "bytes": 2396314,
+      "sha256": "48468604ed3b62c48bd80bde4a3b28cb168156d99b1a9d3e82c9d79e76271b49"
+    },
+    "residual.json": {
+      "bytes": 5010,
+      "sha256": "3ffa15608b37dc9c3e3781cc6fdc375cf07bcfb054485deb2e37bbb82c516edc"
+    },
+    "root_codes.json": {
+      "bytes": 1296130,
+      "sha256": "86423c8a73dea8e6afc5a883fae55d52227d51c44d08140edf47b02bae938c31"
+    },
+    "stars.json": {
+      "bytes": 11648,
+      "sha256": "b45f3a522822b298f37cb2feb110398257a5843860b7e74eb010bab8c5e6f8cc"
+    }
+  },
+  "late_original_cold_runs": [
+    {
+      "argv": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "scratch/pass20-author/reproduce.py",
+        "--work",
+        "scratch/pass20-native-normal"
+      ],
+      "seconds": 14.424863136955537,
+      "peak_kib": 81284,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    {
+      "argv": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "-O",
+        "scratch/pass20-author/reproduce.py",
+        "--work",
+        "scratch/pass20-native-optimized"
+      ],
+      "seconds": 15.539193418924697,
+      "peak_kib": 81588,
+      "exit_code": 0,
+      "guard_seconds": 90
+    }
+  ],
+  "original_whole_frozen_evidence_files": {
+    "construct/CONSTRUCTIONS.json": {
+      "bytes": 4155,
+      "sha256": "f20b8c4649fef4854d48d723d204b85c483627d486586b29ff377a2449864445"
+    },
+    "cover/COVER.json": {
+      "bytes": 16161,
+      "sha256": "51dc81afc8f7ae5719350458131af6b3f309807227ed59677cc34c1d9af63e4d"
+    },
+    "equality/COMPLETIONS68.json": {
+      "bytes": 18446,
+      "sha256": "f09ab995cfb392173e742b0b9f7cf6bb36693c650c419d2a7a0cf3c2f1654fdf"
+    },
+    "equality/COUNT_CERTIFICATE.json": {
+      "bytes": 47696,
+      "sha256": "c30ced978ba85aaf5bac74b0e0b626613ea314eb38ddaa8a7d0d877cc90c5f68"
+    },
+    "equality/GRAPH.json": {
+      "bytes": 11217,
+      "sha256": "cb5a6e63b6dcf71f91f869a9cd7c91d2067d471fb5cfb640ee9ae46099f3e148"
+    },
+    "model/BASELINE68.json": {
+      "bytes": 441,
+      "sha256": "8046c3c545478d15d2ab064f09d1269d6434f127033d609088b4c7672ea6f10c"
+    },
+    "model/ORBIT_MODEL.json": {
+      "bytes": 104795,
+      "sha256": "69001d299854fb599b7a6446dd4410e8fd7355bdf498e2ed894fcdd911404500"
+    },
+    "root-audit/ACTUAL_ROOTS.json": {
+      "bytes": 11648,
+      "sha256": "b45f3a522822b298f37cb2feb110398257a5843860b7e74eb010bab8c5e6f8cc"
+    },
+    "roots/ROOTS.json": {
+      "bytes": 20778,
+      "sha256": "7185db69b486044485aa101f60367e77e7bda446d6afd229d85e27e93bb0c872"
+    },
+    "roots/ROOT_ORBITS.json": {
+      "bytes": 20966,
+      "sha256": "5b5b067416597010bcf1e7e77bff2ce3fd467b9ee745d77e94bda0affad32a16"
+    },
+    "saturation/ALL_CODES.json": {
+      "bytes": 2396314,
+      "sha256": "48468604ed3b62c48bd80bde4a3b28cb168156d99b1a9d3e82c9d79e76271b49"
+    },
+    "saturation/CLASSIFICATION.json": {
+      "bytes": 5086,
+      "sha256": "48b15d19ba6bed8187b402218a9c8b4b0472c35d85516b29519dcc76c3ab752d"
+    }
+  },
+  "original_exact_result_sha256": "17c7bc785e77b32adbfc2e6a3e80e92ff2cec7039814a2a51a1c9eb2ddfe88f4",
+  "original_all_21_semantic_controls_pass": true,
+  "first_expectation_adapter_error": "Only tuple/int-key versus JSON list/string-key comparison. All seven original normal/O files were already byteequal; canonical JSON footer corrected before author inspection and checked final runs both passed. No mathematical output changed.",
+  "original_source_untouched": true,
+  "resource_scope": "native threads1; one serial CPU-intensive job; unchanged1CPU2GiB; outer90seconds; original inner60seconds; no timeout or resource-negative inference",
+  "omitted_large_files": "Complete generated inventories are reproducible outputs in scratch, not premises or publication files.",
+  "literature_checked": "Primary Brouwer1975/ACL2003/maintainedtable live2026-10-02; candidate-specific searches give no historical priority proof."
+}
