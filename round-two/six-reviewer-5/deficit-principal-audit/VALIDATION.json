@@ -1,0 +1,161 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "primary_sealed_unchanged": true,
+  "primary_normal_optimized_whole_bytes_equal": true,
+  "primary_costs": [
+    {
+      "mode": "normal",
+      "program": "algebra",
+      "seconds": 0.6903136170003563,
+      "maxrss_kib": 50412,
+      "guard_seconds": 45
+    },
+    {
+      "mode": "normal",
+      "program": "original",
+      "seconds": 0.8547228620154783,
+      "maxrss_kib": 50412,
+      "guard_seconds": 45
+    },
+    {
+      "mode": "normal",
+      "program": "principal",
+      "seconds": 0.2621195160318166,
+      "maxrss_kib": 50412,
+      "guard_seconds": 45
+    },
+    {
+      "mode": "normal",
+      "program": "optimizer",
+      "seconds": 2.490115449996665,
+      "maxrss_kib": 50412,
+      "guard_seconds": 45
+    },
+    {
+      "mode": "optimized",
+      "program": "algebra",
+      "seconds": 1.0072167899925262,
+      "maxrss_kib": 51404,
+      "guard_seconds": 45
+    },
+    {
+      "mode": "optimized",
+      "program": "original",
+      "seconds": 1.0366233818931505,
+      "maxrss_kib": 51404,
+      "guard_seconds": 45
+    },
+    {
+      "mode": "optimized",
+      "program": "principal",
+      "seconds": 0.36542831105180085,
+      "maxrss_kib": 51404,
+      "guard_seconds": 45
+    },
+    {
+      "mode": "optimized",
+      "program": "optimizer",
+      "seconds": 2.5839146099751815,
+      "maxrss_kib": 51404,
+      "guard_seconds": 45
+    }
+  ],
+  "public_reproduce_normal_optimized_entire_record_passed": true,
+  "public_corroboration": [
+    {
+      "mode": "normal",
+      "program": "public source-only corroborate.py",
+      "seconds": 5.973654443980195,
+      "maxrss_kib": 23488,
+      "guard_seconds": 45,
+      "result": {
+        "ok": true,
+        "native_bytes": 73825,
+        "native_sha256": "249b2778b1c92125ec9334a42846e86829c0df6074482b3a43a47d43f973304d",
+        "common_bytes": 70556,
+        "common_sha256": "3fc7fffdf5298122381194e2f1df4586c0e56a22ccc7f6e11512e800eee91b53",
+        "exact_pinned_source_files": 16
+      }
+    },
+    {
+      "mode": "optimized",
+      "program": "public source-only corroborate.py",
+      "seconds": 3.7170834140852094,
+      "maxrss_kib": 27188,
+      "guard_seconds": 45,
+      "result": {
+        "ok": true,
+        "native_bytes": 73825,
+        "native_sha256": "249b2778b1c92125ec9334a42846e86829c0df6074482b3a43a47d43f973304d",
+        "common_bytes": 70556,
+        "common_sha256": "3fc7fffdf5298122381194e2f1df4586c0e56a22ccc7f6e11512e800eee91b53",
+        "exact_pinned_source_files": 16
+      }
+    }
+  ],
+  "native": {
+    "agent": "six-reviewer-5",
+    "role": "independent mathematical reviewer",
+    "native_late_auxiliary": true,
+    "native_modes": [
+      {
+        "mode": "normal",
+        "seconds": 1.5590523700229824,
+        "maxrss_kib": 20192,
+        "guard_seconds": 45,
+        "whole_bytes": 73825,
+        "sha256": "249b2778b1c92125ec9334a42846e86829c0df6074482b3a43a47d43f973304d",
+        "scalar_controls": 356
+      },
+      {
+        "mode": "optimized",
+        "seconds": 1.7008033799938858,
+        "maxrss_kib": 23680,
+        "guard_seconds": 45,
+        "whole_bytes": 73825,
+        "sha256": "249b2778b1c92125ec9334a42846e86829c0df6074482b3a43a47d43f973304d",
+        "scalar_controls": 356
+      }
+    ],
+    "copied_inputs": [
+      {
+        "local": "fixtures/n24.json",
+        "url": "https://raw.githubusercontent.com/helgithorskarp/math_results/b0899891b28d5b4e0ec9aa150e8c3d2a97ad4624/round-two/six-downset-2/near_full_n24_sharp_support/seed.json",
+        "bytes": 6617,
+        "sha256": "4aaf0182bdeccc7b116630adf1a83038c62ce70152b4edb21fb3c2407f3fd3a6"
+      },
+      {
+        "local": "fixtures/n32.json",
+        "url": "https://raw.githubusercontent.com/helgithorskarp/math_results/fca248f4d3e8d6f377c6e6e165c191593b62660b/round-two/six-downset-2/near_full_n32_sharp_support/seed.json",
+        "bytes": 15323,
+        "sha256": "c0793a1955dc59f41da3c521bbb070efe125a445fc159e328bd616968a8ee40e"
+      },
+      {
+        "local": "fixtures/n40.json",
+        "url": "https://raw.githubusercontent.com/helgithorskarp/math_results/ff8b58c0f6355b417607aaffae532cb243434795/round-two/six-downset-2/near_full_n40_sharp_support/seed.json",
+        "bytes": 26058,
+        "sha256": "52a5646a169395319fe2879c5ee2f0f35587f4305cd97104f0186bff267967d8"
+      },
+      {
+        "local": "affine.py",
+        "url": "https://raw.githubusercontent.com/helgithorskarp/math_results/ff8b58c0f6355b417607aaffae532cb243434795/round-two/six-downset-2/near_full_n40_sharp_support/affine.py",
+        "bytes": 3803,
+        "sha256": "9cdcaa2f616d2e6b63f76cdd5dda4d9d633845da34f8d4ee2646d822deea59b8"
+      },
+      {
+        "local": "model.py",
+        "url": "https://raw.githubusercontent.com/helgithorskarp/math_results/ff8b58c0f6355b417607aaffae532cb243434795/round-two/six-downset-2/near_full_n40_sharp_support/model.py",
+        "bytes": 4695,
+        "sha256": "9189b8b427be0a51bf46f7c6d338159b266d47ce4242dea03c2ee54888c63b10"
+      }
+    ]
+  },
+  "scope": "All children serial/native1/unchanged1CPU2GiB/fixed45s. Complete native replay corroborates; five common categories independently recomputed. No full n40 cone verdict.",
+  "preseal_debug": [
+    "CAS endpoint evaluation changes the rational field; fixed before seal.",
+    "Local variable shadowing of the lower scalar by an endpoint label; fixed before seal.",
+    "Corrected own bulk count after identifying the target PROOF typo before seal."
+  ],
+  "operational_limits_hit": false
+}

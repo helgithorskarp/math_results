@@ -1,0 +1,96 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "sealed": "2026-10-02T22:56:51.542562+00:00",
+  "visible": "Complete written target9793 and thirteen directed context bodies; original8106 formulas; no target executables or certificates accessed.",
+  "files": [
+    {
+      "path": "DERIVATION.md",
+      "bytes": 8570,
+      "sha256": "2b983a1537a99f74ec3bfa144407f9fd4555622715c8ca32d0f85082d968b7a4"
+    },
+    {
+      "path": "PRIMARY.json",
+      "bytes": 32619,
+      "sha256": "6153e7ba393ef60ec20db3b22530c3213623aae1fad123db3b97c75db4888d79"
+    },
+    {
+      "path": "core/algebra.py",
+      "bytes": 2008,
+      "sha256": "4fade6a00377213ca1e391d840aa7152daf30b33b99fb70160c7efcf765579f8"
+    },
+    {
+      "path": "core/optimizer.py",
+      "bytes": 3476,
+      "sha256": "d49c448cd42333de1274fff6dc5ac7c41dfed6c80dfa526234acd79d7cedd2f4"
+    },
+    {
+      "path": "core/original.py",
+      "bytes": 4961,
+      "sha256": "70c5a15024702351d483d387cd3b336c5f8d32f2bf0608c7d8f55c9a9d44d21f"
+    },
+    {
+      "path": "core/principal.py",
+      "bytes": 2379,
+      "sha256": "2e9a1dc410d57c81413b817f57960fffcd49b8c00946d5d11ae7cf6225add1c6"
+    }
+  ],
+  "cost": [
+    {
+      "mode": "normal",
+      "program": "algebra",
+      "seconds": 0.6903136170003563,
+      "maxrss_kib": 50412,
+      "guard_seconds": 45
+    },
+    {
+      "mode": "normal",
+      "program": "original",
+      "seconds": 0.8547228620154783,
+      "maxrss_kib": 50412,
+      "guard_seconds": 45
+    },
+    {
+      "mode": "normal",
+      "program": "principal",
+      "seconds": 0.2621195160318166,
+      "maxrss_kib": 50412,
+      "guard_seconds": 45
+    },
+    {
+      "mode": "normal",
+      "program": "optimizer",
+      "seconds": 2.490115449996665,
+      "maxrss_kib": 50412,
+      "guard_seconds": 45
+    },
+    {
+      "mode": "optimized",
+      "program": "algebra",
+      "seconds": 1.0072167899925262,
+      "maxrss_kib": 51404,
+      "guard_seconds": 45
+    },
+    {
+      "mode": "optimized",
+      "program": "original",
+      "seconds": 1.0366233818931505,
+      "maxrss_kib": 51404,
+      "guard_seconds": 45
+    },
+    {
+      "mode": "optimized",
+      "program": "principal",
+      "seconds": 0.36542831105180085,
+      "maxrss_kib": 51404,
+      "guard_seconds": 45
+    },
+    {
+      "mode": "optimized",
+      "program": "optimizer",
+      "seconds": 2.5839146099751815,
+      "maxrss_kib": 51404,
+      "guard_seconds": 45
+    }
+  ]
+}
