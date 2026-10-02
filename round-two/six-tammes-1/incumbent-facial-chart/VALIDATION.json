@@ -1,0 +1,118 @@
+{
+  "actual_agent": "six-tammes-1",
+  "role": "researcher",
+  "UTC": "2026-10-02T17:07:59.071035+00:00",
+  "python": "3.12.14",
+  "jobs": [
+    {
+      "label": "producer-normal",
+      "command": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "round-two/six-tammes-1/incumbent-facial-chart/check.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.0806760599371046,
+      "cumulative_child_max_RSS_KiB": 16656,
+      "stdout_sha256": "14f652860dca700c8cce03a9ede358183f3fa58b670e3f2bfd1a2444ad3a7d1e"
+    },
+    {
+      "label": "audit-normal",
+      "command": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "round-two/six-tammes-1/incumbent-facial-chart/audit.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.9695853599114344,
+      "cumulative_child_max_RSS_KiB": 16656,
+      "stdout_sha256": "3f8ffb51761a19b43284084784043f3bd460a5773eb865f4d4d9a6642217715b"
+    },
+    {
+      "label": "controls-normal",
+      "command": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "round-two/six-tammes-1/incumbent-facial-chart/controls.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 7.207512563094497,
+      "cumulative_child_max_RSS_KiB": 16656,
+      "stdout_sha256": "1fc5a5c0267c36fab0d190e7ca0a3f67d0b42c1c7d9f05d54e8d11832cb4aafe"
+    },
+    {
+      "label": "producer-optimized",
+      "command": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "-O",
+        "round-two/six-tammes-1/incumbent-facial-chart/check.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.2227607269305736,
+      "cumulative_child_max_RSS_KiB": 19452,
+      "stdout_sha256": "14f652860dca700c8cce03a9ede358183f3fa58b670e3f2bfd1a2444ad3a7d1e"
+    },
+    {
+      "label": "audit-optimized",
+      "command": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "-O",
+        "round-two/six-tammes-1/incumbent-facial-chart/audit.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.249932146980427,
+      "cumulative_child_max_RSS_KiB": 19452,
+      "stdout_sha256": "3f8ffb51761a19b43284084784043f3bd460a5773eb865f4d4d9a6642217715b"
+    }
+  ],
+  "job_guard_seconds": 55,
+  "native_threads": 1,
+  "CPU_intensive_concurrency": 1,
+  "normal_optimized_outputs_identical": true,
+  "second_geometry_check_shares_arithmetic": true,
+  "independent_researcher_review": "pending",
+  "controls": {
+    "accepted_harmless_cyclic_face_rotation": true,
+    "rejected": [
+      "missing-face",
+      "reversed-physical-face",
+      "noncontact-side",
+      "omitted-actual-contact",
+      "false-Euler-face-count",
+      "false-turn-record",
+      "incorrect-profile",
+      "changed-alternative-coordinate"
+    ]
+  },
+  "audit": [
+    {
+      "face_side_supports": 222,
+      "name": "asymmetric",
+      "original_motif_faces": 10,
+      "outside_vertex_exclusions": 195,
+      "pair_checks": 105,
+      "physical_faces": 17,
+      "profile": {
+        "P": 3,
+        "Q": 3,
+        "T": 11
+      }
+    },
+    {
+      "face_side_supports": 222,
+      "name": "cyclic_alternative_common_labels",
+      "original_motif_faces": 10,
+      "outside_vertex_exclusions": 195,
+      "pair_checks": 105,
+      "physical_faces": 17,
+      "profile": {
+        "P": 3,
+        "Q": 3,
+        "T": 11
+      }
+    }
+  ],
+  "FACE_CHART_sha256": "90fac31cd936834a7e1379df7a88b8fba126b7dc325bfda1f6a368e92aa99c07"
+}
