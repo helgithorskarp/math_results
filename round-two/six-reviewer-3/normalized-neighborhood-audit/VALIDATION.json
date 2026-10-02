@@ -1,0 +1,129 @@
+{
+  "actual_agent": "six-reviewer-3",
+  "role": "independent mathematical reviewer",
+  "independent_record_sha256": "3c4e81d5b786bdce59f485d489db51bf5a40e7be7091c69dccaf23508e80dc23",
+  "original_record_sha256": "fccc5f467ca924daa99abaa164cbd230b947931d52a42165477c0763e256b749",
+  "full_original_fixture_comparison": true,
+  "input_files_hash_verified": 96,
+  "guard_seconds_per_child": 45,
+  "native_threads": 1,
+  "serial_children": true,
+  "peak_child_rss_KiB": 23612,
+  "runs": [
+    {
+      "label": "complete independent regenerated record",
+      "mode": "normal",
+      "exit": 0,
+      "elapsed_seconds": 6.400679,
+      "stdout_sha256": "e6fbfe15c1a6ee4a8a7857a3eef909ea68515e7975fb72358be79e23b3cd76e9",
+      "stderr_bytes": 0
+    },
+    {
+      "label": "independent external fixture rejects missing",
+      "mode": "normal",
+      "exit": 1,
+      "elapsed_seconds": 0.177743,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 1352
+    },
+    {
+      "label": "independent external fixture rejects malformed",
+      "mode": "normal",
+      "exit": 1,
+      "elapsed_seconds": 0.239452,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 1505
+    },
+    {
+      "label": "independent external fixture rejects changed",
+      "mode": "normal",
+      "exit": 1,
+      "elapsed_seconds": 6.497295,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 1022
+    },
+    {
+      "label": "unchanged original checker, all original predicates and controls",
+      "mode": "normal",
+      "exit": 0,
+      "elapsed_seconds": 3.620154,
+      "stdout_sha256": "ea00ad4da6fc3b4d265afcf04e24cda306de3d7b1ba97b62a5b46cb5a97a480e",
+      "stderr_bytes": 0
+    },
+    {
+      "label": "separate whole original record regeneration",
+      "mode": "normal",
+      "exit": 0,
+      "elapsed_seconds": 3.295289,
+      "stdout_sha256": "ea00ad4da6fc3b4d265afcf04e24cda306de3d7b1ba97b62a5b46cb5a97a480e",
+      "stderr_bytes": 0
+    },
+    {
+      "label": "complete independent regenerated record",
+      "mode": "optimized",
+      "exit": 0,
+      "elapsed_seconds": 6.882909,
+      "stdout_sha256": "e6fbfe15c1a6ee4a8a7857a3eef909ea68515e7975fb72358be79e23b3cd76e9",
+      "stderr_bytes": 0
+    },
+    {
+      "label": "independent external fixture rejects missing",
+      "mode": "optimized",
+      "exit": 1,
+      "elapsed_seconds": 0.595476,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 1352
+    },
+    {
+      "label": "independent external fixture rejects malformed",
+      "mode": "optimized",
+      "exit": 1,
+      "elapsed_seconds": 0.577315,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 1505
+    },
+    {
+      "label": "independent external fixture rejects changed",
+      "mode": "optimized",
+      "exit": 1,
+      "elapsed_seconds": 6.964495,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 1022
+    },
+    {
+      "label": "unchanged original checker, all original predicates and controls",
+      "mode": "optimized",
+      "exit": 0,
+      "elapsed_seconds": 3.557238,
+      "stdout_sha256": "ea00ad4da6fc3b4d265afcf04e24cda306de3d7b1ba97b62a5b46cb5a97a480e",
+      "stderr_bytes": 0
+    },
+    {
+      "label": "separate whole original record regeneration",
+      "mode": "optimized",
+      "exit": 0,
+      "elapsed_seconds": 3.397115,
+      "stdout_sha256": "ea00ad4da6fc3b4d265afcf04e24cda306de3d7b1ba97b62a5b46cb5a97a480e",
+      "stderr_bytes": 0
+    }
+  ],
+  "trust_boundary": "Original code is corroboration only and supplies no calculation inputs to verify.py; core frozen before original executable/expected inspection.",
+  "python_version": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+  "initial_core_freeze": {
+    "exit": 0,
+    "seconds": 4.094692987040617,
+    "peak_rss_KiB": 21408,
+    "finished_utc": "2026-10-02T13:09:31.018069+00:00",
+    "independent_record_sha256": "3c4e81d5b786bdce59f485d489db51bf5a40e7be7091c69dccaf23508e80dc23",
+    "before_author_executable_expected_inspection": true
+  },
+  "author_first_inspection": {
+    "utc": "2026-10-02T13:10:27.008619+00:00",
+    "source_commit": "8b45ae14447abdb6e08aad04780337b3be80b486",
+    "after_independent_core_freeze": "2026-10-02T13:09:31.018069+00:00",
+    "record_sha256": "3c4e81d5b786bdce59f485d489db51bf5a40e7be7091c69dccaf23508e80dc23"
+  },
+  "whole_independent_normal_optimized_fixtures_equal": true,
+  "mathematical_domain_damage_rejections": 22,
+  "whole_domain_obligations": 56
+}
