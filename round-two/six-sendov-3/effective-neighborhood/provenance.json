@@ -1,0 +1,109 @@
+{
+  "actual_agent": "six-sendov-3",
+  "role": "researcher",
+  "date": "2026-10-02",
+  "proof_status": "ordinary analytic proof with exact hypothesis/constant checks; unformalized and new radius independently unreviewed",
+  "new_scope": "closed numerical nonlinear four-tail/free/radial box and coefficient-local entry retaining six-fold critical collision",
+  "sources": [
+    {
+      "graph_height": "9267",
+      "commit": "fc7b01e38d6b07ccb0afb940e4e04f7569207058",
+      "path": "round-two/six-sendov-3/radial-slack/PROOF.md",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-3/radial-slack/PROOF.md"
+    },
+    {
+      "graph_height": "9225",
+      "commit": "9f8293764732c302d0225150ea018951b14a96db",
+      "path": "round-two/six-sendov-3/complex-sector/PROOF.md",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-3/complex-sector/PROOF.md"
+    },
+    {
+      "graph_height": "9113",
+      "commit": "7bb2d1b6cf6cb3b370ad10023bee018128a1b81f",
+      "path": "round-two/six-sendov-3/validated-boundary-branch/PROOF.md",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-3/validated-boundary-branch/PROOF.md"
+    },
+    {
+      "graph_height": "9174",
+      "commit": "737a94a084ef91129443179fdc892fbb12d65b0f",
+      "path": "round-two/six-reviewer-3/certified-branch-audit/REVIEW.md",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-3/certified-branch-audit/REVIEW.md"
+    },
+    {
+      "graph_height": "9164",
+      "commit": "8a29091f0c1fdf3b310c3788987b3441a13fc1d6",
+      "path": "round-two/six-sendov-3/centered-real-sector/PROOF.md",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-3/centered-real-sector/PROOF.md"
+    },
+    {
+      "graph_height": "9203",
+      "commit": "d623ba67fd42e57067b4e605cf3c0ac2a3ba8bb0",
+      "path": "round-two/six-reviewer-3/centered-sector-audit/REVIEW.md",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-3/centered-sector-audit/REVIEW.md"
+    },
+    {
+      "graph_height": "8921",
+      "commit": "ac6099018ea9e0e8e3092122db6ff24d549ebf32",
+      "path": "round-two/six-sendov-3/analytic-boundary/PROOF.md",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-3/analytic-boundary/PROOF.md"
+    },
+    {
+      "graph_height": "8955",
+      "commit": "af8744b970f35769564fba7cb7c53377281661ca",
+      "path": "round-two/six-reviewer-1/analytic-minimizer-audit/REVIEW.md",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-1/analytic-minimizer-audit/REVIEW.md"
+    },
+    {
+      "graph_height": "9033",
+      "commit": "f6e5848da01148e65c9be0ec8a8b003d14d503d8",
+      "path": "round-two/six-sendov-3/exact-half-obstruction/PROOF.md",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-3/exact-half-obstruction/PROOF.md"
+    },
+    {
+      "graph_height": "9080",
+      "commit": "215d6ae7843624382f0784e3e4b836339885e4a3",
+      "path": "round-two/six-reviewer-3/half-endpoint-audit/REVIEW.md",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-3/half-endpoint-audit/REVIEW.md"
+    },
+    {
+      "graph_height": "9289",
+      "commit": "d390b6a572eeeb29f462d9618c457a87c1e22fe4",
+      "path": "round-two/six-reviewer-3/complex-sector-audit/REVIEW.md",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-3/complex-sector-audit/REVIEW.md"
+    }
+  ],
+  "mathematical_premises": [
+    "9267",
+    "9225",
+    "9113",
+    "9174",
+    "9203"
+  ],
+  "unchanged_source_dependencies": [
+    "9267",
+    "9225",
+    "9164"
+  ],
+  "independent_complex_review_scope": "9289 confirms9225 zero-slack only; no9267 or new-radius verdict",
+  "eta_range": "0<eta<=1/65536",
+  "coefficient_range": "0<=k<1/2-33eta/16",
+  "delta": "1/2-33eta/16-k",
+  "raw_parameter_radius": "delta*2^-721*eta^14",
+  "coefficient_radius": "delta^6*2^-4393*eta^97",
+  "quarter_coefficient_radius": "2^-4411*eta^97",
+  "slack_metric": "(1-|Z_i|^2)/2",
+  "small_metric": "sum h_j^2+sum(u_j-xbranch)^2",
+  "resources": {
+    "native_threads": 1,
+    "serial_math_children": true,
+    "per_child_guard_seconds": 45,
+    "scope_unchanged": true
+  },
+  "not_established": [
+    "eta0 positive radius",
+    "unrestricted global minimum on whole interval",
+    "supremum attainment",
+    "global all-competitor entry",
+    "first-power conjecture"
+  ]
+}
