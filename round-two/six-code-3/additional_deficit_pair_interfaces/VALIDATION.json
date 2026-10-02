@@ -1,0 +1,104 @@
+{
+  "agent": "six-code-3",
+  "cold_runs": [
+    {
+      "agent": "six-code-3",
+      "finished_utc": "2026-10-02T00:05:32.207601+00:00",
+      "guards": "10s/product;200000 point-DFS states/product;5s/color product;64 priority trials;60s/subprocess",
+      "optimized": false,
+      "peak_child_rss_kib": 23496,
+      "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+      "role": "researcher",
+      "scope": "Unchanged1CPU2GiB;one CPU-intensive job at a time",
+      "seconds": 55.50244038301753,
+      "threads": 1
+    },
+    {
+      "agent": "six-code-3",
+      "finished_utc": "2026-10-02T00:07:54.389284+00:00",
+      "guards": "10s/product;200000 point-DFS states/product;5s/color product;64 priority trials;60s/subprocess",
+      "optimized": true,
+      "peak_child_rss_kib": 25784,
+      "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+      "role": "researcher",
+      "scope": "Unchanged1CPU2GiB;one CPU-intensive job at a time",
+      "seconds": 56.75764321204042,
+      "threads": 1
+    }
+  ],
+  "complete_each_mode": {
+    "color_check": {
+      "candidate_domains_sha256": "bc7c58f39b7f207b1a3646b18b41e86118e2c22ffb7bfc76114ed245820653fd",
+      "color_range": [
+        25,
+        31
+      ],
+      "interfaces": 34,
+      "lambda_yw_subscopes": {
+        "4": {
+          "interfaces": 19,
+          "maximum_upper_bound": 67
+        },
+        "5": {
+          "interfaces": 15,
+          "maximum_upper_bound": 67
+        }
+      },
+      "maximum_upper_bound": 67,
+      "records_sha256": "4a8108fdcf09c941c5d029123c24d71a0920cb4f48614f1274e4aac921d0c247",
+      "status": "PASS_ALL34_ADDITIONAL_DEFICIT_LITERAL_COLOR_CERTIFICATES",
+      "total_compatible_edges": 214165,
+      "total_residual_candidates": 4179,
+      "universe_per_interface": 4368,
+      "upper_bound_census": {
+        "61": 1,
+        "62": 5,
+        "63": 7,
+        "64": 11,
+        "65": 3,
+        "66": 2,
+        "67": 5
+      }
+    },
+    "controls": {
+      "bridge_damages": 8,
+      "certificate_damages": 13,
+      "fixture_damages": 10,
+      "primary_record_damages": 7,
+      "product_population_gap": 1,
+      "relabeled_stars": 69,
+      "relabelings": 3,
+      "status": "PASS_SEMANTIC_DAMAGE_AND_ACTUAL_TRANSPORT_CONTROLS",
+      "transported_interfaces": 102
+    },
+    "dfs_states": 4622688,
+    "distinct_word_unions": 34,
+    "explicit_full_maps": 11076,
+    "maximum_states": 15454,
+    "positive_maps": 34,
+    "positive_products": 27,
+    "products": 360,
+    "represented_full_maps": 5598720
+  },
+  "date": "2026-10-02T00:16:32.244147+00:00",
+  "every_mathematical_record_matches": true,
+  "math_source_and_input_sha256": {
+    "BRIDGE.json": "347ea057500e0beece8a3f797d27d6ede78ee69ea59f615ca1dbdb988b993e8a",
+    "certificates.json": "b391f8358f508538cf51b06688ed33b56545e3b0fa5cba07a5b1cd98ed233096",
+    "check_colors.py": "33dcaac83f810de91a57df521039791e80526b4eb4b154de3202ed61301254eb",
+    "controls.py": "a9f363b614ccd8a5bdba79555f58941e2d253bc09cb6f864f369aae1527b41de",
+    "domain.py": "02f86ec89e6717f0193b5825a5d71b6ce3946645d436a09cc2419a188466415e",
+    "expected.json": "f3ae20f9680f3369ad8747bd8d1a2f5de20a50d0dc11e12a5865b47eef2e8df0",
+    "fixtures.json": "c188200792c201bdb44ea1667a8a70255c4e40f04fee6c334c98ecfa650113e7",
+    "generate_colors.py": "f661bc424403d715a21565f3a34661bf14287510889f17e05fe9e8608adc254d",
+    "produce.py": "e44c762c704d93e515faba424093d7a0e676551ae5bf28493703186c36ae6ff0",
+    "reproduce.py": "c0d2854fdb9db8b71382ab663d8a714be6d723331973c84c1769bd79c1c16975",
+    "verify.py": "c573dc8c1c1e9b48fe34d6a9969cbfcca9ede4f331e1eaa2d302b97a4848f94f"
+  },
+  "no_guards_hit": true,
+  "no_resource_escalation": true,
+  "role": "researcher",
+  "scope": "New360-product additional-deficit finite component only. Combined ordinary selector corollary additionally imports reviewed9141 old-domain66; not a new independent review or sharpness proof.",
+  "status": "PASS_COMPLETE_COLD_NORMAL_AND_OPTIMIZED",
+  "whole_RESULT_bytes_equal": true
+}
