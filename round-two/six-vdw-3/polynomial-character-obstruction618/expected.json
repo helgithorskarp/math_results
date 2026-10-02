@@ -1,0 +1,97 @@
+{
+  "certificate_sha256": "7aea15c215525390e4a361cc1df6c1dce3a0b96c7e6c7f12b83791ddf9e7128a",
+  "controls": {
+    "CRT_phase_parameter_sets": 63036,
+    "actual_illegal_phase_column_witnesses": 5974,
+    "affine_basis_value_checks": 126072,
+    "cube_class_sizes": [
+      34,
+      34,
+      34
+    ],
+    "cubic_normalization_value_checks": 1092727,
+    "depressed_normalizations": 10712,
+    "integer_distance_correlation_values": 3030,
+    "legal_phase_rows": 6,
+    "linear_normalizations": 10506,
+    "multiplicativity_inputs": 10404,
+    "phase_cycle_inputs": 1920,
+    "zero_to_three_hole_root_count_classes": 30
+  },
+  "damage_rejections": [
+    {
+      "name": "missing polynomial",
+      "reason": "complete 317-case coverage"
+    },
+    {
+      "name": "duplicate index",
+      "reason": "ordered unique case index"
+    },
+    {
+      "name": "zero polynomial",
+      "reason": "complete canonical coefficient cover"
+    },
+    {
+      "name": "omitted third cube class",
+      "reason": "complete canonical coefficient cover"
+    },
+    {
+      "name": "field coefficient outside domain",
+      "reason": "complete canonical coefficient cover"
+    },
+    {
+      "name": "missing witness pair",
+      "reason": "integer witness row"
+    },
+    {
+      "name": "zero step",
+      "reason": "actual start and nonzero short step"
+    },
+    {
+      "name": "negative step",
+      "reason": "actual start and nonzero short step"
+    },
+    {
+      "name": "out of range start",
+      "reason": "actual start and nonzero short step"
+    },
+    {
+      "name": "field constant step",
+      "reason": "seven distinct field columns"
+    },
+    {
+      "name": "overlapping supports",
+      "reason": "pairwise disjoint field supports"
+    },
+    {
+      "name": "root-containing AP",
+      "reason": "all roots avoided"
+    },
+    {
+      "name": "nonmonochromatic AP",
+      "reason": "literal monochromatic actual AP"
+    }
+  ],
+  "geometry": {
+    "actual_APs": 2536,
+    "actual_points": 17752,
+    "canonical_polynomials": 317,
+    "cases_with_regular_field_zero": 312,
+    "literal_transcript_sha256": "99b33dc7047838dbf201a83067d5d9a17a991ddbbcf5cafbade67cd0d976a8b5",
+    "packing_per_polynomial": 8,
+    "root_count_histogram": {
+      "0": 106,
+      "1": 157,
+      "2": 4,
+      "3": 50
+    },
+    "start_zero_APs": 15,
+    "step_gcd_histogram": {
+      "1": 1243,
+      "2": 1065,
+      "3": 131,
+      "6": 97
+    }
+  },
+  "status": "COMPLETE_INDEPENDENT_LITERAL_CERTIFICATE_AND_NORMALIZATION_CHECK"
+}
