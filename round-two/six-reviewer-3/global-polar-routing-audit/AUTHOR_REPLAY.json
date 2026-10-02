@@ -1,0 +1,133 @@
+{
+  "first_access": {
+    "first_target_code_materialization_utc": "2026-10-02T20:19:22.458132+00:00",
+    "source_files": [
+      {
+        "path": "round-two/six-sendov-1/global-polar-routing/.gitignore",
+        "commit": "bdedbe4d093bc614953a2daed2bcba04217f681c",
+        "bytes": 19,
+        "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+      },
+      {
+        "path": "round-two/six-sendov-1/global-polar-routing/EXPECTED.json",
+        "commit": "bdedbe4d093bc614953a2daed2bcba04217f681c",
+        "bytes": 48748,
+        "sha256": "9ca58ef4542bf521698c02aa58d3f5ced0fe4395e0a326f858a40caaca622721"
+      },
+      {
+        "path": "round-two/six-sendov-1/global-polar-routing/LITERATURE.md",
+        "commit": "bdedbe4d093bc614953a2daed2bcba04217f681c",
+        "bytes": 7330,
+        "sha256": "33cb3a86e5fcdb749ac8dd8bf1861771dd352d7bf0d913e5027991830036bc76"
+      },
+      {
+        "path": "round-two/six-sendov-1/global-polar-routing/MANIFEST.json",
+        "commit": "bdedbe4d093bc614953a2daed2bcba04217f681c",
+        "bytes": 1038,
+        "sha256": "a6222d2800b5c5b0b1f9213f36cc8c96d8e01ed18c03a8102cc18774262bcabb"
+      },
+      {
+        "path": "round-two/six-sendov-1/global-polar-routing/PROOF.md",
+        "commit": "bdedbe4d093bc614953a2daed2bcba04217f681c",
+        "bytes": 15731,
+        "sha256": "072556fd3691e3aa28b964f2c32a0d6df1046e255dfd23f6ca97458e98fac3b5"
+      },
+      {
+        "path": "round-two/six-sendov-1/global-polar-routing/README.md",
+        "commit": "bdedbe4d093bc614953a2daed2bcba04217f681c",
+        "bytes": 3674,
+        "sha256": "100fba7e03738270294b71257c6032d5749d00bf6145e1b4d5f0ce41729a518a"
+      },
+      {
+        "path": "round-two/six-sendov-1/global-polar-routing/VALIDATION.json",
+        "commit": "bdedbe4d093bc614953a2daed2bcba04217f681c",
+        "bytes": 5817,
+        "sha256": "594c8bb7235f0e6fe9bb0adbc1f9ffa6b1352e8b00170c3804308274dfdacaa8"
+      },
+      {
+        "path": "round-two/six-sendov-1/global-polar-routing/validate.py",
+        "commit": "bdedbe4d093bc614953a2daed2bcba04217f681c",
+        "bytes": 6258,
+        "sha256": "f05dfd9de65e73606033f2971b79ae4e26b02f411a7fd78ab358913208bf026a"
+      },
+      {
+        "path": "round-two/six-sendov-1/global-polar-routing/verify.py",
+        "commit": "bdedbe4d093bc614953a2daed2bcba04217f681c",
+        "bytes": 14074,
+        "sha256": "f5319023e7ef2db65ce31e0c17c29c15ba9ec9c4e40de0202c32b4e593ea8d56"
+      }
+    ],
+    "independent_seal_utc": "2026-10-02T20:18:59.779840+00:00",
+    "seal_unchanged": true
+  },
+  "normal": {
+    "actual_multiplicity_controls": 3,
+    "complete_gaussian_controls": 10,
+    "full_polynomial_degrees": {
+      "mean": 48,
+      "modulus": 24,
+      "variance": 24
+    },
+    "rejected_mathematical_damages": [
+      "mean_constant5_leading_margin",
+      "modulus_constant8_leading_margin",
+      "variance_constant12_leading_margin",
+      "tripled_mixed_hessian",
+      "phase_allowance9",
+      "energy_carrier2pow27"
+    ],
+    "rejected_record_damages": [
+      "mean_head",
+      "full_tail_last",
+      "modulus_tail_omitted",
+      "variance_factor",
+      "hessian_ordering",
+      "routing_endpoint",
+      "complex_phase",
+      "actual_multiplicity"
+    ],
+    "status": "PASS",
+    "strict_window_margins": 16,
+    "whole_record_sha256": "6ffd3a3f6bc620f758ba4c3b5d54d55b3c18be6c7637e1b11c6591fd10b69eac"
+  },
+  "optimized": {
+    "actual_multiplicity_controls": 3,
+    "complete_gaussian_controls": 10,
+    "full_polynomial_degrees": {
+      "mean": 48,
+      "modulus": 24,
+      "variance": 24
+    },
+    "rejected_mathematical_damages": [
+      "mean_constant5_leading_margin",
+      "modulus_constant8_leading_margin",
+      "variance_constant12_leading_margin",
+      "tripled_mixed_hessian",
+      "phase_allowance9",
+      "energy_carrier2pow27"
+    ],
+    "rejected_record_damages": [
+      "mean_head",
+      "full_tail_last",
+      "modulus_tail_omitted",
+      "variance_factor",
+      "hessian_ordering",
+      "routing_endpoint",
+      "complex_phase",
+      "actual_multiplicity"
+    ],
+    "status": "PASS",
+    "strict_window_margins": 16,
+    "whole_record_sha256": "6ffd3a3f6bc620f758ba4c3b5d54d55b3c18be6c7637e1b11c6591fd10b69eac"
+  },
+  "validation": {
+    "copied_source_pin_rejections": 4,
+    "external_fixture_rejections": 28,
+    "peak_child_rss_kib": 22468,
+    "positive_runs": 2,
+    "status": "PASS",
+    "whole_record_sha256": "6ffd3a3f6bc620f758ba4c3b5d54d55b3c18be6c7637e1b11c6591fd10b69eac"
+  },
+  "optional_late_only": true,
+  "core_source_seal_unchanged": true
+}
