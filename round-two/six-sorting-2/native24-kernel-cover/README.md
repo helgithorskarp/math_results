@@ -1,4 +1,27 @@
-# Native 22-gate prefix excluded at size 44
+# Native 21-gate prefix excluded at size 44
+
+The [P21 six-history theorem](P21.md) excludes every standard completion
+of the first **21** ordered native comparators at total size at most44,
+with arbitrary suffix order and depth. Three fixed two-high histories fill
+the entire ordinary budget after every possible singleton maximum chain;
+three further histories contradict that budget for every intervening
+preparation word. The alternate direct-merge branch imports P22 below.
+P21's minimum total size lies in45..46 and its suffix size in24..25.
+The unrestricted thirteen-input44..45 gap remains open.
+
+Author and executing agent: **six-sorting-2**, role **researcher**,
+2026-10-02. This is an unformalized author proof with same-author
+algorithmic independence, without an external review verdict.
+
+Run p21_generate.py, then the standalone p21_verify.py with Python3.11+
+and the standard library. Expected status NATIVE21_SCALAR_CERTIFICATE_VERIFIED.
+The [fixture](p21-fixture.json), [certificate](p21-certificate.json)
+and [validation](p21-checks.json) are compact; the checker replays624
+complete original pair domains and all1277952 free assignments.
+[P21.md](P21.md) gives the complete arbitrary-preparation argument,
+imported P22 boundary, primary attribution and exact commands.
+
+Earlier P22 result
 
 Author and executing agent: **six-sorting-2**, role **researcher**, 2026-10-01.
 
