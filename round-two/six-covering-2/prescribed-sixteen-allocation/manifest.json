@@ -1,0 +1,119 @@
+{
+  "agent": "six-covering-2",
+  "role": "researcher",
+  "utc": "2026-10-02T00:17:01.247730+00:00",
+  "proof_status": "Written unformalized combinatorial proof, exact author controls; no independent reviewer verdict",
+  "python_version": "3.11.2",
+  "records": [
+    {
+      "name": "normal",
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-covering-2/prescribed-sixteen-allocation/controls.py",
+        "--expected",
+        "round-two/six-covering-2/prescribed-sixteen-allocation/expected.json"
+      ],
+      "seconds": 0.2757132630213164,
+      "evidence_sha256": "84d991e253c887c3e797fc1daa5160394181188787c828aa80551fbebf8745dd"
+    },
+    {
+      "name": "optimized",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-covering-2/prescribed-sixteen-allocation/controls.py",
+        "--expected",
+        "round-two/six-covering-2/prescribed-sixteen-allocation/expected.json"
+      ],
+      "seconds": 0.38079873303649947,
+      "evidence_sha256": "84d991e253c887c3e797fc1daa5160394181188787c828aa80551fbebf8745dd"
+    }
+  ],
+  "max_child_rss_kib": 19840,
+  "threads": 1,
+  "one_intensive_child_at_a_time": true,
+  "cpu_scope": 1,
+  "memory_scope_gib": 2,
+  "small_models": 1400,
+  "vertex_covers": 8477,
+  "feasible": 548,
+  "feasible_equality_models": 130,
+  "strictly_cut": 764,
+  "fixture": {
+    "points": 48,
+    "cofactor_pair": [
+      2,
+      17
+    ],
+    "free16_witness_original_resources": 24,
+    "prescribed16_gap": 4,
+    "subset_of_F_residual": true,
+    "core_realizability_asserted": false
+  },
+  "current_root": [
+    [
+      8,
+      0
+    ],
+    [
+      9,
+      0
+    ],
+    [
+      10,
+      1
+    ],
+    [
+      14,
+      0
+    ],
+    [
+      12,
+      4
+    ]
+  ],
+  "sixteen_phases": [
+    2,
+    4
+  ],
+  "core_labels_total": 41,
+  "core_labels_free": 36,
+  "remaining_first_tail_labels": 11,
+  "last_tail_labels": 12,
+  "scope": "Necessary condition after all core choices. Both original16 children remain open. No globalLCM improvement.",
+  "dependency_sources": [
+    {
+      "height": 9160,
+      "ref": "bafkreicikkzyr3miq2bffrcq53qsainehnlja7f7zw3ord264h3gyhehdm",
+      "commit": "b91d0ab7880d4c8065c41a6107f9a63086a7ae86",
+      "role": "Credited equal-resource counting mechanism, full written proof read, no numerical certificate imported"
+    },
+    {
+      "height": 9117,
+      "ref": "bafkreiddsmc6ahaqxmqvdohwvsrq22gan35ahdtpp4p3gk23teyv2k6j6e",
+      "commit": "28b11892997c765d098c6badb96f1ea867ffb342",
+      "role": "Own original16 restriction and two current roots"
+    },
+    {
+      "height": 7102,
+      "ref": "bafkreiadl5p7tzrjxfj5dzkkfp5om2fhr5fztv4k6all56vzq4cjta5eqa",
+      "commit": "afaabb5d6222b09be0977c3884714a5cf2e60c47",
+      "role": "Credited prior residual-fiber model and original per-level labels"
+    },
+    {
+      "height": 9158,
+      "ref": "bafkreif53p4y5yi7j3k2p5jstum22fxvcinfndsfo6x5vlz4ipixzdzwcq",
+      "commit": "1aeab40e1251ee6a6be4f839149743d849f70b38",
+      "role": "Separate construction-route context only; no numerical theorem imported"
+    }
+  ],
+  "primary_literature_refresh": "2026-10-02",
+  "trust_boundary": [
+    "unformalized counting and CRT arguments",
+    "ordinary standard-library Python integer/set execution"
+  ],
+  "large_generated_evidence_required": false,
+  "solver_used": false
+}
