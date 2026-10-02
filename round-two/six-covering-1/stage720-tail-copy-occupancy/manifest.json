@@ -1,0 +1,176 @@
+{
+  "agent": "six-covering-1",
+  "role": "researcher",
+  "utc": "2026-10-02T11:56:05.373587+00:00",
+  "files": [
+    ".gitignore",
+    "README.md",
+    "SHA256SUMS",
+    "audit.cpp",
+    "audit.py",
+    "certificate.json",
+    "check.py",
+    "expected.json",
+    "manifest.json",
+    "proof.md",
+    "verify.py"
+  ],
+  "claim": "Each of five free copies needs at least3 ORIGINAL classes meeting actual holes, under stated720 firststage/29tail hypotheses",
+  "proof_status": "exact conditional author-checked computation plus unformalized reduction; no independent verdict",
+  "external_numerical_dependency_for_occupancy_only": {
+    "graph": "9329/0",
+    "source_commit": "537b7f3525f492843ebb5ba1edf510d928afc76b",
+    "reader": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-covering-1/stage720-four-hole-bound/proof.md",
+    "statement": "actual even holes >=99 under exact firststage hypotheses; not recomputed here"
+  },
+  "context_generalized_only_in_fixed82_nonextension_paragraph": {
+    "graph": "9287/0",
+    "source_commit": "106223e6ce40150aa987e64dce7e2725df9e65d4",
+    "reader": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-covering-1/four-coset-tail-overlap/proof.md"
+  },
+  "python": "Python 3.11.2",
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "external_packages": [],
+  "threads": 1,
+  "cpu_scope": 1,
+  "memory_scope_gib": 2,
+  "required_replays": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "scratch/publication/round-two/six-covering-1/stage720-tail-copy-occupancy/check.py"
+      ],
+      "seconds": 2.39133924304042,
+      "max_rss_kib": 19476,
+      "deadline_seconds": 20,
+      "script_sha256": "83b1c5d811e9599a4b59a96734442ecf86c1121c2aa160a0b5cf1506065de9cb",
+      "result": {
+        "status": "EXACT_CONDITIONAL_COPY_OCCUPANCY_CHECKED",
+        "tail_large_unions": 46,
+        "surviving_tail_assignments": 22,
+        "compulsory_counts": [
+          420,
+          420,
+          420,
+          420,
+          410
+        ],
+        "first_capacities": [
+          404,
+          404,
+          404,
+          404,
+          397
+        ],
+        "damage_rejections": 8,
+        "certificate_sha256": "37ae869c633ac928123f0433c1a0cd2dd785612713fa374d1f6d8e64bb6f6dc2",
+        "seconds": 2.3368298299610615,
+        "global_L_min_8_bound_improved": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-O",
+        "scratch/publication/round-two/six-covering-1/stage720-tail-copy-occupancy/check.py"
+      ],
+      "seconds": 2.278757135034539,
+      "max_rss_kib": 22060,
+      "deadline_seconds": 20,
+      "script_sha256": "83b1c5d811e9599a4b59a96734442ecf86c1121c2aa160a0b5cf1506065de9cb",
+      "result": {
+        "status": "EXACT_CONDITIONAL_COPY_OCCUPANCY_CHECKED",
+        "tail_large_unions": 46,
+        "surviving_tail_assignments": 22,
+        "compulsory_counts": [
+          420,
+          420,
+          420,
+          420,
+          410
+        ],
+        "first_capacities": [
+          404,
+          404,
+          404,
+          404,
+          397
+        ],
+        "damage_rejections": 8,
+        "certificate_sha256": "37ae869c633ac928123f0433c1a0cd2dd785612713fa374d1f6d8e64bb6f6dc2",
+        "seconds": 2.103636903921142,
+        "global_L_min_8_bound_improved": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "scratch/publication/round-two/six-covering-1/stage720-tail-copy-occupancy/audit.py"
+      ],
+      "seconds": 2.7625075979158282,
+      "max_rss_kib": 123320,
+      "deadline_seconds": 20,
+      "script_sha256": "404da79e1b795295b80c88cd0539e459e43fb6764b5edfc106755525c42e69ac",
+      "result": {
+        "status": "CPP_CRT_FIBER_AUDIT_MATCHES_ALL_ENTRIES",
+        "tail_entries": 46,
+        "first_original_blocks": 73,
+        "core_profile_pairs": 414720,
+        "covered_raw_core_phase_tuples": 10368000,
+        "seconds": 2.6997183689381927
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-O",
+        "scratch/publication/round-two/six-covering-1/stage720-tail-copy-occupancy/audit.py"
+      ],
+      "seconds": 2.93326684308704,
+      "max_rss_kib": 123248,
+      "deadline_seconds": 20,
+      "script_sha256": "404da79e1b795295b80c88cd0539e459e43fb6764b5edfc106755525c42e69ac",
+      "result": {
+        "status": "CPP_CRT_FIBER_AUDIT_MATCHES_ALL_ENTRIES",
+        "tail_entries": 46,
+        "first_original_blocks": 73,
+        "core_profile_pairs": 414720,
+        "covered_raw_core_phase_tuples": 10368000,
+        "seconds": 2.6491608769865707
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "scratch/publication/round-two/six-covering-1/stage720-tail-copy-occupancy/audit.py",
+        "--sanitizers"
+      ],
+      "seconds": 13.5559171870118,
+      "max_rss_kib": 297156,
+      "deadline_seconds": 20,
+      "script_sha256": "404da79e1b795295b80c88cd0539e459e43fb6764b5edfc106755525c42e69ac",
+      "result": {
+        "status": "SANITIZER_CRT_FIBER_CONTROLS_PASSED",
+        "control_counts": "CONTROLS 2160000 497664 120 10368000",
+        "seconds": 13.480221468023956
+      }
+    }
+  ],
+  "exact_table_comparison": {
+    "tail_rows": 46,
+    "first_original_blocks": 73,
+    "full_match": true
+  },
+  "damage_controls": {
+    "damages_each_python_mode": 8,
+    "rejections_total": 16,
+    "repair_before_final_replay": "An initial mutation set an already-zero phase to zero; changed to an increment. Mathematical tables unchanged."
+  },
+  "certificate_frozen_before_cpp_audit": true,
+  "certificate_sha256": "37ae869c633ac928123f0433c1a0cd2dd785612713fa374d1f6d8e64bb6f6dc2",
+  "sum_required_replay_seconds": 23.921788006089628,
+  "maximum_replay_rss_kib": 297156,
+  "solver_is_proof_premise": false,
+  "large_omitted_proof_artifact": false,
+  "global_cover_or_L_min_8_bound_asserted": false
+}
