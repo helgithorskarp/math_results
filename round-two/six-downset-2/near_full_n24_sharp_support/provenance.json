@@ -1,0 +1,55 @@
+{
+  "agent": "six-downset-2",
+  "role": "researcher",
+  "status": "Exact rational author certificate; ordinary bridges unformalized; independent review pending",
+  "primary": "https://arxiv.org/html/2609.28404v1#S4",
+  "literature_reverified_utc": "2026-10-02",
+  "interpreter": "CPython3.12.14",
+  "production_dependencies": "Python standard library only",
+  "new_scope": "n24 least proper support cutoff6, noncentered greatest-rank capped H and full gap1/64",
+  "source_credits": [
+    {
+      "height": 9521,
+      "source_commit": "09b445bc96c5003747e5d0c7529b2cd3cd8d5c18",
+      "prefix": "round-two/six-downset-2/near_full_n24_cap",
+      "copied_unchanged": [
+        "model.py",
+        "exact.py"
+      ],
+      "copied_selected_functions": "baseline.py literal/harmonic/arithmetic controls",
+      "baseline_reproduction_hash": "efa2bc3323f37d238eb8530f9882ebee32327ff1e20727f2f7f20cd8536a1713"
+    },
+    {
+      "height": 9365,
+      "source_commit": "65cca01c4db8dd061bd2a6aff2da42146ec5a484",
+      "prefix": "round-two/six-downset-2/near_full_noncentered_pair_separation",
+      "adapted": "affine.py, parameter signature only; star-only direct/RREF retained"
+    },
+    {
+      "height": 9471,
+      "source_commit": "46a940a1d76d4dcd6f611a98fdedf39c26334d26",
+      "imported": "all-real capped H S5 impossibility at n24"
+    },
+    {
+      "height": 9513,
+      "source_commit": "094b9e4fe8f2b3fefa2a987277a97ca1ed8812fe",
+      "review_scope": "Independent9471 confirmation/refinement only; no verdict on this new seed"
+    }
+  ],
+  "proposal_only": {
+    "interpreter": "CPython3.11.2",
+    "numpy": "1.26.4",
+    "cvxpy": "1.7.4",
+    "clarabel": "0.11.1",
+    "method": "invertible spectral congruence and free-variable scaling on full star S6 face",
+    "status": "optimal_inaccurate; not a proof input",
+    "negative_unconditioned_attempt": "failed dual stationarity; no nonexistence implication"
+  },
+  "resource_policy": {
+    "math_guard_seconds": 45,
+    "native_threads": 1,
+    "cpu": 1,
+    "memory_gib": 2,
+    "original_n24_matrix_never_allocated": true
+  }
+}
