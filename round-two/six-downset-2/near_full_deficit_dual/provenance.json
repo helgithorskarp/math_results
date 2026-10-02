@@ -1,0 +1,103 @@
+{
+  "agent": "six-downset-2",
+  "role": "researcher",
+  "date": "2026-10-02",
+  "claim": "Ordinary all-order deficit compression, exact optimum of specified full two-test relaxation and original signed support mass, with complete free lower criterion",
+  "proof_status": "Ordinary author proof unformalized and independently unreviewed",
+  "expected_bytes": 73825,
+  "expected_sha256": "249b2778b1c92125ec9334a42846e86829c0df6074482b3a43a47d43f973304d",
+  "inputs": [
+    {
+      "n": 24,
+      "cutoff": 6,
+      "copied_file": "fixtures/n24.json",
+      "bytes": 6617,
+      "sha256": "4aaf0182bdeccc7b116630adf1a83038c62ce70152b4edb21fb3c2407f3fd3a6",
+      "source_commit": "b0899891b28d5b4e0ec9aa150e8c3d2a97ad4624",
+      "source_path": "round-two/six-downset-2/near_full_n24_sharp_support/seed.json",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-downset-2/near_full_n24_sharp_support/seed.json",
+      "role": "Credited prior complete table, identity validation only; no new seed claim"
+    },
+    {
+      "n": 32,
+      "cutoff": 8,
+      "copied_file": "fixtures/n32.json",
+      "bytes": 15323,
+      "sha256": "c0793a1955dc59f41da3c521bbb070efe125a445fc159e328bd616968a8ee40e",
+      "source_commit": "fca248f4d3e8d6f377c6e6e165c191593b62660b",
+      "source_path": "round-two/six-downset-2/near_full_n32_sharp_support/seed.json",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-downset-2/near_full_n32_sharp_support/seed.json",
+      "role": "Credited prior complete table, identity validation only; no new seed claim"
+    },
+    {
+      "n": 40,
+      "cutoff": 11,
+      "copied_file": "fixtures/n40.json",
+      "bytes": 26058,
+      "sha256": "52a5646a169395319fe2879c5ee2f0f35587f4305cd97104f0186bff267967d8",
+      "source_commit": "ff8b58c0f6355b417607aaffae532cb243434795",
+      "source_path": "round-two/six-downset-2/near_full_n40_sharp_support/seed.json",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-downset-2/near_full_n40_sharp_support/seed.json",
+      "role": "Credited prior complete table, identity validation only; no new seed claim"
+    }
+  ],
+  "copied_helpers": [
+    {
+      "path": "affine.py",
+      "bytes": 3803,
+      "sha256": "9cdcaa2f616d2e6b63f76cdd5dda4d9d633845da34f8d4ee2646d822deea59b8",
+      "source_commit": "ff8b58c0f6355b417607aaffae532cb243434795",
+      "source_path": "round-two/six-downset-2/near_full_n40_sharp_support/affine.py",
+      "unchanged": true
+    },
+    {
+      "path": "model.py",
+      "bytes": 4695,
+      "sha256": "9189b8b427be0a51bf46f7c6d338159b266d47ce4242dea03c2ee54888c63b10",
+      "source_commit": "ff8b58c0f6355b417607aaffae532cb243434795",
+      "source_path": "round-two/six-downset-2/near_full_n40_sharp_support/model.py",
+      "unchanged": true
+    }
+  ],
+  "prior_methodology": [
+    {
+      "height": 9471,
+      "ref": "bafkreie5bbft5yrw72p4cxr46lgvyc3t5h4abxjcdtbvtmryjpkrvaevsm",
+      "source_commit": "46a940a1d76d4dcd6f611a98fdedf39c26334d26",
+      "scope": "Original kernel, two-test cancellation and general-k constant"
+    },
+    {
+      "height": 9455,
+      "ref": "bafkreiargjbo5sbj5cfoahgwfclteaugzqfwwvzghfcndw4ejd2vjh44be",
+      "source_commit": "448db1d41bc84a0e5bf2c6f6ce00a043b9a337dd",
+      "scope": "Parameterized clipped profile and open optimization"
+    },
+    {
+      "height": 9513,
+      "ref": "bafkreignq4zzbvxpdsfjiwqwc2drxqro655fcgbafmvx63cqiyu53odsx4",
+      "source_commit": "094b9e4fe8f2b3fefa2a987277a97ca1ed8812fe",
+      "scope": "Original-entry audit and maximum-weight positive mass conversion; not a verdict on this result"
+    }
+  ],
+  "resources": {
+    "native_threads": 1,
+    "cpu_scope": 1,
+    "memory_scope_gib": 2,
+    "fixed_math_guard_seconds": 45,
+    "no_extra_resources": true
+  },
+  "primary_literature": {
+    "reader": "https://arxiv.org/html/2609.28404v1#S4",
+    "version_record": "https://arxiv.org/abs/2609.28404",
+    "live_checked": "2026-10-02",
+    "version": "v1,2026-09-23",
+    "scope": "Spectral H and I still conjectural; upper cap additional"
+  },
+  "trust_boundaries": [
+    "Ordinary all-order PSD/kernel/counting/optimization arguments, unformalized",
+    "Finite literal/layer identity controls do not prove infinite coverage",
+    "Relaxed deficit schedules do not prove whole H feasibility",
+    "Prior n40 independent review still pending",
+    "No exhaustive historical novelty claim"
+  ]
+}
