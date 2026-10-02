@@ -237,13 +237,13 @@ with (2) and the exact high-root completion gives
                      +4n^3-23n^2/4+11n/2-6.              \tag{14}
 \]
 More precisely the replacement in (14) drops the nonnegative root gain
-\(4q\(n-1\)^2/h\), besides replacing the clipped norm by (13).
+\(4q(n-1)^2/h\), besides replacing the clipped norm by (13).
 For general \(k\),
 \[
 \eta_{n,k}-\eta_{n,2}
 =(h-s^2/h)B_{n,k}+(n-1)(S_{n,k}-S_{n,2}),
 \]
-and \(S_{n,k}\le S_{n,2}\), \(0<h-s^2/h<2\(n-1\)\). Hence
+and \(S_{n,k}\le S_{n,2}\), \(0<h-s^2/h<2(n-1)\). Hence
 \[
 \eta_{n,k}\le F_n+2(n-1)B_{n,k}.                         \tag{15}
 \]
@@ -262,7 +262,7 @@ At \(n=12+t\), the added polynomial is
 \]
 These show that the coefficient of \(s\) in (14) is greater than \(n/3\)
 and its cubic remainder is less than \(4n^3\), so
-\(F_n<-\(n/3\)R_n\). If \(6B_{n,k}\le R_n\), (15) yields
+\(F_n<-(n/3)R_n\). If \(6B_{n,k}\le R_n\), (15) yields
 \[
 \eta_{n,k}<-R_n/3<0,\qquad \delta_{n,k}>R_n/(6h\mu).      \tag{16}
 \]
@@ -303,7 +303,7 @@ geometric majorant sums to one. Thus
 domain above; both parity cases are covered.
 
 For \(d>0\), the counted-sign representation of \(X-n/2\) gives
-\(\mathbb E e^{-\lambda\(X-n/2\)}=\cosh(\lambda/2)^n\).
+\(\mathbb E e^{-\lambda(X-n/2)}=\cosh(\lambda/2)^n\).
 Coefficient comparison \((2j)!\ge2^j j!\) proves
 \(\cosh z\le e^{z^2/2}\) for real \(z\). Markov's inequality with
 \(\lambda=4d/n\) therefore gives
@@ -320,7 +320,7 @@ together with \(R_n>3T/4\) proves its stated all-order conclusion by
 (16). Thus its Chernoff bridge is verified as well.
 
 For the stronger cutoff, retain the **full** moment bound (14), instead
-of first replacing it by \(-\(n/3\)R_n\). From (15) and (18),
+of first replacing it by \(-(n/3)R_n\). From (15) and (18),
 \[
 \eta_{n,k}\le E_n:=T(-n+13+1/n)/4+P_n,\qquad
 P_n=4n^3-5n^2+7n/4-25/4<4n^3.                          \tag{19}
