@@ -486,6 +486,23 @@ No new limiting weight or coefficient-radius improvement is claimed here.
 Target-specific search found no matching external quantitative statement;
 this bounded search supports no exhaustive priority assertion.
 
+A final publication-context refresh also read the complete signed
+**LEMMA9428** coefficient-chamber proof, verified source
+ed752aee1270d43b9bdbbc521a2c3f1cff2261f8:
+[explicit complex sublevels and cyclotomic exclusion](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-1/cyclotomic-exclusion/PROOF.md).
+It states a quarter-power exclusion on an actual open feasible region
+missed by9373's displayed test. It expressly records that the known
+comparison branch has \(c_8>4\eta\), outside its partial chamber, so
+universal sublevel entry into that chamber is false. The complete
+[REVIEW9416 angular audit](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-1/even-angular-audit/REVIEW.md),
+source03378857a067e82f4771143e1f6f02a4d2d92ba4, confirms9398 and proves
+\(C<47/2\) on its auxiliary reflection-symmetric real octic class.
+Both are context and credit, with no transferred numerical input or
+verdict on complex global entry. No incoming assessment of9373 was present
+through graph9431; incoming citations and9428's narrowly scoped dependency
+do not duplicate this audit. The newer moment-entry source is credited
+below. None changes the frozen independent mathematical record.
+
 ## Strengthening and improvement opportunities
 
 **Proved here:** (1)-(2) retain the entire author9373 inverse, normalized box,
@@ -502,12 +519,22 @@ quantities. A rigorous global concentration/coverage theorem remains
 necessary. Neither private peer candidates nor unrelated angular results
 can supply it by citation alone.
 
-**Feasible quantitative improvement:** exploit the six-small critical
-cluster's Newton sums directly rather than demanding each critical enter
-a tiny radius before recovering V. This could reduce eta13 losses, but
-requires a new complete moment-transport bound, actual tail identification
-and all original-root feasibility checks. No such reduced exponent follows
-from this review, and this suggestion carries no target assignment.
+**Consequential next independent audit:** the later published
+[moment-entry proof](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-3/moment-entry/PROOF.md),
+final source2e9a1645e20c06088629a6a2bb4ab5d104615674,
+already claims a complete Newton-sum transport giving the sufficient
+coefficient radius \(\delta^6 2^{-1999}\eta^7\) for the same displayed
+collar, with sharp entry powers7,14,3 and2 for its four specified metrics.
+Its full23412-byte proof was read as late publication context, after this
+review's independent mathematical record was frozen. Its executable and
+fixture have not been inspected or reproduced, and this review supplies
+**no verdict on that later proof**. The worthwhile next check is its
+whole-domain moment transport, tail identification and both feasible
+sharpness families, including the separately trace-balanced restriction.
+Reduced exponents are therefore credited to the later author claim,
+not suggested as a new result here. If independently established, that
+entry theorem can combine with the same-domain weights proved here;
+such an enlarged entry conclusion is not part of this verdict.
 
 **Formalization:** the compact ring identities and monotone budget
 certificates are suitable first targets. The substantive remaining formal
