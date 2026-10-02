@@ -1,0 +1,156 @@
+{
+  "runs": [
+    {
+      "flags": [],
+      "seconds": 4.933819,
+      "exit_code": 0,
+      "summary": {
+        "record_sha256": "62cc8aea6cdf1f666b8b555121c02ef1b26331ad3f8a2ac15e37c43529fb72da",
+        "record_bytes": 90847,
+        "whole_negative_orders": 11,
+        "whole_positive_orders": 2,
+        "positions": 332810,
+        "robust_boxes": [
+          "371/195264512",
+          "595/313022464"
+        ]
+      }
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "seconds": 4.652341,
+      "exit_code": 0,
+      "summary": {
+        "record_sha256": "62cc8aea6cdf1f666b8b555121c02ef1b26331ad3f8a2ac15e37c43529fb72da",
+        "record_bytes": 90847,
+        "whole_negative_orders": 11,
+        "whole_positive_orders": 2,
+        "positions": 332810,
+        "robust_boxes": [
+          "371/195264512",
+          "595/313022464"
+        ]
+      }
+    }
+  ],
+  "entire_normal_optimized_records_equal": true,
+  "typed_semantic_whole_record_fixture_damages": [
+    "omit_original_empty_loop",
+    "incorrect_parameter",
+    "false_all_real_margin",
+    "missing_boundary",
+    "wrong_physical_weight",
+    "false_robust_radius",
+    "drop_symbolic_coefficient",
+    "unweighted_quotient",
+    "incorrect_rank"
+  ],
+  "fresh_external_fixture_runs": [
+    {
+      "damage": "semantic",
+      "flags": [],
+      "seconds": 4.349646,
+      "exit_code": 1,
+      "summary": "ValueError: entire independent external mathematical record"
+    },
+    {
+      "damage": "semantic",
+      "flags": [
+        "-O"
+      ],
+      "seconds": 5.684437,
+      "exit_code": 1,
+      "summary": "ValueError: entire independent external mathematical record"
+    },
+    {
+      "damage": "duplicate",
+      "flags": [],
+      "seconds": 4.465058,
+      "exit_code": 1,
+      "summary": "ValueError: duplicate certificate JSON key"
+    },
+    {
+      "damage": "duplicate",
+      "flags": [
+        "-O"
+      ],
+      "seconds": 4.581556,
+      "exit_code": 1,
+      "summary": "ValueError: duplicate certificate JSON key"
+    },
+    {
+      "damage": "malformed",
+      "flags": [],
+      "seconds": 4.506446,
+      "exit_code": 1,
+      "summary": "json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+    },
+    {
+      "damage": "malformed",
+      "flags": [
+        "-O"
+      ],
+      "seconds": 4.811019,
+      "exit_code": 1,
+      "summary": "json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+    }
+  ],
+  "meaningful_source_changes": [
+    {
+      "damage": "wrong_lower_stationary",
+      "flags": [],
+      "seconds": 0.108125,
+      "exit_code": 1,
+      "summary": "ValueError: eliminated first variable"
+    },
+    {
+      "damage": "wrong_lower_stationary",
+      "flags": [
+        "-O"
+      ],
+      "seconds": 0.311373,
+      "exit_code": 1,
+      "summary": "ValueError: eliminated first variable"
+    },
+    {
+      "damage": "omit_actual_empty",
+      "flags": [],
+      "seconds": 0.148961,
+      "exit_code": 1,
+      "summary": "ValueError: whole original cardinality"
+    },
+    {
+      "damage": "omit_actual_empty",
+      "flags": [
+        "-O"
+      ],
+      "seconds": 0.364768,
+      "exit_code": 1,
+      "summary": "ValueError: whole original cardinality"
+    },
+    {
+      "damage": "wrong_projected_star_metric",
+      "flags": [],
+      "seconds": 3.081163,
+      "exit_code": 1,
+      "summary": "ValueError: nonnegative diagonal in every congruence remainder"
+    },
+    {
+      "damage": "wrong_projected_star_metric",
+      "flags": [
+        "-O"
+      ],
+      "seconds": 3.270613,
+      "exit_code": 1,
+      "summary": "ValueError: nonnegative diagonal in every congruence remainder"
+    }
+  ],
+  "per_child_guard_seconds": 45,
+  "peak_child_rss_kib": 27156,
+  "serial_one_math_child": true,
+  "native_threads": 1,
+  "scope": "unchanged1CPU2GiB",
+  "no_timeout_is_nonexistence": true
+}

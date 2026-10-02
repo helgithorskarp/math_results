@@ -1,0 +1,432 @@
+{
+  "actual_public_export_and_replay_adapters_run": true,
+  "public_private_whole_export_bytes_match": true,
+  "structural_normal_optimized_whole_record_matches": true,
+  "preimport_source_damage_rejections": [
+    "export_target.py",
+    "replay_target.py"
+  ],
+  "runs": [
+    {
+      "adapter": "export_target.py",
+      "seconds": 0.820084,
+      "result": {
+        "whole_orders": 13,
+        "author_coefficient_names": [
+          "C0",
+          "Delta",
+          "Rb",
+          "Rc",
+          "B",
+          "U0"
+        ],
+        "postseal_comparison_only": true,
+        "whole_source_checked_before_import": true
+      }
+    },
+    {
+      "adapter": "compare_target.py",
+      "seconds": 0.453045,
+      "result": {
+        "complete_coefficient_form_entries": 38994,
+        "complete_positive_endpoint_floor_entries": 4232,
+        "whole_dual_profile_amplitudes": 578,
+        "complete_scalar_and_moment_fields": 312,
+        "whole_four_symbolic_determinants_and_shifts_matched": true,
+        "every_order_q5_to17": true,
+        "explicit_physical_orbit_permutations": true,
+        "whole_external_author_export_sha256": "34295ae6aca2a41dd7e05f5e4dd99613609e1fadb5f162fc580cc67883958a73",
+        "independent_audit_has_no_author_imports": true,
+        "native_inputs_are_postseal_comparison_only": true
+      }
+    },
+    {
+      "adapter": "replay_target.py",
+      "seconds": 55.753191,
+      "result": {
+        "complete_record_sha256": "1a6fcc2f33ae8a2e0b3ac657c9fa716e5407f03e04b3718515f0b917bf87c648",
+        "native_runs": 3,
+        "peak_child_rss_kib": 61612,
+        "whole_source_checked_before_import": true
+      }
+    },
+    {
+      "adapter": "structural.py",
+      "seconds": 0.043428,
+      "result": {
+        "absolute_combined_trade_row_counts": {
+          "1": 2,
+          "2": 3,
+          "3": 1,
+          "4": 3,
+          "5": 1,
+          "6": 0,
+          "7": 0
+        },
+        "all_plain_core_disjoint_edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "basis": [
+          [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        ],
+        "complete_kernel_dimension": 3,
+        "credited_prior": "9735 complete plain-core classification",
+        "late_addendum_not_part_of_first_sealed_core": true,
+        "rank": 3,
+        "whole_RREF": [
+          [
+            "1",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "whole_star_constraint_matrix": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "1",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ]
+      }
+    },
+    {
+      "adapter": "structural.py",
+      "seconds": 0.127876,
+      "result": {
+        "absolute_combined_trade_row_counts": {
+          "1": 2,
+          "2": 3,
+          "3": 1,
+          "4": 3,
+          "5": 1,
+          "6": 0,
+          "7": 0
+        },
+        "all_plain_core_disjoint_edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "basis": [
+          [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        ],
+        "complete_kernel_dimension": 3,
+        "credited_prior": "9735 complete plain-core classification",
+        "late_addendum_not_part_of_first_sealed_core": true,
+        "rank": 3,
+        "whole_RREF": [
+          [
+            "1",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "whole_star_constraint_matrix": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "1",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ]
+      }
+    }
+  ],
+  "native_math_child_guard_seconds": 45,
+  "one_serial_math_child": true,
+  "native_threads": 1,
+  "unchanged_resource_scope": "1CPU2GiB"
+}
