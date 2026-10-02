@@ -1,0 +1,239 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "own": [
+    {
+      "actual_agent": "six-reviewer-4",
+      "role": "independent mathematical reviewer",
+      "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+      "mode": "normal",
+      "outputs": {
+        "physical": "a322bb7bcdce377fec2917928ea935ea769060bc57e9f8fdd1a45919c6c35358",
+        "audit": "fa015c59c6d2c7be423b3a75961405b466ae57b4de4a9455702796f66d81b905",
+        "controls": "7430f044ae64e3494a60a8eb8b9fb1dece73528e4625be7fa593fd0d5ceafc7f"
+      },
+      "stages": [
+        {
+          "stage": "physical.py",
+          "seconds": 49.403817640966736,
+          "exit": 0
+        },
+        {
+          "stage": "audit.py",
+          "seconds": 9.614964407985099,
+          "exit": 0
+        },
+        {
+          "stage": "controls.py",
+          "seconds": 1.1894579320214689,
+          "exit": 0
+        }
+      ],
+      "total_seconds": 60.21139850199688,
+      "child_peak_KiB": 35140,
+      "serial_children": true,
+      "native_threads": 1,
+      "child_timeout_seconds": 60,
+      "status": "COMPLETE"
+    },
+    {
+      "actual_agent": "six-reviewer-4",
+      "role": "independent mathematical reviewer",
+      "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+      "mode": "optimized",
+      "outputs": {
+        "physical": "a322bb7bcdce377fec2917928ea935ea769060bc57e9f8fdd1a45919c6c35358",
+        "audit": "fa015c59c6d2c7be423b3a75961405b466ae57b4de4a9455702796f66d81b905",
+        "controls": "7430f044ae64e3494a60a8eb8b9fb1dece73528e4625be7fa593fd0d5ceafc7f"
+      },
+      "stages": [
+        {
+          "stage": "physical.py",
+          "seconds": 49.066146654076874,
+          "exit": 0
+        },
+        {
+          "stage": "audit.py",
+          "seconds": 9.610744042089209,
+          "exit": 0
+        },
+        {
+          "stage": "controls.py",
+          "seconds": 1.3316406529629603,
+          "exit": 0
+        }
+      ],
+      "total_seconds": 60.01164829602931,
+      "child_peak_KiB": 35204,
+      "serial_children": true,
+      "native_threads": 1,
+      "child_timeout_seconds": 60,
+      "status": "COMPLETE"
+    }
+  ],
+  "native": [
+    {
+      "agent": "six-code-3",
+      "complete_mathematical_sha256": "32de8218ed616105dcbdc2cc8e6c256799ff2f2355cceb07947c7fb971757cd2",
+      "elapsed_seconds": 78.27484229207039,
+      "independent_person_review": false,
+      "mode": "normal",
+      "native_threads": 1,
+      "ordinary_bridges_formalized": false,
+      "peak_RUSAGE_CHILDREN_KiB": 440740,
+      "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+      "role": "researcher",
+      "serial_children": true,
+      "source_seal": {
+        "EXPECTED.json": "4ff9e078577b3502c232c3f9e8dbddbe0ca80995e2af392226babff547c89659",
+        "baseline/expected.json": "326f8f41a0cf8f9f47c7a93351dab1f96d44fbb90904d0312e0e8f9ebfd16bc9",
+        "baseline/fixtures.json": "c188200792c201bdb44ea1667a8a70255c4e40f04fee6c334c98ecfa650113e7",
+        "baseline/produce.py": "b439d2ad4f12f762d2fb215588b0332bd94396340b0909c856d3c5f8094d6f01",
+        "source/pass16-check-low-friends.py": "ce90f77132ee619be227555e96f0b31e161dffa698cab3325e7d44428eaed33d",
+        "source/pass16-first-engine-low-friends.py": "e38dee21748d0c124e4e810d13aa7921bcb6947f77377fc0ec444842776c44d6",
+        "source/pass18-check-friend-catalogue.py": "4e08ce8dbee2c5da9154d9303ca969ae1dcfc11bac41874f3d2862b959bafbac",
+        "source/pass18-hub-friend-catalogue.py": "c72c9c9708b5de016e57db0db7e453e537795c510fcc26e5da93e083f004a183",
+        "source/pass20-T2-polynomial.py": "cc19d9f6a854979761e37806a42ab9cfd34d9c95fc3628654ad7cd540654a7ec",
+        "source/pass20-T2-produce.py": "0b0ee425dc654a45b007dcd3c393e5c5e425e16fd4c349b63e6e7c76d964b601",
+        "source/pass20-check-damages.py": "80ce4ae7b7420ff5842d154c8d761af63fb19e91788ddd9c0b4586de6b176d00",
+        "source/pass20-check-full-T2-N.py": "3716eb542d4fc94fde04f349de5dc023b73d45f46d074a0a44541bf602602b73",
+        "source/pass20-full-T2-N-produce.py": "79c4cf993fa44e83ca25c1109da4829cb0fa9af07a00f319e7fb1341e526da6f"
+      },
+      "stage_timeout_seconds": 60,
+      "stages": [
+        {
+          "elapsed_seconds": 0.6320230939891189,
+          "stage": "pass16-first-engine-low-friends"
+        },
+        {
+          "elapsed_seconds": 1.672160406014882,
+          "stage": "pass16-check-low-friends"
+        },
+        {
+          "elapsed_seconds": 0.7529809060506523,
+          "stage": "pass20-T2-polynomial"
+        },
+        {
+          "elapsed_seconds": 0.42716686497442424,
+          "stage": "pass20-T2-produce"
+        },
+        {
+          "elapsed_seconds": 4.256992797949351,
+          "stage": "pass18-hub-friend-catalogue"
+        },
+        {
+          "elapsed_seconds": 9.466788033023477,
+          "stage": "pass18-check-friend-catalogue"
+        },
+        {
+          "elapsed_seconds": 11.653850901988335,
+          "stage": "pass20-full-T2-N-produce"
+        },
+        {
+          "elapsed_seconds": 16.20694992004428,
+          "stage": "pass20-check-full-T2-N"
+        },
+        {
+          "elapsed_seconds": 29.61502416699659,
+          "stage": "pass20-check-damages"
+        }
+      ],
+      "status": "PUBLIC_SOURCE_COMPLETE_T2_REPLAY_PASS",
+      "whole_records_matched": 9
+    },
+    {
+      "agent": "six-code-3",
+      "complete_mathematical_sha256": "32de8218ed616105dcbdc2cc8e6c256799ff2f2355cceb07947c7fb971757cd2",
+      "elapsed_seconds": 74.06469745899085,
+      "independent_person_review": false,
+      "mode": "optimized",
+      "native_threads": 1,
+      "ordinary_bridges_formalized": false,
+      "peak_RUSAGE_CHILDREN_KiB": 436196,
+      "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+      "role": "researcher",
+      "serial_children": true,
+      "source_seal": {
+        "EXPECTED.json": "4ff9e078577b3502c232c3f9e8dbddbe0ca80995e2af392226babff547c89659",
+        "baseline/expected.json": "326f8f41a0cf8f9f47c7a93351dab1f96d44fbb90904d0312e0e8f9ebfd16bc9",
+        "baseline/fixtures.json": "c188200792c201bdb44ea1667a8a70255c4e40f04fee6c334c98ecfa650113e7",
+        "baseline/produce.py": "b439d2ad4f12f762d2fb215588b0332bd94396340b0909c856d3c5f8094d6f01",
+        "source/pass16-check-low-friends.py": "ce90f77132ee619be227555e96f0b31e161dffa698cab3325e7d44428eaed33d",
+        "source/pass16-first-engine-low-friends.py": "e38dee21748d0c124e4e810d13aa7921bcb6947f77377fc0ec444842776c44d6",
+        "source/pass18-check-friend-catalogue.py": "4e08ce8dbee2c5da9154d9303ca969ae1dcfc11bac41874f3d2862b959bafbac",
+        "source/pass18-hub-friend-catalogue.py": "c72c9c9708b5de016e57db0db7e453e537795c510fcc26e5da93e083f004a183",
+        "source/pass20-T2-polynomial.py": "cc19d9f6a854979761e37806a42ab9cfd34d9c95fc3628654ad7cd540654a7ec",
+        "source/pass20-T2-produce.py": "0b0ee425dc654a45b007dcd3c393e5c5e425e16fd4c349b63e6e7c76d964b601",
+        "source/pass20-check-damages.py": "80ce4ae7b7420ff5842d154c8d761af63fb19e91788ddd9c0b4586de6b176d00",
+        "source/pass20-check-full-T2-N.py": "3716eb542d4fc94fde04f349de5dc023b73d45f46d074a0a44541bf602602b73",
+        "source/pass20-full-T2-N-produce.py": "79c4cf993fa44e83ca25c1109da4829cb0fa9af07a00f319e7fb1341e526da6f"
+      },
+      "stage_timeout_seconds": 60,
+      "stages": [
+        {
+          "elapsed_seconds": 0.7784893889911473,
+          "stage": "pass16-first-engine-low-friends"
+        },
+        {
+          "elapsed_seconds": 1.8470738240284845,
+          "stage": "pass16-check-low-friends"
+        },
+        {
+          "elapsed_seconds": 0.8868871909799054,
+          "stage": "pass20-T2-polynomial"
+        },
+        {
+          "elapsed_seconds": 0.5662908049998805,
+          "stage": "pass20-T2-produce"
+        },
+        {
+          "elapsed_seconds": 4.509176902007312,
+          "stage": "pass18-hub-friend-catalogue"
+        },
+        {
+          "elapsed_seconds": 9.383180864038877,
+          "stage": "pass18-check-friend-catalogue"
+        },
+        {
+          "elapsed_seconds": 10.779508478939533,
+          "stage": "pass20-full-T2-N-produce"
+        },
+        {
+          "elapsed_seconds": 13.442734713898972,
+          "stage": "pass20-check-full-T2-N"
+        },
+        {
+          "elapsed_seconds": 28.36802918999456,
+          "stage": "pass20-check-damages"
+        }
+      ],
+      "status": "PUBLIC_SOURCE_COMPLETE_T2_REPLAY_PASS",
+      "whole_records_matched": 9
+    }
+  ],
+  "comparison": {
+    "all_native_records": 185136,
+    "branches": 35,
+    "complete_comparison_sha256": "135b4c1aefeea174a3848892a6175388a9402e83ba23ae8e7d83a1657a7cf978",
+    "coordinate_exact": 330494,
+    "coordinate_strict": 100426,
+    "coordinate_subset_checks": 430920,
+    "independent_reduced_carriers": 405,
+    "light_role_bijections": 716382,
+    "native_carriers": 696,
+    "native_catalogue_records": 7681,
+    "native_whole_sha256": "32de8218ed616105dcbdc2cc8e6c256799ff2f2355cceb07947c7fb971757cd2",
+    "needed_types": 28,
+    "preliminary": 266,
+    "projected_signature_keys": 4705,
+    "raw_rows": 426,
+    "selected_actual_marks": 119397,
+    "semantic_types": 60,
+    "vectors": 1373
+  },
+  "core_seal_unchanged": true,
+  "target_public_whole_bytes_verified": 40,
+  "internal_resource_guards_hit": 0,
+  "unchanged_scope": "1CPU2GiB; one serial CPU-intensive job, native1",
+  "formalized": false
+}
