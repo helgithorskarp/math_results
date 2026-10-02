@@ -1,0 +1,606 @@
+{
+  "agent": "six-reviewer-1",
+  "files": {
+    "round-two/six-sendov-3/effective-profile-stability/.gitignore": {
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    "round-two/six-sendov-3/effective-profile-stability/LITERATURE.md": {
+      "bytes": 5059,
+      "sha256": "f8a5bf217aa9979272b98b6d5812d6772c1837b25b9eee862538bc36d793f7ec"
+    },
+    "round-two/six-sendov-3/effective-profile-stability/PROOF.md": {
+      "bytes": 14686,
+      "sha256": "a2f928828c6e473150fa67343c0b97bc8c787bffa0c2b844df62ece4af367aea"
+    },
+    "round-two/six-sendov-3/effective-profile-stability/README.md": {
+      "bytes": 5389,
+      "sha256": "62d167dea2327e60471a62130799c36f2cca0c3e3e6e939b3f65f42743f6689e"
+    },
+    "round-two/six-sendov-3/effective-profile-stability/SHA256SUMS": {
+      "bytes": 788,
+      "sha256": "5ad930e18567a9d7a57768baa8745498098724eb9671900f19438aa4e3171e44"
+    },
+    "round-two/six-sendov-3/effective-profile-stability/VALIDATION.json": {
+      "bytes": 1041,
+      "sha256": "48e36272976938c3ecd81324e9ee2b64030f3de9fe0414ca0733cf4ba88c9ce4"
+    },
+    "round-two/six-sendov-3/effective-profile-stability/checks.py": {
+      "bytes": 20296,
+      "sha256": "91cab62faed4f290fe611a43c71ea6a677ec6f2bd5131f4602d738d062618aed"
+    },
+    "round-two/six-sendov-3/effective-profile-stability/dependencies.json": {
+      "bytes": 5333,
+      "sha256": "328f056b4fc961f15149a4848d9d1113bfe2a2c3e463dbeba18cd0c06c76e38a"
+    },
+    "round-two/six-sendov-3/effective-profile-stability/expected.json": {
+      "bytes": 23918,
+      "sha256": "898cfca7871dbb4d16a15e94bb50ea9a04ff59c402a3a155236f4462e9f0eae8"
+    },
+    "round-two/six-sendov-3/effective-profile-stability/provenance.json": {
+      "bytes": 2221,
+      "sha256": "4728da46cb7c98e10b21dd5b08d3b9a549e9f9152fe1002c42222d3b87363a96"
+    },
+    "round-two/six-sendov-3/effective-profile-stability/verify.py": {
+      "bytes": 1891,
+      "sha256": "be867f03df750d5c47c80f3d238bbfa6cd12b37180826f67ef6759d4c6d96ef4"
+    }
+  },
+  "first_source_access_started_utc": "2026-10-02T20:57:29.913206+00:00",
+  "full_manifest_comparisons": [
+    {
+      "equal": true,
+      "name": ".gitignore",
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "equal": true,
+      "name": "LITERATURE.md",
+      "sha256": "f8a5bf217aa9979272b98b6d5812d6772c1837b25b9eee862538bc36d793f7ec"
+    },
+    {
+      "equal": true,
+      "name": "PROOF.md",
+      "sha256": "a2f928828c6e473150fa67343c0b97bc8c787bffa0c2b844df62ece4af367aea"
+    },
+    {
+      "equal": true,
+      "name": "README.md",
+      "sha256": "62d167dea2327e60471a62130799c36f2cca0c3e3e6e939b3f65f42743f6689e"
+    },
+    {
+      "equal": true,
+      "name": "VALIDATION.json",
+      "sha256": "48e36272976938c3ecd81324e9ee2b64030f3de9fe0414ca0733cf4ba88c9ce4"
+    },
+    {
+      "equal": true,
+      "name": "checks.py",
+      "sha256": "91cab62faed4f290fe611a43c71ea6a677ec6f2bd5131f4602d738d062618aed"
+    },
+    {
+      "equal": true,
+      "name": "dependencies.json",
+      "sha256": "328f056b4fc961f15149a4848d9d1113bfe2a2c3e463dbeba18cd0c06c76e38a"
+    },
+    {
+      "equal": true,
+      "name": "expected.json",
+      "sha256": "898cfca7871dbb4d16a15e94bb50ea9a04ff59c402a3a155236f4462e9f0eae8"
+    },
+    {
+      "equal": true,
+      "name": "provenance.json",
+      "sha256": "4728da46cb7c98e10b21dd5b08d3b9a549e9f9152fe1002c42222d3b87363a96"
+    },
+    {
+      "equal": true,
+      "name": "verify.py",
+      "sha256": "be867f03df750d5c47c80f3d238bbfa6cd12b37180826f67ef6759d4c6d96ef4"
+    }
+  ],
+  "full_public_proof_matches_signed_reader_expansion": true,
+  "independent_data_alignment": {
+    "all_fourteen_lower_phase_coefficients": [
+      {
+        "degree": 1,
+        "phase": 3,
+        "whole_pair_coefficient": [
+          "1/6",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "degree": 2,
+        "phase": 3,
+        "whole_pair_coefficient": [
+          "1/6",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "degree": 3,
+        "phase": 3,
+        "whole_pair_coefficient": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "degree": 4,
+        "phase": 3,
+        "whole_pair_coefficient": [
+          "1/6",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "degree": 5,
+        "phase": 3,
+        "whole_pair_coefficient": [
+          "1/6",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "degree": 6,
+        "phase": 3,
+        "whole_pair_coefficient": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "degree": 7,
+        "phase": 3,
+        "whole_pair_coefficient": [
+          "1/6",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "degree": 1,
+        "phase": 4,
+        "whole_pair_coefficient": [
+          "1/9",
+          "0",
+          "0",
+          "0",
+          "-1/18",
+          "-1/18"
+        ]
+      },
+      {
+        "degree": 2,
+        "phase": 4,
+        "whole_pair_coefficient": [
+          "1/9",
+          "-1/18",
+          "1/18",
+          "0",
+          "0",
+          "1/18"
+        ]
+      },
+      {
+        "degree": 3,
+        "phase": 4,
+        "whole_pair_coefficient": [
+          "1/6",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "degree": 4,
+        "phase": 4,
+        "whole_pair_coefficient": [
+          "1/9",
+          "1/18",
+          "-1/18",
+          "0",
+          "1/18",
+          "0"
+        ]
+      },
+      {
+        "degree": 5,
+        "phase": 4,
+        "whole_pair_coefficient": [
+          "1/9",
+          "1/18",
+          "-1/18",
+          "0",
+          "1/18",
+          "0"
+        ]
+      },
+      {
+        "degree": 6,
+        "phase": 4,
+        "whole_pair_coefficient": [
+          "1/6",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "degree": 7,
+        "phase": 4,
+        "whole_pair_coefficient": [
+          "1/9",
+          "-1/18",
+          "1/18",
+          "0",
+          "0",
+          "1/18"
+        ]
+      }
+    ],
+    "all_native_margins": [
+      {
+        "entire_exact_value": "1609593696203746822663701605674627620927/9527906273786276976974489008089509920768",
+        "native_name": "full original displacement below V/4",
+        "own_name": "quarter root displacement",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "1731743528426378081846155333217001922623/9527906273786276976974489008089509920768",
+        "native_name": "full linear displacement below V/4",
+        "own_name": "quarter linear displacement",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "3166929899445393582101865293692927287401/28796614027203384142317854326060953108576",
+        "native_name": "all phase full normal quadratic budget9/8",
+        "own_name": "all-phase half-normal budget",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "1894758580132136844971651923565800788238333/58974565633524180617712518226825142561579005",
+        "native_name": "all phase non-T full root quadratic budget1",
+        "own_name": "all-phase displacement tail",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "12357068200604144/63328970701209375",
+        "native_name": "complete centered objective eta2 budget40",
+        "own_name": "original reciprocal quadratic40",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "23/75",
+        "native_name": "whole cube leading-normal remainder40eta2",
+        "own_name": "original cube remainder40",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "269/450",
+        "native_name": "whole fourth-phase leading-normal remainder46eta2",
+        "own_name": "original fourth remainder46",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "1/144",
+        "native_name": "positive sqrt21 enclosure",
+        "own_name": "original mu square",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "9187055965276460999/21240405424209355200",
+        "native_name": "full sharp-coercivity budget16",
+        "own_name": "original coercivity16",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "3/800",
+        "native_name": "R3 below gapbudget/100",
+        "own_name": "original cube Delta margin",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "16"
+      },
+      {
+        "entire_exact_value": "39233/5033088",
+        "native_name": "R4 below gapbudget/12",
+        "own_name": "original fourth Delta margin",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "16"
+      },
+      {
+        "entire_exact_value": "1297/16275",
+        "native_name": "real mean inversion below4gap/3",
+        "own_name": "original mean4over3",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "19739/271250",
+        "native_name": "rotated Q inversion below21gap",
+        "own_name": "original Q3over2",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "115031/7200",
+        "native_name": "H difference below26gap",
+        "own_name": "original H26",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "16"
+      },
+      {
+        "entire_exact_value": "27383875361/1717934490",
+        "native_name": "full origin real energy below7gap",
+        "own_name": "original real energy7",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "16"
+      },
+      {
+        "entire_exact_value": "32767/65535",
+        "native_name": "imag mean sqrt term below1",
+        "own_name": null,
+        "post_seal_looser_sqrt_enclosure": true,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "139261/196605",
+        "native_name": "imag mean gap term below1",
+        "own_name": "original D Delta1",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "163708/196605",
+        "native_name": "imag mean eta2 term below44",
+        "own_name": "original D quadratic44",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "32701069/91421325",
+        "native_name": "root mean/T eta2 aggregate below125",
+        "own_name": "all-root quadratic125",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "6563544850207/31664968519680",
+        "native_name": "all9 root-motion gap coefficient below8",
+        "own_name": "original motion Delta8",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "4288544817/4294967296",
+        "native_name": "all9 root-motion sqrt coefficient below3",
+        "own_name": "original motion sqrt3",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "210446975025/4294967296"
+      },
+      {
+        "entire_exact_value": "23/23280",
+        "native_name": "sharp uniform slope exceeds111/40",
+        "own_name": "original rational111over40",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "17/512",
+        "native_name": "selected cosine lower cubic sign",
+        "own_name": "cubic lower sign",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "73/15625",
+        "native_name": "selected cosine upper cubic sign",
+        "own_name": "cubic upper sign",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "483/32",
+        "native_name": "selected cosine monotone divisor",
+        "own_name": "cubic branch monotonicity",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "11/1085",
+        "native_name": "w4 below3/5",
+        "own_name": "dual w4 upper3over5",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "183/2134",
+        "native_name": "w4 above1/2",
+        "own_name": "dual w4 lowerhalf",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "4/7",
+        "native_name": "w3 above4",
+        "own_name": "dual w3 lower4",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "4/165",
+        "native_name": "w3 below23/5",
+        "own_name": "dual w3 upper23over5",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "5/294912",
+        "native_name": "whole centered radius below1/96",
+        "own_name": "centered tail radius",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      },
+      {
+        "entire_exact_value": "194557/196608",
+        "native_name": "positive full reciprocal tail divisor",
+        "own_name": "entire Legendre denominator",
+        "post_seal_looser_sqrt_enclosure": false,
+        "scale": "1"
+      }
+    ],
+    "producer_executable_imported": false,
+    "schema": "post-seal-native-data-alignment-v1",
+    "scope": "31 rational margins, six full fields and 14 full phase coefficients; no claim of coefficient-wise alignment of the other native coordinate maps",
+    "sealed_core_unchanged": true,
+    "six_whole_field_identities": [
+      {
+        "native_name": "real leading mean dual",
+        "orientation_sign": 1,
+        "own_name": "dual mean",
+        "whole_coefficients": [
+          "8",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "native_name": "rotated trace dual",
+        "orientation_sign": 1,
+        "own_name": "dual second moment",
+        "whole_coefficients": [
+          "7",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "native_name": "known sharp coefficient",
+        "orientation_sign": 1,
+        "own_name": "sharp coefficient",
+        "whole_coefficients": [
+          "10/3",
+          "2/9",
+          "-2/9",
+          "0",
+          "4/9",
+          "2/9"
+        ]
+      },
+      {
+        "native_name": "known optimal cube moment",
+        "orientation_sign": 1,
+        "own_name": "cube optimum",
+        "whole_coefficients": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "native_name": "known optimal fourth moment",
+        "orientation_sign": 1,
+        "own_name": "fourth optimum",
+        "whole_coefficients": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "native_name": "whole nonzero Cramer determinant",
+        "orientation_sign": -1,
+        "own_name": "Cramer determinant",
+        "whole_coefficients": [
+          "0",
+          "-3/4",
+          "3/4",
+          "0",
+          "3/4",
+          "3/2"
+        ]
+      }
+    ]
+  },
+  "materialization_finished_utc": "2026-10-02T20:57:30.212152+00:00",
+  "native_full_validation_metadata_scope": "Published358.3s validation metadata was inspected but not independently rerun; native public verifier and all16 built-in mathematical damages were rerun normal/optimized.",
+  "native_map_alignment_scope": "Six native full fields and all14 lower phase coefficients plus every31 rational margin aligned. Remaining native coordinate-map hashes reproduced by native replay, not claimed independently coefficient-wise aligned.",
+  "native_replay": {
+    "peak_rss_KiB": 34100,
+    "runs": [
+      {
+        "mode": "normal",
+        "returncode": 0,
+        "seconds": 28.475104160956107,
+        "stderr": "",
+        "stdout": "{\"canonical_sha256\": \"237f64498730515166758029fbd160e23fd8789c9844a5fd8a96d01a32876fab\", \"identity_records\": 20, \"literal_controls\": 3, \"mathematical_damages_rejected\": 16, \"status\": \"PASS\", \"whole_domain_margins\": 31}\n"
+      },
+      {
+        "mode": "optimized",
+        "returncode": 0,
+        "seconds": 27.134713647072203,
+        "stderr": "",
+        "stdout": "{\"canonical_sha256\": \"237f64498730515166758029fbd160e23fd8789c9844a5fd8a96d01a32876fab\", \"identity_records\": 20, \"literal_controls\": 3, \"mathematical_damages_rejected\": 16, \"status\": \"PASS\", \"whole_domain_margins\": 31}\n"
+      }
+    ]
+  },
+  "native_resource_scope": "Both serial verifier children finished under unchanged45-second guards; six solver/BLAS thread variables1; 1CPU2GiB scope unchanged; no guard hit or resource escalation.",
+  "role": "independent mathematical reviewer",
+  "seal_utc": "2026-10-02T20:56:08.624560+00:00",
+  "sealed_bytes_unchanged": true,
+  "source_commit": "48241d95ef16ffb51e183c89101762a321152dc0",
+  "total_bytes": 80641
+}

@@ -1,0 +1,196 @@
+# Independent effective-stability proof core
+
+Actual author six-reviewer-1, independent mathematical reviewer. This ordinary
+proof is unformalized. The defining written proof and constants of LEMMA9671
+are visible; its executable and fixtures have not been read.
+
+Let p be complex monic degree9, all nine original roots in the closed disk,
+p(a)=0, a=1-eta, 0<eta<=e=1/65536. Count all eight criticals with multiplicity.
+Set F=sum|a-zeta|^-1, H=sum|zeta|². Initially assume H<=1/512.
+On the low sublevel F<=8+3eta, use the independently confirmed9620 and the
+explicitly credited stronger upper estimates of REVIEW9669:
+
+    -3eta/4<M<0, |m|<4eta/5, |D|<eta/3,
+    V<28eta/5, 1-eta<r<1+eta,
+    m=sum zeta/8=M+iD, nu=zeta-m, V=sum|nu|²,
+    u=a-m, r=|u|, T=sum nu², Q+iJ=T*conj(u)/u.
+
+The core9620, not merely those numbers, supplies one counted simple original
+root in each disjoint V/2 circle about m+u*omega_k, omega_k=exp(2pi*i*k/9).
+The V=0 case is p(m+w)=w9-u9 and is handled directly. No critical separation,
+conjugation, coefficient cap, differentiable path or selected profile is used.
+H bounds each original reciprocal denominator away from zero.
+
+Use credited c=cos(pi/9), d=2c²-1, y=1/[3(1+c)], x=2/3-y,
+h0=14y, C=8/3+y, and positive weights
+w4=1/(c+d), w3=(2/3)[7-(1-d)w4]. Their exact nonagon identities are
+
+    w3*A3+w4*A4=8, w3*B3+w4*B4=7, 8-w3-w4=C,
+    A_k=1-cos(2pi*k/9), B_k=1-cos(4pi*k/9),
+    A_k*x+B_k*y=1 for k=3,4.
+
+The cubic 8c³-6c-1 has the selected root in (15/16,47/50). Endpoint signs
+and positive derivative on that interval certify this branch. In particular
+4<w3<151/33 and 1/2<w4<128/217. The derivative of
+w3=2(16c-9)/[3(2c-1)] is positive; w4 decreases. The determinant is
+3(c+d)/2>651/256. Endpoint equalities for the determinant and A4/B4 are
+equalities at the rational bounds; actual strictness follows from the open
+c interval and the monotone derivatives. No floating cosine is a premise.
+
+The complete centered anchored polynomial is
+p(m+w)=w9-u9+sum(j1..7) d_j(w^j-u^j). Vieta/Newton gives
+d7=-9T/14 and d6=-sum nu³/2. All lower coefficients remain included.
+With rho1/64, v*1/512 and a*=1-e, set r-=a*-rho, r+=1+rho,
+s=r++v*/2, A7=9/14 and A_j=9*C(8,9-j)*rho^(7-j)/(8j), j<=6.
+Here rho bounds centered critical moduli since V<6eta<=6e<rho²; V<=v*.
+Maclaurin/Cauchy supplies |d_j|<=A_j V. Set
+
+    Cd=sum j*A_j*s^(j-1), N=2sum A_j*r+^j,
+    Bd=9r-^8-18s^7 v*-Cd v*,
+    B=s^7/(4r-^8)+Cd/(36r-^8).
+
+The exact positive margins N<Bd/4 and N<9r-^8/4 are in the independent
+record. If delta_k is the counted actual displacement and delta0_k is the
+full linear displacement -p(m+u*omega_k)/(9u^8*omega_k^8), the complete
+root equation, |delta|<=V/2, and Taylor remainder give |delta|,|delta0|<V/4
+and |delta-delta0|<=B V². The leading monomial Taylor remainder is at most
+36s^7|delta|²; the full lower-polynomial derivative is at most Cd V.
+These bound the full equation, not truncated root jets.
+
+For j=1..5, |d_j|<=B_j V², with
+B5=63/32, B4=(63/32)rho, B3=(21/128)v*,
+B2=(9/128)rho v*, B1=(9/4096)v*².
+These follow by Maclaurin in |nu|² and the modulus cap for odd orders.
+The independent full-window record verifies
+
+    (1+2rho)B+1/32+(2/9)sum B_j*r-^(j-7)<9/8,
+    B+[2/(9a*)]sum B_j*r-^(j-7)<1.
+
+Consequently, on all nine phases,
+
+    |delta_k - T/(14u)*(omega_k^-1-omega_k)|
+       <mu3/(9a*²)+V², mu3=sum|nu|³,
+
+for V>0, and the exact zero version holds at V=0. Every lower term and
+nonlinear displacement is retained, including d3 at phase4.
+
+Define s_k=-(|Z_k|²+|Z_(9-k)|²-2)/4>=0 and
+L_k=-A_k M-B_k Q/14. The pair average of the base half-normal is exactly
+(a²-1)/2-a A_k M+A_k |m|². The principal linear third-moment contribution
+is [(cos(6pi*k/9)-1)/18] Re[(sum nu³)conj(u)/u²]. Thus it is ZERO at k3
+and EXACTLY minus that real quantity divided by12 at k4. The complete
+nonagon maps establish this with arbitrary complex u, coefficients and
+independent conjugates. The remainder equality is
+
+    -s_k=-eta+L_k+R_k.
+
+Keeping the full base residual and nonlinear errors, the stronger credited
+mean/variance bounds give
+
+    |R3| < [(1/2)+(3/2)(3/4)+(3/2)(4/5)²
+             +(4/5)(28/5)/6+(28/5)²]eta²
+          <(139/4)eta²,
+    |R4| < [(1/2)+2(3/4)+2(4/5)²
+             +(4/5)(28/5)/4+(9/8)(28/5)²]eta²+mu3/(12a*)
+          <(397/10)eta²+mu3/(12a*).
+
+For the original theorem, using its weaker bounds gives40eta² and
+46eta²+mu3/(12a*), respectively. In particular the imaginary parts of
+opposite original labels are not declared conjugate.
+
+Zero sum and Cauchy on the other seven criticals give 8|nu_j|²<=7V, hence
+mu3<=sqrt(7V/8)V<(62/5)eta^(3/2); the square margin is12/125. The original
+mu3<(55/4)eta^(3/2) is also independently verified. The entire Legendre
+tail from degree3 is <=mu3/[(r-tau)r³], tau1/96, because |P_l(t)|<=1 on
+[-1,1] and the absolutely convergent geometric majorant covers every l>=3.
+Use Lambda=1/[(a*-1/96)a*³]. Convexity at a² gives
+8/r>=8/a+8M/a²-4|m|²/a³, and |r^-3-1|<4eta. Thus
+
+    F-8 >=8eta+8M+(V+3Q)/4-37eta²-Lambda*mu3.
+
+The complete discarded quadratic cost is bounded by
+8(3/4)(2-e)/a*²+4(4/5)²/a*³+112/5<37. The last term bounds the entire
+moment-radius error; 8/a-(8+8eta) is nonnegative. This is a full reciprocal
+estimate, not finite interpolation.
+
+Set Phi=w3*s3+w4*s4+(V+Q)/4>=0. Nonnegativity follows from actual disk
+roots and V+Q=2sum[Re(nu*conj(u)/r)]². Substituting the two actual normal
+equalities and exact positive dual gives
+
+    F-8 >= Ceta+Phi-[37+(139/4)w3+(397/10)w4]eta²
+                    -[Lambda+w4/(12a*)]mu3
+           > Ceta+Phi-14eta^(3/2).
+
+The whole-window rational budget uses eta²<=eta^(3/2)/256 and has EXACT gap
+
+    14-[37+(139/4)(151/33)+(397/10)(128/217)]/256
+       -(62/5)[Lambda+(128/217)/(12a*)]
+     =13820930555668014353713/6760113033011697448320000 >0.
+
+The high F>8+3eta arm is immediate since C<3. Therefore the NEW estimate
+F>8+Ceta-14eta^(3/2)>8+(89/32)eta holds throughout the same energy domain.
+The rational slope follows from C>826/291 and sqrteta<=1/256.
+Using the old bounds, all the original9671 coefficient16 and111/40 budgets
+are separately verified and its original theorem is confirmed.
+
+For EVERY epsilon>=0, retain BOTH lowF and F<=8+Ceta+epsilon*eta and put
+Delta=epsilon*eta+14eta^(3/2)>0. Then Phi<Delta, s3<Delta/4,
+s4<2Delta, V+Q<4Delta. The exact new error budgets imply
+|R3|<Delta/100 and |R4|<9Delta/100, hence
+|L3-eta|<13Delta/50 and |L4-eta|<209Delta/100.
+Cramer inversion with positive determinant yields the SAME bounds
+
+    |M+xeta|<4Delta/3, |Q+h0eta|<21Delta,
+    |V-h0eta|<25Delta, |H-h0eta|<26Delta.
+
+The exact two inversion margins are411/5425 and1807/26250. The H estimate
+adds8|m|² and uses Delta>=14eta^(3/2). Original9671 statements retain their
+larger Delta16; the new Delta14 conclusion is a separate proved refinement.
+
+The full eight-coordinate Gram identity gives J²<48eta*Delta. The two
+INDIVIDUAL cube normals from confirmed9620 give
+|aD-J/14|<=(2/sqrt3)(s3+E3), E3=|m|V/6+V²<37eta².
+The exact source of this sign is the base cross term
+Re[conj(m)*u*omega], not Re[m*conj(u)*omega]. Their whole complex forms
+are retained. Thus
+
+    |D| < [2sqrt3/(7a*)]sqrt(eta*Delta)
+              +[7/(24a*)]Delta+[259/(6a*)]eta²
+          < (1/2)sqrt(eta*Delta)+(1/3)Delta+44eta².
+
+All three coefficient comparisons are certified by rational or squared
+positive margins. This strengthens the original D estimate as well.
+Also sum(Re zeta)²<7Delta: rotate nu by conj(u)/r, use
+sum(Re rotated_nu)²=(V+Q)/2 and |u/r-1|²<=2D²/r². The complete cost is
+6Delta+(384/25)eta²+4eta³/a*²<7Delta, using the imported |D|<eta/3.
+
+Finally T/u=(Q+iJ)/conj(u), so
+|T/(14u)+yeta| <[21Delta+4sqrt(3eta*Delta)]/(14a*)
+                  +[28y/(15a*)]eta².
+The new D estimate gives |m+xeta|<5Delta/3+(1/2)sqrt(eta*Delta)+44eta².
+For EVERY k, subtract the leading target from the full linear approximation:
+
+    (m+xeta)(1-omega_k)+[T/(14u)+yeta](omega_k^-1-omega_k).
+
+This identity is exact since x+y=2/3. Add the entire displacement remainder.
+The full error is bounded by
+
+    [10/3+3/a*]Delta+[1+4sqrt3/(7a*)]sqrt(eta*Delta)
+       +125eta²+[55/(36a*²)]eta^(3/2)
+      <(13/2)Delta+2sqrt(eta*Delta).
+
+The last Delta coefficient has exact positive margin
+125308888787/5541369490944; the square-root comparison follows from the
+same48/(49a*²)<1 budget. Thus all nine ACTUAL originals satisfy the NEW
+motion bound about omega_k+eta(-omega_k/3-x-y*omega_k^-1). The marked k0
+target equals a exactly. V0 displacements vanish; all positive-Delta
+conclusions survive that separately handled case. No path differentiability
+or critical separation is needed.
+
+For the optional radius1/25 arm on this SAME eta<=2^-16 window, confirmed9629
+(own9707) gives H<25eta<1/512 BEFORE importing the energy core. The larger
+eta<=2^-14 energy window of9707 is not transported to this theorem. Global
+carrier statements are separate, non-premise context, not audited here.
+Leading C, sharp limiting moment/profile/root motion and selected minimizer
+structure retain8530/8608/8921/8955 credit; none is newly classified here.
+The unrestricted first-power conjecture remains open in the primary paper.
