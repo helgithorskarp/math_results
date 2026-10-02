@@ -1,0 +1,203 @@
+{
+  "prototype_area": 55,
+  "period_area": 110,
+  "representative_copies": 2,
+  "residues_exactly_once": 110,
+  "plane_tiling": true,
+  "contact_inventory": [
+    {
+      "parity": 0,
+      "bounded_candidate_hosts": 13,
+      "edge_contacts": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "corner_contacts": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "parity": 1,
+      "bounded_candidate_hosts": 13,
+      "edge_contacts": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "corner_contacts": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    }
+  ],
+  "periodic_vertex_patterns": 110,
+  "owner_subsets_checked": 320,
+  "any_tiling_subunion_has_no_diagonal_pinch": true,
+  "explicit_coronas": 5,
+  "corona_sizes": [
+    1,
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "prefix_stats": [
+    {
+      "level": 0,
+      "copies": 1,
+      "cells": 55
+    },
+    {
+      "level": 1,
+      "copies": 7,
+      "cells": 385
+    },
+    {
+      "level": 2,
+      "copies": 19,
+      "cells": 1045
+    },
+    {
+      "level": 3,
+      "copies": 37,
+      "cells": 2035
+    },
+    {
+      "level": 4,
+      "copies": 61,
+      "cells": 3355
+    },
+    {
+      "level": 5,
+      "copies": 91,
+      "cells": 5005
+    }
+  ],
+  "heesch_c": "infinity",
+  "heesch_h": "infinity",
+  "all_depth_argument": "PROOF.md: triangular-lattice balls and their complements are connected; each stencil contact contains an edge. Their unit-cell unions are discs and consecutive shells completely surround predecessors.",
+  "finite_heesch_construction": false,
+  "independent_review": false,
+  "formalized": false,
+  "damage_controls": [
+    {
+      "control": "absent prototype cell",
+      "rejected": true,
+      "reason": "invalid normalized55-cell disc"
+    },
+    {
+      "control": "incorrect period",
+      "rejected": true,
+      "reason": "literal period or affine maps differ"
+    },
+    {
+      "control": "incorrect representative translation",
+      "rejected": true,
+      "reason": "literal period or affine maps differ"
+    },
+    {
+      "control": "incorrect reflection",
+      "rejected": true,
+      "reason": "literal period or affine maps differ"
+    },
+    {
+      "control": "absent fifth-corona member",
+      "rejected": true,
+      "reason": "BFS corona fixture differs"
+    },
+    {
+      "control": "moved first-corona member",
+      "rejected": true,
+      "reason": "BFS corona fixture differs"
+    }
+  ]
+}
