@@ -1,0 +1,104 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "validated_at_utc": "2026-10-02T11:58:56.342305+00:00",
+  "python": "Python 3.11.2",
+  "serial_math_jobs": 1,
+  "numerical_threads": 1,
+  "resource_scope": "unchanged1CPU2GiB",
+  "guards": "independent45s/stage,100000categoryupdates; original10s/stage",
+  "whole_independent_record_sha256": "e67a04a9dc41b1c23dad76cca97fbbdb62ada00bd5f02f1a68f352d0e9041bf3",
+  "whole_independent_record_bytes": 117964,
+  "public_whole_result_sha256": "cc8ceccff68475c79fa600f261152bd2238024f7c3983cb7e77b04eefb1b56bc",
+  "normal_optimized_whole_record_equal": true,
+  "normal_optimized_public_result_equal": true,
+  "normal_optimized_original_result_equal": true,
+  "runs": {
+    "independent": {
+      "seconds": 0.0994010170106776,
+      "guard_seconds": 45,
+      "returncode": 0,
+      "peak_rss_upper_kib": 19560
+    },
+    "independent-opt": {
+      "seconds": 0.29215760703664273,
+      "guard_seconds": 45,
+      "returncode": 0,
+      "peak_rss_upper_kib": 22988
+    },
+    "controls-final": {
+      "seconds": 8.421772557892837,
+      "guard_seconds": 45,
+      "returncode": 0,
+      "peak_rss_upper_kib": 20420
+    },
+    "controls-opt": {
+      "seconds": 8.412208801019005,
+      "guard_seconds": 45,
+      "returncode": 0,
+      "peak_rss_upper_kib": 23696
+    },
+    "original-normal": {
+      "seconds": 0.6314559859456494,
+      "guard_seconds": 45,
+      "returncode": 0,
+      "peak_rss_upper_kib": 18508
+    },
+    "original-opt": {
+      "seconds": 1.4295489550568163,
+      "guard_seconds": 45,
+      "returncode": 0,
+      "peak_rss_upper_kib": 23696
+    },
+    "compare": {
+      "seconds": 0.07757349195890129,
+      "guard_seconds": 45,
+      "returncode": 0,
+      "peak_rss_upper_kib": 17512
+    },
+    "public-normal": {
+      "seconds": 8.689626361010596,
+      "guard_seconds": 45,
+      "returncode": 0,
+      "peak_rss_upper_kib": 20840
+    },
+    "public-opt": {
+      "seconds": 9.14570036297664,
+      "guard_seconds": 45,
+      "returncode": 0,
+      "peak_rss_upper_kib": 23452
+    }
+  },
+  "cold_replays": {
+    "original-normal": {
+      "seconds": 0.5623725549085066,
+      "peak_child_rss_kib": 18508,
+      "result_sha256": "7f69fa1c8bad33bee7c5ff5570ef19aab9c0450cebf747170fa1c2a202b9bf1e"
+    },
+    "original-opt": {
+      "seconds": 1.1554990359582007,
+      "peak_child_rss_kib": 21780,
+      "result_sha256": "7f69fa1c8bad33bee7c5ff5570ef19aab9c0450cebf747170fa1c2a202b9bf1e"
+    },
+    "public-normal": {
+      "seconds": 8.61550678499043,
+      "peak_child_rss_kib": 20840,
+      "result_sha256": "cc8ceccff68475c79fa600f261152bd2238024f7c3983cb7e77b04eefb1b56bc"
+    },
+    "public-opt": {
+      "seconds": 8.874015599954873,
+      "peak_child_rss_kib": 23452,
+      "result_sha256": "cc8ceccff68475c79fa600f261152bd2238024f7c3983cb7e77b04eefb1b56bc"
+    }
+  },
+  "first_census_source_unchanged": true,
+  "original_comparison": {
+    "all_original_boundary_branches": 4,
+    "all_original_row_fields": 426,
+    "original_executable_imported": false,
+    "projected_original_branches_sha256": "dd7d8f21ddc92ac2e5acb3708adc4824429aa77b4842e078e5c4dcdfd70de552",
+    "projected_original_row_sha256": "19205841cee4584466bac048f114d0d5f0db096b6861e45f34c94b9180087b16"
+  },
+  "no_guard_hit": true,
+  "original_executes_only_after_first_seal": true
+}

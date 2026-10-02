@@ -1,0 +1,292 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "scope": "fixed psi encoding over all generic marked20-stars with k<=4; no globally realized71-code optimum",
+  "interval": [
+    "3",
+    "4"
+  ],
+  "lower_witness": {
+    "a": -1,
+    "e": 1,
+    "eligible": false,
+    "fixture": 7,
+    "g1": 3,
+    "h": 4,
+    "hh_edges": [
+      [
+        11,
+        12
+      ],
+      [
+        11,
+        13
+      ],
+      [
+        12,
+        14
+      ]
+    ],
+    "high": [
+      11,
+      12,
+      13,
+      14
+    ],
+    "hubs": [],
+    "in_scope": true,
+    "isolated_hubs": [],
+    "k": 0,
+    "margin3": 0,
+    "margin4": 1,
+    "psi": -3,
+    "q": 0,
+    "replication": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      4,
+      4,
+      4,
+      3,
+      5,
+      5
+    ],
+    "sigma": 1
+  },
+  "upper_witness": {
+    "a": 1,
+    "e": 0,
+    "eligible": true,
+    "fixture": 17,
+    "g1": 4,
+    "h": 5,
+    "hh_edges": [
+      [
+        8,
+        12
+      ],
+      [
+        8,
+        13
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        11,
+        13
+      ]
+    ],
+    "high": [
+      8,
+      11,
+      12,
+      13,
+      14
+    ],
+    "hubs": [
+      14
+    ],
+    "in_scope": true,
+    "isolated_hubs": [
+      14
+    ],
+    "k": 1,
+    "margin3": 1,
+    "margin4": 0,
+    "psi": 4,
+    "q": 0,
+    "replication": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      4,
+      5,
+      5,
+      4,
+      4,
+      4,
+      4,
+      5,
+      5
+    ],
+    "sigma": 0
+  },
+  "all_lower_attaining_marks": [
+    [
+      7,
+      []
+    ],
+    [
+      7,
+      [
+        14
+      ]
+    ],
+    [
+      8,
+      []
+    ],
+    [
+      9,
+      []
+    ],
+    [
+      10,
+      []
+    ],
+    [
+      12,
+      []
+    ],
+    [
+      13,
+      []
+    ],
+    [
+      14,
+      []
+    ],
+    [
+      18,
+      []
+    ],
+    [
+      18,
+      [
+        14
+      ]
+    ]
+  ],
+  "all_upper_attaining_marks": [
+    [
+      17,
+      [
+        14
+      ]
+    ]
+  ],
+  "off_scope_failures": [
+    [
+      11,
+      [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      0,
+      1,
+      -3
+    ],
+    [
+      15,
+      [
+        9,
+        10,
+        11,
+        13,
+        14
+      ],
+      0,
+      1,
+      -3
+    ],
+    [
+      16,
+      [
+        9,
+        10,
+        11,
+        13,
+        14
+      ],
+      0,
+      1,
+      -3
+    ],
+    [
+      17,
+      [
+        8,
+        11,
+        12,
+        13,
+        14
+      ],
+      0,
+      1,
+      -3
+    ],
+    [
+      19,
+      [
+        8,
+        10,
+        12,
+        13,
+        14
+      ],
+      0,
+      1,
+      -3
+    ],
+    [
+      20,
+      [
+        7,
+        10,
+        11,
+        13,
+        14
+      ],
+      0,
+      1,
+      -3
+    ],
+    [
+      21,
+      [
+        5,
+        7,
+        11,
+        13,
+        14
+      ],
+      0,
+      1,
+      -3
+    ],
+    [
+      22,
+      [
+        5,
+        7,
+        11,
+        13,
+        14
+      ],
+      0,
+      1,
+      -3
+    ]
+  ],
+  "signed_inequality": "psi>=4*max(a,0)-3*max(-a,0), a=k-e-q",
+  "global_necessary_refinement": "A_plus<=3*Delta, A_minus<=4*Delta, sum|a|<=7*Delta; Delta=E+Q-K"
+}
