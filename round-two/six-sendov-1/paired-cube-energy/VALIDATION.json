@@ -1,0 +1,178 @@
+{
+  "child_peak_rss_kib": 22676,
+  "child_timeout_seconds": 45,
+  "external_fixture_rejections": 20,
+  "external_rejections": [
+    {
+      "case": "wrong-schema",
+      "mode": "normal",
+      "reason": "complete typed fixture mismatch",
+      "rejected": true
+    },
+    {
+      "case": "extra-control",
+      "mode": "normal",
+      "reason": "complete typed fixture mismatch",
+      "rejected": true
+    },
+    {
+      "case": "coefficient-digest",
+      "mode": "normal",
+      "reason": "complete typed fixture mismatch",
+      "rejected": true
+    },
+    {
+      "case": "false-margin",
+      "mode": "normal",
+      "reason": "complete typed fixture mismatch",
+      "rejected": true
+    },
+    {
+      "case": "float-control-count",
+      "mode": "normal",
+      "reason": "invalid fixture type",
+      "rejected": true
+    },
+    {
+      "case": "bool-control-count",
+      "mode": "normal",
+      "reason": "complete typed fixture mismatch",
+      "rejected": true
+    },
+    {
+      "case": "wrong-controls-type",
+      "mode": "normal",
+      "reason": "complete typed fixture mismatch",
+      "rejected": true
+    },
+    {
+      "case": "missing-whole-identity",
+      "mode": "normal",
+      "reason": "complete typed fixture mismatch",
+      "rejected": true
+    },
+    {
+      "case": "duplicate-key",
+      "mode": "normal",
+      "reason": "duplicate fixture key",
+      "rejected": true
+    },
+    {
+      "case": "nan-number",
+      "mode": "normal",
+      "reason": "invalid JSON constant",
+      "rejected": true
+    },
+    {
+      "case": "changed-source-pin",
+      "mode": "normal",
+      "reason": "complete typed fixture mismatch",
+      "rejected": true
+    },
+    {
+      "case": "wrong-schema",
+      "mode": "optimized",
+      "reason": "complete typed fixture mismatch",
+      "rejected": true
+    },
+    {
+      "case": "extra-control",
+      "mode": "optimized",
+      "reason": "complete typed fixture mismatch",
+      "rejected": true
+    },
+    {
+      "case": "coefficient-digest",
+      "mode": "optimized",
+      "reason": "complete typed fixture mismatch",
+      "rejected": true
+    },
+    {
+      "case": "false-margin",
+      "mode": "optimized",
+      "reason": "complete typed fixture mismatch",
+      "rejected": true
+    },
+    {
+      "case": "float-control-count",
+      "mode": "optimized",
+      "reason": "invalid fixture type",
+      "rejected": true
+    },
+    {
+      "case": "bool-control-count",
+      "mode": "optimized",
+      "reason": "complete typed fixture mismatch",
+      "rejected": true
+    },
+    {
+      "case": "wrong-controls-type",
+      "mode": "optimized",
+      "reason": "complete typed fixture mismatch",
+      "rejected": true
+    },
+    {
+      "case": "missing-whole-identity",
+      "mode": "optimized",
+      "reason": "complete typed fixture mismatch",
+      "rejected": true
+    },
+    {
+      "case": "duplicate-key",
+      "mode": "optimized",
+      "reason": "duplicate fixture key",
+      "rejected": true
+    },
+    {
+      "case": "nan-number",
+      "mode": "optimized",
+      "reason": "invalid JSON constant",
+      "rejected": true
+    },
+    {
+      "case": "changed-source-pin",
+      "mode": "optimized",
+      "reason": "complete typed fixture mismatch",
+      "rejected": true
+    }
+  ],
+  "external_source_pin_rejections": 2,
+  "native_thread_counts": {
+    "BLIS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "positive_replays": [
+    {
+      "mode": "normal",
+      "output": {
+        "internal_damage_controls": 12,
+        "record_sha256": "325cc84813fd97995b97d05d855899b26b5af4f637f221e6a6c8767b7a0933cc",
+        "scope": "finite exact corroboration; ordinary analytic proof unformalized",
+        "status": "PASS",
+        "strict_margins": 20,
+        "whole_controls": 35
+      },
+      "seconds": 0.1984492710325867
+    },
+    {
+      "mode": "optimized",
+      "output": {
+        "internal_damage_controls": 12,
+        "record_sha256": "325cc84813fd97995b97d05d855899b26b5af4f637f221e6a6c8767b7a0933cc",
+        "scope": "finite exact corroboration; ordinary analytic proof unformalized",
+        "status": "PASS",
+        "strict_margins": 20,
+        "whole_controls": 35
+      },
+      "seconds": 0.3759950069943443
+    }
+  ],
+  "python_version": "3.12.14",
+  "schema": "paired-cube-validation-v1",
+  "scope": "same-author finite exact corroboration, not formal proof or independent review",
+  "serial": true
+}
