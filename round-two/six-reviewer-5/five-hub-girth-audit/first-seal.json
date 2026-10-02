@@ -1,0 +1,30 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "target_executable_expected_validation_not_read_downloaded_imported_run": true,
+  "defining_signed_body_all_expected_math_visible_and_credited": true,
+  "input": "Credited literal23 fixtures from own8933, no supplied groups. Complete prior classification imported, not rerun.",
+  "whole_record_sha256": "a85997eb39832d3e0bca23aabbec2fb124ac6e69ee87ed91b5e2dc0f298a35bc",
+  "source_sha256": {
+    "rows.py": "9fed51203311e49628f7a1c4a85c8cf7a0b34048f36af5e5821f2923ba0944c9",
+    "oracle.py": "709c0e901eb4abe18959222ce1264426e9ec6104b3492ee0ae1ba4446db285ce",
+    "first_check.py": "c730c312ea1f0f4a5fc6067c10da96999068c56210a332d81a3d67e87e72540b"
+  },
+  "runs": [
+    {
+      "mode": "normal",
+      "seconds": 0.1654484560713172,
+      "peak_math_child_kib": 17100,
+      "whole_sha256": "a85997eb39832d3e0bca23aabbec2fb124ac6e69ee87ed91b5e2dc0f298a35bc"
+    },
+    {
+      "mode": "optimized",
+      "seconds": 0.41629256505984813,
+      "peak_math_child_kib": 19520,
+      "whole_sha256": "a85997eb39832d3e0bca23aabbec2fb124ac6e69ee87ed91b5e2dc0f298a35bc"
+    }
+  ],
+  "native_threads": 1,
+  "fixed_timeout_seconds": 45,
+  "early_preseal_input_guard_error": "Deficit range was mistakenly<=4; corrected to include the genuine zero-replication/deficit5 missing-link-point fixture. No failed run supplies a result."
+}
