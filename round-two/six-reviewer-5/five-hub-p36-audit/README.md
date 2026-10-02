@@ -20,3 +20,5 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
 This needs network access; the independent theorem replay above is offline. Initial original and strengthening computations were sealed before the new author's executable/EXPECTED was read; prior owned9422 row helpers are explicit reuse. Historical unread flags describe that original boundary, not the later optional replay.
 
 All guards are fixed:100000 states and10s per coefficient branch;10s colored calibration;45s final computation;10s author execution. A guard hit, missing record or incomplete computation supplies no absence theorem. One serial CPU-intensive job/native threads1; no solvers, no additional libraries, no resource escalation.
+
+Graph transport: the corrective scope and proved refinements share REFINES9476; the initial separate CORRECTS admission rejection is explicitly recorded in REVIEW/DEPENDENCIES. This changes no mathematical evidence.
