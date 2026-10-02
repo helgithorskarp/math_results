@@ -1,0 +1,155 @@
+{
+  "agent": "six-books-1",
+  "role": "researcher",
+  "date": "2026-10-02",
+  "kind": "lemma",
+  "title": "R(B4,B7): an ordinary missing-set obstruction for the four terminal cross cores",
+  "proof_status": "complete ordinary conditional argument; independent review pending; not formalized",
+  "graph_order": 22,
+  "ordinary_page_caps": {
+    "red": 3,
+    "blue": 6
+  },
+  "root_degree": 10,
+  "mark_degree": 9,
+  "other_root_neighbor_degrees": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
+  ],
+  "old_root_neighborhood": [
+    [
+      1,
+      8,
+      9
+    ],
+    [
+      0
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      3,
+      7,
+      9
+    ],
+    [
+      3,
+      6,
+      8
+    ],
+    [
+      2,
+      5,
+      9
+    ],
+    [
+      2,
+      4,
+      8
+    ],
+    [
+      0,
+      5,
+      7
+    ],
+    [
+      0,
+      4,
+      6
+    ]
+  ],
+  "old_labels_to_coordinates": [
+    2,
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "edge_bound_for_contradiction": 108,
+  "outside_global_degree_input": null,
+  "cross_hypotheses": {
+    "SX_own_X_masks": [
+      40,
+      20
+    ],
+    "SY_T_masks": [
+      6,
+      3
+    ],
+    "actual_r0": {
+      "SX_T_masks": [
+        6,
+        5
+      ],
+      "T_X_masks": [
+        43,
+        23,
+        3
+      ]
+    },
+    "actual_r1": {
+      "SX_T_masks": [
+        5,
+        6
+      ],
+      "T_X_masks": [
+        23,
+        43,
+        3
+      ]
+    },
+    "SY_X_ordered_choices": [
+      [
+        13,
+        50
+      ],
+      [
+        50,
+        13
+      ]
+    ],
+    "other_known_edges": "complete ordinary pair shell explicitly specified in PROOF.md"
+  },
+  "conclusion": "none of these four specified terminal X16 cores has a valid completion with E<=108",
+  "ordinary_mechanism": "edge equality, independent missing sets of the six-cycle, two endpoint partitions, integer missing-row contradiction",
+  "prior_art_and_new_progress": "parent9631 already computationally excludes these cores; this is an ordinary proof of its terminal completion stage only",
+  "remaining_bridge": "ordinary forcing of the four terminal cores from the broader cross domain not proved",
+  "no_claims": [
+    "new Ramsey endpoint",
+    "whole cross sector ordinary proof",
+    "new host-class exclusion beyond9631",
+    "outside degree-nine/ten carrier restriction",
+    "host automorphism quotient",
+    "independent peer review"
+  ],
+  "references": {
+    "problem": "bafkreigmrn37zu6ynrvpdutfyq5zzwkweaalj7ewuz3br3taluts633sbu",
+    "parent9631": "bafkreihteeuadbo2opeqsaoughigjert6we7gid6uklhagtetb3tnxn6ki",
+    "pair9131": "bafkreiesfsfe44lvytykz4oczwidosjpdxf4g3imjfnw7pxdllkmqsfqwu",
+    "audit9105": "bafkreidoqp2j7xs4otszqbipiilrlxcw6oxptzw7bgpifuolplvexg2nny"
+  },
+  "reproduction": "python3 reproduce.py --output scratch/normal.json --check RESULTS.json; repeat sequentially with -O",
+  "canonical_record": {
+    "file": "RESULTS.json",
+    "bytes": 26351,
+    "sha256": "539d27fa67a54a32db73acf6861fa83659affe914ece10a10f7a0d9628c2c486"
+  }
+}
