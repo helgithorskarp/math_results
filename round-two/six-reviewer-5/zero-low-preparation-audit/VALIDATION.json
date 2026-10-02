@@ -1,0 +1,199 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "python": "3.12.14",
+  "single_native_threads": true,
+  "scope": "unchanged1CPU2GiB",
+  "guard_seconds": 45,
+  "own_checks": [
+    {
+      "program": "independent.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 5.348143319017254,
+      "maxrss_kib": 18164,
+      "stdout": "{\"base\": {\"exits\": 193, \"max_all_longest\": 7, \"max_all_shortest\": 7, \"max_retained_longest\": 6, \"max_retained_shortest\": 6, \"retained_count\": 181, \"states\": 374}, \"bytes\": 80790, \"inventory\": {\"high\": {\"11\": 9}, \"high_mass\": 512, \"low\": {\"1\": 7, \"2\": 7, \"3\": 6, \"4\": 6, \"8\": 6}, \"low_mass\": 448, \"scalar_assignments\": 745472}, \"profiles\": 338, \"sha256\": \"58fad9b96c9baf378c73d964dbd4429a48607b30e472c6a84c3cf068f809e899\", \"stronger\": {\"exits\": 193, \"max_retained_longest\": 6, \"max_retained_shortest\": 6, \"retained_count\": 181, \"states\": 374}, \"tight\": 90}\n",
+      "stderr": ""
+    },
+    {
+      "program": "controls.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 12.494716333923861,
+      "maxrss_kib": 17964,
+      "stdout": "{\"all_edges_graded\":true,\"exit_cube_assignments\":395264,\"marker_conflation_control\":{\"D\":9,\"R\":0,\"images\":[4059103473,4042273011],\"left\":[[0,\"H\"],[1,\"H\"]],\"marks\":[11,12],\"right\":[[0,\"H\"],[6,\"H\"]]},\"outside_distinct_rank_clamping_witnesses\":193,\"positive_sorter_controls\":395,\"retained_carrier_gates\":6607,\"retained_depths\":{\"0\":1,\"1\":5,\"2\":16,\"3\":36,\"4\":57,\"5\":51,\"6\":15},\"standard_orientation_countercontrol\":true,\"whole_original_pruning_assignments\":745472,\"whole_wrong_rank_witnesses\":193}\n",
+      "stderr": ""
+    },
+    {
+      "program": "verify.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 12.96475590497721,
+      "maxrss_kib": 21292,
+      "stdout": "{\"actual_max_preparation\": 6, \"controls\": {\"all_edges_graded\": true, \"exit_cube_assignments\": 395264, \"marker_conflation_control\": {\"D\": 9, \"R\": 0, \"images\": [4059103473, 4042273011], \"left\": [[0, \"H\"], [1, \"H\"]], \"marks\": [11, 12], \"right\": [[0, \"H\"], [6, \"H\"]]}, \"outside_distinct_rank_clamping_witnesses\": 193, \"positive_sorter_controls\": 395, \"retained_carrier_gates\": 6607, \"retained_depths\": {\"0\": 1, \"1\": 5, \"2\": 16, \"3\": 36, \"4\": 57, \"5\": 51, \"6\": 15}, \"standard_orientation_countercontrol\": true, \"whole_original_pruning_assignments\": 745472, \"whole_wrong_rank_witnesses\": 193}, \"damage_rejections\": [\"original deletion cost\", \"full function row\", \"missing admissible transition\", \"missing all-suffix exit\", \"word-length grading\", \"added word gate\", \"whole-original-domain coverage\", \"exit retained as a necessary front\"], \"edges\": 446, \"evidence_bytes\": 80790, \"evidence_sha256\": \"58fad9b96c9baf378c73d964dbd4429a48607b30e472c6a84c3cf068f809e899\", \"exits\": 193, \"functions\": 374, \"profiles\": 338, \"retained\": 181, \"status\": \"COMPLETE_ORIGINAL_CUBE_COVER_AND_ACTUAL_SIX_GATE_BOUND_VERIFIED\", \"tight\": 90}\n",
+      "stderr": ""
+    },
+    {
+      "program": "verify.py",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 12.74522985611111,
+      "maxrss_kib": 23640,
+      "stdout": "{\"actual_max_preparation\": 6, \"controls\": {\"all_edges_graded\": true, \"exit_cube_assignments\": 395264, \"marker_conflation_control\": {\"D\": 9, \"R\": 0, \"images\": [4059103473, 4042273011], \"left\": [[0, \"H\"], [1, \"H\"]], \"marks\": [11, 12], \"right\": [[0, \"H\"], [6, \"H\"]]}, \"outside_distinct_rank_clamping_witnesses\": 193, \"positive_sorter_controls\": 395, \"retained_carrier_gates\": 6607, \"retained_depths\": {\"0\": 1, \"1\": 5, \"2\": 16, \"3\": 36, \"4\": 57, \"5\": 51, \"6\": 15}, \"standard_orientation_countercontrol\": true, \"whole_original_pruning_assignments\": 745472, \"whole_wrong_rank_witnesses\": 193}, \"damage_rejections\": [\"original deletion cost\", \"full function row\", \"missing admissible transition\", \"missing all-suffix exit\", \"word-length grading\", \"added word gate\", \"whole-original-domain coverage\", \"exit retained as a necessary front\"], \"edges\": 446, \"evidence_bytes\": 80790, \"evidence_sha256\": \"58fad9b96c9baf378c73d964dbd4429a48607b30e472c6a84c3cf068f809e899\", \"exits\": 193, \"functions\": 374, \"profiles\": 338, \"retained\": 181, \"status\": \"COMPLETE_ORIGINAL_CUBE_COVER_AND_ACTUAL_SIX_GATE_BOUND_VERIFIED\", \"tight\": 90}\n",
+      "stderr": ""
+    },
+    {
+      "program": "compare_author.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.14960990997496992,
+      "maxrss_kib": 18512,
+      "stdout": "{\"activity_images\": 9, \"directed_edges\": 446, \"full_function_rows\": 11968, \"native_certificate_sha256\": \"bdfdc23f34cffe622f623d00f4b005d57de1388c307a9662ab93b351c1d37257\", \"native_representatives\": 374, \"original_cut_records\": 193, \"own_evidence_sha256\": \"58fad9b96c9baf378c73d964dbd4429a48607b30e472c6a84c3cf068f809e899\", \"parent_states\": 136, \"status\": \"ALL_NATIVE_ROWS_EDGES_CUTS_AND_DISTANCES_MATCH_SEALED_INDEPENDENT_EVIDENCE\"}\n",
+      "stderr": ""
+    },
+    {
+      "program": "compare_author.py",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.2881848349934444,
+      "maxrss_kib": 21228,
+      "stdout": "{\"activity_images\": 9, \"directed_edges\": 446, \"full_function_rows\": 11968, \"native_certificate_sha256\": \"bdfdc23f34cffe622f623d00f4b005d57de1388c307a9662ab93b351c1d37257\", \"native_representatives\": 374, \"original_cut_records\": 193, \"own_evidence_sha256\": \"58fad9b96c9baf378c73d964dbd4429a48607b30e472c6a84c3cf068f809e899\", \"parent_states\": 136, \"status\": \"ALL_NATIVE_ROWS_EDGES_CUTS_AND_DISTANCES_MATCH_SEALED_INDEPENDENT_EVIDENCE\"}\n",
+      "stderr": ""
+    }
+  ],
+  "native_replay": {
+    "agent": "six-reviewer-5",
+    "role": "independent mathematical reviewer",
+    "strictly_serial_final_replay": true,
+    "initial_orchestration_incident": null,
+    "rows": [
+      {
+        "program": "generate.py",
+        "mode": "normal",
+        "seconds": 0.9476705000270158,
+        "maxrss_kib": 17976,
+        "guard_seconds": 45,
+        "result": {
+          "agent": "six-sorting-2",
+          "blocked": 193,
+          "certificate_bytes": 91009,
+          "certificate_sha256": "bdfdc23f34cffe622f623d00f4b005d57de1388c307a9662ab93b351c1d37257",
+          "edges": 446,
+          "function_states": 374,
+          "maximum_rss_kib": 17696,
+          "maximum_shortest": 7,
+          "retained": 181,
+          "role": "researcher",
+          "seconds": 0.8927153790136799,
+          "status": "COMPLETE_ZERO_PRIOR_LOW_PREPARATION_FUNCTION_COVER"
+        }
+      },
+      {
+        "program": "verify.py",
+        "mode": "normal",
+        "seconds": 11.512787332991138,
+        "maxrss_kib": 57044,
+        "guard_seconds": 45,
+        "result": {
+          "agent": "six-sorting-2",
+          "damages_rejected_for_intended_reasons": [
+            "prefix pin",
+            "activity image",
+            "whole function",
+            "missing state",
+            "extra leading identity in representative",
+            "original deletion count",
+            "marked cut port",
+            "full rank witness",
+            "missing admissible edge",
+            "incomplete closure"
+          ],
+          "maximum_rss_kib": 57044,
+          "metrics": {
+            "admissible_edges": 446,
+            "blocked": 193,
+            "complete_representative_function_assignments": 11968,
+            "full_original_Boolean_assignments": 8192,
+            "function_states": 374,
+            "maximum_shortest": 7,
+            "original_profile_assignments": 745472,
+            "retained": 181,
+            "selected_cut_assignments": 395264
+          },
+          "role": "researcher",
+          "seconds": 11.447095550014637,
+          "status": "WHOLE_ORIGINAL_CUBES_AND_FULL_FUNCTION_CLOSURE_VERIFIED",
+          "trust": "Separate same-author numeric algorithm; unformalized bridges, external review pending."
+        }
+      },
+      {
+        "program": "generate.py",
+        "mode": "optimized",
+        "seconds": 1.0625658980570734,
+        "maxrss_kib": 57044,
+        "guard_seconds": 45,
+        "result": {
+          "agent": "six-sorting-2",
+          "blocked": 193,
+          "certificate_bytes": 91009,
+          "certificate_sha256": "bdfdc23f34cffe622f623d00f4b005d57de1388c307a9662ab93b351c1d37257",
+          "edges": 446,
+          "function_states": 374,
+          "maximum_rss_kib": 20208,
+          "maximum_shortest": 7,
+          "retained": 181,
+          "role": "researcher",
+          "seconds": 0.8641775990836322,
+          "status": "COMPLETE_ZERO_PRIOR_LOW_PREPARATION_FUNCTION_COVER"
+        }
+      },
+      {
+        "program": "verify.py",
+        "mode": "optimized",
+        "seconds": 11.372794716036879,
+        "maxrss_kib": 58472,
+        "guard_seconds": 45,
+        "result": {
+          "agent": "six-sorting-2",
+          "damages_rejected_for_intended_reasons": [
+            "prefix pin",
+            "activity image",
+            "whole function",
+            "missing state",
+            "extra leading identity in representative",
+            "original deletion count",
+            "marked cut port",
+            "full rank witness",
+            "missing admissible edge",
+            "incomplete closure"
+          ],
+          "maximum_rss_kib": 58472,
+          "metrics": {
+            "admissible_edges": 446,
+            "blocked": 193,
+            "complete_representative_function_assignments": 11968,
+            "full_original_Boolean_assignments": 8192,
+            "function_states": 374,
+            "maximum_shortest": 7,
+            "original_profile_assignments": 745472,
+            "retained": 181,
+            "selected_cut_assignments": 395264
+          },
+          "role": "researcher",
+          "seconds": 11.174057847005315,
+          "status": "WHOLE_ORIGINAL_CUBES_AND_FULL_FUNCTION_CLOSURE_VERIFIED",
+          "trust": "Separate same-author numeric algorithm; unformalized bridges, external review pending."
+        }
+      }
+    ],
+    "native_source_bytes_unchanged": true
+  },
+  "ordinary_pruning_threshold_standardization_cut_and_code_bridges_unformalized": true,
+  "initial_incomplete_run": "A mistaken retained-max7 expectation failed after5.197435s; all complete cover counts already matched. Corrected to retained6 / whole cover7 before target code/certificate access. No timeout or absence inference."
+}
