@@ -51,6 +51,12 @@ that does not establish historical priority. The local and connectedness
 proofs are supplied in full, with a compact exact certificate and a
 different author-written checker. New independent review remains pending.
 
+At the pre-submission refresh, independently committed REVIEW9717 confirmed
+the parent 9681 and proved its broader closed band \([9/20,19/31]\).
+Corollary C explicitly combines that separately credited parent theorem
+with the new local obstruction. The complete broader parent evidence was
+replayed and byte-bound; no parent verdict is transferred to this packet.
+
 The remaining global issue is not settled by good configurations or
 these conditional maps: a useful next step is to prove a particular
 connected-map occurrence predicate, or establish enough optimizer

@@ -2,8 +2,9 @@
 
 Actual author **six-tammes-1**, role **researcher**, 2026-10-02, pass20.
 The local obstruction below is proved by spherical geometry and exact
-algebra. Its application refines committed LEMMA9681; all of that map
-cohort's geometric hypotheses remain explicit. The two exact implementations
+algebra. Its application refines committed LEMMA9681; a later corollary
+combines the wider parent band independently proved in REVIEW9717.
+All map hypotheses remain explicit. The two exact implementations
 here are by the same researcher. Independent review of this new packet is
 pending. No global Tammes-15 upper bound is claimed.
 
@@ -59,6 +60,17 @@ in LEMMA9681's earlier connectedness consequence.
 The hypotheses of Theorem B have not been established for every optimizer.
 The conclusion does not supply a particular G20 or G22 subgraph, a joint
 neighbor, or a global optimality proof.
+
+**Corollary C (expanded closed band).** The connectedness and point-coverage
+conclusions of Theorem B hold with its cosine band replaced by
+\(c\in[9/20,19/31]\), and every other hypothesis retained.
+This combines Lemma A with the wider parent incidence/annulus theorem in
+[REVIEW9717, six-reviewer-5](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-5/two-corner-incidence-audit/REVIEW.md),
+verified source commit `6d18f12a3c56925073e71bf1ad6855f334f35e16`.
+That independent review concerns the parent result, not the new
+shared-edge obstruction or this connectedness corollary. The incidence
+graph's minimum degree two on that band is also the reviewer's prior
+result; it is credited and not renamed as a new theorem here.
 
 ## 2. Contact angles and the rhombus identity
 
@@ -298,6 +310,15 @@ G22 motif inside their complementary triangle annuli: those residuals
 cannot occur under the given hypotheses. The connected-incidence case
 and optimizer coverage remain to be addressed.
 
+For Corollary C, REVIEW9717 proves every parent physical incidence, annulus
+and cap-star fact used in Section 5 on the closed band \([9/20,19/31]\),
+with the same map hypotheses. That band is contained in Lemma A's
+\([9/20,1)\). The two-track argument and the complete typed-port domain
+do not depend on \(c\). Repeating the preceding seam and pigeonhole
+argument therefore excludes disconnection on the expanded band as well.
+The elementary alternative proof in Section 4 is used only for
+\(c\ge1/2\); the three-case proof of Section 3 covers the rest.
+
 ## 7. Calibration, reproducibility and limitations
 
 The local prohibition must not be extended to all positive \(c\). A
@@ -327,6 +348,16 @@ See [README.md](README.md) for exact replay commands,
 and actual costs. [controls.py](controls.py) rejects twenty-three altered
 certificates and accepts five valid representation changes. The latter
 prevent interpreting canonical-byte matching as semantic verification.
+
+The original certificate's `application_closed_band` names Theorem B's
+original \([1/2,3/5]\) band; its local discriminant verification already
+covers \([9/20,1]\), and its complete gluing domain is unchanged for
+Corollary C. The new external physical-band premise is REVIEW9717.
+[PARENT-REPLAY.json](PARENT-REPLAY.json) records an author replay of that
+review's complete 58,345-byte evidence and ten damages, taking 1.067 seconds
+and 23612 KiB RSS under the unchanged 55 second guard. No parent corpus or
+reviewer helper is copied into this packet. This replay is not an
+independent review of our new lemma or corollary.
 
 All ordinary spherical, embedding, annulus, cap and code-to-statement
 bridges remain unformalized. The code certifies the algebraic and finite

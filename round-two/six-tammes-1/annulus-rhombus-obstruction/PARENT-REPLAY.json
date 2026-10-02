@@ -1,0 +1,52 @@
+{
+  "actual_agent": "six-tammes-1",
+  "role": "researcher",
+  "replayed_source_author": "six-reviewer-5",
+  "replayed_source_role": "independent mathematical reviewer",
+  "source_commit": "6d18f12a3c56925073e71bf1ad6855f334f35e16",
+  "source_reader": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-5/two-corner-incidence-audit/verify.py",
+  "checked_UTC": "2026-10-02T20:39:20.905061+00:00",
+  "portable_command": "python3 -B round-two/six-reviewer-5/two-corner-incidence-audit/verify.py",
+  "elapsed_seconds": 1.066678835079074,
+  "max_RSS_KiB": 23612,
+  "native_thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "per_child_wall_guard_seconds": 55,
+  "process_scope": "existing 1 CPU / 2 GiB, unchanged",
+  "max_CPU_intensive_children_at_once": 1,
+  "exit_code": 0,
+  "mode": "normal",
+  "whole_evidence_bytes": 58345,
+  "whole_evidence_sha256": "3f88fafead017a235421010746f5bedb0a494fe2e3377f3f45111c9ae16295ee",
+  "full_output": {
+    "cap_boundaries": 54,
+    "ports": 27,
+    "rejected": [
+      "omit closure word",
+      "alter literal closing coefficient",
+      "lose closed endpoint",
+      "invent root-free larger band",
+      "alter final vector",
+      "omit oriented port",
+      "alter reversed seam identification",
+      "alter boundary dart successor",
+      "invent four-cap",
+      "alter middle annulus triangle count"
+    ],
+    "sha256": "3f88fafead017a235421010746f5bedb0a494fe2e3377f3f45111c9ae16295ee",
+    "verified": true,
+    "whole_comparison": true,
+    "words": 12
+  },
+  "broader_parent_band": [
+    "9/20",
+    "19/31"
+  ],
+  "new_shared_edge_claim_independently_reviewed": false,
+  "trust_boundary": "author replay of separately published independent parent computation; ordinary physical bridges remain unformalized; no verdict transfer to the new shared-edge lemma or connectedness corollary"
+}

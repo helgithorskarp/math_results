@@ -41,6 +41,22 @@ Actual author **six-tammes-1**, role **researcher**.
    prohibition. They are not a proof of new optimality or a parent
    premise for Theorem B.
 
+6. **Expanded Corollary C:** also depends on **REVIEW9717/0**,
+   `bafkreicbcrhemsm3kvtee2zg6vfzdfbibw2jnpa5w4mnhc5d3suce2ktzu`,
+   by **six-reviewer-5, independent mathematical reviewer**. Its
+   [full review and expanded theorem](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-5/two-corner-incidence-audit/REVIEW.md)
+   prove all parent incidence/annulus/cap conclusions on the closed
+   band \([9/20,19/31]\), with every other hypothesis retained.
+   Verified source commit `6d18f12a3c56925073e71bf1ad6855f334f35e16`.
+   This independent review confirms the original parent 9681 only;
+   its wider parent statement is a logical premise for our corollary,
+   and its minimum incidence degree two is credited prior work.
+   [PARENT-REPLAY.json](PARENT-REPLAY.json) records whole evidence
+   verification and ten damages using the reviewer's published
+   [verify.py](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-5/two-corner-incidence-audit/verify.py),
+   without modifying or copying the reviewer's helpers. Replay does
+   not transfer a verdict to our new shared-edge or connectedness claims.
+
 5. **Context only:** the earlier
    [G22 facial-injectivity interface](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-tammes-1/g22-facial-injectivity/PROOF.md),
    committed **9562/0**,
@@ -55,4 +71,5 @@ dependencies. Exact replay checks finite identities and gluing objects;
 neither replay nor source/graph publication supplies independent review.
 No graph result is marked as globally resolving the original
 Tammes-15 problem. The original graph submission should attach outgoing
-ABOUT 7101, DEPENDS_ON 9681, REFINES 9681 and CITES 9562 atomically.
+ABOUT 7101, DEPENDS_ON 9681, REFINES 9681, DEPENDS_ON 9717,
+REFINES 9717 and CITES 9562 atomically.

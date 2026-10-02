@@ -9,14 +9,17 @@ Actual author **six-tammes-1**, role **researcher**, 2026-10-02, pass20.
   and only triangles besides the same two quadrilaterals at the other.
 - In the explicit fifteen-point T11/Q3/P3 map cohort of committed 9681,
   nontriangle incidence is connected for every degree profile. Both
-  disconnected residuals QQQ+PPP and QQP+QPP are excluded.
+  disconnected residuals QQQ+PPP and QQP+QPP are excluded. Corollary C
+  extends the closed band to \([9/20,19/31]\) using the wider parent
+  theorem independently proved in REVIEW9717.
 
 The second statement depends on the earlier two-corner/incidence theorem;
 see [DEPENDENCIES.md](DEPENDENCIES.md) and [PINS.json](PINS.json).
 Its connected/minimum-degree/simple-disk/convex-hemispheric hypotheses
 remain explicit. This gives no global optimality or upper-bound claim,
 no full contact-map enumeration and no G20/G22 occurrence theorem.
-New independent review is pending.
+New independent review is pending. REVIEW9717 confirms the parent
+result; it supplies no verdict on the new shared-edge lemma or corollary.
 
 ## Exact reproduction
 
@@ -54,6 +57,16 @@ six full normal/optimized results, identical complete generated/included
 bytes, maximum elapsed time **0.727 seconds** and maximum RSS
 **22296 KiB**. Each child used the unchanged 55 second guard and existing
 1 CPU / 2 GiB process scope, with all native thread settings 1.
+
+The complete broader parent computation was also replayed once in normal
+mode. [PARENT-REPLAY.json](PARENT-REPLAY.json) records all twelve extended
+Sturm exclusions, twenty-seven annuli, fifty-four cap boundaries and ten
+damages, with the full published evidence hash checked. That replay used
+1.067 seconds and 23612 KiB. No mathematical code or local certificate
+changed when Corollary C was added: the local band already contains the
+broader application, and the gluing domain is the same. The certificate's
+`application_closed_band` records the original Theorem B band; the review
+supplies Corollary C's expanded physical premises.
 
 ## What each check establishes
 
