@@ -1,0 +1,248 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "seal_utc": "2026-10-02T15:40:47.123137+00:00",
+  "target": {
+    "height": 9195,
+    "ref": "bafkreihheqg5ispobqtthf6b4kucvyrgcllkg7lxxfuveveio7l26m3evm",
+    "source_commit": "6df5f969a5140ec9a7b70973a34cf10257ec5f74"
+  },
+  "sealed_files": {
+    "affine.py": "3edd90ce196759e15a8d011d60cbdde60226f36ee956ca1d45d33ff701a22756",
+    "linear.py": "94872f866836b3c2b5971aa96e5e7814eeaf81270b127c0e1fb491b3dfc5224c",
+    "polynomial.py": "50ac7e8ea1ab5fe5b0c4079321d9b1ba0bcb375590926ae9cc624f52ddc5adf2",
+    "endpoint.py": "4bdfe59b4710993ee3acaba8fbf16ce463f81bd18423ec5b43f92b5d434e168c",
+    "scalar.py": "d0e22d18cf30cf8b8218db49a3d77169d462a9d3214af276fe790f2e8706a1dc",
+    "finite.py": "92384f8c1cd1adc499a12a9f1b7c353e6a2b3b5ed9bef3d9a0ca629204dc147d",
+    "verify.py": "cb8119518e1095a51efd438b7370e571f715a6f2e14eb2c0fcba7f2bfcdd2e84",
+    "EXPECTED.json": "bb4cd245dd27d9cfa6a9003e7c6df3b3a45b7c73f101d22a519350547cb9fb7f",
+    "PROOF.md": "ecbd851567568aee0f28b914f73d1f16c71d3e33060b0f63de018a2874f234c5",
+    "README.md": "7271d8cae33f0d327f1efac324d910388b3eeae97d56b289b6cfd2e087b7ded0",
+    "action.py": "92a80cf190ccca8a5ea6d8e1a4d2489f1e0aff41f01508370508b9c212688db5",
+    "EXPECTED-action.json": "1888de31c43ac94cb40a97b8e1a6288c2e578299c165e760b79d019870068f82"
+  },
+  "independent_cold_records": [
+    {
+      "mode": "normal",
+      "whole_expected_equal": true,
+      "outer_seconds": 87.17107232892886,
+      "agent": "six-reviewer-2",
+      "peak_child_KiB": 30936,
+      "phases": 10,
+      "role": "independent mathematical reviewer",
+      "seconds": 87.098,
+      "status": "PASS",
+      "timings": [
+        {
+          "phase": [
+            "endpoint.py"
+          ],
+          "seconds": 0.2315452250186354
+        },
+        {
+          "phase": [
+            "scalar.py"
+          ],
+          "seconds": 0.07079295406583697
+        },
+        {
+          "phase": [
+            "finite.py",
+            "zero"
+          ],
+          "seconds": 0.17089403106365353
+        },
+        {
+          "phase": [
+            "finite.py",
+            "repair"
+          ],
+          "seconds": 0.058158850064501166
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "4",
+            "1",
+            "old"
+          ],
+          "seconds": 0.21247608901467174
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "4",
+            "1",
+            "new"
+          ],
+          "seconds": 0.26216997602023184
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "7",
+            "2",
+            "old"
+          ],
+          "seconds": 2.0008492469787598
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "7",
+            "2",
+            "new"
+          ],
+          "seconds": 2.002801140071824
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "12",
+            "3",
+            "old"
+          ],
+          "seconds": 27.906779648037627
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "12",
+            "3",
+            "new"
+          ],
+          "seconds": 54.1295081670396
+        }
+      ],
+      "whole_record_sha256": "bb4cd245dd27d9cfa6a9003e7c6df3b3a45b7c73f101d22a519350547cb9fb7f"
+    },
+    {
+      "mode": "optimized",
+      "whole_expected_equal": true,
+      "outer_seconds": 77.5241679479368,
+      "agent": "six-reviewer-2",
+      "peak_child_KiB": 31520,
+      "phases": 10,
+      "role": "independent mathematical reviewer",
+      "seconds": 76.82,
+      "status": "PASS",
+      "timings": [
+        {
+          "phase": [
+            "endpoint.py"
+          ],
+          "seconds": 0.926507500000298
+        },
+        {
+          "phase": [
+            "scalar.py"
+          ],
+          "seconds": 0.5729240219807252
+        },
+        {
+          "phase": [
+            "finite.py",
+            "zero"
+          ],
+          "seconds": 0.7175969779491425
+        },
+        {
+          "phase": [
+            "finite.py",
+            "repair"
+          ],
+          "seconds": 0.4700316839152947
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "4",
+            "1",
+            "old"
+          ],
+          "seconds": 0.915325756999664
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "4",
+            "1",
+            "new"
+          ],
+          "seconds": 0.6528616580180824
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "7",
+            "2",
+            "old"
+          ],
+          "seconds": 3.195036207092926
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "7",
+            "2",
+            "new"
+          ],
+          "seconds": 3.049346684012562
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "12",
+            "3",
+            "old"
+          ],
+          "seconds": 35.10584333399311
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "12",
+            "3",
+            "new"
+          ],
+          "seconds": 31.21214192500338
+        }
+      ],
+      "whole_record_sha256": "bb4cd245dd27d9cfa6a9003e7c6df3b3a45b7c73f101d22a519350547cb9fb7f"
+    }
+  ],
+  "independence": "Full defining proof visible and credited; own9488 affine/linear reused unchanged. New target9195 executable, EXPECTED, RESULTS unread at seal.8757 layer completeness and9145 positive1/8 floor remain explicit premises.",
+  "new_scope": "Larger real repair interval min(k*kappa/[8(2k+1)],gamma/(2sqrt3)); rationalendpointmin(k*kappa/[8(2k+1)],2gamma/7) at least8/7 oldfork>=2. No optimality or full-ansatz B0 necessity.",
+  "preseal_reviewer_correction": "Removed an unused draft line and restored its local nonempty-list declaration after an explicit NameError in the q4 zero phase. Corrected before seal; no mathematical author defect or exclusion inference.",
+  "initial_ten_phase_completion_seal_utc": "2026-10-02T15:35:29.140502+00:00",
+  "separate_whole_action_validation": {
+    "normal": {
+      "original_constant_rows": 7,
+      "slope_calibration_entries": 100,
+      "status": "PASS",
+      "whole_expected_equal": true,
+      "whole_record_sha256": "1888de31c43ac94cb40a97b8e1a6288c2e578299c165e760b79d019870068f82"
+    },
+    "optimized": {
+      "original_constant_rows": 7,
+      "slope_calibration_entries": 100,
+      "status": "PASS",
+      "whole_expected_equal": true,
+      "whole_record_sha256": "1888de31c43ac94cb40a97b8e1a6288c2e578299c165e760b79d019870068f82"
+    },
+    "full_records_equal": true
+  },
+  "pre_target_documentation_extension": "After ten-phase cold completion and before ANY target9195 program/oracle access, added the proof-only mixed open/closed repair domain and an independently checked exact universal constant-action record. Original eight executable/frozen files unchanged; final twelve primary files sealed now."
+}

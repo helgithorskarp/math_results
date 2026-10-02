@@ -1,0 +1,727 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "seal_utc": "2026-10-02T15:40:47.123137+00:00",
+  "first_target_access_utc": "2026-10-02T15:41:28.611971+00:00",
+  "sealed_math_and_proof_unchanged_after_target_program_inspection": true,
+  "independent_cold_records": [
+    {
+      "mode": "normal",
+      "whole_expected_equal": true,
+      "outer_seconds": 87.17107232892886,
+      "agent": "six-reviewer-2",
+      "peak_child_KiB": 30936,
+      "phases": 10,
+      "role": "independent mathematical reviewer",
+      "seconds": 87.098,
+      "status": "PASS",
+      "timings": [
+        {
+          "phase": [
+            "endpoint.py"
+          ],
+          "seconds": 0.2315452250186354
+        },
+        {
+          "phase": [
+            "scalar.py"
+          ],
+          "seconds": 0.07079295406583697
+        },
+        {
+          "phase": [
+            "finite.py",
+            "zero"
+          ],
+          "seconds": 0.17089403106365353
+        },
+        {
+          "phase": [
+            "finite.py",
+            "repair"
+          ],
+          "seconds": 0.058158850064501166
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "4",
+            "1",
+            "old"
+          ],
+          "seconds": 0.21247608901467174
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "4",
+            "1",
+            "new"
+          ],
+          "seconds": 0.26216997602023184
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "7",
+            "2",
+            "old"
+          ],
+          "seconds": 2.0008492469787598
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "7",
+            "2",
+            "new"
+          ],
+          "seconds": 2.002801140071824
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "12",
+            "3",
+            "old"
+          ],
+          "seconds": 27.906779648037627
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "12",
+            "3",
+            "new"
+          ],
+          "seconds": 54.1295081670396
+        }
+      ],
+      "whole_record_sha256": "bb4cd245dd27d9cfa6a9003e7c6df3b3a45b7c73f101d22a519350547cb9fb7f"
+    },
+    {
+      "mode": "optimized",
+      "whole_expected_equal": true,
+      "outer_seconds": 77.5241679479368,
+      "agent": "six-reviewer-2",
+      "peak_child_KiB": 31520,
+      "phases": 10,
+      "role": "independent mathematical reviewer",
+      "seconds": 76.82,
+      "status": "PASS",
+      "timings": [
+        {
+          "phase": [
+            "endpoint.py"
+          ],
+          "seconds": 0.926507500000298
+        },
+        {
+          "phase": [
+            "scalar.py"
+          ],
+          "seconds": 0.5729240219807252
+        },
+        {
+          "phase": [
+            "finite.py",
+            "zero"
+          ],
+          "seconds": 0.7175969779491425
+        },
+        {
+          "phase": [
+            "finite.py",
+            "repair"
+          ],
+          "seconds": 0.4700316839152947
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "4",
+            "1",
+            "old"
+          ],
+          "seconds": 0.915325756999664
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "4",
+            "1",
+            "new"
+          ],
+          "seconds": 0.6528616580180824
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "7",
+            "2",
+            "old"
+          ],
+          "seconds": 3.195036207092926
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "7",
+            "2",
+            "new"
+          ],
+          "seconds": 3.049346684012562
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "12",
+            "3",
+            "old"
+          ],
+          "seconds": 35.10584333399311
+        },
+        {
+          "phase": [
+            "finite.py",
+            "original",
+            "12",
+            "3",
+            "new"
+          ],
+          "seconds": 31.21214192500338
+        }
+      ],
+      "whole_record_sha256": "bb4cd245dd27d9cfa6a9003e7c6df3b3a45b7c73f101d22a519350547cb9fb7f"
+    }
+  ],
+  "separate_whole_action_validation": {
+    "normal": {
+      "original_constant_rows": 7,
+      "slope_calibration_entries": 100,
+      "status": "PASS",
+      "whole_expected_equal": true,
+      "whole_record_sha256": "1888de31c43ac94cb40a97b8e1a6288c2e578299c165e760b79d019870068f82"
+    },
+    "optimized": {
+      "original_constant_rows": 7,
+      "slope_calibration_entries": 100,
+      "status": "PASS",
+      "whole_expected_equal": true,
+      "whole_record_sha256": "1888de31c43ac94cb40a97b8e1a6288c2e578299c165e760b79d019870068f82"
+    },
+    "full_records_equal": true
+  },
+  "native_replay": {
+    "records": [
+      {
+        "mode": "normal",
+        "seconds": 118.4658300129231,
+        "peak_child_KiB": 39732,
+        "full_native_expected_equal": true,
+        "whole_stdout_sha256": "b84aa985ccf1fce2ff58a0f0060fc65a3e223ddef96fead14e66b30e58671865",
+        "stable_record_sha256": "33f4947bd0c5a319edd28635563bc69744903e2d1d59e0a4d6c959847d903e73"
+      },
+      {
+        "mode": "optimized",
+        "seconds": 122.53543088794686,
+        "peak_child_KiB": 40048,
+        "full_native_expected_equal": true,
+        "whole_stdout_sha256": "b84aa985ccf1fce2ff58a0f0060fc65a3e223ddef96fead14e66b30e58671865",
+        "stable_record_sha256": "33f4947bd0c5a319edd28635563bc69744903e2d1d59e0a4d6c959847d903e73"
+      }
+    ],
+    "normal_optimized_entire_stdout_equal": true,
+    "native_expected_whole_record_equal": true,
+    "phase_count": 20,
+    "semantic_damage_rejections": 31,
+    "scope": "UNCHANGED native verifier/tasks/helpers,60s each original guard;20 sequential phases, native1; late corroboration only. Positive endpoint and original complete harmonic theorem remain credited dependencies."
+  },
+  "late_comparison": {
+    "determinants": [
+      {
+        "sector": [
+          0,
+          0
+        ],
+        "order": 1,
+        "coefficients": 7,
+        "whole_equal": true
+      },
+      {
+        "sector": [
+          0,
+          0
+        ],
+        "order": 2,
+        "coefficients": 12,
+        "whole_equal": true
+      },
+      {
+        "sector": [
+          0,
+          0
+        ],
+        "order": 3,
+        "coefficients": 17,
+        "whole_equal": true
+      },
+      {
+        "sector": [
+          0,
+          0
+        ],
+        "order": 4,
+        "coefficients": 22,
+        "whole_equal": true
+      },
+      {
+        "sector": [
+          1,
+          0
+        ],
+        "order": 1,
+        "coefficients": 7,
+        "whole_equal": true
+      },
+      {
+        "sector": [
+          1,
+          0
+        ],
+        "order": 2,
+        "coefficients": 12,
+        "whole_equal": true
+      },
+      {
+        "sector": [
+          1,
+          0
+        ],
+        "order": 3,
+        "coefficients": 17,
+        "whole_equal": true
+      },
+      {
+        "sector": [
+          0,
+          1
+        ],
+        "order": 1,
+        "coefficients": 6,
+        "whole_equal": true
+      },
+      {
+        "sector": [
+          0,
+          1
+        ],
+        "order": 2,
+        "coefficients": 12,
+        "whole_equal": true
+      },
+      {
+        "sector": [
+          0,
+          1
+        ],
+        "order": 3,
+        "coefficients": 17,
+        "whole_equal": true
+      },
+      {
+        "sector": [
+          0,
+          1
+        ],
+        "order": 4,
+        "coefficients": 22,
+        "whole_equal": true
+      },
+      {
+        "sector": [
+          1,
+          1
+        ],
+        "order": 1,
+        "coefficients": 6,
+        "whole_equal": true
+      },
+      {
+        "sector": [
+          1,
+          1
+        ],
+        "order": 2,
+        "coefficients": 11,
+        "whole_equal": true
+      },
+      {
+        "sector": [
+          0,
+          2
+        ],
+        "order": 1,
+        "coefficients": 6,
+        "whole_equal": true
+      }
+    ],
+    "upper_margins": [
+      {
+        "sector": [
+          0,
+          0
+        ],
+        "row": 0,
+        "normalized_whole_rational_function_equal": true
+      },
+      {
+        "sector": [
+          0,
+          0
+        ],
+        "row": 1,
+        "normalized_whole_rational_function_equal": true
+      },
+      {
+        "sector": [
+          0,
+          0
+        ],
+        "row": 2,
+        "normalized_whole_rational_function_equal": true
+      },
+      {
+        "sector": [
+          0,
+          0
+        ],
+        "row": 3,
+        "normalized_whole_rational_function_equal": true
+      },
+      {
+        "sector": [
+          0,
+          0
+        ],
+        "row": 4,
+        "normalized_whole_rational_function_equal": true
+      },
+      {
+        "sector": [
+          0,
+          0
+        ],
+        "row": 5,
+        "normalized_whole_rational_function_equal": true
+      },
+      {
+        "sector": [
+          0,
+          0
+        ],
+        "row": 6,
+        "normalized_whole_rational_function_equal": true
+      },
+      {
+        "sector": [
+          1,
+          0
+        ],
+        "row": 0,
+        "normalized_whole_rational_function_equal": true
+      },
+      {
+        "sector": [
+          1,
+          0
+        ],
+        "row": 1,
+        "normalized_whole_rational_function_equal": true
+      },
+      {
+        "sector": [
+          1,
+          0
+        ],
+        "row": 2,
+        "normalized_whole_rational_function_equal": true
+      },
+      {
+        "sector": [
+          1,
+          0
+        ],
+        "row": 3,
+        "normalized_whole_rational_function_equal": true
+      },
+      {
+        "sector": [
+          0,
+          1
+        ],
+        "row": 0,
+        "normalized_whole_rational_function_equal": true
+      },
+      {
+        "sector": [
+          0,
+          1
+        ],
+        "row": 1,
+        "normalized_whole_rational_function_equal": true
+      },
+      {
+        "sector": [
+          0,
+          1
+        ],
+        "row": 2,
+        "normalized_whole_rational_function_equal": true
+      },
+      {
+        "sector": [
+          0,
+          1
+        ],
+        "row": 3,
+        "normalized_whole_rational_function_equal": true
+      },
+      {
+        "sector": [
+          1,
+          1
+        ],
+        "row": 0,
+        "normalized_whole_rational_function_equal": true
+      },
+      {
+        "sector": [
+          1,
+          1
+        ],
+        "row": 1,
+        "normalized_whole_rational_function_equal": true
+      },
+      {
+        "sector": [
+          0,
+          2
+        ],
+        "row": 0,
+        "normalized_whole_rational_function_equal": true
+      }
+    ],
+    "whole_original_matrix_hashes": [
+      {
+        "q": 4,
+        "k": 1,
+        "entries": 1681,
+        "whole_equal": true,
+        "sha256": "18474e734ee60e31e93960f0271b1d91948945c3c333f9ffd60f1cdabf5374a0"
+      },
+      {
+        "q": 7,
+        "k": 2,
+        "entries": 5776,
+        "whole_equal": true,
+        "sha256": "3669f3b0d598509e73e02bb39ad3e294a1230ae1f2fd26ca21733bb4bdccfb9a"
+      },
+      {
+        "q": 12,
+        "k": 3,
+        "entries": 24025,
+        "whole_equal": true,
+        "sha256": "2b39063276a9b8391947b4b5b5b0a751ecb4d37c54633885f349e00c9bfa4bcf"
+      }
+    ],
+    "scalar_samples": [
+      {
+        "q": 4,
+        "k": 1,
+        "all_native_fields_equal": [
+          "B0",
+          "D",
+          "E",
+          "N",
+          "alpha",
+          "chi",
+          "g",
+          "gamma",
+          "h",
+          "k",
+          "kappa",
+          "minimum_q",
+          "q",
+          "s",
+          "tau"
+        ]
+      },
+      {
+        "q": 7,
+        "k": 2,
+        "all_native_fields_equal": [
+          "B0",
+          "D",
+          "E",
+          "N",
+          "alpha",
+          "chi",
+          "g",
+          "gamma",
+          "h",
+          "k",
+          "kappa",
+          "minimum_q",
+          "q",
+          "s",
+          "tau"
+        ]
+      },
+      {
+        "q": 12,
+        "k": 3,
+        "all_native_fields_equal": [
+          "B0",
+          "D",
+          "E",
+          "N",
+          "alpha",
+          "chi",
+          "g",
+          "gamma",
+          "h",
+          "k",
+          "kappa",
+          "minimum_q",
+          "q",
+          "s",
+          "tau"
+        ]
+      },
+      {
+        "q": 18,
+        "k": 4,
+        "all_native_fields_equal": [
+          "B0",
+          "D",
+          "E",
+          "N",
+          "alpha",
+          "chi",
+          "g",
+          "gamma",
+          "h",
+          "k",
+          "kappa",
+          "minimum_q",
+          "q",
+          "s",
+          "tau"
+        ]
+      },
+      {
+        "q": 24,
+        "k": 5,
+        "all_native_fields_equal": [
+          "B0",
+          "D",
+          "E",
+          "N",
+          "alpha",
+          "chi",
+          "g",
+          "gamma",
+          "h",
+          "k",
+          "kappa",
+          "minimum_q",
+          "q",
+          "s",
+          "tau"
+        ]
+      },
+      {
+        "q": 29,
+        "k": 6,
+        "all_native_fields_equal": [
+          "B0",
+          "D",
+          "E",
+          "N",
+          "alpha",
+          "chi",
+          "g",
+          "gamma",
+          "h",
+          "k",
+          "kappa",
+          "minimum_q",
+          "q",
+          "s",
+          "tau"
+        ]
+      },
+      {
+        "q": 600,
+        "k": 100,
+        "all_native_fields_equal": [
+          "B0",
+          "D",
+          "E",
+          "N",
+          "alpha",
+          "chi",
+          "g",
+          "gamma",
+          "h",
+          "k",
+          "kappa",
+          "minimum_q",
+          "q",
+          "s",
+          "tau"
+        ]
+      },
+      {
+        "q": 1000000,
+        "k": 100000,
+        "all_native_fields_equal": [
+          "B0",
+          "D",
+          "E",
+          "N",
+          "alpha",
+          "chi",
+          "g",
+          "gamma",
+          "h",
+          "k",
+          "kappa",
+          "minimum_q",
+          "q",
+          "s",
+          "tau"
+        ]
+      }
+    ],
+    "agent": "six-reviewer-2",
+    "role": "independent mathematical reviewer",
+    "compared_scalar_coefficient_positions": 408,
+    "own_only_adapter": true,
+    "no_target_program_import_into_independent_evidence": true,
+    "scope": "All14 COMPLETE coefficient lists,18 COMPLETE rational margins,three full whole-M hashes covering31482 entries,all native scalar sample fields and all original whole lower/empty/gap pairings. Author secondary characteristic fingerprints and separate finite valid/old-pair enumeration not independently regenerated."
+  },
+  "original_graphql_refresh_limit": "Fixed45s full repeated target query timed out under shared CPU load. No query/index/resource setting changed; original full28224B immutable body and original9edges plus14incoming reused, official signed bounded updates9512->9536 show no target edge or overlapping assessment."
+}
