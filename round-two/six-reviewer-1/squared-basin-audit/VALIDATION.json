@@ -1,0 +1,95 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "python": "3.12.14",
+  "native_threads": 1,
+  "serial_jobs": true,
+  "internal_guard_seconds": 45,
+  "outer_guard_seconds": 45,
+  "first_record_freeze": {
+    "agent": "six-reviewer-1",
+    "role": "independent mathematical reviewer",
+    "utc": "2026-10-02T11:43:10.886731+00:00",
+    "record": "scratch/pass24-first-record.json",
+    "record_bytes": 21710,
+    "record_sha256": "50adec6a09b485a0db617b6a3bf613c6829d4bf58a8a31003260736da7824f1f",
+    "source_sha256": "f14ed0a2421ad1ed0fc7a86d351e40a91924ae06ef86b1431fd29897890f3214",
+    "normal_optimized_whole_bytes_equal": true,
+    "author_executable_read": false,
+    "author_fixture_read": false,
+    "defining_original_proof_read": true,
+    "new_derivative_method": "Univariate directional Taylor coefficients with exact polarization; no rectangular multivariate quotient ring."
+  },
+  "independent_initial_checks": [
+    {
+      "script": "check.py",
+      "optimized": false,
+      "seconds": 0.5544970370829105,
+      "exit_code": 0,
+      "maxrss_child_kib": 17792
+    },
+    {
+      "script": "check.py",
+      "optimized": true,
+      "seconds": 0.765605064923875,
+      "exit_code": 0,
+      "maxrss_child_kib": 21788
+    },
+    {
+      "script": "primitive_controls.py",
+      "optimized": false,
+      "seconds": 0.2880769579205662,
+      "exit_code": 0,
+      "maxrss_child_kib": 21788
+    },
+    {
+      "script": "primitive_controls.py",
+      "optimized": true,
+      "seconds": 0.4776841040002182,
+      "exit_code": 0,
+      "maxrss_child_kib": 21788
+    },
+    {
+      "script": "fixture_controls.py",
+      "optimized": false,
+      "seconds": 10.61024286900647,
+      "exit_code": 0,
+      "maxrss_child_kib": 22416
+    }
+  ],
+  "original_replay": [
+    {
+      "optimized": false,
+      "seconds": 1.196831976994872,
+      "exit_code": 0,
+      "record_sha256": "18498cf0d3ed2141fd19ccfc698fcfff62613f9048f28cf4e72c92cc310dd774"
+    },
+    {
+      "optimized": true,
+      "seconds": 1.2246155469911173,
+      "exit_code": 0,
+      "record_sha256": "18498cf0d3ed2141fd19ccfc698fcfff62613f9048f28cf4e72c92cc310dd774"
+    }
+  ],
+  "core_record_file_sha256": "50adec6a09b485a0db617b6a3bf613c6829d4bf58a8a31003260736da7824f1f",
+  "primitive_record_file_sha256": "319d02b1eaf1b505966a8aefbbe08595d33b472800926eb4f7493b35d3794607",
+  "independent_cross_format_complete_caps_curvature_derivatives_match": true,
+  "cross_format_constant_integer_coefficients_normalized_to_rationals": true,
+  "no_author_engine_import": true,
+  "later_controls_added_after_author_inspection": true,
+  "latest_primitive_entries": {
+    "heavy_fibers": 6,
+    "heavy_literal_checks": 48,
+    "actual_polynomial_communications": 3,
+    "strict_Gaussian_witness": true,
+    "new_negative_trace_entry_budgets": true
+  },
+  "mathematical_damages_reject": 6,
+  "external_fixture_damages": 8,
+  "normal_optimized_external_rejections": 16,
+  "peak_observed_child_rss_kib": 22416,
+  "formalized": false,
+  "model_premise": "REVIEW9168",
+  "entry_corollary_premise": "REVIEW9339",
+  "labeled_competitor_premise": "LEMMA9113 (confirmed9174)"
+}
