@@ -1,0 +1,118 @@
+{
+  "agent": "six-code-3",
+  "canonical_certificate_sha256": "63b4344ff053de526f55fabefc949bed2fd40c4c503e35a65329095d418b966d",
+  "cold_modes_byte_equal_files": [
+    "producer.json",
+    "independent.json",
+    "RESULT.json"
+  ],
+  "controls": {
+    "checks": [
+      "physical_missing_quadruple",
+      "physical_repeated_quadruple",
+      "physical_repeated_pair",
+      "physical_out_of_domain",
+      "two_actual_point_bijections_on_all23_stars_and426_marks",
+      "retain_actual_e4_marks",
+      "retain_all_eight_actual_k5_failures",
+      "cut_damage_missing_record",
+      "cut_damage_wrong_population",
+      "cut_damage_false_capacity",
+      "cut_damage_false_equality",
+      "cut_damage_missing_outside_point",
+      "cut_damage_repeated_inside_point",
+      "cut_damage_root_with_deficient_hub",
+      "all256_small_literal_permitted_role_graphs_and_equality_cuts",
+      "higher_deficit_colour_retained_at_unit_capacity_equality"
+    ],
+    "checks_count": 16,
+    "graph_controls_are_not_packing_realizations": true,
+    "small_equality_graphs": 36,
+    "small_permitted_graphs": 256,
+    "status": "PASS",
+    "transported_physical_rows": 852
+  },
+  "full_RESULT_sha256": "e131837e15f8d7679e5602a8a1d8501d0b5fe5ca21344cbd666e029618cdfa6c",
+  "full_producer_independent_sha256": "f27aa1886023db2f4a49958f2e3202bb2709be65f74e805c353d62849d75653d",
+  "inventory_sha256": "09aa97b5ea163670122f4eef0ed6eec0d214899c9038b957bc692da7dba8f1af",
+  "physical_check": {
+    "branches": 15,
+    "capacity_certificates": 7,
+    "closed_partition_certificates": 11,
+    "examined_unit_graphs": 334912,
+    "four_hub_pair_total_lower_bound": 21,
+    "independent_mathematical_review": false,
+    "ordinary_bridges_formalized": false,
+    "prior_test_survivors": 18,
+    "raw_populations": 47,
+    "status": "PASS"
+  },
+  "primary69": {
+    "checked_at": "2026-10-02T13:29:10.825305+00:00",
+    "distance_distribution": {
+      "10": 445,
+      "6": 1264,
+      "8": 637
+    },
+    "minimum_distance": 6,
+    "owned_unique_triples": 690,
+    "raw_sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+    "source": "https://aeb.win.tue.nl/codes/cwc/d6/a18.6.5.69",
+    "status": "REVALIDATION_ONLY_NOT_NEW_RESEARCH",
+    "word_pairs": 2346,
+    "words": 69
+  },
+  "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+  "resource_limits": "One mathematical job, native threads1, unchanged1CPU2GiB; no guard hit or resource escalation",
+  "role": "researcher",
+  "runs": [
+    {
+      "command": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "round-two/six-code-3/four_hub_p21_endpoint_cut/reproduce.py",
+        "--work",
+        "round-two/six-code-3/scratch/pass15-cold-final-normal"
+      ],
+      "elapsed_seconds": 2.800094034988433,
+      "exit_code": 0,
+      "mode": "normal",
+      "peak_RUSAGE_CHILDREN_KiB": 19112
+    },
+    {
+      "command": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-O",
+        "round-two/six-code-3/four_hub_p21_endpoint_cut/reproduce.py",
+        "--work",
+        "round-two/six-code-3/scratch/pass15-cold-final-optimized"
+      ],
+      "elapsed_seconds": 3.3872962680179626,
+      "exit_code": 0,
+      "mode": "optimized",
+      "peak_RUSAGE_CHILDREN_KiB": 22436
+    }
+  ],
+  "source_files_unchanged_from_pre_cold_seal": {
+    "certificate.json": "8dae9030579c998ee5fba5ec2a51d3f35795564a406920f7da7b4369e61fe593",
+    "controls.py": "e56fbac8892d59c73638bf168c2fbe8c32e7959d29dd241da04c3460d37ac425",
+    "cuts.py": "a229e65d12a69452ac2c6768830854ee42df434672aca0f0971bb1e8c7d181dc",
+    "expected.json": "326f8f41a0cf8f9f47c7a93351dab1f96d44fbb90904d0312e0e8f9ebfd16bc9",
+    "fixtures.json": "c188200792c201bdb44ea1667a8a70255c4e40f04fee6c334c98ecfa650113e7",
+    "produce.py": "b439d2ad4f12f762d2fb215588b0332bd94396340b0909c856d3c5f8094d6f01",
+    "reproduce.py": "ea0b0f96f7a1bc39766aca53b32c9e082ea9642077d7861777e69120e0b808d9",
+    "verify.py": "407d836cd3100a4592be2c27b0487129c698b6dc3592bccb8cc6bf0fb849b507",
+    "verify_cuts.py": "42a294db6bb01fcabeb7b12bff7abb7e7439cde9de44414404e40549c7e88fe2"
+  },
+  "status": "COMPLETE_COLD_NORMAL_OPTIMIZED_PASS",
+  "summary": {
+    "agent": "six-code-3",
+    "certificate_sha256": "63b4344ff053de526f55fabefc949bed2fd40c4c503e35a65329095d418b966d",
+    "full_producer_independent_sha256": "f27aa1886023db2f4a49958f2e3202bb2709be65f74e805c353d62849d75653d",
+    "inventory_sha256": "09aa97b5ea163670122f4eef0ed6eec0d214899c9038b957bc692da7dba8f1af",
+    "physical_rows": 426,
+    "role": "researcher",
+    "statistic_types": 60,
+    "status": "AUTHOR_CHECKED_CONDITIONAL_EXACT_CERTIFICATE"
+  },
+  "trust": "Same-author distinct algorithms; ordinary bridges unformalized and independent mathematical review pending"
+}
