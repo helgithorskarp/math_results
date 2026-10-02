@@ -1,0 +1,87 @@
+{
+  "actual_agent": "six-tammes-1",
+  "cases_regenerated_not_sampled": true,
+  "date_UTC": "2026-10-02",
+  "dependencies": "Python standard library only",
+  "external_runtime_inputs": [],
+  "interpreter": "CPython 3.12.14",
+  "native_threads": 1,
+  "per_command_timeout_seconds": 55,
+  "platform": "Linux-6.1.0-53-cloud-amd64-x86_64-with-glibc2.36",
+  "python_build": [
+    "main",
+    "Sep  1 2026 14:16:52"
+  ],
+  "python_compiler": "Clang 22.1.3 ",
+  "role": "researcher",
+  "runs": [
+    {
+      "child_seconds": 6.256665,
+      "entry_point": "check.py",
+      "optimized": false,
+      "peak_RSS_KiB": 16720,
+      "returncode": 0,
+      "stdout_bytes": 4990,
+      "stdout_equals_complete_expected_file": true,
+      "stdout_sha256": "e8096b4aab523a7302ee68ccb3907edf55cb2bc2c1a7b67db7ef3945500e33f7",
+      "wall_seconds": 6.294471
+    },
+    {
+      "child_seconds": 6.145469,
+      "entry_point": "check.py",
+      "optimized": true,
+      "peak_RSS_KiB": 20200,
+      "returncode": 0,
+      "stdout_bytes": 4990,
+      "stdout_equals_complete_expected_file": true,
+      "stdout_sha256": "e8096b4aab523a7302ee68ccb3907edf55cb2bc2c1a7b67db7ef3945500e33f7",
+      "wall_seconds": 6.282203
+    },
+    {
+      "child_seconds": 4.06689,
+      "entry_point": "audit.py",
+      "optimized": false,
+      "peak_RSS_KiB": 17772,
+      "returncode": 0,
+      "stdout_bytes": 4990,
+      "stdout_equals_complete_expected_file": true,
+      "stdout_sha256": "e8096b4aab523a7302ee68ccb3907edf55cb2bc2c1a7b67db7ef3945500e33f7",
+      "wall_seconds": 4.10686
+    },
+    {
+      "child_seconds": 4.112025,
+      "entry_point": "audit.py",
+      "optimized": true,
+      "peak_RSS_KiB": 21648,
+      "returncode": 0,
+      "stdout_bytes": 4990,
+      "stdout_equals_complete_expected_file": true,
+      "stdout_sha256": "e8096b4aab523a7302ee68ccb3907edf55cb2bc2c1a7b67db7ef3945500e33f7",
+      "wall_seconds": 4.250432
+    },
+    {
+      "child_seconds": 0.035021,
+      "entry_point": "controls.py",
+      "optimized": false,
+      "peak_RSS_KiB": 15484,
+      "returncode": 0,
+      "stdout_bytes": 1991,
+      "stdout_equals_complete_expected_file": true,
+      "stdout_sha256": "e74258641e03c84fb3c94f08fc82b6d3ff849fb0b214c717ccaacb38e8cecfa8",
+      "wall_seconds": 0.077131
+    },
+    {
+      "child_seconds": 0.115937,
+      "entry_point": "controls.py",
+      "optimized": true,
+      "peak_RSS_KiB": 20256,
+      "returncode": 0,
+      "stdout_bytes": 1991,
+      "stdout_equals_complete_expected_file": true,
+      "stdout_sha256": "e74258641e03c84fb3c94f08fc82b6d3ff849fb0b214c717ccaacb38e8cecfa8",
+      "wall_seconds": 0.246349
+    }
+  ],
+  "same_author_audit_not_independent_researcher_review": true,
+  "scope": "unchanged 1CPU/2GiB; one CPU-intensive local child at a time"
+}
