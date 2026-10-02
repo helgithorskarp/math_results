@@ -1,0 +1,99 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "python_version": "3.11.2",
+  "arithmetic": "standard library integer-pair ordered Q(sqrt5) and Fraction",
+  "all_library_threads": 1,
+  "cpu_intensive_jobs_at_once": 1,
+  "guards_seconds": 45,
+  "all_runs_complete": true,
+  "all_normal_optimized_outputs_whole_byte_identical": true,
+  "source_pin_verification": "all12 native transitive files and own2 geometry/arithmetic files exact; original ownmain/immutable34 public raw byte comparisons pass",
+  "runs": [
+    {
+      "seconds": 3.184038005012553,
+      "guard_seconds": 45,
+      "returncode": 0,
+      "peak_rss_upper_kib": 21724,
+      "output_bytes": 52845,
+      "sha256": "ed6499de2afe3e5abe9fa504ef98f2d3ceaa52a944448748e32b4638602027fb",
+      "name": "independent-normal",
+      "command_role": "independent reconstruction"
+    },
+    {
+      "seconds": 5.625750164035708,
+      "guard_seconds": 45,
+      "returncode": 0,
+      "peak_rss_upper_kib": 22508,
+      "output_bytes": 52845,
+      "sha256": "ed6499de2afe3e5abe9fa504ef98f2d3ceaa52a944448748e32b4638602027fb",
+      "name": "independent-optimized",
+      "command_role": "independent reconstruction"
+    },
+    {
+      "seconds": 1.4973201499669813,
+      "guard_seconds": 45,
+      "returncode": 0,
+      "peak_rss_upper_kib": 18880,
+      "output_bytes": 813,
+      "sha256": "8ccf8f8f6ee14b810a6d21e45006e380b68a2c4e02d38fd34dc223ecf9b4d56d",
+      "name": "controls-normal",
+      "command_role": "adverse and positive physical controls"
+    },
+    {
+      "seconds": 1.4056347500300035,
+      "guard_seconds": 45,
+      "returncode": 0,
+      "peak_rss_upper_kib": 19496,
+      "output_bytes": 813,
+      "sha256": "8ccf8f8f6ee14b810a6d21e45006e380b68a2c4e02d38fd34dc223ecf9b4d56d",
+      "name": "controls-optimized",
+      "command_role": "adverse and positive physical controls"
+    },
+    {
+      "seconds": 0.20233653002651408,
+      "guard_seconds": 45,
+      "returncode": 0,
+      "peak_rss_upper_kib": 19940,
+      "output_bytes": 893,
+      "sha256": "8e2039b191271fad45d6c1bf0850e58eb490d6d06ab39a199aa0171eac9921d4",
+      "name": "compare-normal",
+      "command_role": "independent original data comparison"
+    },
+    {
+      "seconds": 0.614903427020181,
+      "guard_seconds": 45,
+      "returncode": 0,
+      "peak_rss_upper_kib": 20456,
+      "output_bytes": 893,
+      "sha256": "8e2039b191271fad45d6c1bf0850e58eb490d6d06ab39a199aa0171eac9921d4",
+      "name": "compare-optimized",
+      "command_role": "independent original data comparison"
+    },
+    {
+      "seconds": 18.005363957956433,
+      "guard_seconds": 45,
+      "returncode": 0,
+      "peak_rss_upper_kib": 22400,
+      "output_bytes": 14893,
+      "sha256": "bfddc098ec79f8ddd003d7dd59c3929f3bf31f755fecca6284ff2913c072c658",
+      "name": "native-normal",
+      "command_role": "separate native producer replay"
+    },
+    {
+      "seconds": 30.19859482202446,
+      "guard_seconds": 45,
+      "returncode": 0,
+      "peak_rss_upper_kib": 25680,
+      "output_bytes": 14893,
+      "sha256": "bfddc098ec79f8ddd003d7dd59c3929f3bf31f755fecca6284ff2913c072c658",
+      "name": "native-optimized",
+      "command_role": "separate native producer replay"
+    }
+  ],
+  "maximum_peak_rss_upper_kib": 25680,
+  "complete_independent_record_bytes": 52845,
+  "complete_original_record_bytes": 14893,
+  "no_resource_increase": true,
+  "formalization": false
+}
