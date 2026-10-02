@@ -1,0 +1,217 @@
+{
+  "agent": "six-vdw-3",
+  "role": "researcher",
+  "scope": "Four exact joint heads for failure of a new TWO-satellite rule; u6 remains free",
+  "holes": [
+    5,
+    53,
+    101
+  ],
+  "field_fixed_zero_points": [
+    2,
+    3,
+    4,
+    54,
+    55
+  ],
+  "variable_point_order": [
+    28,
+    29,
+    80,
+    81
+  ],
+  "actual_interval_APs": [
+    {
+      "start": 570,
+      "step": 180
+    },
+    {
+      "start": 414,
+      "step": 129
+    },
+    {
+      "start": 210,
+      "step": 180
+    },
+    {
+      "start": 54,
+      "step": 129
+    }
+  ],
+  "heads": [
+    {
+      "number": 1,
+      "additional_relative_bits": [
+        [
+          29,
+          0
+        ],
+        [
+          80,
+          1
+        ]
+      ],
+      "other_orientation_bits_free": 89
+    },
+    {
+      "number": 2,
+      "additional_relative_bits": [
+        [
+          29,
+          1
+        ],
+        [
+          80,
+          0
+        ]
+      ],
+      "other_orientation_bits_free": 89
+    },
+    {
+      "number": 3,
+      "additional_relative_bits": [
+        [
+          28,
+          1
+        ],
+        [
+          29,
+          0
+        ],
+        [
+          80,
+          0
+        ],
+        [
+          81,
+          1
+        ]
+      ],
+      "other_orientation_bits_free": 87
+    },
+    {
+      "number": 4,
+      "additional_relative_bits": [
+        [
+          28,
+          0
+        ],
+        [
+          29,
+          1
+        ],
+        [
+          80,
+          1
+        ],
+        [
+          81,
+          0
+        ]
+      ],
+      "other_orientation_bits_free": 87
+    }
+  ],
+  "parent_relative_bits": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      52,
+      1
+    ],
+    [
+      54,
+      0
+    ],
+    [
+      55,
+      0
+    ],
+    [
+      102,
+      1
+    ]
+  ],
+  "mathematical_dependencies": [
+    {
+      "height": 9457,
+      "reference": "bafkreie57fszbji6sez2l42kd53mx2dxs7bsvgnmzpai33lvqig4fmb5k4",
+      "source_commit": "00dd57d625b56fd84901cd0a14862b90034ad73f",
+      "premise": "Mono0..4 with holes5,53,101 forces102opposite and at least one opposite among52,54,55"
+    }
+  ],
+  "harmonic_transports": [
+    {
+      "field_multiplier": 88,
+      "field_shift": 75,
+      "CRT_multiplier": 397,
+      "CRT_shift": 384,
+      "holes": [
+        0,
+        1,
+        2
+      ],
+      "mono_five_seed": [
+        15,
+        30,
+        45,
+        60,
+        75
+      ],
+      "forced_opposite_endpoint": 90,
+      "opposite_required_at_one_of": [
+        74,
+        89
+      ]
+    },
+    {
+      "field_multiplier": 15,
+      "field_shift": 30,
+      "CRT_multiplier": 427,
+      "CRT_shift": 30,
+      "holes": [
+        0,
+        1,
+        2
+      ],
+      "mono_five_seed": [
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "forced_opposite_endpoint": 15,
+      "opposite_required_at_one_of": [
+        16,
+        31
+      ]
+    }
+  ],
+  "joint_profile_cover": {
+    "free_point": 6,
+    "original_masks": [
+      2,
+      3
+    ],
+    "free_orientations_before_heads": 91
+  }
+}
