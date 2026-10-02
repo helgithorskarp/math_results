@@ -1,0 +1,117 @@
+{
+  "actual_agent": "six-code-1",
+  "role": "researcher",
+  "finished_utc": "2026-10-02T11:44:40.655208+00:00",
+  "proof_status": "AUTHOR_CHECKED_UNFORMALIZED_INDEPENDENT_REVIEW_PENDING",
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "threads": 1,
+  "scope": "Unchanged1CPU2GiB; one serial mathematical job at a time",
+  "guards": "10s/cold subprocess;100000 states/10s category branch; no guard hit or escalation",
+  "cold_replays": [
+    {
+      "mode": "normal",
+      "command": [
+        "/usr/bin/python3",
+        "round-two/six-code-1/five_hub_pair_total35/verify.py",
+        "--output",
+        "round-two/six-code-1/scratch/five-hub35-cold-normal-pass12.json"
+      ],
+      "seconds": 0.23492840491235256,
+      "exit_code": 0,
+      "mathematical_sha256": "8e8eb3086384f79e5859eb89b1c27aa04173c696dad1aaaa8cdf35e419f2a4f0",
+      "mathematical_bytes": 10369
+    },
+    {
+      "mode": "optimized",
+      "command": [
+        "/usr/bin/python3",
+        "-O",
+        "round-two/six-code-1/five_hub_pair_total35/verify.py",
+        "--output",
+        "round-two/six-code-1/scratch/five-hub35-cold-optimized-pass12.json"
+      ],
+      "seconds": 0.37448794301599264,
+      "exit_code": 0,
+      "mathematical_sha256": "8e8eb3086384f79e5859eb89b1c27aa04173c696dad1aaaa8cdf35e419f2a4f0",
+      "mathematical_bytes": 10369
+    }
+  ],
+  "whole_normal_optimized_bytes_equal": true,
+  "mathematical_source_sha256": {
+    "verify.py": "c2469d64684d426677225233d7d2928b92db1ad9ecaabe3dc82f3296f861a794",
+    "fixtures.json": "c188200792c201bdb44ea1667a8a70255c4e40f04fee6c334c98ecfa650113e7",
+    "BASELINE69.txt": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+    "EXPECTED.json": "05e6c80045f911d8cdb0d8e8716314e65775a97e83cffd48fe528f7925888583"
+  },
+  "peak_child_rss_kib": 21800,
+  "coverage": {
+    "actual_marked_rows": 426,
+    "retained_five_hub_exception_rows": 8,
+    "full_corrected_rows_sha256": "4832875a52850041bc33b5fc8d99ab96de0a35019b0b2dad68830701cb0d5034",
+    "full_original_rows_sha256": "19205841cee4584466bac048f114d0d5f0db096b6861e45f34c94b9180087b16",
+    "necessary_boundary_branches": 2,
+    "necessary_boundary_patterns": [
+      [],
+      [
+        [
+          6,
+          1,
+          6,
+          0
+        ]
+      ]
+    ],
+    "all_six_vertex_nine_edge_sets": 5005,
+    "cubic_six_vertex_graphs": 70,
+    "triangle_free_cubic_six_vertex_graphs": 10,
+    "girth_five_cubic_six_vertex_graphs": 0,
+    "abstract_petersen_positive_control": true,
+    "primary69_word_pairs": 2346,
+    "damages_rejected": 22,
+    "physical_marked_row_transports": 1278
+  },
+  "imported9313_replay": {
+    "source_commit": "ee796b00005fcce88249859be1607bbadf043093",
+    "raw_pin_main_checks": 26,
+    "reader_url_checks": 3,
+    "runs": [
+      {
+        "mode": "normal",
+        "executed_by": "six-code-1, researcher",
+        "source_author": "six-code-3, researcher",
+        "seconds": 0.6160858499933966,
+        "peak_child_rss_kib": 18524,
+        "completed_stages": 4,
+        "whole_result_sha256": "7f69fa1c8bad33bee7c5ff5570ef19aab9c0450cebf747170fa1c2a202b9bf1e",
+        "guards": "10s/subprocess;100000 category states;10s/category branch"
+      },
+      {
+        "mode": "optimized",
+        "executed_by": "six-code-1, researcher",
+        "source_author": "six-code-3, researcher",
+        "seconds": 1.3591117690084502,
+        "peak_child_rss_kib": 21632,
+        "completed_stages": 4,
+        "whole_result_sha256": "7f69fa1c8bad33bee7c5ff5570ef19aab9c0450cebf747170fa1c2a202b9bf1e",
+        "guards": "10s/subprocess;100000 category states;10s/category branch"
+      }
+    ],
+    "full_original426_row_objects_entrywise_compared": true,
+    "independent_review_claimed": false
+  },
+  "ordinary_trust_bridges": [
+    "Generic complete23-star coverage imported8933, conditional8323",
+    "Local9249 imported and independently confirmed9293; finite carrier not rerun by this checker",
+    "Shortening and physical marked-row coverage",
+    "Both-orientation incidence demand/capacity",
+    "Weighted deficit and homogeneous triple identities",
+    "Five-hub extension using independently reviewed unrestricted upper71",
+    "Closure, actual uncovered neighbor wedges, triangle/four-cycle exclusion and nonempty neighbor layers"
+  ],
+  "primary_literature_refreshed": "2026-10-02",
+  "historical_priority_claimed": false,
+  "global_campaign_interval": [
+    69,
+    71
+  ]
+}
