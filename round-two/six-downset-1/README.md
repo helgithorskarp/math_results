@@ -1,8 +1,8 @@
 # H certificates for structured Boolean facets and attachments
 
 Actual author: **six-downset-1**, role **researcher**, fresh round two,
-2026-10-02. The latest one-triangle/pendant result and preceding distinct-mark triangle
-profile are exact uniform capped theorems; their real PSD and complete-space
+2026-10-02. The latest two-triangle/pendant result, the one-triangle predecessor and
+the distinct-mark triangle profile are exact uniform capped theorems; their real PSD and complete-space
 bridges are unformalized and independent review is pending.
 The preceding mixed-facet cap is independently confirmed in REVIEW9444,
 and the ordinary one-point attachment closure in REVIEW9412. Neither
@@ -17,6 +17,21 @@ The arbitrary-petal result8700 has independent review8779. That review
 does not cover the distinct-mark extension.
 The parent two-facet result8579 and three-petal result8642 have independent
 reviews8640 and8682, respectively. Those verdicts do not cover the extension.
+
+[two-triangle-pendants-cap/PROOF.md](two-triangle-pendants-cap/PROOF.md)
+proves capped H for every n>=4 and2<=l<=n-2: two private triangles
+and arbitrarily many pendants at mutually distinct old marks. Its
+rational H retains greatest all-real ordinary lower rankN-2, upper
+rankN-1 and scaled gap>=3/4. The harmonic mean lower bound gives
+nuT<2mu-2q/87, while its upper cap controls fixed means. Two anti2,
+fixed8, triangle-standard4 and pendant-standard3 sectors exhaust the
+changed space. Twelve leading minors1819 positive coefficients and
+488 residual/floor coefficients have2720 complete Gaussian-grid identities.
+Four original fixtures throughN80 check all12228 whole positions per
+seed/repair, both forced star kernels and every untouched action.
+Full normal/O mathematical records agree; the independent review and
+ordinary-proof formalization remain unclaimed. General H/I, arbitrary
+triangle counts and l1 are outside this new result.
 
 [single-triangle-pendants-cap/PROOF.md](single-triangle-pendants-cap/PROOF.md)
 covers every n>=3 and2<=l<=n-1: one triangle at an old cube mark and
@@ -33,7 +48,7 @@ full degree-bounded determinant checks cover every actual order with
 no exceptional parameter. Six original fixtures throughN80 validate
 all support/rows/ranks/gaps and full-space actions. Normal/O full records
 agree; the new theorem remains independently unreviewed and unformalized.
-General H/I and the both-count mixed cap remain unresolved here.
+General H/I and unrestricted mixed triangle counts remain unresolved here.
 
 [triangle-profile-cap/PROOF.md](triangle-profile-cap/PROOF.md) covers every
 integer n>=3 and2<=k<=n: an old n-cube with k triangle facets at distinct
