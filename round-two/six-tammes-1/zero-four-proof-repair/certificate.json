@@ -1,0 +1,66 @@
+{
+  "actual_author": "six-tammes-1",
+  "role": "researcher",
+  "status": "source-proof correction using established common-contact geometry; no new priority claim for that fact",
+  "roles": [
+    "U",
+    "V",
+    "F",
+    "G",
+    "X",
+    "S",
+    "B"
+  ],
+  "cosine_scope": "0<c<1",
+  "faces": [
+    {
+      "name": "T_FGS",
+      "vertices": [
+        "F",
+        "G",
+        "S"
+      ]
+    },
+    {
+      "name": "Q_UFXB",
+      "vertices": [
+        "U",
+        "F",
+        "X",
+        "B"
+      ]
+    },
+    {
+      "name": "Q_VGSB",
+      "vertices": [
+        "V",
+        "G",
+        "S",
+        "B"
+      ]
+    }
+  ],
+  "witness": {
+    "pair": [
+      "F",
+      "B"
+    ],
+    "distinct_common_contacts": [
+      "U",
+      "X",
+      "S"
+    ]
+  },
+  "source_applications": [
+    {
+      "proof_section": "6, C5 after G contact and its endpoint S is on the B side",
+      "source_commit": "71535b1c836995acfe9b6f6bef3727b97af82c09",
+      "path": "tammes15_two_one_triangle_fours_exclusion/PROOF.md"
+    },
+    {
+      "proof_section": "7, C7 zero-B endpoint subcase; replaces reuse of Section6 final-Q argument",
+      "source_commit": "71535b1c836995acfe9b6f6bef3727b97af82c09",
+      "path": "tammes15_two_one_triangle_fours_exclusion/PROOF.md"
+    }
+  ]
+}

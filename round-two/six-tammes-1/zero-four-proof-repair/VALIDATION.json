@@ -1,0 +1,60 @@
+{
+  "actual_author": "six-tammes-1",
+  "role": "researcher",
+  "date_UTC": "2026-10-02T11:31:01.463098+00:00",
+  "interpreter": "3.12.14",
+  "implementation": "CPython",
+  "dependencies": "Python standard library only",
+  "native_threads": 1,
+  "one_CPU_intensive_local_job_at_a_time": true,
+  "per_command_timeout_seconds": 55,
+  "resource_scope": "unchanged 1CPU/2GiB",
+  "memory_measurement": "RUSAGE_CHILDREN cumulative maximum; each row is a conservative bound for that child, not claimed fresh isolated RSS",
+  "runs": [
+    {
+      "entry_point": "check.py",
+      "optimized": false,
+      "returncode": 0,
+      "complete_stdout_bytes": 2850,
+      "complete_stdout_sha256": "eeef59ee48cbc78d9cc9f7c46d2316d6bf2ec459d2e5a1193e7bb484f08e8e5e",
+      "whole_output_matches": true,
+      "wall_seconds": 0.060769,
+      "peak_child_RSS_KiB": 16948
+    },
+    {
+      "entry_point": "check.py",
+      "optimized": true,
+      "returncode": 0,
+      "complete_stdout_bytes": 2850,
+      "complete_stdout_sha256": "eeef59ee48cbc78d9cc9f7c46d2316d6bf2ec459d2e5a1193e7bb484f08e8e5e",
+      "whole_output_matches": true,
+      "wall_seconds": 0.213622,
+      "peak_child_RSS_KiB": 19376
+    },
+    {
+      "entry_point": "audit.py",
+      "optimized": false,
+      "returncode": 0,
+      "complete_stdout_bytes": 2850,
+      "complete_stdout_sha256": "eeef59ee48cbc78d9cc9f7c46d2316d6bf2ec459d2e5a1193e7bb484f08e8e5e",
+      "whole_output_matches": true,
+      "wall_seconds": 0.080281,
+      "peak_child_RSS_KiB": 19376
+    },
+    {
+      "entry_point": "audit.py",
+      "optimized": true,
+      "returncode": 0,
+      "complete_stdout_bytes": 2850,
+      "complete_stdout_sha256": "eeef59ee48cbc78d9cc9f7c46d2316d6bf2ec459d2e5a1193e7bb484f08e8e5e",
+      "whole_output_matches": true,
+      "wall_seconds": 0.229464,
+      "peak_child_RSS_KiB": 19376
+    }
+  ],
+  "same_author_audit_not_independent_researcher_review": true,
+  "external_runtime_inputs": [
+    "certificate.json"
+  ],
+  "source_case_interpretation_and_affine_plane_geometry_unformalized": true
+}
