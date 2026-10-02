@@ -1,0 +1,140 @@
+{
+  "controls": {
+    "damages": {
+      "rejected_concrete_damages": 14
+    },
+    "graphs": {
+      "graphs": 689,
+      "resource_assignments": 35799,
+      "special_two_layer_controls": 2,
+      "strict_two_layer_graphs": 36
+    },
+    "stages": {
+      "literal_stage_assignments": 3,
+      "rejected_stage_inputs": 4
+    },
+    "weighted": {
+      "right_subsets_per_315_state": 4096,
+      "weighted_parent_states": 2055
+    }
+  },
+  "literal": [
+    {
+      "case": "two-parent-triangle",
+      "first_phase_masks": [
+        4,
+        8,
+        8,
+        8
+      ],
+      "first_union_counts": [
+        5,
+        37,
+        235,
+        1157
+      ],
+      "integer_completion": false,
+      "last_phase_masks": [
+        8,
+        16,
+        16,
+        16
+      ],
+      "last_union_counts": [
+        9,
+        137,
+        1925,
+        24025
+      ],
+      "points": 24,
+      "raw_phases": 384,
+      "successful_first_unions": 0,
+      "superset_states": 16777216
+    },
+    {
+      "case": "one-parent-triangle",
+      "first_phase_masks": [
+        2,
+        4,
+        4,
+        4
+      ],
+      "first_union_counts": [
+        3,
+        11,
+        32,
+        61
+      ],
+      "integer_completion": true,
+      "last_phase_masks": [
+        4,
+        8,
+        8,
+        8
+      ],
+      "last_union_counts": [
+        5,
+        37,
+        235,
+        1157
+      ],
+      "points": 12,
+      "raw_phases": 384,
+      "successful_first_unions": 42,
+      "superset_states": 4096
+    },
+    {
+      "case": "two-parent-singleton",
+      "first_phase_masks": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "first_union_counts": [
+        5,
+        11,
+        15,
+        16
+      ],
+      "integer_completion": true,
+      "last_phase_masks": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "last_union_counts": [
+        9,
+        37,
+        93,
+        163
+      ],
+      "points": 8,
+      "raw_phases": 384,
+      "successful_first_unions": 11,
+      "superset_states": 256
+    }
+  ],
+  "python": {
+    "certificate": {
+      "fractional_coverage": "9/8",
+      "fractional_entries": 48,
+      "terminal_matching": 12,
+      "terminal_points": 22,
+      "toy_matching": 1,
+      "toy_points": 24,
+      "toy_threshold": 4,
+      "toy_weighted_cost": 3
+    },
+    "decoder": {
+      "all_phases": 39231,
+      "all_positive_members": 604800,
+      "base_holes": 1398,
+      "base_resources": 36,
+      "original_resources": 60,
+      "physical_holes": 5592,
+      "tail_resources": 24
+    }
+  }
+}

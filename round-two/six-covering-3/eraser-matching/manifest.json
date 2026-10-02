@@ -1,0 +1,407 @@
+{
+  "agent": "six-covering-3",
+  "arithmetic": "Python arbitrary-precision integers/Fraction; C++ unsigned32-bit masks with at most24 bits, unsigned byte table and size_t indexes below2^24.",
+  "claim_status": "Proved structural lemmas with independently coded same-author exact checks; no external review or global bound.",
+  "cold_source_replay": {
+    "agent": "six-covering-3",
+    "certificate_sha256": "b0c5663ad63bad45f99376596d3a1a4d5458de75455e41178a09e2ba2a905f09",
+    "children": [
+      {
+        "name": "producer",
+        "seconds": 0.037
+      },
+      {
+        "name": "producer-optimized",
+        "seconds": 0.096
+      },
+      {
+        "name": "literal-python-normal",
+        "seconds": 0.251
+      },
+      {
+        "name": "controls-normal",
+        "seconds": 6.558
+      },
+      {
+        "name": "literal-python-optimized",
+        "seconds": 0.409
+      },
+      {
+        "name": "controls-optimized",
+        "seconds": 6.947
+      },
+      {
+        "name": "compile-release",
+        "seconds": 1.508
+      },
+      {
+        "name": "literal-cpp-release",
+        "seconds": 0.158
+      },
+      {
+        "name": "compile-sanitizers",
+        "seconds": 3.662
+      },
+      {
+        "name": "literal-cpp-sanitizers",
+        "seconds": 1.174
+      }
+    ],
+    "complete": true,
+    "evidence": {
+      "controls": {
+        "damages": {
+          "rejected_concrete_damages": 14
+        },
+        "graphs": {
+          "graphs": 689,
+          "resource_assignments": 35799,
+          "special_two_layer_controls": 2,
+          "strict_two_layer_graphs": 36
+        },
+        "stages": {
+          "literal_stage_assignments": 3,
+          "rejected_stage_inputs": 4
+        },
+        "weighted": {
+          "right_subsets_per_315_state": 4096,
+          "weighted_parent_states": 2055
+        }
+      },
+      "literal": [
+        {
+          "case": "two-parent-triangle",
+          "first_phase_masks": [
+            4,
+            8,
+            8,
+            8
+          ],
+          "first_union_counts": [
+            5,
+            37,
+            235,
+            1157
+          ],
+          "integer_completion": false,
+          "last_phase_masks": [
+            8,
+            16,
+            16,
+            16
+          ],
+          "last_union_counts": [
+            9,
+            137,
+            1925,
+            24025
+          ],
+          "points": 24,
+          "raw_phases": 384,
+          "successful_first_unions": 0,
+          "superset_states": 16777216
+        },
+        {
+          "case": "one-parent-triangle",
+          "first_phase_masks": [
+            2,
+            4,
+            4,
+            4
+          ],
+          "first_union_counts": [
+            3,
+            11,
+            32,
+            61
+          ],
+          "integer_completion": true,
+          "last_phase_masks": [
+            4,
+            8,
+            8,
+            8
+          ],
+          "last_union_counts": [
+            5,
+            37,
+            235,
+            1157
+          ],
+          "points": 12,
+          "raw_phases": 384,
+          "successful_first_unions": 42,
+          "superset_states": 4096
+        },
+        {
+          "case": "two-parent-singleton",
+          "first_phase_masks": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "first_union_counts": [
+            5,
+            11,
+            15,
+            16
+          ],
+          "integer_completion": true,
+          "last_phase_masks": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "last_union_counts": [
+            9,
+            37,
+            93,
+            163
+          ],
+          "points": 8,
+          "raw_phases": 384,
+          "successful_first_unions": 11,
+          "superset_states": 256
+        }
+      ],
+      "python": {
+        "certificate": {
+          "fractional_coverage": "9/8",
+          "fractional_entries": 48,
+          "terminal_matching": 12,
+          "terminal_points": 22,
+          "toy_matching": 1,
+          "toy_points": 24,
+          "toy_threshold": 4,
+          "toy_weighted_cost": 3
+        },
+        "decoder": {
+          "all_phases": 39231,
+          "all_positive_members": 604800,
+          "base_holes": 1398,
+          "base_resources": 36,
+          "original_resources": 60,
+          "physical_holes": 5592,
+          "tail_resources": 24
+        }
+      }
+    },
+    "maximum_child_rss_kib": 189248,
+    "python": "3.11.2",
+    "role": "researcher",
+    "seconds": 20.802
+  },
+  "compiler": "g++ (Debian12.2.0-14+deb12u1)12.2.0",
+  "compiler_guard_seconds": 30,
+  "compute_guards_seconds": 20,
+  "large_artifacts": "None needed or published; bit tables, compiled binaries and damaged fixtures remain temporary/scratch.",
+  "mathematical_table_bytes": 16777216,
+  "preclaim_refresh": {
+    "all_delta_relations_inspected": 142,
+    "all_delta_transaction_signatures_valid": true,
+    "all_delta_transactions": 17,
+    "committed_graph_height": 9140,
+    "concept_search_titles": 67,
+    "dependency_source_checks": "Four exact pinned/main proof byte matches and four reader HTTP200 checks before publication.",
+    "primary_literature_reopened": "2026-10-01",
+    "related_contributions_fully_read": 3
+  },
+  "python": "CPython3.11.2",
+  "resource_limits": "Existing1CPU/2GiB scope; one intensive child at a time, numerical threads1; no escalation.",
+  "role": "researcher",
+  "scope": "New period10080 necessary cuts after all36 base phases; no exhaustion of their assignments, no root exclusion or new L_min(8) bound.",
+  "standard": "C++20",
+  "verification": {
+    "agent": "six-covering-3",
+    "certificate_sha256": "b0c5663ad63bad45f99376596d3a1a4d5458de75455e41178a09e2ba2a905f09",
+    "children": [
+      {
+        "name": "producer",
+        "seconds": 0.033
+      },
+      {
+        "name": "producer-optimized",
+        "seconds": 0.204
+      },
+      {
+        "name": "literal-python-normal",
+        "seconds": 0.583
+      },
+      {
+        "name": "controls-normal",
+        "seconds": 7.214
+      },
+      {
+        "name": "literal-python-optimized",
+        "seconds": 0.412
+      },
+      {
+        "name": "controls-optimized",
+        "seconds": 7.053
+      },
+      {
+        "name": "compile-release",
+        "seconds": 1.519
+      },
+      {
+        "name": "literal-cpp-release",
+        "seconds": 0.157
+      },
+      {
+        "name": "compile-sanitizers",
+        "seconds": 3.819
+      },
+      {
+        "name": "literal-cpp-sanitizers",
+        "seconds": 1.21
+      }
+    ],
+    "complete": true,
+    "evidence": {
+      "controls": {
+        "damages": {
+          "rejected_concrete_damages": 14
+        },
+        "graphs": {
+          "graphs": 689,
+          "resource_assignments": 35799,
+          "special_two_layer_controls": 2,
+          "strict_two_layer_graphs": 36
+        },
+        "stages": {
+          "literal_stage_assignments": 3,
+          "rejected_stage_inputs": 4
+        },
+        "weighted": {
+          "right_subsets_per_315_state": 4096,
+          "weighted_parent_states": 2055
+        }
+      },
+      "literal": [
+        {
+          "case": "two-parent-triangle",
+          "first_phase_masks": [
+            4,
+            8,
+            8,
+            8
+          ],
+          "first_union_counts": [
+            5,
+            37,
+            235,
+            1157
+          ],
+          "integer_completion": false,
+          "last_phase_masks": [
+            8,
+            16,
+            16,
+            16
+          ],
+          "last_union_counts": [
+            9,
+            137,
+            1925,
+            24025
+          ],
+          "points": 24,
+          "raw_phases": 384,
+          "successful_first_unions": 0,
+          "superset_states": 16777216
+        },
+        {
+          "case": "one-parent-triangle",
+          "first_phase_masks": [
+            2,
+            4,
+            4,
+            4
+          ],
+          "first_union_counts": [
+            3,
+            11,
+            32,
+            61
+          ],
+          "integer_completion": true,
+          "last_phase_masks": [
+            4,
+            8,
+            8,
+            8
+          ],
+          "last_union_counts": [
+            5,
+            37,
+            235,
+            1157
+          ],
+          "points": 12,
+          "raw_phases": 384,
+          "successful_first_unions": 42,
+          "superset_states": 4096
+        },
+        {
+          "case": "two-parent-singleton",
+          "first_phase_masks": [
+            4,
+            4,
+            4,
+            4
+          ],
+          "first_union_counts": [
+            5,
+            11,
+            15,
+            16
+          ],
+          "integer_completion": true,
+          "last_phase_masks": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "last_union_counts": [
+            9,
+            37,
+            93,
+            163
+          ],
+          "points": 8,
+          "raw_phases": 384,
+          "successful_first_unions": 11,
+          "superset_states": 256
+        }
+      ],
+      "python": {
+        "certificate": {
+          "fractional_coverage": "9/8",
+          "fractional_entries": 48,
+          "terminal_matching": 12,
+          "terminal_points": 22,
+          "toy_matching": 1,
+          "toy_points": 24,
+          "toy_threshold": 4,
+          "toy_weighted_cost": 3
+        },
+        "decoder": {
+          "all_phases": 39231,
+          "all_positive_members": 604800,
+          "base_holes": 1398,
+          "base_resources": 36,
+          "original_resources": 60,
+          "physical_holes": 5592,
+          "tail_resources": 24
+        }
+      }
+    },
+    "maximum_child_rss_kib": 187412,
+    "python": "3.11.2",
+    "role": "researcher",
+    "seconds": 22.207
+  }
+}
