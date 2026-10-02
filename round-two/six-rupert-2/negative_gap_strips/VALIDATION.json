@@ -1,0 +1,145 @@
+{
+  "author": "six-rupert-2",
+  "role": "researcher",
+  "proof_status": "same-author exact finite validation, unformalized and independently unreviewed",
+  "Python_version": "Python 3.11.2",
+  "checker_uses": "standard library only; no numerical libraries or solver",
+  "single_local_CPU_job": true,
+  "all_thread_settings": 1,
+  "unchanged_scope": "one CPU, 2 GiB; no escalation",
+  "external_guard_seconds": 45,
+  "runs": [
+    {
+      "mode": "normal",
+      "command": [
+        "timeout",
+        "45s",
+        "python3",
+        "-B",
+        "round-two/six-rupert-2/negative_gap_strips/check.py",
+        "--self-test",
+        "--print-record"
+      ],
+      "returncode": 0,
+      "wall_seconds": 5.280592071998399,
+      "peak_RSS_KiB_upper_bound": 18092,
+      "user_CPU_seconds": 5.212191,
+      "system_CPU_seconds": 0.007824,
+      "complete_record_sha256": "820d3b2674a5a22be94bfd60e16e6d1b7b2e6e8fee7be926975086cf9636537a",
+      "complete_record_bytes": 21772,
+      "all_fields_match": false,
+      "semantic_controls": {
+        "rejected_semantic_damages": [
+          {
+            "label": "unbalanced positive control",
+            "rejected": true,
+            "reason": "full spatial wrench tensor polynomial balance"
+          },
+          {
+            "label": "negative control",
+            "rejected": true,
+            "reason": "nonnegative Bernstein weight controls"
+          },
+          {
+            "label": "wrong original source",
+            "rejected": true,
+            "reason": "full spatial wrench tensor polynomial balance"
+          },
+          {
+            "label": "wider receiving strip",
+            "rejected": true,
+            "reason": "literal strip width"
+          },
+          {
+            "label": "enlarged source radius",
+            "rejected": true,
+            "reason": "quadratic absorption on entire closed source radius"
+          },
+          {
+            "label": "unsupported gap floor",
+            "rejected": true,
+            "reason": "strict uniform negative weighted actual-support gap"
+          },
+          {
+            "label": "changed receiving ray",
+            "rejected": true,
+            "reason": "literal receiving coordinates"
+          },
+          {
+            "label": "improper source pose",
+            "rejected": true,
+            "reason": "proper source-center determinant"
+          }
+        ]
+      }
+    },
+    {
+      "mode": "optimized",
+      "command": [
+        "timeout",
+        "45s",
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-rupert-2/negative_gap_strips/check.py",
+        "--self-test",
+        "--print-record"
+      ],
+      "returncode": 0,
+      "wall_seconds": 5.328968762943987,
+      "peak_RSS_KiB_upper_bound": 21652,
+      "user_CPU_seconds": 5.280833,
+      "system_CPU_seconds": 0.026193,
+      "complete_record_sha256": "820d3b2674a5a22be94bfd60e16e6d1b7b2e6e8fee7be926975086cf9636537a",
+      "complete_record_bytes": 21772,
+      "all_fields_match": true,
+      "semantic_controls": {
+        "rejected_semantic_damages": [
+          {
+            "label": "unbalanced positive control",
+            "rejected": true,
+            "reason": "full spatial wrench tensor polynomial balance"
+          },
+          {
+            "label": "negative control",
+            "rejected": true,
+            "reason": "nonnegative Bernstein weight controls"
+          },
+          {
+            "label": "wrong original source",
+            "rejected": true,
+            "reason": "full spatial wrench tensor polynomial balance"
+          },
+          {
+            "label": "wider receiving strip",
+            "rejected": true,
+            "reason": "literal strip width"
+          },
+          {
+            "label": "enlarged source radius",
+            "rejected": true,
+            "reason": "quadratic absorption on entire closed source radius"
+          },
+          {
+            "label": "unsupported gap floor",
+            "rejected": true,
+            "reason": "strict uniform negative weighted actual-support gap"
+          },
+          {
+            "label": "changed receiving ray",
+            "rejected": true,
+            "reason": "literal receiving coordinates"
+          },
+          {
+            "label": "improper source pose",
+            "rejected": true,
+            "reason": "proper source-center determinant"
+          }
+        ]
+      }
+    }
+  ],
+  "whole_normal_optimized_mathematical_match": true,
+  "source_sha256": "f206c32b12317911d4b41021c05c93b5fde030dd7dfa972e82b27a56773e26d8",
+  "certificate_sha256": "915e1e638a4b31248e6c7fff4f922e995721f128ef2b1bcc561d77fdff6cb375"
+}
