@@ -1,0 +1,111 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "status": "EXACT_H7_PHASE10_ADJACENT_THIRD_INDEX_AT_MOST5",
+  "selected_phase_count": 10,
+  "third_index_upper_bound": 5,
+  "both_phase_values_covered": true,
+  "normalized_fourth_heads": 16,
+  "endpoint_weights_excluded": false,
+  "phase_band_strengthened": false,
+  "global_W_bound": false,
+  "interval3704_witness": false,
+  "external_independent_review_claimed": false,
+  "formalized": false,
+  "counts": {
+    "literal_APs": 375760,
+    "removed_zero_APs": 4312,
+    "signed_supports": 26488,
+    "tiny_threshold_cells": 172540,
+    "tiny_exact_counts": 4092,
+    "tiny_sixteen_fourth_case_cover_inputs": 1170,
+    "signed_rotation_controls": 61888,
+    "strengthened_clause_truth_rows": 11264,
+    "counter_truth_rows_per_mode": 46208,
+    "substituted_density_truth_rows_per_mode": 108568
+  },
+  "strict_counts_per_mode": {
+    "additions": 197051,
+    "deletions": 1037464,
+    "hints": 3222678
+  },
+  "maximum_native_conflicts": 33300,
+  "all_public_CNF_and_candidate_proof_hashes_reproduced": true,
+  "public_source_seconds": 65.21743632305879,
+  "public_peak_child_kib": 71900,
+  "private_pilot_seconds": 83.7063182858983,
+  "private_peak_child_kib": 71652,
+  "private_definition_audits_seconds": [
+    12.248974275076762,
+    13.219207364018075
+  ],
+  "public_definition_audits_seconds": [
+    13.233244459028356,
+    11.9325719489716
+  ],
+  "corruption_controls": {
+    "rejected": 30,
+    "positive": 2,
+    "tests": [
+      "normal-missing-density-k6-fourth-7-b-1",
+      "normal-missing-density-k6-fourth-14-b-1",
+      "normal-wrong-unit-density-k6-fourth-14-b-0",
+      "normal-removed-semantic-input",
+      "normal-wrong-selected-count",
+      "normal-false-no-adjacency-premise",
+      "normal-forced-next-background",
+      "normal-imported-spacing",
+      "normal-imported-conditional-successor",
+      "normal-removed-density",
+      "normal-reversed-density-sign",
+      "normal-false-density-source",
+      "normal-changed-helper-before-import",
+      "normal-empty-without-hints",
+      "normal-missing-live-hint",
+      "optimized-missing-density-k6-fourth-7-b-1",
+      "optimized-missing-density-k6-fourth-14-b-1",
+      "optimized-wrong-unit-density-k6-fourth-14-b-0",
+      "optimized-removed-semantic-input",
+      "optimized-wrong-selected-count",
+      "optimized-false-no-adjacency-premise",
+      "optimized-forced-next-background",
+      "optimized-imported-spacing",
+      "optimized-imported-conditional-successor",
+      "optimized-removed-density",
+      "optimized-reversed-density-sign",
+      "optimized-false-density-source",
+      "optimized-changed-helper-before-import",
+      "optimized-empty-without-hints",
+      "optimized-missing-live-hint"
+    ],
+    "seconds": 42.66972029604949,
+    "maxrss_child_kib": 58964
+  },
+  "runtime": {
+    "Python": "3.11.2",
+    "python_sat": "1.8.dev24",
+    "six": "1.17.0",
+    "solver": "CaDiCaL195",
+    "all_solver_BLAS_OpenMP_threads": 1,
+    "CPU_intensive_jobs_at_once": 1,
+    "scope_CPU": 1,
+    "scope_memory_GiB": 2,
+    "native_requested_conflicts": 50000,
+    "native_stage_seconds": 30,
+    "converter_internal_seconds": 25,
+    "converter_external_seconds": 30,
+    "strict_seconds_per_mode": 30,
+    "definition_stage_seconds": 55
+  },
+  "private_generated_bytes_not_published": {
+    "cnf": 20343642,
+    "drat": 23037212,
+    "lrat": 32699092
+  },
+  "mathematical_premise_is_parent_bound_six": true,
+  "stronger_bound_five_not_assumed_in_models": true,
+  "old_native_UNKNOWN_models_not_retried": [
+    "ffef8a3b8e849b52e89f55ec2f342abd7ccd28519fc3b710df62636e9a5cc14c",
+    "5965c9ebf67c0446223d8736e0a023a7b21cd86146c3c377c02d8ad41a3f373b"
+  ]
+}
