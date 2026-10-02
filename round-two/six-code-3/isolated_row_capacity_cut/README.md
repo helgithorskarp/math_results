@@ -6,8 +6,11 @@ generic23-star coverage8933/universal8323 and local three-point9249
 give the exact cut2E+Q>=W+2X for at most four unsaturated points.
 Complete boundary categories and ordinary odd handshake sharpen it
 toP>=10 for both three-hub profiles andP>=20 for four hubs.
-No SS-unit hypothesis or whole-code symmetry. New independent review
-and historical priority remain pending; unrestricted69--71 is unchanged.
+No SS-unit hypothesis or whole-code symmetry. Independent
+[9293](../../six-reviewer-4/three-point-star-audit/REVIEW.md) confirms the
+imported local9249 theorem. The new cut and boundary refinements remain
+independently unreviewed; unrestricted69--71 is unchanged and no
+historical priority is claimed.
 
 Python3.11+ standard library only; author runs use CPython3.11.2.
 From the repository root choose fresh, separate work directories:
@@ -35,8 +38,9 @@ information is separate in METADATA. [VALIDATION.json](VALIDATION.json)
 records the author's complete runs.
 
 This runner checks the new row and category certificates; it does not
-replay the earlier local9249 finite carrier or its inherited9209 branch.
-Their precise mathematical dependency is in
+replay the earlier local9249 finite carrier or the independent combined
+carrier9293. The latter confirms the local theorem directly from
+8933/8323 without older numerical branch premises. The precise scope is in
 [DEPENDENCIES.json](DEPENDENCIES.json). Same-author independent
 algorithms are not an independent mathematical review. Ordinary
 projection/incidence and parity bridges remain unformalized.

@@ -12,8 +12,11 @@ leave theorem [8323](../../../constant_weight_upper71_review1/REVIEW.md),
 generic23-star coverage [8933](../../six-reviewer-5/twenty-star-classification-audit/REVIEW.md)
 conditional on8323, and the exact three-point local bound
 [9249](../unit_second_u_four_interfaces/PROOF.md). These are explicit
-mathematical dependencies; reviewed generic inputs do not independently
-review the new local9249 or this transfer.
+mathematical dependencies. Independent
+[9293](../../six-reviewer-4/three-point-star-audit/REVIEW.md) confirms
+the imported three-point theorem with a complete combined proof from
+8933/8323, replacing the earlier numerical9209/9176/9141 branches.
+That review does not audit this new capacity cut or its boundary transfer.
 
 Let S={p:r_p=20}, H its complement, m=|H| and n=18-m.
 Total point replication355 implies sum(20-r_p)=5 and1<=m<=5.
@@ -88,8 +91,9 @@ actual marked20-stars, not counterexamples realizing a global71 code.
 The imported9249 says any distinct x,y,U with r_x=r_y20,xy4,
 unit second row y and an isolated deficient U at x force upper67.
 It has no named fourth mark and no lambda_yU5 requirement.
-Its generic inputs and inherited9209 yu5 branch retain exact scope;
-this runner does not redo those earlier finite carriers.
+Its generic inputs retain exact scope. Independent9293 supplies the
+complete combined local proof without older numerical branch premises;
+this runner does not replay either author's earlier finite carriers.
 
 Take a unit eligible x and a deficient saturated neighbor y. Its
 pair deficit is1. If y is unit,9249 at(x,y,U_x) contradicts71.
@@ -245,8 +249,10 @@ Guards10s/subprocess,100000 category states and10s/category branch;
 no guard hit or resource change. Incomplete computation proves no absence.
 The finite checks establish complete row and necessary-category inventories;
 ordinary shortening/projection/incidence/identity/parity arguments bridge
-them to the theorem and remain unformalized. Earlier9249/9209 finite
-proof chains are explicit dependencies, not replayed here.
+them to the theorem and remain unformalized. The imported local theorem
+9249 is independently confirmed by9293; the new row coefficient and
+boundary parity remain independently unreviewed. Neither the original
+nor the independent local finite carrier is replayed here.
 
 The incidence-cut direction was independently raised in six-code-1's
 private draft at chat1555 (2026-10-02): a weaker3E+2Q cut and P8/P18
