@@ -1,0 +1,115 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "normal": {
+    "actual_agent": "six-reviewer-4",
+    "author_replay_requested": true,
+    "complete": true,
+    "fixed_child_seconds": 60,
+    "native_threads": 1,
+    "optimized": false,
+    "python": "3.12.14",
+    "role": "independent mathematical reviewer",
+    "runs": {
+      "author_compare": {
+        "bytes": 695,
+        "peak_child_rss_KiB": 49520,
+        "seconds": 2.444059,
+        "sha256": "4b1583cab2c3a1de0826208a287a32fea9cc195bd696753dbd04e27ad34d9484"
+      },
+      "author_replay": {
+        "bytes": 629,
+        "peak_child_rss_KiB": 49520,
+        "seconds": 4.167435,
+        "sha256": "3d2d17036917084c85df0173796665b9a3dd2f04134e71aa77bb1a8fd7f38b71"
+      },
+      "certificates": {
+        "bytes": 593,
+        "peak_child_rss_KiB": 29068,
+        "seconds": 0.075597,
+        "sha256": "3fa7aa7153cc4c6548ca0bf796e17d6f45ca49e2ea81d3675ad30f4c4aa633b7"
+      },
+      "classify": {
+        "bytes": 1106,
+        "peak_child_rss_KiB": 29068,
+        "seconds": 0.389413,
+        "sha256": "217a5806d43110312cc739f7b9b7557007ac3d593c8d9114b333a2bae0d074ec"
+      },
+      "reproduce": {
+        "bytes": 677,
+        "peak_child_rss_KiB": 29068,
+        "seconds": 8.121304,
+        "sha256": "bb0b4a145d8a22ebf06cc97dbe8785d6173a311424fb8272f1d2cb866325465b"
+      }
+    },
+    "serial_math_jobs": 1,
+    "whole_complete_bytes": 3570,
+    "whole_complete_sha256": "328f2d583ab20b1be3e6ec4c9235457eed22140e4117c6abca1baf82dc72cfe3"
+  },
+  "optimized": {
+    "actual_agent": "six-reviewer-4",
+    "author_replay_requested": true,
+    "complete": true,
+    "fixed_child_seconds": 60,
+    "native_threads": 1,
+    "optimized": true,
+    "python": "3.12.14",
+    "role": "independent mathematical reviewer",
+    "runs": {
+      "author_compare": {
+        "bytes": 695,
+        "peak_child_rss_KiB": 49372,
+        "seconds": 5.39295,
+        "sha256": "4b1583cab2c3a1de0826208a287a32fea9cc195bd696753dbd04e27ad34d9484"
+      },
+      "author_replay": {
+        "bytes": 628,
+        "peak_child_rss_KiB": 49372,
+        "seconds": 10.690851,
+        "sha256": "18d972b75d8b3f80239f12ab38745f09ae05bdf3dc9614130c578bce1cba30e4"
+      },
+      "certificates": {
+        "bytes": 593,
+        "peak_child_rss_KiB": 31184,
+        "seconds": 0.573551,
+        "sha256": "3fa7aa7153cc4c6548ca0bf796e17d6f45ca49e2ea81d3675ad30f4c4aa633b7"
+      },
+      "classify": {
+        "bytes": 1106,
+        "peak_child_rss_KiB": 31184,
+        "seconds": 1.239387,
+        "sha256": "217a5806d43110312cc739f7b9b7557007ac3d593c8d9114b333a2bae0d074ec"
+      },
+      "reproduce": {
+        "bytes": 676,
+        "peak_child_rss_KiB": 31184,
+        "seconds": 17.315156,
+        "sha256": "7cfd6c07470f7a99e00eb0d2340d8b62c381914b092376446006facb881e875a"
+      }
+    },
+    "serial_math_jobs": 1,
+    "whole_complete_bytes": 3570,
+    "whole_complete_sha256": "328f2d583ab20b1be3e6ec4c9235457eed22140e4117c6abca1baf82dc72cfe3"
+  },
+  "whole_mathematical_and_compact_certificates_match": true,
+  "all_eight_full_records_match": true,
+  "source_kernels_unchanged_since_seals": true,
+  "fixed_guards_not_reached_or_enlarged": true,
+  "formalized": false,
+  "operational_deviation": "Final optimized serial proof replay and read-only cryptographic graph refresh briefly overlapped because a yielded shell session was not awaited before the graph read. Both completed. No extra mathematical job, solver thread, worker or changed resource setting was started. Subsequent heavy operations are awaited sequentially.",
+  "standalone_original_replay_seconds": [
+    4.255933970096521,
+    5.058561273966916
+  ],
+  "standalone_original_max_child_RSS_KiB": [
+    49432,
+    49356
+  ],
+  "primary_fixture": {
+    "url": "https://aeb.win.tue.nl/codes/cwc/d6/a18.6.5.69",
+    "status": 200,
+    "bytes": 1311,
+    "sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+    "full_author_fixture_matches_primary": true
+  }
+}
