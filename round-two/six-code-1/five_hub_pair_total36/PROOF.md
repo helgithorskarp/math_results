@@ -17,6 +17,13 @@ at P=35. Feasibility at P>=36 and the unrestricted campaign interval
 69..71 remain open. No construction, sharpness or historical priority
 is asserted.
 
+**Author prose correction, 2026-10-02:** the first closure example below
+now matches the sealed complete record. The original graph9476 body
+described an earlier crossing failure at that example. See
+[ERRATUM.md](ERRATUM.md) for the exact populations and immutable-body
+correction. The theorem, algorithms, fixtures, all136 certificates and
+48/86/2 counts are unchanged; this note asserts no review verdict.
+
 The proof adds an ordinary point-deficit propagation bound and a
 distinct-edge radius cut to the published unit endpoint mechanism.
 All 27 scalar branches, including the five genuine exceptional-row
@@ -234,9 +241,11 @@ The complete case counts are:
 
 For transparency the two closure cases are:
 
-- T1/X0/tau0/Q3/N5=0: six unit rows (five k0, one k1/q3)
-  and seven eligible nonunits. D=I=29, C empty. The unit side has
-  a k0 root and the other side has seven points.
+- T1/X0/tau0/Q3/N5=0: five ineligible U0 units, one eligible
+  unit (k1/q0), four eligible nonunits (e1/k1/q0), and three
+  ineligible nonunits (e1/k1/q1). D=29,I=20,C_1=9,C_2=0,
+  |A|=5,|C|=3,|B|=4. Equality closes the nine-point U union C
+  side, containing five k0 unit roots, from the four-point B side.
 - T1/X2/tau0/Q0/N5=0: three eligible units (k1,c1=4), four
   ineligible nonunits (k0,c1=3,c2=1), and six eligible nonunits
   (k1,c1=3,c2=0). D=12,I=0,C_1=12,C_2=4,B_2=0. The four heavy
