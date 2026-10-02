@@ -1,0 +1,186 @@
+{
+  "schema": 1,
+  "agent": "six-sendov-1",
+  "role": "researcher",
+  "checked_at": "2026-10-02T14:16:48.883736+00:00",
+  "python": "Python 3.12.14",
+  "stdlib_only": true,
+  "native_threads": 1,
+  "jobs_serial": true,
+  "guard_seconds": 45,
+  "normal_and_optimized": [
+    {
+      "name": "correct",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 0.1018876190064475,
+      "result": {
+        "analytic_bridges_formalized": false,
+        "complete_identity_records": 20,
+        "mathematical_damage_rejections": 11,
+        "status": "PASS",
+        "strict_margins": 28,
+        "whole_record_sha256": "05732eacfe94a3e6583118d70cc8e315e936ec0890d067d518be9d4913500f7f"
+      }
+    },
+    {
+      "name": "correct",
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 0.30573889904189855,
+      "result": {
+        "analytic_bridges_formalized": false,
+        "complete_identity_records": 20,
+        "mathematical_damage_rejections": 11,
+        "status": "PASS",
+        "strict_margins": 28,
+        "whole_record_sha256": "05732eacfe94a3e6583118d70cc8e315e936ec0890d067d518be9d4913500f7f"
+      }
+    }
+  ],
+  "external_fixture_rejections": [
+    {
+      "name": "missing",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.0922894140239805,
+      "error": "FAIL: external fixture absent; full private error retained locally"
+    },
+    {
+      "name": "altered_whole_coefficient",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.096118682064116,
+      "error": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "omitted_identity",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.09254975500516593,
+      "error": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "altered_margin",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.09114297397900373,
+      "error": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "extra_field",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.09189543593674898,
+      "error": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "boolean_for_integer",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.09284508205018938,
+      "error": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "malformed",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.08961850695777684,
+      "error": "FAIL: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+    },
+    {
+      "name": "duplicate_key",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.08988188207149506,
+      "error": "FAIL: duplicate fixture key: schema"
+    },
+    {
+      "name": "float_number",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.09815709700342268,
+      "error": "FAIL: nonintegral or nonfinite fixture number: 1.0"
+    },
+    {
+      "name": "missing",
+      "optimized": true,
+      "returncode": 1,
+      "seconds": 0.27330504509154707,
+      "error": "FAIL: external fixture absent; full private error retained locally"
+    },
+    {
+      "name": "altered_whole_coefficient",
+      "optimized": true,
+      "returncode": 1,
+      "seconds": 0.2728526439750567,
+      "error": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "omitted_identity",
+      "optimized": true,
+      "returncode": 1,
+      "seconds": 0.2886701909592375,
+      "error": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "altered_margin",
+      "optimized": true,
+      "returncode": 1,
+      "seconds": 0.2745744960848242,
+      "error": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "extra_field",
+      "optimized": true,
+      "returncode": 1,
+      "seconds": 0.2669880510075018,
+      "error": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "boolean_for_integer",
+      "optimized": true,
+      "returncode": 1,
+      "seconds": 0.2669971380382776,
+      "error": "FAIL: entire typed fixture differs"
+    },
+    {
+      "name": "malformed",
+      "optimized": true,
+      "returncode": 1,
+      "seconds": 0.26985103893093765,
+      "error": "FAIL: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+    },
+    {
+      "name": "duplicate_key",
+      "optimized": true,
+      "returncode": 1,
+      "seconds": 0.27901731396559626,
+      "error": "FAIL: duplicate fixture key: schema"
+    },
+    {
+      "name": "float_number",
+      "optimized": true,
+      "returncode": 1,
+      "seconds": 0.26902699598576874,
+      "error": "FAIL: nonintegral or nonfinite fixture number: 1.0"
+    }
+  ],
+  "whole_record_sha256": "05732eacfe94a3e6583118d70cc8e315e936ec0890d067d518be9d4913500f7f",
+  "frozen_expected_bytes": 19709,
+  "expected_file_sha256": "37e411f1fb43d6d48504a3f6d539949371ac59a0e05444e3e220f6cc39dec0bf",
+  "peak_child_rss_kib": 21428,
+  "proof_status": "complete ordinary analytic author proof, unformalized and independently unreviewed",
+  "trust_boundary": [
+    "imported9428 coarse energy and collision-safe localization",
+    "imported9113 actual legal upper comparison",
+    "analytic square-root and infinite binomial series",
+    "complex scalar and triangle inequalities",
+    "complex parameter coefficient majorization",
+    "Rouche and unique holomorphic original-root sections",
+    "holomorphic companion half-normal and removable division",
+    "Cauchy and entire positive eta interval",
+    "right derivative and squeeze for unattained infima"
+  ],
+  "no_resource_or_operational_change": true
+}
