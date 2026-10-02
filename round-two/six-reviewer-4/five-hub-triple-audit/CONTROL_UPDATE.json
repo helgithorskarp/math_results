@@ -1,0 +1,62 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "sealed_at_utc": "2026-10-02T20:19:20.200566+00:00",
+  "target_packet_still_unread": true,
+  "first_seal_preserved": true,
+  "core_files_unchanged": [
+    "rows.py",
+    "populations.py",
+    "columns.py",
+    "audit.py",
+    "CORE_PROOF.md",
+    "fixtures.json"
+  ],
+  "controls_change": "Added actual duplicate-charge factors to substantiate that calibration comment; replaced repeated encoded sigma queries by270 distinct queries. Initial405 calls did not include a duplicated charge factor. Core theorem/inventory/proof unchanged; both control versions were before target packet acquisition.",
+  "previous_controls_sha256": "de7c79060ff23af613549496c9ffc1ceab951b1644eab55b99675c2598913554",
+  "current_controls_sha256": "e548c33083a8258f97982d3a3b29ce57f0b4549027a6f9d60b5a9a5dc51c10af",
+  "runs": [
+    {
+      "mode": "normal",
+      "seconds": 2.9610953310038894,
+      "sha256": "e67a6901e40553c633c6fcec432120c014a30e6801d8ada17865459a4be9eb7b",
+      "controls": {
+        "abstract_positive_controls": [
+          "K14",
+          "D7 N5 double-B Ta4",
+          "D8 N5 double-B Ta6"
+        ],
+        "conditional_exceptional_surcharge_guard": true,
+        "fixture_semantic_damages_rejected": 5,
+        "full_transported_marks": 1278,
+        "nineteen_star_named_graphs": 7140,
+        "relaxed_heavy_support_allocations": {
+          "12": 6,
+          "13": 72
+        },
+        "weak_composition_calibrations": 270
+      }
+    },
+    {
+      "mode": "optimized",
+      "seconds": 3.2653379020048305,
+      "sha256": "e67a6901e40553c633c6fcec432120c014a30e6801d8ada17865459a4be9eb7b",
+      "controls": {
+        "abstract_positive_controls": [
+          "K14",
+          "D7 N5 double-B Ta4",
+          "D8 N5 double-B Ta6"
+        ],
+        "conditional_exceptional_surcharge_guard": true,
+        "fixture_semantic_damages_rejected": 5,
+        "full_transported_marks": 1278,
+        "nineteen_star_named_graphs": 7140,
+        "relaxed_heavy_support_allocations": {
+          "12": 6,
+          "13": 72
+        },
+        "weak_composition_calibrations": 270
+      }
+    }
+  ]
+}
