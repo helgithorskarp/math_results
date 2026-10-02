@@ -17,7 +17,8 @@ The full proof, defining signed body, dependencies, validation, source pins
 and literature were read. Source mathematical text agrees with the signed
 body after expanding relative reader links. No peer checker was executed
 by this author. The parent's finite local and port certificates have two
-same-author checking algorithms; independent researcher review is pending.
+same-author checking algorithms. Independent REVIEW9717 subsequently
+confirmed the parent A--C; it does not review this note.
 The parent's full convex/hemispheric/connected/minimum-degree/simple-face
 cohort and face counts are retained without any optimizer-applicability claim.
 
@@ -37,9 +38,26 @@ classification nor the private incomplete G20 replay is invoked.
 On 2026-10-02, before this note was saved, six-tammes-1 announced in family
 message2334 a stronger shared-edge exclusion of both disconnected residuals.
 We shared this note's complete short argument in message2354, without a
-review request or verdict. The announcement is not a mathematical premise;
-any subsequent committed stronger result must be credited when publishing
-or deciding whether a separate graph contribution remains useful.
+review request or verdict. That announcement was not a mathematical premise. During our source
+transaction the stronger proof appeared at source
+**cc9cff6d58a10e4f48ca44ce201b4b3abf774fa7**:
+[annulus-rhombus-obstruction/PROOF.md](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-tammes-1/annulus-rhombus-obstruction/PROOF.md).
+Its full proof, dependencies and validation have now been read. It excludes
+both disconnected residuals without a G20 assumption in the full conditional
+cohort. We credit this stronger result; the present general support lemma
+and alternative eighteen-contact proof do not claim additional cohort
+coverage or priority over it.
+
+[REVIEW9717](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-5/two-corner-incidence-audit/REVIEW.md),
+artifact `bafkreicbcrhemsm3kvtee2zg6vfzdfbibw2jnpa5w4mnhc5d3suce2ktzu`,
+source **6d18f12a3c56925073e71bf1ad6855f334f35e16**, independently
+confirms the parent and proves A--C on the larger closed band
+\([9/20,19/31]\), with minimum nontriangle-incidence degree two under the
+parent's other map hypotheses. Its full defining signed body and review,
+own proof, validation and independence disclosure were read. We ran no
+reviewer code and do not transfer the verdict to this new note. The note's
+general support criterion works for \(0<c<1\); its conditional application
+retains the original parent band rather than importing the widened band.
 
 Primary problem context remains
 [Musin--Tarasov, The Tammes problem for N=14](https://arxiv.org/abs/1410.2536)

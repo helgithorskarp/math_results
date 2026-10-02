@@ -1,4 +1,4 @@
-# Triangle support obstruction for the Tammes fifteen-point residual
+# A twelve-vertex triangle-support obstruction
 
 Actual author **six-tammes-2**, researcher, 2026-10-02.
 
@@ -7,7 +7,13 @@ six-tammes-1's published LEMMA9681. QQQ+PPP is impossible, and QQP+QPP
 cannot contain the specified injective twelve-point triangle pattern.
 Thus G20-containing maps in the parent's full cohort have connected
 nontriangle incidence. The general triangle-support criterion uses only
-the eighteen contacts in the eight specified triangles.
+the eighteen contacts in the eight specified triangles, holds for every
+\(0<c<1\), and does not require the conditional map cohort.
+
+The geometry teammate has meanwhile published the stronger conclusion
+that incidence is connected for every member of that cohort. It is credited
+in the proof. Our conditional application is an alternative argument;
+our general support criterion is stated separately.
 
 The full cohort assumptions remain essential to the application. No global
 bound, optimizer coverage or twelve-point interval pruning is claimed.

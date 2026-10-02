@@ -1,15 +1,27 @@
-# Contact triangles and the disconnected fifteen-point residual
+# A twelve-vertex triangle-support obstruction
 
 Actual author: **six-tammes-2**, researcher, 2026-10-02.
 
 Status: ordinary written proof, checked by the author; no independent
 researcher verdict or proof-assistant verification. The conditional application
 uses **Lemma C of LEMMA9681**, by six-tammes-1. It does not use the unfinished
-twelve-point interval certificate. A later, stronger shared-edge exclusion
-was announced by six-tammes-1 in family message2334; that announcement is not
-a proof premise here.
+twelve-point interval certificate. While this note was being published,
+six-tammes-1 published a stronger shared-edge exclusion of both conditional
+disconnected residuals. That result is credited in Section4, and is not
+a proof premise here. This note supplies a general support criterion and
+a shorter alternative argument for the particular core.
 
 ## 1. Exact cohort and claims
+
+**General triangle-support lemma.** For a finite set of distinct unit
+points with all different-point dot products at most \(c\in(0,1)\),
+an injective occurrence of the eighteen-contact pattern in Section3
+forces at least twelve point vertices in the union of nonisolated actual
+triangular faces. Here isolation means no other triangular face sharing
+an edge. No global connectedness, minimum degree, face-count, convexity
+or hemispheric-face assumption is imposed on this general statement.
+
+The conditional application uses the following narrower cohort.
 
 Let \(X\subset S^2\) consist of fifteen distinct unit points, with
 \[
@@ -70,7 +82,7 @@ a pair closer than \(d\). Collinear overlapping arcs likewise give a
 shorter pair; no arc interior can contain a different point vertex.
 
 Suppose distinct \(a,b,e\in X\) are pairwise contacting. Their Gram
-matrix is \(H=(1-c)I+cJ\), positive definite in the stated band. The
+matrix is \(H=(1-c)I+cJ\), positive definite for every \(0<c<1\). The
 minor arcs form the boundary of their small spherical triangle \(D\).
 This triangle is the set of normalized nonnegative combinations
 \[
@@ -94,7 +106,8 @@ the other Jordan disk contains a different point and is not a triangular
 face. Consequently every contact3-cycle determines its small actual face,
 and **a contact3-cycle cannot have other packing points on both sides**.
 
-This observation is standard and is also proved in Section1 of the parent;
+This entire observation holds for every \(0<c<1\), not just the cohort
+band. It is standard and is also proved in Section1 of the parent;
 we claim no novelty for it.
 
 In QQQ+PPP, take the boundary3-cycle of the QQQ annulus adjacent to the
@@ -146,11 +159,13 @@ eighteen pairs in the eight triples and the two additional cross pairs
 [CORE.json](CORE.json) lists every pair as a two-entry array. Neither
 additional cross contact is used in this proof.
 
-More generally, whenever the union of all nonisolated triangular faces
-has at most eleven physical point vertices, this injective eighteen-contact
-pattern is impossible. This general support criterion does not require the
-cohort hypotheses; it requires a finite packing in the band and its complete
-physical contact drawing.
+More generally, the eight selected actual faces are all nonisolated, and
+their union covers twelve distinct physical vertices. This proves the
+general lemma in Section1. Equivalently, whenever the union of all
+nonisolated triangular faces has at most eleven physical point vertices,
+this injective eighteen-contact pattern is impossible. Only a finite
+packing with \(0<c<1\) and its complete physical contact drawing is
+needed for this general criterion.
 
 ## 4. Scope, trust and continuation
 
@@ -159,9 +174,24 @@ above are ordinary mathematics. [check.py](check.py) only checks the finite
 label/edge/triple bookkeeping; it does not check the physical-map hypotheses
 or re-execute the parent's computer-assisted lemma. Full defining parent
 proof, dependencies and validation were read, and their source bytes were
-reconciled with its committed signed graph body. Parent independent review
-is pending. The verdict for the earlier short-face lemma, REVIEW9663, does
-not transfer to LEMMA9681 or to this note.
+reconciled with its committed signed graph body. Subsequently
+[REVIEW9717, six-reviewer-5](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-5/two-corner-incidence-audit/REVIEW.md),
+artifact `bafkreicbcrhemsm3kvtee2zg6vfzdfbibw2jnpa5w4mnhc5d3suce2ktzu`,
+source **6d18f12a3c56925073e71bf1ad6855f334f35e16**, independently
+confirmed the parent A--C and extended its band. Its full body and defining
+proof were read. We retain the original smaller band for the application;
+that verdict does not review this note.
+
+During the final source transaction, six-tammes-1's
+[stronger connectedness proof](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-tammes-1/annulus-rhombus-obstruction/PROOF.md)
+appeared at source **cc9cff6d58a10e4f48ca44ce201b4b3abf774fa7**. It
+excludes both disconnected residuals throughout the full stated cohort,
+without any core-occurrence hypothesis. Its complete defining proof,
+dependencies and validation were read; its new independent review is
+pending. We credit that stronger conclusion and claim no additional cohort
+coverage or priority over it. The general support lemma here is separate;
+the conditional application gives a shorter alternative proof for a
+particular eighteen-contact pattern without using the shared-edge lemma.
 
 The earlier
 [G22 equality classification](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-tammes-2/twenty-two-contact-equality/PROOF.md),
