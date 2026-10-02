@@ -1,0 +1,325 @@
+{
+  "actual_agent": "six-reviewer-3",
+  "role": "independent mathematical reviewer",
+  "independent": {
+    "positive": [
+      {
+        "mode": "normal",
+        "seconds": 0.3742724689655006,
+        "record_sha256": "bccbff984160d4a45bff596722abd391b79d16cb1d5d3df88de3f680a6061214"
+      },
+      {
+        "mode": "optimized",
+        "seconds": 0.5368428049841896,
+        "record_sha256": "bccbff984160d4a45bff596722abd391b79d16cb1d5d3df88de3f680a6061214"
+      }
+    ],
+    "fixture_rejections": [
+      {
+        "case": "changed Fourier coefficient",
+        "mode": "normal",
+        "reason": "entire typed independent fixture mismatch"
+      },
+      {
+        "case": "changed Fourier coefficient",
+        "mode": "optimized",
+        "reason": "entire typed independent fixture mismatch"
+      },
+      {
+        "case": "missing complete row",
+        "mode": "normal",
+        "reason": "entire typed independent fixture mismatch"
+      },
+      {
+        "case": "missing complete row",
+        "mode": "optimized",
+        "reason": "entire typed independent fixture mismatch"
+      },
+      {
+        "case": "changed widened energy constant",
+        "mode": "normal",
+        "reason": "entire typed independent fixture mismatch"
+      },
+      {
+        "case": "changed widened energy constant",
+        "mode": "optimized",
+        "reason": "entire typed independent fixture mismatch"
+      },
+      {
+        "case": "boolean integer alias",
+        "mode": "normal",
+        "reason": "entire typed independent fixture mismatch"
+      },
+      {
+        "case": "boolean integer alias",
+        "mode": "optimized",
+        "reason": "entire typed independent fixture mismatch"
+      },
+      {
+        "case": "extra root fixture",
+        "mode": "normal",
+        "reason": "entire typed independent fixture mismatch"
+      },
+      {
+        "case": "extra root fixture",
+        "mode": "optimized",
+        "reason": "entire typed independent fixture mismatch"
+      },
+      {
+        "case": "duplicate key",
+        "mode": "normal",
+        "reason": "duplicate JSON key"
+      },
+      {
+        "case": "duplicate key",
+        "mode": "optimized",
+        "reason": "duplicate JSON key"
+      },
+      {
+        "case": "nonfinite constant",
+        "mode": "normal",
+        "reason": "nonfinite JSON constant"
+      },
+      {
+        "case": "nonfinite constant",
+        "mode": "optimized",
+        "reason": "nonfinite JSON constant"
+      }
+    ],
+    "peak_KiB": 20240
+  },
+  "later_refinement": {
+    "positive": [
+      {
+        "mode": "normal",
+        "seconds": 0.35919501702301204,
+        "whole_record_sha256": "cf5c32e1e4d0b4b7fadfbb9b3698f3ecccaa01287b85c6a6a8668aa7a82c9fd9"
+      },
+      {
+        "mode": "optimized",
+        "seconds": 0.5220848619937897,
+        "whole_record_sha256": "cf5c32e1e4d0b4b7fadfbb9b3698f3ecccaa01287b85c6a6a8668aa7a82c9fd9"
+      }
+    ],
+    "fixture_rejections": [
+      {
+        "case": "changed radius",
+        "mode": "normal",
+        "reason": "entire typed refinement fixture differs"
+      },
+      {
+        "case": "changed radius",
+        "mode": "optimized",
+        "reason": "entire typed refinement fixture differs"
+      },
+      {
+        "case": "changed entire favorable coefficient",
+        "mode": "normal",
+        "reason": "entire typed refinement fixture differs"
+      },
+      {
+        "case": "changed entire favorable coefficient",
+        "mode": "optimized",
+        "reason": "entire typed refinement fixture differs"
+      },
+      {
+        "case": "boolean energy alias",
+        "mode": "normal",
+        "reason": "entire typed refinement fixture differs"
+      },
+      {
+        "case": "boolean energy alias",
+        "mode": "optimized",
+        "reason": "entire typed refinement fixture differs"
+      },
+      {
+        "case": "extra global conclusion",
+        "mode": "normal",
+        "reason": "entire typed refinement fixture differs"
+      },
+      {
+        "case": "extra global conclusion",
+        "mode": "optimized",
+        "reason": "entire typed refinement fixture differs"
+      }
+    ],
+    "peak_KiB": 21236
+  },
+  "native_replay": {
+    "agent": "six-sendov-1",
+    "role": "researcher",
+    "status": "PASS",
+    "python_version": "3.12.14",
+    "standard_library_only": true,
+    "native_threads": 1,
+    "serial_children": true,
+    "per_child_guard_seconds": 45,
+    "whole_record_sha256": "ae0fe9a44f37ef7e2228061b5e661d32e8321a94856875e07a565977b6b7cd8f",
+    "positive_runs": [
+      {
+        "mode": "normal",
+        "seconds": 0.42176253302022815,
+        "summary": {
+          "analytic_proof_formalized": false,
+          "complete_controls": 34,
+          "mathematical_damage_rejections": 12,
+          "status": "PASS",
+          "strict_margins": 16,
+          "whole_record_sha256": "ae0fe9a44f37ef7e2228061b5e661d32e8321a94856875e07a565977b6b7cd8f"
+        }
+      },
+      {
+        "mode": "optimized",
+        "seconds": 0.6169039510423318,
+        "summary": {
+          "analytic_proof_formalized": false,
+          "complete_controls": 34,
+          "mathematical_damage_rejections": 12,
+          "status": "PASS",
+          "strict_margins": 16,
+          "whole_record_sha256": "ae0fe9a44f37ef7e2228061b5e661d32e8321a94856875e07a565977b6b7cd8f"
+        }
+      }
+    ],
+    "external_fixture_rejections": [
+      {
+        "name": "actual anchored original coefficient changed",
+        "mode": "normal",
+        "reason": "FAIL: entire typed fixture differs"
+      },
+      {
+        "name": "actual anchored original coefficient changed",
+        "mode": "optimized",
+        "reason": "FAIL: entire typed fixture differs"
+      },
+      {
+        "name": "wrapped first Fourier row missing",
+        "mode": "normal",
+        "reason": "FAIL: entire typed fixture differs"
+      },
+      {
+        "name": "wrapped first Fourier row missing",
+        "mode": "optimized",
+        "reason": "FAIL: entire typed fixture differs"
+      },
+      {
+        "name": "strict endpoint margin changed",
+        "mode": "normal",
+        "reason": "FAIL: entire typed fixture differs"
+      },
+      {
+        "name": "strict endpoint margin changed",
+        "mode": "optimized",
+        "reason": "FAIL: entire typed fixture differs"
+      },
+      {
+        "name": "integer schema replaced by bool",
+        "mode": "normal",
+        "reason": "FAIL: entire typed fixture differs"
+      },
+      {
+        "name": "integer schema replaced by bool",
+        "mode": "optimized",
+        "reason": "FAIL: entire typed fixture differs"
+      },
+      {
+        "name": "extra unproved global concentration field",
+        "mode": "normal",
+        "reason": "FAIL: entire typed fixture differs"
+      },
+      {
+        "name": "extra unproved global concentration field",
+        "mode": "optimized",
+        "reason": "FAIL: entire typed fixture differs"
+      },
+      {
+        "name": "integer schema replaced by float",
+        "mode": "normal",
+        "reason": "FAIL: noninteger fixture number: 1.0"
+      },
+      {
+        "name": "integer schema replaced by float",
+        "mode": "optimized",
+        "reason": "FAIL: noninteger fixture number: 1.0"
+      },
+      {
+        "name": "duplicate schema field",
+        "mode": "normal",
+        "reason": "FAIL: duplicate fixture field"
+      },
+      {
+        "name": "duplicate schema field",
+        "mode": "optimized",
+        "reason": "FAIL: duplicate fixture field"
+      },
+      {
+        "name": "nonfinite NaN field",
+        "mode": "normal",
+        "reason": "FAIL: noninteger fixture number: NaN"
+      },
+      {
+        "name": "nonfinite NaN field",
+        "mode": "optimized",
+        "reason": "FAIL: noninteger fixture number: NaN"
+      },
+      {
+        "name": "nonfinite Infinity field",
+        "mode": "normal",
+        "reason": "FAIL: noninteger fixture number: Infinity"
+      },
+      {
+        "name": "nonfinite Infinity field",
+        "mode": "optimized",
+        "reason": "FAIL: noninteger fixture number: Infinity"
+      }
+    ],
+    "peak_child_rss_kib": 22232,
+    "trust_boundary": "ordinary analytic/norm/disk-root inequalities and imported9533/9572 remain written, unformalized; finite records do not prove those steps"
+  },
+  "late_comparison": {
+    "coefficient_digest_matches": [
+      "full cyclic weight frequency 0/real",
+      "full cyclic weight frequency 0/imag",
+      "full cyclic weight frequency 1/real",
+      "full cyclic weight frequency 1/imag",
+      "full cyclic weight frequency 2/real",
+      "full cyclic weight frequency 2/imag",
+      "full cyclic weight frequency 3/real",
+      "full cyclic weight frequency 3/imag",
+      "full cyclic weight frequency 4/real",
+      "full cyclic weight frequency 4/imag",
+      "full cyclic weight frequency 5/real",
+      "full cyclic weight frequency 5/imag",
+      "full cyclic weight frequency 6/real",
+      "full cyclic weight frequency 6/imag",
+      "full cyclic weight frequency 7/real",
+      "full cyclic weight frequency 7/imag",
+      "full cyclic weight frequency 8/real",
+      "full cyclic weight frequency 8/imag",
+      "full cyclic mean including negative constant norm/real",
+      "full cyclic mean including negative constant norm/imag",
+      "full first Fourier row with wrap/real",
+      "full first Fourier row with wrap/imag",
+      "full second Fourier row with zero extra wrap/real",
+      "full second Fourier row with zero extra wrap/imag",
+      "whole real weight conjugacy 1/real",
+      "whole real weight conjugacy 1/imag",
+      "whole real weight conjugacy 2/real",
+      "whole real weight conjugacy 2/imag",
+      "whole real weight conjugacy 3/real",
+      "whole real weight conjugacy 3/imag",
+      "whole real weight conjugacy 4/real",
+      "whole real weight conjugacy 4/imag",
+      "whole first Fourier majorant"
+    ],
+    "compared_coefficient_positions_with_repeated_rows": 559,
+    "scalar_matches": [
+      "refined_lower_sum",
+      "first_mean_lambda",
+      "final_coefficient_cap"
+    ],
+    "initial_lower_entries": 6,
+    "final_cost_entries": 2,
+    "scope": "late corroboration only; no author imports or theorem input"
+  }
+}
