@@ -1,0 +1,137 @@
+{
+  "fixture_scope": "Record/input sensitivity, not a claim that every changed bound is mathematically false.",
+  "normal_optimized": [
+    {
+      "mode": [],
+      "result": {
+        "canonical_sha256": "a4204b5857c46e2123b09b8a4a9ca247cf5f4fece507edc337093d3735a7aa12",
+        "counts": {
+          "boundary_physical_and_nondisk_pairs": 2,
+          "full_polynomial_identities": 31,
+          "literal_anchored_polynomials": 14,
+          "literal_critical_evaluations": 112,
+          "strict_scalar_margins": 43
+        },
+        "verified": true
+      },
+      "seconds": 0.17711119703017175
+    },
+    {
+      "mode": [
+        "-O"
+      ],
+      "result": {
+        "canonical_sha256": "a4204b5857c46e2123b09b8a4a9ca247cf5f4fece507edc337093d3735a7aa12",
+        "counts": {
+          "boundary_physical_and_nondisk_pairs": 2,
+          "full_polynomial_identities": 31,
+          "literal_anchored_polynomials": 14,
+          "literal_critical_evaluations": 112,
+          "strict_scalar_margins": 43
+        },
+        "verified": true
+      },
+      "seconds": 0.3020306200487539
+    }
+  ],
+  "peak_child_kib": 19244,
+  "resource_contract": "one serial child/native1/fixed45s/unchanged1CPU2GiB",
+  "typed_fixture_rejections": [
+    {
+      "expected_failure": "whole typed",
+      "mode": [],
+      "name": "typed count"
+    },
+    {
+      "expected_failure": "whole typed",
+      "mode": [
+        "-O"
+      ],
+      "name": "typed count"
+    },
+    {
+      "expected_failure": "whole typed",
+      "mode": [],
+      "name": "missing complete section"
+    },
+    {
+      "expected_failure": "whole typed",
+      "mode": [
+        "-O"
+      ],
+      "name": "missing complete section"
+    },
+    {
+      "expected_failure": "whole typed",
+      "mode": [],
+      "name": "initial positive divisor"
+    },
+    {
+      "expected_failure": "whole typed",
+      "mode": [
+        "-O"
+      ],
+      "name": "initial positive divisor"
+    },
+    {
+      "expected_failure": "whole typed",
+      "mode": [],
+      "name": "literal leading coefficient"
+    },
+    {
+      "expected_failure": "whole typed",
+      "mode": [
+        "-O"
+      ],
+      "name": "literal leading coefficient"
+    },
+    {
+      "expected_failure": "whole typed",
+      "mode": [],
+      "name": "complex normal coefficient"
+    },
+    {
+      "expected_failure": "whole typed",
+      "mode": [
+        "-O"
+      ],
+      "name": "complex normal coefficient"
+    },
+    {
+      "expected_failure": "whole typed",
+      "mode": [],
+      "name": "lost coverage row"
+    },
+    {
+      "expected_failure": "whole typed",
+      "mode": [
+        "-O"
+      ],
+      "name": "lost coverage row"
+    },
+    {
+      "expected_failure": "duplicate JSON key",
+      "mode": [],
+      "name": "duplicate key"
+    },
+    {
+      "expected_failure": "duplicate JSON key",
+      "mode": [
+        "-O"
+      ],
+      "name": "duplicate key"
+    },
+    {
+      "expected_failure": "nonfinite JSON value",
+      "mode": [],
+      "name": "nonfinite"
+    },
+    {
+      "expected_failure": "nonfinite JSON value",
+      "mode": [
+        "-O"
+      ],
+      "name": "nonfinite"
+    }
+  ]
+}

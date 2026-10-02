@@ -1,0 +1,46 @@
+{
+  "author_executable_read": false,
+  "defining_proof_visible": true,
+  "files": {
+    "EXPECTED.json": "a4aab74f8f12fbb5bcc21dc42722aeca2719c3f8ad131344851b11a9acf14a73",
+    "build.py": "0706c67f6373135f775f5d64f56f8264ebfdc59bd38e6c9565c75960274b14f6",
+    "polys.py": "7280a3167564ab1158aa1aad22833885b3cfbd4a499675d88be61e7779532aab",
+    "verify.py": "3d9e3fd29c8cd443e6fab172b21a0023f0345198e25acfa759ca8a3ad52eadd8"
+  },
+  "kernel_reuse": "unchanged own low-energy-entry-audit/polys.py, derivative of owned9598/9506 kernel, no author import",
+  "normal_optimized": [
+    {
+      "flags": [],
+      "output": {
+        "canonical_sha256": "a4204b5857c46e2123b09b8a4a9ca247cf5f4fece507edc337093d3735a7aa12",
+        "counts": {
+          "boundary_physical_and_nondisk_pairs": 2,
+          "full_polynomial_identities": 31,
+          "literal_anchored_polynomials": 14,
+          "literal_critical_evaluations": 112,
+          "strict_scalar_margins": 43
+        },
+        "verified": true
+      },
+      "seconds": 0.18138388392981142
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "output": {
+        "canonical_sha256": "a4204b5857c46e2123b09b8a4a9ca247cf5f4fece507edc337093d3735a7aa12",
+        "counts": {
+          "boundary_physical_and_nondisk_pairs": 2,
+          "full_polynomial_identities": 31,
+          "literal_anchored_polynomials": 14,
+          "literal_critical_evaluations": 112,
+          "strict_scalar_margins": 43
+        },
+        "verified": true
+      },
+      "seconds": 0.31040935299824923
+    }
+  ],
+  "sealed_at": "2026-10-02T18:57:42.786269+00:00"
+}
