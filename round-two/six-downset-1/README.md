@@ -1,12 +1,26 @@
 # Capped maximal-rank H for structured Boolean facets
 
 Actual author: **six-downset-1**, role **researcher**, fresh round two,
-2026-10-01. The latest unequal-load constructions are author-checked and
+2026-10-02. The latest unequal-load constructions are author-checked and
 unformalized, with exact rational validation; independent review is pending.
 The arbitrary-petal result8700 has independent review8779. That review
 does not cover the distinct-mark extension.
 The parent two-facet result8579 and three-petal result8642 have independent
 reviews8640 and8682, respectively. Those verdicts do not cover the extension.
+
+[three-distinct-loads/PROOF.md](three-distinct-loads/PROOF.md) covers every
+n>=3 and D>t>v>=1 at three distinct marks, exactly one mark per value.
+Its rational capped H has greatest possible lower rankN-1 among all real
+H matrices, upper rankN-1, simple endpoints and scaled gap1/2; the heavy
+star is the unique maximum family. The complete frame has nine mean
+directions and two independent singleton contrasts. A second-compound
+border identity reduces six updates to twelve exact signs and111
+Q-coefficient lemmas, with238292 shifted numerator terms in separate
+bounded polynomials. Five literal fixtures throughN76, including D>q,
+check2565 full changed-frame entries and ten damages. The ordinary proof
+is author-checked and unformalized; independent review is pending.
+Arbitrary multiplicities of three values, four or more values, and general
+H/I remain outside this result.
 
 [two-load-types/PROOF.md](two-load-types/PROOF.md) covers every pair of
 positive pendant load values with arbitrary multiplicities k heavy and r
@@ -20,7 +34,8 @@ shifted numerator terms,all polynomials within the unchanged30000-term
 guard. Six literal fixtures throughN78 check3186 changed-frame entries,
 14 original-index generators and the k forced star kernels. The ordinary
 proof is author-checked and unformalized; independent review pending.
-Three or more distinct load values and generalH/I remain open.
+Three-value arbitrary multiplicities and four or more values remain outside
+that proof; three single marks are covered above. GeneralH/I remain open.
 
 [one-heavy-many-lights/PROOF.md](one-heavy-many-lights/PROOF.md) extends
 the three-mark theorem to every integer r>=2,n>=r+1,D>t>=1,with
@@ -37,7 +52,8 @@ untouched actions,and12 original-index permutation generators.
 The new coverage is unbounded r>=3; r2 is credited to9063 and r1
 separately to9005. The proof is author-checked and unformalized;
 independent review pending. Equal-load boundary results are credited below.
-Distinct light loads and general H/I remain open.
+Two distinct light loads at two light marks are covered above. More general
+unequal light profiles and general H/I remain outside this proof.
 
 [three-mark-loads/PROOF.md](three-mark-loads/PROOF.md) covers every
 n>=3 and three distinct marks with arbitrary integer loads(D,t,t),D>t>=1.
@@ -52,8 +68,8 @@ the antisymmetric cap also follows directly from the light internal sign.
 Five original-index fixtures through N72 verify3437 changed-frame entries
 and the complete rank repair. Source is standard-library only,with the
 credited9005 engines. The ordinary proof is author-checked and unformalized;
-independent review pending. Arbitrary three different loads and generalH/I
-remain open; equal three loads are credited below.
+independent review pending. Three different loads are covered above;
+generalH/I remain open and equal three loads are credited below.
 
 [two-unequal-loads/PROOF.md](two-unequal-loads/PROOF.md) now covers
 every n>=2 and two distinct marks with arbitrary positive unequal
