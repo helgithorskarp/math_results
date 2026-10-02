@@ -1,0 +1,86 @@
+{
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "schema": "conditional-minimum-lock-source-manifest-v1",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 32,
+      "sha256": "8c0dcf5e173a00ec0a62c785188955da61de05b9c020a1866a3804ebf6604aae"
+    },
+    {
+      "path": "PROOF.md",
+      "bytes": 10238,
+      "sha256": "31fbbb2f5d518c0b0283b15ee9fe8e036e9839a638f3407f7112aed7289c49b6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2560,
+      "sha256": "7ae62105a68b2ccdbefef5a24b9fe4ba1d9a2b889440098943e8bcea746d96ae"
+    },
+    {
+      "path": "SOURCE-CREDITS.md",
+      "bytes": 3993,
+      "sha256": "98ede8b56d859f663e5dfc0b19e34038694aff782a16936779572be7cfcab2ab"
+    },
+    {
+      "path": "certificate.json",
+      "bytes": 3637,
+      "sha256": "afc2d7cab06f8574f78a5c4aedc5c28b3978847ad8a0ed942ea7c8b1e38137d2"
+    },
+    {
+      "path": "checks.json",
+      "bytes": 6020,
+      "sha256": "3ef9ca141b880ba30a116da182b733fd285fe782d4d540c7d4be8fb98edcab22"
+    },
+    {
+      "path": "expected.json",
+      "bytes": 2226,
+      "sha256": "1ddc9422bfcf1d149014ac8a3a744b31db9d17bfaf866f48f00d06cdfd494a95"
+    },
+    {
+      "path": "fixture.json",
+      "bytes": 2272,
+      "sha256": "b2cadfceabddba477d9da1785a1462e823062628d092028227dfaccb51fec162"
+    },
+    {
+      "path": "generate.py",
+      "bytes": 7100,
+      "sha256": "b01a11648e7b0b2f3dda46bac087772ca09357a587100437de40250db73efc96"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 16420,
+      "sha256": "41754b7d0d8168429c1875bebef37f3d83b684652ed3c4c94ef59bea078d9ed6"
+    }
+  ],
+  "credited_generic_sources": [
+    {
+      "path": "round-two/six-sorting-1/both_first_binary_barrier/verify.py",
+      "source_commit": "d6a2bbdaabed14fdbcfd901256240a6f59c6c407",
+      "sha256": "01705b3d02139bf3031a2d5e04e7d6a3361b60f5bbd111d3622c2b1041b8d0b4",
+      "use": "exact nine numeric functions"
+    },
+    {
+      "path": "round-two/six-sorting-1/both_first_binary_barrier/generate.py",
+      "source_commit": "d6a2bbdaabed14fdbcfd901256240a6f59c6c407",
+      "sha256": "232dbee4849bbd8343a632c61a03968e61de4ecccad4f42a270fe055e25cedf3",
+      "use": "adapted generic carrier-pruning algorithm"
+    }
+  ],
+  "exact_copied_numeric_functions": [
+    "need",
+    "count",
+    "digest",
+    "marked",
+    "ports",
+    "simulate",
+    "template",
+    "family",
+    "pruning"
+  ],
+  "python": "CPython 3.11.2, standard library",
+  "normal_optimized_finite_records_equal": true,
+  "normal_optimized_certificate_bytes_equal": true,
+  "external_person_review_claimed": false
+}
