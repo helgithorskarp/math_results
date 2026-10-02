@@ -1,0 +1,243 @@
+{
+  "schema": 1,
+  "agent": "six-books-1",
+  "role": "researcher",
+  "date": "2026-10-02T13:48:19.639788+00:00",
+  "problem": "R(B4,B7)",
+  "scope": "specified one-nine leaf; red degrees9^4,10^18; cross-repeated omissions; secondary whole-leaf corollary imports9327/9381",
+  "engine": "math-research",
+  "primary_approach": "combinatorial",
+  "runtime": "3.12.14",
+  "arithmetic": "exact stdlib integers, Boolean masks, sets; no solver",
+  "cold_validation": {
+    "all_six_jobs_complete": true,
+    "whole_mathematical_bytes": 1556203,
+    "whole_mathematical_sha256": "8b39a65ce59cb832f1bd4f07b615fa2f2c3d43e625681a98ba5be041e180d4a4",
+    "entire_normal_optimized_records_byte_equal": true,
+    "compact_expected_bytes": 11888,
+    "compact_expected_sha256": "754ad4ac9083582191554e5b8fa0db5add48be7314aab86844448240c77cd34c",
+    "fixture_frozen_before_cold_replays": true,
+    "runs": [
+      {
+        "name": "derive-normal",
+        "exit_code": 0,
+        "elapsed_seconds": 59.018892,
+        "output_bytes": 1556203,
+        "output_sha256": "8b39a65ce59cb832f1bd4f07b615fa2f2c3d43e625681a98ba5be041e180d4a4",
+        "cumulative_peak_child_RSS_KiB": 39432,
+        "command": [
+          "python3",
+          "derive.py",
+          "--emit"
+        ]
+      },
+      {
+        "name": "derive-optimized",
+        "exit_code": 0,
+        "elapsed_seconds": 61.332472,
+        "output_bytes": 1556203,
+        "output_sha256": "8b39a65ce59cb832f1bd4f07b615fa2f2c3d43e625681a98ba5be041e180d4a4",
+        "cumulative_peak_child_RSS_KiB": 40756,
+        "command": [
+          "python3",
+          "-O",
+          "derive.py",
+          "--emit"
+        ]
+      },
+      {
+        "name": "verify-normal",
+        "exit_code": 0,
+        "elapsed_seconds": 68.316031,
+        "output_bytes": 1556203,
+        "output_sha256": "8b39a65ce59cb832f1bd4f07b615fa2f2c3d43e625681a98ba5be041e180d4a4",
+        "cumulative_peak_child_RSS_KiB": 128484,
+        "command": [
+          "python3",
+          "verify.py",
+          "--emit"
+        ]
+      },
+      {
+        "name": "verify-optimized",
+        "exit_code": 0,
+        "elapsed_seconds": 70.484196,
+        "output_bytes": 1556203,
+        "output_sha256": "8b39a65ce59cb832f1bd4f07b615fa2f2c3d43e625681a98ba5be041e180d4a4",
+        "cumulative_peak_child_RSS_KiB": 131636,
+        "command": [
+          "python3",
+          "-O",
+          "verify.py",
+          "--emit"
+        ]
+      },
+      {
+        "name": "self-normal",
+        "exit_code": 0,
+        "elapsed_seconds": 77.440783,
+        "output_bytes": 112,
+        "output_sha256": "b4379a262aae85102f19bf425b7740ea4d194dbbfca9604b4f808b744016c375",
+        "cumulative_peak_child_RSS_KiB": 131636,
+        "command": [
+          "python3",
+          "verify.py",
+          "--self-test"
+        ]
+      },
+      {
+        "name": "self-optimized",
+        "exit_code": 0,
+        "elapsed_seconds": 81.909579,
+        "output_bytes": 112,
+        "output_sha256": "b4379a262aae85102f19bf425b7740ea4d194dbbfca9604b4f808b744016c375",
+        "cumulative_peak_child_RSS_KiB": 131636,
+        "command": [
+          "python3",
+          "-O",
+          "verify.py",
+          "--self-test"
+        ]
+      }
+    ],
+    "serial_elapsed_seconds": 418.551095,
+    "max_child_wall_seconds": 81.909579,
+    "max_observed_cumulative_child_RSS_KiB": 131636
+  },
+  "controls": {
+    "six_point_subset_pairs_per_mode": 4096,
+    "SX_orbit_transports_per_mode": 1440,
+    "known_red_book_witnesses_per_mode": 192,
+    "rejected_damages_per_mode": 16,
+    "domain_counts_and_hashes_repaired_in_damages": true
+  },
+  "operational_limits": {
+    "scope_CPU": 1,
+    "scope_memory_GiB": 2,
+    "threads": 1,
+    "one_intensive_child_at_a_time": true,
+    "program_guards_seconds": 30,
+    "X_guard_granularity": "per complete flag in row producer; per repeated-SX choice in column checker",
+    "other_phase_guard_granularity": "per complete stage",
+    "child_guards_seconds": 90,
+    "resource_limits_changed": false,
+    "initial_uncached_checker": {
+      "exit_code": 1,
+      "elapsed_seconds": 81.262984,
+      "peak_child_RSS_KiB": 34940,
+      "reason": "fixed30-second row-phase guard; incomplete verification, no exclusion inferred",
+      "resolution": "cache unchanged complete neighborhoods; identical domains under unchanged limits"
+    }
+  },
+  "main_dependency": {
+    "lemma": "9131",
+    "artifactRef": "bafkreiesfsfe44lvytykz4oczwidosjpdxf4g3imjfnw7pxdllkmqsfqwu",
+    "source_commit": "6285ab7b447b77e323e2ff4dd24bc7f57e329201",
+    "scope": "ordinary sole-page pair/core theorem only"
+  },
+  "secondary_corollary_dependencies": [
+    {
+      "lemma": "9327",
+      "artifactRef": "bafkreihma2u2sz5wqvg5h6k43gn6v7jiy2266kox56mvvwzn7m5nzpjitm",
+      "source_commit": "53299fce3d1533600741841940a4a625db2fdb70"
+    },
+    {
+      "lemma": "9381",
+      "artifactRef": "bafkreicvlta625jrmjtvzxciridxtpw6snsk5ic45icepkprjp5b6h5x3m",
+      "source_commit": "9448a2e44321ca515064436826babc878d465a71"
+    }
+  ],
+  "new_independent_prior_review": {
+    "review": "9414",
+    "actual_agent": "six-reviewer-4",
+    "artifactRef": "bafkreibfuwpcdg7ifqkupycjbywe3lq7kwmqmm3knxummn2kxjpimwfzzu",
+    "source_commit": "fb9fbd0582285c6ea83ae8610c4efd441c0b7e02",
+    "full_statement_source_and_12_directions_intaken": true,
+    "scope": "confirms9381 and proves its E<=108 generalization; no review or degree weakening transferred to new cross theorem or9327; executable not replayed by this author"
+  },
+  "concurrent_context": [
+    {
+      "lemma": "9371",
+      "artifactRef": "bafkreiaamhy4trvoaxcdludr36coymxbrinv2i6ivdrvkkcq6pfyz3w7be",
+      "source_commit": "e43cbf8eec3a8b21dfdf4566ab328b1261c3953f",
+      "scope": "rootless low-edge/three-root incidence theorem, not a premise"
+    },
+    {
+      "lemma": "9392",
+      "artifactRef": "bafkreicwx4t5evfhzq4gehq4sqoy5y5oax4srgtmxllyug4ixgcgtuvxmu",
+      "source_commit": "f5195c1fb99436dc868b54f5520187c5defc929c",
+      "scope": "KG-C3 boundary repair descendants, full statement/source/3 directions intaken; not a premise"
+    }
+  ],
+  "primary_literature": {
+    "journal_paper": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v32i4p64/pdf/",
+    "journal_date": "2025-12-12",
+    "arxiv": "https://arxiv.org/pdf/2407.07285",
+    "live_reopened": "2026-10-02",
+    "Table1_gap": [
+      22,
+      23
+    ],
+    "upper_flag_certificate_replayed": false,
+    "baseline": {
+      "source": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+      "raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+      "n": 21,
+      "red_edges": 93,
+      "blue_edges": 117,
+      "max_red_pages": 3,
+      "max_blue_pages": 6
+    },
+    "baseline_is_prior_art": true
+  },
+  "trust": {
+    "separate_algorithms_same_author": true,
+    "independent_new_review": "pending",
+    "ordinary_finite_completeness_normalization_and_code_bridges": "unformalized",
+    "internal_Y_edges_used_in_any_witness": 0,
+    "large_regenerated_inventories_published": false,
+    "exclusive_historical_priority_claim": false
+  },
+  "source_files": [
+    {
+      "name": ".gitignore",
+      "bytes": 23,
+      "sha256": "9010c2fe0bd4c8ed4dbf01b9b7d1d7def7bd9bdb613892167a25a8f0c8e773d4"
+    },
+    {
+      "name": "EXPECTED.json",
+      "bytes": 11888,
+      "sha256": "754ad4ac9083582191554e5b8fa0db5add48be7314aab86844448240c77cd34c"
+    },
+    {
+      "name": "PROOF.md",
+      "bytes": 16139,
+      "sha256": "5be21d434012df42fa62220e1244accfeb2e627a471aded24084c477f748d897"
+    },
+    {
+      "name": "README.md",
+      "bytes": 2207,
+      "sha256": "caee98487ca8180ea84c9f3020235aaf89597687461db25cc759f2948eb1995b"
+    },
+    {
+      "name": "baseline.py",
+      "bytes": 1887,
+      "sha256": "8f91a62a09d24655b2baf0e12047ea8d60222f083777a1d6ad92db31a972b5f3"
+    },
+    {
+      "name": "derive.py",
+      "bytes": 10366,
+      "sha256": "cef3f8dddf29da6c9ab301ec2f9b475a3e185ba9e758bdc65d94fa29defb1e33"
+    },
+    {
+      "name": "reproduce.py",
+      "bytes": 4422,
+      "sha256": "4886700ac98fbc3b2c6d677cab6dc1099d93f77cc04d606d2884a0ada4a09120"
+    },
+    {
+      "name": "verify.py",
+      "bytes": 17529,
+      "sha256": "d99bfcb21c1121e73288fe735cffb9aecdb640b99a5de64241140b513ac7fd80"
+    }
+  ]
+}
