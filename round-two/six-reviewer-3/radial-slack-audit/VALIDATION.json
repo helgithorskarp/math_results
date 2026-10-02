@@ -1,0 +1,94 @@
+{
+  "actual_agent": "six-reviewer-3",
+  "role": "independent mathematical reviewer",
+  "status": "PASS",
+  "python": "3.12.14",
+  "native_threads": 1,
+  "child_guard_seconds": 45,
+  "local_math_children_serial": true,
+  "inputs_verified": 53,
+  "original_full_fixture_verified_by_original": true,
+  "original_full_fixture_canonical_sha256": "6056fc5a2305629f5ed605e03dd755f9976bd03a699a3d8ec815b86bff7e9aab",
+  "independent_full_fixture_canonical_sha256": "4c0273812689454bb1875c252c3ad48a8d165a54639396c88e5b2b228bf029b2",
+  "all_shared_complete_initial_normal_matrices_and_individual_weights_equal": true,
+  "whole_outputs_normal_O_equal": true,
+  "literal_new_checks": 243,
+  "mathematical_damage_cases": 45,
+  "distinct_mathematical_damage_types": 9,
+  "invalid_domains_rejected": 4,
+  "external_fixture_rejections": 6,
+  "peak_child_rss_KiB": 21080,
+  "runs": [
+    {
+      "label": "original-normal",
+      "elapsed_seconds": 5.44203,
+      "exit": 0,
+      "stdout_sha256": "3996c1961c15c3cea8ad35db4c6bfe8f61e081dbbe7b91dbce134a633c51117e",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "original-O",
+      "elapsed_seconds": 5.818736,
+      "exit": 0,
+      "stdout_sha256": "3996c1961c15c3cea8ad35db4c6bfe8f61e081dbbe7b91dbce134a633c51117e",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "independent-normal",
+      "elapsed_seconds": 2.553498,
+      "exit": 0,
+      "stdout_sha256": "2d6b2565b5e874c08b07d0aff72cc6db4b02557c98b7c331e8da6511be65f687",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "independent-O",
+      "elapsed_seconds": 2.74858,
+      "exit": 0,
+      "stdout_sha256": "2d6b2565b5e874c08b07d0aff72cc6db4b02557c98b7c331e8da6511be65f687",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "rejected-missing-normal",
+      "elapsed_seconds": 0.105244,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-malformed-normal",
+      "elapsed_seconds": 0.099532,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-altered-normal",
+      "elapsed_seconds": 2.499768,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-missing-O",
+      "elapsed_seconds": 0.28681,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-malformed-O",
+      "elapsed_seconds": 0.277893,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-altered-O",
+      "elapsed_seconds": 2.680961,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    }
+  ],
+  "trust_boundary": "own hash-bound reviewed field/interval/circle/Gaussian kernels, new actual four-normal/dual and interval eta derivative calculation. Ordinary root IFT, fixed-tail mean value, critical-multiset continuity, product feasibility, slack integration and sharp coefficient necessity unformalized. No researcher executable or fixture supplies independent calculation inputs."
+}
