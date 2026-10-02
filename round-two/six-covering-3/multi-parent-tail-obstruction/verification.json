@@ -1,0 +1,691 @@
+{
+  "agent": "six-covering-3",
+  "role": "researcher",
+  "utc": "2026-10-02T21:07:55.005641+00:00",
+  "python": "3.11.2",
+  "dependencies": "standard library only",
+  "child_guard_seconds": 20,
+  "threads": 1,
+  "one_CPU_child_at_a_time": true,
+  "maximum_child_RSS_KiB": 21976,
+  "all_six_new_cases_complete": true,
+  "raw_branch_records": 1620,
+  "original_marginal_entries": 55080,
+  "phase_intersections": 14978520,
+  "all_records_entrywise_compared": true,
+  "symmetry_reduction": false,
+  "native_solver": false,
+  "external_independent_review": false,
+  "elementary_bridges_unformalized": true,
+  "parent4_dependency": "Published lemma9709, separately reproducible in parent4-base-obstruction",
+  "full_prefix_or_global_Lmin8_exclusion": false,
+  "source_sha256": {
+    "certificate.json": "cad6c3bb40a2ed28316c821b04e1ce9bc4f7ab7744adaccf6bc9e1dccfa7f8ca",
+    "controls.py": "134785050a563b2cfd8924e957b9ccfa9f3d204e2f851ac53d659df080dc47fd",
+    "reproduce.py": "c9d1e6fa6df40bad95b941f733d6095ab098f73020cd4557f23b301402195454",
+    "generate.py": "2116ccc3ba73087ac17daf5510bbb1b02f36460f322c1dcb34c9f50ece759a25",
+    "check.py": "4d4143cb9ef1ff8031d2178cc96754258618d192de0ba0efcca50e503791340e"
+  },
+  "children": [
+    {
+      "program": "generate.py",
+      "mode": "normal",
+      "seconds": 0.9620452590752393,
+      "parent": 1,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 1,
+        "records": 270,
+        "required": 1206,
+        "total_upper_range": [
+          1057,
+          1204
+        ],
+        "all_rows38H_sha256": "681ab204431912ec59084b5ac8d50d375bbcad59c5916ed1075392badd84ae38",
+        "required_points_sha256": "9983b8c1ee16308a0c258dd01795f089466343b53cc51bb17a0231020ac8fff9",
+        "universal_outside_holes_at_least": 2
+      }
+    },
+    {
+      "program": "check.py",
+      "mode": "normal",
+      "seconds": 1.1226276379311457,
+      "parent": 1,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 1,
+        "records": 270,
+        "required": 1206,
+        "total_upper_range": [
+          1057,
+          1204
+        ],
+        "all_rows38H_sha256": "681ab204431912ec59084b5ac8d50d375bbcad59c5916ed1075392badd84ae38",
+        "required_points_sha256": "9983b8c1ee16308a0c258dd01795f089466343b53cc51bb17a0231020ac8fff9",
+        "universal_outside_holes_at_least": 2,
+        "all270_records_entrywise_equal": true,
+        "independent_literal_AP_audit": true
+      }
+    },
+    {
+      "program": "generate.py",
+      "mode": "normal",
+      "seconds": 0.9730098840082064,
+      "parent": 2,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 2,
+        "records": 270,
+        "required": 1223,
+        "total_upper_range": [
+          1045,
+          1183
+        ],
+        "all_rows38H_sha256": "2d723fd293d64f7d09b7cd9329fd1ee4034112d0ea84004961f6961c6c0cf6f0",
+        "required_points_sha256": "ccc6d878fdf33bdcb834dd4b2282cefbe2556148f0dc778a9d068a41bd0ebef8",
+        "universal_outside_holes_at_least": 40
+      }
+    },
+    {
+      "program": "check.py",
+      "mode": "normal",
+      "seconds": 0.9049206720665097,
+      "parent": 2,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 2,
+        "records": 270,
+        "required": 1223,
+        "total_upper_range": [
+          1045,
+          1183
+        ],
+        "all_rows38H_sha256": "2d723fd293d64f7d09b7cd9329fd1ee4034112d0ea84004961f6961c6c0cf6f0",
+        "required_points_sha256": "ccc6d878fdf33bdcb834dd4b2282cefbe2556148f0dc778a9d068a41bd0ebef8",
+        "universal_outside_holes_at_least": 40,
+        "all270_records_entrywise_equal": true,
+        "independent_literal_AP_audit": true
+      }
+    },
+    {
+      "program": "generate.py",
+      "mode": "normal",
+      "seconds": 0.8847341949585825,
+      "parent": 3,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 3,
+        "records": 270,
+        "required": 1206,
+        "total_upper_range": [
+          1057,
+          1204
+        ],
+        "all_rows38H_sha256": "681ab204431912ec59084b5ac8d50d375bbcad59c5916ed1075392badd84ae38",
+        "required_points_sha256": "f6954bf45d88a0196919dc36c094740f9217473beb349343643aa1c6e34d3e83",
+        "universal_outside_holes_at_least": 2
+      }
+    },
+    {
+      "program": "check.py",
+      "mode": "normal",
+      "seconds": 0.8619683070573956,
+      "parent": 3,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 3,
+        "records": 270,
+        "required": 1206,
+        "total_upper_range": [
+          1057,
+          1204
+        ],
+        "all_rows38H_sha256": "681ab204431912ec59084b5ac8d50d375bbcad59c5916ed1075392badd84ae38",
+        "required_points_sha256": "f6954bf45d88a0196919dc36c094740f9217473beb349343643aa1c6e34d3e83",
+        "universal_outside_holes_at_least": 2,
+        "all270_records_entrywise_equal": true,
+        "independent_literal_AP_audit": true
+      }
+    },
+    {
+      "program": "generate.py",
+      "mode": "normal",
+      "seconds": 0.8506525970296934,
+      "parent": 5,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 5,
+        "records": 270,
+        "required": 1206,
+        "total_upper_range": [
+          1057,
+          1204
+        ],
+        "all_rows38H_sha256": "681ab204431912ec59084b5ac8d50d375bbcad59c5916ed1075392badd84ae38",
+        "required_points_sha256": "d3c1b192ce35e16838ad124b8ef980820d130ffe41a86ec6b15294427800c586",
+        "universal_outside_holes_at_least": 2
+      }
+    },
+    {
+      "program": "check.py",
+      "mode": "normal",
+      "seconds": 0.8618218569317833,
+      "parent": 5,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 5,
+        "records": 270,
+        "required": 1206,
+        "total_upper_range": [
+          1057,
+          1204
+        ],
+        "all_rows38H_sha256": "681ab204431912ec59084b5ac8d50d375bbcad59c5916ed1075392badd84ae38",
+        "required_points_sha256": "d3c1b192ce35e16838ad124b8ef980820d130ffe41a86ec6b15294427800c586",
+        "universal_outside_holes_at_least": 2,
+        "all270_records_entrywise_equal": true,
+        "independent_literal_AP_audit": true
+      }
+    },
+    {
+      "program": "generate.py",
+      "mode": "normal",
+      "seconds": 0.9205882999813184,
+      "parent": 6,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 6,
+        "records": 270,
+        "required": 1223,
+        "total_upper_range": [
+          1045,
+          1183
+        ],
+        "all_rows38H_sha256": "2d723fd293d64f7d09b7cd9329fd1ee4034112d0ea84004961f6961c6c0cf6f0",
+        "required_points_sha256": "b0e9048fa95c837147598a9dd8dd1d79be5f977f1c78962b9d3e6db43a132562",
+        "universal_outside_holes_at_least": 40
+      }
+    },
+    {
+      "program": "check.py",
+      "mode": "normal",
+      "seconds": 0.861592001048848,
+      "parent": 6,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 6,
+        "records": 270,
+        "required": 1223,
+        "total_upper_range": [
+          1045,
+          1183
+        ],
+        "all_rows38H_sha256": "2d723fd293d64f7d09b7cd9329fd1ee4034112d0ea84004961f6961c6c0cf6f0",
+        "required_points_sha256": "b0e9048fa95c837147598a9dd8dd1d79be5f977f1c78962b9d3e6db43a132562",
+        "universal_outside_holes_at_least": 40,
+        "all270_records_entrywise_equal": true,
+        "independent_literal_AP_audit": true
+      }
+    },
+    {
+      "program": "generate.py",
+      "mode": "normal",
+      "seconds": 0.8431509929941967,
+      "parent": 7,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 7,
+        "records": 270,
+        "required": 1206,
+        "total_upper_range": [
+          1057,
+          1204
+        ],
+        "all_rows38H_sha256": "681ab204431912ec59084b5ac8d50d375bbcad59c5916ed1075392badd84ae38",
+        "required_points_sha256": "180b8f4e7eadb9c45953b549e679f2b1524453ee6e167a14e9ae1a3407cf4792",
+        "universal_outside_holes_at_least": 2
+      }
+    },
+    {
+      "program": "check.py",
+      "mode": "normal",
+      "seconds": 0.8517335490323603,
+      "parent": 7,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 7,
+        "records": 270,
+        "required": 1206,
+        "total_upper_range": [
+          1057,
+          1204
+        ],
+        "all_rows38H_sha256": "681ab204431912ec59084b5ac8d50d375bbcad59c5916ed1075392badd84ae38",
+        "required_points_sha256": "180b8f4e7eadb9c45953b549e679f2b1524453ee6e167a14e9ae1a3407cf4792",
+        "universal_outside_holes_at_least": 2,
+        "all270_records_entrywise_equal": true,
+        "independent_literal_AP_audit": true
+      }
+    },
+    {
+      "program": "generate.py",
+      "mode": "optimized",
+      "seconds": 1.0345504090655595,
+      "parent": 1,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 1,
+        "records": 270,
+        "required": 1206,
+        "total_upper_range": [
+          1057,
+          1204
+        ],
+        "all_rows38H_sha256": "681ab204431912ec59084b5ac8d50d375bbcad59c5916ed1075392badd84ae38",
+        "required_points_sha256": "9983b8c1ee16308a0c258dd01795f089466343b53cc51bb17a0231020ac8fff9",
+        "universal_outside_holes_at_least": 2
+      }
+    },
+    {
+      "program": "check.py",
+      "mode": "optimized",
+      "seconds": 1.019875488942489,
+      "parent": 1,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 1,
+        "records": 270,
+        "required": 1206,
+        "total_upper_range": [
+          1057,
+          1204
+        ],
+        "all_rows38H_sha256": "681ab204431912ec59084b5ac8d50d375bbcad59c5916ed1075392badd84ae38",
+        "required_points_sha256": "9983b8c1ee16308a0c258dd01795f089466343b53cc51bb17a0231020ac8fff9",
+        "universal_outside_holes_at_least": 2,
+        "all270_records_entrywise_equal": true,
+        "independent_literal_AP_audit": true
+      }
+    },
+    {
+      "program": "generate.py",
+      "mode": "optimized",
+      "seconds": 1.0128996149869636,
+      "parent": 2,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 2,
+        "records": 270,
+        "required": 1223,
+        "total_upper_range": [
+          1045,
+          1183
+        ],
+        "all_rows38H_sha256": "2d723fd293d64f7d09b7cd9329fd1ee4034112d0ea84004961f6961c6c0cf6f0",
+        "required_points_sha256": "ccc6d878fdf33bdcb834dd4b2282cefbe2556148f0dc778a9d068a41bd0ebef8",
+        "universal_outside_holes_at_least": 40
+      }
+    },
+    {
+      "program": "check.py",
+      "mode": "optimized",
+      "seconds": 0.9986439449712634,
+      "parent": 2,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 2,
+        "records": 270,
+        "required": 1223,
+        "total_upper_range": [
+          1045,
+          1183
+        ],
+        "all_rows38H_sha256": "2d723fd293d64f7d09b7cd9329fd1ee4034112d0ea84004961f6961c6c0cf6f0",
+        "required_points_sha256": "ccc6d878fdf33bdcb834dd4b2282cefbe2556148f0dc778a9d068a41bd0ebef8",
+        "universal_outside_holes_at_least": 40,
+        "all270_records_entrywise_equal": true,
+        "independent_literal_AP_audit": true
+      }
+    },
+    {
+      "program": "generate.py",
+      "mode": "optimized",
+      "seconds": 0.994635219918564,
+      "parent": 3,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 3,
+        "records": 270,
+        "required": 1206,
+        "total_upper_range": [
+          1057,
+          1204
+        ],
+        "all_rows38H_sha256": "681ab204431912ec59084b5ac8d50d375bbcad59c5916ed1075392badd84ae38",
+        "required_points_sha256": "f6954bf45d88a0196919dc36c094740f9217473beb349343643aa1c6e34d3e83",
+        "universal_outside_holes_at_least": 2
+      }
+    },
+    {
+      "program": "check.py",
+      "mode": "optimized",
+      "seconds": 0.9856572940479964,
+      "parent": 3,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 3,
+        "records": 270,
+        "required": 1206,
+        "total_upper_range": [
+          1057,
+          1204
+        ],
+        "all_rows38H_sha256": "681ab204431912ec59084b5ac8d50d375bbcad59c5916ed1075392badd84ae38",
+        "required_points_sha256": "f6954bf45d88a0196919dc36c094740f9217473beb349343643aa1c6e34d3e83",
+        "universal_outside_holes_at_least": 2,
+        "all270_records_entrywise_equal": true,
+        "independent_literal_AP_audit": true
+      }
+    },
+    {
+      "program": "generate.py",
+      "mode": "optimized",
+      "seconds": 1.056368088000454,
+      "parent": 5,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 5,
+        "records": 270,
+        "required": 1206,
+        "total_upper_range": [
+          1057,
+          1204
+        ],
+        "all_rows38H_sha256": "681ab204431912ec59084b5ac8d50d375bbcad59c5916ed1075392badd84ae38",
+        "required_points_sha256": "d3c1b192ce35e16838ad124b8ef980820d130ffe41a86ec6b15294427800c586",
+        "universal_outside_holes_at_least": 2
+      }
+    },
+    {
+      "program": "check.py",
+      "mode": "optimized",
+      "seconds": 1.0404353509657085,
+      "parent": 5,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 5,
+        "records": 270,
+        "required": 1206,
+        "total_upper_range": [
+          1057,
+          1204
+        ],
+        "all_rows38H_sha256": "681ab204431912ec59084b5ac8d50d375bbcad59c5916ed1075392badd84ae38",
+        "required_points_sha256": "d3c1b192ce35e16838ad124b8ef980820d130ffe41a86ec6b15294427800c586",
+        "universal_outside_holes_at_least": 2,
+        "all270_records_entrywise_equal": true,
+        "independent_literal_AP_audit": true
+      }
+    },
+    {
+      "program": "generate.py",
+      "mode": "optimized",
+      "seconds": 1.0728713349672034,
+      "parent": 6,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 6,
+        "records": 270,
+        "required": 1223,
+        "total_upper_range": [
+          1045,
+          1183
+        ],
+        "all_rows38H_sha256": "2d723fd293d64f7d09b7cd9329fd1ee4034112d0ea84004961f6961c6c0cf6f0",
+        "required_points_sha256": "b0e9048fa95c837147598a9dd8dd1d79be5f977f1c78962b9d3e6db43a132562",
+        "universal_outside_holes_at_least": 40
+      }
+    },
+    {
+      "program": "check.py",
+      "mode": "optimized",
+      "seconds": 1.2514652470126748,
+      "parent": 6,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 6,
+        "records": 270,
+        "required": 1223,
+        "total_upper_range": [
+          1045,
+          1183
+        ],
+        "all_rows38H_sha256": "2d723fd293d64f7d09b7cd9329fd1ee4034112d0ea84004961f6961c6c0cf6f0",
+        "required_points_sha256": "b0e9048fa95c837147598a9dd8dd1d79be5f977f1c78962b9d3e6db43a132562",
+        "universal_outside_holes_at_least": 40,
+        "all270_records_entrywise_equal": true,
+        "independent_literal_AP_audit": true
+      }
+    },
+    {
+      "program": "generate.py",
+      "mode": "optimized",
+      "seconds": 1.0597675299504772,
+      "parent": 7,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 7,
+        "records": 270,
+        "required": 1206,
+        "total_upper_range": [
+          1057,
+          1204
+        ],
+        "all_rows38H_sha256": "681ab204431912ec59084b5ac8d50d375bbcad59c5916ed1075392badd84ae38",
+        "required_points_sha256": "180b8f4e7eadb9c45953b549e679f2b1524453ee6e167a14e9ae1a3407cf4792",
+        "universal_outside_holes_at_least": 2
+      }
+    },
+    {
+      "program": "check.py",
+      "mode": "optimized",
+      "seconds": 1.0507888870779425,
+      "parent": 7,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "parent": 7,
+        "records": 270,
+        "required": 1206,
+        "total_upper_range": [
+          1057,
+          1204
+        ],
+        "all_rows38H_sha256": "681ab204431912ec59084b5ac8d50d375bbcad59c5916ed1075392badd84ae38",
+        "required_points_sha256": "180b8f4e7eadb9c45953b549e679f2b1524453ee6e167a14e9ae1a3407cf4792",
+        "universal_outside_holes_at_least": 2,
+        "all270_records_entrywise_equal": true,
+        "independent_literal_AP_audit": true
+      }
+    },
+    {
+      "program": "controls.py",
+      "mode": "normal",
+      "seconds": 4.117378313909285,
+      "parent": null,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "controls": 27,
+        "definition_level_maximum_rows": [
+          {
+            "bound": 1204,
+            "deficit": 2,
+            "gain": 222,
+            "parent": 1,
+            "remaining_sum": 982
+          },
+          {
+            "bound": 1183,
+            "deficit": 40,
+            "gain": 210,
+            "parent": 2,
+            "remaining_sum": 973
+          }
+        ],
+        "toy_prefix_upper_bounds": [
+          16,
+          14,
+          13,
+          12,
+          12,
+          12
+        ],
+        "original_BASE_TAIL_partition": [
+          41,
+          24,
+          65
+        ],
+        "all_original_BASE_AP_lift_points": 362880,
+        "all_original_TAIL_AP_parent_points": 241920,
+        "CRT_multipliers": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1891
+          ],
+          [
+            5,
+            1261
+          ],
+          [
+            7,
+            631
+          ]
+        ],
+        "parent_orbits": [
+          [
+            0
+          ],
+          [
+            1,
+            3,
+            5,
+            7
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4
+          ]
+        ]
+      }
+    },
+    {
+      "program": "controls.py",
+      "mode": "optimized",
+      "seconds": 3.8095904249930754,
+      "parent": null,
+      "exit_code": 0,
+      "stderr_empty": true,
+      "compact_result": {
+        "controls": 27,
+        "definition_level_maximum_rows": [
+          {
+            "bound": 1204,
+            "deficit": 2,
+            "gain": 222,
+            "parent": 1,
+            "remaining_sum": 982
+          },
+          {
+            "bound": 1183,
+            "deficit": 40,
+            "gain": 210,
+            "parent": 2,
+            "remaining_sum": 973
+          }
+        ],
+        "toy_prefix_upper_bounds": [
+          16,
+          14,
+          13,
+          12,
+          12,
+          12
+        ],
+        "original_BASE_TAIL_partition": [
+          41,
+          24,
+          65
+        ],
+        "all_original_BASE_AP_lift_points": 362880,
+        "all_original_TAIL_AP_parent_points": 241920,
+        "CRT_multipliers": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1891
+          ],
+          [
+            5,
+            1261
+          ],
+          [
+            7,
+            631
+          ]
+        ],
+        "parent_orbits": [
+          [
+            0
+          ],
+          [
+            1,
+            3,
+            5,
+            7
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4
+          ]
+        ]
+      }
+    }
+  ]
+}
