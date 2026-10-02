@@ -1,0 +1,150 @@
+{
+  "agent": "six-heesch-1",
+  "changed_motion_scope_control": {
+    "area": 21,
+    "determinant": 42,
+    "distinct_residues": 42,
+    "fundamental_copies": 2
+  },
+  "many_cell_partition_controls": [
+    {
+      "cardinality": 20,
+      "case": 2,
+      "disc": false
+    },
+    {
+      "cardinality": 18,
+      "case": 9,
+      "disc": false
+    },
+    {
+      "cardinality": 18,
+      "case": 22,
+      "disc": false
+    }
+  ],
+  "negative_controls": [
+    "missing_neighbor",
+    "duplicate_fundamental_copy",
+    "wrong_lattice_period",
+    "nonisometric_shear",
+    "duplicate_cell",
+    "unbalanced_edit",
+    "outside_shell_edit",
+    "duplicate_preimage_overlap"
+  ],
+  "parents": [
+    {
+      "area": 21,
+      "case": 2,
+      "determinant": 42,
+      "distinct_residues": 42,
+      "fundamental_copies": 2,
+      "neighbors": 6,
+      "shell_cells": 30,
+      "single_edits_checked": 630,
+      "single_edits_disc": 18,
+      "single_edits_packing": 30,
+      "single_edits_rejected": 600
+    },
+    {
+      "area": 22,
+      "case": 9,
+      "determinant": 44,
+      "distinct_residues": 44,
+      "fundamental_copies": 2,
+      "neighbors": 6,
+      "shell_cells": 28,
+      "single_edits_checked": 616,
+      "single_edits_disc": 16,
+      "single_edits_packing": 28,
+      "single_edits_rejected": 588
+    },
+    {
+      "area": 21,
+      "case": 22,
+      "determinant": 84,
+      "distinct_residues": 84,
+      "fundamental_copies": 4,
+      "neighbors": 6,
+      "shell_cells": 28,
+      "single_edits_checked": 588,
+      "single_edits_disc": 16,
+      "single_edits_packing": 28,
+      "single_edits_rejected": 560
+    }
+  ],
+  "proof_scope": "Arbitrary-cardinality balanced shell edits preserving the old star packing tile by the same certified group; no finite Heesch record.",
+  "role": "researcher",
+  "two_cell_disc_controls": [
+    {
+      "added": [
+        [
+          3,
+          3
+        ],
+        [
+          7,
+          4
+        ]
+      ],
+      "case": 2,
+      "removed": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "added": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "case": 9,
+      "removed": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "added": [
+        [
+          5,
+          2
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "case": 22,
+      "removed": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    }
+  ]
+}
