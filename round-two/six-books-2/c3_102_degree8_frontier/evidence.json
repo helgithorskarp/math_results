@@ -1,0 +1,340 @@
+{
+  "agent": "six-books-2",
+  "baseline": {
+    "known_prior_art": true,
+    "literal_and_native": {
+      "edges": 93,
+      "max_blue_pages": 6,
+      "max_red_pages": 3,
+      "spines": 210,
+      "vertices": 21
+    },
+    "normalized_fixture_bytes": 462,
+    "normalized_fixture_sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec",
+    "note": "Remote prefix matrix with metadata suffix; blue1 complemented to red fixture. Upper23 certificate not replayed.",
+    "raw_bytes": 1056,
+    "raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+    "reader": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt"
+  },
+  "capacity_audit": {
+    "actual_H_maxima_bounded": true,
+    "literal_Gram_row_checks": 184320,
+    "literal_pair_capacity_checks": 737280,
+    "whole_typed_root_table_equal": true
+  },
+  "cases": {
+    "P1_81010": {
+      "K_degree_words": 16536,
+      "K_local_cap_words": 15768,
+      "completion_choices": 220752,
+      "frames": 14,
+      "valid": 0
+    },
+    "P1_8910_G6": {
+      "K_degree_words": 15368,
+      "K_local_cap_words": 12894,
+      "completion_choices": 2320920,
+      "frames": 180,
+      "valid": 0
+    },
+    "P1_8910_G7": {
+      "K_degree_words": 11250,
+      "K_local_cap_words": 7452,
+      "completion_choices": 253368,
+      "frames": 34,
+      "valid": 0
+    },
+    "P1_8910_GM": {
+      "K_degree_words": 15368,
+      "K_local_cap_words": 12690,
+      "completion_choices": 862920,
+      "frames": 68,
+      "valid": 0
+    },
+    "P1_8910_J66": {
+      "K_degree_words": 15368,
+      "K_local_cap_words": 11340,
+      "completion_choices": 0,
+      "frames": 0,
+      "valid": 0
+    },
+    "P1_9910": {
+      "K_degree_words": 16536,
+      "K_local_cap_words": 13122,
+      "completion_choices": 1902690,
+      "frames": 145,
+      "valid": 0
+    },
+    "P1_999": {
+      "K_degree_words": 15368,
+      "K_local_cap_words": 10899,
+      "completion_choices": 305172,
+      "frames": 28,
+      "valid": 0
+    }
+  },
+  "claim": "No ordinary22-point red3/blue6 host with exact red profile8^3,9^10,10^9 and actual automorphism cycle3^7 1.",
+  "cold_replays": {
+    "normal": {
+      "agent": "six-books-2",
+      "child_guard_seconds": 30,
+      "corruption_controls": 23,
+      "frozen_source_verified": true,
+      "intensive_children": "serial",
+      "mathematical_bytes": 42575,
+      "mathematical_sha256": "02cefac0e8bc229ee664a507bdb78e365cb83e8efccf94127951f531a47eaa66",
+      "peak_child_rss_kib": 137372,
+      "program_guard_seconds": 25,
+      "role": "researcher",
+      "seconds": 65.54759414005093,
+      "status": "REPRODUCTION_PASS",
+      "threads": 1,
+      "trust": "Written ordinary/completeness bridges unformalized; new independent review pending."
+    },
+    "optimized": {
+      "agent": "six-books-2",
+      "child_guard_seconds": 30,
+      "corruption_controls": 23,
+      "frozen_source_verified": true,
+      "intensive_children": "serial",
+      "mathematical_bytes": 42575,
+      "mathematical_sha256": "02cefac0e8bc229ee664a507bdb78e365cb83e8efccf94127951f531a47eaa66",
+      "peak_child_rss_kib": 137052,
+      "program_guard_seconds": 25,
+      "role": "researcher",
+      "seconds": 75.52818538399879,
+      "status": "REPRODUCTION_PASS",
+      "threads": 1,
+      "trust": "Written ordinary/completeness bridges unformalized; new independent review pending."
+    }
+  },
+  "entire_expected_normal_optimized_records_equal": true,
+  "implementation_versions": {
+    "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "flags": [
+      "-std=c++17",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic"
+    ],
+    "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+    "python_dependencies": "standard library only"
+  },
+  "native_predicate": "Every ordinary spine is required; invalid graphs can reject at their first failed literal spine.",
+  "not_claimed": [
+    "P2=8^6,9^4,10^12 existence or exclusion",
+    "whole C3/102 branch exclusion",
+    "unrestricted22-point existence/exclusion",
+    "Ramsey endpoint",
+    "historical priority"
+  ],
+  "paused_route": "Initial exhaustive incidence generator completed, largest phase24.98490783199668s near unchanged25s guard; source/output preserved privately and route paused. Exact last-column degree dispatch agrees with all seven entire original frame/incidence streams.",
+  "preserved_pre_seal_failures": [
+    "Initial audit first failed its residual-mark reconstruction because17h had been incorrectly doubled to34h. It was not a Gram failure; the initial diagnosis was explicitly corrected.",
+    "A separately found missing Gamma diagonal in the literal full Gram row comparison was repaired. All737280 pair and184320 full-row checks then passed.",
+    "Zero-frame J66 cached reporting initially omitted an explicit completion counter; both completed children were preserved, schema repaired, and the omission is now a negative control. No zero was inferred from the exception."
+  ],
+  "record_bytes": 42575,
+  "record_sha256": "02cefac0e8bc229ee664a507bdb78e365cb83e8efccf94127951f531a47eaa66",
+  "recorded_at": "2026-10-02T22:10:11.035031+00:00",
+  "resource_scope": {
+    "child_guard_seconds": 30,
+    "cpus": 1,
+    "intensive_children": "serial",
+    "memory_gib": 2,
+    "numerical_threads": 1,
+    "program_guard_seconds": 25,
+    "resource_settings_raised": false
+  },
+  "role": "researcher",
+  "same_author_independent_algorithm_paths": "Full binary K/literal22-spine construction versus weighted K/component-bitset path; recursive exact last-column dispatch versus set/pair-deficit joins; balancing versus load DP; forward canonicalization versus inverse orbit partition.",
+  "semantic_damage_controls": {
+    "actual_red_B4_and_blue_B7_rejected": true,
+    "controls": [
+      {
+        "intended_check": "Independent complete residual marks differ",
+        "name": "doubled_capacity_edge_term",
+        "rejected": true
+      },
+      {
+        "intended_check": "ENTIRE independent A word set differs",
+        "name": "missing_A_word",
+        "rejected": true
+      },
+      {
+        "intended_check": "Literal complete AA Gram-row identity differs",
+        "name": "missing_Gram_diagonal",
+        "rejected": true
+      },
+      {
+        "intended_check": "Missing exact completion counter",
+        "name": "missing_empty_case_counter",
+        "rejected": true
+      },
+      {
+        "intended_check": "Entire marked case coverage",
+        "name": "missing_marked_case",
+        "rejected": true
+      },
+      {
+        "intended_check": "complete marked frame prerequisite",
+        "name": "missing_native_frame",
+        "rejected": true
+      },
+      {
+        "intended_check": "ENTIRE typed root/capacity/column table differs",
+        "name": "missing_root_placement",
+        "rejected": true
+      },
+      {
+        "intended_check": "Entire projection record fields differ",
+        "name": "wrong_A_global_degree",
+        "rejected": true
+      },
+      {
+        "intended_check": "Entire projection record fields differ",
+        "name": "wrong_A_pair_capacity",
+        "rejected": true
+      },
+      {
+        "intended_check": "Entire typed marked incidence sets differ",
+        "name": "wrong_GM_degree_sort",
+        "rank4_global_degrees": [
+          9,
+          10
+        ],
+        "rejected": true,
+        "removed_actual_records": 34
+      },
+      {
+        "intended_check": "Entire P1_999 K-words streams differ",
+        "name": "wrong_K-words",
+        "rejected": true
+      },
+      {
+        "intended_check": "blue B7 page control",
+        "name": "wrong_blue_page_threshold",
+        "rejected": true
+      },
+      {
+        "intended_check": "Typed exact census integer",
+        "name": "wrong_census_integer_type",
+        "rejected": true
+      },
+      {
+        "intended_check": "Entire independent marked column domain differs",
+        "name": "wrong_column_weight",
+        "rejected": true
+      },
+      {
+        "intended_check": "Whole frozen mathematical record differs",
+        "name": "wrong_frozen_record_integer_type",
+        "rejected": true
+      },
+      {
+        "intended_check": "Literal whole declared degree/column marks",
+        "name": "wrong_literal_degree_marks",
+        "rejected": true
+      },
+      {
+        "intended_check": "Literal mixed cut deficit parity",
+        "name": "wrong_mixed_cut_parity",
+        "rejected": true
+      },
+      {
+        "intended_check": "marked A global degree",
+        "name": "wrong_native_degree",
+        "rejected": true
+      },
+      {
+        "intended_check": "literal P1 marked profile",
+        "name": "wrong_native_profile",
+        "rejected": true
+      },
+      {
+        "intended_check": "Entire P1_999 outcomes streams differ",
+        "name": "wrong_outcomes",
+        "rejected": true
+      },
+      {
+        "intended_check": "red B4 page control",
+        "name": "wrong_red_page_threshold",
+        "rejected": true
+      },
+      {
+        "intended_check": "ENTIRE typed root/capacity/column table differs",
+        "name": "wrong_root_deficit",
+        "rejected": true
+      },
+      {
+        "intended_check": "Literal vertex deficit identity",
+        "name": "wrong_vertex_deficit_constant",
+        "rejected": true
+      }
+    ],
+    "damage_rejections": 23,
+    "positive_empty_frame_case_explicit_zero_counters": true,
+    "positive_primary21_accepted": true,
+    "positive_whole_record_accepted": true,
+    "status": "COMPLETE_SEMANTIC_DAMAGE_CONTROLS",
+    "trust": "Actual intended same-author checks, including preserved normalization/schema faults; not external review or completeness formalization."
+  },
+  "status": "AUTHOR_CHECKED_COMPLETE_P1_EXCLUSION",
+  "substantive_source_seal": {
+    "all_inputs_unchanged_after_both_replays": true,
+    "bytes": 142851,
+    "excludes": "SOURCE.json itself and this post-cold runtime evidence; no recursive hash.",
+    "file": "SOURCE.json",
+    "files": 17
+  },
+  "totals": {
+    "K_degree_words": 105794,
+    "K_local_cap_words": 84165,
+    "completion_choices": 5865822,
+    "frames": 469,
+    "valid": 0
+  },
+  "trust": {
+    "author_checks": "Complete normal/O with23 semantic rejections each; neither distinct same-author algorithms nor cold replays are peer review.",
+    "finite_domain_completeness": "Written unformalized",
+    "large_generated_outputs": "Regenerated locally and omitted from public source",
+    "new_independent_review": "Pending",
+    "ordinary_bridge": "Written unformalized",
+    "source_publication": "Does not by itself prove the theorem"
+  },
+  "verified_dependencies": {
+    "context": [
+      {
+        "contribution": "bafkreicxydgdhmps2jhtlyx5mn4jwmmhmxaptazg7kjsomcmd4hrc7zto4",
+        "height": 9537,
+        "kind": "review",
+        "raw_reader": "https://raw.githubusercontent.com/helgithorskarp/math_results/main/round-two/six-reviewer-4/cross-leaf-audit/REVIEW.md",
+        "reader": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-4/cross-leaf-audit/REVIEW.md",
+        "scope": "Credited degree-sensitive deficit mechanism rederived and literally checked here; no review verdict or full old computation imported.",
+        "source_bytes": 22166,
+        "source_commit": "afc469fc7739ac8476c2be99857e63cfe4335e8b",
+        "source_path": "round-two/six-reviewer-4/cross-leaf-audit/REVIEW.md",
+        "source_sha256": "51deabf7ba81a148c3f3242423523ecc775d7e44a2cb384f87e8bbd2dd4a13d0",
+        "whole_current_and_pinned_bytes_verified": true
+      }
+    ],
+    "corollary_premises": [
+      {
+        "contribution": "bafkreidroriw3kegglcicx4axftxzvdl7va2gbafswkfkfsfknjhljfmqi",
+        "height": 9715,
+        "kind": "lemma",
+        "raw_reader": "https://raw.githubusercontent.com/helgithorskarp/math_results/main/round-two/six-books-2/c3_degree_9_10_102/PROOF.md",
+        "reader": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-2/c3_degree_9_10_102/PROOF.md",
+        "scope": "Explicit premise ONLY for the composed remaining-profile corollary; not needed for the standalone P1 exclusion.",
+        "source_bytes": 20235,
+        "source_commit": "04c8e85fb59625f44b109aad16f8f5d5b8921600",
+        "source_path": "round-two/six-books-2/c3_degree_9_10_102/PROOF.md",
+        "source_sha256": "e77a34c5c254259c8b2f54698fe2085b38bb77b68d826909a21fdef0bbf3f843",
+        "whole_current_and_pinned_bytes_verified": true
+      }
+    ],
+    "main_claim_premises": []
+  },
+  "whole_equality": "All typed incidence sets/native frame inputs, sorted K words and completion outcome streams; final deterministic record equality is over every byte, not only a digest."
+}
