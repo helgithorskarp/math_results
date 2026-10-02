@@ -1,0 +1,168 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "seal_utc": "2026-10-02T16:38:18.512303+00:00",
+  "target": {
+    "height": 9546,
+    "ref": "bafkreibgkrqijonibxhpctjdlt7q3c2gkgxa5m6j3wcmnwkiuhfafosxgq",
+    "source_commit": "f3907bdcf78393c79877b8848c210e9ca1fc15f1"
+  },
+  "sealed_files": {
+    "EXPECTED.json": "d806a0827dec3a31d5383954492ae217981995f3a44318982090da1bf2d8c811",
+    "PROOF.md": "c7db2d757dc5ec0240c01e0254061e313e11e791c5671258edcb970a0d760510",
+    "affine.py": "3edd90ce196759e15a8d011d60cbdde60226f36ee956ca1d45d33ff701a22756",
+    "controls.py": "da9599e9a607c446de938b805ecd96136780df95df88c94a9d6fddb7a1a51162",
+    "linear.py": "94872f866836b3c2b5971aa96e5e7814eeaf81270b127c0e1fb491b3dfc5224c",
+    "physical.py": "de409fe5253dff24ae1577bbc4b963152c691aacc977dcee2f4adf55aafc1a76",
+    "sparse.py": "f17c48e668953b234bd04fa120f2496937bdc098093ebdb1a79661d4abd1ed68",
+    "symbolic.py": "05f9d51bbc366eb04e79e3de1cd028d7adfa25b80e67190b163105d91a8a916a",
+    "variance.py": "8b87277fbaf0f4b4542efa9e6fe655927afa218ba21db58c0b5c6e8df705e34f",
+    "verify.py": "2cae06e8e647447f4f6d24453422f24d3465ac36f84ae8a239972b9e912fdc56"
+  },
+  "independent_cold_records": [
+    {
+      "agent": "six-reviewer-2",
+      "mode": "normal",
+      "peak_child_KiB": 76116,
+      "phases": 7,
+      "role": "independent mathematical reviewer",
+      "seconds": 18.182496397057548,
+      "status": "PASS",
+      "timings": [
+        {
+          "phase": [
+            "symbolic.py"
+          ],
+          "seconds": 0.07463474594987929
+        },
+        {
+          "phase": [
+            "variance.py"
+          ],
+          "seconds": 0.1874057879904285
+        },
+        {
+          "phase": [
+            "physical.py",
+            "baseline"
+          ],
+          "seconds": 0.11071024497505277
+        },
+        {
+          "phase": [
+            "physical.py",
+            "point",
+            "24",
+            "6"
+          ],
+          "seconds": 8.759871769929305
+        },
+        {
+          "phase": [
+            "physical.py",
+            "point",
+            "19",
+            "5"
+          ],
+          "seconds": 4.489573976024985
+        },
+        {
+          "phase": [
+            "physical.py",
+            "point",
+            "19",
+            "5",
+            "new"
+          ],
+          "seconds": 4.404788399930112
+        },
+        {
+          "phase": [
+            "controls.py"
+          ],
+          "seconds": 0.15135587600525469
+        }
+      ],
+      "whole_expected_equal": true,
+      "whole_record_sha256": "d806a0827dec3a31d5383954492ae217981995f3a44318982090da1bf2d8c811"
+    },
+    {
+      "agent": "six-reviewer-2",
+      "mode": "optimized",
+      "peak_child_KiB": 77076,
+      "phases": 7,
+      "role": "independent mathematical reviewer",
+      "seconds": 20.443141878931783,
+      "status": "PASS",
+      "timings": [
+        {
+          "phase": [
+            "symbolic.py"
+          ],
+          "seconds": 0.15669304900802672
+        },
+        {
+          "phase": [
+            "variance.py"
+          ],
+          "seconds": 0.24746653100010008
+        },
+        {
+          "phase": [
+            "physical.py",
+            "baseline"
+          ],
+          "seconds": 0.203845183015801
+        },
+        {
+          "phase": [
+            "physical.py",
+            "point",
+            "24",
+            "6"
+          ],
+          "seconds": 10.219453830039129
+        },
+        {
+          "phase": [
+            "physical.py",
+            "point",
+            "19",
+            "5"
+          ],
+          "seconds": 4.739630226045847
+        },
+        {
+          "phase": [
+            "physical.py",
+            "point",
+            "19",
+            "5",
+            "new"
+          ],
+          "seconds": 4.612161920056678
+        },
+        {
+          "phase": [
+            "controls.py"
+          ],
+          "seconds": 0.25720771204214543
+        }
+      ],
+      "whole_expected_equal": true,
+      "whole_record_sha256": "d806a0827dec3a31d5383954492ae217981995f3a44318982090da1bf2d8c811"
+    }
+  ],
+  "independence": "Full defining proof/counts were visible and credited. New target executable/EXPECTED/RESULTS not read or materialized before this seal. Own9552 affine/linear and9508 sparse helpers explicitly reused, no author imports. Full mathematical proof/code/whole record sealed; later native comparison/validation narrative is separate metadata.",
+  "new_scope": "Full universal counted moments/unbounded proof/192closure/23weighted+422complete complement/actual empty andq19extended endpoint, plus sharp general moment floor/two-parameter region.",
+  "preseal_corrections": [
+    "Local else0 syntax spacing repaired before checks; no author defect.",
+    "Draft root comparison q>(11k-19)/2>=5k spacing/inequality corrected before seal; k19 last equality explicitly retained.",
+    "Redundant q19 Grams and Pell parameters are checked then hashed/compacted; no omitted mathematical check or enlarged guard."
+  ],
+  "primary_literature_live_2026_10_02": [
+    "https://arxiv.org/html/2609.28404v1#S4",
+    "https://arxiv.org/abs/1703.00494"
+  ],
+  "literature_priority_scope": "Exact-phrase search produced no relevant primary result; this is inconclusive,not a priority proof. Classical Schur/variance/eigenvalue methods explicitly credited."
+}

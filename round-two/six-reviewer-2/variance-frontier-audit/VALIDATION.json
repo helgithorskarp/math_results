@@ -1,0 +1,335 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "status": "PASS",
+  "target": {
+    "height": 9546,
+    "ref": "bafkreibgkrqijonibxhpctjdlt7q3c2gkgxa5m6j3wcmnwkiuhfafosxgq",
+    "source_commit": "f3907bdcf78393c79877b8848c210e9ca1fc15f1"
+  },
+  "seal_utc": "2026-10-02T16:38:18.512303+00:00",
+  "first_target_access_utc": "2026-10-02T16:38:18.512695+00:00",
+  "primary_files_sealed": 10,
+  "sealed_math_and_proof_unchanged_after_target_program_inspection": true,
+  "independent_cold_records": [
+    {
+      "agent": "six-reviewer-2",
+      "mode": "normal",
+      "peak_child_KiB": 76116,
+      "phases": 7,
+      "role": "independent mathematical reviewer",
+      "seconds": 18.182496397057548,
+      "status": "PASS",
+      "timings": [
+        {
+          "phase": [
+            "symbolic.py"
+          ],
+          "seconds": 0.07463474594987929
+        },
+        {
+          "phase": [
+            "variance.py"
+          ],
+          "seconds": 0.1874057879904285
+        },
+        {
+          "phase": [
+            "physical.py",
+            "baseline"
+          ],
+          "seconds": 0.11071024497505277
+        },
+        {
+          "phase": [
+            "physical.py",
+            "point",
+            "24",
+            "6"
+          ],
+          "seconds": 8.759871769929305
+        },
+        {
+          "phase": [
+            "physical.py",
+            "point",
+            "19",
+            "5"
+          ],
+          "seconds": 4.489573976024985
+        },
+        {
+          "phase": [
+            "physical.py",
+            "point",
+            "19",
+            "5",
+            "new"
+          ],
+          "seconds": 4.404788399930112
+        },
+        {
+          "phase": [
+            "controls.py"
+          ],
+          "seconds": 0.15135587600525469
+        }
+      ],
+      "whole_expected_equal": true,
+      "whole_record_sha256": "d806a0827dec3a31d5383954492ae217981995f3a44318982090da1bf2d8c811"
+    },
+    {
+      "agent": "six-reviewer-2",
+      "mode": "optimized",
+      "peak_child_KiB": 77076,
+      "phases": 7,
+      "role": "independent mathematical reviewer",
+      "seconds": 20.443141878931783,
+      "status": "PASS",
+      "timings": [
+        {
+          "phase": [
+            "symbolic.py"
+          ],
+          "seconds": 0.15669304900802672
+        },
+        {
+          "phase": [
+            "variance.py"
+          ],
+          "seconds": 0.24746653100010008
+        },
+        {
+          "phase": [
+            "physical.py",
+            "baseline"
+          ],
+          "seconds": 0.203845183015801
+        },
+        {
+          "phase": [
+            "physical.py",
+            "point",
+            "24",
+            "6"
+          ],
+          "seconds": 10.219453830039129
+        },
+        {
+          "phase": [
+            "physical.py",
+            "point",
+            "19",
+            "5"
+          ],
+          "seconds": 4.739630226045847
+        },
+        {
+          "phase": [
+            "physical.py",
+            "point",
+            "19",
+            "5",
+            "new"
+          ],
+          "seconds": 4.612161920056678
+        },
+        {
+          "phase": [
+            "controls.py"
+          ],
+          "seconds": 0.25720771204214543
+        }
+      ],
+      "whole_expected_equal": true,
+      "whole_record_sha256": "d806a0827dec3a31d5383954492ae217981995f3a44318982090da1bf2d8c811"
+    }
+  ],
+  "whole_normal_optimized_EXPECTED_equal": true,
+  "native_replay": {
+    "agent": "six-reviewer-2",
+    "role": "independent mathematical reviewer",
+    "records": [
+      {
+        "mode": "normal",
+        "seconds": 14.9794471609639,
+        "peak_child_KiB": 18456,
+        "entire_native_expected_equal": true,
+        "stable_record_sha256": "f4d0a80951c18c9bc02fde372822df7d3bb4756ca849b842367410a9e981f74b",
+        "whole_stdout_sha256": "d96acf355067e9e6bc15f5d406ab6c5e5ea89907c4d53a6451756a2805d74221"
+      },
+      {
+        "mode": "optimized",
+        "seconds": 14.887952666031197,
+        "peak_child_KiB": 21868,
+        "entire_native_expected_equal": true,
+        "stable_record_sha256": "f4d0a80951c18c9bc02fde372822df7d3bb4756ca849b842367410a9e981f74b",
+        "whole_stdout_sha256": "d96acf355067e9e6bc15f5d406ab6c5e5ea89907c4d53a6451756a2805d74221"
+      }
+    ],
+    "entire_native_normal_optimized_expected_equal": true,
+    "guard": "unchanged60s per whole original verifier,no program mutation,serial native1/unchanged1CPU2GiB",
+    "primary_seal_unchanged": true,
+    "native_damage_rejections": 13,
+    "native_positive_controls": 2
+  },
+  "late_comparison": {
+    "agent": "six-reviewer-2",
+    "role": "independent mathematical reviewer",
+    "all192_native_scalar_cases": true,
+    "all42_native_Pell_scalar_records": true,
+    "all_exceptional_keys_norms_star_sizes_ranks_gaps": true,
+    "complete_native_Gram_pair_hash_from_frozen_independent_forms_equal": true,
+    "all_positive_cubic_root_coefficients_equal": true,
+    "all_original_row_moment_fields_equal": true,
+    "native_scalar_numeric_fields_compared": 2963,
+    "whole_original_streams": [
+      {
+        "q": 19,
+        "k": 5,
+        "positions": 94249,
+        "whole_stream_sha256": "b9127fa8415b8e2466380921ee22ffe21a71d84e1a05f78b6ec32289d31d7a87",
+        "entire_equal": true
+      },
+      {
+        "q": 24,
+        "k": 6,
+        "positions": 198916,
+        "whole_stream_sha256": "9bff1f934c443984477d017bef71be81607b18e1f1d36bdb93d92449bdb98499",
+        "entire_equal": true
+      }
+    ],
+    "large_samples": [
+      {
+        "q": 30,
+        "k": 5,
+        "all_fields": [
+          "N",
+          "V",
+          "alpha",
+          "certified_nonempty_and_projected_cap_floor",
+          "e",
+          "g",
+          "k",
+          "kappa",
+          "nonempty_cap_floor_at_zero",
+          "q",
+          "s",
+          "strict_scalar_margin",
+          "t",
+          "variance"
+        ],
+        "M00": "104991001392666814470833/165231014770265718469230",
+        "M0a": "81124220466966662939621/3965544354486377243261520",
+        "sample_only": true
+      },
+      {
+        "q": 114,
+        "k": 19,
+        "all_fields": [
+          "N",
+          "V",
+          "alpha",
+          "certified_nonempty_and_projected_cap_floor",
+          "e",
+          "g",
+          "k",
+          "kappa",
+          "nonempty_cap_floor_at_zero",
+          "q",
+          "s",
+          "strict_scalar_margin",
+          "t",
+          "variance"
+        ],
+        "M00": "12658230003266020215969700713748/14845493576660338855801199236533",
+        "M0a": "2036347828028990961595274089537/356291845839848132539228781676792",
+        "sample_only": true
+      },
+      {
+        "q": 1000000,
+        "k": 100000,
+        "all_fields": [
+          "N",
+          "V",
+          "alpha",
+          "certified_nonempty_and_projected_cap_floor",
+          "e",
+          "g",
+          "k",
+          "kappa",
+          "nonempty_cap_floor_at_zero",
+          "q",
+          "s",
+          "strict_scalar_margin",
+          "t",
+          "variance"
+        ],
+        "M00": "266059637727395308910354483920016214562653237133770642765921483698685764649461360857542803799/458730743679640912104289779946375528391176345051010093448564891809592865054728536766011856268",
+        "M0a": "50001611059631961943483570966467907863754419199589018373897408025046766958399481788361159/125004127652702148548418965035387331486595554026400250464733933018114055727413526268738230833030",
+        "sample_only": true
+      }
+    ],
+    "no_author_function_import": true,
+    "scope": "Own-only late framing adapter; full 293165 original whole stream and two frozen529Grams; secondary native characteristic coefficient fingerprints not independently regenerated. Native true flags alone not proof. Infinite coverage is written independent proof."
+  },
+  "late_adapter_cold_records": [
+    {
+      "mode": "normal",
+      "seconds": 3.2236449929187074,
+      "entire_COMPARISON_equal": true,
+      "whole_stdout_sha256": "ab7a9a37753e561604e745411b5fb763c9968293277c0861296a3fb3f4292d96"
+    },
+    {
+      "mode": "optimized",
+      "seconds": 3.4084213949972764,
+      "entire_COMPARISON_equal": true,
+      "whole_stdout_sha256": "ab7a9a37753e561604e745411b5fb763c9968293277c0861296a3fb3f4292d96"
+    }
+  ],
+  "late_adapter_scope": "compare.py and comparison/validation narratives added after primary10file seal, no modification to proof, eight primary programs or entire EXPECTED. Complete own-only framing adapter independently reproduced normal/O; no target function imports.",
+  "implementation": "CPython3.12.14 standard library exact integer/Fraction/sparse Q[q,k], no CAS, solver or floating arithmetic",
+  "resources": {
+    "native_threads": 1,
+    "simultaneous_cpu_intensive_mathematical_jobs": 1,
+    "limits": "unchanged1CPU2GiB",
+    "own_internal_guard_seconds": 60,
+    "own_outer_guard_seconds": 90,
+    "native_guard_seconds": 60,
+    "native_guard_scope": "whole unchanged original verifier, not per-task",
+    "old_affine_family_guard": "unchanged4<=q<=23",
+    "new_physical_builder": "only published singleton(q,k)=(19,5),(24,6)",
+    "unbounded_no_dense_allocation": true,
+    "additional_resources": "none"
+  },
+  "coverage": {
+    "finite_pairs": 192,
+    "positive_variance_cases": 191,
+    "failed_variance_estimate_retained": {
+      "q": 24,
+      "k": 6
+    },
+    "Pell_calibrations_only": 42,
+    "all_exceptional_original_nonempty_positions": 198025,
+    "whole_positions_exception": 198916,
+    "whole_positions_q19_old": 94249,
+    "whole_positions_q19_new": 94249,
+    "baseline_nonempty_positions": 10145,
+    "whole_original_positions_old_and_new": 387414,
+    "exceptional_Gram_entries_each": 529,
+    "omitted_complement_dimension_proved": 422,
+    "semantic_damage_rejections": 17,
+    "late_all_scalar_fields": 2963,
+    "late_all_original_whole_positions": 293165
+  },
+  "retained_imports": "8757 complete harmonic/9145 positive1/8 framework through9195 and owned9552; own9488 all-real universal necessity and9508 Pell root premises. No arbitrary-H negative extension or full H/I resolution.",
+  "trust_boundary": "Ordinary PSD/complement/Schur/perturbation/empty-lift/equality/root/Pell arguments unformalized; no secondary native characteristic coefficient fingerprints independently regenerated. Failed sufficient moment test is not actual nonexistence.",
+  "literature": [
+    "https://arxiv.org/html/2609.28404v1#S4",
+    "https://arxiv.org/abs/1703.00494"
+  ],
+  "postseal_bookkeeping_corrections": [
+    "Unused local late-adapter else0 assignment removed before comparison; no change to sealed math/code/proof/whole expected record or author source.",
+    "Native control section-count4 corrected to actual13 damage rejections/2 positive controls; no original runtime/evidence change."
+  ]
+}
