@@ -1,0 +1,173 @@
+{
+  "agent": "six-downset-2",
+  "arithmetic": "CPython integers/fractions.Fraction; no CAS or solver",
+  "claim": "Unbounded active-layer growth for all real centered capped H on D(n,n-2)",
+  "exact_tail_examples": [
+    {
+      "T": 9223372036854775808,
+      "constant": "-1493463198815602536624169509123258998836957957322966977570718366863250641911576087433604137716584170027379959135381952932429133681208034083481788131684600337204578084244766260498897451229809052160490008601340650202334656572821103714559/3299599322746510150801282554426420431867549151363939515477985240158518092078778623168673868005096705090178720353621345860973707721926114977387839530151013582744656052478677314733612173911698447227803654192435200000000",
+      "forced_minimum_set_size": 16,
+      "largest_certified_k": 15,
+      "n": 64,
+      "negative_margin_target": "144115188075855872",
+      "six_n_squared_tail": 5522805069630210048,
+      "tail": 224723513575448
+    },
+    {
+      "T": 170141183460469231731687303715884105728,
+      "forced_minimum_set_size": 39,
+      "largest_certified_k": 38,
+      "n": 128,
+      "six_n_squared_tail": 82337376805668250258825950729979428864,
+      "tail": 837579109758181256701924140726516
+    },
+    {
+      "T": 57896044618658097711785492504343953926634992332820282019728792003956564819968,
+      "forced_minimum_set_size": 91,
+      "largest_certified_k": 90,
+      "n": 256,
+      "six_n_squared_tail": 53549273342994462870600292167316933180641854750927103333484546001433169231872,
+      "tail": 136182844398484453507996348488660006664636878333860024346630213423241092
+    }
+  ],
+  "finite_rref_conventions": [
+    {
+      "allowed_complements": 2,
+      "allowed_noncomplements": 2,
+      "finite_constant_negative": false,
+      "finite_sign_not_used_for_uniform_bridge": true,
+      "k": 3,
+      "n": 8,
+      "permitted_coordinate_checks": 4,
+      "physical_constant": "393145/512",
+      "profile_sha256": "1272b9009d8eec73f48de4186e81460ddbcdb76c1c362821ade856f3e95a91f9",
+      "total_middle_coordinates": 4
+    },
+    {
+      "allowed_complements": 6,
+      "allowed_noncomplements": 11,
+      "finite_constant_negative": true,
+      "finite_sign_not_used_for_uniform_bridge": true,
+      "k": 3,
+      "n": 17,
+      "permitted_coordinate_checks": 17,
+      "physical_constant": "-51653452079412674642509100334960795236007189804286162102847711358977/5134670166536954568044178704981259088650376655141402029758985625",
+      "profile_sha256": "61feb643a8df703e6aea4f495753307182b8b4844091027b33b9ee35fd159830",
+      "total_middle_coordinates": 42
+    },
+    {
+      "allowed_complements": 8,
+      "allowed_noncomplements": 26,
+      "finite_constant_negative": true,
+      "finite_sign_not_used_for_uniform_bridge": true,
+      "k": 4,
+      "n": 20,
+      "permitted_coordinate_checks": 34,
+      "physical_constant": "-511869509144608406670624694820756947869815/9977636099542755533184610250282664512",
+      "profile_sha256": "d47c861f37a8215cf10f87f9c11dc998a1e015e24e5c591e3090fd4a5ced5485",
+      "total_middle_coordinates": 64
+    }
+  ],
+  "literal": {
+    "arithmetic_convention_check_not_PSD_claim": true,
+    "empty_loop": "-8/9",
+    "full_order": 120,
+    "k": 2,
+    "lower_pairing": "224",
+    "n": 7,
+    "nonempty_order": 119,
+    "physical_coefficient_has_no_factor2": true,
+    "point_stars_checked": 7,
+    "upper_pairing": "-60829678889156/515753915047"
+  },
+  "no_full_large_downset_matrix": true,
+  "proof_status": "Exact rational/coefficient certificates; ordinary bridges unformalized; independently unreviewed",
+  "rejected_controls": [
+    "changed circle numerator",
+    "false fourth moment",
+    "false strong negative coefficient",
+    "changed actual empty loop",
+    "wrong upper physical factor",
+    "oversized RREF allocation",
+    "changed allowed three-set profile"
+  ],
+  "role": "researcher",
+  "scope": "Every integer n>=64 and2<=k<n/2 with6*n^2*sum_{a=3}^k binom(n,a)<=2^(n-1)",
+  "universal": {
+    "circle_identity": true,
+    "domain": "Characteristic0 Q[n,z], Q[b,t], Q[n,T]; T=2^(n-1)",
+    "exponential_base": {
+      "T64": 9223372036854775808,
+      "forty64_squared": 163840
+    },
+    "low_row_identities": 4,
+    "moment_integrand_nonnegative_identity": true,
+    "moment_numerator_identity": true,
+    "moments": [
+      [
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        -2,
+        3
+      ]
+    ],
+    "negative_T_numerator": [
+      -11250,
+      2625,
+      19075,
+      8170,
+      -7608,
+      -7952,
+      592,
+      192
+    ],
+    "odd_lower_energy": "4*(T-n-1)",
+    "positive_shift64_coefficients": {
+      "exponential_step": [
+        3967,
+        126,
+        1
+      ],
+      "negative_T_margin": [
+        313493090899022,
+        33925319699393,
+        1571059612163,
+        40357095402,
+        621022792,
+        5724400,
+        29264,
+        64
+      ],
+      "rest_below20n": [
+        3521127755,
+        286683668,
+        9329030,
+        151671,
+        1232,
+        4
+      ],
+      "tail_cost_below3n": [
+        458457,
+        22523,
+        368,
+        2
+      ]
+    },
+    "rest_numerator": [
+      -75,
+      236,
+      -70,
+      -119,
+      28,
+      16
+    ],
+    "square_remainder_identity": true,
+    "uniform_sign_domain": "All real n>=64 for rational coefficient bounds; integer n>=64 for exponential induction"
+  }
+}
