@@ -1,0 +1,35 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "python": "CPython3.12.14, stdlib",
+  "normal": {
+    "mode": "normal",
+    "exit": 0,
+    "seconds": 15.064922574907541,
+    "maxrss_KiB": 65980,
+    "initial_outer_guard_seconds": 60,
+    "native_threads": 1,
+    "serial_math_job": true
+  },
+  "optimized": {
+    "mode": "optimized",
+    "exit": 0,
+    "seconds": 16.183681168942712,
+    "maxrss_KiB": 67752,
+    "initial_outer_guard_seconds": 60,
+    "native_threads": 1,
+    "serial_math_job": true
+  },
+  "full_normal_optimized_expected_bytes_equal": true,
+  "full_independent_record_sha256": "dfeb7885560e51145330d93ef7d9cb4a79ee3dc5df368995de3466a39d71e505",
+  "every7_semantic_control_passes_both_modes": true,
+  "original7_damage_replay": {
+    "exit": 0,
+    "seconds": 3.7867625399958342,
+    "maxrss_KiB": 38936
+  },
+  "no_guard_hit_no_solver_status_inference": true,
+  "unchanged_scope_limits": "1CPU2GiB",
+  "independence": "Owned-triple core before new owner/color inputs; full certificate seal before native executable/EXPECTED. Native replay after both seals. Post-seal bit oracle and class4 radius-six checker labeled separately.",
+  "normal_first_run_boundary": "Normal run generated full expectation; optimized replay compared every byte to it. Normal, optimized and published expectation are also byte-compared here; no mathematical change follows that verification."
+}

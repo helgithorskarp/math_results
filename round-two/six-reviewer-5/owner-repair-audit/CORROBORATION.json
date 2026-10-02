@@ -1,0 +1,90 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "phase": "After independent whole-certificate seal; ancillary corroboration only",
+  "late_scalar_and_histogram_comparison": {
+    "cases": [
+      {
+        "all_eight_scalar_fields_equal": true,
+        "id": 0,
+        "whole_vertex_histogram_equal": true
+      },
+      {
+        "all_eight_scalar_fields_equal": true,
+        "id": 4,
+        "whole_vertex_histogram_equal": true
+      },
+      {
+        "all_eight_scalar_fields_equal": true,
+        "id": 5,
+        "whole_vertex_histogram_equal": true
+      },
+      {
+        "all_eight_scalar_fields_equal": true,
+        "id": 6,
+        "whole_vertex_histogram_equal": true
+      },
+      {
+        "all_eight_scalar_fields_equal": true,
+        "id": 7,
+        "whole_vertex_histogram_equal": true
+      }
+    ],
+    "method": "Late native expected comparison; not independent evidence by itself. Native domain-only fingerprint differs from own full color fingerprint and is not claimed equal.",
+    "whole_totals_equal": true
+  },
+  "author_normal": {
+    "mode": "normal",
+    "exit": 0,
+    "seconds": 2.0495284110074863,
+    "maxrss_KiB": 39512,
+    "whole_original_sha256": "9e670c39ccaa4e06e678ec7e446698c443f145dab8409a3f1dbd22a230c78dc5"
+  },
+  "author_optimized": {
+    "mode": "optimized",
+    "exit": 0,
+    "seconds": 3.2103229539934546,
+    "maxrss_KiB": 41556,
+    "whole_original_sha256": "9e670c39ccaa4e06e678ec7e446698c443f145dab8409a3f1dbd22a230c78dc5"
+  },
+  "author_damage_replay": {
+    "agent": "six-code-2",
+    "checker_process_timeout_seconds": 10,
+    "damage_rejections": [
+      {
+        "damage": "missing_four_vertex",
+        "rejection": "incomplete or invented radius-four field"
+      },
+      {
+        "damage": "invalid_five_owner",
+        "rejection": "new-word owner is not a blocker"
+      },
+      {
+        "damage": "missing_collision_carrier",
+        "rejection": "conditional recolorings omit or invent collision carriers"
+      },
+      {
+        "damage": "ineffective_collision_repair",
+        "rejection": "invalid or ineffective recoloring"
+      },
+      {
+        "damage": "nonbijective_point_transport",
+        "rejection": "point map is not bijective"
+      },
+      {
+        "damage": "valid_labels_with_compatible_collision",
+        "rejection": "radius-four ownership collision"
+      },
+      {
+        "damage": "missing_five_vertex",
+        "rejection": "incomplete or invented five-blocker word assignments"
+      }
+    ],
+    "initial_whole_guard_seconds": 60,
+    "role": "researcher",
+    "seconds": 3.695291507989168,
+    "sequential_checker_processes": 7,
+    "status": "ALL_SEVEN_LITERAL_CERTIFICATE_DAMAGES_REJECTED_SEMANTICALLY"
+  },
+  "boundary": "Author normal and optimized records byte-match author EXPECTED. Independent full physical-word/color fingerprints use a different encoding and are not claimed to match author domain-only fingerprints. Original executable, expected and damages are not required by independent checker."
+}
