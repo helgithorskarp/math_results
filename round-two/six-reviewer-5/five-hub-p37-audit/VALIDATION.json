@@ -1,0 +1,118 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "interpreter": "CPython3.12.14 standard library",
+  "native_threads": 1,
+  "mathematical_children_at_once": 1,
+  "scope": "unchanged1CPU2GiB",
+  "final_jobs": [
+    {
+      "program": "core/audit.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 1.8424772430444136,
+      "maxrss_kib": 35640,
+      "stdout_sha256": "b9e794ffa35afd8050b0119e0fa1ff60429ec5c9e03a6d1f8ebf7bd4f099dd13"
+    },
+    {
+      "program": "core/audit.py",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 2.013590749935247,
+      "maxrss_kib": 39008,
+      "stdout_sha256": "b9e794ffa35afd8050b0119e0fa1ff60429ec5c9e03a6d1f8ebf7bd4f099dd13"
+    },
+    {
+      "program": "core/controls.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.5375528630102053,
+      "maxrss_kib": 17816,
+      "stdout_sha256": "5973d29247e4cec54853ae7e7c5f3a52b5d86868945e4be337934b00dde12f76"
+    },
+    {
+      "program": "core/column_quotas.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 1.513118569040671,
+      "maxrss_kib": 49340,
+      "stdout_sha256": "41ee130df3e55079baf7b2fa628e07edd97d2f05bd8a23b7593d9b114cb23bd0"
+    },
+    {
+      "program": "core/verify.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 3.579718093969859,
+      "maxrss_kib": 36060,
+      "stdout_sha256": "afe685774c1c7d23a26bcdb662b997c4f0dd98df4f00cc282f3016d07db05b35"
+    },
+    {
+      "program": "core/verify.py",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 3.7313450070796534,
+      "maxrss_kib": 39416,
+      "stdout_sha256": "afe685774c1c7d23a26bcdb662b997c4f0dd98df4f00cc282f3016d07db05b35"
+    },
+    {
+      "program": "author/verify.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 2.176807289943099,
+      "maxrss_kib": 52748,
+      "stdout_sha256": "d71796acbe6c924b992d73fa31f9f5aded5c773baf7bfb52db4357f181678612"
+    },
+    {
+      "program": "author/verify.py",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 2.3415325130335987,
+      "maxrss_kib": 56232,
+      "stdout_sha256": "d71796acbe6c924b992d73fa31f9f5aded5c773baf7bfb52db4357f181678612"
+    },
+    {
+      "program": "compare_author.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 4.624084113049321,
+      "maxrss_kib": 93096,
+      "stdout_sha256": "611cbd8e5e8e5f4404c5bcfad5a5f7cd48ebfafec4dc5e6c262398f5cd7884f3"
+    },
+    {
+      "program": "compare_author.py",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 4.933622675947845,
+      "maxrss_kib": 94612,
+      "stdout_sha256": "611cbd8e5e8e5f4404c5bcfad5a5f7cd48ebfafec4dc5e6c262398f5cd7884f3"
+    }
+  ],
+  "whole_offline_mathematical_sha256": "bb19194113d0c4d9de717835d24cb70909c95cc9316b421e4c691a58cc21da80",
+  "native_whole_mathematical_sha256": "8fb1785f41d217462b2ba4b847418197879440c3b8434772afd5cf670e0e8ff4",
+  "guards": {
+    "final_seconds": 45,
+    "branch_states": 100000,
+    "branch_seconds": 10,
+    "graph_seconds": 10
+  },
+  "first_attempt": {
+    "status": "INCOMPLETE fixed100000-state guard under old factor order; no mathematical absence",
+    "seconds": 1.4591655239928514,
+    "maxrss_kib": 45888,
+    "next": "charged factors reordered under identical guards; all136 cases completed with max6633 branch states"
+  },
+  "adapter_repairs": "Raw/capped field names normalized in late comparison; final expected record compared as canonical JSON bytes to normalize tuples/lists. Neither changes any sealed mathematics or identifies an author flaw.",
+  "optional_replay": "Public wrapper checks exact13 files and five serial mathematical stages in new separate work dir; tested before publication.",
+  "local_column_quotas_postseal": true,
+  "private_full_population_records_not_published": true
+}
