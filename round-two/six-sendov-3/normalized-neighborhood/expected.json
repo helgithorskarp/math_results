@@ -1,14 +1,14 @@
 {
   "actual_agent": "six-sendov-3",
   "all_feasible_coefficient_ball": {
-    "coefficient": "1/674810573150275710968556550255108348257895092350261142703977813046273342128927438033555485278619592408041319575232676437658190426902100393207838909020206089031912189486435222664418453288972126421587982270717075878092295285044026525819133055353361150474351884105396159917912207636846681167179458493813427693569128233361251405064640458634614727328439625939945337535927553716680131781270689530852584186057944780121293595417070292309397379578420931378398158623104992507693588812203909492985047772786373130368489083543142729822356186120402019700135754835847719935803392",
+    "coefficient": "1/57406534763712726211641660058884099201115885104434760023882136841288313069618515692832974315825313495922298231949373138672355948043152766571296567808332659269564994572656140000344389574120022435714463495031743122390807731823194181973658513020233176985452498279081199404472314802811655824768082110985166340672084454492229252801189742403957029450467388250214501358353312915261004066118140645880633941658603299497698209063510889929202021079926591625770444716951045960277478891794836019580040978608315291377690212791863007764174393209716027254457637891941312587717764400411421385408982726881092425574514688",
     "delta_power": 6,
-    "eta_power": "25"
+    "eta_power": "13"
   },
   "all_feasible_raw_box": {
-    "coefficient": "1/4074071952668972172536891376818756322102936787331872501272280898708762599526673412366794752",
+    "coefficient": "1/8543948143683640329580086824678208458410818089426611079788166431288878903122562200091848347746304",
     "delta_power": 1,
-    "eta_power": "2"
+    "eta_power": "0"
   },
   "beta_modulus_bound": 2048,
   "certified_slack_coefficient": "17/64",
@@ -44,6 +44,12 @@
     "removable even/odd divided normal majorants",
     "all eight reciprocal square-root domains",
     "joint holomorphic objective bound",
+    "universal first objective U coefficient cancellation",
+    "universal first objective H coefficient cancellation",
+    "positive limiting duals with sum below four",
+    "limiting first coefficient between zero and eight",
+    "joint deflated numerator modulus bound",
+    "removable raw objective deflation majorant",
     "whole actual branch in inner quarter raw domain",
     "real heavy center remains separated from six small coordinates",
     "normalized first Cauchy operator bound",
@@ -56,16 +62,16 @@
     "whole off-branch tail Jacobian contraction",
     "contraction center displacement",
     "all inactive-root actual half-normal variations divided by eta",
-    "completely eliminated second Cauchy bound",
-    "completely eliminated third Cauchy bound",
-    "improved explicit eta/kappa raw-radius exponents",
+    "completely eliminated deflated second Cauchy bound",
+    "completely eliminated deflated third Cauchy bound",
+    "eta-independent explicit kappa raw-radius identities",
     "normalized stability box in Cauchy inner domain nonnegative half-integer eta/delta exponents",
     "normalized stability box in Cauchy inner domain whole eta/delta bound",
     "free Euclidean ball inside normalized stability box nonnegative half-integer eta/delta exponents",
     "free Euclidean ball inside normalized stability box whole eta/delta bound",
     "each actual individual radial gradient variation",
     "signed feasible individual-root integration",
-    "zero-slack full Taylor budget",
+    "zero-slack deflated Taylor budget",
     "literal twelve-coordinate Euclidean metric",
     "raw box implies free Euclidean radius",
     "raw box implies normalized four-normal stability box nonnegative half-integer eta/delta exponents",
@@ -82,6 +88,8 @@
     "heavy T V M recovery in raw neighborhood",
     "quarter-curvature gap",
     "quarter-curvature coefficient-ball constant",
+    "new coefficient radius strictly exceeds published eta25 intermediate nonnegative half-integer eta/delta exponents",
+    "new coefficient radius strictly exceeds published eta25 intermediate whole eta/delta bound",
     "eight-unmarked original energy to coefficient norm",
     "anchored critical energy constant sum",
     "branch-matched critical energy to coefficient norm"
@@ -91,9 +99,9 @@
   "complex_eta_radius": "1/1024",
   "coverage": "whole positive eta and explicit positive kappa gap; fixed complex joint root/normalized normal domain includes eta0",
   "critical_entry_disks": {
-    "coefficient": "1/4171849679533027504677776769862406473833407270227837441302815640277772901915313574263597826048",
+    "coefficient": "1/8749002899132047697490008908470485461412677723572849745703082425639811996797503692894052708092215296",
     "delta_power": 1,
-    "eta_power": "4"
+    "eta_power": "2"
   },
   "delta_definition": "1/2-33eta/16-k",
   "elementary_epsilon_majorants": {
@@ -106,12 +114,12 @@
     "8": "17015625/17592186044416"
   },
   "eliminated_second_derivative_majorant": {
-    "coefficient": "1606938044258990275541962092341162602522202993782792835301376",
+    "coefficient": "3369993333393829974333376885877453834204643052817571560137951281152",
     "delta_power": 0,
     "eta_power": "0"
   },
   "eliminated_third_derivative_majorant": {
-    "coefficient": "1018517988167243043134222844204689080525734196832968125318070224677190649881668353091698688",
+    "coefficient": "2135987035920910082395021706169552114602704522356652769947041607822219725780640550022962086936576",
     "delta_power": 0,
     "eta_power": "0"
   },
@@ -121,9 +129,9 @@
   ],
   "fixed_original_root_disk_radius": "1/16",
   "free_Euclidean_ball": {
-    "coefficient": "1/1018517988167243043134222844204689080525734196832968125318070224677190649881668353091698688",
+    "coefficient": "1/2135987035920910082395021706169552114602704522356652769947041607822219725780640550022962086936576",
     "delta_power": 1,
-    "eta_power": "2"
+    "eta_power": "0"
   },
   "free_metric_dimension": 12,
   "full_target_polydisk": {
@@ -132,7 +140,26 @@
     "eta_power": "0"
   },
   "gamma_modulus_bound": 65536,
+  "limiting_duals": [
+    [
+      "26/9",
+      "-2/9",
+      "-4/9"
+    ],
+    [
+      "-1/3",
+      "2/3",
+      "0"
+    ]
+  ],
+  "limiting_first_objective_coefficient": [
+    "26/9",
+    "-8/9",
+    "8/9"
+  ],
   "mathematical_damage_rejections": [
+    "deflation-dual",
+    "deflated-majorant",
     "raw-domain",
     "epsilon-domain",
     "root-disks",
@@ -158,9 +185,9 @@
     "eta_power": "0"
   },
   "normalized_stability_box": {
-    "coefficient": "1/102844034832575377634685573909834406561420991602098741459288064",
+    "coefficient": "1/215679573337205118357336120696157045389097155380324579848828881993728",
     "delta_power": 0,
-    "eta_power": "3/2"
+    "eta_power": "0"
   },
   "normalized_tail_inverse_majorant": {
     "coefficient": "1024",
@@ -170,11 +197,12 @@
   "polynomial_epsilon_square_majorant": "21196276383578867492133645/264452523040700131966976",
   "proof_trust_boundary": "ordinary root continuation/divisibility/Cauchy/contraction/Rouche/Taylor proof remains unformalized",
   "quarter_curvature_coefficient_ball": {
-    "coefficient": "1/176897542887905875976141288310075122845717651089066856992991559823202278999045554315868369132878454432213583678729794732073468671269824205477075722966192905003181589000732075010141311018984309108660760024374857138986626655202581289584330815662551505429948500306924970945521177758753536387889091967402227189302985551606251888329265108388312443080786477302401030563018192641505396465669423636375819828869973876440116388277012474707154666672205576635258806894095235155936828145586381650129072363349310997887317202316333607766551740054346667052272387315688464694851244392448",
+    "coefficient": "1/15048778649098708900024591334476113300977322584816945731700558880122683541322076177782007219047710981075054947716136472064126077643824238840065967471547556631560845937254371164250279660518119161387932318441601269076015902051059415639302737237176005947674459708871461936685990491668258704528004116902095445209142907238410945246315083832742911528263323025464230244084170860858180649908473861473732904002152903343524599316744998729600734613976276435145967459880414992210979426610665493516790262296298203742913223142110136307331732133567798248592543027545063446994685630981451647656652367955517092809805578371072",
     "delta_power": 0,
-    "eta_power": "25"
+    "eta_power": "13"
   },
   "radial_input_record_sha256": "701c0b9d4e05a90aa9b4cb64385e6d93fef6095418baef16917ccbd0b8e9e244",
+  "raw_and_eliminated_deflated_objective_bound": 67108864,
   "raw_complex_radius": "1/64",
   "raw_dimension": 16,
   "role": "researcher",

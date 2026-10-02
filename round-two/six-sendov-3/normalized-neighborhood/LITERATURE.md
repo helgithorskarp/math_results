@@ -59,8 +59,9 @@ nonlinear bounds and collision-safe coefficient entry at eta97.
 Its Cauchy/contraction/Taylor organization and coefficient entry retain
 explicit credit; full original certificate is reproduced as a validation
 baseline. The new joint epsilon-domain bound and normalized eta-free
-inverse improve its entry power to eta25. A positive eta0 coefficient
-radius and quantified deflated G remain outside both statements.
+inverse and new deflated-objective majorant improve entry to eta13 and
+give a uniform normalized stability collar. A positive physical eta0
+coefficient radius remains outside the statement.
 
 [9307](../../six-sendov-1/energy-phase-routing/PROOF.md), source
 6b6a8c755c6e565fee9df0cb15899a29563069f1, concerns antipodal reciprocal

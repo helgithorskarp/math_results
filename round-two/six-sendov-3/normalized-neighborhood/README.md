@@ -7,15 +7,15 @@ uniform normalized normal/Jacobian bounds, and an explicit all-feasible
 coefficient radius for the known monic boundary branch at a=1-eta.
 For every0<eta<=1/65536 and0<=k<1/2-33eta/16, write
 delta=1/2-33eta/16-k. Coefficient maximum distance at most
-`delta^6 2^-1873 eta^25` implies the literal twelve-coordinate energy
+`delta^6 2^-1999 eta^13` implies the literal twelve-coordinate energy
 penalty k eta^2D and four actual original-root slack penalty1/4 each.
-At k1/4 the simpler sufficient radius is `2^-1891 eta^25`.
-The raw sixteen-moment radius is `delta 2^-301 eta^2`.
+At k1/4 the simpler sufficient radius is `2^-2017 eta^13`.
+The raw sixteen-moment radius is `delta 2^-322`.
 
 The primitive expansion/removable normal chart is prior8921/8955;
 branch/sector/radial premises are credited. The new quantitative domain
 removes the eta powers of9315's raw inverse, improving its eta97 entry
-power. Review9335 independently confirms9267, not either numerical-radius
+power to eta13, with an eta-independent normalized stability box. Review9335 independently confirms9267, not either numerical-radius
 theorem. New radius proof is ordinary, unformalized, independently unreviewed.
 The six coincident small criticals are included without analytic labelling.
 Elementary branch-relative original/critical energy entry comparisons and
@@ -31,7 +31,7 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 BLIS_NUM_THREADS=1 NU
 The checker verifies61 unchanged public input-file hashes, recomputes the
 whole radial/cubic arithmetic, and compares every exact field of
 [expected.json](expected.json). It checks covered scalar budgets rather
-than sampling eta. Twelve mathematically damaged budgets reject;
+than sampling eta. Fourteen mathematically damaged budgets reject;
 missing/malformed/altered external fixtures reject in both modes.
 `--fixture PATH` selects a copied fixture; `--freeze` regenerates a
 development fixture and is not validation of new evidence.
@@ -39,8 +39,8 @@ development fixture and is not validation of new evidence.
 baseline replay and serial45-second/native1 resource records.
 
 The analytic root/parity/Cauchy/contraction/Taylor/Rouche bridges remain
-written mathematics outside the checker. The coefficient and stability
-radii still vanish at eta0. No quantified deflated-objective bound,
+written mathematics outside the checker. The physical coefficient radius still vanishes at eta0, while normalized
+stability radii are uniform for a fixed positive k-gap. No
 unrestricted global entry, optimal endpoint attainment or first-power
 conjecture resolution is claimed. [LITERATURE.md](LITERATURE.md) records
 scope and primary sources; [provenance.json](provenance.json) records credits.

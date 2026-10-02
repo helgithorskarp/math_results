@@ -3,7 +3,7 @@
   "role": "researcher",
   "date": "2026-10-02",
   "proof_status": "complete ordinary analytic proof with covered exact constants; unformalized and new radius independently unreviewed",
-  "new_scope": "fixed joint complex normalized normal domain; eta-independent tail inversion; numerical eta25 coefficient-local entry including critical collisions",
+  "new_scope": "fixed joint normalized domain, explicit raw/eliminated deflated objective bound, uniform positive normalized stability box and eta13 coefficient-local entry",
   "sources": [
     {
       "graph_height": "9267",
@@ -121,9 +121,9 @@
   "eta_range": "0<eta<=1/65536",
   "coefficient_range": "0<=k<1/2-33eta/16",
   "delta": "1/2-33eta/16-k",
-  "raw_parameter_radius": "delta*2^-301*eta^2",
-  "coefficient_radius": "delta^6*2^-1873*eta^25",
-  "quarter_coefficient_radius": "2^-1891*eta^25",
+  "raw_parameter_radius": "delta*2^-322",
+  "coefficient_radius": "delta^6*2^-1999*eta^13",
+  "quarter_coefficient_radius": "2^-2017*eta^13",
   "slack_metric": "(1-|Z_i|^2)/2",
   "small_metric": "sum h_j^2+sum(u_j-xbranch)^2",
   "resources": {
@@ -133,8 +133,7 @@
     "scope_unchanged": true
   },
   "not_established": [
-    "positive eta0 coefficient/stability radius",
-    "quantified deflated objective G",
+    "positive physical eta0 coefficient radius",
     "global all-competitor entry",
     "unrestricted first-power endpoint",
     "supremum attainment"
@@ -161,5 +160,14 @@
       "stderr": "",
       "peak_child_kib": 20060
     }
-  ]
+  ],
+  "normalized_stability_box": "2^-227",
+  "normalized_free_radius": "delta*2^-320",
+  "raw_and_eliminated_deflated_objective_bound": "2^26",
+  "same_pass_credited_eta25_intermediate": {
+    "source_commit": "e16936844d95419e23163767f400c2e75a8fcbc8",
+    "canonical_record_sha256": "335f0aefe7fb92be80c7d06b8b84dcb5444864c7c7b3a2b376449aeff07b6e98",
+    "normal_O_complete_agreement": true,
+    "final_theorem_strictly_strengthens_it_on_entire_positive_interval": true
+  }
 }

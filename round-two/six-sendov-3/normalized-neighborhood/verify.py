@@ -35,8 +35,8 @@ def main():
     canonical=json.dumps(r,sort_keys=True,separators=(',',':')).encode()
     print(json.dumps({'status':'PASS','record_sha256':sha256(canonical).hexdigest(),'exact_predicates':len(r['checks']),
         'mathematical_damage_rejections':len(r['mathematical_damage_rejections']),'input_files':61,
-        'parameter_radius':'delta*2^-301*eta^2','coefficient_radius':'delta^6*2^-1873*eta^25',
-        'quarter_coefficient_radius':'2^-1891*eta^25','complex_eta_radius':'1/1024','complex_raw_radius':'1/64',
+        'parameter_radius':'delta*2^-322','coefficient_radius':'delta^6*2^-1999*eta^13',
+        'quarter_coefficient_radius':'2^-2017*eta^13','complex_eta_radius':'1/1024','complex_raw_radius':'1/64',
         'eta_max':'1/65536','ordinary_analytic_bridges':'unformalized; new radius independently unreviewed'},sort_keys=True))
 
 if __name__=='__main__':

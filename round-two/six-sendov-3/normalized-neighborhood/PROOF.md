@@ -6,13 +6,13 @@ unformalized and independently unreviewed at publication.
 
 The new estimates give a joint complex original-root domain and normalized
 normal bounds through eta0, removing eta powers from the quantitative tail
-inverse. They improve9315's coefficient-radius power from eta97 to eta25.
+inverse. They give a uniform normalized stability box and improve9315's coefficient-radius power from eta97 to eta13.
 The primitive jet, removable chart and objective deflation were already
 proved in [8921](../analytic-boundary/PROOF.md), independently confirmed
 within its stated premises by [8955](../../six-reviewer-1/analytic-minimizer-audit/REVIEW.md).
-Those structural facts are credited here, not claimed new. The argument
-below bounds the undeflated objective directly. It supplies no effective
-third-derivative bound on the deflated objective G.
+Those structural facts are credited here, not claimed new. The new joint
+domain also quantifies the raw deflated objective; composition with the
+complete normalized inverse bounds its eliminated derivatives uniformly.
 
 [9335](../../six-reviewer-3/radial-slack-audit/REVIEW.md) now independently
 confirms9267's pointwise all-feasible theorem, including the individual
@@ -47,11 +47,11 @@ Set
     L=2^10, B1=2^27, B2=2^39,
     s=1/(8 L B2)=2^-52,
     d=1/(64 L^2 B1 B2)=2^-92,
-    b=eta^(3/2) d^2/2^22,
-    R=delta eta^2 d^3/2^23=delta 2^-299 eta^2,
-    t=R/4=delta 2^-301 eta^2,
-    ccrit=eta^2 t/2^10=delta 2^-311 eta^4,
-    ccoef=eta ccrit^6/2^7=delta^6 2^-1873 eta^25.       (1)
+    b=d^2/2^43=2^-227,
+    R=delta d^3/2^44=delta 2^-320,
+    t=R/4=delta 2^-322,
+    ccrit=eta^2 t/2^10=delta 2^-332 eta^2,
+    ccoef=eta ccrit^6/2^7=delta^6 2^-1999 eta^13.       (1)
 
 For six free pairs h,u and four heavy moments w=(y,T,V,M) define
 
@@ -87,12 +87,13 @@ in any order; p need not be real or have conjugate criticals.
 
 For k=1/4 it suffices that
 
-    max_(0<=j<=8)|c_j(p)-c_j(p0)|<=2^-1891 eta^25.     (5)
+    max_(0<=j<=8)|c_j(p)-c_j(p0)|<=2^-2017 eta^13.     (5)
 
-This gives a strict coefficient-local minimum. All these stability/entry
-radii shrink with eta. The fixed complex domain and uniform d,s describe
-the normalized analytic chart, not a uniform positive coefficient or free
-stability collar at eta0.
+This gives a strict coefficient-local minimum. The normalized radii b,s,d and R/delta,t/delta are independent of eta.
+For a fixed positive k-gap (in particular k1/4) they give a uniform positive
+normalized stability box over the whole positive eta window. The physical
+coefficient entry still shrinks at eta0; the limiting critical parametrization
+collapses there, so no positive physical coefficient radius is asserted.
 
 ## 2. Precise credited inputs
 
@@ -271,8 +272,45 @@ On(9), each square-bracketed Q satisfies
 `|Q-1|<=10|eta|+9|eta|^2<1/2`. The chosen reciprocal square root is
 holomorphic and of modulus less than2, so `|F|<16<32`.
 For real parameters this equals the literal first-power reciprocal sum,
-and every critical distance exceeds1/2. No quantified bound on the
-already credited deflated G is required below.
+and every critical distance exceeds1/2. The first objective coefficient and fixed-root radials from(17) are
+
+    F=8+eta[8+U-H/2]+O(eta^2),
+    beta_k(0,v)=-1+(tau_k-1)U/8+(1-tau_k^2)H/7,
+    tau3=-1/2, tau4=-c.
+
+The credited initial individual duals are
+
+    mu30=26/9-2c/9-4c^2/9, mu40=(2c-1)/3,
+    C=8-2(mu30+mu40).
+
+Their exact identities -2 sum mu_k(tau_k-1)/8=1 and
+-2 sum mu_k(1-tau_k^2)/7=-1/2 prove, for EVERY complex raw v,
+
+    8+U-H/2=C-2 mu0 dot beta(0,v).                  (20a)
+
+The limiting sum is positive and <4, and 0<C<8. These coefficient/dual
+identities are old8921 data, not a new expansion or limiting constant.
+Define on the raw joint domain
+
+    Graw(eta,v)=[F(eta,v)-8-eta(C-2mu0 dot beta(eta,v))]/eta^2.   (20b)
+
+The numerator and its first eta derivative vanish identically at eta0
+by(20a). Hence this quotient is jointly holomorphic with a removable
+singularity on the ENTIRE |eta|<1/1024 raw-rho domain. Its undivided
+numerator is bounded by
+
+    32+8+(1/1024)[8+2*4*2^11]<64.
+
+Maximum modulus after the known order-two eta zero now gives the NEW
+uniform numerical bound
+
+    |Graw|<=64/(1/1024)^2=2^26.                    (20c)
+
+This deflates before any tail elimination. Consequently we do not need
+a complex-eta extension of the moving branch or its inverse to retain
+this majorant after fixed-eta tail elimination below. The prior qualitative
+deflation keeps its credit; the covered(20c) and its quantitative use are
+new.
 
 ## 5. The uniform quantitative normalized inverse
 
@@ -319,24 +357,30 @@ Hessian at the branch. No old nonlinear collar is imported.
 
 ## 6. Complete elimination, Taylor estimates and feasible radial integration
 
-Let H(z,beta,gamma)=F(v(z,beta,gamma)). It is bounded by32 on the full
-sixteen-target d-polydisk. Cauchy on the inner d/2-polydisk gives
+Let G(z,beta,gamma)=Graw(eta,v(z,beta,gamma)) at each fixed positive eta.
+It is holomorphic and bounded by2^26 on the full sixteen-target d-polydisk,
+by(20c) and the complete inverse. Put H=F after the same elimination:
 
-    ||D^2 H||<=K2=2^16 d^-2,
-    ||D^3 H||<K3=2^23 d^-3.                        (23)
+    H=8+eta(C-2mu0 dot beta)+eta^2 G.
+
+Cauchy on the inner d/2-polydisk gives
+
+    ||D^2 G||<=K2=2^37 d^-2,
+    ||D^3 G||<K3=2^44 d^-3.                        (23)
 
 These derivatives are AFTER every heavy variable has been solved; no
 unevaluated implicit derivative or partial Taylor polynomial is used.
 Euclidean unit free directions have maximum norm at most1, so K3 also
-bounds all required zero-slack third directional derivatives.
+bounds all zero-slack third directional derivatives of the deflated G.
+Those of the physical objective are bounded by eta^2 K3.
 
 On `||z-z0||_2<=R`, `||(beta,gamma)||_infty<=b`, we have R<=b<d/2.
-Each partial H_beta or H_gamma changes by at most K2 b from its branch
-value. The actual individual alpha derivatives obey the chain rule
+Each partial G_beta or G_gamma changes by at most K2 b from its branch
+value. The actual individual alpha derivatives obey
 
-    H_alpha_k^±=H_beta_k/(2eta)±H_gamma_k/(2eta^(3/2)).          (24)
+    H_alpha_k^±=-mu0_k+(eta/2)G_beta_k±(sqrt(eta)/2)G_gamma_k.   (24)
 
-Their variation is therefore at most `K2 b eta^(-3/2)=1/64`.
+Their variation is at most [(eta+sqrt(eta))/2]K2 b<=K2 b=1/64.
 The individual center derivatives from9267 are -mu_k, so by(6)
 
     -H_alpha_k^±>9/32-1/64=17/64>1/4.               (25)
@@ -350,10 +394,10 @@ Integrating the individual gradients(25) yields
 
 For f(z)=H(z,0,0), stationarity and(8),(23) give
 
-    f(z)-F0>=L_eta eta^2D-(K3/6)||z-z0||_2^3
+    f(z)-F0>=eta^2[L_eta D-(K3/6)||z-z0||_2^3]
             >=(L_eta-delta/6)eta^2D>=k eta^2D.       (27)
 
-Here `K3 R=delta eta^2` exactly. Combining(26)-(27) proves(4).
+Here `K3 R=delta` exactly. Combining(26)-(27) proves(4).
 All gradient, Taylor and feasible segments lie in the same certified
 domains. This argument does not assert the optimal local endpoint is
 attained on our box.
@@ -403,7 +447,7 @@ V=sum_all h/eta and M=sum_all h*u. Using branch |u|,|h|<2 gives
 The free changes are <t as well. The positive heavy ordering recovers(2)
 exactly, and monicity plus p(a)=0 recovers the anchored p exactly. Thus
 every polynomial in the coefficient ball lies in the raw t-box. This
-proves the corollary with `ccoef=delta^6 2^-1873 eta^25`.
+proves the corollary with `ccoef=delta^6 2^-1999 eta^13`.
 For k=1/4, delta>1/8, giving(5). Equality in(4) at this positive k forces
 D=0 and all sigma0; tail uniqueness then gives p=p0.
 
@@ -496,7 +540,8 @@ multiset Rouche completeness, moment inverse and actual feasible segment
 are proved above outside a formal proof kernel. The generic jet/parity
 structure, all branch/curvature/radial premises and old collision-safe
 entry receive explicit prior credit. The new contribution is the joint
-quantitative majorants and the resulting eta25 numerical coefficient radius.
-Neither a uniform positive stability collar through eta0 nor an effective
+quantitative majorants and a uniform positive normalized stability collar for every fixed positive
+k-gap and the resulting eta13 numerical coefficient radius.
+No positive physical coefficient radius through eta0, effective
 all-competitor concentration entry, whole-window global minimum, endpoint
 attainment or unrestricted first-power solution is established.
