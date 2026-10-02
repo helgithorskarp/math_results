@@ -1,0 +1,224 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "python": "CPython3.11.2 stdlib only",
+  "target": {
+    "height": 9251,
+    "reference": "bafkreignuqfdr6llbntn6s6gp7qpfq4fn6oiwzwsofyt7wssxopp3mihgy",
+    "source_commit": "1868799e4a622fd6442485335891adace47a5960"
+  },
+  "first_complete_engine_sha256": "2dbd9ceb298edaad67cacd3c8b094f795744474801d2ca9196bdd7d5f479b175",
+  "first_sealed_whole_record_bytes": 1082741,
+  "first_sealed_whole_record_sha256": "283bc117e5f9a53bb28ec19294619025ab65fb8d6441f432fc854c23cfc6c6ee",
+  "independent_seal_before_author_executable_expected_or_certificate_inspection": true,
+  "defining_proof_and_instance_visible": true,
+  "search_input": "57 literal core words only; no pair/maximum-certificate or expected answer is search input",
+  "author_program_imported_by_independent_engine": false,
+  "independent_normal_optimized_whole_records_byte_equal": true,
+  "independent_normal_optimized_controls_byte_equal": true,
+  "independent_runs": [
+    {
+      "name": "pilot",
+      "seconds": 3.535084586997982,
+      "guard_seconds": 45,
+      "returncode": 0,
+      "peak_rss_upper_kib": 22752
+    },
+    {
+      "name": "independent-full",
+      "seconds": 76.90797717199894,
+      "guard_seconds": 180,
+      "returncode": 0,
+      "peak_rss_upper_kib": 25728
+    },
+    {
+      "name": "independent-optimized",
+      "seconds": 59.33761664101621,
+      "guard_seconds": 180,
+      "returncode": 0,
+      "peak_rss_upper_kib": 28140
+    },
+    {
+      "name": "controls",
+      "seconds": 10.653009626024868,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "peak_rss_upper_kib": 31048
+    },
+    {
+      "name": "controls-optimized",
+      "seconds": 12.423103326000273,
+      "guard_seconds": 60,
+      "returncode": 0,
+      "peak_rss_upper_kib": 32432
+    }
+  ],
+  "public_cold_modes": {
+    "normal": {
+      "actual_agent": "six-reviewer-4",
+      "complete": true,
+      "entire_compact_readout_agrees": true,
+      "python_version": "3.11.2",
+      "receipts": [
+        {
+          "fixed_guard_seconds": 180,
+          "name": "complete",
+          "returncode": 0,
+          "seconds": 58.85372459399514
+        },
+        {
+          "fixed_guard_seconds": 60,
+          "name": "controls",
+          "returncode": 0,
+          "seconds": 13.810161270957906
+        }
+      ],
+      "role": "independent mathematical reviewer",
+      "whole_record_sha256": "283bc117e5f9a53bb28ec19294619025ab65fb8d6441f432fc854c23cfc6c6ee",
+      "witnesses": {
+        "standalone84_full69_codes": 84,
+        "standalone_exact55_size68": 66,
+        "standalone_exact56_size68": 1
+      }
+    },
+    "optimized": {
+      "actual_agent": "six-reviewer-4",
+      "complete": true,
+      "entire_compact_readout_agrees": true,
+      "python_version": "3.11.2",
+      "receipts": [
+        {
+          "fixed_guard_seconds": 180,
+          "name": "complete",
+          "returncode": 0,
+          "seconds": 57.91056084498996
+        },
+        {
+          "fixed_guard_seconds": 60,
+          "name": "controls",
+          "returncode": 0,
+          "seconds": 11.861361749994103
+        }
+      ],
+      "role": "independent mathematical reviewer",
+      "whole_record_sha256": "283bc117e5f9a53bb28ec19294619025ab65fb8d6441f432fc854c23cfc6c6ee",
+      "witnesses": {
+        "standalone84_full69_codes": 84,
+        "standalone_exact55_size68": 66,
+        "standalone_exact56_size68": 1
+      }
+    }
+  },
+  "complete_controls": {
+    "actual_transported_oracles": 3,
+    "complete_record_validated": true,
+    "damages_rejected": [
+      "self loop",
+      "asymmetric graph",
+      "boolean adjacency",
+      "negative forbidden mask",
+      "out-of-domain word",
+      "boolean word",
+      "duplicate word",
+      "intersecting words",
+      "universe gap",
+      "candidate gap",
+      "pair gap",
+      "duplicated pair",
+      "single gap",
+      "maximum tail gap",
+      "duplicated maximum tail",
+      "nonpositive count",
+      "boolean count",
+      "unsupported restoration equality"
+    ],
+    "positive_transports": 258,
+    "small_forbidden_domains": 33867,
+    "small_graphs_orders0_to5": 1100
+  },
+  "late_independent_literal_pair_certificate": {
+    "complete_independent_literal_paired_certificate_match": true,
+    "polynomial": [
+      1,
+      12,
+      38,
+      28,
+      5
+    ],
+    "switch_edges": 28,
+    "actual_input_pair_definitions_used_only_after_first_core_search_seal": true,
+    "complete84_physical_tail_sets_equal": true
+  },
+  "original_late_corroboration": {
+    "actual_agent": "six-reviewer-4",
+    "role": "independent mathematical reviewer",
+    "complete_original_normal_optimized_and_frozen": true,
+    "independent_whole_oracle_entrywise_agrees": true,
+    "independent_entire_candidate_domains_agree": 1596,
+    "independent_complete_positive_maximum_inventories_agree": 1596,
+    "actual_maximum_tails_compared": 134064,
+    "all84_literal69_codes_entrywise_agree": true,
+    "native_damages_per_mode": 11,
+    "original_expected_sha256": "17c1696f3a13c39ce23328a0da9acec0e448641fc3db29971b1a0b49fd979266",
+    "receipts": [
+      {
+        "name": "build-normal",
+        "seconds": 18.70305675099371,
+        "outer_guard": 90,
+        "returncode": 0,
+        "peak_rss_upper_kib": 30740
+      },
+      {
+        "name": "audit-normal",
+        "seconds": 15.865170756995212,
+        "outer_guard": 90,
+        "returncode": 0,
+        "peak_rss_upper_kib": 67756
+      },
+      {
+        "name": "provenance-normal",
+        "seconds": 0.10175163403619081,
+        "outer_guard": 90,
+        "returncode": 0,
+        "peak_rss_upper_kib": 67756
+      },
+      {
+        "name": "build-optimized",
+        "seconds": 19.206606977968477,
+        "outer_guard": 90,
+        "returncode": 0,
+        "peak_rss_upper_kib": 67756
+      },
+      {
+        "name": "audit-optimized",
+        "seconds": 16.075623746030033,
+        "outer_guard": 90,
+        "returncode": 0,
+        "peak_rss_upper_kib": 67756
+      },
+      {
+        "name": "provenance-optimized",
+        "seconds": 0.22946284798672423,
+        "outer_guard": 90,
+        "returncode": 0,
+        "peak_rss_upper_kib": 67756
+      },
+      {
+        "name": "compare",
+        "seconds": 0.4534135810099542,
+        "outer_guard": 90,
+        "returncode": 0,
+        "peak_rss_upper_kib": 67756
+      }
+    ],
+    "reader_of_original_executables_after_first_independent_seal": true,
+    "author_program_imported_by_independent_engine": false
+  },
+  "ordinary_bridges": "unformalized exact core/oracle/independent-set/half-table count/component/coordinate-identification reductions",
+  "numerical_mathematical_imports": [],
+  "resource_policy": "unchanged1CPU2GiB, native numeric threads1, one serial CPU-intensive child; fixed180s independent child/45s fifty-pair chunks/60s controls; native unchanged60s internal and90s outer corroboration guards",
+  "guard_hit": false,
+  "scope": "confirms9251 only; prior7540 bound/component independently recomputed; new exact55/56 classification; no radius-five/involution/global-endpoint verdict",
+  "corrected_compact_adapter": "hash uses original whole-record bytes, avoiding JSON integer-key reencoding; mathematical whole record unchanged",
+  "generated_data": "complete1.08MB record, author traces and half tables regenerate locally and are excluded from source"
+}
