@@ -1,0 +1,111 @@
+{
+  "agent": "six-covering-1",
+  "role": "researcher",
+  "utc": "2026-10-02T00:03:56.866533+00:00",
+  "claim": "A universal104-hole bound and no18-plus8 first-stage target for any144 phases",
+  "proof_status": "complete exact finite author replay; written bridge unformalized; no reviewer verdict",
+  "python": "3.11.2",
+  "dependencies": "Python>=3.10 standard library only",
+  "case_counts": {
+    "hole_mass": 56,
+    "singleton": 80,
+    "pairs": 8
+  },
+  "target_pairs": 144,
+  "original_phase_combinations": 280752,
+  "physical_anchor_phase_checks": 2046,
+  "anchor_translations": 72,
+  "resource_scope": {
+    "cpu": 1,
+    "memory_gib": 2,
+    "native_threads": 1,
+    "intensive_jobs_at_once": 1
+  },
+  "source_hashes": {
+    ".gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+    "README.md": "2c36e27ab2dd4b018c7431dd3bd5389b190cb8d0d6685b141bfd0a5553f26404",
+    "audit.py": "eb11640b1eea694c657a7df6920929413c5a1af43f33cba7caced9c004350aeb",
+    "certificate.json": "ca0ed96f2a62c00c0118113c8c021b23aac018f196166b01dc692b33379d1a26",
+    "check.py": "cb197a806386d4e75f664ed90bb9037b08065fab91e20ac5ae6f389cd62a9c96",
+    "controls.py": "d45b04c00414969fe4088a81267e04b945145ed6adbc6059ea93ff5dddb930c4",
+    "expected.json": "b3be87d1b82d0d9e949355be4cc5e4325d136ce9ea1da06d8ed4cdbcd8d70b0f",
+    "proof.md": "aad6b3579e621d58f4ecf4ac2b78d92ab6f6c2360043b63fa12fdff70643f46b"
+  },
+  "expected_frozen_before_audit": {
+    "agent": "six-covering-1",
+    "role": "researcher",
+    "utc": "2026-10-01T23:57:19.897412+00:00",
+    "expected_sha256": "b3be87d1b82d0d9e949355be4cc5e4325d136ce9ea1da06d8ed4cdbcd8d70b0f",
+    "certificate_sha256": "ca0ed96f2a62c00c0118113c8c021b23aac018f196166b01dc692b33379d1a26",
+    "frozen_before_independent_audit": true,
+    "status": "GOLDEN_FROZEN"
+  },
+  "runs": [
+    {
+      "name": "check",
+      "utc": "2026-10-02T00:01:45.528160+00:00",
+      "status": "RETURNED",
+      "exit_code": 0,
+      "seconds": 0.16538349399343133,
+      "deadline_seconds": 45,
+      "max_rss_kib": 16224,
+      "script_sha256": "cb197a806386d4e75f664ed90bb9037b08065fab91e20ac5ae6f389cd62a9c96"
+    },
+    {
+      "name": "check-optimized",
+      "utc": "2026-10-02T00:01:46.018969+00:00",
+      "status": "RETURNED",
+      "exit_code": 0,
+      "seconds": 0.3216722260112874,
+      "deadline_seconds": 45,
+      "max_rss_kib": 16204,
+      "script_sha256": "cb197a806386d4e75f664ed90bb9037b08065fab91e20ac5ae6f389cd62a9c96"
+    },
+    {
+      "name": "audit",
+      "utc": "2026-10-01T23:57:20.490634+00:00",
+      "status": "RETURNED",
+      "exit_code": 0,
+      "seconds": 0.4380078320391476,
+      "deadline_seconds": 45,
+      "max_rss_kib": 16112,
+      "script_sha256": "eb11640b1eea694c657a7df6920929413c5a1af43f33cba7caced9c004350aeb"
+    },
+    {
+      "name": "audit-optimized",
+      "utc": "2026-10-02T00:01:46.783960+00:00",
+      "status": "RETURNED",
+      "exit_code": 0,
+      "seconds": 0.6066246459959075,
+      "deadline_seconds": 45,
+      "max_rss_kib": 16428,
+      "script_sha256": "eb11640b1eea694c657a7df6920929413c5a1af43f33cba7caced9c004350aeb"
+    },
+    {
+      "name": "controls",
+      "utc": "2026-10-01T23:58:21.786155+00:00",
+      "status": "RETURNED",
+      "exit_code": 0,
+      "seconds": 1.5741948329959996,
+      "deadline_seconds": 45,
+      "max_rss_kib": 16204,
+      "script_sha256": "d45b04c00414969fe4088a81267e04b945145ed6adbc6059ea93ff5dddb930c4"
+    },
+    {
+      "name": "controls-optimized",
+      "utc": "2026-10-02T00:01:48.653856+00:00",
+      "status": "RETURNED",
+      "exit_code": 0,
+      "seconds": 1.719983505026903,
+      "deadline_seconds": 45,
+      "max_rss_kib": 17492,
+      "script_sha256": "d45b04c00414969fe4088a81267e04b945145ed6adbc6059ea93ff5dddb930c4"
+    }
+  ],
+  "semantic_damages_rejected": 12,
+  "normal_and_optimized_evidence_equal": true,
+  "solver_status_used": false,
+  "global_L_min_8_bound_changed": false,
+  "large_external_artifact_required": false,
+  "mathematical_numerical_dependencies": []
+}
