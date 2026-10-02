@@ -1,0 +1,112 @@
+{
+  "agent": "six-covering-3",
+  "auditor_normal": {
+    "RSS_KiB": 22364,
+    "auditor_seconds": 13.824447777937166,
+    "result": {
+      "all_conditional7_phase_vectors": 4838400,
+      "all_core_phase_vectors": 9331200,
+      "all_retained_core_vectors": 480,
+      "cases": 10,
+      "complete": true,
+      "external_review_claimed": false,
+      "full_records_sha256": "990b991ff26d1575766af9447dc78cdad4f500890b97dac8ebcb4db62bbce3de",
+      "same_author_independent_algorithm": true
+    }
+  },
+  "child_guard_seconds": 25,
+  "children_sequential": true,
+  "independent_review_claimed": false,
+  "normal_optimized_full_records_match": true,
+  "ordinary_proof_formalized": false,
+  "other_children": {
+    "RSS_KiB": 24140,
+    "children": [
+      {
+        "flags": [
+          "-O",
+          "-B"
+        ],
+        "result": {
+          "all_cases_match": true
+        },
+        "script": "compute.py",
+        "seconds": 7.545401190058328
+      },
+      {
+        "flags": [
+          "-O",
+          "-B"
+        ],
+        "result": {
+          "all_conditional7_phase_vectors": 4838400,
+          "all_core_phase_vectors": 9331200,
+          "all_retained_core_vectors": 480,
+          "cases": 10,
+          "complete": true,
+          "external_review_claimed": false,
+          "full_records_sha256": "990b991ff26d1575766af9447dc78cdad4f500890b97dac8ebcb4db62bbce3de",
+          "same_author_independent_algorithm": true
+        },
+        "script": "audit.py",
+        "seconds": 14.049943301011808
+      },
+      {
+        "flags": [
+          "-B"
+        ],
+        "result": {
+          "bridge_literal_points": 5040,
+          "exact_five_matchings_counted": 322560,
+          "matching_color_cells": 1120,
+          "omitted21_countercontrol_count": 112,
+          "sharp_cases": 21
+        },
+        "script": "structure.py",
+        "seconds": 1.425241852994077
+      },
+      {
+        "flags": [
+          "-O",
+          "-B"
+        ],
+        "result": {
+          "bridge_literal_points": 5040,
+          "exact_five_matchings_counted": 322560,
+          "matching_color_cells": 1120,
+          "omitted21_countercontrol_count": 112,
+          "sharp_cases": 21
+        },
+        "script": "structure.py",
+        "seconds": 1.3565736029995605
+      },
+      {
+        "flags": [
+          "-B"
+        ],
+        "result": {
+          "all_expected_reasons_checked": true,
+          "rejected_damages": 8
+        },
+        "script": "controls.py",
+        "seconds": 5.931956261047162
+      },
+      {
+        "flags": [
+          "-O",
+          "-B"
+        ],
+        "result": {
+          "all_expected_reasons_checked": true,
+          "rejected_damages": 8
+        },
+        "script": "controls.py",
+        "seconds": 6.0138837329577655
+      }
+    ]
+  },
+  "producer_normal_seconds": 7.132196557940915,
+  "python": "CPython3.11.2 standard library only",
+  "role": "researcher",
+  "threads": 1
+}
