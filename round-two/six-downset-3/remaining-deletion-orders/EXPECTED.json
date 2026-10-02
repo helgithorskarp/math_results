@@ -1,0 +1,1831 @@
+{
+  "agent": "six-downset-3",
+  "calibration": {
+    "agent": "six-downset-3",
+    "coverage": "ALL original ordered pairs; four complete coefficient Gram forms plus published q24 point",
+    "fixtures": [
+      {
+        "N": 307,
+        "all_four_times_529_entries_match": true,
+        "forms_digest": "a12b2e5d3167e41124635f64e344ee1638078b3f8434d09ca88ff4533002bbfb",
+        "k": 5,
+        "orbit_sizes": [
+          14,
+          91,
+          5,
+          70,
+          10,
+          1,
+          14,
+          5,
+          1,
+          14,
+          5,
+          1,
+          14,
+          5,
+          1,
+          14,
+          5,
+          1,
+          14,
+          5,
+          1,
+          14,
+          1
+        ],
+        "original_pair_count": 93636,
+        "q": 19
+      },
+      {
+        "N": 446,
+        "all_four_times_529_entries_match": true,
+        "forms_digest": "b119350f1f554bc163fbc3b4657c2056a4765d0582ed2ffb6d70d689065745c2",
+        "k": 6,
+        "orbit_sizes": [
+          18,
+          153,
+          6,
+          108,
+          15,
+          1,
+          18,
+          6,
+          1,
+          18,
+          6,
+          1,
+          18,
+          6,
+          1,
+          18,
+          6,
+          1,
+          18,
+          6,
+          1,
+          18,
+          1
+        ],
+        "original_pair_count": 198025,
+        "published_q24_full_point_digest": "a95fa6aeedb97d2d164547f7c62cf7c0aabd18e526282fe17fac5266b38db7a6",
+        "q": 24
+      }
+    ],
+    "role": "researcher",
+    "semantic_damages_rejected": 4,
+    "status": "exact validation, not new theorem"
+  },
+  "complete_classification": {
+    "ansatz_only_not_arbitrary_H_exclusions": true,
+    "deletions": "ALL Z subset W, sizek",
+    "imports": "9478 negative ALLq<=b-6 and9546 positive ALLq>=b-4",
+    "k_domain": [
+      5,
+      24
+    ],
+    "known_k5_k6_not_claimed_new": true,
+    "negative_boundary_cutoff_b_minus4": [
+      5,
+      6,
+      7,
+      9,
+      11,
+      12,
+      14,
+      15,
+      17,
+      20,
+      23
+    ],
+    "new_k_coverage": [
+      7,
+      24
+    ],
+    "positive_boundary_cutoff_b_minus5": [
+      8,
+      10,
+      13,
+      16,
+      18,
+      19,
+      21,
+      22,
+      24
+    ],
+    "q_domain": "ALL q>=max(4,k)"
+  },
+  "complete_executable_inputs": [
+    {
+      "path": "variance-deletion-frontier/pins.py",
+      "sha256": "5800784f4d233cd5a2eb955eba5aaecb39fe50e8e96f5329cc29a29450f1f7f2"
+    },
+    {
+      "path": "variance-deletion-frontier/variance.py",
+      "sha256": "ac4622bd4e93d81db870e38bdfec8adceb62a470abb4224865d8f80182a388b7"
+    },
+    {
+      "path": "variance-deletion-frontier/point.py",
+      "sha256": "2a0748f98043bbf20e8bb7a7a6d37153fe5aad192bc532be23e9bcdf8c257fa6"
+    },
+    {
+      "path": "variance-deletion-frontier/algebra.py",
+      "sha256": "0e1d92ffc3341823351cbfb90fdbe2fbb3b955e76034de087b0878cbcac5ce02"
+    },
+    {
+      "path": "small-deletion-boundary/literal.py",
+      "sha256": "46218af58a0654279231ade1bc40106d9eb390b6c0b2ceee5f3c4c5b7bedbf39"
+    },
+    {
+      "path": "triangle-majority/exact.py",
+      "sha256": "e52c939bd67eabbcadea6e27c2cc5507fd1913189a63b8b5a3a79c1b8a89e6d0"
+    }
+  ],
+  "finite_boundary_cases": {
+    "agent": "six-downset-3",
+    "negative_mechanism": "9434 original all-real R-annihilating dual ONLY",
+    "positive_bridge": "9546 full complement/generic lower repair/actual empty lift; unformalized and no independent review",
+    "quantifiers": "integers5<=k<=24,q=b(k)-5 only; arbitrary Z transported by symmetry",
+    "records": [
+      {
+        "N": 282,
+        "Q0": "-126891185/110844216",
+        "U0_exact_PSD_check_failure": "negative Schur pivot",
+        "credited_dual_Delta": "3888215081/22629096",
+        "failed_check_is_not_ansatz_nonexistence": true,
+        "forms_digest": "c7d8bb6deced0d1c5e8165d7a4546c63dc11da9f3aa7dfa2a324515e8bfda74e",
+        "k": 5,
+        "m": "-104162044939/11647319616",
+        "q": 18,
+        "status": "credited9434 all-real ansatz exclusion",
+        "three_vector_Delta": "12920651568402/75212026549",
+        "three_vector_Q": "-784601496/1274780111"
+      },
+      {
+        "N": 416,
+        "Q0": "-91568355216/12536354677",
+        "U0_exact_PSD_check_failure": "negative Schur pivot",
+        "credited_dual_Delta": "507538865555/1833379933",
+        "failed_check_is_not_ansatz_nonexistence": true,
+        "forms_digest": "33d9428c1cef6201f80e7d24bac4b808a3c96b70971fe5c40c8816cff33d4a78",
+        "k": 6,
+        "m": "-372151596274/25102729575",
+        "q": 23,
+        "status": "credited9434 all-real ansatz exclusion",
+        "three_vector_Delta": "680493391501084/2458376942257",
+        "three_vector_Q": "-473458802558/66442620061"
+      },
+      {
+        "N": 610,
+        "Q0": "-4923608827/2829256878",
+        "U0_exact_PSD_check_failure": "negative Schur pivot",
+        "credited_dual_Delta": "209568114946/480834297",
+        "failed_check_is_not_ansatz_nonexistence": true,
+        "forms_digest": "e54c8f4e34991a33bb5bb46e67d00549f5347ac6b38940ca3bc56ac5a53a49ba",
+        "k": 7,
+        "m": "-1208255149/136060344",
+        "q": 29,
+        "status": "credited9434 all-real ansatz exclusion",
+        "three_vector_Delta": "7977047071437770/18303425156503",
+        "three_vector_Q": "-1547939773659/795801093761"
+      },
+      {
+        "N": 840,
+        "Q0": "6513974929958/1132319720035",
+        "U0_exact_PSD_rank": 23,
+        "credited_dual_Delta": "19420566970767/30784767475",
+        "forms_digest": "781ab373fb35798bfdc9469caf27b04baf127568c1d510064e58e91e7b0f83f3",
+        "k": 8,
+        "kappa": "1/1786880",
+        "m": "-182171544833/145161325925",
+        "new_beyond_9546_m_criterion": true,
+        "q": 35,
+        "repaired_fixed_cap_rank": 23,
+        "repaired_fixed_lower_rank": 22,
+        "status": "exact positive full-cap construction via credited9546 complement/repair/lift",
+        "t": "1/42885120",
+        "three_vector_Delta": "9913398845618803/15714756574935",
+        "three_vector_Q": "4454777921666/857168540451",
+        "whole_repaired_cap_floor": "3/1024",
+        "whole_zero_cap_floor": "1/256",
+        "zero_fixed_cap_floor": "1/256"
+      },
+      {
+        "N": 1059,
+        "Q0": "-5602309483783/1029056886000",
+        "U0_exact_PSD_check_failure": "negative Schur pivot",
+        "credited_dual_Delta": "15619515711499/19028418750",
+        "failed_check_is_not_ansatz_nonexistence": true,
+        "forms_digest": "bccc2d53b8febe9cb25a676d6a471d52f00a43585035beedc4db453e14dec290",
+        "k": 9,
+        "m": "-13189495661/1041648400",
+        "q": 40,
+        "status": "credited9434 all-real ansatz exclusion",
+        "three_vector_Delta": "248793929915546617/303097543744875",
+        "three_vector_Q": "-15313352782748/2424780349959"
+      },
+      {
+        "N": 1355,
+        "Q0": "2143703189356/713310611895",
+        "U0_exact_PSD_rank": 23,
+        "credited_dual_Delta": "106621311254284/98554026571",
+        "forms_digest": "b90eaf5d730e8bfeda22d8e8090323e022a78fa9b75f8ec946d9679841758d32",
+        "k": 10,
+        "kappa": "1/37240832",
+        "m": "-1616707443187/379724838570",
+        "new_beyond_9546_m_criterion": true,
+        "q": 46,
+        "repaired_fixed_cap_rank": 23,
+        "repaired_fixed_lower_rank": 22,
+        "status": "exact positive full-cap construction via credited9546 complement/repair/lift",
+        "t": "1/893779968",
+        "three_vector_Delta": "23318201142225766/21554117670657",
+        "three_vector_Q": "817549843046/452184286797",
+        "whole_repaired_cap_floor": "3/16384",
+        "whole_zero_cap_floor": "1/4096",
+        "zero_fixed_cap_floor": "1/4096"
+      },
+      {
+        "N": 1629,
+        "Q0": "-1634389962389/134043402000",
+        "U0_exact_PSD_check_failure": "negative Schur pivot",
+        "credited_dual_Delta": "13224153533147/9966521184",
+        "failed_check_is_not_ansatz_nonexistence": true,
+        "forms_digest": "c38a379e863dbdafe1da45bc1ec0cace2a6c04b11482e24d7e20417834230bbe",
+        "k": 11,
+        "m": "-5096437471873/258376295625",
+        "q": 51,
+        "status": "credited9434 all-real ansatz exclusion",
+        "three_vector_Delta": "6805404275827572165/5129006236771889",
+        "three_vector_Q": "-889620538096230/64924129579391"
+      },
+      {
+        "N": 1991,
+        "Q0": "-49980914413519/18061603926240",
+        "U0_exact_PSD_check_failure": "negative Schur pivot",
+        "credited_dual_Delta": "235291893941567/142268272960",
+        "failed_check_is_not_ansatz_nonexistence": true,
+        "forms_digest": "a5454716739f173575e7afafa565c29976bcab1424b4f5bc9c82c290ff4671f7",
+        "k": 12,
+        "m": "-4415284843549/423610157740",
+        "q": 57,
+        "status": "credited9434 all-real ansatz exclusion",
+        "three_vector_Delta": "62886055056601206/38024015852537",
+        "three_vector_Q": "-79325017703388/17283643569335"
+      },
+      {
+        "N": 2389,
+        "Q0": "571743984595724/66159953411895",
+        "U0_exact_PSD_rank": 23,
+        "credited_dual_Delta": "213786079195456/105999297705",
+        "forms_digest": "c4f9e57e362cf38f6c1a21717cf3ed5e32134831d071b158479f209daba9382c",
+        "k": 13,
+        "kappa": "1/6326272",
+        "m": "8560743394384/10304474239017",
+        "new_beyond_9546_m_criterion": false,
+        "q": 63,
+        "repaired_fixed_cap_rank": 23,
+        "repaired_fixed_lower_rank": 22,
+        "status": "exact positive full-cap construction via credited9546 complement/repair/lift",
+        "t": "1/151830528",
+        "three_vector_Delta": "66888618819491954577/33164820668897327",
+        "three_vector_Q": "2226832525428432/341905367720591",
+        "whole_repaired_cap_floor": "3/2048",
+        "whole_zero_cap_floor": "1/512",
+        "zero_fixed_cap_floor": "1/512"
+      },
+      {
+        "N": 2748,
+        "Q0": "-465001237187477/40247515882760",
+        "U0_exact_PSD_check_failure": "negative Schur pivot",
+        "credited_dual_Delta": "12934351800189/5511335434",
+        "failed_check_is_not_ansatz_nonexistence": true,
+        "forms_digest": "fa9f2cf0657993e465f310792ca682361fb355bcd957d631ece0cac8a80eaaed",
+        "k": 14,
+        "m": "-214711607774957/10915472079776",
+        "q": 68,
+        "status": "credited9434 all-real ansatz exclusion",
+        "three_vector_Delta": "424863439357486131/181035199202539",
+        "three_vector_Q": "-109077665674511/7795774128339"
+      },
+      {
+        "N": 3212,
+        "Q0": "117693693815172/139189298562847",
+        "U0_exact_PSD_check_failure": "negative Schur pivot",
+        "compact_exceptional_original_dual": {
+          "original_Delta": "40973507610/227",
+          "original_R": "0",
+          "original_U0": "-1118484/37"
+        },
+        "credited_dual_Delta": "1959552081410/705924739",
+        "failed_check_is_not_ansatz_nonexistence": true,
+        "forms_digest": "68baf13dc2258b44ae1d56689f2b457b8381f2d4e543ab78013e2e9b8af4172b",
+        "k": 15,
+        "m": "-4628415649352021/620682912061056",
+        "q": 74,
+        "status": "NEW original three-vector all-real ansatz exclusion",
+        "three_vector_Delta": "47856140532212612494/17240124888640927",
+        "three_vector_Q": "-143801893468984/75947686734101"
+      },
+      {
+        "N": 3712,
+        "Q0": "27819722105967/1826014247600",
+        "U0_exact_PSD_rank": 23,
+        "credited_dual_Delta": "2903937739142/896037275",
+        "forms_digest": "d8bf011074463f636dbe06ed213404d5e51603d5de699302d4451d7f655b47f5",
+        "k": 16,
+        "kappa": "1/7997440",
+        "m": "522802493569723/77655730488960",
+        "new_beyond_9546_m_criterion": false,
+        "q": 80,
+        "repaired_fixed_cap_rank": 23,
+        "repaired_fixed_lower_rank": 22,
+        "status": "exact positive full-cap construction via credited9546 complement/repair/lift",
+        "t": "1/191938560",
+        "three_vector_Delta": "1743900487820139317/538097996259355",
+        "three_vector_Q": "26792683599753/2196318352079",
+        "whole_repaired_cap_floor": "3/2048",
+        "whole_zero_cap_floor": "1/512",
+        "zero_fixed_cap_floor": "1/512"
+      },
+      {
+        "N": 4156,
+        "Q0": "-2250544603607456/226047826999575",
+        "U0_exact_PSD_check_failure": "negative Schur pivot",
+        "credited_dual_Delta": "159222365332308/43552558075",
+        "failed_check_is_not_ansatz_nonexistence": true,
+        "forms_digest": "2f12e659cf12ee72d3f9fdc513ef5d97cd9071d67c3ca9e554398e3aec0abc6e",
+        "k": 17,
+        "m": "-294368861201137/15676462780650",
+        "q": 85,
+        "status": "credited9434 all-real ansatz exclusion",
+        "three_vector_Delta": "331596575883884918/90702736363135",
+        "three_vector_Q": "-18561305167209/1395426713279"
+      },
+      {
+        "N": 4722,
+        "Q0": "812624279476592/149693052292875",
+        "U0_exact_PSD_rank": 23,
+        "credited_dual_Delta": "89351356423288213/21340855660215",
+        "forms_digest": "db931190e1526e0e20c84f5f8ff866829db91d99329537a979f13525bb5126f4",
+        "k": 18,
+        "kappa": "1/145260544",
+        "m": "-5886924963366667/1631499798392100",
+        "new_beyond_9546_m_criterion": true,
+        "q": 91,
+        "repaired_fixed_cap_rank": 23,
+        "repaired_fixed_lower_rank": 22,
+        "status": "exact positive full-cap construction via credited9546 complement/repair/lift",
+        "t": "1/3486253056",
+        "three_vector_Delta": "1811376860381273793637/432633460405761633",
+        "three_vector_Q": "5568065048264420/3112470938170947",
+        "whole_repaired_cap_floor": "3/32768",
+        "whole_zero_cap_floor": "1/8192",
+        "zero_fixed_cap_floor": "1/8192"
+      },
+      {
+        "N": 5324,
+        "Q0": "190416222085495867/8348978407200384",
+        "U0_exact_PSD_rank": 23,
+        "credited_dual_Delta": "1065559375920998/224145683183",
+        "forms_digest": "257495e3710fa3f3309a62ddf8282b285703fc6bb4bd4b274326828ddfec76dd",
+        "k": 19,
+        "kappa": "1/9668608",
+        "m": "6166921627766383/455228472072960",
+        "new_beyond_9546_m_criterion": false,
+        "q": 97,
+        "repaired_fixed_cap_rank": 23,
+        "repaired_fixed_lower_rank": 22,
+        "status": "exact positive full-cap construction via credited9546 complement/repair/lift",
+        "t": "1/232046592",
+        "three_vector_Delta": "201657526088940212692/42419706680675253",
+        "three_vector_Q": "194761020576271079/10318307030434521",
+        "whole_repaired_cap_floor": "3/2048",
+        "whole_zero_cap_floor": "1/512",
+        "zero_fixed_cap_floor": "1/512"
+      },
+      {
+        "N": 5853,
+        "Q0": "-96617707516097662/13091160998490297",
+        "U0_exact_PSD_check_failure": "negative Schur pivot",
+        "credited_dual_Delta": "123346313295884236/23477231589351",
+        "failed_check_is_not_ansatz_nonexistence": true,
+        "forms_digest": "ada7860434f51cfc66e7c3af2df1cf64cdb44899b1b65616e0b26170cf1dc85b",
+        "k": 20,
+        "m": "-1914491924415452/112851063326155",
+        "q": 102,
+        "status": "credited9434 all-real ansatz exclusion",
+        "three_vector_Delta": "1568220993270768996564/298489052795599063",
+        "three_vector_Q": "-11154152202359520/959771873940833"
+      },
+      {
+        "N": 6521,
+        "Q0": "240121467926133479/21838365778433292",
+        "U0_exact_PSD_rank": 23,
+        "credited_dual_Delta": "3109685938890920/528240916539",
+        "forms_digest": "d040039190a5b3544b8b2cfc127b2b182aaa6d5ebee7ef843508afe2622bca54",
+        "k": 21,
+        "kappa": "1/42999808",
+        "m": "554121608107147/469876867392150",
+        "new_beyond_9546_m_criterion": false,
+        "q": 108,
+        "repaired_fixed_cap_rank": 23,
+        "repaired_fixed_lower_rank": 22,
+        "status": "exact positive full-cap construction via credited9546 complement/repair/lift",
+        "t": "1/1031995392",
+        "three_vector_Delta": "118130205483415064361/20066740336576493",
+        "three_vector_Q": "394247787652284/60993131722117",
+        "whole_repaired_cap_floor": "3/8192",
+        "whole_zero_cap_floor": "1/2048",
+        "zero_fixed_cap_floor": "1/2048"
+      },
+      {
+        "N": 7225,
+        "Q0": "3334959565735520902/106321225224275847",
+        "U0_exact_PSD_rank": 23,
+        "credited_dual_Delta": "332313620109057014/50689464688773",
+        "forms_digest": "e02e4b4dae87c1734157d54b445864fd3bf85bc5dd5a9f88c6e7c13b6b1b91f1",
+        "k": 22,
+        "kappa": "1/11339776",
+        "m": "772798877263407/36257949018788",
+        "new_beyond_9546_m_criterion": false,
+        "q": 114,
+        "repaired_fixed_cap_rank": 23,
+        "repaired_fixed_lower_rank": 22,
+        "status": "exact positive full-cap construction via credited9546 complement/repair/lift",
+        "t": "1/272154624",
+        "three_vector_Delta": "1317947904347292600810/201033352416916573",
+        "three_vector_Q": "15379482149961174/579346836936359",
+        "whole_repaired_cap_floor": "3/2048",
+        "whole_zero_cap_floor": "1/512",
+        "zero_fixed_cap_floor": "1/512"
+      },
+      {
+        "N": 7839,
+        "Q0": "-298076373867991814/78082083939727259",
+        "U0_exact_PSD_check_failure": "negative Schur pivot",
+        "credited_dual_Delta": "243629681058066312/34117640282761",
+        "failed_check_is_not_ansatz_nonexistence": true,
+        "forms_digest": "7d7aa8918a0df346cfb57727c12b28a5938e2d75fcdf436054b96f57ef0abac4",
+        "k": 23,
+        "m": "-761247299542565366/53620984362022077",
+        "q": 119,
+        "status": "credited9434 all-real ansatz exclusion",
+        "three_vector_Delta": "22444992319133270513899/3143174715742640561",
+        "three_vector_Q": "-466161510237400912/52096818492971943"
+      },
+      {
+        "N": 8609,
+        "Q0": "133094582643443004/7582720723203125",
+        "U0_exact_PSD_rank": 23,
+        "credited_dual_Delta": "2485766464481362/315617928125",
+        "forms_digest": "dabc9e7ddeb397ceba6293b6cbadda93bd2d084018824a1bd28e3c9e6aa4a3e9",
+        "k": 24,
+        "kappa": "1/24842240",
+        "m": "9011596151630564/1300183133109375",
+        "new_beyond_9546_m_criterion": false,
+        "q": 125,
+        "repaired_fixed_cap_rank": 23,
+        "repaired_fixed_lower_rank": 22,
+        "status": "exact positive full-cap construction via credited9546 complement/repair/lift",
+        "t": "1/596213760",
+        "three_vector_Delta": "57587208555491769871897/7311855513129719245",
+        "three_vector_Q": "933923398647813578/76966900138207571",
+        "whole_repaired_cap_floor": "3/4096",
+        "whole_zero_cap_floor": "1/1024",
+        "zero_fixed_cap_floor": "1/1024"
+      }
+    ],
+    "role": "researcher",
+    "status": "exact finite sample; no infinite classification"
+  },
+  "independent_original_exception": {
+    "N": 3212,
+    "agent": "six-downset-3",
+    "every_four_times_529_Gram_entry_matches": true,
+    "every_original_vector_amplitude_matches": true,
+    "k": 15,
+    "original_Delta": "40973507610/227",
+    "original_R": "0",
+    "original_U0": "-1118484/37",
+    "original_dual": [
+      "255",
+      "255",
+      "255",
+      "255",
+      "255",
+      "255",
+      "252",
+      "252",
+      "256",
+      "256",
+      "256",
+      "255",
+      "256",
+      "256",
+      "256",
+      "256",
+      "256",
+      "255",
+      "256",
+      "256",
+      "256",
+      "256",
+      "256"
+    ],
+    "original_forms_digest": "68baf13dc2258b44ae1d56689f2b457b8381f2d4e543ab78013e2e9b8af4172b",
+    "original_lower_orientation": "630150/227",
+    "original_members": 3211,
+    "original_representative_positions": 73853,
+    "q": 74,
+    "record_sha256": "77f5dc2ea784f403ff5fd98a3fe398a196a8b961cb22027207b8cacfe568724d",
+    "role": "researcher",
+    "semantic_bad_duals_rejected": 2,
+    "status": "exact original dual calibration, ordinary symmetry bridge unformalized",
+    "whole_pair_enumeration_claimed": false
+  },
+  "limits": {
+    "math_jobs": 1,
+    "native_threads": 1,
+    "old_inverse_method": "PAUSED, not rerun",
+    "per_process_seconds": 60,
+    "scope": "unchanged1CPU2GiB"
+  },
+  "new_compact_original_exceptional_dual": {
+    "agent": "six-downset-3",
+    "compact_rounding_accepted_only_after_exact_pairings": true,
+    "k": 15,
+    "keys": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        1,
+        0
+      ],
+      [
+        3,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        1
+      ],
+      [
+        3,
+        1,
+        0
+      ],
+      [
+        4,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        1
+      ],
+      [
+        4,
+        1,
+        0
+      ],
+      [
+        5,
+        0,
+        0
+      ],
+      [
+        5,
+        0,
+        1
+      ],
+      [
+        5,
+        1,
+        0
+      ],
+      [
+        6,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        1
+      ],
+      [
+        7,
+        0,
+        0
+      ]
+    ],
+    "original_Delta": "40973507610/227",
+    "original_R": "0",
+    "original_U0": "-1118484/37",
+    "q": 74,
+    "role": "researcher",
+    "sizes": [
+      59,
+      1711,
+      15,
+      885,
+      105,
+      1,
+      59,
+      15,
+      1,
+      59,
+      15,
+      1,
+      59,
+      15,
+      1,
+      59,
+      15,
+      1,
+      59,
+      15,
+      1,
+      59,
+      1
+    ],
+    "status": "exact all-real-parameter ansatz exclusion with credited9434 kappa orientation",
+    "trust_boundary": "calibrated counted forms and ordinary original dual bridge, unformalized, independently unreviewed",
+    "vector": [
+      "255",
+      "255",
+      "255",
+      "255",
+      "255",
+      "255",
+      "252",
+      "252",
+      "256",
+      "256",
+      "256",
+      "255",
+      "256",
+      "256",
+      "256",
+      "256",
+      "256",
+      "255",
+      "256",
+      "256",
+      "256",
+      "256",
+      "256"
+    ],
+    "whole_real_parameter_bridge": "lower9434 kernel forces kappa>=0; upper pairing=U0-kappa*Delta-t*R<0"
+  },
+  "new_universal_necessary_mechanism": {
+    "agent": "six-downset-3",
+    "certificates": {
+      "Delta_num": {
+        "coefficients": [
+          [
+            [
+              0,
+              0
+            ],
+            "26435748864"
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            "125232877056"
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            "269763146688"
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            "348760088208"
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            "300648605904"
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            "181426256604"
+          ],
+          [
+            [
+              0,
+              6
+            ],
+            "78186614796"
+          ],
+          [
+            [
+              0,
+              7
+            ],
+            "24056958366"
+          ],
+          [
+            [
+              0,
+              8
+            ],
+            "5177377440"
+          ],
+          [
+            [
+              0,
+              9
+            ],
+            "741961620"
+          ],
+          [
+            [
+              0,
+              10
+            ],
+            "63694188"
+          ],
+          [
+            [
+              0,
+              11
+            ],
+            "2480058"
+          ],
+          [
+            [
+              1,
+              0
+            ],
+            "42691695360"
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            "183711197472"
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            "355823598432"
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            "408445307520"
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            "307663060884"
+          ],
+          [
+            [
+              1,
+              5
+            ],
+            "158869028970"
+          ],
+          [
+            [
+              1,
+              6
+            ],
+            "56937810951"
+          ],
+          [
+            [
+              1,
+              7
+            ],
+            "13980369636"
+          ],
+          [
+            [
+              1,
+              8
+            ],
+            "2249788770"
+          ],
+          [
+            [
+              1,
+              9
+            ],
+            "214164162"
+          ],
+          [
+            [
+              1,
+              10
+            ],
+            "9152595"
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            "31269498784"
+          ],
+          [
+            [
+              2,
+              1
+            ],
+            "120983504720"
+          ],
+          [
+            [
+              2,
+              2
+            ],
+            "208044995456"
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            "208660670932"
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            "134486033274"
+          ],
+          [
+            [
+              2,
+              5
+            ],
+            "57748138704"
+          ],
+          [
+            [
+              2,
+              6
+            ],
+            "16514671608"
+          ],
+          [
+            [
+              2,
+              7
+            ],
+            "3031744788"
+          ],
+          [
+            [
+              2,
+              8
+            ],
+            "324030294"
+          ],
+          [
+            [
+              2,
+              9
+            ],
+            "15352740"
+          ],
+          [
+            [
+              3,
+              0
+            ],
+            "13708952768"
+          ],
+          [
+            [
+              3,
+              1
+            ],
+            "47088854112"
+          ],
+          [
+            [
+              3,
+              2
+            ],
+            "70746980724"
+          ],
+          [
+            [
+              3,
+              3
+            ],
+            "60709645084"
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            "32535515337"
+          ],
+          [
+            [
+              3,
+              5
+            ],
+            "11146749300"
+          ],
+          [
+            [
+              3,
+              6
+            ],
+            "2383053696"
+          ],
+          [
+            [
+              3,
+              7
+            ],
+            "290509416"
+          ],
+          [
+            [
+              3,
+              8
+            ],
+            "15451155"
+          ],
+          [
+            [
+              4,
+              0
+            ],
+            "3996066896"
+          ],
+          [
+            [
+              4,
+              1
+            ],
+            "11991657920"
+          ],
+          [
+            [
+              4,
+              2
+            ],
+            "15413667928"
+          ],
+          [
+            [
+              4,
+              3
+            ],
+            "10997262806"
+          ],
+          [
+            [
+              4,
+              4
+            ],
+            "4701887400"
+          ],
+          [
+            [
+              4,
+              5
+            ],
+            "1204102260"
+          ],
+          [
+            [
+              4,
+              6
+            ],
+            "170916480"
+          ],
+          [
+            [
+              4,
+              7
+            ],
+            "10366380"
+          ],
+          [
+            [
+              5,
+              0
+            ],
+            "812917384"
+          ],
+          [
+            [
+              5,
+              1
+            ],
+            "2086890554"
+          ],
+          [
+            [
+              5,
+              2
+            ],
+            "2230076105"
+          ],
+          [
+            [
+              5,
+              3
+            ],
+            "1269236300"
+          ],
+          [
+            [
+              5,
+              4
+            ],
+            "405579420"
+          ],
+          [
+            [
+              5,
+              5
+            ],
+            "68949468"
+          ],
+          [
+            [
+              5,
+              6
+            ],
+            "4868262"
+          ],
+          [
+            [
+              6,
+              0
+            ],
+            "117714530"
+          ],
+          [
+            [
+              6,
+              1
+            ],
+            "251211836"
+          ],
+          [
+            [
+              6,
+              2
+            ],
+            "214121192"
+          ],
+          [
+            [
+              6,
+              3
+            ],
+            "91069260"
+          ],
+          [
+            [
+              6,
+              4
+            ],
+            "19315044"
+          ],
+          [
+            [
+              6,
+              5
+            ],
+            "1632960"
+          ],
+          [
+            [
+              7,
+              0
+            ],
+            "12126695"
+          ],
+          [
+            [
+              7,
+              1
+            ],
+            "20639836"
+          ],
+          [
+            [
+              7,
+              2
+            ],
+            "13144896"
+          ],
+          [
+            [
+              7,
+              3
+            ],
+            "3710088"
+          ],
+          [
+            [
+              7,
+              4
+            ],
+            "391230"
+          ],
+          [
+            [
+              8,
+              0
+            ],
+            "870360"
+          ],
+          [
+            [
+              8,
+              1
+            ],
+            "1106712"
+          ],
+          [
+            [
+              8,
+              2
+            ],
+            "467652"
+          ],
+          [
+            [
+              8,
+              3
+            ],
+            "65610"
+          ],
+          [
+            [
+              9,
+              0
+            ],
+            "41410"
+          ],
+          [
+            [
+              9,
+              1
+            ],
+            "34930"
+          ],
+          [
+            [
+              9,
+              2
+            ],
+            "7335"
+          ],
+          [
+            [
+              10,
+              0
+            ],
+            "1174"
+          ],
+          [
+            [
+              10,
+              1
+            ],
+            "492"
+          ],
+          [
+            [
+              11,
+              0
+            ],
+            "15"
+          ]
+        ],
+        "count": 78,
+        "digest": "73aa0af6b0324259959e9f2fa97f7c2eb4fb68b78bcb996c5861a36c676e3055"
+      },
+      "V2": {
+        "coefficients": [
+          [
+            [
+              0,
+              0
+            ],
+            "1568"
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            "1948"
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            "842"
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            "126"
+          ],
+          [
+            [
+              1,
+              0
+            ],
+            "698"
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            "589"
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            "129"
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            "103"
+          ],
+          [
+            [
+              2,
+              1
+            ],
+            "44"
+          ],
+          [
+            [
+              3,
+              0
+            ],
+            "5"
+          ]
+        ],
+        "count": 10,
+        "digest": "8abb1791da66c6170f6806726160884007e19d36137ef05d1f24ac3d66db7ad0"
+      },
+      "det_num": {
+        "coefficients": [
+          [
+            [
+              0,
+              0
+            ],
+            "26481920"
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            "91236032"
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            "137561168"
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            "118518384"
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            "63787788"
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            "21945492"
+          ],
+          [
+            [
+              0,
+              6
+            ],
+            "4708746"
+          ],
+          [
+            [
+              0,
+              7
+            ],
+            "575424"
+          ],
+          [
+            [
+              0,
+              8
+            ],
+            "30618"
+          ],
+          [
+            [
+              1,
+              0
+            ],
+            "31330144"
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            "94286128"
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            "121575952"
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            "87023856"
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            "37318158"
+          ],
+          [
+            [
+              1,
+              5
+            ],
+            "9577737"
+          ],
+          [
+            [
+              1,
+              6
+            ],
+            "1360476"
+          ],
+          [
+            [
+              1,
+              7
+            ],
+            "82377"
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            "16149504"
+          ],
+          [
+            [
+              2,
+              1
+            ],
+            "41556496"
+          ],
+          [
+            [
+              2,
+              2
+            ],
+            "44509508"
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            "25378632"
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            "8116137"
+          ],
+          [
+            [
+              2,
+              5
+            ],
+            "1378404"
+          ],
+          [
+            [
+              2,
+              6
+            ],
+            "96957"
+          ],
+          [
+            [
+              3,
+              0
+            ],
+            "4733328"
+          ],
+          [
+            [
+              3,
+              1
+            ],
+            "10115144"
+          ],
+          [
+            [
+              3,
+              2
+            ],
+            "8627844"
+          ],
+          [
+            [
+              3,
+              3
+            ],
+            "3667550"
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            "775800"
+          ],
+          [
+            [
+              3,
+              5
+            ],
+            "65205"
+          ],
+          [
+            [
+              4,
+              0
+            ],
+            "861816"
+          ],
+          [
+            [
+              4,
+              1
+            ],
+            "1466308"
+          ],
+          [
+            [
+              4,
+              2
+            ],
+            "932112"
+          ],
+          [
+            [
+              4,
+              3
+            ],
+            "261960"
+          ],
+          [
+            [
+              4,
+              4
+            ],
+            "27405"
+          ],
+          [
+            [
+              5,
+              0
+            ],
+            "99662"
+          ],
+          [
+            [
+              5,
+              1
+            ],
+            "126329"
+          ],
+          [
+            [
+              5,
+              2
+            ],
+            "53068"
+          ],
+          [
+            [
+              5,
+              3
+            ],
+            "7371"
+          ],
+          [
+            [
+              6,
+              0
+            ],
+            "7133"
+          ],
+          [
+            [
+              6,
+              1
+            ],
+            "5972"
+          ],
+          [
+            [
+              6,
+              2
+            ],
+            "1239"
+          ],
+          [
+            [
+              7,
+              0
+            ],
+            "288"
+          ],
+          [
+            [
+              7,
+              1
+            ],
+            "119"
+          ],
+          [
+            [
+              8,
+              0
+            ],
+            "5"
+          ]
+        ],
+        "count": 45,
+        "digest": "114aa950285416df6547453d72da113c6dc34715d868d866e942b7471e107a3f"
+      }
+    },
+    "exact_calibrations": [
+      {
+        "A": "4056/19",
+        "B": "-16521/19",
+        "C": "-376",
+        "Delta": "60966074564039/319528550507",
+        "Q": "103890552162/10307372597",
+        "S": "5915/31",
+        "T": "4674",
+        "V": "18488",
+        "a": "435577736/10307372597",
+        "b": "-189140296/10307372597",
+        "determinant": "30922117791/361",
+        "e": "26",
+        "h": "1/62",
+        "k": 5,
+        "q": 19
+      },
+      {
+        "A": "635/2",
+        "B": "-2773/2",
+        "C": "-590",
+        "Delta": "4248558926439/14123557261",
+        "Q": "7149416775/1283959751",
+        "S": "3309/11",
+        "T": "8880",
+        "V": "36364",
+        "a": "42910140/1283959751",
+        "b": "-19195945/1283959751",
+        "determinant": "1283959751/4",
+        "e": "25",
+        "h": "1/77",
+        "k": 6,
+        "q": 24
+      },
+      {
+        "A": "85418/37",
+        "B": "-495038/37",
+        "C": "-5026",
+        "Delta": "47856140532212612494/17240124888640927",
+        "Q": "-143801893468984/75947686734101",
+        "S": "630120/227",
+        "T": "220964",
+        "V": "1005078",
+        "a": "771114147448/75947686734101",
+        "b": "-369519604183/75947686734101",
+        "determinant": "303790746936404/1369",
+        "e": "46",
+        "h": "1/227",
+        "k": 15,
+        "q": 74
+      }
+    ],
+    "polynomial_coverage": "every coefficient after exact q=3k+u,k=2+x substitution; finite values are calibration only",
+    "record_sha256": "ff4cd2578823d11e81300770971a0c9a2629dddffac470f3e75af6a4e3ea901e",
+    "role": "researcher",
+    "scope": "ALL integers k>=2,q>=3k; Q<0 excludes ALL REAL kappa,t in the ansatz",
+    "status": "new universal necessary mechanism; written original counting bridge required"
+  },
+  "record_sha256": "e21cefee85249a02ab731ba74b42e436c4b1c46768002bc55db5a04b2ce71715",
+  "remaining_frontier": "k>=25 general b-5 classification, no infinite converse from this finite partition",
+  "role": "researcher",
+  "semantic_false_certificates_rejected": [
+    "false positive unit cap floor",
+    "false lower PSD at negative kappa",
+    "missing small-group orbit census",
+    "unproved q<3k orientation scope",
+    "asymmetric weighted Gram"
+  ],
+  "separate_same_author_characteristic_checks": [
+    {
+      "k": 8,
+      "lower_polynomial_digest": "c2cb4ae7f9010b638ed6a7d2d91b76e50dbf2ce7766b86be3460ec4e7d638d50",
+      "lower_rank": 22,
+      "q": 35,
+      "upper_polynomial_digest": "39446737515ba51f84104963bf2c422bc42362044c1317e4e60c4a3d3dddea9e",
+      "upper_rank": 23
+    },
+    {
+      "k": 10,
+      "lower_polynomial_digest": "6ae70d102634027a7d742e23cd99604912a06b42248e8f1693140b40db858472",
+      "lower_rank": 22,
+      "q": 46,
+      "upper_polynomial_digest": "991cb2645d40085921f3e12fdb78c309b73676707be4dc0cfe22cfa8d1941471",
+      "upper_rank": 23
+    },
+    {
+      "k": 13,
+      "lower_polynomial_digest": "dcd74b4088203b04abc2833f663a13984cd0c5d098a025a56c660e44c04e5da9",
+      "lower_rank": 22,
+      "q": 63,
+      "upper_polynomial_digest": "9827f401e4caa2f610d25c26a4e97e2f92124a7f289c619b2176a7b8a68d7957",
+      "upper_rank": 23
+    },
+    {
+      "k": 16,
+      "lower_polynomial_digest": "e3c06b1bde60f2b25a0b8007fd7e71be9ed70545e16c50571644c5b6a942c359",
+      "lower_rank": 22,
+      "q": 80,
+      "upper_polynomial_digest": "a33cd72eb8f4c5cbcf735cb94a68602e845bca92e12b5860465092368df62698",
+      "upper_rank": 23
+    },
+    {
+      "k": 18,
+      "lower_polynomial_digest": "f9d9f78ae978f7fcc0a87169ddb790f319eedc361a535f0c895585c0b2dca7ce",
+      "lower_rank": 22,
+      "q": 91,
+      "upper_polynomial_digest": "22031105d13f5c40eae79e433c24462de4cb68b1e56d72db16b0c723b476457b",
+      "upper_rank": 23
+    },
+    {
+      "k": 19,
+      "lower_polynomial_digest": "123427b8773543982d6c9b254dedf27269dedc53403083ccb9cbd75697a60fee",
+      "lower_rank": 22,
+      "q": 97,
+      "upper_polynomial_digest": "847b83dc9bf44b7a7a00379c58631e4b1b272692e597d1b29a72eebc4a280f1f",
+      "upper_rank": 23
+    },
+    {
+      "k": 21,
+      "lower_polynomial_digest": "c69e999bb4896261a2afed37b7c5481ef711a21c3a7f66bfa96a47ddeceaa290",
+      "lower_rank": 22,
+      "q": 108,
+      "upper_polynomial_digest": "dacc51a2e6f840442bcf09647d48a1f9843e0d01ee3ce8f09da1f5524cccb40b",
+      "upper_rank": 23
+    },
+    {
+      "k": 22,
+      "lower_polynomial_digest": "e35f2c27952828059667faa3b5472b98f12a8a4d2dde1509bebbf76bddc2b00d",
+      "lower_rank": 22,
+      "q": 114,
+      "upper_polynomial_digest": "670c83ad42496b3c371ebc73c18f2589051fb052432890aad95a3cb75fa6f109",
+      "upper_rank": 23
+    },
+    {
+      "k": 24,
+      "lower_polynomial_digest": "08842faf2c85fbcbc827459e901f14538c48c4eb5b7e7209d8e8939da2386fd6",
+      "lower_rank": 22,
+      "q": 125,
+      "upper_polynomial_digest": "b30a7468be9f8fa6fb3890f88317b4e96e505192ed394ef290e2e2d1aa9b22c1",
+      "upper_rank": 23
+    }
+  ],
+  "status": "exact author proof, unformalized, independently unreviewed, standalone verifier supplies no independent review or graph commitment"
+}
