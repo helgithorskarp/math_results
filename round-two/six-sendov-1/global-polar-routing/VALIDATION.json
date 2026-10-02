@@ -1,0 +1,253 @@
+{
+  "agent": "six-sendov-1",
+  "child_guard_seconds": 45,
+  "copied_source_pin_rejections": [
+    {
+      "file": "verify.py",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "file": "verify.py",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "file": "README.md",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "file": "README.md",
+      "optimized": true,
+      "returncode": 1
+    }
+  ],
+  "external_fixture_rejections": [
+    {
+      "label": "extra_field",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "missing_full_tail",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "truncated_polynomial",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "rational_float",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "integer_boolean",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "zero_boolean",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "wrong_denominator",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "complex_coefficient",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "missing_critical_multiplicity",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "source_identity_changed",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "truncated_json",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "duplicate_key",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "nonfinite_number",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "absent_fixture",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "label": "extra_field",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "missing_full_tail",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "truncated_polynomial",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "rational_float",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "integer_boolean",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "zero_boolean",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "wrong_denominator",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "complex_coefficient",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "missing_critical_multiplicity",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "source_identity_changed",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "truncated_json",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "duplicate_key",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "nonfinite_number",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "label": "absent_fixture",
+      "optimized": true,
+      "returncode": 1
+    }
+  ],
+  "manifest_sha256": "a6222d2800b5c5b0b1f9213f36cc8c96d8e01ed18c03a8102cc18774262bcabb",
+  "native_threads": {
+    "BLIS_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "NUMEXPR_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1,
+    "VECLIB_MAXIMUM_THREADS": 1
+  },
+  "peak_child_rss_kib": 22444,
+  "positive": [
+    {
+      "complete_output": {
+        "actual_multiplicity_controls": 3,
+        "complete_gaussian_controls": 10,
+        "full_polynomial_degrees": {
+          "mean": 48,
+          "modulus": 24,
+          "variance": 24
+        },
+        "rejected_mathematical_damages": [
+          "mean_constant5_leading_margin",
+          "modulus_constant8_leading_margin",
+          "variance_constant12_leading_margin",
+          "tripled_mixed_hessian",
+          "phase_allowance9",
+          "energy_carrier2pow27"
+        ],
+        "rejected_record_damages": [
+          "mean_head",
+          "full_tail_last",
+          "modulus_tail_omitted",
+          "variance_factor",
+          "hessian_ordering",
+          "routing_endpoint",
+          "complex_phase",
+          "actual_multiplicity"
+        ],
+        "status": "PASS",
+        "strict_window_margins": 16,
+        "whole_record_sha256": "6ffd3a3f6bc620f758ba4c3b5d54d55b3c18be6c7637e1b11c6591fd10b69eac"
+      },
+      "optimized": false,
+      "seconds": 0.12814848695416003
+    },
+    {
+      "complete_output": {
+        "actual_multiplicity_controls": 3,
+        "complete_gaussian_controls": 10,
+        "full_polynomial_degrees": {
+          "mean": 48,
+          "modulus": 24,
+          "variance": 24
+        },
+        "rejected_mathematical_damages": [
+          "mean_constant5_leading_margin",
+          "modulus_constant8_leading_margin",
+          "variance_constant12_leading_margin",
+          "tripled_mixed_hessian",
+          "phase_allowance9",
+          "energy_carrier2pow27"
+        ],
+        "rejected_record_damages": [
+          "mean_head",
+          "full_tail_last",
+          "modulus_tail_omitted",
+          "variance_factor",
+          "hessian_ordering",
+          "routing_endpoint",
+          "complex_phase",
+          "actual_multiplicity"
+        ],
+        "status": "PASS",
+        "strict_window_margins": 16,
+        "whole_record_sha256": "6ffd3a3f6bc620f758ba4c3b5d54d55b3c18be6c7637e1b11c6591fd10b69eac"
+      },
+      "optimized": true,
+      "seconds": 0.3111570730106905
+    }
+  ],
+  "python": "3.12.14",
+  "role": "researcher",
+  "serial_math_children": true,
+  "status": "ordinary author algebra and checks; unformalized and independently unreviewed",
+  "third_party_packages": []
+}
