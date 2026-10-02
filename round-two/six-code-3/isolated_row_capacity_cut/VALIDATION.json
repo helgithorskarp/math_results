@@ -1,0 +1,102 @@
+{
+  "agent": "six-code-3",
+  "all_eight_math_source_hashes_unchanged": true,
+  "boundary_branches": 4,
+  "boundary_sha256": "dd7d8f21ddc92ac2e5acb3708adc4824429aa77b4842e078e5c4dcdfd70de552",
+  "catalog_rows": 426,
+  "catalog_sha256": "19205841cee4584466bac048f114d0d5f0db096b6861e45f34c94b9180087b16",
+  "controls": {
+    "actual_relabelings": 3,
+    "actual_transported_marked_rows": 1278,
+    "actual_transported_stars": 69,
+    "rejected_count": 23,
+    "rejected_labels": [
+      "missing_last_mark",
+      "duplicate_mark_with_population_preserved",
+      "missing_actual_e4_link_point_mark",
+      "wrong_high_high_hub_charge",
+      "wrong_eligibility",
+      "wrong_unit_neighbor_capacity",
+      "wrong_saturated_excess",
+      "wrong_hub_deficit_weight",
+      "wrong_psi_sign",
+      "wrong_account_consistent_margin",
+      "wrong_literal_hub_point",
+      "deleted_actual_five_hub_scope_failures",
+      "eligible_mixed_wrongly_offers_capacity",
+      "actual_five_hub_widening",
+      "missing_quadruple",
+      "duplicated_quadruple",
+      "wrong_point",
+      "missing_fixture",
+      "deleted_unique_boundary_template",
+      "changed_boundary_hub_charge",
+      "even_nonunit_block_fabricated",
+      "even_handshake_fabricated",
+      "deleted_boundary_branch"
+    ],
+    "status": "PASS_SEMANTIC_DAMAGES_SCOPE_COUNTEREXAMPLES_AND_ACTUAL_TRANSPORTS"
+  },
+  "cpu_intensive_jobs_at_a_time": 1,
+  "expected_frozen_before_cold_replay": true,
+  "guard_hits": 0,
+  "guards": "10s/subprocess;100000 category states;10s/category branch",
+  "historical_priority_claimed": false,
+  "known69_baseline": {
+    "agent": "six-code-3",
+    "distance_census": {
+      "10": 445,
+      "6": 1264,
+      "8": 637
+    },
+    "novelty": false,
+    "pairs": 2346,
+    "primary_literature": [
+      "https://aeb.win.tue.nl/codes/Andw.html",
+      "https://ymchee66.github.io/home/PDF/6cwc.pdf"
+    ],
+    "reviewed_campaign_interval": [
+      69,
+      71
+    ],
+    "role": "researcher",
+    "source_sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+    "source_url": "https://aeb.win.tue.nl/codes/cwc/d6/a18.6.5.69",
+    "status": "PASS_KNOWN69_BASELINE_VALIDATION_ONLY",
+    "unique_owned_triples": 690,
+    "words": 69
+  },
+  "mathematical_source_files": [
+    "fixtures.json",
+    "certificate.json",
+    "expected.json",
+    "produce.py",
+    "boundaries.py",
+    "verify.py",
+    "controls.py",
+    "reproduce.py"
+  ],
+  "new_result_independently_reviewed": false,
+  "normal": {
+    "peak_child_rss_kib": 18000,
+    "seconds": 0.6501579390023835,
+    "stages": 4
+  },
+  "off_scope_actual_failures": 8,
+  "optimized": {
+    "peak_child_rss_kib": 21672,
+    "seconds": 1.2101828649756499,
+    "stages": 4
+  },
+  "ordinary_bridges_formalized": false,
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "result_sha256": "7f69fa1c8bad33bee7c5ff5570ef19aab9c0450cebf747170fa1c2a202b9bf1e",
+  "role": "researcher",
+  "scope": "Unchanged1CPU2GiB",
+  "status": "PASS_COMPLETE_FROZEN_NORMAL_AND_OPTIMIZED_COLD_REPLAYS",
+  "threads": 1,
+  "trust_boundary": "CPython standard library; generic8933 conditional8323; local9249 and its inherited9209 branch; ordinary projection/incidence/triple identities/parity unformalized; separate same-author implementations are not independent review.",
+  "whole_result_bytes_identical": true,
+  "within_scope_rows": 418,
+  "within_scope_sha256": "ee86c104c1a9a1f2ae4373c0bc386a6bf6e2aa23f8594cd61b9787667c9bd3bf"
+}
