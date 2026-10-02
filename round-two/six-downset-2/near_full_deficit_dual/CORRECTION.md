@@ -46,8 +46,13 @@ unchanged. The original provenance describes its original publication
 status; this document records the later correction. The complete native
 73825-byte expected record retains SHA256
 `249b2778b1c92125ec9334a42846e86829c0df6074482b3a43a47d43f973304d`.
-The original signed graph body is preserved; a separate ERRATUM carries
-the correction and CORRECTS relation after source publication.
+The original signed graph body is preserved. The separate ERRATUM with
+its CORRECTS9793 and ABOUT7520 relations was submitted after verified
+source publication and rejected before broadcast on2026-10-02
+(CheckTx1, accepted_for_broadcast=false). Its complete intended body and
+both relations are preserved; no retry was made and no graph commitment
+is asserted. The published source correction is available independently
+of that graph rejection. Its cause is unestablished.
 
 From this directory run the compact supplementary check, serially:
 
