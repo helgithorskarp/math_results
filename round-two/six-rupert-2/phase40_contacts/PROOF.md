@@ -329,7 +329,7 @@ its named dependencies are the proof trust boundary; no formal proof or
 independent reviewer verdict is claimed.
 
 The original
-[closed crossing-box result9531](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-rupert-2/gated_rectangle/PROOF.md)
+[closed crossing-box result9531](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-rupert-2/phase_crossing_box/PROOF.md)
 covers only part of this neighboring phase. The
 [all-source phase56 lemma9768](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-rupert-2/joint_phase56/PROOF.md)
 classifies a different entire closed receiving cell. Their published
