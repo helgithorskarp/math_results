@@ -1,0 +1,143 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "checked_at_utc": "2026-10-02T18:22:33.806493+00:00",
+  "normal": {
+    "complete": true,
+    "python_version": "3.12.14",
+    "python_optimized": false,
+    "guard_seconds": 60,
+    "native_threads": 1,
+    "one_mathematical_child_at_a_time": true,
+    "mathematics_bytes": 3690,
+    "mathematics_sha256": "f677a391396e8fae0da53121fb641ef3262da0eac22df09140de3d54ac14cbd0",
+    "runs": {
+      "core": {
+        "seconds": 0.255408,
+        "stdout_bytes": 1806,
+        "stdout_sha256": "fdf5cc318781e0498528a5808d1ab9ea10953087264534b74a93f6cc0d2afb92",
+        "peak_child_rss_KiB": 16060,
+        "stderr": ""
+      },
+      "strengthening": {
+        "seconds": 0.040401,
+        "stdout_bytes": 1036,
+        "stdout_sha256": "9d20f9d839ac3c6fc3721535c26d04ee9365a079fa81bb3f47ead013055de804",
+        "peak_child_rss_KiB": 16060,
+        "stderr": ""
+      },
+      "controls": {
+        "seconds": 0.087956,
+        "stdout_bytes": 650,
+        "stdout_sha256": "e243f9e17ddde1be465e05a4d8f14b7784b140d88b9af888d37d9909721d6ad8",
+        "peak_child_rss_KiB": 16060,
+        "stderr": ""
+      },
+      "author": {
+        "seconds": 0.577639,
+        "stdout_bytes": 449,
+        "stdout_sha256": "aada7af7dc11c9aaafe697e5e6eca886482c896de0eb6c974e1f4341b165e86c",
+        "peak_child_rss_KiB": 17768,
+        "stderr": ""
+      },
+      "compare": {
+        "seconds": 0.124487,
+        "stdout_bytes": 539,
+        "stdout_sha256": "70ee0730eb5d34e96cc4f53e1fc15b7ef134ef02bc6344a314705de7a225dd3e",
+        "peak_child_rss_KiB": 17768,
+        "stderr": ""
+      }
+    }
+  },
+  "optimized": {
+    "complete": true,
+    "python_version": "3.12.14",
+    "python_optimized": true,
+    "guard_seconds": 60,
+    "native_threads": 1,
+    "one_mathematical_child_at_a_time": true,
+    "mathematics_bytes": 3690,
+    "mathematics_sha256": "f677a391396e8fae0da53121fb641ef3262da0eac22df09140de3d54ac14cbd0",
+    "runs": {
+      "core": {
+        "seconds": 0.328458,
+        "stdout_bytes": 1806,
+        "stdout_sha256": "fdf5cc318781e0498528a5808d1ab9ea10953087264534b74a93f6cc0d2afb92",
+        "peak_child_rss_KiB": 20956,
+        "stderr": ""
+      },
+      "strengthening": {
+        "seconds": 0.128724,
+        "stdout_bytes": 1036,
+        "stdout_sha256": "9d20f9d839ac3c6fc3721535c26d04ee9365a079fa81bb3f47ead013055de804",
+        "peak_child_rss_KiB": 20956,
+        "stderr": ""
+      },
+      "controls": {
+        "seconds": 0.159512,
+        "stdout_bytes": 650,
+        "stdout_sha256": "e243f9e17ddde1be465e05a4d8f14b7784b140d88b9af888d37d9909721d6ad8",
+        "peak_child_rss_KiB": 20956,
+        "stderr": ""
+      },
+      "author": {
+        "seconds": 0.813747,
+        "stdout_bytes": 449,
+        "stdout_sha256": "6a3fe8abde798dcbaf3b0efe39d5465d43b421fbbb9d6e8c198c17fc9c048594",
+        "peak_child_rss_KiB": 21200,
+        "stderr": ""
+      },
+      "compare": {
+        "seconds": 0.300309,
+        "stdout_bytes": 539,
+        "stdout_sha256": "70ee0730eb5d34e96cc4f53e1fc15b7ef134ef02bc6344a314705de7a225dd3e",
+        "peak_child_rss_KiB": 21200,
+        "stderr": ""
+      }
+    }
+  },
+  "whole_normal_optimized_mathematics_equal": true,
+  "math_bytes": 3690,
+  "math_sha256": "f677a391396e8fae0da53121fb641ef3262da0eac22df09140de3d54ac14cbd0",
+  "source_hashes": {
+    "strengthening.py": "78147c40e8bfa7dfbb21399100cebe3fa3f03e714f2734f1a8669b5b9fba8b76",
+    "controls.py": "ec2dda6b8f20b9bd2731105d795f6b5d719e1bfbd5bc7bc2db1e1509ed3f8c3d",
+    "core.py": "c611419be2409a779c699abaa396eca41c9d299a2bb26e54c38c451569c65ea2",
+    "compare.py": "d5c78af9309a0d3ff5e7c895dae90a73f67136d76497aeb388a7eacb9ce7314d",
+    "reproduce.py": "eb7b268182bc0c3b50edd1a185e1634f2aaadde6029f0340b8f28b84c4a5d1b6"
+  },
+  "first_seal": {
+    "actual_agent": "six-reviewer-4",
+    "role": "independent mathematical reviewer",
+    "sealed_at_utc": "2026-10-02T17:16:58.751046+00:00",
+    "target_executable_EXPECTED_validation_inspected": false,
+    "visible_before_seal": [
+      "full original signed defining proof",
+      "claimed profile/H/control counts and formulas",
+      "owned9490 and9537 proof context"
+    ],
+    "core_sha256": "f118b797ede8032679edf971fb7242f6a99457e7e9f35735e2fa349d16a01537",
+    "complete_record_bytes": 1806,
+    "complete_record_sha256": "fdf5cc318781e0498528a5808d1ab9ea10953087264534b74a93f6cc0d2afb92",
+    "method": "full original7-triple degree words with literal22-vertex budget; all4096 original labeled9-point C3 H graphs; every10 ordered new-root case and36 set-intersection capacities; no author inputs",
+    "preseal_error_corrected": "first zero-case record rejected because orbit multiplicity missing; explicit22-degree expansion and complete nonempty coverage now enforced",
+    "preseal_rejection_receipt": "scratch/pass28-rejected-before-seal.json",
+    "postseal_diagnostic_label_correction": {
+      "at_utc": "2026-10-02T18:18:12.488896+00:00",
+      "change": "full45 to full36 in an error message; actual original code already enumerated combinations(range(9),2), which has36 pairs; no mathematical logic/output changes",
+      "current_core_sha256": "c611419be2409a779c699abaa396eca41c9d299a2bb26e54c38c451569c65ea2"
+    }
+  },
+  "strengthening_seal": {
+    "actual_agent": "six-reviewer-4",
+    "role": "independent mathematical reviewer",
+    "sealed_at_utc": "2026-10-02T18:05:23.576734+00:00",
+    "target_executable_EXPECTED_validation_inspected": false,
+    "code_sha256": "78147c40e8bfa7dfbb21399100cebe3fa3f03e714f2734f1a8669b5b9fba8b76",
+    "complete_record_bytes": 1036,
+    "complete_record_sha256": "9d20f9d839ac3c6fc3721535c26d04ee9365a079fa81bb3f47ead013055de804",
+    "new_statement": "symmetry-free exact h<=12 root obstruction; original C3 theorem retains explicit earlier cohort premises"
+  },
+  "source_first_graph_submission": "Source publication and remote whole-byte verification required before any graph submission; absent at this evidence seal",
+  "trust": "Ordinary and code bridges unformalized; original proof/formulas visible before seal; target executables first acquired after two seals; optional original primary21 author corroboration, not independent new baseline; earlier finite premises not rerun"
+}
