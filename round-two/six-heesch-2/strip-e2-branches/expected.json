@@ -1,0 +1,52 @@
+{
+  "dependency_hashes": {
+    "../strip-contact-domains/strip_contact_reader.py": "d0429c7057e9dd876a5a3f9ae8f5881bda6fef172d54a0161e797b46ef14f3f6",
+    "../strip-contact-domains/strip_local_pair_certificate.py": "7c049fe993cbe0e9ef3d05751a7106547b1d32eddfaa2ba842336ac944f1ca91",
+    "../strip-contact-domains/strip_point_suppliers.py": "594b455753fd469d600a762dd390d650f68dcc635cb8226d3a8fcf449424229a",
+    "../strip-contact-domains/strip_notch_intervals.py": "a9acc497dd8478f77af7c6aa3ee183b1fffe09c761f5ab1844a2dcadb881787a",
+    "../parametric-strip-obstruction/strip_columns.py": "0fef434ed1813ca0cfe0ce71205dd95136544eff3a543005ae834924d6d87aa0",
+    "../parametric-strip-obstruction/strip_parametric_geometry.py": "87157118eefe2912bbb8b04edb18b507f6938e068a053d961e8182b48b4bf7fc",
+    "../strip-t5/exact.py": "265366ae7cc1e5b5ed60bc96075a32e5d56ac62e52da92080ab8752cdbf9285c"
+  },
+  "agent": "six-heesch-2",
+  "role": "researcher",
+  "scope": "All k>=6 registered E1 exclusions and necessary E2 point44 two-branch condition only",
+  "mathematics_sha256": [
+    "a8812a238a085335b9562c6f8c959adea829aa679140a1c3dcbae4ab5dc61777",
+    "0f296e171f44393a9d18a934f55298793ca82295d5c2bf046fc80860d418b595",
+    "d730a1d6390149b3073f685117252a7b9820f9878559e64e5878d2ce46938fb4"
+  ],
+  "expected_counts": {
+    "E1_exclusions": 6,
+    "finite_DAG_nodes": [
+      2,
+      3,
+      3
+    ],
+    "supplier_tree_nodes": [
+      4,
+      4,
+      3
+    ],
+    "point44_suppliers_before": 8,
+    "point44_suppliers_after": 2,
+    "damaged_controls_per_reader": 18
+  },
+  "source_hashes": {
+    ".gitignore": "c155f2d4e1e8c4780645b7b36183b3cacd31fc423311be48bf55993aff696d6f",
+    "README.md": "f71e571582c2eaa5853adf4af01b4718c84c1c98655d0b8bfd68c085ab4748eb",
+    "conditional_collars.py": "a9ca66f0fd7364377f6578054a0a1c2c6d7e631c6c59b442f605243a58a60e1a",
+    "deps.py": "12530c76b562007b4b77372a01642417bb2ce5748c181c6911cc92225f8f1181",
+    "finite_collars.py": "31746934f1ae2b6ff1e506a835eda1326866f00e8d789113f760e960659cb8fb",
+    "inputs.json": "f79073f4558eead96ccb47580aa35fb8d6537e1c0088e5db01692ba908d21fb6",
+    "proof.md": "1ce397b17ae99ced7fb7c1a7226a5a67b56a60dab0c6959aef743edeefb6bcec",
+    "reader.py": "b1620c6f9820a0142139e0e862df24b56a8fe32e3144bb0e05458d8f77d2e8b7",
+    "verify.py": "a32e04fd2dcec3b9f131e51b0f486c4f6d9793261c7f884dabe5b10bb53fb027"
+  },
+  "dependency_source_commits": {
+    "strip-contact-domains": "f4e3acc9c69137eb3d05bed98374dbfa0116eac0",
+    "parametric-strip-obstruction": "41bf6af8891df8c07f5a71db1c81a40b52c7b4ca",
+    "strip-t5": "a5052d63996131ca4eaceb22c1293a6fd4f9a056"
+  },
+  "proof_status": "Author checked, unformalized, shared affine/height kernels, independently unreviewed"
+}
