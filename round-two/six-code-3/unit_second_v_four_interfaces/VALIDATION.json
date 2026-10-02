@@ -1,0 +1,135 @@
+{
+  "agent": "six-code-3",
+  "all_actual_positive_arrays_and_partial_universes_equal": true,
+  "all_eleven_math_source_hashes_unchanged": true,
+  "carrier": {
+    "dfs_states": 6687660,
+    "distinct_word_unions": 50,
+    "explicit_full_maps": 22356,
+    "maximum_states": 15454,
+    "positive_maps": 50,
+    "positive_products": 39,
+    "positive_source_uv_uncovered": 18,
+    "products": 576,
+    "represented_full_maps": 8957952
+  },
+  "certificate_bytes_regenerated_in_both_modes": true,
+  "color_summary": {
+    "candidate_domains_sha256": "d8fde1e724ee3f99d81f4360045c02f3661625e13a602a6a90680fc762f73666",
+    "color_range": [
+      26,
+      31
+    ],
+    "interfaces": 50,
+    "maximum_upper_bound": 67,
+    "records_sha256": "467155951b04d4c96375293117baa75f1ff22c96615b1dcef441b22e81292a82",
+    "status": "PASS_ALL50_UNIT_SECOND_V_FOUR_LITERAL_COLOR_CERTIFICATES",
+    "subscopes": {
+      "first_deficit_pattern": {
+        "11111": {
+          "interfaces": 6,
+          "maximum_upper_bound": 64
+        },
+        "2111": {
+          "interfaces": 44,
+          "maximum_upper_bound": 67
+        }
+      },
+      "lambda_xu": {
+        "3": {
+          "interfaces": 14,
+          "maximum_upper_bound": 65
+        },
+        "4": {
+          "interfaces": 36,
+          "maximum_upper_bound": 67
+        }
+      },
+      "observed_uv": {
+        "1": {
+          "interfaces": 18,
+          "maximum_upper_bound": 67
+        },
+        "2": {
+          "interfaces": 32,
+          "maximum_upper_bound": 65
+        }
+      }
+    },
+    "total_compatible_edges": 300375,
+    "total_residual_candidates": 5986,
+    "universe_per_interface": 4368,
+    "upper_bound_census": {
+      "62": 7,
+      "63": 19,
+      "64": 17,
+      "65": 6,
+      "67": 1
+    }
+  },
+  "controls": {
+    "actual_uv1_positive_product": 32,
+    "bridge_damages": 8,
+    "certificate_damages": 13,
+    "fixture_damages": 10,
+    "primary_record_damages": 7,
+    "product_population_gap": 1,
+    "relabeled_stars": 69,
+    "relabelings": 3,
+    "status": "PASS_SEMANTIC_DAMAGE_AND_ACTUAL_TRANSPORT_CONTROLS",
+    "transported_interfaces": 150,
+    "uncovered_uv_orbit_gap": 1,
+    "unsupported_uv_pruning": 1
+  },
+  "cpu_intensive_jobs_at_a_time": 1,
+  "expected_frozen_before_replay": true,
+  "guard_hits": 0,
+  "guards": "10s/product;200000 DFS states/product;5s/color product;64 priorities;60s/subprocess",
+  "historical_priority_claimed": false,
+  "independent_review_of_new_result": false,
+  "known69_baseline_validation": {
+    "distance_census": {
+      "10": 445,
+      "6": 1264,
+      "8": 637
+    },
+    "pair_checks": 2346,
+    "source_sha256": "cf71ac44391d86eeb244cbf75de3fee5cfbedb36081175a830e7571acf370c7d",
+    "source_url": "https://aeb.win.tue.nl/codes/cwc/d6/a18.6.5.69",
+    "status": "PASS_REPRODUCED_KNOWN69_VALIDATION_ONLY",
+    "unique_owned_triples": 690,
+    "words": 69
+  },
+  "math_source_files_checked": [
+    "fixtures.json",
+    "domain.py",
+    "produce.py",
+    "verify.py",
+    "generate_colors.py",
+    "check_colors.py",
+    "controls.py",
+    "reproduce.py",
+    "BRIDGE.json",
+    "certificates.json",
+    "expected.json"
+  ],
+  "normal": {
+    "peak_child_rss_kib": 24388,
+    "seconds": 82.52668490703218,
+    "stages": 43
+  },
+  "optimized": {
+    "peak_child_rss_kib": 25964,
+    "seconds": 97.74138069100445,
+    "stages": 43
+  },
+  "ordinary_bridges_formalized": false,
+  "process_scope": "Unchanged1CPU2GiB",
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "result_sha256": "f1f158b1b6f0483f02bb334e749da54e192ecc3b450afd08dceea53641968a40",
+  "role": "researcher",
+  "status": "PASS_COMPLETE_NORMAL_AND_OPTIMIZED_COLD_REPLAYS",
+  "threads": 1,
+  "trust_boundary": "CPython standard library; ordinary completeness arguments; same-author separate encoders are not independent review; generic8933 conditional8323; previous9176 only for combined yv5 branch.",
+  "whole_mathematical_result_bytes_equal": true
+}
