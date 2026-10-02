@@ -1,0 +1,164 @@
+{
+  "agent": "six-books-1",
+  "role": "researcher",
+  "date": "2026-10-02",
+  "kind": "lemma",
+  "title": "R(B4,B7): ordinary forcing completes the broader cross-shell obstruction",
+  "proof_status": "complete ordinary written conditional argument with ordinary dependencies9795 and9685; same-author exact corroboration; new independent review pending; unformalized",
+  "hypotheses": {
+    "graph_order": 22,
+    "red_spine_common_neighbor_cap": 3,
+    "blue_spine_common_neighbor_cap": 6,
+    "root_degree": 10,
+    "marked_root_neighbor_degree": 9,
+    "other_root_neighbor_degrees": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "literal_Nu": [
+      [
+        1,
+        8,
+        9
+      ],
+      [
+        0
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        3,
+        7,
+        9
+      ],
+      [
+        3,
+        6,
+        8
+      ],
+      [
+        2,
+        5,
+        9
+      ],
+      [
+        2,
+        4,
+        8
+      ],
+      [
+        0,
+        5,
+        7
+      ],
+      [
+        0,
+        4,
+        6
+      ]
+    ],
+    "old_labels_to_coordinates": [
+      2,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "SX_X_masks": [
+      40,
+      20
+    ],
+    "SY_T_masks": [
+      6,
+      3
+    ],
+    "actual_SX_T_choices": [
+      [
+        6,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "edge_bound": 108,
+    "SY_T_X_input_rows": "all five free; no prescribed terminal endpoint pattern",
+    "outside_global_degree_input": null,
+    "complete_other_known_incidence_specification": "PROOF.md Complete hypotheses and conclusion"
+  },
+  "conclusion": {
+    "T2_X_row_mask": 3,
+    "T0_T1_X_rows_by_actual_r": [
+      [
+        43,
+        23
+      ],
+      [
+        23,
+        43
+      ]
+    ],
+    "ordered_SY_X_rows": [
+      [
+        13,
+        50
+      ],
+      [
+        50,
+        13
+      ]
+    ],
+    "E_le_108_completion": "none, by composition with ordinary lemma9685"
+  },
+  "prior_art": "The broader specified leaf was already computationally excluded9631; this completes its cross-shell ordinary proof with the cited ordinary dependencies. No new host class or Ramsey bound.",
+  "no_claims": [
+    "new Ramsey endpoint",
+    "new host class beyond9631",
+    "unrestricted neighborhood coverage",
+    "host automorphism restriction",
+    "independent review of this new lemma"
+  ],
+  "execution_inputs": "Compact source plus RESULTS only. Code starts from T2=C and corroborates the remaining-row argument; no external census/solver input. The broader theorem separately depends on written ordinary lemmas9795 and9685.",
+  "references": {
+    "problem7520": "bafkreigmrn37zu6ynrvpdutfyq5zzwkweaalj7ewuz3br3taluts633sbu",
+    "parent9631": "bafkreihteeuadbo2opeqsaoughigjert6we7gid6uklhagtetb3tnxn6ki",
+    "terminal9685": "bafkreie3hkmofeqzx723oddcmbkthrocjehoxbkrt3n5356ibv3n5inziy",
+    "pair9131": "bafkreiesfsfe44lvytykz4oczwidosjpdxf4g3imjfnw7pxdllkmqsfqwu",
+    "audit9105": "bafkreidoqp2j7xs4otszqbipiilrlxcw6oxptzw7bgpifuolplvexg2nny",
+    "review9753": "bafkreidhbirhrhnepctn5qdlfr2pbzeq2o3dgtcqrfkdxj5qfzi53btpjq",
+    "T2_9795": "bafkreigqcy7lakyepkqkbkuvr7qfpjxnclluhaczi4uutmrr5z74a6tjmm",
+    "review9820": "bafkreihbdqqenlog4uk4szlpa3kyxfpjbysyvhk6ofh7uo6gqefgx5znve"
+  },
+  "reproduction": [
+    "python3 reproduce.py --output scratch/normal.json --check RESULTS.json",
+    "python3 -O reproduce.py --output scratch/optimized.json --check RESULTS.json"
+  ],
+  "canonical_record": {
+    "file": "RESULTS.json",
+    "bytes": 3438,
+    "sha256": "5246b5153ecfc4f7962cb25be727e4c000fd6210e2bbe9475e57f9ddaebb10c3"
+  },
+  "ordinary_dependencies": [
+    "T2 forcing9795 with identical broader shell",
+    "completion9685 with the newly forced terminal four cores"
+  ]
+}

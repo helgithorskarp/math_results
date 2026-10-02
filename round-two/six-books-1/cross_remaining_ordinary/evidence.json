@@ -1,0 +1,100 @@
+{
+  "agent": "six-books-1",
+  "role": "researcher",
+  "pass": 20,
+  "prepared_UTC": "2026-10-02T23:21:50.089965+00:00",
+  "proof_status": "complete ordinary written conditional argument with ordinary dependencies9795 and9685; same-author exact corroboration; new independent review pending; unformalized",
+  "ordinary_dependencies": [
+    "T2 forcing9795 with identical broader shell",
+    "completion9685 with the newly forced terminal four cores"
+  ],
+  "execution_boundary": "Compact source plus RESULTS only. Code starts from T2=C and corroborates the remaining-row argument; no external census/solver input. The broader theorem separately depends on written ordinary lemmas9795 and9685.",
+  "expected_mathematical_record": {
+    "file": "RESULTS.json",
+    "bytes": 3438,
+    "sha256": "5246b5153ecfc4f7962cb25be727e4c000fd6210e2bbe9475e57f9ddaebb10c3"
+  },
+  "runs": {
+    "normal": {
+      "complete": true,
+      "mode": "normal",
+      "optimized": false,
+      "python": "3.11.2",
+      "mathematical_bytes": 3438,
+      "mathematical_sha256": "5246b5153ecfc4f7962cb25be727e4c000fd6210e2bbe9475e57f9ddaebb10c3",
+      "whole_expected_byte_match": true,
+      "reported_maxrss_KiB_linux": 22052,
+      "thread_variables": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      },
+      "wall_seconds": 2.1010469190077856,
+      "inner_wall_seconds": 2.0453904200112447,
+      "stderr_empty": true,
+      "phase_guard_seconds": 30,
+      "child_guard_seconds": 90
+    },
+    "optimized": {
+      "complete": true,
+      "mode": "optimized",
+      "optimized": true,
+      "python": "3.11.2",
+      "mathematical_bytes": 3438,
+      "mathematical_sha256": "5246b5153ecfc4f7962cb25be727e4c000fd6210e2bbe9475e57f9ddaebb10c3",
+      "whole_expected_byte_match": true,
+      "reported_maxrss_KiB_linux": 24400,
+      "thread_variables": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      },
+      "wall_seconds": 2.282728818943724,
+      "inner_wall_seconds": 2.091598954051733,
+      "stderr_empty": true,
+      "phase_guard_seconds": 30,
+      "child_guard_seconds": 90
+    }
+  },
+  "whole_normal_optimized_bytes_equal": true,
+  "fresh_prior_T2_baseline": {
+    "bytes": 3897,
+    "sha256": "157735924b9a9f264972371dc453abdbd669db3e805e2993c446ce7da722db76",
+    "whole_prior_expected_byte_match": true,
+    "prior_art_validation_only": true
+  },
+  "method": "ordinary combinatorial proof; literal colored-spine and separate coordinate corroboration",
+  "runtime": "Python3.11.2 standard library only",
+  "scope": "unchanged1CPU2GiB",
+  "numeric_threads": 1,
+  "max_mathematical_children": 1,
+  "phase_guard_seconds": 30,
+  "child_guard_seconds": 90,
+  "new_resources_needed": false,
+  "solver_used": false,
+  "external_census_input": false,
+  "floating_point_mathematics": false,
+  "primary_literature": {
+    "URL": "https://arxiv.org/pdf/2407.07285",
+    "table": "Table1",
+    "live_reopened_date": "2026-10-02",
+    "best_located_bounds": [
+      22,
+      23
+    ],
+    "upper_flag_certificate_replayed": false
+  },
+  "independent_review": {
+    "new_remaining_row_argument": "pending",
+    "inherited_T2_9795": "confirmed by separately scoped9820",
+    "inherited_terminal9685": "confirmed by separately scoped9753",
+    "verdicts_are_not_proof_inputs": true
+  },
+  "postseal_isolated_replay_receipts": "recorded privately and in the graph contribution/durable checkpoint; not an execution input"
+}
