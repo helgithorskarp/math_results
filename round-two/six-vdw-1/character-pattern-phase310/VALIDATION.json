@@ -1,0 +1,209 @@
+{
+  "affine_and_finite_checks": {
+    "affine_cases_per_period": 930,
+    "all_original310_lifts": 95790,
+    "all_point_maps": 864900,
+    "author": "six-vdw-1",
+    "character_product_identities": 900,
+    "exact_tiny_character_cores": 729000000,
+    "input_flip_entries": 64,
+    "max310_endpoint": 1239,
+    "max_even620_endpoint": 2478,
+    "period_cases_total": 1860,
+    "point_map_sha256": "7286c12597bd43393e85d3cc3fb8f3278838c33592f4e8bcddc9cceb83d33501",
+    "regular_point_maps": 837000,
+    "retained_root_point_maps": 83700,
+    "role": "researcher",
+    "scope": "All930 relative-pole affine transports and two finite sufficient bounds; no optimal cutoff or unrestricted core exclusion.",
+    "status": "COMPLETE_AFFINE_TRANSPORT_AND_FINITE_LIFT_CHECK",
+    "tiny_legal_phase_rows": 30,
+    "tiny_original_pairs": 4830,
+    "tiny_phase_inputs": 32,
+    "tiny_regular_pairs": 540
+  },
+  "author": "six-vdw-1",
+  "broader_unrestricted_slice": {
+    "author": "six-vdw-1",
+    "cnf_sha256": "74c9d3002969205440352152d91ce627d939f3504f8bc8184099be843e9ef889",
+    "elapsed_seconds": 3.5552050619153306,
+    "hard_observed_conflicts": 50000,
+    "mathematical_exclusion": false,
+    "model_sha256": "8bd50501c2bed499635da372861f4eff8f70e3b9c0e1c3148fcc95ec2b4d21b7",
+    "native_returncode": 0,
+    "native_seconds_guard": 30,
+    "requested_conflicts": 49900,
+    "retry_authorized": false,
+    "role": "researcher",
+    "solver_sha256": "2d3fb92d83b7b2f3b15fc19ab5c05e2ce65958724781c3763f73399e3e707802",
+    "solver_version": "1.9.5",
+    "statistics": {
+      "conflicts": 49902,
+      "decisions": 62095,
+      "propagations": 1054670,
+      "restarts": 278
+    },
+    "status": "UNKNOWN",
+    "subprocess_seconds_guard": 32,
+    "valid_coloring": false
+  },
+  "checker_credit": {
+    "copied_byte_exact": true,
+    "file": "round-two/six-vdw-1/h3-core620-exclusion/strict_rup.py",
+    "graph_height": 9625,
+    "numerical_exclusion_imported": false,
+    "sha256": "55543f905d42aaf0955906f97a8484ec8522a182512b1d2e8fe132bb45cb545c",
+    "source_commit": "677a27f2ce7a154cd287040a46bc3df475894a9e"
+  },
+  "compact_actual_AP_kernel": {
+    "AP_certificate_sha256": "95290afa768f192f5b4e749aba9246bbb48b8ab6a6d41203ebf1e7ee84e0a441",
+    "actual_physical_bindings": {
+      "actual_AP_leaves": 1758,
+      "clause_sha256": "697e54302f47a584d9d174c98da53758b0eaaa820c962f45bd7d17675adecd7e",
+      "original_terms_checked": 12306,
+      "regular_points": 300,
+      "root_points_retained": 30,
+      "whole_physical_points": 310
+    },
+    "author": "six-vdw-1",
+    "checked_additions": 859,
+    "cnf_sha256": "db47d3d90a88c01e1100176ff74f616a7f831b6f4a9ce5e7b4cdcd417828bb77",
+    "deleted_clauses": 0,
+    "initial_clauses": 1758,
+    "mathematical_exclusion": true,
+    "proof_sha256": "0085ad43258497f12d0a4b9a363d7d1d3c891a51ac277c33edc4b416f670c1ea",
+    "propagation_hints_checked": 13559,
+    "role": "researcher",
+    "scope": "One fixed character-root triple, all independent10-phase functions after forced antipodality. No numerical W claim.",
+    "status": "COMPLETE_ORIGINAL_AP_KERNEL_AND_STRICT_RUP_CHECKED",
+    "variables": 55
+  },
+  "converter": {
+    "author": "six-vdw-1",
+    "converter_guard_seconds": 20,
+    "converter_sha256": "f0023a4a6b2862dcf8324d6c259a3bd4e050fd22152b0b8a2a8af029e0eba50f",
+    "elapsed_seconds": 0.37787296704482287,
+    "mathematical_exclusion": false,
+    "proof_bytes": 917935,
+    "proof_sha256": "ae8623f8895e67128407b521039e0775ec67cff764cba5cf8428ecea8af9d228",
+    "returncode": 0,
+    "role": "researcher",
+    "status": "UNTRUSTED_CONVERSION_COMPLETE",
+    "timeout": false
+  },
+  "damaged_evidence_controls": {
+    "author": "six-vdw-1",
+    "damages": [
+      "pole_AP",
+      "zero_step",
+      "outside_start",
+      "wrong_palette",
+      "missing_leaf",
+      "duplicate_leaf",
+      "root_removed",
+      "pole_changed",
+      "negative_hint",
+      "unknown_hint",
+      "nonfresh_addition",
+      "outside_variable",
+      "missing_empty"
+    ],
+    "rejected": 13,
+    "role": "researcher",
+    "status": "ALL_ORIGINAL_AP_AND_STRICT_PROOF_DAMAGES_REJECTED",
+    "undefined_character_rejected": true
+  },
+  "discovery_control_correction": {
+    "affected_instance": "separate unrestricted150 slice, not this kernel",
+    "correction": "Fresh v2 stages use an actual field-label change; all11 damage controls and3 literal tiny positive cores pass normal/O. Initial failed source and receipt preserved privately.",
+    "encoding_modified": false,
+    "error": "Initial merged-field damage assigned an already-present label, so control correctly refused to report rejection."
+  },
+  "full_native_CNF_published": false,
+  "full_native_trace_published": false,
+  "hard_process_limits": {
+    "CPU": 1,
+    "converter_seconds": 20,
+    "hard_observed_conflicts": 50000,
+    "memory_GiB": 2,
+    "native_outer_seconds": 35,
+    "native_seconds": 30,
+    "native_subprocess_seconds": 32,
+    "public_child_seconds": 35,
+    "requested_conflicts": 49900,
+    "simultaneous_CPU_jobs": 1,
+    "threads": 1
+  },
+  "native_retry_authorized": false,
+  "native_tool_provenance": {
+    "converter": {
+      "C_source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+      "binary_sha256": "f0023a4a6b2862dcf8324d6c259a3bd4e050fd22152b0b8a2a8af029e0eba50f",
+      "command_arguments": [
+        "INPUT_CNF",
+        "INPUT_DRUP",
+        "-L",
+        "OUTPUT_LRAT",
+        "-t",
+        "20"
+      ],
+      "name": "drat-trim",
+      "source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+    },
+    "solver": {
+      "binary_sha256": "2d3fb92d83b7b2f3b15fc19ab5c05e2ce65958724781c3763f73399e3e707802",
+      "command_arguments": [
+        "--no-binary",
+        "-c",
+        "49900",
+        "-t",
+        "30",
+        "INPUT_CNF",
+        "OUTPUT_DRUP"
+      ],
+      "name": "CaDiCaL",
+      "source_commit": "146207318796f094dcded87349a64f0c6927309e",
+      "version": "1.9.5"
+    },
+    "trusted_for_exclusion": false
+  },
+  "original_discovery": {
+    "author": "six-vdw-1",
+    "cnf_sha256": "fe0afb826f1b5b2b4d42d967d36f549bf7aa459a0f4f5d907e8d75c4fdf6d81d",
+    "elapsed_seconds": 0.21395899902563542,
+    "hard_observed_conflicts": 50000,
+    "mathematical_exclusion": false,
+    "model_sha256": "62b89516a1b1cc714bfab89eb55957a56d11305960af2bc1555fdd98a8ec84ea",
+    "native_returncode": 20,
+    "native_seconds_guard": 30,
+    "requested_conflicts": 49900,
+    "retry_authorized": false,
+    "role": "researcher",
+    "solver_sha256": "2d3fb92d83b7b2f3b15fc19ab5c05e2ce65958724781c3763f73399e3e707802",
+    "solver_version": "1.9.5",
+    "statistics": {
+      "conflicts": 937,
+      "decisions": 1036,
+      "propagations": 7105,
+      "restarts": 7
+    },
+    "status": "UNVERIFIED_UNSAT_PROPOSAL",
+    "subprocess_seconds_guard": 32,
+    "trace_sha256": "9b29dc09bd8bdf3d2251b04127ba3b4cb96ceaa52c692506ed73e2853b872566",
+    "valid_coloring": false
+  },
+  "proof_status": "ORIGINAL55_AP_KERNEL_AND859_POSITIVE_RUP_IMPLICATIONS_VERIFIED_IN_NORMAL_AND_OPTIMIZED_PYTHON",
+  "role": "researcher",
+  "schema": "CHARACTER_PATTERN_PHASE310_VALIDATION_V1",
+  "scope": "Only the stated F31 relative-root character-pattern family, not arbitrary regular310/620 cores, nonperiodic root changes, numerical W or a3704 witness.",
+  "trust_boundary": {
+    "converter_trusted": false,
+    "external_person_review": false,
+    "hashes_are_not_proof": true,
+    "independent_AP_auditor": "Gauss character and literal physical original cyclic APs, no producer imports",
+    "ordinary_bridges_formalized": false,
+    "producer": "Euler character and compressed signed NAE constraints",
+    "solver_trusted": false
+  },
+  "unrestricted_slice_mathematical_exclusion": false,
+  "validated_at": "2026-10-02T23:12:59.625529+00:00"
+}
