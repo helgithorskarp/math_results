@@ -1,0 +1,110 @@
+{
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "private_baseline_finite_sha256": "d6f14001ab1cd74b61388ed021afc26412a60276552f684600a698003bc43a79",
+  "published_primitives_commit": "f47e57677011488966488f68228562643bed2b3c",
+  "published_cover_original_reconstruction_credit": "77ec6201796bd9ad54baa261cb257a461a30973c",
+  "adaptations": [
+    {
+      "local": "fronts.py",
+      "origin": "round-two/six-sorting-1/disjoint_two_prior_pilot/produce_fronts.py",
+      "origin_sha256": "6fef3bde306267cfa576c201510594a8e76aae5f500fdce7742b52ee58717c1d",
+      "changes": "Portable ROOT/work/prior IO and optional operations barrier; freeze deployment metadata only."
+    },
+    {
+      "local": "verify_fronts.py",
+      "origin": "round-two/six-sorting-1/disjoint_two_prior_pilot/check_fronts.py",
+      "origin_sha256": "6581278f8719eeadc9941a20ad8744ba6c516b6df558d1d80afd1ecde34f5292",
+      "changes": "Portable ROOT/work/prior IO and optional operations barrier; freeze deployment metadata only."
+    },
+    {
+      "local": "catalogue.py",
+      "origin": "round-two/six-sorting-1/disjoint_two_prior_pilot/catalogue.py",
+      "origin_sha256": "d46a1a02afa0156b667238a5cf46c6b6451ca783bb4d2ef0334b56355f7c55fb",
+      "changes": "Portable ROOT/work/prior IO and optional operations barrier; freeze deployment metadata only."
+    },
+    {
+      "local": "select_constant.py",
+      "origin": "round-two/six-sorting-1/disjoint_two_prior_pilot/constant_screen.py",
+      "origin_sha256": "6bd15d64bee147d4bf87ba886bcceea0891811a9d3d2fbe728a4d5b8bc1b2e1b",
+      "changes": "Portable ROOT/work/prior IO and optional operations barrier; freeze deployment metadata only."
+    },
+    {
+      "local": "verify_constant.py",
+      "origin": "round-two/six-sorting-1/disjoint_two_prior_pilot/check_constant.py",
+      "origin_sha256": "663419025a244c9c51a83a56dbd9ca5b2dc623c6bae4d1afd7b00d502fae7da9",
+      "changes": "Portable ROOT/work/prior IO and optional operations barrier; freeze deployment metadata only."
+    },
+    {
+      "local": "select_inner.py",
+      "origin": "round-two/six-sorting-1/disjoint_two_prior_pilot/inner_refine.py",
+      "origin_sha256": "312930a9820d042e8a87bfeec46e368a311813704829bf4e2a9f1e7da64df2cf",
+      "changes": "Portable ROOT/work/prior IO and optional operations barrier; freeze deployment metadata only."
+    },
+    {
+      "local": "verify_inner.py",
+      "origin": "round-two/six-sorting-1/disjoint_two_prior_pilot/check_inner.py",
+      "origin_sha256": "ad69f8d1f0dedea1862f3d43e81bf173f15ff53f401e520c7858e1a4d8d0d8aa",
+      "changes": "Portable ROOT/work/prior IO and optional operations barrier; freeze deployment metadata only."
+    },
+    {
+      "local": "check_damage.py",
+      "origin": "round-two/six-sorting-1/disjoint_two_prior_pilot/check_damage.py",
+      "origin_sha256": "b358adca0d3c069e4a58a62cffb207b969ddc31011d050fbf71d7f7c0fd45879",
+      "changes": "Portable ROOT/work/prior IO and optional operations barrier; freeze deployment metadata only."
+    },
+    {
+      "local": "freeze.py",
+      "origin": "round-two/six-sorting-1/disjoint_two_prior_pilot/freeze.py",
+      "origin_sha256": "003d4f72e3432e7a6bf15662acfdc3eecf804e1ad2795287c2882c97f24508fe",
+      "changes": "Portable ROOT/work/prior IO and optional operations barrier; freeze deployment metadata only."
+    }
+  ],
+  "published_algorithm_adaptations": [
+    {
+      "local": "cover.py",
+      "source_commit": "77ec6201796bd9ad54baa261cb257a461a30973c",
+      "original_path": "round-two/six-sorting-1/two_prior_heavy_barrier/cover.py",
+      "original_sha256": "1d75eb1cf6a2a4b9aa2b460c131938a7f5e523fb8047e581d62b6ff7e6753d2f",
+      "change": "Complete deterministic seed index kept; unused pilot closure removed."
+    },
+    {
+      "local": "verify_original.py",
+      "source_commit": "77ec6201796bd9ad54baa261cb257a461a30973c",
+      "original_path": "round-two/six-sorting-1/two_prior_heavy_barrier/verify_seeds.py",
+      "original_sha256": "bf59971a9f420e7c9ec1ea0ef88f42285a406187490b48853d0538bdef74e2f1",
+      "change": "Keep definition-level full original cube and Boolean witness reconstruction; remove unused pilot closure and compare frozen scalar cache."
+    }
+  ],
+  "private_preparation_adaptations": [
+    {
+      "local": "preparations.py",
+      "original_path": "scratch/two-prior-expand-preparations.py",
+      "original_sha256": "8d5786722854977afa4204e7036781df1e6aadafc2caa24be0f8bc2222b80079",
+      "changes": "Only portable IO and optional read-only operations barrier."
+    },
+    {
+      "local": "verify_preparations.py",
+      "original_path": "scratch/two-prior-check-preparations.py",
+      "original_sha256": "51f46cc0a4351f02f2f217d24a142ba63421e8b114ddde4e4fbf3befdd6d4c53",
+      "changes": "Only portable IO and optional read-only operations barrier."
+    },
+    {
+      "local": "screen_cuts.py",
+      "original_path": "scratch/two-prior-free-cut-screen.py",
+      "original_sha256": "5191a1a438197761b15658e692ebc84f5f1fb2db77783fdcb649ed3b499a5a3b",
+      "changes": "Only portable IO and optional read-only operations barrier."
+    },
+    {
+      "local": "verify_cuts.py",
+      "original_path": "scratch/two-prior-check-free-cuts.py",
+      "original_sha256": "4e8c262a49538834d36b81c10ee28619dca6d19464c6cf238f6050560facf3b2",
+      "changes": "Only portable IO and optional read-only operations barrier."
+    }
+  ],
+  "control_fixture_portability_repair": {
+    "source": "check_damage.py/run.py",
+    "change": "Use already generated complete catalogue slice0..1000, firstcase, rather than obsolete pilot imported-kernel classification. Proof-producing stages1..174 and all private mathematical bindings unchanged.",
+    "missing_legacy_input_is_not_math_nonexistence": true
+  }
+}
