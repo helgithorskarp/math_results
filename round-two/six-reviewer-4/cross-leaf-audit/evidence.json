@@ -1,0 +1,382 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "normal": {
+    "complete": true,
+    "guard_seconds_per_direct_child": 60,
+    "mathematics_sha256": "713dfcfe4dbaf06ed10eba335a396c8a05a0dd3dd583ee96a659224c32d63789",
+    "one_intensive_child_at_a_time": true,
+    "python_optimized": false,
+    "runs": {
+      "build": {
+        "peak_child_rss_KiB": 117216,
+        "seconds": 2.41209,
+        "stderr": ""
+      },
+      "controls": {
+        "peak_child_rss_KiB": 140436,
+        "seconds": 15.463284,
+        "stderr": ""
+      },
+      "literal-comparison": {
+        "peak_child_rss_KiB": 117216,
+        "seconds": 18.03908,
+        "stderr": ""
+      },
+      "native": {
+        "peak_child_rss_KiB": 117216,
+        "seconds": 1.236669,
+        "stderr": ""
+      },
+      "sanitizer-build": {
+        "peak_child_rss_KiB": 213504,
+        "seconds": 6.394272,
+        "stderr": ""
+      },
+      "sanitizer-whole": {
+        "peak_child_rss_KiB": 213504,
+        "seconds": 7.917454,
+        "stderr": ""
+      }
+    }
+  },
+  "optimized": {
+    "complete": true,
+    "guard_seconds_per_direct_child": 60,
+    "mathematics_sha256": "713dfcfe4dbaf06ed10eba335a396c8a05a0dd3dd583ee96a659224c32d63789",
+    "one_intensive_child_at_a_time": true,
+    "python_optimized": true,
+    "runs": {
+      "build": {
+        "peak_child_rss_KiB": 117384,
+        "seconds": 2.992809,
+        "stderr": ""
+      },
+      "controls": {
+        "peak_child_rss_KiB": 139528,
+        "seconds": 20.397611,
+        "stderr": ""
+      },
+      "literal-comparison": {
+        "peak_child_rss_KiB": 117384,
+        "seconds": 25.560357,
+        "stderr": ""
+      },
+      "native": {
+        "peak_child_rss_KiB": 117384,
+        "seconds": 1.40235,
+        "stderr": ""
+      },
+      "sanitizer-build": {
+        "peak_child_rss_KiB": 213568,
+        "seconds": 8.305387,
+        "stderr": ""
+      },
+      "sanitizer-whole": {
+        "peak_child_rss_KiB": 213568,
+        "seconds": 8.641497,
+        "stderr": ""
+      }
+    }
+  },
+  "entire_mathematics_equal": true,
+  "mathematics_bytes": 3760,
+  "mathematics_sha256": "713dfcfe4dbaf06ed10eba335a396c8a05a0dd3dd583ee96a659224c32d63789",
+  "whole_mathematical_checks": {
+    "comparison": {
+      "checks": {
+        "all_join_witnesses_checked": 192,
+        "all_surviving_SY_X_rows_partition_six": true,
+        "complete_cartesian_volume": 2018064,
+        "four_SY_Q_sorted_page_vectors": [
+          {
+            "joins": 160,
+            "pages": [
+              3,
+              3,
+              3,
+              4
+            ]
+          },
+          {
+            "joins": 32,
+            "pages": [
+              3,
+              4,
+              4,
+              4
+            ]
+          }
+        ],
+        "four_SY_Q_spine_page_sum_histogram": {
+          "13": 160,
+          "15": 32
+        },
+        "literal_X_interfaces_checked": 836,
+        "literal_endpoint_pairs_checked": 1105944,
+        "violating_red_spine_types": {
+          "K-Q": 448
+        },
+        "violating_red_spines_histogram": {
+          "1": 32,
+          "2": 64,
+          "3": 96
+        }
+      },
+      "comparison_basis": "every decoded physical entry, not counts alone",
+      "complete": true,
+      "domains": {
+        "X": {
+          "author_format_sha256": "fa7d77736174b810552241296e9b70a94c42d3579336fed24402b80ad598d5be",
+          "count": 836,
+          "every_entry_equal": true
+        },
+        "XY_joins": {
+          "author_format_sha256": "35ab8295eb284a0dcbf76d296e7fd5684c6b4c115216f53d037048eafb1bfb07",
+          "count": 192,
+          "every_entry_equal": true
+        },
+        "XY_rows": {
+          "author_format_sha256": "f8264d86d50ea8d1b483e46f48dcf033dbd2612aa80cf8243c5e72b2b060bd62",
+          "count": 4500,
+          "every_entry_equal": true
+        },
+        "Y_endpoints": {
+          "author_format_sha256": "d9abc354f28f28b75f092962bd597677cb5cc3cc24e17afa12de727f69eac01c",
+          "count": 52664,
+          "every_entry_equal": true
+        },
+        "red_books": {
+          "author_format_sha256": "8588506756a5d58da31cca5ca0d248708ec6af7c2f6e10702a020196caf5b003",
+          "count": 192,
+          "every_entry_equal": true
+        }
+      }
+    },
+    "controls": {
+      "books": {
+        "blue_pairs": 117,
+        "colored_threshold_controls": 4,
+        "individual_known_books": 192,
+        "page_maxima": [
+          3,
+          6
+        ],
+        "physical_Q_witness_transports": 1152,
+        "primary_n": 21,
+        "primary_rows_sha256": "b079a04ad28d23d2e94cc0de69b7608f965daf6ca53576121b5c631521875585",
+        "red_edges": 93
+      },
+      "core": {
+        "cross_cores": 24,
+        "flag_words": 26,
+        "individual_cross_core_low_transports": 3960,
+        "labeled_other_low_placements_per_core": 165,
+        "normalized_SX_choices": 2,
+        "ordinary_omission_words": 36,
+        "same_side_cores_each": 6
+      },
+      "damages": {
+        "damage_basis": "strict duplicate-field decoder and equality to entire freshly regenerated domains; no count-only acceptance",
+        "rejected_whole_record_or_encoding_damages": 14
+      },
+      "signed_matrix": {
+        "distinct_carriers": 24,
+        "exact_integer_energy_checks": 168,
+        "four_low_deficit_sum": 120,
+        "four_low_noncommuting_controls": 24,
+        "general_noncarrier_controls": 4,
+        "positivity_basis": "ordinary nonnegative colored page deficits under valid-host hypotheses; signed controls test identities only",
+        "signed_four_low_controls": 24,
+        "valid_host_construction_claimed": false
+      },
+      "subsets": {
+        "Q_low_mask_transport_controls": 92160,
+        "exact_rank_minima_each_color": 49,
+        "ordered_SX_transports": 1440,
+        "ordered_pair_orbit_sizes": [
+          90,
+          120
+        ],
+        "subset_pairs": 4096
+      }
+    },
+    "sealed_core_unchanged": true,
+    "summary": {
+      "algorithm": "native physical colored-neighbor census",
+      "complete": true,
+      "domains": {
+        "frames": {
+          "count": 52664,
+          "sha256": "62bced2ed791e7c64642faea4ce7c44b2aa2b8b439b3d8ace9718ef7f779f8ec"
+        },
+        "joins": {
+          "count": 192,
+          "sha256": "70f25df73276564e6b8cc22cfb9299739f8fa282798e0ce8fe8720d2097c5779"
+        },
+        "x": {
+          "count": 836,
+          "sha256": "ed6bb102a3a2ddfa0e124191cb0fa3fb19d29db8507ae57e61e3c046f1e6e3a2"
+        }
+      },
+      "first_join": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        7,
+        7,
+        2,
+        1,
+        2,
+        1,
+        13,
+        50,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        15,
+        51,
+        17,
+        18,
+        13,
+        36,
+        26,
+        41,
+        42,
+        29,
+        53,
+        30,
+        54,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        11,
+        16,
+        106,
+        3,
+        3
+      ],
+      "join_Q_low_words": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "join_flag_words": [
+        [
+          0,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "metadata": {
+        "cartesian_tuples": 2018064,
+        "compatible_tuples": 360,
+        "endpoint_frames": 52664,
+        "joins": 192,
+        "nonempty_frames": 4500,
+        "red_page_excess_max": 3,
+        "red_page_excess_min": 1,
+        "violating_red_spines_max": 3,
+        "violating_red_spines_min": 1,
+        "x_stage_0": {
+          "column_words": 38416,
+          "fourteen_point_survivors": 538,
+          "interfaces": 418,
+          "rank_survivors": 209978,
+          "sy_row_pairs": 659050,
+          "tagged_column_words": 4568
+        },
+        "x_stage_1": {
+          "column_words": 38416,
+          "fourteen_point_survivors": 538,
+          "interfaces": 418,
+          "rank_survivors": 209978,
+          "sy_row_pairs": 659050,
+          "tagged_column_words": 4568
+        }
+      },
+      "record_bytes": 3438378,
+      "record_sha256": "723bb6410697587ac4a2432f243536f5a7bb00dbab5b9b420ac168afe88fafa8"
+    },
+    "whole_native_sanitizers_equal": true
+  },
+  "later_author_corrob": {
+    "bytes": 1556203,
+    "complete": true,
+    "guard_seconds_per_stage": 60,
+    "original_functions_unmodified": true,
+    "runs": {
+      "X": {
+        "peak_child_rss_KiB": 19956,
+        "seconds": 46.605693,
+        "stderr": ""
+      },
+      "XY_joins": {
+        "peak_child_rss_KiB": 38636,
+        "seconds": 0.558939,
+        "stderr": ""
+      },
+      "XY_rows": {
+        "peak_child_rss_KiB": 38636,
+        "seconds": 8.049896,
+        "stderr": ""
+      },
+      "Y_endpoints": {
+        "peak_child_rss_KiB": 34780,
+        "seconds": 6.347527,
+        "stderr": ""
+      },
+      "red_books": {
+        "peak_child_rss_KiB": 38636,
+        "seconds": 0.306351,
+        "stderr": ""
+      }
+    },
+    "sha256": "8b39a65ce59cb832f1bd4f07b615fa2f2c3d43e625681a98ba5be041e180d4a4"
+  },
+  "toolchain": {
+    "python": "3.11.2",
+    "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+    "language": "C++17"
+  },
+  "limits": {
+    "CPU": 1,
+    "memory_GiB": 2,
+    "threads": 1,
+    "math_child_guard_seconds": 60,
+    "serial": true,
+    "changed": false
+  },
+  "timeouts": [],
+  "previous_pass24_optional_incomplete_sanitizer_not_retried": true,
+  "entire_native_record_bytes_equal_between_modes": true,
+  "entire_native_streams_bytes_equal_between_modes": true,
+  "cross_mode_complete_file_comparisons": [
+    "census-x.txt",
+    "census-frames.txt",
+    "census-joins.txt",
+    "census-meta.txt",
+    "census-full.json",
+    "comparison.json",
+    "controls.json",
+    "mathematics.json"
+  ],
+  "entire_native_record_bytes": 3438378,
+  "entire_native_record_sha256": "723bb6410697587ac4a2432f243536f5a7bb00dbab5b9b420ac168afe88fafa8"
+}
