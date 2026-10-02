@@ -1,0 +1,130 @@
+{
+  "agent": "six-books-2",
+  "role": "researcher",
+  "status": "AUTHOR_CHECKED_ORDINARY_PROOF_AND_EXACT_VALIDATION",
+  "python": "3.11.2",
+  "new_results": [
+    "Entire99/C3 branch excluded using explicit prior premises",
+    "New ordinary three-pair odd-column parity exclusion",
+    "New ordinary exceptional7^3,9^13,10^6 deficit exclusion"
+  ],
+  "normal": {
+    "status": "REPRODUCTION_PASS",
+    "agent": "six-books-2",
+    "role": "researcher",
+    "mathematical_bytes": 7665,
+    "mathematical_sha256": "d6db64da2d4c618a200d3b0142b5f40d1378b1f65292af561038bfb1c93aa6d4",
+    "seconds": 0.5219125130679458,
+    "peak_rss_kib": 17852,
+    "threads": 1,
+    "program_guard_seconds": 25,
+    "trust": "Exact source checks of new ordinary proof bridges; no prior theorem replay, independent peer verdict or proof assistant."
+  },
+  "optimized": {
+    "status": "REPRODUCTION_PASS",
+    "agent": "six-books-2",
+    "role": "researcher",
+    "mathematical_bytes": 7665,
+    "mathematical_sha256": "d6db64da2d4c618a200d3b0142b5f40d1378b1f65292af561038bfb1c93aa6d4",
+    "seconds": 1.4213461640756577,
+    "peak_rss_kib": 21348,
+    "threads": 1,
+    "program_guard_seconds": 25,
+    "trust": "Exact source checks of new ordinary proof bridges; no prior theorem replay, independent peer verdict or proof assistant."
+  },
+  "entire_records_byte_equal": true,
+  "frozen_before_final_cold_checks": {
+    "agent": "six-books-2",
+    "role": "researcher",
+    "scope": "Final ten source files present before fresh cold-v2 and optimized checks; first failed seal preserved separately; evidence added afterward.",
+    "files": [
+      {
+        "name": ".gitignore",
+        "bytes": 28,
+        "sha256": "dca72ad33bb8d76573c08cd167d1067ea67f2a0754b60730adccbe14063fbe0c"
+      },
+      {
+        "name": "DEPENDENCIES.json",
+        "bytes": 6083,
+        "sha256": "68dcd02e75d81d41c75946992d6bffa436c2848f6938eea826d78d5e311d5389"
+      },
+      {
+        "name": "EXPECTED.json",
+        "bytes": 7665,
+        "sha256": "d6db64da2d4c618a200d3b0142b5f40d1378b1f65292af561038bfb1c93aa6d4"
+      },
+      {
+        "name": "PROOF.md",
+        "bytes": 11919,
+        "sha256": "bf60b9ad1df6e463abe3c92f84204ef86ec887b5c9c39865065f18c087a12c22"
+      },
+      {
+        "name": "README.md",
+        "bytes": 2476,
+        "sha256": "fac793daa10084c4b78e4dbc7834dc2952215430636f0460e0c8167c05327e78"
+      },
+      {
+        "name": "analytic.py",
+        "bytes": 6697,
+        "sha256": "aa799128935dae18bc10c1710766c280cf29fa3f00e33b0c15790c5d826d3f56"
+      },
+      {
+        "name": "audit.py",
+        "bytes": 6891,
+        "sha256": "8775a8371da7702cc5b949c2de970e43947cc57adb80aa5ef46c233d728084d1"
+      },
+      {
+        "name": "controls.py",
+        "bytes": 5265,
+        "sha256": "41fdb4abc23de0cf02bbff0e6d88a1f4e1c6783b902b412f7516ba9711efbb91"
+      },
+      {
+        "name": "primary21.rows",
+        "bytes": 462,
+        "sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec"
+      },
+      {
+        "name": "reproduce.py",
+        "bytes": 2898,
+        "sha256": "586a0eddef4bac61456338bf102d527733e4cad174f267c59da69e540ca5301c"
+      }
+    ]
+  },
+  "unsealed_seed_before_sealing": true,
+  "first_failed_seal_preserved": true,
+  "corrected_attempts": [
+    {
+      "stage": "unsealed first seed",
+      "status": "REJECTED_BY_LITERAL_GRAPH_IDENTITY_CONTROL",
+      "cause": "Incorrect general-E checker formula6006-6E-3sumd2; this was the E99-specialized affine expression, not an identity for arbitrary E.",
+      "correction": "General doubled deficit is -6468+120E-3sumd2. The separately derived E99 formula66-3sum(d-9)^2 is consistent.",
+      "no_nonexistence_inference": true,
+      "no_resource_escalation": true
+    },
+    {
+      "stage": "first frozen cold normal",
+      "status": "REJECTED_BY_WHOLE_TYPED_EXPECTED_COMPARISON",
+      "cause": "Integer degree-count keys sorted numerically in the raw producer, but parsed JSON keys sort lexically. This serialization issue made the canonical expected-byte comparison differ.",
+      "correction": "Producer now emits string degree keys consistently; preserve first seal/expected/failure record, reseal after new unsealed seed. Mathematical records must agree as parsed complete values.",
+      "no_nonexistence_inference": true,
+      "no_resource_escalation": true
+    }
+  ],
+  "prerequisites": {
+    "exact_signed_target_count": 9,
+    "current_and_pinned_proof_byte_checks": 16,
+    "primary21_refetched_and_whole_normalization_equal": true,
+    "prior_entire_computations_not_replayed": true
+  },
+  "resources": {
+    "threads": 1,
+    "maximum_intensive_jobs": 1,
+    "CPU": 1,
+    "GiB": 2,
+    "program_guard_seconds": 25,
+    "child_guard_seconds": 30,
+    "no_resource_escalation": true
+  },
+  "trust": "Ordinary proof/counting bridges unformalized; same-author distinct algorithms; new independent review pending; old9490 verdict covers9453 only.",
+  "scope": "Exactly99 rededges/type3^7 1 ordinary22 hosts; corollary exactly102 credits8971. Other symmetry types,102 completions and Ramsey endpoint remain open."
+}
