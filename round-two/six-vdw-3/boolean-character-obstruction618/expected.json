@@ -1,0 +1,132 @@
+{
+  "author": "six-vdw-3",
+  "certificate_bytes": 155886,
+  "certificate_sha256": "e7ecddbc9d917d193dafe60472e7a2fe16c8d30ac27beddd3c72e79e85045e28",
+  "controls": {
+    "CRT_phase_parameter_sets": 63036,
+    "abstract_truth_transport_entries": 620612,
+    "action_output_flip_and_coordinate_compositions": 465442,
+    "actual_illegal_phase_column_witnesses": 5974,
+    "actual_regular_field_input_coordinate_values": 60904,
+    "fixed_states_by_root_count_and_permutation": {
+      "1": {
+        "0": 2
+      },
+      "2": {
+        "01": 8,
+        "10": 4
+      },
+      "3": {
+        "012": 12928,
+        "021": 16,
+        "102": 16,
+        "120": 16,
+        "201": 16,
+        "210": 16
+      }
+    },
+    "folded_normalized_truth_functions": {
+      "000": 2,
+      "001": 8,
+      "010": 8,
+      "011": 8,
+      "012": 128
+    },
+    "integer_distance_correlation_values": 2620,
+    "legal_phase_rows": 6,
+    "multiplicativity_inputs": 10404,
+    "ordered_root_pair_maps": 77586,
+    "original_distinct_root_palette_truth_inputs": 16384,
+    "original_ordered_distinct_root_triples": 1061106,
+    "original_repeated_root_truth_fold_inputs": 28672,
+    "phase_cycle_inputs": 1920,
+    "regular_field_COLOR_identities_IMPLIED_by_factorization": 7758620,
+    "zero_to_three_hole_mask_classes": 26
+  },
+  "merge_semantic_damage_rejections": [
+    "missing final range",
+    "duplicate range",
+    "gap between ranges",
+    "missing transported case",
+    "duplicate transported case",
+    "mismatched certificate",
+    "incorrect AP total",
+    "malformed transcript digest"
+  ],
+  "orbit_size_histograms_by_original_root_count": {
+    "1": {
+      "1": 2
+    },
+    "2": {
+      "1": 4,
+      "2": 2
+    },
+    "3": {
+      "2": 8,
+      "3": 16,
+      "6": 2144
+    }
+  },
+  "packing_per_case": 9,
+  "parameter_classes": 2176,
+  "parameter_classes_by_original_root_count": {
+    "1": 2,
+    "2": 6,
+    "3": 2168
+  },
+  "parameter_states": 12938,
+  "raw_states_by_original_root_count": {
+    "1": 2,
+    "2": 8,
+    "3": 12928
+  },
+  "representative_APs": 19584,
+  "representative_literal_transcript_sha256": "35416e65be79d0c9d778064f8142abeb7b711d3130678d25ae371fc5787421fe",
+  "representative_points": 137088,
+  "representative_step_gcd_histogram": {
+    "1": 6777,
+    "2": 8009,
+    "3": 755,
+    "6": 4043
+  },
+  "role": "researcher",
+  "scope": "arbitrary Boolean rule on three affine F103 character inputs, ALL original roots free; any six-row phase/palette; arbitrary nonperiodic nonroot column edits; cyclic618 or N>=2466; no W bound or optimum",
+  "semantic_damage_rejections": [
+    "missing canonical case",
+    "duplicate index",
+    "duplicate parameter state",
+    "zero original roots",
+    "four original roots",
+    "two-root field parameter not normalized",
+    "truth table outside arity",
+    "odd truth table outside output gauge",
+    "missing AP pair",
+    "zero step",
+    "start outside cyclic range",
+    "ignored-input original root treated as regular",
+    "repeated field column",
+    "disjointness broken",
+    "step outside short domain",
+    "short orbit represented twice or incorrectly",
+    "literal colors not monochromatic",
+    "ignored second input root treated as regular"
+  ],
+  "start_zero_APs": 0,
+  "status": "EXACT_BOOLEAN_THREE_AFFINE_CHARACTER618_REPAIR_AT_LEAST9",
+  "transport_color_flip_state_histogram": {
+    "0": 9708,
+    "1": 3230
+  },
+  "transport_commitment_encoding": "SHA256 of ordered newline compact JSON [state,orbit_size,SHA256 of all actual AP event lines for this state]",
+  "transported_APs": 116442,
+  "transported_case_commitment_root_sha256": "bb17c31fe8aaae9b727720cffd3fe54234dad434d8617bf8b1d643707b6442a9",
+  "transported_points": 815094,
+  "transported_states": 12938,
+  "transported_step_gcd_histogram": {
+    "1": 40340,
+    "2": 47672,
+    "3": 4490,
+    "6": 23940
+  },
+  "trust_boundary": "ordinary Boolean folding/normalization/CRT/Burnside/disjointness/lift proof plus exact stdlib finite checker; no imported numerical bound"
+}
