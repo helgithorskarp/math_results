@@ -1,0 +1,84 @@
+{
+  "agent": "six-code-3",
+  "damage_expected_record_fixed_before_first_damage_audit": true,
+  "expected_whole_derived_from_complete_private_normal_O_mathematical_records": true,
+  "independent_person_review": false,
+  "mathematical_output_sha256": {
+    "pass16-first-engine-low-friends": "a3209505abdef0d8e54453a47befe01a7f234dfe2f8f1d18dc451eee71dfee68",
+    "pass16-independent-low-friends": "ec217dc2891112afce90094458c4ae820e9daecd704945d5a6642059ef3e1cdc",
+    "pass18-hub-friend-catalogue": "1421e38938dcf0d3081d3b3bc2c1f1fe0b926fd98f858f396950c5ed87e5e566",
+    "pass18-independent-friend-catalogue": "8b93a0954a8de540ad7b1a6d60d33df6a8abb6f49cd93b0028958c56470b0d7c",
+    "pass20-T2-polynomial": "b989b75ce4d0e7d6fc4a7a6576d3c207c53027fe05eba80340ede7b6f26282b3",
+    "pass20-T2-producer": "0b8f0adb03d158f617263e75e551dce399fd2dbb2a881a0cf902c07d36724e06",
+    "pass20-certificate-damages": "93f5bd23c31c43a7b75f5e2b409b963cb028c38fc0cc98b255ef21ac7f5ba2a7",
+    "pass20-full-T2-N-producer": "4e6697077fb92cecc1107914112208fef87132fb3459ceb4daeb2249bea787f3",
+    "pass20-independent-full-T2-N": "e2c442faa1ff9ca5b336a0ae173df241a5383c6ec9d0fb5cf97123c58c09a9a0"
+  },
+  "ordinary_bridges_formalized": false,
+  "outputs": [
+    "pass16-first-engine-low-friends",
+    "pass16-independent-low-friends",
+    "pass20-T2-polynomial",
+    "pass20-T2-producer",
+    "pass18-hub-friend-catalogue",
+    "pass18-independent-friend-catalogue",
+    "pass20-full-T2-N-producer",
+    "pass20-independent-full-T2-N",
+    "pass20-certificate-damages"
+  ],
+  "role": "researcher",
+  "scope": {
+    "T_values": [
+      2
+    ],
+    "canonical_HH_carriers": 696,
+    "catalogue_selected_types": 44,
+    "catalogue_signatures": 7681,
+    "full_carrier_population_records": 185136,
+    "labelled_HH_carriers": 3996,
+    "preliminary_populations": 266,
+    "raw_vectors": 1373,
+    "scalar_branches": 35,
+    "semantic_damages": 5
+  },
+  "stages": [
+    {
+      "name": "pass16-first-engine-low-friends"
+    },
+    {
+      "name": "pass16-check-low-friends"
+    },
+    {
+      "name": "pass20-T2-polynomial"
+    },
+    {
+      "name": "pass20-T2-produce"
+    },
+    {
+      "name": "pass18-hub-friend-catalogue"
+    },
+    {
+      "name": "pass18-check-friend-catalogue"
+    },
+    {
+      "arguments": [
+        "--output",
+        "round-two/six-code-3/scratch/pass20-full-T2-N-producer.json"
+      ],
+      "name": "pass20-full-T2-N-produce"
+    },
+    {
+      "arguments": [
+        "--author",
+        "round-two/six-code-3/scratch/pass20-full-T2-N-producer.json",
+        "--output",
+        "round-two/six-code-3/scratch/pass20-independent-full-T2-N.json"
+      ],
+      "name": "pass20-check-full-T2-N"
+    },
+    {
+      "name": "pass20-check-damages"
+    }
+  ],
+  "whole_mathematical_sha256": "32de8218ed616105dcbdc2cc8e6c256799ff2f2355cceb07947c7fb971757cd2"
+}

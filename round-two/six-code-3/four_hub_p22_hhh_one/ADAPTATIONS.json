@@ -1,0 +1,105 @@
+{
+  "adaptations": [
+    {
+      "adapted_sha256": "e38dee21748d0c124e4e810d13aa7921bcb6947f77377fc0ec444842776c44d6",
+      "declared_replacements": [],
+      "file": "source/pass16-first-engine-low-friends.py",
+      "original": "scratch/publication/round-two/six-code-3/four_hub_p22_hhh_two/source/pass16-first-engine-low-friends.py",
+      "original_sha256": "e38dee21748d0c124e4e810d13aa7921bcb6947f77377fc0ec444842776c44d6"
+    },
+    {
+      "adapted_sha256": "ce90f77132ee619be227555e96f0b31e161dffa698cab3325e7d44428eaed33d",
+      "declared_replacements": [],
+      "file": "source/pass16-check-low-friends.py",
+      "original": "scratch/publication/round-two/six-code-3/four_hub_p22_hhh_two/source/pass16-check-low-friends.py",
+      "original_sha256": "ce90f77132ee619be227555e96f0b31e161dffa698cab3325e7d44428eaed33d"
+    },
+    {
+      "adapted_sha256": "cc19d9f6a854979761e37806a42ab9cfd34d9c95fc3628654ad7cd540654a7ec",
+      "declared_replacements": [],
+      "file": "source/pass20-T2-polynomial.py",
+      "original": "round-two/six-code-3/scratch/pass20-T2-freeze/round-two/six-code-3/scratch/pass20-T2-polynomial.py",
+      "original_sha256": "cc19d9f6a854979761e37806a42ab9cfd34d9c95fc3628654ad7cd540654a7ec"
+    },
+    {
+      "adapted_sha256": "0b0ee425dc654a45b007dcd3c393e5c5e425e16fd4c349b63e6e7c76d964b601",
+      "declared_replacements": [],
+      "file": "source/pass20-T2-produce.py",
+      "original": "round-two/six-code-3/scratch/pass20-T2-freeze/round-two/six-code-3/scratch/pass20-T2-produce.py",
+      "original_sha256": "0b0ee425dc654a45b007dcd3c393e5c5e425e16fd4c349b63e6e7c76d964b601"
+    },
+    {
+      "adapted_sha256": "c72c9c9708b5de016e57db0db7e453e537795c510fcc26e5da93e083f004a183",
+      "declared_replacements": [
+        {
+          "after": "set([0,1,2,3,4,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,25,26,27,28,29,30,31,32,34,35,36,40,42,44,46,47,49,50,53,56,57])",
+          "before": "{i for r in json.loads((S/'pass18-p22-radius-cuts.json').read_text())['survivors'] for i,n in r['population']}"
+        }
+      ],
+      "file": "source/pass18-hub-friend-catalogue.py",
+      "original": "round-two/six-code-3/scratch/pass18-hub-friend-catalogue.py",
+      "original_sha256": "a68bf904e58290a3e01bcae65b9d62eab2d15e83b388484ef8913256118e41f7"
+    },
+    {
+      "adapted_sha256": "4e08ce8dbee2c5da9154d9303ca969ae1dcfc11bac41874f3d2862b959bafbac",
+      "declared_replacements": [
+        {
+          "after": "set([0,1,2,3,4,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,25,26,27,28,29,30,31,32,34,35,36,40,42,44,46,47,49,50,53,56,57])",
+          "before": "{i for r in json.loads((S/'pass18-p22-radius-cuts.json').read_text())['survivors'] for i,n in r['population']}"
+        }
+      ],
+      "file": "source/pass18-check-friend-catalogue.py",
+      "original": "round-two/six-code-3/scratch/pass18-check-friend-catalogue.py",
+      "original_sha256": "77e660bb2ccca085c53610ee211f1a56ec258db56f84e867e4d8eabf0aa194e9"
+    },
+    {
+      "adapted_sha256": "79c4cf993fa44e83ca25c1109da4829cb0fa9af07a00f319e7fb1341e526da6f",
+      "declared_replacements": [
+        {
+          "after": "catpath",
+          "before": "old=json.loads((S/'pass18-higher-T-friend-support.json').read_text());catpath"
+        },
+        {
+          "after": "",
+          "before": " need(old['status']=='PRIVATE_HIGHER_T_COORDINATE_RELAXATION_COMPLETE','supplied list status')\n"
+        },
+        {
+          "after": "labelled,domain=carriers();need(labelled==3996 and len(domain)==696,'complete carrier counts; second generator checks every record')",
+          "before": "labelled,domain=carriers();need(labelled==old['carriers']['2']['labelled_carriers'] and domain==old['carriers']['2']['canonical_carriers'],'whole conservative carrier stream')"
+        },
+        {
+          "after": "S/'pass20-T2-producer.json'",
+          "before": "S/'pass20-T2-freeze/round-two/six-code-3/scratch/pass20-T2-producer.json'"
+        }
+      ],
+      "file": "source/pass20-full-T2-N-produce.py",
+      "original": "round-two/six-code-3/scratch/pass20-full-T2-N-resumable-produce.py",
+      "original_sha256": "be092effab50d1104a8bd5251f146844fea3dce8963357d835078470b48c8ae8"
+    },
+    {
+      "adapted_sha256": "3716eb542d4fc94fde04f349de5dc023b73d45f46d074a0a44541bf602602b73",
+      "declared_replacements": [
+        {
+          "after": "S/'pass20-T2-producer.json'",
+          "before": "S/'pass20-T2-freeze/round-two/six-code-3/scratch/pass20-T2-producer.json'"
+        }
+      ],
+      "file": "source/pass20-check-full-T2-N.py",
+      "original": "round-two/six-code-3/scratch/pass20-check-full-T2-N.py",
+      "original_sha256": "62632257071c52f0e1bdf50bad48969766542c64e760a59843924e1cb4dc330c"
+    }
+  ],
+  "agent": "six-code-3",
+  "algorithmic_kernels_unchanged": true,
+  "author_private_proof_already_complete": true,
+  "fixture_classification_still_explicit_premise8933": true,
+  "opaque_private_inputs_removed": [
+    "prior wider P22 radius population file",
+    "prior higher-T carrier/support output"
+  ],
+  "remaining_external_inputs": [],
+  "role": "researcher",
+  "sealed_at": "2026-10-02T20:36:58.337256+00:00",
+  "state_time_resource_guards_unchanged": true,
+  "status": "SOURCE_ADAPTATIONS_FROZEN_BEFORE_SELF_CONTAINED_REPLAY"
+}
