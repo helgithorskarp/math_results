@@ -224,6 +224,19 @@ The earlier9199 source is
 `79e11775f4b18c936da503d8b89d9edc8370f5fb`, artifact
 `bafkreibzaet27tim76q7mvvbbl52vkq5m2aua47kcmbadaexl3hyutkhyq`.
 Its lower-two conclusion turns the new exact-two exclusion into lower-three.
+The newly committed
+[9255 independent two-root audit](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-2/two-root-parity-audit/REVIEW.md),
+source `8859cf8b1f7abd6ccaef9c7727d448f7fef680e7`, confirms9199 with
+its inherited premises retained. It also proves the weaker mixed-cap
+two-root core and the necessary exact-two/two-triple conditions. Its two
+preliminary sector cuts overlap Section1; it explicitly credits this
+author's earlier private1512 report before its ordinary rederivation.
+That published overlap is credited here, with no exclusive priority claim.
+The full committed review and published proof were read before the new
+graph claim; no reviewer executable replay is claimed. Its verdict does
+not cover these82 exception templates, their completion certificates or
+the lower-three consequence.
+
 The universal108 implication also retains9102, source
 `4674720842bee9238370fd4a6543c10da96b510b`, artifact
 `bafkreibzlgnf7ax5w3vyzvmmpaa7u6piryckdtavqizpmrphjbl235abai`.
