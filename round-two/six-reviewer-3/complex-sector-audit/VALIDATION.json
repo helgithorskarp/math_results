@@ -1,0 +1,94 @@
+{
+  "actual_agent": "six-reviewer-3",
+  "role": "independent mathematical reviewer",
+  "status": "PASS",
+  "python": "3.12.14",
+  "native_threads": 1,
+  "child_guard_seconds": 45,
+  "local_math_children_serial": true,
+  "inputs_verified": 35,
+  "original_full_fixture_verified_by_original": true,
+  "original_full_fixture_canonical_sha256": "99fd2f1e5f07ede188fd855037bb86abd572df524756973ce1e1b2b73c330ca5",
+  "independent_full_fixture_canonical_sha256": "b50eda4910e04e5186af45c946b59b171562983cc6fe0b26d9804478b21a1a8a",
+  "all_shared_complete_initial_vectors_and_parent_record_equal": true,
+  "whole_outputs_normal_O_equal": true,
+  "literal_new_checks": 403,
+  "mathematical_damage_cases": 28,
+  "distinct_mathematical_damage_types": 9,
+  "invalid_domains_rejected": 4,
+  "external_fixture_rejections": 6,
+  "peak_child_rss_KiB": 21212,
+  "runs": [
+    {
+      "label": "original-normal",
+      "elapsed_seconds": 8.344611,
+      "exit": 0,
+      "stdout_sha256": "9fac7166f67e73ff6d92f4e9502799bc30e101d93fb0dd2b7a5e945357ed2e11",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "original-O",
+      "elapsed_seconds": 8.554697,
+      "exit": 0,
+      "stdout_sha256": "9fac7166f67e73ff6d92f4e9502799bc30e101d93fb0dd2b7a5e945357ed2e11",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "independent-normal",
+      "elapsed_seconds": 8.346359,
+      "exit": 0,
+      "stdout_sha256": "25bd653d8d68da97241a54911282b287f1c1edbd8f3874569ab9deac0b8593a9",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "independent-O",
+      "elapsed_seconds": 8.571483,
+      "exit": 0,
+      "stdout_sha256": "25bd653d8d68da97241a54911282b287f1c1edbd8f3874569ab9deac0b8593a9",
+      "stderr_nonempty": false
+    },
+    {
+      "label": "rejected-missing-normal",
+      "elapsed_seconds": 0.088895,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-malformed-normal",
+      "elapsed_seconds": 0.090452,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-altered-normal",
+      "elapsed_seconds": 9.357613,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-missing-O",
+      "elapsed_seconds": 0.263113,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-malformed-O",
+      "elapsed_seconds": 0.264727,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    },
+    {
+      "label": "rejected-altered-O",
+      "elapsed_seconds": 8.644705,
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_nonempty": true
+    }
+  ],
+  "trust_boundary": "hash-bound own reviewed parent arithmetic plus new Gaussian/circle/response code; no researcher executable or expected data supplies independent calculations; ordinary full real Jacobian, IFT, root continuity, conjugation/permutation Hessian, mean-value normalization and Taylor/separation inequalities unformalized"
+}
