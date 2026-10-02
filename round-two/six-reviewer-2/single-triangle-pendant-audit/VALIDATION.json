@@ -1,0 +1,519 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "python": "3.12.14",
+  "all11_sealed_primary_files_unchanged": true,
+  "whole_primary_normal_optimized_agree": true,
+  "primary_normal": {
+    "original_phases": 24,
+    "uniform_tests": 4,
+    "whole_expected_match": false,
+    "whole_record_bytes": 100056,
+    "whole_record_sha256": "2de740e82ab2f89e041dd56d0ef3feb816db362a689d80effb59131ac62506cd"
+  },
+  "primary_optimized": {
+    "original_phases": 24,
+    "uniform_tests": 4,
+    "whole_expected_match": true,
+    "whole_record_bytes": 100056,
+    "whole_record_sha256": "2de740e82ab2f89e041dd56d0ef3feb816db362a689d80effb59131ac62506cd"
+  },
+  "native_unchanged_entire_normal": {
+    "counts": {
+      "actual_original_fixtures": 6,
+      "actual_positions_per_seed_or_repair": 15776,
+      "complete_changed_Gram_positions": 1608,
+      "complete_changed_frame_positions": 1608,
+      "direct_arithmetic_controls": 8,
+      "exact_symbolic_arrow_congruence_positions": 9,
+      "fixed_frame_controls": 8,
+      "fixed_frame_grouping_positions": 512,
+      "full_degree_bounded_identity_points": 1979,
+      "independent_Gaussian5_inverse_controls": 8,
+      "original_reduced_Gram_positions": 462,
+      "original_reduced_frame_positions": 462,
+      "positive_norm_coefficients": 407,
+      "rational_scalar_component_positions": 212,
+      "semantic_damages_rejected": 18,
+      "uniform_leading_minor_coefficients": 1252,
+      "uniform_leading_minors": 10,
+      "untouched_high_directions": 88,
+      "untouched_low_directions": 70
+    },
+    "entire_record_compared": true,
+    "peak_KiB": 24304,
+    "record_sha256": "f8ce503e1ffc83dad0d1c730c35134025e804052655b96c4e32a7b8daebcfbe0",
+    "seconds": 22.545948526007123,
+    "status": "PASS"
+  },
+  "native_unchanged_entire_optimized": {
+    "counts": {
+      "actual_original_fixtures": 6,
+      "actual_positions_per_seed_or_repair": 15776,
+      "complete_changed_Gram_positions": 1608,
+      "complete_changed_frame_positions": 1608,
+      "direct_arithmetic_controls": 8,
+      "exact_symbolic_arrow_congruence_positions": 9,
+      "fixed_frame_controls": 8,
+      "fixed_frame_grouping_positions": 512,
+      "full_degree_bounded_identity_points": 1979,
+      "independent_Gaussian5_inverse_controls": 8,
+      "original_reduced_Gram_positions": 462,
+      "original_reduced_frame_positions": 462,
+      "positive_norm_coefficients": 407,
+      "rational_scalar_component_positions": 212,
+      "semantic_damages_rejected": 18,
+      "uniform_leading_minor_coefficients": 1252,
+      "uniform_leading_minors": 10,
+      "untouched_high_directions": 88,
+      "untouched_low_directions": 70
+    },
+    "entire_record_compared": true,
+    "peak_KiB": 26044,
+    "record_sha256": "f8ce503e1ffc83dad0d1c730c35134025e804052655b96c4e32a7b8daebcfbe0",
+    "seconds": 22.54152048297692,
+    "status": "PASS"
+  },
+  "native_source_lineage": [
+    {
+      "file": "exact.py",
+      "method": "entire bytes",
+      "source_commit": "8a32f730483ce09147db62d7eedbf0c097745b53",
+      "whole_sha256": "b8f206f3939eedc38fcdd11301f8ccb19631d8ceab97a913afadd43e3df2b4ad"
+    },
+    {
+      "file": "bivariate.py",
+      "method": "entire bytes",
+      "source_commit": "8a32f730483ce09147db62d7eedbf0c097745b53",
+      "whole_sha256": "e6a31a702eacc77b425b6b45dd6bfe23e244e6ef00693472001aa5e424553509"
+    },
+    {
+      "file": "polynomial.py",
+      "method": "entire executableAST6 functions",
+      "functions": [
+        "require",
+        "alarm",
+        "clear_rows",
+        "bareiss_minors",
+        "scalar_determinant",
+        "identity"
+      ],
+      "source_commit": "8a32f730483ce09147db62d7eedbf0c097745b53"
+    },
+    {
+      "file": "baseline9408.py",
+      "method": "entire executableAST",
+      "source_commit": "f8255e1d617237421c32b3d1e13dd865bffd50c4"
+    }
+  ],
+  "late_common_whole_normal_optimized_agree": true,
+  "late_common_bytes": 65296,
+  "late_common_sha256": "7d82971e6ebd4477dc3f80ce14e5c3a6808456ecb515e9ed9849a3328ce0a015",
+  "late_phase_measures": {
+    "normal": [
+      {
+        "phase": "symbolic",
+        "seconds": 2.784
+      },
+      {
+        "phase": "original-3-2",
+        "seconds": 0.294
+      },
+      {
+        "phase": "original-4-2",
+        "seconds": 0.384
+      },
+      {
+        "phase": "original-4-3",
+        "seconds": 0.427
+      },
+      {
+        "phase": "original-5-4",
+        "seconds": 0.971
+      },
+      {
+        "phase": "original-6-2",
+        "seconds": 2.985
+      },
+      {
+        "phase": "original-6-5",
+        "seconds": 3.507
+      }
+    ],
+    "optimized": [
+      {
+        "phase": "native",
+        "seconds": 22.875
+      },
+      {
+        "phase": "symbolic",
+        "seconds": 2.125
+      },
+      {
+        "phase": "original-3-2",
+        "seconds": 0.31
+      },
+      {
+        "phase": "original-4-2",
+        "seconds": 0.357
+      },
+      {
+        "phase": "original-4-3",
+        "seconds": 0.373
+      },
+      {
+        "phase": "original-5-4",
+        "seconds": 0.63
+      },
+      {
+        "phase": "original-6-2",
+        "seconds": 1.783
+      },
+      {
+        "phase": "original-6-5",
+        "seconds": 2.937
+      }
+    ]
+  },
+  "preliminary_original_phase_measures": {
+    "normal": [
+      {
+        "n": 3,
+        "l": 2,
+        "phase": "physical",
+        "seconds": 0.174
+      },
+      {
+        "n": 3,
+        "l": 2,
+        "phase": "seed",
+        "seconds": 0.09
+      },
+      {
+        "n": 3,
+        "l": 2,
+        "phase": "old",
+        "seconds": 0.096
+      },
+      {
+        "n": 3,
+        "l": 2,
+        "phase": "new",
+        "seconds": 0.095
+      },
+      {
+        "n": 4,
+        "l": 2,
+        "phase": "physical",
+        "seconds": 0.415
+      },
+      {
+        "n": 4,
+        "l": 2,
+        "phase": "seed",
+        "seconds": 0.126
+      },
+      {
+        "n": 4,
+        "l": 2,
+        "phase": "old",
+        "seconds": 0.168
+      },
+      {
+        "n": 4,
+        "l": 2,
+        "phase": "new",
+        "seconds": 0.133
+      },
+      {
+        "n": 4,
+        "l": 3,
+        "phase": "physical",
+        "seconds": 0.528
+      },
+      {
+        "n": 4,
+        "l": 3,
+        "phase": "seed",
+        "seconds": 0.128
+      },
+      {
+        "n": 4,
+        "l": 3,
+        "phase": "old",
+        "seconds": 0.142
+      },
+      {
+        "n": 4,
+        "l": 3,
+        "phase": "new",
+        "seconds": 0.143
+      },
+      {
+        "n": 5,
+        "l": 4,
+        "phase": "physical",
+        "seconds": 1.999
+      },
+      {
+        "n": 5,
+        "l": 4,
+        "phase": "seed",
+        "seconds": 0.279
+      },
+      {
+        "n": 5,
+        "l": 4,
+        "phase": "old",
+        "seconds": 0.371
+      },
+      {
+        "n": 5,
+        "l": 4,
+        "phase": "new",
+        "seconds": 0.372
+      },
+      {
+        "n": 6,
+        "l": 2,
+        "phase": "physical",
+        "seconds": 6.878
+      },
+      {
+        "n": 6,
+        "l": 2,
+        "phase": "seed",
+        "seconds": 0.722
+      },
+      {
+        "n": 6,
+        "l": 2,
+        "phase": "old",
+        "seconds": 1.03
+      },
+      {
+        "n": 6,
+        "l": 2,
+        "phase": "new",
+        "seconds": 1.046
+      },
+      {
+        "n": 6,
+        "l": 5,
+        "phase": "physical",
+        "seconds": 9.487
+      },
+      {
+        "n": 6,
+        "l": 5,
+        "phase": "seed",
+        "seconds": 1.026
+      },
+      {
+        "n": 6,
+        "l": 5,
+        "phase": "old",
+        "seconds": 1.456
+      },
+      {
+        "n": 6,
+        "l": 5,
+        "phase": "new",
+        "seconds": 1.409
+      }
+    ],
+    "optimized": [
+      {
+        "n": 3,
+        "l": 2,
+        "phase": "physical",
+        "seconds": 0.314
+      },
+      {
+        "n": 3,
+        "l": 2,
+        "phase": "seed",
+        "seconds": 0.235
+      },
+      {
+        "n": 3,
+        "l": 2,
+        "phase": "old",
+        "seconds": 0.235
+      },
+      {
+        "n": 3,
+        "l": 2,
+        "phase": "new",
+        "seconds": 0.231
+      },
+      {
+        "n": 4,
+        "l": 2,
+        "phase": "physical",
+        "seconds": 0.574
+      },
+      {
+        "n": 4,
+        "l": 2,
+        "phase": "seed",
+        "seconds": 0.267
+      },
+      {
+        "n": 4,
+        "l": 2,
+        "phase": "old",
+        "seconds": 0.28
+      },
+      {
+        "n": 4,
+        "l": 2,
+        "phase": "new",
+        "seconds": 0.28
+      },
+      {
+        "n": 4,
+        "l": 3,
+        "phase": "physical",
+        "seconds": 0.658
+      },
+      {
+        "n": 4,
+        "l": 3,
+        "phase": "seed",
+        "seconds": 0.271
+      },
+      {
+        "n": 4,
+        "l": 3,
+        "phase": "old",
+        "seconds": 0.29
+      },
+      {
+        "n": 4,
+        "l": 3,
+        "phase": "new",
+        "seconds": 0.289
+      },
+      {
+        "n": 5,
+        "l": 4,
+        "phase": "physical",
+        "seconds": 2.176
+      },
+      {
+        "n": 5,
+        "l": 4,
+        "phase": "seed",
+        "seconds": 0.425
+      },
+      {
+        "n": 5,
+        "l": 4,
+        "phase": "old",
+        "seconds": 0.497
+      },
+      {
+        "n": 5,
+        "l": 4,
+        "phase": "new",
+        "seconds": 0.526
+      },
+      {
+        "n": 6,
+        "l": 2,
+        "phase": "physical",
+        "seconds": 6.972
+      },
+      {
+        "n": 6,
+        "l": 2,
+        "phase": "seed",
+        "seconds": 0.838
+      },
+      {
+        "n": 6,
+        "l": 2,
+        "phase": "old",
+        "seconds": 1.176
+      },
+      {
+        "n": 6,
+        "l": 2,
+        "phase": "new",
+        "seconds": 1.172
+      },
+      {
+        "n": 6,
+        "l": 5,
+        "phase": "physical",
+        "seconds": 9.602
+      },
+      {
+        "n": 6,
+        "l": 5,
+        "phase": "seed",
+        "seconds": 1.16
+      },
+      {
+        "n": 6,
+        "l": 5,
+        "phase": "old",
+        "seconds": 1.577
+      },
+      {
+        "n": 6,
+        "l": 5,
+        "phase": "new",
+        "seconds": 1.552
+      }
+    ]
+  },
+  "counts": {
+    "all_quadrant_norm_coefficients": 465,
+    "all_leading_minor_coefficients": 1588,
+    "complete_identity_grid_points": 2482,
+    "exact_symbolic_augmented_entries": 16,
+    "late_common_scalar_rational_identities": 12,
+    "late_common_matrix_rational_entries": 28,
+    "whole_original_M_positions_per_seed_old_or_new": 15776,
+    "whole_original_core_positions": 15238,
+    "whole_original_residual_positions": 224,
+    "own_damages": 19,
+    "native_damages": 18
+  },
+  "related_two_triangle": {
+    "height": 9683,
+    "artifact_ref": "bafkreieccs7da4qvw4gik7npjeonvoo4dmx7h4r6bqf4nlrmpdg5plcbye",
+    "scope_read": "n>=4,l2..n-2,two distinct triangle stars/lowerN-2, different hypothesis; related context not premise or assessment"
+  },
+  "formalized": false,
+  "operations": {
+    "threads": 1,
+    "CPU_math_jobs": 1,
+    "scope": "unchanged1CPU2GiB/TasksMax128",
+    "own_phase_alarm": 45,
+    "own_outer_child": 55,
+    "target_native_stage60_unchanged": true,
+    "account_budget_controls_unchanged": true
+  },
+  "operational_notes": [
+    "An early bookkeeping read used nonexistent workspace-root checkpoint path; actual checkpoint is in round-two/six-reviewer-2.",
+    "A natural-pause bookkeeping read used nonexistent state/HANDOVER path; corrected state/monitor/HANDOVER, completed; no control mutation.",
+    "One bookkeeping Python conditional was mistyped else0 and failed before any work; corrected; no primary source change.",
+    "Related context source lay at an earlier height than initial9641 intake checkpoint; bounded signed9640..9716 lookup retrieved full payload, no verdict transfer.",
+    "Active checkpoint word unmaterialized corrected to unread contents; paths already populated by ordinary Git fetch. No primary code or proof changed after seal."
+  ],
+  "portable_common_normal": {
+    "entire_common_match": true,
+    "phases": 7,
+    "whole_common_bytes": 65296,
+    "whole_common_sha256": "7d82971e6ebd4477dc3f80ce14e5c3a6808456ecb515e9ed9849a3328ce0a015"
+  },
+  "portable_common_optimized": {
+    "entire_common_match": true,
+    "phases": 7,
+    "whole_common_bytes": 65296,
+    "whole_common_sha256": "7d82971e6ebd4477dc3f80ce14e5c3a6808456ecb515e9ed9849a3328ce0a015"
+  }
+}
