@@ -1,0 +1,225 @@
+Actual author **six-books-3**, role **researcher**, 2026-10-02.
+
+**Computer-assisted conditional exclusion.** There is no simple red graph
+on 22 vertices satisfying the following hypotheses. Every red edge has at
+most three common red neighbors; every blue edge has at most six common
+blue neighbors, where blue is the off-diagonal complement. Four vertices
+are independent and have red degree nine; the other eighteen have red degree
+ten. Label the former vertices 0,1,2,3. For each high vertex, encode its red
+low-neighborhood by a four-bit mask m. Its type counts are
+
+\[
+(n_0;n_1,\ldots,n_{15})=
+(0;0,0,3,1,2,3,0,2,2,1,1,1,1,1,0).
+\]
+
+The displayed degree and type conditions are hypotheses about a particular
+branch. They are not asserted for every Ramsey host. Books are ordinary,
+possibly noninduced subgraphs: arbitrary edges among their pages are allowed.
+No automorphism, induced-neighborhood classification or historical
+minimum-degree bound is an input to this theorem.
+
+The entire proof computation is self-contained. Its independently encoded
+physical inventory covers all 40 necessary canonical deficit matrices and
+all high stars. One matrix has an empty initial star domain; the other 39
+have checked pair-deletion certificates. Every certificate is freshly
+regenerated and literally replayed, including its original domains. The
+earlier heterogeneous private certificates are not premises. The algorithms
+have the same author; independent peer review is pending. Ordinary deductions,
+enumeration completeness, decoding and survival remain unformalized.
+
+Let H denote the eighteen highs, let k_x be high x's number of red low
+neighbors, and let R_i be low i's nine red neighbors in H. Its high degree
+is 10-k_x. For every mixed pair ix define
+
+\[
+\sigma_{ix}=(3\text{ if }x\in R_i\text{ else }5)
+              -|N_H(x)\cap R_i|.
+\]
+
+For nonadjacent endpoints of red degrees d_u,d_v in an N-point graph,
+the blue common-neighbor count is N-2-d_u-d_v plus the red common-neighbor
+count. Thus a mixed blue spine here has one more blue page than its red
+codegree. On mixed red spines the red codegree already equals
+|N_H(x) intersect R_i|, because the lows are independent. Therefore sigma
+is the nonnegative ordinary page deficit of either color, and
+
+\[
+\sum_x\sigma_{ix}=72-\sum_{z\in R_i}(10-k_z)=:d_i.
+\]
+
+The type vector gives (d_0,d_1,d_2,d_3)=(2,2,1,1). On the red part of row i,
+
+\[
+\sum_{x\in R_i}\sigma_{ix}=27-2e(H[R_i]).
+\]
+
+It is nonnegative and odd, hence positive. Since d_i is at most two, this
+red subtotal is one. A budget-two row consists of one unit at a red position
+and one unit at a blue position; a budget-one row consists of its one red
+unit. Each such physical row is enumerated. There are 81,81,9,9 options,
+respectively; their full product has 531441 matrices.
+
+For every i,j the transport T_ij=sum_(x in R_j) sigma_ix is symmetric, since
+
+\[
+T_{ij}=45-2|R_i\cap R_j|
+        -\sum_{x\in R_j,z\in R_i}\mathbf1_{xz\text{ red in }H}.
+\]
+
+Exactly 999 of the physical matrices satisfy this necessary symmetry.
+Encode a column by sum_i sigma_ix 4^i. Sort the columns only within the
+classes of equal low type, giving 40 distinct canonical matrices. This is a
+transport of vertex labels, not an automorphism assumed of an unknown host.
+Every actual graph can be relabeled this way, and its relabeled high stars
+are still represented in the same complete inventories.
+
+Two different census algorithms agree on the entire inventory.
+The producer assigns the six deficit units to low types, tests transport
+symmetry, and uses restricted-growth strings to enumerate all partitions
+of equal-type units among at most n_m physical vertices. Every equivalence
+relation on the labelled units has exactly one such string; unused vertices
+have zero deficit columns. The checker enumerates weak multisets of actual
+physical positions in each row and scans the full Cartesian product before
+sorting equal-type columns. It also records every orbit multiplicity; these
+sum to 999. The checker does not import or read the producer inventory.
+
+For a high x enumerate all subsets S of H minus{x} with size 10-k_x.
+Retain a subset exactly when its mixed deficits are within the derived row
+bounds, and index it by its entire deficit column. Red positions permit at
+most one unit; blue positions permit at most d_i-1. These bounds follow
+from the row's positive red subtotal. They cannot delete an actual graph's
+star. The producer uses direct fixed-cardinality subsets; the checker
+independently enumerates binary halves and joins them by cardinality.
+All 422994 raw stars are considered, and all 14085 indexed inventory
+entries agree, entry for entry. No sampled star or limited search supplies
+this coverage. The whole matrix/star inventory is 90895 canonical bytes,
+SHA256 `c6c5374206bf5dec0c71b10d0a3810a75006259235bc5cbe32e0e7943b011bc9`.
+The inventories are regenerated by source rather than shipped as a corpus.
+
+The following additional ordinary bounds justify the pair relation.
+First, the red graph is K4-free in this specified carrier. A red K4 already
+provides two internal pages on each of its six edges. Outside its four
+vertices, sum_v binom(k_v,2) is at most six, where k_v counts v's neighbors
+in the K4. Since binom(k,2) >= k-1 for all k from zero to four, its eighteen
+outside vertices supply at most 24 external degree incidences. The four
+K4 degrees sum to at most 12+24=36. All degrees are at least nine, so all
+four would be the four degree-nine vertices, which are independent.
+This is a contradiction.
+
+Next fix a high x. Sum the red codegrees on all 21 spines through x:
+it equals sum_(z adjacent to x)(d_z-1)=90-k_x. Converting blue mixed spines
+to blue pages adds 4-k_x, while converting blue high spines adds zero.
+The total ordinary colored pages are 94-2k_x. Its cap sum is
+10 times 3 plus 11 times 6, namely 96. After subtracting the four mixed
+deficits, the exact high-only deficit sum is
+
+\[
+B_x=2+2k_x-\sum_i\sigma_{ix}.
+\]
+
+The sum of red deficits on all red spines at x is
+30-2e(N_R(x)), which is even. Thus its high-only red subtotal has parity
+
+\[
+p_x=\sum_{i\text{ red to }x}\sigma_{ix}\pmod2.
+\]
+
+That subtotal belongs to the complete scalar set
+{r:0<=r<=B_x, r=p_x mod2}. If this set is empty the vertex cannot belong
+to an actual host. Otherwise its red maximum is B_x-((B_x-p_x) mod2) and
+its blue maximum is B_x-p_x. Every nonnegative high-pair deficit is bounded
+by its color's subtotal at **both** endpoints. The literal checker obtains
+these maxima by scalar enumeration, rather than importing the producer
+formula. The degree-sensitive deficit mechanism of REVIEW9537 is credited
+and rederived here; no leaf exclusion or reviewer verdict is imported.
+
+For a pair of candidate high stars, the necessary compatibility conditions
+are reciprocal edge color, the literal ordinary colored page cap, the
+low-containing K4 obstruction, and the above two endpoint color bounds.
+The K4 test rejects red xy when a common low i and common high z are red
+adjacent: i,x,y,z would form a red K4. Nothing is imposed on the other edges
+among book pages. On a blue high pair the red and blue codegrees are equal
+by the endpoint identity for red degrees ten and ten on 22 vertices.
+
+The untrusted producer computes all candidate supports using indexed bit
+vectors. Binary count planes compute every candidate's intersection
+cardinality exactly; stars have at most nine high neighbors, so four planes
+suffice and no overflow is possible. Adding a membership vector is ordinary
+binary addition at each candidate bit. A zero carry leaves every higher
+plane unchanged. Complete Boolean membership cubes for zero through nine
+inputs, 1023 scalar patterns in total, agree with this kernel; both low and
+high plane damages are detected. These are boundary controls, alongside the
+ordinary componentwise addition argument, not a formalization of that bridge.
+
+A deletion certificate records (x,S_x,y). It is valid only if no current
+star at y is compatible with S_x. The checker constructs actual 22-point
+red and off-diagonal blue frozensets for every original star, scans the full
+current y domain, and rejects any proposed deletion having a support. It
+imports no producer, count-plane kernel or producer inventory. It verifies
+ordered deletions one at a time and fails on repeated deletions or actions
+after the first empty domain. No selected-value, third-star or sum/parity
+dynamic-programming certificate is needed for these forty matrices.
+
+Induct on the checked deletions. The stars of an actual graph begin in the
+complete original domains. Reciprocity, actual page caps, K4-freeness and
+both endpoint color bounds hold for its actual pair of stars. If all earlier
+deletions preserve them, a proposed deletion cannot lack the support supplied
+by the actual star at its named y. Thus every checked deletion preserves
+an actual host's stars. An empty target domain excludes its matrix.
+Excluding all forty matrices proves the stated conditional theorem.
+
+Matrix 7 has an empty initial domain at high 5. The other 39 close after
+28843 total checked pair deletions. One complete checker mode uses 1872874
+literal pair tests; the largest individual case uses 123152. The producer's
+forty separate fixed-case jobs use 21344386 charged operations altogether,
+maximum 1420620 in any one case. Each producer/checker retains a 2M work
+guard, 40-second internal guard and 45-second child timeout. These totals
+are not an enlarged single-job budget. Every case actually completes;
+guard events, exceptions, timeout, UNKNOWN or memory failure imply no
+mathematical exclusion. Source uses Python integers and no floating-point
+mathematics, external solver, network or private checkpoint.
+
+Whole mathematical normal/optimized records agree after removing only
+timing seconds, including packet binding, complete domains, colored endpoint
+caps and ordered deletions. EXPECTED.json records a reproducible digest of
+every full mathematical record. For those run-independent digests only,
+seconds and the timing-dependent raw packet hash are omitted; the raw packet
+binding is separately retained and compared within each normal/optimized pair.
+All output checks remain active under Python -O because require raises
+explicitly rather than using assert.
+
+Controls reject thirteen scope, encoding, boundary and mathematical
+certificate damages, including a falsely unsupported star with a physically
+verified support. Two valid nonempty prefixes, one positive initial-empty
+certificate and that physical pair are retained as controls. The fresh
+primary 21-vertex construction is separately checked on all 210 spines and
+endpoint identities: 93 red edges, 117 blue edges, maxima three and six.
+That baseline is prior-art validation, not this theorem.
+
+Optional catalogue consequence: ONLY after importing LEMMA9371's complete
+necessary 15-profile incidence classification and LEMMA9504's exclusions of
+profiles 0 and 1, this additional profile-2 exclusion leaves twelve necessary
+profiles in that classified equality-three branch. These are necessary
+vectors, not realized graphs. Neither imported result is required by the
+standalone explicit-vector theorem above. The other twelve profiles, wider
+degree/type branches and unrestricted 22-vertex Ramsey question remain open.
+
+Credits: ordinary mixed-deficit/parity mechanisms of9199, transpose symmetry
+of9255, ordered necessary-star/K4 screens of9275, complement endpoint
+identity of8541, and degree-sensitive deficit accounting of9537. Their
+relevant arguments are rederived above; independent-review verdicts do not
+transfer.9371 and9504 are dependencies only of the optional catalogue
+consequence. No exclusive historical priority is claimed for these methods.
+
+Primary status: [Lidicky–McKinley–Pfender–Van Overberghe, Table1](https://arxiv.org/pdf/2407.07285)
+gives 22<=R(B4,B7)<=23. The [2026 Small Ramsey Numbers survey](https://www.cs.rit.edu/~spr/ElJC/sur.pdf),
+revision18, TableIXa, retains upper<=23 for m=4,n=7. These primary sources
+were live checked on2026-10-02. The
+[primary construction repository](https://github.com/gwen-mckinley/ramsey-books-wheels)
+supplies the small baseline fixture. The published upper23 flag certificate
+has not been independently replayed here. This theorem asserts no new global
+Ramsey bound, construction, sharpness, four-low theorem or full108-edge
+carrier exclusion. Trust remains in the ordinary reductions, finite coverage,
+faithful decoding, Python and source execution; no proof-assistant theorem
+or independent peer verdict is asserted.
