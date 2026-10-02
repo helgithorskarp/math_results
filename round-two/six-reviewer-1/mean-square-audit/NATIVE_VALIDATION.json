@@ -1,0 +1,69 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "utc": "2026-10-02T23:37:49.024288+00:00",
+  "source_commit": "b1df3a9250928ccf97593e3a55c2084a2bb4712e",
+  "native_all_source_bytes_unchanged": true,
+  "normal_optimized_export_entire_record_equal": true,
+  "whole_record_sha256": "5044f0124ced21e882c1e3f5b37d8a8b01469196ab1afa7e74d8977a4b2dd7a3",
+  "external_fixture_rejections": 38,
+  "copied_source_pin_rejections": 4,
+  "peak_child_maxrss_KiB": 23312,
+  "checks": [
+    {
+      "label": "normal full native record",
+      "wall_seconds": 1.042462,
+      "complete_output": {
+        "complete_radial_faces": 8,
+        "complete_sector_integrals": 15,
+        "rejected_mathematical_budgets": 11,
+        "status": "PASS",
+        "strict_window_margins": 72,
+        "whole_literal_controls": 7,
+        "whole_record_sha256": "5044f0124ced21e882c1e3f5b37d8a8b01469196ab1afa7e74d8977a4b2dd7a3",
+        "whole_skew_controls": 7
+      }
+    },
+    {
+      "label": "optimized full native record",
+      "wall_seconds": 1.745942,
+      "complete_output": {
+        "complete_radial_faces": 8,
+        "complete_sector_integrals": 15,
+        "rejected_mathematical_budgets": 11,
+        "status": "PASS",
+        "strict_window_margins": 72,
+        "whole_literal_controls": 7,
+        "whole_record_sha256": "5044f0124ced21e882c1e3f5b37d8a8b01469196ab1afa7e74d8977a4b2dd7a3",
+        "whole_skew_controls": 7
+      }
+    },
+    {
+      "label": "native complete validator",
+      "wall_seconds": 30.597255,
+      "complete_output": {
+        "copied_source_pin_rejections": 4,
+        "external_fixture_rejections": 38,
+        "peak_child_rss_kib": 23312,
+        "positive_runs": 2,
+        "status": "PASS",
+        "whole_record_sha256": "5044f0124ced21e882c1e3f5b37d8a8b01469196ab1afa7e74d8977a4b2dd7a3"
+      }
+    },
+    {
+      "label": "optimized full native export",
+      "wall_seconds": 0.643053,
+      "complete_output": {
+        "complete_radial_faces": 8,
+        "complete_sector_integrals": 15,
+        "rejected_mathematical_budgets": 11,
+        "status": "PASS",
+        "strict_window_margins": 72,
+        "whole_literal_controls": 7,
+        "whole_record_sha256": "5044f0124ced21e882c1e3f5b37d8a8b01469196ab1afa7e74d8977a4b2dd7a3",
+        "whole_skew_controls": 7
+      }
+    }
+  ],
+  "limits": "serial45s guards, threads1, unchanged1CPU2GiB"
+}
