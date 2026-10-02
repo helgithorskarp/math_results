@@ -1,0 +1,198 @@
+{
+  "agent": "six-books-1",
+  "role": "researcher",
+  "date_UTC": "2026-10-02",
+  "claim": "specified one-nine leaf at u, global red degrees9^4,10^18: both SX cannot omit the same T point",
+  "primary_approach": "combinatorial",
+  "proof_status": "exact finite reduction and ordinary finish; unformalized completeness bridges; same-author independent algorithms; independent review pending",
+  "python_version": "3.12.14",
+  "dependencies": "Python standard library only; no shared producer/checker imports",
+  "resource_policy": {
+    "math_children_at_once": 1,
+    "native_thread_variables": 1,
+    "CPU_limit": 1,
+    "memory_limit_GiB": 2,
+    "program_guard_seconds": 30,
+    "external_guard_seconds": 90,
+    "resource_settings_changed": false
+  },
+  "record": {
+    "file": "EXPECTED.json",
+    "bytes": 14173,
+    "sha256_including_newline": "6272bd2638d39457faf9e685c2f4d5c94f2c3da7eaacd9b224d6d5542a313612",
+    "domain_sha256": "9da2e8de3b0b2ac4aaca38fab36341f97984f7004afc26fae7eebe4c90062121",
+    "interfaces": 208,
+    "actual_low_placements_covered": 165,
+    "flag_words": 26,
+    "SX_Y_frames": 18720,
+    "compatible_T_Y_row_pairs": 0
+  },
+  "validation": {
+    "runs": [
+      {
+        "command": [
+          "round-two/six-books-1/caseII_tagged_leaf/derive.py"
+        ],
+        "optimized": false,
+        "wall_seconds": 7.492627,
+        "peak_RSS_KiB": 15204,
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "-O",
+          "round-two/six-books-1/caseII_tagged_leaf/derive.py"
+        ],
+        "optimized": true,
+        "wall_seconds": 7.240569,
+        "peak_RSS_KiB": 19200,
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "round-two/six-books-1/caseII_tagged_leaf/verify.py",
+          "--emit"
+        ],
+        "optimized": false,
+        "wall_seconds": 10.643252,
+        "peak_RSS_KiB": 16692,
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "-O",
+          "round-two/six-books-1/caseII_tagged_leaf/verify.py",
+          "--emit"
+        ],
+        "optimized": true,
+        "wall_seconds": 14.12314,
+        "peak_RSS_KiB": 20488,
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "round-two/six-books-1/caseII_tagged_leaf/verify.py",
+          "--self-test"
+        ],
+        "optimized": false,
+        "wall_seconds": 11.42128,
+        "peak_RSS_KiB": 17000,
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "-O",
+          "round-two/six-books-1/caseII_tagged_leaf/verify.py",
+          "--self-test"
+        ],
+        "optimized": true,
+        "wall_seconds": 11.311975,
+        "peak_RSS_KiB": 20308,
+        "exit_code": 0
+      }
+    ],
+    "max_wall_seconds": 14.12314,
+    "max_RSS_KiB": 20488,
+    "normal_optimized_whole_records_equal": true,
+    "damages_rejected_per_mode": 14,
+    "six_point_subset_pairs_per_mode": 4096
+  },
+  "primary_baseline": {
+    "source": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+    "n": 21,
+    "red_edges": 93,
+    "blue_edges": 117,
+    "max_red_pages": 3,
+    "max_blue_pages": 6
+  },
+  "primary_literature": {
+    "paper": "https://arxiv.org/pdf/2407.07285",
+    "table": "Table1",
+    "best_located_gap": [
+      22,
+      23
+    ],
+    "reopened_UTC": "2026-10-02",
+    "upper_flag_certificate_replayed": false,
+    "priority_claim": "no exclusive or unpublished priority claim"
+  },
+  "survey": {
+    "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf",
+    "bytes": 349271,
+    "sha256": "fc7df6ab2aae870f8b27039a336f368a1234bf4eb9325e80bf20510aba79f2d2",
+    "fetched_UTC": "2026-10-02",
+    "current_pdf_download_verified": true,
+    "table_not_extracted_in_this_pass": true,
+    "use_as_proof_input": false
+  },
+  "inherited_or_context_sources": [
+    {
+      "lemma": "9131",
+      "artifactRef": "bafkreiesfsfe44lvytykz4oczwidosjpdxf4g3imjfnw7pxdllkmqsfqwu",
+      "source_commit": "6285ab7b447b77e323e2ff4dd24bc7f57e329201",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-1/single_page_pairs/PROOF.md",
+      "use": "main ordinary pair premise"
+    },
+    {
+      "lemma": "9197",
+      "artifactRef": "bafkreihpfs2amla4nojrvjj7sce2qmukiswkuv6msyz2el7zphfqg65m74",
+      "source_commit": "266d4715935381ce0aeb9386ad966364e0797f6d",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-1/degree9_cycle_saturation/PROOF.md",
+      "use": "Case-II predecessor, context"
+    },
+    {
+      "lemma": "9281",
+      "artifactRef": "bafkreif2fwnlg5k23u4tosqfzsnllwqr4x4si7x5gjbe3djfa6johsd4aa",
+      "source_commit": "681566bd54dc19a3ae93b193802727a454bda1e7",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-1/isolated_leaf_mark/PROOF.md",
+      "use": "older isolated-mark reduction, context"
+    },
+    {
+      "lemma": "9327",
+      "artifactRef": "bafkreihma2u2sz5wqvg5h6k43gn6v7jiy2266kox56mvvwzn7m5nzpjitm",
+      "source_commit": "53299fce3d1533600741841940a4a625db2fdb70",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-1/caseI_tagged_leaf/PROOF.md",
+      "use": "complementary exclusion, corollary premise only"
+    }
+  ],
+  "independent_prior_reviews": [
+    {
+      "review": "9247",
+      "artifactRef": "bafkreih73jm2tc3tlstokum5ue3wrmxrjcglgrc6t2pcr7op63fspyhkw4",
+      "source_commit": "c10bc7c39e7808fb9f08bda535c5e9ab41f60193",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-4/degree-nine-audit/REVIEW.md",
+      "use": "credited prior Case-II low cut; not imported as a finite-domain pruning"
+    },
+    {
+      "review": "9105",
+      "artifactRef": "bafkreidoqp2j7xs4otszqbipiilrlxcw6oxptzw7bgpifuolplvexg2nny",
+      "source_commit": "5a063abc29f41da9995f92341639b463f2a0e1d8",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-2/leaf-neighbor-audit/REVIEW.md",
+      "use": "ordinary four-regularity attribution; rederived in PROOF.md"
+    }
+  ],
+  "concurrent_peer_context": {
+    "agent": "six-books-3",
+    "role": "researcher",
+    "source_commit": "e43cbf8eec3a8b21dfdf4566ab328b1261c3953f",
+    "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-books-3/three-root-incidence108/PROOF.md",
+    "entire_proof_read": true,
+    "proof_bytes": 15510,
+    "proof_sha256": "ed5486072f099129b2f410b97df3dfe237cf0ddc0500816ca4d4d97a487b9fcf",
+    "executable_replayed_by_this_author": false,
+    "imported_as_premise": false,
+    "graph_ref": "bafkreiaamhy4trvoaxcdludr36coymxbrinv2i6ivdrvkkcq6pfyz3w7be",
+    "commitment_height": 9371,
+    "full_graph_body_source_matches": true,
+    "all_12_initial_directions_read": true
+  },
+  "not_covered": [
+    "cross-repeated cores",
+    "other neighborhoods",
+    "other degree multisets",
+    "all108-edge hosts",
+    "the numerical Ramsey endpoint"
+  ],
+  "public_contents": "compact source and complete14173-byte evidence; no private ledger, signed transaction, key, checkpoint, bulky corpus or logs"
+}
