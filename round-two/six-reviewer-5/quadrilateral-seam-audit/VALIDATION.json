@@ -1,0 +1,124 @@
+{
+  "actual_author": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "own_four_serial_children": [
+    {
+      "program": "core/audit.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.10076103603933007,
+      "maxrss_kib": 17392,
+      "stdout": "{\"bytes\": 25825, \"sha256\": \"f3704fd4904205d84b32a11814361dee7d12153df0ac65ce27a71756d7a549b5\", \"ports\": 27, \"seams\": 81, \"discriminants\": 3, \"one_vertex_threshold_squared\": \"1/5\"}\n",
+      "stderr": ""
+    },
+    {
+      "program": "core/audit.py",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.23212029098067433,
+      "maxrss_kib": 19864,
+      "stdout": "{\"bytes\": 25825, \"sha256\": \"f3704fd4904205d84b32a11814361dee7d12153df0ac65ce27a71756d7a549b5\", \"ports\": 27, \"seams\": 81, \"discriminants\": 3, \"one_vertex_threshold_squared\": \"1/5\"}\n",
+      "stderr": ""
+    },
+    {
+      "program": "core/controls.py",
+      "mode": "normal",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.12954674009233713,
+      "maxrss_kib": 16696,
+      "stdout": "{\"semantic_damages_rejected\": 10, \"valid_record_representation_accepted\": true, \"ordinary_geometry_unformalized\": true}\n",
+      "stderr": ""
+    },
+    {
+      "program": "core/controls.py",
+      "mode": "optimized",
+      "guard_seconds": 45,
+      "exit": 0,
+      "seconds": 0.274384016986005,
+      "maxrss_kib": 20044,
+      "stdout": "{\"semantic_damages_rejected\": 10, \"valid_record_representation_accepted\": true, \"ordinary_geometry_unformalized\": true}\n",
+      "stderr": ""
+    }
+  ],
+  "late_native_six_serial_children": [
+    {
+      "program": "check.py",
+      "mode": "normal",
+      "seconds": 0.10276884795166552,
+      "maxrss_kib": 17020,
+      "exit": 0,
+      "stdout": "{\"annulus_port_cases\": 27, \"calibration\": \"six-point triangular prism at c=1/7\", \"certificate_sha256\": \"308b6a783ffa4b0ec739db4b7598ff9d12605109daa8b3419739b77d5fa5a7b6\", \"seams_joining_distinct_boundaries\": 81, \"star_cases\": 3, \"strict_negative_discriminants\": 3}\n",
+      "stderr": "",
+      "guard_seconds": 45
+    },
+    {
+      "program": "audit.py",
+      "mode": "normal",
+      "seconds": 0.0713241680059582,
+      "maxrss_kib": 17352,
+      "exit": 0,
+      "stdout": "{\"all_star_equations_and_discriminants_bound\": true, \"annulus_port_cases\": 27, \"certificate_sha256\": \"308b6a783ffa4b0ec739db4b7598ff9d12605109daa8b3419739b77d5fa5a7b6\", \"independent_adjacent_angle_factorization\": true, \"prism_Gram_entries\": 36, \"prism_contacts\": 9, \"prism_strict_noncontacts\": 6, \"seams_joining_distinct_boundaries\": 81, \"star_cases\": 3, \"strict_negative_discriminants\": 3}\n",
+      "stderr": "",
+      "guard_seconds": 45
+    },
+    {
+      "program": "controls.py",
+      "mode": "normal",
+      "seconds": 0.24362897605169564,
+      "maxrss_kib": 17364,
+      "exit": 0,
+      "stdout": "{\"damage_reasons\": {\"changed_B_over_A\": \"multiple-angle cotangent identity\", \"changed_Delta\": \"squared-difference discriminant identity\", \"changed_P\": \"A endpoint equation\", \"changed_S_over_A\": \"A endpoint equation\", \"changed_solver_divisor_over_A\": \"star solver divisor\", \"collapsed_boundary_cycle\": \"full boundary components\", \"deleted_quotient_vertex\": \"all quotient classes\", \"duplicate_ring\": \"every labeled port case exactly once\", \"duplicate_star\": \"complete t domain\", \"missing_boundary_arc\": \"every physical boundary arc\", \"missing_prism_contact\": \"complete prism contacts\", \"missing_ring\": \"full 27-row annulus catalog\", \"missing_seam\": \"complete seam domain\", \"missing_star\": \"three star cases\", \"overlapping_ports\": \"port domain\", \"physical_endpoint_one_included\": \"closed algebraic band and open physical upper endpoint\", \"unsupported_lower_band\": \"closed algebraic band and open physical upper endpoint\", \"wrong_adjacent_angle_identity\": \"adjacent-angle exact factorization\", \"wrong_discriminant_Bernstein\": \"full Bernstein coefficient binding\", \"wrong_divisor_Bernstein\": \"full Bernstein coefficient binding\", \"wrong_mixed_count\": \"mixed-corner field\", \"wrong_prism_Gram\": \"every prism Gram entry\", \"wrong_seam_endpoint\": \"exact seam endpoints\"}, \"damages_rejected\": 23, \"outside_band_calibration\": \"c=1/7 is a feasible TQQ prism, not excluded\", \"valid_controls\": {\"class_and_member_order\": \"accepted\", \"complete_row_order\": \"accepted\", \"cycle_rotation_reversal_and_order\": \"accepted\", \"positive_rational_rescaling\": \"accepted\", \"prism_face_cyclic_rotation\": \"accepted\"}, \"valid_controls_accepted\": 5}\n",
+      "stderr": "",
+      "guard_seconds": 45
+    },
+    {
+      "program": "check.py",
+      "mode": "optimized",
+      "seconds": 0.2513971569715068,
+      "maxrss_kib": 21048,
+      "exit": 0,
+      "stdout": "{\"annulus_port_cases\": 27, \"calibration\": \"six-point triangular prism at c=1/7\", \"certificate_sha256\": \"308b6a783ffa4b0ec739db4b7598ff9d12605109daa8b3419739b77d5fa5a7b6\", \"seams_joining_distinct_boundaries\": 81, \"star_cases\": 3, \"strict_negative_discriminants\": 3}\n",
+      "stderr": "",
+      "guard_seconds": 45
+    },
+    {
+      "program": "audit.py",
+      "mode": "optimized",
+      "seconds": 0.25014624395407736,
+      "maxrss_kib": 21384,
+      "exit": 0,
+      "stdout": "{\"all_star_equations_and_discriminants_bound\": true, \"annulus_port_cases\": 27, \"certificate_sha256\": \"308b6a783ffa4b0ec739db4b7598ff9d12605109daa8b3419739b77d5fa5a7b6\", \"independent_adjacent_angle_factorization\": true, \"prism_Gram_entries\": 36, \"prism_contacts\": 9, \"prism_strict_noncontacts\": 6, \"seams_joining_distinct_boundaries\": 81, \"star_cases\": 3, \"strict_negative_discriminants\": 3}\n",
+      "stderr": "",
+      "guard_seconds": 45
+    },
+    {
+      "program": "controls.py",
+      "mode": "optimized",
+      "seconds": 0.39454003795981407,
+      "maxrss_kib": 21384,
+      "exit": 0,
+      "stdout": "{\"damage_reasons\": {\"changed_B_over_A\": \"multiple-angle cotangent identity\", \"changed_Delta\": \"squared-difference discriminant identity\", \"changed_P\": \"A endpoint equation\", \"changed_S_over_A\": \"A endpoint equation\", \"changed_solver_divisor_over_A\": \"star solver divisor\", \"collapsed_boundary_cycle\": \"full boundary components\", \"deleted_quotient_vertex\": \"all quotient classes\", \"duplicate_ring\": \"every labeled port case exactly once\", \"duplicate_star\": \"complete t domain\", \"missing_boundary_arc\": \"every physical boundary arc\", \"missing_prism_contact\": \"complete prism contacts\", \"missing_ring\": \"full 27-row annulus catalog\", \"missing_seam\": \"complete seam domain\", \"missing_star\": \"three star cases\", \"overlapping_ports\": \"port domain\", \"physical_endpoint_one_included\": \"closed algebraic band and open physical upper endpoint\", \"unsupported_lower_band\": \"closed algebraic band and open physical upper endpoint\", \"wrong_adjacent_angle_identity\": \"adjacent-angle exact factorization\", \"wrong_discriminant_Bernstein\": \"full Bernstein coefficient binding\", \"wrong_divisor_Bernstein\": \"full Bernstein coefficient binding\", \"wrong_mixed_count\": \"mixed-corner field\", \"wrong_prism_Gram\": \"every prism Gram entry\", \"wrong_seam_endpoint\": \"exact seam endpoints\"}, \"damages_rejected\": 23, \"outside_band_calibration\": \"c=1/7 is a feasible TQQ prism, not excluded\", \"valid_controls\": {\"class_and_member_order\": \"accepted\", \"complete_row_order\": \"accepted\", \"cycle_rotation_reversal_and_order\": \"accepted\", \"positive_rational_rescaling\": \"accepted\", \"prism_face_cyclic_rotation\": \"accepted\"}, \"valid_controls_accepted\": 5}\n",
+      "stderr": "",
+      "guard_seconds": 45
+    }
+  ],
+  "comparison": {
+    "rational_fields": 15,
+    "whole_coefficient_positions": 46,
+    "ports": 27,
+    "quotient_classes": 216,
+    "directed_arcs": 216,
+    "directed_cycles": 54,
+    "seams": 81,
+    "mixed_corner_counts": 54,
+    "prism_Gram_entries": 36,
+    "alternate_factorization": true,
+    "target_executable_imported": false
+  },
+  "all_threads_one": true,
+  "child_guard_seconds": 45,
+  "proof_bridges_unformalized": true
+}
