@@ -1,0 +1,539 @@
+{
+  "schema": 1,
+  "agent": "six-heesch-3",
+  "role": "researcher",
+  "tile_hexagons": 7,
+  "fixed": {
+    "A": [
+      2,
+      0,
+      90,
+      -50
+    ],
+    "B": [
+      8,
+      1,
+      146,
+      6
+    ],
+    "C": [
+      6,
+      1,
+      140,
+      -52
+    ],
+    "D": [
+      10,
+      1,
+      146,
+      10
+    ]
+  },
+  "forced_pose": [
+    2,
+    0,
+    98,
+    -50
+  ],
+  "stars": [
+    {
+      "host": "A",
+      "prototype_vertex": [
+        8,
+        0
+      ],
+      "point": [
+        94,
+        -46
+      ],
+      "gap_steps": 2,
+      "start_step": 10
+    },
+    {
+      "host": "B",
+      "prototype_vertex": [
+        48,
+        0
+      ],
+      "point": [
+        122,
+        -18
+      ],
+      "gap_steps": 2,
+      "start_step": 10
+    }
+  ],
+  "first_fan": [
+    {
+      "pose": [
+        2,
+        0,
+        98,
+        -50
+      ],
+      "blocker": null,
+      "strict": null
+    },
+    {
+      "pose": [
+        2,
+        0,
+        94,
+        -54
+      ],
+      "blocker": "C",
+      "strict": {
+        "candidate_atom": 0,
+        "blocker_atom": 15,
+        "point": [
+          "96",
+          "-52"
+        ]
+      }
+    },
+    {
+      "pose": [
+        2,
+        0,
+        90,
+        -58
+      ],
+      "blocker": "C",
+      "strict": {
+        "candidate_atom": 3,
+        "blocker_atom": 15,
+        "point": [
+          "96",
+          "-52"
+        ]
+      }
+    },
+    {
+      "pose": [
+        2,
+        0,
+        86,
+        -62
+      ],
+      "blocker": "C",
+      "strict": {
+        "candidate_atom": 6,
+        "blocker_atom": 15,
+        "point": [
+          "96",
+          "-52"
+        ]
+      }
+    },
+    {
+      "pose": [
+        2,
+        0,
+        82,
+        -66
+      ],
+      "blocker": "C",
+      "strict": {
+        "candidate_atom": 9,
+        "blocker_atom": 15,
+        "point": [
+          "96",
+          "-52"
+        ]
+      }
+    },
+    {
+      "pose": [
+        2,
+        0,
+        78,
+        -70
+      ],
+      "blocker": "C",
+      "strict": {
+        "candidate_atom": 12,
+        "blocker_atom": 15,
+        "point": [
+          "96",
+          "-52"
+        ]
+      }
+    },
+    {
+      "pose": [
+        2,
+        0,
+        74,
+        -74
+      ],
+      "blocker": "C",
+      "strict": {
+        "candidate_atom": 15,
+        "blocker_atom": 15,
+        "point": [
+          "96",
+          "-52"
+        ]
+      }
+    },
+    {
+      "pose": [
+        8,
+        1,
+        102,
+        -46
+      ],
+      "blocker": "C",
+      "strict": {
+        "candidate_atom": 2,
+        "blocker_atom": 16,
+        "point": [
+          "96",
+          "-148/3"
+        ]
+      }
+    },
+    {
+      "pose": [
+        8,
+        1,
+        106,
+        -42
+      ],
+      "blocker": "C",
+      "strict": {
+        "candidate_atom": 5,
+        "blocker_atom": 16,
+        "point": [
+          "96",
+          "-148/3"
+        ]
+      }
+    },
+    {
+      "pose": [
+        8,
+        1,
+        110,
+        -38
+      ],
+      "blocker": "C",
+      "strict": {
+        "candidate_atom": 8,
+        "blocker_atom": 16,
+        "point": [
+          "96",
+          "-148/3"
+        ]
+      }
+    },
+    {
+      "pose": [
+        8,
+        1,
+        114,
+        -34
+      ],
+      "blocker": "C",
+      "strict": {
+        "candidate_atom": 11,
+        "blocker_atom": 16,
+        "point": [
+          "96",
+          "-148/3"
+        ]
+      }
+    },
+    {
+      "pose": [
+        8,
+        1,
+        118,
+        -30
+      ],
+      "blocker": "C",
+      "strict": {
+        "candidate_atom": 14,
+        "blocker_atom": 16,
+        "point": [
+          "96",
+          "-148/3"
+        ]
+      }
+    },
+    {
+      "pose": [
+        8,
+        1,
+        122,
+        -26
+      ],
+      "blocker": "C",
+      "strict": {
+        "candidate_atom": 17,
+        "blocker_atom": 16,
+        "point": [
+          "96",
+          "-148/3"
+        ]
+      }
+    },
+    {
+      "pose": [
+        8,
+        1,
+        126,
+        -22
+      ],
+      "blocker": "C",
+      "strict": {
+        "candidate_atom": 20,
+        "blocker_atom": 16,
+        "point": [
+          "289/3",
+          "-49"
+        ]
+      }
+    }
+  ],
+  "second_fan": [
+    {
+      "pose": [
+        2,
+        0,
+        126,
+        -22
+      ],
+      "blocker": "D",
+      "strict": {
+        "candidate_atom": 17,
+        "blocker_atom": 4,
+        "point": [
+          "148",
+          "8/3"
+        ]
+      }
+    },
+    {
+      "pose": [
+        2,
+        0,
+        122,
+        -26
+      ],
+      "blocker": "D",
+      "strict": {
+        "candidate_atom": 20,
+        "blocker_atom": 4,
+        "point": [
+          "443/3",
+          "7/3"
+        ]
+      }
+    },
+    {
+      "pose": [
+        2,
+        0,
+        118,
+        -30
+      ],
+      "blocker": "P",
+      "strict": {
+        "candidate_atom": 0,
+        "blocker_atom": 15,
+        "point": [
+          "120",
+          "-28"
+        ]
+      }
+    },
+    {
+      "pose": [
+        2,
+        0,
+        114,
+        -34
+      ],
+      "blocker": "P",
+      "strict": {
+        "candidate_atom": 0,
+        "blocker_atom": 12,
+        "point": [
+          "116",
+          "-32"
+        ]
+      }
+    },
+    {
+      "pose": [
+        2,
+        0,
+        110,
+        -38
+      ],
+      "blocker": "P",
+      "strict": {
+        "candidate_atom": 0,
+        "blocker_atom": 9,
+        "point": [
+          "112",
+          "-36"
+        ]
+      }
+    },
+    {
+      "pose": [
+        2,
+        0,
+        106,
+        -42
+      ],
+      "blocker": "P",
+      "strict": {
+        "candidate_atom": 0,
+        "blocker_atom": 6,
+        "point": [
+          "108",
+          "-40"
+        ]
+      }
+    },
+    {
+      "pose": [
+        2,
+        0,
+        102,
+        -46
+      ],
+      "blocker": "P",
+      "strict": {
+        "candidate_atom": 0,
+        "blocker_atom": 3,
+        "point": [
+          "104",
+          "-44"
+        ]
+      }
+    },
+    {
+      "pose": [
+        8,
+        1,
+        130,
+        -18
+      ],
+      "blocker": "P",
+      "strict": {
+        "candidate_atom": 2,
+        "blocker_atom": 20,
+        "point": [
+          "371/3",
+          "-65/3"
+        ]
+      }
+    },
+    {
+      "pose": [
+        8,
+        1,
+        134,
+        -14
+      ],
+      "blocker": "P",
+      "strict": {
+        "candidate_atom": 5,
+        "blocker_atom": 20,
+        "point": [
+          "371/3",
+          "-65/3"
+        ]
+      }
+    },
+    {
+      "pose": [
+        8,
+        1,
+        138,
+        -10
+      ],
+      "blocker": "P",
+      "strict": {
+        "candidate_atom": 8,
+        "blocker_atom": 20,
+        "point": [
+          "371/3",
+          "-65/3"
+        ]
+      }
+    },
+    {
+      "pose": [
+        8,
+        1,
+        142,
+        -6
+      ],
+      "blocker": "P",
+      "strict": {
+        "candidate_atom": 11,
+        "blocker_atom": 20,
+        "point": [
+          "371/3",
+          "-65/3"
+        ]
+      }
+    },
+    {
+      "pose": [
+        8,
+        1,
+        146,
+        -2
+      ],
+      "blocker": "P",
+      "strict": {
+        "candidate_atom": 14,
+        "blocker_atom": 20,
+        "point": [
+          "371/3",
+          "-65/3"
+        ]
+      }
+    },
+    {
+      "pose": [
+        8,
+        1,
+        150,
+        2
+      ],
+      "blocker": "P",
+      "strict": {
+        "candidate_atom": 17,
+        "blocker_atom": 20,
+        "point": [
+          "371/3",
+          "-65/3"
+        ]
+      }
+    },
+    {
+      "pose": [
+        8,
+        1,
+        154,
+        6
+      ],
+      "blocker": "D",
+      "strict": {
+        "candidate_atom": 0,
+        "blocker_atom": 3,
+        "point": [
+          "152",
+          "4"
+        ]
+      }
+    }
+  ]
+}
