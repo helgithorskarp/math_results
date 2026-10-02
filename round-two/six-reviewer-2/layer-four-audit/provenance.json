@@ -1,0 +1,155 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "target": {
+    "height": 9147,
+    "ref": "bafkreidz633ymu7x25p25vtmk7bmoakjatwaxjjxpbj23sikx64ddo2x2a",
+    "title": "Exact three-to-four support threshold for centered capped H on D(17,15)",
+    "author": "six-downset-2",
+    "source_commit": "9b4ad4c17fea20bdc228763919e69f5a6651fdbf"
+  },
+  "inputs": [
+    {
+      "path": "round-two/six-downset-2/near_full_layer_four/dual.json",
+      "bytes": 18746,
+      "sha256": "08ba8321c09d1d93bb732a1113d17890591eaf4b2b2b1fa88a7faaddc4cac9b0",
+      "local_name": "INPUT-dual.json"
+    },
+    {
+      "path": "round-two/six-downset-2/near_full_layer_four/seed.json",
+      "bytes": 2250,
+      "sha256": "df58ee04efc6962bc2ab2313555ef50786a27f63fefebb210c967019cccfcfdf",
+      "local_name": "INPUT-seed.json"
+    }
+  ],
+  "python": "3.12.14",
+  "arithmetic": "integers and fractions.Fraction; standard library only",
+  "chronology": "Independent center-first checker and frozen full record completed before reading/executing any author program. Author rational seed and dual were credited inputs, never independently discovered. Complete author normal/O replay followed independent whole-record normal/O verification. No author program is imported by check.py.",
+  "canonical_full_record_sha256": "74d8a785a753ee37b40372ab8661394ada7878a544a8dce59e3e1b33116272ce",
+  "expected_file_sha256": "d7fd7236812defbd35149ffcb2144041bbd9c26f129cf5ac059d07d5e5f9d92e",
+  "runs": {
+    "own-first-record": {
+      "argv": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "round-two/six-reviewer-2/layer-four-audit/check.py",
+        "--record"
+      ],
+      "seconds": 4.803887929010671,
+      "peak_kib": 31516,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    "own-sealed-record": {
+      "argv": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "round-two/six-reviewer-2/layer-four-audit/check.py",
+        "--record"
+      ],
+      "seconds": 5.8051215640152805,
+      "peak_kib": 32368,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    "own-normal": {
+      "argv": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "round-two/six-reviewer-2/layer-four-audit/check.py"
+      ],
+      "seconds": 5.54555405897554,
+      "peak_kib": 32304,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    "own-O": {
+      "argv": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-2/layer-four-audit/check.py"
+      ],
+      "seconds": 5.864432848000433,
+      "peak_kib": 32708,
+      "exit_code": 0,
+      "guard_seconds": 90
+    },
+    "author-normal": {
+      "argv": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "scratch/pass16-author/verify.py",
+        "--check",
+        "scratch/pass16-author/expected.json",
+        "--output",
+        "scratch/pass16-author-normal-record.json"
+      ],
+      "seconds": 2.222710015019402,
+      "peak_kib": 20204,
+      "exit_code": 0,
+      "guard_seconds": 45
+    },
+    "author-O": {
+      "argv": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-B",
+        "-O",
+        "scratch/pass16-author/verify.py",
+        "--check",
+        "scratch/pass16-author/expected.json",
+        "--output",
+        "scratch/pass16-author-O-record.json"
+      ],
+      "seconds": 2.401836415985599,
+      "peak_kib": 23004,
+      "exit_code": 0,
+      "guard_seconds": 45
+    }
+  },
+  "trust": "Exact certificate arithmetic; ordinary real PSD, averaging, affine completeness, Boolean harmonic completeness, lift and convexity bridges are rederived in REVIEW.md and not proof-assistant formalized. Literal n7/n8 controls assert decoding/support/rows/stars, not PSD.",
+  "resources": {
+    "native_threads": 1,
+    "one_serial_math_job": true,
+    "scope_cpu": 1,
+    "scope_gib": 2,
+    "own_fixed_guard_seconds": 90,
+    "author_fixed_guard_seconds": 45,
+    "largest_original_matrix_order": 247,
+    "no_original_131054_square_matrix": true
+  },
+  "check_counts": {
+    "affine_equations": 30,
+    "supported_coordinates": 71,
+    "affine_rank": 29,
+    "free_dimension": 42,
+    "whole_basis_checks": 43,
+    "harmonic_degrees": 9,
+    "seed_endpoint_block_pairs": 18,
+    "real_face_cancellations": 17,
+    "outside_coefficients": 25,
+    "original_action_entries": 14140,
+    "original_physical_bilinear_entries": 354,
+    "ternary_symmetric_3x3": 729,
+    "PSD_ternary": 24,
+    "rejected_damages": 21
+  },
+  "proved_refinements": [
+    "original proper-disjoint min-size>=4 entry magnitude >2^-27",
+    "unordered absolute mass of those entries >1/3",
+    "L_t >= (3465t/131072) P_Zperp for every real0<t<=1/27720",
+    "NI-L_t >= (1/4-3465t) P_1perp for every real0<=t<=1/27720"
+  ],
+  "primary_literature": [
+    {
+      "url": "https://arxiv.org/html/2609.28404v1#S4",
+      "checked_utc_date": "2026-10-02",
+      "scope": "H/I definitions; extra cap is not I; classical Chvatal result already known"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.28404",
+      "checked_utc_date": "2026-10-02",
+      "version": "v1 2026-09-23"
+    }
+  ]
+}
