@@ -1,0 +1,309 @@
+{
+  "agent": "six-vdw-2",
+  "role": "researcher",
+  "status": "EXACT_H7_PHASE10_ADJACENT_RUN_DENSITY_LEMMA",
+  "claim": "At phase value count ten, every selected run start of length at least two has its third selection within indices two through six.",
+  "selected_phase_count": 10,
+  "phase_weights_covered": [
+    10,
+    34
+  ],
+  "phase_band_strengthened": false,
+  "phase_endpoint_weights_excluded": false,
+  "global_W_bound": false,
+  "interval3704_witness": false,
+  "normalized_excluded_cases": 6,
+  "third_selected_indices_excluded": [
+    7,
+    8,
+    9
+  ],
+  "variables_min": 346,
+  "variables_max": 366,
+  "clauses_min": 52338,
+  "clauses_max": 53592,
+  "no_adjacency_cut": false,
+  "conditional_successor_cut": false,
+  "strict_additions_per_mode": 125492,
+  "strict_deletions_per_mode": 443708,
+  "strict_hints_per_mode": 2094091,
+  "all_CNF_and_LRAT_hashes_reproduced": true,
+  "all_expected_counts_reproduced": true,
+  "EXPECTED_csv_sha256": "6506bb303997a88ba3d9cb54f79cb51b1d625b479ece8a8fe697ac19093c49a4",
+  "definition_audits": [
+    {
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "status": "EXACT_K10_ADJACENT_LONG_NEXT6_AUDIT",
+      "literal_APs": 375760,
+      "removed_zero_APs": 4312,
+      "signed_supports": 26488,
+      "tiny_threshold_cells": 181244,
+      "tiny_exact_counts": 4092,
+      "tiny_sixteen_case_cover_inputs": 113582,
+      "tiny_branches": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          9,
+          1
+        ]
+      ],
+      "signed_rotation_controls": 61888,
+      "conditional_density_clause_truth_rows": 22528,
+      "no_adjacency_cut": false,
+      "conditional_successor_cut": false,
+      "seconds": 10.985971249989234,
+      "maxrss_kib": 67144
+    },
+    {
+      "agent": "six-vdw-2",
+      "role": "researcher",
+      "status": "EXACT_K10_ADJACENT_LONG_NEXT6_AUDIT",
+      "literal_APs": 375760,
+      "removed_zero_APs": 4312,
+      "signed_supports": 26488,
+      "tiny_threshold_cells": 181244,
+      "tiny_exact_counts": 4092,
+      "tiny_sixteen_case_cover_inputs": 113582,
+      "tiny_branches": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          9,
+          1
+        ]
+      ],
+      "signed_rotation_controls": 61888,
+      "conditional_density_clause_truth_rows": 22528,
+      "no_adjacency_cut": false,
+      "conditional_successor_cut": false,
+      "seconds": 10.872707317001186,
+      "maxrss_kib": 69104
+    }
+  ],
+  "private_pilot": {
+    "generated_audited_models": 16,
+    "positive_cases": 6,
+    "native_cases_attempted": 7,
+    "never_proposed_cases": 9,
+    "seconds": 55.006177586037666,
+    "maxrss_parent_kib": 25456,
+    "maxrss_child_kib": 71384,
+    "maximum_native_positive_conflicts": 33671
+  },
+  "stopped_unknown_case": {
+    "stem": "adjacent-next-6-b-0",
+    "variables": 376,
+    "clauses": 53655,
+    "cnf_sha256": "ffef8a3b8e849b52e89f55ec2f342abd7ccd28519fc3b710df62636e9a5cc14c",
+    "status": "UNKNOWN",
+    "mathematical_exclusion": false,
+    "proposal": {
+      "cnf_sha256": "ffef8a3b8e849b52e89f55ec2f342abd7ccd28519fc3b710df62636e9a5cc14c",
+      "conflict_budget": 50000,
+      "seconds": 6.224514088011347,
+      "solver": "cadical195",
+      "stats": {
+        "conflicts": 50002,
+        "decisions": 52561,
+        "propagations": 1008621,
+        "restarts": 640
+      },
+      "status": "UNKNOWN"
+    }
+  },
+  "public_source_reconstruction": {
+    "seconds": 55.84158868994564,
+    "maxrss_parent_kib": 24832,
+    "maxrss_child_kib": 69104,
+    "proposal_source": "cached candidate proofs byte-matched, then checked independently normal/O; no cached native answer trusted"
+  },
+  "damage_controls": {
+    "agent": "six-vdw-2",
+    "role": "researcher",
+    "status": "ALL_CORRUPTION_CONTROLS_REJECTED",
+    "tests": [
+      "normal-missing-adjacent-next-7-b-1",
+      "normal-missing-adjacent-next-9-b-1",
+      "normal-wrong-unit-adjacent-next-9-b-0",
+      "normal-removed-semantic-input",
+      "normal-wrong-selected-count",
+      "normal-false-no-adjacency-premise",
+      "normal-forced-next-background",
+      "normal-imported-spacing",
+      "normal-imported-conditional-successor",
+      "normal-changed-helper-before-import",
+      "normal-empty-without-hints",
+      "normal-missing-live-hint",
+      "optimized-missing-adjacent-next-7-b-1",
+      "optimized-missing-adjacent-next-9-b-1",
+      "optimized-wrong-unit-adjacent-next-9-b-0",
+      "optimized-removed-semantic-input",
+      "optimized-wrong-selected-count",
+      "optimized-false-no-adjacency-premise",
+      "optimized-forced-next-background",
+      "optimized-imported-spacing",
+      "optimized-imported-conditional-successor",
+      "optimized-changed-helper-before-import",
+      "optimized-empty-without-hints",
+      "optimized-missing-live-hint"
+    ],
+    "rejected": 24,
+    "positive_controls": [
+      "normal-toy-positive-RUP",
+      "optimized-toy-positive-RUP"
+    ],
+    "seconds": 28.81552272301633,
+    "maxrss_parent_kib": 37344,
+    "maxrss_child_kib": 59096
+  },
+  "generated_omitted_bytes": {
+    "cnf": 20856104,
+    "drat": 12178901,
+    "lrat": 20092561
+  },
+  "resource_caps": {
+    "threads": 1,
+    "CPU_intensive_jobs_at_once": 1,
+    "scope_CPU": 1,
+    "scope_memory_GiB": 2,
+    "native_requested_conflicts": 50000,
+    "native_seconds": 30,
+    "converter_internal_seconds": 25,
+    "converter_external_seconds": 30,
+    "strict_replay_seconds_per_mode": 30,
+    "definitions_seconds_per_stage": 55
+  },
+  "runtime": {
+    "Python": "3.11.2",
+    "python_sat": "1.8.dev24",
+    "six": "1.17.0",
+    "native_solver": "CaDiCaL195"
+  },
+  "external_independent_review_claimed": false,
+  "formalization_claimed": false,
+  "trust_boundaries": [
+    "written complete forbidden-pattern cover and scalar/global-palette normalization",
+    "cited universal mathematical necessities",
+    "pinned independent literal auditor and strict positive-only RUP kernel",
+    "Python and runtime execution"
+  ],
+  "counter_gate_truth_rows_per_mode": 21432
+}
