@@ -1,0 +1,102 @@
+{
+  "agent": "six-rupert-2",
+  "certificate_canonical_sha256": "17ed527de1406cee6e3e3ae30c9a4eb9037ba20ed2a6da496508dc786ef0c861",
+  "coefficient_stream_sha256": "ae58255e24d95a17244cbc37200701c1c60c61652256aa4e2c92737bde9f8185",
+  "commands": [
+    [
+      "python3",
+      "round-two/six-rupert-2/full_source_cap/check.py",
+      "--self-test",
+      "--print-record"
+    ],
+    [
+      "python3",
+      "-O",
+      "round-two/six-rupert-2/full_source_cap/check.py",
+      "--self-test",
+      "--print-record"
+    ]
+  ],
+  "complete_four_chart_leaf_counts": [
+    2381,
+    2253,
+    2078,
+    2187
+  ],
+  "complete_records": {
+    "agent": "six-rupert-2",
+    "canonical_mathematical_bytes": 9343,
+    "canonical_mathematical_sha256": "0fd8f87a8cce340211b70e505b9945488dff64545b8cce80c830796720c8cff6",
+    "coefficient_stream_sha256": "ae58255e24d95a17244cbc37200701c1c60c61652256aa4e2c92737bde9f8185",
+    "damaged_controls_rejected": [
+      "missing closed cube",
+      "omitted half-turn component chart",
+      "positive weight with false equilibrium",
+      "same original at every balanced support",
+      "improper source pose",
+      "unsupported source hole radius",
+      "different receiving center",
+      "enlarged receiving cap without absorption"
+    ],
+    "role": "researcher",
+    "stdout_bytes": 21133,
+    "stdout_sha256": "8a0b9fa3c08322cfa966670a74510366f90956baebf70b67af48bc8acca85048",
+    "verified_leaves": 8899,
+    "whole_normal_optimized_stdout_bytes_equal": true
+  },
+  "cpu_intensive_local_jobs_at_once": 1,
+  "date_utc": "2026-10-02T10:51:37.821269+00:00",
+  "finite_literal_alignment_audit": {
+    "certificate_receiving_projective_chord_radius": "1/1000000000",
+    "constructed_raw_center_equals_displayed_u0": true,
+    "recorded_uniform_basis_inverse_bound": 32,
+    "six_certificate_base_poses_equal_the_displayed_F": true
+  },
+  "optimized_replay": {
+    "agent": "six-rupert-2",
+    "children_peak_rss_upper_KiB": 51416,
+    "exit_code": 0,
+    "role": "researcher",
+    "termination": "completed child",
+    "threads": 1,
+    "timeout_seconds": 130,
+    "wall_seconds": 68.62024448800366
+  },
+  "ordinary_replay": {
+    "agent": "six-rupert-2",
+    "children_peak_rss_upper_KiB": 48728,
+    "exit_code": 0,
+    "reason": "final simple scalar gates added to match the written proof; all8855 cuts and44 local leaves plus8damages replayed",
+    "role": "researcher",
+    "termination": "completed child",
+    "threads": 1,
+    "timeout_seconds": 130,
+    "wall_seconds": 66.79054878395982
+  },
+  "process_scope": "unchanged 1CPU/2GiB; no resource increases",
+  "proof_status": "author-checked complete exact finite certificate plus ordinary geometric proof; unformalized and independently unreviewed",
+  "publication_files": "eight compact mathematical source/evidence files only; private search outputs and operational receipts excluded",
+  "python": "Python 3.11.2",
+  "role": "researcher",
+  "scope": "all-source closed fits on the stated closed nonminimal receiving cap; global J74 remains open",
+  "strict_exact_Bernstein_coefficient_checks": 240273,
+  "thread_environment": {
+    "BLIS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "trust_boundaries": [
+    "ordered Q(sqrt5) arithmetic and the original J74 model are byte-pinned before import",
+    "original model identification is the cited geometry proof LEMMA8551, separately credited",
+    "four-chart coverage, homogeneous rotation identities, tensor Bernstein positivity, support transport and Neumann estimates are ordinary unformalized arguments",
+    "floating search and LPs only proposed the compact exact certificate; neither is a verifier premise",
+    "same-author replay and damaged controls are not independent mathematical review"
+  ],
+  "verified_leaf_kinds": {
+    "C": 8855,
+    "H": 44
+  }
+}
