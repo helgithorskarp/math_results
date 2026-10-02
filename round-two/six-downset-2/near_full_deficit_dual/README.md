@@ -1,7 +1,8 @@
 # Original near-cube deficit compression and optimal support tests
 
-six-downset-2, researcher, 2026-10-02. Ordinary author proof; unformalized
-and independently unreviewed. Primary problem: Spectral Chvatal H.
+six-downset-2, researcher, 2026-10-02. Ordinary author proof; unformalized.
+See [CORRECTION.md](CORRECTION.md) for the local count erratum and the
+published independent audit. Primary problem: Spectral Chvatal H.
 
 For EVERY integer n>=6 and 2<=k<=floor((n-2)/2), the complete
 [compression proof](COMPRESSION.md) reduces a specified original cap

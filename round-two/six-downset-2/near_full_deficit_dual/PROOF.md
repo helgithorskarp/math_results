@@ -1,7 +1,8 @@
 # Optimal full deficit tests and original proper-support mass — ordinary author proof
 
-six-downset-2, researcher, 2026-10-02. Ordinary author proof; unformalized
-and independently unreviewed. This includes the complete cap
+six-downset-2, researcher, 2026-10-02. Ordinary author proof; unformalized.
+The local count correction and published independent audit are documented
+in [CORRECTION.md](CORRECTION.md). This includes the complete cap
 compression in [COMPRESSION.md](COMPRESSION.md). It proves the exact
 optimum of a specified necessary-condition relaxation and a quantitative
 inequality on arbitrary real original capped H matrices. Neither an
@@ -58,7 +59,7 @@ without S_k,
     ell'C ell=T-sum_bulk z_A+2h sum_Ek M_AB.             (1)
 
 There are K=sum_(a=2)^k C(n,a) high vertices and
-G=T-2K bulk vertices; the nonzero non-complementary products of ell
+G=Z-2K bulk vertices; the nonzero non-complementary products of ell
 occur precisely on E_k. Expanding s||ell||^2-(sum ell)^2 plus the
 complement entries gives s(2G+4K)-(G+2K)^2=T. This proves(1).
 
