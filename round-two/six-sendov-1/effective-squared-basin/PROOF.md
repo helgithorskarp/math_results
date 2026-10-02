@@ -31,11 +31,11 @@ in Section2 of [9111](../joint-polar-functional/PROOF.md).
 
 **Theorem.** Suppose all seven s_j are nonnegative and
 
-    S <= gamma/64,       rho^2 <= gamma/9000000.          (1)
+    S <= gamma/64,       rho^2 <= gamma/160000.          (1)
 
 Then the two primitive constraints above imply
 
-    sum_j r_j >=16ell+gamma[S/8+rho^2/22500].            (2)
+    sum_j r_j >=16ell+gamma[(3/10)S+rho^2/100].            (2)
 
 There is **no closeness or upper-bound assumption on r_1**. In particular
 the entire positive heavy-radius fiber is allowed. Even its critical-disk
@@ -50,14 +50,13 @@ holds in these critical coordinates. The equality polynomial is the already
 known C0(z-a)(z+1)^8, C0!=0. Repeated critical points are counted.
 If a is also critical, the original first-power sum is infinite.
 
-The new effective domain is anisotropic: phase norm at most sqrt(gamma)/3000
+The new effective domain is anisotropic: phase norm at most sqrt(gamma)/400
 and total small radial slack at most gamma/64. This is not an assertion that
 these constants or scaling are optimal. It does not supply an effective
 original-root radius, a global minimum basin, or the unrestricted first-power
-inequality. Its parent9111 has an existential reciprocal width; its exact
-phase/slack coefficients are retained here on an explicit domain with a
-larger heavy-radius fiber. Neither new certificate has an independent
-verdict as of submission.
+inequality. Its parent9111 has an existential reciprocal width; the stronger coefficients proved in independent review9168 are retained
+here on an explicit domain with a larger heavy-radius fiber. The new
+effective-domain certificate remains independently unreviewed.
 
 ## 2. A nonsingular squared functional and its certified jets
 
@@ -94,25 +93,28 @@ C=1+ivt+ct^2+O(t^3) along a real phase direction. Their contributions to
 The first slack derivatives agree because O,C and all radii are positive
 real at the model. The same identities extend to a=1 through (3).
 
-The specifically imported whole-interval result of9111, Section4, is
+The specifically imported whole-interval result of independent
+[review9168](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-1/joint-polar-audit/REVIEW.md),
+by six-reviewer-1, is
 
     partial_{s_j}G(a,0,0)=c(a)>=(3/4)gamma,
-    phase quadratic A(a)>=(gamma/3750)I.                (4)
+    phase quadratic A(a)>=(gamma/40)I.                (4)
 
-Both modulus rank-one terms are retained by the squared products. No
-independent verdict on9111 is inferred from using its author proof.
+Both modulus rank-one terms are retained by the squared products. Review9168 independently confirms9111 and supplies the stronger model
+bounds used here. Its verdict is not transferred to this new domain.
 The negative heavy derivative at the model is K0=H+mu J1, where
 
     H=((1+a)^8-1)/[8a(1+a)^6],
     J1=integral_0^1 t(a+(1-a)t)^7dt.
 
-Parent9111 gives H<=1, J1<=1/2 and 1<mu<2, hence K0<2. The complete
+Review9168 proves K0<9/8 on the whole interval through14 positive
+Bernstein coefficients. The complete
 identity
 
     (1+a)^8-1-2a(1+a)^6
         =a(6+16a+26a^2+30a^3+26a^4+16a^5+6a^6+a^7)
 
-also proves H>1/4, so 1/4<K0<2. These are bounds for the actual derivative
+also proves H>1/4, so 1/4<K0<9/8. These are bounds for the actual derivative
 of the squared functional, not a linear approximation to its values.
 
 ## 3. Whole-interval primitive coefficient bounds
@@ -268,7 +270,7 @@ terms are c S+t^2 v^T A v. The higher terms are exhausted by S powers>=2
 at t=0, terms with S power>=1 and t power>=2, and pure t powers>=4.
 Positive majorant coefficients give, for0<=S<=S0 and0<=t<=T,
 
-    G >=(3/4)gamma S+(gamma/3750)t^2
+    G >=(3/4)gamma S+(gamma/40)t^2
                             -19S^2-800S t^2-1200t^4.  (10)
 
 For example, each mixed term S^i t^j with i>=1,j>=2 is bounded by
@@ -278,12 +280,12 @@ why the phase error is fourth order rather than third order.
 
 Under (1), exact rational arithmetic gives
 
-    19/64+800/9000000 <3/8,
-    1200/9000000 =1/7500.
+    19/64+800/160000 <3/8,
+    1200/160000 =3/400 <1/80.
 
 The mixed error is charged to the slack term. Consequently
 
-    G >=gamma[(3/8)S+t^2/7500].                         (11)
+    G >=gamma[(3/8)S+t^2/80].                         (11)
 
 The stated box lies within the majorant domain since gamma<=3/8.
 Conjugation likewise eliminates odd phase coefficients of the reference
@@ -294,7 +296,7 @@ heavy derivative and of B_heavy. The remaining certified bounds yield
 
 Here K_ref=-partial_Delta R at Delta=0. Its first variation uses the
 coefficient of Z in W, which accounts for all mixed slack/phase terms.
-Thus 1/8<K_ref<17/8<3.
+Thus 1/8<K_ref<5/4.
 
 ## 6. Positive curvature and the full heavy fiber
 
@@ -319,11 +321,31 @@ q_1 and the radial product is affine in r_1, (3) is literally quadratic:
 This identity holds for every real Delta, not just a Taylor neighborhood.
 The assumptions give R(q)<=0. With G>=0 and B_heavy>0, (13) first forces
 Delta>=0: every term would be positive for Delta<0. It then gives
-K_ref Delta>=G+B_heavy Delta^2>=G. Since K_ref<3, Delta>=G/3.
+K_ref Delta>=G+B_heavy Delta^2>=G. Since K_ref<5/4, Delta>=(4/5)G.
 Inserting (11) proves (2) without any bound on r_1. Equality in the baseline
 forces S=t=0 by (11), then Delta=0, which proves the stated equality tuple.
 
 ## 7. Evidence, attribution and limits
+
+**Critical-coordinate competitor exclusion, using9113.** Let
+0<eta<=1/65536, a=1-eta, and M(eta) be the unrestricted infimum of the
+degree-nine first-power sum among disk-rooted polynomials with marked zero a.
+For any such finite competitor whose critical coordinates obey (1),
+
+    F(p,a)-M(eta)>eta+(a-5/8)[(3/10)S+rho^2/100].       (14)
+
+Indeed the specifically imported legal competitor of
+[9113](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-3/validated-boundary-branch/PROOF.md),
+six-sendov-3, source7bb2d1b6cf6cb3b370ad10023bee018128a1b81f, has
+F_branch<8+3eta throughout this explicit interval, so M<=F_branch.
+Meanwhile16/(2-eta)=8+4eta+4eta^2/(2-eta)>8+4eta.
+Subtracting proves (14). No attainment or identification of that branch
+with M is required. This excludes this explicit critical-coordinate domain
+from competitors within eta of the infimum; it asserts no inclusion
+comparison with9113's original-root basin. Dependency on9113 is limited
+to this labeled comparison. Its branch certificate remains independently
+unreviewed as of intake. The core tuple theorem (2) does not use9113,
+global concentration or any minimizer construction.
 
 The standalone certificate checks30 exact rational function caps,631
 Bernstein entries and61 complete inverse basis transformations. The latter
@@ -336,13 +358,17 @@ proof kernel. [README.md](README.md) gives exact reproduction and the
 complete canonical record hash. No float, solver, runtime CAS, external
 corpus, unknown resource result or fitted root is proof input.
 
-The sole mathematical campaign dependency is9111's exact model jets and
-scalar heavy bounds; its proof and source756a258f441731aff17d6d39bb493b12edb967f2
-are explicitly cited and its review status preserved. The known7290
+The mathematical campaign dependency is independent review9168's exact
+model jets and stronger scalar heavy bound, source
+5ffcf3ff328bbd50637e535db5c3e1248ae7b480. Parent9111's functional
+reduction and source756a258f441731aff17d6d39bb493b12edb967f2 retain credit.
+The review was committed during this publication pass; its full proof was
+read before adopting its model coefficients. The present effective extension remains independently unreviewed. The known7290
 baseline, cutoff and original-root radius remain credited. Review9078
 confirms the earlier origin-only9039, not9111 or this certificate; correction9084
-records that attribution. Peer9113's effective boundary branch and9121's
-effective angular collar are complementary; neither supplies a premise.
+records that attribution. Peer9113 supplies only the labeled upper competitor
+in(14); its original-root exclusion and7290 dependency are not imported.
+Peer9121's effective angular collar is complementary context, without a premise.
 The primary first-power conjecture remains unresolved in the stated source.
 No historical priority is asserted for squared constraints, Bernstein bounds,
 analytic majorants or classical primitive identities.

@@ -196,9 +196,9 @@ def reject(op,message):
     except ValueError: return
     raise ValueError('damage was accepted: '+message)
 
-def margins(ms,mm,m4,mks,mkt,mbs,mbt,slack_den=64,phase_den=9000000):
+def margins(ms,mm,m4,mks,mkt,mbs,mbt,slack_den=64,phase_den=160000):
     require(ms/Q(slack_den)+mm/Q(phase_den)<=Q(3,8),'slack residual >=3/8 gap')
-    require(m4/Q(phase_den)<=Q(1,7500),'phase residual >=gap/7500')
+    require(m4/Q(phase_den)<=Q(1,80),'phase residual >=gap/80 from reviewed model bound1/40')
     require((mks/Q(slack_den)+mkt/Q(phase_den))*Q(3,8)<Q(1,8),'heavy derivative variation <1/8')
     require((mbs/Q(slack_den)+mbt/Q(phase_den))*Q(3,8)<Q(1,8),'heavy curvature variation <1/8')
     require(Q(3,8)/slack_den<=Q(1,128),'slack box inside majorant radius')
@@ -221,7 +221,7 @@ def regenerate_record():
     nbern=sum(2*(r['degree']+1) for group in bs['certificates'].values() for r in group)+len(bs['heavy_B_shift'])
     require(nbern==631,'full Bernstein coefficient coverage')
     reject(lambda:margins(*caps.values(),slack_den=8),'excessive slack box')
-    reject(lambda:margins(*caps.values(),phase_den=1000000),'excessive phase box')
+    reject(lambda:margins(*caps.values(),phase_den=10000),'excessive phase box')
     reject(lambda:require(raw['M4']<1100,'false fourth-order cap'),'incorrect derivative cap')
     reject(lambda:require(Q(7,3)**2>=7,'incorrect phase one-norm bound'),'incorrect phase norm factor')
     return rationalize({'schema':1,'author':'six-sendov-1','role':'researcher',
@@ -229,7 +229,7 @@ def regenerate_record():
         'radial_majorant_at_radius':majorant_radius(),'bounds':bs,
         'derivative_values':raw,'derivative_caps':caps,'controls':c,
         'bernstein_coefficients':nbern,'full_basis_reconstructions':61,
-        'mathematical_damage_controls':4,'slack_denominator':64,'phase_squared_denominator':9000000,
-        'phase_coercivity_denominator':22500,
-        'mathematical_dependency':'Lemma9111 whole-interval first/slack and full phase jets; normalized squared functional has exactly those jets. No theorem implementation imported.',
+        'mathematical_damage_controls':4,'slack_denominator':64,'phase_squared_denominator':160000,
+        'phase_coercivity_denominator':100,'slack_coercivity':'3/10',
+        'mathematical_dependency':'Independent review9168 model slack>=3gap/4, full phase matrix>=gap I/40 and heavy derivative<9/8; squared functional has exactly those jets, extending author9111. No theorem implementation imported.',
         'trust_boundary':'Exact stdlib Fraction polynomial caps, complete Bernstein reverse identities, rational truncated Taylor arithmetic and ordinary analytic majorant proof. Unformalized, independently unreviewed. No float, solver, CAS or external corpus.'})

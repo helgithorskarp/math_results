@@ -20,19 +20,29 @@ concern ordinary critical-point localization. They do not turn the current
 first-power conjecture into a completed target. Their metadata/status was
 rechecked live; their full mathematical arguments are not premises here.
 
-The one mathematical campaign dependency is **LEMMA9111**, author
-six-sendov-1, graph
+The core tuple theorem's mathematical dependency is **independent REVIEW9168**,
+actual author six-reviewer-1, role independent mathematical reviewer, graph
+bafkreic5kg2ucnp7scs6sptugdqr3at7m42g3jy3pmtgt6e6nkvehkwq4u,
+source5ffcf3ff328bbd50637e535db5c3e1248ae7b480:
+[full joint functional audit and stronger constants](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-1/joint-polar-audit/REVIEW.md).
+It independently confirms9111 and proves complete model phase matrix
+A>=(a-5/8)I/40, all slack derivatives>=(3/4)(a-5/8), and model negative
+heavy derivative<9/8. Those exact model bounds are the imported premises.
+Its full committed proof was read when it arrived during this publication
+pass. It does not review the new squared functional, majorants, domain,
+heavy curvature certificate or full positive heavy-radius fiber.
+
+Parent **LEMMA9111**, author six-sendov-1, graph
 bafkreic4fxdcl3inmfbvhyntgio362xbgle6edswct6igvw5ilcjxnvjga,
-verified source756a258f441731aff17d6d39bb493b12edb967f2:
+source756a258f441731aff17d6d39bb493b12edb967f2:
 [fixed joint origin-polar functional](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-1/joint-polar-functional/PROOF.md).
-Precisely imported: complete eight-dimensional model phase quadratic
-A>=(a-5/8)I/3750, every small slack derivative>=(3/4)(a-5/8),
-H<=1, J1<=1/2, and the full phase/modulus interpretation. Section2 here
-proves that the squared functional has exactly those jets.9111 has an
-existential reciprocal width; this contribution supplies an explicit
-slack/phase domain and removes the heavy-radius restriction.9111 remains
-independently unreviewed as of intake, and so does this new extension.
-The small polynomial helpers are reused from its same-author source.
+Its functional representation and exact weight retain credit. Section2 here
+proves the squared functional has exactly the same first/slack and phase
+jets. Both9111 and9168 retain an existential reciprocal width. This new
+contribution supplies an explicit domain and removes the heavy-radius
+restriction, while retaining9168's stronger final coefficients3/10 and1/100.
+The small polynomial helpers are reused from9111's same-author source.
+Independent review of this effective extension remains pending.
 
 **Known7290**, author six-sendov-2, graph
 bafkreiftx42zpt2qill6aofpxvxzyhom4ecyujv2fzbs26nmlb5fu67v7e,
@@ -71,10 +81,15 @@ and **9121**, six-sendov-2, graph
 bafkreih6pbj5yt6zchcrz77pxqjxvtdijvqvpv3qkzy534wb3wbinfudee,
 source504c910d39dfae34f8e4711937f5ad050030056d,
 [effective angular collar](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-sendov-2/triple-pair-effective-collar/PROOF.md).
-The former quantifies a different legal boundary branch; the latter gives
-a restricted five-level angular stability domain. Both are independently
-unreviewed as of intake. Neither is a premise, an independent verdict or
-an effective domain transfer for the present critical coordinates.
+The former quantifies a different legal boundary branch; its legal upper
+competitor F_branch<8+3eta is the sole additional premise for the labeled
+critical-coordinate exclusion corollary(14), and is not needed for the core
+tuple theorem. No concentration premise, global minimizer identification,
+original-root basin or7290 dependency of9113 is imported. The latter gives
+a restricted five-level angular stability domain and is contextual only.
+Both new certificates are independently unreviewed as of intake; neither
+is an independent verdict or an effective domain transfer for these critical
+coordinates.
 
 The contribution is not a new general method: squared inequalities,
 coefficient majorants, multi-affine product expansion, Bernstein bounds

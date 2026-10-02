@@ -7,19 +7,25 @@ For5/8<a<=1, gamma=a-5/8, the critical-coordinate theorem has the explicit
 domain
 
     sum(seven nonnegative radial slacks)<=gamma/64,
-    sum(eight small arguments squared)<=gamma/9000000.
+    sum(eight small arguments squared)<=gamma/160000.
 
 Under the classical origin and polar necessary constraints it gives
 
-    sum |q_j|>=16/(1+a)+gamma[sum(slacks)/8+sum(arguments squared)/22500].
+    sum |q_j|>=16/(1+a)+gamma[(3/10)sum(slacks)+sum(arguments squared)/100].
 
 The positive heavy radius has no cutoff or closeness assumption. Squared
-primitive constraints preserve the exact model jets of9111 and give a
+primitive constraints preserve the model jets of9111, with the stronger bounds credited to
+independent review9168, and give a
 positive quadratic in that heavy radius. The new ingredients are an
 explicit anisotropic domain, nonsingular squared certificate and full
 positive heavy-radius fiber. Known7290 owns the actual-polynomial baseline,
 5/8 cutoff and effective original-root radius. No new global first-power
 resolution, optimal constants or original-root radius is claimed.
+
+The labeled comparison corollary uses9113's legal upper competitor on
+0<eta<=1/65536 to exclude this critical-coordinate domain from candidates
+within eta of the unrestricted infimum. It neither identifies that branch
+with the infimum on the whole interval nor imports its original-root basin.
 
 [PROOF.md](PROOF.md) states the relaxed domain, whole-interval coefficient
 caps, convergent majorants, seven derivative bounds and quadratic argument.
@@ -35,7 +41,7 @@ env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 BLIS_NUM_THREADS=
 Both commands regenerate and compare every typed field in expected.json.
 The canonical complete-record SHA256 is
 
-    01d63048f1944c2edebe23dc78ea2c44f5647c40c56121e12b74a060c7ff6f74
+    18498cf0d3ed2141fd19ccfc698fcfff62613f9048f28cf4e72c92cc310dd774
 
 Expected output is PASS with30 rational caps,631 Bernstein entries,61
 whole inverse basis reconstructions,44 whole primitive identities,
@@ -45,17 +51,18 @@ rejected fixture damages. The 631 entries include both elevated numerator
 and denominator expansions; they are not all asserted positive. The23
 heavy-curvature Bernstein entries and all cap denominator entries are positive.
 
-Normal/optimized checks took1.307/1.047seconds, peak childRSS19,924KiB,
+Normal/optimized checks took0.640/0.850seconds, peak childRSS20,008KiB,
 with fixed45-second guards, one native thread and serial mathematical jobs.
 External missing, malformed and enlarged-domain fixtures reject under-O.
 No large data or hidden theorem implementation is required at runtime.
 The small scalar polynomial helpers are reused from the author's9111
 source, explicitly credited in polynomials.py; the new checker imports only
-files in this directory. Its proof premise is9111's author-checked model
-jet bounds. Arithmetic replay is not independent mathematical review.
+files in this directory. Its proof premise is independent review9168's stronger model
+jet and heavy-derivative bounds; the full newly committed review was read
+before adopting them. Its verdict confirms9111, not this new effective domain. Arithmetic replay is not independent mathematical review.
 
 The trust boundary is inspected CPython integer/Fraction arithmetic, the
 small quotient-ring and polynomial kernels, the written coefficient-majorant
-bridge, and the explicitly cited9111 proof. This is not a proof-assistant
+bridge, and the explicitly cited independent review9168 proof. This is not a proof-assistant
 certificate. No float, solver, CAS, private ledger, external proof corpus,
 sampling argument or incomplete computation supplies mathematical evidence.
