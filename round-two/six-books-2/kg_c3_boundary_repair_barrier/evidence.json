@@ -1,0 +1,100 @@
+{
+  "CPU_intensive_jobs_at_once": 1,
+  "author": "six-books-2",
+  "cold_normal": {
+    "child_guard_seconds": 30,
+    "mathematical_summary_sha256": "dad0eae7b946bc5def6254b43c8327aef4ef1c831fac5a6a5b15133d5b0d6629",
+    "optimized_python": false,
+    "peak_child_rss_kib": 142172,
+    "primary21": {
+      "edges": 93,
+      "max_blue_pages": 6,
+      "max_red_pages": 3
+    },
+    "python": "3.11.2",
+    "seconds": 6.903096955968067,
+    "soft_phase_seconds": 25,
+    "status": "COMPLETE_COLD_BOUNDARY_REPAIR_REPLAY",
+    "threads": 1,
+    "trust": "Same-author distinct cover/direct/Gray algorithms; written bridges unformalized; predecessor9337 supplies complete boundary list."
+  },
+  "cold_optimized": {
+    "child_guard_seconds": 30,
+    "mathematical_summary_sha256": "dad0eae7b946bc5def6254b43c8327aef4ef1c831fac5a6a5b15133d5b0d6629",
+    "optimized_python": true,
+    "peak_child_rss_kib": 141820,
+    "primary21": {
+      "edges": 93,
+      "max_blue_pages": 6,
+      "max_red_pages": 3
+    },
+    "python": "3.11.2",
+    "seconds": 7.146557132015005,
+    "soft_phase_seconds": 25,
+    "status": "COMPLETE_COLD_BOUNDARY_REPAIR_REPLAY",
+    "threads": 1,
+    "trust": "Same-author distinct cover/direct/Gray algorithms; written bridges unformalized; predecessor9337 supplies complete boundary list."
+  },
+  "compiler": "g++12.2.0/C++17",
+  "full_validation": {
+    "both_complete_streams_byte_equal": true,
+    "direct_deletion_subsets": 1027496,
+    "every_release_sanitizer_field_equal": true,
+    "flags": [
+      "-O1",
+      "-g",
+      "-fno-omit-frame-pointer",
+      "-fno-pie",
+      "-no-pie",
+      "-fsanitize=address,undefined"
+    ],
+    "native_damages": [
+      {
+        "name": "missing-parent",
+        "reason": "complete28 parent recipe coverage"
+      },
+      {
+        "name": "duplicate-parent",
+        "reason": "duplicate parent recipe"
+      },
+      {
+        "name": "extra-field",
+        "reason": "extra recipe field"
+      },
+      {
+        "name": "truncated-row",
+        "reason": "upper witness domain"
+      },
+      {
+        "name": "noninteger",
+        "reason": "recipe header"
+      },
+      {
+        "name": "forged-minimum",
+        "reason": "red repair below claimed minimum"
+      }
+    ],
+    "parent_damages": [
+      "omission",
+      "duplicate",
+      "Boolean-weight",
+      "Boolean-orbit",
+      "unknown-field",
+      "duplicate-JSON-key"
+    ],
+    "residual_promotion_subsets": 98304,
+    "sanitizer_program_seconds": 5.93399,
+    "scope": "Whole finite direct graph census, not merely selected sanitizer intervals; same author, no external review.",
+    "seconds": 15.954877959913574,
+    "status": "WHOLE_SANITIZER_STREAMS_AND_DAMAGED_INPUTS_PASS"
+  },
+  "math_limits_occurred": false,
+  "mathematical_outputs_equal": true,
+  "omitted_generated_data": "No repair inventory, pool corpus, phase logs, build products, checkpoints or private state are published. All generate into caller scratch.",
+  "prior_boundary_census": "Imported from actually committed lemma9337; its1,832,600-case replay is a separate prior result, not rerun by this new packet.",
+  "prior_source_commit": "e1d57a37e944d8ae5a534b947b8eb9531e31f594",
+  "proof_status": "Author-checked exact computational lemma; unformalized completeness/transport/monotonicity bridges; independent peer review pending.",
+  "role": "researcher",
+  "scope": "unchanged1CPU2GiB",
+  "threads": 1
+}
