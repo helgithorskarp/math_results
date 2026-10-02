@@ -1,0 +1,176 @@
+{
+  "agent": "six-books-3",
+  "all_final_modes_complete_without_timeout_kill_unknown": true,
+  "all_five_reject_normal_optimized": true,
+  "complete_modes": [
+    {
+      "command": [
+        "python3",
+        "derive.py",
+        "--check",
+        "incidence.json",
+        "--full"
+      ],
+      "exact_frozen_bytes_equal": true,
+      "exit_code": 0,
+      "mode": "derive-normal",
+      "peak_child_rss_kib_cumulative": 16092,
+      "seconds": 0.15098271402530372,
+      "whole_stdout_bytes": 9289,
+      "whole_stdout_sha256": "10c23fac3815df26beb8120854ad46c9a87bd15c1b29fa40514c64e6eb8dbd6f"
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "derive.py",
+        "--check",
+        "incidence.json",
+        "--full"
+      ],
+      "exact_frozen_bytes_equal": true,
+      "exit_code": 0,
+      "mode": "derive-optimized",
+      "peak_child_rss_kib_cumulative": 20008,
+      "seconds": 0.34778762399218976,
+      "whole_stdout_bytes": 9289,
+      "whole_stdout_sha256": "10c23fac3815df26beb8120854ad46c9a87bd15c1b29fa40514c64e6eb8dbd6f"
+    },
+    {
+      "command": [
+        "python3",
+        "verify.py",
+        "--full"
+      ],
+      "exact_frozen_bytes_equal": true,
+      "exit_code": 0,
+      "mode": "verify-normal",
+      "peak_child_rss_kib_cumulative": 20008,
+      "seconds": 0.20356512803118676,
+      "whole_stdout_bytes": 9289,
+      "whole_stdout_sha256": "10c23fac3815df26beb8120854ad46c9a87bd15c1b29fa40514c64e6eb8dbd6f"
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "verify.py",
+        "--full"
+      ],
+      "exact_frozen_bytes_equal": true,
+      "exit_code": 0,
+      "mode": "verify-optimized",
+      "peak_child_rss_kib_cumulative": 20328,
+      "seconds": 0.45007236796664074,
+      "whole_stdout_bytes": 9289,
+      "whole_stdout_sha256": "10c23fac3815df26beb8120854ad46c9a87bd15c1b29fa40514c64e6eb8dbd6f"
+    },
+    {
+      "command": [
+        "python3",
+        "validate.py"
+      ],
+      "exact_frozen_bytes_equal": true,
+      "exit_code": 0,
+      "mode": "validate-normal",
+      "peak_child_rss_kib_cumulative": 20328,
+      "seconds": 0.26869641698431224,
+      "whole_stdout_bytes": 693,
+      "whole_stdout_sha256": "976b7629ab2b4db90609acb5cbd78fdd7684ce68e2ff4b1270b4615b73ef6986"
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "validate.py"
+      ],
+      "exact_frozen_bytes_equal": true,
+      "exit_code": 0,
+      "mode": "validate-optimized",
+      "peak_child_rss_kib_cumulative": 20328,
+      "seconds": 0.3897377980174497,
+      "whole_stdout_bytes": 693,
+      "whole_stdout_sha256": "976b7629ab2b4db90609acb5cbd78fdd7684ce68e2ff4b1270b4615b73ef6986"
+    }
+  ],
+  "date": "2026-10-02",
+  "external_math_guard_seconds": 45,
+  "five_record_damages": [
+    "missing-canonical-profile",
+    "duplicate-labeled-profile",
+    "wrong-low-margin",
+    "boolean-count",
+    "false-scope"
+  ],
+  "frozen_expected_sha256": "527c22078eb160c7beb4ab48d01a9767128ad3b7844329237b248e94ff66012b",
+  "generated_control_graphs": "190 fixed exact invalid signed controls regenerated in memory; no graph dump or private completion pilot is an input.",
+  "largest_final_child_seconds": 0.45007236796664074,
+  "mathematical_trust_boundary": "Ordinary contradiction, code correspondence, permutation coverage and Python execution unformalized; new independent review pending. Source publication/hash agreement alone are not proofs.",
+  "max_cpu_intensive_children": 1,
+  "method": "Ordinary actual mixed-slack symmetry contradiction plus complete necessary incidence-count enumeration",
+  "native_threads": 1,
+  "new_pilot_or_unfinished_computation_is_not_proof_input": true,
+  "peak_final_math_child_rss_kib": 20564,
+  "predecessor_review9297": {
+    "artifact_ref": "bafkreihtafdgllzj4iqhlonanmehhctzjga3vqshmkcfic4jsbqwhudqgq",
+    "full_body_sha256": "f0fad15f6c51cbf63408f000de2f227b806da97bdf92165a6ee77b9c43b9b870",
+    "intake": "Entire signed body/16 original directions/REVIEW/README/provenance read and matched; no reviewer executable replay by this researcher",
+    "review_sha256": "3e886e3da06bf0ebeb399a1d9240370a1ff4255470d5f9838a24dfab016d095c",
+    "source_commit": "2fa3b9c262a40c7080df8cb9a73ffef2a765fbf1",
+    "verdict_scope": "Independently confirms9275; strengthens two-triple high-blue cap scope. Does not assess this new result."
+  },
+  "primary_input": {
+    "bytes": 1056,
+    "fresh_live_bytes_verified": true,
+    "sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+    "url": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt"
+  },
+  "primary_literature": [
+    {
+      "located_interval": [
+        22,
+        23
+      ],
+      "location": "Table1",
+      "reopened_date": "2026-10-02",
+      "url": "https://arxiv.org/pdf/2407.07285"
+    },
+    {
+      "located_interval": [
+        22,
+        23
+      ],
+      "location": "revision18/TableIXa",
+      "reopened_date": "2026-10-02",
+      "url": "https://www.cs.rit.edu/~spr/ElJC/sur.pdf"
+    }
+  ],
+  "primary_replay": {
+    "blue_edges": 117,
+    "blue_pages": 6,
+    "checked_pairs": 210,
+    "order": 21,
+    "primary_prior_art": true,
+    "raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+    "red_edges": 93,
+    "red_pages": 3
+  },
+  "python": "3.12.14",
+  "resource_scope": "unchanged1CPU/2GiB",
+  "role": "researcher",
+  "scope": "Rootless22-point9^4,10^18; mixed red cap3/mixed blue cap6/low-low blue cap6; no high-high colored cap or low-low red cap imported. A low edge forces >=4 one-nine roots; exactly3 requires independent lows and15 necessary profiles, not graph realization or completion exclusion.",
+  "secondary_corollary": "Under full colored validity, equality-three excludes9281 specified one-nine leaf at every singleton root: independent L makes its actual low mark isolated.",
+  "secondary_import9281": {
+    "artifact_ref": "bafkreif2fwnlg5k23u4tosqfzsnllwqr4x4si7x5gjbe3djfa6johsd4aa",
+    "dependency_scope": "Only the secondary specified-leaf corollary under full validity; not the ordinary low-edge or15-profile cores",
+    "full_body_sha256": "19e31c4421bc85f92a57436df38915b12edf59e8e2d155e15dc70d008e5848f7",
+    "intake": "Entire signed body and proof/README read and matched in pass13; no executable replay or independent review transferred",
+    "proof_sha256": "54f43373f644af8827b1b9042b65a8adf065878428f0621707cd24471dac87b1",
+    "source_commit": "681566bd54dc19a3ae93b193802727a454bda1e7",
+    "source_path": "round-two/six-books-1/isolated_leaf_mark/PROOF.md"
+  },
+  "source_algorithms": "Two same-author algorithms: complete composition/two-free-pair-variable producer; independent all5^6 count-vector checker with literal physical low complement pages. Entire labeled and24-permutation-normalized lists match. No producer imports by checker.",
+  "upper23_flag_certificate_replayed": false,
+  "whole_incidence_bytes": 9289,
+  "whole_incidence_sha256": "10c23fac3815df26beb8120854ad46c9a87bd15c1b29fa40514c64e6eb8dbd6f"
+}
