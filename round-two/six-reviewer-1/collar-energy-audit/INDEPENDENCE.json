@@ -1,0 +1,151 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "sealed_utc": "2026-10-02T19:53:40.964379+00:00",
+  "target": 9629,
+  "defining_written_proof_visible": true,
+  "target_executable_fixture_validation_unread": true,
+  "method": "Fresh rational token-multiset polynomial product/conjugation and definition-level Laurent original-root weight checker; no target executable/helper reuse. Own9631/9669 nondisk control credited.",
+  "source_sha256": {
+    "audit.py": "e1a9d5f8c9bb3f4be5d7111ff0d8f289706cfc1ed8d578c8c293ced9d91760fe",
+    "EXPECTED.json": "8613a43c22598da886ab4599b011f0c1afcff71ffe004f377257907fcd97b334"
+  },
+  "runs": [
+    {
+      "mode": "normal",
+      "wall_seconds": 0.162916,
+      "stdout": {
+        "status": "PASS",
+        "full_record_sha256": "a79d0adc7f64688cf5d89a6fa747cc223abae1636e05a2d8f2959db124d6e975",
+        "whole_identities": 19,
+        "strict_margins": 41,
+        "full_literal_controls": 5,
+        "original_eta_endpoint": "1/65536",
+        "extended_eta_endpoint": "1/16384"
+      }
+    },
+    {
+      "mode": "optimized",
+      "wall_seconds": 0.29421,
+      "stdout": {
+        "status": "PASS",
+        "full_record_sha256": "a79d0adc7f64688cf5d89a6fa747cc223abae1636e05a2d8f2959db124d6e975",
+        "whole_identities": 19,
+        "strict_margins": 41,
+        "full_literal_controls": 5,
+        "original_eta_endpoint": "1/65536",
+        "extended_eta_endpoint": "1/16384"
+      }
+    }
+  ],
+  "semantic_source_damages": [
+    {
+      "name": "Fourier-lost-conjugation",
+      "rejected": true,
+      "reason": "FAIL: identity: 0",
+      "wall_seconds": 0.067442
+    },
+    {
+      "name": "Fourier-wrong-conjugate-exponent",
+      "rejected": true,
+      "reason": "FAIL: identity: 1",
+      "wall_seconds": 0.063386
+    },
+    {
+      "name": "Fourier-wrong-degree",
+      "rejected": true,
+      "reason": "FAIL: identity: 0",
+      "wall_seconds": 0.06356
+    },
+    {
+      "name": "complex-top-trace-sign",
+      "rejected": true,
+      "reason": "FAIL: identity: top",
+      "wall_seconds": 0.074293
+    },
+    {
+      "name": "wrong-cube-pair",
+      "rejected": true,
+      "reason": "FAIL: identity: top",
+      "wall_seconds": 0.073686
+    },
+    {
+      "name": "third-Newton-mixed-term",
+      "rejected": true,
+      "reason": "FAIL: identity: Newton3",
+      "wall_seconds": 0.090653
+    },
+    {
+      "name": "fourth-Newton-whole-term",
+      "rejected": true,
+      "reason": "FAIL: identity: Newton4",
+      "wall_seconds": 0.119748
+    },
+    {
+      "name": "M0-H-sign",
+      "rejected": true,
+      "reason": "FAIL: identity: M0",
+      "wall_seconds": 0.125666
+    },
+    {
+      "name": "M1-second-order-term",
+      "rejected": true,
+      "reason": "FAIL: identity: M0",
+      "wall_seconds": 0.131797
+    },
+    {
+      "name": "stale-extended-endpoint",
+      "rejected": true,
+      "reason": "FAIL: complete typed record mismatch",
+      "wall_seconds": 0.181126
+    }
+  ],
+  "optimized_external_fixture_rejections": [
+    {
+      "name": "wrong-whole-ratio",
+      "rejected": true,
+      "reason": "FAIL: complete typed record mismatch"
+    },
+    {
+      "name": "missing-whole-row",
+      "rejected": true,
+      "reason": "FAIL: complete typed record mismatch"
+    },
+    {
+      "name": "integer-to-float",
+      "rejected": true,
+      "reason": "FAIL: complete typed record mismatch"
+    },
+    {
+      "name": "missing-window-polynomial",
+      "rejected": true,
+      "reason": "FAIL: complete typed record mismatch"
+    },
+    {
+      "name": "duplicate-key",
+      "rejected": true,
+      "reason": "FAIL: duplicate fixture key"
+    },
+    {
+      "name": "nonfinite",
+      "rejected": true,
+      "reason": "FAIL: nonfinite fixture token"
+    },
+    {
+      "name": "malformed",
+      "rejected": true,
+      "reason": "FAIL: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+    },
+    {
+      "name": "extra-global-claim",
+      "rejected": true,
+      "reason": "FAIL: complete typed record mismatch"
+    }
+  ],
+  "child_peak_rss_KiB": 21124,
+  "native_threads_one": true,
+  "serial": true,
+  "fixed_child_guard_seconds": 45,
+  "resource_scope_unchanged": "1CPU2GiB",
+  "trust_boundary": "Ordinary all-index square-tail convergence, norms, disk-root nonnegative weight, Fourier inequalities, monotone endpoint substitutions and actual-domain imports remain unformalized. Finite literal controls do not certify universal physical existence."
+}

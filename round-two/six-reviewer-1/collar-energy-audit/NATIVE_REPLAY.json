@@ -1,0 +1,1042 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "utc": "2026-10-02T19:56:50.079453+00:00",
+  "source_commit": "a91f154cef486ba66c4c9083def8921f42cf1a4d",
+  "native_runs": [
+    {
+      "mode": "normal",
+      "seconds": 0.199405,
+      "stdout": {
+        "internal_damage_controls": 12,
+        "record_sha256": "325cc84813fd97995b97d05d855899b26b5af4f637f221e6a6c8767b7a0933cc",
+        "scope": "finite exact corroboration; ordinary analytic proof unformalized",
+        "status": "PASS",
+        "strict_margins": 20,
+        "whole_controls": 35
+      }
+    },
+    {
+      "mode": "optimized",
+      "seconds": 0.368347,
+      "stdout": {
+        "internal_damage_controls": 12,
+        "record_sha256": "325cc84813fd97995b97d05d855899b26b5af4f637f221e6a6c8767b7a0933cc",
+        "scope": "finite exact corroboration; ordinary analytic proof unformalized",
+        "status": "PASS",
+        "strict_margins": 20,
+        "whole_controls": 35
+      }
+    }
+  ],
+  "validation_seconds": 6.867882,
+  "native_validation": {
+    "child_peak_rss_kib": 22640,
+    "child_timeout_seconds": 45,
+    "external_fixture_rejections": 20,
+    "external_rejections": [
+      {
+        "case": "wrong-schema",
+        "mode": "normal",
+        "reason": "complete typed fixture mismatch",
+        "rejected": true
+      },
+      {
+        "case": "extra-control",
+        "mode": "normal",
+        "reason": "complete typed fixture mismatch",
+        "rejected": true
+      },
+      {
+        "case": "coefficient-digest",
+        "mode": "normal",
+        "reason": "complete typed fixture mismatch",
+        "rejected": true
+      },
+      {
+        "case": "false-margin",
+        "mode": "normal",
+        "reason": "complete typed fixture mismatch",
+        "rejected": true
+      },
+      {
+        "case": "float-control-count",
+        "mode": "normal",
+        "reason": "invalid fixture type",
+        "rejected": true
+      },
+      {
+        "case": "bool-control-count",
+        "mode": "normal",
+        "reason": "complete typed fixture mismatch",
+        "rejected": true
+      },
+      {
+        "case": "wrong-controls-type",
+        "mode": "normal",
+        "reason": "complete typed fixture mismatch",
+        "rejected": true
+      },
+      {
+        "case": "missing-whole-identity",
+        "mode": "normal",
+        "reason": "complete typed fixture mismatch",
+        "rejected": true
+      },
+      {
+        "case": "duplicate-key",
+        "mode": "normal",
+        "reason": "duplicate fixture key",
+        "rejected": true
+      },
+      {
+        "case": "nan-number",
+        "mode": "normal",
+        "reason": "invalid JSON constant",
+        "rejected": true
+      },
+      {
+        "case": "changed-source-pin",
+        "mode": "normal",
+        "reason": "complete typed fixture mismatch",
+        "rejected": true
+      },
+      {
+        "case": "wrong-schema",
+        "mode": "optimized",
+        "reason": "complete typed fixture mismatch",
+        "rejected": true
+      },
+      {
+        "case": "extra-control",
+        "mode": "optimized",
+        "reason": "complete typed fixture mismatch",
+        "rejected": true
+      },
+      {
+        "case": "coefficient-digest",
+        "mode": "optimized",
+        "reason": "complete typed fixture mismatch",
+        "rejected": true
+      },
+      {
+        "case": "false-margin",
+        "mode": "optimized",
+        "reason": "complete typed fixture mismatch",
+        "rejected": true
+      },
+      {
+        "case": "float-control-count",
+        "mode": "optimized",
+        "reason": "invalid fixture type",
+        "rejected": true
+      },
+      {
+        "case": "bool-control-count",
+        "mode": "optimized",
+        "reason": "complete typed fixture mismatch",
+        "rejected": true
+      },
+      {
+        "case": "wrong-controls-type",
+        "mode": "optimized",
+        "reason": "complete typed fixture mismatch",
+        "rejected": true
+      },
+      {
+        "case": "missing-whole-identity",
+        "mode": "optimized",
+        "reason": "complete typed fixture mismatch",
+        "rejected": true
+      },
+      {
+        "case": "duplicate-key",
+        "mode": "optimized",
+        "reason": "duplicate fixture key",
+        "rejected": true
+      },
+      {
+        "case": "nan-number",
+        "mode": "optimized",
+        "reason": "invalid JSON constant",
+        "rejected": true
+      },
+      {
+        "case": "changed-source-pin",
+        "mode": "optimized",
+        "reason": "complete typed fixture mismatch",
+        "rejected": true
+      }
+    ],
+    "external_source_pin_rejections": 2,
+    "native_thread_counts": {
+      "BLIS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "positive_replays": [
+      {
+        "mode": "normal",
+        "output": {
+          "internal_damage_controls": 12,
+          "record_sha256": "325cc84813fd97995b97d05d855899b26b5af4f637f221e6a6c8767b7a0933cc",
+          "scope": "finite exact corroboration; ordinary analytic proof unformalized",
+          "status": "PASS",
+          "strict_margins": 20,
+          "whole_controls": 35
+        },
+        "seconds": 0.19030098500661552
+      },
+      {
+        "mode": "optimized",
+        "output": {
+          "internal_damage_controls": 12,
+          "record_sha256": "325cc84813fd97995b97d05d855899b26b5af4f637f221e6a6c8767b7a0933cc",
+          "scope": "finite exact corroboration; ordinary analytic proof unformalized",
+          "status": "PASS",
+          "strict_margins": 20,
+          "whole_controls": 35
+        },
+        "seconds": 0.3737874400103465
+      }
+    ],
+    "python_version": "3.12.14",
+    "schema": "paired-cube-validation-v1",
+    "scope": "same-author finite exact corroboration, not formal proof or independent review",
+    "serial": true
+  },
+  "whole_polynomial_comparisons": [
+    {
+      "native_name": "entire-cyclic-row-0",
+      "whole_coefficient_sha256": "d1ae41eb69777c81ac6f9981d37211dd4a3d35b3d9e98fccffd1aea0b3f8378a",
+      "terms": 9,
+      "matched": true
+    },
+    {
+      "native_name": "entire-cyclic-row-1",
+      "whole_coefficient_sha256": "225a5a09189e0f5ce39383c03c255350c377859894c3440fceb2ff306c14ae9f",
+      "terms": 8,
+      "matched": true
+    },
+    {
+      "native_name": "entire-cyclic-row-2",
+      "whole_coefficient_sha256": "e770a705eea08bfa4b16ba2a3e2a0021ae200d1d27e160ed2dd5623a0511b262",
+      "terms": 8,
+      "matched": true
+    },
+    {
+      "native_name": "entire-cyclic-row-3",
+      "whole_coefficient_sha256": "a2ad853f861ce2071c245a82435fe07db178d912b2ac737217703318c40848d5",
+      "terms": 8,
+      "matched": true
+    },
+    {
+      "native_name": "entire-cyclic-row-4",
+      "whole_coefficient_sha256": "ea8a15ce5bf5570ec09bb4c3dd9b66915b70ca0207ec604bc2f610ecf34bf2a9",
+      "terms": 8,
+      "matched": true
+    },
+    {
+      "native_name": "entire-cyclic-row-5",
+      "whole_coefficient_sha256": "58c823af5f51d7da0aece173611aa1f9099c26218a7b08113e7537c6cc95cb45",
+      "terms": 8,
+      "matched": true
+    },
+    {
+      "native_name": "entire-cyclic-row-6",
+      "whole_coefficient_sha256": "62832d86f999dc37716b8808f7a7f64b251f321368a7075cb1938b3c5448a41f",
+      "terms": 8,
+      "matched": true
+    },
+    {
+      "native_name": "entire-cyclic-row-7",
+      "whole_coefficient_sha256": "8464a79eb3df9cc9e7167e86d77191234ec0ba78ebb2436bead01ca1c22f80ae",
+      "terms": 8,
+      "matched": true
+    },
+    {
+      "native_name": "entire-cyclic-row-8",
+      "whole_coefficient_sha256": "95003e4a3e3993b8473b7ee6ff974d43bc93e9214879bd15e5b8dae5a5ce3f2a",
+      "terms": 8,
+      "matched": true
+    },
+    {
+      "native_name": "entire-paired-quadratic-kernel",
+      "whole_coefficient_sha256": "155939839cda4dce120c23dd7872a0d1aa9b9caef455af26fcc0ec942ff2c3b8",
+      "terms": 73,
+      "matched": true
+    },
+    {
+      "native_name": "entire-top-three-coefficient-reduction",
+      "whole_coefficient_sha256": "e82dd99db732ef38bf25957f62f4bb1fbb773df67dce0d146817222a2b07e271",
+      "terms": 9,
+      "matched": true
+    },
+    {
+      "native_name": "entire-paired-linear-anchor",
+      "whole_coefficient_sha256": "c9b19a5de2f2a1e5312be5701c10016a37c0cfccb297f236742e6a6b50b9b498",
+      "terms": 51,
+      "matched": true
+    },
+    {
+      "native_name": "whole-first-newton",
+      "whole_coefficient_sha256": "f59278b96716a4e5598e0ba0e6d653c4ed0deeb5466b6844f7221203dc614f48",
+      "terms": 8,
+      "matched": true
+    },
+    {
+      "native_name": "whole-second-newton",
+      "whole_coefficient_sha256": "960ea5dce798a11164dd9d3594cabd172fa431bc33510b1617a10531621fb384",
+      "terms": 8,
+      "matched": true
+    },
+    {
+      "native_name": "whole-third-newton",
+      "whole_coefficient_sha256": "771cf0332388c8f4cc94eb4d53f7d67a831c8ed7cbe6c8f6da8f13deaeb8fd46",
+      "terms": 56,
+      "matched": true
+    },
+    {
+      "native_name": "whole-fourth-newton",
+      "whole_coefficient_sha256": "04d3f4273938a2dfe96468953df8baedd67377fb4953a2bc7a1d8cb5cc1fe0a2",
+      "terms": 70,
+      "matched": true
+    },
+    {
+      "native_name": "complete-low-sublevel-polynomial",
+      "whole_coefficient_sha256": "c4e7b1c8f4cd771c8df2ff3f770247a746ac9bd22f432de0c0eb5bc811a42b16",
+      "terms": 4,
+      "matched": true
+    },
+    {
+      "native_name": "mean-stage-4",
+      "whole_coefficient_sha256": "f0a53e7b3708920e7c62e5602442feaa88b3ac58922e6230414631b63018ac0a",
+      "terms": 44,
+      "matched": true
+    },
+    {
+      "native_name": "mean-stage-5",
+      "whole_coefficient_sha256": "bd7971d563f6dc59252f4eea1521cf5faa539eb0deb923efd82adf2d3adfd118",
+      "terms": 44,
+      "matched": true
+    },
+    {
+      "native_name": "paired-Qplus",
+      "whole_coefficient_sha256": "ac9d73a43d7253e788f13cce787e3066813ac20b54c2cafe2096bfb5de52d8f0",
+      "terms": 42,
+      "matched": true
+    },
+    {
+      "native_name": "paired-S",
+      "whole_coefficient_sha256": "735e4b76518c978e40987794795052daeea0d879311ce8122d5e51a57480a480",
+      "terms": 44,
+      "matched": true
+    },
+    {
+      "native_name": "complete-feedback-T",
+      "whole_coefficient_sha256": "0b5217a5d5e78ff6f65cd46936653ce76b3b6cc736aca41fc9ae909db6abdcd2",
+      "terms": 44,
+      "matched": true
+    }
+  ],
+  "all_scalar_budget_comparisons": [
+    {
+      "native_name": "bounded-full-critical-energy",
+      "value": "8/625",
+      "matched": true,
+      "provenance": "direct sealed margin, with stated normalization"
+    },
+    {
+      "native_name": "energy-feedback-H25",
+      "value": "95042718573569586169592536150856470231189428806283809/23449934187403521429979791360000000000000000000000000000",
+      "matched": true,
+      "provenance": "direct sealed margin, with stated normalization"
+    },
+    {
+      "native_name": "energy-feedback-denominator",
+      "value": "84859932089707888937147609393214594180963824579874449171/6253315783307605714661277696000000000000000000000000000000",
+      "matched": true,
+      "provenance": "direct sealed margin, with stated normalization"
+    },
+    {
+      "native_name": "low-sublevel-lower-budget",
+      "value": "65535/65536",
+      "matched": true,
+      "provenance": "later explicit scalar arithmetic from sealed endpoint"
+    },
+    {
+      "native_name": "mean-stage-1-damping",
+      "value": "8397841797468721/210000000000000000",
+      "matched": true,
+      "provenance": "direct sealed margin, with stated normalization"
+    },
+    {
+      "native_name": "mean-stage-1-energy",
+      "value": "802079518220578564209889/25634765625000000000000000",
+      "matched": true,
+      "provenance": "direct sealed margin, with stated normalization"
+    },
+    {
+      "native_name": "mean-stage-1-eta",
+      "value": "1677585549557599/210000000000000000",
+      "matched": true,
+      "provenance": "direct sealed margin, with stated normalization"
+    },
+    {
+      "native_name": "mean-stage-2-damping",
+      "value": "64587548829906163/630000000000000000",
+      "matched": true,
+      "provenance": "direct sealed margin, with stated normalization"
+    },
+    {
+      "native_name": "mean-stage-2-energy",
+      "value": "1288541789097940770754667/76904296875000000000000000",
+      "matched": true,
+      "provenance": "direct sealed margin, with stated normalization"
+    },
+    {
+      "native_name": "mean-stage-2-eta",
+      "value": "421049504409917/26250000000000000",
+      "matched": true,
+      "provenance": "direct sealed margin, with stated normalization"
+    },
+    {
+      "native_name": "mean-stage-3-damping",
+      "value": "394782197267406163/630000000000000000",
+      "matched": true,
+      "provenance": "direct sealed margin, with stated normalization"
+    },
+    {
+      "native_name": "mean-stage-3-energy",
+      "value": "18828691476079226903567167/76904296875000000000000000",
+      "matched": true,
+      "provenance": "direct sealed margin, with stated normalization"
+    },
+    {
+      "native_name": "mean-stage-3-eta",
+      "value": "89931135273499043/630000000000000000",
+      "matched": true,
+      "provenance": "direct sealed margin, with stated normalization"
+    },
+    {
+      "native_name": "mean-stage-4-energy",
+      "value": "2907945711745139410425246131337799912118685284341173481/347406432405978095258959872000000000000000000000000000000",
+      "matched": true,
+      "provenance": "direct sealed margin, with stated normalization"
+    },
+    {
+      "native_name": "mean-stage-4-eta",
+      "value": "252356696366211764323730259681806949061/1044469485922597359820723710851442278400",
+      "matched": true,
+      "provenance": "direct sealed margin, with stated normalization"
+    },
+    {
+      "native_name": "mean-stage-5-energy",
+      "value": "1244476800193049936168726343716905567255989608320845947171/19454760214734773334501752832000000000000000000000000000000",
+      "matched": true,
+      "provenance": "direct sealed margin, with stated normalization"
+    },
+    {
+      "native_name": "mean-stage-5-eta",
+      "value": "5237310350732430879242955985965213109/21315703794338721628994361445947801600",
+      "matched": true,
+      "provenance": "direct sealed margin, with stated normalization"
+    },
+    {
+      "native_name": "radius-ratio",
+      "value": "65511/1638400",
+      "matched": true,
+      "provenance": "direct sealed margin, with stated normalization"
+    },
+    {
+      "native_name": "signed-coefficient-positive",
+      "value": "13/384",
+      "matched": true,
+      "provenance": "later explicit scalar arithmetic from sealed literal input"
+    },
+    {
+      "native_name": "square-tail-positive",
+      "value": "19/96",
+      "matched": true,
+      "provenance": "trivial positivity of sealed literal input"
+    }
+  ],
+  "later_producer_literal_controls": [
+    {
+      "native_name": "whole-actual-original-weight-0",
+      "whole_weight": [
+        [
+          -8,
+          "131071/4294967296",
+          "0"
+        ],
+        [
+          -7,
+          "-131071/268435456",
+          "0"
+        ],
+        [
+          -6,
+          "1966065/536870912",
+          "0"
+        ],
+        [
+          -5,
+          "-4587485/268435456",
+          "0"
+        ],
+        [
+          -4,
+          "59637305/1073741824",
+          "0"
+        ],
+        [
+          -3,
+          "-35782383/268435456",
+          "0"
+        ],
+        [
+          -2,
+          "131202071/536870912",
+          "0"
+        ],
+        [
+          -1,
+          "-93715765/268435456",
+          "0"
+        ],
+        [
+          0,
+          "843441885/2147483648",
+          "0"
+        ],
+        [
+          1,
+          "-93715765/268435456",
+          "0"
+        ],
+        [
+          2,
+          "131202071/536870912",
+          "0"
+        ],
+        [
+          3,
+          "-35782383/268435456",
+          "0"
+        ],
+        [
+          4,
+          "59637305/1073741824",
+          "0"
+        ],
+        [
+          5,
+          "-4587485/268435456",
+          "0"
+        ],
+        [
+          6,
+          "1966065/536870912",
+          "0"
+        ],
+        [
+          7,
+          "-131071/268435456",
+          "0"
+        ],
+        [
+          8,
+          "131071/4294967296",
+          "0"
+        ]
+      ],
+      "polynomial": [
+        [
+          0,
+          "-65535/65536",
+          "0"
+        ],
+        [
+          1,
+          "73727/8192",
+          "0"
+        ],
+        [
+          2,
+          "-589817/16384",
+          "0"
+        ],
+        [
+          3,
+          "688121/8192",
+          "0"
+        ],
+        [
+          4,
+          "-4128733/32768",
+          "0"
+        ],
+        [
+          5,
+          "1032185/8192",
+          "0"
+        ],
+        [
+          6,
+          "-1376249/16384",
+          "0"
+        ],
+        [
+          7,
+          "294911/8192",
+          "0"
+        ],
+        [
+          8,
+          "-589823/65536",
+          "0"
+        ],
+        [
+          9,
+          "1",
+          "0"
+        ]
+      ],
+      "coefficient_sha256": "05ccf4c779b0ee1b6e4750357cd0881aa05019821aef4bcec60df8407ab7bd0e",
+      "matched": true,
+      "all_original_norms_le_one": true
+    },
+    {
+      "native_name": "whole-actual-original-weight-1",
+      "whole_weight": [
+        [
+          -8,
+          "401361353362075478126540703878069670483984375/1461501637330902918203684832716283019655932542976",
+          "0"
+        ],
+        [
+          -7,
+          "-52607235313998338748441562855293525752752556015625/11972621413014756705924586149611790497021399392059392",
+          "0"
+        ],
+        [
+          -6,
+          "51715016608290704134590972399021161280220274227275890625/1569275433846670190958947355801916604025588861116008628224",
+          "0"
+        ],
+        [
+          -5,
+          "-7908122433703995522757465323812501025123849142624761984909375/51422017416287688817342786954917203280710495801049370729644032",
+          "0"
+        ],
+        [
+          -4,
+          "6737467254068539489714721259163191865988561290823430467835873853125/13479973333575319897333507543509815336818572211270286240551805124608",
+          "0"
+        ],
+        [
+          -3,
+          "-264927992391974484849210697562250625902494840576224609714305094776717375/220855883097298041197912187592864814478435487109452369765200775161577472",
+          "0"
+        ],
+        [
+          -2,
+          "63661843336938721765921962426295305453982076363859842329979491713144862015425/28948022309329048855892746252171976963317496166410141009864396001978282409984",
+          "0"
+        ],
+        [
+          -1,
+          "-2980101832161969868428172917856046349350887109694009675860052189297191801223315465/948568795032094272909893509191171341133987714380927500611236528192824358010355712",
+          "0"
+        ],
+        [
+          0,
+          "1757735583066743747409353083236502942168682130927471839801095265333032063243163602649079/497323236409786642155382248146820840100456150797347717440463976893159497012533375533056",
+          "0"
+        ],
+        [
+          1,
+          "-2980101832161969868428172917856046349350887109694009675860052189297191801223315465/948568795032094272909893509191171341133987714380927500611236528192824358010355712",
+          "0"
+        ],
+        [
+          2,
+          "63661843336938721765921962426295305453982076363859842329979491713144862015425/28948022309329048855892746252171976963317496166410141009864396001978282409984",
+          "0"
+        ],
+        [
+          3,
+          "-264927992391974484849210697562250625902494840576224609714305094776717375/220855883097298041197912187592864814478435487109452369765200775161577472",
+          "0"
+        ],
+        [
+          4,
+          "6737467254068539489714721259163191865988561290823430467835873853125/13479973333575319897333507543509815336818572211270286240551805124608",
+          "0"
+        ],
+        [
+          5,
+          "-7908122433703995522757465323812501025123849142624761984909375/51422017416287688817342786954917203280710495801049370729644032",
+          "0"
+        ],
+        [
+          6,
+          "51715016608290704134590972399021161280220274227275890625/1569275433846670190958947355801916604025588861116008628224",
+          "0"
+        ],
+        [
+          7,
+          "-52607235313998338748441562855293525752752556015625/11972621413014756705924586149611790497021399392059392",
+          "0"
+        ],
+        [
+          8,
+          "401361353362075478126540703878069670483984375/1461501637330902918203684832716283019655932542976",
+          "0"
+        ]
+      ],
+      "polynomial": [
+        [
+          0,
+          "-22297682844144366589289473329255217787109375/22300745198530623141535718272648361505980416",
+          "0"
+        ],
+        [
+          1,
+          "3062167476879519330183951475750316015625/340282366920938463463374607431768211456",
+          "0"
+        ],
+        [
+          2,
+          "-46725680581056219274951575123984375/1298074214633706907132624082305024",
+          "0"
+        ],
+        [
+          3,
+          "1663639093956885811269606703125/19807040628566084398385987584",
+          "0"
+        ],
+        [
+          4,
+          "-76156516088664949016690625/604462909807314587353088",
+          "0"
+        ],
+        [
+          5,
+          "1162073946573051789375/9223372036854775808",
+          "0"
+        ],
+        [
+          6,
+          "-5910703932112875/70368744177664",
+          "0"
+        ],
+        [
+          7,
+          "38653526025/1073741824",
+          "0"
+        ],
+        [
+          8,
+          "-589815/65536",
+          "0"
+        ],
+        [
+          9,
+          "1",
+          "0"
+        ]
+      ],
+      "coefficient_sha256": "9baa0732fcfbe5c4cb81b62f38252d970b99c8f5e56cf9e7eb754c0e67a0c1f1",
+      "matched": true,
+      "all_original_norms_le_one": true
+    },
+    {
+      "native_name": "whole-actual-original-weight-2",
+      "whole_weight": [
+        [
+          -8,
+          "-21845/131072",
+          "-21845/65536"
+        ],
+        [
+          -7,
+          "393211/196608",
+          "98303/49152"
+        ],
+        [
+          -6,
+          "-672155140103/77309411328",
+          "-66571370497/12884901888"
+        ],
+        [
+          -5,
+          "1563351908387/77309411328",
+          "73013788675/12884901888"
+        ],
+        [
+          -4,
+          "-113338275161/4294967296",
+          "21845/32768"
+        ],
+        [
+          -3,
+          "1254118195235/77309411328",
+          "-124552871939/12884901888"
+        ],
+        [
+          -2,
+          "672155140103/77309411328",
+          "66571370497/4294967296"
+        ],
+        [
+          -1,
+          "-1486043480099/38654705664",
+          "-85898559491/6442450944"
+        ],
+        [
+          0,
+          "114054092121/2147483648",
+          "0"
+        ],
+        [
+          1,
+          "-1486043480099/38654705664",
+          "85898559491/6442450944"
+        ],
+        [
+          2,
+          "672155140103/77309411328",
+          "-66571370497/4294967296"
+        ],
+        [
+          3,
+          "1254118195235/77309411328",
+          "124552871939/12884901888"
+        ],
+        [
+          4,
+          "-113338275161/4294967296",
+          "-21845/32768"
+        ],
+        [
+          5,
+          "1563351908387/77309411328",
+          "-73013788675/12884901888"
+        ],
+        [
+          6,
+          "-672155140103/77309411328",
+          "66571370497/12884901888"
+        ],
+        [
+          7,
+          "393211/196608",
+          "-98303/49152"
+        ],
+        [
+          8,
+          "-21845/131072",
+          "21845/65536"
+        ]
+      ],
+      "polynomial": [
+        [
+          1,
+          "-21845/131072",
+          "-21845/65536"
+        ],
+        [
+          2,
+          "393211/393216",
+          "98303/98304"
+        ],
+        [
+          3,
+          "-106495/49152",
+          "-131071/98304"
+        ],
+        [
+          4,
+          "458749/196608",
+          "2/3"
+        ],
+        [
+          5,
+          "-109227/131072",
+          "21845/65536"
+        ],
+        [
+          6,
+          "-393211/393216",
+          "-98303/98304"
+        ],
+        [
+          7,
+          "106495/49152",
+          "131071/98304"
+        ],
+        [
+          8,
+          "-458749/196608",
+          "-2/3"
+        ],
+        [
+          9,
+          "1",
+          "0"
+        ]
+      ],
+      "coefficient_sha256": "08f263342301ee0172787794b21d0c2d598fb6bdaa859ff56ac9974db6b4b081",
+      "matched": true,
+      "all_original_norms_le_one": true
+    },
+    {
+      "native_name": "whole-actual-original-weight-3",
+      "whole_weight": [
+        [
+          -8,
+          "65535/524288",
+          "0"
+        ],
+        [
+          -7,
+          "-229373/131072",
+          "0"
+        ],
+        [
+          -6,
+          "3022332198957/343597383680",
+          "0"
+        ],
+        [
+          -5,
+          "-39498213917797/1717986918400",
+          "0"
+        ],
+        [
+          -4,
+          "1305112374584501/34359738368000",
+          "0"
+        ],
+        [
+          -3,
+          "-2088835552209129/42949672960000",
+          "0"
+        ],
+        [
+          -2,
+          "1292412724955627/21474836480000",
+          "0"
+        ],
+        [
+          -1,
+          "-1630413275741341/21474836480000",
+          "0"
+        ],
+        [
+          0,
+          "7251609572714811/85899345920000",
+          "0"
+        ],
+        [
+          1,
+          "-1630413275741341/21474836480000",
+          "0"
+        ],
+        [
+          2,
+          "1292412724955627/21474836480000",
+          "0"
+        ],
+        [
+          3,
+          "-2088835552209129/42949672960000",
+          "0"
+        ],
+        [
+          4,
+          "1305112374584501/34359738368000",
+          "0"
+        ],
+        [
+          5,
+          "-39498213917797/1717986918400",
+          "0"
+        ],
+        [
+          6,
+          "3022332198957/343597383680",
+          "0"
+        ],
+        [
+          7,
+          "-229373/131072",
+          "0"
+        ],
+        [
+          8,
+          "65535/524288",
+          "0"
+        ]
+      ],
+      "polynomial": [
+        [
+          1,
+          "65535/524288",
+          "0"
+        ],
+        [
+          2,
+          "-229373/262144",
+          "0"
+        ],
+        [
+          3,
+          "3040839/1310720",
+          "0"
+        ],
+        [
+          4,
+          "-9797561/3276800",
+          "0"
+        ],
+        [
+          5,
+          "31260479/13107200",
+          "0"
+        ],
+        [
+          6,
+          "-14909309/6553600",
+          "0"
+        ],
+        [
+          7,
+          "9207733/3276800",
+          "0"
+        ],
+        [
+          8,
+          "-163839/65536",
+          "0"
+        ],
+        [
+          9,
+          "1",
+          "0"
+        ]
+      ],
+      "coefficient_sha256": "e44cf0296b4c431b76a0af1db31e6579af88e23d81a8558c46448738adb3359f",
+      "matched": true,
+      "all_original_norms_le_one": true
+    }
+  ],
+  "all_original_sealed_bytes_unchanged": true,
+  "child_peak_rss_KiB": 22640,
+  "scope_note": "22 complete defining maps including all nine Fourier quadratics and all five full bivariate bootstrap maps; all20 margins. Producer35 controls not falsely equated to own19 differently arranged identities. Four target literal weight polynomials reconstructed only after seal; sealed own controls differ. No native test proves analytic convergence/norm/original-disk bridges."
+}
