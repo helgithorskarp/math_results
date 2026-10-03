@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "case": "baseline",
+      "optimized": false,
+      "seconds": 1.4531737020006403,
+      "exit_code": 0,
+      "last_line": "{\"status\": \"PASS\", \"identities\": 111, \"signs\": 23}"
+    },
+    {
+      "case": "missing_fixed_row",
+      "optimized": false,
+      "seconds": 0.6823248940054327,
+      "exit_code": 1,
+      "last_line": "ValueError: whole form dimensions"
+    },
+    {
+      "case": "original_coefficient",
+      "optimized": false,
+      "seconds": 0.6348263610852882,
+      "exit_code": 1,
+      "last_line": "ValueError: entire own/native QQ(h) original correspondence"
+    },
+    {
+      "case": "positive_shift_coefficient",
+      "optimized": false,
+      "seconds": 0.7636195290833712,
+      "exit_code": 1,
+      "last_line": "ValueError: complete native shifted coefficient identity"
+    },
+    {
+      "case": "baseline",
+      "optimized": true,
+      "seconds": 1.5021624499931931,
+      "exit_code": 0,
+      "last_line": "{\"status\": \"PASS\", \"identities\": 111, \"signs\": 23}"
+    },
+    {
+      "case": "missing_fixed_row",
+      "optimized": true,
+      "seconds": 0.8228501200210303,
+      "exit_code": 1,
+      "last_line": "ValueError: whole form dimensions"
+    },
+    {
+      "case": "original_coefficient",
+      "optimized": true,
+      "seconds": 0.8810521400300786,
+      "exit_code": 1,
+      "last_line": "ValueError: entire own/native QQ(h) original correspondence"
+    },
+    {
+      "case": "positive_shift_coefficient",
+      "optimized": true,
+      "seconds": 0.9287267309846357,
+      "exit_code": 1,
+      "last_line": "ValueError: complete native shifted coefficient identity"
+    }
+  ],
+  "entire_mathematical_correspondence_sha256": "c298700075afaa263c5a5ee2274ee2c7a4ebeeb73c0ed0f7e5c5c5d914e25ccf",
+  "outer_guard_seconds": 45
+}

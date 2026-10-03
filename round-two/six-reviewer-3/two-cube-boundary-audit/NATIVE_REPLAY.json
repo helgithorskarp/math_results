@@ -1,0 +1,106 @@
+{
+  "status": "PASS",
+  "source_only": true,
+  "outer_guard_seconds": 45,
+  "native_thread_variables": 1,
+  "records": [
+    {
+      "optimized": false,
+      "seconds": 23.991856965003535,
+      "complete_stream_bytes": 164966,
+      "stream_sha256": "604c5299e6b5473dcecfecf8e2af7a07f2a32c34e577f7d192584739bbaed4c5",
+      "compact_record_sha256": "a3b3d4df45495fc1b03db048314e22f660e1d4a090996e799b86a9bfa5deae75",
+      "execution": {
+        "agent": "six-downset-1",
+        "role": "researcher",
+        "optimized": 0,
+        "complete": true,
+        "source_only": true,
+        "phases": [
+          {
+            "phase": "uniform",
+            "seconds": 1.2527292979648337,
+            "peak_KiB": 19552
+          },
+          {
+            "phase": "independent",
+            "seconds": 2.423030770965852,
+            "peak_KiB": 22324
+          },
+          {
+            "phase": "original-h2",
+            "seconds": 0.4575151570606977,
+            "peak_KiB": 19104
+          },
+          {
+            "phase": "original-h3",
+            "seconds": 0.9059230950661004,
+            "peak_KiB": 19104
+          },
+          {
+            "phase": "original-h10",
+            "seconds": 16.181011672015302,
+            "peak_KiB": 25364
+          },
+          {
+            "phase": "damages",
+            "seconds": 2.6948899229755625,
+            "peak_KiB": 24652
+          }
+        ],
+        "seconds": 23.917386484099552,
+        "whole_mathematical_stream_sha256": "604c5299e6b5473dcecfecf8e2af7a07f2a32c34e577f7d192584739bbaed4c5",
+        "compact_result_sha256": "a3b3d4df45495fc1b03db048314e22f660e1d4a090996e799b86a9bfa5deae75"
+      }
+    },
+    {
+      "optimized": true,
+      "seconds": 25.056263345992193,
+      "complete_stream_bytes": 164966,
+      "stream_sha256": "604c5299e6b5473dcecfecf8e2af7a07f2a32c34e577f7d192584739bbaed4c5",
+      "compact_record_sha256": "a3b3d4df45495fc1b03db048314e22f660e1d4a090996e799b86a9bfa5deae75",
+      "execution": {
+        "agent": "six-downset-1",
+        "role": "researcher",
+        "optimized": 1,
+        "complete": true,
+        "source_only": true,
+        "phases": [
+          {
+            "phase": "uniform",
+            "seconds": 1.3020276450552046,
+            "peak_KiB": 20740
+          },
+          {
+            "phase": "independent",
+            "seconds": 2.4789227140136063,
+            "peak_KiB": 24988
+          },
+          {
+            "phase": "original-h2",
+            "seconds": 0.6165453239809722,
+            "peak_KiB": 22312
+          },
+          {
+            "phase": "original-h3",
+            "seconds": 1.0480951779754832,
+            "peak_KiB": 22312
+          },
+          {
+            "phase": "original-h10",
+            "seconds": 16.673913429956883,
+            "peak_KiB": 27628
+          },
+          {
+            "phase": "damages",
+            "seconds": 2.672898087068461,
+            "peak_KiB": 26420
+          }
+        ],
+        "seconds": 24.794504042016342,
+        "whole_mathematical_stream_sha256": "604c5299e6b5473dcecfecf8e2af7a07f2a32c34e577f7d192584739bbaed4c5",
+        "compact_result_sha256": "a3b3d4df45495fc1b03db048314e22f660e1d4a090996e799b86a9bfa5deae75"
+      }
+    }
+  ]
+}
