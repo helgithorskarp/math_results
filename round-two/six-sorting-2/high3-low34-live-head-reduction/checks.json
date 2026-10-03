@@ -1,0 +1,70 @@
+{
+  "agent": "six-sorting-2",
+  "role": "researcher",
+  "status": "COMPLETE_COLD_CAPABLE_SOURCE_ONLY_REPRODUCTION",
+  "python": "3.11.2",
+  "native_threads": 1,
+  "mathematical_child_concurrency": 1,
+  "per_child_guard_seconds": 55,
+  "runtime_source_files": {
+    "packed.py": "9e45eff5ddd9ef5a203c0c20573c1422e7f7bfbbb8e09ae68ecebcc275f15ef6",
+    "numeric.py": "83c79d716581cdc8f947a21d9120a001624d8179fab8935817e28326f10bb041",
+    "fixture.json": "bd32c97c24e8bcca8f9e10ccdc72d450e663dcdd9cefe29eed1d3d72b00b7b28",
+    "positive45.json": "13d83226498b7658ec6e5a3bae305a6857952510fbee8ae071574e430a07fa0e",
+    "generate.py": "16bcaaf9cd1e377686e2fc76c4db71df2c9b3253d0737c186913b095cc4e1af4",
+    "verify.py": "308220b6e27fe4f3090d3b5ae417b249b070950779ed916584924fcc905e7ff8",
+    "run.py": "728cf62d06f1088786646f1920d061fe8aa1d57ef67881eea286ef9400c6556d",
+    ".gitignore": "150013329e71880dfa4486d9ff2c563ce925934be8c6ccf8771b347e0e17e65c"
+  },
+  "entire_producer_mathematical_sha256": "8c393a25149701839fa23f7f2b59cc6912789e4949a162ce11bb50f94250eb07",
+  "entire_separate_checker_mathematical_sha256": "9308086c2cd34727d1bc44b2ec503b4774dde352116de8b4a90b4db92bbd8e2d",
+  "entire_normal_optimized_records_equal": true,
+  "compact_certificate_bytes": 2188,
+  "compact_certificate_sha256": "839da38b118502141388d76579ccf8f9125ccbfe32ae47b3dfdbf6bc88dab12f",
+  "forest_counts": {
+    "2": 150,
+    "3": 900,
+    "4": 2700,
+    "5": 2700
+  },
+  "live_head_count": 11400,
+  "live_head_proof_counts": {
+    "COMMUTATION_TO_PUBLIC_TWO_BINARY": 2064,
+    "ORDINARY_HEAD_MASS": 1038,
+    "ORDINARY_PREPARATION_MASS": 7748,
+    "PUBLIC_TWO_BINARY_EXCLUSION": 520,
+    "TIGHT_ORIGINAL_BALANCED_HEAD_IDENTITY": 30
+  },
+  "original_ground_assignments_per_mode": 612352,
+  "positive_sorter_Boolean_inputs_per_mode": 8192,
+  "rejected_damages_per_mode": 16,
+  "whole_clamped_identity_assignments_per_mode": 2048,
+  "balanced_tree_original_replays_per_mode": 6,
+  "maximum_child_rss_kib": 78780,
+  "stages": [
+    {
+      "mode": "normal",
+      "tool": "generate.py",
+      "seconds": 0.8259242309723049
+    },
+    {
+      "mode": "normal",
+      "tool": "verify.py",
+      "seconds": 15.734579222043976
+    },
+    {
+      "mode": "optimized",
+      "tool": "generate.py",
+      "seconds": 0.9509287220425904
+    },
+    {
+      "mode": "optimized",
+      "tool": "verify.py",
+      "seconds": 15.861063214950264
+    }
+  ],
+  "seconds": 33.97263934893999,
+  "ordinary_bridges": "written unformalized",
+  "independent_person_review": "pending",
+  "global44_exclusion": false
+}
