@@ -1,0 +1,334 @@
+{
+  "actual_source_depth": 6,
+  "agent": "six-rupert-1",
+  "exact_five_small_public_dependencies": [
+    {
+      "bytes": 10659,
+      "path": "round-two/six-rupert-1/pentagonal_closed_horizon_cell/geometry.py",
+      "sha256": "20ae6b80440bb24b11cc01d6467e923c9d83d0d1221703ac615e6a64ce3ea76e"
+    },
+    {
+      "bytes": 3605,
+      "path": "round-two/six-rupert-1/pentagonal_closed_horizon_cell/polynomial.py",
+      "sha256": "7180768c614a591075d361aa287a948eca3ff6a77c8366331511caa29080f714"
+    },
+    {
+      "bytes": 17243,
+      "path": "round-two/six-rupert-1/pentagonal_minimum_diameter/verify.py",
+      "sha256": "12c94ea3ab9d7bc42e2086dbb5fbb9154306d6fd7095a8be4b25bb44fefd5339"
+    },
+    {
+      "bytes": 9725,
+      "path": "round-two/six-rupert-1/pentagonal_minimum_diameter/model.py",
+      "sha256": "aa8512eed3abe60c8d897f725f7015ffb22617cf0287c3f0533ed23805c8084c"
+    },
+    {
+      "bytes": 2093,
+      "path": "round-two/six-rupert-1/pentagonal_minimum_diameter/model.json",
+      "sha256": "e1ce268370de64b35be62bd14ed36b63fe48dc240e5a73a80b5fe5136a2eec8e"
+    }
+  ],
+  "existing_child_guard_max_seconds": 45,
+  "existing_source_depth_cap": 18,
+  "expected_sha256": "c23d7d0f9ded0d6511a7082a81b2707cc3d124bc3e06890da545a5ef1fad5e36",
+  "formalization": false,
+  "generated_large_interval_corpus_published": false,
+  "global_named_solid_rupert_status": "OPEN",
+  "independent_review": "NOT_CLAIMED_AUTHOR_CONTROLS_ONLY",
+  "input_scope": "Fresh relocated directory containing exactly the mathematical runtime files listed here and five pinned small adjacent public dependencies. No previous generated data, private geometry cache, checkpoint, source forest output or run journal was imported. Documentation finalized after successful replay; it is not a runtime input.",
+  "mathematical_runtime_inputs": [
+    {
+      "bytes": 9113,
+      "path": "aggregate.py",
+      "sha256": "b51111bd4ccc5130804d74d53b718b99c7a92074aea6c7f238b57c45a1a5fb9b"
+    },
+    {
+      "bytes": 12346,
+      "path": "configuration.json",
+      "sha256": "ffee2dc38a0356cb48ed52b3ad5d48ce0d88027ea44ae495b37242cc3aeaa999"
+    },
+    {
+      "bytes": 5624,
+      "path": "expand.py",
+      "sha256": "3a2c926999f05ce02e66b9561bc898f61d8b13affee5d8b45215651f862a6555"
+    },
+    {
+      "bytes": 3026,
+      "path": "expected.json",
+      "sha256": "c23d7d0f9ded0d6511a7082a81b2707cc3d124bc3e06890da545a5ef1fad5e36"
+    },
+    {
+      "bytes": 30438,
+      "path": "forest32.json",
+      "sha256": "48a1da2cf976a28eb3af90b2a5ec63cb2d5887cb9da4b77d00c3284ca15543ec"
+    },
+    {
+      "bytes": 17093,
+      "path": "local.py",
+      "sha256": "6a1894a8013af95735278f6e2f8ceb28f73ca91cb31124f4846f009aca1dfddc"
+    },
+    {
+      "bytes": 11908,
+      "path": "local_certificate.json",
+      "sha256": "3407c6ca2a011565b8adff16c76f205b6e9568f5f0ae4125d26a3917673b31b2"
+    },
+    {
+      "bytes": 11608,
+      "path": "local_controls.py",
+      "sha256": "27e5b16aad7d2f2be124487263eb4b6f3ad3a1139ebad64f7271475aced14d21"
+    },
+    {
+      "bytes": 7023,
+      "path": "prepare.py",
+      "sha256": "55df15567d4d153dcf2184b3686b30def2329ba3218f476cd8c0a5b6c6520745"
+    },
+    {
+      "bytes": 4205,
+      "path": "reproduce.py",
+      "sha256": "11c0d7c79874d1159a590fe1a3400de6fe667eab5e73c9d35bae7d5ff9f1b818"
+    },
+    {
+      "bytes": 7863,
+      "path": "source_cell.py",
+      "sha256": "21e4a7a7d720eb4844d85237f8c67cc36ed3a98e86d88851b98c09a886228993"
+    },
+    {
+      "bytes": 15858,
+      "path": "source_controls.py",
+      "sha256": "4bbf89c08617d6b81ac86617860bb97d93444c4aacfb9f21610d217cd7050cfb"
+    },
+    {
+      "bytes": 2684,
+      "path": "target.json",
+      "sha256": "142d6b4e1b89f84cfd8218f0de09e3d81ce1ece2912ab232ea9f47d462890d89"
+    },
+    {
+      "bytes": 13548,
+      "path": "verify_shell.py",
+      "sha256": "d1cc3bb1b64a1f059a0768e06f429ca0b0a02a78dfb1702acc0f6a9a42c6726c"
+    }
+  ],
+  "maximum_cpu_intensive_children": 1,
+  "maximum_measured_child_wall_seconds": 29.725633915048093,
+  "maximum_reported_child_peak_rss_kib": 111764,
+  "numeric_threads": 1,
+  "ordinary_proof_required": true,
+  "python": "3.11.2",
+  "replay_modes": [
+    {
+      "complete": true,
+      "driver_wall_seconds": 102.46425436902791,
+      "mode": "normal",
+      "named_model_rebuilt_afresh": true,
+      "stages": [
+        {
+          "actual_child_wall_seconds": 29.725633915048093,
+          "guard_seconds": 45,
+          "mathematical_statuses": [
+            "COMPLETE_FRESH_ACTUAL_NAMED_MODEL_RECONSTRUCTION_PASSED"
+          ],
+          "stage": "local.py"
+        },
+        {
+          "actual_child_wall_seconds": 0.1401470210403204,
+          "guard_seconds": 20,
+          "mathematical_statuses": [
+            "EXACT_LITERAL_FOREST_DECODED"
+          ],
+          "stage": "expand.py"
+        },
+        {
+          "actual_child_wall_seconds": 15.758281431044452,
+          "guard_seconds": 40,
+          "mathematical_statuses": [
+            "EXACT_WHOLE_CLOSED_CELL32_CONDITIONAL_THREE_FAN_LOCAL_RIGIDITY_AND_PHYSICAL_GAP_PASSED"
+          ],
+          "stage": "local.py"
+        },
+        {
+          "actual_child_wall_seconds": 12.693998689064756,
+          "guard_seconds": 40,
+          "mathematical_statuses": [
+            "WHOLE_CLOSED_PENTAGON32_INDEPENDENT_AUTHOR_LOCAL_CONTROLS_PASSED"
+          ],
+          "stage": "local_controls.py"
+        },
+        {
+          "actual_child_wall_seconds": 16.30556482600514,
+          "guard_seconds": 40,
+          "mathematical_statuses": [
+            "EXACT_PROPER_BODY_CAYLEY_CELL_IDENTITIES_PASSED_NOT_A_RUPERT_EXCLUSION",
+            "EXACT_OUTER_PROPOSAL_GEOMETRY_PREPARED_ALL_SOURCE_LEAF_SIGNS_PENDING"
+          ],
+          "stage": "prepare.py"
+        },
+        {
+          "actual_child_wall_seconds": 18.441377307055518,
+          "guard_seconds": 45,
+          "mathematical_statuses": [
+            "DECLARED_EXACT_LEAF_RANGE_PASSED"
+          ],
+          "stage": "verify_shell.py"
+        },
+        {
+          "actual_child_wall_seconds": 8.683138700085692,
+          "guard_seconds": 40,
+          "mathematical_statuses": [
+            "WHOLE_PENTAGON32_INDEPENDENT_SOURCE_AND_COVER_CONTROLS_PASSED"
+          ],
+          "stage": "source_controls.py"
+        },
+        {
+          "actual_child_wall_seconds": 0.7101141930324957,
+          "guard_seconds": 20,
+          "mathematical_statuses": [
+            "WHOLE_CLOSED_PENTAGON32_ALL_ORIGINAL_SOURCES_AND_PHYSICAL_TRANSLATION_SCALE_VERIFIED"
+          ],
+          "stage": "aggregate.py"
+        }
+      ],
+      "starting_generated_state": "ABSENT_EMPTY"
+    },
+    {
+      "complete": true,
+      "driver_wall_seconds": 102.16954428795725,
+      "mode": "optimized",
+      "named_model_rebuilt_afresh": true,
+      "stages": [
+        {
+          "actual_child_wall_seconds": 22.92688137094956,
+          "guard_seconds": 45,
+          "mathematical_statuses": [
+            "COMPLETE_FRESH_ACTUAL_NAMED_MODEL_RECONSTRUCTION_PASSED"
+          ],
+          "stage": "local.py"
+        },
+        {
+          "actual_child_wall_seconds": 0.28162345895543694,
+          "guard_seconds": 20,
+          "mathematical_statuses": [
+            "EXACT_LITERAL_FOREST_DECODED"
+          ],
+          "stage": "expand.py"
+        },
+        {
+          "actual_child_wall_seconds": 15.806336223962717,
+          "guard_seconds": 40,
+          "mathematical_statuses": [
+            "EXACT_WHOLE_CLOSED_CELL32_CONDITIONAL_THREE_FAN_LOCAL_RIGIDITY_AND_PHYSICAL_GAP_PASSED"
+          ],
+          "stage": "local.py"
+        },
+        {
+          "actual_child_wall_seconds": 15.941183727001771,
+          "guard_seconds": 40,
+          "mathematical_statuses": [
+            "WHOLE_CLOSED_PENTAGON32_INDEPENDENT_AUTHOR_LOCAL_CONTROLS_PASSED"
+          ],
+          "stage": "local_controls.py"
+        },
+        {
+          "actual_child_wall_seconds": 17.60735433397349,
+          "guard_seconds": 40,
+          "mathematical_statuses": [
+            "EXACT_PROPER_BODY_CAYLEY_CELL_IDENTITIES_PASSED_NOT_A_RUPERT_EXCLUSION",
+            "EXACT_OUTER_PROPOSAL_GEOMETRY_PREPARED_ALL_SOURCE_LEAF_SIGNS_PENDING"
+          ],
+          "stage": "prepare.py"
+        },
+        {
+          "actual_child_wall_seconds": 19.38753666600678,
+          "guard_seconds": 45,
+          "mathematical_statuses": [
+            "DECLARED_EXACT_LEAF_RANGE_PASSED"
+          ],
+          "stage": "verify_shell.py"
+        },
+        {
+          "actual_child_wall_seconds": 9.148199692019261,
+          "guard_seconds": 40,
+          "mathematical_statuses": [
+            "WHOLE_PENTAGON32_INDEPENDENT_SOURCE_AND_COVER_CONTROLS_PASSED"
+          ],
+          "stage": "source_controls.py"
+        },
+        {
+          "actual_child_wall_seconds": 1.038281452958472,
+          "guard_seconds": 20,
+          "mathematical_statuses": [
+            "WHOLE_CLOSED_PENTAGON32_ALL_ORIGINAL_SOURCES_AND_PHYSICAL_TRANSLATION_SCALE_VERIFIED"
+          ],
+          "stage": "aggregate.py"
+        }
+      ],
+      "starting_generated_state": "ABSENT_EMPTY"
+    }
+  ],
+  "resource_settings_changed": false,
+  "role": "researcher",
+  "standard_library_only": true,
+  "status": "COMPLETE_FRESH_ISOLATED_NORMAL_AND_OPTIMIZED_AUTHOR_REPLAY_PASSED",
+  "validated_utc": "2026-10-03T00:05:41.589890+00:00",
+  "whole_mathematical_record_pairs": [
+    {
+      "bytes": 81201,
+      "entire_bytes_equal": true,
+      "file": "named_geometry.json",
+      "sha256": "ce7fb43061b5dc692b1824a0e41bec539026c75ae041faa9264a64b8e8b8283f"
+    },
+    {
+      "bytes": 2316,
+      "entire_bytes_equal": true,
+      "file": "model.json",
+      "sha256": "7e0e1a2517e76d9a1800032d06720c3a6089afc239e9133ad7893d4d89516609"
+    },
+    {
+      "bytes": 1030561,
+      "entire_bytes_equal": true,
+      "file": "forest.json",
+      "sha256": "7914acb3eaff86a4c7d9a3227d4661f974648050500f624e57521c975b53528a"
+    },
+    {
+      "bytes": 305905,
+      "entire_bytes_equal": true,
+      "file": "local.json",
+      "sha256": "1e540827f9809ccf47a415381a253d7c5f76bc0ab4ce60a8f7b243682fc120b8"
+    },
+    {
+      "bytes": 1383,
+      "entire_bytes_equal": true,
+      "file": "local_controls.json",
+      "sha256": "4339c02ece54edaaf196b2317aa7f478a4716f5f43e0a07f87f24f1215d9485e"
+    },
+    {
+      "bytes": 20944,
+      "entire_bytes_equal": true,
+      "file": "source.json",
+      "sha256": "189d16bc8c9bc643aaffd5b141fde87f262afc8db34a03bc1a8aab1ab29c0773"
+    },
+    {
+      "bytes": 272785,
+      "entire_bytes_equal": true,
+      "file": "geometry.json",
+      "sha256": "2321b03c7fb3785588994dfe4c1f7957537ed2a49e476ef3f1f264863a8749ba"
+    },
+    {
+      "bytes": 15152468,
+      "entire_bytes_equal": true,
+      "file": "leaves_0.json",
+      "sha256": "61d12df5e7faefe4ca5bd359a5e94c4750210cbabcc35c3f767ae082a227aacf"
+    },
+    {
+      "bytes": 9488,
+      "entire_bytes_equal": true,
+      "file": "source_controls.json",
+      "sha256": "5c1a9c15b68bd66c0484ef32bf996566eff9d328ba18de380ab4d95fa2a46cdd"
+    },
+    {
+      "bytes": 3026,
+      "entire_bytes_equal": true,
+      "file": "complete.json",
+      "sha256": "c23d7d0f9ded0d6511a7082a81b2707cc3d124bc3e06890da545a5ef1fad5e36"
+    }
+  ]
+}
