@@ -1,0 +1,352 @@
+{
+  "K5_degree_identities": 7168,
+  "K5_equalities": 1,
+  "cases": {
+    "A": 102900,
+    "B": 97020
+  },
+  "child_runs": [
+    {
+      "optimized": false,
+      "script": "produce",
+      "seconds": 0.18132203398272395
+    },
+    {
+      "optimized": false,
+      "script": "check",
+      "seconds": 2.110350144095719
+    },
+    {
+      "optimized": false,
+      "script": "lost_positive",
+      "seconds": 1.5857142809545621
+    },
+    {
+      "optimized": false,
+      "script": "false_flag",
+      "seconds": 1.9816937539726496
+    },
+    {
+      "optimized": false,
+      "script": "lost_case",
+      "seconds": 1.810864057042636
+    },
+    {
+      "optimized": false,
+      "script": "duplicate_edge",
+      "seconds": 1.5967342199292034
+    },
+    {
+      "optimized": false,
+      "script": "bad_edge",
+      "seconds": 1.5368155190953985
+    },
+    {
+      "optimized": false,
+      "script": "false_capacity",
+      "seconds": 1.8505993130384013
+    },
+    {
+      "optimized": false,
+      "script": "lost_equality",
+      "seconds": 1.5579506700159982
+    },
+    {
+      "optimized": false,
+      "script": "false_support",
+      "seconds": 1.527393118944019
+    },
+    {
+      "optimized": true,
+      "script": "produce",
+      "seconds": 0.30744488805066794
+    },
+    {
+      "optimized": true,
+      "script": "check",
+      "seconds": 1.738532837945968
+    },
+    {
+      "optimized": true,
+      "script": "lost_positive",
+      "seconds": 1.776784443994984
+    },
+    {
+      "optimized": true,
+      "script": "false_flag",
+      "seconds": 1.7879002200206742
+    },
+    {
+      "optimized": true,
+      "script": "lost_case",
+      "seconds": 2.0352650829590857
+    },
+    {
+      "optimized": true,
+      "script": "duplicate_edge",
+      "seconds": 1.762485351995565
+    },
+    {
+      "optimized": true,
+      "script": "bad_edge",
+      "seconds": 1.7142512549180537
+    },
+    {
+      "optimized": true,
+      "script": "false_capacity",
+      "seconds": 1.7857480939710513
+    },
+    {
+      "optimized": true,
+      "script": "lost_equality",
+      "seconds": 1.7006695560412481
+    },
+    {
+      "optimized": true,
+      "script": "false_support",
+      "seconds": 1.7033805270912126
+    }
+  ],
+  "equality": [
+    {
+      "all_stars": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4,
+            5
+          ]
+        ]
+      ],
+      "carrier": "A",
+      "m": [
+        3,
+        0,
+        0,
+        1
+      ],
+      "n": [
+        6,
+        3,
+        3,
+        5
+      ]
+    },
+    {
+      "all_stars": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3,
+            5
+          ]
+        ]
+      ],
+      "carrier": "A",
+      "m": [
+        3,
+        0,
+        1,
+        0
+      ],
+      "n": [
+        6,
+        3,
+        5,
+        3
+      ]
+    }
+  ],
+  "flags_sha256": "dc995f573db9c8ea8dd5872e38880a32e1adeeff12fe991b8c751352e2aa39c8",
+  "guard_seconds_per_child": 45,
+  "independent_primary_modes": 2,
+  "minimum_K": 17,
+  "peak_child_rss_KiB": 20768,
+  "positive_cases": 39,
+  "python": "3.12.14",
+  "records_sha256": "28a7b54c910a727b007f3f01b3911060b9239f414ff6a5c6294a88d6245e9f2e",
+  "semantic_controls": [
+    {
+      "damage": "lost_positive",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "damage": "false_flag",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "damage": "lost_case",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "damage": "duplicate_edge",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "damage": "bad_edge",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "damage": "false_capacity",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "damage": "lost_equality",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "damage": "false_support",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "damage": "lost_positive",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "damage": "false_flag",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "damage": "lost_case",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "damage": "duplicate_edge",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "damage": "bad_edge",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "damage": "false_capacity",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "damage": "lost_equality",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "damage": "false_support",
+      "optimized": true,
+      "rejected": true
+    }
+  ],
+  "threads": 1,
+  "whole_mode_bytes_identical": true
+}
