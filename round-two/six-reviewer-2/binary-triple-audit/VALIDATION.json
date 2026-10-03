@@ -1,0 +1,159 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "utc": "2026-10-03T13:22:17.579685+00:00",
+  "status": "COMPLETE_COPIED_SOURCE_NORMAL_OPTIMIZED_ENTIRE_RECORD_AND_SEMANTIC_CONTROLS",
+  "copied_only": [
+    "audit.py",
+    "semantic.py",
+    "controls.py"
+  ],
+  "source_pins": {
+    "audit.py": {
+      "bytes": 8062,
+      "sha256": "255a75eb2fb54c4a5c573a7e9266ccabd05a59f6bd814d5e29a717c0208f6881"
+    },
+    "semantic.py": {
+      "bytes": 7535,
+      "sha256": "23953a7d71bef11c7a73c3ac5b280ede559985b90c2453bf8c3b20be704aecf0"
+    },
+    "controls.py": {
+      "bytes": 2388,
+      "sha256": "c82f6617b8d113c004a191229045dd5467fe2f46b43eaa923533d27e281dc3fb"
+    }
+  },
+  "source_only": true,
+  "target_native_access": false,
+  "blind": false,
+  "canonical_bytes": 4084178,
+  "canonical_sha256": "22e2adefca1f10d8ea3a58864b9f665cf166b5e913f55309c103b19bc536b308",
+  "entire_file_products_compared": 8,
+  "entire_file_bytes_compared": 32673432,
+  "semantic_false_fixtures_per_mode": 15,
+  "positive_fixtures_per_mode": 8,
+  "controls_rejection_hash_gate": false,
+  "max_single_child_seconds": 9.303400335949846,
+  "max_reported_CHILDREN_rss_kib": 53084,
+  "rss_method": "getrusage CHILDREN cumulative maximum across serial children, not separately measured current child or parent",
+  "guard_seconds": 20,
+  "threads": 1,
+  "resource_escalation": false,
+  "ordinary_proof_formalized": false,
+  "receipts": [
+    {
+      "child": "cold-incidence-normal",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 1.267871055053547,
+      "rss_kib": 49204,
+      "guard_seconds": 20,
+      "threads": 1
+    },
+    {
+      "child": "cold-physical-normal",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 1.559618097031489,
+      "rss_kib": 51144,
+      "guard_seconds": 20,
+      "threads": 1
+    },
+    {
+      "child": "cold-incidence-O",
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 1.3616289349738508,
+      "rss_kib": 51144,
+      "guard_seconds": 20,
+      "threads": 1
+    },
+    {
+      "child": "cold-physical-O",
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 1.7810317520052195,
+      "rss_kib": 53084,
+      "guard_seconds": 20,
+      "threads": 1
+    },
+    {
+      "child": "semantic-normal",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 9.090035144006833,
+      "rss_kib": 53084,
+      "guard_seconds": 20,
+      "threads": 1
+    },
+    {
+      "child": "controls-normal",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 0.047159024979919195,
+      "rss_kib": 53084,
+      "guard_seconds": 20,
+      "threads": 1
+    },
+    {
+      "child": "semantic-O",
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 9.303400335949846,
+      "rss_kib": 53084,
+      "guard_seconds": 20,
+      "threads": 1
+    },
+    {
+      "child": "controls-O",
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 0.14710984099656343,
+      "rss_kib": 53084,
+      "guard_seconds": 20,
+      "threads": 1
+    }
+  ],
+  "primary_live_comparison": "All4 complete4084178B normal/O kernel records compare in full; source-only cold replays add4 exact whole products",
+  "public_final_relocation": {
+    "status": "COMPLETE_EMPTY_RELOCATED_PUBLIC_SOURCE_ONLY_NORMAL_OPTIMIZED",
+    "utc": "2026-10-03T13:30:06.689000+00:00",
+    "copied_files": [
+      ".gitignore",
+      "audit.py",
+      "semantic.py",
+      "controls.py",
+      "verify.py",
+      "PROOF.md",
+      "REVIEW.md",
+      "README.md",
+      "EXPECTED.json",
+      "DEPENDENCIES.json",
+      "SEAL.json",
+      "VALIDATION.json"
+    ],
+    "ordinary_proof_formalized": false,
+    "target_native_access": false,
+    "entire_compact_output_equal": true,
+    "receipts": [
+      {
+        "optimized": false,
+        "returncode": 0,
+        "seconds": 11.309124986990355,
+        "rss_kib": 68192,
+        "guard_seconds": 20,
+        "threads": 1
+      },
+      {
+        "optimized": true,
+        "returncode": 0,
+        "seconds": 11.533640406909399,
+        "rss_kib": 68372,
+        "guard_seconds": 20,
+        "threads": 1
+      }
+    ],
+    "max_completed_child_seconds": 11.533640406909399,
+    "rss_method": "serial getrusage CHILDREN cumulative maximum, not separately current child or parent",
+    "copied_validation_metadata_at_start": "before these final receipts; validation metadata is not an arithmetic input"
+  }
+}

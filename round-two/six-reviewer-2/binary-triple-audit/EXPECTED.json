@@ -1,0 +1,65 @@
+{
+  "status": "COMPLETE_SOURCE_ONLY_BINARY_TRIPLE_REVIEW",
+  "canonical_bytes": 4084178,
+  "canonical_sha256": "22e2adefca1f10d8ea3a58864b9f665cf166b5e913f55309c103b19bc536b308",
+  "summary": {
+    "Q_states_with_omission": 50680,
+    "affordable_nonfive": [
+      72,
+      144
+    ],
+    "all_original_G_phase_entries": 1118400,
+    "bad_binary_max": 96,
+    "binary_states_with_omission": 78000,
+    "forced_active_binary_states": 800,
+    "native_original_phase_owner_maps": 12055,
+    "opposite_extra_targets": 320,
+    "structural_bad_max": 91,
+    "targets": 400
+  },
+  "semantic": {
+    "Q_states": 50680,
+    "binary_entries": 78000,
+    "capacity_entries": 279600,
+    "gap_entries": 1118400,
+    "native_maps": 12055,
+    "shared_model_definitions": true,
+    "status": "COMPLETE_DEFINITION_BASED_CHECKS",
+    "targets": 400
+  },
+  "controls": {
+    "expected_or_hash_gate": false,
+    "positive": [
+      "native-active",
+      "native-inactive",
+      "original-aliases",
+      "Q-all-omitted",
+      "singleton-inactive",
+      "entire-inventory",
+      "five-point-gap",
+      "W-outside-Q-is-free"
+    ],
+    "rejected": [
+      "native-wrong-active-parity",
+      "native-inactive-fabricated",
+      "owner-outside-domain",
+      "original-phase-missing",
+      "one-original-two-owners",
+      "projected-alias-merged",
+      "extra-label-on-entire-Q",
+      "Q-omission-fabricated",
+      "Q-row-incorrect-count",
+      "singleton-inactive-counted",
+      "binary-arm-wrong-parity",
+      "gap-point-omitted",
+      "gap-transversal-damaged",
+      "supplemental-intersection24",
+      "supplemental-outside-F"
+    ],
+    "status": "COMPLETE_SEMANTIC_CONTROLS",
+    "target_data_inputs": false
+  },
+  "target_native_imported": false,
+  "ordinary_proof_formalized": false,
+  "shared_primary_orchestration_schema": true
+}
