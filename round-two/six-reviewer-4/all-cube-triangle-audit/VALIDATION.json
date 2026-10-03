@@ -1,0 +1,191 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "checked_at_utc": "2026-10-03T16:15:23.134205+00:00",
+  "whole_primary_bytes": 9786,
+  "whole_primary_sha256": "b387586704fb6f59e97d7394f7d83bcdeaf726aa0ed0648eaa3e2d77f08ad78f",
+  "four_complete_positive_records_equal": true,
+  "positive_modes": [
+    "scratch/pass50-normal-primary.json",
+    "scratch/pass50-optimized-primary.json",
+    "scratch/pass50-cold-normal-primary.json",
+    "scratch/pass50-cold-optimized-primary.json"
+  ],
+  "primary_seal_files_unchanged": true,
+  "sealed_primary_files": 11,
+  "fresh_cold_source_from_empty_directory": true,
+  "cold_child_cwd": "/tmp",
+  "PYTHONPATH_PYTHONHOME_removed": true,
+  "cold_source_integrity_checked": true,
+  "semantic_rejections_per_mode": 18,
+  "whole_normal_optimized_controls_equal": true,
+  "semantic_rejections": [
+    {
+      "error": "all required whole physical blocks",
+      "error_type": "ValueError",
+      "name": "missing_whole_block",
+      "rejected": true
+    },
+    {
+      "error": "all required whole physical blocks",
+      "error_type": "ValueError",
+      "name": "reordered_whole_blocks",
+      "rejected": true
+    },
+    {
+      "error": "complete square pivot chain",
+      "error_type": "ValueError",
+      "name": "omitted_final_pivot",
+      "rejected": true
+    },
+    {
+      "error": "missing ordered update in deliberately damaged finite certificate",
+      "error_type": "StopIteration",
+      "name": "omitted_last_update",
+      "rejected": true
+    },
+    {
+      "error": "detached elimination",
+      "error_type": "ValueError",
+      "name": "detached_update_order",
+      "rejected": true
+    },
+    {
+      "error": "original entry mismatch",
+      "error_type": "ValueError",
+      "name": "changed_original_cap_entry",
+      "rejected": true
+    },
+    {
+      "error": "original metric mismatch",
+      "error_type": "ValueError",
+      "name": "changed_original_metric",
+      "rejected": true
+    },
+    {
+      "error": "pivot not original current matrix",
+      "error_type": "ValueError",
+      "name": "changed_pivot",
+      "rejected": true
+    },
+    {
+      "error": "Gaussian identity failed",
+      "error_type": "ValueError",
+      "name": "changed_update_result",
+      "rejected": true
+    },
+    {
+      "error": "all block dimensions",
+      "error_type": "ValueError",
+      "name": "missing_old_R_direction",
+      "rejected": true
+    },
+    {
+      "error": "typed exact polynomial",
+      "error_type": "ValueError",
+      "name": "boolean_polynomial_exponent",
+      "rejected": true
+    },
+    {
+      "error": "duplicate monomial",
+      "error_type": "ValueError",
+      "name": "duplicate_monomial",
+      "rejected": true
+    },
+    {
+      "error": "shift is not strictly coefficient-positive",
+      "name": "negative_shift_constant",
+      "rejected": true
+    },
+    {
+      "error": "original entry mismatch",
+      "name": "omit_actual_empty_frame",
+      "rejected": true
+    },
+    {
+      "error": "original entry mismatch",
+      "name": "wrong_old_row_multiplicity",
+      "rejected": true
+    },
+    {
+      "error": "original metric mismatch",
+      "name": "wrong_contrast_metric",
+      "rejected": true
+    },
+    {
+      "error": "whole physical dimension",
+      "name": "drop_untouched_old_contrast",
+      "rejected": true
+    },
+    {
+      "error": "whole empty lift perturbation",
+      "name": "wrong_actual_empty_repair_loop",
+      "rejected": true
+    }
+  ],
+  "guard_seconds": {
+    "child": 30,
+    "wrapper": 45
+  },
+  "native_threads": 1,
+  "serial_mathematical_children": 1,
+  "process_scope": "unchanged1CPU2GiB",
+  "maximum_positive_mathematical_child_seconds": 6.049298631027341,
+  "cold_positive_phases": [
+    {
+      "label": "cold-normal",
+      "seconds": 15.798768976936117,
+      "returncode": 0,
+      "peak_child_KiB": 19408,
+      "mathematical_bytes": 9786,
+      "whole_record_sha256": "b387586704fb6f59e97d7394f7d83bcdeaf726aa0ed0648eaa3e2d77f08ad78f"
+    },
+    {
+      "label": "cold-optimized",
+      "seconds": 15.563483859994449,
+      "returncode": 0,
+      "peak_child_KiB": 21740,
+      "mathematical_bytes": 9786,
+      "whole_record_sha256": "b387586704fb6f59e97d7394f7d83bcdeaf726aa0ed0648eaa3e2d77f08ad78f"
+    }
+  ],
+  "control_phases": [
+    {
+      "label": "normal",
+      "seconds": 11.333191100973636,
+      "returncode": 0,
+      "stderr": "",
+      "peak_child_KiB": 34036
+    },
+    {
+      "label": "optimized",
+      "seconds": 11.790329684037715,
+      "returncode": 0,
+      "stderr": "",
+      "peak_child_KiB": 36436
+    }
+  ],
+  "optional_exact_CAS_generation_children": 11,
+  "maximum_CAS_generation_child_seconds": 1.9752347379690036,
+  "tool_versions": {
+    "portable": "CPython3.11.2 standard library",
+    "CAS_generation": "CPython3.12.14 SymPy1.14.0 mpmath1.3.0"
+  },
+  "native_target_modules_certificates_expected_controls_opened": false,
+  "normal_record_source": "independent reconstructed primitive rows and full coefficient identities, no producer module import",
+  "operational_events": [
+    {
+      "event": "PRESEAL reviewer coefficient total required zero in redundant physical coordinates",
+      "resolution": "Changed test to zero in the actual physical metric, respecting centered B/T/mean relations; no target rejection or resource change"
+    },
+    {
+      "event": "Control harness assumed ValueError for every deliberately damaged finite certificate",
+      "resolution": "Missing ordered update raises StopIteration, which is an explicit malformed-certificate rejection; harness now records its class. No damaged case accepted, no mathematical formula or sealed primary changed"
+    }
+  ],
+  "no_timeout_unknown_memory_kill_incomplete_adopted": true,
+  "no_resource_escalation": true,
+  "no_proof_assistant": true,
+  "unformalized_bridges": "physical realization, complete representation decomposition, spectral transfer, original principal and Schur interpretation",
+  "no_historical_priority_claim": true
+}
