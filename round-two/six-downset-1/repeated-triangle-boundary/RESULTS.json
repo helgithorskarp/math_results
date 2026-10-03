@@ -1,0 +1,636 @@
+{
+  "agent": "six-downset-1",
+  "role": "researcher",
+  "scope": "Exact source verification of n2 integer h>=2 boundary signs and literal controls; ordinary geometric/product proof in PROOF.md is unformalized and independently unreviewed",
+  "phases": 6,
+  "complete_mathematical_bytes": 164966,
+  "whole_mathematical_stream_sha256": "604c5299e6b5473dcecfecf8e2af7a07f2a32c34e577f7d192584739bbaed4c5",
+  "phase_records": [
+    {
+      "phase": "uniform",
+      "mathematical_bytes": 156553,
+      "mathematical_sha256": "eb7f6ee796eed50c8ddbcababb8ce62ebf33d3ac0fb9f17d01f9004446346823"
+    },
+    {
+      "phase": "independent",
+      "mathematical_bytes": 2605,
+      "mathematical_sha256": "dacb77593bbef0c00716a24a5f280b13dcae81aff7f16303073e7bace05a1402"
+    },
+    {
+      "phase": "original-h2",
+      "mathematical_bytes": 1518,
+      "mathematical_sha256": "827892bd1a36fee2b6f75c4746b9ac8e17159bba912f32d391d589f90725f482"
+    },
+    {
+      "phase": "original-h3",
+      "mathematical_bytes": 1544,
+      "mathematical_sha256": "33e3691b3cc8e77f591a869351e5e89cab7f7cd1de0b41fe650fdf4e057ed957"
+    },
+    {
+      "phase": "original-h10",
+      "mathematical_bytes": 1685,
+      "mathematical_sha256": "6af13abe94febfceae646e362fb0f6c68f2ec3ed80ee143e1c74ca1f311b4db1"
+    },
+    {
+      "phase": "damages",
+      "mathematical_bytes": 1055,
+      "mathematical_sha256": "1ee2aad110396048dff83fa10fc9da3d879c152269c7b46827eef04b251f59ea"
+    }
+  ],
+  "uniform": {
+    "domain": "q=2, real h>=2 for sign forms only; original family requires integer h>=2",
+    "fixed_quotient": 9,
+    "signs": [
+      {
+        "group": "alphaH",
+        "order": 1,
+        "positive": true,
+        "degree": 11,
+        "original_terms": 12,
+        "shifted_terms": 12
+      },
+      {
+        "group": "betaH",
+        "order": 1,
+        "positive": true,
+        "degree": 11,
+        "original_terms": 12,
+        "shifted_terms": 12
+      },
+      {
+        "group": "alphaL",
+        "order": 1,
+        "positive": true,
+        "degree": 6,
+        "original_terms": 7,
+        "shifted_terms": 7
+      },
+      {
+        "group": "betaL",
+        "order": 1,
+        "positive": true,
+        "degree": 5,
+        "original_terms": 6,
+        "shifted_terms": 6
+      },
+      {
+        "group": "nu",
+        "order": 1,
+        "positive": true,
+        "degree": 11,
+        "original_terms": 12,
+        "shifted_terms": 12
+      },
+      {
+        "group": "muL",
+        "order": 1,
+        "positive": true,
+        "degree": 5,
+        "original_terms": 6,
+        "shifted_terms": 6
+      },
+      {
+        "group": "antiH",
+        "order": 1,
+        "positive": true,
+        "degree": 16,
+        "original_terms": 15,
+        "shifted_terms": 17
+      },
+      {
+        "group": "antiH",
+        "order": 2,
+        "positive": true,
+        "degree": 38,
+        "original_terms": 33,
+        "shifted_terms": 39
+      },
+      {
+        "group": "antiL",
+        "order": 1,
+        "positive": true,
+        "degree": 9,
+        "original_terms": 9,
+        "shifted_terms": 10
+      },
+      {
+        "group": "antiL",
+        "order": 2,
+        "positive": true,
+        "degree": 22,
+        "original_terms": 22,
+        "shifted_terms": 23
+      },
+      {
+        "group": "standard",
+        "order": 1,
+        "positive": true,
+        "degree": 13,
+        "original_terms": 11,
+        "shifted_terms": 14
+      },
+      {
+        "group": "standard",
+        "order": 2,
+        "positive": true,
+        "degree": 31,
+        "original_terms": 27,
+        "shifted_terms": 32
+      },
+      {
+        "group": "standard",
+        "order": 3,
+        "positive": true,
+        "degree": 53,
+        "original_terms": 49,
+        "shifted_terms": 54
+      },
+      {
+        "group": "standard",
+        "order": 4,
+        "positive": true,
+        "degree": 75,
+        "original_terms": 67,
+        "shifted_terms": 76
+      },
+      {
+        "group": "fixed",
+        "order": 1,
+        "positive": true,
+        "degree": 3,
+        "original_terms": 3,
+        "shifted_terms": 4
+      },
+      {
+        "group": "fixed",
+        "order": 2,
+        "positive": true,
+        "degree": 16,
+        "original_terms": 13,
+        "shifted_terms": 17
+      },
+      {
+        "group": "fixed",
+        "order": 3,
+        "positive": true,
+        "degree": 28,
+        "original_terms": 21,
+        "shifted_terms": 29
+      },
+      {
+        "group": "fixed",
+        "order": 4,
+        "positive": true,
+        "degree": 44,
+        "original_terms": 35,
+        "shifted_terms": 45
+      },
+      {
+        "group": "fixed",
+        "order": 5,
+        "positive": true,
+        "degree": 57,
+        "original_terms": 43,
+        "shifted_terms": 58
+      },
+      {
+        "group": "fixed",
+        "order": 6,
+        "positive": true,
+        "degree": 70,
+        "original_terms": 52,
+        "shifted_terms": 71
+      },
+      {
+        "group": "fixed",
+        "order": 7,
+        "positive": true,
+        "degree": 92,
+        "original_terms": 70,
+        "shifted_terms": 93
+      },
+      {
+        "group": "fixed",
+        "order": 8,
+        "positive": true,
+        "degree": 103,
+        "original_terms": 81,
+        "shifted_terms": 104
+      },
+      {
+        "group": "fixed",
+        "order": 9,
+        "positive": true,
+        "degree": 115,
+        "original_terms": 91,
+        "shifted_terms": 116
+      }
+    ],
+    "guards": {
+      "child_seconds": 60,
+      "native_threads": 1,
+      "packing_bytes": 33554432,
+      "polynomial_terms": 512
+    }
+  },
+  "independent": {
+    "checks": [
+      {
+        "degree": 11,
+        "determinant_identity_bound": 11,
+        "group": "alphaH",
+        "nodes": 12,
+        "order": 1
+      },
+      {
+        "degree": 11,
+        "determinant_identity_bound": 11,
+        "group": "betaH",
+        "nodes": 12,
+        "order": 1
+      },
+      {
+        "degree": 6,
+        "determinant_identity_bound": 6,
+        "group": "alphaL",
+        "nodes": 7,
+        "order": 1
+      },
+      {
+        "degree": 5,
+        "determinant_identity_bound": 5,
+        "group": "betaL",
+        "nodes": 6,
+        "order": 1
+      },
+      {
+        "degree": 11,
+        "determinant_identity_bound": 11,
+        "group": "nu",
+        "nodes": 12,
+        "order": 1
+      },
+      {
+        "degree": 5,
+        "determinant_identity_bound": 5,
+        "group": "muL",
+        "nodes": 6,
+        "order": 1
+      },
+      {
+        "degree": 16,
+        "determinant_identity_bound": 16,
+        "group": "antiH",
+        "nodes": 17,
+        "order": 1
+      },
+      {
+        "degree": 38,
+        "determinant_identity_bound": 38,
+        "group": "antiH",
+        "nodes": 39,
+        "order": 2
+      },
+      {
+        "degree": 9,
+        "determinant_identity_bound": 9,
+        "group": "antiL",
+        "nodes": 10,
+        "order": 1
+      },
+      {
+        "degree": 22,
+        "determinant_identity_bound": 22,
+        "group": "antiL",
+        "nodes": 23,
+        "order": 2
+      },
+      {
+        "degree": 13,
+        "determinant_identity_bound": 13,
+        "group": "standard",
+        "nodes": 14,
+        "order": 1
+      },
+      {
+        "degree": 31,
+        "determinant_identity_bound": 31,
+        "group": "standard",
+        "nodes": 32,
+        "order": 2
+      },
+      {
+        "degree": 53,
+        "determinant_identity_bound": 53,
+        "group": "standard",
+        "nodes": 54,
+        "order": 3
+      },
+      {
+        "degree": 75,
+        "determinant_identity_bound": 75,
+        "group": "standard",
+        "nodes": 76,
+        "order": 4
+      },
+      {
+        "degree": 3,
+        "determinant_identity_bound": 3,
+        "group": "fixed",
+        "nodes": 4,
+        "order": 1
+      },
+      {
+        "degree": 16,
+        "determinant_identity_bound": 16,
+        "group": "fixed",
+        "nodes": 17,
+        "order": 2
+      },
+      {
+        "degree": 28,
+        "determinant_identity_bound": 28,
+        "group": "fixed",
+        "nodes": 29,
+        "order": 3
+      },
+      {
+        "degree": 44,
+        "determinant_identity_bound": 44,
+        "group": "fixed",
+        "nodes": 45,
+        "order": 4
+      },
+      {
+        "degree": 57,
+        "determinant_identity_bound": 57,
+        "group": "fixed",
+        "nodes": 58,
+        "order": 5
+      },
+      {
+        "degree": 70,
+        "determinant_identity_bound": 70,
+        "group": "fixed",
+        "nodes": 71,
+        "order": 6
+      },
+      {
+        "degree": 92,
+        "determinant_identity_bound": 92,
+        "group": "fixed",
+        "nodes": 93,
+        "order": 7
+      },
+      {
+        "degree": 103,
+        "determinant_identity_bound": 103,
+        "group": "fixed",
+        "nodes": 104,
+        "order": 8
+      },
+      {
+        "degree": 115,
+        "determinant_identity_bound": 115,
+        "group": "fixed",
+        "nodes": 116,
+        "order": 9
+      }
+    ],
+    "clearing_coefficient_identities": 111,
+    "complete": true,
+    "full_Gaussian_determinant_nodes": 857,
+    "original_field_coefficient_identities": 111,
+    "positive_affine_factor_occurrences": 104,
+    "strict_positive_coefficients": 857,
+    "trust": "Independent same-author standard-library univariate rational/Gaussian computation. Geometric quotient and universal original-space bridges remain unformalized; no independent review.",
+    "whole_shift_coefficient_identities": 23
+  },
+  "original_controls": [
+    {
+      "agent": "six-downset-1",
+      "original": {
+        "N": 22,
+        "changed_quotient_rank": 19,
+        "core_sha256": "82a05d3ef53e3fdc4d0c0ec19015450932d82cb83fdf7569607d5bf5e82b899e",
+        "delta": "19190914953/764508012871",
+        "direct_original_deleted_principal_dimension": 19,
+        "direct_original_dependency_and_inverse_verified": true,
+        "direct_original_repair_Schur_verified": true,
+        "entire_Gram_frame_cap_radical_verified": true,
+        "floor": "610980693247/764508012871",
+        "h": 2,
+        "kappa": "150398734375/76763659812",
+        "literal_Ax_plus_Ay_zero": true,
+        "n": 2,
+        "old_quotient_rank": 3,
+        "original_positions": 484,
+        "physical_Gram_positions": 400,
+        "physical_frame_positions": 400,
+        "q": 2,
+        "s": "8",
+        "seed": {
+          "N": 22,
+          "lower_rank": 20,
+          "matrix_sha256": "71e0dc5525aff397ef68e35e7143f0381f00d21c2f1a915d7b76043d0b1aff50",
+          "s": "8",
+          "upper_rank": 21
+        },
+        "sharp": {
+          "N": 22,
+          "lower_rank": 21,
+          "matrix_sha256": "ed12baa3d06e67e6b0a92be371573cdb065fd6a5760e3f5f1d6bd4b68cb8e2cb",
+          "s": "8",
+          "upper_rank": 21
+        },
+        "sharp_sha256": "ed12baa3d06e67e6b0a92be371573cdb065fd6a5760e3f5f1d6bd4b68cb8e2cb",
+        "untouched_old_directions": 0
+      },
+      "residual_scalars": {
+        "alphaH": "272813/20000",
+        "alphaL": "9304/625",
+        "betaH": "227267/60000",
+        "betaL": "8488/1875",
+        "muL": "2636/1875",
+        "nu": "27447/20000"
+      },
+      "role": "researcher",
+      "scope": "PRIVATE literal original q2 control only; uniform h is unproved",
+      "sectors": {
+        "all_Gram_frame_cap_sector_positions": 327,
+        "all_reduced_sectors_PD": true,
+        "ambient_coordinate_dimension": 20,
+        "changed_dimension": 19,
+        "complete_change_rank": 19,
+        "cross_sector_positions": 252,
+        "fixed_sector_dimension": 9,
+        "h": 2,
+        "q": "2"
+      }
+    },
+    {
+      "agent": "six-downset-1",
+      "original": {
+        "N": 28,
+        "changed_quotient_rank": 25,
+        "core_sha256": "5ae0369b40585e648a16c794e4517cd9cbd0e4f3552b3c94b585635955392e23",
+        "delta": "24843655243085/914016995450512",
+        "direct_original_deleted_principal_dimension": 25,
+        "direct_original_dependency_and_inverse_verified": true,
+        "direct_original_repair_Schur_verified": true,
+        "entire_Gram_frame_cap_radical_verified": true,
+        "floor": "89408469188229/114252124431314",
+        "h": 3,
+        "kappa": "29755006917948/24843655243085",
+        "literal_Ax_plus_Ay_zero": true,
+        "n": 2,
+        "old_quotient_rank": 3,
+        "original_positions": 784,
+        "physical_Gram_positions": 676,
+        "physical_frame_positions": 676,
+        "q": 2,
+        "s": "11",
+        "seed": {
+          "N": 28,
+          "lower_rank": 26,
+          "matrix_sha256": "e9e569713aa993a36d72632548f2fc1af197672ccb0f71d56f0426706dafdd81",
+          "s": "11",
+          "upper_rank": 27
+        },
+        "sharp": {
+          "N": 28,
+          "lower_rank": 27,
+          "matrix_sha256": "d721345dd77d12c102d1b1f1b3abb15d80189ce643cdc8504b21b08410230dbc",
+          "s": "11",
+          "upper_rank": 27
+        },
+        "sharp_sha256": "d721345dd77d12c102d1b1f1b3abb15d80189ce643cdc8504b21b08410230dbc",
+        "untouched_old_directions": 0
+      },
+      "residual_scalars": {
+        "alphaH": "105802/5577",
+        "alphaL": "40033/1859",
+        "betaH": "7984751/1204632",
+        "betaL": "3535/507",
+        "muL": "9961/4056",
+        "nu": "4938797/1606176"
+      },
+      "role": "researcher",
+      "scope": "PRIVATE literal original q2 control only; uniform h is unproved",
+      "sectors": {
+        "all_Gram_frame_cap_sector_positions": 387,
+        "all_reduced_sectors_PD": true,
+        "ambient_coordinate_dimension": 26,
+        "changed_dimension": 25,
+        "complete_change_rank": 25,
+        "cross_sector_positions": 496,
+        "fixed_sector_dimension": 9,
+        "h": 3,
+        "q": "2"
+      }
+    },
+    {
+      "agent": "six-downset-1",
+      "original": {
+        "N": 70,
+        "changed_quotient_rank": 67,
+        "core_sha256": "ce57cea13aae56b1a99bd5d929d3e7090938098f690ff9cf81bc1191accfe471",
+        "delta": "40061147369338072815747917/1342498961375457498795281299",
+        "direct_original_deleted_principal_dimension": 67,
+        "direct_original_dependency_and_inverse_verified": true,
+        "direct_original_repair_Schur_verified": true,
+        "entire_Gram_frame_cap_radical_verified": true,
+        "floor": "1022009782420752916269297963/1342498961375457498795281299",
+        "h": 10,
+        "kappa": "60542245556639168691347955/160244589477352291262991668",
+        "literal_Ax_plus_Ay_zero": true,
+        "n": 2,
+        "old_quotient_rank": 3,
+        "original_positions": 4900,
+        "physical_Gram_positions": 4624,
+        "physical_frame_positions": 4624,
+        "q": 2,
+        "s": "32",
+        "seed": {
+          "N": 70,
+          "lower_rank": 68,
+          "matrix_sha256": "0e7b5707c00d3ce2abca9182da68e851443494bb544a5ca1ccffa7e694e0eec8",
+          "s": "32",
+          "upper_rank": 69
+        },
+        "sharp": {
+          "N": 70,
+          "lower_rank": 69,
+          "matrix_sha256": "26e7704847f0da1fb41ee0d09e690974fd3f30e3705b571f32e31c79b469715c",
+          "s": "32",
+          "upper_rank": 69
+        },
+        "sharp_sha256": "26e7704847f0da1fb41ee0d09e690974fd3f30e3705b571f32e31c79b469715c",
+        "untouched_old_directions": 0
+      },
+      "residual_scalars": {
+        "alphaH": "3645733668487/58331760000",
+        "alphaL": "77747516/1215245",
+        "betaH": "3710900728841/174995280000",
+        "betaL": "77708792/3645735",
+        "muL": "34880524/3645735",
+        "nu": "3310687914551/314991504000"
+      },
+      "role": "researcher",
+      "scope": "PRIVATE literal original q2 control only; uniform h is unproved",
+      "sectors": {
+        "all_Gram_frame_cap_sector_positions": 807,
+        "all_reduced_sectors_PD": true,
+        "ambient_coordinate_dimension": 68,
+        "changed_dimension": 67,
+        "complete_change_rank": 67,
+        "cross_sector_positions": 4220,
+        "fixed_sector_dimension": 9,
+        "h": 10,
+        "q": "2"
+      }
+    }
+  ],
+  "damages": [
+    {
+      "name": "wrong_original_domain",
+      "reason": "exact singular-boundary domain",
+      "rejected": true
+    },
+    {
+      "name": "wrong_fixed_quotient",
+      "reason": "exact singular-boundary domain",
+      "rejected": true
+    },
+    {
+      "name": "missing_minor",
+      "reason": "complete23 obligations in order",
+      "rejected": true
+    },
+    {
+      "name": "wrong_positive_shift_coefficient",
+      "reason": "independent complete coefficient h2 composition",
+      "rejected": true
+    },
+    {
+      "name": "wrong_original_rational_coefficient",
+      "reason": "EVERY separate original QQ[h] formula coefficient identity",
+      "rejected": true
+    },
+    {
+      "name": "wrong_positive_row_clearing",
+      "reason": "EVERY independent original row-clearing coefficient identity",
+      "rejected": true
+    },
+    {
+      "name": "wrong_removed_factor_power",
+      "reason": "EVERY independent original row-clearing coefficient identity",
+      "rejected": true
+    },
+    {
+      "name": "missing_physical_fixed_row",
+      "reason": "entire row catalogue dimensions",
+      "rejected": true
+    }
+  ]
+}

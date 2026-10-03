@@ -1,0 +1,172 @@
+{
+  "agent": "six-downset-1",
+  "role": "researcher",
+  "fresh_source_only": true,
+  "no_precomputed_table_input": true,
+  "normal_optimized_entire_final_records_equal": true,
+  "phases_per_mode": 6,
+  "complete_mathematical_bytes": 164966,
+  "whole_mathematical_stream_sha256": "604c5299e6b5473dcecfecf8e2af7a07f2a32c34e577f7d192584739bbaed4c5",
+  "entire_compact_result_sha256": "a3b3d4df45495fc1b03db048314e22f660e1d4a090996e799b86a9bfa5deae75",
+  "full_code_hashes": {
+    "bareiss.py": "352cdfa0b1ab27efaa81eaff4dd4518707d67fc41991dd06f9b4b333cdc4d168",
+    "bivariate.py": "e6a31a702eacc77b425b6b45dd6bfe23e244e6ef00693472001aa5e424553509",
+    "check_uniform.py": "20e1873b8fdf65968a34ed8121856f8daaf41ff0979e9db60b52e98b7ff20d5c",
+    "clearing.py": "452569d697f75d0966f44c4d654bbbc571629d1708127a71e2b4893bb86b8ce9",
+    "control.py": "5c36aa5f4120e0ae31f953781e7280f3e0eab24ff2ac09ffd0d6208001505a12",
+    "damages.py": "9509fe5fc868cfa66a8de2a2d14a24d33c581ce5ab814f805654bc3d58a0f9c9",
+    "exact.py": "b8f206f3939eedc38fcdd11301f8ccb19631d8ceab97a913afadd43e3df2b4ad",
+    "independent.py": "5efd131c5a77f487280a7317c5a1bc9508d3c56db7c820282d3e2c3aee4e1d26",
+    "linear.py": "6f8c3f8ecdd4e6d484eedd7dd21bcb9fafca53b2453abd823aa7fd749524920c",
+    "model.py": "26f10bb229ebdd0501d3bbd2e38597e81aed97714df96e265f6cc7b39e776574",
+    "recipe.py": "0693d4fbb3200173c627cdc4cc21769f05b971ebf40fca031799d0c3cc9f7972",
+    "sectors.py": "33a6ad84f71a5d585fde86c04a89a7ad8b302dbc4a5daeccbad9dc046f861421",
+    "uniform.py": "7c9405ea35ff2325b5342f0fa106a5c8bc491867a2bc0486d7ca4ae56f25894c",
+    "verify.py": "c7df3003b299f02112233dea69c460d6fa92265e2724117919f275f228e74da3"
+  },
+  "mode_receipts": [
+    {
+      "agent": "six-downset-1",
+      "role": "researcher",
+      "optimized": 0,
+      "complete": true,
+      "source_only": true,
+      "phases": [
+        {
+          "phase": "uniform",
+          "seconds": 1.1703956780256703,
+          "peak_KiB": 19628
+        },
+        {
+          "phase": "independent",
+          "seconds": 2.3238661909708753,
+          "peak_KiB": 22252
+        },
+        {
+          "phase": "original-h2",
+          "seconds": 0.45506882097106427,
+          "peak_KiB": 19188
+        },
+        {
+          "phase": "original-h3",
+          "seconds": 0.8568715470610186,
+          "peak_KiB": 19188
+        },
+        {
+          "phase": "original-h10",
+          "seconds": 18.48326090699993,
+          "peak_KiB": 25332
+        },
+        {
+          "phase": "damages",
+          "seconds": 2.5209858189336956,
+          "peak_KiB": 24520
+        }
+      ],
+      "seconds": 25.812673581996933,
+      "whole_mathematical_stream_sha256": "604c5299e6b5473dcecfecf8e2af7a07f2a32c34e577f7d192584739bbaed4c5",
+      "compact_result_sha256": "a3b3d4df45495fc1b03db048314e22f660e1d4a090996e799b86a9bfa5deae75"
+    },
+    {
+      "agent": "six-downset-1",
+      "role": "researcher",
+      "optimized": 1,
+      "complete": true,
+      "source_only": true,
+      "phases": [
+        {
+          "phase": "uniform",
+          "seconds": 1.9030265549663454,
+          "peak_KiB": 20768
+        },
+        {
+          "phase": "independent",
+          "seconds": 2.6700094339903444,
+          "peak_KiB": 24936
+        },
+        {
+          "phase": "original-h2",
+          "seconds": 0.6679234349867329,
+          "peak_KiB": 22340
+        },
+        {
+          "phase": "original-h3",
+          "seconds": 1.0641210700850934,
+          "peak_KiB": 22340
+        },
+        {
+          "phase": "original-h10",
+          "seconds": 16.648399672005326,
+          "peak_KiB": 27632
+        },
+        {
+          "phase": "damages",
+          "seconds": 2.791501202969812,
+          "peak_KiB": 26912
+        }
+      ],
+      "seconds": 25.747384332004003,
+      "whole_mathematical_stream_sha256": "604c5299e6b5473dcecfecf8e2af7a07f2a32c34e577f7d192584739bbaed4c5",
+      "compact_result_sha256": "a3b3d4df45495fc1b03db048314e22f660e1d4a090996e799b86a9bfa5deae75"
+    }
+  ],
+  "previous_defining_13_math_files_unchanged": true,
+  "previous_full_certificate_normal_optimized_replay_equal": true,
+  "original_baseline": {
+    "agent": "six-downset-1",
+    "role": "researcher",
+    "entire_original_published_baseline_equal": true,
+    "entire_adapted_source_baseline_equal": true,
+    "h": 3,
+    "n": 3,
+    "original_positions": 1024,
+    "fixture": {
+      "h": 3,
+      "n": 3,
+      "q": 4,
+      "N": 32,
+      "s": "13",
+      "seed": {
+        "N": 32,
+        "s": "13",
+        "lower_rank": 30,
+        "upper_rank": 31,
+        "matrix_sha256": "36124a578fd3416e5ac3df3b8d63671c3432e987f29edea752e4dfb9803d075f"
+      },
+      "sharp": {
+        "N": 32,
+        "s": "13",
+        "lower_rank": 31,
+        "upper_rank": 31,
+        "matrix_sha256": "205925c9bdda90a7f35a9737bd2ec5faacc8ab41b7edf35a50b07f0933dbff79"
+      },
+      "core_sha256": "097d5226fccd9153517cae38ca74c9d0a25a07f316d3894251385d46a50197cd",
+      "sharp_sha256": "205925c9bdda90a7f35a9737bd2ec5faacc8ab41b7edf35a50b07f0933dbff79",
+      "original_positions": 1024,
+      "physical_Gram_positions": 676,
+      "physical_frame_positions": 676,
+      "kappa": "285302941065025/294234333266336",
+      "delta": "73558583316584/2639177607195713",
+      "floor": "2050708940663041/2639177607195713"
+    },
+    "published_source_commit": "5a0b75bbb9856bd3ba829e3844b1a486c70db776",
+    "published_graph_height": 9926
+  },
+  "guard": {
+    "child_seconds": 60,
+    "polynomial_terms": 512,
+    "packing_bytes": 33554432,
+    "literal_h": 10,
+    "literal_n": 6,
+    "literal_N": 80,
+    "one_math_child": true,
+    "native_threads": 1
+  },
+  "ordinary_bridge": "Full original Gram/quotient, completeness, Schur, all-real greatest-rank and finite-product proof is ordinary unformalized mathematics in PROOF.md",
+  "independent_person_review": false,
+  "formalization": false,
+  "product_fixture_scope": "Three literal original factors only, not enumeration of large products",
+  "source_published_at_validation": false,
+  "graph_submitted_at_validation": false,
+  "python": "3.12.14"
+}

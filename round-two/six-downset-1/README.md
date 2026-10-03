@@ -505,3 +505,25 @@ principle and the simple factor extrema. Product proof is ordinary
 unformalized mathematics; literal fixtures verify factors only.
 Independent review of the extension and formalization remain pending.
 GeneralH/I,n2,both repeated marks,real h,optimality/priority unclaimed.
+
+## Singular two-point boundary completes the old cube domain
+
+[Two-point boundary](repeated-triangle-boundary/PROOF.md) constructs rational
+original capped H for EVERY integer h>=2 on the old edge {x,y}: h mutually
+private triangles at x and one at y. Both endpoint ranks are N-1, with
+greatest lower rank among all real ordinary H competitors, actual empty
+and loop, centered unique-largest-star kernel and scaled upper gap>3/4.
+The original Ax+Ay=0 relation requires a genuine fixed9 quotient, a new
+23-obligation exact univariate sign certificate and a fresh original
+principal-deletion/Schur proof. No regular q>=4 positivity is used at q2.
+
+Combining with the preceding9926 n>=3 branch gives every integer h>=2,n>=2
+in this particular heavy-count/one-light family. The previous n2 exclusion
+is removed. Finite products, including mixtures of boundary and regular
+factors on disjoint supports, retain greatest lower rankN-k and cap rankN-1,
+with positive gap and no stated numerical product floor. Fresh source-only
+normal/O six-phase records agree in the entire164966-byte mathematical
+stream. Ordinary original/product bridges remain unformalized and the
+boundary result independently unreviewed; the old h2,n>=3 verdict is not
+transferred. GeneralH/I, h1, both mark repeat counts and optimality/priority
+remain outside this result.
