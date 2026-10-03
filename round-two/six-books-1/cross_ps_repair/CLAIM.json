@@ -1,0 +1,293 @@
+{
+  "agent": "six-books-1",
+  "role": "researcher",
+  "pass": 23,
+  "problem": "R(B4,B7)",
+  "title": "Correction of10020: complete actual-color P/S bridge and credited conditional cross exclusion",
+  "kind": "erratum",
+  "status": "Exact computer-assisted correction of10020: complete T2 forcing and explicitly credited10062 conditional exclusion; ordinary/source bridges unformalized; independent review of new repair pending",
+  "quantifier": "No simple red graph on22 vertices satisfies all explicit full cross-shell hypotheses",
+  "hypotheses": {
+    "red_edge_common_red_cap": 3,
+    "blue_edge_common_blue_cap": 6,
+    "partition": {
+      "u_v_a": [
+        "u",
+        "v",
+        "a"
+      ],
+      "X": [
+        "X0",
+        "X1",
+        "X2",
+        "X3",
+        "X4",
+        "X5"
+      ],
+      "SX": [
+        "SX0",
+        "SX1"
+      ],
+      "SY": [
+        "SY0",
+        "SY1"
+      ],
+      "T": [
+        "T0",
+        "T1",
+        "T2"
+      ],
+      "Q": [
+        "A0",
+        "A1",
+        "B0",
+        "B1",
+        "C0",
+        "C1"
+      ]
+    },
+    "root_red_neighborhood": [
+      "v",
+      "a",
+      "X0",
+      "X1",
+      "X2",
+      "X3",
+      "X4",
+      "X5",
+      "SX0",
+      "SX1"
+    ],
+    "only_edges_inside_root_neighborhood": [
+      [
+        "a",
+        "v"
+      ],
+      [
+        "a",
+        "SX0"
+      ],
+      [
+        "a",
+        "SX1"
+      ],
+      [
+        "X0",
+        "X4"
+      ],
+      [
+        "X4",
+        "X3"
+      ],
+      [
+        "X3",
+        "X1"
+      ],
+      [
+        "X1",
+        "X2"
+      ],
+      [
+        "X2",
+        "X5"
+      ],
+      [
+        "X5",
+        "X0"
+      ],
+      [
+        "SX0",
+        "X3"
+      ],
+      [
+        "SX0",
+        "X5"
+      ],
+      [
+        "SX1",
+        "X2"
+      ],
+      [
+        "SX1",
+        "X4"
+      ]
+    ],
+    "degrees": {
+      "u": 10,
+      "a": 9,
+      "every_other_vertex_of_root_neighborhood": 10
+    },
+    "independent_sets": [
+      [
+        "SX0",
+        "SX1",
+        "SY0",
+        "SY1"
+      ],
+      [
+        "T0",
+        "T1",
+        "T2"
+      ]
+    ],
+    "v_outside": {
+      "red": "SY union Q",
+      "blue": "T"
+    },
+    "a_outside": {
+      "red": "SY union T",
+      "blue": "Q"
+    },
+    "SY_T_red_rows": [
+      [
+        "T1",
+        "T2"
+      ],
+      [
+        "T0",
+        "T1"
+      ]
+    ],
+    "both_actual_SX_T_choices": {
+      "r0": [
+        [
+          "T1",
+          "T2"
+        ],
+        [
+          "T0",
+          "T2"
+        ]
+      ],
+      "r1": [
+        [
+          "T0",
+          "T2"
+        ],
+        [
+          "T1",
+          "T2"
+        ]
+      ]
+    },
+    "free_pairs": [
+      "all five SY/T-to-X rows",
+      "all SX/SY/T/X-to-Q pairs",
+      "all Q-to-Q pairs"
+    ],
+    "all_other_pairs": "fixed by the above partition and root description",
+    "edge_count_bound": null,
+    "prescribed_T2_X_row": null,
+    "outside_global_degree_floor": null,
+    "host_symmetry_assumption": null
+  },
+  "conclusion": {
+    "T2_X": [
+      "X0",
+      "X1"
+    ],
+    "Ramsey_endpoint_established": false,
+    "full_cross_shell_impossible": true
+  },
+  "original_gap": {
+    "SY1_T2_color": "BLUE",
+    "unjustified_old_SY1_X0_blue": true,
+    "unjustified_old_SY1_Q_disjoint_T2_Q": true,
+    "original_full_P_completeness_bridge_not_supplied": true,
+    "independent_observation": "six-reviewer-3"
+  },
+  "repair": {
+    "complete_P_rows_and_ranks": 7500,
+    "separate_pair_survivors": 26,
+    "joint_survivors": 3,
+    "omitted_SY1_P_case_retained": true,
+    "derived_P_edges": [
+      108,
+      109
+    ],
+    "109_endpoint_Q_packets": [
+      180,
+      0,
+      60
+    ],
+    "109_raw_products": [
+      768,
+      0,
+      115200
+    ],
+    "109_rank_matching_products": [
+      48,
+      0,
+      0
+    ],
+    "whole109_known_spine_survivor_sets": [
+      [],
+      [],
+      []
+    ],
+    "all_Q_point_roles_per_core": 32,
+    "all_X_SX_point_words_per_role": 256,
+    "full_six_cycle_missing_filter_in_P_branch_used": false,
+    "Q_Q_graph_used": false
+  },
+  "theorem_dependency_108": "bafkreigqcy7lakyepkqkbkuvr7qfpjxnclluhaczi4uutmrr5z74a6tjmm",
+  "ordinary108_baseline": {
+    "bytes": 3897,
+    "sha256": "157735924b9a9f264972371dc453abdbd669db3e805e2993c446ce7da722db76"
+  },
+  "references": {
+    "problem7520": "bafkreigmrn37zu6ynrvpdutfyq5zzwkweaalj7ewuz3br3taluts633sbu",
+    "parent9631": "bafkreihteeuadbo2opeqsaoughigjert6we7gid6uklhagtetb3tnxn6ki",
+    "pair9131": "bafkreiesfsfe44lvytykz4oczwidosjpdxf4g3imjfnw7pxdllkmqsfqwu",
+    "T2_9795": "bafkreigqcy7lakyepkqkbkuvr7qfpjxnclluhaczi4uutmrr5z74a6tjmm",
+    "cross10020": "bafkreihplowndono3u5mxbcnmqx63vahcnsfuffjl2hg47zvy75s6lvbbq",
+    "conditional10062": "bafkreig62ddirathd32tkl375meqb4vi26qqfitpgob6sikafy6opazmmm"
+  },
+  "graph_relations": {
+    "about": [
+      "problem7520"
+    ],
+    "corrects": [
+      "cross10020"
+    ],
+    "supports": [
+      "cross10020"
+    ],
+    "generalizes": [
+      "T2_9795"
+    ],
+    "depends_on": [
+      "T2_9795",
+      "conditional10062"
+    ],
+    "cites": [
+      "T2_9795",
+      "cross10020",
+      "pair9131",
+      "parent9631",
+      "conditional10062"
+    ],
+    "replies_to": [
+      "conditional10062"
+    ]
+  },
+  "source_prior_commit": "061639acb07ffb71f8e35f2f05eb9372831e3155",
+  "whole_record_sha256": "8496fb0f36dc6ed009f5a1666833130ff929c4725b730021a66110dba16bc9e4",
+  "runtime_solver_float_ledger_census_review_input": false,
+  "independent_review_pending": true,
+  "unrestricted_root_classification_claimed": false,
+  "reproduce": "python3 -B reproduce.py --output work/normal --check RESULTS.json --verify-source",
+  "proof_URL": "https://raw.githubusercontent.com/helgithorskarp/math_results/main/round-two/six-books-1/cross_ps_repair/PROOF.md",
+  "conditional_theorem_dependency": {
+    "reference": "bafkreig62ddirathd32tkl375meqb4vi26qqfitpgob6sikafy6opazmmm",
+    "actual_author": "six-reviewer-3",
+    "role": "independent mathematical reviewer",
+    "used_only_after_T2_C_established": true,
+    "all_original_hypotheses_matched": true,
+    "source_commit": "0e0a4c965016605324b522c69a9caaf3ab0ee6f9",
+    "whole_baseline_bytes": 613267,
+    "whole_baseline_sha256": "f98cb4f67c3c981193edb8bf2dc2b57cb128c0d067f19e6b388f1a4a15633e0e",
+    "all72_labeled_cases_checked": true,
+    "independent_review_of_new_P_repair_claimed": false
+  }
+}
