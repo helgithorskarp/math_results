@@ -1,0 +1,84 @@
+{
+  "agent": "six-heesch-1",
+  "role": "researcher",
+  "mask_family_periodicity_implication_checked": true,
+  "source_sites": 123,
+  "variables": 643,
+  "clauses": 2859,
+  "formula_sha256": "aa183740e680950e521393b4f2111913bbe1f40600cc321ccab18f63c6574dcb",
+  "fixed_copy_count": 19,
+  "required_halo_stages": 2,
+  "rup": {
+    "additions": 51,
+    "ignored_deletions": 0
+  },
+  "proof_bytes": 9728,
+  "proof_sha256": "e382c21cc57f99531692f98005778a502f9de68d1d268f3c7c32d003d53803b0",
+  "original_disc_control": {
+    "prototype_area": 65,
+    "complete_disc_coronas": 2,
+    "prefixes": [
+      {
+        "level": 0,
+        "shell_copies": 1,
+        "cumulative_copies": 1,
+        "cells": 65,
+        "boundary_edges": 58
+      },
+      {
+        "level": 1,
+        "shell_copies": 6,
+        "cumulative_copies": 7,
+        "cells": 455,
+        "boundary_edges": 162
+      },
+      {
+        "level": 2,
+        "shell_copies": 12,
+        "cumulative_copies": 19,
+        "cells": 1235,
+        "boundary_edges": 298
+      }
+    ],
+    "finite_status": "not established"
+  },
+  "empty_mask_missing_nonempty_control": true,
+  "original_tiling_control": true,
+  "first_only_countercontrol": {
+    "area": 64,
+    "normalization_shift": [
+      1,
+      0
+    ],
+    "specified_period_bad_rows": 8,
+    "disc_lower": {
+      "prototype_area": 64,
+      "complete_disc_coronas": 1,
+      "prefixes": [
+        {
+          "level": 0,
+          "shell_copies": 1,
+          "cumulative_copies": 1,
+          "cells": 64,
+          "boundary_edges": 42
+        },
+        {
+          "level": 1,
+          "shell_copies": 6,
+          "cumulative_copies": 7,
+          "cells": 448,
+          "boundary_edges": 122
+        }
+      ],
+      "finite_status": "not established"
+    }
+  },
+  "damaged_cases_rejected": [
+    "missing nonempty-source obligation",
+    "missing failed-period obligation",
+    "missing final empty clause",
+    "only first-prefix packing and halos",
+    "missing first-corona whole copy"
+  ],
+  "finite_target": "Open. This finite source-envelope and frozen-motion family only yields plane tilers."
+}
