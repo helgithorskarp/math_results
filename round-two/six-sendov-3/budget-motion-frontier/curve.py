@@ -135,10 +135,15 @@ def build(damage=None):
         for j in range(3):term=multiply(term,columns[j][perm[j]])
         det=add(det,term)
     identity(rows,'whole rank-three constraint minor',det,scale(multiply(multiply(a,b),add(a,b)),6))
+    u=variable(6)
+    lagrange_cubic=scale(multiply(multiply(add(u,a),u),add(u,scale(b,-1))),4)
+    lagrange_hessian=derivative(lagrange_cubic,6)
     outer_sign=-1 if damage=='wrong_outer_hessian_sign' else 1
-    identity(rows,'repeated lower value Hessian direction',scale(multiply(a,add(a,b)),8),
+    identity(rows,'repeated lower value Hessian direction',
+             scale(substitute(lagrange_hessian,6,scale(a,-1)),2),
              scale(multiply(a,add(a,b)),8*outer_sign))
-    identity(rows,'repeated upper value Hessian direction',scale(multiply(b,add(a,b)),8),
+    identity(rows,'repeated upper value Hessian direction',
+             scale(substitute(lagrange_hessian,6,b),2),
              scale(multiply(b,add(a,b)),8))
     counts=[{'ordered_multiplicities':[i,j,8-i-j],'outer_repeat_excluded':i>1 or 8-i-j>1}
             for i in range(1,7) for j in range(1,8-i)]
