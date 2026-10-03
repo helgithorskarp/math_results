@@ -1,0 +1,413 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+  "fixed_child_guard_seconds": 45,
+  "serial_children": true,
+  "native_threads": 1,
+  "reports": [
+    {
+      "args": [
+        "-B",
+        "check.py"
+      ],
+      "expected_success": true,
+      "actual_returncode": 0,
+      "seconds": 3.773744,
+      "stdout": "{\"controls\": 5, \"maps\": 57, \"margins\": 110, \"phases\": 9, \"whole_sha256\": \"e6f88e24cbaabb971d99616f1ce3345305cb8352f0a976acb3ce6e48503d84a1\"}",
+      "rejection_tail": []
+    },
+    {
+      "args": [
+        "-B",
+        "check.py"
+      ],
+      "expected_success": true,
+      "actual_returncode": 0,
+      "seconds": 3.994131,
+      "stdout": "{\"controls\": 5, \"maps\": 57, \"margins\": 110, \"phases\": 9, \"whole_sha256\": \"e6f88e24cbaabb971d99616f1ce3345305cb8352f0a976acb3ce6e48503d84a1\"}",
+      "rejection_tail": []
+    },
+    {
+      "args": [
+        "-B",
+        "core.py",
+        "old_rms"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 0.051379,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: fine_preliminary_RMS"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "core.py",
+        "old_tail"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 0.057965,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: receiving_tail_radius"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "core.py",
+        "drop_d3"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 0.207589,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: all lower coefficients including d3 at phase4"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "core.py",
+        "flip_cubic"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 0.197584,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: phase4_signed_cubic"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "-c",
+        "import controls; controls.build('drop_d3')"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 0.796233,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: whole principal displacement all degrees"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "check.py",
+        "bad.json"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 3.757354,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: record keys root.core.maps"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "check.py",
+        "bad.json"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 3.776003,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: record value root.core.margins.physical_square_det"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "check.py",
+        "bad.json"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 3.775796,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: record keys root.core.all9_phase_maps.4"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "check.py",
+        "bad.json"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 5.169975,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: record type root.core.endpoint"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "check.py",
+        "bad.json"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 4.029196,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: record value root.controls.2.primitive.6.0"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "check.py",
+        "bad.json"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 3.741834,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: record length root.controls"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "check.py",
+        "bad.json"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 4.993383,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: duplicate JSON key"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "-O",
+        "check.py"
+      ],
+      "expected_success": true,
+      "actual_returncode": 0,
+      "seconds": 3.859089,
+      "stdout": "{\"controls\": 5, \"maps\": 57, \"margins\": 110, \"phases\": 9, \"whole_sha256\": \"e6f88e24cbaabb971d99616f1ce3345305cb8352f0a976acb3ce6e48503d84a1\"}",
+      "rejection_tail": []
+    },
+    {
+      "args": [
+        "-B",
+        "-O",
+        "check.py"
+      ],
+      "expected_success": true,
+      "actual_returncode": 0,
+      "seconds": 3.849622,
+      "stdout": "{\"controls\": 5, \"maps\": 57, \"margins\": 110, \"phases\": 9, \"whole_sha256\": \"e6f88e24cbaabb971d99616f1ce3345305cb8352f0a976acb3ce6e48503d84a1\"}",
+      "rejection_tail": []
+    },
+    {
+      "args": [
+        "-B",
+        "-O",
+        "core.py",
+        "old_rms"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 0.142801,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: fine_preliminary_RMS"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "-O",
+        "core.py",
+        "old_tail"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 0.143294,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: receiving_tail_radius"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "-O",
+        "core.py",
+        "drop_d3"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 0.292866,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: all lower coefficients including d3 at phase4"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "-O",
+        "core.py",
+        "flip_cubic"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 0.288106,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: phase4_signed_cubic"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "-O",
+        "-c",
+        "import controls; controls.build('drop_d3')"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 0.897708,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: whole principal displacement all degrees"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "-O",
+        "check.py",
+        "bad.json"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 4.215443,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: record keys root.core.maps"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "-O",
+        "check.py",
+        "bad.json"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 4.017752,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: record value root.core.margins.physical_square_det"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "-O",
+        "check.py",
+        "bad.json"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 3.908444,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: record keys root.core.all9_phase_maps.4"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "-O",
+        "check.py",
+        "bad.json"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 4.001801,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: record type root.core.endpoint"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "-O",
+        "check.py",
+        "bad.json"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 3.877816,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: record value root.controls.2.primitive.6.0"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "-O",
+        "check.py",
+        "bad.json"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 3.965468,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: record length root.controls"
+      ]
+    },
+    {
+      "args": [
+        "-B",
+        "-O",
+        "check.py",
+        "bad.json"
+      ],
+      "expected_success": false,
+      "actual_returncode": 1,
+      "seconds": 4.098359,
+      "stdout": "",
+      "rejection_tail": [
+        "ValueError: duplicate JSON key"
+      ]
+    }
+  ],
+  "sealed_candidate_hashes": {
+    "core.py": "8c7d5523c20c25c387708fdd038e4e60f88b7fdf0687245316c1979b39f40026",
+    "controls.py": "7d58dd72d677ce4463602c4509090ea04111cf793acfc8d22af48e8fcc4fd474",
+    "check.py": "12454d214b5d9c4f34512ee4a15ae6e54ded9c6c4b2ec156695a878b98e84e03",
+    "EXPECTED.json": "bf6edca55988f0c5d18276b5a2607ea3e23b3b4e60c146e190e2cdda4e1e048d",
+    "PROOF.md": "75c5571f089a221ae8c4ea537430c380a1b03bf922433e3efa03048fc0e82346",
+    "validate.py": "a9d78f2ba9845faa888d8de611a0cd8eaa8c0ef98cb2630ffb37d229ee8295d1"
+  },
+  "peak_child_rss_kib": 22440
+}
