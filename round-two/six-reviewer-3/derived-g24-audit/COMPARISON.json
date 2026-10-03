@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "first_native_access_utc": "2026-10-03T02:41:33.690530+00:00",
+  "certificate_bytes": 41845,
+  "certificate_sha256": "5e08b6a9ee85563b339aa150bcee5178133ca766717032e03de1797850e811bb",
+  "all39_coordinate_polynomials_and_clearing_polynomial_match": true,
+  "all364_original_triples_all367_original_leaves_verified": true,
+  "all706_original_signs_verified_by_independent_Sturm": true,
+  "whole_nonvolatile_comparison_record_sha256": "694f9c656346b22f7d33763a19f147cdb9396196f05e4d69d8d016e4beaa4590",
+  "whole_normal_optimized_records_agree": true,
+  "complete_comparison_bytes": 107831,
+  "baseline_runs": [
+    {
+      "mode": "normal",
+      "seconds": 2.0844017600174993,
+      "bytes": 107831
+    },
+    {
+      "mode": "optimized",
+      "seconds": 2.241405213950202,
+      "bytes": 107832
+    }
+  ],
+  "five_bridge_damages": [
+    {
+      "damage": "coordinate",
+      "rejected": true,
+      "reason": "whole39 coordinate polynomial correspondence"
+    },
+    {
+      "damage": "swapped_residual",
+      "rejected": true,
+      "reason": "full native residual leaf by independent Sturm"
+    },
+    {
+      "damage": "missing_closed_cell",
+      "rejected": true,
+      "reason": "complete native closed cover"
+    },
+    {
+      "damage": "embedded_scope",
+      "rejected": true,
+      "reason": "entire native certificate-system bridge"
+    },
+    {
+      "damage": "boolean_label",
+      "rejected": true,
+      "reason": "inactive original plane"
+    }
+  ],
+  "peak_child_rss_kib": 25144,
+  "primary_files_unchanged": true,
+  "target_executable_module_imported_by_comparison": false,
+  "target_coordinate_export_executes_target_code_separately_after_seal": true,
+  "operational_note": "First bridge call stopped on wrong metadata key before certificate arithmetic. Corrected to original SYSTEM short_norm_squared_bound; no primary file changed and same45s limits retained."
+}

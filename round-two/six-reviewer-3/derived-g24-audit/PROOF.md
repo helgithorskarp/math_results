@@ -1,0 +1,265 @@
+# Independent derived-G24 capacity and exact feasibility classification
+
+Actual author: **six-reviewer-3**, **independent mathematical reviewer**, 2026-10-03.
+The written mathematical formulas of six-tammes-2 were exposed. This is an
+independent derivation and implementation, not a blind review. Before any access
+to target executable source or its certificate, this proof, the reflection-based
+integer/Fraction implementation, the entire expected record and validation were
+sealed. Shared signing identity does not imply distinct authorship.
+
+## Statement and literal quantifiers
+
+Put \(I=[14/25,593/1000]\). The thirteen labels are
+\(0,1,2,4,5,6,7,8,9,10,11,12,x\); the source uses 13 for the fresh label \(x\).
+The literal twenty-four contacts are
+
+```
+0-5 0-6 0-7 0-11 1-2 1-4 1-10 1-12 2-4 2-8 2-10 4-8
+5-7 5-9 5-11 6-11 7-12 9-10 9-11 10-12 5-12 2-x 9-x 10-x
+```
+
+For each \(t\in I\), a finite set of distinct unit vectors is a \(t\)-code if
+all different pairs have inner product at most \(t\). A prescribed contact has
+inner product exactly \(t\). Added points are arbitrary and extra contacts are
+allowed. There is no face, degree, optimizer, proximity, irreducibility, contact
+cohort or preselected-coordinate assumption.
+
+The capacity conclusion of LEMMA9966 is **confirmed**: every such code containing
+this mask has at most fourteen points, on the entire original closed interval.
+
+This independent review further **proves**:
+
+1. The literal thirteen-point motif exists if and only if
+   \(t\ge 1/\sqrt3\), within \(I\).
+2. For every \(t\in[1/\sqrt3,593/1000]\), the maximum cardinality of a
+   \(t\)-code containing that motif is **exactly fourteen**. A uniform construction
+   of a fourteenth point is given below.
+3. For \(t>1/\sqrt3\), that constructed point has strict inequality against all
+   thirteen core points. At \(t=1/\sqrt3\), it contacts exactly labels 0,4,6;
+   the core has its twenty-four prescribed contacts plus the sole extra 6-8.
+
+The degree corollary imports only the independently verified implication of
+LEMMA9922: in a fifteen-point \(t\)-code on \(I\) with the original G20 mask and
+5-12, degree10 belongs to \(\{4,5\}\), and degree5 forces a fresh \(x\) with
+2-x,9-x,10-x. Consequently that complete degree is exactly four. No 9813
+physical-cohort hypothesis is used. Other G20 branches and global N15 optimality
+are not resolved. The wider interval of REVIEW9950 is not transferred to this
+capacity certificate.
+
+## Exhaustive ordinary normalization
+
+The actual ordered basis \((p_1,p_2,p_4)\) has Gram matrix
+\(H=(1-t)I_3+t\mathbf1\mathbf1^T\), with eigenvalues \(1-t,1-t,1+2t>0\).
+It is a basis of physical three-space; matching its Gram matrix removes only an
+orthogonal isometry, including reflections. We use coefficient vectors and
+\(\langle u,v\rangle_H=(1-t)u\cdot v+t(\sum u_i)(\sum v_i)\).
+
+Let \(r=2t/(1+t)\). For unit vectors \(u,v\) with \(u\cdot v=t\), their two
+unit common neighbors with both products \(t\) are interchanged by
+\(q\mapsto r(u+v)-q\). To see completeness, their projection to the span is
+\(t(u+v)/(1+t)\); the orthogonal complement is one-dimensional and the unit
+condition gives precisely its two opposite components. Its squared projection
+norm \(2t^2/(1+t)\) is strictly below one. Specifying two different labels
+therefore chooses the opposite component; there is no omitted chirality branch.
+
+Start with basis coefficients \(p_1=e_1,p_2=e_2,p_4=e_3\). Reflect in order
+
+\[
+ p_8=r(p_2+p_4)-p_1,\quad p_{10}=r(p_1+p_2)-p_4,
+ \quad p_{12}=r(p_1+p_{10})-p_2,
+\]
+\[
+ p_x=r(p_2+p_{10})-p_1,\qquad p_9=r(p_{10}+p_x)-p_2.
+\]
+
+With \(d=\langle p_9,p_{12}\rangle_H\), the two distinct common neighbors
+\(p_5,p_{10}\) of \(p_9,p_{12}\) give
+
+\[
+ p_5=\frac{2t}{1+d}(p_9+p_{12})-p_{10}.
+\]
+
+Those endpoints cannot be antipodal because both have positive product \(t\)
+with \(p_{10}\). They cannot coincide in an actual distinct-label code. The same
+projection/reflection calculation therefore applies, with its nonzero
+orthogonal component guaranteed by the two distinct common neighbors.
+
+In the A-side chain,
+\(p_0=r(p_5+p_7)-p_{12}\),
+\(p_{11}=r(p_0+p_5)-p_7\), and
+\(p_9=r(p_5+p_{11})-p_0\). Substitution gives
+
+\[
+ p_7=\frac{p_9-r^2(r+1)p_5-(1-r^2)p_{12}}{r(r^2-2)},
+ \qquad p_6=r(p_0+p_{11})-p_5.
+\]
+
+Here \(0<r<1\), so the denominator is strictly negative. Thus every realization
+has exactly these rational coefficient vectors. This argument needs no claim
+that every parameter already gives a packing.
+
+Our fresh rational-function implementation constructs these vectors directly
+from reflections; it does not transcribe the target's expanded integral
+coordinate table. Exact polynomial gcds reduce the expressions. With
+
+\[
+ a=1+t,\quad Q=(1-t^2)(1+3t)+8t^4,\quad L=1+2t-t^2,
+ \quad \Omega=a^5QL>0,
+\]
+
+all thirteen vectors are \(Y_i/\Omega\) with integral polynomial coordinates.
+The complete coordinates are in EXPECTED.json and are regenerated by audit.py.
+Coefficient-wise identities check all thirteen norms, all twenty-four original
+contacts, and \(1+d=2Q/a^3\). They are identities in \(\mathbb Q(t)\), not
+samples or a quotient at a chosen root. Divisions, normalization and every
+exceptional factor used here are nonzero on \(I\).
+
+## Independent dual-coordinate capacity proof
+
+Set \(n=(-5,-14,20)\), whose squared physical norm is \(621-620t\).
+Define \(K=\{y:\langle y,p_i\rangle_H\le t\ \forall i\}\) and
+\(C=K\cap\{y:\langle y,n\rangle_H\le15\}\).
+The origin is strictly feasible. Our exact four determinant signs establish
+that \(p_0,p_4,p_9\) span and
+\(\lambda_0p_0+\lambda_4p_4+\lambda_9p_9+p_{11}=0\), with all three
+multipliers strictly positive, throughout closed \(I\). For any recession
+vector all four projections are nonpositive; their positive dependence forces
+all to zero and their span forces the vector to zero. Both polytopes are
+bounded and full-dimensional.
+
+For an independent representation put \(z=Hy\). The thirteen inequalities
+become \(Y_i\cdot z\le t\Omega\), and the cut is \(n\cdot z\le15\).
+The squared physical norm is
+
+\[
+ q(z)=\frac{(1+2t)\sum z_i^2-t(\sum z_i)^2}{(1-t)(1+2t)}.
+\]
+
+All vertices have three independent active planes. We exhaust the
+\(\binom{14}3=364\) original plane triples, including cut label99. For a triple,
+Cramer's rule gives \(z=W/D\). The four identically singular triples are
+(0,2,5), (0,2,10), (0,5,10), (2,5,10). Every other triple is covered throughout
+closed \(I\) by a complete binary tree. Common polynomial factors may be
+cancelled from all four Cramer components: the original intersection is
+unchanged wherever the original determinant is nonzero. At any original
+singular parameter that triple cannot represent three independent active
+planes. Removable cancellation may over-cover extra intersections but does not
+lose an actual vertex. Every entire Cramer row identity is checked after
+cancellation.
+
+Each leaf certifies either
+
+\[
+ 49(1-t)(1+2t)D^2
+ -50\big((1+2t)\sum W_i^2-t(\sum W_i)^2\big)>0,
+\]
+
+or two opposite inactive residual signs
+\(Y_j\cdot W-b_jD>0\), \(Y_k\cdot W-b_kD<0\), where the row right-hand side
+\(b_i=t\Omega\), or 15 for the cut. The first gives squared norm below49/50
+when \(D\ne0\). In the second case, division by positive \(D\) violates rowj;
+division by negative \(D\) violates rowk. No determinant sign, isolated zero,
+zero-containing denominator or endpoint is discarded.
+
+Only positive integer content and powers of the explicit positive factors
+\(t,1+t,1-t,1+2t,3t-1,3t+1,Q,L\) are stripped from sign polynomials.
+Their positive signs on \(I\) follow directly from \(0<t<1\), \(t>1/3\), and
+the displayed forms of Q and L. Exact division is checked.
+
+**Our positivity method is Sturm root counting.** A sign polynomial has positive
+values at both closed endpoints and has zero distinct real roots between them,
+as certified by equal Sturm variations. This also rejects internal repeated
+roots and endpoint zeros. The integer primitive pseudo-remainder at every step
+is a positive multiple of the ordinary rational Euclidean remainder; dividing
+only by positive content preserves every sign. The next Sturm term is its
+negative. An independent Fraction long-division control checks that bridge for
+both signs of divisor leading coefficients. This method uses neither target
+Bernstein coefficients nor target Taylor bounds.
+
+The fresh full record has 360 nonsingular covers, 367 leaves (32 norm bounds and
+335 pairs of opposite violations), maximum depth4. The three split covers are
+(0,4,6), (0,4,7), (0,4,99). Each cover's paths are prefix-free and have total
+binary measure1, so cover the entire closed interval, including every dyadic
+boundary. All labels, paths, witnesses and polynomial fingerprints are retained;
+a matching aggregate count is not our criterion.
+
+Every feasible vertex has squared norm below49/50. A bounded polytope is the
+convex hull of its vertices, and squared positive-definite norm is convex, so
+this holds throughout C. An arbitrary avoiding unit vector therefore lies in
+the open cap \(\langle n,y\rangle_H>15\), not inside C.
+
+For two such unit vectors, decompose along the cap axis and apply
+Cauchy--Schwarz to the transverse components, or bound the sum of their angular
+distances to that axis. Since \(0<15<\|n\|_H\), their inner product is strictly
+larger than \(450/\|n\|_H^2-1\). On \(I\),
+\(\|n\|_H^2\le1369/5\), so that product is
+\(>881/1369>593/1000\ge t\). Thus at most one added unit point can belong to a
+code. Arbitrary added points were never assumed to be polytope vertices or to
+carry any contacts. This proves the full capacity assertion.
+
+## New exact feasible interval and uniform attainment
+
+Independently form **all78** core packing gaps
+\(t\Omega^2-\langle Y_i,Y_j\rangle_H\). Twenty-four vanish for the original
+contacts. Among the remaining54, fifty-three reduce to polynomials strictly
+positive throughout closed I, certified separately by Sturm counts. The sole
+exception is 6-8, whose sign polynomial factors exactly as
+
+\[
+ 69t^5+51t^4-20t^3-20t^2-t+1
+ =(3t^2-1)(23t^3+17t^2+t-1).
+\]
+
+The cubic is strictly positive on I. Therefore the core packing condition is
+exactly \(t\ge1/\sqrt3\). Since \(H\) is positive definite, the explicitly
+constructed coefficient vectors realize actual vectors in Euclidean
+three-space. All norms and contacts hold identically. The packing gaps and
+\(t<1\) prove distinctness. Both directions of the realizability statement
+follow; \(3(14/25)^2<1<3(593/1000)^2\) places the threshold inside I.
+
+For a uniform fourteenth point, take the uncut intersection of planes 0,4,6 in
+the dual coordinates above: \(z=W/D\), \(y=H^{-1}z\). Its determinant is
+strictly negative on I. All ten inactive residuals
+\(Y_i\cdot W-t\Omega D\) are strictly positive on I; hence y strictly satisfies
+all inactive inequalities, and the three active ones are equalities.
+The reduced sign polynomial of \(q(y)-1\) factors as
+
+\[
+ (3t^2-1)(23t^3+17t^2+t-1)(77t^5+79t^4+16t^3+3t+1).
+\]
+
+The omitted factors and denominator are strictly positive on I; both displayed
+factors after \(3t^2-1\) are positive. Entire Cramer coordinates and all
+inactive sign polynomials are independently regenerated and retained in the
+sharpness section of EXPECTED.json. Thus \(q(y)\ge1\) exactly on the feasible
+core interval. Set \(u=y/\sqrt{q(y)}\). It is an actual unit vector and
+\(\langle u,p_i\rangle\le t/\sqrt{q(y)}\le t\), since \(t>0\).
+At the threshold q=1 gives exactly the three active contacts; above it q>1
+makes all thirteen inequalities strict. The avoiding inequalities with \(t<1\)
+ensure u is different from every core point. This constructs fourteen points
+at every feasible parameter, including the algebraic lower endpoint.
+
+At t=29/50 the complete rational control has q>1 and all thirteen avoidance
+inequalities. This is an additional concrete, nonvacuous control, rather than
+the only existence claim. At the lower algebraic endpoint the 14-point graph
+has exactly28 contacts; above it our construction has the24 core contacts and
+an isolated fourteenth vertex. No packing record or global optimality follows.
+
+## Scope and trust boundary
+
+This is an ordinary geometric/algebraic proof with an exhaustive exact
+computer-assisted sign step, unformalized. Its foundations are common-neighbor
+reflection, positive-definite Gram coordinates, elementary polytope convexity,
+Cramer's rule, Sturm's theorem and the cap inequality. Exact arithmetic,
+polynomial division, complete case covers and the data bridge are implemented
+in compact standard-library Python. There is no solver, floating-point proof
+input, external dataset or target-code import in primary evidence. Normal and
+optimized modes must agree on the entire typed record; assertion stripping
+cannot disable our explicit checks. An incomplete run or timed-out guard is
+failure, not mathematical exclusion.
+
+Later native-data comparison and author-code replay are reported separately;
+they cannot retroactively supply an independent primary proof. Classical
+methods and the author's literal-mask capacity result are credited. The exact
+feasible interval and uniform14 attainment are a further scoped refinement;
+no exhaustive historical-priority claim is made.

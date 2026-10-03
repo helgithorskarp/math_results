@@ -1,0 +1,88 @@
+{
+  "actual_agent": "six-reviewer-3",
+  "role": "independent reviewer; postseal native replay only",
+  "target_source": "e2c6ed08c89a22fcdc153bfdb005186efba5e512",
+  "all8_full_native_outputs_match_original_bytes": true,
+  "runs": [
+    {
+      "program": "generate",
+      "mode": "normal",
+      "whole_original_bytes_match": true,
+      "bytes": 41845,
+      "sha256": "5e08b6a9ee85563b339aa150bcee5178133ca766717032e03de1797850e811bb",
+      "seconds": 5.683810525108129,
+      "exit_code": 0
+    },
+    {
+      "program": "check",
+      "mode": "normal",
+      "whole_original_bytes_match": true,
+      "bytes": 4243,
+      "sha256": "3d68c1d7cab7a35af5b50f95ee9fd2c26610b097c8569a62c267cc8bfdb2b6fd",
+      "seconds": 2.861871581990272,
+      "exit_code": 0
+    },
+    {
+      "program": "audit",
+      "mode": "normal",
+      "whole_original_bytes_match": true,
+      "bytes": 4242,
+      "sha256": "eb97b18560f8f1b3f93baae4d6527cdcd5a11f5760be743abf3d37c1862465fb",
+      "seconds": 2.8799720880342647,
+      "exit_code": 0
+    },
+    {
+      "program": "controls",
+      "mode": "normal",
+      "whole_original_bytes_match": true,
+      "bytes": 1017,
+      "sha256": "79efac046f2b9b404a501ed9ddfe310c9f92f196c776b89a6020bd6d842147ca",
+      "seconds": 0.22218184894882143,
+      "exit_code": 0
+    },
+    {
+      "program": "generate",
+      "mode": "optimized",
+      "whole_original_bytes_match": true,
+      "bytes": 41845,
+      "sha256": "5e08b6a9ee85563b339aa150bcee5178133ca766717032e03de1797850e811bb",
+      "seconds": 5.8653940570075065,
+      "exit_code": 0
+    },
+    {
+      "program": "check",
+      "mode": "optimized",
+      "whole_original_bytes_match": true,
+      "bytes": 4243,
+      "sha256": "3d68c1d7cab7a35af5b50f95ee9fd2c26610b097c8569a62c267cc8bfdb2b6fd",
+      "seconds": 3.1036887749796733,
+      "exit_code": 0
+    },
+    {
+      "program": "audit",
+      "mode": "optimized",
+      "whole_original_bytes_match": true,
+      "bytes": 4242,
+      "sha256": "eb97b18560f8f1b3f93baae4d6527cdcd5a11f5760be743abf3d37c1862465fb",
+      "seconds": 3.0632599350064993,
+      "exit_code": 0
+    },
+    {
+      "program": "controls",
+      "mode": "optimized",
+      "whole_original_bytes_match": true,
+      "bytes": 1017,
+      "sha256": "79efac046f2b9b404a501ed9ddfe310c9f92f196c776b89a6020bd6d842147ca",
+      "seconds": 0.39318899996578693,
+      "exit_code": 0
+    }
+  ],
+  "peak_child_rss_kib": 21464,
+  "maximum_child_seconds": 5.8653940570075065,
+  "outer_guard_seconds": 45,
+  "target_internal_guard_seconds": 50,
+  "all_native_threads": 1,
+  "serial": true,
+  "new_independence_from_native_replay": false,
+  "completed_utc": "2026-10-03T02:45:33.198912+00:00"
+}

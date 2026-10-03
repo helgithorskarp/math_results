@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "signed_remainder_controls": 24,
+  "sturm_controls": 10,
+  "children": [
+    {
+      "name": "whole_baseline",
+      "mode": "normal",
+      "rejected": false,
+      "seconds": 8.00315771100577,
+      "exit_code": 0,
+      "terminal": "{\"status\": \"PASS\", \"range\": [0, 364], \"triples\": 364, \"record_sha256\": \"dd84878fde0da6ef631b63e4c1930809a19b054d1c267c43d690d15c0a4cdaff\", \"seconds\": 7.9322050110204145, \"sturm_polynomials\": 193}"
+    },
+    {
+      "name": "whole_baseline",
+      "mode": "optimized",
+      "rejected": false,
+      "seconds": 8.071092699072324,
+      "exit_code": 0,
+      "terminal": "{\"status\": \"PASS\", \"range\": [0, 364], \"triples\": 364, \"record_sha256\": \"dd84878fde0da6ef631b63e4c1930809a19b054d1c267c43d690d15c0a4cdaff\", \"seconds\": 7.829176216037013, \"sturm_polynomials\": 193}"
+    },
+    {
+      "name": "wrong_reflection",
+      "mode": "normal",
+      "rejected": true,
+      "seconds": 0.1079754630336538,
+      "exit_code": 1,
+      "terminal": "ValueError: unit identity"
+    },
+    {
+      "name": "wrong_reflection",
+      "mode": "optimized",
+      "rejected": true,
+      "seconds": 0.27188911207485944,
+      "exit_code": 1,
+      "terminal": "ValueError: unit identity"
+    },
+    {
+      "name": "wrong_fresh_label",
+      "mode": "normal",
+      "rejected": true,
+      "seconds": 0.0870259280782193,
+      "exit_code": 1,
+      "terminal": "ValueError: unit identity"
+    },
+    {
+      "name": "wrong_fresh_label",
+      "mode": "optimized",
+      "rejected": true,
+      "seconds": 0.26338565698824823,
+      "exit_code": 1,
+      "terminal": "ValueError: unit identity"
+    },
+    {
+      "name": "wrong_metric",
+      "mode": "normal",
+      "rejected": true,
+      "seconds": 0.11510907404590398,
+      "exit_code": 1,
+      "terminal": "ValueError: unit identity"
+    },
+    {
+      "name": "wrong_metric",
+      "mode": "optimized",
+      "rejected": true,
+      "seconds": 0.2832916909828782,
+      "exit_code": 1,
+      "terminal": "ValueError: unit identity"
+    },
+    {
+      "name": "wrong_threshold_factor",
+      "mode": "normal",
+      "rejected": true,
+      "seconds": 0.3657699469476938,
+      "exit_code": 1,
+      "terminal": "ValueError: 6-8 exact threshold factor"
+    },
+    {
+      "name": "wrong_threshold_factor",
+      "mode": "optimized",
+      "rejected": true,
+      "seconds": 0.5518228650325909,
+      "exit_code": 1,
+      "terminal": "ValueError: 6-8 exact threshold factor"
+    },
+    {
+      "name": "missing_active_triple",
+      "mode": "normal",
+      "rejected": true,
+      "seconds": 8.498937333934009,
+      "exit_code": 1,
+      "terminal": "ValueError: whole typed expected record mismatch"
+    },
+    {
+      "name": "clipped_upper_endpoint",
+      "mode": "normal",
+      "rejected": true,
+      "seconds": 7.9654419219587,
+      "exit_code": 1,
+      "terminal": "ValueError: whole typed expected record mismatch"
+    },
+    {
+      "name": "wrong_sign_polynomial",
+      "mode": "normal",
+      "rejected": true,
+      "seconds": 7.771029880968854,
+      "exit_code": 1,
+      "terminal": "ValueError: whole typed expected record mismatch"
+    }
+  ],
+  "maximum_child_seconds": 8.498937333934009,
+  "peak_child_rss_kib": 27012,
+  "serial": true,
+  "per_child_guard_seconds": 45,
+  "native_threads": 1
+}
