@@ -1,0 +1,329 @@
+{
+  "actual_agent": "six-tammes-2",
+  "role": "researcher",
+  "validated_utc": "2026-10-03T14:45:50.931540+00:00",
+  "Python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "only_standard_library": true,
+  "serial_math_children": true,
+  "native_thread_settings": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1"
+  },
+  "unchanged_scope": "1CPU/2GiB",
+  "inner_alarm_seconds": {
+    "check.py": 20,
+    "audit.py": 20,
+    "controls.py": 20
+  },
+  "parent_subprocess_guard_seconds": 25,
+  "all_twelve_native_runs_complete": true,
+  "all_three_entire_live_cold_normal_O_outputs_equal": true,
+  "all_entire_native_recreated_expected_objects_compared": true,
+  "cold_directory_initially_absent_created_empty": true,
+  "cold_mathematical_source_only_files": {
+    "AUDIT.json": {
+      "bytes": 7718,
+      "sha256": "8751e2147acab8204b0d1eda849ded564e0101d5b8f4dac0a988adbf0ed26321"
+    },
+    "CERTIFICATE.json": {
+      "bytes": 2957,
+      "sha256": "d6b817283502cc87a92d96d615d5644e064a30b498f3a036cd37d7ad508c961c"
+    },
+    "CONTROLS.json": {
+      "bytes": 4293,
+      "sha256": "377ca8f856e81e217fa4317666a275a5c96c4bbca91e6e048d933eb1691edea0"
+    },
+    "FACTORS.json": {
+      "bytes": 37842,
+      "sha256": "d0cbeddfc62e052235e662c69b8a01eec2fe8fc7ee595eb870f14d965492c64c"
+    },
+    "PARENT_SYSTEM.json": {
+      "bytes": 3823,
+      "sha256": "de2b78260162b7b0a4482ba61ddc532c23783ed1e81f9b2e067c3c50badde1de"
+    },
+    "SYSTEM.json": {
+      "bytes": 13359,
+      "sha256": "6d77c47826430a674c3920f94f568876a8c68c7461ee1a31faac0987c479207b"
+    },
+    "audit.py": {
+      "bytes": 7939,
+      "sha256": "53e9f221c73c009cda5f727fcea115887e008c028a714e1dfeceb44e7ed1bc8a"
+    },
+    "check.py": {
+      "bytes": 3145,
+      "sha256": "915d947c83e2a83f92e8a3fa9c0b6a57a02b9b49a4422feb01755cbf95b4afd8"
+    },
+    "controls.py": {
+      "bytes": 7034,
+      "sha256": "b57e73841ebfe4794ed51dd03ea25334bbddb94f70abcf156e03e67ff5dcf582"
+    },
+    "digit.py": {
+      "bytes": 4659,
+      "sha256": "92d236855528b0e1f5ead7448abcfbff6a6a2ea133cdab11ae9053d61c13f9e0"
+    },
+    "exact.py": {
+      "bytes": 4248,
+      "sha256": "6fed263b66af9c93435c9bd68f6fc6252844ccc2004290675bb8814dbd9a335a"
+    },
+    "frame.py": {
+      "bytes": 3553,
+      "sha256": "66bfea6b1131719ac9f32e0fbc724a2e0266be083bf23418541a5ca34347762e"
+    },
+    "polynomials.py": {
+      "bytes": 2558,
+      "sha256": "92c25587115816b4ab068c3ce3c39e01388722621388a54e9c241f5c28435166"
+    },
+    "scope.py": {
+      "bytes": 4957,
+      "sha256": "391bf5c5642a3619569a6103d740f41ccf7e79ce46407959dcae4c116bbb392d"
+    }
+  },
+  "cold_has_no_earlier_source_or_network_runtime_input": true,
+  "runs": [
+    {
+      "location": "live",
+      "entrypoint": "check.py",
+      "optimized": false,
+      "actual_command": [
+        "/usr/bin/python3",
+        "-B",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.5072163430741057,
+      "whole_stdout_bytes": 243,
+      "whole_stdout_sha256": "6f35eea49b1257b274fb2eed27181bc929a6838f1057e6214b86454c8888333a",
+      "entire_expected_artifact": "CERTIFICATE.json",
+      "entire_artifact_bytes": 2957,
+      "entire_artifact_sha256": "d6b817283502cc87a92d96d615d5644e064a30b498f3a036cd37d7ad508c961c",
+      "native_entire_expected_object_compared": true,
+      "cumulative_max_child_RSS_kib": 18564
+    },
+    {
+      "location": "live",
+      "entrypoint": "audit.py",
+      "optimized": false,
+      "actual_command": [
+        "/usr/bin/python3",
+        "-B",
+        "audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2913905209861696,
+      "whole_stdout_bytes": 271,
+      "whole_stdout_sha256": "95009f26123d1f36a04eaaaf0ffa528f21d7c70afbba377b4081d5de87f218df",
+      "entire_expected_artifact": "AUDIT.json",
+      "entire_artifact_bytes": 7718,
+      "entire_artifact_sha256": "8751e2147acab8204b0d1eda849ded564e0101d5b8f4dac0a988adbf0ed26321",
+      "native_entire_expected_object_compared": true,
+      "cumulative_max_child_RSS_kib": 20580
+    },
+    {
+      "location": "live",
+      "entrypoint": "controls.py",
+      "optimized": false,
+      "actual_command": [
+        "/usr/bin/python3",
+        "-B",
+        "controls.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.7629879149608314,
+      "whole_stdout_bytes": 263,
+      "whole_stdout_sha256": "067eb912eece80573da58a2f4137e9c7f711ad78f560309dc3763fdb1c61a76e",
+      "entire_expected_artifact": "CONTROLS.json",
+      "entire_artifact_bytes": 4293,
+      "entire_artifact_sha256": "377ca8f856e81e217fa4317666a275a5c96c4bbca91e6e048d933eb1691edea0",
+      "native_entire_expected_object_compared": true,
+      "cumulative_max_child_RSS_kib": 21264
+    },
+    {
+      "location": "live",
+      "entrypoint": "check.py",
+      "optimized": true,
+      "actual_command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.6642786009470001,
+      "whole_stdout_bytes": 243,
+      "whole_stdout_sha256": "6f35eea49b1257b274fb2eed27181bc929a6838f1057e6214b86454c8888333a",
+      "entire_expected_artifact": "CERTIFICATE.json",
+      "entire_artifact_bytes": 2957,
+      "entire_artifact_sha256": "d6b817283502cc87a92d96d615d5644e064a30b498f3a036cd37d7ad508c961c",
+      "native_entire_expected_object_compared": true,
+      "cumulative_max_child_RSS_kib": 21468
+    },
+    {
+      "location": "live",
+      "entrypoint": "audit.py",
+      "optimized": true,
+      "actual_command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.4421180379576981,
+      "whole_stdout_bytes": 271,
+      "whole_stdout_sha256": "95009f26123d1f36a04eaaaf0ffa528f21d7c70afbba377b4081d5de87f218df",
+      "entire_expected_artifact": "AUDIT.json",
+      "entire_artifact_bytes": 7718,
+      "entire_artifact_sha256": "8751e2147acab8204b0d1eda849ded564e0101d5b8f4dac0a988adbf0ed26321",
+      "native_entire_expected_object_compared": true,
+      "cumulative_max_child_RSS_kib": 22032
+    },
+    {
+      "location": "live",
+      "entrypoint": "controls.py",
+      "optimized": true,
+      "actual_command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "controls.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.8824284620350227,
+      "whole_stdout_bytes": 263,
+      "whole_stdout_sha256": "067eb912eece80573da58a2f4137e9c7f711ad78f560309dc3763fdb1c61a76e",
+      "entire_expected_artifact": "CONTROLS.json",
+      "entire_artifact_bytes": 4293,
+      "entire_artifact_sha256": "377ca8f856e81e217fa4317666a275a5c96c4bbca91e6e048d933eb1691edea0",
+      "native_entire_expected_object_compared": true,
+      "cumulative_max_child_RSS_kib": 22604
+    },
+    {
+      "location": "initially_empty_source_only_copy",
+      "entrypoint": "check.py",
+      "optimized": false,
+      "actual_command": [
+        "/usr/bin/python3",
+        "-B",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.5098431559745222,
+      "whole_stdout_bytes": 243,
+      "whole_stdout_sha256": "6f35eea49b1257b274fb2eed27181bc929a6838f1057e6214b86454c8888333a",
+      "entire_expected_artifact": "CERTIFICATE.json",
+      "entire_artifact_bytes": 2957,
+      "entire_artifact_sha256": "d6b817283502cc87a92d96d615d5644e064a30b498f3a036cd37d7ad508c961c",
+      "native_entire_expected_object_compared": true,
+      "cumulative_max_child_RSS_kib": 22604
+    },
+    {
+      "location": "initially_empty_source_only_copy",
+      "entrypoint": "audit.py",
+      "optimized": false,
+      "actual_command": [
+        "/usr/bin/python3",
+        "-B",
+        "audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2885526670143008,
+      "whole_stdout_bytes": 271,
+      "whole_stdout_sha256": "95009f26123d1f36a04eaaaf0ffa528f21d7c70afbba377b4081d5de87f218df",
+      "entire_expected_artifact": "AUDIT.json",
+      "entire_artifact_bytes": 7718,
+      "entire_artifact_sha256": "8751e2147acab8204b0d1eda849ded564e0101d5b8f4dac0a988adbf0ed26321",
+      "native_entire_expected_object_compared": true,
+      "cumulative_max_child_RSS_kib": 22604
+    },
+    {
+      "location": "initially_empty_source_only_copy",
+      "entrypoint": "controls.py",
+      "optimized": false,
+      "actual_command": [
+        "/usr/bin/python3",
+        "-B",
+        "controls.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.7285622860072181,
+      "whole_stdout_bytes": 263,
+      "whole_stdout_sha256": "067eb912eece80573da58a2f4137e9c7f711ad78f560309dc3763fdb1c61a76e",
+      "entire_expected_artifact": "CONTROLS.json",
+      "entire_artifact_bytes": 4293,
+      "entire_artifact_sha256": "377ca8f856e81e217fa4317666a275a5c96c4bbca91e6e048d933eb1691edea0",
+      "native_entire_expected_object_compared": true,
+      "cumulative_max_child_RSS_kib": 22604
+    },
+    {
+      "location": "initially_empty_source_only_copy",
+      "entrypoint": "check.py",
+      "optimized": true,
+      "actual_command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.6624635439366102,
+      "whole_stdout_bytes": 243,
+      "whole_stdout_sha256": "6f35eea49b1257b274fb2eed27181bc929a6838f1057e6214b86454c8888333a",
+      "entire_expected_artifact": "CERTIFICATE.json",
+      "entire_artifact_bytes": 2957,
+      "entire_artifact_sha256": "d6b817283502cc87a92d96d615d5644e064a30b498f3a036cd37d7ad508c961c",
+      "native_entire_expected_object_compared": true,
+      "cumulative_max_child_RSS_kib": 22604
+    },
+    {
+      "location": "initially_empty_source_only_copy",
+      "entrypoint": "audit.py",
+      "optimized": true,
+      "actual_command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.42394921195227653,
+      "whole_stdout_bytes": 271,
+      "whole_stdout_sha256": "95009f26123d1f36a04eaaaf0ffa528f21d7c70afbba377b4081d5de87f218df",
+      "entire_expected_artifact": "AUDIT.json",
+      "entire_artifact_bytes": 7718,
+      "entire_artifact_sha256": "8751e2147acab8204b0d1eda849ded564e0101d5b8f4dac0a988adbf0ed26321",
+      "native_entire_expected_object_compared": true,
+      "cumulative_max_child_RSS_kib": 22604
+    },
+    {
+      "location": "initially_empty_source_only_copy",
+      "entrypoint": "controls.py",
+      "optimized": true,
+      "actual_command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "controls.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.8861093759769574,
+      "whole_stdout_bytes": 263,
+      "whole_stdout_sha256": "067eb912eece80573da58a2f4137e9c7f711ad78f560309dc3763fdb1c61a76e",
+      "entire_expected_artifact": "CONTROLS.json",
+      "entire_artifact_bytes": 4293,
+      "entire_artifact_sha256": "377ca8f856e81e217fa4317666a275a5c96c4bbca91e6e048d933eb1691edea0",
+      "native_entire_expected_object_compared": true,
+      "cumulative_max_child_RSS_kib": 22772
+    }
+  ],
+  "maximum_actual_child_seconds": 0.8861093759769574,
+  "observed_cumulative_max_child_RSS_kib": 22772,
+  "guard_reached": false,
+  "resource_escalation": false,
+  "new_independent_peer_review": "pending",
+  "parent_review10148_is_separately_scoped": true,
+  "new_capacity_or_global_bound": false
+}
