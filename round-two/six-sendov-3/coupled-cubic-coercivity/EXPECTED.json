@@ -1,0 +1,832 @@
+{
+  "agent": "six-sendov-3",
+  "budgets": {
+    "Cramer_endpoint_equalities": {
+      "B4": "31/128",
+      "determinant": "651/256"
+    },
+    "G": "1048576000000000000000/1030776462947857146399",
+    "V_endpoint": "1/3200",
+    "beta_cap": "271/200",
+    "beta_endpoint_upper": "504850578176053332500000/372873606668470084261689",
+    "complete_objective_cost": "946264087783773574364771/4123105851791428585596",
+    "complete_physical_cost": "508693831863587858733151/2061552925895714292798",
+    "eta_endpoint": "1/16000",
+    "k": "220323/160000",
+    "local_radius_floor": "15999/16000",
+    "objective_error": "230",
+    "physical_error": "247",
+    "q": "127641/160000",
+    "quartic_factor": "7/8",
+    "routes": [
+      {
+        "V_fourth_square_remainder": "1411954173/159361795000",
+        "a0": "31872359/512000000",
+        "b0": "-109923/320000",
+        "delta": "1/4",
+        "determinant": "1411954173/2560000000000",
+        "lambda": "69/50",
+        "name": "physical"
+      },
+      {
+        "V_fourth_square_remainder": "4647004749/1278723590000",
+        "a0": "127872359/512000000",
+        "b0": "-109923/320000",
+        "delta": "1/2",
+        "determinant": "4647004749/5120000000000",
+        "lambda": "69/100",
+        "name": "objective"
+      }
+    ],
+    "rows": [
+      {
+        "name": "local positive radius floor",
+        "strict_margin": "15999/16000"
+      },
+      {
+        "name": "local positive full tail denominator",
+        "strict_margin": "47197/48000"
+      },
+      {
+        "name": "local centered radius from V5",
+        "strict_margin": "1/230400"
+      },
+      {
+        "name": "joint A is positive",
+        "strict_margin": "996068555571148799200/1048772616191487951999"
+      },
+      {
+        "name": "joint beta minus A is positive",
+        "strict_margin": "419371415142297598400/1048772616191487951999"
+      },
+      {
+        "name": "joint A below1",
+        "strict_margin": "54319982373356920285067/1118620820005410252785067"
+      },
+      {
+        "name": "joint beta below271/200",
+        "strict_margin": "78631771944726334917719/74574721333694016852337800"
+      },
+      {
+        "name": "physical positive E-square coefficient",
+        "strict_margin": "31872359/512000000"
+      },
+      {
+        "name": "physical positive full determinant",
+        "strict_margin": "1411954173/2560000000000"
+      },
+      {
+        "name": "objective positive E-square coefficient",
+        "strict_margin": "127872359/512000000"
+      },
+      {
+        "name": "objective positive full determinant",
+        "strict_margin": "4647004749/5120000000000"
+      },
+      {
+        "name": "complete physical error247",
+        "strict_margin": "509740832653571587955/2061552925895714292798"
+      },
+      {
+        "name": "complete objective error230",
+        "strict_margin": "2050258128255000322309/4123105851791428585596"
+      },
+      {
+        "name": "unconditional slope141/50",
+        "strict_margin": "383/93120"
+      },
+      {
+        "name": "entire paired R3 cap29",
+        "strict_margin": "203/450"
+      },
+      {
+        "name": "entire paired R4 noncubic cap33",
+        "strict_margin": "341/1800"
+      },
+      {
+        "name": "entire individual cube error26",
+        "strict_margin": "5/18"
+      },
+      {
+        "name": "complete objective noncubic cost36",
+        "strict_margin": "7142610790256/36857088431991"
+      },
+      {
+        "name": "complete dual noncubic cost190",
+        "strict_margin": "4/5"
+      },
+      {
+        "name": "sqrt247 above31/2",
+        "strict_margin": "27/4"
+      },
+      {
+        "name": "fresh cube normal below3Delta/8",
+        "strict_margin": "15/1976"
+      },
+      {
+        "name": "fresh fourth residual belowDelta/2",
+        "strict_margin": "50250389/245008686"
+      },
+      {
+        "name": "Cramer mean8Delta/5",
+        "strict_margin": "389/4340"
+      },
+      {
+        "name": "Cramer negative rotated trace9Delta/5",
+        "strict_margin": "213/5425"
+      },
+      {
+        "name": "rotated trace26Delta",
+        "strict_margin": "4/5"
+      },
+      {
+        "name": "variance34Delta with strict Cramer trace",
+        "strict_margin": "1046/775"
+      },
+      {
+        "name": "critical energy35Delta",
+        "strict_margin": "4171/4275"
+      },
+      {
+        "name": "unrotated real energy13Delta",
+        "strict_margin": "1482309093791/1580602406175"
+      },
+      {
+        "name": "imaginary mean sqrt coefficient1",
+        "strict_margin": "7422432049/64000000"
+      },
+      {
+        "name": "imaginary mean Delta coefficient1",
+        "strict_margin": "33997/47997"
+      },
+      {
+        "name": "imaginary mean eta2 coefficient31",
+        "strict_margin": "31907/47997"
+      },
+      {
+        "name": "sqrt80 below9",
+        "strict_margin": "1"
+      },
+      {
+        "name": "complete mu3 coefficient21/2",
+        "strict_margin": "7/200"
+      },
+      {
+        "name": "whole original eta2 coefficient88",
+        "strict_margin": "1596521/4463721"
+      },
+      {
+        "name": "all9 original Delta coefficient19/2",
+        "strict_margin": "63403813/276622710"
+      },
+      {
+        "name": "all9 original sqrt coefficient7/2",
+        "strict_margin": "46300289953/333270337302"
+      },
+      {
+        "name": "selected cosine lower sign",
+        "strict_margin": "17/512"
+      },
+      {
+        "name": "selected cosine upper sign",
+        "strict_margin": "73/15625"
+      },
+      {
+        "name": "selected cosine monotone",
+        "strict_margin": "483/32"
+      },
+      {
+        "name": "w4 below3/5",
+        "strict_margin": "11/1085"
+      },
+      {
+        "name": "w4 above1/2",
+        "strict_margin": "183/2134"
+      },
+      {
+        "name": "w3 above4",
+        "strict_margin": "4/7"
+      },
+      {
+        "name": "w3 below23/5",
+        "strict_margin": "4/165"
+      },
+      {
+        "name": "Cramer determinant monotone",
+        "strict_margin": "19/4"
+      },
+      {
+        "name": "Cramer B4 strictly decreases",
+        "strict_margin": "15/4"
+      }
+    ],
+    "stability_sqrt_floor": "31/2"
+  },
+  "claim": "joint signed cubic variance kernel; F>8+Ceta-230eta2; lowF<=8+3eta physical247 retains E/4; BOTH cuts,arbitrary epsilon>=0,fresh Delta247 moments/all9 motion",
+  "complete_arbitrary_critical_controls": [
+    {
+      "A": "19/20",
+      "E": "0",
+      "R": "0",
+      "S4": "0",
+      "V": "0",
+      "beta": "27/20",
+      "centered_f_variance": "0",
+      "complete_critical_multiset": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "index": 0,
+      "original_disk_feasibility_or_objective_cut_asserted": false,
+      "retained_variance_kernel": "0"
+    },
+    {
+      "A": "19/20",
+      "E": "0",
+      "R": "0",
+      "S4": "301/12500000",
+      "V": "7/1250",
+      "beta": "27/20",
+      "centered_f_variance": "45927/1250000000",
+      "complete_critical_multiset": [
+        [
+          "0",
+          "1/100"
+        ],
+        [
+          "0",
+          "1/100"
+        ],
+        [
+          "0",
+          "1/100"
+        ],
+        [
+          "0",
+          "1/100"
+        ],
+        [
+          "0",
+          "1/100"
+        ],
+        [
+          "0",
+          "1/100"
+        ],
+        [
+          "0",
+          "1/100"
+        ],
+        [
+          "0",
+          "-7/100"
+        ]
+      ],
+      "index": 1,
+      "original_disk_feasibility_or_objective_cut_asserted": false,
+      "retained_variance_kernel": "107163/2500000000"
+    },
+    {
+      "A": "19/20",
+      "E": "7/1250",
+      "R": "-399/1250000",
+      "S4": "301/12500000",
+      "V": "7/1250",
+      "beta": "27/20",
+      "centered_f_variance": "22743/1250000000",
+      "complete_critical_multiset": [
+        [
+          "1/100",
+          "0"
+        ],
+        [
+          "1/100",
+          "0"
+        ],
+        [
+          "1/100",
+          "0"
+        ],
+        [
+          "1/100",
+          "0"
+        ],
+        [
+          "1/100",
+          "0"
+        ],
+        [
+          "1/100",
+          "0"
+        ],
+        [
+          "1/100",
+          "0"
+        ],
+        [
+          "-7/100",
+          "0"
+        ]
+      ],
+      "index": 2,
+      "original_disk_feasibility_or_objective_cut_asserted": false,
+      "retained_variance_kernel": "107163/2500000000"
+    },
+    {
+      "A": "19/20",
+      "E": "1/1800",
+      "R": "0",
+      "S4": "1/3359232",
+      "V": "1/648",
+      "beta": "27/20",
+      "centered_f_variance": "0",
+      "complete_critical_multiset": [
+        [
+          "1/120",
+          "1/90"
+        ],
+        [
+          "1/120",
+          "1/90"
+        ],
+        [
+          "1/120",
+          "1/90"
+        ],
+        [
+          "1/120",
+          "1/90"
+        ],
+        [
+          "-1/120",
+          "-1/90"
+        ],
+        [
+          "-1/120",
+          "-1/90"
+        ],
+        [
+          "-1/120",
+          "-1/90"
+        ],
+        [
+          "-1/120",
+          "-1/90"
+        ]
+      ],
+      "index": 3,
+      "original_disk_feasibility_or_objective_cut_asserted": false,
+      "retained_variance_kernel": "6361/1728000000"
+    },
+    {
+      "A": "19/20",
+      "E": "1858/739375",
+      "R": "-4083153/579670000000",
+      "S4": "44327303/5485996880000",
+      "V": "1237/236600",
+      "beta": "27/20",
+      "centered_f_variance": "12780370028011/5485996880000000000",
+      "complete_critical_multiset": [
+        [
+          "3/910",
+          "-57/1820"
+        ],
+        [
+          "1/455",
+          "-19/910"
+        ],
+        [
+          "-47/4550",
+          "-17/9100"
+        ],
+        [
+          "1/175",
+          "-3/700"
+        ],
+        [
+          "47/4550",
+          "17/9100"
+        ],
+        [
+          "8/2275",
+          "151/9100"
+        ],
+        [
+          "23/910",
+          "9/910"
+        ],
+        [
+          "-1/25",
+          "3/100"
+        ]
+      ],
+      "index": 4,
+      "original_disk_feasibility_or_objective_cut_asserted": false,
+      "retained_variance_kernel": "2388053286243/55979560000000000"
+    }
+  ],
+  "independent_review_of_new_leaf": false,
+  "mathematical_damage_rejections": [
+    {
+      "name": "wrong signed fourth-normal feedback",
+      "reason": "identity: feedback sign"
+    },
+    {
+      "name": "wrong eight-count centered coefficient1/7",
+      "reason": "identity: centered variance"
+    },
+    {
+      "name": "wrong scalar fourth-variance coefficient7",
+      "reason": "identity: counted8"
+    },
+    {
+      "name": "erase fourth-phase cubic",
+      "reason": "nonzero entire phase-four coefficient"
+    },
+    {
+      "name": "beta cap27/20 fails the full endpoint",
+      "reason": "budget: joint beta below271/200"
+    },
+    {
+      "name": "physical lambda34/25 fails full determinant",
+      "reason": "budget: physical positive full determinant"
+    },
+    {
+      "name": "objective lambda17/25 fails full determinant",
+      "reason": "budget: objective positive full determinant"
+    },
+    {
+      "name": "physical error246 misses full cost",
+      "reason": "budget: complete physical error247"
+    },
+    {
+      "name": "objective error229 misses full cost",
+      "reason": "budget: complete objective error230"
+    },
+    {
+      "name": "objective230 cannot replace physicalDelta247",
+      "reason": "budget: complete physical error247"
+    },
+    {
+      "name": "old sqrt272 lower16 fails for247",
+      "reason": "budget: sqrt247 above31/2"
+    },
+    {
+      "name": "old R3/100 Delta residual is false",
+      "reason": "fresh R3 Delta bound required"
+    },
+    {
+      "name": "old R4/12 Delta residual is false",
+      "reason": "fresh R4 Delta bound required"
+    }
+  ],
+  "ordinary_unformalized_bridges": [
+    "9857 actual entry before local bootstrap,all9 counted labels and full nonlinear normals",
+    "zero-sum centering,Cauchy,credited9845 quartic SOS and nonnegative discarded terms",
+    "full infinite reciprocal expansion with convergence,not finite coefficients alone",
+    "positive determinant,legal unsquaring and all zero/high/infinite arms",
+    "fresh BOTH-cuts arbitrary epsilon and complete complex/all9 original-root estimates"
+  ],
+  "role": "researcher",
+  "schema": "sendov-joint-cubic-coercivity-v1",
+  "scope": "ALL9 actual originals CLOSED unit disk,complex monic degree9,marked a=1-eta,ALL8 critical multiplicities,EVERY0<eta<=1/16000;9857 genuine entry/local full normals adopted",
+  "whole_signed_and_dual_maps": [
+    {
+      "coefficient_count": 4,
+      "lhs_sha256": "ac5728bb0dd2c0edf90778e976b0923b913110889d5c990cdef71ffc40ae6ebf",
+      "name": "whole paired signed cubic combined BEFORE absolute values",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "ac5728bb0dd2c0edf90778e976b0923b913110889d5c990cdef71ffc40ae6ebf"
+    },
+    {
+      "name": "whole paired cubic ninth-root phase coefficients",
+      "rows": [
+        {
+          "all6_field_coefficients": [
+            "-1/12",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "phase": 1
+        },
+        {
+          "all6_field_coefficients": [
+            "-1/12",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "phase": 2
+        },
+        {
+          "all6_field_coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "phase": 3
+        },
+        {
+          "all6_field_coefficients": [
+            "-1/12",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "phase": 4
+        }
+      ]
+    },
+    {
+      "all6_field_coefficients": [
+        "8",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "name": "credited exact mean dual"
+    },
+    {
+      "all6_field_coefficients": [
+        "7",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "name": "credited exact trace dual"
+    },
+    {
+      "all6_field_coefficients": [
+        "10/3",
+        "2/9",
+        "-2/9",
+        "0",
+        "4/9",
+        "2/9"
+      ],
+      "name": "credited exact sharp slope"
+    },
+    {
+      "all6_field_coefficients": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "name": "credited exact optimal third normal"
+    },
+    {
+      "all6_field_coefficients": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "name": "credited exact optimal fourth normal"
+    },
+    {
+      "all_twelve_coefficient_counts": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "all_twelve_field_polynomial_maps_sha256": "53e21911bf6f1ab4ed22d6fa80f9274eb31256879dfde624a76ea1816c37bbd2",
+      "name": "whole leading physical substitution WITH signed fourth normal and full residuals",
+      "whole_maps_compared": true
+    }
+  ],
+  "whole_variance_and_absorption_maps": [
+    {
+      "coefficient_count": 0,
+      "lhs_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "entire zero-sum8 real coordinates",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "coefficient_count": 0,
+      "lhs_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "entire centered8 f values",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "coefficient_count": 14,
+      "lhs_sha256": "16ddc656c0586e048535f20350bbe1a67a252c5c9821c45bebc39ec69c6896f6",
+      "name": "entire centered Cauchy numerator",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "16ddc656c0586e048535f20350bbe1a67a252c5c9821c45bebc39ec69c6896f6"
+    },
+    {
+      "coefficient_count": 1008,
+      "lhs_sha256": "ec193498b27d92eaac98d580536d00d7fc709fbbe7d7cd8816beea5496f2dd86",
+      "name": "whole8 centered Lagrange nonnegative square sum",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "ec193498b27d92eaac98d580536d00d7fc709fbbe7d7cd8816beea5496f2dd86"
+    },
+    {
+      "coefficient_count": 36,
+      "lhs_sha256": "13fdee32e9ddba723d7e895d250d130fb5d7127dd9b3db83e84aba7811496eb8",
+      "name": "whole8 centered scalar variance",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "13fdee32e9ddba723d7e895d250d130fb5d7127dd9b3db83e84aba7811496eb8"
+    },
+    {
+      "coefficient_count": 16,
+      "lhs_sha256": "3d1a95f1047abeef97619a5fe442f8eb0db769d3a283cbd3a3ae0bb5c26ee967",
+      "name": "whole joint cubic polynomial substitution",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "3d1a95f1047abeef97619a5fe442f8eb0db769d3a283cbd3a3ae0bb5c26ee967"
+    },
+    {
+      "coefficient_count": 16,
+      "lhs_sha256": "12fd752234f64c86b78e0eb6bf1128d2d158d9165ec982d8b96754c4fc5cba0b",
+      "name": "whole centered quadratic feedback mean",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "12fd752234f64c86b78e0eb6bf1128d2d158d9165ec982d8b96754c4fc5cba0b"
+    },
+    {
+      "coefficient_count": 24,
+      "lhs_sha256": "68ce1672431318d757e0d4fcf3842e93e61e7e33850915b58528ccd3285eedcb",
+      "name": "whole retained quartic feedback expansion",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "68ce1672431318d757e0d4fcf3842e93e61e7e33850915b58528ccd3285eedcb"
+    },
+    {
+      "coefficient_count": 36,
+      "lhs_sha256": "261d54aab8f59790b69a0ca90b6882c3d1f0d241f8bb173fc17c714c0fb4f508",
+      "name": "whole8 squared-coordinate variance identity",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "261d54aab8f59790b69a0ca90b6882c3d1f0d241f8bb173fc17c714c0fb4f508"
+    },
+    {
+      "coefficient_count": 180,
+      "lhs_sha256": "e3a066a9fa892e46e2248695a3ded30b11a646d0c82be272834baf7d51227a9e",
+      "name": "whole retained variance kernel and three nonnegative remainders",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "e3a066a9fa892e46e2248695a3ded30b11a646d0c82be272834baf7d51227a9e"
+    },
+    {
+      "coefficient_count": 0,
+      "lhs_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "whole8 centered complex multiplicity sum real",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "coefficient_count": 0,
+      "lhs_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "whole8 centered complex multiplicity sum imaginary",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "coefficient_count": 56,
+      "lhs_sha256": "a24fa9b666f5607ed6657977fe5ea9ba0ad5966a689aaab26fca0d38b2fff04b",
+      "name": "whole other-seven norm identity 0",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "a24fa9b666f5607ed6657977fe5ea9ba0ad5966a689aaab26fca0d38b2fff04b"
+    },
+    {
+      "coefficient_count": 56,
+      "lhs_sha256": "a1645ec91c519de1eb42dfdc66d6881f75cbb83035ba1abf57558ea25bcec614",
+      "name": "whole other-seven norm identity 1",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "a1645ec91c519de1eb42dfdc66d6881f75cbb83035ba1abf57558ea25bcec614"
+    },
+    {
+      "coefficient_count": 56,
+      "lhs_sha256": "91f21a42fc2ce6df9a79d90ca3d08bd95c4a698802af3cf9495841d5f6e9ce29",
+      "name": "whole other-seven norm identity 2",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "91f21a42fc2ce6df9a79d90ca3d08bd95c4a698802af3cf9495841d5f6e9ce29"
+    },
+    {
+      "coefficient_count": 56,
+      "lhs_sha256": "e897bef2c3eb8fc3eb66dc4dfb1df3064acd9c8838bda90d3f55d007aa4815e8",
+      "name": "whole other-seven norm identity 3",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "e897bef2c3eb8fc3eb66dc4dfb1df3064acd9c8838bda90d3f55d007aa4815e8"
+    },
+    {
+      "coefficient_count": 56,
+      "lhs_sha256": "84aa6f1ad06effb96b2de959ea8222a4e6fcb3d498577403470514fccd3a6a0e",
+      "name": "whole other-seven norm identity 4",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "84aa6f1ad06effb96b2de959ea8222a4e6fcb3d498577403470514fccd3a6a0e"
+    },
+    {
+      "coefficient_count": 56,
+      "lhs_sha256": "4c0f23a58a99f0f34a21e029a188c1aa811cd2ce4a545a3f4198956c4b950093",
+      "name": "whole other-seven norm identity 5",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "4c0f23a58a99f0f34a21e029a188c1aa811cd2ce4a545a3f4198956c4b950093"
+    },
+    {
+      "coefficient_count": 56,
+      "lhs_sha256": "fb5f3e1ef764db238e0e3e6f82268aac86cd4c7c6541c4cd4d0a9dec0767d39f",
+      "name": "whole other-seven norm identity 6",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "fb5f3e1ef764db238e0e3e6f82268aac86cd4c7c6541c4cd4d0a9dec0767d39f"
+    },
+    {
+      "coefficient_count": 56,
+      "lhs_sha256": "84f638303d03fe35a9028fceccfebb0e19f8c263dd29093ccee33a63cead5976",
+      "name": "whole other-seven norm identity 7",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "84f638303d03fe35a9028fceccfebb0e19f8c263dd29093ccee33a63cead5976"
+    },
+    {
+      "coefficient_count": 1204,
+      "lhs_sha256": "6ae30852b254b7db6d882dbb21f5a0927f890d27ca767e8c54871cd8326c3c0c",
+      "name": "whole complex zero-sum quartic SOS credited9845",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "6ae30852b254b7db6d882dbb21f5a0927f890d27ca767e8c54871cd8326c3c0c"
+    },
+    {
+      "coefficient_count": 4,
+      "lhs_sha256": "cb99a6988636263f37ad8750cbd49c449f16774c93fed54f82ffc137052b3c8f",
+      "name": "whole physical positive determinant completion",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "cb99a6988636263f37ad8750cbd49c449f16774c93fed54f82ffc137052b3c8f"
+    },
+    {
+      "coefficient_count": 1,
+      "lhs_sha256": "942030aa573cbbf97305e5c46ab892f4b1c173bac1b158e1de2fe599dd877d62",
+      "name": "whole physical nonnegative qE3 relaxation",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "942030aa573cbbf97305e5c46ab892f4b1c173bac1b158e1de2fe599dd877d62"
+    },
+    {
+      "coefficient_count": 4,
+      "lhs_sha256": "9919ba4438ee083fdb1f6e81a7c59d54dd5f2e3a0b7172ffdebc3da5d09ed963",
+      "name": "whole objective positive determinant completion",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "9919ba4438ee083fdb1f6e81a7c59d54dd5f2e3a0b7172ffdebc3da5d09ed963"
+    },
+    {
+      "coefficient_count": 1,
+      "lhs_sha256": "942030aa573cbbf97305e5c46ab892f4b1c173bac1b158e1de2fe599dd877d62",
+      "name": "whole objective nonnegative qE3 relaxation",
+      "nonzero_residual_coefficients": 0,
+      "rhs_sha256": "942030aa573cbbf97305e5c46ab892f4b1c173bac1b158e1de2fe599dd877d62"
+    }
+  ]
+}
