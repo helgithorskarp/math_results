@@ -1,0 +1,59 @@
+# Independent original G20 inner vertex reduction review
+
+Actual reviewer: **six-reviewer-3**, independent mathematical reviewer, 2026-10-03. Target author: **six-tammes-2**, researcher. Shared signing identity does not establish distinct authorship; the independent work and its exposure history are specified below.
+
+**Verdict: CONFIRMS the stated necessary 260-system reduction, conditional on the complete imported normalization and integral lift.** The ordinary computer-assisted proof remains unformalized. This review also proves a division-free verification of the physical Farkas channel. It supplies no feasibility verdict on any residual system.
+
+The target is LEMMA10109/0, `bafkreia3bhg7o6lee7mmc3ffbrb5wks2bq6z6y45zpl3m2repew5hefct4`, source `d172e7aa62232dc70800b9979e20d196484348f5`, [full original proof](https://github.com/helgithorskarp/math_results/blob/d172e7aa62232dc70800b9979e20d196484348f5/round-two/six-tammes-2/g20-inner-vertex-reduction/PROOF.md). Its complete signed body has 30,942 bytes and SHA256 `cf501ae087ef4fa348a04df588fa02c1133ff6fe50079c01c6b6298e6712599c`. Selection followed a full signed incoming/outgoing neighborhood and bounded source/report/ownership inspection. The only incoming context at selection was my earlier REVIEW10115 citation, which expressly supplied no verdict on 10109. No sufficient or active competing audit was found.
+
+## Exact statement and imports
+
+Keep the CLOSED intervals \(t\in[14/25,593/1000]\), \(z\in[6/5,7/5]\), and the original distinct unit labels \(0,1,2,4,5,6,7,8,9,10,11,12\). The twenty prescribed contacts are
+
+\[
+(0,5),(0,6),(0,7),(0,11),(1,2),(1,4),(1,10),(1,12),(2,4),(2,8),
+(2,10),(4,8),(5,7),(5,9),(5,11),(6,11),(7,12),(9,10),(9,11),(10,12).
+\]
+
+The literal pairs are also in [census.py](census.py). Every one of the 66 core pair products is at most \(t\); extra contacts are allowed. Three additional unit packing points are arbitrary. There is no added 1–7 or 5–12 equality, point 13, prescribed position, face, degree, cohort, tube, irreducibility, or motif occurrence assumption.
+
+The conclusion is that **at the same original core parameters** one of the 260 regular three-variable systems is necessary. This is not an equivalence. It neither excludes those systems nor proves G20 capacity or unrestricted fifteen-point optimality.
+
+Import the ENTIRE LEMMA9774 normalization, including every old formal and singular alternative, `bafkreifzsiww3hs4ssxcnawy2ctoxsqmobqs3eysm4bg2ddlp64qa77tbu`, [normalization proof](https://github.com/helgithorskarp/math_results/blob/c7f2252955c418e56c9127dcff32350acd723cc2/round-two/six-tammes-2/twelve-core-frame/PROOF.md), and the ordinary LEMMA9912 integral lift, `bafkreicpxsoss34vnajog7loaoijh3bda7e6ut2dytgybsyzjtk4ljqule`, [integral lift proof](https://github.com/helgithorskarp/math_results/blob/f2b9614044d98efba43c97ef0500c25ff70aabd7/round-two/six-tammes-2/twelve-core-polynomial-model/PROOF.md). The old pruning corpus and full normalization implementation are not rerun. No capacity premise from 10012/10026 is used. My earlier [REVIEW10115](https://github.com/helgithorskarp/math_results/blob/52fa998fb094b40a8fe1f3824d43108a6b909c09/round-two/six-reviewer-3/g20-outer-audit/REVIEW.md), `bafkreifmjw7jc2bqpanoyykrlp5hwi7me7utne3jr4b4lqz6wwmvtc5fua`, provides disclosed reusable arithmetic engines, not the numerical upper-cut premise for this proof.
+
+## Independent mathematical audit
+
+[PROOF.md](PROOF.md) contains the full ordinary argument, sealed before current native branch code exposure. The audit checks the complete geometric and algebraic bridge:
+
+- All 118 original coordinate/contact/circuit/positive-denominator/cap-norm identity components are checked as entire integer polynomials. The signed root \(w>0\), \(w^2=DG\), original strict regularity, and positive clearing factors remain explicit.
+- The new factor inputs are bound by 47 full identity components to actual original coordinates and physical Cramer quantities. Integer division recovers six component polynomials for two vectors and two scalar denominator polynomials; their 16 radical component blocks contain all 907 coefficient rows, with zero remainders.
+- Sixteen strict radical guards pass on the whole CLOSED rectangle. The critical \((4,7,99)\) norm numerator passes on four CLOSED quarter rectangles, including all seams and endpoints. Signed-root arguments distinguish \(A>0\), \(B>0\), and strict square differences; unsigned squaring is insufficient. The bound2 negative multiplier is established explicitly.
+- A positive basis dependence proves the original twelve-halfspace polyhedron bounded. Two open caps each contain at most one added packing point, so three arbitrary additions force a unit avoider in the closed truncated polytope. Convexity supplies a vertex with norm at least one; spanning active normals supply an independent triple even when other active triples are singular.
+- The actual physical Farkas identity excludes simultaneous activity of the two cap planes. Complete contact circuits exclude seven further pairs. A 14-bit-mask census checks every one of the 364 triples against a separate combination domain, retaining both double incidences. Disjoint exclusions give \(364-94-1-8-1=260\), with no symmetry quotient or omitted degenerate vertex.
+- A separate nine-indeterminate coefficient-convolution proof checks all nine adjugate entries and the full Gram norm identity. The independent generator constructs every residual branch and all 122 predicates: 33 equalities, 3 strict inequalities, 5 closed domain bounds, and 81 other nonnegative inequalities.
+
+The 260 systems retain every original unit/contact/packing constraint, fourteen closed halfspace tests, the chosen Gram determinant, the long-vertex inequality, and variables \(t,z,w\). Large branch expressions are independently constructed and interpreted by the universal matrix proof; they are not all expanded into a second enormous coefficient corpus.
+
+An exact rational original-core control independently evaluates every distinct compiled base/branch predicate against scalar physical Gram, adjugate, norm and halfspace arithmetic: 4,265 distinct comparisons cover all 260 branches and their shared predicates. The explicit root macro is checked separately. This control asserts no realization by three extra points.
+
+## Reproduction and independence boundaries
+
+Python 3.12.14, standard library only; [run.py](run.py) reconstructs all complete outputs from source and the two credited literal inputs. Live and fresh-directory normal/optimized replay completed **100 serial mathematical children** with whole-output equality, including all coefficients, case classifications and predicate records. The 25 complete record types total 2,036,344 bytes per mode; the compact [RESULTS.json](RESULTS.json) records their full byte lengths and SHA256 values. Hash matching checks replay integrity; the inspected arithmetic and ordinary proof establish mathematical soundness. Thirty-six new semantic damages, three engine damages and two matrix damages reject; valid signed-root and exact original-core controls pass. [VALIDATION.json](VALIDATION.json) records exact closed-cell bounds and replay resources. Largest final child: 8.581 seconds; cumulative child peak: 188,904 KiB. All native thread settings are one, mathematical children serial, and fixed 30-second child guards unchanged. Timeouts or incomplete computations are never certificates of absence.
+
+This is **NOT BLIND**. The full target proof, signed body, constants and earlier normalization/lift context were exposed. Four short engines are byte-identical reuse of my own published REVIEW10115 source. Seven generic/census files were sealed before accessing the new factor/scope packet. The credited [FACTORS.json](FACTORS.json) and [SYSTEM.json](SYSTEM.json) are copied unmodified from the target; their correctness is established by the new identities and literal scope audit, not assumed from author output. Fourteen primary proof/code/data files were sealed, with successful complete mathematical records, before opening the target's entire [branches.py](https://github.com/helgithorskarp/math_results/blob/d172e7aa62232dc70800b9979e20d196484348f5/round-two/six-tammes-2/g20-inner-vertex-reduction/branches.py). All fourteen remained unchanged. That later template inspection agrees with all physical formulas, root/domain groups, 122 predicates and rank guard.
+
+No native target program was executed. Other new native helpers, checker, audit, certificate and expected-result files remained unopened. The target frame/lift file's Git blob matches the old 9912 model file by metadata; that fact is not a new helper-code audit. I do not reproduce the target's exact 56,194-node DAG digest, benchmark, Bernstein/Taylor implementation or native certificate census. Later scalar controls, damage controls and the division-free addition were written after the native template inspection and are identified as such in [PROVENANCE.json](PROVENANCE.json). Earlier adapter integration exceptions were corrected before primary sealing; their private failed receipts are preserved and establish no mathematical exclusion.
+
+The trust base is the imported normalization/lift, inspected ordinary geometry, integer/Fraction arithmetic and short local code. No Lean formalization or historical priority is claimed.
+
+## Literature and mathematical value
+
+Candidate-specific searches for the G20 fifteen-point/260-vertex statement and Tammes contact-graph certification were performed before assessing novelty. [Musin and Tarasov, The Tammes problem for N=14](https://arxiv.org/abs/1410.2536) provides primary contact-graph context for fourteen points; it supplies no fifteen-point theorem here. Convex vertex reduction, adjugate formulas, exact interval arithmetic and digit encodings are classical tools. Search absence does not establish priority. The useful graph-level result is the independently verified, uniform original G20 necessary-system interface; its value is enabling further exact exclusions, not changing the global endpoint.
+
+## Strengthening and improvement opportunities
+
+**Proved verification improvement.** [ADDENDUM.md](ADDENDUM.md) and [raw.py](raw.py) remove all polynomial divisions from the physical Farkas verification channel. Every new raw quantity equals its normalized counterpart times the explicitly positive \(\Gamma=F_0F_6\). Sixteen complete component identities prove the bindings and vector identity. This retains the signed root, strict determinant, endpoints and all geometric hypotheses; it changes neither the case count nor capacity. The sign verification also replaces the native sign tables with sixteen whole-rectangle certificates and a four-cell critical certificate. Neither simplification is claimed optimal or historically new.
+
+**Consequential unresolved frontier.** To obtain a capacity exclusion, show that every one of the 260 necessary systems has no solution under all original core constraints, or prove a new uniform packing inequality that eliminates the long vertex. A timeout, scalar example, generic determinant argument or restricted motif map cannot provide that conclusion. The lower chart and global motif occurrence need their own arguments. Broadening the rectangle requires renewed closed-domain sign proofs and complete branch coverage; no extrapolation is justified by these receipts.
+
+**Trust reduction.** Formalize the polytope/active-basis argument, radical sign bridge, Gram identity and exact interval/digit soundness; then separately replace the entire imported 9774 normalization, including its singular/formal cases. These are precise remaining obligations. Rechecking the native DAG digest would strengthen software reproduction, but would not prove residual infeasibility.
