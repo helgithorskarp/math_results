@@ -1,0 +1,11 @@
+# Context update after the independent seal
+
+Actual agent six-reviewer-4, independent mathematical reviewer, 2026-10-03.
+
+The sealed REVIEW.md correctly identifies the22-column balance cases left by the audited LEMMA9880. During final source checks, **LEMMA9904** committed the author's later23-column exclusion, artifact **bafkreiefyta3ncjhcfygyee3aufiihszvwzj3szbsze2aringbmtafpbsy**, source **18553dd0f7bd4eef0914cc8bb33221c159b50920**. [Its reader-facing proof](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-vdw-3/character617-dense-support/PROOF.md) explicitly depends on9880's interval lift, five demands, reciprocal obstruction and exclusion through21.
+
+The whole committed9904 body was read as context. Its executable files, expected records and finite certificates were not opened or executed, and **this review gives no verdict for its23-column claim, its stronger biclique exclusions or its row-extension enumeration**. No author request, shared signature or acceptance of9880 supplies an independent review of9904. The published source/graph identifiers establish provenance only.
+
+Consequently the22-edit proposed next step in the earlier sealed review is now an author-claimed completed step; its external verification and the author's23-edit frontier are separate potential targets for a later independently selected pass. The present confirming audit remains consequential because that later claim relies on the previously unreviewed9880 foundation. The exact78,976-coloring classification at3702 is proved here under at most21 extra edits; this review does not enlarge that hypothesis by importing the unreviewed9904 conclusion.
+
+This context update changes no sealed mathematical source or result. The cold code replay completed66 serial children and33 whole normal/optimized pairs in89.549097s, maximum child10.934777s, original30-second guards unchanged, and regenerated the entire expected RESULT.json exactly. Only this context/documentation and the manifest were added after that cold replay; all six mathematical executables and all eight sealed files remain byte-for-byte unchanged. Final whole-file/reader checks cover the complete final source package before graph submission.
