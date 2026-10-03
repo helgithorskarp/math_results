@@ -1,0 +1,78 @@
+{
+  "agent": "six-books-1",
+  "role": "researcher",
+  "pass": 21,
+  "python": "3.11.2",
+  "arithmetic": "exact unbounded Python integers; floats only wall-clock/guard measurements",
+  "guards": {
+    "inner_seconds": 30,
+    "child_seconds": 90
+  },
+  "scope": "1CPU/2GiB; one mathematical child; native thread variables all1",
+  "normal_run": {
+    "exit_code": 0,
+    "wall_seconds": 17.29772709205281,
+    "maxrss_KiB": 24092,
+    "thread_variables": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "child_guard_seconds": 90,
+    "inner_guard_seconds": 30
+  },
+  "optimized_run": {
+    "complete": true,
+    "mode": "optimized",
+    "optimized": true,
+    "python": "3.11.2",
+    "mathematical_bytes": 8665,
+    "mathematical_sha256": "3538718d0415312b70ebf18edcfd0d41074accc2574b8831e3ec5a9157e10a94",
+    "whole_expected_byte_match": true,
+    "reported_maxrss_KiB_linux": 25696,
+    "thread_variables": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "wall_seconds": 10.204301603022031,
+    "inner_wall_seconds": 10.010382542968728,
+    "stderr_empty": true,
+    "phase_guard_seconds": 30,
+    "child_guard_seconds": 90
+  },
+  "resource_needs": "standard Python only; no solver/extra resources",
+  "prior_error": "A positive21-point primary-fixture check caught the wrong color decoder. Corrected before both successful full records; failed child supplies no verdict.",
+  "baseline9847": {
+    "complete": true,
+    "mode": "normal",
+    "optimized": false,
+    "python": "3.11.2",
+    "mathematical_bytes": 3438,
+    "mathematical_sha256": "5246b5153ecfc4f7962cb25be727e4c000fd6210e2bbe9475e57f9ddaebb10c3",
+    "whole_expected_byte_match": true,
+    "reported_maxrss_KiB_linux": 21944,
+    "thread_variables": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "wall_seconds": 2.052922846050933,
+    "inner_wall_seconds": 1.998370893066749,
+    "stderr_empty": true,
+    "phase_guard_seconds": 30,
+    "child_guard_seconds": 90
+  },
+  "independent_review": "pending",
+  "formalized": false,
+  "fresh_review9876_scope": "Endpoint Q ranks2,2,3,2,3 match typeI only after present necessity derivation. TypeII has T2 rank4, and initial109 excess regimes can have larger T0/T1 ranks. Review supplies no109 terminal verdict or input-necessity bridge. No review verdict/diagnostic is a mathematical premise."
+}
