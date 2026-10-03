@@ -1,0 +1,94 @@
+{
+  "actual_agent": "six-tammes-2",
+  "role": "researcher",
+  "utc": "2026-10-02T23:56:57.482489+00:00",
+  "normal_optimized_entire_exact_output_equal": true,
+  "normal_optimized_entire_controls_output_equal": true,
+  "all40_cube_corners_actually_checked": true,
+  "all72_rectangle_partials_enclosed": true,
+  "all108_exact_point_jet_enclosures_actually_checked": true,
+  "rejected_semantic_damage_count": 20,
+  "valid_control_count": 3,
+  "final_source_sha256": {
+    "INPUT.json": "51a651ef4ab8a83d306da8112f77d82be51e80191272ae609e1ebd53ab48fba7",
+    "PLAN.json": "ee8f7016f07ed9ce5e51cb12daeb7b646193257f4e2f0f1289349e3082d4ccb9",
+    "check.py": "c7521507a546dd3185744059bf95901d9ba3922a0b52c361c0c76eb7e7f1f653",
+    "controls.py": "1612063a6fa50fb0111ab9057d3c2e7280737a330582db82e35b3559ff304627",
+    "exact.py": "a5fbcbf2ab36e3af5687c52239dcec93ae61ebf81b81bd9557224dc5d2878f0f",
+    "field.py": "fed3f04c1f55c44741518be7ba5f61fa20becf94c272f2fb0cf50125097b9e9f",
+    "frame.py": "9b7dd265965afaddaba813d122bdce56712073818d41ca037b04fc50d9745241",
+    "interval.py": "9ff4eaf241233ccb31324d6b97a5d182f3ee2fa872f056fd1fc9afb65bb31b46"
+  },
+  "guard_reached": false,
+  "active_job": false,
+  "ordinary_proof_formalized": false,
+  "independent_new_result_review": "pending",
+  "executions": [
+    {
+      "name": "exact-normal",
+      "command": [
+        "python3",
+        "check.py",
+        "--output",
+        "/tmp/tammes-local-gate.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.4131587200099602,
+      "child_cpu_seconds": 1.3750820000000001,
+      "cumulative_child_max_rss_kib": 18260,
+      "threads": 1,
+      "subprocess_guard_seconds": 55,
+      "stdout_sha256": "91fbeca5fec7ea9dc3e64a27a7c17aee14b5b76562517d7507b757834f8c53b3"
+    },
+    {
+      "name": "exact-optimized",
+      "command": [
+        "python3",
+        "-O",
+        "check.py",
+        "--output",
+        "/tmp/tammes-local-gate.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.5202265430707484,
+      "child_cpu_seconds": 1.5103069999999998,
+      "cumulative_child_max_rss_kib": 21604,
+      "threads": 1,
+      "subprocess_guard_seconds": 55,
+      "stdout_sha256": "91fbeca5fec7ea9dc3e64a27a7c17aee14b5b76562517d7507b757834f8c53b3"
+    },
+    {
+      "name": "controls-normal",
+      "command": [
+        "python3",
+        "controls.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.0973207759670913,
+      "child_cpu_seconds": 3.0910909999999996,
+      "cumulative_child_max_rss_kib": 21604,
+      "threads": 1,
+      "subprocess_guard_seconds": 55,
+      "stdout_sha256": "7aec22a690d4c5bfe6ce113a64cc1da607e913ed4b6af96972645611d2e9a380"
+    },
+    {
+      "name": "controls-optimized",
+      "command": [
+        "python3",
+        "-O",
+        "controls.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.208985799923539,
+      "child_cpu_seconds": 3.2071220000000005,
+      "cumulative_child_max_rss_kib": 21604,
+      "threads": 1,
+      "subprocess_guard_seconds": 55,
+      "stdout_sha256": "7aec22a690d4c5bfe6ce113a64cc1da607e913ed4b6af96972645611d2e9a380"
+    }
+  ],
+  "runtime": "Python3.11.2 standard library",
+  "resource_scope_unchanged": "1CPU2GiB; one native mathematical child at a time; all thread variables1",
+  "complete_expected_output_sha256": "9f2700353e84d020acdf32bb64feeee2a56c95f09280d8ee427cc815c0f9aa4b",
+  "controls_output_sha256": "09e2c50d96893f4cf3b0a81e66c897f0af19ef8e5183285969a27c14cff86b10"
+}
