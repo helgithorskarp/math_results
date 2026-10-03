@@ -1,0 +1,210 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "python": "3.11.2",
+  "all_complete": true,
+  "whole_normal_optimized_equal": true,
+  "child_guard_seconds": 20,
+  "native_threads": 1,
+  "serial_mathematical_children": 8,
+  "timings": [
+    {
+      "mode": "normal",
+      "child": "produce.py",
+      "seconds": 0.2032299570273608,
+      "peak_child_kib": 17020,
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "child": "check.py",
+      "seconds": 0.3087360420031473,
+      "peak_child_kib": 17036,
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "child": "face.py",
+      "seconds": 2.2412405000068247,
+      "peak_child_kib": 30572,
+      "exit_code": 0
+    },
+    {
+      "mode": "normal",
+      "child": "controls.py",
+      "seconds": 2.343761121039279,
+      "peak_child_kib": 30572,
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "child": "produce.py",
+      "seconds": 0.29152706102468073,
+      "peak_child_kib": 30572,
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "child": "check.py",
+      "seconds": 0.3758767420658842,
+      "peak_child_kib": 30572,
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "child": "face.py",
+      "seconds": 2.2792895970633253,
+      "peak_child_kib": 32288,
+      "exit_code": 0
+    },
+    {
+      "mode": "optimized",
+      "child": "controls.py",
+      "seconds": 2.443020500941202,
+      "peak_child_kib": 32288,
+      "exit_code": 0
+    }
+  ],
+  "total_seconds": 10.512110793963075,
+  "files": {
+    "congruence.json": {
+      "bytes": 60274,
+      "sha256": "50aa3075ae2e591107a511bb84c1e78c341963d9d59de07c3b0848816bde0fb1"
+    },
+    "polynomial.json": {
+      "bytes": 38456,
+      "sha256": "a2cb39d40f713f0531f2231532ae55399e5e69a8449c967978089cf1746de209"
+    },
+    "affine.json": {
+      "bytes": 756779,
+      "sha256": "b1c4423058a6a2c6bb0bb9a911150c11455955387c1f9029615420f6b054c67f"
+    },
+    "damages.json": {
+      "bytes": 896,
+      "sha256": "5d653044ee81348ea523ae6a5695d8665851b5df27edab185fc7d92fce475aa5"
+    }
+  },
+  "semantic_damages_per_mode": 27,
+  "affine_probes": 84,
+  "affine_table_entries": 13296,
+  "affine_physical_entries": 110484,
+  "cases": [
+    {
+      "n": 12,
+      "N": 4083,
+      "s": 2036,
+      "h": 2047,
+      "floor": "1/100",
+      "coordinate_count": 16,
+      "q": 66,
+      "lower_rank": 4005,
+      "upper_rank": 4082,
+      "gap": "1/204700",
+      "original": {
+        "centered": false,
+        "empty_loop": "552549/250",
+        "empty_rows": [
+          "-21097/100",
+          "11",
+          "663/1000",
+          "559/1000",
+          "7/10",
+          "787/1000",
+          "803/1000",
+          "789/1000",
+          "126/125",
+          "11"
+        ]
+      },
+      "sector_dimensions": [
+        10,
+        10,
+        9,
+        7,
+        5,
+        3,
+        1
+      ],
+      "lower_nullities": [
+        2,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimum_classes": 3,
+      "unique_equality_absent_profiles": [
+        [
+          2
+        ]
+      ],
+      "class_subset_count": 16,
+      "entire_polynomial_record_hash": "8f37be0d5aec3498ef9c0afa0af8478d9874a7a03c6b95a23b4195d9c504edbf"
+    },
+    {
+      "n": 16,
+      "N": 65519,
+      "s": 32752,
+      "h": 32767,
+      "floor": "1/1000",
+      "coordinate_count": 25,
+      "q": 680,
+      "lower_rank": 64823,
+      "upper_rank": 65518,
+      "gap": "1/32767000",
+      "original": {
+        "centered": false,
+        "empty_loop": "4209869437/100000",
+        "empty_rows": [
+          "-74197997/25000",
+          "15",
+          "15",
+          "145201/200000",
+          "731447/1000000",
+          "759327/1000000",
+          "12001/15625",
+          "783239/1000000",
+          "799797/1000000",
+          "406079/500000",
+          "832213/1000000",
+          "241011/250000",
+          "15",
+          "15"
+        ]
+      },
+      "sector_dimensions": [
+        14,
+        14,
+        13,
+        11,
+        9,
+        7,
+        5,
+        3,
+        1
+      ],
+      "lower_nullities": [
+        3,
+        3,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimum_classes": 4,
+      "unique_equality_absent_profiles": [
+        [
+          2,
+          3
+        ]
+      ],
+      "class_subset_count": 64,
+      "entire_polynomial_record_hash": "a4daad6c8db196d5289664cdd2dc8f5c49fe25111de8053c09c8bda2ef58f06f"
+    }
+  ]
+}
