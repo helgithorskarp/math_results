@@ -1,0 +1,61 @@
+{
+  "runs": [
+    {
+      "optimized": false,
+      "export_summary": {
+        "all18_preimport_byte_gates": true,
+        "all_actual_orders": 18,
+        "whole_export_sha256": "bf0e945d8cc0c6101010fe23780903b4262a18bce85b677d8b361ad3c1a3e303"
+      },
+      "comparison_passed": true
+    },
+    {
+      "optimized": true,
+      "export_summary": {
+        "all18_preimport_byte_gates": true,
+        "all_actual_orders": 18,
+        "whole_export_sha256": "bf0e945d8cc0c6101010fe23780903b4262a18bce85b677d8b361ad3c1a3e303"
+      },
+      "comparison_passed": true
+    }
+  ],
+  "whole_export_normal_optimized_equal": true,
+  "whole_comparison_normal_optimized_equal": true,
+  "preimport_source_damage_rejections": [
+    {
+      "source": "forms.py",
+      "optimized": false,
+      "exit_code": 1,
+      "rejected_before_import": true
+    },
+    {
+      "source": "forms.py",
+      "optimized": true,
+      "exit_code": 1,
+      "rejected_before_import": true
+    },
+    {
+      "source": "../small-deletion-boundary/literal.py",
+      "optimized": false,
+      "exit_code": 1,
+      "rejected_before_import": true
+    },
+    {
+      "source": "../small-deletion-boundary/literal.py",
+      "optimized": true,
+      "exit_code": 1,
+      "rejected_before_import": true
+    }
+  ],
+  "all18_external_source_files_restored": true,
+  "published_fixture_directory_replays": [
+    {
+      "optimized": false,
+      "all_published_fixtures_adapter_passed": true
+    },
+    {
+      "optimized": true,
+      "all_published_fixtures_adapter_passed": true
+    }
+  ]
+}
