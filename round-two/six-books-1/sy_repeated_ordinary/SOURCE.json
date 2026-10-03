@@ -1,0 +1,76 @@
+{
+  "agent": "six-books-1",
+  "role": "researcher",
+  "schema": "Portable source seal excluding its own self-reference",
+  "files": [
+    {
+      "name": ".gitignore",
+      "bytes": 19,
+      "sha256": "0175fcafc5d8328c584d3df3eeba657ad2c5ccda3956d46d15e15adb9ecdd57c"
+    },
+    {
+      "name": "CLAIM.json",
+      "bytes": 4823,
+      "sha256": "45b53f1b2c890537fb8b7aec8d547324cde5126ac6cf7e3b0327a76fc5c34edc"
+    },
+    {
+      "name": "PROOF.md",
+      "bytes": 13318,
+      "sha256": "bdf04fe6191bcd2325c47e6992499b3e7ab018a12db8bb21a031e8e85bab8858"
+    },
+    {
+      "name": "README.md",
+      "bytes": 4374,
+      "sha256": "4cf7b92a14c0772ec134b5d7f2cfb21cf31eac23aeeed93cd9f90f53188553b4"
+    },
+    {
+      "name": "RESULTS.json",
+      "bytes": 1227,
+      "sha256": "379784a80ff13fdfdfca7c5459b839718433010288ac85f755014f334644a4ec"
+    },
+    {
+      "name": "baseline.py",
+      "bytes": 2388,
+      "sha256": "370aea96ab0115fb1bfc71ecddf828c68999354efb5dfbca8e46a96ed24c8730"
+    },
+    {
+      "name": "literal.py",
+      "bytes": 3048,
+      "sha256": "06b9e20cde718937775f7c28c0a371e74f7937671a32572e048f6ff533738850"
+    },
+    {
+      "name": "phase.py",
+      "bytes": 1261,
+      "sha256": "541dd8adaa022d536aea6b4ec60915a0b679648eaf901f28e6f2c7117a6eacdd"
+    },
+    {
+      "name": "primary21.txt",
+      "bytes": 1056,
+      "sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55"
+    },
+    {
+      "name": "reduction.py",
+      "bytes": 10145,
+      "sha256": "e6a52c3bbb3c04ed6aeeaceaf6ba93cc75bd46ad95e6c0c5ea6074e97c3f13c0"
+    },
+    {
+      "name": "reference.py",
+      "bytes": 1722,
+      "sha256": "265864a49a913f55ce072575eaeb26f13166c93e529d2cf991ddc7dd4adc36ae"
+    },
+    {
+      "name": "reproduce.py",
+      "bytes": 4028,
+      "sha256": "76b84ba550e48715082bd369144ec12a20f1b68b327b43f286eb1cd36023b9c0"
+    },
+    {
+      "name": "terminal.py",
+      "bytes": 4006,
+      "sha256": "2e447b2551d506c2ee544a16eb6e32d25b4a9e20b78cedbf7eef9bcf094338ad"
+    }
+  ],
+  "generated_mathematical_records_published": false,
+  "external_runtime_inputs": [],
+  "reproduce": "python3 -B reproduce.py --output work/normal --check RESULTS.json --verify-source",
+  "optimized_reproduce": "python3 -B -O reproduce.py --output work/optimized --check RESULTS.json --verify-source"
+}
