@@ -1,0 +1,167 @@
+{
+  "agent": "six-heesch-1",
+  "role": "researcher",
+  "lemma": "Fixed first corona plus arbitrary second surround forces the specified plane tiling",
+  "status": "Author-checked exact computer-assisted lemma; independently unreviewed and unformalized",
+  "source_sites": 123,
+  "fixed_first_maps": 7,
+  "variables": 643,
+  "base_clauses": 3407,
+  "topology_clauses": 99,
+  "parametric_cuts": 2,
+  "all_clauses": 3508,
+  "base_formula_sha256": "e5d9244e7ff0e4ab7669aa7d73a9326d366b7c22c9f0efcc173bda4487cfe62a",
+  "formula_sha256": "56ea49ea29346ab1ce66593808c271853cbd827327f8df283ac1a96f7202f124",
+  "proof_sha256": "67e467900b913f7d9303a0f123080f3c42d675534736ae2136be358c556f5db1",
+  "rup": {
+    "additions": 130,
+    "ignored_deletions": 0
+  },
+  "proof_bytes": 3125,
+  "guard_sizes": [
+    72,
+    60
+  ],
+  "guard_free_bits": [
+    51,
+    63
+  ],
+  "all_alternative_suppliers_checked": [
+    7865,
+    7865
+  ],
+  "original_first": {
+    "prototype_area": 65,
+    "complete_disc_coronas": 1,
+    "prefixes": [
+      {
+        "level": 0,
+        "shell_copies": 1,
+        "cumulative_copies": 1,
+        "cells": 65,
+        "boundary_edges": 58
+      },
+      {
+        "level": 1,
+        "shell_copies": 6,
+        "cumulative_copies": 7,
+        "cells": 455,
+        "boundary_edges": 162
+      }
+    ],
+    "finite_status": "not established"
+  },
+  "first_only_controls": [
+    {
+      "area": 64,
+      "bad_period_rows": 8,
+      "first_only_assignment_checked": true
+    },
+    {
+      "area": 64,
+      "bad_period_rows": 8,
+      "first_only_assignment_checked": true
+    }
+  ],
+  "periods": [
+    [
+      22,
+      6
+    ],
+    [
+      -6,
+      22
+    ]
+  ],
+  "lattice_index": 520,
+  "period_copies": 8,
+  "consequent_area": 65,
+  "scope": "Simple S in the stated123-site envelope, prescribed packed disc first prefix/root surround, and a complete arbitrary-motion second surround; second prefix may have holes. No statement for other first motions or a global finite Heesch record.",
+  "damaged_cases": [
+    {
+      "case": "changed first physical motion",
+      "rejected": true,
+      "reason": "independent first-stage basis differs"
+    },
+    {
+      "case": "missing separator-region cell",
+      "rejected": true,
+      "reason": "invalid separator region"
+    },
+    {
+      "case": "false connected-separator endpoint supplier",
+      "rejected": true,
+      "reason": "endpoint supplier differs"
+    },
+    {
+      "case": "guard1: missing potential source site",
+      "rejected": true,
+      "reason": "incomplete source envelope"
+    },
+    {
+      "case": "guard1: missing terminal contradiction",
+      "rejected": true,
+      "reason": "missing unique terminal contradiction"
+    },
+    {
+      "case": "guard1: unlicensed new-copy vertex",
+      "rejected": true,
+      "reason": "unlicensed future-copy vertex obligation"
+    },
+    {
+      "case": "guard1: changed forced physical map",
+      "rejected": true,
+      "reason": "possible alternative supplier survives the guard"
+    },
+    {
+      "case": "guard1: changed source-cut direction",
+      "rejected": true,
+      "reason": "cut is not the negation of its source guard"
+    },
+    {
+      "case": "guard1: missing forced source-anchor atom",
+      "rejected": true,
+      "reason": "forced supplier anchor is not selected by the guard"
+    },
+    {
+      "case": "guard2: missing potential source site",
+      "rejected": true,
+      "reason": "incomplete source envelope"
+    },
+    {
+      "case": "guard2: missing terminal contradiction",
+      "rejected": true,
+      "reason": "missing unique terminal contradiction"
+    },
+    {
+      "case": "guard2: unlicensed new-copy vertex",
+      "rejected": true,
+      "reason": "unlicensed future-copy vertex obligation"
+    },
+    {
+      "case": "guard2: changed forced physical map",
+      "rejected": true,
+      "reason": "possible alternative supplier survives the guard"
+    },
+    {
+      "case": "guard2: changed source-cut direction",
+      "rejected": true,
+      "reason": "cut is not the negation of its source guard"
+    },
+    {
+      "case": "guard2: missing forced source-anchor atom",
+      "rejected": true,
+      "reason": "forced supplier anchor is not selected by the guard"
+    },
+    {
+      "case": "removed final empty clause with updated hash",
+      "rejected": true,
+      "reason": "proof must end with an added empty clause"
+    },
+    {
+      "case": "removed both no-next clauses with updated formula",
+      "rejected": true,
+      "reason": "non-RUP step at line 59"
+    }
+  ]
+}
