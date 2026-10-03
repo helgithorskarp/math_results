@@ -1,0 +1,81 @@
+{
+  "agent": "six-downset-2",
+  "role": "researcher",
+  "checked_at": "2026-10-03T15:19:19.013094+00:00",
+  "source_status": "ordinary author proof; independently unreviewed; real bridges unformalized",
+  "expected_summary_matches_all_fields_both_modes": true,
+  "whole_math_record_bytes_equal": true,
+  "record_bytes": 543072,
+  "record_sha256": "b917b529163fe27a0a99571162fba3c0d5be57005ddf1ca859a78411d645592d",
+  "algorithms": [
+    "integer Bareiss",
+    "rational Schur"
+  ],
+  "all_raw_original_full_endpoints": 28,
+  "all_original_floor_tests": 28,
+  "complete_real_degrees": 14,
+  "rejected_semantic_damages_each_mode": 13,
+  "runs": [
+    {
+      "python": "3.12.14",
+      "isolated": 1,
+      "optimize": 0,
+      "native_threads": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "seconds": 17.13850392191671,
+      "peak_rss_kib": 23096,
+      "guard_seconds": 45,
+      "summary_compared_after_math": true,
+      "verifier_check_argument_used": false
+    },
+    {
+      "python": "3.12.14",
+      "isolated": 1,
+      "optimize": 1,
+      "native_threads": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "seconds": 16.748066833009943,
+      "peak_rss_kib": 24744,
+      "guard_seconds": 45,
+      "summary_compared_after_math": true,
+      "verifier_check_argument_used": true
+    }
+  ],
+  "source_sha256": {
+    "verify.py": "51d2f697170614a30f16dc2d896609d217ad120fe6b37ec4cabe090ed26e341a",
+    "model.py": "3a5e7f841699a27f674cf4c09560d80d86d52cb3443a6242485da503ca824974",
+    "core_check.py": "d3d90a1994746ec3b7440a9faacdc494c9c4f7714634bae9e6ed0bd7c7a408cc",
+    "original_forms.py": "75fc444dce9dbc675d1f56eb5d09734247bcfaeba601c2d826eec6a90594d9b4",
+    "audit.py": "f7f0fd90ed440c816324f27859d8dcd52a5698f0d19d0964a0b7a29e824beafc",
+    "CERTIFICATE.json": "72bc0463be7a583189eed9c40366323935162e941296a0f37c5a6d9b31fd88ba",
+    "credited/affine.py": "9cdcaa2f616d2e6b63f76cdd5dda4d9d633845da34f8d4ee2646d822deea59b8",
+    "credited/model.py": "9189b8b427be0a51bf46f7c6d338159b266d47ce4242dea03c2ee54888c63b10",
+    "credited/exact.py": "a22f9a4c4a569aed0321c7934a66883d2575ef146bbdba43708023bfd09b17d2",
+    "credited/matrices.py": "4541b4b7669ce706e0142339d614ebb36b46214f137abe2475a9d9ad99fd9588"
+  },
+  "private_public_linkage": {
+    "complete_values_table_empty_equal": true,
+    "all_endpoint_raw_original_metric_entries_compared": 20712,
+    "private_records_are_not_runtime_inputs": true
+  },
+  "prior_full_rref_guard_retained": true,
+  "star_validation": "separate full original triangular system and every table entry on38 affine probes",
+  "cpu_scope": 1,
+  "memory_scope_bytes": 2147483648,
+  "serial_mathematical_children": 1,
+  "no_resource_escalation": true,
+  "operational_failure_is_mathematical_nonexistence": false,
+  "bulky_records_excluded": true
+}
