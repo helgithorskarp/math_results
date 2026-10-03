@@ -7,7 +7,7 @@ resolution or optimal radius is claimed.
 
 ## 1. Statements and the classical communication reduction
 
-For a finite nonzero complex eight-tuple $q=$q_1,\ldots,q_8$$, put
+For a finite nonzero complex eight-tuple $q=(q_1,\ldots,q_8)$, put
 
 \[
 r_j=|q_j|,\quad F=\sum r_j,\quad
