@@ -1,0 +1,170 @@
+{
+  "actual_author": "six-tammes-1",
+  "role": "researcher",
+  "Python": "3.12.14",
+  "status": "complete",
+  "jobs": [
+    {
+      "mode": "normal",
+      "script": "check.py",
+      "arguments": [
+        "--emit"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.253513725940138,
+      "peak_RSS_KiB": 22484,
+      "stdout_bytes": 396,
+      "stdout_sha256": "59152c4aab30b2f730b06cbbb62947697e19d5f47cd659243c44b3df58bdf5d1"
+    },
+    {
+      "mode": "normal",
+      "script": "audit.py",
+      "arguments": [
+        "--emit"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.1541107239900157,
+      "peak_RSS_KiB": 22724,
+      "stdout_bytes": 396,
+      "stdout_sha256": "59152c4aab30b2f730b06cbbb62947697e19d5f47cd659243c44b3df58bdf5d1"
+    },
+    {
+      "mode": "normal",
+      "script": "check.py",
+      "arguments": [],
+      "exit_code": 0,
+      "wall_seconds": 4.28300845308695,
+      "peak_RSS_KiB": 22536,
+      "stdout_bytes": 396,
+      "stdout_sha256": "59152c4aab30b2f730b06cbbb62947697e19d5f47cd659243c44b3df58bdf5d1"
+    },
+    {
+      "mode": "normal",
+      "script": "audit.py",
+      "arguments": [],
+      "exit_code": 0,
+      "wall_seconds": 3.1238466210197657,
+      "peak_RSS_KiB": 22820,
+      "stdout_bytes": 396,
+      "stdout_sha256": "59152c4aab30b2f730b06cbbb62947697e19d5f47cd659243c44b3df58bdf5d1"
+    },
+    {
+      "mode": "normal",
+      "script": "controls.py",
+      "arguments": [],
+      "exit_code": 0,
+      "wall_seconds": 11.417744857026264,
+      "peak_RSS_KiB": 27664,
+      "stdout_bytes": 1010,
+      "stdout_sha256": "696ffb0b9cc0776c695932d872354c7224eaa6c7fc7ce7487f8453e92cce1c56"
+    },
+    {
+      "mode": "optimized",
+      "script": "check.py",
+      "arguments": [
+        "--emit"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.7187927439808846,
+      "peak_RSS_KiB": 26380,
+      "stdout_bytes": 396,
+      "stdout_sha256": "59152c4aab30b2f730b06cbbb62947697e19d5f47cd659243c44b3df58bdf5d1"
+    },
+    {
+      "mode": "optimized",
+      "script": "audit.py",
+      "arguments": [
+        "--emit"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.3575131610268727,
+      "peak_RSS_KiB": 26388,
+      "stdout_bytes": 396,
+      "stdout_sha256": "59152c4aab30b2f730b06cbbb62947697e19d5f47cd659243c44b3df58bdf5d1"
+    },
+    {
+      "mode": "optimized",
+      "script": "check.py",
+      "arguments": [],
+      "exit_code": 0,
+      "wall_seconds": 4.180180786061101,
+      "peak_RSS_KiB": 26436,
+      "stdout_bytes": 396,
+      "stdout_sha256": "59152c4aab30b2f730b06cbbb62947697e19d5f47cd659243c44b3df58bdf5d1"
+    },
+    {
+      "mode": "optimized",
+      "script": "audit.py",
+      "arguments": [],
+      "exit_code": 0,
+      "wall_seconds": 3.2139069109689444,
+      "peak_RSS_KiB": 26540,
+      "stdout_bytes": 396,
+      "stdout_sha256": "59152c4aab30b2f730b06cbbb62947697e19d5f47cd659243c44b3df58bdf5d1"
+    },
+    {
+      "mode": "optimized",
+      "script": "controls.py",
+      "arguments": [],
+      "exit_code": 0,
+      "wall_seconds": 7.668099308968522,
+      "peak_RSS_KiB": 30456,
+      "stdout_bytes": 1010,
+      "stdout_sha256": "696ffb0b9cc0776c695932d872354c7224eaa6c7fc7ce7487f8453e92cce1c56"
+    }
+  ],
+  "all_math_jobs_serial": true,
+  "native_threads": 1,
+  "child_timeout_seconds": 55,
+  "unchanged_CPU_scope": 1,
+  "unchanged_memory_scope_GiB": 2,
+  "independent_researcher_review": false,
+  "formalization": false,
+  "controls": {
+    "arithmetic_controls": [
+      "rank-three-actual-Gram",
+      "rank-four-rejected",
+      "Bareiss-row-exchange",
+      "in-band-root-unresolved",
+      "root-free-common-divisor",
+      "known-incumbent-change-of-variable"
+    ],
+    "damages": [
+      "widen-closed-cosine-band",
+      "open-r-band-endpoint",
+      "omit-complete-contact-hypothesis",
+      "alias-two-core-corners",
+      "omit-a-rooted-shape",
+      "omit-a-parent-order",
+      "erase-first-reuse-probe",
+      "alter-first-reuse-polynomial-binding",
+      "erase-packing-rejection",
+      "allow-triangle-across-actual-P",
+      "drop-one-shared-ear-assignment",
+      "allow-two-shared-ears",
+      "omit-grid-path",
+      "delete-extra-contact-edge",
+      "alias-nontriangle-corner",
+      "erase-degree-or-convexity-screen",
+      "reverse-root-free-equation-sign",
+      "replace-gcd-with-zero",
+      "change-four-vector-Gram-binding",
+      "change-incumbent-polynomial",
+      "admit-critical-map-as-strict-improvement",
+      "omit-full-band-map",
+      "boolean-for-corner-integer",
+      "float-for-count-integer",
+      "unknown-certificate-field"
+    ],
+    "semantic_damages_rejected_by_both": 25,
+    "status": "complete",
+    "valid_representations_accepted_by_both": 3
+  },
+  "checked_UTC": "2026-10-03T02:19:07.169990+00:00",
+  "certificate_bytes": 43286,
+  "certificate_sha256": "a623b07538a6f09b01496d6f411b4edc0ad24d2d758a1128c06a1d9be3ee5187",
+  "both_normal_optimized_generated_certificates_equal_entire_included_bytes": true,
+  "whole_normal_optimized_outputs_equal": true,
+  "maximum_job_seconds": 11.417744857026264,
+  "maximum_child_RSS_KiB": 30456
+}
