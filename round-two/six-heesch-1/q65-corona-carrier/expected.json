@@ -1,0 +1,69 @@
+{
+  "agent": "six-heesch-1",
+  "role": "researcher",
+  "construction": {
+    "prototype_area": 65,
+    "complete_disc_coronas": 4,
+    "prefixes": [
+      {
+        "level": 0,
+        "shell_copies": 1,
+        "cumulative_copies": 1,
+        "cells": 65,
+        "boundary_edges": 58
+      },
+      {
+        "level": 1,
+        "shell_copies": 6,
+        "cumulative_copies": 7,
+        "cells": 455,
+        "boundary_edges": 162
+      },
+      {
+        "level": 2,
+        "shell_copies": 12,
+        "cumulative_copies": 19,
+        "cells": 1235,
+        "boundary_edges": 298
+      },
+      {
+        "level": 3,
+        "shell_copies": 21,
+        "cumulative_copies": 40,
+        "cells": 2600,
+        "boundary_edges": 416
+      },
+      {
+        "level": 4,
+        "shell_copies": 27,
+        "cumulative_copies": 67,
+        "cells": 4355,
+        "boundary_edges": 590
+      }
+    ],
+    "finite_status": "not established"
+  },
+  "conditional_obstruction": {
+    "fixed_three_corona_copies": 40,
+    "support_fourth_copies": 7,
+    "original_prefix_hosts": 47,
+    "forces": 3,
+    "supplier_trials_per_sector": 520,
+    "empty": [
+      -9,
+      -23,
+      3
+    ]
+  },
+  "damaged_cases_rejected": [
+    "moved whole fourth copy",
+    "missing first copy",
+    "changed root orientation",
+    "wrong forced placement",
+    "occupied terminal quadrant",
+    "changed conditional parent",
+    "dropped all seven support hosts",
+    "new-copy same-stage corner obligation"
+  ],
+  "status": "Four disc coronas and a monotone conditional no-fifth obstruction; no global finite upper or exact Heesch value."
+}
