@@ -1,0 +1,321 @@
+{
+  "agent": "six-sendov-1",
+  "checked_at": "2026-10-03T13:29:19.356222+00:00",
+  "formalized": false,
+  "full_typed_positives": [
+    "local-normal",
+    "cold-normal",
+    "local-optimized",
+    "cold-optimized"
+  ],
+  "guard_seconds": 45,
+  "independent_review": false,
+  "interpreter": "CPython standard library",
+  "max_child_rss_kib": 26412,
+  "max_child_seconds": 1.7620188350556418,
+  "native_threads": {
+    "BLIS_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "NUMEXPR_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1,
+    "VECLIB_MAXIMUM_THREADS": 1
+  },
+  "omission": "Private verbose pilot coefficient corpora; ALL defining inputs and exact whole-case comparisons regenerate from source",
+  "omitted_large_artifact": true,
+  "python": "3.12.14",
+  "record_sha256": "d778c4fa9fe827f26b8c91107c5db507dcdb6528d7b62e0bbbc196df54df7040",
+  "rejections": [
+    "math-last-polar-coefficient-normal",
+    "math-drop-polar-series-normal",
+    "math-newton-eighth-normal",
+    "math-origin-drop-eighth-normal",
+    "math-origin-odd-root-normal",
+    "math-uncouple-energy-normal",
+    "math-omit-leaf-normal",
+    "math-radial-lower-cap-normal",
+    "math-radial-coefficient-normal",
+    "math-centered-third-normal",
+    "math-last-polar-coefficient-optimized",
+    "math-drop-polar-series-optimized",
+    "math-newton-eighth-optimized",
+    "math-origin-drop-eighth-optimized",
+    "math-origin-odd-root-optimized",
+    "math-uncouple-energy-optimized",
+    "math-omit-leaf-optimized",
+    "math-radial-lower-cap-optimized",
+    "math-radial-coefficient-optimized",
+    "math-centered-third-optimized",
+    "fixture-wrong-polar-integral-normal",
+    "fixture-wrong-polar-integral-optimized",
+    "fixture-missing-eighth-normal",
+    "fixture-missing-eighth-optimized",
+    "fixture-wrong-full-fingerprint-normal",
+    "fixture-wrong-full-fingerprint-optimized",
+    "fixture-wrong-type-normal",
+    "fixture-wrong-type-optimized",
+    "fixture-extra-key-normal",
+    "fixture-extra-key-optimized",
+    "source-pin-normal",
+    "source-pin-optimized"
+  ],
+  "resource_scope": "unchanged one CPU/two GiB; no escalation",
+  "result": "PASS",
+  "role": "researcher",
+  "runs": [
+    {
+      "exit_code": 0,
+      "label": "local-normal",
+      "mode": "normal",
+      "positive": true,
+      "seconds": 1.552587380982004
+    },
+    {
+      "exit_code": 0,
+      "label": "cold-normal",
+      "mode": "normal",
+      "positive": true,
+      "seconds": 1.3632610590429977
+    },
+    {
+      "exit_code": 0,
+      "label": "local-optimized",
+      "mode": "optimized",
+      "positive": true,
+      "seconds": 1.5857611489482224
+    },
+    {
+      "exit_code": 0,
+      "label": "cold-optimized",
+      "mode": "optimized",
+      "positive": true,
+      "seconds": 1.5461063570110127
+    },
+    {
+      "exit_code": 1,
+      "label": "math-last-polar-coefficient-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.7967645230237395
+    },
+    {
+      "exit_code": 1,
+      "label": "math-drop-polar-series-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.26135781896300614
+    },
+    {
+      "exit_code": 1,
+      "label": "math-newton-eighth-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.7999073819955811
+    },
+    {
+      "exit_code": 1,
+      "label": "math-origin-drop-eighth-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.8105171789648011
+    },
+    {
+      "exit_code": 1,
+      "label": "math-origin-odd-root-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.8042559780878946
+    },
+    {
+      "exit_code": 1,
+      "label": "math-uncouple-energy-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.8199123449157923
+    },
+    {
+      "exit_code": 1,
+      "label": "math-omit-leaf-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 1.358789685065858
+    },
+    {
+      "exit_code": 1,
+      "label": "math-radial-lower-cap-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.24662561295554042
+    },
+    {
+      "exit_code": 1,
+      "label": "math-radial-coefficient-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.24025575001724064
+    },
+    {
+      "exit_code": 1,
+      "label": "math-centered-third-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.788974778028205
+    },
+    {
+      "exit_code": 1,
+      "label": "math-last-polar-coefficient-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.989256119937636
+    },
+    {
+      "exit_code": 1,
+      "label": "math-drop-polar-series-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.4454861379927024
+    },
+    {
+      "exit_code": 1,
+      "label": "math-newton-eighth-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.9810380630660802
+    },
+    {
+      "exit_code": 1,
+      "label": "math-origin-drop-eighth-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 1.0249047169927508
+    },
+    {
+      "exit_code": 1,
+      "label": "math-origin-odd-root-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 1.0083442239556462
+    },
+    {
+      "exit_code": 1,
+      "label": "math-uncouple-energy-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.9754626119975001
+    },
+    {
+      "exit_code": 1,
+      "label": "math-omit-leaf-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 1.54496015899349
+    },
+    {
+      "exit_code": 1,
+      "label": "math-radial-lower-cap-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.42212778702378273
+    },
+    {
+      "exit_code": 1,
+      "label": "math-radial-coefficient-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.43566720199305564
+    },
+    {
+      "exit_code": 1,
+      "label": "math-centered-third-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.9985207749996334
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-wrong-polar-integral-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 1.39205005497206
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-wrong-polar-integral-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 1.7620188350556418
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-missing-eighth-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 1.369399440009147
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-missing-eighth-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 1.5308866549748927
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-wrong-full-fingerprint-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 1.3422687490237877
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-wrong-full-fingerprint-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 1.560728098032996
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-wrong-type-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 1.3506935749901459
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-wrong-type-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 1.5759792670141906
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-extra-key-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 1.3388125239871442
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-extra-key-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 1.5725449350429699
+    },
+    {
+      "exit_code": 1,
+      "label": "source-pin-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.06748905696440488
+    },
+    {
+      "exit_code": 1,
+      "label": "source-pin-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.25285997800529003
+    }
+  ],
+  "serial": true,
+  "source_unchanged": true
+}
