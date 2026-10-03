@@ -1,0 +1,144 @@
+{
+  "agent": "six-downset-3",
+  "copied_generic_routines": {
+    "bytes": 16367,
+    "excerpts": [
+      {
+        "exact_excerpt_sha256": "92ebccd0877fd905d45e0b9176ebd9bc80e365cc2cc87ae2816e63159335c3b9",
+        "first_line": 17,
+        "function": "indicator",
+        "last_line": 18
+      },
+      {
+        "exact_excerpt_sha256": "bd99340580be2ddbfbabecb20b8ebd1304b0f6b8fa533b3808fce19d370fadfa",
+        "first_line": 21,
+        "function": "lower_dual",
+        "last_line": 44
+      },
+      {
+        "exact_excerpt_sha256": "3e069d3b5bfb43828b46e0a06fc732073a18acd307a39dd11766825251814998",
+        "first_line": 63,
+        "function": "orientation",
+        "last_line": 91
+      },
+      {
+        "exact_excerpt_sha256": "2cc50fffc774afb3cd94997f84b2f0c9b93cd36ac55600af895155a36db89fb9",
+        "first_line": 94,
+        "function": "literal_checks",
+        "last_line": 138
+      },
+      {
+        "exact_excerpt_sha256": "aafd52ce76ee76c7a73c8f8a70da424f49cffdeb205258a515908da5238e4b9a",
+        "first_line": 141,
+        "function": "psd_record",
+        "last_line": 146
+      },
+      {
+        "exact_excerpt_sha256": "cc463baa842c64e6f96373b6a6f7569d0273c621fbb6ccb82fb699ff3997b467",
+        "first_line": 149,
+        "function": "check_lift",
+        "last_line": 173
+      }
+    ],
+    "path": "round-two/six-downset-3/core-edge-five-cutoff/verify.py",
+    "sha256": "2adab2295b9ce34359d8bbec79c30932a51772e004e7400f41f9f48d252ec678"
+  },
+  "copied_symbolic_helper": {
+    "bytes": 2983,
+    "path": "round-two/six-downset-3/core-edge-five-cutoff/symbolic.py",
+    "sha256": "b4e72f9a30a87e7d4fbd23c5fc64ae23942f33d790a309b96e2e51d11b080d94"
+  },
+  "credited_parent_lemma": "9766/0",
+  "credited_parent_source_commit": "4b32748c4a06e7e311c95d8a40646bc85808921a",
+  "discovery_CAS_solver_grid_records_are_not_runtime_or_proof_inputs": true,
+  "original_coefficients_are_checked_on_every_member_pair": true,
+  "proof_dependencies": [
+    {
+      "bytes": 13588,
+      "current_full_historical_bytes_match": true,
+      "directory": "integer-deletion-cutoff",
+      "path": "round-two/six-downset-3/integer-deletion-cutoff/PROOF.md",
+      "sha256": "ebb8584fbcbf97e2736c1644a006396dea57d5262654d71e1dc5d52460321317",
+      "source_commit": "90b3bad1b7fb61a97268e4bc4f8d29d2bf3bc026"
+    },
+    {
+      "bytes": 21649,
+      "current_full_historical_bytes_match": true,
+      "directory": "triangle-majority",
+      "path": "round-two/six-downset-3/triangle-majority/PROOF.md",
+      "sha256": "dca7ec23aa82800c0096f1cfa80051ab266c966339d30006b4a63c75f4535ac4",
+      "source_commit": "99d63aa2f085127a670ae375b19a68b89e184074"
+    },
+    {
+      "bytes": 23519,
+      "current_full_historical_bytes_match": true,
+      "directory": "two-deletion-kappa",
+      "path": "round-two/six-downset-3/two-deletion-kappa/PROOF.md",
+      "sha256": "33ea3c453e9a4315c9340b1facfda1582143af48c269290dd44da715155facd0",
+      "source_commit": "21bd374fef20b19b8a07f12e0bfc0e43d4f2d3e7"
+    },
+    {
+      "bytes": 21453,
+      "current_full_historical_bytes_match": true,
+      "directory": "adaptive-deletions",
+      "path": "round-two/six-downset-3/adaptive-deletions/PROOF.md",
+      "sha256": "0bef4bec08f928a9e3fcc1767a0a2f72ceb77d076b52ad98841957045eb64820",
+      "source_commit": "6df5f969a5140ec9a7b70973a34cf10257ec5f74"
+    },
+    {
+      "bytes": 18585,
+      "current_full_historical_bytes_match": true,
+      "directory": "small-deletion-boundary",
+      "path": "round-two/six-downset-3/small-deletion-boundary/PROOF.md",
+      "sha256": "12e4077a0084f024a04a2f3a4399e2a91d49aee5e38fc5a284d716da3a1fe14d",
+      "source_commit": "41a580c695e0b0d38858af543a8fabcf880631ae"
+    },
+    {
+      "bytes": 22434,
+      "current_full_historical_bytes_match": true,
+      "directory": "five-deletion-boundary",
+      "path": "round-two/six-downset-3/five-deletion-boundary/PROOF.md",
+      "sha256": "76805c51f5cf2983e80b630d13aff16280dca196f1976d492395a7afacf4357d",
+      "source_commit": "6e029f9f88a784f54c562dc3e8c28536bfb1e08c"
+    },
+    {
+      "bytes": 13150,
+      "current_full_historical_bytes_match": true,
+      "directory": "remaining-deletion-orders",
+      "path": "round-two/six-downset-3/remaining-deletion-orders/PROOF.md",
+      "sha256": "e104840827454e77f962775fbefa4bb55b9eb99a2dcab7095e87c5f0faf6cd07",
+      "source_commit": "cf8b5d93925629be15d584c5e116370047be8a7d"
+    },
+    {
+      "bytes": 12876,
+      "current_full_historical_bytes_match": true,
+      "directory": "bc-exception-certificate",
+      "path": "round-two/six-downset-3/bc-exception-certificate/PROOF.md",
+      "sha256": "8561908bffd4eb356dbb6ed4e176131563e0f3c4e03fd40791c735be1a7a098d",
+      "source_commit": "a242e5ff80f0df09b14d325c101e57bb18b3fdc3"
+    },
+    {
+      "bytes": 18695,
+      "current_full_historical_bytes_match": true,
+      "directory": "core-edge-five-cutoff",
+      "path": "round-two/six-downset-3/core-edge-five-cutoff/PROOF.md",
+      "sha256": "1bab739c428e9fc58fb755ea266c05c21743316b228fb067b31bfddaceb3532c",
+      "source_commit": "4b32748c4a06e7e311c95d8a40646bc85808921a"
+    },
+    {
+      "bytes": 16498,
+      "current_full_historical_bytes_match": true,
+      "directory": "parent-independent-review",
+      "path": "round-two/six-reviewer-3/core-edge-cutoff-audit/REVIEW.md",
+      "scope": "9807 scoped parent audit only, no verdict on this extension",
+      "sha256": "ed9f02a61d9b59cd5480f7159dd2ca83a668aa9cee6c1d7eb8c64d6b309dc2bd",
+      "source_commit": "1af289953362f1e263a231b71894637af6e37716"
+    }
+  ],
+  "role": "researcher",
+  "runtime_external_inputs_only": [
+    "small-deletion-boundary/literal.py",
+    "triangle-majority/exact.py"
+  ],
+  "two_algorithms_share_author_and_table_not_independent_review": true
+}
