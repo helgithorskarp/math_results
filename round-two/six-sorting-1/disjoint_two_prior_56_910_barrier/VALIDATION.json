@@ -1,0 +1,1844 @@
+{
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "status": "COMPLETE_COLD_SOURCE_ONLY_EXECUTION",
+  "command": "python3 run.py",
+  "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "standard_library_only": true,
+  "cache_free_this_execution": true,
+  "source_manifest_sha256": "aaf8b0acfc3a1d7cb0ef3653678688be5406e073af519c6c9a65f3bb6c28edd0",
+  "certificate_finite_sha256": "8128b1865b846acb7fa6c246a565801c24edf2354e7766c25e73efb301ce8f66",
+  "wall_seconds": 515.5089632009622,
+  "top_level_serial_stages": [
+    {
+      "script": "run_preparations.py",
+      "arguments": [],
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 16.026411563972943
+    },
+    {
+      "script": "make_bindings.py",
+      "arguments": [],
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 0.5012865460012108
+    },
+    {
+      "script": "run_reserve.py",
+      "arguments": [],
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 8.013336178963073
+    },
+    {
+      "script": "run_all.py",
+      "arguments": [],
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 472.0169857169967
+    },
+    {
+      "script": "verify_transfer.py",
+      "arguments": [],
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 0.5015511850360781
+    },
+    {
+      "script": "verify_transfer.py",
+      "arguments": [],
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 0.5012942210305482
+    },
+    {
+      "script": "check_controls.py",
+      "arguments": [
+        "work/semantic-controls-scratch"
+      ],
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 11.017282665940002
+    },
+    {
+      "script": "check_extended_controls.py",
+      "arguments": [
+        "work/extended-controls-scratch"
+      ],
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 3.004834352992475
+    },
+    {
+      "script": "check_nested_controls.py",
+      "arguments": [
+        "work/nested-controls-scratch"
+      ],
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 2.5040322149870917
+    }
+  ],
+  "retained_actual_mathematical_stage_count": 146,
+  "retained_actual_mathematical_stages": [
+    {
+      "stage_file": "extended-stages-00512-00640.json",
+      "script": "select_extended.py",
+      "args": [
+        512,
+        640
+      ],
+      "optimized": false,
+      "seconds": 0.3341340000042692,
+      "returncode": 0
+    },
+    {
+      "stage_file": "extended-stages-00512-00640.json",
+      "script": "verify_extended.py",
+      "args": [
+        512,
+        640
+      ],
+      "optimized": false,
+      "seconds": 0.2497014959808439,
+      "returncode": 0
+    },
+    {
+      "stage_file": "extended-stages-00512-00640.json",
+      "script": "verify_extended.py",
+      "args": [
+        512,
+        640
+      ],
+      "optimized": true,
+      "seconds": 0.40163661597762257,
+      "returncode": 0
+    },
+    {
+      "stage_file": "extended-stages-01408-01536.json",
+      "script": "select_extended.py",
+      "args": [
+        1408,
+        1536
+      ],
+      "optimized": false,
+      "seconds": 0.8684618639526889,
+      "returncode": 0
+    },
+    {
+      "stage_file": "extended-stages-01408-01536.json",
+      "script": "verify_extended.py",
+      "args": [
+        1408,
+        1536
+      ],
+      "optimized": false,
+      "seconds": 0.4660246609710157,
+      "returncode": 0
+    },
+    {
+      "stage_file": "extended-stages-01408-01536.json",
+      "script": "verify_extended.py",
+      "args": [
+        1408,
+        1536
+      ],
+      "optimized": true,
+      "seconds": 0.7406234140507877,
+      "returncode": 0
+    },
+    {
+      "stage_file": "extended-stages-01536-01594.json",
+      "script": "select_extended.py",
+      "args": [
+        1536,
+        1594
+      ],
+      "optimized": false,
+      "seconds": 9.727805592003278,
+      "returncode": 0
+    },
+    {
+      "stage_file": "extended-stages-01536-01594.json",
+      "script": "verify_extended.py",
+      "args": [
+        1536,
+        1594
+      ],
+      "optimized": false,
+      "seconds": 1.3662485990207642,
+      "returncode": 0
+    },
+    {
+      "stage_file": "extended-stages-01536-01594.json",
+      "script": "verify_extended.py",
+      "args": [
+        1536,
+        1594
+      ],
+      "optimized": true,
+      "seconds": 1.486701740999706,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00000-00128.json",
+      "script": "fronts.py",
+      "args": [
+        3,
+        0,
+        128
+      ],
+      "optimized": false,
+      "seconds": 1.1246991739608347,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00000-00128.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        0,
+        128
+      ],
+      "optimized": false,
+      "seconds": 0.9293242560233921,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00000-00128.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        0,
+        128
+      ],
+      "optimized": true,
+      "seconds": 0.9872483720537275,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00128-00256.json",
+      "script": "fronts.py",
+      "args": [
+        3,
+        128,
+        256
+      ],
+      "optimized": false,
+      "seconds": 1.1454405199037865,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00128-00256.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        128,
+        256
+      ],
+      "optimized": false,
+      "seconds": 0.9312417811015621,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00128-00256.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        128,
+        256
+      ],
+      "optimized": true,
+      "seconds": 1.0568556259386241,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00256-00384.json",
+      "script": "fronts.py",
+      "args": [
+        3,
+        256,
+        384
+      ],
+      "optimized": false,
+      "seconds": 1.2304050249513239,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00256-00384.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        256,
+        384
+      ],
+      "optimized": false,
+      "seconds": 0.9992256280966103,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00256-00384.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        256,
+        384
+      ],
+      "optimized": true,
+      "seconds": 1.067018469912,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00384-00512.json",
+      "script": "fronts.py",
+      "args": [
+        3,
+        384,
+        512
+      ],
+      "optimized": false,
+      "seconds": 1.1544089709641412,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00384-00512.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        384,
+        512
+      ],
+      "optimized": false,
+      "seconds": 0.8937049809610471,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00384-00512.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        384,
+        512
+      ],
+      "optimized": true,
+      "seconds": 1.048592068022117,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00512-00640.json",
+      "script": "fronts.py",
+      "args": [
+        3,
+        512,
+        640
+      ],
+      "optimized": false,
+      "seconds": 1.1402625000337139,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00512-00640.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        512,
+        640
+      ],
+      "optimized": false,
+      "seconds": 0.8883284090552479,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00512-00640.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        512,
+        640
+      ],
+      "optimized": true,
+      "seconds": 0.9911324989516288,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00640-00768.json",
+      "script": "fronts.py",
+      "args": [
+        3,
+        640,
+        768
+      ],
+      "optimized": false,
+      "seconds": 1.2270990159595385,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00640-00768.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        640,
+        768
+      ],
+      "optimized": false,
+      "seconds": 0.949233719962649,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00640-00768.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        640,
+        768
+      ],
+      "optimized": true,
+      "seconds": 1.0102239419938996,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00768-00896.json",
+      "script": "fronts.py",
+      "args": [
+        3,
+        768,
+        896
+      ],
+      "optimized": false,
+      "seconds": 1.269521298003383,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00768-00896.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        768,
+        896
+      ],
+      "optimized": false,
+      "seconds": 1.1244601219659671,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00768-00896.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        768,
+        896
+      ],
+      "optimized": true,
+      "seconds": 1.107308236998506,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00896-01024.json",
+      "script": "fronts.py",
+      "args": [
+        3,
+        896,
+        1024
+      ],
+      "optimized": false,
+      "seconds": 1.1724012619815767,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00896-01024.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        896,
+        1024
+      ],
+      "optimized": false,
+      "seconds": 0.8625854360871017,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-00896-01024.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        896,
+        1024
+      ],
+      "optimized": true,
+      "seconds": 1.0054085119627416,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-01024-01152.json",
+      "script": "fronts.py",
+      "args": [
+        3,
+        1024,
+        1152
+      ],
+      "optimized": false,
+      "seconds": 1.9382138630608097,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-01024-01152.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        1024,
+        1152
+      ],
+      "optimized": false,
+      "seconds": 1.4826086800312623,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-01024-01152.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        1024,
+        1152
+      ],
+      "optimized": true,
+      "seconds": 2.6526251749601215,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-01152-01280.json",
+      "script": "fronts.py",
+      "args": [
+        3,
+        1152,
+        1280
+      ],
+      "optimized": false,
+      "seconds": 2.050196413998492,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-01152-01280.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        1152,
+        1280
+      ],
+      "optimized": false,
+      "seconds": 1.4743590059224516,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-01152-01280.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        1152,
+        1280
+      ],
+      "optimized": true,
+      "seconds": 1.6341131679946557,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-01280-01408.json",
+      "script": "fronts.py",
+      "args": [
+        3,
+        1280,
+        1408
+      ],
+      "optimized": false,
+      "seconds": 2.0297922119498253,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-01280-01408.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        1280,
+        1408
+      ],
+      "optimized": false,
+      "seconds": 1.456392606953159,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-01280-01408.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        1280,
+        1408
+      ],
+      "optimized": true,
+      "seconds": 1.6142174090491608,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-01408-01536.json",
+      "script": "fronts.py",
+      "args": [
+        3,
+        1408,
+        1536
+      ],
+      "optimized": false,
+      "seconds": 1.9701557609951124,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-01408-01536.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        1408,
+        1536
+      ],
+      "optimized": false,
+      "seconds": 1.8833437779685482,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-01408-01536.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        1408,
+        1536
+      ],
+      "optimized": true,
+      "seconds": 1.5524897589348257,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-01536-01594.json",
+      "script": "fronts.py",
+      "args": [
+        3,
+        1536,
+        1594
+      ],
+      "optimized": false,
+      "seconds": 0.6119006118969992,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-01536-01594.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        1536,
+        1594
+      ],
+      "optimized": false,
+      "seconds": 0.47836262197233737,
+      "returncode": 0
+    },
+    {
+      "stage_file": "front-stages-01536-01594.json",
+      "script": "verify_fronts.py",
+      "args": [
+        3,
+        1536,
+        1594
+      ],
+      "optimized": true,
+      "seconds": 0.5981331450166181,
+      "returncode": 0
+    },
+    {
+      "stage_file": "nested-stages.json",
+      "script": "generate_nested.py",
+      "args": [],
+      "optimized": false,
+      "seconds": 0.13363073591608554,
+      "returncode": 0
+    },
+    {
+      "stage_file": "nested-stages.json",
+      "script": "verify_nested.py",
+      "args": [],
+      "optimized": false,
+      "seconds": 0.1850202230270952,
+      "returncode": 0
+    },
+    {
+      "stage_file": "nested-stages.json",
+      "script": "verify_nested.py",
+      "args": [],
+      "optimized": true,
+      "seconds": 0.2859321149298921,
+      "returncode": 0
+    },
+    {
+      "stage_file": "preparation-stages.json",
+      "script": "prior/base.py",
+      "args": [],
+      "optimized": false,
+      "seconds": 0.5640110010281205,
+      "returncode": 0
+    },
+    {
+      "stage_file": "preparation-stages.json",
+      "script": "prior/verify_base.py",
+      "args": [],
+      "optimized": false,
+      "seconds": 3.6455217549810186,
+      "returncode": 0
+    },
+    {
+      "stage_file": "preparation-stages.json",
+      "script": "prior/verify_base.py",
+      "args": [],
+      "optimized": true,
+      "seconds": 3.7969621089287102,
+      "returncode": 0
+    },
+    {
+      "stage_file": "preparation-stages.json",
+      "script": "cover.py",
+      "args": [],
+      "optimized": false,
+      "seconds": 0.04541462892666459,
+      "returncode": 0
+    },
+    {
+      "stage_file": "preparation-stages.json",
+      "script": "verify_original.py",
+      "args": [],
+      "optimized": false,
+      "seconds": 1.179956411011517,
+      "returncode": 0
+    },
+    {
+      "stage_file": "preparation-stages.json",
+      "script": "verify_original.py",
+      "args": [],
+      "optimized": true,
+      "seconds": 1.2590452310396358,
+      "returncode": 0
+    },
+    {
+      "stage_file": "preparation-stages.json",
+      "script": "preparations.py",
+      "args": [
+        3,
+        4
+      ],
+      "optimized": false,
+      "seconds": 0.4983501919778064,
+      "returncode": 0
+    },
+    {
+      "stage_file": "preparation-stages.json",
+      "script": "verify_preparations.py",
+      "args": [
+        3,
+        4
+      ],
+      "optimized": false,
+      "seconds": 2.0336272820131853,
+      "returncode": 0
+    },
+    {
+      "stage_file": "preparation-stages.json",
+      "script": "verify_preparations.py",
+      "args": [
+        3,
+        4
+      ],
+      "optimized": true,
+      "seconds": 2.0935602550162002,
+      "returncode": 0
+    },
+    {
+      "stage_file": "preparation-stages.json",
+      "script": "screen_cuts.py",
+      "args": [
+        3,
+        4
+      ],
+      "optimized": false,
+      "seconds": 0.332769503002055,
+      "returncode": 0
+    },
+    {
+      "stage_file": "preparation-stages.json",
+      "script": "verify_cuts.py",
+      "args": [
+        3,
+        4
+      ],
+      "optimized": false,
+      "seconds": 0.16924799897242337,
+      "returncode": 0
+    },
+    {
+      "stage_file": "preparation-stages.json",
+      "script": "verify_cuts.py",
+      "args": [
+        3,
+        4
+      ],
+      "optimized": true,
+      "seconds": 0.26576371397823095,
+      "returncode": 0
+    },
+    {
+      "stage_file": "reserve-stages.json",
+      "script": "reserve_seed.py",
+      "args": [],
+      "optimized": false,
+      "seconds": 0.07151408609934151,
+      "returncode": 0
+    },
+    {
+      "stage_file": "reserve-stages.json",
+      "script": "verify_reserve_seed.py",
+      "args": [],
+      "optimized": false,
+      "seconds": 3.4652377740712836,
+      "returncode": 0
+    },
+    {
+      "stage_file": "reserve-stages.json",
+      "script": "verify_reserve_seed.py",
+      "args": [],
+      "optimized": true,
+      "seconds": 3.1515421610092744,
+      "returncode": 0
+    },
+    {
+      "stage_file": "reserve-stages.json",
+      "script": "reserve_prune.py",
+      "args": [],
+      "optimized": false,
+      "seconds": 0.5584579709684476,
+      "returncode": 0
+    },
+    {
+      "stage_file": "reserve-stages.json",
+      "script": "verify_reserve_preps.py",
+      "args": [],
+      "optimized": false,
+      "seconds": 0.22484022099524736,
+      "returncode": 0
+    },
+    {
+      "stage_file": "reserve-stages.json",
+      "script": "verify_reserve_preps.py",
+      "args": [],
+      "optimized": true,
+      "seconds": 0.324625242035836,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00000-00128.json",
+      "script": "select_witnesses.py",
+      "args": [
+        0,
+        128,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 5.463110622018576,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00000-00128.json",
+      "script": "verify_constant.py",
+      "args": [
+        0,
+        128,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 4.190030611003749,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00000-00128.json",
+      "script": "verify_constant.py",
+      "args": [
+        0,
+        128,
+        0,
+        1000
+      ],
+      "optimized": true,
+      "seconds": 4.515938634052873,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00000-00128.json",
+      "script": "select_witnesses.py",
+      "args": [
+        0,
+        128,
+        1000,
+        1024
+      ],
+      "optimized": false,
+      "seconds": 0.23020755499601364,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00000-00128.json",
+      "script": "verify_constant.py",
+      "args": [
+        0,
+        128,
+        1000,
+        1024
+      ],
+      "optimized": false,
+      "seconds": 0.19393631594721228,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00000-00128.json",
+      "script": "verify_constant.py",
+      "args": [
+        0,
+        128,
+        1000,
+        1024
+      ],
+      "optimized": true,
+      "seconds": 0.2908649379387498,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00128-00256.json",
+      "script": "select_witnesses.py",
+      "args": [
+        128,
+        256,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 5.5132439830340445,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00128-00256.json",
+      "script": "verify_constant.py",
+      "args": [
+        128,
+        256,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 4.154022061033174,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00128-00256.json",
+      "script": "verify_constant.py",
+      "args": [
+        128,
+        256,
+        0,
+        1000
+      ],
+      "optimized": true,
+      "seconds": 4.2842347010737285,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00128-00256.json",
+      "script": "select_witnesses.py",
+      "args": [
+        128,
+        256,
+        1000,
+        1068
+      ],
+      "optimized": false,
+      "seconds": 0.46627798094414175,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00128-00256.json",
+      "script": "verify_constant.py",
+      "args": [
+        128,
+        256,
+        1000,
+        1068
+      ],
+      "optimized": false,
+      "seconds": 0.3978878790512681,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00128-00256.json",
+      "script": "verify_constant.py",
+      "args": [
+        128,
+        256,
+        1000,
+        1068
+      ],
+      "optimized": true,
+      "seconds": 0.49497582006733865,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00256-00384.json",
+      "script": "select_witnesses.py",
+      "args": [
+        256,
+        384,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 5.503892257926054,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00256-00384.json",
+      "script": "verify_constant.py",
+      "args": [
+        256,
+        384,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 6.050317978020757,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00256-00384.json",
+      "script": "verify_constant.py",
+      "args": [
+        256,
+        384,
+        0,
+        1000
+      ],
+      "optimized": true,
+      "seconds": 6.170796450925991,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00256-00384.json",
+      "script": "select_witnesses.py",
+      "args": [
+        256,
+        384,
+        1000,
+        1198
+      ],
+      "optimized": false,
+      "seconds": 1.1564147779718041,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00256-00384.json",
+      "script": "verify_constant.py",
+      "args": [
+        256,
+        384,
+        1000,
+        1198
+      ],
+      "optimized": false,
+      "seconds": 1.704343446996063,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00256-00384.json",
+      "script": "verify_constant.py",
+      "args": [
+        256,
+        384,
+        1000,
+        1198
+      ],
+      "optimized": true,
+      "seconds": 1.8520584489451721,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00384-00512.json",
+      "script": "select_witnesses.py",
+      "args": [
+        384,
+        512,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 5.851108039030805,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00384-00512.json",
+      "script": "verify_constant.py",
+      "args": [
+        384,
+        512,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 14.428372540976852,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00384-00512.json",
+      "script": "verify_constant.py",
+      "args": [
+        384,
+        512,
+        0,
+        1000
+      ],
+      "optimized": true,
+      "seconds": 18.203962770989165,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00384-00512.json",
+      "script": "select_witnesses.py",
+      "args": [
+        384,
+        512,
+        1000,
+        1070
+      ],
+      "optimized": false,
+      "seconds": 0.9310815329663455,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00384-00512.json",
+      "script": "verify_constant.py",
+      "args": [
+        384,
+        512,
+        1000,
+        1070
+      ],
+      "optimized": false,
+      "seconds": 0.6351415829267353,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00384-00512.json",
+      "script": "verify_constant.py",
+      "args": [
+        384,
+        512,
+        1000,
+        1070
+      ],
+      "optimized": true,
+      "seconds": 0.7560222040629014,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00512-00640.json",
+      "script": "select_witnesses.py",
+      "args": [
+        512,
+        640,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 6.019191536935978,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00512-00640.json",
+      "script": "verify_constant.py",
+      "args": [
+        512,
+        640,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 10.197569749085233,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00512-00640.json",
+      "script": "verify_constant.py",
+      "args": [
+        512,
+        640,
+        0,
+        1000
+      ],
+      "optimized": true,
+      "seconds": 9.745905671035871,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00512-00640.json",
+      "script": "select_witnesses.py",
+      "args": [
+        512,
+        640,
+        1000,
+        1074
+      ],
+      "optimized": false,
+      "seconds": 0.5374122409848496,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00512-00640.json",
+      "script": "verify_constant.py",
+      "args": [
+        512,
+        640,
+        1000,
+        1074
+      ],
+      "optimized": false,
+      "seconds": 0.5958047530148178,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00512-00640.json",
+      "script": "verify_constant.py",
+      "args": [
+        512,
+        640,
+        1000,
+        1074
+      ],
+      "optimized": true,
+      "seconds": 0.7216040979837999,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00640-00768.json",
+      "script": "select_witnesses.py",
+      "args": [
+        640,
+        768,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 5.464259410044178,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00640-00768.json",
+      "script": "verify_constant.py",
+      "args": [
+        640,
+        768,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 10.244172864011489,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00640-00768.json",
+      "script": "verify_constant.py",
+      "args": [
+        640,
+        768,
+        0,
+        1000
+      ],
+      "optimized": true,
+      "seconds": 11.332744222949259,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00640-00768.json",
+      "script": "select_witnesses.py",
+      "args": [
+        640,
+        768,
+        1000,
+        1096
+      ],
+      "optimized": false,
+      "seconds": 0.61343194602523,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00640-00768.json",
+      "script": "verify_constant.py",
+      "args": [
+        640,
+        768,
+        1000,
+        1096
+      ],
+      "optimized": false,
+      "seconds": 0.7831411029910669,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00640-00768.json",
+      "script": "verify_constant.py",
+      "args": [
+        640,
+        768,
+        1000,
+        1096
+      ],
+      "optimized": true,
+      "seconds": 0.9287462370702997,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00768-00896.json",
+      "script": "select_witnesses.py",
+      "args": [
+        768,
+        896,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 5.532364685088396,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00768-00896.json",
+      "script": "verify_constant.py",
+      "args": [
+        768,
+        896,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 8.458658721996471,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00768-00896.json",
+      "script": "verify_constant.py",
+      "args": [
+        768,
+        896,
+        0,
+        1000
+      ],
+      "optimized": true,
+      "seconds": 8.566528866067529,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00768-00896.json",
+      "script": "select_witnesses.py",
+      "args": [
+        768,
+        896,
+        1000,
+        1212
+      ],
+      "optimized": false,
+      "seconds": 1.3139588549965993,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00768-00896.json",
+      "script": "verify_constant.py",
+      "args": [
+        768,
+        896,
+        1000,
+        1212
+      ],
+      "optimized": false,
+      "seconds": 2.5584347570547834,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00768-00896.json",
+      "script": "verify_constant.py",
+      "args": [
+        768,
+        896,
+        1000,
+        1212
+      ],
+      "optimized": true,
+      "seconds": 2.5768942120485008,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00896-01024.json",
+      "script": "select_witnesses.py",
+      "args": [
+        896,
+        1024,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 5.463432263932191,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00896-01024.json",
+      "script": "verify_constant.py",
+      "args": [
+        896,
+        1024,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 11.830201594042592,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00896-01024.json",
+      "script": "verify_constant.py",
+      "args": [
+        896,
+        1024,
+        0,
+        1000
+      ],
+      "optimized": true,
+      "seconds": 12.13224463595543,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00896-01024.json",
+      "script": "select_witnesses.py",
+      "args": [
+        896,
+        1024,
+        1000,
+        1066
+      ],
+      "optimized": false,
+      "seconds": 0.45685653400141746,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00896-01024.json",
+      "script": "verify_constant.py",
+      "args": [
+        896,
+        1024,
+        1000,
+        1066
+      ],
+      "optimized": false,
+      "seconds": 1.1714185210876167,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-00896-01024.json",
+      "script": "verify_constant.py",
+      "args": [
+        896,
+        1024,
+        1000,
+        1066
+      ],
+      "optimized": true,
+      "seconds": 1.8514464709442109,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01024-01152.json",
+      "script": "select_witnesses.py",
+      "args": [
+        1024,
+        1152,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 9.576790505903773,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01024-01152.json",
+      "script": "verify_constant.py",
+      "args": [
+        1024,
+        1152,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 12.213719976018183,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01024-01152.json",
+      "script": "verify_constant.py",
+      "args": [
+        1024,
+        1152,
+        0,
+        1000
+      ],
+      "optimized": true,
+      "seconds": 12.583674140041694,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01024-01152.json",
+      "script": "select_witnesses.py",
+      "args": [
+        1024,
+        1152,
+        1000,
+        1032
+      ],
+      "optimized": false,
+      "seconds": 0.4746147079858929,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01024-01152.json",
+      "script": "verify_constant.py",
+      "args": [
+        1024,
+        1152,
+        1000,
+        1032
+      ],
+      "optimized": false,
+      "seconds": 0.8696871959837154,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01024-01152.json",
+      "script": "verify_constant.py",
+      "args": [
+        1024,
+        1152,
+        1000,
+        1032
+      ],
+      "optimized": true,
+      "seconds": 0.930100180907175,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01152-01280.json",
+      "script": "select_witnesses.py",
+      "args": [
+        1152,
+        1280,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 9.272406489006244,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01152-01280.json",
+      "script": "verify_constant.py",
+      "args": [
+        1152,
+        1280,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 16.70441123098135,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01152-01280.json",
+      "script": "verify_constant.py",
+      "args": [
+        1152,
+        1280,
+        0,
+        1000
+      ],
+      "optimized": true,
+      "seconds": 17.035484763095155,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01152-01280.json",
+      "script": "select_witnesses.py",
+      "args": [
+        1152,
+        1280,
+        1000,
+        1066
+      ],
+      "optimized": false,
+      "seconds": 0.8255284379702061,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01152-01280.json",
+      "script": "verify_constant.py",
+      "args": [
+        1152,
+        1280,
+        1000,
+        1066
+      ],
+      "optimized": false,
+      "seconds": 0.8911221640883014,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01152-01280.json",
+      "script": "verify_constant.py",
+      "args": [
+        1152,
+        1280,
+        1000,
+        1066
+      ],
+      "optimized": true,
+      "seconds": 1.063190915971063,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01280-01408.json",
+      "script": "select_witnesses.py",
+      "args": [
+        1280,
+        1408,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 9.037356779910624,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01280-01408.json",
+      "script": "verify_constant.py",
+      "args": [
+        1280,
+        1408,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 11.474946287926286,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01280-01408.json",
+      "script": "verify_constant.py",
+      "args": [
+        1280,
+        1408,
+        0,
+        1000
+      ],
+      "optimized": true,
+      "seconds": 11.878360335016623,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01280-01408.json",
+      "script": "select_witnesses.py",
+      "args": [
+        1280,
+        1408,
+        1000,
+        1098
+      ],
+      "optimized": false,
+      "seconds": 1.071342142065987,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01280-01408.json",
+      "script": "verify_constant.py",
+      "args": [
+        1280,
+        1408,
+        1000,
+        1098
+      ],
+      "optimized": false,
+      "seconds": 1.3738525350345299,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01280-01408.json",
+      "script": "verify_constant.py",
+      "args": [
+        1280,
+        1408,
+        1000,
+        1098
+      ],
+      "optimized": true,
+      "seconds": 1.5616002400638536,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01408-01536.json",
+      "script": "select_witnesses.py",
+      "args": [
+        1408,
+        1536,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 9.332052988000214,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01408-01536.json",
+      "script": "verify_constant.py",
+      "args": [
+        1408,
+        1536,
+        0,
+        1000
+      ],
+      "optimized": false,
+      "seconds": 20.550556975998916,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01408-01536.json",
+      "script": "verify_constant.py",
+      "args": [
+        1408,
+        1536,
+        0,
+        1000
+      ],
+      "optimized": true,
+      "seconds": 20.634733753977343,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01408-01536.json",
+      "script": "select_witnesses.py",
+      "args": [
+        1408,
+        1536,
+        1000,
+        1034
+      ],
+      "optimized": false,
+      "seconds": 0.5806280269753188,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01408-01536.json",
+      "script": "verify_constant.py",
+      "args": [
+        1408,
+        1536,
+        1000,
+        1034
+      ],
+      "optimized": false,
+      "seconds": 1.1024577899370342,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01408-01536.json",
+      "script": "verify_constant.py",
+      "args": [
+        1408,
+        1536,
+        1000,
+        1034
+      ],
+      "optimized": true,
+      "seconds": 1.0560819880338386,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01536-01594.json",
+      "script": "select_witnesses.py",
+      "args": [
+        1536,
+        1594,
+        0,
+        450
+      ],
+      "optimized": false,
+      "seconds": 2.451364608015865,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01536-01594.json",
+      "script": "verify_constant.py",
+      "args": [
+        1536,
+        1594,
+        0,
+        450
+      ],
+      "optimized": false,
+      "seconds": 7.216191623010673,
+      "returncode": 0
+    },
+    {
+      "stage_file": "witness-stages-01536-01594.json",
+      "script": "verify_constant.py",
+      "args": [
+        1536,
+        1594,
+        0,
+        450
+      ],
+      "optimized": true,
+      "seconds": 7.390419480972923,
+      "returncode": 0
+    },
+    {
+      "stage_file": "runner-stages.json",
+      "script": "verify_transfer.py",
+      "arguments": [],
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 0.5015511850360781
+    },
+    {
+      "stage_file": "runner-stages.json",
+      "script": "verify_transfer.py",
+      "arguments": [],
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 0.5012942210305482
+    }
+  ],
+  "native_threads": 1,
+  "maximum_active_mathematical_children": 1,
+  "actual_math_child_guard_seconds": 55,
+  "internal_general_guard_seconds": 45,
+  "preparation_guard_seconds": 5,
+  "preparation_guard_states": 20000,
+  "maximum_top_result_self_RSS_kib": 44472,
+  "maximum_descendant_RSS_kib": 55624,
+  "independent_person_review_claimed": false,
+  "global_size44_exclusion_claimed": false,
+  "receipt_path_display": "Absolute control-directory arguments normalized relative to source root; complete original execution receipts retained locally.",
+  "actual_semantic_rejection_children": 36,
+  "actual_checked_math_children_including_semantic_rejections": 182,
+  "largest_recorded_actual_math_child_seconds": 20.634733753977343
+}
