@@ -1,0 +1,45 @@
+{
+  "utc": "2026-10-03T03:19:00.834959+00:00",
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "not_blind": true,
+  "target_written_proof_and_literal_data_seen": true,
+  "native_code_certificate_counterexample_expected_unopened": true,
+  "files": {
+    "independent.py": "511e4c7abd14e55f6f0b5d0606a3651d1120a2930300f8adc2dc36aca56a4c20",
+    "primary_controls.py": "fc1a967ed0d35ec4c9abda47e3868a5ecde4be4ac6fb5f3751146934130235d6",
+    "PROOF.md": "77b86399f3fb132c6e14c41fe036aca337a72cb3a169b9c3504eabd140fe3462",
+    "input.json": "4d1027933c4a622cc7973529eed57c4e6fbd7e0d3541ade5fad98974a4b22eae",
+    "tiling.json": "c10494283889c97f3cebcdbbf721851a06172234fff06603cc5e2d279754e62d"
+  },
+  "positive_runs": [
+    {
+      "mode": [],
+      "script": "independent.py",
+      "seconds": 0.18698342703282833,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": [],
+      "script": "primary_controls.py",
+      "seconds": 0.27634377498179674,
+      "stdout_sha256": "e51678346935ac22043b53b07c5894a1da51889b3f0f243a2fecd5d9379d5da3"
+    },
+    {
+      "mode": [
+        "-O"
+      ],
+      "script": "independent.py",
+      "seconds": 0.353214033995755,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": [
+        "-O"
+      ],
+      "script": "primary_controls.py",
+      "seconds": 0.4763534680241719,
+      "stdout_sha256": "e51678346935ac22043b53b07c5894a1da51889b3f0f243a2fecd5d9379d5da3"
+    }
+  ]
+}

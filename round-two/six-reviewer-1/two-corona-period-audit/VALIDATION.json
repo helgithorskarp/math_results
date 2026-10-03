@@ -1,0 +1,145 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "serial_runs": [
+    {
+      "name": "reproduce",
+      "optimized": false,
+      "seconds": 3.849396512960084,
+      "stdout_sha256": "d7b30e7587ddbf3ef7bd52ba6de6ca82cd6817fadf848c150798c98ae6021e03",
+      "stdout_bytes": 2447,
+      "returncode": 0
+    },
+    {
+      "name": "controls",
+      "optimized": false,
+      "seconds": 0.2938649320276454,
+      "stdout_sha256": "e51678346935ac22043b53b07c5894a1da51889b3f0f243a2fecd5d9379d5da3",
+      "stdout_bytes": 356,
+      "returncode": 0
+    },
+    {
+      "name": "damages",
+      "optimized": false,
+      "seconds": 0.5198017599759623,
+      "stdout_sha256": "d2124bf9efff0a8fad42d2d911ba9be37551753eaf4c87162eeeaeba083500d8",
+      "stdout_bytes": 363,
+      "returncode": 0
+    },
+    {
+      "name": "native",
+      "optimized": false,
+      "seconds": 0.6476503850426525,
+      "stdout_sha256": "ae547e75a6d42a450cd65bdd461941b3d0d64f1068e171e557f80c52bc5dd69b",
+      "stdout_bytes": 2130,
+      "returncode": 0
+    },
+    {
+      "name": "correspondence",
+      "optimized": false,
+      "seconds": 0.3290778429945931,
+      "stdout_sha256": "b171b3d7a1df7d58f52631f8e967313b76f66e881ff44ffe18b1a7f56e7c02ac",
+      "stdout_bytes": 287,
+      "returncode": 0
+    },
+    {
+      "name": "reproduce",
+      "optimized": true,
+      "seconds": 3.9511290580267087,
+      "stdout_sha256": "d7b30e7587ddbf3ef7bd52ba6de6ca82cd6817fadf848c150798c98ae6021e03",
+      "stdout_bytes": 2447,
+      "returncode": 0
+    },
+    {
+      "name": "controls",
+      "optimized": true,
+      "seconds": 0.46308212191797793,
+      "stdout_sha256": "e51678346935ac22043b53b07c5894a1da51889b3f0f243a2fecd5d9379d5da3",
+      "stdout_bytes": 356,
+      "returncode": 0
+    },
+    {
+      "name": "damages",
+      "optimized": true,
+      "seconds": 0.6863238499499857,
+      "stdout_sha256": "d2124bf9efff0a8fad42d2d911ba9be37551753eaf4c87162eeeaeba083500d8",
+      "stdout_bytes": 363,
+      "returncode": 0
+    },
+    {
+      "name": "native",
+      "optimized": true,
+      "seconds": 0.7839087239699438,
+      "stdout_sha256": "ae547e75a6d42a450cd65bdd461941b3d0d64f1068e171e557f80c52bc5dd69b",
+      "stdout_bytes": 2130,
+      "returncode": 0
+    },
+    {
+      "name": "correspondence",
+      "optimized": true,
+      "seconds": 0.49803745897952467,
+      "stdout_sha256": "b171b3d7a1df7d58f52631f8e967313b76f66e881ff44ffe18b1a7f56e7c02ac",
+      "stdout_bytes": 287,
+      "returncode": 0
+    }
+  ],
+  "all_whole_normal_optimized_records_equal": true,
+  "all_five_primary_files_unchanged": true,
+  "peak_child_RSS_KiB": 72280,
+  "total_seconds": 12.022272645845078,
+  "max_child_seconds": 3.9511290580267087,
+  "threads": 1,
+  "CPU_intensive_jobs_at_once": 1,
+  "guard_seconds": 45,
+  "raised_resource_limits": false,
+  "resource_limit_hit": false,
+  "full_record_sha256": "d7b30e7587ddbf3ef7bd52ba6de6ca82cd6817fadf848c150798c98ae6021e03",
+  "primary_controls": {
+    "local_exact_rows": 4087,
+    "rejected_controls": [
+      "missing-empty",
+      "post-zero",
+      "out-of-domain",
+      "duplicate",
+      "deletion",
+      "rat",
+      "early-empty",
+      "interior-zero",
+      "duplicate-source",
+      "noninteger-cell",
+      "wrong-depth",
+      "wrong-margin",
+      "lost-copy",
+      "moved-root",
+      "nonisometry",
+      "changed-period",
+      "missing-period-copy"
+    ],
+    "whole_quotient_formula_bijection": true
+  },
+  "mathematical_controls": {
+    "count": 11,
+    "mathematical_damages_rejected": [
+      "removed-nonempty",
+      "removed-period-failure",
+      "unsupported-immediate-empty",
+      "second-stage-wholly-removed",
+      "lost-final-empty-obligation",
+      "moved-period-representative",
+      "duplicated-period-representative",
+      "deleted-counter-cell",
+      "changed-counter-origin",
+      "moved-first-counter-copy",
+      "missing-first-counter-copy"
+    ]
+  },
+  "late_correspondence": {
+    "scope": "Late correspondence, not a second independent proof",
+    "whole_123_site_list": true,
+    "whole_19_physical_maps": true,
+    "whole_2859_clause_set": true,
+    "whole_520_integer_rows": true,
+    "whole_native_DIMACS_sha256": "aa183740e680950e521393b4f2111913bbe1f40600cc321ccab18f63c6574dcb"
+  },
+  "native_complete_record_sha256": "ae547e75a6d42a450cd65bdd461941b3d0d64f1068e171e557f80c52bc5dd69b"
+}
