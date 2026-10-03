@@ -1,0 +1,526 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "status": "COMPLETE_SCOPED_INDEPENDENT_AND_LATE_AUDIT",
+  "utc": "2026-10-03T03:57:54.401455+00:00",
+  "independent_normal_optimized": {
+    "status": "COMPLETE_SOURCE_ONLY_ASYMMETRIC_MOTION_AUDIT",
+    "utc": "2026-10-03T03:49:09.087712+00:00",
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "whole_mode_records": [
+      {
+        "stage": "primitive",
+        "bytes": 28351,
+        "sha256": "62ffb2a3efba15e83ce6602d1d31794ad4767aa44625528018a4306b25d7a09f",
+        "whole_mode_match": true
+      },
+      {
+        "stage": "second",
+        "bytes": 24982,
+        "sha256": "fa10238688684f9a6dbdecbc34bd6bdb547b3eca26952646ce5ca6cccc0f332d",
+        "whole_mode_match": true
+      },
+      {
+        "stage": "controls",
+        "bytes": 2073,
+        "sha256": "e8c64f312693535be0710598dc5c94553c5cde474b15312ce4aa2462ffd9373f",
+        "whole_mode_match": true
+      }
+    ],
+    "execution": [
+      {
+        "name": "primitive-normal",
+        "seconds": 0.5007020860211924,
+        "returncode": 0,
+        "stdout_bytes": 28351,
+        "stdout_sha256": "62ffb2a3efba15e83ce6602d1d31794ad4767aa44625528018a4306b25d7a09f",
+        "peak_children_rss_kib": 15912,
+        "optimized": false,
+        "guard_seconds": 45,
+        "threads": 1
+      },
+      {
+        "name": "second-normal",
+        "seconds": 2.0368116589961573,
+        "returncode": 0,
+        "stdout_bytes": 24982,
+        "stdout_sha256": "fa10238688684f9a6dbdecbc34bd6bdb547b3eca26952646ce5ca6cccc0f332d",
+        "peak_children_rss_kib": 16392,
+        "optimized": false,
+        "guard_seconds": 45,
+        "threads": 1
+      },
+      {
+        "name": "controls-normal",
+        "seconds": 20.78290453297086,
+        "returncode": 0,
+        "stdout_bytes": 2073,
+        "stdout_sha256": "e8c64f312693535be0710598dc5c94553c5cde474b15312ce4aa2462ffd9373f",
+        "peak_children_rss_kib": 16392,
+        "optimized": false,
+        "guard_seconds": 45,
+        "threads": 1
+      },
+      {
+        "name": "primitive-optimized",
+        "seconds": 0.3529614300932735,
+        "returncode": 0,
+        "stdout_bytes": 28351,
+        "stdout_sha256": "62ffb2a3efba15e83ce6602d1d31794ad4767aa44625528018a4306b25d7a09f",
+        "peak_children_rss_kib": 16392,
+        "optimized": true,
+        "guard_seconds": 45,
+        "threads": 1
+      },
+      {
+        "name": "second-optimized",
+        "seconds": 1.9929291480220854,
+        "returncode": 0,
+        "stdout_bytes": 24982,
+        "stdout_sha256": "fa10238688684f9a6dbdecbc34bd6bdb547b3eca26952646ce5ca6cccc0f332d",
+        "peak_children_rss_kib": 17140,
+        "optimized": true,
+        "guard_seconds": 45,
+        "threads": 1
+      },
+      {
+        "name": "controls-optimized",
+        "seconds": 20.78278255800251,
+        "returncode": 0,
+        "stdout_bytes": 2073,
+        "stdout_sha256": "e8c64f312693535be0710598dc5c94553c5cde474b15312ce4aa2462ffd9373f",
+        "peak_children_rss_kib": 17140,
+        "optimized": true,
+        "guard_seconds": 45,
+        "threads": 1
+      }
+    ],
+    "max_child_seconds": 20.78290453297086,
+    "total_child_seconds": 46.44909141410608,
+    "semantic_damages_per_mode": 14,
+    "malformed_damages_per_mode": 10,
+    "positive_repair_slacks": [
+      "1/2",
+      "1",
+      "2"
+    ],
+    "one_serial_child": true,
+    "threads": 1,
+    "guard_seconds": 45
+  },
+  "cold_source_only_replay": {
+    "status": "COMPLETE_SOURCE_ONLY_ASYMMETRIC_MOTION_AUDIT",
+    "utc": "2026-10-03T03:51:37.607923+00:00",
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "whole_mode_records": [
+      {
+        "stage": "primitive",
+        "bytes": 28351,
+        "sha256": "62ffb2a3efba15e83ce6602d1d31794ad4767aa44625528018a4306b25d7a09f",
+        "whole_mode_match": true
+      },
+      {
+        "stage": "second",
+        "bytes": 24982,
+        "sha256": "fa10238688684f9a6dbdecbc34bd6bdb547b3eca26952646ce5ca6cccc0f332d",
+        "whole_mode_match": true
+      },
+      {
+        "stage": "controls",
+        "bytes": 2073,
+        "sha256": "e8c64f312693535be0710598dc5c94553c5cde474b15312ce4aa2462ffd9373f",
+        "whole_mode_match": true
+      }
+    ],
+    "execution": [
+      {
+        "name": "primitive-normal",
+        "seconds": 0.27962965099141,
+        "returncode": 0,
+        "stdout_bytes": 28351,
+        "stdout_sha256": "62ffb2a3efba15e83ce6602d1d31794ad4767aa44625528018a4306b25d7a09f",
+        "peak_children_rss_kib": 16032,
+        "optimized": false,
+        "guard_seconds": 45,
+        "threads": 1
+      },
+      {
+        "name": "second-normal",
+        "seconds": 1.9040900589898229,
+        "returncode": 0,
+        "stdout_bytes": 24982,
+        "stdout_sha256": "fa10238688684f9a6dbdecbc34bd6bdb547b3eca26952646ce5ca6cccc0f332d",
+        "peak_children_rss_kib": 16032,
+        "optimized": false,
+        "guard_seconds": 45,
+        "threads": 1
+      },
+      {
+        "name": "controls-normal",
+        "seconds": 20.350475008948706,
+        "returncode": 0,
+        "stdout_bytes": 2073,
+        "stdout_sha256": "e8c64f312693535be0710598dc5c94553c5cde474b15312ce4aa2462ffd9373f",
+        "peak_children_rss_kib": 16032,
+        "optimized": false,
+        "guard_seconds": 45,
+        "threads": 1
+      },
+      {
+        "name": "primitive-optimized",
+        "seconds": 0.34079083905089647,
+        "returncode": 0,
+        "stdout_bytes": 28351,
+        "stdout_sha256": "62ffb2a3efba15e83ce6602d1d31794ad4767aa44625528018a4306b25d7a09f",
+        "peak_children_rss_kib": 16032,
+        "optimized": true,
+        "guard_seconds": 45,
+        "threads": 1
+      },
+      {
+        "name": "second-optimized",
+        "seconds": 1.9324271010700613,
+        "returncode": 0,
+        "stdout_bytes": 24982,
+        "stdout_sha256": "fa10238688684f9a6dbdecbc34bd6bdb547b3eca26952646ce5ca6cccc0f332d",
+        "peak_children_rss_kib": 16784,
+        "optimized": true,
+        "guard_seconds": 45,
+        "threads": 1
+      },
+      {
+        "name": "controls-optimized",
+        "seconds": 21.69102806702722,
+        "returncode": 0,
+        "stdout_bytes": 2073,
+        "stdout_sha256": "e8c64f312693535be0710598dc5c94553c5cde474b15312ce4aa2462ffd9373f",
+        "peak_children_rss_kib": 16784,
+        "optimized": true,
+        "guard_seconds": 45,
+        "threads": 1
+      }
+    ],
+    "max_child_seconds": 21.69102806702722,
+    "total_child_seconds": 46.498440726078115,
+    "semantic_damages_per_mode": 14,
+    "malformed_damages_per_mode": 10,
+    "positive_repair_slacks": [
+      "1/2",
+      "1",
+      "2"
+    ],
+    "one_serial_child": true,
+    "threads": 1,
+    "guard_seconds": 45
+  },
+  "all_seven_pre_native_files_unchanged": true,
+  "first_target_executable_certificate_access_utc": "2026-10-03T03:52:42.344758+00:00",
+  "native_source_only_replay": {
+    "agent": "six-sendov-3",
+    "role": "researcher",
+    "status": "PASS",
+    "ordinary_proof_unformalized": true,
+    "independent_review": false,
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "native_threads": 1,
+    "serial_math_children": true,
+    "child_guard_seconds": 45,
+    "positive_modes": 4,
+    "mathematical_damage_cases_per_positive": 10,
+    "whole_external_fixture_rejections": 26,
+    "source_byte_rejections": 1,
+    "whole_seconds": 40.181005743914284,
+    "peak_child_rss_kib": 22428,
+    "whole_summary": {
+      "active_fourth_order_inward_roots": 4,
+      "agent": "six-sendov-3",
+      "all_critical_multiplicities": 8,
+      "all_individual_half_normals": 9,
+      "all_original_root_jets": 9,
+      "analytic_collars": "existential ordinary proof",
+      "formalized": false,
+      "independent_review": false,
+      "mathematical_damage_rejections": 10,
+      "role": "researcher",
+      "source_integrity": "PASS",
+      "status": "PASS",
+      "whole_record_sha256": "1d76ad9aa06eff51b6d9e1521509cb32e6bc1ca1f6cec42491ee2a6715f04e18"
+    },
+    "whole_runs": [
+      {
+        "mode": "normal-source",
+        "optimized": false,
+        "case": "positive",
+        "seconds": 9.1967243879335,
+        "output": {
+          "active_fourth_order_inward_roots": 4,
+          "agent": "six-sendov-3",
+          "all_critical_multiplicities": 8,
+          "all_individual_half_normals": 9,
+          "all_original_root_jets": 9,
+          "analytic_collars": "existential ordinary proof",
+          "formalized": false,
+          "independent_review": false,
+          "mathematical_damage_rejections": 10,
+          "role": "researcher",
+          "source_integrity": "PASS",
+          "status": "PASS",
+          "whole_record_sha256": "1d76ad9aa06eff51b6d9e1521509cb32e6bc1ca1f6cec42491ee2a6715f04e18"
+        }
+      },
+      {
+        "mode": "isolated-source-only",
+        "optimized": false,
+        "case": "positive",
+        "seconds": 8.890571249066852,
+        "output": {
+          "active_fourth_order_inward_roots": 4,
+          "agent": "six-sendov-3",
+          "all_critical_multiplicities": 8,
+          "all_individual_half_normals": 9,
+          "all_original_root_jets": 9,
+          "analytic_collars": "existential ordinary proof",
+          "formalized": false,
+          "independent_review": false,
+          "mathematical_damage_rejections": 10,
+          "role": "researcher",
+          "source_integrity": "PASS",
+          "status": "PASS",
+          "whole_record_sha256": "1d76ad9aa06eff51b6d9e1521509cb32e6bc1ca1f6cec42491ee2a6715f04e18"
+        }
+      },
+      {
+        "mode": "normal-source",
+        "optimized": false,
+        "case": "external-fixtures",
+        "seconds": 1.6613670130027458,
+        "output": {
+          "rejections": [
+            {
+              "name": "missing_ninth_root",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "missing_ninth_normal",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "missing_last_primitive_degree",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "changed_last_root_coefficient",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "changed_last_normal_coefficient",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "missing_last_critical_moment",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "false_objective_coefficient",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "omitted_parameter_row",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "false_analytic_scope",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "bool_type_alias",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "omitted_embedding_budget",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "duplicate_key",
+              "reason": "duplicate JSON key"
+            },
+            {
+              "name": "nonfinite",
+              "reason": "nonfinite JSON constant"
+            }
+          ],
+          "status": "PASS",
+          "whole_record_sha256": "1d76ad9aa06eff51b6d9e1521509cb32e6bc1ca1f6cec42491ee2a6715f04e18"
+        }
+      },
+      {
+        "mode": "normal-source",
+        "optimized": true,
+        "case": "positive",
+        "seconds": 9.103861697949469,
+        "output": {
+          "active_fourth_order_inward_roots": 4,
+          "agent": "six-sendov-3",
+          "all_critical_multiplicities": 8,
+          "all_individual_half_normals": 9,
+          "all_original_root_jets": 9,
+          "analytic_collars": "existential ordinary proof",
+          "formalized": false,
+          "independent_review": false,
+          "mathematical_damage_rejections": 10,
+          "role": "researcher",
+          "source_integrity": "PASS",
+          "status": "PASS",
+          "whole_record_sha256": "1d76ad9aa06eff51b6d9e1521509cb32e6bc1ca1f6cec42491ee2a6715f04e18"
+        }
+      },
+      {
+        "mode": "isolated-source-only",
+        "optimized": true,
+        "case": "positive",
+        "seconds": 9.465365859912708,
+        "output": {
+          "active_fourth_order_inward_roots": 4,
+          "agent": "six-sendov-3",
+          "all_critical_multiplicities": 8,
+          "all_individual_half_normals": 9,
+          "all_original_root_jets": 9,
+          "analytic_collars": "existential ordinary proof",
+          "formalized": false,
+          "independent_review": false,
+          "mathematical_damage_rejections": 10,
+          "role": "researcher",
+          "source_integrity": "PASS",
+          "status": "PASS",
+          "whole_record_sha256": "1d76ad9aa06eff51b6d9e1521509cb32e6bc1ca1f6cec42491ee2a6715f04e18"
+        }
+      },
+      {
+        "mode": "normal-source",
+        "optimized": true,
+        "case": "external-fixtures",
+        "seconds": 1.79430767102167,
+        "output": {
+          "rejections": [
+            {
+              "name": "missing_ninth_root",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "missing_ninth_normal",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "missing_last_primitive_degree",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "changed_last_root_coefficient",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "changed_last_normal_coefficient",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "missing_last_critical_moment",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "false_objective_coefficient",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "omitted_parameter_row",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "false_analytic_scope",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "bool_type_alias",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "omitted_embedding_budget",
+              "reason": "complete typed record mismatch"
+            },
+            {
+              "name": "duplicate_key",
+              "reason": "duplicate JSON key"
+            },
+            {
+              "name": "nonfinite",
+              "reason": "nonfinite JSON constant"
+            }
+          ],
+          "status": "PASS",
+          "whole_record_sha256": "1d76ad9aa06eff51b6d9e1521509cb32e6bc1ca1f6cec42491ee2a6715f04e18"
+        }
+      },
+      {
+        "mode": "isolated-source-only",
+        "case": "changed_source_byte",
+        "returncode": 1,
+        "expected_reason": "source-byte mismatch jets.py"
+      }
+    ],
+    "manifest_sha256": "f1b650fc180112dd9e5b9729297ebe93b6867dc4e5ebc17330cda96d33602508"
+  },
+  "native_execution": {
+    "utc": "2026-10-03T03:54:06.221864+00:00",
+    "total_seconds": 40.27403597498778,
+    "returncode": 0,
+    "peak_children_rss_kib": 22428,
+    "child_guard_seconds": 45,
+    "wrapper_guard_seconds": 180,
+    "one_serial_math_child": true,
+    "six_native_threads": 1
+  },
+  "late_correspondence": {
+    "counts": {
+      "affine_field_vectors": 750,
+      "rational_coordinates": 9168,
+      "scalar_field_vectors": 14,
+      "whole_series": 50
+    },
+    "entire_compared_record_bytes": 43246,
+    "entire_compared_record_sha256": "dc14403eb24129333498a358a400a864393f986079c6198210848d907a9e7dec",
+    "fixture_hash_is_mathematical_premise": false,
+    "native_imported": false,
+    "status": "COMPLETE_LATE_NATIVE_CORRESPONDENCE",
+    "timing": "after independent seven-file seal/native exposure; primary files untouched"
+  },
+  "late_execution": [
+    {
+      "optimized": false,
+      "seconds": 0.950068789999932,
+      "returncode": 0,
+      "whole_record_sha256": "508fab6eb9b02a53653af21ed3baf98f0e290550f7d545287bccf04b7d43449d",
+      "peak_children_rss_kib": 17336,
+      "guard_seconds": 45,
+      "threads": 1
+    },
+    {
+      "optimized": true,
+      "seconds": 1.0101369679905474,
+      "returncode": 0,
+      "whole_record_sha256": "508fab6eb9b02a53653af21ed3baf98f0e290550f7d545287bccf04b7d43449d",
+      "peak_children_rss_kib": 20020,
+      "guard_seconds": 45,
+      "threads": 1
+    }
+  ],
+  "same_author_native_is_independent": false,
+  "ordinary_analytic_proof_formalized": false,
+  "development_failure_preserved": {
+    "kind": "Python mixed E/A coercion TypeError",
+    "mathematical_failure": false,
+    "corrected_before_native_access": true,
+    "preserved_path": "scratch/pass39-initial-coercion",
+    "elapsed_seconds": 0.13228309096302837
+  },
+  "no_timeout_or_incomplete_job_used_for_absence": true,
+  "historical_operations_blocker": "PASS34 CheckTx1 rejection remains preserved separately; current successful native/source checks identify no cause and authorize no retry"
+}

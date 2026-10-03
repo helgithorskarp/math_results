@@ -1,0 +1,69 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "utc": "2026-10-03T03:52:20.100007+00:00",
+  "target": "LEMMA10006/0",
+  "written_mathematics_exposed": true,
+  "mathematics_blind": false,
+  "target_executable_certificate_expected_access_before_seal": false,
+  "method": "fresh QQ[T]/Phi36 closed antiderivative versus independently implemented two-generator critical-product integration/full-Horner residuals; whole affine normal/objective maps; no target code imports",
+  "files": {
+    ".gitignore": {
+      "bytes": 13,
+      "sha256": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+    },
+    "PROOF.md": {
+      "bytes": 10326,
+      "sha256": "58fd6de778f1e09b6e52ba2385c97ef64904ee08cc1dc685cfde14cde5203723"
+    },
+    "controls.py": {
+      "bytes": 2736,
+      "sha256": "e5df48c9445922b7a79571fb012a86390ab872aeebf444ed4116401fa26ce207"
+    },
+    "cyclo36.py": {
+      "bytes": 4017,
+      "sha256": "01e9a0e0e5de3ff93bf0d148eaed703c82efc6a3af8550f8bb48c7272c8c100d"
+    },
+    "primitive.py": {
+      "bytes": 5134,
+      "sha256": "441d24b490fea436a5d9208c994a1ae3bda3ecc13bd515db738fbd536ddf1d19"
+    },
+    "reproduce.py": {
+      "bytes": 2842,
+      "sha256": "08ec2114afa892ce703fb74ef427e420f9d8bcd701a65d9eebe570d85c3b97e6"
+    },
+    "second.py": {
+      "bytes": 12491,
+      "sha256": "45081c6f85b5e83b791ebe8ea2581c5806c25d4e4dd5e4efc5b2a7b08c724ba1"
+    }
+  },
+  "pre_native_whole_records": [
+    {
+      "stage": "primitive",
+      "bytes": 28351,
+      "sha256": "62ffb2a3efba15e83ce6602d1d31794ad4767aa44625528018a4306b25d7a09f",
+      "whole_mode_match": true
+    },
+    {
+      "stage": "second",
+      "bytes": 24982,
+      "sha256": "fa10238688684f9a6dbdecbc34bd6bdb547b3eca26952646ce5ca6cccc0f332d",
+      "whole_mode_match": true
+    },
+    {
+      "stage": "controls",
+      "bytes": 2073,
+      "sha256": "e8c64f312693535be0710598dc5c94553c5cde474b15312ce4aa2462ffd9373f",
+      "whole_mode_match": true
+    }
+  ],
+  "cold_whole_records_match": true,
+  "initial_development_failure": {
+    "kind": "Python mixed E/A coercion TypeError",
+    "mathematical_failure": false,
+    "corrected_before_native_access": true,
+    "preserved_path": "scratch/pass39-initial-coercion",
+    "elapsed_seconds": 0.13228309096302837
+  },
+  "symbolic_package": "SymPy unavailable; no install, exact stdlib quotient-ring reconstruction"
+}
