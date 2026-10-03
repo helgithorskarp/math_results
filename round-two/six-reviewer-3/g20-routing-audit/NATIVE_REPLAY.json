@@ -1,0 +1,405 @@
+{
+  "status": "PASS",
+  "guard_seconds": 45,
+  "native_threads": 1,
+  "serial": true,
+  "runs": [
+    {
+      "script": "check.py",
+      "extra": [],
+      "optimized": false,
+      "seconds": 0.07218021305743605,
+      "peak_kib": 17352,
+      "out": {
+        "G20_edges": 20,
+        "G20_vertices": 12,
+        "V_assignments": 7,
+        "V_degree10_five_assignments": 1,
+        "boundary_pairings": 2,
+        "certificate_sha256": "526533f3bedc90e46b17d3ca47fbe8f38cd4376fba1bf1d105e0bc3aaa77fa9a",
+        "diagonal_subsets": 32,
+        "disk_allocations": [
+          {
+            "TQP": [
+              3,
+              3,
+              2
+            ],
+            "boundary_vertices": 11,
+            "branch": "P",
+            "inner_faces": 8,
+            "interior_edges": 10,
+            "interior_vertices": 3
+          },
+          {
+            "TQP": [
+              2,
+              2,
+              3
+            ],
+            "boundary_vertices": 11,
+            "branch": "V",
+            "inner_faces": 7,
+            "interior_edges": 9,
+            "interior_vertices": 3
+          }
+        ],
+        "exact_arithmetic": true,
+        "forced_G24_edges": 24,
+        "forced_TT_component_sizes": [
+          5,
+          6
+        ],
+        "noncore_neighbor_cases": 7,
+        "nonstrict_scalar_comparisons": 2,
+        "oriented_assignments": 14,
+        "partitions": 52,
+        "patch_faces": 8,
+        "retained_subsets": [
+          [],
+          [
+            [
+              5,
+              12
+            ]
+          ]
+        ],
+        "schema": "g20-five-cycle-routing-v1",
+        "separated_profiles": 9,
+        "strict_scalar_comparisons": 7
+      }
+    },
+    {
+      "script": "audit.py",
+      "extra": [],
+      "optimized": false,
+      "seconds": 0.09891218005213886,
+      "peak_kib": 17352,
+      "out": {
+        "G20_edges": 20,
+        "G20_vertices": 12,
+        "V_assignments": 7,
+        "V_degree10_five_assignments": 1,
+        "boundary_pairings": 2,
+        "certificate_sha256": "526533f3bedc90e46b17d3ca47fbe8f38cd4376fba1bf1d105e0bc3aaa77fa9a",
+        "diagonal_subsets": 32,
+        "disk_allocations": [
+          {
+            "TQP": [
+              3,
+              3,
+              2
+            ],
+            "boundary_vertices": 11,
+            "branch": "P",
+            "inner_faces": 8,
+            "interior_edges": 10,
+            "interior_vertices": 3
+          },
+          {
+            "TQP": [
+              2,
+              2,
+              3
+            ],
+            "boundary_vertices": 11,
+            "branch": "V",
+            "inner_faces": 7,
+            "interior_edges": 9,
+            "interior_vertices": 3
+          }
+        ],
+        "exact_arithmetic": true,
+        "forced_G24_edges": 24,
+        "forced_TT_component_sizes": [
+          5,
+          6
+        ],
+        "noncore_neighbor_cases": 7,
+        "nonstrict_scalar_comparisons": 2,
+        "oriented_assignments": 14,
+        "partitions": 52,
+        "patch_faces": 8,
+        "retained_subsets": [
+          [],
+          [
+            [
+              5,
+              12
+            ]
+          ]
+        ],
+        "schema": "g20-five-cycle-routing-v1",
+        "separated_profiles": 9,
+        "strict_scalar_comparisons": 7
+      }
+    },
+    {
+      "script": "controls.py",
+      "extra": [],
+      "optimized": false,
+      "seconds": 0.7258886269992217,
+      "peak_kib": 20052,
+      "out": {
+        "damages": [
+          "scalar-derivative_lower",
+          "scalar-hi",
+          "scalar-lo",
+          "scalar-lo_minus_half",
+          "scalar-lo_squared_minus_one_fifth",
+          "scalar-nine_c_squared_minus_two_c_minus_one_at_lo",
+          "scalar-one_minus_hi",
+          "scalar-sqrt2_upper_squared_gap",
+          "scalar-sqrt5_lower_squared_gap",
+          "scalar-sqrt5_upper_squared_gap",
+          "scalar-three_eighths_minus_upper_angle_cosine",
+          "omit-cross-contact",
+          "aliased-core-corner",
+          "omit-triangle-adjacency",
+          "change-long-boundary",
+          "change-region-pairing",
+          "missing-diagonal-subset",
+          "allow-U",
+          "omit-7-9-strictness",
+          "allow-degree12-five",
+          "allow-degree9-five",
+          "alter-forced-triangle",
+          "omit-whole-profile",
+          "omit-oriented-assignment",
+          "allow-V-with-A-four",
+          "force-profile-four-seven",
+          "erase-interior-edge",
+          "alter-face-allocation",
+          "wrong-Euler-data",
+          "erase-freshness-case",
+          "erase-forced-TT-edge",
+          "alter-forced-core-contact",
+          "widen-profile-band",
+          "unknown-field",
+          "boolean-for-integer"
+        ],
+        "semantic_damages_rejected_by_both": 35,
+        "valid_representations_accepted_by_both": 3
+      }
+    },
+    {
+      "script": "check.py",
+      "extra": [
+        "--emit"
+      ],
+      "optimized": false,
+      "seconds": 0.0804756369907409,
+      "peak_kib": 17280,
+      "whole_original_certificate_bytes_match": true
+    },
+    {
+      "script": "audit.py",
+      "extra": [
+        "--emit"
+      ],
+      "optimized": false,
+      "seconds": 0.08666810591239482,
+      "peak_kib": 17216,
+      "whole_original_certificate_bytes_match": true
+    },
+    {
+      "script": "check.py",
+      "extra": [],
+      "optimized": true,
+      "seconds": 0.3047075249487534,
+      "peak_kib": 22368,
+      "out": {
+        "G20_edges": 20,
+        "G20_vertices": 12,
+        "V_assignments": 7,
+        "V_degree10_five_assignments": 1,
+        "boundary_pairings": 2,
+        "certificate_sha256": "526533f3bedc90e46b17d3ca47fbe8f38cd4376fba1bf1d105e0bc3aaa77fa9a",
+        "diagonal_subsets": 32,
+        "disk_allocations": [
+          {
+            "TQP": [
+              3,
+              3,
+              2
+            ],
+            "boundary_vertices": 11,
+            "branch": "P",
+            "inner_faces": 8,
+            "interior_edges": 10,
+            "interior_vertices": 3
+          },
+          {
+            "TQP": [
+              2,
+              2,
+              3
+            ],
+            "boundary_vertices": 11,
+            "branch": "V",
+            "inner_faces": 7,
+            "interior_edges": 9,
+            "interior_vertices": 3
+          }
+        ],
+        "exact_arithmetic": true,
+        "forced_G24_edges": 24,
+        "forced_TT_component_sizes": [
+          5,
+          6
+        ],
+        "noncore_neighbor_cases": 7,
+        "nonstrict_scalar_comparisons": 2,
+        "oriented_assignments": 14,
+        "partitions": 52,
+        "patch_faces": 8,
+        "retained_subsets": [
+          [],
+          [
+            [
+              5,
+              12
+            ]
+          ]
+        ],
+        "schema": "g20-five-cycle-routing-v1",
+        "separated_profiles": 9,
+        "strict_scalar_comparisons": 7
+      }
+    },
+    {
+      "script": "audit.py",
+      "extra": [],
+      "optimized": true,
+      "seconds": 0.31387179100420326,
+      "peak_kib": 22280,
+      "out": {
+        "G20_edges": 20,
+        "G20_vertices": 12,
+        "V_assignments": 7,
+        "V_degree10_five_assignments": 1,
+        "boundary_pairings": 2,
+        "certificate_sha256": "526533f3bedc90e46b17d3ca47fbe8f38cd4376fba1bf1d105e0bc3aaa77fa9a",
+        "diagonal_subsets": 32,
+        "disk_allocations": [
+          {
+            "TQP": [
+              3,
+              3,
+              2
+            ],
+            "boundary_vertices": 11,
+            "branch": "P",
+            "inner_faces": 8,
+            "interior_edges": 10,
+            "interior_vertices": 3
+          },
+          {
+            "TQP": [
+              2,
+              2,
+              3
+            ],
+            "boundary_vertices": 11,
+            "branch": "V",
+            "inner_faces": 7,
+            "interior_edges": 9,
+            "interior_vertices": 3
+          }
+        ],
+        "exact_arithmetic": true,
+        "forced_G24_edges": 24,
+        "forced_TT_component_sizes": [
+          5,
+          6
+        ],
+        "noncore_neighbor_cases": 7,
+        "nonstrict_scalar_comparisons": 2,
+        "oriented_assignments": 14,
+        "partitions": 52,
+        "patch_faces": 8,
+        "retained_subsets": [
+          [],
+          [
+            [
+              5,
+              12
+            ]
+          ]
+        ],
+        "schema": "g20-five-cycle-routing-v1",
+        "separated_profiles": 9,
+        "strict_scalar_comparisons": 7
+      }
+    },
+    {
+      "script": "controls.py",
+      "extra": [],
+      "optimized": true,
+      "seconds": 0.9014436090365052,
+      "peak_kib": 23568,
+      "out": {
+        "damages": [
+          "scalar-derivative_lower",
+          "scalar-hi",
+          "scalar-lo",
+          "scalar-lo_minus_half",
+          "scalar-lo_squared_minus_one_fifth",
+          "scalar-nine_c_squared_minus_two_c_minus_one_at_lo",
+          "scalar-one_minus_hi",
+          "scalar-sqrt2_upper_squared_gap",
+          "scalar-sqrt5_lower_squared_gap",
+          "scalar-sqrt5_upper_squared_gap",
+          "scalar-three_eighths_minus_upper_angle_cosine",
+          "omit-cross-contact",
+          "aliased-core-corner",
+          "omit-triangle-adjacency",
+          "change-long-boundary",
+          "change-region-pairing",
+          "missing-diagonal-subset",
+          "allow-U",
+          "omit-7-9-strictness",
+          "allow-degree12-five",
+          "allow-degree9-five",
+          "alter-forced-triangle",
+          "omit-whole-profile",
+          "omit-oriented-assignment",
+          "allow-V-with-A-four",
+          "force-profile-four-seven",
+          "erase-interior-edge",
+          "alter-face-allocation",
+          "wrong-Euler-data",
+          "erase-freshness-case",
+          "erase-forced-TT-edge",
+          "alter-forced-core-contact",
+          "widen-profile-band",
+          "unknown-field",
+          "boolean-for-integer"
+        ],
+        "semantic_damages_rejected_by_both": 35,
+        "valid_representations_accepted_by_both": 3
+      }
+    },
+    {
+      "script": "check.py",
+      "extra": [
+        "--emit"
+      ],
+      "optimized": true,
+      "seconds": 0.2774352839915082,
+      "peak_kib": 22432,
+      "whole_original_certificate_bytes_match": true
+    },
+    {
+      "script": "audit.py",
+      "extra": [
+        "--emit"
+      ],
+      "optimized": true,
+      "seconds": 0.2911103731021285,
+      "peak_kib": 22212,
+      "whole_original_certificate_bytes_match": true
+    }
+  ],
+  "operation_note": "initial runpy wrapper omitted script directory from sys.path, controls.py import failed before mathematical controls; corrected launcher only; fixed original45s guard and resources unchanged"
+}

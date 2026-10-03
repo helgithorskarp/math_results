@@ -1,0 +1,187 @@
+{
+  "guard_seconds": 45,
+  "native_threads": 1,
+  "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+  "runs": [
+    {
+      "case": "baseline",
+      "optimized": false,
+      "peak_kib": 16904,
+      "seconds": 0.13169230008497834,
+      "status": "PASS"
+    },
+    {
+      "case": "baseline",
+      "optimized": true,
+      "peak_kib": 21232,
+      "seconds": 0.29365430993493646,
+      "status": "PASS"
+    },
+    {
+      "case": "omit_cross_contact",
+      "diagnostic": "literal12/20",
+      "optimized": false,
+      "peak_kib": 16488,
+      "seconds": 0.0625537580344826,
+      "status": "REJECTED"
+    },
+    {
+      "case": "omit_cross_contact",
+      "diagnostic": "literal12/20",
+      "optimized": true,
+      "peak_kib": 21312,
+      "seconds": 0.21836774505209178,
+      "status": "REJECTED"
+    },
+    {
+      "case": "wrong_P_order",
+      "diagnostic": "unique oriented map",
+      "optimized": false,
+      "peak_kib": 16548,
+      "seconds": 0.06720609404146671,
+      "status": "REJECTED"
+    },
+    {
+      "case": "wrong_P_order",
+      "diagnostic": "unique oriented map",
+      "optimized": true,
+      "peak_kib": 21224,
+      "seconds": 0.23506570199970156,
+      "status": "REJECTED"
+    },
+    {
+      "case": "erase_V",
+      "diagnostic": "unique oriented map",
+      "optimized": false,
+      "peak_kib": 16400,
+      "seconds": 0.08812818699516356,
+      "status": "REJECTED"
+    },
+    {
+      "case": "erase_V",
+      "diagnostic": "unique oriented map",
+      "optimized": true,
+      "peak_kib": 21276,
+      "seconds": 0.25783976598177105,
+      "status": "REJECTED"
+    },
+    {
+      "case": "reuse_core_corner",
+      "diagnostic": "unique oriented map",
+      "optimized": false,
+      "peak_kib": 16504,
+      "seconds": 0.12766215892042965,
+      "status": "REJECTED"
+    },
+    {
+      "case": "reuse_core_corner",
+      "diagnostic": "unique oriented map",
+      "optimized": true,
+      "peak_kib": 21172,
+      "seconds": 0.28723506710957736,
+      "status": "REJECTED"
+    },
+    {
+      "case": "omit_strict_diagonal",
+      "diagnostic": "two complete necessary subdivisions",
+      "optimized": false,
+      "peak_kib": 16488,
+      "seconds": 0.12739716994110495,
+      "status": "REJECTED"
+    },
+    {
+      "case": "omit_strict_diagonal",
+      "diagnostic": "two complete necessary subdivisions",
+      "optimized": true,
+      "peak_kib": 21140,
+      "seconds": 0.2852574959397316,
+      "status": "REJECTED"
+    },
+    {
+      "case": "incomplete_partition_cohort",
+      "diagnostic": "partition scope",
+      "optimized": false,
+      "peak_kib": 16464,
+      "seconds": 0.12464904692023993,
+      "status": "REJECTED"
+    },
+    {
+      "case": "incomplete_partition_cohort",
+      "diagnostic": "partition scope",
+      "optimized": true,
+      "peak_kib": 21152,
+      "seconds": 0.2876313399756327,
+      "status": "REJECTED"
+    },
+    {
+      "case": "wrong_residual_boundary",
+      "diagnostic": "full11-boundary",
+      "optimized": false,
+      "peak_kib": 16384,
+      "seconds": 0.06770508096087724,
+      "status": "REJECTED"
+    },
+    {
+      "case": "wrong_residual_boundary",
+      "diagnostic": "full11-boundary",
+      "optimized": true,
+      "peak_kib": 21228,
+      "seconds": 0.2256979359081015,
+      "status": "REJECTED"
+    },
+    {
+      "case": "wrong_upper_angle",
+      "diagnostic": "whole strict angle/rhombus budget",
+      "optimized": false,
+      "peak_kib": 16432,
+      "seconds": 0.12664484803099185,
+      "status": "REJECTED"
+    },
+    {
+      "case": "wrong_upper_angle",
+      "diagnostic": "whole strict angle/rhombus budget",
+      "optimized": true,
+      "peak_kib": 21272,
+      "seconds": 0.28865212900564075,
+      "status": "REJECTED"
+    },
+    {
+      "case": "wrong_G24_edge_count",
+      "diagnostic": "complete residual side incidence",
+      "optimized": false,
+      "peak_kib": 16400,
+      "seconds": 0.12731731904204935,
+      "status": "REJECTED"
+    },
+    {
+      "case": "wrong_G24_edge_count",
+      "diagnostic": "complete residual side incidence",
+      "optimized": true,
+      "peak_kib": 21156,
+      "seconds": 0.2836396029451862,
+      "status": "REJECTED"
+    },
+    {
+      "case": "false_triangle_adjacency",
+      "diagnostic": "full triangle dual",
+      "optimized": false,
+      "peak_kib": 16484,
+      "seconds": 0.1261789130512625,
+      "status": "REJECTED"
+    },
+    {
+      "case": "false_triangle_adjacency",
+      "diagnostic": "full triangle dual",
+      "optimized": true,
+      "peak_kib": 21276,
+      "seconds": 0.2795358409639448,
+      "status": "REJECTED"
+    }
+  ],
+  "serial": true,
+  "source_damages_each_mode": 10,
+  "status": "PASS",
+  "valid_representation_controls": 3,
+  "whole_record_damages": 6,
+  "whole_record_sha256": "03f284b66c79cc5b5f150cf5112cb6b7b252a16cfe9c1c9026c99b290f6bb5cc"
+}
