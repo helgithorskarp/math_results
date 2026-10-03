@@ -1,0 +1,242 @@
+{
+  "actual_agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "verdict": "CONFIRMED",
+  "ordinary_proof_unformalized": true,
+  "proof_assistant": false,
+  "environment": {
+    "python": "3.12.14",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "native_threads": 1,
+    "serial_cpu_jobs": 1,
+    "scope_cpu": 1,
+    "scope_memory_GiB": 2,
+    "guard_seconds": 45
+  },
+  "costs": [
+    {
+      "program": "uniform.py",
+      "mode": "normal",
+      "seconds": 4.528770657023415,
+      "maxrss_kib": 54952,
+      "guard_seconds": 45,
+      "exit": 0
+    },
+    {
+      "program": "uniform.py",
+      "mode": "normal",
+      "seconds": 2.460454704007134,
+      "maxrss_kib": 54216,
+      "guard_seconds": 45,
+      "exit": 0
+    },
+    {
+      "program": "original.py",
+      "mode": "normal",
+      "seconds": 3.6077473160112277,
+      "maxrss_kib": 16796,
+      "guard_seconds": 45,
+      "exit": 0
+    },
+    {
+      "program": "uniform.py",
+      "mode": "optimized",
+      "seconds": 2.721693192026578,
+      "maxrss_kib": 56088,
+      "guard_seconds": 45,
+      "exit": 0
+    },
+    {
+      "program": "uniform.py",
+      "mode": "optimized",
+      "seconds": 2.582963216002099,
+      "maxrss_kib": 55456,
+      "guard_seconds": 45,
+      "exit": 0
+    },
+    {
+      "program": "original.py",
+      "mode": "optimized",
+      "seconds": 3.631633699988015,
+      "maxrss_kib": 56088,
+      "guard_seconds": 45,
+      "exit": 0
+    },
+    {
+      "program": "unmodified target verify.py",
+      "mode": "normal",
+      "seconds": 9.87753303104546,
+      "maxrss_kib": 31896,
+      "guard_seconds": 45,
+      "exit": 0
+    },
+    {
+      "program": "unmodified target verify.py",
+      "mode": "optimized",
+      "seconds": 10.296600372996181,
+      "maxrss_kib": 34904,
+      "guard_seconds": 45,
+      "exit": 0
+    },
+    {
+      "program": "frozen.py",
+      "mode": "normal",
+      "seconds": 6.814085036050528,
+      "maxrss_kib": 54800,
+      "guard_seconds": 45,
+      "exit": 0
+    },
+    {
+      "program": "frozen.py",
+      "mode": "optimized",
+      "seconds": 7.026900878991,
+      "maxrss_kib": 55880,
+      "guard_seconds": 45,
+      "exit": 0
+    },
+    {
+      "program": "correspond.py",
+      "mode": "normal",
+      "seconds": 7.52495606301818,
+      "maxrss_kib": 59912,
+      "guard_seconds": 45,
+      "exit": 0
+    },
+    {
+      "program": "correspond.py",
+      "mode": "optimized",
+      "seconds": 7.519646757049486,
+      "maxrss_kib": 61276,
+      "guard_seconds": 45,
+      "exit": 0
+    },
+    {
+      "program": "reproduce.py",
+      "mode": "normal",
+      "seconds": 14.668894269037992,
+      "maxrss_kib": 57240,
+      "guard_seconds": 45,
+      "exit": 0
+    },
+    {
+      "program": "reproduce.py",
+      "mode": "optimized",
+      "seconds": 15.734641157090664,
+      "maxrss_kib": 58648,
+      "guard_seconds": 45,
+      "exit": 0
+    },
+    {
+      "program": "corroborate.py",
+      "mode": "normal",
+      "seconds": 20.220734079019167,
+      "maxrss_kib": 68444,
+      "guard_seconds": 45,
+      "exit": 0
+    },
+    {
+      "program": "corroborate.py",
+      "mode": "optimized",
+      "seconds": 19.672674017958343,
+      "maxrss_kib": 70788,
+      "guard_seconds": 45,
+      "exit": 0
+    }
+  ],
+  "primary_pre_access_whole_bytes_unchanged": true,
+  "primary_written_target_visible_not_blind": true,
+  "all_portable_normal_optimized_whole_mathematics_equal": true,
+  "full_record_hashes": [
+    {
+      "path": "PRIMARY.json",
+      "bytes": 113776,
+      "sha256": "887e359dd56a09a42f52a4b614bfb46d724fd29060f1ae9406b311ddbfc47297"
+    },
+    {
+      "path": "CONTROLS.json",
+      "bytes": 940,
+      "sha256": "2c8b6e8d04866e173a8c01f794f5d42c3d2510f13b0bc45699d6a4dd116b464a"
+    },
+    {
+      "path": "COMMON.json",
+      "bytes": 4649,
+      "sha256": "bbb2122b8c9556af240c87478dba1dd3c4cc6ad327527cb951a2fd72a3465a1e"
+    },
+    {
+      "path": "PRIMARY-SEAL.json",
+      "bytes": 1121,
+      "sha256": "8bcb8b982a74d818bb088dd5bb69de693e53fbd6a741bdeec545c8ae984ddb2e"
+    },
+    {
+      "path": "AUTHOR-SOURCE.json",
+      "bytes": 5869,
+      "sha256": "b441caa0ca926b4b8a04eb4f87731dca458c089be3270805f57156ca291104bd"
+    }
+  ],
+  "independent_uniform": {
+    "certificates": 2,
+    "obligations_each": 24,
+    "original_rational_entries_each": 130,
+    "positive_coefficients_each": 594,
+    "max_degree": 80,
+    "original_field_identities": 86,
+    "ordered_off_sector_positions": 544,
+    "heavy_multiplicity": 2,
+    "full_gaussian_identity_points_each": 599
+  },
+  "independent_original": {
+    "orders": [
+      3,
+      4,
+      5
+    ],
+    "actual_set_census": true,
+    "complete_positions_per_seed_or_sharp": 4332,
+    "whole_lifted_repair_positions": 4332,
+    "lower_upper_PSD_ranks_and_forced_star": true,
+    "invalid_retained_empty_rejected_each": true
+  },
+  "independent_native_correspondence": {
+    "entire_rational_entries": 130,
+    "entire_clearing_normalizations": 130,
+    "entire_determinant_and_shift_polynomials": 24,
+    "entire_literal_seed_core_entries": 4115,
+    "entire_literal_sharp_entries": 4332,
+    "entire_actual_sets_and_kappa_delta": true,
+    "sorted_native_order_bridge": true
+  },
+  "frozen_semantic_rejections": [
+    "missing final fixed minor",
+    "missing heavy multiplicity",
+    "wrong full-domain margin",
+    "wrong untouched dimension",
+    "wrong untouched margin",
+    "negative shifted constant",
+    "changed entire original entry",
+    "negative row multiplier",
+    "negative row domain",
+    "false entry degree",
+    "false determinant bound",
+    "noncanonical exact coefficient",
+    "wrong original dimension",
+    "missing original intersection identity"
+  ],
+  "native_corroboration_only": "Baseline9361,12 scalar controls,18 native damages, native arithmetic/physical reconstruction/untouched action counts; no blanket independent audit of every native-only category.",
+  "native_whole_mathematical_sha256": "cf3ad87fd27030de8d1230708121f669fa214994732df613c47cbf17d54b58cd",
+  "strengthened_uniform_gap": {
+    "seed_strictly_greater_than": "2",
+    "same_repaired_witness_strictly_greater_than": "2-8delta > 7/4",
+    "source_guarantee": "1-8delta > 3/4",
+    "optimality_claim": false
+  },
+  "trust": [
+    "ordinary complete physical-space/lift/Schur/perturbation/all-real-rank bridges",
+    "finite-degree polynomial uniqueness argument",
+    "exact Python integers and Fraction",
+    "SymPy rational-function field",
+    "independently written reconstruction and checkers"
+  ],
+  "no_general_H_I_n2_other_profiles_priority_claim": true,
+  "large_native_record_published": false
+}
