@@ -1,0 +1,550 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "utc": "2026-10-03T14:39:44.547569+00:00",
+  "python": "CPython3.12.14 standard library",
+  "primary": {
+    "agent": "six-reviewer-1",
+    "all_five_primary_seals_unchanged": true,
+    "fixed_child_guard_seconds": 45,
+    "mathematical_rejection_children": 14,
+    "maximum_child_seconds": 3.369734,
+    "native_threads": 1,
+    "no_timeout_unknown_kill_or_incomplete_inference": true,
+    "positive_children": 8,
+    "records": {
+      "check.py": {
+        "all_four_entire_parsed_and_byte_comparisons": true,
+        "bytes": 4071621,
+        "sha256": "f33f6b9c2271776bd656fc17b6a948dfacbe56ec311feec0241ebd9d707360ca"
+      },
+      "literal.py": {
+        "all_four_entire_parsed_and_byte_comparisons": true,
+        "bytes": 40562,
+        "sha256": "b5144c8d3ac4ab792a473be4061f772cf8852f147449728a820b90a074082569"
+      }
+    },
+    "role": "independent mathematical reviewer",
+    "rows": [
+      {
+        "cumulative_peak_child_RSS_KiB": 41052,
+        "damage": null,
+        "optimized": false,
+        "result_bytes": 4071621,
+        "returncode": 0,
+        "script": "check.py",
+        "seconds": 3.195807,
+        "source": "local"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 45696,
+        "damage": null,
+        "optimized": true,
+        "result_bytes": 4071621,
+        "returncode": 0,
+        "script": "check.py",
+        "seconds": 3.369734,
+        "source": "local"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 45696,
+        "damage": null,
+        "optimized": false,
+        "result_bytes": 4071621,
+        "returncode": 0,
+        "script": "check.py",
+        "seconds": 3.193627,
+        "source": "cold"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 45696,
+        "damage": null,
+        "optimized": true,
+        "result_bytes": 4071621,
+        "returncode": 0,
+        "script": "check.py",
+        "seconds": 3.363796,
+        "source": "cold"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 56312,
+        "damage": null,
+        "optimized": false,
+        "result_bytes": 40562,
+        "returncode": 0,
+        "script": "literal.py",
+        "seconds": 0.167547,
+        "source": "local"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 56312,
+        "damage": null,
+        "optimized": true,
+        "result_bytes": 40562,
+        "returncode": 0,
+        "script": "literal.py",
+        "seconds": 0.324682,
+        "source": "local"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 56312,
+        "damage": null,
+        "optimized": false,
+        "result_bytes": 40562,
+        "returncode": 0,
+        "script": "literal.py",
+        "seconds": 0.163738,
+        "source": "cold"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 56312,
+        "damage": null,
+        "optimized": true,
+        "result_bytes": 40562,
+        "returncode": 0,
+        "script": "literal.py",
+        "seconds": 0.414629,
+        "source": "cold"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 56312,
+        "damage": "radial-lower",
+        "optimized": false,
+        "result_bytes": 0,
+        "returncode": 1,
+        "script": "check.py",
+        "seconds": 0.10837,
+        "source": "local"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 56312,
+        "damage": "phase-reciprocal",
+        "optimized": false,
+        "result_bytes": 0,
+        "returncode": 1,
+        "script": "check.py",
+        "seconds": 0.133175,
+        "source": "local"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 56312,
+        "damage": "polar-terminal",
+        "optimized": false,
+        "result_bytes": 0,
+        "returncode": 1,
+        "script": "check.py",
+        "seconds": 0.182318,
+        "source": "local"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 56312,
+        "damage": "missing-leaf",
+        "optimized": false,
+        "result_bytes": 0,
+        "returncode": 1,
+        "script": "check.py",
+        "seconds": 0.566905,
+        "source": "local"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 56312,
+        "damage": "illegal-axis",
+        "optimized": false,
+        "result_bytes": 0,
+        "returncode": 1,
+        "script": "check.py",
+        "seconds": 0.567617,
+        "source": "local"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 56312,
+        "damage": "lost-eighth-integral",
+        "optimized": false,
+        "result_bytes": 0,
+        "returncode": 1,
+        "script": "check.py",
+        "seconds": 0.583373,
+        "source": "local"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 56312,
+        "damage": "lost-origin-margin",
+        "optimized": false,
+        "result_bytes": 0,
+        "returncode": 1,
+        "script": "check.py",
+        "seconds": 0.753591,
+        "source": "local"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 56312,
+        "damage": "radial-lower",
+        "optimized": true,
+        "result_bytes": 0,
+        "returncode": 1,
+        "script": "check.py",
+        "seconds": 0.59121,
+        "source": "local"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 56312,
+        "damage": "phase-reciprocal",
+        "optimized": true,
+        "result_bytes": 0,
+        "returncode": 1,
+        "script": "check.py",
+        "seconds": 0.541079,
+        "source": "local"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 56312,
+        "damage": "polar-terminal",
+        "optimized": true,
+        "result_bytes": 0,
+        "returncode": 1,
+        "script": "check.py",
+        "seconds": 0.608489,
+        "source": "local"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 56312,
+        "damage": "missing-leaf",
+        "optimized": true,
+        "result_bytes": 0,
+        "returncode": 1,
+        "script": "check.py",
+        "seconds": 0.992144,
+        "source": "local"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 56312,
+        "damage": "illegal-axis",
+        "optimized": true,
+        "result_bytes": 0,
+        "returncode": 1,
+        "script": "check.py",
+        "seconds": 0.622375,
+        "source": "local"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 56312,
+        "damage": "lost-eighth-integral",
+        "optimized": true,
+        "result_bytes": 0,
+        "returncode": 1,
+        "script": "check.py",
+        "seconds": 0.56789,
+        "source": "local"
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 56312,
+        "damage": "lost-origin-margin",
+        "optimized": true,
+        "result_bytes": 0,
+        "returncode": 1,
+        "script": "check.py",
+        "seconds": 0.583354,
+        "source": "local"
+      }
+    ],
+    "serial": true,
+    "total_child_seconds": 21.59545
+  },
+  "late_native_corroboration": {
+    "agent": "six-reviewer-1",
+    "all10_native_source_pins_verified": true,
+    "all_primary_native_math_fields_equal": true,
+    "entire_native_normal_optimized_records_equal": true,
+    "fixed_guard_seconds": 45,
+    "fresh_native_bytes": 1884921,
+    "fresh_native_sha256": "96ab79a95799f9fddc078b4e2a87979428685a7c40def765da2e79d7a8cc06c6",
+    "full_coefficients": 19149,
+    "full_polynomial_vectors": 1967,
+    "maximum_child_seconds": 3.309079,
+    "native_threads": 1,
+    "positive_children": 3,
+    "role": "independent mathematical reviewer",
+    "role_of_native_execution": "late exposed corroboration only; no source of new perturbed margin",
+    "rows": [
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": false,
+        "optimized": false,
+        "options": [
+          "--output"
+        ],
+        "returncode": 0,
+        "script": "check.py",
+        "seconds": 3.309079
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": false,
+        "optimized": false,
+        "options": [
+          "--record"
+        ],
+        "returncode": 0,
+        "script": "verify.py",
+        "seconds": 1.393756
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": false,
+        "optimized": true,
+        "options": [
+          "--record"
+        ],
+        "returncode": 0,
+        "script": "verify.py",
+        "seconds": 1.57399
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": false,
+        "options": [
+          "--damage",
+          "last-polar-coefficient"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 0.779492
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": false,
+        "options": [
+          "--damage",
+          "drop-polar-series"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 0.253485
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": false,
+        "options": [
+          "--damage",
+          "newton-eighth"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 0.784463
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": false,
+        "options": [
+          "--damage",
+          "origin-drop-eighth"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 0.799938
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": false,
+        "options": [
+          "--damage",
+          "origin-odd-root"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 0.793201
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": false,
+        "options": [
+          "--damage",
+          "uncouple-energy"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 0.776239
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": false,
+        "options": [
+          "--damage",
+          "omit-leaf"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 1.328148
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": false,
+        "options": [
+          "--damage",
+          "radial-lower-cap"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 0.235778
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": false,
+        "options": [
+          "--damage",
+          "radial-coefficient"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 0.237176
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": false,
+        "options": [
+          "--damage",
+          "centered-third"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 0.772271
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": true,
+        "options": [
+          "--damage",
+          "last-polar-coefficient"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 1.015258
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": true,
+        "options": [
+          "--damage",
+          "drop-polar-series"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 0.458312
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": true,
+        "options": [
+          "--damage",
+          "newton-eighth"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 0.98592
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": true,
+        "options": [
+          "--damage",
+          "origin-drop-eighth"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 0.9863
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": true,
+        "options": [
+          "--damage",
+          "origin-odd-root"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 0.973683
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": true,
+        "options": [
+          "--damage",
+          "uncouple-energy"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 0.971017
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": true,
+        "options": [
+          "--damage",
+          "omit-leaf"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 1.527362
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": true,
+        "options": [
+          "--damage",
+          "radial-lower-cap"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 0.42886
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": true,
+        "options": [
+          "--damage",
+          "radial-coefficient"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 0.423456
+      },
+      {
+        "cumulative_peak_child_RSS_KiB": 41764,
+        "negative": true,
+        "optimized": true,
+        "options": [
+          "--damage",
+          "centered-third"
+        ],
+        "returncode": 1,
+        "script": "verify.py",
+        "seconds": 0.983162
+      }
+    ],
+    "semantic_rejections": 20,
+    "serial": true,
+    "total_child_seconds": 21.790346
+  },
+  "large_result_files_published": false,
+  "large_results_recreated_and_compared_whole_before_hash": true,
+  "mathematical_result": "CONFIRMS complete10131/index1 relative10101 lower region; PROVES F>8+1/125000 only on marked annulus[11/20,3/5]"
+}
