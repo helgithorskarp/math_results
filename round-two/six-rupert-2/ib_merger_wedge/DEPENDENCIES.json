@@ -1,0 +1,51 @@
+{
+  "agent": "six-rupert-2",
+  "role": "researcher",
+  "runtime": "CPython3.11.2, standard library, exact positive real embedding of Q(sqrt5)",
+  "runtime_files": [
+    {
+      "path": "../model.py",
+      "sha256": "cc0ce4358eea0139da13962b6abdf25a9710fb934e8e41ee3e6f3cbe3acb8cd7"
+    },
+    {
+      "path": "../q5.py",
+      "sha256": "cef1fe01c185fc5c63d729d8e27588b4efe56d8487c87a73f22a68297b18ed3c"
+    }
+  ],
+  "ordinary_mathematical_dependencies": [
+    {
+      "file": "../joint_phase4/PROOF.md",
+      "source_commit": "82e94dc282701d753065b9b0e771a0ff715b55bd",
+      "graph_ref": "bafkreihlcdxfsxm7kinnvew2lyv7emxeksawfhqox4c4r5qjk5z46rzyyu",
+      "scope": "full arbitrary-original-Q, physical-T, lambda>=1 classification at the single receiver q ONLY; source forest not rerun",
+      "sha256": "212d70ea74706e87f78aa422c78f75ecf11d5cbaf804ccd9397948c4c91d9e24",
+      "reader_URL": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-rupert-2/joint_phase4/PROOF.md"
+    },
+    {
+      "file": "../halfturn_merger_wedge/PROOF.md",
+      "source_commit": "c6c32dc036534de446baa559d7456418198785e6",
+      "graph_ref": "bafkreicl6zoh3xixpcj2ddkec3hdazsfqwrdzys4ur7ba2aspdtxawvm5i",
+      "scope": "full explicit closed wedge G family physical-rho1/1000 conditional collar; not independently rerun",
+      "sha256": "c4ae9f18b45cb74a4b8ef7328bbe8a2d3317d6bef58fc6724b7707c82a976bd9",
+      "reader_URL": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-rupert-2/halfturn_merger_wedge/PROOF.md"
+    },
+    {
+      "file": "../hb_merger_wedge/PROOF.md",
+      "source_commit": "d176058ada1350f135c5931f84b64d9b946e879f",
+      "graph_ref": "bafkreicgckplcjgagj23copof5bl6h335clhzk4uo5t5pxajsuwstrorqa",
+      "scope": "full explicit closed wedge HB family physical-rho1/1000 conditional collar; not independently rerun",
+      "sha256": "ff0e4e9b7059f3f97f15199bc1d798ea5da635e54993abb3a4f22c8688975bfa",
+      "reader_URL": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-rupert-2/hb_merger_wedge/PROOF.md"
+    }
+  ],
+  "runtime_does_not_import_external_theorem_source": true,
+  "noneffective_source_entry": "ordinary compactness only after all I/B,G,HB collars; no computed delta_star",
+  "primitive_credit": [
+    "model8551 original J74",
+    "code7140 ordered field",
+    "local9677/9918 exact determinant and triangular Bernstein primitives",
+    "HB10107 free-variable contact polynomial primitives"
+  ],
+  "source_entry_forest_G_HB_coefficients_and_external_proof_inputs_not_rerun": true,
+  "global_J74_status": "OPEN"
+}

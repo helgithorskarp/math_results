@@ -1,0 +1,358 @@
+{
+  "agent": "six-rupert-2",
+  "role": "researcher",
+  "saved_at": "2026-10-03T13:42:29.452862+00:00",
+  "interpreter": "Python 3.11.2",
+  "package_dependencies": "standard library only",
+  "declared_replay_inputs": [
+    {
+      "path": "ib_merger_wedge/.gitignore",
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "path": "ib_merger_wedge/DEPENDENCIES.json",
+      "bytes": 2604,
+      "sha256": "56014e0d8692489987a9f29a03ee190b3e60860e8931598dfe66d01e3eeb117b"
+    },
+    {
+      "path": "ib_merger_wedge/EXPECTED.json",
+      "bytes": 98576,
+      "sha256": "0d7c7059d5b18fe3034d5d63dbba66efa6b7576133a2b5e304331bb3840c4c54"
+    },
+    {
+      "path": "ib_merger_wedge/PROOF.md",
+      "bytes": 17660,
+      "sha256": "8c421595fb8e0507ebfad198a2a0e5e1c6048bd5c876b4b467c03a1334eb1453"
+    },
+    {
+      "path": "ib_merger_wedge/README.md",
+      "bytes": 2319,
+      "sha256": "1da22313dfe8d7c0b3d2c34e141a3f06759f989eabc1e7223e2464731797faca"
+    },
+    {
+      "path": "ib_merger_wedge/algebra.py",
+      "bytes": 3918,
+      "sha256": "b66e2bfc178eeb882abfee86d42b7465b683bca92b6b8731f06738659e52c6c9"
+    },
+    {
+      "path": "ib_merger_wedge/certificate.json",
+      "bytes": 4903,
+      "sha256": "ceda3876c821b0969182e1a4e0eaac32b3d775ba6f58cb5429720b36066a2aea"
+    },
+    {
+      "path": "ib_merger_wedge/check.py",
+      "bytes": 18824,
+      "sha256": "1d547f4765d94e98471710556631c19c7511437432e7f22e0bf675e9b0d631c3"
+    },
+    {
+      "path": "ib_merger_wedge/controls.py",
+      "bytes": 2658,
+      "sha256": "378cb84fa95374ac843d50523c53234887a44eb485d9f40de79f09afcd4c8704"
+    },
+    {
+      "path": "ib_merger_wedge/geometry.py",
+      "bytes": 2531,
+      "sha256": "cf5e7fb21f3c0a9e61a6ac87308f430642ce075d98124e6f3adc314d36fc89f9"
+    },
+    {
+      "path": "model.py",
+      "bytes": 4254,
+      "sha256": "cc0ce4358eea0139da13962b6abdf25a9710fb934e8e41ee3e6f3cbe3acb8cd7"
+    },
+    {
+      "path": "q5.py",
+      "bytes": 2047,
+      "sha256": "cef1fe01c185fc5c63d729d8e27588b4efe56d8487c87a73f22a68297b18ed3c"
+    }
+  ],
+  "runs": [
+    {
+      "label": "normal",
+      "optimized": false,
+      "fresh_EMPTY_relocated": false,
+      "resource": {
+        "agent": "six-rupert-2",
+        "role": "researcher",
+        "label": "pass29-final-normal",
+        "command": [
+          "/usr/bin/python3",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/round-two/six-rupert-2/ib_merger_wedge/check.py",
+          "--output",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass29-final-normal-record.json",
+          "--transcript",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass29-final-normal-transcript.json"
+        ],
+        "exit_code": 0,
+        "error": null,
+        "wall_seconds": 19.803777251043357,
+        "single_child_peak_RSS_KiB": 36572,
+        "child_guard_seconds": 45,
+        "numeric_threads": 1,
+        "cpu_intensive_children": 1,
+        "scope_unchanged": "1CPU2GiB"
+      },
+      "whole_record_SHA256": "afa673e7cc04b7109df8f8d75ab986d92d08cba6cac42ef600549c4fcbfd2820",
+      "whole_transcript_SHA256": "2700c1fc5eb69728b04cf2062169c04f65c17b0baf9a577d68057b3d5c0b3bc6",
+      "every_original_gap_control_pair_and_coefficient_compared": true,
+      "two_original_runtime_dependencies_only": true
+    },
+    {
+      "label": "optimized",
+      "optimized": true,
+      "fresh_EMPTY_relocated": false,
+      "resource": {
+        "agent": "six-rupert-2",
+        "role": "researcher",
+        "label": "pass29-final-optimized",
+        "command": [
+          "/usr/bin/python3",
+          "-O",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/round-two/six-rupert-2/ib_merger_wedge/check.py",
+          "--output",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass29-final-optimized-record.json",
+          "--transcript",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass29-final-optimized-transcript.json"
+        ],
+        "exit_code": 0,
+        "error": null,
+        "wall_seconds": 21.99917042197194,
+        "single_child_peak_RSS_KiB": 39540,
+        "child_guard_seconds": 45,
+        "numeric_threads": 1,
+        "cpu_intensive_children": 1,
+        "scope_unchanged": "1CPU2GiB"
+      },
+      "whole_record_SHA256": "afa673e7cc04b7109df8f8d75ab986d92d08cba6cac42ef600549c4fcbfd2820",
+      "whole_transcript_SHA256": "2700c1fc5eb69728b04cf2062169c04f65c17b0baf9a577d68057b3d5c0b3bc6",
+      "every_original_gap_control_pair_and_coefficient_compared": true,
+      "two_original_runtime_dependencies_only": true
+    },
+    {
+      "label": "empty-normal",
+      "optimized": false,
+      "fresh_EMPTY_relocated": true,
+      "resource": {
+        "agent": "six-rupert-2",
+        "role": "researcher",
+        "label": "pass29-final-empty-normal",
+        "command": [
+          "/usr/bin/python3",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass29-empty-normal-8ek2ildh/isolated-original/ib_merger_wedge/check.py",
+          "--output",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass29-final-empty-normal-record.json",
+          "--transcript",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass29-final-empty-normal-transcript.json"
+        ],
+        "exit_code": 0,
+        "error": null,
+        "wall_seconds": 19.024715026956983,
+        "single_child_peak_RSS_KiB": 37368,
+        "child_guard_seconds": 45,
+        "numeric_threads": 1,
+        "cpu_intensive_children": 1,
+        "scope_unchanged": "1CPU2GiB"
+      },
+      "whole_record_SHA256": "afa673e7cc04b7109df8f8d75ab986d92d08cba6cac42ef600549c4fcbfd2820",
+      "whole_transcript_SHA256": "2700c1fc5eb69728b04cf2062169c04f65c17b0baf9a577d68057b3d5c0b3bc6",
+      "every_original_gap_control_pair_and_coefficient_compared": true,
+      "two_original_runtime_dependencies_only": true
+    },
+    {
+      "label": "empty-optimized",
+      "optimized": true,
+      "fresh_EMPTY_relocated": true,
+      "resource": {
+        "agent": "six-rupert-2",
+        "role": "researcher",
+        "label": "pass29-final-empty-optimized",
+        "command": [
+          "/usr/bin/python3",
+          "-O",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass29-empty-optimized-hpb0g1ap/isolated-original/ib_merger_wedge/check.py",
+          "--output",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass29-final-empty-optimized-record.json",
+          "--transcript",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass29-final-empty-optimized-transcript.json"
+        ],
+        "exit_code": 0,
+        "error": null,
+        "wall_seconds": 19.46633845602628,
+        "single_child_peak_RSS_KiB": 39464,
+        "child_guard_seconds": 45,
+        "numeric_threads": 1,
+        "cpu_intensive_children": 1,
+        "scope_unchanged": "1CPU2GiB"
+      },
+      "whole_record_SHA256": "afa673e7cc04b7109df8f8d75ab986d92d08cba6cac42ef600549c4fcbfd2820",
+      "whole_transcript_SHA256": "2700c1fc5eb69728b04cf2062169c04f65c17b0baf9a577d68057b3d5c0b3bc6",
+      "every_original_gap_control_pair_and_coefficient_compared": true,
+      "two_original_runtime_dependencies_only": true
+    }
+  ],
+  "whole_mathematical_record_entry_agreement": true,
+  "whole_private_transcript_entry_agreement": true,
+  "every_actual_gap_coefficient_control_and_pair_compared": true,
+  "control_runs": [
+    {
+      "label": "controls-normal",
+      "optimized": false,
+      "resource": {
+        "agent": "six-rupert-2",
+        "role": "researcher",
+        "label": "pass29-final-controls-normal",
+        "command": [
+          "/usr/bin/python3",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/round-two/six-rupert-2/ib_merger_wedge/controls.py",
+          "--output",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass29-final-controls-normal-record.json"
+        ],
+        "exit_code": 0,
+        "error": null,
+        "wall_seconds": 4.7951537349727005,
+        "single_child_peak_RSS_KiB": 20072,
+        "child_guard_seconds": 45,
+        "numeric_threads": 1,
+        "cpu_intensive_children": 1,
+        "scope_unchanged": "1CPU2GiB"
+      },
+      "whole_control_record_SHA256": "78379743f82cc4e7b21bc88fd7884571dde813cd65674471af5c28b1382e1ca3",
+      "whole_semantic_rejections": [
+        {
+          "false_mathematical_fixture": "false actual B spatial preimage",
+          "rejected_by_original_mathematical_gate": "literal actual B spatial preimage of endpoint"
+        },
+        {
+          "false_mathematical_fixture": "eta=0 edge falsely used inside receiving wedge",
+          "rejected_by_original_mathematical_gate": "every60 genuine receiving supports at every closed wedge corner"
+        },
+        {
+          "false_mathematical_fixture": "false enlarged delta=1 support domain",
+          "rejected_by_original_mathematical_gate": "every60 genuine receiving supports at every closed wedge corner"
+        },
+        {
+          "false_mathematical_fixture": "zero base weight falsely called strict on all30 contacts",
+          "rejected_by_original_mathematical_gate": "positive finite domain, every base weight, quadratic bound and physical radius"
+        },
+        {
+          "false_mathematical_fixture": "false C=1 nonlinear normal bound",
+          "rejected_by_original_mathematical_gate": "fresh literal nonlinear normalized-normal bound"
+        },
+        {
+          "false_mathematical_fixture": "false closed rho=1 absorption",
+          "rejected_by_original_mathematical_gate": "finite nonlinear absorption is strictly less than one"
+        },
+        {
+          "false_mathematical_fixture": "improper B source matrix",
+          "rejected_by_original_mathematical_gate": "actual proper original source motion"
+        },
+        {
+          "false_mathematical_fixture": "negative original excess cofactor",
+          "rejected_by_original_mathematical_gate": "all105 finite excess-weight controls positive"
+        },
+        {
+          "false_mathematical_fixture": "nonzero original force target falsely called cancelled",
+          "rejected_by_original_mathematical_gate": "original signed torque and exactly zero two physical force components"
+        },
+        {
+          "false_mathematical_fixture": "false normalized mass bound1",
+          "rejected_by_original_mathematical_gate": "all28 strict normalized physical mass controls"
+        },
+        {
+          "false_mathematical_fixture": "real interior receiving corner27 replaced by55 in wrong cell",
+          "rejected_by_original_mathematical_gate": "every actual receiving AND full60 B closed-cell support control with direct spatial/planar comparison"
+        },
+        {
+          "false_mathematical_fixture": "fictitious strict18-corner q hull",
+          "rejected_by_original_mathematical_gate": "genuine strict q cycle, without fictitious18-corner degeneration"
+        }
+      ]
+    },
+    {
+      "label": "controls-optimized",
+      "optimized": true,
+      "resource": {
+        "agent": "six-rupert-2",
+        "role": "researcher",
+        "label": "pass29-final-controls-optimized",
+        "command": [
+          "/usr/bin/python3",
+          "-O",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/round-two/six-rupert-2/ib_merger_wedge/controls.py",
+          "--output",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass29-final-controls-optimized-record.json"
+        ],
+        "exit_code": 0,
+        "error": null,
+        "wall_seconds": 4.9332382620777935,
+        "single_child_peak_RSS_KiB": 23140,
+        "child_guard_seconds": 45,
+        "numeric_threads": 1,
+        "cpu_intensive_children": 1,
+        "scope_unchanged": "1CPU2GiB"
+      },
+      "whole_control_record_SHA256": "78379743f82cc4e7b21bc88fd7884571dde813cd65674471af5c28b1382e1ca3",
+      "whole_semantic_rejections": [
+        {
+          "false_mathematical_fixture": "false actual B spatial preimage",
+          "rejected_by_original_mathematical_gate": "literal actual B spatial preimage of endpoint"
+        },
+        {
+          "false_mathematical_fixture": "eta=0 edge falsely used inside receiving wedge",
+          "rejected_by_original_mathematical_gate": "every60 genuine receiving supports at every closed wedge corner"
+        },
+        {
+          "false_mathematical_fixture": "false enlarged delta=1 support domain",
+          "rejected_by_original_mathematical_gate": "every60 genuine receiving supports at every closed wedge corner"
+        },
+        {
+          "false_mathematical_fixture": "zero base weight falsely called strict on all30 contacts",
+          "rejected_by_original_mathematical_gate": "positive finite domain, every base weight, quadratic bound and physical radius"
+        },
+        {
+          "false_mathematical_fixture": "false C=1 nonlinear normal bound",
+          "rejected_by_original_mathematical_gate": "fresh literal nonlinear normalized-normal bound"
+        },
+        {
+          "false_mathematical_fixture": "false closed rho=1 absorption",
+          "rejected_by_original_mathematical_gate": "finite nonlinear absorption is strictly less than one"
+        },
+        {
+          "false_mathematical_fixture": "improper B source matrix",
+          "rejected_by_original_mathematical_gate": "actual proper original source motion"
+        },
+        {
+          "false_mathematical_fixture": "negative original excess cofactor",
+          "rejected_by_original_mathematical_gate": "all105 finite excess-weight controls positive"
+        },
+        {
+          "false_mathematical_fixture": "nonzero original force target falsely called cancelled",
+          "rejected_by_original_mathematical_gate": "original signed torque and exactly zero two physical force components"
+        },
+        {
+          "false_mathematical_fixture": "false normalized mass bound1",
+          "rejected_by_original_mathematical_gate": "all28 strict normalized physical mass controls"
+        },
+        {
+          "false_mathematical_fixture": "real interior receiving corner27 replaced by55 in wrong cell",
+          "rejected_by_original_mathematical_gate": "every actual receiving AND full60 B closed-cell support control with direct spatial/planar comparison"
+        },
+        {
+          "false_mathematical_fixture": "fictitious strict18-corner q hull",
+          "rejected_by_original_mathematical_gate": "genuine strict q cycle, without fictitious18-corner degeneration"
+        }
+      ]
+    }
+  ],
+  "fixed_guard_seconds": 45,
+  "numeric_threads": 1,
+  "max_CPU_intensive_children": 1,
+  "resource_scope_unchanged": "1CPU2GiB",
+  "ordinary_q_classification_and_G_HB_theorem_dependencies_not_replayed": true,
+  "source_entry": "ordinary compactness proof with no numerical delta_star",
+  "validation_file_created_after_replay_not_a_runtime_input": true,
+  "private_corrected_setup_issue": "An initial dependency-manifest path through the not-yet-created publication directory was missing. Corrected by reading the already published direct path. Mathematical source and coefficients unchanged.",
+  "independent_review": false,
+  "formalized": false,
+  "global_J74_status": "OPEN"
+}
