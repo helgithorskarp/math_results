@@ -1,0 +1,124 @@
+{
+  "agent": "six-covering-3",
+  "role": "researcher",
+  "root_stream_sha256": "73b75edfcff0a70b93879088232935a96021a594897ca850cd5dbbc15f268ca0",
+  "producer_math_sha256": {
+    "seed": "d08da4fae7915b1e65643366fdf761c787cacfc73eec4eca8711c3933a38b9b6",
+    "quotient": "b39eb73506b58dac995048863a3f7f5ad622b7a657f38933f53abaff7a9dc1d3",
+    "BASE": "d862366779556368fb67aed6eba15bf08735626a3b9c4c0eaf04543e780b05e5",
+    "five": "2ea0b9049ab7c04db9bce2d19c1e222cb144a42761b39edb4f21fbfcb77a5459"
+  },
+  "executed_sources": [
+    "check-five-tail-footprint.py",
+    "five-tail-footprint-pilot.py",
+    "published9859-generate-root.py",
+    "root48-base-check.py",
+    "root48-base-controls.py",
+    "root48-base-generate.py",
+    "root48-check.py",
+    "root48-controls.py",
+    "root48-generate.py",
+    "root48-guard.py",
+    "root48-live-prefix-map.py",
+    "three-pair-capacity-control.py"
+  ],
+  "controls": {
+    "root48-controls.py": [
+      {
+        "damage": "missing_group",
+        "expected_reason": "Generator closure not complete Cartesian stabilizer",
+        "exit": 1,
+        "intended_reason_present": true
+      },
+      {
+        "damage": "physical_first",
+        "expected_reason": "Physical point map differs",
+        "exit": 1,
+        "intended_reason_present": true
+      },
+      {
+        "damage": "phase_last",
+        "expected_reason": "Original phase-stream field differs",
+        "exit": 1,
+        "intended_reason_present": true
+      },
+      {
+        "damage": "missing_orbit",
+        "expected_reason": "Wrong original orbit inventory",
+        "exit": 1,
+        "intended_reason_present": true
+      },
+      {
+        "damage": "duplicate_orbit",
+        "expected_reason": "Orbit overlap/representative ambiguity",
+        "exit": 1,
+        "intended_reason_present": true
+      },
+      {
+        "damage": "parity_pooled",
+        "expected_reason": "Full raw orbit fields differ",
+        "exit": 1,
+        "intended_reason_present": true
+      },
+      {
+        "damage": "retained_omission",
+        "expected_reason": "Normalized target frontier differs",
+        "exit": 1,
+        "intended_reason_present": true
+      },
+      {
+        "damage": "other_P14",
+        "expected_reason": "Original physical domain differs",
+        "exit": 1,
+        "intended_reason_present": true
+      }
+    ],
+    "root48-base-controls.py": [
+      {
+        "damage": "early_cutoff",
+        "expected_reason": "Every-stage coverage cutoff differs",
+        "exit": 1,
+        "intended_reason_present": true
+      },
+      {
+        "damage": "preceding_omission",
+        "expected_reason": "Preceding qualifying tuple domain omitted/duplicated/reordered",
+        "exit": 1,
+        "intended_reason_present": true
+      },
+      {
+        "damage": "preceding_duplicate",
+        "expected_reason": "Preceding qualifying tuple domain omitted/duplicated/reordered",
+        "exit": 1,
+        "intended_reason_present": true
+      },
+      {
+        "damage": "first_extension_phase",
+        "expected_reason": "Complete physical original row differs",
+        "exit": 1,
+        "intended_reason_present": true
+      },
+      {
+        "damage": "last_extension_upper",
+        "expected_reason": "Complete physical original row differs",
+        "exit": 1,
+        "intended_reason_present": true
+      },
+      {
+        "damage": "truncated_final",
+        "expected_reason": "Incomplete/extra original phase stream",
+        "exit": 1,
+        "intended_reason_present": true
+      },
+      {
+        "damage": "canonical_root_omission",
+        "expected_reason": "Complete normalized root domain/fields differ",
+        "exit": 1,
+        "intended_reason_present": true
+      }
+    ]
+  },
+  "frozen_output_private_status_labels_are_historical": true,
+  "arithmetic_child_guard_seconds": 20,
+  "threads": 1
+}
