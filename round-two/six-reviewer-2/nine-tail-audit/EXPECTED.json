@@ -1,0 +1,44 @@
+{
+  "whole_record_sha256": "3cdc2d74b15bb486945a55ae395576cec2e1cb35d0c54a5c8558aeab1a363657",
+  "whole_record_bytes": 1136039,
+  "direct_audit": {
+    "BASE_phases": 46255,
+    "final_original_phase_tuples": 46856,
+    "independent_kernel_imported": false,
+    "local_states": 14808,
+    "raw_H_unions": 479477,
+    "raw_local_states": 10980,
+    "status": "COMPLETE_DIRECT_PHYSICAL_AUDIT",
+    "third_states": 1360,
+    "three_parent_allocations": 45,
+    "types": 34,
+    "whole_record_bytes": 1136039,
+    "whole_record_sha256": "3cdc2d74b15bb486945a55ae395576cec2e1cb35d0c54a5c8558aeab1a363657"
+  },
+  "controls": {
+    "malformed_rejections": 5,
+    "restored_whole_positive": true,
+    "semantic_rejections": [
+      "wrong original14 phase",
+      "drop essential32",
+      "exact-LCM assumption",
+      "at-least-eight minimum",
+      "drop last BASE original",
+      "last BASE phase stream",
+      "false1156 budget",
+      "inactive half falsely covers",
+      "drop final raw phase",
+      "wrong final original phase",
+      "wrong mixed bound",
+      "drop late H-union group",
+      "drop third-parent allocation",
+      "false180 terminal type bound",
+      "false ninth-to-tenth tail flag",
+      "unproved global bound flag",
+      "new unsupported claim key"
+    ],
+    "status": "COMPLETE_CONTROLS",
+    "trust": "full reference is cached only after a fresh complete direct mathematical audit; damages test the validation interface, not new mathematical proofs",
+    "whole_record_sha256": "3cdc2d74b15bb486945a55ae395576cec2e1cb35d0c54a5c8558aeab1a363657"
+  }
+}
