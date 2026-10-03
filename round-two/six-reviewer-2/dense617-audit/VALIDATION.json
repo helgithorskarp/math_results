@@ -1,0 +1,56 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "utc": "2026-10-03T02:16:12.818352+00:00",
+  "scoped_cold_replay": {
+    "status": "COMPLETE_DENSE617_INDEPENDENT_AUDIT",
+    "children": 170,
+    "whole_pairs": 85,
+    "all_primary_entries_checked": true,
+    "controls": {
+      "literal_subset_fixtures": 36,
+      "positive_records": 53,
+      "semantic_damages_rejected": [
+        "omit_first",
+        "omit_last",
+        "duplicate",
+        "wrong_core",
+        "wrong_cost",
+        "wrong_best",
+        "wrong_missing",
+        "duplicated_row",
+        "extra_field"
+      ]
+    },
+    "max_child_seconds": 15.65946265310049,
+    "peak_child_rss_kib": 122612,
+    "guards_seconds": 20,
+    "threads": 1,
+    "expected_sha256": "714458f7776315c39b351a5dad76645916fb8783dfb779999fa2da3913bb4b4d"
+  },
+  "native_source_only_replay": {
+    "children": 104,
+    "maximum_child_seconds": 6.280153208994307,
+    "peak_child_rss_kib": 61828,
+    "seconds": 268.31982837908436,
+    "status": "COMPLETE_ALL_DOMAIN_CHECKED",
+    "summary_sha256": "bfa88afacf76064c224aa53abf3ff7854f45603b7b20a060d43dc872c05fc257"
+  },
+  "late_correspondence": {
+    "completed": true,
+    "whole_pairs": 18,
+    "full_row_entries": 68405,
+    "parent": {
+      "all_literal_parent_entries_equal": true,
+      "full_adjacencies": 94864,
+      "full_fives": 1685,
+      "full_states": 11092,
+      "full_survivors": 515
+    }
+  },
+  "late_max_child_seconds": 2.78830041596666,
+  "late_peak_rss_kib": 138176,
+  "all_five_pre_native_kernels_unchanged": true,
+  "ordinary107_refinement": "Integral missing-degree deduction from the465 independently verified core cases; credited9940 method, no9940 numerical premise or24 verdict.",
+  "unused_optional_experiment": "Larger623800 pre-native primary cases completed; partial secondary verification voluntarily retired when short ordinary proof replaced it. No exclusion inferred from the earlier20s timeout or retirement. Preserved private, absent from published proof scope."
+}
