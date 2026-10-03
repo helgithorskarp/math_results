@@ -1,0 +1,96 @@
+{
+  "actual_agent": "six-tammes-2",
+  "role": "researcher",
+  "utc": "2026-10-03T00:55:09.622645+00:00",
+  "normal_optimized_entire_exact_output_equal": true,
+  "normal_optimized_entire_controls_output_equal": true,
+  "all76_generic_polynomial_identities_actually_checked": true,
+  "all4_known_completions_actually_checked": true,
+  "all376_base_model_polynomials_actually_checked": true,
+  "all4_exact_strict_improvement_equality_controls_actually_checked": true,
+  "rejected_semantic_damage_count": 27,
+  "valid_control_count": 3,
+  "final_source_sha256": {
+    "INPUT.json": "51a651ef4ab8a83d306da8112f77d82be51e80191272ae609e1ebd53ab48fba7",
+    "SYSTEM.json": "c52bd3a693dc2f42060e9091a32e2c776833544b2013dff63db4e1bf556ea17c",
+    "check.py": "e4fb5e114cad074de687d7c2ec8ce533d13c06c35a9668d27541657614825838",
+    "controls.py": "c472a03b9d7010bd55846402528059381d3798bcf5cb7fbc3c2957563ebab22d",
+    "field.py": "fed3f04c1f55c44741518be7ba5f61fa20becf94c272f2fb0cf50125097b9e9f",
+    "incumbents.py": "3ad3655ab910e54c8ceb0f0713f9bdc32f6285c1a13205cc6482f790a2e289f8",
+    "model.py": "66bfea6b1131719ac9f32e0fbc724a2e0266be083bf23418541a5ca34347762e",
+    "polynomials.py": "92c25587115816b4ab068c3ce3c39e01388722621388a54e9c241f5c28435166",
+    "schema.py": "e740e32ef0a81041e0996cc30be6c5abbab88c69fb092ff29a40390c25836f6a"
+  },
+  "guard_reached": false,
+  "active_job": false,
+  "ordinary_proof_formalized": false,
+  "independent_new_result_review": "pending",
+  "executions": [
+    {
+      "name": "exact-normal",
+      "command": [
+        "python3",
+        "check.py",
+        "--output",
+        "/tmp/tammes-polynomial-model.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 5.473246769979596,
+      "child_cpu_seconds": 5.429332,
+      "cumulative_child_max_rss_kib": 18776,
+      "threads": 1,
+      "subprocess_guard_seconds": 55,
+      "stdout_sha256": "8d431bce138288bd1f204ad6bd4518f658f4569ca4bef842ccb5e7230bd2b8e2"
+    },
+    {
+      "name": "exact-optimized",
+      "command": [
+        "python3",
+        "-O",
+        "check.py",
+        "--output",
+        "/tmp/tammes-polynomial-model.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 6.690775510040112,
+      "child_cpu_seconds": 6.673592999999999,
+      "cumulative_child_max_rss_kib": 21660,
+      "threads": 1,
+      "subprocess_guard_seconds": 55,
+      "stdout_sha256": "8d431bce138288bd1f204ad6bd4518f658f4569ca4bef842ccb5e7230bd2b8e2"
+    },
+    {
+      "name": "controls-normal",
+      "command": [
+        "python3",
+        "controls.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.18268255901057273,
+      "child_cpu_seconds": 0.17765100000000011,
+      "cumulative_child_max_rss_kib": 21660,
+      "threads": 1,
+      "subprocess_guard_seconds": 55,
+      "stdout_sha256": "c76796c60038801dd25371ff67b7f4557d8778b687d684ae88fb1787e7ad23b4"
+    },
+    {
+      "name": "controls-optimized",
+      "command": [
+        "python3",
+        "-O",
+        "controls.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.3215303799370304,
+      "child_cpu_seconds": 0.3204099999999986,
+      "cumulative_child_max_rss_kib": 21660,
+      "threads": 1,
+      "subprocess_guard_seconds": 55,
+      "stdout_sha256": "c76796c60038801dd25371ff67b7f4557d8778b687d684ae88fb1787e7ad23b4"
+    }
+  ],
+  "runtime": "Python3.11.2 standard library",
+  "resource_scope_unchanged": "1CPU2GiB; one native mathematical child at a time; all thread variables1",
+  "complete_expected_output_sha256": "8d431bce138288bd1f204ad6bd4518f658f4569ca4bef842ccb5e7230bd2b8e2",
+  "controls_output_sha256": "c76796c60038801dd25371ff67b7f4557d8778b687d684ae88fb1787e7ad23b4"
+}
