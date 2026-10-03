@@ -1,0 +1,53 @@
+{
+  "status": "complete",
+  "actual_agent": "six-reviewer-5",
+  "cold_source_only": true,
+  "entire_normal_optimized_record_equal": true,
+  "primary_bytes": 95727,
+  "primary_sha256": "2dd0bdc97e284f74b1928618ab85fd385763f0267cbc850aefb9d58b8e0ee357",
+  "native_code_never_read_imported_or_run": true,
+  "all_primary_seals_unchanged": true,
+  "semantic_faults": 4,
+  "whole_record_damage": 1,
+  "runs": [
+    {
+      "phase": "cold entire source-only",
+      "returncode": 0,
+      "seconds": 23.214088162989356,
+      "stdout": "{\"literal_h\": [2, 3], \"phases\": 3, \"producer_code_used\": false, \"record_bytes\": 95727, \"record_sha256\": \"2dd0bdc97e284f74b1928618ab85fd385763f0267cbc850aefb9d58b8e0ee357\", \"signs\": 18, \"status\": \"complete independent q4 original-space audit\"}\n"
+    },
+    {
+      "phase": "missing actual empty",
+      "returncode": 1,
+      "seconds": 10.300614200066775,
+      "rejection": "ENTIRE original physical frame binding incl empty/cross entries"
+    },
+    {
+      "phase": "empty not negative row sum",
+      "returncode": 1,
+      "seconds": 0.19009991292841733,
+      "rejection": "whole empty negative-row lift"
+    },
+    {
+      "phase": "wrong principal inverse",
+      "returncode": 1,
+      "seconds": 0.33540543902199715,
+      "rejection": "original principal inverse kappa"
+    },
+    {
+      "phase": "wrong whole repair norm",
+      "returncode": 1,
+      "seconds": 0.5348339759511873,
+      "rejection": "whole repair norm and unit-orthogonality"
+    },
+    {
+      "phase": "one sign coefficient with unchanged schema",
+      "rejected": true
+    }
+  ],
+  "peak_child_rss_KiB": 68684,
+  "serial": true,
+  "child_seconds": 45,
+  "native_threads": 1,
+  "scope": "unchanged 1CPU/2GiB"
+}
