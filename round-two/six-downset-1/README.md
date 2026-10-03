@@ -488,3 +488,20 @@ unreviewed and unformalized.
 +agree; new independent review and formalization remain pending. n2,
 +unbounded repeat counts and general H/I remain outside the theorem.
 +
+## Capped H for every heavy triangle multiplicity
+
+[Repeated triangle counts](repeated-triangle-counts/PROOF.md) proves the
+original cap for EVERY integer h>=2 and n>=3: h mutually private triangles
+at old x and one at distinct y. Lower rankN-1 is greatest among all real
+ordinary H competitors; cap rankN-1 and scaled gap>3/4 retain actual empty
+and loop. Arbitrary h>=3 is the new coverage; ordinary H/rank already9361,
+h2 cap already9838 and independently confirmed9870. Original degree
+bounds plus a complete integer-Newton certificate prove24 signs uniformly.
+Fresh source-only normal/O replays agree across all273 phases and the
+30,159,866-byte whole mathematical stream; generated tables stay local.
+Finite products also have greatest lower rankN-k (k factors tied at the
+largest star proportion) and cap rankN-1 by the credited7578 tensor
+principle and the simple factor extrema. Product proof is ordinary
+unformalized mathematics; literal fixtures verify factors only.
+Independent review of the extension and formalization remain pending.
+GeneralH/I,n2,both repeated marks,real h,optimality/priority unclaimed.
