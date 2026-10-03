@@ -1,0 +1,167 @@
+{
+  "actual_agent": "six-reviewer-3",
+  "role": "independent mathematical reviewer",
+  "verdict": "original P/S proof gap; conditional T2=C all-rank/all-h terminal confirmed",
+  "full_records": {
+    "terminal": {
+      "bytes": 613267,
+      "sha256": "f98cb4f67c3c981193edb8bf2dc2b57cb128c0d067f19e6b388f1a4a15633e0e"
+    },
+    "reductions": {
+      "bytes": 3827,
+      "sha256": "4cdcfbad6042720b2b96a94e65066df0755d5ae4ea292d6fd3811d078aeb572f"
+    },
+    "gap": {
+      "bytes": 30032,
+      "sha256": "02302cb75b7a8037e9d69375241e7fff54343d2df8ec139c69f08ca936952933"
+    }
+  },
+  "cases": 72,
+  "canonical_cases": [
+    {
+      "case": [
+        3,
+        0,
+        0,
+        false
+      ],
+      "domain_sizes": [
+        6,
+        2,
+        7,
+        7,
+        7,
+        7
+      ],
+      "balanced": 8,
+      "valid": 0
+    },
+    {
+      "case": [
+        3,
+        1,
+        0,
+        false
+      ],
+      "domain_sizes": [
+        6,
+        2,
+        7,
+        7,
+        7,
+        3
+      ],
+      "balanced": 0,
+      "valid": 0
+    },
+    {
+      "case": [
+        3,
+        2,
+        0,
+        false
+      ],
+      "domain_sizes": [
+        6,
+        2,
+        7,
+        7,
+        3,
+        7
+      ],
+      "balanced": 0,
+      "valid": 0
+    },
+    {
+      "case": [
+        4,
+        0,
+        0,
+        false
+      ],
+      "domain_sizes": [
+        2,
+        2,
+        7,
+        7,
+        4,
+        4
+      ],
+      "balanced": 0,
+      "valid": 0
+    },
+    {
+      "case": [
+        4,
+        1,
+        0,
+        false
+      ],
+      "domain_sizes": [
+        2,
+        2,
+        7,
+        7,
+        4,
+        1
+      ],
+      "balanced": 0,
+      "valid": 0
+    },
+    {
+      "case": [
+        4,
+        2,
+        0,
+        false
+      ],
+      "domain_sizes": [
+        2,
+        2,
+        7,
+        7,
+        5,
+        4
+      ],
+      "balanced": 0,
+      "valid": 0
+    }
+  ],
+  "local_countermodel": {
+    "pair": {
+      "cap": 6,
+      "color": "blue",
+      "pages": [
+        "X1",
+        "X4",
+        "X5",
+        "q4",
+        "q5",
+        "u"
+      ],
+      "pair": [
+        "SY1",
+        "T2"
+      ]
+    },
+    "common_red": [
+      "X0",
+      "X2",
+      "X3",
+      "a",
+      "q0"
+    ],
+    "root_degrees": {
+      "u": 10,
+      "a": 9,
+      "SY1": 9,
+      "T2": 10
+    },
+    "SY1_X0_red": true,
+    "SY1_T2_Q_overlap": [
+      "q0"
+    ],
+    "other_global_violations": 111,
+    "Ramsey_counterexample": false
+  }
+}
