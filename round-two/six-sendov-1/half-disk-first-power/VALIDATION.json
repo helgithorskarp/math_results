@@ -1,0 +1,272 @@
+{
+  "agent": "six-sendov-1",
+  "checked_at": "2026-10-03T05:29:26.235501+00:00",
+  "formalized": false,
+  "full_typed_positives": [
+    "local-normal",
+    "cold-normal",
+    "local-optimized",
+    "cold-optimized"
+  ],
+  "guard_seconds": 45,
+  "independent_review": false,
+  "interpreter": "CPython standard library",
+  "max_child_rss_kib": 21676,
+  "max_child_seconds": 0.6552559429546818,
+  "native_threads": {
+    "BLIS_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "NUMEXPR_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1,
+    "VECLIB_MAXIMUM_THREADS": 1
+  },
+  "omitted_large_artifact": false,
+  "python": "3.12.14",
+  "record_sha256": "5943221e6ecd20e057eb77a83b0c59121989270e27cda30a6bddedc47adb432e",
+  "rejections": [
+    "math-last-polar-coefficient-normal",
+    "math-newton-eighth-bound-normal",
+    "math-origin-drop-eighth-normal",
+    "math-monotone-square-normal",
+    "math-newton-last-sign-normal",
+    "math-gaussian-last-coefficient-normal",
+    "math-last-polar-coefficient-optimized",
+    "math-newton-eighth-bound-optimized",
+    "math-origin-drop-eighth-optimized",
+    "math-monotone-square-optimized",
+    "math-newton-last-sign-optimized",
+    "math-gaussian-last-coefficient-optimized",
+    "fixture-last-polar-normal",
+    "fixture-last-polar-optimized",
+    "fixture-drop-eighth-normal",
+    "fixture-drop-eighth-optimized",
+    "fixture-last-newton-normal",
+    "fixture-last-newton-optimized",
+    "fixture-last-complex-normal",
+    "fixture-last-complex-optimized",
+    "fixture-wrong-type-normal",
+    "fixture-wrong-type-optimized",
+    "fixture-extra-key-normal",
+    "fixture-extra-key-optimized",
+    "source-pin-normal",
+    "source-pin-optimized"
+  ],
+  "resource_scope": "unchanged one CPU/two GiB; no escalation",
+  "result": "PASS",
+  "role": "researcher",
+  "runs": [
+    {
+      "exit_code": 0,
+      "label": "local-normal",
+      "mode": "normal",
+      "positive": true,
+      "seconds": 0.34822463104501367
+    },
+    {
+      "exit_code": 0,
+      "label": "cold-normal",
+      "mode": "normal",
+      "positive": true,
+      "seconds": 0.35245843103621155
+    },
+    {
+      "exit_code": 0,
+      "label": "local-optimized",
+      "mode": "optimized",
+      "positive": true,
+      "seconds": 0.5771646780194715
+    },
+    {
+      "exit_code": 0,
+      "label": "cold-optimized",
+      "mode": "optimized",
+      "positive": true,
+      "seconds": 0.5237760699819773
+    },
+    {
+      "exit_code": 1,
+      "label": "math-last-polar-coefficient-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.17781996401026845
+    },
+    {
+      "exit_code": 1,
+      "label": "math-newton-eighth-bound-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.151724123978056
+    },
+    {
+      "exit_code": 1,
+      "label": "math-origin-drop-eighth-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.16659984306897968
+    },
+    {
+      "exit_code": 1,
+      "label": "math-monotone-square-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.15762445610016584
+    },
+    {
+      "exit_code": 1,
+      "label": "math-newton-last-sign-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.197645180975087
+    },
+    {
+      "exit_code": 1,
+      "label": "math-gaussian-last-coefficient-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.3229865219909698
+    },
+    {
+      "exit_code": 1,
+      "label": "math-last-polar-coefficient-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3345137529540807
+    },
+    {
+      "exit_code": 1,
+      "label": "math-newton-eighth-bound-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.34042832802515477
+    },
+    {
+      "exit_code": 1,
+      "label": "math-origin-drop-eighth-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3440681890351698
+    },
+    {
+      "exit_code": 1,
+      "label": "math-monotone-square-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3380970780272037
+    },
+    {
+      "exit_code": 1,
+      "label": "math-newton-last-sign-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3859146540053189
+    },
+    {
+      "exit_code": 1,
+      "label": "math-gaussian-last-coefficient-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.5023479079827666
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-last-polar-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.34173341502901167
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-last-polar-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.562024547951296
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-drop-eighth-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.35252228600438684
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-drop-eighth-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.560547859990038
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-last-newton-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.3671339610591531
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-last-newton-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.6552559429546818
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-last-complex-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.37420132604893297
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-last-complex-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.5372238410636783
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-wrong-type-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.3713378750253469
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-wrong-type-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.5474349140422419
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-extra-key-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.34482340002432466
+    },
+    {
+      "exit_code": 1,
+      "label": "fixture-extra-key-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.5438352499622852
+    },
+    {
+      "exit_code": 1,
+      "label": "source-pin-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.066670585074462
+    },
+    {
+      "exit_code": 1,
+      "label": "source-pin-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.2538008929695934
+    }
+  ],
+  "serial": true,
+  "source_unchanged": true
+}
