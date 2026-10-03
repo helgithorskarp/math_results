@@ -1,0 +1,63 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "utc": "2026-10-03T00:05:55.924256+00:00",
+  "native_threads": 1,
+  "serial": true,
+  "child_timeout_seconds": 60,
+  "runs": [
+    {
+      "kind": "native",
+      "mode": "normal",
+      "returncode": 0,
+      "seconds": 2.214004293899052,
+      "stdout": {
+        "complete": true,
+        "bytes": 3438,
+        "sha256": "5246b5153ecfc4f7962cb25be727e4c000fd6210e2bbe9475e57f9ddaebb10c3",
+        "wall_seconds": 2.161117309005931,
+        "guard_seconds": 30
+      },
+      "max_child_rssKiB": 21588
+    },
+    {
+      "kind": "late",
+      "mode": "normal",
+      "returncode": 0,
+      "seconds": 2.6161576880840585,
+      "stdout": {
+        "bytes_without_LF": 673,
+        "sha256_without_LF": "c2198330083318a3e72073c0339a1287ee8aa295ae7e723144d1a71aa459c0ee"
+      },
+      "max_child_rssKiB": 21588
+    },
+    {
+      "kind": "native",
+      "mode": "optimized",
+      "returncode": 0,
+      "seconds": 2.2621353269787505,
+      "stdout": {
+        "complete": true,
+        "bytes": 3438,
+        "sha256": "5246b5153ecfc4f7962cb25be727e4c000fd6210e2bbe9475e57f9ddaebb10c3",
+        "wall_seconds": 2.084395943908021,
+        "guard_seconds": 30
+      },
+      "max_child_rssKiB": 24404
+    },
+    {
+      "kind": "late",
+      "mode": "optimized",
+      "returncode": 0,
+      "seconds": 2.9121382769662887,
+      "stdout": {
+        "bytes_without_LF": 673,
+        "sha256_without_LF": "c2198330083318a3e72073c0339a1287ee8aa295ae7e723144d1a71aa459c0ee"
+      },
+      "max_child_rssKiB": 24404
+    }
+  ],
+  "native_normal_optimized_bytes_equal": true,
+  "late_normal_optimized_bytes_equal": true,
+  "path_only_failure": "Initial late CLI used one excessive parent directory; failed before native file access or mathematical checking. Correct absolute input used for these four completed jobs."
+}
