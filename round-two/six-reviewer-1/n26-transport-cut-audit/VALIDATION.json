@@ -1,0 +1,358 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+  "full_cold_positive_records": {
+    "check.py": {
+      "bytes": 280967,
+      "sha256_after_full_comparison": "a661e1175c09084c78074206c9de69b7e1aca6f62d914f4631cf984193132904"
+    },
+    "literal.py": {
+      "bytes": 12486,
+      "sha256_after_full_comparison": "908a99e76e425dba56234858e775b1b9dda0dea47e266a075e3042d0c906cc19"
+    }
+  },
+  "positive_children": 4,
+  "semantic_rejections": [
+    {
+      "label": "wrong_original_ground",
+      "optimized": false,
+      "rejected_semantically": true,
+      "reason": "original ground sizes"
+    },
+    {
+      "label": "wrong_original_ground",
+      "optimized": true,
+      "rejected_semantically": true,
+      "reason": "original ground sizes"
+    },
+    {
+      "label": "incomplete_real_labels",
+      "optimized": false,
+      "rejected_semantically": true,
+      "reason": "complete declared real face"
+    },
+    {
+      "label": "incomplete_real_labels",
+      "optimized": true,
+      "rejected_semantically": true,
+      "reason": "complete declared real face"
+    },
+    {
+      "label": "wrong_profile",
+      "optimized": false,
+      "rejected_semantically": true,
+      "reason": "complete exact proper-only cut, all six cancellations"
+    },
+    {
+      "label": "wrong_profile",
+      "optimized": true,
+      "rejected_semantically": true,
+      "reason": "complete exact proper-only cut, all six cancellations"
+    },
+    {
+      "label": "negative_empty_weight",
+      "optimized": false,
+      "rejected_semantically": true,
+      "reason": "positive integral PSD weights"
+    },
+    {
+      "label": "negative_empty_weight",
+      "optimized": true,
+      "rejected_semantically": true,
+      "reason": "positive integral PSD weights"
+    },
+    {
+      "label": "lost_deficit_cancellation",
+      "optimized": false,
+      "rejected_semantically": true,
+      "reason": "complete exact proper-only cut, all six cancellations"
+    },
+    {
+      "label": "lost_deficit_cancellation",
+      "optimized": true,
+      "rejected_semantically": true,
+      "reason": "complete exact proper-only cut, all six cancellations"
+    },
+    {
+      "label": "wrong_proper_cut",
+      "optimized": false,
+      "rejected_semantically": true,
+      "reason": "complete exact proper-only cut, all six cancellations"
+    },
+    {
+      "label": "wrong_proper_cut",
+      "optimized": true,
+      "rejected_semantically": true,
+      "reason": "complete exact proper-only cut, all six cancellations"
+    },
+    {
+      "label": "wrong_transport",
+      "optimized": false,
+      "rejected_semantically": true,
+      "reason": "all exact normalized transport values"
+    },
+    {
+      "label": "wrong_transport",
+      "optimized": true,
+      "rejected_semantically": true,
+      "reason": "all exact normalized transport values"
+    },
+    {
+      "label": "wrong_negative_pairing",
+      "optimized": false,
+      "rejected_semantically": true,
+      "reason": "whole exact strict-negative slice pairing"
+    },
+    {
+      "label": "wrong_negative_pairing",
+      "optimized": true,
+      "rejected_semantically": true,
+      "reason": "whole exact strict-negative slice pairing"
+    },
+    {
+      "label": "wrong_credited_n24_transport_input",
+      "optimized": false,
+      "rejected_semantically": true,
+      "reason": "all exact normalized transport values"
+    },
+    {
+      "label": "wrong_credited_n24_transport_input",
+      "optimized": true,
+      "rejected_semantically": true,
+      "reason": "all exact normalized transport values"
+    }
+  ],
+  "total_children": 22,
+  "serial_one_math_child": true,
+  "native_threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "fixed_child_guard_seconds": 45,
+  "all_six_primary_sealed_files_unchanged": true,
+  "whole_normal_optimized_positive_records_equal": true,
+  "runs": [
+    {
+      "file": "check.py",
+      "optimized": false,
+      "seconds": 0.227511,
+      "returncode": 0
+    },
+    {
+      "file": "check.py",
+      "optimized": true,
+      "seconds": 0.394794,
+      "returncode": 0
+    },
+    {
+      "file": "literal.py",
+      "optimized": false,
+      "seconds": 0.533422,
+      "returncode": 0
+    },
+    {
+      "file": "literal.py",
+      "optimized": true,
+      "seconds": 0.680093,
+      "returncode": 0
+    },
+    {
+      "file": "check.py",
+      "optimized": false,
+      "seconds": 0.060859,
+      "returncode": 1
+    },
+    {
+      "file": "check.py",
+      "optimized": true,
+      "seconds": 0.229829,
+      "returncode": 1
+    },
+    {
+      "file": "check.py",
+      "optimized": false,
+      "seconds": 0.059673,
+      "returncode": 1
+    },
+    {
+      "file": "check.py",
+      "optimized": true,
+      "seconds": 0.235525,
+      "returncode": 1
+    },
+    {
+      "file": "check.py",
+      "optimized": false,
+      "seconds": 0.201124,
+      "returncode": 1
+    },
+    {
+      "file": "check.py",
+      "optimized": true,
+      "seconds": 0.371082,
+      "returncode": 1
+    },
+    {
+      "file": "check.py",
+      "optimized": false,
+      "seconds": 0.191588,
+      "returncode": 1
+    },
+    {
+      "file": "check.py",
+      "optimized": true,
+      "seconds": 0.363964,
+      "returncode": 1
+    },
+    {
+      "file": "check.py",
+      "optimized": false,
+      "seconds": 0.191114,
+      "returncode": 1
+    },
+    {
+      "file": "check.py",
+      "optimized": true,
+      "seconds": 0.374259,
+      "returncode": 1
+    },
+    {
+      "file": "check.py",
+      "optimized": false,
+      "seconds": 0.193568,
+      "returncode": 1
+    },
+    {
+      "file": "check.py",
+      "optimized": true,
+      "seconds": 0.363545,
+      "returncode": 1
+    },
+    {
+      "file": "check.py",
+      "optimized": false,
+      "seconds": 0.196289,
+      "returncode": 1
+    },
+    {
+      "file": "check.py",
+      "optimized": true,
+      "seconds": 0.370708,
+      "returncode": 1
+    },
+    {
+      "file": "check.py",
+      "optimized": false,
+      "seconds": 0.217837,
+      "returncode": 1
+    },
+    {
+      "file": "check.py",
+      "optimized": true,
+      "seconds": 0.36778,
+      "returncode": 1
+    },
+    {
+      "file": "check.py",
+      "optimized": false,
+      "seconds": 0.195195,
+      "returncode": 1
+    },
+    {
+      "file": "check.py",
+      "optimized": true,
+      "seconds": 0.383842,
+      "returncode": 1
+    }
+  ],
+  "total_child_wall_seconds": 6.403601,
+  "maximum_child_wall_seconds": 0.680093,
+  "proof_scope": "Ordinary real affine counting, exact input, no imported author code, no float/solver/PSD sample extrapolation.",
+  "late_native_corroboration": {
+    "agent": "six-reviewer-1",
+    "role": "independent mathematical reviewer",
+    "new_native_exposure_late_after_primary_seal": true,
+    "corroboration_not_primary_proof": true,
+    "all_original_native_record_fields_compared": true,
+    "credited_literal_n8_control_not_independent_new_proof": true,
+    "native_record_bytes": 6690,
+    "native_record_sha256_after_full_comparison": "bc01de1d6ffb247aeb0d87ebf4515525fef7b851f6331d5f36a41a11393c648d",
+    "whole_normal_optimized_records_equal": true,
+    "positive_children": 2,
+    "author_semantic_rejections": 16,
+    "all_target_and_three_dependency_pins_verified": true,
+    "serial_one_math_child": true,
+    "fixed_child_guard_seconds": 45,
+    "native_threads": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "runs": [
+      {
+        "optimized": false,
+        "returncode": 0,
+        "seconds": 5.239736,
+        "stdout": {
+          "status": "exact original rank-nine PSD dual verified",
+          "record_bytes": 6690,
+          "record_sha256": "bc01de1d6ffb247aeb0d87ebf4515525fef7b851f6331d5f36a41a11393c648d",
+          "original_dual_rank": 9,
+          "strict_negative_fixed_slice_pairing": "-274356636025866281341291/98175000000",
+          "affine_basis_probes": 37,
+          "semantic_rejections": 8,
+          "full36_real_face_infeasible": false,
+          "flags": {
+            "isolated": 1,
+            "optimize": 0
+          },
+          "native_threads": {
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "NUMEXPR_NUM_THREADS": "1",
+            "VECLIB_MAXIMUM_THREADS": "1",
+            "BLIS_NUM_THREADS": "1"
+          }
+        }
+      },
+      {
+        "optimized": true,
+        "returncode": 0,
+        "seconds": 5.573147,
+        "stdout": {
+          "status": "exact original rank-nine PSD dual verified",
+          "record_bytes": 6690,
+          "record_sha256": "bc01de1d6ffb247aeb0d87ebf4515525fef7b851f6331d5f36a41a11393c648d",
+          "original_dual_rank": 9,
+          "strict_negative_fixed_slice_pairing": "-274356636025866281341291/98175000000",
+          "affine_basis_probes": 37,
+          "semantic_rejections": 8,
+          "full36_real_face_infeasible": false,
+          "flags": {
+            "isolated": 1,
+            "optimize": 1
+          },
+          "native_threads": {
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "NUMEXPR_NUM_THREADS": "1",
+            "VECLIB_MAXIMUM_THREADS": "1",
+            "BLIS_NUM_THREADS": "1"
+          }
+        }
+      }
+    ],
+    "total_child_wall_seconds": 10.812883,
+    "maximum_child_wall_seconds": 5.573147
+  }
+}
