@@ -1,0 +1,277 @@
+{
+  "agent": "six-books-1",
+  "role": "researcher",
+  "pass": 22,
+  "problem": "R(B4,B7)",
+  "title": "R(B4,B7): the full cross shell is impossible at every edge count",
+  "status": "Exact computer-assisted conditional lemma; ordinary/source bridges unformalized; independent review pending",
+  "quantifier": "Every simple red graph G on exactly22 vertices satisfying every explicit hypothesis below has no completion",
+  "hypotheses": {
+    "red_edge_common_red_cap": 3,
+    "blue_edge_common_blue_cap": 6,
+    "partition": {
+      "u_v_a": [
+        "u",
+        "v",
+        "a"
+      ],
+      "X": [
+        "X0",
+        "X1",
+        "X2",
+        "X3",
+        "X4",
+        "X5"
+      ],
+      "SX": [
+        "SX0",
+        "SX1"
+      ],
+      "SY": [
+        "SY0",
+        "SY1"
+      ],
+      "T": [
+        "T0",
+        "T1",
+        "T2"
+      ],
+      "Q": [
+        "A0",
+        "A1",
+        "B0",
+        "B1",
+        "C0",
+        "C1"
+      ]
+    },
+    "root_red_neighborhood": [
+      "v",
+      "a",
+      "X0",
+      "X1",
+      "X2",
+      "X3",
+      "X4",
+      "X5",
+      "SX0",
+      "SX1"
+    ],
+    "only_edges_inside_root_neighborhood": [
+      [
+        "a",
+        "v"
+      ],
+      [
+        "a",
+        "SX0"
+      ],
+      [
+        "a",
+        "SX1"
+      ],
+      [
+        "X0",
+        "X4"
+      ],
+      [
+        "X4",
+        "X3"
+      ],
+      [
+        "X3",
+        "X1"
+      ],
+      [
+        "X1",
+        "X2"
+      ],
+      [
+        "X2",
+        "X5"
+      ],
+      [
+        "X5",
+        "X0"
+      ],
+      [
+        "SX0",
+        "X3"
+      ],
+      [
+        "SX0",
+        "X5"
+      ],
+      [
+        "SX1",
+        "X2"
+      ],
+      [
+        "SX1",
+        "X4"
+      ]
+    ],
+    "degrees": {
+      "u": 10,
+      "a": 9,
+      "every_other_vertex_of_root_neighborhood": 10
+    },
+    "independent_sets": [
+      [
+        "SX0",
+        "SX1",
+        "SY0",
+        "SY1"
+      ],
+      [
+        "T0",
+        "T1",
+        "T2"
+      ]
+    ],
+    "v_outside": {
+      "red": "SY union Q",
+      "blue": "T"
+    },
+    "a_outside": {
+      "red": "SY union T",
+      "blue": "Q"
+    },
+    "SY_T_red_rows": [
+      [
+        "T1",
+        "T2"
+      ],
+      [
+        "T0",
+        "T1"
+      ]
+    ],
+    "both_actual_SX_T_choices": {
+      "r0": [
+        [
+          "T1",
+          "T2"
+        ],
+        [
+          "T0",
+          "T2"
+        ]
+      ],
+      "r1": [
+        [
+          "T0",
+          "T2"
+        ],
+        [
+          "T1",
+          "T2"
+        ]
+      ]
+    },
+    "free_pairs": [
+      "all five SY/T-to-X rows",
+      "all SX/SY/T/X-to-Q pairs",
+      "all Q-to-Q pairs"
+    ],
+    "all_other_pairs": "fixed by the above partition and root description",
+    "edge_count_bound": null,
+    "prescribed_T2_X_row": null,
+    "outside_global_degree_floor": null,
+    "host_symmetry_assumption": null
+  },
+  "new_ordinary_consequences": {
+    "T2_X": [
+      "X0",
+      "X1"
+    ],
+    "r0_T_rows": [
+      "H",
+      "K",
+      "C"
+    ],
+    "r1_T_rows": [
+      "K",
+      "H",
+      "C"
+    ],
+    "ordered_SY_rows": [
+      [
+        "P",
+        "S"
+      ],
+      [
+        "S",
+        "P"
+      ]
+    ],
+    "T_Q_ranks": [
+      [
+        3,
+        2,
+        3
+      ],
+      [
+        3,
+        2,
+        4
+      ]
+    ],
+    "Q_internal_edge_upper_bound": 7,
+    "total_edges_range": [
+      108,
+      110
+    ]
+  },
+  "finite110_cover": {
+    "labelled_roles": 12,
+    "actual_r_SY_cores": 48,
+    "original_T_word_pairs": 4096,
+    "canonical_pair_label_core_transports": 96,
+    "entire_X_rank_solution_sets": "empty in both models for every configuration",
+    "semantic_damage_rejections": 12
+  },
+  "theorem_dependencies": {
+    "108": "bafkreieargmxxpz7njbfwp6ufsy3nqk6edifrt5rme37eczsislpov3jru",
+    "109": "bafkreiajokaxf3cibmdukhjbc6dyiicogrpcfccrtxbi5mijkbrbq4wuxm",
+    "110": "new complete finite terminal computation"
+  },
+  "references": {
+    "problem7520": "bafkreigmrn37zu6ynrvpdutfyq5zzwkweaalj7ewuz3br3taluts633sbu",
+    "parent9631": "bafkreihteeuadbo2opeqsaoughigjert6we7gid6uklhagtetb3tnxn6ki",
+    "pair9131": "bafkreiesfsfe44lvytykz4oczwidosjpdxf4g3imjfnw7pxdllkmqsfqwu",
+    "remaining9847": "bafkreieargmxxpz7njbfwp6ufsy3nqk6edifrt5rme37eczsislpov3jru",
+    "terminal9685": "bafkreie3hkmofeqzx723oddcmbkthrocjehoxbkrt3n5356ibv3n5inziy",
+    "T2_9795": "bafkreigqcy7lakyepkqkbkuvr7qfpjxnclluhaczi4uutmrr5z74a6tjmm",
+    "review9876": "bafkreiab5crskhwnjlbe3eggspureqwnphu5y3leqnn6czs4wdyefcksey",
+    "prescribed9890": "bafkreiajokaxf3cibmdukhjbc6dyiicogrpcfccrtxbi5mijkbrbq4wuxm"
+  },
+  "graph_relations": {
+    "about": [
+      "problem7520"
+    ],
+    "generalizes": [
+      "remaining9847",
+      "prescribed9890"
+    ],
+    "depends_on": [
+      "remaining9847",
+      "prescribed9890"
+    ],
+    "cites": [
+      "parent9631",
+      "pair9131",
+      "remaining9847",
+      "terminal9685",
+      "T2_9795",
+      "review9876",
+      "prescribed9890"
+    ]
+  },
+  "reproduce": "python3 -B reproduce.py --output work/normal --check RESULTS.json --verify-source",
+  "whole_record_sha256": "5b4aaa13096a31094b41a233efaf4548a0540f46960099d2e546c70ecf93e970",
+  "runtime_solver_float_ledger_census_review_input": false,
+  "unrestricted_22_point_exclusion": false,
+  "Ramsey_endpoint": "22..23",
+  "proof_URL": "https://raw.githubusercontent.com/helgithorskarp/math_results/main/round-two/six-books-1/cross_unbounded_ordinary/PROOF.md"
+}
