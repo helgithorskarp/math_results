@@ -1,0 +1,84 @@
+{
+  "agent": "six-downset-2",
+  "role": "researcher",
+  "python": "3.12.14",
+  "arithmetic": "CPython standard-library int and Fraction only",
+  "source_only": true,
+  "cold_source_only": true,
+  "whole_mathematical_records_identical": true,
+  "mathematical_record_bytes": 6690,
+  "mathematical_record_sha256": "bc01de1d6ffb247aeb0d87ebf4515525fef7b851f6331d5f36a41a11393c648d",
+  "source_sha256": {
+    "verify.py": "e92d1966b6a3bdefce48c24422e4f69b1f2fe0de8d889cfd98098f18c9fde1fa",
+    "CERTIFICATE.json": "7452cb1452d0c0e4dd63dc9037647c4aa62fe7285480e4e852a75ef80ffcb7ab",
+    "expected.json": "3eeed7d846af432ea978b76c45e81a8ed8cab5f73f149c71296648e20d54d322"
+  },
+  "exact_original_dual_rank": 9,
+  "affine_basis_probes": 37,
+  "whole_table_entries": 23125,
+  "actual_empty_not_dropped": true,
+  "original_lower_PSD_only": true,
+  "full36_real_face_infeasible": false,
+  "literal_baseline": {
+    "credited_claim": "8319/0",
+    "vertices": 247,
+    "entries_compared": 61009,
+    "signed_profile_energies": [
+      "1461768/5",
+      "3652"
+    ],
+    "difference_energies": [
+      "12",
+      "179/50",
+      "449/100"
+    ],
+    "actual_empty_loop": "20841/100",
+    "new_research": false
+  },
+  "modes": [
+    {
+      "mode": "normal",
+      "exit_code": 0,
+      "seconds": 9.289638758986257,
+      "peak_rss_kib": 20784,
+      "guard_seconds": 45,
+      "flags": {
+        "isolated": 1,
+        "optimize": 0
+      },
+      "native_threads": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "semantic_rejections": 8
+    },
+    {
+      "mode": "optimized",
+      "exit_code": 0,
+      "seconds": 5.655609642970376,
+      "peak_rss_kib": 24016,
+      "guard_seconds": 45,
+      "flags": {
+        "isolated": 1,
+        "optimize": 1
+      },
+      "native_threads": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "semantic_rejections": 8
+    }
+  ],
+  "normal_expected_generation": "Normal exact acceptance preceded expected.json generation; optimized mode regenerated full record before its expected comparison",
+  "resource_scope": "Serial one CPU math job; unchanged45-second guard;1CPU2GiB; all six native thread environments1",
+  "trust": "Ordinary original counting/affinity/rank/PSD proof unformalized; author checks not independent-person review",
+  "discovery_only": "ONE CLARABEL full original28-cone six-variable solve optimal_inaccurate with negative preconditioned objective; no nonexistence inferred from it"
+}
