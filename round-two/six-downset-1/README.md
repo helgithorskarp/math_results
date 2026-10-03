@@ -540,7 +540,11 @@ mark, all2h private pairs disjoint/outside. N=12h+4,s=3h+2; the entire
 ground has4h+2 points, whereas old n=2. Lower rankN-2 is greatest among
 ALL REAL ordinary H competitors, cap rankN-1, both centered largest-star
 kernels are exact, and the full scaled gap is>3/4. Actual empty/loop and
-all support/rows are retained. Ordinary H/rank is prior9361; this cap
+all support/rows are retained. Ordinary H existence is prior9361 at its
+weak boundary, but its greatest-rank theorem requires a strict bound and
+does not apply at t_j=q=2. The present construction attains greatest rank
+and the cap; [precise credit](balanced-triangle-edge/PRIOR-ART.md) also
+corrects the analogous predecessor-credit sentence in9986. This balanced
 domain was excluded from the earlier9926/9986 one-heavy/one-light family.
 
 The total old/marked vector K=-gxy and a uniform2h-facet mean simplex give

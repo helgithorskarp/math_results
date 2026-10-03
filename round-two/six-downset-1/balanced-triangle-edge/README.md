@@ -22,7 +22,10 @@ kappa=2/nu+4/beta>0, and 1-8delta>3/4. This is a SCALED gap,
 not a claimed factor-independent unit-M gap.
 
 The addition is uniform capped coverage of balanced repetitions at BOTH
-marks. Ordinary H/greatest rank are prior9361. The earlier9926/9986
+marks. Ordinary H existence is prior9361; its greatest-rank assertion
+requires a strict private-star bound, which fails here at t_j=q=2.
+[PRIOR-ART.md](PRIOR-ART.md) explains the corrected predecessor credit.
+Greatest rank and the cap are attained by the present proof. The earlier9926/9986
 one-heavy/one-light cap family excludes this case. General H/I, h1,
 unequal repeats, old cubes n>=3, optimality and priority are not claimed.
 

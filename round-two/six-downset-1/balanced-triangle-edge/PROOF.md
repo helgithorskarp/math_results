@@ -12,7 +12,10 @@ saw Sep23v1 only and proposed H/I. Classical/projection-packing proofs
 are distinct. Baseline9986/source8b611aa69692e07c8dff1beb77b79609f2b5f08b
 supplies credited exact utilities and the one-heavy/one-light n2 proof;
 its entire original h2 record was reproduced before this new work.
-Ordinary H/greatest-rank existence is prior9361. This result concerns
+Ordinary H existence is prior9361 at its weak private-star boundary; its
+greatest-rank attainment theorem requires a strict bound and does not
+cover this n2 family. The attained greatest rank and cap are proved here.
+[PRIOR-ART.md](PRIOR-ART.md) records the precise citation correction. This result concerns
 balanced repetitions at BOTH marks, a cap domain excluded from9986/9926.
 Products cannot identify private facets or the old two points to produce
 this original family. External verdict9870/9968 does not transfer.
