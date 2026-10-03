@@ -1,0 +1,155 @@
+{
+  "actual_agent": "six-reviewer-3",
+  "role": "independent mathematical reviewer",
+  "python": "3.12.14",
+  "standard_library_only": true,
+  "scope": "unchanged1CPU2GiB",
+  "native_threads": 1,
+  "serial": true,
+  "guard_seconds_per_child": 30,
+  "final_source_only_static_files": 11,
+  "final_live": {
+    "children": [
+      {
+        "name": "engine",
+        "optimized": false,
+        "peak_cumulative_child_KiB": 15064,
+        "seconds": 0.3163401950150728,
+        "whole_bytes_SHA256": "b6de2ecbd5c169e56ebb64060f381f3d1b4c9e7d3bcbbf80794a12a1c0743042"
+      },
+      {
+        "name": "original",
+        "optimized": false,
+        "peak_cumulative_child_KiB": 19296,
+        "seconds": 0.12775942008011043,
+        "whole_bytes_SHA256": "abd7f3099d5ba30482e263356d1549ea9cff79d001073abd86244585d6adf264"
+      },
+      {
+        "name": "stronger",
+        "optimized": false,
+        "peak_cumulative_child_KiB": 19392,
+        "seconds": 0.13163630501367152,
+        "whole_bytes_SHA256": "f518c2024d50b5e50708c2b5e29919c478be2a6ccacf6913272f4267384079a8"
+      },
+      {
+        "name": "damages",
+        "optimized": false,
+        "peak_cumulative_child_KiB": 19392,
+        "seconds": 0.10134630009997636,
+        "whole_bytes_SHA256": "0d3f45d34ff18d8a546927e4016d23556b3ad6ba6ff6182481258b5294879349"
+      },
+      {
+        "name": "engine",
+        "optimized": true,
+        "peak_cumulative_child_KiB": 19392,
+        "seconds": 0.4287339070579037,
+        "whole_bytes_SHA256": "b6de2ecbd5c169e56ebb64060f381f3d1b4c9e7d3bcbbf80794a12a1c0743042"
+      },
+      {
+        "name": "original",
+        "optimized": true,
+        "peak_cumulative_child_KiB": 21364,
+        "seconds": 0.32372095191385597,
+        "whole_bytes_SHA256": "abd7f3099d5ba30482e263356d1549ea9cff79d001073abd86244585d6adf264"
+      },
+      {
+        "name": "stronger",
+        "optimized": true,
+        "peak_cumulative_child_KiB": 21364,
+        "seconds": 0.31295545992907137,
+        "whole_bytes_SHA256": "f518c2024d50b5e50708c2b5e29919c478be2a6ccacf6913272f4267384079a8"
+      },
+      {
+        "name": "damages",
+        "optimized": true,
+        "peak_cumulative_child_KiB": 21364,
+        "seconds": 0.26801508700009435,
+        "whole_bytes_SHA256": "0d3f45d34ff18d8a546927e4016d23556b3ad6ba6ff6182481258b5294879349"
+      }
+    ],
+    "guard_seconds": 30,
+    "python": "3.12.14",
+    "serial": true,
+    "threads": 1
+  },
+  "final_cold": {
+    "children": [
+      {
+        "name": "engine",
+        "optimized": false,
+        "peak_cumulative_child_KiB": 15400,
+        "seconds": 0.3256880010012537,
+        "whole_bytes_SHA256": "b6de2ecbd5c169e56ebb64060f381f3d1b4c9e7d3bcbbf80794a12a1c0743042"
+      },
+      {
+        "name": "original",
+        "optimized": false,
+        "peak_cumulative_child_KiB": 19408,
+        "seconds": 0.12503102701157331,
+        "whole_bytes_SHA256": "abd7f3099d5ba30482e263356d1549ea9cff79d001073abd86244585d6adf264"
+      },
+      {
+        "name": "stronger",
+        "optimized": false,
+        "peak_cumulative_child_KiB": 19408,
+        "seconds": 0.13157799292821437,
+        "whole_bytes_SHA256": "f518c2024d50b5e50708c2b5e29919c478be2a6ccacf6913272f4267384079a8"
+      },
+      {
+        "name": "damages",
+        "optimized": false,
+        "peak_cumulative_child_KiB": 19408,
+        "seconds": 0.09621112502645701,
+        "whole_bytes_SHA256": "0d3f45d34ff18d8a546927e4016d23556b3ad6ba6ff6182481258b5294879349"
+      },
+      {
+        "name": "engine",
+        "optimized": true,
+        "peak_cumulative_child_KiB": 19408,
+        "seconds": 0.43381009390577674,
+        "whole_bytes_SHA256": "b6de2ecbd5c169e56ebb64060f381f3d1b4c9e7d3bcbbf80794a12a1c0743042"
+      },
+      {
+        "name": "original",
+        "optimized": true,
+        "peak_cumulative_child_KiB": 21000,
+        "seconds": 0.3274080000119284,
+        "whole_bytes_SHA256": "abd7f3099d5ba30482e263356d1549ea9cff79d001073abd86244585d6adf264"
+      },
+      {
+        "name": "stronger",
+        "optimized": true,
+        "peak_cumulative_child_KiB": 21344,
+        "seconds": 0.32304156094323844,
+        "whole_bytes_SHA256": "f518c2024d50b5e50708c2b5e29919c478be2a6ccacf6913272f4267384079a8"
+      },
+      {
+        "name": "damages",
+        "optimized": true,
+        "peak_cumulative_child_KiB": 21344,
+        "seconds": 0.2711472020018846,
+        "whole_bytes_SHA256": "0d3f45d34ff18d8a546927e4016d23556b3ad6ba6ff6182481258b5294879349"
+      }
+    ],
+    "guard_seconds": 30,
+    "python": "3.12.14",
+    "serial": true,
+    "threads": 1
+  },
+  "final16_complete_children": 16,
+  "all4_whole_child_outputs_identical_live_cold_normal_optimized": true,
+  "full_mathematics_SHA256": "25b3a31ac730de77b9f88e0401d4e825c89c60fa4857b9b8fcdfd0017bf752f6",
+  "max_actual_child_seconds": 0.43381009390577674,
+  "max_cumulative_child_peak_KiB": 21364,
+  "actual_damages_each_mode": 24,
+  "predata_engine_damages_each_mode": 3,
+  "unit_contact_components": 64,
+  "whole_new_identity_records": 10,
+  "whole_scalar_quotient_polynomials": 4,
+  "scalar_quotient_coefficient_rows": 277,
+  "whole_closed_boxes_each_cut": 6,
+  "complete_cover_cells_each_cut": 25,
+  "physical_positive_control_pairs": 66,
+  "no_timeout_unknown_incomplete_or_resource_escalation": true,
+  "first_cold_copy_note": "Initial cold fixture contained equivalent JSON before whitespace compaction; its complete record matched. Final byte-identical11-file snapshot was then replayed. Earlier receipts retained privately, no mathematical inference from formatting."
+}
