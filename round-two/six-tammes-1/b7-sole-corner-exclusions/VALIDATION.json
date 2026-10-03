@@ -1,0 +1,189 @@
+{
+  "actual_agent": "six-tammes-1",
+  "role": "researcher",
+  "pass": 27,
+  "checked_UTC": "2026-10-03T05:00:51.660228+00:00",
+  "status": "complete",
+  "python": "3.12.14",
+  "dependency": "Python standard library only",
+  "jobs": [
+    {
+      "command": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "round-two/six-tammes-1/b7-sole-corner-exclusions/check.py",
+        "--emit",
+        "round-two/six-tammes-1/b7-sole-corner-exclusions/CERTIFICATE.json"
+      ],
+      "started_UTC": "2026-10-03T04:45:23.838716+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 37.7913277259795,
+      "peak_child_RSS_KiB": 19720,
+      "native_threads": 1,
+      "child_guard_seconds": 55,
+      "scope_CPU": 1,
+      "scope_GiB": 2
+    },
+    {
+      "command": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "round-two/six-tammes-1/b7-sole-corner-exclusions/audit.py"
+      ],
+      "started_UTC": "2026-10-03T04:49:01.394666+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 7.36302894493565,
+      "peak_child_RSS_KiB": 19136,
+      "native_threads": 1,
+      "child_guard_seconds": 55,
+      "scope_CPU": 1,
+      "scope_GiB": 2
+    },
+    {
+      "command": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-O",
+        "round-two/six-tammes-1/b7-sole-corner-exclusions/check.py",
+        "--emit",
+        "scratch/pass27/certificate-optimized.json"
+      ],
+      "started_UTC": "2026-10-03T04:51:02.639639+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 38.18904454202857,
+      "peak_child_RSS_KiB": 22056,
+      "native_threads": 1,
+      "child_guard_seconds": 55,
+      "scope_CPU": 1,
+      "scope_GiB": 2
+    },
+    {
+      "command": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-O",
+        "round-two/six-tammes-1/b7-sole-corner-exclusions/audit.py"
+      ],
+      "started_UTC": "2026-10-03T04:53:50.116564+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 7.439652069006115,
+      "peak_child_RSS_KiB": 22244,
+      "native_threads": 1,
+      "child_guard_seconds": 55,
+      "scope_CPU": 1,
+      "scope_GiB": 2
+    },
+    {
+      "command": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "round-two/six-tammes-1/b7-sole-corner-exclusions/controls.py",
+        "--emit",
+        "round-two/six-tammes-1/b7-sole-corner-exclusions/CONTROLS.json"
+      ],
+      "started_UTC": "2026-10-03T04:54:26.462035+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 49.03265773993917,
+      "peak_child_RSS_KiB": 22368,
+      "native_threads": 1,
+      "child_guard_seconds": 55,
+      "scope_CPU": 1,
+      "scope_GiB": 2
+    },
+    {
+      "command": [
+        "/scratch/venvs/discovery-team/bin/python",
+        "-O",
+        "round-two/six-tammes-1/b7-sole-corner-exclusions/controls.py",
+        "--emit",
+        "scratch/pass27/controls-optimized.json"
+      ],
+      "started_UTC": "2026-10-03T04:57:50.270711+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "wall_seconds": 48.372171088005416,
+      "peak_child_RSS_KiB": 23748,
+      "native_threads": 1,
+      "child_guard_seconds": 55,
+      "scope_CPU": 1,
+      "scope_GiB": 2
+    }
+  ],
+  "certificate_bytes": 26295,
+  "certificate_sha256": "b92549e6c9c7047df9c85d7a67fc724a42f3175006050c4fb5984205d2be9b11",
+  "whole_normal_optimized_certificate_equal": true,
+  "whole_primary_outputs_equal": true,
+  "whole_normal_optimized_controls_equal": true,
+  "producer_and_separate_interpolation_auditor_completed": true,
+  "controls": {
+    "arithmetic_count": 10,
+    "damaged_projection_count": 24,
+    "projection_reference_freshly_verified_by_both": true,
+    "full_independent_geometric_negative_reruns": [
+      "anchor-coordinate"
+    ],
+    "valid_presentations": 2,
+    "critical_map8_root_retained": true
+  },
+  "maximum_job_seconds": 49.03265773993917,
+  "maximum_child_RSS_KiB": 23748,
+  "one_mathematical_child_at_a_time": true,
+  "resource_settings_escalated": false,
+  "dense_kernel_AST_unchanged_except_provenance_docstring": true,
+  "singular_six_by_six_parameters_not_discarded": true,
+  "Cramer_determinant_not_divided": true,
+  "independent_mathematical_review": false,
+  "formalization": false,
+  "new_unconditional_Tammes15_bound": false,
+  "remaining_closed_maps": [
+    8,
+    36,
+    42,
+    43,
+    44,
+    45,
+    61,
+    62,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79
+  ],
+  "remaining_strict_maps": [
+    36,
+    42,
+    43,
+    44,
+    45,
+    61,
+    62,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79
+  ]
+}
