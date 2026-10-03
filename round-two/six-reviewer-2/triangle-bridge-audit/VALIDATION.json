@@ -1,0 +1,71 @@
+{
+  "agent": "six-reviewer-2",
+  "role": "independent mathematical reviewer",
+  "utc": "2026-10-03T00:43:41.936223+00:00",
+  "python": "Python 3.12.14",
+  "serial_math_children": 1,
+  "native_threads": 1,
+  "original_wall_guard": 60,
+  "inner_guard": 55,
+  "max_child_rss_kib": 25156,
+  "rows": [
+    {
+      "entry": "check.py",
+      "optimized": false,
+      "seconds": 5.45592228602618,
+      "stdout_bytes": 41480,
+      "stdout_sha256": "7f50bbc1d5625851b89e27bc761c627dbd391099492844eb72209906ad91d367",
+      "returncode": 0
+    },
+    {
+      "entry": "check.py",
+      "optimized": true,
+      "seconds": 5.504683826002292,
+      "stdout_bytes": 41480,
+      "stdout_sha256": "7f50bbc1d5625851b89e27bc761c627dbd391099492844eb72209906ad91d367",
+      "returncode": 0
+    },
+    {
+      "entry": "controls.py",
+      "optimized": false,
+      "seconds": 0.22370001301169395,
+      "stdout_bytes": 970,
+      "stdout_sha256": "7d9405085f18f142b10acda72d12ef0f912b0b490b2aa8ab7abaecb6c1aac6be",
+      "returncode": 0
+    },
+    {
+      "entry": "controls.py",
+      "optimized": true,
+      "seconds": 0.30439183895941824,
+      "stdout_bytes": 970,
+      "stdout_sha256": "7d9405085f18f142b10acda72d12ef0f912b0b490b2aa8ab7abaecb6c1aac6be",
+      "returncode": 0
+    },
+    {
+      "entry": "verify.py",
+      "optimized": false,
+      "seconds": 5.565645997063257,
+      "stdout_bytes": 192,
+      "stdout_sha256": "21631c3f9308eebf98b15145566b4179498a5d22117970ff4784fd2c92adcea7",
+      "returncode": 0
+    },
+    {
+      "entry": "verify.py",
+      "optimized": true,
+      "seconds": 5.4688708439935,
+      "stdout_bytes": 192,
+      "stdout_sha256": "21631c3f9308eebf98b15145566b4179498a5d22117970ff4784fd2c92adcea7",
+      "returncode": 0
+    }
+  ],
+  "whole_normal_optimized_equal": true,
+  "new_native_source_unopened": true,
+  "nodal_verification": {
+    "agent": "six-reviewer-2",
+    "complete_nodal_identities": 76,
+    "damaged_coefficient_rejected": true,
+    "distinct_exact_nodes": 514,
+    "role": "independent mathematical reviewer",
+    "whole_expected_equal": true
+  }
+}
