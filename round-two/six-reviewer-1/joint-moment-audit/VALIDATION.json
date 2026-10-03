@@ -1,0 +1,630 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "utc": "2026-10-03T01:29:34.584941+00:00",
+  "independent": {
+    "agent": "six-reviewer-1",
+    "certificate_semantic_rejections": [
+      "last-witness-coefficient",
+      "minor",
+      "raw-normalization",
+      "missing-row",
+      "duplicate-exponent",
+      "bool-exponent",
+      "native-last-coefficient-whole_Fstar_zero_primitive_quadratics",
+      "native-last-coefficient-whole_primitive_three_by_three_minors"
+    ],
+    "late_data_only": {
+      "all40_map_coefficients": 863,
+      "complete_native_maps": 40,
+      "native_matrix_coefficients": 132,
+      "native_matrix_entries": 15,
+      "scalar_polynomial_comparisons": 40,
+      "selected_map_coefficients": 849,
+      "trust": "All exposed mathematical maps compared; native bool identity/control rows and native replay damage receipts are not independent proofs. No producer imports.",
+      "whole72_author_witness_equality": true,
+      "whole_all10_minors_equality": true
+    },
+    "no_producer_imports": true,
+    "primary_record_sha256": "ac89e0f42f2129b263a5e6441dbcb5f73fe35c168b9150a05e5c82b9cc8c1136",
+    "role": "independent mathematical reviewer",
+    "status": "PASS",
+    "unit": {
+      "Q": "14913669297722925580854623",
+      "complete10_minors": true,
+      "exact_S": "34067100067415021244918497997300224982960985417508781547158193910360091250630797797724521318198719380014119648838933236005087685738104423305596799817469142801564595980552561798694677219845797191168370430593380632312105803974460755698941372031885603527219938058303404882023031062655819402367176942569/559825050909493150770108745980770451742710338027573060046953231076201062080777708926946917130150537716775740586215437187068053764542760365137113533685223625514637638889809024335051855534439631665230675011150766443370537143343923803333658442057690838407364530830086603915579186032898462622058195079934771200000000",
+      "exact_SQ": "508065464337862010601212291444801809138400681463849712263670458418449905195227375129008277175912775122901348978950512308074020267455083257950023163266564859557489306679705191677096071500434549438572217222907210031646954130429418509886791860985947901520057944599932974951193133519520139194277899346649276713271564875209146487/559825050909493150770108745980770451742710338027573060046953231076201062080777708926946917130150537716775740586215437187068053764542760365137113533685223625514637638889809024335051855534439631665230675011150766443370537143343923803333658442057690838407364530830086603915579186032898462622058195079934771200000000",
+      "primitive_unit": [
+        [
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          1,
+          1
+        ]
+      ],
+      "raw_unit": [
+        [
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          1,
+          1
+        ]
+      ],
+      "rounded_gain_over_author": 10000000000000,
+      "strict_rounded_S_lt_1e13_inverse": true,
+      "whole72_coefficients": true
+    }
+  },
+  "native_replay": {
+    "all_fixed_three_by_three_minors": 10,
+    "all_quadratic_rows": 5,
+    "complex_first_power_proved": false,
+    "entire_rational_unit_coefficients": 72,
+    "independently_reviewed": false,
+    "mathematical_boundary_controls": 7,
+    "matrix_coefficient_bound_Q": "14913669297722925580854623",
+    "matrix_entry_degree": 5,
+    "original_cubic_and_fifth_moments_joint_zero_excluded": true,
+    "rejected_mathematical_damages": 6,
+    "unit_coefficient_bound_C": 1,
+    "unit_multiplier_degree": 4,
+    "whole_polynomial_identities": 32,
+    "whole_record_sha256": "97b467872be8c1d5741ebc0b37980ec060188dc66266403d565ee7b6b217529a"
+  },
+  "all7_primary_seals_unchanged": true,
+  "first_native_access": {
+    "utc": "2026-10-03T01:25:57.046638+00:00",
+    "seal_utc": "2026-10-03T01:25:26.623644+00:00",
+    "all7_primary_seals_unchanged": true,
+    "target_source": "fadd074a5339772bb937e7e77c5a0292c80b256a",
+    "files": {
+      "expected.json": "a45a2e4143bd5cac737d210fe05d9c6c27357df0dd47faabbdc9bca07af8520d",
+      "verify.py": "f6213f7ab945214e4c10abf96015b0b3fc9642c3e8b30f535799ec7ccb73f6d4"
+    }
+  },
+  "runs": [
+    {
+      "args": [
+        "SOURCE/round-two/six-reviewer-1/joint-moment-audit/check_certificate.py",
+        "--native-json",
+        "REPLAY/pass40-native/expected.json"
+      ],
+      "seconds": 0.8886324870400131,
+      "exit": 0,
+      "expected_success": true,
+      "peak_child_kib": 20716,
+      "record": {
+        "agent": "six-reviewer-1",
+        "certificate_semantic_rejections": [
+          "last-witness-coefficient",
+          "minor",
+          "raw-normalization",
+          "missing-row",
+          "duplicate-exponent",
+          "bool-exponent",
+          "native-last-coefficient-whole_Fstar_zero_primitive_quadratics",
+          "native-last-coefficient-whole_primitive_three_by_three_minors"
+        ],
+        "late_data_only": {
+          "all40_map_coefficients": 863,
+          "complete_native_maps": 40,
+          "native_matrix_coefficients": 132,
+          "native_matrix_entries": 15,
+          "scalar_polynomial_comparisons": 40,
+          "selected_map_coefficients": 849,
+          "trust": "All exposed mathematical maps compared; native bool identity/control rows and native replay damage receipts are not independent proofs. No producer imports.",
+          "whole72_author_witness_equality": true,
+          "whole_all10_minors_equality": true
+        },
+        "no_producer_imports": true,
+        "primary_record_sha256": "ac89e0f42f2129b263a5e6441dbcb5f73fe35c168b9150a05e5c82b9cc8c1136",
+        "role": "independent mathematical reviewer",
+        "status": "PASS",
+        "unit": {
+          "Q": "14913669297722925580854623",
+          "complete10_minors": true,
+          "exact_S": "34067100067415021244918497997300224982960985417508781547158193910360091250630797797724521318198719380014119648838933236005087685738104423305596799817469142801564595980552561798694677219845797191168370430593380632312105803974460755698941372031885603527219938058303404882023031062655819402367176942569/559825050909493150770108745980770451742710338027573060046953231076201062080777708926946917130150537716775740586215437187068053764542760365137113533685223625514637638889809024335051855534439631665230675011150766443370537143343923803333658442057690838407364530830086603915579186032898462622058195079934771200000000",
+          "exact_SQ": "508065464337862010601212291444801809138400681463849712263670458418449905195227375129008277175912775122901348978950512308074020267455083257950023163266564859557489306679705191677096071500434549438572217222907210031646954130429418509886791860985947901520057944599932974951193133519520139194277899346649276713271564875209146487/559825050909493150770108745980770451742710338027573060046953231076201062080777708926946917130150537716775740586215437187068053764542760365137113533685223625514637638889809024335051855534439631665230675011150766443370537143343923803333658442057690838407364530830086603915579186032898462622058195079934771200000000",
+          "primitive_unit": [
+            [
+              [
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              1,
+              1
+            ]
+          ],
+          "raw_unit": [
+            [
+              [
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              1,
+              1
+            ]
+          ],
+          "rounded_gain_over_author": 10000000000000,
+          "strict_rounded_S_lt_1e13_inverse": true,
+          "whole72_coefficients": true
+        }
+      }
+    },
+    {
+      "args": [
+        "-O",
+        "SOURCE/round-two/six-reviewer-1/joint-moment-audit/check_certificate.py",
+        "--native-json",
+        "REPLAY/pass40-native/expected.json"
+      ],
+      "seconds": 1.1183711789781228,
+      "exit": 0,
+      "expected_success": true,
+      "peak_child_kib": 22896,
+      "record": {
+        "agent": "six-reviewer-1",
+        "certificate_semantic_rejections": [
+          "last-witness-coefficient",
+          "minor",
+          "raw-normalization",
+          "missing-row",
+          "duplicate-exponent",
+          "bool-exponent",
+          "native-last-coefficient-whole_Fstar_zero_primitive_quadratics",
+          "native-last-coefficient-whole_primitive_three_by_three_minors"
+        ],
+        "late_data_only": {
+          "all40_map_coefficients": 863,
+          "complete_native_maps": 40,
+          "native_matrix_coefficients": 132,
+          "native_matrix_entries": 15,
+          "scalar_polynomial_comparisons": 40,
+          "selected_map_coefficients": 849,
+          "trust": "All exposed mathematical maps compared; native bool identity/control rows and native replay damage receipts are not independent proofs. No producer imports.",
+          "whole72_author_witness_equality": true,
+          "whole_all10_minors_equality": true
+        },
+        "no_producer_imports": true,
+        "primary_record_sha256": "ac89e0f42f2129b263a5e6441dbcb5f73fe35c168b9150a05e5c82b9cc8c1136",
+        "role": "independent mathematical reviewer",
+        "status": "PASS",
+        "unit": {
+          "Q": "14913669297722925580854623",
+          "complete10_minors": true,
+          "exact_S": "34067100067415021244918497997300224982960985417508781547158193910360091250630797797724521318198719380014119648838933236005087685738104423305596799817469142801564595980552561798694677219845797191168370430593380632312105803974460755698941372031885603527219938058303404882023031062655819402367176942569/559825050909493150770108745980770451742710338027573060046953231076201062080777708926946917130150537716775740586215437187068053764542760365137113533685223625514637638889809024335051855534439631665230675011150766443370537143343923803333658442057690838407364530830086603915579186032898462622058195079934771200000000",
+          "exact_SQ": "508065464337862010601212291444801809138400681463849712263670458418449905195227375129008277175912775122901348978950512308074020267455083257950023163266564859557489306679705191677096071500434549438572217222907210031646954130429418509886791860985947901520057944599932974951193133519520139194277899346649276713271564875209146487/559825050909493150770108745980770451742710338027573060046953231076201062080777708926946917130150537716775740586215437187068053764542760365137113533685223625514637638889809024335051855534439631665230675011150766443370537143343923803333658442057690838407364530830086603915579186032898462622058195079934771200000000",
+          "primitive_unit": [
+            [
+              [
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              1,
+              1
+            ]
+          ],
+          "raw_unit": [
+            [
+              [
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              1,
+              1
+            ]
+          ],
+          "rounded_gain_over_author": 10000000000000,
+          "strict_rounded_S_lt_1e13_inverse": true,
+          "whole72_coefficients": true
+        }
+      }
+    },
+    {
+      "args": [
+        "-I",
+        "REPLAY/pass40-native/cubic-quintic-exclusion/verify.py"
+      ],
+      "seconds": 0.8005389790050685,
+      "exit": 0,
+      "expected_success": true,
+      "peak_child_kib": 22896,
+      "record": {
+        "all_fixed_three_by_three_minors": 10,
+        "all_quadratic_rows": 5,
+        "complex_first_power_proved": false,
+        "entire_rational_unit_coefficients": 72,
+        "independently_reviewed": false,
+        "mathematical_boundary_controls": 7,
+        "matrix_coefficient_bound_Q": "14913669297722925580854623",
+        "matrix_entry_degree": 5,
+        "original_cubic_and_fifth_moments_joint_zero_excluded": true,
+        "rejected_mathematical_damages": 6,
+        "unit_coefficient_bound_C": 1,
+        "unit_multiplier_degree": 4,
+        "whole_polynomial_identities": 32,
+        "whole_record_sha256": "97b467872be8c1d5741ebc0b37980ec060188dc66266403d565ee7b6b217529a"
+      }
+    },
+    {
+      "args": [
+        "-I",
+        "-O",
+        "REPLAY/pass40-native/cubic-quintic-exclusion/verify.py"
+      ],
+      "seconds": 1.0421898739878088,
+      "exit": 0,
+      "expected_success": true,
+      "peak_child_kib": 22896,
+      "record": {
+        "all_fixed_three_by_three_minors": 10,
+        "all_quadratic_rows": 5,
+        "complex_first_power_proved": false,
+        "entire_rational_unit_coefficients": 72,
+        "independently_reviewed": false,
+        "mathematical_boundary_controls": 7,
+        "matrix_coefficient_bound_Q": "14913669297722925580854623",
+        "matrix_entry_degree": 5,
+        "original_cubic_and_fifth_moments_joint_zero_excluded": true,
+        "rejected_mathematical_damages": 6,
+        "unit_coefficient_bound_C": 1,
+        "unit_multiplier_degree": 4,
+        "whole_polynomial_identities": 32,
+        "whole_record_sha256": "97b467872be8c1d5741ebc0b37980ec060188dc66266403d565ee7b6b217529a"
+      }
+    },
+    {
+      "args": [
+        "-I",
+        "REPLAY/pass40-native/cubic-quintic-exclusion/verify.py",
+        "--expected",
+        "REPLAY/pass40-native-last-unit-damage.json"
+      ],
+      "seconds": 0.8505345319863409,
+      "exit": 1,
+      "expected_success": false,
+      "peak_child_kib": 22896,
+      "rejection": "ValueError: ENTIRE typed expected certificate"
+    },
+    {
+      "args": [
+        "-I",
+        "-O",
+        "REPLAY/pass40-native/cubic-quintic-exclusion/verify.py",
+        "--expected",
+        "REPLAY/pass40-native-last-unit-damage.json"
+      ],
+      "seconds": 1.0659867570502684,
+      "exit": 1,
+      "expected_success": false,
+      "peak_child_kib": 22896,
+      "rejection": "ValueError: ENTIRE typed expected certificate"
+    },
+    {
+      "args": [
+        "-I",
+        "REPLAY/pass40-native/cubic-quintic-exclusion/verify.py",
+        "--expected",
+        "REPLAY/pass40-native-last-matrix-damage.json"
+      ],
+      "seconds": 0.8067873590625823,
+      "exit": 1,
+      "expected_success": false,
+      "peak_child_kib": 22896,
+      "rejection": "ValueError: ENTIRE typed expected certificate"
+    },
+    {
+      "args": [
+        "-I",
+        "-O",
+        "REPLAY/pass40-native/cubic-quintic-exclusion/verify.py",
+        "--expected",
+        "REPLAY/pass40-native-last-matrix-damage.json"
+      ],
+      "seconds": 0.980230252025649,
+      "exit": 1,
+      "expected_success": false,
+      "peak_child_kib": 22896,
+      "rejection": "ValueError: ENTIRE typed expected certificate"
+    },
+    {
+      "args": [
+        "-I",
+        "REPLAY/pass40-native/cubic-quintic-exclusion/verify.py",
+        "--expected",
+        "REPLAY/pass40-native-extra-typed-damage.json"
+      ],
+      "seconds": 0.7889265549601987,
+      "exit": 1,
+      "expected_success": false,
+      "peak_child_kib": 22896,
+      "rejection": "ValueError: ENTIRE typed expected certificate"
+    },
+    {
+      "args": [
+        "-I",
+        "-O",
+        "REPLAY/pass40-native/cubic-quintic-exclusion/verify.py",
+        "--expected",
+        "REPLAY/pass40-native-extra-typed-damage.json"
+      ],
+      "seconds": 0.9716436020098627,
+      "exit": 1,
+      "expected_success": false,
+      "peak_child_kib": 22896,
+      "rejection": "ValueError: ENTIRE typed expected certificate"
+    },
+    {
+      "args": [
+        "COLD/validate_primary.py"
+      ],
+      "seconds": 1.64543276198674,
+      "exit": 0,
+      "expected_success": true,
+      "peak_child_kib": 22896,
+      "record": {
+        "agent": "six-reviewer-1",
+        "all10_minors": true,
+        "all5_rows": true,
+        "boundary_common_zeros": [
+          [
+            "-3/8",
+            "0",
+            "-224/9"
+          ],
+          [
+            "-3/7",
+            "0",
+            "0"
+          ]
+        ],
+        "math_build_only_rejections": [
+          "pivot",
+          "drop-fifth",
+          "matrix",
+          "moment",
+          "boundary"
+        ],
+        "record_sha256": "ac89e0f42f2129b263a5e6441dbcb5f73fe35c168b9150a05e5c82b9cc8c1136",
+        "status": "PASS",
+        "trust": "No newest producer module or fixture; OWN68bf078a arithmetic explicitly reused; displayed formulas exposed, not blind.",
+        "whole_identities": 60,
+        "whole_typed_fixture_rejections": [
+          "missing",
+          "extra",
+          "integer-to-bool",
+          "last-coefficient",
+          "missing-fifth-row",
+          "boundary-constant"
+        ]
+      }
+    },
+    {
+      "args": [
+        "-O",
+        "COLD/validate_primary.py"
+      ],
+      "seconds": 1.8831368680112064,
+      "exit": 0,
+      "expected_success": true,
+      "peak_child_kib": 22896,
+      "record": {
+        "agent": "six-reviewer-1",
+        "all10_minors": true,
+        "all5_rows": true,
+        "boundary_common_zeros": [
+          [
+            "-3/8",
+            "0",
+            "-224/9"
+          ],
+          [
+            "-3/7",
+            "0",
+            "0"
+          ]
+        ],
+        "math_build_only_rejections": [
+          "pivot",
+          "drop-fifth",
+          "matrix",
+          "moment",
+          "boundary"
+        ],
+        "record_sha256": "ac89e0f42f2129b263a5e6441dbcb5f73fe35c168b9150a05e5c82b9cc8c1136",
+        "status": "PASS",
+        "trust": "No newest producer module or fixture; OWN68bf078a arithmetic explicitly reused; displayed formulas exposed, not blind.",
+        "whole_identities": 60,
+        "whole_typed_fixture_rejections": [
+          "missing",
+          "extra",
+          "integer-to-bool",
+          "last-coefficient",
+          "missing-fifth-row",
+          "boundary-constant"
+        ]
+      }
+    },
+    {
+      "args": [
+        "COLD/check_certificate.py"
+      ],
+      "seconds": 0.8336269969586283,
+      "exit": 0,
+      "expected_success": true,
+      "peak_child_kib": 22896,
+      "record": {
+        "agent": "six-reviewer-1",
+        "certificate_semantic_rejections": [
+          "last-witness-coefficient",
+          "minor",
+          "raw-normalization",
+          "missing-row",
+          "duplicate-exponent",
+          "bool-exponent"
+        ],
+        "late_data_only": null,
+        "no_producer_imports": true,
+        "primary_record_sha256": "ac89e0f42f2129b263a5e6441dbcb5f73fe35c168b9150a05e5c82b9cc8c1136",
+        "role": "independent mathematical reviewer",
+        "status": "PASS",
+        "unit": {
+          "Q": "14913669297722925580854623",
+          "complete10_minors": true,
+          "exact_S": "34067100067415021244918497997300224982960985417508781547158193910360091250630797797724521318198719380014119648838933236005087685738104423305596799817469142801564595980552561798694677219845797191168370430593380632312105803974460755698941372031885603527219938058303404882023031062655819402367176942569/559825050909493150770108745980770451742710338027573060046953231076201062080777708926946917130150537716775740586215437187068053764542760365137113533685223625514637638889809024335051855534439631665230675011150766443370537143343923803333658442057690838407364530830086603915579186032898462622058195079934771200000000",
+          "exact_SQ": "508065464337862010601212291444801809138400681463849712263670458418449905195227375129008277175912775122901348978950512308074020267455083257950023163266564859557489306679705191677096071500434549438572217222907210031646954130429418509886791860985947901520057944599932974951193133519520139194277899346649276713271564875209146487/559825050909493150770108745980770451742710338027573060046953231076201062080777708926946917130150537716775740586215437187068053764542760365137113533685223625514637638889809024335051855534439631665230675011150766443370537143343923803333658442057690838407364530830086603915579186032898462622058195079934771200000000",
+          "primitive_unit": [
+            [
+              [
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              1,
+              1
+            ]
+          ],
+          "raw_unit": [
+            [
+              [
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              1,
+              1
+            ]
+          ],
+          "rounded_gain_over_author": 10000000000000,
+          "strict_rounded_S_lt_1e13_inverse": true,
+          "whole72_coefficients": true
+        }
+      }
+    },
+    {
+      "args": [
+        "-O",
+        "COLD/check_certificate.py"
+      ],
+      "seconds": 1.0289555210620165,
+      "exit": 0,
+      "expected_success": true,
+      "peak_child_kib": 22896,
+      "record": {
+        "agent": "six-reviewer-1",
+        "certificate_semantic_rejections": [
+          "last-witness-coefficient",
+          "minor",
+          "raw-normalization",
+          "missing-row",
+          "duplicate-exponent",
+          "bool-exponent"
+        ],
+        "late_data_only": null,
+        "no_producer_imports": true,
+        "primary_record_sha256": "ac89e0f42f2129b263a5e6441dbcb5f73fe35c168b9150a05e5c82b9cc8c1136",
+        "role": "independent mathematical reviewer",
+        "status": "PASS",
+        "unit": {
+          "Q": "14913669297722925580854623",
+          "complete10_minors": true,
+          "exact_S": "34067100067415021244918497997300224982960985417508781547158193910360091250630797797724521318198719380014119648838933236005087685738104423305596799817469142801564595980552561798694677219845797191168370430593380632312105803974460755698941372031885603527219938058303404882023031062655819402367176942569/559825050909493150770108745980770451742710338027573060046953231076201062080777708926946917130150537716775740586215437187068053764542760365137113533685223625514637638889809024335051855534439631665230675011150766443370537143343923803333658442057690838407364530830086603915579186032898462622058195079934771200000000",
+          "exact_SQ": "508065464337862010601212291444801809138400681463849712263670458418449905195227375129008277175912775122901348978950512308074020267455083257950023163266564859557489306679705191677096071500434549438572217222907210031646954130429418509886791860985947901520057944599932974951193133519520139194277899346649276713271564875209146487/559825050909493150770108745980770451742710338027573060046953231076201062080777708926946917130150537716775740586215437187068053764542760365137113533685223625514637638889809024335051855534439631665230675011150766443370537143343923803333658442057690838407364530830086603915579186032898462622058195079934771200000000",
+          "primitive_unit": [
+            [
+              [
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              1,
+              1
+            ]
+          ],
+          "raw_unit": [
+            [
+              [
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              1,
+              1
+            ]
+          ],
+          "rounded_gain_over_author": 10000000000000,
+          "strict_rounded_S_lt_1e13_inverse": true,
+          "whole72_coefficients": true
+        }
+      }
+    }
+  ],
+  "guards_seconds": 45,
+  "native_threads": 1,
+  "serial_jobs": true,
+  "scope_limits_unchanged": true,
+  "operational_limit_hit": false,
+  "sympy_available": false,
+  "sympy_scout_used_as_proof": false,
+  "python": "Python 3.12.14"
+}
