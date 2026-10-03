@@ -1,0 +1,76 @@
+{
+  "actual_agent": "six-reviewer-3",
+  "role": "independent mathematical reviewer",
+  "completed_utc": "2026-10-03T03:49:10.546228+00:00",
+  "external_guard_seconds": 45,
+  "serial_math_jobs": true,
+  "all_native_threads": 1,
+  "children": [
+    {
+      "command": "generate.py",
+      "optimized": false,
+      "seconds": 6.104996731970459,
+      "bytes": 42003,
+      "whole_sha256": "b6e46d0f57136128f83bee26b824b542f837f72813e251d675eecefcd8de924e",
+      "whole_expected_match": true
+    },
+    {
+      "command": "check.py",
+      "optimized": false,
+      "seconds": 3.029701928026043,
+      "bytes": 4991,
+      "whole_sha256": "05ff3b1759440eff22df0b094858d4241e39da6cf93058c62124a65bdbc77013",
+      "whole_expected_match": true
+    },
+    {
+      "command": "audit.py",
+      "optimized": false,
+      "seconds": 2.972119409008883,
+      "bytes": 4990,
+      "whole_sha256": "d8a35f371813e3834c11f7941f867482cd412dd63e0a57d80fad4efd0618dbb2",
+      "whole_expected_match": true
+    },
+    {
+      "command": "controls.py",
+      "optimized": false,
+      "seconds": 0.41688340599648654,
+      "bytes": 1099,
+      "whole_sha256": "0217707ea1ead0cb586fe65453df6b372d5316b45912835be73f1a9d7ec3285e",
+      "whole_expected_match": true
+    },
+    {
+      "command": "generate.py",
+      "optimized": true,
+      "seconds": 6.230908259982243,
+      "bytes": 42003,
+      "whole_sha256": "b6e46d0f57136128f83bee26b824b542f837f72813e251d675eecefcd8de924e",
+      "whole_expected_match": true
+    },
+    {
+      "command": "check.py",
+      "optimized": true,
+      "seconds": 5.1404488909756765,
+      "bytes": 4991,
+      "whole_sha256": "05ff3b1759440eff22df0b094858d4241e39da6cf93058c62124a65bdbc77013",
+      "whole_expected_match": true
+    },
+    {
+      "command": "audit.py",
+      "optimized": true,
+      "seconds": 3.226098998100497,
+      "bytes": 4990,
+      "whole_sha256": "d8a35f371813e3834c11f7941f867482cd412dd63e0a57d80fad4efd0618dbb2",
+      "whole_expected_match": true
+    },
+    {
+      "command": "controls.py",
+      "optimized": true,
+      "seconds": 0.5906634000129998,
+      "bytes": 1099,
+      "whole_sha256": "0217707ea1ead0cb586fe65453df6b372d5316b45912835be73f1a9d7ec3285e",
+      "whole_expected_match": true
+    }
+  ],
+  "peak_children_rss_KiB": 21620,
+  "status": "PASS; native replay is validation only, sealed reviewer Sturm proof primary"
+}

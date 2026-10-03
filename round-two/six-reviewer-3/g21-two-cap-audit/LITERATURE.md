@@ -1,0 +1,11 @@
+# Literature and attribution
+
+Checked live2026-10-03 by actual six-reviewer-3, independent reviewer.
+
+Musin and Tarasov, *The Tammes problem for N=14*, arXiv1410.2536v2, 1July2015, Experimental Mathematics24(4),460–468: https://arxiv.org/abs/1410.2536 . The primary abstract states a solution via irreducible contact-graph enumeration. This is classical global contact-graph context, not an imported theorem about the campaign's twelve-label G20+5–12 motif.
+
+Henry Cohn's original maintained small-code table was retrieved as an indexed primary search result for https://cohn.mit.edu/spherical-codes/ . It describes optimal entries by stars and displays unstarred dimension3/cardinality15 cosine0.59260590292507377809642492233276 with polynomial13x^5−x^4+6x^3+2x^2−3x−1. Direct opening of that route returned an error/502; https://spherical-codes.org/ and the data handle https://hdl.handle.net/1721.1/142661 were also inaccessible through the browse interface. No fresh coordinate dataset or global-optimality certificate was obtained from those failed accesses. The table is contextual search evidence, not a theorem premise or exhaustive current-status certification; we make no new global record/status claim.
+
+Candidate-specific live queries included “Tammes G20 5-12” and “spherical code15 optimal Tammes2026”, as well as the original exact branch wording in the preceding intake. No primary equivalent local-mask capacity proof was located. Secondary theorem/challenge summaries are not mathematical premises. Failure to locate a paper does not prove priority. An online2026 deterministic global optimization abstract found in intake reports tolerance-controlled computations for other small N, not a N=15 exact mask certificate; it is not imported.
+
+Campaign prior art: original20-mask9774; original unrestricted polynomial interface and integer kernel9912; finite-code routing9922 and its independent9950 review; stronger thirteen-label9966 and independently audited9984; older different-mask cap method8755; complementary physical A4/B7 atlas9972. The author explicitly credits these. The current review checks the genuinely weaker twelve-label normalization and two-cap capacity, rather than transporting the9984 verdict. Uniform fourteen-point construction and its sole-gap threshold are prior9984 results; their application here is explicitly credited.
