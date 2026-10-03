@@ -1,0 +1,266 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "utc": "2026-10-03T00:43:29.814670+00:00",
+  "method": "Independent full written-proof reconstruction BEFORE target native access; OWN345e13e primitives disclosed; old helper compute/literal_controls not called.",
+  "python": "Python 3.12.14",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "normal_optimized_cold_whole_record_equal": true,
+  "whole_record_sha256": "12fa4f3407d2a4847d45ef775bef35d88624d8ea1d1bf26124e47c25139b2b30",
+  "summary": {
+    "Legendre_degrees": 13,
+    "agent": "six-reviewer-1",
+    "fresh_Gaussian_controls": 5,
+    "objective_remainder": "238",
+    "role": "independent mathematical reviewer",
+    "separate_physical_remainder": "268",
+    "status": "PASS",
+    "strict_margins": 121,
+    "whole_identities": 98,
+    "whole_nine_phases": 9,
+    "whole_record_sha256": "12fa4f3407d2a4847d45ef775bef35d88624d8ea1d1bf26124e47c25139b2b30"
+  },
+  "math_build_only_rejections": 13,
+  "optimized_whole_fixture_rejections": 10,
+  "checks": [
+    {
+      "label": "author complete independent record before target access",
+      "expected_success": true,
+      "returncode": 0,
+      "seconds": 6.604754,
+      "stdout": "",
+      "stderr_tail": ""
+    },
+    {
+      "label": "normal whole record",
+      "expected_success": true,
+      "returncode": 0,
+      "seconds": 7.168561,
+      "stdout": "{\"Legendre_degrees\": 13, \"agent\": \"six-reviewer-1\", \"fresh_Gaussian_controls\": 5, \"objective_remainder\": \"238\", \"role\": \"independent mathematical reviewer\", \"separate_physical_remainder\": \"268\", \"status\": \"PASS\", \"strict_margins\": 121, \"whole_identities\": 98, \"whole_nine_phases\": 9, \"whole_record_sha256\": \"12fa4f3407d2a4847d45ef775bef35d88624d8ea1d1bf26124e47c25139b2b30\"}",
+      "stderr_tail": ""
+    },
+    {
+      "label": "normal cold whole record",
+      "expected_success": true,
+      "returncode": 0,
+      "seconds": 7.332698,
+      "stdout": "{\"Legendre_degrees\": 13, \"agent\": \"six-reviewer-1\", \"fresh_Gaussian_controls\": 5, \"objective_remainder\": \"238\", \"role\": \"independent mathematical reviewer\", \"separate_physical_remainder\": \"268\", \"status\": \"PASS\", \"strict_margins\": 121, \"whole_identities\": 98, \"whole_nine_phases\": 9, \"whole_record_sha256\": \"12fa4f3407d2a4847d45ef775bef35d88624d8ea1d1bf26124e47c25139b2b30\"}",
+      "stderr_tail": ""
+    },
+    {
+      "label": "optimized whole record",
+      "expected_success": true,
+      "returncode": 0,
+      "seconds": 6.959618,
+      "stdout": "{\"Legendre_degrees\": 13, \"agent\": \"six-reviewer-1\", \"fresh_Gaussian_controls\": 5, \"objective_remainder\": \"238\", \"role\": \"independent mathematical reviewer\", \"separate_physical_remainder\": \"268\", \"status\": \"PASS\", \"strict_margins\": 121, \"whole_identities\": 98, \"whole_nine_phases\": 9, \"whole_record_sha256\": \"12fa4f3407d2a4847d45ef775bef35d88624d8ea1d1bf26124e47c25139b2b30\"}",
+      "stderr_tail": ""
+    },
+    {
+      "label": "optimized cold whole record",
+      "expected_success": true,
+      "returncode": 0,
+      "seconds": 7.368617,
+      "stdout": "{\"Legendre_degrees\": 13, \"agent\": \"six-reviewer-1\", \"fresh_Gaussian_controls\": 5, \"objective_remainder\": \"238\", \"role\": \"independent mathematical reviewer\", \"separate_physical_remainder\": \"268\", \"status\": \"PASS\", \"strict_margins\": 121, \"whole_identities\": 98, \"whole_nine_phases\": 9, \"whole_record_sha256\": \"12fa4f3407d2a4847d45ef775bef35d88624d8ea1d1bf26124e47c25139b2b30\"}",
+      "stderr_tail": ""
+    },
+    {
+      "label": "invalid-alpha3over4 mathematical build-only rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 6.134112,
+      "stdout": "",
+      "stderr_tail": "resh_controls(alpha)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated>/core.py\", line 355, in fresh_controls\n    require(quartic_gap>=0,'literal universal quartic coefficient')\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: literal universal quartic coefficient"
+    },
+    {
+      "label": "unjustified-Vbelow4eta mathematical build-only rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 0.235226,
+      "stdout": "",
+      "stderr_tail": "ammm3ex/core.py\", line 54, in positive\n    value=F(value);require(value>0,'strict whole-window margin: '+name)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: strict whole-window margin: two-square V below5eta"
+    },
+    {
+      "label": "missing-fourth-phase-degree3 mathematical build-only rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 0.265545,
+      "stdout": "",
+      "stderr_tail": "ider-audit-xammm3ex/core.py\", line 57, in identity\n    lhs=P(lhs);rhs=P(rhs);require(lhs==rhs,'WHOLE identity: '+name)\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: WHOLE identity: whole all-lower displacement 1"
+    },
+    {
+      "label": "truncated-fine-normal1over8 mathematical build-only rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 0.226346,
+      "stdout": "",
+      "stderr_tail": "ine 54, in positive\n    value=F(value);require(value>0,'strict whole-window margin: '+name)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: strict whole-window margin: fine all-phase COMPLETE half-normal9over8"
+    },
+    {
+      "label": "overstrong-objective237 mathematical build-only rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 0.233266,
+      "stdout": "",
+      "stderr_tail": "x/core.py\", line 54, in positive\n    value=F(value);require(value>0,'strict whole-window margin: '+name)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: strict whole-window margin: PROVED retained OBJECTIVE238"
+    },
+    {
+      "label": "overstrong-physical267 mathematical build-only rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 0.225193,
+      "stdout": "",
+      "stderr_tail": "ex/core.py\", line 54, in positive\n    value=F(value);require(value>0,'strict whole-window margin: '+name)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: strict whole-window margin: PROVED retained PHYSICAL268"
+    },
+    {
+      "label": "objective238-used-as-physical mathematical build-only rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 0.222956,
+      "stdout": "",
+      "stderr_tail": "ex/core.py\", line 54, in positive\n    value=F(value);require(value>0,'strict whole-window margin: '+name)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: strict whole-window margin: PROVED retained PHYSICAL268"
+    },
+    {
+      "label": "invalid-imaginary-quadratic30 mathematical build-only rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 0.228805,
+      "stdout": "",
+      "stderr_tail": "\", line 54, in positive\n    value=F(value);require(value>0,'strict whole-window margin: '+name)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: strict whole-window margin: original imaginary eta2 coefficient31"
+    },
+    {
+      "label": "invalid-full-motion9 mathematical build-only rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 0.223774,
+      "stdout": "",
+      "stderr_tail": "x/core.py\", line 54, in positive\n    value=F(value);require(value>0,'strict whole-window margin: '+name)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: strict whole-window margin: original motion Delta19over2"
+    },
+    {
+      "label": "missing-signed-cubic-Q-elimination mathematical build-only rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 0.655336,
+      "stdout": "",
+      "stderr_tail": "it-xammm3ex/core.py\", line 57, in identity\n    lhs=P(lhs);rhs=P(rhs);require(lhs==rhs,'WHOLE identity: '+name)\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: WHOLE identity: WHOLE physical signed-cubic coercivity"
+    },
+    {
+      "label": "wrong-Laplace-cubic-sign mathematical build-only rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 0.628414,
+      "stdout": "",
+      "stderr_tail": "60, in ratid\n    lhs=R(lhs);rhs=R(rhs);require(lhs==rhs,'WHOLE rational identity: '+name)\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: WHOLE rational identity: Legendre recurrence/Laplace WHOLE degree2"
+    },
+    {
+      "label": "wrong-full-physical-square mathematical build-only rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 0.60169,
+      "stdout": "",
+      "stderr_tail": "py\", line 60, in ratid\n    lhs=R(lhs);rhs=R(rhs);require(lhs==rhs,'WHOLE rational identity: '+name)\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: WHOLE rational identity: WHOLE physical E-quarter square"
+    },
+    {
+      "label": "damaged-eighth-coordinate mathematical build-only rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 0.475541,
+      "stdout": "",
+      "stderr_tail": ", line 60, in ratid\n    lhs=R(lhs);rhs=R(rhs);require(lhs==rhs,'WHOLE rational identity: '+name)\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: WHOLE rational identity: entire seven-complement variance 0"
+    },
+    {
+      "label": "bool-schema malformed whole typed record rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 6.687232,
+      "stdout": "",
+      "stderr_tail": "line 19, in equal\n    for k in a:equal(a[k],b[k])\n               ^^^^^^^^^^^^^^^^\n  File \"<isolated>/validate.py\", line 16, in equal\n    core.require(type(a)is type(b),'whole exact record type')\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: whole exact record type"
+    },
+    {
+      "label": "floating-endpoint malformed whole typed record rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 6.684652,
+      "stdout": "",
+      "stderr_tail": "line 19, in equal\n    for k in a:equal(a[k],b[k])\n               ^^^^^^^^^^^^^^^^\n  File \"<isolated>/validate.py\", line 16, in equal\n    core.require(type(a)is type(b),'whole exact record type')\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: whole exact record type"
+    },
+    {
+      "label": "missing-last-phase malformed whole typed record rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 6.865319,
+      "stdout": "",
+      "stderr_tail": "ine 19, in equal\n    for k in a:equal(a[k],b[k])\n               ^^^^^^^^^^^^^^^^\n  File \"<isolated>/validate.py\", line 21, in equal\n    core.require(len(a)==len(b),'whole exact record length')\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: whole exact record length"
+    },
+    {
+      "label": "missing-full-SOS-coefficient malformed whole typed record rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 6.886291,
+      "stdout": "",
+      "stderr_tail": "ine 19, in equal\n    for k in a:equal(a[k],b[k])\n               ^^^^^^^^^^^^^^^^\n  File \"<isolated>/validate.py\", line 21, in equal\n    core.require(len(a)==len(b),'whole exact record length')\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: whole exact record length"
+    },
+    {
+      "label": "missing-last-control-phase malformed whole typed record rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 6.850849,
+      "stdout": "",
+      "stderr_tail": "ine 19, in equal\n    for k in a:equal(a[k],b[k])\n               ^^^^^^^^^^^^^^^^\n  File \"<isolated>/validate.py\", line 21, in equal\n    core.require(len(a)==len(b),'whole exact record length')\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: whole exact record length"
+    },
+    {
+      "label": "changed-last-source-value malformed whole typed record rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 6.89618,
+      "stdout": "",
+      "stderr_tail": "\n               ^^^^^^^^^^^^^^^^\n  File \"<isolated>/validate.py\", line 23, in equal\n    else:core.require(a==b,'whole exact record value')\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: whole exact record value"
+    },
+    {
+      "label": "removed-degree12-coefficient malformed whole typed record rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 6.783774,
+      "stdout": "",
+      "stderr_tail": "ine 19, in equal\n    for k in a:equal(a[k],b[k])\n               ^^^^^^^^^^^^^^^^\n  File \"<isolated>/validate.py\", line 21, in equal\n    core.require(len(a)==len(b),'whole exact record length')\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: whole exact record length"
+    },
+    {
+      "label": "lost-fine-degree3-budget malformed whole typed record rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 6.821066,
+      "stdout": "",
+      "stderr_tail": "19, in equal\n    for k in a:equal(a[k],b[k])\n               ^^^^^^^^^^^^^^^^\n  File \"<isolated>/validate.py\", line 18, in equal\n    core.require(a.keys()==b.keys(),'whole exact record keyset')\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: whole exact record keyset"
+    },
+    {
+      "label": "nonfinite malformed whole typed record rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 6.920663,
+      "stdout": "",
+      "stderr_tail": "n3.12/json/decoder.py\", line 354, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated>/validate.py\", line 13, in finite\n    def finite(s):raise ValueError('nonfinite JSON constant')\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: nonfinite JSON constant"
+    },
+    {
+      "label": "duplicate malformed whole typed record rejection",
+      "expected_success": false,
+      "returncode": 1,
+      "seconds": 6.723795,
+      "stdout": "",
+      "stderr_tail": "ne 354, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ^^^^^^^^^^^^^^^^^^^^^^\n  File \"<isolated>/validate.py\", line 9, in pairs\n    core.require(k not in out,'duplicate JSON key')\n  File \"<isolated>/owned_effective.py\", line 17, in require\n    raise ValueError(message)\nValueError: duplicate JSON key"
+    }
+  ],
+  "source_hashes": {
+    "core.py": "2e038fa2251c049bf3517e944fa7f85496a81ec07198ae4bc9319da65645697f",
+    "owned_effective.py": "908fe3695aa3d9636f6a69e98e3e2f366614ee1a6fcfb636cd1a1d0ea643d0a4",
+    "validate.py": "80643d1365d48df803dad412b21dfa7815399f9f4c3205deb6f878301bfef2b2",
+    "EXPECTED.json": "0b8005861343629ae189fb98ca7c90a1c10e385ae888f32ece63475f9f213c3e"
+  },
+  "peak_child_maxrss_KiB": 22524,
+  "scope": "One serial exact math child; fixed45s per child; unchanged1CPU2GiB/native threads1. All universal analytic bridges ordinary and unformalized."
+}

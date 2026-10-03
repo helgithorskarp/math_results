@@ -1,0 +1,166 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "utc": "2026-10-03T00:52:35.493546+00:00",
+  "status": "PASS",
+  "summary": {
+    "agent": "six-reviewer-1",
+    "complete_common_maps": 57,
+    "complete_scalar_streams": 17,
+    "every_literal_control_field": true,
+    "independent_record_sha256": "12fa4f3407d2a4847d45ef775bef35d88624d8ea1d1bf26124e47c25139b2b30",
+    "literal_control_count": 5,
+    "producer_whole_record_sha256": "21a506327568c009ec9a982e4daf4edec31b5eb23576a5b97a3352107a26af4d",
+    "role": "independent mathematical reviewer",
+    "status": "PASS",
+    "trust": "LATE data-only check; no producer imports. Every captured whole map and special field row covered. Producer native107 margin rows/18 damages are replay validation; independent121 written-proof margins/13 math damages have their separate scope.",
+    "whole_common_coefficient_entries": 13756,
+    "whole_seven_bootstrap_rows": true,
+    "whole_special_field_rows": 9
+  },
+  "normal_optimized_cold_equal": true,
+  "late_semantic_rejections": 6,
+  "producer_pin_rejections_before_import": 4,
+  "all_seven_primary_seals_unchanged": true,
+  "checks": [
+    {
+      "label": "native-data-only normal",
+      "seconds": 1.928748,
+      "returncode": 0,
+      "expected_success": true,
+      "stdout": "{\"agent\": \"six-reviewer-1\", \"complete_common_maps\": 57, \"complete_scalar_streams\": 17, \"every_literal_control_field\": true, \"independent_record_sha256\": \"12fa4f3407d2a4847d45ef775bef35d88624d8ea1d1bf26124e47c25139b2b30\", \"literal_control_count\": 5, \"producer_whole_record_sha256\": \"21a506327568c009ec9a982e4daf4edec31b5eb23576a5b97a3352107a26af4d\", \"role\": \"independent mathematical reviewer\", \"status\": \"PASS\", \"trust\": \"LATE data-only check; no producer imports. Every captured whole map and special field row covered. Producer native107 margin rows/18 damages are replay validation; independent121 written-proof margins/13 math damages have their separate scope.\", \"whole_common_coefficient_entries\": 13756, \"whole_seven_bootstrap_rows\": true, \"whole_special_field_rows\": 9}"
+    },
+    {
+      "label": "cold-native-data-only normal",
+      "seconds": 1.961464,
+      "returncode": 0,
+      "expected_success": true,
+      "stdout": "{\"agent\": \"six-reviewer-1\", \"complete_common_maps\": 57, \"complete_scalar_streams\": 17, \"every_literal_control_field\": true, \"independent_record_sha256\": \"12fa4f3407d2a4847d45ef775bef35d88624d8ea1d1bf26124e47c25139b2b30\", \"literal_control_count\": 5, \"producer_whole_record_sha256\": \"21a506327568c009ec9a982e4daf4edec31b5eb23576a5b97a3352107a26af4d\", \"role\": \"independent mathematical reviewer\", \"status\": \"PASS\", \"trust\": \"LATE data-only check; no producer imports. Every captured whole map and special field row covered. Producer native107 margin rows/18 damages are replay validation; independent121 written-proof margins/13 math damages have their separate scope.\", \"whole_common_coefficient_entries\": 13756, \"whole_seven_bootstrap_rows\": true, \"whole_special_field_rows\": 9}"
+    },
+    {
+      "label": "native-data-only optimized",
+      "seconds": 2.224215,
+      "returncode": 0,
+      "expected_success": true,
+      "stdout": "{\"agent\": \"six-reviewer-1\", \"complete_common_maps\": 57, \"complete_scalar_streams\": 17, \"every_literal_control_field\": true, \"independent_record_sha256\": \"12fa4f3407d2a4847d45ef775bef35d88624d8ea1d1bf26124e47c25139b2b30\", \"literal_control_count\": 5, \"producer_whole_record_sha256\": \"21a506327568c009ec9a982e4daf4edec31b5eb23576a5b97a3352107a26af4d\", \"role\": \"independent mathematical reviewer\", \"status\": \"PASS\", \"trust\": \"LATE data-only check; no producer imports. Every captured whole map and special field row covered. Producer native107 margin rows/18 damages are replay validation; independent121 written-proof margins/13 math damages have their separate scope.\", \"whole_common_coefficient_entries\": 13756, \"whole_seven_bootstrap_rows\": true, \"whole_special_field_rows\": 9}"
+    },
+    {
+      "label": "cold-native-data-only optimized",
+      "seconds": 2.020234,
+      "returncode": 0,
+      "expected_success": true,
+      "stdout": "{\"agent\": \"six-reviewer-1\", \"complete_common_maps\": 57, \"complete_scalar_streams\": 17, \"every_literal_control_field\": true, \"independent_record_sha256\": \"12fa4f3407d2a4847d45ef775bef35d88624d8ea1d1bf26124e47c25139b2b30\", \"literal_control_count\": 5, \"producer_whole_record_sha256\": \"21a506327568c009ec9a982e4daf4edec31b5eb23576a5b97a3352107a26af4d\", \"role\": \"independent mathematical reviewer\", \"status\": \"PASS\", \"trust\": \"LATE data-only check; no producer imports. Every captured whole map and special field row covered. Producer native107 margin rows/18 damages are replay validation; independent121 written-proof margins/13 math damages have their separate scope.\", \"whole_common_coefficient_entries\": 13756, \"whole_seven_bootstrap_rows\": true, \"whole_special_field_rows\": 9}"
+    },
+    {
+      "label": "missing-last-telescoping late mathematical comparison rejection",
+      "seconds": 2.092487,
+      "returncode": 1,
+      "expected_success": false,
+      "stdout": "",
+      "stderr_exception_only": "ValueError: every independent expected common map covered"
+    },
+    {
+      "label": "damaged-whole-quartic-coefficient late mathematical comparison rejection",
+      "seconds": 1.989157,
+      "returncode": 1,
+      "expected_success": false,
+      "stdout": "",
+      "stderr_exception_only": "ValueError: ENTIRE producer/independent coefficient map whole centered quartic SOS credited9845"
+    },
+    {
+      "label": "cancelled-fourth-cubic late mathematical comparison rejection",
+      "seconds": 2.01017,
+      "returncode": 1,
+      "expected_success": false,
+      "stdout": "",
+      "stderr_exception_only": "ValueError: whole exact record value"
+    },
+    {
+      "label": "lost-critical-multiplicity late mathematical comparison rejection",
+      "seconds": 2.021441,
+      "returncode": 1,
+      "expected_success": false,
+      "stdout": "",
+      "stderr_exception_only": "ValueError: every producer critical multiplicity"
+    },
+    {
+      "label": "discarded-complex-third-moment late mathematical comparison rejection",
+      "seconds": 2.099537,
+      "returncode": 1,
+      "expected_success": false,
+      "stdout": "",
+      "stderr_exception_only": "ValueError: whole exact record value"
+    },
+    {
+      "label": "objective-remainder-as-physical late mathematical comparison rejection",
+      "seconds": 2.038936,
+      "returncode": 1,
+      "expected_success": false,
+      "stdout": "",
+      "stderr_exception_only": "ValueError: whole exact record value"
+    },
+    {
+      "label": "arithmetic.py producer pin rejection BEFORE import",
+      "seconds": 0.22357,
+      "returncode": 1,
+      "expected_success": false,
+      "stdout": "",
+      "stderr_exception_only": "ValueError: producer source pin BEFORE import: arithmetic.py"
+    },
+    {
+      "label": "budgets.py producer pin rejection BEFORE import",
+      "seconds": 0.231289,
+      "returncode": 1,
+      "expected_success": false,
+      "stdout": "",
+      "stderr_exception_only": "ValueError: producer source pin BEFORE import: budgets.py"
+    },
+    {
+      "label": "verify.py producer pin rejection BEFORE import",
+      "seconds": 0.235854,
+      "returncode": 1,
+      "expected_success": false,
+      "stdout": "",
+      "stderr_exception_only": "ValueError: producer source pin BEFORE import: verify.py"
+    },
+    {
+      "label": "EXPECTED.json producer pin rejection BEFORE import",
+      "seconds": 0.214185,
+      "returncode": 1,
+      "expected_success": false,
+      "stdout": "",
+      "stderr_exception_only": "ValueError: producer source pin BEFORE import: EXPECTED.json"
+    }
+  ],
+  "native_replay": {
+    "agent": "six-sendov-3",
+    "role": "researcher",
+    "status": "PASS",
+    "ordinary_proof_unformalized": true,
+    "independent_review": false,
+    "native_threads": 1,
+    "serial_children": true,
+    "child_guard_seconds": 45,
+    "whole_seconds": 60.132644383003935,
+    "peak_child_rss_kib": 35564,
+    "positive_modes": 2,
+    "intended_external_fixture_rejections": 18,
+    "summary": {
+      "complete_Legendre_comparisons": 30,
+      "complete_arbitrary_critical_controls": 5,
+      "rejected_mathematical_damages": 18,
+      "status": "PASS",
+      "strict_rational_margins": 107,
+      "whole_identity_records": 33,
+      "whole_record_sha256": "21a506327568c009ec9a982e4daf4edec31b5eb23576a5b97a3352107a26af4d"
+    }
+  },
+  "native_complete_run_receipt_sha256": "cf0390d135ea260fb7e7bdd35353ba319de7f6271eb77f762e291ad846270845",
+  "producer_full_export_bytes": 742028,
+  "producer_full_export_sha256": "b8518b92506b7ac9520253a9ac00de18153c843d4c2e3406498f4dc9b86173fc",
+  "producer_full_export_published": false,
+  "reproducible_from_pinned_public_source": true,
+  "peak_child_maxrss_KiB": 57900,
+  "resource_scope": "One serial math child; fixed45s; native threads1; unchanged1CPU2GiB; no limit hit.",
+  "error_display": "Expected failures show their final exception; complete process evidence retained locally. This late receipt is not one of the seven sealed primary files."
+}
