@@ -1,0 +1,546 @@
+{
+  "agent": "six-sendov-3",
+  "role": "researcher",
+  "status": "PASS",
+  "whole_summary": {
+    "all_nine_harmonics": 9,
+    "all_three_value_count_cases": 21,
+    "all_two_value_cases": 7,
+    "independent_review": false,
+    "manifest_sha256": "abbd09dc8118721d367aa6257e190cec94f4af15030f45270c060dca574bfbff",
+    "mathematical_damages": [
+      {
+        "damage": "wrong_cosine_embedding",
+        "reason": "physical cosine cubic",
+        "rejected": true
+      },
+      {
+        "damage": "wrong_middle_count",
+        "reason": "identity: all eight balance",
+        "rejected": true
+      },
+      {
+        "damage": "wrong_candidate_cubic",
+        "reason": "identity: whole candidate cubic",
+        "rejected": true
+      },
+      {
+        "damage": "wrong_candidate_quartic",
+        "reason": "identity: whole candidate quartic",
+        "rejected": true
+      },
+      {
+        "damage": "missing_count_case",
+        "reason": "all ordered three-value multiplicities",
+        "rejected": true
+      },
+      {
+        "damage": "wrong_outer_hessian_sign",
+        "reason": "identity: repeated lower value Hessian direction",
+        "rejected": true
+      },
+      {
+        "damage": "wrong_pearson_factor",
+        "reason": "identity: whole singular two-value Pearson defect",
+        "rejected": true
+      },
+      {
+        "damage": "wrong_cost_monotonicity",
+        "reason": "entire field polynomial entire monotone cost derivative",
+        "rejected": true
+      },
+      {
+        "damage": "wrong_cost_endpoint",
+        "reason": "entire field polynomial endpoint cost",
+        "rejected": true
+      },
+      {
+        "damage": "missing_ninth_harmonic",
+        "reason": "all nine harmonics",
+        "rejected": true
+      }
+    ],
+    "ordinary_analytic_bridges_unformalized": true,
+    "peak_rss_kib": 18464,
+    "prior_baselines": [
+      {
+        "comparison": "all9 complete cubic coefficient/norm maps",
+        "path": "round-two/six-sendov-3/sharp-cubic-motion/EXPECTED.json",
+        "prior_theorem_replay": false,
+        "same_author_not_independent": true,
+        "source_commit": "52a66be58cce29cb813c5c34777a59c53c9f7ab9",
+        "whole_file_sha256": "0ea2d535ec9c771eadb50b10d941622a3a822f817d1084a43a924f5e05d0a262"
+      },
+      {
+        "comparison": "entire least-profile cost polynomial",
+        "path": "round-two/six-sendov-3/uniform-leading-profiles/EXPECTED.json",
+        "prior_theorem_replay": false,
+        "same_author_not_independent": true,
+        "source_commit": "8890cc2f467f71934ea3b816e7c6bc6670893885",
+        "whole_file_sha256": "09fce50546b5836a6c11b959f9e762c1594bb981e12141a9a9aa29dd7b871d20"
+      }
+    ],
+    "seconds": 0.14183193899225444,
+    "status": "PASS",
+    "whole_record_sha256": "1a2dab9bf30fa9559eab18375597a57751cd55e9547c612502abf467c763bce4"
+  },
+  "manifest_sha256": "abbd09dc8118721d367aa6257e190cec94f4af15030f45270c060dca574bfbff",
+  "positive_modes": 4,
+  "mathematical_damage_cases_per_positive": 10,
+  "whole_external_fixture_rejections": 12,
+  "source_byte_rejections": 1,
+  "native_threads": 1,
+  "max_cpu_intensive_jobs": 1,
+  "child_guard_seconds": 45,
+  "scope": "existing1CPU2GiB unchanged",
+  "whole_seconds": 3.8367363680154085,
+  "peak_child_rss_kib": 20820,
+  "utc": "2026-10-03T05:31:55.129522+00:00",
+  "children": [
+    {
+      "description": "normal sources full record and ten mathematical damages",
+      "optimized": false,
+      "expected_pass": true,
+      "returncode": 0,
+      "seconds": 0.24398167291656137,
+      "child_guard_seconds": 45,
+      "summary": {
+        "all_nine_harmonics": 9,
+        "all_three_value_count_cases": 21,
+        "all_two_value_cases": 7,
+        "independent_review": false,
+        "manifest_sha256": "abbd09dc8118721d367aa6257e190cec94f4af15030f45270c060dca574bfbff",
+        "mathematical_damages": [
+          {
+            "damage": "wrong_cosine_embedding",
+            "reason": "physical cosine cubic",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_middle_count",
+            "reason": "identity: all eight balance",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_candidate_cubic",
+            "reason": "identity: whole candidate cubic",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_candidate_quartic",
+            "reason": "identity: whole candidate quartic",
+            "rejected": true
+          },
+          {
+            "damage": "missing_count_case",
+            "reason": "all ordered three-value multiplicities",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_outer_hessian_sign",
+            "reason": "identity: repeated lower value Hessian direction",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_pearson_factor",
+            "reason": "identity: whole singular two-value Pearson defect",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_cost_monotonicity",
+            "reason": "entire field polynomial entire monotone cost derivative",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_cost_endpoint",
+            "reason": "entire field polynomial endpoint cost",
+            "rejected": true
+          },
+          {
+            "damage": "missing_ninth_harmonic",
+            "reason": "all nine harmonics",
+            "rejected": true
+          }
+        ],
+        "ordinary_analytic_bridges_unformalized": true,
+        "peak_rss_kib": 18464,
+        "prior_baselines": [
+          {
+            "comparison": "all9 complete cubic coefficient/norm maps",
+            "path": "round-two/six-sendov-3/sharp-cubic-motion/EXPECTED.json",
+            "prior_theorem_replay": false,
+            "same_author_not_independent": true,
+            "source_commit": "52a66be58cce29cb813c5c34777a59c53c9f7ab9",
+            "whole_file_sha256": "0ea2d535ec9c771eadb50b10d941622a3a822f817d1084a43a924f5e05d0a262"
+          },
+          {
+            "comparison": "entire least-profile cost polynomial",
+            "path": "round-two/six-sendov-3/uniform-leading-profiles/EXPECTED.json",
+            "prior_theorem_replay": false,
+            "same_author_not_independent": true,
+            "source_commit": "8890cc2f467f71934ea3b816e7c6bc6670893885",
+            "whole_file_sha256": "09fce50546b5836a6c11b959f9e762c1594bb981e12141a9a9aa29dd7b871d20"
+          }
+        ],
+        "seconds": 0.14183193899225444,
+        "status": "PASS",
+        "whole_record_sha256": "1a2dab9bf30fa9559eab18375597a57751cd55e9547c612502abf467c763bce4"
+      }
+    },
+    {
+      "description": "normal sources full record and ten mathematical damages",
+      "optimized": true,
+      "expected_pass": true,
+      "returncode": 0,
+      "seconds": 0.39073260605800897,
+      "child_guard_seconds": 45,
+      "summary": {
+        "all_nine_harmonics": 9,
+        "all_three_value_count_cases": 21,
+        "all_two_value_cases": 7,
+        "independent_review": false,
+        "manifest_sha256": "abbd09dc8118721d367aa6257e190cec94f4af15030f45270c060dca574bfbff",
+        "mathematical_damages": [
+          {
+            "damage": "wrong_cosine_embedding",
+            "reason": "physical cosine cubic",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_middle_count",
+            "reason": "identity: all eight balance",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_candidate_cubic",
+            "reason": "identity: whole candidate cubic",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_candidate_quartic",
+            "reason": "identity: whole candidate quartic",
+            "rejected": true
+          },
+          {
+            "damage": "missing_count_case",
+            "reason": "all ordered three-value multiplicities",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_outer_hessian_sign",
+            "reason": "identity: repeated lower value Hessian direction",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_pearson_factor",
+            "reason": "identity: whole singular two-value Pearson defect",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_cost_monotonicity",
+            "reason": "entire field polynomial entire monotone cost derivative",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_cost_endpoint",
+            "reason": "entire field polynomial endpoint cost",
+            "rejected": true
+          },
+          {
+            "damage": "missing_ninth_harmonic",
+            "reason": "all nine harmonics",
+            "rejected": true
+          }
+        ],
+        "ordinary_analytic_bridges_unformalized": true,
+        "peak_rss_kib": 19988,
+        "prior_baselines": [
+          {
+            "comparison": "all9 complete cubic coefficient/norm maps",
+            "path": "round-two/six-sendov-3/sharp-cubic-motion/EXPECTED.json",
+            "prior_theorem_replay": false,
+            "same_author_not_independent": true,
+            "source_commit": "52a66be58cce29cb813c5c34777a59c53c9f7ab9",
+            "whole_file_sha256": "0ea2d535ec9c771eadb50b10d941622a3a822f817d1084a43a924f5e05d0a262"
+          },
+          {
+            "comparison": "entire least-profile cost polynomial",
+            "path": "round-two/six-sendov-3/uniform-leading-profiles/EXPECTED.json",
+            "prior_theorem_replay": false,
+            "same_author_not_independent": true,
+            "source_commit": "8890cc2f467f71934ea3b816e7c6bc6670893885",
+            "whole_file_sha256": "09fce50546b5836a6c11b959f9e762c1594bb981e12141a9a9aa29dd7b871d20"
+          }
+        ],
+        "seconds": 0.13313228101469576,
+        "status": "PASS",
+        "whole_record_sha256": "1a2dab9bf30fa9559eab18375597a57751cd55e9547c612502abf467c763bce4"
+      }
+    },
+    {
+      "description": "cold source-only full record and ten mathematical damages",
+      "optimized": false,
+      "expected_pass": true,
+      "returncode": 0,
+      "seconds": 0.20607866998761892,
+      "child_guard_seconds": 45,
+      "summary": {
+        "all_nine_harmonics": 9,
+        "all_three_value_count_cases": 21,
+        "all_two_value_cases": 7,
+        "independent_review": false,
+        "manifest_sha256": "abbd09dc8118721d367aa6257e190cec94f4af15030f45270c060dca574bfbff",
+        "mathematical_damages": [
+          {
+            "damage": "wrong_cosine_embedding",
+            "reason": "physical cosine cubic",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_middle_count",
+            "reason": "identity: all eight balance",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_candidate_cubic",
+            "reason": "identity: whole candidate cubic",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_candidate_quartic",
+            "reason": "identity: whole candidate quartic",
+            "rejected": true
+          },
+          {
+            "damage": "missing_count_case",
+            "reason": "all ordered three-value multiplicities",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_outer_hessian_sign",
+            "reason": "identity: repeated lower value Hessian direction",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_pearson_factor",
+            "reason": "identity: whole singular two-value Pearson defect",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_cost_monotonicity",
+            "reason": "entire field polynomial entire monotone cost derivative",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_cost_endpoint",
+            "reason": "entire field polynomial endpoint cost",
+            "rejected": true
+          },
+          {
+            "damage": "missing_ninth_harmonic",
+            "reason": "all nine harmonics",
+            "rejected": true
+          }
+        ],
+        "ordinary_analytic_bridges_unformalized": true,
+        "peak_rss_kib": 18228,
+        "prior_baselines": null,
+        "seconds": 0.13561323704198003,
+        "status": "PASS",
+        "whole_record_sha256": "1a2dab9bf30fa9559eab18375597a57751cd55e9547c612502abf467c763bce4"
+      }
+    },
+    {
+      "description": "cold source-only full record and ten mathematical damages",
+      "optimized": true,
+      "expected_pass": true,
+      "returncode": 0,
+      "seconds": 0.42475109396036714,
+      "child_guard_seconds": 45,
+      "summary": {
+        "all_nine_harmonics": 9,
+        "all_three_value_count_cases": 21,
+        "all_two_value_cases": 7,
+        "independent_review": false,
+        "manifest_sha256": "abbd09dc8118721d367aa6257e190cec94f4af15030f45270c060dca574bfbff",
+        "mathematical_damages": [
+          {
+            "damage": "wrong_cosine_embedding",
+            "reason": "physical cosine cubic",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_middle_count",
+            "reason": "identity: all eight balance",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_candidate_cubic",
+            "reason": "identity: whole candidate cubic",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_candidate_quartic",
+            "reason": "identity: whole candidate quartic",
+            "rejected": true
+          },
+          {
+            "damage": "missing_count_case",
+            "reason": "all ordered three-value multiplicities",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_outer_hessian_sign",
+            "reason": "identity: repeated lower value Hessian direction",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_pearson_factor",
+            "reason": "identity: whole singular two-value Pearson defect",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_cost_monotonicity",
+            "reason": "entire field polynomial entire monotone cost derivative",
+            "rejected": true
+          },
+          {
+            "damage": "wrong_cost_endpoint",
+            "reason": "entire field polynomial endpoint cost",
+            "rejected": true
+          },
+          {
+            "damage": "missing_ninth_harmonic",
+            "reason": "all nine harmonics",
+            "rejected": true
+          }
+        ],
+        "ordinary_analytic_bridges_unformalized": true,
+        "peak_rss_kib": 20340,
+        "prior_baselines": null,
+        "seconds": 0.14156259107403457,
+        "status": "PASS",
+        "whole_record_sha256": "1a2dab9bf30fa9559eab18375597a57751cd55e9547c612502abf467c763bce4"
+      }
+    },
+    {
+      "description": "alter LAST field coefficient",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.13864537794142962,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole value record.field_polynomial_identities[4].all_coefficients[0][5]"
+    },
+    {
+      "description": "alter LAST field coefficient",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.29812472697813064,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole value record.field_polynomial_identities[4].all_coefficients[0][5]"
+    },
+    {
+      "description": "remove last multiplicity case",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.11840559705160558,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole list length record.all_ordered_three_value_counts"
+    },
+    {
+      "description": "remove last multiplicity case",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.28692839900031686,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole list length record.all_ordered_three_value_counts"
+    },
+    {
+      "description": "bool for integer label",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.1158773530041799,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: typed mismatch record.all_nine_harmonics[0].label"
+    },
+    {
+      "description": "bool for integer label",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.29703061596956104,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: typed mismatch record.all_nine_harmonics[0].label"
+    },
+    {
+      "description": "integer for boolean",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.11148693005088717,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: typed mismatch record.ordinary_analytic_bridges_unformalized"
+    },
+    {
+      "description": "integer for boolean",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.28900874697137624,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: typed mismatch record.ordinary_analytic_bridges_unformalized"
+    },
+    {
+      "description": "extra whole-record key",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.11605260998476297,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole key set record"
+    },
+    {
+      "description": "extra whole-record key",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.2930897140176967,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole key set record"
+    },
+    {
+      "description": "alter last harmonic norm",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.11812819098122418,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole value record.all_nine_harmonics[8].squared_norm[0][5]"
+    },
+    {
+      "description": "alter last harmonic norm",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.2953478059498593,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole value record.all_nine_harmonics[8].squared_norm[0][5]"
+    },
+    {
+      "description": "one source byte alteration",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.07741675700526685,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole sealed source curve.py"
+    }
+  ],
+  "ordinary_proof_unformalized": true,
+  "independent_review": false
+}
