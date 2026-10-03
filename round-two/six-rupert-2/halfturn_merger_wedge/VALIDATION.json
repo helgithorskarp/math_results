@@ -1,0 +1,165 @@
+{
+  "agent": "six-rupert-2",
+  "role": "researcher",
+  "runtime": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "status": "author whole evidence checked; ordinary proof unformalized, independently UNREVIEWED, global J74 OPEN",
+  "math_record_SHA256": "14d60fc373911db0f63feaeccbc25e66825bbe4110d5fa56114a8787e4defb8f",
+  "full_support_and_coefficient_transcript_SHA256": "1a4307485d3bfb74d31734406776bed97bc86be5c8755e20c2c591f84625d866",
+  "WHOLE_math_and_EVERY_1620_support_gap_records_equal_all_four_runs": true,
+  "normal_optimized_and_each_fresh_EMPTY_relocated": true,
+  "false_mathematical_fixtures_rejected": 10,
+  "full_controls_record_SHA256": "841887c862d7ab1e06d8ee8971f4239eb395b55f70974ac49e9e4146eb8c880e",
+  "initial_declared_input_count": 12,
+  "declared_inputs_unchanged_before_after": {
+    "round-two/six-rupert-2/halfturn_merger_wedge/.gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+    "round-two/six-rupert-2/halfturn_merger_wedge/geometry.py": "570ec4e49d1ebd959b95c6311a5514163aa55b23c297d9c905515b74d8d580bc",
+    "round-two/six-rupert-2/halfturn_merger_wedge/polynomial.py": "a1a687084d77a053fbb0e0cf14f35993eb8b2742141c9fa8d91c7e2ad597e928",
+    "round-two/six-rupert-2/halfturn_merger_wedge/check.py": "f6bd2165e1affb396cf724928f2ae8fa1a0b61f87a1a59ecf72f8925a2629706",
+    "round-two/six-rupert-2/halfturn_merger_wedge/controls.py": "0a369f788a848cce36ab9061f0f92318f3c2062fe1e8558dd32842e6de418651",
+    "round-two/six-rupert-2/halfturn_merger_wedge/certificate.json": "f06855a0bbf35a6a0b97e810795d57743dbd82fd40bc45ab61b20b0cf4428a74",
+    "round-two/six-rupert-2/halfturn_merger_wedge/expected.json": "b0e0c09302fff044ca4d4d1c33fcaf127104116297d755a19dbb5c6870590a98",
+    "round-two/six-rupert-2/halfturn_merger_wedge/DEPENDENCIES.json": "2a95fa81e66894dd03212c3ec0c9de134a5ee49ac24c654780d71dbe114fd05b",
+    "round-two/six-rupert-2/halfturn_merger_wedge/PROOF.md": "c4ae9f18b45cb74a4b8ef7328bbe8a2d3317d6bef58fc6724b7707c82a976bd9",
+    "round-two/six-rupert-2/halfturn_merger_wedge/README.md": "8dda1924dd0a473a52c13827c52e411ca64a1559a23fc69a1c002b2d43127210",
+    "round-two/six-rupert-2/model.py": "cc0ce4358eea0139da13962b6abdf25a9710fb934e8e41ee3e6f3cbe3acb8cd7",
+    "round-two/six-rupert-2/q5.py": "cef1fe01c185fc5c63d729d8e27588b4efe56d8487c87a73f22a68297b18ed3c"
+  },
+  "guard_seconds": 45,
+  "numeric_threads": 1,
+  "cpu_intensive_children_at_once": 1,
+  "scope": "unchanged1CPU2GiB",
+  "resources": [
+    {
+      "agent": "six-rupert-2",
+      "role": "researcher",
+      "label": "pass27-final-v2-normal",
+      "command": [
+        "/usr/bin/python3",
+        "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/round-two/six-rupert-2/halfturn_merger_wedge/check.py",
+        "--output",
+        "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass27-final-v2-normal.json",
+        "--transcript",
+        "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass27-final-v2-normal-transcript.json"
+      ],
+      "exit_code": 0,
+      "error": null,
+      "wall_seconds": 0.51399346801918,
+      "single_child_peak_RSS_KiB": 20180,
+      "child_guard_seconds": 45,
+      "numeric_threads": 1,
+      "cpu_intensive_children": 1,
+      "scope_unchanged": "1CPU2GiB"
+    },
+    {
+      "agent": "six-rupert-2",
+      "role": "researcher",
+      "label": "pass27-final-v2-optimized",
+      "command": [
+        "/usr/bin/python3",
+        "-O",
+        "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/round-two/six-rupert-2/halfturn_merger_wedge/check.py",
+        "--output",
+        "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass27-final-v2-optimized.json",
+        "--transcript",
+        "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass27-final-v2-optimized-transcript.json"
+      ],
+      "exit_code": 0,
+      "error": null,
+      "wall_seconds": 0.7187262299703434,
+      "single_child_peak_RSS_KiB": 23760,
+      "child_guard_seconds": 45,
+      "numeric_threads": 1,
+      "cpu_intensive_children": 1,
+      "scope_unchanged": "1CPU2GiB"
+    },
+    {
+      "agent": "six-rupert-2",
+      "role": "researcher",
+      "label": "pass27-final-v2-isolated-normal",
+      "command": [
+        "/usr/bin/python3",
+        "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass27-final-v2-isolated-normal-empty/research/halfturn_merger_wedge/check.py",
+        "--output",
+        "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass27-final-v2-isolated-normal.json",
+        "--transcript",
+        "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass27-final-v2-isolated-normal-transcript.json"
+      ],
+      "exit_code": 0,
+      "error": null,
+      "wall_seconds": 0.5259994820225984,
+      "single_child_peak_RSS_KiB": 20568,
+      "child_guard_seconds": 45,
+      "numeric_threads": 1,
+      "cpu_intensive_children": 1,
+      "scope_unchanged": "1CPU2GiB"
+    },
+    {
+      "agent": "six-rupert-2",
+      "role": "researcher",
+      "label": "pass27-final-v2-isolated-optimized",
+      "command": [
+        "/usr/bin/python3",
+        "-O",
+        "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass27-final-v2-isolated-optimized-empty/research/halfturn_merger_wedge/check.py",
+        "--output",
+        "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass27-final-v2-isolated-optimized.json",
+        "--transcript",
+        "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass27-final-v2-isolated-optimized-transcript.json"
+      ],
+      "exit_code": 0,
+      "error": null,
+      "wall_seconds": 0.6578716669464484,
+      "single_child_peak_RSS_KiB": 23668,
+      "child_guard_seconds": 45,
+      "numeric_threads": 1,
+      "cpu_intensive_children": 1,
+      "scope_unchanged": "1CPU2GiB"
+    },
+    {
+      "agent": "six-rupert-2",
+      "role": "researcher",
+      "label": "pass27-final-v2-controls-normal",
+      "command": [
+        "/usr/bin/python3",
+        "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/round-two/six-rupert-2/halfturn_merger_wedge/controls.py",
+        "--output",
+        "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass27-final-v2-controls-normal.json"
+      ],
+      "exit_code": 0,
+      "error": null,
+      "wall_seconds": 1.1410145710688084,
+      "single_child_peak_RSS_KiB": 19308,
+      "child_guard_seconds": 45,
+      "numeric_threads": 1,
+      "cpu_intensive_children": 1,
+      "scope_unchanged": "1CPU2GiB"
+    },
+    {
+      "agent": "six-rupert-2",
+      "role": "researcher",
+      "label": "pass27-final-v2-controls-optimized",
+      "command": [
+        "/usr/bin/python3",
+        "-O",
+        "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/round-two/six-rupert-2/halfturn_merger_wedge/controls.py",
+        "--output",
+        "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass27-final-v2-controls-optimized.json"
+      ],
+      "exit_code": 0,
+      "error": null,
+      "wall_seconds": 1.320492137921974,
+      "single_child_peak_RSS_KiB": 21408,
+      "child_guard_seconds": 45,
+      "numeric_threads": 1,
+      "cpu_intensive_children": 1,
+      "scope_unchanged": "1CPU2GiB"
+    }
+  ],
+  "private_initial_failures": [
+    "Initial prototype Q multiplied on left of sparse polynomial raised TypeError; corrected before successful finite check.",
+    "First standalone tuple/list concatenation raised TypeError before math completed; corrected.",
+    "First whole-record replay exposed integer dictionary keys versus JSON string keys; explicit string normalization corrected this serialization comparison. No arithmetic coefficient changed."
+  ],
+  "no_timeout_kill_UNKNOWN_or_resource_escalation": true,
+  "checked_at": "2026-10-03T05:50:46.528596+00:00"
+}
