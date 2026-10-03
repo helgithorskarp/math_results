@@ -1,0 +1,181 @@
+{
+  "agent": "six-rupert-3",
+  "all4_entire_production_records_equal": true,
+  "all4_entire_semantic_control_records_equal": true,
+  "all6_preimport_pin_damages": [
+    {
+      "actual_changed_bytes_sha256": "77fff8371a1d624022e48b6b81940a0e0194a8559fc17bad29de008ee85afbe1",
+      "changed_input": "field.py",
+      "guard_elapsed_seconds": 0.059,
+      "mode": "normal",
+      "rejected_before_arithmetic_import": true,
+      "returncode": 1
+    },
+    {
+      "actual_changed_bytes_sha256": "734c7f3f7eb67c8b87d82b1da2bcd15c39a35286facff645a173270bad1dc161",
+      "changed_input": "verify.py",
+      "guard_elapsed_seconds": 0.056,
+      "mode": "normal",
+      "rejected_before_arithmetic_import": true,
+      "returncode": 1
+    },
+    {
+      "actual_changed_bytes_sha256": "31927e20bba7c450ed1886c5358c34d1a3bf073e481791b9209dc97bf0bf7a3d",
+      "changed_input": "EXPECTED.json",
+      "guard_elapsed_seconds": 0.056,
+      "mode": "normal",
+      "rejected_before_arithmetic_import": true,
+      "returncode": 1
+    },
+    {
+      "actual_changed_bytes_sha256": "77fff8371a1d624022e48b6b81940a0e0194a8559fc17bad29de008ee85afbe1",
+      "changed_input": "field.py",
+      "guard_elapsed_seconds": 0.186,
+      "mode": "optimized",
+      "rejected_before_arithmetic_import": true,
+      "returncode": 1
+    },
+    {
+      "actual_changed_bytes_sha256": "734c7f3f7eb67c8b87d82b1da2bcd15c39a35286facff645a173270bad1dc161",
+      "changed_input": "verify.py",
+      "guard_elapsed_seconds": 0.179,
+      "mode": "optimized",
+      "rejected_before_arithmetic_import": true,
+      "returncode": 1
+    },
+    {
+      "actual_changed_bytes_sha256": "31927e20bba7c450ed1886c5358c34d1a3bf073e481791b9209dc97bf0bf7a3d",
+      "changed_input": "EXPECTED.json",
+      "guard_elapsed_seconds": 0.183,
+      "mode": "optimized",
+      "rejected_before_arithmetic_import": true,
+      "returncode": 1
+    }
+  ],
+  "all_declared_input_pin_maps_equal": true,
+  "all_final_children_serial_with_own_math_lock": true,
+  "cold_children": [
+    {
+      "every_declared_input_pin_matches": true,
+      "every_mathematical_field_matches_baseline": true,
+      "guard_elapsed_seconds": 0.899,
+      "label": "final-cold-normal-production",
+      "peak_kib": 20416,
+      "python_version": "3.11.2",
+      "seconds": 0.803,
+      "whole_mathematical_sha256": "6aba27528591e36b0acbd82bce8d62f87edbbd4477b60fff6339eb9e7ac2e082"
+    },
+    {
+      "every_declared_input_pin_matches": true,
+      "every_mathematical_field_matches_baseline": true,
+      "guard_elapsed_seconds": 1.116,
+      "label": "final-cold-normal-controls",
+      "peak_kib": 19636,
+      "python_version": "3.11.2",
+      "seconds": 1.034,
+      "whole_mathematical_sha256": "9ab70597a6e8f2a7e91964bf2e66c7e95bb5b2561bdcd76fe97e9563573f9423"
+    },
+    {
+      "every_declared_input_pin_matches": true,
+      "every_mathematical_field_matches_baseline": true,
+      "guard_elapsed_seconds": 1.02,
+      "label": "final-cold-optimized-production",
+      "peak_kib": 25044,
+      "python_version": "3.11.2",
+      "seconds": 0.724,
+      "whole_mathematical_sha256": "6aba27528591e36b0acbd82bce8d62f87edbbd4477b60fff6339eb9e7ac2e082"
+    },
+    {
+      "every_declared_input_pin_matches": true,
+      "every_mathematical_field_matches_baseline": true,
+      "guard_elapsed_seconds": 1.326,
+      "label": "final-cold-optimized-controls",
+      "peak_kib": 25056,
+      "python_version": "3.11.2",
+      "seconds": 1.033,
+      "whole_mathematical_sha256": "9ab70597a6e8f2a7e91964bf2e66c7e95bb5b2561bdcd76fe97e9563573f9423"
+    }
+  ],
+  "controls_whole_mathematical_sha256": "9ab70597a6e8f2a7e91964bf2e66c7e95bb5b2561bdcd76fe97e9563573f9423",
+  "earlier_private_geometric_record_comparison": {
+    "all_geometric_values_equal": true,
+    "all_scalar_values_equal": true,
+    "metadata_renaming": [
+      "actual_original_model_and_source_quotient_rebuilt becomes actual_original_model_and_twelve_source_forms_rebuilt",
+      "publication-ready proof_status string"
+    ],
+    "old_external_runtime_pins_not_needed_by_new_packet": true,
+    "old_geometry_sha256": "97ffeda4a4da3a1d80feac813eb04c4c7f735eb6422ca83cc8c262b3094ce4de",
+    "old_normals_matched_entry_by_entry": true
+  },
+  "final_source_whitespace_correction_and_current_pin_replay": {
+    "all_final_source_reproduction_rechecked_due_to_actual_pin_change": true,
+    "declared_field_pin_updated": "38e0d0ccbbb04fda342c19763473fb8f5eeded5b2a74edc2aecaf68af590bcc9",
+    "final_source_trailing_blank_lines_removed": true,
+    "no_mathematical_algorithm_changed": true,
+    "no_source_commit_or_graph_attempt_before_this_correction": true,
+    "only_git_diff_check_failure": "field.py161 new blank line at EOF"
+  },
+  "fresh_empty_input_manifest": {
+    ".gitignore": {
+      "bytes": 47,
+      "sha256": "0c3c8d30a4a0606b4725e836c8ffe6b71cf0bec0bd6be00aa67846336e5276d2"
+    },
+    "DEPENDENCIES.json": {
+      "bytes": 1853,
+      "sha256": "e2bfe55c0b7ba9044f594c46d70b55d87ce2dc28103baa4076de9f25d872f278"
+    },
+    "EXACT_CONTROLS.md": {
+      "bytes": 1626,
+      "sha256": "01b081af7e52a62f757d5180dd179c67d73e972642a27648a9a5563bb25bba14"
+    },
+    "EXPECTED.json": {
+      "bytes": 5816,
+      "sha256": "2b48c4985a5de38b74f511baee169c647670b492d62ad0a72fe79b7586b035cb"
+    },
+    "MANIFEST.json": {
+      "bytes": 668,
+      "sha256": "9b1a8ebb636dff9b549eea132517eeb83d7632672a1a27107d2e9dbd7194cc6c"
+    },
+    "PROOF.md": {
+      "bytes": 21028,
+      "sha256": "759fb07fc7807ec2e83b3ef8c3f6d72d0102a2595b884b4fc4ac301340d3a91a"
+    },
+    "README.md": {
+      "bytes": 3288,
+      "sha256": "1d6e3d81082a97c0ad8c0829bf295ef9cd4bed935c66aa8cda3ef922356aa766"
+    },
+    "field.py": {
+      "bytes": 3939,
+      "sha256": "38e0d0ccbbb04fda342c19763473fb8f5eeded5b2a74edc2aecaf68af590bcc9"
+    },
+    "verify.py": {
+      "bytes": 21642,
+      "sha256": "5901ba806fc42c310226857d65e7e082d529e1582652e21e30741240b2dc8474"
+    }
+  },
+  "guard_seconds": 20,
+  "known_early_guard_overlap": "Two earlier non-final control orchestration windows overlapped by at most0.079s; CPU child overlap was not measured. Final semantic and cold validations used an exclusive own math lock.",
+  "only_normal_and_optimized_author_reproduction_not_independent_review": true,
+  "production_whole_mathematical_sha256": "6aba27528591e36b0acbd82bce8d62f87edbbd4477b60fff6339eb9e7ac2e082",
+  "proof_status": "Complete ordinary author proof; unformalized/independently UNREVIEWED",
+  "role": "researcher",
+  "scope_limits_changed": false,
+  "semantic_false_controls_per_mode": 3,
+  "sole_mathematical_premise": "public10074 fixed-source converse; no old conditional gate as necessity premise",
+  "threads": 1,
+  "two_fresh_empty_relocated_inputs": [
+    {
+      "copied_only_declared_public_source_docs_and_compact_inputs": true,
+      "initial_empty_directory": true,
+      "mode": "normal",
+      "output_outside_copied_input_directory": true
+    },
+    {
+      "copied_only_declared_public_source_docs_and_compact_inputs": true,
+      "initial_empty_directory": true,
+      "mode": "optimized",
+      "output_outside_copied_input_directory": true
+    }
+  ]
+}
