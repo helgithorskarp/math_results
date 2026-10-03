@@ -1,0 +1,144 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "first_native_access": {
+    "utc": "2026-10-03T02:09:44.450531+00:00",
+    "sealed_primary_files": 9,
+    "all_primary_hashes_unchanged": true,
+    "source_commit": "f7851176d3acd8ec4fb3256ada4f53a50a6afdc2",
+    "native_files": {
+      ".gitignore": "12bd0e82cbf86c0bce1905d9a83022e400ad1eee408424c7c8bab675ea95775f",
+      "EXPECTED.json": "063028e7bbe4234eb274b5214158cf8daa864a22b29ea9ba339d51f9b7d59ed8",
+      "LITERATURE.md": "32495a8023e9d4518cdf75c94f33fb01009d92e0d7640f720de1a04f3b3af52f",
+      "MANIFEST.json": "191e06d29f62b53652eca2958c5a19f0ecd4cbbd06d6851d243db58c3ce54cbf",
+      "PROOF.md": "ea6b836be218a4774dc0707419d37800b80998cbf203ff35b174fa5c31946b95",
+      "README.md": "39aea7297fe3da6df035a2a9b99fa1a02dc9ccd7eaad96b4ad29af39c7b26e8b",
+      "VALIDATION.json": "1f1b662965b9dbad26769aee4484495d9f732b77669319285c1c3ba80235a8e6",
+      "validate.py": "54f47352a3c6b310fd6117c93498562f05bf386ef5ed87365d62a46312f9fe54",
+      "verify.py": "8961e4e7d8bc58951bf98a009cc805b63d12c2baca416796ce3e63ac2a27c568"
+    },
+    "native_file_bytes": 140093
+  },
+  "all_nine_primary_seals_unchanged": true,
+  "native_replay": {
+    "whole_record_sha256": "d358837159721ad97116bc324ed47f12ccb52be138288afe65fe67ddc14d6aa6",
+    "whole_validation_stdout": {
+      "status": "PASS",
+      "whole_record_sha256": "d358837159721ad97116bc324ed47f12ccb52be138288afe65fe67ddc14d6aa6",
+      "external_fixture_rejections": 44,
+      "copied_source_pin_rejections": 4,
+      "peak_child_rss_kib": 22652
+    },
+    "positive_runs": [
+      {
+        "optimized": false,
+        "seconds": 0.30310001492034644,
+        "whole_output": {
+          "status": "PASS",
+          "eta_endpoint": "1/12000",
+          "whole_record_sha256": "d358837159721ad97116bc324ed47f12ccb52be138288afe65fe67ddc14d6aa6",
+          "whole_polar_coefficients": 99,
+          "all_penalty_faces": 8,
+          "full_receiving_margins": 70,
+          "whole_cube_coefficients": 7,
+          "all_real_skew_controls": 7,
+          "whole_complex_controls": 3
+        }
+      },
+      {
+        "optimized": true,
+        "seconds": 0.47490473405923694,
+        "whole_output": {
+          "status": "PASS",
+          "eta_endpoint": "1/12000",
+          "whole_record_sha256": "d358837159721ad97116bc324ed47f12ccb52be138288afe65fe67ddc14d6aa6",
+          "whole_polar_coefficients": 99,
+          "all_penalty_faces": 8,
+          "full_receiving_margins": 70,
+          "whole_cube_coefficients": 7,
+          "all_real_skew_controls": 7,
+          "whole_complex_controls": 3
+        }
+      },
+      {
+        "optimized": false,
+        "isolated": true,
+        "seconds": 0.3152257789624855,
+        "whole_output": {
+          "status": "PASS",
+          "eta_endpoint": "1/12000",
+          "whole_record_sha256": "d358837159721ad97116bc324ed47f12ccb52be138288afe65fe67ddc14d6aa6",
+          "whole_polar_coefficients": 99,
+          "all_penalty_faces": 8,
+          "full_receiving_margins": 70,
+          "whole_cube_coefficients": 7,
+          "all_real_skew_controls": 7,
+          "whole_complex_controls": 3
+        }
+      },
+      {
+        "optimized": true,
+        "isolated": true,
+        "seconds": 0.481829862925224,
+        "whole_output": {
+          "status": "PASS",
+          "eta_endpoint": "1/12000",
+          "whole_record_sha256": "d358837159721ad97116bc324ed47f12ccb52be138288afe65fe67ddc14d6aa6",
+          "whole_polar_coefficients": 99,
+          "all_penalty_faces": 8,
+          "full_receiving_margins": 70,
+          "whole_cube_coefficients": 7,
+          "all_real_skew_controls": 7,
+          "whole_complex_controls": 3
+        }
+      }
+    ],
+    "external_fixture_rejections": 44,
+    "copied_source_pin_rejections": 4,
+    "seconds": 24.270288,
+    "scope": "Unchanged fresh-source native normal/optimized/isolated replay is validation; not independent authorship or universal proof."
+  },
+  "late_comparison": [
+    {
+      "optimized": false,
+      "seconds": 1.586811,
+      "output": {
+        "all3_credited_native_tuples_whole_maps": true,
+        "all7_cube_pairs": true,
+        "all7_skew_ratios": true,
+        "all8_complete_face_residuals": true,
+        "all99_polar_coefficients": true,
+        "both_whole_Newton_streams": true,
+        "native_last_Newton_damage_rejected": true,
+        "native_record_sha256": "d358837159721ad97116bc324ed47f12ccb52be138288afe65fe67ddc14d6aa6",
+        "primary_record_sha256": "8c1048773d9e41c7f7e6608a5f1c1174ed7bb17f187fdb88c0a62bbb8f32ca5a",
+        "producer_program_imported": false,
+        "status": "PASS",
+        "whole_comparisons": 114
+      }
+    },
+    {
+      "optimized": true,
+      "seconds": 2.044932,
+      "output": {
+        "all3_credited_native_tuples_whole_maps": true,
+        "all7_cube_pairs": true,
+        "all7_skew_ratios": true,
+        "all8_complete_face_residuals": true,
+        "all99_polar_coefficients": true,
+        "both_whole_Newton_streams": true,
+        "native_last_Newton_damage_rejected": true,
+        "native_record_sha256": "d358837159721ad97116bc324ed47f12ccb52be138288afe65fe67ddc14d6aa6",
+        "primary_record_sha256": "8c1048773d9e41c7f7e6608a5f1c1174ed7bb17f187fdb88c0a62bbb8f32ca5a",
+        "producer_program_imported": false,
+        "status": "PASS",
+        "whole_comparisons": 114
+      }
+    }
+  ],
+  "peak_children_kib": 22652,
+  "serial_jobs": 1,
+  "native_threads": 1,
+  "fixed_child_guard_seconds": 45,
+  "limits_raised": false
+}

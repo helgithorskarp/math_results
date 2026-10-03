@@ -1,0 +1,140 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "status": "PASS",
+  "producer_inputs": false,
+  "fixed_child_timeout_seconds": 45,
+  "serial_native_threads": 1,
+  "runs": [
+    {
+      "case": "core.py",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 0.666292,
+      "peak_children_kib": 17964,
+      "stdout": "{\"Gaussian_controls\": 3, \"agent\": \"six-reviewer-1\", \"faces\": 8, \"polar_coefficients\": 99, \"status\": \"PASS\", \"strict_margins\": 60, \"whole_cube_coefficients\": 7, \"whole_record_sha256\": \"8c1048773d9e41c7f7e6608a5f1c1174ed7bb17f187fdb88c0a62bbb8f32ca5a\"}",
+      "stderr_last": ""
+    },
+    {
+      "case": "checks.py",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 0.343159,
+      "peak_children_kib": 18768,
+      "stdout": "{\"mathematical_damages\": [{\"damage\": \"squared-polar-real-mean\", \"reason\": \"entire squared-polar cancellation\", \"rejected_without_fixture\": true}, {\"damage\": \"face-integration-degree9\", \"reason\": \"whole face two routes 1\", \"rejected_without_fixture\": true}, {\"damage\": \"Newton-fourth-moment\", \"reason\": \"whole Newton gap 1\", \"rejected_without_fixture\": true}, {\"damage\": \"retained-square-coefficient\", \"reason\": \"whole mean square identity\", \"rejected_without_fixture\": true}], \"status\": \"PASS\"}",
+      "stderr_last": ""
+    },
+    {
+      "case": "fresh-source-core",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 0.801521,
+      "peak_children_kib": 18768,
+      "stdout": "{\"Gaussian_controls\": 3, \"agent\": \"six-reviewer-1\", \"faces\": 8, \"polar_coefficients\": 99, \"status\": \"PASS\", \"strict_margins\": 60, \"whole_cube_coefficients\": 7, \"whole_record_sha256\": \"8c1048773d9e41c7f7e6608a5f1c1174ed7bb17f187fdb88c0a62bbb8f32ca5a\"}",
+      "stderr_last": ""
+    },
+    {
+      "case": "whole-polar-last-coefficient",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.652232,
+      "peak_children_kib": 18768,
+      "stdout": "",
+      "stderr_last": "ValueError: whole record scalar"
+    },
+    {
+      "case": "whole-Newton-term-deletion",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.688254,
+      "peak_children_kib": 18768,
+      "stdout": "",
+      "stderr_last": "ValueError: whole record length"
+    },
+    {
+      "case": "boolean-for-integer",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.667589,
+      "peak_children_kib": 18768,
+      "stdout": "",
+      "stderr_last": "ValueError: whole record type"
+    },
+    {
+      "case": "duplicate-key",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.665931,
+      "peak_children_kib": 18768,
+      "stdout": "",
+      "stderr_last": "ValueError: duplicate JSON key"
+    },
+    {
+      "case": "core.py",
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 0.799593,
+      "peak_children_kib": 21360,
+      "stdout": "{\"Gaussian_controls\": 3, \"agent\": \"six-reviewer-1\", \"faces\": 8, \"polar_coefficients\": 99, \"status\": \"PASS\", \"strict_margins\": 60, \"whole_cube_coefficients\": 7, \"whole_record_sha256\": \"8c1048773d9e41c7f7e6608a5f1c1174ed7bb17f187fdb88c0a62bbb8f32ca5a\"}",
+      "stderr_last": ""
+    },
+    {
+      "case": "checks.py",
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 0.463451,
+      "peak_children_kib": 21360,
+      "stdout": "{\"mathematical_damages\": [{\"damage\": \"squared-polar-real-mean\", \"reason\": \"entire squared-polar cancellation\", \"rejected_without_fixture\": true}, {\"damage\": \"face-integration-degree9\", \"reason\": \"whole face two routes 1\", \"rejected_without_fixture\": true}, {\"damage\": \"Newton-fourth-moment\", \"reason\": \"whole Newton gap 1\", \"rejected_without_fixture\": true}, {\"damage\": \"retained-square-coefficient\", \"reason\": \"whole mean square identity\", \"rejected_without_fixture\": true}], \"status\": \"PASS\"}",
+      "stderr_last": ""
+    },
+    {
+      "case": "fresh-source-core",
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 0.783649,
+      "peak_children_kib": 21360,
+      "stdout": "{\"Gaussian_controls\": 3, \"agent\": \"six-reviewer-1\", \"faces\": 8, \"polar_coefficients\": 99, \"status\": \"PASS\", \"strict_margins\": 60, \"whole_cube_coefficients\": 7, \"whole_record_sha256\": \"8c1048773d9e41c7f7e6608a5f1c1174ed7bb17f187fdb88c0a62bbb8f32ca5a\"}",
+      "stderr_last": ""
+    },
+    {
+      "case": "whole-polar-last-coefficient",
+      "optimized": true,
+      "returncode": 1,
+      "seconds": 0.781778,
+      "peak_children_kib": 21464,
+      "stdout": "",
+      "stderr_last": "ValueError: whole record scalar"
+    },
+    {
+      "case": "whole-Newton-term-deletion",
+      "optimized": true,
+      "returncode": 1,
+      "seconds": 0.84086,
+      "peak_children_kib": 21484,
+      "stdout": "",
+      "stderr_last": "ValueError: whole record length"
+    },
+    {
+      "case": "boolean-for-integer",
+      "optimized": true,
+      "returncode": 1,
+      "seconds": 0.842501,
+      "peak_children_kib": 21484,
+      "stdout": "",
+      "stderr_last": "ValueError: whole record type"
+    },
+    {
+      "case": "duplicate-key",
+      "optimized": true,
+      "returncode": 1,
+      "seconds": 0.79247,
+      "peak_children_kib": 21484,
+      "stdout": "",
+      "stderr_last": "ValueError: duplicate JSON key"
+    }
+  ],
+  "total_runs": 14,
+  "peak_children_kib": 21484,
+  "maximum_seconds": 0.842501,
+  "limits_raised": false
+}
