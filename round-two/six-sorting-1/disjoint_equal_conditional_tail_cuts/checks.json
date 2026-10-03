@@ -1,0 +1,60 @@
+{
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "status": "COMPLETE_SCOPED_SIX_ROUTE_AUTHOR_CERTIFICATE",
+  "finite": {
+    "producer_finite_sha256": "4eaeb977debc266d0f455b954547bb7f8c1b8309eef4785473188010db8a84bb",
+    "scalar_finite_sha256": "c6cc87b7158cd64819c2b79d698e12dca6166808ccb6ad2180b295c1b1e4c68c",
+    "controls_finite_sha256": "c6a9db5bfe7e8ae5162b74180e5bcb724ec4a7839b3a647bffe20f824799a6e2",
+    "entire_producer_scalar_normal_O_records_match": true,
+    "cold_source_only_complete": true,
+    "all16_semantic_rejections_pass": true,
+    "six_routes_each_three_fixed_and_at_least_four_head_tail_cuts": true,
+    "actual_head_moves_checked": 8,
+    "arbitrary_preparation_length_and_suffix_depth_allowed": true,
+    "whole_route_or_global_size44_exclusion_claimed": false,
+    "external_person_review_claimed": false,
+    "formalized": false
+  },
+  "finite_sha256": "8b239f2d6ded6fd412bc23102443278991e583e823c9c77457948ef8075cff32",
+  "stages": [
+    {
+      "script": "generate.py",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 0.10936932708136737,
+      "finite_sha256": "4eaeb977debc266d0f455b954547bb7f8c1b8309eef4785473188010db8a84bb"
+    },
+    {
+      "script": "verify.py",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 1.9959298518951982,
+      "finite_sha256": "c6cc87b7158cd64819c2b79d698e12dca6166808ccb6ad2180b295c1b1e4c68c"
+    },
+    {
+      "script": "generate.py",
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 0.2161994701018557,
+      "finite_sha256": "4eaeb977debc266d0f455b954547bb7f8c1b8309eef4785473188010db8a84bb"
+    },
+    {
+      "script": "verify.py",
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 2.1402026190189645,
+      "finite_sha256": "c6cc87b7158cd64819c2b79d698e12dca6166808ccb6ad2180b295c1b1e4c68c"
+    },
+    {
+      "script": "check_controls.py",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 7.147243559011258,
+      "finite_sha256": "c6a9db5bfe7e8ae5162b74180e5bcb724ec4a7839b3a647bffe20f824799a6e2"
+    }
+  ],
+  "seconds": 11.611874318914488,
+  "max_child_RSS_KiB": 21372,
+  "python_version": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]"
+}
