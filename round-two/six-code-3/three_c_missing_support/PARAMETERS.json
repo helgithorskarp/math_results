@@ -1,0 +1,199 @@
+{
+  "agent": "six-code-3",
+  "expected_filter_whole_result_sha256": "f178bd4641daa5f2383a3d0a3a19f93ef7e35cfa5a5c6592baccee11439c35fe",
+  "expected_math": {
+    "anchor": "378dcfa24b2bfc20e973eef2ae851ac56ac3d94fe70c0b7ff30e56f3b8d9ca11",
+    "full": "d49986d321427de8dd8d63cfde8bf587dc8d317b01238450f66b14fba1e281a2",
+    "images": "8b0f7570a25558da6dfb24a36ddb694238998a4e1e8c73569f4f7d7d2f0a2e16",
+    "ordered": "9c4fe26c7233225aa44ef933330f188ddf1474194e24d66b5d31c56d172ff239",
+    "pairs": "b7baeb038a4fbd4baa74da390e108a50d9dbfe2107954871d5bb601603d56388",
+    "rooted": "87b69189b96f53baac38819475f722386c40e185d9b85fb4d9ae3ac997701cb7"
+  },
+  "fixture_file_sha256": "c188200792c201bdb44ea1667a8a70255c4e40f04fee6c334c98ecfa650113e7",
+  "guards": {
+    "child_seconds": 60,
+    "inner_seconds": 20,
+    "native_threads": 1,
+    "serial": true,
+    "states": 500000
+  },
+  "input_metadata": {
+    "application_review": {
+      "artifact_ref": "bafkreiacvrcxrpdwzy6vvhp5ji32qqom25cpjxmqbkl7lo3tdcfp2bcz5e",
+      "height": 10078,
+      "source_commit": "c6811ad58163819c69bd225fd752049406c16967"
+    },
+    "images_source_anchor_theorem": "pass29_RESULTS.md",
+    "original_image_manifest_sha256": "3bbc85b3c38152b22176a1ed6fae8c94f085d9957f9f9c782d5188ffd8efbcfe"
+  },
+  "python": "3.12.14",
+  "role": "researcher",
+  "stages": {
+    "anchor": {
+      "expected": {
+        "agent": "six-code-3",
+        "baseline_colors": [
+          3,
+          1,
+          2,
+          2,
+          3,
+          0,
+          3,
+          0,
+          1,
+          1,
+          2,
+          0
+        ],
+        "baseline_source": "Direct polynomial arithmetic in F2[z]/(z*z+z+1); off-diagonal label z*i+(1+z)*j",
+        "claim_status": "PRIVATE_UNRUN_EXACT_ANCHOR_CLASSIFICATION; no packing completion or independent-person review",
+        "complete_count_not_asserted_before_run": true,
+        "input_domain": "All six lexicographic permutations of the other three labels in each of four off-diagonal rows; retain every column matching",
+        "normalized_row_fillings": 1296,
+        "role": "researcher"
+      },
+      "kernels": [
+        "literal",
+        "dual",
+        "verify"
+      ]
+    },
+    "filter": {
+      "expected": {
+        "agent": "six-code-3",
+        "precursor_math_sha256": {
+          "ANCHORS": "378dcfa24b2bfc20e973eef2ae851ac56ac3d94fe70c0b7ff30e56f3b8d9ca11",
+          "FULL": "d49986d321427de8dd8d63cfde8bf587dc8d317b01238450f66b14fba1e281a2",
+          "ORDERED": "9c4fe26c7233225aa44ef933330f188ddf1474194e24d66b5d31c56d172ff239",
+          "STAR": "87b69189b96f53baac38819475f722386c40e185d9b85fb4d9ae3ac997701cb7"
+        },
+        "role": "researcher",
+        "status": "PRIVATE_UNRUN_THREE_C_ROOT_FILTER",
+        "survivor_count_not_assumed_before_execution": true
+      },
+      "kernels": [
+        "filter"
+      ]
+    },
+    "full": {
+      "expected": {
+        "agent": "six-code-3",
+        "full_relabeling_domain": 8064,
+        "input_math_sha256": "378dcfa24b2bfc20e973eef2ae851ac56ac3d94fe70c0b7ff30e56f3b8d9ca11",
+        "input_systems": 56,
+        "orbits_not_assumed_before_execution": true,
+        "pairwise_domain": 3136,
+        "role": "researcher",
+        "status": "PRIVATE_UNRUN_FULL_RESOLUTION_CLASSIFICATION"
+      },
+      "kernels": [
+        "literal",
+        "dual",
+        "verify"
+      ]
+    },
+    "images": {
+      "expected": {
+        "agent": "six-code-3",
+        "domain": {
+          "B_extra_orders": 2,
+          "anchors": [
+            0,
+            10
+          ],
+          "first_class_maps": 24,
+          "ordered_friend_pairs": 42,
+          "raw_maps_per_group": 2016,
+          "roots": [
+            1,
+            2,
+            3
+          ],
+          "total_raw_maps": 12096
+        },
+        "fixture_file_sha256": "c188200792c201bdb44ea1667a8a70255c4e40f04fee6c334c98ecfa650113e7",
+        "geometry_controls": 6,
+        "guard_seconds": 20,
+        "guard_states": 500000,
+        "independent_person_review": false,
+        "native_threads": 1,
+        "ordinary_bridges_formalized": false,
+        "outer_child_timeout_seconds": 60,
+        "role": "researcher",
+        "status": "UNRUN_CANDIDATE_COUNTS_NOT_ASSUMED"
+      },
+      "kernels": [
+        "literal",
+        "dual",
+        "verify"
+      ]
+    },
+    "ordered": {
+      "expected": {
+        "actual_relabeling_domain": 1344,
+        "agent": "six-code-3",
+        "input_math_sha256": "378dcfa24b2bfc20e973eef2ae851ac56ac3d94fe70c0b7ff30e56f3b8d9ca11",
+        "input_systems": 56,
+        "orbits_not_assumed_before_execution": true,
+        "pairwise_domain": 3136,
+        "role": "researcher",
+        "status": "PRIVATE_UNRUN_EXACT_PHYSICAL_ISOMORPHISM_CLASSIFICATION"
+      },
+      "kernels": [
+        "literal",
+        "dual",
+        "verify"
+      ]
+    },
+    "pairs": {
+      "expected": {
+        "agent": "six-code-3",
+        "cases": 349488,
+        "declared_parent_group_sizes": [
+          60,
+          60,
+          60,
+          336,
+          336,
+          336
+        ],
+        "fixture_file_sha256": "c188200792c201bdb44ea1667a8a70255c4e40f04fee6c334c98ecfa650113e7",
+        "guard_seconds": 20,
+        "guard_states": 500000,
+        "independent_person_review": false,
+        "native_threads": 1,
+        "ordinary_bridges_formalized": false,
+        "outer_child_timeout_seconds": 60,
+        "role": "researcher",
+        "status": "UNRUN_PAIR_OUTCOMES_NOT_ASSUMED"
+      },
+      "kernels": [
+        "literal",
+        "dual",
+        "verify"
+      ]
+    },
+    "rooted": {
+      "expected": {
+        "agent": "six-code-3",
+        "classification_review_ref": "bafkreic2wb2z6reycvrsrywbgjxdtjl5f7eqkbe2yk2xtco2su6tgn43aq",
+        "domain": 2352,
+        "extension_count_not_assumed": true,
+        "input_math_sha256": "378dcfa24b2bfc20e973eef2ae851ac56ac3d94fe70c0b7ff30e56f3b8d9ca11",
+        "normalized_anchors": 56,
+        "ordered_low_pair_cases": 42,
+        "public_fixture_commit": "69f2312bb468eb59b8ab3d8978fe19b3d86cf58a",
+        "public_fixture_url": "https://github.com/helgithorskarp/math_results/blob/69f2312bb468eb59b8ab3d8978fe19b3d86cf58a/round-two/six-code-2/free_involution_upper68/fixtures.json",
+        "published_fixture_file_sha256": "c188200792c201bdb44ea1667a8a70255c4e40f04fee6c334c98ecfa650113e7",
+        "role": "researcher",
+        "status": "PRIVATE_UNRUN_FULL_STAR_GLUING"
+      },
+      "kernels": [
+        "literal",
+        "dual",
+        "verify"
+      ]
+    }
+  }
+}
