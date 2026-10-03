@@ -1,0 +1,336 @@
+{
+  "agent": "six-rupert-2",
+  "role": "researcher",
+  "saved_at": "2026-10-03T12:37:19.330854+00:00",
+  "interpreter": "Python 3.11.2",
+  "package_dependencies": "standard library only",
+  "declared_replay_inputs": [
+    {
+      "path": "hb_merger_wedge/.gitignore",
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "path": "hb_merger_wedge/DEPENDENCIES.json",
+      "bytes": 2799,
+      "sha256": "602fbce66a27d00f2ec7498ce7db4f0598e40937f558ec84553ae3fece3671c7"
+    },
+    {
+      "path": "hb_merger_wedge/PROOF.md",
+      "bytes": 14946,
+      "sha256": "ff0e4e9b7059f3f97f15199bc1d798ea5da635e54993abb3a4f22c8688975bfa"
+    },
+    {
+      "path": "hb_merger_wedge/README.md",
+      "bytes": 3308,
+      "sha256": "465a792407f40f832683bfdd9845cf296ae884726a0c2e8dc00cb4bb9d0bdec8"
+    },
+    {
+      "path": "hb_merger_wedge/certificate.json",
+      "bytes": 1810,
+      "sha256": "60f4952f522be6d05d38f32e9b78b92a12622b0c22101a4a8f81a7b2406c6041"
+    },
+    {
+      "path": "hb_merger_wedge/check.py",
+      "bytes": 15667,
+      "sha256": "f3a3e1a5e1da4dc37b62bc4991406b59a4ecdf8eec91b4a58120f48911b1ded4"
+    },
+    {
+      "path": "hb_merger_wedge/controls.py",
+      "bytes": 1803,
+      "sha256": "90760d01191e2d51c7ebc941b62c254fedadb6462cb6e2bf4f89c29f2f9ba7a8"
+    },
+    {
+      "path": "hb_merger_wedge/expected.json",
+      "bytes": 74017,
+      "sha256": "f68f2c993e20bfb583aef6418fe9ce15af200cce79b98dffa824cb88e48f147a"
+    },
+    {
+      "path": "hb_merger_wedge/geometry.py",
+      "bytes": 2335,
+      "sha256": "2a87adc781adde55f221c31f44f7981adbc6d188070b744288e65233d16b9b67"
+    },
+    {
+      "path": "hb_merger_wedge/polynomial.py",
+      "bytes": 2346,
+      "sha256": "a1a687084d77a053fbb0e0cf14f35993eb8b2742141c9fa8d91c7e2ad597e928"
+    },
+    {
+      "path": "model.py",
+      "bytes": 4254,
+      "sha256": "cc0ce4358eea0139da13962b6abdf25a9710fb934e8e41ee3e6f3cbe3acb8cd7"
+    },
+    {
+      "path": "q5.py",
+      "bytes": 2047,
+      "sha256": "cef1fe01c185fc5c63d729d8e27588b4efe56d8487c87a73f22a68297b18ed3c"
+    }
+  ],
+  "runs": [
+    {
+      "label": "normal",
+      "optimized": false,
+      "fresh_EMPTY_relocated": false,
+      "resource": {
+        "agent": "six-rupert-2",
+        "role": "researcher",
+        "label": "pass28-final-normal",
+        "command": [
+          "/usr/bin/python3",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/round-two/six-rupert-2/hb_merger_wedge/check.py",
+          "--output",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass28-final-normal-record.json",
+          "--transcript",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass28-final-normal-transcript.json"
+        ],
+        "exit_code": 0,
+        "error": null,
+        "wall_seconds": 3.208735742024146,
+        "single_child_peak_RSS_KiB": 35512,
+        "child_guard_seconds": 45,
+        "numeric_threads": 1,
+        "cpu_intensive_children": 1,
+        "scope_unchanged": "1CPU2GiB"
+      },
+      "whole_record_SHA256": "09b05a603f221567355861030bddefdc92ea55f59b186ba6484dd687a0216215",
+      "whole_transcript_SHA256": "caf99bef2c7d3ee6fa2e34f7df45728cfe602846fae9cd9ce401430ecd43dea2",
+      "EVERY_original_gap_and_comparison": true,
+      "runtime_original_dependencies_only": true
+    },
+    {
+      "label": "optimized",
+      "optimized": true,
+      "fresh_EMPTY_relocated": false,
+      "resource": {
+        "agent": "six-rupert-2",
+        "role": "researcher",
+        "label": "pass28-final-optimized",
+        "command": [
+          "/usr/bin/python3",
+          "-O",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/round-two/six-rupert-2/hb_merger_wedge/check.py",
+          "--output",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass28-final-optimized-record.json",
+          "--transcript",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass28-final-optimized-transcript.json"
+        ],
+        "exit_code": 0,
+        "error": null,
+        "wall_seconds": 3.713197204982862,
+        "single_child_peak_RSS_KiB": 38804,
+        "child_guard_seconds": 45,
+        "numeric_threads": 1,
+        "cpu_intensive_children": 1,
+        "scope_unchanged": "1CPU2GiB"
+      },
+      "whole_record_SHA256": "09b05a603f221567355861030bddefdc92ea55f59b186ba6484dd687a0216215",
+      "whole_transcript_SHA256": "caf99bef2c7d3ee6fa2e34f7df45728cfe602846fae9cd9ce401430ecd43dea2",
+      "EVERY_original_gap_and_comparison": true,
+      "runtime_original_dependencies_only": true
+    },
+    {
+      "label": "empty-normal",
+      "optimized": false,
+      "fresh_EMPTY_relocated": true,
+      "resource": {
+        "agent": "six-rupert-2",
+        "role": "researcher",
+        "label": "pass28-final-empty-normal",
+        "command": [
+          "/usr/bin/python3",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass28-empty-normal-7zosqtmf/isolated-original/hb_merger_wedge/check.py",
+          "--output",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass28-final-empty-normal-record.json",
+          "--transcript",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass28-final-empty-normal-transcript.json"
+        ],
+        "exit_code": 0,
+        "error": null,
+        "wall_seconds": 3.384521803003736,
+        "single_child_peak_RSS_KiB": 36004,
+        "child_guard_seconds": 45,
+        "numeric_threads": 1,
+        "cpu_intensive_children": 1,
+        "scope_unchanged": "1CPU2GiB"
+      },
+      "whole_record_SHA256": "09b05a603f221567355861030bddefdc92ea55f59b186ba6484dd687a0216215",
+      "whole_transcript_SHA256": "caf99bef2c7d3ee6fa2e34f7df45728cfe602846fae9cd9ce401430ecd43dea2",
+      "EVERY_original_gap_and_comparison": true,
+      "runtime_original_dependencies_only": true
+    },
+    {
+      "label": "empty-optimized",
+      "optimized": true,
+      "fresh_EMPTY_relocated": true,
+      "resource": {
+        "agent": "six-rupert-2",
+        "role": "researcher",
+        "label": "pass28-final-empty-optimized",
+        "command": [
+          "/usr/bin/python3",
+          "-O",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass28-empty-optimized-jyb6est9/isolated-original/hb_merger_wedge/check.py",
+          "--output",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass28-final-empty-optimized-record.json",
+          "--transcript",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/scratch/pass28-final-empty-optimized-transcript.json"
+        ],
+        "exit_code": 0,
+        "error": null,
+        "wall_seconds": 3.6535791869973764,
+        "single_child_peak_RSS_KiB": 37796,
+        "child_guard_seconds": 45,
+        "numeric_threads": 1,
+        "cpu_intensive_children": 1,
+        "scope_unchanged": "1CPU2GiB"
+      },
+      "whole_record_SHA256": "09b05a603f221567355861030bddefdc92ea55f59b186ba6484dd687a0216215",
+      "whole_transcript_SHA256": "caf99bef2c7d3ee6fa2e34f7df45728cfe602846fae9cd9ce401430ecd43dea2",
+      "EVERY_original_gap_and_comparison": true,
+      "runtime_original_dependencies_only": true
+    }
+  ],
+  "whole_record_entry_agreement": true,
+  "whole_private_transcript_entry_agreement": true,
+  "EVERY_gap_and_spatial_comparison_compared": true,
+  "control_runs": [
+    {
+      "label": "controls-normal",
+      "optimized": false,
+      "resource": {
+        "agent": "six-rupert-2",
+        "role": "researcher",
+        "label": "pass28-final-controls-normal",
+        "command": [
+          "/usr/bin/python3",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/round-two/six-rupert-2/hb_merger_wedge/controls.py"
+        ],
+        "exit_code": 0,
+        "error": null,
+        "wall_seconds": 3.9590776909608394,
+        "single_child_peak_RSS_KiB": 22444,
+        "child_guard_seconds": 45,
+        "numeric_threads": 1,
+        "cpu_intensive_children": 1,
+        "scope_unchanged": "1CPU2GiB"
+      },
+      "whole_control_record_SHA256": "ad16bd3d84fbce69bedfadf7cf8103466c33d8e14d0d6d9a184c11709376d1f3",
+      "whole_semantic_rejection_records": [
+        {
+          "fixture": "wrong original HB label",
+          "semantic_rejection": "EVERY labelled shared source vertex in original coordinates"
+        },
+        {
+          "fixture": "false full-solid Ax symmetry",
+          "semantic_rejection": "false full-body Ax action"
+        },
+        {
+          "fixture": "improper original HB source",
+          "semantic_rejection": "actual original proper motion"
+        },
+        {
+          "fixture": "wrong original triangle negative",
+          "semantic_rejection": "complete actual paired triangle inventory"
+        },
+        {
+          "fixture": "wrong original width negative",
+          "semantic_rejection": "complete actual three width-pair inventory"
+        },
+        {
+          "fixture": "changed genuine stress weight",
+          "semantic_rejection": "identical original receiving row, actual selected source, and positive exact weight"
+        },
+        {
+          "fixture": "omitted actual receiving extreme point",
+          "semantic_rejection": "EVERY actual receiver continuum support gap endpoint"
+        },
+        {
+          "fixture": "unremoved merger degeneracy",
+          "semantic_rejection": "strict ALL merger receiving turns after true degeneracies removed"
+        },
+        {
+          "fixture": "wrong Cr instead of actual Jr",
+          "semantic_rejection": "FREE full-wedge ACTUAL Jr(HB)=R(w/den)HB, including merger; not Cr(HB)"
+        },
+        {
+          "fixture": "enlarged finite receiver wedge",
+          "semantic_rejection": "strict FINITE upper from explicit published selected-point dependency, not an infinitesimal sign"
+        }
+      ]
+    },
+    {
+      "label": "controls-optimized",
+      "optimized": true,
+      "resource": {
+        "agent": "six-rupert-2",
+        "role": "researcher",
+        "label": "pass28-final-controls-optimized",
+        "command": [
+          "/usr/bin/python3",
+          "-O",
+          "/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-rupert-2/round-two/six-rupert-2/hb_merger_wedge/controls.py"
+        ],
+        "exit_code": 0,
+        "error": null,
+        "wall_seconds": 4.111492952913977,
+        "single_child_peak_RSS_KiB": 25008,
+        "child_guard_seconds": 45,
+        "numeric_threads": 1,
+        "cpu_intensive_children": 1,
+        "scope_unchanged": "1CPU2GiB"
+      },
+      "whole_control_record_SHA256": "ad16bd3d84fbce69bedfadf7cf8103466c33d8e14d0d6d9a184c11709376d1f3",
+      "whole_semantic_rejection_records": [
+        {
+          "fixture": "wrong original HB label",
+          "semantic_rejection": "EVERY labelled shared source vertex in original coordinates"
+        },
+        {
+          "fixture": "false full-solid Ax symmetry",
+          "semantic_rejection": "false full-body Ax action"
+        },
+        {
+          "fixture": "improper original HB source",
+          "semantic_rejection": "actual original proper motion"
+        },
+        {
+          "fixture": "wrong original triangle negative",
+          "semantic_rejection": "complete actual paired triangle inventory"
+        },
+        {
+          "fixture": "wrong original width negative",
+          "semantic_rejection": "complete actual three width-pair inventory"
+        },
+        {
+          "fixture": "changed genuine stress weight",
+          "semantic_rejection": "identical original receiving row, actual selected source, and positive exact weight"
+        },
+        {
+          "fixture": "omitted actual receiving extreme point",
+          "semantic_rejection": "EVERY actual receiver continuum support gap endpoint"
+        },
+        {
+          "fixture": "unremoved merger degeneracy",
+          "semantic_rejection": "strict ALL merger receiving turns after true degeneracies removed"
+        },
+        {
+          "fixture": "wrong Cr instead of actual Jr",
+          "semantic_rejection": "FREE full-wedge ACTUAL Jr(HB)=R(w/den)HB, including merger; not Cr(HB)"
+        },
+        {
+          "fixture": "enlarged finite receiver wedge",
+          "semantic_rejection": "strict FINITE upper from explicit published selected-point dependency, not an infinitesimal sign"
+        }
+      ]
+    }
+  ],
+  "fixed_guard_seconds": 45,
+  "numeric_threads": 1,
+  "max_CPU_intensive_children": 1,
+  "resource_scope_unchanged": "1CPU2GiB",
+  "ordinary_necessity_dependency_not_replayed": true,
+  "validation_file_created_after_replay_not_a_runtime_input": true,
+  "independent_review": false,
+  "formalized": false,
+  "global_J74_status": "OPEN"
+}
