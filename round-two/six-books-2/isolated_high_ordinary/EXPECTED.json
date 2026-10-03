@@ -1,0 +1,232 @@
+{
+  "baseline.py": {
+    "actual_blue_cap_mutation_rejected": true,
+    "agent": "six-books-2",
+    "all_spines": 210,
+    "blue_edges": 117,
+    "max_blue_pages": 6,
+    "max_red_pages": 3,
+    "primary_fixture_bytes": 462,
+    "primary_fixture_sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec",
+    "prior_art_validation_only": true,
+    "program_guard_seconds": 25,
+    "red_degree_profile": {
+      "10": 1,
+      "8": 4,
+      "9": 16
+    },
+    "red_edges": 93,
+    "role": "researcher",
+    "status": "COMPLETE_PRIOR_ART_BASELINE",
+    "threads": 1,
+    "vertices": 21
+  },
+  "check.py": {
+    "agent": "six-books-2",
+    "balanced_marginal_cases": 71,
+    "claim": "Ordinary22 red3/blue6: degree9 root, at least five neighbors degree<=8, all neighbors degree<=10 => every degree10 neighbor has an H neighbor.",
+    "controls": {
+      "actual_capacity_loss_coefficient_damage_rejected": true,
+      "actual_diagonal_damage_rejected": true,
+      "actual_rank_profile_omission_rejected": true
+    },
+    "exact_degree_coupling_cases": 8,
+    "independent_person_review": false,
+    "isolated_H_edge_cases": 13,
+    "literal_identity_cases": 3663,
+    "literal_identity_supports": 407,
+    "monotone_decrement_cases": 663,
+    "no_global_profile_or_outside_degree_or_automorphism_hypothesis": true,
+    "program_guard_seconds": 25,
+    "proof_assistant_formalized": false,
+    "role": "researcher",
+    "sorted_terminal_rank_cube": 293930,
+    "status": "COMPLETE_EXACT_CHECKS",
+    "table": [
+      {
+        "C_max": 100,
+        "M": 71,
+        "T_min": 175,
+        "h": 0,
+        "min_cost": 0,
+        "minimizing_vectors": 1
+      },
+      {
+        "C_max": 101,
+        "M": 69,
+        "T_min": 165,
+        "h": 1,
+        "min_cost": 16,
+        "minimizing_vectors": 10
+      },
+      {
+        "C_max": 102,
+        "M": 67,
+        "T_min": 155,
+        "h": 2,
+        "min_cost": 32,
+        "minimizing_vectors": 5
+      },
+      {
+        "C_max": 102,
+        "M": 65,
+        "T_min": 145,
+        "h": 3,
+        "min_cost": 49,
+        "minimizing_vectors": 5
+      },
+      {
+        "C_max": 101,
+        "M": 63,
+        "T_min": 135,
+        "h": 4,
+        "min_cost": 67,
+        "minimizing_vectors": 10
+      },
+      {
+        "C_max": 100,
+        "M": 61,
+        "T_min": 125,
+        "h": 5,
+        "min_cost": 85,
+        "minimizing_vectors": 1
+      },
+      {
+        "C_max": 97,
+        "M": 59,
+        "T_min": 116,
+        "h": 6,
+        "min_cost": 105,
+        "minimizing_vectors": 28
+      },
+      {
+        "C_max": 94,
+        "M": 57,
+        "T_min": 108,
+        "h": 7,
+        "min_cost": 125,
+        "minimizing_vectors": 70
+      },
+      {
+        "C_max": 91,
+        "M": 55,
+        "T_min": 100,
+        "h": 8,
+        "min_cost": 145,
+        "minimizing_vectors": 28
+      },
+      {
+        "C_max": 88,
+        "M": 53,
+        "T_min": 92,
+        "h": 9,
+        "min_cost": 165,
+        "minimizing_vectors": 1
+      },
+      {
+        "C_max": 83,
+        "M": 51,
+        "T_min": 84,
+        "h": 10,
+        "min_cost": 187,
+        "minimizing_vectors": 3
+      },
+      {
+        "C_max": 77,
+        "M": 49,
+        "T_min": 76,
+        "h": 11,
+        "min_cost": 210,
+        "minimizing_vectors": 3
+      },
+      {
+        "C_max": 70,
+        "M": 47,
+        "T_min": 69,
+        "h": 12,
+        "min_cost": 234,
+        "minimizing_vectors": 1
+      }
+    ],
+    "terminal_shapes": {
+      "47": [
+        {
+          "T": 70,
+          "beta": [
+            3,
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            5
+          ],
+          "max_weighted_nine": 37
+        },
+        {
+          "T": 69,
+          "beta": [
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "max_weighted_nine": 36
+        }
+      ],
+      "49": [
+        {
+          "T": 77,
+          "beta": [
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            5,
+            5
+          ],
+          "max_weighted_nine": 38
+        },
+        {
+          "T": 76,
+          "beta": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            5
+          ],
+          "max_weighted_nine": 37
+        }
+      ]
+    },
+    "threads": 1,
+    "virtual_row_cube": 65536
+  }
+}

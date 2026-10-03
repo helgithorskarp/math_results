@@ -1,0 +1,330 @@
+{
+  "agent": "six-books-2",
+  "baseline": {
+    "actual_blue_cap_mutation_rejected": true,
+    "agent": "six-books-2",
+    "all_spines": 210,
+    "blue_edges": 117,
+    "max_blue_pages": 6,
+    "max_red_pages": 3,
+    "primary_fixture_bytes": 462,
+    "primary_fixture_sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec",
+    "prior_art_validation_only": true,
+    "program_guard_seconds": 25,
+    "red_degree_profile": {
+      "10": 1,
+      "8": 4,
+      "9": 16
+    },
+    "red_edges": 93,
+    "role": "researcher",
+    "status": "COMPLETE_PRIOR_ART_BASELINE",
+    "threads": 1,
+    "vertices": 21
+  },
+  "baseline_source": {
+    "final_url": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt",
+    "normalization": "ast.literal_eval of leading21x21 integer matrix only; complement distinct entries, keep zero diagonal; metadata suffix excluded.",
+    "normalized_bytes": 462,
+    "normalized_sha256": "4f1dd2bc743590a0553107936656e469db6e7d742db0456d697353ce50aac5ec",
+    "prior_art_validation_only": true,
+    "raw_bytes": 1056,
+    "raw_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+    "status": "WHOLE_PRIMARY21_RAW_AND_NORMALIZED_BYTES_PASS",
+    "status_code": 200,
+    "url": "https://raw.githubusercontent.com/gwen-mckinley/ramsey-books-wheels/main/tabu/constructions/R_B4_B7_construction_21vertices.txt"
+  },
+  "checks": {
+    "agent": "six-books-2",
+    "balanced_marginal_cases": 71,
+    "claim": "Ordinary22 red3/blue6: degree9 root, at least five neighbors degree<=8, all neighbors degree<=10 => every degree10 neighbor has an H neighbor.",
+    "controls": {
+      "actual_capacity_loss_coefficient_damage_rejected": true,
+      "actual_diagonal_damage_rejected": true,
+      "actual_rank_profile_omission_rejected": true
+    },
+    "exact_degree_coupling_cases": 8,
+    "independent_person_review": false,
+    "isolated_H_edge_cases": 13,
+    "literal_identity_cases": 3663,
+    "literal_identity_supports": 407,
+    "monotone_decrement_cases": 663,
+    "no_global_profile_or_outside_degree_or_automorphism_hypothesis": true,
+    "program_guard_seconds": 25,
+    "proof_assistant_formalized": false,
+    "role": "researcher",
+    "sorted_terminal_rank_cube": 293930,
+    "status": "COMPLETE_EXACT_CHECKS",
+    "table": [
+      {
+        "C_max": 100,
+        "M": 71,
+        "T_min": 175,
+        "h": 0,
+        "min_cost": 0,
+        "minimizing_vectors": 1
+      },
+      {
+        "C_max": 101,
+        "M": 69,
+        "T_min": 165,
+        "h": 1,
+        "min_cost": 16,
+        "minimizing_vectors": 10
+      },
+      {
+        "C_max": 102,
+        "M": 67,
+        "T_min": 155,
+        "h": 2,
+        "min_cost": 32,
+        "minimizing_vectors": 5
+      },
+      {
+        "C_max": 102,
+        "M": 65,
+        "T_min": 145,
+        "h": 3,
+        "min_cost": 49,
+        "minimizing_vectors": 5
+      },
+      {
+        "C_max": 101,
+        "M": 63,
+        "T_min": 135,
+        "h": 4,
+        "min_cost": 67,
+        "minimizing_vectors": 10
+      },
+      {
+        "C_max": 100,
+        "M": 61,
+        "T_min": 125,
+        "h": 5,
+        "min_cost": 85,
+        "minimizing_vectors": 1
+      },
+      {
+        "C_max": 97,
+        "M": 59,
+        "T_min": 116,
+        "h": 6,
+        "min_cost": 105,
+        "minimizing_vectors": 28
+      },
+      {
+        "C_max": 94,
+        "M": 57,
+        "T_min": 108,
+        "h": 7,
+        "min_cost": 125,
+        "minimizing_vectors": 70
+      },
+      {
+        "C_max": 91,
+        "M": 55,
+        "T_min": 100,
+        "h": 8,
+        "min_cost": 145,
+        "minimizing_vectors": 28
+      },
+      {
+        "C_max": 88,
+        "M": 53,
+        "T_min": 92,
+        "h": 9,
+        "min_cost": 165,
+        "minimizing_vectors": 1
+      },
+      {
+        "C_max": 83,
+        "M": 51,
+        "T_min": 84,
+        "h": 10,
+        "min_cost": 187,
+        "minimizing_vectors": 3
+      },
+      {
+        "C_max": 77,
+        "M": 49,
+        "T_min": 76,
+        "h": 11,
+        "min_cost": 210,
+        "minimizing_vectors": 3
+      },
+      {
+        "C_max": 70,
+        "M": 47,
+        "T_min": 69,
+        "h": 12,
+        "min_cost": 234,
+        "minimizing_vectors": 1
+      }
+    ],
+    "terminal_shapes": {
+      "47": [
+        {
+          "T": 70,
+          "beta": [
+            3,
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            5
+          ],
+          "max_weighted_nine": 37
+        },
+        {
+          "T": 69,
+          "beta": [
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "max_weighted_nine": 36
+        }
+      ],
+      "49": [
+        {
+          "T": 77,
+          "beta": [
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            5,
+            5
+          ],
+          "max_weighted_nine": 38
+        },
+        {
+          "T": 76,
+          "beta": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            5
+          ],
+          "max_weighted_nine": 37
+        }
+      ]
+    },
+    "threads": 1,
+    "virtual_row_cube": 65536
+  },
+  "cold_replays": {
+    "normal": {
+      "actual_semantic_damage_rejections": 11,
+      "all_frozen_inputs_unchanged": true,
+      "child_guard_seconds": 30,
+      "children": [
+        {
+          "program": "check.py",
+          "returncode": 0,
+          "seconds": 0.30087480298243463,
+          "stderr": ""
+        },
+        {
+          "program": "baseline.py",
+          "returncode": 0,
+          "seconds": 0.04613230295944959,
+          "stderr": ""
+        }
+      ],
+      "entire_mathematical_record_equal": true,
+      "program_guard_seconds": 25,
+      "status": "COMPLETE_COPIED_SOURCE_REPLAY",
+      "threads": 1
+    },
+    "optimized": {
+      "actual_semantic_damage_rejections": 11,
+      "all_frozen_inputs_unchanged": true,
+      "child_guard_seconds": 30,
+      "children": [
+        {
+          "program": "check.py",
+          "returncode": 0,
+          "seconds": 0.3770219450816512,
+          "stderr": ""
+        },
+        {
+          "program": "baseline.py",
+          "returncode": 0,
+          "seconds": 0.18534879304934293,
+          "stderr": ""
+        }
+      ],
+      "entire_mathematical_record_equal": true,
+      "program_guard_seconds": 25,
+      "status": "COMPLETE_COPIED_SOURCE_REPLAY",
+      "threads": 1
+    }
+  },
+  "credited_rederived_mechanisms": [
+    "REVIEW9537/0",
+    "LEMMA9832/0"
+  ],
+  "date": "2026-10-03",
+  "endpoint_resolved": false,
+  "expected_record_bytes": 4758,
+  "expected_record_sha256": "f862238342e76d7e634c88e23d5fceffeb2a35fc498dad15d2e898e6d4787090",
+  "logical_dependencies": [],
+  "no_private_inputs_or_large_certificate_needed": true,
+  "preserved_prepublication_failure": "First whitespace-binary-row normalizer rejected the primary public Python-list matrix format. Source bytes matched; ast.literal_eval of the leading matrix then matched all fixture bytes. No negative mathematics was inferred.",
+  "proof_status": "Written elementary proof; exact corroboration; unformalized; independent-person review pending.",
+  "python_311_cross_version": {
+    "children": [
+      {
+        "program": "check.py",
+        "returncode": 0,
+        "seconds": 0.29060014605056494,
+        "stderr": ""
+      },
+      {
+        "program": "baseline.py",
+        "returncode": 0,
+        "seconds": 0.045948949991725385,
+        "stderr": ""
+      }
+    ],
+    "entire_record_equal": true
+  },
+  "python_versions": [
+    "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+    "Python 3.11.2"
+  ],
+  "resource_scope": "Unchanged1CPU/2GiB; serial mathematical jobs; all numerical threads1.",
+  "role": "researcher",
+  "source_seal_files": 6,
+  "status": "AUTHOR_CHECKED_ORDINARY_ANALYTIC_LEMMA"
+}
