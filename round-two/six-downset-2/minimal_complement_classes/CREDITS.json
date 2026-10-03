@@ -1,0 +1,59 @@
+{
+  "agent": "six-downset-2",
+  "role": "researcher",
+  "copies": [
+    {
+      "path": "credited/affine.py",
+      "bytes": 3803,
+      "sha256": "9cdcaa2f616d2e6b63f76cdd5dda4d9d633845da34f8d4ee2646d822deea59b8",
+      "original_source_path": "round-two/six-downset-2/near_full_deficit_dual/affine.py",
+      "source_commit": "827652b63b5fb9ff95e2e65d135cdedaafdb5b90",
+      "credit": "9365/0; parameter-tuple adapter in 9793/0 supporting source",
+      "source_reader": "https://github.com/helgithorskarp/math_results/blob/827652b63b5fb9ff95e2e65d135cdedaafdb5b90/round-two/six-downset-2/near_full_deficit_dual/affine.py",
+      "unchanged_copy": true
+    },
+    {
+      "path": "credited/model.py",
+      "bytes": 4695,
+      "sha256": "9189b8b427be0a51bf46f7c6d338159b266d47ce4242dea03c2ee54888c63b10",
+      "original_source_path": "round-two/six-downset-2/near_full_deficit_dual/model.py",
+      "source_commit": "827652b63b5fb9ff95e2e65d135cdedaafdb5b90",
+      "credit": "9017/0 and subsequent complete harmonic models",
+      "source_reader": "https://github.com/helgithorskarp/math_results/blob/827652b63b5fb9ff95e2e65d135cdedaafdb5b90/round-two/six-downset-2/near_full_deficit_dual/model.py",
+      "unchanged_copy": true
+    },
+    {
+      "path": "credited/exact.py",
+      "bytes": 2516,
+      "sha256": "a22f9a4c4a569aed0321c7934a66883d2575ef146bbdba43708023bfd09b17d2",
+      "original_source_path": "round-two/six-downset-2/near_full_low_degree_reduction/exact.py",
+      "source_commit": "82271e4d09ca65afa426f917e885a558d1145867",
+      "credit": "9639/0; prior Bareiss/rational-Schur algorithms",
+      "source_reader": "https://github.com/helgithorskarp/math_results/blob/82271e4d09ca65afa426f917e885a558d1145867/round-two/six-downset-2/near_full_low_degree_reduction/exact.py",
+      "unchanged_copy": true
+    },
+    {
+      "path": "credited/matrices.py",
+      "bytes": 2846,
+      "sha256": "4541b4b7669ce706e0142339d614ebb36b46214f137abe2475a9d9ad99fd9588",
+      "original_source_path": "spectral_downset_pair_expanded_caps/matrices.py",
+      "source_commit": "6dffbb940c10f415b71e275a45010a7141d1ee4e",
+      "credit": "8319/0, author six-downset-3; unchanged n8 control",
+      "source_reader": "https://github.com/helgithorskarp/math_results/blob/6dffbb940c10f415b71e275a45010a7141d1ee4e/spectral_downset_pair_expanded_caps/matrices.py",
+      "unchanged_copy": true
+    }
+  ],
+  "statement": "All four support implementations are unchanged copies. Credited methods and n8 validation are prior art. The new result is finite minimum-class attainment and greatest rank subject to that minimum. No verdict transfers to the new caps.",
+  "dependencies": [
+    "7578/0 original lift and forced-star kernel",
+    "9365/0 real star-only decoder",
+    "9639/0 complete Boolean harmonic metric and dimensions",
+    "9942/0 real saturated-complement population bound"
+  ],
+  "context": [
+    "8319/0 n8 exact control",
+    "9017/0 existing greatest unrestricted rank n16 cap",
+    "9793/0 unchanged supporting affine/model code only, not its compression-count claim",
+    "9968/0 independent review confirms 9942 only; no review of these caps"
+  ]
+}

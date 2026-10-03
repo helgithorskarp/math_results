@@ -1,0 +1,110 @@
+{
+  "agent": "six-downset-2",
+  "role": "researcher",
+  "record_bytes": 28245,
+  "record_sha256": "5181d9e1b87b6711096e04226ff05ba7a83dfce9b0fe7ea8bb519107c32c1541",
+  "case_orders": [
+    12,
+    16
+  ],
+  "class_counts": [
+    3,
+    4
+  ],
+  "lower_ranks": [
+    4005,
+    64823
+  ],
+  "upper_ranks": [
+    4082,
+    65518
+  ],
+  "upper_gaps": [
+    "1/204700",
+    "1/32767000"
+  ],
+  "original_populations": [
+    {
+      "order": 12,
+      "vertices": 4083,
+      "complementary_populations": {
+        "2": 66,
+        "3": 220,
+        "4": 495,
+        "5": 792,
+        "6": 462
+      },
+      "saturated_pairs": 66,
+      "count_budget": 185,
+      "excluded_class_count": 2,
+      "unavoidable_saturated_pairs": 286,
+      "minimum_noncentral_classes": 3,
+      "unavoidable_saturated_pairs_at_class_minimum": 66,
+      "greatest_lower_rank_at_class_minimum": 4005
+    },
+    {
+      "order": 16,
+      "vertices": 65519,
+      "complementary_populations": {
+        "2": 120,
+        "3": 560,
+        "4": 1820,
+        "5": 4368,
+        "6": 8008,
+        "7": 11440,
+        "8": 6435
+      },
+      "saturated_pairs": 680,
+      "count_budget": 2183,
+      "excluded_class_count": 3,
+      "unavoidable_saturated_pairs": 2500,
+      "minimum_noncentral_classes": 4,
+      "unavoidable_saturated_pairs_at_class_minimum": 680,
+      "greatest_lower_rank_at_class_minimum": 64823
+    }
+  ],
+  "affine_audits": [
+    {
+      "order": 12,
+      "probes": 18,
+      "complete_table_entries": 2178,
+      "all_stars": true,
+      "independent_rref": true,
+      "all_constant_lower_kernels": true
+    },
+    {
+      "order": 16,
+      "probes": 27,
+      "complete_table_entries": 6075,
+      "all_stars": true,
+      "independent_rref": true,
+      "all_constant_lower_kernels": true
+    },
+    {
+      "order": 8,
+      "probes": 11,
+      "complete_table_entries": 539,
+      "all_stars": true,
+      "independent_rref": true,
+      "all_constant_lower_kernels": true
+    }
+  ],
+  "credited_control": {
+    "credited_claim": "8319/0",
+    "source_commit": "6dffbb940c10f415b71e275a45010a7141d1ee4e",
+    "order": 8,
+    "vertices": 247,
+    "entry_alignment": 61009,
+    "original_star_rows": 1976,
+    "lower_rank": 239,
+    "upper_rank": 246,
+    "status": "validation only, not new"
+  },
+  "rejected_damages": [
+    9,
+    9
+  ],
+  "solver_input": false,
+  "independently_reviewed": false,
+  "real_bridges_formalized": false
+}
