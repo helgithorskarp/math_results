@@ -1,0 +1,342 @@
+{
+  "actual_source_depth": 7,
+  "agent": "six-rupert-1",
+  "every_private_public_actual_local_entry_equal": true,
+  "every_private_public_actual_source_leaf_record_equal": true,
+  "exact_five_small_public_dependencies": [
+    {
+      "bytes": 10659,
+      "path": "round-two/six-rupert-1/pentagonal_closed_horizon_cell/geometry.py",
+      "sha256": "20ae6b80440bb24b11cc01d6467e923c9d83d0d1221703ac615e6a64ce3ea76e"
+    },
+    {
+      "bytes": 3605,
+      "path": "round-two/six-rupert-1/pentagonal_closed_horizon_cell/polynomial.py",
+      "sha256": "7180768c614a591075d361aa287a948eca3ff6a77c8366331511caa29080f714"
+    },
+    {
+      "bytes": 2093,
+      "path": "round-two/six-rupert-1/pentagonal_minimum_diameter/model.json",
+      "sha256": "e1ce268370de64b35be62bd14ed36b63fe48dc240e5a73a80b5fe5136a2eec8e"
+    },
+    {
+      "bytes": 9725,
+      "path": "round-two/six-rupert-1/pentagonal_minimum_diameter/model.py",
+      "sha256": "aa8512eed3abe60c8d897f725f7015ffb22617cf0287c3f0533ed23805c8084c"
+    },
+    {
+      "bytes": 17243,
+      "path": "round-two/six-rupert-1/pentagonal_minimum_diameter/verify.py",
+      "sha256": "12c94ea3ab9d7bc42e2086dbb5fbb9154306d6fd7095a8be4b25bb44fefd5339"
+    }
+  ],
+  "existing_child_guard_max_seconds": 45,
+  "existing_source_depth_cap": 18,
+  "expected_sha256": "a28f5467777f08d2828da69481ea82905f5d22b96ade20b410c6ce5f21378155",
+  "formalization": false,
+  "generated_large_interval_corpus_published": false,
+  "global_named_solid_rupert_status": "OPEN",
+  "independent_review": "NOT_CLAIMED_AUTHOR_CONTROLS_ONLY",
+  "input_scope": "Fresh empty relocated tree, exactly14 compact mathematical runtime files and five small pinned public dependencies. No private cache, generator, checkpoint, corpus or journal was imported. Expected summary frozen after complete ordinary replay, then ordinary aggregate checked against it; optimized full replay uses and checks that frozen summary. Documentation finalized after actual replay, not a runtime proof premise.",
+  "mathematical_runtime_inputs": [
+    {
+      "bytes": 9095,
+      "path": "aggregate.py",
+      "sha256": "09f01a275a0695bca274763f3e43a49f1200ef0143ddfd8dca74f3fda9b803fc"
+    },
+    {
+      "bytes": 7518,
+      "path": "configuration.json",
+      "sha256": "101e4b3c5a30416438d2dfe77baa7c0a1d4400ba38899df72cc82992716de0d2"
+    },
+    {
+      "bytes": 5624,
+      "path": "expand.py",
+      "sha256": "25debc9c92acf331d272bb60942d807c6e85bc4d301863b4569136480818527e"
+    },
+    {
+      "bytes": 3054,
+      "path": "expected.json",
+      "sha256": "a28f5467777f08d2828da69481ea82905f5d22b96ade20b410c6ce5f21378155"
+    },
+    {
+      "bytes": 16967,
+      "path": "forest31.json",
+      "sha256": "f2b54812d33b81df6c5ecd35463f2c37dba5bc10d13a4c5e276bfb8d531d7644"
+    },
+    {
+      "bytes": 17060,
+      "path": "local.py",
+      "sha256": "fa03628cc1f99fa01b9e6e74ee8eb15d326e6ccab2fb1a212a3e759489753848"
+    },
+    {
+      "bytes": 5167,
+      "path": "local_certificate.json",
+      "sha256": "cb79518bfeb7c32cdfa2106f39419522a96240113e233649c605cfdc97e55848"
+    },
+    {
+      "bytes": 11606,
+      "path": "local_controls.py",
+      "sha256": "dc686f13ba833c7e3dabfac0eececc4fdb5f37e98c8aa0546c8449c4c86a2f7f"
+    },
+    {
+      "bytes": 7023,
+      "path": "prepare.py",
+      "sha256": "0182cc40d28002c2e40bc6f504f3999522bd51d380c3ee150e89830c5a306741"
+    },
+    {
+      "bytes": 4205,
+      "path": "reproduce.py",
+      "sha256": "e8ebc44ccc7dbf5281ee533570fc874f0aac1c7f397526baf1ff9cd686e38356"
+    },
+    {
+      "bytes": 7863,
+      "path": "source_cell.py",
+      "sha256": "21e4a7a7d720eb4844d85237f8c67cc36ed3a98e86d88851b98c09a886228993"
+    },
+    {
+      "bytes": 15842,
+      "path": "source_controls.py",
+      "sha256": "2eb3be0018d94cb85b5287d6f6962779f1faf1c5e5fa4c9843d66c344576a7a2"
+    },
+    {
+      "bytes": 11212,
+      "path": "target.json",
+      "sha256": "04a6fb68ff0fb67fdd028146be7361d75b44cc008eb0a980f5e36fe96698f02f"
+    },
+    {
+      "bytes": 13510,
+      "path": "verify_shell.py",
+      "sha256": "b95fc8706e01448f1c4481125d01d5428ec7d2ee0d97384c269fdab2e5aeeec0"
+    }
+  ],
+  "maximum_cpu_intensive_children": 1,
+  "maximum_measured_child_wall_seconds": 24.863203329965472,
+  "maximum_reported_child_peak_rss_kib": 51420,
+  "numeric_threads": 1,
+  "ordinary_post_freeze_expected_binding": {
+    "actual_wall_seconds": 0.30112885404378176,
+    "guard_seconds": 20,
+    "status": "COMPLETED"
+  },
+  "ordinary_proof_required": true,
+  "python": "3.11.2",
+  "replay_modes": [
+    {
+      "complete": true,
+      "driver_wall_seconds": 63.32622336701024,
+      "mode": "normal",
+      "named_model_rebuilt_afresh": true,
+      "stages": [
+        {
+          "actual_child_wall_seconds": 24.863203329965472,
+          "guard_seconds": 45,
+          "mathematical_statuses": [
+            "COMPLETE_FRESH_ACTUAL_NAMED_MODEL_RECONSTRUCTION_PASSED"
+          ],
+          "stage": "local.py"
+        },
+        {
+          "actual_child_wall_seconds": 0.09050630603451282,
+          "guard_seconds": 20,
+          "mathematical_statuses": [
+            "EXACT_LITERAL_FOREST_DECODED"
+          ],
+          "stage": "expand.py"
+        },
+        {
+          "actual_child_wall_seconds": 7.465504969935864,
+          "guard_seconds": 40,
+          "mathematical_statuses": [
+            "EXACT_WHOLE_CLOSED_CELL31_CONDITIONAL_WHOLE_TRIANGLE_LOCAL_RIGIDITY_AND_PHYSICAL_GAP_PASSED"
+          ],
+          "stage": "local.py"
+        },
+        {
+          "actual_child_wall_seconds": 6.2292345750611275,
+          "guard_seconds": 40,
+          "mathematical_statuses": [
+            "WHOLE_CLOSED_TRIANGLE31_INDEPENDENT_AUTHOR_LOCAL_CONTROLS_PASSED"
+          ],
+          "stage": "local_controls.py"
+        },
+        {
+          "actual_child_wall_seconds": 8.294861723086797,
+          "guard_seconds": 40,
+          "mathematical_statuses": [
+            "EXACT_PROPER_BODY_CAYLEY_CELL_IDENTITIES_PASSED_NOT_A_RUPERT_EXCLUSION",
+            "EXACT_OUTER_PROPOSAL_GEOMETRY_PREPARED_ALL_SOURCE_LEAF_SIGNS_PENDING"
+          ],
+          "stage": "prepare.py"
+        },
+        {
+          "actual_child_wall_seconds": 6.268250538036227,
+          "guard_seconds": 45,
+          "mathematical_statuses": [
+            "DECLARED_EXACT_LEAF_RANGE_PASSED"
+          ],
+          "stage": "verify_shell.py"
+        },
+        {
+          "actual_child_wall_seconds": 9.68303300801199,
+          "guard_seconds": 40,
+          "mathematical_statuses": [
+            "WHOLE_TRIANGLE31_INDEPENDENT_SOURCE_AND_COVER_CONTROLS_PASSED"
+          ],
+          "stage": "source_controls.py"
+        },
+        {
+          "actual_child_wall_seconds": 0.425776298972778,
+          "guard_seconds": 20,
+          "mathematical_statuses": [
+            "WHOLE_CLOSED_TRIANGLE31_ALL_ORIGINAL_SOURCES_AND_PHYSICAL_TRANSLATION_SCALE_VERIFIED"
+          ],
+          "stage": "aggregate.py"
+        }
+      ],
+      "starting_generated_state": "ABSENT_EMPTY"
+    },
+    {
+      "complete": true,
+      "driver_wall_seconds": 65.87848072394263,
+      "mode": "optimized",
+      "named_model_rebuilt_afresh": true,
+      "stages": [
+        {
+          "actual_child_wall_seconds": 24.341242819093168,
+          "guard_seconds": 45,
+          "mathematical_statuses": [
+            "COMPLETE_FRESH_ACTUAL_NAMED_MODEL_RECONSTRUCTION_PASSED"
+          ],
+          "stage": "local.py"
+        },
+        {
+          "actual_child_wall_seconds": 0.24116955907084048,
+          "guard_seconds": 20,
+          "mathematical_statuses": [
+            "EXACT_LITERAL_FOREST_DECODED"
+          ],
+          "stage": "expand.py"
+        },
+        {
+          "actual_child_wall_seconds": 9.881729852990247,
+          "guard_seconds": 40,
+          "mathematical_statuses": [
+            "EXACT_WHOLE_CLOSED_CELL31_CONDITIONAL_WHOLE_TRIANGLE_LOCAL_RIGIDITY_AND_PHYSICAL_GAP_PASSED"
+          ],
+          "stage": "local.py"
+        },
+        {
+          "actual_child_wall_seconds": 6.508504505967721,
+          "guard_seconds": 40,
+          "mathematical_statuses": [
+            "WHOLE_CLOSED_TRIANGLE31_INDEPENDENT_AUTHOR_LOCAL_CONTROLS_PASSED"
+          ],
+          "stage": "local_controls.py"
+        },
+        {
+          "actual_child_wall_seconds": 8.933082256931812,
+          "guard_seconds": 40,
+          "mathematical_statuses": [
+            "EXACT_PROPER_BODY_CAYLEY_CELL_IDENTITIES_PASSED_NOT_A_RUPERT_EXCLUSION",
+            "EXACT_OUTER_PROPOSAL_GEOMETRY_PREPARED_ALL_SOURCE_LEAF_SIGNS_PENDING"
+          ],
+          "stage": "prepare.py"
+        },
+        {
+          "actual_child_wall_seconds": 6.586566852987744,
+          "guard_seconds": 45,
+          "mathematical_statuses": [
+            "DECLARED_EXACT_LEAF_RANGE_PASSED"
+          ],
+          "stage": "verify_shell.py"
+        },
+        {
+          "actual_child_wall_seconds": 8.869282440980896,
+          "guard_seconds": 40,
+          "mathematical_statuses": [
+            "WHOLE_TRIANGLE31_INDEPENDENT_SOURCE_AND_COVER_CONTROLS_PASSED"
+          ],
+          "stage": "source_controls.py"
+        },
+        {
+          "actual_child_wall_seconds": 0.4964939469937235,
+          "guard_seconds": 20,
+          "mathematical_statuses": [
+            "WHOLE_CLOSED_TRIANGLE31_ALL_ORIGINAL_SOURCES_AND_PHYSICAL_TRANSLATION_SCALE_VERIFIED"
+          ],
+          "stage": "aggregate.py"
+        }
+      ],
+      "starting_generated_state": "ABSENT_EMPTY"
+    }
+  ],
+  "resource_settings_changed": false,
+  "role": "researcher",
+  "standard_library_only": true,
+  "status": "COMPLETE_FRESH_ISOLATED_NORMAL_AND_OPTIMIZED_AUTHOR_REPLAY_PASSED",
+  "total_actual_coefficient_intervals": 37656,
+  "validated_utc": "2026-10-03T01:36:19.692568+00:00",
+  "whole_mathematical_record_pairs": [
+    {
+      "bytes": 81201,
+      "entire_bytes_equal": true,
+      "file": "named_geometry.json",
+      "sha256": "ce7fb43061b5dc692b1824a0e41bec539026c75ae041faa9264a64b8e8b8283f"
+    },
+    {
+      "bytes": 2316,
+      "entire_bytes_equal": true,
+      "file": "model.json",
+      "sha256": "7e0e1a2517e76d9a1800032d06720c3a6089afc239e9133ad7893d4d89516609"
+    },
+    {
+      "bytes": 376957,
+      "entire_bytes_equal": true,
+      "file": "forest.json",
+      "sha256": "282b934909b798a62c7b7b17d493fadc7310f64c07d7e6c8bc8dcdbb53b8b095"
+    },
+    {
+      "bytes": 105463,
+      "entire_bytes_equal": true,
+      "file": "local.json",
+      "sha256": "24bae68cd7ba08ce2a89dc89dca125ac270f90117e7598835ed09f00e9a415f2"
+    },
+    {
+      "bytes": 1391,
+      "entire_bytes_equal": true,
+      "file": "local_controls.json",
+      "sha256": "20ec2ac5fa1e40b49640dda4ef403389830ecd16ee028084caec4cbccde1d4cd"
+    },
+    {
+      "bytes": 20944,
+      "entire_bytes_equal": true,
+      "file": "source.json",
+      "sha256": "189d16bc8c9bc643aaffd5b141fde87f262afc8db34a03bc1a8aab1ab29c0773"
+    },
+    {
+      "bytes": 167818,
+      "entire_bytes_equal": true,
+      "file": "geometry.json",
+      "sha256": "356515015440386dd8d599a567f40a1e0f0734a21f685c23b754e63811b28d57"
+    },
+    {
+      "bytes": 4549314,
+      "entire_bytes_equal": true,
+      "file": "leaves_0.json",
+      "sha256": "13115614391c985df98c0cb91ac55deca55c59dce22aba5b268d20485b7b6504"
+    },
+    {
+      "bytes": 8668,
+      "entire_bytes_equal": true,
+      "file": "source_controls.json",
+      "sha256": "aa2acfa49dbdf61d93563ce8ab26007b7c833a2734683f0ad54a541f7c8a8f57"
+    },
+    {
+      "bytes": 3054,
+      "entire_bytes_equal": true,
+      "file": "complete.json",
+      "sha256": "a28f5467777f08d2828da69481ea82905f5d22b96ade20b410c6ce5f21378155"
+    }
+  ]
+}

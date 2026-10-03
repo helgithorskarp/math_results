@@ -1,0 +1,294 @@
+{
+  "agent": "six-rupert-1",
+  "cells": {
+    "31": {
+      "coefficient_checks": 36900,
+      "expanded_forest_sha256": "282b934909b798a62c7b7b17d493fadc7310f64c07d7e6c8bc8dcdbb53b8b095",
+      "expected_closed_support_geometry": {
+        "actual_original_squared_norm_upper": "1011739907851872228877723173069526991216405370689502239551314234457457006036430765178595979183932566869094095074858111289074251550472931327883120245197318732670844560726741448299179677017/902779768818261492800716341405821153323212371800358158299882649456981149254055485667445894979105089445475804774400000000000000000000000000000000000000000000000000000000000000000000000000",
+        "actual_support_height_lower": "226601260190297670139011931307736485011561706166444917677000843042153329301837008400638480523/296921011042765966306929736510372404326130704923072921600000000000000000000000000000000000000",
+        "actual_support_squared_norm_upper": "88199691230875396197858825154476560503464308770921630541661972145624386169809625149961443338479758002019275154032418834229192198960067697330987281803904852911522498744956590983863141/55101304249161468066449972009632638752637473864767953997795571866270822098025847513882195738470769619474841600000000000000000000000000000000000000000000000000000000000000000000000000",
+        "actual_translation": "b=pi_r(alpha*e_y+beta*e_z), r_x=1; wrench translation entries are m_y,m_z",
+        "closed_cell_halfspace_vertex_checks": 189,
+        "closed_midpoint_receiver_piece_count": 1,
+        "closed_receiver_fan_triangle_indices": [
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "closed_receiver_refinement_depth": 0,
+        "closed_support_original_comparisons": 4692,
+        "distinct_contact_rows": 20,
+        "distinct_directed_support_edges": 17,
+        "exact_closed_support_ties": 126,
+        "exact_offendpoint_grazing_ties": 24,
+        "exact_polygon_edge_wall_indices": [
+          [
+            2
+          ],
+          [
+            61
+          ],
+          [
+            55
+          ]
+        ],
+        "exact_raw_chart_area": [
+          [
+            "3592/155",
+            "-1874/155"
+          ],
+          [
+            "-768/155",
+            "536/155"
+          ],
+          [
+            "-2002/155",
+            "1084/155"
+          ]
+        ],
+        "facet_phase": "-----------+++++++++----------++++++++++-+------+++--+++++++",
+        "grazing_tie_example": {
+          "edge": [
+            11,
+            22
+          ],
+          "exponent": 3,
+          "original": 33,
+          "polygon_vertex": 0
+        },
+        "receiver_exact_pieces": [
+          {
+            "path": "0",
+            "vertices": [
+              [
+                [
+                  [
+                    "22/31",
+                    "15/31"
+                  ],
+                  [
+                    "-8/31",
+                    "34/31"
+                  ],
+                  [
+                    "-36/31",
+                    "-2/31"
+                  ]
+                ],
+                [
+                  [
+                    "69/31",
+                    "-53/31"
+                  ],
+                  [
+                    "-42/31",
+                    "8/31"
+                  ],
+                  [
+                    "-34/31",
+                    "36/31"
+                  ]
+                ]
+              ],
+              [
+                [
+                  [
+                    "-56/31",
+                    "21/31"
+                  ],
+                  [
+                    "12/31",
+                    "-20/31"
+                  ],
+                  [
+                    "26/31",
+                    "-2/31"
+                  ]
+                ],
+                [
+                  [
+                    "-15/31",
+                    "25/31"
+                  ],
+                  [
+                    "32/31",
+                    "-12/31"
+                  ],
+                  [
+                    "28/31",
+                    "-26/31"
+                  ]
+                ]
+              ],
+              [
+                [
+                  [
+                    "52/5",
+                    "-29/5"
+                  ],
+                  [
+                    "-8/5",
+                    "6/5"
+                  ],
+                  [
+                    "-28/5",
+                    "16/5"
+                  ]
+                ],
+                [
+                  [
+                    "-21/5",
+                    "17/5"
+                  ],
+                  [
+                    "4/5",
+                    "2/5"
+                  ],
+                  [
+                    "2",
+                    "-2"
+                  ]
+                ]
+              ]
+            ]
+          }
+        ],
+        "uniform_cayley_polynomial_remainder_constant": 4
+      },
+      "forest_file": "forest31.json",
+      "forest_input_sha256": "f2b54812d33b81df6c5ecd35463f2c37dba5bc10d13a4c5e276bfb8d531d7644",
+      "maximum_upper_coefficient": "-1414202852206695073/1000000000000000000000000",
+      "minimum_positive_weight": "3134677253830359338663/1000000000000000000000000",
+      "ratio": "1/13",
+      "receiver_triangle_indices": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "receiving_stress_pieces": 615,
+      "reference_full_actual_leaf_records_sha256": "69bcf5734f7a08e8e6d93f589e86defae2a48b93e6f7d2de8063a11846350e35",
+      "source_depth_limit": 18,
+      "source_leaves": 615,
+      "source_midpoint_nodes": 507
+    }
+  },
+  "expected_fresh_named_geometry_sha256": "ce7fb43061b5dc692b1824a0e41bec539026c75ae041faa9264a64b8e8b8283f",
+  "expected_private_local_sha256": "24bae68cd7ba08ce2a89dc89dca125ac270f90117e7598835ed09f00e9a415f2",
+  "local_certificate_sha256": "cb79518bfeb7c32cdfa2106f39419522a96240113e233649c605cfdc97e55848",
+  "local_dependency_pins": {
+    "geometry.py": "20ae6b80440bb24b11cc01d6467e923c9d83d0d1221703ac615e6a64ce3ea76e",
+    "polynomial.py": "7180768c614a591075d361aa287a948eca3ff6a77c8366331511caa29080f714"
+  },
+  "public_eleven_cell_dependency": {
+    "graph_ref": "bafkreiekwlhmnpyoxaqfyphaz2en7psqcz2c2x7vqtusw7r3aqzsowpfcy",
+    "literal_closed_cells": [
+      14,
+      28,
+      13,
+      11,
+      20,
+      34,
+      19,
+      18,
+      16,
+      33,
+      32
+    ],
+    "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-rupert-1/pentagonal_whole_pentagon32/PROOF.md",
+    "source_commit": "1c85a23fb5bbcb780a3949f6594fbe85eca1d6b9"
+  },
+  "role": "researcher",
+  "source_cell_sha256": "21e4a7a7d720eb4844d85237f8c67cc36ed3a98e86d88851b98c09a886228993",
+  "source_faces": [
+    [
+      8,
+      17,
+      6,
+      15,
+      10
+    ],
+    [
+      4,
+      13,
+      2,
+      11,
+      9
+    ],
+    [
+      8,
+      10,
+      3,
+      12,
+      5
+    ],
+    [
+      11,
+      14,
+      7,
+      16,
+      9
+    ],
+    [
+      6,
+      17,
+      0,
+      16,
+      7
+    ],
+    [
+      3,
+      19,
+      2,
+      13,
+      12
+    ],
+    [
+      7,
+      14,
+      1,
+      15,
+      6
+    ],
+    [
+      12,
+      13,
+      4,
+      18,
+      5
+    ],
+    [
+      5,
+      18,
+      0,
+      17,
+      8
+    ],
+    [
+      2,
+      19,
+      1,
+      14,
+      11
+    ],
+    [
+      9,
+      16,
+      0,
+      18,
+      4
+    ],
+    [
+      10,
+      15,
+      1,
+      19,
+      3
+    ]
+  ],
+  "target_sha256": "04a6fb68ff0fb67fdd028146be7361d75b44cc008eb0a980f5e36fe96698f02f"
+}
