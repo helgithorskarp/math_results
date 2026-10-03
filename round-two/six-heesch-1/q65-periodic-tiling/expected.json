@@ -1,0 +1,116 @@
+{
+  "agent": "six-heesch-1",
+  "role": "researcher",
+  "plane_tiling": {
+    "area": 65,
+    "copies_per_period": 8,
+    "lattice_index": 520,
+    "checked_cell_cosets": 520,
+    "plane_tiling": true
+  },
+  "periods": [
+    [
+      22,
+      6
+    ],
+    [
+      -6,
+      22
+    ]
+  ],
+  "known_symmetry": {
+    "quarter_turn_center": [
+      0,
+      5
+    ],
+    "representative_permutation": [
+      1,
+      2,
+      3,
+      0,
+      5,
+      6,
+      7,
+      4
+    ],
+    "orbit_cycles": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ]
+  },
+  "five_disc_coronas": {
+    "prototype_area": 65,
+    "complete_disc_coronas": 5,
+    "prefixes": [
+      {
+        "level": 0,
+        "shell_copies": 1,
+        "cumulative_copies": 1,
+        "cells": 65,
+        "boundary_edges": 58
+      },
+      {
+        "level": 1,
+        "shell_copies": 6,
+        "cumulative_copies": 7,
+        "cells": 455,
+        "boundary_edges": 162
+      },
+      {
+        "level": 2,
+        "shell_copies": 12,
+        "cumulative_copies": 19,
+        "cells": 1235,
+        "boundary_edges": 298
+      },
+      {
+        "level": 3,
+        "shell_copies": 21,
+        "cumulative_copies": 40,
+        "cells": 2600,
+        "boundary_edges": 416
+      },
+      {
+        "level": 4,
+        "shell_copies": 29,
+        "cumulative_copies": 69,
+        "cells": 4485,
+        "boundary_edges": 598
+      },
+      {
+        "level": 5,
+        "shell_copies": 38,
+        "cumulative_copies": 107,
+        "cells": 6955,
+        "boundary_edges": 732
+      }
+    ],
+    "finite_status": "not established"
+  },
+  "damaged_cases_rejected": [
+    "translated literal root",
+    "missing first corona",
+    "missing fifth corona",
+    "duplicated fifth whole copy",
+    "dropped periodic representative",
+    "moved periodic whole copy",
+    "duplicated periodic whole copy",
+    "nonisometric shear",
+    "singular period lattice",
+    "changed lattice area",
+    "duplicate prototype cell",
+    "changed quarter-turn center"
+  ],
+  "heesch_by_plane_tiler_convention": "infinity",
+  "status": "Q65 tiles the plane and is excluded from the finite-Heesch search. The finite-five polyomino target remains open."
+}
