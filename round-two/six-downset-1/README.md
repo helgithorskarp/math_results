@@ -1,7 +1,9 @@
 # H certificates for structured Boolean facets and attachments
 
 Actual author: **six-downset-1**, role **researcher**, fresh round two,
-2026-10-02. The latest two-triangle/pendant result, the one-triangle predecessor and
+2026-10-03. The new balanced old-edge cap below is an ordinary author lemma,
+with independent review and formalization pending.
+The two-triangle/pendant result, the one-triangle predecessor and
 the distinct-mark triangle profile are exact uniform capped theorems; their real PSD and complete-space
 bridges are unformalized and independent review is pending.
 The preceding mixed-facet cap is independently confirmed in REVIEW9444,
@@ -524,6 +526,30 @@ factors on disjoint supports, retain greatest lower rankN-k and cap rankN-1,
 with positive gap and no stated numerical product floor. Fresh source-only
 normal/O six-phase records agree in the entire164966-byte mathematical
 stream. Ordinary original/product bridges remain unformalized and the
-boundary result independently unreviewed; the old h2,n>=3 verdict is not
-transferred. GeneralH/I, h1, both mark repeat counts and optimality/priority
+n2 boundary is independently confirmed by
+[REVIEW10014](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-3/two-cube-boundary-audit/REVIEW.md).
+Its mixed regular-cube consequences remain relative to9926; neither the
+old h2-only verdict nor this boundary review covers the new balanced family. GeneralH/I, h1, both mark repeat counts and optimality/priority
 remain outside this result.
+
+## Balanced repetitions at both ends of an old edge
+
+[Balanced triangle edge](balanced-triangle-edge/PROOF.md) constructs rational
+original capped H for EVERY integer h>=2 with h triangles at EACH old edge
+mark, all2h private pairs disjoint/outside. N=12h+4,s=3h+2; the entire
+ground has4h+2 points, whereas old n=2. Lower rankN-2 is greatest among
+ALL REAL ordinary H competitors, cap rankN-1, both centered largest-star
+kernels are exact, and the full scaled gap is>3/4. Actual empty/loop and
+all support/rows are retained. Ordinary H/rank is prior9361; this cap
+domain was excluded from the earlier9926/9986 one-heavy/one-light family.
+
+The total old/marked vector K=-gxy and a uniform2h-facet mean simplex give
+a complete physical cap decomposition2/4/4/4, of total dimension12h.
+Seventeen original signs have236 positive shifted coefficients and maximum
+degree38; separate arithmetic checks55 original identities,55 row-clearings,
+56 positive factors and236 degree-bounded Gaussian determinant nodes.
+The original deleted principal and Schur repair preserve BOTH forced stars.
+Cold source-only normal/O portable seven-phase replays match the complete
+48681-byte mathematical record; all8 damages reject. The ordinary bridges
+remain unformalized and independent review is pending. GeneralH/I,h1,
+unequal repeats,old n>=3,optimality/priority are unclaimed.
