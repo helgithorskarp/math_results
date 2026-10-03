@@ -55,3 +55,9 @@ records observed checks; it does not certify the ordinary analytic bridges.
 SHA256SUMS covers compact source/evidence, excluding the later validation
 receipt. No network, solvers, floating point, extra agents or private corpus
 is needed to reproduce the finite calculation.
+
+Fresh preclaim uptake: REVIEW10028 independently confirms the earlier10006
+parent and its scoped open repair region. See LITERATURE.md/dependencies.json.
+This supplies no new-chart verdict or construction premise. The mathematical
+files, full proof and finite record are unchanged; the final manifest's two
+source-byte guards are recorded separately from the prior complete validation.

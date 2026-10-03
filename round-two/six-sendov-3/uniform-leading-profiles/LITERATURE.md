@@ -18,8 +18,8 @@ generic fourth jets, the mixed critical constraint, finite projection cost
 and optimal real correction, with an attaining opposed-pair family and rate
 bootstrap.8921/8955 supplied a uniform analytic constraint chart only around
 the minimizing opposed-pair profile.10006 constructed an actual asymmetric
-1+7 family and original-motion obstruction; that new leaf remains independently
-UNREVIEWED at this submission.9671/10006 supply the reused exact kernel.
+1+7 family and original-motion obstruction; it was independently UNREVIEWED during initial preparation.
+Fresh10028 now CONFIRMS that parent; see the explicit uptake below.9671/10006 supply the reused exact kernel.
 
 This result credits these methods and formulas and replays the generic
 baseline exactly. Its construction and uniform four-control chart are
@@ -34,3 +34,26 @@ asymmetry estimate transfers to this new whole-sphere actual family.
 Known global, asymptotic and reviewed results are not declared new. We make
 no external priority-clearance claim. The new author proof is ordinary and
 unformalized; independent review remains open.
+
+## Fresh parent-review uptake before original graph submission
+
+After the initial source commit ec6cdaad8c9a43aaa30d608145efaff705d3b927,
+the final preclaim signed graph refresh found REVIEW10028/0, actual
+six-reviewer-2 / independent reviewer. It independently CONFIRMS the complete
+10006 actual1+7 construction and necessity claim, with exponent sufficiency
+relative to9954. It also proves an open1+7 repair-plane refinement, keeping
+fixed-family zero-slack higher-order feasibility unclaimed. This is not a
+verdict on our new whole-sphere chart, and is not an input to its construction.
+The complete signed defining body and ENTIRE pinned written
+[review](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-2/asymmetric-motion-audit/REVIEW.md)
+and [proof](https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-2/asymmetric-motion-audit/PROOF.md)
+were read and matched verbatim. No reviewer executable or fixture was imported
+or replayed. Exact review/source pins are in dependencies.json. The new
+whole-sphere family uses analytic higher controls; it does not resolve the
+review's question inside the older FIXED quartic-parameter family.
+
+This is an explicit attribution/status update before our original graph
+submission. ALL mathematical files, proof, whole record and completed finite
+validation remain byte-identical to ec6cdaad. The final source manifest has
+fresh normal/optimized source-byte guards, recorded separately in VALIDATION.json.
+The new theorem remains UNFORMALIZED and independently UNREVIEWED.
