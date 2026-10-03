@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "actual_agent": "six-tammes-2",
+  "role": "researcher",
+  "claim": "Every original-G20 core in the complete9774 frame on closed I has z<7/5.",
+  "t_interval": [
+    "14/25",
+    "593/1000"
+  ],
+  "excluded_z_interval": [
+    "7/5",
+    "5/2"
+  ],
+  "core_labels": [
+    0,
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "required_contacts": [
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      0,
+      11
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      10
+    ],
+    [
+      1,
+      12
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      2,
+      10
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      5,
+      9
+    ],
+    [
+      5,
+      11
+    ],
+    [
+      6,
+      11
+    ],
+    [
+      7,
+      12
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      9,
+      11
+    ],
+    [
+      10,
+      12
+    ]
+  ],
+  "additional_contacts_allowed": true,
+  "other_points_arbitrary": true,
+  "imported_complete_branch": [
+    -1,
+    1
+  ],
+  "necessary_core_chart": "(1-t)^2*z^2<=1",
+  "necessary_core_regularity": "2*G>(1+t)^4*C^2",
+  "root_equation": "w^2=(1-t)^2*(1+2t)*G",
+  "root_sign": "w>0",
+  "no_additional_point_required": true,
+  "closed_cover": [
+    {
+      "name": "lower-corner",
+      "box": [
+        "14/25",
+        "113/200",
+        "7/5",
+        "71/50"
+      ],
+      "contradicting_pair": [
+        6,
+        8
+      ]
+    },
+    {
+      "name": "upper-t",
+      "box": [
+        "113/200",
+        "593/1000",
+        "7/5",
+        "5/2"
+      ],
+      "contradicting_pair": [
+        5,
+        12
+      ]
+    },
+    {
+      "name": "upper-z",
+      "box": [
+        "14/25",
+        "593/1000",
+        "71/50",
+        "5/2"
+      ],
+      "contradicting_pair": [
+        5,
+        12
+      ]
+    }
+  ],
+  "conclusion_is_global_Tammes_bound": false,
+  "independent_new_result_review": "pending",
+  "formalization": "unformalized"
+}

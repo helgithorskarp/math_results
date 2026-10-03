@@ -1,0 +1,34 @@
+{
+  "actual_agent": "six-tammes-2",
+  "role": "researcher",
+  "runtime_inputs_sha256": {
+    "CERTIFICATE.json": "926564fb665817c5e3a34e378633d2fdb9cad2c895046bae853b0ef1e388da2c",
+    "FACTORS.json": "3959945bb81658cb489c70614ea48ec7c86af9add3a4838d1cadf0e584abde0e",
+    "SYSTEM.json": "01377a3d052cf5555be732ebcbfd158dbb9b0ad1d37ab623500bdde45f2f3f3c",
+    "algebra.py": "937ad4f0b56e999cd238b9a05559f1bd4e8c17107ba63d9cfaa1cb19d2aa0b57",
+    "audit.py": "2ef3c244ab4487d103492d0921ecab1550ffddbc0b1518cd114995821502b1bd",
+    "check.py": "e7293e5e2ec23c94369157b443c073c8dbe47e73508e401b24de769407a831ea",
+    "controls.py": "db801cf5071ba7b50f644caa510fc711becb36ef5911e19e559a1f650c049cc3",
+    "frame.py": "66bfea6b1131719ac9f32e0fbc724a2e0266be083bf23418541a5ca34347762e",
+    "generate.py": "819bafe718cec0223e575e731a660bbb618a7e1ef096837dfabef67439d86edf",
+    "polynomials.py": "92c25587115816b4ab068c3ce3c39e01388722621388a54e9c241f5c28435166",
+    "schema.py": "95ed7ae2d4f1565d03f45fed4d0b1c2cf6c53ff27cc355233a164bcedf29f170",
+    "signs.py": "cf548063f1bedbfbea93e188df37bf02ff45aef435af39afa874b2c917e961f1"
+  },
+  "python": "CPython3.11.2",
+  "required_packages": "standard library only",
+  "coefficient_domain": "Z and Q, characteristic zero",
+  "variable_order": [
+    "t",
+    "z",
+    "w"
+  ],
+  "division_order": "lexicographic; whole product identity required",
+  "all_native_threads": 1,
+  "serial_mathematical_jobs": true,
+  "scope_cpu": 1,
+  "scope_memory_gib": 2,
+  "internal_guard_seconds": 20,
+  "external_guard_seconds": 25,
+  "external_executable_or_private_data_required": false
+}
