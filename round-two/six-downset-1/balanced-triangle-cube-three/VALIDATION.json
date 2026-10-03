@@ -1,0 +1,185 @@
+{
+  "agent": "six-downset-1",
+  "role": "researcher",
+  "five_phases_each_mode": true,
+  "entire_mathematical_bytes": 51665,
+  "entire_mathematical_sha256": "8286d8d0391d42f85d4a3af75b4a631a81af630f95db6807124fb4ab741ce474",
+  "compact_result_sha256": "42737c8027ba85e0d29611e564caf6754d21767b3246d898d52f66949029654b",
+  "all_eight_damages_rejected_each_mode": true,
+  "serial_waited_completion": true,
+  "execution_records": [
+    {
+      "agent": "six-downset-1",
+      "role": "researcher",
+      "optimized": 0,
+      "complete": true,
+      "source_only": true,
+      "serial_children": true,
+      "native_threads": 1,
+      "phases": [
+        {
+          "phase": "uniform",
+          "seconds": 0.21837360097561032,
+          "peak_KiB": 17076
+        },
+        {
+          "phase": "independent",
+          "seconds": 0.3830737859243527,
+          "peak_KiB": 18404
+        },
+        {
+          "phase": "sectors-h2",
+          "seconds": 1.1703434499213472,
+          "peak_KiB": 19388
+        },
+        {
+          "phase": "sectors-h3",
+          "seconds": 2.991272410028614,
+          "peak_KiB": 20968
+        },
+        {
+          "phase": "damages",
+          "seconds": 0.5215035460423678,
+          "peak_KiB": 19644
+        }
+      ],
+      "seconds": 5.286189200007357,
+      "whole_mathematical_stream_sha256": "8286d8d0391d42f85d4a3af75b4a631a81af630f95db6807124fb4ab741ce474",
+      "compact_result_sha256": "42737c8027ba85e0d29611e564caf6754d21767b3246d898d52f66949029654b"
+    },
+    {
+      "agent": "six-downset-1",
+      "role": "researcher",
+      "optimized": 1,
+      "complete": true,
+      "source_only": true,
+      "serial_children": true,
+      "native_threads": 1,
+      "phases": [
+        {
+          "phase": "uniform",
+          "seconds": 0.37313452805392444,
+          "peak_KiB": 20804
+        },
+        {
+          "phase": "independent",
+          "seconds": 0.5115536350058392,
+          "peak_KiB": 21340
+        },
+        {
+          "phase": "sectors-h2",
+          "seconds": 1.298926664981991,
+          "peak_KiB": 22080
+        },
+        {
+          "phase": "sectors-h3",
+          "seconds": 3.230770519003272,
+          "peak_KiB": 23648
+        },
+        {
+          "phase": "damages",
+          "seconds": 0.7202963849995285,
+          "peak_KiB": 22132
+        }
+      ],
+      "seconds": 6.136647274950519,
+      "whole_mathematical_stream_sha256": "8286d8d0391d42f85d4a3af75b4a631a81af630f95db6807124fb4ab741ce474",
+      "compact_result_sha256": "42737c8027ba85e0d29611e564caf6754d21767b3246d898d52f66949029654b"
+    }
+  ],
+  "maximum_child_seconds": 3.230770519003272,
+  "maximum_peak_KiB": 23648,
+  "combined_seconds": 11.422836474957876,
+  "unchanged_limits": {
+    "child_seconds": 60,
+    "polynomial_terms": 512,
+    "packing_bytes": 33554432,
+    "native_threads": 1,
+    "literal_h_max": 10,
+    "literal_n_max": 6,
+    "literal_N_max": 80,
+    "scope": "1CPU/2GiB"
+  },
+  "status": "PASS: complete exact author validation, ordinary bridges unformalized and independent review pending",
+  "python": "CPython3.12.14",
+  "standard_library_only": true,
+  "source_only": true,
+  "preexisting_generated_inputs": 0,
+  "proof": {
+    "file": "PROOF.md",
+    "bytes": 18786,
+    "sha256": "135936d20d999562f68aa773d9e5611c4b685ee3b5ca90973900e3ffcdb8136d"
+  },
+  "code": [
+    {
+      "file": "bareiss.py",
+      "bytes": 565,
+      "sha256": "352cdfa0b1ab27efaa81eaff4dd4518707d67fc41991dd06f9b4b333cdc4d168"
+    },
+    {
+      "file": "bivariate.py",
+      "bytes": 10085,
+      "sha256": "e6a31a702eacc77b425b6b45dd6bfe23e244e6ef00693472001aa5e424553509"
+    },
+    {
+      "file": "check_uniform.py",
+      "bytes": 7314,
+      "sha256": "953fc7759ace16d5b7452f3900f284773b5acd17aa952742a6228123a42b5951"
+    },
+    {
+      "file": "clearing.py",
+      "bytes": 2462,
+      "sha256": "452569d697f75d0966f44c4d654bbbc571629d1708127a71e2b4893bb86b8ce9"
+    },
+    {
+      "file": "damages.py",
+      "bytes": 2889,
+      "sha256": "438447d35c01eac7ba8660d79bc7365c6a5d67c9fef2569935a4064a89ab2994"
+    },
+    {
+      "file": "exact.py",
+      "bytes": 5113,
+      "sha256": "b8f206f3939eedc38fcdd11301f8ccb19631d8ceab97a913afadd43e3df2b4ad"
+    },
+    {
+      "file": "independent.py",
+      "bytes": 5500,
+      "sha256": "5de394c0d84cd893dc803ab380ddd8d89a4385c12e8f4277f2de83c28ffba34d"
+    },
+    {
+      "file": "linear.py",
+      "bytes": 632,
+      "sha256": "6f8c3f8ecdd4e6d484eedd7dd21bcb9fafca53b2453abd823aa7fd749524920c"
+    },
+    {
+      "file": "probe.py",
+      "bytes": 10623,
+      "sha256": "97a38760a593fd3e039a29b54b85f6cd9909cf5a374a7cb54f55746844816498"
+    },
+    {
+      "file": "recipe.py",
+      "bytes": 1154,
+      "sha256": "1d62eb86a1ca3bd3cbd60818db93b912f4bdb92696180ce0e762bfde90c54086"
+    },
+    {
+      "file": "sector_control.py",
+      "bytes": 5262,
+      "sha256": "20f30ea74b988ddcc73a85bf93cd5212d5b78d875d640d30dcdad107eb008aaa"
+    },
+    {
+      "file": "sectors.py",
+      "bytes": 2196,
+      "sha256": "d1de5b01f987c4895da25dff121921d3fde68ac4bc063d8901760a81c1926d0c"
+    },
+    {
+      "file": "uniform.py",
+      "bytes": 3218,
+      "sha256": "0c38a4c3683c8cde7ee23cb5b892de37bfae6c08d1d801d06c3d73dcb7271c2c"
+    },
+    {
+      "file": "verify.py",
+      "bytes": 5137,
+      "sha256": "d94f7ad10a070e4c7b9d96c75d5ff823fb6f5410662e0ca37fb2e94351f07439"
+    }
+  ]
+}
