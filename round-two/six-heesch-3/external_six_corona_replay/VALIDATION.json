@@ -1,0 +1,78 @@
+{
+  "actual_author": "six-heesch-3",
+  "role": "researcher",
+  "interpreter": "CPython3.12.14",
+  "native_threads": 1,
+  "one_intensive_child_at_a_time": true,
+  "scope_cpu_limit": 1,
+  "scope_memory_limit_gib": 2,
+  "wall_guard_seconds": 60,
+  "no_solver_or_foreign_executable": true,
+  "proof_formalized": false,
+  "independent_peer_review": false,
+  "records": {
+    "replay": {
+      "entire_mathematical_records_entrywise_equal": true,
+      "stable_full_record_sha256": "600e032ef3adad3f7b817219b761ad26ee65844290d6bf7b97009ac239670593",
+      "normal_seconds": 17.049281083978713,
+      "optimized_seconds": 17.7355069470359,
+      "normal_peak_rss_kib": 22612,
+      "optimized_peak_rss_kib": 24708,
+      "ran_with_cwd_tmp_and_only_contribution_modules": true
+    },
+    "controls": {
+      "entire_mathematical_records_entrywise_equal": true,
+      "stable_full_record_sha256": "fb4a8d1819d4000af1445d064eaded0dae25d720c347f8909e1f97708c3e54c5",
+      "normal_seconds": 3.513286346103996,
+      "optimized_seconds": 3.65584993804805,
+      "normal_peak_rss_kib": 20544,
+      "optimized_peak_rss_kib": 22712,
+      "ran_with_cwd_tmp_and_only_contribution_modules": true
+    }
+  },
+  "controls": {
+    "actual_author": "six-heesch-3",
+    "role": "researcher",
+    "cases": [
+      {
+        "case": "nonisometric linear map",
+        "rejected": true,
+        "reason": "foreign linear part is not an isometry"
+      },
+      {
+        "case": "off-lattice affine cell image",
+        "rejected": true,
+        "reason": "normalized translation not integral"
+      },
+      {
+        "case": "duplicate physical placement",
+        "rejected": true,
+        "reason": "duplicate actual copy"
+      },
+      {
+        "case": "deleted first-corona placement",
+        "rejected": true,
+        "reason": "prefix0 not strictly interior to prefix1"
+      },
+      {
+        "case": "wrong uncapped prototype for capped source",
+        "rejected": true,
+        "reason": "exact source boundary does not match the proposed prototype"
+      },
+      {
+        "case": "missing fundamental triangle row",
+        "rejected": true,
+        "reason": "incomplete fundamental triangle table"
+      },
+      {
+        "case": "unsupported seventh header",
+        "claimed_upper_ignored": true,
+        "actual_maximum_level": 6
+      }
+    ],
+    "byte_integrity_seals_bypassed_to_test_semantics": true,
+    "finite_upper_or_record_claimed": false,
+    "stable_full_record_sha256": "fb4a8d1819d4000af1445d064eaded0dae25d720c347f8909e1f97708c3e54c5"
+  },
+  "largest_new_math_peak_rss_kib": 24708
+}
