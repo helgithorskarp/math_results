@@ -1,0 +1,116 @@
+{
+  "actual_agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "complete": true,
+  "normal_optimized_entire_stream_equal": true,
+  "native": {
+    "children_phases_per_mode": 273,
+    "runs": [
+      {
+        "mode": "normal",
+        "seconds": 311.3065321780741,
+        "bytes": 59270,
+        "sha256": "566a2076f2ed6959f57e11ac0e9921a63e8f1b819915d33a35ec9bd999842f29",
+        "peak_child_kib": 72860,
+        "complete": true
+      },
+      {
+        "mode": "optimized",
+        "seconds": 350.5959675629856,
+        "bytes": 59270,
+        "sha256": "566a2076f2ed6959f57e11ac0e9921a63e8f1b819915d33a35ec9bd999842f29",
+        "peak_child_kib": 72860,
+        "complete": true
+      }
+    ],
+    "scope": "author algorithm corroboration, not independent evidence by itself"
+  },
+  "independent": {
+    "children": 304,
+    "children_per_mode": 152,
+    "negative_controls_per_mode": 12,
+    "maximum_child_seconds": 19.262098755920306,
+    "peak_child_kib": 101512,
+    "summary": [
+      {
+        "mode": "normal",
+        "stream_bytes": 434165,
+        "stream_sha256": "b3b7170518b001b0c0a146ae49d062fbb9a05944824f93c3410c809275d58721",
+        "Newton": {
+          "Newton_identity_nodes": 44324,
+          "actual_agent": "six-reviewer-5",
+          "all_coefficients": 44324,
+          "complete": true,
+          "determinant_nodes": 78469,
+          "integer_h_domain_only": true,
+          "nonzero_positive_coefficients": 38880,
+          "points": 131,
+          "role": "independent reviewer",
+          "shift_nodes": 78469,
+          "whole_fresh_coefficient_sha256": "3dc8119c4839e8bc14ef490ac5f08df9acc79c376e3e27b5528b83577a478994"
+        }
+      },
+      {
+        "mode": "optimized",
+        "stream_bytes": 434165,
+        "stream_sha256": "b3b7170518b001b0c0a146ae49d062fbb9a05944824f93c3410c809275d58721",
+        "Newton": {
+          "Newton_identity_nodes": 44324,
+          "actual_agent": "six-reviewer-5",
+          "all_coefficients": 44324,
+          "complete": true,
+          "determinant_nodes": 78469,
+          "integer_h_domain_only": true,
+          "nonzero_positive_coefficients": 38880,
+          "points": 131,
+          "role": "independent reviewer",
+          "shift_nodes": 78469,
+          "whole_fresh_coefficient_sha256": "3dc8119c4839e8bc14ef490ac5f08df9acc79c376e3e27b5528b83577a478994"
+        }
+      }
+    ]
+  },
+  "supplement": {
+    "children": 16,
+    "negative_controls_per_mode": 4,
+    "whole_stream_bytes": 243778,
+    "whole_stream_sha256": "ad3a8e514613d9c614c1ef8026fbfab1e7454f7bfc0edcbb08c61ecb03521ea6",
+    "maximum_child_seconds": 18.506828307989053,
+    "whole_parameter_identities": 23,
+    "inverse_controls": 6,
+    "seed_core_positions": 10684,
+    "repaired_original_positions": 11080
+  },
+  "resources": {
+    "threads": 1,
+    "serial_math_children": true,
+    "review_child_guard_seconds": 55,
+    "native_child_guard_seconds": 60,
+    "unchanged_scope": "1CPU2GiB"
+  },
+  "cold_public_packet": {
+    "result": {
+      "actual_agent": "six-reviewer-5",
+      "role": "independent mathematical reviewer",
+      "complete": true,
+      "source_only_reviewer": true,
+      "native_source_regenerated": false,
+      "native_cache_entire273phases_checked": true,
+      "own_children": 304,
+      "extra_children": 16,
+      "entire_normal_optimized_equal": true,
+      "independent_stream_sha256": "b3b7170518b001b0c0a146ae49d062fbb9a05944824f93c3410c809275d58721",
+      "supplement_stream_sha256": "ad3a8e514613d9c614c1ef8026fbfab1e7454f7bfc0edcbb08c61ecb03521ea6",
+      "serial_math_children": true,
+      "threads": 1
+    },
+    "all_twelve_defining_source_files_exact": true,
+    "maximum_child_seconds": 21.036406135070138,
+    "peak_child_kib": 101720,
+    "own_children": 304,
+    "supplement_children": 16,
+    "all_32_negative_controls_reject": true,
+    "native_source_regeneration_scope": "two separately completed source-only normal/O runs; cold reviewer packet reused entire validated273-phase native DATA",
+    "ordinary_proof_formalized": false
+  }
+}
