@@ -1,0 +1,310 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "checked_at_utc": "2026-10-03T05:21:43.943690+00:00",
+  "primary": {
+    "actual_agent": "six-reviewer-4",
+    "role": "independent mathematical reviewer",
+    "python": "3.11.2",
+    "schema": "cubic-motion-audit-v1",
+    "guard_seconds_per_math_child": 30,
+    "native_thread_variables": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "single_serial_math_child": true,
+    "record_bytes": 19294,
+    "whole_record_sha256": "be23fedbf4ff79a173683abcb9e65d58f0d77e5c3f200bcc83e25fdf323bba3b",
+    "whole_normal_optimized_records_equal": true,
+    "results": {
+      "normal:check.py": {
+        "KE_bracket": [
+          "7098639097659426666968094489838380169/770097739638649361409247197265920000",
+          "1135782255625508454627962654257765561/123215638342183897825479551562547200"
+        ],
+        "all_elementary_primitive_coordinates": 1140,
+        "all_individual_active_rows": 4,
+        "all_norm_labels": 9,
+        "all_root_raw_and_map_coordinates": 540,
+        "c_bracket": [
+          "21159996684071109/22517998136852480",
+          "52899991710177773/56294995342131200"
+        ],
+        "decoder_rank": 12,
+        "multiplicity_cases": 7,
+        "polynomial_identity_indices": 8,
+        "roots": 9,
+        "status": "verified"
+      },
+      "normal:controls.py": {
+        "rejected": [
+          "anchored_constant",
+          "Newton_cubic_sign",
+          "original_raw_sign",
+          "original_map_coefficient",
+          "marked_root_motion",
+          "winning_label_norm",
+          "equality_profile_cost",
+          "rigidity_coefficient",
+          "repair_determinant",
+          "skewness_multiplicity",
+          "deficit_identity",
+          "distance_identity",
+          "duplicate_root_label",
+          "bool_root_label",
+          "omitted_original",
+          "dropped_zero_coordinate",
+          "bad_slot_order",
+          "unrelated_field"
+        ],
+        "status": "all damages rejected",
+        "without_expected_fixture": true
+      },
+      "optimized:check.py": {
+        "KE_bracket": [
+          "7098639097659426666968094489838380169/770097739638649361409247197265920000",
+          "1135782255625508454627962654257765561/123215638342183897825479551562547200"
+        ],
+        "all_elementary_primitive_coordinates": 1140,
+        "all_individual_active_rows": 4,
+        "all_norm_labels": 9,
+        "all_root_raw_and_map_coordinates": 540,
+        "c_bracket": [
+          "21159996684071109/22517998136852480",
+          "52899991710177773/56294995342131200"
+        ],
+        "decoder_rank": 12,
+        "multiplicity_cases": 7,
+        "polynomial_identity_indices": 8,
+        "roots": 9,
+        "status": "verified"
+      },
+      "optimized:controls.py": {
+        "rejected": [
+          "anchored_constant",
+          "Newton_cubic_sign",
+          "original_raw_sign",
+          "original_map_coefficient",
+          "marked_root_motion",
+          "winning_label_norm",
+          "equality_profile_cost",
+          "rigidity_coefficient",
+          "repair_determinant",
+          "skewness_multiplicity",
+          "deficit_identity",
+          "distance_identity",
+          "duplicate_root_label",
+          "bool_root_label",
+          "omitted_original",
+          "dropped_zero_coordinate",
+          "bad_slot_order",
+          "unrelated_field"
+        ],
+        "status": "all damages rejected",
+        "without_expected_fixture": true
+      }
+    },
+    "receipts": [
+      {
+        "mode": "normal",
+        "program": "produce.py",
+        "exit_code": 0,
+        "seconds": 0.6200233590789139,
+        "peak_child_kib": 16048
+      },
+      {
+        "mode": "normal",
+        "program": "check.py",
+        "exit_code": 0,
+        "seconds": 0.3541441720444709,
+        "peak_child_kib": 16048
+      },
+      {
+        "mode": "normal",
+        "program": "controls.py",
+        "exit_code": 0,
+        "seconds": 2.2167034070007503,
+        "peak_child_kib": 16048
+      },
+      {
+        "mode": "optimized",
+        "program": "produce.py",
+        "exit_code": 0,
+        "seconds": 0.7433374630054459,
+        "peak_child_kib": 16048
+      },
+      {
+        "mode": "optimized",
+        "program": "check.py",
+        "exit_code": 0,
+        "seconds": 0.39331701397895813,
+        "peak_child_kib": 16048
+      },
+      {
+        "mode": "optimized",
+        "program": "controls.py",
+        "exit_code": 0,
+        "seconds": 2.033729765098542,
+        "peak_child_kib": 16048
+      }
+    ]
+  },
+  "fresh_minimal_source_only": {
+    "actual_agent": "six-reviewer-4",
+    "role": "independent mathematical reviewer",
+    "python": "3.11.2",
+    "schema": "cubic-motion-audit-v1",
+    "guard_seconds_per_math_child": 30,
+    "native_thread_variables": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "single_serial_math_child": true,
+    "record_bytes": 19294,
+    "whole_record_sha256": "be23fedbf4ff79a173683abcb9e65d58f0d77e5c3f200bcc83e25fdf323bba3b",
+    "whole_normal_optimized_records_equal": true,
+    "results": {
+      "normal:check.py": {
+        "KE_bracket": [
+          "7098639097659426666968094489838380169/770097739638649361409247197265920000",
+          "1135782255625508454627962654257765561/123215638342183897825479551562547200"
+        ],
+        "all_elementary_primitive_coordinates": 1140,
+        "all_individual_active_rows": 4,
+        "all_norm_labels": 9,
+        "all_root_raw_and_map_coordinates": 540,
+        "c_bracket": [
+          "21159996684071109/22517998136852480",
+          "52899991710177773/56294995342131200"
+        ],
+        "decoder_rank": 12,
+        "multiplicity_cases": 7,
+        "polynomial_identity_indices": 8,
+        "roots": 9,
+        "status": "verified"
+      },
+      "normal:controls.py": {
+        "rejected": [
+          "anchored_constant",
+          "Newton_cubic_sign",
+          "original_raw_sign",
+          "original_map_coefficient",
+          "marked_root_motion",
+          "winning_label_norm",
+          "equality_profile_cost",
+          "rigidity_coefficient",
+          "repair_determinant",
+          "skewness_multiplicity",
+          "deficit_identity",
+          "distance_identity",
+          "duplicate_root_label",
+          "bool_root_label",
+          "omitted_original",
+          "dropped_zero_coordinate",
+          "bad_slot_order",
+          "unrelated_field"
+        ],
+        "status": "all damages rejected",
+        "without_expected_fixture": true
+      },
+      "optimized:check.py": {
+        "KE_bracket": [
+          "7098639097659426666968094489838380169/770097739638649361409247197265920000",
+          "1135782255625508454627962654257765561/123215638342183897825479551562547200"
+        ],
+        "all_elementary_primitive_coordinates": 1140,
+        "all_individual_active_rows": 4,
+        "all_norm_labels": 9,
+        "all_root_raw_and_map_coordinates": 540,
+        "c_bracket": [
+          "21159996684071109/22517998136852480",
+          "52899991710177773/56294995342131200"
+        ],
+        "decoder_rank": 12,
+        "multiplicity_cases": 7,
+        "polynomial_identity_indices": 8,
+        "roots": 9,
+        "status": "verified"
+      },
+      "optimized:controls.py": {
+        "rejected": [
+          "anchored_constant",
+          "Newton_cubic_sign",
+          "original_raw_sign",
+          "original_map_coefficient",
+          "marked_root_motion",
+          "winning_label_norm",
+          "equality_profile_cost",
+          "rigidity_coefficient",
+          "repair_determinant",
+          "skewness_multiplicity",
+          "deficit_identity",
+          "distance_identity",
+          "duplicate_root_label",
+          "bool_root_label",
+          "omitted_original",
+          "dropped_zero_coordinate",
+          "bad_slot_order",
+          "unrelated_field"
+        ],
+        "status": "all damages rejected",
+        "without_expected_fixture": true
+      }
+    },
+    "receipts": [
+      {
+        "mode": "normal",
+        "program": "produce.py",
+        "exit_code": 0,
+        "seconds": 0.5918736329767853,
+        "peak_child_kib": 15960
+      },
+      {
+        "mode": "normal",
+        "program": "check.py",
+        "exit_code": 0,
+        "seconds": 0.2823717350838706,
+        "peak_child_kib": 15960
+      },
+      {
+        "mode": "normal",
+        "program": "controls.py",
+        "exit_code": 0,
+        "seconds": 1.8836948809912428,
+        "peak_child_kib": 15960
+      },
+      {
+        "mode": "optimized",
+        "program": "produce.py",
+        "exit_code": 0,
+        "seconds": 0.697812209953554,
+        "peak_child_kib": 16036
+      },
+      {
+        "mode": "optimized",
+        "program": "check.py",
+        "exit_code": 0,
+        "seconds": 0.38057158200535923,
+        "peak_child_kib": 16036
+      },
+      {
+        "mode": "optimized",
+        "program": "controls.py",
+        "exit_code": 0,
+        "seconds": 1.9080044819274917,
+        "peak_child_kib": 16036
+      }
+    ]
+  },
+  "whole_records_and_summaries_equal": true,
+  "native_code_fixture_unopened": true,
+  "primary_seals_unchanged": true
+}
