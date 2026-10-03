@@ -1,0 +1,114 @@
+{
+  "actual_agent": "six-tammes-2",
+  "role": "researcher",
+  "validated_utc": "2026-10-03T12:50:54.143967+00:00",
+  "Python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+  "only_standard_library": true,
+  "serial_math_children": true,
+  "native_thread_settings": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1"
+  },
+  "unchanged_scope": "1CPU/2GiB",
+  "inner_alarm_seconds": {
+    "check.py": 20,
+    "audit.py": 20,
+    "controls.py": 25
+  },
+  "parent_subprocess_guard_seconds": 25,
+  "all_six_native_runs_complete": true,
+  "all_three_entire_normal_O_outputs_equal": true,
+  "runs": [
+    {
+      "entrypoint": "check.py",
+      "optimized": false,
+      "actual_command": [
+        "/usr/bin/python3",
+        "-B",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.188368920935318,
+      "whole_stdout_sha256": "cbda8675bfdd85a134985f9b3f860995bb7792d5df5a4d0eb28228882ad42896",
+      "cumulative_max_child_RSS_kib": 47260
+    },
+    {
+      "entrypoint": "audit.py",
+      "optimized": false,
+      "actual_command": [
+        "/usr/bin/python3",
+        "-B",
+        "audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.836730616982095,
+      "whole_stdout_sha256": "09b30a39ee1904365cb4cd40e478ab84a8ce6deac3c02e9cca27b00cb365b3da",
+      "cumulative_max_child_RSS_kib": 47260
+    },
+    {
+      "entrypoint": "controls.py",
+      "optimized": false,
+      "actual_command": [
+        "/usr/bin/python3",
+        "-B",
+        "controls.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.5235979900462553,
+      "whole_stdout_sha256": "7732841535d076252bc269e9c5b49c7785f509481f606a043c24eb4ca165c47d",
+      "cumulative_max_child_RSS_kib": 47260
+    },
+    {
+      "entrypoint": "check.py",
+      "optimized": true,
+      "actual_command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "check.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.667351057054475,
+      "whole_stdout_sha256": "cbda8675bfdd85a134985f9b3f860995bb7792d5df5a4d0eb28228882ad42896",
+      "cumulative_max_child_RSS_kib": 49540
+    },
+    {
+      "entrypoint": "audit.py",
+      "optimized": true,
+      "actual_command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.058420056011528,
+      "whole_stdout_sha256": "09b30a39ee1904365cb4cd40e478ab84a8ce6deac3c02e9cca27b00cb365b3da",
+      "cumulative_max_child_RSS_kib": 49540
+    },
+    {
+      "entrypoint": "controls.py",
+      "optimized": true,
+      "actual_command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "controls.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.604542229906656,
+      "whole_stdout_sha256": "7732841535d076252bc269e9c5b49c7785f509481f606a043c24eb4ca165c47d",
+      "cumulative_max_child_RSS_kib": 49540
+    }
+  ],
+  "maximum_actual_child_seconds": 4.667351057054475,
+  "observed_cumulative_max_child_RSS_kib": 49540,
+  "guard_reached": false,
+  "resource_escalation": false,
+  "independent_peer_review": "pending",
+  "new_global_bound": false
+}
