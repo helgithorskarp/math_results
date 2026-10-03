@@ -111,7 +111,7 @@ native four-phase normal/O30339-byte record agrees with its original digest
 These late checks are corroboration and exact scope alignment, not a repair
 of the missing necessity inference.
 
-Standard CPython3.11.2, standard library only. The22 primary guarded children
+Standard CPython3.12.14, standard library only. The22 primary guarded children
 finish normally, longest14.504607s, peak29912KiB; seven semantic damages
 reject in each mode. Native outer45-second normal/O checks complete in
 11.503403/12.378990s. Threads1, one mathematical child at a time, unchanged
