@@ -1,0 +1,110 @@
+{
+  "agent": "six-sorting-1",
+  "role": "researcher",
+  "source_commit": "f47e57677011488966488f68228562643bed2b3c",
+  "use": "Pristine minimal base/numeric/pruning/profile/anchor primitives. No prior negative theorem imported.",
+  "files": [
+    {
+      "path": "base.py",
+      "bytes": 2207,
+      "sha256": "c2489903737bd3aaf716ac118d3d01aa000b56d0f6c5ada76e0a55990fc5195c"
+    },
+    {
+      "path": "verify_base.py",
+      "bytes": 2788,
+      "sha256": "9a5df898cdf13d9de6bd9889f4d228a4ac59ca2ae519f60407f8fc02966774e9"
+    },
+    {
+      "path": "minimum_packed.py",
+      "bytes": 1908,
+      "sha256": "816c2f4a6f0b3355f294a1205289870624a486481f795ea01b3000f8e5ff2695"
+    },
+    {
+      "path": "numeric.py",
+      "bytes": 7832,
+      "sha256": "95cc1fad1ba9dbed3be6165613b9c80d8b456051331db1fed4bf967b923e6a1e"
+    },
+    {
+      "path": "profile.py",
+      "bytes": 5656,
+      "sha256": "dca9c8d6331c3fc548c514ca8f5f1cd170f4a0bb39a3c05250876247d0362719"
+    },
+    {
+      "path": "anchors.py",
+      "bytes": 3960,
+      "sha256": "0b95573e7e3c446d0b7ca5352f6b5f4b8d92b91d6f3c72e7b4f783cd99d89902"
+    },
+    {
+      "path": "pruning.py",
+      "bytes": 1802,
+      "sha256": "1d0e1cd9139c8a67b9dc71ed234e2ad1a27e9bba657a4541c47464a47c665cf8"
+    },
+    {
+      "path": "fixture.json",
+      "bytes": 1630,
+      "sha256": "c55edfb188905a790933defcea4561ca0424c361ddbfbe50c870839f75b23cf5"
+    }
+  ],
+  "credited_generic_sources": [
+    {
+      "source_commit": "d6a2bbdaabed14fdbcfd901256240a6f59c6c407",
+      "path": "round-two/six-sorting-1/both_first_binary_barrier/verify.py",
+      "sha256": "01705b3d02139bf3031a2d5e04e7d6a3361b60f5bbd111d3622c2b1041b8d0b4",
+      "local": "numeric.py",
+      "exact_named_functions": [
+        "need",
+        "count",
+        "digest",
+        "marked",
+        "ports",
+        "simulate",
+        "template",
+        "family",
+        "pruning",
+        "summary",
+        "profiles",
+        "ceil_log",
+        "huffman",
+        "anchor_bounds",
+        "inner_checked"
+      ]
+    },
+    {
+      "source_commit": "d6a2bbdaabed14fdbcfd901256240a6f59c6c407",
+      "path": "round-two/six-sorting-1/both_first_binary_barrier/generate.py",
+      "sha256": "232dbee4849bbd8343a632c61a03968e61de4ecccad4f42a270fe055e25cedf3",
+      "local": "pruning.py",
+      "exact_named_functions": [
+        "need",
+        "digest",
+        "pruning"
+      ]
+    },
+    {
+      "source_commit": "5650ffcfc66c27f85b8e621d4794083de6be81e9",
+      "path": "round-two/six-sorting-1/conditional_minimum_lock/generate.py",
+      "sha256": "b01a11648e7b0b2f3dda46bac087772ca09357a587100437de40250db73efc96",
+      "local": "minimum_packed.py",
+      "exact_named_functions": [
+        "need",
+        "digest",
+        "columns",
+        "packed"
+      ]
+    },
+    {
+      "source_commit": "d6a2bbdaabed14fdbcfd901256240a6f59c6c407",
+      "path": "round-two/six-sorting-1/both_first_binary_barrier/profile.py",
+      "sha256": "dca9c8d6331c3fc548c514ca8f5f1cd170f4a0bb39a3c05250876247d0362719",
+      "local": "profile.py",
+      "use": "byte-for-byte copied credited module"
+    },
+    {
+      "source_commit": "d6a2bbdaabed14fdbcfd901256240a6f59c6c407",
+      "path": "round-two/six-sorting-1/both_first_binary_barrier/anchors.py",
+      "sha256": "0b95573e7e3c446d0b7ca5352f6b5f4b8d92b91d6f3c72e7b4f783cd99d89902",
+      "local": "anchors.py",
+      "use": "byte-for-byte copied credited module"
+    }
+  ]
+}

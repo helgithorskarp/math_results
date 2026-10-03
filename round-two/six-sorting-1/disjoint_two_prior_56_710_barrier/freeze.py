@@ -398,7 +398,7 @@ def main(output_dir=None):
     source_files = sorted(p for p in ROOT.rglob('*') if p.is_file() and
                           'work' not in p.relative_to(ROOT).parts and
                           '__pycache__' not in p.relative_to(ROOT).parts and
-                          p.name not in ('WORK_IN_PROGRESS.json', 'source-manifest.json', 'certificate.json'))
+                          p not in (ROOT/'WORK_IN_PROGRESS.json', ROOT/'source-manifest.json', ROOT/'certificate.json', ROOT/'universal/source-manifest.json', ROOT/'universal/certificate.json'))
     source_rows = [{'path': str(p.relative_to(ROOT)), 'bytes': p.stat().st_size,
                     'sha256': hashlib.sha256(p.read_bytes()).hexdigest()} for p in source_files]
     evidence_rows = sorted(EVIDENCE.values(), key=lambda row: row['path'])
