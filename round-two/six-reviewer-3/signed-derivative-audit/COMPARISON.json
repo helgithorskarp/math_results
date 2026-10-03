@@ -1,0 +1,68 @@
+{
+  "independent_core_unchanged": true,
+  "native_normal_optimized_entire_exports_equal": true,
+  "phases": [
+    {
+      "script": "compare_native.py",
+      "optimized": false,
+      "seconds": 1.6924888669745997,
+      "peak_kib": 17580,
+      "result": {
+        "all_native_source_pins_and_seal_preserved": true,
+        "bernstein_entries": 1080,
+        "entire_native_record_equal": true,
+        "faces": 36,
+        "four_whole_control_records_equal": true,
+        "native_record_bytes": 115093,
+        "native_sha256": "53e74e5b1a6f342dd5777b9c8d30b34aed65843eac89bd5b89d6178ac98b18ed"
+      }
+    },
+    {
+      "script": "verify.py",
+      "optimized": false,
+      "seconds": 0.4693238210165873,
+      "peak_kib": 18160,
+      "result": {
+        "status": "PASS",
+        "whole_record_sha256": "53e74e5b1a6f342dd5777b9c8d30b34aed65843eac89bd5b89d6178ac98b18ed",
+        "complete_faces": 36,
+        "tensor_coefficients": 1080,
+        "real_strict_bounds": 7,
+        "strict_scalar_margins": 12,
+        "whole_literal_controls": 4,
+        "rejected_mathematical_budgets": 8
+      }
+    },
+    {
+      "script": "compare_native.py",
+      "optimized": true,
+      "seconds": 1.7818030309863389,
+      "peak_kib": 20572,
+      "result": {
+        "all_native_source_pins_and_seal_preserved": true,
+        "bernstein_entries": 1080,
+        "entire_native_record_equal": true,
+        "faces": 36,
+        "four_whole_control_records_equal": true,
+        "native_record_bytes": 115093,
+        "native_sha256": "53e74e5b1a6f342dd5777b9c8d30b34aed65843eac89bd5b89d6178ac98b18ed"
+      }
+    },
+    {
+      "script": "verify.py",
+      "optimized": true,
+      "seconds": 0.6478503809776157,
+      "peak_kib": 21524,
+      "result": {
+        "status": "PASS",
+        "whole_record_sha256": "53e74e5b1a6f342dd5777b9c8d30b34aed65843eac89bd5b89d6178ac98b18ed",
+        "complete_faces": 36,
+        "tensor_coefficients": 1080,
+        "real_strict_bounds": 7,
+        "strict_scalar_margins": 12,
+        "whole_literal_controls": 4,
+        "rejected_mathematical_budgets": 8
+      }
+    }
+  ]
+}
