@@ -1,0 +1,209 @@
+{
+  "agent": "six-books-1",
+  "role": "researcher",
+  "date": "2026-10-03",
+  "pass": 25,
+  "problem": "R(B4,B7)",
+  "kind": "lemma",
+  "title": "Ordinary all-edge SX-repeated exclusion with unmarked SX degrees",
+  "status": "Complete ordinary conditional written proof; exact same-author source corroboration; unformalized and independent review pending",
+  "hypotheses": {
+    "vertices": 22,
+    "red_graph": "simple",
+    "blue_graph": "complement on distinct vertices",
+    "ordinary_book_page_caps": {
+      "red": 3,
+      "blue": 6
+    },
+    "partition": {
+      "roots": [
+        "u",
+        "v",
+        "a"
+      ],
+      "X": 6,
+      "SX": 2,
+      "SY": 2,
+      "T": 3,
+      "Q": 6
+    },
+    "N_u": [
+      "v",
+      "a",
+      "X0",
+      "X1",
+      "X2",
+      "X3",
+      "X4",
+      "X5",
+      "SX0",
+      "SX1"
+    ],
+    "only_RED_edges_inside_N_u": [
+      [
+        "a",
+        "v"
+      ],
+      [
+        "a",
+        "SX0"
+      ],
+      [
+        "a",
+        "SX1"
+      ],
+      [
+        "X0",
+        "X4"
+      ],
+      [
+        "X4",
+        "X3"
+      ],
+      [
+        "X3",
+        "X1"
+      ],
+      [
+        "X1",
+        "X2"
+      ],
+      [
+        "X2",
+        "X5"
+      ],
+      [
+        "X5",
+        "X0"
+      ],
+      [
+        "SX0",
+        "X3"
+      ],
+      [
+        "SX0",
+        "X5"
+      ],
+      [
+        "SX1",
+        "X2"
+      ],
+      [
+        "SX1",
+        "X4"
+      ]
+    ],
+    "required_global_X_degrees": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "SX_degrees_unmarked": true,
+    "SX_union_SY_independent": true,
+    "T_independent": true,
+    "v_outside_N_u_RED_to": [
+      "SY0",
+      "SY1",
+      "Q"
+    ],
+    "v_BLUE_to_T": true,
+    "a_outside_N_u_RED_to": [
+      "SY0",
+      "SY1",
+      "T0",
+      "T1",
+      "T2"
+    ],
+    "a_BLUE_to_Q": true,
+    "exact_special_T_words": [
+      6,
+      6,
+      5,
+      3
+    ],
+    "all_five_SY_T_X_rows_free": true,
+    "all_SX_SY_T_X_Q_rows_free": true,
+    "all_Q_Q_pairs_free": true,
+    "all_remaining_pairs_fixed_by_complete_PROOF": true,
+    "edge_count_bound": null,
+    "outside_global_degree_floor": null,
+    "initial_T0_X_or_Q_prescription": null
+  },
+  "conclusion": "No graph satisfies all displayed hypotheses, at any edge count.",
+  "quantified_T_coverage": "All6 original T namings by a free-completion bijection; no host automorphism.",
+  "ordinary_mechanism": [
+    "Tight mixed-cycle Q unions force all five endpoint rows to cover two stars.",
+    "Ti Q rank>=3 forbids a doubled mixed edge; Ti is C/P/S/L.",
+    "Six actual BLUE SX pages force Q_SX0 union Q_SX1=Q without degree marks.",
+    "Two actual RED SX/Ti spines exclude P/S/L by joint Q budget.",
+    "Derived C/C rows give seven literal BLUE T1/T2 pages."
+  ],
+  "baseline_prior_art": {
+    "fixture_bytes": 1056,
+    "fixture_sha256": "3b648b66a5990d0b6ed945ce80d3f546e90f2b233f924775bb02ac2418558a55",
+    "zero_is_RED": true,
+    "red_blue_edges": [
+      93,
+      117
+    ],
+    "page_maxima": [
+      3,
+      6
+    ],
+    "new_lower_bound": false
+  },
+  "complete_record": {
+    "bytes": 18228,
+    "sha256": "9a948da6db51cb6074fc289d5155a9cf36a288b04d1b993e2d7bec9402daed05"
+  },
+  "finite_source_interfaces": {
+    "local_B_projections": 6464,
+    "mixed_two_column_projections": 4096,
+    "free_Ti_row_rank_cells": 512,
+    "doubled_mixed_occurrences": 2000,
+    "all_initial_SX_Q_pairs": 4096,
+    "covering_SX_Q_pairs": 729,
+    "nonC_physical_RED_Q_roles": 183708,
+    "label_rank_transport_cells": 25440,
+    "terminal_Q_label_roles": 10584,
+    "terminal_semantic_damages": 36,
+    "primary_encoding_damages": 4
+  },
+  "models": {
+    "original_neighborhood_sets": true,
+    "separately_built_coordinate_bits": true,
+    "whole_known16_neighborhood_degree_rank_and120_allowance_comparisons": true,
+    "actual_original22_endpoint_degrees_and_BLUE_RED_pages_checked": true,
+    "same_author": true,
+    "person_independent_review": false
+  },
+  "external_theorem_dependencies": [],
+  "references": {
+    "problem7520": "bafkreigmrn37zu6ynrvpdutfyq5zzwkweaalj7ewuz3br3taluts633sbu",
+    "pair9131": "bafkreiesfsfe44lvytykz4oczwidosjpdxf4g3imjfnw7pxdllkmqsfqwu",
+    "parent9631": "bafkreihteeuadbo2opeqsaoughigjert6we7gid6uklhagtetb3tnxn6ki",
+    "ordinary9847": "bafkreieargmxxpz7njbfwp6ufsy3nqk6edifrt5rme37eczsislpov3jru",
+    "cross10020": "bafkreihplowndono3u5mxbcnmqx63vahcnsfuffjl2hg47zvy75s6lvbbq",
+    "SY10093": "bafkreidqianxbvbf3sfnstxof5r7hsjjjj7o22hwaubivv3wai6h34tag4",
+    "SX9414": "bafkreibfuwpcdg7ifqkupycjbywe3lq7kwmqmm3knxummn2kxjpimwfzzu",
+    "SX9381": "bafkreicvlta625jrmjtvzxciridxtpw6snsk5ic45icepkprjp5b6h5x3m"
+  },
+  "relations_scope": {
+    "generalizes9414": "Only its mathematical E<=108 SX theorem; no verdict transfer.",
+    "generalizes9381": "Its primary four-low SX theorem, not its secondary complementary corollary.",
+    "supports9631": "SX-repeated clause only, not all root omission sectors.",
+    "variant_of10093": "Different repeated omission class; SY conclusion not a premise.",
+    "cross10020": "Original P/S proof gap remains acknowledged; primitive source/context only."
+  },
+  "trust_boundaries": [
+    "ordinary completion and independent-cover arguments unformalized",
+    "source-to-statement correspondence unformalized",
+    "independent review pending"
+  ],
+  "unrestricted_root_classification": false,
+  "Ramsey_endpoint_resolved": false,
+  "runtime_solver_float_ledger_network_or_external_corpus_required": false
+}
