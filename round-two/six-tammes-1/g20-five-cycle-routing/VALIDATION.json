@@ -1,0 +1,228 @@
+{
+  "Python": "3.12.14",
+  "actual_author": "six-tammes-1",
+  "all_math_jobs_serial": true,
+  "both_normal_optimized_generated_certificates_equal_entire_included_bytes": true,
+  "certificate_bytes": 26283,
+  "certificate_sha256": "526533f3bedc90e46b17d3ca47fbe8f38cd4376fba1bf1d105e0bc3aaa77fa9a",
+  "checked_UTC": "2026-10-03T01:14:57.570353+00:00",
+  "controls": {
+    "damages": [
+      "scalar-derivative_lower",
+      "scalar-hi",
+      "scalar-lo",
+      "scalar-lo_minus_half",
+      "scalar-lo_squared_minus_one_fifth",
+      "scalar-nine_c_squared_minus_two_c_minus_one_at_lo",
+      "scalar-one_minus_hi",
+      "scalar-sqrt2_upper_squared_gap",
+      "scalar-sqrt5_lower_squared_gap",
+      "scalar-sqrt5_upper_squared_gap",
+      "scalar-three_eighths_minus_upper_angle_cosine",
+      "omit-cross-contact",
+      "aliased-core-corner",
+      "omit-triangle-adjacency",
+      "change-long-boundary",
+      "change-region-pairing",
+      "missing-diagonal-subset",
+      "allow-U",
+      "omit-7-9-strictness",
+      "allow-degree12-five",
+      "allow-degree9-five",
+      "alter-forced-triangle",
+      "omit-whole-profile",
+      "omit-oriented-assignment",
+      "allow-V-with-A-four",
+      "force-profile-four-seven",
+      "erase-interior-edge",
+      "alter-face-allocation",
+      "wrong-Euler-data",
+      "erase-freshness-case",
+      "erase-forced-TT-edge",
+      "alter-forced-core-contact",
+      "widen-profile-band",
+      "unknown-field",
+      "boolean-for-integer"
+    ],
+    "semantic_damages_rejected_by_both": 35,
+    "valid_representations_accepted_by_both": 3
+  },
+  "independent_researcher_review": false,
+  "jobs": [
+    {
+      "arguments": [
+        "--emit"
+      ],
+      "exit_code": 0,
+      "mode": "normal",
+      "peak_RSS_KiB": 17176,
+      "script": "check.py",
+      "stdout_bytes": 26283,
+      "stdout_sha256": "526533f3bedc90e46b17d3ca47fbe8f38cd4376fba1bf1d105e0bc3aaa77fa9a",
+      "wall_seconds": 0.09294882195536047
+    },
+    {
+      "arguments": [
+        "--emit"
+      ],
+      "exit_code": 0,
+      "mode": "normal",
+      "peak_RSS_KiB": 17316,
+      "script": "audit.py",
+      "stdout_bytes": 26283,
+      "stdout_sha256": "526533f3bedc90e46b17d3ca47fbe8f38cd4376fba1bf1d105e0bc3aaa77fa9a",
+      "wall_seconds": 0.08882758894469589
+    },
+    {
+      "arguments": [],
+      "exit_code": 0,
+      "mode": "normal",
+      "peak_RSS_KiB": 17228,
+      "script": "check.py",
+      "stdout_bytes": 847,
+      "stdout_sha256": "7391d013cae669f1385cd2929dc8a3c83820d4f88291b9346f2874968a22cb2b",
+      "wall_seconds": 0.07511800806969404
+    },
+    {
+      "arguments": [],
+      "exit_code": 0,
+      "mode": "normal",
+      "peak_RSS_KiB": 17144,
+      "script": "audit.py",
+      "stdout_bytes": 847,
+      "stdout_sha256": "7391d013cae669f1385cd2929dc8a3c83820d4f88291b9346f2874968a22cb2b",
+      "wall_seconds": 0.09759136906359345
+    },
+    {
+      "arguments": [],
+      "exit_code": 0,
+      "mode": "normal",
+      "peak_RSS_KiB": 19836,
+      "script": "controls.py",
+      "stdout_bytes": 1001,
+      "stdout_sha256": "895519d4a831255cb11c485a7b50c1c4758a5276fbe4938d30ed16e656428def",
+      "wall_seconds": 0.7386175609426573
+    },
+    {
+      "arguments": [
+        "--emit"
+      ],
+      "exit_code": 0,
+      "mode": "optimized",
+      "peak_RSS_KiB": 22052,
+      "script": "check.py",
+      "stdout_bytes": 26283,
+      "stdout_sha256": "526533f3bedc90e46b17d3ca47fbe8f38cd4376fba1bf1d105e0bc3aaa77fa9a",
+      "wall_seconds": 0.31724305904936045
+    },
+    {
+      "arguments": [
+        "--emit"
+      ],
+      "exit_code": 0,
+      "mode": "optimized",
+      "peak_RSS_KiB": 21844,
+      "script": "audit.py",
+      "stdout_bytes": 26283,
+      "stdout_sha256": "526533f3bedc90e46b17d3ca47fbe8f38cd4376fba1bf1d105e0bc3aaa77fa9a",
+      "wall_seconds": 0.290916346013546
+    },
+    {
+      "arguments": [],
+      "exit_code": 0,
+      "mode": "optimized",
+      "peak_RSS_KiB": 21984,
+      "script": "check.py",
+      "stdout_bytes": 847,
+      "stdout_sha256": "7391d013cae669f1385cd2929dc8a3c83820d4f88291b9346f2874968a22cb2b",
+      "wall_seconds": 0.2801100689684972
+    },
+    {
+      "arguments": [],
+      "exit_code": 0,
+      "mode": "optimized",
+      "peak_RSS_KiB": 21912,
+      "script": "audit.py",
+      "stdout_bytes": 847,
+      "stdout_sha256": "7391d013cae669f1385cd2929dc8a3c83820d4f88291b9346f2874968a22cb2b",
+      "wall_seconds": 0.3043225680012256
+    },
+    {
+      "arguments": [],
+      "exit_code": 0,
+      "mode": "optimized",
+      "peak_RSS_KiB": 23564,
+      "script": "controls.py",
+      "stdout_bytes": 1001,
+      "stdout_sha256": "895519d4a831255cb11c485a7b50c1c4758a5276fbe4938d30ed16e656428def",
+      "wall_seconds": 0.9265423190081492
+    }
+  ],
+  "maximum_child_RSS_KiB": 23564,
+  "maximum_job_seconds": 0.9265423190081492,
+  "measurement": "each entrypoint executed through a private runpy wrapper; child resource.RUSAGE_SELF peak RSS in KiB on Linux",
+  "native_threads": 1,
+  "normal_optimized_whole_outputs_identical": true,
+  "ordinary_geometric_proof_formalized": false,
+  "per_job_wall_guard_seconds": 55,
+  "role": "researcher",
+  "status": "complete",
+  "summary": {
+    "G20_edges": 20,
+    "G20_vertices": 12,
+    "V_assignments": 7,
+    "V_degree10_five_assignments": 1,
+    "boundary_pairings": 2,
+    "certificate_sha256": "526533f3bedc90e46b17d3ca47fbe8f38cd4376fba1bf1d105e0bc3aaa77fa9a",
+    "diagonal_subsets": 32,
+    "disk_allocations": [
+      {
+        "TQP": [
+          3,
+          3,
+          2
+        ],
+        "boundary_vertices": 11,
+        "branch": "P",
+        "inner_faces": 8,
+        "interior_edges": 10,
+        "interior_vertices": 3
+      },
+      {
+        "TQP": [
+          2,
+          2,
+          3
+        ],
+        "boundary_vertices": 11,
+        "branch": "V",
+        "inner_faces": 7,
+        "interior_edges": 9,
+        "interior_vertices": 3
+      }
+    ],
+    "exact_arithmetic": true,
+    "forced_G24_edges": 24,
+    "forced_TT_component_sizes": [
+      5,
+      6
+    ],
+    "noncore_neighbor_cases": 7,
+    "nonstrict_scalar_comparisons": 2,
+    "oriented_assignments": 14,
+    "partitions": 52,
+    "patch_faces": 8,
+    "retained_subsets": [
+      [],
+      [
+        [
+          5,
+          12
+        ]
+      ]
+    ],
+    "schema": "g20-five-cycle-routing-v1",
+    "separated_profiles": 9,
+    "strict_scalar_comparisons": 7
+  }
+}
