@@ -1,0 +1,147 @@
+{
+  "all_primary_seals_unchanged": true,
+  "cold_source_only": true,
+  "comparison": {
+    "all_10_norms": true,
+    "all_22_algebra_objects": true,
+    "all_eight_moment_coefficient_maps": true,
+    "all_nine_jet_monomials": true,
+    "all_nine_mass_budget_terms": true,
+    "cross_method_damages": [
+      {
+        "name": "DF-last",
+        "rejection": "whole DF"
+      },
+      {
+        "name": "G-lift-constant",
+        "rejection": "whole WG"
+      },
+      {
+        "name": "central-eta",
+        "rejection": "entire unreduced eta_num rational equivalence"
+      },
+      {
+        "name": "last-moving-node",
+        "rejection": "entire nine Laurent monomials"
+      },
+      {
+        "name": "seventh-moment-sign",
+        "rejection": "whole coefficient 7"
+      },
+      {
+        "name": "large-F-budget",
+        "rejection": "scalar Cb_floor"
+      }
+    ],
+    "entire_eta_equivalence": true,
+    "late_centered_F_identity": true,
+    "native20checks": true,
+    "native_six_mathematical_damages": [
+      {
+        "damage": "last_DF_coefficient",
+        "whole_mathematical_rejection": "whole identity: undivided complete F lift"
+      },
+      {
+        "damage": "omitted_degree_loss_factor",
+        "whole_mathematical_rejection": "whole identity: undivided complete F lift"
+      },
+      {
+        "damage": "G_lift_constant",
+        "whole_mathematical_rejection": "whole identity: undivided G discriminant lift including g zero"
+      },
+      {
+        "damage": "frozen_J_node",
+        "whole_mathematical_rejection": "whole nine-term moving-node mass derivative"
+      },
+      {
+        "damage": "odd_seventh_moment_sign",
+        "whole_mathematical_rejection": "entire odd Newton moment identities"
+      },
+      {
+        "damage": "weakened_large_F_budget",
+        "whole_mathematical_rejection": "complete sufficient rational scalar comparisons"
+      }
+    ],
+    "native_whole_record_sha256": "6809619c0cce513a557c9228c29ed6c06ef87102fb8ccd2c71a1276c7b7fd60d",
+    "nine_named_scalar_matches": true,
+    "primary_whole_sha256": "ec7985210b1c622b3bc64ff4b9195798b6481f3cd0bf56916eac4efaee605744",
+    "scope": "late corroboration after sealed independent primary; no producer edits or primary repairs"
+  },
+  "finished_at": "2026-10-03T05:34:44.595483+00:00",
+  "max_child_seconds": 7.57070579205174,
+  "native_threads": 1,
+  "peak_child_rss_kib": 68676,
+  "per_child_timeout_seconds": 55,
+  "producer_inputs_full_pinned_hashes": true,
+  "runs": [
+    {
+      "expected_failure": false,
+      "name": "fresh-primary-normal",
+      "returncode": 0,
+      "seconds": 7.175084094982594,
+      "stdout_bytes": 10292,
+      "stdout_sha256": "ec7985210b1c622b3bc64ff4b9195798b6481f3cd0bf56916eac4efaee605744"
+    },
+    {
+      "expected_failure": false,
+      "name": "native-original-normal",
+      "returncode": 0,
+      "seconds": 0.14723636698909104,
+      "stdout_bytes": 302,
+      "stdout_sha256": "1998fd6d50f7d92ff5181fea92c5e8337c4e82da7ff001e89ce243f28bd56bdb"
+    },
+    {
+      "expected_failure": false,
+      "name": "late-whole-comparison-normal",
+      "returncode": 0,
+      "seconds": 0.18766440101899207,
+      "stdout_bytes": 1665,
+      "stdout_sha256": "eaea71c2d6fffe23e7baf45dacc9826c96789044dadb678f81c09d9d4b357aac"
+    },
+    {
+      "expected_failure": false,
+      "name": "fresh-primary-O",
+      "returncode": 0,
+      "seconds": 7.57070579205174,
+      "stdout_bytes": 10292,
+      "stdout_sha256": "ec7985210b1c622b3bc64ff4b9195798b6481f3cd0bf56916eac4efaee605744"
+    },
+    {
+      "expected_failure": false,
+      "name": "native-original-O",
+      "returncode": 0,
+      "seconds": 0.33022722403984517,
+      "stdout_bytes": 302,
+      "stdout_sha256": "1998fd6d50f7d92ff5181fea92c5e8337c4e82da7ff001e89ce243f28bd56bdb"
+    },
+    {
+      "expected_failure": false,
+      "name": "late-whole-comparison-O",
+      "returncode": 0,
+      "seconds": 0.3793121899943799,
+      "stdout_bytes": 1665,
+      "stdout_sha256": "eaea71c2d6fffe23e7baf45dacc9826c96789044dadb678f81c09d9d4b357aac"
+    },
+    {
+      "expected_failure": true,
+      "name": "external-last-DF-normal",
+      "returncode": 1,
+      "seconds": 0.1562249519629404,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_failure": true,
+      "name": "external-last-DF-O",
+      "returncode": 1,
+      "seconds": 0.332684550085105,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "unchanged 1 CPU/2 GiB; no search or timeout premise; ordinary bridges unformalized",
+  "seconds": 17.325901889940724,
+  "status": "complete",
+  "top_level_serial_children": 8,
+  "whole_normal_O_equal": true
+}

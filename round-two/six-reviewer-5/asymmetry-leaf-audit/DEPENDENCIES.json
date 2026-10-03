@@ -1,0 +1,20 @@
+{
+  "interpreter_observed": "CPython 3.12.14",
+  "minimum": "CPython 3.10",
+  "packages": {
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "native_threads": 1,
+  "serial_children": true,
+  "per_child_timeout_seconds": 55,
+  "resource_scope": "unchanged 1 CPU and 2 GiB",
+  "coefficient_field": "QQ(a,b,c); exact polynomials and rational functions; actual b,L,H,A nonzero by ordinary proof",
+  "input_files": [
+    "primary.py",
+    "primary.json",
+    "producer-pin.json"
+  ],
+  "trust_boundary": "SymPy exact algebra plus CPython Fraction; ordinary universal bridges unformalized; author code late corroboration only",
+  "primary_certificate_alias": "primary-seal.json scratch name primary.stdout has identical bytes to public primary.json"
+}
