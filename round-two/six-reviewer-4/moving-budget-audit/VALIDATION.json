@@ -1,0 +1,293 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "python": "3.11.2",
+  "implementation": "cpython",
+  "stdlib_only": true,
+  "primary_record_sha256": "8104bf93d78cfe6c138b5ec05415788ce5f5d8dca3b72572c984202db7e64901",
+  "primary_record_bytes": 9259,
+  "primary_run": {
+    "command": [
+      "/usr/bin/python3",
+      "-I",
+      "-B",
+      "round-two/six-reviewer-4/moving-budget-audit/audit.py"
+    ],
+    "guard_seconds": 30,
+    "seconds": 0.4393664989620447,
+    "max_rss_kib": 14876,
+    "exit_code": 0,
+    "stdout_bytes": 9259
+  },
+  "four_whole_positive_records_equal": true,
+  "mathematical_damages_per_mode": 6,
+  "external_fixture_damages_per_mode": 7,
+  "preimport_source_damages": 2,
+  "serial_children": 32,
+  "control_wrapper": {
+    "exit_code": 0,
+    "total_seconds": 13.321147568989545,
+    "max_child_rss_kib": 20364,
+    "outer_initial_guard_seconds": 45
+  },
+  "maximum_child_seconds": 0.9837742239469662,
+  "thread_variables_all_one": true,
+  "one_CPU_job_at_a_time": true,
+  "existing_scope": "1CPU/2GiB unchanged",
+  "resource_escalations": false,
+  "positive_whole_record_hashes": [
+    "8104bf93d78cfe6c138b5ec05415788ce5f5d8dca3b72572c984202db7e64901",
+    "8104bf93d78cfe6c138b5ec05415788ce5f5d8dca3b72572c984202db7e64901",
+    "8104bf93d78cfe6c138b5ec05415788ce5f5d8dca3b72572c984202db7e64901",
+    "8104bf93d78cfe6c138b5ec05415788ce5f5d8dca3b72572c984202db7e64901"
+  ],
+  "rejections": [
+    {
+      "optimized": false,
+      "args": [
+        "--damage",
+        "wrong_root_second_coefficient"
+      ],
+      "intended_error": "Direct curvature constant",
+      "exit_code": 1
+    },
+    {
+      "optimized": false,
+      "args": [
+        "--damage",
+        "wrong_projection_mixed_sign"
+      ],
+      "intended_error": "Whole unconstrained invariant polynomial defect",
+      "exit_code": 1
+    },
+    {
+      "optimized": false,
+      "args": [
+        "--damage",
+        "too_large_lower_secant"
+      ],
+      "intended_error": "Complete lower secant identity",
+      "exit_code": 1
+    },
+    {
+      "optimized": false,
+      "args": [
+        "--damage",
+        "wrong_endpoint"
+      ],
+      "intended_error": "Merged cubic endpoint",
+      "exit_code": 1
+    },
+    {
+      "optimized": false,
+      "args": [
+        "--damage",
+        "wrong_reciprocal_power"
+      ],
+      "intended_error": "Actual reciprocal FIRST-power scalar coefficients",
+      "exit_code": 1
+    },
+    {
+      "optimized": false,
+      "args": [
+        "--damage",
+        "wrong_actual_anchor"
+      ],
+      "intended_error": "Entire anchored real Newton map through second order",
+      "exit_code": 1
+    },
+    {
+      "optimized": true,
+      "args": [
+        "--damage",
+        "wrong_root_second_coefficient"
+      ],
+      "intended_error": "Direct curvature constant",
+      "exit_code": 1
+    },
+    {
+      "optimized": true,
+      "args": [
+        "--damage",
+        "wrong_projection_mixed_sign"
+      ],
+      "intended_error": "Whole unconstrained invariant polynomial defect",
+      "exit_code": 1
+    },
+    {
+      "optimized": true,
+      "args": [
+        "--damage",
+        "too_large_lower_secant"
+      ],
+      "intended_error": "Complete lower secant identity",
+      "exit_code": 1
+    },
+    {
+      "optimized": true,
+      "args": [
+        "--damage",
+        "wrong_endpoint"
+      ],
+      "intended_error": "Merged cubic endpoint",
+      "exit_code": 1
+    },
+    {
+      "optimized": true,
+      "args": [
+        "--damage",
+        "wrong_reciprocal_power"
+      ],
+      "intended_error": "Actual reciprocal FIRST-power scalar coefficients",
+      "exit_code": 1
+    },
+    {
+      "optimized": true,
+      "args": [
+        "--damage",
+        "wrong_actual_anchor"
+      ],
+      "intended_error": "Entire anchored real Newton map through second order",
+      "exit_code": 1
+    },
+    {
+      "optimized": false,
+      "args": [
+        "--expected",
+        "missing.json"
+      ],
+      "intended_error": "No such file",
+      "exit_code": 1
+    },
+    {
+      "optimized": false,
+      "args": [
+        "--expected",
+        "malformed.json"
+      ],
+      "intended_error": "JSONDecodeError",
+      "exit_code": 1
+    },
+    {
+      "optimized": false,
+      "args": [
+        "--expected",
+        "boolean_index.json"
+      ],
+      "intended_error": "Entire typed mathematical record mismatch",
+      "exit_code": 1
+    },
+    {
+      "optimized": false,
+      "args": [
+        "--expected",
+        "missing_constant.json"
+      ],
+      "intended_error": "Entire typed mathematical record mismatch",
+      "exit_code": 1
+    },
+    {
+      "optimized": false,
+      "args": [
+        "--expected",
+        "changed_normal.json"
+      ],
+      "intended_error": "Entire typed mathematical record mismatch",
+      "exit_code": 1
+    },
+    {
+      "optimized": false,
+      "args": [
+        "--expected",
+        "deleted_case.json"
+      ],
+      "intended_error": "Entire typed mathematical record mismatch",
+      "exit_code": 1
+    },
+    {
+      "optimized": false,
+      "args": [
+        "--expected",
+        "extra_field.json"
+      ],
+      "intended_error": "Entire typed mathematical record mismatch",
+      "exit_code": 1
+    },
+    {
+      "optimized": true,
+      "args": [
+        "--expected",
+        "missing.json"
+      ],
+      "intended_error": "No such file",
+      "exit_code": 1
+    },
+    {
+      "optimized": true,
+      "args": [
+        "--expected",
+        "malformed.json"
+      ],
+      "intended_error": "JSONDecodeError",
+      "exit_code": 1
+    },
+    {
+      "optimized": true,
+      "args": [
+        "--expected",
+        "boolean_index.json"
+      ],
+      "intended_error": "Entire typed mathematical record mismatch",
+      "exit_code": 1
+    },
+    {
+      "optimized": true,
+      "args": [
+        "--expected",
+        "missing_constant.json"
+      ],
+      "intended_error": "Entire typed mathematical record mismatch",
+      "exit_code": 1
+    },
+    {
+      "optimized": true,
+      "args": [
+        "--expected",
+        "changed_normal.json"
+      ],
+      "intended_error": "Entire typed mathematical record mismatch",
+      "exit_code": 1
+    },
+    {
+      "optimized": true,
+      "args": [
+        "--expected",
+        "deleted_case.json"
+      ],
+      "intended_error": "Entire typed mathematical record mismatch",
+      "exit_code": 1
+    },
+    {
+      "optimized": true,
+      "args": [
+        "--expected",
+        "extra_field.json"
+      ],
+      "intended_error": "Entire typed mathematical record mismatch",
+      "exit_code": 1
+    },
+    {
+      "optimized": false,
+      "args": [],
+      "intended_error": "Core source seal mismatch: exact.py",
+      "exit_code": 1
+    },
+    {
+      "optimized": true,
+      "args": [],
+      "intended_error": "Core source seal mismatch: exact.py",
+      "exit_code": 1
+    }
+  ],
+  "fixture_paths_normalized_for_portable_report": true
+}
