@@ -1,0 +1,826 @@
+{
+  "schema": 1,
+  "agent": "six-rupert-2",
+  "role": "researcher",
+  "variable_order": [
+    "xi",
+    "eta",
+    "c_x",
+    "c_y",
+    "c_z",
+    "tau_x",
+    "tau_z"
+  ],
+  "physical_Cayley_radius": [
+    "1/1000",
+    "0"
+  ],
+  "receiver_half_width": [
+    "1/1000",
+    "0"
+  ],
+  "receiver_upper_height": [
+    "1/100000",
+    "0"
+  ],
+  "receiver_base_x": [
+    "-5/11",
+    "4/11"
+  ],
+  "receiving_edges": [
+    [
+      13,
+      31
+    ],
+    [
+      31,
+      43
+    ],
+    [
+      43,
+      7
+    ],
+    [
+      7,
+      27
+    ],
+    [
+      27,
+      3
+    ],
+    [
+      3,
+      39
+    ],
+    [
+      39,
+      47
+    ],
+    [
+      47,
+      11
+    ],
+    [
+      11,
+      10
+    ],
+    [
+      10,
+      28
+    ],
+    [
+      28,
+      36
+    ],
+    [
+      36,
+      0
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      4,
+      20
+    ],
+    [
+      20,
+      40
+    ],
+    [
+      40,
+      48
+    ],
+    [
+      48,
+      12
+    ],
+    [
+      12,
+      13
+    ]
+  ],
+  "source_contacts": [
+    {
+      "receiver_edge": [
+        13,
+        31
+      ],
+      "source": 0
+    },
+    {
+      "receiver_edge": [
+        13,
+        31
+      ],
+      "source": 4
+    },
+    {
+      "receiver_edge": [
+        31,
+        43
+      ],
+      "source": 0
+    },
+    {
+      "receiver_edge": [
+        31,
+        43
+      ],
+      "source": 36
+    },
+    {
+      "receiver_edge": [
+        43,
+        7
+      ],
+      "source": 28
+    },
+    {
+      "receiver_edge": [
+        43,
+        7
+      ],
+      "source": 36
+    },
+    {
+      "receiver_edge": [
+        7,
+        27
+      ],
+      "source": 8
+    },
+    {
+      "receiver_edge": [
+        7,
+        27
+      ],
+      "source": 10
+    },
+    {
+      "receiver_edge": [
+        7,
+        27
+      ],
+      "source": 28
+    },
+    {
+      "receiver_edge": [
+        27,
+        3
+      ],
+      "source": 8
+    },
+    {
+      "receiver_edge": [
+        27,
+        3
+      ],
+      "source": 10
+    },
+    {
+      "receiver_edge": [
+        27,
+        3
+      ],
+      "source": 28
+    },
+    {
+      "receiver_edge": [
+        3,
+        39
+      ],
+      "source": 10
+    },
+    {
+      "receiver_edge": [
+        3,
+        39
+      ],
+      "source": 11
+    },
+    {
+      "receiver_edge": [
+        39,
+        47
+      ],
+      "source": 11
+    },
+    {
+      "receiver_edge": [
+        39,
+        47
+      ],
+      "source": 29
+    },
+    {
+      "receiver_edge": [
+        47,
+        11
+      ],
+      "source": 29
+    },
+    {
+      "receiver_edge": [
+        47,
+        11
+      ],
+      "source": 39
+    },
+    {
+      "receiver_edge": [
+        11,
+        10
+      ],
+      "source": 3
+    },
+    {
+      "receiver_edge": [
+        11,
+        10
+      ],
+      "source": 39
+    },
+    {
+      "receiver_edge": [
+        10,
+        28
+      ],
+      "source": 3
+    },
+    {
+      "receiver_edge": [
+        10,
+        28
+      ],
+      "source": 7
+    },
+    {
+      "receiver_edge": [
+        28,
+        36
+      ],
+      "source": 7
+    },
+    {
+      "receiver_edge": [
+        28,
+        36
+      ],
+      "source": 43
+    },
+    {
+      "receiver_edge": [
+        36,
+        0
+      ],
+      "source": 31
+    },
+    {
+      "receiver_edge": [
+        36,
+        0
+      ],
+      "source": 43
+    },
+    {
+      "receiver_edge": [
+        0,
+        4
+      ],
+      "source": 13
+    },
+    {
+      "receiver_edge": [
+        0,
+        4
+      ],
+      "source": 15
+    },
+    {
+      "receiver_edge": [
+        0,
+        4
+      ],
+      "source": 31
+    },
+    {
+      "receiver_edge": [
+        4,
+        20
+      ],
+      "source": 13
+    },
+    {
+      "receiver_edge": [
+        20,
+        40
+      ],
+      "source": 12
+    },
+    {
+      "receiver_edge": [
+        40,
+        48
+      ],
+      "source": 12
+    },
+    {
+      "receiver_edge": [
+        40,
+        48
+      ],
+      "source": 30
+    },
+    {
+      "receiver_edge": [
+        48,
+        12
+      ],
+      "source": 30
+    },
+    {
+      "receiver_edge": [
+        48,
+        12
+      ],
+      "source": 40
+    },
+    {
+      "receiver_edge": [
+        12,
+        13
+      ],
+      "source": 4
+    },
+    {
+      "receiver_edge": [
+        12,
+        13
+      ],
+      "source": 40
+    }
+  ],
+  "signed_coordinate_duals": [
+    {
+      "coordinate": 0,
+      "sign": -1,
+      "nonnegative_weights": [
+        {
+          "row_index": 1,
+          "weight": [
+            "751/1558",
+            "493/1558"
+          ]
+        },
+        {
+          "row_index": 7,
+          "weight": [
+            "6400/24149",
+            "4053/24149"
+          ]
+        },
+        {
+          "row_index": 8,
+          "weight": [
+            "12786/24149",
+            "7184/24149"
+          ]
+        },
+        {
+          "row_index": 22,
+          "weight": [
+            "113/779",
+            "97/779"
+          ]
+        },
+        {
+          "row_index": 24,
+          "weight": [
+            "1761/1558",
+            "905/1558"
+          ]
+        }
+      ]
+    },
+    {
+      "coordinate": 0,
+      "sign": 1,
+      "nonnegative_weights": [
+        {
+          "row_index": 0,
+          "weight": [
+            "1299005/1437718",
+            "1350277/7188590"
+          ]
+        },
+        {
+          "row_index": 1,
+          "weight": [
+            "189433/718859",
+            "601631/3594295"
+          ]
+        },
+        {
+          "row_index": 15,
+          "weight": [
+            "518569/1437718",
+            "615779/1437718"
+          ]
+        },
+        {
+          "row_index": 22,
+          "weight": [
+            "1273713/1437718",
+            "366061/1437718"
+          ]
+        },
+        {
+          "row_index": 24,
+          "weight": [
+            "14285/46378",
+            "35151/231890"
+          ]
+        }
+      ]
+    },
+    {
+      "coordinate": 1,
+      "sign": -1,
+      "nonnegative_weights": [
+        {
+          "row_index": 0,
+          "weight": [
+            "25/341",
+            "243/1705"
+          ]
+        },
+        {
+          "row_index": 1,
+          "weight": [
+            "167/682",
+            "41/3410"
+          ]
+        },
+        {
+          "row_index": 5,
+          "weight": [
+            "-8/11",
+            "23/55"
+          ]
+        },
+        {
+          "row_index": 20,
+          "weight": [
+            "267/682",
+            "331/3410"
+          ]
+        },
+        {
+          "row_index": 22,
+          "weight": [
+            "47/31",
+            "-18/31"
+          ]
+        }
+      ]
+    },
+    {
+      "coordinate": 1,
+      "sign": 1,
+      "nonnegative_weights": [
+        {
+          "row_index": 1,
+          "weight": [
+            "-57/187",
+            "82/187"
+          ]
+        },
+        {
+          "row_index": 4,
+          "weight": [
+            "-17/44",
+            "299/748"
+          ]
+        },
+        {
+          "row_index": 7,
+          "weight": [
+            "1177/1054",
+            "-429/1054"
+          ]
+        },
+        {
+          "row_index": 16,
+          "weight": [
+            "-499/374",
+            "1579/1870"
+          ]
+        },
+        {
+          "row_index": 24,
+          "weight": [
+            "-81/68",
+            "23/20"
+          ]
+        }
+      ]
+    },
+    {
+      "coordinate": 2,
+      "sign": -1,
+      "nonnegative_weights": [
+        {
+          "row_index": 0,
+          "weight": [
+            "111/116",
+            "47/116"
+          ]
+        },
+        {
+          "row_index": 7,
+          "weight": [
+            "13/2",
+            "-5/2"
+          ]
+        },
+        {
+          "row_index": 20,
+          "weight": [
+            "-23/29",
+            "19/29"
+          ]
+        },
+        {
+          "row_index": 21,
+          "weight": [
+            "-19/4",
+            "9/4"
+          ]
+        },
+        {
+          "row_index": 22,
+          "weight": [
+            "-3",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "coordinate": 2,
+      "sign": 1,
+      "nonnegative_weights": [
+        {
+          "row_index": 0,
+          "weight": [
+            "2/5",
+            "-3/25"
+          ]
+        },
+        {
+          "row_index": 1,
+          "weight": [
+            "31/55",
+            "157/275"
+          ]
+        },
+        {
+          "row_index": 4,
+          "weight": [
+            "-47/220",
+            "57/220"
+          ]
+        },
+        {
+          "row_index": 16,
+          "weight": [
+            "53/55",
+            "124/275"
+          ]
+        },
+        {
+          "row_index": 24,
+          "weight": [
+            "3/4",
+            "71/100"
+          ]
+        }
+      ]
+    },
+    {
+      "coordinate": 3,
+      "sign": -1,
+      "nonnegative_weights": [
+        {
+          "row_index": 0,
+          "weight": [
+            "37353/99418",
+            "18677/497090"
+          ]
+        },
+        {
+          "row_index": 1,
+          "weight": [
+            "97587/198836",
+            "358459/994180"
+          ]
+        },
+        {
+          "row_index": 16,
+          "weight": [
+            "88873/198836",
+            "-30201/994180"
+          ]
+        },
+        {
+          "row_index": 22,
+          "weight": [
+            "-249/9038",
+            "161/4519"
+          ]
+        },
+        {
+          "row_index": 24,
+          "weight": [
+            "113785/198836",
+            "63253/198836"
+          ]
+        }
+      ]
+    },
+    {
+      "coordinate": 3,
+      "sign": 1,
+      "nonnegative_weights": [
+        {
+          "row_index": 12,
+          "weight": [
+            "7/26",
+            "-11/130"
+          ]
+        },
+        {
+          "row_index": 16,
+          "weight": [
+            "-1/13",
+            "11/65"
+          ]
+        },
+        {
+          "row_index": 18,
+          "weight": [
+            "-159/806",
+            "608/2015"
+          ]
+        },
+        {
+          "row_index": 19,
+          "weight": [
+            "1/13",
+            "-3/130"
+          ]
+        },
+        {
+          "row_index": 20,
+          "weight": [
+            "35/806",
+            "427/4030"
+          ]
+        }
+      ]
+    },
+    {
+      "coordinate": 4,
+      "sign": -1,
+      "nonnegative_weights": [
+        {
+          "row_index": 6,
+          "weight": [
+            "37/93",
+            "1/93"
+          ]
+        },
+        {
+          "row_index": 7,
+          "weight": [
+            "37/93",
+            "1/93"
+          ]
+        },
+        {
+          "row_index": 8,
+          "weight": [
+            "37/93",
+            "1/93"
+          ]
+        }
+      ]
+    },
+    {
+      "coordinate": 4,
+      "sign": 1,
+      "nonnegative_weights": [
+        {
+          "row_index": 0,
+          "weight": [
+            "3568/49709",
+            "27274/248545"
+          ]
+        },
+        {
+          "row_index": 1,
+          "weight": [
+            "58831/99418",
+            "68113/497090"
+          ]
+        },
+        {
+          "row_index": 16,
+          "weight": [
+            "-15487/49709",
+            "69502/248545"
+          ]
+        },
+        {
+          "row_index": 22,
+          "weight": [
+            "4221/9038",
+            "585/9038"
+          ]
+        },
+        {
+          "row_index": 24,
+          "weight": [
+            "66963/99418",
+            "224677/497090"
+          ]
+        }
+      ]
+    }
+  ],
+  "separating_dual": [
+    {
+      "row_index": 10,
+      "weight": [
+        "3133/2318",
+        "-4903/11590"
+      ]
+    },
+    {
+      "row_index": 12,
+      "weight": [
+        "80/1159",
+        "116/5795"
+      ]
+    },
+    {
+      "row_index": 16,
+      "weight": [
+        "181/2318",
+        "-75/2318"
+      ]
+    },
+    {
+      "row_index": 26,
+      "weight": [
+        "459/25498",
+        "72/63745"
+      ]
+    },
+    {
+      "row_index": 27,
+      "weight": [
+        "2610/12749",
+        "-1431/63745"
+      ]
+    },
+    {
+      "row_index": 33,
+      "weight": [
+        "217/2318",
+        "-91/11590"
+      ]
+    }
+  ],
+  "separating_beta_claim": [
+    "-1179/50996",
+    "-11619/254980"
+  ],
+  "exact_origin_interior_pairs": [
+    [
+      0,
+      7
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      2,
+      5
+    ]
+  ],
+  "external_mathematical_premise": "LEMMA9961/0 supplies fixedG unit/T0 feasibility on the boundary edge only; its full old certificate is not replayed here"
+}
