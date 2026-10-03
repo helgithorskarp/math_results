@@ -1,0 +1,138 @@
+{
+  "actual_agent": "six-reviewer-4",
+  "role": "independent mathematical reviewer",
+  "python": "Python 3.11.2",
+  "mathematical_record_bytes": 1058245,
+  "whole_record_sha256": "afd2a4e57d22a0ee22954d6f6e59ff13aa2faee53cc515d48d787c6b27fcb97a",
+  "mathematical_canonical_sha256": "c06dd09541b2c92f1a644c7dc2a8b0def1edc61b43f77684532aab2a68b42c47",
+  "four_entire_records_equal": true,
+  "all_compact_summary_fields_equal": true,
+  "cold_initial_files": [
+    "exact.py",
+    "audit.py",
+    "controls.py"
+  ],
+  "false_fixtures_per_mode": 11,
+  "normal_optimized_control_reasons_equal": true,
+  "primary_seals": {
+    "exact.py": "9012aeca850582147dd7c46b5f55dd73ab5657c8bb9b6041a33bde67f69da1d7",
+    "audit.py": "5f1ef8a8fb49aaa6a8a95f9a52e67f36f795acfdedfd52de905f305af4267c95",
+    "controls.py": "af8816dcb3bddce93b4691e3f4d698bb22b427af3aad580526e5a73ffd5b5a0c",
+    "PROOF.md": "8a4eeeb7c7f887eab43287889793ac60dc78880d557178bda5583fec929ef5fd"
+  },
+  "threads": 1,
+  "one_intensive_child": true,
+  "scope_unchanged": "1CPU/2GiB",
+  "no_timeout_or_incomplete_inference": true,
+  "runs": [
+    {
+      "location": "original",
+      "mode": "normal",
+      "program": "audit.py",
+      "guard_seconds": 30,
+      "seconds": 3.5880157160572708,
+      "max_rss_kib": 29156,
+      "returncode": 0
+    },
+    {
+      "location": "original",
+      "mode": "optimized",
+      "program": "audit.py",
+      "guard_seconds": 30,
+      "seconds": 3.686374979093671,
+      "max_rss_kib": 31608,
+      "returncode": 0
+    },
+    {
+      "location": "empty-relocated",
+      "mode": "normal",
+      "program": "audit.py",
+      "guard_seconds": 30,
+      "seconds": 3.575932209030725,
+      "max_rss_kib": 31608,
+      "returncode": 0
+    },
+    {
+      "location": "empty-relocated",
+      "mode": "normal",
+      "program": "controls.py",
+      "guard_seconds": 30,
+      "seconds": 19.78237726096995,
+      "max_rss_kib": 31608,
+      "returncode": 0
+    },
+    {
+      "location": "empty-relocated",
+      "mode": "optimized",
+      "program": "audit.py",
+      "guard_seconds": 30,
+      "seconds": 3.726336496998556,
+      "max_rss_kib": 31968,
+      "returncode": 0
+    },
+    {
+      "location": "empty-relocated",
+      "mode": "optimized",
+      "program": "controls.py",
+      "guard_seconds": 30,
+      "seconds": 21.080909777083434,
+      "max_rss_kib": 31968,
+      "returncode": 0
+    }
+  ],
+  "public_wrappers": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-reviewer-4/rid-square-audit/verify.py"
+      ],
+      "parent_guard_seconds": 40,
+      "mathematical_child_guard_seconds": 30,
+      "seconds": 3.5677166710374877,
+      "max_rss_kib": 25924,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "round-two/six-reviewer-4/rid-square-audit/verify.py",
+        "--controls"
+      ],
+      "parent_guard_seconds": 40,
+      "mathematical_child_guard_seconds": 30,
+      "seconds": 20.928669666987844,
+      "max_rss_kib": 25924,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-4/rid-square-audit/verify.py"
+      ],
+      "parent_guard_seconds": 40,
+      "mathematical_child_guard_seconds": 30,
+      "seconds": 4.216278952080756,
+      "max_rss_kib": 28008,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "round-two/six-reviewer-4/rid-square-audit/verify.py",
+        "--controls"
+      ],
+      "parent_guard_seconds": 40,
+      "mathematical_child_guard_seconds": 30,
+      "seconds": 23.603398422012106,
+      "max_rss_kib": 28008,
+      "returncode": 0
+    }
+  ],
+  "six_preimport_source_damages_rejected": true
+}
