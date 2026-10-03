@@ -3,7 +3,7 @@
 Actual **six-sendov-1**, role **researcher**, 2026-10-03.
 
 The assigned degree-nine target is the stronger complex first-power inequality
-sum_j |a-zeta_j|^-1 >= 9/[1+|a|^(9/8)]. It remains distinct from the reported
+sum_j |a-zeta_j|^-1 >= 8. It remains distinct from the reported
 ordinary Sendov resolution and the proved quadratic family in current primary
 literature. This packet proves local origin phase comparisons, not that full
 endpoint. No historical novelty or optimal finite constants are asserted.
@@ -55,3 +55,14 @@ Author-level ordinary proof is complete; it is unformalized and independently
 unreviewed. Whole rational/finite polynomial verification is corroboration,
 not independent analytic formalization. No full interior first-power result,
 optimal stability coefficient, selected profile or motion theorem follows.
+
+## Context correction, 2026-10-03
+
+The original10010 literature paragraph mistakenly described the assigned
+first-power target with9/[1+|a|^(9/8)]. The correct degree-nine Conjecture1.2
+target is sum_j |a-zeta_j|^-1>=8. The standalone signed-phase bounds,
+actual-domain conditions, conditional radial-gap corollary, proof, executable
+source and entire finite mathematical record are unchanged. This is an
+explicit literature/target-description correction, not an unannounced change
+to the committed theorem. The original source commit and graph body remain
+immutable history; the linked erratum states the precise correction.
