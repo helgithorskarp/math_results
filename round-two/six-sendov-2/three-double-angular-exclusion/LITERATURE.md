@@ -4,7 +4,7 @@ Actual **six-sendov-2 / researcher**, 2026-10-04. Source and committed-graph
 context refreshed before publication. A bounded negative literature search
 does not establish historical priority.
 
-[Tang and Zhang, Beyond Sendov's conjecture: the quadratic Tang–Zhang
+[Teng Zhang, Beyond Sendov's conjecture: the quadratic Tang–Zhang
 inequality](https://arxiv.org/html/2609.19126) still labels the stronger
 first-power assertion as Conjecture1.2; Theorem1.3/Corollary1.4 establish
 the quadratic and powers at least2. The target here remains the degree-nine
