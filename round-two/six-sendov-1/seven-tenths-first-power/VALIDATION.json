@@ -1,0 +1,1968 @@
+{
+  "ENTIRE_mathematical_bytes_compared": true,
+  "agent": "six-sendov-1",
+  "checked_at": "2026-10-04T23:22:00.728708+00:00",
+  "cover_fixture_cases": 13,
+  "entry_fixture_cases": 11,
+  "expected_fixture_cases": 8,
+  "formalized": false,
+  "full_typed_positives": [
+    "local-whole-normal",
+    "cold-whole-normal",
+    "local-whole-optimized",
+    "cold-whole-optimized"
+  ],
+  "guard_seconds": 45,
+  "independent_review": false,
+  "interpreter": "CPython standard library",
+  "mathematical_damage_cases": 72,
+  "max_child_rss_kib": 94428,
+  "max_child_seconds": 14.522587045001274,
+  "native_threads": {
+    "BLIS_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "NUMEXPR_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1,
+    "VECLIB_MAXIMUM_THREADS": 1
+  },
+  "omission": "Large private complete coefficient/control records; all defining inputs and complete comparisons regenerate from compact local source",
+  "omitted_large_artifact": true,
+  "python": "3.12.14",
+  "record_sha256": "7f5053c5bd9f6b22064060069c6fe547fb692065085db152877d39cdc4f97a38",
+  "rejections": [
+    "math-last-polar-coefficient-normal",
+    "math-drop-polar-series-normal",
+    "math-radial-lower-cap-normal",
+    "math-radial-coefficient-normal",
+    "math-chord-slope-normal",
+    "math-wrong-T-lower-normal",
+    "math-centered-third-underpay-normal",
+    "math-newton-eighth-normal",
+    "math-false-empty-normal",
+    "math-uncouple-T-normal",
+    "math-energy-integral-coefficient-normal",
+    "math-omit-face-leaf-normal",
+    "math-ET-last-bivariate-coefficient-normal",
+    "math-ET-last-Bernstein-control-normal",
+    "math-drop-upper-anchor-normal",
+    "math-drop-lower-anchor-normal",
+    "math-quartic-variance-coefficient-normal",
+    "math-quartic-real-norm-underpay-normal",
+    "math-quartic-cross-coefficient-normal",
+    "math-quartic-Hilbert-factor-normal",
+    "math-linear-norm-root-underpay-normal",
+    "math-last-cleared-coefficient-normal",
+    "math-tenth-Bernstein-control-normal",
+    "math-anchor-above-marked-normal",
+    "math-centered-energy-decouple-normal",
+    "math-odd-root-underpay-normal",
+    "math-synchronized-denominator-normal",
+    "math-diagonal-last-coefficient-normal",
+    "math-last-bivariate-coefficient-normal",
+    "math-drop-eighth-normal",
+    "math-last-Bernstein-control-normal",
+    "math-product-floor-endpoint-normal",
+    "math-product-F-endpoint-normal",
+    "math-product-variance-endpoint-normal",
+    "math-product-root-underpay-normal",
+    "math-product-log-last-normal",
+    "math-product-exp-drop-fourth-normal",
+    "math-product-exp-sign-normal",
+    "math-floor-endpoint-normal",
+    "math-radius-seven-floors-normal",
+    "math-J-omit-differentiated-floor-normal",
+    "math-J-integral-denominator-normal",
+    "math-J-underpaid-bound-normal",
+    "math-E-path-underpayment-normal",
+    "math-mean-path-underpayment-normal",
+    "math-O-missing-slot-square-normal",
+    "math-O-linear-marked-endpoint-normal",
+    "math-slot-square-coefficient-normal",
+    "math-O-drop-odd-norm-factor-normal",
+    "math-O-drop-last-cubic-coefficient-normal",
+    "math-O-weighted-integral-underpayment-normal",
+    "math-O-underpaid-bound-normal",
+    "math-ratio-last-coefficient-normal",
+    "math-critical-location-sign-normal",
+    "math-monic-leading-factor-eight-normal",
+    "math-primitive-factor-eight-normal",
+    "math-primitive-a-power-normal",
+    "math-channel-drop-last-coefficient-normal",
+    "math-gradient-missing-factor-nine-normal",
+    "math-clip-wrong-denominator-normal",
+    "math-transform-leading-power-eight-normal",
+    "math-transform-centre-sign-normal",
+    "math-derivative-leading-power-nine-normal",
+    "math-last-polynomial-coefficient-normal",
+    "math-omit-critical-slot-normal",
+    "math-reciprocal-orientation-normal",
+    "math-mass-ratio-inversion-normal",
+    "math-zero-contraction-normal",
+    "math-disk-majorant-normal",
+    "math-contour-underpay-5-normal",
+    "math-contour-underpay-6-normal",
+    "math-contour-underpay-7-normal",
+    "math-last-polar-coefficient-optimized",
+    "math-drop-polar-series-optimized",
+    "math-radial-lower-cap-optimized",
+    "math-radial-coefficient-optimized",
+    "math-chord-slope-optimized",
+    "math-wrong-T-lower-optimized",
+    "math-centered-third-underpay-optimized",
+    "math-newton-eighth-optimized",
+    "math-false-empty-optimized",
+    "math-uncouple-T-optimized",
+    "math-energy-integral-coefficient-optimized",
+    "math-omit-face-leaf-optimized",
+    "math-ET-last-bivariate-coefficient-optimized",
+    "math-ET-last-Bernstein-control-optimized",
+    "math-drop-upper-anchor-optimized",
+    "math-drop-lower-anchor-optimized",
+    "math-quartic-variance-coefficient-optimized",
+    "math-quartic-real-norm-underpay-optimized",
+    "math-quartic-cross-coefficient-optimized",
+    "math-quartic-Hilbert-factor-optimized",
+    "math-linear-norm-root-underpay-optimized",
+    "math-last-cleared-coefficient-optimized",
+    "math-tenth-Bernstein-control-optimized",
+    "math-anchor-above-marked-optimized",
+    "math-centered-energy-decouple-optimized",
+    "math-odd-root-underpay-optimized",
+    "math-synchronized-denominator-optimized",
+    "math-diagonal-last-coefficient-optimized",
+    "math-last-bivariate-coefficient-optimized",
+    "math-drop-eighth-optimized",
+    "math-last-Bernstein-control-optimized",
+    "math-product-floor-endpoint-optimized",
+    "math-product-F-endpoint-optimized",
+    "math-product-variance-endpoint-optimized",
+    "math-product-root-underpay-optimized",
+    "math-product-log-last-optimized",
+    "math-product-exp-drop-fourth-optimized",
+    "math-product-exp-sign-optimized",
+    "math-floor-endpoint-optimized",
+    "math-radius-seven-floors-optimized",
+    "math-J-omit-differentiated-floor-optimized",
+    "math-J-integral-denominator-optimized",
+    "math-J-underpaid-bound-optimized",
+    "math-E-path-underpayment-optimized",
+    "math-mean-path-underpayment-optimized",
+    "math-O-missing-slot-square-optimized",
+    "math-O-linear-marked-endpoint-optimized",
+    "math-slot-square-coefficient-optimized",
+    "math-O-drop-odd-norm-factor-optimized",
+    "math-O-drop-last-cubic-coefficient-optimized",
+    "math-O-weighted-integral-underpayment-optimized",
+    "math-O-underpaid-bound-optimized",
+    "math-ratio-last-coefficient-optimized",
+    "math-critical-location-sign-optimized",
+    "math-monic-leading-factor-eight-optimized",
+    "math-primitive-factor-eight-optimized",
+    "math-primitive-a-power-optimized",
+    "math-channel-drop-last-coefficient-optimized",
+    "math-gradient-missing-factor-nine-optimized",
+    "math-clip-wrong-denominator-optimized",
+    "math-transform-leading-power-eight-optimized",
+    "math-transform-centre-sign-optimized",
+    "math-derivative-leading-power-nine-optimized",
+    "math-last-polynomial-coefficient-optimized",
+    "math-omit-critical-slot-optimized",
+    "math-reciprocal-orientation-optimized",
+    "math-mass-ratio-inversion-optimized",
+    "math-zero-contraction-optimized",
+    "math-disk-majorant-optimized",
+    "math-contour-underpay-5-optimized",
+    "math-contour-underpay-6-optimized",
+    "math-contour-underpay-7-optimized",
+    "expected-wrong-polar-margin-normal",
+    "expected-wrong-polar-margin-optimized",
+    "expected-missing-mean-matrix-normal",
+    "expected-missing-mean-matrix-optimized",
+    "expected-wrong-fingerprint-normal",
+    "expected-wrong-fingerprint-optimized",
+    "expected-wrong-type-normal",
+    "expected-wrong-type-optimized",
+    "expected-extra-key-normal",
+    "expected-extra-key-optimized",
+    "expected-missing-key-normal",
+    "expected-missing-key-optimized",
+    "expected-noncanonical-expected-normal",
+    "expected-noncanonical-expected-optimized",
+    "expected-duplicate-normal",
+    "expected-duplicate-optimized",
+    "cover-bool-axis-normal",
+    "cover-bool-axis-optimized",
+    "cover-fifth-axis-normal",
+    "cover-fifth-axis-optimized",
+    "cover-boundary-cut-normal",
+    "cover-boundary-cut-optimized",
+    "cover-noncanonical-cut-normal",
+    "cover-noncanonical-cut-optimized",
+    "cover-half-open-key-normal",
+    "cover-half-open-key-optimized",
+    "cover-unpaid-leaf-normal",
+    "cover-unpaid-leaf-optimized",
+    "cover-missing-leaf-normal",
+    "cover-missing-leaf-optimized",
+    "cover-unreachable-leaf-normal",
+    "cover-unreachable-leaf-optimized",
+    "cover-leaf-split-overlap-normal",
+    "cover-leaf-split-overlap-optimized",
+    "cover-old-five-dimensional-root-normal",
+    "cover-old-five-dimensional-root-optimized",
+    "cover-wrong-marked-root-normal",
+    "cover-wrong-marked-root-optimized",
+    "cover-noncanonical-root-normal",
+    "cover-noncanonical-root-optimized",
+    "cover-duplicate-normal",
+    "cover-duplicate-optimized",
+    "entry-missing-shell-normal",
+    "entry-missing-shell-optimized",
+    "entry-bool-shell-index-normal",
+    "entry-bool-shell-index-optimized",
+    "entry-gap-shell-normal",
+    "entry-gap-shell-optimized",
+    "entry-bool-entry-axis-normal",
+    "entry-bool-entry-axis-optimized",
+    "entry-boundary-entry-cut-normal",
+    "entry-boundary-entry-cut-optimized",
+    "entry-missing-entry-leaf-normal",
+    "entry-missing-entry-leaf-optimized",
+    "entry-unreachable-entry-leaf-normal",
+    "entry-unreachable-entry-leaf-optimized",
+    "entry-entry-split-overlap-normal",
+    "entry-entry-split-overlap-optimized",
+    "entry-unpaid-entry-target-normal",
+    "entry-unpaid-entry-target-optimized",
+    "entry-old-radial-entry-budget-normal",
+    "entry-old-radial-entry-budget-optimized",
+    "entry-duplicate-normal",
+    "entry-duplicate-optimized",
+    "preimport-source-pin-normal",
+    "preimport-source-pin-optimized"
+  ],
+  "resource_scope": "unchanged one CPU/two GiB; no escalation",
+  "result": "PASS",
+  "role": "researcher",
+  "runs": [
+    {
+      "exit_code": 0,
+      "intended_rejection": null,
+      "label": "local-whole-normal",
+      "mode": "normal",
+      "positive": true,
+      "seconds": 13.224070518997905
+    },
+    {
+      "exit_code": 0,
+      "intended_rejection": null,
+      "label": "cold-whole-normal",
+      "mode": "normal",
+      "positive": true,
+      "seconds": 12.210918204997142
+    },
+    {
+      "exit_code": 0,
+      "intended_rejection": null,
+      "label": "local-whole-optimized",
+      "mode": "optimized",
+      "positive": true,
+      "seconds": 12.171779611002421
+    },
+    {
+      "exit_code": 0,
+      "intended_rejection": null,
+      "label": "cold-whole-optimized",
+      "mode": "optimized",
+      "positive": true,
+      "seconds": 14.522587045001274
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole19 polar coefficients",
+      "label": "math-last-polar-coefficient-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.1262862670046161
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "all phase/deficit coefficients",
+      "label": "math-drop-polar-series-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11826043399923947
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "radial lower root",
+      "label": "math-radial-lower-cap-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11764716999459779
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "all radial coefficients",
+      "label": "math-radial-coefficient-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.1078959250007756
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole chord endpoint identity",
+      "label": "math-chord-slope-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10429596399626462
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "retained full lower radial/energy coupling",
+      "label": "math-wrong-T-lower-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10396146799757844
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "all seven centered Newton payments",
+      "label": "math-centered-third-underpay-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.12294123000174295
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "all seven centered Newton payments",
+      "label": "math-newton-eighth-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.1067533459936385
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "false whole-box pruning rejected",
+      "label": "math-false-empty-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10757032399851596
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL13x19 coupled coefficient identities",
+      "label": "math-uncouple-T-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.13349323500005994
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL13 coupled beta integral identities",
+      "label": "math-energy-integral-coefficient-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.14948752700001933
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "missing closed face leaf",
+      "label": "math-omit-face-leaf-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.14680574699741555
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL13x19 coupled coefficient identities",
+      "label": "math-ET-last-bivariate-coefficient-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.13551621200167574
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL13 Bernstein reconstruction coefficients",
+      "label": "math-ET-last-Bernstein-control-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.14564468099706573
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "BOTH exact endpoint anchor",
+      "label": "math-drop-upper-anchor-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11026090400264366
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "BOTH exact endpoint anchor",
+      "label": "math-drop-lower-anchor-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10601703499560244
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole squared-variable centering coefficient",
+      "label": "math-quartic-variance-coefficient-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10434726100356784
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole real centered quartic norm payment",
+      "label": "math-quartic-real-norm-underpay-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10650220500247087
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole real quartic complexification coefficients",
+      "label": "math-quartic-cross-coefficient-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11839244200382382
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole real-to-complex Hilbert quartic factor",
+      "label": "math-quartic-Hilbert-factor-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10881771000276785
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole positive linear mean-norm payment",
+      "label": "math-linear-norm-root-underpay-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11867808399983915
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL10 cleared origin coefficients",
+      "label": "math-last-cleared-coefficient-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.1775135659991065
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL10 final cleared Bernstein controls paid",
+      "label": "math-tenth-Bernstein-control-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.17558321400429122
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "BOTH exact endpoint anchor",
+      "label": "math-anchor-above-marked-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.13793671000166796
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole retained centered-energy identity",
+      "label": "math-centered-energy-decouple-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.16278952900029253
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole odd square-root payment",
+      "label": "math-odd-root-underpay-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.1635361919979914
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "actual mean norm must remain separate",
+      "label": "math-synchronized-denominator-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10641116499755299
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL9 diagonal coefficients",
+      "label": "math-diagonal-last-coefficient-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.108192929001234
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL90 centered u/t coefficients",
+      "label": "math-last-bivariate-coefficient-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11375054399832152
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL seven centered orders",
+      "label": "math-drop-eighth-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.1238310070039006
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL9 final Bernstein controls paid",
+      "label": "math-last-Bernstein-control-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.19553516899759416
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole per-box floor endpoint",
+      "label": "math-product-floor-endpoint-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.18326214300032007
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole radius sum upper endpoint",
+      "label": "math-product-F-endpoint-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11404736199619947
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole centered variance upper endpoint",
+      "label": "math-product-variance-endpoint-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11796041500201682
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole centered coordinate square-root payment",
+      "label": "math-product-root-underpay-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10581762700167019
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole logarithmic derivative coefficient identity",
+      "label": "math-product-log-last-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10461656800180208
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL FIVE positive exponential terms",
+      "label": "math-product-exp-drop-fourth-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10712483699899167
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole logarithmic and exponential comparison signs",
+      "label": "math-product-exp-sign-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.1073751150033786
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "floor endpoint",
+      "label": "math-floor-endpoint-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10424022599909222
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "other radius floors",
+      "label": "math-radius-seven-floors-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.1064263270018273
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "excluding differentiated slot",
+      "label": "math-J-omit-differentiated-floor-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11110562500107335
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "derivative integrals",
+      "label": "math-J-integral-denominator-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.14949836999585386
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "J Lipschitz",
+      "label": "math-J-underpaid-bound-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.12613659199996619
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "squared-norm path",
+      "label": "math-E-path-underpayment-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10953843500465155
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "mean path",
+      "label": "math-mean-path-underpayment-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10883213900524424
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "AM-GM coefficients",
+      "label": "math-O-missing-slot-square-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10821603899967158
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "AM-GM coefficients",
+      "label": "math-O-linear-marked-endpoint-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11028760099725332
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "removed-slot",
+      "label": "math-slot-square-coefficient-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11263467199751176
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "odd norm factor",
+      "label": "math-O-drop-odd-norm-factor-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10723367999889888
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "cubic majorant coefficients",
+      "label": "math-O-drop-last-cubic-coefficient-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10945509599696379
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "weighted cubic integral",
+      "label": "math-O-weighted-integral-underpayment-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11137670899915975
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "origin Lipschitz",
+      "label": "math-O-underpaid-bound-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11698903600336052
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ratio coefficients",
+      "label": "math-ratio-last-coefficient-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10990907499945024
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL nine affine-derivative versus factor-channel coefficients",
+      "label": "math-critical-location-sign-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.12011090600572061
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole monic ninth-degree primitive with marked zero",
+      "label": "math-monic-leading-factor-eight-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11627689299348276
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "full original-primitive and normalized channel values",
+      "label": "math-primitive-factor-eight-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.12937293799768668
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "full original-primitive and normalized channel values",
+      "label": "math-primitive-a-power-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11792037499981234
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL nine affine-derivative versus factor-channel coefficients",
+      "label": "math-channel-drop-last-coefficient-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11678131399821723
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "all slot derivatives by exact full multilinear differences",
+      "label": "math-gradient-missing-factor-nine-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.18162186299741734
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole l1 clipping displacement",
+      "label": "math-clip-wrong-denominator-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10849884799972642
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "entire degree-nine leading coefficient",
+      "label": "math-transform-leading-power-eight-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.12174808100098744
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "marked original root retained",
+      "label": "math-transform-centre-sign-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.12439063299825648
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL NINE derivative chain coefficients",
+      "label": "math-derivative-leading-power-nine-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.12836874200002057
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "entire degree-nine leading coefficient",
+      "label": "math-last-polynomial-coefficient-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11022575599781703
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL eight critical multiplicity slots",
+      "label": "math-omit-critical-slot-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.26616757299780147
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL eight affine reciprocal coordinates",
+      "label": "math-reciprocal-orientation-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.2867805740024778
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "finite positive mass threshold contraction",
+      "label": "math-mass-ratio-inversion-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.2884877449978376
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "positive contraction domain",
+      "label": "math-zero-contraction-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.16264897499786457
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL nine exact closed-disk contraction bounds",
+      "label": "math-disk-majorant-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.14738478299841518
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole paid high-order contour cap order5",
+      "label": "math-contour-underpay-5-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.12413758400361985
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole paid high-order contour cap order6",
+      "label": "math-contour-underpay-6-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11198412399971858
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole paid high-order contour cap order7",
+      "label": "math-contour-underpay-7-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10733249999611871
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole19 polar coefficients",
+      "label": "math-last-polar-coefficient-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.29988810799841303
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "all phase/deficit coefficients",
+      "label": "math-drop-polar-series-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.28093991100467974
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "radial lower root",
+      "label": "math-radial-lower-cap-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.4022190059986315
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "all radial coefficients",
+      "label": "math-radial-coefficient-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.286220547000994
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole chord endpoint identity",
+      "label": "math-chord-slope-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.2742301899997983
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "retained full lower radial/energy coupling",
+      "label": "math-wrong-T-lower-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.2817912380050984
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "all seven centered Newton payments",
+      "label": "math-centered-third-underpay-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.35782947600091575
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "all seven centered Newton payments",
+      "label": "math-newton-eighth-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.29144213700055843
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "false whole-box pruning rejected",
+      "label": "math-false-empty-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.2763673040026333
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL13x19 coupled coefficient identities",
+      "label": "math-uncouple-T-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.32128967099561123
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL13 coupled beta integral identities",
+      "label": "math-energy-integral-coefficient-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.4131350969983032
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "missing closed face leaf",
+      "label": "math-omit-face-leaf-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.39451975100382697
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL13x19 coupled coefficient identities",
+      "label": "math-ET-last-bivariate-coefficient-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.4894605669978773
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL13 Bernstein reconstruction coefficients",
+      "label": "math-ET-last-Bernstein-control-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3980236489951494
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "BOTH exact endpoint anchor",
+      "label": "math-drop-upper-anchor-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.4677244639970013
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "BOTH exact endpoint anchor",
+      "label": "math-drop-lower-anchor-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3780520969958161
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole squared-variable centering coefficient",
+      "label": "math-quartic-variance-coefficient-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.36615534799784655
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole real centered quartic norm payment",
+      "label": "math-quartic-real-norm-underpay-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.29033645000163233
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole real quartic complexification coefficients",
+      "label": "math-quartic-cross-coefficient-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.2800416270038113
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole real-to-complex Hilbert quartic factor",
+      "label": "math-quartic-Hilbert-factor-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.4023204800032545
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole positive linear mean-norm payment",
+      "label": "math-linear-norm-root-underpay-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.5241048619936919
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL10 cleared origin coefficients",
+      "label": "math-last-cleared-coefficient-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.5651689770020312
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL10 final cleared Bernstein controls paid",
+      "label": "math-tenth-Bernstein-control-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3422078369985684
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "BOTH exact endpoint anchor",
+      "label": "math-anchor-above-marked-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.39071311699808575
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole retained centered-energy identity",
+      "label": "math-centered-energy-decouple-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.45039265300147235
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole odd square-root payment",
+      "label": "math-odd-root-underpay-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.4498691359985969
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "actual mean norm must remain separate",
+      "label": "math-synchronized-denominator-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.47129599799518473
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL9 diagonal coefficients",
+      "label": "math-diagonal-last-coefficient-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.49443357400014065
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL90 centered u/t coefficients",
+      "label": "math-last-bivariate-coefficient-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.5417551450009341
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL seven centered orders",
+      "label": "math-drop-eighth-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3064869500012719
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL9 final Bernstein controls paid",
+      "label": "math-last-Bernstein-control-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.29848200699780136
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole per-box floor endpoint",
+      "label": "math-product-floor-endpoint-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.2875758770023822
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole radius sum upper endpoint",
+      "label": "math-product-F-endpoint-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3596346240010462
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole centered variance upper endpoint",
+      "label": "math-product-variance-endpoint-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.5655161610047799
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole centered coordinate square-root payment",
+      "label": "math-product-root-underpay-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.4639863160045934
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole logarithmic derivative coefficient identity",
+      "label": "math-product-log-last-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.31985484799952246
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL FIVE positive exponential terms",
+      "label": "math-product-exp-drop-fourth-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.29304330200102413
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole logarithmic and exponential comparison signs",
+      "label": "math-product-exp-sign-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.2831783779984107
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "floor endpoint",
+      "label": "math-floor-endpoint-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.27986754100129474
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "other radius floors",
+      "label": "math-radius-seven-floors-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3048857699977816
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "excluding differentiated slot",
+      "label": "math-J-omit-differentiated-floor-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.28952250700240256
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "derivative integrals",
+      "label": "math-J-integral-denominator-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.28702381400216836
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "J Lipschitz",
+      "label": "math-J-underpaid-bound-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.29065339499356924
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "squared-norm path",
+      "label": "math-E-path-underpayment-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.30349163800565293
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "mean path",
+      "label": "math-mean-path-underpayment-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.28430540800036397
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "AM-GM coefficients",
+      "label": "math-O-missing-slot-square-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.34690962999593467
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "AM-GM coefficients",
+      "label": "math-O-linear-marked-endpoint-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.44547986399993533
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "removed-slot",
+      "label": "math-slot-square-coefficient-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.32758533799642464
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "odd norm factor",
+      "label": "math-O-drop-odd-norm-factor-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.30831451900303364
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "cubic majorant coefficients",
+      "label": "math-O-drop-last-cubic-coefficient-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.29995839999901364
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "weighted cubic integral",
+      "label": "math-O-weighted-integral-underpayment-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3292895260019577
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "origin Lipschitz",
+      "label": "math-O-underpaid-bound-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3113242550025461
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ratio coefficients",
+      "label": "math-ratio-last-coefficient-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3205229910017806
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL nine affine-derivative versus factor-channel coefficients",
+      "label": "math-critical-location-sign-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3132651249979972
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole monic ninth-degree primitive with marked zero",
+      "label": "math-monic-leading-factor-eight-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3143409949989291
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "full original-primitive and normalized channel values",
+      "label": "math-primitive-factor-eight-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3497478079952998
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "full original-primitive and normalized channel values",
+      "label": "math-primitive-a-power-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.29260291699756635
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL nine affine-derivative versus factor-channel coefficients",
+      "label": "math-channel-drop-last-coefficient-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.28590864499710733
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "all slot derivatives by exact full multilinear differences",
+      "label": "math-gradient-missing-factor-nine-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3577688860023045
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole l1 clipping displacement",
+      "label": "math-clip-wrong-denominator-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.2829835469965474
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "entire degree-nine leading coefficient",
+      "label": "math-transform-leading-power-eight-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.301968707004562
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "marked original root retained",
+      "label": "math-transform-centre-sign-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3080276699984097
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL NINE derivative chain coefficients",
+      "label": "math-derivative-leading-power-nine-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3989231559971813
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "entire degree-nine leading coefficient",
+      "label": "math-last-polynomial-coefficient-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.2931261240009917
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL eight critical multiplicity slots",
+      "label": "math-omit-critical-slot-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.514266393998696
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL eight affine reciprocal coordinates",
+      "label": "math-reciprocal-orientation-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.4990146249983809
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "finite positive mass threshold contraction",
+      "label": "math-mass-ratio-inversion-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.4423263920034515
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "positive contraction domain",
+      "label": "math-zero-contraction-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.2850252630014438
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "ALL nine exact closed-disk contraction bounds",
+      "label": "math-disk-majorant-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3826962530001765
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole paid high-order contour cap order5",
+      "label": "math-contour-underpay-5-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.32261916599964024
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole paid high-order contour cap order6",
+      "label": "math-contour-underpay-6-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.2774862500009476
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole paid high-order contour cap order7",
+      "label": "math-contour-underpay-7-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.28620747099921573
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "value expected",
+      "label": "expected-wrong-polar-margin-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 12.207223015000636
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "value expected",
+      "label": "expected-wrong-polar-margin-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 12.653350428001431
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "value expected",
+      "label": "expected-missing-mean-matrix-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 14.071219493998797
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "value expected",
+      "label": "expected-missing-mean-matrix-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 13.736177645005228
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "value expected",
+      "label": "expected-wrong-fingerprint-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 13.12517181000294
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "value expected",
+      "label": "expected-wrong-fingerprint-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 12.846264186999178
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "type expected",
+      "label": "expected-wrong-type-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 12.5072513289997
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "type expected",
+      "label": "expected-wrong-type-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 12.733051027003967
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "keys expected",
+      "label": "expected-extra-key-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 12.056696129002376
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "keys expected",
+      "label": "expected-extra-key-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 13.565333188002114
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "keys expected",
+      "label": "expected-missing-key-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 12.377166915997805
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "keys expected",
+      "label": "expected-missing-key-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 12.78936628500378
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "value expected",
+      "label": "expected-noncanonical-expected-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 12.046095571000478
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "value expected",
+      "label": "expected-noncanonical-expected-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 12.440509223997651
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "duplicate JSON key",
+      "label": "expected-duplicate-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 13.835038849996636
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "duplicate JSON key",
+      "label": "expected-duplicate-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 12.509772812001756
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "exact face cut path/axis/rational types",
+      "label": "cover-bool-axis-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11664444199413992
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "exact face cut path/axis/rational types",
+      "label": "cover-bool-axis-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3312423080060398
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "exact face cut path/axis/rational types",
+      "label": "cover-fifth-axis-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.12392067100154236
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "exact face cut path/axis/rational types",
+      "label": "cover-fifth-axis-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.40243686999747297
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "strict face interior cut",
+      "label": "cover-boundary-cut-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.12062111699924571
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "strict face interior cut",
+      "label": "cover-boundary-cut-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3241257610061439
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "canonical rational coordinate",
+      "label": "cover-noncanonical-cut-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.15745740100101102
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "canonical rational coordinate",
+      "label": "cover-noncanonical-cut-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.28271837400097866
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "exact face cut path/axis/rational types",
+      "label": "cover-half-open-key-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11471819799771765
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "exact face cut path/axis/rational types",
+      "label": "cover-half-open-key-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.2918450130018755
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "exact face leaf types",
+      "label": "cover-unpaid-leaf-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11233909700240474
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "exact face leaf types",
+      "label": "cover-unpaid-leaf-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.37527835199580295
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "missing closed face leaf",
+      "label": "cover-missing-leaf-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.1459261370036984
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "missing closed face leaf",
+      "label": "cover-missing-leaf-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.30155775200546486
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "all face entries reached",
+      "label": "cover-unreachable-leaf-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10988874000031501
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "all face entries reached",
+      "label": "cover-unreachable-leaf-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.5064383710050606
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "face internal/leaf disjointness",
+      "label": "cover-leaf-split-overlap-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.16514879500027746
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "face internal/leaf disjointness",
+      "label": "cover-leaf-split-overlap-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.4535432470001979
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "exact face root value",
+      "label": "cover-old-five-dimensional-root-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11229593699681573
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "exact face root value",
+      "label": "cover-old-five-dimensional-root-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.28979089399945224
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "exact face root value",
+      "label": "cover-wrong-marked-root-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10846654399938416
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "exact face root value",
+      "label": "cover-wrong-marked-root-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3607842239944148
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "canonical rational coordinate",
+      "label": "cover-noncanonical-root-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.15147807599714724
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "canonical rational coordinate",
+      "label": "cover-noncanonical-root-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.445948523003608
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "duplicate JSON key",
+      "label": "cover-duplicate-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.1190846750032506
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "duplicate JSON key",
+      "label": "cover-duplicate-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.2816324839950539
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "complete76 initial entry shells",
+      "label": "entry-missing-shell-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.16797846800182015
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "complete76 initial entry shells",
+      "label": "entry-missing-shell-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.32900544699805323
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole ordered closed initial entry shell",
+      "label": "entry-bool-shell-index-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.15267488799872808
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole ordered closed initial entry shell",
+      "label": "entry-bool-shell-index-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.4455748870022944
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole ordered closed initial entry shell",
+      "label": "entry-gap-shell-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.15254205200471915
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole ordered closed initial entry shell",
+      "label": "entry-gap-shell-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.30893492600444006
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole entry split schema",
+      "label": "entry-bool-entry-axis-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10966226500022458
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "whole entry split schema",
+      "label": "entry-bool-entry-axis-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.27901287799613783
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "strict entry interior cut",
+      "label": "entry-boundary-entry-cut-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.10785967099945992
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "strict entry interior cut",
+      "label": "entry-boundary-entry-cut-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.34618600300018443
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "missing closed entry leaf",
+      "label": "entry-missing-entry-leaf-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.19068691300344653
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "missing closed entry leaf",
+      "label": "entry-missing-entry-leaf-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.5121234949983773
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "all entry entries reached",
+      "label": "entry-unreachable-entry-leaf-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11886462800612208
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "all entry entries reached",
+      "label": "entry-unreachable-entry-leaf-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.30227909999666736
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "entry internal/leaf disjointness",
+      "label": "entry-entry-split-overlap-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.11288341400359059
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "entry internal/leaf disjointness",
+      "label": "entry-entry-split-overlap-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.28411751000385266
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "exact entry marked/energy/target/radial budgets",
+      "label": "entry-unpaid-entry-target-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.1674118040027679
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "exact entry marked/energy/target/radial budgets",
+      "label": "entry-unpaid-entry-target-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.493678466998972
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "exact entry marked/energy/target/radial budgets",
+      "label": "entry-old-radial-entry-budget-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.1686665789966355
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "exact entry marked/energy/target/radial budgets",
+      "label": "entry-old-radial-entry-budget-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.40526966899778927
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "duplicate JSON key",
+      "label": "entry-duplicate-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.16200098000263097
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "duplicate JSON key",
+      "label": "entry-duplicate-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.4296846060024109
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "manifest preimport whole local source bytes",
+      "label": "preimport-source-pin-normal",
+      "mode": "normal",
+      "positive": false,
+      "seconds": 0.07463711300079012
+    },
+    {
+      "exit_code": 1,
+      "intended_rejection": "manifest preimport whole local source bytes",
+      "label": "preimport-source-pin-optimized",
+      "mode": "optimized",
+      "positive": false,
+      "seconds": 0.3060337570059346
+    }
+  ],
+  "runtime_ancestor_or_reviewer_input": false,
+  "serial": true,
+  "source_pin_cases": 1,
+  "source_unchanged": true,
+  "total_seconds": 305.31622602599964,
+  "whole_canonical_mathematical_bytes": 8740923
+}
