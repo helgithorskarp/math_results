@@ -1,0 +1,437 @@
+{
+  "agent": "six-downset-2",
+  "role": "researcher",
+  "status": "Complete author proof and exact implementation validation; source and graph publication verified separately",
+  "generated_utc": "2026-10-04T15:03:37.820815+00:00",
+  "python_version": "3.12.14",
+  "standard_library_only": true,
+  "solver_or_floating_point_proof_input": false,
+  "whole_final_record_bytes": 358173,
+  "whole_final_record_sha256": "ace42ea695bae05d07afd1fd7b8e3af227ffc56e4f35e63c11171a205c233a20",
+  "normal_optimized_whole_records_equal": true,
+  "normal_optimized_whole_summaries_and_EXPECTED_equal": true,
+  "source_sha256": {
+    "verify.py": "57f3a783a4559a1a9e9cb3680417b8d99023b9340e0d6ca164a4c03496edb377",
+    "model.py": "e76d44093e4def7d40d46b81adc2b390970833fe43d4a5d0d4192d2365bab7e2",
+    "linear.py": "7cd3c0824add5ba11c6997c9c4e3bc5dba85838929cd4e4bc10ef569263c3821"
+  },
+  "expected_sha256": "b56b8fdbd881564c50427639405e999d64ebe0859d5824c1c106287ae0f73e2a",
+  "modes": [
+    {
+      "mode": "normal",
+      "seconds": 1.9807650269995065,
+      "peak_rss_kib": 24560,
+      "exit_code": 0,
+      "guard_seconds": 45,
+      "native_threads": 1
+    },
+    {
+      "mode": "optimized",
+      "seconds": 2.209982979000415,
+      "peak_rss_kib": 26576,
+      "exit_code": 0,
+      "guard_seconds": 45,
+      "native_threads": 1
+    }
+  ],
+  "native_thread_variables": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1"
+  },
+  "scope_cpu_count": 1,
+  "scope_memory_gib": 2,
+  "maximum_intensive_jobs_at_once": 1,
+  "reproduction": [
+    "python3 -B verify.py --check EXPECTED.json",
+    "python3 -B -O verify.py --check EXPECTED.json"
+  ],
+  "complete_original_systems": [
+    {
+      "affine_dimension": 3,
+      "complete_original_matrices": 5,
+      "n": 4,
+      "name": "near_cube",
+      "original_equations": 55,
+      "original_member_count": 11,
+      "original_rank": 29,
+      "p": 4,
+      "saturated": [],
+      "star_sizes": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "affine_dimension": 25,
+      "complete_original_matrices": 27,
+      "n": 5,
+      "name": "near_cube",
+      "original_equations": 156,
+      "original_member_count": 26,
+      "original_rank": 86,
+      "p": 5,
+      "saturated": [],
+      "star_sizes": [
+        11,
+        11,
+        11,
+        11,
+        11
+      ]
+    },
+    {
+      "affine_dimension": 2,
+      "complete_original_matrices": 4,
+      "n": 4,
+      "name": "near_cube",
+      "original_equations": 66,
+      "original_member_count": 11,
+      "original_rank": 30,
+      "p": 4,
+      "saturated": [
+        [
+          3,
+          12
+        ]
+      ],
+      "star_sizes": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "affine_dimension": 17,
+      "complete_original_matrices": 19,
+      "n": 5,
+      "name": "near_cube",
+      "original_equations": 208,
+      "original_member_count": 26,
+      "original_rank": 94,
+      "p": 5,
+      "saturated": [
+        [
+          3,
+          28
+        ],
+        [
+          5,
+          26
+        ]
+      ],
+      "star_sizes": [
+        11,
+        11,
+        11,
+        11,
+        11
+      ]
+    },
+    {
+      "affine_dimension": 0,
+      "complete_original_matrices": 1,
+      "n": 4,
+      "name": "near_cube",
+      "original_equations": 88,
+      "original_member_count": 11,
+      "original_rank": 32,
+      "p": 4,
+      "saturated": [
+        [
+          3,
+          12
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "star_sizes": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "affine_dimension": 5,
+      "complete_original_matrices": 7,
+      "n": 5,
+      "name": "cycle",
+      "original_equations": 66,
+      "original_member_count": 11,
+      "original_rank": 36,
+      "p": 5,
+      "saturated": [],
+      "star_sizes": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "affine_dimension": 3,
+      "complete_original_matrices": 5,
+      "n": 3,
+      "name": "nonregular_path",
+      "original_equations": 12,
+      "original_member_count": 6,
+      "original_rank": 8,
+      "p": 1,
+      "saturated": [],
+      "star_sizes": [
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "affine_dimension": 1,
+      "complete_original_matrices": 3,
+      "n": 3,
+      "name": "nonregular_path",
+      "original_equations": 18,
+      "original_member_count": 6,
+      "original_rank": 10,
+      "p": 1,
+      "saturated": [
+        [
+          1,
+          6
+        ]
+      ],
+      "star_sizes": [
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "affine_dimension": 0,
+      "complete_original_matrices": 1,
+      "n": 2,
+      "name": "downset",
+      "original_equations": 12,
+      "original_member_count": 4,
+      "original_rank": 5,
+      "p": 2,
+      "saturated": [],
+      "star_sizes": [
+        2,
+        2
+      ]
+    }
+  ],
+  "complete_affine_matrices": 72,
+  "complete_original_entry_comparisons": 33457,
+  "original_maximum_star_actions": 6861,
+  "damaged_inputs_rejected_in_each_mode": [
+    "noninteger_order",
+    "proper_pair_is_not_whole_ground_complement",
+    "duplicate_saturated_pair",
+    "omitted_complement_parameter",
+    "floating_parameter",
+    "wrong_fixed_diagonal",
+    "intersecting_higher_entry",
+    "deleted_actual_empty_row",
+    "supported_row_one_without_star_equations",
+    "saturated_value_without_entire_column_equality",
+    "empty_term_omitted_from_metric",
+    "wrong_exact_metric_inverse",
+    "whole_ground_complements_removed_from_count",
+    "naive_metric_misses_original_cap_failure",
+    "incorrectly_forcing_smaller_point_stars"
+  ],
+  "naive_cap_metric_original_negative_energy": "-156",
+  "conditional_n28": {
+    "L_two_endpoint_gap": "3/400000000",
+    "M_two_endpoint_gap": "3/53687090800000000",
+    "cap_rank": 268435426,
+    "changes_actual_empty_and_unsaturated_complements": true,
+    "cube_radius": "1/7270700478476198400000000",
+    "dimension": 3629809216575,
+    "entire_original_matrix_generated": false,
+    "interval": [
+      9,
+      19
+    ],
+    "invariant_dimension": 36,
+    "invariant_size_pairs": [
+      [
+        9,
+        9
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        9,
+        12
+      ],
+      [
+        9,
+        13
+      ],
+      [
+        9,
+        14
+      ],
+      [
+        9,
+        15
+      ],
+      [
+        9,
+        16
+      ],
+      [
+        9,
+        17
+      ],
+      [
+        9,
+        18
+      ],
+      [
+        9,
+        19
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        10,
+        12
+      ],
+      [
+        10,
+        13
+      ],
+      [
+        10,
+        14
+      ],
+      [
+        10,
+        15
+      ],
+      [
+        10,
+        16
+      ],
+      [
+        10,
+        17
+      ],
+      [
+        10,
+        18
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        11,
+        13
+      ],
+      [
+        11,
+        14
+      ],
+      [
+        11,
+        15
+      ],
+      [
+        11,
+        16
+      ],
+      [
+        11,
+        17
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        12,
+        14
+      ],
+      [
+        12,
+        15
+      ],
+      [
+        12,
+        16
+      ],
+      [
+        13,
+        13
+      ],
+      [
+        13,
+        14
+      ],
+      [
+        13,
+        15
+      ],
+      [
+        14,
+        14
+      ]
+    ],
+    "lower_rank": 263644105,
+    "lower_seed_floor": "1/100000000",
+    "maximum_degree": 354522,
+    "n": 28,
+    "noninvariant_slice_dimension": 3629809216539,
+    "saturated_pair_count": 4791294,
+    "seed": "10208/0 explicit theorem premise, not re-audited here",
+    "seed_source_commit": "8dd0fd663b047d525540a285901461388e696323",
+    "trace_G": 51271151568,
+    "unused_count": 3629809216575
+  },
+  "proof_boundary": "Finite exact controls validate a distinct literal original-equation RREF route, the incidence decoder, full metric/projector/cap identities and controls. General real converse, spectral stability and combinatorial completeness remain written ordinary unformalized proofs.",
+  "review_boundary": "Different algorithms and runtime modes are same-author validation, not independent-person review. Seed10208 is an explicit unreplayed premise, not independently audited here.",
+  "records_omitted": "Whole 358173-byte records are regenerated from source; no private record is a runtime input or part of the compact packet.",
+  "earlier_prototype_gate_failure": "An earlier seven-system optimized run regenerated an identical whole mathematical record but rejected its final expected-summary serialization because tuples were compared with JSON lists. This failed gate is preserved privately, not counted as passing. The final nine-system source uses JSON-native lists and both final whole-record and whole-summary checks pass.",
+  "resource_limit_failure_is_nonexistence": false,
+  "source_publication_verified_by_this_file": false,
+  "graph_commitment_verified_by_this_file": false,
+  "publication_boundary": "This file records completed mathematical validation, not source-remote or graph commitment checks. The graph claim cites the separately verified source commit."
+}
