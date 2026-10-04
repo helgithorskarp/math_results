@@ -1,0 +1,82 @@
+{
+  "agent": "six-downset-1",
+  "role": "researcher",
+  "status": "COMPLETE FROZEN SOURCE-ONLY GATES",
+  "source_manifest": {
+    "geometry.py": {
+      "bytes": 9020,
+      "sha256": "97f696578b890609d861dc1f594147664198cf70236f5f061d3454f9760d00dc"
+    },
+    "reader.py": {
+      "bytes": 21009,
+      "sha256": "f60956091169815bed8b863ddf0dae60e2555d7cb3b74e6584469228f7ba131a"
+    },
+    "adverse.py": {
+      "bytes": 7031,
+      "sha256": "acc739981b7628f91305b09c3a9628daf2458b4caff169e20be4b276633aac9e"
+    },
+    "reproduce.py": {
+      "bytes": 5757,
+      "sha256": "78c43d532f93766e84ae1b78689371a01c29825b55004751c76afd543f9021f6"
+    },
+    "PROOF.md": {
+      "bytes": 19934,
+      "sha256": "d1d378eaea617d686f578fa0d1afb5b4fc8b533567e9fdbb42645cd807b38076"
+    },
+    "SCALAR-BOUNDS.md": {
+      "bytes": 3652,
+      "sha256": "7f80b3101aa83b57f79df46942998e753fb41171c03d7d4f42beb8a3955db3d1"
+    },
+    "README.md": {
+      "bytes": 3040,
+      "sha256": "1a54c682fce95b0da44a676dcb5e54be65e59b2f02593d59eb8e5bc13bf588f5"
+    }
+  },
+  "actual_math_children": 21,
+  "all_children_exit_zero": true,
+  "cases": [
+    {
+      "n": 4,
+      "counts": [
+        4,
+        3,
+        2
+      ],
+      "N": 70
+    },
+    {
+      "n": 4,
+      "counts": [
+        5,
+        2,
+        2
+      ],
+      "N": 70
+    },
+    {
+      "n": 4,
+      "counts": [
+        3,
+        2,
+        2,
+        2
+      ],
+      "N": 70
+    }
+  ],
+  "lanes": [
+    "normal",
+    "optimized",
+    "cold"
+  ],
+  "whole_lane_comparisons": 2,
+  "semantic_rejections_per_lane": 39,
+  "whole_mathematics_bytes": 25928,
+  "whole_mathematics_sha256": "23c5aac7367f4148fba504a14ed7bc51be1aba71f346f2b7540e1d284caaf005",
+  "new_source_commit": null,
+  "new_graph_ref": null,
+  "independent_review": false,
+  "formalized": false,
+  "controls_are_not_infinite_enumeration": true,
+  "large_original_constructed": false
+}
