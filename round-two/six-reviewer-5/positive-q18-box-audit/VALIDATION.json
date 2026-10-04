@@ -1,0 +1,425 @@
+{
+  "actual_agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "complete": true,
+  "positive_replays": 6,
+  "mathematical_rejects": 18,
+  "input_schema_rejects": 8,
+  "whole_fixture_rejects": 4,
+  "preimport_source_rejects": 2,
+  "total_rejects": 32,
+  "serial_child_limit": 1,
+  "native_threads": {
+    "OPENBLAS_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "NUMEXPR_NUM_THREADS": 1,
+    "VECLIB_MAXIMUM_THREADS": 1,
+    "BLIS_NUM_THREADS": 1
+  },
+  "fixed_child_seconds": 45,
+  "resource_settings_unchanged": true,
+  "all_whole_positive_bytes_equal": true,
+  "max_child_seconds": 5.431116,
+  "peak_child_rss_KiB": 39872,
+  "total_seconds": 73.339663,
+  "checks": [
+    {
+      "label": "local-normal",
+      "optimized": false,
+      "status": "PASS",
+      "expected_failure": null,
+      "seconds": 5.431116,
+      "python": "/usr/bin/python3",
+      "record": {
+        "status": "PASS",
+        "complete": true,
+        "whole_record_bytes": 19186,
+        "whole_record_sha256": "27578aaea57e8ab26c3b987d008d557f954a634ccb400a9e1c559ffef6c7fa72",
+        "source_manifest_sha256": "8b2e77eca0e17b14e75208a1f670abc4ab516f107fb70c925709305afd59e927",
+        "seconds": 5.327522384002805,
+        "python": "3.11.2",
+        "optimized": false
+      }
+    },
+    {
+      "label": "local-O",
+      "optimized": true,
+      "status": "PASS",
+      "expected_failure": null,
+      "seconds": 4.501011,
+      "python": "/usr/bin/python3",
+      "record": {
+        "status": "PASS",
+        "complete": true,
+        "whole_record_bytes": 19186,
+        "whole_record_sha256": "27578aaea57e8ab26c3b987d008d557f954a634ccb400a9e1c559ffef6c7fa72",
+        "source_manifest_sha256": "8b2e77eca0e17b14e75208a1f670abc4ab516f107fb70c925709305afd59e927",
+        "seconds": 4.261386928999855,
+        "python": "3.11.2",
+        "optimized": true
+      }
+    },
+    {
+      "label": "cold-normal",
+      "optimized": false,
+      "status": "PASS",
+      "expected_failure": null,
+      "seconds": 3.210614,
+      "python": "/usr/bin/python3",
+      "record": {
+        "status": "PASS",
+        "complete": true,
+        "whole_record_bytes": 19186,
+        "whole_record_sha256": "27578aaea57e8ab26c3b987d008d557f954a634ccb400a9e1c559ffef6c7fa72",
+        "source_manifest_sha256": "8b2e77eca0e17b14e75208a1f670abc4ab516f107fb70c925709305afd59e927",
+        "seconds": 3.07878514299955,
+        "python": "3.11.2",
+        "optimized": false
+      }
+    },
+    {
+      "label": "cold-O",
+      "optimized": true,
+      "status": "PASS",
+      "expected_failure": null,
+      "seconds": 3.62853,
+      "python": "/usr/bin/python3",
+      "record": {
+        "status": "PASS",
+        "complete": true,
+        "whole_record_bytes": 19186,
+        "whole_record_sha256": "27578aaea57e8ab26c3b987d008d557f954a634ccb400a9e1c559ffef6c7fa72",
+        "source_manifest_sha256": "8b2e77eca0e17b14e75208a1f670abc4ab516f107fb70c925709305afd59e927",
+        "seconds": 3.389179518002493,
+        "python": "3.11.2",
+        "optimized": true
+      }
+    },
+    {
+      "label": "second-normal",
+      "optimized": false,
+      "status": "PASS",
+      "expected_failure": null,
+      "seconds": 4.047096,
+      "python": "/scratch/venvs/discovery-team/bin/python",
+      "record": {
+        "status": "PASS",
+        "complete": true,
+        "whole_record_bytes": 19186,
+        "whole_record_sha256": "27578aaea57e8ab26c3b987d008d557f954a634ccb400a9e1c559ffef6c7fa72",
+        "source_manifest_sha256": "8b2e77eca0e17b14e75208a1f670abc4ab516f107fb70c925709305afd59e927",
+        "seconds": 3.9659810699959053,
+        "python": "3.12.14",
+        "optimized": false
+      }
+    },
+    {
+      "label": "second-O",
+      "optimized": true,
+      "status": "PASS",
+      "expected_failure": null,
+      "seconds": 4.238983,
+      "python": "/scratch/venvs/discovery-team/bin/python",
+      "record": {
+        "status": "PASS",
+        "complete": true,
+        "whole_record_bytes": 19186,
+        "whole_record_sha256": "27578aaea57e8ab26c3b987d008d557f954a634ccb400a9e1c559ffef6c7fa72",
+        "source_manifest_sha256": "8b2e77eca0e17b14e75208a1f670abc4ab516f107fb70c925709305afd59e927",
+        "seconds": 3.821877633999975,
+        "python": "3.12.14",
+        "optimized": true
+      }
+    },
+    {
+      "label": "value-normal",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 0.956274,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "value-O",
+      "optimized": true,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 1.086861,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "factor-normal",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 2.846848,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "factor-O",
+      "optimized": true,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 3.291756,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "scalar-normal",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 2.810546,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "scalar-O",
+      "optimized": true,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 2.846332,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "star-normal",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 0.300049,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "star-O",
+      "optimized": true,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 0.475297,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "upper-normal",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 0.261141,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "upper-O",
+      "optimized": true,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 0.443495,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "empty-normal",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 0.316015,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "empty-O",
+      "optimized": true,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 0.853168,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "radius-normal",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 0.887516,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "radius-O",
+      "optimized": true,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 1.094229,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "action-normal",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 2.455397,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "action-O",
+      "optimized": true,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 2.818594,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "loop-normal",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 2.864548,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "loop-O",
+      "optimized": true,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 3.206407,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "float-normal",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 0.114447,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "float-O",
+      "optimized": true,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 0.231346,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "boolean-normal",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 0.079278,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "boolean-O",
+      "optimized": true,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 0.230016,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "key-normal",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 0.081943,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "key-O",
+      "optimized": true,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 0.229267,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "triangle-normal",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 2.176741,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "triangle-O",
+      "optimized": true,
+      "status": "REJECTED",
+      "expected_failure": "",
+      "seconds": 2.436693,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "fixture-float-N",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "whole fixture",
+      "seconds": 3.223101,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "fixture-boolean-N",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "whole fixture",
+      "seconds": 3.348586,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "fixture-drop-block",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "whole fixture",
+      "seconds": 3.11677,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "fixture-alter-bound",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "whole fixture",
+      "seconds": 3.04215,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "source-changed-arithmetic",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "preimport",
+      "seconds": 0.055921,
+      "python": "/usr/bin/python3",
+      "record": null
+    },
+    {
+      "label": "source-omitted-manifest-row",
+      "optimized": false,
+      "status": "REJECTED",
+      "expected_failure": "preimport",
+      "seconds": 0.055704,
+      "python": "/usr/bin/python3",
+      "record": null
+    }
+  ],
+  "negative_detection": "Nonzero exited ValueError and no final record; full default positives validate source/baseline. Specific trace messages are not retained."
+}
