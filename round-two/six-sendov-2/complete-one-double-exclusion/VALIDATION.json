@@ -1,0 +1,112 @@
+{
+  "actual_agent": "six-sendov-2",
+  "all_four_entire_records_identical": true,
+  "complete": true,
+  "fixed_child_guard_seconds": 45,
+  "full_positive_replays": 4,
+  "mathematical_rejections": 8,
+  "mathematical_source_sha256": {
+    "EXPECTED.json": "f10b24899926d3df8ebdaaa516496594e9b2c6a5eda393ac589d5827cc807120",
+    "PARTITION.json": "4929a6eb4d9c0609d3ed5ebc55e770d687327758e24f55eabe0b30b65c19889a",
+    "compare_cas.py": "26e7088737a348bb9adf67139187e6f526356ab08ef39ade7cfe71707f6f10da",
+    "record_io.py": "2065d80f54e7b97376c365b3bd6791ac44e9c106260ca33935cec85a2a66863d",
+    "verify.py": "c9ab4931292dea8d64591af5c2dac5b7c8adba55afaab1360db53521d8b4dd39"
+  },
+  "native_threads": 1,
+  "no_timeout_or_resource_hit": true,
+  "not_independent_peer_review": true,
+  "ordinary_bridges_unformalized": true,
+  "peak_child_rss_KiB": 70632,
+  "python": "3.12.14",
+  "resource_limits_changed": false,
+  "role": "researcher",
+  "runs": [
+    {
+      "intended_rejection": null,
+      "label": "native-local-normal",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 4.132020832999842
+    },
+    {
+      "intended_rejection": null,
+      "label": "native-cold-optimized",
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 4.388620599005662
+    },
+    {
+      "intended_rejection": null,
+      "label": "cas-local-normal",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 7.247412667995377
+    },
+    {
+      "intended_rejection": null,
+      "label": "cas-cold-optimized",
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 9.93809126799897
+    },
+    {
+      "intended_rejection": "whole original critical quartic",
+      "label": "critical-quartic-cubic-term",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.1110883509973064
+    },
+    {
+      "intended_rejection": "entire original factorization",
+      "label": "original-root-factor",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.11667075200239196
+    },
+    {
+      "intended_rejection": "entire degree-five residue numerator",
+      "label": "full-mass-factor-eight",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.10207982399879256
+    },
+    {
+      "intended_rejection": "complete expected record mismatch",
+      "label": "positive-cap-denominator",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 4.07989394699689
+    },
+    {
+      "intended_rejection": "complete expected record mismatch",
+      "label": "negative-height-J",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 4.506193374996656
+    },
+    {
+      "intended_rejection": "whole quartic reverse tensor identity",
+      "label": "whole-reverse-tensor",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 1.2022469479998108
+    },
+    {
+      "intended_rejection": "all original-strip endpoint margins",
+      "label": "original-strip-endpoint",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 1.8740569729998242
+    },
+    {
+      "intended_rejection": "ten-leaf quartic coverage",
+      "label": "missing-quartic-piece",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 1.6272522040017066
+    }
+  ],
+  "serial_cpu_children": 1,
+  "sympy": "1.14.0",
+  "whole_math_sha256": "a40535cb3e306325983a410f3d988d7201649262387d2a7540f0753cdd70800f"
+}
