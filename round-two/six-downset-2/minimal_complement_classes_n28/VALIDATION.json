@@ -1,0 +1,89 @@
+{
+  "agent": "six-downset-2",
+  "role": "researcher",
+  "checked_at": "2026-10-04T11:55:35.581925+00:00",
+  "source_status": "ordinary author proof; new point independently unreviewed; real bridges unformalized",
+  "expected_summary_matches_all_fields_both_modes": true,
+  "whole_math_record_bytes_equal": true,
+  "record_bytes": 1073950,
+  "record_sha256": "14f73159603bbaee647685dfe2b8ce981dd396cb2fac5029981fd73cd03a6b37",
+  "algorithms": [
+    "integer Bareiss",
+    "rational Schur"
+  ],
+  "all_raw_original_full_endpoints": 30,
+  "all_original_floor_tests": 30,
+  "complete_real_degrees": 15,
+  "rejected_semantic_damages_each_mode": 13,
+  "runs": [
+    {
+      "python": "3.12.14",
+      "isolated": 1,
+      "optimize": 0,
+      "native_threads": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "seconds": 20.592444618000172,
+      "peak_rss_kib": 25016,
+      "guard_seconds": 45,
+      "summary_compared_after_math": true,
+      "verifier_check_argument_used": false
+    },
+    {
+      "python": "3.12.14",
+      "isolated": 1,
+      "optimize": 1,
+      "native_threads": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1"
+      },
+      "seconds": 23.16090303100009,
+      "peak_rss_kib": 27572,
+      "guard_seconds": 45,
+      "summary_compared_after_math": true,
+      "verifier_check_argument_used": true
+    }
+  ],
+  "source_sha256": {
+    "verify.py": "df4305f7be58a9aba9491556d217927e35baa6e72b8b77460cad9829391e39c3",
+    "model.py": "3a5e7f841699a27f674cf4c09560d80d86d52cb3443a6242485da503ca824974",
+    "core_check.py": "d3d90a1994746ec3b7440a9faacdc494c9c4f7714634bae9e6ed0bd7c7a408cc",
+    "original_forms.py": "75fc444dce9dbc675d1f56eb5d09734247bcfaeba601c2d826eec6a90594d9b4",
+    "audit.py": "57b3202ef2ba87cbedccc80b74c4e73048c66dda9e4d3d0580a7077604bb2f11",
+    "CERTIFICATE.json": "a6e6136eac8f908c38328a8d3aff50726dd6fa5ee1fa986b59644fa5988ac6f9",
+    "credited/affine.py": "9cdcaa2f616d2e6b63f76cdd5dda4d9d633845da34f8d4ee2646d822deea59b8",
+    "credited/model.py": "9189b8b427be0a51bf46f7c6d338159b266d47ce4242dea03c2ee54888c63b10",
+    "credited/exact.py": "a22f9a4c4a569aed0321c7934a66883d2575ef146bbdba43708023bfd09b17d2",
+    "credited/matrices.py": "4541b4b7669ce706e0142339d614ebb36b46214f137abe2475a9d9ad99fd9588"
+  },
+  "private_public_linkage": {
+    "complete_values_table_empty_equal": true,
+    "all_endpoint_raw_original_metric_entries_compared": 25662,
+    "private_records_are_not_runtime_inputs": true,
+    "n26_motion_bound_used": false
+  },
+  "prior_full_rref_guard_retained": true,
+  "star_validation": "Separate full original triangular system and every table entry on38 affine probes",
+  "spectral_gap": {
+    "epsilon": "1/100000000",
+    "original_upper_floor_scope": "Every complete original sector",
+    "lower_floor_scope": "Selected complementary planes; ordinary orthogonality bridge in PROOF.md supplies the positive eigenvalue bound",
+    "M_gap_both_nonendpoint_sides": "1/13421772700000000",
+    "new_stability_box_claim": false
+  },
+  "cpu_scope": 1,
+  "memory_scope_bytes": 2147483648,
+  "serial_mathematical_children": 1,
+  "no_resource_escalation": true,
+  "operational_failure_is_mathematical_nonexistence": false,
+  "bulky_records_excluded": true
+}
