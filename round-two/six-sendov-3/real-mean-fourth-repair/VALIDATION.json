@@ -1,0 +1,374 @@
+{
+  "agent": "six-sendov-3",
+  "role": "researcher",
+  "complete": true,
+  "python": "3.12.14",
+  "math_source_hashes": {
+    "arithmetic.py": "5527bcc330398f6618f10e1705e9ed56133e61e94de9155faa148e84e09539e2",
+    "series.py": "086ed53d71fce43b9126ceed773ea60e3fecb67788a8820ed24cf0219ff0b225",
+    "means.py": "210b8e1be20efef1ddf9a0d1c0f4231d3883105a07aab37bd752b22f595e7792",
+    "verify.py": "b90e62caf72ac62ef55fa469ec3d5a4fc9cd5b12594215e983583d3f20594dab",
+    "EXPECTED.json": "4a8511d05284bec9c83f21905a5cb1e0bdc2258f36043722b4fefcdca3a9bb92"
+  },
+  "native_threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "maximum_simultaneous_mathematical_children": 1,
+  "per_child_timeout_seconds": 45,
+  "positive_runs": 4,
+  "intended_rejections": 26,
+  "peak_child_kib": 22364,
+  "all_cases": [
+    {
+      "label": "local-N",
+      "optimized": false,
+      "intended_reject": false,
+      "exit_code": 0,
+      "seconds": 16.323013424000237,
+      "intended_gate": null,
+      "diagnostic_last_line": null,
+      "whole_output": {
+        "agent": "six-sendov-3",
+        "analytic_bridges_unformalized": true,
+        "complete": true,
+        "independent_review": false,
+        "positive_rational_signs": 17,
+        "role": "researcher",
+        "whole_baseline_sha256": "d00486db2576f1be9de39483d374b68c4223a8193bf0f7374bd37b3c9d14cccd",
+        "whole_identities": 250,
+        "whole_record_bytes": 72980,
+        "whole_record_sha256": "c5950e67532f26d5d4cd455147fa44abbe125ed5309011f8ee660c67e54bced5"
+      }
+    },
+    {
+      "label": "cold-N",
+      "optimized": false,
+      "intended_reject": false,
+      "exit_code": 0,
+      "seconds": 15.62311495600079,
+      "intended_gate": null,
+      "diagnostic_last_line": null,
+      "whole_output": {
+        "agent": "six-sendov-3",
+        "analytic_bridges_unformalized": true,
+        "complete": true,
+        "independent_review": false,
+        "positive_rational_signs": 17,
+        "role": "researcher",
+        "whole_baseline_sha256": "d00486db2576f1be9de39483d374b68c4223a8193bf0f7374bd37b3c9d14cccd",
+        "whole_identities": 250,
+        "whole_record_bytes": 72980,
+        "whole_record_sha256": "c5950e67532f26d5d4cd455147fa44abbe125ed5309011f8ee660c67e54bced5"
+      }
+    },
+    {
+      "label": "math-unbalanced_mean-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 5.54413872099758,
+      "intended_gate": "ENTIRE balanced eta\u00b2 critical mean",
+      "diagnostic_last_line": "arithmetic.CertificateError: WHOLE coefficient identity ENTIRE balanced eta\u00b2 critical mean",
+      "whole_output": null
+    },
+    {
+      "label": "math-freeze_third-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 9.095906786998967,
+      "intended_gate": "ALL4 actual third normals repaired",
+      "diagnostic_last_line": "arithmetic.CertificateError: WHOLE coefficient identity ALL4 actual third normals repaired/3",
+      "whole_output": null
+    },
+    {
+      "label": "math-omit_pair_compensation-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 12.209364951002499,
+      "intended_gate": "ALL4 actual third normals repaired",
+      "diagnostic_last_line": "arithmetic.CertificateError: WHOLE coefficient identity ALL4 actual third normals repaired/3",
+      "whole_output": null
+    },
+    {
+      "label": "math-drop_quadratic_pair-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 16.284519070999522,
+      "intended_gate": "ALL4 active actual normals through4",
+      "diagnostic_last_line": "arithmetic.CertificateError: WHOLE coefficient identity ALL4 active actual normals through4/3/4",
+      "whole_output": null
+    },
+    {
+      "label": "math-wrong_cost_linear-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 13.562933950001025,
+      "intended_gate": "ENTIRE repaired quadratic fourth cost",
+      "diagnostic_last_line": "arithmetic.CertificateError: WHOLE coefficient identity ENTIRE repaired quadratic fourth cost",
+      "whole_output": null
+    },
+    {
+      "label": "math-wrong_dual-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 15.184147624000616,
+      "intended_gate": "ENTIRE repaired scalar/positive-dual elimination",
+      "diagnostic_last_line": "arithmetic.CertificateError: WHOLE coefficient identity ENTIRE repaired scalar/positive-dual elimination",
+      "whole_output": null
+    },
+    {
+      "label": "math-outward_ninth-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 15.240398894999089,
+      "intended_gate": "ENTIRE epsilon9 inward primitive",
+      "diagnostic_last_line": "arithmetic.CertificateError: WHOLE coefficient identity ENTIRE epsilon9 inward primitive",
+      "whole_output": null
+    },
+    {
+      "label": "math-wrong_positivity-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 16.241800271996908,
+      "intended_gate": "intentional strict physical-sign damage",
+      "diagnostic_last_line": "arithmetic.CertificateError: intentional strict physical-sign damage",
+      "whole_output": null
+    },
+    {
+      "label": "fixture-mean_linear_sign-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 16.487222165000276,
+      "intended_gate": "WHOLE CANONICAL",
+      "diagnostic_last_line": "ValueError: WHOLE CANONICAL value record/constants/L/0/1/0",
+      "whole_output": null
+    },
+    {
+      "label": "fixture-dropped_root_coefficient-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 15.57496490399717,
+      "intended_gate": "WHOLE CANONICAL",
+      "diagnostic_last_line": "ValueError: WHOLE CANONICAL length record/whole_all_nine_original_roots_epsilon0to9/3/all_root_coefficients/8/0",
+      "whole_output": null
+    },
+    {
+      "label": "fixture-boolean_as_integer-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 11.703589647000626,
+      "intended_gate": "WHOLE CANONICAL",
+      "diagnostic_last_line": "ValueError: WHOLE CANONICAL strict type record/schema",
+      "whole_output": null
+    },
+    {
+      "label": "fixture-sign_as_number-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 10.842440222000732,
+      "intended_gate": "WHOLE CANONICAL",
+      "diagnostic_last_line": "ValueError: WHOLE CANONICAL strict type record/positive_rational_signs/0/rational_lower",
+      "whole_output": null
+    },
+    {
+      "label": "local-O",
+      "optimized": true,
+      "intended_reject": false,
+      "exit_code": 0,
+      "seconds": 13.24551996199807,
+      "intended_gate": null,
+      "diagnostic_last_line": null,
+      "whole_output": {
+        "agent": "six-sendov-3",
+        "analytic_bridges_unformalized": true,
+        "complete": true,
+        "independent_review": false,
+        "positive_rational_signs": 17,
+        "role": "researcher",
+        "whole_baseline_sha256": "d00486db2576f1be9de39483d374b68c4223a8193bf0f7374bd37b3c9d14cccd",
+        "whole_identities": 250,
+        "whole_record_bytes": 72980,
+        "whole_record_sha256": "c5950e67532f26d5d4cd455147fa44abbe125ed5309011f8ee660c67e54bced5"
+      }
+    },
+    {
+      "label": "cold-O",
+      "optimized": true,
+      "intended_reject": false,
+      "exit_code": 0,
+      "seconds": 12.154527766000683,
+      "intended_gate": null,
+      "diagnostic_last_line": null,
+      "whole_output": {
+        "agent": "six-sendov-3",
+        "analytic_bridges_unformalized": true,
+        "complete": true,
+        "independent_review": false,
+        "positive_rational_signs": 17,
+        "role": "researcher",
+        "whole_baseline_sha256": "d00486db2576f1be9de39483d374b68c4223a8193bf0f7374bd37b3c9d14cccd",
+        "whole_identities": 250,
+        "whole_record_bytes": 72980,
+        "whole_record_sha256": "c5950e67532f26d5d4cd455147fa44abbe125ed5309011f8ee660c67e54bced5"
+      }
+    },
+    {
+      "label": "math-unbalanced_mean-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 4.479649586999585,
+      "intended_gate": "ENTIRE balanced eta\u00b2 critical mean",
+      "diagnostic_last_line": "arithmetic.CertificateError: WHOLE coefficient identity ENTIRE balanced eta\u00b2 critical mean",
+      "whole_output": null
+    },
+    {
+      "label": "math-freeze_third-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 6.847675347999029,
+      "intended_gate": "ALL4 actual third normals repaired",
+      "diagnostic_last_line": "arithmetic.CertificateError: WHOLE coefficient identity ALL4 actual third normals repaired/3",
+      "whole_output": null
+    },
+    {
+      "label": "math-omit_pair_compensation-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 7.571877491001942,
+      "intended_gate": "ALL4 actual third normals repaired",
+      "diagnostic_last_line": "arithmetic.CertificateError: WHOLE coefficient identity ALL4 actual third normals repaired/3",
+      "whole_output": null
+    },
+    {
+      "label": "math-drop_quadratic_pair-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 9.62423958400177,
+      "intended_gate": "ALL4 active actual normals through4",
+      "diagnostic_last_line": "arithmetic.CertificateError: WHOLE coefficient identity ALL4 active actual normals through4/3/4",
+      "whole_output": null
+    },
+    {
+      "label": "math-wrong_cost_linear-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 9.45803710400287,
+      "intended_gate": "ENTIRE repaired quadratic fourth cost",
+      "diagnostic_last_line": "arithmetic.CertificateError: WHOLE coefficient identity ENTIRE repaired quadratic fourth cost",
+      "whole_output": null
+    },
+    {
+      "label": "math-wrong_dual-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 11.638944059002824,
+      "intended_gate": "ENTIRE repaired scalar/positive-dual elimination",
+      "diagnostic_last_line": "arithmetic.CertificateError: WHOLE coefficient identity ENTIRE repaired scalar/positive-dual elimination",
+      "whole_output": null
+    },
+    {
+      "label": "math-outward_ninth-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 9.844125872001314,
+      "intended_gate": "ENTIRE epsilon9 inward primitive",
+      "diagnostic_last_line": "arithmetic.CertificateError: WHOLE coefficient identity ENTIRE epsilon9 inward primitive",
+      "whole_output": null
+    },
+    {
+      "label": "math-wrong_positivity-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 8.686184901998786,
+      "intended_gate": "intentional strict physical-sign damage",
+      "diagnostic_last_line": "arithmetic.CertificateError: intentional strict physical-sign damage",
+      "whole_output": null
+    },
+    {
+      "label": "fixture-mean_linear_sign-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 9.838890343999083,
+      "intended_gate": "WHOLE CANONICAL",
+      "diagnostic_last_line": "ValueError: WHOLE CANONICAL value record/constants/L/0/1/0",
+      "whole_output": null
+    },
+    {
+      "label": "fixture-dropped_root_coefficient-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 9.115474883001298,
+      "intended_gate": "WHOLE CANONICAL",
+      "diagnostic_last_line": "ValueError: WHOLE CANONICAL length record/whole_all_nine_original_roots_epsilon0to9/3/all_root_coefficients/8/0",
+      "whole_output": null
+    },
+    {
+      "label": "fixture-boolean_as_integer-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 8.800279928000236,
+      "intended_gate": "WHOLE CANONICAL",
+      "diagnostic_last_line": "ValueError: WHOLE CANONICAL strict type record/schema",
+      "whole_output": null
+    },
+    {
+      "label": "fixture-sign_as_number-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 8.17666656500296,
+      "intended_gate": "WHOLE CANONICAL",
+      "diagnostic_last_line": "ValueError: WHOLE CANONICAL strict type record/positive_rational_signs/0/rational_lower",
+      "whole_output": null
+    },
+    {
+      "label": "preimport-source-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 0.05589253500147606,
+      "intended_gate": "SOURCE SHA256 means.py",
+      "diagnostic_last_line": "ValueError: SOURCE SHA256 means.py",
+      "whole_output": null
+    },
+    {
+      "label": "preimport-source-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 0.2276110359998711,
+      "intended_gate": "SOURCE SHA256 means.py",
+      "diagnostic_last_line": "ValueError: SOURCE SHA256 means.py",
+      "whole_output": null
+    }
+  ],
+  "analytic_bridges_unformalized": true,
+  "independent_review": false
+}
