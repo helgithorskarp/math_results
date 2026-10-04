@@ -1,0 +1,284 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "python": "Python 3.12.14",
+  "native_threads": 1,
+  "serial_children": true,
+  "fixed_child_guard_seconds": 45,
+  "positives": 4,
+  "rejections": 30,
+  "max_child_seconds": 4.749777,
+  "peak_child_RSS_KiB": 25208,
+  "whole_record_bytes": 187990,
+  "whole_record_sha256": "f6baf6dbf065651bbab20aaa4b59e8855f2f9455bc96f99ac84c5ef36bb38414",
+  "no_resource_hit": true,
+  "source_seal_unchanged": true,
+  "rows": [
+    {
+      "label": "local/normal",
+      "exit_code": 0,
+      "seconds": 3.728362,
+      "intended_outcome": true,
+      "whole_receipt": {
+        "agent": "six-reviewer-1",
+        "all_source_and_entire_record_checks_passed": true,
+        "checks": 83,
+        "role": "independent mathematical reviewer",
+        "whole_record_bytes": 187990,
+        "whole_record_sha256": "f6baf6dbf065651bbab20aaa4b59e8855f2f9455bc96f99ac84c5ef36bb38414"
+      }
+    },
+    {
+      "label": "local/O",
+      "exit_code": 0,
+      "seconds": 4.298823,
+      "intended_outcome": true,
+      "whole_receipt": {
+        "agent": "six-reviewer-1",
+        "all_source_and_entire_record_checks_passed": true,
+        "checks": 83,
+        "role": "independent mathematical reviewer",
+        "whole_record_bytes": 187990,
+        "whole_record_sha256": "f6baf6dbf065651bbab20aaa4b59e8855f2f9455bc96f99ac84c5ef36bb38414"
+      }
+    },
+    {
+      "label": "empty-relocated/normal",
+      "exit_code": 0,
+      "seconds": 3.943373,
+      "intended_outcome": true,
+      "whole_receipt": {
+        "agent": "six-reviewer-1",
+        "all_source_and_entire_record_checks_passed": true,
+        "checks": 83,
+        "role": "independent mathematical reviewer",
+        "whole_record_bytes": 187990,
+        "whole_record_sha256": "f6baf6dbf065651bbab20aaa4b59e8855f2f9455bc96f99ac84c5ef36bb38414"
+      }
+    },
+    {
+      "label": "empty-relocated/O",
+      "exit_code": 0,
+      "seconds": 3.914783,
+      "intended_outcome": true,
+      "whole_receipt": {
+        "agent": "six-reviewer-1",
+        "all_source_and_entire_record_checks_passed": true,
+        "checks": 83,
+        "role": "independent mathematical reviewer",
+        "whole_record_bytes": 187990,
+        "whole_record_sha256": "f6baf6dbf065651bbab20aaa4b59e8855f2f9455bc96f99ac84c5ef36bb38414"
+      }
+    },
+    {
+      "label": "freeze-third/normal",
+      "exit_code": 1,
+      "seconds": 3.152796,
+      "intended_outcome": true,
+      "error": "ValueError: moving third U3 column was discarded"
+    },
+    {
+      "label": "freeze-third/O",
+      "exit_code": 1,
+      "seconds": 4.749777,
+      "intended_outcome": true,
+      "error": "ValueError: moving third U3 column was discarded"
+    },
+    {
+      "label": "third-cross/normal",
+      "exit_code": 1,
+      "seconds": 0.954588,
+      "intended_outcome": true,
+      "error": "ValueError: all moving root residuals 3"
+    },
+    {
+      "label": "third-cross/O",
+      "exit_code": 1,
+      "seconds": 1.083026,
+      "intended_outcome": true,
+      "error": "ValueError: all moving root residuals 3"
+    },
+    {
+      "label": "omit-mean/normal",
+      "exit_code": 1,
+      "seconds": 2.424821,
+      "intended_outcome": true,
+      "error": "ValueError: full stationary third coefficient and two normalization payments"
+    },
+    {
+      "label": "omit-mean/O",
+      "exit_code": 1,
+      "seconds": 2.514043,
+      "intended_outcome": true,
+      "error": "ValueError: full stationary third coefficient and two normalization payments"
+    },
+    {
+      "label": "omit-norm/normal",
+      "exit_code": 1,
+      "seconds": 2.46787,
+      "intended_outcome": true,
+      "error": "ValueError: full stationary third coefficient and two normalization payments"
+    },
+    {
+      "label": "omit-norm/O",
+      "exit_code": 1,
+      "seconds": 2.68369,
+      "intended_outcome": true,
+      "error": "ValueError: full stationary third coefficient and two normalization payments"
+    },
+    {
+      "label": "mixed-sign/normal",
+      "exit_code": 1,
+      "seconds": 2.814651,
+      "intended_outcome": true,
+      "error": "ValueError: whole signed mixed projection under only exact constraints"
+    },
+    {
+      "label": "mixed-sign/O",
+      "exit_code": 1,
+      "seconds": 4.022062,
+      "intended_outcome": true,
+      "error": "ValueError: whole signed mixed projection under only exact constraints"
+    },
+    {
+      "label": "chart-kappa/normal",
+      "exit_code": 1,
+      "seconds": 3.833559,
+      "intended_outcome": true,
+      "error": "ValueError: whole positive definite local quadratic form"
+    },
+    {
+      "label": "chart-kappa/O",
+      "exit_code": 1,
+      "seconds": 3.575577,
+      "intended_outcome": true,
+      "error": "ValueError: whole positive definite local quadratic form"
+    },
+    {
+      "label": "fixture-extra-key/normal",
+      "exit_code": 1,
+      "seconds": 0.066958,
+      "intended_outcome": true,
+      "error": "ValueError: entire fixture schema"
+    },
+    {
+      "label": "fixture-extra-key/O",
+      "exit_code": 1,
+      "seconds": 0.255386,
+      "intended_outcome": true,
+      "error": "ValueError: entire fixture schema"
+    },
+    {
+      "label": "fixture-bool-checks/normal",
+      "exit_code": 1,
+      "seconds": 0.052055,
+      "intended_outcome": true,
+      "error": "ValueError: strict typed full record sizes"
+    },
+    {
+      "label": "fixture-bool-checks/O",
+      "exit_code": 1,
+      "seconds": 0.228973,
+      "intended_outcome": true,
+      "error": "ValueError: strict typed full record sizes"
+    },
+    {
+      "label": "fixture-bool-size/normal",
+      "exit_code": 1,
+      "seconds": 0.050447,
+      "intended_outcome": true,
+      "error": "ValueError: strict typed full record sizes"
+    },
+    {
+      "label": "fixture-bool-size/O",
+      "exit_code": 1,
+      "seconds": 0.223278,
+      "intended_outcome": true,
+      "error": "ValueError: strict typed full record sizes"
+    },
+    {
+      "label": "fixture-digest/normal",
+      "exit_code": 1,
+      "seconds": 3.4357,
+      "intended_outcome": true,
+      "error": "ValueError: entire exact independent record"
+    },
+    {
+      "label": "fixture-digest/O",
+      "exit_code": 1,
+      "seconds": 4.062688,
+      "intended_outcome": true,
+      "error": "ValueError: entire exact independent record"
+    },
+    {
+      "label": "fixture-source-hash/normal",
+      "exit_code": 1,
+      "seconds": 0.050751,
+      "intended_outcome": true,
+      "error": "ValueError: preimport source derive.py"
+    },
+    {
+      "label": "fixture-source-hash/O",
+      "exit_code": 1,
+      "seconds": 0.224743,
+      "intended_outcome": true,
+      "error": "ValueError: preimport source derive.py"
+    },
+    {
+      "label": "fixture-missing-source/normal",
+      "exit_code": 1,
+      "seconds": 0.051386,
+      "intended_outcome": true,
+      "error": "ValueError: entire source gate schema"
+    },
+    {
+      "label": "fixture-missing-source/O",
+      "exit_code": 1,
+      "seconds": 0.232242,
+      "intended_outcome": true,
+      "error": "ValueError: entire source gate schema"
+    },
+    {
+      "label": "fixture-missing-digest/normal",
+      "exit_code": 1,
+      "seconds": 0.053965,
+      "intended_outcome": true,
+      "error": "ValueError: entire fixture schema"
+    },
+    {
+      "label": "fixture-missing-digest/O",
+      "exit_code": 1,
+      "seconds": 0.223552,
+      "intended_outcome": true,
+      "error": "ValueError: entire fixture schema"
+    },
+    {
+      "label": "fixture-wrong-agent/normal",
+      "exit_code": 1,
+      "seconds": 0.052458,
+      "intended_outcome": true,
+      "error": "ValueError: explicit methodology identity"
+    },
+    {
+      "label": "fixture-wrong-agent/O",
+      "exit_code": 1,
+      "seconds": 0.224777,
+      "intended_outcome": true,
+      "error": "ValueError: explicit methodology identity"
+    },
+    {
+      "label": "preimport-source/normal",
+      "exit_code": 1,
+      "seconds": 0.049747,
+      "intended_outcome": true,
+      "error": "ValueError: preimport source derive.py"
+    },
+    {
+      "label": "preimport-source/O",
+      "exit_code": 1,
+      "seconds": 0.231494,
+      "intended_outcome": true,
+      "error": "ValueError: preimport source derive.py"
+    }
+  ]
+}
