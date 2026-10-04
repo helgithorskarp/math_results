@@ -1,0 +1,125 @@
+{
+  "CPU_intensive_children_at_once": 1,
+  "agent": "six-reviewer-1",
+  "children_max_rss_KiB": 19060,
+  "fixed_child_timeout_seconds": 45,
+  "gate_count": 64,
+  "intended_rejections": [
+    {
+      "defect": "drop-inverse-tail",
+      "gate": "full inverse identity in original x",
+      "rejected": true
+    },
+    {
+      "defect": "underpay-root",
+      "gate": "refined root payment margin",
+      "rejected": true
+    },
+    {
+      "defect": "underpay-Taylor",
+      "gate": "refined Taylor payment margin",
+      "rejected": true
+    },
+    {
+      "defect": "omit-seven-remainders",
+      "gate": "original entire eight-root Taylor loss",
+      "rejected": true
+    },
+    {
+      "defect": "wrong-bound-derivative",
+      "gate": "entire nonlinear angular bound derivative",
+      "rejected": true
+    },
+    {
+      "defect": "delete-original-position",
+      "gate": "original eight-position census 1/100",
+      "rejected": true
+    },
+    {
+      "defect": "wrong-full-mass-normalization",
+      "gate": "literal full central mass 1/100",
+      "rejected": true
+    },
+    {
+      "defect": "newline",
+      "gate": "entire deterministic expected record mismatch",
+      "rejected": true
+    },
+    {
+      "defect": "changed-matrix",
+      "gate": "entire deterministic expected record mismatch",
+      "rejected": true
+    },
+    {
+      "defect": "integer-type",
+      "gate": "entire deterministic expected record mismatch",
+      "rejected": true
+    },
+    {
+      "defect": "preimport algebra.py",
+      "gate": "primary source seal algebra.py",
+      "rejected": true
+    },
+    {
+      "defect": "preimport verify.py",
+      "gate": "primary source seal verify.py",
+      "rejected": true
+    }
+  ],
+  "max_child_seconds": 0.224811,
+  "native_threads": 1,
+  "ordinary_bridges_formalized": false,
+  "positives": [
+    {
+      "cold": false,
+      "complete_record": {
+        "bytes": 18667,
+        "gate_count": 64,
+        "sha256": "eec3506f64cde2a32596b0dcff22e324c0b15980413d5dda1be494707e8f3405",
+        "whole_record_equal": true
+      },
+      "optimized": false,
+      "seconds": 0.097365
+    },
+    {
+      "cold": false,
+      "complete_record": {
+        "bytes": 18667,
+        "gate_count": 64,
+        "sha256": "eec3506f64cde2a32596b0dcff22e324c0b15980413d5dda1be494707e8f3405",
+        "whole_record_equal": true
+      },
+      "optimized": true,
+      "seconds": 0.224811
+    },
+    {
+      "cold": true,
+      "complete_record": {
+        "bytes": 18667,
+        "gate_count": 64,
+        "sha256": "eec3506f64cde2a32596b0dcff22e324c0b15980413d5dda1be494707e8f3405",
+        "whole_record_equal": true
+      },
+      "optimized": false,
+      "seconds": 0.085839
+    },
+    {
+      "cold": true,
+      "complete_record": {
+        "bytes": 18667,
+        "gate_count": 64,
+        "sha256": "eec3506f64cde2a32596b0dcff22e324c0b15980413d5dda1be494707e8f3405",
+        "whole_record_equal": true
+      },
+      "optimized": true,
+      "seconds": 0.210454
+    }
+  ],
+  "process_scope": "existing1CPU2GiB128tasks; unchanged",
+  "python": "3.12.14",
+  "record_bytes": 18667,
+  "record_sha256": "eec3506f64cde2a32596b0dcff22e324c0b15980413d5dda1be494707e8f3405",
+  "role": "independent mathematical reviewer",
+  "target_author_executable_fixture_or_validation_used": false,
+  "whole_record_compared": true
+}
