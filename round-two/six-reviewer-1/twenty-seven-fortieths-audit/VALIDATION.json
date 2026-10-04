@@ -1,0 +1,452 @@
+{
+  "actual_refined_gap": "1/131072",
+  "agent": "six-reviewer-1",
+  "all_native_threads": 1,
+  "children_serial": true,
+  "entire_literal_outputs_equal": true,
+  "entire_records_equal": true,
+  "entire_refinement_records_equal": true,
+  "fixed_child_timeout_seconds": 45,
+  "literal_bytes": 17130,
+  "literal_sha256": "06aa71cc2e0d011fa4f987fa74b1733ff93912c31f77ccc2fd6596d83fbe4058",
+  "max_child_seconds": 14.997729,
+  "peak_child_RSS_KiB": 49600,
+  "positive_children": [
+    {
+      "exit": 0,
+      "label": "local-normal",
+      "seconds": 12.491158,
+      "stdout_bytes": 12362,
+      "stdout_sha256": "c801e266aff6d0cc92fdd472f5383d4652dec503597d564a61da31b368a86f4f"
+    },
+    {
+      "exit": 0,
+      "label": "literal-local-normal",
+      "seconds": 0.075942,
+      "stdout_bytes": 17130,
+      "stdout_sha256": "06aa71cc2e0d011fa4f987fa74b1733ff93912c31f77ccc2fd6596d83fbe4058"
+    },
+    {
+      "exit": 0,
+      "label": "refined-local-normal",
+      "seconds": 11.657379,
+      "stdout_bytes": 3203,
+      "stdout_sha256": "26c05a9c2ed116e81369cf603b0932eed0a71ef5fea50f5223b3a174ec8292c4"
+    },
+    {
+      "exit": 0,
+      "label": "local-O",
+      "seconds": 13.080991,
+      "stdout_bytes": 12362,
+      "stdout_sha256": "c801e266aff6d0cc92fdd472f5383d4652dec503597d564a61da31b368a86f4f"
+    },
+    {
+      "exit": 0,
+      "label": "literal-local-O",
+      "seconds": 0.276442,
+      "stdout_bytes": 17130,
+      "stdout_sha256": "06aa71cc2e0d011fa4f987fa74b1733ff93912c31f77ccc2fd6596d83fbe4058"
+    },
+    {
+      "exit": 0,
+      "label": "refined-local-O",
+      "seconds": 12.607136,
+      "stdout_bytes": 3203,
+      "stdout_sha256": "26c05a9c2ed116e81369cf603b0932eed0a71ef5fea50f5223b3a174ec8292c4"
+    },
+    {
+      "exit": 0,
+      "label": "cold-normal",
+      "seconds": 12.388605,
+      "stdout_bytes": 12362,
+      "stdout_sha256": "c801e266aff6d0cc92fdd472f5383d4652dec503597d564a61da31b368a86f4f"
+    },
+    {
+      "exit": 0,
+      "label": "literal-cold-normal",
+      "seconds": 0.07677,
+      "stdout_bytes": 17130,
+      "stdout_sha256": "06aa71cc2e0d011fa4f987fa74b1733ff93912c31f77ccc2fd6596d83fbe4058"
+    },
+    {
+      "exit": 0,
+      "label": "refined-cold-normal",
+      "seconds": 11.463176,
+      "stdout_bytes": 3203,
+      "stdout_sha256": "26c05a9c2ed116e81369cf603b0932eed0a71ef5fea50f5223b3a174ec8292c4"
+    },
+    {
+      "exit": 0,
+      "label": "cold-O",
+      "seconds": 11.58768,
+      "stdout_bytes": 12362,
+      "stdout_sha256": "c801e266aff6d0cc92fdd472f5383d4652dec503597d564a61da31b368a86f4f"
+    },
+    {
+      "exit": 0,
+      "label": "literal-cold-O",
+      "seconds": 0.169426,
+      "stdout_bytes": 17130,
+      "stdout_sha256": "06aa71cc2e0d011fa4f987fa74b1733ff93912c31f77ccc2fd6596d83fbe4058"
+    },
+    {
+      "exit": 0,
+      "label": "refined-cold-O",
+      "seconds": 11.210752,
+      "stdout_bytes": 3203,
+      "stdout_sha256": "26c05a9c2ed116e81369cf603b0932eed0a71ef5fea50f5223b3a174ec8292c4"
+    }
+  ],
+  "post_format_whole_normal_O_rechecks": [
+    {
+      "entire_record_bytes_equal": true,
+      "exit": 0,
+      "label": "post-format-normal",
+      "seconds": 12.295144
+    },
+    {
+      "entire_record_bytes_equal": true,
+      "exit": 0,
+      "label": "post-format-O",
+      "seconds": 12.849403
+    }
+  ],
+  "primary_seals_unchanged": true,
+  "python": "3.12.14",
+  "record_bytes": 5651685,
+  "record_sha256": "24d7c11db232471bb3c23a602f90f694356ce4876ef9892f3dfa97373450f6d4",
+  "refinement_record_bytes": 46297,
+  "refinement_record_sha256": "7049a3500d5718a87dbd15687ec2c0d4cbd8c3720000d967bc43629821882f58",
+  "rejections": [
+    {
+      "exit": 1,
+      "intended_rejection": "all five positive lower-exponential terms",
+      "label": "damage-product-lost-fifth-normal",
+      "seconds": 0.547687,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "all five positive lower-exponential terms",
+      "label": "damage-product-lost-fifth-O",
+      "seconds": 0.670964,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "positive exponential reciprocal direction",
+      "label": "damage-product-inverted-exponential-normal",
+      "seconds": 0.578303,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "positive exponential reciprocal direction",
+      "label": "damage-product-inverted-exponential-O",
+      "seconds": 0.701203,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "whole clipped leaf surpluses",
+      "label": "damage-gap-overreach-normal",
+      "seconds": 11.28299,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "whole clipped leaf surpluses",
+      "label": "damage-gap-overreach-O",
+      "seconds": 12.019952,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "whole typed independent summary and record seal",
+      "label": "damage-lost-eighth-normal",
+      "seconds": 11.058291,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "whole typed independent summary and record seal",
+      "label": "damage-lost-eighth-O",
+      "seconds": 11.999164,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "whole typed independent summary and record seal",
+      "label": "damage-beta-as-norm-normal",
+      "seconds": 10.813393,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "whole typed independent summary and record seal",
+      "label": "damage-beta-as-norm-O",
+      "seconds": 10.969086,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "whole typed independent summary and record seal",
+      "label": "damage-mean-lost-eighth-normal",
+      "seconds": 11.192142,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "whole typed independent summary and record seal",
+      "label": "damage-mean-lost-eighth-O",
+      "seconds": 11.110234,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "whole typed independent summary and record seal",
+      "label": "damage-mean-wrong-denominator-normal",
+      "seconds": 10.919242,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "whole typed independent summary and record seal",
+      "label": "damage-mean-wrong-denominator-O",
+      "seconds": 12.78539,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "whole typed independent summary and record seal",
+      "label": "damage-lost-phase-coupling-normal",
+      "seconds": 9.36279,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "whole typed independent summary and record seal",
+      "label": "damage-lost-phase-coupling-O",
+      "seconds": 9.519479,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "whole closed root domain",
+      "label": "cover-root-radius-normal",
+      "seconds": 0.108828,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "whole closed root domain",
+      "label": "cover-root-radius-O",
+      "seconds": 0.307488,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "cut axis",
+      "label": "cover-boolean-axis-normal",
+      "seconds": 0.73319,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "cut axis",
+      "label": "cover-boolean-axis-O",
+      "seconds": 0.934483,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "canonical rational",
+      "label": "cover-noncanonical-cut-normal",
+      "seconds": 0.588895,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "canonical rational",
+      "label": "cover-noncanonical-cut-O",
+      "seconds": 0.83696,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "unvisited/missing branch",
+      "label": "cover-missing-last-leaf-normal",
+      "seconds": 10.579339,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "unvisited/missing branch",
+      "label": "cover-missing-last-leaf-O",
+      "seconds": 11.609249,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "all listed and reachable nodes exactly agree",
+      "label": "cover-unreachable-extra-normal",
+      "seconds": 12.054913,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "all listed and reachable nodes exactly agree",
+      "label": "cover-unreachable-extra-O",
+      "seconds": 14.79001,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "leaf scope/type",
+      "label": "cover-unknown-status-normal",
+      "seconds": 0.077066,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "leaf scope/type",
+      "label": "cover-unknown-status-O",
+      "seconds": 0.34874,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "complete cover schema",
+      "label": "cover-extra-schema-normal",
+      "seconds": 0.077838,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "complete cover schema",
+      "label": "cover-extra-schema-O",
+      "seconds": 0.315542,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "whole typed independent summary and record seal",
+      "label": "expected-type-normal",
+      "seconds": 13.623679,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "whole typed independent summary and record seal",
+      "label": "expected-type-O",
+      "seconds": 11.202173,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "all eight exact seven-factor coefficients",
+      "label": "refined-damage-lost-terminal-normal",
+      "seconds": 11.574717,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "all eight exact seven-factor coefficients",
+      "label": "refined-damage-lost-terminal-O",
+      "seconds": 11.918882,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "clipped product ratio loss direction",
+      "label": "refined-damage-wrong-product-direction-normal",
+      "seconds": 14.997729,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "clipped product ratio loss direction",
+      "label": "refined-damage-wrong-product-direction-O",
+      "seconds": 11.275387,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "refined gap against every entire defining leaf",
+      "label": "refined-damage-gap-overreach-normal",
+      "seconds": 10.707879,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "refined gap against every entire defining leaf",
+      "label": "refined-damage-gap-overreach-O",
+      "seconds": 11.437534,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "preimport source pin",
+      "label": "source-preimport-normal",
+      "seconds": 0.057085,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit": 1,
+      "intended_rejection": "preimport source pin",
+      "label": "source-preimport-O",
+      "seconds": 0.235288,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "resource_limit_hit": false,
+  "result": "PASS",
+  "role": "independent mathematical reviewer",
+  "trust": "Ordinary analytic bridges and external real Hilbert Banach identity remain unformalized.",
+  "whitespace_only_AST_identical_change": {
+    "AST_identical": true,
+    "after_sha256": "6221c4fa7fd334e676fdf0373092f2e6782e1484e0c6b82ef963ae704509c631",
+    "before_sha256": "66d3ce0c332329c0acabff8ffe039a53b2fc9b0f61979b1ddc55f8e32d4ecdea",
+    "file": "check.py"
+  }
+}
