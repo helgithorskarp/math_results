@@ -1,0 +1,148 @@
+{
+  "actual_agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "complete": true,
+  "positive_replays": 4,
+  "semantic_rejects": 16,
+  "whole_fixture_rejects": 3,
+  "preimport_source_rejects": 2,
+  "total_rejects": 21,
+  "canonical_bytes": 37572,
+  "canonical_sha256": "87797f49fa2faf1e69715ea77a265e6dc6fd753b101690345b99d4650970b512",
+  "fixed_child_seconds": 45,
+  "all_native_threads": 1,
+  "serial_children": true,
+  "total_seconds": 13.188697402001708,
+  "cases": [
+    {
+      "case": "local",
+      "status": "PASS",
+      "seconds": 1.9586789699969813
+    },
+    {
+      "case": "local-O",
+      "status": "PASS",
+      "seconds": 1.8751126839997596
+    },
+    {
+      "case": "missing-leaf",
+      "status": "REJECT",
+      "reason": "no missing/unpaid child"
+    },
+    {
+      "case": "orphan-leaf",
+      "status": "REJECT",
+      "reason": "all source nodes reachable"
+    },
+    {
+      "case": "boolean-axis",
+      "status": "REJECT",
+      "reason": "strict integer axis"
+    },
+    {
+      "case": "noncanonical-cut",
+      "status": "REJECT",
+      "reason": "canonical rational string"
+    },
+    {
+      "case": "floating-root",
+      "status": "REJECT",
+      "reason": "rational string"
+    },
+    {
+      "case": "changed-closed-endpoint",
+      "status": "REJECT",
+      "reason": "original complete closed root box"
+    },
+    {
+      "case": "missing-coordinate",
+      "status": "REJECT",
+      "reason": "COVER root shape"
+    },
+    {
+      "case": "unknown-role",
+      "status": "REJECT",
+      "reason": "known mathematical role"
+    },
+    {
+      "case": "parent-endpoint-cut",
+      "status": "REJECT",
+      "reason": "strict rational cut"
+    },
+    {
+      "case": "split-leaf-duplicate",
+      "status": "REJECT",
+      "reason": "split/leaf exclusive"
+    },
+    {
+      "case": "negative-root-domain",
+      "status": "REJECT",
+      "reason": "root domain"
+    },
+    {
+      "case": "undeclared-polynomial-degree",
+      "status": "REJECT",
+      "reason": "Bernstein degree/interval"
+    },
+    {
+      "case": "unpaid-polar-phase",
+      "status": "REJECT",
+      "reason": "standard radial positive kernel"
+    },
+    {
+      "case": "larger-unpaid-gap",
+      "status": "REJECT",
+      "reason": "origin clipping contradiction paid"
+    },
+    {
+      "case": "underpaid-origin-gradient",
+      "status": "REJECT",
+      "reason": "fresh paid origin gradient"
+    },
+    {
+      "case": "wrong-mass-entry",
+      "status": "REJECT",
+      "reason": "nonempty necessary enclosure"
+    },
+    {
+      "case": "cold",
+      "status": "PASS",
+      "seconds": 2.0812694760024897
+    },
+    {
+      "case": "cold-O",
+      "status": "PASS",
+      "seconds": 1.9670298589990125
+    },
+    {
+      "case": "fixture-last-leaf",
+      "status": "REJECT",
+      "reason": "COMPLETE INDEPENDENT FIXTURE",
+      "seconds": 1.7935931440006243
+    },
+    {
+      "case": "fixture-record-digest",
+      "status": "REJECT",
+      "reason": "COMPLETE INDEPENDENT FIXTURE",
+      "seconds": 1.652834051004902
+    },
+    {
+      "case": "fixture-whole-bridge",
+      "status": "REJECT",
+      "reason": "COMPLETE INDEPENDENT FIXTURE",
+      "seconds": 1.7375656490039546
+    },
+    {
+      "case": "preimport-face.py",
+      "status": "REJECT",
+      "reason": "PREIMPORT SOURCE",
+      "seconds": 0.04618637500243494
+    },
+    {
+      "case": "preimport-bridges.py",
+      "status": "REJECT",
+      "reason": "PREIMPORT SOURCE",
+      "seconds": 0.04840199899626896
+    }
+  ]
+}
