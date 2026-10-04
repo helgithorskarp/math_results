@@ -1,0 +1,621 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "utc": "2026-10-04T12:19:52.191254+00:00",
+  "primary": {
+    "agent": "six-reviewer-1",
+    "role": "independent mathematical reviewer",
+    "python": "3.12.14",
+    "sympy": "1.14.0",
+    "native_threads": 1,
+    "serial_children": true,
+    "fixed_per_child_seconds": 45,
+    "whole_record_bytes": 49822,
+    "whole_record_sha256": "8776b4408513649532e31b57f33c48a7dcee250905b0746d61ebb204f9e03bb3",
+    "primary_files": {
+      "audit.py": "e928b9060d6d4dc161b94938946e5e71be97ad841ec5995e965ec4e2d68586f0",
+      "portable.py": "1125f529342070d842f2d3887a85b75f1e5d4f3b19fecc95af37de4a381c36c2",
+      "validate.py": "fdc5a6763f806326fb8ff9aa8488b9e5d364dcb19c162fadfdce1be5cc5b9c34",
+      "EXPECTED.json": "8776b4408513649532e31b57f33c48a7dcee250905b0746d61ebb204f9e03bb3"
+    },
+    "positive_children": 6,
+    "method_rejections": 6,
+    "fixture_rejections": 20,
+    "total_child_seconds": 42.156343,
+    "max_child_seconds": 5.1464,
+    "cumulative_child_peak_RSS_KiB": 67160,
+    "runs": [
+      {
+        "name": "CAS normal",
+        "exit": 0,
+        "seconds": 4.703472,
+        "stdout_bytes": 223,
+        "stdout_sha256": "7391aa66f48aa4868ea4b0302b51b49b6758abfd69edc932b9b918553ff61e7d",
+        "positive": true,
+        "result": {
+          "bernstein_vectors": 12,
+          "bytes": 49822,
+          "identities": 75,
+          "python": "3.12.14",
+          "root_controls": 8,
+          "sha256": "8776b4408513649532e31b57f33c48a7dcee250905b0746d61ebb204f9e03bb3",
+          "sympy": "1.14.0",
+          "whole_polynomials": 21
+        }
+      },
+      {
+        "name": "portable normal",
+        "exit": 0,
+        "seconds": 0.090379,
+        "stdout_bytes": 165,
+        "stdout_sha256": "6e92d7ce14d795c1ca5d618064786ffca57ebc75169348872ef64228a53530b5",
+        "positive": true,
+        "result": {
+          "closed_bernstein_vectors": 12,
+          "identities": 75,
+          "schema": "six-reviewer-1/quartet-fiber/1",
+          "whole_polynomials_rederived": 21,
+          "whole_sturm_chains_rederived": 8
+        }
+      },
+      {
+        "name": "CAS optimized",
+        "exit": 0,
+        "seconds": 5.1464,
+        "stdout_bytes": 223,
+        "stdout_sha256": "7391aa66f48aa4868ea4b0302b51b49b6758abfd69edc932b9b918553ff61e7d",
+        "positive": true,
+        "result": {
+          "bernstein_vectors": 12,
+          "bytes": 49822,
+          "identities": 75,
+          "python": "3.12.14",
+          "root_controls": 8,
+          "sha256": "8776b4408513649532e31b57f33c48a7dcee250905b0746d61ebb204f9e03bb3",
+          "sympy": "1.14.0",
+          "whole_polynomials": 21
+        }
+      },
+      {
+        "name": "portable optimized",
+        "exit": 0,
+        "seconds": 0.275743,
+        "stdout_bytes": 165,
+        "stdout_sha256": "6e92d7ce14d795c1ca5d618064786ffca57ebc75169348872ef64228a53530b5",
+        "positive": true,
+        "result": {
+          "closed_bernstein_vectors": 12,
+          "identities": 75,
+          "schema": "six-reviewer-1/quartet-fiber/1",
+          "whole_polynomials_rederived": 21,
+          "whole_sturm_chains_rederived": 8
+        }
+      },
+      {
+        "name": "CAS cold",
+        "exit": 0,
+        "seconds": 4.821734,
+        "stdout_bytes": 223,
+        "stdout_sha256": "7391aa66f48aa4868ea4b0302b51b49b6758abfd69edc932b9b918553ff61e7d",
+        "positive": true,
+        "result": {
+          "bernstein_vectors": 12,
+          "bytes": 49822,
+          "identities": 75,
+          "python": "3.12.14",
+          "root_controls": 8,
+          "sha256": "8776b4408513649532e31b57f33c48a7dcee250905b0746d61ebb204f9e03bb3",
+          "sympy": "1.14.0",
+          "whole_polynomials": 21
+        }
+      },
+      {
+        "name": "portable cold",
+        "exit": 0,
+        "seconds": 0.084007,
+        "stdout_bytes": 165,
+        "stdout_sha256": "6e92d7ce14d795c1ca5d618064786ffca57ebc75169348872ef64228a53530b5",
+        "positive": true,
+        "result": {
+          "closed_bernstein_vectors": 12,
+          "identities": 75,
+          "schema": "six-reviewer-1/quartet-fiber/1",
+          "whole_polynomials_rederived": 21,
+          "whole_sturm_chains_rederived": 8
+        }
+      },
+      {
+        "name": "method damage normal critical-cubic",
+        "exit": 1,
+        "seconds": 3.405549,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: identity failure: three-branch derivative"
+      },
+      {
+        "name": "method damage normal odd-octic",
+        "exit": 1,
+        "seconds": 3.648115,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: identity failure: original octic coefficient 1"
+      },
+      {
+        "name": "method damage normal dependent-opening",
+        "exit": 1,
+        "seconds": 3.961784,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: identity failure: opening3 third moment"
+      },
+      {
+        "name": "method damage optimized critical-cubic",
+        "exit": 1,
+        "seconds": 3.91953,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: identity failure: three-branch derivative"
+      },
+      {
+        "name": "method damage optimized odd-octic",
+        "exit": 1,
+        "seconds": 4.261048,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: identity failure: original octic coefficient 1"
+      },
+      {
+        "name": "method damage optimized dependent-opening",
+        "exit": 1,
+        "seconds": 4.508306,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: identity failure: opening3 third moment"
+      },
+      {
+        "name": "fixture normal missing identity",
+        "exit": 1,
+        "seconds": 0.059773,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: all75 identity names required"
+      },
+      {
+        "name": "fixture optimized missing identity",
+        "exit": 1,
+        "seconds": 0.245669,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: all75 identity names required"
+      },
+      {
+        "name": "fixture normal missing final moment",
+        "exit": 1,
+        "seconds": 0.069909,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: whole polynomial domain"
+      },
+      {
+        "name": "fixture optimized missing final moment",
+        "exit": 1,
+        "seconds": 0.258808,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: whole polynomial domain"
+      },
+      {
+        "name": "fixture normal changed final moment coefficient",
+        "exit": 1,
+        "seconds": 0.079754,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: whole coefficient mismatch original moment 8"
+      },
+      {
+        "name": "fixture optimized changed final moment coefficient",
+        "exit": 1,
+        "seconds": 0.243801,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: whole coefficient mismatch original moment 8"
+      },
+      {
+        "name": "fixture normal last Bernstein sign",
+        "exit": 1,
+        "seconds": 0.077549,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: whole closed Bernstein coefficients opening3 gain numerator"
+      },
+      {
+        "name": "fixture optimized last Bernstein sign",
+        "exit": 1,
+        "seconds": 0.24896,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: whole closed Bernstein coefficients opening3 gain numerator"
+      },
+      {
+        "name": "fixture normal missing last Sturm coefficient",
+        "exit": 1,
+        "seconds": 0.085987,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: coefficient list"
+      },
+      {
+        "name": "fixture optimized missing last Sturm coefficient",
+        "exit": 1,
+        "seconds": 0.256236,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: coefficient list"
+      },
+      {
+        "name": "fixture normal root count Boolean",
+        "exit": 1,
+        "seconds": 0.096357,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: root count outside triple singleton 1"
+      },
+      {
+        "name": "fixture optimized root count Boolean",
+        "exit": 1,
+        "seconds": 0.276195,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: root count outside triple singleton 1"
+      },
+      {
+        "name": "fixture normal omitted zero endpoint control",
+        "exit": 1,
+        "seconds": 0.079265,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: complete root control domain"
+      },
+      {
+        "name": "fixture optimized omitted zero endpoint control",
+        "exit": 1,
+        "seconds": 0.262981,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: complete root control domain"
+      },
+      {
+        "name": "fixture normal duplicate root bracket",
+        "exit": 1,
+        "seconds": 0.081426,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: disjoint root brackets"
+      },
+      {
+        "name": "fixture optimized duplicate root bracket",
+        "exit": 1,
+        "seconds": 0.249909,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: disjoint root brackets"
+      },
+      {
+        "name": "fixture normal zero clearing denominator",
+        "exit": 1,
+        "seconds": 0.065681,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: zero clearing denominator"
+      },
+      {
+        "name": "fixture optimized zero clearing denominator",
+        "exit": 1,
+        "seconds": 0.268483,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: zero clearing denominator"
+      },
+      {
+        "name": "fixture normal changed both copies of odd coefficient",
+        "exit": 1,
+        "seconds": 0.069003,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: whole coefficient mismatch literal octic coefficient 1"
+      },
+      {
+        "name": "fixture optimized changed both copies of odd coefficient",
+        "exit": 1,
+        "seconds": 0.25453,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "positive": false,
+        "reason": "ValueError: whole coefficient mismatch literal octic coefficient 1"
+      }
+    ],
+    "all_primary_files_unchanged": true,
+    "CAS_full_record_bytes_equal_normal_optimized_cold": true,
+    "portable_whole_reconstructions_agree_normal_optimized_cold": true
+  },
+  "late": {
+    "utc": "2026-10-04T12:14:00.879971+00:00",
+    "native_first_read": "2026-10-04T12:08:47.011010+00:00",
+    "primary_proof_independent_of_native": true,
+    "producer_code_imported_into_independent_engines": false,
+    "primary4_and_gap2_unchanged": true,
+    "native_internal_damage_rejections": 10,
+    "native_whole_record_bytes": 46515,
+    "native_whole_record_sha256": "5192c8fe5d77ae76a6fec1efff4b9aee715a6f442500266e95410066ec47524b",
+    "whole_shared_fields": {
+      "all_native_nonzero_coefficient_entries": 154,
+      "complete_shared_polynomial_fields": 36,
+      "fields": [
+        "complete q",
+        "quartic",
+        "quotient_decomposition",
+        "third_power",
+        "fifth_power",
+        "Hurwitz_invariant",
+        "whole six-pair product",
+        "Abar",
+        "whole odd cross term",
+        "J",
+        "octic 0",
+        "octic 1",
+        "octic 2",
+        "octic 3",
+        "octic 4",
+        "octic 5",
+        "octic 6",
+        "octic 7",
+        "octic 8",
+        "critical_cubic_N",
+        "critical_cubic_derivative",
+        "N_at_zero",
+        "N_at_quarter_sum",
+        "N_at_half_sum",
+        "direction_discriminant",
+        "H numerator",
+        "H denominator",
+        "whole H derivative numerator",
+        "entire double-root equation",
+        "cube_max_gap",
+        "cube_min_gap",
+        "support3_cube_gap",
+        "multiplier",
+        "lower_Hessian",
+        "upper_Hessian",
+        "regular zero-opening derivative"
+      ],
+      "late_data_only_comparison": true,
+      "producer_code_imported": false
+    },
+    "runs": [
+      {
+        "name": "native normal",
+        "exit": 0,
+        "seconds": 0.206996,
+        "stdout_sha256": "cabacc9e3851f62a3c037c714ecf4aa659833fd2df77b36fd47382faa0da0964",
+        "result": {
+          "status": "PASS",
+          "whole_record_bytes": 46515,
+          "sha256": "5192c8fe5d77ae76a6fec1efff4b9aee715a6f442500266e95410066ec47524b",
+          "equal_support_cases": 2,
+          "positive_Bernstein_polynomials": 12,
+          "normalized_octic_coefficients": 9,
+          "nontrivial_positive_fiber_controls": 2,
+          "semantic_rejections": 5
+        },
+        "stderr": ""
+      },
+      {
+        "name": "native optimized",
+        "exit": 0,
+        "seconds": 0.453677,
+        "stdout_sha256": "cabacc9e3851f62a3c037c714ecf4aa659833fd2df77b36fd47382faa0da0964",
+        "result": {
+          "status": "PASS",
+          "whole_record_bytes": 46515,
+          "sha256": "5192c8fe5d77ae76a6fec1efff4b9aee715a6f442500266e95410066ec47524b",
+          "equal_support_cases": 2,
+          "positive_Bernstein_polynomials": 12,
+          "normalized_octic_coefficients": 9,
+          "nontrivial_positive_fiber_controls": 2,
+          "semantic_rejections": 5
+        },
+        "stderr": ""
+      },
+      {
+        "name": "native dense CAS",
+        "exit": 0,
+        "seconds": 3.674648,
+        "stdout_sha256": "116513932720e6020b707ec3b593147030d15d7252855998b1246d686bf0489a",
+        "result": {
+          "status": "PASS",
+          "sympy": "1.14.0",
+          "entire_record_bytes": 46515,
+          "sha256": "5192c8fe5d77ae76a6fec1efff4b9aee715a6f442500266e95410066ec47524b",
+          "Bernstein_method": "dense exact interpolation",
+          "all_normalized_octic_coefficients": 9,
+          "same_author_not_independent_review": true
+        },
+        "stderr": ""
+      },
+      {
+        "name": "late whole shared normal",
+        "exit": 0,
+        "seconds": 0.092081,
+        "stdout_sha256": "232413544b7849af553e309c591c2e576958dab13d2bbcfa5992ebb0eeac95d7",
+        "result": {
+          "all_native_nonzero_coefficient_entries": 154,
+          "complete_shared_polynomial_fields": 36,
+          "fields": [
+            "complete q",
+            "quartic",
+            "quotient_decomposition",
+            "third_power",
+            "fifth_power",
+            "Hurwitz_invariant",
+            "whole six-pair product",
+            "Abar",
+            "whole odd cross term",
+            "J",
+            "octic 0",
+            "octic 1",
+            "octic 2",
+            "octic 3",
+            "octic 4",
+            "octic 5",
+            "octic 6",
+            "octic 7",
+            "octic 8",
+            "critical_cubic_N",
+            "critical_cubic_derivative",
+            "N_at_zero",
+            "N_at_quarter_sum",
+            "N_at_half_sum",
+            "direction_discriminant",
+            "H numerator",
+            "H denominator",
+            "whole H derivative numerator",
+            "entire double-root equation",
+            "cube_max_gap",
+            "cube_min_gap",
+            "support3_cube_gap",
+            "multiplier",
+            "lower_Hessian",
+            "upper_Hessian",
+            "regular zero-opening derivative"
+          ],
+          "late_data_only_comparison": true,
+          "producer_code_imported": false
+        },
+        "stderr": ""
+      },
+      {
+        "name": "late whole shared optimized",
+        "exit": 0,
+        "seconds": 0.265303,
+        "stdout_sha256": "232413544b7849af553e309c591c2e576958dab13d2bbcfa5992ebb0eeac95d7",
+        "result": {
+          "all_native_nonzero_coefficient_entries": 154,
+          "complete_shared_polynomial_fields": 36,
+          "fields": [
+            "complete q",
+            "quartic",
+            "quotient_decomposition",
+            "third_power",
+            "fifth_power",
+            "Hurwitz_invariant",
+            "whole six-pair product",
+            "Abar",
+            "whole odd cross term",
+            "J",
+            "octic 0",
+            "octic 1",
+            "octic 2",
+            "octic 3",
+            "octic 4",
+            "octic 5",
+            "octic 6",
+            "octic 7",
+            "octic 8",
+            "critical_cubic_N",
+            "critical_cubic_derivative",
+            "N_at_zero",
+            "N_at_quarter_sum",
+            "N_at_half_sum",
+            "direction_discriminant",
+            "H numerator",
+            "H denominator",
+            "whole H derivative numerator",
+            "entire double-root equation",
+            "cube_max_gap",
+            "cube_min_gap",
+            "support3_cube_gap",
+            "multiplier",
+            "lower_Hessian",
+            "upper_Hessian",
+            "regular zero-opening derivative"
+          ],
+          "late_data_only_comparison": true,
+          "producer_code_imported": false
+        },
+        "stderr": ""
+      },
+      {
+        "name": "gap normal",
+        "exit": 0,
+        "seconds": 0.036746,
+        "stdout_sha256": "5a9db8c688c9ffde8987f57528e54236912bb6b907955230b56968cd4b5d2f2c",
+        "result": {
+          "D_upper": "12/329",
+          "K2_upper": "425/10528",
+          "S2_lower": "658/425",
+          "S2_upper": "2",
+          "fourK_over_S3_upper": "180625/432964",
+          "mu4_upper": "425/2632",
+          "q_over_S2_lower": "84113/1731856",
+          "q_real_line_lower": "84113/1118600"
+        },
+        "stderr": ""
+      },
+      {
+        "name": "gap optimized",
+        "exit": 0,
+        "seconds": 0.132509,
+        "stdout_sha256": "5a9db8c688c9ffde8987f57528e54236912bb6b907955230b56968cd4b5d2f2c",
+        "result": {
+          "D_upper": "12/329",
+          "K2_upper": "425/10528",
+          "S2_lower": "658/425",
+          "S2_upper": "2",
+          "fourK_over_S3_upper": "180625/432964",
+          "mu4_upper": "425/2632",
+          "q_over_S2_lower": "84113/1731856",
+          "q_real_line_lower": "84113/1118600"
+        },
+        "stderr": ""
+      }
+    ],
+    "total_child_seconds": 4.86196,
+    "max_child_seconds": 3.674648,
+    "cumulative_child_peak_RSS_KiB": 64824,
+    "serial1_native1_fixed45s": true,
+    "late_adapter_initial_normalization_failure": "Producer uses (t,b,z), own witnesses use (t,s) or (a,b,x); first late comparison rejected missing explicit renaming. Explicit variable maps then supplied; primary4/gap2 unchanged; not a mathematical failure."
+  },
+  "all_sealed_primary4_and_gap2_unchanged": true,
+  "scope_limits": "1CPU2GiB; VM4CPU16GiB/shared300percent8Ghigh9Gmax; one CPU-intensive math child; six native thread settings1",
+  "additional_resources_required": false,
+  "operational_nonmathematical_events": [
+    "One bounded30s GraphQL query timed out, replaced by bounded signature-verified point lookup without increased limits.",
+    "Campaign Python had no pip; system pip installed only scratch-local SymPy1.14.0/mpmath1.3.0. No host environment or controls altered.",
+    "Late comparison initially rejected variable-name mismatch. Explicit producer-to-owned renaming then supplied. Primary4/gap2 remained unchanged."
+  ]
+}
