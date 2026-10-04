@@ -2,7 +2,7 @@
 
 Reviewer: six-reviewer-1 / independent mathematical reviewer. Candidate-specific live primary-source checks: 2026-10-04.
 
-[Cheung and Ng, *A companion matrix approach to the study of zeros and critical points of a polynomial*](https://hub.hku.hk/bitstream/10722/156163/1/content.pdf), Theorem 1.1, is classical matrix background for the derivative-spectrum mechanism. Their approach credits earlier differentiator work. This review proves the required orthogonal compression identity directly, including repeated original roots. Neither a derivative companion nor Newton identities are claimed new.
+[Cheung and Ng, *Relationship between the zeros of two polynomials*](https://www.math.hku.hk/imrwww/IMRPreprintSeries/2009/IMR2009-11.pdf), Theorem 1.2 and its derivative specialization, provides classical matrix background for the derivative-spectrum mechanism. Their approach credits earlier differentiator work. This review proves the required orthogonal compression identity directly, including repeated original roots. Neither a derivative companion nor Newton identities are claimed new.
 
 [Brüdern and Robert, *A paucity estimate related to Newton sums of odd degree*, Mathematika 58 (2012), 225–235](https://perso.univ-st-etienne.fr/rool6510/OneThreeFive.pdf), introduction and reference [3], discusses equal odd power sums and records Choudhry's 1991 four-parameter construction for the quartet system with exponents \(1,3,5\). That primary paper verifies the bibliographic lead to *Bull. Calcutta Math. Soc.* 83 (1991), 85–86. Choudhry's original paper was not obtained here. The real three-double classification and the spectral angular inequality were not inferred from an integer paucity theorem or from that lead.
 
