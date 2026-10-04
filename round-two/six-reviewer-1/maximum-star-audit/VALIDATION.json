@@ -1,0 +1,290 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "python_version": "3.12.14",
+  "standard_library_only": true,
+  "serial_child_count": 1,
+  "native_threads": 1,
+  "fixed_child_timeout_seconds": 45,
+  "positive_children": 8,
+  "semantic_rejections": 24,
+  "total_child_seconds": 318.167968,
+  "max_child_seconds": 34.174878,
+  "cumulative_child_peak_RSS_KiB": 24796,
+  "children": [
+    {
+      "program": "coordinates.py",
+      "location": "local",
+      "optimized": false,
+      "kind": "positive",
+      "seconds": 29.904478,
+      "record_bytes": 178573,
+      "record_sha256": "ae6229bf308a7bd8854a0c908df35230e56650478f1ebecf2088a61fc5154add"
+    },
+    {
+      "program": "coordinates.py",
+      "location": "local",
+      "optimized": true,
+      "kind": "positive",
+      "seconds": 34.174878,
+      "record_bytes": 178573,
+      "record_sha256": "ae6229bf308a7bd8854a0c908df35230e56650478f1ebecf2088a61fc5154add"
+    },
+    {
+      "program": "frobenius.py",
+      "location": "local",
+      "optimized": false,
+      "kind": "positive",
+      "seconds": 2.012007,
+      "record_bytes": 692159,
+      "record_sha256": "712b4120afdc5b11d8121e8b1c2430cb82f06a3299a099e06c1a4334e8790116"
+    },
+    {
+      "program": "frobenius.py",
+      "location": "local",
+      "optimized": true,
+      "kind": "positive",
+      "seconds": 1.911794,
+      "record_bytes": 692159,
+      "record_sha256": "712b4120afdc5b11d8121e8b1c2430cb82f06a3299a099e06c1a4334e8790116"
+    },
+    {
+      "program": "coordinates.py",
+      "location": "cold-source-only",
+      "optimized": false,
+      "kind": "positive",
+      "seconds": 30.130901,
+      "record_bytes": 178573,
+      "record_sha256": "ae6229bf308a7bd8854a0c908df35230e56650478f1ebecf2088a61fc5154add"
+    },
+    {
+      "program": "coordinates.py",
+      "location": "cold-source-only",
+      "optimized": true,
+      "kind": "positive",
+      "seconds": 29.148365,
+      "record_bytes": 178573,
+      "record_sha256": "ae6229bf308a7bd8854a0c908df35230e56650478f1ebecf2088a61fc5154add"
+    },
+    {
+      "program": "frobenius.py",
+      "location": "cold-source-only",
+      "optimized": false,
+      "kind": "positive",
+      "seconds": 2.692509,
+      "record_bytes": 692159,
+      "record_sha256": "712b4120afdc5b11d8121e8b1c2430cb82f06a3299a099e06c1a4334e8790116"
+    },
+    {
+      "program": "frobenius.py",
+      "location": "cold-source-only",
+      "optimized": true,
+      "kind": "positive",
+      "seconds": 1.742013,
+      "record_bytes": 692159,
+      "record_sha256": "712b4120afdc5b11d8121e8b1c2430cb82f06a3299a099e06c1a4334e8790116"
+    },
+    {
+      "program": "coordinates.py",
+      "optimized": false,
+      "kind": "semantic-rejection",
+      "damage": "smaller_star",
+      "seconds": 0.07482,
+      "final_error": "ValueError: inconsistent equations"
+    },
+    {
+      "program": "coordinates.py",
+      "optimized": true,
+      "kind": "semantic-rejection",
+      "damage": "smaller_star",
+      "seconds": 0.269107,
+      "final_error": "ValueError: inconsistent equations"
+    },
+    {
+      "program": "coordinates.py",
+      "optimized": false,
+      "kind": "semantic-rejection",
+      "damage": "omit_complements",
+      "seconds": 0.109824,
+      "final_error": "ValueError: full original affine dimension"
+    },
+    {
+      "program": "coordinates.py",
+      "optimized": true,
+      "kind": "semantic-rejection",
+      "damage": "omit_complements",
+      "seconds": 0.331648,
+      "final_error": "ValueError: full original affine dimension"
+    },
+    {
+      "program": "coordinates.py",
+      "optimized": false,
+      "kind": "semantic-rejection",
+      "damage": "empty_metric",
+      "seconds": 0.077708,
+      "final_error": "ValueError: full metric including actual empty term"
+    },
+    {
+      "program": "coordinates.py",
+      "optimized": true,
+      "kind": "semantic-rejection",
+      "damage": "empty_metric",
+      "seconds": 0.255438,
+      "final_error": "ValueError: full metric including actual empty term"
+    },
+    {
+      "program": "coordinates.py",
+      "optimized": false,
+      "kind": "semantic-rejection",
+      "damage": "naive_cap",
+      "seconds": 27.949854,
+      "final_error": "ValueError: naive cap substitution fails"
+    },
+    {
+      "program": "coordinates.py",
+      "optimized": true,
+      "kind": "semantic-rejection",
+      "damage": "naive_cap",
+      "seconds": 30.54665,
+      "final_error": "ValueError: naive cap substitution fails"
+    },
+    {
+      "program": "coordinates.py",
+      "optimized": false,
+      "kind": "semantic-rejection",
+      "damage": "raw_saturation",
+      "seconds": 27.893845,
+      "final_error": "ValueError: PSD saturation bridge omitted"
+    },
+    {
+      "program": "coordinates.py",
+      "optimized": true,
+      "kind": "semantic-rejection",
+      "damage": "raw_saturation",
+      "seconds": 33.326744,
+      "final_error": "ValueError: PSD saturation bridge omitted"
+    },
+    {
+      "program": "coordinates.py",
+      "optimized": false,
+      "kind": "semantic-rejection",
+      "damage": "simple_unit_boundary",
+      "seconds": 27.998455,
+      "final_error": "ValueError: false boundary simplicity"
+    },
+    {
+      "program": "coordinates.py",
+      "optimized": true,
+      "kind": "semantic-rejection",
+      "damage": "simple_unit_boundary",
+      "seconds": 28.866334,
+      "final_error": "ValueError: false boundary simplicity"
+    },
+    {
+      "program": "frobenius.py",
+      "optimized": false,
+      "kind": "semantic-rejection",
+      "damage": "drop_empty_square",
+      "seconds": 0.105139,
+      "final_error": "ValueError: all original Frobenius type entries"
+    },
+    {
+      "program": "frobenius.py",
+      "optimized": true,
+      "kind": "semantic-rejection",
+      "damage": "drop_empty_square",
+      "seconds": 0.386478,
+      "final_error": "ValueError: all original Frobenius type entries"
+    },
+    {
+      "program": "frobenius.py",
+      "optimized": false,
+      "kind": "semantic-rejection",
+      "damage": "wrong_star_sign",
+      "seconds": 0.067851,
+      "final_error": "ValueError: all original Frobenius type entries"
+    },
+    {
+      "program": "frobenius.py",
+      "optimized": true,
+      "kind": "semantic-rejection",
+      "damage": "wrong_star_sign",
+      "seconds": 0.244773,
+      "final_error": "ValueError: all original Frobenius type entries"
+    },
+    {
+      "program": "frobenius.py",
+      "optimized": false,
+      "kind": "semantic-rejection",
+      "damage": "unordered_half",
+      "seconds": 0.067577,
+      "final_error": "ValueError: ordered original positions count twice"
+    },
+    {
+      "program": "frobenius.py",
+      "optimized": true,
+      "kind": "semantic-rejection",
+      "damage": "unordered_half",
+      "seconds": 0.25177,
+      "final_error": "ValueError: ordered original positions count twice"
+    },
+    {
+      "program": "frobenius.py",
+      "optimized": false,
+      "kind": "semantic-rejection",
+      "damage": "floor_sqrt",
+      "seconds": 1.496979,
+      "final_error": "ValueError: certified upward integer square root"
+    },
+    {
+      "program": "frobenius.py",
+      "optimized": true,
+      "kind": "semantic-rejection",
+      "damage": "floor_sqrt",
+      "seconds": 2.09565,
+      "final_error": "ValueError: certified upward integer square root"
+    },
+    {
+      "program": "frobenius.py",
+      "optimized": false,
+      "kind": "semantic-rejection",
+      "damage": "underpay_radius",
+      "seconds": 1.763326,
+      "final_error": "ValueError: too-small Frobenius budget"
+    },
+    {
+      "program": "frobenius.py",
+      "optimized": true,
+      "kind": "semantic-rejection",
+      "damage": "underpay_radius",
+      "seconds": 1.893769,
+      "final_error": "ValueError: too-small Frobenius budget"
+    },
+    {
+      "program": "frobenius.py",
+      "optimized": false,
+      "kind": "semantic-rejection",
+      "damage": "omit_coverage",
+      "seconds": 0.127848,
+      "final_error": "ValueError: new sharp-budget coverage premise is required"
+    },
+    {
+      "program": "frobenius.py",
+      "optimized": true,
+      "kind": "semantic-rejection",
+      "damage": "omit_coverage",
+      "seconds": 0.249436,
+      "final_error": "ValueError: new sharp-budget coverage premise is required"
+    }
+  ],
+  "records": {
+    "coordinates.py": {
+      "record_bytes": 178573,
+      "record_sha256": "ae6229bf308a7bd8854a0c908df35230e56650478f1ebecf2088a61fc5154add"
+    },
+    "frobenius.py": {
+      "record_bytes": 692159,
+      "record_sha256": "712b4120afdc5b11d8121e8b1c2430cb82f06a3299a099e06c1a4334e8790116"
+    }
+  }
+}
