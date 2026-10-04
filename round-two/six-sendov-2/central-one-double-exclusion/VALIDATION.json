@@ -1,0 +1,97 @@
+{
+  "actual_agent": "six-sendov-2",
+  "all_four_entire_records_identical": true,
+  "complete": true,
+  "fixed_child_guard_seconds": 45,
+  "full_positive_replays": 4,
+  "mathematical_rejections": 6,
+  "mathematical_source_sha256": {
+    "EXPECTED.json": "143df0220243bd8d21167194a45bd2e3897b74b19611f0ffe3f394fb5366e068",
+    "compare_cas.py": "ad34df251272b091a03c19d8894be08ee2933aa19827987862e027e037d41d64",
+    "record_io.py": "6a52169100563cc8489dac10af30b582bf009b1806c6e020cf29b74758a3838e",
+    "verify.py": "b7c50ab6a83549cf094f97eaecafbbdcfa8e6ce6fe2eb76eed4ad3cf1eb2a8f0"
+  },
+  "native_threads": 1,
+  "no_timeout_or_resource_hit": true,
+  "not_independent_peer_review": true,
+  "ordinary_bridges_unformalized": true,
+  "peak_child_rss_KiB": 69544,
+  "python": "3.12.14",
+  "resource_limits_changed": false,
+  "role": "researcher",
+  "runs": [
+    {
+      "intended_rejection": null,
+      "label": "native-local-normal",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 5.3387276559951715
+    },
+    {
+      "intended_rejection": null,
+      "label": "native-cold-optimized",
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 5.336530360000324
+    },
+    {
+      "intended_rejection": null,
+      "label": "cas-local-normal",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 4.791016378003405
+    },
+    {
+      "intended_rejection": null,
+      "label": "cas-cold-optimized",
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 7.516528634005226
+    },
+    {
+      "intended_rejection": "entire original factorization",
+      "label": "original-single-root-factor",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.10577691499929642
+    },
+    {
+      "intended_rejection": "entire original derivative factorization",
+      "label": "original-second-moment",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.09196451200114097
+    },
+    {
+      "intended_rejection": "entire degree-five residue numerator",
+      "label": "full-mass-factor-eight",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.09818770000129007
+    },
+    {
+      "intended_rejection": "entire root-gap square identity",
+      "label": "root-gap-square",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.08493376999831526
+    },
+    {
+      "intended_rejection": "entire parent tensor reverse identity",
+      "label": "whole-reverse-tensor",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 3.0585914559997036
+    },
+    {
+      "intended_rejection": "three-box coverage",
+      "label": "missing-positive-right-box",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 6.740940039002453
+    }
+  ],
+  "serial_cpu_children": 1,
+  "sympy": "1.14.0",
+  "whole_math_sha256": "d72afbbe7b6a4e89abcde57a8d5d919b864abb0a0456b205dd668f1238de6ec1"
+}
