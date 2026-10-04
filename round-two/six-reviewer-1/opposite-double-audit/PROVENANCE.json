@@ -1,0 +1,84 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "utc": "2026-10-04T17:26:54.406402+00:00",
+  "target": {
+    "source_commit": "3aead62f40b1e30ec0f7442703de029feb173f9e",
+    "source_directory": "round-two/six-sendov-2/opposite-double-angular-exclusion",
+    "source_files": {
+      "EXPECTED.json": {
+        "bytes": 1210,
+        "sha256": "b19212a7b4ef32c2f1a7f5e975630aaa6a702027db278233d4c50d0accb04b79"
+      },
+      "INPUT.json": {
+        "bytes": 46547,
+        "sha256": "581558bbf183f1bb2ddc4c2504c93466979b369aeb46092caa66b2dd42653bd4"
+      },
+      "LITERATURE.md": {
+        "bytes": 3560,
+        "sha256": "7f297c80eb01a13f10a4a6f626764440ebd5f7673dcca4b9c42b53555245e491"
+      },
+      "PROOF.md": {
+        "bytes": 18297,
+        "sha256": "5e354a3ae48f4ec28de266baee0feed3ce903c948fda11e88884adad19c34dc3"
+      },
+      "README.md": {
+        "bytes": 3808,
+        "sha256": "0a1aa08ea10a6971c464d11024bc59ed66a18d77992f079cfa49c0ee08957f42"
+      },
+      "VALIDATION.json": {
+        "bytes": 3131,
+        "sha256": "ab0f41ee6d54479d4791a5762eee545a99f1bd102dcf09a3f3d553af41e44aba"
+      },
+      "algebra.py": {
+        "bytes": 8700,
+        "sha256": "7d7228396bcdc78197a1688bd189e8a620209400c8c9117fd1eb8ef66e9b3a6a"
+      },
+      "compare_sectors.py": {
+        "bytes": 6381,
+        "sha256": "55cc0a231cca9cdf5ec99f6bf519fafd53cb5579c676e87ee40edac61581e8f7"
+      },
+      "derive_actual.py": {
+        "bytes": 8643,
+        "sha256": "3a97e7f910cc6215bcbbb921198b9b1b221274c808997b36fd178cf7b6edfdaa"
+      },
+      "requirements.txt": {
+        "bytes": 14,
+        "sha256": "25f9f1fb1988b230147a1d3092d34e09c069eb7a6c6d6df46b3973b9f2d36efc"
+      },
+      "verify.py": {
+        "bytes": 16830,
+        "sha256": "1ffbe39c2b41b967c40bf38906614bdee99787e6d7faa6b3b37fa8814a5cfccd"
+      }
+    },
+    "whole_signed_body_bytes": 31023,
+    "whole_signed_body_sha256": "cf7f8eeadf7442dcd7e222957b239dea5fa616cd0d7ad3e114b812f68c512d7b",
+    "height": 10260,
+    "index": 0,
+    "ref": "bafkreifx2uqb6pi3iyl5gk7dizrdfshwnwpxax3hdpl5r7puaanu5oywfm"
+  },
+  "independence": {
+    "written_full_target_exposed_not_blind": true,
+    "all_five_primary_source_files_sealed_before_current_target_INPUT_access": true,
+    "current_target_INPUT_whole_fields_checked_against_fresh_actual_ring_after_seal": true,
+    "target_native_program_bytes_hashed_only_never_inspected_imported_executed": true,
+    "target_EXPECTED_bytes_hashed_only_never_parsed": true,
+    "inherited_own_REVIEW10244_math_source": "0e26e39345ad6299a8c776cb46d8cedc59cda69b",
+    "strict_singular_even_REVIEW9416_source": "03378857a067e82f4771143e1f6f02a4d2d92ba4",
+    "no_prior_verdict_transfer_to_this_new_claim": true
+  },
+  "context": {
+    "relative_local_application_only": [
+      10200,
+      10218,
+      10235,
+      10105,
+      9416
+    ],
+    "unreplayed_ancestor_proofs_not_new_verdicts": [
+      10200,
+      10105,
+      10136
+    ]
+  }
+}

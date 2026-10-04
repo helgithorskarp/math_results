@@ -1,0 +1,521 @@
+{
+  "CPU_intensive_children_concurrent": 1,
+  "actual_positive_sector_strict_C_above16": true,
+  "agent": "six-reviewer-1",
+  "all_five_primary_files_unchanged": true,
+  "all_four_whole_records_equal_normal_O_local_cold": true,
+  "expected_records": {
+    "actual.py": {
+      "bytes": 54540,
+      "sha256": "16a179de6672d02b55c107c520f97e43d00ade9dfecbae07a47e50c6411e6299"
+    },
+    "input_check.py": {
+      "bytes": 425,
+      "sha256": "721284b45d685fe027b3e01528c51804c7383e26d6797a083fc6dde8262da8f2"
+    },
+    "literal.py": {
+      "bytes": 43440,
+      "sha256": "0a3f07abd0dcc91f99096fe5c51639e1d99f4b7fe51e232ececc9599e371ef9a"
+    },
+    "sectors.py": {
+      "bytes": 1097168,
+      "sha256": "8b9f3f573cad89b62036bb0e6d4595412c054f83309b948acc4d6a16d64b2775"
+    }
+  },
+  "fixed_child_seconds": 45,
+  "fixed_outer_child_seconds": 50,
+  "mathematical_and_schema_rejections": 36,
+  "max_child_seconds": 8.054197,
+  "native_threads": 1,
+  "peak_child_RSS_KiB": 27976,
+  "positive_children": 16,
+  "python": "3.12.14",
+  "role": "independent mathematical reviewer",
+  "runs": [
+    {
+      "defect": null,
+      "exit": 0,
+      "optimized": false,
+      "record_bytes": 54540,
+      "record_sha256": "16a179de6672d02b55c107c520f97e43d00ade9dfecbae07a47e50c6411e6299",
+      "script": "actual.py",
+      "seconds": 1.813825,
+      "source": "local"
+    },
+    {
+      "defect": null,
+      "exit": 0,
+      "optimized": false,
+      "record_bytes": 1097168,
+      "record_sha256": "8b9f3f573cad89b62036bb0e6d4595412c054f83309b948acc4d6a16d64b2775",
+      "script": "sectors.py",
+      "seconds": 8.054197,
+      "source": "local"
+    },
+    {
+      "defect": null,
+      "exit": 0,
+      "optimized": false,
+      "record_bytes": 43440,
+      "record_sha256": "0a3f07abd0dcc91f99096fe5c51639e1d99f4b7fe51e232ececc9599e371ef9a",
+      "script": "literal.py",
+      "seconds": 0.156755,
+      "source": "local"
+    },
+    {
+      "defect": null,
+      "exit": 0,
+      "optimized": false,
+      "record_bytes": 425,
+      "record_sha256": "721284b45d685fe027b3e01528c51804c7383e26d6797a083fc6dde8262da8f2",
+      "script": "input_check.py",
+      "seconds": 1.919586,
+      "source": "local"
+    },
+    {
+      "defect": null,
+      "exit": 0,
+      "optimized": true,
+      "record_bytes": 54540,
+      "record_sha256": "16a179de6672d02b55c107c520f97e43d00ade9dfecbae07a47e50c6411e6299",
+      "script": "actual.py",
+      "seconds": 1.977143,
+      "source": "local"
+    },
+    {
+      "defect": null,
+      "exit": 0,
+      "optimized": true,
+      "record_bytes": 1097168,
+      "record_sha256": "8b9f3f573cad89b62036bb0e6d4595412c054f83309b948acc4d6a16d64b2775",
+      "script": "sectors.py",
+      "seconds": 7.695899,
+      "source": "local"
+    },
+    {
+      "defect": null,
+      "exit": 0,
+      "optimized": true,
+      "record_bytes": 43440,
+      "record_sha256": "0a3f07abd0dcc91f99096fe5c51639e1d99f4b7fe51e232ececc9599e371ef9a",
+      "script": "literal.py",
+      "seconds": 0.392616,
+      "source": "local"
+    },
+    {
+      "defect": null,
+      "exit": 0,
+      "optimized": true,
+      "record_bytes": 425,
+      "record_sha256": "721284b45d685fe027b3e01528c51804c7383e26d6797a083fc6dde8262da8f2",
+      "script": "input_check.py",
+      "seconds": 2.190907,
+      "source": "local"
+    },
+    {
+      "defect": null,
+      "exit": 0,
+      "optimized": false,
+      "record_bytes": 54540,
+      "record_sha256": "16a179de6672d02b55c107c520f97e43d00ade9dfecbae07a47e50c6411e6299",
+      "script": "actual.py",
+      "seconds": 2.372202,
+      "source": "cold"
+    },
+    {
+      "defect": null,
+      "exit": 0,
+      "optimized": false,
+      "record_bytes": 1097168,
+      "record_sha256": "8b9f3f573cad89b62036bb0e6d4595412c054f83309b948acc4d6a16d64b2775",
+      "script": "sectors.py",
+      "seconds": 7.794236,
+      "source": "cold"
+    },
+    {
+      "defect": null,
+      "exit": 0,
+      "optimized": false,
+      "record_bytes": 43440,
+      "record_sha256": "0a3f07abd0dcc91f99096fe5c51639e1d99f4b7fe51e232ececc9599e371ef9a",
+      "script": "literal.py",
+      "seconds": 0.158385,
+      "source": "cold"
+    },
+    {
+      "defect": null,
+      "exit": 0,
+      "optimized": false,
+      "record_bytes": 425,
+      "record_sha256": "721284b45d685fe027b3e01528c51804c7383e26d6797a083fc6dde8262da8f2",
+      "script": "input_check.py",
+      "seconds": 1.759185,
+      "source": "cold"
+    },
+    {
+      "defect": null,
+      "exit": 0,
+      "optimized": true,
+      "record_bytes": 54540,
+      "record_sha256": "16a179de6672d02b55c107c520f97e43d00ade9dfecbae07a47e50c6411e6299",
+      "script": "actual.py",
+      "seconds": 1.956375,
+      "source": "cold"
+    },
+    {
+      "defect": null,
+      "exit": 0,
+      "optimized": true,
+      "record_bytes": 1097168,
+      "record_sha256": "8b9f3f573cad89b62036bb0e6d4595412c054f83309b948acc4d6a16d64b2775",
+      "script": "sectors.py",
+      "seconds": 6.995008,
+      "source": "cold"
+    },
+    {
+      "defect": null,
+      "exit": 0,
+      "optimized": true,
+      "record_bytes": 43440,
+      "record_sha256": "0a3f07abd0dcc91f99096fe5c51639e1d99f4b7fe51e232ececc9599e371ef9a",
+      "script": "literal.py",
+      "seconds": 0.353638,
+      "source": "cold"
+    },
+    {
+      "defect": null,
+      "exit": 0,
+      "optimized": true,
+      "record_bytes": 425,
+      "record_sha256": "721284b45d685fe027b3e01528c51804c7383e26d6797a083fc6dde8262da8f2",
+      "script": "input_check.py",
+      "seconds": 1.845466,
+      "source": "cold"
+    },
+    {
+      "defect": "mass-factor",
+      "exit": 1,
+      "gate": "all five actual positive-mass normalization",
+      "optimized": false,
+      "script": "actual.py",
+      "seconds": 0.43766,
+      "source": "local"
+    },
+    {
+      "defect": "last-numerator",
+      "exit": 1,
+      "gate": "all500 angular trace coefficients",
+      "optimized": false,
+      "script": "actual.py",
+      "seconds": 4.263212,
+      "source": "local"
+    },
+    {
+      "defect": "denominator-factor",
+      "exit": 1,
+      "gate": "entire positive actual denominator factor",
+      "optimized": false,
+      "script": "actual.py",
+      "seconds": 1.84108,
+      "source": "local"
+    },
+    {
+      "defect": "critical-slot",
+      "exit": 1,
+      "gate": "all seven original critical slots",
+      "optimized": false,
+      "script": "actual.py",
+      "seconds": 1.811367,
+      "source": "local"
+    },
+    {
+      "defect": "odd-coefficient",
+      "exit": 1,
+      "gate": "entire actual derivative",
+      "optimized": false,
+      "script": "actual.py",
+      "seconds": 0.068495,
+      "source": "local"
+    },
+    {
+      "defect": "negative-terminal",
+      "exit": 1,
+      "gate": "every negative-sector coefficient",
+      "optimized": false,
+      "script": "sectors.py",
+      "seconds": 0.153644,
+      "source": "local"
+    },
+    {
+      "defect": "tensor-negative",
+      "exit": 1,
+      "gate": "entire inverse Bernstein reconstruction",
+      "optimized": false,
+      "script": "sectors.py",
+      "seconds": 1.981576,
+      "source": "local"
+    },
+    {
+      "defect": "tensor-zero-omitted",
+      "exit": 1,
+      "gate": "entire tensor slots including zero",
+      "optimized": false,
+      "script": "sectors.py",
+      "seconds": 1.571815,
+      "source": "local"
+    },
+    {
+      "defect": "closed-cut",
+      "exit": 1,
+      "gate": "exact ordered complete closed cover without any gap",
+      "optimized": false,
+      "script": "sectors.py",
+      "seconds": 1.430382,
+      "source": "local"
+    },
+    {
+      "defect": "endpoint-strictness",
+      "exit": 1,
+      "gate": "positive boundary column at every closed shared endpoint",
+      "optimized": false,
+      "script": "sectors.py",
+      "seconds": 1.937997,
+      "source": "local"
+    },
+    {
+      "defect": "sharp-leading",
+      "exit": 1,
+      "gate": "exact sharp sequence leading coefficients",
+      "optimized": false,
+      "script": "sectors.py",
+      "seconds": 0.149735,
+      "source": "local"
+    },
+    {
+      "defect": "seven-slot",
+      "exit": 1,
+      "gate": "all seven literal critical slots",
+      "optimized": false,
+      "script": "literal.py",
+      "seconds": 0.061237,
+      "source": "local"
+    },
+    {
+      "defect": "literal-mass",
+      "exit": 1,
+      "gate": "entire seven-slot mass sum",
+      "optimized": false,
+      "script": "literal.py",
+      "seconds": 0.077902,
+      "source": "local"
+    },
+    {
+      "defect": "raw-normalization",
+      "exit": 1,
+      "gate": "whole actual normalized angular trace",
+      "optimized": false,
+      "script": "literal.py",
+      "seconds": 0.084828,
+      "source": "local"
+    },
+    {
+      "defect": "target-terminal",
+      "exit": 1,
+      "gate": "every actual transferred quintic coefficient",
+      "optimized": false,
+      "script": "input_check.py",
+      "seconds": 1.708154,
+      "source": "local"
+    },
+    {
+      "defect": "target-input-factor",
+      "exit": 1,
+      "gate": "all transferred inverse coefficients equal independently computed actual cofactors",
+      "optimized": false,
+      "script": "input_check.py",
+      "seconds": 1.653128,
+      "source": "local"
+    },
+    {
+      "defect": "target-domain",
+      "exit": 1,
+      "gate": "post-damage precise actual domain",
+      "optimized": false,
+      "script": "input_check.py",
+      "seconds": 1.53978,
+      "source": "local"
+    },
+    {
+      "defect": "target-boolean",
+      "exit": 1,
+      "gate": "typed bounded exponents",
+      "optimized": false,
+      "script": "input_check.py",
+      "seconds": 1.830449,
+      "source": "local"
+    },
+    {
+      "defect": "mass-factor",
+      "exit": 1,
+      "gate": "all five actual positive-mass normalization",
+      "optimized": true,
+      "script": "actual.py",
+      "seconds": 0.628619,
+      "source": "local"
+    },
+    {
+      "defect": "last-numerator",
+      "exit": 1,
+      "gate": "all500 angular trace coefficients",
+      "optimized": true,
+      "script": "actual.py",
+      "seconds": 1.707314,
+      "source": "local"
+    },
+    {
+      "defect": "denominator-factor",
+      "exit": 1,
+      "gate": "entire positive actual denominator factor",
+      "optimized": true,
+      "script": "actual.py",
+      "seconds": 1.537515,
+      "source": "local"
+    },
+    {
+      "defect": "critical-slot",
+      "exit": 1,
+      "gate": "all seven original critical slots",
+      "optimized": true,
+      "script": "actual.py",
+      "seconds": 1.734612,
+      "source": "local"
+    },
+    {
+      "defect": "odd-coefficient",
+      "exit": 1,
+      "gate": "entire actual derivative",
+      "optimized": true,
+      "script": "actual.py",
+      "seconds": 0.253611,
+      "source": "local"
+    },
+    {
+      "defect": "negative-terminal",
+      "exit": 1,
+      "gate": "every negative-sector coefficient",
+      "optimized": true,
+      "script": "sectors.py",
+      "seconds": 0.342587,
+      "source": "local"
+    },
+    {
+      "defect": "tensor-negative",
+      "exit": 1,
+      "gate": "entire inverse Bernstein reconstruction",
+      "optimized": true,
+      "script": "sectors.py",
+      "seconds": 2.404711,
+      "source": "local"
+    },
+    {
+      "defect": "tensor-zero-omitted",
+      "exit": 1,
+      "gate": "entire tensor slots including zero",
+      "optimized": true,
+      "script": "sectors.py",
+      "seconds": 1.850547,
+      "source": "local"
+    },
+    {
+      "defect": "closed-cut",
+      "exit": 1,
+      "gate": "exact ordered complete closed cover without any gap",
+      "optimized": true,
+      "script": "sectors.py",
+      "seconds": 1.556745,
+      "source": "local"
+    },
+    {
+      "defect": "endpoint-strictness",
+      "exit": 1,
+      "gate": "positive boundary column at every closed shared endpoint",
+      "optimized": true,
+      "script": "sectors.py",
+      "seconds": 2.309823,
+      "source": "local"
+    },
+    {
+      "defect": "sharp-leading",
+      "exit": 1,
+      "gate": "exact sharp sequence leading coefficients",
+      "optimized": true,
+      "script": "sectors.py",
+      "seconds": 0.360889,
+      "source": "local"
+    },
+    {
+      "defect": "seven-slot",
+      "exit": 1,
+      "gate": "all seven literal critical slots",
+      "optimized": true,
+      "script": "literal.py",
+      "seconds": 0.248153,
+      "source": "local"
+    },
+    {
+      "defect": "literal-mass",
+      "exit": 1,
+      "gate": "entire seven-slot mass sum",
+      "optimized": true,
+      "script": "literal.py",
+      "seconds": 0.258985,
+      "source": "local"
+    },
+    {
+      "defect": "raw-normalization",
+      "exit": 1,
+      "gate": "whole actual normalized angular trace",
+      "optimized": true,
+      "script": "literal.py",
+      "seconds": 0.268654,
+      "source": "local"
+    },
+    {
+      "defect": "target-terminal",
+      "exit": 1,
+      "gate": "every actual transferred quintic coefficient",
+      "optimized": true,
+      "script": "input_check.py",
+      "seconds": 2.056732,
+      "source": "local"
+    },
+    {
+      "defect": "target-input-factor",
+      "exit": 1,
+      "gate": "all transferred inverse coefficients equal independently computed actual cofactors",
+      "optimized": true,
+      "script": "input_check.py",
+      "seconds": 2.042305,
+      "source": "local"
+    },
+    {
+      "defect": "target-domain",
+      "exit": 1,
+      "gate": "post-damage precise actual domain",
+      "optimized": true,
+      "script": "input_check.py",
+      "seconds": 1.911951,
+      "source": "local"
+    },
+    {
+      "defect": "target-boolean",
+      "exit": 1,
+      "gate": "typed bounded exponents",
+      "optimized": true,
+      "script": "input_check.py",
+      "seconds": 2.095698,
+      "source": "local"
+    }
+  ],
+  "total_seconds": 93.620784
+}
