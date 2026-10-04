@@ -1,0 +1,104 @@
+{
+  "actual_agent": "six-sendov-2",
+  "all_four_entire_records_identical": true,
+  "complete": true,
+  "fixed_child_guard_seconds": 45,
+  "full_positive_replays": 4,
+  "mathematical_rejections": 7,
+  "mathematical_source_sha256": {
+    "EXPECTED.json": "4fab70227e4bf1dbc29d5f421603aef43e65b4539c800bd3d62815ab4fe067d9",
+    "compare_cas.py": "a233146e9a45eb20b8cc6c3454c76afa683d5cc6607b92d9bc15a8a2128430c6",
+    "record_io.py": "f55f8708b3c598baf007642f2e32808fb21377b3e49f9a8f4a8c3dcc9084ce4c",
+    "verify.py": "9ed04704c7c5c08cf16a8d8e9939b2160d5da3c524c09d731e55fb30e6a3806f"
+  },
+  "native_threads": 1,
+  "no_timeout_or_resource_hit": true,
+  "not_independent_peer_review": true,
+  "ordinary_bridges_unformalized": true,
+  "peak_child_rss_KiB": 72536,
+  "python": "3.12.14",
+  "resource_limits_changed": false,
+  "role": "researcher",
+  "runs": [
+    {
+      "intended_rejection": null,
+      "label": "native-local-normal",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 5.028187971998705
+    },
+    {
+      "intended_rejection": null,
+      "label": "native-cold-optimized",
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 5.427098723994277
+    },
+    {
+      "intended_rejection": null,
+      "label": "cas-local-normal",
+      "optimized": false,
+      "returncode": 0,
+      "seconds": 4.351870566999423
+    },
+    {
+      "intended_rejection": null,
+      "label": "cas-cold-optimized",
+      "optimized": true,
+      "returncode": 0,
+      "seconds": 7.796077354003501
+    },
+    {
+      "intended_rejection": "whole original critical quartic",
+      "label": "critical-quartic-cubic-term",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.06322323900531046
+    },
+    {
+      "intended_rejection": "entire original factorization",
+      "label": "original-single-root-factor",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.07163373899675207
+    },
+    {
+      "intended_rejection": "entire original derivative factorization",
+      "label": "original-second-moment",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.11446285100100795
+    },
+    {
+      "intended_rejection": "entire degree-five residue numerator",
+      "label": "full-mass-factor-eight",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.18567827800143277
+    },
+    {
+      "intended_rejection": "entire outer root-gap square envelope",
+      "label": "root-gap-square",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 0.09304012099892134
+    },
+    {
+      "intended_rejection": "entire parent tensor reverse identity",
+      "label": "whole-reverse-tensor",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 2.0294119480022346
+    },
+    {
+      "intended_rejection": "three-box coverage",
+      "label": "missing-positive-right-box",
+      "optimized": false,
+      "returncode": 1,
+      "seconds": 4.318478661996778
+    }
+  ],
+  "serial_cpu_children": 1,
+  "sympy": "1.14.0",
+  "whole_math_sha256": "12b0ed927868bc6bb04d9d9cfce17c77089d22af34637a64d7d277936cc64234"
+}
