@@ -1,0 +1,83 @@
+{
+  "agent": "six-downset-1",
+  "role": "researcher",
+  "primary_literature": [
+    "https://arxiv.org/abs/2609.28404",
+    "https://arxiv.org/html/2609.28404v1#S4"
+  ],
+  "primary_version": "v1, 23 September 2026; rechecked live 2026-10-04",
+  "H_root_ref": "bafkreifksyt4jkcmrqdjw2f4anwch6xchicjm7jtgewlgag7ldvcl246sy",
+  "predecessors": [
+    {
+      "height": 9361,
+      "ref": "bafkreidlgstp2okjjosbb677iysm3h4mpkohkmcrn4kbx7vsqogn6goxra",
+      "source_commit": "ca8d2e363536435ad034f08cf3845a6ffd276326",
+      "path": "round-two/six-downset-1/one-point-attachments/PROOF.md",
+      "credit": "Ordinary H and greatest lower rank are prior work for this class.",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-downset-1/one-point-attachments/PROOF.md"
+    },
+    {
+      "height": 10111,
+      "ref": "bafkreiailm2w3yvzhfqflc2nwzrnv3o2v3xuxygp5zzkk6if7aumqrylaq",
+      "source_commit": "2252bcaacf4798c6b13d75b4918792fd7c8bbe9c",
+      "path": "round-two/six-downset-1/balanced-triangle-all-cubes/PROOF.md",
+      "credit": "Old cube Gram, balanced construction, and polynomial engine; balanced counts are a separate prior domain.",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-downset-1/balanced-triangle-all-cubes/PROOF.md"
+    },
+    {
+      "height": 10160,
+      "ref": "bafkreicdarvtdijre7i2e7e7wqrc2awospw4hniluiba2jkfgkmhuv2xoq",
+      "source_commit": "95ef0d44f2263cb94a191632fc04dd64f0feaba7",
+      "path": "round-two/six-downset-1/balanced-triangle-repair-line/PROOF.md",
+      "credit": "Verbatim exact/linear/probe sources, full balanced parent recipe, and repair-line mechanism.",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-downset-1/balanced-triangle-repair-line/PROOF.md"
+    },
+    {
+      "height": 10230,
+      "ref": "bafkreihcefvfoat4fxwswmbkl6p6v6nkc752f7u6ym7lzjvuvfxxbf2ydi",
+      "source_commit": "21517cfce36b080a73f3c0ec5ed7969e09a50cf9",
+      "path": "round-two/six-downset-1/consecutive-triangle-cap/PROOF.md",
+      "credit": "Retained light mean and harmonic residual coupling for consecutive counts; all unequal counts extend its cap/rank statement.",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-downset-1/consecutive-triangle-cap/PROOF.md"
+    },
+    {
+      "height": 10237,
+      "ref": "bafkreihyussbwaeoehxhrsnqyrbyiqiealycyjp7jaczvf6yzelid3ypoi",
+      "source_commit": "4ff8e4ec4693a852d247ed72d56853a170e173ac",
+      "path": "round-two/six-reviewer-5/asymmetric-cube-cap-audit/REVIEW.md",
+      "credit": "Independent review of consecutive counts only; no all-count verdict transferred. Sharp parent dual estimate informs the mean-dual calculation.",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-5/asymmetric-cube-cap-audit/REVIEW.md"
+    }
+  ],
+  "verbatim_utilities": [
+    {
+      "file": "exact.py",
+      "source_path": "round-two/six-downset-1/balanced-triangle-repair-line/exact.py",
+      "source_commit": "95ef0d44f2263cb94a191632fc04dd64f0feaba7",
+      "bytes": 5113,
+      "sha256": "b8f206f3939eedc38fcdd11301f8ccb19631d8ceab97a913afadd43e3df2b4ad",
+      "verbatim": true
+    },
+    {
+      "file": "linear.py",
+      "source_path": "round-two/six-downset-1/balanced-triangle-repair-line/linear.py",
+      "source_commit": "95ef0d44f2263cb94a191632fc04dd64f0feaba7",
+      "bytes": 632,
+      "sha256": "6f8c3f8ecdd4e6d484eedd7dd21bcb9fafca53b2453abd823aa7fd749524920c",
+      "verbatim": true
+    },
+    {
+      "file": "probe.py",
+      "source_path": "round-two/six-downset-1/balanced-triangle-repair-line/probe.py",
+      "source_commit": "95ef0d44f2263cb94a191632fc04dd64f0feaba7",
+      "bytes": 10623,
+      "sha256": "97a38760a593fd3e039a29b54b85f6cd9909cf5a374a7cb54f55746844816498",
+      "verbatim": true
+    }
+  ],
+  "engine_derivation": "trivariate.py adapts the credited balanced10111 bivariate engine to three variables; it is producer code, not the separate certificate reader.",
+  "trust": "Ordinary real/spectral/completeness and integer-encoding bridges are unformalized. Separate checker algorithms have the same author; no independent-person review.",
+  "runtime": "CPython 3.12.14; standard library only; native threads one; children serial",
+  "priority_claim": false,
+  "globally_resolves_H": false
+}
