@@ -1,0 +1,163 @@
+{
+  "agent": "six-sendov-3",
+  "role": "researcher",
+  "python": "3.12.14",
+  "scope": "Exact finite coordinate/higher-trace corroboration; ordinary actual uniform bridges remain credited premises.",
+  "source_hashes": {
+    "arithmetic.py": "5ca52c6b92566ffe2004fbe28721f2fe353c04dd3ed62c3c83f0063f5c651af6",
+    "verify.py": "f68433fb6a38ac025eb3198234214b409f4b8ad8fc0dfc11c4c53da8d4a790c0"
+  },
+  "whole_record_bytes": 48257,
+  "whole_record_sha256": "36bc0b41304eccafdbb4a9cdd6523c302f51f65b42a452c6d4f245d2218c9a18",
+  "complete_record_bytes_compared": true,
+  "replays": [
+    {
+      "label": "local",
+      "seconds": 0.172664,
+      "exit_code": 0,
+      "status": "PASS",
+      "gate": null
+    },
+    {
+      "label": "local optimized",
+      "seconds": 0.424613,
+      "exit_code": 0,
+      "status": "PASS",
+      "gate": null
+    },
+    {
+      "label": "cold",
+      "seconds": 0.171813,
+      "exit_code": 0,
+      "status": "PASS",
+      "gate": null
+    },
+    {
+      "label": "cold optimized",
+      "seconds": 0.472097,
+      "exit_code": 0,
+      "status": "PASS",
+      "gate": null
+    },
+    {
+      "label": "mathematical defect mean-axis",
+      "seconds": 0.312167,
+      "exit_code": 1,
+      "status": "EXPECTED_REJECTION",
+      "gate": "old real mean channel"
+    },
+    {
+      "label": "mathematical defect imaginary-axis",
+      "seconds": 0.276439,
+      "exit_code": 1,
+      "status": "EXPECTED_REJECTION",
+      "gate": "old imaginary mean channel"
+    },
+    {
+      "label": "mathematical defect real-transverse",
+      "seconds": 0.34467,
+      "exit_code": 1,
+      "status": "EXPECTED_REJECTION",
+      "gate": "ENTIRE twelve-dimensional old cost to axis cost"
+    },
+    {
+      "label": "mathematical defect imaginary-transverse",
+      "seconds": 0.400989,
+      "exit_code": 1,
+      "status": "EXPECTED_REJECTION",
+      "gate": "ENTIRE twelve-dimensional old cost to axis cost"
+    },
+    {
+      "label": "mathematical defect cubic-factor",
+      "seconds": 0.49091,
+      "exit_code": 1,
+      "status": "EXPECTED_REJECTION",
+      "gate": "complete cubic first jet, all eight slots"
+    },
+    {
+      "label": "mathematical defect second-tangent",
+      "seconds": 0.323344,
+      "exit_code": 1,
+      "status": "EXPECTED_REJECTION",
+      "gate": "all second imaginary means"
+    },
+    {
+      "label": "mathematical defect third-real-sign",
+      "seconds": 0.320152,
+      "exit_code": 1,
+      "status": "EXPECTED_REJECTION",
+      "gate": "entire higher primitive derivative column 7"
+    },
+    {
+      "label": "mathematical defect third-imag-sign",
+      "seconds": 0.310652,
+      "exit_code": 1,
+      "status": "EXPECTED_REJECTION",
+      "gate": "entire higher primitive derivative column 6"
+    },
+    {
+      "label": "mathematical defect slack-weight",
+      "seconds": 0.266558,
+      "exit_code": 1,
+      "status": "EXPECTED_REJECTION",
+      "gate": "physical even dual first response"
+    },
+    {
+      "label": "mathematical defect fourth-constant",
+      "seconds": 0.267599,
+      "exit_code": 1,
+      "status": "EXPECTED_REJECTION",
+      "gate": "credited fourth constant"
+    },
+    {
+      "label": "mathematical defect kappa-sign",
+      "seconds": 0.262261,
+      "exit_code": 1,
+      "status": "EXPECTED_REJECTION",
+      "gate": "credited common imaginary weight"
+    },
+    {
+      "label": "mathematical defect normal-factor",
+      "seconds": 0.348454,
+      "exit_code": 1,
+      "status": "EXPECTED_REJECTION",
+      "gate": "actual half-normal slack normalization"
+    },
+    {
+      "label": "unsealed source arithmetic.py",
+      "seconds": 0.215473,
+      "exit_code": 1,
+      "status": "EXPECTED_REJECTION",
+      "gate": "pre-import source hash: arithmetic.py"
+    },
+    {
+      "label": "unsealed source verify.py",
+      "seconds": 0.204349,
+      "exit_code": 1,
+      "status": "EXPECTED_REJECTION",
+      "gate": "pre-import source hash: verify.py"
+    },
+    {
+      "label": "final cold",
+      "seconds": 0.195159,
+      "exit_code": 0,
+      "status": "PASS",
+      "gate": null
+    }
+  ],
+  "threads": {
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "NUMEXPR_NUM_THREADS": 1,
+    "VECLIB_MAXIMUM_THREADS": 1,
+    "BLIS_NUM_THREADS": 1
+  },
+  "one_cpu_child_at_a_time": true,
+  "per_child_timeout_seconds": 45,
+  "max_completed_seconds": 0.49091,
+  "cumulative_child_peak_kib": 22232,
+  "resource_limited": false,
+  "mathematical_rejections": 12,
+  "source_rejections": 2
+}
