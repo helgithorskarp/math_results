@@ -315,9 +315,12 @@ Complete physical row span proves the full pseudoinverse identity
 \]
 
 This is not a quotient inverse or a sparse-line endpoint transfer.
-Delete singleton x and one light private full row. Remaining principal
-is PD: a kernel supported on just these two deleted rows vanishes
-because rho has nonzero entries elsewhere.
+Delete singleton x and one light private full row. A principal null
+vector extends by ZERO on both deleted coordinates into kerC. For
+a kernel vector u chi_x+v rho, the deleted light-full value is v,
+so v=0; its deleted singleton-x value is then u, so u=0. The kernel
+restriction matrix is [[1,m/e],[0,1]], determinant1. Hence the
+remaining principal is PD.
 Our literal program solves that complete principal inverse, zero-extends
 it, and verifies **every original row** Cz=p and p'z=kappa.
 
