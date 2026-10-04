@@ -1,0 +1,354 @@
+{
+  "actual_agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "complete": true,
+  "serial_children": 1,
+  "native_threads": 1,
+  "fixed_child_guard_seconds": 45,
+  "positive_replays": 6,
+  "mathematical_rejects": 24,
+  "whole_fixture_rejects": 4,
+  "preimport_source_rejects": 2,
+  "whole_record_bytes": 66066,
+  "whole_record_sha256": "bfc97c056ed8c23ca6809ae96146426c996b427853611d5bcb31071d1018347d",
+  "children": [
+    {
+      "label": "local-normal",
+      "positive": true,
+      "code": 0,
+      "seconds": 21.722601146997476,
+      "peak_child_KiB": 20804,
+      "stdout": "{\"complete\": true, \"whole_record_bytes\": 66066, \"sha256\": \"bfc97c056ed8c23ca6809ae96146426c996b427853611d5bcb31071d1018347d\", \"whole_rows\": 21, \"all_original_labels\": 9, \"ordinary_and_repaired_original_jets\": 18, \"both_repair_orders_all_labels\": true, \"threads\": 1}\n",
+      "stderr": "",
+      "whole_record_equal": true
+    },
+    {
+      "label": "local-O",
+      "positive": true,
+      "code": 0,
+      "seconds": 26.830279877001885,
+      "peak_child_KiB": 22104,
+      "stdout": "{\"complete\": true, \"whole_record_bytes\": 66066, \"sha256\": \"bfc97c056ed8c23ca6809ae96146426c996b427853611d5bcb31071d1018347d\", \"whole_rows\": 21, \"all_original_labels\": 9, \"ordinary_and_repaired_original_jets\": 18, \"both_repair_orders_all_labels\": true, \"threads\": 1}\n",
+      "stderr": "",
+      "whole_record_equal": true
+    },
+    {
+      "label": "cold-normal",
+      "positive": true,
+      "code": 0,
+      "seconds": 34.04588632300147,
+      "peak_child_KiB": 22104,
+      "stdout": "{\"complete\": true, \"whole_record_bytes\": 66066, \"sha256\": \"bfc97c056ed8c23ca6809ae96146426c996b427853611d5bcb31071d1018347d\", \"whole_rows\": 21, \"all_original_labels\": 9, \"ordinary_and_repaired_original_jets\": 18, \"both_repair_orders_all_labels\": true, \"threads\": 1}\n",
+      "stderr": "",
+      "whole_record_equal": true
+    },
+    {
+      "label": "cold-O",
+      "positive": true,
+      "code": 0,
+      "seconds": 40.18123576799917,
+      "peak_child_KiB": 22416,
+      "stdout": "{\"complete\": true, \"whole_record_bytes\": 66066, \"sha256\": \"bfc97c056ed8c23ca6809ae96146426c996b427853611d5bcb31071d1018347d\", \"whole_rows\": 21, \"all_original_labels\": 9, \"ordinary_and_repaired_original_jets\": 18, \"both_repair_orders_all_labels\": true, \"threads\": 1}\n",
+      "stderr": "",
+      "whole_record_equal": true
+    },
+    {
+      "label": "second-python-normal",
+      "positive": true,
+      "code": 0,
+      "seconds": 24.133249059999798,
+      "peak_child_KiB": 22416,
+      "stdout": "{\"complete\": true, \"whole_record_bytes\": 66066, \"sha256\": \"bfc97c056ed8c23ca6809ae96146426c996b427853611d5bcb31071d1018347d\", \"whole_rows\": 21, \"all_original_labels\": 9, \"ordinary_and_repaired_original_jets\": 18, \"both_repair_orders_all_labels\": true, \"threads\": 1}\n",
+      "stderr": "",
+      "whole_record_equal": true
+    },
+    {
+      "label": "second-python-O",
+      "positive": true,
+      "code": 0,
+      "seconds": 13.126031102001434,
+      "peak_child_KiB": 22416,
+      "stdout": "{\"complete\": true, \"whole_record_bytes\": 66066, \"sha256\": \"bfc97c056ed8c23ca6809ae96146426c996b427853611d5bcb31071d1018347d\", \"whole_rows\": 21, \"all_original_labels\": 9, \"ordinary_and_repaired_original_jets\": 18, \"both_repair_orders_all_labels\": true, \"threads\": 1}\n",
+      "stderr": "",
+      "whole_record_equal": true
+    },
+    {
+      "label": "third-normal",
+      "positive": false,
+      "code": 1,
+      "seconds": 1.4885683579996112,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 94, in core\n    for n in range(10):equal(obj.v[n],wanted.get(n,R()),'whole direct FIRST coefficient '+str(n))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole direct FIRST coefficient 6\n"
+    },
+    {
+      "label": "third-O",
+      "positive": false,
+      "code": 1,
+      "seconds": 1.4474933440033055,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 94, in core\n    for n in range(10):equal(obj.v[n],wanted.get(n,R()),'whole direct FIRST coefficient '+str(n))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole direct FIRST coefficient 6\n"
+    },
+    {
+      "label": "pair-third-normal",
+      "positive": false,
+      "code": 1,
+      "seconds": 1.2316494850019808,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 94, in core\n    for n in range(10):equal(obj.v[n],wanted.get(n,R()),'whole direct FIRST coefficient '+str(n))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole direct FIRST coefficient 6\n"
+    },
+    {
+      "label": "pair-third-O",
+      "positive": false,
+      "code": 1,
+      "seconds": 1.3649971499980893,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 94, in core\n    for n in range(10):equal(obj.v[n],wanted.get(n,R()),'whole direct FIRST coefficient '+str(n))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole direct FIRST coefficient 6\n"
+    },
+    {
+      "label": "fourth-normal",
+      "positive": false,
+      "code": 1,
+      "seconds": 1.1742344120029884,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 94, in core\n    for n in range(10):equal(obj.v[n],wanted.get(n,R()),'whole direct FIRST coefficient '+str(n))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole direct FIRST coefficient 8\n"
+    },
+    {
+      "label": "fourth-O",
+      "positive": false,
+      "code": 1,
+      "seconds": 1.3852080710021255,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 94, in core\n    for n in range(10):equal(obj.v[n],wanted.get(n,R()),'whole direct FIRST coefficient '+str(n))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole direct FIRST coefficient 8\n"
+    },
+    {
+      "label": "pair-fourth-normal",
+      "positive": false,
+      "code": 1,
+      "seconds": 1.2331365350000851,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 94, in core\n    for n in range(10):equal(obj.v[n],wanted.get(n,R()),'whole direct FIRST coefficient '+str(n))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole direct FIRST coefficient 8\n"
+    },
+    {
+      "label": "pair-fourth-O",
+      "positive": false,
+      "code": 1,
+      "seconds": 1.6205664549997891,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 94, in core\n    for n in range(10):equal(obj.v[n],wanted.get(n,R()),'whole direct FIRST coefficient '+str(n))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole direct FIRST coefficient 8\n"
+    },
+    {
+      "label": "M-normal",
+      "positive": false,
+      "code": 1,
+      "seconds": 1.3502123600010236,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 94, in core\n    for n in range(10):equal(obj.v[n],wanted.get(n,R()),'whole direct FIRST coefficient '+str(n))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole direct FIRST coefficient 8\n"
+    },
+    {
+      "label": "M-O",
+      "positive": false,
+      "code": 1,
+      "seconds": 1.526269167999999,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 94, in core\n    for n in range(10):equal(obj.v[n],wanted.get(n,R()),'whole direct FIRST coefficient '+str(n))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole direct FIRST coefficient 8\n"
+    },
+    {
+      "label": "beta-normal",
+      "positive": false,
+      "code": 1,
+      "seconds": 1.4224310760000662,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 94, in core\n    for n in range(10):equal(obj.v[n],wanted.get(n,R()),'whole direct FIRST coefficient '+str(n))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole direct FIRST coefficient 8\n"
+    },
+    {
+      "label": "beta-O",
+      "positive": false,
+      "code": 1,
+      "seconds": 1.5645857890012849,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 94, in core\n    for n in range(10):equal(obj.v[n],wanted.get(n,R()),'whole direct FIRST coefficient '+str(n))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole direct FIRST coefficient 8\n"
+    },
+    {
+      "label": "inward-normal",
+      "positive": false,
+      "code": 1,
+      "seconds": 1.3290632429998368,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 94, in core\n    for n in range(10):equal(obj.v[n],wanted.get(n,R()),'whole direct FIRST coefficient '+str(n))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole direct FIRST coefficient 9\n"
+    },
+    {
+      "label": "inward-O",
+      "positive": false,
+      "code": 1,
+      "seconds": 1.395997391999117,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 94, in core\n    for n in range(10):equal(obj.v[n],wanted.get(n,R()),'whole direct FIRST coefficient '+str(n))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole direct FIRST coefficient 9\n"
+    },
+    {
+      "label": "balance-normal",
+      "positive": false,
+      "code": 1,
+      "seconds": 1.3685412949998863,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 94, in core\n    for n in range(10):equal(obj.v[n],wanted.get(n,R()),'whole direct FIRST coefficient '+str(n))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole direct FIRST coefficient 4\n"
+    },
+    {
+      "label": "balance-O",
+      "positive": false,
+      "code": 1,
+      "seconds": 1.5458804490008333,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 94, in core\n    for n in range(10):equal(obj.v[n],wanted.get(n,R()),'whole direct FIRST coefficient '+str(n))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole direct FIRST coefficient 4\n"
+    },
+    {
+      "label": "multiplicity-normal",
+      "positive": false,
+      "code": 1,
+      "seconds": 0.3811816999987059,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 81, in core\n    equal(p[9],J(1),'whole monic');equal(zeval(p,a),J(),'whole actual anchor')\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole monic\n"
+    },
+    {
+      "label": "multiplicity-O",
+      "positive": false,
+      "code": 1,
+      "seconds": 0.5123380129989528,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 81, in core\n    equal(p[9],J(1),'whole monic');equal(zeval(p,a),J(),'whole actual anchor')\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole monic\n"
+    },
+    {
+      "label": "anchor-normal",
+      "positive": false,
+      "code": 1,
+      "seconds": 0.36790902899883804,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 81, in core\n    equal(p[9],J(1),'whole monic');equal(zeval(p,a),J(),'whole actual anchor')\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole actual anchor\n"
+    },
+    {
+      "label": "anchor-O",
+      "positive": false,
+      "code": 1,
+      "seconds": 0.5379673149982409,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 81, in core\n    equal(p[9],J(1),'whole monic');equal(zeval(p,a),J(),'whole actual anchor')\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole actual anchor\n"
+    },
+    {
+      "label": "cost-multiplicity-normal",
+      "positive": false,
+      "code": 1,
+      "seconds": 1.3507057990027533,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 94, in core\n    for n in range(10):equal(obj.v[n],wanted.get(n,R()),'whole direct FIRST coefficient '+str(n))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole direct FIRST coefficient 0\n"
+    },
+    {
+      "label": "cost-multiplicity-O",
+      "positive": false,
+      "code": 1,
+      "seconds": 1.5962764009964303,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 48, in main\n    else:core(args.damage)\n         ^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 94, in core\n    for n in range(10):equal(obj.v[n],wanted.get(n,R()),'whole direct FIRST coefficient '+str(n))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: whole direct FIRST coefficient 0\n"
+    },
+    {
+      "label": "column-normal",
+      "positive": false,
+      "code": 1,
+      "seconds": 0.7606259049971413,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 47, in main\n    if args.damage=='column':columns(args.damage)\n                             ^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 164, in columns\n    for j in range(10):equal(responses[j],expected[j],'entire leading actual repair primitive '+str((q,j)))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: entire leading actual repair primitive (3, 7)\n"
+    },
+    {
+      "label": "column-O",
+      "positive": false,
+      "code": 1,
+      "seconds": 0.7665721400007897,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/verify.py\", line 47, in main\n    if args.damage=='column':columns(args.damage)\n                             ^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/audit.py\", line 164, in columns\n    for j in range(10):equal(responses[j],expected[j],'entire leading actual repair primitive '+str((q,j)))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 8, in equal\n    require(a==b,label)\n  File \"/scratch/research-team-sol61-six-20260929/rounds/round2-clean-20261001T1130Z/workspaces/six-reviewer-5/round-two/six-reviewer-5/scratch/pass58/packet/signs.py\", line 5, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: entire leading actual repair primitive (3, 7)\n"
+    },
+    {
+      "label": "fixture-float",
+      "positive": false,
+      "code": 1,
+      "seconds": 0.2050639939989196,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<validation-scratch>/fixture-float/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"<validation-scratch>/fixture-float/verify.py\", line 39, in main\n    raw=(root/'FRESH-BASE.json').read_bytes();expected=json.loads(raw);exact_tree(expected)\n                                                                       ^^^^^^^^^^^^^^^^^^^^\n  File \"<validation-scratch>/fixture-float/verify.py\", line 31, in exact_tree\n    for item in value.values():exact_tree(item)\n                               ^^^^^^^^^^^^^^^^\n  File \"<validation-scratch>/fixture-float/verify.py\", line 27, in exact_tree\n    for item in value:exact_tree(item)\n                      ^^^^^^^^^^^^^^^^\n  File \"<validation-scratch>/fixture-float/verify.py\", line 31, in exact_tree\n    for item in value.values():exact_tree(item)\n                               ^^^^^^^^^^^^^^^^\n  File \"<validation-scratch>/fixture-float/verify.py\", line 33, in exact_tree\n    raise ValueError('strict exact record type')\nValueError: strict exact record type\n"
+    },
+    {
+      "label": "fixture-boolean",
+      "positive": false,
+      "code": 1,
+      "seconds": 0.3486986669995531,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<validation-scratch>/fixture-boolean/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"<validation-scratch>/fixture-boolean/verify.py\", line 39, in main\n    raw=(root/'FRESH-BASE.json').read_bytes();expected=json.loads(raw);exact_tree(expected)\n                                                                       ^^^^^^^^^^^^^^^^^^^^\n  File \"<validation-scratch>/fixture-boolean/verify.py\", line 31, in exact_tree\n    for item in value.values():exact_tree(item)\n                               ^^^^^^^^^^^^^^^^\n  File \"<validation-scratch>/fixture-boolean/verify.py\", line 27, in exact_tree\n    for item in value:exact_tree(item)\n                      ^^^^^^^^^^^^^^^^\n  File \"<validation-scratch>/fixture-boolean/verify.py\", line 31, in exact_tree\n    for item in value.values():exact_tree(item)\n                               ^^^^^^^^^^^^^^^^\n  File \"<validation-scratch>/fixture-boolean/verify.py\", line 33, in exact_tree\n    raise ValueError('strict exact record type')\nValueError: strict exact record type\n"
+    },
+    {
+      "label": "fixture-drop-root",
+      "positive": false,
+      "code": 1,
+      "seconds": 18.135161725997023,
+      "peak_child_KiB": 22416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<validation-scratch>/fixture-drop-root/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"<validation-scratch>/fixture-drop-root/verify.py\", line 51, in main\n    require(b==canonical(expected),'every field of whole exact record')\n  File \"<validation-scratch>/fixture-drop-root/verify.py\", line 10, in require\n    if not ok:raise ValueError(label)\n              ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: every field of whole exact record\n"
+    },
+    {
+      "label": "fixture-alter-coefficient",
+      "positive": false,
+      "code": 1,
+      "seconds": 19.663632088999293,
+      "peak_child_KiB": 22476,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<validation-scratch>/fixture-alter-coefficient/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"<validation-scratch>/fixture-alter-coefficient/verify.py\", line 51, in main\n    require(b==canonical(expected),'every field of whole exact record')\n  File \"<validation-scratch>/fixture-alter-coefficient/verify.py\", line 10, in require\n    if not ok:raise ValueError(label)\n              ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: every field of whole exact record\n"
+    },
+    {
+      "label": "source-arithmetic",
+      "positive": false,
+      "code": 1,
+      "seconds": 0.27208744900053716,
+      "peak_child_KiB": 22476,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<validation-scratch>/source-arithmetic/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"<validation-scratch>/source-arithmetic/verify.py\", line 38, in main\n    root=Path(__file__).resolve().parent;source_gate(root)\n                                         ^^^^^^^^^^^^^^^^^\n  File \"<validation-scratch>/source-arithmetic/verify.py\", line 21, in source_gate\n    require(hashlib.sha256((root/name).read_bytes()).hexdigest()==digest,'source seal '+name)\n  File \"<validation-scratch>/source-arithmetic/verify.py\", line 10, in require\n    if not ok:raise ValueError(label)\n              ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source seal algebra.py\n"
+    },
+    {
+      "label": "source-census",
+      "positive": false,
+      "code": 1,
+      "seconds": 0.31402246599827777,
+      "peak_child_KiB": 22476,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<validation-scratch>/source-census/verify.py\", line 58, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"<validation-scratch>/source-census/verify.py\", line 38, in main\n    root=Path(__file__).resolve().parent;source_gate(root)\n                                         ^^^^^^^^^^^^^^^^^\n  File \"<validation-scratch>/source-census/verify.py\", line 19, in source_gate\n    require(tuple(name for name,digest in rows)==SOURCE_FILES,'source seal complete census')\n  File \"<validation-scratch>/source-census/verify.py\", line 10, in require\n    if not ok:raise ValueError(label)\n              ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source seal complete census\n"
+    }
+  ],
+  "interpreters": [
+    "Python 3.11.2",
+    "Python 3.12.14"
+  ],
+  "all_children_completed_within_fixed_guard": true,
+  "peak_reported_child_KiB": 22476,
+  "max_child_seconds": 40.18123576799917,
+  "validation_before_final_document_seal": true
+}
