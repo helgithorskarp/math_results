@@ -1,0 +1,666 @@
+{
+  "agent": "six-sendov-3",
+  "role": "researcher",
+  "python": "3.12.14",
+  "formalization": false,
+  "independent_review": false,
+  "same_author_validation": true,
+  "source_fingerprint": "aa698a4b606ad590ca89d7ec617aa229d21b9192f6c20256c85c1a0b2b6d7d99",
+  "source_files": {
+    ".gitignore": "17e753d23c7a6e118d75047a23347a53f276a1e8ed6ab1611c91845c155df31d",
+    "DEPENDENCIES.json": "6229cb0dd295c265e0b3aaff583f6f9f89ef6e7ac38b9bf86dd35e1a8c834e24",
+    "EXPECTED.json": "19bff4b09e8e82156c6fe62095a91c83d0ad18ed5380ce70aeeedf2fedae19e7",
+    "LITERATURE.md": "e818b7a59287d7dfa392cced06488ffc57224ea2d11f6a5be479fc8eaecf8c7e",
+    "PROOF.md": "54b45ae260e452a5683102fe50400ac4f0c889b6da8b3e352f930ba10bcdd4f3",
+    "README.md": "fda822779e708f4d1122e5fce8cac6710aded985348a3e2114bcd066bfc966c4",
+    "checks.py": "d3915b51df944e5212a2aca19bd3bfeed40cc718805b1dd09a80da6f6fcb5c74",
+    "profiles.py": "5a6dac4d86c3394919e6386ecd843e987935343a6055d28c1f8b67509e79451d",
+    "provenance.json": "219fbe4e75c01cc4ed79d74fd1cc834d6c558a438fa51d6e3491623398d19f0b",
+    "validate.py": "c42e96b49617d4d29f4fb141b77c1bd794ee2392d2c8b7ec9f32e9f3f46ee7e9",
+    "verify.py": "eccfc3d6efc5df7e9667c13a4b5de8347ad36dfa445cfdbb6689e0f54da7d2c2"
+  },
+  "native_threads": 1,
+  "max_cpu_intensive_children": 1,
+  "child_guard_seconds": 45,
+  "positive_modes": 4,
+  "positive_stage_jobs": 36,
+  "negative_controls": 44,
+  "positives": [
+    {
+      "mode": "local-n",
+      "stage": "algebra",
+      "seconds": 0.21867317400028696,
+      "peak_rss_kib": 21552,
+      "identity_count": 9,
+      "whole_record_sha256": "65b25172b1e11308b2e8f91cf5d9d72491db448886b28e28ead7b5e3bc3b9d04",
+      "whole_record_bytes": 3728
+    },
+    {
+      "mode": "local-n",
+      "stage": "lower_centers",
+      "seconds": 8.293187273999138,
+      "peak_rss_kib": 22412,
+      "identity_count": 69,
+      "whole_record_sha256": "da13332af78f80846393a3446c144a5c15d3f5de3c2ca5c43d8f6060879db7a3",
+      "whole_record_bytes": 12833
+    },
+    {
+      "mode": "local-n",
+      "stage": "literal",
+      "seconds": 6.965035274000911,
+      "peak_rss_kib": 23748,
+      "identity_count": 42,
+      "whole_record_sha256": "c0727f938cf06a5b69e94dda3f3b165aca5ff33ede8939a6a98d6f78f0cacf68",
+      "whole_record_bytes": 100640
+    },
+    {
+      "mode": "local-n",
+      "stage": "distance",
+      "seconds": 11.203988817000209,
+      "peak_rss_kib": 25040,
+      "identity_count": 70,
+      "whole_record_sha256": "755793eefb3726cd990a4195da720a9758aaf6ff86923c7fcbfac33f0f2d8562",
+      "whole_record_bytes": 210124
+    },
+    {
+      "mode": "local-n",
+      "stage": "roots",
+      "seconds": 11.977147046000027,
+      "peak_rss_kib": 23752,
+      "identity_count": 59,
+      "whole_record_sha256": "bc16d4c27f9697a1fc1e9aa14daf8f6e9b74d3d3c195f9a8738a9638909b7f16",
+      "whole_record_bytes": 107713
+    },
+    {
+      "mode": "local-n",
+      "stage": "real_center",
+      "seconds": 13.000940117000937,
+      "peak_rss_kib": 24464,
+      "identity_count": 20,
+      "whole_record_sha256": "a0ef075cad70525717153ada06e0e605f1704ac3be45e38864a997832399ba47",
+      "whole_record_bytes": 4029
+    },
+    {
+      "mode": "local-n",
+      "stage": "imaginary_center",
+      "seconds": 12.341706993000116,
+      "peak_rss_kib": 24540,
+      "identity_count": 20,
+      "whole_record_sha256": "d949276f3ae7d503d59503cda00b92c2458c3e68b9a14f66cc98e21c5be7849b",
+      "whole_record_bytes": 4134
+    },
+    {
+      "mode": "local-n",
+      "stage": "real_pair",
+      "seconds": 12.506817534998845,
+      "peak_rss_kib": 24512,
+      "identity_count": 20,
+      "whole_record_sha256": "80b71b74e3d135383f035cb14845719ec9eb29b8061008510e76ee19a2124e13",
+      "whole_record_bytes": 3987
+    },
+    {
+      "mode": "local-n",
+      "stage": "imaginary_pair",
+      "seconds": 12.580512316999375,
+      "peak_rss_kib": 24544,
+      "identity_count": 20,
+      "whole_record_sha256": "eadbed7738643b80fa28afc50519175e1ef45e689aa1d9daef727d89e8c6cd02",
+      "whole_record_bytes": 4092
+    },
+    {
+      "mode": "local-o",
+      "stage": "algebra",
+      "seconds": 0.6736222119998274,
+      "peak_rss_kib": 21844,
+      "identity_count": 9,
+      "whole_record_sha256": "65b25172b1e11308b2e8f91cf5d9d72491db448886b28e28ead7b5e3bc3b9d04",
+      "whole_record_bytes": 3728
+    },
+    {
+      "mode": "local-o",
+      "stage": "lower_centers",
+      "seconds": 10.10455992000061,
+      "peak_rss_kib": 23164,
+      "identity_count": 69,
+      "whole_record_sha256": "da13332af78f80846393a3446c144a5c15d3f5de3c2ca5c43d8f6060879db7a3",
+      "whole_record_bytes": 12833
+    },
+    {
+      "mode": "local-o",
+      "stage": "literal",
+      "seconds": 9.067850536999686,
+      "peak_rss_kib": 23904,
+      "identity_count": 42,
+      "whole_record_sha256": "c0727f938cf06a5b69e94dda3f3b165aca5ff33ede8939a6a98d6f78f0cacf68",
+      "whole_record_bytes": 100640
+    },
+    {
+      "mode": "local-o",
+      "stage": "distance",
+      "seconds": 12.481259247000708,
+      "peak_rss_kib": 25256,
+      "identity_count": 70,
+      "whole_record_sha256": "755793eefb3726cd990a4195da720a9758aaf6ff86923c7fcbfac33f0f2d8562",
+      "whole_record_bytes": 210124
+    },
+    {
+      "mode": "local-o",
+      "stage": "roots",
+      "seconds": 12.472888057000091,
+      "peak_rss_kib": 24452,
+      "identity_count": 59,
+      "whole_record_sha256": "bc16d4c27f9697a1fc1e9aa14daf8f6e9b74d3d3c195f9a8738a9638909b7f16",
+      "whole_record_bytes": 107713
+    },
+    {
+      "mode": "local-o",
+      "stage": "real_center",
+      "seconds": 12.57203480300086,
+      "peak_rss_kib": 24964,
+      "identity_count": 20,
+      "whole_record_sha256": "a0ef075cad70525717153ada06e0e605f1704ac3be45e38864a997832399ba47",
+      "whole_record_bytes": 4029
+    },
+    {
+      "mode": "local-o",
+      "stage": "imaginary_center",
+      "seconds": 13.49676400899989,
+      "peak_rss_kib": 24740,
+      "identity_count": 20,
+      "whole_record_sha256": "d949276f3ae7d503d59503cda00b92c2458c3e68b9a14f66cc98e21c5be7849b",
+      "whole_record_bytes": 4134
+    },
+    {
+      "mode": "local-o",
+      "stage": "real_pair",
+      "seconds": 12.491971680999995,
+      "peak_rss_kib": 24724,
+      "identity_count": 20,
+      "whole_record_sha256": "80b71b74e3d135383f035cb14845719ec9eb29b8061008510e76ee19a2124e13",
+      "whole_record_bytes": 3987
+    },
+    {
+      "mode": "local-o",
+      "stage": "imaginary_pair",
+      "seconds": 12.167964352998752,
+      "peak_rss_kib": 24748,
+      "identity_count": 20,
+      "whole_record_sha256": "eadbed7738643b80fa28afc50519175e1ef45e689aa1d9daef727d89e8c6cd02",
+      "whole_record_bytes": 4092
+    },
+    {
+      "mode": "cold-n",
+      "stage": "algebra",
+      "seconds": 0.21449453300010646,
+      "peak_rss_kib": 21548,
+      "identity_count": 9,
+      "whole_record_sha256": "65b25172b1e11308b2e8f91cf5d9d72491db448886b28e28ead7b5e3bc3b9d04",
+      "whole_record_bytes": 3728
+    },
+    {
+      "mode": "cold-n",
+      "stage": "lower_centers",
+      "seconds": 8.273025709000649,
+      "peak_rss_kib": 22424,
+      "identity_count": 69,
+      "whole_record_sha256": "da13332af78f80846393a3446c144a5c15d3f5de3c2ca5c43d8f6060879db7a3",
+      "whole_record_bytes": 12833
+    },
+    {
+      "mode": "cold-n",
+      "stage": "literal",
+      "seconds": 6.829970377000791,
+      "peak_rss_kib": 23764,
+      "identity_count": 42,
+      "whole_record_sha256": "c0727f938cf06a5b69e94dda3f3b165aca5ff33ede8939a6a98d6f78f0cacf68",
+      "whole_record_bytes": 100640
+    },
+    {
+      "mode": "cold-n",
+      "stage": "distance",
+      "seconds": 12.172204399999828,
+      "peak_rss_kib": 25132,
+      "identity_count": 70,
+      "whole_record_sha256": "755793eefb3726cd990a4195da720a9758aaf6ff86923c7fcbfac33f0f2d8562",
+      "whole_record_bytes": 210124
+    },
+    {
+      "mode": "cold-n",
+      "stage": "roots",
+      "seconds": 12.497576933001255,
+      "peak_rss_kib": 23756,
+      "identity_count": 59,
+      "whole_record_sha256": "bc16d4c27f9697a1fc1e9aa14daf8f6e9b74d3d3c195f9a8738a9638909b7f16",
+      "whole_record_bytes": 107713
+    },
+    {
+      "mode": "cold-n",
+      "stage": "real_center",
+      "seconds": 11.917247934999978,
+      "peak_rss_kib": 24536,
+      "identity_count": 20,
+      "whole_record_sha256": "a0ef075cad70525717153ada06e0e605f1704ac3be45e38864a997832399ba47",
+      "whole_record_bytes": 4029
+    },
+    {
+      "mode": "cold-n",
+      "stage": "imaginary_center",
+      "seconds": 11.987447763000091,
+      "peak_rss_kib": 24492,
+      "identity_count": 20,
+      "whole_record_sha256": "d949276f3ae7d503d59503cda00b92c2458c3e68b9a14f66cc98e21c5be7849b",
+      "whole_record_bytes": 4134
+    },
+    {
+      "mode": "cold-n",
+      "stage": "real_pair",
+      "seconds": 12.539084811000066,
+      "peak_rss_kib": 24472,
+      "identity_count": 20,
+      "whole_record_sha256": "80b71b74e3d135383f035cb14845719ec9eb29b8061008510e76ee19a2124e13",
+      "whole_record_bytes": 3987
+    },
+    {
+      "mode": "cold-n",
+      "stage": "imaginary_pair",
+      "seconds": 13.381431112000428,
+      "peak_rss_kib": 24540,
+      "identity_count": 20,
+      "whole_record_sha256": "eadbed7738643b80fa28afc50519175e1ef45e689aa1d9daef727d89e8c6cd02",
+      "whole_record_bytes": 4092
+    },
+    {
+      "mode": "cold-o",
+      "stage": "algebra",
+      "seconds": 0.5177978720003011,
+      "peak_rss_kib": 22308,
+      "identity_count": 9,
+      "whole_record_sha256": "65b25172b1e11308b2e8f91cf5d9d72491db448886b28e28ead7b5e3bc3b9d04",
+      "whole_record_bytes": 3728
+    },
+    {
+      "mode": "cold-o",
+      "stage": "lower_centers",
+      "seconds": 9.468732438001098,
+      "peak_rss_kib": 22856,
+      "identity_count": 69,
+      "whole_record_sha256": "da13332af78f80846393a3446c144a5c15d3f5de3c2ca5c43d8f6060879db7a3",
+      "whole_record_bytes": 12833
+    },
+    {
+      "mode": "cold-o",
+      "stage": "literal",
+      "seconds": 8.849396635998346,
+      "peak_rss_kib": 24468,
+      "identity_count": 42,
+      "whole_record_sha256": "c0727f938cf06a5b69e94dda3f3b165aca5ff33ede8939a6a98d6f78f0cacf68",
+      "whole_record_bytes": 100640
+    },
+    {
+      "mode": "cold-o",
+      "stage": "distance",
+      "seconds": 12.098553058998732,
+      "peak_rss_kib": 25776,
+      "identity_count": 70,
+      "whole_record_sha256": "755793eefb3726cd990a4195da720a9758aaf6ff86923c7fcbfac33f0f2d8562",
+      "whole_record_bytes": 210124
+    },
+    {
+      "mode": "cold-o",
+      "stage": "roots",
+      "seconds": 11.68605594300061,
+      "peak_rss_kib": 24488,
+      "identity_count": 59,
+      "whole_record_sha256": "bc16d4c27f9697a1fc1e9aa14daf8f6e9b74d3d3c195f9a8738a9638909b7f16",
+      "whole_record_bytes": 107713
+    },
+    {
+      "mode": "cold-o",
+      "stage": "real_center",
+      "seconds": 12.888542810000217,
+      "peak_rss_kib": 25004,
+      "identity_count": 20,
+      "whole_record_sha256": "a0ef075cad70525717153ada06e0e605f1704ac3be45e38864a997832399ba47",
+      "whole_record_bytes": 4029
+    },
+    {
+      "mode": "cold-o",
+      "stage": "imaginary_center",
+      "seconds": 13.697454600000128,
+      "peak_rss_kib": 24716,
+      "identity_count": 20,
+      "whole_record_sha256": "d949276f3ae7d503d59503cda00b92c2458c3e68b9a14f66cc98e21c5be7849b",
+      "whole_record_bytes": 4134
+    },
+    {
+      "mode": "cold-o",
+      "stage": "real_pair",
+      "seconds": 12.62373789099911,
+      "peak_rss_kib": 24948,
+      "identity_count": 20,
+      "whole_record_sha256": "80b71b74e3d135383f035cb14845719ec9eb29b8061008510e76ee19a2124e13",
+      "whole_record_bytes": 3987
+    },
+    {
+      "mode": "cold-o",
+      "stage": "imaginary_pair",
+      "seconds": 12.737255218999053,
+      "peak_rss_kib": 24720,
+      "identity_count": 20,
+      "whole_record_sha256": "eadbed7738643b80fa28afc50519175e1ef45e689aa1d9daef727d89e8c6cd02",
+      "whole_record_bytes": 4092
+    }
+  ],
+  "rejections": [
+    {
+      "tag": "semantic-n-wrong_pair_compensation",
+      "stage": "literal",
+      "optimized": false,
+      "gate_marker": "WHOLE",
+      "seconds": 2.75055785099903
+    },
+    {
+      "tag": "semantic-n-omit_even_repair",
+      "stage": "literal",
+      "optimized": false,
+      "gate_marker": "WHOLE",
+      "seconds": 5.417976421000276
+    },
+    {
+      "tag": "semantic-n-omit_odd_center",
+      "stage": "roots",
+      "optimized": false,
+      "gate_marker": "WHOLE",
+      "seconds": 4.167631169000742
+    },
+    {
+      "tag": "semantic-n-wrong_radical_relation",
+      "stage": "distance",
+      "optimized": false,
+      "gate_marker": "WHOLE",
+      "seconds": 4.795456802001354
+    },
+    {
+      "tag": "semantic-n-wrong_fourth_binomial",
+      "stage": "distance",
+      "optimized": false,
+      "gate_marker": "WHOLE",
+      "seconds": 3.279819763998603
+    },
+    {
+      "tag": "semantic-n-missing_critical_slot",
+      "stage": "literal",
+      "optimized": false,
+      "gate_marker": "CENSUS",
+      "seconds": 0.3572080059984728
+    },
+    {
+      "tag": "semantic-n-missing_ninth_original",
+      "stage": "roots",
+      "optimized": false,
+      "gate_marker": "CENSUS",
+      "seconds": 1.7769333659998665
+    },
+    {
+      "tag": "semantic-n-wrong_skew_cubic",
+      "stage": "roots",
+      "optimized": false,
+      "gate_marker": "WHOLE",
+      "seconds": 12.01208093799869
+    },
+    {
+      "tag": "semantic-n-monomial_carry",
+      "stage": "algebra",
+      "optimized": false,
+      "gate_marker": "NO monomial carry",
+      "seconds": 0.20068157200148562
+    },
+    {
+      "tag": "semantic-n-omit_lower_pair_cubic",
+      "stage": "lower_centers",
+      "optimized": false,
+      "gate_marker": "WHOLE",
+      "seconds": 7.584064801001659
+    },
+    {
+      "tag": "semantic-n-wrong_chi_payment",
+      "stage": "algebra",
+      "optimized": false,
+      "gate_marker": "WHOLE",
+      "seconds": 0.21820981999917421
+    },
+    {
+      "tag": "fixture-n-boolean_count",
+      "stage": "algebra",
+      "optimized": false,
+      "gate_marker": "TYPE",
+      "seconds": 0.05315985500055831
+    },
+    {
+      "tag": "fixture-n-independent_review",
+      "stage": "algebra",
+      "optimized": false,
+      "gate_marker": "TYPE",
+      "seconds": 0.05414390999976604
+    },
+    {
+      "tag": "fixture-n-formalization",
+      "stage": "algebra",
+      "optimized": false,
+      "gate_marker": "TYPE",
+      "seconds": 0.05862393400093424
+    },
+    {
+      "tag": "fixture-n-universal_scope",
+      "stage": "algebra",
+      "optimized": false,
+      "gate_marker": "TYPE",
+      "seconds": 0.05429934600033448
+    },
+    {
+      "tag": "fixture-n-bad_stage_census",
+      "stage": "algebra",
+      "optimized": false,
+      "gate_marker": "TYPE",
+      "seconds": 0.059292087998983334
+    },
+    {
+      "tag": "fixture-n-wrong_record_seal",
+      "stage": "algebra",
+      "optimized": false,
+      "gate_marker": "RECORD",
+      "seconds": 0.22084891099984816
+    },
+    {
+      "tag": "fixture-n-own_proof_byte",
+      "stage": "algebra",
+      "optimized": false,
+      "gate_marker": "SOURCE",
+      "seconds": 0.05300556699876324
+    },
+    {
+      "tag": "fixture-n-parent_arithmetic_byte",
+      "stage": "algebra",
+      "optimized": false,
+      "gate_marker": "SOURCE",
+      "seconds": 0.06779942699904495
+    },
+    {
+      "tag": "fixture-n-missing_source_manifest",
+      "stage": "algebra",
+      "optimized": false,
+      "gate_marker": "SOURCE",
+      "seconds": 0.053936934999001096
+    },
+    {
+      "tag": "fixture-n-duplicate_manifest_path",
+      "stage": "algebra",
+      "optimized": false,
+      "gate_marker": "SOURCE",
+      "seconds": 0.059789400998852216
+    },
+    {
+      "tag": "fixture-n-unlisted_critical_source",
+      "stage": "algebra",
+      "optimized": false,
+      "gate_marker": "SOURCE",
+      "seconds": 0.07429955100087682
+    },
+    {
+      "tag": "semantic-o-wrong_pair_compensation",
+      "stage": "literal",
+      "optimized": true,
+      "gate_marker": "WHOLE",
+      "seconds": 3.2582623840007727
+    },
+    {
+      "tag": "semantic-o-omit_even_repair",
+      "stage": "literal",
+      "optimized": true,
+      "gate_marker": "WHOLE",
+      "seconds": 6.638009913998758
+    },
+    {
+      "tag": "semantic-o-omit_odd_center",
+      "stage": "roots",
+      "optimized": true,
+      "gate_marker": "WHOLE",
+      "seconds": 5.086650651001037
+    },
+    {
+      "tag": "semantic-o-wrong_radical_relation",
+      "stage": "distance",
+      "optimized": true,
+      "gate_marker": "WHOLE",
+      "seconds": 5.650095295000938
+    },
+    {
+      "tag": "semantic-o-wrong_fourth_binomial",
+      "stage": "distance",
+      "optimized": true,
+      "gate_marker": "WHOLE",
+      "seconds": 4.233532420999836
+    },
+    {
+      "tag": "semantic-o-missing_critical_slot",
+      "stage": "literal",
+      "optimized": true,
+      "gate_marker": "CENSUS",
+      "seconds": 0.5577747650004312
+    },
+    {
+      "tag": "semantic-o-missing_ninth_original",
+      "stage": "roots",
+      "optimized": true,
+      "gate_marker": "CENSUS",
+      "seconds": 1.8742001460013853
+    },
+    {
+      "tag": "semantic-o-wrong_skew_cubic",
+      "stage": "roots",
+      "optimized": true,
+      "gate_marker": "WHOLE",
+      "seconds": 13.266333919000317
+    },
+    {
+      "tag": "semantic-o-monomial_carry",
+      "stage": "algebra",
+      "optimized": true,
+      "gate_marker": "NO monomial carry",
+      "seconds": 0.3629302400004235
+    },
+    {
+      "tag": "semantic-o-omit_lower_pair_cubic",
+      "stage": "lower_centers",
+      "optimized": true,
+      "gate_marker": "WHOLE",
+      "seconds": 7.722676068999135
+    },
+    {
+      "tag": "semantic-o-wrong_chi_payment",
+      "stage": "algebra",
+      "optimized": true,
+      "gate_marker": "WHOLE",
+      "seconds": 0.39584119800019835
+    },
+    {
+      "tag": "fixture-o-boolean_count",
+      "stage": "algebra",
+      "optimized": true,
+      "gate_marker": "TYPE",
+      "seconds": 0.2212333560000843
+    },
+    {
+      "tag": "fixture-o-independent_review",
+      "stage": "algebra",
+      "optimized": true,
+      "gate_marker": "TYPE",
+      "seconds": 0.225379282999711
+    },
+    {
+      "tag": "fixture-o-formalization",
+      "stage": "algebra",
+      "optimized": true,
+      "gate_marker": "TYPE",
+      "seconds": 0.27041494400145893
+    },
+    {
+      "tag": "fixture-o-universal_scope",
+      "stage": "algebra",
+      "optimized": true,
+      "gate_marker": "TYPE",
+      "seconds": 0.23025874199993268
+    },
+    {
+      "tag": "fixture-o-bad_stage_census",
+      "stage": "algebra",
+      "optimized": true,
+      "gate_marker": "TYPE",
+      "seconds": 0.22272712999983924
+    },
+    {
+      "tag": "fixture-o-wrong_record_seal",
+      "stage": "algebra",
+      "optimized": true,
+      "gate_marker": "RECORD",
+      "seconds": 0.3826967749992036
+    },
+    {
+      "tag": "fixture-o-own_proof_byte",
+      "stage": "algebra",
+      "optimized": true,
+      "gate_marker": "SOURCE",
+      "seconds": 0.23344774500037602
+    },
+    {
+      "tag": "fixture-o-parent_arithmetic_byte",
+      "stage": "algebra",
+      "optimized": true,
+      "gate_marker": "SOURCE",
+      "seconds": 0.3258943779983383
+    },
+    {
+      "tag": "fixture-o-missing_source_manifest",
+      "stage": "algebra",
+      "optimized": true,
+      "gate_marker": "SOURCE",
+      "seconds": 0.22152714999901946
+    },
+    {
+      "tag": "fixture-o-duplicate_manifest_path",
+      "stage": "algebra",
+      "optimized": true,
+      "gate_marker": "SOURCE",
+      "seconds": 0.2298732409999502
+    },
+    {
+      "tag": "fixture-o-unlisted_critical_source",
+      "stage": "algebra",
+      "optimized": true,
+      "gate_marker": "SOURCE",
+      "seconds": 0.22307331200136105
+    }
+  ],
+  "full_records_published": false,
+  "ordinary_bridges": "uniform analytic remainders, simple-root implicit functions, strict containment and finite stability remain unformalized"
+}
