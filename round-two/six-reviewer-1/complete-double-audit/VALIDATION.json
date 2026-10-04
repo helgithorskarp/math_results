@@ -1,0 +1,219 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "python": "3.12.14",
+  "whole_record_bytes": 2921855,
+  "whole_record_sha256": "0292113f357f2fdfd4aa969afc9018d63faf3482738022fe6216c361d9c61ba8",
+  "all_four_entire_parsed_and_byte_records_equal": true,
+  "positive_children": 4,
+  "semantic_rejections": 8,
+  "serial_math_children": 1,
+  "fixed_child_timeout_seconds": 45,
+  "all_six_native_thread_environment_variables": 1,
+  "records": [
+    {
+      "name": "local-normal",
+      "optimization": false,
+      "expected_semantic_rejection": null,
+      "exit": 0,
+      "seconds": 9.050086,
+      "peak_RSS_KiB": 31840
+    },
+    {
+      "name": "local-optimized",
+      "optimization": true,
+      "expected_semantic_rejection": null,
+      "exit": 0,
+      "seconds": 8.835322,
+      "peak_RSS_KiB": 33256
+    },
+    {
+      "name": "cold-normal",
+      "optimization": false,
+      "expected_semantic_rejection": null,
+      "exit": 0,
+      "seconds": 9.021843,
+      "peak_RSS_KiB": 41792
+    },
+    {
+      "name": "cold-optimized",
+      "optimization": true,
+      "expected_semantic_rejection": null,
+      "exit": 0,
+      "seconds": 11.429473,
+      "peak_RSS_KiB": 41832
+    },
+    {
+      "name": "wrong-original-derivative",
+      "optimization": false,
+      "expected_semantic_rejection": "whole original derivative identity",
+      "exit": 1,
+      "seconds": 0.109143,
+      "peak_RSS_KiB": null
+    },
+    {
+      "name": "wrong-J-minus",
+      "optimization": true,
+      "expected_semantic_rejection": "whole rational J polynomial identity",
+      "exit": 1,
+      "seconds": 2.749507,
+      "peak_RSS_KiB": null
+    },
+    {
+      "name": "wrong-u-cap",
+      "optimization": false,
+      "expected_semantic_rejection": "complete independently reconstructed written minima",
+      "exit": 1,
+      "seconds": 10.345767,
+      "peak_RSS_KiB": null
+    },
+    {
+      "name": "wrong-h-factor",
+      "optimization": true,
+      "expected_semantic_rejection": "whole positive-q0 reduced identity and census",
+      "exit": 1,
+      "seconds": 0.691773,
+      "peak_RSS_KiB": null
+    },
+    {
+      "name": "wrong-q-factor",
+      "optimization": false,
+      "expected_semantic_rejection": "whole real-q0 reverse factor identity",
+      "exit": 1,
+      "seconds": 3.591794,
+      "peak_RSS_KiB": null
+    },
+    {
+      "name": "wrong-range-endpoint",
+      "optimization": true,
+      "expected_semantic_rejection": "all written rational range margins",
+      "exit": 1,
+      "seconds": 8.605603,
+      "peak_RSS_KiB": null
+    },
+    {
+      "name": "wrong-Hermite-constant",
+      "optimization": false,
+      "expected_semantic_rejection": "every whole Hermite minor",
+      "exit": 1,
+      "seconds": 8.490906,
+      "peak_RSS_KiB": null
+    },
+    {
+      "name": "wrong-quartic-corner",
+      "optimization": true,
+      "expected_semantic_rejection": "complete strict coefficient positivity",
+      "exit": 1,
+      "seconds": 8.89183,
+      "peak_RSS_KiB": null
+    }
+  ],
+  "tensor_minima": [
+    "348569154937963516887934520382151688274065401780031535081569684112551837397/4656612873077392578125000000000000000000000000000000000000000000000000000000000000000",
+    "1444912818622147863714055938325725538741246407564414796173822846521611149/1638454989461024524644017219543457031250000000000000000000000000000000000000000000000000",
+    "37725215322714843119616/1792160394037",
+    "28090220358923189203046560727198822280054/40437393667554291532315824798997",
+    "472115081689901544567668295283515/3839339858408590549723567"
+  ],
+  "quartic_minima": [
+    "2071/577536",
+    "709/770048",
+    "31303/9240576",
+    "103511/45120000",
+    "466423/360960000",
+    "24477/15040000",
+    "415663/360960000",
+    "210757/23101440000",
+    "6631783/92405760000",
+    "11934583/5775360000"
+  ],
+  "all10492_controls_positive_and_all_inverse_identities": true,
+  "quantitative_refinements": {
+    "gap_hypotheses": "actual one-double with reflected a>0,4+4 signs,1/625<D<=5/141; chart regions and original-root licences as in proof",
+    "positive_q0_middle_band_gap": "2^-146",
+    "real_q0_outer_middle_band_gap": "2^-125*(24*(A-1/8)^2/D-1)^2"
+  },
+  "preseal_unadopted_refinement": "A proposed outer S lower floor2^34 failed its exact minimum check; revised and proved floor2^26 and deficit2^-125. No invalid floor or failed run was adopted.",
+  "neighborhood_query_boundary": "Full-history CLI query was explicitly interrupted; signed canonical entries from target creation through current frontier supply complete bounded incoming coverage.",
+  "initial_source_hashes": {
+    "ring.py": "cc9c164533cd75e239681a1e8767a99ae36a983e86e7c5e3543845fa1b179024",
+    "certificates.py": "5b148b87256ab37ceb6c657fed37ab1dfe581c28711d6ed1c57ad6a6abab600e",
+    "bridges.py": "839b84789e88593841756ab5f34eb6b87b455372dda5a93ba6abc510f92119a0",
+    "written_minima.py": "a7c6bb5ddf92556efdabf1e4696a114eb356fad33542dd6e050bdfa82082f879",
+    "check.py": "864122c25237f0f6b7c6be44db5fcba515919747980f4e71810ba95b57bdfdd7"
+  },
+  "source_hashes": {
+    "ring.py": "0220e3103db89d90020bf8d22ab1a875d20b18c1df52cada3712967ef57ad52f",
+    "certificates.py": "5b148b87256ab37ceb6c657fed37ab1dfe581c28711d6ed1c57ad6a6abab600e",
+    "bridges.py": "839b84789e88593841756ab5f34eb6b87b455372dda5a93ba6abc510f92119a0",
+    "written_minima.py": "a7c6bb5ddf92556efdabf1e4696a114eb356fad33542dd6e050bdfa82082f879",
+    "check.py": "864122c25237f0f6b7c6be44db5fcba515919747980f4e71810ba95b57bdfdd7"
+  },
+  "EOF_only_AST_equal_final_replays": [
+    {
+      "optimized": false,
+      "whole_bytes": 2921855,
+      "whole_sha256": "0292113f357f2fdfd4aa969afc9018d63faf3482738022fe6216c361d9c61ba8",
+      "seconds": 9.154925508002634,
+      "actual_summary": {
+        "whole_bytes": 2921855,
+        "whole_sha256": "0292113f357f2fdfd4aa969afc9018d63faf3482738022fe6216c361d9c61ba8",
+        "minima": [
+          "348569154937963516887934520382151688274065401780031535081569684112551837397/4656612873077392578125000000000000000000000000000000000000000000000000000000000000000",
+          "1444912818622147863714055938325725538741246407564414796173822846521611149/1638454989461024524644017219543457031250000000000000000000000000000000000000000000000000",
+          "37725215322714843119616/1792160394037",
+          "28090220358923189203046560727198822280054/40437393667554291532315824798997",
+          "472115081689901544567668295283515/3839339858408590549723567"
+        ],
+        "quartic_minima": [
+          "2071/577536",
+          "709/770048",
+          "31303/9240576",
+          "103511/45120000",
+          "466423/360960000",
+          "24477/15040000",
+          "415663/360960000",
+          "210757/23101440000",
+          "6631783/92405760000",
+          "11934583/5775360000"
+        ],
+        "all10492_coefficients_positive_and_whole_inverse_equal": true,
+        "seconds": 8.96817,
+        "peak_RSS_KiB": 31652
+      }
+    },
+    {
+      "optimized": true,
+      "whole_bytes": 2921855,
+      "whole_sha256": "0292113f357f2fdfd4aa969afc9018d63faf3482738022fe6216c361d9c61ba8",
+      "seconds": 8.768536789000791,
+      "actual_summary": {
+        "whole_bytes": 2921855,
+        "whole_sha256": "0292113f357f2fdfd4aa969afc9018d63faf3482738022fe6216c361d9c61ba8",
+        "minima": [
+          "348569154937963516887934520382151688274065401780031535081569684112551837397/4656612873077392578125000000000000000000000000000000000000000000000000000000000000000",
+          "1444912818622147863714055938325725538741246407564414796173822846521611149/1638454989461024524644017219543457031250000000000000000000000000000000000000000000000000",
+          "37725215322714843119616/1792160394037",
+          "28090220358923189203046560727198822280054/40437393667554291532315824798997",
+          "472115081689901544567668295283515/3839339858408590549723567"
+        ],
+        "quartic_minima": [
+          "2071/577536",
+          "709/770048",
+          "31303/9240576",
+          "103511/45120000",
+          "466423/360960000",
+          "24477/15040000",
+          "415663/360960000",
+          "210757/23101440000",
+          "6631783/92405760000",
+          "11934583/5775360000"
+        ],
+        "all10492_coefficients_positive_and_whole_inverse_equal": true,
+        "seconds": 8.464898,
+        "peak_RSS_KiB": 41228
+      }
+    }
+  ],
+  "all6_final_sealed_files_unchanged": true
+}
