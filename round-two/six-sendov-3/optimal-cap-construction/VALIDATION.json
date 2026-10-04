@@ -1,0 +1,515 @@
+{
+  "agent": "six-sendov-3",
+  "role": "researcher",
+  "status": "PASS",
+  "whole_summary": {
+    "critical_count": 8,
+    "field_identities": 416,
+    "generic_identities": 1,
+    "independent_review": false,
+    "manifest_sha256": "1da6a6cb6160624084397dadc16a3d5eec2a2cd025ad8342798be718b9f8a306",
+    "ordinary_analytic_bridges_unformalized": true,
+    "original_epsilon_order": 9,
+    "original_root_count": 9,
+    "peak_rss_kib": 21848,
+    "prior_baselines": [
+      {
+        "comparison": "ALL50 full primitive columns, ALL45 full roots/half-normals through eta4, all four FIRST-power coefficients through eta3",
+        "height": 10152,
+        "path": "round-two/six-sendov-3/third-boundary-optimum/EXPECTED.json",
+        "same_author_only": true,
+        "source_commit": "1be71320811999a00162305caebcc3bccebe8f19",
+        "whole_file_sha256": "345874798f0263debfed05d8add567f341aa66b584a00cdb09c2586be3530618",
+        "whole_prior_analytic_replay": false
+      },
+      {
+        "comparison": "ALL four complete symbolic real/Gaussian repairs; ALL27 full zero-parameter original coefficients through eta2",
+        "height": 10197,
+        "path": "round-two/six-sendov-3/nonzero-skew-attainment/EXPECTED.json",
+        "same_author_only": true,
+        "source_commit": "5bce81ba0680027b842dd0c101737deb8a3c2718",
+        "whole_file_sha256": "a5b428ad8bebc82bef247635d05212fc3df39435d38bcb4fa56158b462f221bc",
+        "whole_prior_analytic_replay": false
+      }
+    ],
+    "seconds": 14.727016080999874,
+    "signs": 35,
+    "status": "PASS",
+    "whole_record_sha256": "d6925c6515ee6ad211c51a2fa9ad68124b3dee5a41b3aca3ea48dda49a647769"
+  },
+  "manifest_sha256": "1da6a6cb6160624084397dadc16a3d5eec2a2cd025ad8342798be718b9f8a306",
+  "positive_modes": 4,
+  "mathematical_damage_cases": 18,
+  "distinct_mathematical_damages": 9,
+  "whole_external_fixture_rejections": 17,
+  "source_byte_rejections": 1,
+  "native_threads": 1,
+  "max_cpu_intensive_jobs": 1,
+  "child_guard_seconds": 45,
+  "scope": "existing individual1CPU2GiB unchanged; current shared3CPU9GiB respected",
+  "whole_seconds": 200.24188001099992,
+  "peak_child_rss_kib": 22960,
+  "utc": "2026-10-04T12:18:51.313630+00:00",
+  "children": [
+    {
+      "description": "local complete record/baseline replay",
+      "optimized": false,
+      "expected_pass": true,
+      "returncode": 0,
+      "seconds": 14.814578261000406,
+      "child_guard_seconds": 45,
+      "summary": {
+        "critical_count": 8,
+        "field_identities": 416,
+        "generic_identities": 1,
+        "independent_review": false,
+        "manifest_sha256": "1da6a6cb6160624084397dadc16a3d5eec2a2cd025ad8342798be718b9f8a306",
+        "ordinary_analytic_bridges_unformalized": true,
+        "original_epsilon_order": 9,
+        "original_root_count": 9,
+        "peak_rss_kib": 21848,
+        "prior_baselines": [
+          {
+            "comparison": "ALL50 full primitive columns, ALL45 full roots/half-normals through eta4, all four FIRST-power coefficients through eta3",
+            "height": 10152,
+            "path": "round-two/six-sendov-3/third-boundary-optimum/EXPECTED.json",
+            "same_author_only": true,
+            "source_commit": "1be71320811999a00162305caebcc3bccebe8f19",
+            "whole_file_sha256": "345874798f0263debfed05d8add567f341aa66b584a00cdb09c2586be3530618",
+            "whole_prior_analytic_replay": false
+          },
+          {
+            "comparison": "ALL four complete symbolic real/Gaussian repairs; ALL27 full zero-parameter original coefficients through eta2",
+            "height": 10197,
+            "path": "round-two/six-sendov-3/nonzero-skew-attainment/EXPECTED.json",
+            "same_author_only": true,
+            "source_commit": "5bce81ba0680027b842dd0c101737deb8a3c2718",
+            "whole_file_sha256": "a5b428ad8bebc82bef247635d05212fc3df39435d38bcb4fa56158b462f221bc",
+            "whole_prior_analytic_replay": false
+          }
+        ],
+        "seconds": 14.727016080999874,
+        "signs": 35,
+        "status": "PASS",
+        "whole_record_sha256": "d6925c6515ee6ad211c51a2fa9ad68124b3dee5a41b3aca3ea48dda49a647769"
+      }
+    },
+    {
+      "description": "mathematical wrong_embedding",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.10058377199993629,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: physical cosine embedding"
+    },
+    {
+      "description": "mathematical wrong_anchor",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 1.509678210000402,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: WHOLE coefficient identity actual ALL9 fourth normal column 0"
+    },
+    {
+      "description": "mathematical missing_ninth_root",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 1.4227614119999998,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: ALL9 original root census"
+    },
+    {
+      "description": "mathematical wrong_even_repair",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 3.150579568000012,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: WHOLE coefficient identity ENTIRE new zero-skew FIRST power through eta4"
+    },
+    {
+      "description": "mathematical wrong_odd_repair",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 15.00499528399996,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: WHOLE coefficient identity ALL4 actual strictly inward ninth normal 3"
+    },
+    {
+      "description": "mathematical wrong_inward_shift",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 15.018266403000325,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: WHOLE coefficient identity ALL4 actual strictly inward ninth normal 3"
+    },
+    {
+      "description": "mathematical wrong_pair_distance_sign",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 14.880546630000026,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: WHOLE coefficient identity ENTIRE actual first power epsilon0to9 with shrinking-skew cost"
+    },
+    {
+      "description": "mathematical wrong_fourth_binomial",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 2.984613158999764,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: WHOLE coefficient identity ENTIRE new zero-skew FIRST power through eta4"
+    },
+    {
+      "description": "mathematical wrong_skew_scaling",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 12.029020872000274,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: WHOLE coefficient identity closed common odd fourth repair"
+    },
+    {
+      "description": "local complete record/baseline replay",
+      "optimized": true,
+      "expected_pass": true,
+      "returncode": 0,
+      "seconds": 16.82306031400003,
+      "child_guard_seconds": 45,
+      "summary": {
+        "critical_count": 8,
+        "field_identities": 416,
+        "generic_identities": 1,
+        "independent_review": false,
+        "manifest_sha256": "1da6a6cb6160624084397dadc16a3d5eec2a2cd025ad8342798be718b9f8a306",
+        "ordinary_analytic_bridges_unformalized": true,
+        "original_epsilon_order": 9,
+        "original_root_count": 9,
+        "peak_rss_kib": 22688,
+        "prior_baselines": [
+          {
+            "comparison": "ALL50 full primitive columns, ALL45 full roots/half-normals through eta4, all four FIRST-power coefficients through eta3",
+            "height": 10152,
+            "path": "round-two/six-sendov-3/third-boundary-optimum/EXPECTED.json",
+            "same_author_only": true,
+            "source_commit": "1be71320811999a00162305caebcc3bccebe8f19",
+            "whole_file_sha256": "345874798f0263debfed05d8add567f341aa66b584a00cdb09c2586be3530618",
+            "whole_prior_analytic_replay": false
+          },
+          {
+            "comparison": "ALL four complete symbolic real/Gaussian repairs; ALL27 full zero-parameter original coefficients through eta2",
+            "height": 10197,
+            "path": "round-two/six-sendov-3/nonzero-skew-attainment/EXPECTED.json",
+            "same_author_only": true,
+            "source_commit": "5bce81ba0680027b842dd0c101737deb8a3c2718",
+            "whole_file_sha256": "a5b428ad8bebc82bef247635d05212fc3df39435d38bcb4fa56158b462f221bc",
+            "whole_prior_analytic_replay": false
+          }
+        ],
+        "seconds": 16.53113318800024,
+        "signs": 35,
+        "status": "PASS",
+        "whole_record_sha256": "d6925c6515ee6ad211c51a2fa9ad68124b3dee5a41b3aca3ea48dda49a647769"
+      }
+    },
+    {
+      "description": "mathematical wrong_embedding",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.3227904629998193,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: physical cosine embedding"
+    },
+    {
+      "description": "mathematical wrong_anchor",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 1.9900793790002353,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: WHOLE coefficient identity actual ALL9 fourth normal column 0"
+    },
+    {
+      "description": "mathematical missing_ninth_root",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 1.8040775649997158,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: ALL9 original root census"
+    },
+    {
+      "description": "mathematical wrong_even_repair",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 3.737165166000068,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: WHOLE coefficient identity ENTIRE new zero-skew FIRST power through eta4"
+    },
+    {
+      "description": "mathematical wrong_odd_repair",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 15.241538753999976,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: WHOLE coefficient identity ALL4 actual strictly inward ninth normal 3"
+    },
+    {
+      "description": "mathematical wrong_inward_shift",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 15.039338138000403,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: WHOLE coefficient identity ALL4 actual strictly inward ninth normal 3"
+    },
+    {
+      "description": "mathematical wrong_pair_distance_sign",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 15.490907637000419,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: WHOLE coefficient identity ENTIRE actual first power epsilon0to9 with shrinking-skew cost"
+    },
+    {
+      "description": "mathematical wrong_fourth_binomial",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 3.6042262930000106,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: WHOLE coefficient identity ENTIRE new zero-skew FIRST power through eta4"
+    },
+    {
+      "description": "mathematical wrong_skew_scaling",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 9.64708147500005,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: WHOLE coefficient identity closed common odd fourth repair"
+    },
+    {
+      "description": "cold source-only complete replay",
+      "optimized": false,
+      "expected_pass": true,
+      "returncode": 0,
+      "seconds": 15.69627970700003,
+      "child_guard_seconds": 45,
+      "summary": {
+        "critical_count": 8,
+        "field_identities": 416,
+        "generic_identities": 1,
+        "independent_review": false,
+        "manifest_sha256": "1da6a6cb6160624084397dadc16a3d5eec2a2cd025ad8342798be718b9f8a306",
+        "ordinary_analytic_bridges_unformalized": true,
+        "original_epsilon_order": 9,
+        "original_root_count": 9,
+        "peak_rss_kib": 21856,
+        "prior_baselines": null,
+        "seconds": 15.610468354000204,
+        "signs": 35,
+        "status": "PASS",
+        "whole_record_sha256": "d6925c6515ee6ad211c51a2fa9ad68124b3dee5a41b3aca3ea48dda49a647769"
+      }
+    },
+    {
+      "description": "cold source-only complete replay",
+      "optimized": true,
+      "expected_pass": true,
+      "returncode": 0,
+      "seconds": 16.322946427999796,
+      "child_guard_seconds": 45,
+      "summary": {
+        "critical_count": 8,
+        "field_identities": 416,
+        "generic_identities": 1,
+        "independent_review": false,
+        "manifest_sha256": "1da6a6cb6160624084397dadc16a3d5eec2a2cd025ad8342798be718b9f8a306",
+        "ordinary_analytic_bridges_unformalized": true,
+        "original_epsilon_order": 9,
+        "original_root_count": 9,
+        "peak_rss_kib": 22652,
+        "prior_baselines": null,
+        "seconds": 16.049723813000128,
+        "signs": 35,
+        "status": "PASS",
+        "whole_record_sha256": "d6925c6515ee6ad211c51a2fa9ad68124b3dee5a41b3aca3ea48dda49a647769"
+      }
+    },
+    {
+      "description": "alter LAST root field coefficient",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.12387472799991883,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole value record.all_nine_shrinking_roots_epsilon0to9[8].all_root_coefficients[9][1][1][1][5]"
+    },
+    {
+      "description": "alter LAST root field coefficient",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.26306398699989586,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole value record.all_nine_shrinking_roots_epsilon0to9[8].all_root_coefficients[9][1][1][1][5]"
+    },
+    {
+      "description": "remove ninth original",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.13475978599990412,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole list length record.all_nine_shrinking_roots_epsilon0to9"
+    },
+    {
+      "description": "remove ninth original",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.2669367010003043,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole list length record.all_nine_shrinking_roots_epsilon0to9"
+    },
+    {
+      "description": "bool for integer label",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.10157659400010743,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: typed mismatch record.all_nine_shrinking_roots_epsilon0to9[0].label"
+    },
+    {
+      "description": "bool for integer label",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.2918269909996525,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: typed mismatch record.all_nine_shrinking_roots_epsilon0to9[0].label"
+    },
+    {
+      "description": "integer for boolean",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.10296324399996593,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: typed mismatch record.ordinary_analytic_bridges_unformalized"
+    },
+    {
+      "description": "integer for boolean",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.28228074599974207,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: typed mismatch record.ordinary_analytic_bridges_unformalized"
+    },
+    {
+      "description": "extra whole-record key",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.1300184070000796,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole key set record"
+    },
+    {
+      "description": "extra whole-record key",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.3348637399999461,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole key set record"
+    },
+    {
+      "description": "omit pair critical multiplicity",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.09159152200027165,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole list length record.critical_multiplicities"
+    },
+    {
+      "description": "omit pair critical multiplicity",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.26076997600011964,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole list length record.critical_multiplicities"
+    },
+    {
+      "description": "alter actual ninth FIRST-power coefficient",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.0999382869999863,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole value record.direct_first_power_epsilon0to9[9][0][0][1][0]"
+    },
+    {
+      "description": "alter actual ninth FIRST-power coefficient",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.39836763199991765,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole value record.direct_first_power_epsilon0to9[9][0][0][1][0]"
+    },
+    {
+      "description": "remove eighth Newton moment",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.14287182800035225,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole list length record.all_eight_Newton_powers_epsilon0to9"
+    },
+    {
+      "description": "remove eighth Newton moment",
+      "optimized": true,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.3078121209996425,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole list length record.all_eight_Newton_powers_epsilon0to9"
+    },
+    {
+      "description": "duplicate JSON object key",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.08928274599975339,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: duplicate JSON object key"
+    },
+    {
+      "description": "one source byte alteration",
+      "optimized": false,
+      "expected_pass": false,
+      "returncode": 1,
+      "seconds": 0.08475176799993278,
+      "child_guard_seconds": 45,
+      "reason": "REJECTED: whole sealed source cap.py"
+    }
+  ],
+  "ordinary_proof_unformalized": true,
+  "independent_review": false
+}
