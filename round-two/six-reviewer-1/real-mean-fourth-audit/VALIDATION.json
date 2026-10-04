@@ -1,0 +1,457 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "complete": true,
+  "positive_whole_normal_O_local_cold": 4,
+  "intended_rejections": 28,
+  "canonical_bytes": 77849,
+  "canonical_sha256": "58b5984c0f20f8ae80464c7cd151cd9bc484815f398641f824f20a34727de243",
+  "fixed_child_guard_seconds": 45,
+  "serial_children": true,
+  "native_threads": 1,
+  "resource_limit_hit": false,
+  "rows": [
+    {
+      "folder": "local",
+      "script": "verify.py",
+      "optimized": false,
+      "args": [
+        "--output",
+        "WORK/whole-0.json"
+      ],
+      "positive": true,
+      "intended_rejection": null,
+      "seconds": 3.73779,
+      "peak_child_RSS_KiB": 19708,
+      "exit_code": 0
+    },
+    {
+      "folder": "local",
+      "script": "verify.py",
+      "optimized": true,
+      "args": [
+        "--output",
+        "WORK/whole-1.json"
+      ],
+      "positive": true,
+      "intended_rejection": null,
+      "seconds": 4.10032,
+      "peak_child_RSS_KiB": 20724,
+      "exit_code": 0
+    },
+    {
+      "folder": "cold",
+      "script": "verify.py",
+      "optimized": false,
+      "args": [
+        "--output",
+        "WORK/whole-2.json"
+      ],
+      "positive": true,
+      "intended_rejection": null,
+      "seconds": 3.756949,
+      "peak_child_RSS_KiB": 20724,
+      "exit_code": 0
+    },
+    {
+      "folder": "cold",
+      "script": "verify.py",
+      "optimized": true,
+      "args": [
+        "--output",
+        "WORK/whole-3.json"
+      ],
+      "positive": true,
+      "intended_rejection": null,
+      "seconds": 4.598226,
+      "peak_child_RSS_KiB": 20724,
+      "exit_code": 0
+    },
+    {
+      "folder": "local",
+      "script": "check.py",
+      "optimized": false,
+      "args": [
+        "--damage",
+        "third-mean"
+      ],
+      "positive": false,
+      "intended_rejection": "individual active normal",
+      "seconds": 1.164437,
+      "peak_child_RSS_KiB": 20724,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "check.py",
+      "optimized": true,
+      "args": [
+        "--damage",
+        "third-mean"
+      ],
+      "positive": false,
+      "intended_rejection": "individual active normal",
+      "seconds": 1.142826,
+      "peak_child_RSS_KiB": 21556,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "check.py",
+      "optimized": false,
+      "args": [
+        "--damage",
+        "fourth-scale"
+      ],
+      "positive": false,
+      "intended_rejection": "individual active normal",
+      "seconds": 1.044894,
+      "peak_child_RSS_KiB": 21556,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "check.py",
+      "optimized": true,
+      "args": [
+        "--damage",
+        "fourth-scale"
+      ],
+      "positive": false,
+      "intended_rejection": "individual active normal",
+      "seconds": 1.388976,
+      "peak_child_RSS_KiB": 21576,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "check.py",
+      "optimized": false,
+      "args": [
+        "--damage",
+        "unbalanced"
+      ],
+      "positive": false,
+      "intended_rejection": "individual active normal",
+      "seconds": 1.199745,
+      "peak_child_RSS_KiB": 21576,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "check.py",
+      "optimized": true,
+      "args": [
+        "--damage",
+        "unbalanced"
+      ],
+      "positive": false,
+      "intended_rejection": "individual active normal",
+      "seconds": 1.320359,
+      "peak_child_RSS_KiB": 21576,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "check.py",
+      "optimized": false,
+      "args": [
+        "--damage",
+        "root-fourth"
+      ],
+      "positive": false,
+      "intended_rejection": "all original root equations",
+      "seconds": 1.080978,
+      "peak_child_RSS_KiB": 21576,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "check.py",
+      "optimized": true,
+      "args": [
+        "--damage",
+        "root-fourth"
+      ],
+      "positive": false,
+      "intended_rejection": "all original root equations",
+      "seconds": 1.428855,
+      "peak_child_RSS_KiB": 21580,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "check.py",
+      "optimized": false,
+      "args": [
+        "--damage",
+        "inward-sign"
+      ],
+      "positive": false,
+      "intended_rejection": "original inward root equation",
+      "seconds": 0.613705,
+      "peak_child_RSS_KiB": 21580,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "check.py",
+      "optimized": true,
+      "args": [
+        "--damage",
+        "inward-sign"
+      ],
+      "positive": false,
+      "intended_rejection": "original inward root equation",
+      "seconds": 0.826347,
+      "peak_child_RSS_KiB": 21580,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "check.py",
+      "optimized": false,
+      "args": [
+        "--damage",
+        "scalar-linear"
+      ],
+      "positive": false,
+      "intended_rejection": "entire first-power coefficient",
+      "seconds": 2.084987,
+      "peak_child_RSS_KiB": 21580,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "check.py",
+      "optimized": true,
+      "args": [
+        "--damage",
+        "scalar-linear"
+      ],
+      "positive": false,
+      "intended_rejection": "entire first-power coefficient",
+      "seconds": 2.449422,
+      "peak_child_RSS_KiB": 21592,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "check.py",
+      "optimized": false,
+      "args": [
+        "--damage",
+        "dual-weight"
+      ],
+      "positive": false,
+      "intended_rejection": "entire positive dual center payment",
+      "seconds": 2.833331,
+      "peak_child_RSS_KiB": 21592,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "check.py",
+      "optimized": true,
+      "args": [
+        "--damage",
+        "dual-weight"
+      ],
+      "positive": false,
+      "intended_rejection": "entire positive dual center payment",
+      "seconds": 2.369473,
+      "peak_child_RSS_KiB": 21612,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "refine.py",
+      "optimized": false,
+      "args": [
+        "--damage",
+        "underpay"
+      ],
+      "positive": false,
+      "intended_rejection": "entire fifth-normal coefficient enclosure",
+      "seconds": 3.763765,
+      "peak_child_RSS_KiB": 21612,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "refine.py",
+      "optimized": true,
+      "args": [
+        "--damage",
+        "underpay"
+      ],
+      "positive": false,
+      "intended_rejection": "entire fifth-normal coefficient enclosure",
+      "seconds": 4.533694,
+      "peak_child_RSS_KiB": 21612,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "refine.py",
+      "optimized": false,
+      "args": [
+        "--damage",
+        "slack"
+      ],
+      "positive": false,
+      "intended_rejection": "uniform fifth inward surplus one",
+      "seconds": 3.707132,
+      "peak_child_RSS_KiB": 21612,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "refine.py",
+      "optimized": true,
+      "args": [
+        "--damage",
+        "slack"
+      ],
+      "positive": false,
+      "intended_rejection": "uniform fifth inward surplus one",
+      "seconds": 4.351021,
+      "peak_child_RSS_KiB": 21620,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "verify.py",
+      "optimized": false,
+      "args": [
+        "--expected",
+        "WORK/fourth-root.json"
+      ],
+      "positive": false,
+      "intended_rejection": "whole-record",
+      "seconds": 3.959334,
+      "peak_child_RSS_KiB": 21620,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "verify.py",
+      "optimized": true,
+      "args": [
+        "--expected",
+        "WORK/fourth-root.json"
+      ],
+      "positive": false,
+      "intended_rejection": "whole-record",
+      "seconds": 6.368261,
+      "peak_child_RSS_KiB": 21620,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "verify.py",
+      "optimized": false,
+      "args": [
+        "--expected",
+        "WORK/fifth-budget.json"
+      ],
+      "positive": false,
+      "intended_rejection": "whole-record",
+      "seconds": 4.129473,
+      "peak_child_RSS_KiB": 21620,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "verify.py",
+      "optimized": true,
+      "args": [
+        "--expected",
+        "WORK/fifth-budget.json"
+      ],
+      "positive": false,
+      "intended_rejection": "whole-record",
+      "seconds": 4.14705,
+      "peak_child_RSS_KiB": 21620,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "verify.py",
+      "optimized": false,
+      "args": [
+        "--expected",
+        "WORK/wrong-type.json"
+      ],
+      "positive": false,
+      "intended_rejection": "whole-record",
+      "seconds": 3.753242,
+      "peak_child_RSS_KiB": 21620,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "verify.py",
+      "optimized": true,
+      "args": [
+        "--expected",
+        "WORK/wrong-type.json"
+      ],
+      "positive": false,
+      "intended_rejection": "whole-record",
+      "seconds": 4.116014,
+      "peak_child_RSS_KiB": 21620,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "verify.py",
+      "optimized": false,
+      "args": [
+        "--expected",
+        "WORK/missing-label.json"
+      ],
+      "positive": false,
+      "intended_rejection": "whole-record",
+      "seconds": 3.627696,
+      "peak_child_RSS_KiB": 21620,
+      "exit_code": 1
+    },
+    {
+      "folder": "local",
+      "script": "verify.py",
+      "optimized": true,
+      "args": [
+        "--expected",
+        "WORK/missing-label.json"
+      ],
+      "positive": false,
+      "intended_rejection": "whole-record",
+      "seconds": 3.92743,
+      "peak_child_RSS_KiB": 21620,
+      "exit_code": 1
+    },
+    {
+      "folder": "cold",
+      "script": "verify.py",
+      "optimized": false,
+      "args": [],
+      "positive": false,
+      "intended_rejection": "PREIMPORT source mismatch check.py",
+      "seconds": 0.054398,
+      "peak_child_RSS_KiB": 21620,
+      "exit_code": 1
+    },
+    {
+      "folder": "cold",
+      "script": "verify.py",
+      "optimized": true,
+      "args": [],
+      "positive": false,
+      "intended_rejection": "PREIMPORT source mismatch check.py",
+      "seconds": 0.24778,
+      "peak_child_RSS_KiB": 21620,
+      "exit_code": 1
+    }
+  ]
+}
