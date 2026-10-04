@@ -1,0 +1,322 @@
+{
+  "status": "PASS",
+  "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+  "positive_children": 4,
+  "semantic_rejections": 16,
+  "guard_seconds": 45,
+  "native_threads": 1,
+  "serial": true,
+  "record_bytes": 3105235,
+  "record_sha256": "0c1acd825553d829c0314bec7fccf12d53ebfa0dcf7c436af4faab0cc1956b52",
+  "source_sha256": "55b11a17bd549433d9bfedd4ec8b6dbc9ce74d17ca29ebe98194bf3b73b3d6cb",
+  "input_sha256": "1788079a00f939668d5efe49e175cfae5449bab153ab044be13742cac65740d2",
+  "max_child_seconds": 10.39701327900002,
+  "rows": [
+    {
+      "command": [
+        "check_cover.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"census\": {\"empty-necessary-inequalities\": 16, \"origin-passes\": 230, \"polar-excluded\": 246}, \"centered_vectors\": 3332, \"elapsed_seconds\": 10.185945555000217, \"energy_cells\": 67, \"energy_max\": \"40268181198879994418511060369931743939553684890900517253558109788122667785481725229189387/41530503415479272639272580578365071486041767358971959923432908757485486080000000000000000\", \"nodes\": 983, \"origin_min\": \"95663331251067220156711448172586724138594138427363692463451/95581268562833425410890263553271398400000000000000000000000\", \"peak_rss_kib\": 30096, \"polar_max\": \"2137087846856569362440522844891187415662526748328893005865224307302696432181688339073914359851299132185245215269580717567511162480239267/2137489676288594924540645927200871681857026860821912520096193984007128284215154029667413043771287564869071329413908398080000000000000000\", \"polar_vectors\": 313, \"record_bytes\": 3105235, \"record_sha256\": \"0c1acd825553d829c0314bec7fccf12d53ebfa0dcf7c436af4faab0cc1956b52\", \"status\": \"PASS\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 10.393861560999994,
+      "result": {
+        "census": {
+          "empty-necessary-inequalities": 16,
+          "origin-passes": 230,
+          "polar-excluded": 246
+        },
+        "centered_vectors": 3332,
+        "elapsed_seconds": 10.185945555000217,
+        "energy_cells": 67,
+        "energy_max": "40268181198879994418511060369931743939553684890900517253558109788122667785481725229189387/41530503415479272639272580578365071486041767358971959923432908757485486080000000000000000",
+        "nodes": 983,
+        "origin_min": "95663331251067220156711448172586724138594138427363692463451/95581268562833425410890263553271398400000000000000000000000",
+        "peak_rss_kib": 30096,
+        "polar_max": "2137087846856569362440522844891187415662526748328893005865224307302696432181688339073914359851299132185245215269580717567511162480239267/2137489676288594924540645927200871681857026860821912520096193984007128284215154029667413043771287564869071329413908398080000000000000000",
+        "polar_vectors": 313,
+        "record_bytes": 3105235,
+        "record_sha256": "0c1acd825553d829c0314bec7fccf12d53ebfa0dcf7c436af4faab0cc1956b52",
+        "status": "PASS"
+      }
+    },
+    {
+      "command": [
+        "-O",
+        "check_cover.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"census\": {\"empty-necessary-inequalities\": 16, \"origin-passes\": 230, \"polar-excluded\": 246}, \"centered_vectors\": 3332, \"elapsed_seconds\": 10.016627709000204, \"energy_cells\": 67, \"energy_max\": \"40268181198879994418511060369931743939553684890900517253558109788122667785481725229189387/41530503415479272639272580578365071486041767358971959923432908757485486080000000000000000\", \"nodes\": 983, \"origin_min\": \"95663331251067220156711448172586724138594138427363692463451/95581268562833425410890263553271398400000000000000000000000\", \"peak_rss_kib\": 32800, \"polar_max\": \"2137087846856569362440522844891187415662526748328893005865224307302696432181688339073914359851299132185245215269580717567511162480239267/2137489676288594924540645927200871681857026860821912520096193984007128284215154029667413043771287564869071329413908398080000000000000000\", \"polar_vectors\": 313, \"record_bytes\": 3105235, \"record_sha256\": \"0c1acd825553d829c0314bec7fccf12d53ebfa0dcf7c436af4faab0cc1956b52\", \"status\": \"PASS\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 10.39701327900002,
+      "result": {
+        "census": {
+          "empty-necessary-inequalities": 16,
+          "origin-passes": 230,
+          "polar-excluded": 246
+        },
+        "centered_vectors": 3332,
+        "elapsed_seconds": 10.016627709000204,
+        "energy_cells": 67,
+        "energy_max": "40268181198879994418511060369931743939553684890900517253558109788122667785481725229189387/41530503415479272639272580578365071486041767358971959923432908757485486080000000000000000",
+        "nodes": 983,
+        "origin_min": "95663331251067220156711448172586724138594138427363692463451/95581268562833425410890263553271398400000000000000000000000",
+        "peak_rss_kib": 32800,
+        "polar_max": "2137087846856569362440522844891187415662526748328893005865224307302696432181688339073914359851299132185245215269580717567511162480239267/2137489676288594924540645927200871681857026860821912520096193984007128284215154029667413043771287564869071329413908398080000000000000000",
+        "polar_vectors": 313,
+        "record_bytes": 3105235,
+        "record_sha256": "0c1acd825553d829c0314bec7fccf12d53ebfa0dcf7c436af4faab0cc1956b52",
+        "status": "PASS"
+      }
+    },
+    {
+      "command": [
+        "check_cover.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"census\": {\"empty-necessary-inequalities\": 16, \"origin-passes\": 230, \"polar-excluded\": 246}, \"centered_vectors\": 3332, \"elapsed_seconds\": 9.95291228699989, \"energy_cells\": 67, \"energy_max\": \"40268181198879994418511060369931743939553684890900517253558109788122667785481725229189387/41530503415479272639272580578365071486041767358971959923432908757485486080000000000000000\", \"nodes\": 983, \"origin_min\": \"95663331251067220156711448172586724138594138427363692463451/95581268562833425410890263553271398400000000000000000000000\", \"peak_rss_kib\": 41088, \"polar_max\": \"2137087846856569362440522844891187415662526748328893005865224307302696432181688339073914359851299132185245215269580717567511162480239267/2137489676288594924540645927200871681857026860821912520096193984007128284215154029667413043771287564869071329413908398080000000000000000\", \"polar_vectors\": 313, \"record_bytes\": 3105235, \"record_sha256\": \"0c1acd825553d829c0314bec7fccf12d53ebfa0dcf7c436af4faab0cc1956b52\", \"status\": \"PASS\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 10.073331811000116,
+      "result": {
+        "census": {
+          "empty-necessary-inequalities": 16,
+          "origin-passes": 230,
+          "polar-excluded": 246
+        },
+        "centered_vectors": 3332,
+        "elapsed_seconds": 9.95291228699989,
+        "energy_cells": 67,
+        "energy_max": "40268181198879994418511060369931743939553684890900517253558109788122667785481725229189387/41530503415479272639272580578365071486041767358971959923432908757485486080000000000000000",
+        "nodes": 983,
+        "origin_min": "95663331251067220156711448172586724138594138427363692463451/95581268562833425410890263553271398400000000000000000000000",
+        "peak_rss_kib": 41088,
+        "polar_max": "2137087846856569362440522844891187415662526748328893005865224307302696432181688339073914359851299132185245215269580717567511162480239267/2137489676288594924540645927200871681857026860821912520096193984007128284215154029667413043771287564869071329413908398080000000000000000",
+        "polar_vectors": 313,
+        "record_bytes": 3105235,
+        "record_sha256": "0c1acd825553d829c0314bec7fccf12d53ebfa0dcf7c436af4faab0cc1956b52",
+        "status": "PASS"
+      }
+    },
+    {
+      "command": [
+        "-O",
+        "check_cover.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"census\": {\"empty-necessary-inequalities\": 16, \"origin-passes\": 230, \"polar-excluded\": 246}, \"centered_vectors\": 3332, \"elapsed_seconds\": 9.03352443499989, \"energy_cells\": 67, \"energy_max\": \"40268181198879994418511060369931743939553684890900517253558109788122667785481725229189387/41530503415479272639272580578365071486041767358971959923432908757485486080000000000000000\", \"nodes\": 983, \"origin_min\": \"95663331251067220156711448172586724138594138427363692463451/95581268562833425410890263553271398400000000000000000000000\", \"peak_rss_kib\": 49272, \"polar_max\": \"2137087846856569362440522844891187415662526748328893005865224307302696432181688339073914359851299132185245215269580717567511162480239267/2137489676288594924540645927200871681857026860821912520096193984007128284215154029667413043771287564869071329413908398080000000000000000\", \"polar_vectors\": 313, \"record_bytes\": 3105235, \"record_sha256\": \"0c1acd825553d829c0314bec7fccf12d53ebfa0dcf7c436af4faab0cc1956b52\", \"status\": \"PASS\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 9.274353245999919,
+      "result": {
+        "census": {
+          "empty-necessary-inequalities": 16,
+          "origin-passes": 230,
+          "polar-excluded": 246
+        },
+        "centered_vectors": 3332,
+        "elapsed_seconds": 9.03352443499989,
+        "energy_cells": 67,
+        "energy_max": "40268181198879994418511060369931743939553684890900517253558109788122667785481725229189387/41530503415479272639272580578365071486041767358971959923432908757485486080000000000000000",
+        "nodes": 983,
+        "origin_min": "95663331251067220156711448172586724138594138427363692463451/95581268562833425410890263553271398400000000000000000000000",
+        "peak_rss_kib": 49272,
+        "polar_max": "2137087846856569362440522844891187415662526748328893005865224307302696432181688339073914359851299132185245215269580717567511162480239267/2137489676288594924540645927200871681857026860821912520096193984007128284215154029667413043771287564869071329413908398080000000000000000",
+        "polar_vectors": 313,
+        "record_bytes": 3105235,
+        "record_sha256": "0c1acd825553d829c0314bec7fccf12d53ebfa0dcf7c436af4faab0cc1956b52",
+        "status": "PASS"
+      }
+    },
+    {
+      "command": [
+        "-O",
+        "control.py"
+      ],
+      "returncode": 0,
+      "stdout": "entire closed root\n",
+      "stderr": "",
+      "elapsed_seconds": 0.17832649100000708,
+      "label": "closed upper endpoint changed",
+      "intended_rejection": "entire closed root"
+    },
+    {
+      "command": [
+        "-O",
+        "control.py"
+      ],
+      "returncode": 0,
+      "stdout": "root types\n",
+      "stderr": "",
+      "elapsed_seconds": 0.194020159000047,
+      "label": "numeric root bypass",
+      "intended_rejection": "root types"
+    },
+    {
+      "command": [
+        "-O",
+        "control.py"
+      ],
+      "returncode": 0,
+      "stdout": "split path and axis types\n",
+      "stderr": "",
+      "elapsed_seconds": 0.20979979599997023,
+      "label": "boolean split axis",
+      "intended_rejection": "axis types"
+    },
+    {
+      "command": [
+        "-O",
+        "control.py"
+      ],
+      "returncode": 0,
+      "stdout": "split path and axis types\n",
+      "stderr": "",
+      "elapsed_seconds": 0.1817289300001903,
+      "label": "out of range split axis",
+      "intended_rejection": "axis types"
+    },
+    {
+      "command": [
+        "-O",
+        "control.py"
+      ],
+      "returncode": 0,
+      "stdout": "leaf path and status types\n",
+      "stderr": "",
+      "elapsed_seconds": 0.17736618999970233,
+      "label": "unknown leaf status",
+      "intended_rejection": "status types"
+    },
+    {
+      "command": [
+        "-O",
+        "control.py"
+      ],
+      "returncode": 0,
+      "stdout": "input census\n",
+      "stderr": "",
+      "elapsed_seconds": 0.17423523900015425,
+      "label": "missing defining leaf",
+      "intended_rejection": "input census"
+    },
+    {
+      "command": [
+        "-O",
+        "control.py"
+      ],
+      "returncode": 0,
+      "stdout": "input census\n",
+      "stderr": "",
+      "elapsed_seconds": 0.18022637400008534,
+      "label": "extra defining leaf",
+      "intended_rejection": "input census"
+    },
+    {
+      "command": [
+        "-O",
+        "control.py"
+      ],
+      "returncode": 0,
+      "stdout": "disjoint leaves and splits\n",
+      "stderr": "",
+      "elapsed_seconds": 0.17837094000014986,
+      "label": "split leaf overlap",
+      "intended_rejection": "disjoint leaves"
+    },
+    {
+      "command": [
+        "-O",
+        "control.py"
+      ],
+      "returncode": 0,
+      "stdout": "nonempty is not declared empty\n",
+      "stderr": "",
+      "elapsed_seconds": 1.2598298359998807,
+      "label": "false empty parent",
+      "intended_rejection": "nonempty is not declared empty"
+    },
+    {
+      "command": [
+        "-O",
+        "control.py"
+      ],
+      "returncode": 0,
+      "stdout": "both children reachable\n",
+      "stderr": "",
+      "elapsed_seconds": 1.2228142710000611,
+      "label": "disconnected subtree",
+      "intended_rejection": "both children reachable"
+    },
+    {
+      "command": [
+        "-O",
+        "control.py"
+      ],
+      "returncode": 0,
+      "stdout": "sqrt floor square enclosure\n",
+      "stderr": "",
+      "elapsed_seconds": 0.1790663609999683,
+      "label": "sqrt floor raised",
+      "intended_rejection": "sqrt floor square enclosure"
+    },
+    {
+      "command": [
+        "-O",
+        "control.py"
+      ],
+      "returncode": 0,
+      "stdout": "entire polar integral\n",
+      "stderr": "",
+      "elapsed_seconds": 0.18335808699976042,
+      "label": "beta denominator damaged",
+      "intended_rejection": "entire polar integral"
+    },
+    {
+      "command": [
+        "-O",
+        "control.py"
+      ],
+      "returncode": 0,
+      "stdout": "entire polar integral\n",
+      "stderr": "",
+      "elapsed_seconds": 0.18625235700028497,
+      "label": "kernel square top coefficient dropped",
+      "intended_rejection": "entire polar integral"
+    },
+    {
+      "command": [
+        "-O",
+        "control.py"
+      ],
+      "returncode": 0,
+      "stdout": "full low first-power integral\n",
+      "stderr": "",
+      "elapsed_seconds": 0.17622691399992618,
+      "label": "highest integration coefficient dropped",
+      "intended_rejection": "low first-power integral"
+    },
+    {
+      "command": [
+        "-O",
+        "control.py"
+      ],
+      "returncode": 0,
+      "stdout": "entire centered beta power\n",
+      "stderr": "",
+      "elapsed_seconds": 1.4970632210001895,
+      "label": "centered multinomial vector damaged",
+      "intended_rejection": "centered beta power"
+    },
+    {
+      "command": [
+        "-O",
+        "control.py"
+      ],
+      "returncode": 0,
+      "stdout": "all seven recurrence minima\n",
+      "stderr": "",
+      "elapsed_seconds": 0.22307558100010283,
+      "label": "seventh Maclaurin cardinality damaged",
+      "intended_rejection": "seven recurrence minima"
+    }
+  ]
+}
