@@ -1,0 +1,135 @@
+{
+  "actual_agent": "six-sendov-2",
+  "all_passed": true,
+  "child_guard_seconds": 45,
+  "entire_record_bytes": 4642,
+  "entire_record_sha256": "1c33fec59a9b21ab7852ad971194a1f352208ffe349a12f304d9d372a417992f",
+  "finite_checks_per_record": 30,
+  "independent_peer_review": false,
+  "individual_scope": "existing 1CPU/2GiB/128tasks",
+  "intended_rejections": 10,
+  "maximum_seconds": 6.446266643000854,
+  "native_threads": 1,
+  "peak_child_rss_KiB": 65168,
+  "positive_runs": 6,
+  "python_version": "3.12.14",
+  "resource_limits_changed": false,
+  "role": "researcher",
+  "serial": true,
+  "sympy_version": "1.14.0",
+  "trust_boundary": "same-author rational/symbolic arithmetic; ordinary spectral, IVT and Taylor bridges in PROOF.md",
+  "validation": [
+    {
+      "intended_rejection": null,
+      "label": "verify.py-normal",
+      "returncode": 0,
+      "seconds": 0.06476991400268162,
+      "whole_positive_record": true
+    },
+    {
+      "intended_rejection": null,
+      "label": "verify.py-O",
+      "returncode": 0,
+      "seconds": 0.2589923400009866,
+      "whole_positive_record": true
+    },
+    {
+      "intended_rejection": null,
+      "label": "check_cas.py-normal",
+      "returncode": 0,
+      "seconds": 0.6912012419998064,
+      "whole_positive_record": true
+    },
+    {
+      "intended_rejection": null,
+      "label": "check_cas.py-O",
+      "returncode": 0,
+      "seconds": 6.446266643000854,
+      "whole_positive_record": true
+    },
+    {
+      "intended_rejection": null,
+      "label": "cold-verify.py",
+      "returncode": 0,
+      "seconds": 0.06494460999965668,
+      "whole_positive_record": true
+    },
+    {
+      "intended_rejection": null,
+      "label": "cold-check_cas.py",
+      "returncode": 0,
+      "seconds": 0.6986714089980524,
+      "whole_positive_record": true
+    },
+    {
+      "intended_rejection": "entire expected record/type mismatch",
+      "label": "altered-bound-verify.py",
+      "returncode": 1,
+      "seconds": 0.31481627600078355,
+      "whole_positive_record": false
+    },
+    {
+      "intended_rejection": "entire expected record/type mismatch",
+      "label": "altered-bound-check_cas.py",
+      "returncode": 1,
+      "seconds": 3.9667185899998003,
+      "whole_positive_record": false
+    },
+    {
+      "intended_rejection": "entire expected record/type mismatch",
+      "label": "bool-int-type-verify.py",
+      "returncode": 1,
+      "seconds": 0.2555825140007073,
+      "whole_positive_record": false
+    },
+    {
+      "intended_rejection": "entire expected record/type mismatch",
+      "label": "bool-int-type-check_cas.py",
+      "returncode": 1,
+      "seconds": 3.733520794001379,
+      "whole_positive_record": false
+    },
+    {
+      "intended_rejection": "JSONDecodeError",
+      "label": "malformed-verify.py",
+      "returncode": 1,
+      "seconds": 0.24447637000048417,
+      "whole_positive_record": false
+    },
+    {
+      "intended_rejection": "JSONDecodeError",
+      "label": "malformed-check_cas.py",
+      "returncode": 1,
+      "seconds": 3.800183338997158,
+      "whole_positive_record": false
+    },
+    {
+      "intended_rejection": "complete sum of two central-mass Taylor losses",
+      "label": "unpaid-Taylor-loss",
+      "returncode": 1,
+      "seconds": 0.2366651259981154,
+      "whole_positive_record": false
+    },
+    {
+      "intended_rejection": "strict IVT signs for all 0<D<=Dmax",
+      "label": "unpaid-central-IVT",
+      "returncode": 1,
+      "seconds": 0.20906388699950185,
+      "whole_positive_record": false
+    },
+    {
+      "intended_rejection": "entire inverse-cubic Taylor remainder",
+      "label": "missing-cubic-term",
+      "returncode": 1,
+      "seconds": 0.2130261860002065,
+      "whole_positive_record": false
+    },
+    {
+      "intended_rejection": "entire central mass of literal sharp even family",
+      "label": "dropped-mass-factor8",
+      "returncode": 1,
+      "seconds": 0.2089117180003086,
+      "whole_positive_record": false
+    }
+  ]
+}
