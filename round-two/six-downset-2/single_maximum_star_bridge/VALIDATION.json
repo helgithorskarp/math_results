@@ -1,0 +1,242 @@
+{
+  "agent": "six-downset-2",
+  "role": "researcher",
+  "status": "Checked ordinary author norm proof and conditional finite box; independently unreviewed",
+  "CPython": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+  "input_sha256": "132c164b1e453d93d8d8e2df4d75789b0211cb605e0b80247bc8ec31e7de4feb",
+  "files_sha256": {
+    "bind.py": "5f3186d917d0493f11eba9dd20e7f0a700447f963c144e53e6b1b65a45b82221",
+    "envelope.py": "2bea4a42049fc9ffe7934345947160e7b4c4c27d1e389fe1cba98ee0c7a45a90",
+    "ENVELOPE_CERTIFICATE.json": "46e22bb8b0e8141a91af749ac039c47a5b6ce1759eaaa4f60cf9f0f2d5b9a225",
+    "PROOF.md": "9db9d5f2fd4f86178c69684522b4b6a9e381946df9f3fd44af83ef50778c2c64",
+    "CREDITED_Q16_COEFFICIENTS.json": "132c164b1e453d93d8d8e2df4d75789b0211cb605e0b80247bc8ec31e7de4feb",
+    "DEPENDENCIES.json": "a9eb815df3a66384df6bed050d1cadb44ad8ffb054187a500a295b4990bcfc6e"
+  },
+  "checks": [
+    {
+      "name": "bridge",
+      "whole_records_identical": true,
+      "whole_summaries_identical": true,
+      "record_bytes": 3244435,
+      "record_sha256": "bcd9855da6629302aa73991e071acc76c7e926c20dce60ddb0e70b225ee13aea",
+      "summary": {
+        "G_spectrum": {
+          "1": 228,
+          "180": 1,
+          "52": 1
+        },
+        "M_endpoint_gap_if_parent_margins_hold": "1/46080",
+        "actual_empty_lift_squared_norm": 180,
+        "agent": "six-downset-2",
+        "carrier": {
+          "N": 232,
+          "all19_star_sizes": [
+            52,
+            44,
+            44,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22
+          ],
+          "h": 180,
+          "m": 230,
+          "p": 1,
+          "s": 52,
+          "selected_whole_ground_pairs": 0
+        },
+        "complete_original_basis_count": 20103,
+        "complete_original_cap_identity_entries": 53824,
+        "complete_original_core_entries": 53361,
+        "complete_original_lift_entries": 53824,
+        "complete_record_bytes": 3244435,
+        "complete_record_sha256": "bcd9855da6629302aa73991e071acc76c7e926c20dce60ddb0e70b225ee13aea",
+        "current_new_result": "Private entire original q16 point/basis binding to the one-maximum-star incidence cone",
+        "entire_metric_inverse_product_entries": 105800,
+        "generic_degree_box_superseded_by_independent_Frobenius_source": "c393814322f69f914bedef7ad1a327e07241634c",
+        "independently_reviewed": false,
+        "maximum_residual_disjoint_degree": 209,
+        "ordinary_real_bridges_unformalized": true,
+        "original_L_gap_if_parent_margins_hold": "1/256",
+        "parent_PSD_and_gaps_reaudited": false,
+        "parent_core_margin_premise": "C on proper a-star perpendicular >=1/128 and U>=1/128",
+        "parent_source_commit": "52ce9643a4eb700056e37c0df6e3ed3736f71808",
+        "prior_parent_cube_radius": "1/10292736",
+        "proper_lift_squared_norm": 52,
+        "radius_factor": "20103/5434",
+        "radius_if_parent_core_margins_hold": "1/2782208",
+        "rejected_mathematical_damages": [
+          "smaller_star_pivot",
+          "removed_smaller_singleton",
+          "wrong_original_anchor",
+          "omitted_actual_empty_metric",
+          "full_lift_norm_paid_as_proper_lift",
+          "imported_whole_ground_saturation"
+        ],
+        "role": "researcher",
+        "source_parent": "10242/0",
+        "sparse_basis_positions": 148083,
+        "trace_G": 460
+      },
+      "actual_children": [
+        {
+          "exit_code": 0,
+          "seconds": 1.1756036860024324,
+          "peak_rss_kib": 52280,
+          "guard_seconds": 45,
+          "native_threads": 1,
+          "command": [
+            "/scratch/venvs/discovery-team/bin/python",
+            "-B",
+            "round-two/six-downset-2/single_maximum_star_bridge/bind.py",
+            "--certificate",
+            "scratch/fullstar-d3-input-certificate.json",
+            "--record",
+            "scratch/one-star-bridge-final-normal-record.json"
+          ]
+        },
+        {
+          "exit_code": 0,
+          "seconds": 1.2724969560003956,
+          "peak_rss_kib": 53980,
+          "guard_seconds": 45,
+          "native_threads": 1,
+          "command": [
+            "/scratch/venvs/discovery-team/bin/python",
+            "-B",
+            "scratch/one_star_optimized_child.py",
+            "round-two/six-downset-2/single_maximum_star_bridge/bind.py",
+            "--certificate",
+            "scratch/fullstar-d3-input-certificate.json",
+            "--record",
+            "scratch/one-star-bridge-final-O-record.json"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "envelope",
+      "whole_records_identical": true,
+      "whole_summaries_identical": true,
+      "record_bytes": 223279,
+      "record_sha256": "df7bf602a29b154611d334c461bd5df071a0a67a224a3c6c05ea51e79abf24c5",
+      "summary": {
+        "agent": "six-downset-2",
+        "complete_weighted_original_rows": 231,
+        "conditional_radius": "1/164096",
+        "corner_congruence_entries": 53361,
+        "equitable_original_row_sums": 5313,
+        "free_coordinates": 20103,
+        "frobenius_squared": 669906,
+        "independently_reviewed": false,
+        "original_members": 231,
+        "parent_PSD_and_gaps_reaudited": false,
+        "radius_factor_over_independent_Frobenius_box": "819/641",
+        "radius_factor_over_original_author_box": "40206/641",
+        "record_bytes": 223279,
+        "record_sha256": "df7bf602a29b154611d334c461bd5df071a0a67a224a3c6c05ea51e79abf24c5",
+        "rejected_mathematical_damages": [
+          "nonpositive_original_weight",
+          "insufficient_anchor_weight",
+          "wrong_positive_corner_anchor",
+          "omitted_free_basis_edge",
+          "intersecting_free_entry",
+          "underclaimed_operator_budget_640"
+        ],
+        "role": "researcher",
+        "sharp_envelope_does_not_claim_optimal_feasible_radius": true,
+        "sharp_operator_envelope": "largest eigenvalue of the complete nonnegative proper envelope",
+        "smallest_strict_integer_row_slack": 458,
+        "star_neighbour_histogram": [
+          [
+            15,
+            8
+          ],
+          [
+            16,
+            1
+          ],
+          [
+            31,
+            32
+          ],
+          [
+            33,
+            2
+          ],
+          [
+            45,
+            120
+          ],
+          [
+            48,
+            16
+          ]
+        ],
+        "strict_Perron_root_integer_interval": [
+          640,
+          641
+        ],
+        "sum_star_neighbour_squares": 314850,
+        "weights_sha256": "46e22bb8b0e8141a91af749ac039c47a5b6ce1759eaaa4f60cf9f0f2d5b9a225"
+      },
+      "actual_children": [
+        {
+          "exit_code": 0,
+          "seconds": 0.2414240170000994,
+          "peak_rss_kib": 19168,
+          "guard_seconds": 45,
+          "native_threads": 1,
+          "command": [
+            "/scratch/venvs/discovery-team/bin/python",
+            "-B",
+            "round-two/six-downset-2/single_maximum_star_bridge/envelope.py",
+            "--record",
+            "scratch/one-star-envelope-final-normal-record.json"
+          ]
+        },
+        {
+          "exit_code": 0,
+          "seconds": 0.4377398769975116,
+          "peak_rss_kib": 21128,
+          "guard_seconds": 45,
+          "native_threads": 1,
+          "command": [
+            "/scratch/venvs/discovery-team/bin/python",
+            "-B",
+            "scratch/one_star_optimized_child.py",
+            "round-two/six-downset-2/single_maximum_star_bridge/envelope.py",
+            "--record",
+            "scratch/one-star-envelope-final-O-record.json"
+          ]
+        }
+      ]
+    }
+  ],
+  "damages_normal_plus_O": 24,
+  "not_an_independent_seed_positivity_reaudit": true,
+  "normal_O_agreement_not_independent_review": true,
+  "no_solver_no_floating_arithmetic": true,
+  "all_native_threads": 1,
+  "serial_children": true,
+  "fixed_child_guard_seconds": 45,
+  "job_running": false,
+  "resource_limits_changed": false,
+  "prose_only_metadata_refresh_after_math": true,
+  "math_reexecuted_during_metadata_freeze": false,
+  "source_and_graph_provenance": "Verified commit SHA and actual graph reference appear in the original signed contribution; self-references are not embedded in this source commit.",
+  "publication_metadata_only": true,
+  "checked_mathematical_code_unchanged": true
+}
