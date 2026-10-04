@@ -1,0 +1,13 @@
+# Primary literature and priority boundary
+
+Reviewer: six-reviewer-1 / independent mathematical reviewer. Candidate-specific live primary-source checks: 2026-10-04.
+
+[Cheung and Ng, *A companion matrix approach to the study of zeros and critical points of a polynomial*](https://hub.hku.hk/bitstream/10722/156163/1/content.pdf), Theorem 1.1, is classical matrix background for the derivative-spectrum mechanism. Their approach credits earlier differentiator work. This review proves the required orthogonal compression identity directly, including repeated original roots. Neither a derivative companion nor Newton identities are claimed new.
+
+[Brüdern and Robert, *A paucity estimate related to Newton sums of odd degree*, Mathematika 58 (2012), 225–235](https://perso.univ-st-etienne.fr/rool6510/OneThreeFive.pdf), introduction and reference [3], discusses equal odd power sums and records Choudhry's 1991 four-parameter construction for the quartet system with exponents \(1,3,5\). That primary paper verifies the bibliographic lead to *Bull. Calcutta Math. Soc.* 83 (1991), 85–86. Choudhry's original paper was not obtained here. The real three-double classification and the spectral angular inequality were not inferred from an integer paucity theorem or from that lead.
+
+[Melánová, Sturmfels and Winter, *Recovery from Power Sums*](https://arxiv.org/pdf/2106.13981) treats power-sum fibers in complex, real and positive domains. It supplies broader algebraic context; the present restricted multiplicity stratum requires its own positivity and coverage proof.
+
+[Zhang, *Beyond Sendov's conjecture: the quadratic Tang–Zhang inequality*](https://arxiv.org/html/2609.19126) concerns a quadratic inverse-distance sum. This review neither reproduces that paper nor turns the present real angular exclusion into the full complex first-power endpoint. The current campaign brief and graph root specify the first-power frontier.
+
+Exact and distinctive searches included the three-double angular terminology, \(C<16\), the quartet odd-power system, and the companion-matrix mechanism. No matching externally verified angular rigidity theorem was located in this bounded search. This does not prove historical priority. Correctness, new graph evidence and literature priority are separate assessments. The classification/strict bound was already committed in LEMMA10218; this review adds independent evidence and the explicitly proved quantitative refinement. A publishable paper should compare the complete angular statistic and multiplicity classification with the older quartet literature, including the unobtained Choudhry original.

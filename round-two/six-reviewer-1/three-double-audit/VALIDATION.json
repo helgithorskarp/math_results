@@ -1,0 +1,199 @@
+{
+  "agent": "six-reviewer-1",
+  "all_primary_files_unchanged": true,
+  "cumulative_child_peak_RSS_KiB": 22292,
+  "fixed_per_child_seconds": 45,
+  "generic_method_rejections": 3,
+  "literal_method_rejections": 3,
+  "max_child_seconds": 0.722701,
+  "native_threads": 1,
+  "positive_children": 8,
+  "primary_files": 5,
+  "python": "3.12.14",
+  "records": {
+    "check.py": {
+      "bytes": 18734,
+      "sha256": "c39aa806f6743fae4b965a7b5581a05aac06e41e01ae6ede9b2339c7cbe7d216",
+      "whole_bytes_and_parse_equal_in_four_modes": true
+    },
+    "literal.py": {
+      "bytes": 52554,
+      "sha256": "d455f77bcb2cdba9b0c62a6c2ef50fe31b77d701f0e7144ffec954db59f33b94",
+      "whole_bytes_and_parse_equal_in_four_modes": true
+    }
+  },
+  "role": "independent mathematical reviewer",
+  "runs": [
+    {
+      "bytes": 18734,
+      "cumulative_child_peak_RSS_KiB": 17340,
+      "exit": 0,
+      "label": null,
+      "negative": false,
+      "optimized": false,
+      "script": "check.py",
+      "seconds": 0.304871,
+      "sha256": "c39aa806f6743fae4b965a7b5581a05aac06e41e01ae6ede9b2339c7cbe7d216",
+      "source": "local"
+    },
+    {
+      "bytes": 18734,
+      "cumulative_child_peak_RSS_KiB": 22068,
+      "exit": 0,
+      "label": null,
+      "negative": false,
+      "optimized": true,
+      "script": "check.py",
+      "seconds": 0.722701,
+      "sha256": "c39aa806f6743fae4b965a7b5581a05aac06e41e01ae6ede9b2339c7cbe7d216",
+      "source": "local"
+    },
+    {
+      "bytes": 18734,
+      "cumulative_child_peak_RSS_KiB": 22068,
+      "exit": 0,
+      "label": null,
+      "negative": false,
+      "optimized": false,
+      "script": "check.py",
+      "seconds": 0.646932,
+      "sha256": "c39aa806f6743fae4b965a7b5581a05aac06e41e01ae6ede9b2339c7cbe7d216",
+      "source": "cold"
+    },
+    {
+      "bytes": 18734,
+      "cumulative_child_peak_RSS_KiB": 22152,
+      "exit": 0,
+      "label": null,
+      "negative": false,
+      "optimized": true,
+      "script": "check.py",
+      "seconds": 0.500285,
+      "sha256": "c39aa806f6743fae4b965a7b5581a05aac06e41e01ae6ede9b2339c7cbe7d216",
+      "source": "cold"
+    },
+    {
+      "bytes": 52554,
+      "cumulative_child_peak_RSS_KiB": 22152,
+      "exit": 0,
+      "label": null,
+      "negative": false,
+      "optimized": false,
+      "script": "literal.py",
+      "seconds": 0.199001,
+      "sha256": "d455f77bcb2cdba9b0c62a6c2ef50fe31b77d701f0e7144ffec954db59f33b94",
+      "source": "local"
+    },
+    {
+      "bytes": 52554,
+      "cumulative_child_peak_RSS_KiB": 22152,
+      "exit": 0,
+      "label": null,
+      "negative": false,
+      "optimized": true,
+      "script": "literal.py",
+      "seconds": 0.554548,
+      "sha256": "d455f77bcb2cdba9b0c62a6c2ef50fe31b77d701f0e7144ffec954db59f33b94",
+      "source": "local"
+    },
+    {
+      "bytes": 52554,
+      "cumulative_child_peak_RSS_KiB": 22152,
+      "exit": 0,
+      "label": null,
+      "negative": false,
+      "optimized": false,
+      "script": "literal.py",
+      "seconds": 0.234409,
+      "sha256": "d455f77bcb2cdba9b0c62a6c2ef50fe31b77d701f0e7144ffec954db59f33b94",
+      "source": "cold"
+    },
+    {
+      "bytes": 52554,
+      "cumulative_child_peak_RSS_KiB": 22152,
+      "exit": 0,
+      "label": null,
+      "negative": false,
+      "optimized": true,
+      "script": "literal.py",
+      "seconds": 0.359972,
+      "sha256": "d455f77bcb2cdba9b0c62a6c2ef50fe31b77d701f0e7144ffec954db59f33b94",
+      "source": "cold"
+    },
+    {
+      "bytes": 0,
+      "cumulative_child_peak_RSS_KiB": 22152,
+      "exit": 1,
+      "label": "lost-mass-factor",
+      "negative": true,
+      "optimized": false,
+      "script": "check.py",
+      "seconds": 0.265049,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "local"
+    },
+    {
+      "bytes": 0,
+      "cumulative_child_peak_RSS_KiB": 22292,
+      "exit": 1,
+      "label": "lost-terminal-num",
+      "negative": true,
+      "optimized": true,
+      "script": "check.py",
+      "seconds": 0.633658,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "local"
+    },
+    {
+      "bytes": 0,
+      "cumulative_child_peak_RSS_KiB": 22292,
+      "exit": 1,
+      "label": "wrong-rigidity-constant",
+      "negative": true,
+      "optimized": false,
+      "script": "check.py",
+      "seconds": 0.342971,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "local"
+    },
+    {
+      "bytes": 0,
+      "cumulative_child_peak_RSS_KiB": 22292,
+      "exit": 1,
+      "label": "lost-critical-slot",
+      "negative": true,
+      "optimized": false,
+      "script": "literal.py",
+      "seconds": 0.066609,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "local"
+    },
+    {
+      "bytes": 0,
+      "cumulative_child_peak_RSS_KiB": 22292,
+      "exit": 1,
+      "label": "lost-mass-factor",
+      "negative": true,
+      "optimized": true,
+      "script": "literal.py",
+      "seconds": 0.322208,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "local"
+    },
+    {
+      "bytes": 0,
+      "cumulative_child_peak_RSS_KiB": 22292,
+      "exit": 1,
+      "label": "lost-angular-normalization",
+      "negative": true,
+      "optimized": false,
+      "script": "literal.py",
+      "seconds": 0.144506,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "local"
+    }
+  ],
+  "serial_children": true,
+  "total_child_seconds": 5.29772,
+  "utc": "2026-10-04T13:51:59.380398+00:00"
+}
