@@ -1,0 +1,249 @@
+{
+  "agent": "six-sendov-3",
+  "role": "researcher",
+  "complete": true,
+  "python": "3.12.14",
+  "math_source_hashes": {
+    "arithmetic.py": "5527bcc330398f6618f10e1705e9ed56133e61e94de9155faa148e84e09539e2",
+    "coercivity.py": "eb5a5fd5261d479de6ea4e1327f43d1ee2c27e6fca96d1f830e23e37f273aeea",
+    "verify.py": "7d6c4698d6a85321b78e4331c67c661fb138595b1e5c9a1ac526275f124a475e",
+    "EXPECTED.json": "54f9a821e6ce6182abc007b36eec185e3ad5d960c7d69bfe1d900d2a760afb95"
+  },
+  "native_threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "maximum_simultaneous_mathematical_children": 1,
+  "per_child_timeout_seconds": 45,
+  "positive_runs": 4,
+  "intended_rejections": 18,
+  "all_cases": [
+    {
+      "label": "local-N",
+      "optimized": false,
+      "intended_reject": false,
+      "exit_code": 0,
+      "seconds": 1.134279953999794,
+      "whole_output": {
+        "agent": "six-sendov-3",
+        "analytic_bridges_unformalized": true,
+        "complete": true,
+        "independent_review": false,
+        "positive_rational_signs": 6,
+        "role": "researcher",
+        "whole_baseline_sha256": "345874798f0263debfed05d8add567f341aa66b584a00cdb09c2586be3530618",
+        "whole_identities": 40,
+        "whole_record_bytes": 25183,
+        "whole_record_sha256": "6f8a54e5505fd4dc593c5d3913cecbad2c29e607a965176e365299525dbb55a0"
+      }
+    },
+    {
+      "label": "cold-N",
+      "optimized": false,
+      "intended_reject": false,
+      "exit_code": 0,
+      "seconds": 1.4839175380002416,
+      "whole_output": {
+        "agent": "six-sendov-3",
+        "analytic_bridges_unformalized": true,
+        "complete": true,
+        "independent_review": false,
+        "positive_rational_signs": 6,
+        "role": "researcher",
+        "whole_baseline_sha256": "345874798f0263debfed05d8add567f341aa66b584a00cdb09c2586be3530618",
+        "whole_identities": 40,
+        "whole_record_bytes": 25183,
+        "whole_record_sha256": "6f8a54e5505fd4dc593c5d3913cecbad2c29e607a965176e365299525dbb55a0"
+      }
+    },
+    {
+      "label": "math-sixth_sign-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 0.12775520400100504,
+      "whole_output": null
+    },
+    {
+      "label": "math-missing_norm_payment-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 1.252446743001201,
+      "whole_output": null
+    },
+    {
+      "label": "math-quadratic_skew_sign-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 1.153058163003152,
+      "whole_output": null
+    },
+    {
+      "label": "math-frozen_moving_phi-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 1.3561038949992508,
+      "whole_output": null
+    },
+    {
+      "label": "fixture-normal_coefficient-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 1.4614941379986703,
+      "whole_output": null
+    },
+    {
+      "label": "fixture-dropped_phi_term-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 1.2626208830006362,
+      "whole_output": null
+    },
+    {
+      "label": "fixture-boolean_as_integer-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 1.1391733790005674,
+      "whole_output": null
+    },
+    {
+      "label": "fixture-sign_as_number-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 1.2285373589984374,
+      "whole_output": null
+    },
+    {
+      "label": "source-N",
+      "optimized": false,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 0.05655338100041263,
+      "whole_output": null
+    },
+    {
+      "label": "local-O",
+      "optimized": true,
+      "intended_reject": false,
+      "exit_code": 0,
+      "seconds": 1.8462276489990472,
+      "whole_output": {
+        "agent": "six-sendov-3",
+        "analytic_bridges_unformalized": true,
+        "complete": true,
+        "independent_review": false,
+        "positive_rational_signs": 6,
+        "role": "researcher",
+        "whole_baseline_sha256": "345874798f0263debfed05d8add567f341aa66b584a00cdb09c2586be3530618",
+        "whole_identities": 40,
+        "whole_record_bytes": 25183,
+        "whole_record_sha256": "6f8a54e5505fd4dc593c5d3913cecbad2c29e607a965176e365299525dbb55a0"
+      }
+    },
+    {
+      "label": "cold-O",
+      "optimized": true,
+      "intended_reject": false,
+      "exit_code": 0,
+      "seconds": 1.4752443389988912,
+      "whole_output": {
+        "agent": "six-sendov-3",
+        "analytic_bridges_unformalized": true,
+        "complete": true,
+        "independent_review": false,
+        "positive_rational_signs": 6,
+        "role": "researcher",
+        "whole_baseline_sha256": "345874798f0263debfed05d8add567f341aa66b584a00cdb09c2586be3530618",
+        "whole_identities": 40,
+        "whole_record_bytes": 25183,
+        "whole_record_sha256": "6f8a54e5505fd4dc593c5d3913cecbad2c29e607a965176e365299525dbb55a0"
+      }
+    },
+    {
+      "label": "math-sixth_sign-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 0.2650767150007596,
+      "whole_output": null
+    },
+    {
+      "label": "math-missing_norm_payment-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 1.418160279001313,
+      "whole_output": null
+    },
+    {
+      "label": "math-quadratic_skew_sign-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 1.4858820810004545,
+      "whole_output": null
+    },
+    {
+      "label": "math-frozen_moving_phi-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 1.5847705609994591,
+      "whole_output": null
+    },
+    {
+      "label": "fixture-normal_coefficient-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 1.402950152001722,
+      "whole_output": null
+    },
+    {
+      "label": "fixture-dropped_phi_term-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 1.3145494169984886,
+      "whole_output": null
+    },
+    {
+      "label": "fixture-boolean_as_integer-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 1.4871717860005447,
+      "whole_output": null
+    },
+    {
+      "label": "fixture-sign_as_number-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 1.7995005619995936,
+      "whole_output": null
+    },
+    {
+      "label": "source-O",
+      "optimized": true,
+      "intended_reject": true,
+      "exit_code": 1,
+      "seconds": 0.34199940700273146,
+      "whole_output": null
+    }
+  ],
+  "peak_child_kib": 21532,
+  "analytic_bridges_unformalized": true,
+  "independent_review": false
+}
