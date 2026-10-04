@@ -1,0 +1,267 @@
+{
+  "actual_agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "python": "3.12.14",
+  "positive_children": [
+    {
+      "source": "field.py",
+      "optimized": false,
+      "exit_code": 0,
+      "seconds": 4.378026631000466,
+      "peak_child_KiB": 55264
+    },
+    {
+      "source": "polynomial.py",
+      "optimized": false,
+      "exit_code": 0,
+      "seconds": 3.1756532389990753,
+      "peak_child_KiB": 55264
+    },
+    {
+      "source": "original.py",
+      "optimized": false,
+      "exit_code": 0,
+      "seconds": 3.03731569699994,
+      "peak_child_KiB": 55264
+    },
+    {
+      "source": "field.py",
+      "optimized": true,
+      "exit_code": 0,
+      "seconds": 5.150164863998725,
+      "peak_child_KiB": 55612
+    },
+    {
+      "source": "polynomial.py",
+      "optimized": true,
+      "exit_code": 0,
+      "seconds": 3.6434686120010156,
+      "peak_child_KiB": 55612
+    },
+    {
+      "source": "original.py",
+      "optimized": true,
+      "exit_code": 0,
+      "seconds": 3.236549143999582,
+      "peak_child_KiB": 55612
+    }
+  ],
+  "all_six_whole_math_records_match": true,
+  "whole_math_records": [
+    {
+      "fresh-field-record.json": "6b736857202bf5fd9842d42a42d364d19e6301b94271a763b45a7ff388e5a45b",
+      "literal-record.json": "ad93fa8b2567fb476741ec6814f72ad9ced3145bbe668b62bc4f1a1129900519",
+      "polynomial-record.json": "feecf9ba6ead1cc7aa339ec87bf737a3b99a09beeb2e3411b09f797973c67fac"
+    },
+    {
+      "fresh-field-record.json": "6b736857202bf5fd9842d42a42d364d19e6301b94271a763b45a7ff388e5a45b",
+      "literal-record.json": "ad93fa8b2567fb476741ec6814f72ad9ced3145bbe668b62bc4f1a1129900519",
+      "polynomial-record.json": "feecf9ba6ead1cc7aa339ec87bf737a3b99a09beeb2e3411b09f797973c67fac"
+    }
+  ],
+  "semantic_damage_rejections": 24,
+  "controls": [
+    {
+      "label": "empty-frame",
+      "source": "original.py",
+      "optimized": false,
+      "exit_code": 1,
+      "seconds": 1.007575428000564,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "light-mean",
+      "source": "original.py",
+      "optimized": false,
+      "exit_code": 1,
+      "seconds": 0.6018173529992055,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "empty-update",
+      "source": "original.py",
+      "optimized": false,
+      "exit_code": 1,
+      "seconds": 1.1061255369986611,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "private-full",
+      "source": "original.py",
+      "optimized": false,
+      "exit_code": 1,
+      "seconds": 0.7464253990001453,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "dual-heavy",
+      "source": "original.py",
+      "optimized": false,
+      "exit_code": 1,
+      "seconds": 0.8423825099998794,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "old-complement",
+      "source": "original.py",
+      "optimized": false,
+      "exit_code": 1,
+      "seconds": 0.6511927029987419,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "mean-metric",
+      "source": "original.py",
+      "optimized": false,
+      "exit_code": 1,
+      "seconds": 0.7527482329987834,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "original-carrier",
+      "source": "original.py",
+      "optimized": false,
+      "exit_code": 1,
+      "seconds": 0.7835721860010381,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "missing-block",
+      "source": "polynomial.py",
+      "optimized": false,
+      "exit_code": 1,
+      "seconds": 0.07689274099902832,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "shift-sign",
+      "source": "polynomial.py",
+      "optimized": false,
+      "exit_code": 1,
+      "seconds": 0.29151053900022816,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "row-clear",
+      "source": "polynomial.py",
+      "optimized": false,
+      "exit_code": 1,
+      "seconds": 4.282225151999228,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "leading-pivot",
+      "source": "polynomial.py",
+      "optimized": false,
+      "exit_code": 1,
+      "seconds": 4.041721641999175,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "empty-frame",
+      "source": "original.py",
+      "optimized": true,
+      "exit_code": 1,
+      "seconds": 1.2878938539997762,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "light-mean",
+      "source": "original.py",
+      "optimized": true,
+      "exit_code": 1,
+      "seconds": 0.9059848729993973,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "empty-update",
+      "source": "original.py",
+      "optimized": true,
+      "exit_code": 1,
+      "seconds": 1.2629545219988358,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "private-full",
+      "source": "original.py",
+      "optimized": true,
+      "exit_code": 1,
+      "seconds": 1.1246544949990493,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "dual-heavy",
+      "source": "original.py",
+      "optimized": true,
+      "exit_code": 1,
+      "seconds": 1.3551220070003183,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "old-complement",
+      "source": "original.py",
+      "optimized": true,
+      "exit_code": 1,
+      "seconds": 0.909541810000519,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "mean-metric",
+      "source": "original.py",
+      "optimized": true,
+      "exit_code": 1,
+      "seconds": 1.1562247000001662,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "original-carrier",
+      "source": "original.py",
+      "optimized": true,
+      "exit_code": 1,
+      "seconds": 0.9408624970001256,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "missing-block",
+      "source": "polynomial.py",
+      "optimized": true,
+      "exit_code": 1,
+      "seconds": 0.3775108019999607,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "shift-sign",
+      "source": "polynomial.py",
+      "optimized": true,
+      "exit_code": 1,
+      "seconds": 0.49360519200126873,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "row-clear",
+      "source": "polynomial.py",
+      "optimized": true,
+      "exit_code": 1,
+      "seconds": 4.365247653999177,
+      "peak_child_KiB": 55612
+    },
+    {
+      "label": "leading-pivot",
+      "source": "polynomial.py",
+      "optimized": true,
+      "exit_code": 1,
+      "seconds": 4.022184588000528,
+      "peak_child_KiB": 55612
+    }
+  ],
+  "unchanged_core": {
+    "field.py": "8bc01ec8caaf82d09c8d999df02e28888b77bdb6decd71824c605ef9e6da6d86",
+    "original.py": "4b52af412532b1462e9830a691eb51844ec569648e49e411379a40612a78d820",
+    "polynomial.py": "5ac07902b52abc64e70ac48decb1ca16f9aafcd5a1e9230fb7f15a5486f977bd",
+    "reproduce.py": "9e2d949ed13ae438b91845908220b407644ac0bd5708f9ce1693af2d0ac608d9"
+  },
+  "serial_children": 1,
+  "native_threads": 1,
+  "child_timeout_seconds": 45,
+  "formalized": false
+}

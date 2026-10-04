@@ -1,0 +1,70 @@
+{
+  "actual_agent": "six-reviewer-5",
+  "written_inputs": [
+    {
+      "name": "target-proof",
+      "commit": "21517cfce36b080a73f3c0ec5ed7969e09a50cf9",
+      "path": "round-two/six-downset-1/consecutive-triangle-cap/PROOF.md",
+      "bytes": 18467,
+      "sha256": "1b6fca1b066a038beef17b1bdab73f4c2591cb6e87006952a8b5b2970a6fa1d0"
+    },
+    {
+      "name": "prior9361",
+      "commit": "ca8d2e363536435ad034f08cf3845a6ffd276326",
+      "path": "round-two/six-downset-1/one-point-attachments/PROOF.md",
+      "bytes": 14655,
+      "sha256": "ea563d8059904b8a1b1e6d54c9c1b3501f5f5774d7348965021f48221d6410d5"
+    },
+    {
+      "name": "prior10111",
+      "commit": "2252bcaacf4798c6b13d75b4918792fd7c8bbe9c",
+      "path": "round-two/six-downset-1/balanced-triangle-all-cubes/PROOF.md",
+      "bytes": 21198,
+      "sha256": "23d1cc0777d1dd2cf4923374175432cb5a6926a63c55689b9d355f55d3d8d674"
+    },
+    {
+      "name": "prior10160",
+      "commit": "95ef0d44f2263cb94a191632fc04dd64f0feaba7",
+      "path": "round-two/six-downset-1/balanced-triangle-repair-line/PROOF.md",
+      "bytes": 16090,
+      "sha256": "b7caa4beb73c67cf167f60d957e043cb93855e84d2ae96107238d158b1792655"
+    }
+  ],
+  "primary_literature": [
+    {
+      "url": "https://arxiv.org/html/2609.28404v1#S4",
+      "status": "H/I proposed; cap not supplied by classical/projection-packing proof",
+      "checked": "2026-10-04"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.28404",
+      "status": "only September23 v1 shown at audit",
+      "checked": "2026-10-04"
+    }
+  ],
+  "exposure": "Whole target graph and written defining proof exposed. Prior written excerpts read for credit; author native programs, coefficient certificate, EXPECTED and VALIDATION never opened/imported/run.",
+  "logical_ancestor_theorem_premises": [],
+  "credit_graph_parents": [
+    {
+      "height": 9361,
+      "ref": "bafkreidlgstp2okjjosbb677iysm3h4mpkohkmcrn4kbx7vsqogn6goxra",
+      "title": "Star-bounded one-point attachments to a Boolean cube: H closure and greatest lower rank"
+    },
+    {
+      "height": 10111,
+      "ref": "bafkreiailm2w3yvzhfqflc2nwzrnv3o2v3xuxygp5zzkk6if7aumqrylaq",
+      "title": "Balanced private triangles on every old cube: a uniform cap at greatest lower rank"
+    },
+    {
+      "height": 10160,
+      "ref": "bafkreicdarvtdijre7i2e7e7wqrc2awospw4hniluiba2jkfgkmhuv2xoq",
+      "title": "Exact balanced private-triangle repair line on every old cube"
+    }
+  ],
+  "credited_own_prior_review": {
+    "height": 10117,
+    "ref": "bafkreicj62q6cteggzzgubwvumueor7di5dgvsqjlz5nu2djbugkahlifa",
+    "scope": "balanced old three-point cube only; no verdict transferred"
+  },
+  "trust": "Fresh SymPy1.14 over QQ(h,q), CPython Fraction/sparse-polynomial reader, ordinary complete physical/spectral/Schur/rank arguments. Unformalized."
+}
