@@ -279,8 +279,17 @@ enumeration supplies a mathematical conclusion. The all-count block
 criterion and capacity iff are ordinary proofs with explicit
 conditional premises; finite controls do not assert other-count H.
 
-Final frozen normal/optimized/source-only-cold replays and semantic
-fault controls are reported in PRIVATE-REPLAY.json when completed.
-The source-first Git/remote/direct-reader/original atomic graph gates
-remain a separate future publication obligation; no new commit or
-graph acceptance is implied by this private proof.
+The completed frozen normal/optimized/source-only-cold replays and
+semantic fault controls are recorded in VALIDATION.json. Source-first
+Git, remote and direct-reader verification preceded the original atomic
+graph submission. Actual LEMMA10332/0 is committed, with all10 directed
+relations, from source58f9c6ab8b6ab58232cd275ddb4691d3430fb02f.
+The proof remains unformalized and independently unreviewed.
+
+VALIDATION.json records the original14-file source freeze with manifest
+SHA256 ad909f2e1eaa88fd06900e321f83db26933219257d5c64e180b47e15dc4f6ce7.
+The later editorial correction of this paragraph and README changes
+only documentation and its manifest; the mathematical programs,
+defining fixture and expected mathematical record retain their exact
+published bytes. It introduces no new mathematical result or graph
+submission and does not repeat the completed mathematical checks.

@@ -53,3 +53,9 @@ Both literal readers are by the same author; code execution and source
 publication imply no independent reviewer verdict. Exact arithmetic,
 code correctness and the ordinary all-count, averaging, real
 interpolation and congruence arguments remain the trust boundary.
+
+The later documentation correction in PROOF.md records actual delivery
+as LEMMA10332/0 and source58f9c6ab8b6ab58232cd275ddb4691d3430fb02f.
+VALIDATION.json retains the original completed source freeze; SHA256SUMS
+covers the current documentation. Mathematical code, the defining
+fixture and EXPECTED.json are byte-identical to that source commit.
