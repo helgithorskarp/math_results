@@ -1,0 +1,184 @@
+{
+  "actual_mathematical_rejections": 20,
+  "agent": "six-reviewer-1",
+  "all_whole_records_equal": true,
+  "any_resource_limit_hit": false,
+  "complete_positive_replays": 4,
+  "distinct_mathematical_defects": 10,
+  "fixed_child_timeout_seconds": 45,
+  "full_mathematical_record_bytes": 59687,
+  "full_mathematical_record_sha256": "d98b91df53baec1cd2709ba6d952903afdd5a3c174dadc76748f00e47058457a",
+  "maximum_simultaneous_mathematical_children": 1,
+  "native_threads": 1,
+  "negative_records": [
+    {
+      "fixture": "denominator-zero",
+      "message": "polynomial denominator",
+      "rejected": true
+    },
+    {
+      "fixture": "duplicate-exponent",
+      "message": "all coefficient exponents",
+      "rejected": true
+    },
+    {
+      "fixture": "negative-final-pivot",
+      "message": "complete coefficient identity failed",
+      "rejected": true
+    },
+    {
+      "fixture": "ordered-update",
+      "message": "entire ordered Schur coverage",
+      "rejected": true
+    },
+    {
+      "fixture": "old-row-drop",
+      "message": "complete coefficient identity failed",
+      "rejected": true
+    },
+    {
+      "fixture": "Schur-sign",
+      "message": "complete coefficient identity failed",
+      "rejected": true
+    },
+    {
+      "fixture": "empty-row",
+      "message": "actual empty negative-row-sum Gram",
+      "rejected": true
+    },
+    {
+      "fixture": "light-dual",
+      "message": "every original dual score and actual empty",
+      "rejected": true
+    },
+    {
+      "fixture": "light-mean-omitted",
+      "message": "all original physical five-block entries",
+      "rejected": true
+    },
+    {
+      "fixture": "star-census",
+      "message": "all original star sizes",
+      "rejected": true
+    },
+    {
+      "fixture": "denominator-zero",
+      "message": "polynomial denominator",
+      "rejected": true
+    },
+    {
+      "fixture": "duplicate-exponent",
+      "message": "all coefficient exponents",
+      "rejected": true
+    },
+    {
+      "fixture": "negative-final-pivot",
+      "message": "complete coefficient identity failed",
+      "rejected": true
+    },
+    {
+      "fixture": "ordered-update",
+      "message": "entire ordered Schur coverage",
+      "rejected": true
+    },
+    {
+      "fixture": "old-row-drop",
+      "message": "complete coefficient identity failed",
+      "rejected": true
+    },
+    {
+      "fixture": "Schur-sign",
+      "message": "complete coefficient identity failed",
+      "rejected": true
+    },
+    {
+      "fixture": "empty-row",
+      "message": "actual empty negative-row-sum Gram",
+      "rejected": true
+    },
+    {
+      "fixture": "light-dual",
+      "message": "every original dual score and actual empty",
+      "rejected": true
+    },
+    {
+      "fixture": "light-mean-omitted",
+      "message": "all original physical five-block entries",
+      "rejected": true
+    },
+    {
+      "fixture": "star-census",
+      "message": "all original star sizes",
+      "rejected": true
+    }
+  ],
+  "preimport_source_rejections": 2,
+  "role": "independent mathematical reviewer",
+  "runs": [
+    {
+      "child_cumulative_maxrss_KiB": 22224,
+      "label": "local-normal",
+      "returncode": 0,
+      "seconds": 8.46817,
+      "whole_bytes": 59687,
+      "whole_sha256": "d98b91df53baec1cd2709ba6d952903afdd5a3c174dadc76748f00e47058457a"
+    },
+    {
+      "child_cumulative_maxrss_KiB": 22576,
+      "label": "local-O",
+      "returncode": 0,
+      "seconds": 7.982811,
+      "whole_bytes": 59687,
+      "whole_sha256": "d98b91df53baec1cd2709ba6d952903afdd5a3c174dadc76748f00e47058457a"
+    },
+    {
+      "child_cumulative_maxrss_KiB": 22576,
+      "label": "cold-normal",
+      "returncode": 0,
+      "seconds": 7.739692,
+      "whole_bytes": 59687,
+      "whole_sha256": "d98b91df53baec1cd2709ba6d952903afdd5a3c174dadc76748f00e47058457a"
+    },
+    {
+      "child_cumulative_maxrss_KiB": 22576,
+      "label": "cold-O",
+      "returncode": 0,
+      "seconds": 8.06089,
+      "whole_bytes": 59687,
+      "whole_sha256": "d98b91df53baec1cd2709ba6d952903afdd5a3c174dadc76748f00e47058457a"
+    },
+    {
+      "child_cumulative_maxrss_KiB": 22576,
+      "label": "defects-normal",
+      "returncode": 0,
+      "seconds": 3.363097,
+      "whole_bytes": 1144,
+      "whole_sha256": "f9d699c275391a9593c47f34978906ddc08025c884a9b31bb289c17c8f40e83f"
+    },
+    {
+      "child_cumulative_maxrss_KiB": 22576,
+      "label": "defects-O",
+      "returncode": 0,
+      "seconds": 3.181066,
+      "whole_bytes": 1144,
+      "whole_sha256": "f9d699c275391a9593c47f34978906ddc08025c884a9b31bb289c17c8f40e83f"
+    },
+    {
+      "child_cumulative_maxrss_KiB": 22576,
+      "label": "source-defect-normal",
+      "returncode": 1,
+      "seconds": 0.049544,
+      "whole_bytes": 0,
+      "whole_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "child_cumulative_maxrss_KiB": 22576,
+      "label": "source-defect-O",
+      "returncode": 1,
+      "seconds": 0.198966,
+      "whole_bytes": 0,
+      "whole_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "runtime": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]"
+}
