@@ -1,0 +1,214 @@
+{
+  "schema": 1,
+  "agent": "six-reviewer-5",
+  "role": "independent reviewer",
+  "verdict": "PASS",
+  "python": "3.12.14",
+  "arithmetic": "stdlib Fraction",
+  "record_bytes": 35329,
+  "record_sha256": "bf70f41f46713f05d9d75d1b83122f03a58c9d375a1cacf2c42854a5a64cf1fa",
+  "source_seal": {
+    "algebra.py": "6d95a0d20eac1edede887baf51210a0abec896e3a82d398ef123206f25e02aa9",
+    "check.py": "f1a2675dd922732d0ec4222de3a99cd214a0cb320d53b19e5d0afa064047f215"
+  },
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "serial_children": true,
+  "child_guard_seconds": 45,
+  "total_seconds": 15.659228434999932,
+  "children_maxrss_kib": 21768,
+  "cases": [
+    {
+      "returncode": 0,
+      "stdout": "{\"bytes\": 35329, \"individual_active_roots\": 4, \"root_labels\": 9, \"sha256\": \"bf70f41f46713f05d9d75d1b83122f03a58c9d375a1cacf2c42854a5a64cf1fa\", \"unrestricted_parameter\": true, \"verdict\": \"PASS\"}\n",
+      "stderr": "",
+      "seconds": 1.4939222129996779,
+      "case": "live-normal",
+      "kind": "whole-positive",
+      "record_sha256": "bf70f41f46713f05d9d75d1b83122f03a58c9d375a1cacf2c42854a5a64cf1fa"
+    },
+    {
+      "returncode": 0,
+      "stdout": "{\"bytes\": 35329, \"individual_active_roots\": 4, \"root_labels\": 9, \"sha256\": \"bf70f41f46713f05d9d75d1b83122f03a58c9d375a1cacf2c42854a5a64cf1fa\", \"unrestricted_parameter\": true, \"verdict\": \"PASS\"}\n",
+      "stderr": "",
+      "seconds": 1.6909205430001748,
+      "case": "live-optimized",
+      "kind": "whole-positive",
+      "record_sha256": "bf70f41f46713f05d9d75d1b83122f03a58c9d375a1cacf2c42854a5a64cf1fa"
+    },
+    {
+      "returncode": 0,
+      "stdout": "{\"bytes\": 35329, \"individual_active_roots\": 4, \"root_labels\": 9, \"sha256\": \"bf70f41f46713f05d9d75d1b83122f03a58c9d375a1cacf2c42854a5a64cf1fa\", \"unrestricted_parameter\": true, \"verdict\": \"PASS\"}\n",
+      "stderr": "",
+      "seconds": 1.2879198909995466,
+      "case": "cold-source-only-normal",
+      "kind": "whole-positive",
+      "record_sha256": "bf70f41f46713f05d9d75d1b83122f03a58c9d375a1cacf2c42854a5a64cf1fa"
+    },
+    {
+      "returncode": 0,
+      "stdout": "{\"bytes\": 35329, \"individual_active_roots\": 4, \"root_labels\": 9, \"sha256\": \"bf70f41f46713f05d9d75d1b83122f03a58c9d375a1cacf2c42854a5a64cf1fa\", \"unrestricted_parameter\": true, \"verdict\": \"PASS\"}\n",
+      "stderr": "",
+      "seconds": 1.291743253000277,
+      "case": "cold-source-only-optimized",
+      "kind": "whole-positive",
+      "record_sha256": "bf70f41f46713f05d9d75d1b83122f03a58c9d375a1cacf2c42854a5a64cf1fa"
+    },
+    {
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "REJECT: third individual active half-normal 3\n",
+      "seconds": 0.4958357999994405,
+      "case": "normal-mu",
+      "kind": "mathematical-rejection"
+    },
+    {
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "REJECT: third individual active half-normal 3\n",
+      "seconds": 0.6403204109992657,
+      "case": "normal-nu",
+      "kind": "mathematical-rejection"
+    },
+    {
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "REJECT: third individual active half-normal 3\n",
+      "seconds": 0.4902284809995763,
+      "case": "normal-sigma",
+      "kind": "mathematical-rejection"
+    },
+    {
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "REJECT: entire skew quartic jet\n",
+      "seconds": 0.28898563100028696,
+      "case": "normal-q1",
+      "kind": "mathematical-rejection"
+    },
+    {
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "REJECT: entire skew quartic jet\n",
+      "seconds": 0.3269582699995226,
+      "case": "normal-split",
+      "kind": "mathematical-rejection"
+    },
+    {
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "REJECT: exact marked anchor through eta3\n",
+      "seconds": 0.23944323900013842,
+      "case": "normal-anchor",
+      "kind": "mathematical-rejection"
+    },
+    {
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "REJECT: reversed shift fails containment\n",
+      "seconds": 0.606849271000101,
+      "case": "normal-shift",
+      "kind": "mathematical-rejection"
+    },
+    {
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "REJECT: complete first-power objective including every r power\n",
+      "seconds": 1.2129251169999407,
+      "case": "normal-cost-split",
+      "kind": "mathematical-rejection"
+    },
+    {
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "REJECT: third individual active half-normal 3\n",
+      "seconds": 0.6883700250000402,
+      "case": "optimized-mu",
+      "kind": "mathematical-rejection"
+    },
+    {
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "REJECT: third individual active half-normal 3\n",
+      "seconds": 0.8197292309996556,
+      "case": "optimized-nu",
+      "kind": "mathematical-rejection"
+    },
+    {
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "REJECT: third individual active half-normal 3\n",
+      "seconds": 0.7092889819996344,
+      "case": "optimized-sigma",
+      "kind": "mathematical-rejection"
+    },
+    {
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "REJECT: entire skew quartic jet\n",
+      "seconds": 0.3762786799998139,
+      "case": "optimized-q1",
+      "kind": "mathematical-rejection"
+    },
+    {
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "REJECT: entire skew quartic jet\n",
+      "seconds": 0.5758116420001897,
+      "case": "optimized-split",
+      "kind": "mathematical-rejection"
+    },
+    {
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "REJECT: exact marked anchor through eta3\n",
+      "seconds": 0.39462511700003233,
+      "case": "optimized-anchor",
+      "kind": "mathematical-rejection"
+    },
+    {
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "REJECT: reversed shift fails containment\n",
+      "seconds": 0.6711463920000824,
+      "case": "optimized-shift",
+      "kind": "mathematical-rejection"
+    },
+    {
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "REJECT: complete first-power objective including every r power\n",
+      "seconds": 1.183826011999372,
+      "case": "optimized-cost-split",
+      "kind": "mathematical-rejection"
+    },
+    {
+      "kind": "strict-whole-record-rejections",
+      "cases": [
+        "individual-third-root-coordinate",
+        "individual-third-normal-coordinate",
+        "seventh-normal-coordinate",
+        "boolean-integer-confusion",
+        "float-integer-confusion",
+        "missing-entire-repair-map",
+        "extra-field"
+      ]
+    },
+    {
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "REJECT: preimport source mismatch: algebra.py\n",
+      "seconds": 0.05851658300070994,
+      "kind": "preimport-source-rejection",
+      "case": "cold-algebra-byte-change"
+    }
+  ],
+  "timeouts": 0,
+  "resource_escalation": false
+}
