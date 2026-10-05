@@ -1,0 +1,93 @@
+{
+  "actual_agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "baseline_manifest_sha256": "de4aa7f31fe801d5439261772c836004ec0ba63bebe4f6ed2434d8f41a867f71",
+  "baseline": [
+    {
+      "name": "check.py",
+      "sha256": "242f2256f2b32f218c5b09c088f089bf58ea6c9591abad68b8ddb6de6745b461",
+      "bytes": 16873
+    },
+    {
+      "name": "validate.py",
+      "sha256": "7ef254405c34708f0b282e3c41d307c5bfe1e9df4a559113391716441cb3cec4",
+      "bytes": 2991
+    },
+    {
+      "name": "PROOF.md",
+      "sha256": "928cfd57bac9a98c03537652600a147ffaf4c22a70d6b718ccacf1c56f689eaa",
+      "bytes": 13323
+    },
+    {
+      "name": "REVIEW.md",
+      "sha256": "91753e161f10ed4e74757b66e0b7c40df1c992e4018d9b4a0be052ff83d37da4",
+      "bytes": 5752
+    },
+    {
+      "name": "README.md",
+      "sha256": "8c128559d7cad1ab1b7aabc5e447e63207271837109e9a4c97902b1d9b451899",
+      "bytes": 1578
+    },
+    {
+      "name": "RECORD.json",
+      "sha256": "3a5346354fdf42c11ec41e8371f0243d589a1094dbbac18cecf7256dabaf6920",
+      "bytes": 12353
+    },
+    {
+      "name": "SOURCE.json",
+      "sha256": "e0f3fc7741b78f5f24c10e179d4fb3bdcd139f8d7dbecae51c73850280ba2153",
+      "bytes": 1529
+    }
+  ],
+  "unchanged": [
+    "check.py",
+    "validate.py",
+    "PROOF.md",
+    "RECORD.json"
+  ],
+  "changes": {
+    "REVIEW.md": [
+      {
+        "before": "**Private completed mathematical verdict:** CONFIRMED",
+        "after": "**Mathematical verdict:** CONFIRMED"
+      },
+      {
+        "before": "This new assessment has not\nyet been source-published or graph-submitted.",
+        "after": "Source publication and actual graph commitment are verified separately;\nacceptance for broadcast is not commitment."
+      },
+      {
+        "before": "https://github.com/helgithorskarp/math_results/blob/58f9c6ab8b6ab58232cd275ddb4691d3430fb02f/round-two/six-downset-2/q19-sharp-star-extension/STRUCTURAL.md",
+        "after": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-downset-2/q19-sharp-star-extension/STRUCTURAL.md"
+      },
+      {
+        "before": "The mathematical evidence is complete at this scope, but source freeze,\nreader/seal controls, normal/optimized cold replay and remote delivery\ngates must precede any new graph submission. Source publication and actual\ngraph commitment are separate obligations. The original capacity review's\npending transaction must not be replaced or resubmitted.",
+        "after": "The mathematical evidence is complete at this scope. Four complete\nlocal/cold normal/optimized replays agree on the entire 12,353-byte record;\n24 live semantic damages and four distinct preimport damages were rejected.\nVALIDATION.json records the paid evidence. publish_check.py checks exact\neditorial provenance without executing closed mathematics. Source delivery\nand actual graph commitment are separate obligations. The original\ncapacity review's transaction must not be replaced or resubmitted."
+      }
+    ],
+    "README.md": [
+      {
+        "before": "Agent six-reviewer-5 / independent mathematical reviewer. This is presently\nprivate evidence, with no new source commit or graph submission. The",
+        "after": "Agent six-reviewer-5 / independent mathematical reviewer. Source publication\nand actual graph commitment are verified separately. The"
+      },
+      {
+        "before": "CPython standard library only.",
+        "after": "CPython 3.12.14 standard library only."
+      },
+      {
+        "before": "The validator checks all sealed bytes before executing the math checker.",
+        "after": "For publication integrity without repeating mathematics, run\n`python3 -B publish_check.py`. EDITORIAL.json records the exact reversible\npublication edits; the mathematical checker, validator, proof and complete\nrecord are byte-identical to the private seal.\n\nThe mathematical validator checks all primary sealed bytes before executing the checker."
+      }
+    ],
+    "SOURCE.json": [
+      {
+        "before": "  \"new_source_commit\": null,\n  \"new_graph_ref\": null,",
+        "after": "  \"delivery_status\": \"Verified source commit and actual graph commitment are reported separately\","
+      },
+      {
+        "before": "\"original_capacity_review_pending_ref\"",
+        "after": "\"original_capacity_review_broadcast_ref\""
+      }
+    ]
+  },
+  "scope": "Only publication wording, reader URL and interpreter metadata change; whole reversal must equal every private sealed source. No mathematical proof/code/data/record change."
+}
