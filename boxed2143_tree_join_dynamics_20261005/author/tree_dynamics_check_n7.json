@@ -1,0 +1,112 @@
+{
+  "status": "finite replay passed; not an asymptotic theorem",
+  "scope": {
+    "all_permutations_n": [
+      0,
+      7
+    ],
+    "all_maximum_gaps_for_every_parent": true
+  },
+  "permutations_checked": 5914,
+  "maximum_insertions_checked": 46233,
+  "stream_sha256": "88666a5d0d1cb4cd363b4b3dee0f368f02523181a99317fa6aaaa13e9526cdc3",
+  "records": [
+    {
+      "n": 0,
+      "permutations": 1,
+      "shape_states": 1,
+      "avoiders": 1,
+      "max_avoiding_shape_fiber": 1,
+      "max_heap_labeling_shape_fiber": 1,
+      "mixed_avoidance_shapes": 0
+    },
+    {
+      "n": 1,
+      "permutations": 1,
+      "shape_states": 1,
+      "avoiders": 1,
+      "max_avoiding_shape_fiber": 1,
+      "max_heap_labeling_shape_fiber": 1,
+      "mixed_avoidance_shapes": 0
+    },
+    {
+      "n": 2,
+      "permutations": 2,
+      "shape_states": 2,
+      "avoiders": 2,
+      "max_avoiding_shape_fiber": 1,
+      "max_heap_labeling_shape_fiber": 1,
+      "mixed_avoidance_shapes": 0
+    },
+    {
+      "n": 3,
+      "permutations": 6,
+      "shape_states": 5,
+      "avoiders": 6,
+      "max_avoiding_shape_fiber": 2,
+      "max_heap_labeling_shape_fiber": 2,
+      "mixed_avoidance_shapes": 0
+    },
+    {
+      "n": 4,
+      "permutations": 24,
+      "shape_states": 14,
+      "avoiders": 23,
+      "max_avoiding_shape_fiber": 3,
+      "max_heap_labeling_shape_fiber": 3,
+      "mixed_avoidance_shapes": 1
+    },
+    {
+      "n": 5,
+      "permutations": 120,
+      "shape_states": 42,
+      "avoiders": 106,
+      "max_avoiding_shape_fiber": 7,
+      "max_heap_labeling_shape_fiber": 8,
+      "mixed_avoidance_shapes": 9
+    },
+    {
+      "n": 6,
+      "permutations": 720,
+      "shape_states": 132,
+      "avoiders": 565,
+      "max_avoiding_shape_fiber": 17,
+      "max_heap_labeling_shape_fiber": 20,
+      "mixed_avoidance_shapes": 51
+    },
+    {
+      "n": 7,
+      "permutations": 5040,
+      "shape_states": 429,
+      "avoiders": 3395,
+      "max_avoiding_shape_fiber": 43,
+      "max_heap_labeling_shape_fiber": 80,
+      "mixed_avoidance_shapes": 236
+    }
+  ],
+  "same_shape_different_avoidance": {
+    "containing": [
+      2,
+      1,
+      4,
+      3
+    ],
+    "avoiding": [
+      3,
+      1,
+      4,
+      2
+    ],
+    "tree": "((.(..))(..))",
+    "occurrences": [
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  "python": "3.11.2",
+  "seconds": 1.1926052470080322
+}
