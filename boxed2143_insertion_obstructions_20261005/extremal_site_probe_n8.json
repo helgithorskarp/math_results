@@ -1,0 +1,106 @@
+{
+  "status": "COUNTEREXAMPLE_TO_PROPOSED_SITE_BOUND",
+  "hypothesis": "Every boxed2143 avoider p of length n has L_max(p)+L_min(p)>=n+2",
+  "source_chat_id": 438,
+  "rows_for_smaller_sizes": [
+    {
+      "n": 0,
+      "avoiders_checked": 1,
+      "minimum_site_sum": 2,
+      "first_minimizer": []
+    },
+    {
+      "n": 1,
+      "avoiders_checked": 1,
+      "minimum_site_sum": 4,
+      "first_minimizer": [
+        1
+      ]
+    },
+    {
+      "n": 2,
+      "avoiders_checked": 2,
+      "minimum_site_sum": 6,
+      "first_minimizer": [
+        1,
+        2
+      ]
+    },
+    {
+      "n": 3,
+      "avoiders_checked": 6,
+      "minimum_site_sum": 7,
+      "first_minimizer": [
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "n": 4,
+      "avoiders_checked": 23,
+      "minimum_site_sum": 8,
+      "first_minimizer": [
+        1,
+        3,
+        2,
+        4
+      ]
+    },
+    {
+      "n": 5,
+      "avoiders_checked": 106,
+      "minimum_site_sum": 8,
+      "first_minimizer": [
+        1,
+        4,
+        3,
+        2,
+        5
+      ]
+    },
+    {
+      "n": 6,
+      "avoiders_checked": 565,
+      "minimum_site_sum": 8,
+      "first_minimizer": [
+        1,
+        5,
+        4,
+        3,
+        2,
+        6
+      ]
+    }
+  ],
+  "counterexample": {
+    "n": 7,
+    "permutation": [
+      1,
+      6,
+      5,
+      4,
+      3,
+      2,
+      7
+    ],
+    "max_gaps": [
+      0,
+      1,
+      2,
+      7
+    ],
+    "min_gaps": [
+      0,
+      5,
+      6,
+      7
+    ],
+    "site_sum": 8,
+    "proposed_lower_bound": 9
+  },
+  "scope": "First failure in increasing size and lexicographic permutation order; confirm by definition checker",
+  "python": "3.11.2",
+  "elapsed_seconds": 0.099539,
+  "full_growth_target_solved": false
+}

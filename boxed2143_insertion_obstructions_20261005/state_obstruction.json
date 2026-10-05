@@ -1,0 +1,145 @@
+{
+  "candidate_state": "legal maximum gap set at fixed size",
+  "collision_size": 2,
+  "rows": [
+    {
+      "parent": [
+        1,
+        2
+      ],
+      "parent_legal_gaps": [
+        0,
+        1,
+        2
+      ],
+      "chosen_gap": 2,
+      "child": [
+        1,
+        2,
+        3
+      ],
+      "child_legal_gaps": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "child_avoids": true,
+      "grandchildren": [
+        {
+          "gap": 0,
+          "permutation": [
+            4,
+            1,
+            2,
+            3
+          ],
+          "occurrences": []
+        },
+        {
+          "gap": 1,
+          "permutation": [
+            1,
+            4,
+            2,
+            3
+          ],
+          "occurrences": []
+        },
+        {
+          "gap": 2,
+          "permutation": [
+            1,
+            2,
+            4,
+            3
+          ],
+          "occurrences": []
+        },
+        {
+          "gap": 3,
+          "permutation": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "occurrences": []
+        }
+      ]
+    },
+    {
+      "parent": [
+        2,
+        1
+      ],
+      "parent_legal_gaps": [
+        0,
+        1,
+        2
+      ],
+      "chosen_gap": 2,
+      "child": [
+        2,
+        1,
+        3
+      ],
+      "child_legal_gaps": [
+        0,
+        1,
+        3
+      ],
+      "child_avoids": true,
+      "grandchildren": [
+        {
+          "gap": 0,
+          "permutation": [
+            4,
+            2,
+            1,
+            3
+          ],
+          "occurrences": []
+        },
+        {
+          "gap": 1,
+          "permutation": [
+            2,
+            4,
+            1,
+            3
+          ],
+          "occurrences": []
+        },
+        {
+          "gap": 2,
+          "permutation": [
+            2,
+            1,
+            4,
+            3
+          ],
+          "occurrences": [
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "gap": 3,
+          "permutation": [
+            2,
+            1,
+            3,
+            4
+          ],
+          "occurrences": []
+        }
+      ]
+    }
+  ],
+  "full_growth_target_solved": false
+}
