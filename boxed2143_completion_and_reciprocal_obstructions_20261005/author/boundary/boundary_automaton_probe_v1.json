@@ -1,0 +1,154 @@
+{
+  "actor": "literature-researcher-3",
+  "full_target_solved": false,
+  "status": "Q refuted by exact author collision; no growth conclusion",
+  "sizes_checked": [
+    {
+      "n": 0,
+      "shapes_checked": 1,
+      "complete": true
+    },
+    {
+      "n": 1,
+      "shapes_checked": 1,
+      "complete": true
+    },
+    {
+      "n": 2,
+      "shapes_checked": 2,
+      "complete": true
+    },
+    {
+      "n": 3,
+      "shapes_checked": 5,
+      "complete": true
+    },
+    {
+      "n": 4,
+      "prefix_shapes_checked": 2,
+      "complete": false
+    }
+  ],
+  "plan_sha256": "ca88ad5b871895164bb6113bc9b8c556cc78c87e0c71a330e8ef0759c581991f",
+  "source_sha256": "dd4775c708caa63f38038391b439dccd7ec365ded1b7bfe91dd95bd7fb41e2a2",
+  "counterexample": {
+    "n": 4,
+    "ABC": [
+      5,
+      2,
+      1
+    ],
+    "first_shape": "(.(.(.(..))))",
+    "second_shape": "(.(.((..).)))",
+    "first_avoiding_representative": [
+      4,
+      3,
+      2,
+      1
+    ],
+    "second_avoiding_representative": [
+      4,
+      3,
+      1,
+      2
+    ],
+    "first_child_multiset": [
+      {
+        "ABC": [
+          3,
+          3,
+          2
+        ],
+        "multiplicity": 1
+      },
+      {
+        "ABC": [
+          4,
+          3,
+          2
+        ],
+        "multiplicity": 1
+      },
+      {
+        "ABC": [
+          5,
+          3,
+          2
+        ],
+        "multiplicity": 1
+      },
+      {
+        "ABC": [
+          6,
+          2,
+          1
+        ],
+        "multiplicity": 1
+      },
+      {
+        "ABC": [
+          6,
+          3,
+          2
+        ],
+        "multiplicity": 1
+      }
+    ],
+    "second_child_multiset": [
+      {
+        "ABC": [
+          3,
+          3,
+          2
+        ],
+        "multiplicity": 1
+      },
+      {
+        "ABC": [
+          4,
+          3,
+          2
+        ],
+        "multiplicity": 1
+      },
+      {
+        "ABC": [
+          5,
+          4,
+          2
+        ],
+        "multiplicity": 1
+      },
+      {
+        "ABC": [
+          6,
+          2,
+          1
+        ],
+        "multiplicity": 1
+      },
+      {
+        "ABC": [
+          6,
+          3,
+          2
+        ],
+        "multiplicity": 1
+      }
+    ],
+    "first_legal_gaps": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "second_legal_gaps": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+}
