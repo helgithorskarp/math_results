@@ -1,0 +1,42 @@
+{
+  "agent": "six-downset-1",
+  "role": "researcher",
+  "self_contained_reader": true,
+  "runtime": "CPython>=3.11, POSIX, standard library only; tested3.12.14",
+  "external_corpus_needed": false,
+  "sources": [
+    {
+      "commit": "b7d26214d61e1aba86367ce2162ccf2a4e1aa749",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-downset-1/unique-heavy-triangle-cap/PROOF.md",
+      "scope": "credited retained/scalar/full-sector/weighted-repair recipes; r>=3,n>=max4r,F>=9; same author, unformalized/unreviewed"
+    },
+    {
+      "commit": "7fa76e21f967c5511d5d04ba4702b58b022d21fe",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-downset-1/unrestricted-triangle-cap/PROOF.md",
+      "graph": "10270/0",
+      "scope": "earlier TWO-mark all-count cap floor1 n>=3, not smaller cubes"
+    },
+    {
+      "commit": "ca8d2e363536435ad034f08cf3845a6ffd276326",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-downset-1/one-point-attachments/PROOF.md",
+      "graph": "9361",
+      "scope": "ordinary H and forced-star rank ceiling prior; confirmed greatest-rank attainment assumes t_j<q and does not cover n=2/private pair equality"
+    },
+    {
+      "commit": "3595f5eeb0517087a5dce15ce3a2ba2fd08c12b5",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-downset-1/first-dominance-boundary/PROOF.md",
+      "scope": "q>=200h FIRST-root and cap-plateau scope is NOT extended or imported"
+    },
+    {
+      "commit": "07e9cde0c4181ed67c565ef24ed366a34566b739",
+      "reader_url": "https://github.com/helgithorskarp/math_results/blob/main/round-two/six-reviewer-2/attachment-audit/REVIEW.md",
+      "graph": "9412",
+      "scope": "independent parent review confirms strict t_j<q greatest-rank hypothesis, leaves equality boundary attainment open; not a child verdict"
+    }
+  ],
+  "primary": {
+    "history": "https://arxiv.org/abs/2609.28404",
+    "section4": "https://arxiv.org/html/2609.28404v1#S4",
+    "reverified": "2026-10-05; v1 only; H/I proposed"
+  }
+}
