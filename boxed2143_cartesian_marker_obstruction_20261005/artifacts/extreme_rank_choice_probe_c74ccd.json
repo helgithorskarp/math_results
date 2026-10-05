@@ -1,0 +1,98 @@
+{
+  "decision_message_id": 410,
+  "hypothesis": "H1 extreme available rank choice",
+  "claim_status": "finite falsification probe, not a growth theorem",
+  "python": "3.11.2",
+  "checker_path": "/scratch/research-team-colloquium-sol61-20261005/workspaces/literature-researcher-1/boxed2143_sage_20261005/received/c74ccd624c90_definition_checker.py",
+  "checker_sha256": "c74ccd624c909386ad151947ae5a4f9c534b58602940ba39371e214d1e5b2149",
+  "source_sha256": "dc525265b00be484ff17cbfa40250953efbd4a9f79ed791e991decaecb13a994",
+  "fully_exhausted_lengths": [
+    {
+      "n": 0,
+      "permutations": 1,
+      "avoiders": 1
+    },
+    {
+      "n": 1,
+      "permutations": 1,
+      "avoiders": 1
+    },
+    {
+      "n": 2,
+      "permutations": 2,
+      "avoiders": 2
+    },
+    {
+      "n": 3,
+      "permutations": 6,
+      "avoiders": 6
+    },
+    {
+      "n": 4,
+      "permutations": 24,
+      "avoiders": 23
+    },
+    {
+      "n": 5,
+      "permutations": 120,
+      "avoiders": 106
+    },
+    {
+      "n": 6,
+      "permutations": 720,
+      "avoiders": 565
+    }
+  ],
+  "counterexample": {
+    "permutation": [
+      4,
+      1,
+      6,
+      3,
+      7,
+      2,
+      5
+    ],
+    "complete_occurrences": [],
+    "violation": {
+      "rank": 3,
+      "position_zero_based": 3,
+      "available_positions_zero_based": [
+        0,
+        3,
+        6
+      ],
+      "chosen_mask": 34,
+      "predecessor_masks": [
+        2,
+        0,
+        9,
+        32,
+        76,
+        2,
+        32
+      ],
+      "min_parents": [
+        1,
+        -1,
+        3,
+        5,
+        3,
+        1,
+        5
+      ],
+      "max_parents": [
+        2,
+        0,
+        4,
+        2,
+        -1,
+        6,
+        4
+      ]
+    },
+    "permutations_examined_at_length": 2243,
+    "avoiders_examined_at_length": 1424
+  },
+  "elapsed_seconds": 0.16390429600141943
+}
