@@ -1,0 +1,74 @@
+{
+  "actual_agent": "six-sendov-2",
+  "role": "researcher",
+  "python": "3.12.14",
+  "native_threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1"
+  },
+  "serial_math_children": 1,
+  "timeout_seconds": 45,
+  "complete_record_bytes": 6041,
+  "complete_record_sha256": "e383ede30dcf8115d4a8231ae600ce006169d04a8c401764e91365426e0d5613",
+  "finite_checks": 72,
+  "maxrss_kib_cumulative_children": 21720,
+  "independent_mathematical_review": false,
+  "no_parent_executable_reexecution": true,
+  "replays": [
+    {
+      "label": "normal",
+      "exit_code": 0,
+      "elapsed_seconds": 0.0806140869972296,
+      "bytes": 6041,
+      "sha256": "e383ede30dcf8115d4a8231ae600ce006169d04a8c401764e91365426e0d5613",
+      "entire_record_equals_frozen": true
+    },
+    {
+      "label": "optimized",
+      "exit_code": 0,
+      "elapsed_seconds": 0.42423581899493,
+      "bytes": 6041,
+      "sha256": "e383ede30dcf8115d4a8231ae600ce006169d04a8c401764e91365426e0d5613",
+      "entire_record_equals_frozen": true
+    },
+    {
+      "label": "cold_source_only",
+      "exit_code": 0,
+      "elapsed_seconds": 0.07883779000258073,
+      "bytes": 6041,
+      "sha256": "e383ede30dcf8115d4a8231ae600ce006169d04a8c401764e91365426e0d5613",
+      "entire_record_equals_frozen": true
+    }
+  ],
+  "targeted_rejections": [
+    {
+      "label": "heat_majorant",
+      "exit_code": 1,
+      "elapsed_seconds": 0.25494047599931946,
+      "intended_gate": "whole odd heat discrepancy at absolute z at most two",
+      "rejected_at_intended_gate": true
+    },
+    {
+      "label": "det_floor",
+      "exit_code": 1,
+      "elapsed_seconds": 0.2520275579954614,
+      "intended_gate": "strict quantitative even Gram determinant floor",
+      "rejected_at_intended_gate": true
+    },
+    {
+      "label": "too_wide_collar",
+      "exit_code": 1,
+      "elapsed_seconds": 0.2560041479955544,
+      "intended_gate": "strict eight-root sign licence",
+      "rejected_at_intended_gate": true
+    }
+  ],
+  "commands_from_repository_root": [
+    "python3 -I -B round-two/six-sendov-2/explicit-odd-moment-collar/check.py",
+    "python3 -I -B -O round-two/six-sendov-2/explicit-odd-moment-collar/check.py"
+  ]
+}
