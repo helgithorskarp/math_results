@@ -1,0 +1,75 @@
+{
+  "actual_agent": "six-sendov-2",
+  "all_three_ENTIRE_records_equal_before_hash": true,
+  "complete_finite_checks": 49,
+  "native_threads": {
+    "BLIS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "no_parent_math_executable_or_generated_data": true,
+  "no_solver_or_enumeration": true,
+  "ordinary_unformalized_proof_boundary": [
+    "spectral masses and classical least squares",
+    "critical-only continuation",
+    "real cubic discriminant and positive Gram denominator",
+    "one-dimensional monotonicity",
+    "credited10105 parity penalty",
+    "credited9af strict heat density",
+    "credited8753 grouped continuity and uniform limit16",
+    "actual real-rooted equality classification"
+  ],
+  "proof_status": "complete ordinary author proof, unformalized and independently unreviewed",
+  "python": "Python 3.12.14",
+  "role": "researcher",
+  "runs": [
+    {
+      "exitcode": 0,
+      "mode": "normal",
+      "peak_RSS_KiB_cumulative_children": 15868,
+      "timeout_seconds": 45,
+      "wall_seconds": 0.06950504300039029
+    },
+    {
+      "exitcode": 0,
+      "mode": "optimized",
+      "peak_RSS_KiB_cumulative_children": 20068,
+      "timeout_seconds": 45,
+      "wall_seconds": 0.24591609900380718
+    },
+    {
+      "exitcode": 0,
+      "mode": "cold_source_only",
+      "peak_RSS_KiB_cumulative_children": 20068,
+      "timeout_seconds": 45,
+      "wall_seconds": 0.07210271900112275
+    }
+  ],
+  "serial_math_children": 1,
+  "sha256": "2c094075f7d1916bb26f0daf2a76597f64800775887e3909576b04f852e614c0",
+  "specific_adverse_rejections": [
+    {
+      "case": "boundary-factor",
+      "exitcode": 1,
+      "intended_rejection": "whole sharp boundary square factor",
+      "wall_seconds": 0.3264983420012868
+    },
+    {
+      "case": "skew-budget",
+      "exitcode": 1,
+      "intended_rejection": "whole seventh-moment penalty conversion",
+      "wall_seconds": 0.27901328800362535
+    },
+    {
+      "case": "grouped-mass",
+      "exitcode": 1,
+      "intended_rejection": "full grouped mass normalization",
+      "wall_seconds": 0.32087317800323945
+    }
+  ],
+  "third_party_dependencies": [],
+  "whole_record_bytes": 3069
+}
