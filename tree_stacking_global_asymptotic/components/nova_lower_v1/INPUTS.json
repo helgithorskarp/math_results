@@ -1,0 +1,143 @@
+{
+  "author": "Nova",
+  "agent_id": "studio-researcher-3",
+  "role": "researcher",
+  "task": 17,
+  "agreed_statement": {
+    "message": 242,
+    "sha256": "6101e1eccfce6ae0ce5faf23b1e7740613244567de982610c83c174e6998f647"
+  },
+  "primary": {
+    "url": "https://arxiv.org/html/2609.31811v1",
+    "author": "J. Fairfax-Ball",
+    "title": "The stacking number of a tree",
+    "version": "arXiv:2609.31811v1",
+    "read_on": "2026-10-05",
+    "imported_interfaces": [
+      "Section2 k>=2/nonempty singleton stack/exact-mass definitions",
+      "estimator identity(4), full-tree degrees and ambient distances",
+      "Theorem1.1 tree stacking formula for |V(T)|>=2",
+      "Theorem3.3 exact branch-score stackability criterion",
+      "Theorem4.1 canonical configuration has all scores zero"
+    ],
+    "trust_boundary": "ordinary published theorem inputs; no independent reproof or formal verification claimed"
+  },
+  "inherited": {
+    "producer_commit": "1c8b93869f785981f0f5b73a6a7253cd1a923a97",
+    "classification_commit": "d4c0ebbc94ca2855f4fdc547549eed41d63d704c",
+    "published_file_receipts": [
+      {
+        "name": "README.md",
+        "url": "https://raw.githubusercontent.com/helgithorskarp/math_results/1c8b93869f785981f0f5b73a6a7253cd1a923a97/tree_stacking_branched_broom_all_orders/README.md",
+        "bytes": 8362,
+        "sha256": "84d9fc9f2b5f80f544d0f4d5559a1ca259b9e77daba4524388e6567cf5071aa3",
+        "matches_graph_review_hash": null
+      },
+      {
+        "name": "verify_finite.py",
+        "url": "https://raw.githubusercontent.com/helgithorskarp/math_results/1c8b93869f785981f0f5b73a6a7253cd1a923a97/tree_stacking_branched_broom_all_orders/verify_finite.py",
+        "bytes": 3784,
+        "sha256": "5a0519f4aa767f4b15e8388356e4ae7429b31e6a4b0c8b58f0a67b068a86144b",
+        "matches_graph_review_hash": true
+      },
+      {
+        "name": "verify_direct.py",
+        "url": "https://raw.githubusercontent.com/helgithorskarp/math_results/1c8b93869f785981f0f5b73a6a7253cd1a923a97/tree_stacking_branched_broom_all_orders/verify_direct.py",
+        "bytes": 4504,
+        "sha256": "0ae3727c332a9218ad84b57b556df3a4a006d9d42ca2ac3f34c8287639392312",
+        "matches_graph_review_hash": true
+      },
+      {
+        "name": "verify_analytic.py",
+        "url": "https://raw.githubusercontent.com/helgithorskarp/math_results/1c8b93869f785981f0f5b73a6a7253cd1a923a97/tree_stacking_branched_broom_all_orders/verify_analytic.py",
+        "bytes": 1866,
+        "sha256": "1990a833114b63beef899ab0500eb8f476293f9936abf8ff4b3334523a40ee8d",
+        "matches_graph_review_hash": true
+      },
+      {
+        "name": "expected_summary.json",
+        "url": "https://raw.githubusercontent.com/helgithorskarp/math_results/1c8b93869f785981f0f5b73a6a7253cd1a923a97/tree_stacking_branched_broom_all_orders/expected_summary.json",
+        "bytes": 444,
+        "sha256": "028e9d9517eb134a7440a3403108af9f2354445ec48627b7ca9fea2f96b5be19",
+        "matches_graph_review_hash": true
+      },
+      {
+        "name": "../sibling_classification_d4c0ebbc_README.md",
+        "url": "https://raw.githubusercontent.com/helgithorskarp/math_results/d4c0ebbc94ca2855f4fdc547549eed41d63d704c/tree_stacking_extremal_classification/README.md",
+        "bytes": 11444,
+        "sha256": "725400c0263838bb584fca6a2951ff8fd75a31619bb1394201e08940144fcbf8",
+        "matches_graph_review_hash": true
+      }
+    ],
+    "graph_bodies": [
+      {
+        "artifact": "bafkreieh4a2tbwembs6afot6edtztvemkmwtgtvuuf6qlydjp5cey7fl4e",
+        "body_sha256": "e0a7b5a34cdf6dfb32836e4b2a63339a18b33820c84c2e3feb7f296f7aa53c43",
+        "cached_read_height": 10339
+      },
+      {
+        "artifact": "bafkreignyano56e7pvwihgprbljwwnsv2z4lcwc7f3ryvqfjcvhsh5vy5y",
+        "body_sha256": "1b3b87e4e407cc993e972dee2d3309abcb54b417e7294e0b3c32bf4a5698f825",
+        "cached_read_height": 10339
+      },
+      {
+        "artifact": "bafkreigrlfot45gncrzuggfqitcuxbwmxdwto2kav4srp47b6zbmslfl5u",
+        "body_sha256": "e1fe40ca80825342bc6c8dd7880c0974f26c050e88e3505e5d4529d24f0e84cc",
+        "cached_read_height": 10339
+      },
+      {
+        "artifact": "bafkreih76pzukitjoutfawrvr5hpldol2uwl2bov6qfr5noiy2cnlpazem",
+        "body_sha256": "ec10938ecce4b2777c343f1bdee998a06a5f5d27a507460a69d70cc3988cff80",
+        "cached_read_height": 10339
+      }
+    ],
+    "use": "R-family/order parameters and sufficient redistribution construction; restricted result and count mechanism remain prior art",
+    "excluded_inputs": [
+      "converse classification/exhaustiveness",
+      "554 symmetric-broom comparisons",
+      "onset/census",
+      "restricted optimizer"
+    ]
+  },
+  "bound": {
+    "n0": 37,
+    "C_minus": "5/4",
+    "statement": "log2 M(n) >= log2 N(T_n) > (5/36)n^2-(5/4)n",
+    "kind": "ordinary proof with exact primary input boundary"
+  },
+  "reproduction": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 check_lower.py > RESULT.rerun.json",
+    "python_minimum": "3.11",
+    "dependencies": "standard library only",
+    "deterministic_record_sha256": "67c620281ebb8fe9deb170fb7bba5d30ce5ea1fb651b1244e3806aace47731a1",
+    "author_run_runtime": {
+      "arithmetic": "integer/Fraction, no numerical logarithms",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 check_lower.py",
+      "cpu_seconds": 2.950761955,
+      "implementation": "CPython",
+      "native_threads": 1,
+      "peak_rss_KiB_linux": 16152,
+      "processes": 1,
+      "python": "3.12.14"
+    },
+    "control_scope": "90 literal all-residue witness trees plus6 boundary/eligibility controls; not infinite computation, raw move reachability or another researcher check"
+  },
+  "review": {
+    "designated_checker": "Rowan / studio-researcher-4",
+    "status": "frozen author handoff; acceptance pending",
+    "required_scope": [
+      "literal tree/parameters/all n>=37/order residues",
+      "full degree potentials/global leaf maximum/strict parent eligibility",
+      "sufficient critical configurations/injectivity/count/primary theorem interface",
+      "binomial lower/polynomial identity/explicit C_minus and range",
+      "exact source and bounded control trust scopes"
+    ]
+  },
+  "publication_metadata": {
+    "kind": "provenance_metadata_derivative_only",
+    "original_checked_INPUTS_sha256": "bc52c70df893dca7134fa602e3b4d7ee86d7c52b4e061986dd7d523a8d5e2483",
+    "omitted_fields": "Only cache and extracted_path local file locators in inherited.graph_bodies. All theorem scopes, artifact IDs, body hashes, source URLs/hashes, arithmetic and reproducibility metadata are unchanged.",
+    "original_pending_labels": "Historical frozen handoff labels; current scoped acceptance is recorded in ACCEPTED_SCOPE.md and Rowan internal report.",
+    "accepted_review_sha256": "2ebf638b27df6d5f14e95727fdd34c7a9c2fb6ccc9bde179b3ed5bbeaa26a1c8"
+  }
+}
