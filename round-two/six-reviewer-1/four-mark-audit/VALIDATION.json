@@ -1,0 +1,273 @@
+{
+  "agent": "six-reviewer-1",
+  "role": "independent mathematical reviewer",
+  "target_height": 10316,
+  "scope": "completed computational validation of independently audited ordinary theorem; universal proof remains unformalized",
+  "positive_replays": [
+    {
+      "label": "local-normal",
+      "reported_seconds_rounded_milliseconds": 11.618,
+      "conservative_seconds_upper_bound": 11.619,
+      "bytes": 183039,
+      "sha256": "903f734235fc53fbfd4ac6b5a2247f5e9c29ffc145693e00f56ee5e4a417e204"
+    },
+    {
+      "label": "local-O",
+      "reported_seconds_rounded_milliseconds": 11.949,
+      "conservative_seconds_upper_bound": 11.95,
+      "bytes": 183039,
+      "sha256": "903f734235fc53fbfd4ac6b5a2247f5e9c29ffc145693e00f56ee5e4a417e204"
+    },
+    {
+      "label": "cold-normal",
+      "reported_seconds_rounded_milliseconds": 11.208,
+      "conservative_seconds_upper_bound": 11.209,
+      "bytes": 183039,
+      "sha256": "903f734235fc53fbfd4ac6b5a2247f5e9c29ffc145693e00f56ee5e4a417e204"
+    },
+    {
+      "label": "cold-O",
+      "reported_seconds_rounded_milliseconds": 12.517,
+      "conservative_seconds_upper_bound": 12.518,
+      "bytes": 183039,
+      "sha256": "903f734235fc53fbfd4ac6b5a2247f5e9c29ffc145693e00f56ee5e4a417e204"
+    }
+  ],
+  "whole_records_equal_before_hashing": true,
+  "unchanged_paid_work_mathematics": true,
+  "semantic_rejections": [
+    {
+      "fixture": "denominator-zero",
+      "gate": "polynomial denominator",
+      "rejected": true,
+      "mode": "normal",
+      "seconds": 0.09797485500166658
+    },
+    {
+      "fixture": "duplicate-exponent",
+      "gate": "all coefficient exponents",
+      "rejected": true,
+      "mode": "normal",
+      "seconds": 0.09035956399748102
+    },
+    {
+      "fixture": "domain-wrong",
+      "gate": "whole four-mark data domain and attribution",
+      "rejected": true,
+      "mode": "normal",
+      "seconds": 0.09625087099993834
+    },
+    {
+      "fixture": "ordered-coverage",
+      "gate": "entire ordered Schur coverage",
+      "rejected": true,
+      "mode": "normal",
+      "seconds": 0.12573684599919943
+    },
+    {
+      "fixture": "pivot-link",
+      "gate": "whole pivot working links",
+      "rejected": true,
+      "mode": "normal",
+      "seconds": 0.1784538159990916
+    },
+    {
+      "fixture": "old-row-drop",
+      "gate": "complete coefficient identity failed",
+      "rejected": true,
+      "mode": "normal",
+      "seconds": 0.12174723100179108
+    },
+    {
+      "fixture": "Schur-sign",
+      "gate": "complete coefficient identity failed",
+      "rejected": true,
+      "mode": "normal",
+      "seconds": 1.3010626589966705
+    },
+    {
+      "fixture": "empty-row",
+      "gate": "actual empty negative-row-sum Gram",
+      "rejected": true,
+      "mode": "normal",
+      "seconds": 1.3958211119970656
+    },
+    {
+      "fixture": "light-mean-omitted",
+      "gate": "all original physical five-block metric entries",
+      "rejected": true,
+      "mode": "normal",
+      "seconds": 1.3545924510035547
+    },
+    {
+      "fixture": "light-dual",
+      "gate": "every original dual score and actual empty",
+      "rejected": true,
+      "mode": "normal",
+      "seconds": 2.4768770650043734
+    },
+    {
+      "fixture": "star-census",
+      "gate": "all original star sizes",
+      "rejected": true,
+      "mode": "normal",
+      "seconds": 0.1050916669992148
+    },
+    {
+      "fixture": "deleted-inverse-row",
+      "gate": "every original inverse equation including deleted rows",
+      "rejected": true,
+      "mode": "normal",
+      "seconds": 2.773000034998404
+    },
+    {
+      "fixture": "outside-empty-lift",
+      "gate": "complete original centered outside-line witness",
+      "rejected": true,
+      "mode": "normal",
+      "seconds": 3.058141635003267
+    },
+    {
+      "fixture": "prototype-count",
+      "gate": "whole generic prototype coefficient identity",
+      "rejected": true,
+      "mode": "normal",
+      "seconds": 0.08975141999690095
+    },
+    {
+      "fixture": "denominator-zero",
+      "gate": "polynomial denominator",
+      "rejected": true,
+      "mode": "O",
+      "seconds": 0.2972871890015085
+    },
+    {
+      "fixture": "duplicate-exponent",
+      "gate": "all coefficient exponents",
+      "rejected": true,
+      "mode": "O",
+      "seconds": 0.30695012099749874
+    },
+    {
+      "fixture": "domain-wrong",
+      "gate": "whole four-mark data domain and attribution",
+      "rejected": true,
+      "mode": "O",
+      "seconds": 0.290930526003649
+    },
+    {
+      "fixture": "ordered-coverage",
+      "gate": "entire ordered Schur coverage",
+      "rejected": true,
+      "mode": "O",
+      "seconds": 0.3407349550034269
+    },
+    {
+      "fixture": "pivot-link",
+      "gate": "whole pivot working links",
+      "rejected": true,
+      "mode": "O",
+      "seconds": 0.3771811879996676
+    },
+    {
+      "fixture": "old-row-drop",
+      "gate": "complete coefficient identity failed",
+      "rejected": true,
+      "mode": "O",
+      "seconds": 0.3220329180039698
+    },
+    {
+      "fixture": "Schur-sign",
+      "gate": "complete coefficient identity failed",
+      "rejected": true,
+      "mode": "O",
+      "seconds": 1.3107454959972529
+    },
+    {
+      "fixture": "empty-row",
+      "gate": "actual empty negative-row-sum Gram",
+      "rejected": true,
+      "mode": "O",
+      "seconds": 1.6041934090026189
+    },
+    {
+      "fixture": "light-mean-omitted",
+      "gate": "all original physical five-block metric entries",
+      "rejected": true,
+      "mode": "O",
+      "seconds": 1.565040854999097
+    },
+    {
+      "fixture": "light-dual",
+      "gate": "every original dual score and actual empty",
+      "rejected": true,
+      "mode": "O",
+      "seconds": 2.6910903500029235
+    },
+    {
+      "fixture": "star-census",
+      "gate": "all original star sizes",
+      "rejected": true,
+      "mode": "O",
+      "seconds": 0.3107796869953745
+    },
+    {
+      "fixture": "deleted-inverse-row",
+      "gate": "every original inverse equation including deleted rows",
+      "rejected": true,
+      "mode": "O",
+      "seconds": 3.263769015997241
+    },
+    {
+      "fixture": "outside-empty-lift",
+      "gate": "complete original centered outside-line witness",
+      "rejected": true,
+      "mode": "O",
+      "seconds": 3.077811367002141
+    },
+    {
+      "fixture": "prototype-count",
+      "gate": "whole generic prototype coefficient identity",
+      "rejected": true,
+      "mode": "O",
+      "seconds": 0.4393673550002859
+    }
+  ],
+  "source_before_import_rejections": [
+    {
+      "file": "polynomials.py",
+      "mode": "normal",
+      "seconds": 0.06726224900194211,
+      "rejected_before_mathematics": true
+    },
+    {
+      "file": "polynomials.py",
+      "mode": "O",
+      "seconds": 0.2383720979996724,
+      "rejected_before_mathematics": true
+    },
+    {
+      "file": "verify.py",
+      "mode": "normal",
+      "seconds": 0.05639157400582917,
+      "rejected_before_mathematics": true
+    },
+    {
+      "file": "verify.py",
+      "mode": "O",
+      "seconds": 0.22428126000158954,
+      "rejected_before_mathematics": true
+    }
+  ],
+  "max_measured_child_seconds_upper_bound": 12.518,
+  "fixed_child_seconds": 45,
+  "fixed_encoding_guard_bytes": 4194304,
+  "native_threads": 1,
+  "simultaneous_intensive_children": 1,
+  "any_resource_limit_hit": false,
+  "runtime": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+  "fixture_gate_correction": "light-mean omission is rejected at the newly added complete metric binding, before the former frame binding; exact negative harness label corrected, ordinary proof and all positive evidence unchanged",
+  "source_bridge": "four complete raw records preserved; all primary hashes unchanged except the exactly identified negative-harness string; all 28 designated rejections and 4 pre-import source faults paid after correction",
+  "conservative_negative_and_source_child_peak_RSS_KiB": 32768,
+  "resource_observation_scope": "The RSS observation covers the successful completed negative/source children in the resumed harness. The four earlier positive raw records and rounded wall times are preserved; their RSS measurements were not retained after the expected-gate mismatch. Existing 1CPU/2GiB limits and fixed45s guards applied throughout."
+}
