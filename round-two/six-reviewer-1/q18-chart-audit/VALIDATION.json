@@ -1,0 +1,179 @@
+{
+  "agent": "six-reviewer-1",
+  "canonical_bytes": 1580,
+  "canonical_sha256": "a3b700f93f5c55e7e0193d1fb2af237809650e41a7549de7f9d8b495ebd6fa89",
+  "fixed_child_timeout_seconds": 45,
+  "maximum_child_RSS_KiB": 41156,
+  "one_serial_child": true,
+  "ordinary_infinite_bridges_unformalized": true,
+  "positives": [
+    {
+      "cold_copy": false,
+      "damage": null,
+      "designated_math_rejection": false,
+      "exit_code": 0,
+      "optimized": false,
+      "seconds": 2.5151670230043237
+    },
+    {
+      "cold_copy": false,
+      "damage": null,
+      "designated_math_rejection": false,
+      "exit_code": 0,
+      "optimized": true,
+      "seconds": 2.9014713409997057
+    },
+    {
+      "cold_copy": true,
+      "damage": null,
+      "designated_math_rejection": false,
+      "exit_code": 0,
+      "optimized": false,
+      "seconds": 2.75575432000187
+    },
+    {
+      "cold_copy": true,
+      "damage": null,
+      "designated_math_rejection": false,
+      "exit_code": 0,
+      "optimized": true,
+      "seconds": 3.7621824689995265
+    }
+  ],
+  "python": "3.12.14 (main, Sep  1 2026, 14:16:52) [Clang 22.1.3 ]",
+  "role": "independent mathematical reviewer",
+  "semantic_controls": [
+    {
+      "damage": "inverse",
+      "designated_math_rejection": true,
+      "exit_code": 1,
+      "optimized": false,
+      "seconds": 0.0994789589967695
+    },
+    {
+      "damage": "inverse",
+      "designated_math_rejection": true,
+      "exit_code": 1,
+      "optimized": true,
+      "seconds": 0.23883591800404247
+    },
+    {
+      "damage": "bad_degree",
+      "designated_math_rejection": true,
+      "exit_code": 1,
+      "optimized": false,
+      "seconds": 0.28060685899981763
+    },
+    {
+      "damage": "bad_degree",
+      "designated_math_rejection": true,
+      "exit_code": 1,
+      "optimized": true,
+      "seconds": 0.6512329399993178
+    },
+    {
+      "damage": "good_mass",
+      "designated_math_rejection": true,
+      "exit_code": 1,
+      "optimized": false,
+      "seconds": 0.5574083590036025
+    },
+    {
+      "damage": "good_mass",
+      "designated_math_rejection": true,
+      "exit_code": 1,
+      "optimized": true,
+      "seconds": 1.0876785919972463
+    },
+    {
+      "damage": "anchor",
+      "designated_math_rejection": true,
+      "exit_code": 1,
+      "optimized": false,
+      "seconds": 2.7157888850051677
+    },
+    {
+      "damage": "anchor",
+      "designated_math_rejection": true,
+      "exit_code": 1,
+      "optimized": true,
+      "seconds": 3.3752261199988425
+    },
+    {
+      "damage": "missing_column",
+      "designated_math_rejection": true,
+      "exit_code": 1,
+      "optimized": false,
+      "seconds": 3.0062106830009725
+    },
+    {
+      "damage": "missing_column",
+      "designated_math_rejection": true,
+      "exit_code": 1,
+      "optimized": true,
+      "seconds": 3.0372987640002975
+    },
+    {
+      "damage": "empty_lift",
+      "designated_math_rejection": true,
+      "exit_code": 1,
+      "optimized": false,
+      "seconds": 0.3802392560028238
+    },
+    {
+      "damage": "empty_lift",
+      "designated_math_rejection": true,
+      "exit_code": 1,
+      "optimized": true,
+      "seconds": 0.42531166700064205
+    }
+  ],
+  "six_native_threads_one": true,
+  "whole_math_record": {
+    "NN_maximum": 7884,
+    "actual_envelope_positions": 21208,
+    "actual_maximum": 10280,
+    "agent": "six-reviewer-1",
+    "all_full_inverse_product_positions": 13122,
+    "all_original_columns_and_lifts_sha256": "875d1829f3eb0e36dfdc9bee11a944a675e991e83fe7023ebcd5fcf25a5c2899",
+    "complete_actual_envelope_sha256": "d2f03c1ca1772f3eb1fbd84d4505039b3f5fc15c3067499d519c1c5f0cb9aaca",
+    "complete_proper_envelope_sha256": "4e2875821f7e5b0bf6073e070e9f2ba31c828f1c3a3162262b496c741fd8b470",
+    "counts": {
+      "actual_positions": 101458,
+      "bad": 2547,
+      "good": 7884,
+      "proper_positions": 49830,
+      "star": 10280
+    },
+    "inverse_entry_counts": {
+      "-1": 145,
+      "-2": 14,
+      "0": 6226,
+      "1": 98,
+      "2": 78
+    },
+    "inverse_sha256": "d1bb27be22411b49b7e41710fefa5a802ae70b0feb6b8e255a77eb7c13cc1789",
+    "maximum_bad_absolute_edge_sum": "8",
+    "maximum_bad_terms": 8,
+    "no_author_executable_or_data_input": true,
+    "ordinary_bridges_unformalized": true,
+    "original_rho": "1/18889465931478580854784",
+    "proper_absolute_edge_sums": {
+      "all": "49850",
+      "bad": "13522",
+      "good": "15768",
+      "star": "20560"
+    },
+    "proper_envelope_positions": 21012,
+    "refined_NN_sign_margin": "599/2694840320",
+    "refined_actual_gap": "932597/21558722560",
+    "refined_proper_floor": "10258567/1077936128",
+    "refined_rho": "1/10779361280",
+    "refined_unforced_M_surplus": "1/28835840",
+    "retained_premises": [
+      "10308 original center/equality geometry",
+      "10324 enlarged center/equality geometry for refinement only"
+    ],
+    "role": "independent mathematical reviewer"
+  }
+}
