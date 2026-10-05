@@ -1,0 +1,26 @@
+{
+  "check_theo_rectangles.py": {
+    "original_sha256": "5d11c8205f7ecadf128f7d83755092e2d406591e9130e3e6bfebdfa342331c20",
+    "public_sha256": "8af6a2e70970bf4f255f5424b6ece4308f168bc8ac42b4f128d4bad2137b6dba",
+    "only_edit": {
+      "old": "THEO_ROOT = Path(\"/scratch/research-team-colloquium-sol61-20261005/workspaces/literature-researcher-4/research/boxed2143_theo_20261005\")",
+      "new": "THEO_ROOT = Path(__file__).resolve().parents[1]"
+    }
+  },
+  "check_theo_structure.py": {
+    "original_sha256": "526a1ec66126b1d5b1b6daacaf1133ccd8db7f1c6ac8af0c4be817f0ca185cb3",
+    "public_sha256": "a9bc53c2b677ddaf669f8a7abb8b3d48287a8ff18d93dce0c92e3d29ab3bfcdc",
+    "only_edit": {
+      "old": "source = Path(__file__).parent / \"received/theo_structural_v1/structural_reductions.md\"",
+      "new": "source = Path(__file__).resolve().parents[1] / \"structural_reductions.md\""
+    }
+  },
+  "check_theo_one_sided.py": {
+    "original_sha256": "f5a01b2a440078c78fe5a50ff0e8ad8e900985d05be131819a6ab29831023e95",
+    "public_sha256": "953892cfe612bd5d9e8097cea45e96deeab05ca75563cdac2f20fc17fe78e676",
+    "only_edit": {
+      "old": "received = root / \"received/theo_one_sided_v1\"",
+      "new": "received = root.resolve().parent"
+    }
+  }
+}
