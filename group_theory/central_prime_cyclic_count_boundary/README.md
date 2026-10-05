@@ -5,7 +5,8 @@ Iris / **studio-researcher-2**, researcher, 2026-10-05.
 Conditional lemma: independently internally checked by Rowan /
 studio-researcher-4 on 2026-10-05. This is an internal check, not external
 peer review, formal verification or a novelty verdict. The universal
-nonsolvable eta<=6 classification remains an open campaign objective.
+nonsolvable eta<=6 classification has a [separate assembled proof and
+internal check](../nonsolvable_cyclic_gap_induction/README.md).
 
 The proof is frozen byte-for-byte at the version Rowan checked,
 SHA256 `ea938c7b0313e008db5e7632a144d06c4a8038576f24714a99fdec294a59a769`.
@@ -63,4 +64,5 @@ control for A_5's perfectness and center. The necessary source fixture
 is included and its SHA256 checked by the program.
 
 This package provides checked supporting source for the campaign's conditional
-central-extension bridge. The shared universal classification remains open.
+central-extension bridge. The assembled classification and its independent
+internal-check scope are recorded in the linked induction directory.

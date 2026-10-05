@@ -1,0 +1,1079 @@
+{
+  "catalogue_comparison": {
+    "input_sha256": "623df2a1334f0ba1f6f57a0358447f6230a6e11241b940dc75a5d53d32b59f6f",
+    "matched_rows_and_prime_supports": 53,
+    "status": "INDEPENDENT_CATALOGUE_METADATA_MATCH"
+  },
+  "claim_status": "independent finite bounds; catalogue completeness imported separately",
+  "excluded_simple_rows": 52,
+  "family_cutoff_initial_lower_bounds": {
+    "3D4 q2": 211341312,
+    "A10": 1814400,
+    "E6 and 2E6 q2 power": 22906492245,
+    "E7 q2 power": 4611686018427387904,
+    "E8 q2 power": 1329227995784915872903807060280344576,
+    "F4 q2 power": 16777216,
+    "G2 q3": 4245696,
+    "PSL n5 q2": 1999872,
+    "PSL2 q114": 740715,
+    "PSL3 q7": 1876896,
+    "PSL4 q3": 3032640,
+    "PSU n5 q2": 2737152,
+    "PSU3 q7": 1887872,
+    "PSU4 q3": 3265920,
+    "Ree q27": 10073444472,
+    "Sp rank2 q4": 979200,
+    "Sp rank2 q5": 4680000,
+    "Sp rank3 q2": 725760,
+    "Sz q32": 32537600,
+    "Tits": 17971200,
+    "even orth rank4 q2": 43545600,
+    "large 2F4 q8 power": 68719476736,
+    "next sporadic M23": 10200960
+  },
+  "gamma_times_six_fourth": "3623878656/5005",
+  "independent_comparison": {
+    "input_sha256": "2bd8c15067ae70e5aae74740eb7028a724386c3c0306081abff528c9f2241726",
+    "matched_complete_order_histograms": 16,
+    "matched_cyclic_counts": 16,
+    "status": "INDEPENDENT_COUNTS_MATCH"
+  },
+  "literal_controls": {
+    "A5": {
+      "cyclic_count": 32,
+      "element_order_histogram": {
+        "1": 1,
+        "2": 15,
+        "3": 20,
+        "5": 24
+      },
+      "order": 60
+    },
+    "A6": {
+      "cyclic_count": 167,
+      "element_order_histogram": {
+        "1": 1,
+        "2": 45,
+        "3": 80,
+        "4": 90,
+        "5": 144
+      },
+      "order": 360
+    },
+    "A7": {
+      "cyclic_count": 947,
+      "element_order_histogram": {
+        "1": 1,
+        "2": 105,
+        "3": 350,
+        "4": 630,
+        "5": 504,
+        "6": 210,
+        "7": 720
+      },
+      "order": 2520
+    },
+    "M11": {
+      "cyclic_count": 2576,
+      "element_order_histogram": {
+        "1": 1,
+        "2": 165,
+        "3": 440,
+        "4": 990,
+        "5": 1584,
+        "6": 1320,
+        "8": 1980,
+        "11": 1440
+      },
+      "order": 7920
+    },
+    "S5": {
+      "cyclic_count": 67,
+      "element_order_histogram": {
+        "1": 1,
+        "2": 25,
+        "3": 20,
+        "4": 30,
+        "5": 24,
+        "6": 20
+      },
+      "order": 120
+    }
+  },
+  "methods": {
+    "Lucchini square-root bound": 37,
+    "literal permutation cyclic-subgroup count": 3,
+    "literal permutation exception": 1,
+    "three torus classes plus identity": 1,
+    "two torus classes plus identity": 11
+  },
+  "proper_A5_overgroup": {
+    "count": 67,
+    "name": "S5",
+    "outcome": "excluded",
+    "target": 48
+  },
+  "quotient_order_limit": 724052,
+  "rows": [
+    {
+      "aut_primes": [
+        2,
+        3,
+        5
+      ],
+      "cyclic_lower_bound": 32,
+      "method": "literal permutation exception",
+      "name": "A5",
+      "order": 60,
+      "outcome": "allowed simple base",
+      "outer_order": 2,
+      "target": 48
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        7
+      ],
+      "cyclic_lower_bound": 50,
+      "method": "two torus classes plus identity",
+      "name": "PSL(2,7)",
+      "order": 168,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "partition_exact_count": 79,
+      "partition_order_histogram": {
+        "1": 1,
+        "2": 21,
+        "3": 56,
+        "4": 42,
+        "7": 48
+      },
+      "q": 7,
+      "target": 48
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5
+      ],
+      "cyclic_lower_bound": 167,
+      "method": "literal permutation cyclic-subgroup count",
+      "name": "A6",
+      "order": 360,
+      "outcome": "excluded",
+      "outer_order": 4,
+      "target": 48
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        7
+      ],
+      "cyclic_lower_bound": 65,
+      "method": "two torus classes plus identity",
+      "name": "PSL(2,8)",
+      "order": 504,
+      "outcome": "excluded",
+      "outer_order": 3,
+      "partition_exact_count": 156,
+      "partition_order_histogram": {
+        "1": 1,
+        "2": 63,
+        "3": 56,
+        "7": 216,
+        "9": 168
+      },
+      "q": 8,
+      "target": 48
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        11
+      ],
+      "cyclic_lower_bound": 122,
+      "method": "two torus classes plus identity",
+      "name": "PSL(2,11)",
+      "order": 660,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "partition_exact_count": 244,
+      "partition_order_histogram": {
+        "1": 1,
+        "2": 55,
+        "3": 110,
+        "5": 264,
+        "6": 110,
+        "11": 120
+      },
+      "q": 11,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        7,
+        13
+      ],
+      "cyclic_lower_bound": 170,
+      "method": "two torus classes plus identity",
+      "name": "PSL(2,13)",
+      "order": 1092,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "partition_exact_count": 366,
+      "partition_order_histogram": {
+        "1": 1,
+        "2": 91,
+        "3": 182,
+        "6": 182,
+        "7": 468,
+        "13": 168
+      },
+      "q": 13,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        17
+      ],
+      "cyclic_lower_bound": 50,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,17)",
+      "order": 2448,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 17,
+      "target": 48
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "cyclic_lower_bound": 947,
+      "method": "literal permutation cyclic-subgroup count",
+      "name": "A7",
+      "order": 2520,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        19
+      ],
+      "cyclic_lower_bound": 362,
+      "method": "two torus classes plus identity",
+      "name": "PSL(2,19)",
+      "order": 3420,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "partition_exact_count": 914,
+      "partition_order_histogram": {
+        "1": 1,
+        "2": 171,
+        "3": 380,
+        "5": 684,
+        "9": 1140,
+        "10": 684,
+        "19": 360
+      },
+      "q": 19,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        17
+      ],
+      "cyclic_lower_bound": 257,
+      "method": "two torus classes plus identity",
+      "name": "PSL(2,16)",
+      "order": 4080,
+      "outcome": "excluded",
+      "outer_order": 4,
+      "partition_exact_count": 784,
+      "partition_order_histogram": {
+        "1": 1,
+        "2": 255,
+        "3": 272,
+        "5": 544,
+        "15": 1088,
+        "17": 1920
+      },
+      "q": 16,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        13
+      ],
+      "cyclic_lower_bound": 75,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(3,3)",
+      "order": 5616,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "target": 48
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        7
+      ],
+      "cyclic_lower_bound": 78,
+      "method": "Lucchini square-root bound",
+      "name": "PSU(3,3)",
+      "order": 6048,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "target": 48
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        11,
+        23
+      ],
+      "cyclic_lower_bound": 530,
+      "method": "two torus classes plus identity",
+      "name": "PSL(2,23)",
+      "order": 6072,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "partition_exact_count": 1566,
+      "partition_order_histogram": {
+        "1": 1,
+        "2": 253,
+        "3": 506,
+        "4": 506,
+        "6": 506,
+        "11": 2760,
+        "12": 1012,
+        "23": 528
+      },
+      "q": 23,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        13
+      ],
+      "cyclic_lower_bound": 626,
+      "method": "two torus classes plus identity",
+      "name": "PSL(2,25)",
+      "order": 7800,
+      "outcome": "excluded",
+      "outer_order": 4,
+      "partition_exact_count": 2082,
+      "partition_order_histogram": {
+        "1": 1,
+        "2": 325,
+        "3": 650,
+        "4": 650,
+        "5": 624,
+        "6": 650,
+        "12": 1300,
+        "13": 3600
+      },
+      "q": 25,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        11
+      ],
+      "cyclic_lower_bound": 2576,
+      "method": "literal permutation cyclic-subgroup count",
+      "name": "M11",
+      "order": 7920,
+      "outcome": "excluded",
+      "outer_order": 1,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        7,
+        13
+      ],
+      "cyclic_lower_bound": 100,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,27)",
+      "order": 9828,
+      "outcome": "excluded",
+      "outer_order": 6,
+      "q": 27,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        7,
+        29
+      ],
+      "cyclic_lower_bound": 842,
+      "method": "two torus classes plus identity",
+      "name": "PSL(2,29)",
+      "order": 12180,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "partition_exact_count": 2554,
+      "partition_order_histogram": {
+        "1": 1,
+        "2": 435,
+        "3": 812,
+        "5": 1624,
+        "7": 2610,
+        "14": 2610,
+        "15": 3248,
+        "29": 840
+      },
+      "q": 29,
+      "target": 192
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        31
+      ],
+      "cyclic_lower_bound": 122,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,31)",
+      "order": 14880,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 31,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "cyclic_lower_bound": 142,
+      "method": "Lucchini square-root bound",
+      "name": "A8",
+      "order": 20160,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "cyclic_lower_bound": 142,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(3,4)",
+      "order": 20160,
+      "outcome": "excluded",
+      "outer_order": 12,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        19,
+        37
+      ],
+      "cyclic_lower_bound": 160,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,37)",
+      "order": 25308,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 37,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5
+      ],
+      "cyclic_lower_bound": 161,
+      "method": "Lucchini square-root bound",
+      "name": "PSp(4,3)",
+      "order": 25920,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "target": 48
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        7,
+        13
+      ],
+      "cyclic_lower_bound": 4097,
+      "method": "three torus classes plus identity",
+      "name": "Sz(8)",
+      "order": 29120,
+      "outcome": "excluded",
+      "outer_order": 3,
+      "partition_exact_count": 6372,
+      "partition_order_histogram": {
+        "1": 1,
+        "2": 455,
+        "4": 3640,
+        "5": 5824,
+        "7": 12480,
+        "13": 6720
+      },
+      "target": 192
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        11,
+        31
+      ],
+      "cyclic_lower_bound": 1025,
+      "method": "two torus classes plus identity",
+      "name": "PSL(2,32)",
+      "order": 32736,
+      "outcome": "excluded",
+      "outer_order": 5,
+      "partition_exact_count": 3040,
+      "partition_order_histogram": {
+        "1": 1,
+        "2": 1023,
+        "3": 992,
+        "11": 4960,
+        "31": 15840,
+        "33": 9920
+      },
+      "q": 32,
+      "target": 192
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        7,
+        41
+      ],
+      "cyclic_lower_bound": 1682,
+      "method": "two torus classes plus identity",
+      "name": "PSL(2,41)",
+      "order": 34440,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "partition_exact_count": 6808,
+      "partition_order_histogram": {
+        "1": 1,
+        "2": 861,
+        "3": 1640,
+        "4": 1722,
+        "5": 3444,
+        "7": 4920,
+        "10": 3444,
+        "20": 6888,
+        "21": 9840,
+        "41": 1680
+      },
+      "q": 41,
+      "target": 192
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        7,
+        11,
+        43
+      ],
+      "cyclic_lower_bound": 200,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,43)",
+      "order": 39732,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 43,
+      "target": 192
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        23,
+        47
+      ],
+      "cyclic_lower_bound": 228,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,47)",
+      "order": 51888,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 47,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "cyclic_lower_bound": 243,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,49)",
+      "order": 58800,
+      "outcome": "excluded",
+      "outer_order": 4,
+      "q": 49,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        13
+      ],
+      "cyclic_lower_bound": 250,
+      "method": "Lucchini square-root bound",
+      "name": "PSU(3,4)",
+      "order": 62400,
+      "outcome": "excluded",
+      "outer_order": 4,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        13,
+        53
+      ],
+      "cyclic_lower_bound": 273,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,53)",
+      "order": 74412,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 53,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        11
+      ],
+      "cyclic_lower_bound": 309,
+      "method": "Lucchini square-root bound",
+      "name": "M12",
+      "order": 95040,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        29,
+        59
+      ],
+      "cyclic_lower_bound": 321,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,59)",
+      "order": 102660,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 59,
+      "target": 192
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        31,
+        61
+      ],
+      "cyclic_lower_bound": 337,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,61)",
+      "order": 113460,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 61,
+      "target": 192
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "cyclic_lower_bound": 355,
+      "method": "Lucchini square-root bound",
+      "name": "PSU(3,5)",
+      "order": 126000,
+      "outcome": "excluded",
+      "outer_order": 6,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        11,
+        17,
+        67
+      ],
+      "cyclic_lower_bound": 388,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,67)",
+      "order": 150348,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 67,
+      "target": 192
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        19
+      ],
+      "cyclic_lower_bound": 419,
+      "method": "Lucchini square-root bound",
+      "name": "J1",
+      "order": 175560,
+      "outcome": "excluded",
+      "outer_order": 1,
+      "target": 384
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        7,
+        71
+      ],
+      "cyclic_lower_bound": 423,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,71)",
+      "order": 178920,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 71,
+      "target": 192
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "cyclic_lower_bound": 426,
+      "method": "Lucchini square-root bound",
+      "name": "A9",
+      "order": 181440,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        37,
+        73
+      ],
+      "cyclic_lower_bound": 441,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,73)",
+      "order": 194472,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 73,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        13,
+        79
+      ],
+      "cyclic_lower_bound": 497,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,79)",
+      "order": 246480,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 79,
+      "target": 192
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        7,
+        13
+      ],
+      "cyclic_lower_bound": 512,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,64)",
+      "order": 262080,
+      "outcome": "excluded",
+      "outer_order": 6,
+      "q": 64,
+      "target": 192
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        41
+      ],
+      "cyclic_lower_bound": 516,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,81)",
+      "order": 265680,
+      "outcome": "excluded",
+      "outer_order": 8,
+      "q": 81,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        7,
+        41,
+        83
+      ],
+      "cyclic_lower_bound": 535,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,83)",
+      "order": 285852,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 83,
+      "target": 192
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        11,
+        89
+      ],
+      "cyclic_lower_bound": 594,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,89)",
+      "order": 352440,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 89,
+      "target": 192
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        31
+      ],
+      "cyclic_lower_bound": 610,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(3,5)",
+      "order": 372000,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        7,
+        11
+      ],
+      "cyclic_lower_bound": 666,
+      "method": "Lucchini square-root bound",
+      "name": "M22",
+      "order": 443520,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "target": 192
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        7,
+        97
+      ],
+      "cyclic_lower_bound": 676,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,97)",
+      "order": 456288,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 97,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        17,
+        101
+      ],
+      "cyclic_lower_bound": 718,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,101)",
+      "order": 515100,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 101,
+      "target": 192
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        13,
+        17,
+        103
+      ],
+      "cyclic_lower_bound": 740,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,103)",
+      "order": 546312,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 103,
+      "target": 192
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "cyclic_lower_bound": 778,
+      "method": "Lucchini square-root bound",
+      "name": "J2",
+      "order": 604800,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        53,
+        107
+      ],
+      "cyclic_lower_bound": 783,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,107)",
+      "order": 612468,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 107,
+      "target": 96
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        5,
+        11,
+        109
+      ],
+      "cyclic_lower_bound": 805,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,109)",
+      "order": 647460,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 109,
+      "target": 192
+    },
+    {
+      "aut_primes": [
+        2,
+        3,
+        7,
+        19,
+        113
+      ],
+      "cyclic_lower_bound": 850,
+      "method": "Lucchini square-root bound",
+      "name": "PSL(2,113)",
+      "order": 721392,
+      "outcome": "excluded",
+      "outer_order": 2,
+      "q": 113,
+      "target": 192
+    }
+  ],
+  "simple_rows": 53
+}
