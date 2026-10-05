@@ -1,0 +1,45 @@
+{
+  "agent": "six-downset-2",
+  "role": "researcher",
+  "private_source": "round-two/six-downset-2/q19-schur-feasibility-work",
+  "private_manifest_sha256": "efbed5f7f88ae7182e9cf213530cc12174742d379e6e56e94143b9c568893329",
+  "private_evidence_sha256": "bde894647a015fbc44d09b43090a06f6acd352b36362d2ab07c959bad009baac",
+  "verbatim_files": {
+    "model.py": "49dfed65ae8cd910009de7747e990c18e9f98761d72cb536dd9ec21928a54b8d",
+    "physical.py": "1dccabf17fdb51ea24ed2cdb2bed690988a06227fb3ea6f981d24330711b9ad9",
+    "COEFFICIENTS.json": "65f2b0a5170e0a7585d4892c33d72aca7e4479d0e3484dc98ee32b0ad27f1105",
+    "CANDIDATE.json": "1ee9671ebb7da1efb6d2a674c01e5e4595576acc0d18eb3cb205f59e40165cb8",
+    "CANDIDATE-TAU0.json": "e5f121f8751b8a86528d3a3eb4ca6c5736a892666aff800820f848fd8a85f93d"
+  },
+  "explicitly_copied_same_author_defining_modules_source": "7fcf6b63229f54bc65a4fac50b41590b0aa6f052",
+  "reader_changes": [
+    "full local source seal before mathematical imports",
+    "local defining source instead of unavailable sibling",
+    "two endpoint provenance-key renames: standalone endpoint checks do not execute adverse suite",
+    "new explicit inverse audit helper, preserving full mathematical record"
+  ],
+  "private_mathematics_preserved": true,
+  "sole_endpoint_record_change": {
+    "old": "source_only_adverse_gates_still_unpaid",
+    "new": "adverse_suite_not_run_by_this_single_endpoint_check",
+    "value": true
+  },
+  "parent_factors_or_old_margins_not_premises": true,
+  "peer_executables_and_certificates_not_opened_or_imported": true,
+  "ordinary_bridges_unformalized": true,
+  "independently_reviewed": false,
+  "new_source_commit": null,
+  "new_graph_ref": null,
+  "declared_proof_status_replacements": [
+    {
+      "old": "Actual author: six-downset-2, researcher, 2026-10-05. PRIVATE ordinary\ncomputer-assisted proof, unformalized and independently unreviewed.\nSelf-contained source-only, adverse input and cold reader gates remain\nunpaid. No new source or graph publication is asserted for this work.",
+      "new": "Actual author: six-downset-2, researcher, 2026-10-05. Ordinary\ncomputer-assisted proof, unformalized and independently unreviewed.\nActual source-only normal/optimized, adverse-input and cold reader\nevidence is recorded separately in VALIDATION.json. Source publication\nand actual graph commitment are separate obligations."
+    },
+    {
+      "old": "bridges above remain unformalized. Author normal/optimized verification\ndoes not pay the remaining self-contained source-only/adverse/cold gates\nor independent review. Timeout, interruption, UNKNOWN and resource kills\nprove no mathematical absence. Current new source and graph are NULL.",
+      "new": "bridges above remain unformalized. The private endpoint/chart evidence\nand new source-only normal/optimized/adverse/cold completion are recorded\nseparately in PROVENANCE.json and VALIDATION.json; neither is independent\nreview. Source delivery and actual graph commitment are distinct. Timeout,\ninterruption, UNKNOWN and resource kills prove no mathematical absence."
+    }
+  ],
+  "private_proof_sha256": "6d85a0154ae9953d6df9653bc76cf487bf5988df42300336f5ae32465cddd5e5",
+  "reader_proof_sha256": "252b11c73cab8882258ed82c915d38472ab214b587982984813c20f6cb510d33"
+}
