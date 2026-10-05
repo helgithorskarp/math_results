@@ -1,0 +1,173 @@
+{
+  "agent": "six-downset-2",
+  "role": "researcher",
+  "origin_private_proof": "q19-sharp-ceiling-work/PROOF.md",
+  "origin_private_proof_sha256": "2479d4bd4ff0870755adf7977dd0121a54580415a85eba251e85672372fab74c",
+  "origin_private_manifest_sha256": "63f2fa5a40ee2e2a83b0002c27a5058ee5c1b722498dcd0799d7cf809f37676d",
+  "origin_private_mathematical_records": [
+    {
+      "label": "STRUCTURE",
+      "returncodes": [
+        0,
+        0
+      ],
+      "whole_mathematical_normal_O_equal": true,
+      "canonical_mathematical_bytes": 4019,
+      "canonical_mathematical_sha256": "18c87135360e1d3f55a15c2b0614c216acdaeafee7c4f020ddf7fac88b3af604",
+      "checker_sha256": "3825a6560742b8cca54c810db659e6ec83b265285ef965b1ddb0dec9666aaa13",
+      "max_observed_math_seconds": 1.1018699389969697,
+      "max_peak_RSS_KiB": 31660
+    },
+    {
+      "label": "BOUNDARY",
+      "returncodes": [
+        0,
+        0
+      ],
+      "whole_mathematical_normal_O_equal": true,
+      "canonical_mathematical_bytes": 54238,
+      "canonical_mathematical_sha256": "80f845cf6fa80e6e00f1f56f98fc5f76ca317dc771ca0931b5be564c682ea874",
+      "checker_sha256": "2029a622effc1cf1db0e02b957e12c79be1f374463f577b82e6c910f01044a3b",
+      "max_observed_math_seconds": 6.979672009001661,
+      "max_peak_RSS_KiB": 56364
+    },
+    {
+      "label": "POSTLINE",
+      "returncodes": [
+        0,
+        0
+      ],
+      "whole_mathematical_normal_O_equal": true,
+      "canonical_mathematical_bytes": 54342,
+      "canonical_mathematical_sha256": "3edd8f165a758cefd0fb251371a3eefb60edb43063197b33e3fd73c94a71f5ec",
+      "checker_sha256": "9ba5a3db98b68d0f73bc2b1c4ca303e90b4ab35dc9fc725748d77cc266da4a18",
+      "max_observed_math_seconds": 5.332230684995011,
+      "max_peak_RSS_KiB": 56472
+    }
+  ],
+  "exact_verbatim_inputs": [
+    {
+      "name": "model.py",
+      "from_source": "fe4bf0695998eda55018095b6f09cee0a4666134",
+      "whole_sha256": "49dfed65ae8cd910009de7747e990c18e9f98761d72cb536dd9ec21928a54b8d",
+      "verbatim": true
+    },
+    {
+      "name": "physical.py",
+      "from_source": "fe4bf0695998eda55018095b6f09cee0a4666134",
+      "whole_sha256": "1dccabf17fdb51ea24ed2cdb2bed690988a06227fb3ea6f981d24330711b9ad9",
+      "verbatim": true
+    },
+    {
+      "name": "COEFFICIENTS.json",
+      "from_source": "fe4bf0695998eda55018095b6f09cee0a4666134",
+      "whole_sha256": "65f2b0a5170e0a7585d4892c33d72aca7e4479d0e3484dc98ee32b0ad27f1105",
+      "verbatim": true
+    },
+    {
+      "name": "BOUNDARY-CANDIDATE.json",
+      "from_private_seal": "63f2fa5a40ee2e2a83b0002c27a5058ee5c1b722498dcd0799d7cf809f37676d",
+      "whole_sha256": "70b689016621c1bac532ccf043301865753462d96d968c19566f05a4e6187ff0",
+      "verbatim": true,
+      "creation_metadata_is_historical": true
+    },
+    {
+      "name": "POSTLINE-CANDIDATE.json",
+      "from_private_seal": "63f2fa5a40ee2e2a83b0002c27a5058ee5c1b722498dcd0799d7cf809f37676d",
+      "whole_sha256": "3ed5f72aad412fd7d4c140b69bc7bfe31710e1328a4760c649a37da71940fd83",
+      "verbatim": true,
+      "creation_metadata_is_historical": true
+    },
+    {
+      "name": "DUAL.json",
+      "from_private_seal": "63f2fa5a40ee2e2a83b0002c27a5058ee5c1b722498dcd0799d7cf809f37676d",
+      "whole_sha256": "4aa71db39ec0fd03a1e87c2365a18ae3e1ab25f478066b05be71e76e668ed38b",
+      "verbatim": true,
+      "creation_metadata_is_historical": true
+    },
+    {
+      "name": "ENTRY-PRIMAL.json",
+      "from_private_seal": "63f2fa5a40ee2e2a83b0002c27a5058ee5c1b722498dcd0799d7cf809f37676d",
+      "whole_sha256": "f92c812157d58bc3d3270dc951a7d8343b0a4c4a8bf3f78a741ee65cfe9e5f91",
+      "verbatim": true,
+      "creation_metadata_is_historical": true
+    }
+  ],
+  "explicit_reader_edits": [
+    {
+      "file": "check_boundary.py",
+      "old": "PARENT=Path(__file__).resolve().parents[1]/'q19-full-optimizer-face'\nsys.path.insert(0,str(PARENT))\n",
+      "new": ""
+    },
+    {
+      "file": "check_postline.py",
+      "old": "PARENT=Path(__file__).resolve().parents[1]/'q19-full-optimizer-face'\nsys.path.insert(0,str(PARENT))\n",
+      "new": ""
+    },
+    {
+      "file": "check_postline.py",
+      "old": "    zero_GG=0\n",
+      "new": "    zero_GG=0;negative_GG=0\n"
+    },
+    {
+      "file": "check_postline.py",
+      "old": "            if tag=='GG' and observed==0:zero_GG+=1\n",
+      "new": "            if tag=='GG' and observed==0:zero_GG+=1\n            if tag=='GG' and observed<0:negative_GG+=1\n"
+    },
+    {
+      "file": "check_postline.py",
+      "old": "and zero_GG==4230 and P==",
+      "new": "and zero_GG==4230 and negative_GG==3240 and P=="
+    },
+    {
+      "file": "check_postline.py",
+      "old": "original_negative_GG_count=3240,",
+      "new": "original_negative_GG_count=negative_GG,"
+    },
+    {
+      "file": "check_structure.py",
+      "old": "PARENT = HERE.parent / 'q19-full-optimizer-face'\nsys.path.insert(0, str(PARENT))\n",
+      "new": ""
+    },
+    {
+      "file": "encoding.py",
+      "old": "Private exact unrestricted invariant entry/lower-PSD encoding.",
+      "new": "Self-contained exact unrestricted invariant entry/lower-PSD encoding."
+    },
+    {
+      "file": "PROOF.md",
+      "old": "PRIVATE ordinary proof with rational computational certificates;\nunformalized and independently unreviewed. This result has no new source\ncommit or graph reference. The current private checkers explicitly require\nthe sibling source-bound q19-full-optimizer-face reader. Self-contained\nsource-only, semantic adverse-input, cold-reader and publication gates\nremain unpaid; PRIVATE-VALIDATION.json records the checks actually run.",
+      "new": "Ordinary proof with rational computational certificates; unformalized\nand independently unreviewed. The self-contained reader includes the\nexplicitly credited same-author defining modules and complete certificate\ndata. VALIDATION.json records actual source-only normal/optimized,\nsemantic adverse-input and isolated cold checks. Source publication and\nactual graph commitment remain separate obligations. SOURCE.json records\nthe paid private predecessor and every source-reader edit; certificate\ncreation-time private/null metadata is historical, not a claim about\npublication or graph commitment."
+    },
+    {
+      "file": "PROOF.md",
+      "old": "They disclose and byte-bind fe4's same-author model.py, physical.py,\nencoding.py and defining fixture before mathematical use.",
+      "new": "They disclose and byte-bind the same-author model.py and physical.py\ncopied verbatim from fe4, its locally addressed encoding.py and the\ncomplete defining fixture before mathematical use."
+    },
+    {
+      "file": "check_structure.py",
+      "change": "Extract the already-paid two whole inverse-product checks to audit_inverse(A,inv), add inverse-shape guard, and call it from inverse_and_det so new semantic damages reach the same actual mathematical guard."
+    },
+    {
+      "file": "check_structure.py",
+      "change": "Replace private/sibling docstring with the self-contained reader description; no mathematical output changes."
+    },
+    {
+      "file": "PROOF.md",
+      "change": "Explain historical floating discovery and exact recovery without implying omitted private search scripts are reader inputs; mathematical proof body and quantified claims preserved."
+    }
+  ],
+  "same_author_reuse_not_independent_review": true,
+  "no_old_or_peer_positive_endpoint_checker_EXPECTED_factor_or_floor_imported": true,
+  "old_tau0_center_is_credited_published_theorem_premise": true,
+  "new_source_commit": null,
+  "new_graph_ref": null,
+  "creation_time_fields_are_historical": true,
+  "new_reader_scaffolding": {
+    "binding.py": "Same-author complete-file binding pattern from fe4, with the exact new nineteen defining files; consistency check only.",
+    "verify.py": "Same-author serial cold-copy normal/O scaffold from fe4, adapted to NEW structure/boundary/postline/adverse programs and three compact whole-record pins. No old positive checker, factor, floor or EXPECTED is imported.",
+    "adverse.py": "Same-author post-binding damage-control design from fe4; seventeen new ceiling-relevant mathematical input damages and separate four source-damage checks in verify.py.",
+    "README.md": "New claim, coverage, trust, provenance and exact reproduction instructions.",
+    ".gitignore": "New contribution-specific cache/output exclusions."
+  }
+}
