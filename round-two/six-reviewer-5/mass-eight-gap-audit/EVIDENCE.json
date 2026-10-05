@@ -1,0 +1,155 @@
+{
+  "agent": "six-reviewer-5",
+  "role": "independent reviewer",
+  "status": "COMPLETE ordinary scoped audit; exact mathematical checks completed before public delivery",
+  "entry_component": {
+    "status": "PASS PARTIAL",
+    "agent": "six-reviewer-5",
+    "role": "independent reviewer",
+    "whole_math_record_equal": true,
+    "source_pins": {
+      "check.py": "de5c2bf8bd992075314749ad562c380062a76632c554728318bd29849f21e3a2",
+      "COVER.json": "70a773a61a3a7074719c124318ae8e9bf2e6b5d7719af45709dcefed2b8ed55a"
+    },
+    "child_guard_seconds": 45,
+    "native_threads": 1,
+    "serial_children": true,
+    "shared_and_individual_limits_unchanged": true,
+    "maximum_children_rss_kib": 22568,
+    "replays": [
+      {
+        "directory": "local",
+        "optimized": false,
+        "seconds": 1.5190188869964913,
+        "complete_record_bytes": 350023,
+        "complete_record_sha256": "d85a33f87549606f1282d6a4bcf039d455a3dddecf271cdd84813189b1ec3701"
+      },
+      {
+        "directory": "local",
+        "optimized": true,
+        "seconds": 1.3975065749982605,
+        "complete_record_bytes": 350023,
+        "complete_record_sha256": "d85a33f87549606f1282d6a4bcf039d455a3dddecf271cdd84813189b1ec3701"
+      },
+      {
+        "directory": "cold",
+        "optimized": false,
+        "seconds": 1.290566519004642,
+        "complete_record_bytes": 350023,
+        "complete_record_sha256": "d85a33f87549606f1282d6a4bcf039d455a3dddecf271cdd84813189b1ec3701"
+      },
+      {
+        "directory": "cold",
+        "optimized": true,
+        "seconds": 1.6675238440002431,
+        "complete_record_bytes": 350023,
+        "complete_record_sha256": "d85a33f87549606f1282d6a4bcf039d455a3dddecf271cdd84813189b1ec3701"
+      }
+    ],
+    "scope": "Only the new continuity/entry/coverage/product-envelope gates. No complete face or universal theorem verdict."
+  },
+  "face_component": {
+    "status": "PASS NEW full face arithmetic and1/340 sufficient refinement",
+    "agent": "six-reviewer-5",
+    "role": "independent reviewer",
+    "whole_math_record_equal": true,
+    "source_pins": {
+      "face.py": "2ab6fe801e1d9a269685ee7ed3c3168e6020b90ec7ec7e5ffe6e9e2702a863b8",
+      "base.py": "b47b4a46202c60c3353d05f5b69d73fa735dfc25f90fa473cc5cd87175ddf281",
+      "COVER.json": "70a773a61a3a7074719c124318ae8e9bf2e6b5d7719af45709dcefed2b8ed55a"
+    },
+    "child_guard_seconds": 45,
+    "native_threads": 1,
+    "serial_children": true,
+    "shared_and_individual_limits_unchanged": true,
+    "maximum_children_rss_kib": 46228,
+    "replays": [
+      {
+        "directory": "local",
+        "optimized": false,
+        "seconds": 26.323380206995353,
+        "complete_record_bytes": 3070840,
+        "complete_record_sha256": "b66b192e58bc79e3ab95ad283817bbbeeaaf04be5fa3bef778be945448cc7fda",
+        "roles": {
+          "scalar-product-origin": 79,
+          "retained-mean-product-origin": 9,
+          "standard-polar": 2,
+          "joint-energy-polar": 49
+        }
+      },
+      {
+        "directory": "local",
+        "optimized": true,
+        "seconds": 24.65600313399773,
+        "complete_record_bytes": 3070840,
+        "complete_record_sha256": "b66b192e58bc79e3ab95ad283817bbbeeaaf04be5fa3bef778be945448cc7fda",
+        "roles": {
+          "scalar-product-origin": 79,
+          "retained-mean-product-origin": 9,
+          "standard-polar": 2,
+          "joint-energy-polar": 49
+        }
+      },
+      {
+        "directory": "cold",
+        "optimized": false,
+        "seconds": 24.735460907999368,
+        "complete_record_bytes": 3070840,
+        "complete_record_sha256": "b66b192e58bc79e3ab95ad283817bbbeeaaf04be5fa3bef778be945448cc7fda",
+        "roles": {
+          "scalar-product-origin": 79,
+          "retained-mean-product-origin": 9,
+          "standard-polar": 2,
+          "joint-energy-polar": 49
+        }
+      },
+      {
+        "directory": "cold",
+        "optimized": true,
+        "seconds": 23.998608968002372,
+        "complete_record_bytes": 3070840,
+        "complete_record_sha256": "b66b192e58bc79e3ab95ad283817bbbeeaaf04be5fa3bef778be945448cc7fda",
+        "roles": {
+          "scalar-product-origin": 79,
+          "retained-mean-product-origin": 9,
+          "standard-polar": 2,
+          "joint-energy-polar": 49
+        }
+      }
+    ],
+    "preimport_rejections": [
+      {
+        "name": "base.py",
+        "optimized": false,
+        "reason": "owned pure helper pin BEFORE import",
+        "exit_code": 1
+      },
+      {
+        "name": "base.py",
+        "optimized": true,
+        "reason": "owned pure helper pin BEFORE import",
+        "exit_code": 1
+      },
+      {
+        "name": "COVER.json",
+        "optimized": false,
+        "reason": "defining cover before parse",
+        "exit_code": 1
+      },
+      {
+        "name": "COVER.json",
+        "optimized": true,
+        "reason": "defining cover before parse",
+        "exit_code": 1
+      }
+    ],
+    "scope": "NEW original139 face inequalities; closed73-shell/old continuity not rerun. Ordinary universal bridges separately written. No source publication or graph verdict claimed by replay."
+  },
+  "entry_record_bytes": 350023,
+  "entry_record_sha256": "d85a33f87549606f1282d6a4bcf039d455a3dddecf271cdd84813189b1ec3701",
+  "face_record_bytes": 3070840,
+  "face_record_sha256": "b66b192e58bc79e3ab95ad283817bbbeeaaf04be5fa3bef778be945448cc7fda",
+  "entry_component_scope": "Does not alone pay the face; complete139 face proof in PROOF.md/face.py",
+  "source_delivery_closed_math_replays": 0,
+  "trust": "Ordinary analytic argument, REAL Banach and explicit parent theorem; CPython/Fraction/checker correctness. No formal certification."
+}
