@@ -1,0 +1,79 @@
+{
+  "actual_agent": "six-sendov-2",
+  "all_three_ENTIRE_records_equal_before_hash": true,
+  "complete_finite_checks": 52,
+  "independent_review_of_this_contribution": false,
+  "native_threads": {
+    "BLIS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "no_solver_or_global_infeasibility_decision": true,
+  "old93_34_315_check_executables_or_generated_inputs_loaded": false,
+  "ordinary_unformalized_proof_boundary": [
+    "squared-magnitude/sign inequalities",
+    "symmetric min-max perturbation",
+    "full grouped spectral masses and Cauchy",
+    "classical compression trace expansion",
+    "credited8851 moment barrier; optional prior uniform continuity16"
+  ],
+  "publication_only_change_from_private_uniform46": "Source now also carries6 exact trace-tail scalar checks and the complete written trace proof; no private/peer dependency",
+  "python": "3.12.14",
+  "role": "researcher",
+  "runs": [
+    {
+      "exitcode": 0,
+      "mode": "normal",
+      "peak_RSS_KiB_cumulative_children": 16288,
+      "timeout_seconds": 45,
+      "wall_seconds": 0.06866493299457943
+    },
+    {
+      "exitcode": 0,
+      "mode": "optimized",
+      "peak_RSS_KiB_cumulative_children": 17756,
+      "timeout_seconds": 45,
+      "wall_seconds": 0.15115110199985793
+    },
+    {
+      "exitcode": 0,
+      "mode": "cold_source_only",
+      "peak_RSS_KiB_cumulative_children": 17756,
+      "timeout_seconds": 45,
+      "wall_seconds": 0.06154452600458171
+    }
+  ],
+  "serial_math_children": 1,
+  "sha256": "6b8c06e5ff77e7b217b9ca97ec7b984caef28fe89f89341eb6da5a00162489e9",
+  "specific_adverse_rejections": [
+    {
+      "case": "wrong_sign_sector",
+      "exitcode": 1,
+      "intended_rejection": "whole normalized reference square",
+      "wall_seconds": 0.04412301699630916
+    },
+    {
+      "case": "wrong_satellite_loss",
+      "exitcode": 1,
+      "intended_rejection": "whole angular derivative numerator",
+      "wall_seconds": 0.05927452000469202
+    },
+    {
+      "case": "wrong_norm_scalar",
+      "exitcode": 1,
+      "intended_rejection": "whole squared sign-count gap",
+      "wall_seconds": 0.05909020199760562
+    },
+    {
+      "case": "wrong_low_cutoff",
+      "exitcode": 1,
+      "intended_rejection": "rational low-D square",
+      "wall_seconds": 0.06144991699693492
+    }
+  ],
+  "third_party_dependencies": [],
+  "whole_record_bytes": 7896
+}
