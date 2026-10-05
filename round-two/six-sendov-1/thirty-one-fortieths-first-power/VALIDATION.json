@@ -1,0 +1,175 @@
+{
+  "agent": "six-sendov-1",
+  "all_five_source_rejections": {
+    "agent": "six-sendov-1",
+    "all_five_specific_seal_rejections": [
+      {
+        "damage": "core-byte",
+        "exit_code": 1,
+        "math_children_started": false,
+        "specific_gate": "FAIL: whole typed exact record mismatch"
+      },
+      {
+        "damage": "expected-byte",
+        "exit_code": 1,
+        "math_children_started": false,
+        "specific_gate": "FAIL: whole typed exact record mismatch"
+      },
+      {
+        "damage": "face-byte",
+        "exit_code": 1,
+        "math_children_started": false,
+        "specific_gate": "FAIL: whole typed exact record mismatch"
+      },
+      {
+        "damage": "manifest-omit-source",
+        "exit_code": 1,
+        "math_children_started": false,
+        "specific_gate": "FAIL: all defining sources and expected envelope sealed"
+      },
+      {
+        "damage": "duplicate-manifest-key",
+        "exit_code": 1,
+        "math_children_started": false,
+        "specific_gate": "FAIL: duplicate JSON key"
+      }
+    ],
+    "formalized": false,
+    "independently_reviewed": false,
+    "role": "researcher"
+  },
+  "all_three_full_replays": [
+    {
+      "files": [
+        {
+          "bytes": 1827575,
+          "entire_bytes_match": true,
+          "file": "entry_fixed.py.json",
+          "sha256": "7d27ef45e1581ed76c493eb2805ba20777750179c71ca010a0626f6b0a8c2de3"
+        },
+        {
+          "bytes": 8297919,
+          "entire_bytes_match": true,
+          "file": "face_fixed_00.py.json",
+          "sha256": "449005d1ff508db33f9badf01e43ab6f60381ac28d7bdd2cc49b2d76056ee9a9"
+        },
+        {
+          "bytes": 7938475,
+          "entire_bytes_match": true,
+          "file": "face_fixed_01.py.json",
+          "sha256": "975d2c2f21a25a64669b1d65a4d4170e30fe5f7e359647ac9084e47a8c0315e0"
+        },
+        {
+          "bytes": 8802231,
+          "entire_bytes_match": true,
+          "file": "face_fixed_02.py.json",
+          "sha256": "da295160d150f00f16c09159c43ec935093e71839ac94150abb6719de6965e26"
+        },
+        {
+          "bytes": 296600,
+          "entire_bytes_match": true,
+          "file": "physical-and-clipping.json",
+          "sha256": "14df2cb5e08a55c573a8a194dd68482c3de9bde63b0fc9892d5affe74de942d4"
+        }
+      ],
+      "run": "emit-normal"
+    },
+    {
+      "files": [
+        {
+          "bytes": 1827575,
+          "entire_bytes_match": true,
+          "file": "entry_fixed.py.json",
+          "sha256": "7d27ef45e1581ed76c493eb2805ba20777750179c71ca010a0626f6b0a8c2de3"
+        },
+        {
+          "bytes": 8297919,
+          "entire_bytes_match": true,
+          "file": "face_fixed_00.py.json",
+          "sha256": "449005d1ff508db33f9badf01e43ab6f60381ac28d7bdd2cc49b2d76056ee9a9"
+        },
+        {
+          "bytes": 7938475,
+          "entire_bytes_match": true,
+          "file": "face_fixed_01.py.json",
+          "sha256": "975d2c2f21a25a64669b1d65a4d4170e30fe5f7e359647ac9084e47a8c0315e0"
+        },
+        {
+          "bytes": 8802231,
+          "entire_bytes_match": true,
+          "file": "face_fixed_02.py.json",
+          "sha256": "da295160d150f00f16c09159c43ec935093e71839ac94150abb6719de6965e26"
+        },
+        {
+          "bytes": 296600,
+          "entire_bytes_match": true,
+          "file": "physical-and-clipping.json",
+          "sha256": "14df2cb5e08a55c573a8a194dd68482c3de9bde63b0fc9892d5affe74de942d4"
+        }
+      ],
+      "run": "cold-normal"
+    },
+    {
+      "files": [
+        {
+          "bytes": 1827575,
+          "entire_bytes_match": true,
+          "file": "entry_fixed.py.json",
+          "sha256": "7d27ef45e1581ed76c493eb2805ba20777750179c71ca010a0626f6b0a8c2de3"
+        },
+        {
+          "bytes": 8297919,
+          "entire_bytes_match": true,
+          "file": "face_fixed_00.py.json",
+          "sha256": "449005d1ff508db33f9badf01e43ab6f60381ac28d7bdd2cc49b2d76056ee9a9"
+        },
+        {
+          "bytes": 7938475,
+          "entire_bytes_match": true,
+          "file": "face_fixed_01.py.json",
+          "sha256": "975d2c2f21a25a64669b1d65a4d4170e30fe5f7e359647ac9084e47a8c0315e0"
+        },
+        {
+          "bytes": 8802231,
+          "entire_bytes_match": true,
+          "file": "face_fixed_02.py.json",
+          "sha256": "da295160d150f00f16c09159c43ec935093e71839ac94150abb6719de6965e26"
+        },
+        {
+          "bytes": 296600,
+          "entire_bytes_match": true,
+          "file": "physical-and-clipping.json",
+          "sha256": "14df2cb5e08a55c573a8a194dd68482c3de9bde63b0fc9892d5affe74de942d4"
+        }
+      ],
+      "run": "cold-optimized"
+    }
+  ],
+  "at": "2026-10-05T11:31:07.291247+00:00",
+  "formalized": false,
+  "graph_reference": null,
+  "independently_reviewed": false,
+  "large_records_published": false,
+  "physical_clipping_semantic_rejections_per_replay": 37,
+  "preserved_launch_failure": "unavailable /usr/bin/time exit127; interpreter not started; original stdout/stderr retained",
+  "resource_receipt": {
+    "agent": "six-sendov-1",
+    "at": "2026-10-05T11:30:02.550125+00:00",
+    "command": [
+      "/scratch/venvs/discovery-team/bin/python",
+      "-O",
+      "scratch/thirty-one-package-cold/verify.py",
+      "--records",
+      "scratch/thirty-one-package-cold-optimized"
+    ],
+    "exit_code": 0,
+    "math_child_guard_seconds": 45,
+    "max_rss_kib": 107688,
+    "native_threads": 1,
+    "role": "researcher",
+    "seconds": 41.11464317700302,
+    "serial_intensive_jobs": 1
+  },
+  "role": "researcher",
+  "status": "SOURCE_SEAL_AND_COLD_CONTROLS_COMPLETE"
+}
