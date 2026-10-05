@@ -1,0 +1,457 @@
+{
+  "decision_message_id": 410,
+  "full_target_solved": false,
+  "claim_status": "two explicit failed induction invariants; no failure of full completion",
+  "adjacent_max_inputs_examined": 37,
+  "adjacent_max_failure": {
+    "input": [
+      1,
+      2,
+      4,
+      5,
+      3
+    ],
+    "all_candidate_witnesses": [
+      {
+        "word": [
+          1,
+          2,
+          3,
+          4,
+          7,
+          6,
+          9,
+          8,
+          5
+        ],
+        "rho": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "occurrence_zero_based": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "selected_values": [
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      {
+        "word": [
+          1,
+          4,
+          3,
+          6,
+          7,
+          8,
+          9,
+          2,
+          5
+        ],
+        "rho": [
+          2,
+          3,
+          4,
+          1
+        ],
+        "occurrence_zero_based": [
+          1,
+          2,
+          3,
+          8
+        ],
+        "selected_values": [
+          4,
+          3,
+          6,
+          5
+        ]
+      }
+    ],
+    "candidates": 2,
+    "minimality_scope": "all shorter inputs then prior lexicographic inputs",
+    "unrestricted_132_completion": {
+      "decision_message_id": 410,
+      "claim_status": "finite exact132-scaffold completion search; no universal existence proof",
+      "input": [
+        1,
+        2,
+        4,
+        5,
+        3
+      ],
+      "output": [
+        1,
+        6,
+        3,
+        4,
+        7,
+        8,
+        9,
+        2,
+        5
+      ],
+      "rho": [
+        3,
+        2,
+        4,
+        1
+      ],
+      "root_state_count": 4,
+      "subproblem_count": 25,
+      "total_state_count": 35,
+      "subproblem_state_counts": {
+        "(0, 1, 1)": 1,
+        "(0, 1, 2)": 1,
+        "(0, 1, 3)": 1,
+        "(0, 1, 4)": 1,
+        "(0, 2, 1)": 1,
+        "(0, 2, 2)": 1,
+        "(0, 2, 3)": 1,
+        "(0, 3, 1)": 2,
+        "(0, 3, 2)": 2,
+        "(0, 4, 1)": 3,
+        "(0, 5, 1)": 4,
+        "(1, 2, 1)": 1,
+        "(1, 2, 2)": 1,
+        "(1, 2, 3)": 1,
+        "(1, 3, 1)": 1,
+        "(1, 3, 2)": 1,
+        "(1, 4, 1)": 1,
+        "(1, 5, 1)": 3,
+        "(2, 3, 1)": 1,
+        "(2, 3, 2)": 1,
+        "(2, 4, 1)": 1,
+        "(2, 5, 1)": 2,
+        "(3, 4, 1)": 1,
+        "(3, 5, 1)": 1,
+        "(4, 5, 1)": 1
+      },
+      "merges_attempted": 33,
+      "merges_rejected": 9,
+      "python": "3.11.2",
+      "elapsed_seconds": 0.002739784002187662,
+      "peak_rss_kib_linux": 16572,
+      "full_target_solved": false
+    }
+  },
+  "band_condition_failure": {
+    "input": [
+      2,
+      1,
+      4,
+      3,
+      5,
+      6,
+      7
+    ],
+    "reachable_subproblem": [
+      0,
+      4,
+      3
+    ],
+    "old_word": [
+      3,
+      1,
+      7,
+      5
+    ],
+    "even_band": [
+      6,
+      8,
+      10
+    ],
+    "old_words_below_and_above_band_avoid": true,
+    "all_six_arbitrary_even_scaffold_witnesses": [
+      {
+        "even_word": [
+          6,
+          8,
+          10
+        ],
+        "word": [
+          3,
+          6,
+          1,
+          8,
+          7,
+          10,
+          5
+        ],
+        "occurrence_zero_based": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_values": [
+          6,
+          1,
+          8,
+          7
+        ]
+      },
+      {
+        "even_word": [
+          6,
+          10,
+          8
+        ],
+        "word": [
+          3,
+          6,
+          1,
+          10,
+          7,
+          8,
+          5
+        ],
+        "occurrence_zero_based": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_values": [
+          6,
+          1,
+          10,
+          7
+        ]
+      },
+      {
+        "even_word": [
+          8,
+          6,
+          10
+        ],
+        "word": [
+          3,
+          8,
+          1,
+          6,
+          7,
+          10,
+          5
+        ],
+        "occurrence_zero_based": [
+          0,
+          2,
+          3,
+          6
+        ],
+        "selected_values": [
+          3,
+          1,
+          6,
+          5
+        ]
+      },
+      {
+        "even_word": [
+          8,
+          10,
+          6
+        ],
+        "word": [
+          3,
+          8,
+          1,
+          10,
+          7,
+          6,
+          5
+        ],
+        "occurrence_zero_based": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "selected_values": [
+          3,
+          1,
+          7,
+          6
+        ]
+      },
+      {
+        "even_word": [
+          10,
+          6,
+          8
+        ],
+        "word": [
+          3,
+          10,
+          1,
+          6,
+          7,
+          8,
+          5
+        ],
+        "occurrence_zero_based": [
+          0,
+          2,
+          3,
+          6
+        ],
+        "selected_values": [
+          3,
+          1,
+          6,
+          5
+        ]
+      },
+      {
+        "even_word": [
+          10,
+          8,
+          6
+        ],
+        "word": [
+          3,
+          10,
+          1,
+          8,
+          7,
+          6,
+          5
+        ],
+        "occurrence_zero_based": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "selected_values": [
+          3,
+          1,
+          8,
+          7
+        ]
+      }
+    ],
+    "full_input_still_has_132_completion": {
+      "decision_message_id": 410,
+      "claim_status": "finite exact132-scaffold completion search; no universal existence proof",
+      "input": [
+        2,
+        1,
+        4,
+        3,
+        5,
+        6,
+        7
+      ],
+      "output": [
+        3,
+        2,
+        1,
+        4,
+        7,
+        6,
+        5,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "rho": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "root_state_count": 9,
+      "subproblem_count": 63,
+      "total_state_count": 127,
+      "subproblem_state_counts": {
+        "(0, 1, 1)": 1,
+        "(0, 1, 2)": 1,
+        "(0, 1, 3)": 1,
+        "(0, 1, 4)": 1,
+        "(0, 1, 5)": 1,
+        "(0, 1, 6)": 1,
+        "(0, 2, 1)": 1,
+        "(0, 2, 2)": 1,
+        "(0, 2, 3)": 1,
+        "(0, 2, 4)": 1,
+        "(0, 2, 5)": 1,
+        "(0, 3, 1)": 2,
+        "(0, 3, 2)": 2,
+        "(0, 3, 3)": 1,
+        "(0, 3, 4)": 1,
+        "(0, 4, 1)": 4,
+        "(0, 4, 2)": 2,
+        "(0, 4, 3)": 0,
+        "(0, 5, 1)": 7,
+        "(0, 5, 2)": 1,
+        "(0, 6, 1)": 8,
+        "(0, 7, 1)": 9,
+        "(1, 2, 1)": 1,
+        "(1, 2, 2)": 1,
+        "(1, 2, 3)": 1,
+        "(1, 2, 4)": 1,
+        "(1, 2, 5)": 1,
+        "(1, 3, 1)": 1,
+        "(1, 3, 2)": 1,
+        "(1, 3, 3)": 1,
+        "(1, 3, 4)": 1,
+        "(1, 4, 1)": 2,
+        "(1, 4, 2)": 2,
+        "(1, 4, 3)": 2,
+        "(1, 5, 1)": 5,
+        "(1, 5, 2)": 5,
+        "(1, 6, 1)": 7,
+        "(1, 7, 1)": 10,
+        "(2, 3, 1)": 1,
+        "(2, 3, 2)": 1,
+        "(2, 3, 3)": 1,
+        "(2, 3, 4)": 1,
+        "(2, 4, 1)": 1,
+        "(2, 4, 2)": 1,
+        "(2, 4, 3)": 1,
+        "(2, 5, 1)": 2,
+        "(2, 5, 2)": 2,
+        "(2, 6, 1)": 3,
+        "(2, 7, 1)": 5,
+        "(3, 4, 1)": 1,
+        "(3, 4, 2)": 1,
+        "(3, 4, 3)": 1,
+        "(3, 5, 1)": 1,
+        "(3, 5, 2)": 1,
+        "(3, 6, 1)": 2,
+        "(3, 7, 1)": 3,
+        "(4, 5, 1)": 1,
+        "(4, 5, 2)": 1,
+        "(4, 6, 1)": 1,
+        "(4, 7, 1)": 2,
+        "(5, 6, 1)": 1,
+        "(5, 7, 1)": 1,
+        "(6, 7, 1)": 1
+      },
+      "merges_attempted": 189,
+      "merges_rejected": 84,
+      "python": "3.11.2",
+      "elapsed_seconds": 0.02109192199714016,
+      "peak_rss_kib_linux": 17628,
+      "full_target_solved": false
+    }
+  },
+  "source_sha256": "47c88cc6d9440ffc7b3156f6da1ecd8d4097179fea9d62d0f8447482c44dc804",
+  "python": "3.11.2",
+  "elapsed_seconds": 0.032783426009700634,
+  "peak_rss_kib_linux": 17628
+}

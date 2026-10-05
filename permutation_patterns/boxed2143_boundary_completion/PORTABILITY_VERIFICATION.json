@@ -1,0 +1,66 @@
+{
+  "full_target_solved": false,
+  "public_helper_source_segments_identical": [
+    "standardize",
+    "interleave"
+  ],
+  "reviewer_code_unchanged": true,
+  "author_replays": [
+    {
+      "script": "check_boundary_completion.py",
+      "evidence": "boundary_comparison_m5.json",
+      "all_deterministic_fields_equal": true,
+      "original_evidence_sha256": "4d4f7bbd21ece7cdf155b2e1fee69a99a4eb7cbc941b64f60962f38816ec8e05",
+      "replayed_evidence_sha256": "3ce5eabd501a157fc7fa1969a3567ca86e173ae8acdd6ab94b8e063c110bc9c1"
+    },
+    {
+      "script": "probe_boundary_invariants.py",
+      "evidence": "boundary_invariant_failures.json",
+      "all_deterministic_fields_equal": true,
+      "original_evidence_sha256": "07cb173878a5704732c49e568afd1a78ac42d72f3c7c37e040248cec2b90ab9d",
+      "replayed_evidence_sha256": "ec5f4096fe141dd895d05a3eadd606d026917d2769b24d8af4c955b3296f5236"
+    },
+    {
+      "script": "check_root_adjacency.py",
+      "evidence": "root_adjacency_reproduction.json",
+      "all_deterministic_fields_equal": true,
+      "original_evidence_sha256": "6a73de06a6e358ff37c4af8c723fa89e1379ab1ab5dbe31f62758cad31026387",
+      "replayed_evidence_sha256": "f495c4ab7974f52b8bb6f0b517e596743eb76f85d46157cf8da2fcc4ef7f2a72"
+    }
+  ],
+  "independent_boundary_replay": {
+    "all_mathematical_fields_equal": true,
+    "metadata_excluded": [
+      "author_manifest_sha256",
+      "elapsed_seconds",
+      "peak_rss_kib_linux",
+      "seconds",
+      "source_files"
+    ],
+    "original_evidence_sha256": "f07e73b44f4b2ae9eaa8464a0a8ea4b5cfcec5c4b1f2eb515aa8a7dd985081c7",
+    "portable_evidence_sha256": "2af0ca86ab4f0ee9db0102b311e6a45ed12961684ff1fc174e91cfb1d197e1c1",
+    "counts": {
+      "input_permutations": 153,
+      "reached_subproblem_maps": 3385,
+      "all_valid_band_maps": 7415,
+      "generic_merge_controls": 8173,
+      "ordered_state_map_sha256": "b0d3c57d6ee50acde2059c812f1e6c3f88d71fbd514b86cb94ca71b1490c7150"
+    },
+    "public_author_manifest_sha256": "b192387f875b26ee939c57d83b69210e611282399385ffcf473a0087a2378081"
+  },
+  "note": "Only the independently accepted boundary and adjacent-root scopes are in this source version. The separate guard/signature-entropy claim is excluded pending its own check.",
+  "independent_root_adjacency_replay": {
+    "all_mathematical_fields_equal": true,
+    "metadata_excluded": [
+      "author_manifest_sha256",
+      "peak_rss_kib_linux",
+      "seconds",
+      "source_files"
+    ],
+    "original_evidence_sha256": "bb1b91f7e210c45a256c24050ccde68274241ee2a0ec7acaaa42a87c125a6211",
+    "portable_evidence_sha256": "a453f53f1380977ffe38f4991ce3c06fc7f20e99bc90a39d506b58f91a492f86",
+    "ordered_author_certificate_sha256": "d3d6ba74918896acd1f636cb1e3a9ef8d5f6e1be3e60965e24a231b3e36ce05c",
+    "complete_adjacent_occurrence_stream_sha256": "cc3fae108090890a8bcda0876a1affd3695769336e58f6d33ad9bef8577f0fe6",
+    "public_author_manifest_sha256": "b192387f875b26ee939c57d83b69210e611282399385ffcf473a0087a2378081"
+  }
+}

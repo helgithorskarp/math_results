@@ -1,0 +1,330 @@
+{
+  "author": "literature-researcher-2",
+  "checker": "literature-researcher-1",
+  "proof_sha256": "5faa0cd185933697a5538b158ce7bdf7902864f24a953ab57d77a293442d05da",
+  "author_manifest_sha256": "701abd4741fe00197befecf83ac7a9de05c2950342a6b3fc4ece705cb20fb9e1",
+  "source_files": {
+    "BOUNDARY_INTERFACE_LEMMA.md": {
+      "size": 10502,
+      "sha256": "5faa0cd185933697a5538b158ce7bdf7902864f24a953ab57d77a293442d05da"
+    },
+    "boundary_completion.py": {
+      "size": 5461,
+      "sha256": "7aa6c011e5ca3ea504d4b1b8d8fa9522ef1965a4022e7517f256219c77493836"
+    },
+    "check_boundary_completion.py": {
+      "size": 4700,
+      "sha256": "f2696e715088266d106307eb5e8dc2184d3308b349819ec842a84bde611748ac"
+    },
+    "probe_boundary_invariants.py": {
+      "size": 5720,
+      "sha256": "47c88cc6d9440ffc7b3156f6da1ecd8d4097179fea9d62d0f8447482c44dc804"
+    },
+    "boundary_comparison_m5.json": {
+      "size": 1293,
+      "sha256": "4d4f7bbd21ece7cdf155b2e1fee69a99a4eb7cbc941b64f60962f38816ec8e05"
+    },
+    "boundary_invariant_failures.json": {
+      "size": 8031,
+      "sha256": "07cb173878a5704732c49e568afd1a78ac42d72f3c7c37e040248cec2b90ab9d"
+    },
+    "definition_checker.py": {
+      "size": 4942,
+      "sha256": "c74ccd624c909386ad151947ae5a4f9c534b58602940ba39371e214d1e5b2149"
+    },
+    "completion_templates.py": {
+      "size": 5658,
+      "sha256": "6e166135821156020f72db76ada22601795134d5eb2409d63abb230a6f64091d"
+    }
+  },
+  "full_target_solved": false,
+  "input_permutations": 153,
+  "reached_subproblem_maps": 3385,
+  "all_valid_band_maps": 7415,
+  "ordered_state_map_sha256": "b0d3c57d6ee50acde2059c812f1e6c3f88d71fbd514b86cb94ca71b1490c7150",
+  "rows": [
+    {
+      "m": 1,
+      "inputs": 1,
+      "reached_maps": 1,
+      "all_valid_band_maps": 1
+    },
+    {
+      "m": 2,
+      "inputs": 2,
+      "reached_maps": 6,
+      "all_valid_band_maps": 10
+    },
+    {
+      "m": 3,
+      "inputs": 6,
+      "reached_maps": 42,
+      "all_valid_band_maps": 84
+    },
+    {
+      "m": 4,
+      "inputs": 24,
+      "reached_maps": 336,
+      "all_valid_band_maps": 720
+    },
+    {
+      "m": 5,
+      "inputs": 120,
+      "reached_maps": 3000,
+      "all_valid_band_maps": 6600
+    }
+  ],
+  "generic_merge_controls": 8173,
+  "avoiding_merges": 7331,
+  "rejected_merges": 842,
+  "adjacent_maximum_exact_candidates": [
+    {
+      "rho": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "word": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        6,
+        9,
+        8,
+        5
+      ],
+      "complete_occurrences": [
+        [
+          4,
+          5,
+          6,
+          7
+        ]
+      ]
+    },
+    {
+      "rho": [
+        2,
+        3,
+        4,
+        1
+      ],
+      "word": [
+        1,
+        4,
+        3,
+        6,
+        7,
+        8,
+        9,
+        2,
+        5
+      ],
+      "complete_occurrences": [
+        [
+          1,
+          2,
+          3,
+          8
+        ]
+      ]
+    }
+  ],
+  "smaller_adjacent_inputs": 33,
+  "local_band_all_six": [
+    {
+      "markers": [
+        6,
+        8,
+        10
+      ],
+      "word": [
+        3,
+        6,
+        1,
+        8,
+        7,
+        10,
+        5
+      ],
+      "complete_occurrences": [
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "markers": [
+        6,
+        10,
+        8
+      ],
+      "word": [
+        3,
+        6,
+        1,
+        10,
+        7,
+        8,
+        5
+      ],
+      "complete_occurrences": [
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "markers": [
+        8,
+        6,
+        10
+      ],
+      "word": [
+        3,
+        8,
+        1,
+        6,
+        7,
+        10,
+        5
+      ],
+      "complete_occurrences": [
+        [
+          0,
+          2,
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "markers": [
+        8,
+        10,
+        6
+      ],
+      "word": [
+        3,
+        8,
+        1,
+        10,
+        7,
+        6,
+        5
+      ],
+      "complete_occurrences": [
+        [
+          0,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          2,
+          5,
+          6
+        ]
+      ]
+    },
+    {
+      "markers": [
+        10,
+        6,
+        8
+      ],
+      "word": [
+        3,
+        10,
+        1,
+        6,
+        7,
+        8,
+        5
+      ],
+      "complete_occurrences": [
+        [
+          0,
+          2,
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "markers": [
+        10,
+        8,
+        6
+      ],
+      "word": [
+        3,
+        10,
+        1,
+        8,
+        7,
+        6,
+        5
+      ],
+      "complete_occurrences": [
+        [
+          0,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          2,
+          5,
+          6
+        ]
+      ]
+    }
+  ],
+  "valid_full_size5_word": [
+    1,
+    6,
+    3,
+    4,
+    7,
+    8,
+    9,
+    2,
+    5
+  ],
+  "valid_full_size7_word": [
+    3,
+    2,
+    1,
+    4,
+    7,
+    6,
+    5,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "python": "3.11.2",
+  "seconds": 4.621846886991989,
+  "peak_rss_kib_linux": 18320
+}
