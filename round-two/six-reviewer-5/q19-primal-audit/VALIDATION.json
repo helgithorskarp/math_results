@@ -1,0 +1,186 @@
+{
+  "actual_agent": "six-reviewer-5",
+  "role": "independent mathematical reviewer",
+  "status": "PASS",
+  "positive_replays": 4,
+  "actual_semantic_rejections": 44,
+  "distinct_semantic_types": 11,
+  "actual_preimport_source_rejections": 10,
+  "preimport_types": 5,
+  "fixed_math_child_timeout_seconds": 45,
+  "fixed_source_child_timeout_seconds": 20,
+  "native_threads": 1,
+  "serial_math_jobs": 1,
+  "whole_record_bytes": 11979,
+  "whole_record_sha256": "1ddf622a592e963a5f98a8b755a748c4fb3490f85671b5bf79d342411efc6aa7",
+  "files": [
+    {
+      "name": "COEFFICIENTS.json",
+      "bytes": 26316,
+      "sha256": "65f2b0a5170e0a7585d4892c33d72aca7e4479d0e3484dc98ee32b0ad27f1105"
+    },
+    {
+      "name": "PROOF.md",
+      "bytes": 9725,
+      "sha256": "8e4a34308569e2ed06cf90d2ce64c97c1e76352c664b70895588ab7350778f70"
+    },
+    {
+      "name": "README.md",
+      "bytes": 1272,
+      "sha256": "aae2c858c393866484644ed5539bc879f301c9693394a4e80cc9700139fc7cfc"
+    },
+    {
+      "name": "RECORD.json",
+      "bytes": 11979,
+      "sha256": "1ddf622a592e963a5f98a8b755a748c4fb3490f85671b5bf79d342411efc6aa7"
+    },
+    {
+      "name": "REVIEW.md",
+      "bytes": 5472,
+      "sha256": "18d9880b2e67b9c6550d3659d36b19c26ad1a3f09a63139fe458a683f2dc0b2e"
+    },
+    {
+      "name": "SHA256SUMS",
+      "bytes": 698,
+      "sha256": "668f10ff3720c1d7f0e8d1414a82f02dce4bc3cbcc490448d1ba18458fd20c82"
+    },
+    {
+      "name": "SOURCE.json",
+      "bytes": 1479,
+      "sha256": "42255830a097221d1016d70b2f349845b0bb9191fb4b911596bff7e0c21fb042"
+    },
+    {
+      "name": "literal.py",
+      "bytes": 2401,
+      "sha256": "c208169e6b95b2c2eb8892a07233a4fb0e4d08e49d46291b35d0dd5ccece39ce"
+    },
+    {
+      "name": "primal.py",
+      "bytes": 25094,
+      "sha256": "08a8954fcae6b48868ff53aa7a247180b04af29babff8de0c3859da33da7565e"
+    },
+    {
+      "name": "validate.py",
+      "bytes": 3356,
+      "sha256": "8ab87c039d279da4e7936cf1a568ed98336445ba4898860b5ee7cf85c9818c44"
+    }
+  ],
+  "source_bytes": 87792,
+  "source_manifest_sha256": "668f10ff3720c1d7f0e8d1414a82f02dce4bc3cbcc490448d1ba18458fd20c82",
+  "positive_runs": [
+    {
+      "label": "local",
+      "cumulative_child_max_rss_kib": 75644,
+      "damage": null,
+      "exit_code": 0,
+      "mode": "normal",
+      "seconds": 13.26180866100185,
+      "whole_record_bytes": 11979,
+      "whole_record_sha256": "1ddf622a592e963a5f98a8b755a748c4fb3490f85671b5bf79d342411efc6aa7"
+    },
+    {
+      "label": "local",
+      "cumulative_child_max_rss_kib": 75844,
+      "damage": null,
+      "exit_code": 0,
+      "mode": "optimized",
+      "seconds": 11.872367632997339,
+      "whole_record_bytes": 11979,
+      "whole_record_sha256": "1ddf622a592e963a5f98a8b755a748c4fb3490f85671b5bf79d342411efc6aa7"
+    },
+    {
+      "label": "cold",
+      "cumulative_child_max_rss_kib": 75740,
+      "damage": null,
+      "exit_code": 0,
+      "mode": "normal",
+      "seconds": 14.66567162299907,
+      "whole_record_bytes": 11979,
+      "whole_record_sha256": "1ddf622a592e963a5f98a8b755a748c4fb3490f85671b5bf79d342411efc6aa7"
+    },
+    {
+      "label": "cold",
+      "cumulative_child_max_rss_kib": 75844,
+      "damage": null,
+      "exit_code": 0,
+      "mode": "optimized",
+      "seconds": 12.479327746004856,
+      "whole_record_bytes": 11979,
+      "whole_record_sha256": "1ddf622a592e963a5f98a8b755a748c4fb3490f85671b5bf79d342411efc6aa7"
+    }
+  ],
+  "preimport_rejections": [
+    {
+      "file": "primal.py",
+      "mode": "normal",
+      "exit_code": 1,
+      "rejection": "ValueError: whole source seal before mathematical imports: primal.py",
+      "seconds": 0.112582026005839
+    },
+    {
+      "file": "primal.py",
+      "mode": "optimized",
+      "exit_code": 1,
+      "rejection": "ValueError: whole source seal before mathematical imports: primal.py",
+      "seconds": 0.38640543400106253
+    },
+    {
+      "file": "literal.py",
+      "mode": "normal",
+      "exit_code": 1,
+      "rejection": "ValueError: whole source seal before mathematical imports: literal.py",
+      "seconds": 0.08808359099930385
+    },
+    {
+      "file": "literal.py",
+      "mode": "optimized",
+      "exit_code": 1,
+      "rejection": "ValueError: whole source seal before mathematical imports: literal.py",
+      "seconds": 0.37288302299566567
+    },
+    {
+      "file": "COEFFICIENTS.json",
+      "mode": "normal",
+      "exit_code": 1,
+      "rejection": "ValueError: whole source seal before mathematical imports: COEFFICIENTS.json",
+      "seconds": 0.05138677899958566
+    },
+    {
+      "file": "COEFFICIENTS.json",
+      "mode": "optimized",
+      "exit_code": 1,
+      "rejection": "ValueError: whole source seal before mathematical imports: COEFFICIENTS.json",
+      "seconds": 0.22785884099721443
+    },
+    {
+      "file": "SOURCE.json",
+      "mode": "normal",
+      "exit_code": 1,
+      "rejection": "ValueError: whole source seal before mathematical imports: SOURCE.json",
+      "seconds": 0.05658954699902097
+    },
+    {
+      "file": "SOURCE.json",
+      "mode": "optimized",
+      "exit_code": 1,
+      "rejection": "ValueError: whole source seal before mathematical imports: SOURCE.json",
+      "seconds": 0.2157082259946037
+    },
+    {
+      "file": "RECORD.json",
+      "mode": "normal",
+      "exit_code": 1,
+      "rejection": "ValueError: whole source seal before mathematical imports: RECORD.json",
+      "seconds": 0.0512086390008335
+    },
+    {
+      "file": "RECORD.json",
+      "mode": "optimized",
+      "exit_code": 1,
+      "rejection": "ValueError: whole source seal before mathematical imports: RECORD.json",
+      "seconds": 0.24811866699747043
+    }
+  ],
+  "math_trust": "Ordinary UNFORMALIZED exact finite reconstruction and all-real bridges; no public source or graph delivery yet",
+  "scope": "Paid original primary-packet mathematical validation; ordinary UNFORMALIZED. Public integrity is checked separately."
+}
