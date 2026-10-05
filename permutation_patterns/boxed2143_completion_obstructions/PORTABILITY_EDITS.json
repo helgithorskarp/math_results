@@ -1,0 +1,51 @@
+[
+  {
+    "scope": "simple_root",
+    "checker": "check_theo_simple_root.py",
+    "original": {
+      "sha256": "77d1266598edd589739421f671e60ebd930b6fe3248186f18ed5a32661704950",
+      "bytes": 5689
+    },
+    "portable": {
+      "sha256": "1d205d3930089d0112620e320afecb3fd2c85e8f50e9fcba4a3a87de7241a839",
+      "bytes": 5656
+    },
+    "exact_replacement": [
+      "packet = base / \"received/theo_simple_root_v1\"",
+      "packet = base"
+    ],
+    "all_other_checker_bytes_unchanged": true
+  },
+  {
+    "scope": "signed_rectangle",
+    "checker": "check_theo_bruhat.py",
+    "original": {
+      "sha256": "63c4c3507311922920eea359b34a4c8b8592da13c167279ca045bb6f526eaea0",
+      "bytes": 8608
+    },
+    "portable": {
+      "sha256": "0b7f2ac3846ac0cc66cdf689a9aab6c56f7ce3a67abdbda41725429933bab7c3",
+      "bytes": 8580
+    },
+    "exact_replacement": [
+      "packet = base / 'received/theo_bruhat_v1'",
+      "packet = base"
+    ],
+    "all_other_checker_bytes_unchanged": true
+  },
+  {
+    "scope": "simple_root",
+    "helper": "check_theo_arbitrary_inflation.py",
+    "original_full_helper": {
+      "sha256": "0b726d924047edfb404de8f5a3c5dec6fe4e39a6a73977926bdc160b634defd3",
+      "bytes": 13408
+    },
+    "extracted_function_sha256": "9e9dc7bb777c5b67b2a78bc21e3f417a8d7d24138ce73f211eab3811ac415ae4",
+    "portable_helper": {
+      "sha256": "185d1bf8b075574e7f732f47708cb0c4b42c919906e414c20b6880827a46f565",
+      "bytes": 407
+    },
+    "mathematical_function_bytes_unchanged": true,
+    "removed_scope": "unused imports, inflation checks and command entry point"
+  }
+]

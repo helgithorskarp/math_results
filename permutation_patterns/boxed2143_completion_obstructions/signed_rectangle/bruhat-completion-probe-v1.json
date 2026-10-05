@@ -1,0 +1,126 @@
+{
+  "actor": "literature-researcher-4",
+  "checker": null,
+  "decision_message_id": 410,
+  "full_target_solved": false,
+  "status": "new exact partial reduction/mechanism test awaiting separate review",
+  "graph_controls": {
+    "complete_permutations_through7": 5914,
+    "transpositions_through6": 12164,
+    "quadruples_checked": 187824,
+    "signed_graph_stream_sha256": "1428ff8ce38bc1c45fd5374cff4b140dca3b396096398e0e93d0cb3e2ece9249",
+    "all_K4_relative_patterns": {
+      "2143": 2555,
+      "2413": 2555,
+      "3142": 2555,
+      "3412": 2555
+    }
+  },
+  "ascent_probe": {
+    "scope_rows": [
+      {
+        "m": 2,
+        "complete_input_scaffold_pairs": 2,
+        "complete_length": true
+      },
+      {
+        "m": 3,
+        "complete_input_scaffold_pairs": 7,
+        "complete_length": false
+      }
+    ],
+    "input_scaffold_pairs_tested": 9,
+    "nonavoiding_pairs_tested": 1,
+    "strict_ascent_failure": {
+      "m": 3,
+      "pi": [
+        2,
+        3,
+        1
+      ],
+      "rho": [
+        1,
+        2
+      ],
+      "word": [
+        3,
+        2,
+        5,
+        4,
+        1
+      ],
+      "down_degree": 4,
+      "negative_edges_zero_based_positions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "boxed_occurrences": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "all_even_transposition_neighbors": [
+        {
+          "scaffold_positions_swapped": [
+            0,
+            1
+          ],
+          "rho": [
+            2,
+            1
+          ],
+          "word": [
+            3,
+            4,
+            5,
+            2,
+            1
+          ],
+          "down_degree": 4,
+          "occurrences": []
+        }
+      ],
+      "all_scaffold_scores_for_this_input": [
+        {
+          "rho": [
+            1,
+            2
+          ],
+          "down_degree": 4,
+          "avoids": false
+        },
+        {
+          "rho": [
+            2,
+            1
+          ],
+          "down_degree": 4,
+          "avoids": true
+        }
+      ],
+      "is_global_down_degree_maximizer_for_input": true
+    }
+  },
+  "python": "3.11.2",
+  "seconds": 1.4786757760011824,
+  "peak_rss_kib_linux": 17956,
+  "processes": 1,
+  "native_threads": 1
+}
