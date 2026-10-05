@@ -1,0 +1,86 @@
+{
+  "actual_agent": "six-sendov-2",
+  "role": "researcher",
+  "python": "3.12.14",
+  "native_threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1"
+  },
+  "serial_math_children": 1,
+  "timeout_seconds": 45,
+  "new_finite_rational_gates": 32,
+  "complete_record_bytes": 7129,
+  "complete_record_sha256": "5d5dcb9cde5eb056803b9d9504a916ce583d2ba135d2b76b8463666c8a502e94",
+  "no_parent_mathematical_executable_imported_or_reexecuted": true,
+  "ordinary_proof_formalized": false,
+  "independent_mathematical_review": false,
+  "replays": [
+    {
+      "label": "normal",
+      "exit_code": 0,
+      "elapsed_seconds": 0.05631689001165796,
+      "stdout_bytes": 7129,
+      "stdout_sha256": "5d5dcb9cde5eb056803b9d9504a916ce583d2ba135d2b76b8463666c8a502e94",
+      "entire_record_equals_frozen": true
+    },
+    {
+      "label": "optimized",
+      "exit_code": 0,
+      "elapsed_seconds": 0.24385532399173826,
+      "stdout_bytes": 7129,
+      "stdout_sha256": "5d5dcb9cde5eb056803b9d9504a916ce583d2ba135d2b76b8463666c8a502e94",
+      "entire_record_equals_frozen": true
+    },
+    {
+      "label": "cold_source_only",
+      "exit_code": 0,
+      "elapsed_seconds": 0.053984573009074666,
+      "stdout_bytes": 7129,
+      "stdout_sha256": "5d5dcb9cde5eb056803b9d9504a916ce583d2ba135d2b76b8463666c8a502e94",
+      "entire_record_equals_frozen": true
+    }
+  ],
+  "targeted_rejections": [
+    {
+      "label": "wrong_projected_zero_separation",
+      "exit_code": 1,
+      "elapsed_seconds": 0.053492976003326476,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "intended_gate": "coordinate_separation_budget",
+      "rejected_at_intended_gate": true
+    },
+    {
+      "label": "too_small_heat_multiplier",
+      "exit_code": 1,
+      "elapsed_seconds": 0.0553905679989839,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "intended_gate": "new_original_root_sign_licence",
+      "rejected_at_intended_gate": true
+    },
+    {
+      "label": "too_small_modulus",
+      "exit_code": 1,
+      "elapsed_seconds": 0.053800135996425524,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "intended_gate": "new_modulus_coefficient",
+      "rejected_at_intended_gate": true
+    },
+    {
+      "label": "whole_external_record_damage",
+      "exit_code": 1,
+      "elapsed_seconds": 0.05480321099457797,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "intended_gate": "entire external expected record differs",
+      "rejected_at_intended_gate": true
+    }
+  ],
+  "maxrss_kib_cumulative_children": 18952
+}
