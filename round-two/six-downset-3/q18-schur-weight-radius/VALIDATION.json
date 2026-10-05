@@ -1,0 +1,471 @@
+{
+  "actual_agent": "six-downset-3",
+  "role": "researcher",
+  "UTC": "2026-10-05T02:50:05.778225+00:00",
+  "status": "COMPLETE author delivery observations; ordinary proofs unformalized and independently unreviewed",
+  "tested_interpreter": {
+    "implementation": "CPython",
+    "version": "3.11.2",
+    "platform": "Linux"
+  },
+  "positive": {
+    "actual_agent": "six-downset-3",
+    "role": "researcher",
+    "UTC": "2026-10-05T02:42:56.382814+00:00",
+    "runs": [
+      {
+        "mode": "normal",
+        "seconds": 1.2873324489992228,
+        "bytes": 35759,
+        "SHA256": "b3a7a2d8560fd42cfead00e59cca9fb8fb4db92f8e378d591374e4da2d9f7fc3"
+      },
+      {
+        "mode": "optimized",
+        "seconds": 2.288287080002192,
+        "bytes": 35759,
+        "SHA256": "b3a7a2d8560fd42cfead00e59cca9fb8fb4db92f8e378d591374e4da2d9f7fc3"
+      },
+      {
+        "mode": "cold-isolated",
+        "seconds": 1.248090029002924,
+        "bytes": 35759,
+        "SHA256": "b3a7a2d8560fd42cfead00e59cca9fb8fb4db92f8e378d591374e4da2d9f7fc3"
+      }
+    ],
+    "whole_three_records_and_expected_equal": true,
+    "peak_child_RSS_KiB": 21580,
+    "fixed_child_seconds": 45,
+    "serial_native_threads": 1,
+    "old_standalone_or_original_candidate_PSD_checker_run": false,
+    "source_snapshot_SHA256": "0119fd25acd982fb7bcbd1c9f06b787bed1d82c102ff8dbfca74581c6b11993b",
+    "independent_review_or_formal_proof": false
+  },
+  "semantic_rejection_count": 40,
+  "source_before_math_import_rejection_count": 8,
+  "adverse_receipts": [
+    {
+      "phase": "semantic",
+      "UTC": "2026-10-05T02:47:34.669170+00:00",
+      "count": 20,
+      "receipt_SHA256": "96d3ffd338d457e0c16673b0810764992658a1ff605852c71d1a49c342caa7c9",
+      "peak_child_RSS_KiB": 22048
+    },
+    {
+      "phase": "semantic",
+      "UTC": "2026-10-05T02:48:09.504325+00:00",
+      "count": 20,
+      "receipt_SHA256": "0711c6608a0798b629fba5465ec9a5b966df3ca21cf09ec1a4640686dce9c482",
+      "peak_child_RSS_KiB": 22228
+    },
+    {
+      "phase": "source",
+      "UTC": "2026-10-05T02:48:28.871150+00:00",
+      "count": 8,
+      "receipt_SHA256": "b1451113628be33cf06bf58b128a2e90493ec1cbedbd8dc6c1c9a1d5e053df9d",
+      "peak_child_RSS_KiB": 19860
+    }
+  ],
+  "designated_rejections": [
+    {
+      "case": "candidate-scale",
+      "mode": "normal",
+      "gate": "coefficient denominator guard: CANDIDATE.json",
+      "seconds": 0.055424532998586074,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "candidate-scale",
+      "mode": "optimized",
+      "gate": "coefficient denominator guard: CANDIDATE.json",
+      "seconds": 0.20455511799809756,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "star-kernel",
+      "mode": "normal",
+      "gate": "three whole original star-kernel vectors",
+      "seconds": 0.09362887099996442,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "star-kernel",
+      "mode": "optimized",
+      "gate": "three whole original star-kernel vectors",
+      "seconds": 0.2400183889985783,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "quarter-original-vector",
+      "mode": "normal",
+      "gate": "ALL 58 fresh quarter-weight original vector coordinates",
+      "seconds": 0.1006671360009932,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "quarter-original-vector",
+      "mode": "optimized",
+      "gate": "ALL 58 fresh quarter-weight original vector coordinates",
+      "seconds": 0.3433968020035536,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "comparison-cap",
+      "mode": "normal",
+      "gate": "fresh aggregate exactly decodes published quarter-weight DATA",
+      "seconds": 0.09999672299454687,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "comparison-cap",
+      "mode": "optimized",
+      "gate": "fresh aggregate exactly decodes published quarter-weight DATA",
+      "seconds": 0.25132519000180764,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "individual-NS-entry",
+      "mode": "normal",
+      "gate": "ALL 81 exact dual kernel rows",
+      "seconds": 0.22744152499944903,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "individual-NS-entry",
+      "mode": "optimized",
+      "gate": "ALL 81 exact dual kernel rows",
+      "seconds": 0.3736762320040725,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "dual-nullrow",
+      "mode": "normal",
+      "gate": "ALL 81 exact dual kernel rows",
+      "seconds": 0.332012892999046,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "dual-nullrow",
+      "mode": "optimized",
+      "gate": "ALL 81 exact dual kernel rows",
+      "seconds": 0.4125188079997315,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "dual-physical-action",
+      "mode": "normal",
+      "gate": "EVERY new exact physical dual action coordinate",
+      "seconds": 0.3960535280057229,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "dual-physical-action",
+      "mode": "optimized",
+      "gate": "EVERY new exact physical dual action coordinate",
+      "seconds": 0.515300062004826,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "dual-factor-position",
+      "mode": "normal",
+      "gate": "ALL new dual factor identity positions",
+      "seconds": 0.5779312660015421,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "dual-factor-position",
+      "mode": "optimized",
+      "gate": "ALL new dual factor identity positions",
+      "seconds": 0.5209936940009356,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "row-census",
+      "mode": "normal",
+      "gate": "ALL58 literal original disjoint bad-neighbor counts",
+      "seconds": 0.47308649500337197,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "row-census",
+      "mode": "optimized",
+      "gate": "ALL58 literal original disjoint bad-neighbor counts",
+      "seconds": 0.8881628149974858,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "row-kernel",
+      "mode": "normal",
+      "gate": "ALL58 original aggregate coordinates have zero sum",
+      "seconds": 0.478269495004497,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "row-kernel",
+      "mode": "optimized",
+      "gate": "ALL58 original aggregate coordinates have zero sum",
+      "seconds": 0.6976055449995329,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "basic-primal",
+      "mode": "normal",
+      "gate": "NEW full original zero-sum primal energy equality",
+      "seconds": 0.5567974930017954,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "basic-primal",
+      "mode": "optimized",
+      "gate": "NEW full original zero-sum primal energy equality",
+      "seconds": 0.9556137149993447,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "bcW-column-support",
+      "mode": "normal",
+      "gate": "ALL nine actual bcW original column capacities",
+      "seconds": 0.7986512269999366,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "bcW-column-support",
+      "mode": "optimized",
+      "gate": "ALL nine actual bcW original column capacities",
+      "seconds": 1.1052831560009508,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "coupling-slope",
+      "mode": "normal",
+      "gate": "fixed bcW contribution removes162 apparent movable positive-row slots",
+      "seconds": 0.4922283889973187,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "coupling-slope",
+      "mode": "optimized",
+      "gate": "fixed bcW contribution removes162 apparent movable positive-row slots",
+      "seconds": 0.6390970260035829,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "coupled-primal",
+      "mode": "normal",
+      "gate": "new exact whole original primal/kernel/coupling/energy equality",
+      "seconds": 0.48505046300124377,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "coupled-primal",
+      "mode": "optimized",
+      "gate": "new exact whole original primal/kernel/coupling/energy equality",
+      "seconds": 0.6268630089980434,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "root-isolation",
+      "mode": "normal",
+      "gate": "NEW exact strict coupled-threshold isolation in original M units",
+      "seconds": 0.6989109009955428,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "root-isolation",
+      "mode": "optimized",
+      "gate": "NEW exact strict coupled-threshold isolation in original M units",
+      "seconds": 0.6320278170023812,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "extended-floor-claim",
+      "mode": "normal",
+      "gate": "CLAIM licence/scope mismatch",
+      "seconds": 0.6557434499991359,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "extended-floor-claim",
+      "mode": "optimized",
+      "gate": "CLAIM licence/scope mismatch",
+      "seconds": 0.7768754209973849,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "signed-weight-claim",
+      "mode": "normal",
+      "gate": "CLAIM licence/scope mismatch",
+      "seconds": 0.5165794799977448,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "signed-weight-claim",
+      "mode": "optimized",
+      "gate": "CLAIM licence/scope mismatch",
+      "seconds": 0.6681055939989164,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "original-distance-claim",
+      "mode": "normal",
+      "gate": "CLAIM licence/scope mismatch",
+      "seconds": 0.6747743830055697,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "original-distance-claim",
+      "mode": "optimized",
+      "gate": "CLAIM licence/scope mismatch",
+      "seconds": 0.6924812369979918,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "expected-root-coefficient",
+      "mode": "normal",
+      "gate": "whole EXPECTED semantic record mismatch",
+      "seconds": 0.49935256200114964,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "expected-root-coefficient",
+      "mode": "optimized",
+      "gate": "whole EXPECTED semantic record mismatch",
+      "seconds": 0.681357178997132,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "expected-coordinate-omission",
+      "mode": "normal",
+      "gate": "whole EXPECTED semantic record mismatch",
+      "seconds": 0.6812574949944974,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "expected-coordinate-omission",
+      "mode": "optimized",
+      "gate": "whole EXPECTED semantic record mismatch",
+      "seconds": 0.7309735699964222,
+      "returncode": 2,
+      "source_checked_before_math_import": false
+    },
+    {
+      "case": "producer-before-import",
+      "mode": "normal",
+      "gate": "source bytes mismatch: aggregate.py",
+      "seconds": 0.06356233399856137,
+      "returncode": 2,
+      "source_checked_before_math_import": true
+    },
+    {
+      "case": "producer-before-import",
+      "mode": "optimized",
+      "gate": "source bytes mismatch: aggregate.py",
+      "seconds": 0.20996033900155453,
+      "returncode": 2,
+      "source_checked_before_math_import": true
+    },
+    {
+      "case": "proof-before-import",
+      "mode": "normal",
+      "gate": "source bytes mismatch: PROOF.md",
+      "seconds": 0.06397926800127607,
+      "returncode": 2,
+      "source_checked_before_math_import": true
+    },
+    {
+      "case": "proof-before-import",
+      "mode": "optimized",
+      "gate": "source bytes mismatch: PROOF.md",
+      "seconds": 0.22786561599787092,
+      "returncode": 2,
+      "source_checked_before_math_import": true
+    },
+    {
+      "case": "omitted-producer-pin",
+      "mode": "normal",
+      "gate": "source file coverage mismatch",
+      "seconds": 0.05510662499727914,
+      "returncode": 2,
+      "source_checked_before_math_import": true
+    },
+    {
+      "case": "omitted-producer-pin",
+      "mode": "optimized",
+      "gate": "source file coverage mismatch",
+      "seconds": 0.1974553480031318,
+      "returncode": 2,
+      "source_checked_before_math_import": true
+    },
+    {
+      "case": "unexpected-source",
+      "mode": "normal",
+      "gate": "unexpected source file",
+      "seconds": 0.05295872699934989,
+      "returncode": 2,
+      "source_checked_before_math_import": true
+    },
+    {
+      "case": "unexpected-source",
+      "mode": "optimized",
+      "gate": "unexpected source file",
+      "seconds": 0.2458055519964546,
+      "returncode": 2,
+      "source_checked_before_math_import": true
+    }
+  ],
+  "largest_observed_child_seconds": 2.288287080002192,
+  "largest_observed_child_RSS_KiB": 22228,
+  "process_scope": "one CPU, two GiB, 128 tasks; native threads one and children serial",
+  "fixed_child_guard_seconds": 45,
+  "batch_outer_guard_seconds": 60,
+  "ALL_positive_complete35759_byte_records_equal_each_other_and_EXPECTED": true,
+  "source_snapshot0_SHA256": "0119fd25acd982fb7bcbd1c9f06b787bed1d82c102ff8dbfca74581c6b11993b",
+  "snapshot0_to_final_only_VALIDATION_JSON_and_its_SOURCE_pin_changed": true,
+  "other20_pinned_files_including_all_producers_DATA_proofs_EXPECTED_unchanged": true,
+  "semantic_copies_repin_SOURCE_and_require_exact_mathematical_or_scope_gate": true,
+  "source_controls_proved_import_marker_absent": true,
+  "crash_timeout_memorykill_unknown_or_wrong_gate_counted_as_rejection": false,
+  "original_candidate_PSD_program_or_factor_replayed": false,
+  "peer_executable_DATA_factor_or_verdict_imported": false,
+  "this_delivers_previously_private_mathematics_not_new_mathematical_progress_by_packaging": true,
+  "ordinary_completeness_and_entire_real_bridges_paid_by_PROOF_documents_not_this_finite_execution": true,
+  "formal_proof_or_independent_review": false
+}
