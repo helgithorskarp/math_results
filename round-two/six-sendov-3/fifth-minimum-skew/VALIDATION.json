@@ -1,0 +1,356 @@
+{
+  "agent": "six-sendov-3",
+  "all_cases_passed": true,
+  "cases": [
+    {
+      "case": "local",
+      "exit": 0,
+      "expected_rejection": null,
+      "optimized": false,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 9.580416635995789,
+      "sha256": "2b71e8e85ebf5b400a0f67ee3dae9d4c859e05700ac718daa3565c8e71b0cb9c",
+      "whole_bytes": 103218
+    },
+    {
+      "case": "local-O",
+      "exit": 0,
+      "expected_rejection": null,
+      "optimized": true,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 11.146672875998775,
+      "sha256": "2b71e8e85ebf5b400a0f67ee3dae9d4c859e05700ac718daa3565c8e71b0cb9c",
+      "whole_bytes": 103218
+    },
+    {
+      "case": "cold",
+      "exit": 0,
+      "expected_rejection": null,
+      "optimized": false,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 8.673725294000178,
+      "sha256": "2b71e8e85ebf5b400a0f67ee3dae9d4c859e05700ac718daa3565c8e71b0cb9c",
+      "whole_bytes": 103218
+    },
+    {
+      "case": "cold-O",
+      "exit": 0,
+      "expected_rejection": null,
+      "optimized": true,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 9.740387762001774,
+      "sha256": "2b71e8e85ebf5b400a0f67ee3dae9d4c859e05700ac718daa3565c8e71b0cb9c",
+      "whole_bytes": 103218
+    },
+    {
+      "case": "math-wrong-anchor",
+      "exit": 1,
+      "expected_rejection": "BASELINE all4 active half-normals below10",
+      "optimized": false,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 4.422903522005072
+    },
+    {
+      "case": "math-omitted-beta",
+      "exit": 1,
+      "expected_rejection": "ALL4 repaired half-normals through10",
+      "optimized": true,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 8.486319983996509
+    },
+    {
+      "case": "math-outward-tau",
+      "exit": 1,
+      "expected_rejection": "ALL4 repaired half-normals through10",
+      "optimized": false,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 8.28771249899728
+    },
+    {
+      "case": "math-wrong-J0",
+      "exit": 1,
+      "expected_rejection": "ENTIRE fresh zero-skew fifth scalar",
+      "optimized": true,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 8.608059409998532
+    },
+    {
+      "case": "math-wrong-first-jet",
+      "exit": 1,
+      "expected_rejection": "WHOLE selected small real first jet",
+      "optimized": false,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 7.996884519001469
+    },
+    {
+      "case": "math-missing-h-axis",
+      "exit": 1,
+      "expected_rejection": "WHOLE12 sharp rank-one quadratic identity",
+      "optimized": true,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 8.580994606003514
+    },
+    {
+      "case": "math-missing-real-cross",
+      "exit": 1,
+      "expected_rejection": "WHOLE12 sharp rank-one quadratic identity",
+      "optimized": false,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 8.243889196004602
+    },
+    {
+      "case": "math-doubled-gamma",
+      "exit": 1,
+      "expected_rejection": "WHOLE12 sharp rank-one quadratic identity",
+      "optimized": true,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 10.942820545998984
+    },
+    {
+      "case": "math-wrong-cubic-sign",
+      "exit": 1,
+      "expected_rejection": "WHOLE12 exact cubic pair elimination",
+      "optimized": false,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 9.886847936999402
+    },
+    {
+      "case": "math-missing-eighth-moment",
+      "exit": 1,
+      "expected_rejection": "RECORD: all eight Newton slots",
+      "optimized": true,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 9.600934474001406
+    },
+    {
+      "case": "math-dropped-critical-mass",
+      "exit": 1,
+      "expected_rejection": "ALL9 full original equation",
+      "optimized": true,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 0.7064488109972444
+    },
+    {
+      "case": "fixture-missing-ninth-root",
+      "expected_rejection": "RECORD: all nine original slots",
+      "passed": true
+    },
+    {
+      "case": "fixture-missing-eighth-moment",
+      "expected_rejection": "RECORD: all eight Newton slots",
+      "passed": true
+    },
+    {
+      "case": "fixture-short-half-normal",
+      "expected_rejection": "RECORD: entire tenth-degree root and half-normal jets",
+      "passed": true
+    },
+    {
+      "case": "fixture-false-review",
+      "expected_rejection": "RECORD: trust boundary",
+      "passed": true
+    },
+    {
+      "case": "fixture-formalized-bridge",
+      "expected_rejection": "RECORD: trust boundary",
+      "passed": true
+    },
+    {
+      "case": "fixture-missing-real-map",
+      "expected_rejection": "RECORD: whole field map whole_residual",
+      "passed": true
+    },
+    {
+      "case": "fixture-false-differential",
+      "expected_rejection": "RECORD: all twelve variables, pair identity and cubic differential",
+      "passed": true
+    },
+    {
+      "case": "fixture-nonzero-residual",
+      "expected_rejection": "RECORD: mathematical equalities precede digests",
+      "passed": true
+    },
+    {
+      "case": "fixture-wrong-fifth",
+      "expected_rejection": "RECORD: complete generated mathematical maps",
+      "passed": true
+    },
+    {
+      "case": "fixture-omitted-sign",
+      "expected_rejection": "RECORD: entire rational sign census",
+      "passed": true
+    },
+    {
+      "case": "scope-degree",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "scope-original_roots",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "scope-critical_slots",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "scope-complex_coefficients",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "scope-all_critical_multiplicities_and_collisions",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "scope-original_root_domain",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "scope-marked_root",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "scope-reciprocal_zero_denominator",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "scope-objective",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "scope-normal_convention",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "scope-minimum_domain",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "scope-collar",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "scope-fourth_excess_coverage",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "scope-fifth_band_coverage",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "scope-exact_fifth_endpoint_J0_claimed",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "scope-global_interior_FIRST_claimed",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "scope-effective_radius_claimed",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "scope-ordinary_analytic_bridges_outside_exact_kernel",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "scope-independent_review_of_new_child",
+      "expected_rejection": "SCOPE: exact quantified declaration",
+      "passed": true
+    },
+    {
+      "case": "source-missing-kernel",
+      "exit": 1,
+      "expected_rejection": "SOURCE_SEAL:",
+      "optimized": false,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 0.07840320700051961
+    },
+    {
+      "case": "source-mutated-kernel",
+      "exit": 1,
+      "expected_rejection": "SOURCE_SEAL:",
+      "optimized": true,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 0.3460575669960235
+    },
+    {
+      "case": "source-malformed-seal",
+      "exit": 1,
+      "expected_rejection": "SOURCE_SEAL:",
+      "optimized": false,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 0.08416874199610902
+    },
+    {
+      "case": "source-mutated-fixture",
+      "exit": 1,
+      "expected_rejection": "SOURCE_SEAL:",
+      "optimized": true,
+      "passed": true,
+      "peak_kib": 42504,
+      "seconds": 0.36189337800169596
+    }
+  ],
+  "complete_record_mutation_rejections": 10,
+  "expected_record": {
+    "bytes": 103218,
+    "sha256": "2b71e8e85ebf5b400a0f67ee3dae9d4c859e05700ac718daa3565c8e71b0cb9c"
+  },
+  "full_byte_replays": 4,
+  "independent_review": false,
+  "mathematical_children_serial": true,
+  "mathematical_producer_rejections": 11,
+  "maximum_child_seconds": 11.146672875998775,
+  "native_threads": {
+    "BLIS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "ordinary_analytic_bridges_outside_exact_kernel": true,
+  "peak_child_kib": 42504,
+  "preimport_source_rejections": 4,
+  "resource_limit_hit": false,
+  "role": "researcher",
+  "scope_checks_and_source_digests_are_not_proofs": true,
+  "scope_declaration_rejections": 19,
+  "timeout_seconds_per_child": 45
+}

@@ -1,0 +1,118 @@
+"""Stdlib pre-import seal, exact producer, complete-byte and scope gates.
+
+These are finite-support consistency checks. No analytic theorem is
+proved by a scope declaration, a source digest or an expected record.
+"""
+from pathlib import Path
+from hashlib import sha256
+import argparse, json, os, sys
+
+D = Path(__file__).resolve().parent
+THREADS = ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS",
+           "BLIS_NUM_THREADS", "VECLIB_MAXIMUM_THREADS", "NUMEXPR_NUM_THREADS")
+
+def need(ok, message):
+    if not ok:
+        raise ValueError(message)
+
+SCOPE = {
+    "degree": 9, "original_roots": 9, "critical_slots": 8,
+    "complex_coefficients": True, "all_critical_multiplicities_and_collisions": True,
+    "original_root_domain": "closed unit disk",
+    "marked_root": "actual a=1-eta>0", "reciprocal_zero_denominator": "infinity",
+    "objective": "FIRST power, sum of eight positive reciprocal distances",
+    "normal_convention": "(abs(Z)^2-1)/2, four independent physical half-normals",
+    "minimum_domain": "all actual complex degree-nine disk-root polynomials",
+    "collar": "existential, common on each fixed finite parameter interval",
+    "fourth_excess_coverage": "every fixed finite D>=0, all Delta in [0,D]",
+    "fifth_band_coverage": "every compact interval strictly above J0",
+    "exact_fifth_endpoint_J0_claimed": False,
+    "global_interior_FIRST_claimed": False, "effective_radius_claimed": False,
+    "ordinary_analytic_bridges_outside_exact_kernel": True,
+    "independent_review_of_new_child": False,
+}
+
+def check_scope(scope):
+    need(type(scope) is dict and scope == SCOPE, "SCOPE: exact quantified declaration")
+    for key, value in SCOPE.items():
+        need(type(scope[key]) is type(value), "SCOPE: exact scalar type " + key)
+
+def source_gate():
+    try:
+        manifest = json.loads((D / "SOURCE.json").read_text())
+        pins = manifest["preimport_mathematical_source_pins"]
+        names = {"derive.py", "kernel-pins.json"} | {
+            "kernel/" + n for n in ("arithmetic.py", "series.py", "constants.py",
+                                    "family.py", "calculation.py")}
+        need(set(pins) == names, "SOURCE_SEAL: exact mathematical source census")
+        for name, pin in pins.items():
+            b = (D / name).read_bytes()
+            need(len(b) == pin["bytes"] and sha256(b).hexdigest() == pin["sha256"],
+                 "SOURCE_SEAL: whole source " + name)
+        b = (D / "EXPECTED.json").read_bytes()
+        need(len(b) == manifest["expected_record"]["bytes"] and
+             sha256(b).hexdigest() == manifest["expected_record"]["sha256"],
+             "SOURCE_SEAL: whole expected fixture")
+    except (OSError, KeyError, json.JSONDecodeError) as error:
+        raise ValueError("SOURCE_SEAL: absent or malformed pinned input") from error
+    return manifest
+
+def check_record(data, expected):
+    """Whole map comparisons, plus explicit finite census/trust semantics."""
+    row = json.loads(data)
+    need(row["agent"] == "six-sendov-3" and row["role"] == "researcher",
+         "RECORD: actual producer attribution")
+    need(row["independent_review"] is False and
+         row["ordinary_analytic_bridges_outside_exact_kernel"] is True and
+         row["generated_mathematical_inputs_read"] is False, "RECORD: trust boundary")
+    roots = row["whole_all9_originals"]
+    need([r["label"] for r in roots] == list(range(9)), "RECORD: all nine original slots")
+    need(all(len(r["all_root_coefficients"]) == 11 and
+             len(r["all_half_normals"]) == 11 for r in roots),
+         "RECORD: entire tenth-degree root and half-normal jets")
+    need(len(row["whole_all8_moments"]) == 8, "RECORD: all eight Newton slots")
+    need(len(row["whole_primitive"]) == 11 and len(row["whole_first"]) == 11,
+         "RECORD: complete primitive and FIRST jets")
+    need(row["whole_identity_count"] == 260 and len(row["whole_identities"]) == 260,
+         "RECORD: entire identity census")
+    need(all(r["whole_maps_compared_before_hash"] is True and
+             r["nonzero_residual_coefficients"] == 0 for r in row["whole_identities"]),
+         "RECORD: mathematical equalities precede digests")
+    need(len(row["strict_signs"]) == 12, "RECORD: entire rational sign census")
+    for name in ("whole_quadratic", "whole_rankone", "whole_residual",
+                 "whole_linear_cubic", "whole_exact_cubic"):
+        need(len(row[name]) == 6, "RECORD: whole field map " + name)
+    need(row["sharp_rankone_whole_coefficient_map_equal"] is True and
+         row["whole_cubic_pair_elimination_equal"] is True and
+         row["all12_cubic_differential_coordinates_equal"] is True,
+         "RECORD: all twelve variables, pair identity and cubic differential")
+    need(row["scope"].startswith("Finite support only;"), "RECORD: finite support scope")
+    need(row == json.loads(expected), "RECORD: complete generated mathematical maps")
+    need(data == expected, "RECORD: complete canonical generated bytes")
+    return row
+
+def main():
+    args = argparse.ArgumentParser()
+    args.add_argument("--output", type=Path)
+    args = args.parse_args()
+    for name in THREADS:
+        os.environ[name] = "1"
+    source_gate()                 # No mathematical import has occurred.
+    check_scope(json.loads((D / "THEOREM.json").read_text()))
+    sys.path.insert(0, str(D))
+    import derive                 # Fresh producer; does not read EXPECTED.
+    data = (D / "record.json").read_bytes()
+    row = check_record(data, (D / "EXPECTED.json").read_bytes())
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_bytes(data)
+    print(json.dumps({"verified": True, "bytes": len(data),
+                      "sha256": sha256(data).hexdigest(),
+                      "whole_identities": row["whole_identity_count"],
+                      "strict_signs": len(row["strict_signs"]),
+                      "preimport_source_seal": True,
+                      "scope_consistency_is_not_a_proof": True,
+                      "independent_review": False}))
+
+if __name__ == "__main__":
+    main()
