@@ -1,0 +1,86 @@
+{
+  "prepared_at_utc": "2026-10-06T02:30:32.213460+00:00",
+  "author": "literature-researcher-2",
+  "checker": "literature-researcher-1",
+  "accepted_author_scope": 673,
+  "whole_internal_review": 681,
+  "actual_author_acknowledgment": 688,
+  "prior_dependencies": [
+    634,
+    635
+  ],
+  "full_target_solved": false,
+  "new_projected_weight_scope694_included": false,
+  "omitted_local_generated_reports": [
+    {
+      "filename": "full_grid_strip_diamond_probe_v1.json",
+      "bytes": 4418999,
+      "sha256": "3435fb9353d98999cda40f3417bbaba84924a8db60c242de8f441813fa43de63"
+    },
+    {
+      "filename": "lyra_full_grid_strip_diamond_independent_v1.json",
+      "bytes": 5006132,
+      "sha256": "900e8a43e6fbc3c7230a2b92df27ab904e396ae269b18310cba4fe1c83acb47b"
+    }
+  ],
+  "publication_portability_changes": [
+    {
+      "file": "review/check_lyra_boundary.py",
+      "original": {
+        "bytes": 10377,
+        "sha256": "f2a503f9d94b90e0f70c468c83f033eee62ca0295d51db7b9c72c2ce70a60a15"
+      },
+      "selected_functions": [
+        "occurrences",
+        "require"
+      ],
+      "every_selected_function_AST_unchanged": true
+    },
+    {
+      "file": "review/check_lyra_adaptive_full_guard.py",
+      "original": {
+        "bytes": 10373,
+        "sha256": "f538fd7dc4b0fc512be5b73f9dc6a182bdf8d0dd7fa3beb1ba1736f128c4d4b0"
+      },
+      "selected_functions": [
+        "full_decode",
+        "full_encode",
+        "selected_box"
+      ],
+      "every_selected_function_AST_unchanged": true
+    },
+    {
+      "file": "review/check_lyra_full_grid_strip_diamond_v1.py",
+      "original": {
+        "bytes": 18567,
+        "sha256": "8edf982eae422654dc5ea1750c8c650d99462e4cb1a9a0c8b9c71181e12f58b0"
+      },
+      "changed_functions": [
+        "pin_check",
+        "main"
+      ],
+      "unchanged_function_names": [
+        "fingerprint",
+        "inverse",
+        "comparison",
+        "literal_component",
+        "strip_data",
+        "strip_tables",
+        "extracted_strip_sets",
+        "diamonds_at_actual_points",
+        "full_record",
+        "r3_records",
+        "swap_identity",
+        "r4_records",
+        "r5_records",
+        "chain_masks",
+        "chain_partition"
+      ],
+      "unchanged_functions_count": 15,
+      "all_other_function_ASTs_unchanged": true
+    }
+  ],
+  "source_scope": "uniform full-grid strip/diamond reduction and exact actual chain partition; positive-delta K estimate missing",
+  "internal_reviews_are_external_peer_review": false,
+  "preparation_metadata_correction": "Initial receipt label said16 unchanged functions; the verified AST list has15. The original preparation metadata remains preserved locally; no mathematical function or run changed."
+}
