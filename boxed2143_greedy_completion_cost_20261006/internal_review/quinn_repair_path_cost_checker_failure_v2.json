@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-06T01:55:47.239141+00:00",
+  "exit_code": 1,
+  "status": "checker added an invalid stronger assertion, not a rejected author claim",
+  "failed_source": "check_quinn_repair_path_cost_failed_child_gap_assertion_v2.py",
+  "failed_source_sha256": "845b04e33f3d93c171f550a93c90615e1cedb1a90547d27ebdc5ec093d14b766",
+  "stderr": "quinn-repair-path-cost-reproduction-v2.stderr",
+  "stderr_sha256": "a60054fdfbd8c423e467f39955a117e0d69184257ad691f9ea34681627def6f6",
+  "stdout_empty": true,
+  "failed_assertion": "all child external paths have no RR after an earlierL",
+  "explanation": "legal insertion into an avoiding parent preserves avoidance but does not make every gap of that child legal for a future maximum",
+  "explicit_control": {
+    "parent": [
+      2,
+      1
+    ],
+    "chosen_legal_gap": 2,
+    "avoiding_child": [
+      2,
+      1,
+      3
+    ],
+    "new_blocked_gap": 2,
+    "hypothetical_child": [
+      2,
+      1,
+      4,
+      3
+    ],
+    "boxed_occurrences": [
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  "author_claim_mismatch": false,
+  "completed_reproduction_claimed": false,
+  "output_directory_absent": true,
+  "correction": "remove only this additional child-gap assertion; retain every child potential and every prescribed literal child scan"
+}
