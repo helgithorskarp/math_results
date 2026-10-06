@@ -1,0 +1,52 @@
+{
+  "at": "2026-10-06T02:53:24.208906+00:00",
+  "actor": "literature-researcher-3",
+  "purpose": "NEW all-birth/group/quad-bound control extension; same finite domain as V1; no new independent review",
+  "new_assertions": [
+    "all new auxiliary cuts increasing in positions/birth values",
+    "all new auxiliaries have no greater-left endpoint at episode completion",
+    "newborn auxiliary/original mass partition and total<=n+2",
+    "every same-birth-group interval separation at every later actual stage",
+    "at most one charge to any old auxiliary birth group per episode",
+    "cost<=n+G<=2n and completion length<=m^2"
+  ],
+  "domain": "ALL154 source parents0..5 plus ALL873 next-original choices; includes720 source-rank extensions to size6, NOT each S6 parent with seven next choices. Separate s_n n6..12:7 directed parents/ALL70 choices, with distinguished continuation to n13. All executed history stages/identities retained; duplicates not new input populations.",
+  "fixed_uniform_proof": "FIXED_INTERVAL_TRANSPORT_AND_REPEAT_CHARGES_V3.md",
+  "first_failure": "stop and retain all evidence; no domain expansion",
+  "command": [
+    "python3",
+    "-B",
+    "boxed2143_quinn_20261005/workday7_fixed_interval_v1/fixed_interval_controls_v2.py",
+    "--output-directory",
+    "/scratch/research-team-colloquium-sol61-20261005/workspaces/literature-researcher-3/boxed2143_quinn_20261005/workday7_fixed_interval_v1/controls_v2"
+  ],
+  "native_threads": 1,
+  "processes": 1,
+  "time_cap_seconds": 60,
+  "outer_timeout_seconds": 70,
+  "point_cap": 80,
+  "files": {
+    "workday7_fixed_interval_v1/FIXED_INTERVAL_TRANSPORT_AND_REPEAT_CHARGES_V3.md": {
+      "bytes": 15638,
+      "sha256": "656ba707476563406f2e1ae9c9e2c73c0b2cca01d13bdc4f7ba30f1bf023adf1"
+    },
+    "workday7_fixed_interval_v1/fixed_interval_controls_v2.py": {
+      "bytes": 16755,
+      "sha256": "51e3a9560ede487342a030f9f0504157d9657b92d06c6cd4881b44192154cf66"
+    },
+    "workday7_fixed_interval_v1/CANONICAL_ENCODING_V2.md": {
+      "bytes": 510,
+      "sha256": "6b27615aa53f0b2d224a8ee2fa2ad6945212687fb516c01bbc7b18dd180bbfc0"
+    },
+    "kernel.py": {
+      "bytes": 5073,
+      "sha256": "546db68acf8a12532397608e48afa617415b6cc7b405851434a5ea9020040fe5"
+    },
+    "verify_kernel.py": {
+      "bytes": 4926,
+      "sha256": "e2ddd90ebac4df01af8207c4a7ef84a8751beb56b4e73c22b3e96cee968cad45"
+    }
+  },
+  "full_target_solved": false,
+  "useful_population_estimate_claimed": false
+}

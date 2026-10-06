@@ -1,0 +1,167 @@
+{
+  "actor": "literature-researcher-3",
+  "full_target_solved": false,
+  "status": "author drift-candidate rejection",
+  "potential": "sum over original gaps of all RR adjacencies in their paths",
+  "tested_drift_constant": 1,
+  "first_failure": {
+    "source": [
+      1,
+      2,
+      4,
+      3
+    ],
+    "n": 4,
+    "word": [
+      1,
+      2,
+      4,
+      3
+    ],
+    "tags": [
+      1,
+      2,
+      4,
+      3
+    ],
+    "phi": 1,
+    "children": [
+      {
+        "initial_current_gap": 0,
+        "cost": 0,
+        "word": [
+          5,
+          1,
+          2,
+          4,
+          3
+        ],
+        "tags": [
+          5,
+          1,
+          2,
+          4,
+          3
+        ],
+        "phi": 3
+      },
+      {
+        "initial_current_gap": 1,
+        "cost": 0,
+        "word": [
+          1,
+          5,
+          2,
+          4,
+          3
+        ],
+        "tags": [
+          1,
+          5,
+          2,
+          4,
+          3
+        ],
+        "phi": 3
+      },
+      {
+        "initial_current_gap": 2,
+        "cost": 0,
+        "word": [
+          1,
+          2,
+          5,
+          4,
+          3
+        ],
+        "tags": [
+          1,
+          2,
+          5,
+          4,
+          3
+        ],
+        "phi": 3
+      },
+      {
+        "initial_current_gap": 3,
+        "cost": 0,
+        "word": [
+          1,
+          2,
+          4,
+          5,
+          3
+        ],
+        "tags": [
+          1,
+          2,
+          4,
+          5,
+          3
+        ],
+        "phi": 1
+      },
+      {
+        "initial_current_gap": 4,
+        "cost": 0,
+        "word": [
+          1,
+          2,
+          4,
+          3,
+          5
+        ],
+        "tags": [
+          1,
+          2,
+          4,
+          3,
+          5
+        ],
+        "phi": 1
+      }
+    ],
+    "drift_numerator": 6,
+    "drift_denominator": 5
+  },
+  "states_checked": 12,
+  "rows": [
+    {
+      "n": 0,
+      "source_states_checked": 1,
+      "largest_drift_numerator": 0,
+      "denominator": 1
+    },
+    {
+      "n": 1,
+      "source_states_checked": 1,
+      "largest_drift_numerator": 1,
+      "denominator": 2
+    },
+    {
+      "n": 2,
+      "source_states_checked": 2,
+      "largest_drift_numerator": 2,
+      "denominator": 3
+    },
+    {
+      "n": 3,
+      "source_states_checked": 6,
+      "largest_drift_numerator": 4,
+      "denominator": 4
+    },
+    {
+      "n": 4,
+      "source_states_checked": 2,
+      "largest_drift_numerator": 6,
+      "denominator": 5
+    }
+  ],
+  "stream_sha256": "cd16d68006f05ca75cd820228840bdc089f75f4da9522df21f06b212cce30fb5",
+  "seconds": 0.004559553024591878,
+  "peak_rss_kib_linux": 17972,
+  "python": "3.11.2",
+  "processes": 1,
+  "native_threads": 1
+}
